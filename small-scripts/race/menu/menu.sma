@@ -403,12 +403,12 @@ public race_make( const socket, const menu, const race, const chr )
 	
 	new race_name[100];
 	race_getProperty( race, RP_STR_NAME, _, race_name );
-	sysmessage( socket, _, "You have become a %s", race_name );
+	sysmessage( chr, _, "You have become a %s", race_name );
 	
 	if( curr!=chr ) {
 		new name[100];
 		chr_getProperty( chr, CP_STR_NAME, _, name );
-		sysmessage( socket, _, "Now %s is a %s", name, race_name );
+		sysmessage( curr, _, "Now %s is a %s", name, race_name );
 	}
 
 }
