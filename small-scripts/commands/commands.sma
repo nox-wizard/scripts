@@ -2,6 +2,7 @@
 #include "small-scripts/commands/tweak/tweak.sma"
 #include "small-scripts/commands/stats/stats.sma"
 #include "small-scripts/commands/options/options.sma"
+#include "small-scripts/commands/skills/skills.sma"
 
 public command_tweak( const socket )
 {
@@ -73,3 +74,7 @@ public command_options( const socket )
 	getTarget( socket, funcidx("target_options"), "Select object.. " );
 }
 
+public command_skills( const socket )
+{
+	getTarget( socket, funcidx("target_skills"), "Select character.. " );
+}
