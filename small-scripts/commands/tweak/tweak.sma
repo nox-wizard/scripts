@@ -363,9 +363,9 @@ public tweak_itm(const chrsource, const target, pagenumber)
 	gui_addButton(twkItmMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
 	gui_addText(twkItmMenu,380,49,33,msg_commandsDef[44]);
 	gui_addButton(twkItmMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-	gui_addText(twkItmMenu,470,49,33,msg_commandsDef[45]); //events
+	gui_addText(twkItmMenu,470,49,33,msg_commandsDef[46]); //events
 	gui_addButton(twkItmMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-	gui_addText(twkItmMenu,60,79,33,msg_commandsDef[46]); //localvars
+	gui_addText(twkItmMenu,60,79,33,msg_commandsDef[45]); //localvars
 	
 	gui_addText(twkItmMenu,66,120,33,msg_commandsDef[50]);
 	sprintf( tempItmStr,"%d",itm_getProperty(target, IP_OWNERSERIAL));
@@ -414,7 +414,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 	}
 	else if( pagenumber == 5) //events
 	{
-		gui_addText(twkItmMenu,230,150,33,msg_commandsDef[45]);
+		gui_addText(twkItmMenu,230,150,33,msg_commandsDef[46]);
 		new i;
 		for ( i=0;i < NUM_itmevent;++i)
 		{
@@ -428,7 +428,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 	}
 	else if( pagenumber == 6) //localvars
 	{
-		gui_addText(twkItmMenu,230,150,33,msg_commandsDef[53]);
+		gui_addText(twkItmMenu,230,150,33,msg_commandsDef[45]);
 		
 		new count=0;
 		new LocalV[512];
@@ -870,11 +870,11 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 		}
 	        else if(pagenumber == 6) //localVars
 		{
-		       	checked = gui_getProperty(twkItmMenu,MP_CHECK,i);
 		       	for(i=1000;i<5000;i++)
 		       	{
 		       		if (chr_isaLocalVar(target, i, VAR_TYPE_ANY))
 		       		{
+		       			checked = gui_getProperty(twkItmMenu,MP_CHECK,i);
 		       			if(checked != 1)
 		       			{
 		       				itm_delLocalVar(target, i)
@@ -1960,13 +1960,14 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        }
 		        else if(pagenumber == 6) //localVars
 		        {
-		        	checked = gui_getProperty(twkChrMenu,MP_CHECK,i);
 		        	for(i=1000;i<5000;i++)
 		        	{
 		        		if (chr_isaLocalVar(target, i, VAR_TYPE_ANY))
 		        		{
+		        			checked = gui_getProperty(twkChrMenu,MP_CHECK,i);
 		        			if(checked != 1)
 		        			{
+		        				printf("checked local var no %d: %d", i, checked);
 		        				chr_delLocalVar(target, i)
 		        			}
 		        			else if(chr_isaLocalVar(target, i, VAR_TYPE_INTEGER))
