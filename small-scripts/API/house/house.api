@@ -165,7 +165,7 @@ native house_addCoOwner(const house, const chr);
 native house_removeCoOwner(const house, const chr);
 
 /*!
-\brief tells if a char is friend of the house
+\brief tells if a char is co owner of the house
 \author Wintermute
 \since 0.82
 \fn house_isCoOwner
