@@ -2635,6 +2635,19 @@
 #define $item_a_new_guildstone 2123
 #define $item_a_new_guildstone_deed 2124
 #define $item_a_cigar 2125
+#define $item_a_campfire 2126
+#define $item_tillerman 2127
+#define $item_plank1 2128
+#define $item_plank2 2129
+#define $item_hold1 2130
+#define $item_clock 2131
+#define $item_leather_piece 2132
+#define $item_mount 2133
+#define $item_mount 2134
+#define $item_hardcoded 2135
+#define $item_blood_puddle 2136
+#define $item_restock 2137
+
 
 
 
