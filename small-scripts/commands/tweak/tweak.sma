@@ -19,8 +19,8 @@ Shows an ingame menu that allows all kinds of modifications to chars and items<B
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 //                                        general tweak stuff                                             //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-const BUTTON_APPLY=10
-const twkpages=8; //one line for one page, two rows for one page
+const BUTTON_APPLY=11
+const twkpages=9; //one line for one page, two rows for one page
 
 const oldpic = 5002;
 const newpic = 5003;
@@ -42,18 +42,21 @@ old6,
 new7,
 old7,
 new8,
-old8
+old8,
+new9,
+old9
 };
 
 static twkButton[twkpages][twk_buttons] = {
-{5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209}
+{5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209}
 };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -311,10 +314,6 @@ static ct_pg4_l =0;
 static ct_pg4_r =0;
 static ct_pg5_l =0;
 static ct_pg5_r =0;
-static ct_pg6_l =0;
-static ct_pg6_r =0;
-static ct_pg7_l =0;
-static ct_pg7_r =0;
 
 const NUM_chrtweak = 75;
 enum Chr_tweaklines
@@ -618,8 +617,28 @@ public init_tweak_itm()
 					ct_pg4_r = i-1; //then fewer lines then max to keep it together
 					i=ct_pg4_l+14;
 				}
-				else if((j==(ct_pg3_l+14)) || i==(NUM_chrtweak-1))
+				else if((j==(ct_pg4_l+14)) || i==(NUM_chrtweak-1))
 					ct_pg4_r = i; //maximum 14 lines that fit at row
+			}//else if
+			else if(ct_pg4_r < i <= (ct_pg4_r+14))//left row 4. page
+			{
+				if(j>(ct_pg4_r+14)) // to add radio button would extend over max line number
+				{
+					ct_pg5_l = i-1; //then fewer lines then max to keep it together
+					i=ct_pg4_r+14;
+				}
+				else if((j==(ct_pg4_r+14)) || i==(NUM_chrtweak-1))
+					ct_pg5_l = i; //maximum 14 lines that fit at row
+			}
+			else if(ct_pg5_l < i <= (ct_pg5_l+14))//right row 4. page
+			{
+				if(j>(ct_pg5_l+14)) // to add radio button would extend over max line number
+				{
+					ct_pg5_r = i-1; //then fewer lines then max to keep it together
+					i=ct_pg5_l+14;
+				}
+				else if((j==(ct_pg5_l+14)) || i==(NUM_chrtweak-1))
+					ct_pg5_r = i; //maximum 14 lines that fit at row
 			}//else if
 		}//for
 	tweakinit = true;
@@ -703,7 +722,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 	else if( pagenumber == 4)
 	{
 		gui_addText(twkItmMenu,230,150,33,"Flags 3");
-		startline = it_pg2_r+1;
+		startline = it_pg3_r+1;
 		leftrow = it_pg4_l;
 		rightrow = it_pg4_r;
 	}
@@ -905,7 +924,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 		//printf("dividerrest: %d, count: %d", dividerrest, count);
 	}//page number 6
 	
-	if( 1<= pagenumber <= 4)
+	if( 1<= pagenumber <= 5)
 	{
 		new linetype; //type of the line (propertyfield, inputfield, radiobutton ...)
 		new p; //creates several property fields if splitted (more is splitted into 4 more values and so p for more is 4)
@@ -1032,30 +1051,14 @@ public tweak_itm(const chrsource, const target, pagenumber)
 	gui_show(twkItmMenu,chrsource); 
 }
 
-public viewItmMenu(const chrsource, const target, const buttonCode)
-{
-	//printf("enter viewItmMenu, page: %d^n", buttonCode);
-	switch(buttonCode)
-	{
-		case 1: tweak_itm(chrsource, target, 1);
-		case 2: tweak_itm(chrsource, target, 2);
-		case 3: tweak_itm(chrsource, target, 3);
-		case 4: tweak_itm(chrsource, target, 4);
-		case 5: tweak_itm(chrsource, target, 5);
-		case 6: tweak_itm(chrsource, target, 6);
-		case 7: tweak_itm(chrsource, target, 7);
-	}
-}
-
 public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 {
 	new target = gui_getProperty( twkItmMenu,MP_BUFFER,1 ); //target
-	if( 1 <= buttonCode <= 7)
+	if( 1 <= buttonCode <= 9)
 	{
-		viewItmMenu(chrsource, target, buttonCode);
-		//gui_delete( twkItmMenu );
+		tweak_itm(chrsource, target, buttonCode);
 	}
-	else if( buttonCode == 10) //apply
+	else if( buttonCode == 11) //apply
 	{
 		for(new i=0; i <= NUM_itmtweak; ++i)
 		{
@@ -1092,7 +1095,6 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 				{
 					new textbuf_input[15];
 		        		new value=0;
-		        		new checked = gui_getProperty(twkItmMenu,MP_CHECK,i);
 		        		gui_getProperty(twkItmMenu,MP_UNI_TEXT,i,textbuf_input);
 		        		trim(textbuf_input);
 		        		if (isStrUnsignedInt(textbuf_input)) //should be an integer, is it?
@@ -1150,13 +1152,15 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
 	gui_addText(twkChrMenu,380,49,33,"Flags3");
 	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-	gui_addText(twkChrMenu,470,49,33,"Events");
+	gui_addText(twkChrMenu,470,49,33,"Flags4");
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkChrMenu,60,79,33,"LocalVars");
 	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkChrMenu,195,79,33,"Skills");
 	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 	gui_addText(twkChrMenu,285,79,33,"Layer");
+	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
+	gui_addText(twkChrMenu,380,79,33,"Events");
 	
 	//printf("target: %d", target);
 	gui_addText(twkChrMenu,66,120,33,"Account number :");
@@ -1206,12 +1210,19 @@ public tweak_char(const chrsource, const target, pagenumber)
 	else if( pagenumber == 4)
 	{
 		gui_addText(twkChrMenu,230,150,33,"Flags 3");
-		startline = ct_pg2_r+1;
+		startline = ct_pg3_r+1;
 		leftrow = ct_pg4_l;
 		rightrow = ct_pg4_r;
 	}
+	else if( pagenumber == 5)
+	{
+		gui_addText(twkChrMenu,230,150,33,"Flags 4");
+		startline = ct_pg4_r+1;
+		leftrow = ct_pg5_l;
+		rightrow = ct_pg5_r;
+	}
 	//printf("rightrow: %d, leftrow: %d", rightrow, leftrow);
-	if( 1<= pagenumber <= 4)
+	if( 1<= pagenumber <= 5)
 	{
 		new linetype; //type of the line (propertyfield, inputfield, radiobutton ...)
 		new p; //creates several property fields if splitted (more is splitted into 4 more values and so p for more is 4)
@@ -1408,7 +1419,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 		}//for
 	}//if pagenumber
 
-	else if(pagenumber == 5)
+	else if(pagenumber == 9)
 	{
 		gui_addPageButton(twkChrMenu,210,493,2224,2117,2);
 		gui_addText(twkChrMenu,240,490,1310,"Events 2");
@@ -1891,9 +1902,15 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 	}
 	else if( pagenumber == 4)
 	{
-		startline = ct_pg2_r+1;
+		startline = ct_pg3_r+1;
 		leftrow = ct_pg4_l;
 		rightrow = ct_pg4_r;
+	}
+	else if( pagenumber == 5)
+	{
+		startline = ct_pg4_r+1;
+		leftrow = ct_pg5_l;
+		rightrow = ct_pg5_r;
 	}
 	new endline;
 	new i=0;
@@ -1907,14 +1924,14 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 	
 	switch(buttonCode)
 	{
-		case 1..8: 	
+		case 1..9: 	
 		{	
 			tweak_char(chrsource, target, buttonCode);
 			//gui_delete( twkChrMenu );
 		}
-		case 10:
+		case 11:
 		{
-			if(0 < pagenumber < 5)
+			if(0 < pagenumber <= 5)
 		        {
 		        	for(i=startline; i<=endline; ++i)
 		        	{
@@ -2053,7 +2070,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 					{
 						new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
 						checked = gui_getProperty(twkChrMenu,MP_CHECK,i); //is it checked?
-						if( q = 5)
+						if( q == 5)
 						{
 							new status = chr_getProperty(target, chr_twkarray[i][ct_propval]);
 							if( (status == 0) && checked) //not dead but checked now
@@ -2066,7 +2083,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 					}
 		        	}//for
 		        }
-		        else if(pagenumber == 5) //events
+		        else if(pagenumber == 9) //events
 		        {
 		        	new callname[15];
 		        	new oldevent[15];
