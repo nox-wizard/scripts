@@ -1,8 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# This tool was conceived and written by Straylight, Ultima Online freeshard Anacron.
-# Additional help provided by Lina and Haegar, also from Anacron
+# This tool was conceived and written by Wintermute
 
 
 #	This program is free software; you can redistribute it and/or modify
@@ -670,8 +669,7 @@ def main():
 	glob.discardedItems=0
 	glob.booknumber=1
 	print "Sphere 55i to Nox Wizard 0.82 worldsave converter"
-	print "This program was conceived and written by Straylight of the Ultima Online freeshard Anacron, http://anacron.confused.at/"
-	print "Report bugs or enhancement requests to straylight@anacron-staff.de"
+	print "This program was conceived and written by Wintermute"
 # argument test
 	if ( len(sys.argv) < 2 ):
 		usage()
