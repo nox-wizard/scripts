@@ -32,12 +32,12 @@ native guild_getProperty( const guild, const property, const subprop=0, ...);
 
 /*!
 \author Endymion
-\fn guild_makeGuildstone( cosnt stone, const master )
+\fn guild_guildstone( cosnt stone, const master )
 \brief Make a guildstone with given guild master and given stone
 \param stone the stone to make guildstone
 \param master the guild master
 */
-native guild_makeGuildstone( const stone, const master );
+native guild_guildstone( const stone, const master );
 
 /*!
 \author Endymion
