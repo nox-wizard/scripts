@@ -1,0 +1,28 @@
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+////// von Horian, gerNoX Wizard Projekt und Saber /////
+////// 02.02.2003 //////////////////////////////////////
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+
+#include scripts/items/schmiedesystem/color armour/agapite_armour.xss
+#include scripts/items/schmiedesystem/color armour/bronze_armour.xss
+#include scripts/items/schmiedesystem/color armour/copper_armour.xss
+#include scripts/items/schmiedesystem/color armour/golden_armour.xss
+#include scripts/items/schmiedesystem/color armour/iron_armour.xss
+#include scripts/items/schmiedesystem/color armour/merkite_armour.xss
+#include scripts/items/schmiedesystem/color armour/shadow_armour.xss
+#include scripts/items/schmiedesystem/color armour/silver_armour.xss
+#include scripts/items/schmiedesystem/color armour/valorite_armour.xss
+#include scripts/items/schmiedesystem/color armour/verite_armour.xss
+
+#include scripts/items/schmiedesystem/color weapons/agapite_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/bronze_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/copper_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/golden_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/iron_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/merkite_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/shadow_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/silver_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/valorite_weapons.xss
+#include scripts/items/schmiedesystem/color weapons/verite_weapons.xss

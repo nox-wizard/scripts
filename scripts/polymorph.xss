@@ -1,0 +1,66 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (polymorph.scp)                                  ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Usage:
+// <PolimorphIcon> <Name>
+// POLIMORPHID <ID>
+//
+// For the icon, check with InsideUO the Artwork/Static Tiles section.
+// For the ID of the creature to polymorph into, check with InsideUO the
+// Animation section ( Model No. )
+//
+// Maximum number of polymorphable creatures: 50
+// ***********************************************************************
+
+SECTION POLYMORPHDURATION 0
+{
+    90
+}
+
+
+SECTION POLYMORPHMENU 8196
+{
+    Choose a creature
+        20CF Black Bear
+            POLYMORPHID 00D3
+        20DB Grizzly Bear
+            POLYMORPHID 00D4
+        20E1 Polar Bear
+            POLYMORPHID 00D5
+        20D1 Chicken
+            POLYMORPHID 00D0
+        20D3 Daemon
+            POLYMORPHID 0009
+        20D8 Ettin
+            POLYMORPHID 0002
+        20D9 Gargoyle
+            POLYMORPHID 0004
+        20D6 Dragon
+            POLYMORPHID 000C
+        20C9 Gorilla
+            POLYMORPHID 001D
+        20CA Lizardman
+            POLYMORPHID 0023
+        20DF Ogre
+            POLYMORPHID 0001
+        20D0 Rat
+            POLYMORPHID 00D7
+        20D4 Deer
+            POLYMORPHID 00ED
+        20D7 Earth Elemental
+            POLYMORPHID 000E
+        20E7 Skeleton
+            POLYMORPHID 0032
+        2100 Wisp
+            POLYMORPHID 003A
+        211F Horse
+            POLYMORPHID 00C8
+        210B Water Elemental
+            POLYMORPHID 0010
+}
+
+
