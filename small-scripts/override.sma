@@ -28,6 +28,7 @@
 
 #include "small-scripts/custom/default.sma"
 #include "small-scripts/custom/speech.sma"
+#include "small-scripts/nxw_lib2.sma"
 
 //
 // Include the Shard's script

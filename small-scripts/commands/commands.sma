@@ -325,6 +325,7 @@ public startCommandSystem(const chr)
 			
 			chr_message(chr,_,"You have been set admin");
 			chr_makeGM(chr);
+			chr_makeInvul(chr);
 			new name[20];
 			chr_getProperty(chr,CP_STR_NAME,0,name);
 			log_message("%s has been set admin",name);

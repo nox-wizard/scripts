@@ -1,0 +1,71 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Fax				||
+// || Last Update	: 09-apr-2004					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_gmpage_api_
+  #endinput
+#endif
+#define _nxw_gmpage_api_
+
+/** \defgroup script_API_gmpage GM page system functions
+ *  \ingroup script_API
+ *  @{
+ */
+/*!
+\author Fax
+\fn getGmPageList(set)
+\param set: a set,createdwith set_create()
+\since 0.82
+\brief returns the list of GM pages available
+
+The set will be filled with all paging characters,in order of paging time,characters won't be duplicated
+if they paged many times.
+\return true on success,else false
+*/
+native getGmPageList(const set) 
+
+/*!
+\author Fax
+\fn addGmPage(chr,reason[])
+\param chr: the paging character
+\param reason[]: reason of the page
+\since 0.82
+\brief adds a page to the GM page list
+
+Use this function to add a page to the GMpage list, reason[] must be less than 100 characters long
+\return true on success,else false
+*/
+native addGmPage(const chr ,const reason[])
+
+/*!
+\author Fax
+\fn chr_getGmPage(const chr,const page_number,reason[],time[])
+\param chr: the character
+\param page_number: if character made more than 1 pages you can select the page with this param
+\param reason[]: preallocated string that will be filled with page reason
+\param time[]: preallocated string that will be filled with the time of the page
+\since 0.82
+\brief returns a character's page
+
+Every character has a maximum of 3 open pages simultaneously, son pge_number is limited to 
+\return true on success,else false
+*/
+native chr_getGmPage(const chr,const page_number,reason[],time[])
+
+/*!
+\author Fax
+\fn chr_solveGmPage (const chr ,const page_number)
+\param chr: the character
+\param page_number: if character made more than 1 pages you can select the page with this param
+\since 0.82
+\brief solves a page
+
+Deletes a page from the GM page list
+\return true on success,else false
+*/
+native chr_solveGmPage (const chr ,const page_number)
+
+/** @} */ // end of script_API_gmpage
