@@ -219,7 +219,7 @@ SECTION ITEM $item_scorp
     VALUE 10
 }
 
-SECTION ITEM $item_woodworkers_bench_A1
+SECTION ITEM $item_woodworkers_bench1_1
 {
     NAME woodworkers bench
     ID 19f1
@@ -227,7 +227,7 @@ SECTION ITEM $item_woodworkers_bench_A1
     MOVABLE 1
 }
 
-SECTION ITEM $item_woodworkers_bench_A2
+SECTION ITEM $item_woodworkers_bench1_2
 {
     NAME woodworkers bench
     ID 19f2
@@ -235,7 +235,7 @@ SECTION ITEM $item_woodworkers_bench_A2
     MOVABLE 1
 }
 
-SECTION ITEM $item_woodworkers_bench_A3
+SECTION ITEM $item_woodworkers_bench1_3
 {
     NAME woodworkers bench
     ID 19f3
@@ -251,7 +251,7 @@ SECTION ITEM $item_vise1
     MOVABLE 1
 }
 
-SECTION ITEM $item_woodworkers_bench_B1
+SECTION ITEM $item_woodworkers_bench2_1
 {
     NAME woodworkers bench
     ID 19f7
@@ -259,7 +259,7 @@ SECTION ITEM $item_woodworkers_bench_B1
     MOVABLE 1
 }
 
-SECTION ITEM $item_woodworkers_bench_B2
+SECTION ITEM $item_woodworkers_bench2_2
 {
     NAME woodworkers bench
     ID 19f6
@@ -267,7 +267,7 @@ SECTION ITEM $item_woodworkers_bench_B2
     MOVABLE 1
 }
 
-SECTION ITEM $item_woodworkers_bench_B3
+SECTION ITEM $item_woodworkers_bench2_3
 {
     NAME woodworkers bench
     ID 19f5
@@ -283,7 +283,7 @@ SECTION ITEM $item_vise2
     MOVABLE 1
 }
 
-SECTION ITEM $item_coopers_bench_A1
+SECTION ITEM $item_coopers_bench1_1
 {
     NAME coopers bench
     ID 19f9
@@ -291,7 +291,7 @@ SECTION ITEM $item_coopers_bench_A1
     MOVABLE 1
 }
 
-SECTION ITEM $item_coopers_bench_A2
+SECTION ITEM $item_coopers_bench1_2
 {
     NAME coopers bench
     ID 19fa
@@ -299,7 +299,7 @@ SECTION ITEM $item_coopers_bench_A2
     MOVABLE 1
 }
 
-SECTION ITEM $item_coopers_bench_B1
+SECTION ITEM $item_coopers_bench2_1
 {
     NAME coopers bench
     ID 19fb
@@ -307,7 +307,7 @@ SECTION ITEM $item_coopers_bench_B1
     MOVABLE 1
 }
 
-SECTION ITEM $item_coopers_bench_B2
+SECTION ITEM $item_coopers_bench2_2
 {
     NAME coopers bench
     ID 19fc
