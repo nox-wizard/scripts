@@ -35,8 +35,7 @@ public cmd_decay(const chr)
 	if(isStrInt(__cmdParams[1]))	
 		decay = getTimerValue(str2Int(__cmdParams[1]));
 		
-		new areacheck = 0;
-	
+	new areacheck = 0;
 	if(__cmdParams[0][0] == 'a')
 		areacheck=1;
 		

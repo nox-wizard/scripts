@@ -10,23 +10,25 @@
 \fn cmd_iset(const chr)
 \brief sets properties of an item or character
 
-<B>syntax:<B> 'iset property value 
+<B>syntax:<B> 'iset a/t property value 
 <B>command params:</B>
 <UL>
-<LI> property: the property to be set,choose from the list below,each property allows different values:
+<LI> a/t: decides if area or single target to apply
 	<UL>
-	<LI> "amount": amount
-	<LI> "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
-	<LI> "type": item type
-	<LI> "value": item price
-	<LI> "restock": restock rate
-	<LI> "sfx": proximity sound effect
+	<LI> property: the property to be set,choose from the list below,each property allows different values:
+		<UL>
+		<LI> "amount": amount
+		<LI> "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
+		<LI> "type": item type
+		<LI> "value": item price
+		<LI> "restock": restock rate
+		<LI> "sfx": proximity sound effect
+		</UL>
 	</UL>
-<LI> "target": pass this parameter if you want to bypass the area effect
 </UL>
 
 Properties are recognized also if you type only a few initial letters. Unless there is ambiguity
-between properties names you can ype only the forst letter, if you get an ambiguity message type some
+between properties names you can type only the first letter, if you get an ambiguity message type some
 more letters.
 */
 public cmd_iset(const chr)
@@ -44,21 +46,27 @@ public cmd_iset(const chr)
 
 
 
-	new area = chr_getCmdArea(chr);
-	new i = 0, item;
-	//apply command to all items in area
-	if(area_isValid(area))
+	new areacheck = 0;
+	if(__cmdParams[0][0] == 'a')
+		areacheck=1;
+		
+	if(areacheck==1)
 	{
-		area_useCommand(area);
-		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
+		new area = chr_getCmdArea(chr);
+		new i = 0, item;
+		//apply command to all items in area
+		if(area_isValid(area))
 		{
+			area_useCommand(area);
+			for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
+			{
 				item = set_getItem(area_items(area));
 				itm_setProperty(item,prop,_,val);
 				itm_refresh(item);
+			}
+			chr_message(chr,_,msg_commandsDef[160],__cmdParams[0],i);		
+			return;
 		}
-
-		chr_message(chr,_,msg_commandsDef[160],__cmdParams[0],i);		
-		return;
 	}
 
 	//store parameters to be read by the callback
@@ -97,19 +105,19 @@ static readPropAndVal(chr,&prop,&val)
 {
 	//switch on first property letter, if there is ambiguity add 
 	//another switch on the second letter __cmdParams[0][1]
-	switch(__cmdParams[0][0])
+	switch(__cmdParams[1][0])
 	{
 		case 'a': prop = IP_AMOUNT;
 		case 'd': //direction
 		{
-			if(!strlen(__cmdParams[0]))
+			if(!strlen(__cmdParams[1]))
 			{
 				chr_message(chr,_,msg_commandsDef[104]);
 				return INVALID;
 			}
 	
 			prop = IP_DIR;
-			val = str2Dir(__cmdParams[1]);
+			val = str2Dir(__cmdParams[2]);
 	
 			if(val == INVALID)
 			{
@@ -123,7 +131,7 @@ static readPropAndVal(chr,&prop,&val)
 		//case 'm': prop = IP_MOVEABLE;
 		case 't': prop = IP_TYPE;
 		case 'v': 
-			switch(__cmdParams[0][1])
+			switch(__cmdParams[1][1])
 			{
 				case 'a': prop = IP_VALUE;
 				case 'i': prop = IP_VISIBLE;
@@ -144,10 +152,10 @@ static readPropAndVal(chr,&prop,&val)
 		}
 	}
 
-	if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
+	if(!strlen(__cmdParams[2]) || !isStrInt(__cmdParams[2]))
 		return INVALID;
 	
-	val = str2Int(__cmdParams[1]);
+	val = str2Int(__cmdParams[2]);
 	return OK;
 }
 /*! }@ */

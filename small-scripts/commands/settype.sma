@@ -10,10 +10,15 @@
 \fn cmd_settype(const chr)
 \brief settypes an item
 
-<B>syntax:<B> 'settype type
-
+<B>syntax:<B> 'settype a/t type
+<UL>
+<LI> a/t: decides if area or single target to apply
+<UL>
+	<LI>type: integer no of type
+</UL>
+</UL>
 If area effect is active, all items in area will have type set.
-If no area effect is active, or if you pass "target", a target will appear and only 
+If no area effect is active, or if you pass "t", a target will appear and only 
 the targetted item will be affected.<br>
 */
 public cmd_settype(const chr)
