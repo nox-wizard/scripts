@@ -144,5 +144,5 @@ public __nxw_sk_tailoring(const s, const itm)
 		ntprintf(s, "You are not skilled enough for this kind of material.");
 		return;
 	}
-	chr_skillMakeMenu(cc, clothMakeMenu[type], SK_TAILORING);
+	chr_skillMakeMenu(cc, clothMakeMenu[type], SK_TAILORING, itm);
 }

@@ -17,8 +17,9 @@ static where[8][] = {
 
 public __nxw_sk_tracking( const socket )
 {
-	if ( !chr_checkSkill(cc, SK_TRAKING, 0, 1000, 1) ) {
-		ntprintf( s, "You cannot see any sign" ); 
+	new chr = getCharFromSocket( socket );
+	if ( !chr_checkSkill(chr, SK_TRACKING, 0, 1000, 1) ) {
+		ntprintf( socket, "You cannot see any sign" ); 
 		return;
 	}
 
@@ -28,7 +29,7 @@ public __nxw_sk_tracking( const socket )
 	gui_addIcon( menu, 0x20E9, _, _, "Creatures" );
 	gui_addIcon( menu, 0x2106, _, _, "Players" );
 	
-	gui_show( menu, getCharFromSocket( socket ) );
+	gui_show( menu, chr );
 }
 
 
