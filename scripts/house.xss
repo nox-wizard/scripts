@@ -1067,7 +1067,7 @@ LOCK
 X 2
 Y 4
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 3
@@ -1123,7 +1123,7 @@ LOCK
 X 3
 Y 7
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 9
@@ -1169,7 +1169,7 @@ LOCK
 X 1
 Y 7
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 14
@@ -1215,7 +1215,7 @@ LOCK
 X 4
 Y 7
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 19
@@ -1261,7 +1261,7 @@ LOCK
 X 4
 Y 11
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 24
@@ -1325,7 +1325,7 @@ LOCK
 X 4
 Y 16
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 31
@@ -1371,7 +1371,7 @@ LOCK
 X 0
 Y 7
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 37
@@ -1717,7 +1717,7 @@ LOCK
 X 1
 Y 4
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 102
@@ -1736,7 +1736,7 @@ LOCK
 X 3
 Y 4
 Z 5
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 104
@@ -1755,7 +1755,7 @@ LOCK
 X 3
 Y 4
 Z 6
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 106
@@ -1765,7 +1765,7 @@ LOCK
 X 1
 Y 6
 Z 3
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 107
@@ -1811,7 +1811,7 @@ LOCK
 X 3
 Y 5
 Z 12
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 112
@@ -1830,7 +1830,7 @@ LOCK
 X 4
 Y 5
 Z 14
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 114
@@ -1858,7 +1858,7 @@ LOCK
 X 0
 Y 7
 Z 0
-ONDBLCLICK housestart
+@ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 117
