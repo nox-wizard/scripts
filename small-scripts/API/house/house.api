@@ -231,3 +231,13 @@ native house_makeKeys(const house, const chr);
 */
 native house_deleteKeys(const house);
 
+/*!
+\brief remove the house and all item within the house limits
+\author Wintermute
+\since 0.82
+\fn house_delete
+\param house, the house serial
+*/
+
+native house_delete(const house);
+
