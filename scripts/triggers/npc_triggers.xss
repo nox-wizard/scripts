@@ -120,7 +120,7 @@ SECTION NPCTRG $ntrg_jeweler_quest
     TALK My golden bracelet!! Thank you! You've earned yourself a big reward!
     TALK Here.. take 15000 gold coins!
     NPCACT 13
-    IADD $item_gold_coin_O
+    IADD $item_gold_coin
     SETTRG $ntrg_jeweler_quest_1
 }
 

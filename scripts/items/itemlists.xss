@@ -776,7 +776,7 @@ SECTION ITEMLIST $itemlist_treasure_hunt
 SECTION ITEMLIST $itemlist_spawn_chest_loot
 {
     //$$ spawn chest loot
-    $item_gold_coin_1
+    $item_gold_coin 96
     $item_bread_loaves
     $item_lesser_heal_potion
     $item_scimitar
@@ -803,7 +803,7 @@ SECTION ITEMLIST $itemlist_spawn_chest_loot
 SECTION ITEMLIST $itemlist_christmas
 {
     //$$ christmas
-    $item_gold_coin_1
+    $item_gold_coin 96
     $item_baked_pie
     $item_bunches_of_dates
     $item_fruit_basket
@@ -829,9 +829,9 @@ SECTION ITEMLIST $itemlist_low_level_dungeon_chest_spawner
     //$$ low level dungeon chest spawner
     $item_low_level_dungeon_chest_list
     $item_low_level_dungeon_chest_list
-    $item_gold_coin_2
+    $item_gold_coin 151
     $item_low_level_dungeon_chest_list
-    $item_gold_coin_3
+    $item_gold_coin 204
     $item_low_level_dungeon_chest_list
     $item_low_level_dungeon_chest_list
 }
@@ -842,9 +842,9 @@ SECTION ITEMLIST $itemlist_mid_level_dungeon_chest_spawner
     //$$ mid level dungeon chest spawner
     $item_mid_level_dungeon_chest_list
     $item_mid_level_dungeon_chest_list
-    $item_gold_coin_4
+    $item_gold_coin 462
     $item_mid_level_dungeon_chest_list
-    $item_gold_coin_5
+    $item_gold_coin 531
     $item_mid_level_dungeon_chest_list
     $item_mid_level_dungeon_chest_list
 }
@@ -855,8 +855,8 @@ SECTION ITEMLIST $itemlist_high_level_dungeon_chest_spawner
     //$$ high level dungeon chest spawner
     $item_high_level_dungeon_chest_list
     $item_high_level_dungeon_chest_list
-    $item_gold_coin_6
-    $item_gold_coin_7
+    $item_gold_coin 774
+    $item_gold_coin 812
     $item_high_level_dungeon_chest_list
     $item_high_level_dungeon_chest_list
 }
@@ -938,8 +938,8 @@ SECTION ITEMLIST $itemlist_mid_level_dungeon_chest_items
     $item_a_hammer_pick_of_ruin
     $item_a_katana_of_might
     $item_a_katana_of_ruin
-    $item_gold_coin_4
-    $item_gold_coin_5
+    $item_gold_coin 462
+    $item_gold_coin 531
     $item_a_kryss_of_might
     $item_a_kryss_of_ruin
     $item_a_large_battle_axe_of_might

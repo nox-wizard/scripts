@@ -822,7 +822,7 @@ SECTION ITEMTRG $itrg_treasure
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin_K
+    IADD $item_gold_coin
     IADD $item_a_broad_sword_of_ruin
     IADD $item_chainmail_of_defence
     IADD $item_a_hatchet_of_ruin
@@ -911,7 +911,7 @@ SECTION ITEMTRG $itrg_big_treasure
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin_N
+    IADD $item_gold_coin
     IADD $item_chainmail_of_guarding
     IADD $item_chain_legs_of_guarding
     IADD $item_a_wand_of_greater_heal
@@ -995,7 +995,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl2_3
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin_L
+    IADD $item_gold_coin
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
@@ -1086,7 +1086,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_3
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin_M
+    IADD $item_gold_coin
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
@@ -1255,7 +1255,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_7
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin_O
+    IADD $item_gold_coin
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
