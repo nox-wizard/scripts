@@ -10,10 +10,9 @@
 \fn cmd_iset(const chr)
 \brief sets properties of an item or character
 
-<B>syntax:<B> 'iset property value 
+<B>syntax:<B> 'iset property value ["t"]
 <B>command params:</B>
 <UL>
-<LI> a/t: decides if area or single target to apply
 	<UL>
 	<LI> property: the property to be set,choose from the list below,each property allows different values:
 		<UL>
@@ -25,6 +24,7 @@
 		<LI> "sfx": proximity sound effect
 		</UL>
 	</UL>
+<LI> "t": bypass command area and get a target
 </UL>
 
 Properties are recognized also if you type only a few initial letters. Unless there is ambiguity
@@ -48,7 +48,7 @@ public cmd_iset(const chr)
 	new area = chr_getCmdArea(chr);
 	new i = 0, item;
 	//apply command to all items in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[2][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)

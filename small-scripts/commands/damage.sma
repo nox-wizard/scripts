@@ -10,15 +10,16 @@
 \fn cmd_damage(const chr)
 \brief damages a character
 
-<B>syntax:<B> 'damage [amount]["hp"/"stam"/"mana"]
+<B>syntax:<B> 'damage amount ["hp"/"stam"/"mana"]["t"]
 <B>command params:</B>
 <UL>
-<LI> amount: hoe much damage you want to do
+<LI> amount: how much damage you want to do
 	<UL>
 	<LI> "hp": decrease HP (default)
 	<LI> "stam": decrease stamina
 	<LI> "mana": decrease mana
 	</UL>
+	<LI> "t": bypass command area and get a target
 
 </UL>
 
@@ -28,8 +29,8 @@ public cmd_damage(const chr)
 {
 	readCommandParams(chr);
 
-	new stat = 0;
-	new amount = STAT_HP;
+	new stat = STAT_HP;
+	new amount = 0;
 
 	//parameters handling, if no parameters are given, keep defaults, else
 	//read them
@@ -55,7 +56,7 @@ public cmd_damage(const chr)
 	new area = chr_getCmdArea(chr);
 	new chr2,i = 0;
 	//apply command to all characters in area if an area is defined
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[2][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)

@@ -10,13 +10,14 @@
 \fn cmd_freeze(const chr)
 \brief freezes a character
 
-<B>syntax:<B> 'freeze ["on"/"off"]
+<B>syntax:<B> 'freeze ["on"/"off"]["t"]
 <B>command params:</B>
 <UL>
 	<UL>
 	<LI> "on": freeze
 	<LI> "off": off
 	</UL>
+<LI> "t": bypass command area and get a target
 
 </UL>
 
@@ -48,7 +49,7 @@ public cmd_freeze(const chr)
 	new area = chr_getCmdArea(chr);
 	new chr2,i = 0;
 	//apply command to all characters in area if an area is defined
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		area_useCommand(area);
 		if(freeze)

@@ -861,6 +861,7 @@ stock itm_duplicate(const item)
 	return copy;
 }
 
+//=============================== LOCAL VARS ===================================================//
 
 /*!
 \author Horian
@@ -892,5 +893,71 @@ stock chr_LocalVarMaker(const chr, const vartype, const varnum, const Integer=IN
         	log_error("Char %d got string var %d, but before already had an integer var at this place that now was deleted!^n", chr, varnum);
         }
 }
+
+/*!
+\author Fax
+\fn chr_setTempIntVar(chr,var,value)
+\param chr: the character
+\param var: the variable index
+\param value: the value to store
+\since 0.82
+\brief sets a temporary local int var
+
+You don0t need to create the variable, this function already allocates it
+\return nothing
+*/
+stock chr_setTempIntVar(chr,var,value)
+{
+	chr_delLocalVar(chr,var);
+	chr_addLocalIntVar(chr,var,value);
+}
+
+/*!
+\author Fax
+\fn chr_getTempIntVar(chr,var)
+\param chr: the character
+\param var: the variable index
+\since 0.82
+\brief gets a temporary local int var
+
+The variable is deleted after reading.
+
+\return nothing
+*/
+stock chr_getTempIntVar(chr,var)
+{
+	new v = chr_getLocalIntVar(chr,var);
+	chr_delLocalVar(chr,var);
+	return v;
+}
+
+stock chr_setTempStrVar(chr,var,string[])
+{
+	chr_delLocalVar(chr,var);
+	chr_addLocalStrVar(chr,var,string);
+}
+
+stock chr_getTempStrVar(chr,var,string[])
+{
+	chr_getLocalStrVar(chr,var,string);
+	chr_delLocalVar(chr,var);
+}
+
+stock chr_setTempIntVec(chr,var,...)
+{
+	chr_delLocalVar(chr,var);
+	new l = numargs() - 2;
+	chr_addLocalIntVec(chr,var,l);
+	for(new i = 0; i < l; i++)
+		chr_setLocalIntVec(chr,var,i,getarg(i + 2));
+}
+
+stock chr_getTempIntVec(chr,var,vec[])
+{
+	new l = chr_sizeofLocalVar(chr,var);
+	for(new i = 0; i < l; i++)
+		vec[i] = chr_getLocalIntVec(chr,var,i);
+}
+
 
 /** @} */

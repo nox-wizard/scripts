@@ -10,7 +10,7 @@
 \fn cmd_invul
 \brief makes a character vulnerable or invulnerable
 
-<B>syntax:<B> 'invul ["on"/"off"] 
+<B>syntax:<B> 'invul ["on"/"off"]["t"]
 <B>command params:</B>
 <UL>
 <LI> 
@@ -18,7 +18,7 @@
 	<LI> "on": make invulnerable (default)
 	<LI> "off": make vulnerable
 	</UL>
-<LI> "target" pass this paramter if you want to bypass the area effect 
+<LI> "t": bypass command area and get a target 
 </UL>
 
 If area effect is active, all characters in area will be affec.
@@ -46,7 +46,7 @@ public cmd_invul(const chr)
 
 	//apply command to all characters in area
 	new area = chr_getCmdArea(chr)
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		new i,chr2;
 		if(makeinvul)

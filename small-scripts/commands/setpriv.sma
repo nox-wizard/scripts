@@ -10,7 +10,7 @@
 \fn cmd_setpriv(const chr)
 \brief sets the privlevel of a character
 
-<B>syntax:<B> 'setpriv [priv]
+<B>syntax:<B> 'setpriv [priv]["t"]
 <B>command params:</B>
 <UL>
 	<UL>
@@ -47,7 +47,7 @@ public cmd_setpriv(const chr)
 	new area = chr_getCmdArea(chr);
 	new chr2,i = 0;
 	//apply command to all characters in area if an area is defined
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		area_useCommand(area);
 

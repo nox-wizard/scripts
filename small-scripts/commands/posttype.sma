@@ -10,10 +10,11 @@
 \fn cmd_posttype(const chr)
 \brief posttypes a character
 
-<B>syntax:<B> 'posttype type
+<B>syntax:<B> 'posttype type ["t"]
 <B>command params:</B>
 <UL>
 <LI> type: the post type (0 local - 1 regional - 2 global)
+<LI> "t": bypass command area and get a target
 </UL>
 
 If area effect is active, all characters in area will have post type set.
@@ -37,7 +38,7 @@ public cmd_posttype(const chr)
 	new area = chr_getCmdArea(chr);
 	new chr2,i = 0;
 	//apply command to all characters in area if an area is defined
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)

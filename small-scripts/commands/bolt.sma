@@ -10,22 +10,22 @@
 \fn cmd_bolt
 \brief kills a character with showing a lightning bolt
 
-<B>syntax:<B> 'bolt 
+<B>syntax:<B> 'bolt ["t"]
 <B>command params:</B>
 <UL>
-
+	<LI> "t": bypass command area and get a target
 </UL>
 
-If area effect is active, all characters in area will die.
 */
 public cmd_bolt(const chr)
 {
-
+	
+	readCommandParams(chr);
 
 	new area = chr_getCmdArea(chr);
 	new i = 0, chr2;
 	//apply command to all characters in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)

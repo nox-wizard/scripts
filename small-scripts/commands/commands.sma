@@ -60,7 +60,7 @@
 #include "small-scripts/commands/resurrect.sma"
 #include "small-scripts/commands/save.sma"
 #include "small-scripts/commands/sell.sma"
-//#include "small-scripts/commands/setdir.sma" removed
+//#include "small-scripts/commands/setdir.sma" replaced by 'iset dir
 #include "small-scripts/commands/setmoreb12.sma"
 #include "small-scripts/commands/setmoreb34.sma"
 //#include "small-scripts/commands/setmorexyz.sma" replaced by imore

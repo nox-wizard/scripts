@@ -10,14 +10,16 @@
 \fn cmd_dupe(const chr)
 \brief duplicates an item
 
-<B>syntax:<B> 'dupe 
+<B>syntax:<B> 'dupe n ["t"]
 <B>command params:</B>
 <UL>
-
+	<LI> n: number of copies
+	<LI> "t": bypass command area and get a target
 </UL>
 
-If area effect is active, all items in area will be cloned.
-Items in the player's backpack are not copied.
+If area effect is active, all items in area will be cloned.<br>
+Items in the player's backpack are not copied.<br>
+New items are moved to original item's position
 */
 public cmd_dupe(const chr)
 {
@@ -31,7 +33,7 @@ public cmd_dupe(const chr)
 	new area = chr_getCmdArea(chr);
 	new item,i = 0;
 	//apply command to all items in area if an area is defined
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
@@ -39,17 +41,21 @@ public cmd_dupe(const chr)
 			item = set_getItem(area_items(area));
 			if(itm_getProperty(item,IP_CONTAINERSERIAL) != chr_getBackpack(chr)) 
 			{
-				new copy = itm_duplicate(item);
-
-				if(!isItem(copy))
-				{
-					chr_message(chr,_,"That item can't be duplicated");
-					return;
-				}
-		
 				new x,y,z;
 				itm_getPosition(item,x,y,z);
-				itm_moveTo(copy,x,y,z);
+				new copy;
+				for(new j; j < n; j++)
+				{
+					copy = itm_duplicate(item);
+				
+					if(!isItem(copy))
+					{
+						chr_message(chr,_,msg_commandsDef[124]);
+						return;
+					}
+						
+					itm_moveTo(copy,x,y,z);
+				}
 			}
 		}
 

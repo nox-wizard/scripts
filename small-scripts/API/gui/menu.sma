@@ -386,7 +386,7 @@ stock createListMenu(startx,starty,rows,cols,nitems,title[],callback[],menuCallb
 
 /*!
 \author Fax
-\fn createListMenu1(startx,starty,rows,cols,nitems,title[],callback[],menuCallback[])
+\fn createSimpleListMenu(startx,starty,rows,cols,nitems,title[],callback[],menuCallback[])
 \param startx,starty: top left corner coords
 \param rows: menu body height in rows
 \param cols: menu width in columns
@@ -416,12 +416,11 @@ menus use createSimpleListMenu().
 
 \return the menu serial
 */
-stock createListMenu1(startx,starty,rows,cols,nitems,title[],callback[],menuCallback[])
+stock createSimpleListMenu(startx,starty,rows,cols,nitems,title[],callback[],menuCallback[])
 {
 	//create a temporary menu, just to call drawSimpleListMenu() as if it was called by
 	//one of the "prev" "next" buttons
 	new m = createFramedMenu(startx,starty,2,rows,cols,menuCallback);
-	menu_addTitle(title);
 	
 	//store parameters so the function can draw the menu
 	menu_storeValue(0,startx);
@@ -441,7 +440,6 @@ public drawSimpleListMenuPage(menu,chr,btncode)
 {
 	if(!btncode) return INVALID;
 	
-	printf("ciao^n");
 	//read data to draw the menu
 	new startx = menu_readValue(menu,0);
 	new starty = menu_readValue(menu,1);
@@ -450,20 +448,18 @@ public drawSimpleListMenuPage(menu,chr,btncode)
 	new nitems = menu_readValue(menu,4);
 	new title[100];
 	
-	printf("bu^n");
 	menu_readString(menu,0,title);
 	new callback[AMX_FUNCTION_LENGTH];
 	menu_readString(menu,1,callback);
 	new menuCallback[AMX_FUNCTION_LENGTH]
 	menu_readString(menu,2,menuCallback);
 	
-	printf("%s %s %s^n",title,callback,menuCallback);
-	
 	//delete old menu (only needed to get rid of the first temp menu)
-	menu_delete();
+	//menu_delete();
 	
 	//create new menu (that will be actually shown)
 	new m = createFramedMenu(startx,starty,2,rows,cols,menuCallback);
+	cursor_right(cols/2 - strlen(title)/2);
 	menu_addTitle(title);
 	
 	//store parameters so we can redraw the menu in the next calls to this function
@@ -475,40 +471,40 @@ public drawSimpleListMenuPage(menu,chr,btncode)
 	menu_storeString(0,title);
 	menu_storeString(1,callback);
 	menu_storeString(2,menuCallback);
-	
-	printf("riciao^n");
-	
+			
 	//the "prev" "next" buttons return code (btncode) contains information about
 	//the starting and ending items to be drawn
 	new startIdx = btncode >> 16;
 	new stopIdx = btncode & 0xFFFF;
 	
-	printf("startIdx:%d - stopIdx:%d^n",startIdx,stopIdx);
-	
 	cursor_newline();
 	
 	//if this is not the first page add the "prev" button
-	if(startIdx > rows) 
+	if(startIdx >= rows - 1) 
 	{
 		new idx1 = startIdx - rows;
 		new idx2 = startIdx - 1;
+		cursor_right(cols/2 - 8);
 		menu_addLabeledButtonFn((idx1 << 16) + idx2,"drawSimpleListMenuPage","Prev");
+		cursor_back();
 	}
 	
 	//if this is not the last page add the "next" button
 	if(stopIdx < nitems - 1)
 	{
-		new idx1 = stopIdx;
+		new idx1 = stopIdx + 1;
 		new idx2 = stopIdx + rows;
 		if(idx2 >= nitems) idx2 = nitems - 1;
+		cursor_right(cols/2 + 2);
 		menu_addLabeledButtonFn((idx1 << 16) + idx2,"drawSimpleListMenuPage","Next");
+		cursor_back();
 	}
 	
 	//go down to the menu body
 	cursor_newline(3);
 	
 	//draw items by calling the callback
-	for(new idx = startIdx; idx < stopIdx; idx++)
+	for(new idx = startIdx; idx <= stopIdx; idx++)
 	{
 		callFunction1P(funcidx(callback),idx); //the callback will only add text on the right of the button
 		cursor_newline();

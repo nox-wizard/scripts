@@ -10,8 +10,10 @@
 \fn cmd_setmoreb12(const chr)
 \brief setmoreb12s an item
 
-<B>syntax:<B> 'setmoreb12 value
-
+<B>syntax:<B> 'setmoreb12 value ["t"]
+<UL>
+	<LI> "t": bypass command area and get a target
+<LI>
 If area effect is active, all items in area will have moreb12 set.
 */
 public cmd_setmoreb12(const chr)
@@ -37,7 +39,7 @@ public cmd_setmoreb12(const chr)
 	new area = chr_getCmdArea(chr);
 	new i = 0, item;
 	//apply command to all items in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)

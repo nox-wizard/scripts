@@ -8,12 +8,12 @@
 /*!
 \author Fax
 \fn cmd_stamina(const chr)
-\brief staminas a character
+\brief refreshes a character's stamina
 
 <B>syntax:<B> 'stamina 
 <B>command params:</B>
 <UL>
-<LI> "target": pass this parameter if you want to bypass the area effect
+	<LI> "t": bypass command area and get a target
 </UL>
 
 If area effect is active, all characters in area will be staminaed.
@@ -29,7 +29,7 @@ public cmd_stamina(const chr)
 	new area = chr_getCmdArea(chr);
 	new chr2,i = 0;
 	//apply command to all characters in area if an area is defined
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[0][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)

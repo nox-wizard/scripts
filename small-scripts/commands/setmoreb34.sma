@@ -10,7 +10,7 @@
 \fn cmd_setmoreb34(const chr)
 \brief setmoreb34s an item
 
-<B>syntax:<B> 'setmoreb34 value
+<B>syntax:<B> 'setmoreb34 value ["t"]
 
 If area effect is active, all items in area will have moreb34 set.
 If no area effect is active, or if you pass "target", a target will appear and only 
@@ -39,7 +39,7 @@ public cmd_setmoreb34(const chr)
 	new area = chr_getCmdArea(chr);
 	new i = 0, item;
 	//apply command to all items in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)

@@ -10,10 +10,10 @@
 \fn cmd_resend
 \brief resends a character
 
-<B>syntax:<B> 'resend 
+<B>syntax:<B> 'resend ["t"]
 <B>command params:</B>
 <UL>
-
+	<LI> "t": bypass command area and get a target
 </UL>
 
 If area effect is active, all characters in area will die.
@@ -27,7 +27,7 @@ public cmd_resend(const chr)
 	new area = chr_getCmdArea(chr);
 	new i = 0;
 	//apply command to all characters in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[0][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)

@@ -10,12 +10,12 @@
 \fn cmd_dye(const chr)
 \brief dyes an item
 
-<B>syntax:<B> 'dye a/t color 
+<B>syntax:<B> 'dye color ["t"] 
 <B>command params:</B>
 <UL>
-<LI> a/t: decides if area or single target to apply
 <UL>
 	<LI> color: color code, integer or hexadecimal (preceded by 0x)
+	<LI> "t": bypass command area and get a target
 </UL>
 </UL>
 
@@ -33,20 +33,20 @@ public cmd_dye(const chr)
 	}
 
 	new color;
-	if(!isStrHex(__cmdParams[1]))
-		if(!isStrInt(__cmdParams[1]))
+	if(!isStrHex(__cmdParams[0]))
+		if(!isStrInt(__cmdParams[0]))
 		{
 			chr_message(chr,_,msg_commandsDef[126]);
 			return;
 		}
-		else color = str2Int(__cmdParams[1]);
-	else color = str2Hex(__cmdParams[1]);
+		else color = str2Int(__cmdParams[0]);
+	else color = str2Hex(__cmdParams[0]);
 
 
 	new area = chr_getCmdArea(chr);
 	new i = 0, item;
 	//apply command to all items in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)

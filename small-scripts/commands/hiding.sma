@@ -10,7 +10,7 @@
 \fn cmd_hide(const chr)
 \brief hides a character
 
-<B>syntax:<B> 'hiding ["on"/"off"][mode]
+<B>syntax:<B> 'hiding ["on"/"off"][mode]["t"]
 <B>command params:</B>
 <UL>
 <LI>	<UL>
@@ -23,6 +23,7 @@
 	<LI>"spell": hides by spell
 	<LI>"perma": permanantly hidden (default)
 	</UL>
+<LI> "t": bypass command area and get a target
 
 </UL>
 
@@ -69,7 +70,7 @@ public cmd_hiding(const chr)
 	new area = chr_getCmdArea(chr);
 	new i=0, chr2,txt[15];
 	//apply command to all characters in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[2][0] != 't')
 	{	//swich on action: toggle, unhide, hide
 		switch(action)
 		{

@@ -5,14 +5,13 @@ public locationsMenu(const chr, const object)
 	#endif
 	
 	cursor_setProperty(CRP_TAB,50);
-	createListMenu1(0,0,30,30,NUM_LOCATIONS,"Locations list","drawLocationsMenuLine","locationsMenuCback");	
+	createSimpleListMenu(0,0,30,30,NUM_LOCATIONS,"Locations list","drawLocationsMenuLine","locationsMenuCback");	
 	cursor_restoreDefaults();
-	menu_storeValue(0,object);
-	printf("showing menu^n");
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,object);
 	menu_show(chr);
 }
 
-public drawLocationsMenuLine(page,line,col,i)
+public drawLocationsMenuLine(i)
 {
 	new text[10];
 	sprintf(text,"%d ",i);
@@ -26,7 +25,9 @@ public locationsMenuCback(menu,chr,loc)
 {
 	if(!loc) return;
 	--loc;
-	new obj = menu_readValue(menu,0);
+	new obj = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
+	
 	if(isChar(obj))
 		chr_moveTo(obj,__locations[loc][__locX],__locations[loc][__locY],__locations[loc][__locZ]);
 	else if(isItem(obj))

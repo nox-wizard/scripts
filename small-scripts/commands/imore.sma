@@ -10,165 +10,62 @@
 \fn cmd_imore(const chr)
 \brief sets different imore properties of an item
 
-<B>syntax:<B> 'imore property value 
+<B>syntax:<B> 'imore x y z ["t"] 
 <B>command params:</B>
 <UL>
-<LI> property: the property to be set,choose from the list below,each property allows different values:
-	<UL>
-	<LI> "xyz": imorex,y,z
-	<LI> "x":
-	<LI> "y":
-	<LI> "z":
-	</UL>
+	<LI> x: more x
+	<LI> y: more y
+	<LI> z: more z
+	<LI> "t": bypass the area effect and get a target
 </UL>
 
+Passing '_' means "keepold value" so:<br>
+imore _ 23 _<br>
+will set only morey and keep old morex and morez values.
 */
+
 public cmd_imore(const chr)
 {
 	readCommandParams(chr);
-
-	if(!strlen(__cmdParams[0]))
+	
+	new more;
+	new morex = str2Int(__cmdParams[0]);
+	new morey = str2Int(__cmdParams[1]);
+	new morez = str2Int(__cmdParams[2]);
+	
+	//these flags are true if we want tokeep the old value
+	new keep_morex = __cmdParams[0][0] == '_';
+	new keep_morey = __cmdParams[1][0] == '_';
+	new keep_morez = __cmdParams[2][0] == '_';
+	
+	new area = chr_getCmdArea(chr);
+	new i = 0, item;
+	//apply command to all items in area
+	if(area_isValid(area) && __cmdParams[3][0] != 't')
 	{
-		chr_message(chr,_,msg_commandsDef[99]);
+		area_useCommand(area);
+		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
+		{
+			item = set_getItem(area_items(area));
+			more = itm_getProperty(item,IP_MORE);
+			
+			//update the value only if it is different from '_'
+			morex = keep_morex ? (more >> 16) & 0xFF : morex;
+			morey = keep_morey ? (more >> 8) & 0xFF : morey;
+			morez = keep_morez ? more & 0xFF : morez;
+			
+			more = (morex << 16) + (morey << 8) + morez;
+			itm_setProperty(item,IP_MORE,_,more);
+		}
+		chr_message(chr,_,msg_commandsDef[160],__cmdParams[0],i);		
 		return;
 	}
-	
-	new stringlen1 = strlen(__cmdParams[1]);
-
-	new morex, morey, morez,type = 0;
-	//type decides which more is set here, type 1 is morexyz, type2 is morex, type3 is morey, type4 is morez, type5 is morexy, type6 is moreyz, type7 is morexz
-	if(stringlen1==3) //xyz, type1
-	{
-		if(!strlen(__cmdParams[2]) || !strlen(__cmdParams[3]) || !strlen(__cmdParams[4]))
-		{
-			chr_message(chr,_,msg_commandsDef[231]);
-			return;
-		}
-		else 
-		{
-			morex = str2Int(__cmdParams[2]);
-			morey = str2Int(__cmdParams[3]);
-			morez = str2Int(__cmdParams[4]);
-			type = 1;
-		}
-	}
-	else if(stringlen1==2) //type2-4
-	{
-		if(!strlen(__cmdParams[2]) || !strlen(__cmdParams[3]))
-		{
-			chr_message(chr,_,msg_commandsDef[278]);
-			return;
-		}
-		else
-		{
-			if(!strcmp(__cmdParams[1],"xy"))
-			{
-				morex = str2Int(__cmdParams[2]);
-				morey = str2Int(__cmdParams[3]);
-				type=2;
-			}
-			else if(!strcmp(__cmdParams[1],"yz"))
-			{
-				morey = str2Int(__cmdParams[2]);
-				morez = str2Int(__cmdParams[3]);
-				type=3;
-			}
-			else if(!strcmp(__cmdParams[1],"xz"))
-			{
-				morex = str2Int(__cmdParams[2]);
-				morez = str2Int(__cmdParams[3]);
-				type=4;
-			}
-		}
-	}
-	else if(stringlen1==1) //type5-7
-	{
-		if(!strlen(__cmdParams[2]) )
-		{
-			chr_message(chr,_,msg_commandsDef[278]);
-			return;
-		}
-		else
-		{
-			if(!strcmp(__cmdParams[0],"x"))
-			{
-				type=5;
-				morex = str2Int(__cmdParams[2]);
-			}
-			else if(!strcmp(__cmdParams[0],"y"))
-			{
-				type=6;
-				morey = str2Int(__cmdParams[2]);
-			}
-			else if(!strcmp(__cmdParams[0],"z"))
-			{
-				type=7;
-				morez = str2Int(__cmdParams[2]);
-			}
-		}
-	}
-
-	new areacheck = 0;
-	if(__cmdParams[0][0] == 'a')
-		areacheck=1;
 		
-	if(areacheck==1)
-	{
-		new area = chr_getCmdArea(chr);
-		new i = 0, item;
-		//apply command to all items in area
-		if(area_isValid(area))
-		{
-			area_useCommand(area);
-			for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
-			{
-				//type decides which more is set here, type 1 is morexyz, type2 is morex, type3 is morey, type4 is morez, type5 is morexy, type6 is moreyz, type7 is morexz
-				switch(type)
-				{
-					case 1:
-					{
-						itm_setProperty(item,IP_MORE,IP2_X, morex);
-						itm_setProperty(item,IP_MORE,IP2_Y, morey);
-						itm_setProperty(item,IP_MORE,IP2_Z, morez);
-					}
-					case 2:
-					{
-						itm_setProperty(item,IP_MORE,IP2_X, morex);
-					}
-					case 3:
-					{
-						itm_setProperty(item,IP_MORE,IP2_Y, morey);
-					}
-					case 4:
-					{
-						itm_setProperty(item,IP_MORE,IP2_Z, morez);
-					}
-					case 5:
-					{
-						itm_setProperty(item,IP_MORE,IP2_X, morex);
-						itm_setProperty(item,IP_MORE,IP2_Y, morey);
-					}
-					case 6:
-					{
-						itm_setProperty(item,IP_MORE,IP2_Y, morey);
-						itm_setProperty(item,IP_MORE,IP2_Z, morez);
-					}
-					case 7:
-					{
-						itm_setProperty(item,IP_MORE,IP2_X, morex);
-						itm_setProperty(item,IP_MORE,IP2_Z, morez);
-					}
-					default: log_error("Invalid imore type");
-				}
-			}
-			chr_message(chr,_,msg_commandsDef[160],__cmdParams[0],i);		
-			return;
-		}
-	}
-
-	//store parameters to be read by the callback
+	//store the parameters to set
+	chr_setTempIntVec(chr,CLV_CMDTEMP,morex,morey,morez,keep_morex,keep_morey,keep_morez);
+	
 	chr_message(chr,_,msg_commandsDef[161],__cmdParams[0]);
-	target_create(chr,(morex<<24)+(morey << 16) + (morez << 8) + type,_,_,"cmd_imore_targ");
+	target_create(chr,_,_,_,"cmd_imore_targ");
 }
 
 /*!
@@ -177,56 +74,25 @@ public cmd_imore(const chr)
 \params all standard target callback params
 \brief handles single character targetting and setdiring
 */
-public cmd_imore_targ(target, chr, item, x, y, z, unused, morexyz)
+public cmd_imore_targ(target, chr, item, x, y, z, unused, unused1)
 {
-	new prop = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-	chr_delLocalVar(chr,CLV_CMDTEMP);
+	new m[6]; 	//m[0] to m[2] -> morex,morey,morez
+			//m[3] to m[5] -> keep_ flags
+	new more;
+	chr_getTempIntVec(chr,CLV_CMDTEMP,m);
 	
-	new morex = (morexyz >> 24)& 0xFF;
-	new morey = (morexyz >> 16) & 0xFF;
-	new morez = morexyz & 0xFF;
-	new type = morexyz;
-
 	if(isItem(item))
 	{
-		//type decides which more is set here, type 1 is morexyz, type2 is morex, type3 is morey, type4 is morez, type5 is morexy, type6 is moreyz, type7 is morexz
-		switch(type)
-		{
-			case 1:
-			{
-				itm_setProperty(item,IP_MORE,IP2_X, morex);
-				itm_setProperty(item,IP_MORE,IP2_Y, morey);
-				itm_setProperty(item,IP_MORE,IP2_Z, morez);
-			}
-			case 2:
-			{
-				itm_setProperty(item,IP_MORE,IP2_X, morex);
-			}
-			case 3:
-			{
-				itm_setProperty(item,IP_MORE,IP2_Y, morey);
-			}
-			case 4:
-			{
-				itm_setProperty(item,IP_MORE,IP2_Z, morez);
-			}
-			case 5:
-			{
-				itm_setProperty(item,IP_MORE,IP2_X, morex);
-				itm_setProperty(item,IP_MORE,IP2_Y, morey);
-			}
-			case 6:
-			{
-				itm_setProperty(item,IP_MORE,IP2_Y, morey);
-				itm_setProperty(item,IP_MORE,IP2_Z, morez);
-			}
-			case 7:
-			{
-				itm_setProperty(item,IP_MORE,IP2_X, morex);
-				itm_setProperty(item,IP_MORE,IP2_Z, morez);
-			}
-			default: log_error("Invalid imore type");
-		}
+		more = itm_getProperty(item,IP_MORE);
+			
+		//update the value only if it is different from '_'
+		m[0] = m[3] ? (more >> 16) & 0xFF : m[0];
+		m[1] = m[4] ? (more >> 8) & 0xFF : m[1];
+		m[2] = m[5] ? more & 0xFF : m[2];
+		
+		more = (m[0] << 16) + (m[1] << 8) + m[2];
+		itm_setProperty(item,IP_MORE,_,more);
+		
 		itm_refresh(item);
 		chr_message(chr,_,msg_commandsDef[279]);
 	}

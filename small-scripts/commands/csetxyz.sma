@@ -10,7 +10,7 @@
 \fn cmd_csetxyz(const chr)
 \brief sets location-type properties of a character
 
-<B>syntax:<B> 'csetxyz property x y z 
+<B>syntax:<B> 'csetxyz property x y z ["t"]
 <B>command params:</B>
 <UL>
 <LI> property: the property to be set,choose from the list below,each property allows different values:
@@ -19,7 +19,7 @@
 	<LI> "home": home position, for freely wandering npcs
 	<LI> "work": work place, for freely wandering npcs
 </UL>
-<LI> "target": pass this parameter if you want to bypass the area effect
+<LI> "t": bypass command area and get a target
 </UL>
 
 Properties are recognized also if you type only a few initial letters. Unless there is ambiguity
@@ -44,7 +44,7 @@ public cmd_csetxyz(const chr)
 	new area = chr_getCmdArea(chr);
 	new i = 0, item,chr2;
 	//apply command to all items in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[4][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)

@@ -10,11 +10,11 @@
 \fn cmd_decay(const chr)
 \brief decays an item
 
-<B>syntax:<B> 'decay a/t decayTime/"off" 
+<B>syntax:<B> 'decay decayTime/"off" ["t"] 
 params:
 <UL>
-<LI> a/t: decides if area or single target to apply
-<LI> decayTime/"off": the time the item will decay in, or pass "off" to set decay off
+	<LI> decayTime/"off": the time the item will decay in, or pass "off" to set decay off
+	<LI> "t": bypass command area and get a target
 </UL>
 
 If area effect is active, all items in area will have decay set.
@@ -30,14 +30,14 @@ public cmd_decay(const chr)
 	}
 	
 	new decay = INVALID;
-	if(isStrInt(__cmdParams[1]))	
-		decay = getTimerValue(str2Int(__cmdParams[1]));
+	if(isStrInt(__cmdParams[0]))	
+		decay = getTimerValue(str2Int(__cmdParams[0]));
 		
 	new area = chr_getCmdArea(chr);
 	new i = 0, item;
 	
 	//apply command to all items in area
-	if(area_isValid(area))
+	if(area_isValid(area) && __cmdParams[1][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
