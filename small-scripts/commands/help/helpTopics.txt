@@ -13,7 +13,7 @@ to interact with the emulator.
 An ingame command is an ' followed by the command name
 (i.e.: 'add 'wipe 'skills).
 To have hints on commands use the command 
-as help topic (i.e.: help 'add).
+as help topic (i.e.: 'help add).
 For detailed description about commands parameters 
 please refer to the documentation.
 
@@ -88,6 +88,11 @@ all  objects in an area without having to select
 the area each time.
 'area without parameters sets a default area or 
 deletes a previously defined one.
+
+TOPIC 'bolt
+TEXT
+kills a char or area with using lightning bolt anim
+syntax: 'bolt
 
 TOPIC 'cset
 TEXT

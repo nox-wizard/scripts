@@ -10,15 +10,15 @@
 \fn cmd_decay(const chr)
 \brief decays an item
 
-<B>syntax:<B> 'decay decayTime/"off" 
+<B>syntax:<B> 'decay a/t decayTime/"off" 
 params:
 <UL>
+<LI> a/t: decides if area or single target to apply
 <LI> decayTime/"off": the time the item will decay in, or pass "off" to set decay off
-<LI> "target": optionally pass targettobypass the area effect
 </UL>
 
 If area effect is active, all items in area will have decay set.
-If no area effect is active, or if you pass "target", a target will appear and only 
+If no area effect is active, or if you pass "t", a target will appear and only 
 the targetted item will be affected.<br>
 */
 public cmd_decay(const chr)
@@ -30,29 +30,34 @@ public cmd_decay(const chr)
 		chr_message(chr,_,msg_commandsDef[116]);
 		return;
 	}
+	
+	new areacheck = 0;
+	
+	if(__cmdParams[0][0] == 'a')
+		areacheck=1;
 
 	new decay = INVALID;
-	if(isStrInt(__cmdParams[0]))	
+	if(isStrInt(__cmdParams[1]))	
 		decay = getTimerValue(str2Int(__cmdParams[0]));
-
-
-
-	new area = chr_getCmdArea(chr);
-	new i = 0, item;
-	//apply command to all items in area
-	if(area_isValid(area))
+		
+	if(areacheck==1)
 	{
-		area_useCommand(area);
-		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
+		new area = chr_getCmdArea(chr);
+		new i = 0, item;
+		//apply command to all items in area
+		if(area_isValid(area))
 		{
+			area_useCommand(area);
+			for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
+			{
 				item = set_getItem(area_items(area));
 				itm_setDecay(item,decay);
+			}
+			
+			chr_message(chr,_,msg_commandsDef[117],i);		
+			return;
 		}
-
-		chr_message(chr,_,msg_commandsDef[117],i);		
-		return;
 	}
-
 	chr_message(chr,_,msg_commandsDef[118]);
 	target_create(chr,decay,_,_,"cmd_decay_targ");
 }
