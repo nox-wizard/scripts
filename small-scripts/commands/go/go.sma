@@ -195,7 +195,7 @@ public loadGoLocations()
 	log_message("Loading locations for 'go command ...");
 	if(xss_scanFile(filename,"cmd_go_scan")==INVALID)
 	{
-		log_error("Unable toread from %s",filename);
+		log_error("Unable to read from %s",filename);
 		return;
 	}
 	
@@ -307,7 +307,7 @@ static cmd_go_writeFile()
 		file_write(f,"}^n^n");
 	}
 	
-	file_write(f,"//EOF: leave this line at the end of the file^nEOF");
+	file_write(f,"//EOF: leave this line at the end of the file^n");
 	file_close(f);
 	reload_scripts();
 }

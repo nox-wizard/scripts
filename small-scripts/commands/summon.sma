@@ -24,7 +24,6 @@ When using this option no other parameters are needed.<br>
 	<LI> "abs": x and y are intended as absolute (non-negative) coordinates, new position is x,y
 	<LI> "rel": x and y are intended as relative summonment, new position is oldx + x, oldy + y (default)
 	</UL> 
-<LI> "target": pass this parameter if you want to bypass the command area
 </UL>
 
 this command supports command areas only in "rel" mode, in that case all items in the area are

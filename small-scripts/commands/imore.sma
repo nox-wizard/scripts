@@ -20,7 +20,6 @@
 	<LI> "y":
 	<LI> "z":
 	</UL>
-<LI> "target": pass this parameter if you want to bypass the area effect
 </UL>
 
 */

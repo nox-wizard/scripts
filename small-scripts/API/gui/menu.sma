@@ -564,6 +564,7 @@ public createSetListCback(p,l,c,i)
 	callFunction5P(funcidx(setListCallback),p,l,c,i,setListSet);
 }
 
+//========================= MENU PROPERTIES/BUFFERS HANDLING =========================//
 /*!
 \author Fax
 \fn menu_getProperty(prop)

@@ -17,8 +17,6 @@
 </UL>
 
 If area effect is active, all characters in area will be staminaed.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted char will be staminaed
 */
 public cmd_stamina(const chr)
 {

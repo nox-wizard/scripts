@@ -17,8 +17,6 @@
 </UL>
 
 If area effect is active, all characters in area will have stats raised.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted char will be have stats raised
 */
 public cmd_fullstats(const chr)
 {

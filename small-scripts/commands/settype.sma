@@ -10,7 +10,7 @@
 \fn cmd_settype(const chr)
 \brief settypes an item
 
-<B>syntax:<B> 'settype a/t type
+<B>syntax:<B> 'settype type
 <UL>
 <LI> a/t: decides if area or single target to apply
 <UL>
@@ -18,8 +18,6 @@
 </UL>
 </UL>
 If area effect is active, all items in area will have type set.
-If no area effect is active, or if you pass "t", a target will appear and only 
-the targetted item will be affected.<br>
 */
 public cmd_settype(const chr)
 {
@@ -33,29 +31,20 @@ public cmd_settype(const chr)
 
 	new type = str2Int(__cmdParams[1]);
 
-
-
-	new areacheck = 0;
-	if(__cmdParams[0][0] == 'a')
-		areacheck=1;
-		
-	if(areacheck==1)
+	new area = chr_getCmdArea(chr);
+	new i = 0, item;
+	//apply command to all items in area
+	if(area_isValid(area))
 	{
-		new area = chr_getCmdArea(chr);
-		new i = 0, item;
-		//apply command to all items in area
-		if(area_isValid(area))
+		area_useCommand(area);
+		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
 		{
-			area_useCommand(area);
-			for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
-			{
-				item = set_getItem(area_items(area));
-				itm_setProperty(item,IP_TYPE,_,type);
-			}
-			chr_message(chr,_,msg_commandsDef[243],i);		
-			return;
-		}		
-	}
+			item = set_getItem(area_items(area));
+			itm_setProperty(item,IP_TYPE,_,type);
+		}
+		chr_message(chr,_,msg_commandsDef[243],i);		
+		return;
+	}		
 
 	chr_message(chr,_,msg_commandsDef[244]);
 	target_create(chr,type,_,_,"cmd_settype_targ");

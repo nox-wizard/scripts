@@ -14,7 +14,6 @@
 <B>command params:</B>
 <UL>
 <LI> dir: the direction -  "n" "ne" "e" "se" "s" "sw" "w" "nw"
-<LI> "target": pass this parameter if you want to bypass the area effect
 </UL>
 
 */

@@ -17,8 +17,6 @@
 </UL>
 
 If area effect is active, all items in area will be cloned.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted item will be cloned.<br>
 Items in the player's backpack are not copied.
 */
 public cmd_dupe(const chr)

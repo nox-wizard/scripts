@@ -76,6 +76,8 @@ public cmd_help_showTopic(menu,chr,topic)
 
 public loadHelpTopics()
 {
+	log_message("Loading topics for 'help command...");
+	
 	new file = file_open(helpFile,"r");
 	helpResourceMap = createResourceMap(RESOURCEMAP_STRING);
 	printf("help map: %d^n",helpResourceMap);
@@ -85,8 +87,6 @@ public loadHelpTopics()
 		log_error("Unable to open %s, help won't work",helpFile);
 		return;
 	}
-
-	log_message("Loading topics for 'help command...");
 
 	new buffer[200],cmd[50],i;
 	for(i = 0; i < NUM_HELP_TOPICS; i++)
@@ -127,7 +127,7 @@ public loadHelpTopics()
 	NUM_LOADED_TOPICS = i;
 	log_message("%d help topics loaded^n",NUM_LOADED_TOPICS);
 	if(!file_eof(file))
-		log_warning("helpTopics[][] is undersized, increas it's size in small-scripts/commands/help/constant.sma^n",i);
+		log_warning("helpTopics[][] is undersized, increas its size in small-scripts/commands/help/constant.sma^n",i);
 	
 	file_close(file);
 }

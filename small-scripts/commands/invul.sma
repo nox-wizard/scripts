@@ -22,8 +22,6 @@
 </UL>
 
 If area effect is active, all characters in area will be affec.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted char will be affected.
 */
 public cmd_invul(const chr)
 {

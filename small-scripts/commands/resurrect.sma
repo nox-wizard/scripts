@@ -17,8 +17,6 @@
 </UL>
 
 If area effect is active, all characters in area will be resurrected.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted char will be resurrected
 */
 public cmd_resurrect(const chr)
 {

@@ -23,8 +23,6 @@
 </UL>
 
 If area effect is active, all characters in area will be damaged.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted char will be damaged.
 */
 public cmd_damage(const chr)
 {

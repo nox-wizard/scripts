@@ -17,8 +17,6 @@
 </UL>
 
 If area effect is active, all characters in area will die.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted char will be bolted
 */
 public cmd_bolt(const chr)
 {
