@@ -170,7 +170,7 @@ enum additemEntry
 #define NUM_TAILOR 15
 #define IDX_TAILOR IDX_CARPENTER2 + NUM_CARPENTER2
 
-#define NUM_BLACKSMITH 18
+#define NUM_BLACKSMITH 19
 #define IDX_BLACKSMITH IDX_TAILOR + NUM_TAILOR
 
 #define NUM_MUSICIAN 7
@@ -1424,18 +1424,18 @@ new __addMenuList[NUM_ADD_ITEMS][additemEntry] =
 	{0x10E5,"$item_froe                             ","froe"},
 	{0x10E6,"$item_inshave                          ","inshave"},
 	{0x10E7,"$item_scorp                            ","scorp"},
-	{0x19f1,"$item_woodworkers_bench1_1             ","woodworkers bench"},
-	{0x19f2,"$item_woodworkers_bench1_2             ","woodworkers bench"},
-	{0x19f3,"$item_woodworkers_bench1_3             ","woodworkers bench"},
+	{0x19f1,"$item_woodworkers_bench_A1             ","woodworkers bench"},
+	{0x19f2,"$item_woodworkers_bench_A2             ","woodworkers bench"},
+	{0x19f3,"$item_woodworkers_bench_A3             ","woodworkers bench"},
 	{0x19f8,"$item_vise1                            ","vise"},
-	{0x19f7,"$item_woodworkers_bench2_1             ","woodworkers bench"},
-	{0x19f6,"$item_woodworkers_bench2_2             ","woodworkers bench"},
-	{0x19f5,"$item_woodworkers_bench2_3             ","woodworkers bench"},
+	{0x19f7,"$item_woodworkers_bench_B1             ","woodworkers bench"},
+	{0x19f6,"$item_woodworkers_bench_B2             ","woodworkers bench"},
+	{0x19f5,"$item_woodworkers_bench_B3             ","woodworkers bench"},
 	{0x19f4,"$item_vise2                            ","vise"},
-	{0x19f9,"$item_coopers_bench1_1                 ","coopers bench"},
-	{0x19fa,"$item_coopers_bench1_2                 ","coopers bench"},
-	{0x19fb,"$item_coopers_bench2_1                 ","coopers bench"},
-	{0x19fc,"$item_coopers_bench2_2                 ","coopers bench"},
+	{0x19f9,"$item_coopers_bench_A1                 ","coopers bench"},
+	{0x19fa,"$item_coopers_bench_A2                 ","coopers bench"},
+	{0x19fb,"$item_coopers_bench_B1                 ","coopers bench"},
+	{0x19fc,"$item_coopers_bench_B2                 ","coopers bench"},
 	//Misc
 	{0x0A9F,"$item_display_case_border_1            ","display case_border" },
 	{0x0AA0,"$item_display_case_border_2            ","display case_border" },
@@ -1524,8 +1524,9 @@ new __addMenuList[NUM_ADD_ITEMS][additemEntry] =
 	{0x198E,"$item_forge2_2_5                       ",""},
 	{0x1986,"$item_bellows_2                        ",""},
 	{0x0F39,"$item_shovel                           ",""},
-	{0x0F39,"$item_tongs                            ",""},
+	{0x0Fbb,"$item_tongs                            ",""},
 	{0x1BF2,"$item_iron_ingots                      ",""},
+	{0x19B9,"$item_iron_ore                         ",""},
 	
 	//Musician
 	{0x0E9C,"$item_drum                             ","drum"},
