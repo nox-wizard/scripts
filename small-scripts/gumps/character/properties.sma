@@ -136,7 +136,8 @@ static const propSkillTINKERING		= 117;
 static const propSkillTRACKING		= 118;
 static const propSkillVETERINARY	= 119;
 static const propSkillWRESTLING		= 120;
-
+static const propOnCheckAi		= 121;
+static const propOnDied			= 122;
 
 static const propLocalVariables	= 200;
 //
@@ -1000,6 +1001,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 					chr_setProperty( serial, CP_PRIV2, _,  chr_getProperty( serial, CP_PRIV2, _) & ~0x02 );
 			}
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if( page == 8 )
+		{
+			//
 			// process changes to: Game master clearance
 			// -----------------------------------------
 			//
@@ -1034,14 +1043,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 				}
 			}
 			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if( page == 8 )
-		{
-			//
 			// process changes to: Healing skill
 			// ---------------------------------
 			//
@@ -1060,6 +1061,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_HERDING, newNumeric );
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if( page == 9 )
+		{
+			//
 			// process changes to: Hidden Permanently
 			// ---------------------------------------
 			//
@@ -1074,14 +1083,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 					chr_setProperty( serial, CP_PRIV2, _,  chr_getProperty( serial, CP_PRIV2, _) & ~0x08 );
 				updateChar = 1;
 			}
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if( page == 9 )
-		{
 			//
 			// process changes to: Hiding skill
 			// --------------------------------
@@ -1149,29 +1150,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 					updateChar = 1;
 				}
 			}
-			//
-			// process changes to: Invulnerable
-			// --------------------------------
-			//
-			gui_getInputField( propInvulnerable, newString );
-			oldNumeric = (chr_getProperty( serial, CP_PRIV, _)&0x04 ? 1 : 0);
-			newNumeric = prop2Boolean( newString, oldNumeric );
-			if( newNumeric != oldNumeric )
-			{
-				if( newNumeric )
-					chr_setProperty( serial, CP_PRIV, _,  chr_getProperty( serial, CP_PRIV, _) | 0x04 );
-				else
-					chr_setProperty( serial, CP_PRIV, _,  chr_getProperty( serial, CP_PRIV, _) & ~0x04 );
-			}
-			//
-			// process changes to: Item identification skill
-			// ---------------------------------------------
-			//
-			gui_getInputField( propSkillITEMID, newString );
-			oldNumeric = chr_getProperty( serial, CP_SKILL, SK_ITEMID );
-			newNumeric = prop2Unsigned( newString, oldNumeric );
-			if( newNumeric != oldNumeric )
-				chr_setProperty( serial, CP_SKILL, SK_ITEMID, newNumeric );
 			// TODO - needs amxwrap2 change
 			//
 			// process changes to: Jail time
@@ -1203,6 +1181,29 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 		}
 		if ( page == 10 )
 		{
+			//
+			// process changes to: Invulnerable
+			// --------------------------------
+			//
+			gui_getInputField( propInvulnerable, newString );
+			oldNumeric = (chr_getProperty( serial, CP_PRIV, _)&0x04 ? 1 : 0);
+			newNumeric = prop2Boolean( newString, oldNumeric );
+			if( newNumeric != oldNumeric )
+			{
+				if( newNumeric )
+					chr_setProperty( serial, CP_PRIV, _,  chr_getProperty( serial, CP_PRIV, _) | 0x04 );
+				else
+					chr_setProperty( serial, CP_PRIV, _,  chr_getProperty( serial, CP_PRIV, _) & ~0x04 );
+			}
+			//
+			// process changes to: Item identification skill
+			// ---------------------------------------------
+			//
+			gui_getInputField( propSkillITEMID, newString );
+			oldNumeric = chr_getProperty( serial, CP_SKILL, SK_ITEMID );
+			newNumeric = prop2Unsigned( newString, oldNumeric );
+			if( newNumeric != oldNumeric )
+				chr_setProperty( serial, CP_SKILL, SK_ITEMID, newNumeric );
 			//
 			// process changes to: Karma
 			// -------------------------
@@ -1299,6 +1300,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 					chr_setProperty( serial, CP_PRIV2, _,  chr_getProperty( serial, CP_PRIV2, _) & ~0x40 );
 			}
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if ( page == 11 )
+		{
+			//
 			// process changes to: Magic resistance skill
 			// ------------------------------------------
 			//
@@ -1307,14 +1316,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_MAGICRESISTANCE, newNumeric );
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if ( page == 11 )
-		{
 			//
 			// process changes to: Mana not needed
 			// -----------------------------------
@@ -1366,6 +1367,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_MUSICIANSHIP, newNumeric );
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if ( page == 12 )
+		{
+			//
 			// process changes to: Name
 			// ------------------------
 			//
@@ -1378,14 +1387,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 					newString{29} = 0;
 				chr_setProperty( serial, CP_STR_NAME, _, newString );
 			}
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if ( page == 12 )
-		{
 			//
 			// process changes to: Parry skill
 			// -------------------------------
@@ -1423,6 +1424,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_PROVOCATION, newNumeric );
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if ( page == 13 )
+		{
+			//
 			// process changes to: Reagents not needed
 			// ---------------------------------------
 			//
@@ -1436,14 +1445,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 				else
 					chr_setProperty( serial, CP_PRIV2, _,  chr_getProperty( serial, CP_PRIV2, _) & ~0x80 );
 			}
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if ( page == 13 )
-		{
 			//
 			// process changes to: Remove traps skill
 			// --------------------------------------
@@ -1533,6 +1534,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 					chr_setProperty( serial, CP_PRIV, _,  chr_getProperty( serial, CP_PRIV, _) & ~0x40 );
 			}
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if ( page == 14 )
+		{
+			//
 			// process changes to: Snooping skill
 			// ----------------------------------
 			//
@@ -1550,14 +1559,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_SPIRITSPEAK, newNumeric );
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if ( page == 14 )
-		{
 			//
 			// process changes to: Stealing skill
 			// ----------------------------------
@@ -1616,6 +1617,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_TAILORING, newNumeric );
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if ( page == 15 )
+		{
+			//
 			// process changes to: Taming skill
 			// --------------------------------
 			//
@@ -1633,14 +1642,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_TASTEID, newNumeric );
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if ( page == 15 )
-		{
 			//
 			// process changes to: Tinkering skill
 			// -----------------------------------
@@ -1682,6 +1683,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_VETERINARY, newNumeric );
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if( page == 16 )
+		{
+			//
 			// process changes to: Wander mode
 			// -------------------------------
 			//
@@ -1705,14 +1714,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			{
 				chr_setProperty( serial, CP_NPCWANDER, _, newNumeric )
 			}
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if( page == 16 )
-		{
 			//
 			// process changes to: Wrestling skill
 			// -----------------------------------
@@ -2088,6 +2089,12 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			chr_getEventHandler( clickedChar, EVENT_CHR_ONKILL, str );
 			addProperty( "Event kill", str, 0, 0, ( edit ? propOnKill : 0 ));
 			//
+			chr_getEventHandler( clickedChar, EVENT_CHR_ONDIED, str );
+			addProperty( "Event kill", str, 0, 0, ( edit ? propOnDied : 0 ));
+			//
+			chr_getEventHandler( clickedChar, EVENT_CHR_ONCHECKNPCAI, str );
+			addProperty( "Event kill", str, 0, 0, ( edit ? propOnCheckAi : 0 ));
+			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_FAME, _ ));
 			addProperty( "Fame", str, 0, 0, ( edit ? propFame : 0 ) );
 			//
@@ -2104,13 +2111,13 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			// TO DO: remove GM property, is handled by clearance prop
 			addProperty( "Game master", (chr_isGM( clickedChar ) ? "True" : "False") );
 			//
+		}
+		if ( page == 8 )
+		{
 			addProperty( "Game master clearance", ( chr_getProperty( clickedChar, CP_PRIV, _)&0x1 ? "True" : "False" ), 0, 0, ( edit ? propGMClearance : 0 ) );
 			//
 			addProperty( "Game master is pageable", ( chr_getProperty( clickedChar, CP_PRIV, _)&0x20 ? "True" : "False" ), 0, 0, ( edit ? propGMPageable : 0 ));
 			//
-		}
-		if ( page == 8 )
-		{
 			addProperty( "Guarded", (chr_getProperty( clickedChar, CP_GUARDED, _ ) ? "True" : "False" ) );
 			//
 			sprintf( str, "%d", chr_getGuildNumber( clickedChar ) );
@@ -2138,6 +2145,9 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_HERDING ) );
 			addProperty( "Herding", str, 0, 0, ( edit ? propSkillHERDING : 0 ) );
 			//
+		}
+		if ( page == 9 )
+		{
 			if ( (chr_getProperty( clickedChar, CP_PRIV2, _)&0x8 ) )
 				int = 3;
 			else
@@ -2154,9 +2164,6 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			//
 			addProperty( "Hidden permanently", ((chr_getProperty( clickedChar, CP_PRIV2, _)&0x8) ? "True" : "False" ), 0, 0, ( edit ? propAlwaysHidden : 0 ) );
 			//
-		}
-		if ( page == 9 )
-		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_HIDING ) );
 			addProperty( "Hiding", str, 0, 0, ( edit ? propSkillHIDING : 0 ) );
 			//
@@ -2178,14 +2185,14 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_INTELLIGENCE, CP2_REAL ));
 			addProperty( "Intelligence", str, 0, 0, ( edit ? propIntelligence : 0 ) );
 			//
+		}
+		if ( page == 10 )
+		{
 			addProperty( "Invulnerable", (chr_getProperty( clickedChar, CP_PRIV,_ )&0x04 ? "True" : "False"), 0, 0, ( edit ? propInvulnerable : 0 ));
 			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_ITEMID ) );
 			addProperty( "Item identification", str, 0, 0, ( edit ? propSkillITEMID : 0 ) );
 			//
-		}
-		if ( page == 10 )
-		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_KARMA, _ ));
 			addProperty( "Karma", str, 0, 0, ( edit ? propKarma : 0 ) );
 			//
@@ -2213,15 +2220,15 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			//
 			addProperty( "Magic reflect ability", ((chr_getProperty( clickedChar, CP_PRIV2, _)&0x40) ? "True" : "False" ), 0, 0, ( edit ? propManaUnneeded : 0 ) );
 			//
+		}
+		if ( page == 11)
+		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_MAGICRESISTANCE ) );
 			addProperty( "Magic resistance", str, 0, 0, ( edit ? propSkillMAGICRESISTANCE : 0 ) );
 			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_INTELLIGENCE, CP2_ACT ));
 			addProperty( "Mana", str );
 			//
-		}
-		if ( page == 11)
-		{
 			addProperty( "Mana not needed", ((chr_getProperty( clickedChar, CP_PRIV2, _)&0x10) ? "True" : "False" ), 0, 0, ( edit ? propManaUnneeded : 0 ) );
 			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_MEDITATION ) );
@@ -2242,15 +2249,15 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_MUSICIANSHIP ) );
 			addProperty( "Musicianship", str, 0, 0, ( edit ? propSkillMUSICIANSHIP : 0 ) );
 			//
+		}
+		if ( page == 12 )
+		{
 			chr_getProperty( clickedChar, CP_STR_NAME, _, str );
 			addProperty( "Name (current)", str, 0, 0, ( edit ? propName : 0 ) );
 			//
 			chr_getProperty( clickedChar, CP_STR_ORGNAME, _, str );
 			addProperty( "Name (real)", str, 0, 1 );
 			//
-		}
-		if ( page == 12 )
-		{
 			int = chr_getProperty( clickedChar, CP_WEIGHT, _ ) - chr_getProperty( clickedChar, CP_STRENGHT, CP2_REAL )*4 + 30;
 			if( int < 0 )
 				int = 0;
@@ -2284,14 +2291,14 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_PROVOCATION ) );
 			addProperty( "Provocation", str, 0, 0, ( edit ? propSkillPROVOCATION : 0 ) );
 			//
+		}
+		if ( page == 13 )
+		{
 			addProperty( "Reagents not needed", ((chr_getProperty( clickedChar, CP_PRIV2, _)&0x80) ? "True" : "False" ), 0, 0, ( edit ? propNoReagents : 0 ) );
 			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_REMOVETRAPS ) );
 			addProperty( "Remove traps", str, 0, 0, ( edit ? propSkillREMOVETRAPS : 0 ) );
 			//
-		}
-		if ( page == 13 )
-		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SERIAL, _ ) );
 			addProperty( "Serial", str );
 			//
@@ -2311,15 +2318,15 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			//
 			addProperty( "Snoop ability", (chr_getProperty( clickedChar, CP_PRIV, _ )&0x40 ? "True" : "False"), 0, 0, ( edit ? propSnoopAbility : 0 ));
 			//
+		}
+		if ( page == 14 )
+		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_SNOOPING ) );
 			addProperty( "Snooping", str, 0, 0, ( edit ? propSkillSNOOPING : 0 ) );
 			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_SPIRITSPEAK ) );
 			addProperty( "Spiritspeak", str, 0, 0, ( edit ? propSkillSPIRITSPEAK : 0 ) );
 			//
-		}
-		if ( page == 14 )
-		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_DEXTERITY, CP2_ACT ));
 			addProperty( "Stamina", str );
 			//
@@ -2343,15 +2350,15 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_TAILORING ) );
 			addProperty( "Tailoring", str, 0, 0, ( edit ? propSkillTAILORING : 0 ) );
 			//
+		}
+		if ( page == 15 )
+		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_TAMING ) );
 			addProperty( "Taming", str, 0, 0, ( edit ? propSkillTAMING : 0 ) );
 			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_TASTEID ) );
 			addProperty( "Taste identification", str, 0, 0, ( edit ? propSkillTASTEID : 0 ) );
 			//
-		}
-		if ( page == 15 )
-		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_TINKERING ) );
 			addProperty( "Tinkering", str, 0, 0, ( edit ? propSkillTINKERING : 0 ) );
 			//
@@ -2373,15 +2380,15 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_NPCWANDER, _ ) );
 			addProperty( "Wander mode", str, 0, 0, ( edit ? propWanderMode : 0 )  );
 			//
+		}
+		if ( page == 16 )
+		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_OLDNPCWANDER, _ ) );
 			addProperty( "Wander mode (old)", str, 0, 0, ( edit ? propOldWanderMode : 0 )  );
 			//
 			sprintf( str, "%d/%d", chr_getProperty(clickedChar, CP_WEIGHT, _), chr_getProperty(clickedChar, CP_STRENGHT, CP2_REAL )*4+30 );
 			addProperty( "Weight", str );
 			//
-		}
-		if ( page == 16 )
-		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_WRESTLING ) );
 			addProperty( "Wrestling", str, 0, 0, ( edit ? propSkillWRESTLING : 0 ) );
 		}
