@@ -364,87 +364,87 @@ C;MORE1;OWNER;=getHouseOwner(None, value)
 T;NAME;NAME;a brass sign
 
 [0b95]
-MAPPING $item_library
+MAPPING $item_library_sign_1
 
 [i_sign_bakery]
-MAPPING $item_bakery
+MAPPING $item_bakery_sign_1
 [0ba4]
-MAPPING $item_bakery_1
+MAPPING $item_bakery_sign_1
 
 [0ba9]
-MAPPING $item_butcher
+MAPPING $item_butcher_sign_1
 [0bab]
-MAPPING $item_healer
+MAPPING $item_healer_sign_1
 [0bad]
-MAPPING $item_magic_shop
+MAPPING $item_magic_shop_sign_1
 [0baf]
-MAPPING $item_carpenter
+MAPPING $item_carpenter_sign_1
 
 [0bb1]
-MAPPING $item_harbor_master
+MAPPING $item_harbor_master_sign_1
 
 [0bb3]
-MAPPING $item_inn
+MAPPING $item_inn_sign_1
 
 [0bb5]
-MAPPING $item_shipwright
+MAPPING $item_shipwright_sign_1
 
 [0bb7]
-MAPPING $item_stables
+MAPPING $item_stables_sign_1
 
 [0bbb]
-MAPPING $item_musician
+MAPPING $item_musician_sign_1
 
 [0bbf]
-MAPPING $item_armorer
+MAPPING $item_armorer_sign_1
 
 [0bc1]
-MAPPING $item_jewler
+MAPPING $item_jewler_sign_1
 
 [0bc3]
-MAPPING $item_tavern
+MAPPING $item_tavern_sign_1
 
 [0bc5]
-MAPPING $item_alchemist
+MAPPING $item_alchemist_sign_1
 
 [0bc7]
-MAPPING $item_blacksmith
+MAPPING $item_blacksmith_sign_1
 
 [0bd3]
-MAPPING $item_armaments_guild
+MAPPING $item_armaments_guild_sign_1
 
 [0bd5]
-MAPPING $item_armorers_guild
+MAPPING $item_armorers_guild_sign_1
 
 [0bd7]
-MAPPING $item_blacksmiths_guild
+MAPPING $item_blacksmiths_guild_sign_1
 
 [0bd9]
-MAPPING $item_weapons_guild
+MAPPING $item_weapons_guild_sign_1
 
 [0bdb]
-MAPPING $item_bardic_guild
+MAPPING $item_bardic_guild_sign_1
 
 [0bdd]
-MAPPING $item_miners_guild
+MAPPING $item_miners_guild_sign_1
 
 [0c02]
-MAPPING $item_tinkers_guild_1
+MAPPING $item_tinkers_guild_2
 
 [0c03]
-MAPPING $item_warriors_guild
+MAPPING $item_warriors_guild_sign_1
 
 [0c05]
-MAPPING $item_cavalry_guild
+MAPPING $item_cavalry_guild_sign_1
 
 [0c07]
-MAPPING $item_fighters_guild
+MAPPING $item_fighters_guild_sign_1
 
 [0c09]
-MAPPING $item_merchants_guild
+MAPPING $item_merchants_guild_sign_1
 
 [0c0a]
-MAPPING $item_merchants_guild_1
+MAPPING $item_merchants_guild_sign_1
 [01ACB]
 MAPPING $item_lighthouse_Z5
 
@@ -1213,3 +1213,58 @@ MAPPING $item_candelabra
 [0BFA]
 MAPPING $item_tailors_guild_sign_2
 
+[i_bar_piece]
+MAPPING $item_bar_piece
+D;ID;;
+C;DISPID;ID;=decimal(value)
+
+[01910]
+MAPPING $item_bar_piece
+
+[01911]
+MAPPING $item_bar_piece_1
+
+[01912]
+MAPPING $item_bar_piece_2
+
+[01913]
+MAPPING $item_bar_piece_3
+
+[01918]
+MAPPING $item_bar_piece_4
+
+[01919]
+MAPPING $item_bar_piece_5
+
+[0191a]
+MAPPING $item_bar_piece_6
+
+[0191b]
+MAPPING $item_bar_piece_7
+
+[0191c]
+MAPPING $item_bar_piece_8
+
+[0191d]
+MAPPING $item_bar_piece_9
+
+[0191e]
+MAPPING $item_bar_piece_10
+
+[0191f]
+MAPPING $item_bar_piece_11
+
+[i_bench_wood_dark]
+MAPPING $item_wooden_bench
+
+[0b2d]
+MAPPING $item_wooden_bench_1
+
+[i_table_nightstand]
+MAPPING $item_table
+
+[0b35]
+MAPPING $item_table_4
+
+[i_table_nightstand_ext]
+MAPPING $item_table_3

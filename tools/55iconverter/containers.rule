@@ -24,9 +24,6 @@ MAPPING $item_pouch
 [0E75]
 MAPPING $item_backpack
 
-[I_BACKPACK]
-MAPPING $item_backpack
-
 [0E76]
 MAPPING $item_leather_bag
 
@@ -45,15 +42,38 @@ MAPPING $item_metal_box
 [I_BOX_BRASS]
 MAPPING $item_metal_box
 
-[0E40]
-MAPPING $item_metal_chest1
-
-[I_CHEST_METAL_BRASS]
-MAPPING $item_metal_chest1
-
 [0E7D]
 MAPPING $item_wooden_box1_1
 
 [0E7C]
 MAPPING $item_silver_chest
 
+[i_pouch]
+MAPPING $item_pouch
+
+[i_chest_metal]
+MAPPING $item_metal_chest1
+I;;SCRIPTID;2502
+T;TYPE;TYPE;=mapSphereType(value, "t_container_locked")
+C;LINK;MORE;=findHouseLink(value)
+
+[i_chest_metal_brass]
+MAPPING $item_metal_chest1
+I;;SCRIPTID;2502
+T;TYPE;TYPE;=mapSphereType(value, "t_container_locked")
+C;LINK;MORE;=findHouseLink(value)
+
+[i_vendorbox]
+T;NAME;NAME;a backpack
+I;;NAME2;#
+I;;ID;3701
+I;;SCRIPTID;310101
+T;X;X;0
+T;Y;Y;0
+T;Z;Z;0
+I;;TYPE;1
+I;;DYEABLE;1
+I;;ATT;5
+I;;PRIV;1
+C;LAYER;LAYER;=chooseSellBox(value)
+C;CONT;CONT;=glob.serialIndex[value]

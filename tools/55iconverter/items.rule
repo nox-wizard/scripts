@@ -1414,4 +1414,43 @@ MAPPING $item_e
 [0E41]
 MAPPING $item_metal_chest2
 
+[i_map_blank]
+MAPPING $item_a_map
+
+[i_water]
+MAPPING $item_ground_water
+
+[i_cloth]
+MAPPING $item_cut_cloth
+
+[i_teleporter]
+MAPPING $item_teleporter
+D;ID;;
+C;DISPID;ID;=decimal(value)
+T;MOREX;MOREX;0
+T;MOREY;MOREY;0
+T;MOREZ;MOREZ;0
+C;TYPE;TYPE;51
+
+[i_bandage_bloody]
+MAPPING $item_clean_bandages
+
+[i_trough_water]
+MAPPING $item_water_trough
+
+[0b41]
+MAPPING $item_water_trough
+
+[0b42]
+MAPPING $item_water_trough_1
+
+[0b43]
+MAPPING $item_water_trough_2
+
+[0b44]
+MAPPING $item_water_trough_3
+
+[i_hammer_smith]
+MAPPING $item_smithy_hammer
+
 

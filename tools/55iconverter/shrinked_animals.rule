@@ -1,0 +1,40 @@
+[i_pet_horse_brown_dk]
+MAPPING $item_pet_horse
+I;;ID;8481
+
+[i_pet_horse_brown_lt]
+MAPPING $item_pet_horse
+I;;ID;8480
+
+[i_pet_horse_gray]
+MAPPING $item_pet_horse
+I;;ID;8479
+
+[i_pet_horse_tan]
+MAPPING $item_pet_horse
+I;;ID;8484
+
+[i_pet_llama_pack]
+MAPPING $item_pet_pack_llama
+
+[i_pet_ostard_desert]
+MAPPING $item_pet_ostard
+I;;ID;8501
+
+[i_pet_ostard_forest]
+MAPPING $item_pet_ostard
+I;;ID;8503
+
+[i_pet_ostard_zostrich]
+MAPPING $item_pet_ostard
+I;;ID;8502
+
+[i_pet_rabbit_2]
+MAPPING $item_pet_rabbit
+
+[i_pet_man]
+MAPPING $item_pet_man
+
+[i_pet_woman]
+MAPPING $item_pet_woman
+

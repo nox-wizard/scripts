@@ -538,7 +538,6 @@ def cleanRules():
 							ruleParts=indiv_rule.split(";")
 							if ( ruleParts[0].startswith("MAPPING")):
 								continue
-							print "Debug: ", ruleParts
 							currentRuleIndex[ruleParts[2].upper()]=1
 							if ( noxName == ruleParts[2]):
 								delRules.append(indexCount-1)
@@ -655,14 +654,13 @@ def main():
 	glob.itemArray=[]
 	glob.lineCounter=0
 	glob.charCounter=1
-	glob.itemCounter=0
 	glob.serialCounter=1
 	glob.itemSerialCounter=1073741825
 	glob.itemSerials=str(glob.itemSerialCounter)
 	glob.serials=str(glob.serialCounter)
 	glob.accSerialIndex={}
 	glob.itemIdIndex={}
-	glob.itemCounter=0
+	glob.itemCounter=1
 	glob.backpackIndex={}
 	glob.bankboxIndex={}
 	glob.charMappingTable={}
@@ -805,15 +803,20 @@ def main():
 	os.remove("items_pickle.cnv");
 	print "Done"
 	print "Writing missing converter rules to missing.txt...",
+	missTotal=0
+	if ( len(glob.missing) > 0 ):
+		missingFile=open (os.path.dirname(sys.argv[0]) + "/" + "missing.txt", "w")
 
-	missingFile=open (os.path.dirname(sys.argv[0]) + "/" + "missing.txt", "w")
-	for entry in glob.missing.keys():
-		missingFile.write("Don't know how to convert entry " + entry + ", totalling " + str (glob.missing[entry]) + " entries\n")
-	missingFile.close()
-	missingFile=open (os.path.dirname(sys.argv[0]) + "/" + "NoxMissing.txt", "w")
-	for entry in glob.noxMissing.keys():
-		missingFile.write("Don't know entry " + entry + ", totalling " + str (glob.noxMissing[entry]) + " entries in Nox!\n")
-	missingFile.close()
+		for entry in glob.missing.keys():
+			missingFile.write("Don't know how to convert entry " + entry + ", totalling " + str (glob.missing[entry]) + " entries\n")
+			missTotal+=glob.missing[entry]
+		missingFile.close()
+	if ( len(glob.noxMissing) > 0 ):
+		missingFile=open (os.path.dirname(sys.argv[0]) + "/" + "NoxMissing.txt", "w")
+		for entry in glob.noxMissing.keys():
+			missingFile.write("Don't know entry " + entry + ", totalling " + str (glob.noxMissing[entry]) + " entries in Nox!\n")
+		missingFile.close()
 	print "Done"
+	print missTotal, "items have been lost due to missing the conversion"
 	print glob.discardedItems, "items have been discarded during the conversion"
 main()

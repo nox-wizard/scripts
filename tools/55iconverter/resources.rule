@@ -1,0 +1,445 @@
+[i_ore_iron]
+I;;ID;6585
+I;;NAME;iron ore
+I;;SCRIPTID;95518
+T;;COLOR;2104
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_rusty]
+I;;ID;6585
+I;;NAME;rusty ore
+I;;SCRIPTID;95518
+T;;COLOR;1872
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+
+[i_ore_dull_copper]
+I;;ID;6585
+I;;NAME;dull copper ore
+I;;SCRIPTID;95518
+T;;COLOR;1546
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+
+[i_ore_old_copper]
+I;;ID;6585
+I;;NAME;old copper ore
+I;;SCRIPTID;95518
+T;;COLOR;1424
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_bronze]
+I;;ID;6585
+I;;NAME;bronze ore
+I;;SCRIPTID;95518
+T;;COLOR;2107
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_copper]
+I;;ID;6585
+I;;NAME;copper ore
+I;;SCRIPTID;95518
+T;;COLOR;1134
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_shadow]
+I;;ID;6585
+I;;NAME;shadow ore
+I;;SCRIPTID;95518
+T;;COLOR;2412
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_agapite]
+I;;ID;6585
+I;;NAME;agapite ore
+I;;SCRIPTID;95518
+T;;COLOR;2205
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_rose]
+I;;ID;6585
+I;;NAME;rose ore
+I;;SCRIPTID;95518
+T;;COLOR;1637
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+
+[i_ore_gold]
+I;;ID;6585
+I;;NAME;gold ore
+I;;SCRIPTID;95518
+T;;COLOR;2009
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+
+[i_ore_silver]
+I;;ID;6585
+I;;NAME;silver ore
+I;;SCRIPTID;95518
+T;;COLOR;2101
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+
+[i_ore_verite]
+I;;ID;6585
+I;;NAME;verite ore
+I;;SCRIPTID;95518
+T;;COLOR;1956
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_bloodrock]
+I;;ID;6585
+I;;NAME;bloodrock ore
+I;;SCRIPTID;95518
+T;;COLOR;1218
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_valorite]
+I;;ID;6585
+I;;NAME;valorite ore
+I;;SCRIPTID;95518
+T;;COLOR;1301
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_mytheril]
+I;;ID;6585
+I;;NAME;mythril ore
+I;;SCRIPTID;95518
+T;;COLOR;401
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ore_blackrock]
+I;;ID;6585
+I;;NAME;blackrock ore
+I;;SCRIPTID;95518
+T;;COLOR;1109
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;700
+I;;PRIV;1
+
+[i_ingot_iron]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;iron ingot
+T;;COLOR;0
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_rusty]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;rusty ingot
+T;;COLOR;1872
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_dull_copper]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;dull copper ingot
+T;;COLOR;1546
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+
+[i_ingot_old_copper]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;old copper ingot
+T;;COLOR;1424
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+
+[i_ingot_bronze]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;bronze ingot
+T;;COLOR;2107
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+
+[i_ingot_copper]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;copper ingot
+T;;COLOR;1134
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+
+[i_ingot_shadow]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;shadow ingot
+T;;COLOR;2412
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+
+[i_ingot_agapite]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;agapite ingot
+T;;COLOR;2205
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_rose]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;rose ingot
+T;;COLOR;1637
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_gold]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;gold ingot
+T;;COLOR;2009
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_silver]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;silver ingot
+T;;COLOR;2101
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_verite]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;verite ingot
+T;;COLOR;559
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_bloodrock]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;bloodrock ingot
+T;;COLOR;1218
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_valorite]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;valorite ingot
+T;;COLOR;1301
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_mytheril]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;mythril ingot
+T;;COLOR;401
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_ingot_blackrock]
+MAPPING $item_iron_ingots
+I;;ID;7154
+T;;NAME;blackrock ingot
+T;;COLOR;1109
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;100
+
+[i_log]
+MAPPING $item_logs
+I;;ID;7136
+I;;NAME2;#
+I;;PILEABLE;1
+I;;ATT;5
+I;;WEIGHT;200
+I;;VALUE;5
+
+[i_log_kastanie]
+MAPPING $item_logs
+T;;NAME;Kastanienholz
+I;;ID;7136
+I;;COLOR;1863
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5
+
+[i_log_kiefer]
+MAPPING $item_logs
+T;;NAME;Kieferholz
+I;;ID;7136
+I;;COLOR;1723
+I;;SCRIPTID;7021
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5
+
+[i_log_Fichte]
+MAPPING $item_logs
+T;;NAME;Fichtenholz
+I;;ID;7136
+I;;COLOR;1446
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5
+
+[i_log_Ahorn]
+MAPPING $item_logs
+T;;NAME;Ahornholz
+I;;ID;7136
+I;;COLOR;2415
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5
+
+[i_log_buche]
+MAPPING $item_logs
+T;;NAME;Buchenholz
+I;;ID;7136
+I;;COLOR;2215
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5
+
+[i_log_Tanne]
+MAPPING $item_logs
+T;;NAME;Tannenholz
+I;;ID;7136
+I;;COLOR;350
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5
+
+[i_log_Eiche]
+MAPPING $item_logs
+T;;NAME;Eichenholz
+I;;ID;7136
+I;;COLOR;1536
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5
+
+[i_log_Rotbuche]
+MAPPING $item_logs
+T;;NAME;Rotbuchenholz
+I;;ID;7136
+I;;COLOR;1615
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5
+
+[i_log_Mahagoni]
+MAPPING $item_logs
+T;;NAME;Mahagoniholz
+I;;ID;7136
+I;;COLOR;442
+I;;NAME2;#
+I;;PILEABLE;1
+I;;WEIGHT;700
+I;;VALUE;5

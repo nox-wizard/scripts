@@ -69,3 +69,72 @@ MAPPING $item_lsd_potion
 [I_FLASK_LONG_PURPLE_ANIM]
 MAPPING $item_lsd_potion
 
+[i_potion_cureGreat]
+MAPPING $greater_cure_potion
+
+[i_potion_PoisonGreat]
+MAPPING $greater_poison_potion
+
+[i_potion_PoisonDeadly]
+MAPPING $greater_poison_potion
+
+[i_potion_AgilityGreater]
+MAPPING $greater_agility_potion
+
+[i_potion_ExplosionGreat]
+MAPPING $greater_explosion_potion
+
+[i_potion_Poison]
+MAPPING $normal_poison_potion
+
+[i_potion_PoisonLess]
+MAPPING $lesser_poison_potion
+
+[i_potion_Strength]
+MAPPING $normal_strength_potion
+
+[i_potion_HealGreat]
+MAPPING $greater_healing_potion
+
+[i_potion_StrengthGreat]
+MAPPING $greater_strength_potion
+
+[i_potion_HealLess]
+MAPPING $lesser_healing_potion
+
+[i_potion_Nightsight]
+MAPPING $greater_nightsight_potion
+
+[i_potion_ExplosionLess]
+MAPPING $lesser_explosion_potion
+
+[i_potion_Agility]
+MAPPING $normal_agility_potion
+
+[i_potion_CureLess]
+MAPPING $lesser_cure_potion
+
+[i_potion_Explosion]
+MAPPING $normal_explosion_potion
+
+[i_potion_Heal]
+MAPPING $normal_healing_potion
+
+[i_potion_Cure]
+MAPPING $normal_cure_potion
+
+[i_potion_ManaTotal]
+MAPPING $greater_mana_potion
+
+[i_potion_Mana]
+MAPPING $normal_mana_potion
+
+[i_potion_RefreshTotal]
+MAPPING $greater_energy_potion
+
+[i_potion_Refresh]
+MAPPING $normal_energy_potion
+
+[i_potion_AgilityGreat]
+MAPPING $greater_agility_potion
+

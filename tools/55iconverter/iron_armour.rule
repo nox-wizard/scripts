@@ -85,6 +85,9 @@ MAPPING $item_iron_bronze_shield
 [01416]
 MAPPING $item_iron_platemail
 
+[I_PLATEMAIL_CHEST]
+MAPPING $item_iron_platemail
+
 [01B74]
 MAPPING $item_iron_metal_kite_shield
 
@@ -104,6 +107,9 @@ MAPPING $item_iron_ringmail_gloves
 MAPPING $item_iron_ringmail_leggings
 
 [0141A]
+MAPPING $item_iron_plate_leggings
+
+[I_PLATEMAIL_LEGGINGS]
 MAPPING $item_iron_plate_leggings
 
 [013EF]

@@ -118,3 +118,8 @@ MAPPING $item_iron_maul
 [01405]
 MAPPING $item_iron_war_fork
 
+[I_BOW]
+MAPPING $item_bow
+
+[i_sword_long]
+MAPPING $item_iron_long_sword
