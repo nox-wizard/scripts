@@ -1,0 +1,68 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_menu_api_
+  #endinput
+#endif
+#define _nxw_menu_api_
+
+/** \defgroup script_API_menu Menu
+ *  \ingroup script_API
+ *  @{
+ */
+
+
+/*!
+\author Xanathar
+\fn mnu_prepare(const socket, const pages, const itemperpage)
+\brief
+*/
+native mnu_prepare(const socket, const pages, const itemperpage);
+
+/*!
+\author Xanathar
+\fn mnu_setStyle(const socket, const style, const color = 0)
+\brief
+*/
+native mnu_setStyle(const socket, const style, const color = 0);
+
+/*!
+\author Xanathar
+\fn mnu_setTitle(const socket, const format[], ...)
+\brief
+*/
+native mnu_setTitle(const socket, const format[], ...);
+
+/*!
+\author Xanathar
+\fn mnu_setColor(const socket, const color)
+\brief
+*/
+native mnu_setColor(const socket, const color);
+
+/*!
+\author Xanathar
+\fn mnu_addItem(const socket, const page, const idx, const format[], ...)
+\brief
+*/
+native mnu_addItem(const socket, const page, const idx, const format[], ...);
+
+/*!
+\author Xanathar
+\fn mnu_show(const socket)
+\brief
+*/
+native mnu_show(const socket);
+
+/*!
+\author Xanathar
+\fn mnu_setCallback(const socket, const callback)
+\brief
+*/
+native mnu_setCallback(const socket, const callback);
+
+/** @} */ // end of script_API_menu
