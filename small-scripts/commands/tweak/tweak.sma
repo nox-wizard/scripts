@@ -6,7 +6,7 @@
 */
 
 /*!
-\author Straylight of the freeshard Anacron, www.anacron.net, rewrite, extended and modified by Horian,gernox.de
+\author Straylight/wintermute (www.anacron.net) and Horian (gernox.de)
 \fn cmd_tweak(const chr)
 \brief ingame char/item editing
 
@@ -20,7 +20,7 @@ Shows an ingame menu that allows all kinds of modifications to chars and items<B
 //                                        general tweak stuff                                             //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 const BUTTON_APPLY=10
-const twkpages=7; //one line for one page, two rows for one page
+const twkpages=8; //one line for one page, two rows for one page
 
 const oldpic = 5002;
 const newpic = 5003;
@@ -40,17 +40,20 @@ old5,
 new6,
 old6,
 new7,
-old7
+old7,
+new8,
+old8
 };
 
 static twkButton[twkpages][twk_buttons] = {
-{5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209}
+{5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209}
 };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -207,6 +210,40 @@ static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 //                                      Char tweak definition                                             //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 
+const NUM_lay = 24;
+enum ct_layerlines
+{
+	lt_used,
+	lt_name: 11
+};
+
+static ct_layerprop[NUM_lay][ct_layerlines] = {
+{0,"Hand 1"},
+{0,"Hand 2"},
+{0,"Shoes"},
+{0,"Pants"},
+{0,"Shirt"},
+{0,"Helm"},
+{0,"Gloves"},
+{0,"Ring"},
+{0,"Light"},
+{0,"Neck"},
+{0,"Hair"},
+{0,"Waist"},
+{0,"Chest"},
+{0,"bracelet"},
+{0,"Unused"},
+{0,"Beard"},
+{0,"mid torso"},
+{0,"Ears"},
+{0,"Arms"},
+{0,"Cloak"},
+{0,"Backpack"},
+{0,"Robe"},
+{0,"Skirts"},
+{0,"inner legs"}
+};
+
 const NUM_chrevent = 38;
 
 enum eventChr_prop
@@ -271,7 +308,7 @@ static ct_pg6_r =0;
 static ct_pg7_l =0;
 static ct_pg7_r =0;
 
-const NUM_chrtweak = 50;
+const NUM_chrtweak = 73;
 enum Chr_tweaklines
 {
 ct_linetype,
@@ -284,7 +321,7 @@ ct_inputname: 10
 
 //1: property field, eg itemname
 //2: infofield (for example weight): ct_propnumber is property num to get info or if 0 custom info function (then ct_infotype defines the number for custom function), ct_propval: string:1 and integer: 0
-//3: inputfield, eg Nightsight
+//3: inputfield, eg Nightsight, ct_propnumber = 1 for TFX-Effects, ct_propnumber = 2 for LocalVars Int, ct_propnumber = 3 for LocalVars Str
 //4: checkbox: ct_propnumber is property num to change or 0 if custom function (then ct_infotype defines the number for custom function)
 //5: radiobutton
 //6: subproperties (morex/morey/morez)
@@ -336,10 +373,33 @@ static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {1, "NPC Poison attack:", 257, 0, 0, "         "},
 {1, "Poison time:      ", 261, 0, 0, "         "},
 {1, "Face direction:   ", 104, 0, 0, "         "},
-{3, "Nightsight:       ",   1, 0, 0, "millisec "},
+{3, "Nightsight:       ",   1, 2, 0, "millisec "},
 {4, "Magic reflect:    ", 121,40, 0, "         "},
 {4, "Polymorph:        ",   0, 4, 0, "         "},
-{2, "Incognito:        ",   0, 2, 0, "         "}
+{2, "Incognito:        ",   0, 2, 0, "         "},
+{2, "Has shield:       ",   0, 3, 0, "         "},
+{4, "See House as Icon:", 121, 4, 0, "         "},
+{1, "Steps to fly:     ", 108, 0, 0, "         "},
+{3, "Hallucination:    ",   2,20, 0, "millisec "},
+{2, "Criminal:         ", 213, 0, 0, "         "},
+{1, "Summontimer left: ", 296, 0, 0, "         "},
+{2, "Is tamed:         ",   9, 0, 0, "         "},
+{2, "Spawnerserial:    ", 285, 0, 0, "         "},
+{2, "Is on horse:      ",   7, 0, 0, "         "},
+{4, "Can move all:     ", 121, 1, 0, "         "},
+{4, "Can Broadcast:    ", 134, 2, 0, "         "},
+{1, "Command level:    ", 103, 0, 0, "         "},
+{1, "Defense rating:   ", 215, 0, 0, "         "},
+{4, "Can dispel:       ", 121,20, 0, "         "},
+{3, "Hunger:           ",  2,1002,0, "         "},
+{3, "Thirst:           ",  2,1003,0, "         "},
+{2, "Is jailed:        ",   5, 0, 0, "         "},
+{4, "Needs no mana:    ", 121,10, 0, "         "},
+{4, "Needs no reagents:", 121,80, 0, "         "},
+{4, "Can see serials:  ", 134, 8, 0, "         "},
+{4, "No skill title:   ", 134,10, 0, "         "},
+{4, "Can snoop all:    ", 134,40, 0, "         "},
+{1, "Wandermode:       ", 116, 0, 0, "         "}
 };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -941,18 +1001,22 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 	}//apply button
 }
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+//                                                  char tweak                                           //
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
+
 public tweak_char(const chrsource, const target, pagenumber)
 {
+	printf("enter char tweak mit nummer %d", pagenumber);
 	init_tweak_itm();
 	new tempChrStr[100];
-	new tweakchr_cllbck[15];
-	sprintf( tweakchr_cllbck,"tweakchrBck%d",pagenumber);
-	//printf("tweakchr_cllbck: %s", tweakchr_cllbck);
-	new twkChrMenu = gui_create( 10,10,1,1,1,tweakchr_cllbck );
+	
+	new twkChrMenu = gui_create( 10,10,1,1,1,"tweakchrBck" );
 	
 	gui_setProperty( twkChrMenu,MP_BUFFER,0,PROP_CHARACTER );
 	gui_setProperty( twkChrMenu,MP_BUFFER,1,target );
 	gui_setProperty( twkChrMenu,MP_BUFFER,3,BUTTON_APPLY );
+	gui_setProperty( twkChrMenu,MP_BUFFER,5,pagenumber );
 
 	gui_addPage(twkChrMenu,0);
 	gui_addResizeGump(twkChrMenu,10,35,5054,550,530 );
@@ -963,27 +1027,31 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addButton( twkChrMenu,460,525, 0x084A, 0x084B,BUTTON_APPLY );
 	gui_addPage(twkChrMenu,1);
 
-	new tempStr[100];
-	new tweak_cllbck[15];
-	sprintf( tweak_cllbck,"tweakBck%d",pagenumber);
-	//printf("tweak_cllbck: %s", tweak_cllbck);
-
 	new arrayline = pagenumber-1;
 
 	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
 	gui_addText(twkChrMenu,60,49,33,"Main infos");
+	
 	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
 	gui_addText(twkChrMenu,195,49,33,"Flags1");
+	
 	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
 	gui_addText(twkChrMenu,285,49,33,"Flags2");
+	
 	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
 	gui_addText(twkChrMenu,380,49,33,"Flags3");
+	
 	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 	gui_addText(twkChrMenu,470,49,33,"Events");
+	
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkChrMenu,60,79,33,"LocalVars");
+	
 	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkChrMenu,195,79,33,"Skills");
+	
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+	gui_addText(twkChrMenu,285,79,33,"Layer");
 	
 	gui_addText(twkChrMenu,66,120,33,"Account number :");
 	sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
@@ -1036,15 +1104,15 @@ public tweak_char(const chrsource, const target, pagenumber)
 		leftrow = ct_pg4_l;
 		rightrow = ct_pg4_r;
 	}
-	printf("rightrow: %d, leftrow: %d", rightrow, leftrow);
+	//printf("rightrow: %d, leftrow: %d", rightrow, leftrow);
 	if( 1<= pagenumber <= 4)
 	{
-		printf("chartweak enter page");
+		//printf("chartweak enter page");
 		new linetype; //type of the line (propertyfield, inputfield, radiobutton ...)
 		new p; //creates several property fields if splitted (more is splitted into 4 more values and so p for more is 4)
 		new k=0; //multiplier how many pixel right row is pushed to the right compared to the left row
 		new n=0; //counts the line numbers per row, max is 14 lines
-		new endline
+		new endline;
 		if((rightrow == 0) && (leftrow != 0))
 			endline = leftrow;
 		else if((rightrow != 0) && (leftrow != 0))
@@ -1083,6 +1151,8 @@ public tweak_char(const chrsource, const target, pagenumber)
 							sprintf( tempChrStr,"%d",tempfx_isActive( target,TFX_SPELL_REACTARMOR));
 						else if(chr_twkarray[i][ct_infotype]==2)
 							sprintf( tempChrStr,"%d",tempfx_isActive( target,TFX_SPELL_INCOGNITO));
+						else if(chr_twkarray[i][ct_infotype]==3)
+						       sprintf( tempChrStr,"%d",chr_getShield(target)); 
 					}
 					else if(chr_twkarray[i][ct_propval]==0) //is an integer information
 					{
@@ -1093,15 +1163,24 @@ public tweak_char(const chrsource, const target, pagenumber)
 				}
 				case 3: //inputfield, eg Nightsight
 				{
-					
-					if( chr_twkarray[i][ct_propnumber] == 1)
+					if( chr_twkarray[i][ct_propnumber] == 1) //TFX function
 					{
-						if(tempfx_isActive( target,TFX_SPELL_LIGHT) == 1)
-						checklev = 1;
+						if(tempfx_isActive( target,chr_twkarray[i][ct_infotype]) == 1)
+							checklev = 1;
+							sprintf(tempChrStr, "%s", chr_twkarray[i][ct_inputname]);
+					}
+					else if( chr_twkarray[i][ct_propnumber] == 2) //AMX LocalVars Int
+					{
+						new output = chr_getLocalIntVar(target, chr_twkarray[i][ct_infotype]);
+						sprintf(tempChrStr, "%d",output);
+					}
+					else if( chr_twkarray[i][ct_propnumber] == 3) //AMX LocalVars Str
+					{
+						chr_getLocalStrVar(target, chr_twkarray[i][ct_infotype], tempChrStr);
 					}
 					gui_addGump(twkChrMenu,ct_gu+k, 181+(n*20), 0x827);
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
-					gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,chr_twkarray[i][ct_inputname]);
+					gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
 					gui_addCheckbox( twkChrMenu,ct_check+k,180+(n*20),oldpic,newpic,checklev,i+10);
 					checklev=0;
 				}
@@ -1109,7 +1188,10 @@ public tweak_char(const chrsource, const target, pagenumber)
 				{
 					if((chr_twkarray[i][ct_propnumber] == 134) || (chr_twkarray[i][ct_propnumber] == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
 					{
-						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] != chr_twkarray[i][ct_infotype]) //for example is frozen
+						new privvalue = chr_twkarray[i][ct_infotype]
+						if(privvalue >= 10)
+							privvalue = (privvalue/10)*16;
+						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] == privvalue) //for example is frozen
 							checklev = 1;
 					}
 					else if(chr_twkarray[i][ct_propnumber] == 0) //customized button function, for example open bank box
@@ -1129,14 +1211,14 @@ public tweak_char(const chrsource, const target, pagenumber)
 				}
 				case 5: //radiobutton
 				{
-					if((chr_twkarray[i][ct_propnumber] == 110) || (chr_twkarray[i][ct_propnumber] == 121)) //visible or Priv (bitfields)
+					if((chr_twkarray[i][ct_propnumber] == 110) || (chr_twkarray[i][ct_propnumber] == 121)) //bitfields (for example visibility)
 					{
-						if(chr_getProperty( target,IP_PRIV)&chr_twkarray[i][ct_infotype] != chr_twkarray[i][ct_infotype]) //can decay
+						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] != chr_twkarray[i][ct_infotype]) //can decay
 							checklev = 1;
 						gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
 						gui_addRadioButton( twkChrMenu,ct_radio+k,(180+(n*20)), oldpic,newpic,checklev,i+10);
 					}
-					if(chr_twkarray[i][ct_propnumber] == 111) //moveable
+					else if(chr_twkarray[i][ct_propnumber] == 111) //splitted normal properties, for example moveable (CP_MAGIC)
 					{
 						if(chr_twkarray[i][ct_propval] == chr_getProperty( target,chr_twkarray[i][ct_propnumber]))
 							checklev = 1;
@@ -1153,25 +1235,25 @@ public tweak_char(const chrsource, const target, pagenumber)
 				}
 				case 7: //stock function call
 				{
-					new p = (chr_twkarray[i][ct_propnumber]); //line in chr_stockarray
+					new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
 					new output;
-					if(p==0)
+					if(q==0)
 						output = chr_getSkillSum(target);
-					else if(p==1)
+					else if(q==1)
 						output = chr_countBankGold(target);
-					else if(p=2)
+					else if(q==2)
 					{
 						if ( chr_getGuild(target) >= 0 )
 							guild_getProperty( chr_getGuild(target),GP_STR_NAME,_,0,tempChrStr );
 						else	tempChrStr="None";
 					}
-					else if(p==3)
+					else if(q==3)
 					{
 						if ( chr_getGuild(target) >= 0 )
 							chr_getProperty(getGuildMaster(chr_getGuild(target)), CP_STR_NAME, _, tempChrStr);
 						else	tempChrStr="None";
 					}
-					else if(p==4)
+					else if(q==4)
 					{
 						new age=chr_getProperty(target,CP_CREATIONDAY);
 						if ( age > 0 )
@@ -1196,244 +1278,6 @@ public tweak_char(const chrsource, const target, pagenumber)
 		}//for
 	}//if pagenumber
 
-	else if(pagenumber ==7)
-	{
-		gui_addText(twkChrMenu,100,150,33,"Miscellaneous");
-		new miscSkills[21]={ SK_ALCHEMY,SK_BLACKSMITHING,SK_BOWCRAFT,SK_CARPENTRY,SK_COOKING,SK_FISHING,SK_HEALING,SK_HERDING,SK_LOCKPICKING,SK_LUMBERJACKING,SK_MAGERY,SK_MEDITATION,SK_MINING,SK_MUSICIANSHIP,SK_REMOVETRAPS,	SK_MAGICRESISTANCE,SK_SNOOPING,SK_STEALING,SK_TAILORING,SK_TINKERING,SK_VETERINARY};
-		for ( new i=0;i<13;++i)
-		{
-			gui_addGump(twkChrMenu,50,171+20*i, 0x827);
-			gui_addText( twkChrMenu,66,170+20*i,1310,"%s : ",skillName[ miscSkills[i] ] );
-			gui_addPropField( twkChrMenu,190,170+20*i,50,30,CP_BASESKILL,miscSkills[i],0 );
-		}
-		for ( new i=13;i<21;++i)
-		{
-
-			gui_addGump(twkChrMenu,321,171+20*(i-13), 0x827);
-			gui_addText( twkChrMenu,335,170+20*(i-13),1310,"%s : ",skillName[ miscSkills[i] ] );
-			gui_addPropField( twkChrMenu,470,170+20*(i-13),50,30,CP_BASESKILL,miscSkills[i],0 );
-		}
-		
-		gui_addText(twkChrMenu,130,490,1310,"Skill Page 2 (Combat Ratings,Actions,Lore Knowledge)");
-		gui_addPageButton(twkChrMenu,100,493,2224,2117,2);
-		
-		gui_addPage(twkChrMenu,2);
-		gui_addPageButton(twkChrMenu,100,493,2224,2117,1);
-		gui_addText(twkChrMenu,130,490,1310,"Skill Page 1 (Miscellaneous)");
-		
-		gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-		gui_addText(twkChrMenu,60,49,33,"Main infos");
-		gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-		gui_addText(twkChrMenu,195,49,33,"Skills");
-		gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-		gui_addText(twkChrMenu,285,49,33,"Flags");
-		gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-		gui_addText(twkChrMenu,380,49,33,"Layer");
-		gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-		gui_addText(twkChrMenu,470,49,33,"Events");
-		gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-		gui_addText(twkChrMenu,60,79,33,"LocalVars");
-		gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-		gui_addText(twkChrMenu,195,79,33,"Flags 2");
-		
-		gui_addText(twkChrMenu,66,120,33,"Account number :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
-		gui_addText( twkChrMenu, 185, 120,0,tempChrStr);
-		
-		gui_addText(twkChrMenu,280,120,33,"Serial :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_SERIAL));
-		gui_addText( twkChrMenu, 336, 120,0,tempChrStr);
-		
-		gui_addGump(twkChrMenu,430,121, 0x827);
-		gui_addText(twkChrMenu,451,120,33,"NPC-AI:");
-		gui_addPropField( twkChrMenu,515,120,50,30,CP_NPCAI);
-		
-		gui_addText(twkChrMenu,100,150,33,"Combat Ratings");
-
-		new combatSkills[8]={ SK_ARCHERY,SK_FENCING,SK_MACEFIGHTING,SK_PARRYING,SK_SWORDSMANSHIP,SK_TACTICS,SK_WRESTLING};
-		for ( new i=0;i<8;++i)
-		{
-			gui_addGump(twkChrMenu,50,171+20*i, 0x827);
-			gui_addText( twkChrMenu,66,170+20*i,1310,"%s : ",skillName[ combatSkills[i] ] );
-			gui_addPropField( twkChrMenu,190,170+20*i,50,30,CP_BASESKILL,combatSkills[i],0 );
-		}
-		gui_addText(twkChrMenu,100,335,33,"Actions");
-		new actionSkills[13]={ SK_TAMING,SK_BEGGING,SK_CAMPING,SK_CARTOGRAPHY,SK_DETECTINGHIDDEN,SK_ENTICEMENT,	SK_HIDING,SK_INSCRIPTION,SK_PEACEMAKING,SK_POISONING,SK_PROVOCATION,SK_SPIRITSPEAK,SK_TRACKING};
-		for ( new i=0;i<7;++i)
-		{
-			gui_addGump(twkChrMenu,50,351+20*i, 0x827);
-			gui_addText( twkChrMenu,66,350+20*i,1310,"%s : ",skillName[ actionSkills[i] ] );
-			gui_addPropField( twkChrMenu,190,350+20*i,50,30,CP_BASESKILL,actionSkills[i],0 );
-		}
-		for ( new i=7;i<13;++i)
-		{
-			gui_addGump(twkChrMenu,321,171+20*(i-7), 0x827);
-			gui_addText( twkChrMenu,335,170+20*(i-7),1310,"%s : ",skillName[ actionSkills[i] ] );
-			gui_addPropField( twkChrMenu,470,170+20*(i-7),50,30,CP_BASESKILL,actionSkills[i],0 );
-		}
-		gui_addText(twkChrMenu,361,300,33,"Lore & Knowledge");
-		new loreSkills[7]={ SK_ANATOMY,SK_ANIMALLORE,SK_ARMSLORE,SK_EVALUATINGINTEL,SK_FORENSICS,SK_ITEMID,SK_TASTEID};
-		for ( new i=0;i<7;++i)
-		{
-			gui_addGump(twkChrMenu,321,321+20*i, 0x827);
-			gui_addText( twkChrMenu,335,320+20*i,1310,"%s : ",skillName[ loreSkills[i] ] );
-			gui_addPropField( twkChrMenu,470,320+20*i,50,30,CP_BASESKILL,loreSkills[i],0 );
-		}
-		printf("test gui, twkChrMenu: %d^n", twkChrMenu);
-	}
-	else if(pagenumber == 3)
-	{
-		gui_addButton(twkChrMenu,317,173,2224,2117,24);
-		gui_addText(twkChrMenu,340,170,1310,"Has Shield :");
-
-		if ( chr_getShield(target) > 0 )
-		        sprintf( tempChrStr,"1" );
-		else    sprintf( tempChrStr,"0");
-		gui_addText(twkChrMenu,470,170,1110,tempChrStr);
-		
-		//Hausicons
-		if(chr_getProperty(target,CP_PRIV2)&PRIV2_VIEWHOUSESASICON == 4 ) //Icon
-		      checklev = 1;
-		gui_addText(twkChrMenu,340,190,1310,"House as icons :");
-		gui_addCheckbox( twkChrMenu,470,193,oldpic,newpic,checklev,25);
-		checklev=0;
-
-		//26
-		gui_addGump(twkChrMenu,317,210, 0x827);
-		gui_addText(twkChrMenu,340,210,1310,"Steps to fly :");
-		gui_addPropField(twkChrMenu,470,210,125,30,CP_FLY_STEPS );
-		
-		gui_addButton(twkChrMenu,317,273,2224,2117,27);
-		gui_addText(twkChrMenu,340,270,1310,"Respawn :");
-		gui_addText(twkChrMenu,470,270,1110,"Respawn N/A");
-		
-		//Hallucination
-		if(tempfx_isActive( target,TFX_LSD)) //LSD on
-		      checklev = 1;
-		gui_addText(twkChrMenu,340,290,1310,"Hallucinating :");
-		gui_addInputField( twkChrMenu,470,290,50,20,28,1110,"millisec");
-		gui_addCheckbox( twkChrMenu,535,293,oldpic,newpic,checklev,28);
-		checklev=0;
-		
-		/*sprintf( tempChrStr,"%d",chr_getProperty(target,CP_HIDDEN);
-		gui_addButton(twkChrMenu,317,313,2224,2117,29);
-		gui_addText(twkChrMenu,340,310,1310,"Hidden :");
-		gui_addText(twkChrMenu,470,310,1110,tempChrStr);*/
-		
-		gui_addButton(twkChrMenu,317,333,2224,2117,29);
-		gui_addText(twkChrMenu,340,330,1310,"Indoors :");
-		gui_addText(twkChrMenu,470,330,1110,"N/A");
-		
-		gui_addButton(twkChrMenu,317,353,2224,2117,29);
-		gui_addText(twkChrMenu,340,350,1310,"Criminal :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_CRIMINALFLAG));
-		gui_addText(twkChrMenu,470,350,1110,tempChrStr);
-		
-		gui_addButton(twkChrMenu,317,373,2224,2117,30);
-		gui_addText(twkChrMenu,340,370,1310,"Conjured :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_SUMMONTIMER));
-		gui_addText(twkChrMenu,470,370,1110,tempChrStr);
-		
-		gui_addButton(twkChrMenu,317,393,2224,2117, 31);
-		gui_addText(twkChrMenu,340,390,1310,"Pet :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_TAMED));
-		gui_addText(twkChrMenu,470,390,1110,tempChrStr);
-		
-		gui_addButton(twkChrMenu,317,413,2224,2117,32);
-		gui_addText(twkChrMenu,340,410,1310,"Spawned :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_SPAWNSERIAL));
-		gui_addText(twkChrMenu,470,410,1110,tempChrStr);
-		
-		gui_addButton(twkChrMenu,317,433,2224,2117,33);
-		gui_addText(twkChrMenu,340,430,1310,"On Horse :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ONHORSE));
-		gui_addText(twkChrMenu,470,430,1110,tempChrStr);
-		
-		printf("test gui, twkChrMenu: %d^n", twkChrMenu);
-	}
-	else if(pagenumber == 4)
-	{
-		new items[24];
-	new wornLayer[24]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-	static layerText[24][24]={
-		"Hand 1",
-		"Hand 2",
-		"Shoes",
-		"Pants",
-		"Shirt",
-		"Helm",
-		"Gloves",
-		"Ring",
-		"Light",
-		"Neck",
-		"Hair",
-		"Waist",
-		"Chest",
-		"bracelet",
-		"Unused",
-		"Beard",
-		"mid torso",
-		"Ears",
-		"Arms",
-		"Cloak",
-		"Backpack",
-		"Robe",
-		"Skirts",
-		"inner legs"
-	};
-		
-		//gui_addText(twkChrMenu,50,150,1110,"Layer");
-
-		new itemSet=set_create();
-		set_addItemWeared(itemSet,target,false,true,true);
-		new i=1;
-		for (set_rewind(itemSet);!set_end(itemSet);)
-		{
-			new item = set_get(itemSet);
-			new itemName[30];
-			chr_getProperty(item,IP_STR_NAME,_,itemName);
-			new layer= chr_getProperty(item,IP_LAYER);
-			if ( layer <= 24)
-			{
-				wornLayer[layer]=1;
-		
-				if ( layer <= 12 )
-				{
-					gui_addTilePic(twkChrMenu,40+(layer-1)*40,150,chr_getProperty(item,IP_ID));
-					gui_addCheckbox(twkChrMenu,43,243+(layer-1)*20, oldpic, newpic, 1, 6+(layer-1));
-					gui_addText(twkChrMenu,66,240+(layer-1)*20,0,layerText[layer-1]);
-					gui_addText(twkChrMenu,140,240+(layer-1)*20,1310,itemName);
-				}
-				else
-				{
-					gui_addTilePic(twkChrMenu,(layer-12)*40,190,chr_getProperty(item,IP_ID));
-					gui_addCheckbox(twkChrMenu,317,203+(layer-11)*20, oldpic, newpic, 1, 6+(layer-1));
-					gui_addText(twkChrMenu,340,200+(layer-11)*20,0,layerText[layer-1]);
-					gui_addText(twkChrMenu,420,200+(layer-11)*20,1310,itemName);
-				}
-			}
-		}
-		set_delete(itemSet);
-		for ( i=1;i <= 24;++i)
-		{
-			if ( wornLayer[i] == 0 )
-			{
-				if ( i <= 12 )
-				{
-					gui_addCheckbox(twkChrMenu,43,243+(i-1)*20, oldpic, newpic, 0, 6+(i-1));
-					gui_addText(twkChrMenu,66,240+(i-1)*20,0,layerText[i-1]);
-					gui_addText(twkChrMenu,140,240+(i-1)*20,1310,"Nothing");
-				}
-				else
-				{
-					gui_addCheckbox(twkChrMenu,317,203+(i-11)*20, oldpic, newpic, 0, 6+(i-1));
-					gui_addText(twkChrMenu,340,200+(i-11)*20,0,layerText[i-1]);
-					gui_addText(twkChrMenu,420,200+(i-11)*20,1310,"Nothing");
-				}
-			}
-		}
-		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
-	}
 	else if(pagenumber == 5)
 	{
 		gui_addPageButton(twkChrMenu,210,493,2224,2117,2);
@@ -1725,145 +1569,473 @@ public tweak_char(const chrsource, const target, pagenumber)
 				}//if
 			}//if
 		}//for
-
 		//printf("dividerrest: %d, count: %d", dividerrest, count);
 	}
-	else if(pagenumber == 7)
+	else if(pagenumber ==7)
 	{
-		new checker = 0;
-		gui_addText(twkChrMenu,100,150,33,"Flags 2");
+		gui_addText(twkChrMenu,100,150,33,"Miscellaneous");
+		new miscSkills[21]={ SK_ALCHEMY,SK_BLACKSMITHING,SK_BOWCRAFT,SK_CARPENTRY,SK_COOKING,SK_FISHING,SK_HEALING,SK_HERDING,SK_LOCKPICKING,SK_LUMBERJACKING,SK_MAGERY,SK_MEDITATION,SK_MINING,SK_MUSICIANSHIP,SK_REMOVETRAPS,	SK_MAGICRESISTANCE,SK_SNOOPING,SK_STEALING,SK_TAILORING,SK_TINKERING,SK_VETERINARY};
+		for ( new i=0;i<13;++i)
+		{
+			gui_addGump(twkChrMenu,50,171+20*i, 0x827);
+			gui_addText( twkChrMenu,66,170+20*i,1310,"%s : ",skillName[ miscSkills[i] ] );
+			gui_addPropField( twkChrMenu,190,170+20*i,50,30,CP_BASESKILL,miscSkills[i],0 );
+		}
+		for ( new i=13;i<21;++i)
+		{
+
+			gui_addGump(twkChrMenu,321,171+20*(i-13), 0x827);
+			gui_addText( twkChrMenu,335,170+20*(i-13),1310,"%s : ",skillName[ miscSkills[i] ] );
+			gui_addPropField( twkChrMenu,470,170+20*(i-13),50,30,CP_BASESKILL,miscSkills[i],0 );
+		}
 		
-		//All move, 12
-		if(chr_getProperty( target, CP_PRIV2, _)&PRIV2_ALLMOVE == 1) //can move all
-			checker = 1;
-		gui_addCheckbox( twkChrMenu,190,173, oldpic,newpic,checker,12);
-		gui_addText(twkChrMenu,66,170,1310,"Can move all :");
-		checker=0;
-
-		//Can broadcast, 13
-		if(chr_getProperty( target, CP_PRIV, _)&PRIV_CANBROADCAST == 2) //can broadcast
-		{
-			checker = 1;
-		}
-		gui_addCheckbox( twkChrMenu,190,193, oldpic,newpic,checker,13);
-		gui_addText(twkChrMenu,66,190,1310,"Can broadcast :");
-		checker=0;
-
-		//Commandlevel, 14
-		gui_addGump(twkChrMenu,50,210, 0x827);
-		gui_addText(twkChrMenu,66,210,1310,"Ingame Command level :");
-		gui_addText(twkChrMenu,66,230,1310,"(50 player, 100 CNS, 150 Seer, 200 GM, 250 Admin)"); 
-		gui_addPropField(twkChrMenu,250,210,125,30,CP_PRIVLEVEL);
+		gui_addText(twkChrMenu,130,490,1310,"Skill Page 2 (Combat Ratings,Actions,Lore Knowledge)");
+		gui_addPageButton(twkChrMenu,100,493,2224,2117,2);
 		
-		//is CNS/GM, 15/16/17
-		new checker2=0;
-		new checker3=0;
-		printf("true GM: %d", chr_isTrueGM(target));
-		if(chr_getProperty( target, CP_PRIV)&PRIV_ISCOUNSELOR == 128) //is CNS
-			checker=1;
-		else if(chr_getProperty( target, CP_PRIV)&PRIV_ISGM == 1) //is GM
-			checker2=1;
-		else
-			checker3=1; //player
-		gui_addText(twkChrMenu,66,250,1310,"Is/Make");
-		gui_addText(twkChrMenu,140,250,0,"CNS");
-		gui_addRadioButton( twkChrMenu,180,253, oldpic,newpic,checker,15);
-		gui_addText(twkChrMenu,216,250,0,"GM");
-		gui_addRadioButton( twkChrMenu,256,253, oldpic,newpic,checker2,16);
-		gui_addText(twkChrMenu,292,250,0,"Player");
-		gui_addRadioButton( twkChrMenu,337,253, oldpic,newpic,checker3,17);
-		checker=0;
-
-		//pageable as GM, 18
-		printf("pageable: %d", chr_getProperty( target, CP_PRIV, _)&PRIV_GMPAGEABLE);
-		if(chr_getProperty( target, CP_PRIV, _)&PRIV_GMPAGEABLE == 32) //can be paged
-		{
-			checker = 1;
-		}
-		gui_addText(twkChrMenu,66,270,1310,"pageable as GM :");
-		gui_addCheckbox( twkChrMenu,200,273, oldpic,newpic,checker,18);
-		checker=0;
-
-		//Defense, 19
-		gui_addGump(twkChrMenu,50,290, 0x827);
-		gui_addText(twkChrMenu,66,290,1310,"Defense :");
-		gui_addPropField(twkChrMenu,190,290,125,30,CP_DEF);
+		gui_addPage(twkChrMenu,2);
+		gui_addPageButton(twkChrMenu,100,493,2224,2117,1);
+		gui_addText(twkChrMenu,130,490,1310,"Skill Page 1 (Miscellaneous)");
 		
-		//Dispellable, 20
-		if(chr_getProperty( target, CP_PRIV2, _)&0x20 == 32) //can dispel
-		{
-			checker = 1;
-		}
-		gui_addCheckbox( twkChrMenu,190,313, oldpic,newpic,checker,20);
-		gui_addText(twkChrMenu,66,310,1310,"Can dispel :");
-		checker=0;
-
-		//Hunger, 21
-		gui_addGump(twkChrMenu,50,330, 0x827);
-		gui_addText(twkChrMenu,66,330,1310,"Hunger :");
-		gui_addPropField(twkChrMenu,190,330,125,30,CP_HUNGER);
+		gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
+		gui_addText(twkChrMenu,60,49,33,"Main infos");
+		gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
+		gui_addText(twkChrMenu,195,49,33,"Skills");
+		gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
+		gui_addText(twkChrMenu,285,49,33,"Flags");
+		gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
+		gui_addText(twkChrMenu,380,49,33,"Layer");
+		gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
+		gui_addText(twkChrMenu,470,49,33,"Events");
+		gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
+		gui_addText(twkChrMenu,60,79,33,"LocalVars");
+		gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
+		gui_addText(twkChrMenu,195,79,33,"Flags 2");
 		
-		//Jailed, 22
-		gui_addGump(twkChrMenu,50,350, 0x827);
-		//gui_addPropField(twkChrMenu,190,350,125,30,CP_JAILED);
-		gui_addText(twkChrMenu,66,350,1310,"Is jailed :");
+		gui_addText(twkChrMenu,66,120,33,"Account number :");
+		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
+		gui_addText( twkChrMenu, 185, 120,0,tempChrStr);
 		
-		//Needs Mana, 23
-		if(chr_getProperty( target, CP_PRIV2, _)&0x10 == 16) //needs no mana
-		{
-			checker = 1;
-		}
-		gui_addCheckbox( twkChrMenu,190,373, oldpic,newpic,checker,23);
-		gui_addText(twkChrMenu,66,370,1310,"Needs no mana :");
-		checker=0;
+		gui_addText(twkChrMenu,280,120,33,"Serial :");
+		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_SERIAL));
+		gui_addText( twkChrMenu, 336, 120,0,tempChrStr);
+		
+		gui_addGump(twkChrMenu,430,121, 0x827);
+		gui_addText(twkChrMenu,451,120,33,"NPC-AI:");
+		gui_addPropField( twkChrMenu,515,120,50,30,CP_NPCAI);
+		
+		gui_addText(twkChrMenu,100,150,33,"Combat Ratings");
 
-		//Needs Reagents, 24
-		if(chr_getProperty( target, CP_PRIV2, _)&0x80 == 128) //needs no reagents
+		new combatSkills[8]={ SK_ARCHERY,SK_FENCING,SK_MACEFIGHTING,SK_PARRYING,SK_SWORDSMANSHIP,SK_TACTICS,SK_WRESTLING};
+		for ( new i=0;i<8;++i)
 		{
-			checker = 1;
+			gui_addGump(twkChrMenu,50,171+20*i, 0x827);
+			gui_addText( twkChrMenu,66,170+20*i,1310,"%s : ",skillName[ combatSkills[i] ] );
+			gui_addPropField( twkChrMenu,190,170+20*i,50,30,CP_BASESKILL,combatSkills[i],0 );
 		}
-		gui_addCheckbox( twkChrMenu,190,393, oldpic,newpic,checker,24);
-		gui_addText(twkChrMenu,66,390,1310,"Needs no reagents :");
-		checker=0;
-
-		//Sees serials, 25
-		if(chr_getProperty( target, CP_PRIV, _)&0x08 == 8) //can see serials at single click
+		gui_addText(twkChrMenu,100,335,33,"Actions");
+		new actionSkills[13]={ SK_TAMING,SK_BEGGING,SK_CAMPING,SK_CARTOGRAPHY,SK_DETECTINGHIDDEN,SK_ENTICEMENT,	SK_HIDING,SK_INSCRIPTION,SK_PEACEMAKING,SK_POISONING,SK_PROVOCATION,SK_SPIRITSPEAK,SK_TRACKING};
+		for ( new i=0;i<7;++i)
 		{
-			checker = 1;
+			gui_addGump(twkChrMenu,50,351+20*i, 0x827);
+			gui_addText( twkChrMenu,66,350+20*i,1310,"%s : ",skillName[ actionSkills[i] ] );
+			gui_addPropField( twkChrMenu,190,350+20*i,50,30,CP_BASESKILL,actionSkills[i],0 );
 		}
-		gui_addCheckbox( twkChrMenu,190,413, oldpic,newpic,checker,25);
-		gui_addText(twkChrMenu,66,410,1310,"Can see serials :");
-		checker=0;
-
-		//Shows no skilltitle, 26
-		if(chr_getProperty( target, CP_PRIV, _)&0x10 == 16) //shows no skilltitle
+		for ( new i=7;i<13;++i)
 		{
-			checker = 1;
+			gui_addGump(twkChrMenu,321,171+20*(i-7), 0x827);
+			gui_addText( twkChrMenu,335,170+20*(i-7),1310,"%s : ",skillName[ actionSkills[i] ] );
+			gui_addPropField( twkChrMenu,470,170+20*(i-7),50,30,CP_BASESKILL,actionSkills[i],0 );
 		}
-		gui_addCheckbox( twkChrMenu,190,433, oldpic,newpic,checker,26);
-		gui_addText(twkChrMenu,66,430,1310,"No skill title :");
-		checker=0;
-
-		//can snoop all, 27
-		if(chr_getProperty( target, CP_PRIV, _)&0x40 == 64) //can snoop all
+		gui_addText(twkChrMenu,361,300,33,"Lore & Knowledge");
+		new loreSkills[7]={ SK_ANATOMY,SK_ANIMALLORE,SK_ARMSLORE,SK_EVALUATINGINTEL,SK_FORENSICS,SK_ITEMID,SK_TASTEID};
+		for ( new i=0;i<7;++i)
 		{
-			checker = 1;
+			gui_addGump(twkChrMenu,321,321+20*i, 0x827);
+			gui_addText( twkChrMenu,335,320+20*i,1310,"%s : ",skillName[ loreSkills[i] ] );
+			gui_addPropField( twkChrMenu,470,320+20*i,50,30,CP_BASESKILL,loreSkills[i],0 );
 		}
-		gui_addCheckbox( twkChrMenu,470,173, oldpic,newpic,checker,27);
-		gui_addText(twkChrMenu,340,170,1310,"Can snoop all :");
-		checker=0;
-
-		//Wander Mode, 28
-		gui_addGump(twkChrMenu,317,190, 0x827);
-		gui_addText(twkChrMenu,340,190,1310,"Wandermode :");
-		gui_addPropField(twkChrMenu,470,190,125,30,CP_NPCWANDER);
+		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
 	}
+	else if(pagenumber == 8)
+	{
+		gui_addText(twkChrMenu,50,150,1110,"Layer");
+		printf("enter layer gump page");
+				
+		new layer;
+		new r;
+		new s;
+		new t;
+		printf("layerpage preset");
+		new itemSet=set_create();
+		printf("layerpage postset");
+		set_addItemWeared(itemSet,target,false,true,true);
+		
+		printf("layerpage1");
+		for (set_rewind(itemSet);!set_end(itemSet);)
+		{
+			new item = set_get(itemSet);
+			new itemName[30];
+			chr_getProperty(item,IP_STR_NAME,_,itemName);
+			layer= chr_getProperty(item,IP_LAYER);
+			ct_layerprop[layer-1][lt_used] = 1; //this layer is used
+			if ( layer <= 24) //number of layer should only show equipplayer, not bankbox or others
+			{
+				r = 20;
+				if ( layer <= 12 )
+				{
+					s=1;
+					t=274;
+				}
+				else
+				{
+					s=11;
+					t=0;
+				}
+				gui_addTilePic(twkChrMenu,(layer-s)*r*2,190-t,chr_getProperty(item,IP_ID));
+				sprintf(tempChrStr, "%s", itemName);
+			}
+		}
+		set_delete(itemSet);
+		printf("layerpage2");
+		for ( layer=1;layer <= 24;++layer) //now draw lines for unused layer
+		{
+			if ( ct_layerprop[layer-1][lt_used] == 0 )
+			{
+				if ( layer <= 12 )
+					s=1;
+				else
+					s=11
+				sprintf(tempChrStr, "Nothing");
+			}
+		}
+		gui_addCheckbox(twkChrMenu,317-t,203+(layer-s)*r, oldpic, newpic, 1, 6+(layer-1));
+		gui_addText(twkChrMenu,340-t,200+(layer-s)*r,0,ct_layerprop[layer-1][lt_name]);
+		gui_addText(twkChrMenu,420-t,200+(layer-s)*r,1310,tempChrStr);
+		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
+	}//pagenumber
 	gui_show(twkChrMenu,chrsource); 
+}
+
+public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
+{
+	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 );
+	new pagenumber = gui_getProperty( twkChrMenu,MP_BUFFER,5 );
+	new startline;
+	new leftrow;
+	new rightrow;
+	new tempChrStr[50];
+	
+	if( pagenumber == 1)
+	{
+		startline = 0;
+		leftrow = ct_pg1_l;
+		rightrow = ct_pg1_r;
+	}
+	else if( pagenumber == 2)
+	{
+		startline = ct_pg1_r+1;
+		leftrow = ct_pg2_l;
+		rightrow = ct_pg2_r;
+	}
+	else if( pagenumber == 3)
+	{
+		startline = ct_pg2_r+1;
+		leftrow = ct_pg3_l;
+		rightrow = ct_pg3_r;
+	}
+	else if( pagenumber == 4)
+	{
+		startline = ct_pg2_r+1;
+		leftrow = ct_pg4_l;
+		rightrow = ct_pg4_r;
+	}
+	new endline;
+	new i=0;
+	//performance saver, only go through the array lines shown at the page with apply button
+	if((rightrow == 0) && (leftrow != 0))
+		endline = leftrow;
+	else if((rightrow != 0) && (leftrow != 0))
+		endline = rightrow;
+	
+	new checklev;
+	switch(buttonCode)
+	{
+		case 1..8: 	
+		{	
+			printf("call viewchrMenu^n");	
+			viewchrMenu(chrsource, target, buttonCode);
+				//gui_delete( twkChrMenu );
+		}
+		case 10:
+		{
+		        if(1 <= pagenumber <= 4)
+		        {
+		        	for(i=startline; i<=endline; ++i)
+		        	{
+		        		new linetype = chr_twkarray[i][ct_linetype];
+		        		checklev = 0;
+		        		if(linetype == 3)
+		        		{
+		        			new textbuf_input[15];
+		        			new textbuf_origin[15];
+		        			new value=0;
+		        			new type=chr_twkarray[i][ct_propnumber];
+		        			new checked=0;
+		        			if( type== 1) //TFX function
+		        			{
+		        				sprintf(textbuf_origin, "%s", chr_twkarray[i][ct_inputname]);
+		        				checked = gui_getProperty(twkChrMenu,MP_CHECK,i);
+		        			}
+		        			else if( type == 2) //AMX LocalVars Int
+						{
+							new origin = chr_getLocalIntVar(target, chr_twkarray[i][ct_infotype]);
+							sprintf(textbuf_origin, "%d",origin);
+							checked = 1;
+						}
+						else if( type == 3) //AMX LocalVars Str
+						{
+							chr_getLocalStrVar(target, chr_twkarray[i][ct_infotype], textbuf_origin);
+							checked = 1;
+						}
+						if( strcmp( textbuf_input,textbuf_origin) && checked) //its checked so go on to get the entry if input different from origin
+		        			{
+		        				trim(textbuf_input);
+		        				if ((isStrUnsignedInt(textbuf_input)) && (type != 3)) //should be an integer, is it?
+		        				{
+		        					value = str2UnsignedInt(textbuf_input);
+		        					if( type == 1) //TFX function
+		        					{
+		        						if ( tempfx_isActive( target,chr_twkarray[i][ct_infotype]) != 1 ) // no tempfx already
+		        						{
+		        							tempfx_activate( chr_twkarray[i][ct_infotype],target,target,0,value,-1); //activates tempfx
+		        						}
+			        				}
+			        				else if( type == 2)
+			        				{
+			        					chr_setLocalIntVar(target, chr_twkarray[i][ct_infotype], value);
+			        				}
+			        			}
+			        			else if(type == 3)
+			        			{
+			        				chr_setLocalStrVar(target, chr_twkarray[i][ct_infotype], textbuf_input);
+			        			}
+			        			else chr_message( chrsource, _,"A number must be inserted!");
+			        		}
+			        		else if( (type == 1) && (tempfx_isActive( target,chr_twkarray[i][ct_infotype]) == 1) && (checked != 1) ) // is tempfx line and this tempfx is active yet but no Entry made and not checked -> remove the tempfx
+			        		{
+			        			tempfx_delete( target,chr_twkarray[i][ct_infotype],true); //no more tempfx
+			        		}	        						
+			        	}//linetype
+			        	else if(linetype == 4) //checkbox
+		        		{
+		        			if((chr_twkarray[i][ct_propnumber] == 134) || (chr_twkarray[i][ct_propnumber] == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
+						{
+							new privvalue = chr_twkarray[i][ct_infotype]
+							if(privvalue >= 10)
+							privvalue = (privvalue/10)*16;
+							if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] == privvalue) //property status we have
+								checklev = 1;
+							if( checklev < gui_getProperty(twkChrMenu,MP_CHECK,i)) //its checked now and status changed to ON
+								chr_setProperty( target,chr_twkarray[i][ct_propnumber],_, chr_getProperty( target,chr_twkarray[i][ct_propnumber],_)|chr_twkarray[i][ct_infotype] );
+							else if(checklev > gui_getProperty(twkChrMenu,MP_CHECK,i)) //its checked now and status changed to OFF
+								chr_setProperty( target,chr_twkarray[i][ct_propnumber],_, chr_getProperty( target,chr_twkarray[i][ct_propnumber],_)&~chr_twkarray[i][ct_infotype] );
+						}
+						else if(chr_twkarray[i][ct_propnumber] == 0) //customized button function, for example open bank box
+						{
+							new infotype = chr_twkarray[i][ct_infotype];
+							if( (infotype == 1) && gui_getProperty(twkChrMenu,MP_CHECK,i)) //bank box opening
+								chr_getBankBox(target, BANKBOX_NORMAL);
+							else if((infotype == 2) && gui_getProperty(twkChrMenu,MP_CHECK,i)) //gold bank opening
+								chr_getBankBox(target, BANKBOX_GOLDONLY);
+							else if( (infotype == 3) && gui_getProperty(twkChrMenu,MP_CHECK,i)) //go to guild stone
+							{
+								new x = itm_getProperty(chr_getGuild(target), IP_POSITION, IP2_X);
+								new y = itm_getProperty(chr_getGuild(target), IP_POSITION, IP2_Y);
+								new z = itm_getProperty(chr_getGuild(target), IP_POSITION, IP2_Z);
+								chr_moveTo( chrsource, x, y, z);
+							}
+							else if( infotype == 4) //polymorp/unmorph
+								if (!(gui_getProperty(twkChrMenu,MP_CHECK,i))&& (chr_getProperty( target,CP_ID)) != (chr_getProperty(target,CP_XID))) //not checked and is morphed, if(chr_getProperty( target,CP_POLYMORPH) == 1) //polymorphed
+		        						chr_unmorph(target);
+		        					else if((gui_getProperty(twkChrMenu,MP_CHECK,i))&& (chr_getProperty( target,CP_ID)) == (chr_getProperty(target,CP_XID))) //is checked and not morphed
+		        						callPolyMenu(chrsource, target,1); //polymorph
+						}
+						else //on/off check only
+						{
+							checklev = chr_getProperty(target,chr_twkarray[i][ct_propnumber]); //status of property
+							if((checklev == 0) && ( gui_getProperty(twkChrMenu,MP_CHECK,i))) //is checked and was zero
+								chr_setProperty( target, (chr_twkarray[i][ct_propnumber]),_, 1);
+							else if((checklev != 0) && (!gui_getProperty(twkChrMenu,MP_CHECK,i))) //is not checked and was not zero
+								chr_setProperty( target,(chr_twkarray[i][ct_propnumber]) ,_, 1);
+						}
+		        		}
+		        		else if(linetype == 5) //radiobutton
+		        		{
+		        			if((chr_twkarray[i][ct_propnumber] == 110) || (chr_twkarray[i][ct_propnumber] == 121)) //bitfields (for example visibility)
+						{
+							if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] == chr_twkarray[i][ct_infotype]) //which status does the property has so far?
+								checklev = 1; //yes
+							if( gui_getProperty(twkChrMenu,MP_CHECK,i) > checklev ) //changed status and checked now
+								chr_setProperty( target,chr_twkarray[i][ct_propnumber],_, chr_getProperty( target,chr_twkarray[i][ct_propnumber],_)|chr_twkarray[i][ct_infotype] );
+							else
+								chr_setProperty( target,chr_twkarray[i][ct_propnumber],_, chr_getProperty( target,chr_twkarray[i][ct_propnumber],_)&~chr_twkarray[i][ct_infotype] );
+						}
+		        			else if(chr_twkarray[i][ct_propnumber] == 111) //splitted normal properties, for example moveable (CP_MAGIC)
+						{
+							if(chr_twkarray[i][ct_propval] == chr_getProperty( target,chr_twkarray[i][ct_propnumber])) //which status does the property has so far?
+								checklev = 1;
+							if( gui_getProperty(twkChrMenu,MP_CHECK,i) > checklev) //changed status and checked now
+								chr_setProperty( target,chr_twkarray[i][ct_propnumber], chr_twkarray[i][ct_propval]);
+						}
+					}//linetype
+					else if(linetype == 7) //stock function call
+					{
+						//new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
+						//new output;
+						printf("needed callback: %d", i);
+					}
+		        	}//for
+		        }
+		        else if(pagenumber == 5) //events
+		        {
+		        	new callname[15];
+		        	new oldevent[15];
+		        	for(i=0;i<NUM_chrevent;i++)
+		        	{
+		        		if ( !gui_getProperty(twkChrMenu,MP_CHECK,i+1)) //checkbox no more checked and event had existed
+		        		{
+		        			//printf("del event");
+		        			chr_delEventHandler(target, eventChr_array[i][eventnum]);
+		        		}
+		        		else
+		        		{
+		        			gui_getProperty(twkChrMenu,MP_UNI_TEXT,i+1,callname);
+		        			trim(callname);
+		        			chr_getEventHandler(target,eventChr_array[i][eventnum],oldevent);
+		        			if( strcmp( callname, oldevent) ) //different input happened
+		        				chr_setEventHandler(target, eventChr_array[i][eventnum], EVENTTYPE_STATIC, callname);
+		        		}
+		        		sprintf(callname, "");
+		        	}//for
+		        }
+		        else if(pagenumber == 6) //localVars
+		        {
+		        	for(i=1000;i<5000;i++)
+		        	{
+		        		if (chr_isaLocalVar(target, i, VAR_TYPE_ANY))
+		        		{
+		        			if(!(gui_getProperty(twkChrMenu,MP_CHECK,i)))
+		        			{
+		        				chr_delLocalVar(target, i)
+		        			}
+		        			else if(chr_isaLocalVar(target, i, VAR_TYPE_INTEGER))
+		        			{
+		        				gui_getProperty(twkChrMenu,MP_UNI_TEXT,i,tempChrStr);
+		        				trim(tempChrStr);
+		        				if (isStrUnsignedInt(tempChrStr) || strcmp( !tempChrStr, "0" ))
+		        				{
+		        					new value = str2UnsignedInt(tempChrStr);
+		        					if(chr_getLocalIntVar(target,i)!=value)
+		        						chr_setLocalIntVar(target, i, value);
+		        				}
+		        				else
+		        					chr_message(target, _, "An integer localVar value may only contain numbers with 0-9!");
+		        			}
+		        			else if(chr_isaLocalVar(target, i, VAR_TYPE_STRING))
+		        			{
+		        				new value[256];
+		        				gui_getProperty(twkChrMenu,MP_UNI_TEXT,i,tempChrStr);
+		        				chr_getLocalStrVar(target,i, value);
+		        				if( strcmp( value, tempChrStr )) //is different
+		        					chr_setLocalStrVar(target, i, tempChrStr);
+		        			}//if var test
+		        		}//if
+		        	}//for
+		        	if(gui_getProperty(twkChrMenu,MP_RADIO,101)) //integer var adding
+		        	{
+		        		new tempChrStrB[15];
+		        		new inpt[15];
+		        		gui_getProperty(twkChrMenu,MP_UNI_TEXT,5,tempChrStrB); //number
+		        		trim(tempChrStrB);
+		        		if(isStrUnsignedInt(tempChrStrB)) //is numeric
+		        		{
+		        			new number = str2UnsignedInt(tempChrStrB);
+		        			//printf("tempChrStrB: %s, number: %d^n", tempChrStrB, number);
+		        			if(!(chr_isaLocalVar(target, number, VAR_TYPE_ANY))) //already exist
+		        			{
+		        				gui_getProperty(twkChrMenu,MP_UNI_TEXT,6,inpt); //value
+		        				trim(inpt);
+		        				//printf("value: %s^n", inpt);
+		        				if ( (isStrUnsignedInt(inpt)) || strcmp( !inpt, "0" )) //value is numeric
+		        				{
+		        					new value = str2UnsignedInt(inpt);
+		        					chr_addLocalIntVar(target, number);
+		        					chr_setLocalIntVar(target, number, value);
+		        				}
+		        				else
+		        					chr_message(target, _, "An integer localVar value may only contain numbers with 0-9!");
+		        			}
+		        			else
+		        				chr_message(target, _, "This char has already a localVar with this value!");
+		        		}
+		        		else
+		        			chr_message(target, _, "The localVar number must consist of 0-9, no letters or other signs!");
+		        	}
+		        	else if(gui_getProperty(twkChrMenu,MP_RADIO,100)) //string localvar
+		        	{
+		        		new tempChrStrB[15];
+		        		new inpt[15];
+		        		gui_getProperty(twkChrMenu,MP_UNI_TEXT,5,tempChrStrB); //number
+		        		trim(tempChrStrB);
+		        		if(isStrUnsignedInt(tempChrStrB)) //is numeric
+		        		{
+		        			new number = str2UnsignedInt(tempChrStrB);
+		        			//printf("tempChrStrB: %s, number: %d^n", tempChrStrB, number);
+		        			if(!(chr_isaLocalVar(target, number, VAR_TYPE_ANY))) //already exist
+		        			{
+		        				gui_getProperty(twkChrMenu,MP_UNI_TEXT,6,inpt); //value
+		        				//printf("input: %s", inpt);
+		        				chr_addLocalStrVar(target, number);
+		        				chr_setLocalStrVar(target, number, inpt);
+		        			}
+		        			else
+		        				chr_message(target, _, "This char has already a localVar with this value!");
+		        		}
+		        		else
+		        			chr_message(target, _, "The localVar number must consist of 0-9, no letters or other signs!");
+		        	}
+		        }
+		        else if(pagenumber == 8) //layer
+		        {
+		        	new itemSet=set_create();
+		        	set_addItemWeared(itemSet,target,false,true,true);
+		        	for (set_rewind(itemSet);!set_end(itemSet);)
+		        	{
+		        		new item = set_get(itemSet);
+		        		new itemName[30];
+		        		chr_getProperty(item,IP_STR_NAME,_,itemName);
+		        		new layer= chr_getProperty(item,IP_LAYER);
+		        		if ( layer <= 24)
+		        		{
+		        			if(!gui_getProperty(twkChrMenu,MP_CHECK,6+(layer-1)))
+		        			{
+		        				new bp = chr_getBackpack(target, true);
+		        				itm_setContSerial(item, bp);
+		        				itm_refresh(item);
+		        			}
+		        		}
+		        	}
+		        	set_delete( itemSet );
+		        }//pagenumber
+		        chr_update(target);
+		//gui_delete( twkChrMenu );
+		}//case
+	}//switch
 }
 
 public viewchrMenu(const chrsource, const target, const buttonCode)
 {
-	//printf("enter viewchrMenu, page: %d", buttonCode);
+	printf("enter viewchrMenu, page: %d", buttonCode);
 	switch(buttonCode)
 	{
 		case 1: tweak_char(chrsource, target, 1);
@@ -1873,467 +2045,8 @@ public viewchrMenu(const chrsource, const target, const buttonCode)
 		case 5: tweak_char(chrsource, target, 5);
 		case 6: tweak_char(chrsource, target, 6);
 		case 7: tweak_char(chrsource, target, 7);
+		case 8: tweak_char(chrsource, target, 8);
 	}
-}
-
-public tweakchrBck1(const twkChrMenu, const chrsource, const buttonCode)
-{
-	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 ); //target
-	switch(buttonCode)
-	{
-		case 1,2,3,4,5,6,7: 	
-		{		viewchrMenu(chrsource, target, buttonCode);
-				//gui_delete( twkChrMenu );
-		}
-		case 10:
-		{
-			        chr_update(target);
-			        //gui_delete( twkChrMenu );
-		}
-	}
-}
-
-public tweakchrBck2(const twkChrMenu, const chrsource, const buttonCode)
-{
-	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 ); //target
-	switch(buttonCode)
-	{
-		case 1,2,3,4,5,6,7:
-		{
-			viewchrMenu(chrsource, target, buttonCode);
-			//gui_delete( twkChrMenu );
-		}
-		case 10:
-		{
-			chr_update(target);
-		}
-	}
-
-}
-
-public tweakchrBck3(const twkChrMenu, const chrsource, const buttonCode)
-{
-	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 ); //target
-	//new textbuf[5];
-	switch(buttonCode)
-	{
-		case 1,2,3,4,5,6,7:
-		{
-			viewchrMenu(chrsource, target, buttonCode);
-			//gui_delete( twkChrMenu );
-		}
-		case 10:
-		{
-			new i;
-			for(i=12; i <= 28;++i)
-			{
-				if(i==12)
-				{
-					if ( gui_getProperty(twkChrMenu,MP_CHECK,i) )
-						chr_makeInvul(target);
-					else	chr_makeVulnerable(target);
-				}
-				if(i==13)
-				{
-					if ( gui_getProperty(twkChrMenu,MP_CHECK,i) )
-						chr_setHitPoints(target,0);
-					else	chr_resurrect(target);
-				}
-				if(i==14)
-				{
-					if ( gui_getProperty(twkChrMenu,MP_CHECK,i) )
-						chr_freeze(target);
-					else	chr_unfreeze(target);
-				}
-				if(i==15 )
-				{
-					if ( gui_getProperty(twkChrMenu,MP_RADIO,15) ) //skill
-					{
-						chr_setProperty( target,CP_HIDDEN,_,1);
-						chr_setProperty( target,CP_PRIV2,_, chr_getProperty( target,CP_PRIV2,_) &~0x08 ); //nicht mehr permahidden
-					}
-					else if ( gui_getProperty(twkChrMenu,MP_RADIO,16) ) //spell
-					{
-						chr_setProperty( target,CP_HIDDEN,_,2);
-						chr_setProperty( target,CP_PRIV2,_, chr_getProperty( target,CP_PRIV2,_) &~0x08 ); //nicht mehr permahidden
-					}
-					else if ( gui_getProperty(twkChrMenu,MP_RADIO,17) ) //perma
-					{
-						chr_setProperty( target,CP_HIDDEN,_,2); //invis durch spell
-						chr_setProperty( target,CP_PRIV2,_,chr_getProperty( target,CP_PRIV2) | PRIV2_PERMAHIDDEN); //wird permahidden
-						//printf("perma: %d",(chr_getProperty( target,CP_PRIV2) & PRIV2_PERMAHIDDEN));
-					}
-					else //visible
-					{
-						chr_setProperty( target,CP_HIDDEN,_,0); //wird visible,da invisflag weggeklickt wurde
-						chr_setProperty( target,CP_PRIV2,_, chr_getProperty( target,CP_PRIV2,_) &~0x08 ); //nicht mehr permahidden
-					}
-				}
-				if(i==19) //war mode
-				{ 
-					//if( chr_getProperty( target,CP_WAR) == 0 )
-					if ( gui_getProperty(twkChrMenu,MP_CHECK,19) )
-						chr_setProperty( target,CP_WAR,1);
-					else	chr_setProperty( target,CP_WAR,0);
-				}
-				if(i==20)  //nightsight
-				{
-					new textbuf_night[15];
-					gui_getProperty(twkChrMenu,MP_UNI_TEXT,20,textbuf_night);
-					if( strcmp( textbuf_night,"millisec" ) && gui_getProperty(twkChrMenu,MP_CHECK,i)) //Entry made and is nightsight activated
-					{
-						trim(textbuf_night);
-						if (isStrUnsignedInt(textbuf_night))
-						{
-							new value;
-							value = str2UnsignedInt(textbuf_night);
-							if ( tempfx_isActive( target,TFX_SPELL_LIGHT) != 1 ) // no nightsight already
-							{
-								tempfx_activate( TFX_SPELL_LIGHT,target,target,0,value,-1); //puts lighlevel for char to daylightlevel
-							}
-						}
-						else chr_message( chrsource, _,"A number must be inserted!");
-					}
-					else if( (tempfx_isActive( target,TFX_SPELL_LIGHT) == 1) && !(gui_getProperty(twkChrMenu,MP_CHECK,i)) ) // no Entry,is not activated and nightsight is active
-					{
-						tempfx_delete( target,TFX_SPELL_LIGHT,true); //no more nightsight
-					}
-				}
-				if(i==21)  //magic reflect
-				{
-					if( gui_getProperty(twkChrMenu,MP_CHECK,i) ) //magic reflect is activated
-						chr_setProperty( target, CP_PRIV2, _,  chr_getProperty( target, CP_PRIV2, _) | 0x40 ); //activate magic reflect
-					else
-						chr_setProperty( target, CP_PRIV2, _,  chr_getProperty( target, CP_PRIV2, _) & ~0x40 ); //disable
-				}
-				if(i==22)
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-				            callPolyMenu(chrsource, target,1); //polymorph
-					else if (!(gui_getProperty(twkChrMenu,MP_CHECK,i))&& (chr_getProperty( target,CP_ID)) != (chr_getProperty(target,CP_XID)))
-				            chr_unmorph(target);
-				}
-				if(i==25) //house icon
-				{
-					if ( gui_getProperty(twkChrMenu,MP_CHECK,i) )
-					        chr_setProperty( target,CP_PRIV2,_,chr_getProperty( target,CP_PRIV2,_) | PRIV2_VIEWHOUSESASICON ); //set 0 to 1
-					else	chr_setProperty( target,CP_PRIV2,_,chr_getProperty( target,CP_PRIV2,_) &~PRIV2_VIEWHOUSESASICON ); //set 1 to 0
-				}
-				if(i==28)  //nightsight
-				{
-					new textbuf_lsd[15];
-					gui_getProperty(twkChrMenu,MP_UNI_TEXT,i,textbuf_lsd);
-					if( strcmp( textbuf_lsd,"millisec" ) && gui_getProperty(twkChrMenu,MP_CHECK,i)) //Entry made and is hallucination activated
-					{
-						trim(textbuf_lsd);
-						if (isStrUnsignedInt(textbuf_lsd))
-						{
-							new value;
-							value = str2UnsignedInt(textbuf_lsd);
-							if ( tempfx_isActive( target,TFX_LSD) != 1 ) // no nightsight already
-							{
-								tempfx_activate( TFX_LSD,target,target,0,value,-1); //lets char hallucinate
-							}
-						}
-						else chr_message( chrsource, _,"A number must be inserted!");
-					}
-					else if( (tempfx_isActive( target,TFX_LSD) == 1) && !(gui_getProperty(twkChrMenu,MP_CHECK,i)) ) // no Entry,is not activated and nightsight is active
-					{
-						tempfx_delete( target,TFX_LSD,true); //no more nightsight
-					}
-				}
-			}//for
-		}//case
-		default: printf("unknown button");
-	}//switch
-	chr_update(target);
-	//printf("buttonCode: %d",buttonCode);
-}
-
-public tweakchrBck4(const twkChrMenu, const chrsource, const buttonCode)
-{
-	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 ); //target
-	switch(buttonCode)
-	{
-		case 1,2,3,4,5,6,7:
-		{
-			viewchrMenu(chrsource, target, buttonCode);
-			//gui_delete( twkChrMenu );
-		}
-		case 10:
-		{
-			new itemSet=set_create();
-			set_addItemWeared(itemSet,target,false,true,true);
-			for (set_rewind(itemSet);!set_end(itemSet);)
-			{
-				new item = set_get(itemSet);
-				new itemName[30];
-				chr_getProperty(item,IP_STR_NAME,_,itemName);
-				new layer= chr_getProperty(item,IP_LAYER);
-				if ( layer <= 24)
-				{
-					if(!gui_getProperty(twkChrMenu,MP_CHECK,6+(layer-1)))
-					{
-						new bp = chr_getBackpack(target, true);
-						itm_setContSerial(item, bp);
-						itm_refresh(item);
-					}
-				}
-			}
-			set_delete( itemSet );
-			chr_update(target);
-		}
-	}
-
-}
-
-public tweakchrBck5(const twkChrMenu, const chrsource, const buttonCode)
-{
-	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 ); //target
-	
-	switch(buttonCode)
-	{
-		case 1,2,3,4,5,6,7:
-		{
-			viewchrMenu(chrsource, target, buttonCode);
-			//gui_delete( twkChrMenu );
-		}
-		case 10:
-		{
-			new i=0;
-			new callname[15];
-			new oldevent[15];
-			for(i=0;i<NUM_chrevent;i++)
-			{
-				if ( !gui_getProperty(twkChrMenu,MP_CHECK,i+1)) //checkbox no more checked and event had existed
-				{
-					//printf("del event");
-					chr_delEventHandler(target, eventChr_array[i][eventnum]);
-				}
-				else
-				{
-					gui_getProperty(twkChrMenu,MP_UNI_TEXT,i+1,callname);
-					trim(callname);
-					chr_getEventHandler(target,eventChr_array[i][eventnum],oldevent);
-					if( strcmp( callname, oldevent) ) //different input happened
-						chr_setEventHandler(target, eventChr_array[i][eventnum], EVENTTYPE_STATIC, callname);
-				}
-				sprintf(callname, "");
-			}//for
-			chr_update(target);
-		}//case
-	}
-
-}
-
-public tweakchrBck6(const twkChrMenu, const chrsource, const buttonCode)
-{
-	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 ); //target
-	new tempChrStr[15];
-	
-	switch(buttonCode)
-	{
-		case 1,2,3,4,5,6,7:
-		{
-			viewchrMenu(chrsource, target, buttonCode);
-		}
-		case 10:
-		{
-			new i;
-			for(i=1000;i<5000;i++)
-			{
-				if (chr_isaLocalVar(target, i, VAR_TYPE_ANY))
-				{
-					if(!(gui_getProperty(twkChrMenu,MP_CHECK,i)))
-					{
-						chr_delLocalVar(target, i)
-					}
-					else if(chr_isaLocalVar(target, i, VAR_TYPE_INTEGER))
-					{
-						gui_getProperty(twkChrMenu,MP_UNI_TEXT,i,tempChrStr);
-						trim(tempChrStr);
-						if (isStrUnsignedInt(tempChrStr) || strcmp( !tempChrStr, "0" ))
-						{
-							new value = str2UnsignedInt(tempChrStr);
-							if(chr_getLocalIntVar(target,i)!=value)
-							         chr_setLocalIntVar(target, i, value);
-						}
-						else
-							chr_message(target, _, "An integer localVar value may only contain numbers with 0-9!");
-					}
-					else if(chr_isaLocalVar(target, i, VAR_TYPE_STRING))
-					{
-						new value[256];						
-						gui_getProperty(twkChrMenu,MP_UNI_TEXT,i,tempChrStr);
-						chr_getLocalStrVar(target,i, value);
-						if( strcmp( value, tempChrStr )) //is different
-						            chr_setLocalStrVar(target, i, tempChrStr);
-					}
-				}//if var test
-			}//for
-			if(gui_getProperty(twkChrMenu,MP_RADIO,101)) //integer var adding
-			{
-				new tempChrStrB[15];
-				new inpt[15];
-				gui_getProperty(twkChrMenu,MP_UNI_TEXT,5,tempChrStrB); //number
-				trim(tempChrStrB);
-				if(isStrUnsignedInt(tempChrStrB)) //is numeric
-				{
-					new number = str2UnsignedInt(tempChrStrB);
-					printf("tempChrStrB: %s, number: %d^n", tempChrStrB, number);
-					if(!(chr_isaLocalVar(target, number, VAR_TYPE_ANY))) //already exist
-					{
-						gui_getProperty(twkChrMenu,MP_UNI_TEXT,6,inpt); //value
-						trim(inpt);
-						printf("value: %s^n", inpt);
-						if ( (isStrUnsignedInt(inpt)) || strcmp( !inpt, "0" )) //value is numeric
-						{
-							new value = str2UnsignedInt(inpt);
-							chr_addLocalIntVar(target, number);
-							chr_setLocalIntVar(target, number, value);
-					
-						}
-						else
-							chr_message(target, _, "An integer localVar value may only contain numbers with 0-9!");
-					}
-					else
-						chr_message(target, _, "This char has already a localVar with this value!");
-				}
-				else
-					chr_message(target, _, "The localVar number must consist of 0-9, no letters or other signs!");
-			}
-			else if(gui_getProperty(twkChrMenu,MP_RADIO,100)) //string localvar
-			{
-				new tempChrStrB[15];
-				new inpt[15];
-				gui_getProperty(twkChrMenu,MP_UNI_TEXT,5,tempChrStrB); //number
-				trim(tempChrStrB);
-				if(isStrUnsignedInt(tempChrStrB)) //is numeric
-				{
-					new number = str2UnsignedInt(tempChrStrB);
-					printf("tempChrStrB: %s, number: %d^n", tempChrStrB, number);
-					if(!(chr_isaLocalVar(target, number, VAR_TYPE_ANY))) //already exist
-					{
-						gui_getProperty(twkChrMenu,MP_UNI_TEXT,6,inpt); //value
-						printf("input: %s", inpt);
-						chr_addLocalStrVar(target, number);
-						chr_setLocalStrVar(target, number, inpt);
-					}
-					else
-						chr_message(target, _, "This char has already a localVar with this value!");
-				}
-				else
-					chr_message(target, _, "The localVar number must consist of 0-9, no letters or other signs!");
-			}
-		}//case
-		default: printf("unknown button");
-	}//switch
-	chr_update(target);
-}
-
-public tweakchrBck7(const twkChrMenu, const chrsource, const buttonCode)
-{
-	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 ); //target
-	//new textbuf[5];
-	switch(buttonCode)
-	{
-		case 1,2,3,4,5,6,7:
-		{
-			viewchrMenu(chrsource, target, buttonCode);
-			//gui_delete( twkChrMenu );
-		}
-		case 10:
-		{
-			new i;
-			for(i=12; i <= 28;++i)
-			{
-				if(i==12)
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-						chr_setProperty( target, CP_PRIV2, _, chr_getProperty(target,CP_PRIV2) | PRIV2_ALLMOVE);
-					else
-						chr_setProperty( target, CP_PRIV2, _, chr_getProperty(target,CP_PRIV2) &~ PRIV2_ALLMOVE);
-				}
-				else if(i==13) //Can broadcast
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-						chr_setProperty( target, CP_PRIV, _,  chr_getProperty( target, CP_PRIV) | PRIV_CANBROADCAST );
-					else
-						chr_setProperty( target, CP_PRIV, _,  chr_getProperty( target, CP_PRIV) &~PRIV_CANBROADCAST );
-				}
-				else if(i==15) //is CNS/GM/player
-				{
-					if ( gui_getProperty(twkChrMenu,MP_RADIO,15) ) //CNS
-					{
-						chr_setProperty( target,CP_PRIV,_, chr_getProperty( target,CP_PRIV) | 0x80 );
-						chr_setProperty( target,CP_PRIV,_, chr_getProperty( target,CP_PRIV) &~0x01 ); //is no GM
-					}
-					else if ( gui_getProperty(twkChrMenu,MP_RADIO,16) ) //GM
-					{
-						chr_setProperty( target,CP_PRIV,_, chr_getProperty( target,CP_PRIV) &~ 0x80 );
-						chr_setProperty( target,CP_PRIV,_, chr_getProperty( target,CP_PRIV) | 0x01 ); //is GM
-					}
-					else
-					{
-						chr_setProperty( target,CP_PRIV,_, chr_getProperty( target,CP_PRIV) &~0x80 ); //is no CNS
-						chr_setProperty( target,CP_PRIV,_, chr_getProperty( target,CP_PRIV) &~0x01 ); //is no GM
-					}
-				}
-				else if(i==18) //pageable as GM, 18
-				{
-					if( gui_getProperty(twkChrMenu,MP_CHECK,i) )
-						chr_setProperty( target, CP_PRIV,_, chr_getProperty( target, CP_PRIV) | PRIV_GMPAGEABLE );
-					else
-						chr_setProperty( target, CP_PRIV,_,  chr_getProperty( target, CP_PRIV) & ~PRIV_GMPAGEABLE );
-				}
-				else if(i==20) //Dispellable, 20
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-						chr_setProperty( target, CP_PRIV2, _,  chr_getProperty( target, CP_PRIV2, _) | 0x20 );
-					else
-						chr_setProperty( target, CP_PRIV2, _,  chr_getProperty( target, CP_PRIV2, _) & ~0x20 );
-			
-				} 
-				else if(i==23) //Needs no Mana, 23
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-						chr_setProperty( target, CP_PRIV2, _,  chr_getProperty( target, CP_PRIV2, _) | 0x10 );
-					else
-						chr_setProperty( target, CP_PRIV2, _,  chr_getProperty( target, CP_PRIV2, _) & ~0x10 );
-				}
-				else if(i==24) //Needs no Reagents, 24
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-						chr_setProperty( target, CP_PRIV2, _,  chr_getProperty( target, CP_PRIV2, _) | 0x80 );
-					else
-						chr_setProperty( target, CP_PRIV2, _,  chr_getProperty( target, CP_PRIV2, _) & ~0x80 );
-				}
-				else if(i==25) //Sees serials, 25
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-						chr_setProperty( target, CP_PRIV, _,  chr_getProperty( target, CP_PRIV, _) | 0x08 );
-					else
-						chr_setProperty( target, CP_PRIV, _,  chr_getProperty( target, CP_PRIV, _) & ~0x08 );
-				}
-				else if(i==26) //Shows no skilltitle, 26
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-						chr_setProperty( target, CP_PRIV, _,  chr_getProperty( target, CP_PRIV, _) | 0x10 );
-					else
-						chr_setProperty( target, CP_PRIV, _,  chr_getProperty( target, CP_PRIV, _) & ~0x10 );
-				}
-				else if(i==27)
-				{
-					if(gui_getProperty(twkChrMenu,MP_CHECK,i))
-						chr_setProperty( target, CP_PRIV, _,  chr_getProperty( target, CP_PRIV, _) | 0x40 );
-					else
-						chr_setProperty( target, CP_PRIV, _,  chr_getProperty( target, CP_PRIV, _) & ~0x40 );
-				}//if
-			}//for
-		}//case
-		default: printf("unknown button");
-	}//switch
-	chr_update(target);
 }
 
 /*! }@ */
