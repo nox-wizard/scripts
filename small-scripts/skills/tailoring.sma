@@ -137,6 +137,7 @@ public __nxw_sk_tailoring(const s, const itm)
 	for( new index = 0; index < ALL_CLOTHS; index++) {
 		if( clothsDef[index] == scriptid ) {
 			type = index;
+			break;
 		}
 	}
 	if (type == INVALID) {

@@ -139,6 +139,7 @@ public __nxw_sk_tannering(const s, const itm)
 	for( new index = 0; index < ALL_LEATHERS; index++) {
 		if (leathersDef[index] == scriptid) {
 			type = index;
+			break;
 		}
 	}
 	if (type == INVALID) {
