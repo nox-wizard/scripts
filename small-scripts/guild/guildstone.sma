@@ -142,37 +142,64 @@ public guild_dclickStone( const guild, const socket ){
 	
 	gui_setProperty( gui, MP_BUFFER, 0, guild );
 	
-	gui_addText( gui, 40, 30, colorEdit, "Recruit someone in the gild" );
-	gui_addButton( gui, 20, 30, 0x4B9, 0x4BA, 1 );
+	gui_addText( gui, 45, 5, colorEdit, "GuildStone Menu" );
 	
-	gui_addText( gui, 40, 60, colorEdit, "See the member list" );
-	gui_addButton( gui, 20, 60, 0x4B9, 0x4BA, 2 );
+	gui_addText( gui, 45, 29, _, "Recruit someone in the gild" );
+	gui_addButton( gui, 25, 29, 0x4B9, 0x4BA, 1 );
 	
-	gui_addText( gui, 40, 90, colorEdit, "Reath the guild description" );
-	gui_addButton( gui, 20, 90, 0x4B9, 0x4BA, 3 );
+	gui_addText( gui, 45, 59, _, "See the member list" );
+	gui_addButton( gui, 25, 59, 0x4B9, 0x4BA, 2 );
 	
-	gui_addText( gui, 40, 120, colorEdit, "Resign From Guild" );
-	gui_addButton( gui, 20, 120, 0x4B9, 0x4BA, 4 );
+	gui_addText( gui, 45, 89, _, "Reath the guild description" );
+	gui_addButton( gui, 25, 89, 0x4B9, 0x4BA, 3 );
 	
-	gui_addText( gui, 40, 150, colorEdit, "Read the candidates list" );
-	gui_addButton( gui, 20, 150, 0x4B9, 0x4BA, 5 );
+	gui_addText( gui, 45, 119, _, "Resign From Guild" );
+	gui_addButton( gui, 25, 119, 0x4B9, 0x4BA, 4 );
 	
-	gui_addText( gui, 40, 180, colorEdit, "Advanced Menu" );
-	gui_addButton( gui, 20, 180, 0x4B9, 0x4BA, 6 );
+	gui_addText( gui, 45, 149, _, "Read the candidates list" );
+	gui_addButton( gui, 25, 149, 0x4B9, 0x4BA, 5 );
 	
-	gui_addText( gui, 40, 210, colorEdit, "Read the guilds that are in war with you " );
-	gui_addButton( gui, 20, 210, 0x4B9, 0x4BA, 7 );
+	gui_addText( gui, 45, 179, _, "Advanced Menu" );
+	gui_addButton( gui, 25, 179, 0x4B9, 0x4BA, 6 );
 	
-	gui_addText( gui, 40, 240, colorEdit, "Read the guilds that you have declared war" );
-	gui_addButton( gui, 20, 240, 0x4B9, 0x4BA, 8 );
+	gui_addText( gui, 45, 209, _, "Read the guilds that are in war with you " );
+	gui_addButton( gui, 25, 209, 0x4B9, 0x4BA, 7 );
 	
-	gui_show( gui, socket );
+	gui_addText( gui, 45, 239, _, "Read the guilds that you have declared war" );
+	gui_addButton( gui, 25, 239, 0x4B9, 0x4BA, 8 );
+	
+	gui_show( gui, getCharFromSocket(socket) );
 	
 }
 
 public guildDclick_callback( const socket, const gui, const button ){
 
-return;
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	
+	switch(button){
+		case 0: return;
+		
+		case 1: return;
+		
+		case 2: return;
+		
+		case 3: return;
+		
+		case 4: return;
+		
+		case 5: return;
+		
+		case 6: return;
+		
+		case 7: return;
+		
+		case 8: return;
+		
+		default:{
+			nprintf(socket, "Something gone wrong!");
+			return;
+		}
+	}
 }
 
 /*!
