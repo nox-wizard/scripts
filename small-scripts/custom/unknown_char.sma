@@ -251,15 +251,13 @@ public unknown_sglclick(const clicked, const viewer)
 	if (viewer == clicked) 
 		status=1; 
 	 
-	log_message("Enter single click, viewer is: %d, clicked is: %d, status: %d^n^n", viewer, clicked, status); 
-	 
-	//log_message("char listener is: %d and status towards %s is: %d^n", listener, tempStr, status); 
-	 
-	if( status == -1) 
+	log_message("Enter single click, viewer is: %d, clicked is: %d, status: %d^n^n", viewer, clicked, status);
+	
+	if( status == -1 ) 
 	{ 
 		sprintf(tempStr3, "%s",msg_chrUnknownDef[0]); //set the string to say to unknown 
 	} 
-	else 
+	else
 	{ 
 		sprintf(tempStr3, "%s",tempStr); 		
 	}
