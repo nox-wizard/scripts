@@ -3322,6 +3322,7 @@ SECTION ITEM $item_a_dying_tub
     ID 0FAB
     DECAY
     VALUE 10
+    DYE 1
 }
 
 SECTION ITEM $item_display_case
