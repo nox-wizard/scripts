@@ -134,7 +134,7 @@ public chr_introduce_name(const viewer)
 }
 
 //carefull here, if the person is under incognito or in polymorph the naming system needs to treat him accordingly, so don't use the localVar with the "real" name here
-public introduce_name_targ(clicked, viewerchr, object, x, y, z, unused, param)
+public introduce_name_targ(target, viewerchr, clicked, x, y, z, unused, param)
 {
 	new tempStr[100];
 	new charmap = chr_getLocalIntVar( viewerchr, UNKNOWN_CHAR_VAR);
