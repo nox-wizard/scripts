@@ -1,0 +1,1900 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (farmitems.xss)                                      ||
+// || Maintained by Horian		                                  ||
+// || Last Update 27-feb-2003                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82 or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_small_flower_pot
+{
+    NAME small flower pot
+    ID 11c6
+    TRIGGER $itrg_potted_tree
+    TRIGTYPE 0
+}
+
+SECTION ITEM $item_potted_orfluer
+{
+    NAME potted orfluer flower
+    ID 11cb
+    TRIGGER $itrg_potted_tree
+    TRIGTYPE 0
+}
+
+SECTION ITEM $item_potted_plant
+{
+    NAME potted plant
+    ID 11cb
+    TRIGGER $itrg_potted_tree
+    TRIGTYPE 0
+}
+
+SECTION ITEM $item_potted_cactus1
+{
+    NAME potted cactus
+    ID 1E0F
+}
+
+SECTION ITEM $item_potted_cactus2
+{
+    NAME potted cactus
+    ID 1E10
+}
+
+SECTION ITEM $item_big_flower_pot
+{
+    NAME big flower pot
+    ID 11c7
+    TRIGGER $itrg_potted_tree
+    TRIGTYPE 0
+}
+
+SECTION ITEM $item_potted_plant2
+{
+    NAME potted plant
+    ID 11c8
+    TRIGGER $itrg_potted_tree
+    TRIGTYPE 0
+}
+
+SECTION ITEM $item_potted_tree
+{
+    NAME potted tree
+    ID 11c9
+    TRIGGER $itrg_potted_tree
+    TRIGTYPE 0
+}
+
+SECTION ITEM $item_potted_foxglove
+{
+    NAME big flower pot
+    ID 11ca
+    TRIGGER $itrg_potted_tree
+    TRIGTYPE 0
+}
+
+SECTION ITEM $item_potted_cactus3
+{
+    NAME potted cactus
+    ID 1E11
+}
+
+SECTION ITEM $item_potted_cactus4
+{
+    NAME potted cactus
+    ID 1E12
+}
+
+SECTION ITEM $item_potted_cactus5
+{
+    NAME potted cactus
+    ID 1E13
+}
+
+SECTION ITEM $item_potted_cactus6
+{
+    NAME potted cactus
+    ID 1E14
+}
+
+SECTION ITEM $item_flowers
+{
+    NAME flowers
+    ID 0c37
+}
+
+SECTION ITEM $item_flowers2
+{
+    NAME flowers
+    ID 0c38
+}
+
+SECTION ITEM $item_flowers3
+{
+    NAME flowers
+    ID 0c45
+}
+
+SECTION ITEM $item_flowers4
+{
+    NAME flowers
+    ID 0c46
+}
+
+SECTION ITEM $item_flowers5
+{
+    NAME flowers
+    ID 0c47
+}
+
+SECTION ITEM $item_flowers7
+{
+    NAME flowers
+    ID 0c48
+}
+
+SECTION ITEM $item_flowers8
+{
+    NAME flowers
+    ID 0c49
+}
+
+SECTION ITEM $item_flowers9
+{
+    NAME flowers
+    ID 0c4a
+}
+
+SECTION ITEM $item_flowers10
+{
+    NAME flowers
+    ID 0c4b
+}
+
+SECTION ITEM $item_flowers11
+{
+    NAME flowers
+    ID 0c4c
+}
+
+SECTION ITEM $item_flowers12
+{
+    NAME flowers
+    ID 0c4d
+}
+
+SECTION ITEM $item_flowers13
+{
+    NAME flowers
+    ID 0c4e
+}
+
+SECTION ITEM $item_flowers14
+{
+    NAME flowers
+    ID 0d29
+}
+
+SECTION ITEM $item_flowers15
+{
+    NAME flowers
+    ID 0d2b
+}
+
+SECTION ITEM $item_flowers16
+{
+    NAME flowers
+    ID 0d2d
+}
+
+SECTION ITEM $item_flowers17
+{
+    NAME flowers
+    ID 0d2f
+}
+
+SECTION ITEM $item_flowers18
+{
+    NAME flowers
+    ID 0d36
+}
+
+SECTION ITEM $item_sprouts
+{
+    NAME sprouts
+    ID 0c68
+}
+
+SECTION ITEM $item_sprouts_2
+{
+    NAME sprouts
+    ID 0c69
+}
+
+SECTION ITEM $item_small_palm
+{
+    NAME small palm
+    ID 0c9a
+}
+
+SECTION ITEM $item_small_palm_2
+{
+    NAME small palm
+    ID 0c9c
+}
+
+SECTION ITEM $item_small_palm_3
+{
+    NAME small palm
+    ID 0c9b
+}
+
+SECTION ITEM $item_small_palm_4
+{
+    NAME small palm
+    ID 0c9d
+}
+
+SECTION ITEM $item_small_palm_5
+{
+    NAME small palm
+    ID 0c99
+}
+
+SECTION ITEM $item_cotton1
+{
+    NAME cotton
+    ID 0c51
+}
+
+SECTION ITEM $item_cotton1_2
+{
+    NAME cotton
+    ID 0c53
+}
+
+SECTION ITEM $item_cotton1_3
+{
+    NAME cotton
+    ID 0c4f
+}
+
+SECTION ITEM $item_cotton2
+{
+    NAME cotton
+    ID 0c52
+}
+
+SECTION ITEM $item_cotton2_2
+{
+    NAME cotton
+    ID 0c54
+}
+
+SECTION ITEM $item_cotton2_3
+{
+    NAME cotton
+    ID 0c50
+}
+
+SECTION ITEM $item_flax1
+{
+    NAME flax
+    ID 1a99
+}
+
+SECTION ITEM $item_flax1_2
+{
+    NAME flax
+    ID 1a9a
+}
+
+SECTION ITEM $item_flax1_3
+{
+    NAME flax
+    ID 1a9b
+}
+
+SECTION ITEM $item_flax2
+{
+    NAME flax bundle
+    ID 1a9c
+}
+
+SECTION ITEM $item_flax3
+{
+    NAME flax bundle
+    ID 1a9d
+}
+
+SECTION ITEM $item_hops1_1
+{
+    NAME hops
+    ID 1a9e
+}
+
+SECTION ITEM $item_hops1_2
+{
+    NAME hops
+    ID 1aa0
+}
+
+SECTION ITEM $item_hops2_1
+{
+    NAME hops
+    ID 1a9f
+}
+
+SECTION ITEM $item_hops2_2
+{
+    NAME hops
+    ID 1aa1
+}
+
+SECTION ITEM $item_hops3
+{
+    NAME hops cones
+    ID 1aa2
+}
+
+SECTION ITEM $item_wheat1_1
+{
+    NAME wheat sproutes
+    ID 1ebe
+}
+
+SECTION ITEM $item_wheat1_2
+{
+    NAME wheat
+    ID 0c55
+}
+
+SECTION ITEM $item_wheat1_3
+{
+    NAME wheat
+    ID 0c57
+}
+
+SECTION ITEM $item_wheat1_4
+{
+    NAME ripe wheat
+    ID 0c58
+}
+
+SECTION ITEM $item_wheat1_5
+{
+    NAME harvested wheat
+    ID 0daf
+}
+
+SECTION ITEM $item_wheat2_1
+{
+    NAME wheat sproutes
+    ID 1ebf
+}
+
+SECTION ITEM $item_wheat2_2
+{
+    NAME wheat
+    ID 0c55
+}
+
+SECTION ITEM $item_wheat2_3
+{
+    NAME wheat
+    ID 0c59
+}
+
+SECTION ITEM $item_wheat2_4
+{
+    NAME ripe wheat
+    ID 0c5b
+}
+
+SECTION ITEM $item_wheat2_5
+{
+    NAME harvested wheat
+    ID 0dae
+}
+
+SECTION ITEM $item_wheat3_1
+{
+    NAME wheat sproutes
+    ID 1ebf
+}
+
+SECTION ITEM $item_wheat3_2
+{
+    NAME wheat
+    ID 0c56
+}
+
+SECTION ITEM $item_wheat3_3
+{
+    NAME wheat
+    ID 0c59
+}
+
+SECTION ITEM $item_wheat3_4
+{
+    NAME ripe wheat
+    ID 0c5a
+}
+
+SECTION ITEM $item_wheat3_5
+{
+    NAME harvested wheat
+    ID 0daf
+}
+
+SECTION ITEM $item_straw_pillow1
+{
+    NAME straw pillow
+    ID 11ea
+}
+
+SECTION ITEM $item_straw_pillow2
+{
+    NAME straw pillow
+    ID 11eb
+}
+
+SECTION ITEM $item_loose_grain
+{
+    NAME loose grain
+    ID 1449
+}
+
+SECTION ITEM $item_watermelons
+{
+    NAME water melon
+    ID 0c5d
+}
+
+SECTION ITEM $item_watermelons_2
+{
+    NAME water melon
+    ID 0C5c
+    TYPE $itype_food
+    VALUE 15
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_turnip1
+{
+    NAME turnip
+    ID 0c61
+}
+
+SECTION ITEM $item_turnip1_2
+{
+    NAME turnip
+    ID 0c62
+}
+
+SECTION ITEM $item_turnip1_3
+{
+    NAME turnip
+    ID 0d39
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_turnip2
+{
+    NAME turnip
+    ID 0c61
+}
+
+SECTION ITEM $item_turnip2_2
+{
+    NAME turnip
+    ID 0c63
+}
+
+SECTION ITEM $item_turnip2_3
+{
+    NAME turnip
+    ID 0d3a
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_gourd1
+{
+    NAME gourd
+    ID 0c66
+}
+
+SECTION ITEM $item_gourd1_2
+{
+    NAME gourd
+    ID 0c65
+    TYPE $itype_food
+}
+
+SECTION ITEM $item_gourd2
+{
+    NAME gourd
+    ID 0c67
+}
+
+SECTION ITEM $item_gourd2_2
+{
+    NAME gourd
+    ID 0c64
+    TYPE $itype_food
+}
+
+SECTION ITEM $item_pumpkin1
+{
+    NAME pumpkin
+    ID 0c6c
+}
+
+SECTION ITEM $item_pumpkin1_2
+{
+    NAME pumpkin
+    ID 0c6a
+    TYPE $itype_food
+}
+
+SECTION ITEM $item_pumpkin2
+{
+    NAME pumpkin
+    ID 0c6c
+}
+
+SECTION ITEM $item_pumpkin2_2
+{
+    NAME pumpkin
+    ID 0c6b
+    TYPE $itype_food
+}
+
+SECTION ITEM $item_onions
+{
+    NAME onion
+    ID 0c6f
+}
+
+SECTION ITEM $item_onions_2
+{
+    NAME onion
+    ID 0c6e
+}
+
+SECTION ITEM $item_onions_3
+{
+    NAME onion
+    ID 0c6d
+    TYPE $itype_food
+}
+
+SECTION ITEM $item_lettuce1
+{
+    NAME lettuce
+    ID 0c70
+    TYPE $itype_food
+}
+
+SECTION ITEM $item_lettuce2
+{
+    NAME lettuce
+    ID 0c71
+    TYPE $itype_food
+}
+
+SECTION ITEM $item_squash1
+{
+    NAME squash
+    ID 0C72
+    TYPE $itype_food
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_squash2
+{
+    NAME squash
+    ID 0C73
+    TYPE $itype_food
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_honeydew_melons1
+{
+    NAME honeydew melon
+    ID 0C74
+    TYPE $itype_food
+    VALUE 10
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_honeydew_melons2
+{
+    NAME honeydew melon
+    ID 0C75
+    TYPE $itype_food
+    VALUE 10
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_carrots
+{
+    NAME carrots
+    ID 0c76
+}
+
+SECTION ITEM $item_carrots_2
+{
+    NAME carrot
+    ID 0C77
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_carrots_3
+{
+    NAME carrot
+    ID 0C78
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_canteloupes
+{
+    NAME canteloupe
+    ID 0C79
+    TYPE $itype_food
+    //DECAY
+    VALUE 10
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_canteloupes_2
+{
+    NAME canteloupe
+    ID 0C7a
+    TYPE $itype_food
+    //DECAY
+    VALUE 10
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_heads_of_cabbage
+{
+    NAME cabbage
+    ID 0C7B
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_heads_of_cabbage_2
+{
+    NAME cabbage
+    ID 0C7c
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_ears_of_corn1_1
+{
+    NAME unripe corn
+    ID 0c7e
+}
+
+SECTION ITEM $item_ears_of_corn1_2
+{
+    NAME ripe corn
+    ID 0c7d
+}
+
+SECTION ITEM $item_ears_of_corn1_3
+{
+    NAME ear of corn
+    ID 0C7F
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_ears_of_corn1_4
+{
+    NAME ear of corn
+    ID 0C81
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_ears_of_corn2_1
+{
+    NAME unripe corn
+    ID 0c7e
+}
+
+SECTION ITEM $item_ears_of_corn2_2
+{
+    NAME ripe corn
+    ID 0c7d
+}
+
+SECTION ITEM $item_ears_of_corn2_3
+{
+    NAME ear of corn
+    ID 0C80
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_ears_of_corn2_4
+{
+    NAME ear of corn
+    ID 0C82
+    TYPE $itype_food
+    //DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_campion_flowers
+{
+    NAME campion flowers
+    ID 0C87
+}
+
+SECTION ITEM $item_campion_flowers_2
+{
+    NAME campion flowers
+    ID 0C89
+}
+
+SECTION ITEM $item_campion_flowers_3
+{
+    NAME campion flowers
+    ID 0C83
+}
+
+SECTION ITEM $item_foxglove_flowers1
+{
+    NAME foxglove flowers
+    ID 0C84
+}
+
+SECTION ITEM $item_foxglove_flowers2
+{
+    NAME foxglove flowers
+    ID 0C8a
+}
+
+SECTION ITEM $item_orfluer_flowers1
+{
+    NAME orfluer flowers
+    ID 0C85
+}
+
+SECTION ITEM $item_orfluer_flowers1_2
+{
+    NAME orfluer flowers
+    ID 0Cc0
+}
+
+SECTION ITEM $item_orfluer_flowers1_3
+{
+    NAME orfluer flowers
+    ID 0Cc1
+}
+
+SECTION ITEM $item_red_poppies1
+{
+    NAME red poppies
+    ID 0Cbe
+}
+
+SECTION ITEM $item_red_poppies2_1
+{
+    NAME red poppies
+    ID 0Cbf
+}
+
+SECTION ITEM $item_red_poppies2_2
+{
+    NAME red poppies
+    ID 0C86
+}
+
+SECTION ITEM $item_snow_drops
+{
+    NAME snow drops
+    ID 0C8e
+}
+
+SECTION ITEM $item_snow_drops_2
+{
+    NAME snow drops
+    ID 0C88
+}
+
+SECTION ITEM $item_snow_drops_3
+{
+    NAME snow drops
+    ID 0C8d
+}
+
+SECTION ITEM $item_hedge1
+{
+    NAME hedge
+    ID 0C8F
+}
+
+SECTION ITEM $item_hedge1_2
+{
+    NAME untrimmed hedge
+    ID 0C91
+}
+
+SECTION ITEM $item_hedge2
+{
+    NAME hedge
+    ID 0C90
+}
+
+SECTION ITEM $item_hedge2_2
+{
+    NAME untrimmed hedge
+    ID 0C92
+}
+
+SECTION ITEM $item_hedge3
+{
+    NAME high hedge
+    ID 0C8F
+}
+
+SECTION ITEM $item_hedge3_2
+{
+    NAME high untrimmed hedge
+    ID 0db9
+}
+
+SECTION ITEM $item_hedge4
+{
+    NAME high hedge
+    ID 0C90
+}
+
+SECTION ITEM $item_hedge4_2
+{
+    NAME high untrimmed hedge
+    ID 0db8
+}
+
+SECTION ITEM $item_blade_plant
+{
+    NAME blade plant
+    ID 0C93
+}
+
+SECTION ITEM $item_bulrushes
+{
+    NAME bulrushes
+    ID 0C94
+}
+
+SECTION ITEM $item_coconut_palm
+{
+    NAME coconut palm
+    ID 0C95
+}
+
+SECTION ITEM $item_date_palm
+{
+    NAME date palm
+    ID 0C96
+}
+
+SECTION ITEM $item_elephant_ear
+{
+    NAME elephant ear
+    ID 0C97
+}
+
+SECTION ITEM $item_fan_plant
+{
+    NAME fan plant
+    ID 0C98
+}
+
+SECTION ITEM $item_ohii_tree
+{
+    NAME o'hii tree
+    ID 0C9e
+}
+
+SECTION ITEM $item_fern1
+{
+    NAME fern
+    ID 0C9f
+}
+
+SECTION ITEM $item_fern2
+{
+    NAME fern
+    ID 0Ca0
+}
+
+SECTION ITEM $item_fern3
+{
+    NAME fern
+    ID 0Ca2
+}
+
+SECTION ITEM $item_fern4
+{
+    NAME fern
+    ID 0Ca3
+}
+
+SECTION ITEM $item_fern5
+{
+    NAME fern
+    ID 0Ca4
+}
+
+SECTION ITEM $item_large_fern
+{
+    NAME large fern
+    ID 0CA1
+}
+
+SECTION ITEM $item_pampas_grass1
+{
+    NAME pampas grass
+    ID 0CA5
+}
+
+SECTION ITEM $item_pampas_grass2
+{
+    NAME pampas grass
+    ID 0Cc4
+}
+
+SECTION ITEM $item_ponytail_palm
+{
+    NAME ponytail palm
+    ID 0CA6
+}
+
+SECTION ITEM $item_rushes
+{
+    NAME rushes
+    ID 0CA7
+}
+
+SECTION ITEM $item_banana_plant
+{
+    NAME small banana plant
+    ID 0CA8
+}
+
+SECTION ITEM $item_banana_plant_2
+{
+    NAME banana plant with fruits
+    ID 0CAa
+}
+
+SECTION ITEM $item_banana_plant_3
+{
+    NAME harvested banana plant
+    ID 0CAb
+}
+
+SECTION ITEM $item_snake_plant
+{
+    NAME snake plant
+    ID 0CA9
+}
+
+SECTION ITEM $item_grasses1_1
+{
+    NAME grasses
+    ID 0CAc
+}
+
+SECTION ITEM $item_grasses1_2
+{
+    NAME grasses
+    ID 0CAd
+}
+
+SECTION ITEM $item_grasses2_1
+{
+    NAME grasses
+    ID 0CAe
+}
+
+SECTION ITEM $item_grasses2_2
+{
+    NAME grasses
+    ID 0CAf
+}
+
+SECTION ITEM $item_grasses3
+{
+    NAME grasses
+    ID 0Cb0
+}
+
+SECTION ITEM $item_grasses4
+{
+    NAME grasses
+    ID 0Cb1
+}
+
+SECTION ITEM $item_grasses5
+{
+    NAME grasses
+    ID 0Cb2
+}
+
+SECTION ITEM $item_grasses6
+{
+    NAME grasses
+    ID 0Cb3
+}
+
+SECTION ITEM $item_grasses7
+{
+    NAME grasses
+    ID 0Cb4
+}
+
+SECTION ITEM $item_grasses8
+{
+    NAME grasses
+    ID 0Cb5
+}
+
+SECTION ITEM $item_grasses9
+{
+    NAME grasses
+    ID 0Cb6
+}
+
+SECTION ITEM $item_grasses10
+{
+    NAME grasses
+    ID 0Cbb
+}
+
+SECTION ITEM $item_grasses11
+{
+    NAME grasses
+    ID 0Cbc
+}
+
+SECTION ITEM $item_grasses12
+{
+    NAME grasses
+    ID 0Cbd
+}
+
+SECTION ITEM $item_grasses13
+{
+    NAME grasses
+    ID 0d32
+}
+
+SECTION ITEM $item_grasses14
+{
+    NAME grasses
+    ID 0d33
+}
+
+SECTION ITEM $item_grasses15_1
+{
+    NAME grass
+    ID 1782
+}
+
+SECTION ITEM $item_grasses15_2
+{
+    NAME grass
+    ID 1784
+}
+
+SECTION ITEM $item_grasses15_3
+{
+    NAME grass
+    ID 1783
+}
+
+SECTION ITEM $item_grasses15_4
+{
+    NAME grass
+    ID 1785
+}
+
+SECTION ITEM $item_grasses16_1
+{
+    NAME grass
+    ID 1786
+}
+
+SECTION ITEM $item_grasses16_2
+{
+    NAME grass
+    ID 1787
+}
+
+SECTION ITEM $item_grasses16_3
+{
+    NAME grass
+    ID 1788
+}
+
+SECTION ITEM $item_grasses16_4
+{
+    NAME grass
+    ID 1789
+}
+
+SECTION ITEM $item_grass_mat1
+{
+    NAME grass mat
+    ID 11e2
+}
+
+SECTION ITEM $item_grass_mat1_2
+{
+    NAME grass mat
+    ID 11e3
+}
+
+SECTION ITEM $item_grass_mat2
+{
+    NAME grass mat
+    ID 11e4
+}
+
+SECTION ITEM $item_grass_mat2_2
+{
+    NAME grass mat
+    ID 11e5
+}
+
+SECTION ITEM $item_muck1
+{
+    NAME muck
+    ID 0Cc3
+}
+
+SECTION ITEM $item_muck2
+{
+    NAME muck
+    ID 0Cc5
+}
+
+SECTION ITEM $item_muck3
+{
+    NAME muck
+    ID 0Cc6
+}
+
+SECTION ITEM $item_weed
+{
+    NAME weed
+    ID 0Cc7
+}
+
+SECTION ITEM $item_cattails1_1
+{
+    NAME cattails
+    ID 0Cb7
+}
+
+SECTION ITEM $item_cattails1_2
+{
+    NAME cattails
+    ID 0Cb8
+}
+
+SECTION ITEM $item_cattails2_1
+{
+    NAME cattails
+    ID 0Cb9
+}
+
+SECTION ITEM $item_cattails2_2
+{
+    NAME cattails
+    ID 0Cba
+}
+
+SECTION ITEM $item_juniper_bush
+{
+    NAME juniper bush
+    ID 0CC8
+}
+
+SECTION ITEM $item_spider_tree
+{
+    NAME spider tree
+    ID 0CC9
+}
+
+SECTION ITEM $item_vines1
+{
+    NAME vines
+    ID 0Cee
+}
+
+SECTION ITEM $item_vines1_2
+{
+    NAME vines
+    ID 0Cec
+}
+
+SECTION ITEM $item_vines1_3
+{
+    NAME vines
+    ID 0Ced
+}
+
+SECTION ITEM $item_vines1_4
+{
+    NAME vines
+    ID 0Cee
+}
+
+SECTION ITEM $item_vines2_1
+{
+    NAME vines
+    ID 0Ceb
+}
+
+SECTION ITEM $item_vines2_2
+{
+    NAME vines
+    ID 0Cf2
+}
+
+SECTION ITEM $item_vines2_3
+{
+    NAME vines
+    ID 0Cf0
+}
+
+SECTION ITEM $item_vines2_4
+{
+    NAME vines
+    ID 0Cf1
+}
+
+SECTION ITEM $item_water_plants
+{
+    NAME water plants
+    ID 0d04
+}
+
+SECTION ITEM $item_reeds
+{
+    NAME water plants
+    ID 0d05
+}
+
+SECTION ITEM $item_lily_pads1
+{
+    NAME water lily
+    ID 0d06
+}
+
+SECTION ITEM $item_lily_pads2
+{
+    NAME water lily
+    ID 0d07
+}
+
+SECTION ITEM $item_lily_pads3
+{
+    NAME water lily
+    ID 0d08
+}
+
+SECTION ITEM $item_lily_pads4
+{
+    NAME water lily
+    ID 0dc1
+}
+
+SECTION ITEM $item_lily_pads5
+{
+    NAME water lily
+    ID 0dc2
+}
+
+SECTION ITEM $item_lily_pads6
+{
+    NAME water lily
+    ID 0dc3
+}
+
+SECTION ITEM $item_lily_pads7
+{
+    NAME lily pad
+    ID 0d09
+}
+
+SECTION ITEM $item_lily_pads8
+{
+    NAME lily pad
+    ID 0d0a
+}
+
+SECTION ITEM $item_lily_pads9
+{
+    NAME lily pads
+    ID 0d0b
+}
+
+SECTION ITEM $item_lily_pads10
+{
+    NAME lily pad
+    ID 0dbc
+}
+
+SECTION ITEM $item_lily_pads11
+{
+    NAME lily pad
+    ID 0dbd
+}
+
+SECTION ITEM $item_lily_pads12
+{
+    NAME lily pads
+    ID 0dbe
+}
+
+SECTION ITEM $item_seaweed
+{
+    NAME seaweed
+    ID 0dba
+}
+
+SECTION ITEM $item_seaweed2
+{
+    NAME seaweed
+    ID 0dbb
+}
+
+SECTION ITEM $item_grape_vines1
+{
+    NAME grape vines
+    ID 0d1b
+}
+
+SECTION ITEM $item_grape_vines2
+{
+    NAME grape vines
+    ID 0d1c
+}
+
+SECTION ITEM $item_grape_vines3
+{
+    NAME grape vines
+    ID 0d1d
+}
+
+SECTION ITEM $item_grape_vines4
+{
+    NAME grape vines
+    ID 0d1e
+}
+
+SECTION ITEM $item_grape_vines5
+{
+    NAME grape vines
+    ID 0d1f
+}
+
+SECTION ITEM $item_grape_vines6
+{
+    NAME grape vines
+    ID 0d20
+}
+
+SECTION ITEM $item_grape_vines7
+{
+    NAME grape vines
+    ID 0d21
+}
+
+SECTION ITEM $item_grape_vines8
+{
+    NAME grape vines
+    ID 0d22
+}
+
+SECTION ITEM $item_grape_vines9
+{
+    NAME grape vines
+    ID 0d23
+}
+
+SECTION ITEM $item_grape_vines10
+{
+    NAME grape vines
+    ID 0d24
+}
+
+SECTION ITEM $item_cactus1_1
+{
+    NAME Barrel Cactus
+    ID 0d26
+}
+
+SECTION ITEM $item_cactus1_2
+{
+    NAME TriBarrel Cactus
+    ID 0d27
+}
+
+SECTION ITEM $item_cactus1_3
+{
+    NAME TriBarrel Cactus
+    ID 0d25
+}
+
+SECTION ITEM $item_cactus2_1
+{
+    NAME  Prickly Pear Cactus
+    ID 0d28
+}
+
+SECTION ITEM $item_cactus2_2
+{
+    NAME  Prickly Pear Cactus
+    ID 0d2c
+}
+
+SECTION ITEM $item_cactus2_3
+{
+    NAME  Prickly Pear Cactus
+    ID 0d2e
+}
+
+SECTION ITEM $item_cactus3_1
+{
+    NAME  Prickly Pear Cactus
+    ID 0d28
+}
+
+SECTION ITEM $item_cactus3_2
+{
+    NAME  Prickly Pear Cactus
+    ID 0d2a
+}
+
+SECTION ITEM $item_cactus3_3
+{
+    NAME  Prickly Pear Cactus
+    ID 0d2e
+}
+
+SECTION ITEM $item_cactus4
+{
+    NAME  Pipe Cactus
+    ID 0d35
+}
+
+SECTION ITEM $item_century_plant
+{
+    NAME  century plant
+    ID 0d30
+}
+
+SECTION ITEM $item_century_plant2
+{
+    NAME  century plant
+    ID 0d31
+}
+
+SECTION ITEM $item_morning_glory
+{
+    NAME  morning glory
+    ID 0d34
+}
+
+SECTION ITEM $item_morning_glory2
+{
+    NAME  morning glory
+    ID 1f0d
+}
+
+SECTION ITEM $item_morning_glory3
+{
+    NAME  morning glory
+    ID 1f0e
+}
+
+SECTION ITEM $item_morning_glory4
+{
+    NAME  morning glory
+    ID 1f0f
+}
+
+SECTION ITEM $item_morning_glory5
+{
+    NAME  morning glory
+    ID 1f10
+}
+
+SECTION ITEM $item_morning_glory6
+{
+    NAME  morning glory
+    ID 1f11
+}
+
+SECTION ITEM $item_morning_glory7
+{
+    NAME  morning glory
+    ID 1f12
+}
+
+SECTION ITEM $item_yucca
+{
+    NAME  century plant
+    ID 0d37
+}
+
+SECTION ITEM $item_yucca2
+{
+    NAME  century plant
+    ID 0d38
+}
+
+SECTION ITEM $item_tuscany_pine2
+{
+    NAME  tuscany pine
+    ID 1b7e
+}
+
+SECTION ITEM $item_hay1_1
+{
+    NAME harvested hay
+    ID 1a95
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay1_2
+{
+    NAME harvested hay
+    ID 1a94
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay1_3
+{
+    NAME harvested hay
+    ID 1a92
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay1_4
+{
+    NAME harvested hay
+    ID 0F34
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_sheaf_of_hay1
+{
+    NAME sheaf of hay
+    ID 0F36
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay2_1
+{
+    NAME hay
+    ID 1a96
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay2_2
+{
+    NAME hay
+    ID 1a93
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay2_3
+{
+    NAME hay
+    ID 1a92
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay2_4
+{
+    NAME harvested hay
+    ID 0F35
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_sheaf_of_hay2
+{
+    NAME sheaf of hay
+    ID 100c
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay3
+{
+    NAME harvested hay
+    ID 1036
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hay4
+{
+    NAME harvested hay
+    ID 1037
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_sheaf_of_hay3
+{
+    NAME sheaf of hay
+    ID 100d
+    DECAY
+    VALUE 5
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_mandrake1_1
+{
+    NAME mandrake
+    ID 18df
+}
+
+SECTION ITEM $item_mandrake1_2
+{
+    NAME mandrake
+    ID 18e0
+}
+
+SECTION ITEM $item_mandrake2_1
+{
+    NAME mandrake
+    ID 18dd
+}
+
+SECTION ITEM $item_mandrake2_2
+{
+    NAME mandrake
+    ID 18de
+}
+
+SECTION ITEM $item_garlic1
+{
+    NAME garlic
+    ID 18df
+}
+
+SECTION ITEM $item_garlic2
+{
+    NAME garlic
+    ID 18e0
+}
+
+SECTION ITEM $item_nightshade1_1
+{
+    NAME nightshade
+    ID 18e5
+}
+
+SECTION ITEM $item_nightshade1_2
+{
+    NAME nightshade
+    ID 18e6
+}
+
+SECTION ITEM $item_nightshade2_1
+{
+    NAME nightshade
+    ID 18e7
+}
+
+SECTION ITEM $item_nightshade2_2
+{
+    NAME nightshade
+    ID 18e8
+}
+
+SECTION ITEM $item_ginseng1_1
+{
+    NAME ginseng
+    ID 18e9
+}
+
+SECTION ITEM $item_ginseng1_2
+{
+    NAME ginseng
+    ID 18ea
+}
+
+SECTION ITEM $item_ginseng2_1
+{
+    NAME ginseng
+    ID 18eb
+}
+
+SECTION ITEM $item_ginseng2_2
+{
+    NAME ginseng
+    ID 18ec
+}
+
+SECTION ITEM $item_egg_nest1_1
+{
+    NAME nest with eggs
+    ID 1ad4
+}
+
+SECTION ITEM $item_egg_nest1_2
+{
+    NAME empty nest
+    ID 18eb
+}
+
+// christmas tree needles
+SECTION ITEM $item_christmas_tree
+{
+    NAME christmas tree
+    ID 0CD7
+}
+
+SECTION ITEM $item_christmas_tree_deed
+{
+    NAME christmas tree deed
+    ID 14F0
+    NEWBIE
+    DECAY
+    MOREX 212
+}
+
+SECTION ITEM $item_plough1
+{
+    NAME plough
+    ID 1500
+}
+
+SECTION ITEM $item_plough1_2
+{
+    NAME plough
+    ID 1501
+}
+
+SECTION ITEM $item_plough2
+{
+    NAME plough
+    ID 1502
+}
+
+SECTION ITEM $item_plough2_2
+{
+    NAME plough
+    ID 1503
+}
+
+SECTION ITEM $item_harrow1
+{
+    NAME harrow
+    ID 1504
+}
+
+SECTION ITEM $item_harrow1_2
+{
+    NAME harrow
+    ID 1505
+}
+
+SECTION ITEM $item_harrow2
+{
+    NAME harrow
+    ID 1506
+}
+
+SECTION ITEM $item_harrow2_2
+{
+    NAME harrow
+    ID 1507
+}
+
+SECTION ITEM $item_scarecrow1_1
+{
+    NAME scarecrow
+    ID 1e34
+}
+
+SECTION ITEM $item_scarecrow1_2
+{
+    NAME scarecrow
+    ID 1e35
+}
+
+SECTION ITEM $item_seed
+{
+    NAME seed
+    ID 0dcf
+}
+
+SECTION ITEM $item_bowl_with_soil1
+{
+    NAME bowl with
+    ID 1602
+    @ONDBLCLICK _farming
+}
+
+SECTION ITEM $item_bowl_with_soil2
+{
+    NAME bowl with fertile
+    ID 1602
+    @ONDBLCLICK _farming
+}
+
+SECTION ITEM $item_dirt_patch
+{
+    NAME patch of fertile dirt
+    ID 0913
+}
+
+SECTION ITEM $item_vibrant_bowl
+{
+    ID 1602
+    @ONDBLCLICK gui_plantgrowing
+}

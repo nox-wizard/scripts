@@ -1,0 +1,434 @@
+//////////////////////////////////////////////////////////////
+//////////////// colored armor by Saber ////////////////////
+//////////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////
+//////////// ringmail ///////////////
+
+// ring gloves
+SECTION ITEM $item_bronze_ringmail_gloves
+{
+    NAME bronze ringmail gloves
+    ID 13F2
+    COLOR 083b
+    LAYER $layer_gloves
+    DEF 2
+    HP 25
+    STR 20
+    DEXADD -1
+    DECAY
+    VALUE 75
+    WEIGHT 200
+}
+
+// ring sleeves
+SECTION ITEM $item_bronze_ringmail_sleeves
+{
+    NAME bronze ringmail sleeves
+    ID 13EF
+    COLOR 083b
+    LAYER $layer_arms
+    DEF 4
+    HP 40
+    STR 25
+    DEXADD -1
+    DECAY
+    VALUE 80
+    WEIGHT 400
+}
+
+// ring leggings
+SECTION ITEM $item_bronze_ringmail_leggings
+{
+    NAME bronze ringmail leggings
+    ID 13F1
+    COLOR 083b
+    LAYER $layer_pants
+    DEF 4
+    HP 40
+    STR 25
+    DEXADD -1
+    DECAY
+    VALUE 85
+    WEIGHT 600
+}
+// ringmail
+SECTION ITEM $item_bronze_ringmail_tunic
+{
+    NAME bronze ringmail tunic
+    ID 13ED
+    COLOR 083b
+    LAYER $layer_inner_torso
+    DEF 7
+    HP 45
+    STR 25
+    DEXADD -2
+    DECAY
+    VALUE 100
+    WEIGHT 600
+}
+
+/////////////////////////////////////
+//////////// Chainmail //////////////
+
+
+// chainmail coif
+SECTION ITEM $item_bronze_chain_coif
+{
+    NAME bronze chainmail coif
+    ID 13BB
+    COLOR 083b
+    LAYER $layer_helm
+    DEF 4
+    HP 39
+    STR 20
+    DECAY
+    VALUE 100
+    WEIGHT 700
+}
+
+// chainmail Legs
+SECTION ITEM $item_bronze_chain_leggings
+{
+    NAME bronze chainmail leggings
+    ID 13C3
+    COLOR 083b
+    LAYER $layer_pants
+    DEF 6
+    HP 50
+    STR 20
+    DEXADD -3
+    DECAY
+    VALUE 120
+    WEIGHT 700
+}
+
+// chainmail tunic
+SECTION ITEM $item_bronze_chain_tunic
+{
+    NAME bronze chainmail tunic
+    ID 13C4
+    COLOR 083b
+    LAYER $layer_inner_torso
+    DEF 10
+    HP 50
+    STR 20
+    DEXADD -5
+    DECAY
+    VALUE 150
+    WEIGHT 700
+}
+
+/////////////////////////////////////
+//////////// platemail //////////////
+
+//plate gorget
+SECTION ITEM $item_bronze_plate_gorget
+{
+    NAME bronze plate gorget
+    ID 1413
+    COLOR 083b
+    LAYER $layer_neck
+    DEXADD -1
+    DEF 2
+    HP 50
+    STR 30
+    DECAY
+    VALUE 115
+    WEIGHT 200
+}
+
+//plate gloves
+SECTION ITEM $item_bronze_plate_gloves
+{
+    NAME bronze plate gloves
+    ID 1414
+    COLOR 083b
+    LAYER $layer_gloves
+    DEXADD -2
+    DEF 3
+    HP 52
+    STR 30
+    DECAY
+    VALUE 135
+    WEIGHT 200
+}
+
+//helm
+SECTION ITEM $item_bronze_plate_helm
+{
+    NAME bronze helm
+    ID 1412
+    COLOR 083b
+    LAYER $layer_helm
+    DEXADD -1
+    DEF 5
+    HP 48
+    STR 40
+    DECAY
+    VALUE 175
+    WEIGHT 500
+}
+
+//plate sleeves
+SECTION ITEM $item_bronze_plate_sleeves
+{
+    NAME bronze plate sleeves
+    ID 1410
+    COLOR 083b
+    LAYER $layer_arms
+    DEXADD -2
+    DEF 5
+    HP 55
+    STR 40
+    DECAY
+    VALUE 193
+    WEIGHT 500
+}
+
+//plate Legs
+SECTION ITEM $item_bronze_plate_leggings
+{
+    NAME bronze plate leggings
+    ID 141A
+    COLOR 083b
+    LAYER $layer_innerlegs
+    DEXADD -6
+    DEF 7
+    HP 57
+    STR 60
+    DECAY
+    VALUE 231
+    WEIGHT 700
+}
+
+// female plate
+SECTION ITEM $item_bronze_female_plate
+{
+    NAME bronze female plate
+    ID 1C04
+    COLOR 083b
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 12
+    HP 50
+    STR 45
+    DEXADD -5
+    VALUE 100
+    WEIGHT 500
+}
+
+//plate Mail
+SECTION ITEM $item_bronze_platemail
+{
+    NAME bronze platemail
+    ID 1416
+    COLOR 083b
+    LAYER $layer_inner_torso
+    DEXADD -8
+    DEF 14
+    HP 60
+    STR 60
+    DECAY
+    VALUE 265
+    WEIGHT 1000
+}
+
+/////////////////////////////////////
+//////////// helms //////////////////
+
+// a bascinet
+SECTION ITEM $item_bronze_bascinet
+{
+    NAME bronze bascinet
+    ID 140C
+    COLOR 083b
+    LAYER $layer_helm
+    DEF 2
+    HP 50
+    STR 20
+    DECAY
+    VALUE 155
+    WEIGHT 500
+}
+
+// close helm
+SECTION ITEM $item_bronze_close_helm
+{
+    NAME bronze close helm
+    ID 1408
+    COLOR 083b
+    LAYER $layer_helm
+    DEF 5
+    HP 50
+    STR 40
+    DEXADD -1
+    DECAY
+    VALUE 160
+    WEIGHT 500
+}
+
+// a helmet
+SECTION ITEM $item_bronze_helmet
+{
+    NAME bronze helmet
+    ID 140A
+    COLOR 083b
+    LAYER $layer_helm
+    DEF 4
+    HP 45
+    STR 40
+    DECAY
+    VALUE 150
+    WEIGHT 500
+}
+
+// a nose helm
+SECTION ITEM $item_bronze_nose_helm
+{
+    NAME bronze nose helm
+    ID 140E
+    COLOR 083b
+    LAYER $layer_helm
+    DEF 4
+    HP 45
+    STR 40
+    DECAY
+    VALUE 160
+    WEIGHT 500
+}
+
+/////////////////////////////////////
+//////////// shields ///////////////
+
+//buckler
+SECTION ITEM $item_bronze_buckler
+{
+    NAME bronze buckler
+    ID 1B73
+    COLOR 083b
+    DEF 1
+    HP 10
+    STR 15
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 83
+    WEIGHT 200
+}
+
+//metal shield
+SECTION ITEM $item_bronze_metal_shield
+{
+    NAME bronze metal shield
+    ID 1B7B
+    COLOR 083b
+    DEF 4
+    HP 40
+    STR 15
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 74
+    WEIGHT 600
+}
+
+//round shield
+SECTION ITEM $item_bronze_bronze_shield
+{
+    NAME bronze round shield
+    ID 1B72
+    COLOR 083b
+    DEF 3
+    HP 30
+    STR 20
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 94
+    WEIGHT 300
+}
+
+//Kite Shield (Wooden)
+SECTION ITEM $item_bronze_wooden_kite_shield
+{
+    NAME bronze wooden kite shield
+    ID 1B78
+    COLOR 083b
+    DEF 5
+    HP 46
+    STR 30
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 110
+    WEIGHT 700
+}
+
+//Kite Shield (Metal)
+SECTION ITEM $item_bronze_metal_kite_shield
+{
+    NAME bronze metal kite shield
+    ID 1B74
+    COLOR 083b
+    DEF 6
+    HP 60
+    STR 20
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DYE 1
+    DECAY
+    VALUE 119
+    WEIGHT 400
+}
+
+//heater
+SECTION ITEM $item_bronze_heater
+{
+    NAME bronze heater
+    ID 1B76
+    COLOR 083b
+    DEF 7
+    HP 30
+    STR 30
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 154
+    WEIGHT 900
+}
+
+///////////////// nicht herstellbar ////////////////////////////////
+//chaos shield
+SECTION ITEM $item_bronze_chaos_shield
+{
+    NAME bronze chaos shield
+    ID 1BC3
+    COLOR 083b
+    DEF 12
+    HP 120
+    STR 0
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 250
+    WEIGHT 800
+}
+
+//order shield
+SECTION ITEM $item_bronze_order_shield
+{
+    NAME bronze order shield
+    ID 1BC4
+    COLOR 083b
+    DEF 12
+    HP 120
+    STR 0
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 250
+    WEIGHT 800
+}

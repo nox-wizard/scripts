@@ -1,0 +1,532 @@
+///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////// Farbige Waffen by Saber ///////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////
+////////////////////// axes ////////////////////////////////
+////////////////////////////////////////////////////////////
+
+// battle axe
+SECTION ITEM $item_verite_double_axe
+{
+    NAME verite double axe
+    ID 0F4B
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 70
+    DECAY
+    VALUE 70
+    //RESTOCK 10
+    STR 45
+    SPD 35
+    WEIGHT 800
+    DAMAGETYPE $damage_slash
+}
+
+// war axe
+SECTION ITEM $item_verite_battle_axe
+{
+    NAME verite battle axe
+    ID 0F47
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 4
+    HIDAMAGE 20
+    HP 110
+    DECAY
+    VALUE 35
+    //RESTOCK 10
+    STR 30
+    SPD 45
+    WEIGHT 200
+    DAMAGETYPE $damage_slash
+}
+
+// Lg. war axe
+SECTION ITEM $item_verite_large_battle_axe
+{
+    NAME verite large battle axe
+    ID 13FB
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 5
+    HIDAMAGE 37
+    HP 75
+    DECAY
+    VALUE 65
+    //RESTOCK 10
+    STR 44
+    SPD 29
+    WEIGHT 600
+    DAMAGETYPE $damage_slash
+}
+
+// axe
+SECTION ITEM $item_verite_axe
+{
+    NAME verite axe
+    ID 0F49
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 4
+    HIDAMAGE 28
+    HP 65
+    DECAY
+    VALUE 55
+    //RESTOCK 10
+    STR 35
+    SPD 35
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+// two-handed axe
+SECTION ITEM $item_verite_two-handed_axe
+{
+    NAME a verite two-handed axe
+    ID 1442
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 70
+    DECAY
+    VALUE 65
+    //RESTOCK 10
+    STR 60
+    SPD 35
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+// Execut. axe
+SECTION ITEM $item_verite_executioners_axe
+{
+    NAME verite executioners axe
+    ID 0F45
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 60
+    DECAY
+    VALUE 85
+    //RESTOCK 10
+    STR 40
+    SPD 28
+    WEIGHT 800
+    DAMAGETYPE $damage_slash
+}
+
+// war axe
+SECTION ITEM $item_verite_war_axe
+{
+    NAME verite war axe
+    ID 13B0
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 9
+    HIDAMAGE 27
+    HP 75
+    DECAY
+    VALUE 65
+    //RESTOCK 10
+    STR 35
+    SPD 38
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+///////////////////////////////////////////////////////////////
+//////////////// swords and blades ////////////////////////
+///////////////////////////////////////////////////////////////
+
+// dagger
+SECTION ITEM $item_verite_dagger
+{
+    NAME verite dagger
+    ID 0F51
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 3
+    HIDAMAGE 15
+    HP 35
+    DECAY
+    VALUE 15
+    //RESTOCK 10
+    STR 1
+    SPD 40
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+}
+
+//cutlass
+SECTION ITEM $item_verite_cutlass
+{
+    NAME verite cutlass
+    ID 1440
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 28
+    HP 50
+    DEF 4
+    DECAY
+    VALUE 65
+    //RESTOCK 10
+    STR 35
+    SPD 40
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+// kryss
+SECTION ITEM $item_verite_kryss
+{
+    NAME verite kryss
+    ID 1400
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 26
+    HP 70
+    DECAY
+    VALUE 40
+    //RESTOCK 10
+    STR 22
+    SPD 45
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+}
+
+//katana
+SECTION ITEM $item_verite_katana
+{
+    NAME verite katana
+    ID 13FF
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 26
+    HP 45
+    DEF 8
+    DECAY
+    VALUE 75
+    //RESTOCK 10
+    STR 10
+    SPD 40
+    WEIGHT 300
+    DAMAGETYPE $damage_slash
+}
+
+//scimitar
+SECTION ITEM $item_verite_scimitar
+{
+    NAME verite scimitar
+    ID 13B6
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 4
+    HIDAMAGE 30
+    HP 45
+    DEF 4
+    DECAY
+    VALUE 65
+    //RESTOCK 10
+    STR 32
+    SPD 41
+    WEIGHT 200
+    DAMAGETYPE $damage_slash
+}
+
+//Broad Sword
+SECTION ITEM $item_verite_broadsword
+{
+    NAME verite broadsword
+    ID 0F5E
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 29
+    HP 65
+    DEF 5
+    DECAY
+    VALUE 80
+    //RESTOCK 10
+    STR 25
+    SPD 39
+    WEIGHT 300
+    DAMAGETYPE $damage_slash
+}
+
+//long sword
+SECTION ITEM $item_verite_long_sword
+{
+    NAME verite long sword
+    ID 13B8
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    DEF 5
+    LODAMAGE 6
+    HIDAMAGE 27
+    HP 45
+    DECAY
+    VALUE 70
+    //RESTOCK 10
+    STR 25
+    SPD 33
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+//Viking Sword
+SECTION ITEM $item_verite_viking_sword
+{
+    NAME verite viking sword
+    ID 13BA
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    HP 50
+    LODAMAGE 6
+    HIDAMAGE 34
+    HP 100
+    DECAY
+    VALUE 85
+    //RESTOCK 10
+    STR 38
+    SPD 30
+    WEIGHT 300
+    DAMAGETYPE $damage_slash
+}
+
+///////////////////////////////////////////////////////////
+///////////////////// Maces ///////////////////////////////
+///////////////////////////////////////////////////////////
+
+// mace
+SECTION ITEM $item_verite_mace
+{
+    NAME verite mace
+    ID 0F5C
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 8
+    HIDAMAGE 32
+    HP 40
+    DECAY
+    VALUE 30
+    //RESTOCK 10
+    STR 45
+    SPD 28
+    WEIGHT 1100
+    DAMAGETYPE $damage_bludgeon
+}
+
+// maul
+SECTION ITEM $item_verite_maul
+{
+    NAME verite maul
+    ID 143A
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 7
+    HIDAMAGE 32
+    HP 50
+    DECAY
+    VALUE 35
+    //RESTOCK 10
+    STR 20
+    SPD 28
+    WEIGHT 1100
+    DAMAGETYPE $damage_bludgeon
+}
+
+// war mace
+SECTION ITEM $item_verite_war_mace
+{
+    NAME verite war mace
+    ID 1406
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 10
+    HIDAMAGE 30
+    HP 70
+    DECAY
+    VALUE 60
+    //RESTOCK 10
+    STR 30
+    SPD 30
+    WEIGHT 1400
+    DAMAGETYPE $damage_bludgeon
+}
+
+// war hammer
+SECTION ITEM $item_verite_war_hammer
+{
+    NAME verite war hammer
+    ID 1438
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 8
+    HIDAMAGE 38
+    HP 70
+    DECAY
+    VALUE 55
+    //RESTOCK 10
+    STR 40
+    SPD 29
+    WEIGHT 700
+    DAMAGETYPE $damage_bludgeon
+}
+
+// hammer pick
+SECTION ITEM $item_verite_hammer_pick
+{
+    NAME verite hammer pick
+    ID 143C
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 8
+    HIDAMAGE 24
+    HP 32
+    DECAY
+    VALUE 40
+    //RESTOCK 10
+    STR 45
+    SPD 30
+    WEIGHT 600
+    DAMAGETYPE $damage_bludgeon
+}
+
+//////////////////////////////////////////////////////////////
+///////////////// spears and forks //////////////////////////
+//////////////////////////////////////////////////////////////
+
+//short spear
+SECTION ITEM $item_verite_short_spear
+{
+    NAME verite short spear
+    ID 1403
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 2
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 70
+    DECAY
+    VALUE 45
+    //RESTOCK 10
+    STR 15
+    SPD 35
+    WEIGHT 200
+    DAMAGETYPE $damage_pierce
+}
+
+//war fork
+SECTION ITEM $item_verite_war_fork
+{
+    NAME verite war fork
+    ID 1405
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 65
+    DECAY
+    VALUE 90
+    //RESTOCK 10
+    STR 35
+    SPD 35
+    WEIGHT 600
+    DAMAGETYPE $damage_pierce
+}
+
+//spear
+SECTION ITEM $item_verite_spear
+{
+    NAME verite spear
+    ID 0F62
+    COLOR 08a4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 2
+    LODAMAGE 2
+    HIDAMAGE 36
+    HP 40
+    DECAY
+    VALUE 55
+    //RESTOCK 10
+    STR 30
+    SPD 27
+    WEIGHT 300
+    DAMAGETYPE $damage_pierce
+}
+
+//////////////////////////////////////////////////////////////
+//////////////////////// Pole Arms ///////////////////////////
+//////////////////////////////////////////////////////////////
+
+// bardiche
+SECTION ITEM $item_verite_bardiche
+{
+    NAME verite bardiche
+    ID 0F4D
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 5
+    HIDAMAGE 43
+    HP 62
+    DECAY
+    VALUE 70
+    //RESTOCK 10
+    STR 50
+    SPD 24
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+// halberd
+SECTION ITEM $item_verite_halberd
+{
+    NAME verite halberd
+    ID 143E
+    COLOR 08a4
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 5
+    HIDAMAGE 49
+    HP 62
+    DEF 5
+    DECAY
+    VALUE 85
+    //RESTOCK 10
+    STR 55
+    SPD 22
+    WEIGHT 1300
+    DAMAGETYPE $damage_slash
+}
