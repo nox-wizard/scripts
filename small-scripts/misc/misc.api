@@ -105,3 +105,11 @@ native weblaunch(const socket,const format[], ...);
 \brief Sends a broadcast message
 */
 native broadcast(const format[], ...);
+
+/*!
+\author Endymion
+\fn getIntFromDefine(const define[], ...)
+\param define[]: the define
+\brief Get define Number
+*/
+native getIntFromDefine(const define[], ...);
