@@ -38,4 +38,10 @@ native race_getProperty( const race, const property, const subProp=0, ... );
 */
 native race_getGlobalProp( const property, const subProp=0, ... );
 
+//todo: take this function call out of source, right now its called when in race-global.xss MODE ON is made
+public __race_enlist(const chr)
+{
+	bypass();
+}
+
 /*! }@*/
