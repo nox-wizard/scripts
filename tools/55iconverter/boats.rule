@@ -15,9 +15,6 @@
 # value for the string in the sphere charfile for the current attribute (which is the one defined in column 2)
 # decimal(value) for the decimal representation of a hex value (no tests made, if it is really a hex value)
 
-[03E4E]
-MAPPING $item_tillerman
-
 [i_deed_ship]
 MAPPING $item_deed_small_ship
 

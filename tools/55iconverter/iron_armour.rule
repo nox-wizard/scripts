@@ -4,12 +4,6 @@ MAPPING $item_iron_female_plate
 [I_ARMOR_FEMALE_PLATE]
 MAPPING $item_iron_female_plate
 
-[01BC3]
-MAPPING $item_iron_chaos_shield
-
-[I_SHIELD_CHAOS]
-MAPPING $item_iron_chaos_shield
-
 [013BB]
 MAPPING $item_iron_chain_coif
 
@@ -102,12 +96,6 @@ MAPPING $item_iron_heater
 
 [I_SHIELD_HEATER]
 MAPPING $item_iron_heater
-
-[01BC4]
-MAPPING $item_iron_order_shield
-
-[I_SHIELD_ORDER]
-MAPPING $item_iron_order_shield
 
 [013F2]
 MAPPING $item_iron_ringmail_gloves

@@ -34,9 +34,6 @@ MAPPING $item_verite_metal_shield
 [i_VERITE_BUCKLER_SHIELD]
 MAPPING $item_verite_buckler
 
-[I_SHIELD_KITE_METAL]
-MAPPING $item_verite_metal_kite_shield
-
 [i_VERITE_HEATER_SHIELD]
 MAPPING $item_verite_heater
 

@@ -1240,9 +1240,6 @@ MAPPING $item_morning_glory6
 [01F0F]
 MAPPING $item_morning_glory4
 
-[014F0]
-MAPPING $item_christmas_tree_deed
-
 [01507]
 MAPPING $item_harrow2_2
 
@@ -1254,12 +1251,6 @@ MAPPING $item_lily_pads8
 
 [I_PLANT_LILYPAD_5]
 MAPPING $item_lily_pads8
-
-[01602]
-MAPPING $item_vibrant_bowl
-
-[I_BOWL_PEWTER_POTATOES]
-MAPPING $item_vibrant_bowl
 
 [0100C]
 MAPPING $item_sheaf_of_hay2

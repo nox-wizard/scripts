@@ -34,9 +34,6 @@ MAPPING $item_valorite_metal_shield
 [i_VALORITE_BUCKLER_SHIELD]
 MAPPING $item_valorite_buckler
 
-[I_SHIELD_KITE_METAL]
-MAPPING $item_valorite_metal_kite_shield
-
 [i_VALORITE_HEATER_SHIELD]
 MAPPING $item_valorite_heater
 

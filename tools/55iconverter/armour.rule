@@ -339,12 +339,6 @@ MAPPING $item_bear_mask
 [I_MASK_BEAR]
 MAPPING $item_bear_mask
 
-[01711]
-MAPPING $item_thigh_boots
-
-[I_BOOTS_THIGH]
-MAPPING $item_thigh_boots
-
 [013CD]
 MAPPING $item_leather_sleeves
 
@@ -386,12 +380,6 @@ MAPPING $item_boots
 
 [I_BOOTS_CALF]
 MAPPING $item_boots
-
-[0170D]
-MAPPING $item_sandles
-
-[I_SANDALS]
-MAPPING $item_sandles
 
 [0170F]
 MAPPING $item_shoes

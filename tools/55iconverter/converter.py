@@ -334,7 +334,13 @@ def readSphereAccounts(sphereCharfile, takeChars):
 						glob.itemSerialCounter+=1
 						glob.itemSerials=repr(glob.itemSerialCounter)
 						if ( itemid.startswith("i_mt")):
-							newPlayer = player_character(newItem.getAttr("MORE1"), glob.linebuffer[firstline:glob.lineCounter-1])
+							try:
+								myLineCounter=glob.lineCounter
+								newPlayer = player_character(newItem.getAttr("MORE1"), glob.linebuffer[firstline:glob.lineCounter-1])
+							except KeyError:
+								glob.lineCounter=myLineCounter
+								orgMountName="c_" + itemid[5:]
+								newPlayer = player_character(orgMountName, glob.linebuffer[firstline:glob.lineCounter-1])
 							newPlayer.saveChar(glob.charfile)
 							# print "Indexing mount to owner", newPlayer.getAttr("LINK"), "with", newPlayer.getAttr("SERIAL"), "and Position", glob.accSerialIndex[newPlayer.getAttr("LINK")].getAttr("X"), glob.accSerialIndex[newPlayer.getAttr("LINK")].getAttr("Y")
 							glob.accSerialIndex[newPlayer.attributes["SERIAL"]]=newPlayer
@@ -532,6 +538,7 @@ def cleanRules():
 							ruleParts=indiv_rule.split(";")
 							if ( ruleParts[0].startswith("MAPPING")):
 								continue
+							print "Debug: ", ruleParts
 							currentRuleIndex[ruleParts[2].upper()]=1
 							if ( noxName == ruleParts[2]):
 								delRules.append(indexCount-1)

@@ -46,12 +46,6 @@ MAPPING $item_wand_of_energy_vortex
 MAPPING $item_wand_of_energy_vortex
 
 [0DF4]
-MAPPING $item_wand_of_magic_arrow
-
-[I_WAND_3]
-MAPPING $item_wand_of_magic_arrow
-
-[0DF4]
 MAPPING $item_wand_of_healing
 
 [I_WAND_3]

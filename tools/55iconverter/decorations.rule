@@ -15,12 +15,6 @@
 # value for the string in the sphere charfile for the current attribute (which is the one defined in column 2)
 # decimal(value) for the decimal representation of a hex value (no tests made, if it is really a hex value)
 
-[0BCD]
-MAPPING $item_bowyer_sign_1
-
-[0C0A]
-MAPPING $item_merchants_guild_sign_2
-
 [01ACA]
 MAPPING $item_lighthouse_Z4
 
@@ -35,9 +29,6 @@ MAPPING $item_statue7
 
 [01ABC]
 MAPPING $item_lighthouse_N
-
-[0BFC]
-MAPPING $item_thieves_guild_sign_2
 
 [0A0A]
 MAPPING $item_wall_torch1_2
@@ -83,9 +74,6 @@ MAPPING $item_pentagram_5
 
 [01ACE]
 MAPPING $item_lighthouse_Z8
-
-[0B95]
-MAPPING $item_library_sign_1
 
 [0B96]
 MAPPING $item_library_sign_2
@@ -207,15 +195,6 @@ MAPPING $item_pentagram_9
 [01F28]
 MAPPING $item_sign_2
 
-[I_SIGN_BLANK]
-MAPPING $item_sign_2
-
-[01F29]
-MAPPING $item_sign_1
-
-[0C07]
-MAPPING $item_fighters_guild_sign_1
-
 [0C06]
 MAPPING $item_cavalry_guild_sign_2
 
@@ -258,9 +237,6 @@ MAPPING $item_telescope_H
 [01464]
 MAPPING $item_telescope_B
 
-[0BC7]
-MAPPING $item_armorer_sign_1
-
 [01AAA]
 MAPPING $item_lighthouse_6
 
@@ -281,9 +257,6 @@ MAPPING $item_telescope_Z5
 
 [0C01]
 MAPPING $item_tinkers_guild_sign_1
-
-[0BCB]
-MAPPING $item_provisioner_sign_1
 
 [0BEE]
 MAPPING $item_miners_guild_sign_2
@@ -419,9 +392,6 @@ MAPPING $item_shipwright
 [0bb7]
 MAPPING $item_stables
 
-[0bb9]
-MAPPING $item_barber
-
 [0bbb]
 MAPPING $item_musician
 
@@ -439,15 +409,6 @@ MAPPING $item_alchemist
 
 [0bc7]
 MAPPING $item_blacksmith
-
-[0bc9]
-MAPPING $item_artist
-
-[0bcb]
-MAPPING $item_provisioner
-
-[0bcd]
-MAPPING $item_bowyer
 
 [0bd3]
 MAPPING $item_armaments_guild
@@ -467,29 +428,17 @@ MAPPING $item_bardic_guild
 [0bdd]
 MAPPING $item_miners_guild
 
-[0c01]
-MAPPING $item_tinkers_guild
-
 [0c02]
 MAPPING $item_tinkers_guild_1
 
 [0c03]
 MAPPING $item_warriors_guild
 
-[0c04]
-MAPPING $item_warriors_guild_1
-
 [0c05]
 MAPPING $item_cavalry_guild
 
-[0c06]
-MAPPING $item_cavalry_guild_1
-
 [0c07]
 MAPPING $item_fighters_guild
-
-[0c08]
-MAPPING $item_fighters_guild_1
 
 [0c09]
 MAPPING $item_merchants_guild
@@ -504,9 +453,6 @@ MAPPING $item_lighthouse_Z6
 
 [0BD8]
 MAPPING $item_blacksmiths_guild_sign_2
-
-[0BD9]
-MAPPING $item_weapons_guild_sign_1
 
 [01ACF]
 MAPPING $item_lighthouse_Z9
@@ -607,9 +553,6 @@ MAPPING $item_trophy12
 [01E6D]
 MAPPING $item_trophy14
 
-[0BDB]
-MAPPING $item_bardic_guild_sign_1
-
 [0BDC]
 MAPPING $item_bardic_guild_sign_2
 
@@ -624,9 +567,6 @@ MAPPING $item_provisioners_guild_sign_1
 
 [0FED]
 MAPPING $item_pentagram_8
-
-[0BDD]
-MAPPING $item_barders_guild_sign_1
 
 [0BDE]
 MAPPING $item_barders_guild_sign_2
@@ -696,9 +636,6 @@ MAPPING $item_lighthouse_Z3
 
 [09FF]
 MAPPING $item_wall_sconce_1
-
-[0C05]
-MAPPING $item_cavalry_guild_sign_1
 
 [0145A]
 MAPPING $item_telescope_1
@@ -811,26 +748,14 @@ MAPPING $item_statue4
 [0BB0]
 MAPPING $item_carpenter_sign_2
 
-[0BB1]
-MAPPING $item_shipwright_sign_1
-
 [0BB2]
 MAPPING $item_shipwright_sign_2
-
-[0BB3]
-MAPPING $item_inn_sign_1
 
 [0BB4]
 MAPPING $item_inn_sign_2
 
-[0BB5]
-MAPPING $item_harbor_master_sign_1
-
 [0BB6]
 MAPPING $item_harbor_master_sign_2
-
-[0BB7]
-MAPPING $item_stables_sign_1
 
 [01226]
 MAPPING $item_statue13
@@ -955,9 +880,6 @@ MAPPING $item_telescope_Z1
 [0BBA]
 MAPPING $item_barber_sign_2
 
-[0BBB]
-MAPPING $item_musician_sign_1
-
 [0BBC]
 MAPPING $item_musician_sign_2
 
@@ -966,9 +888,6 @@ MAPPING $item_archer_sign_1
 
 [0BBE]
 MAPPING $item_archer_sign_2
-
-[0BBF]
-MAPPING $item_blacksmith_sign_1
 
 [01299]
 MAPPING $item_road_sign2_1
@@ -988,20 +907,11 @@ MAPPING $item_telescope_F
 [01469]
 MAPPING $item_telescope_G
 
-[0C09]
-MAPPING $item_merchants_guild_sign_1
-
 [0C08]
 MAPPING $item_fighters_guild_sign_2
 
-[0BC3]
-MAPPING $item_tavern_sign_1
-
 [0BC2]
 MAPPING $item_jewler_sign_2
-
-[0BC1]
-MAPPING $item_jewler_sign_1
 
 [0BC0]
 MAPPING $item_blacksmith_sign_2
@@ -1017,9 +927,6 @@ MAPPING $item_signpost
 
 [I_SIGN_POST]
 MAPPING $item_signpost
-
-[0BC5]
-MAPPING $item_alchemist_sign_1
 
 [0BC4]
 MAPPING $item_tavern_sign_2
@@ -1080,9 +987,6 @@ MAPPING $item_lamp_post3_2
 
 [01491]
 MAPPING $item_telescope_ZF
-
-[0C03]
-MAPPING $item_warriors_guild_sign_1
 
 [01493]
 MAPPING $item_telescope_ZH
@@ -1159,17 +1063,8 @@ MAPPING $item_telescope_ZO
 [0BAC]
 MAPPING $item_healer_sign_2
 
-[0BAB]
-MAPPING $item_healer_sign_1
-
 [0BAE]
 MAPPING $item_magic_shop_sign_2
-
-[0BAD]
-MAPPING $item_magic_shop_sign_1
-
-[0BAF]
-MAPPING $item_carpenter_sign_1
 
 [01ABB]
 MAPPING $item_lighthouse_ZD
@@ -1222,17 +1117,11 @@ MAPPING $item_dartboard_1
 [I_DARTBOARD]
 MAPPING $item_dartboard_1
 
-[0C02]
-MAPPING $item_tinkers_guild_sign_2
-
 [0146B]
 MAPPING $item_telescope_I
 
 [01E2F]
 MAPPING $item_dartboard_2
-
-[0BCF]
-MAPPING $item_wooden_sign_1
 
 [01487]
 MAPPING $item_telescope_ZB
@@ -1258,17 +1147,11 @@ MAPPING $item_telescope_ZD
 [0BA3]
 MAPPING $item_bakery_sign_1
 
-[I_SIGN_BAKERY]
-MAPPING $item_bakery_sign_1
-
 [0BA5]
 MAPPING $item_tailor_sign_1
 
 [I_SIGN_TAILOR]
 MAPPING $item_tailor_sign_1
-
-[0BA4]
-MAPPING $item_bakery_sign_2
 
 [0BA7]
 MAPPING $item_tinker_sign_1
@@ -1278,9 +1161,6 @@ MAPPING $item_tinker_sign_1
 
 [0BA6]
 MAPPING $item_tailor_sign_2
-
-[0BA9]
-MAPPING $item_butcher_sign_1
 
 [0BA8]
 MAPPING $item_tinker_sign_2

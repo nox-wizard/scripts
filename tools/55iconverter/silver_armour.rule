@@ -34,9 +34,6 @@ MAPPING $item_silver_metal_shield
 [i_SILVER_BUCKLER_SHIELD]
 MAPPING $item_silver_buckler
 
-[I_SHIELD_KITE_METAL]
-MAPPING $item_silver_metal_kite_shield
-
 [i_SILVER_HEATER_SHIELD]
 MAPPING $item_silver_heater
 

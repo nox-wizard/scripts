@@ -33,12 +33,6 @@ MAPPING $lesser_agility_potion
 [I_BOTTLE_BLUE]
 MAPPING $lesser_agility_potion
 
-[0F08]
-MAPPING $item_blessed_water
-
-[I_BOTTLE_BLUE]
-MAPPING $item_blessed_water
-
 [0F09]
 MAPPING $lesser_strength_potion
 
@@ -68,12 +62,6 @@ MAPPING $lesser_explosion_potion
 
 [I_BOTTLE_PURPLE]
 MAPPING $lesser_explosion_potion
-
-[0F0E]
-MAPPING $lesser_mana_potion
-
-[I_BOTTLE_EMPTY]
-MAPPING $lesser_mana_potion
 
 [01841]
 MAPPING $item_lsd_potion

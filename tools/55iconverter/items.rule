@@ -66,13 +66,6 @@ MAPPING $item_set_of_vials
 [I_TESTTUBE_RACK]
 MAPPING $item_set_of_vials
 
-MULTIPLE
-[02106]
-MAPPING $item_weak_henchman
-
-[I_PET_MAN]
-MAPPING $item_weak_henchman
-
 [0931]
 MAPPING $item_oven_1
 
@@ -139,15 +132,8 @@ MAPPING $item_skull_recoverd_from_a_shipwreck_3
 [0AE8]
 MAPPING $item_carpet5_6
 
-MULTIPLE
-[01AE3]
-MAPPING $item_skull_recoverd_from_a_shipwreck_1
-
 [01AE3]
 MAPPING $item_skull_1
-
-[0E80]
-MAPPING $item_brass_box
 
 [0E85]
 MAPPING $item_pickaxe
@@ -187,18 +173,6 @@ MAPPING $item_medium_leather_pillow
 
 [I_PILLOW_9]
 MAPPING $item_medium_leather_pillow
-
-[01515]
-MAPPING $item_piwafwi
-
-[I_CAPE]
-MAPPING $item_piwafwi
-
-[01F14]
-MAPPING $item_teleport_rune
-
-[I_RUNE_MARKER]
-MAPPING $item_teleport_rune
 
 [0ECA]
 MAPPING $item_pile_of_bones_recoverd_from_a_shipwreck_8
@@ -263,9 +237,6 @@ MAPPING $item_e_9
 [I_BANNER_3_PART_3]
 MAPPING $item_e_9
 
-[0979]
-MAPPING $item_cigar
-
 [0E4B]
 MAPPING $item_jars
 
@@ -290,21 +261,6 @@ MAPPING $item_star_sapphires1
 [I_GEM_STAR_SAPPHIRE]
 MAPPING $item_star_sapphires1
 
-[0E40]
-MAPPING $item_metal_chest1
-
-[I_CHEST_METAL_BRASS]
-MAPPING $item_metal_chest1
-
-[0E43]
-MAPPING $item_wooden_chest
-
-[0E42]
-MAPPING $item_wooden_chest_1
-
-[I_CHEST_WOODEN_BRASS]
-MAPPING $item_wooden_chest_1
-
 [0ADE]
 MAPPING $item_carpet4_5
 
@@ -325,21 +281,6 @@ MAPPING $item_pet_rabbit
 
 [I_PET_RABBIT]
 MAPPING $item_pet_rabbit
-
-[09AA]
-MAPPING $item_wooden_box_2
-
-[I_BOX_WOOD]
-MAPPING $item_wooden_box_2
-
-[09A8]
-MAPPING $item_metal_box
-
-[I_BOX_BRASS]
-MAPPING $item_metal_box
-
-[09A6]
-MAPPING $item_knife
 
 [0DE1]
 MAPPING $item_kindling
@@ -488,27 +429,6 @@ MAPPING $item_iron_key
 [I_KEY_IRON]
 MAPPING $item_iron_key
 
-[0E79]
-MAPPING $item_pouch
-
-[0E75]
-MAPPING $item_backpack
-
-[I_BACKPACK]
-MAPPING $item_backpack
-
-[0E76]
-MAPPING $item_leather_bag
-
-[I_BAG]
-MAPPING $item_leather_bag
-
-[0E77]
-MAPPING $item_trashcan
-
-[I_BARREL_OPEN]
-MAPPING $item_trashcan
-
 [0E73]
 MAPPING $item_cannon_ball
 
@@ -575,12 +495,6 @@ MAPPING $item_ring
 [I_RING_GOLD]
 MAPPING $item_ring
 
-[0E7D]
-MAPPING $item_wooden_box_1
-
-[0E7C]
-MAPPING $item_silver_chest
-
 [0AC4]
 MAPPING $item_carpet1_8
 
@@ -611,12 +525,6 @@ MAPPING $item_carpet2_3
 [0AC9]
 MAPPING $item_carpet2_4
 
-[0F88]
-MAPPING $item_nightshade_spawner
-
-[I_REAG_NIGHTSHADE]
-MAPPING $item_nightshade_spawner
-
 [01E5E]
 MAPPING $item_bulletin_board
 
@@ -641,30 +549,6 @@ MAPPING $item_sapphires4
 [I_GEM_SAPPHIRE_4]
 MAPPING $item_sapphires4
 
-[0F86]
-MAPPING $item_mandrake_root_spawner
-
-[I_REAG_MANDRAKE_ROOT]
-MAPPING $item_mandrake_root_spawner
-
-[0F84]
-MAPPING $item_garlic_spawner
-
-[I_REAG_GARLIC]
-MAPPING $item_garlic_spawner
-
-[0F85]
-MAPPING $item_gensing_spawner
-
-[I_REAG_GINSENG]
-MAPPING $item_gensing_spawner
-
-[0F6C]
-MAPPING $item_blue_moongate
-
-[I_MOONGATE_BLUE]
-MAPPING $item_blue_moongate
-
 [0DE3]
 MAPPING $item_campfire
 
@@ -673,39 +557,6 @@ MAPPING $item_campfire
 
 [0A58]
 MAPPING $item_bedroll
-
-[0FC7]
-MAPPING $item_shell_recoverd_from_a_shipwreck_3
-
-[0FC6]
-MAPPING $item_shell_recoverd_from_a_shipwreck_2
-
-[0FC5]
-MAPPING $item_shell_recoverd_from_a_shipwreck_1
-
-[0FC4]
-MAPPING $item_shell_recoverd_from_a_shipwreck
-
-[I_SHELL]
-MAPPING $item_shell_recoverd_from_a_shipwreck
-
-[0FC9]
-MAPPING $item_shell_recoverd_from_a_shipwreck_5
-
-[0FC8]
-MAPPING $item_shell_recoverd_from_a_shipwreck_4
-
-[0FCC]
-MAPPING $item_shell_recoverd_from_a_shipwreck_8
-
-[0FCB]
-MAPPING $item_shell_recoverd_from_a_shipwreck_7
-
-[0FCA]
-MAPPING $item_shell_recoverd_from_a_shipwreck_6
-
-[01F7F]
-MAPPING $item_bugmans_brew
 
 [01057]
 MAPPING $item_sextant
@@ -737,12 +588,6 @@ MAPPING $item_citrines1
 [I_GEM_CITRINE]
 MAPPING $item_citrines1
 
-[0F8C]
-MAPPING $item_sulfuric_ash_spawner
-
-[I_REAG_SULFUR_ASH]
-MAPPING $item_sulfuric_ash_spawner
-
 [0F17]
 MAPPING $item_amethysts2
 
@@ -766,12 +611,6 @@ MAPPING $item_emeralds1
 
 [I_GEM_EMERALD]
 MAPPING $item_emeralds1
-
-[0F8D]
-MAPPING $item_spidersilk_spawner
-
-[I_REAG_SPIDER_SILK]
-MAPPING $item_spidersilk_spawner
 
 [0F12]
 MAPPING $item_sapphires2
@@ -824,24 +663,6 @@ MAPPING $item_books1
 [014F4]
 MAPPING $item_boat_model
 
-[022C]
-MAPPING $item_door_2
-
-[I_DOOR_TENT]
-MAPPING $item_door_2
-
-[022D]
-MAPPING $item_door_3
-
-[I_DOOR_TENT_O]
-MAPPING $item_door_3
-
-[022E]
-MAPPING $item_door
-
-[022F]
-MAPPING $item_door_1
-
 [01E2D]
 MAPPING $item_pickpocket_dip_1
 
@@ -856,12 +677,6 @@ MAPPING $item_wash_basin
 
 [I_WASH_BASIN]
 MAPPING $item_wash_basin
-
-[01005]
-MAPPING $item_jar_for_milk
-
-[I_JAR_EMPTY]
-MAPPING $item_jar_for_milk
 
 [0A0F]
 MAPPING $item_candle_3
@@ -901,12 +716,6 @@ MAPPING $item_bar_door
 
 [I_BAR_DOOR_NE]
 MAPPING $item_bar_door
-
-[01718]
-MAPPING $item_magical_wizards_hat
-
-[I_HAT_WIZARDS]
-MAPPING $item_magical_wizards_hat
 
 [0F14]
 MAPPING $item_rubies2
@@ -1175,23 +984,11 @@ MAPPING $item_arm_1
 [I_FLESH_ARM_RIGHT]
 MAPPING $item_arm_1
 
-[01FD4]
-MAPPING $item_black_moongate
-
-[I_MOONGATE_BLACK]
-MAPPING $item_black_moongate
-
 [0DBF]
 MAPPING $item_fishing_pole
 
 [I_FISHING_POLE]
 MAPPING $item_fishing_pole
-
-[0CD7]
-MAPPING $item_christmas_tree
-
-[I_FOLIAGE_CEDAR]
-MAPPING $item_christmas_tree
 
 [041F]
 MAPPING $item_gruesome2_1
@@ -1277,12 +1074,6 @@ MAPPING $item_bottle4
 [I_BOTTLE_3]
 MAPPING $item_bottle4
 
-[0104D]
-MAPPING $item_clock_frames
-
-[I_CLOCK_FRAME]
-MAPPING $item_clock_frames
-
 [0AE9]
 MAPPING $item_carpet5_7
 
@@ -1291,12 +1082,6 @@ MAPPING $item_pile_of_skulls_recoverd_from_a_shipwreck
 
 [I_SKULL_PILE]
 MAPPING $item_pile_of_skulls_recoverd_from_a_shipwreck
-
-[01820]
-MAPPING $item_dispel-wall-spawner
-
-[I_RUNE_ALCHEM_4]
-MAPPING $item_dispel-wall-spawner
 
 [0AF9]
 MAPPING $item_carpet1_13
@@ -1336,12 +1121,6 @@ MAPPING $item_e_5
 
 [I_BANNER_1_PART_2]
 MAPPING $item_e_5
-
-[0EFC]
-MAPPING $item_efreeti_bottle
-
-[I_BOTTLE_9]
-MAPPING $item_efreeti_bottle
 
 [0EFC]
 MAPPING $item_bottle10
@@ -1580,24 +1359,6 @@ I;;TYPE;60
 
 [019B9]
 MAPPING $item_iron_ore
-
-[0F7B]
-MAPPING $item_bloodmoss_spawner
-
-[I_REAG_BLOOD_MOSS]
-MAPPING $item_bloodmoss_spawner
-
-[0F7A]
-MAPPING $item_black_pearl_spawner
-
-[I_REAG_BLACK_PEARL]
-MAPPING $item_black_pearl_spawner
-
-[0F7D]
-MAPPING $item_vials_of_blood
-
-[I_REAG_BLOOD_VIAL]
-MAPPING $item_vials_of_blood
 
 [01EA8]
 MAPPING $item_slotmachine_5gp_

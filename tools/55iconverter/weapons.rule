@@ -63,18 +63,6 @@ MAPPING $item_iron_executionners_axe_of_power
 [i_axe_exec_vanq]
 MAPPING $item_iron_executionners_axe_of_vanquishing
 
-[0F43]
-MAPPING $item_hatchet_practice_weapon_
-
-[I_HATCHET]
-MAPPING $item_hatchet_practice_weapon_
-
-[0DF2]
-MAPPING $item_scepter
-
-[I_WAND_1]
-MAPPING $item_scepter
-
 [0DF0]
 MAPPING $item_black_staff
 
@@ -168,12 +156,6 @@ MAPPING $item_iron_large_battle_axe_of_power
 [i_axe_battle_vanq]
 MAPPING $item_iron_large_battle_axe_of_vanquishing
 
-[0F62]
-MAPPING $item_iron_spear_practice_weapon_
-
-[I_SPEAR]
-MAPPING $item_iron_spear_practice_weapon_
-
 [i_SPEAR_RUIN]
 MAPPING $item_iron_spear_of_ruin
 
@@ -188,9 +170,6 @@ MAPPING $item_iron_spear_of_power
 
 [i_SPEAR_vanq]
 MAPPING $item_iron_spear_of_vanquishing
-
-[013E4]
-MAPPING $item_smithy_hammer
 
 [i_hammer_war_RUIN]
 MAPPING $item_iron_war_hammer_of_ruin
@@ -405,9 +384,6 @@ MAPPING $item_iron_kryss_of_ruin
 [i_KRYSS_MIGHT]
 MAPPING $item_iron_kryss_of_might
 
-[I_KRYSS]
-MAPPING $item_iron_kryss_of_might
-
 [i_KRYSS_FORCE]
 MAPPING $item_iron_kryss_of_force
 
@@ -476,9 +452,6 @@ MAPPING $item_iron_war_fork_of_power
 
 [i_WAR_FORK_vanq]
 MAPPING $item_iron_war_fork_of_vanquishing
-
-[0FB4]
-MAPPING $item_sledge_hammer_1
 
 [I_HAMMER_SLEDGE]
 MAPPING $item_sledge_hammer_1

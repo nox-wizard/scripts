@@ -34,9 +34,6 @@ MAPPING $item_shadow_metal_shield
 [i_SHADOW_BUCKLER_SHIELD]
 MAPPING $item_shadow_buckler
 
-[I_SHIELD_KITE_METAL]
-MAPPING $item_shadow_metal_kite_shield
-
 [i_SHADOW_HEATER_SHIELD]
 MAPPING $item_shadow_heater
 
