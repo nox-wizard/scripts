@@ -99,10 +99,10 @@ static it_pg4_r =0;
 
 new it_gu = 40;
 new it_tex = 56;
-new it_prop = 190;
-new it_check = 275;
-new it_radio = 190;
-new it_desc = 190;
+new it_prop = 195;
+new it_check = 280;
+new it_radio = 195;
+new it_desc = 195;
 
 enum Itm_tweaklines
 {
@@ -136,11 +136,11 @@ static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {1,"Str bonus:       ", 238, 0, 0, "         "},
 {2,"Weight:          ", 248, 0, 0, "         "},
 {1,"Good:          ? ", 211, 0, 0, "         "},
-{6,"More1:           ", 112, 1, 0, "         "},
+{6,"More1:           ", 112, 1, 3, "         "},
 {6,"More2:           ", 112, 2, 0, "         "},
 {6,"More3:           ", 112, 3, 0, "         "},
 {6,"More4:           ", 112, 4, 0, "         "},
-{6,"MoreB 1:         ", 113, 1, 0, "         "},
+{6,"MoreB 1:         ", 113, 1, 3, "         "},
 {6,"MoreB 2:         ", 113, 2, 0, "         "},
 {6,"MoreB 3:         ", 113, 3, 0, "         "},
 {6,"MoreB 4:         ", 113, 4, 0, "         "},
@@ -148,19 +148,19 @@ static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {2,"Layer:           ", 110, 0, 0, "         "},
 {1,"Money Value:     ", 247, 0, 0, "         "},
 {1,"Can be dyed:     ", 105, 0, 0, "         "},
-{6,"MoreX:           ", 220, 1, 0, "         "},
+{6,"MoreX:           ", 220, 1, 2, "         "},
 {6,"MoreY:           ", 220, 2, 0, "         "},
 {6,"MoreZ:           ", 220, 3, 0, "         "},
-{5,"Visible by:  all:", 120, 2, 0, "         "},
-{5,"   owner & GM:   ", 120, 0, 1, "         "},
-{5,"   only GM:      ", 120, 0, 2, "         "},
+{5,"Visible by:  all:", 120, 0, 2, "         "},
+{5,"   owner & GM:   ", 120, 1, 0, "         "},
+{5,"   only GM:      ", 120, 2, 0, "         "},
 {2,"Is Corpse:       ", 102, 0, 0, "         "},
 {2,"Door-Dir:        ", 103, 0, 0, "         "},
 {2,"Door is open:    ", 104, 0, 0, "         "},
-{5,"Movable default: ", 111, 3, 0, "         "},
-{5,"   all:          ", 111, 0, 1, "         "},
-{5,"   never:        ", 111, 0, 2, "         "},
-{5,"   owner only:   ", 111, 0, 3, "         "},
+{5,"Movable default: ", 111, 0, 3, "         "},
+{5,"   all:          ", 111, 1, 0, "         "},
+{5,"   never:        ", 111, 2, 0, "         "},
+{5,"   owner only:   ", 111, 3, 0, "         "},
 {2,"Pile able:       ", 454, 0, 0, "         "},
 {4,"Is Newbie-Item:  ", 118, 2, 0, "         "},
 {1,"Damagetype:      ", 121, 0, 0, "         "},
@@ -172,7 +172,7 @@ static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {1,"Gatetime:     ?  ", 209, 0, 0, "         "},
 {1,"Multiserial:     ", 221, 0, 0, "         "},
 {1,"Is poisoned:  ?  ", 217, 0, 0, "         "},
-{6,"X Position:      ", 227, 0, 0, "         "},
+{6,"X Position:      ", 227, 0, 3, "         "},
 {6,"Y Position:      ", 227, 1, 0, "         "},
 {6,"Z Position:      ", 227, 2, 0, "         "},
 {1,"Rank:            ", 228, 0, 0, "         "},
@@ -308,7 +308,7 @@ static ct_pg6_r =0;
 static ct_pg7_l =0;
 static ct_pg7_r =0;
 
-const NUM_chrtweak = 73;
+const NUM_chrtweak = 75;
 enum Chr_tweaklines
 {
 ct_linetype,
@@ -319,26 +319,26 @@ ct_propval,
 ct_inputname: 10
 };
 
+//0: empty line for sorting lines at pages or use with text entry if helpful
 //1: property field, eg itemname
 //2: infofield (for example weight): ct_propnumber is property num to get info or if 0 custom info function (then ct_infotype defines the number for custom function), ct_propval: string:1 and integer: 0
 //3: inputfield, eg Nightsight, ct_propnumber = 1 for TFX-Effects, ct_propnumber = 2 for LocalVars Int, ct_propnumber = 3 for LocalVars Str
 //4: checkbox: ct_propnumber is property num to change or 0 if custom function (then ct_infotype defines the number for custom function)
-//5: radiobutton
-//6: subproperties (morex/morey/morez)
+//5: radiobutton: ct_propnumber is property num to get info, ct_infotype is TRUE-value, ct_propval for grouping at page: how many MORE props in group?
+//6: subproperties (morex/morey/morez), ct_propnumber is property num to get info, ct_infotype subproperty num, ct_propval for grouping at page: how many MORE props in group?
 //7: stock function call: ct_propnumber is number of stock function, ct_infotype: string:1 and integer: 0
 static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {1, "Char name:        ", 453, 0, 0, "         "},
 {1, "Char title:       ", 455, 0, 0, "         "},
 {1, "Karma:            ", 237, 0, 0, "         "},
 {1, "Fame:             ", 218, 0, 0, "         "},
-{6, "Strength:         ", 295, 2, 0, "         "},
+{6, "Strength:         ", 295, 2, 5, "         "},
 {6, "Hits(from Str):   ", 295, 3, 0, "         "},
 {6, "Dexterity:        ", 216, 2, 0, "         "},
 {6, "Stamina(from Dex):", 216, 3, 0, "         "},
 {6, "Intelligence:     ", 236, 2, 0, "         "},
 {6, "Mana (from Int):  ", 236, 3, 0, "         "},
 {1, "Kills:            ", 239, 0, 0, "         "},
-{1, "Foodposition:     ", 220, 0, 0, "         "},
 {2, "Weight:           ", 312, 0, 0, "         "},
 {7, "Skill sum:        ",   0, 0, 0, "         "},
 {7, "Bank gold:        ",   1, 0, 0, "         "},
@@ -349,11 +349,17 @@ static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {1, "Body hexID:       ", 403, 0, 0, "         "},
 {1, "Body old hexID:   ", 405, 0, 0, "         "},
 {2, "ScriptID:         ", 272, 0, 0, "         "},
+{1, "Command level:    ", 103, 0, 0, "         "},
 {2, "Skill used:       ", 242, 0, 0, "         "},
-{6, "X Position:       ", 262, 0, 0, "         "},
+{3, "Hunger:           ",  2,1002,0, "         "},
+{3, "Thirst:           ",  2,1003,0, "         "},
+{6, "X Position:       ", 262, 0, 2, "         "},
 {6, "Y Position:       ", 262, 1, 0, "         "},
 {6, "Z Position:       ", 262, 2, 0, "         "},
-{6, "X Work Position:  ", 262, 0, 0, "         "},
+{6, "Foodposition X:   ", 220, 0, 2, "         "},
+{6, "Foodposition Y:   ", 220, 1, 0, "         "},
+{6, "Foodposition Z:   ", 220, 2, 0, "         "},
+{6, "X Work Position:  ", 262, 0, 2, "         "},
 {6, "Y Work Position:  ", 262, 1, 0, "         "},
 {6, "Z Work Position:  ", 262, 2, 0, "         "},
 {7, "Guild name:       ",   2, 1, 0, "         "},
@@ -363,9 +369,9 @@ static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {4, "Invulnerable:     ", 134, 4, 0, "         "},
 {4, "Kill/Dead:        ",   1, 0, 0, "         "},
 {4, "Freeze:           ", 121, 2, 0, "         "},
-{5, "Invis by skill:   ", 110, 3, 1, "         "},
-{5, "Invis by spell:   ", 110, 0, 2, "         "},
-{5, "permanent Invis:  ", 121, 0, 8, "         "},
+{5, "Invis by skill:   ", 110, 1, 3, "         "},
+{5, "Invis by spell:   ", 110, 2, 0, "         "},
+{5, "permanent Invis:  ", 121, 8, 0, "         "},
 {5, "Visible:          ", 110, 0, 0, "         "},
 {4, "Warmode:          ", 128, 0, 0, "         "},
 {2, "Reactive Armor:   ",   0, 1, 0, "         "},
@@ -380,7 +386,7 @@ static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {2, "Has shield:       ",   0, 3, 0, "         "},
 {4, "See House as Icon:", 121, 4, 0, "         "},
 {1, "Steps to fly:     ", 108, 0, 0, "         "},
-{3, "Hallucination:    ",   2,20, 0, "millisec "},
+{3, "Hallucination:    ",   1,20, 0, "millisec "},
 {2, "Criminal:         ", 213, 0, 0, "         "},
 {1, "Summontimer left: ", 296, 0, 0, "         "},
 {2, "Is tamed:         ",   9, 0, 0, "         "},
@@ -388,11 +394,8 @@ static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {2, "Is on horse:      ",   7, 0, 0, "         "},
 {4, "Can move all:     ", 121, 1, 0, "         "},
 {4, "Can Broadcast:    ", 134, 2, 0, "         "},
-{1, "Command level:    ", 103, 0, 0, "         "},
 {1, "Defense rating:   ", 215, 0, 0, "         "},
 {4, "Can dispel:       ", 121,20, 0, "         "},
-{3, "Hunger:           ",  2,1002,0, "         "},
-{3, "Thirst:           ",  2,1003,0, "         "},
 {2, "Is jailed:        ",   5, 0, 0, "         "},
 {4, "Needs no mana:    ", 121,10, 0, "         "},
 {4, "Needs no reagents:", 121,80, 0, "         "},
@@ -438,9 +441,12 @@ public init_tweak_itm()
 		{
 			new j;
 			if(itm_twkarray[i][it_linetype] == 5)
-				j = i + itm_twkarray[i][it_infotype]; //how many lines we need for the radiobuttonbox-thing?
+				j = i + itm_twkarray[i][it_propval]; //how many lines we need for the radiobuttonbox-thing?
+			else if(itm_twkarray[i][it_linetype] == 6) //subprop-grouping
+				j = i + itm_twkarray[i][it_propval];
 			else j=i;
-			if(i<14) //left row page1, we can only check first 14 array lines
+			//printf("j: %d^n", j);
+			if(i<=13) //left row page1, we can only check first 14 array lines
 			{
 				if(j>=14)  //to add radio button would extend over max line number
 					it_pg1_l = i-1; //then fewer lines then max to keep it together
@@ -450,49 +456,70 @@ public init_tweak_itm()
 			else if(it_pg1_l < i <= (it_pg1_l+14))//right row first page, we can only check for next 14 array lines
 			{
 				if(j>(it_pg1_l+14)) // to add radio button would extend over max line number
+				{
 					it_pg1_r = i-1; //then fewer lines then max to keep it together
+					i=it_pg1_l+14;
+				}
 				else if(j==(it_pg1_l+14))
 					it_pg1_r = i; //maximum 14 lines that fit at row
 			}
 			else if(it_pg1_r < i <= (it_pg1_r+14))//left row 2. page
 			{
 				if(j>(it_pg1_r+14)) // to add radio button would extend over max line number
+				{
 					it_pg2_l = i-1; //then fewer lines then max to keep it together
+					i=it_pg1_r+14;
+				}
 				else if(j==(it_pg1_r+14))
 					it_pg2_l = i; //maximum 14 lines that fit at row
 			}
 			else if(it_pg2_l < i <= (it_pg2_l+14))//right row 2. page
 			{
 				if(j>(it_pg2_l+14)) // to add radio button would extend over max line number
+				{
 					it_pg2_r = i-1; //then fewer lines then max to keep it together
+					i=it_pg2_l+14;
+				}
 				else if(j==(it_pg2_l+14))
 					it_pg2_r = i; //maximum 14 lines that fit at row
 			}
 			else if(it_pg2_r < i <= (it_pg2_r+14))//left row 3. page
 			{
 				if(j>(it_pg2_r+14)) // to add radio button would extend over max line number
+				{
 					it_pg3_l = i-1; //then fewer lines then max to keep it together
+					i=it_pg2_r+14;
+				}
 				else if((j==(it_pg2_r+14)) || i==(NUM_itmtweak-1))
 					it_pg3_l = i; //maximum 14 lines that fit at row
 			}
 			else if(it_pg3_l < i <= (it_pg3_l+14))//right row 3. page
 			{
 				if(j>(it_pg3_l+14)) // to add radio button would extend over max line number
+				{
 					it_pg3_r = i-1; //then fewer lines then max to keep it together
+					i=it_pg3_l+14;
+				}
 				else if((j==(it_pg3_l+14)) || i==(NUM_itmtweak-1))
 					it_pg3_r = i; //maximum 14 lines that fit at row
 			}
 			else if(it_pg3_r < i <= (it_pg3_r+14))//left row 4. page
 			{
 				if(j>(it_pg3_r+14)) // to add radio button would extend over max line number
+				{
 					it_pg4_l = i-1; //then fewer lines then max to keep it together
+					i=it_pg3_r+14;
+				}
 				else if((j==(it_pg3_r+14)) || i==(NUM_itmtweak-1))
 					it_pg4_l = i; //maximum 14 lines that fit at row
 			}
 			else if(it_pg4_l < i <= (it_pg4_l+14))//right row 4. page
 			{
 				if(j>(it_pg4_l+14)) // to add radio button would extend over max line number
+				{
 					it_pg4_r = i-1; //then fewer lines then max to keep it together
+					i=it_pg4_l+14;
+				}
 				else if((j==(it_pg3_l+14)) || i==(NUM_itmtweak-1))
 					it_pg4_r = i; //maximum 14 lines that fit at row
 			}//else if
@@ -500,8 +527,10 @@ public init_tweak_itm()
 		for(new i=0; i<NUM_chrtweak; ++i)
 		{
 			new j;
-			if(chr_twkarray[i][ct_linetype] == 5)
-				j = i + chr_twkarray[i][ct_infotype]; //how many lines we need for the radiobuttonbox-thing?
+			if(chr_twkarray[i][ct_linetype] == 5) //radiobutton-grouping
+				j = i + chr_twkarray[i][ct_propval]; //how many lines we need for the radiobuttonbox-thing?
+			else if(chr_twkarray[i][ct_linetype] == 6) //subprop-grouping
+				j = i + chr_twkarray[i][ct_propval];
 			else j=i;
 			if(i<14) //left row page1, we can only check first 14 array lines
 			{
@@ -513,56 +542,81 @@ public init_tweak_itm()
 			else if(ct_pg1_l < i <= (ct_pg1_l+14))//right row first page, we can only check for next 14 array lines
 			{
 				if(j>(ct_pg1_l+14)) // to add radio button would extend over max line number
+				{
 					ct_pg1_r = i-1; //then fewer lines then max to keep it together
+					i=ct_pg1_l+14;
+					//printf("i: %d, j: %d^n", i, j);
+				}
 				else if(j==(ct_pg1_l+14))
+				{
 					ct_pg1_r = i; //maximum 14 lines that fit at row
+					//printf("J=last+14, i: %d^n", i);
+				}
 			}
 			else if(ct_pg1_r < i <= (ct_pg1_r+14))//left row 2. page
 			{
 				if(j>(ct_pg1_r+14)) // to add radio button would extend over max line number
+				{
 					ct_pg2_l = i-1; //then fewer lines then max to keep it together
+					i=ct_pg1_r+14;
+				}
 				else if(j==(ct_pg1_r+14))
 					ct_pg2_l = i; //maximum 14 lines that fit at row
 			}
 			else if(ct_pg2_l < i <= (ct_pg2_l+14))//right row 2. page
 			{
 				if(j>(ct_pg2_l+14)) // to add radio button would extend over max line number
+				{
 					ct_pg2_r = i-1; //then fewer lines then max to keep it together
+					i=ct_pg2_l+14;
+				}
 				else if(j==(ct_pg2_l+14))
 					ct_pg2_r = i; //maximum 14 lines that fit at row
 			}
 			else if(ct_pg2_r < i <= (ct_pg2_r+14))//left row 3. page
 			{
 				if(j>(ct_pg2_r+14)) // to add radio button would extend over max line number
+				{
 					ct_pg3_l = i-1; //then fewer lines then max to keep it together
+					i=ct_pg2_r+14;
+				}
 				else if((j==(ct_pg2_r+14)) || i==(NUM_chrtweak-1))
 					ct_pg3_l = i; //maximum 14 lines that fit at row
 			}
 			else if(ct_pg3_l < i <= (ct_pg3_l+14))//right row 3. page
 			{
 				if(j>(ct_pg3_l+14)) // to add radio button would extend over max line number
+				{
 					ct_pg3_r = i-1; //then fewer lines then max to keep it together
+					i=ct_pg3_l+14;
+				}
 				else if((j==(ct_pg3_l+14)) || i==(NUM_chrtweak-1))
 					ct_pg3_r = i; //maximum 14 lines that fit at row
 			}
 			else if(ct_pg3_r < i <= (ct_pg3_r+14))//left row 4. page
 			{
 				if(j>(ct_pg3_r+14)) // to add radio button would extend over max line number
+				{
 					ct_pg4_l = i-1; //then fewer lines then max to keep it together
+					i=ct_pg3_r+14;
+				}
 				else if((j==(ct_pg3_r+14)) || i==(NUM_chrtweak-1))
 					ct_pg4_l = i; //maximum 14 lines that fit at row
 			}
 			else if(ct_pg4_l < i <= (ct_pg4_l+14))//right row 4. page
 			{
 				if(j>(ct_pg4_l+14)) // to add radio button would extend over max line number
+				{
 					ct_pg4_r = i-1; //then fewer lines then max to keep it together
+					i=ct_pg4_l+14;
+				}
 				else if((j==(ct_pg3_l+14)) || i==(NUM_chrtweak-1))
 					ct_pg4_r = i; //maximum 14 lines that fit at row
 			}//else if
 		}//for
 	tweakinit = true;
 	}//if
-	//printf("^nL1: %d, R1: %d, L2: %d, R2: %d, L3: %d, R3: %d, L4: %d, R4: %d^n", it_pg1_l, it_pg1_r, it_pg2_l, it_pg2_r, it_pg3_l, it_pg3_r, it_pg4_l, it_pg4_r);
+	//printf("^nL1: %d, R1: %d, Char L1: %d, R1: %d^n", it_pg1_l, it_pg1_r, ct_pg1_l, ct_pg1_r);
 }
 
 public tweak_itm(const chrsource, const target, pagenumber)
@@ -865,6 +919,10 @@ public tweak_itm(const chrsource, const target, pagenumber)
 				//printf("linetype: %d, i: %d^n, m: %d, n:%d^n", linetype, i, m, n);
 				switch(linetype)
 				{
+					case 0:
+					{
+						gui_addText(twkItmMenu,it_tex+k,180+(n*20),1310, itm_twkarray[i][it_linename]);					
+					}
 					case 1: //property field, eg itemname
 					{
 						gui_addGump(twkItmMenu,it_gu+k,181+(n*20), 0x827);
@@ -914,7 +972,13 @@ public tweak_itm(const chrsource, const target, pagenumber)
 					}
 					case 5: //radiobutton
 					{
-						if(itm_twkarray[i][it_propval] == itm_getProperty( target,itm_twkarray[i][it_propnumber]))
+						new u; //how many radiobuttons are part of this group?
+						if( itm_twkarray[i][it_propval] != 0) //first line of a radiobuttongroup
+						{
+							u=itm_twkarray[i][it_propval]+1;
+							gui_addGroup( twkItmMenu, u );
+						}
+						if(itm_twkarray[i][ct_infotype] == itm_getProperty( target,itm_twkarray[i][it_propnumber]))
 							checklev = 1;
 						if(itm_twkarray[i][it_propnumber] == 120) //visible
 							{
@@ -1065,10 +1129,10 @@ public tweak_char(const chrsource, const target, pagenumber)
 	new checklev;
 	new ct_gu = 40; //254
 	new ct_tex = 56; //right: 270 = delta 104
-	new ct_prop = 190; //right: 284
-	new ct_check = 275;
-	new ct_radio = 190;
-	new ct_desc = 190; //description
+	new ct_prop = 195; //right: 284
+	new ct_check = 280;
+	new ct_radio = 195;
+	new ct_desc = 195; //description
 	
 	if( pagenumber == 1)
 	{
@@ -1205,14 +1269,14 @@ public tweak_char(const chrsource, const target, pagenumber)
 				case 5: //radiobutton
 				{
 					new u; //how many radiobuttons are part of this group?
-					if( chr_twkarray[i][ct_infotype] != 0) //first line of a radiobuttongroup
+					if( chr_twkarray[i][ct_propval] != 0) //first line of a radiobuttongroup
 					{
-						u=chr_twkarray[i][ct_infotype]+1;
+						u=chr_twkarray[i][ct_propval]+1;
 						gui_addGroup( twkChrMenu, u );
 					}
 					if(chr_twkarray[i][ct_propnumber] == 121) //bitfields (for example visibility)
 					{
-						new privvalue = chr_twkarray[i][ct_propval];
+						new privvalue = chr_twkarray[i][ct_infotype];
 						if(privvalue >= 10)
 							privvalue = (privvalue/10)*16;
 						new originalval = chr_getProperty( target,chr_twkarray[i][ct_propnumber])&privvalue;
@@ -1221,7 +1285,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 					}
 					else if (chr_twkarray[i][ct_propnumber] == 110)
 					{
-						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber]) == chr_twkarray[i][ct_propval])
+						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber]) == chr_twkarray[i][ct_infotype])
 							checklev = 1;
 					}
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
