@@ -58,6 +58,11 @@
 #include "small-scripts/item/potiondelay.sma"
 #include "small-scripts/gumps/gumps.sma"
 #include "small-scripts/guild/guildstone.sma"
+#include "small-scripts/check/check.sma"
+//
+// Include the Shard's script
+//
+#include "small-scripts/myshard.sma"
 
 
 
