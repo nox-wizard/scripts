@@ -1,99 +1,110 @@
+#define RP_WITH_WEB_INTERFACE 0 //show web interface?, 1 means yes
+#define RP_TELEPORT_ON_ENLIST 1 //teleport Char without race to special location
 
-public race_enlistDialog1( const chr, const race )
+public race_menu( const chr, const race )
 {
-
-	new menu = gui_create( 30, 30, true, false, false, "handle_race_enlist1" );
-
-	gui_addBackground( menu, 5120, 320,  340 );
-	gui_addGump( menu, 20, 80, 1418 );
+	printf("enter race menu");
+	new racemenu = gui_create( 10,10,1,0,0,"race_menu_Bck" );
 	
-	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
+	gui_setProperty( racemenu,MP_BUFFER,0,PROP_CHARACTER );
+	gui_setProperty( racemenu,MP_BUFFER,3,BUTTON_APPLY );
+
+	gui_addPage(racemenu,0);
+	gui_addBackground( racemenu, 5120, 320,  340 );
+	gui_addGump( racemenu, 20, 80, 1418 );
+	
+	if( RP_WITH_WEB_INTERFACE == 1)
 	{
-		gui_addTilePic( menu, 286, 8, 3811 );
-		gui_addButtonFn( menu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
+		gui_addTilePic( racemenu, 286, 8, 3811 );
+		gui_addHtmlGump( racemenu, 294, 30, 1209, 1210, "http://www.korondar.de/themes/AT-0ri0n/images/logo.jpg", 1, 1 );
+		//gui_addButtonFn( racemenu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
 	}
 
-	gui_addText( menu, 73,   8,  152,  "N" );
-	gui_addText( menu, 85,   8,   95,  "oxwizard" );
-	gui_addText( menu, 151,   8,  152,  "R" );
-	gui_addText( menu, 163,   8,   95,  "ace" );
-	gui_addText( menu, 189,   8,  152,  "S" );
-	gui_addText( menu, 201,   8,   95,  "ystem" );
+	gui_addText( racemenu, 73,   8,  152,  "N" );
+	gui_addText( racemenu, 85,   8,   95,  "oxwizard" );
+	gui_addText( racemenu, 151,   8,  152,  "R" );
+	gui_addText( racemenu, 163,   8,   95,  "ace" );
+	gui_addText( racemenu, 189,   8,  152,  "S" );
+	gui_addText( racemenu, 201,   8,   95,  "ystem" );
 
-	gui_addText( menu, 13,  42, 1153,  "D" );
-	gui_addText( menu, 25,  42,   95,  "ear player the Noxwizard Race System" );
-	gui_addText( menu, 13,  58,   95,  "has been activated on this shard." );
+	gui_addText( racemenu, 13,  42, 1153,  "D" );
+	gui_addText( racemenu, 25,  42,   95,  "ear player the Noxwizard Race System" );
+	gui_addText( racemenu, 13,  58,   95,  "has been activated on this shard." );
 
-	gui_addText( menu, 13,  88, 1153, "A" );
-	gui_addText( menu, 25,  88,   95, "s you do not belong to a race yet....." );
-	gui_addText( menu, 13, 106,   95, "you must choose one now!" );
+	gui_addText( racemenu, 13,  88, 1153, "A" );
+	gui_addText( racemenu, 25,  88,   95, "s you do not belong to a race yet....." );
+	gui_addText( racemenu, 13, 106,   95, "you must choose one now!" );
 
 	new offset = 0;
-	if( race_getProperty( race, RP_TELEPORT_ON_ENLIST ) )
+	if( RP_TELEPORT_ON_ENLIST == 1)
 	{
-		gui_addText( menu, 13, 136, 1153, "Y" );
-		gui_addText( menu, 25, 136,   95, "ou have been transported to a safe location" );
-		gui_addText( menu, 13, 154,   95, "and will be returned after you've made your" );
-		gui_addText( menu, 13, 172,   95, "choice." );
+		gui_addText( racemenu, 13, 136, 1153, "Y" );
+		gui_addText( racemenu, 25, 136,   95, "ou have been transported to a safe location" );
+		gui_addText( racemenu, 13, 154,   95, "and will be returned after you've made your" );
+		gui_addText( racemenu, 13, 172,   95, "choice." );
 
 		offset=60;
 	}
 
-	gui_addButton( menu, 13, 139 +offset, 1209, 1210, 1 ); // Information about races
-	gui_addText( menu, 33, 136 +offset, 1153, "I" );
-	gui_addText( menu, 42, 136 +offset,   95, "nformation about races" );
-	gui_addButton( menu, 13, 169 +offset, 1209, 1209, 2 ); // Choose a race
-	gui_addText( menu, 33, 166 +offset, 1153, "S" );
-	gui_addText( menu, 45, 166 +offset,   95, "elect your race" );
+	gui_addButton( racemenu, 13, 139 +offset, 1209, 1210, 1 ); // Information about races
+	gui_addText( racemenu, 33, 136 +offset, 1153, "I" );
+	gui_addText( racemenu, 42, 136 +offset,   95, "nformation about races" );
+	gui_addButton( racemenu, 13, 169 +offset, 1209, 1209, 2 ); // Choose a race
+	gui_addText( racemenu, 33, 166 +offset, 1153, "S" );
+	gui_addText( racemenu, 45, 166 +offset,   95, "elect your race" );
 	
-	gui_show( menu, chr );
+	gui_show( racemenu, chr );
 
 }
 
+public race_menu_Bck(const racemenu, const chrsource, const buttonCode)
+{
+	
+}
 
 public race_dialogRaceInfo( const chr, const race )
 {
 
-	new menu = gui_create( 30, 30, true, false, false, "handle_race_raceInfo" );
+	new racemenu = gui_create( 30, 30, true, false, false, "handle_race_raceInfo" );
 
-	gui_addBackground( menu, 5120, 320,  340 );
-	gui_addGump( menu, 20, 80, 1418 );
+	gui_addBackground( racemenu, 5120, 320,  340 );
+	gui_addGump( racemenu, 20, 80, 1418 );
 
-	gui_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
+	gui_addButton( racemenu, 10, 300, 2130, 2129, 1 ); 	// OKAY
 
-	gui_addText( menu, 73, 8, 152, "N" );
-	gui_addText( menu, 85, 8, 95, "oxwizard" );
-	gui_addText( menu, 151, 8, 152, "R" );
-	gui_addText( menu, 163, 8, 95, "ace" );
-	gui_addText( menu, 189, 8, 152, "S" );
-	gui_addText( menu, 201, 8, 95, "ystem" );
+	gui_addText( racemenu, 73, 8, 152, "N" );
+	gui_addText( racemenu, 85, 8, 95, "oxwizard" );
+	gui_addText( racemenu, 151, 8, 152, "R" );
+	gui_addText( racemenu, 163, 8, 95, "ace" );
+	gui_addText( racemenu, 189, 8, 152, "S" );
+	gui_addText( racemenu, 201, 8, 95, "ystem" );
 
-	gui_addText( menu, 13, 42, 1153, "C" );
-	gui_addText( menu, 25, 42, 95, "hoose an option" );
+	gui_addText( racemenu, 13, 42, 1153, "C" );
+	gui_addText( racemenu, 25, 42, 95, "hoose an option" );
 
-	gui_addButton( menu, 13, 82, 1209, 1210, 1 ); // General Information
-	gui_addText( menu, 33, 82, 1153, "G" );
-	gui_addText( menu, 45, 82, 95, "eneral information" );
+	gui_addButton( racemenu, 13, 82, 1209, 1210, 1 ); // General Information
+	gui_addText( racemenu, 33, 82, 1153, "G" );
+	gui_addText( racemenu, 45, 82, 95, "eneral information" );
 
-	gui_addButton( menu, 13, 102, 1209, 1210, 2 ); // Player races
-	gui_addText( menu, 33, 102, 1153, "P" );
-	gui_addText( menu, 45, 102, 95, "layer races" );
+	gui_addButton( racemenu, 13, 102, 1209, 1210, 2 ); // Player races
+	gui_addText( racemenu, 33, 102, 1153, "P" );
+	gui_addText( racemenu, 45, 102, 95, "layer races" );
 
-	gui_addButton( menu, 13, 122, 1209, 1210, 3 ); // Non player races
-	gui_addText( menu, 33, 122, 1153, "N" );
-	gui_addText( menu, 45, 122, 95, "on player races" );
+	gui_addButton( racemenu, 13, 122, 1209, 1210, 3 ); // Non player races
+	gui_addText( racemenu, 33, 122, 1153, "N" );
+	gui_addText( racemenu, 45, 122, 95, "on player races" );
 
-	gui_addButton( menu, 13, 142, 1209, 1210, 4 ); // All races
-	gui_addText( menu, 33, 142, 1153, "A" );
-	gui_addText( menu, 45, 142, 95, "ll races" );
+	gui_addButton( racemenu, 13, 142, 1209, 1210, 4 ); // All races
+	gui_addText( racemenu, 33, 142, 1153, "A" );
+	gui_addText( racemenu, 45, 142, 95, "ll races" );
 
 	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
-		gui_addTilePic( menu, 286, 8, 3811 );
-		gui_addButtonFn( menu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
+		gui_addTilePic( racemenu, 286, 8, 3811 );
+		gui_addButtonFn( racemenu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
 	}
 
-	gui_show( menu, chr );
+	gui_show( racemenu, chr );
 
 }
 
@@ -102,22 +113,22 @@ public race_dialogRaceInfo( const chr, const race )
 public race_nameList( const chr, const raceType, const canClose, const canMove, const withOk )
 {
 																																															// Must add static reference map < racename, &Race*> to class
-	new menu = gui_create( 30, 30, canMove, canClose, false, "handle_race_nameList" );
+	new racemenu = gui_create( 30, 30, canMove, canClose, false, "handle_race_nameList" );
 
-	gui_addBackground( menu, 5120, 320,  340 );
-	gui_addGump( menu, 20, 80, 1418 );
+	gui_addBackground( racemenu, 5120, 320,  340 );
+	gui_addGump( racemenu, 20, 80, 1418 );
 
 	if ( withOk )
-		gui_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
+		gui_addButton( racemenu, 10, 300, 2130, 2129, 1 ); 	// OKAY
 
-	gui_addText( menu, 73,   8,  152,  "N" );
-	gui_addText( menu, 84,   8,   95,  "oxwizard" );
-	gui_addText( menu, 151,  8,  152, "R" );
-	gui_addText( menu, 162,  8,   95,  "ace" );
-	gui_addText( menu, 189,  8,  152,  "S" );
-	gui_addText( menu, 200,  8,   95,  "ystem" );
-	gui_addText( menu, 20,  32, 1153,  "C" );
-	gui_addText( menu, 31,  32,   95,  "hoose a race:" );
+	gui_addText( racemenu, 73,   8,  152,  "N" );
+	gui_addText( racemenu, 84,   8,   95,  "oxwizard" );
+	gui_addText( racemenu, 151,  8,  152, "R" );
+	gui_addText( racemenu, 162,  8,   95,  "ace" );
+	gui_addText( racemenu, 189,  8,  152,  "S" );
+	gui_addText( racemenu, 200,  8,   95,  "ystem" );
+	gui_addText( racemenu, 20,  32, 1153,  "C" );
+	gui_addText( racemenu, 31,  32,   95,  "hoose a race:" );
 
 	new set = set_create();
 	set_addAllRaces( set, true );
@@ -141,14 +152,14 @@ public race_nameList( const chr, const raceType, const canClose, const canMove, 
 			{
 				position=62;
 				page++;
-				gui_addPage( menu, page );
+				gui_addPage( racemenu, page );
 			}
 			
 			new name[100];
 			race_getProperty( race, RP_STR_NAME, _, name );
 			
-			gui_addText( menu, 40, position-4, 95, name );
-			gui_addButton( menu, 20, position, 1209, 1210, race );
+			gui_addText( racemenu, 40, position-4, 95, name );
+			gui_addButton( racemenu, 20, position, 1209, 1210, race );
 
 			position+=20;
 			raceCount++;
@@ -158,53 +169,53 @@ public race_nameList( const chr, const raceType, const canClose, const canMove, 
 
 	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
-		gui_addTilePic( menu, 286, 8, 3811 );
-		gui_addButtonFn( menu, 294, 30, 1209, 1210, INVALID, _, "race_webInterface" )
+		gui_addTilePic( racemenu, 286, 8, 3811 );
+		gui_addButtonFn( racemenu, 294, 30, 1209, 1210, INVALID, _, "race_webInterface" )
 	}
 
 	//new pagenum = 0;
 	for( new i=1; i<page; ++i )
 	{
-		gui_addPage( menu, i );
+		gui_addPage( racemenu, i );
 		if( i>1 )
-			gui_addPageButton( menu, 270, 303, 2223, 2223, i-1 )
+			gui_addPageButton( racemenu, 270, 303, 2223, 2223, i-1 )
 
 		if( i<page )
-			gui_addPageButton( menu, 290, 303, 2224, 2224, i+1 )
+			gui_addPageButton( racemenu, 290, 303, 2224, 2224, i+1 )
 		
 	}
 
-	gui_show( menu, chr );
+	gui_show( racemenu, chr );
 
 }
 
 public race_description( const chr, const race, const canClose, const canMove, const withOk )
 {
 
-	new menu = gui_create( 30, 30, canMove, canClose, false, "handle_race_description" );
+	new racemenu = gui_create( 30, 30, canMove, canClose, false, "handle_race_description" );
 
-	gui_addBackground( menu, 5120, 640,  340 );
-	gui_addGump( menu, 340, 80, 1418 );
+	gui_addBackground( racemenu, 5120, 640,  340 );
+	gui_addGump( racemenu, 340, 80, 1418 );
 
 	if ( withOk )
-		gui_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
+		gui_addButton( racemenu, 10, 300, 2130, 2129, 1 ); 	// OKAY
 
-	gui_addText( menu, 233, 8,  152,  "N" );
-	gui_addText( menu, 244, 8,   95,  "oxwizard" );
-	gui_addText( menu, 311, 8,  152,  "R" );
-	gui_addText( menu, 322, 8,   95,  "ace" );
-	gui_addText( menu, 349, 8,  152,  "S" );
-	gui_addText( menu, 360, 8,   95,  "ystem" );
+	gui_addText( racemenu, 233, 8,  152,  "N" );
+	gui_addText( racemenu, 244, 8,   95,  "oxwizard" );
+	gui_addText( racemenu, 311, 8,  152,  "R" );
+	gui_addText( racemenu, 322, 8,   95,  "ace" );
+	gui_addText( racemenu, 349, 8,  152,  "S" );
+	gui_addText( racemenu, 360, 8,   95,  "ystem" );
 
 	new name[100];
 	race_getProperty( race, RP_STR_NAME, _, name );
 	new footerCenter = ( 640 - ( strlen(name) * PIXELFORCHAR ) ) / 2;
-	gui_addText( menu, footerCenter, 300, 152,  name );
+	gui_addText( racemenu, footerCenter, 300, 152,  name );
 
 	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
-		gui_addTilePic( menu, 606, 8, 3811 );
-		gui_addButtonFn( menu, 614, 30, 1209, 1210, race, _, "race_webInterface" )
+		gui_addTilePic( racemenu, 606, 8, 3811 );
+		gui_addButtonFn( racemenu, 614, 30, 1209, 1210, race, _, "race_webInterface" )
 	}
 
 
@@ -221,7 +232,7 @@ public race_description( const chr, const race, const canClose, const canMove, c
 		{
 			position=62;
 			page++;
-			gui_addPage( menu, page );
+			gui_addPage( racemenu, page );
 		}
 
 		k++;
@@ -237,7 +248,7 @@ public race_description( const chr, const race, const canClose, const canMove, c
 		}
 		
 		
-		gui_addText( menu, 20, position-4, 95, desc );
+		gui_addText( racemenu, 20, position-4, 95, desc );
 
 		position+=20;
 
@@ -245,20 +256,20 @@ public race_description( const chr, const race, const canClose, const canMove, c
 
 	for( new i=1; i<page; ++i )
 	{
-		gui_addPage( menu, i );
+		gui_addPage( racemenu, i );
 		if( i>1 )
-			gui_addPageButton( menu, 590, 303, 2223, 2223, i-1 )
+			gui_addPageButton( racemenu, 590, 303, 2223, 2223, i-1 )
 
 		if( i<page )
-			gui_addPageButton( menu, 610, 303, 2224, 2224, i+1 )
+			gui_addPageButton( racemenu, 610, 303, 2224, 2224, i+1 )
 			
 	}
 
-	gui_show( menu, chr );
+	gui_show( racemenu, chr );
 }
 
 
-public race_webInterface( const menu, const chr, const race )
+public race_webInterface( const racemenu, const chr, const race )
 {
 	new root[200];
 	race_getGlobalProp( RP_STR_WEBROOT, _, root );
@@ -275,7 +286,7 @@ public race_webInterface( const menu, const chr, const race )
 }
 
 
-public race_make( const menu, const curr, const race, const chr )
+public race_make( const racemenu, const curr, const race, const chr )
 {
 
 	if( race==INVALID )

@@ -1023,15 +1023,16 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
 	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+	
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
 	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
+	gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
 	gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
 	
 	//printf("target: %d", target);
@@ -1242,7 +1243,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 				}
 				case 7: //stock function call
 				{
-					new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
+					new q = (chr_twkarray[i][ct_infotype]); //type of stock function
 					new output;
 					new infotext=1;
 					if(q==0)
@@ -1285,12 +1286,75 @@ public tweak_char(const chrsource, const target, pagenumber)
 						infotext=0;
 						printf("status: %d", status);
 					}
-					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
-					if(chr_twkarray[i][ct_infotype] == 0) //integer value to display
-						sprintf(tempChrStr, "%d", output);
-					if(infotext == 1)
+					else if(q==6) //Beard Color
+					{
+						new beard = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+						if(beard>=0)
+						{
+							output = itm_getProperty(beard, IP_COLOR);
+							sprintf(tempChrStr, "%d", output);
+							checklev = 1;
+						}
+						else
+							sprintf(tempChrStr, "None");
+						gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
+						gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,checklev,i);
+						checklev = 0;
+						infotext = 0; //no infoline
+					}
+					else if(q==7) //Beard Style
+					{
+						new beard = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+						if(beard>=0)
+						{
+							output = itm_getProperty(beard, IP_ID);
+							sprintf(tempChrStr, "%d", output);
+							checklev = 1;
+						}
+						else
+							sprintf(tempChrStr, "None");
+						gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
+						gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,checklev,i);
+						checklev = 0;
+						infotext = 0; //no infoline
+					}
+					else if(q==8) //Hair color
+					{
+						new hair = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+						if(hair>=0)
+						{
+							output = itm_getProperty(hair, IP_COLOR);
+							sprintf(tempChrStr, "%d", output);
+							checklev = 1;
+						}
+						else
+							sprintf(tempChrStr, msg_commandsDef[75]);
+						gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
+						gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,checklev,i);
+						checklev = 0;
+						infotext = 0; //no infoline
+					}
+					else if(q==9) //Hair style
+					{
+						new hair = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+						if(hair>=0)
+						{
+							output = itm_getProperty(hair, IP_ID);
+							sprintf(tempChrStr, "%d", output);
+						}
+						else
+							sprintf(tempChrStr, "None");
+						gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
+						infotext = 0; //no infoline
+					}
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]); //line name
+					if(infotext == 1) //we have an infoline here, so what is the info?
+					{
+						if(chr_twkarray[i][ct_propval] == 0) //integer value to display
+							sprintf(tempChrStr, "%d", output);
 						gui_addText( twkChrMenu, ct_desc+k, 180+(n*20),0,tempChrStr);
-					tempChrStr=" ";
+					}
+					tempChrStr=" "; //clean tempChrStr
 				}
 				default: printf("unknown item-tweak case!");
 			}//linetype
@@ -1333,15 +1397,16 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
 	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+	
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
 	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
+	gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
 	gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
 	
 	//printf("target: %d", target);
@@ -1384,15 +1449,16 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
 	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+	
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
 	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
+	gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
 	gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
 	
 	//printf("target: %d", target);
@@ -1456,15 +1522,16 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
 	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+	
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
 	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
+	gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
 	gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
 	
 	//printf("target: %d", target);
@@ -1643,15 +1710,16 @@ public tweak_char(const chrsource, const target, pagenumber)
 						gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
 						gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 						gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+						
 						gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 						gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-						gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
+						gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 						gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-						gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+						gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 						gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-						gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
+						gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
 						gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-						gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
+						gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
 						gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
 						
 							gui_addText(twkChrMenu,66,120,33,msg_commandsDef[50]);
@@ -1830,7 +1898,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 	
 	switch(buttonCode)
 	{
-		case 1..9: 	
+		case 1..10: 	
 		{	
 			tweak_char(chrsource, target, buttonCode);
 			//gui_delete( twkChrMenu );
@@ -1976,7 +2044,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 					{
 						new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
 						checked = gui_getProperty(twkChrMenu,MP_CHECK,i); //is it checked?
-						if( q == 5)
+						if( q == 5) //char kill/revive
 						{
 							new status = chr_getProperty(target, chr_twkarray[i][ct_propval]);
 							if( (status == 0) && checked) //not dead but checked now
@@ -1986,6 +2054,43 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 							else if ((status == 1) && !checked) //dead but no more checked
 								chr_resurrect(target);
 						}
+						else if( 6<= q <=9) //Beard color, style, hair color, style
+						{
+							new textbuf_input[15];
+							new value=0;
+							new output;
+							new item = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+							gui_getProperty(twkChrMenu,MP_UNI_TEXT,i,textbuf_input);
+							trim(textbuf_input);
+							if(isStrUnsignedInt(textbuf_input)) //should be an integer, is it?
+								value = str2UnsignedInt(textbuf_input);
+							if((q==6) || (q==8)) //color
+							{
+								output = itm_getProperty(item, IP_COLOR);
+								if(output != value) //new value
+								{
+									if(item>=0) //beard/hair exists already
+										itm_setProperty(item, IP_COLOR, value);
+									else if(item < 0) //can't change the color if the hair/beard does not exist
+										chr_message( target, _, msg_commandsDef[271]);
+									
+								}//new value
+							} //if color
+							if((q==7) || (q==9)) //style
+							{
+								checked = gui_getProperty(twkChrMenu,MP_CHECK,i);
+								output = itm_getProperty(item, IP_ID);
+								if(checked = 1) //keep/have hair/beard
+								{
+									if((output != value) && (item>=0)) //new value and hair/beard exists already
+										itm_setProperty(item, IP_ID, value);
+									/*else if(item < 0) //lets add a beard/hair
+										makebeard_and_hair(target, value);*/
+								}
+								else //kill hair/beard
+									itm_remove(item);
+							}//if style
+						}//beard/hair color/style
 					}
 		        	}//for
 		        }

@@ -4,7 +4,7 @@
 \brief handles login stuff
 
 Use this function to call a script at character login, do not put code in the function but call
-an extern function
+an external function
 */
 public __charLogin(const chr)
 {
@@ -30,8 +30,12 @@ public __charLogin(const chr)
 	hungerandthirst(chr);
 	
 	new race = chr_getProperty(chr, CP_NPCRACE);
-	if( race == 0)
-		race_enlistDialog1(chr, race);
+	printf("race is: %d", race);
+	if( race < 0)
+	{
+		printf("call racemenu now");
+		race_menu(chr, race);
+	}
 	
 	//put here any function you want to be executed at character login
 		
