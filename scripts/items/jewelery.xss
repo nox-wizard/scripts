@@ -335,16 +335,30 @@ SECTION ITEM $item_beads
 	VALUE 35
 }
 
-SECTION ITEM $item_bracelet
+SECTION ITEM $item_bracelet1
 {
 	ID 1086
 	DECAY
 	VALUE 40
 }
 
-SECTION ITEM $item_earrings
+SECTION ITEM $item_bracelet2
+{
+	ID 1f06
+	DECAY
+	VALUE 40
+}
+
+SECTION ITEM $item_earrings1
 {
 	ID 1087
+	DECAY
+	VALUE 40
+}
+
+SECTION ITEM $item_earrings2
+{
+	ID 1f07
 	DECAY
 	VALUE 40
 }
@@ -370,9 +384,81 @@ SECTION ITEM $item_necklace3
 	VALUE 45
 }
 
-SECTION ITEM $item_ring
+SECTION ITEM $item_necklace4
+{
+	ID 1f08
+	DECAY
+	VALUE 45
+}
+
+SECTION ITEM $item_necklace5
+{
+	ID 1f05
+	DECAY
+	VALUE 45
+}
+
+SECTION ITEM $item_necklace6
+{
+	ID 1f0a
+	DECAY
+	VALUE 45
+}
+
+SECTION ITEM $item_ring1
 {
 	ID 108A
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_ring2
+{
+	ID 1f09
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_gold_belt_1
+{
+	ID 1535
+	DECAY
+	VALUE 35
+	AMXINT $localvar_flipitem $item_gold_belt_2
+}
+
+SECTION ITEM $item_gold_belt_2
+{
+	ID 1536
+	DECAY
+	VALUE 35
+	AMXINT $localvar_flipitem $item_gold_belt_1
+}
+
+SECTION ITEM $item_steel_wire
+{
+	ID 1876
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_silver_wire
+{
+	ID 1877
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_gold_wire
+{
+	ID 1878
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_copper_wire
+{
+	ID 1879
 	DECAY
 	VALUE 35
 }

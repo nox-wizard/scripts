@@ -15,6 +15,7 @@
 #define $itype_wand 15
 #define $itype_resurrect 16
 #define $itype_manareq_wand 17
+#define $itype_keyring 18
 #define $itype_potion 19
 #define $itype_rune 50
 #define $itype_moongate 51

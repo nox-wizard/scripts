@@ -168,6 +168,20 @@ SECTION ITEM $item_brass_box
 	MOVABLE 1
 }
 
+//
+// keys
+//
+
+SECTION ITEM $item_copper_key
+{
+	NAME gold key
+	ID 100F
+	TYPE $itype_key
+	DECAY
+	VALUE 15
+	WEIGHT 2
+}
+
 SECTION ITEM $item_gold_key
 {
 	NAME gold key
@@ -203,6 +217,42 @@ SECTION ITEM $item_bronze_key
 	ID 1013
 	TYPE $itype_key
 	DECAY
+	VALUE 10
+	WEIGHT 2
+}
+
+SECTION ITEM $item_key_ring1
+{
+	NAME key ring
+	ID 1011
+	TYPE $itype_keyring
+	VALUE 10
+	WEIGHT 2
+}
+
+SECTION ITEM $item_key_ring2
+{
+	NAME key ring
+	ID 1769
+	TYPE $itype_keyring
+	VALUE 10
+	WEIGHT 2
+}
+
+SECTION ITEM $item_key_ring3
+{
+	NAME key ring
+	ID 176a
+	TYPE $itype_keyring
+	VALUE 10
+	WEIGHT 2
+}
+
+SECTION ITEM $item_key_ring4
+{
+	NAME key ring
+	ID 176b
+	TYPE $itype_keyring
 	VALUE 10
 	WEIGHT 2
 }

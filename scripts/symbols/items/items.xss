@@ -281,6 +281,11 @@
 #define $item_iron_key 1051
 #define $item_magic_key 1052
 #define $item_bronze_key 1053
+#define $item_copper_key 1054
+#define $item_key_ring1 1055
+#define $item_key_ring2 1056
+#define $item_key_ring3 1057
+#define $item_key_ring4 1058
 
 //
 // STATUES
@@ -666,45 +671,38 @@
 //
 #define $item_amethysts1 13194
 #define $item_amethysts2 13195
-#define $item_amethysts3 13213
-#define $item_amethysts4 13214
-#define $item_citrines1 13196
-#define $item_citrines2 13215
-#define $item_citrines3 13216
-#define $item_citrines4 13217
-#define $item_emeralds1 13197
-#define $item_emeralds2 13222
-#define $item_rubies1 13198
-#define $item_rubies3 13200
-#define $item_rubies4 13201
-#define $item_rubies5 13202
-#define $item_rubies6 13223
-#define $item_rubies7 13224
-#define $item_sapphires1 13203
-#define $item_sapphires2 13204
-#define $item_sapphires3 13205
-#define $item_sapphires4 13206
-#define $item_star_sapphires1 13207
-#define $item_star_sapphires2 13208
-#define $item_star_sapphires3 13225
-#define $item_tourmalines1 13209
-#define $item_tourmalines2 13210
-#define $item_tourmalines3 13211
-#define $item_tourmalines4 13226
-#define $item_pieces_of_amber 13212
-#define $item_diamonds1 13218
-#define $item_diamonds2 13219
-#define $item_diamonds3 13220
-#define $item_diamonds4 13221
-#define $item_diamonds5 13234
+#define $item_amethysts3 13196
+#define $item_amethysts4 13197
+#define $item_citrines1 13198
+#define $item_citrines2 13199
+#define $item_citrines3 13200
+#define $item_citrines4 13201
+#define $item_emeralds1 13202
+#define $item_emeralds2 13203
+#define $item_rubies1 13204
+#define $item_rubies3 13205
+#define $item_rubies4 13206
+#define $item_rubies5 13207
+#define $item_rubies6 13208
+#define $item_rubies7 13209
+#define $item_sapphires1 13210
+#define $item_sapphires2 13211
+#define $item_sapphires3 13212
+#define $item_sapphires4 13213
+#define $item_star_sapphires1 13214
+#define $item_star_sapphires2 13215
+#define $item_star_sapphires3 13216
+#define $item_tourmalines1 13217
+#define $item_tourmalines2 13218
+#define $item_tourmalines3 13219
+#define $item_tourmalines4 13220
+#define $item_pieces_of_amber 13221
+#define $item_diamonds1 13222
+#define $item_diamonds2 13223
+#define $item_diamonds3 13224
+#define $item_diamonds4 13225
+#define $item_diamonds5 13226
 
-#define $item_beads 13227
-#define $item_bracelet 13228
-#define $item_earrings 13229
-#define $item_necklace1 13230
-#define $item_necklace2 13231
-#define $item_necklace3 13232
-#define $item_ring 13233
 
 //
 // treasure pieces
@@ -713,103 +711,108 @@
 // corner left bottom
 //
 #define $item_treasure1A 160001
-#define $item_treasure1B 160004
-#define $item_treasure1C 160005
-#define $item_treasure1D 160010
-#define $item_treasure1E 160009
-#define $item_treasure1F 160011
+#define $item_treasure1B 160002
+#define $item_treasure1C 160003
+#define $item_treasure1D 160004
+#define $item_treasure1E 160005
+#define $item_treasure1F 160006
 #define $item_treasure1G 160007
 #define $item_treasure1H 160008
 
 //
 // left top corner
 //
-#define $item_treasure2A 160013
-#define $item_treasure2B 160014
-#define $item_treasure2C 160012
+#define $item_treasure2A 160009
+#define $item_treasure2B 160010
+#define $item_treasure2C 160011
 
 //
 // top right corner
 //
-#define $item_treasure3A 160016
-#define $item_treasure3B 160017
-#define $item_treasure3C 160036
+#define $item_treasure3A 160012
+#define $item_treasure3B 160013
+#define $item_treasure3C 160014
 
 //
 // left side
 //
-#define $item_treasure4A 160019
-#define $item_treasure4B 160020
-#define $item_treasure4C 160021
+#define $item_treasure4A 160015
+#define $item_treasure4B 160016
+#define $item_treasure4C 160017
 
 //
 // bottom side
 //
-#define $item_treasure5A 160022
-#define $item_treasure5B 160023
-#define $item_treasure5C 160006
-#define $item_treasure5D 160003
+#define $item_treasure5A 160018
+#define $item_treasure5B 160019
+#define $item_treasure5C 160020
+#define $item_treasure5D 160021
 
 //
 // center
 //
-#define $item_treasure6A 160026
-#define $item_treasure6B 160027
-#define $item_treasure6C 160002
-#define $item_treasure6D 160029
-#define $item_treasure6E 160030
-#define $item_treasure6F 160031
-#define $item_treasure6G 160032
-#define $item_treasure6H 160041
+#define $item_treasure6A 160022
+#define $item_treasure6B 160023
+#define $item_treasure6C 160024
+#define $item_treasure6D 160025
+#define $item_treasure6E 160026
+#define $item_treasure6F 160027
+#define $item_treasure6G 160028
+#define $item_treasure6H 160029
 
 //
 // right side
 //
-#define $item_treasure7A 160033
-#define $item_treasure7B 160034
-#define $item_treasure7C 160035
-#define $item_treasure7D 160028
+#define $item_treasure7A 160030
+#define $item_treasure7B 160031
+#define $item_treasure7C 160032
+#define $item_treasure7D 160033
 
 //
 // top side
 //
-#define $item_treasure8A 160015
-#define $item_treasure8B 160037
-#define $item_treasure8C 160038
-#define $item_treasure8D 160039
-#define $item_treasure8E 160040
-#define $item_treasure8F 160025
+#define $item_treasure8A 160034
+#define $item_treasure8B 160035
+#define $item_treasure8C 160036
+#define $item_treasure8D 160037
+#define $item_treasure8E 160038
+#define $item_treasure8F 160039
 
 //
 // corner bottom right
 //
-#define $item_treasure9A 160042
-#define $item_treasure9B 160018
-#define $item_treasure9C 160024
+#define $item_treasure9A 160040
+#define $item_treasure9B 160041
+#define $item_treasure9C 160042
 
 
-#define $item_treasure_deed1 160170
-#define $item_treasure_deed2 160171
-#define $item_treasure_deed3 160172
-#define $item_treasure_deed4 160173
+#define $item_treasure_deed1 160150
+#define $item_treasure_deed2 160151
+#define $item_treasure_deed3 160152
+#define $item_treasure_deed4 160153
+
+#define $item_beads 160200
+#define $item_bracelet1 160201
+#define $item_bracelet2 160202
+#define $item_earrings1 160203
+#define $item_earrings2 160204
+#define $item_necklace1 160205
+#define $item_necklace2 160206
+#define $item_necklace3 160207
+#define $item_necklace4 160208
+#define $item_necklace5 160209
+#define $item_necklace6 160210
+#define $item_ring1 160211
+#define $item_ring2 160212
+#define $item_gold_belt_1 160213
+#define $item_gold_belt_2 160214
+#define $item_steel_wire 160215
+#define $item_silver_wire 160216
+#define $item_gold_wire 160217
+#define $item_copper_wire 160218
 
 /////////////////////////////////////////////////
 
-#define $item_banker_spawner-f 13235
-#define $item_bard_spawner-f 13236
-#define $item_bard_spawner-m 13237
-#define $item_miner_spawner-m 13238
-#define $item_miner_spawner-f 13239
-#define $item_weaponsmith_spawner-m 13240
-#define $item_weaponsmith_spawner-f 13241
-#define $item_baker_spawner-m 13242
-#define $item_baker_spawner-f 13243
-#define $item_provisioner_spawner-m 13244
-#define $item_provisioner_spawner-f 13245
-#define $item_cobbler_spawner-m 13246
-#define $item_cobbler_spawner-f 13247
-#define $item_innkeeper_spawner-m 13248
-#define $item_innkeeper_spawner-f 13249
 #define $item_mage_spawner-m 13250
 #define $item_mage_spawner-f 13251
 #define $item_herbalist_spawner-m 13252
@@ -851,6 +854,21 @@
 #define $item_engineer_spawner-m 13288
 #define $item_engineer_spawner-f 13289
 #define $item_banker_spawner-m 13290
+#define $item_banker_spawner-f 13291
+#define $item_bard_spawner-f 13292
+#define $item_bard_spawner-m 13293
+#define $item_miner_spawner-m 13294
+#define $item_miner_spawner-f 13295
+#define $item_weaponsmith_spawner-m 13296
+#define $item_weaponsmith_spawner-f 13297
+#define $item_baker_spawner-m 13298
+#define $item_baker_spawner-f 13299
+#define $item_provisioner_spawner-m 13300
+#define $item_provisioner_spawner-f 13301
+#define $item_cobbler_spawner-m 13302
+#define $item_cobbler_spawner-f 13303
+#define $item_innkeeper_spawner-m 13304
+#define $item_innkeeper_spawner-f 13305
 
 /////////////////////////////////////////////////
 
