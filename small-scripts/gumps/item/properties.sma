@@ -142,7 +142,7 @@ static const propLocalVariables	= 200;
 //
 // Button Identifiers
 //
-static const buttonCancel	= 0;
+static const buttonCancel	= 65533;
 
 public gui_itemProps( const clickedItem, const showToWhom, const edit )
 {
