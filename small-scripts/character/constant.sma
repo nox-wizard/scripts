@@ -221,6 +221,7 @@ const CP_STR_TITLE = 455;
 const CP_STR_TRIGWORD = 456;
 const CP_STR_SPEECHWORD = 457;	// word/phrase in speech that triggered speech override
 const CP_STR_SPEECH = 458; // entire speech that contains word/phrase that triggered speech override
+const CP_STR_SPEECH_CURRENT = 459;
 
 const NPC_TALK = 1;
 const NPC_TALK_ALL = 2;
