@@ -104,7 +104,7 @@ native chr_setProperty(const chr, const property, const subprop=0, ...);
 To be used only in commands scripts
 \return the speech
 */
-native chr_getCmdSpeech(const chr, speech[], no_command = true)
+native chr_getSpeech(const chr, speech[], no_command = true)
 
 /*!
 \author Stonedz
@@ -1120,23 +1120,33 @@ native chr_sound(const chr, const soundfx);
 */
 native chr_poison(const chr, const poisontype, const secs = -1);
 
+/*
+author Luxor
+fn chr_morph(const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ...)
+param chr the character to be morphed
+param bodyid new body ID
+param skincolor new skin color
+param hairstyle new hair style
+param haircolor new hair color
+param beardstyle new beard style
+param beardcolor new beard color
+param backup if true old character will be saved
+param name[] format string for the name
+param ...  parameters of the format string
+brief changes character's appearance
+return 0 or INVALID if chr is not a valid character serial
+*/
+// native chr_morph( const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ... );
 /*!
-\author Luxor
-\fn chr_morph(const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ...)
+\author Luxor, changed by Wintermute
+\fn chr_morph(const chr, const npcid, const backup)
 \param chr the character to be morphed
-\param bodyid new body ID
-\param skincolor new skin color
-\param hairstyle new hair style
-\param haircolor new hair color
-\param beardstyle new beard style
-\param beardcolor new beard color
-\param backup if true old character will be saved
-\param name[] format string for the name
-\param ...  parameters of the format string
+\param npcid the id (xss) of the np to be morphed into
+\param backup = true, if char settings should be restored
 \brief changes character's appearance
 \return 0 or INVALID if chr is not a valid character serial
 */
-native chr_morph( const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ... );
+native chr_morph( const chr, const npcid, const backup);
 
 /*!
 \author Luxor
