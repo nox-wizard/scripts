@@ -32,6 +32,7 @@
 #include scripts/items/signs_posts.xss
 #include scripts/items/garbage.xss
 #include scripts/items/jewelery.xss
+#include scripts/items/plants.xss
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || Include your scripts after these lines.                             ||
