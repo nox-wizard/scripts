@@ -342,7 +342,7 @@ native set_getRaceStuff( const set, const race, const prop, const subProp=0  );
 \param 2 the house
 \return 0
 */
-native  set_getCoOwners ( const set, const house);
+native  set_addCoOwners ( const set, const house);
 
 /*
 \brief Add to given set all house friends (serials)
