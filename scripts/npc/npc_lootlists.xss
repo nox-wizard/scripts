@@ -327,7 +327,7 @@ SECTION LOOTLIST $loot_swords
 	$item_iron_kryss
 	$item_iron_scimitar
 	$item_iron_long_sword
-	$item_iron_broadsword
+	$item_iron_broad_sword
 	$item_iron_cutlass
 	$item_iron_katana
 }
@@ -837,8 +837,8 @@ SECTION LOOTLIST $loot_weak_magical_weapons
 	$item_iron_katana_of_might
 	$item_iron_hatchet_of_ruin
 	$item_iron_hatchet_of_might
-	$item_iron_executionners_axe_of_ruin
-	$item_iron_executionners_axe_of_might
+	$item_iron_executioners_axe_of_ruin
+	$item_iron_executioners_axe_of_might
 	$item_iron_axe_of_ruin
 	$item_iron_axe_of_might
 	$item_iron_double_axe_of_ruin
@@ -919,9 +919,9 @@ SECTION LOOTLIST $loot_strong_magical_weapons
 	$item_iron_hatchet_of_force
 	$item_iron_hatchet_of_power
 	$item_iron_hatchet_of_vanquishing
-	$item_iron_executionners_axe_of_force
-	$item_iron_executionners_axe_of_power
-	$item_iron_executionners_axe_of_vanquishing
+	$item_iron_executioners_axe_of_force
+	$item_iron_executioners_axe_of_power
+	$item_iron_executioners_axe_of_vanquishing
 	$item_iron_axe_of_force
 	$item_iron_axe_of_power
 	$item_iron_axe_of_vanquishing
@@ -1098,16 +1098,16 @@ SECTION LOOTLIST $loot_colored_armor
 	$item_bronze_close_helm
 	$item_bronze_helmet
 	$item_bronze_bascinet
-	$item_gapite_platemail
-	$item_gapite_plate_gorget
-	$item_gapite_plate_gloves
-	$item_gapite_plate_helm
-	$item_gapite_plate_leggings
-	$item_gapite_plate_sleeves
-	$item_gapite_nose_helm
-	$item_gapite_close_helm
-	$item_gapite_helmet
-	$item_gapite_bascinet
+	$item_agapite_platemail
+	$item_agapite_plate_gorget
+	$item_agapite_plate_gloves
+	$item_agapite_plate_helm
+	$item_agapite_plate_leggings
+	$item_agapite_plate_sleeves
+	$item_agapite_nose_helm
+	$item_agapite_close_helm
+	$item_agapite_helmet
+	$item_agapite_bascinet
 }
 
 SECTION LOOTLIST $loot_crook_practice_weapon
@@ -1151,11 +1151,11 @@ SECTION LOOTLIST $loot_magic_axes
 	$item_iron_double_axe_of_power
 	$item_iron_double_axe_of_ruin
 	$item_iron_double_axe_of_vanquishing
-	$item_iron_executionners_axe_of_force
-	$item_iron_executionners_axe_of_might
-	$item_iron_executionners_axe_of_power
-	$item_iron_executionners_axe_of_ruin
-	$item_iron_executionners_axe_of_vanquishing
+	$item_iron_executioners_axe_of_force
+	$item_iron_executioners_axe_of_might
+	$item_iron_executioners_axe_of_power
+	$item_iron_executioners_axe_of_ruin
+	$item_iron_executioners_axe_of_vanquishing
 	$item_iron_hatchet_of_force
 	$item_iron_hatchet_of_might
 	$item_iron_hatchet_of_power

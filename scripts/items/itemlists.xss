@@ -103,7 +103,7 @@ SECTION ITEMLIST $itemlist_more_weapons_and_armor
     $item_iron_scimitar
     $item_iron_long_sword
     $item_iron_viking_sword
-    $item_iron_broadsword
+    $item_iron_broad_sword
     $item_iron_plate_of_hardening
     $item_iron_plate_gorget_of_hardening
     $item_iron_plate_gloves_of_hardening
@@ -155,7 +155,7 @@ SECTION ITEMLIST $itemlist_weapons
     $item_iron_scimitar
     $item_iron_long_sword
     $item_iron_viking_sword
-    $item_iron_broadsword
+    $item_iron_broad_sword
     $item_iron_cutlass
     $item_iron_katana
     $item_hatchet
@@ -595,11 +595,11 @@ SECTION ITEMLIST $itemlist_treasure_hunt
     $item_iron_hatchet_of_force
     $item_iron_hatchet_of_power
     $item_iron_hatchet_of_vanquishing
-    $item_iron_executionners_axe_of_ruin
-    $item_iron_executionners_axe_of_might
-    $item_iron_executionners_axe_of_force
-    $item_iron_executionners_axe_of_power
-    $item_iron_executionners_axe_of_vanquishing
+    $item_iron_executioners_axe_of_ruin
+    $item_iron_executioners_axe_of_might
+    $item_iron_executioners_axe_of_force
+    $item_iron_executioners_axe_of_power
+    $item_iron_executioners_axe_of_vanquishing
     $item_iron_axe_of_ruin
     $item_iron_axe_of_might
     $item_iron_axe_of_force
@@ -782,7 +782,7 @@ SECTION ITEMLIST $itemlist_spawn_chest_loot
     $item_iron_scimitar
     $item_iron_long_sword
     $item_iron_viking_sword
-    $item_iron_broadsword
+    $item_iron_broad_sword
     $item_iron_cutlass
     $item_iron_katana
     $item_pitchfork
@@ -932,8 +932,8 @@ SECTION ITEMLIST $itemlist_mid_level_dungeon_chest_items
     $item_iron_dagger_of_ruin
     $item_iron_double_axe_of_might
     $item_iron_double_axe_of_ruin
-    $item_iron_executionners_axe_of_might
-    $item_iron_executionners_axe_of_ruin
+    $item_iron_executioners_axe_of_might
+    $item_iron_executioners_axe_of_ruin
     $item_iron_hammer_pick_of_might
     $item_iron_hammer_pick_of_ruin
     $item_iron_katana_of_might

@@ -14,6 +14,7 @@
 #include scripts/items/items.xss
 #include scripts/items/potions.xss
 #include scripts/items/weapons.xss
+#include scripts/items/magic_weapon.xss
 #include scripts/items/itemlists.xss
 #include scripts/items/race_items.xss
 #include scripts/items/spawners.xss

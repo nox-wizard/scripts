@@ -255,9 +255,9 @@ SECTION ITEM $item_iron_scimitar
 }
 
 //Broad Sword
-SECTION ITEM $item_iron_broadsword
+SECTION ITEM $item_iron_broad_sword
 {
-    NAME iron broadsword
+    NAME iron broad_sword
     ID 0F5E
     COLOR 0838
     LAYER $layer_1hand_weapon

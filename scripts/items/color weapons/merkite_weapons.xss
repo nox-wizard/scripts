@@ -255,9 +255,9 @@ SECTION ITEM $item_merkite_scimitar
 }
 
 //Broad Sword
-SECTION ITEM $item_merkite_broadsword
+SECTION ITEM $item_merkite_broad_sword
 {
-    NAME merkite broadsword
+    NAME merkite broad_sword
     ID 0F5E
     COLOR 025e
     LAYER $layer_1hand_weapon

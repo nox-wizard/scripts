@@ -233,7 +233,7 @@ SECTION MAKEMENU 9
     0F5E Broad Sword
     RESOURCE 10
     SKILL 608
-    ADDITEM $item_iron_broadsword
+    ADDITEM $item_iron_broad_sword
     13B8 Long Sword
     RESOURCE 12
     SKILL 538
@@ -2056,15 +2056,15 @@ SECTION MAKEMENU 820
     13BB Agapite Chain Coif
     RESOURCE 10
     SKILL 600
-    ADDITEM $item_gapite_chain_coif
+    ADDITEM $item_agapite_chain_coif
     13C3 Agapite Chain Legs
     RESOURCE 18
     SKILL 600
-    ADDITEM $item_gapite_chain_leggings
+    ADDITEM $item_agapite_chain_leggings
     13C4 Agapite Chain Tunic
     RESOURCE 20
     SKILL 600
-    ADDITEM $item_gapite_chain_tunic
+    ADDITEM $item_agapite_chain_tunic
 }
 
 SECTION MAKEMENU 2027
@@ -2383,19 +2383,19 @@ SECTION MAKEMENU 2004
     13F2 Gloves
     RESOURCE 10
     SKILL 338
-    ADDITEM $item_gapite_ringmail_gloves
+    ADDITEM $item_agapite_ringmail_gloves
     13EF Sleeves
     RESOURCE 14
     SKILL 385
-    ADDITEM $item_gapite_ringmail_sleeves
+    ADDITEM $item_agapite_ringmail_sleeves
     13F1 Leggings
     RESOURCE 16
     SKILL 408
-    ADDITEM $item_gapite_ringmail_leggings
+    ADDITEM $item_agapite_ringmail_leggings
     13ED Tunic
     RESOURCE 18
     SKILL 432
-    ADDITEM $item_gapite_ringmail_tunic
+    ADDITEM $item_agapite_ringmail_tunic
 }
 
 SECTION MAKEMENU 2005
@@ -2692,43 +2692,43 @@ SECTION MAKEMENU 2025
     1413 Agapite Plate Gorget
     RESOURCE 10
     SKILL 700
-    ADDITEM $item_gapite_plate_gorget
+    ADDITEM $item_agapite_plate_gorget
     1414 Agapite Plate Gloves
     RESOURCE 12
     SKILL 700
-    ADDITEM $item_gapite_plate_gloves
+    ADDITEM $item_agapite_plate_gloves
     140D Agapite Bascinet
     RESOURCE 15
     SKILL 700
-    ADDITEM $item_gapite_bascinet
+    ADDITEM $item_agapite_bascinet
     140F Agapite Nose Helm
     RESOURCE 15
     SKILL 700
-    ADDITEM $item_gapite_nose_helm
+    ADDITEM $item_agapite_nose_helm
     1409 Agapite Close Helm
     RESOURCE 15
     SKILL 700
-    ADDITEM $item_gapite_close_helm
+    ADDITEM $item_agapite_close_helm
     1412 Agapite Plate Helm
     RESOURCE 15
     SKILL 700
-    ADDITEM $item_gapite_plate_helm
+    ADDITEM $item_agapite_plate_helm
     1410 Agapite Plate Sleeves
     RESOURCE 18
     SKILL 700
-    ADDITEM $item_gapite_plate_sleeves
+    ADDITEM $item_agapite_plate_sleeves
     141A Agapite Plate Leggings
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_gapite_plate_leggings
+    ADDITEM $item_agapite_plate_leggings
     1c04 Agapite Female Plate
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_gapite_female_plate
+    ADDITEM $item_agapite_female_plate
     1416 Agapite Tunic
     RESOURCE 25
     SKILL 750
-    ADDITEM $item_gapite_platemail
+    ADDITEM $item_agapite_platemail
 }
 
 SECTION MAKEMENU 2026

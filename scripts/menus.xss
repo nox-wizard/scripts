@@ -557,7 +557,7 @@ SECTION BATCH $batch_polymorph_cns
 //    13BA Viking Sword
 //    ADDITEM $item_iron_viking_sword
 //    0F5E Broad Sword
-//    ADDITEM $item_iron_broadsword
+//    ADDITEM $item_iron_broad_sword
 //    1440 Cutlass
 //    ADDITEM $item_iron_cutlass
 //    13FF Katana
@@ -3098,7 +3098,7 @@ SECTION BATCH $batch_polymorph_cns
 //    0F47 magic hatchets
 //    OPENMENU $menu_magic_hatchets
 //    0F45 magic executionner's axes
-//    OPENMENU $menu_magic_executionners_axes
+//    OPENMENU $menu_magic_executioners_axes
 //    0F49 magic axes
 //    OPENMENU $menu_magic_axes_1
 //    0F4B magic double axes
@@ -3130,19 +3130,19 @@ SECTION BATCH $batch_polymorph_cns
 //    OPENMENU $menu_magic_axes
 //}
 //
-//SECTION MENU $menu_magic_executionners_axes
+//SECTION MENU $menu_magic_executioners_axes
 //{
 //    Magic Executionner's Axes
 //    0F45 magic executionner's axe of ruin
-//    ADDITEM $item_iron_executionners_axe_of_ruin
+//    ADDITEM $item_iron_executioners_axe_of_ruin
 //    0F45 magic executionner's axe of might
-//    ADDITEM $item_iron_executionners_axe_of_might
+//    ADDITEM $item_iron_executioners_axe_of_might
 //    0F45 magic executionner's axe of force
-//    ADDITEM $item_iron_executionners_axe_of_force
+//    ADDITEM $item_iron_executioners_axe_of_force
 //    0F45 magic executionner's axe of power
-//    ADDITEM $item_iron_executionners_axe_of_power
+//    ADDITEM $item_iron_executioners_axe_of_power
 //    0F45 magic executionner's axe of vanquishing
-//    ADDITEM $item_iron_executionners_axe_of_vanquishing
+//    ADDITEM $item_iron_executioners_axe_of_vanquishing
 //    < Previous Menu
 //    OPENMENU $menu_magic_axes
 //}

@@ -256,9 +256,9 @@ SECTION ITEM $item_verite_scimitar
 }
 
 //Broad Sword
-SECTION ITEM $item_verite_broadsword
+SECTION ITEM $item_verite_broad_sword
 {
-    NAME verite broadsword
+    NAME verite broad_sword
     ID 0F5E
     COLOR 08a4
     LAYER $layer_1hand_weapon

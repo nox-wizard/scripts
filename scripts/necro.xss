@@ -67,7 +67,7 @@ SECTION ITEMLIST $necroitem_gravedigging_weapons
     $item_iron_scimitar
     $item_iron_long_sword
     $item_iron_viking_sword
-    $item_iron_broadsword
+    $item_iron_broad_sword
     $item_iron_cutlass
     $item_iron_katana
     $item_iron_executioners_axe

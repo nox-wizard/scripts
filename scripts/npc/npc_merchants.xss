@@ -291,7 +291,7 @@ SECTION NPC $npc_weaponsmith_m
 	RSHOPITEM $item_iron_scimitar
 	RSHOPITEM $item_iron_long_sword
 	RSHOPITEM $item_iron_viking_sword
-	RSHOPITEM $item_iron_broadsword
+	RSHOPITEM $item_iron_broad_sword
 	RSHOPITEM $item_iron_cutlass
 	RSHOPITEM $item_iron_katana
 	RSHOPITEM $item_pitchfork
@@ -328,7 +328,7 @@ SECTION NPC $npc_weaponsmith_m
 	SELLITEM $item_iron_scimitar
 	SELLITEM $item_iron_long_sword
 	SELLITEM $item_iron_viking_sword
-	SELLITEM $item_iron_broadsword
+	SELLITEM $item_iron_broad_sword
 	SELLITEM $item_iron_cutlass
 	SELLITEM $item_iron_katana
 	SELLITEM $item_pitchfork
@@ -391,10 +391,10 @@ SECTION NPC $npc_weaponsmith_m
 	SELLITEM $item_iron_double_axe_of_power
 	SELLITEM $item_iron_double_axe_of_ruin
 	SELLITEM $item_iron_double_axe_of_vanquishing
-	SELLITEM $item_iron_executionners_axe_of_force
-	SELLITEM $item_iron_executionners_axe_of_might
-	SELLITEM $item_iron_executionners_axe_of_power
-	SELLITEM $item_iron_executionners_axe_of_vanquishing
+	SELLITEM $item_iron_executioners_axe_of_force
+	SELLITEM $item_iron_executioners_axe_of_might
+	SELLITEM $item_iron_executioners_axe_of_power
+	SELLITEM $item_iron_executioners_axe_of_vanquishing
 	SELLITEM $item_iron_halberd_of_force
 	SELLITEM $item_iron_halberd_of_might
 	SELLITEM $item_iron_halberd_of_power
@@ -576,7 +576,7 @@ SECTION NPC $npc_weaponsmith_f
 	RSHOPITEM $item_iron_scimitar
 	RSHOPITEM $item_iron_long_sword
 	RSHOPITEM $item_iron_viking_sword
-	RSHOPITEM $item_iron_broadsword
+	RSHOPITEM $item_iron_broad_sword
 	RSHOPITEM $item_iron_cutlass
 	RSHOPITEM $item_iron_katana
 	RSHOPITEM $item_pitchfork
@@ -613,7 +613,7 @@ SECTION NPC $npc_weaponsmith_f
 	SELLITEM $item_iron_scimitar
 	SELLITEM $item_iron_long_sword
 	SELLITEM $item_iron_viking_sword
-	SELLITEM $item_iron_broadsword
+	SELLITEM $item_iron_broad_sword
 	SELLITEM $item_iron_cutlass
 	SELLITEM $item_iron_katana
 	SELLITEM $item_pitchfork
@@ -676,10 +676,10 @@ SECTION NPC $npc_weaponsmith_f
 	SELLITEM $item_iron_double_axe_of_power
 	SELLITEM $item_iron_double_axe_of_ruin
 	SELLITEM $item_iron_double_axe_of_vanquishing
-	SELLITEM $item_iron_executionners_axe_of_force
-	SELLITEM $item_iron_executionners_axe_of_might
-	SELLITEM $item_iron_executionners_axe_of_power
-	SELLITEM $item_iron_executionners_axe_of_vanquishing
+	SELLITEM $item_iron_executioners_axe_of_force
+	SELLITEM $item_iron_executioners_axe_of_might
+	SELLITEM $item_iron_executioners_axe_of_power
+	SELLITEM $item_iron_executioners_axe_of_vanquishing
 	SELLITEM $item_iron_halberd_of_force
 	SELLITEM $item_iron_halberd_of_might
 	SELLITEM $item_iron_halberd_of_power
@@ -3978,7 +3978,7 @@ SECTION NPC $npc_blacksmith_m
 	RSHOPITEM $item_iron_scimitar
 	RSHOPITEM $item_iron_long_sword
 	RSHOPITEM $item_iron_viking_sword
-	RSHOPITEM $item_iron_broadsword
+	RSHOPITEM $item_iron_broad_sword
 	RSHOPITEM $item_iron_cutlass
 	RSHOPITEM $item_iron_katana
 	RSHOPITEM $item_pitchfork
@@ -4036,7 +4036,7 @@ SECTION NPC $npc_blacksmith_m
 	SELLITEM $item_iron_scimitar
 	SELLITEM $item_iron_long_sword
 	SELLITEM $item_iron_viking_sword
-	SELLITEM $item_iron_broadsword
+	SELLITEM $item_iron_broad_sword
 	SELLITEM $item_iron_cutlass
 	SELLITEM $item_iron_katana
 	SELLITEM $item_pitchfork
@@ -4144,7 +4144,7 @@ SECTION NPC $npc_blacksmith_f
 	RSHOPITEM $item_iron_scimitar
 	RSHOPITEM $item_iron_long_sword
 	RSHOPITEM $item_iron_viking_sword
-	RSHOPITEM $item_iron_broadsword
+	RSHOPITEM $item_iron_broad_sword
 	RSHOPITEM $item_iron_cutlass
 	RSHOPITEM $item_iron_katana
 	RSHOPITEM $item_pitchfork
@@ -4202,7 +4202,7 @@ SECTION NPC $npc_blacksmith_f
 	SELLITEM $item_iron_scimitar
 	SELLITEM $item_iron_long_sword
 	SELLITEM $item_iron_viking_sword
-	SELLITEM $item_iron_broadsword
+	SELLITEM $item_iron_broad_sword
 	SELLITEM $item_iron_cutlass
 	SELLITEM $item_iron_katana
 	SELLITEM $item_pitchfork

@@ -50,7 +50,7 @@
 #define $item_iron_kryss 350003
 #define $item_iron_katana 350004
 #define $item_iron_scimitar 350005
-#define $item_iron_broadsword 350006
+#define $item_iron_broad_sword 350006
 #define $item_iron_long_sword 350007
 #define $item_iron_viking_sword 350008
 
@@ -119,7 +119,7 @@
 #define $item_shadow_kryss 350103
 #define $item_shadow_katana 350104
 #define $item_shadow_scimitar 350105
-#define $item_shadow_broadsword 350106
+#define $item_shadow_broad_sword 350106
 #define $item_shadow_long_sword 350107
 #define $item_shadow_viking_sword 350108
 
@@ -184,7 +184,7 @@
 #define $item_merkite_kryss 350203
 #define $item_merkite_katana 350204
 #define $item_merkite_scimitar 350205
-#define $item_merkite_broadsword 350206
+#define $item_merkite_broad_sword 350206
 #define $item_merkite_long_sword 350207
 #define $item_merkite_viking_sword 350208
 
@@ -249,7 +249,7 @@
 #define $item_copper_kryss 350303
 #define $item_copper_katana 350304
 #define $item_copper_scimitar 350305
-#define $item_copper_broadsword 350306
+#define $item_copper_broad_sword 350306
 #define $item_copper_long_sword 350307
 #define $item_copper_viking_sword 350308
 
@@ -314,7 +314,7 @@
 #define $item_silver_kryss 350403
 #define $item_silver_katana 350404
 #define $item_silver_scimitar 350405
-#define $item_silver_broadsword 350406
+#define $item_silver_broad_sword 350406
 #define $item_silver_long_sword 350407
 #define $item_silver_viking_sword 350408
 
@@ -379,7 +379,7 @@
 #define $item_bronze_kryss 350503
 #define $item_bronze_katana 350504
 #define $item_bronze_scimitar 350505
-#define $item_bronze_broadsword 350506
+#define $item_bronze_broad_sword 350506
 #define $item_bronze_long_sword 350507
 #define $item_bronze_viking_sword 350508
 
@@ -444,7 +444,7 @@
 #define $item_golden_kryss 350603
 #define $item_golden_katana 350604
 #define $item_golden_scimitar 350605
-#define $item_golden_broadsword 350606
+#define $item_golden_broad_sword 350606
 #define $item_golden_long_sword 350607
 #define $item_golden_viking_sword 350608
 
@@ -474,66 +474,66 @@
 //////// Agapite Color 0700 /////////////
 /////////////////////////////////////////
 
-#define $item_gapite_ringmail_gloves 300701
-#define $item_gapite_ringmail_sleeves 300702
-#define $item_gapite_ringmail_leggings 300703
-#define $item_gapite_ringmail_tunic 300704
+#define $item_agapite_ringmail_gloves 300701
+#define $item_agapite_ringmail_sleeves 300702
+#define $item_agapite_ringmail_leggings 300703
+#define $item_agapite_ringmail_tunic 300704
 
-#define $item_gapite_chain_coif 310701
-#define $item_gapite_chain_leggings 310702
-#define $item_gapite_chain_tunic 310703
+#define $item_agapite_chain_coif 310701
+#define $item_agapite_chain_leggings 310702
+#define $item_agapite_chain_tunic 310703
 
-#define $item_gapite_plate_gorget 320701
-#define $item_gapite_plate_gloves 320702
-#define $item_gapite_plate_helm 320703
-#define $item_gapite_plate_sleeves 320704
-#define $item_gapite_plate_leggings 320705
-#define $item_gapite_female_plate 320706
-#define $item_gapite_platemail 320707
+#define $item_agapite_plate_gorget 320701
+#define $item_agapite_plate_gloves 320702
+#define $item_agapite_plate_helm 320703
+#define $item_agapite_plate_sleeves 320704
+#define $item_agapite_plate_leggings 320705
+#define $item_agapite_female_plate 320706
+#define $item_agapite_platemail 320707
 
-#define $item_gapite_bascinet 330701
-#define $item_gapite_close_helm 330702
-#define $item_gapite_helmet 330703
-#define $item_gapite_nose_helm 330704
+#define $item_agapite_bascinet 330701
+#define $item_agapite_close_helm 330702
+#define $item_agapite_helmet 330703
+#define $item_agapite_nose_helm 330704
 
-#define $item_gapite_buckler 340701
-#define $item_gapite_metal_shield 340702
-#define $item_gapite_bronze_shield 340703
-#define $item_gapite_wooden_kite_shield 340704
-#define $item_gapite_metal_kite_shield 340705
-#define $item_gapite_heater 340706
-#define $item_gapite_chaos_shield 340707
-#define $item_gapite_order_shield 340708
+#define $item_agapite_buckler 340701
+#define $item_agapite_metal_shield 340702
+#define $item_agapite_bronze_shield 340703
+#define $item_agapite_wooden_kite_shield 340704
+#define $item_agapite_metal_kite_shield 340705
+#define $item_agapite_heater 340706
+#define $item_agapite_chaos_shield 340707
+#define $item_agapite_order_shield 340708
 
-#define $item_gapite_dagger 350701
-#define $item_gapite_cutlass 350702
-#define $item_gapite_kryss 350703
-#define $item_gapite_katana 350704
-#define $item_gapite_scimitar 350705
-#define $item_gapite_broadsword 350706
-#define $item_gapite_long_sword 350707
-#define $item_gapite_viking_sword 350708
+#define $item_agapite_dagger 350701
+#define $item_agapite_cutlass 350702
+#define $item_agapite_kryss 350703
+#define $item_agapite_katana 350704
+#define $item_agapite_scimitar 350705
+#define $item_agapite_broad_sword 350706
+#define $item_agapite_long_sword 350707
+#define $item_agapite_viking_sword 350708
 
-#define $item_gapite_mace 360701
-#define $item_gapite_maul 360702
-#define $item_gapite_war_mace 360703
-#define $item_gapite_war_hammer 360704
-#define $item_gapite_hammer_pick 360705
+#define $item_agapite_mace 360701
+#define $item_agapite_maul 360702
+#define $item_agapite_war_mace 360703
+#define $item_agapite_war_hammer 360704
+#define $item_agapite_hammer_pick 360705
 
-#define $item_gapite_short_spear 370701
-#define $item_gapite_war_fork 370702
-#define $item_gapite_spear 370703
+#define $item_agapite_short_spear 370701
+#define $item_agapite_war_fork 370702
+#define $item_agapite_spear 370703
 
-#define $item_gapite_double_axe 380701
-#define $item_gapite_battle_axe 380702
-#define $item_gapite_large_battle_axe 380703
-#define $item_gapite_axe 380704
-#define $item_gapite_two-handed_axe 380705
-#define $item_gapite_executioners_axe 380706
-#define $item_gapite_war_axe 380707
+#define $item_agapite_double_axe 380701
+#define $item_agapite_battle_axe 380702
+#define $item_agapite_large_battle_axe 380703
+#define $item_agapite_axe 380704
+#define $item_agapite_two-handed_axe 380705
+#define $item_agapite_executioners_axe 380706
+#define $item_agapite_war_axe 380707
 
-#define $item_gapite_bardiche 390701
-#define $item_gapite_halberd 390702
+#define $item_agapite_bardiche 390701
+#define $item_agapite_halberd 390702
 
 /////////////////////////////////////////
 //////// Verite Color 0800 //////////////
@@ -575,7 +575,7 @@
 #define $item_verite_kryss 350803
 #define $item_verite_katana 350804
 #define $item_verite_scimitar 350805
-#define $item_verite_broadsword 350806
+#define $item_verite_broad_sword 350806
 #define $item_verite_long_sword 350807
 #define $item_verite_viking_sword 350808
 
@@ -640,7 +640,7 @@
 #define $item_valorite_kryss 350903
 #define $item_valorite_katana 350904
 #define $item_valorite_scimitar 350905
-#define $item_valorite_broadsword 350906
+#define $item_valorite_broad_sword 350906
 #define $item_valorite_long_sword 350907
 #define $item_valorite_viking_sword 350908
 

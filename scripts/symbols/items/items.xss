@@ -896,110 +896,6 @@
 
 #define $item_townstone 3298
 
-
-/////////////////////////////////////////////////
-
-#define $item_iron_long_sword_of_ruin 3300
-#define $item_iron_long_sword_of_might 3301
-#define $item_iron_long_sword_of_force 3302
-#define $item_iron_long_sword_of_power 3303
-#define $item_iron_long_sword_of_vanquishing 3304
-#define $item_iron_viking_sword_of_ruin 3305
-#define $item_iron_viking_sword_of_might 3306
-#define $item_iron_viking_sword_of_force 3307
-#define $item_iron_viking_sword_of_power 3308
-#define $item_iron_viking_sword_of_vanquishing 3309
-#define $item_iron_broad_sword_of_ruin 3310
-#define $item_iron_broad_sword_of_might 3311
-#define $item_iron_broad_sword_of_force 3312
-#define $item_iron_broad_sword_of_power 3313
-#define $item_iron_broad_sword_of_vanquishing 3314
-#define $item_iron_scimitar_of_ruin 3315
-#define $item_iron_scimitar_of_might 3316
-#define $item_iron_scimitar_of_force 3317
-#define $item_iron_scimitar_of_power 3318
-#define $item_iron_scimitar_of_vanquishing 3319
-#define $item_iron_cutlass_of_ruin 3320
-#define $item_iron_cutlass_of_might 3321
-#define $item_iron_cutlass_of_force 3322
-#define $item_iron_cutlass_of_power 3323
-#define $item_iron_cutlass_of_vanquishing 3324
-#define $item_iron_katana_of_ruin 3325
-#define $item_iron_katana_of_might 3326
-#define $item_iron_katana_of_force 3327
-#define $item_iron_katana_of_power 3328
-#define $item_iron_katana_of_vanquishing 3329
-#define $item_iron_hatchet_of_ruin 3330
-#define $item_iron_hatchet_of_might 3331
-#define $item_iron_hatchet_of_force 3332
-#define $item_iron_hatchet_of_power 3333
-#define $item_iron_hatchet_of_vanquishing 3334
-#define $item_iron_executionners_axe_of_ruin 3335
-#define $item_iron_executionners_axe_of_might 3336
-#define $item_iron_executionners_axe_of_force 3337
-#define $item_iron_executionners_axe_of_power 3338
-#define $item_iron_executionners_axe_of_vanquishing 3339
-#define $item_iron_axe_of_ruin 3340
-#define $item_iron_axe_of_might 3341
-#define $item_iron_axe_of_force 3342
-#define $item_iron_axe_of_power 3343
-#define $item_iron_axe_of_vanquishing 3344
-#define $item_iron_double_axe_of_ruin 3345
-#define $item_iron_double_axe_of_might 3346
-#define $item_iron_double_axe_of_force 3347
-#define $item_iron_double_axe_of_power 3348
-#define $item_iron_double_axe_of_vanquishing 3349
-#define $item_iron_large_battle_axe_of_ruin 3350
-#define $item_iron_large_battle_axe_of_might 3351
-#define $item_iron_large_battle_axe_of_force 3352
-#define $item_iron_large_battle_axe_of_power 3353
-#define $item_iron_large_battle_axe_of_vanquishing 3354
-#define $item_iron_pick_axe_of_ruin 3355
-#define $item_iron_pick_axe_of_might 3356
-#define $item_iron_pick_axe_of_force 3357
-#define $item_iron_pick_axe_of_power 3358
-#define $item_iron_pick_axe_of_vanquishing 3359
-#define $item_iron_war_axe_of_ruin 3360
-#define $item_iron_war_axe_of_might 3361
-#define $item_iron_war_axe_of_force 3362
-#define $item_iron_war_axe_of_power 3363
-#define $item_iron_war_axe_of_vanquishing 3364
-#define $item_iron_butcher_knife_of_ruin 3365
-#define $item_iron_butcher_knife_of_might 3366
-#define $item_iron_butcher_knife_of_force 3367
-#define $item_iron_butcher_knife_of_power 3368
-#define $item_iron_butcher_knife_of_vanquishing 3369
-#define $item_iron_skinning_knife_of_ruin 3370
-#define $item_iron_skinning_knife_of_might 3371
-#define $item_iron_skinning_knife_of_force 3372
-#define $item_iron_skinning_knife_of_power 3373
-#define $item_iron_skinning_knife_of_vanquishing 3374
-#define $item_iron_cleaver_of_ruin 3375
-#define $item_iron_cleaver_of_might 3376
-#define $item_iron_cleaver_of_force 3377
-#define $item_iron_cleaver_of_power 3378
-#define $item_iron_cleaver_of_vanquishing 3379
-#define $item_iron_dagger_of_ruin 3380
-#define $item_iron_dagger_of_might 3381
-#define $item_iron_dagger_of_force 3382
-#define $item_iron_dagger_of_power 3383
-#define $item_iron_dagger_of_vanquishing 3384
-#define $item_iron_kryss_of_ruin 3385
-#define $item_iron_kryss_of_might 3386
-#define $item_iron_kryss_of_force 3387
-#define $item_iron_kryss_of_power 3388
-#define $item_iron_kryss_of_vanquishing 3389
-#define $item_iron_club_of_ruin 3390
-#define $item_iron_club_of_might 3391
-#define $item_iron_club_of_force 3392
-#define $item_iron_club_of_power 3393
-#define $item_iron_club_of_vanquishing 3394
-#define $item_iron_hammer_pick_of_ruin 3395
-#define $item_iron_hammer_pick_of_might 3396
-#define $item_iron_hammer_pick_of_force 3397
-#define $item_iron_hammer_pick_of_power 3398
-#define $item_iron_hammer_pick_of_vanquishing 3399
-
 /////////////////////////////////////////////////
 
 #define $item_golden_bow 4021
@@ -1527,39 +1423,6 @@
 #define $item_random_wood_elves_spawner 10156
 #define $item_random_high_elves_spawner 10157
 
-#define $item_iron_viking_sword_of_flamestrike 10158
-#define $item_iron_viking_sword_of_feeblemind 10159
-#define $item_iron_viking_sword_of_mana_drain 10160
-#define $item_iron_viking_sword_of_lightning 10161
-#define $item_iron_viking_sword_of_energy_bolt 10162
-#define $item_iron_viking_sword_of_invisibility 10163
-#define $item_iron_viking_sword_of_resurrection 10164
-
-#define $item_iron_long_sword_of_flamestrike 10165
-#define $item_iron_long_sword_of_feeblemind 10166
-#define $item_iron_long_sword_of_mana_drain 10167
-#define $item_iron_long_sword_of_lightning 10168
-#define $item_iron_long_sword_of_energy_bolt 10169
-#define $item_iron_long_sword_of_invisibility 10170
-#define $item_iron_long_sword_of_resurrection 10171
-
-#define $item_iron_scimitar_of_flamestrike 10172
-#define $item_iron_scimitar_of_feeblemind 10173
-#define $item_iron_scimitar_of_mana_drain 10174
-#define $item_iron_scimitar_of_lightning 10175
-#define $item_iron_scimitar_of_energy_bolt 10176
-#define $item_iron_scimitar_of_invisibility 10177
-#define $item_iron_scimitar_of_resurrection 10178
-
-#define $item_iron_broad_sword_of_flamestrike 10179
-#define $item_iron_broad_sword_of_feeblemind 10180
-#define $item_iron_broad_sword_of_mana_drain 10181
-#define $item_iron_broad_sword_of_lightning 10182
-#define $item_iron_broad_sword_of_energy_bolt 10183
-#define $item_iron_broad_sword_of_invisibility 10184
-#define $item_iron_broad_sword_of_resurrection 10185
-
-
 #define $item_vase 10189
 #define $item_jars 10190
 #define $item_boat_model 10191
@@ -1600,6 +1463,142 @@
 #define $item_wall_sconce_1 13019
 #define $item_wall_sconce_2 13020
 #define $item_leather 13021
+
+//////////////////////////////////////////
+//magic weapon
+//////////////////////////////////////////
+
+#define $item_iron_long_sword_of_ruin 3300
+#define $item_iron_long_sword_of_might 3301
+#define $item_iron_long_sword_of_force 3302
+#define $item_iron_long_sword_of_power 3303
+#define $item_iron_long_sword_of_vanquishing 3304
+
+#define $item_iron_viking_sword_of_ruin 3305
+#define $item_iron_viking_sword_of_might 3306
+#define $item_iron_viking_sword_of_force 3307
+#define $item_iron_viking_sword_of_power 3308
+#define $item_iron_viking_sword_of_vanquishing 3309
+
+#define $item_iron_broad_sword_of_ruin 3310
+#define $item_iron_broad_sword_of_might 3311
+#define $item_iron_broad_sword_of_force 3312
+#define $item_iron_broad_sword_of_power 3313
+#define $item_iron_broad_sword_of_vanquishing 3314
+
+#define $item_iron_scimitar_of_ruin 3315
+#define $item_iron_scimitar_of_might 3316
+#define $item_iron_scimitar_of_force 3317
+#define $item_iron_scimitar_of_power 3318
+#define $item_iron_scimitar_of_vanquishing 3319
+
+#define $item_iron_cutlass_of_ruin 3320
+#define $item_iron_cutlass_of_might 3321
+#define $item_iron_cutlass_of_force 3322
+#define $item_iron_cutlass_of_power 3323
+#define $item_iron_cutlass_of_vanquishing 3324
+
+#define $item_iron_katana_of_ruin 3325
+#define $item_iron_katana_of_might 3326
+#define $item_iron_katana_of_force 3327
+#define $item_iron_katana_of_power 3328
+#define $item_iron_katana_of_vanquishing 3329
+
+#define $item_iron_hatchet_of_ruin 3330
+#define $item_iron_hatchet_of_might 3331
+#define $item_iron_hatchet_of_force 3332
+#define $item_iron_hatchet_of_power 3333
+#define $item_iron_hatchet_of_vanquishing 3334
+
+#define $item_iron_executioners_axe_of_ruin 3335
+#define $item_iron_executioners_axe_of_might 3336
+#define $item_iron_executioners_axe_of_force 3337
+#define $item_iron_executioners_axe_of_power 3338
+#define $item_iron_executioners_axe_of_vanquishing 3339
+
+#define $item_iron_axe_of_ruin 3340
+#define $item_iron_axe_of_might 3341
+#define $item_iron_axe_of_force 3342
+#define $item_iron_axe_of_power 3343
+#define $item_iron_axe_of_vanquishing 3344
+
+#define $item_iron_double_axe_of_ruin 3345
+#define $item_iron_double_axe_of_might 3346
+#define $item_iron_double_axe_of_force 3347
+#define $item_iron_double_axe_of_power 3348
+#define $item_iron_double_axe_of_vanquishing 3349
+
+#define $item_iron_large_battle_axe_of_ruin 3350
+#define $item_iron_large_battle_axe_of_might 3351
+#define $item_iron_large_battle_axe_of_force 3352
+#define $item_iron_large_battle_axe_of_power 3353
+#define $item_iron_large_battle_axe_of_vanquishing 3354
+
+#define $item_iron_battle_axe_of_ruin 70000
+#define $item_iron_battle_axe_of_might 70001
+#define $item_iron_battle_axe_of_force 70002
+#define $item_iron_battle_axe_of_power 70003
+#define $item_iron_battle_axe_of_vanquishing 70004
+
+#define $item_iron_two-handed_axe_of_ruin 70005
+#define $item_iron_two-handed_axe_of_might 70006
+#define $item_iron_two-handed_axe_of_force 70007
+#define $item_iron_two-handed_axe_of_power 70008
+#define $item_iron_two-handed_axe_of_vanquishing 70009
+
+#define $item_iron_pick_axe_of_ruin 3355
+#define $item_iron_pick_axe_of_might 3356
+#define $item_iron_pick_axe_of_force 3357
+#define $item_iron_pick_axe_of_power 3358
+#define $item_iron_pick_axe_of_vanquishing 3359
+
+#define $item_iron_war_axe_of_ruin 3360
+#define $item_iron_war_axe_of_might 3361
+#define $item_iron_war_axe_of_force 3362
+#define $item_iron_war_axe_of_power 3363
+#define $item_iron_war_axe_of_vanquishing 3364
+
+#define $item_iron_butcher_knife_of_ruin 3365
+#define $item_iron_butcher_knife_of_might 3366
+#define $item_iron_butcher_knife_of_force 3367
+#define $item_iron_butcher_knife_of_power 3368
+#define $item_iron_butcher_knife_of_vanquishing 3369
+
+#define $item_iron_skinning_knife_of_ruin 3370
+#define $item_iron_skinning_knife_of_might 3371
+#define $item_iron_skinning_knife_of_force 3372
+#define $item_iron_skinning_knife_of_power 3373
+#define $item_iron_skinning_knife_of_vanquishing 3374
+
+#define $item_iron_cleaver_of_ruin 3375
+#define $item_iron_cleaver_of_might 3376
+#define $item_iron_cleaver_of_force 3377
+#define $item_iron_cleaver_of_power 3378
+#define $item_iron_cleaver_of_vanquishing 3379
+
+#define $item_iron_dagger_of_ruin 3380
+#define $item_iron_dagger_of_might 3381
+#define $item_iron_dagger_of_force 3382
+#define $item_iron_dagger_of_power 3383
+#define $item_iron_dagger_of_vanquishing 3384
+
+#define $item_iron_kryss_of_ruin 3385
+#define $item_iron_kryss_of_might 3386
+#define $item_iron_kryss_of_force 3387
+#define $item_iron_kryss_of_power 3388
+#define $item_iron_kryss_of_vanquishing 3389
+
+#define $item_iron_club_of_ruin 3390
+#define $item_iron_club_of_might 3391
+#define $item_iron_club_of_force 3392
+#define $item_iron_club_of_power 3393
+#define $item_iron_club_of_vanquishing 3394
+
+#define $item_iron_hammer_pick_of_ruin 3395
+#define $item_iron_hammer_pick_of_might 3396
+#define $item_iron_hammer_pick_of_force 3397
+#define $item_iron_hammer_pick_of_power 3398
+#define $item_iron_hammer_pick_of_vanquishing 3399
 
 #define $item_iron_mace_of_ruin 15000
 #define $item_iron_mace_of_might 15001
@@ -1643,6 +1642,12 @@
 #define $item_iron_spear_of_power 15033
 #define $item_iron_spear_of_vanquishing 15034
 
+#define $item_iron_short_spear_of_ruin 70010
+#define $item_iron_short_spear_of_might 70011
+#define $item_iron_short_spear_of_force 70012
+#define $item_iron_short_spear_of_power 70013
+#define $item_iron_short_spear_of_vanquishing 70014
+
 #define $item_iron_war_fork_of_ruin 15035
 #define $item_iron_war_fork_of_might 15036
 #define $item_iron_war_fork_of_force 15037
@@ -1678,6 +1683,40 @@
 #define $item_iron_heavy_crossbow_of_force 15062
 #define $item_iron_heavy_crossbow_of_power 15063
 #define $item_iron_heavy_crossbow_of_vanquishing 15064
+
+#define $item_iron_viking_sword_of_flamestrike 10158
+#define $item_iron_viking_sword_of_feeblemind 10159
+#define $item_iron_viking_sword_of_mana_drain 10160
+#define $item_iron_viking_sword_of_lightning 10161
+#define $item_iron_viking_sword_of_energy_bolt 10162
+#define $item_iron_viking_sword_of_invisibility 10163
+#define $item_iron_viking_sword_of_resurrection 10164
+
+#define $item_iron_long_sword_of_flamestrike 10165
+#define $item_iron_long_sword_of_feeblemind 10166
+#define $item_iron_long_sword_of_mana_drain 10167
+#define $item_iron_long_sword_of_lightning 10168
+#define $item_iron_long_sword_of_energy_bolt 10169
+#define $item_iron_long_sword_of_invisibility 10170
+#define $item_iron_long_sword_of_resurrection 10171
+
+#define $item_iron_scimitar_of_flamestrike 10172
+#define $item_iron_scimitar_of_feeblemind 10173
+#define $item_iron_scimitar_of_mana_drain 10174
+#define $item_iron_scimitar_of_lightning 10175
+#define $item_iron_scimitar_of_energy_bolt 10176
+#define $item_iron_scimitar_of_invisibility 10177
+#define $item_iron_scimitar_of_resurrection 10178
+
+#define $item_iron_broad_sword_of_flamestrike 10179
+#define $item_iron_broad_sword_of_feeblemind 10180
+#define $item_iron_broad_sword_of_mana_drain 10181
+#define $item_iron_broad_sword_of_lightning 10182
+#define $item_iron_broad_sword_of_energy_bolt 10183
+#define $item_iron_broad_sword_of_invisibility 10184
+#define $item_iron_broad_sword_of_resurrection 10185
+
+//clothes
 
 #define $item_random_male_hair_list 15065
 #define $item_random_beard_list 15066

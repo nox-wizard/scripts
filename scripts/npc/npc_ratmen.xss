@@ -19,8 +19,8 @@ SECTION NPC $npc_ratman
     SKIN 0000
     DIRECTION N
     BACKPACK
-    ITEM $item_iron_broadsword
-    PACKITEM $item_iron_broadsword
+    ITEM $item_iron_broad_sword
+    PACKITEM $item_iron_broad_sword
     NPCWANDER 4
     FX1 -1
     FY1 -1

@@ -918,7 +918,7 @@ SECTION ITEMTRG $itrg_big_treasure
     IADD $item_wand_of_greater_heal
     IADD $item_iron_viking_sword_of_ruin
     IADD $item_iron_scimitar_of_ruin
-    IADD $item_iron_executionners_axe_of_ruin
+    IADD $item_iron_executioners_axe_of_ruin
     IADD $item_iron_skinning_knife_of_ruin
     IADD $item_iron_platemail_of_defence
     IADD $item_iron_cutlass_of_ruin

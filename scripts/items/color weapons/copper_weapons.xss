@@ -255,9 +255,9 @@ SECTION ITEM $item_copper_scimitar
 }
 
 //Broad Sword
-SECTION ITEM $item_copper_broadsword
+SECTION ITEM $item_copper_broad_sword
 {
-    NAME copper broadsword
+    NAME copper broad_sword
     ID 0F5E
     COLOR 046e
     LAYER $layer_1hand_weapon

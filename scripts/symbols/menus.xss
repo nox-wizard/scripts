@@ -139,7 +139,7 @@
 #define $menu_magic_katanas 257
 #define $menu_magic_axes 258
 #define $menu_magic_hatchets 259
-#define $menu_magic_executionners_axes 260
+#define $menu_magic_executioners_axes 260
 #define $menu_magic_axes_1 261
 #define $menu_magic_double_axes 262
 #define $menu_magic_large_battle_axes 263

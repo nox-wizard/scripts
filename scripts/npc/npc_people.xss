@@ -978,7 +978,7 @@ SECTION NPC $npc_noble_m
 	SKINLIST 16
 	DIRECTION N
 	GOLD 75
-	ITEM $item_iron_broadsword
+	ITEM $item_iron_broad_sword
 	ITEM $item_male_fancy_shirts_list
 	COLORLIST 11
 	ITEM $item_male_fancy_pants_list
@@ -1024,7 +1024,7 @@ SECTION NPC $npc_noble_f
 	BACKPACK
 	DIRECTION N
 	GOLD 75
-	ITEM $item_iron_broadsword
+	ITEM $item_iron_broad_sword
 	ITEM $item_female_fancy_shirts_list
 	COLORLIST 11
 	ITEM $item_female_fancy_pants_list
@@ -1444,7 +1444,7 @@ SECTION NPC $npc_jailor_m
 	ITEM $item_iron_chain_leggings
 	ITEM $item_iron_chain_coif
 	ITEM $item_iron_plate_sleeves
-	ITEM $item_iron_broadsword
+	ITEM $item_iron_broad_sword
 	ITEM $item_iron_bronze_shield
 	ITEM $item_male_fancy_footwear_list
 	FX1 -1

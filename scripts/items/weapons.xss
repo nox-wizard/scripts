@@ -423,7 +423,7 @@ SECTION ITEM $item_iron_scimitar_of_resurrection
 //Broad Sword of Flamestrike
 SECTION ITEM $item_iron_broad_sword_of_flamestrike
 {
-    NAME a magic broadsword
+    NAME a magic broad_sword
     NAME2 broad sword of flamestrike
     ID 0F5E
     LAYER $layer_1hand_weapon
@@ -446,7 +446,7 @@ SECTION ITEM $item_iron_broad_sword_of_flamestrike
 //Broad Sword of Feeblemind
 SECTION ITEM $item_iron_broad_sword_of_feeblemind
 {
-    NAME a magic broadsword
+    NAME a magic broad_sword
     NAME2 broad sword of feeblemind
     ID 0F5E
     LAYER $layer_1hand_weapon
@@ -492,7 +492,7 @@ SECTION ITEM $item_iron_broad_sword_of_mana_drain
 //Broad Sword of Lightning
 SECTION ITEM $item_iron_broad_sword_of_lightning
 {
-    NAME a magic broadsword
+    NAME a magic broad_sword
     NAME2 broad sword of lightning
     ID 0F5E
     LAYER $layer_1hand_weapon
@@ -515,7 +515,7 @@ SECTION ITEM $item_iron_broad_sword_of_lightning
 //Broad Sword of Energy Bolt
 SECTION ITEM $item_iron_broad_sword_of_energy_bolt
 {
-    NAME a magic broadsword
+    NAME a magic broad_sword
     NAME2 broad sword of energy bolt
     ID 0F5E
     LAYER $layer_1hand_weapon
@@ -538,7 +538,7 @@ SECTION ITEM $item_iron_broad_sword_of_energy_bolt
 //Broad Sword of Invisibility
 SECTION ITEM $item_iron_broad_sword_of_invisibility
 {
-    NAME a magic broadsword
+    NAME a magic broad_sword
     NAME2 broad sword of invisibility
     ID 0F5E
     LAYER $layer_1hand_weapon
@@ -561,7 +561,7 @@ SECTION ITEM $item_iron_broad_sword_of_invisibility
 //Broad Sword of Resurrection
 SECTION ITEM $item_iron_broad_sword_of_resurrection
 {
-    NAME a magic broadsword
+    NAME a magic broad_sword
     NAME2 broad sword of resurrection
     ID 0F5E
     LAYER $layer_1hand_weapon
