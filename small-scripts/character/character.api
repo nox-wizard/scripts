@@ -31,6 +31,16 @@ stock isChar( const serial ) {
 	return ( ( serial>=FIRST_CHAR_SERIAL ) && ( serial<FIRST_ITEM_SERIAL ) ); 
 }
 
+/*!
+\author Xanathar
+\fn getCharFromSerial(const serial)
+\param serial the serial
+\brief Gets the char of the given serial
+
+this function is useless since internal serial management is changed
+\note useless
+*/
+native getCharFromSerial(const serial);
 
 //====================== PROPERTIES INTERFACE  ============================
 /*!
@@ -130,7 +140,7 @@ native chr_isGM(const chr);
 \param chr the character
 \brief check  if character is true GM
 
-This function does'n see restriction, it returns true if the PRIV_GMCLEARANCE flag
+This function doesn't see restriction, it returns true if the PRIV_GMCLEARANCE flag
 is true
 \return true if character is true GM
 */
@@ -157,6 +167,9 @@ stock chr_makeGM(const chr)
 \fn chr_canBroadcast(const chr)
 \param chr the character
 \brief returns true if a character can send broadcast messages
+
+A broadcast message is a message sent by a player to all other players, it will appear at bottom-left
+corner in the client screen.
 */
 native chr_canBroadcast(const chr);
 
@@ -379,21 +392,6 @@ stock chr_makePlayer(const chr)
 	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~(PRIV_ISGM + PRIV_ISCOUNSELOR));
 	return OK;
 }
-
-
-/*!
-\brief Prints a message of given color to the given character
-\author Endymion
-\fn chr_message( const chr, const color=0x0387, const format[], ... )
-\param chr the player
-\param color the color
-\param format the message
-*/
-native chr_message( const chr, const color=0x0387, const format[], ... );
-
-
-
-
 /** @} */
 //============================  PRIV2  ================================
 /** \defgroup script_API_character_priv2 privileges2
@@ -808,12 +806,14 @@ stock chr_isNpc (const chr)
 
 /*!
 \author Fax
-\fn chr_isPlayer(const chr)
+\fn chr_isPc(const chr)
 \param chr the character
 \brief checks if a character is a playing character
-\return true if character is a player
+
+A PC (Non Playing Character) is a character controlled by a player
+\return true if character is NPC
 */
-stock chr_isPlayer(const chr)
+stock chr_isPc (const chr)
 {
 	return !chr_getProperty(chr, CP_NPC);
 }
@@ -829,6 +829,24 @@ stock chr_isPlayer(const chr)
 native chr_isHuman(const chr);
 
 /*!
+\author Fax
+\fn chr_isPc(const chr)
+\param chr the character
+\brief checks if a character male or female
+
+Checks the body ID and returns male or female
+\note Works only on charaters with human body
+\return a GENDER_* constant
+*/
+stock chr_getGender(const chr)
+{
+if(chr_isNpc(chr)) return GENDER_UNDEFINED
+if (chr_getProperty(chr,CP_ID) == 400)
+	return GENDER_MALE;
+return GENDER_FEMALE;
+}
+
+/*!
 \author Luxor
 \fn chr_isUndead(const chr)
 \param chr the character
@@ -841,6 +859,8 @@ stock chr_isUndead (const chr)
 }
 /** @} */
 //=====================  JAIL  =========================
+
+//chr_getJailTimeLeft(chr)  needed?
 
 /*!
 \author Endymion
@@ -859,7 +879,7 @@ native chr_jail( const jailer, const player, const seconds );
 \param releaser the releaser
 \param player the player to be released
 \brief Release the given player from jail
-\note this is an hlper functions that calls chr_jail( releaser, player, 0 )
+\note this is an hlper function that calls chr_jail( releaser, player, 0 )
 */
 stock chr_unjail( const releaser, const player ) {
 	chr_jail( releaser, player, 0 );
@@ -920,9 +940,9 @@ native chr_getBackpack( const chr, const createIfNotExist = false );
 \author Xanathar
 \fn chr_getItemOnLayer(const chr, const layer)
 \param chr the character
-\param layer the layer the item sould be on
+\param layer the layer the item sould be on, see \ref LAYER_
 \brief returns the item equipped by the character on the specified layer
-TODO: add layer list link
+
 \return the item serial or INVALID if layer is empty
 */
 native chr_getItemOnLayer(const chr, const layer);
@@ -945,7 +965,7 @@ native chr_getShield(const chr);
 */
 native chr_getWeapon(const chr);
 
-//TODO: add helpers to get other layer's items
+
 /** @} */
 //===================  ACTIONS ===========================
 /** \defgroup script_API_character_sctions Actions
@@ -1141,6 +1161,7 @@ native chr_setRandomName(const chr, const namelist[]);
 \param x2,y2,z2 location to check the LOS
 \param checkfor items that can block the LOS
 \brief checks the Line Of Sight between two locations
+
 TODO: checkfor values
 \return 0 if LOS is not blocked, 1 if it's blocked, INVALIDE for invalid socket
 */
@@ -1188,8 +1209,7 @@ native chr_setMultiSerial(const chr, const serial);
 \param x the x location
 \param y the y location
 \brief Get the direction for see location
-TODO: link to directions list
-\return the direction
+\return the direction, one of the NORTH, EAST, ... constants
 */
 public chr_getDirForSee( const chr, const x, const y )
 {
@@ -1201,9 +1221,9 @@ public chr_getDirForSee( const chr, const x, const y )
 
 	if (chr_x == x) {
 		if (chr_y > y)
-			return NORTH; // north
+			return DIR_NORTH; // north
 		else
-			return SOUTH; // south
+			return DIR_SOUTH; // south
 	}
 	else
 	{
@@ -1211,26 +1231,26 @@ public chr_getDirForSee( const chr, const x, const y )
 		coef = ( (y - chr_y) * 100 ) / (x - chr_x);
 		if (chr_x < x) // facing east
 			if (coef > 200)
-				return SOUTH;
+				return DIR_SOUTH;
 			else if (coef > 50)
-				return SOUTHEAST;
+				return DIR_SOUTHEAST;
 			else if (coef > -50)
-				return EAST;
+				return DIR_EAST;
 			else if (coef > -200)
-				return NORTHEAST;
-			else return NORTH;
+				return DIR_NORTHEAST;
+			else return DIR_NORTH;
 		else // facing west
 			if (coef > 200)
-				return NORTH;
+				return DIR_NORTH;
 			else if (coef > 50)
-				return NORTHWEST; // south-west
+				return DIR_NORTHWEST; // south-west
 			else if (coef > -50)
-				return WEST; // west
+				return DIR_WEST; // west
 			else if (coef > -200)
-				return SOUTHWEST; // north-west
-			else return SOUTH;
+				return DIR_SOUTHWEST; // north-west
+			else return DIR_SOUTH;
 	}
-	return SOUTH;
+	return DIR_SOUTH;
 }
 
 //=======================  MOVEMENT/POSITION =========================
@@ -1266,6 +1286,7 @@ stock chr_moveToVec(const chr, pos[3])
 \author Luxor
 \fn chr_teleport(const chr)
 \brief teleports the character to his X,Y cooordinates
+
 TODO: is this needed?
 */
 native chr_teleport(const chr);
@@ -1312,8 +1333,6 @@ stock chr_getPositionVec(const chr, pos[3])
 \params chr the character to be hidden
 \params mode what to do: 0 - unhide, 1 - hide, 2 - hidebyspell
 \brief hides a character
-
-TODO: remove unhide mode? ther is chr_unhide already
 \return 0 or INVALID if chr is not a valid character serial
 */
 native chr_hide(const chr, const mode);
@@ -1416,7 +1435,7 @@ native chr_addNPC(const npcScriptID, const x, const y, const z);
 
 /*!
 \author Fax
-\fn chr_addNPC(const npcScriptID, pos[3])
+\fn chr_addNPCVec(const npcScriptID, pos[3])
 \param npcScriptID the npc's XSS script ID
 \param pos[3] vector with the position (x,y,z) where npc will be created 
 \brief creates a new npc at a given location
@@ -1441,6 +1460,7 @@ native chr_remove(const chr);
 \fn chr_getCreationDay(const chr)
 \param chr the character
 \brief gets the day the character was created
+
 TODO: day format?
 \return the day
 */
@@ -1452,6 +1472,7 @@ native chr_getCreationDay( const chr );
 \param chr the character
 \param day the day
 \brief sets the character's creation day
+
 TODO: quite nonsense ...
 */
 native chr_setCreationDay( const chr, const day );
@@ -1465,7 +1486,10 @@ native chr_setCreationDay( const chr, const day );
 \fn chr_calcAtt(const chr)
 \param chr the character
 \brief calculates a character's attack power
-TODO: attack power description
+
+NPCs: the attack power is a random number between CP_LODAMAGE and CP_HIDAMAGE
+PC: the attack power is a random number between IP_LODAMAGE and IP_HIDAMAGE of the weapon
+if no weapon is carried, wrestling/10 is returned.
 \return 0 or INVALID if chr is not a valid character serial
 */
 native chr_calcAtt (const chr);
@@ -1475,7 +1499,7 @@ native chr_calcAtt (const chr);
 \fn chr_calcDef(const chr)
 \param chr the character
 \brief calculates a character's defense power
-TODO: defense power description
+
 TODO: check for another paramater (body location), used in sources
 \return 0 or INVALID if chr is not a valid character serial
 */
@@ -1513,11 +1537,10 @@ native chr_helpStuff (const helped, const helper);
 \fn chr_applyDamage(const chr, const damage, const damagetype, const stat)
 \param che the character
 \param damage the damage amount
-\param damagetype the damage type (one of the DAMAGE_* constants)
+\param damagetype the \ref damage_types
 \param stat the sta to be damaged
-TODO: link to damage types list
+\brief damages a character's stat with given damagetype
 \return 1 or INVALID if chr is not a valid character serial
-\brief
 */
 native chr_applyDamage(const chr, const damage, const damagetype, const stat);
 
@@ -1530,8 +1553,11 @@ native chr_applyDamage(const chr, const damage, const damagetype, const stat);
 \param magiclike true if the damage is magical
 \param damagetype one fo the DAMAGE_* contants
 \param stattobedamaged the stat that will be damaged
-\brief damages a char, differnely from chr_applyDamage
-TODO: detailed description of internal
+\brief damages a char considering magic damage too
+
+Invulnerable characters and player vendors won't be damaged.
+Is magiclike is true and the victim is a NPC the damage is doubled.
+This function calls chr_attackStuff(chr, attacker) too 
 \return applied damage
 */
 stock chr_damage(const chr, const basedamage, const attacker = -1, const magiclike = 0, const damagetype = DAMAGE_PURE, const stattobedamaged = 0)
@@ -1583,8 +1609,7 @@ native chr_guildCompare (const chr1, const chr2);
 \author Sparhawk
 \fn chr_getGuildType(const chr)
 \param chr the character
-\brief gets the guild type of a character
-TODO: link to guild type list (0:standard 1:chaos 2:order)
+\brief gets the guild type of a character (0:standard 1:chaos 2:order) 
 \return the guild type
 */
 native chr_getGuildType( const chr );
@@ -1629,9 +1654,8 @@ stock chr_isInOrderGuild(const chr)
 \author Sparhawk
 \fn chr_setGuildType(const chr, const type)
 \param chr the character
-\param type the guild type
-\brief sets the guild type of a character
-TODO: link to guild type list (0:std 1:chaos 2:order)
+\param type the guild type (0:std 1:chaos 2:order)
+\brief sets the guild type of a character 
 \return 0 or INVALID if chr is not a valid character serial 
 */
 native chr_setGuildType( const chr, const type );
@@ -1660,6 +1684,7 @@ native chr_setGuildTraitor( const chr, const traitor = 1 );
 \fn chr_hasGuildToggle(const chr)
 \param chr the character
 \brief gets the guild name toggle status of a character
+
 TODO: what is guild toggle status?
 \return the guild name toggle status
 */
@@ -1680,6 +1705,7 @@ native chr_setGuildToggle( const chr, const toggle = 1 );
 \fn chr_getGuildFealty(const chr)
 \param chr the character
 \brief gets the guild fealty of a character
+
 TODO: what is guild fealty serial?
 \return the guild fealty serial
 */
@@ -1750,7 +1776,6 @@ native chr_setGuildTitle( const chr, const title[] );
 
 Use this function to check if a player succeedes in using a skill, if raise is set to true
 the skill is raised if the action takes place. 
-TODO: explain how it owrks (look in sources)
 \return  0 failed, 1 right or INVALID if not valid character or socket
 */
 native chr_checkSkill(const chr, const skill, const min=0, const max=1000, const raise=1);
@@ -1774,6 +1799,7 @@ native chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1
 \param chr the character
 \param skill the skill to be read
 \brief gets a character's skill value
+
 TODO: description of skill values (base, normal)
 \return the skill value
 */
@@ -1788,6 +1814,7 @@ stock chr_getSkill(const chr, const skill)
 \param chr the character
 \param skill the skill to be read
 \brief gets a character's base skill value
+
 TODO: description of skill values (base, normal)
 \return the base skill value
 */
@@ -1803,6 +1830,7 @@ stock chr_getBaseSkill(const chr, const skill)
 \param skill the skill to be set
 \param value the value the skill will be set to
 \brief sets a character's base skill value
+
 TODO: description of skill values (base, normal)
 \return 0 or INVALID if chr is not a valid character serial
 */
@@ -1965,25 +1993,23 @@ stock chr_setMana(const chr, const value)
 \fn chr_getEventHandler(const chr, const event, handler[])
 \param chr	character serial
 \param event	character event identifier (EVENT_CHR_ON*)
-\param handler  string in wich the callback name will be stored
+\param handler[]  string in wich the callback name will be stored
 \brief Returns name of small function bound to the specified event into handler
-TODO: report sparhawk's post on this topic
 \return the callback name in the handler[] parameter
 */
 native chr_getEventHandler(const chr, const event, handler[]);
 
 /*!
 \author Xanathar
-\fn chr_setEventHandler(const chr, const event, const evtype, const format[], ...)
+\fn chr_setEventHandler(const chr, const event, const evtype, const format[],...)
 \param chr	character serial
-\param event	character event identifier (EVENT_CHR_ON*)
+\param event	\ref EVENT_CHR_ON_
 \param evtype	sets dynamic or static event type (EVENTTYPE_STATIC or EVENTTYPE_DYNAMIC). Static events will be saved in worldfile.
-\param format	Name of small function to bind to the event
+\param format[]	Name of small function to bind to the event
 \brief Binds a small function to a character event
-TODO: events explanation, link to events list
 \return 0 or INVALID if chr is not a valid character serial
 */
-native chr_setEventHandler(const chr, const event, const evtype, const format[], ...);
+native chr_setEventHandler(const chr, const event, const evtype, const format[],...);
 
 /*!
 \author Xanathar
@@ -1991,6 +2017,7 @@ native chr_setEventHandler(const chr, const event, const evtype, const format[],
 \param chr	character serial
 \param event	character event identifier (EVENT_CHR_ON*)
 \brief Unbinds link between a character event and a small function
+
 TODO: report sparhawk's post on this topic
 \return 0 or INVALID if chr is not a valid character serial
 */

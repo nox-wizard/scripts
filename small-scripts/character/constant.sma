@@ -12,61 +12,14 @@
 
 const PROP_CHARACTER = 0;
 
+/** \defgroup script_API_character_constants constants
+*   \ingroup script_API_character
+ *  @{
+ */
 
-//second cp for positions
-const CP2_X = 0;		//!< X subproperty of CP_POSITION
-const CP2_Y = 1;		//!< Y subproperty of CP_POSITION
-const CP2_Z = 2;		//!< Z subproperty of CP_POSITION
-const CP2_DZ = 3;		//!< DZ subproperty of CP_POSITION (same as Z)
-const CP2_DISPZ = 3;		//!< DISPZ subproperty of CP_POSITION (same as Z)
-
-//second cp for generic stat
-const CP2_EFF   = 0;		//!< effective value of a stat
-				/*!< This value is the effective stat value, including bonuses and maluses */
-const CP2_DEC  = 1;		//!< decimal value of a stat
-				/*!< when this number reaches 1000 the stat is increased by 1 */
-const CP2_REAL = 2;		//!< real value of a stat
-				/*!< this is the real unmodified value, not including any bonuses/maluses */
-const CP2_ACT  = 3;		//!< actual value of a stat
-				/*!< this value maps into hp for str, mana for int, stamina for dex */
-
-//second cp for strenght (more readable :))
-const CP2_STR   = 0;		//!< strenght effective value
-const CP2_STRDEC  = 1;		//!< strenght decimal value
-const CP2_STRREAL = 2;		//!< strenght real value
-const CP2_HITPOINTS  = 3;	//!< stranght actual value (HP)
-const CP2_HP  = 3;		//!< hit point (same as HITPOINTS)
-
-//second cp for dexterity (more readable :))
-const CP2_DEX  = 0;		//!< dexterity effective value
-const CP2_DEXDEC  = 1;		//!< dexterity decimal value
-const CP2_DEXREAL = 2;		//!< dexterity real value
-const CP2_STAMINA  = 3;		//!< dexterity actual value (stamina)
-
-//second cp for intelligence (more readable :))
-const CP2_INT   = 0;		//!< intelligence effective value		
-const CP2_INTDEC  = 1;		//!< intelligence decimal value
-const CP2_INTREAL = 2;		//!< intelligence real value
-const CP2_MANA  = 3;		//!< intelligence actual value (mana)
-
-//property for regenerate
-const CP2_REGEN_HP = 0;		//!< HP regen rate
-const CP2_REGEN_MANA = 1;	//!< MANA regen rate
-const CP2_REGEN_STAMINA = 2;	//!< STAMINA regen rate
-
-//property for applyDamage
-const CP2_DAMAGE_HP = 0;	//!< subproperty for applyDamage, damages HP
-const CP2_DAMAGE_MANA = 1;	//!< subproperty for applyDamage, damages MANA
-const CP2_DAMAGE_STAMINA = 2;	//!< subproperty for applyDamage, damages STAMINA
-
-const CP2_STARTATTACK = 0;	//!< ??
-const CP2_IDLE = 1;		//!< ??
-const CP2_ATTACK = 2;		//!< ??
-const CP2_DEFEND = 3;		//!< ??
-const CP2_DIE = 4;		//!< ??
-
-
-//property list
+/** \defgroup CP_* properties
+ *  @{
+ */
 const CP_CANTRAIN = 0;		//!< true if the character can train others
 const CP_DEAD = 1;		//!< true if character is dead
 const CP_FREE = 2;		//!< unused at the moment
@@ -251,6 +204,68 @@ const CP_STR_SPEECH = 458; 	//!< entire speech that contains word/phrase that tr
 
 const CP_UNI_SPEECH_CURRENT = 500;//!<
 const CP_UNI_PROFILE = 501;	//!<
+/** @} */
+/** \defgroup CP2_* subproperties
+ *  @{
+ */
+//second cp for positions
+const CP2_X = 0;		//!< X subproperty of CP_POSITION
+const CP2_Y = 1;		//!< Y subproperty of CP_POSITION
+const CP2_Z = 2;		//!< Z subproperty of CP_POSITION
+const CP2_DZ = 3;		//!< DZ subproperty of CP_POSITION (same as Z)
+const CP2_DISPZ = 3;		//!< DISPZ subproperty of CP_POSITION (same as Z)
+
+//second cp for generic stat
+const CP2_EFF   = 0;		//!< effective value of a stat
+				/*!< This value is the effective stat value, including bonuses and maluses */
+const CP2_DEC  = 1;		//!< decimal value of a stat
+				/*!< when this number reaches 1000 the stat is increased by 1 */
+const CP2_REAL = 2;		//!< real value of a stat
+				/*!< this is the real unmodified value, not including any bonuses/maluses */
+const CP2_ACT  = 3;		//!< actual value of a stat
+				/*!< this value maps into hp for str, mana for int, stamina for dex */
+
+//second cp for strenght (more readable :))
+const CP2_STR   = 0;		//!< strenght effective value
+const CP2_STRDEC  = 1;		//!< strenght decimal value
+const CP2_STRREAL = 2;		//!< strenght real value
+const CP2_HITPOINTS  = 3;	//!< strenght actual value (HP)
+const CP2_HP  = 3;		//!< hit point (same as HITPOINTS)
+
+//second cp for dexterity (more readable :))
+const CP2_DEX  = 0;		//!< dexterity effective value
+const CP2_DEXDEC  = 1;		//!< dexterity decimal value
+const CP2_DEXREAL = 2;		//!< dexterity real value
+const CP2_STAMINA  = 3;		//!< dexterity actual value (stamina)
+
+//second cp for intelligence (more readable :))
+const CP2_INT   = 0;		//!< intelligence effective value		
+const CP2_INTDEC  = 1;		//!< intelligence decimal value
+const CP2_INTREAL = 2;		//!< intelligence real value
+const CP2_MANA  = 3;		//!< intelligence actual value (mana)
+
+//property for regenerate
+const CP2_REGEN_HP = 0;		//!< HP regen rate
+const CP2_REGEN_MANA = 1;	//!< MANA regen rate
+const CP2_REGEN_STAMINA = 2;	//!< STAMINA regen rate
+
+//property for applyDamage
+const CP2_DAMAGE_HP = 0;	//!< subproperty for applyDamage, damages HP
+const CP2_DAMAGE_MANA = 1;	//!< subproperty for applyDamage, damages MANA
+const CP2_DAMAGE_STAMINA = 2;	//!< subproperty for applyDamage, damages STAMINA
+
+const CP2_STARTATTACK = 0;	//!< ??
+const CP2_IDLE = 1;		//!< ??
+const CP2_ATTACK = 2;		//!< ??
+const CP2_DEFEND = 3;		//!< ??
+const CP2_DIE = 4;		//!< ??
+/** @} */
+
+enum {
+	GENDER_MALE,		//!< ??
+	GENDER_FEMAL,		//!< ??
+	GENDER_UNDEFINED	//!< ??
+	}
 
 const NPC_TALK = 1;		//!<
 const NPC_TALK_ALL = 2;		//!<
@@ -296,4 +311,4 @@ const PRIV2_DISPELLABLE = 0x20;	//!<
 const PRIV2_PERMAMAGICREFLECT = 0x40;//!<
 const PRIV2_NONEEDREAGS = 0x80;	//!<
 
-enum { NORTH = 0, NORTHEAST, EAST, SOUTHEAST, SOUTH, SOUTHWEST, WEST, NORTHWEST };
+/** @} */

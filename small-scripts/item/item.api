@@ -11,6 +11,10 @@
 #define _nxw_item_api_
 
 #include "small-scripts/include/nxw_lib"
+/** \defgroup script_API_item items
+ *  \ingroup script_API
+ *  @{
+ */
 
 /*!
 \brief Check if a serial is an item serial
@@ -427,3 +431,26 @@ stock itm_setAmxFlags(const itm, const idx, const value)
 	itm_setProperty(itm, IP_AMXFLAGS, idx, value);
 }
 
+/*!
+\author Fax
+\fn itm_isArmor(const item)
+\param item the item
+\brief checks if an item is armor
+\return a TYPE_* constant
+*/
+stock itm_isArmor(const itm)
+{
+new scriptID = itm_getProperty(item,IP_SCRIPTID);
+switch(scriptID)
+	{
+	case 55..57:		return TYPE_CHAINMAIL;
+	case 67..69,78: 	return TYPE_LEATHER;
+	case 62..66,76,81: 	return TYPE_STUDDED;
+	case 58..61: 		return TYPE_RINGMAIL;
+	case 44..49,77:		return TYPE_PLATEMAIL;
+	case 50..54:		return TYPE_BONEARMOR;
+	case 70..74:		return TYPE_HELM;
+	default:		return TYPE_UNDEFINED;
+	}
+}
+/** @} */

@@ -10,12 +10,6 @@
 #endif
 #define _nxw_event_constant_
 
-/** \defgroup script_const_effects Effect constants
- *  \ingroup script_API_effects
- *  @{
- */
-
-
 const TRIG_ABORT = 1;
 const TRIG_CONTINUE = 0;
 
@@ -76,6 +70,10 @@ const BANKBOX_SPECIAL = 1;
 const EVENTTYPE_STATIC = 0;
 const EVENTTYPE_DYNAMIC = 1;
 
+/*! \defgroup EVENT_ITM_ON_ item events
+    \ingroup script_API_item_constants
+    @{
+*/
 enum
 {
 	EVENT_ITM_ONSTART = 0,
@@ -98,48 +96,523 @@ enum
         EVENT_ITM_ONTAKEFROMCONTAINER,
         ALLITEMEVENTS
 };
+/* @} */
 
-enum
-{
-	EVENT_CHR_ONDEATH		=  0,
-	EVENT_CHR_ONBEFOREDEATH		=  0,
-	EVENT_CHR_ONWOUNDED		=  1,
-	EVENT_CHR_ONHIT			=  2,
-	EVENT_CHR_ONHITMISS		=  3,
-	EVENT_CHR_ONGETHIT		=  4,
-	EVENT_CHR_ONREPUTATIONCHG	=  5,
-	EVENT_CHR_ONDISPEL		=  6,
-	EVENT_CHR_ONRESURRECT		=  7,
-	EVENT_CHR_ONFLAGCHG		=  8,
-	EVENT_CHR_ONWALK		=  9,
-	EVENT_CHR_ONADVANCESKILL	= 10,
-	EVENT_CHR_ONADVANCESTAT		= 11,
-	EVENT_CHR_ONBEGINATTACK		= 12,
-	EVENT_CHR_ONBEGINDEFENSE	= 13,
-	EVENT_CHR_ONTRANSFER		= 14,
-	EVENT_CHR_ONMULTIENTER		= 15,
-	EVENT_CHR_ONMULTILEAVE		= 16,
-	EVENT_CHR_ONSNOOPED		= 17,
-	EVENT_CHR_ONSTOLEN		= 18,
-	EVENT_CHR_ONPOISONED		= 19,
-	EVENT_CHR_ONREGIONCHANGE	= 20,
-	EVENT_CHR_ONCASTSPELL		= 21,
-	EVENT_CHR_ONGETSKILLCAP		= 22,
-	EVENT_CHR_ONGETSTATCAP		= 23,
-	EVENT_CHR_ONBLOCK		= 24,
-	EVENT_CHR_ONSTART		= 25,
-	EVENT_CHR_ONHEARTBEAT		= 26,
-	EVENT_CHR_ONBREAKMEDITATION	= 27,
-	EVENT_CHR_ONCLICK		= 28,
-	EVENT_CHR_ONMOUNT		= 29,
-	EVENT_CHR_ONDISMOUNT		= 30,
-	EVENT_CHR_ONKILL		= 31,
-	EVENT_CHR_ONHEARPLAYER		= 32,
-	EVENT_CHR_ONDOCOMBAT		= 33,
-	EVENT_CHR_ONCOMBATHIT		= 34,
-	EVENT_CHR_ONSPEECH		= 35,
-	EVENT_CHR_ONCHECKNPCAI		= 36,
-	EVENT_CHR_ONDIED		= 37,
-	EVENT_CHR_ONAFTERDEATH		= 37,
-	EVENT_CHR_MAX			= 38
-};
+/*! \defgroup EVENT_CHR_ON_ character events
+    \ingroup script_API_character_constants
+    @{
+*/
+
+/*!
+<B>callback prototype:</B> public mycallback(chr)<br>
+<UL>
+<LI> chr: the character who's dieing
+</UL>
+<B>called when:</B> befor the death sequence<br>
+<B>bypass:</B> avoids death, howewer you should remove the death's cause<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> not called for pplayer vendors, dead characters and invulnerable characters
+*/
+const EVENT_CHR_ONDEATH		=  0; 
+const EVENT_CHR_ONBEFOREDEATH	=  0; 
+
+/*!
+<B>callback prototype:</B> public mycallback(chr,damage,attacker)<br>
+<UL>
+<LI> chr: the character who's being wounded
+<LI> damage: the damage amount
+<LI> attacker: the character who is damaging chr
+</UL>
+<B>called when:</B> a character is damaged<br>
+<B>bypass:</B> avoids the damage<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONWOUNDED	=  1; 
+
+/*!
+<B>callback prototype:</B> public mycallback(attacker, defender)<br>
+<UL>
+<LI> attacker: the character who attacks
+<LI> defender: the character who defends
+</UL>
+<B>called when:</B> the attacker hits the defender<br>
+<B>bypass:</B> avoids the hit<br>
+<B>return:</B> nothing<br>
+<B>notes: called right before EVENT_CHR_ONGETHIT and before any damage calculation</B>
+*/
+const EVENT_CHR_ONHIT		=  2;
+
+/*!
+<B>callback prototype:</B> public mycallback(attacker, defender)<br>
+<UL>
+<LI> attacker: the character who attacks
+<LI> defender: the character who defends
+</UL>
+<B>called when:</B> the attacker misses the defender<br>
+<B>bypass:</B> avoids sound effects and arrow/bolt firing<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONHITMISS	=  3;
+
+/*!
+<B>callback prototype:</B> public mycallback(defender, attacker)<br>
+<UL>
+<LI> defender: the character who defends
+<LI> attacker: the character who attacks
+</UL>
+<B>called when:</B> the defender is hit by the attacker<br>
+<B>bypass:</B> avoids the hit<br>
+<B>return:</B> nothing<br>
+<B>notes: called right after EVENT_CHR_ONHIT and before any damage calculation</B>
+*/
+const EVENT_CHR_ONGETHIT	=  4;
+
+/*!
+<B>callback prototype:</B> public mycallback(character, amount, karmaorfame)<br>
+<UL>
+<LI> character: the character whose karma or fame changed
+<LI> amount: change amount, can be negative
+<LI> karmaorfame: what changed REPUTATION_KARMA or REPUTATION_FAME
+</UL>
+<B>called when:</B> character's karma or fame changes<br>
+<B>bypass:</B> avoids karma/fame change messages<br>
+<B>return:</B> nothing<br>
+<B>notes: to avoid the change you should restore the old value by adding the change to the current karma/fame value</B>
+*/
+const EVENT_CHR_ONREPUTATIONCHG	=  5;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, dispeller, type)<br>
+<UL>
+<LI> chr: the character being dispelled
+<LI> dispeller: the charater who's dispelling chr
+<LI> type: one of \ref DISPEL_
+</UL>
+<B>called when:</B> the char is being dispelled<br>
+<B>bypass:</B> can't bypass if type is DISPEL_GMREMOVE, in other cases you should remove the dispel cause<br>
+<B>return:</B> nothing<br>
+<B>notes: on dispel spell this event is called befor checking if the creature is dispellable</B>
+*/
+const EVENT_CHR_ONDISPEL	=  6;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, healer)<br>
+<UL>
+<LI> chr: the character who is resurrecting
+<LI> healer: the chartcater who is resurrecting chr, if present, else INVALID
+</UL>
+<B>called when:</B> chr resurrects<br>
+<B>bypass:</B> avoids resurrection<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONRESURRECT	=  7;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr)<br>
+<UL>
+<LI> chr: the character whose flag is changing
+</UL>
+<B>called when:</B> the character's flag changes<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+\see \ref script_API_character_constants_flag
+*/
+const EVENT_CHR_ONFLAGCHG	=  8;
+
+/*!
+<B>callback prototype:</B> public mycallback(char, dir, sequence)<br>
+<UL>
+<LI> chr: the character walking
+<LI> dir: the character's direction
+<LI> sequence: the sequence number of the walk (used in network packets, generally useless)
+</UL>
+<B>called when:</B> the character walks or changes direction<br>
+<B>bypass:</B> avoids the walk<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> using this event can be very computationally expensive, pay attention on how you use it
+*/
+const EVENT_CHR_ONWALK		=  9;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, skill, skillused, default)<br>
+<UL>
+<LI> chr: the character whose skill should be advanced
+<LI> skill: the skill that should be advanced
+<LI> skillused: true if the skill was succesfully used
+<LI> default: what NOX decided to do: SKILLADV_RAISE or SKILLADV_DONTRAISE
+</UL>
+<B>called when:</B> a skill is checked for advancement<br>
+<B>bypass:</B> avoids skill increase and skill atrophy<br>
+<B>return:</B> SKILLADV_RAISE to make the skill raise, SKILLADV_DONTRAISE to make it not raise<br>
+<B>notes:</B> this event is not called if the skill is blocked or lowering, or if the skillcap is reached
+*/
+const EVENT_CHR_ONADVANCESKILL	= 10;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, stat, skillraised, act)<br>
+<UL>
+<LI> chr: the character whose stat should be advanced
+<LI> stat: the stat that should be raised STATCAP_STR, STATCAP_DEX, STATCAP_INT
+<LI> skillraised: the skill that caused the stat to increase
+<LI> act: the actual value of the stat
+</UL>
+<B>called when:</B> a stat should have a value advance<br>
+<B>bypass:</B> avoids stat advance, actually lose the stat point gained<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONADVANCESTAT	= 11;
+
+/*!
+<B>callback prototype:</B> public mycallback(attacker, defender)<br>
+<UL>
+<LI> attacker: the character who is requesting an attack
+<LI> defender: the character who is being attacked
+</UL>
+<B>called when:</B> a character attacks another in any way<br>
+<B>bypass:</B> not recomended, bypass avoids reoputation stuff and unhiding<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> this event is fired on EVERY attack request, even is the the attacked char reacts attacking the attacker
+*/
+const EVENT_CHR_ONBEGINATTACK	= 12;
+
+/*!
+<B>callback prototype:</B> public mycallback(defender, attacker)<br>
+<UL>
+<LI> defender: the character who is being attacked
+<LI> attacker: the character who is requesting an attack
+</UL>
+<B>called when:</B> after the EVENT_CHR_ONBEGINATTACK<br>
+<B>bypass:</B> no<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> is alway called after EVENT_CHR_ONBEGINATTACK
+*/
+const EVENT_CHR_ONBEGINDEFENSE	= 13;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, newowner)<br>
+<UL>
+<LI> oldowner: the character that is being transferred
+<LI> newowner: the new owner
+</UL>
+<B>called when:</B> a character is transferred<br>
+<B>bypass:</B> avoids the transfer<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> the event is raised before checking if the character is transferible
+*/
+const EVENT_CHR_ONTRANSFER	= 14;
+
+/*!
+<B>callback prototype:</B> public mycallback()<br>
+<UL>
+<LI>
+</UL>
+<B>called when:</B> <br>
+<B>bypass:</B> <br>
+<B>return:</B> <br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONMULTIENTER	= 15;
+
+/*!
+<B>callback prototype:</B> public mycallback()<br>
+<UL>
+<LI>
+</UL>
+<B>called when:</B> <br>
+<B>bypass:</B> <br>
+<B>return:</B> <br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONMULTILEAVE	= 16;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, snooper)<br>
+<UL>
+<LI> chr: the character being snooped
+<LI> snooper: the character who is snooping chr
+</UL>
+<B>called when:</B> a charcater is snooped<br>
+<B>bypass:</B> avoids the snooping<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> called before checking if the victim is snoopable and if the snooper is skilled enough to snoop the victim
+*/
+const EVENT_CHR_ONSNOOPED	= 17;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, thief)<br>
+<UL>
+<LI> chr: the character being stolen something
+<LI> thief: teh charcater who is stealing
+</UL>
+<B>called when:</B> a character is being stolen something<br>
+<B>bypass:</B> avoids the stealing<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> called after thief skill check. called after EVENT_ITM_ONSTOLEN
+*/
+const EVENT_CHR_ONSTOLEN	= 18;
+
+/*!
+<B>callback prototype:</B> public mycallback()<br>
+<UL>
+<LI>
+</UL>
+<B>called when:</B> <br>
+<B>bypass:</B> <br>
+<B>return:</B> <br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONPOISONED	= 19;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, oldregion, newregion)<br>
+<UL>
+<LI> chr: the character who is changing region
+<LI> oldregion: the region the character comes from
+<LI> newregion: the region the charcater is entering
+</UL>
+<B>called when:</B> a character passes from a region to another<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> called before the standard region change code
+*/
+const EVENT_CHR_ONREGIONCHANGE	= 20;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, spell, type, sphere)<br>
+<UL>
+<LI> chr: the charcater who is casting a spell
+<LI> spell: the spell number
+<LI> type: the type of spell (SPELL_BOOK, SPELL_SCROLL, SPELL_WAND, SPELL_NPC)
+<LI> sphere: the sphere for NPC spells
+</UL>
+<B>called when:</B> a charcater casts a spell<br>
+<B>bypass:</B> avoid casting<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONCASTSPELL	= 21;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr)<br>
+<UL>
+<LI> chr: the character
+</UL>
+<B>called when:</B> NOX checks for a custom skillcap<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> the skill cap value (not multiplied by 10, so 700 for a 700 skillpoints cap you shuld return 700)<br>
+<B>notes:</B> 
+*/
+const EVENT_CHR_ONGETSKILLCAP	= 22;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, stat, default)<br>
+<UL>
+<LI> chr: the character
+<LI> stat: the stat the engine wafnts to know a custom cap about (STATCAP_STR, STATCAP_DEX, STATCAP_INT, STATCAP_CAP)
+<LI> dafault: the value the engine decided to aplly to the stat
+</UL>
+<B>called when:</B> a custom stat-cap is needed<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> the cap value<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONGETSTATCAP	= 23;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, dir, newx, newy)<br>
+<UL>
+<LI> chr: the character
+<LI> dir: the character's direction
+<LI> newx: the x coordinate of the blocking cause
+<LI> newy: the y coordinate of the blocking cause
+<LI> 
+</UL>
+<B>called when:</B> a character gest blocked while walking<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONBLOCK		= 24;
+
+/*!
+<B>callback prototype:</B> public mycallback()<br>
+<UL>
+<LI>
+</UL>
+<B>called when:</B> <br>
+<B>bypass:</B> <br>
+<B>return:</B> <br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONSTART		= 25;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, time)<br>
+<UL>
+<LI> chr: the character
+<LI> time: the current time
+</UL>
+<B>called when:</B> on every engine loop when a character is doing something<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> can slow down the server VERY much!! pay attention on what you are doing
+*/
+const EVENT_CHR_ONHEARTBEAT	= 26;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr)<br>
+<UL>
+<LI> chr: the character whose meditation has been interrupted
+</UL>
+<B>called when:</B> somethiung interrupts a character's meditation<br>
+<B>bypass:</B> keeps meditation<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONBREAKMEDITATION= 27;
+
+/*!
+<B>callback prototype:</B> public mycallback(clicked, clicker)<br>
+<UL>
+<LI> clicked: the character who has been clicked over
+<LI> clicker: the character who clicked
+</UL>
+<B>called when:</B> a charcater is clicked over<br>
+<B>bypass:</B> avoids name showing<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONCLICK		= 28;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, mount)<br>
+<UL>
+<LI> chr: the character who is mounting
+<LI> mount: the mounted character
+</UL>
+<B>called when:</B> a character mounts another character<br>
+<B>bypass:</B> avoid mounting<br>
+<B>return:</B> <br>
+<B>notes:</B> called after range check and befor any other check
+*/
+const EVENT_CHR_ONMOUNT		= 29;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr)<br>
+<UL>
+<LI> chr: the character who has been dismounted
+</UL>
+<B>called when:</B> a character dismounts from his horse<br>
+<B>bypass:</B> keeps the character mounted<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONDISMOUNT	= 30;
+
+/*!
+<B>callback prototype:</B> public mycallback(killer, killed)<br>
+<UL>
+<LI> killer: the character who killed someone
+<LI> killed: the character killed
+</UL>
+<B>called when:</B> a character kills another character<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONKILL		= 31;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, talker, isghost)<br>
+<UL>
+<LI> chr: the character who hears a speech
+<LI> talker: the character talking
+<LI> isghost: true if talker is a ghost
+</UL>
+<B>called when:</B> a character talks and someone hears him<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> called for each character in a range, the range is: 2 tiles for whispering, VISRANGE for normal talking, 1.5*VISRANGE for yelling
+*/
+const EVENT_CHR_ONHEARPLAYER	= 32;
+
+/*!
+<B>callback prototype:</B> public mycallback(attacker, defender, dist, attackweapon)<br>
+<UL>
+<LI> attacker: the character who attacks
+<LI> defender: the character who defends
+<LI> dist: distance between attaacker and defender
+<LI> attackweapon: attacker's weapon
+</UL>
+<B>called when:</B> attacker's combat sequence starts<br>
+<B>bypass:</B> avoids combat sequence<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> bypassing this event is not recomended unless you know how sources work
+*/
+const EVENT_CHR_ONDOCOMBAT	= 33;
+
+/*!
+<B>callback prototype:</B> public mycallback(attacker, defender)<br>
+<UL>
+<LI> attacker: the character who attacks
+<LI> defender: the character who defends
+</UL>
+<B>called when:</B> the attacker tries to hit the defender, before checking if he actually hits<br>
+<B>bypass:</B> avoids the hit<br>
+<B>return:</B> <br>
+<B>notes:</B> bypassing this event is not recomended unless you know how sources work
+*/
+const EVENT_CHR_ONCOMBATHIT	= 34;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr)<br>
+<UL>
+<LI> chr: the character who is speaking
+</UL>
+<B>called when:</B> a character talks<br>
+<B>bypass:</B> avoids showing speech<br>
+<B>return:</B> nothing<br>
+<B>notes:</B> use CP_STR_SPEECH to retrieve the speech string
+*/
+const EVENT_CHR_ONSPEECH	= 35;
+
+/*!
+<B>callback prototype:</B> public mycallback()<br>
+<UL>
+<LI>
+</UL>
+<B>called when:</B> <br>
+<B>bypass:</B> <br>
+<B>return:</B> <br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONCHECKNPCAI	= 36;
+
+/*!
+<B>callback prototype:</B> public mycallback(chr, corpse)<br>
+<UL>
+<LI> chr: the died character
+<LI> corpse: the character's corpse
+</UL>
+<B>called when:</B> at the end of death sequence<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONDIED		= 37;
+/*!
+synonim of EVENT_CHR_ONDIED
+*/
+const EVENT_CHR_ONAFTERDEATH	= 37;
+
+/*!
+number of events
+*/
+const EVENT_CHR_MAX		= 38;
+
+/* @} */

@@ -12,6 +12,10 @@
 
 const PROP_ITEM = 1;
 
+/** \defgroup script_API_item_constants constants
+ *  \ingroup script_API_item
+ *  @{
+ */
 //second cp for positions
 const IP2_X = 0;
 const IP2_Y = 1;
@@ -106,3 +110,35 @@ const IP_STR_DISABLEDMSG = 452;
 const IP_STR_MURDERER = 453;
 const IP_STR_NAME = 454;
 const IP_STR_NAME2 = 455;
+/** @} */
+
+enum {
+	TYPE_KNIFE,	
+	TYPE_SWORD,
+	TYPE_AXE_1H,
+	TYPE_FORK_1H,
+	TYPE_CROSSBOW,
+	TYPE_BOW,
+	TYPE_SPEAR_1H,
+	
+	TYPE_STAFF,	
+	TYPE_MACE_1H,
+	TYPE_MACE_2H,
+	TYPE_AXE_2H,
+	TYPE_LONGWEAPON,
+	TYPE_FORK_2H,
+	TYPE_SPEAR_2H,
+	TYPE_JAVELIN,
+	
+	TYPE_BOLT,
+	TYPE_ARROW,
+
+	TYPE_CHAINMAIL,
+	TYPE_LEATHER,
+	TYPE_STUDDED,
+	TYPE_RINGMAIL,
+	TYPE_HELM,
+	TYPE_PLATEMAIL,
+	TYPE_BONEARMOR,
+	TYPE_UNDEFINED
+}

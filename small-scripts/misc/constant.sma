@@ -10,6 +10,10 @@
 #endif
 #define _nxw_misc_constant_
 
+/*!  \defgroup script_API_constants general constants
+*    \ingroup script_API
+* @{
+*/
 const NXWINC_VERSION = 0x060;
 
 const VERTYPE_SUPPORTED = 0x1;
@@ -61,7 +65,6 @@ enum
 	DIR_WEST  = 6,
 	DIR_NORTHWEST = 7
 };
-
 /*************************************************************************
  LINE OF SIGHT RELATED CONSTANTS
  *************************************************************************/
@@ -76,17 +79,22 @@ const LAVA_WATER = 32;
 /*************************************************************************
  DAMAGE TYPES CONSTANTS
  *************************************************************************/
-
+/*! \defgroup DAMAGE_ damage constants
+* @{
+*/
 enum {
 	DAMAGE_PURE = 0, DAMAGE_SLASH, DAMAGE_PIERCE, DAMAGE_BLUDGEON, DAMAGE_BACKSTAB,
 	DAMAGE_FIRE, DAMAGE_ELECTRICITY, DAMAGE_MENTAL, DAMAGE_POISON, DAMAGE_COLD,
 	DAMAGE_FORCE, DAMAGE_HOLY, DAMAGE_MAGIC, MAX_RESISTANCE_INDEX
 };
-
+/* @} */
 /*************************************************************************
  LAYER TYPES CONSTANTS
  *************************************************************************/
 
+/*! \defgroup LAYER_ layers definitions
+* @{
+*/
 enum
 {
 	LAYER_1HANDWEAPON	= 1,
@@ -120,3 +128,5 @@ enum
 	LAYER_BANKBOX,
 	LAYER_COUNT		= 29
 };
+/* @} */
+/* @} */
