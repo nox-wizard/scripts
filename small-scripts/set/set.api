@@ -26,6 +26,7 @@
  * Primo esempio sui set
  */
 
+#include "../include/nxw_lib"
 
 /*!
 \brief Open a set
@@ -129,17 +130,6 @@ native set_getChar( const set );
 \fn set_getItem( const set )
 */
 native set_getItem( const set );
-
-/*!
-\brief Add object to given set
-\author Endymion
-\since 0.82
-\param 1 the set
-\param 2 the object
-\return 0
-\fn set_add( const set, const value )
-*/
-native set_add( const set, const value );
 
 /*!
 \brief Add to given set the owned npc of given character
