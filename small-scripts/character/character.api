@@ -1167,3 +1167,13 @@ public chr_setTamed (const chr, const npc)
 	chr_setProperty(npc, CP_NPCWANDER, _, 0);
 	chr_setProperty(npc, CP_NPCAI, _, 10);
 }
+
+
+/*!
+\brief Flee the npc
+\author Endymion
+\param npc
+\param from
+\param seconds
+*/
+native chr_flee( const npc, const from, const seconds );

@@ -24,5 +24,6 @@ StartChar=itm_potionStart,AFTER
 [networkrcv]
 
 [speech]
+ciao=prova_menu,BEFORE
 
 

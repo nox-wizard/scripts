@@ -25,3 +25,13 @@ native getCurrentTime();
 \return the current system time (in s)
 */
 native getSystemTime();
+
+/*
+\brief Get the timer value
+\author Endymion
+\param seconds the seconds
+*/
+public getTimerValue( const seconds )
+{
+	return getCurrentTime()+1000*seconds;
+}
