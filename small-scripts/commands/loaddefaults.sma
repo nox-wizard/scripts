@@ -16,7 +16,7 @@
 */
 public cmd_loaddefaults(const chr)
 {
-	//loaddefaults();
+	loadDefaults();
 }
 
 /*! }@ */

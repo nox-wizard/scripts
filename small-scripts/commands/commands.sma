@@ -50,6 +50,7 @@
 #include "small-scripts/commands/possess.sma"
 #include "small-scripts/commands/posttype.sma"
 #include "small-scripts/commands/racelang.sma"
+#include "small-scripts/commands/random.sma"
 #include "small-scripts/commands/regioncp.sma"
 #include "small-scripts/commands/reload.sma"
 //#include "small-scripts/commands/reloadsmall.sma" removed

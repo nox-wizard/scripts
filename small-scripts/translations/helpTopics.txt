@@ -322,11 +322,22 @@ sysntax: 'possess
 to switch back possession use 'possess again 
 and target yourself
 
+TOPIC 'random
+TEXT
+Applies a command randomly to online characters
+syntax: 'random chance command
+chance: chacne that a character is affected by command (in %)
+command: the command to be applied (without ')
+ 
+You can use 'random only with commands that take NO
+parameters.
+example:
+'random 20 kill : kills 20% of characters
 
 TOPIC 'reload
 TEXT
 Reloads commands/XSS/scripts/small
-syntax: 'reload "commands"/"XSS"/"scripts"
+syntax: 'reload "commands"/"XSS"/"scripts"/"small"
 
 
 TOPIC 'regioncp

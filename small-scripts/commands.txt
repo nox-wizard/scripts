@@ -69,6 +69,7 @@ polymorph,100,cmd_polymorph
 popup,100,cmd_popup
 possess,100,cmd_possess
 racelang,0,cmd_racelang
+random,150,cmd_random
 regioncp,150,cmd_regioncp
 reload,255,cmd_reload
 resend,50,cmd_resend
