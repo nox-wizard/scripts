@@ -158,9 +158,9 @@ static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {6,"MoreB 2:         ", 113, 2, 0, "         "},
 {6,"MoreB 3:         ", 113, 3, 0, "         "},
 {6,"MoreB 4:         ", 113, 4, 0, "         "},
-{6,"MoreX:           ", 220, 1, 2, "         "},
-{6,"MoreY:           ", 220, 2, 0, "         "},
-{6,"MoreZ:           ", 220, 3, 0, "         "},
+{6,"MoreX:           ", 220, 0, 2, "         "},
+{6,"MoreY:           ", 220, 1, 0, "         "},
+{6,"MoreZ:           ", 220, 2, 0, "         "},
 {1,"Good:          ? ", 211, 0, 0, "         "},
 {1,"Money Value:     ", 247, 0, 0, "         "},
 {2,"Random valuerate:", 231, 0, 0, "         "},
@@ -196,9 +196,9 @@ static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {0,"Spawner Stuff    ",   0, 0, 0, "         "},
 {1,"Max at Spawner:  ", 400, 0, 0, "         "},
 {1,"Now at Spawner:  ", 401, 0, 0, "         "},
-{6,"Script to Spawn: ", 220, 1, 2, "         "},
-{6,"Minimal time(min)", 220, 2, 0, "         "},
-{6,"Maximum time(min)", 220, 3, 0, "         "},
+{6,"Script to Spawn: ", 220, 0, 2, "         "},
+{6,"Minimal time(min)", 220, 1, 0, "         "},
+{6,"Maximum time(min)", 220, 2, 0, "         "},
 {1,"Item=61 or NPC=62", 245, 0, 0, "         "},
 {7,"Min. to Spawn:   ",   0, 0, 0, "         "},
 {7,"Max. to Spawn:   ",   1, 0, 0, "         "},
@@ -375,7 +375,7 @@ static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {4, "Go to Guild:      ",   0, 3, 0, "         "},
 {7, "Char created at:  ",   4, 0, 0, "         "},
 {4, "Invulnerable:     ", 134, 4, 0, "         "},
-{4, "Kill/Dead:        ",   1, 0, 0, "         "},
+{7, "Kill/Dead:        ",   5, 0, 1, "         "},
 {4, "Freeze:           ", 121, 2, 0, "         "},
 {5, "Invis by skill:   ", 110, 1, 3, "         "},
 {5, "Invis by spell:   ", 110, 2, 0, "         "},
@@ -1118,7 +1118,7 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 
 public tweak_char(const chrsource, const target, pagenumber)
 {
-	printf("enter char tweak seite %d^n", pagenumber);
+	//printf("enter char tweak seite %d^n", pagenumber);
 	init_tweak_itm();
 	new tempChrStr[100];
 	
@@ -1157,7 +1157,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 	gui_addText(twkChrMenu,285,79,33,"Layer");
 	
-	printf("target: %d", target);
+	//printf("target: %d", target);
 	gui_addText(twkChrMenu,66,120,33,"Account number :");
 	sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
 	gui_addText( twkChrMenu, 185, 120,0,tempChrStr);
@@ -1353,6 +1353,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 				{
 					new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
 					new output;
+					new infotext=1;
 					if(q==0)
 						output = chr_getSkillSum(target);
 					else if(q==1)
@@ -1369,7 +1370,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 							chr_getProperty(getGuildMaster(chr_getGuild(target)), CP_STR_NAME, _, tempChrStr);
 						else	tempChrStr="None";
 					}
-					else if(q==4)
+					else if(q==4)//creation day
 					{
 						new age=chr_getProperty(target,CP_CREATIONDAY);
 						if ( age > 0 )
@@ -1382,10 +1383,22 @@ public tweak_char(const chrsource, const target, pagenumber)
 						}
 						else	tempChrStr="----";
 					}
+					else if(q==5) //kill/dead
+					{
+						new status = chr_getProperty(target,chr_twkarray[i][ct_propval]);
+						if(status == 1)
+							checklev = 1;
+						gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
+						gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,checklev,i);
+						checklev = 0;
+						infotext=0;
+						printf("status: %d", status);
+					}
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
 					if(chr_twkarray[i][ct_infotype] == 0) //integer value to display
 						sprintf(tempChrStr, "%d", output);
-					gui_addText( twkChrMenu, ct_desc+k, 180+(n*20),0,tempChrStr);
+					if(infotext == 1)
+						gui_addText( twkChrMenu, ct_desc+k, 180+(n*20),0,tempChrStr);
 					tempChrStr=" ";
 				}
 				default: printf("unknown item-tweak case!");
@@ -2038,9 +2051,19 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        		}//linetype
 					else if(linetype == 7) //stock function call
 					{
-						//new q = (propnumber); //type of stock function
-						//new output;
-						//printf("needed callback: %d, line is %s^n", i, chr_twkarray[i][ct_linename]);
+						new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
+						checked = gui_getProperty(twkChrMenu,MP_CHECK,i); //is it checked?
+						if( q = 5)
+						{
+							new status = chr_getProperty(target, chr_twkarray[i][ct_propval]);
+							if( (status == 0) && checked) //not dead but checked now
+							{
+								chr_setHitPoints(target,0);
+								printf("DIE!");
+							}
+							else if ((status == 1) && !checked) //dead but no more checked
+								chr_resurrect(target);
+						}
 					}
 		        	}//for
 		        }
