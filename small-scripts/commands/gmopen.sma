@@ -10,14 +10,22 @@
 \fn cmd_gmopen
 \brief opens a character's backpack
 
-<B>syntax:<B> 'gmopen 
+<B>syntax:<B> 'gmopen [special]
+<UL>
+	<LI> special: can be 26(sell) 27(buy) 28(bought)
+</UL>
 
 the targetted character's backpack will be opened
 */
 public cmd_gmopen(const chr)
 {
+	readCommandParams(chr);
+	new type;
+	if(strlen(__cmdParams[0]))
+		type = str2Int(__cmdParams[0]);
+		
 	chr_message(chr,_,msg_commandsDef[141]);
-	target_create(chr,_,_,_,"cmd_gmopen_targ");
+	target_create(chr,type,_,_,"cmd_gmopen_targ");
 }
 
 /*!
@@ -26,18 +34,21 @@ public cmd_gmopen(const chr)
 \params all standard target callback params
 \brief handles single character targetting and gmopening
 */
-public cmd_gmopen_targ(target, chr, object, x, y, z, unused, unused1)
+public cmd_gmopen_targ(target, chr, object, x, y, z, unused, layer)
 {
 	if(isChar(object))
 	{
-		new bp = chr_getBackpack(object);
-		if(!isItem(bp))
+		new cont = chr_getItemOnLayer(object,layer);
+		
+		if(!isItem(cont))
 		{
-			chr_message(chr,_,msg_commandsDef[142]);
+			chr_message(chr,_,msg_commandsDef[142],layer);
 			return;
 		}
 
-		itm_showContainer(bp,chr);
+		if(itm_getProperty(cont,IP_TYPE) == ITYPE_CONTAINER)
+			itm_showContainer(cont,chr);
+		else chr_message(chr,_,msg_commandsDef[270],layer);
 	}
 	else chr_message(chr,_,msg_commandsDef[32]);
 }

@@ -26,6 +26,7 @@
 	<LI> "speech": speech block
 	<LI> "split": split
 	<LI> "splitchance": splitchance
+	<LI> "squelch": 1 squelched - 0 not squelched
 	<LI> "train": if npc can train (0 no - 1 yes)
 	<LI> "trigger": npc trigger
 	</UL>
@@ -152,6 +153,7 @@ static readPropAndVal(chr,&prop,&val)
 							else prop = CP_SPLITCHNC;
 						}
 					}
+				case 'q': prop = CP_SQUELCHED;
 		
 				default:
 				{

@@ -33,6 +33,17 @@ TEXT
 Makes a character perform an action
 sysntax: 'action actionnumber
 
+TOPIC 'accountscp
+TEXT
+Opens the accounts control panel
+sysntax: 'accountscp [accountslist]
+accountslist: list of accounts to be shown, 
+separated by "-"
+for example: 'accountscp 1-2-45-67-4
+If accountslist is not given you will be 
+prompted to target a character and his
+accounts will be shown
+
 TOPIC 'add
 TEXT
 Adds items characters to the world
@@ -59,6 +70,11 @@ the area each time.
 'area without parameters sets a default area or 
 deletes a previously defined one.
 
+TOPIC 'buy
+TEXT
+Shows a charcater's buy gump
+syntax: 'buy
+
 TOPIC 'cset
 TEXT
 Sets a character's property
@@ -75,6 +91,7 @@ property can be:
 "speech": speech block
 "split": split
 "splitchance": splitchance
+"squelch": squelch
 "train": if npc can train (0 no - 1 yes)
 "trigger": npc trigger
 
@@ -156,6 +173,14 @@ syntax: 'go [x y z / x y / n / name / "s" serial]
 'go "m" name: mark location and give it a name
 'go "d" n: delete location n
 
+TOPIC 'guards
+TEXT
+Switches guards activation
+syntax: 'guards on/off [region]
+on/off: switch guards on or off
+region: the region, if not specified 
+all regions willbe affected
+
 TOPIC 'gy
 TEXT
 Yells a message to allonline gm's
@@ -194,6 +219,12 @@ propery can be:
 "type": item type
 "value": item price
 "restock": restock rate
+"sfx": proximity sound effect
+
+TOPIC 'loaddefaults
+TEXT
+Loads server defaults
+syntax: 'loaddefaults
 
 TOPIC 'jail
 TEXT
@@ -206,6 +237,15 @@ TOPIC 'kill
 TEXT
 Kills a character
 syntax: 'kill 
+
+TOPIC 'kick
+TEXT
+Disconnects a character
+syntax: 'kick [serial] 
+If serial is not given you will be prompted to
+target a character.
+The character is not banned, only 
+disconnected from server.
 
 TOPIC 'killbeard
 TEXT
@@ -261,6 +301,11 @@ TEXT
 Shows page list
 syntax: 'pagelist
 
+TOPIC 'pdump
+TEXT
+Shows server performance
+syntax: 'pdump
+
 TOPIC 'playerlist
 TEXT
 Showsconnected players list
@@ -310,6 +355,12 @@ TOPIC 'setmorexyz
 TEXT
 Sets morex morey morez
 syntax: 'setmorexyz x y z
+
+
+TOPIC 'sell
+TEXT
+Shows a charcater's sell gump
+syntax: 'sell
 
 TOPIC 'setmoreb12
 TEXT
@@ -377,6 +428,13 @@ TOPIC 'sysm
 TEXT
 Broadcasts a message
 syntax: 'sysm [message]
+
+TOPIC 'tell
+TEXT
+Sends a message to a character
+syntax: 'tell serial message
+serial: the serial of the character
+message: the message
 
 TOPIC 'tile
 TEXT

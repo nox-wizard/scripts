@@ -42,14 +42,17 @@ public drawPageListMenu(const solver, const chr)
 		}
 
 	if(set_size(s) == 0)
+	{
+		set_delete(s);
 		return 0;
-		
+	}	
 	//now s contains serials of the characters we want to see the pages
 	new COLS = 40;
 	new ROWS = set_size(s)*4;
 	cursor_setProperty(CRP_TAB,50);
 	createSetListMenu(0,0,ROWS,COLS,s,"Submitted pages","pagemenu_printpage","pagemenu_cback");
 	
+	set_delete(s);
 	menu_show(solver);
 	return 1;
 }

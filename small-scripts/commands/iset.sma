@@ -20,6 +20,7 @@
 	<LI> "type": item type
 	<LI> "value": item price
 	<LI> "restock": restock rate
+	<LI> "sfx": proximity sound effect
 	</UL>
 <LI> "target": pass this parameter if you want to bypass the area effect
 </UL>
@@ -133,6 +134,7 @@ static readPropAndVal(chr,&prop,&val)
 				}
 			}
 		case 'r': prop = IP_RESTOCK;
+		case 's': prop = IP_SFX;
 		case 'w': prop = IP_WIPE;
 
 		default:

@@ -191,7 +191,7 @@ native garbageCollection();
 \brief load serverdefaults
 \return nothing
 */
-native loaddefaults();
+//native loaddefaults();
 
 /*!
 \author Wintermute

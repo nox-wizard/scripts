@@ -33,6 +33,7 @@ new set = set_create(); // creating a new set
 there is nobody permahidden or hidden itself (exploit prevention: use hide for detect hidden player)- prevent hiding*/
 		{
 		chr_message(c, _,msg_sk_dhiddenDef[5]);
+		set_delete(set);
 		return;
 		}
 	} //for searches whole range, if not stopped before than goes on
@@ -46,4 +47,6 @@ there is nobody permahidden or hidden itself (exploit prevention: use hide for d
 	chr_update(c);
 	}
 	else chr_message(c, _, msg_sk_dhiddenDef[7]);
+	
+	set_delete(set);
 }

@@ -463,6 +463,8 @@ public chr_countItemsByDef(const chr, const resource, const color)
                else  
                     amount += itm_getProperty(item, IP_AMOUNT); 
      } 
+     
+     set_delete(itemsInBackpack);
      return amount; 
   
 }

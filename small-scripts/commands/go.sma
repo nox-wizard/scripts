@@ -57,10 +57,12 @@ public cmd_go(const chr)
 		
 			if(set_end(s) && c < n)
 			{
+				set_delete(s);
 				chr_message(chr,_,msg_commandsDef[143],n);
 				return;
 			}	
-		
+			
+			set_delete(s);
 			chr_getPosition(chr2,x,y,z);
 		}
 	else if(!strcmp(__cmdParams[0],"s"))
@@ -101,10 +103,12 @@ public cmd_go(const chr)
 	
 			if(set_end(s) && strcmp(__cmdParams[0],name))
 			{
+				set_delete(s);
 				chr_message(chr,_,msg_commandsDef[146],__cmdParams[0]);
 				return;
 			}
-	
+			
+			set_delete(s);
 			chr_getPosition(chr2,x,y,z);
 		}
 

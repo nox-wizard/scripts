@@ -392,6 +392,7 @@ stock getOnlineCharFromName(name[])
 		if(!strcmp(name1,name)) found = true;
 	}
 	
+	set_delete(s);
 	if(found)
 		return chr2;
 	return INVALID;
@@ -565,7 +566,8 @@ public chr_duplicate(const chr)
 		i = itm_duplicate(set_getItem(s));
 		chr_equip(copy,i);
 	}
-
+	
+	set_delete(s);
 	return copy;
 }
 

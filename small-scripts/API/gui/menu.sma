@@ -23,6 +23,12 @@ enum
 	MP_APPLY_UP,		//!< apply button up gump
 	MP_APPLY_DOWN,		//!< apply button down gump
 	
+	MP_CANCEL_UP,		//!< cancel button up gump
+	MP_CANCEL_DOWN,		//!< cancel button down gump
+	
+	MP_OK_UP,		//!< ok button up gump
+	MP_OK_DOWN,		//!< ok button down gump
+	
 	MP_BACKGROUND,		//!< background resize gump
 	MP_FOREGROUND,		//!< foreground resize gump
 	
@@ -50,6 +56,12 @@ static mp[MP_COUNT] =
 	0x084A,
 	0x084B,
 	
+	0x0849,
+	0x0848,
+
+	0x0850,
+	0x0851,
+		
 	0x13bE,
 	0x0dac,
 	
@@ -242,6 +254,39 @@ brief standard callback for popups, empty
 public popup_cback()
 {
 	return;	
+}
+
+
+/*!
+\author Fax
+\fn createMessageBox(title[],message[],okCallback[],cancelCalback[])
+\param title[]: the message box title
+\param message[]: the message box text
+\param callback[]: the menu callback
+\since 0.82
+\brief creates a message box with
+
+A message box consists in a popup menu with an OK and a CANCEL button.<br>
+The return codes for the 2 buttons are:
+- OK: 2
+- CANCEL: 1
+
+\return nothing
+*/
+public createMessageBox(title[],message[],callback[])
+{
+	new msg[512];
+	sprintf(msg,"%s^n^n",message);
+	createPopupMenu(title,msg);
+	
+	cursor_back();
+	new middle = (cursor_getProperty(CRP_MAX_X) + cursor_x())/2;
+	cursor_goto(middle,cursor_y());
+	cursor_left(8);
+	menu_addOkButton(2);
+	
+	cursor_right(9)
+	menu_addCancelButton(1);	
 }
 
 /*!
@@ -714,6 +759,37 @@ stock menu_addApplyButton(btncode)
 
 /*!
 \author Fax
+\fn menu_addCancelButton(btncode)
+\param btncode: the button's return code
+\since 0.82
+\brief adds a CANCEL button to the menu
+
+This is like any other button, but it uses the MP_CANCEL_* gump
+\return nothing
+*/
+stock menu_addCancelButton(btncode)
+{
+	gui_addButton(currentMenu,cursor_x(),cursor_y(),mp[MP_CANCEL_UP],mp[MP_CANCEL_DOWN],btncode);
+}
+
+
+/*!
+\author Fax
+\fn menu_addCancelButton(btncode)
+\param btncode: the button's return code
+\since 0.82
+\brief adds an OK button to the menu
+
+This is like any other button, but it uses the MP_OK_* gump
+\return nothing
+*/
+stock menu_addOkButton(btncode)
+{
+	gui_addButton(currentMenu,cursor_x(),cursor_y(),mp[MP_OK_UP],mp[MP_OK_DOWN],btncode);
+}
+
+/*!
+\author Fax
 \fn menu_addTilePic(gump)
 \param gump:gump index in art.mul
 \since 0.82
@@ -832,12 +908,15 @@ stock menu_broadcast()
 	set_fillAllOnlinePl(s);	
 	for(set_rewind(s); !set_end(s);)
 		menu_show(set_getChar(s));
+	set_delete(s);
 }
 
 /*!
 \author Fax
 \fn popupMenu(chr,title[],message[])
 \param chr: the character
+\param title[]: the popup title
+\param message[]: the popup text
 \since 0.82
 \brief
 \return nothing
@@ -845,6 +924,23 @@ stock menu_broadcast()
 stock popupMenu(chr,title[],message[])
 {
 	createPopupMenu(title,message);
+	menu_show(chr);
+}
+
+/*!
+\author Fax
+\fn messageBox(chr,title[],message[],callback[])
+\param chr: the character
+\param title[]: the message box title
+\param message[]: the message box text
+\param callback[]: the menu callback
+\since 0.82
+\brief
+\return nothing
+*/
+stock messageBox(chr,title[],message[],callback[])
+{
+	createMessageBox(title,message,callback);
 	menu_show(chr);
 }
 
@@ -864,6 +960,7 @@ stock broadcastPopup(title[],message[])
 	set_addAllOnlinePl(s);
 	for(set_rewind(s);!set_end(s);)
 		menu_show(set_getChar(s));
+	set_delete(s);
 }
 
 /*! @}*/ 

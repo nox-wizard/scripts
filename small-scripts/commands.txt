@@ -24,9 +24,11 @@
 //name_of_the_command,priv_level,callback
 
 action,100,cmd_action
+accountscp,255,cmd_accountscp
 add,150,cmd_add
 align,100,cmd_align
 area,100,cmd_area
+buy,100,cmd_buy
 cset,200,cmd_cset
 csetxyz,150,cmd_csetxyz
 damage,150,cmd_damage
@@ -48,9 +50,11 @@ invul,100,cmd_invul
 iset,200,cmd_iset
 jail,100,cmd_jail
 kill,100,cmd_kill
+kick,150,cmd_kick
 killhair,150,cmd_killhair
 killbeard,150,cmd_killbeard
 lightlevel,100,cmd_lightlevel
+loaddefaults,255,cmd_loaddefaults
 make,255,cmd_make
 mana,200,cmd_mana
 move,100,cmd_move
@@ -59,6 +63,7 @@ onlinegm,0,cmd_onlinegm
 page,0,cmd_page
 pages,100,cmd_pages
 pagelist,100,cmd_pagelist
+pdump,150,cmd_pdump
 playerlist,50,cmd_playerlist
 polymorph,100,cmd_polymorph
 popup,100,cmd_popup
@@ -70,6 +75,7 @@ resend,50,cmd_resend
 respawn,150,cmd_respawn
 resurrect,100,cmd_resurrect
 save,200,cmd_save
+sell,100,cmd_sell
 setmorexyz,150,cmd_setmorexyz
 setmoreb12,150,cmd_setmoreb12
 setmoreb34,150,cmd_setmoreb34
@@ -86,6 +92,7 @@ stamina,200,cmd_stamina
 stats,0,cmd_stats
 summon,100,cmd_summon
 sysm,100,cmd_sysm
+tell,100,cmd_tell
 tile,150,cmd_tile
 timespeed,255,cmd_timespeed
 tweak,100,cmd_tweak

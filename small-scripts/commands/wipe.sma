@@ -89,6 +89,8 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 				set_addItemsInCont(s,bp);
 				for(set_rewind(s);!set_end(s);)
 					itm_remove(set_getItem(s));
+				
+				set_delete(s);
 				return; 
 			}
 		else { chr_message(chr,_,msg_commandsDef[257]); return; }
@@ -120,6 +122,8 @@ public cmd_wipe_rect(chr,x0,y0,x1,y1)
 		#endif
 
 	}
+	
+	set_delete(s);
 	chr_message(chr,_,msg_commandsDef[259]);
 }
 /*! }@ */

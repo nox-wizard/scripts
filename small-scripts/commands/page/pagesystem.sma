@@ -148,6 +148,7 @@ public getGmPageList(&set)
 			set_add(set,chr);
 	}
 	
+	set_delete(s);
 	return 1;
 }
 

@@ -80,10 +80,12 @@ public cmd_go(const chr)
 	
 			if(set_end(s) && c >= n)
 			{
+				set_delete(s);
 				chr_message(chr,_,msg_commandsDef[2]);
 				return;
 			}
-	
+			
+			set_delete(s);
 			chr_getPosition(chr2,x,y,z);
 		}
 	else if(!strcmp(__cmdParams[0],"s"))

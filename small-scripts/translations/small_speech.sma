@@ -571,7 +571,7 @@ public msg_api_partyDef[NUM_api_partySENT][]={
 "You notify them that you do not wish to join the party."
 };
 
-const NUM_commandsSENT = 271;
+const NUM_commandsSENT = 276;
 public msg_commandsDef[NUM_commandsSENT][]={
 "No other players connected",
 "Users Online : ",
@@ -604,7 +604,7 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "You must target a player",
 "You must give the skill and value as integers",
 "skill and value must be positive",//30
-"Select character.. ",
+"Select character...",
 "You must target a character",
 "Invalid skill value '%d'",
 "Skills work only on character" ,
@@ -715,7 +715,7 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Select a character to raise stats",
 "stats raised", //140
 "Select a character to open his backpack",
-"That character does not have a backpack",
+"That character does not have items on layer %d",
 "There are less than %d players online",
 "you must specify a character serial",
 "you must specify a valid character serial",
@@ -842,8 +842,13 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "All pages solved",
 "There are only %d available locations",
 "Location %d stored - (%d,%d,%d) %s",
+"Location %d deleted", 
+"The item the character has on layer %d is not a container", //270
 "Location %d deleted",
-"Flags5" //270
+"Flags5",
+"Select the character on wich you want account info",
+"Select a character to kick",
+"Invalid serial"
 };
 
 const NUM_EatDrinkSENT = 26;
