@@ -10,12 +10,12 @@
 // X2, Y2 -> bottom right corner of spawning rectange
 
 
-SECTION AREA 0
+SECTION AREA $area_0
 {
-X1 545
-Y1 2113
-X2 557
-Y2 2125
+	X1 545
+	Y1 2113
+	X2 557
+	Y2 2125
 }
 
 EOF
