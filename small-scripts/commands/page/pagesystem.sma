@@ -20,8 +20,17 @@ public initPageSystem()
 {
 	log_message("Initializing GM page system^n");
 	__onlineStaff = set_create();
+	
+	//pageSystemTest();
 }
 
+public pageSystemTest()
+{
+	addGmPage(3,"test page 1");
+	new reason[100];
+	chr_getGmPage(3,1,reason);
+	printf(reason);
+}
 /*!
 \author Fax
 \fn addOnlineStaff(const chr)

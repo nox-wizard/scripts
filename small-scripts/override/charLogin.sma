@@ -18,10 +18,8 @@ public __charLogin(const chr)
 	#endif
 	
 	//start extended skillsystem if required
-	#if ACTIVATE_EXTENDED_SKILLSYSTEM
-		startExtSkillsystem(chr);
-	#endif	
-		
+	startExtSkillsystem(chr);
+			
 	globaltags(chr);
 	
 	itm_potionStart(chr);//every function you want to start with char login put in here

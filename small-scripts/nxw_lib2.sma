@@ -390,25 +390,18 @@ stock chr_getClass(const chr)
 
 /*!
 \author Horian
-\fn chr_getSkillsum(const chr, skillsum)
+\fn chr_getSkillsum(const chr, skillsum[])
 \param chr: the character
 \param skillsum: the characters skillsum
 \since 0.82
-\brief returns class of character
+\brief returns skillsum of character in a string
 
-This functions has been written to simplify custom class definition.<BR>
-All scripts use this function to get the class, so if you modify this function all scripts
-will work with your classes.
-\return the charatcer's race
+\return the skillsum
 */
 stock chr_getSkillsum(const chr, skillsum[])
 {
-	new i;
-	new skillsum;
-	for (i=0;i<49;++i)
-	{
-		skillsum=skillsum+chr_getProperty(target,CP_BASESKILL,i);
-	}
 	new skillsumStr[10];
-	sprintf(skillsumStr,"%d",skillsum);
+	new sum = chr_getSkillCap(chr);
+	sprintf(skillsumStr,"%d",sum);
+	return sum;
 }

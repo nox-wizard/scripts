@@ -17,6 +17,7 @@
 
 #define _SKILLS_DEBUG_ 1 //<! set to 1 if you want debug messages to be printed
 #define ACTIVATE_EXTENDED_SKILLSYSTEM 0	//!< set to 1 to activate the extended skillsystem
+#define EXT_SKILLSYSTEM_TEST 0	//!< set to 1 if you want a skillsystem test performed on char login (VERY MUCH LAG at char login) then look in skilltest.txt the results
 #define MAX_SKILL_SUM 7000	//!< maximum value the skillsumcan reach
 #define MAX_SKILL_VALUE 1000 	//!< maximum value a skill can reach, not considering modifiers
 #define SK_ADDITIONAL_MAX 10	//!< max number of additional skills in skills2.xss, change it if you need more skills
@@ -82,31 +83,29 @@ enum
 };
 
 #if ACTIVATE_EXTENDED_SKILLSYSTEM 
-//if extended skillsystem is NOT active compiler will not generate code for this
-
-
-//skill properties structure
-enum __skillStruct
-{
-	_skFailRaise,		//<! how much the base skill raises on failure 
-	_skSuccessRaise,	//<! how much the base skill raises on success 
-	_skStr,			//<! how much strength influences skill value in %
-	_skDex,			//<! how much dex influences skill value in %
-	_skInt,			//<! how much int influences skill value in %
-	_skUnhideOnFail,	//<! true if character is unhidden when fails skill check
-	_skUnhideOnUse,		//!< true if charcater is unhidden when he uses the skill
-}	//<! skill data type, you can modify this to your needs, but remember to update __skillinfo[][] too
-
-new SK_ADDITIONAL_COUNT = 0;	//!< skills loaded from skills2.sma - DO NOT TOUCH!
-new SK_COUNT = SK_STD_COUNT+SK_ADDITIONAL_COUNT;	//!< total number of skills - DO NOT TOUCH!
-
-/*!
-\brief mixed array with additional skills characteristics
-
-add a row for each new skill
-*/
-
-new __skillinfo[SK_ADDITIONAL_MAX][__skillStruct];
+	//if extended skillsystem is NOT active compiler will not generate code for this
+	
+	
+	//skill properties structure
+	enum __skillStruct
+	{
+		_skFailRaise,		//<! how much the base skill raises on failure 
+		_skSuccessRaise,	//<! how much the base skill raises on success 
+		_skStr,			//<! how much strength influences skill value in %
+		_skDex,			//<! how much dex influences skill value in %
+		_skInt,			//<! how much int influences skill value in %
+		_skUnhideOnFail,	//<! true if character is unhidden when fails skill check
+		_skUnhideOnUse,		//!< true if charcater is unhidden when he uses the skill
+	}	//<! skill data type, you can modify this to your needs, but remember to update __skillinfo[][] too
+	
+	new SK_ADDITIONAL_COUNT = 0;	//!< skills loaded from skills2.sma - DO NOT TOUCH!
+	new SK_COUNT = SK_STD_COUNT;	//!< total number of skills - DO NOT TOUCH!
+	
+	/*!
+	\brief mixed array with additional skills characteristics
+	add a row for each new skill
+	*/
+	new __skillinfo[SK_ADDITIONAL_MAX][__skillStruct];
 #endif
 
 #define CLASSES_COUNT 1	//!< maximum number of classes
@@ -116,7 +115,7 @@ new __classSkillCapModifier[SK_STD_COUNT + SK_ADDITIONAL_MAX][CLASSES_COUNT];//!
 new __raceSkillCapModifier[SK_STD_COUNT + SK_ADDITIONAL_MAX][RACES_COUNT];//!< skillcap modifiers derived from races
 
 #if !ACTIVATE_EXTENDED_SKILLSYSTEM
-new SK_ADDITIONAL_COUNT = 0;	//!< skills loaded from skills2.sma - DO NOT TOUCH!
+
 new SK_COUNT = SK_STD_COUNT;	//!< total number of skills - DO NOT TOUCH!
 
 public skillName[SK_STD_COUNT][] = 

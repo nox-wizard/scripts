@@ -220,12 +220,23 @@ public cmd_move_targ_loc(target, chr, object, x, y, z, unused, unused2)
 */
 public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 {
-	printf("t: %d - chr:%d - o:%d - x,y,z:%d %d %d - %d^n",target,chr,object,x,y,z,unused2);
-
 	if((x != INVALID && y != INVALID) || object != INVALID)
 	{
-		if(isItem(object)) itm_getPosition(object,x,y,z);
-		else if(isChar(object)) chr_getPosition(object,x,y,z);
+		if(isItem(object)) 
+			itm_getPosition(object,x,y,z);
+		else 	if(isChar(object)) 
+			{
+				chr_getPosition(object,x,y,z);
+				new bp = chr_getBackpack(object);
+				if(isItem(bp)) 
+				{
+					itm_moveTo(param,x,y,z);
+					itm_setProperty(param,IP_CONTAINERSERIAL,_,bp);
+					itm_refresh(param);
+					itm_refresh(bp);
+				}
+				else chr_message(chr,_,"That character does not have a valid backpack");
+			}
 
 		if(isChar(param))
 			chr_moveTo(param,x,y,z);
@@ -237,6 +248,7 @@ public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 			itm_refresh(param);
 			if(isItem(cont)) itm_refresh(cont);
 		}
+		
 		area_refresh(chr_getCmdArea(chr));
 		return;
 	}

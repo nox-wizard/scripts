@@ -50,8 +50,13 @@ public cmd_csetxyz(const chr)
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 		{
 				chr2 = set_getChar(area_chars(area));
-				if(chr2 != chr) chr_setProperty(item,prop,_,val);
-				chr_update(item);
+				if(chr2 != chr)
+				{
+					 chr_setProperty(chr2,prop,CP2_X,val[0]);
+					chr_setProperty(chr2,prop,CP2_Y,val[1]);
+					chr_setProperty(chr2,prop,CP2_Z,val[2]);
+					chr_update(item);
+				}
 		}
 
 		chr_message(chr,_,"%s set to %d characters",__cmdParams[0],i);		

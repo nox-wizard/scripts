@@ -18,9 +18,11 @@
 	<LI> "ai": npcai
 	<LI> "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
 	<LI> "dex": dexterity
+	<LI> "gmfx": gm moving effect
 	<LI> "int": intelligence
 	<LI> "npcwander": npc wander mode
 	<LI> "owner": owner serial
+	<LI> "shop": is character is a shopkeeper (0 no - 1 yes)
 	<LI> "str": strength
 	<LI> "spattack": type of spell attack
 	<LI> "spadelay": delay between 2 spell attacks
@@ -28,6 +30,7 @@
 	<LI> "split": split
 	<LI> "splitchance": splitchance
 	<LI> "target": npc follow target
+	<LI> "train": if npc can train (0 no - 1 yes)
 	<LI> "trigger": npc trigger
 	</UL>
 <LI> "target": pass this parameter if you want to bypass the area effect
@@ -127,13 +130,14 @@ static readPropAndVal(chr,&prop,&val)
 					return OK;
 				}
 			}
-	
+		case 'g': prop = CP_GMMOVEEFF;
 		case 'i': prop = CP_INTELLIGENCE;
 		case 'n': prop = CP_NPCWANDER
 		case 'o': prop = CP_OWNSERIAL;
 		case 's':
 			switch(__cmdParams[0][1])
 			{ 
+				case 's': prop = CP_SHOPKEEPER;
 				case 't': prop = CP_STRENGTH;
 				case 'p': 
 					switch(__cmdParams[0][1])
@@ -165,10 +169,15 @@ static readPropAndVal(chr,&prop,&val)
 			switch(__cmdParams[0][1])
 			{ 
 				case 'a': prop = CP_FTARG;
-				case 'r': prop = CP_TRIGGER;
+				case 'r': 
+					switch(__cmdParams[0][1])
+					{ 
+						case 'i': prop = CP_TRIGGER;
+						case 'a': prop = CP_CANTRAIN;
+					}
 				default:
 				{
-					chr_message(chr,_,"Maybe you wanted to type 'target'or 'trigger'?");
+					chr_message(chr,_,"Maybe you wanted to type 'target','trigger' or 'trainer'?");
 					return INVALID;
 				}
 			}
