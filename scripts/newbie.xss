@@ -302,6 +302,8 @@ UNIQUE SECTION ALLNEWBIES
     PACKITEM $item_bread_loaves 2
     PACKITEM $item_book
     PACKITEM $item_candle_3
+    
+    @ONADVANCESKILL __onSkillAdvance
 }
 
 UNIQUE SECTION MALENEWBIES

@@ -142,6 +142,14 @@ public detectCommand(const chr)
 
 public readCommandParams(const chr)
 {
+	/*for(new p = 0; p < 8; p++)
+	{
+		chr_getProperty(chr,CP_STR_PARAM,p,__cmdParams[p]);	
+		#if _CMD_DEBUG_
+			log_message("^t->param %d: %s",p,__cmdParams[p]);
+		#endif
+	}
+	*/
 	new speech[150];	 
 	new command[30]; 
 
@@ -175,6 +183,7 @@ public readCommandParams(const chr)
 
 		param++;
 	}
+	
 }
 /*!
 \author Fax

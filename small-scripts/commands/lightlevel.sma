@@ -25,7 +25,7 @@ public cmd_lightlevel(const chr)
 {
 	readCommandParams(chr);
 
-	new level,target = false;
+	new level;
 
 	if(!isStrInt(__cmdParams[0]))
 	{

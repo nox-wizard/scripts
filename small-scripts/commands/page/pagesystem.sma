@@ -18,7 +18,7 @@ Creates the __onlineStaff set, wich contain all online pageable GM and counselor
 */
 public initPageSystem()
 {
-	log_message("Initializing GM page system");
+	log_message("Initializing GM page system^n");
 	__onlineStaff = set_create();
 }
 

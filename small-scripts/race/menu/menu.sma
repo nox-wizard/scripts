@@ -208,7 +208,7 @@ public race_description( const chr, const race, const canClose, const canMove, c
 	}
 
 
-const descForPage = 11;
+	const descForPage = 11;
 
 	new page = 0;
 

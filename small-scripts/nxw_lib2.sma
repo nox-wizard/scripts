@@ -133,6 +133,11 @@ public rectangle_cback_2(target, chr, object, x, y, z, unused, xy)
 	callFunction5P(funcidx(callback),chr,x0,y0,x1,y1);
 }
 
+
+//=========================================================================================//
+//                                 SET HELP FUNCTIONS                                      //
+//=========================================================================================//
+
 /*!
 \author Fax
 \fn set_remove(const set,const value)
@@ -163,7 +168,7 @@ stock set_remove(const set,const value)
 //                              FILE HELP FUNCTIONS                                      //
 //=======================================================================================//
 #define FILE_SCAN_BUFFER_SIZE 512
-new __fileScanBuffer[FILE_SCAN_BUFFER_SIZE]; //!< global variable used to read the scanned line in file scanning functions
+static __fileScanBuffer[FILE_SCAN_BUFFER_SIZE]; //!< global variable used to read the scanned line in file scanning functions
 
 /*!
 \author Fax
@@ -223,6 +228,7 @@ public file_scan(filename[], callback[], exclude[])
 	
 	//call the callback with EOF line
 	callFunction2P(funcidx(callback),file,INVALID);
+	file_close(file);
 	return line;
 }
 
@@ -240,4 +246,144 @@ Use this function at the beginning of your callback to read the scan line
 public file_getScanLine(line[FILE_SCAN_BUFFER_SIZE])
 {
 	strcpy(line,__fileScanBuffer);
+}
+
+new currentXssSectionType[FILE_SCAN_BUFFER_SIZE];
+new currentXssSection;
+new currentXssCommand[FILE_SCAN_BUFFER_SIZE];
+new currentXssValue[FILE_SCAN_BUFFER_SIZE];
+
+/*!
+\author Fax
+\fn file_scanXss(file[], callback[])
+\param file[]: the file to be scanned, path starts from NOX folder.
+\param callback[]: the function to be called for each XSS command
+\since 0.82
+\brief scans an XSS file and calls the callback for every command
+
+The file is scanned line by line and calls the callback for each XSS command<BR>
+
+The callback will be passed the file handle and the line number.<BR>
+You can read XSS section type, section number, command and value with:<BR>
+	- currentXssSectionType[]
+	- currentXssSection
+	- currentXssCommand[]
+	- currentXssValue[]
+	
+\return the number of scanned sections or INVALID if file does not exist
+*/
+public xss_scanFile(filename[],callback[])
+{
+	new file = file_open(filename,"r");
+	if(file == INVALID) return INVALID;
+	
+	new line,section,token[50];
+	
+	for(file_read(file,__fileScanBuffer); !file_eof(file); file_read(file,__fileScanBuffer))
+	{		
+		line++
+		trim(__fileScanBuffer);
+		
+		if(!strlen(__fileScanBuffer)) continue;
+		
+		//skip comments
+		if(__fileScanBuffer[0] == '/' && __fileScanBuffer[1] == '/') continue;
+		
+		//seek "SECTION"
+		str2Token(__fileScanBuffer,token,0,__fileScanBuffer,0)
+		if(strcmp(token,"SECTION")) continue;
+		
+		//store the section type
+		str2Token(__fileScanBuffer,currentXssSectionType,0,token,0)
+		
+		//read section number
+		if(isStrInt(token)) currentXssSection = str2Int(token);
+		else 	if(isStrHex(token)) currentXssSection = str2Hex(token);
+			else	currentXssSection = getIntFromDefine(token);
+		
+		//seek first non empty line
+		for(file_read(file,__fileScanBuffer); !file_eof(file); file_read(file,__fileScanBuffer))
+		{
+			trim(__fileScanBuffer);
+			if(__fileScanBuffer[0] == 0) continue;
+			break;
+		}
+		
+		if(file_eof(file))
+		{
+			log_error("%s(%d): unexpected end of file - '{' expected",filename,line);
+			file_close(file);
+			return INVALID;
+		}
+		
+		if(__fileScanBuffer[0] != '{')
+		{
+			log_error("%s(%d): expected token '{', found %s",filename,line,__fileScanBuffer);
+			file_close(file);
+			return INVALID;
+		}
+		
+		//read XSS commands
+		for(file_read(file,__fileScanBuffer); !file_eof(file); file_read(file,__fileScanBuffer))
+		{
+			line++;
+			trim(__fileScanBuffer);
+			if(__fileScanBuffer[0] == 0) continue; //skip empty lines
+			if(__fileScanBuffer[0] == '/' && __fileScanBuffer[1] == '/') continue; //skip comments
+			if(__fileScanBuffer[0] == '}') break; //end of section
+						
+			str2Token(__fileScanBuffer,currentXssCommand,0,currentXssValue,0);
+			trim(currentXssValue);
+			
+			callFunction2P(funcidx(callback),file,line);
+		}
+		
+		if(file_eof(file))
+		{
+			log_error("%s(%d): unexpected end of file - '}' expected",filename,line);
+			file_close(file);
+			return INVALID;
+		}
+		
+		section++;	
+	}
+	
+	return section;
+}
+
+//=========================================================================================//
+//                              CHARACTER HELP FUNCTIONS                                   //
+//=========================================================================================//
+/*!
+\author Fax
+\fn chr_getRace(const chr)
+\param chr: the character
+\since 0.82
+\brief returns race of character
+
+This functions has been written to simplify custom race definition.<BR>
+All scripts use this function to get the race, so if you modify this function all scripts
+will work with your races.
+\return the charatcer's race
+*/
+stock chr_getRace(const chr)
+{
+	return chr_getProperty(chr,CP_RACE);
+}
+
+/*!
+\author Fax
+\fn chr_getClass(const chr)
+\param chr: the character
+\since 0.82
+\brief returns class of character
+
+This functions has been written to simplify custom class definition.<BR>
+All scripts use this function to get the class, so if you modify this function all scripts
+will work with your classes.
+\return the charatcer's race
+*/
+stock chr_getClass(const chr)
+{
+	return 0; //standard classes hasn't been defined yet
 }

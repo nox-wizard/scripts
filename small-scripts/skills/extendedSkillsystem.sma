@@ -4,34 +4,6 @@
 @{
 */
 
-#define ACTIVATE_EXTENDED_SKILLSYSTEM 0	//!< set to 1 to activate the extended skillsystem
-#define SK_ADDITIONAL_COUNT 1		//number of additional skills
-
-//total number of skills
-#if ACTIVATE_EXTENDED_SKILLSYSTEM
-	#define SK_EXT_COUNT SK_COUNT + SK_ADDITIONAL_COUNT  
-#else
-	#define SK_EXT_COUNT SK_COUNT
-#endif
-
-enum __skill
-{
-	_skFailRaise,		//<! how much the base skill raises on failure 
-	_skSuccessRaise,	//<! how much the base skill raises on success 
-	_skStr,			//<! how much strength influences skill value in %
-	_skDex,			//<! how much dex influences skill value in %
-	_skInt,			//<! how much int influences skill value in %
-	_skUnhideOnFail,	//<! true if character is unhidden when fails skill check
-	_skUnhideOnUse,		//!< true if charcater is unhidden when he uses the skill
-	_skName: 30,		//!< skill name
-}	//<! skill data type, you can modify this to your needs, but remember to update __skillinfo[][] too
-
-new __skillinfo[SK_ADDITIONAL_COUNT][__skill] =
-{
-	{50,100,10,10,10,true,true,"lamering" }
-} //<!! mixed array with additional skills characteristics, add a row for each new skill
-
-
 /*!
 \author Fax
 \ingroup script_skills
@@ -45,15 +17,11 @@ Reads a skill value of a character, if extended skillsystem is active supports a
 */
 public chr_getSkill(const chr,const skill)
 {
-	if(skill < 0) return -1;
-#if !ACTIVATE_EXTENDED_SKILLSYSTEM
-	if(skill >= SK_COUNT) return -1;
-	return chr_getProperty(chr, CP_SKILL, skill);
-#else
-	if(skill < SK_COUNT) return chr_getProperty(chr, CP_SKILL, skill);
-	if(skill >= SK_EXT_COUNT) return -1;
-	return chr_getLocalIntVec(chr,CLV_ADDITIONALSKILLS,skill - SK_COUNT);
-#endif
+	if(skill < 0 || skill >= SK_COUNT) return -1;
+
+	if(skill < SK_STD_COUNT) 
+		return chr_getProperty(chr, CP_SKILL, skill);
+	return chr_getLocalIntVec(chr,CLV_ADDITIONALSKILLS,skill - SK_STD_COUNT);
 }
 
 /*!
@@ -69,18 +37,17 @@ sets a skill value of a character, if extended skillsystem is active supports ad
 */
 public chr_setSkill(const chr,const skill, const value)
 {
-	if(skill < 0) return INVALID;
+	if(skill < 0 || skill >= SK_COUNT) return INVALID;
 	
-#if !ACTIVATE_EXTENDED_SKILLSYSTEM
-	if(skill >= SK_COUNT) return INVALID;
-	chr_setProperty(chr, CP_BASESKILL, skill, value);
+	if(skill < SK_STD_COUNT)
+	{ 
+		chr_setProperty(chr, CP_BASESKILL, skill, value);
+		return OK;
+	}
+	
+	chr_setLocalIntVec(chr,CLV_ADDITIONALSKILLSBASE,skill - SK_STD_COUNT, value*100);
+	updateSkillLevel(chr,skill);
 	return OK;
-#else
-	if(skill < SK_COUNT) chr_setProperty(chr, CP_BASESKILL, skill, value);
-	if(skill >= SK_EXT_COUNT) return INVALID;
-	chr_setLocalIntVec(chr,CLV_ADDITIONALSKILLSBASE,skill - SK_COUNT, value*100);
-	return OK;
-#endif
 }
 
 /*!
@@ -96,16 +63,12 @@ Reads a skill base value of a character, if extended skillsystem is active suppo
 */
 public chr_getBaseSkill(const chr,const skill)
 {
-	if(skill < 0) return -1;
+	if(skill < 0 || skill >= SK_COUNT) return -1;
 	
-#if !ACTIVATE_EXTENDED_SKILLSYSTEM
-	if(skill >= SK_COUNT) return -1;
-	return chr_getProperty(chr, CP_BASESKILL, skill);
-#else
-	if(skill < SK_COUNT)	return chr_getProperty(chr, CP_BASESKILL, skill);
-	if(skill >= SK_EXT_COUNT) return -1;
-	return chr_getLocalIntVec(chr,CLV_ADDITIONALSKILLSBASE,skill - SK_COUNT)/100;
-#endif
+	if(skill < SK_STD_COUNT)
+		return chr_getProperty(chr, CP_BASESKILL, skill);
+	
+	return chr_getLocalIntVec(chr,CLV_ADDITIONALSKILLSBASE,skill - SK_STD_COUNT)/100;
 }
 
 public chr_getSkillcap(const chr)
@@ -113,7 +76,7 @@ public chr_getSkillcap(const chr)
 	if(!isChar(chr)) return -1;
 	
 	new skillcap = chr_getProperty(chr,CP_TOTALSKILL);
-	for(new sk = SK_COUNT; sk < SK_EXT_COUNT; sk++)
+	for(new sk = SK_STD_COUNT; sk < SK_COUNT; sk++)
 		skillcap += chr_getSkill(chr,sk);
 	return skillcap; 
 }
@@ -144,7 +107,7 @@ the skill is raised.
 public chr_trySkill(const chr, const sk, low, high, const raise)
 {	
 	//if it is a standard skill, call the native funciton
-	if(sk < SK_COUNT) return chr_checkSkill(chr,sk,low,high,raise); 
+	if(sk < SK_STD_COUNT) return chr_checkSkill(chr,sk,low,high,raise); 
 	
 	//deads always fail
 	if(chr_getProperty(chr,CP_DEAD)) return 0;
@@ -209,9 +172,9 @@ Modify this function to define how the skills grow when they are used
 */
 public advanceSkill(chr, sk, success)
 {
-	if(sk < SK_COUNT) return;
+	if(sk < SK_STD_COUNT) return;
 	
-	if(handleSkillcap(chr,sk,success,SKILLADV_RAISE) == SKILLADV_DONTRAISE) return;
+	if(__onSkillAdvance(chr,sk,success,SKILLADV_RAISE) == SKILLADV_DONTRAISE) return;
 	
 	sk -= SK_COUNT;
 	
@@ -238,8 +201,8 @@ Modify this function to define how real skill value is calculated from base skil
 */
 public updateSkillLevel(chr, sk)
 {
-	if(sk < SK_COUNT) return;
-	sk -= SK_COUNT;
+	if(sk < SK_STD_COUNT) return;
+	sk -= SK_STD_COUNT;
 	new base = chr_getLocalIntVec(chr,CLV_ADDITIONALSKILLSBASE,sk)/100;
 		
 	//here you can modify the relationship between real value and base value
@@ -265,10 +228,11 @@ public updateSkillLevel(chr, sk)
 */
 public startExtSkillsystem(const chr)
 {
-	
+
+#if ACTIVATE_EXTENDED_SKILLSYSTEM
 	if(!chr_isaLocalVar(chr,CLV_ADDITIONALSKILLS))
 	{
-		printf("Creating extended skillsystem for character %d ...",chr);
+		log_message("Creating extended skillsystem for character %d ...",chr);
 		chr_addLocalIntVec(chr,CLV_ADDITIONALSKILLS,SK_ADDITIONAL_COUNT,0);
 		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
 		{
@@ -286,11 +250,153 @@ public startExtSkillsystem(const chr)
 		}
 				
 		//update additional skill values
-		for(new sk = SK_COUNT; sk < SK_EXT_COUNT; sk++)
+		for(new sk = SK_STD_COUNT; sk < SK_COUNT; sk++)
 			updateSkillLevel(chr,sk);
-
-		printf("[DONE]^n");
 	}
+#else
+	chr_delLocalVar(CLV_ADDITIONALSKILLS);
+	chr_delLocalVar(CLV_ADDITIONALSKILLSBASE);
+#endif
+
+	printf("^n");
 }
 
+/*!
+\author Fax
+\fn initExtendedSkillsystem()
+\since 0.82
+\brief initializes the extended skillsystem
+
+Loads skills2.xss, uses loadAdditionalSkills() to actually load skills
+\return nothing
+*/
+public initExtendedSkillsystem()
+{
+#if !ACTIVATE_EXTENDED_SKILLSYSTEM
+	return;
+#endif
+	
+	log_message("Loading additional skills ...")
+	
+	//set default values
+	for(new s = 0; s < SK_ADDITIONAL_MAX; s++)
+	{
+		__skillinfo[s][_skUnhideOnUse] = true;
+		__skillinfo[s][_skUnhideOnFail] = true;
+	}
+	
+	SK_ADDITIONAL_COUNT = xss_scanFile("scripts/skills2.xss","loadAdditionalSkills");
+	
+	if(SK_ADDITIONAL_COUNT == INVALID)
+	{
+		log_error("Unable to load additional skills from scripts/skills2.xss");
+		return;
+	}
+	
+	if(SK_ADDITIONAL_COUNT > SK_ADDITIONAL_MAX)
+	{
+		SK_ADDITIONAL_COUNT = SK_ADDITIONAL_MAX;
+		log_warning("You have only %d additional skills available",SK_ADDITIONAL_MAX);
+		log_warning("Increase SK_ADDITIONAL_MAX in 'small-scripts/skills/constant.sma' if you need more skills");
+		log_warning("Skills out of range weren't loaded");
+		printf("^n");
+	}	
+	
+	//increase number of available skills
+	SK_COUNT += SK_ADDITIONAL_COUNT;
+	
+	log_message("%d additional skills loaded, %d skills available",SK_ADDITIONAL_COUNT,SK_COUNT);
+	printf("^n");
+	
+#if _SKILLS_DEBUG_
+	if(SK_ADDITIONAL_COUNT > 0)
+	{
+		log_message("Loaded skills details:");
+		for(new s = 0; s < SK_ADDITIONAL_COUNT; s++)
+		{
+			log_message("SKILL %d",s + SK_STD_COUNT);
+			log_message("NAME %s",skillName[s + SK_STD_COUNT]);
+			log_message("STR %d",__skillinfo[s][_skStr]);
+			log_message("DEX %d",__skillinfo[s][_skDex]);
+			log_message("INT %d",__skillinfo[s][_skInt]);
+			log_message("SUCCESSRAISE %d",__skillinfo[s][_skSuccessRaise]);
+			log_message("FAILRAISE %d",__skillinfo[s][_skFailRaise]);
+			log_message("UNHIDEONUSE %d",__skillinfo[s][_skUnhideOnUse]);
+			log_message("UNHIDEONFAIL %d",__skillinfo[s][_skUnhideOnFail]);
+			printf("^n");
+		}
+	}
+#endif
+	printf("^n");
+}
+
+public loadAdditionalSkills(file,line)
+{
+	if(strcmp(currentXssSectionType,"SKILL")) return;
+	if(currentXssSection <= 0) return;
+	new sk = currentXssSection;
+	
+	if(sk < SK_STD_COUNT)
+	{
+		log_error("skills2.xss(%d): You can't modify standard skills (0 - %d) in skills2.sma, you can do it in skills.sma",line,SK_STD_COUNT - 1);
+		return;
+	}
+	
+	//check for out-of-range skills
+	if(sk >= SK_STD_COUNT + SK_ADDITIONAL_MAX)
+	{
+		log_error("skills2.xss(%d): Skill number out of range %d",line,sk);
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"NAME"))
+	{
+		strcpy(skillName[sk],currentXssValue);
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"STR"))
+	{
+		__skillinfo[sk - SK_STD_COUNT][_skStr] = str2Int(currentXssValue);
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"INT"))
+	{
+		__skillinfo[sk - SK_STD_COUNT][_skInt] = str2Int(currentXssValue);
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"DEX"))
+	{
+		__skillinfo[sk - SK_STD_COUNT][_skDex] = str2Int(currentXssValue);
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"UNHIDEONUSE"))
+	{
+		__skillinfo[sk - SK_STD_COUNT][_skUnhideOnUse] = str2Int(currentXssValue) != 0;
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"UNHIDEONFAIL"))
+	{
+		__skillinfo[sk - SK_STD_COUNT][_skUnhideOnFail] = str2Int(currentXssValue) != 0;
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"SUCCESSRAISE"))
+	{
+		__skillinfo[sk - SK_STD_COUNT][_skSuccessRaise] = str2Int(currentXssValue);
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"FAILRAISE"))
+	{
+		__skillinfo[sk - SK_STD_COUNT][_skFailRaise] = str2Int(currentXssValue);
+		return;
+	}
+	
+	log_warning("Unrecognized command %s",currentXssCommand);
+}
 /*! @} */

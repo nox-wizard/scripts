@@ -965,7 +965,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addGump(twkMenu,50,210, 0x827);
 		gui_addText(twkMenu,66,210,1310,"Ingame Command level :");
 		gui_addText(twkMenu,66,230,1310,"(0: as player, 1: as CNS, 2: as GM)"); 
-		gui_addPropField(twkMenu,250,210,125,30,CP_COMMANDLEVEL);
+		gui_addPropField(twkMenu,250,210,125,30,CP_PRIVLEVEL);
 
 		//is CNS/GM, 15/16/17
 		new checker2=0;

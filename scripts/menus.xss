@@ -30,7 +30,9 @@ SECTION MENU $menu_web_links
 {
     Web Links
     < NoX-Wizard homepage
-    WEBLINK http://nox-wizard.sunsite.dk
+    WEBLINK http://noxwizard.sourceforge.net
+    < Bug tracker
+    WEBLINK http://noxwizard.berlios.de/mantis
     < OSGM: Easy to use GM Tool
     WEBLINK http://osgmtool.sourceforge.net
     < Official UO Homepage

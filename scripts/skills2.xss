@@ -1,0 +1,164 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (skills2.xss)                                     ||
+// || Maintained by Fax                                                    ||
+// || Created 24/4/2004                                                ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82 or later                        ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//
+//Here you can define additional skills.
+//Simply uncomment skills if you want to add them and edit the section's content.
+//If you need more skills follow the syntax and add as many skills as you want
+//but remember to increase SK_ADDITIONAL_MAX in small-scripts/skills/constants.sma
+//
+//Syntax:
+//	NAME		: skill name
+//	STR		: How much strength influences skill value
+//	DEX		: How much dexterity influences skill value
+//	INT		: How much intelligence influences skill value
+//	SUCCESSRAISE	: How much the skill raises if the action is succesful
+//	FAILRAISE 	: How much the skill raises if the action fails
+//	UNHIDEONUSE	: tells if should unhide when used, default = 1
+//	UNHIDEONFAIL	: tells if should unhide when failed, default = 1
+//
+//The section number defines the skill number, you can't give section numbers that are already
+//used by standard skills in skills.xss
+//If you don't need additional skills at all you may want to remove the extended skillsystem.
+//To do so edit small-scripts/skills/constants.sma and turn ACTIVATE_EXTENDED_SKILLSYSTEM to 0.
+//Once the extended skillsystem has been deactivated this fileis not read anymore.
+//
+//NOTE: Since this file is read by a scripted XSS parser,not all XSS features are available.
+//You can use symbolic constants ($...) in section's numbers, but you can't define them here.
+
+//// test
+//SECTION SKILL 49
+//{
+//    NAME test skill 1
+//    STR 10
+//    DEX 50
+//    INT 50
+//    SUCCESSRAISE 50
+//    FAILRAISE 20
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 50
+//{
+//    NAME test skill 2
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 51
+//{
+//    NAME test skill 3
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 52
+//{
+//    NAME test skill 4
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 53
+//{
+//    NAME test skill 5
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 54
+//{
+//    NAME test skill 6
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 55
+//{
+//    NAME test skill 7
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 56
+//{
+//    NAME test skill 8
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 57
+//{
+//    NAME test skill 9
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+//
+//// test
+//SECTION SKILL 58
+//{
+//    NAME test skill 10
+//    STR 15
+//    DEX 45
+//    INT 66
+//    SUCCESSRAISE 90
+//    FAILRAISE 10
+//    UNHIDEONUSE 0
+//    UNHIDEONFAIL 0
+//}
+
+
+//EOF - leave this line at the end of the file

@@ -7,40 +7,52 @@
 
 public cmd_setskills( const caller )
 {
+	readCommandParams(caller);
+	
+	new skill = INVALID, value = INVALID, skillValue = INVALID;
+	
+	if(strlen(__cmdParams[0]) || strlen(__cmdParams[1]))
+		if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]))
+		{
+			chr_message(caller,_,"You must give the skill and value as integers");
+			return;
+		}
+		else
+		{
+			skill = str2Int(__cmdParams[0]);
+			value =str2Int(__cmdParams[1]);
+			skillValue = (skill << 16) + value;
+		}
+	
 	chr_message(caller, _, "Select character.. "); 
-	target_create( caller, _, _, _, "target_setskills");
+	target_create( caller,skillValue , _, _, "target_setskills");
 }
 
 public cmd_skills(chr)
 {
-	//if extended skillsystem is active print additional skill values
-	#if ACTIVATE_EXTENDED_SKILLSYSTEM
-	for(new sk = SK_COUNT; sk < SK_EXT_COUNT; sk++)
-	{
-		chr_message(caller,_,"%s %d (%d)",__skillinfo[sk - SK_COUNT][_skName],chr_getSkill(chr,sk),chr_getBaseSkill(chr,sk));
-	}
-	#endif
-
 	skills_char( chr, chr, false );
 }
 
-public target_setskills( const target, const caller, const chr)
+public target_setskills( const target, const caller, const chr,x,y,z,unused,skillValue)
 {
 	if(!isChar(chr)) 
 	{
 		chr_message(caller,_ , "Skills work only on character" );
 		return;
 	}
-
-	//if extended skillsystem is active print additional skill values
-	#if ACTIVATE_EXTENDED_SKILLSYSTEM
-	for(new sk = SK_COUNT; sk < SK_EXT_COUNT; sk++)
+	
+	//opengump if no params are given
+	if(skillValue == INVALID)
 	{
-		chr_message(caller,_,"%s %d (%d)",__skillinfo[sk - SK_COUNT][_skName],chr_getSkill(chr,sk),chr_getBaseSkill(chr,sk));
+		//skills_char( caller, chr, true );
+		chr_message(caller,_,"Sorry, due to a little bug the 'setskills gump is not available, use 'setskills <skill> <value> instead");
+		return;
 	}
-	#endif
-
-	skills_char( caller, chr, true );
+	
+	new skill = skillValue >> 16;
+	new value = skillValue & 0xFFFF;
+	
+	chr_setSkill(chr,skill,value);
 }
 
 
@@ -48,10 +60,8 @@ public skills_char( const caller, const chr, const edit )
 {
 	new menu = gui_create( 50, 50, true, true, true, "handle_skills_char" );
 	gui_addGump( menu, 0, 0, 0x04CC, 0 );
-//	gui_addBackground( menu, 0x0E14, 128, 128 );
-	gui_setProperty( menu, MP_BUFFER, 0, PROP_CHARACTER );
-	gui_setProperty( menu, MP_BUFFER, 1, chr );
-	gui_setProperty( menu, MP_BUFFER, 3, 1 );
+	
+	chr_setLocalIntVar(caller,CLV_CMDTEMP,chr);	
 
 	if(edit) gui_addButton( menu, 250, 265, 0x084A, 0x084B, 1 );
 
@@ -75,25 +85,39 @@ public skills_char( const caller, const chr, const edit )
 			position=38;
 		}
 
-		gui_addText( menu, 28, position, _, "%s : ", skillName[ skillByName[i] ] );
+		gui_addText( menu, 28, position, _, "%s : ", skillName[i] );
+		
+		gui_addText( menu, 220, position, _, "%d", chr_getSkill(chr,i));
 		if(edit)
-			gui_addPropField( menu, 220, position, 50, 30, CP_SKILL, skillByName[i], colorEdit );
-		else gui_addText( menu, 220, position, _, "%d", chr_getSkill(chr,i));
-		position+=20;
+			gui_addInputField( menu, 260, position, 50, 30, i, TXT_COLOR,"%d",chr_getBaseSkill(chr,i));
+		else gui_addText( menu, 260, position, _, "%d", chr_getBaseSkill(chr,i));
+		position += 20;
 	}
 
 	gui_show( menu, caller);
 }
 
-public handle_skills_char( const caller, const menu, const button )
+public handle_skills_char( const menu, const caller, const button )
 {
-	if( button==MENU_CLOSED )
+	if( button == MENU_CLOSED )
 		return;
 
-	if( button==1 ) { //apply
-		chr_teleport( gui_getProperty( menu, MP_BUFFER, 1 ));
-	}
-
+	if( button == 1 ) 
+	{ //apply
+		new buffer[5],chr = chr_getLocalIntVar( caller, CLV_CMDTEMP);
+		
+		for(new sk = 0; sk < SK_COUNT; sk++)
+		{
+			gui_getProperty(menu,MP_UNI_TEXT,sk,buffer);
+			if(isStrInt(buffer))
+				chr_setSkill(chr,sk,str2Int(buffer));
+			else chr_message(chr,_,"Invalid skill value '%d'",buffer);
+			
+			log_message("buffer %d:'%s'^n",sk,buffer);
+		}
+		
+		chr_teleport(chr);
+	}	
 }
 
 /*! }@ */

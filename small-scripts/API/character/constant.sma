@@ -67,7 +67,7 @@ const CP_TRAININGPLAYERIN = 133;//!< the skill the char is training a player in
 const CP_PRIV = 134;		//!< priv flags TODO:link to PRIV list
 const CP_DAMAGETYPE = 135;	//!< only npc, the damage type, one of the DAMAGE_* constants TODO:link to DAMAGE_*
 
-const CP_ACCOUNT = 200;		//!< accoount number
+const CP_ACCOUNT = 200;		//!< account number
 const CP_ADVOBJ = 201;		//!< if character used advancement gate, this is the serial of the gate
 const CP_ATT = 202;		//!< attack power
 const CP_ATTACKER = 203;	//!< if the character is attacked, this is the attacker's serial

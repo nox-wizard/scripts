@@ -16,6 +16,12 @@
 */
 
 #define _SKILLS_DEBUG_ 1 //<! set to 1 if you want debug messages to be printed
+#define ACTIVATE_EXTENDED_SKILLSYSTEM 1	//!< set to 1 to activate the extended skillsystem
+#define MAX_SKILL_SUM 7000	//!< maximum value the skillsumcan reach
+#define MAX_SKILL_VALUE 1000 	//!< maximum value a skill can reach, not considering modifiers
+#define SK_ADDITIONAL_MAX 10	//!< max number of additional skills in skills2.xss, change it if you need more skills
+
+//==================   DO NOT MODIFY ANYTHING BELOW THIS LINE  ======================== 
 
 /*!
 \brief skill constants used to identify a skill with a number always use this constants to refer to a skill
@@ -71,65 +77,111 @@ enum
 	SK_MEDITATION = 46,
 	SK_STEALTH = 47,
 	SK_REMOVETRAPS = 48,
-	SK_COUNT
+	SK_STD_COUNT,
 };
 
+#if ACTIVATE_EXTENDED_SKILLSYSTEM 
+//if extended skillsystem is not active compiler won't generate code for this
 
-public skillName[SK_COUNT][] = {
-"Alchemy",
-"Anatomy",
-"Animal Lore",
-"Item Id",
-"Arms Lore",
-"Parrying",
-"Begging",
-"Blacksmithing",
-"Bowcraft",
-"Peacemaking",
-"Camping",
-"Carpentery",
-"Cartography",
-"Cooking",
-"Detecting hidden",
-"Enticement",
-"Evaluating intelligence",
-"Healing",
-"Fishing",
-"Forensic",
-"Herding",
-"Hiding",
-"Provocation",
-"Inscription",
-"Lockpicking",
-"Magery",
-"Magic resistance",
-"Tactics",
-"Snooping",
-"Musicianship",
-"Poisoning",
-"Archery",
-"Spirit Speak",
-"Stealing",
-"Tailoring",
-"Taming",
-"Taste Id",
-"Tinkering",
-"Tracking",
-"Veterinary",
-"Swordsmanship",
-"Macefighting",
-"Fencing",
-"Wrestling",
-"Lumberjacking",
-"Mining",
-"Meditation",
-"Stealth",
-"Remove Traps"
+
+//skill properties structure
+enum __skillStruct
+{
+	_skFailRaise,		//<! how much the base skill raises on failure 
+	_skSuccessRaise,	//<! how much the base skill raises on success 
+	_skStr,			//<! how much strength influences skill value in %
+	_skDex,			//<! how much dex influences skill value in %
+	_skInt,			//<! how much int influences skill value in %
+	_skUnhideOnFail,	//<! true if character is unhidden when fails skill check
+	_skUnhideOnUse,		//!< true if charcater is unhidden when he uses the skill
+}	//<! skill data type, you can modify this to your needs, but remember to update __skillinfo[][] too
+
+new SK_ADDITIONAL_COUNT = 0;	//!< skills loaded from skills2.sma - DO NOT TOUCH!
+new SK_COUNT = SK_STD_COUNT;	//!< total number of skills - DO NOT TOUCH!
+/*!
+\brief mixed array with additional skills characteristics
+
+add a row for each new skill
+*/
+new __skillinfo[SK_ADDITIONAL_MAX][__skillStruct];
+#endif
+
+#define CLASSES_COUNT 1	//!< maximum number of classes
+new __classSkillCapModifier[SK_STD_COUNT + SK_ADDITIONAL_MAX][CLASSES_COUNT];//!< skillcap modifiers derived from classes
+
+#define RACES_COUNT 1	//!< maximum number of races
+new __raceSkillCapModifier[SK_STD_COUNT + SK_ADDITIONAL_MAX][RACES_COUNT];//!< skillcap modifiers derived from races
+
+public skillName[SK_STD_COUNT + SK_ADDITIONAL_MAX][] = 
+{
+	"Alchemy",
+	"Anatomy",
+	"Animal Lore",
+	"Item Id",
+	"Arms Lore",
+	"Parrying",
+	"Begging",
+	"Blacksmithing",
+	"Bowcraft",
+	"Peacemaking",
+	"Camping",
+	"Carpentery",
+	"Cartography",
+	"Cooking",
+	"Detecting hidden",
+	"Enticement",
+	"Evaluating intelligence",
+	"Healing",
+	"Fishing",
+	"Forensic",
+	"Herding",
+	"Hiding",
+	"Provocation",
+	"Inscription",
+	"Lockpicking",
+	"Magery",
+	"Magic resistance",
+	"Tactics",
+	"Snooping",
+	"Musicianship",
+	"Poisoning",
+	"Archery",
+	"Spirit Speak",
+	"Stealing",
+	"Tailoring",
+	"Taming",
+	"Taste Id",
+	"Tinkering",
+	"Tracking",
+	"Veterinary",
+	"Swordsmanship",
+	"Macefighting",
+	"Fencing",
+	"Wrestling",
+	"Lumberjacking",
+	"Mining",
+	"Meditation",
+	"Stealth",
+	"Remove Traps"
+	
+#if ACTIVATE_EXTENDED_SKILLSYSTEM //do not put anything here
+	,//blanks are needed to avoid memory allocation problems when loading skills with long names 
+	"additional skill 1             ",
+	"additional skill 2             ",
+	"additional skill 3             ",
+	"additional skill 4             ",
+	"additional skill 5             ",
+	"additional skill 6             ",
+	"additional skill 7             ",
+	"additional skill 8             ",
+	"additional skill 9             ",
+	"additional skill 10            "
+#endif
 }; //!< skill names array, to be indexed with SK_ constants
 
 
 
-public skillByName[SK_COUNT] = {
+public skillByName[SK_STD_COUNT] = {
 SK_ALCHEMY,
 SK_ANATOMY,
 SK_ANIMALLORE,
@@ -189,7 +241,7 @@ This array contains the names of the functions called to execute
 a skill.
 Changing values in the array will cause a different function to be called to execute a skill
 */
-public __skillFunctions[SK_COUNT][] = {
+public __skillFunctions[SK_STD_COUNT][] = {
 	"__nxw_sk_alchemy",
 	"__nxw_sk_anatomy",
 	"__nxw_sk_animalLore",

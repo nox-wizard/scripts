@@ -4,6 +4,7 @@ public __startServer()
 	
 	initCommandSystem();
 	initPageSystem();
+	initExtendedSkillsystem();
 	
 	printf("^n================  END OF STARTUP SCRIPTS ===================^n^n");
 }

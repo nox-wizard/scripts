@@ -85,7 +85,7 @@ public regioncp_cback(const menu, const chr, const btn)
 	if(!strcmp(weather,"sun")) rgn_setWeather(reg,WEATHER_SUN);
 	else 	if(!strcmp(weather,"rain")) rgn_setWeather(reg,WEATHER_RAIN);
 		else 	if(!strcmp(weather,"snow")) rgn_setWeather(reg,WEATHER_SNOW);
-			else chr_message(chr,_,"Invalid weather");
+			else chr_message(chr,_,"Invalid weather %s",weather);
 
 	rgn_setGate(reg,gui_getProperty(menu,MP_CHECK,4));
 	rgn_setMagicDamage(reg,gui_getProperty(menu,MP_CHECK,5));

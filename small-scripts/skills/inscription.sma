@@ -73,14 +73,14 @@ static __inscription_scroll(const chr, const scroll)
 	new skill_hi;
 	switch(id)
 	{
-		case 7981..7988: {skill_low = 10;  skill_hi = 30;} //1st circle
-		case 7989..7996: {skill_low = 30;  skill_hi = 40;} //2nd circle
-		case 7997..8004: {skill_low = 40;  skill_hi = 50;} //3rd circle
-		case 8005..8012: {skill_low = 50;  skill_hi = 60;} //4th circle
-		case 8013..8020: {skill_low = 60;  skill_hi = 70;} //5th circle
-		case 8021..8028: {skill_low = 70;  skill_hi = 80;} //6th circle
-		case 8029..8036: {skill_low = 80;  skill_hi = 90;} //7th circle
-		case 8037..8044: {skill_low = 90;  skill_hi = 100;} //8th circle
+		case 7981..7988: {skill_low = 100;  skill_hi = 300;} //1st circle
+		case 7989..7996: {skill_low = 300;  skill_hi = 400;} //2nd circle
+		case 7997..8004: {skill_low = 400;  skill_hi = 500;} //3rd circle
+		case 8005..8012: {skill_low = 500;  skill_hi = 600;} //4th circle
+		case 8013..8020: {skill_low = 600;  skill_hi = 700;} //5th circle
+		case 8021..8028: {skill_low = 700;  skill_hi = 800;} //6th circle
+		case 8029..8036: {skill_low = 800;  skill_hi = 900;} //7th circle
+		case 8037..8044: {skill_low = 900;  skill_hi = 1000;} //8th circle
 	}
 
 	//if success copy scroll
