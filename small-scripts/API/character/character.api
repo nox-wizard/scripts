@@ -928,7 +928,7 @@ native chr_countItems(const chr, const itemtype, const color = -1);
 \fn chr_getBankBox(const chr, const bankboxtype = 0)
 \param chr tha character
 \param bankboxtype the bank box type, normal(0) or gold-only(123) bank.
-\brief opens character's bankbox
+\brief gets serial of character's bankbox
 
 normal bankbox(BANKBOX_NORMAL) contains gold and items, gold-only bankbox (BANKBOX_GOLDONLY)
 contains only gold pieces. gold-only bank can be opened only if the extended bank system
@@ -2326,6 +2326,15 @@ stock chr_setAmxFlags(const chr, const idx, const value)
 {
 	chr_setProperty(chr, CP_AMXFLAGS, idx, value);
 }
+
+
+/** @} */ // script_API_character_vars Local Vars
+//============================   Basic Gumps  =================================
+/** \defgroup script_API_character_basicgumps 
+ *  @{
+ */
+/*!
+
 /*!
 \author Wintermute
 \fn chr_showMessage(const chr, const target)
@@ -2334,7 +2343,15 @@ stock chr_setAmxFlags(const chr, const idx, const value)
 \brief shows a message anove the head of a character, visible only to one another character
 \return 1 or INVALID if chr is not a valid character serial
 */
-
 native chr_showPaperdoll(const chr, const target);
-/** @} */
-/** @} */ // end of script_API_calendar
+
+/*!
+\author Wintermute
+\fn itm_showContainer(const itm, const chr)
+\brief show the itm if it is an container to character chr
+\param 1: the item to be displayed (can be bank box, backpack, whatever)
+\param 2: the character the item is shown to
+*/
+native itm_showContainer(const itm, const chr);
+
+/** @} */ // end of script_API_character_basicgumps 
