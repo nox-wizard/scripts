@@ -1,6 +1,31 @@
 /*!
 \defgroup script_commands_cset 'cset
 \ingroup script_commands
+\brief sets properties of a character
+
+\b syntax: 'cset property value ["t"] 
+
+- property/value: the property to be set,choose from the list below,each property allows different values:
+	-# "ai": npcai
+	-# "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
+	-# "gmfx": gm moving effect
+	-# "light": character fixed light level
+	-# "owner": owner serial
+	-# "shop": character is a shopkeeper (0 no - 1 yes)
+	-# "spattack": type of spell attack
+	-# "spadelay": delay between 2 spell attacks
+	-# "speech": speech block
+	-# "split": split
+	-# "splitchance": splitchance
+	-# "squelch": 1 squelched - 0 not squelched
+	-# "train": if npc can train (0 no - 1 yes)
+	-# "trigger": npc trigger
+	
+- "t": bypass command area and get a target
+
+Properties are recognized also if you type only a few initial letters. Unless there is ambiguity
+between properties names you can ype only the first letter, if you get an ambiguity message type some
+more letters.
 
 @{
 */
@@ -8,34 +33,13 @@
 /*!
 \author Fax
 \fn cmd_cset(const chr)
-\brief sets properties of a character
+\param chr: the character who used the command
+\since 0.82
+\brief 'cset command start function
 
-<B>syntax:<B> 'cset property value ["t"] 
-<B>command params:</B>
-<UL>
-<LI> property: the property to be set,choose from the list below,each property allows different values:
-	<UL>
-	<LI> "ai": npcai
-	<LI> "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
-	<LI> "gmfx": gm moving effect
-	<LI> "light": character fixed light level
-	<LI> "owner": owner serial
-	<LI> "shop": is character is a shopkeeper (0 no - 1 yes)
-	<LI> "spattack": type of spell attack
-	<LI> "spadelay": delay between 2 spell attacks
-	<LI> "speech": speech block
-	<LI> "split": split
-	<LI> "splitchance": splitchance
-	<LI> "squelch": 1 squelched - 0 not squelched
-	<LI> "train": if npc can train (0 no - 1 yes)
-	<LI> "trigger": npc trigger
-	</UL>
-<LI> "t": bypass command area and get a target
-</UL>
+This function is called by sources on 'cset command detection.\n
+You can change it in commands.txt.
 
-Properties are recognized also if you type only a few initial letters. Unless there is ambiguity
-between properties names you can ype only the forst letter, if you get an ambiguity message type some
-more letters.
 */
 public cmd_cset(const chr)
 {

@@ -1,6 +1,13 @@
 /*!
 \defgroup script_commands_flip 'flip
 \ingroup script_commands
+\brief flips an item
+
+\b syntax: 'flip
+
+The character can flip only items he can reach and handle (not too heavy), flipping an item causes
+stamina loss depending on the item's weight.\n
+SEERs and higher staff can flip everything without stamina loss.
 
 @{
 */
@@ -8,13 +15,12 @@
 /*!
 \author Fax
 \fn cmd_flip(const chr)
-\brief flips an item
+\param chr: the character who used the command
+\since 0.82
+\brief 'flip command start function
 
-<B>syntax:<B> 'flip
-
-The character can flip only items he can reach and handle (not too heavy), flipping an item causes
-stamina loss depending on the item's weight.<br>
-SEERs and higher staff can flip everything without stamina loss.
+This function is called by sources on 'flip command detection.\n
+You can change it in commands.txt.
 */
 public cmd_flip(const chr)
 {

@@ -1,16 +1,22 @@
 /*!
 \defgroup script_command_action 'action
 \ingroup script_commands
+\brief makes character perform an action
 
+\b syntax: 'action action
+- action: the action code, from \ref ACTION_ constants
 @{
 */
 
 /*!
 \author Fax(const chr)
-\fn cmd_action
-\brief makes character performan action
+\fn cmd_action(const chr)
+\param chr: the character who used the command
+\since 0.82
+\brief 'action command start function
 
-<B>syntax:<B> 'action action
+This function is called by sources on 'action command detection.\n
+You can change it in commands.txt.
 */
 public cmd_action(const chr)
 {

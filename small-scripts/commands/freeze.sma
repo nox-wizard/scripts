@@ -1,27 +1,29 @@
 /*!
 \defgroup script_command_freeze 'freeze
 \ingroup script_commands
+\brief freezes a character
 
+\b syntax: 'freeze status ["t"]
+- status: the freezing status
+	- "on": frozen
+	- "off": free
+	
+- "t": bypass command area and get a target
+
+If area effect is active, all characters in area will be frozen.
 @{
 */
 
 /*!
 \author Fax
 \fn cmd_freeze(const chr)
-\brief freezes a character
+\param chr: the character who used the command
+\since 0.82
+\brief 'freeze command start function
 
-<B>syntax:<B> 'freeze ["on"/"off"]["t"]
-<B>command params:</B>
-<UL>
-	<UL>
-	<LI> "on": freeze
-	<LI> "off": off
-	</UL>
-<LI> "t": bypass command area and get a target
+This function is called by sources on 'freeze command detection.\n
+You can change it in commands.txt.
 
-</UL>
-
-If area effect is active, all characters in area will be frozen.
 */
 public cmd_freeze(const chr)
 {

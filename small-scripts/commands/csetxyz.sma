@@ -1,30 +1,33 @@
 /*!
 \defgroup script_commands_csetxyz 'csetxyz
 \ingroup script_commands
+\brief sets location-type properties of a character
 
+\b syntax: 'csetxyz property x y z ["t"]
+- property: the property to be set,choose from the list below,each property allows different values:
+	-#
+	-# "food": food position, for freely wandering npcs
+	-# "home": home position, for freely wandering npcs
+	-# "work": work place, for freely wandering npcs
+- x y z: the location
+- "t": bypass command area and get a target
+
+Properties are recognized also if you type only a few initial letters. Unless there is ambiguity
+between properties names you can ype only the forst letter, if you get an ambiguity message type some
+more letters.
 @{
 */
 
 /*!
 \author Fax
 \fn cmd_csetxyz(const chr)
-\brief sets location-type properties of a character
+\param chr: the character who used the command
+\since 0.82
+\brief 'csetxyz command start function
 
-<B>syntax:<B> 'csetxyz property x y z ["t"]
-<B>command params:</B>
-<UL>
-<LI> property: the property to be set,choose from the list below,each property allows different values:
-	<UL>
-	<LI> "food": food position, for freely wandering npcs
-	<LI> "home": home position, for freely wandering npcs
-	<LI> "work": work place, for freely wandering npcs
-</UL>
-<LI> "t": bypass command area and get a target
-</UL>
+This function is called by sources on 'csetxyz command detection.\n
+You can change it in commands.txt.
 
-Properties are recognized also if you type only a few initial letters. Unless there is ambiguity
-between properties names you can ype only the forst letter, if you get an ambiguity message type some
-more letters.
 */
 public cmd_csetxyz(const chr)
 {

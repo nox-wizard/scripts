@@ -1,18 +1,22 @@
 /*!
 \defgroup script_command_buy 'buy
 \ingroup script_commands
+\brief shows a venfor buy gump
 
+\b syntax: 'buy 
+
+the targetted character will show you his buy gump
 @{
 */
 
 /*!
-\author Fax(const chr)
-\fn cmd_buy
-\brief shows a venfor buy gump
+\author Fax
+\fn cmd_buy(const chr)
+\param chr: the character who used the command
+\brief 'buy command start function
 
-<B>syntax:<B> 'buy 
-
-the targetted character will show you his buy gump
+This function is called by sources on 'buy command detection.\n
+You can change it in commands.txt.
 */
 public cmd_buy(const chr)
 {

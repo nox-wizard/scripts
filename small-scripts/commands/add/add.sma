@@ -96,7 +96,7 @@ public cmd_add(const chr)
 		return;
 	}
 
-	chr_addLocalIntVar(chr,CLV_CMDTEMP,amount);
+	chr_setTempIntVar(chr,CLV_CMDTEMP,amount);
 
 	if(isStrInt(__cmdParams[0]))
 	{
@@ -141,9 +141,8 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 	#if _CMD_DEBUG_
 		log_message("^tadding npc at: %d %d %d ^n",x,y,z);
 	#endif
-	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-	chr_delLocalVar(chr,CLV_CMDTEMP);
-
+	new amount = chr_getTempIntVar(chr,CLV_CMDTEMP);
+	
 	getMapLocation(object,x,y,z);
 
 	for(new i = 0; i < amount; i++)
@@ -158,7 +157,7 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 	//handle continuous adding mode
 	if(chr_isaLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE))
 	{
-		chr_addLocalIntVar(chr,CLV_CMDTEMP,1);
+		chr_setTempIntVar(chr,CLV_CMDTEMP,1);
 		target_create(chr,scriptID,_,_,"cmd_add_npc_targ");
 	}
 }
@@ -170,13 +169,12 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 */
 public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 {
+	new amount = chr_getTempIntVar(chr,CLV_CMDTEMP);
+	
 	#if _CMD_DEBUG_
-		log_message("^tadding item %d at: %d %d %d",scriptID,x,y,z);
+		log_message("^tadding %d items of type %d at: %d %d %d",amount,scriptID,x,y,z);
 	#endif
-	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-	//printf("amount: %d", amount);
-	chr_delLocalVar(chr,CLV_CMDTEMP);
-
+	
 	if(isChar(object))
 		if(!chr_isNpc(object))
 		{
@@ -229,7 +227,7 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 	//handle continuous adding mode
 	if(chr_isaLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE))
 	{
-		chr_addLocalIntVar(chr,CLV_CMDTEMP,1);
+		chr_setTempIntVar(chr,CLV_CMDTEMP,1);
 		target_create(chr,scriptID,_,_,"cmd_add_itm_targ");
 	}
 }

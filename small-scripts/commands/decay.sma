@@ -1,6 +1,14 @@
 /*!
 \defgroup script_commands_decay 'decay
 \ingroup script_commands
+\brief decays an item
+
+\b syntax: 'decay time ["t"] 
+
+- time: the time the item will decay in (in seconds), pass "off" to set decay off
+- "t": bypass command area and get a target
+
+If area effect is active, all items in area will have decay set.
 
 @{
 */
@@ -8,16 +16,12 @@
 /*!
 \author Fax
 \fn cmd_decay(const chr)
-\brief decays an item
+\param chr: the character who used the command
+\since 0.82
+\brief 'decay command start function
 
-<B>syntax:<B> 'decay decayTime/"off" ["t"] 
-params:
-<UL>
-	<LI> decayTime/"off": the time the item will decay in, or pass "off" to set decay off
-	<LI> "t": bypass command area and get a target
-</UL>
-
-If area effect is active, all items in area will have decay set.
+This function is called by sources on 'decay command detection.\n
+You can change it in commands.txt.
 */
 public cmd_decay(const chr)
 {

@@ -1,26 +1,26 @@
 /*!
 \defgroup script_commands_dye 'dye
 \ingroup script_commands
+\brief dyes an item
 
+\b syntax: 'dye color ["t"] 
+
+- color: color code, integer or hexadecimal (preceded by 0x) from hues.mul
+- "t": bypass command area and get a target
+
+If area effect is active, all items in area will be dyed.
 @{
 */
 
 /*!
 \author Fax
 \fn cmd_dye(const chr)
-\brief dyes an item
+\param chr: the character who used the command
+\since 0.82
+\brief 'dye command start function
 
-<B>syntax:<B> 'dye color ["t"] 
-<B>command params:</B>
-<UL>
-<UL>
-	<LI> color: color code, integer or hexadecimal (preceded by 0x)
-	<LI> "t": bypass command area and get a target
-</UL>
-</UL>
-
-If area effect is active, all characters in area will be dyed.
-\todo dye gump
+This function is called by sources on 'dye command detection.\n
+You can change it in commands.txt.
 */
 public cmd_dye(const chr)
 {

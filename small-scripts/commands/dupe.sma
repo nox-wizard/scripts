@@ -1,25 +1,27 @@
 /*!
 \defgroup script_command_dupe 'dupe
 \ingroup script_commands
+\brief duplicates an item
 
+\b syntax: 'dupe n ["t"]
+- n: number of copies
+- "t": bypass command area and get a target
+
+If area effect is active, all items in area will be cloned.\n
+Items in the player's backpack are not copied.\n
+New items are moved to original item's position
 @{
 */
 
 /*!
 \author Fax
 \fn cmd_dupe(const chr)
-\brief duplicates an item
+\param chr: the character who used the command
+\since 0.82
+\brief 'dupe command start function
 
-<B>syntax:<B> 'dupe n ["t"]
-<B>command params:</B>
-<UL>
-	<LI> n: number of copies
-	<LI> "t": bypass command area and get a target
-</UL>
-
-If area effect is active, all items in area will be cloned.<br>
-Items in the player's backpack are not copied.<br>
-New items are moved to original item's position
+This function is called by sources on 'dupe command detection.\n
+You can change it in commands.txt.
 */
 public cmd_dupe(const chr)
 {

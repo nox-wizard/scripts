@@ -2,22 +2,48 @@
 \defgroup script_command_area 'area
 \ingroup script_commands
 
+\brief sets a command area for a character
+
+\b syntax: 'area [R][include][ncommands]
+- R: the area radius (default = VISRANGE)
+- include:
+	-# "itm": include items only
+	-# "chr": include chr only (default)
+	-# "all": include all 
+- ncommands: number of commands that will be affected from the area effect. (default = 1000000000) 
+
+Calling 'area with no parameters will result in a default area to be set, centered at the 
+character's position and with the values specified in the script.\n
+If the character already had a command area set, calling 'area with no parameters
+will only delete the area, and no new area is set.
+
+\section command_areas Command areas
+The 'area command is used to set command areas, a command area is a set of objects in a certain map area.\n
+When a command area is set, all commands will act on every object in the area as if you used the
+command on each object separately.\n
+This is useful when you want to apply the same command on a big amount of objects and you don't 
+want to waste time retyping the command and targetting every single object.\n
+If you define the number of commands the command area will be cleared after the given number 
+of commanda have been used.\n
+Not all commands support command areas, and every command that supports them has an optional last
+parameter ("t") that allows you to bypass the command area for that command, when passing "t" to a
+command as last parameter the command works as if the command area was not set, allowing you to aplly
+a command to a single object without having to clear and reset the area.\n
 @{
 */
 
 /*!
 \defgroup script_command_area_class command area system
-\note MODIFYING THIS FILE MAY CAUSE THE INGAME COMMANDS NOT TO WORK PROPERLY!
 @{
 */
 
-const INCLUDE_CHR = 0x1; //!< include character in the area
-const INCLUDE_ITM = 0x2; //!< include items in the area 
-const INCLUDE_ALL = 0x3; //!< incllude all
+#define INCLUDE_CHR 0x1 //!< include character in the area
+#define INCLUDE_ITM 0x2 //!< include items in the area 
+#define INCLUDE_ALL 0x3 //!< incllude all
 
-const DEFAULT_R = VISRANGE;		//!< default value for the area radius
-const DEFAULT_INCLUDE = INCLUDE_ALL;	//!< default value for the objects to include in an area
-const DEFAULT_CMDS = 50000;	//!< default area duration (number of commands)
+#define DEFAULT_R VISRANGE		//!< default value for the area radius
+#define DEFAULT_INCLUDE INCLUDE_ALL	//!< default value for the objects to include in an area
+#define DEFAULT_CMDS 50000	//!< default area duration (number of commands)
 
 #define AREA_INVALID -1 //!< invalid area serial
 /*!
@@ -214,25 +240,10 @@ public area_chars(const area)
 /*!
 \author Fax
 \fn cmd_area(const chr)
-\brief sets a command area for a character
+\brief start function for 'area command
 
-<B>syntax:</B> 'area [R] [include] [duration]
-<B>command params:</B>
-<UL>
-<LI> R: the area radius (default = VISRANGE)
-<LI> include:
-	<UL>
-	<LI> "itm": include items only
-	<LI> "chr": include chr only (default)
-	<LI> "all": include all 
-<LI> duration: number of commands that will be affected from the area effect. (default = unlimited (0xFFFFFFFF)) 
-</UL>
-
-Calling 'area with no parameters will result in a default area to be set, centered at the 
-character's position and with the values specified in the script.<br>
-If the character already had a command area set, calling 'area with no parameters
-will only delete the area, and no new area is set.
-
+This function is called by sources on 'area command detection.\n
+You can change it in commands.txt.
 */
 public cmd_area(const chr)
 {
@@ -336,7 +347,7 @@ public cmd_area(const chr)
 	}
 
 	if(!strcmp(__cmdParams[2],"unlimited"))
-		areas[area][area_cmdsLeft] = 0xFFFFFFFF;
+		areas[area][area_cmdsLeft] = 1000000000;
 	else 	if(!isStrInt(__cmdParams[2]))
 		{
 			chr_message(chr,_,msg_commandsDef[96]);

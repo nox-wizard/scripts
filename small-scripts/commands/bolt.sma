@@ -1,6 +1,10 @@
 /*!
 \defgroup script_command_bolt 'bolt
 \ingroup script_commands
+\brief kills a character with showing a lightning bolt
+
+\b syntax: 'bolt ["t"]
+- "t": bypass command area and get a target
 
 @{
 */
@@ -8,14 +12,10 @@
 /*!
 \author Horian(const chr)
 \fn cmd_bolt
-\brief kills a character with showing a lightning bolt
+\brief start function for 'bolt command
 
-<B>syntax:<B> 'bolt ["t"]
-<B>command params:</B>
-<UL>
-	<LI> "t": bypass command area and get a target
-</UL>
-
+This function is called by sources on 'bolt command detection.\n
+You can change it in commands.txt.
 */
 public cmd_bolt(const chr)
 {

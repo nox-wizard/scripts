@@ -1,6 +1,12 @@
 /*!
 \defgroup script_command_fullstats 'fullstats
 \ingroup script_commands
+\brief raises all stats (hp,mana,stamina) to maximum
+
+\b syntax: 'fullstats ["t"]
+- "t": bypass command area and get a target
+
+If area effect is active, all characters in area will have stats raised.
 
 @{
 */
@@ -8,15 +14,12 @@
 /*!
 \author Fax
 \fn cmd_fullstats(const chr)
-\brief raises all stats (hp,mana,stamina) to maximum
+\param chr: the character who used the command
+\since 0.82
+\brief 'fullstats command start function
 
-<B>syntax:<B> 'fullstats ["t"]
-<B>command params:</B>
-<UL>
-	<LI> "t": bypass command area and get a target
-</UL>
-
-If area effect is active, all characters in area will have stats raised.
+This function is called by sources on 'fullstats command detection.\n
+You can change it in commands.txt.
 */
 public cmd_fullstats(const chr)
 {

@@ -1,22 +1,32 @@
 /*!
 \defgroup script_command_func 'func
 \ingroup script_commands
+\brief executes a Small function
 
+\b syntax: 'func [function][...]
+- function: the function name
+- ...: params to be passed to the function
+
+The function prototype must be:\n
+\code
+	public function(chr,param1, param2, ...)
+\endcode
+\n
+The first parameter will contain the character that used the command, remaining parameters are the
+parameters specified in the command call.\n
+Parameters can only be integers.
 @{
 */
 
 /*!
 \author Fax
 \fn cmd_func(const chr)
-\brief executes a Small function
+\param chr: the character who used the command
+\since 0.82
+\brief 'func command start function
 
-<B>syntax:</B> 'func [function][...]
-<b>params:</b>
-<UL>
-<LI> function: the function name
-<LI> ...: params to be passed to the function
-Calls a PUBLIC function in the scripts passing given parameters.
-<br>
+This function is called by sources on 'func command detection.\n
+You can change it in commands.txt.
 */
 public cmd_func(const chr)
 {

@@ -2,34 +2,42 @@
 \defgroup script_command_align 'align
 \ingroup script_commands
 
+\brief alignes an object to another
+
+\b syntax: 'align x/y/z
+- x/y/z: the coordinate you want to align 
+
+This command does not support command areas.\n
+
+Character is prompted to target something wich will be taken as reference.\n
+Then it will be prompted to target an object tah will be aligned to the reference,
+the reference can be an object or a map location
+
 @{
 */
 
 /*!
 \author Fax
-\since 0.82
 \fn cmd_align(const chr)
-\brief alignes one object to another
+\param chr: the character who used the command
+\since 0.82
+\brief 'align command start function
 
-<B>syntax:<B> 'align x/y/z
-
-<B>command params:</B>
-<UL>
-<LI> x/y/z: the coordinate you want to align 
-</UL>
-
-This command does not support command areas
+This function is called by sources on 'align command detection.\n
+You can change it in commands.txt.
 */
 public cmd_align(const chr)
 {
 	readCommandParams(chr);
-
+	
+	//param is mandatory
 	if(!strlen(__cmdParams[0]))
 	{
 		chr_message(chr,_,msg_commandsDef[81]);
 		return;
 	}
-
+	
+	//parse param
 	new d = 0;
 	switch(__cmdParams[0][0])
 	{
@@ -53,6 +61,8 @@ public cmd_align(const chr)
 \fn cmd_align_targ_ref(target, chr, object, x, y, z, unused, dir)
 \params all standard target callback params
 \brief handles first targetting in 'move command with no params
+
+The forst targetted object is the reference
 */
 public cmd_align_targ_ref(target, chr, object, x, y, z, unused, dir)
 {

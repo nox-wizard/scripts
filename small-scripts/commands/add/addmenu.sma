@@ -171,7 +171,6 @@ public addgui_cback(menu,chr,btn)
 	if(!btn) 
 	{	
 		//closing add menu deletetes localvars
-		chr_delLocalVar(chr,CLV_CMDTEMP); 
 		chr_delLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE);
 		return;
 	}
@@ -199,10 +198,8 @@ public addgui_cback(menu,chr,btn)
 		callFunction2P(funcidx(submenuData[btn][__submenuFunction]),chr,btn);
 	else 
 	{
-		chr_addLocalIntVec(chr,CLV_CMDTEMP,2);
-		chr_setLocalIntVec(chr,CLV_CMDTEMP,0,false);
-		chr_setLocalIntVec(chr,CLV_CMDTEMP,1,1);
-		callFunction3P(funcidx(submenuData[btn][__submenuFunction]),INVALID,chr,btn << 16);
+		chr_setTempIntVec(chr,CLV_CMDTEMP,false,1);
+		callFunction3P(funcidx(submenuData[btn][__submenuFunction]),INVALID,chr,(btn << 16) + 1);
 		//addgui_standard(INVALID,chr,btn << 16);	
 	}
 }
@@ -234,11 +231,9 @@ be passed the submenu and the current submenu page (index in pageData[][]), so p
 */
 public addgui_standard(menu,chr,submenuPage)
 {
-	if(!isChar(chr)) 
-	{
-		chr_delLocalVar(chr,CLV_CMDTEMP);
+	if(submenuPage == 0) 
 		return;
-	}
+	submenuPage--;
 	
 	new submenu = submenuPage >> 16;
 	new page = submenuPage & 0xFFFF;
@@ -251,6 +246,7 @@ public addgui_standard(menu,chr,submenuPage)
 	new startx,starty;
 	new itemsInBackpack = chr_getLocalIntVec(chr,CLV_CMDTEMP,0);
 	new amount = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
 	
 	//calculate header size
 	new ROWS = 2 + submenuData[submenu][__numPages]/ITEMS_PER_ROW + (submenuData[submenu][__numPages]%ITEMS_PER_ROW > 0 ? 1 : 0)
@@ -367,10 +363,7 @@ public addgui_standard_cback(menu,chr,btncode)
 			}
 		
 		//rebuild and show the menu
-		chr_delLocalVar(chr,CLV_CMDTEMP); //just for safety, not really needed
-		chr_addLocalIntVec(chr,CLV_CMDTEMP,2);
-		chr_setLocalIntVec(chr,CLV_CMDTEMP,0,itemsInBackpack);
-		chr_setLocalIntVec(chr,CLV_CMDTEMP,1,n);
+		chr_setTempIntVec(chr,CLV_CMDTEMP,itemsInBackpack,n);
 		new submenu = menu_readValue(menu,0);
 		new page = menu_readValue(menu,1);
 		addgui_standard(INVALID,chr,(submenu << 16) + page);
@@ -378,8 +371,7 @@ public addgui_standard_cback(menu,chr,btncode)
 
 	else
 	{	//store amount for cmd_add_* functions
-		chr_delLocalVar(chr,CLV_CMDTEMP);
-		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
+		chr_setTempIntVar(chr,CLV_CMDTEMP,n);
 		
 		//distinguish between items and NPC
 		if(btncode > 0)
@@ -632,9 +624,7 @@ public addgui_combat_cback(menu,chr,submenuPageAction)
 	new n,itemsInBackpack;
 	getAmountAndChk(menu,n,itemsInBackpack);
 	
-	chr_addLocalIntVec(chr,CLV_CMDTEMP);
-	chr_setLocalIntVec(chr,CLV_CMDTEMP,0,itemsInBackpack);
-	chr_setLocalIntVec(chr,CLV_CMDTEMP,1,n);
+	chr_setTempIntVec(chr,CLV_CMDTEMP,itemsInBackpack,n);
 	addgui_standard(INVALID,chr,(submenu << 16) + page);
 }
 

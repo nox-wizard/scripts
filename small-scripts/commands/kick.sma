@@ -35,7 +35,7 @@ public cmd_kick(const chr)
 public cmd_kick_targ(target, chr, object, x, y, z, unused, unused1)
 {
 	if(isChar(object))
-		chr_disconnect(chr);
+		chr_disconnect(object);
 	else chr_message(chr,_,msg_commandsDef[32]);
 }
 

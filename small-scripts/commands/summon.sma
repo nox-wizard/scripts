@@ -37,12 +37,10 @@ public cmd_summon(const chr)
 
 	if(strlen(__cmdParams[0]))
 	{
-		//handle multi word names (john smith the cool guy)
-		for(new i = 1; i < __MAX_PARAMS; i++)
-			if(strlen(__cmdParams[i]))
-				sprintf(__cmdParams[0],"%s %s",__cmdParams[0],__cmdParams[i]);
+		new name[50];
+		chr_getSpeech(chr,name);
 				
-		new chr2 = getOnlineCharFromName(__cmdParams[0]);
+		new chr2 = getOnlineCharFromName(name);
 		
 		if(!isChar(chr2))
 		{

@@ -1,6 +1,19 @@
 /*!
 \defgroup script_command_damage 'damage
 \ingroup script_commands
+\brief damages a character
+
+\b syntax:'damage amount stat ["t"]
+- amount: how much damage you want to do
+- stat: the stat to damage
+	
+	-# "hp": decrease HP (default)
+	-# "stam": decrease stamina
+	-# "mana": decrease mana
+	
+- "t": bypass command area and get a target
+
+If area effect is active, all characters in area will be damaged.
 
 @{
 */
@@ -8,22 +21,13 @@
 /*!
 \author Fax
 \fn cmd_damage(const chr)
-\brief damages a character
+\param chr: the character who used the command
+\since 0.82
+\brief 'damage command start function
 
-<B>syntax:<B> 'damage amount ["hp"/"stam"/"mana"]["t"]
-<B>command params:</B>
-<UL>
-<LI> amount: how much damage you want to do
-	<UL>
-	<LI> "hp": decrease HP (default)
-	<LI> "stam": decrease stamina
-	<LI> "mana": decrease mana
-	</UL>
-	<LI> "t": bypass command area and get a target
+This function is called by sources on 'damage command detection.\n
+You can change it in commands.txt.
 
-</UL>
-
-If area effect is active, all characters in area will be damaged.
 */
 public cmd_damage(const chr)
 {

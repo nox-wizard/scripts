@@ -28,11 +28,6 @@ Your privlevel can be set by the shard admins,
 by default you are a 'player'.
 
 ====== HERE START THE COMMANDS HELP TOPICS =======
-TOPIC 'action
-TEXT
-Makes a character perform an action
-sysntax: 'action actionnumber
-
 TOPIC 'accountscp
 TEXT
 Opens the accounts control panel
@@ -42,7 +37,47 @@ separated by "-"
 for example: 'accountscp 1-2-45-67-4
 If accountslist is not given you will be 
 prompted to target a character and his
-accounts will be shown
+account will be shown.
+ 
+With the accounts control panel you can:
+block an account: characters from that 
+      account won't be able to login
+delete an account: the account is deleted and
+      characters are lost
+ban a character: the character won't be able to login
+unban a character: a previously banned character
+      will be able to login again
+change password: type in a new password 
+ 
+For each account in the list you will see:
+Name: the account name required to login
+Last IP: the last IP that logged in
+Characters: the list of characters in that account
+
+TOPIC 'action
+TEXT
+Makes a character perform an action
+syntax: 'action actionnumber
+actionnumber: the action code
+ 
+Action codes list:
+0: walk unarmed     1:walk armed
+2: run unarmed      3:run armed
+4: stand            5:look around 
+6:lookdown          7: stand 1h attack 
+8:stand 2h attack   9:attack 1h 
+10:jab 11:fist
+12:attack 2h down   13:attack 2h wide
+14:2h jab           15:walk war mode
+16:cast direct      17:cast area 
+18:attack bow       19:attack crossbow 
+20:take hit         21:die back 
+22:die fwd          23:walk mounted
+24:ride             25:attack horse 
+26:attack bow horse 27:attack crossbow horse 
+28:slap             29:turn
+30:attack unarmed + walk 31:bow
+32:salute           33:drink
 
 TOPIC 'add
 TEXT
@@ -57,8 +92,12 @@ TOPIC 'align
 TEXT
 Alignes an object to another, or to a map location
 syntax: 'align x/y/z
-Target reference object or location and then 
-the object to be aligned.
+x/y/z: the corrdinate to align
+ 
+You will be prompted to target something that
+will be taken as reference, then the second target
+will be aligned to the reference.
+The reference can be an object or a map location.
 
 TOPIC 'area
 TEXT
