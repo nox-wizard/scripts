@@ -405,3 +405,8 @@ public isTheatreSign( const id )
 { 
 	return ((id >= 0x0C0D && id <= 0x0C0E)); 
 }
+
+public isBook( const id ) 
+{ 
+	return (id == 0xE3B || id == 0xEFA || id == 0xFBD || id == 0xFBE || 0xFEF <= id <= 0xFF4); 
+}

@@ -10,11 +10,13 @@
 const NXW_LUMBERLOGS = 10;
 
 
-/****************************************************************************
- FUNCTION : __nxw_sk_lumber
- AUTHOR   : Luxor
- PURPOSE  : This function is called by Nox-Wizard engine after tree control
- ****************************************************************************/
+/*!
+\ingroup script_skills
+\fn __nxw_sk_lumber(const cc)
+\param cc the character
+\author Luxor
+\brief This function is called by Nox-Wizard engine after tree control
+*/
 public __nxw_sk_lumber(const cc )
 {
 

@@ -6,10 +6,26 @@
 // || This file contains NoX-Wizard functions to support Anatomy          ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-/**********************************************************************************************
- FUNCTION : __anatomyTarget
- AUTHOR   : Luxor
- *********************************************************************************************/
+/*!
+\ingroup script_skills
+\fn __nxw_sk_anatomy(const chr)
+\param chr the character who used anatomy
+\author Luxor
+\brief called by __nxw_sk_main, gets a target for anatomy
+*/
+public __nxw_sk_anatomy( const chr )
+{
+	chr_message( chr, _, "Whom shall I examine?");
+	target_create( chr, _, _, _, "__anatomyTarget" );
+}
+
+/*!
+\ingroup script_skills
+\fn  __anatomyTarget( const t, const cc, const target, const x, const y, const z, const model, const param1 )
+\author Luxor
+\param t,cc,x,y,z,model,param1 standard target callback parameters
+\brief target callback for anatomy
+*/
 public __anatomyTarget( const t, const cc, const target, const x, const y, const z, const model, const param1 )
 {
 	if (target < 0) {
@@ -21,6 +37,8 @@ public __anatomyTarget( const t, const cc, const target, const x, const y, const
 		chr_message( cc, _, "You cannot analize yourself!");
 		return;
 	}
+	
+	
 	if (chr_distance(cc, target) >= 10) {
 		chr_message( cc, _, "You need to be closer to find out more about them");
 		return;
@@ -124,14 +142,5 @@ public __anatomyTarget( const t, const cc, const target, const x, const y, const
 	}
 }
 
-/**********************************************************************************************
- FUNCTION : __nxw_sk_anatomy
- AUTHOR   : Luxor
- PURPOSE  : This function is called by Nox-Wizard when a char clicks Anatomy on the skills list
- *********************************************************************************************/
-public __nxw_sk_anatomy( const chr )
-{
-	chr_message( chr, _, "Whom shall I examine?");
-	target_create( chr, _, _, _, "__anatomyTarget" );
-}
+
 

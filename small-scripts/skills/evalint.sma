@@ -6,10 +6,25 @@
 // || This file contains NoX-Wizard functions to support Ev. Intelligence ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-/**********************************************************************************************
- FUNCTION : __evintTarget
- AUTHOR   : Luxor
- *********************************************************************************************/
+/*!
+\ingroup scripts_skill
+\fn  __nxw_sk_evint(const chr)
+\author Luxor
+\brief called by __nxw_sk_main, gets a target for evalint. Called on evalint button press
+*/
+public __nxw_sk_evint( const chr )
+{
+	chr_message( chr, _, "Whom shall I examine?" );
+	target_create( chr, _, _, _, "__evintTarget" );
+}
+
+/*!
+\ingroup script_skills
+\fn __evintTarget( const t, const cc, const target, const x, const y, const z, const model, const param1 )
+\param all standard target callback params
+\author Luxor
+\brief evalint target callback
+*/
 public __evintTarget( const t, const cc, const target, const x, const y, const z, const model, const param1 )
 {
 
@@ -69,43 +84,34 @@ public __evintTarget( const t, const cc, const target, const x, const y, const z
 	new mana = chr_getMana(target);
 	new prc = mana*100/int;
 
-	switch(prc/10)
+	switch(prc)
 	{
-		case 0:
+		case 0..9:
 			chr_message( cc, _, "He/She is completely tired [%d%%]", prc);
- 		case 1:
+ 		case 10..19:
 			chr_message( cc, _, "He/She is extremely tired [%d%%]", prc);
-		case 2:
+		case 20..29:
 			chr_message( cc, _, "He/She is very much tired [%d%%]", prc);
-		case 3:
+		case 30..39:
 			chr_message( cc, _, "He/She is very tired [%d%%]", prc);
-		case 4:
+		case 40..49:
 			chr_message( cc, _, "He/She is tired [%d%%]", prc);
-		case 5:
+		case 50..59:
 			chr_message( cc, _, "He/She is slightly tired [%d%%]", prc);
-		case 6:
+		case 60..69:
 			chr_message( cc, _, "He/She is not tired [%d%%]", prc);
-		case 7:
+		case 70..79:
 			chr_message( cc, _, "He/She is slightly fresh [%d%%]", prc);
-		case 8:
+		case 80..89:
 			chr_message( cc, _, "He/She is almost fresh [%d%%]", prc);
-		case 9:
+		case 90..99:
 			chr_message( cc, _, "He/She is fresh [%d%%]", prc);
-		case 10:
+		case 100:
 			chr_message( cc, _, "He/She is fully fresh [%d%%]", prc);
 		default:
 			chr_message( cc, _, "He/She is at %d%% mana", prc);
 	}
 }
 
-/**************************************************************************************************************
- FUNCTION : __nxw_sk_evint
- AUTHOR   : Luxor
- PURPOSE  : This function is called by Nox-Wizard when a char clicks Evaluating Intelligence on the skills list
- *************************************************************************************************************/
-public __nxw_sk_evint( const chr )
-{
-	chr_message( chr, _, "Whom shall I examine?" );
-	target_create( chr, _, _, _, "__evintTarget" );
-}
+
 

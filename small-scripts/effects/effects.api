@@ -50,6 +50,6 @@ native tempfx_delete( const chr, const type = TFX_AMXCUSTOM, const doExpire = tr
 \param callback is the second param if type = TFX_AMXCUSTOM, is INVALID if not used
 \fn tempfx_isActive( const chr, const type = TFX_AMXCUSTOM, const callback = INVALID)
 */
-native tempfx_isActive( const chr, const type = TFX_AMXCUSTOM, const callback = INVALID)
+native tempfx_isActive( const chr, const type = TFX_AMXCUSTOM, const callback = INVALID);
 
 /** @} */ // end of script_API_tempfx

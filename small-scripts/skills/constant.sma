@@ -10,6 +10,14 @@
 #endif
 #define _nxw_skill_constant_
 
+/*! \defgroup skillconstants constants
+\ingroup script_skills
+@{
+*/
+
+/*!
+\brief skill constants used to identify a skill with a number always use this constants to refer to a skill
+*/
 enum
 {
 	SK_ALCHEMY = 0,
@@ -115,7 +123,9 @@ public skillName[SK_COUNT][] = {
 "Meditation",
 "Stealth",
 "Remove Traps"
-}
+}; //!< skill names array, to be indexed with SK_ constants
+
+
 
 public skillByName[SK_COUNT] = {
 SK_ALCHEMY,
@@ -167,4 +177,66 @@ SK_TINKERING,
 SK_TRACKING,
 SK_VETERINARY,
 SK_WRESTLING
-};
+}; //!< brief alphabetically ordered skill constants
+
+
+/*!
+\brief skill functions names array.
+
+This array contains the names of the functions called to execute
+a skill.
+Changing values in the array will cause a different function to be called to execute a skill
+*/
+public skillFunctions[SK_COUNT][] = {
+	"__nxw_sk_alchemy",
+	"__nxw_sk_anatomy",
+	"__nxw_sk_animalLore",
+	"__nxw_sk_itemId",
+	"__nxw_sk_armsLore",
+	"__nxw_sk_parrying",
+	"__nxw_sk_begging",
+	"__nxw_sk_blacksmith",
+	"__nxw_sk_bowcraft",
+	"__nxw_sk_peace",
+	"__nxw_sk_camping",
+	"__nxw_sk_carpentery",
+	"__nxw_sk_cartography",
+	"__nxw_sk_cooking",
+	"__nxw_sk_detectHid",
+	"__nxw_sk_enticement",
+	"__nxw_sk_evint",
+	"__nxw_sk_healing",
+	"__nxw_sk_fishing",
+	"__nxw_sk_forensic",
+	"__nxw_sk_herding",
+	"__nxw_sk_hiding",
+	"__nxw_sk_provocat",
+	"__nxw_sk_inscript",
+	"__nxw_sk_lockpick",
+	"__nxw_sk_magery",
+	"__nxw_sk_magicRes",
+	"__nxw_sk_tactics",
+	"__nxw_sk_snooping",
+	"__nxw_sk_musician",
+	"__nxw_sk_poisoning",
+	"__nxw_sk_archery",
+	"__nxw_sk_spiritSp",
+	"__nxw_sk_stealing",
+	"__nxw_sk_tailoring",
+	"__nxw_sk_taming",
+	"__nxw_sk_tasteId",
+	"__nxw_sk_tinkering",
+	"__nxw_sk_tracking",
+	"__nxw_sk_veterinary",
+	"__nxw_sk_sword",
+	"__nxw_sk_mace",
+	"__nxw_sk_fencing",
+	"__nxw_sk_wrestling",
+	"__nxw_sk_lumberjack",
+	"__nxw_sk_mining",
+	"__nxw_sk_meditation",
+	"__nxw_sk_stealth",
+	"__nxw_sk_removeTrap"
+	};
+
+/* @}*/
