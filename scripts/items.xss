@@ -9,6 +9,7 @@
 #include scripts/items/architecture.xss
 #include scripts/items/armour.xss
 #include scripts/items/beard.xss
+#include scripts/items/carpet_rug.xss
 #include scripts/items/decorations.xss
 #include scripts/items/hair.xss
 #include scripts/items/items.xss

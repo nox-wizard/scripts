@@ -39,3 +39,30 @@ SECTION ITEM $item_plantcross
 	ID 13D3
 	@ONDBLCLICK plantcross_show
 }
+
+#define $item_sell_pack 9000004
+SECTION ITEM $item_sell_pack
+{
+    NAME backpack
+    ID 0E75
+    TYPE $itype_container
+    LAYER 26
+}
+
+#define $item_buy_pack 9000005
+SECTION ITEM $item_buy_pack
+{
+    NAME backpack
+    ID 0E75
+    TYPE $itype_container
+    LAYER 27
+}
+
+#define $item_bought_pack 9000006
+SECTION ITEM $item_bought_pack
+{
+    NAME backpack
+    ID 0E75
+    TYPE $itype_container
+    LAYER 28
+}

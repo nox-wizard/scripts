@@ -5733,6 +5733,21 @@ SECTION ITEM $item_cave_floor_21
     ID 054F
 }
 
+SECTION ITEM $item_cave_floor_22
+{
+    ID 0551
+}
+
+SECTION ITEM $item_cave_floor_23
+{
+    ID 0552
+}
+
+SECTION ITEM $item_cave_floor_24
+{
+    ID 0553
+}
+
 SECTION ITEM $item_alchemical_floor_1
 {
     ID 181D
@@ -5863,7 +5878,7 @@ SECTION ITEM $item_stone_roof_4
 {
     ID 0557
 }
- 
+
 SECTION ITEM $item_stone_roof_5
 {
     ID 0558
@@ -7109,6 +7124,11 @@ SECTION ITEM $item_stone_roof_70
     ID 065D
 }
 
+SECTION ITEM $item_stone_roof_71
+{
+    ID 0550
+}
+
 SECTION ITEM $item_tent_roof_57
 {
     ID 065E
@@ -7628,3 +7648,409 @@ SECTION ITEM $item_wooden_gate_8
     ///SUBSECTION Wooden Gate 2
 }
 
+//=========================================================================//
+//                                 Curtains                                //
+//=========================================================================//
+
+SECTION ITEM $item_curtain_1
+{
+    ID 0980
+}
+
+SECTION ITEM $item_curtain_2
+{
+    ID 0981
+}
+
+SECTION ITEM $item_curtain_3
+{
+    ID 0982
+}
+
+SECTION ITEM $item_curtain_4
+{
+    ID 0983
+}
+
+SECTION ITEM $item_curtain_5
+{
+    ID 0984
+}
+
+SECTION ITEM $item_curtain_6
+{
+    ID 0985
+}
+
+SECTION ITEM $item_curtain_7
+{
+    ID 0986
+}
+
+SECTION ITEM $item_curtain_8
+{
+    ID 0987
+}
+
+SECTION ITEM $item_curtain_9
+{
+    ID 0988
+}
+
+SECTION ITEM $item_curtain_10
+{
+    ID 0989
+}
+
+SECTION ITEM $item_curtain_11
+{
+    ID 098a
+}
+
+SECTION ITEM $item_curtain_12
+{
+    ID 098b
+}
+
+SECTION ITEM $item_curtain_13
+{
+    ID 12da
+}
+
+SECTION ITEM $item_curtain_14
+{
+    ID 12db
+}
+
+SECTION ITEM $item_curtain_15
+{
+    ID 12dc
+}
+
+SECTION ITEM $item_curtain_16
+{
+    ID 12dd
+}
+
+SECTION ITEM $item_curtain_17
+{
+    ID 12de
+}
+
+SECTION ITEM $item_curtain_18
+{
+    ID 12df
+}
+
+SECTION ITEM $item_curtain_19
+{
+    ID 12e0
+}
+
+SECTION ITEM $item_curtain_20
+{
+    ID 12e1
+}
+
+SECTION ITEM $item_curtain_sash_1
+{
+    ID 12e2
+}
+
+SECTION ITEM $item_curtain_sash_2
+{
+    ID 12e3
+}
+
+SECTION ITEM $item_curtain_sash_3
+{
+    ID 12e4
+}
+
+SECTION ITEM $item_curtain_21
+{
+    ID 12e5
+}
+
+SECTION ITEM $item_curtain_22
+{
+    ID 12e6
+}
+
+SECTION ITEM $item_curtain_23
+{
+    ID 12e7
+}
+
+SECTION ITEM $item_curtain_24
+{
+    ID 12e8
+}
+
+SECTION ITEM $item_curtain_25
+{
+    ID 12e9
+}
+
+SECTION ITEM $item_curtain_26
+{
+    ID 12ea
+}
+
+SECTION ITEM $item_curtain_27
+{
+    ID 12eb
+}
+
+SECTION ITEM $item_curtain_28
+{
+    ID 12ec
+}
+
+SECTION ITEM $item_curtain_sash_4
+{
+    ID 12ed
+}
+
+SECTION ITEM $item_curtain_29
+{
+     ID 154e
+}
+
+SECTION ITEM $item_curtain_30
+{
+     ID 154f
+}
+
+SECTION ITEM $item_curtain_31
+{
+     ID 1557
+}
+
+SECTION ITEM $item_curtain_32
+{
+     ID 159e
+}
+
+SECTION ITEM $item_curtain_33
+{
+     ID 159f
+}
+
+SECTION ITEM $item_curtain_34
+{
+     ID 15f6
+}
+
+SECTION ITEM $item_curtain_35
+{
+     ID 15f7
+}
+
+SECTION ITEM $item_curtain_36
+{
+     ID 160d
+}
+
+SECTION ITEM $item_curtain_37
+{
+     ID 160e
+}
+
+//=========================================================================//
+//                              Secret Doors                               //
+//=========================================================================//
+
+SECTION ITEM $item_magical_door_1
+{
+    ID 1ed9
+}
+
+SECTION ITEM $item_magical_door_2
+{
+    ID 1eda
+}
+
+SECTION ITEM $item_magical_door_3
+{
+    ID 1edb
+}
+
+SECTION ITEM $item_magical_door_4
+{
+    ID 1edc
+}
+
+SECTION ITEM $item_magical_door_5
+{
+    ID 1edd
+}
+
+SECTION ITEM $item_magical_door_6
+{
+    ID 1ede
+}
+
+SECTION ITEM $item_magical_door_7
+{
+    ID 1edf
+}
+
+SECTION ITEM $item_magical_door_8
+{
+    ID 1ee0
+}
+
+SECTION ITEM $item_magical_door_9
+{
+    ID 1ee1
+}
+
+SECTION ITEM $item_magical_door_10
+{
+    ID 1ee2
+}
+
+SECTION ITEM $item_magical_door_11
+{
+    ID 1ee3
+}
+
+SECTION ITEM $item_magical_door_12
+{
+    ID 1ee4
+}
+
+SECTION ITEM $item_magical_door_13
+{
+    ID 1ee5
+}
+
+SECTION ITEM $item_magical_door_14
+{
+    ID 1ee6
+}
+
+SECTION ITEM $item_magical_door_15
+{
+    ID 1ee7
+}
+
+SECTION ITEM $item_magical_door_16
+{
+    ID 1ee8
+}
+
+SECTION ITEM $item_magical_door_17
+{
+    ID 1ee9
+}
+
+SECTION ITEM $item_magical_door_18
+{
+    ID 1eea
+}
+
+SECTION ITEM $item_magical_door_19
+{
+    ID 1eeb
+}
+
+SECTION ITEM $item_magical_door_20
+{
+    ID 1eec
+}
+
+SECTION ITEM $item_magical_door_21
+{
+    ID 1eed
+}
+
+SECTION ITEM $item_magical_door_22
+{
+    ID 1eee
+}
+
+SECTION ITEM $item_magical_door_23
+{
+    ID 1eef
+}
+
+SECTION ITEM $item_magical_door_24
+{
+    ID 1ef0
+}
+
+SECTION ITEM $item_magical_door_25
+{
+    ID 1ef1
+}
+
+SECTION ITEM $item_magical_door_26
+{
+    ID 1ef2
+}
+
+SECTION ITEM $item_magical_door_27
+{
+    ID 1ef3
+}
+
+SECTION ITEM $item_magical_door_28
+{
+    ID 1ef4
+}
+
+SECTION ITEM $item_magical_door_29
+{
+    ID 1ef5
+}
+
+SECTION ITEM $item_magical_door_30
+{
+    ID 1ef6
+}
+
+SECTION ITEM $item_magical_door_31
+{
+    ID 1ef7
+}
+
+SECTION ITEM $item_magical_door_32
+{
+    ID 1ef8
+}
+
+SECTION ITEM $item_magical_door_33
+{
+    ID 1ef9
+}
+
+SECTION ITEM $item_magical_door_34
+{
+    ID 1efa
+}
+
+SECTION ITEM $item_magical_door_35
+{
+    ID 1efb
+}
+
+SECTION ITEM $item_magical_door_36
+{
+    ID 1efc
+}
+
+SECTION ITEM $item_bar_door
+{
+    NAME bar door
+    ID 190E
+    TYPE $itype_door
+}
+
+SECTION ITEM $item_bar_door_1
+{
+    NAME bar door
+    ID 190F
+    TYPE $itype_door
+}

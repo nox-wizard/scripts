@@ -40,8 +40,8 @@
 #define $item_med_short_beard 18
 #define $item_med_short_beard_1 19
 #define $item_vandyke 20
-#define $item_a_teleport_rune 23
 #define $item_teleport_rune 23
+#define $item_worldgem_bit 24
 
 //
 // QUEST / SPECIAL ITEMS
@@ -127,98 +127,6 @@
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 
-
-#define $item_rug1_1 248
-#define $item_rug1_2 249
-#define $item_rug1_3 250
-#define $item_rug1_4 251
-#define $item_rug1_5 252
-#define $item_rug1_6 253
-#define $item_rug1_7 254
-#define $item_rug1_8 255
-#define $item_rug1_9 256
-#define $item_rug1_10 257
-
-#define $item_rug2_1 258
-#define $item_rug2_2 259
-#define $item_rug2_3 260
-#define $item_rug2_4 261
-#define $item_rug2_5 262
-#define $item_rug2_6 263
-#define $item_rug2_7 264
-#define $item_rug2_8 265
-#define $item_rug2_9 266
-#define $item_rug2_10 267
-
-#define $item_carpet1_1 268
-#define $item_carpet1_2 269
-#define $item_carpet1_3 270
-#define $item_carpet1_4 271
-#define $item_carpet1_5 272
-#define $item_carpet1_6 273
-#define $item_carpet1_7 274
-#define $item_carpet1_8 275
-#define $item_carpet1_9 276
-#define $item_carpet1_10 321
-#define $item_carpet1_11 322
-#define $item_carpet1_12 323
-#define $item_carpet1_13 324
-
-#define $item_carpet2_1 277
-#define $item_carpet2_2 278
-#define $item_carpet2_3 279
-#define $item_carpet2_4 280
-#define $item_carpet2_5 281
-#define $item_carpet2_6 282
-#define $item_carpet2_7 283
-#define $item_carpet2_8 284
-#define $item_carpet2_9 285
-#define $item_carpet2_10 286
-#define $item_carpet2_11 287
-
-#define $item_carpet3_1 288
-#define $item_carpet3_2 289
-#define $item_carpet3_3 290
-#define $item_carpet3_4 291
-#define $item_carpet3_5 292
-#define $item_carpet3_6 293
-#define $item_carpet3_7 294
-#define $item_carpet3_8 295
-#define $item_carpet3_9 296
-
-#define $item_carpet4_1 297
-#define $item_carpet4_2 298
-#define $item_carpet4_3 299
-#define $item_carpet4_4 300
-#define $item_carpet4_5 301
-#define $item_carpet4_6 302
-#define $item_carpet4_7 303
-#define $item_carpet4_8 304
-#define $item_carpet4_9 305 
-
-#define $item_carpet5_1 306
-#define $item_carpet5_2 307
-#define $item_carpet5_3 308
-#define $item_carpet5_4 309
-#define $item_carpet5_5 310
-#define $item_carpet5_6 311
-#define $item_carpet5_7 312
-#define $item_carpet5_8 313
-#define $item_carpet5_9 314
-
-#define $item_carpet6_1 315   
-#define $item_carpet6_2 316   
-#define $item_carpet6_3 317   
-#define $item_carpet6_4 318   
-#define $item_carpet6_5 319   
-#define $item_carpet6_6 320   
-#define $item_carpet6_7 494   
-#define $item_carpet6_8 495   
-#define $item_carpet6_9 496   
-#define $item_carpet6_10 497
-#define $item_carpet6_11 325
-
-///////////////////////////////////////////////////
 
 #define $item_leather_cap 326
 #define $item_backpack 327
