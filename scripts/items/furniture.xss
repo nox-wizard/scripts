@@ -1,7 +1,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (furniture.xss)                                  ||
-// || Maintained by Akron                                                 ||
-// || Last Update 09-aug-2003                                             ||
+// || Maintained by Horian                                                 ||
+// || Last Update 21.3.2005 21:42                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || This script requires NoX-Wizard 0.70s or later                      ||
 // || Compatible with Unicorn Categorization                              ||
@@ -19,7 +19,7 @@ SECTION ITEM $item_marble_bench_A1
     ///SUBSECTION Chairs & Benches
 }
 
-SECTIONITEM $item_marble_bench_A2
+SECTION ITEM $item_marble_bench_A2
 {
     NAME marble bench
     ID 045A
@@ -30,7 +30,7 @@ SECTIONITEM $item_marble_bench_A2
     ///SUBSECTION Chairs & Benches
 }
 
-SECTIONITEM $item_marble_bench_B1_1
+SECTION ITEM $item_marble_bench_B1_1
 {
     ID 1DCD
     AMXINT $localvar_flipitem $item_marble_bench_B2_1
@@ -39,7 +39,7 @@ SECTIONITEM $item_marble_bench_B1_1
     ///DESCRIPTION Marble Bench
 }
 
-SECTIONITEM $item_marble_bench_B1_2
+SECTION ITEM $item_marble_bench_B1_2
 {
     ID 1DCE
     AMXINT $localvar_flipitem $item_marble_bench_B2_2
@@ -48,7 +48,7 @@ SECTIONITEM $item_marble_bench_B1_2
     ///DESCRIPTION Marble Bench
 }
 
-SECTIONITEM $item_marble_bench_B1_3
+SECTION ITEM $item_marble_bench_B1_3
 {
     ID 1DCF
     AMXINT $localvar_flipitem $item_marble_bench_B2_3
@@ -57,7 +57,7 @@ SECTIONITEM $item_marble_bench_B1_3
     ///DESCRIPTION Marble Bench
 }
 
-SECTIONITEM $item_marble_bench_B2_1
+SECTION ITEM $item_marble_bench_B2_1
 {
     ID 1DD0
     AMXINT $localvar_flipitem $item_marble_bench_B1_1
@@ -66,7 +66,7 @@ SECTIONITEM $item_marble_bench_B2_1
     ///DESCRIPTION Marble Bench
 }
 
-SECTIONITEM $item_marble_bench_B2_2
+SECTION ITEM $item_marble_bench_B2_2
 {
     ID 1DD1
     AMXINT $localvar_flipitem $item_marble_bench_B1_2
@@ -75,7 +75,7 @@ SECTIONITEM $item_marble_bench_B2_2
     ///DESCRIPTION Marble Bench
 }
 
-SECTIONITEM $item_marble_bench_B2_3
+SECTION ITEM $item_marble_bench_B2_3
 {
     ID 1DD2
     AMXINT $localvar_flipitem $item_marble_bench_B1_3
@@ -84,7 +84,7 @@ SECTIONITEM $item_marble_bench_B2_3
     ///DESCRIPTION Marble Bench
 }
 
-SECTIONITEM $item_sandstone_bench_A1
+SECTION ITEM $item_sandstone_bench_A1
 {
     NAME marble bench
     ID 045B
@@ -95,7 +95,7 @@ SECTIONITEM $item_sandstone_bench_A1
     ///SUBSECTION Chairs & Benches
 }
 
-SECTIONITEM $item_sandstone_bench_A2
+SECTION ITEM $item_sandstone_bench_A2
 {
     NAME marble bench
     ID 045C
@@ -106,7 +106,7 @@ SECTIONITEM $item_sandstone_bench_A2
     ///SUBSECTION Chairs & Benches
 }
 
-SECTIONITEM $item_sandstone_bench_B1_1
+SECTION ITEM $item_sandstone_bench_B1_1
 {
     ID 1DC7
     AMXINT $localvar_flipitem $item_sandstone_bench_B2_1
@@ -115,7 +115,7 @@ SECTIONITEM $item_sandstone_bench_B1_1
     ///DESCRIPTION Marble Bench
 }
 
-SECTIONITEM $item_sandstone_bench_B1_2
+SECTION ITEM $item_sandstone_bench_B1_2
 {
     ID 1DC8
     AMXINT $localvar_flipitem $item_sandstone_bench_B2_2
@@ -124,7 +124,7 @@ SECTIONITEM $item_sandstone_bench_B1_2
     ///DESCRIPTION Sandstone Bench
 }
 
-SECTIONITEM $item_sandstone_bench_B1_3
+SECTION ITEM $item_sandstone_bench_B1_3
 {
     ID 1DC9
     AMXINT $localvar_flipitem $item_sandstone_bench_B2_3
@@ -133,7 +133,7 @@ SECTIONITEM $item_sandstone_bench_B1_3
     ///DESCRIPTION Sandstone Bench
 }
 
-SECTIONITEM $item_sandstone_bench_B2_1
+SECTION ITEM $item_sandstone_bench_B2_1
 {
     ID 1DCA
     AMXINT $localvar_flipitem $item_sandstone_bench_B1_1
@@ -142,7 +142,7 @@ SECTIONITEM $item_sandstone_bench_B2_1
     ///DESCRIPTION Marble Bench
 }
 
-SECTIONITEM $item_sandstone_bench_B2_2
+SECTION ITEM $item_sandstone_bench_B2_2
 {
     ID 1DCB
     AMXINT $localvar_flipitem $item_sandstone_bench_B1_2
@@ -151,7 +151,7 @@ SECTIONITEM $item_sandstone_bench_B2_2
     ///DESCRIPTION Sandstone Bench
 }
 
-SECTIONITEM $item_sandstone_bench_B2_3
+SECTION ITEM $item_sandstone_bench_B2_3
 {
     ID 1DCC
     AMXINT $localvar_flipitem $item_sandstone_bench_B1_3
@@ -160,7 +160,7 @@ SECTIONITEM $item_sandstone_bench_B2_3
     ///DESCRIPTION Sandstone Bench
 }
 
-SECTIONITEM $item_stone_chair
+SECTION ITEM $item_stone_chair
 {
     ID 1218
     AMXINT $localvar_flipitem $item_stone_chair_1
@@ -169,7 +169,7 @@ SECTIONITEM $item_stone_chair
     ///DESCRIPTION Stone Chair
 }
 
-SECTIONITEM $item_stone_chair_1
+SECTION ITEM $item_stone_chair_1
 {
     ID 1219
     AMXINT $localvar_flipitem $item_stone_chair_2
@@ -178,7 +178,7 @@ SECTIONITEM $item_stone_chair_1
     ///DESCRIPTION Stone Chair
 }
 
-SECTIONITEM $item_stone_chair_2
+SECTION ITEM $item_stone_chair_2
 {
     ID 121A
     AMXINT $localvar_flipitem $item_stone_chair_3
@@ -188,7 +188,7 @@ SECTIONITEM $item_stone_chair_2
     ///DESCRIPTION Stone Chair
 }
 
-SECTIONITEM $item_stone_chair_3
+SECTION ITEM $item_stone_chair_3
 {
     ID 121B
     AMXINT $localvar_flipitem $item_stone_chair
@@ -197,56 +197,116 @@ SECTIONITEM $item_stone_chair_3
     ///DESCRIPTION Stone Chair
 }
 
-SECTIONITEM $item_stone_table
+SECTION ITEM $item_stone_table1A_1
 {
     NAME stone table
     ID 1201
+    AMXINT $localvar_flipitem $item_stone_table1A_2
     ///CATEGORY Furniture
     ///SUBSECTION Tables
     ///DESCRIPTION Stone Table
 }
 
-SECTIONITEM $item_stone_table_1
+SECTION ITEM $item_stone_table1B_1
 {
     NAME stone table
     ID 1202
+    AMXINT $localvar_flipitem $item_stone_table1B_2
     ///CATEGORY Furniture
     ///SUBSECTION Tables
     ///DESCRIPTION Stone Table
 }
 
-SECTION ITEM $item_stone_table_2
+SECTION ITEM $item_stone_table1C_1
 {
     NAME stone table
     ID 1203
+    AMXINT $localvar_flipitem $item_stone_table1C_2
     ///CATEGORY Furniture
     ///SUBSECTION Tables
     ///DESCRIPTION Stone Table
 }
 
-SECTION ITEM $item_stone_table_3
+SECTION ITEM $item_stone_table1A_2
 {
     NAME stone table
     ID 1204
+    AMXINT $localvar_flipitem $item_stone_table1A_1
     ///CATEGORY Furniture
     ///SUBSECTION Tables
     ///DESCRIPTION Stone Table
 }
 
-SECTION ITEM $item_stone_table_4
+SECTION ITEM $item_stone_table1B_2
 {
     NAME stone table
     ID 1205
+    AMXINT $localvar_flipitem $item_stone_table1B_1
     ///CATEGORY Furniture
     ///SUBSECTION Tables
     ///DESCRIPTION Stone Table
 }
 
-SECTION ITEM $item_stone_table_5
+SECTION ITEM $item_stone_table1C_2
 {
     NAME stone table
     ID 1206
+    AMXINT $localvar_flipitem $item_stone_table1C_1
     ///CATEGORY Furniture
     ///SUBSECTION Tables
     ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_bench1A_1
+{
+    ID 1207
+    AMXINT $localvar_flipitem $item_stone_bench1A_2
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_stone_bench1B_1
+{
+    ID 1208
+    AMXINT $localvar_flipitem $item_stone_bench1B_2
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION stone Bench
+}
+
+SECTION ITEM $item_stone_bench1C_1
+{
+    ID 1209
+    AMXINT $localvar_flipitem $item_stone_bench1C_2
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION stone Bench
+}
+
+SECTION ITEM $item_stone_bench1A_2
+{
+    ID 120A
+    AMXINT $localvar_flipitem $item_stone_bench1A_1
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_stone_bench1B_2
+{
+    ID 120B
+    AMXINT $localvar_flipitem $item_stone_bench1B_1
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION stone Bench
+}
+
+SECTION ITEM $item_stone_bench1C_2
+{
+    ID 120C
+    AMXINT $localvar_flipitem $item_stone_bench1C_1
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION stone Bench
 }

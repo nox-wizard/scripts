@@ -1241,7 +1241,7 @@ SECTION BATCH $batch_polymorph_cns
 //    0E40 Metal Chest
 //    ADDITEM $item_metal_chest1
 //    0E7D Wooden Box
-//    ADDITEM $item_wooden_box_1
+//    ADDITEM $item_wooden_box1_1
 //    0E7E Small Wooden Crate
 //    ADDITEM $item_small_wooden_crate1_1
 //    0E3E Medium Wooden Crate
@@ -5174,9 +5174,9 @@ SECTION BATCH $batch_polymorph_cns
 //    108B Beads
 //    ADDITEM $item_beads
 //    1086 Bracelet
-//    ADDITEM $item_bracelet
+//    ADDITEM $item_bracelet1
 //    1087 Earrings
-//    ADDITEM $item_earrings
+//    ADDITEM $item_earrings1
 //    1085 Necklace
 //    ADDITEM $item_necklace1
 //    1088 Necklace
@@ -5184,7 +5184,7 @@ SECTION BATCH $batch_polymorph_cns
 //    1089 Necklace
 //    ADDITEM $item_necklace3
 //    108A Ring
-//    ADDITEM $item_ring
+//    ADDITEM $item_ring1
 //    < Previous Menu
 //    OPENMENU $menu_coins_gems_jewelry
 //}
@@ -6783,7 +6783,7 @@ SECTION BATCH $batch_polymorph_cns
 //    10A4 Spinning Wheel - not animated
 //    ADDITEM $item_spinning_wheel2
 //    10A5 Spinning Wheel - animated
-//    ADDITEM $item_spinning_wheel3
+//    ADDITEM $item_spinning_wheel2_2
 //    1061 Upright Loom - 1st part South
 //    ADDITEM $item_upright_loom_1_1
 //    1062 Upright Loom - 2nd part South

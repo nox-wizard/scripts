@@ -91,6 +91,28 @@
 #define $item_barber_scissor1_1 3967
 #define $item_barber_scissor1_2 3968
 
+// fisherman
+#define $item_fishing_net1_1 16601
+#define $item_fishing_net1_2 16602
+#define $item_fishing_net2_1 16603
+#define $item_fishing_net2_2 16604
+#define $item_fishing_net3_1 16605
+#define $item_fishing_net3_2 16606
+#define $item_fishing_net3_3 16607
+#define $item_fishing_net3_4 16608
+#define $item_fishing_net4_1 16609
+#define $item_fishing_net4_2 16610
+#define $item_fishing_net4_3 16611
+#define $item_fishing_net4_4 16612
+#define $item_fishing_net5 16613
+#define $item_fishing_weight1_1 16614
+#define $item_fishing_weight1_2 16615
+#define $item_fishing_weight1_3 16616
+#define $item_fishing_weight1_4 16617
+#define $item_fishing_pole 16618
+#define $item_fishing_pole 16619
+
+
 // Carpenter Tools 140000-140200
 #define $item_carpentry_tools_list 7018
 #define $item_hatchet 140000

@@ -594,7 +594,7 @@ SECTION ITEMTRG $itrg_wheel_deed
 { wheel deed
     //$$ wheel deed
     MSG You place the wheel on the ground!
-    IADD $item_spinning_wheel3
+    IADD $item_spinning_wheel2_2
     NEWNAME a spinning wheel
     REMOVE
 }
@@ -663,7 +663,7 @@ SECTION ITEMTRG $itrg_wheel_deed_1
 { wheel deed
     //$$ wheel deed
     MSG You place the wheel on the ground!
-    IADD $item_spinning_wheel1
+    IADD $item_spinning_wheel2_1
     NEWNAME a spinning wheel
     REMOVE
 }

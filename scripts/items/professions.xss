@@ -15,6 +15,7 @@ SECTION ITEM $item_knitting1_1
 	ID 0df6
 	DECAY
 	VALUE 20
+	AMXINT $localvar_flipitem $item_knitting1_2
 }
 
 SECTION ITEM $item_knitting1_2
@@ -23,6 +24,7 @@ SECTION ITEM $item_knitting1_2
 	ID 0df7
 	DECAY
 	VALUE 20
+	AMXINT $localvar_flipitem $item_knitting1_1
 }
 
 SECTION ITEM $item_sewing_kit
@@ -48,6 +50,7 @@ SECTION ITEM $item_scissors1_1
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Scissors
+	AMXINT $localvar_flipitem $item_scissors1_2
 }
 
 SECTION ITEM $item_scissors1_2
@@ -61,6 +64,7 @@ SECTION ITEM $item_scissors1_2
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Scissors
+	AMXINT $localvar_flipitem $item_scissors1_1
 }
 
 //not animated
@@ -71,6 +75,7 @@ SECTION ITEM $item_spinning_wheel1_1
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spinning_wheel1_2
 }
 
 SECTION ITEM $item_spinning_wheel1_2
@@ -80,6 +85,7 @@ SECTION ITEM $item_spinning_wheel1_2
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spinning_wheel1_3
 }
 
 SECTION ITEM $item_spinning_wheel1_3
@@ -89,6 +95,7 @@ SECTION ITEM $item_spinning_wheel1_3
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spinning_wheel1_4
 }
 
 SECTION ITEM $item_spinning_wheel1_4
@@ -98,6 +105,7 @@ SECTION ITEM $item_spinning_wheel1_4
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spinning_wheel1_1
 }
 
 //animated
@@ -108,6 +116,7 @@ SECTION ITEM $item_spinning_wheel2_1
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spinning_wheel2_2
 }
 
 SECTION ITEM $item_spinning_wheel2_2
@@ -117,6 +126,7 @@ SECTION ITEM $item_spinning_wheel2_2
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spinning_wheel2_3
 }
 
 SECTION ITEM $item_spinning_wheel2_3
@@ -126,6 +136,7 @@ SECTION ITEM $item_spinning_wheel2_3
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spinning_wheel2_4
 }
 
 SECTION ITEM $item_spinning_wheel2_4
@@ -135,6 +146,7 @@ SECTION ITEM $item_spinning_wheel2_4
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spinning_wheel2_1
 }
 
 SECTION ITEM $item_spinning_wheel_deed_1
@@ -206,6 +218,7 @@ SECTION ITEM $item_dress_form1_1
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_dress_form1_2
 }
 
 SECTION ITEM $item_dress_form1_2
@@ -215,6 +228,7 @@ SECTION ITEM $item_dress_form1_2
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_dress_form1_1
 }
 
 SECTION ITEM $item_dyes
@@ -304,6 +318,7 @@ SECTION ITEM $item_spools_of_thread1_1
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spools_of_thread1_2
 }
 
 SECTION ITEM $item_spools_of_thread1_2
@@ -316,16 +331,19 @@ SECTION ITEM $item_spools_of_thread1_2
 
 	///CATEGORY Professions
 	///SUBSECTION Tailor
+	AMXINT $localvar_flipitem $item_spools_of_thread1_1
 }
 
 SECTION ITEM $item_rolls_of_string1_1
 {
 	ID 1420
+	AMXINT $localvar_flipitem $item_rolls_of_string1_2
 }
 
 SECTION ITEM $item_rolls_of_string1_2
 {
 	ID 1421
+	AMXINT $localvar_flipitem $item_rolls_of_string1_1
 }
 
 SECTION ITEM $item_folded_cloth1_1
@@ -340,6 +358,7 @@ SECTION ITEM $item_folded_cloth1_1
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth1_2
 }
 
 SECTION ITEM $item_folded_cloth1_2
@@ -354,6 +373,7 @@ SECTION ITEM $item_folded_cloth1_2
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth1_1
 }
 
 SECTION ITEM $item_folded_cloth2_1
@@ -368,6 +388,7 @@ SECTION ITEM $item_folded_cloth2_1
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth2_2
 }
 
 SECTION ITEM $item_folded_cloth2_2
@@ -382,6 +403,7 @@ SECTION ITEM $item_folded_cloth2_2
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth2_3
 }
 
 SECTION ITEM $item_folded_cloth2_3
@@ -396,6 +418,7 @@ SECTION ITEM $item_folded_cloth2_3
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth2_4
 }
 
 SECTION ITEM $item_folded_cloth2_4
@@ -410,6 +433,7 @@ SECTION ITEM $item_folded_cloth2_4
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth2_1
 }
 
 SECTION ITEM $item_folded_cloth3_1
@@ -424,6 +448,7 @@ SECTION ITEM $item_folded_cloth3_1
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth3_2
 }
 
 SECTION ITEM $item_folded_cloth3_2
@@ -438,6 +463,7 @@ SECTION ITEM $item_folded_cloth3_2
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth3_3
 }
 
 SECTION ITEM $item_folded_cloth3_3
@@ -452,6 +478,7 @@ SECTION ITEM $item_folded_cloth3_3
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth3_4
 }
 
 SECTION ITEM $item_folded_cloth3_4
@@ -466,6 +493,7 @@ SECTION ITEM $item_folded_cloth3_4
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_folded_cloth3_1
 }
 
 SECTION ITEM $item_cut_cloth1_1
@@ -480,6 +508,7 @@ SECTION ITEM $item_cut_cloth1_1
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_cut_cloth1_2
 }
 
 SECTION ITEM $item_cut_cloth1_2
@@ -494,6 +523,7 @@ SECTION ITEM $item_cut_cloth1_2
 	///CATEGORY Professions
 	///SUBSECTION Tailor
 	///DESCRIPTION Cut Cloth
+	AMXINT $localvar_flipitem $item_cut_cloth1_1
 }
 
 SECTION ITEM $item_bolts_of_cloth1_1
@@ -502,6 +532,7 @@ SECTION ITEM $item_bolts_of_cloth1_1
 	NAME bolt of cloth
 	DECAY
 	VALUE 75
+	AMXINT $localvar_flipitem $item_bolts_of_cloth1_2
 }
 
 SECTION ITEM $item_bolts_of_cloth1_2
@@ -510,6 +541,7 @@ SECTION ITEM $item_bolts_of_cloth1_2
 	NAME bolt of cloth
 	DECAY
 	VALUE 75
+	AMXINT $localvar_flipitem $item_bolts_of_cloth1_1
 }
 
 SECTION ITEM $item_bolts_of_cloth2_1
@@ -518,6 +550,7 @@ SECTION ITEM $item_bolts_of_cloth2_1
 	NAME bolt of cloth
 	DECAY
 	VALUE 75
+	AMXINT $localvar_flipitem $item_bolts_of_cloth2_2
 }
 
 SECTION ITEM $item_bolts_of_cloth2_2
@@ -526,6 +559,7 @@ SECTION ITEM $item_bolts_of_cloth2_2
 	NAME bolt of cloth
 	DECAY
 	VALUE 75
+	AMXINT $localvar_flipitem $item_bolts_of_cloth2_1
 }
 
 SECTION ITEM $item_bolts_of_cloth3_1
@@ -534,6 +568,7 @@ SECTION ITEM $item_bolts_of_cloth3_1
 	NAME bolt of cloth
 	DECAY
 	VALUE 75
+	AMXINT $localvar_flipitem $item_bolts_of_cloth3_2
 }
 
 SECTION ITEM $item_bolts_of_cloth3_2
@@ -542,6 +577,7 @@ SECTION ITEM $item_bolts_of_cloth3_2
 	NAME bolt of cloth
 	DECAY
 	VALUE 75
+	AMXINT $localvar_flipitem $item_bolts_of_cloth3_1
 }
 
 SECTION ITEM $item_bolts_of_cloth4_1
@@ -550,6 +586,7 @@ SECTION ITEM $item_bolts_of_cloth4_1
 	NAME bolt of cloth
 	DECAY
 	VALUE 75
+	AMXINT $localvar_flipitem $item_bolts_of_cloth4_2
 }
 
 SECTION ITEM $item_bolts_of_cloth4_2
@@ -558,6 +595,7 @@ SECTION ITEM $item_bolts_of_cloth4_2
 	NAME bolt of cloth
 	DECAY
 	VALUE 75
+	AMXINT $localvar_flipitem $item_bolts_of_cloth4_1
 }
 
 SECTION ITEM $item_stretched_hide1_1
@@ -566,6 +604,7 @@ SECTION ITEM $item_stretched_hide1_1
 	ID 1069
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide1_2
 }
 
 SECTION ITEM $item_stretched_hide1_2
@@ -574,6 +613,7 @@ SECTION ITEM $item_stretched_hide1_2
 	ID 107a
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide1_1
 }
 
 SECTION ITEM $item_stretched_hide2_1
@@ -582,6 +622,7 @@ SECTION ITEM $item_stretched_hide2_1
 	ID 106a
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide2_2
 }
 
 SECTION ITEM $item_stretched_hide2_2
@@ -590,6 +631,7 @@ SECTION ITEM $item_stretched_hide2_2
 	ID 107b
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide2_1
 }
 
 SECTION ITEM $item_stretched_hide3_1
@@ -598,6 +640,7 @@ SECTION ITEM $item_stretched_hide3_1
 	ID 106b
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide3_2
 }
 
 SECTION ITEM $item_stretched_hide3_2
@@ -606,6 +649,7 @@ SECTION ITEM $item_stretched_hide3_2
 	ID 107c
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide3_1
 }
 
 SECTION ITEM $item_stretched_hide4A_1
@@ -614,6 +658,7 @@ SECTION ITEM $item_stretched_hide4A_1
 	ID 106d
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide4A_2
 }
 
 SECTION ITEM $item_stretched_hide4A_2
@@ -622,6 +667,7 @@ SECTION ITEM $item_stretched_hide4A_2
 	ID 107d
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide4A_1
 }
 
 SECTION ITEM $item_stretched_hide4B_1
@@ -630,6 +676,7 @@ SECTION ITEM $item_stretched_hide4B_1
 	ID 106c
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide4B_2
 }
 
 SECTION ITEM $item_stretched_hide4B_2
@@ -638,6 +685,7 @@ SECTION ITEM $item_stretched_hide4B_2
 	ID 107e
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide4B_1
 }
 
 SECTION ITEM $item_stretched_hide5A_1
@@ -646,6 +694,7 @@ SECTION ITEM $item_stretched_hide5A_1
 	ID 106f
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide5A_2
 }
 
 SECTION ITEM $item_stretched_hide5A_2
@@ -654,6 +703,7 @@ SECTION ITEM $item_stretched_hide5A_2
 	ID 107f
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide5A_1
 }
 
 SECTION ITEM $item_stretched_hide5B_1
@@ -662,6 +712,7 @@ SECTION ITEM $item_stretched_hide5B_1
 	ID 106e
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide5B_2
 }
 
 SECTION ITEM $item_stretched_hide5B_2
@@ -670,6 +721,7 @@ SECTION ITEM $item_stretched_hide5B_2
 	ID 1080
 	DECAY
 	PILE 1
+	AMXINT $localvar_flipitem $item_stretched_hide5B_1
 }
 
 SECTION ITEM $item_hide1_1
@@ -679,6 +731,7 @@ SECTION ITEM $item_hide1_1
 	DECAY
 	VALUE 3
 	PILE 1
+	AMXINT $localvar_flipitem $item_hide1_2
 }
 
 SECTION ITEM $item_hide1_2
@@ -688,6 +741,7 @@ SECTION ITEM $item_hide1_2
 	DECAY
 	VALUE 3
 	PILE 1
+	AMXINT $localvar_flipitem $item_hide1_1
 }
 
 SECTION ITEM $item_leather1_1
@@ -697,6 +751,7 @@ SECTION ITEM $item_leather1_1
 	DECAY
 	VALUE 3
 	PILE 1
+	AMXINT $localvar_flipitem $item_leather1_2
 }
 
 SECTION ITEM $item_leather1_2
@@ -706,6 +761,7 @@ SECTION ITEM $item_leather1_2
 	DECAY
 	VALUE 3
 	PILE 1
+	AMXINT $localvar_flipitem $item_leather1_3
 }
 
 SECTION ITEM $item_leather1_3
@@ -719,6 +775,7 @@ SECTION ITEM $item_leather1_3
 
 	///CATEGORY Professions
 	///SUBSECTION Tanner
+	AMXINT $localvar_flipitem $item_leather1_4
 }
 
 SECTION ITEM $item_leather1_4
@@ -732,6 +789,7 @@ SECTION ITEM $item_leather1_4
 
 	///CATEGORY Professions
 	///SUBSECTION Tanner
+	AMXINT $localvar_flipitem $item_leather1_1
 }
 
 //for fur see carpet_rug.xss
@@ -746,6 +804,7 @@ SECTION ITEM $item_barber_scissor1_1
 	ID 0dfc
 	DECAY
 	VALUE 20
+	AMXINT $localvar_flipitem $item_barber_scissor1_2
 }
 
 SECTION ITEM $item_barber_scissor1_2
@@ -754,86 +813,245 @@ SECTION ITEM $item_barber_scissor1_2
 	ID 0dfd
 	DECAY
 	VALUE 20
+	AMXINT $localvar_flipitem $item_barber_scissor1_1
 }
 
 SECTION ITEM $item_wig1_1
 {
 	ID 0dff
+	AMXINT $localvar_flipitem $item_wig1_2
 }
 
 SECTION ITEM $item_wig1_2
 {
 	ID 0e00
+	AMXINT $localvar_flipitem $item_wig1_3
 }
 
 SECTION ITEM $item_wig1_3
 {
 	ID 0e09
+	AMXINT $localvar_flipitem $item_wig1_4
 }
 
 SECTION ITEM $item_wig1_4
 {
 	ID 0e0a
+	AMXINT $localvar_flipitem $item_wig1_1
 }
 
 SECTION ITEM $item_wig2_1
 {
 	ID 0e01
+	AMXINT $localvar_flipitem $item_wig2_2
 }
 
 SECTION ITEM $item_wig2_2
 {
 	ID 0e02
+	AMXINT $localvar_flipitem $item_wig2_3
 }
 
 SECTION ITEM $item_wig2_3
 {
 	ID 0e0b
+	AMXINT $localvar_flipitem $item_wig2_4
 }
 
 SECTION ITEM $item_wig2_4
 {
 	ID 0e0c
+	AMXINT $localvar_flipitem $item_wig2_1
 }
 
 SECTION ITEM $item_wig3_1
 {
 	ID 0e03
+	AMXINT $localvar_flipitem $item_wig3_2
 }
 
 SECTION ITEM $item_wig3_2
 {
 	ID 0e04
+	AMXINT $localvar_flipitem $item_wig3_3
 }
 
 SECTION ITEM $item_wig3_3
 {
 	ID 0e0d
+	AMXINT $localvar_flipitem $item_wig3_4
 }
 
 SECTION ITEM $item_wig3_4
 {
 	ID 0e0e
+	AMXINT $localvar_flipitem $item_wig3_1
 }
 
 SECTION ITEM $item_wig stand1_1
 {
 	ID 0e05
+	AMXINT $localvar_flipitem $item_wig stand1_2
 }
 
 SECTION ITEM $item_wig stand1_2
 {
 	ID 0e06
+	AMXINT $localvar_flipitem $item_wig stand1_3
 }
 
 SECTION ITEM $item_wig stand1_3
 {
 	ID 0e07
+	AMXINT $localvar_flipitem $item_wig stand1_4
 }
 
 SECTION ITEM $item_wig stand1_4
 {
 	ID 0e08
+	AMXINT $localvar_flipitem $item_wig stand1_1
+}
+
+//
+// fisherman
+//
+
+SECTION ITEM $item_fishing_net1_1
+{
+	NAME fishing net
+	ID 1ea3
+	AMXINT $localvar_flipitem $item_fishing_net1_2
+}
+
+SECTION ITEM $item_fishing_net1_2
+{
+	NAME fishing net
+	ID 1ea4
+	AMXINT $localvar_flipitem $item_fishing_net1_1
+}
+
+SECTION ITEM $item_fishing_net2_1
+{
+	NAME fishing net
+	ID 1ea5
+	AMXINT $localvar_flipitem $item_fishing_net2_2
+}
+
+SECTION ITEM $item_fishing_net2_2
+{
+	NAME fishing net
+	ID 1ea6
+	AMXINT $localvar_flipitem $item_fishing_net2_1
+}
+
+SECTION ITEM $item_fishing_net3_1
+{
+	NAME fishing net
+	ID 0dcb
+	AMXINT $localvar_flipitem $item_fishing_net3_2
+}
+
+SECTION ITEM $item_fishing_net3_2
+{
+	NAME fishing net
+	ID 0dd3
+	AMXINT $localvar_flipitem $item_fishing_net3_3
+}
+
+SECTION ITEM $item_fishing_net3_3
+{
+	NAME fishing net
+	ID 0dc9
+	AMXINT $localvar_flipitem $item_fishing_net3_4
+}
+
+SECTION ITEM $item_fishing_net3_4
+{
+	NAME fishing net
+	ID 0dc8
+	AMXINT $localvar_flipitem $item_fishing_net3_1
+}
+
+SECTION ITEM $item_fishing_net4_1
+{
+	NAME fishing net
+	ID 0dd1
+	AMXINT $localvar_flipitem $item_fishing_net4_2
+}
+
+SECTION ITEM $item_fishing_net4_2
+{
+	NAME fishing net
+	ID 0dd2
+	AMXINT $localvar_flipitem $item_fishing_net4_3
+}
+
+SECTION ITEM $item_fishing_net4_3
+{
+	NAME fishing net
+	ID 0dd4
+	AMXINT $localvar_flipitem $item_fishing_net4_4
+}
+
+SECTION ITEM $item_fishing_net4_4
+{
+	NAME fishing net
+	ID 0dd5
+	AMXINT $localvar_flipitem $item_fishing_net4_1
+}
+
+SECTION ITEM $item_fishing_net5
+{
+	NAME fishing net
+	ID 0dca
+}
+
+SECTION ITEM $item_fishing_weight1_1
+{
+	NAME fishing weight
+	ID 0dcc
+	AMXINT $localvar_flipitem $item_fishing_weight1_2
+}
+
+SECTION ITEM $item_fishing_weight1_2
+{
+	NAME fishing weight
+	ID 0dcd
+	AMXINT $localvar_flipitem $item_fishing_weight1_3
+}
+
+SECTION ITEM $item_fishing_weight1_3
+{
+	NAME fishing weight
+	ID 0dce
+	AMXINT $localvar_flipitem $item_fishing_weight1_4
+}
+
+SECTION ITEM $item_fishing_weight1_4
+{
+	NAME fishing weight
+	ID 0dcf
+	AMXINT $localvar_flipitem $item_fishing_weight1_1
+}
+
+SECTION ITEM $item_fishing_pole
+{
+	NAME fishing pole
+	ITEMHAND 2
+	ID 0DBF
+	DECAY
+	VALUE 14
+	@ONDBLCLICK __nxw_sk_fishing
+}
+
+SECTION ITEM $item_fishing_pole
+{
+	NAME fishing pole
+	ITEMHAND 2
+	ID 0Dc0
+	DECAY
+	VALUE 14
+	@ONDBLCLICK __nxw_sk_fishing
 }
 
 //
@@ -849,6 +1067,7 @@ SECTION ITEM $item_boards
 	VALUE 5
 	WEIGHT 3
 	DECAY
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_logs
@@ -860,6 +1079,7 @@ SECTION ITEM $item_logs
 	WEIGHT 4
 	DECAY
 	@ONDBLCLICK _cutlog
+	AMXINT $localvar_flipitem 
 }
 
 // carpentry tool
@@ -867,6 +1087,7 @@ SECTION ITEM $item_carpentry_tools_list
 {
 	NAME carpentry tools list
 	ITEMLIST $itemlist_carpentry_tools
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_hatchet
@@ -885,6 +1106,7 @@ SECTION ITEM $item_hatchet
 	WEIGHT 400
 	DAMAGETYPE $damage_slash
 	AMXINT $localvar_flipitem $item_hatchet2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_hatchet2
@@ -903,6 +1125,7 @@ SECTION ITEM $item_hatchet2
 	WEIGHT 400
 	DAMAGETYPE $damage_slash
 	AMXINT $localvar_flipitem $item_hatchet
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_chisel
@@ -913,6 +1136,7 @@ SECTION ITEM $item_chisel
 	VALUE 35
 	WEIGHT 400
 	AMXINT $localvar_flipitem $item_chisel2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_chisel2
@@ -923,6 +1147,7 @@ SECTION ITEM $item_chisel2
 	VALUE 35
 	WEIGHT 400
 	AMXINT $localvar_flipitem $item_chisel
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_dovetail_saw
@@ -934,6 +1159,7 @@ SECTION ITEM $item_dovetail_saw
 	WEIGHT 400
 	@ONDBLCLICK _cutlog
 	AMXINT $localvar_flipitem $item_dovetail_saw2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_dovetail_saw2
@@ -945,6 +1171,7 @@ SECTION ITEM $item_dovetail_saw2
 	WEIGHT 400
 	@ONDBLCLICK _cutlog
 	AMXINT $localvar_flipitem $item_dovetail_saw
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_hammer
@@ -953,6 +1180,7 @@ SECTION ITEM $item_hammer
 	DECAY
 	VALUE 15
 	AMXINT $localvar_flipitem $item_hammer2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_hammer2
@@ -961,6 +1189,7 @@ SECTION ITEM $item_hammer2
 	DECAY
 	VALUE 15
 	AMXINT $localvar_flipitem $item_hammer
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_moulding_planes
@@ -970,6 +1199,7 @@ SECTION ITEM $item_moulding_planes
 	VALUE 15
 	@ONDBLCLICK carpenter
 	AMXINT $localvar_flipitem $item_moulding_planes2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_moulding_planes2
@@ -979,6 +1209,7 @@ SECTION ITEM $item_moulding_planes2
 	VALUE 15
 	@ONDBLCLICK carpenter
 	AMXINT $localvar_flipitem $item_moulding_planes
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_nails
@@ -987,6 +1218,7 @@ SECTION ITEM $item_nails
 	DECAY
 	VALUE 5
 	AMXINT $localvar_flipitem $item_nails2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_nails2
@@ -995,6 +1227,7 @@ SECTION ITEM $item_nails2
 	DECAY
 	VALUE 5
 	AMXINT $localvar_flipitem $item_nails
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_jointing_plane
@@ -1004,6 +1237,7 @@ SECTION ITEM $item_jointing_plane
 	VALUE 15
 	@ONDBLCLICK carpenter
 	AMXINT $localvar_flipitem $item_jointing_plane2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_jointing_plane2
@@ -1013,6 +1247,7 @@ SECTION ITEM $item_jointing_plane2
 	VALUE 15
 	@ONDBLCLICK carpenter
 	AMXINT $localvar_flipitem $item_jointing_plane
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_smoothing_plane
@@ -1022,6 +1257,7 @@ SECTION ITEM $item_smoothing_plane
 	VALUE 15
 	@ONDBLCLICK carpenter
 	AMXINT $localvar_flipitem $item_smoothing_plane2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_smoothing_plane2
@@ -1030,6 +1266,7 @@ SECTION ITEM $item_smoothing_plane2
 	DECAY
 	VALUE 15
 	AMXINT $localvar_flipitem $item_smoothing_plane
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_saw
@@ -1039,6 +1276,7 @@ SECTION ITEM $item_saw
 	VALUE 20
 	@ONDBLCLICK _cutlog
 	AMXINT $localvar_flipitem $item_saw2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_saw2
@@ -1048,6 +1286,7 @@ SECTION ITEM $item_saw2
 	VALUE 20
 	@ONDBLCLICK _cutlog
 	AMXINT $localvar_flipitem $item_saw
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_draw_knife
@@ -1055,6 +1294,7 @@ SECTION ITEM $item_draw_knife
 	ID 10E4
 	DECAY
 	VALUE 5
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_froe
@@ -1062,6 +1302,7 @@ SECTION ITEM $item_froe
 	ID 10E5
 	DECAY
 	VALUE 15
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_inshave
@@ -1069,6 +1310,7 @@ SECTION ITEM $item_inshave
 	ID 10E6
 	DECAY
 	VALUE 10
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_scorp
@@ -1076,6 +1318,7 @@ SECTION ITEM $item_scorp
 	ID 10E7
 	DECAY
 	VALUE 10
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_woodworkers_bench1_1
@@ -1085,6 +1328,7 @@ SECTION ITEM $item_woodworkers_bench1_1
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_woodworkers_bench2_1
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_woodworkers_bench1_2
@@ -1094,6 +1338,7 @@ SECTION ITEM $item_woodworkers_bench1_2
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_woodworkers_bench2_2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_woodworkers_bench1_3
@@ -1103,6 +1348,7 @@ SECTION ITEM $item_woodworkers_bench1_3
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_woodworkers_bench2_3
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_vise1
@@ -1112,6 +1358,7 @@ SECTION ITEM $item_vise1
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_vise2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_woodworkers_bench2_1
@@ -1121,6 +1368,7 @@ SECTION ITEM $item_woodworkers_bench2_1
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_woodworkers_bench1_1
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_woodworkers_bench2_2
@@ -1130,6 +1378,7 @@ SECTION ITEM $item_woodworkers_bench2_2
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_woodworkers_bench1_2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_woodworkers_bench2_3
@@ -1139,6 +1388,7 @@ SECTION ITEM $item_woodworkers_bench2_3
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_woodworkers_bench1_3
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_vise2
@@ -1148,6 +1398,7 @@ SECTION ITEM $item_vise2
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_vise1
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_coopers_bench1_1
@@ -1157,6 +1408,7 @@ SECTION ITEM $item_coopers_bench1_1
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_coopers_bench2_1
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_coopers_bench1_2
@@ -1166,6 +1418,7 @@ SECTION ITEM $item_coopers_bench1_2
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_coopers_bench2_2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_coopers_bench2_1
@@ -1175,6 +1428,7 @@ SECTION ITEM $item_coopers_bench2_1
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_coopers_bench1_1
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_coopers_bench2_2
@@ -1184,6 +1438,7 @@ SECTION ITEM $item_coopers_bench2_2
 	VALUE 20
 	MOVABLE 1
 	AMXINT $localvar_flipitem $item_coopers_bench1_2
+	AMXINT $localvar_flipitem 
 }
 
 //
@@ -1199,6 +1454,7 @@ SECTION ITEM $item_anvil_1
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Anvil
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_anvil_2
@@ -1211,6 +1467,7 @@ SECTION ITEM $item_anvil_2
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Anvil
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_bellows
@@ -1221,12 +1478,14 @@ SECTION ITEM $item_bellows
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Bellows 
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_bellows_1
 {
 	NAME bellows
 	ID 1986
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge1
@@ -1237,6 +1496,7 @@ SECTION ITEM $item_forge1
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_1_1
@@ -1247,6 +1507,7 @@ SECTION ITEM $item_forge2_1_1
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_1_2
@@ -1258,6 +1519,7 @@ SECTION ITEM $item_forge2_1_2
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_1_3
@@ -1268,6 +1530,7 @@ SECTION ITEM $item_forge2_1_3
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_1_4
@@ -1278,6 +1541,7 @@ SECTION ITEM $item_forge2_1_4
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_1_5
@@ -1288,6 +1552,7 @@ SECTION ITEM $item_forge2_1_5
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_2_1
@@ -1299,6 +1564,7 @@ SECTION ITEM $item_forge2_2_1
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_2_2
@@ -1306,6 +1572,7 @@ SECTION ITEM $item_forge2_2_2
 	NAME forge
 	ID 198a
 	AMXINT $localvar_flipitem $item_forge2_1_2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_2_3
@@ -1317,6 +1584,7 @@ SECTION ITEM $item_forge2_2_3
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_2_4
@@ -1328,6 +1596,7 @@ SECTION ITEM $item_forge2_2_4
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_forge2_2_5
@@ -1338,6 +1607,7 @@ SECTION ITEM $item_forge2_2_5
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Forge 2
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_large_forge_deed_2
@@ -1346,6 +1616,7 @@ SECTION ITEM $item_large_forge_deed_2
 	ID 14F0
 	NEWBIE
 	MOREX 36
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_large_forge_deed_1
@@ -1354,6 +1625,7 @@ SECTION ITEM $item_large_forge_deed_1
 	ID 14F0
 	NEWBIE
 	MOREX 35
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_shovel
@@ -1367,6 +1639,7 @@ SECTION ITEM $item_shovel
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Shovel
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_drum
@@ -1379,6 +1652,7 @@ SECTION ITEM $item_drum
 	///CATEGORY Professions
 	///SUBSECTION Bard
 	///DESCRIPTION Drum
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_tambourine1
@@ -1391,6 +1665,7 @@ SECTION ITEM $item_tambourine1
 	///CATEGORY Professions
 	///SUBSECTION Bard
 	///DESCRIPTION Tambourine
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_tambourine2
@@ -1403,6 +1678,7 @@ SECTION ITEM $item_tambourine2
 	///CATEGORY Professions
 	///SUBSECTION Bard
 	///DESCRIPTION Tambourine
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_standing_harp
@@ -1415,6 +1691,7 @@ SECTION ITEM $item_standing_harp
 	///CATEGORY Professions
 	///SUBSECTION Bard
 	///DESCRIPTION Standing Harp
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_lap_harp
@@ -1427,6 +1704,7 @@ SECTION ITEM $item_lap_harp
 	///CATEGORY Professions
 	///SUBSECTION Bard
 	///DESCRIPTION Harp
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_lute_2
@@ -1439,6 +1717,7 @@ SECTION ITEM $item_lute_2
 	///CATEGORY Professions
 	///SUBSECTION Bard
 	///DESCRIPTION Lute
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_lute_1
@@ -1451,6 +1730,7 @@ SECTION ITEM $item_lute_1
 	///CATEGORY Professions
 	///SUBSECTION Bard
 	///DESCRIPTION Lute
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_lockpicks
@@ -1464,6 +1744,7 @@ SECTION ITEM $item_lockpicks
 	///CATEGORY Professions
 	///SUBSECTION Thief
 	///DESCRIPTION Lockpick
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_iron_ingots
@@ -1479,6 +1760,7 @@ SECTION ITEM $item_iron_ingots
 	///CATEGORY Professions
 	///SUBSECTION Miner & Blacksmith
 	///DESCRIPTION Iron Ingot
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_clock_parts
@@ -1492,6 +1774,7 @@ SECTION ITEM $item_clock_parts
 	///CATEGORY Professions
 	///SUBSECTION Tinker
 	///DESCRIPTION Clock Parts
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_axles_with_gears
@@ -1505,6 +1788,7 @@ SECTION ITEM $item_axles_with_gears
 	///CATEGORY Professions
 	///SUBSECTION Tinker
 	///DESCRIPTION Axles with Gears
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_gears
@@ -1518,6 +1802,7 @@ SECTION ITEM $item_gears
 	///CATEGORY Professions
 	///SUBSECTION Tinker
 	///DESCRIPTION Gear
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_hinges
@@ -1530,6 +1815,7 @@ SECTION ITEM $item_hinges
 	///CATEGORY Professions
 	///SUBSECTION Tinker
 	///DESCRIPTION Hinges
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_sextant_parts
@@ -1542,6 +1828,7 @@ SECTION ITEM $item_sextant_parts
 	///CATEGORY Professions
 	///SUBSECTION Tinker
 	///DESCRIPTION Sextant Parts
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_axles
@@ -1554,6 +1841,7 @@ SECTION ITEM $item_axles
 	///CATEGORY Professions
 	///SUBSECTION Tinker
 	///DESCRIPTION Axles
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_springs
@@ -1566,6 +1854,7 @@ SECTION ITEM $item_springs
 	///CATEGORY Professions
 	///SUBSECTION Tinker
 	///DESCRIPTION Springs
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_tinkers_tools
@@ -1578,6 +1867,7 @@ SECTION ITEM $item_tinkers_tools
 	///CATEGORY Professions
 	///SUBSECTION Tinker
 	///DESCRIPTION Tinker's Tools
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_archery_butte_2
@@ -1588,6 +1878,7 @@ SECTION ITEM $item_archery_butte_2
 
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_archery_butte_1
@@ -1598,6 +1889,7 @@ SECTION ITEM $item_archery_butte_1
 
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_feathers_1
@@ -1607,6 +1899,7 @@ SECTION ITEM $item_feathers_1
 	AMXINT $localvar_flipitem $item_feathers_2
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_feathers_2
@@ -1616,6 +1909,7 @@ SECTION ITEM $item_feathers_2
 	AMXINT $localvar_flipitem $item_feathers_1
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_arrow_fletching_2
@@ -1626,6 +1920,7 @@ SECTION ITEM $item_arrow_fletching_2
 	
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_arrow_fletching_1
@@ -1636,6 +1931,7 @@ SECTION ITEM $item_arrow_fletching_1
 	
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_arrow_shafts_2
@@ -1646,6 +1942,7 @@ SECTION ITEM $item_arrow_shafts_2
 	
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_arrow_shafts_1
@@ -1656,6 +1953,7 @@ SECTION ITEM $item_arrow_shafts_1
 	
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_arrow
@@ -1668,6 +1966,7 @@ SECTION ITEM $item_arrow
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
 	///DESCRIPTION Arrow
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_crossbow_bolt
@@ -1680,6 +1979,7 @@ SECTION ITEM $item_crossbow_bolt
 	///CATEGORY Professions
 	///SUBSECTION Bowyer / Fletcher
 	///DESCRIPTION Bolt
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_clock
@@ -1692,6 +1992,7 @@ SECTION ITEM $item_clock
 	
 	///CATEGORY Professions
 	///SUBSECTION Tinker
+	AMXINT $localvar_flipitem 
 }
 
 SECTION ITEM $item_clock_frames
@@ -1699,5 +2000,6 @@ SECTION ITEM $item_clock_frames
 	NAME clock frame
 	ID 104D
 	DECAY
+	AMXINT $localvar_flipitem 
 }
 

@@ -4565,7 +4565,7 @@ Z 15
 SECTION HOUSE ITEM 352
 {
 	// christmas tree ordament
-	ITEM $item_earrings
+	ITEM $item_earrings1
 	X 1
 	Y 0
 	Z 22

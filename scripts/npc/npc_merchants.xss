@@ -1048,7 +1048,7 @@ SECTION NPC $npc_provisioner_m
 	RSHOPITEM $item_leather_bag
 	RSHOPITEM $item_pouch
 	RSHOPITEM $item_square_basket
-	RSHOPITEM $item_wooden_box_1
+	RSHOPITEM $item_wooden_box1_1
 	RSHOPITEM $item_gold_key
 	RSHOPITEM $item_iron_key
 	RSHOPITEM $item_bronze_key
@@ -1141,7 +1141,7 @@ SECTION NPC $npc_provisioner_m
 	SELLITEM $item_leather_bag
 	SELLITEM $item_pouch
 	SELLITEM $item_square_basket
-	SELLITEM $item_wooden_box_1
+	SELLITEM $item_wooden_box1_1
 	SELLITEM $item_gold_key
 	SELLITEM $item_iron_key
 	SELLITEM $item_bronze_key
@@ -1310,7 +1310,7 @@ SECTION NPC $npc_provisioner_f
 	RSHOPITEM $item_leather_bag
 	RSHOPITEM $item_pouch
 	RSHOPITEM $item_square_basket
-	RSHOPITEM $item_wooden_box_1
+	RSHOPITEM $item_wooden_box1_1
 	RSHOPITEM $item_gold_key
 	RSHOPITEM $item_iron_key
 	RSHOPITEM $item_bronze_key
@@ -1403,7 +1403,7 @@ SECTION NPC $npc_provisioner_f
 	SELLITEM $item_leather_bag
 	SELLITEM $item_pouch
 	SELLITEM $item_square_basket
-	SELLITEM $item_wooden_box_1
+	SELLITEM $item_wooden_box1_1
 	SELLITEM $item_gold_key
 	SELLITEM $item_iron_key
 	SELLITEM $item_bronze_key
@@ -2781,12 +2781,12 @@ SECTION NPC $npc_jeweler_m
 	RSHOPITEM $item_star_sapphires3
 	RSHOPITEM $item_tourmalines4
 	RSHOPITEM $item_beads
-	RSHOPITEM $item_bracelet
-	RSHOPITEM $item_earrings
+	RSHOPITEM $item_bracelet1
+	RSHOPITEM $item_earrings1
 	RSHOPITEM $item_necklace1
 	RSHOPITEM $item_necklace2
 	RSHOPITEM $item_necklace3
-	RSHOPITEM $item_ring
+	RSHOPITEM $item_ring1
 	SELLITEM $item_amethysts4
 	SELLITEM $item_amethysts1
 	SELLITEM $item_citrines1
@@ -2821,12 +2821,12 @@ SECTION NPC $npc_jeweler_m
 	SELLITEM $item_star_sapphires3
 	SELLITEM $item_tourmalines4
 	SELLITEM $item_beads
-	SELLITEM $item_bracelet
-	SELLITEM $item_earrings
+	SELLITEM $item_bracelet1
+	SELLITEM $item_earrings1
 	SELLITEM $item_necklace1
 	SELLITEM $item_necklace2
 	SELLITEM $item_necklace3
-	SELLITEM $item_ring
+	SELLITEM $item_ring1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -2901,12 +2901,12 @@ SECTION NPC $npc_jeweler_f
 	RSHOPITEM $item_star_sapphires3
 	RSHOPITEM $item_tourmalines4
 	RSHOPITEM $item_beads
-	RSHOPITEM $item_bracelet
-	RSHOPITEM $item_earrings
+	RSHOPITEM $item_bracelet1
+	RSHOPITEM $item_earrings1
 	RSHOPITEM $item_necklace1
 	RSHOPITEM $item_necklace2
 	RSHOPITEM $item_necklace3
-	RSHOPITEM $item_ring
+	RSHOPITEM $item_ring1
 	SELLITEM $item_amethysts4
 	SELLITEM $item_amethysts1
 	SELLITEM $item_citrines1
@@ -2941,12 +2941,12 @@ SECTION NPC $npc_jeweler_f
 	SELLITEM $item_star_sapphires3
 	SELLITEM $item_tourmalines4
 	SELLITEM $item_beads
-	SELLITEM $item_bracelet
-	SELLITEM $item_earrings
+	SELLITEM $item_bracelet1
+	SELLITEM $item_earrings1
 	SELLITEM $item_necklace1
 	SELLITEM $item_necklace2
 	SELLITEM $item_necklace3
-	SELLITEM $item_ring
+	SELLITEM $item_ring1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -4450,7 +4450,7 @@ SECTION NPC $npc_carpenter_m
 	DEF 5
 	SHOPKEEPER
 	RSHOPITEM $item_wooden_shield
-	RSHOPITEM $item_wooden_box_1
+	RSHOPITEM $item_wooden_box1_1
 	RSHOPITEM $item_small_wooden_crate1_1
 	RSHOPITEM $item_pine_wooden_bench_D1
 	RSHOPITEM $item_pine_throne_1
@@ -4497,7 +4497,7 @@ SECTION NPC $npc_carpenter_m
 	RSHOPITEM $item_nails
 	RSHOPITEM $item_froe
 	SELLITEM $item_wooden_shield
-	SELLITEM $item_wooden_box_1
+	SELLITEM $item_wooden_box1_1
 	SELLITEM $item_small_wooden_crate1_1
 	SELLITEM $item_pine_wooden_bench_D1
 	SELLITEM $item_pine_wooden_chair1_1
@@ -4574,7 +4574,7 @@ SECTION NPC $npc_carpenter_f
 	DEF 5
 	SHOPKEEPER
 	RSHOPITEM $item_wooden_shield
-	RSHOPITEM $item_wooden_box_1
+	RSHOPITEM $item_wooden_box1_1
 	RSHOPITEM $item_small_wooden_crate1_1
 	RSHOPITEM $item_pine_wooden_bench_D1
 	RSHOPITEM $item_pine_throne_1
@@ -4621,7 +4621,7 @@ SECTION NPC $npc_carpenter_f
 	RSHOPITEM $item_nails
 	RSHOPITEM $item_froe
 	SELLITEM $item_wooden_shield
-	SELLITEM $item_wooden_box_1
+	SELLITEM $item_wooden_box1_1
 	SELLITEM $item_small_wooden_crate1_1
 	SELLITEM $item_pine_wooden_bench_D1
 	SELLITEM $item_pine_wooden_chair1_1

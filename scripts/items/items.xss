@@ -136,7 +136,7 @@ SECTION ITEM $item_silver_chest
 	MOVABLE 1
 }
 
-SECTION ITEM $item_wooden_box_1
+SECTION ITEM $item_wooden_box1_1
 {
 	NAME wooden box
 	ID 0E7D
@@ -144,10 +144,10 @@ SECTION ITEM $item_wooden_box_1
 	VALUE 55
 	WEIGHT 100
 	MOVABLE 1
-	AMXINT $localvar_flipitem $item_wooden_box_2
+	AMXINT $localvar_flipitem $item_wooden_box1_2
 }
 
-SECTION ITEM $item_wooden_box_2
+SECTION ITEM $item_wooden_box1_2
 {
 	NAME wooden box
 	ID 09aa
@@ -155,7 +155,7 @@ SECTION ITEM $item_wooden_box_2
 	VALUE 55
 	WEIGHT 100
 	MOVABLE 1
-	AMXINT $localvar_flipitem $item_wooden_box_1
+	AMXINT $localvar_flipitem $item_wooden_box1_1
 }
 
 SECTION ITEM $item_brass_box
@@ -375,16 +375,6 @@ SECTION ITEM $item_seasons_greetings
 	NEWBIE
 	COLOR 0027
 	DECAY
-}
-
-SECTION ITEM $item_fishing_pole
-{
-	NAME fishing pole
-	ITEMHAND 2
-	ID 0DBF
-	DECAY
-	VALUE 14
-	@ONDBLCLICK __nxw_sk_fishing
 }
 
 SECTION ITEM $item_black_smith
@@ -799,14 +789,6 @@ SECTION ITEM $item_shafts
 SECTION ITEM $item_clock_frames
 {
 	ID 104D
-	DECAY
-}
-
-SECTION ITEM $item_fishing_net
-{
-	NAME fishing net
-	ID 1ea5
-	COLOR 07d3
 	DECAY
 }
 

@@ -962,11 +962,11 @@ SECTION ITEMLIST $itemlist_christmas
     $item_red_sandals
     $item_wizards_hat
     $item_beads
-    $item_bracelet
-    $item_earrings
+    $item_bracelet1
+    $item_earrings1
     $item_necklace2
     $item_necklace3
-    $item_ring
+    $item_ring1
 }
 
 // start of Fraz's npc monsters random equipped weapon list

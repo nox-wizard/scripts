@@ -438,11 +438,11 @@ SECTION MAKEMENU 22
     0E7D Wooden Box - East
     RESOURCE 8
     SKILL 100
-    ADDITEM $item_wooden_box_1
+    ADDITEM $item_wooden_box1_1
     09aa Wooden Box - South
     RESOURCE 8
     SKILL 100
-    ADDITEM $item_wooden_box_2
+    ADDITEM $item_wooden_box1_2
     0E7E Small Wooden Crate - East
     RESOURCE 9
     SKILL 100

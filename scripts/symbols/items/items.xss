@@ -259,8 +259,8 @@
 #define $item_pouch 1002
 
 #define $item_silver_chest 1003
-#define $item_wooden_box_1 1004
-#define $item_wooden_box_2 1005
+#define $item_wooden_box1_1 1004
+#define $item_wooden_box1_2 1005
 #define $item_brass_box 1006
 
 //key
@@ -268,6 +268,11 @@
 #define $item_iron_key 1051
 #define $item_magic_key 1052
 #define $item_bronze_key 1053
+#define $item_copper_key 1054
+#define $item_key_ring1 1055
+#define $item_key_ring2 1056
+#define $item_key_ring3 1057
+#define $item_key_ring4 1058
 
 //
 // STATUES
@@ -426,7 +431,6 @@
 #define $item_fire_mace 1705
 #define $item_recall_rune 1777
 #define $item_spellbook 1783
-#define $item_fishing_pole 1784
 #define $item_all-spell_scroll 1800
 #define $item_all_spell_scroll 1800
 #define $item_black_smith 1801
@@ -614,47 +618,60 @@
 //
 //JEWELS
 //
-#define $item_amethysts1 13194
-#define $item_amethysts2 13195
-#define $item_amethysts3 13213
-#define $item_amethysts4 13214
-#define $item_citrines1 13196
-#define $item_citrines2 13215
-#define $item_citrines3 13216
-#define $item_citrines4 13217
-#define $item_emeralds1 13197
-#define $item_emeralds2 13222
-#define $item_rubies1 13198
-#define $item_rubies3 13200
-#define $item_rubies4 13201
-#define $item_rubies5 13202
-#define $item_rubies6 13223
-#define $item_rubies7 13224
-#define $item_sapphires1 13203
-#define $item_sapphires2 13204
-#define $item_sapphires3 13205
-#define $item_sapphires4 13206
-#define $item_star_sapphires1 13207
-#define $item_star_sapphires2 13208
-#define $item_star_sapphires3 13225
-#define $item_tourmalines1 13209
-#define $item_tourmalines2 13210
-#define $item_tourmalines3 13211
-#define $item_tourmalines4 13226
-#define $item_pieces_of_amber 13212
-#define $item_diamonds1 13218
-#define $item_diamonds2 13219
-#define $item_diamonds3 13220
-#define $item_diamonds4 13221
-#define $item_diamonds5 13234
+#define $item_amethysts1 13193
+#define $item_amethysts2 13194
+#define $item_amethysts3 13195
+#define $item_amethysts4 13196
+#define $item_citrines1 13197
+#define $item_citrines2 13198
+#define $item_citrines3 13199
+#define $item_citrines4 13200
+#define $item_emeralds1 13201
+#define $item_emeralds2 13202
+#define $item_rubies1 13203
+#define $item_rubies3 13204
+#define $item_rubies4 13205
+#define $item_rubies5 13206
+#define $item_rubies6 13207
+#define $item_rubies7 13208
+#define $item_sapphires1 13209
+#define $item_sapphires2 13210
+#define $item_sapphires3 13211
+#define $item_sapphires4 13212
+#define $item_star_sapphires1 13213
+#define $item_star_sapphires2 13214
+#define $item_star_sapphires3 13215
+#define $item_tourmalines1 13216
+#define $item_tourmalines2 13217
+#define $item_tourmalines3 13218
+#define $item_tourmalines4 13219
+#define $item_pieces_of_amber 13220
+#define $item_diamonds1 13221
+#define $item_diamonds2 13222
+#define $item_diamonds3 13223
+#define $item_diamonds4 13224
+#define $item_diamonds5 13225
 
-#define $item_beads 13227
-#define $item_bracelet 13228
-#define $item_earrings 13229
-#define $item_necklace1 13230
-#define $item_necklace2 13231
-#define $item_necklace3 13232
-#define $item_ring 13233
+#define $item_beads 13226
+#define $item_bracelet1 13227
+#define $item_bracelet2 13228
+#define $item_earrings1 13229
+#define $item_earrings2 13230
+#define $item_necklace1 13231
+#define $item_necklace2 13232
+#define $item_necklace3 13233
+#define $item_necklace4 13234
+#define $item_necklace5 13235
+#define $item_necklace6 13236
+#define $item_ring1 13237
+#define $item_ring2 13238
+#define $item_gold_belt_1 13239
+#define $item_gold_belt_2 13240
+#define $item_steel_wire 13241
+#define $item_silver_wire 13242
+#define $item_gold_wire 13243
+#define $item_copper_wire 13244
+
 
 //
 // treasure pieces
@@ -1049,7 +1066,6 @@
 #define $item_pentagram_8 16033
 #define $item_pentagram_9 16034
 
-#define $item_fishing_net 16442
 
 /////////////////////////////////////////////////
 

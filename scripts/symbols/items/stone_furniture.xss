@@ -20,14 +20,22 @@
 #define $item_sandstone_bench_B2_2 350
 #define $item_sandstone_bench_B2_3 351
 
+#define $item_stone_chair 391
 #define $item_stone_chair_1 392
 #define $item_stone_chair_2 393
 #define $item_stone_chair_3 394
 #define $item_stone_chair_4 395
 
-#define $item_stone_table_1_1 612
-#define $item_stone_table_1_2 613
-#define $item_stone_table_1_3 614
-#define $item_stone_table_2_1 615
-#define $item_stone_table_2_2 616
-#define $item_stone_table_2_3 617
+#define $item_stone_table1A_1 612
+#define $item_stone_table1B_1 613
+#define $item_stone_table1C_1 614
+#define $item_stone_table1A_2 615
+#define $item_stone_table1B_2 616
+#define $item_stone_table1C_2 617
+
+#define $item_stone_bench1A_1 618
+#define $item_stone_bench1B_1 619
+#define $item_stone_bench1C_1 620
+#define $item_stone_bench1A_2 621
+#define $item_stone_bench1B_2 622
+#define $item_stone_bench1C_2 623
