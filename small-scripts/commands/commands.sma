@@ -1,7 +1,7 @@
 #include "small-scripts/nxw_lib2.sma"
 #include "small-scripts/commands/constant.sma"
 
-//here are all command scripts
+//here are all command scripts (Horian: test cvs)
 #include "small-scripts/commands/area.sma"
 #include "small-scripts/commands/action.sma"
 #include "small-scripts/commands/accountscp.sma"
