@@ -314,6 +314,16 @@ native gui_addXmfHtmlGump( const menu, const x, const y, const width, const heig
 native gui_addPage( const menu, const page );
 
 /*!
+\brief Add a new group at given menu
+\author Wintermute
+\param 1 the menu serial
+\param 2 the group
+\return false if error, true else
+\fn gui_addGroup( const menu, const group )
+*/
+native gui_addGroup( const menu, const group );
+
+/*!
 \brief Add a new page button at given menu
 \author Endymion
 \since 0.82
