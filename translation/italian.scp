@@ -27,8 +27,8 @@ You failed to cook the %s and drop some into the ashes.$Non sei stato in grado d
 You failed to mix, and spilt your water.$Non sei riuscito a mescolare, ed hai versato tutta l'acqua.
 You failed to mix.$Hai fallito il tentativo.
 You failed to resurrect the ghost$Non sei stato capace di resuscitare il fantasma
-You're not enough skilled$
-You've not enough resources$
+You're not enough skilled$Non sei abbastanza bravo
+You've not enough resources$Non hai abbastanza risorse
 
 // ai.cpp
 
@@ -53,8 +53,8 @@ There was an error creating that boat.$Si e' verificato un errore nella creazion
 The deed is broken, please contact a Game Master.$Il deed e' inservibile, per favore contatta un Game Master.
 Arr, Sir, we've hit rough waters!$Accidenti! Messere, siamo entrati in acque burrascose!
 Arr, somethings in the way!$Accidenti! Qualcosa sulla rotta!
-Arr, another ship in the way$
-Select location for placing.$
+Arr, another ship in the way$Arr, una nave sulla nostra rotta!
+Select location for placing.$Dove lo vuoi posizionare?
 You cannot build your structure there!$Non e' il posto adatto a quella struttura!
 Can not build a house at that location (CBS)!$Non puoi edificare una casa in quel posto (CBS)!
 
@@ -70,10 +70,10 @@ Books are currently disabled, sorry :($Libri momentaneamente disabilitati :(
 
 // chars.cpp
 
-%s's item bank box.$
+%s's item bank box.$La banca oggetti di %s
 %s's bank box.$ conto corrente di %s.
 You break your concentration.$Perdi la concentrazione.
-You stop casting the spell.$
+You stop casting the spell.$Smetti di pronunciare l'incantesimo
 You've gained a little karma.$Il tuo karma e' salito di un po'.
 You have been poisoned!$Sei stato avvelenato!
 You are no longer frozen.$Non rimarrai congelato ancora per molto.
@@ -82,16 +82,16 @@ You are already hidden$Sei gia' nascosto.
 You are unable to hide here.$Non riesci a nasconderti qui.
 You have hidden yourself well.$Ti sei nascosto bene.
 That person isn't dead$Questa persona non e' morta.
-You cannot use shopkeepers.$
-You can only possess NPCs.$
-This NPC is already possessed by someone!$
+You cannot use shopkeepers.$Non puoi usare i vendor
+You can only possess NPCs.$Puoi solo possedere PNG
+This NPC is already possessed by someone!$Questo PNG è giàposseduto da qualcuno!
 You have been kicked!$Sei stato cacciato.
-Thou have suffered thy punishment, scoundrel.$
+Thou have suffered thy punishment, scoundrel.$Hai avuto la tua punizione, maledetto!
 You have killed %i innocent people.$Hai ucciso %i persone innocenti.
 You are now a murderer!$Ora sei un assassino!
 You are not strong enough to keep %s equipped!$Non sei abbastanza forte per equipaggiarti di un %s !
-You are not dexterious enough to equip that.$
-You are not intelligent enough to equip that.$
+You are not dexterious enough to equip that.$Non sei abbastanza agile per indosarlo
+You are not intelligent enough to equip that.$Non sei abbastanza intelligente per indossarlo
 %s %s by %s$%s %s per %s
 %s at %igp$%s a %imonete d'oro
 %s %i charge$%s %i cambia
@@ -114,7 +114,7 @@ Wheeeee!!! Smoking!$Wheeeee!!! Fuma!
 You are no longer squelched!$Non sei piu' zittito.
 You are no longer a criminal.$Non sei piu' un criminale.
 You are no longer a murderer.$Non sei piu' un assassino
-Select your target$
+Select your target$Scegli il tuo bersaglio
 * %s looks a little hungry *$* %s e' un po' affamato *
 * %s looks fairly hungry *$* %s e' affamato *
 * %s looks extremely hungry *$* %s e' estremamente affamato *
@@ -127,16 +127,16 @@ The poison has killed you.$Il veleno ti ha ucciso.
 * %s is in severe pain! *$* %s e' nel panico piu' totale *
 * %s looks extremely weak and is wrecked in pain! *$* %s e' estremamente debole e attanagliato dalla paura *
 The poison has worn off.$Il veleno e' stato debellato.
-Did you see the size of that chicken ?$
-Boy, i could swear i saw a three headed monkey!$
-Hey, this is better than a trip to las vegas!$
-Did you know that there are roots growing from my ears ?$
-I wonder how my head looks like without those purple antennas.$
-What was that?$
-Did you see that?$
-The rocks are lovely this time of year.$
-I'll show you that damn rock there is weaker than my head!$
-I don't really feel so good$
+Did you see the size of that chicken ?$Hai visto quant'è grande quella gallina?
+Boy, i could swear i saw a three headed monkey!$Ragazzo, ti giuro che ho visto un asino a tre teste!
+Hey, this is better than a trip to las vegas!$Hey, questo è meglio di un viaggio a Las Vegas!
+Did you know that there are roots growing from my ears ?$Hai saputo che ho delle radici che mi spuntano dalle orecchie?
+I wonder how my head looks like without those purple antennas.$Mi chiedo come starebbe la mia testa senza quelle antenne rosse
+What was that?$Cos'e' stato?
+Did you see that?$L'hai visto?
+The rocks are lovely this time of year.$Le rocce sono fantastiche in queto periodo
+I'll show you that damn rock there is weaker than my head!$Ti faro' vedere che la mia testa e'più dura di quella dannata roccia!
+I don't really feel so good$Non mi sento tanto bene
 You have gained a little karma.$Il tuo karma e' salito un po'.
 You have lost a little karma.$Il tuo karma e' sceso un po' .
 You have gained some karma.$Il tuo karma e' salito.
@@ -173,7 +173,7 @@ To place a bounty on a murderer, use BOUNTY <amount>$Per mettere una taglia su u
 server is going to sleep for %i seconds!$Il Server andra' in sospensione per %i secondi.
 server is back from a %i second break$Il Server e' di nuovo up dopo un break di %i secondi.
 Shutdown has been interrupted.$L'arresto del Server e' stato interrotto.
-This command is simply no more supported. Sorry :[$
+This command is simply no more supported. Sorry :[$Questo comando non è più supportato
 World is now respawning, expect some lag!$Il mondo sta rigenerando. Aspettatevi un po' di lag!
 Guards have been reactivated.$Le guardie sono state riattivate.
 Warning: Guards have been deactivated globally.$ATTENZIONE: le guardie sono state disabilitate ovunque!
@@ -197,12 +197,12 @@ That player is already dead.$Questa persona e' gia' morta.
 // combat.cpp
 
 Your weapon has been destroyed$La tua arma e' andata distrutta.
-You failed to disarm your opponent!$
-You failed to stun your opponent!$
+You failed to disarm your opponent!$Non sei riuscito a disarmarlo!
+You failed to stun your opponent!$Non sei riuscito a stordirlo!
 Your shield has been destroyed$Il tuo scudo e' andato distrutto.
-You are out of ammunition!$
+You are out of ammunition!$Hai finito le munizioni!
 You are too tired to attack.$Sei troppo stanco per attaccare!
-The poison you put on the weapon went out.$
+The poison you put on the weapon went out.$Il veleno che hai messo sull'arma è andato via
 hits you in your Chest!$ti colpisce al torace!
 lands a terrible blow to your Chest!$ti assesta un colpo terribile al torace!
 lands a blow to your Stomach!$ti assesta un colpo al basso ventre!
@@ -224,13 +224,13 @@ hits you to your Throat!$ti colpisce alla gola!
 hits you in Left Hand!$ti colpisce alla mano sinistra!
 hits you in Right Hand!$ti colpisce alla mano destra!
 Your %s has been destroyed$Le tue %s sono andate distrutte!
-You prepare yourself for a disarm move.$
-You prepare yourself for a stunning punch.$
+You prepare yourself for a disarm move.$Ti prepari per disarmare
+You prepare yourself for a stunning punch.$Ti prepari per stordire
 
 // commands.cpp
 
-Spawn %d is spawning all items/NPCs, this will cause some lag.$
-[DONE] All NPCs/items spawned in spawn %d.$
+Spawn %d is spawning all items/NPCs, this will cause some lag.$Lo spawn %d sta rigenerando tutti gli oggetti/PNG, ci sara' un po' di lag
+[DONE] All NPCs/items spawned in spawn %d.$[FATTO] Tutti gli oggetti rigenerati dallo spawn %d
 Region %d is Spawning %d NPCs/items, this will cause some lag.$La zona %d sta Generando %d NPCs/items, questo causera' un po' di lag.
 Killing all characters, this may cause some lag...$Si stanno uccidendo tutti i personaggi, questo causera' un po' di lag...
 The Counselor Queue is currently full. Contact the shard operator$La lista di pages dei Counselor e' momentaneamente intasata. Contatta lo shard operator
@@ -275,7 +275,7 @@ World will be saved in 30 seconds..$Il mondo sara' salvato fra 30 secondi...
 You must wait to perform another action.$Devi aspettare un attimo prima di compiere una nuova azione.
 You must wait to perform another action$Devi aspettare un po' prima di effettuare un'altra azione.
 Must be closer to use this!$Dovresti essere piu' vicino per poterlo usare!
-You cannot reach the item$
+You cannot reach the item$Non riesci a raggiungere l'oggetto
 That is a secured chest!$Questa cassa e' chiusa a chiave!
 That item is locked down.$Questo oggetto e' assicurato a terra.
 You may not do that as a ghost.$Non pui comportarti come se fossi un fantasma.
@@ -288,7 +288,7 @@ You are already living!$Sei di nuovo in vita!
 That is locked.$Pare sia chiusa.
 Select teleport target.$Seleziona il posto dove ti vuoi teleportare.
 Select item to use the key on?$Cosa vuoi chiudere?
-This item is locked.$Sembra chiuso.
+This item is locked.$E' bloccato.
 If you wish to open a spellbook, it must be equipped or in your main backpack.$Se vuoi aprire il libro, devi accertarti che sia nello zaino principale.
 You quickly unlock, use, and then relock the door.$Hai aperto e richiuso velocemente la porta.
 This door is locked.$Mi spiace porta chiusa.
@@ -365,7 +365,7 @@ You are loosing karma!$Stai perdendo Karma!
 You can't wear that$Ma non puoi indossare quello!
 You are not strong enough to use that.$Non sei abbastanza forte per usarlo.
 You cant wear female armor!$Volevi veramente usare un'armatura femminile?ah ah ah non lo puoi fare!
-You cannot wear two weapons.$
+You cannot wear two weapons.$Non puoi usare due armi!
 You can't put items on other people!$Non puoi dare oggetti a chi ti pare!
 * You see %s eating %s *$* Osservi %s che si ciba di %s *
 It doesn't appear to want the item$Non mi pare troppo propenso ad accettare l'oggetto
@@ -379,19 +379,19 @@ I thank thee for thy payment. That should give thee a good start on thy way. Far
 I am sorry, but I can only accept gold.$Spiacente,ma...non posso accettare oro.
 Hey, putting houses in your pack crashes your back and client !$Hola,mettendo case nel tuo zaino causerai un crash !
 Thank thee kindly, but I have done nothing to warrant a gift.$Grazie sei molto gentile,ma non ho fatto nulla che giustifichi il tuo dono.
-I need much more gold if i shall be working for you !$
-Thank thee kindly, but this is more than i need for the day.$
-You cannot place an item there!$
-There is not enough space there!$
+I need much more gold if i shall be working for you !$Dovrai darmi mlto più oro se vuoi che lavori per te!
+Thank thee kindly, but this is more than i need for the day.$Grazie molte, ma questo è molto più di quello che mi serve per la giornata
+You cannot place an item there!$Non puoi metterlo li'!
+There is not enough space there!$Non c'e' abbastanza spazio li'!
 Hey, putting houses in your pack crashes your back and client!$Hola,mettendo case nel tuo zaino causerai un crash !
-This aint your backpack!$
+This aint your backpack!$Questo non è il tuo zaino!
 You can only put golds in this bank box!$In questo forziere puoi mettere solo monete d'oro!
-You exceeded the number of maximimum items in bank of %d$
+You exceeded the number of maximimum items in bank of %d$Sei arrivato al limite di %d oggetti in banca
 As you let go of the item it disappears.$Appena ti sei allontanato l'oggetto e' sparito.
 You can only place spell scrolls in a spellbook!$Puoi mettere incantesimi solamente nel libro magico!
 You cannot place spells in other peoples spellbooks.$Non puoi inserire incantesimi nel libro di un'altra persona.
 You already have that spell!$Possiedi gia' questo incantesimo!
-You can't put more than one scroll at a time in your book.$
+You can't put more than one scroll at a time in your book.$Non puoi mettere più di una pergamena alla volta nel libro magico
 Set a price for this item.$Stabilisci il prezzo di questo oggetto.
 
 // encryption.cpp
@@ -399,10 +399,10 @@ Set a price for this item.$Stabilisci il prezzo di questo oggetto.
 
 // extractionskills.cpp
 
-You can't mine with nothing in your hand !!$
+You can't mine with nothing in your hand !!$Non puoi minare a mani nude!!
 You cant mine while on a horse!$Non puoi minare in groppa al cavallo!
 You are too tired to mine.$Ti senti troppo affaticato per continuare a minare.
-You must have a pickaxe or shovel in hand in order to mine.$
+You must have a pickaxe or shovel in hand in order to mine.$Devi avere un piccone o un badile per minare
 You can't mine that!$Non puoi scavare qui!
 There is no metal here to mine.$Non ci sono metalli estraibili qui.
 You sifted thru the dirt and rocks, but found nothing useable.$Hai estratto meteriale di scarso valore che non puo' essere usato.
@@ -410,7 +410,7 @@ You sifted thru the dirt and rocks, but found nothing useable.$Hai estratto mete
 // fishing.cpp
 
 You are too far away to reach that$E' troppo lontano per raggiungerlo
-You can only fish in water !!$
+You can only fish in water !!$Puoi pescare solo nell'acqua!!
 You are too tired to fish, you need to rest!$Sei troppo affaticato per continuare,converrebbe fermarsi un po'!
 You fish for a while, but fail to catch anything.$Stai pescando da un po' ,ma non sei ancora riuscito a prendere nulla.
 You fished up an old pair of boots!$Hai pescato dei vecchi stivali!
@@ -444,7 +444,7 @@ You pull out a fish!$Hai catturato un pesce!
 // house.cpp
 
 Select location for building.$Scegli il posto adatto per la costruzione.
-You cannot build that in town!$
+You cannot build that in town!$Non puoi costruirlo in citta'!
 You cant build structures inside structures$Non puoi costruire una struttura all'interno di un'altra
 You have transferred your house to %s.$Hai traferito la proprieta' della tua casa a %s.
 You cannot build houses in town!$ Non puoi costruire case in citta'!
@@ -459,25 +459,25 @@ Converted into a %s.$Convertita in %s.
 A vendor deed for %s$Atto di compravendita di un vendor di %s
 Packed up vendor %s.$Riempito il vendor %s.
 All house items and keys removed.$Case oggetti e chiavi sono stati rimossi.
-you already own this house!$
+you already own this house!$Questa casa e' gia' tua
 Player ejected.$Giocatore espulso!
 That is not inside the house.$Non e' dentro la casa.
 %s has been banned from this house.$%s E' stato escluso dalla casa.
 That player is already on a house register.$Questo giocatore e' gia' nel registro della casa.
-You can't do that!$
+You can't do that!$Non puoi farlo!
 %s has been made a friend of the house.$%s e' diventato un amico di casa.
-That player is already a friend of the house.$
+That player is already a friend of the house.$Quel giocatore e' gia' amico della casa
 you cannot lock this down!$Non puoi chiuderlo a chiave.
-You can't lockdown doors or signs!$
-You can't lockdown anvils!$
-You can't lockdown forges!$
+You can't lockdown doors or signs!$Non puoi bloccare porte e cartelli!
+You can't lockdown anvils!$Non puoi bloccare le incudini!
+You can't lockdown forges!$Non puoi bloccare le forge!
 That item is already locked down, release it first!$Questo oggetto e' gia chiuso a chiave, aprilo prima!
-You already have locked down too many items!$
+You already have locked down too many items!$Hai gia' bloccato troppi oggetti!
 That item is not in your house!$Questo oggetto non e' nella tua casa.
 Invalid item!$Oggetto non valido.
 You cant lockdown doors or signs!$Non puoi chiudere a chiave porte o insegne.
-You already have secured too many items!$
-You can only secure chests!$Puoi solo chiudere un baule!
+You already have secured too many items!$Hai gia' blindato troppi oggetti
+You can only secure chests!$Puoi solo blindare i bauli!
 This is not your item!$Non e' tuo.
 you cannot release this!$Non puoi aprirlo!
 You cant release doors or signs!$Non puoi aprire porte o insegne.
@@ -510,48 +510,48 @@ Run AWAY!!! It will kill you!!$Gambe in spalla!!! Ti vuol far la pelle!!
 
 // jail.cpp
 
-That player is already in jail!$
-No free cells to jail %s$
+That player is already in jail!$Quel giocatore e' gia'in prigione
+No free cells to jail %s$La prigione %s e' piena
 You are jailed !$Sei stato arrestato.
-Player %s has been jailed in cell %i.$
+Player %s has been jailed in cell %i.$Il giocatore %s e' stato imprigionato nella cella %d
 Your jail time is over!$Hai scontato la tua pena.
-%s is now free$
-%s have released you$
+%s is now free$%s e' libero ora
+%s have released you$%s ti ha liberato
 
 // logsystem.cpp
 
-unable to open/create log file %s$
-Unable to write to log file %s$
+unable to open/create log file %s$Impossibile aprire/creare il logfile %s
+Unable to write to log file %s$Impossibile scrivere il logfile %s
 
 // magic.cpp
 
-You don't know that spell yet.$
+You don't know that spell yet.$Non conosci ancora quella magia
 You have insufficient mana to cast that spell.$Non hai mana a sufficienza per questo incantesimo.
 You feel yourself resisting magical energy!$Stai provando a resistere agli effetti magici!
-You do not have enough reagents to cast that spell.[$
+You do not have enough reagents to cast that spell.[$Non hai abbastanza reagenti per lanciare quella magia
 The spell fizzles.$L'incantesimo sfuma.
-You are too far away from the target.$
-You cannot see your target.$
-There is something between you and your target that makes the casting impossible.$
-You cannot cast field spells in town!$
+You are too far away from the target.$Sei troppo lontano dal bersaglio
+You cannot see your target.$Non vedi il bersaglio
+There is something between you and your target that makes the casting impossible.$C'e'qualcosa tra te e il bersaglio
+You cannot cast field spells in town!$Non puoi lanciare incantesimi in citta'!
 It's locked!$E'chiusa!
 You cannot lock this!!!$Non puoi chiuderla!!!
-You unlocked it!$
-You cannot unlock this!!!$
+You unlocked it!$L'hai sbloccata
+You cannot unlock this!!!$Non puoi sbloccarlo!
 It's trapped!$E' una trappola!
 You cannot trap this!!!$Non puoi mettere una trappola la'!!!
 You successfully untrap this item!$Hai avuto successo nel togliere la trappola!
 This item doesn't seem to be trapped!$Non riesci a mettere una trappola qui!
-This item cannot be untrapped!$
-The rune is not marked yet.$
-That is not a rune!!$
+This item cannot be untrapped!$Non può essere sbloccato!
+The rune is not marked yet.$La runa non e' ancora marcata
+That is not a rune!!$Non e' una runa quella!
 That player isn't dead!$Quel giocatore non e' ancora morto!
 That player isn't online!$Quel giocatore non e' online!
 Recall rune marked.$Bene,runa marcata.
-You're too heavy!$
+You're too heavy!$Sei troppo pesante
 You are in jail and cannot cast spells$Pensavi di poter fare incantesimi anche in prigione?ah ah ah
 Unseen forces make thou unable to cast that spell.$Una forza sconosciuta ti impedisce di fare incantesimi.
-You cannot cast by invisible.$
+You cannot cast by invisible.$Non puoi lanciare incantesimi mentre sei invisibile
 You cannot cast with a weapon equipped.$Non puoi far magie con un'arma in mano.
 
 // map.cpp
@@ -564,7 +564,7 @@ You cannot cast with a weapon equipped.$Non puoi far magie con un'arma in mano.
 
 You are already on a mount.$Sei gia' su una cavalcatura.
 This is not a mountable creature$
-Now you are riding %s$
+Now you are riding %s$Stai cavalcando %s
 You dont own that creature.$Questa creatura non ti appartiene.
 
 // msgboard.cpp
@@ -575,7 +575,7 @@ Currently posting GLOBAL messages$Stai scrivendo un messaggio GLOBALE
 Post type set to LOCAL$Tipo di messaggio impostato come LOCALE
 Post type set to REGIONAL$Tipo di messaggio impostato come REGIONALE
 Post type set to GLOBAL$Tipo di messaggio impostato come GLOBALE
-Invalid Post Type$
+Invalid Post Type$Tipo di post invalido
 You can not reply to global or regional posts$Non puoi rispondere a messaggi globali o regionali
 Post failed!$Invio fallito!
 Invalid post type!$Tipo di messaggio non valido!
@@ -589,15 +589,15 @@ You have just received %d gold coins from %s %s$Hai ricevuto %d monete da %s, %s
 
 // network.cpp
 
-%s %s %s [%s] Compiled by %s$
+%s %s %s [%s] Compiled by %s$%s %s %s [%s] Compilato da %s
 Programmed by: %s$Programmato da: %s
 %s entered the realm$%s e' entrato nel reame
 There is NO client version checking active on this shard. The recommanded-dev-team-supported client version for this server version is client version %s though$Su questo shard NON e' attivo il controllo della versione del client. Tuttavia la versione raccomandata dal team di sviluppo e' la %s.
 This shard requires the recommanded-dev-team-supported client version for this server version client version %s$Questo shard richiede la versione raccomandata dal team di sviluppo del client. La versione richiesta e' la %s.
-This shard requires client version[s] %s$
+This shard requires client version[s] %s$Questo shard richiede il client %s
  The NoX-Wizard team recommanded client is $ Il client raccomandato dal team di sviluppo e' il %s.
 Access Denied!!!$Accesso negato!!!
-Ethereal souls really can't cast spells$
+Ethereal souls really can't cast spells$Le anime eteree non possono lanciare incantesimi
 You are already casting a spell.$Stai gia' lanciando un incantesimo.
 You cannot cast spells while frozen.$Non puoi lanciare incantesimi mentre sei bloccato.
 To place a bounty on %s, use the command BOUNTY <Amount>.$Per mettere una taglia sulla testa di %s usa il comando BOUNTY <totale>.
@@ -610,10 +610,10 @@ You are using a %iD client, version %s$Stai usando un %iD client, verione %s.
 
 // nox-wizard.cpp
 
-Don't fear, help is near$
-Don't fear, help is on the way$
+Don't fear, help is near$Non temere, i soccorsi sono vicini!
+Don't fear, help is on the way$Non temere, stanno arrivando i socorsi!
 The server is shutting down.$Il server sta andando down! a presto
-It is$sono 
+It is$sono
 It is a quarter past$E'un quarto dopo
 It is half past$E'mezzora dopo
 It is a quarter till$Manca un quarto d'ora a 
@@ -652,12 +652,12 @@ Now would be a good time to throw it!$E' il momento giusto per gettarlo!
 You feel better!$Ti senti meglio.
 You feel more healty!$Le tue ferite si sono rimarginate.
 You feel much more healty!$Hai guarito molte delle tue ferite.
-You poisoned yourself! *sigh*$
+You poisoned yourself! *sigh*$Ti sei avvelenato...
 You feel more energetic!$Ti senti piu energico!
 You feel much more energetic!$Ti senti molto piu' energico.
 You feel more strong!$Ti senti piu' forte!
 You feel much more strong!$Ti senti molto piu' forte.
-no,no,no,can't you get enough ?$
+no,no,no,can't you get enough ?$no,no,no, non ne hai di piu'?
 
 // npcai.cpp
 
@@ -665,12 +665,12 @@ no,no,no,can't you get enough ?$
 Hello %s, Welcome to my shop, How may i help thee?.$Salute %s.Benvenuto nel mio negozio.Come ti posso aiutare?
 I will nay give life to a scoundrel like thee!$Non rendero' mai la vita ad un marrano come te.
 I will nay give life to thee for thou art a criminal!$Non rendero' mai la vita ad un criminale!
-Thou art dead, but 'tis within my power to resurrect thee.	Live!$
+Thou art dead, but 'tis within my power to resurrect thee.	Live!$Sei defunto, ma io posso risorgerti.
 Allow me to resurrect thee ghost.  Thy time of true death has not yet come.$Permettimi di resuscitarlo! Il tempo della sua morte non e' ancora venuto.
-Perhaps thou shouldst be more careful.	Here, I shall resurrect thee.$
-Live again, ghost!	Thy time in this world is not yet done.$
+Perhaps thou shouldst be more careful.	Here, I shall resurrect thee.$Forse dovresti essere piu' accorto.Vieni, ti resuscitero'
+Live again, ghost!	Thy time in this world is not yet done.$Vivi nuovamente! Il tuo tempo in questo mondo non e' ancora terminato!
 I shall attempt to resurrect thee.$Provero' a resuscitarti.
-I despise all things good. I shall not give thee another chance!$
+I despise all things good. I shall not give thee another chance!$Rinnego tutte lecose buone! non ti daro' un'altra possibilita'!
 Fellow minion of Mondain, Live!!$Anima immonda Resuscita!!
 Thou has evil flowing through your vains, so I will bring you back to life.$Nelle tue vene scorre sangue demoniaco, per questo ti resuscitero'.
 If I res thee, promise to raise more hell!.$Io ti resuscitero', ma tu dovrai portare molti uomini sulla strada del male!
@@ -680,10 +680,10 @@ Could thou spare a few coins?$Hai qualche moneta da darmi?
 Hey buddy can you spare some gold?$Hey ragazzo, puoi darmi qualche moneta?
 I have a family to feed, think of the children.$Ho una famiglia da mantenere, pensa ai miei figli.
 Thou shalt regret thine actions, swine!$Ti pentirai delle tue azioni, infame!
-You are ridiculous$
-Die unusefull mortal!$
-What are you doing? Come here and Die!$
-Stupid Mortal I'll crush you as a fly$
+You are ridiculous$Sei ridicolo
+Die unusefull mortal!$Muori inutile mortale!
+What are you doing? Come here and Die!$Cosa stai facendo! Vieni qui e muori!
+Stupid Mortal I'll crush you as a fly$Stupido mortale, ti schiaccero' come una mosca!
 
 // npcs.cpp
 
@@ -751,8 +751,8 @@ Stupid Mortal I'll crush you as a fly$
 // rcvpkg.cpp
 
 Thou art dead, but 'tis within my power to resurrect thee.  Live!$Sei morto! Ma e' in mio potere farti rivivere! Torna fra noi anima!
-Perhaps thou shouldst be more careful.  Here, I shall resurrect thee.$
-Live again, ghost!  Thy time in this world is not yet done.$
+Perhaps thou shouldst be more careful.  Here, I shall resurrect thee.$Forse dovresti stare piu' attento... vieni, ti resuscitero'
+Live again, ghost!  Thy time in this world is not yet done.$Iltuo tempo non e' ancora terminato
 Come nearer, ghost, and i'll give you life!$Avvicinati e ti rendero' la vita.
 I will not give life to a scoundrel like thee!$Non riportero' in vita un marrano come te.
 Come nearer, evil soul, and i'll give you life!$Avvicinati anima dannata e io ti rendero' la vita.
@@ -768,7 +768,7 @@ Help! Guards! Tis a murder being commited!$Aiuto! Guardie! Si sta commettendo un
 
 // remadmin.cpp
 
-Initializing remote administration server...$
+Initializing remote administration server...$Inizializzazione del server remoto di amministrazione in corso...
 
 // scp_parser.cpp
 
@@ -781,7 +781,7 @@ Initializing remote administration server...$
 
 // skills.cpp
 
-There is someone nearby who prevents you to hide.$
+There is someone nearby who prevents you to hide.$C'e' qualcuno nei paraggi che ti impedisce di nasconderti
 You can't stealth on horse!$Non puoi nasconderti mentre sei su una cavalcatura.
 You must hide first.$Prima devi nasconderti.
 You are not hidden well enough. Become better at hiding.$Non sei nascosto bene. Migliora la tua abilita' prima!
@@ -803,7 +803,7 @@ You must wait a few moments before using another skill.$Devi aspettare qualche i
 you are in jail and cant gain skills here!$Sei in cella e qui le tue skills non possono aumentare!
 You cannot do that as a ghost.$Un fantasma non puo' farlo!
 You can't do that while you are casting$Non puoi fare questo mentre stai lanciando una magia.
-Your race cannot use that skill$
+Your race cannot use that skill$La tua razza non puo' usare quell'abilita'
 What item do you wish to get information about?$Quale oggetto vuoi ispezionare?
 What do you wish to appraise and identify?$Cosa vuoi valutare o identificare?
 Tame which animal?$Quale animale vuoi addomesticare?
@@ -862,7 +862,7 @@ You cannot use that material for carpentry.$Non e' materiale da carpenteria.
 The anvil is too far away.$L'incudine e' troppo lontana.
 You cannot use that material for blacksmithing$Un fabro usa materiali ben diversi
 You place some %c%s ore in your pack.$Hai messo del %c%s nello zaino.
-You cannot do this on a horse$
+You cannot do this on a horse$Non puoi fare cio' a un cavallo!
 You must have a weapon in hand in order to chop.$
 You are too tired to chop.$Sei troppo stanco per continuare a tagliare legna.
 Lumberjacking startup, setting tree values and times...$Lumberjacking e' partita, setta il numero dei pezzi di legna e l'intervallo in cui possono essere tagliati...
@@ -889,10 +889,10 @@ You failed to make cloth.$Non sei riuscito a tagliare la stoffa.
 You have broken and lost some material!$Hai rotto e quindi perso del materiale!
 You have made your cloth.$Hai cucito la stoffa con successo.
 You have made a bolt of cloth.$Hai realizzato un rotolo di stoffa.
-You can't tailor here.$
+You can't tailor here.$Non puoi fare il sarto qui
 You failed to cook the %s and drop some into the ashes.$Non sei stato in grado di cuocere del %s e l'hai ridotto in cenere.
 You have cooked the %s,and it smells great.$Hai cotto del %s,ed hai avuto un buon risultato.
-You cannot see for hidden objects so far.$
+You cannot see for hidden objects so far.$Non puoi cercareoggetti nascosti così lontano
 You have been revealed!$Ti hanno rivelato!
 You revelaled %s$Hai scoperto %s nascosto qui vicino.
 You fail to find anyone.$Non riesci a scovare nessuno.
@@ -903,17 +903,17 @@ Your music fails to attract them.$Questa cantilena non puo' provocare nessun eff
 You cant do that in town!$Marrano non puoi farlo in citta'!
 You cannot entice other players.$Ti piacerebbe irretire un altro giocatore ma...non lo puoi fare.
 You play your music, luring them near. Whom do you wish them to follow?$Suonando la tua melodia,li attiri a te.Chi dovrebbero seguire?
-You can't do that in town!$
-Silly bard! You can't get something to attack itself.$Nightblade il bardo! Non puoi fare nulla per scalfirlo.
+You can't do that in town!$Non puoi farlo in citta'!
+Silly bard! You can't get something to attack itself.$Stupido bardo! Gli oggetti non possono attaccarsi!.
 Your music succeeds as you start a fight.$La tua melodia ha scatenato una battaglia.
 Your music fails to incite enough anger.$La tua melodia non scatena abbastanza furore.
 * You see %s attacking %s *$* Osservi %s che attacca %s *
 You play rather poorly and to no effect.$Suoni piuttosto male e senza effetto.
 You cannot provoke other players.$Non puoi provocare un altro giocatore.
 You play your music, inciting anger, and your target begins to look furious. Whom do you wish it to attack?$Suonando la tua melodia,stai provocando rabbia,ed il tuo bersaglio comincia a diventare furioso.Chi dovrebbe attaccare?
-There is no bottle in your pack$
+There is no bottle in your pack$NOn hai bottiglie nello zaino
 That is not a valid reagent.$Non e' il reagente adatto.
-You can't heal while in a fight!$
+You can't heal while in a fight!$Non puoi curare mentre combatti!
 You are not close enough to apply the bandages.$Non sei abbastanza vicino da applicare le bende.
 You are not skilled enough to resurrect$Non sei ancora abbastanza abile da resuscitare una persona
 Because of your skill, you were able to resurrect the ghost.$Grazie alla tua abilita',sei in grado di resuscitare un fantasma.
@@ -1004,7 +1004,7 @@ That would be foolish.$Sarebbe decisamente stupido.
 You need to be closer to find out more about them$Non sei abbastanza vicino per scoprire altro
 Little is known of these robed gods.$
 The human race should use dvorak!$La razza umana dovrebbe usare dvorak!
-himself$
+himself$se' stesso
 You can not think of anything relevant at this time.$Non riesci a pensare a nulla di rilevante ora.
 That does not appear to be a corpse.$Quello non sembra proprio un cadavere.
 The %s is %i seconds old and the killer was %s.$%s e' morto da %i pochi secondi ed il suo assassino e' %s.
@@ -1015,8 +1015,8 @@ You can't say who was the killer.$Non riesci a determinare chi sia l'assassino.
 The killer was %s.$L'assassino e' %s.
 That is not a valid poison!$Non e' un veleno attendibile!
 You can't poison that item.$Non puoi avvelenare quel oggetto.
-You cannot poison that item$
-Too many items you can poison at least 5 items$
+You cannot poison that item$Non puoi avvelenarlo
+Too many items you can poison at least 5 items$Puoi avvelenare al massimo 5 oggetti
 You successfully poison that item.$Hai avvelenato l'oggetto con successo.
 You fail to apply the poison.$Non sei riuscito ad applicare il veleno.
 What item do you want to poison?$Che oggetto vuoi avvelenare?
@@ -1038,8 +1038,8 @@ You combined the parts$Hai montato i pezzi giusti
 
 // sndpkg.cpp
 
-Thou dont posses nothing of interest to me.$
-Sorry i cannot take so many items..$
+Thou dont posses nothing of interest to me.$Non hai niente che mi interessi
+Sorry i cannot take so many items..$Spiacente, non posso portare cosi' tanti oggetti...
 GM tells %s: %s$GM informa %s: %s
 
 // spawn.cpp
@@ -1047,11 +1047,11 @@ GM tells %s: %s$GM informa %s: %s
 
 // speech.cpp
 
-Leave me alone!$
-I am %s.$
-I %s will kill you.$
-Hello %s, i could work for thee for only %d goldpieces a day.$
-Hello %s, i am sorry, i already work for someone else.$
+Leave me alone!$Lasciami stare!
+I am %s.$Io sono %s
+I %s will kill you.$Io %s ti uccidero'!
+Hello %s, i could work for thee for only %d goldpieces a day.$Salute %s, posso lavorare per te per soli %d pezzi d'oro al giorno
+Hello %s, i am sorry, i already work for someone else.$Salute %s, sono spiacente, ma sono gia' impegnato con altri
 You are in %s$Ti trovi a %s
 You are in the wilderness$Ti trovi nel deserto
 Lead on! Payment shall be made when we arrive at %s.$Non illuderti! Il pagamento sara' effettuato quando arriveremo a %s.
@@ -1059,14 +1059,14 @@ Lead on to %s. I shall pay thee when we arrive.$Non illuderti %s. Ti paghero' al
 I am seeking an escort to %s. Wilt thou take me there?$Sto cercando una scorta per %s. Vorresti accompagnarmi la?
 I am already being escorted to %s by %s.$Possiedo gia' la scorta per %s da parte di %s.
 %s's balance as of now is %i.$Il conto di %s ammonta a %i.
-I can teach thee the following skills:$
+I can teach thee the following skills:$Posso insegnarti le seguenti abilita':
 I am sorry, but I have nothing to teach thee$Sono spiacente, ma non ho piu' nulla da insegnarti
-Thou wishest to learn of  %s?$
+Thou wishest to learn of  %s?$Speri di imparare %s?
  I can teach thee no more than thou already knowest!$Non posso insegnarti piu' di quello che gia' conosci!
  I can teach thee no more. Thou already knowest too much!$Non ho piu' nulla da insegnarti. Sai gia' troppo per i miei gusti!
  Very well I, can train thee up to the level of %i percent for %i gold. Pay for less and I shall teach thee less.$Benissimo, posso migliorarti fino alla percentuale del %i in cambio di %i monete d'oro. Meno sara' il compenso e minore sara'il mio insegnamento.
 I am sorry but I cannot train thee in that skill.$Sono spiacente ma non posso insegnarti questa abilita'.
-I am sorry but I have to mind the shop.$
+I am sorry but I have to mind the shop.$Spiacente madevo pensare al negozio.
 Click on the target to follow.$Clicca sul bersaglio da seguire.
 You don't have pets following you!$
 You can't have pets attack in town!$

@@ -337,7 +337,8 @@ Creates the items selected in the gump
 public addgui_standard_cback(menu,chr,btncode)
 {
 	if(!btncode)	return;
-
+	
+	printf("btncode: %d^n",btncode);
 	//read amount and checkbox
 	new n,itemsInBackpack;
 	getAmountAndChk(menu,n,itemsInBackpack);
@@ -430,7 +431,7 @@ static addItemList(startIdx,stopIdx,pic,label)
 		scriptID = getIntFromDefine(addMenuList[idx][__addGui_def]);
 		if(scriptID > 0)
 		{
-			menu_addButton(scriptID);
+			menu_addButton(addMenuList[idx][__addGui_type]*scriptID);
 		}
 		else 
 		{
