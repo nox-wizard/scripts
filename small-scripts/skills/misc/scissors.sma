@@ -22,31 +22,36 @@ public _scissorsTarget( const s, const target, const itm )
     	
 	new id = itm_getProperty( itm, IP_ID );
 	
-	if( IsCloth( id ) || IsCutCloth( id ) ) {
+	if( isCloth( id ) || isCutCloth( id ) ) {
 
 		new amt = itm_getProperty( itm, IP_AMOUNT );
+		if( amt<0 ) {
+			itm_remove(itm);
+			return;
+		}
+
+		amt=amt*3;
+	
 		chr_sound( chr, 0x0248 );
 		nprintf(s,"You cut some cloth into bandages, and put it in your backpack");
 		new bp = itm_getCharBackPack( target );
 		new benda = itm_createByDef( "$item_clean_bandages" );
-		itm_setProperty( benda, IP_AMOUNT, _, 3 );
+		itm_setProperty( benda, IP_AMOUNT, _, amt );
 		itm_contPileItem( bp, benda );
-		itm_setProperty( itm, IP_AMOUNT, _, ( (itm_getProperty( itm, IP_AMOUNT )) -1) );
-		if ((itm_getProperty( itm, IP_AMOUNT )) == 0) {
-			itm_remove(itm);
-			return;
-		}			
+		itm_reduceAmount( itm, 1 );
+		itm_remove(itm);
 		
 	}
 
-	else if( IsBoltOfCloth( id ) ) {
+	else if( isBoltOfCloth( id ) ) {
 		_doCloth( s, itm );
 	}
 	
-	else if( IsHide( id ) ) {
+	else if( isHide( id ) ) {
 		_doLeatherPiece( s, itm );
 	}
     
-    else ntprintf( s, "You cannot cut anything from that item." );
+    else
+    	ntprintf( s, "You cannot cut anything from that item." );
 
 }

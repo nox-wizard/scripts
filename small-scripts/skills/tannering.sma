@@ -43,8 +43,8 @@ static hideMakeMenu[] = {
 };
 
 //Hides names
-static hideName[NUM_HIDES][] = {
-"Hide"
+static hideDefine[NUM_HIDES][] = {
+"$item_leather_piece"
 };
 
 /*----------------------------------------------------------------------------------------*\
@@ -55,34 +55,29 @@ End Customizable Hides
 
 public _doLeatherPiece( const s, const hide ) {
 
-		new amt = itm_getProperty( itm, IP_AMOUNT );
-		chr_sound( chr, 0x0248 );
-		new bp = itm_getCharBackPack( target );
-		new pelle = itm_createByDef( "$item_leather_piece" );
-		itm_setProperty( pelle, IP_AMOUNT, _, 2 );
-		itm_setDualByteProperty(pelle, IP_COLOR, (itm_getDualByteProperty(i, IP_COLOR)));
-		itm_contPileItem( bp, pelle );
-		itm_setProperty( itm, IP_AMOUNT, _, ( (itm_getProperty( itm, IP_AMOUNT )) -1) );
-		if ((itm_getProperty( itm, IP_AMOUNT )) == 0) {
-			itm_remove(itm);
-			return;
-		}
+	new color = itm_getProperty( hide, IP_COLOR );
+	new type=NORMAL_HIDE;
+	for( new i=0; i<NUM_HIDES; ++i ) {
+		if( color==hideColor[i] )
+			type=i;
+	}
 
-/*	new amt = itm_getProperty( itm, IP_AMOUNT );
-	new color = itm_getProperty( itm, IP_COLOR );
+	new amt=itm_getProperty( hide, IP_AMOUNT );
+	if( amt<0 ) {
+		itm_remove( hide );
+		return;
+	}
 
+	new chr = getCharFromSocket(s);
 	chr_sound( chr, 0x0248 );
 
-	P_ITEM pcc=item::CreateFromScript( "$item_leather_piece", pc->getBackpack() );
-	VALIDATEPI(pcc);
-	pi->setColor( color );
-
-	pcc->amount=amt;
-	pcc->Refresh();
-    pi->deleteItem();*/
-
+	new bp = itm_getCharBackPack( chr );
+	new leather = itm_createByDef( hideDefine[type] );
+	itm_setProperty( leather, IP_AMOUNT, _, amt );
+	itm_contPileItem( bp, leather );
+	itm_remove( hide );
+	
 }
-
 
 
 
@@ -106,7 +101,7 @@ public __nxw_sk_tannering(const s, const itm)
 	
 	//At this point, we're already sure that we're analyzing an hide, because the engine did the check for us.
 	new cc = getCharFromSocket(s);
-	new hideNum = -1;
+	new hideNum = INVALID;
 	new skill = chr_getSkill(cc, SK_TAILORING);
 	new color = itm_getDualByteProperty(itm, IP_COLOR);
 	new index;
@@ -115,7 +110,7 @@ public __nxw_sk_tannering(const s, const itm)
 			hideNum = index;
 		}
 	}
-	if (hideNum == -1) {
+	if (hideNum == INVALID) {
 		printf ("WARNING: __nxw_sk_tailoring received an unknown hide");
 		return;
 	}
