@@ -21,11 +21,11 @@ public cmd_onlinegm(const chr)
 {
 	if(set_size(__onlineStaff) == 0)
 	{
-		chr_message(chr,_,"There are no pageable GMs or counselors online");
+		chr_message(chr,_,msg_commandsDef[20]);
 		return;
 	}
 
-	chr_message(chr,_,"Online pageable staff is:");
+	chr_message(chr,_,msg_commandsDef[21]);
 	new chr2,name[30];
 	set_rewind(__onlineStaff);
 	while(!set_end(__onlineStaff))

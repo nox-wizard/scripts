@@ -31,7 +31,7 @@ public cmd_setskills( const caller )
 	if(strlen(__cmdParams[0]) || strlen(__cmdParams[1]))
 		if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]))
 		{
-			chr_message(caller,_,"You must give the skill and value as integers");
+			chr_message(caller,_,msg_commandsDef[29]);
 			return;
 		}
 		else
@@ -41,13 +41,13 @@ public cmd_setskills( const caller )
 			
 			if(skill < 0 || value < 0)
 			{
-				chr_message(caller,_,"skill and value must be positive");
+				chr_message(caller,_,msg_commandsDef[30]);
 				return;
 			}
 			skillValue = (skill << 16) + value;
 		}
 	
-	chr_message(caller, _, "Select character.. "); 
+	chr_message(caller, _, msg_commandsDef[31]); 
 	target_create( caller,skillValue , _, _, "target_setskills");
 }
 
@@ -55,7 +55,7 @@ public target_setskills( const target, const caller, const chr,x,y,z,unused,skil
 {
 	if(!isChar(chr)) 
 	{
-		chr_message(caller,_ , "You must target a character" );
+		chr_message(caller,_ , msg_commandsDef[32] );
 		return;
 	}
 	

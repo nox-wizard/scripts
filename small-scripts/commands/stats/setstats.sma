@@ -18,7 +18,7 @@
 */
 public cmd_setstats( const caller )
 {
-	chr_message(caller, _, "Select character.. "); 
+	chr_message(caller, _, msg_commandsDef[31]); 
 	target_create( caller,_, _, _, "target_setstats");
 }
 
@@ -26,7 +26,7 @@ public target_setstats( const target, const caller, const chr,x,y,z,unused,skill
 {
 	if(!isChar(chr)) 
 	{
-		chr_message(caller,_ , "Skills work only on character" );
+		chr_message(caller,_ ,msg_commandsDef[34] );
 		return;
 	}
 	

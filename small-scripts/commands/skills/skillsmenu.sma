@@ -131,7 +131,7 @@ public handle_skills_char( const menu, const caller, button )
 			gui_getProperty(menu,MP_UNI_TEXT,sk,buffer);
 			if(isStrInt(buffer))
 				chr_setSkill(chr,sk,str2Int(buffer));
-			else chr_message(caller,_,"Invalid skill value '%d'",buffer);
+			else chr_message(caller,_,msg_commandsDef[33],buffer);
 		}
 		
 		chr_teleport(chr);

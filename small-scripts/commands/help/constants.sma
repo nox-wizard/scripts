@@ -1,4 +1,4 @@
-new helpFile[] = "small-scripts/commands/help/helpTopics.txt";
+new helpFile[] = "small-scripts/translations/helpTopics.txt";
 
 #define NUM_HELP_TOPICS 100
 new NUM_LOADED_TOPICS = 0;

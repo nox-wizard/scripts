@@ -26,7 +26,7 @@ public initPageSystem()
 
 public pageSystemTest()
 {
-	addGmPage(3,"test page 1");
+	addGmPage(3,msg_commandsDef[24]);
 	new reason[100];
 	chr_getGmPage(3,1,reason);
 	printf(reason);
@@ -119,8 +119,8 @@ public sendPageHandlingMessage(solver,pager,page,status)
 
 	switch(status)
 	{
-		case PAGE_STATUS_SOLVING: sprintf(message,"%s is solving %s's page",solverName,pagerName,page);
-		case PAGE_STATUS_SOLVED: sprintf(message,"%s is solved %s's page number %d",solverName,pagerName,page);
+		case PAGE_STATUS_SOLVING: sprintf(message,msg_commandsDef[25],solverName,pagerName,page);
+		case PAGE_STATUS_SOLVED: sprintf(message,msg_commandsDef[26],solverName,pagerName,page);
 	}
 
 	new chr2 = INVALID;

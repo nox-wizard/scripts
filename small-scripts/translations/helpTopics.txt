@@ -1,0 +1,385 @@
+In this file you can write all help topics you want, the syntax is simple:
+-TOPIC is the topic title
+-TEXT starts the help text, what will be shown when a player types 'help <topictitle>.
+You can leave blanks before keywords, they will be recognized anyway.
+
+Leaving a blank line after the help text closes the topic, after the blank line you can start a new topic.
+Between the blank line and the next TOPIC you can write what you want, it won't be read.
+
+TOPIC commands
+TEXT
+NOX wizard allows users to use ingame commands
+to interact with the emulator.
+An ingame command is an ' followed by the command name
+(i.e.: 'add 'wipe 'skills).
+If you give wrong parameters to a command usually 
+it will tell you what parameters it needs.
+To have hints on commands use the command 
+as help topic (i.e.: help 'add).
+For detailed description about commands parameters 
+please refer to the documentation.
+
+TOPIC privlevel
+TEXT
+Your privlevel defines whether you can access a 
+command or not, more powerful commands require 
+higher privlevels.
+Your privlevel can be set by the shard admins,
+by default you are a 'player'.
+
+====== HERE START THE COMMANDS HELP TOPICS =======
+TOPIC 'action
+TEXT
+Makes a character perform an action
+sysntax: 'action actionnumber
+
+TOPIC 'add
+TEXT
+Adds items characters to the world
+syntax: 'add [ID/scriptID][amount]
+If no params are specified the add menu is opened.
+If you give a generic word as parameter ('add forge)
+you will be prompted to choosefrom a list of
+possible items
+
+TOPIC 'align
+TEXT
+Alignes an object to another, or to a map location
+syntax: 'align x/y/z
+Target reference object or location and then 
+the object to be aligned.
+
+TOPIC 'area
+TEXT
+sets a command area for a character
+syntax: 'area [R] ["itm"/"chr"/"all"] [duration]
+Command areas are used to perform many commands on 
+all  objects in an area without having to select 
+the area each time.
+'area without parameters sets a default area or 
+deletes a previously defined one.
+
+TOPIC 'cset
+TEXT
+Sets a character's property
+syntax: 'cset property value
+ 
+property can be:
+"ai": npcai
+"dir": direction - (n/ne/e/se/s/sw/w/nw)
+"gmfx": gm moving effect
+"owner": owner serial
+"shop": if character is a shopkeeper (0 no - 1 yes)
+"spattack": type of spell attack
+"spadelay": delay between 2 spell attacks
+"speech": speech block
+"split": split
+"splitchance": splitchance
+"train": if npc can train (0 no - 1 yes)
+"trigger": npc trigger
+
+TOPIC 'csetxyz
+TEXT
+Sets a 3-value character's property (like food 
+position)
+syntax: 'csetxyz property x y z
+ 
+property can be:
+"food": food position, for freely wandering npcs
+"home": home position, for freely wandering npcs
+"work": work place, for freely wandering npcs
+
+TOPIC 'damage
+TEXT
+Damages a character
+syntax: 'damage [amount]["hp"/"stam"/"mana"]
+You can specify wich stat you want to damage
+
+TOPIC 'decay
+TEXT
+Sets item's decay time
+syntax: 'decay decayTime/"off" 
+'decay off makes the item not decay
+
+TOPIC 'dye
+TEXT
+Dyes an item
+syntax: 'dye color 
+
+TOPIC 'dupe
+TEXT
+Duplicates an item
+syntax: 'dupe [n]
+n is the number of copies
+
+TOPIC 'flip
+TEXT
+flips an item. 
+Flipping an item causes stamina loss unless you are 
+a Seer or higher.
+syntax: 'flip
+
+TOPIC 'freeze
+TEXT
+Freezes or unfreezes a character
+syntax: 'freeze "on"/"off"
+
+TOPIC 'fullstats
+TEXT
+Raises all character's stats to their maximum
+syntax: 'fullstats
+
+TOPIC 'func
+TEXT
+Calls a Small public function
+syntax: 'func function [param0][param1][param2][param3][param4]
+Parameters can only be integers
+
+TOPIC 'gmopen
+TEXT
+Opens a character's backpack
+syntax: 'gmopen
+
+TOPIC 'go
+TEXT
+Moves character to a map location
+syntax: 'go [x y z / x y / n / name / "s" serial]
+'go x y z - 'go x y : move to specified map location
+'go n : go to n-th connected player
+'go name : go to named character
+'go "s" serial: go to character with that serial
+
+TOPIC 'gy
+TEXT
+Yells a message to allonline gm's
+syntax: 'gy message
+
+TOPIC 'hiding
+TEXT
+Hides a character
+syntax: 'hiding ["on"/"off"]["skill"/"spell"/"perma"]
+
+TOPIC 'heal
+TEXT
+Heals a character
+syntax: 'heal
+
+TOPIC 'help
+TEXT
+Shows help on a topic
+syntax: 'help [topic]
+'help without parameters shows a list of
+available topics
+
+TOPIC 'invul
+TEXT
+Switches invulnerability of a character
+syntax: 'invul ["on"/"off"] 
+
+TOPIC 'iset
+TEXT
+Sets an item's property
+syntax: 'iset property value
+ 
+propery can be:
+"amount": amount
+"dir": direction (n/ne/e/se/s/sw/w/nw)
+"type": item type
+"value": item price
+"restock": restock rate
+
+TOPIC 'jail
+TEXT
+Jails a character
+syntax: 'jail [days][hours][minutes]
+If not jailing time is specified, the character 
+will be jailed forever (until someone unjails him)
+
+TOPIC 'kill
+TEXT
+Kills a character
+syntax: 'kill 
+
+TOPIC 'killbeard
+TEXT
+Kills a character's beard
+syntax: 'killhair
+
+
+TOPIC 'killhair
+TEXT
+Kills a character's hair
+syntax: 'killhair
+
+
+TOPIC 'lightlevel
+TEXT
+syntax: 'lightlevel
+
+TOPIC 'make
+TEXT
+Makes a character player, GM or counselor
+syntax: 'make "player"/"gm"/"cns" 
+
+TOPIC 'mana
+TEXT
+Refreshes character's mana
+syntax: 'mana 
+
+TOPIC 'move
+TEXT
+Moves an object
+syntax: 'move "me"/"here"/"loc"/ x y ["abs"/"rel"]
+'move me: moves the calling chatacer
+'move here: moves object to charatcer's feet
+'move loc: moves object to a location
+
+TOPIC 'onlinegm
+TEXT
+Shows a list of online GMs and counselors
+syntax: 'onlinegm
+
+TOPIC 'page
+TEXT
+Submits a page
+syntax: 'page message
+
+TOPIC 'pages
+TEXT
+Shows pages done by a character
+syntax: 'pages
+
+TOPIC 'pagelist
+TEXT
+Shows page list
+syntax: 'pagelist
+
+TOPIC 'playerlist
+TEXT
+Showsconnected players list
+syntax: 'playerlist
+
+TOPIC 'polymorph
+TEXT
+syntax: 'polymorph
+
+TOPIC 'possess
+TEXT
+Possesses an npc
+sysntax: 'possess
+to switch back possession use 'possess again 
+and target yourself
+
+TOPIC 'regioncp
+TEXT
+Opens the region control panel
+syntax: 'regioncp
+You must be in a region to use this command
+
+TOPIC 'resend
+TEXT
+Updates the character
+syntax: 'resend
+May be useful to solve some bugs
+
+TOPIC 'resurrect
+TEXT
+Resurrects a ghost
+syntax: 'resurrect 
+
+TOPIC 'save
+TEXT
+Saves the world
+synatx: 'save
+
+TOPIC 'setmorexyz
+TEXT
+Sets morex morey morez
+syntax: 'setmorexyz x y z
+
+TOPIC 'setmoreb12
+TEXT
+Sets moreb12 (for spawner minimal to spawn amount)
+syntax: 'setmoreb12 value
+
+TOPIC 'setmoreb34
+TEXT
+Sets moreb34 (for spawner maximum to spawn amount)
+syntax: 'setmoreb34 value
+
+TOPIC 'setskills
+TEXT
+Sets a character's skills
+syntax: 'setskills [skill][value]
+If you don't pass any parameters you 
+will be shown the targetted 
+character's skills menu.
+If 'skill' is greater than the number
+of available skills then all skills will
+set to 'value'.
+
+TOPIC 'showbank
+TEXT
+Open character's bank box
+syntax: 'showbank ["gold"]
+'showbank gold : opens gold-only bank
+
+TOPIC 'skills
+TEXT
+Shows character's skills
+syntax: 'skills
+
+TOPIC 'solvepage
+TEXT
+Solves a character's page
+syntax: 'solvepage [pagenumber]
+
+TOPIC 'stamina
+TEXT
+Refreshes a character
+syntax: 'stamina 
+
+TOPIC 'stats
+TEXT
+Shows many object's stats
+syntax: 'stats
+
+TOPIC 'summon
+TEXT
+Takes a character to you
+syntax: 'summon [name]
+name is the character's name
+player must be online
+
+TOPIC 'sysm
+TEXT
+Broadcasts a message
+syntax: 'sysm [message]
+
+TOPIC 'tile
+TEXT
+Tiles an item along x y z axis
+syntax: 'tile [nX nY] [nZ zScale]
+
+TOPIC 'tweak
+TEXT
+Shows objects properties in a gump
+syntax: 'tweak
+
+TOPIC 'unjail
+TEXT
+Unjails a character
+syntax: 'unjail
+
+TOPIC 'where
+TEXT
+Shows exact coordinates and region 
+of a character
+syntax: 'where
+
+TOPIC 'wipe
+TEXT
+Removes objects
+syntax: 'wipe ["rect"]
+
+====== END OF COMMAND HELP TOPICS ================

@@ -19,7 +19,7 @@ Use this command to see a character's pages
 */
 public cmd_pages(const chr)
 {
-	chr_message(chr,_,"Select the character you want to see the pages");
+	chr_message(chr,_,msg_commandsDef[22]);
 	target_create(chr,_,_,_,"cmd_pages_cback");
 }
 
@@ -27,7 +27,7 @@ public cmd_pages_cback(const t, const chr, const object, x, y, z, unused, unused
 {
 	if(!isChar(object) || chr_isNpc(object))
 	{
-		chr_message(chr,_,"You must target a player");
+		chr_message(chr,_,msg_commandsDef[23]);
 		return;
 	}
 

@@ -20,19 +20,19 @@ public menu_stats_char( const caller, const chr, const edit )
 	if(edit) gui_addButton( menu, 250, 265, 0x084A, 0x084B, 1 );
 
 	new position = 38;
-	gui_addText( menu, 28, position, _, "Strength :");
+	gui_addText( menu, 28, position, _, msg_commandsDef[35]);
 	if(edit)
 		gui_addInputField( menu, 220, position, 50, 30, 0, TXT_COLOR,"%d",chr_getStr(chr));
 	else gui_addText( menu, 220, position, _, "%d", chr_getStr(chr));
 	
 	position += 20;
-	gui_addText( menu, 28, position, _, "Dexterity :");
+	gui_addText( menu, 28, position, _, msg_commandsDef[36]);
 	if(edit)
 		gui_addInputField( menu, 220, position, 50, 30, 1, TXT_COLOR,"%d",chr_getDex(chr));
 	else gui_addText( menu, 220, position, _, "%d", chr_getDex(chr));
 	
 	position += 20;
-	gui_addText( menu, 28, position, _, "Intelligence :");
+	gui_addText( menu, 28, position, _, msg_commandsDef[37]);
 	if(edit)
 		gui_addInputField( menu, 220, position, 50, 30, 2, TXT_COLOR,"%d",chr_getInt(chr));
 	else gui_addText( menu, 220, position, _, "%d", chr_getInt(chr));

@@ -29,7 +29,7 @@ public cmd_solvepage(const chr)
 	if(isStrInt(__cmdParams[0]))
 		page = str2Int(__cmdParams[0]);
 
-	chr_message(chr,_,"Select the character you want to solve a page");
+	chr_message(chr,_,msg_commandsDef[27]);
 	target_create(chr,page,_,_,"cmd_solvepage_cback");
 }
 
@@ -37,7 +37,7 @@ public cmd_solvepage_cback(const t, const chr, const object, x, y, z, unused, pa
 {
 	if(!isChar(object) || chr_isNpc(object))
 	{
-		chr_message(chr,_,"You must target a player");
+		chr_message(chr,_,msg_commandsDef[28]);
 		return;
 	}
 
