@@ -2068,100 +2068,89 @@ native chr_showMessage(const chrWhoSeesMsg, const chrWhoHasMsg, const msg[], con
 \since 0.60 
 \param 1 speaker 
 \param 2 listener 
-\param 3 version ( RUNIC or EMOTE or TALK for plain text ) 
+\param 3 mode ( SPEECH_RUNIC or SPEECH_EMOTE or SPEECH_TALK for plain text ) 
 \param 4 color 
 \param 5 antispam flag 
 \param 6 text 
 \return 0 or INVALID if not valid characters 
 */
-native chr_speech(const speaker, const listener, const mode, const color, const antispam = 1, const speech[]);
+native chr_speech(const speaker, const listener, const mode = SPEECH_NORMAL, const color = 1310, const antispam = 1, const speech[]);
 
 /*!
-\author ???
-\fn chr_talk(const listener, const speaker, const text[], const antispam = 1)
+\author Fax
+\fn chr_talk(const speaker, const text[])
+\param speaker the character who speaks
+\param text[] the speech
+\brief makes a character talk
+*/
+stock chr_talkAll(const speaker, text[])
+{
+	chr_speech(speaker, INVALID, SPEECH_NORMAL, _, _, text);
+}
+
+/*!
+\author Fax
+\fn chr_talkToChar(const speaker, const listener, const text[])
 \param listener the character who hears the speech
 \param speaker the character who speaks
 \param text[] the speech
-\param antispam antispam flag
-\brief helper that calls chr_speech(NPC_TALK, listener, speaker, text, antispam)
-TODO: link to chr_speech
+\brief makes a character talk to a precise character
 */
-stock chr_talk(const listener, const speaker, const text[], const antispam = 1)
+stock chr_talkToChar(const speaker, const listener, text[])
 {
-	chr_speech(TALK, listener, speaker, text, antispam);
+	chr_speech(speaker, listener, SPEECH_NORMAL, _, _, text);
 }
 
 /*!
-\author ???
-\fn chr_talkall(const chr, const text[], const antispam = 1)
-\param chr the character who speaks
+\author Fax
+\fn chr_talkRunic(const speaker, const text[])
+\param speaker the character who speaks
 \param text[] the speech
-\param antispam antispam flag
-\brief helper that calls chr_speech(NPC_TALK_ALL, _, chr, text, antispam)
-TODO: link to chr_speech
+\brief makes a character talk runic
 */
-stock chr_talkall(const chr, const text[], const antispam = 1)
+stock chr_talkAllRunic(const speaker, text[])
 {
-	chr_speech(TALK, -1, chr, 0, antispam, text);
+	chr_speech(speaker, INVALID, SPEECH_RUNIC, _, _, text);
 }
 
 /*!
-\author ???
-\fn chr_talkRunic(const listener, const speaker, const text[], const antispam = 1)
+\author Fax
+\fn chr_talkRunicToChar(const speaker, const listener, const text[])
 \param listener the character who hears the speech
 \param speaker the character who speaks
 \param text[] the speech
-\param antispam antispam flag
-\brief helper that calls chr_speech(NPC_TALK_RUNIC, listener, speaker, text, antispam)
-TODO: link to chr_speech
+\brief makes a character talk runic to a precise character
 */
-stock chr_talkRunic(const listener, const speaker, const text[], const antispam = 1)
+stock chr_talkRunicToChar(const speaker, const listener, text[])
 {
-	chr_speech(TALK_RUNIC, listener, speaker, 0, antispam, text);
+	chr_speech(speaker, listener, SPEECH_RUNIC, _, _, text);
 }
 
 /*!
-\author ???
-\fn chr_talkallRunic(const chr, const text[], const antispam = 1)
-\param chr the character who speaks
+\author Fax
+\fn chr_emote(const speaker, const text[])
+\param speaker the character who speaks
 \param text[] the speech
-\param antispam antispam flag
-\brief helper that calls chr_speech(NPC_TALK_ALL_RUNIC, _, chr, text, antispam)
-TODO: link to chr_speech
+\brief makes a character emote
 */
-stock chr_talkallRunic(const chr, const text[], const antispam = 1)
+stock chr_emoteAll(const speaker,const text[])
 {
-	chr_speech(TALK_RUNIC, -1, chr, 0, antispam, text);
+	chr_speech(speaker, INVALID, SPEECH_EMOTE, _, _, text);
 }
 
 /*!
-\author ???
-\fn chr_emote(const listener, const speaker, const text[], const antispam = 1)
-\param listener the character who hears the emote
-\param speaker the character who emotes
+\author Fax
+\fn chr_emoteToChar(const speaker, const listener, const text[])
+\param listener the character who hears the speech
+\param speaker the character who speaks
 \param text[] the speech
-\param antispam antispam flag
-\brief helper that calls chr_speech(NPC_EMOTE, listener, speaker, text, antispam)
-TODO: link to chr_speech
+\brief makes a character emote to a precise character
 */
-stock chr_emote(const listener, const speaker, const text[], const antispam = 1)
+stock chr_emoteToChar(const speaker, const listener, const text[])
 {
-	chr_speech(EMOTE, listener, speaker, 0, antispam, text);
+	chr_speech(speaker, listener, SPEECH_EMOTE, _, _, text);
 }
 
-/*!
-\author ???
-\fn chr_emoteall(const chr, const text[], const antispam = 1)
-\param chr the character who emotes
-\param text[] the speech
-\param antispam antispam flag
-\brief helper that calls chr_speech(NPC_EMOTE_ALL, _, chr, text, antispam)
-TODO: link to chr_speech
-*/
-stock chr_emoteall(const chr, const text[], const antispam = 1)
-{
-	chr_speech(EMOTE, -1, chr, 0, antispam, text);
-}
 /** @} */
 //============================   LOCAL VARS/AMX FLAGS  =================================
 /** \defgroup script_API_character_vars Local Vars

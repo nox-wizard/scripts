@@ -277,9 +277,9 @@ enum {
 	GENDER_UNDEFINED	//!< ??
 	}
 
-const TALK = 1;			//!<
-const TALK_RUNIC = 2;	//!<
-const EMOTE = 3;		//!<
+const SPEECH_NORMAL = 1;		//!<
+const SPEECH_RUNIC = 2;		//!<
+const SPEECH_EMOTE = 3;		//!<
 
 const NXWF0_GREY = 1;		//!<
 const NXWF0_PERMAGREY = 2;	//!<

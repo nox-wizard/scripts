@@ -119,11 +119,11 @@ public func_tame(const chr, const dest, const power, const mode)
 		new nmb = random(4);
 		switch(nmb)
 		{
-			case 0: chr_talkall(chr,msg_sk_tameDef[15],0);
-			case 1: chr_emoteall(chr,msg_sk_tameDef[16],0);
-			case 2: { if(plec == 400) {chr_talkall(chr,msg_sk_tameDef[17],0); } else { chr_talkall(chr,msg_sk_tameDef[18],0);}}
-			case 3: chr_talkall(chr,msg_sk_tameDef[19],0);
-			case 4: chr_talkall(chr,msg_sk_tameDef[20],0);
+			case 0: chr_talkAll(chr,msg_sk_tameDef[15]);
+			case 1: chr_emoteAll(chr,msg_sk_tameDef[16]);
+			case 2: { if(plec == 400) {chr_talkAll(chr,msg_sk_tameDef[17]); } else { chr_talkAll(chr,msg_sk_tameDef[18]);}}
+			case 3: chr_talkAll(chr,msg_sk_tameDef[19]);
+			case 4: chr_talkAll(chr,msg_sk_tameDef[20]);
 		}
 		proba--;
 		chr_setLocalIntVar(chr, 1009, proba);

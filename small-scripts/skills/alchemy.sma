@@ -305,7 +305,7 @@ public createPotion(const chr, const arrayline, const amount)
 		
 		new emotetext[50];
 		sprintf(emotetext, msg_sk_alchDef[16], chrname, potionreg); //combine the names
-		chr_emoteall( chr, emotetext);
+		chr_emoteAll( chr, emotetext);
 		
 		//combine the potion scriptname out of array and $item_
 		sprintf(scriptname, potionProperty[arrayline][potionscript]);

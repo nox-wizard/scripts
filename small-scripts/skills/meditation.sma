@@ -50,7 +50,7 @@ if (chr_checkSkill(c,46,0,1000,1))
       chr_y[c] = chr_getProperty(c, CP_POSITION, CP2_Y);  
       chr_setProperty(c,CP_MEDITATING,_,1);  
       chr_sound(c, 0x00f9);  
-      chr_speech(EMOTE,-1,c,0,0,msg_sk_meditDef[5]);  
+      chr_emoteAll(c,msg_sk_meditDef[5]);  
       tempfx_activate(_, c,c,0,REGEN_RATE, funcidx("meditation_cal"));  
  }  
  
@@ -76,7 +76,7 @@ if (mode == TFXM_END)
  
             if (random(10) > 5)  
              {  
-                  chr_speech(EMOTE,-1,c,0,0,msg_sk_meditDef[5]);  
+                  chr_emoteAll(c,msg_sk_meditDef[5]);  
              }  
  
             new act_mana = chr_getMana(c);  
@@ -100,7 +100,7 @@ if (mode == TFXM_END)
             if (act_mana > chr_getInt(c))  
              {  
                   chr_setMana(c,chr_getInt(c));  
-                  chr_speech(EMOTE,-1,c,0,0,msg_sk_meditDef[7]);  
+                  chr_emoteAll(c,msg_sk_meditDef[7]);  
                   chr_setProperty(c,CP_MEDITATING,_,0);  
                   return;  
              }  
@@ -112,7 +112,7 @@ if (mode == TFXM_END)
        }  
       else  
        {  
-            chr_speech(EMOTE,-1,c,0,0,msg_sk_meditDef[7]);  
+            chr_emoteAll(c,msg_sk_meditDef[7]);  
             chr_setProperty(c,CP_MEDITATING,_,0);  
             return;  
        }  

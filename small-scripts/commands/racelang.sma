@@ -42,7 +42,7 @@ public cmd_racelang(const c)
 			}
 			else 
 			{
-				chr_speech(TALK_RUNIC ,-1,c, 0,0, "bla");
+				chr_talkAllRunic(c,"bla");
 				chr_message( c, _," %s says something in an unknown language.",name);
 			}
 		}
