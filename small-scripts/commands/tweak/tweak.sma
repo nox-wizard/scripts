@@ -993,7 +993,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 {
 	//printf("enter char tweak seite %d^n", pagenumber);
 	init_tweak_itm();
-	new tempChrStr[100];
+	new tempChrStr[150];
 	
 	new twkChrMenu = gui_create( 10,10,1,1,1,"tweakchrBck" );
 	
@@ -1381,7 +1381,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 			gui_addGump(twkChrMenu,50,173+(i*20), 0x827);
 			gui_addText(twkChrMenu,66,170+(i*20),1310,eventChr_array[i][eventname]);
 			chr_getEventHandler(target,eventChr_array[i][eventnum],tempChrStr);
-			gui_addInputField( twkChrMenu,220,170+(i*20),150,20,i+1,0,tempChrStr);
+			gui_addInputField( twkChrMenu,220,170+(i*20),200,20,i+1,0,tempChrStr);
 			gui_addCheckbox( twkChrMenu, 200, 173+(i*20), oldpic, newpic, 1, i+1 );
 		}
 		
@@ -1433,7 +1433,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 			gui_addGump(twkChrMenu,50,173+((i-16)*20), 0x827);
 			gui_addText(twkChrMenu,66,170+((i-16)*20),1310,eventChr_array[i][eventname]);
 			chr_getEventHandler(target,eventChr_array[i][eventnum],tempChrStr);
-			gui_addInputField( twkChrMenu,220,170+((i-16)*20),150,20,i+1,0,tempChrStr);
+			gui_addInputField( twkChrMenu,220,170+((i-16)*20),200,20,i+1,0,tempChrStr);
 			gui_addCheckbox( twkChrMenu, 200, 173+((i-16)*20), oldpic, newpic, 1, i+1 );
 		}
 		
@@ -1480,13 +1480,13 @@ public tweak_char(const chrsource, const target, pagenumber)
 		
 		gui_addText(twkChrMenu,50,150,1310,msg_commandsDef[69]);
 
-		for ( i=32;i <= 37;++i)
+		for ( i=32;i <= (NUM_chrevent-1);++i)
 		{
 			gui_addGump(twkChrMenu,50,173+((i-32)*20), 0x827);
 			gui_addText(twkChrMenu,66,170+((i-32)*20),1310,eventChr_array[i][eventname]);
 			gui_addCheckbox( twkChrMenu, 200, 173+((i-32)*20), oldpic, newpic, 1, i+1 );
 			chr_getEventHandler(target,eventChr_array[i][eventnum],tempChrStr);
-			gui_addInputField( twkChrMenu,220,170+((i-32)*20),150,20,i+1,0,tempChrStr);
+			gui_addInputField( twkChrMenu,220,170+((i-32)*20),200,20,i+1,0,tempChrStr);
 		}
 		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
 	}
