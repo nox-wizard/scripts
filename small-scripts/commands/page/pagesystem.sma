@@ -77,9 +77,15 @@ public removeOnlineStaff(const chr)
 {
 	new chr2 = INVALID;
 	set_rewind(__onlineStaff);
+	new size = 0;
+	new TmpArray[2048];
 	while(!set_end(__onlineStaff) && chr2 != chr)
+	{
+		//fill temporary array with all chars of the OnlineStaffList that are not the ones logging out
+		size++;
 		chr2 = set_getChar(__onlineStaff);
-
+		TmpArray[size] = chr2;
+	}
 	if(set_end(__onlineStaff) && chr2 != chr) return;
 
 #if _PAGESYSTEM_DEBUG_
@@ -88,7 +94,9 @@ public removeOnlineStaff(const chr)
 	log_message("Removing %s from online staff list",name);
 	printf("^n");
 #endif
-	set_remove(__onlineStaff,chr);
+	set_clear(__onlineStaff);
+	for (new counter = 0; counter < size; counter++)
+		set_add(__onlineStaff, TmpArray[counter] );
 }
 
 /*!
