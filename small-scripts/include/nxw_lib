@@ -54,6 +54,44 @@ enum eStringMode
 	PACKED
 };
 
+/*!
+\author Fax modified by Sparhawk
+\fn isStrContainedInStr( const string[], const container[])
+\param string   : the string to find in the container
+\param container: the string that may contain the contained string
+\return		: true when the first string is contained somewhere in the second
+\brief check if a string is contained in another
+*/
+
+stock isStrContainedInStr( const string[], const container[] )
+{
+	new flag;
+	new stringlen    = strlen( string );
+	new containerlen = strlen( container );
+	new deltalen	 = containerlen - stringlen;
+
+	if ( stringlen <= containerlen )
+		for (new i = 0; i <= deltalen && !flag; ++i )
+		{
+			flag = 1;
+			for ( new j = 0; j < stringlen; ++j )
+			{
+				if ( eStringMode:getStringMode() == UNPACKED )
+				{
+					if ( string[j] != container[i + j] )
+						flag = 0;
+				}
+				else
+				{
+					if ( string{j} != container{i + j} )
+						flag = 0;
+				}
+			}
+		}
+
+	return flag;
+}
+
 stock strcpy( dest[], const source[] )
 {
 	strncpy( dest, source, strlen( source ) );
