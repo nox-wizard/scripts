@@ -3249,7 +3249,7 @@ SECTION HOUSE ITEM 274
 SECTION HOUSE ITEM 275
 {
 	//NAME arbitoir 1
-	ITEM $item_ltar
+	ITEM $item_altar
 	X 0
 	Y 1
 	Z 0
@@ -3258,7 +3258,7 @@ SECTION HOUSE ITEM 275
 SECTION HOUSE ITEM 276
 {
 	//NAME arbitoir 2
-	ITEM $item_ltar_1
+	ITEM $item_altar_1
 	X -1
 	Y 1
 	Z 0
@@ -3267,7 +3267,7 @@ SECTION HOUSE ITEM 276
 SECTION HOUSE ITEM 277
 {
 	//NAME arbitoir 3
-	ITEM $item_ltar_2
+	ITEM $item_altar_2
 	X -1
 	Y 0
 	Z 0
@@ -3276,7 +3276,7 @@ SECTION HOUSE ITEM 277
 SECTION HOUSE ITEM 278
 {
 	//NAME arbitoir 4
-	ITEM $item_ltar_3
+	ITEM $item_altar_3
 	X -1
 	Y -1
 	Z 0
@@ -3285,7 +3285,7 @@ SECTION HOUSE ITEM 278
 SECTION HOUSE ITEM 279
 {
 	//NAME arbitoir 5
-	ITEM $item_ltar_4
+	ITEM $item_altar_4
 	X 0
 	Y -1
 	Z 0
@@ -3294,7 +3294,7 @@ SECTION HOUSE ITEM 279
 SECTION HOUSE ITEM 280
 {
 	//NAME arbitor 6
-	ITEM $item_ltar_5
+	ITEM $item_altar_5
 	X 1
 	Y -1
 	Z 0
@@ -3303,7 +3303,7 @@ SECTION HOUSE ITEM 280
 SECTION HOUSE ITEM 281
 {
 	//NAME arbitoir 7
-	ITEM $item_ltar_6
+	ITEM $item_altar_6
 	X 1
 	Y 0
 	Z 0
@@ -3312,7 +3312,7 @@ SECTION HOUSE ITEM 281
 SECTION HOUSE ITEM 282
 {
 	//NAME arbitoir 8
-	ITEM $item_ltar_7
+	ITEM $item_altar_7
 	X 1
 	Y 1
 	Z 0

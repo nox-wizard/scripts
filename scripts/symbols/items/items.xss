@@ -2026,14 +2026,14 @@
 #define $item_telescope_ZT 60159
 #define $item_telescope_ZU 60160
 
-#define $item_ltar 60161
-#define $item_ltar_1 60162
-#define $item_ltar_2 60163
-#define $item_ltar_3 60164
-#define $item_ltar_4 60165
-#define $item_ltar_5 60166
-#define $item_ltar_6 60167
-#define $item_ltar_7 60168
+#define $item_altar 60161
+#define $item_altar_1 60162
+#define $item_altar_2 60163
+#define $item_altar_3 60164
+#define $item_altar_4 60165
+#define $item_altar_5 60166
+#define $item_altar_6 60167
+#define $item_altar_7 60168
 
 #define $item_lsd_potion 60297
 #define $item_the_book_of_the_dead 85000
@@ -2100,8 +2100,8 @@
 #define $item_golden_bow 400006
 #define $item_pitchfork 400007
 #define $item_iron_mace_practice_weapon_ 400010
-#define $item_a_campfire 2126
-#define $item_campfire 2126
+#define $item_a_campfire 2140
+#define $item_campfire 2141
 #define $item_tillerman 2127
 #define $item_plank1 2128
 #define $item_plank2 2129
