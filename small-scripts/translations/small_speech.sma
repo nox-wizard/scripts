@@ -849,7 +849,7 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Select the character on wich you want account info",
 "Select a character to kick",
 "Invalid serial",
-"Command applied to %d characters"
+"Command applied to %d characters",
 "You can't change the hair/beard color, if the person has no hair/beard!"
 };
 
