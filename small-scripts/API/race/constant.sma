@@ -7,9 +7,9 @@ const RP_STR_WEBLINK = 452;
 const RP_STR_WEBROOT = 453;
 
 //global subprops
-const RP2_X = 1;
-const RP2_Y = 2;
-const RP2_Z = 3;
+const RP2_X = 0;
+const RP2_Y = 1;
+const RP2_Z = 2;
 
 //unsorted/untested
 const RP2_DESCRIPTION_COUNT = 1;
