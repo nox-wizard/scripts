@@ -5,6 +5,7 @@
 #include "small-scripts/commands/damage.sma"
 #include "small-scripts/commands/freeze.sma"
 #include "small-scripts/commands/func.sma"
+#include "small-scripts/commands/go.sma"
 #include "small-scripts/commands/hiding.sma"
 #include "small-scripts/commands/invul.sma"
 #include "small-scripts/commands/kill.sma"

@@ -60,7 +60,8 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_SEER,	"regioncp",	""},
 	{PRIV_CNS,	"resurrect",	""},
 	{PRIV_CNS,	"lightlevel",	""},
-	{0,"",""},{0,"",""},
+	{PRIV_CNS,	"go",		""},
+	{0,"",""},
 	{0,"",""},{0,"",""},{0,"",""},{0,"",""},{0,"",""}
 }; //!< names of commands, are used to create function names. Due to the 19 characters function name limit, command names are limited to 15 characters in length.
 
