@@ -1012,7 +1012,6 @@ public tweak_char(const chrsource, const target, pagenumber)
 	new tempChrStr[100];
 	
 	new twkChrMenu = gui_create( 10,10,1,1,1,"tweakchrBck" );
-	//printf("menu page: %d, target: %d, pgetarget: %d^n", pagenumber, target, pgetarget);
 	
 	gui_setProperty( twkChrMenu,MP_BUFFER,0,PROP_CHARACTER );
 	gui_setProperty( twkChrMenu,MP_BUFFER,1,target );
@@ -1168,9 +1167,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 						sprintf(tempChrStr, "%d",output);
 					}
 					else if( chr_twkarray[i][ct_propnumber] == 3) //AMX LocalVars Str
-					{
 						chr_getLocalStrVar(target, chr_twkarray[i][ct_infotype], tempChrStr);
-					}
 					gui_addGump(twkChrMenu,ct_gu+k, 181+(n*20), 0x827);
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
 					gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
@@ -1185,12 +1182,8 @@ public tweak_char(const chrsource, const target, pagenumber)
 						if(privvalue >= 10)
 							privvalue = (privvalue/10)*16;
 						new originalval = chr_getProperty( target,chr_twkarray[i][ct_propnumber])&privvalue;
-						//printf("enter menu line %s, linetype: %d, i: %d^n", chr_twkarray[i][ct_linename], linetype, i);
-						//printf("original value: %d^n", originalval);
 						if(originalval == privvalue) //for example is frozen
-						{
 							checklev = 1;
-						}
 					}
 					else if(chr_twkarray[i][ct_propnumber] == 0) //customized button function, for example open bank box
 					{
@@ -1217,7 +1210,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 						u=chr_twkarray[i][ct_infotype]+1;
 						gui_addGroup( twkChrMenu, u );
 					}
-					if((chr_twkarray[i][ct_propnumber] == 110) || (chr_twkarray[i][ct_propnumber] == 121)) //bitfields (for example visibility)
+					if(chr_twkarray[i][ct_propnumber] == 121) //bitfields (for example visibility)
 					{
 						new privvalue = chr_twkarray[i][ct_propval];
 						if(privvalue >= 10)
@@ -1225,10 +1218,14 @@ public tweak_char(const chrsource, const target, pagenumber)
 						new originalval = chr_getProperty( target,chr_twkarray[i][ct_propnumber])&privvalue;
 						if(originalval == privvalue) //can decay
 							checklev = 1;
-						printf("enter menu line %s, value: %d^n", chr_twkarray[i][ct_linename], originalval);
-						gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
-						gui_addRadioButton( twkChrMenu,ct_radio+k,(180+(n*20)), oldpic,newpic,checklev,i);
 					}
+					else if (chr_twkarray[i][ct_propnumber] == 110)
+					{
+						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber]) == chr_twkarray[i][ct_propval])
+							checklev = 1;
+					}
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
+					gui_addRadioButton( twkChrMenu,ct_radio+k,(180+(n*20)), oldpic,newpic,checklev,i);
 					checklev=0;
 				}
 				case 6: //splitted properties (more for example)
@@ -1502,8 +1499,8 @@ public tweak_char(const chrsource, const target, pagenumber)
 		{
 			new item = set_get(itemSet);
 			new itemName[30];
-			chr_getProperty(item,IP_STR_NAME,_,itemName);
-			layer= chr_getProperty(item,IP_LAYER);
+			itm_getProperty(item,IP_STR_NAME,_,itemName);
+			layer= itm_getProperty(item,IP_LAYER);
 			ct_layerprop[layer-1][lt_used] = 1; //this layer is used
 			if ( layer <= 24) //number of layer should only show equipplayer, not bankbox or others
 			{
@@ -1664,7 +1661,6 @@ public tweak_char(const chrsource, const target, pagenumber)
 						}
 						else
 						{
-							//printf("dividerrest > 16, enter sub page content, count: %d^n", count);
 							if (chr_isaLocalVar(target, num, VAR_TYPE_INTEGER))
 							{
 								sprintf(LocalV, "%d", chr_getLocalIntVar(target,num));
@@ -1684,7 +1680,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 						}				
 					}//for
 				}//if subaccount
-				else /*if((divider==0) || ((divider==1) && (dividerrest==0)))*/ //first page == almost static (no subpage)
+				else //first page == almost static (no subpage)
 				{
 					if(1<=dividerrest<=16)
 					{
@@ -1734,7 +1730,6 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 {
 	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 );
 	new pagenumber = gui_getProperty( twkChrMenu,MP_BUFFER,4 );
-	printf("enter callback, page: %d, target: %d^n", pagenumber, target);
 	new startline;
 	new leftrow;
 	new rightrow;
@@ -1797,7 +1792,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        			new textbuf_input[15];
 		        			new textbuf_origin[15];
 		        			new value=0;
-		        			checked = gui_getProperty(twkChrMenu,MP_CHECK,i+1);
+		        			checked = gui_getProperty(twkChrMenu,MP_CHECK,i);
 		        			if( type== 1) //TFX function
 		        			{
 		        				sprintf(textbuf_origin, "%s", chr_twkarray[i][ct_inputname]);
@@ -1811,8 +1806,9 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 						{
 							chr_getLocalStrVar(target, chr_twkarray[i][ct_infotype], textbuf_origin);
 						}
-						if( strcmp( textbuf_input,textbuf_origin) && checked) //its checked so go on to get the entry if input different from origin
+						if( strcmp( textbuf_input,textbuf_origin) && (checked==1)) //its checked so go on to get the entry if input different from origin
 		        			{
+		        				printf("different input, type 3, line %d^n", i);
 		        				trim(textbuf_input);
 		        				if ((isStrUnsignedInt(textbuf_input)) && (type != 3)) //should be an integer, is it?
 		        				{
@@ -1892,27 +1888,36 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        		else if(linetype == 5) //radiobutton
 		        		{
 		        			checked = gui_getProperty(twkChrMenu,MP_RADIO,i);
-		        			
-		        			if((propnumber == 110) || (propnumber == 121)) //bitfields (for example visibility)
+		        			new privvalue = chr_twkarray[i][ct_propval];
+		        			if(propnumber == 121) //bitfields (for example visibility)
 						{
-							new privvalue = chr_twkarray[i][ct_propval];
 							new originalvalue = chr_getProperty( target,propnumber)&privvalue;
 							if(privvalue >= 10)
 								privvalue = (privvalue/10)*16;
-							printf("enter radiobutton %s, checkbox: %d, value: %d^n", chr_twkarray[i][ct_linename], checked, originalvalue)
 							if( originalvalue == privvalue) //is already set
 								checklev = 1;
 							if( (checklev == 1) && (checked !=1) ) //is at TRUE and no longer checked
 								chr_setProperty( target,propnumber, _, chr_getProperty( target,propnumber) &~ privvalue );
 							else if( (checklev != 1) && (checked == 1)) //is false and checked now
 								chr_setProperty( target,propnumber, _, chr_getProperty( target,propnumber) | privvalue );
+							if((privvalue == 8)&& (checked == 1)) //perma invis flag needs additionally a hide property
+								chr_setProperty( target,110, _, 2);
+						}
+						else if(propnumber == 110)//visibility
+						{
+							new originalvalue = chr_getProperty( target,propnumber);
+							if( (checked == 1) && (originalvalue != privvalue)) //is false and checked now
+							{
+								chr_setProperty( target,propnumber, _, privvalue);
+								chr_setProperty( target,121, _, chr_getProperty( target,121) | 8 ); //just to be carefull, perma invis is now set to false
+							}
 						}
 		        		}//linetype
 					else if(linetype == 7) //stock function call
 					{
 						//new q = (propnumber); //type of stock function
 						//new output;
-						//printf("needed callback: %d", i);
+						//printf("needed callback: %d, line is %s^n", i, chr_twkarray[i][ct_linename]);
 					}
 		        	}//for
 		        }
