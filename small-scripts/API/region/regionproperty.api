@@ -1,0 +1,33 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Wintermue				||
+// || Last Update	: 04-apr-2004					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_regionprop_api_
+  #endinput
+#endif
+#define _nxw_regionprop_api_
+
+/** \defgroup script_API_reg Region Properties
+ *  \ingroup script_API
+ *  @{
+ */
+
+/*!
+\author Wintermute
+\fn region_getProperty(const region, const property, const subproperty=0, ...)
+\brief use function to query for certain region properties
+*/
+
+native region_getProperty(const region, const property, const subproperty=0, ...);
+
+/*!
+\author Wintermute
+\fn region_setProperty(const region, const property, const subproperty=0, ...)
+\brief use function to set certain region properties
+*/
+
+native region_setProperty(const region, const property, const subproperty=0, ...);
+

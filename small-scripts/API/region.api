@@ -14,7 +14,7 @@
  *  \ingroup script_API
  *  @{
  */
- 
+
 /*!
 \author Xanathar
 \fn rgn_setWeather(const region, const weathertype = 0)
@@ -112,5 +112,15 @@ native rgn_isValid(const region);
 \brief
 */
 native rgn_getName(const region, regionName[]);
+
+/*!
+\author Wintermute
+\fn rgn_getRegion(const x, const y)
+\brief returns internal region number at koordinates x,y
+*/
+native rgn_getRegion(const x, const y);
+
+
+
 
 /** @} */ // end of script_API_reg

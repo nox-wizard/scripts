@@ -9,6 +9,7 @@
 #include "small-scripts/API/magic/constant.sma"
 #include "small-scripts/API/party/constant.sma"
 #include "small-scripts/API/race/constant.sma"
+#include "small-scripts/API/region/constant.sma"
 
 #include "small-scripts/API/calendar/calendar.api"
 #include "small-scripts/API/character/character.api"
@@ -35,3 +36,4 @@
 #include "small-scripts/API/target.api"
 #include "small-scripts/API/time.api"
 #include "small-scripts/API/party/party.api"
+#include "small-scripts/API/region/regionproperty.api"

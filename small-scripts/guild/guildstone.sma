@@ -707,7 +707,7 @@ public guildmasterMenu(const chr, const guild)
 
 	ypos+=30;
 	new alignment = guild_getProperty(guild, GP_TYPE, _);
-	sprintf(name, "Change the alignment of guild. (currently %s)" , alignments[alignment]);
+	sprintf(name, "Change the alignment of guild. (currently %s)" , alignments[GUILD_ALIGN:alignment][0]);
 	gui_addText( gui, 45, ypos, _,  name);
 	gui_addButton( gui, 25, ypos, 0x4B9, 0x4BA, 3 );
 
