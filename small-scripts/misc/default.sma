@@ -47,7 +47,7 @@ public __get_milk_from_cow(const s, const c, const this_is_useless)
     }
 
     itm_contDelAmount(itm_getCharBackPack(cc), 1, 0x1005);
-    itm_spawnBackpack(s, 199001);
+    itm_createInBp( 199001, c);
 
     chr_setProperty(c, CP_DISABLED, 0 , getCurrentTime()+60000);
     chr_setProperty(c, CP_STR_DISABLEDMSG, 0, "It has been milked recently");

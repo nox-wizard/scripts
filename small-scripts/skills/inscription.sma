@@ -106,7 +106,7 @@ public __inscription_copy(const socket, const target, const item)
 		// very _very_ dirty solution
 		// printf("%d",START_SCROLL+id-7981);
 		itm_contDelAmount(backpack, 1, 3636 );
-		itm_spawnBackpack(socket, START_SCROLL+id-7981);
+		itm_createInBp( START_SCROLL+id-7981, chr );
 		nprintf(socket,"You success to copy that spell");
 	}
 	else
