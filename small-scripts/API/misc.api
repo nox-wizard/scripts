@@ -79,9 +79,11 @@ native weblaunch(const socket,const format[], ...);
 native broadcast(const format[], ...);
 
 /*!
-\author Endymion
+\author Endymion, changed by Wintermute
 \fn getIntFromDefine(const define[], ...)
 \param define[]: the define
+\param 2: checkDefine: true if a logmessage should be displayed in the console if the define is not available
 \brief Get define Number
 */
-native getIntFromDefine(const define[], ...);
+native getIntFromDefine(const define[], const bool checkDefine=true);
+
