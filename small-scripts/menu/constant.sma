@@ -37,6 +37,9 @@ const MP_STR_CALLBACK = 450;
 const MP_STR_BUFFER = 451;
 const MP_UNI_TEXT = 500;
 
+const MENU_CLOSED = 0;
+const GUMP_INVALID = 0x0068;
+
 
 
 

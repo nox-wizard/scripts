@@ -94,7 +94,7 @@ public guildPlace( const s, const target, const item, const x, const y, const z 
 public guild_dclickStone( const guild, const socket )
 {
 	//show menu
-	gui_guildStone( guild, getCharFromSocket( socket ) );
+	//gui_guildStone( guild, getCharFromSocket( socket ) );
 	bypass();
 }
 
