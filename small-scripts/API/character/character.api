@@ -1269,6 +1269,16 @@ native chr_checkEquipment(const chr);
 */
 native chr_setMultiSerial(const chr, const serial);
 
+/*
+\brief Show the status gump of the target char to the calling char or the gump of the caller itself
+\author Wintermute
+\since 0.82
+\param 1 the caller
+\param 2 the target ( can be INVALID )
+\return true or false ( false also if not valid character )
+*/
+native (_chr_showStatus );
+
 /*!
 \author Endymion, mod by Luxor
 \param chr the  character
