@@ -59,9 +59,9 @@ public race_menu( const chr, const race )
 		new chry = chr_getProperty(chr,CP_POSITION,CP2_Y);
 		new chrz = chr_getProperty(chr,CP_POSITION,CP2_Z);
 
-		chr_LocalVarMaker(chr, 0, RACE_STARTX, chrx, _);
-		chr_LocalVarMaker(chr, 0, RACE_STARTY, chry, _);
-		chr_LocalVarMaker(chr, 0, RACE_STARTZ, chrz, _);
+		chr_LocalVarMaker(chr, 0, racex, chrx, _);
+		chr_LocalVarMaker(chr, 0, racey, chry, _);
+		chr_LocalVarMaker(chr, 0, racez, chrz, _);
 		chr_moveTo(chr, racex, racey, racez);
 
 		offset=60;
