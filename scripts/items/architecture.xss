@@ -3769,102 +3769,102 @@ SECTION ITEM $item_stone_wall6_24
 //=========================================================================//
 //                                 STAIRS                                  //
 //=========================================================================//
-SECTION ITEM $item_sandostone_stairs1_1
+SECTION ITEM $item_sandstone_stairs1_1
 {
     ID 03EF
 }
  
-SECTION ITEM $item_sandostone_stairs1_2
+SECTION ITEM $item_sandstone_stairs1_2
 {
     ID 03F0
 }
  
-SECTION ITEM $item_sandostone_stairs1_3
+SECTION ITEM $item_sandstone_stairs1_3
 {
     ID 03F1
 }
  
-SECTION ITEM $item_sandostone_stairs1_4
+SECTION ITEM $item_sandstone_stairs1_4
 {
     ID 03F2
 }
  
-SECTION ITEM $item_sandostone_stairs1_5
+SECTION ITEM $item_sandstone_stairs1_5
 {
     ID 03F3
 }
  
-SECTION ITEM $item_sandostone_stairs1_6
+SECTION ITEM $item_sandstone_stairs1_6
 {
     ID 03F4
 }
  
-SECTION ITEM $item_sandostone_stairs1_7
+SECTION ITEM $item_sandstone_stairs1_7
 {
     ID 03F5
 }
  
-SECTION ITEM $item_sandostone_stairs1_8
+SECTION ITEM $item_sandstone_stairs1_8
 {
     ID 03F6
 }
  
-SECTION ITEM $item_sandostone_stairs1_9
+SECTION ITEM $item_sandstone_stairs1_9
 {
     ID 03F7
 }
  
-SECTION ITEM $item_sandostone_stairs1_10
+SECTION ITEM $item_sandstone_stairs1_10
 {
     ID 03F8
 }
 
-SECTION ITEM $item_sandostone_stairs1_11
+SECTION ITEM $item_sandstone_stairs1_11
 {
     ID 03F9
 }
 
-SECTION ITEM $item_sandostone_stairs1_12
+SECTION ITEM $item_sandstone_stairs1_12
 {
     ID 03FA
 }
 
-SECTION ITEM $item_sandostone_stairs1_13
+SECTION ITEM $item_sandstone_stairs1_13
 {
     ID 03FB
 }
 
-SECTION ITEM $item_sandostone_stairs1_14
+SECTION ITEM $item_sandstone_stairs1_14
 {
     ID 03FC
 }
 
-SECTION ITEM $item_sandostone_stairs1_15
+SECTION ITEM $item_sandstone_stairs1_15
 {
     ID 03FD
 }
 
-SECTION ITEM $item_sandostone_stairs1_16
+SECTION ITEM $item_sandstone_stairs1_16
 {
     ID 03FE
 }
 
-SECTION ITEM $item_sandostone_stairs1_17
+SECTION ITEM $item_sandstone_stairs1_17
 {
     ID 03FF
 }
 
-SECTION ITEM $item_sandostone_stairs1_18
+SECTION ITEM $item_sandstone_stairs1_18
 {
     ID 0400
 }
 
-SECTION ITEM $item_sandostone_stairs1_19
+SECTION ITEM $item_sandstone_stairs1_19
 {
     ID 0401
 }
 
-SECTION ITEM $item_sandostone_stairs1_20
+SECTION ITEM $item_sandstone_stairs1_20
 {
     ID 0402
 }
@@ -4384,127 +4384,127 @@ SECTION ITEM $item_stone_stairs1_25
     ID 0768
 }
 
-SECTION ITEM $item_sandstone_stairs1_1
+SECTION ITEM $item_sandstone_stairs2_1
 {
     ID 0769
 }
  
-SECTION ITEM $item_sandstone_stairs1_2
+SECTION ITEM $item_sandstone_stairs2_2
 {
     ID 076A
 }
  
-SECTION ITEM $item_sandstone_stairs1_3
+SECTION ITEM $item_sandstone_stairs2_3
 {
     ID 076B
 }
  
-SECTION ITEM $item_sandstone_stairs1_4
+SECTION ITEM $item_sandstone_stairs2_4
 {
     ID 076C
 }
  
-SECTION ITEM $item_sandstone_stairs1_5
+SECTION ITEM $item_sandstone_stairs2_5
 {
     ID 076D
 }
  
-SECTION ITEM $item_sandstone_stairs1_6
+SECTION ITEM $item_sandstone_stairs2_6
 {
     ID 076E
 }
  
-SECTION ITEM $item_sandstone_stairs1_7
+SECTION ITEM $item_sandstone_stairs2_7
 {
     ID 076F
 }
  
-SECTION ITEM $item_sandstone_stairs1_8
+SECTION ITEM $item_sandstone_stairs2_8
 {
     ID 0770
 }
  
-SECTION ITEM $item_sandstone_stairs1_9
+SECTION ITEM $item_sandstone_stairs2_9
 {
     ID 0771
 }
  
-SECTION ITEM $item_sandstone_stairs1_10
+SECTION ITEM $item_sandstone_stairs2_10
 {
     ID 0772
 }
 
-SECTION ITEM $item_sandstone_stairs1_11
+SECTION ITEM $item_sandstone_stairs2_11
 {
     ID 0773
 }
 
-SECTION ITEM $item_sandstone_stairs1_12
+SECTION ITEM $item_sandstone_stairs2_12
 {
     ID 0774
 }
 
-SECTION ITEM $item_sandstone_stairs1_13
+SECTION ITEM $item_sandstone_stairs2_13
 {
     ID 0775
 }
 
-SECTION ITEM $item_sandstone_stairs1_14
+SECTION ITEM $item_sandstone_stairs2_14
 {
     ID 0776
 }
 
-SECTION ITEM $item_sandstone_stairs1_15
+SECTION ITEM $item_sandstone_stairs2_15
 {
     ID 0777
 }
 
-SECTION ITEM $item_sandstone_stairs1_16
+SECTION ITEM $item_sandstone_stairs2_16
 {
     ID 0778
 }
 
-SECTION ITEM $item_sandstone_stairs1_17
+SECTION ITEM $item_sandstone_stairs2_17
 {
     ID 0779
 }
 
-SECTION ITEM $item_sandstone_stairs1_18
+SECTION ITEM $item_sandstone_stairs2_18
 {
     ID 077A
 }
 
-SECTION ITEM $item_sandstone_stairs1_19
+SECTION ITEM $item_sandstone_stairs2_19
 {
     ID 077B
 }
 
-SECTION ITEM $item_sandstone_stairs1_20
+SECTION ITEM $item_sandstone_stairs2_20
 {
     ID 077C
 }
 
-SECTION ITEM $item_sandstone_stairs1_21
+SECTION ITEM $item_sandstone_stairs2_21
 {
     ID 077D
 }
 
-SECTION ITEM $item_sandstone_stairs1_22
+SECTION ITEM $item_sandstone_stairs2_22
 {
     ID 077E
 }
 
-SECTION ITEM $item_sandstone_stairs1_23
+SECTION ITEM $item_sandstone_stairs2_23
 {
     ID 077F
 }
 
-SECTION ITEM $item_sandstone_stairs1_24
+SECTION ITEM $item_sandstone_stairs2_24
 {
     ID 0780
 }
 
-SECTION ITEM $item_sandstone_stairs1_25
+SECTION ITEM $item_sandstone_stairs2_25
 {
     ID 0781
 }
