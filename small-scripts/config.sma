@@ -47,6 +47,10 @@
 #define UNKNOWN_CHAR_VAR 9500           //this localVar stores the hash map which is assigned to the char and stores which chars he already knows
 #define UNKNOWN_CHAR_NAME 9501          //this localVar stores the real char name
 
+// key rings AMX
+#define AMX_keymore 9502 //AMX vector to store key more (lock id) and key scriptID, gets all the more values as dynamic vector
+#define AMX_keyname 9503 //String local var that is fed with the keys name enclosed by 
+
 ////////////////////////
 //treasure hunt system//
 ////////////////////////

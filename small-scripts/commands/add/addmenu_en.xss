@@ -1998,9 +1998,9 @@ SECTION PAGE
 	ITEM 0F9D $item_sewing_kit sewing kit
 	ITEM 1766 $item_cut_cloth cut cloth
 	ITEM 0F9E $item_scissors scissors
-	ITEM 101d $item_spinning_wheel1 spinning wheel
+	ITEM 101d $item_spinning_wheel2_1 spinning wheel
 	ITEM 10A4 $item_spinning_wheel2 spinning wheel
-	ITEM 10A5 $item_spinning_wheel3 spinning wheel
+	ITEM 10A5 $item_spinning_wheel2_2 spinning wheel
 	ITEM 0DF8 $item_piles_of_wool_1 piles of wool
 	ITEM 0E1D $item_balls_of_yarn1 balls of yarn
 	ITEM 0E1E $item_balls_of_yarn2 balls of yarn

@@ -93,7 +93,7 @@ public cmd_move(const chr)
 	if(!strlen(__cmdParams[0]))
 	{
 		chr_message(chr,_,msg_commandsDef[179]);
-		target_create(chr,_,_,_,"cmd_move_targ");
+		target_create(chr,_,_,_,"cmd_move_targ_paramless");
 		return;
 	}
 
@@ -104,7 +104,7 @@ public cmd_move(const chr)
 	new keep_movey = __cmdParams[2][0] == '_' || __cmdParams[2][0] == 0;
 	new keep_movez = __cmdParams[3][0] == '_' || __cmdParams[3][0] == 0;
 	
-	printf("1_0 is %s^n", __cmdParams[1][0]);
+	//printf("1_0 is %s^n", __cmdParams[1][0]);
 	printf("change x: %d, y: %d, z: %d^n", keep_movex, keep_movey, keep_movez);
 	
 	new x,y,z;	
@@ -180,8 +180,7 @@ public cmd_move(const chr)
 	chr_setLocalIntVec(chr,CLV_CMDTEMP,3,z);
 	
 	chr_message(chr,_,msg_commandsDef[183]);
-	getRectangle(chr, "cmd_move_targ")
-	//target_create(chr,_,_,_,"cmd_move_targ");
+	getRectangle(chr, "cmd_move_targ");
 }
 
 /*!
@@ -242,9 +241,9 @@ public cmd_move_targ(chr,xy0,xy1,z0,z1,object)
 		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != 0)//don't keep that one
 		{
 			if(mode)
-			newz = oldz + chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+			newz = oldz + chr_getLocalIntVec(chr,CLV_CMDTEMP,3);
 			else
-			newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+			newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3);
 		}
 		else newz = oldz;
 		chr_delLocalVar(chr,CLV_CMDTEMP);
@@ -256,6 +255,7 @@ public cmd_move_targ(chr,xy0,xy1,z0,z1,object)
 	if(isItem(object))
 	{
 		//printf("start object is %d^n", object);
+		
 		new s = set_create();
 		new x,y;
 		for(x = x0; x <= x1; x++)
@@ -292,9 +292,9 @@ public cmd_move_targ(chr,xy0,xy1,z0,z1,object)
 				if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != 0)
 				{
 					if(mode)
-						newz = oldz + chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+						newz = oldz + chr_getLocalIntVec(chr,CLV_CMDTEMP,3);
 					else
-						newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+						newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3);
 				}
 				else newz = oldz;
 								
@@ -414,6 +414,83 @@ public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 		return;
 	}
 	chr_message(chr,_,msg_commandsDef[187]);
+}
+
+public cmd_move_targ_paramless(target, chr, object, x, y, z, staticid, unused1)
+{
+	if(!isChar(object) && !isItem(object))
+	{
+		chr_message(chr,_,msg_commandsDef[184]);
+		return;
+	}
+	
+	//this happens if we didn't specify parameters, so we nedd the destination
+	if(!chr_isaLocalVar(chr,CLV_CMDTEMP))
+	{
+		chr_message(chr,_,"Select the destination");
+		target_create(chr,object,_,_,"cmd_move_targ_dst");
+		return;
+	}
+	
+	new oldx,oldy,oldz,newx,newy,newz;
+	
+	if(isChar(object))
+	{
+		chr_getPosition(object,oldx,oldy,oldz);
+		
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,1) != 0) //don't keep that one
+		{
+			newx = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+		}
+		else newx = oldx;
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,2) != 0)//don't keep that one
+		{
+			newy = chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+		}
+		else newy = oldy;
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != 0)//don't keep that one
+		{
+			newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3);
+		}
+		else newz = oldz;
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+		chr_moveTo(object,newx,newy,newz);
+		area_refresh(chr_getCmdArea(chr));
+		return;
+	}
+
+	if(isItem(object))
+	{
+		//printf("start object is %d^n", object);
+		
+		itm_getPosition(object,oldx,oldy,oldz);
+		//printf("set object found %d^n", object);
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,1) != 0)
+		{
+			newx = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+		}
+		else newx = oldx;
+		
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,2) != 0)
+		{
+			newy = chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+		}
+		else newy = oldy;
+				
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != 0)
+		{
+			newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3);
+		}
+		else newz = oldz;
+							
+		//printf("move old x: %d, y: %d, z: %d of object %d^n", oldx,oldy,oldz);
+		//printf("move x: %d, y: %d, z: %d of object %d^n", newx,newy,newz,object);
+				
+		itm_moveTo(object,newx,newy,newz);
+		area_refresh(chr_getCmdArea(chr));
+		
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+	}
 }
 
 /*! }@ */

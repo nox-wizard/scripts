@@ -75,7 +75,7 @@ You shouldn't need to look edit this function
 */
 new rect_z;
 new rect_object;
-stock rectangle_cback_1(target, chr, object, x, y, z, staticid, unused1)
+public rectangle_cback_1(target, chr, object, x, y, z, staticid, unused1)
 {
 	//get xyz no matter if item, char or object was targeted
 	if(getMapLocation(object,x,y,z) == INVALID)
@@ -103,7 +103,7 @@ stock rectangle_cback_1(target, chr, object, x, y, z, staticid, unused1)
 You shouldn't need to look edit this function
 \return nothing
 */
-stock rectangle_cback_2(target, chr, object1, x, y, z, unused, xy)
+public rectangle_cback_2(target, chr, object1, x, y, z, unused, xy)
 {
 	if(getMapLocation(object1,x,y,z) == INVALID)
 	{
@@ -177,7 +177,7 @@ Gives the top of the target for adding stuff on top of other items
 You shouldn't need to look edit this function
 \return nothing
 */
-stock rectangleTop_cback_1(target, chr, object, x, y, z, itemid, unused1)
+public rectangleTop_cback_1(target, chr, object, x, y, z, itemid, unused1)
 {
 	//get xyz no matter if item, char or object was targeted
 	if(getMapLocation(object,x,y,z) == INVALID)
@@ -225,7 +225,7 @@ Gives the top of the target for adding stuff on top of other items
 You shouldn't need to look edit this function
 \return nothing
 */
-stock rectangleTop_cback_2(target, chr, object, x, y, z, itemid, xy)
+public rectangleTop_cback_2(target, chr, object, x, y, z, itemid, xy)
 {
 	if(getMapLocation(object,x,y,z) == INVALID)
 	{
@@ -1421,257 +1421,6 @@ stock DisplayVector(const chr)
 }
 */
 
-/*!
-\author Keldan
-\fn DVit_Create(const itm, const AmxID)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief creates a dynamic vector.
-\return 1 if succes, else 0
-*/
 
-//physical segment size of dynamic vector
-const DVit_GROWTHSIZE = 10;
-//symbolic number to mark end of vector. Take care to don't use equal element...
-const DVit_END = 0x7FFFFFFF;
-stock DVit_Create(const itm, const AmxID)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-	{
-		itm_addLocalIntVec(itm, AmxID, DVit_GROWTHSIZE+1, DVit_END);
-		return 1;
-	}
-	return 0;
-}
-/*!
-\author Keldan
-\fn DVit_Delete(const itm, const AmxID)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief delete the dynamic vector.
-\return 1 if succes, else 0
-*/
-stock DVit_Delete(const itm, const AmxID)
-{
-	if (itm_isaLocalVar(itm, AmxID))
-	{
-		itm_delLocalVar(itm, AmxID);
-		return 1;
-	}
-	return 0;
-}
-/*!
-\author Keldan
-\fn DVit_GetSize(const itm, const AmxID)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief return the (virtual) size of the dynamic vector
-\return return the size or -1 if invalid vector
-*/
-stock DVit_GetSize(const itm, const AmxID)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-	return -1;
-	new counter;
-	new PhySize = itm_sizeofLocalVar(itm, AmxID);
-	for (counter = 0; counter < PhySize; counter++)
-	{
-		if (itm_getLocalIntVec(itm, AmxID, counter) == DVit_END)
-			return counter;
-	}
-	return -1;
-}
-/*!
-\author Keldan
-\fn DVit_SearchElement(const itm, const AmxID, const element)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief return position of first occurence of element in vector
-\return position of first occurence of element in vector, -1 if no occurence found
-*/
-stock DVit_SearchElement(const itm, const AmxID, const element)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-		return -1;
-	new PhySize = itm_sizeofLocalVar(itm, AmxID);
-	for (new counter = 0; counter < PhySize; counter++)
-	{
-		if (itm_getLocalIntVec(itm, AmxID, counter) == element)
-			return counter;
-		else if (itm_getLocalIntVec(itm, AmxID, counter) == DVit_END)
-			return -1;
-	}
-	return -1;
-}
-/*!
-\author Keldan
-\fn DVit_GetElement(const itm, const AmxID, const index)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief return the element at the given index
-\return return the element at the given index, -1 if no occurence found
-*/
-stock DVit_GetElement(const itm, const AmxID, const index)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-		return -1;
-	if (index >= itm_sizeofLocalVar(itm, AmxID))
-		return -1;
-	new element = itm_getLocalIntVec(itm, AmxID, index);
-	if (element == DVit_END)
-		return -1;
-	return element;
-}
-/*!
-\author Keldan
-\fn DVit_AddElement(const itm, const AmxID, const element)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief add element at the end of vector
-\return -1 if invalid
-*/
-stock DVit_AddElement(const itm, const AmxID, const element)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-		return -1;
-	new size = DVit_GetSize(itm, AmxID);
-	if (size%DVit_GROWTHSIZE == 0)//if no more free slot, grow physical size
-		DVit_Grow(itm, AmxID);
-	itm_setLocalIntVec(itm, AmxID, size, element);
-	itm_setLocalIntVec(itm, AmxID, size+1, DVit_END);
-	return 1;
-}
-/*!
-\author Keldan
-\fn DVit_DelElement(const itm, const AmxID, const element)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief remove the fist occurence of element
-\return -1 if invalid, 0 if not found, 1 if success
-*/
-stock DVit_DelElement(const itm, const AmxID, const element)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-		return -1;
-	new ret=-1;
-	new mode = 0;//0 => search, 1 => resize
-	new PhySize = itm_sizeofLocalVar(itm, AmxID);
-	for (new counter = 0; (counter < PhySize) && (ret == -1); counter++)
-	{
-		if (mode)
-		{
-			itm_setLocalIntVec(itm, AmxID, counter-1,itm_getLocalIntVec(itm, AmxID, counter));
-			if (itm_getLocalIntVec(itm, AmxID, counter-1) == DVit_END)
-				ret = 1;
-		}
-		else if (itm_getLocalIntVec(itm, AmxID, counter) == element)
-			mode = 1;
-		else if (itm_getLocalIntVec(itm, AmxID, counter) == DVit_END)
-			ret = 0;
-	}
-	if (DVit_GetSize(itm, AmxID)%DVit_GROWTHSIZE == 0)
-		DVit_Reduce(itm, AmxID);
-	return ret;
-}
-/*!
-\author Keldan
-\fn DVit_DelIndex(const itm, const AmxID, const index)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief remove the element at the given index
-\return -1 if invalid, 1 if success
-*/
-stock DVit_DelIndex(const itm, const AmxID, const index)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-		return -1;
-	new ret=-1;
-	new PhySize = itm_sizeofLocalVar(itm, AmxID);
-	if (index >= PhySize)
-		return -1;
-	for (new counter = index+1; (counter < PhySize) && (ret == -1); counter++)
-	{
-		itm_setLocalIntVec(itm, AmxID, counter-1, itm_getLocalIntVec(itm, AmxID, counter));
-		if (itm_getLocalIntVec(itm, AmxID, counter-1) == DVit_END)
-			ret = 1;
-	}
-	if (DVit_GetSize(itm, AmxID)%DVit_GROWTHSIZE == 0)
-	DVit_Reduce(itm, AmxID);
-	return ret;
-}
-/*!
-\author Keldan
-\fn DVit_SetElement(const itm, const AmxID, const index, const element)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief set element at given index, changing the old value
-\return 1 if successful, -1 if invalid
-*/
-stock DVit_SetElement(const itm, const AmxID, const index, const element)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-		return -1;
-	if (index >= DVit_GetSize(itm, AmxID))
-		return -1;
-	itm_setLocalIntVec(itm, AmxID, index, element);
-		return 1;
-}
-/*!
-\author Keldan
-\fn DVit_Grow(const itm, const AmxID)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief made grow the dynamic vector by DVit_GROWTHSIZE (private use only)
-\return -1 if invalid
-*/
-stock DVit_Grow(const itm, const AmxID)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-		return -1;
-	new PhySize = itm_sizeofLocalVar(itm, AmxID);
-	new TmpArray[2048];
-	//transfert vector element in temp array
-	for (new counter = 0; counter < PhySize; counter++)
-		TmpArray[counter] = itm_getLocalIntVec(itm, AmxID, counter);
-	itm_delLocalVar(itm, AmxID);
-	itm_addLocalIntVec(itm, AmxID, PhySize+DVit_GROWTHSIZE, DVit_END);
-	for (new counter = 0; counter < PhySize; counter++)
-		itm_setLocalIntVec(itm, AmxID, counter, TmpArray[counter]);
-	return 1;
-}
-/*!
-\author Keldan
-\fn DVit_Reduce(const itm, const AmxID)
-\param itm: the item
-\param var: the variable index
-\since 0.82
-\brief reduce the dynamic vector by DVit_GROWTHSIZE (private use only)
-\return -1 if invalid
-*/
-stock DVit_Reduce(const itm, const AmxID)
-{
-	if (!itm_isaLocalVar(itm, AmxID))
-		return -1;
-	new NewSize = itm_sizeofLocalVar(itm, AmxID) - DVit_GROWTHSIZE;
-	new TmpArray[2048];
-	//transfert vector element in temp array
-	for (new counter = 0; counter < NewSize; counter++)
-		TmpArray[counter] = itm_getLocalIntVec(itm, AmxID, counter);
-	itm_delLocalVar(itm, AmxID);
-	itm_addLocalIntVec(itm, AmxID, NewSize, DVit_END);
-	for (new counter = 0; counter < NewSize; counter++)
-		itm_setLocalIntVec(itm, AmxID, counter, TmpArray[counter]);
-	return 1;
-}
 
 /** @} */
