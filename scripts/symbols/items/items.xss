@@ -2571,8 +2571,8 @@
 #define $item_deed_medium_dragon_ship 2120
 #define $item_deed_large_ship 2121
 #define $item_deed_large_dragon_ship 2122
-#define $item_a_new_guildstone 2123
-#define $item_a_new_guildstone_deed 2124
+#define $item_guildstone 2123
+#define $item_guildstone_deed 2124
 #define $item_a_cigar 2125
 #define $item_a_campfire 2126
 #define $item_tillerman 2127
