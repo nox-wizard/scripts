@@ -84,7 +84,7 @@ SECTION IDLIST WTRIGR x9ccx9cdx9cex9cf
     MSG You cut the fish into steaks!
     SND 00 50
     REMOVE
-    IADD $item_fish_steaks $trg_intoBackpack 5
+    IADD  $item_raw_fish_steaks $trg_intoBackpack 5
 }
 
 // BAKING TRIGGERS BY RETALIN
