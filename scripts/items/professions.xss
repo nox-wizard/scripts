@@ -34,6 +34,7 @@ SECTION ITEM $item_anvil_1
 {
     ID 0FAF
     AMXINT $localvar_flipitem $item_anvil_2
+    @ONDBLCLICK blacksmith
     
     ///CATEGORY Professions
     ///SUBSECTION Miner & Blacksmith
@@ -44,6 +45,7 @@ SECTION ITEM $item_anvil_2
 {
     ID 0FB0
     AMXINT $localvar_flipitem $item_anvil_1
+    @ONDBLCLICK blacksmith
     
     ///CATEGORY Professions
     ///SUBSECTION Miner & Blacksmith

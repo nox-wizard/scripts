@@ -83,7 +83,7 @@
 #define $item_cake_mix 101524
 #define $item_cake 101525
 #define $item_unbaked_apple_pie 101526
-#define $item_pple_pie 101527
+#define $item_apple_pie 101527
 #define $item_unbaked_meat_pie 101528
 #define $item_meat_pie 101529
 #define $item_unbaked_fish_pie 101530
@@ -239,7 +239,7 @@
 
 #define $item_pears_1 104044
 #define $item_pears_2 104045
-#define $item_pples 104046
+#define $item_apples 104046
 #define $item_grape_bunches_1 104047
 #define $item_grape_bunches_2 104048
 #define $item_peaches_1 104049

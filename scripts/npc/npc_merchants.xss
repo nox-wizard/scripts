@@ -857,7 +857,7 @@ SECTION NPC $npc_baker_m
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_pears_1
-	SELLITEM $item_pples
+	SELLITEM $item_apples
 	SELLITEM $item_grape_bunches_1
 	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
@@ -957,7 +957,7 @@ SECTION NPC $npc_baker_f
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_pears_1
-	SELLITEM $item_pples
+	SELLITEM $item_apples
 	SELLITEM $item_grape_bunches_1
 	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
@@ -1102,7 +1102,7 @@ SECTION NPC $npc_provisioner_m
 	RSHOPITEM $item_fish_steaks
 	RSHOPITEM $item_slabs_of_bacon_1
 	RSHOPITEM $item_pears_1
-	RSHOPITEM $item_pples
+	RSHOPITEM $item_apples
 	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_bedroll
 	RSHOPITEM $item_kindling
@@ -1229,7 +1229,7 @@ SECTION NPC $npc_provisioner_m
 	SELLITEM $item_fish_steaks
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_pears_1
-	SELLITEM $item_pples
+	SELLITEM $item_apples
 	SELLITEM $item_peaches_1
 	SELLITEM $item_bedroll
 	SELLITEM $item_kindling
@@ -1365,7 +1365,7 @@ SECTION NPC $npc_provisioner_f
 	RSHOPITEM $item_fish_steaks
 	RSHOPITEM $item_slabs_of_bacon_1
 	RSHOPITEM $item_pears_1
-	RSHOPITEM $item_pples
+	RSHOPITEM $item_apples
 	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_bedroll
 	RSHOPITEM $item_kindling
@@ -1492,7 +1492,7 @@ SECTION NPC $npc_provisioner_f
 	SELLITEM $item_fish_steaks
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_pears_1
-	SELLITEM $item_pples
+	SELLITEM $item_apples
 	SELLITEM $item_peaches_1
 	SELLITEM $item_bedroll
 	SELLITEM $item_kindling
@@ -4705,7 +4705,7 @@ SECTION NPC $npc_farmer_m
 	SHOPKEEPER
 	RSHOPITEM $item_eggs
 	RSHOPITEM $item_pears_1
-	RSHOPITEM $item_pples
+	RSHOPITEM $item_apples
 	RSHOPITEM $item_grape_bunches_1
 	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_fruit_basket
@@ -4726,7 +4726,7 @@ SECTION NPC $npc_farmer_m
 	RSHOPITEM $item_sheaf_of_hay1
 	SELLITEM $item_eggs
 	SELLITEM $item_pears_1
-	SELLITEM $item_pples
+	SELLITEM $item_apples
 	SELLITEM $item_grape_bunches_1
 	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
@@ -4788,7 +4788,7 @@ SECTION NPC $npc_farmer_f
 	SHOPKEEPER
 	RSHOPITEM $item_eggs
 	RSHOPITEM $item_pears_1
-	RSHOPITEM $item_pples
+	RSHOPITEM $item_apples
 	RSHOPITEM $item_grape_bunches_1
 	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_fruit_basket
@@ -4809,7 +4809,7 @@ SECTION NPC $npc_farmer_f
 	RSHOPITEM $item_sheaf_of_hay1
 	SELLITEM $item_eggs
 	SELLITEM $item_pears_1
-	SELLITEM $item_pples
+	SELLITEM $item_apples
 	SELLITEM $item_grape_bunches_1
 	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
@@ -4885,7 +4885,7 @@ SECTION NPC $npc_cook_m
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_pears_1
-	SELLITEM $item_pples
+	SELLITEM $item_apples
 	SELLITEM $item_grape_bunches_1
 	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
@@ -4969,7 +4969,7 @@ SECTION NPC $npc_cook_f
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_pears_1
-	SELLITEM $item_pples
+	SELLITEM $item_apples
 	SELLITEM $item_grape_bunches_1
 	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket

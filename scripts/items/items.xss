@@ -4714,19 +4714,6 @@ SECTION ITEM $item_smithy_hammer
     SPD 28
     WEIGHT 500
     DAMAGETYPE $damage_bludgeon
-}
-
-SECTION ITEM $item_forge1
-{ 
-    NAME forge
-    ID 0FAF
-    @ONDBLCLICK blacksmith
-}
-
-SECTION ITEM $item_forge2_1_5
-{ 
-    NAME forge
-    ID 0FB0
     @ONDBLCLICK blacksmith
 }
 
@@ -4744,6 +4731,13 @@ SECTION ITEM $item_pickaxe
     //RESTOCK 10
     STR 40
     SPD 33
+    WEIGHT 800
+}
+
+SECTION ITEM $item_iron_ore
+{
+    NAME ore
+    ID 19b9
     WEIGHT 800
 }
 
@@ -4767,7 +4761,7 @@ SECTION ITEM $item_tongs
 
 SECTION ITEM $item_hitching_post
 {
-    NAME Anbindepfosten
+    NAME hitching post
     ID 14e7
     @ONDBLCLICK _freezing
     AMXINT 1009 0
@@ -4775,7 +4769,7 @@ SECTION ITEM $item_hitching_post
 
 SECTION ITEM $item_hitching_post2
 {
-    NAME Anbindepfosten
+    NAME hitching post
     ID 14e8
     @ONDBLCLICK _freezing
     AMXINT 1009 0

@@ -191,11 +191,6 @@ public __nxw_sk_mining(const cc)
 	if (oreAmount > 8) {
 		oreAmount = 1;
 	}
-	/*if (skill >= 850 && random(99) >= 92) {
-		itm_spawnNecroItem(s, 1, "999");
-		chr_message( cc, _, "You place a gem in your pack.");
-		return;
-	}*/
 	
 	new str[50];	//Adjust the size if you create new ores with long names!
 	sprintf(str, "%s", msg_sk_miningDef[oreFound]);
@@ -220,10 +215,9 @@ public __nxw_sk_mining(const cc)
  AUTHOR   : Luxor
  PURPOSE  : The function called by Nox-Wizard engine to smelt ores
  ****************************************************************************/
-public __nxw_smeltOre(const cc, const color1, const color2, ore)
+public __nxw_smeltOre(const cc, const color, ore)
 {
     new skill = chr_getSkill(cc, SK_MINING);
-    new color = itm_getProperty(ore, IP_COLOR);
     new index = 0;
     for (index = 0; index < NUM_ORES; index++) 
         {
@@ -281,6 +275,7 @@ public __nxw_smeltOre(const cc, const color1, const color2, ore)
 public blacksmith(const itm, const chr)
 {
 bypass();
+printf("enter smith");
 new itmx = itm_getProperty(itm, IP_POSITION, IP2_X); // Ausgabe der
 new itmy = itm_getProperty(itm, IP_POSITION, IP2_Y); // Char und der Item Position
 new itmz = itm_getProperty(itm, IP_POSITION, IP2_Z);
