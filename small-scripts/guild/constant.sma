@@ -16,10 +16,13 @@
  */
 
 	const GP_TYPE = 100;
+	
 	const GP_GUILDMASTER = 200;
+	
 	const GP_NAME = 450;
 	const GP_WEBPAGE = 451;
-	const GP_CHARTER = 452;
-	const GP_ABBREVIATION = 453;
+	const GP_ABBREVIATION = 452;
+	
+	const GP_CHARTER = 500;
  
 /** @} */ // end of script_const_guild
