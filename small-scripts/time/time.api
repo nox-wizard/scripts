@@ -11,9 +11,8 @@
 #define _nxw_time_api_
 
 /*!
-\name getCurrentTime
 \author Xanathar
-\syntax getCurrentTime()
+\fn getCurrentTime()
 \brief Gets the current time
 */
 native getCurrentTime();
@@ -22,6 +21,7 @@ native getCurrentTime();
 \brief get the current system time (in s)
 \author Keldan
 \since 0.83
+\fn getSystemTime()
 \return the current system time (in s)
 */
 native getSystemTime();

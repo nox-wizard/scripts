@@ -14,7 +14,7 @@
 /*!
 \author Doctor X
 \fn guild_dclickDeed( const deed, const socket )
-\brief a guild deed dblclick
+\brief a guild deed double-click
 */
 public guild_dclickDeed( const deed, const socket )
 {
@@ -37,7 +37,7 @@ public guild_dclickDeed( const deed, const socket )
 /*!
 \author Doctor X
 \fn guild_dclickStone( const guild, const socket )
-\brief a guild stone dblclick
+\brief a guild stone double-click
 */
 public guild_dclickStone( const guild, const socket )
 {
@@ -48,6 +48,11 @@ public guild_dclickStone( const guild, const socket )
 	bypass();
 }
 
+/*!
+\author Doctor X
+\fn guild_sclickStone( const guild, const socket )
+\brief a guild stone single-click
+*/
 public guild_sclickStone( const guild, const socket )
 {
 	new stringMode = getStringMode();

@@ -11,26 +11,23 @@
 #define _nxw_string_api_
 
 /*!
-\name getStringMode
 \author Xanathar
-\syntax getStringMode()
+\fn getStringMode()
 \brief Gets the current string mode used
 */
 native getStringMode();
 
 /*!
-\name setStringMode
 \author Xanathar
-\syntax setStringMode(const mode)
+\fn setStringMode(const mode)
 \param mode: the string mode to set
 \brief Sets the current string mode
 */
 native setStringMode(const mode);
 
 /*!
-\name sprintf
 \author Sparhawk
-\syntax sprintf(dest[],const format[], ...)
+\fn sprintf(dest[],const format[], ...)
 \param dest[]: the string to copy into
 \param format[]: the string to copy
 \brief Copies formatted output from format into dest

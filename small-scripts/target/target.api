@@ -11,9 +11,8 @@
 #define _nxw_target_api_
 
 /*!
-\name getTarget
 \author Xanathar
-\syntax getTarget(const socket, const callback, const format[], ...)
+\fn getTarget(const socket, const callback, const format[], ...)
 \param socket: the socket of the client in which the target will be brought up
 \param callback: the function index that will be invoked by the target
 \param format[]: the message that will be sent with the target

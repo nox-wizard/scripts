@@ -28,73 +28,64 @@
 
 
 /*!
-\name set_open
 \author Xanathar
-\syntax set_open()
+\fn set_open()
 \brief
 */
 native set_open();
 
 /*!
-\name set_close
 \author Xanathar
-\syntax set_close(const set)
+\fn set_close(const set)
 \brief
 */
 native set_close(const set);
 
 /*!
-\name set_pop
 \author Xanathar
-\syntax set_pop(const set)
+\fn set_pop(const set)
 \brief
 */
 native set_pop(const set);
 
 /*!
-\name set_push
 \author Xanathar
-\syntax set_push(const set, const value)
+\fn set_push(const set, const value)
 \brief
 */
 native set_push(const set, const value);
 
 /*!
-\name set_fillOwnedChars
 \author Xanathar
-\syntax set_fillOwnedChars(const set, const chrowner, const includestabled = 1, const includeonlyfollowing = 0)
+\fn set_fillOwnedChars(const set, const chrowner, const includestabled = 1, const includeonlyfollowing = 0)
 \brief
 */
 native set_fillOwnedChars(const set, const chrowner, const includestabled = 1, const includeonlyfollowing = 0);
 
 /*!
-\name set_fillChrNearXY
 \author Xanathar
-\syntax set_fillChrNearXY(const set, const x, const y, const distance = 10, const excludeofflineplayers = 1)
+\fn set_fillChrNearXY(const set, const x, const y, const distance = 10, const excludeofflineplayers = 1)
 \brief
 */
 native set_fillChrNearXY(const set, const x, const y, const distance = 10, const excludeofflineplayers = 1);
 
 /*!
-\name set_fillItemsInCont
 \author Xanathar
-\syntax set_fillItemsInCont(const set, const serial, const includeSubCont = 1)
+\fn set_fillItemsInCont(const set, const serial, const includeSubCont = 1)
 \brief
 */
 native set_fillItemsInCont(const set, const serial, const includeSubCont = 1);
 
 /*!
-\name set_size
 \author Xanathar
-\syntax set_size(const set)
+\fn set_size(const set)
 \brief
 */
 native set_size(const set);
 
 /*!
-\name set_fillItemsAtXY
 \author Xanathar
-\syntax set_fillItemsAtXY(const set, const x, const y, const type = -1, const id = -1)
+\fn set_fillItemsAtXY(const set, const x, const y, const type = -1, const id = -1)
 \brief
 */
 native set_fillItemsAtXY(const set, const x, const y, const type = -1, const id = -1 );
@@ -102,15 +93,14 @@ native set_fillItemsAtXY(const set, const x, const y, const type = -1, const id 
 /*!
 \name set_fillItemsNearXY
 \author Luxor
-\syntax set_fillItemsNearXY(const set, const x, const y, const distance = 10, const bExcludeNotMovableItems = 1)
+\fn set_fillItemsNearXY(const set, const x, const y, const distance = 10, const bExcludeNotMovableItems = 1)
 \brief
 */
 native set_fillItemsNearXY(const set, const x, const y, const distance = 10, const bExcludeNotMovableItems = 1 );
 
 /*!
-\name set_fillOnline
 \author Sparhawk
-\syntax set_fillOnline( const set, const onlyNearThisChar = -1, const range = 18 )
+\fn set_fillOnline( const set, const onlyNearThisChar = -1, const range = 18 )
 \brief Fill set with all online characters unless onlyNearThisChar is a valid char serial then only online pcs within range of char will be collected
 */
 native set_fillOnline( const set, const onlyNearThisChar = -1, const range = 18 );

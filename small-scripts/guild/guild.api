@@ -48,6 +48,7 @@ native guild_addMember( const guild, const chr );
 \brief return the number of members in a guild
 \author Sparhawk
 \since 0.82
+\fn guild_countMember( const guild )
 \param 1: the guild
 \return number of members or invalid when guild does not exist
 */
@@ -57,6 +58,7 @@ native guild_countMember( const guild );
 \brief Add a recuit to a guild
 \author Endymion
 \since 0.82
+\fn guild_addRecruit( const guild, const chr )
 \param 1: the guild
 \param 2: the new recruit
 \return true or false
@@ -67,16 +69,18 @@ native guild_addRecruit( const guild, const chr );
 \brief Given recruit are refuse
 \author Endymion
 \since 0.82
+\fn guild_refuseRecruit( const guild, const chr )
 \param 1: the guild
 \param 2: the recruit
 \return true or false
 */
-native guild_refuseRecruit( const guild, const chr )
+native guild_refuseRecruit( const guild, const chr );
 
 /*!
 \brief return the number of recruits in a guild
 \author Sparhawk
 \since 0.82
+\fn guild_countRecruit( const guild )
 \param 1: the guild
 \return number of recruits or invalid
 */

@@ -11,9 +11,8 @@
 #define _nxw_timer_api_
 
 /*!
-\name addTimer
 \author Xanathar
-\syntax addTimer(const callback, const interval, const more1 = -1, const more2 = -1)
+\fn addTimer(const callback, const interval, const more1 = -1, const more2 = -1)
 \param callback: the function index that the timer have to call
 \param interval: the interval of the timer
 \brief Adds a new timer

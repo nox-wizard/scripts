@@ -11,227 +11,199 @@
 #define _nxw_item_api_
 
 /*!
-\name getItemTarget(
 \author Xanathar
-\syntax getItemTarget()
+\fn getItemTarget()
 \brief Gets the targetted item
 */
 native getItemTarget();
 
 
 /*!
-\name getItemFromSerial
 \author Luxor
-\syntax getItemFromSerial(const serial)
+\fn getItemFromSerial(const serial)
 \param serial: the serial
 \brief Gets the item of the given serial
 */
 native getItemFromSerial(const serial);
 
 /*!
-\name getItemFromSerial
 \author Xanathar
-\syntax getItemFromSerial(const chr)
+\fn getItemFromSerial(const chr)
 \param chr: the character
 \brief Gets the socket of the given char
 */
 native getSocketFromChar(const chr);
 /*!
-\name itm_getProperty
 \author Xanathar
-\syntax itm_getProperty(const item, const property, const subprop=0, ...)
+\fn itm_getProperty(const item, const property, const subprop=0, ...)
 \brief
 */
 native itm_getProperty(const item, const property, const subprop=0, ...);
 
 /*!
-\name itm_setProperty
 \author Xanathar
-\syntax itm_setProperty(const item, const property, const subprop=0, ...)
+\fn itm_setProperty(const item, const property, const subprop=0, ...)
 \brief
 */
 native itm_setProperty(const item, const property, const subprop=0, ...);
 
 /*!
-\name itm_contAddItem
 \author Xanathar
-\syntax itm_contAddItem(const container, const item, const x, const y)
+\fn itm_contAddItem(const container, const item, const x, const y)
 \brief
 */
 native itm_contAddItem(const container, const item, const x, const y);
 
 /*!
-\name itm_color
 \author Xanathar
-\syntax itm_color(const item)
+\fn itm_color(const item)
 \brief
 */
 native itm_color(const item);
 
 /*!
-\name itm_contPileItem
 \author Xanathar
-\syntax itm_contPileItem(const container, const item)
+\fn itm_contPileItem(const container, const item)
 \brief
 */
 native itm_contPileItem(const container, const item);
 
 /*!
-\name itm_contCountItems
 \author Xanathar
-\syntax itm_contCountItems(const container, const id, const color = -1)
+\fn itm_contCountItems(const container, const id, const color = -1)
 \brief
 */
 native itm_contCountItems(const container, const id, const color = -1);
 
 /*!
-\name itm_countItemsByID
 \author Keldan
-\syntax itm_countItemsByID(const container, const ScriptID)
+\fn itm_countItemsByID(const container, const ScriptID)
 \brief return amount of items identified by ScriptID
 */
 native itm_countItemsByID(const container, const ScriptID);
 
 /*!
-\name itm_contDelAmount
 \author Xanathar
-\syntax itm_contDelAmount(const container, const amount, const id, const color = -1)
+\fn itm_contDelAmount(const container, const amount, const id, const color = -1)
 \brief
 */
 native itm_contDelAmount(const container, const amount, const id, const color = -1);
 
 /*!
-\name itm_delAmountByID
 \author Keldan
-\syntax itm_delAmountByID(const container, const amount, const ScriptID)
+\fn itm_delAmountByID(const container, const amount, const ScriptID)
 \brief remove from container "amount" number of items, identified by ScriptID
 */
 native itm_delAmountByID(const container, const amount, const ScriptID);
 
 /*!
-\name itm_moveTo
 \author Xanathar
-\syntax itm_moveTo(const item, const x, const y, const z)
+\fn itm_moveTo(const item, const x, const y, const z)
 \brief
 */
 native itm_moveTo(const item, const x, const y, const z);
 
 /*!
-\name itm_pileItem
 \author Xanathar
-\syntax itm_pileItem(const container, const item)
+\fn itm_pileItem(const container, const item)
 \brief
 */
 native itm_pileItem(const container, const item);
 
 /*!
-\name itm_reduceAmount
 \author Xanathar
-\syntax itm_reduceAmount(const item, const amount)
+\fn itm_reduceAmount(const item, const amount)
 \brief
 */
 native itm_reduceAmount(const item, const amount);
 
 /*!
-\name itm_setContSerial
 \author Xanathar
-\syntax itm_setContSerial(const item, const serial)
+\fn itm_setContSerial(const item, const serial)
 \brief
 */
 native itm_setContSerial(const item, const serial);
 
 /*!
-\name itm_setContSerOnly
 \author Xanathar
-\syntax itm_setContSerOnly(const item, const serial)
+\fn itm_setContSerOnly(const item, const serial)
 \brief
 */
 native itm_setContSerOnly(const item, const serial);
 
 /*!
-\name itm_setMultiSerial
 \author Xanathar
-\syntax itm_setMultiSerial(const item, const serial)
+\fn itm_setMultiSerial(const item, const serial)
 \brief
 */
 native itm_setMultiSerial(const item, const serial);
 
 /*!
-\name itm_setOwnSerial
 \author Xanathar
-\syntax itm_setOwnSerial(const item, const serial)
+\fn itm_setOwnSerial(const item, const serial)
 \brief
 */
 native itm_setOwnSerial(const item, const serial);
 
 /*!
-\name itm_setOwnSerOnly
 \author Xanathar
-\syntax itm_setOwnSerOnly(const item, const serial)
+\fn itm_setOwnSerOnly(const item, const serial)
 \brief
 */
 native itm_setOwnSerOnly(const item, const serial);
 
 /*!
-\name itm_setSerial
 \author Xanathar
-\syntax itm_setSerial(const item, const serial)
+\fn itm_setSerial(const item, const serial)
 \brief
 */
 native itm_setSerial(const item, const serial);
 
 /*!
-\name itm_spawnBackpack
 \author Xanathar
-\syntax itm_spawnBackpack(const socket, const itemid)
+\fn itm_spawnBackpack(const socket, const itemid)
 \brief
 */
 native itm_spawnBackpack(const socket, const itemid);
 
 /*!
-\name itm_getCharBackPack
 \author Xanathar
-\syntax itm_getCharBackPack(const chr)
+\fn itm_getCharBackPack(const chr)
 \brief
 */
 native itm_getCharBackPack(const chr);
 
 /*!
-\name itm_create
 \author Xanathar
-\syntax itm_create(const itemtype)
+\fn itm_create(const itemtype)
 \brief
 */
 native itm_create(const itemtype);
 
 /*!
-\name itm_spawnBank
 \author Xanathar
-\syntax itm_spawnBank(const socket, const itemid)
+\fn itm_spawnBank(const socket, const itemid)
 \brief
 */
 native itm_spawnBank(const socket, const itemid);
 
 /*!
-\name itm_checkDecay
 \author Xanathar
-\syntax itm_checkDecay(const item)
+\fn itm_checkDecay(const item)
 \brief
 */
 native itm_checkDecay(const itm);
 
 /*!
-\name itm_remove
 \author Xanathar
-\syntax itm_remove(const item)
+\fn itm_remove(const item)
 \brief
 */
 native itm_remove(const itm);
 
 /*!
-\name itm_getEventHandler
 \author Sparhawk
-\syntax itm_getEventHandler(const chr, const event, handler[])
+\fn itm_getEventHandler(const chr, const event, handler[])
 \param itm:	item serial
 \param event:	item event identifier (EVENT_ITM_ON*)
 \brief Returns name of small function bound to the specified event into handler
@@ -239,9 +211,8 @@ native itm_remove(const itm);
 native itm_getEventHandler(const chr, const event, handler[]);
 
 /*!
-\name itm_setEventHandler
 \author Xanathar
-\syntax itm_setEventHandler(const itm, const event, const evtype, const format[], ...)
+\fn itm_setEventHandler(const itm, const event, const evtype, const format[], ...)
 \param itm:	item serial
 \param event:	item event identifier (EVENT_ITM_ON*)
 \param evtype:	sets dynamic or static event type (EVENTTYPE_STATIC or EVENTTYPE_DYNAMIC). Static events will be saved in worldfile.
@@ -251,9 +222,8 @@ native itm_getEventHandler(const chr, const event, handler[]);
 native itm_setEventHandler(const itm, const event, const evtype, const format[], ...);
 
 /*!
-\name itm_delEventHandler
 \author Xanathar
-\syntax itm_delEventHandler(const item, const event)
+\fn itm_delEventHandler(const item, const event)
 \param itm:	item serial
 \param event:	item event identifier (EVENT_ITM_ON*)
 \brief Unbinds link between small function an item event
@@ -261,74 +231,65 @@ native itm_setEventHandler(const itm, const event, const evtype, const format[],
 native itm_delEventHandler(const itm, const event);
 
 /*!
-\name itm_sound
 \author Xanathar
-\syntax itm_sound(const item, const soundfx)
+\fn itm_sound(const item, const soundfx)
 \brief
 */
 native itm_sound(const itm, const soundfx);
 
 /*!
-\name itm_spawnItem
 \author Luxor
-\syntax itm_spawnItem(const s, const chr, const amount, const format[], const stackable, const cItemId1, const cItemId2, const cColorId1, const cColorId2, const pack, const send)
+\fn itm_spawnItem(const s, const chr, const amount, const format[], const stackable, const cItemId1, const cItemId2, const cColorId1, const cColorId2, const pack, const send)
 \brief
 */
 native itm_spawnItem(const s, const chr, const amount, const format[], const stackable, const cItemId1, const cItemId2, const cColorId1, const cColorId2, const pack, const send);
 
 /*!
-\name itm_spawnNecroItem
 \author Luxor
-\syntax itm_spawnNecroItem(const s, const inPack, const format[])
+\fn itm_spawnNecroItem(const s, const inPack, const format[])
 \brief
 */
 native itm_spawnNecroItem(const s, const inPack, const format[]);
 
 /*!
-\name itm_refresh
 \author Luxor
-\syntax itm_refresh(const item)
+\fn itm_refresh(const item)
 \brief
 */
 native itm_refresh(const itm);
 
 /*!
-\name itm_speech
 \author Anthalir
-\syntax itm_speech(const s, const itm, const text[])
+\fn itm_speech(const s, const itm, const text[])
 \brief
 */
 native itm_speech(const s, const itm, const text[]);
 
 /*!
-\name itm_equip
 \author Anthalir
-\syntax itm_equip(const chr, const item)
+\fn itm_equip(const chr, const item)
 \brief
 */
 native itm_equip(const chr, const item);
 
 /*!
-\name itm_bounceToPack
 \author Anthalir
-\syntax itm_bounceToPack(const s, const item)
+\fn itm_bounceToPack(const s, const item)
 \brief
 */
 native itm_BounceToPack(const s, const item);
 
 /*!
-\name itm_getLocalVarErr
 \author Sparhawk
-\syntax itm_getLocalVarErr()
+\fn itm_getLocalVarErr()
 \brief Returns result for all operations on item variables
 \brief Returned value is one of VAR_ERROR_NONE, VAR_ERROR_UNKNOWN_VAR, VAR_ERROR_DUPLICATE_VAR, VAR_ERROR_WRONG_TYPE, VAR_ERROR_ACCESS_DENIED
 */
 native itm_getLocalVarErr();
 
 /*!
-\name itm_isaLocalVar
 \author Sparhawk
-\syntax itm_isaLocalVar(const item, const var, const type = 0)
+\fn itm_isaLocalVar(const item, const var, const type = 0)
 \param item:	item serial
 \param var:	variable identifier
 \param type:	type of variable (VAR_TYPE_ANY, VAR_TYPE_INTEGER, VAR_TYPE_STRING )
@@ -337,9 +298,8 @@ native itm_getLocalVarErr();
 native itm_isaLocalVar( const item, const var, const type = 0 );
 
 /*!
-\name itm_delLocalVar
 \author Sparhawk
-\syntax itm_delLocalVar(const item, const var, const type = 0)
+\fn itm_delLocalVar(const item, const var, const type = 0)
 \param item:	item serial
 \param var:	variable identifier
 \param type:	type of variable (VAR_TYPE_ANY, VAR_TYPE_INTEGER, VAR_TYPE_STRING )
@@ -348,9 +308,8 @@ native itm_isaLocalVar( const item, const var, const type = 0 );
 native itm_delLocalVar( const item, const var, const type = 0 );
 
 /*!
-\name itm_addLocalIntVar
 \author Sparhawk
-\syntax itm_addLocalIntVar(const item, const var, const value = 0)
+\fn itm_addLocalIntVar(const item, const var, const value = 0)
 \param item:	item serial
 \param var:	variable identifier
 \param value:	initial value
@@ -359,9 +318,8 @@ native itm_delLocalVar( const item, const var, const type = 0 );
 native itm_addLocalIntVar( const item, const var, const value = 0 );
 
 /*!
-\name itm_getLocalIntVar
 \author Sparhawk
-\syntax itm_getLocalIntVar(const item, const var)
+\fn itm_getLocalIntVar(const item, const var)
 \param item:	item serial
 \param var:	variable identifier
 \brief Get value of specified integer variable from item.
@@ -369,9 +327,8 @@ native itm_addLocalIntVar( const item, const var, const value = 0 );
 native itm_getLocalIntVar( const itm, const var );
 
 /*!
-\name itm_setLocalIntVar
 \author Sparhawk
-\syntax itm_setLocalIntVar(const item, const var, const value = 0)
+\fn itm_setLocalIntVar(const item, const var, const value = 0)
 \param item:	item serial
 \param var:	variable identifier
 \param value:	new value
@@ -380,9 +337,8 @@ native itm_getLocalIntVar( const itm, const var );
 native itm_setLocalIntVar( const itm, const var, const value = 0 );
 
 /*!
-\name itm_addLocalStrVar
 \author Sparhawk
-\syntax itm_addLocalStrVar(const item, const var, const value[] = "")
+\fn itm_addLocalStrVar(const item, const var, const value[] = "")
 \param item:	item serial
 \param var:	variable identifier
 \param value:	initial value
@@ -391,9 +347,8 @@ native itm_setLocalIntVar( const itm, const var, const value = 0 );
 native itm_addLocalStrVar( const item, const var, const value[] = "" );
 
 /*!
-\name itm_getLocalStrVar
 \author Sparhawk
-\syntax itm_getLocalStrVar(const item, const var, value[])
+\fn itm_getLocalStrVar(const item, const var, value[])
 \param item:	item serial
 \param var:	variable identifier
 \brief Get value of specified string variable from item into value.
@@ -401,9 +356,8 @@ native itm_addLocalStrVar( const item, const var, const value[] = "" );
 native itm_getLocalStrVar( const item, const var, value[] );
 
 /*!
-\name itm_setLocalStrVar
 \author Sparhawk
-\syntax itm_setLocalStrVar(const item, const var, const value[] = "")
+\fn itm_setLocalStrVar(const item, const var, const value[] = "")
 \param item:	item serial
 \param var:	variable identifier
 \param value:	new value
@@ -412,9 +366,8 @@ native itm_getLocalStrVar( const item, const var, value[] );
 native itm_setLocalStrVar( const item, const var, const value[] = "" );
 
 /*!
-\name itm_countLocalVar
 \author Sparhawk
-\syntax itm_countLocalVar(const item)
+\fn itm_countLocalVar(const item)
 \param item:	item serial
 \return number of variables defined
 \brief Count the number of local variables defined for specified item
@@ -422,9 +375,8 @@ native itm_setLocalStrVar( const item, const var, const value[] = "" );
 native itm_countLocalVar( const item );
 
 /*!
-\name itm_firstLocalVar
 \author Sparhawk
-\syntax itm_firstLocalVar(const item)
+\fn itm_firstLocalVar(const item)
 \param item:	item serial
 \return first defined local variable or INVALID
 \brief get id of first defined local variable
@@ -432,9 +384,8 @@ native itm_countLocalVar( const item );
 native itm_firstLocalVar( const item );
 
 /*!
-\name itm_nextLocalVar
 \author Sparhawk
-\syntax itm_nextLocalVar(const item, const previous)
+\fn itm_nextLocalVar(const item, const previous)
 \param item:	item serial
 \param previous: variable id of previous variable
 \return next defined local variable or INVALID
@@ -443,9 +394,8 @@ native itm_firstLocalVar( const item );
 native itm_nextLocalVar( const item, const previous );
 
 /*!
-\name itm_getCombatSkill
 \author Luxor
-\syntax itm_getCombatSkill(const itm)
+\fn itm_getCombatSkill(const itm)
 \brief
 */
 native itm_getCombatSkill(const itm);

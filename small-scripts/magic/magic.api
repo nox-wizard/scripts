@@ -21,14 +21,13 @@
 \fn magic_cast(const chr_caster, const chr_target, const spell)
 \brief
 */
-
 native magic_cast(const chr_caster, const chr_target, const spell);
+
 /*!
 \author Xanathar
 \fn magic_castField(const chr_caster, const x, const y, const z, const fieldtype)
 \brief
 */
-
 native magic_castField(const chr_caster, const x, const y, const z, const fieldtype);
 
 /*!

@@ -79,9 +79,8 @@ stock strncpy( dest[], const source[], const size )
 }
 
 /*!
-\funcname ltrim
 \author Sparhawk
-\syntax ltrim(string[])
+\fn ltrim(string[])
 \brief remove leading spaces from a packed or unpacked string
 */
 stock ltrim( string[] )
@@ -118,9 +117,8 @@ stock ltrim( string[] )
 }
 
 /*!
-\funcname rtrim
 \author Sparhawk
-\syntax rtrim(string[])
+\fn rtrim(string[])
 \brief remove trailing spaces from a packed or unpacked string
 */
 stock rtrim( string[] )
@@ -146,9 +144,8 @@ stock rtrim( string[] )
 }
 
 /*!
-\funcname trim
 \author Sparhawk
-\syntax trim(string[])
+\fn trim(string[])
 \brief remove leading and trailing spaces from a packed or unpacked string
 */
 stock trim( string[] )
@@ -158,9 +155,8 @@ stock trim( string[] )
 }
 
 /*!
-\funcname str2upper
 \author Sparhawk
-\syntax str2upper(string[])
+\fn str2upper(string[])
 \brief transform all lower case characters in a packed or unpacked string to uppercase
 */
 stock str2upper( string[] )
@@ -181,9 +177,8 @@ stock str2upper( string[] )
 }
 
 /*!
-\funcname str2lower
 \author Sparhawk
-\syntax str2lower(string[])
+\fn str2lower(string[])
 \param string:	the string to transform
 \brief transform all uppercase characters in a packed or unpacked string to lowercase
 */
@@ -205,9 +200,8 @@ stock str2lower( string[] )
 }
 
 /*!
-\funcname strcmp
 \author Sparhawk
-\syntax strcmp(const string1[], const string2[])
+\fn strcmp(const string1[], const string2[])
 \param string1	: a packed or unpacked string
 \param string2	: a packed or unpacked string
 \return		: 0 for equality, -1 for less, 1 for greater
@@ -286,9 +280,8 @@ stock strcmp( const string1[], const string2[] )
 }
 
 /*!
-\funcname isstrpacked
 \author Sparhawk
-\syntax isstrpacked(string[])
+\fn isstrpacked(string[])
 \param string	: string to examine
 \return		: 0 when unpacked, 1 when packed
 \brief Decide wether a string is in packed or unpacked format
@@ -305,9 +298,8 @@ stock isstrpacked( const string[] )
 }
 
 /*!
-\funcname str2Token
 \author Sparhawk
-\syntax str2Token(const string[], token[], const packedToken, remainder[], const packedRemainder)
+\fn str2Token(const string[], token[], const packedToken, remainder[], const packedRemainder)
 \param string		: The string from which to extract a token. Maybe in packed or unpacked format
 \param token		: The token extracted from the string
 \param packedToken	: Flag which denotes whether the token should be returned in packed or unpacked format
@@ -349,9 +341,8 @@ stock str2Token( const string[], token[], const packedToken, remainder[], const 
 }
 
 /*!
-\funcname substring
 \author Sparhawk
-\syntax substring(const string1[], const from, const to, string2[], const packed2)
+\fn substring(const string1[], const from, const to, string2[], const packed2)
 \param string1	: String from which to extract the substring
 \param from	: Offset in string where the substring starts
 \param to	: Offset in string where the substring ends
@@ -392,9 +383,8 @@ stock substring( const string1[], const from, const to, string2[], const packed2
 }
 
 /*!
-\funcname isDigit
 \author Sparhawk
-\syntax isDigit(const digit)
+\fn isDigit(const digit)
 \param digit	: character to examine
 \return		: true when character is a decimal digit else false
 \brief Decides wether a character is a decimal digit
@@ -407,9 +397,8 @@ stock isDigit( const digit )
 }
 
 /*!
-\funcname isHexDigit
 \author Sparhawk
-\syntax isHexDigit(const digit)
+\fn isHexDigit(const digit)
 \param digit	: character to examine
 \return		: true when character is a hexadecimal digit else false
 \brief Decides wether a character is a hexadecimal digit
@@ -423,9 +412,8 @@ stock isHexDigit( const digit )
 }
 
 /*!
-\funcname hexChar2Number
 \author Sparhawk
-\syntax hexChar2Number(const character)
+\fn hexChar2Number(const character)
 \param character: hexadecimal character
 \return		: decimal value or -1 on failure
 \brief Transform hexadecimal character to a decimal value
@@ -442,9 +430,8 @@ stock hexChar2Number( const character )
 }
 
 /*!
-\funcname isStrUnsignedInt
 \author Sparhawk
-\syntax isStrUnsignedInt(const string[])
+\fn isStrUnsignedInt(const string[])
 \param string	: string to check
 \return		: true when string is a unsigned integer or false on failure
 \brief Check if a string is an unsigned integer value
@@ -469,9 +456,8 @@ stock isStrUnsignedInt( const string[] )
 }
 
 /*!
-\funcname str2UnsignedInt
 \author Sparhawk
-\syntax str2UnsignedInt(const string[])
+\fn str2UnsignedInt(const string[])
 \param string	: stringvalue to transform
 \return		: unsigned integer value
 \brief Transform a string into an unsigned integer value. Check for validity with isStrUnsignedInt() first!
@@ -496,9 +482,8 @@ stock str2UnsignedInt( const string[] )
 }
 
 /*!
-\funcname isStrInt
 \author Sparhawk
-\syntax isStrInt(const string[])
+\fn isStrInt(const string[])
 \param string	: string to check
 \return		: true if string is an integer else false
 \brief Check if a string can be transformed into a signed integer value
@@ -538,9 +523,8 @@ stock isStrInt( const string[] )
 }
 
 /*!
-\funcname str2Int
 \author Sparhawk
-\syntax str2Int(const string[])
+\fn str2Int(const string[])
 \param string	: string to transform
 \return		: signed integer value
 \brief Transform a string into a signed integer value. Check validity with isStrInt() first;
@@ -568,9 +552,8 @@ stock str2Int( const string[] )
 }
 
 /*!
-\funcname isStrHex
 \author Sparhawk
-\syntax isStrHex(const string[])
+\fn isStrHex(const string[])
 \param string	: string to check
 \return		: true if string is a hexadecimal value else false
 \brief Check if a string is a hexadecimal value
@@ -598,9 +581,8 @@ stock isStrHex( const string[] )
 }
 
 /*!
-\funcname str2Hex
 \author Sparhawk
-\syntax str2Hex(const string[])
+\fn str2Hex(const string[])
 \param string	: string to transform
 \return		: unsigned integer value
 \brief Transform hexadecimal string value into unsigned integer value. Check for validity with isStrHex first!
@@ -624,9 +606,8 @@ stock str2Hex( const string[] )
 }
 
 /*!
-\funcname isStrBooleanFalse
 \author Sparhawk
-\syntax isStrBooleanFalse(const string[])
+\fn isStrBooleanFalse(const string[])
 \param	string	: string to examine
 \return		: true if string contains boolean false value else false
 \brief Check if string contains boolean false value. Valid values are "false", "no", decimal or hexadecimal 0.
@@ -640,9 +621,8 @@ stock isStrBooleanFalse( const string[] )
 }
 
 /*!
-\funcname isStrBooleanTrue
 \author Sparhawk
-\syntax isStrBooleanTrue(const string[])
+\fn isStrBooleanTrue(const string[])
 \param	string	: string to examine
 \return		: true if string contains boolean true value else false
 \brief Check if string contains boolean true value. Valid values are "true", "no", decimal or hexadecimal 1
@@ -668,9 +648,8 @@ stock isStrBooleanTrue( const string[] )
 
 
 /*!
-\funcname itm_getDualByteProperty
 \author ???
-\syntax itm_getDualByteProperty(const itm, const property)
+\fn itm_getDualByteProperty(const itm, const property)
 \brief
 */
 stock itm_getDualByteProperty(const itm, const property)
@@ -679,9 +658,8 @@ stock itm_getDualByteProperty(const itm, const property)
 }
 
 /*!
-\funcname itm_setDualByteProperty
 \author ???
-\syntax itm_setDualByteProperty(const itm, const property, const value)
+\fn itm_setDualByteProperty(const itm, const property, const value)
 \brief
 */
 stock itm_setDualByteProperty(const itm, const property, const value)
@@ -691,9 +669,8 @@ stock itm_setDualByteProperty(const itm, const property, const value)
 }
 
 /*!
-\funcname itm_getAmxFlags
 \author ???
-\syntax itm_getAmxFlags(const itm, const idx)
+\fn itm_getAmxFlags(const itm, const idx)
 \brief
 */
 stock itm_getAmxFlags(const itm, const idx)
@@ -702,9 +679,8 @@ stock itm_getAmxFlags(const itm, const idx)
 }
 
 /*!
-\funcname itm_setAmxFlags
 \author ???
-\syntax itm_setAmxFlags(const itm, const idx, const value)
+\fn itm_setAmxFlags(const itm, const idx, const value)
 \brief
 */
 stock itm_setAmxFlags(const itm, const idx, const value)
@@ -713,9 +689,8 @@ stock itm_setAmxFlags(const itm, const idx, const value)
 }
 
 /*!
-\funcname itm_setMultiByteProperty
 \author Rage
-\syntax itm_setMultiByteProperty(const itm, const property, const value)
+\fn itm_setMultiByteProperty(const itm, const property, const value)
 \brief
 */
 stock itm_setMultiByteProperty(const itm, const property, const value)
@@ -727,9 +702,8 @@ stock itm_setMultiByteProperty(const itm, const property, const value)
 }
 
 /*!
-\funcname itm_getMultiByteProperty
 \author Rage
-\syntax itm_getMultiByteProperty(const itm, const property)
+\fn itm_getMultiByteProperty(const itm, const property)
 \brief
 */
 stock itm_getMultiByteProperty(const itm, const property)
@@ -750,9 +724,8 @@ stock itm_getMultiByteProperty(const itm, const property)
 
 
 /*!
-\funcname chr_getDualByteProperty
 \author ???
-\syntax chr_getDualByteProperty(const chr, const property)
+\fn chr_getDualByteProperty(const chr, const property)
 \brief
 */
 stock chr_getDualByteProperty(const chr, const property)
@@ -761,9 +734,8 @@ stock chr_getDualByteProperty(const chr, const property)
 }
 
 /*!
-\funcname chr_setDualByteProperty
 \author ???
-\syntax chr_setDualByteProperty(const chr, const property, const value)
+\fn chr_setDualByteProperty(const chr, const property, const value)
 \brief
 */
 stock chr_setDualByteProperty(const chr, const property, const value)
@@ -773,9 +745,8 @@ stock chr_setDualByteProperty(const chr, const property, const value)
 }
 
 /*!
-\funcname chr_getInt
 \author ???
-\syntax chr_getInt(const chr)
+\fn chr_getInt(const chr)
 \brief
 */
 stock chr_getInt(const chr)
@@ -784,9 +755,8 @@ stock chr_getInt(const chr)
 }
 
 /*!
-\funcname chr_getRealInt
 \author ???
-\syntax chr_getRealInt(const chr)
+\fn chr_getRealInt(const chr)
 \brief
 */
 stock chr_getRealInt(const chr)
@@ -795,9 +765,8 @@ stock chr_getRealInt(const chr)
 }
 
 /*!
-\funcname chr_getMana
 \author ???
-\syntax chr_getMana(const chr)
+\fn chr_getMana(const chr)
 \brief
 */
 stock chr_getMana(const chr)
@@ -806,9 +775,8 @@ stock chr_getMana(const chr)
 }
 
 /*!
-\funcname chr_getDex
 \author ???
-\syntax chr_getDex(const chr)
+\fn chr_getDex(const chr)
 \brief
 */
 stock chr_getDex(const chr)
@@ -817,9 +785,8 @@ stock chr_getDex(const chr)
 }
 
 /*!
-\funcname chr_getRealDex
 \author ???
-\syntax chr_getRealDex(const chr)
+\fn chr_getRealDex(const chr)
 \brief
 */
 stock chr_getRealDex(const chr)
@@ -828,9 +795,8 @@ stock chr_getRealDex(const chr)
 }
 
 /*!
-\funcname chr_getStamina
 \author ???
-\syntax chr_getStamina(const chr)
+\fn chr_getStamina(const chr)
 \brief
 */
 stock chr_getStamina(const chr)
@@ -839,9 +805,8 @@ stock chr_getStamina(const chr)
 }
 
 /*!
-\funcname chr_getStr
 \author ???
-\syntax chr_getStr(const chr)
+\fn chr_getStr(const chr)
 \brief
 */
 stock chr_getStr(const chr)
@@ -850,9 +815,8 @@ stock chr_getStr(const chr)
 }
 
 /*!
-\funcname chr_getRealStr
 \author ???
-\syntax chr_getRealStr(const chr)
+\fn chr_getRealStr(const chr)
 \brief
 */
 stock chr_getRealStr(const chr)
@@ -861,9 +825,8 @@ stock chr_getRealStr(const chr)
 }
 
 /*!
-\funcname chr_getHitPoints
 \author ???
-\syntax chr_getHitPoints(const chr)
+\fn chr_getHitPoints(const chr)
 \brief
 */
 stock chr_getHitPoints(const chr)
@@ -872,9 +835,8 @@ stock chr_getHitPoints(const chr)
 }
 
 /*!
-\funcname chr_setHitPoints
 \author ???
-\syntax chr_setHitPoints(const chr, const value)
+\fn chr_setHitPoints(const chr, const value)
 \brief
 */
 stock chr_setHitPoints(const chr, const value)
@@ -883,9 +845,8 @@ stock chr_setHitPoints(const chr, const value)
 }
 
 /*!
-\funcname chr_setStamina
 \author ???
-\syntax chr_setStamina(const chr, const value)
+\fn chr_setStamina(const chr, const value)
 \brief
 */
 stock chr_setStamina(const chr, const value)
@@ -894,9 +855,8 @@ stock chr_setStamina(const chr, const value)
 }
 
 /*!
-\funcname chr_setMana
 \author ???
-\syntax chr_setMana(const chr, const value)
+\fn chr_setMana(const chr, const value)
 \brief
 */
 stock chr_setMana(const chr, const value)
@@ -905,9 +865,8 @@ stock chr_setMana(const chr, const value)
 }
 
 /*!
-\funcname chr_getAmxFlags
 \author ???
-\syntax chr_getAmxFlags(const chr, const idx)
+\fn chr_getAmxFlags(const chr, const idx)
 \brief
 */
 stock chr_getAmxFlags(const chr, const idx)
@@ -916,9 +875,8 @@ stock chr_getAmxFlags(const chr, const idx)
 }
 
 /*!
-\funcname chr_setAmxFlags
 \author ???
-\syntax chr_setAmxFlags(const chr, const idx, const value)
+\fn chr_setAmxFlags(const chr, const idx, const value)
 \brief
 */
 stock chr_setAmxFlags(const chr, const idx, const value)
@@ -927,9 +885,8 @@ stock chr_setAmxFlags(const chr, const idx, const value)
 }
 
 /*!
-\funcname chr_getSkill
 \author ???
-\syntax chr_getSkill(const chr, const skill)
+\fn chr_getSkill(const chr, const skill)
 \brief
 */
 stock chr_getSkill(const chr, const skill)
@@ -938,9 +895,8 @@ stock chr_getSkill(const chr, const skill)
 }
 
 /*!
-\funcname chr_getBaseSkill
 \author ???
-\syntax chr_getBaseSkill(const chr, const skill)
+\fn chr_getBaseSkill(const chr, const skill)
 \brief
 */
 stock chr_getBaseSkill(const chr, const skill)
@@ -949,9 +905,8 @@ stock chr_getBaseSkill(const chr, const skill)
 }
 
 /*!
-\funcname chr_setBaseSkill
 \author ???
-\syntax chr_setBaseSkill(const chr, const skill, const value)
+\fn chr_setBaseSkill(const chr, const skill, const value)
 \brief
 */
 stock chr_setBaseSkill(const chr, const skill, const value)
@@ -960,9 +915,8 @@ stock chr_setBaseSkill(const chr, const skill, const value)
 }
 
 /*!
-\funcname chr_damage
 \author ???
-\syntax chr_damage(const chr, const basedamage, const attacker = -1, const magiclike = 0, const damagetype = DAMAGE_PURE, const stattobedamaged = 0)
+\fn chr_damage(const chr, const basedamage, const attacker = -1, const magiclike = 0, const damagetype = DAMAGE_PURE, const stattobedamaged = 0)
 \brief
 */
 stock chr_damage(const chr, const basedamage, const attacker = -1, const magiclike = 0, const damagetype = DAMAGE_PURE, const stattobedamaged = 0)
@@ -984,9 +938,8 @@ stock chr_damage(const chr, const basedamage, const attacker = -1, const magicli
 }
 
 /*!
-\funcname chr_talk
 \author ???
-\syntax chr_talk(const chr, const npc, const text[], const antispam = 1)
+\fn chr_talk(const chr, const npc, const text[], const antispam = 1)
 \brief
 */
 stock chr_talk(const chr, const npc, const text[], const antispam = 1)
@@ -995,9 +948,8 @@ stock chr_talk(const chr, const npc, const text[], const antispam = 1)
 } 
 
 /*!
-\funcname chr_talkall
 \author ???
-\syntax chr_talkall(const npc, const text[], const antispam = 1)
+\fn chr_talkall(const npc, const text[], const antispam = 1)
 \brief
 */
 stock chr_talkall(const npc, const text[], const antispam = 1)
@@ -1006,9 +958,8 @@ stock chr_talkall(const npc, const text[], const antispam = 1)
 }
 
 /*!
-\funcname chr_talkRunic
 \author ???
-\syntax chr_talkRunic(const chr, const npc, const text[], const antispam = 1)
+\fn chr_talkRunic(const chr, const npc, const text[], const antispam = 1)
 \brief
 */
 stock chr_talkRunic(const chr, const npc, const text[], const antispam = 1)
@@ -1017,9 +968,8 @@ stock chr_talkRunic(const chr, const npc, const text[], const antispam = 1)
 } 
 
 /*!
-\funcname chr_talkallRunic
 \author ???
-\syntax chr_talkallRunic(const npc, const text[], const antispam = 1)
+\fn chr_talkallRunic(const npc, const text[], const antispam = 1)
 \brief
 */
 stock chr_talkallRunic(const npc, const text[], const antispam = 1)
@@ -1028,9 +978,8 @@ stock chr_talkallRunic(const npc, const text[], const antispam = 1)
 } 
 
 /*!
-\funcname chr_emote
 \author ???
-\syntax chr_emote(const chr, const npc, const text[], const antispam = 1)
+\fn chr_emote(const chr, const npc, const text[], const antispam = 1)
 \brief
 */
 stock chr_emote(const chr, const npc, const text[], const antispam = 1)
@@ -1039,9 +988,8 @@ stock chr_emote(const chr, const npc, const text[], const antispam = 1)
 } 
 
 /*!
-\funcname chr_emoteall
 \author ???
-\syntax chr_emoteall(const npc, const text[], const antispam = 1)
+\fn chr_emoteall(const npc, const text[], const antispam = 1)
 \brief
 */
 stock chr_emoteall(const npc, const text[], const antispam = 1)
@@ -1050,9 +998,8 @@ stock chr_emoteall(const npc, const text[], const antispam = 1)
 }
 
 /*!
-\funcname chr_isNpc
 \author Luxor
-\syntax chr_isNpc(const chr)
+\fn chr_isNpc(const chr)
 \brief
 */
 public chr_isNpc (const chr)
@@ -1065,9 +1012,8 @@ public chr_isNpc (const chr)
 }
 
 /*!
-\funcname chr_isUndead
 \author ???
-\syntax chr_isUndead(const chr)
+\fn chr_isUndead(const chr)
 \brief
 */
 public chr_isUndead (const chr)
@@ -1076,9 +1022,8 @@ public chr_isUndead (const chr)
 }
 
 /*!
-\funcname chr_setTamed
 \author Luxor
-\syntax chr_setTamed(const chr, const npc)
+\fn chr_setTamed(const chr, const npc)
 \brief
 */
 public chr_setTamed (const chr, const npc)
@@ -1105,9 +1050,8 @@ public chr_setTamed (const chr, const npc)
 
 
 /*!
-\funcname tempfx_getMore1
 \author ???
-\syntax tempfx_getMore1(const more)
+\fn tempfx_getMore1(const more)
 \brief
 */
 stock tempfx_getMore1(const more)
@@ -1116,9 +1060,8 @@ stock tempfx_getMore1(const more)
 }
 
 /*!
-\funcname tempfx_getMore2
 \author ???
-\syntax tempfx_getMore2(const more)
+\fn tempfx_getMore2(const more)
 \brief
 */
 stock tempfx_getMore2(const more)
@@ -1127,9 +1070,8 @@ stock tempfx_getMore2(const more)
 }
 
 /*!
-\funcname tempfx_getMore3
 \author ???
-\syntax tempfx_getMore3(const more)
+\fn tempfx_getMore3(const more)
 \brief
 */
 stock tempfx_getMore3(const more)
@@ -1138,9 +1080,8 @@ stock tempfx_getMore3(const more)
 }
 
 /*!
-\funcname tempfx_setMore
 \author ???
-\syntax tempfx_setMore(const more1, const more2, const more3)
+\fn tempfx_setMore(const more1, const more2, const more3)
 \brief
 */
 stock tempfx_setMore(const more1, const more2, const more3)
@@ -1159,9 +1100,8 @@ stock tempfx_setMore(const more1, const more2, const more3)
  */
 
 /*!
-\funcname guild_getGuildFromStone
 \author Rage
-\syntax guild_getGuildFromStone(const stone)
+\fn guild_getGuildFromStone(const stone)
 \brief
 */
 stock guild_getGuildFromStone(const stone)
