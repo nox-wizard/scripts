@@ -2352,6 +2352,5 @@ native chr_showPaperdoll(const chr, const target);
 \param 1: the item to be displayed (can be bank box, backpack, whatever)
 \param 2: the character the item is shown to
 */
-native itm_showContainer(const itm, const chr);
 
 /** @} */ // end of script_API_character_basicgumps 
