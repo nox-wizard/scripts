@@ -33,6 +33,9 @@ public cmd_move(const chr)
 {
 	readCommandParams(chr);
 	
+	if(chr_isaLocalVar(chr,CLV_CMDTEMP))
+		chr_delLocalVar(chr, CLV_CMDTEMP);
+	
 	//called 'move me
 	if(!strcmp(__cmdParams[0],"me"))
 	{
@@ -42,7 +45,7 @@ public cmd_move(const chr)
 	}
 
 	//called 'move here
-	if(!strcmp(__cmdParams[0],"here"))
+	else if(!strcmp(__cmdParams[0],"here"))
 		if(strlen(__cmdParams[1]))
 		{
 			//handle multi word names (john smith the cool guy)
@@ -68,7 +71,7 @@ public cmd_move(const chr)
 		}
 
 	//called 'move loc
-	if(!strcmp(__cmdParams[0],"loc"))
+	else if(!strcmp(__cmdParams[0],"loc"))
 	{
 		chr_message(chr,_,msg_commandsDef[178]);
 		target_create(chr,chr,_,_,"cmd_move_targ_loc");
@@ -76,7 +79,7 @@ public cmd_move(const chr)
 	}
 	
 	//called 'move bag
-	if(!strcmp(__cmdParams[0],"bag"))
+	else if(!strcmp(__cmdParams[0],"bag"))
 	{
 		chr_message(chr,_,msg_commandsDef[178]);
 		target_create(chr,chr,_,_,"cmd_move_targ_bag");

@@ -86,6 +86,12 @@ public cmd_add(const chr)
 		loadAddMenu(chr);
 		return;
 	}
+	
+	//set continous adding as default without add menu, esc stops it
+	if(!chr_isaLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE))
+	{
+		chr_addLocalIntVar(chr,CLV_CONTINUOUS_ADDING_MODE);
+	}
 		
 	if(isStrInt(__cmdParams[1]))
 		amount = str2Int(__cmdParams[1]);
