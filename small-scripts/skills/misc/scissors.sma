@@ -11,10 +11,10 @@ public _scissorsTarget( const s, const target, const itm )
 		return;
 		
 	new chr = getCharFromSocket(s);
-	if( chr==INVALID )
+	if( chr < 0 )
 		return;
 	
-	if( itm==INVALID )
+	if( itm < 0 )
 		return;
 
     if( itm_getProperty( itm, IP_MAGIC )==4 )
@@ -24,25 +24,19 @@ public _scissorsTarget( const s, const target, const itm )
 	
 	if( IsCloth( id ) || IsCutCloth( id ) ) {
 
-		new amt=pi->amount;
-		new color = itm_getProperty( itm, IP_COLOR );
-		
+		new amt = itm_getProperty( itm, IP_AMOUNT );
 		chr_sound( chr, 0x0248 );
-		pc->sysmsg(TRANSLATE("You cut some cloth into bandages, and put it in your backpack"));
-
-		P_ITEM pcc=item::CreateFromScript( "$item_clean_bandages", pc->getBackpack() );
-		VALIDATEPI(pcc);
-		pcc->setColor( color );
-		// need to set amount and weight and pileable, note: cannot set pilable while spawning item -Fraz-
-		pcc->weight=10;
-		pcc->pileable=1;
-		pcc->att=9;
-		pcc->amount=amt;
-		pcc->Refresh();
-		pi->deleteItem();
-		weights::NewCalc(pc);
-		statwindow(pc,pc);
-		return;
+		nprintf(s,"You cut some cloth into bandages, and put it in your backpack");
+		new bp = itm_getCharBackPack( target );
+		new benda = itm_createByDef( "$item_clean_bandages" );
+		itm_setProperty( benda, IP_AMOUNT, _, 3 );
+		itm_contPileItem( bp, benda );
+		itm_setProperty( itm, IP_AMOUNT, _, ( (itm_getProperty( itm, IP_AMOUNT )) -1) );
+		if ((itm_getProperty( itm, IP_AMOUNT )) == 0) {
+			itm_remove(itm);
+			return;
+		}			
+		
 	}
 
 	else if( IsBoltOfCloth( id ) ) {

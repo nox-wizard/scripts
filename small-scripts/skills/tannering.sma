@@ -55,7 +55,20 @@ End Customizable Hides
 
 public _doLeatherPiece( const s, const hide ) {
 
-	new amt = itm_getProperty( itm, IP_AMOUNT );
+		new amt = itm_getProperty( itm, IP_AMOUNT );
+		chr_sound( chr, 0x0248 );
+		new bp = itm_getCharBackPack( target );
+		new pelle = itm_createByDef( "$item_leather_piece" );
+		itm_setProperty( pelle, IP_AMOUNT, _, 2 );
+		itm_setDualByteProperty(pelle, IP_COLOR, (itm_getDualByteProperty(i, IP_COLOR)));
+		itm_contPileItem( bp, pelle );
+		itm_setProperty( itm, IP_AMOUNT, _, ( (itm_getProperty( itm, IP_AMOUNT )) -1) );
+		if ((itm_getProperty( itm, IP_AMOUNT )) == 0) {
+			itm_remove(itm);
+			return;
+		}
+
+/*	new amt = itm_getProperty( itm, IP_AMOUNT );
 	new color = itm_getProperty( itm, IP_COLOR );
 
 	chr_sound( chr, 0x0248 );
@@ -66,7 +79,7 @@ public _doLeatherPiece( const s, const hide ) {
 
 	pcc->amount=amt;
 	pcc->Refresh();
-    pi->deleteItem();
+    pi->deleteItem();*/
 
 }
 

@@ -53,6 +53,19 @@ End Customizable Cloths
 
 
 public _doCloth( const s, const cloth ) {
+
+	new amt = itm_getProperty( itm, IP_AMOUNT );
+	chr_sound( chr, 0x0248 );
+	new bp = itm_getCharBackPack( target );
+	new stoffa = itm_createByDef( "$item_cut_cloth" );
+	itm_setProperty( stoffa, IP_AMOUNT, _, 30 );
+	itm_contPileItem( bp, stoffa );
+	itm_setProperty( itm, IP_AMOUNT, _, ( (itm_getProperty( itm, IP_AMOUNT )) -1) );
+	if ((itm_getProperty( itm, IP_AMOUNT )) == 0) {
+		itm_remove(itm);
+		return;
+	}
+/*
 	new amt = 40;
 	new color = itm_getProperty( itm, IP_COLOR );
 	if( pi->amount>1 )
@@ -69,7 +82,7 @@ public _doCloth( const s, const cloth ) {
 
 	pcc->setColor( color );
     pcc->amount=amt;
-	itm_contPileItem( bp, cutcloth );
+	itm_contPileItem( bp, cutcloth );*/
 }
 
 
