@@ -7,7 +7,6 @@ bypass();
 	target_create( chr, _ , _, _, "detecthidtwo" );
 }
 
-
 public detecthidtwo( const t, const c, const target, const trgx, const trgy, const trgz, const model, const param1 )
 {
 new char_x = chr_getProperty(c, CP_POSITION, CP2_X);  
@@ -18,6 +17,7 @@ new detectskill = chr_getProperty(c,CP_SKILL,14); //range for detect is as small
 new dx = char_x - trgx;
 new dy = char_y - trgy;
 
+printf("charx: %d, trgx: %d, dx: %d^n", char_x, trgx, dx);
 if ((dx > 10) || (dx < -10) || (dy > 10) || (dy < -10)) // Abfrage ueber Visrange
     {
     chr_message(c, _, "Thats too far away to search there, if you want to search there go closer.");
@@ -27,13 +27,14 @@ else
 {
 new set = set_create(); // creating a new set
     // fill the set with all chars in range
-	set_addNpcsNearXY( set, char_x, char_y,(detectskill)/10); //?!?
+    new range = detectskill/10;
+    set_addNpcsNearXY( set, char_x,char_y,range);
 
     //set_rewind reinitialize internal set index, so now point to first element
     //!set_isEmpty check if is not at end of set
     
     printf("test1");
-    for( set_rewind(set); !set_end(set);  ) 
+    for( set_rewind(set); !set_end(set);  )
         {
         printf("test2");
         new cc=set_getChar(set); // get the current set character and move internal index to next
@@ -50,15 +51,15 @@ new set = set_create(); // creating a new set
 		new hidingskill = chr_getProperty(cc,CP_SKILL,21);
 		new dist = (cd_x + cd_y)/2;
 		new skillmin = (dist*20)+(hidingskill/2);
-		if ( skillmin < 0 )
-		skillmin = 0;
-		else if ( skillmin > 999 )
-		skillmin = 999;
+		printf("skillmin: %d", skillmin);
+		if ( skillmin < 0 )skillmin = 0;
+		else if ( skillmin > 999 ) skillmin = 999;
 		if(chr_checkSkill(c, 14, skillmin, 1000, 1))
 		      {
 		      chr_message(cc, _, "You have been revealed");
 		      chr_setProperty( cc,CP_HIDDEN,_,0); //becomes visible
 		      chr_setProperty( cc,CP_PRIV2,_, chr_getProperty( target,CP_PRIV2,_) &~0x08 ); //not permahidden
+		      chr_update(cc);
 		      new chrname[30]; //neuer leerer String fuer das auslesen des Charnamens
 		      chr_getProperty(cc, CP_STR_NAME, 0, chrname); //auslesen des Charnamen
 		      chr_message(c, _,"You revealed %s.", chrname);
