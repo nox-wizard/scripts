@@ -455,7 +455,16 @@ what: commands or XSS or accounts or Small
 TOPIC 'rename
 TEXT
 Rename a char or item
-syntax: 'rename name
+syntax: 'rename what name
+ 
+the targetted object will be renamed/re-titled etc.
+what:
+_ = char or item name
+creator = char: nothing, item: creator
+desc = char: nothing, item: description, invis ingame at click
+hidden = item name 2 (hidden name of magic items), char: nothing
+message = disabled message
+title = char title, item: nothing
 
 TOPIC 'resend
 TEXT

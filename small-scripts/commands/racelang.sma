@@ -8,7 +8,7 @@
 /*!
 \author Horian(const chr)
 \fn cmd_racelang
-\brief sets the char to speak in racelanguage (only people that are of same race understand what is said, inkludes range check)
+\brief sets the char to speak in racelanguage (only people that are of same race understand what is said, includes range check)
 
 <B>syntax:<B> 'racelang
 */

@@ -117,7 +117,7 @@ const IP_STR_DESCRIPTION = 451;        //!< description of the item
 const IP_STR_DISABLEDMSG = 452;        //!< message shown when disabled
 const IP_STR_MURDERER = 453;           //!< murderer name for corpses
 const IP_STR_NAME = 454;               //!< name of the item
-const IP_STR_NAME2 = 455;              //!< item-id name of the item
+const IP_STR_NAME2 = 455;              //!< name2 of the item (for magic items the hidden name)
 
 //Item Local Vars
 enum

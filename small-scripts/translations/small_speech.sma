@@ -595,7 +595,7 @@ public msg_api_partyDef[NUM_api_partySENT][]={
 "You notify them that you do not wish to join the party."
 };
 
-const NUM_commandsSENT = 284;
+const NUM_commandsSENT = 285;
 public msg_commandsDef[NUM_commandsSENT][]={
 "No other players connected",
 "Users Online : ",
@@ -880,7 +880,8 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Flags6", //280
 "Flags7",
 "Flags8",
-"Flags9"
+"Flags9",
+"Description:"
 };
 
 const NUM_EatDrinkSENT = 26;

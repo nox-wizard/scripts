@@ -520,11 +520,18 @@ public tweak_itm(const chrsource, const target, pagenumber)
 	
 	gui_addGump(twkItmMenu,50,111, 0x827);
 	gui_addText(twkItmMenu,66,110,33,msg_commandsDef[50]);
-	gui_addPropField( twkItmMenu, 10, 120,150,150,454);
+	gui_addPropField( twkItmMenu, 110, 110,150,150,454);
 	
 	gui_addGump(twkItmMenu,50,131, 0x827);
 	gui_addText(twkItmMenu,66,130,33,msg_commandsDef[52]);
 	gui_addPropField( twkItmMenu, 180, 130,300,150,455);
+	
+	if (pagenumber != 6)
+	{
+		gui_addGump(twkItmMenu,50,501, 0x827);
+		gui_addText(twkItmMenu,66,500,33,msg_commandsDef[284]);
+		gui_addPropField( twkItmMenu, 180, 500,300,150,451);
+	}
 	
 	new startline;
 	new leftrow;
@@ -551,7 +558,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 		startline = it_pg2_r+1;
 		leftrow = it_pg3_l;
 		rightrow = it_pg3_r;
-		printf("tweak item page 3: left %d line, right %d^n", it_pg3_l, it_pg3_r);
+		//printf("tweak item page 3: left %d line, right %d^n", it_pg3_l, it_pg3_r);
 	}
 	else if( pagenumber == 4)
 	{
@@ -559,7 +566,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 		startline = it_pg3_r+1;
 		leftrow = it_pg4_l;
 		rightrow = it_pg4_r;
-		printf("tweak item page 4: left %d line, right %d^n", it_pg4_l, it_pg4_r);
+		//printf("tweak item page 4: left %d line, right %d^n", it_pg4_l, it_pg4_r);
 	}
 	else if( pagenumber == 5) //events
 	{
