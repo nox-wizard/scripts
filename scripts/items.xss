@@ -1,0 +1,27 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (items.xss)                                      ||
+// || Maintained by Sparhawk		                                  ||
+// || Last Update 04-aug-2002                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#include scripts/items/armour.xss
+#include scripts/items/beard.xss
+#include scripts/items/guild.xss
+#include scripts/items/hair.xss
+#include scripts/items/items.xss
+#include scripts/items/potions.xss
+#include scripts/items/weapons.xss
+#include scripts/items/itemlists.xss
+#include scripts/items/race_items.xss
+#include scripts/items/spawners.xss
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || Include your scripts after these lines.                             ||
+// || -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ||
+// || Number your sections starting from 200000 and put them in a separate||
+// || directory (like the custom directory) to ease future NoX-Wizard     ||
+// || upgrades.                                                           ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+

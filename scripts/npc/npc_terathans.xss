@@ -1,0 +1,235 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_terathans.xss)                              ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//*********************************************************************
+//*************************** Terathens *******************************
+//***************************           *******************************
+//*********************************************************************
+
+//a terathan drone
+
+SECTION NPC $npc_a_terathan_drone
+{
+    NAME a terathan drone
+    ID 0047
+    SKIN 0000
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    BACKPACK
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    GOLD 0 50
+    STR 36 65
+    DEX 15 20
+    INT 21 45
+    KARMA -2000
+    FAME 2000
+    SPEECH $speech_none
+    MAGICRESISTANCE 300 450
+    TACTICS 300 500
+    WRESTLING 400 500
+    DAMAGE 4 14
+    POISON 3
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    BACKPACK
+    TOTAME 1100
+    RACE $race_terathan
+    DOORUSE 1
+}
+
+// a terathan warrior
+
+SECTION NPC $npc_a_terathan_warrior
+{
+    NAME a terathan warrior
+    ID 0046
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    ITEM $item_halberd
+    PACKITEM $item_arrow_7
+    LOOT $loot_potions
+    LOOT $loot_potions
+    LOOT $loot_uncut_gems
+    GOLD 50 150
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 165 210
+    DEX 15 20
+    INT 41 65
+    KARMA -5000
+    FAME 5500
+    SPEECH $speech_none
+    MAGICRESISTANCE 150 250
+    TACTICS 800 1000
+    WRESTLING 800 900
+    PARRYING 700 800
+    DAMAGE 4 20
+    POISON 4
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_terathan
+    DOORUSE 1
+}
+
+//a terathan avenger
+
+SECTION NPC $npc_a_terathan_avenger
+{
+    NAME a terathan avenger
+    ID 0046
+    SKIN 066d
+    DIRECTION E
+    BACKPACK
+    ITEM $item_halberd
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_weak_magical_weapons
+    GOLD 200 250
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 465 645
+    DEX 15 20
+    INT 46 70
+    KARMA -8000
+    FAME 7500
+    SPEECH $speech_none
+    MAGICRESISTANCE 650 850
+    TACTICS 900 1000
+    WRESTLING 900 1000
+    DAMAGE 10 30
+    MAGERY 700 800
+    SPATTACK 7552
+    MAGICLEVEL 10
+    MAGISCPHERE 6
+    SPADELAY 7
+    POISON 4
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_terathan
+    DOORUSE 1
+}
+
+//a terathan matriarch
+
+SECTION NPC $npc_a_terathan_matriarch
+{
+    NAME a terathan matriarch
+    ID 0048
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_weak_magical_weapons
+    LOOT $loot_weak_magical_weapons
+    GOLD 250 500
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 315 405
+    DEX 15 20
+    INT 366 455
+    KARMA -9000
+    FAME 8000
+    SPEECH $speech_none
+    MAGICRESISTANCE 900 1000
+    TACTICS 500 700
+    WRESTLING 600 800
+    PARRYING 550 650
+    DAMAGE 5 20
+    MAGERY 900 1000
+    SPATTACK 7552
+    MAGICLEVEL 20
+    MAGICSPHERE $sphere_terathan
+    SPADELAY 10
+    POISON 4
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_terathan
+    DOORUSE 1
+}
+
+//a terathan newt
+
+SECTION NPC $npc_a_terathan_newt
+{
+    NAME a terathan newt
+    ID 0047
+    SKIN 0482
+    DIRECTION E
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    GOLD 50 80
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 50 60
+    DEX 15 20
+    INT 5 10
+    KARMA -500
+    FAME 600
+    SPEECH $speech_none
+    MAGICRESISTANCE 300 450
+    TACTICS 400 600
+    WRESTLING 400 600
+    POISON 1
+    DAMAGE 6 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_terathan
+    DOORUSE 1
+}
+

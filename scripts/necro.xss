@@ -1,0 +1,172 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (necro.xss)                                      ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+// This Section is for Grave Digging
+
+// ITEMLIST for gravedigging
+SECTION ITEM $necroitem_gravedigging_gems
+{
+    NAME RANDOM GEMS LIST
+    ITEMLIST $necroitem_gravedigging_gems
+}
+
+SECTION ITEMLIST $necroitem_gravedigging_gems
+{
+    $item_amethysts
+    $item_amethysts_1
+    $item_citrines
+    $item_diamonds_4
+    $item_emeralds
+    $item_rubies
+    $item_rubies_1
+    $item_rubies_2
+    $item_rubies_3
+    $item_rubies_4
+    $item_sapphires
+    $item_sapphires_1
+    $item_sapphires_2
+    $item_sapphires_3
+    $item_star_sapphires
+    $item_star_sapphires_1
+    $item_tourmalines
+    $item_tourmalines_1
+    $item_tourmalines_2
+    $item_pieces_of_amber
+    $item_amethysts_2
+    $item_amethysts_3
+    $item_citrines_1
+    $item_citrines_2
+    $item_citrines_3
+    $item_diamonds
+    $item_diamonds_1
+    $item_diamonds_2
+    $item_diamonds_3
+    $item_emeralds_1
+    $item_rubies_5
+    $item_rubies_6
+    $item_star_sapphires_2
+    $item_tourmalines_3
+}
+
+SECTION ITEM $necroitem_gravedigging_weapons
+{
+    NAME RANDOM WEAPON LIST
+    ITEMLIST $necroitem_gravedigging_weapons
+}
+
+// The listed items are in the Items.scp
+SECTION ITEMLIST $necroitem_gravedigging_weapons
+{
+    $item_scimitar
+    $item_long_sword
+    $item_viking_sword
+    $item_broadsword
+    $item_cutlass
+    $item_katana
+    $item_executioners_axe
+    $item_axe
+    $item_large_battle_axe
+    $item_battle_axe
+    $item_war_axe
+    $item_a_two-handed_axe
+    $item_dagger
+    $item_kryss
+    $item_hammer_pick
+    $item_mace
+    $item_maul
+    $item_war_hammer
+    $item_war_mace
+}
+
+SECTION ITEM $necroitem_gravedigging_armors
+{
+    NAME RANDOM ARMOR LIST
+    ITEMLIST $necroitem_gravedigging_armors
+}
+
+SECTION ITEMLIST $necroitem_gravedigging_armors
+{
+    $item_bronze_shield
+    $item_buckler
+    $item_heater
+    $item_metal_kite_shield
+    $item_metal_shield
+    $item_platemail
+    $item_plate_gorget
+    $item_plate_gloves
+    $item_plate_helm
+    $item_plate_leggings
+    $item_plate_sleeves
+    $item_bone_chest
+    $item_bone_arms
+    $item_bone_gloves
+    $item_bone_helm
+    $item_bone_legs
+    $item_chain_tunic
+    $item_chain_leggings
+    $item_chain_coif
+    $item_ringmail_tunic
+    $item_ringmail_sleeves
+    $item_ringmail_leggings
+    $item_ringmail_gloves
+    $item_close_helm
+    $item_a_helmet
+    $item_bascinet
+    $item_nose_helm
+    $item_female_studded_leather
+}
+
+// This be the monster section
+
+SECTION UNDEAD $necro_monster_low
+{
+    NAME RANDOM LOW LEV UNDEAD
+    UNDEADLIST $necro_monster_low
+}
+
+SECTION UNDEADLIST $necro_monster_low
+{
+    $npc_a_skeleton
+    $npc_a_skeleton_1
+    $npc_a_zombie
+    $npc_a_spectre
+    $npc_a_bone_knight
+}
+
+SECTION UNDEAD $necro_monster_mid
+{
+    NAME RANDOM MID LEV UNDEAD
+    UNDEADLIST $necro_monster_mid
+}
+
+SECTION UNDEADLIST $necro_monster_mid
+{
+    $npc_a_lich
+    $npc_a_bone_magi
+    $npc_a_ghost
+}
+
+SECTION UNDEAD $necro_monster_high
+{
+    NAME RANDOM HI LEV UNDEAD
+    UNDEADLIST $necro_monster_high
+}
+
+SECTION UNDEADLIST $necro_monster_high
+{
+    $npc_a_lich
+    $npc_a_lich_lord
+}
+
+
+
+
+
+

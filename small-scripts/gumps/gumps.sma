@@ -1,0 +1,15 @@
+#include "small-scripts/gumps/constants.sma"
+#include "small-scripts/gumps/api.sma"
+#include "small-scripts/gumps/support.sma"
+#include "small-scripts/gumps/response.sma"
+#include "small-scripts/gumps/character/properties.sma"
+#include "small-scripts/gumps/item/properties.sma"
+#include "small-scripts/gumps/region/list.sma"
+#include "small-scripts/gumps/region/properties.sma"
+#include "small-scripts/gumps/guild/guildstone.sma"
+#include "small-scripts/gumps/guild/guildstone_recruit.sma"
+#include "small-scripts/gumps/guild/member_list.sma"
+#include "small-scripts/gumps/guild/recruit_list.sma"
+#include "small-scripts/gumps/guild/properties.sma"
+
+

@@ -1,0 +1,25 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_effects_api_
+  #endinput
+#endif
+#define _nxw_effects_api_
+
+/** \defgroup script_API_effects Effects
+ *  \ingroup script_API
+ *  @{
+ */
+
+/*!
+\author Xanathar
+\fn tempfx_activate(const type = 121, const chrsrc, const chrdest, const more, const dur = -1, const callback = -3)
+\brief
+*/
+native tempfx_activate(const type = 121, const chrsrc, const chrdest, const more, const dur = -1, const callback = -3);
+
+/** @} */ // end of script_API_tempfx

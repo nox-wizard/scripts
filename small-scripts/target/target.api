@@ -1,0 +1,22 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_target_api_
+  #endinput
+#endif
+#define _nxw_target_api_
+
+/*!
+\name getTarget
+\author Xanathar
+\syntax getTarget(const socket, const callback, const format[], ...)
+\param socket: the socket of the client in which the target will be brought up
+\param callback: the function index that will be invoked by the target
+\param format[]: the message that will be sent with the target
+\brief Brings up a target, that will invoke the specific callback when the choice is made
+*/
+native getTarget(const socket, const callback, const format[], ...);

@@ -1,0 +1,27 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_time_api_
+  #endinput
+#endif
+#define _nxw_time_api_
+
+/*!
+\name getCurrentTime
+\author Xanathar
+\syntax getCurrentTime()
+\brief Gets the current time
+*/
+native getCurrentTime();
+
+/*!
+\brief get the current system time (in s)
+\author Keldan
+\since 0.83
+\return the current system time (in s)
+*/
+native getSystemTime();

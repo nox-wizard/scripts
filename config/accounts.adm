@@ -1,0 +1,40 @@
+SECTION ACCOUNT 0
+{
+NAME admin
+PASS admin
+}
+
+SECTION ACCOUNT 5
+{
+NAME p
+PASS pass
+}
+
+SECTION ACCOUNT 1
+{
+NAME player1
+PASS player1
+}
+
+SECTION ACCOUNT 2
+{
+NAME player2
+PASS player2
+}
+
+SECTION ACCOUNT 3
+{
+NAME player3
+PASS player3
+}
+
+SECTION ACCOUNT 4
+{
+NAME player4
+PASS player4
+}
+
+
+
+// Note: Last used Account Number was: 0
+EOF

@@ -1,0 +1,69 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_file_api_
+  #endinput
+#endif
+#define _nxw_file_api_
+
+/*!
+\name file_open
+\author Sparhawk
+\since 0.82
+\syntax file_open(const filename[], const openmode[] )
+\param	filename	- name of the file to open
+\param	openmode	- mode in which to open the file ( conform fopen() syntax )
+\return	symbolic numerical file handle or INVALID
+\brief Opens a file for reading and or writing
+*/
+native file_open(const filename[], const openmode[] );
+
+/*!
+\name file_close
+\author Sparhawk
+\since 0.82
+\syntax file_close( const handle )
+\param	handle	- file handle obtained from file_open()
+\return	true on success else false
+\brief Closes a file
+*/
+native file_close( const handle );
+
+/*!
+\name file_eof
+\author Sparhawk
+\since 0.82
+\syntax file_eof( const handle )
+\param	handle	- file handle obtained from file_open()
+\return	true on end of file else false
+\brief Check for end of file situation
+*/
+native file_eof( const handle );
+
+/*!
+\name file_write
+\author Sparhawk
+\since 0.82
+\syntax file_write(const handle, const text[] )
+\param	handle	- file handle obtained through file_open()
+\param	text	- string to write to file
+\return	true on success else false
+\brief Write a string to a file
+*/
+native file_write(const handle, const text[] );
+
+/*!
+\name file_read
+\author Sparhawk
+\since 0.82
+\syntax file_read(const handle, line[] )
+\param	handle	- file handle obtained through file_open()
+\param	line	- Array in to which line read is stored
+\return	true
+\brief Read a line from a file
+*/
+native file_read(const handle, line[] );

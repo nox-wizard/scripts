@@ -1,0 +1,42 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_variable_api_
+  #endinput
+#endif
+#define _nxw_variable_api_
+
+/*!
+\brief New amx variable interface (work in progress so don't touch and don't use)
+\author Sparhawk
+\since 0.82
+\return To be explained
+\note Replacement for itm/chr get/set Local var
+*/
+native var_get (const serial, const var, string[]);
+
+/*
+native var_getError();
+native var_del( const serial, const identifier );
+native var_cnt( const serial );
+native var_get( const serial, const identifier, ... );
+
+native var_addInt( const serial, const identifier, const value = 0, const temporary = 0 );
+native var_delInt( const serial, const identifier );
+native var_cntInt( const serial );
+native var_getInt( const serial, const identifier );
+native var_setInt( const serial, const identifier, const value = 0 );
+
+native var_addStr( const serial, const identifier, const value[] = "", const temporary = 0 );
+native var_delStr( const serial, const identifier );
+native var_cntStr( const serial );
+native var_getStr( const serial, const identifier, value[] );
+native var_setStr( const serial, const identifier, const value[] = "" );
+
+native var_addIntSet( const serial, const identifier, const elements = 1, const value = 0, const temporary = 0 );
+native var_delIntSet( const serial, const identifier, const elements = 1, const value[] = "", const temporary = 0 );
+*/

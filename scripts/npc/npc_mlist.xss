@@ -1,0 +1,1446 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_mlist.xss)                                  ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+SECTION NPC $npc_official
+{
+    NAME MAKENPC
+    TITLE the official
+    ID 0190
+    //$$ official
+    NAMELIST 120
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_short_hair
+    ITEM $item_goatee
+    ITEM $item_sandles
+    ITEM $item_a_skullcap
+    COLOR 2 5
+    ITEM $item_cloak
+    COLOR 1 7
+    ITEM $item_shirt
+    COLOR 1 8
+    ITEM $item_a_robe
+    COLOR 3 9
+    ITEM $item_long_pants
+    COLOR 1 4
+    ITEM $item_a_body_sash
+    COLOR 2 0
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_foreman
+{
+    NAME MAKENPC
+    TITLE the foreman
+    ID 0190
+    //$$ foreman
+    NAMELIST 120
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_thigh_boots
+    COLOR 1 7
+    COLOR 1 2
+    ITEM $item_shirt
+    COLOR 3 9
+    ITEM $item_a_robe
+    COLOR 1 2
+    ITEM $item_a_skirt
+    COLOR 0 5
+    ITEM $item_a_body_sash
+    COLOR 0 0
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_mercenary
+{
+    NAME MAKENPC
+    TITLE the mercenary
+    ID 0190
+    NAMELIST 120
+    //$$ mercenary
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_long_beard
+    ITEM $item_sandles
+    ITEM $item_a_wizards_hat
+    COLOR 0 1
+    ITEM $item_cloak
+    COLOR 1 0
+    ITEM $item_fancy_shirt
+    COLOR 1 8
+    COLOR 2 1
+    ITEM $item_a_kilt
+    COLOR 1 1
+    ITEM $item_a_half_apron
+    COLOR 3 0
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_guardsman
+{
+    NAME MAKENPC
+    TITLE the guardsman
+    ID 0190
+    NAMELIST 120
+    //$$ guardsman
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_shoes
+    COLOR 1 8
+    COLOR 1 3
+    ITEM $item_shirt
+    COLOR 1 7
+    COLOR 0 3
+    ITEM $item_long_pants
+    COLOR 2 0
+    ITEM $item_a_body_sash
+    COLOR 3 6
+    ITEM $item_quarter_staff
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_watchman
+{
+    NAME MAKENPC
+    TITLE the watchman
+    ID 0190
+    NAMELIST 120
+    //$$ watchman
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_sandles
+    COLOR 2 6
+    ITEM $item_cloak
+    COLOR 0 8
+    ITEM $item_shirt
+    COLOR 2 1
+    ITEM $item_a_plain_dress
+    COLOR 3 4
+    ITEM $item_long_pants
+    COLOR 1 4
+    ITEM $item_a_full_apron
+    COLOR 1 8
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_cleric
+{
+    NAME MAKENPC
+    TITLE the cleric
+    ID 0190
+    NAMELIST 120
+    //$$ cleric
+
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_thigh_boots
+    COLOR 0 0
+    ITEM $item_cloak
+    COLOR 1 8
+    ITEM $item_shirt
+    COLOR 0 9
+    COLOR 3 8
+    ITEM $item_short_pants
+    COLOR 3 9
+    ITEM $item_a_half_apron
+    COLOR 2 9
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_solem_priest
+{
+    NAME MAKENPC
+    TITLE the solem priest
+    ID 0190
+    NAMELIST 120
+    //$$ solem priest
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_boots
+    COLOR 0 1
+    ITEM $item_cloak
+    COLOR 1 9
+    ITEM $item_shirt
+    COLOR 1 7
+    COLOR 0 8
+    ITEM $item_a_skirt
+    COLOR 0 1
+    ITEM $item_a_full_apron
+    COLOR 1 9
+    ITEM $item_quarter_staff
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_magician
+{
+    NAME MAKENPC
+    TITLE the magician
+    ID 0190
+    NAMELIST 120
+    //$$ magician
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_long_hair
+    ITEM $item_mustache
+    ITEM $item_boots
+    COLOR 1 9
+    ITEM $item_cloak
+    COLOR 1 0
+    ITEM $item_shirt
+    COLOR 1 9
+    COLOR 0 7
+    ITEM $item_short_pants
+    COLOR 1 6
+    ITEM $item_a_half_apron
+    COLOR 0 0
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_outlander
+{
+    NAME MAKENPC
+    TITLE the outlander
+    ID 0190
+    NAMELIST 120
+    //$$ outlander
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_vandyke
+    ITEM $item_boots
+    ITEM $item_a_bear_mask
+    COLOR 0 9
+    ITEM $item_cloak
+    COLOR 1 7
+    ITEM $item_fancy_shirt
+    COLOR 3 2
+    COLOR 0 5
+    ITEM $item_a_kilt
+    COLOR 2 5
+    ITEM $item_a_half_apron
+    COLOR 2 9
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_mountain_man
+{
+    NAME MAKENPC
+    TITLE the mountain man
+    ID 0190
+    NAMELIST 120
+    //$$ mountain man
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_thigh_boots
+    ITEM $item_wide_brim_hat
+    COLOR 1 6
+    ITEM $item_cloak
+    COLOR 1 4
+    ITEM $item_fancy_shirt
+    COLOR 0 7
+    COLOR 0 4
+    ITEM $item_a_kilt
+    COLOR 1 4
+    ITEM $item_a_half_apron
+    COLOR 0 4
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_buccaneer
+{
+    NAME MAKENPC
+    TITLE the buccaneer
+    ID 0190
+    NAMELIST 120
+    //$$ buccaneer
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_buns_hair
+    ITEM $item_shoes
+    COLOR 2 1
+    COLOR 2 5
+    ITEM $item_fancy_shirt
+    COLOR 0 6
+    COLOR 3 8
+    ITEM $item_a_skirt
+    COLOR 3 7
+    ITEM $item_a_body_sash
+    COLOR 1 4
+    ITEM $item_quarter_staff
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_cavalier
+{
+    NAME MAKENPC
+    TITLE the cavalier
+    ID 0190
+    NAMELIST 120
+    //$$ cavalier
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_med_short_beard
+    ITEM $item_thigh_boots
+    COLOR 2 1
+    ITEM $item_cloak
+    COLOR 2 7
+    ITEM $item_fancy_shirt
+    COLOR 1 4
+    COLOR 3 6
+    ITEM $item_a_kilt
+    COLOR 3 2
+    ITEM $item_a_body_sash
+    COLOR 2 1
+    ITEM $item_gnarled_staff
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_priest
+{
+    NAME MAKENPC
+    TITLE the priest
+    ID 0190
+    NAMELIST 120
+    //$$ priest
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_med_short_beard_1
+    ITEM $item_thigh_boots
+    ITEM $item_a_tribal_mask_1
+    COLOR 0 0
+    ITEM $item_cloak
+    COLOR 1 3
+    ITEM $item_fancy_shirt
+    COLOR 2 0
+    ITEM $item_a_jesters_suit
+    COLOR 1 0
+    ITEM $item_a_kilt
+    COLOR 0 6
+    ITEM $item_a_full_apron
+    COLOR 3 5
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_magician_1
+{
+    NAME MAKENPC
+    TITLE the magician
+    ID 0190
+    NAMELIST 120
+    //$$ magician
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_mustache
+    ITEM $item_thigh_boots
+    ITEM $item_a_orc_helm
+    COLOR 0 2
+    ITEM $item_cloak
+    COLOR 0 6
+    ITEM $item_shirt
+    COLOR 2 2
+    COLOR 1 6
+    ITEM $item_short_pants
+    COLOR 2 8
+    ITEM $item_a_body_sash
+    COLOR 0 5
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_apprentice
+{
+    NAME MAKENPC
+    TITLE the apprentice
+    ID 0190
+    NAMELIST 120
+    //$$ apprentice
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_sandles
+    ITEM $item_floopy_hat
+    COLOR 0 7
+    COLOR 2 2
+    ITEM $item_shirt
+    COLOR 3 0
+    COLOR 0 6
+    ITEM $item_long_pants
+    COLOR 3 1
+    ITEM $item_a_full_apron
+    COLOR 2 0
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_wizard
+{
+    NAME MAKENPC
+    TITLE the wizard
+    ID 0190
+    NAMELIST 120
+    //$$ wizard
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_krisna_hair
+    ITEM $item_shoes
+    ITEM $item_feathered_hat
+    COLOR 2 7
+    COLOR 1 0
+    ITEM $item_fancy_shirt
+    COLOR 0 6
+    COLOR 3 1
+    ITEM $item_long_pants
+    COLOR 1 4
+    ITEM $item_a_full_apron
+    COLOR 2 6
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_piss_ant
+{
+    NAME MAKENPC
+    TITLE the piss ant
+    ID 0190
+    NAMELIST 120
+    //$$ piss ant
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_thigh_boots
+    ITEM $item_a_bandana
+    COLOR 0 8
+    COLOR 1 0
+    ITEM $item_shirt
+    COLOR 3 0
+    COLOR 3 5
+    ITEM $item_a_skirt
+    COLOR 0 3
+    ITEM $item_a_full_apron
+    COLOR 1 9
+    ITEM $item_gnarled_staff
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_mage
+{
+    NAME MAKENPC
+    TITLE the mage
+    ID 0190
+    NAMELIST 120
+    //$$ mage
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_sandles
+    ITEM $item_straw_hat
+    COLOR 3 2
+    COLOR 0 7
+    ITEM $item_fancy_shirt
+    COLOR 2 3
+    COLOR 1 6
+    ITEM $item_a_skirt
+    COLOR 0 1
+    ITEM $item_a_half_apron
+    COLOR 2 6
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_laborer
+{
+    NAME MAKENPC
+    TITLE the laborer
+    ID 0190
+    NAMELIST 120
+    //$$ laborer
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_mohawk
+    ITEM $item_short_beard
+    ITEM $item_shoes
+    COLOR 0 5
+    ITEM $item_cloak
+    COLOR 3 5
+    ITEM $item_shirt
+    COLOR 3 1
+    COLOR 1 7
+    ITEM $item_short_pants
+    COLOR 0 0
+    ITEM $item_a_full_apron
+    COLOR 1 7
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_barbarian_1
+{
+    NAME MAKENPC
+    TITLE the barbarian
+    ID 0190
+    NAMELIST 120
+    //$$ barbarian
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_krisna_hair
+    ITEM $item_long_beard
+    ITEM $item_sandles
+    COLOR 3 2
+    COLOR 3 1
+    ITEM $item_shirt
+    COLOR 0 3
+    ITEM $item_a_tunic
+    COLOR 3 7
+    ITEM $item_long_pants
+    COLOR 2 3
+    ITEM $item_a_half_apron
+    COLOR 1 0
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_newbie_spammer
+{
+    NAME MAKENPC
+    TITLE the newbie spammer
+    ID 0190
+    NAMELIST 120
+    //$$ newbie spammer
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_pageboy
+    ITEM $item_sandles
+    COLOR 2 1
+    ITEM $item_cloak
+    COLOR 2 2
+    ITEM $item_shirt
+    COLOR 2 2
+    COLOR 1 1
+    ITEM $item_a_kilt
+    COLOR 2 2
+    ITEM $item_a_half_apron
+    COLOR 2 4
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_wizard_1
+{
+    NAME MAKENPC
+    TITLE the wizard
+    ID 0190
+    NAMELIST 120
+    //$$ wizard
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_thigh_boots
+    COLOR 0 8
+    ITEM $item_cloak
+    COLOR 1 4
+    ITEM $item_fancy_shirt
+    COLOR 1 7
+    COLOR 1 3
+    ITEM $item_short_pants
+    COLOR 1 8
+    ITEM $item_a_full_apron
+    COLOR 0 2
+    ITEM $item_quarter_staff
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_paladin
+{
+    NAME MAKENPC
+    TITLE the paladin
+    ID 0190
+    NAMELIST 120
+    //$$ paladin
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_boots
+    COLOR 1 0
+    ITEM $item_cloak
+    COLOR 3 1
+    ITEM $item_fancy_shirt
+    COLOR 0 3
+    COLOR 1 1
+    ITEM $item_long_pants
+    COLOR 1 7
+    ITEM $item_a_body_sash
+    COLOR 2 7
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_fancy_nobleman
+{
+    NAME MAKENPC
+    TITLE the fancy nobleman
+    ID 0190
+    NAMELIST 120
+    //$$ fancy nobleman
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_sandles
+    ITEM $item_jester_hat
+    COLOR 0 9
+    COLOR 3 3
+    ITEM $item_fancy_shirt
+    COLOR 1 0
+    COLOR 1 1
+    ITEM $item_a_kilt
+    COLOR 0 2
+    ITEM $item_a_full_apron
+    COLOR 3 9
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_redlady
+{
+    NAME MAKENPC
+    TITLE the red lady
+    ID 0190
+    NAMELIST 120
+    //$$ redlady
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_mohawk
+    ITEM $item_boots
+    COLOR 0 4
+    ITEM $item_cloak
+    COLOR 1 1
+    ITEM $item_fancy_shirt
+    COLOR 3 4
+    ITEM $item_a_robe
+    COLOR 2 1
+    ITEM $item_long_pants
+    COLOR 2 0
+    ITEM $item_a_full_apron
+    COLOR 0 5
+    ITEM $item_black_staff
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_magician_2
+{
+    NAME MAKENPC
+    TITLE the magician
+    ID 0190
+    NAMELIST 120
+    //$$ magician
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_shoes
+    ITEM $item_bonnet
+    COLOR 2 7
+    COLOR 3 8
+    ITEM $item_fancy_shirt
+    COLOR 1 0
+    COLOR 1 8
+    ITEM $item_long_pants
+    COLOR 0 8
+    ITEM $item_a_body_sash
+    COLOR 0 3
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_thief
+{
+    NAME MAKENPC
+    TITLE the thief
+    ID 0190
+    NAMELIST 120
+    //$$ thief
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_boots
+    COLOR 2 2
+    COLOR 2 6
+    ITEM $item_shirt
+    COLOR 2 9
+    COLOR 3 5
+    ITEM $item_a_kilt
+    COLOR 3 5
+    ITEM $item_a_full_apron
+    COLOR 3 7
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_vandal
+{
+    NAME MAKENPC
+    TITLE the vandal
+    ID 0190
+    NAMELIST 120
+    //$$ vandal
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_krisna_hair
+    ITEM $item_short_beard
+    ITEM $item_shoes
+    ITEM $item_straw_hat
+    COLOR 3 7
+    COLOR 3 1
+    ITEM $item_shirt
+    COLOR 0 8
+    ITEM $item_a_plain_dress
+    COLOR 3 6
+    ITEM $item_a_skirt
+    COLOR 2 0
+    ITEM $item_a_body_sash
+    COLOR 2 5
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_cutpurse
+{
+    NAME MAKENPC
+    TITLE the cutpurse
+    ID 0190
+    NAMELIST 120
+    //$$ cutpurse
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_receding_hair
+    ITEM $item_mustache
+    ITEM $item_sandles
+    COLOR 1 7
+    ITEM $item_cloak
+    COLOR 2 4
+    ITEM $item_shirt
+    COLOR 1 6
+    COLOR 1 4
+    ITEM $item_short_pants
+    COLOR 2 4
+    ITEM $item_a_full_apron
+    COLOR 1 4
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_bandit
+{
+    NAME MAKENPC
+    TITLE the bandit
+    ID 0190
+    NAMELIST 120
+    //$$ bandit
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_mohawk
+    ITEM $item_sandles
+    COLOR 2 0
+    COLOR 1 8
+    ITEM $item_fancy_shirt
+    COLOR 1 8
+    COLOR 1 2
+    ITEM $item_long_pants
+    COLOR 1 8
+    ITEM $item_a_full_apron
+    COLOR 3 0
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_night_prowler
+{
+    NAME MAKENPC
+    TITLE the night prowler
+    ID 0190
+    NAMELIST 120
+    //$$ night prowler
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_krisna_hair
+    ITEM $item_thigh_boots
+    ITEM $item_floopy_hat
+    COLOR 3 2
+    COLOR 2 0
+    ITEM $item_fancy_shirt
+    COLOR 0 7
+    COLOR 1 8
+    ITEM $item_a_skirt
+    COLOR 3 4
+    ITEM $item_a_body_sash
+    COLOR 3 0
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_ruffian
+{
+    NAME MAKENPC
+    TITLE the ruffian
+    ID 0190
+    NAMELIST 120
+    //$$ ruffian
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_pony_tail
+    ITEM $item_med_short_beard
+    ITEM $item_thigh_boots
+    COLOR 2 9
+    ITEM $item_cloak
+    COLOR 2 8
+    ITEM $item_shirt
+    COLOR 0 2
+    COLOR 3 0
+    ITEM $item_a_skirt
+    COLOR 1 5
+    ITEM $item_a_full_apron
+    COLOR 3 1
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_stinky_pimp
+{
+    NAME MAKENPC
+    TITLE the stinky pimp
+    ID 0190
+    NAMELIST 120
+    //$$ stinky pimp
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_vandyke
+    ITEM $item_thigh_boots
+    COLOR 2 5
+    COLOR 0 5
+    ITEM $item_fancy_shirt
+    COLOR 3 5
+    ITEM $item_a_jesters_suit
+    COLOR 2 0
+    ITEM $item_a_skirt
+    COLOR 2 3
+    ITEM $item_a_body_sash
+    COLOR 3 7
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+
+SECTION NPC $npc_thug
+{
+    NAME MAKENPC
+    TITLE the thug
+    ID 0190
+    NAMELIST 120
+    //$$ thug
+    SKIN 83FF
+    DIRECTION N
+    SPEECH $speech_healer
+    BACKPACK
+    ITEM $item_buns_hair
+    ITEM $item_vandyke
+    ITEM $item_boots
+    ITEM $item_jester_hat
+    COLOR 0 9
+    COLOR 1 1
+    ITEM $item_shirt
+    COLOR 1 0
+    ITEM $item_a_plain_dress
+    COLOR 3 8
+    ITEM $item_short_pants
+    COLOR 3 0
+    ITEM $item_a_body_sash
+    COLOR 1 2
+    ITEM $item_quarter_staff
+    GOLD 76 95
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    STR 80
+    DEX 50
+    INT 50
+    KARMA 0
+    FAME 0
+    TAMING 1100
+    PARRYING 400
+    RESIST 400
+    TACTICS 500
+    WRESTLING 200
+    ATT 13 15
+    DEF 10
+    NPCWANDER 2
+    DOORUSE 1
+}
+

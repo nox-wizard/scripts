@@ -1,0 +1,1206 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (itemlists.xss)                                  ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update (09/07/01)                                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+//*******************Start Of ITEMLISTS****************************************
+
+//All the scrolls
+SECTION ITEMLIST $itemlist_all_scrolls
+{
+    //$$ all scrolls
+    $item_a_clumsy_scroll
+    $item_a_create_food_scroll
+    $item_a_feeblemind_scroll
+    $item_a_heal_scroll
+    $item_a_magic_arrow_scroll
+    $item_a_night_sight_scroll
+    $item_a_reactive_armor_scroll
+    $item_a_weaken_scroll
+    $item_a_agility_scroll
+    $item_a_cunning_scroll
+    $item_a_cure_scroll
+    $item_a_harm_scroll
+    $item_a_magic_trap_scroll
+    $item_a_magic_untrap_scroll
+    $item_a_protection_scroll
+    $item_a_strength_scroll
+    $item_a_bless_scroll
+    $item_a_fireball_scroll
+    $item_a_magic_lock_scroll
+    $item_a_poison_scroll
+    $item_a_telekinesis_scroll
+    $item_a_teleport_scroll
+    $item_an_unlock_scroll
+    $item_a_wall_of_stone_scroll
+    $item_an_archcure_scroll
+    $item_an_arch_protection_scroll
+    $item_a_curse_scroll
+    $item_a_fire_field_scroll
+    $item_a_greater_heal_scroll
+    $item_a_lightning_scroll
+    $item_a_mana_drain_scroll
+    $item_a_recall_scroll
+    $item_a_blade_spirits_scroll
+    $item_a_dispel_field_scroll
+    $item_an_incognito_scroll
+    $item_a_magic_reflection_scroll
+    $item_a_mind_blast_scroll
+    $item_a_paralyze_scroll
+    $item_a_poison_field_scroll
+    $item_a_summon_creature_scroll
+    $item_a_dispel_scroll
+    $item_an_energy_bolt_scroll
+    $item_an_explosion_scroll
+    $item_an_invisibility_scroll
+    $item_a_mark_scroll
+    $item_a_mass_curse_scroll
+    $item_a_paralyze_field_scroll
+    $item_a_reveal_scroll
+    $item_a_chain_lightning_scroll
+    $item_an_energy_field_scroll
+    $item_a_flamestrike_scroll
+    $item_a_gate_travel_scroll
+    $item_a_mana_vampire_scroll
+    $item_a_mass_dispel_scroll
+    $item_a_meteor_swarm_scroll
+    $item_a_polymorph_scroll
+    $item_a_earthquake_scroll
+    $item_a_energy_vortex_scroll
+    $item_a_resurrection_scroll
+    $item_a_summon_air_elemental_scroll
+    $item_a_summon_daemon_scroll
+    $item_a_summon_earth_elemental_scroll
+    $item_a_summon_fire_elemental_scroll
+    $item_a_summon_water_elemental_scroll
+}
+
+//Varios Weapons and Armor
+SECTION ITEMLIST $itemlist_various_weapons_and_armor
+{
+    //$$ various weapons and armor
+    $item_hatchet
+    $item_executioners_axe
+    $item_axe
+    $item_double_axe
+    $item_dagger
+    $item_bone_chest
+    $item_bone_arms
+    $item_bone_gloves
+    $item_long_sword
+}
+
+//More Weapons and Armor
+SECTION ITEMLIST $itemlist_more_weapons_and_armor
+{
+    //$$ more weapons and armor
+    $item_bardiche
+    $item_halberd
+    $item_scimitar
+    $item_long_sword
+    $item_viking_sword
+    $item_broadsword
+    $item_plate_of_hardening
+    $item_plate_gorget_of_hardening
+    $item_plate_gloves_of_hardening
+    $item_plate_helm_of_hardening
+    $item_plate_legs_of_hardening
+    $item_plate_arms_of_hardening
+}
+
+// Potions
+SECTION ITEMLIST $itemlist_potions
+{
+    //$$ potions
+    $item_night_sight_potion
+    $item_cure_potion
+    $item_agility_potion
+    $item_strength_potion
+    $item_poison_potion
+    $item_energy_potion
+    $item_lesser_heal_potion
+    $item_greater_heal_potion
+    $item_lesser_explosion_potion
+}
+
+//Instruments
+SECTION ITEMLIST $itemlist_instruments
+{
+    //$$ instruments
+    $item_drum
+    $item_tambourine
+    $item_tambourine_1
+    $item_standing_harp
+    $item_lap_harp
+    $item_lute
+    $item_lute_1
+}
+
+// Blacksmith Tools
+SECTION ITEMLIST $itemlist_blacksmith_tools
+{
+    //$$ blacksmith tools
+    $item_tongs
+    $item_smithy_hammer
+}
+
+// Weapons
+SECTION ITEMLIST $itemlist_weapons
+{
+    //$$ weapons
+    $item_scimitar
+    $item_long_sword
+    $item_viking_sword
+    $item_broadsword
+    $item_cutlass
+    $item_katana
+    $item_hatchet
+    $item_executioners_axe
+    $item_axe
+    $item_double_axe
+    $item_battle_axe
+    $item_large_battle_axe
+    $item_pickaxe
+    $item_war_axe
+    $item_a_two-handed_axe
+    $item_dagger
+    $item_kryss
+    $item_club
+    $item_hammer_pick
+    $item_mace
+    $item_maul
+    $item_smithy_hammer
+    $item_war_hammer
+    $item_war_mace
+    $item_war_fork
+}
+
+// 1st circle scrolls
+SECTION ITEMLIST $itemlist_first_circle_scrolls
+{
+    //$$ first circle scrolls
+    $item_a_clumsy_scroll
+    $item_a_create_food_scroll
+    $item_a_feeblemind_scroll
+    $item_a_heal_scroll
+    $item_a_magic_arrow_scroll
+    $item_a_night_sight_scroll
+    $item_a_reactive_armor_scroll
+    $item_a_weaken_scroll
+}
+
+// Carpentry Tool
+SECTION ITEMLIST $itemlist_carpentry_tools
+{
+    //$$ carpentry tools
+    $item_draw_knife
+    $item_dovetail_saw
+    $item_saw
+    $item_hammer
+    $item_jointing_plane
+    $item_smoothing_plane
+    $item_scorp
+    $item_inshave
+    $item_moulding_planes
+    $item_nails
+    $item_froe
+}
+
+// TINKERPARTS
+SECTION ITEMLIST $itemlist_tinker_parts
+{
+    //$$ tinker parts
+    $item_iron_ingots
+    $item_clock_parts
+    $item_axles_with_gears
+    $item_gears
+    $item_hinges
+    $item_sextant_parts
+    $item_axles
+    $item_springs
+    $item_tinkers_tools
+}
+
+//Regs
+SECTION ITEMLIST $itemlist_reagents
+{
+    //$$ reagents
+    $item_black_pearl
+    $item_bloodmoss
+    $item_garlic
+    $item_ginseng
+    $item_mandrake_root
+    $item_nightshade
+    $item_sulfurous_ash
+    $item_spiders_silk
+}
+
+SECTION ITEMLIST $itemlist_hairs
+{ // Random Hair
+    //$$ hairs
+    $item_buns_hair
+    $item_long_hair
+    $item_mohawk
+    $item_pageboy
+    $item_pony_tail
+    $item_receding_hair
+    $item_short_hair
+    $item_2_pig_tails
+    $item_krisna_hair
+}
+
+SECTION ITEMLIST $itemlist_beard
+{ // Random Beard
+    //$$ beard
+    $item_goatee
+    $item_vandyke
+    $item_mustache
+    $item_long_beard
+    $item_med_short_beard_1
+    $item_short_beard
+    $item_med_short_beard
+}
+
+SECTION ITEMLIST $itemlist_female_hairs
+{ // Random Female Hair
+    //$$ female hairs
+    $item_buns_hair
+    $item_long_hair
+    $item_pageboy
+    $item_pony_tail
+    $item_short_hair
+    $item_2_pig_tails
+}
+
+// Male Plain Hats
+SECTION ITEMLIST $itemlist_male_plain_hats
+{
+    //$$ male plain hats
+    $item_floopy_hat
+    $item_a_tall_straw_hat
+    $item_straw_hat
+    $item_a_bandana
+    $item_a_skullcap
+}
+
+// Male Plain Shirts
+SECTION ITEMLIST $itemlist_male_plain_shirts
+{
+    //$$ male plain shirts
+    $item_shirt
+}
+
+// Male Plain Pants
+SECTION ITEMLIST $itemlist_male_plain_pants
+{
+    //$$ male plain pants
+    $item_short_pants
+    $item_long_pants
+}
+
+// Male Plain Sandal, Shoe & Boots
+SECTION ITEMLIST $itemlist_male_plain_footwear
+{
+    //$$ male plain footwear
+    $item_boots
+    $item_sandles
+    $item_shoes
+    $item_thigh_boots
+}
+
+// Male Plain Tunic & Aprons
+SECTION ITEMLIST $itemlist_male_plain_tunic_and_aprons
+{
+    //$$ male plain tunic and aprons
+    $item_a_tunic
+    $item_a_half_apron
+    $item_a_full_apron
+}
+
+// Male Plain Tunic & Robe
+SECTION ITEMLIST $itemlist_male_plain_tunic_and_robe
+{
+    //$$ male plain tunic and robe
+    $item_a_tunic
+    $item_a_robe
+}
+
+// Male Plain Cape
+SECTION ITEMLIST $itemlist_male_plain_cape
+{
+    //$$ male plain cape
+    $item_cloak
+}
+
+// Male Fancy Hats
+SECTION ITEMLIST $itemlist_male_fancy_hats
+{
+    //$$ male fancy hats
+    $item_wide_brim_hat
+    $item_cap
+    $item_feathered_hat
+    $item_tricorne_hat
+}
+
+// Male Fancy Shirts
+SECTION ITEMLIST $itemlist_male_fancy_shirts
+{
+    //$$ male fancy shirts
+    $item_fancy_shirt
+}
+
+// Male Fancy Pants
+SECTION ITEMLIST $itemlist_male_fancy_pants
+{
+    //$$ male fancy pants
+    $item_short_pants
+    $item_long_pants
+}
+
+// Male Fancy Shoes & Boots
+SECTION ITEMLIST $itemlist_male_fancy_footwear
+{
+    //$$ male fancy footwear
+    $item_boots
+    $item_shoes
+    $item_thigh_boots
+}
+
+// Male Fancy Surcoat, Tunic, Doublet & Sash
+SECTION ITEMLIST $itemlist_male_fancy_surcoat
+{
+    //$$ male fancy surcoat
+    $item_a_surcoat
+    $item_a_jesters_suit
+    $item_a_doublet
+    $item_a_body_sash
+}
+
+// Male Fancy Robe
+SECTION ITEMLIST $itemlist_male_fancy_robe
+{
+    //$$ male fancy robe
+    $item_a_robe
+}
+
+// Male Fancy Cape
+SECTION ITEMLIST $itemlist_male_fancy_cape
+{
+    //$$ male fancy cape
+    $item_cloak
+}
+
+// Female Plain Hats
+SECTION ITEMLIST $itemlist_female_plain_hats
+{
+    //$$ female plain hats
+    $item_floopy_hat
+    $item_a_tall_straw_hat
+    $item_straw_hat
+    $item_a_bandana
+    $item_a_skullcap
+}
+
+// Female Plain Shirts
+SECTION ITEMLIST $itemlist_female_plain_shirts
+{
+    //$$ female plain shirts
+    $item_shirt
+}
+
+// Female Plain Skirt, Pants & Kilt
+SECTION ITEMLIST $itemlist_female_plain_skirts
+{
+    //$$ female plain skirts
+    $item_a_skirt
+    $item_short_pants
+    $item_a_kilt
+    $item_long_pants
+}
+
+// Female Plain Sandal, Shoe & Boots
+SECTION ITEMLIST $itemlist_female_plain_footwear
+{
+    //$$ female plain footwear
+    $item_boots
+    $item_sandles
+    $item_shoes
+    $item_thigh_boots
+}
+
+// Female Plain Tunic, Dress & Aprons
+SECTION ITEMLIST $itemlist_female_plain_tunic_and_apron
+{
+    //$$ female plain tunic and apron
+    $item_a_tunic
+    $item_a_plain_dress
+    $item_a_half_apron
+    $item_a_full_apron
+}
+
+// Female Plain Tunic, Robe & Dress
+SECTION ITEMLIST $itemlist_female_plain_tunic
+{
+    //$$ female plain tunic
+    $item_a_tunic
+    $item_a_robe
+    $item_a_plain_dress
+}
+
+// Female Plain Cape
+SECTION ITEMLIST $itemlist_female_plain_cape
+{
+    //$$ female plain cape
+    $item_cloak
+}
+
+// headwear
+SECTION ITEMLIST $itemlist_headwears
+{
+    //$$ headwears
+    $item_polar_bear_mask
+    $item_a_deer_mask
+    $item_a_bear_mask
+}
+
+// weapon
+SECTION ITEMLIST $itemlist_weapons_1
+{
+    //$$ weapons
+    $item_bardiche
+    $item_bow
+    $item_gnarled_staff
+    $item_halberd
+    $item_large_battle_axe
+    $item_quarter_staff
+    $item_spear
+}
+
+// Female Fancy Hats
+SECTION ITEMLIST $itemlist_female_fancy_hats
+{
+    //$$ female fancy hats
+    $item_wide_brim_hat
+    $item_bonnet
+    $item_feathered_hat
+    $item_tricorne_hat
+}
+
+// Female Fancy Shirts
+SECTION ITEMLIST $itemlist_female_fancy_shirts
+{
+    //$$ female fancy shirts
+    $item_fancy_shirt
+}
+
+// Female Fancy Skirt, Pants & Kilt
+SECTION ITEMLIST $itemlist_female_fancy_skirt
+{
+    //$$ female fancy skirt
+    $item_a_skirt
+    $item_short_pants
+    $item_a_kilt
+    $item_long_pants
+}
+
+// Female Fancy Shoes & Boots
+SECTION ITEMLIST $itemlist_female_fancy_shoes
+{
+    //$$ female fancy shoes
+    $item_boots
+    $item_shoes
+    $item_thigh_boots
+}
+
+// Female Fancy Surcoat, Tunic, Doublet, Dress & Sash
+SECTION ITEMLIST $itemlist_female_fancy_tunic
+{
+    //$$ female fancy tunic
+    $item_a_surcoat
+    $item_a_jesters_suit
+    $item_a_doublet
+    $item_a_fancy_dress
+    $item_a_body_sash
+}
+
+// Female Fancy Robe & Dress
+SECTION ITEMLIST $itemlist_female_fancy_robe
+{
+    //$$ female fancy robe
+    $item_a_robe
+    $item_a_fancy_dress
+}
+
+// Female Fancy Cape
+SECTION ITEMLIST $itemlist_female_fancy_cape
+{
+    //$$ female fancy cape
+    $item_cloak
+}
+
+// Reagent list
+SECTION ITEMLIST $itemlist_reagents_1
+{
+    //$$ reagents
+    $item_black_pearl
+    $item_bloodmoss
+    $item_garlic
+    $item_ginseng
+    $item_mandrake_root
+    $item_nightshade
+    $item_sulfurous_ash
+    $item_spiders_silk
+}
+
+// Treasure hunt list
+SECTION ITEMLIST $itemlist_treasure_hunt
+{
+    //$$ treasure hunt
+    $item_a_long_sword_of_ruin
+    $item_a_long_sword_of_might
+    $item_a_long_sword_of_force
+    $item_a_long_sword_of_power
+    $item_a_long_sword_of_vanquishing
+    $item_a_viking_sword_of_ruin
+    $item_a_viking_sword_of_might
+    $item_a_viking_sword_of_force
+    $item_a_viking_sword_of_power
+    $item_a_viking_sword_of_vanquishing
+    $item_a_broad_sword_of_ruin
+    $item_a_broad_sword_of_might
+    $item_a_broad_sword_of_force
+    $item_a_broad_sword_of_power
+    $item_a_broad_sword_of_vanquishing
+    $item_a_scimitar_of_ruin
+    $item_a_scimitar_of_might
+    $item_a_scimitar_of_force
+    $item_a_scimitar_of_power
+    $item_a_scimitar_of_vanquishing
+    $item_a_cutlass_of_ruin
+    $item_a_cutlass_of_might
+    $item_a_cutlass_of_force
+    $item_a_cutlass_of_power
+    $item_a_cutlass_of_vanquishing
+    $item_a_katana_of_ruin
+    $item_a_katana_of_might
+    $item_a_katana_of_force
+    $item_a_katana_of_power
+    $item_a_katana_of_vanquishing
+    $item_a_hatchet_of_ruin
+    $item_a_hatchet_of_might
+    $item_a_hatchet_of_force
+    $item_a_hatchet_of_power
+    $item_a_hatchet_of_vanquishing
+    $item_a_executionners_axe_of_ruin
+    $item_a_executionners_axe_of_might
+    $item_a_executionners_axe_of_force
+    $item_a_executionners_axe_of_power
+    $item_a_executionners_axe_of_vanquishing
+    $item_a_axe_of_ruin
+    $item_a_axe_of_might
+    $item_a_axe_of_force
+    $item_a_axe_of_power
+    $item_a_axe_of_vanquishing
+    $item_a_double_axe_of_ruin
+    $item_a_double_axe_of_might
+    $item_a_double_axe_of_force
+    $item_a_double_axe_of_power
+    $item_a_double_axe_of_vanquishing
+    $item_a_large_battle_axe_of_ruin
+    $item_a_large_battle_axe_of_might
+    $item_a_large_battle_axe_of_force
+    $item_a_large_battle_axe_of_power
+    $item_a_large_battle_axe_of_vanquishing
+    $item_a_pick_axe_of_ruin
+    $item_a_pick_axe_of_might
+    $item_a_pick_axe_of_force
+    $item_a_pick_axe_of_power
+    $item_a_pick_axe_of_vanquishing
+    $item_a_war_axe_of_ruin
+    $item_a_war_axe_of_might
+    $item_a_war_axe_of_force
+    $item_a_war_axe_of_power
+    $item_a_war_axe_of_vanquishing
+    $item_a_butcher_knife_of_ruin
+    $item_a_butcher_knife_of_might
+    $item_a_butcher_knife_of_force
+    $item_a_butcher_knife_of_power
+    $item_a_butcher_knife_of_vanquishing
+    $item_a_skinning_knife_of_ruin
+    $item_a_skinning_knife_of_might
+    $item_a_skinning_knife_of_force
+    $item_a_skinning_knife_of_power
+    $item_a_skinning_knife_of_vanquishing
+    $item_a_cleaver_of_ruin
+    $item_a_cleaver_of_might
+    $item_a_cleaver_of_force
+    $item_a_cleaver_of_power
+    $item_a_cleaver_of_vanquishing
+    $item_a_dagger_of_ruin
+    $item_a_dagger_of_might
+    $item_a_dagger_of_force
+    $item_a_dagger_of_power
+    $item_a_dagger_of_vanquishing
+    $item_a_kryss_of_ruin
+    $item_a_kryss_of_might
+    $item_a_kryss_of_force
+    $item_a_kryss_of_power
+    $item_a_kryss_of_vanquishing
+    $item_a_club_of_ruin
+    $item_a_club_of_might
+    $item_a_club_of_force
+    $item_a_club_of_power
+    $item_a_club_of_vanquishing
+    $item_a_hammer_pick_of_ruin
+    $item_a_hammer_pick_of_might
+    $item_a_hammer_pick_of_force
+    $item_a_hammer_pick_of_power
+    $item_a_hammer_pick_of_vanquishing
+    $item_platemail_of_defence
+    $item_plate_gorget_of_defence
+    $item_plate_gloves_of_defence
+    $item_plate_helm_of_defence
+    $item_plate_legs_of_defence
+    $item_plate_arms_of_defence
+    $item_platemail_of_guarding
+    $item_plate_gorget_of_guarding
+    $item_plate_gloves_of_guarding
+    $item_plate_helm_of_guarding
+    $item_plate_legs_of_guarding
+    $item_plate_arms_of_guarding
+    $item_plate_of_hardening
+    $item_plate_gorget_of_hardening
+    $item_plate_gloves_of_hardening
+    $item_plate_helm_of_hardening
+    $item_plate_legs_of_hardening
+    $item_plate_arms_of_hardening
+    $item_platemail_of_fortification
+    $item_plate_gorget_of_fortification
+    $item_plate_gloves_of_fortification
+    $item_plate_helm_of_fortification
+    $item_plate_legs_of_fortification
+    $item_plate_arms_of_fortification
+    $item_magic_platemail_of_invulnerability
+    $item_magic_plate_gorget_of_invulnerability
+    $item_magic_plate_gloves_of_invulnerability
+    $item_magic_plate_helm_of_invulnerability
+    $item_magic_plate_legs_of_invulnerability
+    $item_magic_plate_arms_of_invulnerability
+    $item_chainmail_of_defence
+    $item_chain_legs_of_defence
+    $item_chain_coif_of_defence
+    $item_chainmail_of_guarding
+    $item_chain_legs_of_guarding
+    $item_chain_coif_of_guarding
+    $item_chainmail_of_hardening
+    $item_chain_legs_of_hardening
+    $item_chain_coif_of_hardening
+    $item_chainmail_of_fortification
+    $item_chain_legs_of_fortification
+    $item_chain_coif_of_fortification
+    $item_chainmail_of_invulnerability
+    $item_chain_legs_of_invulnerability
+    $item_chain_coif_of_invulnerability
+    $item_a_magic_mace_of_ruin
+    $item_a_magic_mace_of_might
+    $item_a_magic_mace_of_force
+    $item_a_magic_mace_of_power
+    $item_a_magic_mace_of_vanquishing
+    $item_a_magic_maul_of_ruin
+    $item_a_magic_maul_of_might
+    $item_a_magic_maul_of_force
+    $item_a_magic_maul_of_power
+    $item_a_magic_maul_of_vanquishing
+    $item_a_magic_smiths_hammer_of_ruin
+    $item_a_magic_smiths_hammer_of_might
+    $item_a_magic_smiths_hammer_of_force
+    $item_a_magic_smiths_hammer_of_power
+    $item_a_magic_smiths_hammer_of_vanquishing
+    $item_a_magic_war_hammer_of_ruin
+    $item_a_magic_war_hammer_of_might
+    $item_a_magic_war_hammer_of_force
+    $item_a_magic_war_hammer_of_power
+    $item_a_magic_war_hammer_of_vanquishing
+    $item_a_magic_war_mace_of_ruin
+    $item_a_magic_war_mace_of_might
+    $item_a_magic_war_mace_of_force
+    $item_a_magic_war_mace_of_power
+    $item_a_magic_war_mace_of_vanquishing
+    $item_a_magic_pitch_fork_of_ruin
+    $item_a_magic_pitch_fork_of_might
+    $item_a_magic_pitch_fork_of_force
+    $item_a_magic_pitch_fork_of_power
+    $item_a_magic_pitch_fork_of_vanquishing
+    $item_a_magic_spear_of_ruin
+    $item_a_magic_spear_of_might
+    $item_a_magic_spear_of_force
+    $item_a_magic_spear_of_power
+    $item_a_magic_spear_of_vanquishing
+    $item_a_magic_war_fork_of_ruin
+    $item_a_magic_war_fork_of_might
+    $item_a_magic_war_fork_of_force
+    $item_a_magic_war_fork_of_power
+    $item_a_magic_war_fork_of_vanquishing
+    $item_a_magic_bardiche_of_ruin
+    $item_a_magic_bardiche_of_might
+    $item_a_magic_bardiche_of_force
+    $item_a_magic_bardiche_of_power
+    $item_a_magic_bardiche_of_vanquishing
+    $item_a_magic_halberd_of_ruin
+    $item_a_magic_halberd_of_might
+    $item_a_magic_halberd_of_force
+    $item_a_magic_halberd_of_power
+    $item_a_magic_halberd_of_vanquishing
+    $item_a_magic_bow_of_ruin
+    $item_a_magic_bow_of_might
+    $item_a_magic_bow_of_force
+    $item_a_magic_bow_of_power
+    $item_a_magic_bow_of_vanquishing
+    $item_a_magic_crossbow_of_ruin
+    $item_a_magic_crossbow_of_might
+    $item_a_magic_crossbow_of_force
+    $item_a_magic_crossbow_of_power
+    $item_a_magic_crossbow_of_vanquishing
+    $item_a_magic_heavy_crossbow_of_ruin
+    $item_a_magic_heavy_crossbow_of_might
+    $item_a_magic_heavy_crossbow_of_force
+    $item_a_magic_heavy_crossbow_of_power
+    $item_a_magic_heavy_crossbow_of_vanquishing
+}
+
+// SPAWN CHEST LOOT
+SECTION ITEMLIST $itemlist_spawn_chest_loot
+{
+    //$$ spawn chest loot
+    $item_gold_coin_1
+    $item_bread_loaves
+    $item_lesser_heal_potion
+    $item_scimitar
+    $item_long_sword
+    $item_viking_sword
+    $item_broadsword
+    $item_cutlass
+    $item_katana
+    $item_pitchfork
+    $item_spear
+    $item_short_spear
+    $item_war_fork
+    $item_bow
+    $item_crossbow
+    $item_heavy_crossbow
+    $item_arrow
+    $item_heater
+    $item_wooden_kite_shield
+    $item_wooden_shield
+    $item_metal_shield
+}
+
+// Christmas list
+SECTION ITEMLIST $itemlist_christmas
+{
+    //$$ christmas
+    $item_gold_coin_1
+    $item_baked_pie
+    $item_bunches_of_dates
+    $item_fruit_basket
+    $item_hams
+    $item_plate_of_cookies
+    $item_bottle_of_wine
+    $item_robe_2
+    $item_green_sandals
+    $item_robe
+    $item_red_sandals
+    $item_a_magical_wizard`s_hat
+    $item_beads
+    $item_bracelet
+    $item_earrings
+    $item_necklace_1
+    $item_necklace_2
+    $item_ring
+}
+
+// low level dungeon chest spawner
+SECTION ITEMLIST $itemlist_low_level_dungeon_chest_spawner
+{
+    //$$ low level dungeon chest spawner
+    $item_low_level_dungeon_chest_list
+    $item_low_level_dungeon_chest_list
+    $item_gold_coin_2
+    $item_low_level_dungeon_chest_list
+    $item_gold_coin_3
+    $item_low_level_dungeon_chest_list
+    $item_low_level_dungeon_chest_list
+}
+
+// mid level dungeon chest spawner
+SECTION ITEMLIST $itemlist_mid_level_dungeon_chest_spawner
+{
+    //$$ mid level dungeon chest spawner
+    $item_mid_level_dungeon_chest_list
+    $item_mid_level_dungeon_chest_list
+    $item_gold_coin_4
+    $item_mid_level_dungeon_chest_list
+    $item_gold_coin_5
+    $item_mid_level_dungeon_chest_list
+    $item_mid_level_dungeon_chest_list
+}
+
+// high level dungeon chest spawner
+SECTION ITEMLIST $itemlist_high_level_dungeon_chest_spawner
+{
+    //$$ high level dungeon chest spawner
+    $item_high_level_dungeon_chest_list
+    $item_high_level_dungeon_chest_list
+    $item_gold_coin_6
+    $item_gold_coin_7
+    $item_high_level_dungeon_chest_list
+    $item_high_level_dungeon_chest_list
+}
+
+// beginning of items in itemlist container spawns leave  itemlists 70-125 open (will add soon)
+SECTION ITEMLIST $itemlist_low_level_dungeon_chest_items
+{ low level dungeon chest items (72,99002)
+    //$$ low level dungeon chest items
+    $item_arrow_2
+    $item_arrow_3
+    $item_axe
+    $item_bardiche
+    $item_battle_axe
+    $item_bow
+    $item_meat_cleaver
+    $item_club
+    $item_crossbow
+    $item_cutlass
+    $item_dagger
+    $item_double_axe
+    $item_halberd
+    $item_hammer_pick
+    $item_heavy_crossbow
+    $item_katana
+    $item_kryss
+    $item_long_sword
+    $item_mace
+    $item_pitchfork
+    $item_quarter_staff
+    $item_scimitar
+    $item_spear
+    $item_viking_sword
+    $item_war_axe
+    $item_war_hammer
+    $item_war_mace
+    $item_bronze_shield
+    $item_buckler
+    $item_metal_shield
+    $item_wooden_shield
+    $item_heater
+    $item_metal_kite_shield
+    $item_bascinet
+    $item_a_helmet
+    $item_leather_cap
+    $item_leather_tunic
+    $item_a_orc_helm
+    $item_bone_helm
+    $item_bone_chest
+    $item_plate_gloves
+    $item_a_bless_scroll
+    $item_a_clumsy_scroll
+    $item_a_create_food_scroll
+    $item_a_cure_scroll
+    $item_a_curse_scroll
+    $item_a_cunning_scroll
+    $item_potions_list
+}
+
+SECTION ITEMLIST $itemlist_mid_level_dungeon_chest_items
+{ mid level dungeon chest items (73,99003)
+    //$$ mid level dungeon chest items
+    $item_a_axe_of_might
+    $item_a_axe_of_ruin
+    $item_a_broad_sword_of_might
+    $item_a_broad_sword_of_ruin
+    $item_a_cleaver_of_might
+    $item_a_cleaver_of_ruin
+    $item_a_club_of_ruin
+    $item_a_club_of_might
+    $item_a_cutlass_of_might
+    $item_a_cutlass_of_ruin
+    $item_a_dagger_of_might
+    $item_a_dagger_of_ruin
+    $item_a_double_axe_of_might
+    $item_a_double_axe_of_ruin
+    $item_a_executionners_axe_of_might
+    $item_a_executionners_axe_of_ruin
+    $item_a_hammer_pick_of_might
+    $item_a_hammer_pick_of_ruin
+    $item_a_katana_of_might
+    $item_a_katana_of_ruin
+    $item_gold_coin_4
+    $item_gold_coin_5
+    $item_a_kryss_of_might
+    $item_a_kryss_of_ruin
+    $item_a_large_battle_axe_of_might
+    $item_a_large_battle_axe_of_ruin
+    $item_a_long_sword_of_might
+    $item_a_long_sword_of_ruin
+    $item_a_magic_bardiche_of_ruin
+    $item_a_magic_bardiche_of_might
+    $item_a_magic_bow_of_might
+    $item_a_magic_bow_of_ruin
+    $item_a_magic_crossbow_of_might
+    $item_a_magic_crossbow_of_ruin
+    $item_a_magic_halberd_of_might
+    $item_a_magic_halberd_of_ruin
+    $item_a_magic_heavy_crossbow_of_might
+    $item_a_magic_heavy_crossbow_of_ruin
+    $item_a_magic_mace_of_might
+    $item_a_magic_mace_of_ruin
+    $item_a_magic_pitch_fork_of_might
+    $item_a_magic_pitch_fork_of_ruin
+    $item_a_magic_spear_of_might
+    $item_a_magic_spear_of_ruin
+    $item_a_magic_war_fork_of_might
+    $item_a_magic_war_fork_of_ruin
+    $item_a_magic_war_hammer_of_might
+    $item_a_magic_war_hammer_of_ruin
+    $item_a_magic_war_mace_of_might
+    $item_a_magic_war_mace_of_ruin
+    $item_a_scimitar_of_might
+    $item_a_scimitar_of_ruin
+    $item_a_viking_sword_of_might
+    $item_a_viking_sword_of_ruin
+    $item_a_war_axe_of_might
+    $item_a_war_axe_of_ruin
+    $item_chain_coif_of_defence
+    $item_chain_coif_of_guarding
+    $item_chainmail_of_defence
+    $item_chainmail_of_guarding
+    $item_plate_arms_of_defence
+    $item_plate_arms_of_guarding
+    $item_plate_gloves_of_defence
+    $item_plate_gloves_of_guarding
+    $item_plate_gorget_of_defence
+    $item_plate_gorget_of_guarding
+    $item_plate_helm_of_defence
+    $item_plate_helm_of_guarding
+    $item_plate_legs_of_defence
+    $item_plate_legs_of_guarding
+    $item_platemail_of_defence
+    $item_platemail_of_guarding
+}
+
+SECTION ITEMLIST $itemlist_high_level_dungeon_chest_items
+{ high level dungeon items (74,99004)
+    //$$ high level dungeon chest items
+    $item_a_broad_sword_of_force
+    $item_a_broad_sword_of_power
+    $item_a_broad_sword_of_vanquishing
+    $item_a_cutlass_of_force
+    $item_a_cutlass_of_power
+    $item_a_cutlass_of_vanquishing
+    $item_a_dagger_of_force
+    $item_a_dagger_of_power
+    $item_a_dagger_of_vanquishing
+    $item_a_double_axe_of_force
+    $item_a_double_axe_of_power
+    $item_a_double_axe_of_vanquishing
+    $item_a_hammer_pick_of_force
+    $item_a_hammer_pick_of_power
+    $item_a_hammer_pick_of_vanquishing
+    $item_a_katana_of_force
+    $item_a_katana_of_power
+    $item_a_katana_of_vanquishing
+    $item_a_kryss_of_force
+    $item_a_kryss_of_power
+    $item_a_kryss_of_vanquishing
+    $item_a_large_battle_axe_of_force
+    $item_a_large_battle_axe_of_power
+    $item_a_large_battle_axe_of_vanquishing
+    $item_a_long_sword_of_force
+    $item_a_long_sword_of_power
+    $item_a_long_sword_of_vanquishing
+    $item_a_magic_bardiche_of_force
+    $item_a_magic_bardiche_of_power
+    $item_a_magic_bardiche_of_vanquishing
+    $item_a_magic_bow_of_force
+    $item_a_magic_bow_of_power
+    $item_a_magic_bow_of_vanquishing
+    $item_a_magic_crossbow_of_force
+    $item_a_magic_crossbow_of_power
+    $item_a_magic_crossbow_of_vanquishing
+    $item_a_magic_halberd_of_force
+    $item_a_magic_halberd_of_power
+    $item_a_magic_halberd_of_vanquishing
+    $item_a_magic_heavy_crossbow_of_force
+    $item_a_magic_heavy_crossbow_of_power
+    $item_a_magic_heavy_crossbow_of_vanquishing
+    $item_a_magic_mace_of_force
+    $item_a_magic_mace_of_power
+    $item_a_magic_mace_of_vanquishing
+    $item_a_magic_maul_of_force
+    $item_a_magic_maul_of_power
+    $item_a_magic_maul_of_vanquishing
+    $item_a_magic_spear_of_force
+    $item_a_magic_spear_of_power
+    $item_a_magic_spear_of_vanquishing
+    $item_a_magic_war_fork_of_force
+    $item_a_magic_war_fork_of_power
+    $item_a_magic_war_fork_of_vanquishing
+    $item_a_magic_war_hammer_of_force
+    $item_a_magic_war_hammer_of_power
+    $item_a_magic_war_hammer_of_vanquishing
+    $item_a_magic_war_mace_of_force
+    $item_a_magic_war_mace_of_power
+    $item_a_magic_war_mace_of_vanquishing
+    $item_a_scimitar_of_force
+    $item_a_scimitar_of_power
+    $item_a_scimitar_of_vanquishing
+    $item_a_viking_sword_of_force
+    $item_a_viking_sword_of_power
+    $item_a_viking_sword_of_vanquishing
+    $item_a_war_axe_of_force
+    $item_a_war_axe_of_power
+    $item_a_war_axe_of_vanquishing
+    $item_chain_coif_of_fortification
+    $item_chain_coif_of_hardening
+    $item_chain_coif_of_invulnerability
+    $item_chainmail_of_fortification
+    $item_chainmail_of_hardening
+    $item_chainmail_of_invulnerability
+    $item_magic_plate_arms_of_invulnerability
+    $item_magic_plate_gloves_of_invulnerability
+    $item_magic_plate_gorget_of_invulnerability
+    $item_magic_plate_helm_of_invulnerability
+    $item_magic_plate_legs_of_invulnerability
+    $item_magic_platemail_of_invulnerability
+    $item_plate_arms_of_fortification
+    $item_plate_arms_of_hardening
+    $item_plate_gloves_of_fortification
+    $item_plate_gloves_of_hardening
+    $item_plate_gorget_of_fortification
+    $item_plate_gorget_of_hardening
+    $item_plate_helm_of_fortification
+    $item_plate_helm_of_hardening
+    $item_plate_legs_of_fortification
+    $item_plate_legs_of_hardening
+    $item_platemail_of_fortification
+    $item_plate_of_hardening
+    $item_a_buckler_of_hardening
+    $item_a_buckler_of_fortification
+    $item_a_buckler_of_invulnerablity
+    $item_a_heater_sheild_of_fortification
+    $item_a_heater_sheild_of_hardening
+    $item_a_heater_sheild_of_invulnerablity
+    $item_a_kite_shield_of_fortification
+    $item_a_kite_shield_of_hardening
+    $item_a_kite_shield_of_invulnerablity
+}
+
+SECTION ITEMLIST $itemlist_low_chest_spawner
+{
+    //$$ low chest spawner
+    $item_a_wooden_chest_1
+    $item_a_wooden_chest_2
+}
+
+SECTION ITEMLIST $itemlist_mid_chest_spawner
+{
+    //$$ mid chest spawner
+    $item_a_metal_chest
+    $item_a_metal_chest_1
+}
+
+SECTION ITEMLIST $itemlist_high_chest_spawner
+{
+    //$$ high chest spawner
+    $item_a_metal_chest_2
+    $item_a_metal_chest_3
+}
+
+// start of Fraz's npc monsters random equipped weapon list
+// powerful magical swords (balron) item 25500
+SECTION ITEMLIST $itemlist_npc_equiplist_balron_weapon
+{
+    //$$ npc equiplist balron weapon
+    $item_a_long_sword_of_force
+    $item_a_long_sword_of_force
+    $item_a_long_sword_of_force
+    $item_a_long_sword_of_power
+    $item_a_long_sword_of_power
+    $item_a_long_sword_of_vanquishing
+    $item_a_viking_sword_of_force
+    $item_a_viking_sword_of_force
+    $item_a_viking_sword_of_force
+    $item_a_viking_sword_of_power
+    $item_a_viking_sword_of_power
+    $item_a_viking_sword_of_vanquishing
+    $item_a_broad_sword_of_force
+    $item_a_broad_sword_of_force
+    $item_a_broad_sword_of_force
+    $item_a_broad_sword_of_power
+    $item_a_broad_sword_of_power
+    $item_a_broad_sword_of_vanquishing
+}
+// weak magical swords (daemon) item 25501
+SECTION ITEMLIST $itemlist_npc_equiplist_deamon_sword
+{
+    //$$ npc equiplist deamon sword
+    $item_a_long_sword_of_ruin
+    $item_a_long_sword_of_might
+    $item_a_viking_sword_of_ruin
+    $item_a_viking_sword_of_might
+    $item_a_broad_sword_of_ruin
+    $item_a_broad_sword_of_might
+}
+// normal and weak double axe (for frost troll or other double axe)
+
+item 25502
+SECTION ITEMLIST $itemlist_npc_equiplist_double_axe
+{
+    //$$ npc equiplist double axe
+    $item_double_axe
+    $item_a_double_axe_of_ruin
+    $item_double_axe
+    $item_a_double_axe_of_might
+}
+// weak to medium magic scimitar's (for bone knights) item 25503
+SECTION ITEMLIST $itemlist_npc_equiplist_scimitar
+{
+    //$$ npc equiplist scimitar
+    $item_a_scimitar_of_ruin
+    $item_a_scimitar_of_might
+    $item_a_scimitar_of_force
+}
+// medium to strong war hammer (for cyclop warrior) item 25504
+SECTION ITEMLIST $itemlist_npc_equiplist_war_hammer
+{
+    //$$ npc equiplist war hammer
+    $item_a_magic_war_hammer_of_might
+    $item_a_magic_war_hammer_of_might
+    $item_a_magic_war_hammer_of_force
+    $item_a_magic_war_hammer_of_force
+    $item_a_magic_war_hammer_of_power
+}
+// medium to strong bardiches (for ophidian knights and avengers) item
+
+SECTION ITEMLIST $itemlist_npc_equiplist_bardiches
+{
+    //$$ npc equiplist bardiches
+    $item_a_magic_bardiche_of_might
+    $item_a_magic_bardiche_of_force
+    $item_a_magic_bardiche_of_power
+}
+// medium to strong magic long swords (black knight) 25506
+SECTION ITEMLIST $itemlist_npc_equiplist_longswords
+{
+    //$$ npc equiplist longswords
+    $item_a_long_sword_of_might
+    $item_a_long_sword_of_force
+    $item_a_long_sword_of_power
+}
+
+
+

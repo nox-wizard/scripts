@@ -1,0 +1,1821 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_animals.xss)                                ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+//*****************************************************************
+//*********************** Common animals       ********************
+//***********************                      ********************
+//*****************************************************************
+
+//a horse (light brown)
+
+SECTION NPC $npc_a_horse
+{
+    NAME a horse
+    ID 00C8
+    SKIN 0000
+    DIRECTION E
+    STR 125
+    DEX 15 20
+    INT 6
+    KARMA 100
+    FAME 100
+    PARRYING 325
+    MAGICRESISTANCE 250
+    TACTICS 325
+    WRESTLING 325
+    DAMAGE 3 15
+    DEF 10
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a horse (light gray)
+
+SECTION NPC $npc_a_horse_1
+{
+    NAME a horse
+    ID 00E2
+    SKIN 0000
+    DIRECTION E
+    STR 44
+    DEX 15 20
+    INT 6
+    KARMA 100
+    FAME 100
+    PARRYING 325
+    MAGICRESISTANCE 250
+    TACTICS 325
+    WRESTLING 325
+    DAMAGE 3 15
+    DEF 10
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a horse (gray-brown)
+SECTION NPC $npc_a_horse_2
+{
+    NAME a horse
+    ID 00E4
+    SKIN 0000
+    DIRECTION E
+    STR 125
+    DEX 15 20
+    INT 6
+    KARMA 100
+    FAME 100
+    PARRYING 325
+    MAGICRESISTANCE 250
+    TACTICS 325
+    WRESTLING 325
+    DAMAGE 3 15
+    DEF 10
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a horse (dark brown)
+
+SECTION NPC $npc_a_horse_3
+{
+    NAME a horse
+    ID 00CC
+    SKIN 0000
+    DIRECTION E
+    STR 125
+    DEX 15 20
+    INT 6
+    KARMA 100
+    FAME 100
+    PARRYING 325
+    MAGICRESISTANCE 250
+    TACTICS 325
+    WRESTLING 325
+    DAMAGE 3 15
+    DEF 10
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a pack horse
+
+SECTION NPC $npc_a_pack_horse
+{
+    NAME a pack horse
+    ID 0123
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 125
+    DEX 15 20
+    INT 6
+    KARMA 0
+    FAME 0
+    PARRYING 325
+    MAGICRESISTANCE 250
+    TACTICS 325
+    WRESTLING 325
+    DAMAGE 3 15
+    DEF 10
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a cow (black and white)
+
+SECTION NPC $npc_a_cow
+{
+    NAME a cow
+    ID 00d8
+    DIRECTION E
+    BACKPACK
+    STR 90
+    DEX 15 20
+    INT 5
+    KARMA 0
+    FAME 0
+    PARRYING 600
+    MAGICRESISTANCE 600
+    TACTICS 600
+    WRESTLING 600
+    DAMAGE 2 10
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 111
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a cow (brown and white)
+
+SECTION NPC $npc_a_cow_1
+{
+    NAME a cow
+    ID 00e7
+    DIRECTION E
+    BACKPACK
+    STR 90
+    DEX 15 20
+    INT 25
+    KARMA 0
+    FAME 0
+    PARRYING 250
+    MAGICRESISTANCE 250
+    TACTICS 250
+    WRESTLING 250
+    DAMAGE 2 10
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 111
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a bull (solid)
+
+SECTION NPC $npc_a_bull
+{
+    NAME a bull
+    ID 00e8
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 200
+    DEX 15 20
+    INT 50
+    KARMA 0
+    FAME 0
+    PARRYING 500
+    MAGICRESISTANCE 250
+    TACTICS 500
+    WRESTLING 500
+    DAMAGE 3 15
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 711
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a bull (solid with spots)
+
+SECTION NPC $npc_a_bull_1
+{
+    NAME a bull
+    ID 00e9
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 200
+    DEX 15 20
+    INT 50
+    KARMA 0
+    FAME 0
+    PARRYING 500
+    MAGICRESISTANCE 250
+    TACTICS 500
+    WRESTLING 500
+    DAMAGE 3 15
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 711
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a sheep
+
+SECTION NPC $npc_a_sheep
+{
+    NAME a sheep
+    ID 00cf
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 50
+    DEX 15 20
+    INT 25
+    KARMA 0
+    FAME 0
+    PARRYING 250
+    MAGICRESISTANCE 250
+    TACTICS 250
+    WRESTLING 250
+    DAMAGE 1 5
+    DEF 5
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 111
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a goat
+
+SECTION NPC $npc_a_goat
+{
+    NAME a goat
+    ID 00d1
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 75
+    DEX 15 20
+    INT 35
+    FAME 0
+    KARMA 0
+    PARRYING 375
+    MAGICRESISTANCE 375
+    TACTICS 375
+    WRESTLING 375
+    DAMAGE 2 10
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 111
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a rideable llama
+
+SECTION NPC $npc_a_rideable_llama
+{
+    NAME a rideable llama
+    ID 00dc
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 100
+    DEX 15 20
+    INT 35
+    KARMA 0
+    FAME 0
+    PARRYING 350
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    DAMAGE 2 10
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a llama
+
+SECTION NPC $npc_a_llama
+{
+    NAME a llama
+    ID 00dc
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 100
+    DEX 15 20
+    INT 35
+    KARMA 0
+    FAME 0
+    PARRYING 350
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    DAMAGE 2 10
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a pack llama
+
+SECTION NPC $npc_a_pack_llama
+{
+    NAME a pack llama
+    ID 0124
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 100
+    DEX 15 20
+    INT 35
+    KARMA 0
+    FAME 0
+    PARRYING 350
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    DAMAGE 2 10
+    DEF 10
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a black bear
+
+SECTION NPC $npc_a_black_bear
+{
+    NAME a black bear
+    ID 00d3
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 115
+    DEX 15 20
+    INT 22
+    FAME 0
+    KARMA 0
+    PARRYING 380
+    MAGICRESISTANCE 250
+    TACTICS 400
+    WRESTLING 400
+    DAMAGE 5 13
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 351
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a brown bear
+
+SECTION NPC $npc_a_brown_bear
+{
+    NAME a brown bear
+    ID 00d3
+    SKIN 0090
+    DIRECTION E
+    BACKPACK
+    STR 150
+    DEX 15 20
+    INT 10
+    FAME 0
+    KARMA 0
+    PARRYING 250
+    MAGICRESISTANCE 200
+    TACTICS 400
+    WRESTLING 400
+    DAMAGE 2 12
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 411
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a grizzly bear
+
+SECTION NPC $npc_a_grizzly_bear
+{
+    NAME a grizzly bear
+    ID 00D4
+    SKIN 0000
+    DIRECTION S
+    BACKPACK
+    STR 230
+    DEX 60 80
+    INT 15
+    KARMA -200
+    FAME 200
+    PARRYING 700
+    TACTICS 700
+    MAGICRESISTANCE 450
+    WRESTLING 500
+    DAMAGE 6 15
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 591
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a polar bear
+
+SECTION NPC $npc_a_polar_bear
+{
+    NAME a polar bear
+    ID 00d5
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 280
+    DEX 15 20
+    INT 25
+    KARMA 0
+    FAME 0
+    PARRYING 700
+    MAGICRESISTANCE 450
+    TACTICS 700
+    WRESTLING 600
+    DAMAGE 5 14
+    DEF 9
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 351
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a vera bear
+
+SECTION NPC $npc_a_vera_bear
+{
+    NAME a vera bear
+    ID d4
+    SKIN 396
+    BACKPACK
+    STR 131 265
+    DEX 15 20
+    INT 19 35
+    KARMA 0
+    FAME 0
+    PARRYING 700 850
+    MAGICRESISTANCE 350 500
+    TACTICS 700 1000
+    WRESTLING 600 900
+    DAMAGE 5 15
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 801
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a cave bear
+
+SECTION NPC $npc_a_cave_bear
+{
+    NAME a cave bear
+    ID 00d5
+    SKIN 0282
+    DIRECTION E
+    BACKPACK
+    STR 115 260
+    DEX 15 20
+    INT 17 33
+    KARMA 0
+    FAME 0
+    PARRYING 700 850
+    MAGICRESISTANCE 350 500
+    TACTICS 700 1000
+    WRESTLING 600 900
+    DAMAGE 4 14
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 701
+    RACE $race_animal
+    DOORUSE 0
+}
+
+
+//a walrus
+
+SECTION NPC $npc_a_walrus
+{
+    NAME a walrus
+    ID 00dd
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 21
+    DEX 15 20
+    INT 16
+    KARMA 0
+    FAME 0
+    PARRYING 450
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    DAMAGE 3 6
+    DEF 9
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 351
+    WATERWALK
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a gorilla
+
+SECTION NPC $npc_a_gorilla
+{
+    NAME a gorilla
+    ID 001d
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 53
+    DEX 15 20
+    INT 36
+    KARMA 0
+    FAME 0
+    PARRYING 430
+    MAGICRESISTANCE 430
+    TACTICS 430
+    WRESTLING 430
+    DAMAGE 2 12
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a rabbit
+
+SECTION NPC $npc_a_rabbit
+{
+    NAME a rabbit
+    ID 00cd
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 5
+    DEX 15 20
+    INT 5
+    KARMA 0
+    FAME 0
+    PARRYING 50
+    MAGICRESISTANCE 50
+    TACTICS 50
+    WRESTLING 50
+    DAMAGE 1
+    DEF 3
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a dolphin
+
+SECTION NPC $npc_a_dolphin
+{
+    NAME a dolphin
+    ID 0097
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 21
+    DEX 15 20
+    INT 16
+    KARMA 0
+    FAME 0
+    PARRYING 650
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    DAMAGE 3 6
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 1100
+    WATERWALK
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a sparrow
+
+SECTION NPC $npc_a_sparrow
+{
+    NAME a sparrow
+    ID 0006
+    SKIN 0223
+    DIRECTION E
+    BACKPACK
+    STR 2
+    DEX 15 20
+    INT 1
+    FAME 0
+    KARMA 0
+    PARRYING 50
+    MAGICRESISTANCE 50
+    WRESTLING 50
+    DAMAGE 1
+    DEF 1
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+// a bird
+
+SECTION NPC $npc_forest_bird
+{
+    NAMELIST $names_forest_birds
+    //$$ forest bird
+    ID 0006
+    SKINLIST 11
+    DIRECTION E
+    BACKPACK
+    STR 1
+    DEX 15 20
+    INT 1
+    FAME 0
+    KARMA 0
+    PARRYING 50
+    MAGICRESISTANCE 50
+    TACTICS 50
+    WRESTLING 50
+    DAMAGE 1
+    DEF 1
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a chicken
+
+SECTION NPC $npc_a_chicken
+{
+    NAME a chicken
+    ID 00d0
+    DIRECTION E
+    BACKPACK
+    STR 1
+    DEX 15 20
+    INT 5
+    PARRYING 20
+    MAGICRESISTANCE 40
+    TACTICS 50
+    WRESTLING 50
+    DAMAGE 1
+    DEF 1
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a falcon
+
+SECTION NPC $npc_a_falcon
+{
+    NAME a falcon
+    ID 0005
+    SKIN 03aa
+    DIRECTION E
+    BACKPACK
+    STR 21
+    DEX 15 20
+    INT 8 20
+    FAME 0
+    KARMA 0
+    PARRYING 250
+    MAGICRESISTANCE 150
+    TACTICS 180
+    WRESTLING 200
+    DAMAGE 1 6
+    DEF 7
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 174
+    WATERWALK
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a hawk
+
+SECTION NPC $npc_a_hawk
+{
+    NAME a hawk
+    ID 0005
+    SKIN 0224
+    DIRECTION E
+    BACKPACK
+    STR 31
+    DEX 15 20
+    INT 8
+    FAME 0
+    KARMA 0
+    PARRYING 250
+    MAGICRESISTANCE 150
+    TACTICS 180
+    WRESTLING 200
+    DAMAGE 2 8
+    DEF 9
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 171
+    WATERWALK
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//an eagle
+
+SECTION NPC $npc_an_eagle
+{
+    NAME an eagle
+    ID 0005
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 47
+    DEX 15 20
+    INT 23
+    FAME 0
+    KARMA 0
+    PARRYING 400
+    MAGICRESISTANCE 300
+    TACTICS 370
+    WRESTLING 300
+    DAMAGE 4 10
+    DEF 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 171
+    WATERWALK
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a blue bird
+
+SECTION NPC $npc_a_blue_bird
+{
+    NAME a blue bird
+    ID 0006
+    SKIN 0062
+    DIRECTION E
+    BACKPACK
+    STR 4
+    DEX 15 20
+    INT 1
+    FAME 0
+    KARMA 0
+    PARRYING 40
+    MAGICRESISTANCE 40
+    TACTICS 40
+    WRESTLING 40
+    DAMAGE 1
+    DEF 1
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 100
+    WATERWALK
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a cardinal
+
+SECTION NPC $npc_a_cardinal
+{
+    NAME a cardinal
+    ID 0006
+    SKIN 00ee
+    DIRECTION E
+    BACKPACK
+    STR 4
+    DEX 15 20
+    INT 1
+    FAME 0
+    KARMA 0
+    PARRYING 40
+    MAGICRESISTANCE 40
+    WRESTLING 40
+    DAMAGE 1
+    DEF 1
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    WATERWALK
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a snake
+
+SECTION NPC $npc_a_snake
+{
+    NAME a snake
+    ID 0034
+    SKINLIST 10
+    DIRECTION N
+    BACKPACK
+    STR 22
+    DEX 15 20
+    INT 6
+    KARMA -500
+    FAME 500
+    PARRYING 150
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    DAMAGE 1 4
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    POISON 1
+    TOTAME 591
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//an ice serpent
+
+SECTION NPC $npc_an_ice_serpent
+{
+    NAME an ice serpent
+    ID 0034
+    SKIN 0480
+    DIRECTION N
+    BACKPACK
+    STR 22
+    DEX 15 20
+    INT 6
+    KARMA -5500
+    FAME 5500
+    PARRYING 450 600
+    MAGICRESISTANCE 600 800
+    TACTICS 750 800
+    WRESTLING 600 800
+    DAMAGE 5 19
+    DEF 16
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a cat
+
+SECTION NPC $npc_a_cat
+{
+    NAME a cat
+    ID 00c9
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 10
+    DEX 15 20
+    INT 5
+    PARRYING 30
+    MAGICRESISTANCE 50
+    TACTICS 40
+    WRESTLING 50
+    DAMAGE 1 3
+    DEF 4
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a cougar
+
+SECTION NPC $npc_a_cougar
+{
+    NAME a cougar
+    ID 00d6
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 60
+    DEX 15 20
+    INT 30
+    FAME 0
+    KARMA 0
+    PARRYING 550
+    MAGICRESISTANCE 150
+    TACTICS 450
+    WRESTLING 450
+    DAMAGE 2 12
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 411
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a panther
+
+SECTION NPC $npc_a_panther
+{
+    NAME a panther
+    ID 00d6
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 60
+    DEX 15 20
+    INT 30
+    FAME 0
+    KARMA 0
+    PARRYING 550
+    MAGICRESISTANCE 150
+    TACTICS 500
+    WRESTLING 500
+    DAMAGE 2 14
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 531
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a snow leopard
+
+SECTION NPC $npc_a_snow_leopard
+{
+    NAME a snow leopard
+    ID 00d6
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 60
+    DEX 15 20
+    INT 30
+    FAME 0
+    KARMA 0
+    PARRYING 550
+    MAGICRESISTANCE 250
+    TACTICS 450
+    WRESTLING 400
+    DAMAGE 2 10
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 531
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a forest ostard
+
+SECTION NPC $npc_a_forest_ostard
+{
+    NAME a forest ostard
+    ID 00db
+    SKINLIST 21
+    DIRECTION E
+    STR 94 170
+    DEX 60 95
+    INT 6 10
+    KARMA -1000
+    FAME 1000
+    PARRYING 350 450
+    MAGICRESISTANCE 250 300
+    TACTICS 290 440
+    WRESTLING 290 440
+    SWORDSMANSHIP 500 600
+    DAMAGE 4 12
+    DEF 9
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a desert ostard
+
+SECTION NPC $npc_a_desert_ostard
+{
+    NAME a desert ostard
+    ID 00d2
+    SKIN 0000
+    DIRECTION E
+    STR 94 170
+    DEX 60 95
+    INT 6 10
+    KARMA -500
+    FAME 500
+    PARRYING 250 350
+    MAGICRESISTANCE 270 320
+    TACTICS 290 440
+    WRESTLING 290 440
+    SWORDSMANSHIP 350 400
+    DAMAGE 7 15
+    DEF 9
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a hind
+
+SECTION NPC $npc_a_hind
+{
+    NAME a hind
+    ID 00ed
+    DIRECTION E
+    BACKPACK
+    STR 100
+    DEX 15 20
+    INT 25
+    KARMA 0
+    FAME 0
+    PARRYING 250
+    MAGICRESISTANCE 150
+    TACTICS 250
+    WRESTLING 250
+    DAMAGE 2 10
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 231
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a great hart
+
+SECTION NPC $npc_a_great_hart
+{
+    NAME a great hart
+    ID 00ea
+    DIRECTION E
+    BACKPACK
+    STR 150
+    DEX 15 20
+    INT 50
+    KARMA 0
+    FAME 0
+    PARRYING 375
+    MAGICRESISTANCE 225
+    TACTICS 375
+    WRESTLING 375
+    DAMAGE 3 15
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 591
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a pig
+
+SECTION NPC $npc_a_pig
+{
+    NAME a pig
+    ID 00cb
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 75
+    DEX 15 20
+    INT 25
+    KARMA 0
+    FAME 0
+    PARRYING 375
+    MAGICRESISTANCE 250
+    TACTICS 250
+    WRESTLING 375
+    DAMAGE 2 10
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 111
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a boar
+
+SECTION NPC $npc_a_boar
+{
+    NAME a boar
+    ID 0122
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 125
+    DEX 15 20
+    INT 35
+    KARMA 0
+    FAME 0
+    PARRYING 500
+    MAGICRESISTANCE 375
+    TACTICS 375
+    WRESTLING 500
+    DAMAGE 3 15
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a dog
+
+SECTION NPC $npc_a_dog
+{
+    NAME a dog
+    ID 00d9
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 35
+    DEX 15 20
+    INT 35
+    PARRYING 350
+    MAGICRESISTANCE 250
+    TACTICS 350
+    FENCING 350
+    DAMAGE 2 10
+    DEF 6
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a dog
+
+SECTION NPC $npc_a_dog_1
+{
+    NAME a dog
+    ID 00d9
+    SKIN 02e7
+    DIRECTION E
+    BACKPACK
+    STR 35
+    DEX 15 20
+    INT 35
+    PARRYING 350
+    MAGICRESISTANCE 250
+    TACTICS 350
+    FENCING 350
+    DAMAGE 2 10
+    DEF 6
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a dog
+
+SECTION NPC $npc_a_dog_2
+{
+    NAME a dog
+    ID 00d9
+    SKIN 01b5
+    DIRECTION E
+    BACKPACK
+    STR 35
+    DEX 15 20
+    INT 35
+    PARRYING 350
+    MAGICRESISTANCE 250
+    TACTICS 350
+    FENCING 350
+    DAMAGE 2 10
+    DEF 6
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a dog
+
+SECTION NPC $npc_a_dog_3
+{
+    NAME a dog
+    ID 00d9
+    SKIN 0289
+    DIRECTION E
+    BACKPACK
+    STR 35
+    DEX 15 20
+    INT 35
+    PARRYING 350
+    MAGICRESISTANCE 250
+    TACTICS 350
+    FENCING 350
+    DAMAGE 2 10
+    DEF 6
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 90
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a timber wolf
+
+SECTION NPC $npc_a_timber_wolf
+{
+    NAME a timber wolf
+    ID 00e1
+    SKINLIST 13
+    DIRECTION E
+    BACKPACK
+    STR 50
+    DEX 15 20
+    INT 50
+    KARMA 0
+    FAME 0
+    PARRYING 500
+    MAGICRESISTANCE 375
+    TACTICS 500
+    FENCING 500
+    DAMAGE 3 15
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 231
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a grey wolf
+
+SECTION NPC $npc_a_grey_wolf
+{
+    NAME a grey wolf
+    ID 00e1
+    SKIN 03e6
+    DIRECTION E
+    BACKPACK
+    STR 50
+    DEX 15 20
+    INT 50
+    KARMA 0
+    FAME 0
+    PARRYING 500
+    MAGICRESISTANCE 375
+    TACTICS 500
+    FENCING 500
+    DAMAGE 3 15
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 531
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a white wolf
+
+SECTION NPC $npc_a_white_wolf
+{
+    NAME a white wolf
+    ID 00e1
+    SKIN 038a
+    DIRECTION E
+    BACKPACK
+    STR 50
+    DEX 15 20
+    INT 50
+    KARMA 0
+    FAME 0
+    PARRYING 500
+    MAGICRESISTANCE 375
+    TACTICS 500
+    FENCING 500
+    DAMAGE 3 15
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 651
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a silver wolf
+
+SECTION NPC $npc_a_silver_wolf
+{
+    NAME a silver wolf
+    ID 00e1
+    SKIN 02b3
+    DIRECTION E
+    BACKPACK
+    GOLD 100 102
+    STR 150 200
+    DEX 75 120
+    INT 50 80
+    KARMA 750 800
+    FAME 750 850
+    PARRYING 500 650
+    MAGICRESISTANCE 750 850
+    TACTICS 500 600
+    FENCING 700 800
+    // Damage per claw-bite
+    DAMAGE 5 25
+    DEF 20
+    MAGERY 500 600
+    // Breath Weapon
+    SPATTACK 8192
+    SPADELAY 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 800
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//****************************************************************
+//************************** Spiders *****************************
+//**************************         *****************************
+//****************************************************************
+
+
+SECTION NPC $npc_a_dark_spider
+{
+    NAME a dark spider
+    ID 001c
+    SKIN 5000
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    STR 100 125
+    DEX 80 95
+    INT 26 40
+    KARMA -1700
+    FAME 1700
+    PARRYING 350 450
+    MAGICRESISTANCE 750 1000
+    TACTICS 550 700
+    WRESTLING 600 850
+    DAMAGE 10 28
+    DEF 28
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 910
+    RACE $race_arachnid
+    DOORUSE 0
+}
+
+// a dread spider
+
+SECTION NPC $npc_a_dread_spider
+{
+    NAME a dread spider
+    ID 001c
+    COLOR 0453
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_arrow_7
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    LOOT $loot_potions
+    LOOT $loot_potions
+    LOOT $loot_potions
+    STR 225 325
+    DEX 35 65
+    INT 92 100
+    KARMA -1700
+    FAME 5000
+    MAGERY 920 1000
+    PARRYING 350 550
+    MAGICRESISTANCE 300 440
+    WRESTLING 500 650
+    TACTICS 350 500
+    DAMAGE 10 25
+    DEF 10
+    SPATTACK 8192
+    MAGICLEVEL 5
+    MAGICSPHERE $sphere_acid
+    SPADELAY 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    POISON 3
+    TOTAME 700
+    RACE $race_arachnid
+    DOORUSE 0
+}
+// Spiders
+
+SECTION NPC $npc_a_giant_spider
+{
+    NAME a giant spider
+    ID 001c
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_arrow_7
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    LOOT $loot_potions
+    TOTAME 700
+    STR 76 100
+    DEX 15 20
+    INT 35 60
+    KARMA -1700
+    FAME 1700
+    PARRYING 350 550
+    MAGICRESISTANCE 250 440
+    WRESTLING 500 650
+    DAMAGE 3 15
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    POISON 2
+    TACTICS 350 500
+    RACE $race_arachnid
+    DOORUSE 0
+}
+
+SECTION NPC $npc_a_frost_spider
+{
+    NAME a frost spider
+    ID 001C
+    SKIN 0480
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    PACKITEM $item_spiders_silk
+    STR 76 100
+    DEX 15 20
+    INT 35 60
+    KARMA -2000
+    FAME 2000
+    PARRYING 350 450
+    MAGICRESISTANCE 250 400
+    TACTICS 350 500
+    WRESTLING 500 650
+    DAMAGE 3 19
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 747
+    RACE $race_arachnid
+    DOORUSE 0
+}
+
+
+//a sewer rat
+
+SECTION NPC $npc_a_sewer_rat
+{
+    NAME a sewer rat
+    ID 00ee
+    DIRECTION N
+    BACKPACK
+    GOLD 5 15
+    STR 9
+    DEX 15 20
+    INT 6
+    KARMA -400
+    FAME 400
+    PARRYING 50
+    MAGICRESISTANCE 50
+    TACTICS 50
+    WRESTLING 50
+    DAMAGE 1 2
+    DEF 3
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_animal
+    DOORUSE 0
+}
+
+//a bullfrog
+
+SECTION NPC $npc_a_bullfrog
+{
+    NAME a bullfrog
+    ID 0051
+    SKIN 0000
+    DIRECTION E
+    STR 46
+    DEX 15 20
+    INT 11
+    KARMA 0
+    FAME 1000
+    MAGICRESISTANCE 250
+    TACTICS 400
+    WRESTLING 400
+    DAMAGE 1 2
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    BACKPACK
+    TOTAME 231
+    RACE $race_animal
+    DOORUSE 0
+}
+
+
+//a giant scorpion
+
+SECTION NPC $npc_a_giant_scorpion
+{
+    NAME a giant scorpion
+    ID 0030
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 73 115
+    DEX 15 20
+    INT 16 30
+    KARMA -2700
+    FAME 2500
+    PARRYING 600 700
+    MAGICRESISTANCE 300 350
+    TACTICS 600 750
+    WRESTLING 500 650
+    DAMAGE 3 12
+    DEF 14
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    POISON 2
+    TOTAME 800
+    RACE $race_arachnid
+    DOORUSE 0
+}
+

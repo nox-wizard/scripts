@@ -1,0 +1,1830 @@
+///////////////////////////////////////////////////////////////////////////////
+//   This file was create by Translate utility by Marco 'Elcabesa' Belli
+//
+//
+//
+//
+//   you have to add your translation of the sentence right near the $
+//   Remembre you MUST put the rigth numebr of %s ,%c ecc like in the coriginal sentence
+//   and you MUST NOT use special key like ò a e ì * ° £ because 
+//   the Ultima Online client doesn't print them on screen
+//
+//
+//
+//
+///////////////////////////////////////////////////////////////////////////////
+
+// les heures ne sont pas traduites, et pour cause...
+// quelques autres sections aussi, comme les potions
+// le nom de chaque traducteur est inscrit dans le fichier.
+// fait par des joueurs et GM du shard Dark Prophecy (http://www.sharddp.com), pour l'émulateur Revelation (http://revelationemu.sourceforge.net)
+
+
+
+// traduit par Aragorn
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amx.c
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amxcons.c
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amxcore.c
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amx_comp.c
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amx_dbg.c
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/accounts.cpp
+
+ 
+// C:\Documents and Settings\Administrator\Desktop\newsrc/addmenu.cpp
+
+Sorry, this menu was rather old :($Escusez moi, ce menu etait plutot vieux :(
+Ever thought an ethereal soul can't really do some actions ?$Avez-vous jamais pense qu'un esprit ethere pouvait entreprendre une quelconque action ?
+You don't know that spell.$Vous ne connaissez pas ce sort.
+You could die for it.. $ Vous pourriez mourir pour cela..
+You're too tired $Vous etes trop fatigue.
+Your mind is too tired $Votre esprit est trop fatigue.
+You need to experience more to do that.$Vous devez etre plus experimente pour faire cela.
+You've not enough resources$Vous n'avez pas assez de ressources.
+You failed$Vous avez echoue.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amxcback.cpp
+
+You are not strong enough to use that.$Vous n'etes pas assez fort pour utiliser cela.
+You are not quick enough to use that.$Vous n'etes pas assez vif pour utiliser cela.
+You are not intelligent enough to use that.$Vous n'etes pas assez inteligent pour utiliser ceci.
+You are not skilled enough to use that.$Vous n'etes pas assez adroit pour utiliser cela.
+You should be faster when choosing an option in your life..$Vous devriez etre plus rapide lorsque vous decidez de votre orientation.
+*You should install a callback for the menu to work*$*Vous devriez installer un retour pour que le menu fonctionne.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amxscript.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amxwrap2.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/amxwraps.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/archive.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/basics.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/boats.cpp
+
+you entered a boat$Vous montez a bord du bateau
+You left the boat.$Vous quittez le navire.
+You cannot get off here!$Vous ne pouvez pas partir!
+Arr, Sir, we've hit rough waters!$Arr, Capitaine, la mer est trop agitee par la!
+Arr, somethings in the way!$Arr, quelque chose gene!
+Arr, something's in the way!$Arr, nous allons heurter quelque chose!
+Aye, sir.$Bien, capitaine.
+Arr,somethings in the way$Arr, quelque chose sur notre chemin.
+There was an error creating that boat.$Il y a eu une erreur en creant ce bateau.
+The deed is broken, please contact a Game Master.$Le contrat n'est plus valable, veuillez contacter un GM.
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/books.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/bounty.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/cache.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/calendar.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/cfile.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/chars.cpp
+
+%s's bank box.$Le coffre fort de %s.
+You break your concentration.$Vous avez perdu votre concentration.
+You have been poisoned!$Vous avez ete empoisonne!
+You are no longer frozen.$Vous n'etes plus immobilise.
+You are jailed !$Vous etes emprisonne !
+You notice you just got something new at your backpack..$Vous remarquez quelque-chose de nouveau dans votre sac a dos..
+You have been kicked!$Vous avez ete vire!
+Thou have suffered thy punishment, scoundrel.$Vous avez merite cette punition, vaurien.
+You have killed %i innocent people.$Vous avez tue %i personnes innocentes.
+You are now a murderer!$Vous etes maintenant considere comme meurtrier!
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/charwrap.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/char_array.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/client.cpp
+
+In order to open spellbook, it must be equipped in your hand or in the first layer of your backpack.$Pour ouvrir votre livre de sorts, vous devez l'avoir en main ou dans votre sac a dos.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/cmdtable.cpp
+
+The bounty system is not active.$Le systeme de prime n'est pas actif.
+You can only place a bounty while you are a ghost.$Vous ne pouvez pas offrir de prime lorsque vous etes sous forme d'esprit.
+You can only place a bounty once after someone has murdered you.$.Vous ne pouvez mettre la tete de quelqu'un a prix qu'apres avoir ete assassine.
+You have placed a bounty of %d gold coins on %s.$Vous proposez une prime de %d pieces d'or pour la tete de %s.
+You were not able to place a bounty (System Error)$Vous ne pouvez mettre sa tete a prix (Erreur du systeme).
+You do not have enough gold to cover the bounty.$Vous n'avez pas assez d'or pour assurer cette prime.
+To place a bounty on a murderer, use BOUNTY <amount>$Pour mettre a prix la tete d'un meurtier, utilisez BOUNTY <amount>.
+server is going to sleep for %i seconds.$Le serveur va etre stoppe pour %i secondes!
+server is back from a %i second break$Le serveur est de nouveau fonctionnel apres un arret de %i secondes.
+Shutdown has been interrupted.$L'arret a ete interrompu.
+This command is simply no more supported. Sorry :[$Cette commande n'est plus utilisable. Desole.
+World is now respawning, expect some lag!$Le monde est en train de se regenerer, attendez vous a quelques ralentissements!
+Guards have been reactivated.$Les gardes ont ete reactives.
+Warning: Guards have been deactivated globally.$Attention: Les gardes ont ete globalement desactives.
+WorldStat Saves will be displayed.$Les sauvegardes seront affichees.
+WorldStat Saves will not be displayed.$Les sauvegardes ne seront pas affichees.
+ALL Regions Spawning to MAX, this will cause some lag.$Toutes les regions se regenerent au MAX, ceci va causer des ralentissements.
+All NPC's have been wiped.$Tout les PNJs ont ete effaces.
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/combat.cpp
+
+// partie traduite par alzair
+
+Your weapon has been destroyed$Votre arme a ete detruite
+Your shield has been destroyed$Votre bouclier a ete detruit
+Halt, scoundrel!$Halte, vaurien!
+You are out of ammunitions!$Vous n'avez plus de munitions!
+You are too tired to attack.$Vous etes trop fatigue pour attaquer.
+hits you in your Chest!$vous frappe a la poitrine!
+lands a terrible blow to your Chest!$vous porte un terrible coup a la poitrine!
+lands a blow to your Stomach!$vous frappe a l'estomac!
+knocks the wind out of you!$frappe dans le vent!
+hits you in your Ribs!$Vous frappe dans les cotes!
+broken your Rib?!$Vous casse une cote?!
+hits you in Left Arm!$Vous frappe au bras gauche!
+hits you in Right Arm!$Vous frappe au bras droit!
+hits you you straight in the Face!$Vous frappe en plein visage!
+lands a stunning blow to your Head!$manque de Vous assomer!
+hits you to your Head!$Vous frappe a la tete!
+smashed a blow across your Face!$Vous porte un terrible coup au visage!
+hits you you square in the Jaw!$Vous frappe en plein dans la machoire!
+lands a terrible hit to your Temple!$Vous envoie un terrible coup a la tempe!
+hits you in Left Thigh!$Vous frappe a la cuisse gauche!
+hits you in Right Thigh!$Vous frappe a la cuisse droite!
+hits you in Groin!$Vous frappe a l'entrejambe!
+hits you to your Throat!$Vous frappe a la gorge!
+hits you in Left Hand!$Vous frappe a la main gauche!
+hits you in Right Hand!$Vous frappe a la main droite!
+Your %s has been destroyed$Votre %s a ete detruit
+You prepare yourself for a disarm move.$Vous vous preparez a desarmer.
+You prepare yourself for a stunning punch.$vous vous preparez a donner un coup de point assommant.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/commands.cpp
+
+Region %d is Spawning %d items/NPCs, this will cause some lag.$La region %d genere %d objets/PNJs, ceci causera des ralentissements.
+Region %d is Spawning %d NPCs/items, this will cause some lag.$La region %d genere %d PNJs/objets, ceci causera des ralentissements.
+Killing all characters, this may cause some lag...$tue tout les personages, ceci peut faire ralentir...
+The Counselor Queue is currently full. Contact the shard operator$La file d'attente des conseillers est remplie. Contactez l'administrateur du shard.
+and ask them to increase the size of the queue.$et demandez leur d'augmenter la taille de la file d'attente.
+Available Counselors have been notified of your request.$Les conseillers disponibles ont ete informes de votre requete.
+There was no Counselor available to take your call.$Il n'y avait aucun conseiller disponible pour vous repondre.
+Please enter the reason for your Counselor request$Veuillez indiquer la raison de votre requete s'il vous plait
+The GM Queue is currently full. Contact the shard operator$La file d'attente des GMs est remplie. Contactez l'administrateur de ce shard
+Available Game Masters have been notified of your request.$Les GMs disponibles ont ete informes de votre requeete.
+There was no Game Master available to take your call.$Il n'y avait aucun GM disponible pour vous repondre.
+Please enter the reason for your GM request$Pour quelle raison desirez vous solliciter un GM?
+All items have been wiped.$Tout les objets one ete effaces.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/common_libs.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/console.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/crontab.cpp
+
+World will be saved in 30 seconds..$Le monde sera sauvegarde dans 30 secondes...
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/custmenu.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/dbl_single_click.cpp
+
+ghosts cant do that!$Les esprits ne peuvent faire cela!
+you need to be closer to play!$Vous etes trop loin pour jouer!
+you dont have enough gold to play!$Vous n'avez pas assez d'or pour jouer!
+Single bars, you are a winner!!$Une barre, vous avez gagne!!
+Double bars, you are a winner!!$Double barres, vous avez gagne!!
+Triple bars, you are a winner!!$Triple barres, vous avez gagne!!
+Any three 7's, you are a winner!!$Les trois 7, vous gagnez!!
+Three blue 7's, you are a winner!!$Trois 7 bleus, vous avez gagne!!
+Three white 7's, you are a winner!!$Trois 7 blancs, vous avez gagne!!
+Three red 7's, you are a winner!!$Trois 7 rouges, vous avez gagne!!
+Jackpot, you are a winner!!$Jackpot, vous avez gagne!!
+Sorry,not a winner,please insert coins.$Desole, vous n'etes pas gagnant, retentez votre chance.
+You must wait to perform another action.$Vous devez attendre avant de faire une autre action.
+That is a secured chest!$C'est un coffre securise!
+You may not do that as a ghost.$Vous ne pouvez pas faire cela sous forme d'esprit.
+You cannot use items equipped by other players.$Vous ne pouvez pas utiliser des objets portes par d'autres joueurs.
+The scroll must be in your backpack to envoke its magic.$Le manuscrit doit etre dans votre sac a dos pour liberer sa magie.
+That doesnt seem to work right now.$Cela ne semble pas marcher pour l'instant.
+You are not close enough to use that.$Vous n'etes pas assez pres pour utiliser ceci.
+What will you use this on?$Que ferez-vous de ceci?
+You have been resurrected.$Vous avez ete ressucite.
+You are already living!$Vous etes deja vivant!
+That is locked.$C'est est ferme.
+You can't reach that!$Vous ne pouvez atteindre ceci!
+You can't peek into that container or you'll be jailed.$Vous ne pouvez jeter de coup d'oeil dans ce recipient sans etre emprisonne.
+%s is trying to snoop you!$%s essaye de vous fouiller!
+You successfully peek into that container.$Vous reussissez a jeter un coup d'oeil dans ce recipient.
+You failed to peek into that container.$Vous n'arrivez pas a jeter un coup d'oeil dans ce recipient.
+Art thou attempting to disturb my privacy?$Essayez-vous de perturber ma vie privee?
+You notice %s trying to peek into your pack!$Vous remarquez que %s tente de fouiller dans votre sac!
+You are too far away!$Vous etes trop loin!
+Select teleport target.$Choisissez le lieu ou vous souhaitez etre teleporte.
+Select item to use the key on.$Choisissez sur quel objet vous souhaitez utiliser cette clef.
+This item is locked.$Cet objet est clos.
+If you wish to open a spellbook, it must be equipped or in your main backpack.$Si vous souhaitez utiliser votre livre des sorts, vous devez l'avoir en main ou dans votre sac a dos.
+Books are currently disabled, sorry :($Les livres sont pour le moment hors d'usage, desole :(
+You quickly unlock, use, and then relock the door.$Vous ouvrez et refermez rapidement la porte.
+This door is locked.$Cette porte est fermee.
+You are simply too full to eat any more!$Vous n'avez tout simplement plus faim!
+You eat the food, but are still extremely hungry.$Vous mangez la nourriture, mais vous avez encore extremement faim.
+After eating the food, you feel much less hungry.$Apres avoir mange ceci, vous avez moins faim.
+You eat the food, and begin to feel more satiated.$Vous mangez cette nourriture, et commencez a vous sentir rassasie.
+You feel quite full after consuming the food.$Vous etes a peu pres repu apres avoir mange cette nourriture.
+You are nearly stuffed, but manage to eat the food.$Vous n'avez presque plus faim, mais reussissez a manger encore un peu.
+The food was poisoned!$La nourriture etait empoisonnee!
+If you wish to use this, it must be equipped or in your backpack.$Si vous souhaitez utiliser ceci, vous devez l'avoir en main ou dans votre sac a dos.
+Seek out the mystic llama herder.$Addressez vous au berger mystique qui s'occupe des lamas.
+Wherever you go, there you are.$Ou que vous alliez, vous etes la.
+The message appears to be too cloudy to make anything out of it.$Le message ne semble pas assez clair.
+You have just lost five strength.. not!$Vous venez de perdre 5 points de force.. en fait non!
+You're really playing a game you know$Vous etes vraiment en train de jouer vous savez
+You will be successful in all you do.$Vous aurez du succes dans tout ce que vous ferez.
+You are a person of culture.$Vous etes une personne cultivee.
+Give me a break! How much good fortune do you expect!$Laissez-moi tranquille! Qu'attendez-vous de la bonne fortune!
+That rune is not yet marked!$Cette rune n'est pas encore marquee!
+Enter new rune name.$Entrez le nouveau nom de la rune.
+That is out of charges.$Il n'y a plus de charges.
+Your wand now has %i charges left$Il reste %i charges a votre baguette.
+This is not a rename deed!$Ce n'est pas un contrat de renommage!
+Enter your new name.$Entrez votre nouveau nom.
+Gulp !$Gulp !
+
+// Traduit par Alzair
+
+You can not use that.$Vous ne pouvez pas utiliser ceci.
+That item is locked down.$Cet objet est ferme.
+Hello sir! My name is %s and i will be working for you.$Bien le bonjour! Mon nom est %s et je vais travailler pour vous.
+You must be close to a house and have a key in your pack to place that.$Vous devez etre pres d'une maison et avoir une clef dans votre sac pour placer ceci.
+You have %i seconds left in the jail$Il vous reste %i secondes a tirer de votre peine
+Crystall ball shatters..$La boule de cristal se brise..
+What do you wish to identify?$Que souhaitez vous identifier?
+Which dye vat will you use this on?$Avec quel bac a teinture voulez utiliser ceci?
+Must be closer to use this!$Vous devez etre plus pres pour utiliser ceci!
+Select item to be repaired.$Selectionnez l'objet a reparer.
+What item would you like to Smelt?$Quel objet souhaitez vous fondre?
+Select the clothing to use this on.$Selectionnez un vetement pour utiliser ceci.
+What would you like to use that on ?$Sur quoi desirez vous utiliser cela?
+Select material to use.$electionnez un materiau a utiliser.
+Where do you want to dig?$Ou voulez vous creuser?
+What do you want to fill the vial with?$Avec quoi voulez vous remplir la fiole?
+The vial is not in your pack$La fiole n'est pas dans votre sac
+Select spinning wheel to spin cotton.$Selectionnez un rouet pour tisser le coton.
+Select loom to make your cloth$Selectionez un metier a tisser pour faire votre vetement
+Build this Monster!$Construisez ce monstre!
+What would you like to use this with?$Avec quoi souhaitez vous utiliser ceci?
+Select cannon to load.$Selectionnez un canon a charger.
+Select flour to pour this on.$Selectionnez la farine a verser ici.
+Select dough to put this on.$Selectionnez la pate que vous voulez poser.
+Select your spin wheel to spin wool.$Selectionnez votre rouet pour filer la laine.
+Select forge to smelt ore on.$Selectionnez une forge pour fondre ce minerai.
+You are to far away to reach that$Vous etes trop loin pour atteindre cela
+You fail to light a fire.$Vous n'arrivez pas a allumer un feu.
+You failed to use this statue.$Vous n'arrivez pas a utiliser cette statue.
+You failed to use this.$Vous n'arrivez pas a utiliser ceci.
+Fish where?$Ou pecher?
+Where is an empty bottle for your potion?$Trouvez une bouteille vide pour votre potion.
+What do you wish to grind with your mortar and pestle?$Que souhaitez vous moudre avec votre mortier et votre pilon?
+What cloth should I use these scissors on?$Sur quel vetement devrais je utiliser ces ciseaux?
+Who will you use the bandages on?$Sur qui voulez vous appliquer les bandages?
+You are at: %s$Vous etes a: %s
+What lock would you like to pick?$Quelle serrure desirez vous crocheter?
+What would you like to cook this on?$Qu'aimeriez vous cuisiner?
+You reach down and pick some cotton.$Vous vous baissez et ramassez du coton.
+Select part to combine that with.$Choisissez avec quoi combiner ceci.
+Select part to combine it with.$Choisissez avec quoi le combiner.
+Select part to combine with$Choisissez la partie a combiner
+You create the sextant.$Vous fabriquez le sextant.
+you fail to create the sextant.$Vous n'arrivez pas a fabriquer le sextant.
+You need to be closer to use that.$Vous avez besoin d'etre plus pres pour utiliser ceci.
+You must wait for it to stop swinging !$Vous devez attendre que ca ait fini de bouger.
+You can't think of a way to use that item.$Vous ne trouvez aucun moyen d'utiliser cet objet.
+[%i spells]$[%i sorts]
+%s %s by %s$%s %s par %s
+%s at %igp$%s a %igp
+%s %i charge$%s %i charge
+[Innocent]$[Innocent]
+[Criminal]$[Criminel]
+[Murderer]$[Meurtrier]
+[locked down]$[ferme]
+[locked down & secure]$[ferme & securise]
+[%i items, %i stones]$[%i objets, %i pierres]
+[0 items, 0 stones]$[0 objet, 0 pierre]
+You cannot ride anything under polymorph effect.$Vous ne pouvez monter sur aucune creature en etant transforme.
+You are dead and cannot do that.$Vous etes mort et ne pouvez faire cela.
+Your pet is in battle right now!$Votre animal de compagnie est en train de combattre!
+You need to get closer.$Vous devez de vous rendre plus pres.
+That is not your beast of burden!$Ce n'est pas vottre bete de somme!
+You cannot open monsters paperdolls.$Vous ne pouvez pas ouvrir la feuille de personnage des monstres.
+Take a look at my goods.$Jetez un coup d'oeil a mes biens.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/debug.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/dragdrop.cpp
+
+You are loosing karma!$Vous etes en train de perdre du karma!
+You can't wear that$Vous ne pouvez vous vetir de cela
+You cant wear female armor!$Vous ne pouvez pas porter une armure pour femme!
+You already have a weapon equipped!$Vous etes deja equipe d'une arme!
+Your hands are both occupied!$Vos deux mains sont occupees!
+You cannot equip a two handed weapon with a weapon equipped!$Vous ne pouvez pas porter d'arme a deux mains alors que vous portez deja une arme!
+You cannot equip a two handed weapon with a two handed weapon equipped!$Vous ne pouvez porter deux armes a deux mains a la fois!
+You cannot equip a shield with a two handed weapon equipped!$Vous ne pouvez tenir un bouclier puisque vous avez deja une arme a deux mains!
+You cannot equip a two handed weapon with a shield equipped!$Vous ne pouvez utiliser d'arme a deux mains puisque vous portez deja un bouclier !
+You already have a shield equiped! You must unequip it to use this.$Vous portez deja un bouclier! Vous devez l'enlever pour utiliser ceci.
+You already have a weapon equiped!$Vous utilisez deja une arme!
+You can't put items on other people!$Vous ne pouvez pas mettre d'objets sur d'autres personnes!
+You can't put items on players! [it could damage stats]$Vous ne pouvez pas mettre d'objets sur les joueurs [risque de bug avec les stats]
+* You see %s eating %s *$* Vous voyez %s manger %s *
+It doesn't appear to want the item$L'animal ne semble pas vouloir de cet objet
+Excellent work! You have brought us the head of %s. Here is your reward of %d gold coins.$Excellent travail! Vous nous avez apporte la tete de %s. Voici votre prime de %d pieces d'or.
+You can not claim that prize scoundrel. You are lucky I don't strike you down where you stand!$Vous ne pouvez pas revendiquer ce prix, vaurien. Vous etes chanceux que je ne vous abatte pas sur place!
+Sorry %s i can only use gold$Desole %s je ne peux utiliser que l'or
+Thank you %s for the %i gold!$Merci %s pour les %i pieces d'or!
+You have gain a little karma!$Vous gagnez un peu de karma!
+You have gain some karma!$Vous gagnez du karma!
+I thank thee for thy payment. That should give thee a good start on thy way. Farewell!$Je vous remercie pour ce paiement. Cela devrait vous donner un bon depart sur cette voie. Adieu!
+I am sorry, but I can only accept gold.$Je suis desole, mais je n'accepte que l'or.
+Hey, putting houses in your pack crashes your back and client !$Hey, mettre des maisons dans votre sac vous briserait le dos et me ferait perdre un client !
+Thank thee kindly, but I have done nothing to warrant a gift.$Merci bien, mais je n'ai rien fait pour meriter un present.
+Hey, putting houses in your pack crashes your back and client!$Hey, mettre des maisons dans votre sac vous briserait le dos et me ferait perdre un client!
+This aint your vendor!$Ce n'est pas votre vendeur!
+You can only put golds in this bank box!$Vous pouvez uniquement mettre de l'or dans ce coffre!
+You exceeded the number of maximimum items in bank of %d$Vous avez depasse le nombre maximum d'objets dans votre banque de %d
+As you let go of the item it disappears.$Lorsque Vous lachez cet objet, il disparait.
+You can only place spell scrolls in a spellbook!$Vous pouvez mettre uniquement des parchemins dans un livre des sorts!
+You cannot place spells in other peoples spellbooks.$Vous ne pouvez pas mettre de sorts dans le livre des sorts de quelqu'un d'autre.
+You already have that spell!$Vous avez deja ce sort!
+You can't put more than one scroll at a time in your book.$Vous ne pouvez pas mettre plus d'un parchemin a la fois dans votre livre.
+Set a price for this item.$Donnez moi un prix pour cet objet.
+
+// traduit par Alzair
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/encryption.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/fishing.cpp
+
+You are too far away to reach that$Vous etes trop loin pour atteindre cela
+You need to be closer to the water to fish!$Vous devez etre plus pres de l'eau pour pecher!
+You fish for a while, but fail to catch anything.$Vous pechez pendant un moment, sans resultat.
+You are too tired to fish, you need to rest!$Vous etes trop fatigue pour pecher, vous avez besoin de repos!
+You fished up an old pair of boots!$Vous avez peche une vieille paire de bottes!
+You fished up an ancient painting!$Vous avez peche un vieux tableau!
+You fished up an ancient weapon!$Vous avez peche une vieille arme!
+You fished up an ancient armor!$Vous avez peche une ancienne armure!
+You fished up some treasure!$Vous avez peche un tresor!
+You fished up a hughe fish!$Vous avez peche un enorme poisson!
+You wait for a while, but nothing happens$Vous attendez un moment, mais rien ne se passe
+You fished up an old chest!$Vous avez peche un vieux coffre!
+You fished up a seashell!$Vous avez peche un coquillage!
+You fished up a skull!$Vous avez peche un crane!
+You fished up a net!$Vous avez peche un filet!
+You fished up some gold!$Vous peche peche de l'or!
+You fished up some bones!$Vous avez peche des ossements!
+you catch a fish, but no place for it left$Vous attrapez un poisson, mais il n'y a pas de place pour le poser
+You pull out an exotic fish!$Vous attrapez un poisson exotique!
+You pull out a fish!$Vous attrapez un poisson!
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/globals.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/guildstones.cpp
+
+You cannot place guildstones at any other location than your house$Vous ne pouvez pas placer de pierres de guilde a un autre endroit que votre maison
+You are already in a guild.$Vous etes deja dans une guilde.
+There are already enough guildstones placed.$Il y a deja assez de pierres de guilde placees.
+Cannot create guildstone$Impossible de creer une pierre de guilde
+Enter a name for the guild.$Entrez un nom pour la guilde.
+Guildstone for %s$Pierre de Guilde pour %s
+You are not the guildmaster of this guild. Only the guildmaster may use this guildstone teleporter.$Vous n'etes pas le chef de guilde. Seul le chef de guilde peut utiliser ce teleporteur de pierre de guilde .
+You are not a member of this guild. Ask an existing guildmember to invite you into this guild.$Vous n'etes pas membre de cette guilde. Demandez a un membre de cette guilde de vous y inviter.
+Recruit someone into the guild.$Recruter quelqu'un dans la guilde.
+View the current roster.$Voir la liste actuelle des membres.
+View the guild's charter.$Voir la charte de la guilde.
+Declare your fealty. You are currently loyal to %s.$Declarer allegeance. Vous etes en ce moment loyal a %s.
+Toggle showing the guild's abbreviation in your name to unguilded people. Currently %s.$Bouton montrant l'abreviation de la guilde dans votre nom aux autres personnes. Actuellement %s.
+Resign from the guild.$Quitter la guilde.
+View list of candidates who have been sponsored to the guild.$Voir la liste des candidats qui ont ete parraines pour la guilde.
+Access %s functions.$Acceder %s fonctions.
+View list of guild that %s has declared war on.$Voir la liste de guilde a qui %s a declare la guerre.
+View list of guilds that have declared war on %s.$Voir la liste des guildes qui ont declare la guerre a %s.
+View list of guilds that %s have declared war on.$Voir la liste des guildes a qui %s a declare la guerre.
+%s, %s functions$%s, %s fonctions
+Set the guild name.$Mettre le nom de la guilde.
+Set the guild's abbreviation.$Mettre l'abreviation de la guilde.
+Change the type of the guild. (Currently a%s guild.)$Changer le type de guilde. (pour l'instant une guilde %s.)
+Set the guild's charter.$Indiquer la charte de la guilde.
+Dismiss a member.$Renvoyer un membre.
+Declare war from menu.$Declarer la guerre a partir du menu.
+Declare war from targeting enemy.$Declarer la guerre en visant un ennemi.
+Declare peace.$Declarer la paix.
+Accept a candidate seeking membership.$Accepter une candidature.
+Refuse a candidate seeking membership.$Refuser une candidature.
+Set the guildmaster's title.$Mettre le titre du chef de guilde.
+Grant a title to another member.$Decerner un titre a un autre membre.
+Move this guildstone.$Deplacer cette pierre de guilde.
+Return to the main menu.$Revenir au menu principal.
+Please select the type you want your guild to be related to.$Selectionnez, s'il vous plait, le type de guilde que vous desirez.
+Select this to return to main menu.$Selectionnez ceci pour retourner au menu principal.
+Set to Standard.$Neutre.
+Set to Order.$Ordre.
+Set to Chaos.$Chaos.
+Set %s charter.$Mettre %s charte.
+Set the charter.$Mettre la charte.
+Set the webpage.$Mettre la page web.
+%s charter.$%s charte.
+%s. Select this to return to the main menu.$%s. Selectionnez ceci pour retourner au menu principal.
+Visit the guild website at %s$Visitez le site web de la guilde a %s
+%s list of candidates.$%s liste des candidats.
+Select this to return to the menu.$Selectionnez ceci pour revenir au menu.
+%s members roster.$%s liste des membres.
+Dismiss what member?$Renvoyer quel membre?
+Refuse what candidate?$Refuser quel candidat?
+Accept what candidate?.$Accepter quel candidat?.
+Guild that %s has declared war on.$Guilde a qui %s a declare la guerre.
+Grant a title to whom?$A qui decerner un titre?
+Whom do you wish to be loyal to?$A qui souhaitez vous etre loyal?
+What guilds do you with to declare war?$A quelles guildes souhaitez vous declarer la guerre?
+What guilds do you with to declare peace?$Avec quelles guildes souhaitez vous etre en paix?
+Guilds that have decalred war on %s.$Guildes ayant declare la guerre a %s.
+You are in no guild$Vous n'etes dans aucune guilde
+You are no longer in that guild.$Vous n'etes plus dans cette guilde.
+You have been the last member of that guild so the stone vanishes.$Vous etiez le dernier membre de cette guilde, la pierre disparait donc.
+you are in no guild$vous n'etes dans aucune guilde
+You are in an Order/Chaos guild, you cannot toggle your title.$Vous etes dans une guilde de Ordre/Chaos, vous ne pouvez pas indiquer votre titre.
+You toggled your abbreviation on.$Vous montrez votre abreviation.
+You toggled your abbreviation off.$Vous cachez votre abreviation.
+This person is already in a guild.$Cette personne est deja dans une guilde.
+No more recruit slots free.$Plus de place disponible pour recruter.
+This being is already a candidate.$Cet etre est deja candidat.
+This is not a player.$Ce n'est pas un joueur.
+This person is not in a guild.$Cette personne n'est pas dans une guilde.
+War yourself? Nah.$Vous declarer la guerre? Nan.
+%s declared war to %s$%s a declare la guerre a %s
+No more war slots free.$Plus de place disponible pour declarer la guerre.
+This guild is already in our warlist.$Cette guilde est deja en guerre contre nous.
+Take care of that stone!$Prenez soin de cette pierre!
+Select person to invite into the guild.$Selectionner une personne a inviter dans la guilde.
+Enter a new guildname.$Entrez un nouveau nom de guilde.
+Enter a new guild abbreviation.$Entrez une nouvelle abreviation de guilde.
+Select person to declare war to.$Seletcionnez une personne a qui declarer la guerre.
+Enter new guildmastertitle.$Entrez un nouveau titre pour le chef de guilde.
+Enter a new charter.$Entrez une nouvelle charte.
+Enter a new URL.$Entrez une nouvelle adresse.
+You cannot dimiss yourself, please resign from the guild if you wish.$Vous ne pouvez pas vous renvoyer, quittez la guilde si vous le souhaitez.
+Kicked that member out of the guild.$Virez ce membre.
+You got dismissed out of your guild.$Vous avez ete renvoye de votre guilde.
+Removed candidate from the list.$Supprimez un candidat de la liste.
+This candidate is now a guildmember.$Ce candidat est a present membre de la guilde.
+This guild is full, maximum amount of members reached!$Cette guilde est pleine, Le nombre maximum de membres a ete atteint!
+This candidate is already in another guild, I'll remove him from your list now.$Ce candidat est deja dans une autre guilde, il est donc efface de votre liste.
+%s declared peace to %s$%s a declare la paix a %s
+Your guild got renamed to %s$Votre guilde a ete renommee en %s
+This name is already taken by another guild.$Ce nom est deja utilise par une autre guilde.
+Your guild has now the abbreviation: %s$Votre guilde a maintenant l'abreviation: %s
+This abbreviation is already taken by another guild.$Cette abreviation est deja utilisee par une autre guilde.
+You changed your own title.$Vous changez votre propre titre.
+You changed the title.$Vous changez le titre.
+You changed the guilds charter.$Vous changez la charte de la guilde.
+You changed the guilds webpage url.$Vous changez l'adresse du site web.
+Your guild is now an Order guild.$Votre guilde est maintenant une guilde de l'Ordre.
+An order shield has been placed in your pack!$Un bouclier de l'ordre a ete mis dans votre sac!
+Your guild is now a Chaos guild.$Votre guilde est maintenant une guilde du Chaos.
+A chaos shield has been placed in your pack!$Un bouclier du Chaos a ete mis dans votre sac!
+Your guild is now a Standard guild.$Votre guilde est maintnenat Neutre.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/gumps.cpp
+
+HouseGump failed - house not found\n$Menu echoue - maison non trouvee\n
+HouseGump failed - house sign not found\n$Menu echoue - pancarte de maison non trouvee\n
+House sign changed.$le signe de la maison a change.
+Select person to transfer ownership to.$Selectionnez une personne a rendre proprietaire.
+Select person to eject from house.$Selectionnez une personne a ejecter de la maison.
+Select person to ban from house.$Selectionnez une personne a bannir de la maison.
+Select person to remove from house registry.$Selectionnez une personne a effacer du registre de la maison.
+Select person to make a friend of the house.$Selectionnez une personne a rendre ami de la maison.
+House renamed to %s$Maison renommee en %s
+HouseGump Called - Button=%i$Menu annule - Boutton=%i
+You fail your attempt at tracking.$Vous ratez votre tentative de pistage.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/house.cpp
+
+Select a place for your structure: $Selectionnez un lieu pour votre batiment: 
+Select location for building.$Selectionnez un lieu ou construire.
+ You cannot build houses in town!$ Vous ne pouvez pas construire de maison en ville!
+You cannot build your structure there!$Vous ne pouvez pas construire votre batiment ici!
+Can not build a house at that location (CBS)!$Impossible de construire une maison a cet endroit (CBS)!
+You cannot build your stucture there.$Vous ne pouvez pas construire votre batiment ici.
+You cant build structures inside structures$Vous ne pouvez pas construire de batiment a l'interieur d'autres batiments
+Demolishing House %s$Destruction de la maison %s
+Converted into a %s.$Converti en %s.
+A vendor deed for %s$Un contrat de vendeur pour %s
+Packed up vendor %s.$Vendeur empaquete %s.
+All house items and keys removed.$Tous les objets et les clefs de la maison ont ete effaces.
+friend of house$ami de la maison
+Select item to lock down$Selectionnez un objet a fixer
+Select item to release$Selectionnez l'objet a rendre mobile
+Select item to secure$Selectionnez l'objet a immobiliser
+Only the house owner can lock down items!$Seul le proprietaire de la maison peut fixer des objets!
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/html.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/im.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/itemid.cpp
+
+// Traduit par Alzair
+
+
+This item is a musical instrument. You can use it for bardic skills like enticement or provocation$Cet objet est un instrument de musique. Vous pouvez l'utiliser pour vos competences de barde comme seduction et provocation
+This a locked door. To open or close it, click on the proper key and target it.$Ceci est une porte verrouillee. Pour l'ouvrir ou la fermer, cliquez sur la clef puis visez la porte.
+This food you can eat when you're hungry. To eat, double click the food, but beware poisoned food!$Vous pouvez manger cette nourriture lorsque vous avez faim. Pour manger, double-cliquez sur la nourriture, mais attention a la nourriture empoisonee!
+This is a rune for use with recall, mark and gate travel spells$Ceci est une rune a utiliser avec les sorts de rappel, de marquage et de porte de lune
+If you dye (or are dead) you can double click this item to resurrect!$Si vous mourez (ou etes mort) vous pouvez double-cliquer sur cet objet pour ressuciter!
+This is a key you can use (double click) to open doors$Ceci est une clef que vous pouvez utiliser (double clic) pour ouvrir les portes
+This is the spellbook, where you can write down your own spells for later use$Ceci est un livre des sorts, ou vous pouvez ecrire vos propres sorts pour une utilisation ulterieure
+This is a potion! You can drink that when you need its effects... but beware of poison potions!$Ceci est une potion! Vous pouvez boire ceci quand vous avez besoin de ses effets... mais attetion aux potions de poison!
+He/She is a player like you. You've met new people!!$Il/Elle est un(e) joueur(euse) comme vous. Vous avez rencontre une nouvelle personne!!
+He/She is a Counselor. You can ask him if you need help on the game$Il/Elle est conseiller(e). Vous pouvez faire appel a cette personne si vous avez besoin de renseignements sur le jeu
+He/She is a Game Master. You can ask his help if you're stuck or have bugs or other problems$Il/Elle est GM. Vous pouvez demander son aide en cas de bugs ou autres problemes
+He/She is a vendor which sells items owned by a player. Good shopping!$Il/Elle est un vendeur d'objets appartenant a un joueur. Bonnes courses!
+Run AWAY!!! It will kill you!!$Courez LOIN!!! Ceci vous tuera!!
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/items.cpp
+
+You are not strong enough to keep %s equipped!$Vous n'etes pas assez fort pour continuer a porter %s !
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/itemwrap.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/item_array.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/los.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/magic.cpp
+
+You have insufficient mana to cast that spell.$Vous n'avez pas assez de mana pour lancer ce sort.
+You do not have enough reagents to cast that spell.[ $Vous n'avez pas assez de reactifs pour lancer ce sort.[ 
+The spell fizzles.$Le sort rate.
+You are too far away from the target.$Vous etes trop loin de la cible.
+There's something between you and your target that makes the casting impossible.$Il y a quelque chose entre vous et la cible qui vous empeche de lancer le sort.
+It's locked!$C'est verrouille!
+You cannot lock this!!!$Vous ne pouvez pas verrouiller ceci!!!
+You unlocked it!$Vous crochetez ceci!
+You cannot unlock this!!!$Vous ne pouvez pas crocheter ceci!!!
+It's trapped!$Il y a un piege!
+You cannot trap this!!!$Vous ne pouvez pas mettre de piege ici!!!
+You successfully untrap this item!$Vous desamorcez cet objet avec brio!
+This item doesn't seem to be trapped!$Cet objet ne semble pas etre piege!
+This item cannot be untrapped!$Cet objet ne peut pas etre desamorce!
+That player isn't dead!$Ce joueur n'est pas mort!
+That player isn't online!$Ce joueur n'est pas connecte!
+Recall rune marked.$Rune de rappel marquee.
+You are in jail and cannot cast spells$Vous etes en prison et ne pouvez pas lancer de sorts
+Unseen forces make thou unable to cast that spell.$Des forces invisibles vous empechent de jeter ce sort.
+You cannot cast with a weapon equipped.$Vous ne pouvez pas lancer de sort avec une arme en main.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/mapstuff.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/msgboard.cpp
+
+Currently posting LOCAL messages$Actuellement en train d'envoyer des messages locaux
+Currently posting REGIONAL messages$Actuellement en train d'envoyer des messages regionaux
+Currently posting GLOBAL messages$Actuellement en train d'envoyer des messages globaux
+$
+Post type set to LOCAL$type de message: LOCAL
+Post type set to REGIONAL$type de messae: REGIONAL
+Post type set to GLOBAL$type de message: GLOBAL
+Invalid post type$Type de message invalide
+You can not reply to global or regional posts$Vous ne pouvez pas repondre aux messages globaux ou regionaux
+Post failed!$Echec de l'envoi du message!
+Invalid post type!$Type de message invalide!
+Post not valid, please notify GM$Message non valide, veuillez le signaler a un GM
+Failed to find post to be removed.$echec de la recherche du message a supprimer.
+Post removed.$Message supprime.
+Thou art not allowed to post messages.$Vous n'etes pas autorise a envoyer des messages.
+Thank you %s for thy service. We have made it safely to %s. Alas, I seem to be a little short on gold. I have nothing to pay you with.$Merci %s pour ce service. Nous l'avons amene a %s sans accident. Helas, je crains de ne pas avoir assez d'or pour vous payer
+Thank you %s for thy service. We have made it safely to %s. Here is thy pay as promised.$Merci %s pour ce service. Nous l'avons amene a %s sans accident. Voici votre paye comme promis.
+You have just received %d gold coins from %s %s$Vous venez de recevoir %d pieces d'or de %s %s
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/necro.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/network.cpp
+
+%s has left the realm$%s a quitte cet univers
+%s %s %s [%s] Compiled by %s$%s %s %s [%s] Compile par %s
+Programmed by: %s$Programme par: %s
+%s entered the realm$%s est entre dans cet univers
+There is NO client version checking active on this shard. The recommanded-dev-team-supported client version for this server version is client version %s though$Il n'y a pas de verification de la version du client sur ce shard. Bien que la version du client recommandee pour ce shard soit %s
+This shard requires the recommanded-dev-team-supported client version for this server version client version %s$Ce shard requiere la version %s du client, recommandee par l'equipe de developpement
+This shard requires client version[s] %s$Ce shard requiere la version %s du client
+ or $ ou 
+ The NoX-Wizard team recommanded client is $ Le client recommande par l'equipe NoX-Wizard est 
+Access Denied!!!$Acces refuse!!!
+Ethereal souls really can't cast spells$Un esprit ne peut vraiment pas lancer de sorts
+You are already casting a spell.$Vous etes deja en train de lancer un sort.
+You cannot cast spells while frozen.$Vous ne pouvez pas lancer de sorts en etant gele.
+To place a bounty on %s, use the command BOUNTY <Amount>.$Pour mettre la tete de  %s a prix, utilisez la commande BOUNTY <Amount>.
+You are now a ghost.$Vous etes a present un esprit.
+The connection between your spirit and the world is too weak.$La connection entre votre esprit et le monde est trop faible.
+You are using a %iD client, version %s$Vous utilisez le client %iD , version %s
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/newbie.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/nox-wizard.cpp
+
+You cannot reach the handle from here$Vous ne pouvez pas atteindre la poignee d'ici
+You refreshed your friend's house$Vous rafraichissez la maison de votre ami
+You refreshed the house$Vous rafraichissez la maison
+This doesnt seem to be a valid door type. Contact a GM.$Ceci ne semble pas etre un type de porte valide. Contactez un GM.
+Time up [%i:%i:%i] Connected players [%i out of %i accounts] Items [%i] Characters [%i]$Heure [%i:%i:%i] Joueurs connectes [%i de %i comptes] Objets [%i] Personnages [%i]
+Runtime lag factors: Corpses not freed from memory [%i] Decayed items still in memory [%i]$Facteurs de lag pendant la duree de fonctionnement: Cadavres non effaces de la memoire [%i] Objets desintegres encore en memoire [%i]
+You are already on a mount.$Vous etes deja sur une monture.
+You dont own that creature.$Cette creature ne vous appartient pas.
+The server is shutting down.$Le serveur est ferme.
+
+
+// tentative de traduction des Heures
+// l'idee est de changer de place les %s afin d'adapter l'ordre
+// reste le gros probleme des 1/4 1/2 et 3/4...
+
+
+It is$Il est
+It is a quarter past$et quart
+It is half past$et demie
+It is a quarter till$quarante-cinq
+%s one o'clock$ une heure %s
+%s two o'clock$ deux heures %s
+%s three o'clock$trois heures %s
+%s four o'clock$quatre heures %s
+%s five o'clock$cinq heures %s
+%s six o'clock$six heures %s 
+%s seven o'clock$sept heures %s 
+%s eight o'clock$huit heures %s 
+%s nine o'clock$neuf heures %s 
+%s ten o'clock$dix heures %s 
+%s eleven o'clock$onze heures %s 
+%s midnight.$minuit %s.
+%s noon.$midi %s.
+%s in the afternoon.$%s de l'apres midi.
+%s in the evening.$%s du soir.
+%s at night.$%s du soir.
+%s in the morning.$%s du matin.
+
+// les heures non traduites sont laissee en commentaire
+
+It is$Il est
+//It is a quarter past$It is a quarter past
+//It is half past$It is half past
+//It is a quarter till$It is a quarter till
+//%s one o'clock$%s one o'clock
+//%s two o'clock$%s two o'clock
+//%s three o'clock$%s three o'clock
+//%s four o'clock$%s four o'clock
+//%s five o'clock$%s five o'clock
+//%s six o'clock$%s six o'clock
+//%s seven o'clock$%s seven o'clock
+//%s eight o'clock$%s eight o'clock
+//%s nine o'clock$%s nine o'clock
+//%s ten o'clock$%s ten o'clock
+//%s eleven o'clock$%s eleven o'clock
+//%s midnight.$%s midnight.
+//%s noon.$%s noon.
+//%s in the afternoon.$%s in the afternoon.
+//%s in the evening.$%s in the evening.
+//%s at night.$%s at nightt.
+//%s in the morning.$%s in the morning.
+
+You see %s attacking %s!$Vous voyez %s attaquer %s!
+%s's items bank box.$Les objets du coffre de banque de %s.
+You feel more agile!$Vous vous sentez plus agile!
+You feel much more agile!$Vous vous sentez beaucoup plus agile!
+The potion had no effect.$La potion n'a pas d'effet.
+The potion was not able to cure this poison.$La potion n'a pas gueri le poison.
+The poison was cured.$Le poison a ete soigne.
+ You cant use that in town!$ Vous ne pouvez pas utiliser ceci en ville!
+Now would be a good time to throw it!$Il serait temps de jeter ceci!
+You feel better!$Vous vous sentez mieux!
+You feel more healty!$Vous vous sentez en meilleure sante!
+You feel much more healty!$Vous vous sentez en bien meilleure sante!
+You poisoned yourself! *sigh*$Vous vous etes empoisonne! *soupir*
+You feel more energetic!$Vous vous sentez en forme!
+You feel much more energetic!$Vous vous sentez en pleine forme!
+You feel more strong!$Vous vous sentez plus fort!
+You feel much more strong!$Vous vous sentez beaucoup plus fort!
+no,no,no,cant you get enough ?$non,non,non,ne pouvez vous pas en obtenir assez?
+You have gained a little karma.$Vous avez gagne un peu de karma.
+You have lost a little karma.$Vous avez perdu un peu de karma.
+You have gained some karma.$Vous avez gagne du karma.
+You have lost some karma.$Vous avez perdu du karma.
+You have gained alot of karma.$Vous avez gagne beaucoup de karma.
+You have lost alot of karma.$Vou avez perdu beaucoup de karma.
+You have gained a huge amount of karma.$Vous avez gagne enormement de karma.
+You have lost a huge amount of karma.$Vous avez perdu enormement de karma.
+You have gained a little fame.$Vous avez gagne un peu de renom.
+You have lost a little fame.$Vous avez perdu un peu de renom.
+You have gained some fame.$Vous avez gagee de la renommee.
+You have lost some fame.$Vous avez perdu de la renommee.
+You have gained alot of fame.$Vous avez gagne beaucoup de renom.
+You have lost alot of fame.$Vous avez perdu beaucoup de renom.
+You have gained a huge amount of fame.$Vous avez gagne enormement de renom.
+You have lost a huge amount of fame.$Vous avez perdu enormement de renom.
+You are now a criminal!$Vous etes maintenant criminel!
+
+// traduit par Styx
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/npcai.cpp
+
+*Doing a summoning ritual.*$*Fait un rituel d'invocation.*
+Hello %s, Welcome to my shop, How may i help thee?.$Bonjour %s, Bienvenue dans mon magasin, En quoi puis-je vous etre utile ?.
+I will nay give life to a scoundrel like thee!$Je ne redonnerai pas la vie a une cannaille comme vous!
+I will nay give life to thee for thou art a criminal!$Je ne vous redonnerai pas la vie a cause de vos actes criminels!
+Thou art dead, but 'tis within my power to resurrect thee.	Live!$Vous etes mort, mais il est en mon pouvoir de vous ressuciter,	Vivez!
+Allow me to resurrect thee ghost.  Thy time of true death has not yet come.$Laissez moi vous ressuciter, esprit. L'heure de votre vraie mort n'a pas encore sonnee.
+Perhaps thou shouldst be more careful.	Here, I shall resurrect thee.$Peut etre devriez vous etre plus prudent. Approchez, je peux vous ressuciter.
+Live again, ghost!	Thy time in this world is not yet done.$Esprit reprend vie!	Le temps qu'il vous a ete imparti sur ce monde n'est pas encore ecoule.
+I shall attempt to resurrect thee.$Je peux essayer de vous ressuciter.
+I despise all things good. I shall not give thee another chance!$Je meprise tout ce qui est bon. Je ne devrais pas vous donner une autre chance!
+Fellow minion of Mondain, Live!!$Fidel serviteur de Mondain, retrouve la vie!!
+Thou has evil flowing through your vains, so I will bring you back to life.$Le mal coule dans vos veines, je vous ramenerais donc a la vie.
+If I res thee, promise to raise more hell!.$Si je vous ressucite, promettez moi d'etendre le mal encore plus qu'autrefois!
+From hell to Britannia, come alive!.$Depuis l'Enfer jusque sur Britannia, venez en vie!.
+Since you are Evil, I will bring you back to consciouness.$Puisque que vous etes mauvais, je vais vous ramener a la conscience.
+Thou shalt regret thine actions, swine!$Vous regretterez vous actes, chien!
+Could thou spare a few coins?$Pourriez vous vous separer de quelques pieces?
+Hey buddy can you spare some gold?$Hey l'ami, tu n'aurais pas quelques piecettes?
+I have a family to feed, think of the children.$J'ai une famille a nourrir, pensez a mes enfants.
+You better watch your step %s, I am watching thee!!$Vous feriez mieux de faire attention ou vous allez %s, j'ai l'oeil sur vous!!
+%s is an upstanding citizen, I will protect thee in %s.$%s est un honnete citoyen, Je vous protegerai %s.
+Foolish Motal!$Mortel stupide!
+You are ridiculous$Vous etes ridicule
+Die unusefull mortal!$Meurs insignifiant mortel!
+What are you doing? Come here and Die!$Que faites vous? Venez par ici et mourrez!
+Stupid Mortal I'll crush you as a fly$Stupide mortel je vais t'ecraser comme un moustique
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/npcs.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/ntservice.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/nxwgui.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/nxw_utils.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/packets.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/particles.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/party.cpp
+
+This party is no more valid. Sorry.$Ce groupe n'est plus valide. Desole.
+The party is full. Sorry.$Le groupe est plein. Desole
+You've entered the party.$Vous faites parti du groupe.
+Party can loot you!$Le groupe peut vous depouiller!
+Party CANNOT loot you!$Le groupe ne peut pas vous depouiller!
+Your party has been dismembered$Votre groupe a ete defait
+You've been kicked from the party$Vous avez ete ejecte du groupe
+Sorry, can't build a party now (internal server error)!$Desole, nous ne pouvons faire de groupe pour le moment (erreur interne au serveur)!
+You're the leader of this party!$Vous etes le chef de ce groupe!
+The selected person is already in a party. $La personne selectionnee est deja dans un groupe.
+The selected person must be online to give you permission. $La personne selectionnee doit etre connectee pour vous donner la permission.
+You are invited in a party lead by %s. Would you accept ?$Vous etes invite a vous joindre au groupe de %s. Accepterez vous?
+Select the one to add to the party..$Selectionnez la personne a ajouter au groupe..
+You're not in a party!$Vous n'etes pas dans un groupe!
+Private message from %s : %s$Message prive de %s : %s
+Party message from %s : %s$Message du groupe de %s : %s
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/pointer.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/qsf.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/race.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/raceability.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/racegender.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/racerequiredtype.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/racescriptentry.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/raceskill.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/racestartitem.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/racetokenizer.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/racetype.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/rcvpkg.cpp
+
+Thou art dead, but 'tis within my power to resurrect thee.  Live!$Vous etes mort, mais il est en mon pouvoir de vous ressuciter,	Vivez!
+Perhaps thou shouldst be more careful.  Here, I shall resurrect thee.$Peut etre devriez vous etre plus prudent. Venez, je peux vous ressuciter.
+Live again, ghost!  Thy time in this world is not yet done.$Esprit reprend vie!	Le temps qu'il vous a ete imparti sur ce monde n'est pas encore ecoule.
+Come nearer, ghost, and i'll give you life!$Approche esprit, je vais te ramener a la vie!
+I will not give life to a scoundrel like thee!$Je ne redonnerai pas la vie a une cannaille comme vous!
+Come nearer, evil soul, and i'll give you life!$Approche mauvais esprit, et je te redonnerai la vie!
+I dispise all things good. I shall not give thee another chance!$Je meprise tout ce qui est bon. Je ne devrais pas vous donner une autre chance!
+There is no fighting in the jail cells!$Aucun combat dans les cellules de la prison!
+That person is already dead!$Cette personne est deja morte!
+%s cannot be harmed.$%s ne peut pas etre blesse.
+Help! Guards! I've been attacked!$Au secours! Gardes! j'ai ete attaque!
+Help! Guards! Tis a murder being commited!$Au secours! Gardes! Un meutre a ete commis!
+You've gained a little karma.$Vous avez gagne un peu de karma.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/regions.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/remadmin.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/scp_parser.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/scriptc.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/scripts.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/set.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/skills.cpp
+
+// Traduit par Admin Juliunus
+
+You made an item with no quality!$Vous avez cree un objet sans aucune qualite!
+You made an item very below standard quality!$Vous avez fait un objet tres en-deca de la qualite standard!
+You made an item below standard quality!$Vous avez fait un objet en-deca de la qualite standard!
+You made a weak quality item!$Vous avez fait un objet de faible qualite!
+You made a standard quality item!$Vous avez fait un objet de qualite standard!
+You made a nice quality item!$Vous avez fait un objet d'assez bonne qualite!
+You made a good quality item!$Vous avez fait un objet de bonne qualite!
+You made a great quality item!$Vous avez fait un objet de tres bonne qualite!
+You made a beautiful quality item!$Vous avez fait un objet de superbe qualite!
+You made a perfect quality item!$Vous avez fait un objet de qualite parfaite!
+You fail to create the item.$Vous ne parvenez pas a creer l'objet.
+You fail to inscribe the spell$Vous ne parvenez pas a inscrire le sort
+You do not have enough resources anymore!!$Vous n'avez plus assez de ressources!!
+You don't have your blank map anymore!!$Vous n'avez plus votre carte vierge!!
+You scratch on the map but the result is unusable$Vous tentez d'ecrire sur la carte mais le resultat est inutilisabe
+ of high quality$ de haute qualite
+ of h.q.$ de h.q.
+(hQ)$(hQ)
+ of very high quality$ de tres haute qualite
+ of v.h.q.$ de t.h.q.
+(vhQ)$(thQ)
+ of exceptional quality$ de qualite exceptionnelle
+ of e.q.$ d'e.q.
+(eQ)$(eQ)
+You create the item and place it in your backpack.$Vous creez l'objet et le placez dans votre sac.
+You create a corresponding key and put it in the chest$Vous creez une clef correspondante et la placez dans le coffre
+You aren't skilled enough to make anything with what you have.$Vous n'etes pas assez competent pour creer quoi que ce soit avec ce que vous avez.
+You cannot hide while fighting.$Vous ne pouvez pas vous cacher en plein combat.
+You are already hidden$Vous etes deja cache
+You are unable to hide here.$Vous etes incapable de vous cacher ici.
+You have hidden yourself well.$Vous avez reussi a vous cacher.
+You can't stealth on horse!$Vous ne pouvez pas vous cacher sur un cheval!
+You must hide first.$Vous devez d'abord vous cacher.
+You are not hidden well enough. Become better at hiding.$Vous n'etes pas assez bien cache. Apprenez a mieux le faire.
+You can move %i steps unseen.$Vous pouvez faire %i pas furtifs.
+You do not have an instrument to play on!$Vous n'avez pas d'instrument avec lequel jouer!
+You play your hypnotic music, stopping the battle.$Vous jouez une musique hypnotisante, qui arrete la bataille.
+You hear some lovely music, and forget about fighting.$Vous entendez une douce musique, et oubliez votre combat.
+You attempt to calm everyone, but fail.$Vous tentez de calmer tout le monde, mais echouez.
+*%s starts grinding some %s in the mortar.*$*%s commence a piler un peu de %s dans le mortier.*
+You do not have enough reagents for that potion.$Vous n'avez pas assez de reactifs pour cette potion.
+*%s tosses the failed mixture from the mortar, unable to create a potion from it.*$*%s jette la mixture ratee du mortier, incapable d'en creer une potion.*
+*%s pours the completed potion into a bottle.*$*%s verse la potion finie dans une bouteille.*
+This is not an appropriate container for a potion.$Ceci n'est pas un recipient approprie pour une potion.
+// comment traduire ce bordel ?
+// comme ca :)
+an agility$une potion d'agilite
+a greater agility$une potion de grande agilite
+a lesser cure$un remede leger
+a cure$un remede
+a greater cure$un remede puissant
+a lesser explosion$une potion d'explosion mineure
+an explosion$une potion d'explosion
+a greater explosion$une potion d'explosion majeure
+a lesser heal$une potion de soin mineur
+a heal$une potion de soin
+a greater heal$une potion de soin majeur
+a night sight$une potion de vision nocturne
+a lesser poison$un poison faible
+a poison$un poison
+a greater poison$un poison puissant
+a deadly poison$un poison mortel
+a refresh$un rafraichissement
+a total refreshment$un refraichissement total
+a strength$une potion de force
+a greater strength$une potion de grande force
+You have reached the skill-cap of %i and no skill can fall!$Vous avez atteint la limite de competence de %i, et aucune competence ne peut descendre!
+You have reached the stat-cap of %i!$Vous avez atteint la limite de competence de %i!
+You fail your attempt at contacting the netherworld.$Vous manquez votre tentative de contacter le monde de l'au-dela.
+You establish a connection to the netherworld.$Vous etablissez une connection avec l'au-dela.
+You must wait a few moments before using another skill.$Vous devez attendre un moment avant d'utiliser une autre competence.
+you are in jail and cant gain skills here!$Vous ne pouvez pas gagner de competence en prison!
+You cannot do that as a ghost.$Vous ne pouvez pas faire ca en tant que fantome.
+You can't do that while you are casting$Vous ne pouvez pas faire ceci pendant que vous lancez un sort
+Your race cannot use that skill$Votre race ne peut utiliser cette competence
+What item do you wish to get information about?$Sur quel objet voulez-vous obtenir des informations?
+Whom shall I examine?$Qui dois-je examiner?
+What do you wish to appraise and identify?$Que voulez vous identifier?
+What would you like to evaluate?$Que voulez-vous evaluer?
+Tame which animal?$Dresser quel animal?
+Where do you wish to search for hidden characters?$Ou voulez-vous chercher des personnages caches?
+Whom do you wish to incite?$Qui voulez-vous provoquer?
+Whom do you wish to entice?$Qui voulez-vous seduire?
+What do you wish to steal?$Que voulez-vous voler?
+That skill has been disabled.$Cette competence a ete desactivee.
+What do you wish to place a spell on?$Sur quoi voulez-vous placer un sort?
+Whom do you wish to annoy?$Qui voulez-vous ennuyer?
+What animal do you wish to get information about?$Sur quel animal voulez-vous obtenir des informations?
+What corpse do you want to examine?$Quel corps voulez-vous examiner?
+What poison do you want to apply?Quel poison voulez-vous appliquer?
+What do you want to taste?$Que voulez-vous gouter?
+Meditation is turned off.  Tell your GM to enable ARMOR_AFFECT_MANA_REGEN in server.cfg to enable it.$Meditation est desactivee.  Dites au GM d'activer ARMOR_AFFECT_MANA_REGEN dans le server.cfg pour l'activer.
+What do you want to untrap?$Que voulez-vous depieger?
+That skill has not been implemented yet.$Cette competence n'a pas encore ete implementee.
+bad luck, your victim doesnt have a backpack$pas de chance, votre victime n'a pas de sac
+
+
+
+// traduit par Alzair
+
+
+
+You catch yourself red handed.$Vous etes pris en flagrant delit.
+You cannot steal that.$Vous ne pouvez pas voler ceci.
+your victim doesnt have posessions$votre victime n'a pas de possessions
+You reach into %s's pack and try to take something...$Vous mettez la main dans le sac de %s et essayez de prendre quelque chose...
+That is too heavy.$C'est trop lourd.
+You can't steal from gods.$Vous ne pouvez pas voler les Dieux.
+That item has no value to you.$Cet objet n'a pas de valeur a vos yeux.
+You successfully steal that item.$Vous volez cet objet avec brio.
+You failed to steal that item.$Vous ne reussissez pas a voler cet objet.
+You have been cought!$Vous avez ete attrape!
+Guards!! A thief is amoung us!$Gardes!! Un voleur est parmi nous!
+You notice %s trying to steal %s from you!$Vous remarquez %s en train d'essaier de vous voler %s!
+You notice %s trying to steal %s from %s!$Vous remarquez %s en train d'essaier de voler %s a %s!
+You are too far away to steal that item.$Vous etes trop loin pour voler cet objet.
+You are now tracking %s.$Vous etes maintenant en train de traquer %s.
+You see no signs of any animals.$Vous ne voyez aucun signe d'aniamux.
+You see no signs of any creatures.$Vous ne voyez aucun signe de creatures.
+You see no signs of anyone.$Vous ne voyez aucun signe de personnes.
+to the North$vers le Nord
+to the Northwest$vers le Nord Ouest
+to the Northeast$vers le Nord Est
+to the South$vers le Sud
+to the Southwest$vers le Sud Ouest
+to the Southeast$vers le Sud Est
+to the West$Vers l'Ouest
+to the East$Vers l'Est
+right next to you$a votre droite
+%s is to the North$%s est au Nord
+%s is to the Northwest$%s est au Nord Ouest
+%s is to the Northeast$%s est au Nord Est
+%s is to the South$%s est au Sud
+%s is to the Southwest$%s est au Sud Ouest
+%s is to the Southeast$%s est au Sud Est
+%s is to the West$%s est a l'Ouest
+%s is to the East$%s est a l'Est
+%s is right next to you$%s est a droite de vous
+You could not possibly engrave on that!$Vous ne pourriez pas graver sur ceci!
+Sorry this spell is not implemented!$Desole ce sort n'est pas realisable!
+Practice archery on archery buttes !$Entrainez vous au tir a l'arc sur une butte de tir!
+You feel you would gain no more from using that.$Vous sentez que vous ne gagneriez rien de plus en utilisant ceci.
+You collect the arrows.$Vous recuperez les fleches.
+You collect the bolts.$Vous recuperez les carreaux.
+This target is empty$Cette cible est vide
+You pull %d arrows from the target$Vous retirez %d fleches de la cible
+You pull %d bolts from the target$Vous retirez %d carreaux de la cible
+You pull %d arrows and %d bolts from the target$Vous retirez %d fleches et %d carreaux de la cible
+You need to equip a bow to use this.$Vous devez porter un arc pour utiliser ceci.
+You should empty the butte first!$Vous devriez vider la butte d'abord!
+You have nothing to fire!$Vous n'avez rien pour faire feu!
+You learn nothing from practicing here$Vous n'apprenez rien en vous entrainant ici
+You miss the target$Vous manquez la cible
+You hit the outer ring!$Vous touchez le cercle exterieur!
+You hit the middle ring!$Vous touchez le cercle median!
+You hit the inner ring!$Vous touchez le cercle interieur!
+You hit the bullseye!!$Vous touchez le centre!!
+You cant use that from here.$Vous ne pouvez pas utiliser ceci d'ici.
+Your mind is too busy with the war thoughts.$Votre esprit est trop preoccupe par le combat.
+Regenerative forces cannot penetrate your armor.$Les forces regeneratrices ne peuvent pas penetrer votre armure.
+You cannot meditate with a weapon or shield equipped!$Vous ne pouvez pas mediter en portant une arme ou un bouclier!
+You are at peace.$Vous etes en paix.
+You cannot focus your concentration.$Vous n'arrivez pas a vous concentrer.
+You enter a meditative trance.$Vous entrez en transe de meditation.
+Your spiritual forces disturb the enemy!$Vos forces spirituelles perturbent l'ennemi!
+A damned soul is disturbing your mind!$Une ame damnee pertube votre esprit!
+%s is persecuted by a ghost!!$%s est persecute par un fantome!!
+Your mind is not strong enough to disturb the enemy.$Votre esprit n'est pas assez fort pour perturber l'ennemi.
+You are unable to persecute him now...rest a little...$Vous etes incapable de le persecuter maintenant...Reposez vous un peu...
+You don't have an empty map to draw on$Vous n'avez pas de carte vierge sur laquelle dessiner
+You fail to decipher the map$Vous n'arrivez pas a dechiffrer la carte
+You put the deciphered tresure map in your pack$Vous mettez la carte du tresor dechiffree dans votre sac
+You must wait to perform another action$Vous devez attendre avant d'entreprendre une autre action
+
+
+// traduit par Warsitch
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/skitarg.cpp
+
+Time to buy a backpack$Il est temps d'acheter un sac a dos
+
+
+You can't use material outside your backpack$Vous ne pouvez utiliser les materiaux au dehors de votre sac a dos
+
+There are no traps on this object$Il n'y a pas de piege sur cet objet
+
+You don't have enough material to make anything.$Vous n'avez pas assez de materiau pour creer cela.
+
+You cannot use that material for tailoring.$Vous ne pouvez utiliser ce materiau pour faire de la couture.
+
+You cannot use that for fletching.$Vous ne pouvez utiliser cela pour faire des fleches.
+You cannot use that material for carpentry.$Vous ne pouvez utiliser ce materiel pour la menuiserie.
+
+
+The anvil is too far away.$L'enclume est trop eloignee.
+
+You don't have enough %s ingots to make anything.$Vous ne possedez pas assez de de lingots de %s pour faire cela.
+
+You cannot use that material for blacksmithing$Vous ne pouvez utiliser ce materiel pour forger
+
+You cant taste that!$Vous ne povez gouter cela!
+
+You can't quite tell what this item is...$Vous ne pouvez determiner ce qu'est cet objet...
+
+You have to use your forensics evalutation skill to know more on this corpse.$Vous devez utiliser la competence examen post-mortem pour en apprendre plus sur ce corps.
+
+
+You found that this item appears to be called: %s$Vous apprenez que cet objet s'appelle : %s.
+
+This item is poisoned!$Cet objet est empoisonne!
+
+This item shows no poison.$Cet objet ne montre aucune trace de poison.
+
+It is %s by %s$C'est %s par %s
+
+It is made by %s$Cela a ete fait par %s
+
+You don't know its creator!$You don't know its creator!
+Vous ne savez pas qui en est le createur!$Vous ne savez pas qui en est le createur!
+
+You can't know its creator!$Vous ne savez pas qui en est le createur!
+
+You must have a pickaxe or showel in hand in order to mine.$Vous devez avoir une pioche ou pelle en main pour pouvoir miner.
+
+You cant mine while on a horse!$Vous ne pouvez pas miner tout en etant sur un cheval!
+
+You are too tired to mine.$Vous etes trop fatigue pour miner.
+
+
+There is no metal here to mine.$Il n'y a pas de metal a miner ici.
+
+You can't mine that!$Vous ne pouvez miner cela!
+
+You sifted thru the dirt and rocks, but found nothing useable.$Vous filtrez les crasses et les pierres, mais ne trouvez rien d'utilisable.
+
+You must have a weapon in hand in order to chop.$Vous devez avoir une arme en main pour couper du bois.
+
+You are too tired to chop.$Vous etes trop faitigue pour couper du bois.
+
+
+Lumberjacking startup, setting tree values and times...$Lumberjacking startup, setting tree values and times...
+There is no more wood here to chop.$Il n'y a plus rien a couper ici.
+
+No backpack to store logs$Vous ne possedez pas de sac a dos pour stocker les buches.
+
+You chop for a while, but fail to produce any usable wood.$Vous coupez du bois durant un moment, mais n'arrivez pas a produire de buche utilisable.
+
+You sifted through the dirt and found nothing.$Vous filtrez les crasses mais ne trouvez rien.
+
+You have disturbed the rest of a vile undead creature.$Vous avez derange les restes d'un mort-vivant.
+
+You unearthed an old shield and placed it in your pack$Vous decouvrez un vieux bouclier et le mettez dans votre sac.
+
+You have found an old piece armor and placed it in your pack.$Vous avez trouve une vieille partie d'armure, et vous la mettez dans votre sac.
+
+You place a gem in your pack.$Vous mettez une gemme dans votre sac.
+
+You unearthed %i gold coin.$Vous decouvrez %i piece d'or.
+
+You unearthed %i gold coins.$Vous decouvrez %i pieces d'or.
+
+You unearthed a old weapon and placed it in your pack.$Vous decouvrez une vieille arme et vous la mettez dans votre sac.
+
+You have unearthed some old bones and placed them in your pack.$Vous ramassez quelques vieux os et vous les placez dans votre sac.
+
+This grave seems to be empty.$Cette tombe semble vide.
+
+You have no idea what to do with this strange ore$Vous ne savez pas quoi faire de cet etrange minerai
+
+Your hand slips and the last of your materials are destroyed.$Votre main a glisse et les derniers materiaux sont detruits.
+
+Your hand slips and some of your materials are destroyed.$Votre main a glisse et certains materiaux sont detruits.
+
+You have smelted your ore$Vous reussissez a fondre votre minerai
+
+You place some %c%s ingots in your pack.$Vous mettez certains %c%s lingots dans votre sac.
+
+You cant smelt here.$Vous ne pouvez fondre cela ici.
+
+You failed to spin your material.$Vous n'arrivez pas a tissr votre materiau.
+
+You have successfully spun your material.$Vous avez tisse votre materiau avec succes.
+
+You cant tailor here.$Vous ne pouvez coudre ici.
+
+You do not have enough material to make anything!$Vous n'avez pas assez de materiau pour faire quoique ce soit!
+
+You failed to make cloth.$Vous n'avez pas reussi a faire ce vetement.
+
+You have broken and lost some material!$Vous avez detruit une partie de votre materiau.
+
+You have made your cloth.$Vous avez reussi a fabriquer le vetement.
+
+You have made a bolt of cloth.$Vous avez fait tous vous vetements.
+
+You failed to cook the %s and drop some into the ashes.$Vous avez late la cuisson de %s et l'avez reduit en cendres.
+You have cooked the %s,and it smells great.$Vous reussissez la cuisson de %s, ca sent bon.
+
+You failed to mix, and spilt your water.$Vous ratez votre melange.
+
+You have mixed very well to make your dough.$Vous reussissez a faire la pate.
+
+You cant mix here.$Vous ne pouvez melanger ici.
+
+You failed to mix.$Vous n'arrivez pas a melanger.
+
+You have made your uncooked pizza, ready to place in oven.$Vous avez reussi a faire votre pizza, elle est prete a etre mise au four.
+
+You have been revealed!$Vous avez ete revele!
+
+You fail to find anyone.$Vous ne trouvez personne.
+
+You revelaled %s$Vous avez trouvez %s
+
+You cannot provoke other players.$Vous ne pouvez provoquer les autres joueurs.
+
+You play your music, inciting anger, and your target begins to look furious. Whom do you wish it to attack?$Vous jouez un air incitant votre cible a combattre, qui voulez vous qu'elle attaque?
+
+You cant entice that npc!$Vous ne pouvez seduire ce PNJ!
+
+You cant do that in town!$Vous ne pouvez faire cela en ville!
+
+You cannot entice other players.$Vous ne pouvez seduire les autres joueurs.
+
+You play your music, luring them near. Whom do you wish them to follow?$Vous jouez un air les attirant, qui voulez vous qu'ils suivent?
+You play your hypnotic music, luring them near your target.$Vous jouez un air hypnotique qui les attire pres de votre cible.
+Your music fails to attract them.$Vous n'arrivez pas a les attirer avec votre musique.
+
+Your music fails to incite enough anger.$Votre music ne provoque pas assez de colere.
+
+* You see %s attacking %s *$* Vous voyez %s attaquer %s *
+
+You play rather poorly and to no effect.$Vous jouez assez mal, et cela ne produit aucun effet.
+
+There is no bottle in your pack$Il n'y a pas de bouteille dans votre sac.
+
+You grind some bone into powder.$Vous reduisez quelques os en poudre.
+
+That is not a valid reagent.$Ce n'est pas un reactif valide.
+
+You cut some cloth into bandages, and put it in your backpack$Vous coupez quelques vetements en bandages, et les mettez dans votre sac a dos.
+You cannot cut anything from that item.$Vous ne pouvez rien couper de cet objet.
+
+You can't heal while in a fight!$Vous ne pouvez pas soigner en combattant!
+
+You are not close enough to apply the bandages.$Vous n'etes pas assez pres pour appliquer les bandages.
+
+You are not skilled enough to resurrect$Vous n'etes pas assez competent pour ressuciter.
+
+You failed to resurrect the ghost$Vous n'arrivez pas a ressuciter le fantome.
+
+Because of your skill, you were able to resurrect the ghost.$Grace a votre competence, vous avez pu ressuciter le fantome.
+
+You are not skilled enough to cure poison.$Vous n'etes pas assez competent pour guerir le poison.
+
+The poison in your target's system counters the bandage's effect.$Vous n'arrivez pas a soigner le poison avec les bandages.
+
+Because of your skill, you were able to counter the poison.$Grace a votre competence, vous avez pu contrer le poison.
+
+You fail to counter the poison$Vous n'arrivez pas a contrer le poison.
+
+That being is not damaged$Cet etre n'est pas blesse.
+
+You apply the bandages, but they barely help!$Vous appliquez les bandages, mais ils aident a peine!
+
+You are not skilled enough to heal that creature.$Vous n'etes pas assez competent pour soigner cette creature.
+
+You apply the bandages and the creature looks a bit healthier.$Vous appliquez les bandages et la creature semble aller un peu mieux.
+
+That does not appear to be a weapon.$Cela ne semble pas etre une arme.
+
+Attack [%i] Defense [%i] Lodamage [%i] Hidamage [%i]$Attaque [%i] Defense [%i] MinDegat [%i] MaxDegat [%i]
+
+You are not certain...$Vous n'etes pas certain...
+
+Sorry this is a old item and it doesn't have maximum hp$Desole c'est un vieil objet, et il n'a pas les pv maximum
+
+This item $Cet objet
+
+is brand new.$est flambant neuf.
+
+is almost new.$est presque neuf.
+
+is barely used, with a few nicks and scrapes.$est assez use, et quelque peu abime.
+
+is in fairly good condition.$est en assez bon etat.
+
+suffered some wear and tear.$a subi quelques usures.
+
+is well used.$est use.
+
+is rather battered.$est plutot ravage.
+
+is somewhat badly damaged.$est salement endommage.
+
+is flimsy and not trustworthy.$est pret a rendre l'ame
+
+is falling apart.$tombe en pieces.
+
+ Would be extraordinarily deadly.$ Serait extraordinairement mortel.
+
+ Would be a superior weapon.$ Serait une arme superieure.
+
+ Would inflict quite a lot of damage and pain.$ Infligerait beaucoup de degats et de douleur.
+
+ Would probably hurt your opponent a fair amount.$ Blesserait honnetement votre adversaire.
+
+ Would do some damage.$ Ferait quelques degats.
+ 
+ Would do minimal damage.$ Ferait un minimum de degats.
+
+ Might scratch your opponent slightly.$ Pourrait egratiner legerement votre adversaire.
+
+ And is very fast.$ Et est tres rapide.
+
+ And is fast.$ Et est rapide.
+ 
+ And is slow.$ Et est lent.
+ 
+ And is very slow.$ Et est tres lent.
+
+ Is superbly crafted to provide maximum protection.$ Est superbement faite pour donner le maximum de protection.
+
+ Offers excellent protection.$ Offre une excellente protection.
+ 
+ Is a superior defense against attack.$ Est d'une defense superieure contre l'attaque.
+
+ Serves as a sturdy protection.$ sert d'une robuste protection.
+ 
+ Offers some protection against blows.$ Donne quelque protection contre les coups.
+
+ Provides very little protection.$ Fournit tres peu de protection.
+
+ Provides almost no protection.$ Ne fournit quasiment aucune protection.
+
+ Offers no defense against attackers.$ N'offre aucune defence contre les attaques.
+
+It seems an item with no quality!$Cela semble etre un objet sans qualite!
+
+It seems an item very below standard quality!$Cela semble etre un objet de qualite exceptionelle de la moyenne.
+
+
+It seems an item below standard quality!$Cela semble etre un objet d'une qualite au-dessus de la moyenne!
+
+It seems a weak quality item!$Cela semble etre un objet d'une pietre qualite!
+
+It seems a standard quality item!$Cela semble etre un objet d'un qualite moyenne!
+
+It seems a nice quality item!$Cela semble etre un objet d'une belle qualite!
+
+It seems a good quality item!$Cela semble etre un objet d'une bonne qualite!
+
+It seems a great quality item!$Cela semble etre un objet d'une grande qualite!
+
+It seems a beautiful quality item!$Cela semble etre un objet d'une qualite magnifique!
+
+It seems a perfect quality item!$Cela semble etre un objet d'une qualite parfaite!
+
+You can't tell if it is magical or not.$Vous ne sauriez dire si c'est magique ou non.
+
+This item has no hidden magical properties.$Cet objet n'a pas de proprietes magiques cachees.
+
+This item is enchanted with a spell, but you cannot determine which$Cet objet est enchante, mais vous n'arrivez pas a determiner le sort.
+
+It is enchanted with the spell %s, but you cannot determine how many charges remain.$C'est enchante avec le sort %s, mais vous n'arrivez pas a determiner le nombre de charges restantes.
+
+It is enchanted with the spell %s, and has %d charges remaining.$C'est enchante avec le sort %s, et il reste %d charges.
+
+You need to be closer to find out$Vous devez etre plus proche pour examiner
+
+You cannot analyze yourself!$Vous ne pouvez vous analyser vous-meme!
+
+You are not certain..$Vous n'etes pas certain...
+
+That does not appear to be a living being.$Cela ne semble pas etre un etre vivant
+
+That person looks $Cette personne semble etre 
+
+slightly less intelligent than a rock.$visiblement moins intelligente qu'une pierre.
+
+fairly stupid.$vraiment stupide.
+
+not the brightest.$pas la plus brillante.
+
+about average.$ moyenne.
+
+moderately intelligent.$moyennement intelligente.
+
+
+very intelligent.$tres intelligente.
+
+extraordinarily intelligent.$extraordinairement intelligente.
+
+like a formidable intellect, well beyond the ordinary.$un formidable intellectuel, bien au dessus de la moyenne.
+
+like a definite genius.$un genie.
+
+superhumanly intelligent in a manner you cannot comprehend.$sur-humainement intelligente.
+
+You need to be closer to find out more about them$Vous devez etre plus proche pour decouvrir plus a ce sujet.
+
+rather feeble$assez faible.
+
+somewhat weak$legerement faible.
+
+to be of normal strength$d'une force normale.
+
+somewhat strong$assez fort.
+
+very strong$tres forte.
+
+extremely strong$extrememnt forte.
+ 
+extraordinarily strong$extraordinairement forte.
+
+as strong as an ox$aussi fort qu'un ox.
+
+like one of the strongest people you have ever seen$l'une des plus fortes que vous n'ayiez jamais vue
+
+superhumanly strong$sur-humainement forte.
+
+of unknown strenght$d'une force inconnue.
+
+very clumsy$tres maladroit
+
+somewhat uncoordinated$quelque peu coordonne.
+
+moderately dexterous$moyenement agile.
+
+somewhat agile$assez agile.
+
+very agile$tres agile
+
+extremely agile$extremement agile.
+
+extraordinarily agile$extraordinairement agile.
+
+like they move like quicksilver$like they move like quicksilver
+like one of the fastest people you have ever seen$l'une des plus rapides que vous n'ayiez jamais vue.
+
+superhumanly agile$surhumainement agile.
+
+of unknown dexterity$d'une agilite inconnue.
+
+That person looks %s and %s.$Cette personne semble etre %s et %s.
+
+You can't tame that creature.$Vous ne pouvez apprivoiser cette creature.
+
+You already control that creature!$Vous controlez deja cette creature!
+
+That creature looks tame already.$Cette creature est deja apprivoisee.
+
+I've always wanted a pet like you.$J'ai toujours voulu un animal comme toi.
+
+Will you be my friend?$Veux-tu etre mon ami?
+
+// traduit par Alzair
+
+Here %s.$Ici %s.
+Good %s.$Bon %s.
+You were unable to tame it.$Vous n'avez pas reussi a le dresser.
+It seems to accept you as it's master!$Il semble vous accepter comme maitre!
+You can't tame that!$Vous ne pouvez pas dresser ceci!
+Maybe you should just ask.$Peut etre devriez vous demander.
+You are not close enough to beg.$Vous n'etes pas assez proche pour mendier.
+Annoy someone else !$Allez embetter quelqu'un d'autre !
+They seem to ignore your begging plees.$Ils semblent ignorer vos demandes.
+Sorry, I'm poor myself$Desole, je suis moi meme pauvre
+Ohh thou lookest so poor, Here is some gold I hope this will assist thee.$Ohh vous avez l'air si pauvre. Voici un peu d'or, qui j'espere, vous aidera.
+Some gold is placed in your pack.$De l'or est mis dans votre sac a dos.
+That would be foolish.$Cela serait stupide.
+The human race should use dvorak!$La race humaine devrait se servir de dvorak!
+Attack [%i] Defense [%i] Taming [%i] Hit Points [%i] Is Loyal to: [%s]$Attaque [%i] Defense [%i] Dressage [%i] Points de vie [%i] est loyal a: [%s]
+Attack [%i] Defense [%i] Taming [%i] Hit Points [%i] Is Loyal to: himself$Attaque [%i] Defense [%i] Dressage [%i] Points de vie [%i] est loyal a: lui meme
+You can not think of anything relevant at this time.$Vous ne pouvez pas penser a quelque chose de pertinant en ce moment.
+That does not appear to be a corpse.$Ceci ne semble pas etre un cadavre.
+The %s is %i seconds old and the killer was %s.$Le %s est vieux de %i secondes et l'assassin etait %s.
+You are not certain about the corpse.$Vous n'etes pas certain a propos du corps.
+few$peu
+many$beaucoup
+many many$plein
+The %s is %s seconds old.$Le %s est vieux de %s secondes.
+You can't say who was the killer.$Vous ne pouvez pas dire qui etait le meurtrier.
+The killer was %s.$Le meurtrier etait %s.
+That is not a valid poison!$Ce n'est pas un poison valide!
+You cannot poison that item$Vous ne pouvez pas empoisonner cet objet
+Too many items you can poison at least 5 items$Trop d'objets, vous pouvez empoisonner au plus 5 objets
+You successfully poison that item.$Vous empoisonnez cet objet avec brio.
+You fail to apply the poison.$Vous echouez dans l'application du poison.
+You can't poison that item.$Vous ne pouvez pas empoisonner cet objet.
+That is not locked.$Ce n'est pas verrouille.
+You manage to pick the lock.$Vous arrivez a crocheter la serrure.
+You broke your lockpick!$Vous cassez votre passe partout!
+That cannot be unlocked without a key.$Ceci ne peut pas etre deverrouille sans clef.
+You don't have enough ingots to make anything.$Vous avez trop peu de lingots pour faire quoique ce soit.
+You don't have enough log's to make anything.$Vous avez trop peu de buches pour faire quoique ce soit.
+You cannot use that material for tinkering.$Vous ne pouvez pas utiliser ce materiel pour bricoler.
+You break one of the parts.$Vous cassez une des parties.
+Original part no longer exists$La partie originale n'existe plus
+You can't combine these.$Vous ne pouvez combiner ceci.
+You aren't skilled enough to even try that!$Vous n'etes pas assez doue pour essayer cela!
+You combined the parts$Vous combinez les parties
+* Your not skilled enough to repair items.*$Vous n'etes pas assez doue pour reparer les objets.
+ That item cant be repaired.$ Cet objet ne peut pas etre repare .
+ Must be closer to the anvil.$ Vous devez etre plus proche de l'enclume.
+ That item is at full strength.$ Cet objet est comme neuf.
+ * the item has been repaired.*$l'objet a ete repare.
+ * You fail to repair the item. *$ Vous n'arrivez pas a reparer l'objet.
+ * You weaken the item.*$Vous abimez l'objet.
+* Your not skilled enough to smelt items.*$Vous n'etes pas assez doue pour fondre des objets.
+You cant smelt that item!$Vous ne pouvez pas fondre cet objet!
+ Must be closer to the forge.$ Vous devez etre plus proche de la forge.
+The item must be in your backpack$L'objet doit etre dans votre sac a dos
+you smelt the item and place some ingots in your pack.$Vous fondez l'objet et placez des lingots dans votre sac.
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/sndpkg.cpp
+
+Launching your web browser. Please wait...$Lancement de votre Navigateur. Veuillez patienter...
+Thou dont posses nothing of interest to me.$Vous ne possedez rien qui m'interesse.
+Sorry i cannot take so many items..$Desole je ne peux pas prendre tant d'objets
+GM tells %s: %s$Le GM dit %s: %s
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/speech.cpp
+
+no stablemaster around$aucun proprietaire d'etable dans les environs
+which pet?$quel animal?
+Your pet is now stabled, say claim %s to claim your pet$Votre animal est maintenant dans l'etable, dites recuperer %s pour recuperer votre animal
+sorry, I can't return that pet$Desole, je ne peux pas rendre cet animal
+That's %i gold pieces$C'est %i pieces d'or
+Thx! Here's your pet$Merci! Voici votre animal
+you can't affort that %i$vous ne pouvez pas vous permettre ceci %i
+You must be in a chaos guild to get a shield!$Vous devez etre dans une guilde du Chaos pour obtenir ce bouclier!
+Sorry but you are in a order guild!$SDesole mais vous etes dans une guilde de l'Ordre!
+you already have a shield!$Vous avez deja un bouclier!
+Hi fellow guild member,here is your new shield.$Salut confrere, voici votre nouveau bouclier.
+You must be in a order guild to get a shield!$Vous devez etre dans une guilde de l'Ordre pour obtenir ce bouclier!
+Sorry but you are in a chaos guild!$Desole mais vous etes dans une guilde du Chaos!
+Select container to empty:$Selectionnez le recipient a vider:
+hello my name is %s.$Bonjour mon nom est %s.
+it is now$c'est maintenant
+in the evening.$dans la soiree.
+in the morning.$dans la matinee.
+You are in %s$Vous etes dans %s
+You are in the wilderness$Vous etes dans un lieu desert
+I'm a little busy now! Leave me be!$J'ai a faire! Laissez moi!
+Lead on! Payment shall be made when we arrive at %s.$Je vous suis! Le paiement doit etre fait quand nous arriverons a %s.
+Lead on to %s. I shall pay thee when we arrive.$Marchez jusqu'a %s. Je vous payerai quand nous arriverons.
+I am seeking an escort to %s. Wilt thou take me there?$Je cherche une escorte pour aller a %s. M'ameneriez vous la bas?
+I am already being escorted to %s by %s.$Je suis deja escorte jusqu'a %s par %s.
+%s's balance as of now is %i.$%s's balance as of now is %i.
+I can teech thee the following skills: $Je peux vous apprendre les competences suivantes: 
+I am sorry, but I have nothing to teach thee$Je suis desole, mais je n'ai rien a vous apprendre
+Thou wishest to learn of  %s?$Vous souhaiteriez apprendre  %s?
+ I can teach thee no more than thou already knowest!$ Je ne peux pas vous en enseigner plus que vous n'en connaissez deja!
+ I can teach thee no more. Thou already knowest too much!$ Je ne peux vous en enseigner plus. Vous en savez deja beaucoup!
+ Very well I, can train thee up to the level of %i percent for %i gold. Pay for less and I shall teach thee less.$ Tres bien, je peux vous entrainer jusqu'a %i pourcents pour %i pieces d'or. Payez moins et vous en apprendrez moins.
+I am sorry but I cannot train thee in that skill.$Je suis desole, mais je ne peux pas vous entrainer dans cette competence.
+Click on the target to follow.$Cliquez sur la cible a suivre.
+You dont have pets following you$Aucun animal ne vous suit
+You cant have pets attack in town!$Les animaux de compagnie ne peuvant pas attaquer en ville!
+Select the target to attack.$Selectionnez la cible a attaquer.
+Click on the object to fetch.$Clicquez sur l'objet a aller chercher.
+Your pet begins following you.$Votre animal commence a vous suivre.
+Click on the char to guard.$Cliquez sur le personnage a proteger
+Select character to transfer your pet to.$Selectionnez le personnage a qui transferer votre animal.
+*%s appears to have decided that it is better off without a master *$*%s semble avoir decide qu'il serait mieux sans maitre *
+I have no gold waiting for you.$Je n'ai pas d'or pour vous.
+Today's purchases total %i gold. I am keeping %i gold for my self. Here is the remaining %i gold. Have a nice day.$%i pieces d'or pour les achats d'aujourd'hui. Je garde %i pieces d'or pour moi meme. Voici les %i pieces d'or restantes. Passez une bonne journee.
+I don't work for you!$Je ne travaille pas pour vous!
+What would you like to buy?$Que souhaitez vous acheter?
+This item's price has been set to %i.$Le prix de cet objet a ete fixe a %i.
+Enter a description for this item.$Entrez une description pour cet objet.
+No price entered, this item's price has been set to %i.$Aucun prix donne, le prix de cet objet a ete fixe a %i.
+This item is now described as %s, $Cet objet est maintenant decrit comme etant %s, 
+Rune to %s$Rune pour %s
+Rune renamed to: Rune to %s$Rune renommee en: Rune pour %s
+Your new name is: %s$Votre nouveau nom est: %s
+Renamed to: %s$Renomme en: %s
+Counselor Page from %s [%x %x %x %x]: %s$Page de conseiller de %s [%x %x %x %x]: %s
+You have been squelched.$Vous perdez l'usage la parole.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/sregions.cpp
+
+You have left %s.$Vous avez quitte %s.
+You have entered %s.$Vous etes entre dans %s.
+You are now under the protection of the guards.$Vous etes maintenant sous la protection des gardes.
+You are now under the protection of %s guards.$Vous etes maintenant sous la protection des gardes de %s.
+You are no longer under the protection of the guards.$Vous n'etes plus sous la protection des gardes.
+You are no longer under the protection of %s guards.$Vous n'etes plus sous la protection des gardes de %s.
+Respawn now complete.$Respawn maintenant complet.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/srvparms.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/targeting.cpp
+
+That is not a character.$Ce n'est pas un personnage.
+That is not an item.$Ce n'est pas un objet.
+That is not a valid item.$Ce n'est pas un objet valide.
+That is not a valid character.$Ce n'est pas un personnage valide.
+I work for you, you need not buy things from me!$Je travaille pour vous, vous n'avez pas besoin de m'acheter ces objets!
+You cannot afford that.$Vous ne pouvez pas vous permettre cela.
+Thank you.$Merci.
+Select second corner of bounding box.$Selectionnez le second coin de la surface de deplacement.
+Select the NPC to set the bounding rectangle for.$Selectionnez le PNJ a mettre dans cette surface de deplacement.
+You cant delete players$Vous ne pouvez pas effacer de joueurs
+Removing character.$Destruction du personnage.
+Removing item.$Destruction de l'objet.
+You fail and destroy the key blank.$Vous echouez et detruisez la clef de la banque.
+You copy the key.$Vous copiez la clef.
+You lock the container.$Vous verrouillez le recipient.
+Enter new name for key.$Donnez un nom a la clef.
+You unlock the container.$Vous deverrouillez le recipient.
+You lock the door.$Vous verrouillez la porte.
+You unlock the door.$Vous deverrouillez la porte.
+What do you wish the sign to say?$Que voulez vous inscrire sur l'enseigne?
+That key is not blank!$Cette clef n'est pas vierge!
+That does not have a lock.$Ceci n'a pas de serrure.
+The key does not fit into that lock.$Cette clef ne correspond pas a cette serrure.
+It is enchanted with item identification, and has %d charges remaining.$Ceci est enchante avec Identification d'objet, et a %d charges restantes.
+That player is already dead.$Ce joueur est deja mort.
+No amounts over 64k in a pile!$Pas de tas de plus de 64000!
+Kicking player$Joueur kicke
+Select container to fill:$Selectionnez le recipient a remplir:
+That is not a valid container!$Ce n'est pas un recipient valide!
+That is not yours!!$Ceci ne vous appartient pas!!
+You can only dye clothes with this.$Vous pouvez seulement teindre des vetements avec ceci.
+Item info has been dumped to the console.$Item info has been dumped to the console.
+Select second corner of inverse wiping box.$Select second corner of inverse wiping box.
+Select second corner of wiping box.$Selectionnez le second coin de la surface a effacer.
+You cannot throw the potion there!$Vous ne pouvez pas jeter la potion ici!
+You cannot squelch GMs.$Vous ne pouvez pas faire taire les GMs.
+Un-squelching...$Rend l'usage de la parole...
+You have been unsquelched!$Vous retrouvez la parole!
+Squelching...$Retire l'usage de la parole...
+You have been squelched!$Vous perdez l'usage de la parole!
+Select location to put this character.$Selectionnez un lieu ou mettre ce personnage.
+Select location to put this item.$Selectionnez un lieu ou mettre cet objet.
+Moving character...$Deplacement le personnage...
+Moving item...$Deplacement l'objet...
+
+// Traduit par Aragorn
+
+You pluck the bird and get some feathers.$Vous plumez l'oiseau et vous lui prenez quelques plumes.
+You carve away some meat.$Vous decoupez quelques bouts de viande.
+You skin the corpse and get the hides.$Vous depecez le corps et vous en obtenez quelques peaux.
+You skin the corpse and get some unspun wool.$Vous depecez le corps et vous obtenez de la laine.
+You carve away some raw bird.$Vous decoupez quelques morceaux de viande d'oiseau crue.
+You lost some fame and karma!$Vous perdez de votre reputation ainsi que du karma.
+You carve the corpse but find nothing usefull.$Vous decoupez le corps mais vous ne trouvez rien d'utilisable.
+That is too far away.$Ceci est trop loin.
+You hack at the tree and produce some kindling.$Vous coupez quelques branches et obtenez du petit bois.
+You can't think of a way to use your blade on that.$Vous ne trouvez pas comment utiliser votre epee sur cela
+Select NPC to follow this player.$Selectionner un pnj pour suivre ce joueur.
+You are released..$Vous etes libere..
+No object was found at that layer on that character$Pas d'objet trouve sur ce personnage a cet endroit
+That is not a person.$Ceci n'est point un personne.
+The buy containers have been added.$Les recipients d'achat ont ete ajoutes
+Target character not found...$Le personnage cible n'a pas ete trouve
+* %s will now take %s as his master *$* %s considere desormais %s en tant que son maitre *
+Target shopkeeper not found...$Le Marchand cible n'a pas ete trouve
+You are already hiding.$Vous etes deja cache.
+He is already hiding.$Il est deja cache.
+You are not hiding.$Vous n'etes pas cache.
+He is not hiding.$Il n'est pas cache.
+That person isn't dead$Cette personne n'est pas morte.
+Player ejected.$Joueur expulse.
+That is not inside the house.$Ceci n'est pas a l'interieur de la maison.
+%s has been removed from the house registry.$%s a ete efface de la maison d'inscription.
+That player is not on the house registry.$Ce personnage n'est pas a l'interieur de la maison d'inscription.
+you cannot lock this down!$Vous ne pouvez fixer cela!
+You cant lockdown doors or signs!$Vous ne pouvez fixer ni portes ni enseignes!
+You cant lockdown anvils!$Vous ne pouvez fixer les enclumes!
+You cant lockdown forges!$Vous ne pouvez fixer les forge!
+That item is already locked down, release it first!$Cet objet est deja fixe, debloquez le d'abord!
+That item is not in your house!$Cet objet n'est pas dans votre maison!
+Invalid item!$Cet objet est invalide!
+You can only secure chests!$Vous pouvez securiser uniquement les coffres
+this is not your item!$Ceci n'est pas votre objet!
+you cannot release this!$Vous ne pouvez debloquer cela!
+You cant release doors or signs!$Vous ne pouvez debloquer ni portes ni enseignes!
+Item not found.$L'objet n'a pas ete trouve.
+you can't create glowing items in other perons packs or hands$Vous ne pouvez creer d'objet incandescent dans le sac ou les mains d'une autre personne
+that object already glows!\n$Cet objet est deja allume!\n
+no item found$Aucun objet trouve
+you can't unglow items in other perons packs or hands$Vous ne pouvez eteindre les objets dans les sacs ou mains des autres
+that object doesnt glow!\n$Cet objet n'est pas allume\n
+no valid target$Cible non valide.
+Fetch is not available at this time.$la competence 'fetch' n'est pas utilisable pour le moment
+Currently can't guard anyone but yourself!$Pour le moment vous ne pouvez proteger d'autre personne que vous meme!
+Your pet is now guarding you.$Votre animal de compagnie vous protege.
+You can only use this item on a dye vat.$Vous ne pouvez utiliser cet objet que dans un bac de teinture.
+You load the cannon.$Vous chargez le cannon.
+That doesn't work in cannon.$Ceci ne marche pas avec un cannon
+That object doesn't fit into cannon.$Cet objet ne s'adapte pas a ce cannon.
+What item do you want to poison?$Quel objet desirez vous empoisonner?
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/telport.cpp
+
+You have already used an advancement object with this character.$Vous avez deja utilise un Advancement Object sur ce personnage
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/timing.cpp
+
+You are released.$Vous etes libere.
+*Drags in deep*$*Drags in deep*
+*Coughs*$*Tousse*
+*Retches*$*a des haut-le-coeur*
+*Hacking cough*$*toux entrecoupee*
+*Sighs in contentment*$*Soupir de contentement*
+*Puff puff*$*Puff puff*
+Wheeeee!!! Smoking!$Wheeeee!!! fumer!
+You are no longer squelched!$Vous n'etes plus ecrase!
+You are no longer a criminal.$Vous n'etes plus criminel.
+Select your target$Choisissez votre cible.
+Your jail time is over!$Votre emprisonement se termine.
+You are still stuffed from your last meal$Vous ete reste repu de votre dernier repas.
+You are not very hungry but could eat more$Vous n'avez pas vraiment faim mais vous pourriez manger encore quelque peu.
+You are feeling fairly hungry$Vous vous sentez quelque peu affame
+You are extremely hungry$Vous vous penchz de douleur, la faim vous rattrape.
+You are very weak from starvation$Vous etes tres faible par manque de nourriture
+You must eat very soon or you will die!$Si vous ne mangez pas, vous allez mourir!
+You are starving !$Vous etes affamme !
+You have died of starvation$Vous etes mort de famine!
+The poison has killed you.$Le poison a eu raison de vous.
+* %s looks a bit nauseous *$* %s semble malade *
+* %s looks disoriented and nauseous! *$* %s semble desoriente et pris de nausee! *
+* %s is in severe pain! *$* %s souffre intencement! *
+* %s looks extremely weak and is wrecked in pain! *$* %s semble extremement faible et malade...la douleur est insurmontable! *
+The poison has worn off.$le poison s'est dissipe.
+* %s must eat very soon or he will die! *$* %s doit manger rapidement ou il mourra *
+* %s appears to have decided that it is better off without a master *$* %s a decide d'etre son propre maitre *
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/titles.cpp
+
+The Murderous Lady $La dame meurtriere
+The Murderer Lord $Le seigneur meurtrier 
+The %sLady $ La %sdame
+The %sLord $le %sseigneur 
+The Murderer $le meurtrier
+The %s$Le %s
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/tmpeff.cpp
+
+Hmmm, tasty, LSD$Hmm, savoureux, ce LSD
+You start healing yourself...$Vous commencez a vous soigner...
+You continue to heal...$Vous continuez de soigner...
+*%s continues grinding.*$*%s continue de moudre.*
+LSD has worn off$L effet du LSD ce dissipe quelque peu.
+You are now visible.$Vous etes maintenant visible
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/trade.cpp
+
+Alas, I no longer have all those goods in stock. Let me know if there is something else thou wouldst buy.$Malheuresement, nous n'avons plus tout cela en stock. Faites moi savoir si quelque chose d'autre vous interrese..
+Here you are, %s. Someone as special as thee will receive my wares for free of course.$Et voila, %s. Quelqu'un d'aussi special que vous aura mes articles gratuitement, il en va de soit.
+Here you are, %s. %d gold coin%s will be deducted from your bank account.  I thank thee for thy business.$Voila, %s. %d pieces d'or%s seront debitees sur votre compte, Merci pour les achats!
+Here you are, %s.  That will be %d gold coin%s.  I thank thee for thy business.$Voila, %s.  ce sera %d piece%s d'or.  Je vous remercie pour vos achats!
+Alas, thou dost not possess sufficient gold for this purchase!$Malheureusement vous ne disposez pas de suffisamment de moyens pour vous permettre de vous offrir ce que vous desirez, j'en suis le premier desole.
+Sorry %s but i can buy only %i items at time!$Desole %s mais je ne peux acheter que %i articles a la fois!
+Cheating scum! Leave now, before I call the guards!$Espece d'ordure!File avant que je n'appele la garde!
+Time to buy a backpack!$Il serait temps d'acheter un sac a dos!
+%s doesnt have a backpack!$%s na pas de sac a dos
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/trigger.cpp
+
+You need more %s to do that!$Vous avez besoin de plus de %s pour faire cela!
+You need less %s to do that!$ Vous n'avez point besoin d'autant de %s pour faire cela!
+That didn't seem to work.$Cela n'a pas l'air d'avoir marche.
+You are getting clumsier!$Vous devenez plus maladroit!
+You are getting more agile!$Vous devenez plus agile!
+You are still extremely hungry.$Vous etes toujours extremement affamee.
+You feel much less hungry.$Vous vous sentez beaucoup moins affame.
+You begin to feel more satiated.$Vous commencez a etre rassasie.
+You feel quite full.$Vous etes presque repu.
+You are nearly stuffed.$Vous etes bientot repu.
+You have no hunger!$Vous etes repu!
+You do not own that.$Ceci ne vous appartient pas.
+You are getting stupid!$Vous vous sentez plus idiot!
+You are getting more cunning!$Vous vous sentez plus ingenieux!
+You have %i gp in your bank account!$Vous avez %i pieces d'or dans votre compte en banque!
+Your mind is too tired to do that.$Votre etes mentalement trop fatigue pour faire cela.
+You don't have the neccessary supplies to do that.$Vous n'avez pas l'approvisionement necessaire pour faire cela.
+Your body is too tired to do that.$Votre corps est trop fatigue pour faire cela.
+You are getting weaker!$Vous vous sentez plus faible
+You are getting stronger!$Vous sentez plus fort!
+Select a target$Selectionnez une cible
+Your %s is already totally repaired!$Votre %s est deja completement repare!
+Your %s is now repaired! [%.1f%%]$Votre %s est maintenant repare! [%.1f%%]
+Your %s appears to be more ruined than before!$Votre %s semble etre plus endommage qu'avant!
+Your %s was too old and it has been destroyed!$Votre %s etait trop vieux et a ete detruit !
+You can't repair %s !$Vous ne pouvez reparer %s !
+You increased the maximum durability of your %s !$Vous avez augmente la durabilite maximum de %s !
+Your %s was too old and it has been destoryed!$Votre %s etait trop vieux et a ete detruit !
+You can't increase durability of %s !$Vous ne pouvez rendre %s plus durable!
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/uglyed.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/utils.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/walking.cpp
+
+You are too fatigued to move.$Vous etes trop fatigue pour avancer.
+You cannot move while casting.$Vous ne pouvez bouger en incantant votre sort.
+You are frozen and cannot move.$Vous etes immobilise et vous ne pouvez plus bouger.
+You are banned from that location.$Vous avez ete banni de cet emplacement.
+You shoved something invisible aside.$Vous poussez quelquechose d'invisible de cote.
+Being perfectly rested, you shove %s out of the way.$Etant totalement repose, vous poussez %s de votre chemin.
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/weight.cpp
+
+You are overloaded! You can't hold all this weight..$Vous etes surcharge!!Vous ne pouvez garder tout cela sur vous, c'est trop lourd..
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/wip.cpp
+
+
+// C:\Documents and Settings\Administrator\Desktop\newsrc/worldmain.cpp
+
+World data saving...$Sauvegarde des donnees du monde...
+Worldsave Done!\n$Sauvegarde faite!\n

@@ -1,0 +1,38 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_string_api_
+  #endinput
+#endif
+#define _nxw_string_api_
+
+/*!
+\name getStringMode
+\author Xanathar
+\syntax getStringMode()
+\brief Gets the current string mode used
+*/
+native getStringMode();
+
+/*!
+\name setStringMode
+\author Xanathar
+\syntax setStringMode(const mode)
+\param mode: the string mode to set
+\brief Sets the current string mode
+*/
+native setStringMode(const mode);
+
+/*!
+\name sprintf
+\author Sparhawk
+\syntax sprintf(dest[],const format[], ...)
+\param dest[]: the string to copy into
+\param format[]: the string to copy
+\brief Copies formatted output from format into dest
+*/
+native sprintf(dest[],const format[], ...);

@@ -1,0 +1,223 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (containers.xss)                                 ||
+// || Maintained by Endymion		                                  ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION CONTAINER 0
+{ // Box/Pouch
+	GUMP 0x3C
+	X1 40
+	Y1 40
+	X2 140
+	Y2 140
+	ID 0x0E75
+	ID 0x0E79 
+	ID 0x09B2 
+}
+
+SECTION CONTAINER 1
+{ // Leather Bag
+	GUMP 0x3D
+	X1 18
+	Y1 50
+	X2 118
+	Y2 100
+	ID 0x0E76 
+}
+
+SECTION CONTAINER 2
+{ // Keg
+	GUMP 0x3E
+	X1 40
+	Y1 40
+	X2 140
+	Y2 140
+	ID 0x0E77
+	ID 0x0E7A
+	ID 0x0E7F 
+	ID 0x0E83
+}
+
+SECTION CONTAINER 3
+{ // Silver Chest
+	GUMP 0x4A
+	X1 18
+	Y1 100
+	X2 118
+	Y2 150
+	ID 0x0E7C 
+	ID 0x09AB 
+	ID 0x0Ab2 
+}
+
+SECTION CONTAINER 4
+{ // Wooden Box
+	GUMP 0x43
+	X1 18
+	Y1 50
+	X2 118
+	Y2 100
+	ID 0x0E7D 
+	ID 0x09AA 
+}
+
+SECTION CONTAINER 5
+{ // Wooden Crate
+	GUMP 0x44
+	X1 18
+	Y1 30
+	X2 118
+	Y2 80
+	ID 0x0E3D			
+	ID 0x0E3C			
+	ID 0x0E3F			
+	ID 0x0E3E		
+	ID 0x0E7E 
+	ID 0x09A9 
+}
+
+SECTION CONTAINER 6
+{ // Metal & Gold Chest
+	GUMP 0x42
+	X1 18
+	Y1 100
+	X2 118
+	Y2 150
+	ID 0x0E40		
+	ID 0x0E41 
+}
+
+SECTION CONTAINER 7
+{ // Wooden & Gold Chest
+	GUMP 0x49
+	X1 18
+	Y1 100
+	X2 118
+	Y2 150
+	ID 0x0E43		
+	ID 0x0E42 
+}
+
+SECTION CONTAINER 8
+{ // Round Basket
+	GUMP 0x41
+	X1 18
+	Y1 30
+	X2 118
+	Y2 80
+	ID 0x0990 
+}
+
+SECTION CONTAINER 9
+{ // Brass Box
+	GUMP 0x4B
+	X1 18
+	Y1 50
+	X2 118
+	Y2 100
+	ID 0x0E80 
+}
+
+SECTION CONTAINER 10
+{ // Metal Box
+	GUMP 0x40
+	X1 18
+	Y1 50
+	X2 118
+	Y2 100
+	ID 0x09A8
+}
+
+SECTION CONTAINER 11
+{ // Coffin
+	GUMP 0x09
+	X1 20
+	Y1 85
+	X2 70
+	Y2 160
+	ID 0x2006
+}
+
+SECTION CONTAINER 12
+{ // Bookcase
+	GUMP 0x4d
+	X1 18
+	Y1 30
+	X2 118
+	Y2 80
+	ID 0x0A97
+	ID 0x0A98
+	ID 0x0A99
+	ID 0x0A9a
+	ID 0x0A9b
+	ID 0x0A9c
+	ID 0x0A9d
+	ID 0x0A9e 
+}
+
+SECTION CONTAINER 13
+{ // Fancy Armoire
+	GUMP 0x4e
+	X1 18
+	Y1 30
+	X2 118
+	Y2 80
+	ID 0x0A4d
+	ID 0x0A51
+	ID 0x0A4c
+	ID 0x0A50 
+}
+
+SECTION CONTAINER 14
+{ // Wooden Armoire
+	GUMP 0x4f
+	X1 18
+	Y1 30
+	X2 118
+	Y2 80
+	ID 0x0A4f
+	ID 0x0A53
+	ID 0x0A4e
+	ID 0x0A52 
+}
+
+SECTION CONTAINER 15
+{ // Chest of drawers (fancy)
+	GUMP 0x48
+	X1 18
+	Y1 30
+	X2 118
+	Y2 80
+	ID 0x0A30
+	ID 0x0A38 
+}
+
+SECTION CONTAINER 16
+{ // Dresser
+	GUMP 0x51
+	X1 18
+	Y1 30
+	X2 118
+	Y2 80
+	ID 0x0A2c
+	ID 0x0A34
+	ID 0x0A3c
+	ID 0x0A3d
+	ID 0x0A44
+	ID 0x0A35 
+}
+
+SECTION CONTAINER 17
+{ // Hatch
+	GUMP 0x4C
+	X1 18
+	Y1 30
+	X2 118
+	Y2 150
+	ID 0x3EB9
+}
+
+EOF

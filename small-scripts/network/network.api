@@ -1,0 +1,103 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_network_api_
+  #endinput
+#endif
+#define _nxw_network_api_
+
+/*!
+\name getSocketCount
+\author Xanathar
+\syntax getSocketCount()
+\brief Gets the number of sockets connected
+*/
+native getSocketCount();
+
+/*!
+\brief get current socket
+\author Xanathar
+\since 0.10
+\return the socket, if error is INVALID
+\note deprecated
+*/
+native getCurrentSocket();
+
+/*!
+\name getCharFromSocket
+\author Xanathar
+\syntax getCharFromSocket(const socket)
+\param socket: the socket
+\brief Gets the char currently used by the given socket
+*/
+native getCharFromSocket(const socket);
+
+/*!
+\name send_send
+\author Xanathar
+\syntax send_send(const socket, const lenght, const data[])
+\brief
+*/
+native send_send(const socket, const lenght, const data[]);
+
+/*!
+\name send_confirmAttack
+\author Xanathar
+\syntax send_confirmAttack(const socket, const chr)
+\brief
+*/
+native send_confirmAttack(const socket, const chr);
+
+/*!
+\name send_movingfx
+\author Xanathar
+\syntax send_movingfx(const chrsrc, const chrdest, const id, const speed = 5, const loop = 0, const explode = 1)
+\brief
+*/
+native send_movingfx(const chrsrc, const chrdest, const id, const speed = 5, const loop = 0, const explode = 1);
+
+/*!
+\name send_boltfx
+\author Xanathar
+\syntax send_boltfx(const chr)
+\brief
+*/
+native send_boltfx(const chr);
+
+/*!
+\name send_statUpdate
+\author Xanathar
+\syntax send_statUpdate(const chr)
+\brief
+*/
+native send_statUpdate (const chr);
+
+/*!
+\name send_staticfx
+\author Luxor
+\syntax send_staticfx(const chr, const effect)
+\brief
+*/
+native send_staticfx(const chr, const effect);
+
+/*!
+\brief test if status request from client is for character skills
+\author Sparhawk
+\since 0.82
+\syntax rcve_skillsRequest( const socket )
+\return true or false
+*/
+native rcve_skillsRequest( const socket );
+
+/*!
+\brief test if status request from client is for character stats
+\author Sparhawk
+\since 0.82
+\return true or false
+*/
+native rcve_statsRequest (const socket);
+

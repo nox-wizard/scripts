@@ -1,0 +1,365 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_deamons.xss)                                ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//a daemon with sword
+
+SECTION NPC $npc_a_daemon
+{
+    NAME a daemon
+    ID 000a
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    ITEM $item_npc_equiplist_deamon_sword
+    // new random magic sword
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    GOLD 300 600
+    STR 475 505
+    DEX 76 95
+    INT 300 325
+    KARMA -9000
+    FAME 9000
+    MAGICRESISTANCE 700 800
+    TACTICS 700 800
+    SWORDSMANSHIP 800 900
+    PARRYING 800 900
+    WRESTLING 800 900
+    MAGERY 700 800
+    SPATTACK 7552
+    MAGICLEVEL 7
+    MAGICSPHERE $sphere_deamon
+    SPADELAY 5
+    DAMAGE 15 39
+    DEF 18
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_deamon
+    DOORUSE 1
+}
+
+//a daemon unarmed
+
+SECTION NPC $npc_deamon_unarmed
+{
+    NAMELIST $names_daemons
+    //$$ deamon unarmed
+    ID 0009
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_viking_sword
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    GOLD 300 600
+    STR 475 505
+    DEX 76 95
+    INT 300 325
+    KARMA -9000
+    FAME 9000
+    MAGICRESISTANCE 700 800
+    TACTICS 700 800
+    SWORDSMANSHIP 800 900
+    PARRYING 800 900
+    WRESTLING 800 900
+    MAGERY 700 800
+    SPATTACK 7552
+    MAGICLEVEL 8
+    MAGICSPHERE $sphere_deamon
+    SPADELAY 5
+    DAMAGE 15 30
+    DEF 18
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_deamon
+    DOORUSE 1
+}
+
+// Balron with viking sword
+
+SECTION NPC $npc_the_collector_of_souls
+{
+    NAME the Collector of Souls
+    ID 0009
+    SKIN 096c
+    DIRECTION N
+    BACKPACK
+    ITEM $item_npc_equiplist_balron_weapon
+    // new random powerful magic viking sword
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_strong_magical_weapons
+    LOOT $loot_magic_bows
+    LOOT $loot_magic_swords
+    LOOT $loot_magic_maces
+    GOLD 1200 2000
+    STR 985 1185
+    DEX 80 100
+    INT 800 1100
+    KARMA -10000
+    FAME 20000
+    MAGICRESISTANCE 900 1000
+    TACTICS 900 1000
+    SWORDSMANSHIP 900 1000
+    WRESTLING 800 1000
+    PARRYING 800 900
+    MAGERY 980 1500
+    SPATTACK 8191
+    MAGICLEVEL 10
+    MAGICSPHERE $sphere_deamon
+    SPADELAY 5
+    DAMAGE 45 60
+    DEF 35 50
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_deamon
+    DOORUSE 1
+}
+
+// Balron with viking sword
+
+SECTION NPC $npc_slayer
+{
+    NAME Slayer
+    ID 0009
+    SKIN 051d
+    DIRECTION S
+    BACKPACK
+    ITEM $item_npc_equiplist_balron_weapon
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_strong_magical_weapons
+    LOOT $loot_magic_bows
+    LOOT $loot_magic_swords
+    LOOT $loot_magic_maces
+    GOLD 1200 2000
+    STR 985 1185
+    DEX 80 100
+    INT 800 1100
+    KARMA -10000
+    FAME 20000
+    MAGICRESISTANCE 900 1000
+    TACTICS 900 1000
+    SWORDSMANSHIP 900 1000
+    WRESTLING 800 1000
+    PARRYING 800 900
+    MAGERY 980 1500
+    MAGICLEVEL 10
+    MAGICSPHERE $sphere_deamon
+    SPATTACK 8191
+    SPADELAY 5
+    DAMAGE 45 60
+    DEF 35 50
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_deamon
+    DOORUSE 1
+}
+
+// Balron with viking sword
+
+SECTION NPC $npc_lord_of_the_abyss
+{
+    NAME Lord of the Abyss
+    ID 0009
+    SKIN 076c
+    DIRECTION E
+    BACKPACK
+    ITEM $item_npc_equiplist_balron_weapon
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_strong_magical_weapons
+    LOOT $loot_magic_bows
+    LOOT $loot_magic_swords
+    LOOT $loot_magic_maces
+    GOLD 1200 2000
+    STR 985 1185
+    DEX 80 100
+    INT 800 1100
+    KARMA -10000
+    FAME 20000
+    MAGICRESISTANCE 900 1000
+    TACTICS 900 1000
+    SWORDSMANSHIP 900 1000
+    WRESTLING 800 1000
+    PARRYING 800 900
+    MAGERY 980 1500
+    MAGICLEVEL 9
+    MAGICSPHERE $sphere_deamon
+    SPATTACK 8191
+    SPADELAY 5
+    DAMAGE 45 60
+    DEF 35 50
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_deamon
+    DOORUSE 1
+}
+
+//an ice fiend
+
+SECTION NPC $npc_an_ice_fiend
+{
+    NAME an ice fiend
+    ID 0009
+    SKIN 0480
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_potions
+    LOOT $loot_wands
+    GOLD 300 500
+    STR 375 405
+    DEX 15 20
+    INT 200 225
+    KARMA -8000
+    FAME 8000
+    MAGICRESISTANCE 800 900
+    TACTICS 800 1000
+    WRESTLING 800 900
+    PARRYING 750 800
+    DAMAGE 3 24
+    DEF 30
+    MAGERY 800 900
+    MAGICLEVEL 5
+    MAGICSPHERE $sphere_water
+    SPATTACK 7552
+    SPADELAY 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_deamon
+    DOORUSE 1
+}
+
+// an imp
+SECTION NPC $npc_an_imp
+{
+    NAME an imp
+    ID 0027
+    SKIN 0676
+    DIRECTION N
+    BACKPACK
+    MAGERY 400 600
+    SPATTACK 4095
+    MAGICLEVEL 4
+    MAGICSPHERE $sphere_minordeamon
+    SPADELAY 10
+    STR 76 100
+    DEX 15 20
+    INT 86 110
+    KARMA -2500
+    FAME 2500
+    PARRYING 500 600
+    MAGICRESISTANCE 350 500
+    TACTICS 550 700
+    WRESTLING 600 700
+    DAMAGE 3 18
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 751
+    RACE $race_deamon
+    DOORUSE 1
+}
+
+

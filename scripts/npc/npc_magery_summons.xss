@@ -1,0 +1,245 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_magery_summons.xss)                         ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// summoncreature list
+SECTION NPCLIST $npclist_summon_list
+{
+    //$$ summon list
+    $npc_a_chicken
+    $npc_a_horse
+    $npc_a_rabbit
+    $npc_a_cat
+    $npc_a_pig
+    $npc_a_sheep
+    $npc_a_dog
+    $npc_a_horse_1
+    $npc_a_goat
+    $npc_a_timber_wolf
+    $npc_a_gorilla
+    $npc_a_panther
+    $npc_a_hind
+    $npc_a_rideable_llama
+    $npc_a_horse_2
+    $npc_a_black_bear
+    $npc_a_grizzly_bear
+    $npc_a_polar_bear
+    $npc_a_horse_3
+}
+
+
+// a Summoned daemon
+SECTION NPC $npc_summoned_deamon
+{
+    NAME a daemon
+    //$$ summoned deamon
+    ID 000a
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    SPATTACK 7552
+    SPADELAY 5
+    MAGERY 700 800
+    STR 475 505
+    DEX 76 95
+    INT 300 325
+    KARMA -9000
+    FAME 9000
+    MAGICRESISTANCE 700 800
+    TACTICS 700 800
+    SWORDSMANSHIP 800 900
+    PARRYING 800 900
+    WRESTLING 800 900
+    DAMAGE 5 25
+    DEF 18
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 1
+}
+
+// A Summoned Elemental
+SECTION NPC $npc_summoned_air_elemental
+{
+    NAME an air elemental
+    //$$ summoned air elemental
+    ID 000d
+    SKIN 5555
+    DIRECTION N
+    BACKPACK
+    MAGERY 600 750
+    SPATTACK 7552
+    SPADELAY 10
+    STR 125 155
+    DEX 15 20
+    INT 71 95
+    KARMA -6000
+    FAME 6000
+    TACTICS 700 900
+    MAGICRESISTANCE 600 750
+    WRESTLING 800 1000
+    DAMAGE 20 30
+    DEF 40
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 1
+}
+
+// A Summoned Elemental
+SECTION NPC $npc_summoned_earth_elemental
+{
+    NAME an earth elemental
+    //$$ summoned earth elemental
+    ID 000e
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 125 155
+    DEX 15 20
+    INT 71 92
+    KARMA -5000
+    FAME 5000
+    MAGICRESISTANCE 500 950
+    TACTICS 600 1000
+    MACEFIGHTING 600 1000
+    PARRYING 400 650
+    WRESTLING 600 1000
+    DAMAGE 5 20
+    DEF 17
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    DOORUSE 1
+}
+
+// A Summoned Elemental
+SECTION NPC $npc_summoned_fire_elemental
+{
+    NAME a fire elemental
+    //$$ summoned fire elemental
+    ID 000f
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 125 155
+    DEX 15 20
+    INT 71 95
+    KARMA -6000
+    FAME 6000
+    MAGICRESISTANCE 600 750
+    TACTICS 800 1000
+    WRESTLING 700 1000
+    PARRYING 550 650
+    DAMAGE 4 12
+    DEF 20
+    SPATTACK 6176
+    SPADELAY 10
+    MAGERY 600 750
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 1
+}
+
+// A Summoned Elemental
+SECTION NPC $npc_summoned_water_elemental
+{
+    NAME a water elemental
+    //$$ summoned water elemental
+    ID 0010
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 125 155
+    DEX 15 20
+    INT 71 95
+    KARMA -5000
+    FAME 5000
+    MAGICRESISTANCE 600 750
+    TACTICS 800 1000
+    WRESTLING 700 900
+    MAGERY 600 750
+    PARRYING 550 650
+    DAMAGE 4 12
+    DEF 20
+    SPATTACK 4095
+    SPADELAY 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 1
+}
+
+// a Summoned Energy Vortex
+SECTION NPC $npc_summoned_energy_vortex
+{
+    NAME an energy vortex
+    //$$ summoned energy vortex
+    ID 000d
+    SKIN 0144
+    DIRECTION N
+    SPATTACK 7552
+    SPADELAY 5
+    MAGERY 700 800
+    POISON 4
+    STR 475 505
+    DEX 76 95
+    INT 300 325
+    KARMA -9000
+    FAME 9000
+    MAGICRESISTANCE 900 1000
+    TACTICS 900 1000
+    WRESTLING 900 1000
+    DAMAGE 40 70
+    DEF 60
+    NPCWANDER 4
+    NPCAI $npc_ai_madness
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 0
+}
+
+SECTION NPC $npc_summoned_blade_spirit
+{
+    NAME a blade spirit
+    //$$ summoned blade spirit
+    ID 023e
+    SKIN 0000
+    DIRECTION N
+    POISON 1
+    STR 475 505
+    DEX 76 95
+    INT 50 70
+    KARMA -9000
+    FAME 9000
+    MAGICRESISTANCE 600 700
+    TACTICS 900 1000
+    WRESTLING 900 1000
+    DAMAGE 15 20
+    DEF 30
+    NPCWANDER 4
+    NPCAI $npc_ai_madness
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 0
+}
+
+

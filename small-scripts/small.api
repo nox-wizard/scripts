@@ -1,0 +1,27 @@
+/*! \page p_small Small
+* \section small Small 
+* Small feature:
+* 
+* By type with tutorial:
+* <UL>
+* <LI> \ref p_set
+* <LI> \ref p_dinamic_var
+* </UL>
+*
+* API reference
+* <UL>
+* <LI> \ref script_API
+* </UL>
+*/
+
+
+
+
+/*! \page p_dinamic_var Variabili Dinamiche
+* \section dinamin_var Variabili Dinamiche
+*
+*  Come avere infinite variaibli a disposizione
+*
+*
+*
+*/

@@ -1,0 +1,3691 @@
+///////////////////////////////////////////////////////////////////////////////
+
+//   you have to add your translation of the sentence right near the $
+
+//   Remember you MUST put the right number of %s ,%c ecc like in the original sentence
+
+//   and you MUST NOT use special key like ò à è ì * ° £ because 
+
+//   the Ultima Online client doesn't print them on screen
+
+//
+
+//  this file had been created searching for regexp "[$].+$" and replacing 
+
+//  matches with a single "$"
+
+//
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amx.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amx_comp.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amx_dbg.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxcons.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxcore.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/accounts.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/addmenu.cpp
+
+
+
+Sorry, this menu was rather old :($
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxcback.cpp
+
+
+
+You should be faster when choosing an option in your life..$
+
+*You should install a callback for the menu to work*$
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxscript.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxwrap2.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxwraps.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/archive.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/basics.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/boats.cpp
+
+
+
+you entered a boat$
+
+You left the boat.$
+
+You cannot get off here!$
+
+There was an error creating that boat.$
+
+The deed is broken, please contact a Game Master.$
+
+You cannot place your boat there.$
+
+Arr, Sir, we've hit rough waters!$
+
+Arr, somethings in the way!$
+
+Arr, something's in the way!$
+
+Aye, sir.$
+
+Arr,somethings in the way$
+
+
+
+// C:\noxwizard2\nox-wizard\src/books.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/bounty.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/cache.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/calendar.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/cfile.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/char_array.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/charwrap.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/client.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/cmdtable.cpp
+
+
+
+The bounty system is not active.$
+
+You can only place a bounty while you are a ghost.$
+
+You can only place a bounty once after someone has murdered you.$
+
+You have placed a bounty of %d gold coins on %s.$
+
+You were not able to place a bounty (System Error)$
+
+You do not have enough gold to cover the bounty.$
+
+To place a bounty on a murderer, use BOUNTY <amount>$
+
+server is going to sleep for %i seconds!$
+
+server is back from a %i second break$
+
+Shutdown has been interrupted.$
+
+This command is simply no more supported. Sorry :[$
+
+World is now respawning, expect some lag!$
+
+Guards have been reactivated.$
+
+Warning: Guards have been deactivated globally.$
+
+WorldStat Saves will be displayed.$
+
+WorldStat Saves will not be displayed.$
+
+ALL Regions Spawning to MAX, this will cause some lag.$
+
+All NPC's have been wiped.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/combat.cpp
+
+
+
+This item is out of charges.$
+
+You have been poisoned!$
+
+Your weapon has been destroyed$
+
+Your shield has been destroyed$
+
+hits you in your Chest!$
+
+lands a terrible blow to your Chest!$
+
+lands a blow to your Stomach!$
+
+knocks the wind out of you!$
+
+hits you in your Ribs!$
+
+broken your Rib?!$
+
+hits you in Left Arm!$
+
+hits you in Right Arm!$
+
+hits you you straight in the Face!$
+
+lands a stunning blow to your Head!$
+
+hits you to your Head!$
+
+smashed a blow across your Face!$
+
+hits you you square in the Jaw!$
+
+lands a terrible hit to your Temple!$
+
+hits you in Left Thigh!$
+
+hits you in Right Thigh!$
+
+hits you in Groin!$
+
+hits you to your Throat!$
+
+hits you in Left Hand!$
+
+hits you in Right Hand!$
+
+You delivered a paralyzing blow$
+
+Halt, scoundrel!$
+
+You are out of ammunitions!$
+
+You are too tired to attack.$
+
+You have killed %i innocent people.$
+
+You are now a murderer!$
+
+Your %s has been destroyed$
+
+Thou shalt regret thine actions, swine!$
+
+*Doing a summoning ritual.*$
+
+
+
+// C:\noxwizard2\nox-wizard\src/commands.cpp
+
+
+
+Region %d is Spawning %d items/NPCs, this will cause some lag.$
+
+Region %d is Spawning %d NPCs/items, this will cause some lag.$
+
+Killing all characters, this may cause some lag...$
+
+The Counselor Queue is currently full. Contact the shard operator$
+
+and ask them to increase the size of the queue.$
+
+Available Counselors have been notified of your request.$
+
+There was no Counselor available to take your call.$
+
+Please enter the reason for your Counselor request$
+
+The GM Queue is currently full. Contact the shard operator$
+
+Available Game Masters have been notified of your request.$
+
+There was no Game Master available to take your call.$
+
+Please enter the reason for your GM request$
+
+All items have been wiped.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/common_libs.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/console.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/crontab.cpp
+
+
+
+World will be saved in 30 seconds..$
+
+
+
+// C:\noxwizard2\nox-wizard\src/custmenu.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/dbl_single_click.cpp
+
+
+
+ghosts cant do that!$
+
+you need to be closer to play!$
+
+you dont have enough gold to play!$
+
+Single bars, you are a winner!!$
+
+Double bars, you are a winner!!$
+
+Triple bars, you are a winner!!$
+
+Any three 7`s, you are a winner!!$
+
+Three blue 7`s, you are a winner!!$
+
+Three white 7`s, you are a winner!!$
+
+Three red 7`s, you are a winner!!$
+
+Jackpot, you are a winner!!$
+
+Sorry,not a winner,please insert coins.$
+
+You must wait to perform another action.$
+
+That is a secured chest!$
+
+You may not do that as a ghost.$
+
+You cannot use items equipped by other players.$
+
+The scroll must be in your backpack to envoke its magic.$
+
+That doesnt seem to work right now.$
+
+You are not close enough to use that.$
+
+What will you use this on?$
+
+You have been resurrected.$
+
+You are already living!$
+
+That is locked.$
+
+You can't reach that!$
+
+You can't peek into that container or you'll be jailed.$
+
+%s is trying to snoop you!$
+
+You successfully peek into that container.$
+
+You failed to peek into that container.$
+
+Art thou attempting to disturb my privacy?$
+
+You notice %s trying to peek into your pack!$
+
+You are too far away!$
+
+Select teleport target.$
+
+Select item to use the key on?$
+
+This item is locked.$
+
+If you wish to open a spellbook, it must be equipped or in your main backpack.$
+
+Books are currently disabled, sorry :($
+
+You quickly unlock, use, and then relock the door.$
+
+This door is locked.$
+
+You are simply too full to eat any more!$
+
+You eat the food, but are still extremely hungry.$
+
+After eating the food, you feel much less hungry.$
+
+You eat the food, and begin to feel more satiated.$
+
+You feel quite full after consuming the food.$
+
+You are nearly stuffed, but manage to eat the food.$
+
+The food was poisoned!$
+
+If you wish to use this, it must be equipped or in your backpack.$
+
+Seek out the mystic llama herder.$
+
+Wherever you go, there you are.$
+
+Quick! Lord Binary is giving away gold at the castle!$
+
+Ripper is watching you every move.$
+
+The message appears to be too cloudy to make anything out of it.$
+
+You have just lost five strength.. not!$
+
+You're really playing a game you know$
+
+You will be successful in all you do.$
+
+You are a person of culture.$
+
+Give me a break! How much good fortune do you expect!$
+
+That rune is not yet marked!$
+
+Enter new rune name.$
+
+That is out of charges.$
+
+Your wand now has %i charges left$
+
+This is not a rename deed!$
+
+Enter your new name.$
+
+Gulp !$
+
+You can not use that.$
+
+That item is locked down.$
+
+Hello sir! My name is %s and i will be working for you.$
+
+You must be close to a house and have a key in your pack to place that.$
+
+You have %i seconds left in the jail$
+
+Crystall ball shatters..$
+
+What do you wish to identify?$
+
+Which dye vat will you use this on?$
+
+Must be closer to use this!$
+
+Select item to be repaired.$
+
+What item would you like to Smelt?$
+
+Select the clothing to use this on.$
+
+What would you like to use that on ?$
+
+Select material to use.$
+
+Where do you want to dig?$
+
+What do you want to fill the vial with?$
+
+The vial is not in your pack$
+
+Select spinning wheel to spin cotton.$
+
+Select loom to make your cloth$
+
+Build this Monster!$
+
+What would you like to use this with?$
+
+Select cannon to load.$
+
+Select flour to pour this on.$
+
+Select dough to put this on.$
+
+Select your spin wheel to spin wool.$
+
+Select forge to smelt ore on.$
+
+You fail to light a fire.$
+
+You failed to use this statue.$
+
+You failed to use this.$
+
+Fish where?$
+
+Where is an empty bottle for your potion?$
+
+What do you wish to grind with your mortar and pestle?$
+
+What cloth should I use these scissors on?$
+
+Who will you use the bandages on?$
+
+You are at: %s$
+
+What lock would you like to pick?$
+
+What would you like to cook this on?$
+
+You reach down and pick some cotton.$
+
+Select part to combine that with.$
+
+Select part to combine it with.$
+
+Select part to combine with$
+
+You create the sextant.$
+
+you fail to create the sextant.$
+
+You need to be closer to use that.$
+
+You must wait for it to stop swinging !$
+
+You can't think of a way to use that item.$
+
+[%i spells]$
+
+%s %s by %s$
+
+%s at %igp$
+
+%s %i charge$
+
+[Innocent]$
+
+[Criminal]$
+
+[Murderer]$
+
+[locked down]$
+
+[locked down & secure]$
+
+[%i items, %i stones]$
+
+[0 items, 0 stones]$
+
+You cannot ride anything under polymorph effect.$
+
+You are dead and cannot do that.$
+
+Your pet is in battle right now!$
+
+You need to get closer.$
+
+That is not your beast of burden!$
+
+You cannot open monsters paperdolls.$
+
+Take a look at my goods.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/debug.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/dragdrop.cpp
+
+
+
+You are loosing karma!$
+
+You can't wear that$
+
+You are not strong enough to use that.$
+
+You cant wear female armor!$
+
+You already have a weapon equipped!$
+
+Your hands are both occupied!$
+
+You cannot equip a two handed weapon with a weapon equipped!$
+
+You cannot equip a two handed weapon with a two handed weapon equipped!$
+
+You cannot equip a shield with a two handed weapon equipped!$
+
+You cannot equip a two handed weapon with a shield equipped!$
+
+You already have a shield equiped! You must unequip it to use this.$
+
+You already have a weapon equiped!$
+
+You can't put items on other people!$
+
+You can't put items on players! [it could damage stats]$
+
+* You see %s eating %s *$
+
+It doesn't appear to want the item$
+
+Excellent work! You have brought us the head of %s. Here is your reward of %d gold coins.$
+
+You can not claim that prize scoundrel. You are lucky I don't strike you down where you stand!$
+
+Sorry %s i can only use gold$
+
+Thank you %s for the %i gold!$
+
+You have gain a little karma!$
+
+You have gain some karma!$
+
+I thank thee for thy payment. That should give thee a good start on thy way. Farewell!$
+
+I am sorry, but I can only accept gold.$
+
+Hey, putting houses in your pack crashes your back and client !$
+
+Thank thee kindly, but I have done nothing to warrant a gift.$
+
+Hey, putting houses in your pack crashes your back and client!$
+
+This aint your vendor!$
+
+You can only put golds in this bank box!$
+
+As you let go of the item it disappears.$
+
+You can only place spell scrolls in a spellbook!$
+
+You cannot place spells in other peoples spellbooks.$
+
+You already have that spell!$
+
+Set a price for this item.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/encryption.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/fishing.cpp
+
+
+
+You are too far away to reach that$
+
+You need to be closer to the water to fish!$
+
+You fish for a while, but fail to catch anything.$
+
+You are too tired to fish, you need to rest!$
+
+You fished up an old pair of boots!$
+
+You fished up an ancient painting!$
+
+You fished up an ancient weapon!$
+
+You fished up an ancient armor!$
+
+You fished up some treasure!$
+
+You fished up a hughe fish!$
+
+You wait for a while, but nothing happens$
+
+You fished up an old chest!$
+
+You fished up a seashell!$
+
+You fished up a skull!$
+
+You fished up a net!$
+
+You fished up some gold!$
+
+You fished up some bones!$
+
+you catch a fish, but no place for it left$
+
+You pull out an exotic fish!$
+
+You pull out a fish!$
+
+
+
+// C:\noxwizard2\nox-wizard\src/globals.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/guildstones.cpp
+
+
+
+You cannot place guildstones at any other location than your house$
+
+You are already in a guild.$
+
+There are already enough guildstones placed.$
+
+Cannot create guildstone$
+
+Enter a name for the guild.$
+
+Guildstone for %s$
+
+You are not the guildmaster of this guild. Only the guildmaster may use this guildstone teleporter.$
+
+You are not a member of this guild. Ask an existing guildmember to invite you into this guild.$
+
+Recruit someone into the guild.$
+
+View the current roster.$
+
+View the guild's charter.$
+
+Declare your fealty. You are currently loyal to %s.$
+
+Toggle showing the guild's abbreviation in your name to unguilded people. Currently %s.$
+
+Resign from the guild.$
+
+View list of candidates who have been sponsored to the guild.$
+
+Access %s functions.$
+
+View list of guild that %s has declared war on.$
+
+View list of guilds that have declared war on %s.$
+
+View list of guilds that %s have declared war on.$
+
+%s, %s functions$
+
+Set the guild name.$
+
+Set the guild's abbreviation.$
+
+Change the type of the guild. (Currently a%s guild.)$
+
+Set the guild's charter.$
+
+Dismiss a member.$
+
+Declare war from menu.$
+
+Declare war from targeting enemy.$
+
+Declare peace.$
+
+Accept a candidate seeking membership.$
+
+Refuse a candidate seeking membership.$
+
+Set the guildmaster's title.$
+
+Grant a title to another member.$
+
+Move this guildstone.$
+
+Return to the main menu.$
+
+Please select the type you want your guild to be related to.$
+
+Select this to return to main menu.$
+
+Set to Standard.$
+
+Set to Order.$
+
+Set to Chaos.$
+
+Set %s charter.$
+
+Set the charter.$
+
+Set the webpage.$
+
+%s charter.$
+
+%s. Select this to return to the main menu.$
+
+Visit the guild website at %s$
+
+%s list of candidates.$
+
+Select this to return to the menu.$
+
+%s members roster.$
+
+Dismiss what member?$
+
+Refuse what candidate?$
+
+Accept what candidate?.$
+
+Guild that %s has declared war on.$
+
+Grant a title to whom?$
+
+Whom do you wish to be loyal to?$
+
+What guilds do you with to declare war?$
+
+What guilds do you with to declare peace?$
+
+Guilds that have decalred war on %s.$
+
+You are in no guild$
+
+You are no longer in that guild.$
+
+You have been the last member of that guild so the stone vanishes.$
+
+you are in no guild$
+
+You are in an Order/Chaos guild, you cannot toggle your title.$
+
+You toggled your abbreviation on.$
+
+You toggled your abbreviation off.$
+
+This person is already in a guild.$
+
+No more recruit slots free.$
+
+This being is already a candidate.$
+
+This is not a player.$
+
+This person is not in a guild.$
+
+War yourself? Nah.$
+
+%s declared war to %s$
+
+No more war slots free.$
+
+This guild is already in our warlist.$
+
+Take care of that stone!$
+
+Select person to invite into the guild.$
+
+Enter a new guildname.$
+
+Enter a new guild abbreviation.$
+
+Select person to declare war to.$
+
+Enter new guildmastertitle.$
+
+Enter a new charter.$
+
+Enter a new URL.$
+
+You cannot dimiss yourself, please resign from the guild if you wish.$
+
+Kicked that member out of the guild.$
+
+You got dismissed out of your guild.$
+
+Removed candidate from the list.$
+
+This candidate is now a guildmember.$
+
+This guild is full, maximum amount of members reached!$
+
+This candidate is already in another guild, I'll remove him from your list now.$
+
+%s declared peace to %s$
+
+Your guild got renamed to %s$
+
+This name is already taken by another guild.$
+
+Your guild has now the abbreviation: %s$
+
+This abbreviation is already taken by another guild.$
+
+You changed your own title.$
+
+You changed the title.$
+
+You changed the guilds charter.$
+
+You changed the guilds webpage url.$
+
+Your guild is now an Order guild.$
+
+An order shield has been placed in your pack!$
+
+Your guild is now a Chaos guild.$
+
+A chaos shield has been placed in your pack!$
+
+Your guild is now a Standard guild.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/gumps.cpp
+
+
+
+House sign changed.$
+
+Select person to transfer ownership to.$
+
+Select person to eject from house.$
+
+Select person to ban from house.$
+
+Select person to remove from house registry.$
+
+Select person to make a friend of the house.$
+
+HouseGump Called - Button=%i$
+
+You fail your attempt at tracking.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/house.cpp
+
+
+
+Select a place for your structure: $
+
+Select location for building.$
+
+You cannot build houses in town!$
+
+You cannot build your structure there!$
+
+Can not build a house at that location (CBS)!$
+
+You cannot build your stucture there.$
+
+You cant build structures inside structures$
+
+Demolishing House %s$
+
+Converted into a %s.$
+
+A vendor deed for %s$
+
+Packed up vendor %s.$
+
+All house items and keys removed.$
+
+friend of house$
+
+Select item to lock down$
+
+Select item to release$
+
+Select item to secure$
+
+Only the house owner can lock down items!$
+
+
+
+// C:\noxwizard2\nox-wizard\src/html.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/im.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/item_array.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/itemid.cpp
+
+
+
+This item is a musical instrument. You can use it for bardic skills like enticement or provocation$
+
+This a door. To open or close it, double click on it.$
+
+This a locked door. To open or close it, click on the proper key and target it.$
+
+This food you can eat when you're hungry. To eat, double click the food, but beware poisoned food!$
+
+This is a rune for use with recall, mark and gate travel spells$
+
+If you dye (or are dead) you can double click this item to resurrect!$
+
+This is a key you can use (double click) to open doors$
+
+This is the spellbook, where you can write down your own spells for later use$
+
+This is a potion! You can drink that when you need its effects... but beware of poison potions!$
+
+He/She is a player like you. You've met new people!!$
+
+He/She is a Counselor. You can ask him if you need help on the game$
+
+He/She is a Game Master. You can ask his help if you're stuck or have bugs or other problems$
+
+He/She is a vendor which sells items owned by a player. Good shopping!$
+
+Run AWAY!!! It will kill you!!$
+
+
+
+// C:\noxwizard2\nox-wizard\src/items.cpp
+
+
+
+You are not strong enough to keep %s equipped!$
+
+
+
+// C:\noxwizard2\nox-wizard\src/itemwrap.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/los.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/magic.cpp
+
+
+
+In order to open spellbook, it must be equipped in your hand or in the first layer of your backpack.$
+
+Contact your shard op to setup the summon list!$
+
+That is not a spellbook.$
+
+You feel yourself resisting magical energy!$
+
+You are no longer frozen.$
+
+You do not have enough reagents to cast that spell.[$
+
+The spell fizzles.$
+
+Laughs at the poison attempt$
+
+You have dodged the cannon blast, and have taken less damage.$
+
+You are in jail and cannot cast spells$
+
+You can't cast spells here$
+
+Unseen forces make thou unable to cast that spell.$
+
+You cannot cast with a weapon equipped.$
+
+you revealed yourself !$
+
+You have insufficient mana to cast that spell.$
+
+That rune has not been marked yet!$
+
+You are too heavy to do that!$
+
+You feel drained from the attempt.$
+
+You have recalled from the rune.$
+
+Recall rune marked.$
+
+That item is not a recall rune.$
+
+Not a valid target on item!$
+
+You can't cast on someone that far away!$
+
+They are Invulnerable merchants!$
+
+That player isn't dead!$
+
+That player isn't online!$
+
+There seems to be something in the way.$
+
+That is not a person.$
+
+You can't use that spell on characters$
+
+You can't teleport there.$
+
+You can't teleport here!$
+
+Give up wanabe Jesus !$
+
+This spell can be used only on characters$
+
+There seems to be something in the way between you and %s.$
+
+This spell can't be used on characters$
+
+Try as you might, but you cannot see %s well enough to cover.$
+
+You would like to see if anything was there, but there is too much stuff in the way.$
+
+You cannot see the target well.$
+
+ You cant cast in town!$
+
+That is not a valid location.$
+
+It's trapped!$
+
+You cannot trap this!!!$
+
+You successfully untrap this item!$
+
+You miss to untrap this item!$
+
+This item doesn't seem to be trapped!$
+
+This item cannot be trapped!$
+
+It's locked!$
+
+You cannot lock this!!!$
+
+You manage to pick the lock.$
+
+That is not locked.$
+
+That does not have a lock.$
+
+There is something in the way!$
+
+That is not a valid item$
+
+Can't cope with this spell, requires a target but it doesn't specify what type$
+
+Not a valid heal target$
+
+Not a valid recall target$
+
+Not a valid mark target$
+
+Not a valid gate target$
+
+
+
+// C:\noxwizard2\nox-wizard\src/mapstuff.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/msgboard.cpp
+
+
+
+Currently posting LOCAL messages$
+
+Currently posting REGIONAL messages$
+
+Currently posting GLOBAL messages$
+
+$
+
+Post type set to LOCAL$
+
+Post type set to REGIONAL$
+
+Post type set to GLOBAL$
+
+Invalid post type$
+
+You can not reply to global or regional posts$
+
+Post failed!$
+
+Invalid post type!$
+
+Post not valid, please notify GM$
+
+Failed to find post to be removed.$
+
+Post removed.$
+
+Thou art not allowed to post messages.$
+
+Thank you %s for thy service. We have made it safely to %s. Alas, I seem to be a little short on gold. I have nothing to pay you with.$
+
+Thank you %s for thy service. We have made it safely to %s. Here is thy pay as promised.$
+
+You have just received %d gold coins from %s %s$
+
+
+
+// C:\noxwizard2\nox-wizard\src/necro.cpp
+
+
+
+You are too wounded to continue.$
+
+You prick your finger and fill the vial.$
+
+%s has pricked you with a dagger and sampled your blood$
+
+That individual is not anywhere near you.$
+
+You take a sample of blood from the corpse.$
+
+You examine the corpse but, decide any further blood samples would be to contaminated.$
+
+That is not a person or a corpse!$
+
+You do not have a dagger equipped.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/network.cpp
+
+
+
+%s has left the realm$
+
+%s %s %s [%s] Compiled by %s$
+
+Programmed by: %s$
+
+%s entered the realm$
+
+There is NO client version checking active on this shard. The recommanded-dev-team-supported client version for this server version is client version %s though$
+
+This shard requires the recommanded-dev-team-supported client version for this server version client version %s$
+
+This shard requires client version[s] %s$
+
+ or $
+
+ The NoX-Wizard team recommanded client is $
+
+Access Denied!!!$
+
+You are already casting a spell.$
+
+You cannot cast spells while frozen.$
+
+You don't have that spell.$
+
+To place a bounty on %s, use the command BOUNTY <Amount>.$
+
+You are now a ghost.$
+
+The connection between your spirit and the world is too weak.$
+
+You are using a %iD client, version %s$
+
+
+
+// C:\noxwizard2\nox-wizard\src/newbie.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/nox-wizard.cpp
+
+
+
+You cannot reach the handle from here$
+
+You refreshed your friend's house$
+
+You refreshed the house$
+
+This doesnt seem to be a valid door type. Contact a GM.$
+
+Time up [%i:%i:%i] Connected players [%i out of %i accounts] Items [%i] Characters [%i]$
+
+Runtime lag factors: Corpses not freed from memory [%i] Decayed items still in memory [%i]$
+
+You are already on a mount.$
+
+You dont own that creature.$
+
+The server is shutting down.$
+
+It is$
+
+It is a quarter past$
+
+It is half past$
+
+It is a quarter till$
+
+%s one o'clock$
+
+%s two o'clock$
+
+%s three o'clock$
+
+%s four o'clock$
+
+%s five o'clock$
+
+%s six o'clock$
+
+%s seven o'clock$
+
+%s eight o'clock$
+
+%s nine o'clock$
+
+%s ten o'clock$
+
+%s eleven o'clock$
+
+%s midnight.$
+
+%s noon.$
+
+%s in the afternoon.$
+
+%s in the evening.$
+
+%s at night.$
+
+%s in the morning.$
+
+You see %s attacking %s!$
+
+%s's bank box.$
+
+%s's items bank box.$
+
+You feel more agile!$
+
+You feel much more agile!$
+
+The potion had no effect.$
+
+The potion was not able to cure this poison.$
+
+The poison was cured.$
+
+ You cant use that in town!$
+
+Now would be a good time to throw it!$
+
+You feel better!$
+
+You feel more healty!$
+
+You feel much more healty!$
+
+You poisoned yourself! *sigh*$
+
+You feel more energetic!$
+
+You feel much more energetic!$
+
+You feel more strong!$
+
+You feel much more strong!$
+
+no,no,no,cant you get enough ?$
+
+You have gained a little karma.$
+
+You have lost a little karma.$
+
+You have gained some karma.$
+
+You have lost some karma.$
+
+You have gained alot of karma.$
+
+You have lost alot of karma.$
+
+You have gained a huge amount of karma.$
+
+You have lost a huge amount of karma.$
+
+You have gained a little fame.$
+
+You have lost a little fame.$
+
+You have gained some fame.$
+
+You have lost some fame.$
+
+You have gained alot of fame.$
+
+You have lost alot of fame.$
+
+You have gained a huge amount of fame.$
+
+You have lost a huge amount of fame.$
+
+You are now a criminal!$
+
+
+
+// C:\noxwizard2\nox-wizard\src/npcs.cpp
+
+
+
+You break your concentration.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/ntservice.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/nxw_utils.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/nxwgui.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/p_ai.cpp
+
+
+
+Hello %s, Welcome to my shop, How may i help thee?.$
+
+Thou art dead, but 'tis within my power to resurrect thee.  Live!$
+
+Allow me to resurrect thee ghost.  Thy time of true death has not yet come.$
+
+Perhaps thou shouldst be more careful. Here, I shall resurrect thee.$
+
+Live again, ghost! Thy time in this world is not yet done.$
+
+I shall attempt to resurrect thee.$
+
+I will nay give life to a scoundrel like thee!$
+
+I will nay give life to thee for thou art a criminal!$
+
+Fellow minion of Mondain, Live!!$
+
+Thou has evil flowing through your vains, so I will bring you back to life.$
+
+If I res thee, promise to raise more hell!.$
+
+From hell to Britannia, come alive!.$
+
+Since you are Evil, I will bring you back to consciouness.$
+
+I dispise all things good. I shall not give thee another chance!$
+
+Could thou spare a few coins?$
+
+Hey buddy can you spare some gold?$
+
+I have a family to feed, think of the children.$
+
+You better watch your step %s, I am watching thee!!$
+
+%s is an upstanding citizen, I will protect thee in %s.$
+
+Foolish Mortal!$
+
+
+
+// C:\noxwizard2\nox-wizard\src/party.cpp
+
+
+
+This party is no more valid. Sorry.$
+
+The party is full. Sorry.$
+
+You've entered the party.$
+
+Party can loot you!$
+
+Party CANNOT loot you!$
+
+Your party has been dismembered$
+
+You've been kicked from the party$
+
+Sorry, can't build a party now (internal server error)!$
+
+You're the leader of this party!$
+
+The selected person is already in a party. $
+
+The selected person must be online to give you permission. $
+
+You are invited in a party lead by %s. Would you accept ?$
+
+Select the one to add to the party..$
+
+You're not in a party!$
+
+Private message from %s : %s$
+
+Party message from %s : %s$
+
+
+
+// C:\noxwizard2\nox-wizard\src/pointer.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/qsf.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/rcvpkg.cpp
+
+
+
+Perhaps thou shouldst be more careful. Here, I shall resurrect thee.$
+
+Come nearer, ghost, and i'll give you life!$
+
+I will not give life to a scoundrel like thee!$
+
+Come nearer, evil soul, and i'll give you life!$
+
+There is no fighting in the jail cells!$
+
+That person is already dead!$
+
+%s cannot be harmed.$
+
+Help! Guards! I've been attacked!$
+
+Help! Guards! Tis a murder being commited!$
+
+You've gained a little karma.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/regions.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/remadmin.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/scp_parser.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/scriptc.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/scripts.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/set.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/skills.cpp
+
+
+
+You made an item with no quality!$
+
+You made an item very below standard quality!$
+
+You made an item below standard quality!$
+
+You made a weak quality item!$
+
+You made a standard quality item!$
+
+You made a nice quality item!$
+
+You made a good quality item!$
+
+You made a great quality item!$
+
+You made a beautiful quality item!$
+
+You made a perfect quality item!$
+
+You fail to create the item.$
+
+You fail to inscribe the spell$
+
+You do not have enough resources anymore!!$
+
+You don't have your blank map anymore!!$
+
+You scratch on the map but the result is unusable$
+
+ of high quality$
+
+ of h.q.$
+
+(hQ)$
+
+ of very high quality$
+
+ of v.h.q.$
+
+(vhQ)$
+
+ of exceptional quality$
+
+ of e.q.$
+
+(eQ)$
+
+You create the item and place it in your backpack.$
+
+You create a corresponding key and put it in the chest$
+
+You aren't skilled enough to make anything with what you have.$
+
+You cannot hide while fighting.$
+
+You are already hidden$
+
+You are unable to hide here.$
+
+You have hidden yourself well.$
+
+You can't stealth on horse!$
+
+You must hide first.$
+
+You are not hidden well enough. Become better at hiding.$
+
+You can move %i steps unseen.$
+
+You do not have an instrument to play on!$
+
+You play your hypnotic music, stopping the battle.$
+
+You hear some lovely music, and forget about fighting.$
+
+You attempt to calm everyone, but fail.$
+
+*%s starts grinding some %s in the mortar.*$
+
+You do not have enough reagents for that potion.$
+
+*%s tosses the failed mixture from the mortar, unable to create a potion from it.*$
+
+*%s pours the completed potion into a bottle.*$
+
+This is not an appropriate container for a potion.$
+
+an agility$
+
+a greater agility$
+
+a lesser cure$
+
+a cure$
+
+a greater cure$
+
+a lesser explosion$
+
+an explosion$
+
+a greater explosion$
+
+a lesser heal$
+
+a heal$
+
+a greater heal$
+
+a night sight$
+
+a lesser poison$
+
+a poison$
+
+a greater poison$
+
+a deadly poison$
+
+a refresh$
+
+a total refreshment$
+
+a strength$
+
+a greater strength$
+
+Ghosts can not train %s$
+
+You have reached the skill-cap of %i and no skill can fall!$
+
+You have reached the stat-cap of %i!$
+
+You fail your attempt at contacting the netherworld.$
+
+You establish a connection to the netherworld.$
+
+You must wait a few moments before using another skill.$
+
+you are in jail and cant gain skills here!$
+
+You cannot do that as a ghost.$
+
+You can't do that while you are casting$
+
+What item do you wish to get information about?$
+
+Whom shall I examine?$
+
+What do you wish to appraise and identify?$
+
+What would you like to evaluate?$
+
+Tame which animal?$
+
+Where do you wish to search for hidden characters?$
+
+Whom do you wish to incite?$
+
+Whom do you wish to entice?$
+
+What do you wish to steal?$
+
+That skill has been disabled.$
+
+What do you wish to place a spell on?$
+
+Whom do you wish to annoy?$
+
+What animal do you wish to get information about?$
+
+What corpse do you want to examine?$
+
+What poison do you want to apply?$
+
+What do you want to taste?$
+
+Meditation is turned off.  Tell your GM to enable ARMOR_AFFECT_MANA_REGEN in server.cfg to enable it.$
+
+What do you want to untrap?$
+
+That skill has not been implemented yet.$
+
+bad luck, your victim doesnt have a backpack$
+
+You catch yourself red handed.$
+
+You cannot steal that.$
+
+your victim doesnt have posessions$
+
+You reach into %s's pack and try to take something...$
+
+That is too heavy.$
+
+You can't steal from gods.$
+
+That item has no value to you.$
+
+You successfully steal that item.$
+
+You failed to steal that item.$
+
+You have been cought!$
+
+Guards!! A thief is amoung us!$
+
+You notice %s trying to steal %s from you!$
+
+You notice %s trying to steal %s from %s!$
+
+You are too far away to steal that item.$
+
+You are now tracking %s.$
+
+You see no signs of any animals.$
+
+You see no signs of any creatures.$
+
+You see no signs of anyone.$
+
+to the North$
+
+to the Northwest$
+
+to the Northeast$
+
+to the South$
+
+to the Southwest$
+
+to the Southeast$
+
+to the West$
+
+to the East$
+
+right next to you$
+
+%s is to the North$
+
+%s is to the Northwest$
+
+%s is to the Northeast$
+
+%s is to the South$
+
+%s is to the Southwest$
+
+%s is to the Southeast$
+
+%s is to the West$
+
+%s is to the East$
+
+%s is right next to you$
+
+You don't have this spell in your spell book!$
+
+Your hand jerks and you punch a hole in the item$
+
+Your hand slips and you dent the item$
+
+Your hand cramps and you scratch the item$
+
+This item already has a spell!$
+
+Item at max charges!$
+
+Item successfully Engraved$
+
+You added one more charge to the Item$
+
+You could not possibly engrave on that!$
+
+Sorry this spell is not implemented!$
+
+Practice archery on archery buttes !$
+
+You feel you would gain no more from using that.$
+
+You collect the arrows.$
+
+You collect the bolts.$
+
+This target is empty$
+
+You pull %d arrows from the target$
+
+You pull %d bolts from the target$
+
+You pull %d arrows and %d bolts from the target$
+
+You need to equip a bow to use this.$
+
+You should empty the butte first!$
+
+You have nothing to fire!$
+
+You learn nothing from practicing here$
+
+You miss the target$
+
+You hit the outer ring!$
+
+You hit the middle ring!$
+
+You hit the inner ring!$
+
+You hit the bullseye!!$
+
+You cant use that from here.$
+
+Your mind is too busy with the war thoughts.$
+
+Regenerative forces cannot penetrate your armor.$
+
+You cannot meditate with a weapon or shield equipped!$
+
+You are at peace.$
+
+You cannot focus your concentration.$
+
+You enter a meditative trance.$
+
+Your spiritual forces disturb the enemy!$
+
+A damned soul is disturbing your mind!$
+
+%s is persecuted by a ghost!!$
+
+Your mind is not strong enough to disturb the enemy.$
+
+You are unable to persecute him now...rest a little...$
+
+You don't have an empty map to draw on$
+
+You fail to decipher the map$
+
+You put the deciphered tresure map in your pack$
+
+You must wait to perform another action$
+
+
+
+// C:\noxwizard2\nox-wizard\src/skitarg.cpp
+
+
+
+Time to buy a backpack$
+
+You can't use material outside your backpack$
+
+There are no traps on this object$
+
+You don't have enough material to make anything.$
+
+You cannot use that material for tailoring.$
+
+You cannot use that for fletching.$
+
+You cannot use that material for carpentry.$
+
+The anvil is too far away.$
+
+You don't have enough %s ingots to make anything.$
+
+You cannot use that material for blacksmithing$
+
+You cant taste that!$
+
+You can't quite tell what this item is...$
+
+You have to use your forensics evalutation skill to know more on this corpse.$
+
+You found that this item appears to be called: %s$
+
+This item is poisoned!$
+
+This item shows no poison.$
+
+It is %s by %s$
+
+It is made by %s$
+
+You don't know its creator!$
+
+You can't know its creator!$
+
+You cant mine while on a horse!$
+
+You are too tired to mine.$
+
+You are to far away to reach that$
+
+There is no metal here to mine.$
+
+You can't mine that!$
+
+You sifted thru the dirt and rocks, but found nothing useable.$
+
+You place some iron ore in your pack.$
+
+You place a gem in your pack.$
+
+You place some %c%s ore in your pack.$
+
+You are too tired to chop.$
+
+Lumberjacking startup, setting tree values and times...$
+
+There is no more wood here to chop.$
+
+No backpack to store logs$
+
+You chop for a while, but fail to produce any usable wood.$
+
+You place more logs in your pack.$
+
+You place some logs in your pack.$
+
+You sifted through the dirt and found nothing.$
+
+You have disturbed the rest of a vile undead creature.$
+
+You unearthed an old shield and placed it in your pack$
+
+You have found an old piece armor and placed it in your pack.$
+
+You unearthed %i gold coin.$
+
+You unearthed %i gold coins.$
+
+You unearthed a old weapon and placed it in your pack.$
+
+You have unearthed some old bones and placed them in your pack.$
+
+This grave seems to be empty.$
+
+You have no idea what to do with this strange ore$
+
+Your hand slips and the last of your materials are destroyed.$
+
+Your hand slips and some of your materials are destroyed.$
+
+You have smelted your ore$
+
+You place some %c%s ingots in your pack.$
+
+You cant smelt here.$
+
+You failed to spin your material.$
+
+You have successfully spun your material.$
+
+You cant tailor here.$
+
+You do not have enough material to make anything!$
+
+You failed to make cloth.$
+
+You have broken and lost some material!$
+
+You have made your cloth.$
+
+You have made a bolt of cloth.$
+
+You failed to cook the %s and drop some into the ashes.$
+
+You have cooked the %s,and it smells great.$
+
+You failed to mix, and spilt your water.$
+
+You have mixed very well to make your dough.$
+
+You cant mix here.$
+
+You failed to mix.$
+
+You have made your uncooked pizza, ready to place in oven.$
+
+You have been revealed!$
+
+You fail to find anyone.$
+
+You revelaled %s$
+
+You cannot provoke other players.$
+
+You play your music, inciting anger, and your target begins to look furious. Whom do you wish it to attack?$
+
+ You cant entice that npc!$
+
+ You cant do that in town!$
+
+You cannot entice other players.$
+
+You play your music, luring them near. Whom do you wish them to follow?$
+
+You play your hypnotic music, luring them near your target.$
+
+Your music fails to attract them.$
+
+You cant do that in town!$
+
+Silly bard! You can't get something to attack itself.$
+
+Your music succeeds as you start a fight.$
+
+* You see %s attacking %s *$
+
+Your music fails to incite enough anger.$
+
+You play rather poorly and to no effect.$
+
+You grind some bone into powder.$
+
+That is not a valid reagent.$
+
+You cut some cloth into bandages, and put it in your backpack$
+
+You cannot cut anything from that item.$
+
+You can`t heal while in a fight!$
+
+You are not close enough to apply the bandages.$
+
+You are not skilled enough to resurrect$
+
+You failed to resurrect the ghost$
+
+Because of your skill, you were able to resurrect the ghost.$
+
+You are not skilled enough to cure poison.$
+
+The poison in your target's system counters the bandage's effect.$
+
+Because of your skill, you were able to counter the poison.$
+
+You fail to counter the poison$
+
+That being is not damaged$
+
+You apply the bandages, but they barely help!$
+
+You are not skilled enough to heal that creature.Non sei ancora in grado di rivitalizzare quella creatura.
+
+You apply the bandages and the creature looks a bit healthier.$
+
+That does not appear to be a weapon.$
+
+Attack [%i] Defense [%i] Lodamage [%i] Hidamage [%i]$
+
+You are not certain...$
+
+ Sorry this is a old item and it doesn't have maximum hp$
+
+This item $
+
+is brand new.$
+
+is almost new.$
+
+is barely used, with a few nicks and scrapes.$
+
+is in fairly good condition.$
+
+suffered some wear and tear.$
+
+is well used.$
+
+is rather battered.$
+
+is somewhat badly damaged.$
+
+is flimsy and not trustworthy.$
+
+is falling apart.$
+
+ Would be extraordinarily deadly.$
+
+ Would be a superior weapon.$
+
+ Would inflict quite a lot of damage and pain.$
+
+ Would probably hurt your opponent a fair amount.$
+
+ Would do some damage.$
+
+ Would do minimal damage.$
+
+ Might scratch your opponent slightly.$
+
+ And is very fast.$
+
+ And is fast.$
+
+ And is slow.$
+
+ And is very slow.$
+
+ Is superbly crafted to provide maximum protection.$
+
+ Offers excellent protection.$
+
+ Is a superior defense against attack.$
+
+ Serves as a sturdy protection.$
+
+ Offers some protection against blows.$
+
+ Provides very little protection.$
+
+ Provides almost no protection.$
+
+ Offers no defense against attackers.$
+
+It seems an item with no quality!$
+
+It seems an item very below standard quality!$
+
+It seems an item below standard quality!$
+
+It seems a weak quality item!$
+
+It seems a standard quality item!$
+
+It seems a nice quality item!$
+
+It seems a good quality item!$
+
+It seems a great quality item!$
+
+It seems a beautiful quality item!$
+
+It seems a perfect quality item!$
+
+You can't tell if it is magical or not.$
+
+This item has no hidden magical properties.$
+
+This item is enchanted with a spell, but you cannot determine which$
+
+It is enchanted with the spell %s, but you cannot determine how many charges remain.$
+
+It is enchanted with the spell %s, and has %d charges remaining.$
+
+You need to be closer to find out$
+
+You are not certain..$
+
+That does not appear to be a living being.$
+
+That person looks $
+
+slightly less intelligent than a rock.$
+
+fairly stupid.$
+
+not the brightest.$
+
+about average.$
+
+moderately intelligent.$
+
+very intelligent.$
+
+extraordinarily intelligent.$
+
+like a formidable intellect, well beyond the ordinary.$
+
+like a definite genius.$
+
+superhumanly intelligent in a manner you cannot comprehend.$
+
+You cannot analyze yourself!$
+
+You need to be closer to find out more about them$
+
+rather feeble$
+
+somewhat weak$
+
+to be of normal strength$
+
+somewhat strong$
+
+very strong$
+
+extremely strong$
+
+extraordinarily strong$
+
+as strong as an ox$
+
+like one of the strongest people you have ever seen$
+
+superhumanly strong$
+
+of unknown strenght$
+
+very clumsy$
+
+somewhat uncoordinated$
+
+moderately dexterous$
+
+somewhat agile$
+
+very agile$
+
+extremely agile$
+
+extraordinarily agile$
+
+like they move like quicksilver$
+
+like one of the fastest people you have ever seen$
+
+superhumanly agile$
+
+of unknown dexterity$
+
+That person looks %s and %s.$
+
+You can't tame that creature.$
+
+You already control that creature!$
+
+That creature looks tame already.$
+
+I've always wanted a pet like you.$
+
+Will you be my friend?$
+
+Here %s.$
+
+Good %s.$
+
+You were unable to tame it.$
+
+It seems to accept you as it's master!$
+
+You can't tame that!$
+
+Maybe you should just ask.$
+
+You are not close enough to beg.$
+
+Annoy someone else !$
+
+They seem to ignore your begging plees.$
+
+Sorry, I'm poor myself$
+
+Ohh thou lookest so poor, Here is some gold I hope this will assist thee.$
+
+Some gold is placed in your pack.$
+
+That would be foolish.$
+
+The human race should use dvorak!$
+
+Attack [%i] Defense [%i] Taming [%i] Hit Points [%i]$
+
+You can not think of anything relevant at this time.$
+
+That does not appear to be a corpse.$
+
+The %s is %i seconds old and the killer was %s.$
+
+You are not certain about the corpse.$
+
+few$
+
+many$
+
+many many$
+
+The %s is %s seconds old.$
+
+You can't say who was the killer.$
+
+The killer was %s.$
+
+That is not a valid poison!$
+
+You successfully poison that item.$
+
+You fail to apply the poison.$
+
+You can't poison that item.$
+
+You broke your lockpick!$
+
+That cannot be unlocked without a key.$
+
+You don't have enough ingots to make anything.$
+
+You don't have enough log's to make anything.$
+
+You cannot use that material for tinkering.$
+
+You break one of the parts.$
+
+Original part no longer exists$
+
+You can't combine these.$
+
+You aren't skilled enough to even try that!$
+
+You combined the parts$
+
+* Your not skilled enough to repair items.*$
+
+ That item cant be repaired.$
+
+ Must be closer to the anvil.$
+
+ That item is at full strength.$
+
+ * the item has been repaired.*$
+
+ * You fail to repair the item. *$
+
+ * You weaken the item.*$
+
+* Your not skilled enough to smelt items.*$
+
+You cant smelt that item!$
+
+ Must be closer to the forge.$
+
+The item must be in your backpack$
+
+you smelt the item and place some ingots in your pack.$
+
+
+// C:\noxwizard2\nox-wizard\src/sndpkg.cpp
+
+
+
+Launching your web browser. Please wait...$
+
+Thou doth posses nothing of interest to me.$
+
+GM tells %s: %s$
+
+
+
+// C:\noxwizard2\nox-wizard\src/speech.cpp
+
+
+
+no stablemaster around$
+
+which pet?$
+
+Your pet is now stabled, say claim %s to claim your pet$
+
+sorry, I can't return that pet$
+
+That's %i gold pieces$
+
+Thx! Here's your pet$
+
+you can't affort that %i$
+
+You must be in a chaos guild to get a shield!$
+
+Sorry but you are in a order guild!$
+
+you already have a shield!$
+
+Hi fellow guild member,here is your new shield.$
+
+You must be in a order guild to get a shield!$
+
+Sorry but you are in a chaos guild!$
+
+Select container to empty:$
+
+hello my name is %s.$
+
+it is now$
+
+in the evening.$
+
+in the morning.$
+
+You are in %s$
+
+You are in the wilderness$
+
+I'm a little busy now! Leave me be!$
+
+Lead on! Payment shall be made when we arrive at %s.$
+
+Lead on to %s. I shall pay thee when we arrive.$
+
+I am seeking an escort to %s. Wilt thou take me there?$
+
+I am already being escorted to %s by %s.$
+
+%s's balance as of now is %i.$
+
+I can teech thee the following skills: $
+
+I am sorry, but I have nothing to teach thee$
+
+Thou wishest to learn of %s?$
+
+ I can teach thee no more than thou already knowest!$
+
+ I can teach thee no more. Thou already knowest too much!$
+
+ Very well I, can train thee up to the level of %i percent for %i gold. Pay for less and I shall teach thee less.$
+
+I am sorry but I cannot train thee in that skill.$
+
+Click on the target to follow.$
+
+You dont have pets following you$
+
+You cant have pets attack in town!$
+
+Select the target to attack.$
+
+Click on the object to fetch.$
+
+Your pet begins following you.$
+
+Click on the char to guard.$
+
+Select character to transfer your pet to.$
+
+*%s appears to have decided that it is better off without a master *$
+
+I have no gold waiting for you.$
+
+Today's purchases total %i gold. I am keeping %i gold for my self. Here is the remaining %i gold. Have a nice day.$
+
+I don't work for you!$
+
+What would you like to buy?$
+
+This item's price has been set to %i.$
+
+Enter a description for this item.$
+
+No price entered, this item's price has been set to %i.$
+
+This item is now described as %s, $
+
+Rune to %s$
+
+Rune renamed to: Rune to %s$
+
+Your new name is: %s$
+
+Renamed to: %s$
+
+Counselor Page from %s [%x %x %x %x]: %s$
+
+You have been squelched.$
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/sregions.cpp
+
+
+
+You have left %s.$
+
+You have entered %s.$
+
+You are now under the protection of the guards.$
+
+You are now under the protection of %s guards.$
+
+You are no longer under the protection of the guards.$
+
+You are no longer under the protection of %s guards.$
+
+Respawn now complete.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/srvparms.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/targeting.cpp
+
+
+
+That is not a character.$
+
+That is not an item.$
+
+That is not a valid item.$
+
+That is not a valid character.$
+
+I work for you, you need not buy things from me!$
+
+You cannot afford that.$
+
+Thank you.$
+
+You cant delete players$
+
+Removing character.$
+
+Removing item.$
+
+You fail and destroy the key blank.$
+
+You copy the key.$
+
+You lock the container.$
+
+Enter new name for key.$
+
+You unlock the container.$
+
+You lock the door.$
+
+You unlock the door.$
+
+What do you wish the sign to say?$
+
+That key is not blank!$
+
+The key does not fit into that lock.$
+
+It is enchanted with item identification, and has %d charges remaining.$
+
+That player is already dead.$
+
+No amounts over 64k in a pile!$
+
+Kicking player$
+
+You have been kicked!$
+
+Select container to fill:$
+
+That is not a valid container!$
+
+That is not yours!!$
+
+You can only dye clothes with this.$
+
+Item info has been dumped to the console.$
+
+Select second corner of bounding box.$
+
+Select second corner of inverse wiping box.$
+
+Select second corner of wiping box.$
+
+You cannot throw the potion there!$
+
+You cannot squelch GMs.$
+
+Un-squelching...$
+
+You have been unsquelched!$
+
+Squelching...$
+
+You have been squelched!$
+
+Select location to put this character.$
+
+Select location to put this item.$
+
+Moving character...$
+
+Moving item...$
+
+You pluck the bird and get some feathers.$
+
+You carve away some meat.$
+
+You skin the corpse and get the hides.$
+
+You skin the corpse and get some unspun wool.$
+
+You carve away some raw bird.$
+
+You lost some fame and karma!$
+
+You carve the corpse but find nothing usefull.$
+
+That is too far away.$
+
+You hack at the tree and produce some kindling.$
+
+You can't think of a way to use your blade on that.$
+
+Select NPC to follow this player.$
+
+You are released..$
+
+No object was found at that layer on that character$
+
+The buy containers have been added.$
+
+Target character not found...$
+
+You are jailed !$
+
+You notice you just got something new at your backpack..$
+
+* %s will now take %s as his master *$
+
+Target shopkeeper not found...$
+
+You are already hiding.$
+
+He is already hiding.$
+
+You are not hiding.$
+
+He is not hiding.$
+
+That person isn't dead$
+
+You have transferred your house to %s.$
+
+%s has transferred a house to %s.$
+
+Player ejected.$
+
+That is not inside the house.$
+
+%s has been banned from this house.$
+
+That player is already on a house register.$
+
+That player is not on the property.$
+
+%s has been made a friend of the house.$
+
+%s has been removed from the house registry.$
+
+That player is not on the house registry.$
+
+you cannot lock this down!$
+
+You cant lockdown doors or signs!$
+
+You cant lockdown anvils!$
+
+You cant lockdown forges!$
+
+That item is already locked down, release it first!$
+
+That item is not in your house!$
+
+Invalid item!$
+
+You can only secure chests!$
+
+This is not your item!$
+
+you cannot release this!$
+
+You cant release doors or signs!$
+
+Item not found.$
+
+you can't create glowing items in other perons packs or hands$
+
+that object already glows!\n$
+
+no item found$
+
+you can't unglow items in other perons packs or hands$
+
+that object doesnt glow!\n$
+
+no valid target$
+
+Fetch is not available at this time.$
+
+Currently can't guard anyone but yourself!$
+
+Your pet is now guarding you.$
+
+You can only use this item on a dye vat.$
+
+You load the cannon.$
+
+That doesn't work in cannon.$
+
+That object doesn't fit into cannon.$
+
+What item do you want to poison?$
+
+
+
+// C:\noxwizard2\nox-wizard\src/telport.cpp
+
+
+
+You have already used an advancement object with this character.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/timing.cpp
+
+
+
+*Drags in deep*$
+
+*Coughs*$
+
+*Retches*$
+
+*Hacking cough*$
+
+*Sighs in contentment*$
+
+*Puff puff*$
+
+Wheeeee!!! Smoking!$
+
+You are no longer squelched!$
+
+You are no longer a criminal.$
+
+You are no longer a murderer.$
+
+Your jail time is over!$
+
+You're not in jail already ? Please report to GM$
+
+You are released.$
+
+You are still stuffed from your last meal$
+
+You are not very hungry but could eat more$
+
+You are feeling fairly hungry$
+
+You are extremely hungry$
+
+You are very weak from starvation$
+
+You must eat very soon or you will die!$
+
+You are starving !$
+
+You have died of starvation$
+
+* %s looks a bit nauseous *$
+
+* %s looks disoriented and nauseous! *$
+
+* %s is in severe pain! *$
+
+* %s looks extremely weak and is wrecked in pain! *$
+
+The poison has killed you.$
+
+The poison has worn off.$
+
+* %s looks a little hungry *$
+
+* %s looks fairly hungry *$
+
+* %s looks extremely hungry *$
+
+* %s looks weak from starvation *$
+
+* %s appears to have decided that it is better off without a master *$
+
+* %s must eat very soon or he will die! *$
+
+
+
+// C:\noxwizard2\nox-wizard\src/titles.cpp
+
+
+
+The Murderous Lady $
+
+The Murderer Lord $
+
+The %sLady $
+
+The %sLord $
+
+The Murderer $
+
+The %s$
+
+
+
+// C:\noxwizard2\nox-wizard\src/tmpeff.cpp
+
+
+
+*%s continues grinding.*$
+
+LSD has worn off$
+
+You are now visible.$
+
+Hmmm, tasty, LSD$
+
+You start healing yourself...$
+
+You continue to heal...$
+
+
+
+// C:\noxwizard2\nox-wizard\src/trade.cpp
+
+
+
+Alas, I no longer have all those goods in stock. Let me know if there is something else thou wouldst buy.$
+
+Here you are, %s. Someone as special as thee will receive my wares for free of course.$
+
+Here you are, %s. %d gold coin%s will be deducted from your bank account.  I thank thee for thy business.$
+
+Here you are, %s.  That will be %d gold coin%s.  I thank thee for thy business.$
+
+Alas, thou dost not possess sufficient gold for this purchase!$
+
+Sorry %s but i can buy only %i items at time!$
+
+Cheating scum! Leave now, before I call the guards!$
+
+Time to buy a backpack!$
+
+%s doesnt have a backpack!$
+
+
+
+// C:\noxwizard2\nox-wizard\src/trigger.cpp
+
+
+
+You need more %s to do that!$
+
+You need less %s to do that!$
+
+That didn't seem to work.$
+
+You are getting clumsier!$
+
+You are getting more agile!$
+
+You are still extremely hungry.$
+
+You feel much less hungry.$
+
+You begin to feel more satiated.$
+
+You feel quite full.$
+
+You are nearly stuffed.$
+
+You have no hunger!$
+
+You do not own that.$
+
+You are getting stupid!$
+
+You are getting more cunning!$
+
+You have %i gp in your bank account!$
+
+Your mind is too tired to do that.$
+
+You don't have the neccessary supplies to do that.$
+
+Your body is too tired to do that.$
+
+You are getting weaker!$
+
+You are getting stronger!$
+
+Select a target$
+
+Your %s is already totally repaired!$
+
+Your %s is now repaired! [%.1f%%]$
+
+Your %s appears to be more ruined than before!$
+
+Your %s was too old and it has been destroyed!$
+
+You can't repair %s !$
+
+You increased the maximum durability of your %s !$
+
+Your %s was too old and it has been destoryed!$
+
+You can't increase durability of %s !$
+
+
+
+// C:\noxwizard2\nox-wizard\src/uglyed.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/utils.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/walking.cpp
+
+
+
+You are too fatigued to move.$
+
+You cannot move while casting.$
+
+You are frozen and cannot move.$
+
+You are banned from that location.$
+
+You shoved something invisible aside.$
+
+Being perfectly rested, you shove %s out of the way.$
+
+
+
+// C:\noxwizard2\nox-wizard\src/weight.cpp
+
+
+
+You are overloaded! You can't hold all this weight..$
+
+
+
+// C:\noxwizard2\nox-wizard\src/wip.cpp
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/worldmain.cpp
+
+
+
+World data saving...$
+
+Worldsave Done!\n$
+
+
+
+// C:\noxwizard2\nox-wizard\src/accounts.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amx.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amx_api.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amx_comp.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxcback.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxscript.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amxwraps.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/basetype.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/basics.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/boats.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/books.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/bounty.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/calendar.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/char_array.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/chars.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/charwrap.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/classes.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/client.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/cmdtable.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/common_libs.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/console.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/constants.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/crontab.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/custmenu.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/debug.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/dragdrop.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/encryption.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/globals.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/hcache.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/hfile.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/im.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/inlines.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/item_array.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/itemid.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/items.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/itemwrp.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/msgboard.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/necro.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/ntservice.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/nxw_utils.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/nxwcommn.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/nxwgui.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/osdefs.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/party.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/prototypes.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/range.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/rcvpkg.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/regions.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/remadmin.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/resource.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/sclinux.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/scp_parser.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/scriptc.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/set.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/sndpkg.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/speech.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/sregions.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/srvparms.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/targeting.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/tmpeff.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/trigger.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/typedefs.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/uglyed.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/version.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/wip.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/worldmain.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\CVS/Root
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\CVS/Repository
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\CVS/Entries
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/scexpand.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc1.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc2.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc3.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc4.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc5.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc6.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc7.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sclib.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sclist.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/scpack.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/scvars.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/amx.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/osdefs.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler\CVS/Root
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler\CVS/Repository
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\compiler\CVS/Entries
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/makefile
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm/amx_vm.c
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm/amx_vm.h
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Root
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Repository
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Entries
+
+
+

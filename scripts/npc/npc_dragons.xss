@@ -1,0 +1,751 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_dragons.xss)                                ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 12-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//*************************************************************************
+//************************** Dragon and Wyrms *****************************
+//**************************                  *****************************
+//*************************************************************************
+
+// a wyvern
+
+SECTION NPC $npc_a_wyvern
+{
+    NAME a wyvern
+    ID 003C
+    DIRECTION N
+    SKIN 0663
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    GOLD 250 300
+    STR 450 500
+    DEX 30 45
+    INT 80 115
+    KARMA -6000
+    FAME 6000
+    MAGICRESISTANCE 650 800
+    TACTICS 650 900
+    WRESTLING 650 800
+    PARRYING 650 800
+    DAMAGE 15 26
+    DEF 20
+    NPCWANDER 4
+    SPATTACK 32768
+    SPADELAY 5
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 961
+    POISON 2
+    RACE $race_insect
+    DOORUSE 0
+}
+
+//a drake
+
+SECTION NPC $npc_a_drake
+{
+    NAME a drake
+    ID 003d
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 450 500
+    DEX 30 45
+    INT 80 115
+    INT 100 140
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    KARMA -7000
+    FAME 7000
+    MAGICRESISTANCE 750 800
+    TACTICS 650 900
+    WRESTLING 650 800
+    PARRYING 650 800
+    DAMAGE 10 30
+    DEF 23
+    SPATTACK 16384
+    SPADELAY 5
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 961
+    RACE $race_dragon
+    DOORUSE 0
+}
+
+//a red drake
+
+SECTION NPC $npc_a_drake_1
+{
+    NAME a drake
+    ID 003c
+    SKINLIST 13
+    DIRECTION N
+    BACKPACK
+    GOLD 300 400
+    STR 450 500
+    DEX 30 45
+    INT 100 140
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    KARMA -7000
+    FAME 7000
+    MAGICRESISTANCE 750 800
+    TACTICS 650 900
+    WRESTLING 650 800
+    PARRYING 650 800
+    DAMAGE 15 30
+    DEF 23
+    SPATTACK 16384
+    SPADELAY 5
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 961
+    RACE $race_dragon
+    DOORUSE 0
+}
+
+//a drake  - Chromatic
+
+SECTION NPC $npc_a_drake_2
+{
+    NAME a drake
+    ID 003c
+    SKINLIST 21
+    DIRECTION N
+    BACKPACK
+    GOLD 300 400
+    STR 450 500
+    DEX 30 45
+    INT 100 140
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    KARMA -7000
+    FAME 7000
+    MAGICRESISTANCE 750 800
+    TACTICS 650 900
+    WRESTLING 650 800
+    PARRYING 650 800
+    DAMAGE 10 25
+    DEF 23
+    SPATTACK 16384
+    SPADELAY 5
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 961
+    RACE $race_dragon
+    DOORUSE 0
+}
+
+// a brown dragon
+
+SECTION NPC $npc_a_dragon
+{
+    NAME a dragon
+    ID 000c
+    SKINLIST 13
+    DIRECTION N
+    BACKPACK
+    GOLD 800 1200
+    STR 800 900
+    DEX 50 90
+    INT 450 500
+    LOOT $loot_magic_maces
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    KARMA -9000
+    FAME 10000
+    MAGICRESISTANCE 990 1000
+    TACTICS 980 1000
+    WRESTLING 900 930
+    MAGERY 950 1000
+    PARRYING 550 950
+    DAMAGE 20 50
+    DEF 43
+    SPATTACK 32768
+    SPADELAY 5
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 991
+    RACE $race_dragon
+    DOORUSE 0
+}
+
+//a chromatic dragon
+
+SECTION NPC $npc_a_dragon_1
+{
+    NAME a dragon
+    ID 000c
+    SKINLIST 21
+    DIRECTION N
+    BACKPACK
+    GOLD 800 1200
+    STR 800 850
+    DEX 40 70
+    INT 450 500
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_magic_bows
+    KARMA -9000
+    FAME 10000
+    MAGICRESISTANCE 1900 2900
+    TACTICS 1000 2000
+    WRESTLING 999 1500
+    MAGERY 1000 3000
+    PARRYING 2050 5050
+    DAMAGE 4 20
+    DEF 40
+    SPATTACK 32768
+    SPADELAY 5
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 991
+    RACE $race_dragon
+    DOORUSE 0
+}
+
+//a red dragon
+
+SECTION NPC $npc_a_dragon_2
+{
+    NAME a dragon
+    ID 003b
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    GOLD 800 1200
+    STR 795 825
+    DEX 30 50
+    INT 500 550
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_magic_swords
+    KARMA -9000
+    FAME 10000
+    MAGICRESISTANCE 1900 2900
+    TACTICS 1000 2000
+    WRESTLING 999 1500
+    MAGERY 1000 3000
+    PARRYING 2050 5050
+    DAMAGE 4 20
+    DEF 40
+    SPATTACK 32768
+    SPADELAY 5
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 991
+    RACE $race_dragon
+    DOORUSE 0
+}
+
+//a pure white wyrm
+
+SECTION NPC $npc_a_white_wyrm
+{
+    NAME a white wyrm
+    ID 003b
+    SKIN 0481
+    DIRECTION N
+    BACKPACK
+    GOLD 1000 1500
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_magic_swords
+    KARMA -9000
+    FAME 10000
+    STR 900 1025
+    DEX 30 50
+    INT 1000 1000
+    MAGICRESISTANCE 2000 3000
+    EVALUATINGINTEL 2000 3000
+    TACTICS 1000 2000
+    WRESTLING 999 1500
+    MAGERY 2000 3000
+    PARRYING 2050 5050
+    DAMAGE 30 50
+    DEF 50
+    SPATTACK 7679
+    SPADELAY 5
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 999
+    RACE $race_insect
+    DOORUSE 0
+}
+
+//a white wyrm
+
+SECTION NPC $npc_a_white_wyrm_1
+{
+    NAME a white wyrm
+    ID 000c
+    SKIN 0481
+    DIRECTION N
+    BACKPACK
+    GOLD 1000 1500
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_magic_swords
+    KARMA -9000
+    FAME 10000
+    STR 900 1025
+    DEX 30 50
+    INT 2000 1000
+    MAGICRESISTANCE 2000 3000
+    EVALUATINGINTEL 2000 3000
+    TACTICS 1000 2000
+    WRESTLING 999 1500
+    MAGERY 1000 3000
+    PARRYING 2050 5050
+    DAMAGE 30 50
+    DEF 50
+    SPATTACK 7679
+    SPADELAY 5
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 999
+    RACE $race_insect
+    DOORUSE 0
+}
+
+//a fire wyrm
+
+SECTION NPC $npc_a_fire_wyrm
+{
+    NAME a fire wyrm
+    ID 000c
+    SKIN 00ee
+    DIRECTION N
+    BACKPACK
+    GOLD 3000 4000
+    LOOT $loot_magic_swords
+    KARMA -9000
+    FAME 20000
+    STR 2500 3500
+    DEX 200 300
+    INT 2000 4000
+    EVALUATINGINTEL 2000 3000
+    MAGICRESISTANCE 4000 5000
+    TACTICS 1000 2000
+    WRESTLING 999 1500
+    MAGERY 2000 3000
+    PARRYING 2050 5050
+    DAMAGE 80 100
+    DEF 60
+    SPATTACK 7679
+    SPADELAY 2
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_insect
+    DOORUSE 0
+}
+
+//a brown ancient wyrm
+
+SECTION NPC $npc_an_ancient_wyrm
+{
+    NAME an ancient wyrm
+    ID 000c
+    SKINLIST 13
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    GOLD 2500 4000
+    STR 1200 1300
+    DEX 35 55
+    INT 1100 1500
+    KARMA -10000
+    FAME 10000
+    MAGICRESISTANCE 990 1000
+    TACTICS 950 1000
+    FENCING 950 1000
+    MAGERY 990 1000
+    PARRYING 900 950
+    DAMAGE 30 70
+    DEF 35
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    SPATTACK 32768
+    SPADELAY 5
+    TOTAME 1100
+    RACE $race_insect
+    DOORUSE 0
+}
+
+//a red ancient wyrm
+
+SECTION NPC $npc_an_ancient_wyrm_1
+{
+    NAME an ancient wyrm
+    ID 003b
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    GOLD 2500 4000
+    STR 1100 1250
+    DEX 50 150
+    INT 1000 1200
+    KARMA -12000
+    FAME 12000
+    MAGICRESISTANCE 990 1000
+    TACTICS 950 1000
+    FENCING 950 1000
+    MAGERY 990 1000
+    PARRYING 900 950
+    DAMAGE 35 95
+    DEF 35
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    SPATTACK 32768
+    SPADELAY 5
+    TOTAME 1100
+    RACE $race_insect
+    DOORUSE 0
+}
+
+//a chromatic ancient wyrm
+
+SECTION NPC $npc_an_ancient_wyrm_2
+{
+    NAME an ancient wyrm
+    ID 000c
+    SKINLIST 21
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    GOLD 2500 4000
+    STR 1200 1300
+    DEX 60 150
+    INT 1000 1250
+    KARMA -12000
+    FAME 12000
+    MAGICRESISTANCE 1900 2900
+    TACTICS 1000 2000
+    WRESTLING 999 1500
+    MAGERY 1000 3000
+    PARRYING 2050 5050
+    DAMAGE 4 20
+    DEF 40
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    SPATTACK 32768
+    SPADELAY 5
+    TOTAME 1100
+    RACE $race_insect
+    DOORUSE 0
+}
+
+//a shadow wyrm
+
+SECTION NPC $npc_a_shadow_wyrm
+{
+    NAME a shadow wyrm
+    ID 000c
+    SKIN 5555
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    GOLD 2500 4000
+    STR 1200 1300
+    DEX 35 55
+    INT 1100 1500
+    KARMA -10000
+    FAME 10000
+    MAGICRESISTANCE 990 1000
+    TACTICS 950 1000
+    FENCING 950 1000
+    MAGERY 990 1000
+    PARRYING 900 950
+    DAMAGE 30 70
+    DEF 35
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    SPATTACK 32768
+    SPADELAY 5
+    TOTAME 1100
+    RACE $race_insect
+    DOORUSE 0
+}
+
+SECTION NPC $npc_a_poison_dragon
+{
+    NAME a poison dragon
+    ID 000c
+    SKIN 0594
+    DIRECTION N
+    BACKPACK
+    GOLD 800 1200
+    STR 800 850
+    DEX 40 70
+    INT 450 500
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_magic_bows
+    KARMA -9000
+    FAME 10000
+    MAGICRESISTANCE 1900 2900
+    TACTICS 1000 2000
+    WRESTLING 999 1500
+    MAGERY 1000 3000
+    PARRYING 2050 5050
+    DAMAGE 4 20
+    DEF 40
+    SPATTACK 32768
+    SPADELAY 5
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    POISON 4
+    TOTAME 991
+    RACE $race_dragon
+    DOORUSE 0
+}
+
+

@@ -1,0 +1,273 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (titles.scp)                                     ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// Attention: ORDER AND NUMBER OF ENTRIERS ARE IMPORTANT !!!
+// USE the keyword NONE if you want empty strings, but NEVER actualy leave an entry empty.
+// because it's decreasing the NUBER OF ENTIES what is fatal.
+// NONE currently only works in section OTHER
+//
+// This script requires particular attentions when used with 0.70s (XSS) syntax
+// usually it's better to replace with your own one. sorry for that.
+
+
+UNIQUE SECTION SKILL
+{
+    TITLE Man
+
+    //Alchemy
+    TITLE Alchemist
+
+    //Anatomy
+    TITLE Physician
+
+    //Animal Lore
+    TITLE Beast Master
+
+    //Item Identification
+    TITLE Artificer
+
+    //Arms Lore
+    TITLE Appraiser
+
+    //Parrying
+    TITLE Warrior
+
+    //Begging
+    TITLE Beggar
+
+    //Blacksmithing
+    TITLE Blacksmith
+
+    //Bowcrafting
+    TITLE Bowyer
+
+    //Peacemaking
+    TITLE Minstrel
+
+    //Camping
+    TITLE Woodsman
+
+    //Carpentry
+    TITLE Carpenter
+
+    //Cartography
+    TITLE Explorer
+
+    //Cooking
+    TITLE Cook
+
+    //Detect Hidden
+    TITLE Scout
+
+    //Enticement
+    TITLE Bard
+
+    //Evaluating Inteligence
+    TITLE Mystic
+
+    //Healing
+    TITLE Healer
+
+    //Fishing
+    TITLE Fisherman
+
+    //Forensics
+    TITLE Coroner
+
+    //Herding
+    TITLE Sheperd
+
+    //Hiding
+    TITLE Ninja
+
+    //Provocation
+    TITLE Bard
+
+    //Inscription
+    TITLE Scribe
+
+    //Lockpicking
+    TITLE Locksmith
+
+    //Magery
+    TITLE Magus
+
+    //Magic Resist
+    TITLE Sorceror
+
+    //Tactics
+    TITLE Soldier
+
+    //Snooping
+    TITLE Spy
+
+    //Musicianship
+    TITLE Bard
+
+    //Poisoning
+    TITLE Assassin
+
+    //Archery
+    TITLE Archer
+
+    //Spirit Speak
+    TITLE Medium
+
+    //Stealing
+    TITLE Thief
+
+    //Tailoring
+    TITLE Tailor
+
+    //Taming
+    TITLE Animal Tamer
+
+    //Taste Identification
+    TITLE Food Taster
+
+    //Tinkering
+    TITLE Tinker
+
+    //Tracking
+    TITLE Ranger
+
+    //Veterinary
+    TITLE Veterinarian
+
+    //Swordsmanship
+    TITLE Swordsman
+
+    //Mace Fighting
+    TITLE Macefighter
+
+    //Fencing
+    TITLE Fencer
+
+    //Wrestling
+    TITLE Wrestler
+
+    //Lumberjacking
+    TITLE Lumberjack
+
+    //Mining
+    TITLE Miner
+}
+
+UNIQUE SECTION PROWESS
+{
+    Idiot
+    Neophyte
+    Novice
+    Apprentice
+    Journeyman
+    Expert
+    Adept
+    Master
+    Grandmaster
+}
+
+//Goes in order of BEST fame title to WORST fame title
+//Dont change the NUMBER of entries, might cause very severe troubles  !
+UNIQUE SECTION FAME
+{
+    Glorious
+    Great
+    Estimable
+    Trustworthy
+    Illustrious
+    Famed
+    Commendable
+    Honest
+    Noble
+    Admirable
+    Honorable
+    Good
+    Eminent
+    Proper
+    Respectable
+    Kind
+    Distinguished
+    Reputable
+    Upstanding
+    Fair
+    Renowned
+    Prominent
+    Notable
+    Rude
+    Disreputable
+    Notorious
+    Imfamous
+    Dishonored
+    Unsavory
+    Dishonorable
+    Ignoble
+    Sinister
+    Scoundrel
+    Malicious
+    Vile
+    Villainous
+    Dark
+    Despicable
+    Dastardly
+    Wicked
+    Evil
+    Outcast
+    Wretched
+    Nefarious
+    Dread
+}
+
+// other stuff like criminal titles goes here
+//Dont change the NUMBER of entries, might cause very severe troubles  !
+
+UNIQUE SECTION OTHER
+{
+    ///////////// criminal stuff -> paperdoll
+    The Criminal
+    // criminal flag
+    The Serial Killer
+    // 5 - 10 kills
+    The Murderer
+    // 10 - 20 kills
+    The Mass Murderer
+    // 20 - 50 kills
+    The Evil Dread Murderer
+    // 50 - 100 kills
+    The Evil Emperor
+    // > 100 kills
+    The shard admin
+    // shard admin flag - paperdoll
+    //////////////// other stuff that goes to single clicking players
+    squelched
+    // squelched tag
+    OFF
+    // offline tag
+    Lady
+    // lady tag
+    Lord
+    // lord tag
+    invul
+    // invulnerability tag
+    Shard Admin
+    // adminsistrator flag
+    frozen
+    // frozen tag
+    guarded
+    // guarded tag
+    guarding
+    // guarding tag
+    tamed
+    // tamed tag
+    War Mode
+    // war mode tag
+    Criminal
+    // criminal tag
+    The Murderer
+    // murderer tag
+}
+

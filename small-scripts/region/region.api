@@ -1,0 +1,116 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_region_api_
+  #endinput
+#endif
+#define _nxw_region_api_
+
+/** \defgroup script_API_reg Region
+ *  \ingroup script_API
+ *  @{
+ */
+ 
+/*!
+\author Xanathar
+\fn rgn_setWeather(const region, const weathertype = 0)
+\brief
+*/
+native rgn_setWeather(const region, const weathertype = 0);
+
+/*!
+\author Xanathar
+\fn rgn_getWeather(const region)
+\brief
+*/
+native rgn_getWeather(const region);
+
+/*!
+\author Xanathar
+\fn rgn_isGuarded(const region)
+\brief
+*/
+native rgn_isGuarded(const region);
+
+/*!
+\author Xanathar
+\fn rgn_canMark(const region)
+\brief
+*/
+native rgn_canMark(const region);
+
+/*!
+\author Xanathar
+\fn rgn_canGate(const region)
+\brief
+*/
+native rgn_canGate(const region);
+
+/*!
+\author Xanathar
+\fn rgn_canRecall(const region)
+\brief
+*/
+native rgn_canRecall(const region);
+
+/*!
+\author Xanathar
+\fn rgn_noMagicDamage(const region)
+\brief
+*/
+native rgn_noMagicDamage(const region);
+
+/*!
+\author Sparhawk
+\fn rgn_setGuarded(const region, const trueOrFalse = 1)
+\brief
+*/
+native rgn_setGuarded(const region, const trueOrFalse = 1);
+
+/*!
+\author Sparhawk
+\fn rgn_setMark(const region, const trueOrFalse = 1)
+\brief
+*/
+native rgn_setMark(const region, const trueOrFalse = 1);
+
+/*!
+\author Sparhawk
+\fn rgn_setGate(const region, const trueOrFalse = 1)
+\brief
+*/
+native rgn_setGate(const region, const trueOrFalse = 1);
+
+/*!
+\author Sparhawk
+\fn rgn_setRecall(const region, const trueOrFalse = 1)
+\brief
+*/
+native rgn_setRecall(const region, const trueOrFalse = 1);
+
+/*!
+\author Sparhawk
+\fn rgn_setMagicDamage(const region, const trueOrFalse = 1)
+\brief
+*/
+native rgn_setMagicDamage(const region, const trueOrFalse = 1);
+
+/*!
+\author Sparhawk
+\fn rgn_isValid(const region)
+\brief
+*/
+native rgn_isValid(const region);
+
+/*!
+\author Sparhawk
+\fn rgn_getName(const region, regionName[])
+\brief
+*/
+native rgn_getName(const region, regionName[]);
+
+/** @} */ // end of script_API_reg

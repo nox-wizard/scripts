@@ -1,0 +1,1337 @@
+#define $_id_spawner 3EE8
+#define $_id_spawner2 3EE8
+
+SECTION ITEM $item_orc_lord_spawner
+{
+    NAME orc lord spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_an_orcish_lord
+    MOREY 0
+    MOREZ 1
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_orc_spawner
+{
+    NAME orc spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_orc
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_orc_mage_spawner
+{
+    NAME orc mage spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_an_orcish_mage
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_ettin_spawner
+{
+    NAME ettin spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_an_ettin
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_ogre_spawner
+{
+    NAME ogre spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_an_ogre
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_troll_spawner
+{
+    NAME troll spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_a_troll_1
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_harpy_spawner
+{
+    NAME harpy spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_a_harpy
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_banker_spawner-f
+{
+    NAME female banker spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_banker_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_bard_spawner-f
+{
+    NAME female bard spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_bard_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_bard_spawner-m
+{
+    NAME male bard spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_bard_f_1
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_miner_spawner-m
+{
+    NAME male miner spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_miner_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_miner_spawner-f
+{
+    NAME female miner spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_miner_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_weaponsmith_spawner-m
+{
+    NAME male weaponsmith spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_weaponsmith_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_weaponsmith_spawner-f
+{
+    NAME female weaponsmith spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_weaponsmith_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_baker_spawner-m
+{
+    NAME male baker spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_maker_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_baker_spawner-f
+{
+    NAME female baker spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_baker_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_provisioner_spawner-m
+{
+    NAME male provisioner spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_provisioner_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_provisioner_spawner-f
+{
+    NAME female provisioner spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_provisioner_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_cobbler_spawner-m
+{
+    NAME male cobbler spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_cobbler_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_cobbler_spawner-f
+{
+    NAME female cobbler spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_cobbler_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_innkeeper_spawner-m
+{
+    NAME male innkeeper spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_innkeeper_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_innkeeper_spawner-f
+{
+    NAME female innkeeper spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_innkeeper_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_mage_spawner-m
+{
+    NAME male mage spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_mage_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_mage_spawner-f
+{
+    NAME female mage spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_mage_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_herbalist_spawner-m
+{
+    NAME male herbalist spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_herbalist_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_herbalist_spawner-f
+{
+    NAME female herbalist spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_herbalist_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_butcher_spawner-m
+{
+    NAME male butcher spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_butcher_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_butcher_spawner-f
+{
+    NAME female butcher spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_butcher_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_tailor_spawner-m
+{
+    NAME male tailor spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_tailor_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_tailor_spawner-f
+{
+    NAME female tailor spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_tailor_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_bowyer_spawner-m
+{
+    NAME male bowyer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_bowyer_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_bowyer_spawner-f
+{
+    NAME female bowyer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_bowyer_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_jewler_spawner-m
+{
+    NAME male jewler spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_jeweler_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_jewler_spawner-f
+{
+    NAME female jewler spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_jeweler_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_leather_worker_spawner-m
+{
+    NAME male leather worker spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_leather_worker_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_leather_worker_spawner-f
+{
+    NAME female leather worker spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_leather_worker_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_shipwright_spawner-m
+{
+    NAME male shipwright spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_shipwright_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_shipwright_spawner-f
+{
+    NAME female shipwright spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_shipwright_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_spinner_spawner-m
+{
+    NAME male spinner spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_spinner_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_spinner_spawner-f
+{
+    NAME female spinner spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_spinner_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_armorer_spawner-m
+{
+    NAME male armorer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_armorer_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_armorer_spawner-f
+{
+    NAME female armorer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_armorer_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_blacksmith_spawner-m
+{
+    NAME male blacksmith spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_blacksmith_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_blacksmith_spawner-f
+{
+    NAME female blacksmith spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_blacksmith_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_architect_spawner-m
+{
+    NAME male architect spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_architech_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_architect_spawner-f
+{
+    NAME female architect spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_architect_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_carpenter_spawner-m
+{
+    NAME male carpenter spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_carpenter_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_carpenter_spawner-f
+{
+    NAME female carpenter spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_carpenter_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_farmer_spawner-m
+{
+    NAME male farmer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_farmer_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_farmer_spawner-f
+{
+    NAME female farmer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_farmer_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_cook_spawner-m
+{
+    NAME male cook spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_cook_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_cook_spawner-f
+{
+    NAME female cook spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_cook_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_animal_trainer_spawner-m
+{
+    NAME male animal trainer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_animal_trainer_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_animal_trainer_spawner-f
+{
+    NAME female animal trainer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_animal_trainer_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_fisherman_spawner
+{
+    NAME fisherman spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_fisherman_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_fisherlady_spawner
+{
+    NAME fisherlady spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_fisherman_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_alchemist_spawner-m
+{
+    NAME male alchemist spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_alchemist_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_alchemist_spawner-f
+{
+    NAME female alchemist spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_alchemist_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_tinker_spawner-m
+{
+    NAME male tinker spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_tinker_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_tinker_spawner-f
+{
+    NAME female tinker spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_tinker_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_engineer_spawner-m
+{
+    NAME male engineer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_que
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_engineer_spawner-f
+{
+    NAME female engineer spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_jessie
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_banker_spawner-m
+{
+    NAME male banker spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_banker_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_random_orc_spawn
+{
+    NAME random orc spawn
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_random_cove_orc_spawner
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_lizard_spawn
+{
+    NAME random lizard spawn
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_lizard_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_ratmen_rpawn
+{
+    NAME random ratmen rpawn
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_ratmen_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_dragon_and_drake
+{
+    NAME random dragon and drake
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_random_dragon_or_drake
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_cows_horses_etc
+{
+    NAME random cows horses etc
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_random_farm_animal
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+
+SECTION ITEM $item_goat_spawner
+{
+    NAME goat spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_a_goat
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_arctic_spawner
+{
+    NAME random arctic spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_arctic_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_cave_spawner
+{
+    NAME random cave spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_cave_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_desert_spawner
+{
+    NAME random desert spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_desert_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_dungeon_spawner
+{
+    NAME random dungeon spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_dungeon_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_eerie_place_spawner
+{
+    NAME random eerie place spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_eerie_place_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_farm_spawner
+{
+    NAME random farm spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_farm_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_forest_spawner
+{
+    NAME random forest spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_forest_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_jungle_spawner
+{
+    NAME random jungle spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_jungle_spawn_1
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_mountain_spawner
+{
+    NAME random mountain spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_mountain_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_ocean_spawner
+{
+    NAME random ocean spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_ocean_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_swamp_spawner
+{
+    NAME random swamp spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_swamp_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_town_spawner
+{
+    NAME random town spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_town_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_volcanic_spawner
+{
+    NAME random volcanic spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_volcanic_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_drow_spawner
+{
+    NAME random drow spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_random_drow
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_diablo_spawner
+{
+    NAME random diablo spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_random_diablo
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_wood_elves_spawner
+{
+    NAME random wood elves spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_random_wood_elf
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_high_elves_spawner
+{
+    NAME random high elves spawner
+    ID $_id_spawner
+    TYPE $itype_npc_spawner
+    MOREX $npc_random_high_elf
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_town_crier_spawner-m
+{
+    NAME male town crier spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_towncrier_m
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_town_crier_spawner-f
+{
+    NAME female town crier spawner
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_towncrier_f
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+
+SECTION ITEM $item_register_of_names
+{
+    NAME Register of names
+    ID $_id_spawner2
+    TYPE $itype_npc_spawner
+    MOREX $npc_register_of_names
+    MOREY 0
+    MOREZ 0
+    VISIBLE 1
+}
+
+SECTION ITEM $item_random_cowshorsesect
+{
+    NAME random cowshorsesect
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_farm_animal
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_dragon_and_drake_1
+{
+    NAME random dragon and drake
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_dragon_or_drake
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_ratmen
+{
+    NAME random ratmen
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_ratmen_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_lizzardmen
+{
+    NAME random lizzardmen
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_lizard_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_orcs
+{
+    NAME random orcs
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_cove_orc_spawner
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_birds
+{
+    NAME random birds
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_bird
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_all_animals
+{
+    NAME random all animals
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_animal
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_small_animals
+{
+    NAME random small animals
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_small_animal
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_productive_animals
+{
+    NAME random productive animals
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_productive_animal
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_bears
+{
+    NAME random bears
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_bear
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_overworld_monsters
+{
+    NAME random overworld monsters
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_overworld_monster
+    MOREY 1
+    MOREZ 5
+    AMOUNT 10
+    VISIBLE 1
+}
+
+SECTION ITEM $item_random_strong_undead
+{
+    NAME random strong undead
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_strong_undead
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_weak_undead
+{
+    NAME random weak undead
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_weak_undead
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_all_undead
+{
+    NAME random all undead
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_undead_1
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_daemons
+{
+    NAME random daemons
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_deamon
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_elementals
+{
+    NAME random elementals
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_elementals_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_elementals_and_daemons
+{
+    NAME random elementals and daemons
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_elemental_and_deamon_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_ettinsogres_and_trolls
+{
+    NAME random ettinsogres and trolls
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_etting_ogre_troll_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_med_orcs
+{
+    NAME random med orcs
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_mid_orc_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_weaker_orcs
+{
+    NAME random weaker orcs
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_weaker_orc_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_random_crc-kin
+{
+    NAME random crc-kin
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_orc_list
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_town_area_spawner
+{
+    NAME town area spawner
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_town_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_swamp_area_spawner
+{
+    NAME swamp area spawner
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_random_swamp_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+SECTION ITEM $item_jungle_area_spawner
+{
+    NAME jungle area spawner
+    ID $_id_spawner
+    TYPE $itype_rand_npc_spawner
+    MORE 257
+    MOREX $npc_jungle_spawn
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 10
+}
+
+//Terathan Cocoon 3
+SECTION ITEM $item_cocoon_spawner
+{spawns newts
+    NAME cocoon spawner
+    ID 10da
+    TYPE $itype_rand_npc_spawner
+    MOREX $npc_a_terathan_newt
+    MOREY 0
+    MOREZ 2
+    AMOUNT 5
+}

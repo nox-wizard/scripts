@@ -1,0 +1,5 @@
+// batch definitions
+#define $batch_server_status 1
+#define $batch_polymorph_male 2
+#define $batch_polymorph_gm 3
+#define $batch_polymorph_cns 4

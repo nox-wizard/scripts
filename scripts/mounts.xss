@@ -1,0 +1,180 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (mounts.xss)                                     ||
+// || Maintained by Endymion		                                  ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION MOUNT 0
+{ // Light brown horse
+	ANIM 0xC8
+	ID 0x3E9F
+}
+
+SECTION MOUNT 1
+{ // Light gray horse
+	ANIM 0xE2
+	ID 0x3EA0
+}
+SECTION MOUNT 2
+{ // Horse
+	ANIM 0xE4
+	ID 0x3EA1
+}
+SECTION MOUNT 3
+{ // Dark brown horse
+	ANIM 0xCC
+	ID 0x3EA2
+}
+
+SECTION MOUNT 4
+{ // Desert Ostard
+	ANIM 0xD2
+	ID 0x3EA3
+}
+SECTION MOUNT 5
+{ // Frenzied Ostard
+	ANIM 0xDA
+	ID 0x3EA4
+}
+
+SECTION MOUNT 6
+{ // Forest Ostard
+	ANIM 0xDB
+	ID 0x3EA5
+}
+
+SECTION MOUNT 7
+{ // llama
+	ANIM 0xDC
+	ID 0x3EA6
+}
+
+SECTION MOUNT 8
+{ // unicorn
+	ANIM 0x7A
+	ID 0x3EB4
+}
+
+SECTION MOUNT 9
+{ // Ridgeback
+	ANIM 0xBB
+	ID 0x3EB8
+}
+
+SECTION MOUNT 10
+{ // Giant Beetle
+	ANIM 0x0317
+	ID 0x3EBC
+}
+
+SECTION MOUNT 11
+{ // Skeletal Mount
+	ANIM 0x0319
+	ID 0x3EBB
+}
+
+SECTION MOUNT 12
+{ // swamp dragon
+	ANIM 0x031a
+	ID 0x3EBD
+}
+
+SECTION MOUNT 13
+{ // armor dragon
+	ANIM 0x031f
+	ID 0x3EBE
+}
+
+SECTION MOUNT 14
+{ // Brown horse
+	ANIM 0x34
+	ID 0x3E9F
+}
+
+SECTION MOUNT 15
+{ // Grey horse
+	ANIM 0x4E
+	ID 0x3EA0
+}
+
+SECTION MOUNT 16
+{ // Tan horse
+	ANIM 0x50
+	ID 0x3EA1
+}
+
+SECTION MOUNT 17
+{ // Nightmare
+	ANIM 0x74
+	ID 0x3EB5
+}
+
+SECTION MOUNT 18
+{ // Silver steed
+	ANIM 0x75
+	ID 0x3EA8
+}
+
+SECTION MOUNT 19
+{ // Dark steed
+	ANIM 0x72
+	ID 0x3EA9
+}
+
+SECTION MOUNT 20
+{ // Kirin
+	ANIM 0x84
+	ID 0x3EAD
+}
+
+SECTION MOUNT 21
+{ // Etheral
+	ANIM 0x73
+	ID 0x3EAA
+}
+
+SECTION MOUNT 22
+{ // War Horse Britain
+	ANIM 0x76
+	ID 0x3EB2
+}
+
+SECTION MOUNT 23
+{ // War Horse Mage Council
+	ANIM 0x77
+	ID 0x3EB1
+}
+
+SECTION MOUNT 24
+{ // War Horse Minax
+	ANIM 0x78
+	ID 0x3EAF
+}
+
+SECTION MOUNT 25
+{ // War Horse Shadowlord
+	ANIM 0x79
+	ID 0x3EB0
+}
+
+SECTION MOUNT 26
+{ // Etheral LLama
+	ANIM 0xAA
+	ID 0x3EAB
+}
+
+SECTION MOUNT 27
+{ // Seahorse
+	ANIM 0x90
+	ID 0x3EB3
+}
+
+SECTION MOUNT 28
+{ // Etheral Ostard
+	ANIM 0xAB
+	ID 0x3EAC
+}
+
+EOF

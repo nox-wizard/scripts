@@ -1,0 +1,120 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_misc_api_
+  #endinput
+#endif
+#define _nxw_misc_api_
+
+/*!
+\name nprintf
+\author Xanathar
+\syntax nprintf(const socket, const format[], ...)
+\param socket: the socket
+\param format[]: the message
+\brief Prints a message to the given socket
+*/
+native nprintf(const socket,const format[], ...);
+
+/*!
+\name ncprintf
+\author Luxor
+\syntax ncprintf(const socket,const color,const format[], ...)
+\param socket: the socket
+\param format[]: the message
+\brief Prints a message of given color to the given socket
+*/
+native ncprintf(const socket,const color,const format[], ...);
+
+
+/*!
+\name ntprintf
+\author Luxor
+\syntax ntprintf(const socket, const format[], ...)
+\param socket: the socket
+\param format[]: the message
+\brief Prints a translated message to the given socket
+*/
+native ntprintf(const socket,const format[], ...);
+
+
+/*!
+\name bypass
+\author Xanathar
+\syntax bypass()
+\brief Bypasses default server behaviour
+*/
+native bypass();
+
+/*!
+\name setWindowTitle
+\author Xanathar
+\syntax setWindowTitle(const format[], ...)
+\brief Sets the window title
+*/
+native setWindowTitle(const format[], ...);
+
+/*!
+\name getFrameStatus
+\author Xanathar
+\syntax getFrameStatus()
+\brief Gets the current frame status
+*/
+native getFrameStatus();
+
+
+/*!
+\name getNXWVersion
+\author Xanathar
+\syntax getNXWVersion()
+\brief Gets the NoX-Wizard engine version
+*/
+native getNXWVersion();
+
+/*!
+\name getNXWVersionType
+\author Xanathar
+\syntax getNXWVersionType()
+\brief
+*/
+native getNXWVersionType();
+
+/*!
+\name getNXWPlatform
+\author Xanathar
+\syntax getNXWPlatform()
+\brief Gets the platform which NoX-Wizard is running on
+*/
+native getNXWPlatform();
+
+/*!
+\name cfgServerOption
+\author Xanathar
+\syntax cfgServerOption(const format[], ...)
+\param format[]: the CFG command to be executed
+\brief Performs a CFG command configuring a server.scp entry
+*/
+native cfgServerOption(const format[], ...);
+
+/*!
+\name weblaunch
+\author Luxor
+\syntax weblaunch(const socket,const format[], ...)
+\param socket: the socket
+\param format[]: the URL to be opened by the web client
+\brief Sends a request to the given socket to launch its web client
+*/
+native weblaunch(const socket,const format[], ...);
+
+/*!
+\name broadcast
+\author Luxor
+\syntax broadcast(const format[], ...)
+\param format[]: the message to broadcast
+\brief Sends a broadcast message
+*/
+native broadcast(const format[], ...);

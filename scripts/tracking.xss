@@ -1,0 +1,37 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (tracking.scp)                                   ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+SECTION TRACKINGMENU $tracking_mainmenu
+{
+    What do you wish to track?
+    20D4 Animals
+    CREATETRACKINGMENU $tracking_animals
+    20E9 Creatures
+    CREATETRACKINGMENU $tracking_creatures
+    2106 Players
+    CREATETRACKINGMENU $tracking_players
+}
+
+SECTION TRACKINGMENU $tracking_animals
+{
+    Which animal do you wish to track?
+}
+
+SECTION TRACKINGMENU $tracking_creatures
+{
+    Which creature do you wish to track?
+}
+
+SECTION TRACKINGMENU $tracking_players
+{
+    Whom do you wish to track?
+}
+
+

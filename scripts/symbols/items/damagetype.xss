@@ -1,0 +1,15 @@
+///////// Luxor: DAMAGE TYPES
+
+#define $damage_pure 0
+#define $damage_slash 1
+#define $damage_pierce 2
+#define $damage_bludgeon 3
+#define $damage_backstab 4
+#define $damage_fire 5
+#define $damage_electrical 6
+#define $damage_mental 7
+#define $damage_poison 8
+#define $damage_cold 9
+#define $damage_force 10
+#define $damage_holy 11
+#define $damage_magic 12

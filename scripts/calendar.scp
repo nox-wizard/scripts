@@ -1,0 +1,219 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (calendar.scp)                                   ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 14-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.53b or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script is NOT yet compatible with 0.70 script format,          ||
+// || so please do not ident this file and do not use XSS commands like   ||
+// || #copy, #include or #define. Constants are not supported here yet.   ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// SECTION MONTH :
+// NAME : the month name
+// DAYS : the number of days in the month
+// COMPENSATION : can be one day longer every xx years
+// xxxxMODIFIER : multiplier to weather chances
+// DAWN : hour of dawn of the first day of month
+// SUNSET : hour of sunset of the first day of month
+// SEASON : in which season falls this month ?
+
+
+SECTION MONTH 1
+{
+NAME January
+DAYS 31
+SNOWMODIFIER 2
+RAINMODIFIER 1
+SUNMODIFIER  1
+DAWN 7:30
+SUNSET 17:30
+SEASON 3
+}
+
+SECTION MONTH 2
+{
+NAME February
+DAYS 28
+COMPENSATION 4
+SNOWMODIFIER 1.5
+RAINMODIFIER 1
+SUNMODIFIER  1
+DAWN 7:30
+SUNSET 18:00
+SEASON 3
+}
+
+SECTION MONTH 3
+{
+NAME March
+DAYS 31
+SNOWMODIFIER 1
+RAINMODIFIER 1
+SUNMODIFIER  1
+DAWN 7:30
+SUNSET 18:30
+SEASON 0
+}
+
+
+SECTION MONTH 4
+{
+NAME April
+DAYS 31
+SNOWMODIFIER 0
+RAINMODIFIER 1.5
+SUNMODIFIER  1
+DAWN 7:30
+SUNSET 19:00
+SEASON 0
+}
+
+
+SECTION MONTH 5
+{
+NAME May
+DAYS 31
+SNOWMODIFIER 0
+RAINMODIFIER 1
+SUNMODIFIER  2
+DAWN 7:00
+SUNSET 19:30
+SEASON 0
+}
+
+SECTION MONTH 6
+{
+NAME June
+DAYS 30
+SNOWMODIFIER 0
+RAINMODIFIER 1
+SUNMODIFIER  2
+DAWN 6:30
+SUNSET 20:00
+SEASON 1
+}
+SECTION MONTH 7
+{
+NAME July
+DAYS 31
+SNOWMODIFIER 0
+RAINMODIFIER 1
+SUNMODIFIER  2
+DAWN 6:30
+SUNSET 19:30
+SEASON 1
+}
+SECTION MONTH 8
+{
+NAME August
+DAYS 31
+SNOWMODIFIER 0
+RAINMODIFIER 1
+SUNMODIFIER  1
+DAWN 7:00
+SUNSET 19:00
+SEASON 1
+}
+
+SECTION MONTH 9
+{
+NAME September
+DAYS 30
+SNOWMODIFIER 0
+RAINMODIFIER 2
+SUNMODIFIER  1
+DAWN 7:00
+SUNSET 18:30
+SEASON 2
+}
+
+SECTION MONTH 10
+{
+NAME October
+DAYS 31
+SNOWMODIFIER 0
+RAINMODIFIER 1
+SUNMODIFIER  1
+DAWN 7:30
+SUNSET 18:30
+SEASON 2
+}
+
+SECTION MONTH 11
+{
+NAME November
+DAYS 30
+SNOWMODIFIER 0.5
+RAINMODIFIER 1
+SUNMODIFIER  1
+DAWN 7:30
+SUNSET 18:00
+SEASON 2
+}
+
+SECTION MONTH 12
+{
+NAME December
+DAYS 31
+SNOWMODIFIER 1.5
+RAINMODIFIER 1
+SUNMODIFIER  1
+DAWN 7:30
+SUNSET 17:30
+SEASON 3
+}
+
+
+SECTION WEEKDAY 1
+{
+NAME Sunday
+}
+
+SECTION WEEKDAY 2
+{
+NAME Monday
+}
+
+SECTION WEEKDAY 3
+{
+NAME Tuesday
+}
+
+SECTION WEEKDAY 4
+{
+NAME Wednesday
+}
+
+SECTION WEEKDAY 5
+{
+NAME Thursday
+}
+
+SECTION WEEKDAY 6
+{
+NAME Friday
+}
+
+SECTION WEEKDAY 7
+{
+NAME Saturday
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

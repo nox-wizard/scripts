@@ -1,0 +1,156 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (titles.scp)                                     ||
+// || Maintained by Endymion		                                  ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION WEAPONTYPE 0
+{ // SWORD1H
+	ID 0x0EC1
+	ID 0x0EC2
+	ID 0x0EC3
+	ID 0x0EC4
+	ID 0x0EC5
+	ID 0x0F5E
+	ID 0x0F5F
+	ID 0x0F60
+	ID 0x0F61
+	ID 0x13B5
+	ID 0x13B6
+	ID 0x13B7
+	ID 0x13B8
+	ID 0x13B9
+	ID 0x13BA
+	ID 0x13FE 
+	ID 0x13FF
+	ID 0x1440
+	ID 0x1441
+}
+
+SECTION WEAPONTYPE 1
+{ // SWORD2H
+}
+
+SECTION WEAPONTYPE 2
+{ // AXE1H
+	ID 0x0F43
+	ID 0x0F44
+	ID 0x0F45
+	ID 0x0F46
+	ID 0x0F47
+	ID 0x0F48
+	ID 0x0F49
+	ID 0x0F4A
+	ID 0x0F4B
+	ID 0x0F4C
+	ID 0x0F4D
+	ID 0x0F4E
+	ID 0x13FA
+	ID 0x13FB
+	ID 0x143E 
+	ID 0x143F
+	ID 0x1442 
+	ID 0x1443
+}
+	
+SECTION WEAPONTYPE 3
+{ // AXE2H
+}
+	
+SECTION WEAPONTYPE 4
+{ // MACE1H
+	ID 0x0DF0
+	ID 0x0DF0
+	ID 0x0DF0
+	ID 0x0DF0
+	ID 0x0DF0
+	ID 0x0DF0
+	ID 0x13B3
+	ID 0x13B4
+	ID 0x0F5C
+	ID 0x0F5D
+	ID 0x0FB4 
+	ID 0x0FB5
+	ID 0x13AF
+	ID 0x13B0
+	ID 0x13E3 
+	ID 0x13E4
+	ID 0x13F4 
+	ID 0x13F5
+	ID 0x13F8 
+	ID 0x13F9
+	ID 0x143A 
+	ID 0x143B
+	ID 0x143C 
+	ID 0x143D
+	ID 0x1406 
+	ID 0x1407
+	ID 0x0E89 
+	ID 0x0E8A
+	ID 0x0E81 
+	ID 0x0E82
+}
+	
+SECTION WEAPONTYPE 5
+{ // MACE2H
+	ID 0x1438
+	ID 0x1439
+	ID 0x143A
+	ID 0x143B
+	ID 0x143C
+}
+	
+SECTION WEAPONTYPE 6
+{ // FENCING1H
+        ID 0x1404
+        ID 0x1405
+        ID 0x0F51
+        ID 0x0F52
+        ID 0x1400
+        ID 0x1401
+}
+
+SECTION WEAPONTYPE 7
+{ // FENCING2H
+	ID 0x1402
+	ID 0x1403
+	ID 0x0E87 
+	ID 0x0E88
+	ID 0x0F62
+	ID 0x0F63
+}
+
+SECTION WEAPONTYPE 8
+{ // STAVE1H
+	ID 0x13F8 
+	ID 0x13F9
+	ID 0x0E89 
+	ID 0x0E8A
+	ID 0x0DF0 
+	ID 0x0DF1
+	ID 0x0E81 
+	ID 0x0E82
+}
+
+SECTION WEAPONTYPE 9
+{ // STAVE2H
+}
+
+SECTION WEAPONTYPE 10
+{ // BOW
+	ID 0x13B2
+}
+
+SECTION WEAPONTYPE 11
+{ // CROSSBOW
+	ID 0x13FD
+}
+
+SECTION WEAPONTYPE 12
+{ // HEAVYCROSSBOW
+	ID 0x0F4F
+}
+
+EOF

@@ -1,0 +1,77 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (hair.xss)                                       ||
+// || Maintained by Sparhawk		                                  ||
+// || Last Update 04-aug-2002                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+SECTION DEFAULT HAIR
+{
+	LAYER $layer_hair
+	DECAY
+}
+
+SECTION ITEM $item_short_hair
+{
+	NAME short hair
+	ID 203B
+	#copy DEFAULT HAIR
+}
+
+SECTION ITEM $item_long_hair
+{
+	NAME long hair
+	ID 203C
+	#copy DEFAULT HAIR
+}
+
+SECTION ITEM $item_pony_tail
+{
+	NAME pony tail
+	ID 203D
+	#copy DEFAULT HAIR
+}
+
+SECTION ITEM $item_mohawk
+{
+	NAME mohawk
+	ID 2044
+	#copy DEFAULT HAIR
+}
+
+SECTION ITEM $item_pageboy
+{
+	NAME pageboy
+	ID 2045
+	#copy DEFAULT HAIR
+}
+
+SECTION ITEM $item_buns_hair
+{
+	NAME buns hair
+	ID 2046
+	#copy DEFAULT HAIR
+}
+
+SECTION ITEM $item_receding_hair
+{
+	NAME receding hair
+	ID 2048
+	#copy DEFAULT HAIR
+}
+
+SECTION ITEM $item_2_pig_tails
+{
+	NAME 2 pig tails
+	ID 2049
+	#copy DEFAULT HAIR
+}
+
+SECTION ITEM $item_krisna_hair
+{
+	NAME krishna hair
+	ID 204A
+	#copy DEFAULT HAIR
+}

@@ -1,0 +1,54 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_log_api_
+  #endinput
+#endif
+#define _nxw_log_api_
+
+/** \defgroup script_API_log Log management functions
+ *  \ingroup script_API
+ *  @{
+ */
+
+/*!
+\brief Prints a message to the message log
+\author Sparhawk
+\since 0.82
+\fn log_message(const format[], ...)
+\param format[]: the message
+*/
+native log_message(const format[], ...);
+
+/*!
+\brief Prints a message to the warning log
+\author Sparhawk
+\since 0.82
+\fn log_warning(const format[], ...)
+\param format[]: the message
+*/
+native log_warning(const format[], ...);
+
+/*!
+\brief Prints a message to the error log
+\author Sparhawk
+\since 0.82
+\fn log_error(const format[], ...)
+\param format[]: the message
+*/
+native log_error(const format[], ...);
+
+/*!
+\brief Prints a message to the critical error log
+\author Sparhawk
+\since 0.82
+\fn log_critical(const format[], ...)
+\param format[]: the message
+*/
+native log_critical(const format[], ...);
+
+/** @} */ // end of script_API_log

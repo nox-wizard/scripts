@@ -1,0 +1,165 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_ratmen.xss)                                 ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//***********************************************************
+//************************ Ratmen ***************************
+//************************        ***************************
+//***********************************************************
+
+// ratman with sword
+
+SECTION NPC $npc_ratman
+{
+    NAMELIST $names_ratmen
+    //$$ ratman
+    ID 002d
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    ITEM $item_broadsword
+    PACKITEM $item_broadsword
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    GOLD 25 45
+    STR 96 120
+    DEX 15 20
+    INT 36 60
+    KARMA -700
+    FAME 700
+    MAGICRESISTANCE 350 600
+    TACTICS 500 750
+    SWORDSMANSHIP 500 750
+    WRESTLING 500 750
+    DAMAGE 5 31
+    DEF 14
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_ratman
+    DOORUSE 1
+}
+
+// ratman with axe
+
+SECTION NPC $npc_ratman_axe
+{
+    NAMELIST $names_ratmen
+    //$$ ratman axe
+    ID 002c
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    ITEM $item_axe
+    PACKITEM $item_axe
+    GOLD 25 45
+    STR 96 120
+    DEX 15 20
+    INT 36 60
+    KARMA -700
+    FAME 700
+    MAGICRESISTANCE 350 600
+    TACTICS 500 750
+    MACEFIGHTING 500 750
+    WRESTLING 500 750
+    DAMAGE 4 28
+    DEF 14
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_ratman
+    DOORUSE 1
+}
+
+//ratman archer
+
+SECTION NPC $npc_ratman_archer
+{
+    NAMELIST $names_ratmen
+    //$$ ratman archer
+    ID 002a
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    ITEM $item_bow
+    PACKITEM $item_arrow_7
+    GOLD 200 250
+    STR 96 120
+    DEX 90 110
+    INT 36 60
+    KARMA -1200
+    FAME 3000
+    MAGICRESISTANCE 250
+    TACTICS 900 1000
+    ARCHERY 950 1000
+    WRESTLING 500 700
+    DAMAGE 20 30
+    DEF 14
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_ratman
+    DOORUSE 1
+}
+
+//ratman mage
+
+SECTION NPC $npc_ratman_mage
+{
+    NAMELIST $names_ratmen
+    //$$ ratman mage
+    ID 002a
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 96 120
+    DEX 90 110
+    INT 90 100
+    KARMA -1200
+    FAME 3000
+    SPATTACK 7552
+    MAGICLEVEL 7
+    MAGICSPHERE $sphere_earthpeople
+    SPADELAY 7
+    MAGERY 500 750
+    MAGICRESISTANCE 500 750
+    TACTICS 550 800
+    WRESTLING 500 700
+    PARRYING 500 750
+    DAMAGE 15 30
+    DEF 14
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    GOLD 200 250
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_ratman
+    DOORUSE 1
+}
+
+

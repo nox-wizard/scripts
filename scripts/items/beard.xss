@@ -1,0 +1,64 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (beard.xss)                                      ||
+// || Maintained by Sparhawk		                                  ||
+// || Last Update 04-aug-2002                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+SECTION DEFAULT BEARD
+{
+	LAYER $layer_beard
+	DECAY
+}
+
+
+SECTION ITEM $item_long_beard
+{
+	NAME long beard
+	ID 203E
+	#copy DEFAULT BEARD
+}
+
+SECTION ITEM $item_short_beard
+{
+	NAME short beard
+	ID 203F
+	#copy DEFAULT BEARD
+}
+
+SECTION ITEM $item_goatee
+{
+	NAME goatee
+	ID 2040
+	#copy DEFAULT BEARD
+}
+
+SECTION ITEM $item_mustache
+{
+	NAME mustache
+	ID 2041
+	#copy DEFAULT BEARD
+}
+
+SECTION ITEM $item_med_short_beard
+{
+	NAME medium short beard
+	ID 204B
+	#copy DEFAULT BEARD
+}
+
+SECTION ITEM $item_med_short_beard_1
+{
+	NAME medium short beard
+	ID 204C
+	#copy DEFAULT BEARD
+}
+
+SECTION ITEM $item_vandyke
+{
+	NAME vandyke
+	ID 204D
+	#copy DEFAULT BEARD
+}

@@ -1,0 +1,157 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (fishing.scp)                                    ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+////////////////////////////////////////////////
+// To use this script:                        //
+// Add #`s to each section from the items.scp.//
+// Right now you are not able to add sections.//
+// MONSTERLIST 7 is for fishing up Random     //
+// monsters add #`s from the npc.scp :)       //
+// The (skill>97) means you need to have your //
+// skill in fishing greater than 97 to get a  //
+// item from that list.                       //
+////////////////////////////////////////////////
+
+///////////////////////////////////////////
+// Sections FISHLISTS are for Fishing    //
+///////////////////////////////////////////
+
+// paintings for fishing...(skill>97)
+SECTION FISHLIST 1
+{
+	$item_painting_recoverd_from_a_shipwreck
+	$item_painting_recoverd_from_a_shipwreck_1
+	$item_painting_recoverd_from_a_shipwreck_2
+	$item_painting_recoverd_from_a_shipwreck_3
+	$item_painting_recoverd_from_a_shipwreck_4
+	$item_painting_recoverd_from_a_shipwreck_5
+	$item_painting_recoverd_from_a_shipwreck_6
+	$item_painting_recoverd_from_a_shipwreck_7
+	$item_painting_recoverd_from_a_shipwreck_8
+	$item_painting_recoverd_from_a_shipwreck_9
+	$item_painting_recoverd_from_a_shipwreck_A
+	
+}
+
+// weapons for fishing...(skill>95)
+SECTION FISHLIST 2
+{
+	$item_a_axe_of_vanquishing
+	$item_viking_sword_of_flamestrike
+	$item_a_magic_spear_of_vanquishing
+	$item_a_katana_of_power
+	$item_a_axe_of_force
+	$item_katana
+	$item_a_pick_axe_of_ruin
+}
+
+// armor for fishing...(skill>95)
+SECTION FISHLIST 3
+{
+	$item_shadow_chain_tunic
+	$item_magic_plate_of_hardening
+	$item_valorite_platemail
+	$item_silver_close_helm
+	$item_verite_plate_gorget
+	$item_agapite_plate_helm
+	$item_golden_chain_tunic
+	$item_merkite_chain_tunic
+}
+
+// treasure for fishing...(skill>70)
+SECTION FISHLIST 4
+{
+	$item_a_bronze_shield_of_hardening
+}
+
+// boots for fishing...(skill>20)
+SECTION FISHLIST 5
+{
+	$item_boots
+	$item_thigh_boots
+	$item_thigh_boots_1
+}
+
+// chests for fishing...(skill>80)
+SECTION FISHLIST 6
+{
+	$item_metal_chest_recoverd_from_a_shipwreck
+	$item_wooden_chest_recoverd_from_a_shipwreck
+	$item_metal_chest_recoverd_from_a_shipwreck-faceing_west
+	$item_wooden_chest_recoverd_from_a_shipwreck-faceing_east
+}
+
+// random water monsters...(skill>40)
+SECTION MONSTERLIST 7
+{
+	$npc_a_water_elemental
+	$npc_a_mongbat
+	$npc_a_sea_serpent
+}
+
+// seashells for fishing...(skill>70)
+SECTION FISHLIST 8
+{
+	$item_shell_recoverd_from_a_shipwreck
+	$item_shell_recoverd_from_a_shipwreck_1
+	$item_shell_recoverd_from_a_shipwreck_2
+	$item_shell_recoverd_from_a_shipwreck_3
+	$item_shell_recoverd_from_a_shipwreck_4
+	$item_shell_recoverd_from_a_shipwreck_5
+	$item_shell_recoverd_from_a_shipwreck_6
+	$item_shell_recoverd_from_a_shipwreck_7
+	$item_shell_recoverd_from_a_shipwreck_8
+}
+
+// skulls for fishing...(skill>70)
+SECTION FISHLIST 9
+{
+	$item_a_skull_recoverd_from_a_shipwreck
+	$item_a_skull_recoverd_from_a_shipwreck_1
+	$item_a_skull_recoverd_from_a_shipwreck_2
+	$item_a_skull_recoverd_from_a_shipwreck_3
+	$item_a_skull_recoverd_from_a_shipwreck_4
+	$item_a_pile_of_skulls_recoverd_from_a_shipwreck
+}
+
+// nets for fishing...(skill>90)
+SECTION FISHLIST 10
+{
+	$item_a_fishing_net_recovered_from_a_shipwreck
+	$item_a_fishing_net_recovered_from_a_shipwreck_1
+	$item_a_fishing_net_recovered_from_a_shipwreck_2
+}
+
+// gold for fishing...(skill>90)
+SECTION FISHLIST 11
+{
+	$item_gold_coin_K
+	$item_gold_coin_L
+	$item_gold_coin_M
+	$item_gold_coin_N
+	$item_gold_coin_O
+}
+
+// bones for fishing...(skill>40)
+SECTION FISHLIST 12
+{
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck_1
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck_2
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck_3
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck_4
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck_5
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck_6
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck_7
+	$item_a_pile_of_bones_recoverd_from_a_shipwreck_8
+}
+
+
+
+
+

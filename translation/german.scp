@@ -1,0 +1,1850 @@
+///////////////////////////////////////////////////////////////////////////////
+//   Questo file e' stato tradotto e modificato da Tancredi d'Altavilla
+//
+//
+//
+//
+//   you have to add your translation of the sentence right near the $
+//   Remember you MUST put the right number of %s ,%c ecc like in the original sentence
+//   and you MUST NOT use special key like ò à è ì * ° £ because 
+//   the Ultima Online client doesn't print them on screen
+//
+//
+//
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+// C:\noxwizard2\nox-wizard\src/amx.c
+
+
+// C:\noxwizard2\nox-wizard\src/amx_comp.c
+
+
+// C:\noxwizard2\nox-wizard\src/amx_dbg.c
+
+
+// C:\noxwizard2\nox-wizard\src/amxcons.c
+
+
+// C:\noxwizard2\nox-wizard\src/amxcore.c
+
+
+// C:\noxwizard2\nox-wizard\src/accounts.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/addmenu.cpp
+
+Sorry, this menu was rather old :($Dieses Menue ist leider ziemlich alt :( 
+
+// C:\noxwizard2\nox-wizard\src/amxcback.cpp
+
+You should be faster when choosing an option in your life..$Wuerdest Du eine Moeglichkeit auswaehlen, waerst Du schneller...
+*You should install a callback for the menu to work*$*Damit das Menue funktioniert, solltest Du ein Callback einbauen.
+
+// C:\noxwizard2\nox-wizard\src/amxscript.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/amxwrap2.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/amxwraps.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/archive.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/basics.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/boats.cpp
+
+you entered a boat$Ihr betretet das Schiff.
+You left the boat.$Ihr verlasst das Schiff.
+You cannot get off here!$Hier koennt Ihr nicht aussteigen!
+There was an error creating that boat.$Beim Erschaffen des Schiffes trat ein Fehler auf.
+The deed is broken, please contact a Game Master.$Das Deed ist defekt, bitte ruft einen Gamemaster.
+You cannot place your boat there.$Hierhin koennt Ihr Euer Schiff nicht plazieren.
+Arr, Sir, we've hit rough waters!$Arg, Kapitaen, wir sind in stuermisches Wasser geraten!
+Arr, somethings in the way!$Arg etwas versperrt uns den Weg!
+Arr, something's in the way!$Arg da ist etwas im Weg!
+Aye, sir.$Aye, Sir!
+Arr,somethings in the way$Uff da ist was im Weg!
+
+// C:\noxwizard2\nox-wizard\src/books.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/bounty.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/cache.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/calendar.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/cfile.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/char_array.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/charwrap.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/client.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/cmdtable.cpp
+
+The bounty system is not active.$Das Kopfgeldsystem ist nicht aktiv.
+You can only place a bounty while you are a ghost.$Ihr koennt nur ein Kopfgeld aussetzen wenn Ihr ein Geist seid.
+You can only place a bounty once after someone has murdered you.$Erst wenn Euch jemand getoetet hat, koennt Ihr ein Kopfgeld aussetzen.
+You have placed a bounty of %d gold coins on %s.$Ihr habt ein Kopfgeld von %d Goldstuecken auf %s ausgestzt.
+You were not able to place a bounty (System Error)$Das Kopfgeld konnte nicht ausgesetzt werden (Server Fehler).
+You do not have enough gold to cover the bounty.$Ihr habt nicht genug Gold, um das Kopfgeld zu begleichen.
+To place a bounty on a murderer, use BOUNTY <amount>$Um ein Kopfgeld auf Euren Moerder auszusetzen, benutzt BOUNTY<Menge in Goldstuecken>
+server is going to sleep for %i seconds!$Der Server wird in %i Sekunden angehalten.
+server is back from a %i second break$Der Server ist nach einer Unterbrechung von %i Sekunden wieder verfuegbar.
+Shutdown has been interrupted.$Server Shutdown wurde unterbrochen.
+This command is simply no more supported. Sorry :[$Dieser Befehl wird nicht mehr unterstuetzt, sorry. :[
+World is now respawning, expect some lag!$Es findet gerade ein World Respawn statt, bitte bereitet Euch auf etwas Lag vor!
+Guards have been reactivated.$Die Wachen wurden wieder aktiviert.
+Warning: Guards have been deactivated globally.$Achtung: Die Wachen wurden global deaktiviert!
+WorldStat Saves will be displayed.$Speicherung des Serverstatus wird nun angezeigt.
+WorldStat Saves will not be displayed.$Speicherung des Serverstatus wird nun nicht mehr angezeigt.
+ALL Regions Spawning to MAX, this will cause some lag.$Alle Region Spawns sind auf Maximum, es wird etwas Lag auftreten.
+All NPC's have been wiped.$Alle NPC wurden geloescht.
+
+// C:\noxwizard2\nox-wizard\src/combat.cpp
+
+This item is out of charges.$Dieser Gegenstand hat keine Ladungen mehr.
+You have been poisoned!$Ihr wurdet vergiftet!
+Your weapon has been destroyed$Eure Waffe ist kaputt gegangen.
+Your shield has been destroyed$Euer Schild ist kaputt gegangen.
+hits you in your Chest!$trifft Euch am Brustkorb!
+lands a terrible blow to your Chest!$trifft Euch mit einem schrecklichen Schlag am Brustkorb!
+lands a blow to your Stomach!$trifft Euch am Bauch!
+knocks the wind out of you!$trifft Euch, dass Ihr nach Luft schnappt!
+hits you in your Ribs!$trifft Eure Rippen!
+broken your Rib?!$hat Eure Rippe gebrochen?!
+hits you in Left Arm!$trifft Euren linken Arm!
+hits you in Right Arm!$trifft Euren rechten Arm!
+hits you you straight in the Face!$trifft Euch ins Gesicht!
+lands a stunning blow to your Head!$landet einen betaeubenden Schlag gegen Euren Kopf!
+hits you to your Head!$trifft Euren Kopf!
+smashed a blow across your Face!$schlaegt Euch ins Gesicht!
+hits you you square in the Jaw!$laesst mit einem Treffer Euren Kiefer knacken!
+lands a terrible hit to your Temple!$erwischt Euch furchtbar an der Schlaefe!
+hits you in Left Thigh!$trifft Euch in den linken Oberschenkel! 
+hits you in Right Thigh!$trifft Euch in den rechten Oberschenkel! 
+hits you in Groin!$trifft Euch schmerzhaft in den Unterleib! 
+hits you to your Throat!$trifft Euch in den Hals!
+hits you in Left Hand!$trifft Dich in die linke Hand!
+hits you in Right Hand!$trifft Dich in die rechte Hand!
+You delivered a paralyzing blow$Du landest einen betaeubenden Schlag!
+Halt, scoundrel!$Halt du Schuft!
+You are out of ammunitions!Eure Munition ist alle!
+You are too tired to attack.$Ihr seid zu muede um anzugreifen!
+You have killed %i innocent people.$Ihr habt %i unschuldige Personen getoetet.
+You are now a murderer!$Jetzt seid Ihr ein Moerder!
+Your %s has been destroyed$Euer %s ist kaputt!
+Thou shalt regret thine actions, swine!$Das werdet Ihr bereuen, verdammter Schuft!
+*Doing a summoning ritual.*$*Beschwoert etwas.*
+
+// C:\noxwizard2\nox-wizard\src/commands.cpp
+
+Region %d is Spawning %d items/NPCs, this will cause some lag.$In Region %d wird Item/NPC %d gespawnt, dies wird etwas Lag verursachen.
+Region %d is Spawning %d NPCs/items, this will cause some lag.$In Region %d wird Item/NPC %d gespawnt, dies wird etwas Lag verursachen.
+Killing all characters, this may cause some lag...$Alle Spieler werden getoetet, dies wird etwas Lag verursachen...
+The Counselor Queue is currently full. Contact the shard operator$Die Liste fuer Counseloranfragen ist voll. Bitte wendet Euch an den Shardadmin
+and ask them to increase the size of the queue.$und bittet Ihn, die Liste zu verlaengern.
+Available Counselors have been notified of your request.$Die verfuegbaren Counselor wurden ueber Eure Anfrage informiert..
+There was no Counselor available to take your call.$Es ist kein Counselor verfuegbar, um sich um Eure Anfrage zu kuemmern.
+Please enter the reason for your Counselor request$Bitte gebt die Ursache fuer Eure Anfrage ein.
+The GM Queue is currently full. Contact the shard operator$Die Liste fuer GM-Anfragen ist voll. Bitte wendet Euch an den Shardadmin
+Available Game Masters have been notified of your request.$Die verfuegbaren GMs wurden ueber Eure Anfrage informiert.
+There was no Game Master available to take your call.$Es ist kein GM verfuegbar, um sich um Eure Anfrage zu kuemmern.
+Please enter the reason for your GM request$Bitte gebt den Grund fuer Eure Anfrage ein
+All items have been wiped.$Alle Item wurden geloescht.
+
+// C:\noxwizard2\nox-wizard\src/common_libs.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/console.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/crontab.cpp
+
+World will be saved in 30 seconds..$Weltsicherung erfolgt in 30 Sekunden...
+
+// C:\noxwizard2\nox-wizard\src/custmenu.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/dbl_single_click.cpp
+
+ghosts cant do that!$Geiste sind dazu nicht in derLage!
+you need to be closer to play!$Um zu spielen, muesst Ihr naeher heran!
+you dont have enough gold to play!$Ihr habt nicht genug Gold, um zu spielen!
+Single bars, you are a winner!!$Ein Barren, Ihr habt gewonnen!!
+Double bars, you are a winner!!$Zwei Barren, Ihr habt gewonnen!!
+Triple bars, you are a winner!!$Drei Barren, Ihr habt gewonnen!!
+Any three 7`s, you are a winner!!$Drei Siebenen, Treffer!!
+Three blue 7`s, you are a winner!!$Drei blaue Siebenen, Treffer!!
+Three white 7`s, you are a winner!!$Drei weisse Siebenen, Treffer!!
+Three red 7`s, you are a winner!!$Drei rote Siebenen, Treffer!!
+Jackpot, you are a winner!!$Jackpot, Volltreffer!!
+Sorry,not a winner,please insert coins.$Leider verloren. Bitte Muenzen einwerfen zum Weiterspielen.
+You must wait to perform another action.$Ihr muesst etwas abwarten, bevor Ihr wieder etwas ausfuehren koennt.
+That is a secured chest!$Diese Truhe ist gesichert!
+You may not do that as a ghost.$Das kann man als Geist nicht tun.
+You cannot use items equipped by other players.$Gegenstaende, die andere Spieler besitzen, kann man nicht benutzen.
+The scroll must be in your backpack to envoke its magic.$Um die Magie dieser Spruchrolle zu entfalten muesst Ihr sie in Eurem Rucksack haben.
+That doesnt seem to work right now.$Das scheint momentan nicht zu funktionieren.
+You are not close enough to use that.$Ihr muesst dazu naeher heran.
+What will you use this on?$Womit wollt Ihr das benutzen?
+You have been resurrected.$Ihr seid wiederbelebt worden.
+You are already living!$Ihr lebt doch bereits!
+That is locked.$Verschlossen!
+You can't reach that!$Das koennt Ihr nicht erreichen!
+You can't peek into that container or you'll be jailed.$Wenn Ihr das Gepaeck anderer durchschnueffelt, kommt Ihr ins Gefaengnis.
+%s is trying to snoop you!$%s versucht, einen Blick in Euer Gepaeck zu werfen!
+You successfully peek into that container.$Ihr werft unbemerkt einen Blick hinein.
+You failed to peek into that container.$Es gelingt Euch nicht, hinein zu spaehen.
+Art thou attempting to disturb my privacy?$Versucht Ihr etwa, meine Privatspaehre zu stoeren?
+You notice %s trying to peek into your pack!$Ihr bemerkt, wie %s in Euer Gepaeck spaeht!
+You are too far away!$Ihr seid zu weit weg!
+Select teleport target.$Waehlt aus, wohin Ihr teleportieren wollt.
+Select item to use the key on?$Womit wollt Ihr den Schluessel verwenden?
+This item is locked.$Das ist verschlossen.
+If you wish to open a spellbook, it must be equipped or in your main backpack.$Um ein Zauberbuch zu oeffnen, muesst Ihr es in Eurem Besitz haben.
+Books are currently disabled, sorry :($Buecher sind leider momentan unbrauchbar. :(
+You quickly unlock, use, and then relock the door.$Ihr schliesst die Tuer auf, geht hinein und schliesst hinter Euch wieder zu.
+This door is locked.$Diese Tuer ist verschlossen.
+You are simply too full to eat any more!$Ihr bekommt keinen Bissen mehr herunter!
+You eat the food, but are still extremely hungry.$Ihr verzehrt das Essen, aber auch danach seid Ihr noch furchtbar hungrig.
+After eating the food, you feel much less hungry.$Das Essen reicht, dass Ihr Euch hungrig fuehlt.
+You eat the food, and begin to feel more satiated.$Ihr verzehrt das Essen und seid satt.
+You feel quite full after consuming the food.$Jetzt seid Ihr ganzschoen voll.
+You are nearly stuffed, but manage to eat the food.$Ihr seid zwar schon total vollgestopft, bringt diese Essen aber trotzdem noch herunter.
+The food was poisoned!$Das Essen war vergiftet!
+If you wish to use this, it must be equipped or in your backpack.$Es muss sich in Eurem Gepaeck befinden, damit Ihr es nutzen koennt.
+Seek out the mystic llama herder.$Sucht den geheimnisvollen Lama-Hirten.
+Wherever you go, there you are.$Wohin Ihr geht, da seid Ihr auch.
+Quick! Lord Binary is giving away gold at the castle!$Schnell, Lord Binary verschenkt Gold auf seinem Schloss!
+Ripper is watching you every move.$Der Ripper beobachtet jede Deiner Bewegungen.
+The message appears to be too cloudy to make anything out of it.$Die Nachricht ist zu unklar, um irgendetwas davon zu verstehn.
+You have just lost five strength.. not!$Du hast 5 Kraftpunkte verloren!
+You're really playing a game you know$Ihr spielt ein Spielchen, dass Ihr wirklich kennt.
+You will be successful in all you do.$Ihr werdet in allem erfolgreich sein, dass Ihr versucht.
+You are a person of culture.$Ihr seid eine kultivierte Person.
+Give me a break! How much good fortune do you expect!$Ah, bitte! Wieviel Glueck erwartet Ihr denn?!?
+That rune is not yet marked!$Diese Rune ist nicht markiert!
+Enter new rune name.$Tragt den neuen Runenamen ein.
+That is out of charges.$Das hat keine Ladungen mehr.
+Your wand now has %i charges left$Euer Zauberstab hat %i Ladungen uebrig.
+This is not a rename deed!$Das ist kein Deed, welches Umbenennung erlaubt!
+Enter your new name.$Gebt Euren neuen Namen ein.
+Gulp !$*schluckt*
+You can not use that.$Das koennt Ihr nicht verwenden.
+That item is locked down.$Dieser Gegenstand wurde am Boden befestigt.
+Hello sir! My name is %s and i will be working for you.$Gruesse Herr! Mein Name ist %s und ich werde von nun an fuer Euch arbeiten.
+You must be close to a house and have a key in your pack to place that.$Um das zu befestigen, muesst Ihr nahe eines Hauses sein und einen Schluessel im Gepaeck haben.
+You have %i seconds left in the jail$Euch stehen noch %i Sekunden im Gefaengnis bevor.
+Crystall ball shatters..$Die Kristallkugel zerbricht..
+What do you wish to identify?$Was wollt Ihr identifizieren?
+Which dye vat will you use this on?$Mit welcher Faerbeschuessel wollt Ihr das benutzen?
+Must be closer to use this!$Ihr muesst naeher dran sein!
+Select item to be repaired.$Waehlt das zu reparierende Item aus.
+What item would you like to Smelt?$Was wollt Ihr schmelzen?
+Select the clothing to use this on.$Welches Kleidungstueck soll verwendet werden?
+What would you like to use that on ?$Womit wollt Ihr das benutzen?
+Select material to use.$Welches Material wollt Ihr nehmen?
+Where do you want to dig?$Wo wollt Ihr graben?
+What do you want to fill the vial with?$Was wollt Ihr in das Flaeschchen fuellen?
+The vial is not in your pack$Das Flaeschchen befindet sich nicht in Eurem Gepaeck.
+Select spinning wheel to spin cotton.$Welches Spinnrad wollt Ihr fuer die Wolle verwenden?
+Select loom to make your cloth$Waehlt den Webstuhl aus, mit dem Ihr Euren Stoff weben wollt.
+Build this Monster!$Erschafft dieses Monster!
+What would you like to use this with?$Womit wollt Ihr das verwenden?
+Select cannon to load.$Welche Kanone wollt Ihr laden?
+Select flour to pour this on.$Mit welchem Mehl?
+Select dough to put this on.$Zu welchem Teig wollt Ihr das hinzufuegen?
+Select your spin wheel to spin wool.$Auf welchem Spinnrad soll die Wolle gesponnen werden?
+Select forge to smelt ore on.$Welche Schmelze wollt Ihr zum Erzschmelzen verwenden?
+You fail to light a fire.$Es gelingt Euch nicht das Feuer anzuzuenden.
+You failed to use this statue.$Ihr schafft es nicht, die Statue zu nutzen.
+You failed to use this.$Ihr schafft es nicht, das zu verwenden.
+Fish where?$Wo wollt Ihr Fische fangen?
+Where is an empty bottle for your potion?$In welche leere Flasche wollt Ihr das fuellen?
+What do you wish to grind with your mortar and pestle?$Was wollt Ihr im Moerser zerreiben?
+What cloth should I use these scissors on?$Welchen Stoff wollt Ihr mit der Schere zerschneiden?
+Who will you use the bandages on?$Wen wollt Ihr bandagieren?
+You are at: %s$Ihr befindet Euch bei: %s
+What lock would you like to pick?$Welches Schloss wollt Ihr aufbrechen?
+What would you like to cook this on?$Worauf wollt Ihr das kochen?
+You reach down and pick some cotton.$Ihr bueckt Euch und pflueckt etwas Baumwolle..
+Select part to combine that with.$Mit welchem Teil wollt Ihr das verbinden?
+Select part to combine it with.$Womit wollt Ihr das kombinieren?
+Select part to combine with$Waehlt aus, welches Teil Ihr hinzufuegen wollt. 
+You create the sextant.$Ihr habt einen Sextanten zusammengebastelt .
+you fail to create the sextant.$Es gelingt Euch nicht, den Sextanten zusammenzusetzen.
+You need to be closer to use that.$Um das zu benutzen, muesst Ihr naeher heran.
+You must wait for it to stop swinging !$Ihr muesst warten, bis es sich nicht mehr bewegt!
+You can't think of a way to use that item.$Ihr habt keine Ahnung, wie das zu verwenden ist.
+[%i spells]$[%i Zauberspruch]
+%s %s by %s$%s %s von %s
+%s at %igp$%s fuer %i Goldstuecke
+%s %i charge$%s %i Ladung
+[Innocent]$[ehrbar]
+[Criminal]$[kriminell]
+[Murderer]$[Moerder]
+[locked down]$[befestigt]
+[locked down & secure]$[befestigt und gesichert]
+[%i items, %i stones]$[%i Gegenstaende, %i Kilogramm]
+[0 items, 0 stones]$[0 Gegenstaende, 0 Kilogramm]
+You cannot ride anything under polymorph effect.$Solange ihr Euch im Formwandel befindet, koennt Ihr nicht reiten.
+You are dead and cannot do that.$Ihr seid tot und koennt das nicht tun.
+Your pet is in battle right now!$Euer Tier kaempft!
+You need to get closer.$Ihr muesst naeher heran.
+That is not your beast of burden!$Das ist nicht Eure Last!
+You cannot open monsters paperdolls.$Ihr koennt den Charakterbogen des Monsters nicht oeffnen.
+Take a look at my goods.$Schaut Euch meine Waren an.
+
+// C:\noxwizard2\nox-wizard\src/debug.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/dragdrop.cpp
+
+You are loosing karma!$Ihr verliert Karma!
+You can't wear that$Das koennt Ihr nicht tragen!
+You are not strong enough to use that.$Dafuer seid Ihr zu schwach.
+You cant wear female armor!$Ah das geht nicht. Ihr seid nicht fuer Frauenruestungen gebaut!
+You already have a weapon equipped!$Ihr tragt bereits eine Waffe!
+Your hands are both occupied!$Ihr habt keine Hand frei!
+You cannot equip a two handed weapon with a weapon equipped!$Wenn Ihr bereits eine Waffe benutzt, koennt Ihr nicht einen Zweihaender verwenden!
+You cannot equip a two handed weapon with a two handed weapon equipped!$Wenn Ihr bereits einen Zweihaender benutzt, koennt Ihr nicht noch eine Waffe verwenden!
+You cannot equip a shield with a two handed weapon equipped!$Ihr benutzt bereits einen Zweihaender und koennt nicht noch ein Schild halten!
+You cannot equip a two handed weapon with a shield equipped!$Ihr benutzt bereits ein Schild und koennt nicht noch einen Zweihaender halten!
+You already have a shield equiped! You must unequip it to use this.$Ihr tragt bereits ein Schild, legt es ab, um ein anderes zu benutzen.
+You already have a weapon equiped!$Ihr habt schon eine Waffe in dieser Hand!
+You can't put items on other people!$Ihr koennt Gegenstaende nicht auf andere Leute ziehn!
+You can't put items on players! [it could damage stats]$Ihr koennt Gegenstaende nicht auf andere Spieler ziehn! [es koennte Ihre Stats beschaedigen]
+* You see %s eating %s *$* Ihr seht, wie %s %s isst*
+It doesn't appear to want the item$Es scheint das nicht zu wollen.
+Excellent work! You have brought us the head of %s. Here is your reward of %d gold coins.$Hervoragende Arbeit! Ihr habt uns endlich den Kopf von %s gebracht, hier ist die Belohnung von %d Goldstuecken.
+You can not claim that prize scoundrel. You are lucky I don't strike you down where you stand!$Schurke! Diesen Preis werdet Ihr nicht einfordern. Seid froh, dass ich Euch nicht nierderschlage!
+Sorry %s i can only use gold$Verzeiht, ich kann nur  %s verwenden.
+Thank you %s for the %i gold!$Taussend Dank, %s fuer die %i Goldstuecke!
+You have gain a little karma!$Ihr habt ein bischen Karma gewonnen!
+You have gain some karma!$Ihr habt etwas Karma gewonnen!
+I thank thee for thy payment. That should give thee a good start on thy way. Farewell!$Habt Dank fuer das Gold. Das sollte Euch einen guten Anfang erlauben. Lebt wohl!
+I am sorry, but I can only accept gold.$Das tut mir aber leid - ich nehme nur Gold an.
+Hey, putting houses in your pack crashes your back and client !$He, Haeuser in Dein Gepaeck zu packen bricht Dir den Ruecken und crashed Deinen Clienten!
+Thank thee kindly, but I have done nothing to warrant a gift.$Habt herzlichen Dank, aber ich kann Euch nichts im Gegenzug fuer ein Geschenk anbieten.
+Hey, putting houses in your pack crashes your back and client!$He, Haeuser in Dein Gepaeck zu packen bricht Dir den Ruecken und crashed Deinen Clienten!
+This aint your vendor!$Dieser Haendler arbeitet nicht fuer Euch!
+You can only put golds in this bank box!$Dieses Bankfach ist nur fuer Geld geeignet!
+As you let go of the item it disappears.$Als Ihr den Gegenstand loslasst, verschwindet er.
+You can only place spell scrolls in a spellbook!$Spruchrollen koennen nur in Zauberbuecher eingebunden werden!
+You cannot place spells in other peoples spellbooks.$Ihr koennt Spruchrollen nicht in die Buecher anderer Leute einbinden.
+You already have that spell!$Diesen Spruch habt Ihr bereits eingebunden!
+Set a price for this item.$Legt einen Preis fuer diesen Gegenstand fest.
+
+// C:\noxwizard2\nox-wizard\src/encryption.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/fishing.cpp
+
+You are too far away to reach that$Ihr seid zu weit weg.
+You need to be closer to the water to fish!$Soweit weg vom Wasser fangt Ihr niemals Fische!
+You fish for a while, but fail to catch anything.$Ihr mueht Euch eine Weile, aber fangt nichts.
+You are too tired to fish, you need to rest!$Ihr seid zu erschoepft zum Fische fangen!
+You fished up an old pair of boots!$Ihr zieht ein Paar alte Schuhe aus dem Wasser!
+You fished up an ancient painting!$Was ist das? Ein altes Gemaelde!
+You fished up an ancient weapon!$Ihr habt eine alte Waffe an Land gezogen!
+You fished up an ancient armor!$Na das ist ein Fang - ein Teil einer alten Ruestung!
+You fished up some treasure!$Unglaublich, Ihr habt einen Schatz an Land gezogen!
+You fished up a hughe fish!$Das ist ein Prachtexemplar von Fisch!
+You wait for a while, but nothing happens$Ihr wartet etwas, aber nichts passiert.
+You fished up an old chest!$Oh, eine alte Schatztruhe!
+You fished up a seashell!$Ihr habt eine Muschelschale erbeutet!
+You fished up a skull!$Ein Schaedel ist Eure Beute!
+You fished up a net!$Ihr zieht ein Netz an Land!
+You fished up some gold!$Was fuer ein Glueck, ein paar Goldstuecke!
+You fished up some bones!$Ihr seid um ein paar Knochen reicher!
+you catch a fish, but no place for it left$Ihr fangt einen Fisch aber habt keinen Platz mehr fuer ihn.
+You pull out an exotic fish!$Na das ist ein ungewoehnlicher Fisch!
+You pull out a fish!$Das Glueck ist Euch gewogen, Ihr zieht einen Fisch an Land!
+
+// C:\noxwizard2\nox-wizard\src/globals.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/guildstones.cpp
+
+You cannot place guildstones at any other location than your house$Gildensteine koennt Ihr nur bei Eurem Haus aufstellen.
+You are already in a guild.$Ihr seid bereits Mitglied einer Gilde.
+There are already enough guildstones placed.$Hier stehen schon genug Gildensteine.
+Cannot create guildstone$Der Gildenstein laesst sich nicht aufstellen.
+Enter a name for the guild.$Welchen Namen soll die Gilde tragen.
+Guildstone for %s$Gildenstein von %s.
+You are not the guildmaster of this guild. Only the guildmaster may use this guildstone teleporter.$Ihr seid nicht Gildenmeister dieser Gilde - und nur dieser kann den Gildensteinteleporter benutzen..
+You are not a member of this guild. Ask an existing guildmember to invite you into this guild.$Ihr seid kein Gildenmitglied. Bittet ein Mitglied, Euch aufzunehmen.
+Recruit someone into the guild.$Nimmt jemanden in die Gilde auf.
+View the current roster.$Leggi la lista dei membri.
+View the guild's charter.$Leggi lo statuto della gilda.
+Declare your fealty. You are currently loyal to %s.$Dichiara la tua fedelta' a qualcuno.Attualmente sei fedele a %s.
+Toggle showing the guild's abbreviation in your name to unguilded people. Currently %s.$Abilita/Disabilita la visualizzazione dell'abbreviazione della tua gilda nel tuo nome a chi non e' un membro. Attualmente %s.
+Resign from the guild.$Verlasse die Gilde.
+View list of candidates who have been sponsored to the guild.$Sieh Dir die Liste der Kandidaten an, die fuer die Gilde vorgeschlagen worden.
+Access %s functions.$Greife auf %s Funktion zu.
+View list of guild that %s has declared war on.$Sieh Dir die Liste der  Gilde an, denen %s den Krieg erklaert hat.
+View list of guilds that have declared war on %s.$Sieh Dir die Liste der Gilden an, die %s den Krieg erklaert haben.
+View list of guilds that %s have declared war on.$Sie Dir die Liste der Gilden an, denen %s den Krieg erklaert haben.
+%s, %s functions$%s, %s Funktionen.
+Set the guild name.$Setze den Gildenamen fest.
+Set the guild's abbreviation.$Setze das Gildenkuerzel fest.
+Change the type of the guild. (Currently a%s guild.)$Veraendere die Art der Gilde. (momentan %s).
+Set the guild's charter.$Lege die Gildenregeln fest.
+Dismiss a member.$Entlasse ein Mitglied.
+Declare war from menu.$Erklaere vom Menue den Krieg.
+Declare war from targeting enemy.$Erklaere durch Anwahl des Feindes den Krieg.
+Declare peace.$Schliesse Frieden.
+Accept a candidate seeking membership.$Nimm einen Bewerber auf.
+Refuse a candidate seeking membership.$Verweigere einem Bewerber die Mitgliedschaft.
+Set the guildmaster's title.$Lege den Titel des Gildenmeisters fest.
+Grant a title to another member.$Verleihe einem anderen Mitglied einen Titel.
+Move this guildstone.$Versetze den Gildenstein.
+Return to the main menu.$Zurueck zum Hauptmenue.
+Please select the type you want your guild to be related to.$Bitte waehlt, welcher Art Eure Gilde sein soll.
+Select this to return to main menu.$Klickt hier, um zum Hauptmenue zurueckzukommen.
+Set to Standard.$Gildenart ist "normal".
+Set to Order.$Gildenart ist "rechtschaffend".
+Set to Chaos.$Gildenart ist "Chaos verbreitend".
+Set %s charter.$Setze die Regeln von %s fest.
+Set the charter.$Bestimme die Regeln.
+Set the webpage.$Gib die Homepage an.
+%s charter.$Regelwerk von %s.
+%s. Select this to return to the main menu.$%s. Hier klicken um zum Hauptmenue zurueckzukehren.
+Visit the guild website at %s$Besuche die Gildenhomepage auf %s
+%s list of candidates.$%s Liste der Bewerber.
+Select this to return to the menu.$Hier klicken um zum Hauptmenue zurueckzukehren.
+%s members roster.$%s Mitgliederaufgaben.
+Dismiss what member?$Welches Mitglied entlassen?
+Refuse what candidate?$Welchen Bewerber ablehnen?
+Accept what candidate?.$Welchen Bewerber aufnehmen?
+Guild that %s has declared war on.$Gilde, der  %s den Krieg erklaert hat.
+Grant a title to whom?$Wem wollt Ihr einen Titel verleihen?
+Whom do you wish to be loyal to?$Gegenueber wem wollt Ihr loyal sein?
+What guilds do you with to declare war?$Welchen Gilden wollt Ihr den Krieg erklaeren?
+What guilds do you with to declare peace?$Welchen Gilden wollt Ihr den Frieden erklaeren?
+Guilds that have decalred war on %s.$Gilden, die %s den Krieg erklaert haben.
+You are in no guild$Ihr seid in keiner Gilde.
+You are no longer in that guild.$Ihr seid nicht laenger Gildenmitglied.
+You have been the last member of that guild so the stone vanishes.$Da Ihr das letzte Mitglied dieser Gilde wart, verschwindet der Stein.
+you are in no guild$Ihr seid in keiner Gilde
+You are in an Order/Chaos guild, you cannot toggle your title.$Ihr seid in einer Order/Chaos-Gilde und koennt Euren Titel nicht aendern.
+You toggled your abbreviation on.$Ihr habt die Abkuerzung eingeschaltet.
+You toggled your abbreviation off.$Ihr habt die Abkuerzung ausgeschaltet.
+This person is already in a guild.$Diese Person ist schon Gildenmitglied.
+No more recruit slots free.$Es koennen nicht noch mehr Rekruten aufgenommen werden.
+This being is already a candidate.$Diese Person ist schon Kandidat.
+This is not a player.$Das ist kein Spieler.
+This person is not in a guild.$Diese Person ist in keiner gilde.
+War yourself? Nah.$Den Krieg erklaeren? Aber nein.
+%s declared war to %s$%s hat den Krieg gegen %s erklaert
+No more war slots free.$Ihr koennt nicht noch mehr Gilden den Krieg erklaeren.
+This guild is already in our warlist.$Dieser Gilde habt Ihr schon den Krieg erklaert.
+Take care of that stone!$Seid vorsichtig mit diesem Stein!
+Select person to invite into the guild.$Waehlt die einzuladende Person aus.
+Enter a new guildname.$Gebt den neuen Gildennamen ein.
+Enter a new guild abbreviation.$Gebt die neue Gildenabkuerzung ein.
+Select person to declare war to.$Waehlt die Person aus, der Ihr den Krieg erklaeren wollt.
+Enter new guildmastertitle.$Gebt den neuen Titel fuer den Gildenmeister ein.
+Enter a new charter.$Gebt das neues Regelwerk ein.
+Enter a new URL.$Gebt die neue Homepageadresse ein.
+You cannot dimiss yourself, please resign from the guild if you wish.$Ihr koennt Euch nicht selbst entlassen, bitte tretet aus (resign).
+Kicked that member out of the guild.$Dieses Mitglied wurde rausgeworfen.
+You got dismissed out of your guild.$Ihr wurdet aus der gilde entlassen.
+Removed candidate from the list.$Kandidat von der Liste geloescht.
+This candidate is now a guildmember.$Dieser Kandidat ist jetzt Gildenmitglied.
+This guild is full, maximum amount of members reached!$Die Gilde hat ihre maximale Anzahl an Mitgliedern erreicht und ist damit voll.
+This candidate is already in another guild, I'll remove him from your list now.$Dieser Kandidat ist bereits in einer anderen Gilde und wird daher von der Liste entfernt.
+%s declared peace to %s$%s hat %s den Frieden erklaert.
+Your guild got renamed to %s$Eure Gilde wurde in %s umbenannt.
+This name is already taken by another guild.$Diesen Namen fuehrt bereits eine andere Gilde.
+Your guild has now the abbreviation: %s$Eure Gilde hat nun die Abkuerzung: %s
+This abbreviation is already taken by another guild.$Diese Abkuerzung besitzt bereits eine andere Gilde.
+You changed your own title.$Ihr habt Euren eigenen Titel geaendert.
+You changed the title.$Ihr habt den Titel geaendert.
+You changed the guilds charter.$Ihr habt das Regelwerk der gilde geaendert.
+You changed the guilds webpage url.$Die Adresse der Gildenwebseite wurde geaendert.
+Your guild is now an Order guild.$Eure Gilde gehorcht nun der Order-Ausrichtung.
+An order shield has been placed in your pack!$Ihr habt in eurem Rucksack nun ein Order-Schild!
+Your guild is now a Chaos guild.$Eure Gilde gehorcht nun der Ausrichtung Chaos.
+A chaos shield has been placed in your pack!$In Eurem Rucksack befindet sich nun ein Chaos-Schild!
+Your guild is now a Standard guild.$Eure Gilde gehorcht nun keiner besonderen Ausrichtung.
+
+// C:\noxwizard2\nox-wizard\src/gumps.cpp
+
+House sign changed.$Das Hausschild wurde geaendert.
+Select person to transfer ownership to.$Welche Person soll es besitzen?
+Select person to eject from house.$Welche Person wollt Ihr herauswerfen?
+Select person to ban from house.$Welcher Person wollt Ihr Hausverbot erteilen?
+Select person to remove from house registry.$Welche Person soll aus dem Hausverzeichnis entfernt werden?
+Select person to make a friend of the house.$Welche Person wollt Ihr zum Freund des Hauses erklaeren?
+HouseGump Called - Button=%i$Das Hausmenue wird genutzt - Button=%i
+You fail your attempt at tracking.$Es gelingt Euch nicht, dies zu verfolgen.
+
+// C:\noxwizard2\nox-wizard\src/house.cpp
+
+Select a place for your structure: $Sucht einen Platz dafuer aus:
+Select location for building.$An welche Stelle soll das Gebaeude?.
+You cannot build houses in town!$ In Staedten lassen sich keine Haeuser baun!
+You cannot build your structure there!$Hier kann das nicht hin!
+Can not build a house at that location (CBS)!$An dieser Stelle ist das Haus nicht errichtbar(CBS)!
+You cannot build your stucture there.$Da passt das nicht hin.
+You cant build structures inside structures$Ihr koennt das nicht in etwas anderes hinein bauen.
+Demolishing House %s$Haus %s wird zerstoert.
+Converted into a %s.$In %s umgewandelt.
+A vendor deed for %s$Ein Haendler-Deed fuer %s
+Packed up vendor %s.$Ein verschnuerrter %s - Haendler.
+All house items and keys removed.$Alle Gegenstaende und Schluessel des Hauses entfernt.
+friend of house$Freund des Hauses
+Select item to lock down$Welcher Gegenstand soll befestigt werden?
+Select item to release$Welcher Gegenstand soll losgemacht werden?
+Select item to secure$Welcher Gegenstand soll gesichert werden?
+Only the house owner can lock down items!$Nur der Hausbesitzer darf Gegenstaende befestigen!
+
+// C:\noxwizard2\nox-wizard\src/html.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/im.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/item_array.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/itemid.cpp
+
+This item is a musical instrument. You can use it for bardic skills like enticement or provocation$Dies ist ein Musikinstrument, es kann fuer bardische Faehigkeiten wie Provokation oder Beruhigung genutzt werden.
+This a door. To open or close it, double click on it.$Das ist eine Tuer, um sie zu oeffnen oder schliessen, doppelklicke auf sie.
+This a locked door. To open or close it, click on the proper key and target it.$Diese Tuer ist verschlossen, um sie zu auf oder zuzuschliessen, klickt doppelt auf den passenden Schluessel und dann auf die Tuer.
+This food you can eat when you're hungry. To eat, double click the food, but beware poisoned food!$Das ist Essen, Ihr koennt es essen, wenn Ihr hungrig seid. Klickt dazu doppel auf das Essen - aber seid vorsichtig mit vergifteten Essen!
+This is a rune for use with recall, mark and gate travel spells$Das ist eine Rune, die Ihr mit dem Rueckkehrzauber (recall), mit dem Zauber "Markieren" (mark) oder dem Zauber Tor-Reise (gate travel) benutzen koennt. 
+If you dye (or are dead) you can double click this item to resurrect!$Wenn Ihr sterbt oder tot seid, klickt darauf doppelt um Euch wiederzubeleben.
+This is a key you can use (double click) to open doors$Das ist ein Schluessel, der mit Doppelklick dazu verwendet werden kann, um verschlossene (passende) Tueren zu oeffnen.
+This is the spellbook, where you can write down your own spells for later use$Das ist das Zauberbuch, in das Ihr Eure Zauber eintragen koennt, um sie spaeter zu benutzen.
+This is a potion! You can drink that when you need its effects... but beware of poison potions!$Das ist ein Zaubertrank! Ihr koennt Ihn mit Doppelklick trinken, wenn Ihr seinen Effekt benoetigt - aber seid vorsichtig mit Gifttraenken (poison potion)!
+He/She is a player like you. You've met new people!!$Das ist auch ein Spieler - genau wie Ihr. Ihr habt jemanden Neues kennengelernt!
+He/She is a Counselor. You can ask him if you need help on the game$Das ist ein Berater (Counselor). Wenn Ihr Hilfe im Spiel benoetigt, koennt Ihr ihn fragen.
+He/She is a Game Master. You can ask his help if you're stuck or have bugs or other problems$Das ist ein Spielleiter (Game Master). Ihr koennt ihn um Hilfe bitten, wenn Ihr Fehler (Bugs) im Spiel entdeckt, festhaengt (stuck) oder andere Probleme habt.
+He/She is a vendor which sells items owned by a player. Good shopping!$Das ist ein Haendler (vendor) welcher Gegenstaende verkauft, die einem Spieler gehoeren. Guten Einkauf!
+Run AWAY!!! It will kill you!!$LAUFT!!! Es wird Euch toeten wollen!!
+
+// C:\noxwizard2\nox-wizard\src/items.cpp
+
+You are not strong enough to keep %s equipped!$Ihr seid nicht stark genug, um %s zu benutzen!
+
+// C:\noxwizard2\nox-wizard\src/itemwrap.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/los.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/magic.cpp
+
+In order to open spellbook, it must be equipped in your hand or in the first layer of your backpack.$Um das Zauberbuch zu oeffnen, muss es in der Hand getragen werden!
+Contact your shard op to setup the summon list!$Kontaktiert Eure Shardleitung, damit die Summon Liste erzeugt wird!
+That is not a spellbook.$Das ist kein Zauberbuch.
+You feel yourself resisting magical energy!$Ihr fuellt, wie Euer Koerper magischer Energie widersteht!
+You are no longer frozen.$Ihr seid nicht laenger festgefroren.
+You do not have enough reagents to cast that spell.[$Ihr habt nicht genug Reagenzien um diesen Spruch zu wirken.
+The spell fizzles.$Euer Spruch versagt.
+Laughs at the poison attempt$Lacht wegen des Vergiftungsversuches
+You have dodged the cannon blast, and have taken less damage.$Ihr seid dem Kanonenschuss ausgewichen und nehmt so weniger Schaden.
+You are in jail and cannot cast spells$Ihr seid hier im Gefaengnis und dort kann man nicht zaubern.
+You can't cast spells here$Hier ist das zaubern nicht moeglich.
+Unseen forces make thou unable to cast that spell.$Unsichtbare Kraefte verhindern, dass Ihr den Zauber wirken koennt.
+You cannot cast with a weapon equipped.$So lange Ihr eine Waffe in der Hand tragt, koennt Ihr nicht zaubern.
+you revealed yourself !$Ihr werdet sichtbar!
+You have insufficient mana to cast that spell.$Ihr verfuegt nicht ueber genug Mana, um den Spruch zu wirken.
+That rune has not been marked yet!$Diese Rune ist noch nicht an einen Ort gebunden worden (marked)!
+You are too heavy to do that!$Ihr seid dafuer ueberladen!
+You feel drained from the attempt.$Der Versuch laesst Euch geschwaecht zurueck.
+You have recalled from the rune.$Ihr seid durch die Rune zurueck versetzt worden.
+Recall rune marked.$Die Rune der Rueckkehr (recall) wurde an den Ort gebunden (marked).
+That item is not a recall rune.$Das ist keine Rune der Rueckkehr.
+Not a valid target on item!$Das ist kein gueltiges Ziel!
+You can't cast on someone that far away!$Auf jemanden, der so weit entfernt ist, koennt Ihr keinen Zauber wirken!
+They are Invulnerable merchants!$Das sind unverletzbare Haendler!
+That player isn't dead!$Dieser Spieler ist nicht tot!
+That player isn't online!$Dieser Spieler ist nicht online!
+There seems to be something in the way.$Da ist etwas im Weg.
+That is not a person.$Das ist keine Person.
+You can't use that spell on characters$Dieser Spruch ist nicht auf Personen anwendbar.
+You can't teleport there.$Dahin koennt Ihr Euch nicht teleportieren.
+You can't teleport here!$Hierher koennt Ihr nicht teleportieren!
+Give up wanabe Jesus !$Hoert auf, Jesus zu spielen!
+This spell can be used only on characters$Dieser Zauber kann nur auf Personen angewandt werden.
+There seems to be something in the way between you and %s.$Zwischen Euch und %s ist anscheinend etwas im Weg.
+This spell can't be used on characters$Dieser kann nicht auf Personen gesprochen werden.
+Try as you might, but you cannot see %s well enough to cover.$Versucht was Ihr wollt, aber ihr koennt %s nicht gut genug sehen.
+You would like to see if anything was there, but there is too much stuff in the way.$Da liegt zuviel im Weg als dass Euer Versuch, etwas zu sehn, gelingen koennte!
+You cannot see the target well.$Ihr koennt Euer Ziel nur schlecht sehn.
+ You cant cast in town!$ In einer Stadt kann man nicht zaubern!
+That is not a valid location.$Das ist kein gueltiger Ort.
+It's trapped!$Es ist mit einer Falle gesichert!
+You cannot trap this!!!$Das koennt Ihr nicht mit einer Falle versehn!!!
+You successfully untrap this item!$Ihr seid erfolgreich, es ist entschaerft!
+You miss to untrap this item!$Euer Entschaerfungsversuch ist gescheitert!
+This item doesn't seem to be trapped!$Das scheint nicht mit einer Falle gesichert zu sein!
+This item cannot be trapped!$Das kann nicht mit einer Falle gesichert werden!
+It's locked!$Abgeschlossen!
+You cannot lock this!!!$Das ist nicht abschliessbar!!!
+You manage to pick the lock.$Es gelingt Euch, das Schloss aufzubrechen.
+That is not locked.$Das ist nicht verschlossen.
+That does not have a lock.$Das hat kein Schloss.
+There is something in the way!$Da ist etwas im Weg!
+That is not a valid item$Das ist kein gueltiger Gegenstand.
+Can't cope with this spell, requires a target but it doesn't specify what type$Zauber nicht umsetzbar, erfordert ein Ziel, aber der Typ ist nicht spezifiziert.
+Not a valid heal target$Das ist nicht heilbar
+Not a valid recall target$Das ist fuer den Spruch der Rueckkehr (recall) kein gueltiges Ziel.
+Not a valid mark target$Das ist kein gueltiges Ziel fuer den Zauber "an Ort binden" (mark).
+Not a valid gate target$Kein gueltiges Ziel fuer den Zauber "Tor".
+
+// C:\noxwizard2\nox-wizard\src/mapstuff.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/msgboard.cpp
+
+Currently posting LOCAL messages$Nachrichtenart steht auf LOKALE Nachrichten.
+Currently posting REGIONAL messages$Nachrichtenart steht auf REGIONALE Nachrichten.
+Currently posting GLOBAL messages$Nachrichtenart steht auf GLOBALE Nachrichten.
+$
+Post type set to LOCAL$Nachrichtenart auf LOKAL geaendert.
+Post type set to REGIONAL$Nachrichtenart auf REGIONAL geaendert
+Post type set to GLOBAL$Nachrichtenart auf GLOBAL geaendert
+Invalid post type$Ungueltige Nachrichtenart!
+You can not reply to global or regional posts$Ihr koennt nicht auf globale oder regionale Nachrichten antworten.
+Post failed!$Aushaengen der Nachricht fehlgeschlagen!
+Invalid post type!$Ungueltige Nachrichtenart!
+Post not valid, please notify GM$Nachricht ist ungueltig, bitte unterrichtet einen Spielleiter davon!
+Failed to find post to be removed.$Zu entfernende Nachricht wurde nicht gefunden.
+Post removed.$NAchricht wurde entfernt.
+Thou art not allowed to post messages.$Euch ist es nicht erlaubt, Nachrichten auszuhaengen!
+Thank you %s for thy service. We have made it safely to %s. Alas, I seem to be a little short on gold. I have nothing to pay you with.$%s,habt vielen Dank fuer Eure Hilfe. Wir sind sicher in %s angekommen. Leider bin ich etwas knapp bei Kasse und kann Euch nicht dafuer bezahlen.
+Thank you %s for thy service. We have made it safely to %s. Here is thy pay as promised.$%s,Habt vielen Dank fuer Eure Hilfe. Wir sind sicher in %s angekommen. Hier ist Eure versprochene Belohnung.
+You have just received %d gold coins from %s %s$Euch wurde gerade %d Goldstuecke von %s, %s gegeben. 
+
+// C:\noxwizard2\nox-wizard\src/necro.cpp
+
+You are too wounded to continue.$Ihr seid zu verwundet, um weiterzumachen.
+You prick your finger and fill the vial.$Ihr stecht Euren Finger und fuellt das Gefaess.
+%s has pricked you with a dagger and sampled your blood$%s sticht Euch mit dem Dolch und sammelt Euer Blut.
+That individual is not anywhere near you.$Dieses Individuum ist Euch nicht nahe.
+You take a sample of blood from the corpse.$Ihr nehmt eine Blutprobe von dem Koerper.
+You examine the corpse but, decide any further blood samples would be to contaminated.$Ihr untersucht den Koerper, entscheidet aber, dass es unklug waere, mehr Blut zu nehmen, da diese dann verunreinigt waere..
+That is not a person or a corpse!$Das ist keine Person oder Koerper!
+You do not have a dagger equipped.$Ihr muesst dazu einen Dolch verwenden.
+
+// C:\noxwizard2\nox-wizard\src/network.cpp
+
+%s has left the realm$%s hat die Welt verlassen!
+%s %s %s [%s] Compiled by %s$%s %s %s [%s] kompiliert von %s
+Programmed by: %s$Programmiert von: %s
+%s entered the realm$%s hat die Welt betreten
+There is NO client version checking active on this shard. The recommanded-dev-team-supported client version for this server version is client version %s though$Der Server akzeptiert momentan jede Clientversion. Aus Gruenden der Sicherheit wird jedoch Version %s empfohlen.
+This shard requires the recommanded-dev-team-supported client version for this server version client version %s$Dieser Server akzeptiert momemtan nur den vom Entwicklerteam empfohlenen Clienten Version %s.
+This shard requires client version[s] %s$Der Server akzeptiert momentan nur Einwahl mit dem Client Version %s
+ or $ oder 
+ The NoX-Wizard team recommanded client is $ Der vom NoX-Wizard Entwicklerteam empfohlene Client hat Version %s.
+Access Denied!!!$Zugang verweigert!!!
+You are already casting a spell.$Ihr wirkt bereits einen Zauber.
+You cannot cast spells while frozen.$Waehrend Ihr gelaehmt seid, koennt Ihr nicht zaubern.
+You don't have that spell.$Diesen Zauber habt Ihr nicht.
+To place a bounty on %s, use the command BOUNTY <Amount>.$Um ein Kopfgeld auf %s auszusetzen, benutzt den Befehl BOUNTY <Geldmenge>.
+You are now a ghost.$Ihr seid nun ein Geist
+The connection between your spirit and the world is too weak.$Die Verbindung zwischen Euch und der Welt ist zu schwach.
+You are using a %iD client, version %s$Ihr verwendet den %iD Clienten, Version %s.
+
+// C:\noxwizard2\nox-wizard\src/newbie.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/nox-wizard.cpp
+
+You cannot reach the handle from here$Von hier ist der Griff nicht erreichbar
+You refreshed your friend's house$Ihr habt das Haus Eures Hauses refreshed.
+You refreshed the house$Ihr habt das Haus refreshed.
+This doesnt seem to be a valid door type. Contact a GM.$Das scheint keine gueltige Tuer zu sein, bitte kontaktiert einen GM..
+Time up [%i:%i:%i] Connected players [%i out of %i accounts] Items [%i] Characters [%i]$Zeit seit Serverstart: [%i:%i:%i] Spieler online [%i out of %i accounts] Gegenstaende [%i] Personen [%i]
+Runtime lag factors: Corpses not freed from memory [%i] Decayed items still in memory [%i]$Ursachen fuer Lag: noch %i Leichname die noch im Speicher liegen, %i decayte Gegenstaende die noch im Speicher sind
+You are already on a mount.$Ihr reitet bereits.
+You dont own that creature.$Diese Kreatur gehoert Euch nicht.
+The server is shutting down.$Server faehrt herunter.
+It is$Es ist 
+It is a quarter past$Es ist Viertel nach
+It is half past$Es ist eine halbe Stunde nach
+It is a quarter till$Es ist Viertel vor
+%s one o'clock$%s ein Uhr
+%s two o'clock$%s zwei Uhr
+%s three o'clock$%s drei Uhr
+%s four o'clock$%s vier Uhr
+%s five o'clock$%s fuenf Uhr
+%s six o'clock$%s sechs Uhr
+%s seven o'clock$%s sieben Uhr
+%s eight o'clock$%s acht Uhr
+%s nine o'clock$%s neun Uhr
+%s ten o'clock$%s zehn Uhr
+%s eleven o'clock$%s elf Uhr
+%s midnight.$%s Mitternacht
+%s noon.$%s mittags
+%s in the afternoon.$%s nachmittags.
+%s in the evening.$%s abends.
+%s at night.$%s nachts.
+%s in the morning.$%s morgens.
+You see %s attacking %s!$Ihr seht wie %s %s angreift!
+%s's bank box.$ Bankfach von %s.
+%s's items bank box.$Bankfach fuer Gegenstaende von %s.
+You feel more agile!$Ihr fuehlt Euch beweglicher.
+You feel much more agile!$Ihr fuehlt Euch viel beweglicher.
+The potion had no effect.$Der Trank hatte keine Wirkung.
+The potion was not able to cure this poison.$Der Trank konnte Euch nicht von der Vergiftung heilen.
+The poison was cured.$Das Gift wurde neutralisiert.
+ You cant use that in town!$ Das koennt Ihr nicht in der Stadt benutzen!
+Now would be a good time to throw it!$Jetzt waere eine gute Gelegenheit es zu werfen!
+You feel better!$Ihr fuehlt Euch besser.
+You feel more healty!$Ihr fuehlt Euch gesuender.
+You feel much more healty!$Ihr fuehlt Euch sehr viel gesuender.
+You poisoned yourself! *sigh*$Ihr habt Euch selbst vergiftet! *seufz*
+You feel more energetic!$Ihr fuehlt Euch energiegeladener!
+You feel much more energetic!$Ihr fuehlt Euch sehr viel energiegeladen.
+You feel more strong!$Ihr fuehlt Euch staerker!
+You feel much more strong!$Ihr fuehlt Euch sehr viel staerker.
+no,no,no,cant you get enough ?$NEIN, NEIN und nochmals NEIN! Koennt Ihr nicht genug bekommen?
+You have gained a little karma.$Euer Karma ist nun ein bischen besser.
+You have lost a little karma.$Euer Karma ist nun ein bischen schlechter.
+You have gained some karma.$Ihr habt nun ein etwas besseres Karma.
+You have lost some karma.$Ihr habt nun etwas schlechteres Karma .
+You have gained alot of karma.$Ihr habt nun ein spuerbar besseres Karma.
+You have lost alot of karma.$Ihr habt nun ein spuerbar schlechteres Karma.
+You have gained a huge amount of karma.$Euer Karma ist nun sehr deutlich besser geworden.
+You have lost a huge amount of karma.$Euer Karma ist nun sehr deutlich schlechter geworden.
+You have gained a little fame.$Euer Ruf hat sich ein bischen verbessert.
+You have lost a little fame.$Euer Ruf hat sich ein bischen verschlechtert.
+You have gained some fame.$Ihr habt nun einen etwas besseren Ruf.
+You have lost some fame.$Ihr habt nun einen etwas schlechteren Ruf.
+You have gained alot of fame.$Ihr habt nun einen spuerbar besseren Ruf.
+You have lost alot of fame.$Ihr habt nun einen spuerbar schlechteren Ruf.
+You have gained a huge amount of fame.$Ihr habt sehr deutlich an Ruf gewonnen.
+You have lost a huge amount of fame.$Ihr habt sehr deutlich an Ruf verloren.
+You are now a criminal!$Ihr seid jetzt ein Krimineller.
+
+// C:\noxwizard2\nox-wizard\src/npcs.cpp
+
+You break your concentration.$Perdi la concentrazione.
+
+// C:\noxwizard2\nox-wizard\src/ntservice.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/nxw_utils.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/nxwgui.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/p_ai.cpp
+
+Hello %s, Welcome to my shop, How may i help thee?.$Gruesse %s.Willkommen in meinem Laden. Wie kann ich Euch helfen?
+Thou art dead, but 'tis within my power to resurrect thee.  Live!$Ihr seid tot - aber es steht in meiner Macht, Euch wiederzubeleben. LEBT!
+Allow me to resurrect thee ghost.  Thy time of true death has not yet come.$Erlaubt mir, Euren Geist wieder auferstehen zu lassen. Eure Zeit des wahren Todes ist noch nicht gekommen.
+Perhaps thou shouldst be more careful. Here, I shall resurrect thee.$Vielleicht solltet Ihr etwas Vorsichtiger sein? Da, nun steht auf von den Geistern!
+Live again, ghost! Thy time in this world is not yet done.$Geist, lebe wieder! Deine Zeit in der Welt ist noch nicht vergangen.
+I shall attempt to resurrect thee.$Ich werde versuchen, Euch wiederzubeleben.
+I will nay give life to a scoundrel like thee!$Niemals werde ich einem Schurken wie Euch Leben geben!
+I will nay give life to thee for thou art a criminal!$Dir, Du Krimineller, werde ich niemals Auferstehung ermoeglichen!
+Fellow minion of Mondain, Live!!$Lebe, kleiner Gefaehrte des Mondain!!
+Thou has evil flowing through your vains, so I will bring you back to life.$Das Boese fliesst durch Eure Venen und so werde ich Euch das Leben wiedergeben.
+If I res thee, promise to raise more hell!.$Eins verlang ich dafuer, dass ich Euch auferstehen lasse - bringt die Hoelle ueber die Welt!
+From hell to Britannia, come alive!.$Von der Hoelle hierher, werdet lebendig!
+Since you are Evil, I will bring you back to consciouness.$Da Ihr boese seid, werde ich Euch das Bewusstsein wiedergeben.
+I dispise all things good. I shall not give thee another chance!$Ich hasse alle Dinge, die gut sind. EUCH werde ich keine zweite Chance geben.
+Could thou spare a few coins?$Koenntet Ihr ein paar Muenzen eruebrigen?
+Hey buddy can you spare some gold?$He mein Freund, koennt Ihr mir nicht ein bischen Gold ueberlassen?
+I have a family to feed, think of the children.$Ich muss eine Familie ernaehren - denkt an die Kinder.
+You better watch your step %s, I am watching thee!!$Passt besser auf Eure Schritte auf, %s - ich beobachte sie!!!
+%s is an upstanding citizen, I will protect thee in %s.$%s ist ein aufrechter Buerger, ich werde Euch in %s beschuetzen.
+Foolish Mortal!$Erbaermliche Sterbliche!
+
+// C:\noxwizard2\nox-wizard\src/party.cpp
+
+This party is no more valid. Sorry.$Diese Gruppe ist leider nicht mehr gueltig.
+The party is full. Sorry.$Diese Gruppe ist leider vollbesetzt.
+You've entered the party.$Ihr seid der Gruppe beigetreten.
+Party can loot you!$Die Gruppe kann Eurem Leichnam nun den Besitz abnehmen.
+Party CANNOT loot you!$Wenn Ihr sterbt kann die Gruppe Euren Besitz NICHT an sich nehmen.
+Your party has been dismembered$Euer Gruppenmitglied ist ausgetreten.
+You've been kicked from the party$Ihr wurdet von der Gruppe ausgeschlossen.
+Sorry, can't build a party now (internal server error)!$Interner Serverfehler, leider momentan keine Gruppenbildung moeglich.
+You're the leader of this party!$Ihr seid Gruppenfuehrer.
+The selected person is already in a party. $Die ausgewaehlte Person ist schon Mitglied der Gruppe. 
+The selected person must be online to give you permission. $Die ausgewaehlte Person muss online sein, um zuzustimmen. 
+You are invited in a party lead by %s. Would you accept ?$Ihr wurdet  in die Gruppe von %s eingeladen. Nehmt Ihr an?
+Select the one to add to the party..$Waehlt aus, wen Ihr einladen wollt...
+You're not in a party!$Ihr seid in keiner Gruppe.
+Private message from %s : %s$Private Mitteilung von %s: %s
+Party message from %s : %s$Gruppenmitteilung von %s: %s
+
+// C:\noxwizard2\nox-wizard\src/pointer.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/qsf.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/rcvpkg.cpp
+
+Perhaps thou shouldst be more careful. Here, I shall resurrect thee.$Ihr solltet vorsichtiger sein. Hier, ich werde Euch wiederbeleben.
+Come nearer, ghost, and i'll give you life!$Komm naeher Geist und ich werde Euch das Leben wiederschenken.
+I will not give life to a scoundrel like thee!$Abschaum wie Euch werde ich niemals Leben spenden!
+Come nearer, evil soul, and i'll give you life!$Kommt naeher, boese Seele, und ich werde Euch das Leben neu schenken.
+There is no fighting in the jail cells!$Keine Kaempfe in den Gefaengniszellen!
+That person is already dead!$Diese Person ist schon tot.
+%s cannot be harmed.$%s kann nicht verletzt werden.
+Help! Guards! I've been attacked!$HILFE! WACHEN! Ich werde angegriffen!
+Help! Guards! Tis a murder being commited!$HILFE! WACHEN! Ein Mord wurde veruebt!
+You've gained a little karma.$Euer Karma wurde ein bischen besser.
+
+// C:\noxwizard2\nox-wizard\src/regions.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/remadmin.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/scp_parser.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/scriptc.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/scripts.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/set.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/skills.cpp
+
+You made an item with no quality!$Ihr habt einen lausigen Gegenstand hergestellt!Von Qualitaet kann man da garnicht sprechen.
+You made an item very below standard quality!$Ihr stellt einen Gegenstand her, der weit unter der gewoehnlichen Qualitaet liegt
+You made an item below standard quality!$Der hergestellte Gegenstand liegt ein gutes Stueck unter der gewoehnlichen Qualitaet.
+You made a weak quality item!$Ihr habt bei Eurem Gegenstand die gewoehnliche Qualitaet nicht erreicht.
+You made a standard quality item!$Der von Euch hergestellte Gegenstand ist von gewoehnlicher Qualitaet.
+You made a nice quality item!$Ihr stellt einen Gegenstand von ordentlicher Qualitaet her.
+You made a good quality item!$Hm, Ihr habt eine Gegenstand von guter Qualitaet gemacht.
+You made a great quality item!$Der Gegenstand hat eine beachtliche Qualitaet
+You made a beautiful quality item!$Ihr stellt einen Gegenstand her, der von wunderbarer Qualitaet ist.
+You made a perfect quality item!$Ihr habt einen Gegenstand von perfekter Qualitaet erschaffen!.
+You fail to create the item.$Es gelingt Euch nicht, den Gegenstand herzustellen.
+You fail to inscribe the spell$Euer Versuch, den Spruch zu vervielfachen, misslingt.
+You do not have enough resources anymore!!$Ihr habt nicht mehr genug Ausgangsstoffe!
+You don't have your blank map anymore!!$Ihr habt keine unbeschriebene Karte mehr!
+You scratch on the map but the result is unusable$Ihr kritzelt auf das Papier aber das Resultat ist unbrauchbar!
+ of high quality$ von hoher Qualitaet
+ of h.q.$ von h.Q.
+(hQ)$(hQ)
+ of very high quality$ von sehr hoher Qualitaet
+ of v.h.q.$ von s.h.Q.
+(vhQ)$(vhQ)
+ of exceptional quality$ von ausserdordentlicher Qualitatet
+ of e.q.$ von a.Q.
+(eQ)$(eQ)
+You create the item and place it in your backpack.$Ihr stellt es her und packt es in Euer Gepaeck.
+You create a corresponding key and put it in the chest$Ihr fertigt einen passenden Schluessel und packt ihn in die Truhe.
+You aren't skilled enough to make anything with what you have.$Ihr habt nicht die Fertigkeiten, um mit dem was Ihr habt, etwas anfangen zu koennen!
+You cannot hide while fighting.$Ihr koennt Euch nicht verstecken waehrend Ihr kaempft.
+You are already hidden$Ihr verbergt Euch schon.
+You are unable to hide here.$Ihr koennt Euch hier nicht verstecken.
+You have hidden yourself well.$Ihr habt Euch gut versteckt.
+You can't stealth on horse!$Auf einem Pferd koennt Ihr Euch nicht verbergen.
+You must hide first.$Ihr muesst Euch erst verstecken.
+You are not hidden well enough. Become better at hiding.$Ihr habt Euch nicht gut genug verborgen, versteckt Euch erst besser!
+You can move %i steps unseen.$Ihr koennt Euch %i Schritte ungesehn bewegen.
+You do not have an instrument to play on!$Ihr habt kein Instrument um darauf zu spielen.
+You play your hypnotic music, stopping the battle.$Ihr spielt eine betaeubende Musik, die den Kampf unterbricht.
+You hear some lovely music, and forget about fighting.$Ihr hoert eine liebliche Musik und vergesst dabei das Kaempfen.
+You attempt to calm everyone, but fail.$Ihr versucht, die Kreaturen in Hoerweite zu beruhigen, versagt aber.
+*%s starts grinding some %s in the mortar.*$*%s beginnt, etwas %s in einem Moerser zu zermahlen*
+You do not have enough reagents for that potion.$Fuer diesen Trank habt Ihr nicht genug Reagenzien.
+*%s tosses the failed mixture from the mortar, unable to create a potion from it.*$*%s kippt die verdorbene Mixtur, unfaehig aus ihr einen Trank zu brauen, aus dem Moerser, *
+*%s pours the completed potion into a bottle.*$*%s fuellt den fertigen Trank in eine Flasche*
+This is not an appropriate container for a potion.$Dahinein kann man keinen Trank fuellen!
+an agility$ein "Mittlere Geschwindigkeit"
+a greater agility$ein "Grosse Geschwindigkeit"
+a lesser cure$ein "Schwaches Gegengift"
+a cure$ein "Mittlere Gegegengift"
+a greater cure$ein "Starkes Gegegengift"
+a lesser explosion$ein "Schwaches Explosion"
+an explosion$ein "Mittlere Explosion"
+a greater explosion$ein "Starke Explosion"
+a lesser heal$ein "Schwache Heilung"
+a heal$ein "Mittlere Heilung"
+a greater heal$ein "Grosse Heilung"
+a night sight$ein "Nachtsicht"
+a lesser poison$ein "Schwaches Gift"
+a poison$ ein "Mittleres Gift"
+a greater poison$ein "Starkes Gift"
+a deadly poison$ ein "Toedliches Gift"
+a refresh$ein "Mittlere Erfrischung"
+a total refreshment$ ein "Vollkommene Erfrischung"
+a strength$ ein "Mittlere Kraft"
+a greater strength$ ein "Grosse Kraft"
+Ghosts can not train %s$Geister koennen %s nicht trainieren
+You have reached the skill-cap of %i and no skill can fall!$Ihr habt den Maximalwert der Fertigkeit %i erreicht und keine Fertigkeit kann sinken.
+You have reached the stat-cap of %i!$Ihr habt den maximalen Wert der Eigenschaft %i erreicht.
+You fail your attempt at contacting the netherworld.$Euer Versuch, das Reich der Toten zu erreichen, scheitert.
+You establish a connection to the netherworld.$Es gelingt Euch, eine Verbindung mit dem Reich der Toten herzustellen.
+You must wait a few moments before using another skill.$Ihr muesst einen Moment warten, bevor Ihr eine andere Fertigkeit nutzen koennt.
+you are in jail and cant gain skills here!$Ihr seid im Gefaengnis und hier koennt Ihr Eure Fertigkeiten nicht verbessern!
+You cannot do that as a ghost.$Das koennt Ihr als Geist nicht!
+You can't do that while you are casting$Waehrend Ihr einen Zauber wirkt, ist das nicht moeglich.
+What item do you wish to get information about?$Welchen Gegenstand wollt Ihr untersuchen?
+Whom shall I examine?$Wenn wollt Ihr versuchen einzuschaetzen?
+What do you wish to appraise and identify?$Was wollt Ihr abschaetzen und identifizieren?
+What would you like to evaluate?$Was wollt Ihr bewerten?
+Tame which animal?$Welches Tier wollt Ihr zaehmen?
+Where do you wish to search for hidden characters?$Wo wollt Ihr nach verborgenen Personen suchen?
+Whom do you wish to incite?$Wen wollt Ihr aufhetzen?
+Whom do you wish to entice?$Wen wollt Ihr beruhigen?
+What do you wish to steal?$Was wuerdet Ihr gern stehlen?
+That skill has been disabled.$Diese Fertigkeit ist nicht nutzbar.
+What do you wish to place a spell on?$Worauf wollt Ihr einen Zauber sprechen?
+Whom do you wish to annoy?$Wen wollt Ihr aufwiegeln?
+What animal do you wish to get information about?$Welches Tier wollt Ihr untersuchen?
+What corpse do you want to examine?$Welchen Koerper wollt Ihr einer Betrachtung unterziehn?
+What poison do you want to apply?$Welches Gift wollt Ihr zusetzen?
+What do you want to taste?$Was wollt Ihr kosten?
+Meditation is turned off.  Tell your GM to enable ARMOR_AFFECT_MANA_REGEN in server.cfg to enable it.$Meditation wurde deaktiviert, bitte einem GM mitteilen.
+What do you want to untrap?$Was wollt Ihr entschaerfen?
+That skill has not been implemented yet.$Diese Fertigkeit funktioniert noch nicht.
+bad luck, your victim doesnt have a backpack$So ein Pech, Euer Opfer hat kein Gepaeck!
+You catch yourself red handed.$Ihr wurdet auf frischer Tat ertappt!
+You cannot steal that.$Das koennt Ihr nicht stehlen.
+your victim doesnt have posessions$Euer Opfer verfuegt ueber keinen Besitz.
+You reach into %s's pack and try to take something...$Ihr greift behutsam in das Gepaeck von %s und versucht, etwas zu erwischen ...
+That is too heavy.$Das ist zu schwer.
+You can't steal from gods.$Ihr koennt nicht von Goettern stehlen.
+That item has no value to you.$Das hat keinen Wert fuer Euch.
+You successfully steal that item.$Euer Versuch was erfolgreich, Ihr habt diesen Gegenstand gestohlen.
+You failed to steal that item.$Ihr versagt bei dem Versuch, diesen Gegenstand zu stehlen.
+You have been cought!$Ihr wurdet erwischt!
+Guards!! A thief is amoung us!$WACHEN! Ein Dieb ist unter uns!
+You notice %s trying to steal %s from you!$Ihr bemerkt ploetzlich, dass %s versucht, Euch %s zu stehlen.
+You notice %s trying to steal %s from %s!$Ihr bemerkt, wie %s versucht, von %s %s zu stehlen!
+You are too far away to steal that item.$Ihr seid zu weit weg, um diesen Gegenstand zu stehlen.
+You are now tracking %s.$Ihr verfolgt nun die Spur von %s.
+You see no signs of any animals.$Keine Spur von irgendeinem Tier.
+You see no signs of any creatures.$Keine Spur von irgendeiner Kreatur.
+You see no signs of anyone.$Von nichts und niemandem eine Spur.
+to the North$im Norden
+to the Northwest$im Nordwesten
+to the Northeast$im Nordosten
+to the South$im Sueden
+to the Southwest$im Suedwesten
+to the Southeast$im Suedosten
+to the West$im Westen
+to the East$im Osten
+right next to you$gleich neben Euch.
+%s is to the North$%s befindet sich im Norden.
+%s is to the Northwest$%s befindet sich im Nordwesten.
+%s is to the Northeast$%s befindet sich im Nordosten.
+%s is to the South$%s befindet sich im Sueden.
+%s is to the Southwest$%s befindet sich im Suedwesten.
+%s is to the Southeast$%s Befindet sich im Suedosten.
+%s is to the West$%s befindet sich im Westen.
+%s is to the East$%s befindet sich im Osten.
+%s is right next to you$%s befindet sich gleich neben Euch!
+You don't have this spell in your spell book!$Diesen Spruch habt Ihr nicht im Zauberbuch.
+Your hand jerks and you punch a hole in the item$Eure Hand zuckt aus Versehen und Ihr macht ein Loch in den Gegenstand!
+Your hand slips and you dent the item$Eure Hand rutscht aus und Ihr verbeult den Gegenstand.
+Your hand cramps and you scratch the item$Eure Hand verkrampft und Ihr zerkratzt den Gegenstand.
+This item already has a spell!$Dieser Gegenstand wurde schon mit einem Zauber belegt!
+Item at max charges!$Mehr Ladungen kann dieser Gegenstand nicht bekommen!
+Item successfully Engraved$Ihr habt den Gegenstand erfolgreich mit einer Gravur versehen.
+You added one more charge to the Item$Ihr fuegt mehr Ladungen hinzu.
+You could not possibly engrave on that!$Das laesst sich nicht mit einer Gravur versehn.
+Sorry this spell is not implemented!$Dieser Zauber ist leider nicht verfuegbar.
+Practice archery on archery buttes !$Uebt Eure Treffsicherheit mit dem Bogen an Zielscheiben!
+You feel you would gain no more from using that.$Ihr spuert, dass Euch das nichts mehr bringt.
+You collect the arrows.$Ihr sammelt die Pfeile ein.
+You collect the bolts.$Du sammelst die Bolzen ein.
+This target is empty$Diese Zielscheibe ist leer.
+You pull %d arrows from the target$Ihr zieht %d brauchbare Pfeile aus der Zielscheibe.
+You pull %d bolts from the target$Ihr zieht %d brauchbare Bolzen aus der Schiess-Scheibe.
+You pull %d arrows and %d bolts from the target$Ihr zieht %d brauchbare Bolzen und %d Pfeile aus der Zielscheibe.
+You need to equip a bow to use this.$Ihr koennt das nur nutzen wenn Ihr den Bogen verwendet!
+You should empty the butte first!$Ihr solltet die Schiess-Scheibe erst leeren!
+You have nothing to fire!$Ihr habt nichts, um zu schiessen!
+You learn nothing from practicing here$Ihr lernt nichts waehrend ihr uebt!
+You miss the target$Ihr verfehlt das Ziel.
+You hit the outer ring!$Ihr trefft den aeusseren Ring.
+You hit the middle ring!$Ihr trefft den mittleren Ring.
+You hit the inner ring!$Ihr trefft den inneren Ring.
+You hit the bullseye!!$Ins Schwarze!
+You cant use that from here.$Von hier aus ist das nicht nutzbar.
+Your mind is too busy with the war thoughts.$Euer Verstand ist vom Kampf zu sehr in Anspruch genommen.
+Regenerative forces cannot penetrate your armor.$Regenerierende Kraefte koennen Eure Ruestung nicht durchdringen.
+You cannot meditate with a weapon or shield equipped!$Ihr koennt nicht meditieren, wenn Ihr Waffe oder Schild tragt!
+You are at peace.$Ihr wendet Euch wieder friedlichen Dingen zu.
+You cannot focus your concentration.$Ihr koennt nicht sammeln und konzentrieren.
+You enter a meditative trance.$Ihr versetzt Euch in einen Zustand meditativer Trance.
+Your spiritual forces disturb the enemy!$Eure spirituellen Kraefte stoeren den Feind.
+A damned soul is disturbing your mind!$Eine verdammte Seele stoert Euer Denken.
+%s is persecuted by a ghost!!$%s wird von einem Geist verfolgt.
+Your mind is not strong enough to disturb the enemy.$Euer Geist ist nicht stark genug, den Feind zu stoeren.
+You are unable to persecute him now...rest a little...$Ihr seid unfaehig, ihn zu verfolgen ... ruht ein wenig.
+You don't have an empty map to draw on$Ihr habt keine leere Karte um darauf zu zeichnen.
+You fail to decipher the map$Es gelingt Euch nicht, die Karte zu entziffern.
+You put the deciphered tresure map in your pack$Ihr packt die entzifferte Schatzkarte in Euer Gepaeck.
+You must wait to perform another action$Ihr muesst einen Moment abwarten bevor Ihr etwas anderes tun koennt.
+
+// C:\noxwizard2\nox-wizard\src/skitarg.cpp
+
+Time to buy a backpack$Es wird Zeit, sich einen Rucksack zu kaufen.
+You can't use material outside your backpack$Ihr koennt Ausgangsstoffe nicht ausserhalb Eures Gepaecks bearbeiten.
+There are no traps on this object$Es ist nicht mit Fallen gesichert.
+You don't have enough material to make anything.$Ihr habt nicht genug Material, um damit irgendetwas herzustellen.
+You cannot use that material for tailoring.$Das laesst sich nicht zum Schneidern nutzen.
+You cannot use that for fletching.$Das ist zum Bogenmachen nicht geeignet.
+You cannot use that material for carpentry.$Damit kann man nicht schreinern.
+The anvil is too far away.$Der Amboss ist zu weit weg.
+You don't have enough %s ingots to make anything.$Ihr habt nicht genug Barren aus %s um daraus etwas zu machen.
+You cannot use that material for blacksmithing$Das ist nicht zum Schmieden geeignet.
+You cant taste that!$Das kann man nicht kosten!
+You can't quite tell what this item is...$Ihr koennt nicht richtig sagen, was das ist ...
+You have to use your forensics evalutation skill to know more on this corpse.$Ihr muesst die Totenkunde benutzen, um mehr ueber den Leichnam herauszufinden.
+You found that this item appears to be called: %s$Ihr wisst, dass dieser Gegenstand %s genannt wird
+This item is poisoned!$Es ist vergiftet!
+This item shows no poison.$Es scheint nicht vergiftet zu sein.
+It is %s by %s$Das ist  %s und wurde von %s hergestellt
+It is made by %s$es wurde von %s gemacht
+You don't know its creator!$Euch ist unbekannt, wer dies gemacht hat!
+You can't know its creator!$Der Hersteller ist Euch ein Raetsel!
+You cant mine while on a horse!$Also bitte, auf einem Pferd sitzend, laesst sich kein Erz abbauen!
+You are too tired to mine.$Ihr seid zu erschoepft zum Erzabbau.
+You are to far away to reach that$Ihr seid zu weit weg um das zu erreichen.
+There is no metal here to mine.$Hier gibt es kein abbaubares Erz.
+You can't mine that!$Das laesst sich nicht abbauen!
+You sifted thru the dirt and rocks, but found nothing useable.$Ihr hackt wuehlt Euch durch Steine und Dreck aber findet nichts Brauchbares.
+You place some iron ore in your pack.$Ihr packt ein wenig Eisenerz in Euren Rucksack.
+You place a gem in your pack.$Ihr foerdert einen Edelstein zutage und packt ihn in Euer Gepaeck.
+You place some %c%s ore in your pack.$Ihr verstaut etwas %c%s Erz in Eurem Gepaeck.
+You are too tired to chop.$Ihr seid zu muede, um Baeume zu faellen.
+Lumberjacking startup, setting tree values and times...$Holzfaellerei gestartet, Baumwerte und Zeiten werden gesetzt...
+There is no more wood here to chop.$Der Baum ist nicht weiter stutzbar.
+No backpack to store logs$Ihr habt garkein Gepaeck um das Holz einzupacken!
+You chop for a while, but fail to produce any usable wood.$Ihr hackt eine Weile auf den Baum ein, aber es kommt kein nutzbares Holz dabei heraus..
+You place more logs in your pack.$Ihr verstaut mehr Holz in Eurem Gepaeck.
+You place some logs in your pack.$Ihr packt ein wenig Holz in den Rucksack.
+You sifted through the dirt and found nothing.$Ihr siebt den Schmutz, findet aber nichts.
+You have disturbed the rest of a vile undead creature.$Ihr habt die Ruhe einer boesen untoten Kreatur gestoert.
+You unearthed an old shield and placed it in your pack$Ihr befreit ein alte Schield von der Erde und packt es in Euer Gepaeck.
+You have found an old piece armor and placed it in your pack.$Ein altes Stueck Ruestung kommt zum Vorschein, dass Ihr wegpackt..
+You unearthed %i gold coin.$Ihr grabt %i Goldstueck aus.
+You unearthed %i gold coins.$Ihr findet %i Goldstuecke in der Erde.
+You unearthed a old weapon and placed it in your pack.$Eine alte Waffe kommt ans Licht, die Ihr in Euer Gepaeck packt.
+You have unearthed some old bones and placed them in your pack.$Ihr grabt ein paar alte Knochen aus und packt sie in Euren Rucksack.
+This grave seems to be empty.$Das Grab scheint leer zu sein.
+You have no idea what to do with this strange ore$Ihr habt keine Ahnung, was man mit diesem fremden Erz anfangen kann.
+Your hand slips and the last of your materials are destroyed.$Eure Hand rutscht aus und Euer letztes Material ist zerstoert.
+Your hand slips and some of your materials are destroyed.$Ein Teil Eures Materials wird zerstoert, als Euch die Hand ausrutscht.
+You have smelted your ore$Das Erz ist eingeschmolzen worden.
+You place some %c%s ingots in your pack.$Ihr packt einige Baren aus %c%s in Euer Gepaeck.
+You cant smelt here.$Hier kann man nicht schmelzen.
+You failed to spin your material.$Der Faden reisst mehrfach bei dem Versuch, es zu spinnen.
+You have successfully spun your material.$Ihr habt Euer Material erfolgreich gesponnen.
+You cant tailor here.$Hier koennt Ihr nicht schneidern.
+You do not have enough material to make anything!$Ihr habt nicht genug Ausgangstoffe, um irgendetwas daraus zu machen!
+You failed to make cloth.$Ihr schafft es nicht, daraus Stoff zu machen.
+You have broken and lost some material!$Es ist zerbrochen und Ihr verliert etwas Ausgangsmaterial!
+You have made your cloth.$Ihr habt Stoff produziert.
+You have made a bolt of cloth.$Ihr habt eine Rolle Stoff gemacht.
+You failed to cook the %s and drop some into the ashes.$Der Versuch, %s zu kochen, misslingt und es faellt Euch etwas in die Glut und verbrennt.
+You have cooked the %s,and it smells great.$Der Versuch, %s zu kochen, gelingt, es riecht wunderbar.
+You failed to mix, and spilt your water.$Es geling Euch nicht, es zu vernuenftig zu mischen und Ihr verschuetet etwas Wasser.
+You have mixed very well to make your dough.$Es ist ordentlich durchgemischt und macht einen guten Teig.
+You cant mix here.$Hier koennt Ihr das nicht mischen.
+You failed to mix.$Es gelint Euch nicht, es richtig zu mischen und das Resultat ist unbrauchbar.
+You have made your uncooked pizza, ready to place in oven.$Ihr habt eine ungebackene Pizza gemacht, die jetzt in den Ofen kann.
+You have been revealed!$Ihr wurdet entdeckt!
+You fail to find anyone.$Es gelingt Euch nicht, jemanden zu finden.
+You cannot provoke other players.$Ihr koennt andere Spieler nicht aufwiegeln.
+You play your music, inciting anger, and your target begins to look furious. Whom do you wish it to attack?$Ihr spielt Eure Musik, hetzt Euer Ziel auf es beginnt, sehr wuetend auszusehn. Wen soll es angreifen?
+ You cant entice that npc!$ Diesen NPC koennt Ihr nicht beruhigen!
+ You cant do that in town!$ Das geht nicht in der Stadt!
+You cannot entice other players.$Ihr koennt keine anderen Spieler einlullen.
+You play your music, luring them near. Whom do you wish them to follow?$Ihr spielt Eure Musik und zieht sie wie ihm Trance an. Wem sollen sie folgen?
+You play your hypnotic music, luring them near your target.$Hypnotisierende Musik erklingt, als Ihr zu spielen beginnt, die sie Eurem Ziel benommen zutreibt.
+Your music fails to attract them.$Euer Versuch, sie mit Musik anzuziehn.
+You cant do that in town!$In Staedten ist das nicht moeglich!
+Silly bard! You can't get something to attack itself.$Dummer Barde! Wie koennt Ihr nur versuchen, dass sich etwas selbst angreift?!?
+Your music succeeds as you start a fight.$Eure Musik ist erfolgreich, als Ihr den Kampf beginnt.
+* You see %s attacking %s *$* Ihr seht, wei %s %s anzugreifen beginnt*
+Your music fails to incite enough anger.$Eure Musik erklingt, kann aber niemanden genug Aufhetzen.
+You play rather poorly and to no effect.$Ziemlich erbaermlich ist Euer Spiel und hat keine Auswirkung.
+You grind some bone into powder.$Ihr zermahlt etwas Knochen in das Pulver hinein.
+That is not a valid reagent.$Das ist kein nutzbares Reagenz.
+You cut some cloth into bandages, and put it in your backpack$Ihr schneidet etwas Stoff in Bandagen und packt es in Euer Gepaeckt.
+You cannot cut anything from that item.$Ihr koennt davon nichts abschneiden.
+You can`t heal while in a fight!$Waehrend Ihr kaempft ist es Euch nicht moeglich, zu heilen!
+You are not close enough to apply the bandages.$Ihr seid zu weit weg, um die Bandagen anwenden zu koennen.
+You are not skilled enough to resurrect$Euch fehlt die Uebung, um Wiederbeleben zu koennen.
+You failed to resurrect the ghost$Es misslingt Euch, den Geist wiederzubeleben.
+Because of your skill, you were able to resurrect the ghost.$Eure Fertigkeiten sind gross genug, um dem Geist wieder Leben einzuhauchen.
+You are not skilled enough to cure poison.$Ihr seid nicht geuebt genug um das Gift zu neutralisieren.
+The poison in your target's system counters the bandage's effect.$Das Gift in dieser Person macht alle Auswirkungen der Bandagen zunichte.
+Because of your skill, you were able to counter the poison.$Ihr seid geuebt genug, um dem Gift zu begegnen.
+You fail to counter the poison$Euer Versuch, das Gift zu bekaempfen, scheitert.
+That being is not damaged$Das ist nicht beschaedigt.
+You apply the bandages, but they barely help!$Ihr legt die Bandagen an aber sie helfen kaum!
+You are not skilled enough to heal that creature.Eure Fertigkeiten sind zu begrenzt, um diese Kreatur zu heilen.
+You apply the bandages and the creature looks a bit healthier.$Ihr legt die Verbaende an und die Kreatur scheint ein wenig gesuender zu sein.
+That does not appear to be a weapon.$Das scheint keine Waffe zu sein.
+Attack [%i] Defense [%i] Lodamage [%i] Hidamage [%i]$Angriff [%i] Verteidigung [%i] Minimalschaden [%i] Maximalschaden [%i]
+You are not certain...$Ihr seid nicht sicher...
+ Sorry this is a old item and it doesn't have maximum hp$Dies ist ein alter Gegenstand und hat leider keinen maximalen Schaden
+This item $Dieser Gegenstand
+is brand new.$ist vollkommen neu.
+is almost new.$ist beinahe neu.
+is barely used, with a few nicks and scrapes.$ist kaum genutzt und hat nur wenige Kratzer und Dellen..
+is in fairly good condition.$ist in relativ gutem Zustand.
+suffered some wear and tear.$hat ein wenig gelitten.
+is well used.$ist ziemlich abgenutzt.
+is rather battered.$ist in schlechtem Zustand.
+is somewhat badly damaged.$ist ziemlich kaputt.
+is flimsy and not trustworthy.$ist nicht mehr verlaesslich und schwach.
+is falling apart.$faellt fast auseinander.
+ Would be extraordinarily deadly.$Waere ausserordentlich toedlich.
+ Would be a superior weapon.$Waere eine beeindruckende Waffe.
+ Would inflict quite a lot of damage and pain.$Wuerde eine ganze Menge Schaden und Schmerzen verursachen.
+ Would probably hurt your opponent a fair amount.$Wuerde dem Gegner wahrscheinlich ziemlich stark verletzen.
+ Would do some damage.$Wuerde schon einen gewissen Schaden anrichten.
+ Would do minimal damage.$Wuerde kaum Schaden verursachen.
+ Might scratch your opponent slightly.$Koennte den Gegner vielleicht wenigstens ankratzen.
+ And is very fast.$Und ist sehr schnell.
+ And is fast.$Und ist schnell.
+ And is slow.$Und ist langsam.
+ And is very slow.$Und ist sehr langsam.
+ Is superbly crafted to provide maximum protection.$Ist unglaublich gut verarbeitet um maximalen Schutz zu gewaehren.
+ Offers excellent protection.$Bietet exzellenten Schutz.
+ Is a superior defense against attack.$Bietet sehr guten Schutz gegen Angriffe.
+ Serves as a sturdy protection.$Verspricht eine gute Schutzwirkung.
+ Offers some protection against blows.$Scheint einen gewissen Schutz gegen Treffer zu bieten.
+ Provides very little protection.$Schuetzt ein wenig.
+ Provides almost no protection.$Hat fast keine Schutzwirkung.
+ Offers no defense against attackers.$Bietet gegen Angriffe keinerlei Schutz.
+It seems an item with no quality!$Scheint eine lausige Qualitaet zu sein!
+It seems an item very below standard quality!$Scheint weit unter der gewoehnlichen Qualitaet angesiedelt zu sein!
+It seems an item below standard quality!$Liegt in der Qualitaet noch ein gutes Stueck unter dem Gewoehnlichen!
+It seems a weak quality item!$Ist von schwacher Qualitaet und erreicht die gewoehnliche Qualitaet nicht!
+It seems a standard quality item!$Ist von Gewoehnlicher Qualitaet!
+It seems a nice quality item!$Scheint von ganz ordentlicher Qualitaet zu sein!
+It seems a good quality item!$Scheint von guter Qualitaet zu sein!
+It seems a great quality item!$Scheint ein Gegenstand grosser Qualitaet zu sein!
+It seems a beautiful quality item!$Macht den Eindruck eines Gegenstandes von besonderer Qualitaet!
+It seems a perfect quality item!$Es scheint von perfekter Qualitaet zu sein!
+You can't tell if it is magical or not.$Ihr koennt nicht entscheiden, ob es magische Faehigkeiten hat.
+This item has no hidden magical properties.$Dieser Gegenstand hat keine magischen Faehigkeiten.
+This item is enchanted with a spell, but you cannot determine which$Dieser Gegenstand ist mit einem Zauber belegt, aber Ihr koennt nicht sagen, welcher.
+It is enchanted with the spell %s, but you cannot determine how many charges remain.$Es ist mit dem Zauber %s versehn, doch wie oft Ihr diesen Zauber noch nutzen koennt, wisst Ihr nicht.
+It is enchanted with the spell %s, and has %d charges remaining.$Es ist mit dem Zauber %s belegt und Ihr koennt den Zauber noch %d mal nutzen.
+You need to be closer to find out$Ihr muesst naeher heran, um das festzustellen
+You are not certain..$Ihr seid nicht sicher...
+That does not appear to be a living being.$Das scheint kein Lebewesen zu sein.
+That person looks $Diese Person macht den Eindruck, als waere sie 
+slightly less intelligent than a rock.$kaum intelligenter als ein Stein.
+fairly stupid.$ziemlich dumm.
+not the brightest.$nicht die Hellste.
+about average.$normal intelligent.
+moderately intelligent.$relativ intelligent.
+very intelligent.$sehr intelligent.
+extraordinarily intelligent.$ausserordentlich intelligent.
+like a formidable intellect, well beyond the ordinary.$unglaublich intelligent, weit ueber das Normale hinaus.
+like a definite genius.$intelligent wie es nur ein Genie sein kann.
+superhumanly intelligent in a manner you cannot comprehend.$ueberirdisch intellegent auf eine Art, die Ihr nicht versteht.
+You cannot analyze yourself!$Es geht nicht, sich selbst zu analysieren!
+You need to be closer to find out more about them$Um mehr herauszufinden, muesst Ihr naeher heran
+rather feeble$wirklich schwaechlich
+somewhat weak$ziemlich schwach
+to be of normal strength$normal stark
+somewhat strong$relativ stark
+very strong$sehr stark
+extremely strong$aeusserst stark
+extraordinarily strong$ausserordentlich stark
+as strong as an ox$stark wie ein Ochse
+like one of the strongest people you have ever seen$eine der staerksten Personen, die Ihr je saht
+superhumanly strong$unglaublich stark
+of unknown strenght$von einer bisher nie gesehenen Staerke
+very clumsy$sehr ungeschickt
+somewhat uncoordinated$etwas tapsig
+moderately dexterous$halbwegs geschickt
+somewhat agile$ziemlich beweglich
+very agile$sehr gewandt
+extremely agile$aeusserst gewandt
+extraordinarily agile$ausserordentlich gewandt
+like they move like quicksilver$quirlig wie Quecksilber 
+like one of the fastest people you have ever seen$eine der schnellsten Personen, die Ihr jeht gesehen habt
+superhumanly agile$unglaublich beweglich
+of unknown dexterity$von einer bisher nie gesehenen Gewandtheit
+That person looks %s and %s.$Diese Person erscheint %s und %s.
+You can't tame that creature.$Diese Kreatur ist nicht zaehmbar.
+You already control that creature!$Ihr habt bereits die Kontrolle ueber diese Kreatur!
+That creature looks tame already.$Diese Kreatur scheint schon zahm zu sein.
+I've always wanted a pet like you.$Ich wollte schon immer ein Haustier wie Du.
+Will you be my friend?$Willst Du nicht mein Freund sein?
+Here %s.$Na kommi %s.
+Good %s.$Gut so, %s.
+You were unable to tame it.$Ihr wart nicht in der Lage, es zu zaehmen.
+It seems to accept you as it's master!$Es scheint Euch zu gehorchen!
+You can't tame that!$Das ist nicht zaehmbar!
+Maybe you should just ask.$Vielleicht solltet Ihr fragen.
+You are not close enough to beg.$Ihr seid nicht nah geung heran um zu betteln.
+Annoy someone else !$Veraergert jemand anderes!
+They seem to ignore your begging plees.$Sie ignorieren Eure Bettelei.
+Sorry, I'm poor myself$Es tut mir leid, auch ich bin arm
+Ohh thou lookest so poor, Here is some gold I hope this will assist thee.$Oh Ihr seht so arm aus, hier ist etwas Gold, das wird Euch helfen.
+Some gold is placed in your pack.$Ihr habt ein wenig Gold erhalten.
+That would be foolish.$Das waere dumm.
+The human race should use dvorak!$Die menschliche Rasse sollte dvorak nutzen!
+Attack [%i] Defense [%i] Taming [%i] Hit Points [%i]$Angriff [%i] Verteidigung [%i] Zaehmwert[%i] Trefferpunkte[%i]
+You can not think of anything relevant at this time.$Ecuh faellt momentan nichts Wesentliches ein.
+That does not appear to be a corpse.$Das scheint kein Leichnam zu sein.
+The %s is %i seconds old and the killer was %s.$%s ist seit %i Sekunden tot und der Moerder war %s.
+You are not certain about the corpse.$Ihr seid Euch ueber den Leichnam nicht sicher.
+few$ein wenig
+many$eine Menge
+many many$eine sehr grosse Menge
+The %s is %s seconds old.$%s ist %s Sekunden alt.
+You can't say who was the killer.$Ihr wisst nicht, wer der Moerder war.
+The killer was %s.$Der Moerder war %s.
+That is not a valid poison!$Das ist kein verwendbares Gift!
+You successfully poison that item.$Ihr habt es erfolgreich vergiftet.
+You fail to apply the poison.$Es gelingt Euch nicht, das zu vergiften.
+You can't poison that item.$Das ist nicht vergiftbar.
+You broke your lockpick!$Euer Dietrich ist zerbrochen!
+That cannot be unlocked without a key.$Ohne Schluessel laesst sich das nicht aufschliessen.
+You don't have enough ingots to make anything.$Dafuer benoetigt Ihr mehr Barren.
+You don't have enough log's to make anything.$Mit dieser kleinen Menge Holz koennt Ihr nichts anfangen.
+You cannot use that material for tinkering.$Das laesst sich nicht zum Basteln verwenden.
+You break one of the parts.$Eins der Teile ist zerbrochen.
+Original part no longer exists$Das urspruendliche Teil existiert nicht laenger
+You can't combine these.$Das laesst sich nicht miteinander kombinieren.
+You aren't skilled enough to even try that!$Ihr habt nicht die Fertigkeit, es auch nur zu versuchen!
+You combined the parts$Ihr fuegt die Teile zusammen
+* Your not skilled enough to repair items.*$* Eure Faehigkeiten sind zu klein, um etwas zu reparieren.*
+ That item cant be repaired.$Diesen Gegenstand kann man noch reparieren.
+ Must be closer to the anvil.$Ihr muesst naeher am Amboss stehn.
+ That item is at full strength.$Der Gegenstand ist in bestem Zustand.
+ * the item has been repaired.*$*der Gegenstand ist repariert worden*
+ * You fail to repair the item. *$*die Reparatur schlaegt fehl*
+ * You weaken the item.*$*beim Versuch es zu reparieren wird der Zustand nur verschlimmert*
+* Your not skilled enough to smelt items.*$*Eure Faehigkeiten sind zu gering, um Dinge einzuschmelzen*
+You cant smelt that item!$Das kann man nicht einschmelzen!
+ Must be closer to the forge.$Ihr muesst naeher an der Schmelze sein.
+The item must be in your backpack$Dazu muss es sich in Eurem Gepaeck befinden
+you smelt the item and place some ingots in your pack.$Ihr schmelzt es ein und packt die Barren  in Euer Gepaeck
+
+// C:\noxwizard2\nox-wizard\src/sndpkg.cpp
+
+Launching your web browser. Please wait...$Euer Webbrowser wird gestartet, bittet wartet...
+Thou doth posses nothing of interest to me.$Ihr habt nichts, dass fuer mich von Interesse waere.
+GM tells %s: %s$Ein GM teilt %s mit: %s
+
+// C:\noxwizard2\nox-wizard\src/speech.cpp
+
+no stablemaster around$Es ist kein Stallmeister in der Naehe
+which pet?$Welches Tier?
+Your pet is now stabled, say claim %s to claim your pet$Euer Tier ist nun in der Obhut des Stallmeisters, sagt claim %s um es zurueckzubekommen
+sorry, I can't return that pet$Tut mir leid, ich kann es nicht an Euch zurueckgeben
+That's %i gold pieces$Das kostet dann %i fuer die Pflege
+Thx! Here's your pet$Habt Dank, hier habt Ihr es zurueck.
+you can't affort that %i$Ihr koennt Euch das %i nicht leisten
+You must be in a chaos guild to get a shield!$Um das Schild zu bekommen, muesst Ihr Mitglied in der einer Gilde des Chaos sein!
+Sorry but you are in a order guild!$Dafuer muesst Ihr leider Mitglied in einer Gilde der Ausrichtung Ordnung sein!
+you already have a shield!$Ihr habt schon ein Schild!
+Hi fellow guild member,here is your new shield.$Ah, willkommen Gildenmitglied, hier ist Dein neues Schild.
+You must be in a order guild to get a shield!$Um ein Schild zu bekommen, muesst Ihr Mitglied einer Gilde der Ordnung sein!
+Sorry but you are in a chaos guild!$Tut mir leid aber Ihr gehoert zu einer Gilde des Chaos!
+Select container to empty:$Sucht den zu leerenden Behaelter aus:
+hello my name is %s.$Gruesse, mein Name ist %s.
+it is now$Es ist jetzt
+in the evening.$am Abend.
+in the morning.$am Morgen.
+You are in %s$Ihr seid in %s
+You are in the wilderness$Ihr befindet Euch in der Wildniss.
+I'm a little busy now! Leave me be!$Ich bin gerade ziemlich beschaeftigt, also geht schon!
+Lead on! Payment shall be made when we arrive at %s.$Na los, Ihr seid der Fuehrer, Ihr werdet bezahlt, wenn wir in %s ankommen.
+Lead on to %s. I shall pay thee when we arrive.$Fuehrt uns nach %s. Die Bezahlung erfolgt, wenn wir dort ankommen.
+I am seeking an escort to %s. Wilt thou take me there?$Ich suche Geleitschutz nach %s. Werdet Ihr mich dorthin bringen?
+I am already being escorted to %s by %s.$Oh, habt Dank aber ich werdet schon von %s nach %s gebracht.
+%s's balance as of now is %i.$Das Konto von %s verfuegt nun ueber %i.
+I can teech thee the following skills: $Ich kann Euch folgendes leeren: 
+I am sorry, but I have nothing to teach thee$Hm, nein verzeiht, aber ich kann Euch nichts leeren.
+Thou wishest to learn of %s?$Ihr wollt also etwas ueber %s lernen?
+ I can teach thee no more than thou already knowest!$Ihr wisst bereits was ich auch nur kann, verschwindet!
+ I can teach thee no more. Thou already knowest too much!$Ich kann Euch nichts beibringen, Ihr wisst ja schon mehr als ich!
+ Very well I, can train thee up to the level of %i percent for %i gold. Pay for less and I shall teach thee less.$Sehr gut, ich kann Euch bis zu einem Wert von %i trainieren, aber das kostet %i Goldstuecke.
+I am sorry but I cannot train thee in that skill.$Es tut mir leid, aber diese Fertigkeit kann ich Euch nicht beibringen.
+Click on the target to follow.$Klickt auf das Ziel, dem es folgen soll.
+You dont have pets following you$Es gibt hier kein Tier, dass Euch gehorcht und folgen wuerde.
+You cant have pets attack in town!$Tiere koennen in Staedten nicht angreifen!
+Select the target to attack.$Waehlt das Ziel, dem der Angriff gelten soll.
+Click on the object to fetch.$Was wollt Ihr fuettern? Klickt darauf.
+Your pet begins following you.$Es folgt Euch bereitwillig.
+Click on the char to guard.$Klickt auf die Person, die es bewachen soll.
+Select character to transfer your pet to.$Waehlt aus, wem das Tier kuenftig gehorchen soll.
+*%s appears to have decided that it is better off without a master *$*%s scheint zu dem Schluss gekommen zu sein, dass es ihm ohne Herrn besser geht*
+I have no gold waiting for you.$Ich habe kein Gold fuer Euch.
+Today's purchases total %i gold. I am keeping %i gold for my self. Here is the remaining %i gold. Have a nice day.$Wieviele Goldstuecke ich eingenommen habe? Nun, %i .Davon behalt ich %i fuer mich.Hier behaltet die restlichen Goldstuecke, es sind noch %i .Schoenen Tag noch.
+I don't work for you!$He, ich arbeite nicht fuer Euch!
+What would you like to buy?$Was haettet Ihr denn gern?
+This item's price has been set to %i.$Gute Wahl - aber ich nehme nur Goldstuecke, gebt mir bitte %i  .
+Enter a description for this item.$Gebt bitte eine Beschreibung des Gegenstandes an.
+No price entered, this item's price has been set to %i.$Da kein Preis angegeben wurde, liegt er nun automatisch bei %i.
+This item is now described as %s, $Dieser Gegenstand wird nun als %s verkauft. 
+Rune to %s$Rune nach %s
+Rune renamed to: Rune to %s$Rune in "Rune nach %s " umbenannt.
+Your new name is: %s$Ab jetzt heisst Ihr %s
+Renamed to: %s$In " %s " umbenannt.
+Counselor Page from %s [%x %x %x %x]: %s$Beratermitteilung von %s [%x %x %x %x]: %s
+You have been squelched.$Ihr wurdet zum Schweigen gebracht.
+
+
+// C:\noxwizard2\nox-wizard\src/sregions.cpp
+
+You have left %s.$Ihr habt %s verlassen.
+You have entered %s.$Ihr betretet %s.
+You are now under the protection of the guards.$Ihr seid nun unter dem Schutz der Wache.
+You are now under the protection of %s guards.$Ihr seid nun unter dem Schutz der Wachen von %s.
+You are no longer under the protection of the guards.$Ihr seid nun nicht mehr durch Wachen geschuetzt.
+You are no longer under the protection of %s guards.$Die Wachen von %s schuetzen Euch nicht laenger.
+Respawn now complete.$Respawn ist fertig.
+
+// C:\noxwizard2\nox-wizard\src/srvparms.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/targeting.cpp
+
+That is not a character.$Das ist keine Person.
+That is not an item.$Das ist kein Gegenstand.
+That is not a valid item.$Das ist kein gueltiger Gegenstand.
+That is not a valid character.$Das ist keine gueltige Person.
+I work for you, you need not buy things from me!$Aber ich arbeite fuer Euch, Ihr braucht doch nichts von mir zu kaufen.
+You cannot afford that.$Das koeennt Ihr Euch nicht leisten.
+Thank you.$Danke.
+You cant delete players$Ihr koennt keine Spieler loeschen.
+Removing character.$Charakter wird geloescht.
+Removing item.$Gegenstand wird geloescht.
+You fail and destroy the key blank.$Ihr versagt und zerstoert das Schluesselprofil. Er ist jetzt nicht mehr mit dem Schloss zu gebrauchen.
+You copy the key.$Es gelingt Euch, den Schluessel zu kopieren.
+You lock the container.$Ihr verschliesst den Behaelter.
+Enter new name for key.$Welcher Name soll auf dem Schluessel eingraviert werden?
+You unlock the container.$Ihr schliesst den Behaelter auf.
+You lock the door.$Ihr verschliesst die Tuer.
+You unlock the door.$Ihr schliesst die Tuer auf.
+What do you wish the sign to say?$Was soll auf dem Schild stehn?
+That key is not blank!$Dieser Schluessel hat bereits ein Profil, das zu einem Schloss gehoert.
+The key does not fit into that lock.$Dieser Schluessel passt nicht.
+It is enchanted with item identification, and has %d charges remaining.$Es ist mit der Macht belegt, Gegenstaende fuer Euch zu identifizieren und kann dazu noch %d mal genutzt werden.
+That player is already dead.$Dieser Spieler ist schon tot.
+No amounts over 64k in a pile!$64.000 Stueck auf einem Haufen ist wirklich genug!
+Kicking player$Der Spieler wird gekickt.
+You have been kicked!$Ihr wurdet gekickt.
+Select container to fill:$Welchen Behaelter wollt Ihr fuellen?
+That is not a valid container!$Das ist kein gueltiger Behaelter.
+That is not yours!!$He, das gehoert Euch nicht!!!
+You can only dye clothes with this.$Damit laesst sich nur Stoff faerben.
+Item info has been dumped to the console.$Die Informationen ueber den Gegenstand wurden zur Server-console geschickt.
+Select second corner of bounding box.$Wo soll die zweite Ecke des begrenzenden Rechtecks liegen?
+Select second corner of inverse wiping box.$Wo soll sich die zweite Ecke des Rechtecks befinden, ausserhalb dessen alles geloescht wird?
+Select second corner of wiping box.$Wo soll sich die zweite Ecke des Rechtecks befinden, innerhalb dessen alles geloescht wird?.
+You cannot throw the potion there!$Der Trank laesst sich hier nicht anwenden!
+You cannot squelch GMs.$GM's koennt Ihr nicht zum Schweigen bringen!
+Un-squelching...$Erhaelt wieder Redeerlaubnis!
+You have been unsquelched!$Ihr duerft jetzt wieder sprechen!
+Squelching...$Erhaelt Redeverbot...
+You have been squelched!$Euch wurde ein Redeverbot auferlegt!
+Select location to put this character.$Waehlt den Ort aus, an den die Person gebracht werden soll.
+Select location to put this item.$Waehlt den Ort aus, an den der Gegenstand gebracht werden soll.
+Moving character...$Person wird versetzt...
+Moving item...$Gegenstand wird versetzt...
+You pluck the bird and get some feathers.$Ihr rupft den Vogel und erhaltet ein paar Federn. 
+You carve away some meat.$Ihr schneidet etwas Fleisch ab.
+You skin the corpse and get the hides.$Ihr haeutet den Leichnam und erhaltet die Haeute.
+You skin the corpse and get some unspun wool.$Ihr verarbeitet den Leichnam und gewinnt etwas ungesponnene Wolle.
+You carve away some raw bird.$Ihr nehmt den Leichnam aus und erhaltet den rohen Vogel.
+You lost some fame and karma!$Ihr habt einen Teil Eures guten Rufes eingebuesst und Euer Schicksal weisst staerker in die Richtung des Boesen .
+You carve the corpse but find nothing usefull.$Ihr versucht den Leichnam zu verarbeiten, aber erhaltet nichts brauchbares.
+That is too far away.$Das ist zuweit weg.
+You hack at the tree and produce some kindling.$Ihr schlagt ein paar duenne Aeste vom Baum.
+You can't think of a way to use your blade on that.$Mit Eurer Klinge ist hier nichts zu erreichen.
+Select NPC to follow this player.$Waehlt den NPC aus, der diesem Spieler folgen soll.
+You are released..$Ihr seid befreit ...
+No object was found at that layer on that character$Auf dem Layer wurde beim der Person kein Gegenstand gefunden.
+The buy containers have been added.$Der Behaelter fuer den Warenankauf wurde hinzugefuegt.
+Target character not found...$Die ausgewaehlte Zielperson wurde nicht gefunden....
+You are jailed !$Ihr wurdet ins Gefaengnis geworfen!
+You notice you just got something new at your backpack..$Ihr bemerkt, dass gerade etwas Neues in Eurem Gepaeck aufgetaucht ist.
+* %s will now take %s as his master *$* %s wird von nun an %s gehorchen*
+Target shopkeeper not found...$Der ausgewaehlter Verkaeufer wurde nicht gefunden...
+You are already hiding.$Ihr seid bereits verborgen.
+He is already hiding.$Die Person ist bereits verborgen.
+You are not hiding.$Ihr verbergt Euch nicht.
+He is not hiding.$Die Person verbirgt sich nicht.
+That person isn't dead$Diese Person lebt noch.
+You have transferred your house to %s.$Ihr habt Euer Haus nun an %s uebergeben.
+%s has transferred a house to %s.$%s hat das Haus an %s uebergeben.
+Player ejected.$Spieler herausgeworfen!
+That is not inside the house.$Es befindet sich nicht in Eurem Haus.
+%s has been banned from this house.$%s wurde Hausverbot erteilt.
+That player is already on a house register.$Dieser Spieler wurde bereits entsprechend registriert.
+That player is not on the property.$Dieser Spieler befindet sich nicht auf dem Besitz.
+%s has been made a friend of the house.$%s wurde zum Freund des Hauses erklaert.
+%s has been removed from the house registry.$%s wurde aus dem Hausregister entfernt.
+That player is not on the house registry.$Dieser Spieler befindet sich nicht im Hausregister.
+you cannot lock this down!$Das kann nicht befestigt werden.
+You cant lockdown doors or signs!$Tueren oder Schilder sind nicht befestigbar.
+You cant lockdown anvils!$Ambosse sind nicht befestigbar.
+You cant lockdown forges!$Schmelzen sind nicht befestigbar.
+That item is already locked down, release it first!$Das ist schon befestigt, Ihr muesst es erst losmachen, wenn Ihr es nocheinmal befestigen wollt!
+That item is not in your house!$Das befindet sich nicht in Eurem Haus.
+Invalid item!$Ungueltiger Gegenstand.
+You can only secure chests!$Nur Truhen lassen sich sichern!
+This is not your item!$Das ist nicht Euer Eigentum!.
+you cannot release this!$Das koennt Ihr nicht losmachen!
+You cant release doors or signs!$Tueren oder Schilder lassen sich nicht losmachen.
+Item not found.$Gegenstand nicht gefunden.
+you can't create glowing items in other perons packs or hands$Gluehende Gegenstaende lassen sich nicht in den Haenden oder im Gepaeck anderer Personen erschaffen!
+that object already glows!\n$Dieser Gegenstand glueht schon!\n.
+no item found$Kein Gegenstand gefunden.
+you can't unglow items in other perons packs or hands$Das Gluehen von Gegenstaenden laesst sich nicht abschalten, wenn es jemand anderes in der Hand hat oder im Gepaeck.
+that object doesnt glow!\n$Das glueht nicht.
+no valid target$ungueltiges Ziel.
+Fetch is not available at this time.$Das geht momentan nicht.
+Currently can't guard anyone but yourself!$Im Moment ist es nur moeglich Euch selbst beschuetzen zu lassen.
+Your pet is now guarding you.$Es bewacht Euch jetzt.
+You can only use this item on a dye vat.$Das laesst sich nur mit einem Faerbebottich nutzen.
+You load the cannon.$Ihr ladet die Kanone.
+That doesn't work in cannon.$Das funktioniert nicht mit einer Kanone
+That object doesn't fit into cannon.$Dieser Gegenstand ist zu gross und passt nicht hinein.
+What item do you want to poison?$Welchen Gegenstand wollt Ihr vergiften?
+
+// C:\noxwizard2\nox-wizard\src/telport.cpp
+
+You have already used an advancement object with this character.$Ihr habt mit diesem Charakter bereits eine Verbesserungs-Objekt benutzt!
+
+// C:\noxwizard2\nox-wizard\src/timing.cpp
+
+*Drags in deep*$*zieht in die Tiefe*
+*Coughs*$*Hustet*
+*Retches*$*wuergt*
+*Hacking cough*$*rauher Husten*
+*Sighs in contentment*$*seufzt zufrieden*
+*Puff puff*$*Rauchwoelkchen steigen auf*
+Wheeeee!!! Smoking!$AAAAAAAAAAH!!! Rauch!
+You are no longer squelched!$Ihr koennt wieder sprechen.
+You are no longer a criminal.$Ihr seid kein Krimineller mehr.
+You are no longer a murderer.$Ihr werdet nicht mehr als Moerder betrachtet
+Your jail time is over!$Eure Zeit im Gefaengnis ist vorbei!
+You're not in jail already ? Please report to GM$Ihr seid noch nicht im Gefaengnis? Bitte benachrichtig einen Spielleiter!
+You are released.$Ihr wurdet freigelassen.
+You are still stuffed from your last meal$Ihr seid noch vom letzten Essen pappsatt.
+You are not very hungry but could eat more$Zwar seid Ihr nicht hungrig, aber Ihr koenntet noch etwas essen.
+You are feeling fairly hungry$Ihr seid relativ hungrig.
+You are extremely hungry$Ihr habt sehr grossen Hunger.
+You are very weak from starvation$Euer Hunger schwaecht Euch.
+You must eat very soon or you will die!$Wenn Ihr nicht bald esst, werdet Ihr sterben!
+You are starving !$Ihr seid am Verhungern.
+You have died of starvation$Ihr seid verhungert.
+* %s looks a bit nauseous *$* %s wirkt ein wenig wackelig auf den beinen*
+* %s looks disoriented and nauseous! *$* %s erscheint benommen und wackelig*
+* %s is in severe pain! *$* %sscheint boese schmerzen zu haben*
+* %s looks extremely weak and is wrecked in pain! *$* %s sieht sehr schwach aus und hat eine schmerzverzehrte miene*
+The poison has killed you.$Das Gift hat Euch zmgebracht.
+The poison has worn off.$Das Gift hat Euch geschwaecht.
+* %s looks a little hungry *$* %s knurrt ein wenig der Magen*
+* %s looks fairly hungry *$* %s knurrt deutlich der Magen*
+* %s looks extremely hungry *$* %s macht einen unterernaehrten Eindruck*
+* %s looks weak from starvation *$* %s sieht schwach und halb verhungert aus*
+* %s appears to have decided that it is better off without a master *$* %s scheint zu dem Schluss gekommen zu sein, dass es ohne Herrn besser dran ist*
+* %s must eat very soon or he will die! *$* %s wirkt voellig verhungert und dem Tod sehr nahe*
+
+// C:\noxwizard2\nox-wizard\src/titles.cpp
+
+The Murderous Lady $Die moerderische Lady
+The Murderer Lord $Der moerderische Lord
+The %sLady $Lady %s 
+The %sLord $Lord %s 
+The Murderer $Moerder  
+The %s$ %s
+
+// C:\noxwizard2\nox-wizard\src/tmpeff.cpp
+
+*%s continues grinding.*$*%s mahlt weiter*
+LSD has worn off$Die Droge hat Euch geschwaecht
+You are now visible.$Ihr seid nun sichtbar
+Hmmm, tasty, LSD$Hm wunderbar, Drogen.
+You start healing yourself...$Ihr beginnt, Euch selbst zu heilen.
+You continue to heal...$Ihr heilt weiter...
+
+// C:\noxwizard2\nox-wizard\src/trade.cpp
+
+Alas, I no longer have all those goods in stock. Let me know if there is something else thou wouldst buy.$Leider habe ich nicht mehr alles vorraetig, bitte sagt mir ob ich Euch nicht etwas anderes verkaufen kann?
+Here you are, %s. Someone as special as thee will receive my wares for free of course.$Bitte sehr, %s. Und jemand wie Ihr bekommt meine Waren natuerlich umsonst .
+Here you are, %s. %d gold coin%s will be deducted from your bank account.  I thank thee for thy business.$Bitte sehr, %s, den Preis von %d Goldstueck%s  hole ich mir bei der Bank. Und vielen Dank fuer den Einkauf.
+Here you are, %s.  That will be %d gold coin%s.  I thank thee for thy business.$Bitte, %s.  Das macht %d Goldstueck%s. Habt Dank fuer den Einkauf.
+Alas, thou dost not possess sufficient gold for this purchase!$Ihr scheint mir zu wenig Gold zu haben, um das zu bezahlen, selbst der Baenker rueckt nichts mehr heraus, sagt er.
+Sorry %s but i can buy only %i items at time!$Verzeiht, %s aber ich kann nur %i auf einmal gebrauchen!
+Cheating scum! Leave now, before I call the guards!$Verdammter Abschaum! Verschwinde bevor ich die Wachen rufe!
+Time to buy a backpack!$Es ist an der Zeit, einen Rucksack zu kaufen!
+%s doesnt have a backpack!$%s hat ja kein Gepaeck!
+
+// C:\noxwizard2\nox-wizard\src/trigger.cpp
+
+You need more %s to do that!$Ihr benoetigt dafuer mehr %s!
+You need less %s to do that!$Ihr benoetigt weniger %s dafuer!
+That didn't seem to work.$Das scheint nicht zu gehn!
+You are getting clumsier!$Ihr werdet ungeschickter.
+You are getting more agile!$Ihr werdet beweglicher!
+You are still extremely hungry.$Ihr seid noch immer unglaublich hungrig.
+You feel much less hungry.$Ah, Ihr seid nun sehr viel weniger hungrig.
+You begin to feel more satiated.$Ihr fuehlt Euch langsam ganz zufrieden.
+You feel quite full.$Jetzt seid Ihr ziemlich satt.
+You are nearly stuffed.$Puh, Ihr fuehlt Euch ganzschoen vollgefressen.
+You have no hunger!$Ihr habt keinerlei Hunger.
+You do not own that.$Das gehoert Euch nicht.
+You are getting stupid!$Ihr werdet ploetzlich ziemlich dumm.
+You are getting more cunning!$Ihr werdet schlauer
+You have %i gp in your bank account!$Wieviel Gold Ihr auf der Bank habt? Hm, lasst zaehlen ... %i!
+Your mind is too tired to do that.$Euer Verstand ist zu traege dafuer.
+You don't have the neccessary supplies to do that.$Ihr habt nicht, was Ihr dafuer braucht.
+Your body is too tired to do that.$Euer Koerper ist dafuer zu ausgelaugt.
+You are getting weaker!$Ihr werdet schwaecher.
+You are getting stronger!$Ihr werdet staerker.
+Select a target$Waehlt das Ziel aus.
+Your %s is already totally repaired!$Es (%s) ist bereits vollkommen ganz.
+Your %s is now repaired! [%.1f%%]$Es ( %s )wurde repariert! [%.1f%%]
+Your %s appears to be more ruined than before!$Es (%s) scheint nun schlechter als vorher zu sein.
+Your %s was too old and it has been destroyed!$Es ( %s ) war zu alt und ging kaputt.
+You can't repair %s !$Ihr koennt es (%s) nicht repaieren !
+You increased the maximum durability of your %s !$Ihr habt seine ( %s ) maximale Haltbarkeit erhoeht!
+Your %s was too old and it has been destoryed!$Es ( %s ) war zu alt und ging kaputt.
+You can't increase durability of %s !$Die Haltbarkeit davon ( %s ) kann nicht erhoeht werden!
+
+// C:\noxwizard2\nox-wizard\src/uglyed.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/utils.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/walking.cpp
+
+You are too fatigued to move.$Ihr seid zu erschoepft um Euch zu bewegen.
+You cannot move while casting.$Ihr koennt Euch nicht bewegen, waehrend Ihr einen Zauber wirkt.
+You are frozen and cannot move.$Ihr seid gelaehmt und koennt Euch nicht bewegen.
+You are banned from that location.$Ihr wurdet von diesem Ort verbannt.
+You shoved something invisible aside.$Ihr schiebt etwas Unsichtbares beiseite.
+Being perfectly rested, you shove %s out of the way.$Ihr schiebt %s zur Seite.
+
+// C:\noxwizard2\nox-wizard\src/weight.cpp
+
+You are overloaded! You can't hold all this weight..$Ihr seid vollkommen ueberladen und es koennt das nicht alles tragen.
+
+// C:\noxwizard2\nox-wizard\src/wip.cpp
+
+
+// C:\noxwizard2\nox-wizard\src/worldmain.cpp
+
+World data saving...$Die Welt wird gesichert...
+Worldsave Done!\n$Welt erfolgreich gesichert!\n
+
+// C:\noxwizard2\nox-wizard\src/accounts.h
+
+
+// C:\noxwizard2\nox-wizard\src/amx.h
+
+
+// C:\noxwizard2\nox-wizard\src/amx_api.h
+
+
+// C:\noxwizard2\nox-wizard\src/amx_comp.h
+
+
+// C:\noxwizard2\nox-wizard\src/amxcback.h
+
+
+// C:\noxwizard2\nox-wizard\src/amxscript.h
+
+
+// C:\noxwizard2\nox-wizard\src/amxwraps.h
+
+
+// C:\noxwizard2\nox-wizard\src/basetype.h
+
+
+// C:\noxwizard2\nox-wizard\src/basics.h
+
+
+// C:\noxwizard2\nox-wizard\src/boats.h
+
+
+// C:\noxwizard2\nox-wizard\src/books.h
+
+
+// C:\noxwizard2\nox-wizard\src/bounty.h
+
+
+// C:\noxwizard2\nox-wizard\src/calendar.h
+
+
+// C:\noxwizard2\nox-wizard\src/char_array.h
+
+
+// C:\noxwizard2\nox-wizard\src/chars.h
+
+
+// C:\noxwizard2\nox-wizard\src/charwrap.h
+
+
+// C:\noxwizard2\nox-wizard\src/classes.h
+
+
+// C:\noxwizard2\nox-wizard\src/client.h
+
+
+// C:\noxwizard2\nox-wizard\src/cmdtable.h
+
+
+// C:\noxwizard2\nox-wizard\src/common_libs.h
+
+
+// C:\noxwizard2\nox-wizard\src/console.h
+
+
+// C:\noxwizard2\nox-wizard\src/constants.h
+
+
+// C:\noxwizard2\nox-wizard\src/crontab.h
+
+
+// C:\noxwizard2\nox-wizard\src/custmenu.h
+
+
+// C:\noxwizard2\nox-wizard\src/debug.h
+
+
+// C:\noxwizard2\nox-wizard\src/dragdrop.h
+
+
+// C:\noxwizard2\nox-wizard\src/encryption.h
+
+
+// C:\noxwizard2\nox-wizard\src/globals.h
+
+
+// C:\noxwizard2\nox-wizard\src/hcache.h
+
+
+// C:\noxwizard2\nox-wizard\src/hfile.h
+
+
+// C:\noxwizard2\nox-wizard\src/im.h
+
+
+// C:\noxwizard2\nox-wizard\src/inlines.h
+
+
+// C:\noxwizard2\nox-wizard\src/item_array.h
+
+
+// C:\noxwizard2\nox-wizard\src/itemid.h
+
+
+// C:\noxwizard2\nox-wizard\src/items.h
+
+
+// C:\noxwizard2\nox-wizard\src/itemwrp.h
+
+
+// C:\noxwizard2\nox-wizard\src/msgboard.h
+
+
+// C:\noxwizard2\nox-wizard\src/necro.h
+
+
+// C:\noxwizard2\nox-wizard\src/ntservice.h
+
+
+// C:\noxwizard2\nox-wizard\src/nxw_utils.h
+
+
+// C:\noxwizard2\nox-wizard\src/nxwcommn.h
+
+
+// C:\noxwizard2\nox-wizard\src/nxwgui.h
+
+
+// C:\noxwizard2\nox-wizard\src/osdefs.h
+
+
+// C:\noxwizard2\nox-wizard\src/party.h
+
+
+// C:\noxwizard2\nox-wizard\src/prototypes.h
+
+
+// C:\noxwizard2\nox-wizard\src/range.h
+
+
+// C:\noxwizard2\nox-wizard\src/rcvpkg.h
+
+
+// C:\noxwizard2\nox-wizard\src/regions.h
+
+
+// C:\noxwizard2\nox-wizard\src/remadmin.h
+
+
+// C:\noxwizard2\nox-wizard\src/resource.h
+
+
+// C:\noxwizard2\nox-wizard\src/sclinux.h
+
+
+// C:\noxwizard2\nox-wizard\src/scp_parser.h
+
+
+// C:\noxwizard2\nox-wizard\src/scriptc.h
+
+
+// C:\noxwizard2\nox-wizard\src/set.h
+
+
+// C:\noxwizard2\nox-wizard\src/sndpkg.h
+
+
+// C:\noxwizard2\nox-wizard\src/speech.h
+
+
+// C:\noxwizard2\nox-wizard\src/sregions.h
+
+
+// C:\noxwizard2\nox-wizard\src/srvparms.h
+
+
+// C:\noxwizard2\nox-wizard\src/targeting.h
+
+
+// C:\noxwizard2\nox-wizard\src/tmpeff.h
+
+
+// C:\noxwizard2\nox-wizard\src/trigger.h
+
+
+// C:\noxwizard2\nox-wizard\src/typedefs.h
+
+
+// C:\noxwizard2\nox-wizard\src/uglyed.h
+
+
+// C:\noxwizard2\nox-wizard\src/version.h
+
+
+// C:\noxwizard2\nox-wizard\src/wip.h
+
+
+// C:\noxwizard2\nox-wizard\src/worldmain.h
+
+
+// C:\noxwizard2\nox-wizard\src\CVS/Root
+
+
+// C:\noxwizard2\nox-wizard\src\CVS/Repository
+
+
+// C:\noxwizard2\nox-wizard\src\CVS/Entries
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/scexpand.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc1.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc2.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc3.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc4.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc5.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc6.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc7.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sclib.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sclist.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/scpack.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/scvars.c
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/amx.h
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/osdefs.h
+
+
+// C:\noxwizard2\nox-wizard\src\compiler/sc.h
+
+
+// C:\noxwizard2\nox-wizard\src\compiler\CVS/Root
+
+
+// C:\noxwizard2\nox-wizard\src\compiler\CVS/Repository
+
+
+// C:\noxwizard2\nox-wizard\src\compiler\CVS/Entries
+
+
+// C:\noxwizard2\nox-wizard\src/makefile
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm/amx_vm.c
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm/amx_vm.h
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Root
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Repository
+
+
+// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Entries
+

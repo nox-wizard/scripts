@@ -1,0 +1,46 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (symbols.xss)                                    ||
+// || Maintained by Xanathar                                              ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || Contains all symbol definitions for other scripts                   ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//#include scripts/symbols/animation.xss
+#include scripts/symbols/items/layers.xss
+
+#include scripts/symbols/race.xss
+#include scripts/symbols/race_items.xss
+
+#include scripts/symbols/items/damagetype.xss
+#include scripts/symbols/items/itemlists.xss
+#include scripts/symbols/items/items.xss
+#include scripts/symbols/items/itemtypes.xss
+#include scripts/symbols/items/potions.xss
+
+#include scripts/symbols/skills.xss
+
+#include scripts/symbols/npclists.xss
+#include scripts/symbols/npc.xss
+#include scripts/symbols/npcextras.xss
+#include scripts/symbols/lootlists.xss
+#include scripts/symbols/speech.xss
+
+#include scripts/symbols/menus.xss
+#include scripts/symbols/itrigrs.xss
+#include scripts/symbols/ntrigrs.xss
+
+#include scripts/symbols/batch.xss
+
+#include scripts/symbols/advancementgates.xss
+
+#include scripts/symbols/necro.xss
+
+#include scripts/symbols/tracking.xss
+
+//
+// Local include
+//
+

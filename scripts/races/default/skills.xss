@@ -1,0 +1,1052 @@
+//
+// --------------------------------------------------------------------
+// DEFAULT:	SKILLMODIFIER
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILLMODIFIER $race_skill_modifier_default
+{
+//	base bonus
+	   0 0.0
+	 100 0.0
+	 200 0.0
+	 300 0.0
+	 400 0.0
+	 500 0.0
+	 600 0.0
+	 700 0.0
+	 800 0.0
+	 900 0.0
+	 990 0.0
+	1000 0.0
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	ALCHEMY
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_alchemy
+{
+	ID $skill_alchemy
+	MODIFIER $race_skill_modifier_default
+	ADVANCE $skill_alchemy
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_alchemy
+{
+  #copy SKILL $skill_alchemy
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	ANATOMY
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_anatomy
+{
+	ID $skill_anatomy
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_anatomy
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_anatomy
+{
+  #copy SKILL $skill_anatomy
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	ANIMAL LORE
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_animal_lore
+{
+	ID $skill_animal_lore
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_animal_lore
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_animal_lore
+{
+  #copy SKILL $skill_animal_lore
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	ITEMID
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_itemid
+{
+	ID $skill_itemid
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_itemid
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_itemid
+{
+  #copy SKILL $skill_itemid
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	ARMS LORE
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_arms_lore
+{
+	ID $skill_arms_lore
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_arms_lore
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_arms_lore
+{
+  #copy SKILL $skill_arms_lore
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	PARRYING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_parrying
+{
+	ID $skill_parrying
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_parrying
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_parrying
+{
+  #copy SKILL $skill_parrying
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	BEGGING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_begging
+{
+	ID $skill_begging
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_begging
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_begging
+{
+  #copy SKILL $skill_begging
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	BLACKSMITHING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_blacksmithing
+{
+	ID $skill_blacksmithing
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_blacksmithing
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_blacksmithing
+{
+  #copy SKILL $skill_blacksmithing
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	BOWCRAFTING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_bowcrafting
+{
+	ID $skill_bowcrafting
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_bowcrafting
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_bowcrafting
+{
+  #copy SKILL $skill_bowcrafting
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	PEACEMAKING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_peacemaking
+{
+	ID $skill_peacemaking
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_peacemaking
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_peacemaking
+{
+  #copy SKILL $skill_peacemaking
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	CAMPING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_camping
+{
+	ID $skill_camping
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_camping
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_camping
+{
+  #copy SKILL $skill_camping
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	CARPENTRY
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_carpentry
+{
+	ID $skill_carpentry
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_carpentry
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_carpentry
+{
+  #copy SKILL $skill_carpentry
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	CARTOGRAPHY
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_cartography
+{
+	ID $skill_cartography
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_cartography
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_cartography
+{
+  #copy SKILL $skill_cartography
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	COOKING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_cooking
+{
+	ID $skill_cooking
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_cooking
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_cooking
+{
+  #copy SKILL $skill_cooking
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	DETECT HIDDEN
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_detect_hidden
+{
+	ID $skill_detect_hidden
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_detect_hidden
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_detect_hidden
+{
+  #copy SKILL $skill_detect_hidden
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	ENTICEMENT
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_enticement
+{
+	ID $skill_enticement
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_enticement
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_enticement
+{
+  #copy SKILL $skill_enticement
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	EVALUATE INTELLECT
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_evaluate_intellect
+{
+	ID $skill_evaluate_intellect
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_evaluate_intellect
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_evaluate_intellect
+{
+  #copy SKILL $skill_evaluate_intellect
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	HEALING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_healing
+{
+	ID $skill_healing
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_healing
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_healing
+{
+  #copy SKILL $skill_healing
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	FISHING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_fishing
+{
+	ID $skill_fishing
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_fishing
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_fishing
+{
+  #copy SKILL $skill_fishing
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	FORENSIC EVALUATION
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_forensic_evaluation
+{
+	ID $skill_forensic_evaluation
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_forensic_evaluation
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_forensic_evaluation
+{
+  #copy SKILL $skill_forensic_evaluation
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	HERDING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_herding
+{
+	ID $skill_herding
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_herding
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_herding
+{
+  #copy SKILL $skill_herding
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	HIDING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_hiding
+{
+	ID $skill_hiding
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_hiding
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_hiding
+{
+  #copy SKILL $skill_hiding
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	PROVOCATION
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_provocation
+{
+	ID $skill_provocation
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_provocation
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_provocation
+{
+  #copy SKILL $skill_provocation
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	INSCRIPTION
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_inscription
+{
+	ID $skill_inscription
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_inscription
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_inscription
+{
+  #copy SKILL $skill_inscription
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	LOCKPICKING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_lockpicking
+{
+	ID $skill_lockpicking
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_lockpicking
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_lockpicking
+{
+  #copy SKILL $skill_lockpicking
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	MAGERY
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_magery
+{
+	ID $skill_magery
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_magery
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_magery
+{
+  #copy SKILL $skill_magery
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	MAGIC RESISTANCE
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_magic_resistance
+{
+	ID $skill_magic_resistance
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_magic_resistance
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_magic_resistance
+{
+  #copy SKILL $skill_magic_resistance
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	TACTICS
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_tactics
+{
+	ID $skill_tactics
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_tactics
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_tactics
+{
+  #copy SKILL $skill_tactics
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	SNOOPING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_snooping
+{
+	ID $skill_snooping
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_snooping
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_snooping
+{
+  #copy SKILL $skill_snooping
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	MUSICIANSHIP
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_musicianship
+{
+	ID $skill_musicianship
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_musicianship
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_musicianship
+{
+  #copy SKILL $skill_musicianship
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	POISONING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_poisoning
+{
+	ID $skill_poisoning
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_poisoning
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_poisoning
+{
+  #copy SKILL $skill_poisoning
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	ARCHERY
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_archery
+{
+	ID $skill_archery
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_archery
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_archery
+{
+  #copy SKILL $skill_archery
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	SPIRIT SPEAKING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_spirit_speaking
+{
+	ID $skill_spirit_speaking
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_spirit_speaking
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_spirit_speaking
+{
+  #copy SKILL $skill_spirit_speaking
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	STEALING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_stealing
+{
+	ID $skill_stealing
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_stealing
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_stealing
+{
+  #copy SKILL $skill_stealing
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	TAILORING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_tailoring
+{
+	ID $skill_tailoring
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_tailoring
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_tailoring
+{
+  #copy SKILL $skill_tailoring
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	ANIMAL TAMING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_animal_taming
+{
+	ID $skill_animal_taming
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_animal_taming
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_animal_taming
+{
+  #copy SKILL $skill_animal_taming
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	TASTE IDENTIFICATION
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_taste_identification
+{
+	ID $skill_taste_identification
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_taste_identification
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_taste_identification
+{
+  #copy SKILL $skill_taste_identification
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	TINKERING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_tinkering
+{
+	ID $skill_tinkering
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_tinkering
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_tinkering
+{
+  #copy SKILL $skill_tinkering
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	TRACKING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_tracking
+{
+	ID $skill_tracking
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_tracking
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_tracking
+{
+  #copy SKILL $skill_tracking
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	VETERINARY
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_veterinary
+{
+	ID $skill_veterinary
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_veterinary
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_veterinary
+{
+  #copy SKILL $skill_veterinary
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	SWORDMANSHIP
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_swordsmanship
+{
+	ID $skill_swordsmanship
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_swordsmanship
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_swordsmanship
+{
+  #copy SKILL $skill_swordsmanship
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	MACEFIGHTING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_macefighting
+{
+	ID $skill_macefighting
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_macefighting
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_macefighting
+{
+  #copy SKILL $skill_macefighting
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	FENCING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_fencing
+{
+	ID $skill_fencing
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_fencing
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_fencing
+{
+  #copy SKILL $skill_fencing
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	WRESTLING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_wrestling
+{
+	ID $skill_wrestling
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_wrestling
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_wrestling
+{
+  #copy SKILL $skill_wrestling
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	LUMBERJACKING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_lumberjacking
+{
+	ID $skill_lumberjacking
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_lumberjacking
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_lumberjacking
+{
+  #copy SKILL $skill_lumberjacking
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	MINING
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_mining
+{
+	ID $skill_mining
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_mining
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_mining
+{
+  #copy SKILL $skill_mining
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	MEDITATION
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_meditation
+{
+	ID $skill_meditation
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_meditation
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_meditation
+{
+  #copy SKILL $skill_meditation
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	STEALTH
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_stealth
+{
+	ID $skill_stealth
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_stealth
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+SECTION RACESKILLADVANCE $skill_stealth
+{
+  #copy SKILL $skill_stealth
+}
+
+//
+// --------------------------------------------------------------------
+// DEFAULT:	REMOVE TRAPS
+// --------------------------------------------------------------------
+//
+
+SECTION RACESKILL $skill_remove_traps
+{
+	ID $skill_remove_traps
+  	MODIFIER $race_skill_modifier_default
+  	ADVANCE $skill_remove_traps
+	CANUSESKILL
+	CANUSEADVANCE
+	CANUSEMODIFIER
+}
+
+
+SECTION RACESKILLADVANCE $skill_remove_traps
+{
+  #copy SKILL $skill_remove_traps
+}

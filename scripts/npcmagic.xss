@@ -1,0 +1,352 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npcmagic.xss)                                   ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// see section 255 for all possible values :]
+// Earthquake, Chain Lightning and Meteor Swarm are yet to be implemented! :[
+
+//Fire spells
+SECTION SPHERE $sphere_fire
+{
+    MAGICARROW
+    FIREBALL
+    FIREFIELD
+    EXPLOSION
+    FLAMESTRIKE
+}
+
+//Water spells
+SECTION SPHERE $sphere_water
+{
+    HEAL
+    GREATHEAL
+    GREATCURE
+    PARALYZE
+    MANADRAIN
+    MANAVAMPIRE
+}
+
+//Earth Spells
+SECTION SPHERE $sphere_earth
+{
+    HARM
+    PARALYZE
+    EXPLOSION
+    GREATHEAL
+    METEORSWARM
+    EARTHQUAKE
+}
+
+//Air Spells
+SECTION SPHERE $sphere_air
+{
+    HARM
+    LIGHTNING
+    PARALYZE
+    CHAINLIGHTNING
+    GREATHEAL
+    GREATCURE
+    MAGICREFLECTION
+}
+
+//earth people Spells
+SECTION SPHERE $sphere_earthpeople
+{
+    MAGICARROW
+    FIREBALL
+    CURSE
+    PARALYZE
+    WEAKEN
+    CLUMSY
+    LIGHTNING
+}
+
+//Terathan Spells
+SECTION SPHERE $sphere_terathan
+{
+    WEAKEN
+    CLUMSY
+    CURSE
+    PARALYZE
+    GREATHEAL
+    SUMMON $npc_a_giant_spider
+}
+
+//Ophidian Spells
+SECTION SPHERE $sphere_ophidian
+{
+    GREATHEAL
+    POISON
+    WEAKEN
+    HARM
+    CLUMSY
+    PARALYZE
+    GREATCURE
+}
+
+//Titan Spells
+SECTION SPHERE $sphere_titan
+{
+    FREEBLEMIND
+    MAGICARROW
+    WEAKEN
+    CLUMSY
+    LIGHTNING
+    HEAL
+    FIREBALL
+    POISON
+    CURSE
+    PARALYZE
+    MAGICREFLECTION
+}
+
+//Undead Spells
+SECTION SPHERE $sphere_undead
+{
+    FREEBLEMIND
+    HARM
+    WEAKEN
+    CLUMSY
+    HEAL
+    POISON
+    CURSE
+    PARALYZE
+    MAGICREFLECTION
+}
+
+
+//Gargoyles spells
+SECTION SPHERE $sphere_gargoyle
+{
+    FREEBLEMIND
+    MAGICARROW
+    WEAKEN
+    CLUMSY
+    LIGHTNING
+    HEAL
+    FIREBALL
+    POISON
+    CURSE
+    PARALYZE
+    MAGICREFLECTION
+}
+
+//Undead spells 2
+SECTION SPHERE $sphere_undead2
+{
+    CURSE
+    GREATHEAL
+    GREATCURE
+    PARALYZE
+    POISON
+    SUMMON $npc_a_skeleton
+    SUMMON $npc_a_zombie
+    MAGICREFLECTION
+    MANAVAMPIRE
+    ENERGYBOLT
+}
+
+//Vampire Spells
+SECTION SPHERE $sphere_vampire
+{
+    CURSE
+    GREATHEAL
+    GREATCURE
+    PARALYZE
+    POISON
+    FIREBALL
+    LIGHTNING
+    FLAMESTRIKE
+    SUMMON $npc_a_skeleton
+    SUMMON $npc_a_zombie
+    MAGICREFLECTION
+    MANAVAMPIRE
+    ENERGYBOLT
+}
+
+//Blood Elemental
+SECTION SPHERE $sphere_blood
+{
+    POISON
+    PARALYZE
+    GREATHEAL
+    GREATCURE
+    LIGHTNING
+    MAGICREFLECTION
+    MANAVAMPIRE
+    EARTHQUAKE
+    FLAMESTRIKE
+    ENERGYBOLT
+    CURSE
+}
+
+//Acid spells
+SECTION SPHERE $sphere_acid
+{
+    POISONFIELD
+    POISON
+    POISONFIELD
+    POISON
+    POISONFIELD
+    POISON
+    GREATCURE
+}
+
+//Snow and Ice
+SECTION SPHERE $sphere_snowice
+{
+    PARALYZE
+    PARALYZEFIELD
+    GREATHEAL
+    PARALYZE
+    PARALYZEFIELD
+}
+
+//Efreet
+SECTION SPHERE $sphere_efreet
+{
+    POISON
+    CURSE
+    LIGHTNING
+    FIREBALL
+    HARM
+    GREATHEAL
+    GREATCURE
+}
+
+//Wyrms
+SECTION SPHERE $sphere_wyrms
+{
+    POISON
+    CURSE
+    LIGHTNING
+    FIREBALL
+    HARM
+    GREATHEAL
+    GREATCURE
+}
+
+//Imp
+SECTION SPHERE $sphere_minordeamon
+{
+    FIREBALL
+    LIGHTNING
+    HEAL
+    MAGICARROW
+}
+
+//Reaper
+SECTION SPHERE $sphere_reaper
+{
+    MINDBLAST
+    MAGICARROW
+    EXPLOSION
+}
+
+//Mental spells
+SECTION SPHERE $sphere_mental
+{
+    MINDBLAST
+    PARALYZE
+    PARALYZEFIELD
+    MANADRAIN
+    MANAVAMPIRE
+    ENERGYBOLT
+}
+
+
+//Poison sphere
+SECTION SPHERE $sphere_poison
+{
+    POISON
+    POISONFIELD
+    GREATCURE
+    GREATHEAL
+    MANADRAIN
+    MAGICREFLECTION
+    MANAVAMPIRE
+}
+
+
+//Poison sphere
+SECTION SPHERE $sphere_deamon
+{
+    MINDBLAST
+    PARALYZE
+    PARALYZEFIELD
+    MANADRAIN
+    MANAVAMPIRE
+    ENERGYBOLT
+    SUMMON $npc_an_imp
+    SUMMON $npc_an_imp
+    SUMMON $npc_deamon_unarmed
+}
+
+
+SECTION SPHERE $sphere_xanathar
+{
+    PARALYZE
+    MINDBLAST
+    FIREFIELD
+    FIREFIELD
+    POISONFIELD
+    POISONFIELD
+    PARALYZEFIELD
+    PARALYZEFIELD
+    PARALYZE
+    MANADRAIN
+    MANAVAMPIRE
+    ENERGYBOLT
+    SUMMON $npc_a_dark_spider
+    SUMMON $npc_a_dread_spider
+    SUMMON $npc_a_giant_spider
+    SUMMON $npc_a_frost_spider
+    POISON
+    POISON
+    MAGICREFLECTION
+    MAGICREFLECTION
+    MAGICREFLECTION
+    GREATCURE
+    GREATCURE
+    GREATCURE
+}
+
+//All spells
+SECTION SPHERE sphere_all
+{
+    MAGICARROW
+    HARM
+    CLUMSY
+    FEEBLEMIND
+    WEAKEN
+    FIREBALL
+    CURSE
+    LIGHTNING
+    PARALYZE
+    MINDBLAST
+    ENERGYBOLT
+    EXPLOSION
+    FLAMESTRIKE
+    FIREFIELD
+    POISONFIELD
+    PARALYZEFIELD
+    //this is summon <npc id>
+    SUMMON $npc_a_sewer_rat
+    HEAL
+    GREATHEAL
+    GREATCURE
+    POISON
+    MANADRAIN
+    MANAVAMPIRE
+    BLADESPIRITS
+    ENERGYVORTEX
+    MAGICREFLECTION
+    CHAINLIGHTNING
+    METEORSWARM
+    EARTHQUAKE
+}
+

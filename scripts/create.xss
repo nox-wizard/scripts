@@ -1,0 +1,2777 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (create.scp)                                     ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#include scripts/make.xss
+
+// Uses items in items.scp
+
+// Be aware that all commands are case-sensitive!
+
+
+// Blacksmithing section
+SECTION MAKEMENU 1
+{
+    Blacksmithing
+    1416 Armor
+    RESOURCE 10
+    SKILL 500
+    MAKEMENU 3
+    13BA Weapons
+    RESOURCE 3
+    SKILL 100
+    MAKEMENU 4
+    1BC3 Shields
+    RESOURCE 8
+    SKILL 250
+    MAKEMENU 2
+    09ed Misc
+    RESOURCE 6
+    SKILL 150
+    MAKEMENU 105
+}
+
+SECTION MAKEMENU 2
+{
+    Shields
+    1B73 Buckler
+    RESOURCE 10
+    SKILL 32
+    ADDITEM $item_buckler
+    1B7B Metal Shield
+    RESOURCE 14
+    SKILL 173
+    ADDITEM $item_metal_shield
+    1B72 Bronze Shield
+    RESOURCE 12
+    SKILL 126
+    ADDITEM $item_bronze_shield
+    1B78 Kite Shield (wooden)
+    RESOURCE 8
+    SKILL 126
+    ADDITEM $item_wooden_kite_shield
+    1B74 Kite Shield (Metal)
+    RESOURCE 16
+    SKILL 314
+    ADDITEM $item_metal_kite_shield
+    1B76 Heater
+    RESOURCE 18
+    SKILL 502
+    ADDITEM $item_heater
+}
+
+SECTION MAKEMENU 3
+{
+    Armor
+    13ED Ring Mail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 7
+    13C4 Chain Mail
+    RESOURCE 10
+    SKILL 408
+    MAKEMENU 6
+    1416 Plate Mail
+    RESOURCE 10
+    SKILL 526
+    MAKEMENU 5
+    140C Miscellaneous Helms
+    RESOURCE 10
+    SKILL 350
+    MAKEMENU 8
+}
+
+SECTION MAKEMENU 4
+{
+    Weapons
+    0E74 Cannons / Ammo
+    RESOURCE 2
+    SKILL 400
+    MAKEMENU 14
+    13BA Swords & Blades
+    RESOURCE 3
+    SKILL 550
+    MAKEMENU 9
+    0F5C Maces & Hammers
+    RESOURCE 6
+    SKILL 550
+    MAKEMENU 11
+    0E87 Spears and Forks
+    RESOURCE 6
+    SKILL 632
+    MAKEMENU 12
+    0F47 Axes
+    RESOURCE 14
+    SKILL 538
+    MAKEMENU 10
+    143E Pole Arms
+    RESOURCE 18
+    SKILL 573
+    MAKEMENU 13
+}
+
+SECTION MAKEMENU 5
+{
+    Plate Mail
+    1413 Gorget
+    RESOURCE 10
+    SKILL 573
+    ADDITEM $item_plate_gorget
+    1414 Gloves
+    RESOURCE 12
+    SKILL 597
+    ADDITEM $item_plate_gloves
+    1412 Plate Helm
+    RESOURCE 15
+    SKILL 650
+    ADDITEM $item_plate_helm
+    1410 Sleeves
+    RESOURCE 18
+    SKILL 667
+    ADDITEM $item_plate_sleeves
+    141A Leggings
+    RESOURCE 20
+    SKILL 691
+    ADDITEM $item_plate_leggings
+    1C04 Female Plate
+    RESOURCE 20
+    SKILL 526
+    ADDITEM $item_female_plate
+    1416 Breastplate
+    RESOURCE 25
+    SKILL 750
+    ADDITEM $item_platemail
+}
+
+SECTION MAKEMENU 6
+{
+    Chain Mail
+    13BB Coif
+    RESOURCE 10
+    SKILL 408
+    ADDITEM $item_chain_coif
+    13C3 Leggings
+    RESOURCE 18
+    SKILL 502
+    ADDITEM $item_chain_leggings
+    13C4 Tunic
+    RESOURCE 20
+    SKILL 526
+    ADDITEM $item_chain_tunic
+}
+
+SECTION MAKEMENU 7
+{
+    Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_ringmail_leggings
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_ringmail_tunic
+}
+
+SECTION MAKEMENU 8
+{
+    Miscellaneous Helms
+    140C Bascinet
+    RESOURCE 15
+    SKILL 350
+    ADDITEM $item_bascinet
+    1408 Close Helmet
+    RESOURCE 15
+    SKILL 632
+    ADDITEM $item_close_helm
+    140A Helmet
+    RESOURCE 15
+    SKILL 632
+    ADDITEM $item_a_helmet
+    140E Nose Helm
+    RESOURCE 15
+    SKILL 632
+    ADDITEM $item_nose_helm
+}
+
+SECTION MAKEMENU 9
+{
+    Swords & Blades
+    0F51 Dagger
+    RESOURCE 3
+    SKILL 267
+    ADDITEM $item_dagger
+    0EC4 Skinning Knife
+    RESOURCE 3
+    SKILL 267
+    ADDITEM $item_skinning_knife
+    1440 Cutlass
+    RESOURCE 8
+    SKILL 502
+    ADDITEM $item_cutlass
+    1400 Kryss
+    RESOURCE 8
+    SKILL 620
+    ADDITEM $item_kryss
+    13FF Katana
+    RESOURCE 8
+    SKILL 691
+    ADDITEM $item_katana
+    13B6 Scimitar
+    RESOURCE 10
+    SKILL 573
+    ADDITEM $item_scimitar
+    0F5E Broad Sword
+    RESOURCE 10
+    SKILL 608
+    ADDITEM $item_broadsword
+    13B8 Long Sword
+    RESOURCE 12
+    SKILL 538
+    ADDITEM $item_long_sword
+    13BA Viking Sword
+    RESOURCE 14
+    SKILL 502
+    ADDITEM $item_viking_sword
+}
+
+SECTION MAKEMENU 10
+{
+    Axes
+    0F4B Double Axe
+    RESOURCE 12
+    SKILL 550
+    ADDITEM $item_double_axe
+    0F47 Battle Axe
+    RESOURCE 14
+    SKILL 561
+    ADDITEM $item_battle_axe
+    13FB Large Battle Axe
+    RESOURCE 14
+    SKILL 538
+    ADDITEM $item_large_battle_axe
+    0F49 Axe
+    RESOURCE 14
+    SKILL 597
+    ADDITEM $item_axe
+    1442 Two-handed Axe
+    RESOURCE 16
+    SKILL 585
+    ADDITEM $item_a_two-handed_axe
+    0F45 Executioner's Axe
+    RESOURCE 16
+    SKILL 597
+    ADDITEM $item_executioners_axe
+    13B0 War Axe
+    RESOURCE 16
+    SKILL 644
+    ADDITEM $item_war_axe
+}
+
+SECTION MAKEMENU 11
+{
+    Maces & Hammers
+    0F5C Mace
+    RESOURCE 6
+    SKILL 408
+    ADDITEM $item_mace
+    143A Maul
+    RESOURCE 10
+    SKILL 455
+    ADDITEM $item_maul
+    1406 War Mace
+    RESOURCE 14
+    SKILL 538
+    ADDITEM $item_war_mace
+    1438 War Hammer
+    RESOURCE 16
+    SKILL 597
+    ADDITEM $item_war_hammer
+    143C Hammer Pick
+    RESOURCE 18
+    SKILL 514
+    ADDITEM $item_hammer_pick
+}
+
+SECTION MAKEMENU 12
+{
+    Spears & Forks
+    1403 Short Spear
+    RESOURCE 6
+    SKILL 702
+    ADDITEM $item_short_spear
+    1405 War Fork
+    RESOURCE 12
+    SKILL 632
+    ADDITEM $item_war_fork
+    0F62 Spear
+    RESOURCE 12
+    SKILL 738
+    ADDITEM $item_spear
+}
+
+SECTION MAKEMENU 13
+{
+    Pole Arms
+    0F4D Bardiche
+    RESOURCE 18
+    SKILL 573
+    ADDITEM $item_bardiche
+    143E Halberd
+    RESOURCE 20
+    SKILL 644
+    ADDITEM $item_halberd
+}
+
+SECTION MAKEMENU 14
+{
+    Cannons
+    0E73 Cannon Ball
+    RESOURCE 10
+    SKILL 400
+    ADDITEM $item_a_cannon_ball
+    14ED Cannon Deed
+    RESOURCE 1000
+    SKILL 801
+    ADDITEM $item_a_cannon_deed
+}
+
+// End of Blacksmithing section
+// Beginning of Carpentry section
+// Shields and Other is NOT implemented until the items have been added to the items.scp file
+
+SECTION MAKEMENU 19
+{
+    Boards
+    1BD7 1 Board
+    RESOURCE 2
+    SKILL 10
+    ADDITEM $item_boards_1
+    1BD7 5 Boards
+    RESOURCE 7
+    SKILL 50
+    ADDITEM $item_boards_2
+    1BD7 10 Boards
+    RESOURCE 10
+    SKILL 100
+    ADDITEM $item_boards
+    1BD7 20 Boards
+    RESOURCE 20
+    SKILL 300
+    ADDITEM $item_boards_3
+}
+
+SECTION MAKEMENU 20
+{
+    Carpentry
+    0dbf Staffs and Poles
+    RESOURCE 5
+    SKILL 684
+    MAKEMENU 28
+    1b78 Shields and Other
+    RESOURCE 5
+    SKILL 1001
+    MAKEMENU 26
+    0B32 Chairs
+    RESOURCE 9
+    SKILL 100
+    MAKEMENU 21
+    0E42 Containers
+    RESOURCE 9
+    SKILL 100
+    MAKEMENU 22
+    0B34 Table
+    RESOURCE 17
+    SKILL 421
+    MAKEMENU 23
+}
+
+SECTION MAKEMENU 21
+{
+    Chairs
+    0A2B Stool (Barstool)
+    RESOURCE 9
+    SKILL 110
+    ADDITEM $item_stool_1
+    0A2A Stool, with Supports
+    RESOURCE 9
+    SKILL 110
+    ADDITEM $item_stool
+    0B5A Chair
+    RESOURCE 13
+    SKILL 210
+    MAKEMENU 29
+    0B52 Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    MAKEMENU 27
+    0B2E Wooden Chair
+    RESOURCE 17
+    SKILL 526
+    MAKEMENU 25
+    0B2C Wooden Bench facing South
+    RESOURCE 17
+    SKILL 526
+    ADDITEM $item_wooden_bench
+    0B2D Wooden Bench facing East
+    RESOURCE 17
+    SKILL 526
+    ADDITEM $item_wooden_bench_1
+    0B32 Throne
+    RESOURCE 19
+    SKILL 736
+    MAKEMENU 24
+}
+
+SECTION MAKEMENU 22
+{
+    Containers
+    0E7D Wooden Box - East
+    RESOURCE 8
+    SKILL 100
+    ADDITEM $item_wooden_box
+    09aa Wooden Box - South
+    RESOURCE 8
+    SKILL 100
+    ADDITEM $item_wooden_box_1
+    0E7E Small Wooden Crate - East
+    RESOURCE 9
+    SKILL 100
+    ADDITEM $item_small_wooden_crate
+    09a9 Small Wooden Crate - South
+    RESOURCE 9
+    SKILL 100
+    ADDITEM $item_small_wooden_crate_1
+    0E3E Medium Wooden Crate - East
+    RESOURCE 15
+    SKILL 315
+    ADDITEM $item_medium_wooden_crate
+    0E3f Medium Wooden Crate - South
+    RESOURCE 15
+    SKILL 315
+    ADDITEM $item_medium_wooden_crate_1
+    0E3C Large Wooden Crate - East
+    RESOURCE 18
+    SKILL 473
+    ADDITEM $item_large_wooden_crate
+    0E3d Large Wooden Crate - South
+    RESOURCE 18
+    SKILL 473
+    ADDITEM $item_large_wooden_crate_1
+    0E42 Wooden Chest - East
+    RESOURCE 15
+    SKILL 736
+    ADDITEM $item_wooden_chest
+    0E43 Wooden Chest - South
+    RESOURCE 15
+    SKILL 736
+    ADDITEM $item_wooden_chest_1
+    0A51 Armorie, Cherry - East
+    RESOURCE 35
+    SKILL 842
+    ADDITEM $item_armorie
+    0A4D Armorie, Cherry - South
+    RESOURCE 35
+    SKILL 842
+    ADDITEM $item_armoire
+    0A53 Armorie, Brown - East
+    RESOURCE 35
+    SKILL 842
+    ADDITEM $item_armoire_2
+    0A4F Armorie, Brown - South
+    RESOURCE 35
+    SKILL 842
+    ADDITEM $item_armoire_1
+    0a34 Chest of Drawers - East
+    RESOURCE 40
+    SKILL 945
+    ADDITEM $item_chest_of_drawers_1
+    0a2c Chest of Drawers - South
+    RESOURCE 40
+    SKILL 945
+    ADDITEM $item_chest_of_drawers
+    0a38 Chest of Drawers Cherry - East
+    RESOURCE 40
+    SKILL 945
+    ADDITEM $item_chest_of_drawers_3
+    0a30 Chest of Drawers Cherry - South
+    RESOURCE 40
+    SKILL 945
+    ADDITEM $item_chest_of_drawers_2
+}
+
+SECTION MAKEMENU 23
+{
+    Tables
+    0B34 Table (Small)
+    RESOURCE 17
+    SKILL 421
+    ADDITEM $item_table
+    0B4a Writing Desk - North
+    RESOURCE 17
+    SKILL 631
+    ADDITEM $item_writing_desk_1
+    0B4b Writing Desk - South
+    RESOURCE 17
+    SKILL 631
+    ADDITEM $item_writing_desk_2
+    0B4c Writing Desk - East
+    RESOURCE 17
+    SKILL 631
+    ADDITEM $item_writing_desk_3
+    0B49 Writing Desk - West
+    RESOURCE 17
+    SKILL 631
+    ADDITEM $item_writing_desk
+    0B8F Table facing east
+    RESOURCE 23
+    SKILL 631
+    ADDITEM $item_table_1
+    0B7c Table facing south
+    RESOURCE 23
+    SKILL 631
+    ADDITEM $item_table_Z5
+    0B7d Large Table (Yew Style)- east
+    RESOURCE 27
+    SKILL 842
+    ADDITEM $item_table_Z6
+    0B90 Large Table (Yew Style)- south
+    RESOURCE 27
+    SKILL 842
+    ADDITEM $item_table_2
+}
+SECTION MAKEMENU 24
+{
+    Throne
+    0B32 Throne
+    RESOURCE 19
+    SKILL 736
+    ADDITEM $item_a_throne
+    0B33 Throne
+    RESOURCE 19
+    SKILL 736
+    ADDITEM $item_a_throne_1
+}
+
+SECTION MAKEMENU 25
+{
+    Wooden Chair
+    0B2E Wooden Chair
+    RESOURCE 17
+    SKILL 250
+    ADDITEM $item_a_wooden_chair
+    0B2F Wooden Chair
+    RESOURCE 17
+    SKILL 250
+    ADDITEM $item_a_wooden_chair_1
+    0B30 Wooden Chair
+    RESOURCE 17
+    SKILL 250
+    ADDITEM $item_a_wooden_chair_2
+    0B31 Wooden Chair
+    RESOURCE 17
+    SKILL 250
+    ADDITEM $item_a_wooden_chair_3
+}
+
+SECTION MAKEMENU 26
+{
+    Shields and Other
+    1db8 Barrel Lid
+    RESOURCE 4
+    SKILL 110
+    ADDITEM $item_a_barrel_lid
+    1eb2 Barrel Staves
+    RESOURCE 5
+    SKILL 1
+    ADDITEM $item_barrel_staves
+    1e2f Dart Board Deed
+    RESOURCE 5
+    SKILL 157
+    ADDITEM 
+    1e2e Dart Board Deed
+    RESOURCE 5
+    SKILL 157
+    ADDITEM 
+    1b7a Wooden Shield
+    RESOURCE 9
+    SKILL 526
+    ADDITEM $item_wooden_shield
+    1b78 Wooden Kite Shield
+    RESOURCE 15
+    SKILL 626
+    ADDITEM $item_wooden_kite_shield
+    xeb8 Music Stand
+    RESOURCE 15
+    SKILL 789
+    ADDITEM 
+    1ad7 Keg
+    RESOURCE 5
+    SKILL 157
+    ADDITEM 
+    1940 Keg
+    RESOURCE 5
+    SKILL 157
+    ADDITEM $item_shell_recoverd_from_a_shipwreck_3
+    xebc Music Stand (Tall)
+    RESOURCE 20
+    SKILL 815
+    ADDITEM 
+    xf67 Easel
+    RESOURCE 20
+    SKILL 868
+    ADDITEM 
+    xf65 Easel
+    RESOURCE 20
+    SKILL 868
+    ADDITEM 
+}
+
+SECTION MAKEMENU 27
+{
+    Cushioned Chair
+    0B52 Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    ADDITEM $item_a_fancy_chair_4
+    0B53 Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    ADDITEM $item_a_fancy_chair_5
+    0B54 Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    ADDITEM $item_a_fancy_chair_6
+    0B55 Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    ADDITEM $item_a_fancy_chair_7
+    0B4E Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    ADDITEM $item_a_fancy_chair
+    0B4F Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    ADDITEM $item_a_fancy_chair_1
+    0B50 Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    ADDITEM $item_a_fancy_chair_2
+    0B51 Cushioned Chair
+    RESOURCE 15
+    SKILL 421
+    ADDITEM $item_a_fancy_chair_3
+}
+
+SECTION MAKEMENU 28
+{
+    Staffs and Poles
+    0dbf Fishing Pole
+    RESOURCE 5
+    SKILL 684
+    ADDITEM $item_a_fishing_pole
+    0e8a Quarter Staff
+    RESOURCE 6
+    SKILL 736
+    ADDITEM $item_quarter_staff
+    13f9 Gnarled Staff
+    RESOURCE 5
+    SKILL 789
+    ADDITEM $item_gnarled_staff
+    0e81 Shepherd's Crook
+    RESOURCE 7
+    SKILL 789
+    ADDITEM $item_sheperds_crook
+}
+
+SECTION MAKEMENU 29
+{
+    Chair
+    0B5A Chair
+    RESOURCE 13
+    SKILL 210
+    ADDITEM $item_a_straw_chair
+    0B5B Chair
+    RESOURCE 13
+    SKILL 210
+    ADDITEM $item_a_straw_chair_1
+    0B5C Chair
+    RESOURCE 13
+    SKILL 210
+    ADDITEM $item_a_straw_chair_2
+    0B5D Chair
+    RESOURCE 13
+    SKILL 210
+    ADDITEM $item_a_straw_chair_3
+    0B56 Chair
+    RESOURCE 13
+    SKILL 210
+    ADDITEM $item_a_wooden_chair_4
+    0B57 Chair
+    RESOURCE 13
+    SKILL 210
+    ADDITEM $item_a_wooden_chair_5
+    0B58 Chair
+    RESOURCE 13
+    SKILL 210
+    ADDITEM $item_a_wooden_chair_6
+    0B59 Chair
+    RESOURCE 13
+    SKILL 210
+    ADDITEM $item_a_wooden_chair_7
+}
+
+// End of Carpentry section
+
+// begin tailor section
+// begin cloth section
+
+SECTION MAKEMENU 30
+{
+    Tailoring
+    1713 Hats
+    RESOURCE 2
+    SKILL 10
+    MAKEMENU 31
+    153B Misc.
+    RESOURCE 4
+    SKILL 45
+    MAKEMENU 34
+    0x1397 Bedding
+    RESOURCE 4
+    SKILL 250
+    MAKEMENU 35
+    152E Pants
+    RESOURCE 6
+    SKILL 190
+    MAKEMENU 33
+    1515 Shirts & Robes
+    RESOURCE 8
+    SKILL 10
+    MAKEMENU 32
+    0x160e Single Piece Wall Decorations
+    RESOURCE 20
+    SKILL 600
+    MAKEMENU 36
+    0x15a8 Multi Piece Wall Decorations
+    RESOURCE 25
+    SKILL 610
+    MAKEMENU 37
+}
+
+SECTION MAKEMENU 31
+{
+    Hats
+    1540 Bandana
+    RESOURCE 2
+    SKILL 10
+    ADDITEM $item_a_bandana
+    1544 Skullcap
+    RESOURCE 2
+    SKILL 10
+    ADDITEM $item_a_skullcap
+    1717 Straw hat
+    RESOURCE 10
+    SKILL 68
+    ADDITEM $item_straw_hat
+    1719 Bonnet
+    RESOURCE 11
+    SKILL 68
+    ADDITEM $item_bonnet
+    1715 Cap
+    RESOURCE 11
+    SKILL 68
+    ADDITEM $item_cap
+    1713 Floppy hat
+    RESOURCE 11
+    SKILL 68
+    ADDITEM $item_floopy_hat
+    1714 Wide-brim hat
+    RESOURCE 12
+    SKILL 68
+    ADDITEM $item_wide_brim_hat
+    171B Tricorne hat
+    RESOURCE 12
+    SKILL 68
+    ADDITEM $item_tricorne_hat
+    171A Feathered hat
+    RESOURCE 12
+    SKILL 68
+    ADDITEM $item_feathered_hat
+    1716 Tall hat
+    RESOURCE 12
+    SKILL 73
+    ADDITEM $item_a_tall_straw_hat
+    171C Jester hat
+    RESOURCE 15
+    SKILL 79
+    ADDITEM $item_jester_hat
+    1718 Wizard's hat
+    RESOURCE 15
+    SKILL 79
+    ADDITEM $item_a_wizards_hat
+}
+
+SECTION MAKEMENU 32
+{
+    Shirts & Robes
+    1F7B Doublet
+    RESOURCE 8
+    SKILL 10
+    ADDITEM $item_a_doublet
+    1517 Plain shirt
+    RESOURCE 8
+    SKILL 227
+    ADDITEM $item_shirt
+    1EFD Fancy shirt
+    RESOURCE 8
+    SKILL 272
+    ADDITEM $item_fancy_shirt
+    1F01 Plain Dress
+    RESOURCE 10
+    SKILL 363
+    ADDITEM $item_a_plain_dress
+    1FA1 Tunic
+    RESOURCE 12
+    SKILL 10
+    ADDITEM $item_a_tunic
+    1EFF Fancy Dress
+    RESOURCE 12
+    SKILL 136
+    ADDITEM $item_a_fancy_dress
+    1FFD Surcoat
+    RESOURCE 14
+    SKILL 90
+    ADDITEM $item_a_surcoat
+    1515 Cape
+    RESOURCE 14
+    SKILL 454
+    ADDITEM $item_cloak
+    1F03 Robe
+    RESOURCE 16
+    SKILL 590
+    ADDITEM $item_a_robe
+    1F9F Jester's suit
+    RESOURCE 24
+    SKILL 90
+    ADDITEM $item_a_jesters_suit
+}
+
+SECTION MAKEMENU 33
+{
+    Pants
+    152E Short pants
+    RESOURCE 6
+    SKILL 190
+    ADDITEM $item_short_pants
+    1537 Kilt
+    RESOURCE 8
+    SKILL 227
+    ADDITEM $item_a_kilt
+    1539 Long pants
+    RESOURCE 8
+    SKILL 272
+    ADDITEM $item_long_pants
+    1516 Skirt
+    RESOURCE 10
+    SKILL 318
+    ADDITEM $item_a_skirt
+}
+
+SECTION MAKEMENU 34
+{
+    Misc.
+    1541 Body sash
+    RESOURCE 4
+    SKILL 45
+    ADDITEM $item_a_body_sash
+    153B Half apron
+    RESOURCE 6
+    SKILL 227
+    ADDITEM $item_a_half_apron
+    153D Full apron
+    RESOURCE 10
+    SKILL 318
+    ADDITEM $item_a_full_apron
+}
+
+SECTION MAKEMENU 35
+{
+    Bedding
+    01397 Pillow
+    RESOURCE 4
+    SKILL 250
+    ADDITEM $item_small_pillow
+    0a6c Folded Blanket Poo
+    RESOURCE 6
+    SKILL 300
+    ADDITEM $item_folded_blanket_poo
+    0a59 Bedroll
+    RESOURCE 7
+    SKILL 300
+    ADDITEM $item_bedroll
+    0a92 Folded Sheet
+    RESOURCE 5
+    SKILL 340
+    ADDITEM $item_folded_sheet
+}
+
+SECTION MAKEMENU 36
+{
+    Single Piece Wall Decorations
+    0x15d0 N/S Small Banner
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_small_n
+    0x15d1 E/W Small Banner
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_small_e
+    0x15bc N/S Banner
+    RESOURCE 30
+    SKILL 650
+    ADDITEM $item_n_1
+    0x15bb E/W Banner
+    RESOURCE 30
+    SKILL 650
+    ADDITEM $item_e_1
+    0x15cc N/S Banner
+    RESOURCE 30
+    SKILL 700
+    ADDITEM $item_n_2
+    0x15cb E/W Banner
+    RESOURCE 30
+    SKILL 700
+    ADDITEM $item_e_2
+    0x15c8 N/S Banner
+    RESOURCE 30
+    SKILL 750
+    ADDITEM $item_n_3
+    0x15c7 E/W Banner
+    RESOURCE 30
+    SKILL 750
+    ADDITEM $item_e_3
+    0x160d N/S Fine Curtain
+    RESOURCE 40
+    SKILL 800
+    ADDITEM $item_n
+    0x160e E/W Fine Curtain
+    RESOURCE 40
+    SKILL 800
+    ADDITEM $item_e
+}
+
+SECTION MAKEMENU 37
+{
+    Multi Piece Wall Decorations
+    0x1586 E/W Banner pt 1
+    RESOURCE 25
+    SKILL 610
+    ADDITEM $item_e_4
+    0x1587 E/W Banner pt 2
+    RESOURCE 25
+    SKILL 610
+    ADDITEM $item_e_5
+    0x1588 E/W Banner pt 3
+    RESOURCE 25
+    SKILL 610
+    ADDITEM $item_e_6
+    0x158c E/W Banner pt 1
+    RESOURCE 25
+    SKILL 660
+    ADDITEM $item_e_7
+    0x158d E/W Banner pt 2
+    RESOURCE 25
+    SKILL 660
+    ADDITEM $item_e_8
+    0x158e E/W Banner pt 3
+    RESOURCE 25
+    SKILL 660
+    ADDITEM $item_e_9
+    0x15a0 E/W Banner pt 1
+    RESOURCE 25
+    SKILL 710
+    ADDITEM $item_e_A
+    0x15a1 E/W Banner pt 2
+    RESOURCE 25
+    SKILL 710
+    ADDITEM $item_e_B
+    0x15a8 E/W Banner pt 1
+    RESOURCE 25
+    SKILL 780
+    ADDITEM $item_e_C
+    0x15a9 E/W Banner pt 2
+    RESOURCE 25
+    SKILL 780
+    ADDITEM $item_e_D
+}
+
+
+// end cloth section
+// begin leather section
+
+SECTION MAKEMENU 40
+{
+    Leather Working
+    13D3 Leather Armor
+    RESOURCE 2
+    SKILL 68
+    MAKEMENU 42
+    09B2 Misc
+    RESOURCE 2
+    SKILL 200
+    MAKEMENU 45
+    170B Footwear
+    RESOURCE 4
+    SKILL 136
+    MAKEMENU 41
+    1C03 Female Armor
+    RESOURCE 6
+    SKILL 636
+    MAKEMENU 44
+    13E2 Studded Armor
+    RESOURCE 6
+    SKILL 772
+    MAKEMENU 43
+}
+
+SECTION MAKEMENU 41
+{
+    Footwear
+    170D Sandals
+    RESOURCE 4
+    SKILL 136
+    ADDITEM $item_sandles
+    170F Shoes
+    RESOURCE 6
+    SKILL 181
+    ADDITEM $item_shoes
+    170B Boots
+    RESOURCE 8
+    SKILL 363
+    ADDITEM $item_boots
+    1711 Thigh boots
+    RESOURCE 10
+    SKILL 454
+    ADDITEM $item_thigh_boots
+}
+
+SECTION MAKEMENU 42
+{
+    Leather Armor
+    1DBA Leather cap
+    RESOURCE 2
+    SKILL 68
+    ADDITEM $item_leather_cap
+    13CE Leather gloves
+    RESOURCE 3
+    SKILL 568
+    ADDITEM $item_leather_gloves
+    13C7 Leather gorget
+    RESOURCE 4
+    SKILL 590
+    ADDITEM $item_a_leather_gorget
+    13CD Leather sleeves
+    RESOURCE 4
+    SKILL 590
+    ADDITEM $item_leather_sleeves
+    13D2 Leather leggings
+    RESOURCE 10
+    SKILL 727
+    ADDITEM $item_leather_leggings
+    13D3 Leather tunic
+    RESOURCE 12
+    SKILL 772
+    ADDITEM $item_leather_tunic
+}
+
+SECTION MAKEMENU 43
+{
+    Studded Armor
+    13D6 Studded gorget
+    RESOURCE 6
+    SKILL 772
+    ADDITEM $item_studded_leather_gorget
+    13DD Studded gloves
+    RESOURCE 8
+    SKILL 818
+    ADDITEM $item_studded_leather_gloves
+    13D4 Studded sleeves
+    RESOURCE 10
+    SKILL 863
+    ADDITEM $item_studded_leather_sleeves
+    13E1 Studded legging
+    RESOURCE 12
+    SKILL 909
+    ADDITEM $item_studded_leather_leggings
+    13E2 Studded tunic
+    RESOURCE 14
+    SKILL 954
+    ADDITEM $item_studded_leather_tunic
+}
+
+SECTION MAKEMENU 44
+{
+    Female Armor
+    1C08 Skirt
+    RESOURCE 6
+    SKILL 636
+    ADDITEM $item_leather_skirt
+    1C0A Brassiere (Leather)
+    RESOURCE 6
+    SKILL 636
+    ADDITEM $item_leather_bustier
+    1C00 Shorts
+    RESOURCE 8
+    SKILL 681
+    ADDITEM $item_leather_shorts
+    1C06 One piece
+    RESOURCE 8
+    SKILL 681
+    ADDITEM $item_female_leather_armor
+    1C0C Brassiere (Studded)
+    RESOURCE 8
+    SKILL 818
+    ADDITEM $item_studded_leather_bustier
+    1C02 One piece w/shorts
+    RESOURCE 10
+    SKILL 863
+    ADDITEM $item_female_studded_leather
+}
+
+SECTION MAKEMENU 45
+{
+    Misc
+    163A Pillows
+    RESOURCE 2
+    SKILL 200
+    MAKEMENU 46
+    0E76 A Bag
+    RESOURCE 4
+    SKILL 250
+    ADDITEM $item_leather_bag
+    09B0 A Pouch
+    RESOURCE 4
+    SKILL 250
+    ADDITEM $item_pouch
+    0E9C A Drum
+    RESOURCE 5
+    SKILL 350
+    ADDITEM $item_drum
+    09B2 A Backpack
+    RESOURCE 8
+    SKILL 360
+    ADDITEM $item_backpack
+}
+
+SECTION MAKEMENU 46
+{
+    Pillows
+    163C A Small Leather Pillow
+    RESOURCE 6
+    SKILL 350
+    ADDITEM $item_a_small_leather_pillow
+    163B A Medium Leather Pillow
+    RESOURCE 8
+    SKILL 450
+    ADDITEM $item_a_medium_leather_pillow
+    163A A Large Leather Pillow
+    RESOURCE 12
+    SKILL 550
+    ADDITEM $item_a_large_leather_pillow
+}
+
+
+// end leather section
+// end tailoring section
+
+//Begin of GoldSmithing
+SECTION MAKEMENU 50
+{
+    Goldsmithing
+    09B3 A Golden Goblet
+    RESOURCE 3
+    SKILL 500
+    ADDITEM $item_a_golden_goblet
+    13ed Golden Ringmail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 2002
+    13C4 Golden Chain Mail
+    RESOURCE 10
+    SKILL 600 
+    MAKEMENU 807
+    1416 Golden Plate Mail
+    RESOURCE 10
+    SKILL 800
+    MAKEMENU 52
+    0EED Gold Coins
+    RESOURCE 10
+    SKILL 920
+    MAKEMENU 51
+    09a8 metal box
+    RESOURCE 14
+    SKILL 550
+    ADDITEM $item_metal_box
+    1B76 Heater Shield (18)
+    RESOURCE 18
+    SKILL 506
+    ADDITEM $item_a_golden_heater_shield
+    13BA Weapons
+    RESOURCE 8
+    SKILL 411
+    MAKEMENU 53
+}
+
+
+SECTION MAKEMENU 51
+{
+    Gold Coins
+    0EED 10 Gold Coins
+    RESOURCE 10
+    SKILL 920
+    ADDITEM $item_gold_coin_B
+    0EED 20 Gold Coins
+    RESOURCE 20
+    SKILL 920
+    ADDITEM $item_gold_coin_C
+    0EED 40 Gold Coins
+    RESOURCE 40
+    SKILL 930
+    ADDITEM $item_gold_coin_D
+    0EED 80 Gold Coins
+    RESOURCE 80
+    SKILL 930
+    ADDITEM $item_gold_coin_E
+    0EED 160 Gold Coins
+    RESOURCE 160
+    SKILL 950
+    ADDITEM $item_gold_coin_F
+    0EED 320 Gold Coins
+    RESOURCE 320
+    SKILL 950
+    ADDITEM $item_gold_coin_G
+    0EED 640 Gold Coins
+    RESOURCE 640
+    SKILL 960
+    ADDITEM $item_gold_coin_H
+    0EED 1280 Gold Coins
+    RESOURCE 1280
+    SKILL 960
+    ADDITEM $item_gold_coin_I
+    0EED 2560 Gold Coins
+    RESOURCE 2560
+    SKILL 970
+    ADDITEM $item_gold_coin_J
+}
+
+SECTION MAKEMENU 52
+{
+    Golden Plate Mail
+    1413 Golden Gorget
+    RESOURCE 10
+    SKILL 800
+    ADDITEM $item_golden_plate_gorget
+    1414 Golden Gloves
+    RESOURCE 12
+    SKILL 800
+    ADDITEM $item_golden_plate_gloves
+    140d Golden Bascinet Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_golden_bascinet
+    140f Golden Nose Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_nose_helm_1
+    1409 Golden Close Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_golden_close_helm
+    1412 Golden Plate Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_golden_plate_helm
+    1410 Golden Sleeves
+    RESOURCE 18
+    SKILL 800
+    ADDITEM $item_golden_plate_arms
+    141A Golden Leggings
+    RESOURCE 20
+    SKILL 800
+    ADDITEM $item_golden_plate_legs
+    1c04 Golden Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_plate_armor
+    1416 Golden Platemail
+    RESOURCE 25
+    SKILL 800
+    ADDITEM $item_golden_platemail
+}
+
+SECTION MAKEMENU 53
+{
+    Weapons
+    1400 Kryss (8)
+    RESOURCE 8
+    SKILL 411
+    ADDITEM $item_a_golden_kryss
+    13BA Viking Sword (14)
+    RESOURCE 14
+    SKILL 538
+    ADDITEM $item_a_golden_viking_sword
+    1406 War Mace (14)
+    RESOURCE 14
+    SKILL 506
+    ADDITEM $item_a_golden_war_mace
+    0F4B Double Axe (12)
+    RESOURCE 12
+    SKILL 198
+    ADDITEM $item_a_golden_double_axe
+    13B2 Bow (9)
+    RESOURCE 9
+    SKILL 461
+    ADDITEM $item_a_golden_bow
+    1405 War Fork (12)
+    RESOURCE 12
+    SKILL 411
+    ADDITEM $item_bottle_9
+}
+
+//End of GoldSmithing
+
+// begin bowcraft/fletching section
+// begin fletching section
+
+SECTION MAKEMENU 60
+{
+    Fletching
+    0F41 Arrows
+    RESOURCE 1
+    SKILL 250
+    MAKEMENU 61
+    1BFD Crossbow Bolts
+    RESOURCE 1
+    SKILL 250
+    MAKEMENU 62
+}
+
+SECTION MAKEMENU 61
+{
+    Arrows
+    0F3F One Arrow
+    RESOURCE 1
+    SKILL 150
+    ADDITEM $item_arrow
+    0F40 Five Arrows
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_arrow_2
+    0F41 Ten Arrows
+    RESOURCE 10
+    SKILL 150
+    ADDITEM $item_arrow_3
+    0F41 Twenty Arrows
+    RESOURCE 20
+    SKILL 150
+    ADDITEM $item_arrow_4
+    0F41 Fifty Arrows
+    RESOURCE 50
+    SKILL 150
+    ADDITEM $item_arrow_5
+}
+
+SECTION MAKEMENU 62
+{
+    Crossbow Bolts
+    1BFB One Crossbow Bolt
+    RESOURCE 1
+    SKILL 150
+    ADDITEM $item_crossbow_bolt
+    1BFC Five Crossbow Bolts
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_crossbow_bolt_1
+    1BFD Ten Crossbow Bolts
+    RESOURCE 10
+    SKILL 150
+    ADDITEM $item_crossbow_bolt_2
+    1BFD Twenty Crossbow Bolts
+    RESOURCE 20
+    SKILL 150
+    ADDITEM $item_crossbow_bolt_3
+    1BFD Fifty Crossbow Bolts
+    RESOURCE 50
+    SKILL 150
+    ADDITEM $item_crossbow_bolt_4
+}
+// end fletching section
+
+// begin bowcraft section
+SECTION MAKEMENU 65
+{
+    Bowcraft
+    1BD6 Shafts
+    RESOURCE 2
+    SKILL 100
+    MAKEMENU 66
+    13B2 Bow
+    RESOURCE 2
+    SKILL 300
+    ADDITEM $item_bow
+    0F4F Crossbow
+    RESOURCE 2
+    SKILL 300
+    ADDITEM $item_crossbow
+    13FD Heavy Crossbow
+    RESOURCE 3
+    SKILL 400
+    ADDITEM $item_heavy_crossbow
+}
+
+SECTION MAKEMENU 66
+{
+    Shafts
+    1BD5 Five Shafts
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_shafts
+    1BD6 Ten Shafts
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_shafts_1
+    1BD6 Twenty Shafts
+    RESOURCE 8
+    SKILL 100
+    ADDITEM $item_shafts_2
+    1BD6 Fifty Shafts
+    RESOURCE 18
+    SKILL 100
+    ADDITEM $item_shafts_3
+}
+// end bowcraft section
+// end bowcraft/fletching sections
+
+//begin section Tinkering with Logs
+SECTION MAKEMENU 70
+{
+    Tinkering
+    105B axle
+    RESOURCE 2
+    SKILL 10
+    ADDITEM $item_axles
+    0E34 blank scroll
+    RESOURCE 2
+    SKILL 10
+    ADDITEM $item_blank_scrolls
+    1030 jointing plane
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_jointing_plane
+    102C moulding plane
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_moulding_planes
+    1032 smoothing plane
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_smoothing_plane
+    14f4 A Boat Model
+    RESOURCE 5
+    SKILL 100
+    ADDITEM $item_a_boat_model
+    104D clock frame
+    RESOURCE 6
+    SKILL 250
+    ADDITEM $item_clock_frames
+    10a5 House Add-on's
+    RESOURCE 7
+    SKILL 700
+    MAKEMENU 816
+}
+//end section Tinkering with Logs
+
+//begin section Tinkering with Ingots
+SECTION MAKEMENU 80
+{
+    Tinkering ingots
+    1053 parts
+    RESOURCE 1
+    SKILL 100
+    MAKEMENU 81
+    1034 carpentry tools
+    RESOURCE 2
+    SKILL 100
+    MAKEMENU 82
+    0F9E Other tools
+    RESOURCE 2
+    SKILL 100
+    MAKEMENU 83
+    0B45 Misc.
+    RESOURCE 3
+    SKILL 100
+    MAKEMENU 84
+    0b1d Candles and Candelabras
+    RESOURCE 4
+    SKILL 200
+    MAKEMENU 122
+    10A5 House Add-On's
+    RESOURCE 10
+    SKILL 700
+    MAKEMENU 815
+}
+
+SECTION MAKEMENU 81
+{
+    Tinkering parts
+    1053 gears
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_gears
+    1055 hinge
+    RESOURCE 2
+    SKILL 150
+    ADDITEM $item_hinges
+    105D springs
+    RESOURCE 2
+    SKILL 200
+    ADDITEM $item_springs
+}
+
+SECTION MAKEMENU 82
+{
+    Carpentry Tools
+    10E4 draw knife
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_draw_knife
+    10E5 froe
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_froe
+    10E6 inshave
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_inshave
+    10E7 scorp
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_scorp
+    1028 dovetail saw
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_dovetail_saw
+    1034 saw
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_saw
+}
+
+SECTION MAKEMENU 83
+{
+    Other Tools
+    13F6 butcher knife
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_butcher_knife
+    0F9D sewing kit
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_sewing_kit
+    102A hammer
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_hammer
+    0F9E scissors
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_scissors
+    0F39 shovel
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_shovel
+    0FB4 sledge hammer
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_sledge_hammer
+    13E3 smithy's hammer
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_smithy_hammer
+    0FBB tongs
+    RESOURCE 4
+    SKILL 100
+    ADDITEM $item_tongs
+}
+
+SECTION MAKEMENU 84
+{
+    Misc.
+    099a A golblet
+    RESOURCE 3
+    SKILL 100
+    ADDITEM $item_a_goblet
+    1000 A Pewter Mug
+    RESOURCE 3
+    SKILL 100
+    ADDITEM $item_a_pewter_mug
+    0b46 a small vase
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_a_small_vase
+    0b48 a small vase
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_a_small_vase
+    0B45 A Vase
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_a_vase
+    0B47 A Vase
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_a_vase
+    0e4B Jars
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_jars
+    185B Vials
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_a_set_of_vials
+}
+//end section Tinkering with Ingots
+
+// Retalin's Baking Menu
+
+SECTION MAKEMENU 100
+{
+    Baked Goods
+    103C Loaf of Bread
+    RESOURCE 1
+    SKILL 100
+    ADDITEM $item_bread_loaves
+    098C French Bread
+    RESOURCE 1
+    SKILL 100
+    ADDITEM $item_french_bread
+    09EB Muffins
+    RESOURCE 1
+    SKILL 100
+    ADDITEM $item_muffins_2
+    160B Pan of Cookies
+    RESOURCE 1
+    SKILL 100
+    ADDITEM $item_pan_of_cookies
+    160C Plate of Cookies
+    RESOURCE 1
+    SKILL 100
+    ADDITEM $item_plate_of_cookies
+    1041 Baked Pie
+    RESOURCE 1
+    SKILL 200
+    ADDITEM $item_baked_pie
+    1040 Pizza
+    RESOURCE 1
+    SKILL 200
+    ADDITEM $item_pizzas
+    09E9 Cake
+    RESOURCE 1
+    SKILL 300
+    ADDITEM $item_cake
+}
+
+SECTION MAKEMENU 122
+{
+    Candles and Candelabras
+    1433 small Candle
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_candle_1
+    0a28 Cut Dipping Stick into 3 Candles
+    RESOURCE 2
+    SKILL 100
+    ADDITEM 
+    0a15 Lantern
+    RESOURCE 2
+    SKILL 100
+    ADDITEM $item_lantern
+    1428 Make Dipping Stick
+    RESOURCE 5
+    SKILL 150
+    ADDITEM $item_dipping_stick
+    1854 A Skull Candle
+    RESOURCE 5
+    SKILL 250
+    ADDITEM $item_a_skull_candle_deed
+    0a26 a tall candle
+    RESOURCE 5
+    SKILL 250
+    ADDITEM $item_tall_candle
+    0a27 Candelabra
+    RESOURCE 5
+    SKILL 250
+    ADDITEM $item_candlabra
+    09fc wall scone
+    RESOURCE 6
+    SKILL 250
+    ADDITEM $item_wall_sconce
+    0a06 torch holder
+    RESOURCE 6
+    SKILL 250
+    ADDITEM $item_torch_holder
+    0a29 Tall Candelabra
+    RESOURCE 9
+    SKILL 400
+    ADDITEM $item_a_candelabra
+    142a Pot of wax 10 Beewax
+    RESOURCE 10
+    SKILL 100
+    ADDITEM $item_pots_of_wax
+}
+
+SECTION MAKEMENU 123
+{
+    Make thread string
+    0fa0 spool of thread
+    RESOURCE 1
+    SKILL 100
+    ADDITEM $item_spools_of_thread
+    1420 roll of string
+    RESOURCE 1
+    SKILL 100
+    ADDITEM $item_rolls_of_string
+}
+
+//New smithing addon (Ray)
+SECTION MAKEMENU 105
+{
+    Ironworks
+    09d4 Silverware
+    RESOURCE 2
+    SKILL 117
+    ADDITEM $item_silverware
+    09d5 Silverware
+    RESOURCE 2
+    SKILL 117
+    ADDITEM $item_silverware_1
+    09a6 Knife
+    RESOURCE 3
+    SKILL 117
+    ADDITEM $item_knife
+    09d7 Plate
+    RESOURCE 3
+    SKILL 117
+    ADDITEM $item_plate
+    09e1 Pot
+    RESOURCE 5
+    SKILL 300
+    ADDITEM $item_pot
+    09e3 Pot
+    RESOURCE 6
+    SKILL 300
+    ADDITEM $item_pot_1
+    09f3 pan
+    RESOURCE 8
+    SKILL 360
+    ADDITEM $item_pan
+    09e2 frypan
+    RESOURCE 9
+    SKILL 380
+    ADDITEM $item_frying_pan
+    09ed kettle
+    RESOURCE 16
+    SKILL 550
+    ADDITEM $item_kettle
+}
+
+//********************************************************************
+// Cork's makemenu's Revised by JRoss99
+//********************************************************************
+// *******************************************************************
+// Makemenu for smithing adamantium ingots
+// *******************************************************************
+SECTION MAKEMENU 800
+{
+    Shadow Armor
+    13ed Shadow Ringmail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 2000
+    13C4 Shadow Chain Mail
+    RESOURCE 10
+    SKILL 600
+    MAKEMENU 812
+    1416 Shadow Platemail
+    RESOURCE 10
+    SKILL 70
+    MAKEMENU 2020
+}
+//Bronze ingot makemenu
+SECTION MAKEMENU 801
+{
+    Bronze Armor
+    13ed Bronze Ringmail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 2005
+    13C4 Bronze Chain Mail
+    RESOURCE 10
+    SKILL 600
+    MAKEMENU 811
+    1416 Bronze Platemail
+    RESOURCE 10
+    SKILL 70
+    MAKEMENU 2021
+}
+//Verite ingot makemenu
+SECTION MAKEMENU 802
+{
+    Verite Armor
+    13ed Verite Ringmail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 2003
+    13C4 Verite Chain Mail
+    RESOURCE 10
+    SKILL 600
+    MAKEMENU 809
+    1415 Verite Platemail
+    RESOURCE 10
+    SKILL 70
+    MAKEMENU 2022
+}
+//Mythril ingot makemenu
+SECTION MAKEMENU 803
+{
+    Mythril Armor
+    13ed Mythril Ringmail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 2007
+    13C4 Mythril Chain Mail
+    RESOURCE 10
+    SKILL 600
+    MAKEMENU 810
+    1416 Mythril Platemail
+    RESOURCE 10
+    SKILL 70
+    MAKEMENU 2023
+}
+// Merkite ingot makemenu
+SECTION MAKEMENU 804
+{
+    Merkite Armor
+    13ed Merkite Ringmail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 2001
+    13C4 Merkite Chain Mail
+    RESOURCE 10
+    SKILL 600
+    MAKEMENU 808
+    1416 Merkite Platemail
+    RESOURCE 10
+    SKILL 700
+    MAKEMENU 2024
+}
+//Agapite ingot makemenu
+SECTION MAKEMENU 806
+{
+    Agapite Armor
+    13ed Agapite Ringmail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 2004
+    13C4 Agapite Chain Mail
+    RESOURCE 10
+    SKILL 600
+    MAKEMENU 820
+    1416 Agapite Platemail
+    RESOURCE 10
+    SKILL 700
+    MAKEMENU 2025
+}
+
+
+SECTION MAKEMENU 814
+{
+    Copper Armor
+    13ed Copper Ringmail
+    RESOURCE 10
+    SKILL 338
+    MAKEMENU 2006
+    13C4 Copper Chain Mail
+    RESOURCE 10
+    SKILL 600
+    MAKEMENU 2027
+    1415 Copper Platemail
+    RESOURCE 10
+    SKILL 70
+    MAKEMENU 2026
+}
+
+SECTION MAKEMENU 813
+{
+    Silver Armor
+    13C4 Silver Chain Mail
+    RESOURCE 10
+    SKILL 600
+    MAKEMENU 2028
+    1416 Silver Platemail
+    RESOURCE 10
+    SKILL 70
+    MAKEMENU 2029
+}
+
+// Alchemist (Potions)
+SECTION MAKEMENU 805
+{
+    0F0D Lesser Explosion Potion
+    RESOURCE 3
+    SKILL 300
+    ADDITEM $item_lesser_explosion_potion
+    0F0D Explosion Potion
+    RESOURCE 5
+    SKILL 600
+    ADDITEM $item_explosion_potion
+    0F0D Greater Explosion Potion
+    RESOURCE 10
+    SKILL 900
+    ADDITEM $item_greater_explosion_potion
+}
+// Colored Chain for Makemenu with ingots
+SECTION MAKEMENU 812
+{
+    Shadow Chain Mail
+    13BB Shadow Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_shadow_chain_coif
+    13C3 Shadow Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_shadow_chain_leggings
+    13C4 Shadow Chain Tunic
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_shadow_chain_tunic
+}
+
+SECTION MAKEMENU 807
+{
+    Golden Chain Mail
+    13BB Golden Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_golden_chain_coif
+    13C3 Golden Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_golden_chain_leggings
+    13C4 Golden Chain Tunic
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_golden_chain_tunic
+}
+
+SECTION MAKEMENU 808
+{
+    Merkite Chain Mail
+    13BB Merkite Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_merkite_chain_coif
+    13C3 Merkite Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_merkite_chain_leggings
+    13C4 Merkite Chain Mail
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_merkite_chain_tunic
+}
+SECTION MAKEMENU 809
+{
+    Verite Chain Mail
+    13BB Verite Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_verite_chain_coif
+    13C3 Verite Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_verite_chain_leggings
+    13C4 Verite Chain Tunic
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_verite_chain_tunic
+}
+SECTION MAKEMENU 810
+{
+    Mythril Chain Mail
+    13BB Mythril Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_valorite_chain_coif
+    13C3 Mythril Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_valorite_chain_leggings
+    13C4 Mythril Chain Tunic
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_valorite_chain_tunic
+}
+SECTION MAKEMENU 811
+{
+    Bronze Chain Mail
+    13BB Bronze Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_bronze_chain_coif
+    13C3 Bronze Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_bronze_chain_leggings
+    13C4 Bronze Chain Tunic
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_bronze_chain_tunic
+}
+SECTION MAKEMENU 820
+{
+    Agapite Chain Mail
+    13BB Agapite Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_agapite_chain_coif
+    13C3 Agapite Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_agapite_chain_leggings
+    13C4 Agapite Chain Tunic
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_agapite_chain_tunic
+}
+
+SECTION MAKEMENU 2027
+{
+    Copper Chain Mail
+    13BB Copper Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_merkite_ringmail_tunic
+    13C3 Copper Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_copper_chain_leggings
+    13C4 Copper Chain Tunic
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_copper_chain_tunic
+}
+
+SECTION MAKEMENU 2028
+{
+    Silver Chain Mail
+    13BB Silver Chain Coif
+    RESOURCE 10
+    SKILL 600
+    ADDITEM $item_silver_chain_coif
+    13C3 Silver Chain Legs
+    RESOURCE 18
+    SKILL 600
+    ADDITEM $item_silver_chain_leggings
+    13C4 Silver Chain Tunic
+    RESOURCE 20
+    SKILL 600
+    ADDITEM $item_silver_chain_tunic
+}
+
+SECTION MAKEMENU 2029
+{
+    Silver Plate Mail
+    1413 Silver Gorget
+    RESOURCE 10
+    SKILL 700
+    ADDITEM $item_silver_plate_gorget
+    1414 Silver Gloves
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_silver_plate_gloves
+    140d Silver Bascinet Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_silver_bascinet
+    140f Silver Nose Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_silver_nose_helm
+    1409 Silver Close Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_silver_close_helm
+    1412 Silver Plate Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_silver_plate_helm
+    1410 Silver Sleeves
+    RESOURCE 18
+    SKILL 700
+    ADDITEM $item_silver_plate_arms
+    141A Silver Legs
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_silver_plate_legs
+    1c04 Silver Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_silver_female_plate
+    1416 Silver Tunic
+    RESOURCE 25
+    SKILL 750
+    ADDITEM $item_silver_platemail
+}
+
+SECTION MAKEMENU 815
+{
+    House Add-On's
+    0faf Anvil Deed (Facing South)
+    RESOURCE 150
+    SKILL 600
+    ADDITEM $item_an_anvil_deed_facing_south_
+    0fb0 Anvil Deed (Facing East)
+    RESOURCE 150
+    SKILL 600
+    ADDITEM $item_an_anvil_deed_facing_east_
+    0fb1 Small Forge Deed
+    RESOURCE 200
+    SKILL 700
+    ADDITEM $item_a_forge_deed
+    14f0 Fireplace Deed (facing East)
+    RESOURCE 200
+    SKILL 700
+    ADDITEM $item_fireplace-east_deed
+    14f0 Fireplace Deed (facing South)
+    RESOURCE 200
+    SKILL 700
+    ADDITEM $item_fireplace-south_deed
+    14f0 Oven Deed (facing East)
+    RESOURCE 200
+    SKILL 800
+    ADDITEM $item_oven-east_deed
+    14f0 Oven Deed (facing South)
+    RESOURCE 200
+    SKILL 800
+    ADDITEM $item_oven-south_deed
+    14f0 Large Forge Deed (facing East)
+    RESOURCE 250
+    SKILL 950
+    ADDITEM $item_a_large_forge_facing_east_deed
+    14f0 large Forge Deed (facing South)
+    RESOURCE 250
+    SKILL 950
+    ADDITEM $item_a_large_forge_facing_south_deed
+}
+
+SECTION MAKEMENU 816
+{
+    House Add-On's
+    14f0 Dartboard Deed (Facing south)
+    RESOURCE 40
+    SKILL 190
+    ADDITEM $item_dartboard_deed_1
+    14f0 Dartboard Deed (Facing East)
+    RESOURCE 40
+    SKILL 190
+    ADDITEM $item_dartboard_deed
+    10A5 Spinning Wheel Deed (Facing South)
+    RESOURCE 100
+    SKILL 500
+    ADDITEM $item_a_spinning_wheel_deed_facing_south_
+    10A5 Spinning Wheel Deed (Facing East)
+    RESOURCE 100
+    SKILL 500
+    ADDITEM $item_a_spinning_wheel_deed_facing_east_
+    100a Archery Butte Deed (Facing East)
+    RESOURCE 150
+    SKILL 600
+    ADDITEM $item_an_archery_butte_deed_facing_east_
+    100b Archery Butte Deed (Facing South)
+    RESOURCE 150
+    SKILL 600
+    ADDITEM $item_an_archery_butte_deed_facing_south_
+    1070 Training Dummy Deed (Facing South)
+    RESOURCE 175
+    SKILL 650
+    ADDITEM $item_a_training_dummy_deed_facing_south_
+    1074 Training Dummy Deed (Facing East)
+    RESOURCE 175
+    SKILL 650
+    ADDITEM $item_a_training_dummy_deed_facing_east_
+    1e2c Pick Pocket Dip Deed (Facing South)
+    RESOURCE 175
+    SKILL 650
+    ADDITEM $item_a_pickpocket_dip_deed_facing_south_
+    1e2d Pick Pocket Dip Deed (Facing East)
+    RESOURCE 175
+    SKILL 650
+    ADDITEM $item_a_pickpocket_dip_deed_facing_east_
+    14f0 Loom Deed (Facing East)
+    RESOURCE 175
+    SKILL 650
+    ADDITEM $item_loom-east_deed
+    14f0 Loom Deed (Facing South)
+    RESOURCE 175
+    SKILL 650
+    ADDITEM $item_loom-south_deed
+    14f0 Bed Deed (Facing East)
+    RESOURCE 175
+    SKILL 650
+    ADDITEM $item_bed-east_deed
+    14f0 Bed Deed (Facing south)
+    RESOURCE 175
+    SKILL 650
+    ADDITEM $item_bed-south_deed
+    14f0 Large Bed Deed (facing East)
+    RESOURCE 200
+    SKILL 990
+    ADDITEM $item_a_bed_facing_east_deed
+    14f0 Large Bed Deed (facing South)
+    RESOURCE 200
+    SKILL 990
+    ADDITEM $item_a_bed_facing_south_deed
+}
+
+SECTION MAKEMENU 1100
+{
+    Necromantic Scrolls
+    20ec Zombie Scroll
+    RESOURCE 1
+    SKILL 100
+    ADDITEM $item_a_summon_zombie_scroll
+    20e7 Skeleton Scroll
+    RESOURCE 1
+    SKILL 250
+    ADDITEM $item_a_summon_skeleton_scroll
+    2109 Spectre Scroll
+    RESOURCE 1
+    SKILL 250
+    ADDITEM $item_a_summon_spectre_scroll
+    2109 Wraith Scroll
+    RESOURCE 1
+    SKILL 450
+    ADDITEM $item_a_summon_wraith_scroll
+    20e7 Bone Knight Scroll
+    RESOURCE 1
+    SKILL 550
+    ADDITEM $item_a_summon_bone_knight_scroll
+    20f8 Lich Scroll
+    RESOURCE 1
+    SKILL 650
+    ADDITEM $item_a_summon_lich_scroll
+    20e7 Bone Mage Scroll
+    RESOURCE 1
+    SKILL 750
+    ADDITEM $item_a_summon_bone_mage_scroll
+    20f8 Lich Lord
+    RESOURCE 1
+    SKILL 850
+    ADDITEM $item_a_summon_lich_lord_scroll
+}
+
+SECTION MAKEMENU 2000
+{
+    Shadow Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_shadow_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_shadow_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_ringmail_leggings_1
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_shadow_ringmail_tunic
+}
+
+SECTION MAKEMENU 2001
+{
+    Merkite Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_merkite_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_merkite_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_ringmail_leggings_2
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_merkite_ringmail_tunic
+}
+
+SECTION MAKEMENU 2002
+{
+    Golden Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_golden_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_golden_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_golden_ringmail_leggings
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_golden_ringmail_tunic
+}
+
+SECTION MAKEMENU 2003
+{
+    Verite Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_verite_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_verite_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_verite_ringmail_leggings
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_verite_ringmail_tunic
+}
+
+SECTION MAKEMENU 2004
+{
+    Agapite Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_agapite_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_agapite_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_agapite_ringmail_leggings
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_agapite_ringmail_tunic
+}
+
+SECTION MAKEMENU 2005
+{
+    Bronze Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_bronze_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_bronze_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_ringmail_leggings_3
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_bronze_ringmail_tunic
+}
+
+SECTION MAKEMENU 2006
+{
+    Copper Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_copper_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_copper_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_copper_ringmail_leggings
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_copper_ringmail_tunic
+}
+
+SECTION MAKEMENU 2007
+{
+    Mythril Ring Mail
+    13F2 Gloves
+    RESOURCE 10
+    SKILL 338
+    ADDITEM $item_valorite_ringmail_gloves
+    13EF Sleeves
+    RESOURCE 14
+    SKILL 385
+    ADDITEM $item_valorite_ringmail_sleeves
+    13F1 Leggings
+    RESOURCE 16
+    SKILL 408
+    ADDITEM $item_valorite_ringmail_leggings
+    13ED Tunic
+    RESOURCE 18
+    SKILL 432
+    ADDITEM $item_valorite_ringmail_tunic
+}
+
+SECTION MAKEMENU 2020
+{
+    Shadow Platemail
+    1413 Shadow Plate Gorget
+    RESOURCE 10
+    SKILL 700
+    ADDITEM $item_shadow_plate_gorget
+    1414 Shadow Plate Gloves
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_shadow_plate_gloves
+    140d Shadow Bascinet Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_shadow_bascinet
+    140F Shadow Nose Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_shadow_nose_helm
+    1409 Shadow Close Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_shadow_close_helm
+    1412 Shadow Plate Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_shadow_plate_helm
+    1410 Shadow Plate Sleeves
+    RESOURCE 18
+    SKILL 700
+    ADDITEM 
+    141A Shadow Plate Leggings
+    RESOURCE 20
+    SKILL 700
+    ADDITEM 
+    1c04 Shadow Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_shadow_female_plate
+    1416 Shadow Breastplate
+    RESOURCE 25
+    SKILL 750
+    ADDITEM $item_shadow_platemail
+}
+
+SECTION MAKEMENU 2021
+{
+    Bronze Platemail
+    1413 Bronze Plate Gorget
+    RESOURCE 10
+    SKILL 700
+    ADDITEM $item_bronze_plate_gorget
+    1414 Bronze Plate Gloves
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_bronze_plate_gloves
+    140B Bronze Helm
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_bronze_helmet
+    1412 Bronze Plate Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_bronze_plate_helm
+    140F Bronze Nose Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_bronze_nose_helm
+    1409 Bronze Close Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_bronze_close_helm
+    140D Bronze Bascinet
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_bronze_bascinet
+    1410 Bronze Plate Sleeves
+    RESOURCE 18
+    SKILL 700
+    ADDITEM $item_bronze_plate_arms
+    141A Bronze Plate Leggings
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_bronze_plate_legs
+    1c04 Bronze Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_bronze_female_plate
+    1416 Bronze Tunic
+    RESOURCE 25
+    SKILL 750
+    ADDITEM $item_bronze_platemail
+}
+
+SECTION MAKEMENU 2022
+{
+    Verite Platemail
+    1413 Verite Plate Gorget
+    RESOURCE 10
+    SKILL 700
+    ADDITEM $item_verite_plate_gorget
+    1414 Verite Plate Gloves
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_verite_plate_gloves
+    140B Verite Helm
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_verite_helmet
+    1412 Verite Plate Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_verite_plate_helm
+    140F Verite Nose Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_verite_nose_helm
+    1409 Verite Close Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_verite_close_helm
+    140D Verite Bascinet
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_verite_bascinet
+    1410 Verite Plate Sleeves
+    RESOURCE 18
+    SKILL 700
+    ADDITEM $item_verite_plate_arms
+    141A Verite Plate Leggings
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_verite_plate_legs
+    1c04 Verite Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_verite_female_plate
+    1416 Verite Tunic
+    RESOURCE 25
+    SKILL 750
+    ADDITEM $item_verite_platemail
+}
+
+SECTION MAKEMENU 2023
+{
+    Mythril Platemail
+    1413 Mythril Plate Gorget
+    RESOURCE 10
+    SKILL 700
+    ADDITEM $item_valorite_plate_gorget
+    1414 Mythril Plate Gloves
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_valorite_plate_gloves
+    1412 Mythril Plate Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_valorite_plate_helm
+    140F Mythril Nose Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_valorite_nose_helm
+    1410 Mythril Plate Sleeves
+    RESOURCE 18
+    SKILL 700
+    ADDITEM $item_valorite_plate_arms
+    141A Mythril Plate Leggings
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_valorite_plate_legs
+    1c04 Mythril Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_valorite_female_plate
+    1416 Mythril Breastplate
+    RESOURCE 25
+    SKILL 750
+    ADDITEM $item_valorite_platemail
+}
+
+SECTION MAKEMENU 2024
+{
+    Merkite Platemail
+    1413 Merkite Plate Gorget
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_merkite_plate_gorget
+    1414 Merkite Plate Gloves
+    RESOURCE 14
+    SKILL 700
+    ADDITEM $item_merkite_plate_gloves
+    140d Merkite Bascinet Helm
+    RESOURCE 17
+    SKILL 700
+    ADDITEM 
+    140f Merkite Nose Helm
+    RESOURCE 17
+    SKILL 700
+    ADDITEM $item_merkite_nose_helm
+    1409 Merkite Close Helm
+    RESOURCE 17
+    SKILL 700
+    ADDITEM $item_merkite_close_helm
+    1412 Merkite Plate Helm
+    RESOURCE 17
+    SKILL 700
+    ADDITEM $item_merkite_plate_helm
+    1410 Merkite Plate Sleeves
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_merkite_plate_arms
+    141A Merkite Plate Leggings
+    RESOURCE 22
+    SKILL 700
+    ADDITEM $item_merkite_plate_legs
+    1c04 Merkite Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_merkite_female_plate
+    1416 Merkite Breastplate
+    RESOURCE 27
+    SKILL 750
+    ADDITEM $item_merkite_platemail
+}
+
+SECTION MAKEMENU 2025
+{
+    Agapite Platemail
+    1413 Agapite Plate Gorget
+    RESOURCE 10
+    SKILL 700
+    ADDITEM $item_agapite_plate_gorget
+    1414 Agapite Plate Gloves
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_agapite_plate_gloves
+    140D Agapite Bascinet
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_agapite_bascinet
+    140F Agapite Nose Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_agapite_nose_helm
+    1409 Agapite Close Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_agapite_close_helm
+    1412 Agapite Plate Helm
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_agapite_plate_helm
+    1410 Agapite Plate Sleeves
+    RESOURCE 18
+    SKILL 700
+    ADDITEM $item_agapite_plate_arms
+    141A Agapite Plate Leggings
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_agapite_plate_legs
+    1c04 Agapite Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_agapite_female_plate
+    1416 Agapite Tunic
+    RESOURCE 25
+    SKILL 750
+    ADDITEM $item_agapite_platemail
+}
+
+SECTION MAKEMENU 2026
+{
+    Copper Platemail
+    1413 Copper Gorget
+    RESOURCE 10
+    SKILL 700
+    ADDITEM $item_copper_plate_gorget
+    1414 Copper Gloves
+    RESOURCE 12
+    SKILL 700
+    ADDITEM $item_copper_plate_gloves
+    140d Copper Bascinet Helmet
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_copper_bascinet
+    140f Copper Nose Helmet
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_copper_nose_helm
+    1409 Copper Close Helmet
+    RESOURCE 15
+    SKILL 700
+    ADDITEM $item_copper_close_helm
+    1410 Copper Arms
+    RESOURCE 18
+    SKILL 700
+    ADDITEM $item_copper_plate_arms
+    141A Copper Legs
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_copper_plate_legs
+    1c04 Copper Female Plate
+    RESOURCE 20
+    SKILL 700
+    ADDITEM $item_copper_female_plate
+    1416 Copper Tunic
+    RESOURCE 25
+    SKILL 750
+    ADDITEM $item_copper_platemail
+}
+
+

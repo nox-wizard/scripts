@@ -1,0 +1,36 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_timer_api_
+  #endinput
+#endif
+#define _nxw_timer_api_
+
+/*!
+\name addTimer
+\author Xanathar
+\syntax addTimer(const callback, const interval, const more1 = -1, const more2 = -1)
+\param callback: the function index that the timer have to call
+\param interval: the interval of the timer
+\brief Adds a new timer
+*/
+native addTimer(const callback, const interval, const more1 = -1, const more2 = -1);
+
+/*!
+\brief Add a new timer
+\author Endymion
+\since 0.82
+\param 1: the object ( item or char )
+\param 2: secs
+\param 3: callback eg. funcidx("callbck_func")
+\param 4: flags
+\param 5: n
+\param 6: more1
+\param 7: more2
+\return none
+*/
+native timer_add(serial, secs, check = 0, flags = 1, n = -1, more1 = 0, more2 = 0);

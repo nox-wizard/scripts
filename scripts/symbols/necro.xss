@@ -1,0 +1,7 @@
+//necro stuff
+#define $necroitem_gravedigging_gems 999
+#define $necroitem_gravedigging_weapons 1000
+#define $necroitem_gravedigging_armors 1001
+#define $necro_monster_low 1000
+#define $necro_monster_mid 1001
+#define $necro_monster_high 1002

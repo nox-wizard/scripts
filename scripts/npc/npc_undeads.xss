@@ -1,0 +1,1217 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_undeads.xss)                                ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//********************************************************************
+//**********************    Undead and  Liches      ******************
+//********************************************************************
+
+//a headless
+
+SECTION NPC $npc_a_headless
+{
+    NAME a headless
+    ID 001f
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    GOLD 0 50
+    STR 26 50
+    DEX 15 20
+    INT 16 30
+    KARMA -500
+    FAME 500
+    PARRYING 350 450
+    MAGICRESISTANCE 150 200
+    TACTICS 250 400
+    MACEFIGHTING 250 400
+    WRESTLING 250 400
+    DAMAGE 3 12
+    DEF 9
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a skeleton
+
+SECTION NPC $npc_a_skeleton
+{
+    NAME a skeleton
+    ID 0032
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_small_blades
+    LOOT $loot_bone_armor
+    GOLD 15 60
+    STR 56 80
+    DEX 15 20
+    INT 16 40
+    KARMA -700
+    FAME 700
+    MAGICRESISTANCE 450 600
+    TACTICS 450 600
+    WRESTLING 450 550
+    PARRYING 450 550
+    DAMAGE 2 8
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a skeleton with axe
+
+SECTION NPC $npc_a_skeleton_1
+{
+    NAME a skeleton
+    ID 0038
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    ITEM $item_hatchet
+    PACKITEM $item_hatchet
+    LOOT $loot_bone_armor
+    GOLD 15 70
+    STR 56 80
+    DEX 15 20
+    INT 16 40
+    KARMA -700
+    FAME 700
+    MAGICRESISTANCE 450 600
+    TACTICS 450 600
+    SWORDSMANSHIP 800 900
+    WRESTLING 450 550
+    PARRYING 450 550
+    DAMAGE 4 28
+    DEF 20
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+// a bone knight
+
+SECTION NPC $npc_a_bone_knight
+{
+    NAME a bone knight
+    ID 0039
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    ITEM $item_npc_equiplist_scimitar
+    PACKITEM $item_wooden_shield
+    LOOT $loot_jewelry
+    LOOT $loot_platemail
+    GOLD 50 150
+    STR 150 200
+    DEX 15 20
+    INT 36 60
+    KARMA -5400
+    FAME 4500
+    PARRYING 850 950
+    MAGICRESISTANCE 650 800
+    TACTICS 850 1000
+    SWORDSMANSHIP 800 900
+    WRESTLING 850 950
+    PARRYING 850 950
+    DAMAGE 4 30
+    DEF 18
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a bone mage
+
+SECTION NPC $npc_a_bone_magi
+{
+    NAME a bone magi
+    ID 0032
+    SKIN 07de
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_a_skull
+    PACKITEM $item_bone
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_jewelry
+    STR 76 100
+    DEX 15 20
+    INT 185 210
+    KARMA -3500
+    FAME 3000
+    PARRYING 450 550
+    MAGICRESISTANCE 450 600
+    TACTICS 450 600
+    MACEFIGHTING 450 550
+    WRESTLING 450 550
+    MAGERY 600 700
+    SPATTACK 7552
+    MAGICLEVEL 10
+    MAGICSPHERE $sphere_undead
+    SPADELAY 7
+    NPCWANDER 4
+    DAMAGE 2 8
+    DEF 19
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a burning skeleton
+
+SECTION NPC $npc_a_burning_skeleton
+{
+    NAME a burning skeleton
+    ID 0032
+    SKIN 28
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_sulfurous_ash
+    PACKITEM $item_sulfurous_ash
+    PACKITEM $item_sulfurous_ash
+    PACKITEM $item_sulfurous_ash
+    PACKITEM $item_sulfurous_ash
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_bone_armor
+    STR 90 100
+    DEX 15 20
+    INT 36 60
+    KARMA -1000
+    FAME 1000
+    MAGICRESISTANCE 450
+    TACTICS 450
+    WRESTLING 450
+    DAMAGE 4 20
+    SPATTACK 7552
+    MAGICLEVEL 4
+    MAGICSPHERE $sphere_fire
+    SPADELAY 10
+    DEF 8
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+// a skeletal knight
+
+SECTION NPC $npc_a_skeletal_knight
+{
+    NAME a skeletal knight
+    ID 0039
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    ITEM $item_scimitar
+    PACKITEM $item_scimitar
+    PACKITEM $item_wooden_shield
+    PACKITEM $item_arrow_7
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_platemail
+    GOLD 50 150
+    STR 200 275
+    DEX 15 20
+    INT 36 60
+    KARMA -5400
+    FAME 4500
+    PARRYING 850 950
+    MAGICRESISTANCE 650 800
+    TACTICS 850 1000
+    SWORDSMANSHIP 800 900
+    WRESTLING 850 950
+    PARRYING 850 950
+    DAMAGE 4 30
+    DEF 18
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a skeletal mage
+
+SECTION NPC $npc_a_skeletal_magi
+{
+    NAME a skeletal magi
+    ID 0032
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_a_skull
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_jewelry
+    STR 76 100
+    DEX 15 20
+    INT 185 210
+    KARMA -3500
+    FAME 3000
+    PARRYING 450 550
+    MAGICRESISTANCE 450 600
+    TACTICS 450 600
+    MACEFIGHTING 450 550
+    WRESTLING 450 550
+    MAGERY 600 700
+    SPATTACK 7552
+    MAGICLEVEL 11
+    MAGICSPHERE $sphere_undead
+    SPADELAY 7
+    NPCWANDER 4
+    DAMAGE 2 8
+    DEF 19
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a zombie
+
+SECTION NPC $npc_a_zombie
+{
+    NAME a zombie
+    ID 0003
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    GOLD 20 40
+    STR 46 70
+    DEX 15 20
+    INT 26 40
+    KARMA -500
+    FAME 500
+    PARRYING 200 300
+    MAGICRESISTANCE 150 400
+    TACTICS 350 500
+    WRESTLING 350 500
+    DAMAGE 2 8
+    DEF 9
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+// a zombie elder
+
+SECTION NPC $npc_a_zombie_elder
+{
+    NAME a zombie elder
+    ID 0003
+    SKIN 0544
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_bone_armor
+    LOOT $loot_body_parts
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    GOLD 70 100
+    STR 36 65
+    DEX 15 20
+    INT 100 150
+    KARMA -1500
+    FAME 1500
+    PARRYING 100 300
+    MAGICRESISTANCE 150 300
+    TACTICS 350 500
+    WRESTLING 450 650
+    MAGERY 400 500
+    SPATTACK 193
+    MAGICLEVEL 4
+    MAGICSPHERE $sphere_undead
+    SPADELAY 10
+    DAMAGE 10 15
+    DEF 8
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_ghoul
+{
+    NAME a ghoul
+    ID 001a
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_jewelry
+    LOOT $loot_small_blades
+    LOOT $loot_swords
+    LOOT $loot_bone_armor
+    GOLD 50 150
+    STR 76 100
+    DEX 15 20
+    INT 36 60
+    KARMA -500
+    FAME 500
+    PARRYING 450 550
+    MAGICRESISTANCE 350 500
+    TACTICS 450 600
+    WRESTLING 450 550
+    DAMAGE 6 12
+    DEF 14
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a spectre
+
+SECTION NPC $npc_a_spectre
+{
+    NAME a spectre
+    ID 001a
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_jewelry
+    LOOT $loot_bone_armor
+    GOLD 50 150
+    STR 76 100
+    DEX 15 20
+    INT 36 60
+    KARMA -500
+    FAME 500
+    PARRYING 450 550
+    MAGICRESISTANCE 350 500
+    TACTICS 450 600
+    WRESTLING 450 550
+    DAMAGE 6 12
+    DEF 14
+    NPCWANDER 4
+    SPADELAY 14
+    MAGICLEVEL 5
+    MAGICSPHERE $sphere_undead
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_wraith
+{
+    NAME a wraith
+    ID 001a
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_jewelry
+    LOOT $loot_potions
+    GOLD 50 150
+    STR 96 126
+    DEX 80 95
+    INT 66 76
+    KARMA -3000
+    FAME 3000
+    PARRYING 500 750
+    MAGICRESISTANCE 350 450
+    TACTICS 450 650
+    WRESTLING 450 550
+    MAGICLEVEL 8
+    SPATTACK 7552
+    MAGICSPHERE $sphere_undead
+    SPADELAY 10
+    MAGERY 450 590
+    DAMAGE 12 24
+    DEF 18
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a mummy
+
+SECTION NPC $npc_a_mummy
+{
+    NAME a mummy
+    ID 0003
+    SKIN 044e
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_garlic_2
+    PACKITEM $item_clean_bandages_1
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_potions
+    LOOT $loot_jewelry
+    GOLD 50 150
+    STR 345 370
+    DEX 15 20
+    INT 26 40
+    KARMA -5000
+    FAME 4500
+    PARRYING 200 600
+    MAGICRESISTANCE 150 400
+    TACTICS 350 500
+    MACEFIGHTING 350 500
+    WRESTLING 350 500
+    DAMAGE 4 32
+    DEF 25
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a ghost
+
+SECTION NPC $npc_a_ghost
+{
+    NAME a ghost
+    ID 0190
+    SKIN 5000
+    DIRECTION W
+    COLOR 0000
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    ITEM $item_death_shroud
+    GOLD 0 25
+    TOTAME 1100
+    STR 76 100
+    DEX 15 20
+    INT 25 60
+    KARMA -1000
+    FAME 1000
+    MAGICRESISTANCE 350 500
+    TACTICS 450 600
+    WRESTLING 450 550
+    DAMAGE 6 12
+    DEF 14
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    RACE $race_undead
+    DOORUSE 1
+}
+
+
+//a lich
+
+SECTION NPC $npc_a_lich
+{
+    NAME a lich
+    ID 0018
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_wands
+    LOOT $loot_staves
+    LOOT $loot_magic_axes
+    GOLD 200 250
+    STR 150 200
+    DEX 15 20
+    INT 130 145
+    KARMA -7000
+    FAME 7000
+    PARRYING 550 650
+    MAGICRESISTANCE 700 900
+    TACTICS 700 900
+    WRESTLING 700 900
+    MAGERY 700 800
+    MAGICLEVEL 10
+    MAGICSPHERE $sphere_undead2
+    SPATTACK 7552
+    SPADELAY 5
+    DAMAGE 20 30
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FX2 20
+    FY1 -1
+    FZ1 -1
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_lich_lord
+{
+    NAME a lich lord
+    ID 0018
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_blackmoor
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_wands
+    LOOT $loot_staves
+    LOOT $loot_magic_swords
+    LOOT $loot_magic_bows
+    GOLD 400 700
+    STR 350 400
+    DEX 15 20
+    INT 450 500
+    KARMA -10000
+    FAME 10000
+    PARRYING 550 650
+    MAGICRESISTANCE 900 1000
+    TACTICS 900 1000
+    WRESTLING 900 1000
+    DAMAGE 20 30
+    MAGERY 900 1000
+    MAGICLEVEL 12
+    MAGICSPHERE $sphere_undead2
+    SPATTACK 7552
+    SPADELAY 4
+    DEF 30
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_lich_elder
+{
+    NAME a lich elder
+    ID 0018
+    SKIN 084C
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_a_katana_of_vanquishing
+    PACKITEM $item_a_wand_of_greater_heal
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_wands
+    LOOT $loot_staves
+    LOOT $loot_magic_swords
+    LOOT $loot_magic_bows
+    GOLD 1200 2000
+    STR 700 900
+    DEX 80 95
+    INT 500 700
+    KARMA -12000
+    FAME 20000
+    PARRYING 700 990
+    MAGICRESISTANCE 900 1000
+    EVALUTAINGINTEL 2000 4000
+    TACTICS 700 800
+    WRESTLING 850 1000
+    MAGERY 990 1200
+    MAGICLEVEL 13
+    MAGICSPHERE $sphere_undead2
+    SPATTACK 8191
+    SPADELAY 5
+    DAMAGE 35 45
+    DEF 40
+    TOTAME 1100
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a vampire
+
+SECTION NPC $npc_vampire
+{
+    NAMELIST $names_males
+    //$$ vampire
+    TITLE a vampire
+    ID 0190
+    ITEM $item_random_male_hair_list
+    COLOR 0001
+    SKIN 0000
+    DIRECTION W
+    SPEECH $speech_cultist
+    BACKPACK
+    GOLD 100 150
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    ITEM $item_male_fancy_shirts_list
+    COLOR 066d
+    ITEM $item_male_fancy_pants_list
+    COLOR 066d
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_tunic_list
+    COLOR 066D
+    ITEM $item_female_plain_cape_list
+    COLOR 066d
+    STR 100 180
+    DEX 80 110
+    INT 100 150
+    KARMA -1500
+    FAME 1500
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 15 45
+    DEF 15
+    MAGERY 600 800
+    MAGICLEVEL 5
+    MAGICSPHERE $sphere_vampire
+    SPATTACK 392
+    SPADELAY 10
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCWANDER 4
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a vampiress
+
+SECTION NPC $npc_vampiress
+{
+    NAMELIST $names_females
+    //$$ vampiress
+    TITLE a vampiress
+    ID 0191
+    SKIN 0000
+    DIRECTION W
+    SPEECH $speech_cultist
+    BACKPACK
+    GOLD 100 150
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    ITEM $item_random_female_hair_list
+    COLOR 0001
+    ITEM $item_cloak
+    COLOR 066d
+    ITEM $item_shirt
+    ITEM $item_a_robe
+    COLOR 066d
+    STR 100 180
+    DEX 80 110
+    INT 100 150
+    KARMA -1500
+    FAME 1500
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 15 45
+    DEF 15
+    MAGERY 600 800
+    MAGICLEVEL 5
+    MAGICSPHERE $sphere_vampire
+    SPATTACK 392
+    SPADELAY 10
+    NPCWANDER 4
+    NPCAI $npc_ai_evil
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a floating skull
+
+SECTION NPC $npc_a_floating_skull
+{
+    NAME a floating skull
+    ID 03cd
+    SKIN 0000
+    RACE $race_aberration
+    DIRECTION E
+    BACKPACK
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_pagan_reagents
+    GOLD 30 90
+    STR 80 120
+    DEX 50 60
+    INT 20 40
+    KARMA -1000
+    FAME 1000
+    MAGICRESISTANCE 250 350
+    TACTICS 500 600
+    FENCING 500 600
+    // Damage per Weapon
+    DAMAGE 5 20
+    DEF 17
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a living armor
+
+SECTION NPC $npc_living_armor
+{
+    NAMELIST $names_necromancers
+    //$$ living armor
+    TITLE a living Armor
+    ID 0233
+    ITEM $item_broad_sword_of_energy_bolt
+    NPCAI $npc_ai_evil
+    SPEECH $speech_drow
+    SKIN 02e6
+    DIRECTION E
+    BACKPACK
+    GOLD 300 400
+    ITEM
+    ITEM $item_a_buckler_of_invulnerablity
+    ITEM $item_chain_coif
+    STR 100 100
+    DEX 15 20
+    INT 60 90
+    KARMA -5000
+    FAME 2000
+    SWORDSMANSHIP 750 1000
+    PARRYING 750 1000
+    MAGICRESISTANCE 750 1000
+    TACTICS 750 1000
+    WRESTLING 750 1000
+    DAMAGE 10 50
+    DEF 40
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//*********************************************************
+//***************** Summoned by Necromancy ****************
+//*****************                        ****************
+//*********************************************************
+
+SECTION NPC $npc_a_zombie_1
+{
+    NAME a zombie
+    ID 0003
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 46 70
+    DEX 31 50
+    INT 26 40
+    RUN
+    KARMA 0
+    FAME 0
+    PARRYING 200 300
+    MAGICRESISTANCE 150 400
+    TACTICS 350 500
+    WRESTLING 350 500
+    DAMAGE 2 8
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 110
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_skeleton_2
+{
+    NAME a skeleton
+    ID 0032
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 56 80
+    DEX 56 75
+    INT 21 40
+    RUN
+    KARMA 0
+    FAME 0
+    MAGICRESISTANCE 450 600
+    TACTICS 450 600
+    WRESTLING 450 550
+    DAMAGE 3 15
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 110
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_spectre_1
+{
+    NAME a spectre
+    ID 001a
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 76 100
+    DEX 76 95
+    INT 36 60
+    KARMA -500
+    FAME 500
+    MAGICLEVEL 5
+    MAGICSPHERE $sphere_undead
+    SPATTACK 255
+    SPADELAY 10
+    MAGERY 450 500
+    PARRYING 450 550
+    MAGICRESISTANCE 350 500
+    TACTICS 450 600
+    WRESTLING 450 550
+    DAMAGE 6 12
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 110
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_wraith_1
+{
+    NAME a wraith
+    ID 001a
+    SKIN 6677a
+    DIRECTION N
+    BACKPACK
+    STR 100 150
+    DEX 125 175
+    INT 50 80
+    KARMA -1000
+    FAME 500
+    MAGICLEVEL 8
+    MAGICSPHERE $sphere_undead
+    SPATTACK 432
+    SPADELAY 15
+    MAGERY 550 700
+    PARRYING 450 550
+    MAGICRESISTANCE 350 500
+    TACTICS 450 600
+    WRESTLING 450 550
+    DAMAGE 10 20
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 110
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_bone_knight_1
+{
+    NAME a bone knight
+    ID 0039
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 200 300
+    DEX 80 120
+    INT 30 70
+    KARMA -4400
+    FAME 4400
+    PARRYING 850 950
+    MAGICRESISTANCE 450 800
+    TACTICS 800 900
+    SWORDSMANSHIP 800 900
+    DAMAGE 6 30
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 110
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_lich_1
+{
+    NAME a lich
+    ID 0018
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 105 135
+    DEX 66 85
+    INT 175 205
+    KARMA -7000
+    FAME 7000
+    PARRYING 550 650
+    MAGICRESISTANCE 700 900
+    TACTICS 700 900
+    WRESTLING 700 900
+    MAGERY 700 800
+    DAMAGE 15 25
+    DEF 20
+    NPCWANDER 4
+    FX1 -1
+    FX2 20
+    FY1 -1
+    FZ1 -1
+    SPATTACK 8191
+    MAGICLEVEL 10
+    MAGICSPHERE $sphere_undead2
+    SPADELAY 10
+    TOTAME 110
+    RACE $race_undead
+    DOORUSE 1
+}
+
+SECTION NPC $npc_a_bone_mage
+{
+    NAME a bone mage
+    ID 0032
+    SKIN 07de
+    DIRECTION N
+    BACKPACK
+    MAGERY 600
+    SPATTACK 8191
+    MAGICLEVEL 10
+    MAGICSPHERE $sphere_undead
+    SPADELAY 10
+    NPCWANDER 4
+    STR 76 100
+    DEX 56 76
+    INT 185 210
+    KARMA -3000
+    FAME 3000
+    PARRYING 450 550
+    MAGICRESISTANCE 450 600
+    TACTICS 450 600
+    MACEFIGHTING 450 550
+    DAMAGE 2 8
+    DEF 19
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 110
+    RACE $race_undead
+    DOORUSE 1
+}
+
+
+SECTION NPC $npc_a_lich_lord_1
+{
+    NAME a lich lord
+    ID 0018
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    STR 415 505
+    DEX 96 115
+    INT 565 655
+    KARMA -12000
+    FAME 12000
+    PARRYING 550 650
+    MAGICRESISTANCE 900 1000
+    TACTICS 900 1000
+    WRESTLING 900 1000
+    DAMAGE 6 18
+    DEF 25
+    MAGICLEVEL 12
+    MAGICSPHERE $sphere_undead2
+    SPATTACK 8191
+    SPADELAY 10
+    MAGERY 900 1000
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 110
+    RACE $race_undead
+    DOORUSE 1
+}
+
+//a wisp
+
+SECTION NPC $npc_a_wisp
+{
+    NAME a wisp
+    ID 003a
+    DIRECTION S
+    BACKPACK
+    SPEECH $speech_wisp
+    STR 195 225
+    DEX 15 20
+    INT 195 225
+    KARMA 0
+    FAME 0
+    PARRYING 800
+    MAGICRESISTANCE 800
+    TACTICS 800
+    WRESTLING 800
+    DAMAGE 15 20
+    DEF 20
+    SPATTACK 7552
+    SPADELAY 10
+    MAGERY 800
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_good
+    TOTAME 1100
+    RACE $race_undead
+    DOORUSE 1
+}
+
+

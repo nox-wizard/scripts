@@ -1,0 +1,413 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (items.xss)                                      ||
+// || Maintained by Sparhawk and Juliunus                                 ||
+// || Last Update 28-05-2002                                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//
+// Server supported potion types
+//
+#define $agility_potion 1
+#define $cure_potion 2
+#define $explosion_potion 3
+#define $healing_potion 4
+#define $nightsight_potion 5
+#define $poison_potion 6
+#define $energy_potion 7
+#define $strength_potion 8
+#define $mana_potion 9
+#define $lsd_potion 10
+
+//
+// Potion strengths
+//
+#define $lesser_potion_strength 1
+#define $normal_potion_strength 2
+#define $greater_potion_strength 3
+
+//
+// Potion values
+//
+#define $lesser_potion_value 10
+#define $normal_potion_value 20
+#define $greater_potion_value 40
+
+//
+// Generic potion definition
+//
+// Is included in all potion sections
+//
+SECTION DEFAULT POTION
+{
+	DECAY
+	DYE 0
+	MOVABLE 1
+	NAME a potion
+	RESTOCK 10
+	TYPE $itype_potion
+	WEIGHT 100
+}
+
+//
+// Nightsight
+//
+SECTION DEFAULT NIGHT_SIGHT_POTION
+{
+	#copy DEFAULT POTION
+	ID 0F06
+	MOREY $nightsight_potion
+	NAME a black potion
+	@ONDBLCLICK itm_potionUse
+}
+
+SECTION ITEM $lesser_nightsight_potion
+{
+	#copy DEFAULT NIGHT_SIGHT_POTION
+	NAME2 a weak nightsight potion
+	MOREZ $lesser_potion_strength
+	VALUE $lesser_potion_value
+}
+
+SECTION ITEM $normal_nightsight_potion
+{
+	#copy DEFAULT NIGHT_SIGHT_POTION
+	NAME2 a nightsight potion
+	MOREZ $normal_potion_strength
+	VALUE $normal_potion_value
+}
+
+SECTION ITEM $greater_nightsight_potion
+{
+	#copy DEFAULT NIGHT_SIGHT_POTION
+	NAME2 a nightsight potion
+	MOREZ $greater_potion_strength
+	VALUE $greater_potion_value
+}
+
+//
+// Cure
+//
+SECTION DEFAULT CURE_POTION
+{
+	#copy DEFAULT POTION
+	ID 0F07
+	MOREY $cure_potion
+	NAME an orange potion
+	@ONDBLCLICK itm_potionUse
+}
+
+SECTION ITEM $lesser_cure_potion
+{
+	#copy DEFAULT CURE_POTION
+	NAME2 a weak cure potion
+	MOREZ $lesser_potion_strength
+	VALUE $lesser_potion_value
+}
+
+SECTION ITEM $normal_cure_potion
+{
+	#copy DEFAULT CURE_POTION
+	NAME2 a cure potion
+	MOREZ $normal_potion_strength
+	VALUE $normal_potion_value
+}
+
+SECTION ITEM $greater_cure_potion
+{
+	#copy DEFAULT CURE_POTION
+	NAME2 a strong cure potion
+	MOREZ $greater_potion_strength
+	VALUE $greater_potion_value
+}
+
+//
+// Agility
+//
+SECTION DEFAULT AGILITY_POTION
+{
+	#copy DEFAULT POTION
+	ID 0F08
+	MOREY $agility_potion
+	NAME a blue potion
+	@ONDBLCLICK itm_potionUse
+}
+
+SECTION ITEM $lesser_agility_potion
+{
+	#copy DEFAULT AGILITY_POTION
+	NAME2 a weak agility potion
+	MOREZ $lesser_potion_strength
+	VALUE $lesser_potion_value
+}
+
+SECTION ITEM $normal_agility_potion
+{
+	#copy DEFAULT AGILITY_POTION
+	NAME2 an agility potion
+	MOREZ $normal_potion_strength
+	VALUE $normal_potion_value
+}
+
+SECTION ITEM $greater_agility_potion
+{
+	#copy DEFAULT AGILITY_POTION
+	NAME2 a strong agility potion
+	MOREZ $greater_potion_strength
+	VALUE $greater_potion_value
+}
+
+//
+// Strenght
+//
+SECTION DEFAULT STRENGTH_POTION
+{
+	#copy DEFAULT POTION
+	ID 0F09
+	MOREY $strength_potion
+	NAME a white potion
+	@ONDBLCLICK itm_potionUse
+}
+
+SECTION ITEM $lesser_strength_potion
+{
+	#copy DEFAULT STRENGTH_POTION
+	NAME2 a strength potion
+	MOREZ $lesser_potion_strength
+	VALUE $lesser_potion_value
+}
+
+SECTION ITEM $normal_strength_potion
+{
+	#copy DEFAULT STRENGTH_POTION
+	NAME2 a strength potion
+	MOREZ $normal_potion_strength
+	VALUE $normal_potion_value
+}
+
+SECTION ITEM $greater_strength_potion
+{
+	#copy DEFAULT STRENGTH_POTION
+	NAME2 a strong strength potion
+	MOREZ $greater_potion_strength
+	VALUE $greater_potion_value
+}
+
+//
+// Poison
+//
+SECTION DEFAULT POISON_POTION
+{
+	#copy DEFAULT POTION
+	ID 0F0A
+	MOREY $poison_potion
+	NAME a green potion
+}
+
+SECTION ITEM $lesser_poison_potion
+{
+	#copy DEFAULT POISON_POTION
+	NAME2 a weak poison potion
+	MOREZ $lesser_potion_strength
+	VALUE $lesser_potion_value
+}
+
+SECTION ITEM $normal_poison_potion
+{
+	#copy DEFAULT POISON_POTION
+	NAME2 a poison potion
+	MOREZ $normal_potion_strength
+	VALUE $normal_potion_value
+}
+
+SECTION ITEM $greater_poison_potion
+{
+	#copy DEFAULT POISON_POTION
+	NAME2 a strong poison potion
+	MOREZ $greater_potion_strength
+	VALUE $greater_potion_value
+}
+
+//
+// Energy
+//
+SECTION DEFAULT ENERGY_POTION
+{
+	#copy DEFAULT POTION
+	ID 0F0B
+	MOREY $energy_potion
+	NAME a red potion
+	@ONDBLCLICK itm_potionUse
+}
+
+SECTION ITEM $lesser_energy_potion
+{
+	#copy DEFAULT ENERGY_POTION
+    	NAME2 a weak energy potion
+	MOREZ $lesser_potion_strength
+	VALUE $lesser_energy_potion
+}
+
+SECTION ITEM $normal_energy_potion
+{
+	#copy DEFAULT ENERGY_POTION
+    	NAME2 an energy potion
+	MOREZ $normal_potion_strength
+	VALUE $normal_energy_potion
+}
+
+SECTION ITEM $greater_energy_potion
+{
+	#copy DEFAULT ENERGY_POTION
+    	NAME2 a strong energy potion
+	MOREZ $greater_potion_strength
+	VALUE $greater_energy_potion
+}
+
+//
+// Healing
+//
+
+SECTION DEFAULT HEALING_POTION
+{
+	#copy DEFAULT POTION
+	ID 0F0C
+	MOREY $healing_potion
+	NAME a yellow potion
+	@ONDBLCLICK itm_potionUse
+}
+
+SECTION ITEM $lesser_healing_potion
+{
+	#copy DEFAULT HEALING_POTION
+	NAME2 a weak healing potion
+	MOREZ $lesser_potion_strength
+	VALUE $lesser_potion_value
+}
+
+SECTION ITEM $normal_healing_potion
+{
+	#copy DEFAULT HEALING_POTION
+	NAME2 a healing potion
+	MOREZ $normal_potion_strength
+	VALUE $normal_potion_value
+}
+
+SECTION ITEM $greater_healing_potion
+{
+	#copy DEFAULT HEALING_POTION
+	NAME2 a strong healing potion
+	MOREZ $greater_potion_strength
+	VALUE $greater_potion_value
+}
+
+//
+// Explosion
+//
+
+SECTION DEFAULT EXPLOSION_POTION
+{
+	#copy DEFAULT POTION
+	ID 0F0D
+	MOREY $explosion_potion
+	NAME a purple potion
+}
+
+SECTION ITEM $lesser_explosion_potion
+{
+	#copy DEFAULT EXPLOSION_POTION
+	NAME2 a weak explosion potion
+	MOREX 300
+	MOREZ $lesser_potion_strength
+	VALUE $lesser_potion_value
+}
+
+SECTION ITEM $normal_explosion_potion
+{
+	#copy DEFAULT EXPLOSION_POTION
+	NAME2 an explosion potion
+	MOREX 600
+	MOREZ $normal_potion_strength
+	VALUE $normal_potion_value
+}
+
+SECTION ITEM $greater_explosion_potion
+{
+	#copy DEFAULT EXPLOSION_POTION
+    	NAME2 a greater explosion potion
+	MOREX 900
+	MOREZ $greater_potion_strength
+	VALUE $greater_potion_value
+}
+
+//
+// Mana
+//
+SECTION DEFAULT MANA_POTION
+{
+	#copy DEFAULT POTION
+	COLOR 0384
+	ID 0F0E
+	GOOD 25
+	MOREY $mana_potion
+	NAME a gray potion
+	@ONDBLCLICK itm_potionUse
+}
+
+SECTION ITEM $lesser_mana_potion
+{
+	#copy DEFAULT MANA_POTION
+	NAME2 a weak mana potion
+	MOREZ $lesser_potion_strength
+	MOREX 100
+	VALUE $lesser_potion_value
+}
+
+SECTION ITEM $normal_mana_potion
+{
+	#copy DEFAULT MANA_POTION
+	NAME2 a mana potion
+	MOREZ $normal_potion_strength
+	VALUE $normal_potion_value
+}
+
+SECTION ITEM $greater_mana_potion
+{
+	#copy DEFAULT MANA_POTION
+	NAME2 a strong mana potion
+	MOREZ $greater_potion_strength
+	VALUE $greater_potion_value
+}
+
+//
+// LSD
+//
+
+SECTION ITEM $item_lsd_potion
+{
+	NAME LSD potion
+	ID 1841
+	TYPE $itype_potion
+	MOREY $lsd_potion
+	MOREZ $normal_potion_strength
+	DECAY
+}
+
+//
+// Blessed water
+//
+SECTION ITEM $item_blessed_water
+{
+	NAME a blue potion
+	NAME blessed water
+	ID 0F08
+	TYPE $itype_potion
+	MOREY $cure_potion
+	MOREZ $normal_potion_strength
+	TRIGGER $itrg_drink_blessed_water
+	NODECAY
+	VALUE 50
+	RESTOCK 10
+	GOOD 30
+}

@@ -1,0 +1,224 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (harditems.xss)                                  ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 27-november-2001                                        ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+//Logs
+SECTION IDLIST HARDITEM x1be0
+{
+    GOOD 1
+}
+
+// Ores
+SECTION IDLIST HARDITEM x19bax19b8x19b7x19b9
+{
+    GOOD 2
+}
+
+//Drinks&Blows
+SECTION IDLIST HARDITEM x99Bx99Fx9C7xFFAx9EEx1f8fx9c8x15f9x15fax15fbx15fcx15f8x15fex15ffx1600x1601x1602
+{
+    GOOD 3
+    DECAY
+    WEIGHT 100
+}
+
+//Fruits
+SECTION IDLIST HARDITEM x994x9D0x9D1x9D2x993xd1ax171dx171ex171fx1f20x1721x1722x1723x1724x1725x1726x1727x1728x1729x172ax172bx9d3
+{
+    GOOD 4
+    DECAY
+}
+
+//Baked Goods & Daily Products
+SECTION IDLIST HARDITEM x1041x1042x9e9x97ex97dx97cx98cx9eax103cx1040x160bx9b5x9ec
+{
+    GOOD 5
+    DECAY
+}
+
+//Meat Uncooked
+SECTION IDLIST HARDITEM x9eex1607x9b9x9bax9f1x97a
+{
+    GOOD 6
+    DECAY
+}
+
+//Meat Cooked
+SECTION IDLIST HARDITEM x160ax1608x9b8x9bbx9c0x9c9x9f2x97bx976x977x978x9bcx9c1
+{
+    GOOD 7
+    DECAY
+}
+
+//Fishes
+SECTION IDLIST HARDITEM x97bx9ccx9cdx9cex9cfx1e1ax97ax1e15
+{
+    GOOD 29
+    DECAY
+}
+
+//Common Reagents
+SECTION IDLIST HARDITEM xf7axf7bxf84xf85xf86xf88xf8cxf8d
+{
+    GOOD 8
+    DECAY
+}
+
+//Pagan Reagents
+SECTION IDLIST HARDITEM xf78xf79xf7cxf7dxf7exf7fxf80xf81xf82xf83xf87xf89xf8axf8bxf8exf8fxf90xf91
+{
+    GOOD 9
+    DECAY
+}
+
+//Jewelery
+SECTION IDLIST HARDITEM xf0fxf10xf11xf12xf13xf14xf15xf16xf17xf18xf19xf1axf1bxf1cxf1dxf1exf1fxf20xf21xf22xf23xf24xf25xf26xf27xf28xf29xf2axf2bxf2cxf2dxf2exf2fxf30
+{
+    GOOD 16
+    DECAY
+}
+
+//Busts
+SECTION IDLIST HARDITEM x12cax12cbx139ax1224x1225x139bx1226x139cx1227x139dx1228
+{
+    GOOD 17
+    DECAY
+}
+
+//Spells (1 lvl)
+SECTION IDLIST HARDITEM x1f2dx1f2ex1f2fx1f30x1f31x1f32x1f33x1f34
+{
+    GOOD 18
+    DECAY
+}
+
+//Spells (2 lvl)
+SECTION IDLIST HARDITEM x1f35x1f36x1f37x1f38x1f39x1f3ax1f3bx1f3c
+{
+    GOOD 19
+    DECAY
+}
+
+//Spells (3 lvl)
+SECTION IDLIST HARDITEM x1f3ex1f3fx1f40x1f41x1f42x1f43x1f44x1f3d
+{
+    GOOD 20
+    DECAY
+}
+
+//Spells (4 lvl)
+SECTION IDLIST HARDITEM x1f45x1f46x1f47x1f48x1f49x1f4ax1f4bx1f4c
+{
+    GOOD 21
+    DECAY
+}
+
+//Spells (5 lvl)
+SECTION IDLIST HARDITEM x1f4dx1f4ex1f4fx1f50x1f51x1f52x1f53x1f54
+{
+    DECAY
+    GOOD 22
+}
+
+//Spells (6 lvl)
+SECTION IDLIST HARDITEM x1f55x1f56x1f57x1f58x1f59x1f5ax1f5bx1f5c
+{
+    GOOD 23
+    DECAY
+}
+
+//Spells (7 lvl)
+SECTION IDLIST HARDITEM x1f5dx1f5ex1f5fx1f60x1f61x1f62x1f63x1f64
+{
+    GOOD 24
+    DECAY
+}
+
+//Spells (8 lvl)
+SECTION IDLIST HARDITEM x1f65x1f66x1f67x1f68x1f69x1f6ax1f6bx1f6c
+{
+    GOOD 25
+    DECAY
+}
+
+//Necromantic Scrolls
+SECTION IDLIST HARDITEM x1f6ex1f6fx1f70x1f71x1f72
+{
+    GOOD 26
+    DECAY
+}
+
+//Potions + Steroids & Boombrain
+SECTION IDLIST HARDITEM xf06xf07xf08xf09xf0axf0bxf0cxf0dx1841x183ex1831x183dx183axf0exe9b
+{
+    GOOD 30
+    DECAY
+}
+
+//Steroids & Boombrain Regs
+SECTION IDLIST HARDITEM x1cedx1cf0x1af4x1ae6
+{
+    GOOD 31
+    DECAY
+}
+
+//Rune, Skull (For cleric summon undead), Wands , Wizard Hat, Spellbook, Blank Scroll
+SECTION IDLIST HARDITEM x1f14x1ae3xdf2xdf4xdf5xdf3x1718xefaxe34
+{
+    GOOD 32
+    DECAY
+}
+
+//Tailoring Stuff+Resources(+Special)
+SECTION IDLIST HARDITEM x11faxf9dxfa9xfabx1078xfa0x1a99x1a9cxdf6xdf8xdf9xe1dxf95x175dx1079
+{
+    GOOD 33
+    DECAY
+}
+
+//Clothes
+SECTION IDLIST HARDITEM x170bx1711x170dx170fx1713x1714x1715x1716x1717xx1719x171ax171bx171cx1515x1efdx1ffdx1517x1fa1x1f03x1f9fx1f7bx1effx1f01x1516x152ex1537x1539x153bx153dx1540x1541x1544x1547x1545x1549x154b
+    GOOD 34
+    DECAY
+}
+
+// Clocks
+SECTION IDLIST HARDITEM x104bx104fx104dx1051x1053x1055x1057x1059x105bx105d
+{
+    GOOD 35
+    WEIGHT 100
+}
+// Chests, Barrels, Crates, Bowls
+SECTION IDLIST HARDITEM xe42xe43xe7dx9aaxe7ex9a9xe3exe3fxe3cxe3dxe7fxe83xe77x15f8
+{
+    GOOD 36
+    WEIGHT 100
+}
+
+// Armoires
+SECTION IDLIST HARDITEM xa2cxa34xa4fxa53xa30xa38xa4dxa51xa9dxa9e
+{
+    GOOD 37
+    WEIGHT 100
+}
+
+// Chairs
+SECTION IDLIST HARDITEM xa2axa2bxb2cxb2dxb32xb33xb2exb2fxb30xb31xb4exb4fxb50xb51xb52xb53xb54xb55xb56xb57xb58xb5axb5bxb5cxb5d
+{
+    GOOD 38
+    WEIGHT 100
+}
+
+//Tables
+SECTION IDLIST HARDITEM xb8fxb7cxb90xb7dxb3exb3dxb40xb3fxb49xb4axb4bxb4cxb34xb37xb35xb38
+{
+    GOOD 39
+    WEIGHT 100
+}
+
+

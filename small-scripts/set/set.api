@@ -1,0 +1,117 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_set_api_
+  #endinput
+#endif
+#define _nxw_set_api_
+
+/*! \page p_set Set
+* \section set Set, Contenitori di oggetti
+* <br>
+* <br>
+* Un set é un vettore che può contenere un qualsiasi oggetto, quindi sia item che char. <br>
+* Può essere riempito attraverso le funzioni predefinite oppure "manualmente" dallo scripter <br><br>
+* Alcuni esempi:
+* <UL>
+* <LI>un semplice esempio di come mandare a un player la lista degli altri giocatori in zona ( \ref esempio1.sma )
+* </UL>
+*/
+
+/** \example esempio1.sma
+ * Primo esempio sui set
+ */
+
+
+/*!
+\name set_open
+\author Xanathar
+\syntax set_open()
+\brief
+*/
+native set_open();
+
+/*!
+\name set_close
+\author Xanathar
+\syntax set_close(const set)
+\brief
+*/
+native set_close(const set);
+
+/*!
+\name set_pop
+\author Xanathar
+\syntax set_pop(const set)
+\brief
+*/
+native set_pop(const set);
+
+/*!
+\name set_push
+\author Xanathar
+\syntax set_push(const set, const value)
+\brief
+*/
+native set_push(const set, const value);
+
+/*!
+\name set_fillOwnedChars
+\author Xanathar
+\syntax set_fillOwnedChars(const set, const chrowner, const includestabled = 1, const includeonlyfollowing = 0)
+\brief
+*/
+native set_fillOwnedChars(const set, const chrowner, const includestabled = 1, const includeonlyfollowing = 0);
+
+/*!
+\name set_fillChrNearXY
+\author Xanathar
+\syntax set_fillChrNearXY(const set, const x, const y, const distance = 10, const excludeofflineplayers = 1)
+\brief
+*/
+native set_fillChrNearXY(const set, const x, const y, const distance = 10, const excludeofflineplayers = 1);
+
+/*!
+\name set_fillItemsInCont
+\author Xanathar
+\syntax set_fillItemsInCont(const set, const serial, const includeSubCont = 1)
+\brief
+*/
+native set_fillItemsInCont(const set, const serial, const includeSubCont = 1);
+
+/*!
+\name set_size
+\author Xanathar
+\syntax set_size(const set)
+\brief
+*/
+native set_size(const set);
+
+/*!
+\name set_fillItemsAtXY
+\author Xanathar
+\syntax set_fillItemsAtXY(const set, const x, const y, const type = -1, const id = -1)
+\brief
+*/
+native set_fillItemsAtXY(const set, const x, const y, const type = -1, const id = -1 );
+
+/*!
+\name set_fillItemsNearXY
+\author Luxor
+\syntax set_fillItemsNearXY(const set, const x, const y, const distance = 10, const bExcludeNotMovableItems = 1)
+\brief
+*/
+native set_fillItemsNearXY(const set, const x, const y, const distance = 10, const bExcludeNotMovableItems = 1 );
+
+/*!
+\name set_fillOnline
+\author Sparhawk
+\syntax set_fillOnline( const set, const onlyNearThisChar = -1, const range = 18 )
+\brief Fill set with all online characters unless onlyNearThisChar is a valid char serial then only online pcs within range of char will be collected
+*/
+native set_fillOnline( const set, const onlyNearThisChar = -1, const range = 18 );
+

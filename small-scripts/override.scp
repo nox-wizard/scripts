@@ -1,0 +1,28 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (override.scp)                                   ||
+// || Maintained by Sparhawk                                              ||
+// || Last Update 2002-06-05                                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.10 or later                       ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+[skilltargets]
+1=__anatomy_target,AFTER
+
+[skills]
+
+[triggers]
+
+[magicselect]
+
+[magiccast]
+
+[special]
+StartChar=itm_potionStart,AFTER
+
+[networkrcv]
+
+[speech]
+
+
