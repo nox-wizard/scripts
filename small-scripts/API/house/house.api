@@ -7,7 +7,6 @@
 \param house, the house serial to get the property from
 \param property, the house property to get
 \param subproperty, the subproperty to get
-
 */
 native house_getProperty(const house, const property, const subproperty, ...);
 
@@ -20,7 +19,6 @@ native house_getProperty(const house, const property, const subproperty, ...);
 \param property, the house property to set
 \param subproperty, the subproperty to set
 */
-
 native house_setProperty(const house, const property, const subproperty, const value, ...);
 
 /*!
@@ -30,9 +28,7 @@ native house_setProperty(const house, const property, const subproperty, const v
 \fn house_lockItem
 \param house, the house serial to get the property from
 \param item, the serial of the item to lock
-
 */
-
 native house_lockItem(const house, const item);
 
 /*!
@@ -42,9 +38,7 @@ native house_lockItem(const house, const item);
 \fn house_unlockItem
 \param house, the house serial
 \param item, the serial of the item to unlock
-
 */
-
 native house_unlockItem(const house, const item);
 
 /*!
@@ -54,7 +48,6 @@ native house_unlockItem(const house, const item);
 \fn house_secureContainer
 \param house, the house serial to get the property from
 \param item, the serial of the container to secure
-
 */
 native house_secureContainer(const house, const container);
 
@@ -77,7 +70,6 @@ native house_unsecureContainer(const house, const container);
 \param house, the house serial
 \param x,y,z position of the trashbarrel
 */
-
 native house_placeTrashBarrel(const house, const x, const y, const z);
 
 /*!
@@ -89,8 +81,6 @@ native house_placeTrashBarrel(const house, const x, const y, const z);
 \param obj, the item or char serial
 \return boolean
 */
-
-
 native house_isInsideHouse(const house, const obj);
 
 /*!
@@ -102,7 +92,6 @@ native house_isInsideHouse(const house, const obj);
 \param obj, the item or char serial
 \return boolean
 */
-
 native house_isInHouse(const house, const obj);
 
 /*!
@@ -114,7 +103,6 @@ native house_isInHouse(const house, const obj);
 \param the char serial of the new friend
 \return boolean
 */
-
 native house_addFriend(const house, const chr);
 
 /*!
@@ -126,7 +114,6 @@ native house_addFriend(const house, const chr);
 \param the char serial of the new friend
 \return boolean
 */
-
 native house_removeFriend(const house, const chr);
 
 /*!
@@ -149,7 +136,6 @@ native house_isFriend(const house, const chr);
 \param the char serial of the new co owner
 \return boolean
 */
-
 native house_addCoOwner(const house, const chr);
 
 /*!
@@ -161,7 +147,6 @@ native house_addCoOwner(const house, const chr);
 \param the char serial of the new co owner
 \return boolean
 */
-
 native house_removeCoOwner(const house, const chr);
 
 /*!
@@ -173,7 +158,6 @@ native house_removeCoOwner(const house, const chr);
 \param the char serial of the character
 \return boolean
 */
-
 native house_isCoOwner(const house, const chr);
 
 /*!
@@ -186,6 +170,7 @@ native house_isCoOwner(const house, const chr);
 \return boolean
 */
 native house_addBan(const house, const chr);
+
 /*!
 \brief removes  a character from the list of banned people
 \author Wintermute
@@ -206,7 +191,6 @@ native house_removeBan(const house, const chr);
 \param the char serial of the banned character
 \return boolean
 */
-
 native house_isBanned(const house, const chr);
 
 /*!
@@ -218,7 +202,6 @@ native house_isBanned(const house, const chr);
 \param the char serial of the new owner
 \return boolean
 */
-
 native house_transfer(const house, const newOwner);
 
 /*!
@@ -228,7 +211,6 @@ native house_transfer(const house, const newOwner);
 \fn house_changeLocks
 \param house, the house serial
 */
-
 native house_changeLocks(const house);
 
 /*!
