@@ -1,0 +1,860 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (titles.scp)                                     ||
+// || Maintained by Endymion		                                  ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+
+SECTION CREATURE $creature_ogre
+{
+	START_ATTACK 0x01AB
+	IDLE 0x01AC
+	ATTACK 0x01AD
+	DEFEND 0x01AE
+	DIE 0x01AF
+	ICON 8415
+}
+
+SECTION CREATURE $creature_ettin
+{
+	START_ATTACK 0x016F
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8408
+}
+
+SECTION CREATURE $creature_zombie
+{
+	START_ATTACK 0x01D7
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8428
+}
+
+SECTION CREATURE $creature_gargoyle
+{
+	START_ATTACK 0x0174
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ICON 8409
+}
+
+SECTION CREATURE $creature_eagle
+{
+	START_ATTACK 0x008f
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ANTIBLINK
+	ICON 8434
+}
+
+SECTION CREATURE $creature_bird
+{
+	creatures[0x06].basesound=0x007d;							
+	CANFLY
+	creatures[0x06].soundflag=1; 
+	ICON 8430
+}
+
+SECTION CREATURE $creature_orc
+{
+	START_ATTACK 0x01b0
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8416
+}
+
+SECTION CREATURE $creature_corpser
+{
+	creatures[0x08].basesound=0x01ba;							
+	creatures[0x08].soundflag=3;
+	ICON 8402
+}
+
+SECTION CREATURE $creature_daemon
+{
+	START_ATTACK 0x0165
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ICON 8403
+}
+
+SECTION CREATURE $creature_daemon2
+{
+	START_ATTACK 0x0165
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ICON 8403
+}
+
+SECTION CREATURE $creature_green_dragon
+{
+	START_ATTACK 362
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ICON 8406
+}
+
+SECTION CREATURE $creature_air_elemental
+{
+	START_ATTACK 263
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8429
+}
+
+SECTION CREATURE $creature_earth_elemental
+{
+	START_ATTACK 268
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8407
+}
+
+SECTION CREATURE $creature_fire_elemental
+{
+	START_ATTACK 273
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8435
+}
+
+SECTION CREATURE $creature_water_elemental
+{
+	START_ATTACK 0x0116
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8459
+}
+
+SECTION CREATURE $creature_orc2
+{
+	START_ATTACK 0x01b0
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8416
+}
+
+SECTION CREATURE $creature_ettin2
+{
+	START_ATTACK 0x016F
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8408
+}
+
+SECTION CREATURE $creature_giant_snake
+{
+	START_ATTACK 219
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8446
+}
+
+SECTION CREATURE $creature_gazer
+{
+	START_ATTACK 377
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8426
+}
+
+SECTION CREATURE $creature_liche
+{
+	START_ATTACK 412
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8440;
+}
+
+SECTION CREATURE $creature_ghost1
+{
+	START_ATTACK 382
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8457
+}
+
+SECTION CREATURE $creature_giant_spider
+{
+	START_ATTACK 387
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8445
+}
+
+SECTION CREATURE $creature_gorilla
+{
+	START_ATTACK 158
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8437
+}
+
+SECTION CREATURE $creature_harpy
+{
+	START_ATTACK 402
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8412
+}
+
+SECTION CREATURE $creature_headless
+{
+	START_ATTACK 407
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8458
+}
+
+SECTION CREATURE $creature_lizardman
+{
+	START_ATTACK 417
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8414
+}
+
+SECTION CREATURE $creature_lizardman2
+{
+	START_ATTACK 417
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8414
+}
+
+SECTION CREATURE $creature_lizardman3
+{
+	START_ATTACK 417
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8414
+}
+
+SECTION CREATURE $creature_lizardman4
+{
+	START_ATTACK 417
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8414
+}
+
+SECTION CREATURE $creature_lizardman5
+{
+	START_ATTACK 417
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8414
+}
+
+SECTION CREATURE $creature_mongbat
+{
+	START_ATTACK 422
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ICON 8441
+}
+
+SECTION CREATURE $creature_orc3
+{
+	START_ATTACK 0x01b0
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8416
+}
+
+SECTION CREATURE $creature_ratman
+{
+	START_ATTACK 437
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8419
+}
+
+SECTION CREATURE $creature_ratman2
+{
+	START_ATTACK 437
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8419
+}
+
+SECTION CREATURE $creature_ratman3
+{
+	START_ATTACK 437
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8419
+}
+
+SECTION CREATURE $creature_reaper 
+{
+	START_ATTACK 0x01ba
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8442
+}
+
+SECTION CREATURE $creature_giant_scorpion 
+{
+	START_ATTACK 397
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8420
+}
+
+SECTION CREATURE $creature_skeleton2 
+{
+	START_ATTACK 452
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8423
+}
+
+SECTION CREATURE $creature_slime 
+{
+	START_ATTACK 456
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8424
+}
+
+SECTION CREATURE $creature_snake 
+{
+	START_ATTACK 219
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8444
+}
+
+SECTION CREATURE $creature_troll 
+{
+	START_ATTACK 461
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8425
+}
+
+SECTION CREATURE $creature_troll2 
+{
+	START_ATTACK 461
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8425
+}
+
+SECTION CREATURE $creature_troll3 
+{
+	START_ATTACK 461
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8425
+}
+
+SECTION CREATURE $creature_skeleton3 
+{
+	START_ATTACK 452
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8423
+}
+
+SECTION CREATURE $creature_skeleton4 
+{
+	START_ATTACK 452
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8423
+}
+
+SECTION CREATURE $creature_wisp 
+{
+	START_ATTACK 466
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8448
+}
+
+SECTION CREATURE $creature_red_dragon 
+{
+	START_ATTACK 362
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ICON 8406
+}
+
+SECTION CREATURE $creature_smaller_red_dragon 
+{
+	START_ATTACK 362
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ICON 8406
+}
+
+SECTION CREATURE $creature_smaller_green_dragon 
+{
+	START_ATTACK 362
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	CANFLY
+	ICON 8406
+}
+
+SECTION CREATURE $creature_sea_serpent 
+{
+	creatures[0x96].basesound=477;								
+	creatures[0x96].basesound=3;
+	START_ATTACK 
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8446;
+}
+
+SECTION CREATURE $creature_dolphin 
+{
+	START_ATTACK 138
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8433;
+}
+
+SECTION CREATURE $creature_white_horse 
+{
+	START_ATTACK 168
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8479
+}
+
+SECTION CREATURE $creature_cat 
+{
+	START_ATTACK 105
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ANTIBLINK
+	ICON 8475
+}
+
+SECTION CREATURE $creature_alligator 
+{
+	START_ATTACK 90
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8410
+}
+
+SECTION CREATURE $creature_small_pig 
+{
+	START_ATTACK 196
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8449
+}
+
+SECTION CREATURE $creature_brown_horse 
+{
+	START_ATTACK 168
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8481
+}
+
+SECTION CREATURE $creature_rabbit 
+{
+	creatures[0xcd].basesound=201;								
+	creatures[0xcd].soundflag=2;								
+	ICON 8485
+}
+
+SECTION CREATURE $creature_wooly_sheep 
+{
+	START_ATTACK 214
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8427
+}
+
+SECTION CREATURE $creature_chicken 
+{
+	START_ATTACK 110
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8401
+}
+
+SECTION CREATURE $creature_goat 
+{
+	START_ATTACK 153
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8422;
+}
+
+SECTION CREATURE $creature_brown_bear 
+{
+	START_ATTACK 95
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8399
+}
+
+SECTION CREATURE $creature_grizzly_bear 
+{
+	START_ATTACK 95
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8411
+}
+
+SECTION CREATURE $creature_polar_bear 
+{
+	START_ATTACK 95
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8417
+}
+
+SECTION CREATURE $creature_panther 
+{
+	START_ATTACK 186
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ANTIBLINK
+	ICON 8473
+}
+
+SECTION CREATURE $creature_giant_rat 
+{
+	START_ATTACK 392
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8400
+}
+
+SECTION CREATURE $creature_cow 
+{
+	START_ATTACK 120
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8432
+}
+
+SECTION CREATURE $creature_dog 
+{
+	START_ATTACK 133
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8405
+}
+
+SECTION CREATURE $creature_llama 
+{
+	creatures[0xdc].basesound=183;								
+	creatures[0xdc].soundflag=2;
+	ICON 8438
+}
+
+SECTION CREATURE $creature_walrus 
+{
+	START_ATTACK 224
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8447
+}
+
+SECTION CREATURE $creature_shorn_sheep 
+{
+	creatures[0xdf].basesound=216;								
+	creatures[0xdf].soundflag=2;
+	ICON 8422
+}
+
+SECTION CREATURE $creature_jackal 
+{
+	START_ATTACK 229
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ANTIBLINK
+	ICON 8426
+}
+
+SECTION CREATURE $creature_horse2 
+{
+	START_ATTACK 168
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8484
+}
+
+SECTION CREATURE $creature_horse3 
+{
+	START_ATTACK 168
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8480
+}
+
+SECTION CREATURE $creature_brown_cow 
+{
+	START_ATTACK 120
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ANTIBLINK
+	ICON 8432
+}
+
+SECTION CREATURE $creature_bull 
+{
+	START_ATTACK 100
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ANTIBLINK
+	ICON 8431
+}
+
+SECTION CREATURE $creature_bw_cow 
+{
+	START_ATTACK 120
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ANTIBLINK
+	ICON 8451
+}
+
+SECTION CREATURE $creature_deer 
+{
+	creatures[0xea].basesound=130;								
+	creatures[0xea].soundflag=2;
+	ICON 8404
+}
+
+SECTION CREATURE $creature_small_deer 
+{
+	creatures[0xed].basesound=130;								
+	creatures[0xed].soundflag=2;
+	ICON 8404
+}
+
+SECTION CREATURE $creature_rat 
+{
+	START_ATTACK 204
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8483
+}
+
+SECTION CREATURE $creature_boar 
+{
+	START_ATTACK 196
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8449
+}
+
+SECTION CREATURE $creature_pack_horse 
+{
+	START_ATTACK 168
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8486
+}
+
+SECTION CREATURE $creature_pack_llama 
+{
+	creatures[0x124].basesound=183;								
+	creatures[0x124].soundflag=2;
+	ICON 8487
+}
+
+SECTION CREATURE $creature_e-vortex 
+{
+	START_ATTACK 263
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+}
+
+SECTION CREATURE $creature_blade_spirit 
+{
+	creatures[0x23e].basesound=512;								
+	creatures[0x23e].soundflag=4;
+}
+
+SECTION CREATURE $creature_cougar 
+{
+	START_ATTACK 115
+	IDLE 
+	ATTACK 
+	DEFEND 
+	DIE 
+	ICON 8473
+}
+
+SECTION CREATURE $creature_male 
+{
+	ICON 8454
+}
+
+SECTION CREATURE $creature_female 
+{
+	ICON 8455
+}
+
