@@ -31,16 +31,6 @@ else if( !strcmp(command, "LANG") ) //to make sure: was said  LANG?
 _racelang(c); //a command that takes no param
 bypass();
 }
-else if( !strcmp(command, "TWEAK") ) //to make sure: was said  TWEAK?
-{
-command_tweak( 0, c); //a command that takes no param
-bypass();
-}
-else if( !strcmp(command, "POLY") ) //to make sure: was said  POLY?
-{
-command_polymorph( 0, c); //a command that takes no param
-bypass();
-}
 }
 
 public _hunger (const c) 
