@@ -85,7 +85,7 @@ public cmd_tile_rect(chr,x0,y0,x1,y1)
 	new nXnY = (nX << 16) + nY;
 
 	new xy = (x0 << 16) + y0;
-	chr_setLocalIntVar(chr,CLV_CMDTEMP,xy);
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,xy);
 
 	chr_message(chr,_,"Select an item to tile");
 	target_create(chr,nXnY,_,_,"cmd_tile_targ1");
@@ -103,7 +103,7 @@ public cmd_tile_targ1(target, chr, object, x, y, z, unused, nXnY)
 	 new nY = nXnY & 0xFF;
 	 
 	 new xy = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-	 chr_setLocalIntVar(chr,CLV_CMDTEMP,INVALID);
+	 chr_delLocalVar(chr,CLV_CMDTEMP);
 	 
 	 x = xy >> 16;
 	 y = xy & 0xFFFF;

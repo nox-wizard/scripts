@@ -61,7 +61,7 @@ public cmd_iset(const chr)
 	}
 
 	//store parameters to be read by the callback
-	chr_setLocalIntVar(chr,CLV_CMDTEMP,prop);
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,prop);
 
 	chr_message(chr,_,"Select an item to set the %s",__cmdParams[0]);
 	target_create(chr,val,_,_,"cmd_iset_targ");
@@ -76,6 +76,7 @@ public cmd_iset(const chr)
 public cmd_iset_targ(target, chr, object, x, y, z, unused, val)
 {
 	new prop = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isItem(object))
 	{

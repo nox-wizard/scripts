@@ -1,5 +1,5 @@
 /*!
-\defgroup script_commands_popup
+\defgroup script_commands_popup 'popup
 \ingroup script_commands
 
 @{

@@ -87,3 +87,9 @@ native broadcast(const format[], ...);
 */
 native getIntFromDefine(const define[],  checkDefine=true);
 
+/*!
+\author stonedz
+\fn world_save()
+\brief performs a worldsave
+*/
+native world_save();

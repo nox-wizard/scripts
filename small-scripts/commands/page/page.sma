@@ -1,5 +1,5 @@
 /*!
-\defgroup script_commands_page
+\defgroup script_commands_page 'page
 \ingroup script_commands
 
 @{

@@ -109,6 +109,20 @@ public chr_getSkillSum(const chr)
 	return skillcap; 
 }
 
+public skill_isDirectlyUsable(skill)
+{
+	switch(skill)
+	{
+		case SK_ANATOMY..SK_ARMSLORE,SK_TAMING,SK_BEGGING,SK_CARTOGRAPHY,SK_DETECTINGHIDDEN,SK_EVALUATINGINTEL,SK_FORENSICS,SK_HIDING,SK_INSCRIPTION,SK_MEDITATION..SK_REMOVETRAPS,SK_POISONING,SK_PROVOCATION,SK_SPIRITSPEAK,SK_STEALING,SK_TASTEID,SK_TRACKING,SK_PEACEMAKING: return true;
+	
+	#if ACTIVATE_EXTENDED_SKILLSYSTEM
+		case SK_STD_COUNT..SK_STD_COUNT + SK_ADDITIONAL_MAX: return __skillinfo[skill - SK_STD_COUNT][_skDirectlyUsable];
+	#endif
+	
+	}
+	return false;
+}
+
 //stop reading file if extended skillsystem is not activated.
 #if !ACTIVATE_EXTENDED_SKILLSYSTEM
 	
@@ -486,6 +500,14 @@ public loadAdditionalSkills(file,line)
 	if(!strcmp(currentXssCommand,"FAILRAISE"))
 	{
 		__skillinfo[sk - SK_STD_COUNT][_skFailRaise] = str2Int(currentXssValue);
+		return;
+	}
+	
+	//read fail raise
+	if(!strcmp(currentXssCommand,"FUNCTION"))
+	{
+		__skillinfo[sk - SK_STD_COUNT][_skDirectlyUsable] = 1;
+		strcpy(__skillFunctions[sk],currentXssValue];
 		return;
 	}
 	

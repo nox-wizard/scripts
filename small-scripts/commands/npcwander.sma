@@ -47,7 +47,7 @@ public cmd_npcwander_targ(target, chr, object, x, y, z, unused, wander)
 	if(isChar(object))
 	{		
 		chr_setProperty(object,CP_NPCWANDER,_,wander);
-		chr_setLocalIntVar(chr,CLV_CMDTEMP,object);
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,object);
 		switch(wander)
 		{
 			case WANDER_FREELY_BOX: getRectangle(chr,"cmd_npcwander_rect");
@@ -65,6 +65,8 @@ public cmd_npcwander_targ(target, chr, object, x, y, z, unused, wander)
 public cmd_npcwander_rect(chr,x0,y0,x1,y1)
 {
 	new npc = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
+	
 	chr_setProperty(npc,CP_FPOS1_NPCWANDER,CP2_X,x0);
 	chr_setProperty(npc,CP_FPOS1_NPCWANDER,CP2_Y,y0);
 	chr_setProperty(npc,CP_FPOS1_NPCWANDER,CP2_Z,map_getZ(x0,y0));

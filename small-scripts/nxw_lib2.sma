@@ -405,3 +405,314 @@ stock chr_getSkillsum(const chr, skillsum[])
 	sprintf(skillsumStr,"%d",sum);
 	return sum;
 }
+
+/*!
+\author Fax
+\fn chr_copy(const chr)
+\param chr: the character to be copied
+\since 0.82
+\brief copies a character
+
+This function creates a new character with the same scriptID of the given one, note that
+the new character will have properties set to the standard value given in the XSS definition
+\see chr_duplicate(const chr)
+\return copied character's serial
+*/
+public chr_copy(const chr)
+{
+	return chr_addNPC(chr_getProperty(chr,CP_SCRIPTID),1,1,0);
+}
+
+/*!
+\author Fax
+\fn chr_duplicate(const chr)
+\param chr: the character
+\since 0.82
+\brief duplicates a character
+
+The returned character will have all the properties set to the starting character's.<br>
+The starting character's equipment is copied and equipped to the new character.
+\see chr_copy(const chr)
+\return new character's serial
+*/
+public chr_duplicate(const chr)
+{
+	new subprop;
+	new copy = chr_copy(chr);
+
+	//copy properties, only those really needed
+	chr_setProperty(copy,CP_CANTRAIN,_,chr_getProperty(chr,CP_CANTRAIN));
+	chr_setProperty(copy,CP_TAMED,_,chr_getProperty(chr,CP_TAMED));
+	chr_setProperty(copy,CP_SHOPKEEPER,_,chr_getProperty(chr,CP_SHOPKEEPER));
+	chr_setProperty(copy,CP_FROZEN,_,chr_getProperty(chr,CP_FROZEN));
+	chr_setProperty(copy,CP_DIR,_,chr_getProperty(chr,CP_DIR));
+	chr_setProperty(copy,CP_DIR2,_,chr_getProperty(chr,CP_DIR2));
+	chr_setProperty(copy,CP_FLAG,_,chr_getProperty(chr,CP_FLAG));
+	chr_setProperty(copy,CP_FLY_STEPS,_,chr_getProperty(chr,CP_FLY_STEPS));
+	chr_setProperty(copy,CP_HIDDEN,_,chr_getProperty(chr,CP_HIDDEN));
+	chr_setProperty(copy,CP_NPCWANDER,_,chr_getProperty(chr,CP_NPCWANDER));
+	chr_setProperty(copy,CP_OLDNPCWANDER,_,chr_getProperty(chr,CP_OLDNPCWANDER));
+	chr_setProperty(copy,CP_PRIV2,_,chr_getProperty(chr,CP_PRIV2));
+	chr_setProperty(copy,CP_REACTIVEARMORED,_,chr_getProperty(chr,CP_REACTIVEARMORED));
+	chr_setProperty(copy,CP_REGION,_,chr_getProperty(chr,CP_REGION));
+	chr_setProperty(copy,CP_SPEECH,_,chr_getProperty(chr,CP_SPEECH));
+
+	for(subprop = DAMAGE_PURE; subprop < MAX_RESISTANCE_INDEX; subprop++)
+		chr_setProperty(copy,CP_RESISTS,subprop,chr_getProperty(chr,CP_RESISTS,subprop));
+
+	chr_setProperty(copy,CP_PRIV,_,chr_getProperty(chr,CP_PRIV));
+	chr_setProperty(copy,CP_DAMAGETYPE,_,chr_getProperty(chr,CP_DAMAGETYPE));
+	chr_setProperty(copy,CP_ATT,_,chr_getProperty(chr,CP_ATT));
+	chr_setProperty(copy,CP_DEF,_,chr_getProperty(chr,CP_DEF));
+
+	for(subprop = CP2_EFF; subprop <= CP2_ACT; subprop++)
+		chr_setProperty(copy,CP_DEXTERITY,subprop,chr_getProperty(chr,CP_DEXTERITY,subprop)); 
+
+	chr_setProperty(copy,CP_FAME,_,chr_getProperty(chr,CP_FAME));
+
+	for(subprop = CP2_X; subprop <= CP2_Z; subprop++)
+	{
+		chr_setProperty(copy,CP_FPOS1_NPCWANDER,subprop,chr_getProperty(chr,CP_FPOS1_NPCWANDER,subprop)); 
+		chr_setProperty(copy,CP_FPOS2_NPCWANDER,subprop,chr_getProperty(chr,CP_FPOS2_NPCWANDER,subprop)); 
+	}
+
+	chr_setProperty(copy,CP_FTARG,_,chr_getProperty(chr,CP_FTARG));
+	chr_setProperty(copy,CP_HIDAMAGE,_,chr_getProperty(chr,CP_HIDAMAGE));
+	chr_setProperty(copy,CP_HOLDGOLD,_,chr_getProperty(chr,CP_HOLDGOLD));
+
+	for(subprop = CP2_EFF; subprop <= CP2_ACT; subprop++)
+		chr_setProperty(copy,CP_INTELLIGENCE,subprop,chr_getProperty(chr,CP_INTELLIGENCE,subprop)); 
+
+	chr_setProperty(copy,CP_KARMA,_,chr_getProperty(chr,CP_KARMA));
+	chr_setProperty(copy,CP_LODAMAGE,_,chr_getProperty(chr,CP_LODAMAGE));
+	chr_setProperty(copy,CP_NPCAI,_,chr_getProperty(chr,CP_NPCAI));
+	chr_setProperty(copy,CP_OWNSERIAL,_,chr_getProperty(chr,CP_OWNSERIAL));
+	chr_setProperty(copy,CP_POISON,_,chr_getProperty(chr,CP_POISON));
+	chr_setProperty(copy,CP_REATTACKAT,_,chr_getProperty(chr,CP_REATTACKAT));
+	chr_setProperty(copy,CP_REGENRATE,_,chr_getProperty(chr,CP_REGENRATE));
+	chr_setProperty(copy,CP_SPLIT,_,chr_getProperty(chr,CP_SPLIT));
+	chr_setProperty(copy,CP_SPLITCHNC,_,chr_getProperty(chr,CP_SPLITCHNC));
+
+	for(subprop = CP2_EFF; subprop <= CP2_ACT; subprop++)
+		chr_setProperty(copy,CP_STRENGTH,subprop,chr_getProperty(chr,CP_STRENGTH,subprop)); 
+
+	chr_setProperty(copy,CP_TAMING,_,chr_getProperty(chr,CP_TAMING));
+	chr_setProperty(copy,CP_BASESKILL,_,chr_getProperty(chr,CP_BASESKILL));
+
+	new string[100];
+	for(new prop = CP_STR_DISABLEDMSG; prop < CP_STR_TITLE; prop++)
+	{
+		chr_getProperty(chr,prop,0,string);
+		chr_setProperty(copy,prop,0,string);
+	}
+
+	//remove all weared items
+	new s = set_create();
+	set_addItemWeared(s,copy);
+	for(set_rewind(s); !set_end(s);)
+		itm_remove(set_getItem(s));
+
+	//duplicate original char's weared items and equip them to new char
+	set_delete(s);
+	s = set_create();
+	set_addItemWeared(s,chr);
+	new i;
+	for(set_rewind(s); !set_end(s);)
+	{
+		i = itm_duplicate(set_getItem(s));
+		chr_equip(copy,i);
+	}
+
+	return copy;
+}
+
+/*!
+\author Fax
+\fn chr_canReachItem(const chr, const itm);
+\param chr: the character
+\param itm: the item
+\since 0.82
+\brief checks if a character can reach an item
+
+The character can reach the item if this is within 1 tile from the character
+\return true or false
+\todo add Z check?
+*/
+stock chr_canReachItem(const chr, const itm)
+{
+	new x,y,z,x1,y1,z1;
+	chr_getPosition(chr,x,y,z);
+	itm_getPosition(itm,x1,y1,z1);
+	if(-1 <= x - x1 <= 1 && -1 <= y - y1 <= 1)
+		return true;
+	return false;
+}
+
+/*!
+\author Fax
+\fn chr_getMaxWeight(chr)
+\param chr: the character
+\since 0.82
+\brief returns the maximum weight a character can handle
+\return max weight, in tenths of stone
+*/
+stock chr_getMaxWeight(chr)
+{
+	return chr_getProperty(chr,CP_STRENGTH,CP2_STR)*35;
+}
+
+/*!
+\author Fax
+\fn chr_canMoveItem(const chr, const itm, const msg)
+\param chr: the character
+\param itm: the item
+\param msg: true to activate messages
+\since 0.82
+\brief checks if a character can move an item
+
+If msg == true then the character will receive messages in case the check fails,
+explaining why he can't move the item.<br>
+If the item is too far the function returns -1, if it can't be moved by the character the function returns 0,
+if it can be moved the function returns a number > 0.<br>
+In case of success the returned value is the ratio between the maximum weight the character can handle
+and the item's weight, in tenths (10 = 1, 15 = 1.5, 34 = 3.4 and so on).<br>
+See cmd_flip(const chr) for an example of how is this used.<br>
+
+\return -1, 0 or weight ratio
+*/
+stock chr_canMoveItem(const chr, const itm, const msg)
+{
+	if(!chr_canReachItem(chr,itm)) 
+	{
+		chr_message(chr,_,"You can't reach that! go closer!");
+		return -1;
+	}
+	
+	new ratio = (chr_getMaxWeight(chr)*10)/itm_getProperty(itm,IP_WEIGHT)
+	if(msg)
+		switch(ratio)
+		{
+			case 0..5: {chr_message(chr,_,"That's far beyond you possibilities"); return 0;}
+			case 6..9: {chr_message(chr,_,"It's too heavy for you, get stronger!"); return 0;}
+			case 10..14: {chr_message(chr,_,"You moved that"); return ratio;}
+			default: {chr_message(chr,_,"You easily moved that"); return ratio;}
+		}
+	
+	return ratio;
+}
+//===============================================================================//
+//                             ITEM HELP FUNCTIONS                               //
+//===============================================================================//
+
+/*!
+\author Fax
+\fn itm_flip(itm)
+\param itm:the item
+\since 0.82
+\brief flips an item
+
+The flip peditem's scriptID is stored in the itm's local var $localvar_flipitem 
+(defined in scripts/symbols/items/items.xss).<br>
+
+\return nothing
+*/
+stock itm_flip(itm)
+{
+	//check if item can be flipped
+	new var = getIntFromDefine("$localvar_flipitem");
+	if(!itm_isaLocalVar(itm,var)) return;
+	
+	//get the flippeditem scriptID and create a new item with the same properties as the previous
+	new scriptID = itm_getLocalIntVar(itm,var);
+	new flippedItem = itm_create(scriptID);
+	itm_copyProperties(itm,flippedItem);
+	
+	//move flipped item to old item's position
+	new x,y,z;
+	itm_getPosition(itm,x,y,z);
+	itm_moveTo(flippedItem,x,y,z);
+	
+	//remove old item and set flipped item's serial to old item's serial
+	itm_remove(itm);
+	//itm_setProperty(flippedItem,IP_SERIAL,_,itm);
+}
+
+/*!
+\author Fax
+\fn itm_copy(const item)
+\param item: the item to be copied
+\since 0.82
+\brief copies an item
+
+This function creates a new item with the same scriptID of the given item, note that
+the new item will have properties set to the standard value given in the XSS definition
+\see itm_duplicate(const item)
+\return copied item's serial
+*/
+stock itm_copy(const item)
+{
+	return itm_create(itm_getProperty(item,IP_SCRIPTID));
+}
+
+/*!
+\author Fax
+\fn itm_copyProperties(const item, const copy)
+\param item: the item the properties are copied from
+\param copy: the item the properties are copied to
+\since 0.82
+\brief copies an item's properties to another
+
+Use this function to transfer all properties from an item to another.<br>
+Not all properties are copied (because not all properties can be copied).<br>
+\return nothing
+*/
+stock itm_copyProperties(const item, const copy)
+{
+	for(new prop = IP_DOORDIR; prop <= IP_AUXDAMAGETYPE; prop++)
+		if(	//These properties must not be copied
+			106 <= prop <= 109 ||
+			prop == 116 || prop == 119 )
+			continue;
+		else itm_setProperty(copy,prop,_,itm_getProperty(item,prop));
+
+	for(new prop = IP_ATT; prop <= IP_AMMOFX; prop++)
+		if(	//These properties must not be copied
+			prop == 210 ||
+			prop == IP_POSITION ||
+			prop == IP_SERIAL ||
+			prop == IP_AMXFLAGS ||
+			prop == IP_ANIMID ||
+			prop == IP_SCRIPTID ||
+			prop == IP_TIME_UNUSED ||
+			prop == IP_TIME_UNUSEDLAST)
+			continue;
+		else itm_setProperty(copy,prop,_,itm_getProperty(item,prop));
+
+	for(new prop = IP_AMOUNT; prop < IP_ID; prop++)
+		itm_setProperty(copy,prop,_,itm_getProperty(item,prop));
+
+	new string[100];
+	for(new prop = IP_STR_CREATOR; prop < IP_STR_NAME2; prop++)
+	{
+		itm_getProperty(item,prop,0,string);
+		itm_setProperty(copy,prop,0,string);
+	}
+}
+
+/*!
+\author Fax
+\fn itm_duplicate(const item)
+\param item: the item
+\since 0.82
+\brief duplicates an item
+
+The returned item will have all the properties set to the starting item's ones
+\see itm_copy(const item)
+\return new item's serial
+*/
+stock itm_duplicate(const item)
+{
+	new copy = itm_copy(item)
+	itm_copyProperties(item,copy);
+	return copy;
+}

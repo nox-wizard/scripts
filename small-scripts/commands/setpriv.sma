@@ -56,7 +56,7 @@ public cmd_setpriv(const chr)
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 		{
 				chr2 = set_getChar(area_chars(area));
-				if(chr2 != chr) chr_setLocalIntVar(chr2,CLV_PRIVLEVEL,priv);
+				if(chr2 != chr) chr_setProperty(chr2,CP_PRIVLEVEL,_,priv);
 		}
 
 		chr_message(chr,_,"Privlevel set to %d characters ",i);
@@ -79,10 +79,8 @@ public cmd_setpriv_targ(target, chr, object, x, y, z, unused, priv)
 	if(isChar(object))
 	{	
 		chr_setProperty(object,CP_PRIVLEVEL,_,priv);
-		chr_setLocalIntVar(object,CLV_PRIVLEVEL,priv);
-		chr_message(chr,_,"Privlevel set to %d",chr_getLocalIntVar(object,CLV_PRIVLEVEL));
-		chr_message(object,_,"Your privlevel has been modified,now it's %d",chr_getLocalIntVar(object,CLV_PRIVLEVEL));
-		log_message("Charcter %d privlevel changed, now it's %d",object,chr_getLocalIntVar(object,CLV_PRIVLEVEL));
+		chr_message(chr,_,"Privlevel set to %d",chr_getProperty(object,CP_PRIVLEVEL));
+		chr_message(object,_,"Your privlevel has been modified,now it's %d",chr_getProperty(object,CP_PRIVLEVEL));
 	}
 	else chr_message(chr,_,"You must target a character");
 }

@@ -1,4 +1,3 @@
-
 /*
 \fn __charLogin(const chr)
 \param chr: the character who is logging in
@@ -7,25 +6,34 @@
 Use this function to call a script at character login, do not put code in the function but call
 an extern function
 */
-
 public __charLogin(const chr)
 {
 	if( chr_isNpc (chr)) return;
+	
+	printf("^n");
+	log_message(" == STARTING LOGIN SCRIPTS FOR CHARACTER %d ==",chr);
+	
+	//reset local vars
+	globaltags(chr);
 	
 	//defined in small-scripts/comands.sma
 	startCommandSystem(chr); 
 		
 	//defined in "small-scripts/skills/extendedSkillsystem.sma"
 	startExtSkillsystem(chr);
-			
-	globaltags(chr);
+		
+	itm_potionStart(chr);
 	
-	itm_potionStart(chr);//every function you want to start with char login put in here
-	
-	hungerandthirst(chr);
 	
 	//defined in "small-scripts/comands/page/pagesystem.sma"
 	addOnlineStaff(chr);
+	
+	hungerandthirst(chr);
+	
+	//put here any function you want to be executed at character login
+	
+	
+	log_message(" ============ END OF LOGIN SCRIPTS ============");
 }
 
 
@@ -57,6 +65,13 @@ for (globalVar = 1002; globalVar < (1001+NumGlobalVars); globalVar++)
         printf("char %d got global var %d^n", c, globalVar);
         }
     }
+    
+    //delete temp variables - they shouldn't exist, but let's delete them for safety.
+    	
+    	log_message("Cleaning temp local vars");
+	for(new p = CLV_TEMP1; p <= CLV_CMDTEMP; p++)
+		chr_delLocalVar(c,p);
+	
 }
 
 // Hungersystem starts here

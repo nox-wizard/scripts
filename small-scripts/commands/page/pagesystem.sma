@@ -1,7 +1,7 @@
 #include "small-scripts/commands/page/constants.sma"
 
 /*!
-\defgroup script_commands_pagesystem
+\defgroup script_commands_pagesystem page system functions
 \ingroup script_commands
 
 @{
@@ -105,7 +105,7 @@ public removeOnlineStaff(const chr)
 \since 0.82
 \brief sends a message to all onlie pageable staff to inform them that someone is solving a page
 
-Sends a message to all onlie pageable staff to inform them that someone is solving a page.<br>
+Sends a message to all online pageable staff to inform them that someone is solving a page.<br>
 The message says if the page is being solved or if it's already solved.
 
 \return nothing

@@ -1,7 +1,7 @@
 #include "small-scripts/commands/page/pagemenu.sma"
 
 /*!
-\defgroup script_commands_pagelist
+\defgroup script_commands_pagelist 'pagelist
 \ingroup script_commands
 
 @{

@@ -14,11 +14,11 @@
 <B>syntax:<B> 'help [topic]
 <B>command params:</B>
 <UL>
-<LI> topic: the topic you need helpon,to be choosen from topic list
+<LI> topic: the topic you need help on,to be choosen from topic list
 </UL>
 
 Shows a little guide on various topics, you can define topics and text in commands/help/helpTopics.txt.
-The textwill be shown in a gump.<br>
+The text will be shown in a gump.<br>
 If you don't specify any parameters a topic list will be shown.
 */
 public cmd_help(const chr)
@@ -38,26 +38,32 @@ public cmd_help(const chr)
 
 	trim(topic);
 
-	for(new i; i < NUM_HELP_TOPICS && strlen(helpTopics[i][__helpTopic]);i++)
-	{
+	for(new i; i < NUM_LOADED_TOPICS; i++)
 		if(!strcmp(helpTopics[i][__helpTopic],topic))
 		{
-			printf("sending message^n");
-			chr_message(chr,_,"%s",helpTopics[i][__helpText]);
+			cmd_help_showTopic(INVALID,chr,i + 1);
 			return;
 		}
-	}
 
-	chr_message(chr,_,"Help is not available for that topic, you can ask the staff to write it");
-
+	popupMenu(chr,topic,"Help is not available for that topic.^nYou can ask the staff to write it");
 }
 
 public cmd_help_showTopicList(chr)
 {
-	chr_message(chr,_,"Available help topics:");
-	for(new i; i < NUM_HELP_TOPICS && strlen(helpTopics[i][__helpTopic]);i++)
-		chr_message(chr,_,"%s",helpTopics[i][__helpTopic]);
+	cursor_setProperty(CRP_TAB,40);
+	createListMenu(30,30,20,30,NUM_LOADED_TOPICS,"Available topics","cmd_help_listTopic","cmd_help_showTopic")
+	menu_show(chr);
+}
 
+public cmd_help_listTopic(page,line,col,i)
+{
+	menu_addLabeledButton(i + 1,helpTopics[i][__helpTopic]);
+}
+
+public cmd_help_showTopic(menu,chr,topic)
+{
+	if(!topic) return;
+	popupMenu(chr,helpTopics[topic - 1][__helpTopic],helpTopics[topic - 1][__helpText]);
 }
 
 public loadHelpTopics()
@@ -70,7 +76,7 @@ public loadHelpTopics()
 		return;
 	}
 
-	log_message("Loading help topics for 'help command...");
+	log_message("^t->Loading help topics for 'help command...");
 
 	new buffer[200],cmd[50],i;
 	for(i = 0; i < NUM_HELP_TOPICS; i++)
@@ -103,11 +109,11 @@ public loadHelpTopics()
 			file_read(file,buffer);
 		}
 	}
-
-	log_message("%d help topics loaded",i);
+	
+	NUM_LOADED_TOPICS = i;
+	log_message("^t->%d help topics loaded",NUM_LOADED_TOPICS);
 	if(!file_eof(file))
 		log_warning("helpTopics[][] is undersized, increas it's size in small-scripts/commands/help/constant.sma",i);
 	
 	file_close(file);
-	printf("^n");
 }

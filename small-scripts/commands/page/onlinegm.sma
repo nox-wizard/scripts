@@ -1,7 +1,7 @@
 #include "small-scripts/commands/page/constants.sma"
 
 /*!
-\defgroup script_commands_onlinegm
+\defgroup script_commands_onlinegm 'onlinegm
 \ingroup script_commands
 
 @{

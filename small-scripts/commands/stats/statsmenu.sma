@@ -2,6 +2,8 @@
 	#endinput
 #endif
 #define statsmenu_included
+
+#define TXT_COLOR 33
 /*!
 \defgroup script_command_stats_menu menu
 \ingroup script_commands_stats
@@ -13,7 +15,7 @@ public menu_stats_char( const caller, const chr, const edit )
 	new menu = gui_create( 50, 50, true, true, true, "handle_stats_char" );
 	gui_addGump( menu, 0, 0, 0x04CC, 0 );
 	
-	chr_setLocalIntVar(caller,CLV_CMDTEMP,chr);	
+	chr_addLocalIntVar(caller,CLV_CMDTEMP,chr);	
 
 	if(edit) gui_addButton( menu, 250, 265, 0x084A, 0x084B, 1 );
 
@@ -44,6 +46,7 @@ public handle_stats_char( const menu, const caller, const button )
 		return;
 
 	new buffer[5],chr = chr_getLocalIntVar( caller, CLV_CMDTEMP);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
 	
 	gui_getProperty(menu,MP_UNI_TEXT,0,buffer);
 	if(isStrInt(buffer))

@@ -55,7 +55,7 @@ static areas[MAX_AREAS][areaParams];
 public resetCmdAreas()
 {
 	#if _CMD_DEBUG_
-		printf("DEBUG: Resetting command areas^n");
+		log_message("^t->Resetting command areas");
 	#endif
 
 	new area;

@@ -73,7 +73,7 @@ public cmd_damage(const chr)
 	}
 
 	//if we are here it means we need a target
-	chr_setLocalIntVar(chr,CLV_CMDTEMP,stat);
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,stat);
 	chr_message(chr,_,"Select a character to damage");
 	target_create(chr,amount,_,_,"cmd_damage_targ");
 }
@@ -87,7 +87,10 @@ public cmd_damage(const chr)
 public cmd_damage_targ(target, chr, object, x, y, z, unused, damage)
 {
 	if(isChar(object))
+	{
 		chr_applyDamage(object,damage,DAMAGE_PURE,chr_getLocalIntVar(chr,CLV_CMDTEMP));
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+	}
 	else chr_message(chr,_,"You must target a character");
 }
 

@@ -186,7 +186,7 @@ public addgui_magic_cback(menu,chr,btncode)
 
 	else
 	{
-		chr_setLocalIntVar(chr,CLV_CMDTEMP,n);
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
 		chr_message(chr,_,"click to position the item");
 		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 	}
@@ -595,7 +595,7 @@ public addgui_npc_cback(menu,chr,scriptID)
 		n = 1;
 	else n = str2Int(amount);
 
-	chr_setLocalIntVar(chr,CLV_CMDTEMP,n);
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
 	chr_message(chr,_,"click to position the NPC");
 	target_create(chr,scriptID,_,_,"cmd_add_npc_targ");
 }
@@ -717,7 +717,7 @@ public addgui_supply_cback(menu,chr,btncode)
 
 	else
 	{
-		chr_setLocalIntVar(chr,CLV_CMDTEMP,n);
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
 		chr_message(chr,_,"click to position the item");
 		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 	}
@@ -767,13 +767,13 @@ public addgui_signs(chr,unused,unused2)
 	new starty = cursor_y();
 	new i_col = 14;
 	
-	cursor_setProperty(CRP_TAB,2*tab);
+	cursor_setProperty(CRP_TAB,(15*tab)/10);
 	cursor_setProperty(CRP_INTERLINE,INTERLINE_DOUBLE);
 	for(new p = 1; p <= SIGNS_MENU_ENTRIES; p++)
 	{
 		menu_addPage(p);
 		cursor_goto(cursor_x(),starty);
-		numentries = __listAllocationMap[P_BEVERAGES + p - 1];
+		numentries = __listAllocationMap[P_WORKER + p - 1];
 		if(addItemList(numentries,i_col,idx,1,1)) error = 1;
 		idx += numentries;
 	}
@@ -823,7 +823,7 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 	menu_addLabeledInputField(1,"stone",10,"Material: ");
 	cursor_newline();
 	
-	menu_addLabeledInputField(2,"0",10,"Subtype: ");
+	menu_addLabeledInputField(2,"1",10,"Subtype: ");
 	cursor_newline();
 	
 	menu_addLabeledButton(1,"Open menu");
@@ -839,8 +839,8 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 	menu_addText("wall: stone, brick, log, marble, rattan, hide, tent, ruined^n");	
 	menu_addText("      sandstone, wooden, bamboo, plaster, cave, dungeon^n");	
 	menu_addText("stairs: marble, stone, sandstone, wooden, carpeted, cave^n");	
-	menu_addText("floor: marble, sandstone, planks, boards, logs, bricks, tiles^n");
-	menu_addText("       flagstones, cobblestones, cave^n");			
+	menu_addText("floor: alchemical, marble, sandstone, planks, boards, logs, bricks^n");
+	menu_addText("       tiles, flagstones, cobblestones, cave^n");			
 	menu_addText("roof: stone, slate, tiles, palm, logs, tent, thatch^n");		
 	menu_addText("door: metal, wooden, rattan^n");					
 	menu_addText("gate: iron, wooden^n^n");						
@@ -864,7 +864,7 @@ public addgui_arch_cback(menu,chr,btncode)
 		sprintf(title,"%s %s %s",material,type,subtype);
 		sprintf(type,"_%s",type);
 		if(strcmp(material,"")) sprintf(material,"_%s",material);
-		if(!strcmp(subtype,"0") || !strcmp(subtype,"1")) sprintf(subtype,"");
+		if(!strcmp(subtype,"0")) sprintf(subtype,"");
 	
 		sprintf(basedef,"$item%s%s%s",material,type,subtype);
 
@@ -876,7 +876,7 @@ public addgui_arch_cback(menu,chr,btncode)
 	
 	if(getIntFromDefine(def,false) <= 0)
 	{
-		chr_message(chr,_,"%s %s %s is not defined",material,type,subtype);
+		chr_message(chr,_,"%s is not defined",def);
 		return;
 	}
 
@@ -1031,7 +1031,7 @@ public addgui_furniture(chr,itemsInBackpack,amount)
 				cursor_goto(cursor_x(),startRow); 
 			}
 			
-			menu_addButton(i);
+			menu_addButton(idx + i + 1);
 			
 			cursor_move(menu_getProperty(MP_BUTTON_WIDTH),0);
 			menu_addTilePic(__addMenuList[idx + i][__ID]);
@@ -1042,7 +1042,6 @@ public addgui_furniture(chr,itemsInBackpack,amount)
 	}
 	
 	menu_show(chr);
-	cursor_restoreDefaults();
 }
 
 /*!
@@ -1065,7 +1064,7 @@ public addgui_furniture_cback(menu,chr,idx)
 	if(strlen(material)) sprintf(material,"%s",material);
 
 	new def[100];
-	sprintf(def,"$item_%s_%s",material,__addMenuList[FURNITURE_MENU_IDX + idx][__def]);
+	sprintf(def,"$item_%s_%s",material,__addMenuList[idx][__def]);
 	target_create(chr,getIntFromDefine(def,false),_,_,"cmd_add_itm_targ");
 	addgui_furniture(chr,false,1);
 
@@ -1186,7 +1185,7 @@ public addgui_tools_cback(menu,chr,btncode)
 
 	else
 	{
-		chr_setLocalIntVar(chr,CLV_CMDTEMP,n);
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
 		chr_message(chr,_,"click to position the item");
 		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 	}

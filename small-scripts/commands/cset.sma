@@ -68,7 +68,7 @@ public cmd_cset(const chr)
 	}
 
 	//store parameters to be read by the callback
-	chr_setLocalIntVar(chr,CLV_CMDTEMP,prop);
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,prop);
 
 	chr_message(chr,_,"Select a character to set the %s",__cmdParams[0]);
 	target_create(chr,val,_,_,"cmd_cset_targ");
@@ -83,6 +83,7 @@ public cmd_cset(const chr)
 public cmd_cset_targ(target, chr, object, x, y, z, unused, val)
 {
 	new prop = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isChar(object))
 	{

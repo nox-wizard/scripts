@@ -96,6 +96,7 @@ enum
 		_skInt,			//<! how much int influences skill value in %
 		_skUnhideOnFail,	//<! true if character is unhidden when fails skill check
 		_skUnhideOnUse,		//!< true if charcater is unhidden when he uses the skill
+		_skDirectlyUsable	//!< true if is directly usable from skillmenu (blue button)
 	}	//<! skill data type, you can modify this to your needs, but remember to update __skillinfo[][] too
 	
 	new SK_ADDITIONAL_COUNT = 0;	//!< skills loaded from skills2.sma - DO NOT TOUCH!
@@ -127,7 +128,7 @@ public skillName[SK_STD_COUNT + SK_ADDITIONAL_MAX][] =
 	"Cooking",
 	"Detecting hidden",
 	"Enticement",
-	"Evaluating intelligence",
+	"Ev. intelligence",
 	"Healing",
 	"Fishing",
 	"Forensic",
@@ -236,7 +237,7 @@ This array contains the names of the functions called to execute
 a skill.
 Changing values in the array will cause a different function to be called to execute a skill
 */
-public __skillFunctions[SK_STD_COUNT][] = {
+public __skillFunctions[SK_STD_COUNT + SK_ADDITIONAL_MAX][] = {
 	"__nxw_sk_alchemy",
 	"__nxw_sk_anatomy",
 	"__nxw_sk_animalLore",
@@ -285,7 +286,17 @@ public __skillFunctions[SK_STD_COUNT][] = {
 	"__nxw_sk_mining",
 	"__nxw_sk_meditation",
 	"__nxw_sk_stealth",
-	"__nxw_sk_removeTrap"
+	"__nxw_sk_removeTrap",
+	"additional skill 1             ",
+	"additional skill 2             ",
+	"additional skill 3             ",
+	"additional skill 4             ",
+	"additional skill 5             ",
+	"additional skill 6             ",
+	"additional skill 7             ",
+	"additional skill 8             ",
+	"additional skill 9             ",
+	"additional skill 10            "
 	};
 
 /* @}*/

@@ -1,7 +1,11 @@
 
 #include "small-scripts/API/set.api"
-#define TXT_COLOR 33
 
+/*!
+\defgroup script_API_gui_menu menu library
+\ingroup script_API_gui
+@{
+*/
 enum
 {
 	MP_BUTTON_UP = 0,  	//!< buttons up gump
@@ -28,9 +32,7 @@ enum
 	MP_COUNT
 }
 
-/*!
-menu properties array
-*/
+
 static mp[MP_COUNT] =
 {
 	0x29F4,  	
@@ -53,7 +55,7 @@ static mp[MP_COUNT] =
 	
 	33,
 	1310
-}
+}; //!< menu properties array
 
 static currentMenu; //!< current menu serial
 
@@ -64,13 +66,32 @@ static currentMenu; //!< current menu serial
 \param callback[]: menu callback
 \since 0.82
 \brief creates a menu
+
+Creates a menu object, with no graphics on it, 
+use this function if you want to create a fully customized menu
 \return the menu serial
 */
 stock createMenu(startx,starty,callback[])
 {
-	return gui_create(startx,starty,true,true,true,callback);
+	currentMenu = gui_create(startx,starty,true,true,true,callback);
+	return currentMenu;
 }
 
+/*!
+\author Fax
+\fn menu_delete()
+\since 0.82
+\brief deletes current menu
+
+If the menu was shown to someone it will not be closed! This function is to be used if you
+want to delete a menu wich will never be shown.
+\return nothing
+*/
+stock menu_delete()
+{
+	gui_delete(currentMenu);
+	currentMenu = INVALID;
+}
 /*!
 \author Fax
 \fn menu_drawStandardFrame(rows1,rows2,cols)
@@ -87,7 +108,10 @@ It's formed by:
  - background: a background that contains both the header and the body
  
 This functions sets the menu interline and grid to the standard values.<BR>
-After the function call the cursor is in the top left corner of the header
+After the function call the cursor is in the top left corner of the header.
+<br>
+Modify this function to give to all yourmenus the standard apearance you prefer, here
+you can define the menu styleof your shard's menus
 \return nothing
 */
 static menu_drawStandardFrame(rows1,rows2,cols)
@@ -110,7 +134,7 @@ static menu_drawStandardFrame(rows1,rows2,cols)
 	cursor_move(0,(rows1 + rows2 + n - 2)*grid_y);
 	
 	new noxTag[] = "NOX Wizard 0.82"
-	cursor_right(cols/2 - 1 - strlen(noxTag)/2);
+	cursor_right(cols/2 - 3 - strlen(noxTag)/2);
 	menu_addTitle(noxTag);
 		
 	cursor_setProperty(CRP_MAX_X,cursor_getProperty(CRP_START_X) + cols*grid_x);
@@ -138,7 +162,7 @@ stock createFramedMenu(startx,starty,rows1,rows2,cols,callback[])
 {
 	cursor_setProperty(CRP_START_X,startx);
 	cursor_setProperty(CRP_START_Y,starty);
-	currentMenu = createMenu(startx,starty,callback);
+	createMenu(startx,starty,callback);
 	menu_drawStandardFrame(rows1,rows2,cols);
 	return currentMenu;
 }
@@ -149,7 +173,7 @@ stock createFramedMenu(startx,starty,rows1,rows2,cols,callback[])
 \param startx,starty: top left corner coords
 \param rows: body rows
 \param cols: width in columns
-\param title[]:menu title
+\param title[]: menu title
 \param callback[]: menu callback
 \since 0.82
 \brief draws a standard menu
@@ -161,7 +185,7 @@ so calling cursor_reset() the cursor will be put in the top left corner of the b
 */
 stock createStdMenu(startx,starty,rows,cols,title[],callback[])
 {
-	currentMenu = createFramedMenu(startx,starty,1,rows,cols,callback);
+	createFramedMenu(startx,starty,1,rows,max(cols,strlen(title) + 2),callback);
 	cursor_right(cols/2 - strlen(title)/2);
 	menu_addTitle(title);
 	cursor_newline(3)
@@ -171,31 +195,30 @@ stock createStdMenu(startx,starty,rows,cols,title[],callback[])
 
 /*!
 \author Fax
-\fn popupMenu(chr,title[],message[])
-\param chr: the character
-\param title[]:popup title
-\param message[]:popup message
+\fn createPopupMenu(title[],message[])
+\param title[]: popup title
+\param message[]: popup message
 \since 0.82
-\brief makes a popup menu
+\brief creates a popup menu
 
 A popup menu is a standard menu wich contains a title and a message,it can only be closed by the user.<BR>
 The menu will be automatically sized to fit the message, you can use newline characters ('^n') in the message
 and they will be correctly read.
-\return nothing
+\return the menu serial
 */
-stock popupMenu(chr,title[],message[])
+stock createPopupMenu(title[],message[])
 {
 	//count newlines and find the longest line
-	new lines = 1;
-	new maxl,l = strlen(message);
+	new lines = 0;
+	new maxl,lastn,l = strlen(message);
 	for(new i = 0; i <= l; i++)
-		if(message[i] == '^n')
+		if(message[i] == '^n' || message[i] == 0)
 		{ 
 			lines++;
-			if(i - maxl + 1 > maxl) maxl = i - maxl + 1;
+			if(i - lastn + 1 > maxl) maxl = i - lastn + 1;
+			lastn = i;
 		}
 	
-	if(maxl == 0) maxl = l;
 	createStdMenu(100,100,lines,maxl,title,"popup_cback");
 	
 	replaceStr(message," ","_"); //we must do this or we won't be able to tokenize the string correctly
@@ -209,9 +232,13 @@ stock popupMenu(chr,title[],message[])
 		menu_addText(token);
 		cursor_newline();
 	}
-	menu_show(chr);
+	
+	return currentMenu;
 }
 
+/*!
+brief standard callback for popups, empty
+*/
 public popup_cback()
 {
 	return;	
@@ -242,22 +269,22 @@ The list appearance is not defined: for each list item the function will call th
 a function provided by you that will draw the item.<BR>
 The callback prototype must be:
 \code
-public callback(page,line,col,i,set)
+public callback(page,line,col,i)
 \endcode
 where:<BR>
 - page: is the current page in the menu
 - line: is the current line in the page
 - col: is the current column
-- i: is the current list line
+- i: is the current list line, 0 based
 To better understand how this works take a look at the locationsMenu.sma script or addmenu.sma.<BR>
-The 'menuCallback' is the real menu callback,that one that is called on menu events.
- 
+The 'menuCallback' is the real menu callback,that one that is called on menu events.<br>
+After every callback call the cursor is moved to the next line.
 \return the menu serial
 */
 stock createListMenu(startx,starty,rows,cols,nitems,title[],callback[],menuCallback[])
 {
 	
-	new menu = createFramedMenu(startx,starty,2,rows,cols,menuCallback);
+	createFramedMenu(startx,starty,2,rows,cols,menuCallback);
 		
 	cursor_right(cols/2 - strlen(title)/2);
 	menu_addTitle(title);
@@ -298,14 +325,14 @@ stock createListMenu(startx,starty,rows,cols,nitems,title[],callback[],menuCallb
 		}
 		else line++;
 	}
-	return menu;
+	return currentMenu;
 }
 
 static setListCallback[AMX_FUNCTION_LENGTH],setListSet;
 
 /*!
 \author Fax
-\fn createSetListMenu(startx,starty,rows,cols,set,title[],callback[],menuCallback[])
+\fn createSetListMenu(startx,starty,rows,cols,set,title[],callback[],menuCback[])
 \param startx,starty: top left corner coords
 \param rows: menu body height in rows
 \param cols: menu width in columns
@@ -358,11 +385,31 @@ stock menu_getProperty(prop)
 
 /*!
 \author Fax
+\fn menu_setProperty(prop,value)
+\param prop: the property to be set
+\param value: the value
+\since 0.82
+\brief sets a menu property
+
+Use this function to change the menu appearance, make all you property modifications
+BEFORE starting to build the menu
+\return the property value
+*/
+stock menu_setProperty(prop,value)
+{
+	mp[prop] = value;
+}
+
+/*!
+\author Fax
 \fn menu_storeValue(idx,value)
 \param idx: index
-\param value:value to be stored
+\param value: value to be stored
 \since 0.82
 \brief stores a value in an array
+
+Used to pass parameters to the callback, store values into the menu and then read them in the
+callback with menu_readValue()
 \return nothing
 */
 stock menu_storeValue(idx,value)
@@ -377,6 +424,8 @@ stock menu_storeValue(idx,value)
 \param idx: index
 \since 0.82
 \brief reads a value from an array
+
+Used to pass parameters to the callback,store values with menu_storeValue()
 \return nothing
 */
 
@@ -384,6 +433,7 @@ stock menu_readValue(menu,idx)
 {
 	return gui_getProperty(menu,MP_BUFFER,idx);
 }
+
 /*!
 \author Fax
 \fn menu_setCurrent(menu)
@@ -406,9 +456,9 @@ stock menu_setCurrent(menu)
 
 /*!
 \author Fax
-\fn addColorText(text[],color)
+\fn menu_addColorText(text[],color)
 \param text[]: the text to be added
-\param color:the color
+\param color: the color
 \since 0.82
 \brief adds color text to the menu
 
@@ -419,12 +469,12 @@ If the last n characters are newlines ('^n') n cursor_newline() are called
 stock menu_addColorText(text[],color)
 {
 	gui_addText(currentMenu,cursor_x(),cursor_y(),color,text);
-	for(new i = strlen(text); text[i - 1] == '^n'; i--) cursor_down();
+	for(new i = strlen(text); text[i - 1] == '^n'; i--) cursor_newline();
 }
 
 /*!
 \author Fax
-\fn addText(text[])
+\fn menu_addText(text[])
 \param text[]: the text to be added
 \since 0.82
 \brief adds text to the menu
@@ -440,7 +490,7 @@ stock menu_addText(text[])
 
 /*!
 \author Fax
-\fn addTitle(text[])
+\fn menu_addTitle(text[])
 \param text[]: the text to be added
 \since 0.82
 \brief adds title colored text to the menu
@@ -456,26 +506,40 @@ stock menu_addTitle(text[])
 
 /*!
 \author Fax
-\fn menu_addCheckBox(checked,id)
+\fn menu_addCheckBox(checked,id,...)
 \param checked: true if the checkbox is checked by default
 \param id: checkbox id
+\param 3: gump on
+\param 4: gump off
 \since 0.82
 \brief adds a checkbox to the menu
 
 The checkbox is positioned at the cursor's position
+If params 3 or 4 are set they override the standard on and off checkbox gumps
 \return nothing
 */
-stock menu_addCheckBox(checked,id)
+stock menu_addCheckBox(checked,id,...)
 {
-	gui_addCheckbox(currentMenu,cursor_x(),cursor_y(),mp[MP_CHECKBOX_ON],mp[MP_CHECKBOX_OFF],checked,id)
+	//handle custom gumps
+	new gumpOn = mp[MP_CHECKBOX_ON];
+	new gumpOff = mp[MP_CHECKBOX_OFF];
+	if(numargs() > 2)
+	{
+		gumpOn = getarg(2);
+		if(numargs() > 3)
+			gumpOff = getarg(3);
+	}
+	gui_addCheckbox(currentMenu,cursor_x(),cursor_y(),gumpOn,gumpOff,checked,id);
 }
 
 /*!
 \author Fax
-\fn menu_addLabeledCheckBox(checked,id,label[])
+\fn menu_addLabeledCheckbox(checked,id,label[],...)
 \param checked: true if the checkbox is checked by default
 \param id: checkbox id
 \param label[]: the label
+\param 4:
+\param 5:
 \since 0.82
 \brief adds a labeled checkbox to the menu
 
@@ -483,9 +547,15 @@ The checkbox is positioned at the cursor's position, the label starts just after
 \return nothing
 */
 
-stock menu_addLabeledCheckbox(checked,id,label[])
+stock menu_addLabeledCheckbox(checked,id,label[],...)
 {
-	menu_addCheckBox(checked,id);
+	//handle custom gumps
+	if(numargs() > 3)
+		if(numargs() > 4)
+			menu_addCheckBox(checked,id,getarg(3),getarg(4));
+		else menu_addCheckBox(checked,id,getarg(3));		
+	else menu_addCheckBox(checked,id);
+	
 	cursor_move(mp[MP_CHECKBOX_WIDTH],0);
 	menu_addText(label);
 	cursor_move(-1*mp[MP_CHECKBOX_WIDTH],0);
@@ -584,7 +654,7 @@ stock menu_addLabeledPageButton(page,label[])
 
 /*!
 \author Fax
-\fn menu_addButton(btncode)
+\fn menu_addButton(btncode,...)
 \param btncode: the button return code
 \since 0.82
 \brief adds a button to the menu
@@ -592,9 +662,18 @@ stock menu_addLabeledPageButton(page,label[])
 The button is added at cursor's position
 \return nothing
 */
-stock menu_addButton(btncode)
+stock menu_addButton(btncode,...)
 {
-	gui_addButton(currentMenu,cursor_x(),cursor_y(),mp[MP_BUTTON_UP],mp[MP_BUTTON_DOWN],btncode);
+	//handle custom gumps
+	new gumpUp = mp[MP_BUTTON_UP];
+	new gumpDown = mp[MP_BUTTON_DOWN];
+	if(numargs() > 1)
+	{
+		gumpUp = getarg(1);
+		if(numargs() > 2)
+			gumpDown = getarg(2);
+	} 
+	gui_addButton(currentMenu,cursor_x(),cursor_y(),gumpUp,gumpDown,btncode);
 }
 
 
@@ -737,15 +816,34 @@ stock menu_broadcast()
 
 /*!
 \author Fax
-\fn broadcastPopup()
+\fn popupMenu(chr,title[],message[])
+\param chr: the character
+\since 0.82
+\brief
+\return nothing
+*/
+stock popupMenu(chr,title[],message[])
+{
+	createPopupMenu(title,message);
+	menu_show(chr);
+}
+
+/*!
+\author Fax
+\fn broadcastPopup(title[],message[])
+\param title[]: the popup title
+\param message[]: the popup message
 \since 0.82
 \brief shows a popup to all online players
 \return nothing
 */
 stock broadcastPopup(title[],message[])
 {
+	createPopupMenu(title,message);
 	new s = set_create();
 	set_addAllOnlinePl(s);
 	for(set_rewind(s);!set_end(s);)
-		popupMenu(set_getChar(s),title,message);
+		menu_show(set_getChar(s));
 }
+
+/*! @}*/ 

@@ -8,100 +8,119 @@ Between the blank line and the next TOPIC you can write what you want, it won't 
 
 TOPIC commands
 TEXT
-NOX wizard allows users to use ingame commands to interact with the emulator.
-An ingame command is an ' followed by the command name (i.e.: 'add 'wipe 'skills).
-If you give wrong parameters to a command the command will tell you what parameters it needs.
-To have hints on commands use the command's name as help topic (i.e.: help add).
-For detailed description about commands parameters please refer to the documentation.
-
-TOPIC commands list
-TEXT
-These commands are available at present: (to be finished)
+NOX wizard allows users to use ingame commands
+to interact with the emulator.
+An ingame command is an ' followed by the command name
+(i.e.: 'add 'wipe 'skills).
+If you give wrong parameters to a command usually 
+it will tell you what parameters it needs.
+To have hints on commands use the command 
+as help topic (i.e.: help 'add).
+For detailed description about commands parameters 
+please refer to the documentation.
 
 TOPIC privlevel
 TEXT
-Your privlevel defines whether you can access a command or not, more powerful commands require higher privlevels.
-Your privlevel can be set by the shard admins, by default you are a 'player'.
+Your privlevel defines whether you can access a 
+command or not, more powerful commands require 
+higher privlevels.
+Your privlevel can be set by the shard admins,
+by default you are a 'player'.
 
 ====== HERE START THE COMMANDS HELP TOPICS =======
-TOPIC action
+TOPIC 'action
 TEXT
 Makes a character perform an action
 sysntax: 'action actionnumber
 
-TOPIC add
+TOPIC 'add
 TEXT
 Adds items characters to the world
 syntax: 'add [ID/scriptID][amount]
 If no params are specified the add menu is opened.
+If you give a generic word as parameter ('add forge)
+you will be prompted to choosefrom a list of
+possible items
 
-TOPIC align
+TOPIC 'align
 TEXT
 Alignes an object to another, or to a map location
 syntax: 'align x/y/z
-Target reference object or location and then the object to be aligned.
+Target reference object or location and then 
+the object to be aligned.
 
-TOPIC area
+TOPIC 'area
 TEXT
 sets a command area for a character
 syntax: 'area [R] ["itm"/"chr"/"all"] [duration]
-Command area are used to perform many commands on all objects in an area without having to select the area each time.
-'area without parameters sets a default area or deletes a previously defined one.
+Command areas are used to perform many commands on 
+all  objects in an area without having to select 
+the area each time.
+'area without parameters sets a default area or 
+deletes a previously defined one.
 
-TOPIC cset
+TOPIC 'cset
 TEXT
 Sets a character's property
 syntax: 'cset property value 
 
-TOPIC csetxyz
+TOPIC 'csetxyz
 TEXT
-Sets a 3-value character's property (like food position)
+Sets a 3-value character's property (like food 
+position)
 syntax: 'csetxyz property x y z
 
-TOPIC damage
+TOPIC 'damage
 TEXT
 Damages a character
 syntax: 'damage [amount]["hp"/"stam"/"mana"]
 You can specify wich stat you want to damage
 
-TOPIC decay
+TOPIC 'decay
 TEXT
 Sets item's decay time
 syntax: 'decay decayTime/"off" 
 'decay off makes the item not decay
 
-TOPIC dye
+TOPIC 'dye
 TEXT
 Dyes an item
 syntax: 'dye color 
 
-TOPIC dupe
+TOPIC 'dupe
 TEXT
 Duplicates an item
 syntax: 'dupe 
 
-TOPIC freeze
+TOPIC 'flip
+TEXT
+flips an item. 
+Flipping an item causes stamina loss unless you are 
+a Seer or higher.
+syntax: 'flip
+
+TOPIC 'freeze
 TEXT
 Freezes or unfreezes a character
 syntax: 'freeze "on"/"off"
 
-TOPIC fullstats
+TOPIC 'fullstats
 TEXT
 Raises all character's stats to their maximum
 syntax: 'fullstats
 
-TOPIC func
+TOPIC 'func
 TEXT
 Calls a Small public function
 syntax: 'func function [param0][param1][param2][param3][param4]
 Parameters can only be integers
 
-TOPIC gmopen
+TOPIC 'gmopen
 TEXT
 Opens a character's backpack
 syntax: 'gmopen
 
-TOPIC go
+TOPIC 'go
 TEXT
 Moves character to a map location
 syntax: 'go [x y z / x y / n / name / "s" serial]
@@ -110,74 +129,77 @@ syntax: 'go [x y z / x y / n / name / "s" serial]
 'go name : go to named character
 'go "s" serial: go to character with that serial
 
-TOPIC gy
+TOPIC 'gy
 TEXT
 Yells a message to allonline gm's
 syntax: 'gy message
 
-TOPIC hiding
+TOPIC 'hiding
 TEXT
 Hides a character
 syntax: 'hiding ["on"/"off"]["skill"/"spell"/"perma"]
 
-TOPIC heal
+TOPIC 'heal
 TEXT
 Heals a character
 syntax: 'heal
 
-TOPIC help
+TOPIC 'help
 TEXT
-Shows help topics list
-syntax: 'help
+Shows help on a topic
+syntax: 'help [topic]
+'help without parameters shows a list of
+available topics
 
-TOPIC invul
+TOPIC 'invul
 TEXT
 Switches invulnerability of a character
 syntax: 'invul ["on"/"off"] 
 
-TOPIC iset
+TOPIC 'iset
 TEXT
 Sets an item's property
 syntax: 'iset property value
 
-TOPIC jail
+TOPIC 'jail
 TEXT
 Jails a character
 syntax: 'jail [days][hours][minutes]
-If not jailing time is specified, tha character will be jailed forever (until someone unjails him)
+If not jailing time is specified, the character 
+will be jailed forever (until someone unjails him)
 
-TOPIC kill
+TOPIC 'kill
 TEXT
 Kills a character
 syntax: 'kill 
 
-TOPIC killbeard
+TOPIC 'killbeard
 TEXT
 Kills a character's beard
 syntax: 'killhair
 
 
-TOPIC killhair
+TOPIC 'killhair
 TEXT
 Kills a character's hair
 syntax: 'killhair
 
 
-TOPIC lightlevel
+TOPIC 'lightlevel
 TEXT
 syntax: 'lightlevel
 
-TOPIC make
+TOPIC 'make
 TEXT
 Makes a character player, GM or counselor
 syntax: 'make "player"/"gm"/"cns" 
 
-TOPIC mana
+TOPIC 'mana
 TEXT
 Refreshes character's mana
 syntax: 'mana 
 
-TOPIC move
+TOPIC 'move
 TEXT
 Moves an object
 syntax: 'move "me"/"here"/"loc"/ x y ["abs"/"rel"]
@@ -185,126 +207,139 @@ syntax: 'move "me"/"here"/"loc"/ x y ["abs"/"rel"]
 'move here: moves object to charatcer's feet
 'move loc: moves object to a location
 
-TOPIC onlinegm
+TOPIC 'onlinegm
 TEXT
 Shows a list of online GMs and counselors
 syntax: 'onlinegm
 
-TOPIC options
+TOPIC 'options
 TEXT
 syntax: 'options
 
-TOPIC page
+TOPIC 'page
 TEXT
 Submits a page
 syntax: 'page message
 
-TOPIC pages
+TOPIC 'pages
 TEXT
 Shows pages done by a character
 syntax: 'pages
 
-TOPIC pagelist
+TOPIC 'pagelist
 TEXT
 Shows page list
 syntax: 'pagelist
 
-TOPIC playerlist
+TOPIC 'playerlist
 TEXT
 Showsconnected players list
 syntax: 'playerlist
 
-TOPIC polymorph
+TOPIC 'polymorph
 TEXT
 syntax: 'polymorph
 
-TOPIC possess
+TOPIC 'possess
 TEXT
 Possesses an npc
 sysntax: 'possess
-to switch back possession use 'possess again and target yourself
+to switch back possession use 'possess again 
+and target yourself
 
-TOPIC regioncp
+TOPIC 'regioncp
 TEXT
 Opens the region control panel
 syntax: 'regioncp
 You must be in a region to use this command
 
-TOPIC resend
+TOPIC 'resend
 TEXT
 Updates the character
 syntax: 'resend
 May be useful to solve some bugs
 
-TOPIC resurrect
+TOPIC 'resurrect
 TEXT
 Resurrects a ghost
 syntax: 'resurrect 
 
-TOPIC setmorexyz
+TOPIC 'save
+TEXT
+Saves the world
+synatx: 'save
+
+TOPIC 'setmorexyz
 TEXT
 Sets morex morey morez
 syntax: 'setmorexyz x y z
 
-TOPIC setskills
+TOPIC 'setskills
 TEXT
 Sets a character's skills
-syntax: 'setskills
+syntax: 'setskills [skill][value]
+If you don't pass any parameters you 
+will be shown the targetted 
+character's skills menu.
+If 'skill' is greater than the number
+of available skills then all skills will
+set to 'value'.
 
-TOPIC showbank
+TOPIC 'showbank
 TEXT
 Open character's bank box
 syntax: 'showbank ["gold"]
 'showbank gold : opens gold-only bank
 
-TOPIC skills
+TOPIC 'skills
 TEXT
 Shows character's skills
 syntax: 'skills
 
-TOPIC solvepage
+TOPIC 'solvepage
 TEXT
 Solves a character's page
 syntax: 'solvepage [pagenumber]
 
-TOPIC stamina
+TOPIC 'stamina
 TEXT
 Refreshes a character
 syntax: 'stamina 
 
-TOPIC stats
+TOPIC 'stats
 TEXT
 Shows many object's stats
 syntax: 'stats
 
-TOPIC sysm
+TOPIC 'sysm
 TEXT
 Broadcasts a message
 syntax: 'sysm
 
-TOPIC tile
+TOPIC 'tile
 TEXT
 Tiles an item along x y z axis
 syntax: 'tile [nX nY] [nZ zScale]
 
-TOPIC tweak
+TOPIC 'tweak
 TEXT
 Shows objects properties in a gump
 syntax: 'tweak
 
-TOPIC unjail
+TOPIC 'unjail
 TEXT
 Unjails a character
 syntax: 'unjail
 
-TOPIC where
+TOPIC 'where
 TEXT
-Shows exact coordinates and region of a character
+Shows exact coordinates and region 
+of a character
 syntax: 'where
 
-TOPIC wipe
+TOPIC 'wipe
 TEXT
 Removes objects
-syntax: 'wipe ["rect"/"target"]
+syntax: 'wipe ["rect"]
 
 ====== END OF COMMAND HELP TOPICS ================

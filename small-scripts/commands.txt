@@ -33,6 +33,7 @@ damage,150,cmd_damage
 decay,150,cmd_decay
 dye,150,cmd_dye
 dupe,150,cmd_dupe
+flip,0,cmd_flip
 freeze,100,cmd_freeze
 fullstats,200,cmd_fullstats
 func,200,cmd_func
@@ -65,6 +66,7 @@ possess,100,cmd_possess
 regioncp,150,cmd_regioncp
 resend,50,cmd_resend
 resurrect,100,cmd_resurrect
+save,200,cmd_save
 setdir,150,cmd_setdir
 setmorexyz,150,cmd_setmorexyz
 setpriv,255,cmd_setpriv

@@ -49,7 +49,7 @@ const CP_FLAG = 107;		//!< reputation flag: 1=red 2=grey 4=Blue 8=green 10=Orang
 const CP_FLY_STEPS = 108;	//!< number of step the creature flies if it can fly
 const CP_GMRESTRICT = 109;	//!< 0: no GM restriction, else contains the region the GM is restricted in
 const CP_HIDDEN = 110;		//!< 0: not hidden 1:hidden 2:hidden by spell
-const CP_LOCKSKILL = 112;	//!< array property - use a SK_* constant as subproperty to red it. values: 0:not locked 1:?? 2:?? TODO: link to SK_*
+const CP_LOCKSKILL = 112;	//!< array property - use a SK_* constant as subproperty to read it. values: 0:not locked 1:?? 2:?? TODO: link to SK_*
 const CP_NPC = 114;		//!< 1 if character is npc
 const CP_NPCTYPE = 115;		//!< currently only used for stabling, (type==1 -> stablemaster)
 const CP_NPCWANDER = 116;	//!< wander mode: controls how the npc moves around. contains one of the WANDER_* constants
@@ -322,10 +322,11 @@ const PRIV2_PERMAMAGICREFLECT = 0x40;//!<
 const PRIV2_NONEEDREAGS = 0x80;	//!<
 
 //these local vars are reserved
-#define CLV_PRIVLEVEL 9999		//!< character privlevel
 #define CLV_ADDITIONALSKILLS 9998	//<! local variable to store additional skill values
 #define CLV_ADDITIONALSKILLSBASE 9997	//<! local variable to store addition base skill values
-#define CLV_CMDTEMP 9996		//!< commands temp variable - created at startup, never delete!
+
+//these vars are deleted at character's login (globaltags(c) function in charLogin.sma)
+#define CLV_CMDTEMP 9996		//!< commands temp variable - created on the fly,delete after use
 #define CLV_CMDTEMPVEC 9995		//!< commands temp variable for vectors - created on the fly,delete after use
 #define CLV_CMDTEMPSTR 9994		//!< commands temp variable for strings - created on the fly,delete after use
 #define CLV_CMDTEMPSTR1 9993		//!< commands temp variable for strings - created on the fly,delete after use

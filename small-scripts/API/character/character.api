@@ -2335,10 +2335,10 @@ stock chr_setAmxFlags(const chr, const idx, const value)
  */
 /*!
 \author Wintermute
-\fn chr_showMessage(const chr, const target)
-\param chr the character who should get the paperdoll
-\param target the character whose paperdoll should be shown
-\brief shows a message anove the head of a character, visible only to one another character
+\fn chr_showPaperdoll(const chr, const target)
+\param chr: the character who should get the paperdoll
+\param target: the character whose paperdoll should be shown
+\brief shows a character's paperdoll, visible only to one another character
 \return 1 or INVALID if chr is not a valid character serial
 */
 native chr_showPaperdoll(const chr, const target);

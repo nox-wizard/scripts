@@ -1,7 +1,7 @@
 #include "small-scripts/commands/page/pagemenu.sma"
 
 /*!
-\defgroup script_commands_solvepage
+\defgroup script_commands_solvepage 'solvepage
 \ingroup script_commands
 
 @{

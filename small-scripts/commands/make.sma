@@ -74,32 +74,27 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 		case 0: 
 		{
 			chr_makeGM(object);
-			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_GM);
+			chr_setProperty(object,CP_PRIVLEVEL,_,PRIV_GM);
 		}
 		case 1:
 		{ 
 			chr_makeCounselor(object);
-			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_CNS);
+			chr_setProperty(object,CP_PRIVLEVEL,_,PRIV_CNS);
 		}
 		case 2: 
 		{
 			chr_makePlayer(object);
-			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_PLAYER);
+			chr_setProperty(object,CP_PRIVLEVEL,_,PRIV_PLAYER);
 		}
 		case 3: 
 		{
 			chr_makeGM(object);
 			chr_makeGMPageable(object);
-			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_GM);
+			chr_setProperty(object,CP_PRIVLEVEL,_,PRIV_GM);
 		}
 	}
 
-	if(chr_getLocalVarErr() != VAR_ERROR_NONE)
-	{
-		chr_message(chr,_,"An error occurred!");
-		log_error("Unable to write local int var CLV_PRIVLEVEL - error: %d",chr_getLocalVarErr());
-	}
-	else chr_message(chr,_,"Privlevel of character set to %d",chr_getLocalIntVar(object,CLV_PRIVLEVEL));
+	chr_message(chr,_,"Privlevel of character set to %d",chr_getProperty(object,CP_PRIVLEVEL));
 }
 
 /*! }@ */

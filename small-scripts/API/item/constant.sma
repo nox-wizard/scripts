@@ -47,6 +47,7 @@ const IP_PRIV = 118;                   //!< bit 0: decay off/on bit 1:newbie off
 const IP_VISIBLE = 120;                //!< 0:normally visible 1:owner & GM visible 2:GM visible
 const IP_DAMAGETYPE = 121;             //!< the damage type (see \ref DAMAGE_ constants)
 const IP_AUXDAMAGETYPE = 122;          //!< the additional damagetype for magic weapons (see \ref DAMAGE_ constants)
+
 const IP_ATT = 200;                    //!< attack power of the item
 const IP_CARVE = 201;                  //!< internal for carving system
 const IP_CONTAINERSERIAL = 202;        //!< the serial of the container the item is in
@@ -116,6 +117,12 @@ const IP_STR_DISABLEDMSG = 452;        //!< message shown when disabled
 const IP_STR_MURDERER = 453;           //!< murderer name for corpses
 const IP_STR_NAME = 454;               //!< name of the item
 const IP_STR_NAME2 = 455;              //!< item-id name of the item
+
+//Item Local Vars
+enum
+{
+	ILV_FLIPITEM = 9000
+}
 /** @} */
 /** @} */
 

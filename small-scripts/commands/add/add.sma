@@ -13,11 +13,34 @@
 <B>syntax:</B> 'add [ID/scriptID][amount]
 <B>command params:</B>
 <UL>
-<LI> ID/scriptID: scriptID ($item_.../$npc_...) of the object, or ID of the item as exadecimal or integer number 
+<LI> ID/scriptID: scriptID ($item_.../$npc_...) of the object, or ID of the item as exadecimal or integer number.
 <LI> amount: how much objects you want (default = XSS value for items, 1 for npcs)
 </UL>
 
 If no params are specified the add menu is opened.<BR>
+You can also pass a generic word as parameter, in that case you will be prompted to choose
+between a list ofitems whose define is of the type: $item_<name><type>_<subtype>_<part>.<BR>
+For example:<br>
+'add forge<br>
+will result in a menu where you will be able to choose between:<br>
+$item_forge1<br>
+$item_forge2_1_1<br>
+$item_forge2_1_2<br>
+$item_forge2_1_3<br>
+$item_forge2_1_4<br>
+$item_forge2_1_5<br>
+$item_forge2_2_1<br>
+$item_forge2_2_2<br>
+$item_forge2_2_3<br>
+$item_forge2_2_4<br>
+$item_forge2_2_5<br>
+<br>
+'add stone_chair<br>
+will result in a menu where you will be able to choose between:<br>
+$item_stone_chair_1<br>
+$item_stone_chair_2<br>
+$item_stone_chair_3<br>
+$item_stone_chair_4<br>
 <br>
 */
 
@@ -35,24 +58,17 @@ public cmd_add(const chr)
 		addMenu(chr);
 		return;
 	}
-
+	
 	if(isStrInt(__cmdParams[1]))
 		amount = str2Int(__cmdParams[1]);
-
+	
 	if(amount < 0)
 	{
 		chr_message(chr,_,"Amount must be a positive number");
 		return;
 	}
 
-	//if(isStrHex(__cmdParams[0]))
-	//{
-	//	itm_createInBp(str2Hex(__cmdParams[0]),chr,amount);
-	//	chr_message(chr,_,"item created in your backpack");
-	//	return;
-	//}
-
-	chr_setLocalIntVar(chr,CLV_CMDTEMP,amount);
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,amount);
 
 	if(isStrInt(__cmdParams[0]))
 	{
@@ -60,7 +76,14 @@ public cmd_add(const chr)
 		target_create(chr,str2Int(__cmdParams[0]),amount,_,"cmd_add_itm_targ");
 		return;
 	}
-
+	
+	//if the parameter is a generic word, show a list with matching items	
+	if(__cmdParams[0][0]!='$')
+	{
+		showMatchingItemsList(chr);
+		return;
+	}
+	
 	substring(__cmdParams[0],0,4,type,false);
 	if(!strcmp(type,"$item")) //add an item
 	{
@@ -91,6 +114,7 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 		log_message("^tadding npc at: %d %d %d ^n",x,y,z);
 	#endif
 	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isChar(object))
 		chr_getPosition(object,x,y,z);
@@ -124,6 +148,7 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 		log_message("^tadding item at: %d %d %d ^n",x,y,z);
 	#endif
 	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isChar(object))
 		if(!chr_isNpc(object))
@@ -169,4 +194,109 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 	#endif
 }
 
+static end;
+static matchesFound;
+static def[50];
+static type = 0;
+static subtype = 0;
+static part = 0;
+
+public showMatchingItemsList(chr)
+{
+	type = subtype = part = matchesFound = 0;
+	end = false;
+	new title[60],width = strlen(__cmdParams[0]) + 20;
+	sprintf(title,"Matches for '%s'",__cmdParams[0]);
+	cursor_setProperty(CRP_TAB,width + 10);
+	createListMenu(0,0,15,width,200,title,"drawMatchingItemListLine","cmd_add_ilist_cback");
+	if(matchesFound)
+		menu_show(chr);
+	else 
+	{
+		sprintf(title,"No matches found for '$item_%s'",__cmdParams[0]);
+		popupMenu(chr,title,"This happens because:^n-The item does not exist^n- You didn't replace all blanks^n with undescores");
+	}
+}
+
+public drawMatchingItemListLine(page,line,col,i)
+{
+	if(end)
+	{
+		cursor_up();
+		return;
+	}
+	
+	new scriptID = searchMatch();
+	if(scriptID > 0)
+	{
+		menu_addLabeledButton(scriptID,def);
+		matchesFound = true;
+	}
+	else 	end = true;
+}
+
+static searchMatch()
+{
+	sprintf(def,"$item_%s",__cmdParams[0]);
+	//build definition
+	if(type > 0)
+		sprintf(def,"%s%d",def,type);
+	
+	if(subtype > 0)
+	{
+		sprintf(def,"%s_%d",def,subtype);
+		if(part > 0)
+			sprintf(def,"%s_%d",def,part);
+	}
+		
+	new scriptID;
+	scriptID = getIntFromDefine(def,false);
+	if(scriptID > 0)
+	{
+		//increase last index
+		if(subtype > 0)
+			if(part > 0)
+				part++
+			else subtype++ 	
+		else type++
+		return scriptID;
+	}
+
+	if(part > 0)
+		if(part == 1)
+			if(subtype == 1 && type > 0)
+			{
+				end = true;
+				return - 1;
+			}
+			else
+			{
+				part = 0;
+				subtype = 0;
+				type++;
+				return searchMatch();
+			}
+		else
+		{
+			part = 0;
+			subtype++;
+			return searchMatch();
+		}
+	
+	if(subtype > 0)
+	{
+		part++;
+		return searchMatch();
+	}
+		
+	subtype++;
+	return searchMatch();
+}
+
+public cmd_add_ilist_cback(menu,chr,scriptID)
+{
+	if(!scriptID) return;
+	chr_message(chr,_,"click to position the item");
+	target_create(chr,scriptID,_,_,"cmd_add_itm_targ");
+}
 /*! }@ */
