@@ -33,7 +33,7 @@ static potionProperty[NUM_POTION][potionprop] = {
 {0x0F88, 0x0F0A, 901,1401, 20,"nightshade   ",8, "deadly_poison    "},
 {0x0F7A, 0x0F0B, 0, 500,100,"black_pearl  ",1, "normal_energy    "},
 {0x0F7A, 0x0F0B, 251, 751,100,"black_pearl  ",5, "greater_energy   "},
-{0x0F86, 0x0F09, 251, 751,100,"mandrake_root",2, "normal_strength  "},
+{0x0F86, 0x0F09, 251, 751,100,"mandrake_root",2, "lesser_strength  "},
 {0x0F86, 0x0F09, 451, 951,100,"mandrake_root",5, "normal_strength  "}
 };
 
@@ -87,8 +87,6 @@ public __nxw_sk_alchemy( const itm, const chr)
 
 public alch_show(const chr, const pagenumber)
 {
-	new alch_cllbck[15];
-	//sprintf( alch_cllbck,"alch_bck%d",pagenumber);
 	new alch_menu=gui_create(0, 0 ,0,0,0, "alch_bck");
 	gui_addPage(alch_menu,0);
 	gui_setProperty( alch_menu,MP_BUFFER,0,PROP_ITEM );
@@ -118,8 +116,8 @@ public alch_show(const chr, const pagenumber)
 	gui_addButton(alch_menu,62,293, alchButton[arrayline][newalch8], alchButton[arrayline][oldalch8],8);
 	gui_addText(alch_menu,283,64, 33,"Selections");
 	
-	new k;
-	new j;
+	new k; //line in array where the potion categorie starts, attention, arraylines start with 0 and not with 1!
+	new j; //line in array where the next potion categorie starts
 	
 	switch(pagenumber)
 	{
@@ -169,7 +167,7 @@ public alch_show(const chr, const pagenumber)
 		{
 			//strength
 			k=18;
-			j=21;
+			j=20;
 		}
 		default: chr_message(chr, _, "Unknown Potion Category, please report this!");
 		
@@ -183,7 +181,7 @@ public alch_show(const chr, const pagenumber)
 	sprintf(potionreg, potionProperty[k][reagentuse]);
 	replaceStr (potionreg, oldletter, newletter);
 	trim( potionreg);
-	sprintf(potionreg, "This potion needs %s as reagent", potionreg);
+	sprintf(potionreg, "These potions need %s as reagent", potionreg);
 	gui_addTilePic(alch_menu,200,350, potionProperty[k][hexreag]);
 	gui_addText(alch_menu,155,324, 33,potionreg);
 	gui_addText(alch_menu,86,324, 33,"Notices: ");
@@ -198,11 +196,15 @@ public alch_show(const chr, const pagenumber)
 		sprintf(potionname, potionProperty[i][potionscript]);
 		replaceStr (potionname, oldletter, newletter)
 		trim(potionname)
+		sprintf(potionname, "%s (%d)", potionname, potionProperty[i][reagentneed]);
 		//printf("potionname: %s^n", potionname);
-		gui_addText(alch_menu,309,103+(27*m), 33,potionname);
-		gui_addButton(alch_menu,285,110+(27*m),alchpic1, alchpic2, i+10);
-		gui_addTilePic(alch_menu,250,110+(27*m), potionProperty[i][hexpotion]);
-		m=++m;
+		if(chr_getProperty(chr,CP_SKILL,0) >= potionProperty[arrayline][alchemmin])
+		{
+			gui_addText(alch_menu,309,103+(27*m), 33,potionname);
+			gui_addButton(alch_menu,285,110+(27*m),alchpic1, alchpic2, i+10);
+			gui_addTilePic(alch_menu,250,110+(27*m), potionProperty[i][hexpotion]);
+			m=++m;
+		}
 	}
 	
 	//Cancel
@@ -283,7 +285,13 @@ public createPotion(const chr, const arrayline, const amount)
 	reagnumber = reagnumber * amount;
 	if((reagnumber >= potionProperty[arrayline][reagentneed]) && (alchskill >= potionProperty[arrayline][alchemmin]))
 	{
-		itm_delAmountByID(backpack, potionProperty[arrayline][reagentneed], reagscript); //and we delete the needed reagents
+		if (!chr_checkSkill(chr, 0, 0, 1000, 1)) //skill fails
+		{
+			itm_delAmountByID(backpack, ((potionProperty[arrayline][reagentneed])*amount)/2, reagscript); //we delete the half amount of needed reagents
+			itm_delAmountByID(backpack, amount/2, bottlescript);
+			chr_message( chr, _, "Your alchemic experiment fails and you destroy some reagents and bottles.");
+		}
+		itm_delAmountByID(backpack, (potionProperty[arrayline][reagentneed])*amount, reagscript); //and we delete the needed reagents
 		itm_delAmountByID(backpack, amount, bottlescript);
 		chr_sound(chr, 0x242); //do sound
 		
