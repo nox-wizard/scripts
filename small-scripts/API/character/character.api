@@ -1141,7 +1141,7 @@ return 0 or INVALID if chr is not a valid character serial
 \author Luxor, changed by Wintermute
 \fn chr_morph(const chr, const npcid, const backup)
 \param chr the character to be morphed
-\param npcid the id (xss) of the np to be morphed into
+\param npcid the scriptid (xss) of the np to be morphed into
 \param backup = true, if char settings should be restored
 \brief changes character's appearance
 \return 0 or INVALID if chr is not a valid character serial

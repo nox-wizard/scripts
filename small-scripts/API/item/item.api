@@ -356,7 +356,8 @@ native itm_setEventHandler(const itm, const event, const evtype, const format[],
 \author Xanathar
 \fn itm_delEventHandler(const item, const event)
 \param itm:	item serial
-\param event:	item event identifier \ref EVENT_ITM_ON
+\param event:	item event identifier 
+\ref EVENT_ITM_ON
 \brief Unbinds link between small function an item event
 */
 native itm_delEventHandler(const itm, const event);
