@@ -86,7 +86,6 @@ SECTION ITEM $item_hatchet
     HP 50
     DECAY
     VALUE 35
-    RESTOCK 10
     STR 15
     SPD 38
     WEIGHT 400
@@ -105,7 +104,6 @@ SECTION ITEM $item_executioners_axe
     HP 60
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 28
     WEIGHT 800
@@ -124,7 +122,6 @@ SECTION ITEM $item_axe
     HP 65
     DECAY
     VALUE 55
-    RESTOCK 10
     STR 35
     SPD 35
     WEIGHT 400
@@ -143,7 +140,6 @@ SECTION ITEM $item_double_axe
     HP 70
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 45
     SPD 35
     WEIGHT 800
@@ -162,7 +158,6 @@ SECTION ITEM $item_large_battle_axe
     HP 75
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 44
     SPD 29
     WEIGHT 600
@@ -181,7 +176,6 @@ SECTION ITEM $item_pickaxe
     HP 50
     DECAY
     VALUE 25
-    RESTOCK 10
     STR 40
     SPD 33
     WEIGHT 800
@@ -200,7 +194,6 @@ SECTION ITEM $item_war_axe
     HP 75
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 35
     SPD 38
     WEIGHT 500
@@ -219,7 +212,6 @@ SECTION ITEM $item_butcher_knife
     HP 25
     DECAY
     VALUE 25
-    RESTOCK 10
     STR 5
     SPD 40
     WEIGHT 100
@@ -238,7 +230,6 @@ SECTION ITEM $item_skinning_knife
     HP 35
     DECAY
     VALUE 20
-    RESTOCK 10
     STR 5
     SPD 40
     WEIGHT 100
@@ -257,7 +248,6 @@ SECTION ITEM $item_meat_cleaver
     HP 35
     DECAY
     VALUE 35
-    RESTOCK 10
     STR 10
     SPD 39
     WEIGHT 100
@@ -276,7 +266,6 @@ SECTION ITEM $item_dagger
     HP 35
     DECAY
     VALUE 15
-    RESTOCK 10
     STR 1
     SPD 40
     WEIGHT 100
@@ -295,7 +284,6 @@ SECTION ITEM $item_kryss
     HP 70
     DECAY
     VALUE 40
-    RESTOCK 10
     STR 22
     SPD 45
     WEIGHT 100
@@ -314,7 +302,6 @@ SECTION ITEM $item_club
     HP 40
     DECAY
     VALUE 25
-    RESTOCK 10
     STR 35
     SPD 38
     WEIGHT 600
@@ -333,7 +320,6 @@ SECTION ITEM $item_hammer_pick
     HP 32
     DECAY
     VALUE 40
-    RESTOCK 10
     STR 45
     SPD 30
     WEIGHT 600
@@ -353,7 +339,6 @@ SECTION ITEM $item_mace
     SKILL 41
     DECAY
     VALUE 30
-    RESTOCK 10
     STR 45
     SPD 28
     WEIGHT 1100
@@ -372,7 +357,6 @@ SECTION ITEM $item_maul
     HP 50
     DECAY
     VALUE 35
-    RESTOCK 10
     STR 20
     SPD 28
     WEIGHT 1100
@@ -391,7 +375,6 @@ SECTION ITEM $item_smithy_hammer
     HP 42
     DECAY
     VALUE 25
-    RESTOCK 10
     STR 25
     SPD 28
     WEIGHT 500
@@ -410,7 +393,6 @@ SECTION ITEM $item_war_hammer
     HP 70
     DECAY
     VALUE 55
-    RESTOCK 10
     STR 40
     SPD 29
     WEIGHT 700
@@ -429,7 +411,6 @@ SECTION ITEM $item_war_mace
     HP 70
     DECAY
     VALUE 60
-    RESTOCK 10
     STR 30
     SPD 30
     WEIGHT 1400
@@ -448,7 +429,6 @@ SECTION ITEM $item_bardiche
     HP 62
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 50
     SPD 24
     WEIGHT 400
@@ -468,7 +448,6 @@ SECTION ITEM $item_halberd
     DEF 5
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 55
     SPD 22
     WEIGHT 1300
@@ -488,7 +467,6 @@ SECTION ITEM $item_black_staff
     DEF 8
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 35
     SPD 33
     WEIGHT 300
@@ -508,7 +486,6 @@ SECTION ITEM $item_gnarled_staff
     DEF 6
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 20
     SPD 31
     WEIGHT 300
@@ -528,7 +505,6 @@ SECTION ITEM $item_quarter_staff
     DEF 6
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 30
     SPD 40
     WEIGHT 300
@@ -550,7 +526,6 @@ SECTION ITEM $item_long_sword_of_invisibility
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -575,7 +550,6 @@ SECTION ITEM $item_long_sword_of_invisibility
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -601,7 +575,6 @@ SECTION ITEM $item_long_sword_of_resurrection
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -626,7 +599,6 @@ SECTION ITEM $item_scimitar_of_flamestrike
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -651,7 +623,6 @@ SECTION ITEM $item_scimitar_of_feeblemind
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -676,7 +647,6 @@ SECTION ITEM $item_scimitar_of_mana_drain
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -701,7 +671,6 @@ SECTION ITEM $item_scimitar_of_lightning
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -726,7 +695,6 @@ SECTION ITEM $item_scimitar_of_energy_bolt
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -750,7 +718,6 @@ SECTION ITEM $item_scimitar_of_invisibility
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -775,7 +742,6 @@ SECTION ITEM $item_scimitar_of_resurrection
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -799,7 +765,6 @@ SECTION ITEM $item_broad_sword_of_flamestrike
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -823,7 +788,6 @@ SECTION ITEM $item_broad_sword_of_feeblemind
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -847,7 +811,6 @@ SECTION ITEM $item_broad_sword_of_mana_drain
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -871,7 +834,6 @@ SECTION ITEM $item_broad_sword_of_lightning
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -895,7 +857,6 @@ SECTION ITEM $item_broad_sword_of_energy_bolt
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -919,7 +880,6 @@ SECTION ITEM $item_broad_sword_of_invisibility
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -943,7 +903,6 @@ SECTION ITEM $item_broad_sword_of_resurrection
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -972,7 +931,6 @@ SECTION ITEM $item_sledge_hammer_1
     HP 60
     DECAY
     VALUE 25
-    RESTOCK 10
     STR 45
     SPD 30
     WEIGHT 500
@@ -1022,7 +980,6 @@ SECTION ITEM $item_bow
     ITEMHAND 2
     DECAY
     VALUE 65
-    RESTOCK 10
     LODAMAGE 5
     HIDAMAGE 20
     HP 35
@@ -1042,7 +999,6 @@ SECTION ITEM $item_crossbow
     ITEMHAND 2
     DECAY
     VALUE 90
-    RESTOCK 10
     LODAMAGE 7
     HIDAMAGE 25
     HP 45
@@ -1062,7 +1018,6 @@ SECTION ITEM $item_heavy_crossbow
     ITEMHAND 2
     DECAY
     VALUE 120
-    RESTOCK 10
     LODAMAGE 8
     HIDAMAGE 30
     HP 65
@@ -1087,7 +1042,6 @@ SECTION ITEM $item_a_golden_bow
     STR 30
     DEX 60
     VALUE 195
-    RESTOCK 2
     SPD 14
     WEIGHT 1540
     GOOD 12
@@ -1433,7 +1387,6 @@ SECTION ITEM $item_pitchfork
     HP 35
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 40
     WEIGHT 700
@@ -1453,7 +1406,6 @@ SECTION ITEM $item_spear
     SKILL 42
     DECAY
     VALUE 55
-    RESTOCK 10
     STR 30
     SPD 27
     WEIGHT 300
@@ -1539,7 +1491,6 @@ SECTION ITEM $item_fire_mace
     MOREZ 20
     COLOR 0026
     VALUE 400
-    RESTOCK 1
     WEIGHT 600
     DAMAGETYPE $damage_bludgeon
     AUXDAMAGE 5
@@ -1558,7 +1509,6 @@ SECTION ITEM $item_scepter
     HP 55
     DECAY
     VALUE 100
-    RESTOCK 10
     STR 35
     SPD 45
     WEIGHT 300
@@ -1578,7 +1528,6 @@ SECTION ITEM $item_scimitar
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 32
     SPD 41
     WEIGHT 200
@@ -1599,7 +1548,6 @@ SECTION ITEM $item_long_sword
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 33
     WEIGHT 400
@@ -1619,7 +1567,6 @@ SECTION ITEM $item_viking_sword
     HP 100
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 38
     SPD 30
     WEIGHT 300
@@ -1639,7 +1586,6 @@ SECTION ITEM $item_broadsword
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 39
     WEIGHT 300
@@ -1659,7 +1605,6 @@ SECTION ITEM $item_cutlass
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 35
     SPD 40
     WEIGHT 500
@@ -1679,7 +1624,6 @@ SECTION ITEM $item_katana
     DEF 8
     DECAY
     VALUE 75
-    RESTOCK 10
     STR 10
     SPD 40
     WEIGHT 300
@@ -2330,7 +2274,6 @@ SECTION ITEM $item_a_golden_viking_sword
     STR 65
     VALUE 255
     DECAY
-    RESTOCK 2
     SPD 30
     WEIGHT 1200
     ATT 23
@@ -2352,7 +2295,6 @@ SECTION ITEM $item_viking_sword_of_flamestrike
     HP 100
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 30
     TYPE $itype_wand
@@ -2377,7 +2319,6 @@ SECTION ITEM $item_viking_sword_of_feeblemind
     HP 100
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 30
     TYPE $itype_wand
@@ -2402,7 +2343,6 @@ SECTION ITEM $item_viking_sword_of_mana_drain
     HP 100
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 30
     TYPE $itype_wand
@@ -2427,7 +2367,6 @@ SECTION ITEM $item_viking_sword_of_lightning
     HP 100
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 30
     TYPE $itype_wand
@@ -2452,7 +2391,6 @@ SECTION ITEM $item_viking_sword_of_energy_bolt
     HP 100
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 30
     TYPE $itype_wand
@@ -2477,7 +2415,6 @@ SECTION ITEM $item_viking_sword_of_invisibility
     HP 100
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 30
     TYPE $itype_wand
@@ -2502,7 +2439,6 @@ SECTION ITEM $item_viking_sword_of_resurrection
     HP 100
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 30
     TYPE $itype_wand
@@ -2528,7 +2464,6 @@ SECTION ITEM $item_long_sword_of_flamestrike
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -2554,7 +2489,6 @@ SECTION ITEM $item_long_sword_of_feeblemind
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -2580,7 +2514,6 @@ SECTION ITEM $item_long_sword_of_mana_drain
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -2606,7 +2539,6 @@ SECTION ITEM $item_long_sword_of_lightning
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -2632,7 +2564,6 @@ SECTION ITEM $item_long_sword_of_energy_bolt
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -2658,7 +2589,6 @@ SECTION ITEM $item_long_sword_of_invisibility
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -2684,7 +2614,6 @@ SECTION ITEM $item_long_sword_of_resurrection
     SKILL 40
     DECAY
     VALUE 70
-    RESTOCK 10
     STR 25
     SPD 40
     TYPE $itype_wand
@@ -2709,7 +2638,6 @@ SECTION ITEM $item_scimitar_of_flamestrike
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -2734,7 +2662,6 @@ SECTION ITEM $item_scimitar_of_feeblemind
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -2759,7 +2686,6 @@ SECTION ITEM $item_scimitar_of_mana_drain
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -2784,7 +2710,6 @@ SECTION ITEM $item_scimitar_of_lightning
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -2809,7 +2734,6 @@ SECTION ITEM $item_scimitar_of_energy_bolt
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -2833,7 +2757,6 @@ SECTION ITEM $item_scimitar_of_invisibility
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -2858,7 +2781,6 @@ SECTION ITEM $item_scimitar_of_resurrection
     DEF 4
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 10
     SPD 35
     TYPE $itype_wand
@@ -2882,7 +2804,6 @@ SECTION ITEM $item_broad_sword_of_flamestrike
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -2906,7 +2827,6 @@ SECTION ITEM $item_broad_sword_of_feeblemind
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -2930,7 +2850,6 @@ SECTION ITEM $item_broad_sword_of_mana_drain
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -2954,7 +2873,6 @@ SECTION ITEM $item_broad_sword_of_lightning
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -2978,7 +2896,6 @@ SECTION ITEM $item_broad_sword_of_energy_bolt
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -3002,7 +2919,6 @@ SECTION ITEM $item_broad_sword_of_invisibility
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -3026,7 +2942,6 @@ SECTION ITEM $item_broad_sword_of_resurrection
     DEF 5
     DECAY
     VALUE 80
-    RESTOCK 10
     STR 25
     SPD 35
     TYPE $itype_wand
@@ -3050,7 +2965,6 @@ SECTION ITEM $item_a_two-handed_axe
     HP 70
     DECAY
     VALUE 65
-    RESTOCK 10
     STR 60
     SPD 35
     WEIGHT 500
@@ -3069,7 +2983,6 @@ SECTION ITEM $item_short_spear
     HP 70
     DECAY
     VALUE 45
-    RESTOCK 10
     STR 15
     SPD 35
     WEIGHT 200
@@ -3088,7 +3001,6 @@ SECTION ITEM $item_battle_axe
     HP 110
     DECAY
     VALUE 35
-    RESTOCK 10
     STR 30
     SPD 45
     WEIGHT 200
@@ -3106,7 +3018,6 @@ SECTION ITEM $item_war_fork
     HP 65
     DECAY
     VALUE 90
-    RESTOCK 10
     STR 35
     SPD 35
     WEIGHT 600
@@ -3374,7 +3285,6 @@ SECTION ITEM $item_a_staff_of_lich_summoning
     DEF 8
     DECAY
     VALUE 85
-    RESTOCK 10
     STR 40
     SPD 35
     WEIGHT 600
@@ -3472,7 +3382,6 @@ SECTION ITEM $item_sheperds_crook
     DEF 7
     DECAY
     VALUE 35
-    RESTOCK 10
     STR 10
     SPD 28
     WEIGHT 200

@@ -45,7 +45,6 @@ SECTION DEFAULT POTION
 	DYE 0
 	MOVABLE 1
 	NAME a potion
-	RESTOCK 10
 	TYPE $itype_potion
 	WEIGHT 100
 }
@@ -416,6 +415,5 @@ SECTION ITEM $item_blessed_water
 	TRIGGER $itrg_drink_blessed_water
 	NODECAY
 	VALUE 50
-	RESTOCK 10
 	GOOD 30
 }

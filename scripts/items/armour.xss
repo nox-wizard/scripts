@@ -18,7 +18,6 @@ SECTION ITEM $item_wooden_kite_shield
     ITEMHAND 3
     DECAY
     VALUE 110
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -34,7 +33,6 @@ SECTION ITEM $item_wooden_shield
     ITEMHAND 3
     DECAY
     VALUE 39
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -50,7 +48,6 @@ SECTION ITEM $item_metal_shield
     ITEMHAND 3
     DECAY
     VALUE 74
-    RESTOCK 10
     WEIGHT 600
 }
 
@@ -66,7 +63,6 @@ SECTION ITEM $item_chaos_shield
     ITEMHAND 3
     DECAY
     VALUE 250
-    RESTOCK 5
     WEIGHT 800
 }
 
@@ -82,7 +78,6 @@ SECTION ITEM $item_order_shield
     ITEMHAND 3
     DECAY
     VALUE 250
-    RESTOCK 5
     WEIGHT 800
 }
 
@@ -98,7 +93,6 @@ SECTION ITEM $item_platemail
     STR 60
     DECAY
     VALUE 265
-    RESTOCK 10
     WEIGHT 1000
     COLOR 0961
 }
@@ -115,7 +109,6 @@ SECTION ITEM $item_plate_gorget
     STR 30
     DECAY
     VALUE 115
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -132,7 +125,6 @@ SECTION ITEM $item_plate_gloves
     STR 30
     DECAY
     VALUE 135
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -149,7 +141,6 @@ SECTION ITEM $item_plate_helm
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -166,7 +157,6 @@ SECTION ITEM $item_plate_leggings
     STR 60
     DECAY
     VALUE 231
-    RESTOCK 10
     WEIGHT 700
     COLOR 0961
 }
@@ -183,7 +173,6 @@ SECTION ITEM $item_plate_sleeves
     STR 40
     DECAY
     VALUE 193
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -200,7 +189,6 @@ SECTION ITEM $item_bone_chest
     DEXADD -6
     DECAY
     VALUE 15
-    RESTOCK 10
     WEIGHT 600
 }
 
@@ -216,7 +204,6 @@ SECTION ITEM $item_bone_arms
     DEXADD -2
     DECAY
     VALUE 10
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -231,7 +218,6 @@ SECTION ITEM $item_bone_gloves
     STR 40
     DECAY
     VALUE 10
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -246,7 +232,6 @@ SECTION ITEM $item_bone_helm
     STR 40
     DECAY
     VALUE 12
-    RESTOCK 10
     WEIGHT 300
 }
 
@@ -263,7 +248,6 @@ SECTION ITEM $item_bone_legs
     DEXADD -4
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 300
 }
 
@@ -280,7 +264,6 @@ SECTION ITEM $item_chain_tunic
     DEXADD -5
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -297,7 +280,6 @@ SECTION ITEM $item_chain_leggings
     DEXADD -3
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -313,7 +295,6 @@ SECTION ITEM $item_chain_coif
     STR 20
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -329,7 +310,6 @@ SECTION ITEM $item_ringmail_tunic
     DEXADD -2
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 600
 }
 
@@ -345,7 +325,6 @@ SECTION ITEM $item_ringmail_sleeves
     DEXADD -1
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 400
 }
 
@@ -361,7 +340,6 @@ SECTION ITEM $item_ringmail_leggings
     DEXADD -1
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 600
 }
 
@@ -377,7 +355,6 @@ SECTION ITEM $item_ringmail_gloves
     DEXADD -1
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -392,7 +369,6 @@ SECTION ITEM $item_studded_leather_gorget
     STR 25
     DECAY
     VALUE 60
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -407,7 +383,6 @@ SECTION ITEM $item_studded_leather_gloves
     STR 25
     DECAY
     VALUE 60
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -422,7 +397,6 @@ SECTION ITEM $item_studded_leather_sleeves
     STR 25
     DECAY
     VALUE 65
-    RESTOCK 10
     WEIGHT 400
 }
 
@@ -437,7 +411,6 @@ SECTION ITEM $item_studded_leather_leggings
     STR 25
     DECAY
     VALUE 70
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -452,7 +425,6 @@ SECTION ITEM $item_studded_leather_tunic
     STR 25
     DECAY
     VALUE 90
-    RESTOCK 10
     WEIGHT 600
 }
 
@@ -467,7 +439,6 @@ SECTION ITEM $item_leather_sleeves
     STR 10
     DECAY
     VALUE 50
-    RESTOCK 10
     WEIGHT 300
 }
 
@@ -482,7 +453,6 @@ SECTION ITEM $item_leather_leggings
     STR 10
     DECAY
     VALUE 70
-    RESTOCK 10
     WEIGHT 400
 }
 
@@ -497,7 +467,6 @@ SECTION ITEM $item_leather_tunic
     STR 10
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -513,7 +482,6 @@ SECTION ITEM $item_close_helm
     DEXADD -1
     DECAY
     VALUE 160
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -528,7 +496,6 @@ SECTION ITEM $item_a_helmet
     STR 40
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -543,7 +510,6 @@ SECTION ITEM $item_bascinet
     STR 20
     DECAY
     VALUE 155
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -558,7 +524,6 @@ SECTION ITEM $item_nose_helm
     STR 40
     DECAY
     VALUE 160
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -573,7 +538,6 @@ SECTION ITEM $item_orc_mask
     STR 10
     DECAY
     VALUE 35
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -589,7 +553,6 @@ SECTION ITEM $item_leather_shorts
     STR 10
     ATT 1
     VALUE 50
-    RESTOCK 10
     WEIGHT 300
 }
 
@@ -604,7 +567,6 @@ SECTION ITEM $item_female_studded_leather
     HP 75
     STR 25
     VALUE 100
-    RESTOCK 10
     WEIGHT 800
 }
 
@@ -621,7 +583,6 @@ SECTION ITEM $item_female_plate
     STR 45
     DEXADD -5
     VALUE 100
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -636,7 +597,6 @@ SECTION ITEM $item_female_leather_armor
     HP 20
     STR 15
     VALUE 120
-    RESTOCK 10
     WEIGHT 600
 }
 
@@ -651,7 +611,6 @@ SECTION ITEM $item_leather_skirt
     HP 15
     STR 10
     VALUE 80
-    RESTOCK 10
     WEIGHT 400
 }
 
@@ -666,7 +625,6 @@ SECTION ITEM $item_leather_bustier
     HP 25
     STR 10
     VALUE 85
-    RESTOCK 10
     WEIGHT 300
 }
 
@@ -681,7 +639,6 @@ SECTION ITEM $item_studded_leather_bustier
     HP 70
     STR 25
     VALUE 85
-    RESTOCK 10
     WEIGHT 400
 }
 
@@ -697,7 +654,6 @@ SECTION ITEM $item_bronze_shield
     ITEMHAND 3
     DECAY
     VALUE 94
-    RESTOCK 10
     WEIGHT 300
 }
 
@@ -713,7 +669,6 @@ SECTION ITEM $item_buckler
     ITEMHAND 3
     DECAY
     VALUE 83
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -730,7 +685,6 @@ SECTION ITEM $item_metal_kite_shield
     DYE 1
     DECAY
     VALUE 119
-    RESTOCK 10
     WEIGHT 400
 }
 
@@ -744,7 +698,6 @@ SECTION ITEM $item_leather_cap
     STR 20
     DECAY
     VALUE 60
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -760,7 +713,6 @@ SECTION ITEM $item_boots
     DYE 1
     DECAY
     VALUE 30
-    RESTOCK 10
     WEIGHT 100
 }
 
@@ -773,7 +725,6 @@ SECTION ITEM $item_sandles
     DYE 0
     DECAY
     VALUE 20
-    RESTOCK 10
 }
 
 // shoes
@@ -785,7 +736,6 @@ SECTION ITEM $item_shoes
     DECAY
     DYE 1
     VALUE 15
-    RESTOCK 10
 }
 
 // thigh boots
@@ -800,7 +750,6 @@ SECTION ITEM $item_thigh_boots
     DYE 1
     DECAY
     VALUE 55
-    RESTOCK 10
     WEIGHT 100
 }
 
@@ -817,7 +766,6 @@ SECTION ITEM $item_a_skullcap
     DYE 1
     DECAY
     VALUE 30
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -832,7 +780,6 @@ SECTION ITEM $item_a_deer_mask
     STR 10
     DECAY
     VALUE 40
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -847,7 +794,6 @@ SECTION ITEM $item_a_bear_mask
     STR 10
     DECAY
     VALUE 40
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -862,7 +808,6 @@ SECTION ITEM $item_a_orc_helm
     STR 20
     DECAY
     VALUE 25
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -877,7 +822,6 @@ SECTION ITEM $item_a_orc_mask
     STR 10
     DECAY
     VALUE 40
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -892,7 +836,6 @@ SECTION ITEM $item_a_tribal_mask
     STR 10
     DECAY
     VALUE 40
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -907,7 +850,6 @@ SECTION ITEM $item_a_tribal_mask_1
     STR 10
     DECAY
     VALUE 40
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -922,7 +864,6 @@ SECTION ITEM $item_phoenix_tunic
     STR 25
     DECAY
     VALUE 90
-    RESTOCK 10
     WEIGHT 600
     GOOD 10
 }
@@ -939,7 +880,6 @@ SECTION ITEM $item_phoenix_gorget
     STR 25
     DECAY
     VALUE 60
-    RESTOCK 10
     WEIGHT 200
     GOOD 10
 }
@@ -955,7 +895,6 @@ SECTION ITEM $item_phoenix_gloves
     STR 25
     DECAY
     VALUE 60
-    RESTOCK 10
     WEIGHT 200
     GOOD 10
 }
@@ -971,7 +910,6 @@ SECTION ITEM $item_phoenix_sleeves
     STR 25
     DECAY
     VALUE 65
-    RESTOCK 10
     WEIGHT 400
     GOOD 10
 }
@@ -987,7 +925,6 @@ SECTION ITEM $item_phoenix_leggings
     STR 25
     DECAY
     VALUE 70
-    RESTOCK 10
     WEIGHT 500
     GOOD 10
 }
@@ -1004,7 +941,6 @@ SECTION ITEM $item_phoenix_helm
     STR 40
     DECAY
     VALUE 275
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -1018,7 +954,6 @@ SECTION ITEM $item_leather_gloves
     STR 20
     DECAY
     VALUE 40
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -1032,7 +967,6 @@ SECTION ITEM $item_a_leather_gorget
     STR 20
     DECAY
     VALUE 40
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -1047,7 +981,6 @@ SECTION ITEM $item_platemail_of_defence
     STR 60
     DECAY
     VALUE 315
-    RESTOCK 10
     WEIGHT 1000
     COLOR 0961
 }
@@ -1063,7 +996,6 @@ SECTION ITEM $item_plate_gorget_of_defence
     STR 40
     DECAY
     VALUE 205
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1079,7 +1011,6 @@ SECTION ITEM $item_plate_gloves_of_defence
     STR 40
     DECAY
     VALUE 215
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1095,7 +1026,6 @@ SECTION ITEM $item_plate_helm_of_defence
     STR 40
     DECAY
     VALUE 265
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1111,7 +1041,6 @@ SECTION ITEM $item_plate_legs_of_defence
     STR 60
     DECAY
     VALUE 315
-    RESTOCK 10
     WEIGHT 700
     COLOR 0961
 }
@@ -1127,7 +1056,6 @@ SECTION ITEM $item_plate_arms_of_defence
     STR 40
     DECAY
     VALUE 275
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1143,7 +1071,6 @@ SECTION ITEM $item_platemail_of_guarding
     STR 60
     DECAY
     VALUE 415
-    RESTOCK 10
     WEIGHT 1000
     COLOR 0961
 }
@@ -1159,7 +1086,6 @@ SECTION ITEM $item_plate_gorget_of_guarding
     STR 40
     DECAY
     VALUE 315
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1175,7 +1101,6 @@ SECTION ITEM $item_plate_gloves_of_guarding
     STR 40
     DECAY
     VALUE 325
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1191,7 +1116,6 @@ SECTION ITEM $item_plate_helm_of_guarding
     STR 40
     DECAY
     VALUE 375
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1207,7 +1131,6 @@ SECTION ITEM $item_plate_legs_of_guarding
     STR 60
     DECAY
     VALUE 405
-    RESTOCK 10
     WEIGHT 700
     COLOR 0961
 }
@@ -1223,7 +1146,6 @@ SECTION ITEM $item_plate_arms_of_guarding
     STR 40
     DECAY
     VALUE 355
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1239,7 +1161,6 @@ SECTION ITEM $item_plate_of_hardening
     STR 60
     DECAY
     VALUE 545
-    RESTOCK 10
     WEIGHT 1000
     COLOR 0961
 }
@@ -1255,7 +1176,6 @@ SECTION ITEM $item_plate_gorget_of_hardening
     STR 40
     DECAY
     VALUE 415
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1271,7 +1191,6 @@ SECTION ITEM $item_plate_gloves_of_hardening
     STR 40
     DECAY
     VALUE 430
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1287,7 +1206,6 @@ SECTION ITEM $item_plate_helm_of_hardening
     STR 40
     DECAY
     VALUE 460
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1303,7 +1221,6 @@ SECTION ITEM $item_plate_legs_of_hardening
     STR 60
     DECAY
     VALUE 510
-    RESTOCK 10
     WEIGHT 700
     COLOR 0961
 }
@@ -1319,7 +1236,6 @@ SECTION ITEM $item_plate_arms_of_hardening
     STR 40
     DECAY
     VALUE 470
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1335,7 +1251,6 @@ SECTION ITEM $item_platemail_of_fortification
     STR 60
     DECAY
     VALUE 750
-    RESTOCK 10
     WEIGHT 1000
     COLOR 0961
 }
@@ -1351,7 +1266,6 @@ SECTION ITEM $item_plate_gorget_of_fortification
     STR 40
     DECAY
     VALUE 600
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1367,7 +1281,6 @@ SECTION ITEM $item_plate_gloves_of_fortification
     STR 40
     DECAY
     VALUE 630
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1383,7 +1296,6 @@ SECTION ITEM $item_plate_helm_of_fortification
     STR 40
     DECAY
     VALUE 660
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1399,7 +1311,6 @@ SECTION ITEM $item_plate_legs_of_fortification
     STR 60
     DECAY
     VALUE 730
-    RESTOCK 10
     WEIGHT 700
     COLOR 0961
 }
@@ -1415,7 +1326,6 @@ SECTION ITEM $item_plate_arms_of_fortification
     STR 40
     DECAY
     VALUE 660
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1431,7 +1341,6 @@ SECTION ITEM $item_magic_platemail_of_invulnerability
     STR 60
     DECAY
     VALUE 1000
-    RESTOCK 10
     WEIGHT 1000
     COLOR 0961
 }
@@ -1447,7 +1356,6 @@ SECTION ITEM $item_magic_plate_gorget_of_invulnerability
     STR 40
     DECAY
     VALUE 900
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1463,7 +1371,6 @@ SECTION ITEM $item_magic_plate_gloves_of_invulnerability
     STR 40
     DECAY
     VALUE 930
-    RESTOCK 10
     WEIGHT 200
     COLOR 0961
 }
@@ -1479,7 +1386,6 @@ SECTION ITEM $item_magic_plate_helm_of_invulnerability
     STR 40
     DECAY
     VALUE 950
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1495,7 +1401,6 @@ SECTION ITEM $item_magic_plate_legs_of_invulnerability
     STR 60
     DECAY
     VALUE 997
-    RESTOCK 10
     WEIGHT 700
     COLOR 0961
 }
@@ -1511,7 +1416,6 @@ SECTION ITEM $item_magic_plate_arms_of_invulnerability
     STR 40
     DECAY
     VALUE 985
-    RESTOCK 10
     WEIGHT 500
     COLOR 0961
 }
@@ -1613,7 +1517,6 @@ SECTION ITEM $item_a_golden_heater_shield
     ITEMHAND 3
     DECAY
     VALUE 462
-    RESTOCK 2
     WEIGHT 1800
     GOOD 10
 }
@@ -1632,7 +1535,6 @@ SECTION ITEM $item_a_bronze_shield_of_defence
     ITEMHAND 3
     DECAY
     VALUE 188
-    RESTOCK 1
     WEIGHT 600
     GOOD 11
 }
@@ -1649,7 +1551,6 @@ SECTION ITEM $item_a_bronze_shield_of_guarding
     ITEMHAND 3
     DECAY
     VALUE 376
-    RESTOCK 1
     WEIGHT 600
     GOOD 11
 }
@@ -1666,7 +1567,6 @@ SECTION ITEM $item_a_bronze_shield_of_hardening
     ITEMHAND 3
     DECAY
     VALUE 752
-    RESTOCK 1
     WEIGHT 600
     GOOD 11
 }
@@ -1683,7 +1583,6 @@ SECTION ITEM $item_a_bronze_shield_of_fortification
     ITEMHAND 3
     DECAY
     VALUE 1504
-    RESTOCK 1
     WEIGHT 600
     GOOD 11
 }
@@ -1700,7 +1599,6 @@ SECTION ITEM $item_a_bronze_shield_of_invulnerablity
     ITEMHAND 3
     DECAY
     VALUE 3008
-    RESTOCK 1
     WEIGHT 600
     GOOD 11
 }
@@ -1716,7 +1614,6 @@ SECTION ITEM $item_a_magic_buckler
     ITEMHAND 3
     DECAY
     VALUE 166
-    RESTOCK 1
     WEIGHT 500
     STR 15
     GOOD 11
@@ -1733,7 +1630,6 @@ SECTION ITEM $item_a_buckler_of_guarding
     ITEMHAND 3
     DECAY
     VALUE 332
-    RESTOCK 1
     WEIGHT 500
     STR 15
     GOOD 11
@@ -1750,7 +1646,6 @@ SECTION ITEM $item_a_buckler_of_hardening
     ITEMHAND 3
     DECAY
     VALUE 664
-    RESTOCK 1
     WEIGHT 500
     STR 15
     GOOD 11
@@ -1767,7 +1662,6 @@ SECTION ITEM $item_a_buckler_of_fortification
     ITEMHAND 3
     DECAY
     VALUE 1328
-    RESTOCK 1
     WEIGHT 500
     STR 15
     GOOD 11
@@ -1784,7 +1678,6 @@ SECTION ITEM $item_a_buckler_of_invulnerablity
     ITEMHAND 3
     DECAY
     VALUE 2656
-    RESTOCK 1
     WEIGHT 500
     STR 15
     GOOD 11
@@ -1802,7 +1695,6 @@ SECTION ITEM $item_a_kite_shield_of_defence
     ITEMHAND 3
     DECAY
     VALUE 238
-    RESTOCK 1
     DYE 1
     WEIGHT 700
     GOOD 11
@@ -1820,7 +1712,6 @@ SECTION ITEM $item_a_kite_shield_of_guarding
     ITEMHAND 3
     DECAY
     VALUE 476
-    RESTOCK 1
     DYE 1
     WEIGHT 700
     GOOD 11
@@ -1838,7 +1729,6 @@ SECTION ITEM $item_a_kite_shield_of_hardening
     ITEMHAND 3
     DECAY
     VALUE 952
-    RESTOCK 1
     DYE 1
     WEIGHT 700
     GOOD 11
@@ -1856,7 +1746,6 @@ SECTION ITEM $item_a_kite_shield_of_fortification
     ITEMHAND 3
     DECAY
     VALUE 1904
-    RESTOCK 1
     DYE 1
     WEIGHT 700
     GOOD 11
@@ -1874,7 +1763,6 @@ SECTION ITEM $item_a_kite_shield_of_invulnerablity
     ITEMHAND 3
     DECAY
     VALUE 3808
-    RESTOCK 1
     DYE 1
     WEIGHT 700
     GOOD 11
@@ -1891,7 +1779,6 @@ SECTION ITEM $item_a_metal_shield_of_defence
     ITEMHAND 3
     DECAY
     VALUE 148
-    RESTOCK 1
     WEIGHT 600
     STR 30
     GOOD 11
@@ -1908,7 +1795,6 @@ SECTION ITEM $item_a_metal_shield_of_guarding
     ITEMHAND 3
     DECAY
     VALUE 296
-    RESTOCK 1
     WEIGHT 600
     STR 30
     GOOD 11
@@ -1925,7 +1811,6 @@ SECTION ITEM $item_a_metal_shield_of_hardening
     ITEMHAND 3
     DECAY
     VALUE 592
-    RESTOCK 1
     WEIGHT 600
     STR 30
     GOOD 11
@@ -1942,7 +1827,6 @@ SECTION ITEM $item_a_metal_shield_of_fortification
     ITEMHAND 3
     DECAY
     VALUE 1184
-    RESTOCK 1
     WEIGHT 600
     STR 30
     GOOD 11
@@ -1959,7 +1843,6 @@ SECTION ITEM $item_a_metal_shield_of_invulnerablity
     ITEMHAND 3
     DECAY
     VALUE 2368
-    RESTOCK 1
     WEIGHT 600
     STR 30
     GOOD 11
@@ -1977,7 +1860,6 @@ SECTION ITEM $item_a_wooden_kite_shield_of_defence
     ITEMHAND 3
     DECAY
     VALUE 220
-    RESTOCK 1
     WEIGHT 700
     GOOD 11
 }
@@ -1994,7 +1876,6 @@ SECTION ITEM $item_a_wooden_kite_shield_of_guarding
     ITEMHAND 3
     DECAY
     VALUE 440
-    RESTOCK 1
     WEIGHT 700
     GOOD 11
 }
@@ -2011,7 +1892,6 @@ SECTION ITEM $item_a_wooden_kite_shield_of_hardening
     ITEMHAND 3
     DECAY
     VALUE 880
-    RESTOCK 1
     WEIGHT 700
     GOOD 11
 }
@@ -2028,7 +1908,6 @@ SECTION ITEM $item_a_magic_wooden_kite_shield
     ITEMHAND 3
     DECAY
     VALUE 1760
-    RESTOCK 1
     WEIGHT 700
     GOOD 11
 }
@@ -2045,7 +1924,6 @@ SECTION ITEM $item_a_wooden_kite_shield_of_invulnerablity
     ITEMHAND 3
     DECAY
     VALUE 3520
-    RESTOCK 1
     WEIGHT 700
     GOOD 11
 }
@@ -2061,7 +1939,6 @@ SECTION ITEM $item_a_magic_wooden_shield
     ITEMHAND 3
     DECAY
     VALUE 78
-    RESTOCK 1
     WEIGHT 500
     STR 10
     GOOD 11
@@ -2078,7 +1955,6 @@ SECTION ITEM $item_a_wooden_shield_of_guarding
     ITEMHAND 3
     DECAY
     VALUE 156
-    RESTOCK 1
     WEIGHT 500
     STR 10
     GOOD 11
@@ -2095,7 +1971,6 @@ SECTION ITEM $item_a_wooden_shield_of_hardening
     ITEMHAND 3
     DECAY
     VALUE 312
-    RESTOCK 1
     WEIGHT 500
     STR 10
     GOOD 11
@@ -2112,7 +1987,6 @@ SECTION ITEM $item_a_wooden_shield_of_fortification
     ITEMHAND 3
     DECAY
     VALUE 624
-    RESTOCK 1
     WEIGHT 500
     STR 10
     GOOD 11
@@ -2129,7 +2003,6 @@ SECTION ITEM $item_a_wooden_shield_of_invulnerablity
     ITEMHAND 3
     DECAY
     VALUE 1248
-    RESTOCK 1
     WEIGHT 500
     STR 10
     GOOD 11
@@ -2149,7 +2022,6 @@ SECTION ITEM $item_a_heater_sheild_of_defence
     ITEMHAND 3
     DECAY
     VALUE 308
-    RESTOCK 1
     WEIGHT 900
     GOOD 11
 }
@@ -2166,7 +2038,6 @@ SECTION ITEM $item_a_heater_sheild_of_guarding
     ITEMHAND 3
     DECAY
     VALUE 616
-    RESTOCK 1
     WEIGHT 900
     GOOD 11
 }
@@ -2183,7 +2054,6 @@ SECTION ITEM $item_a_heater_sheild_of_hardening
     ITEMHAND 3
     DECAY
     VALUE 1232
-    RESTOCK 1
     WEIGHT 900
     GOOD 11
 }
@@ -2200,7 +2070,6 @@ SECTION ITEM $item_a_heater_sheild_of_fortification
     ITEMHAND 3
     DECAY
     VALUE 2464
-    RESTOCK 1
     WEIGHT 900
     GOOD 11
 }
@@ -2217,7 +2086,6 @@ SECTION ITEM $item_a_heater_sheild_of_invulnerablity
     ITEMHAND 3
     DECAY
     VALUE 4928
-    RESTOCK 1
     WEIGHT 900
     GOOD 11
 }
@@ -2235,7 +2103,6 @@ SECTION ITEM $item_a_platemail_of_durability
     STR 60
     DECAY
     VALUE 265
-    RESTOCK 10
     COLOR 0961
     WEIGHT 1000
 }
@@ -2253,7 +2120,6 @@ SECTION ITEM $item_a_plate_gorget_of_duribility
     STR 40
     DECAY
     VALUE 115
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2271,7 +2137,6 @@ SECTION ITEM $item_plate_gloves_of_duribility
     STR 40
     DECAY
     VALUE 135
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2289,7 +2154,6 @@ SECTION ITEM $item_a_plate_helm_of_duribility
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2307,7 +2171,6 @@ SECTION ITEM $item_plate_legs_of_duribility
     STR 60
     DECAY
     VALUE 231
-    RESTOCK 10
     COLOR 0961
     WEIGHT 700
 }
@@ -2325,7 +2188,6 @@ SECTION ITEM $item_plate_arms_of_duribility
     STR 40
     DECAY
     VALUE 193
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2343,7 +2205,6 @@ SECTION ITEM $item_a_substantial_platemail
     STR 60
     DECAY
     VALUE 265
-    RESTOCK 10
     COLOR 0961
     WEIGHT 1000
 }
@@ -2361,7 +2222,6 @@ SECTION ITEM $item_a_substantial_plate_gorget
     STR 40
     DECAY
     VALUE 115
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2379,7 +2239,6 @@ SECTION ITEM $item_substantial_plate_gloves
     STR 40
     DECAY
     VALUE 135
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2397,7 +2256,6 @@ SECTION ITEM $item_a_substantial_plate_helm
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2415,7 +2273,6 @@ SECTION ITEM $item_substantial_plate_legs
     STR 60
     DECAY
     VALUE 231
-    RESTOCK 10
     COLOR 0961
     WEIGHT 700
 }
@@ -2433,7 +2290,6 @@ SECTION ITEM $item_substantial_plate_arms
     STR 40
     DECAY
     VALUE 193
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2451,7 +2307,6 @@ SECTION ITEM $item_a_massive_platemail
     STR 60
     DECAY
     VALUE 265
-    RESTOCK 10
     COLOR 0961
     WEIGHT 1000
 }
@@ -2469,7 +2324,6 @@ SECTION ITEM $item_a_massive_plate_gorget
     STR 40
     DECAY
     VALUE 115
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2487,7 +2341,6 @@ SECTION ITEM $item_massive_plate_gloves
     STR 40
     DECAY
     VALUE 135
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2505,7 +2358,6 @@ SECTION ITEM $item_a_massive_plate_helm
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2523,7 +2375,6 @@ SECTION ITEM $item_massive_plate_legs
     STR 60
     DECAY
     VALUE 231
-    RESTOCK 10
     COLOR 0961
     WEIGHT 700
 }
@@ -2541,7 +2392,6 @@ SECTION ITEM $item_massive_plate_arms
     STR 40
     DECAY
     VALUE 193
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2559,7 +2409,6 @@ SECTION ITEM $item_a_fortified_platemail
     STR 60
     DECAY
     VALUE 265
-    RESTOCK 10
     COLOR 0961
     WEIGHT 1000
 }
@@ -2577,7 +2426,6 @@ SECTION ITEM $item_a_fortified_plate_gorget
     STR 40
     DECAY
     VALUE 115
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2595,7 +2443,6 @@ SECTION ITEM $item_fortified_plate_gloves
     STR 40
     DECAY
     VALUE 135
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2613,7 +2460,6 @@ SECTION ITEM $item_a_fortified_plate_helm
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2631,7 +2477,6 @@ SECTION ITEM $item_fortified_plate_legs
     STR 60
     DECAY
     VALUE 231
-    RESTOCK 10
     COLOR 0961
     WEIGHT 700
 }
@@ -2649,7 +2494,6 @@ SECTION ITEM $item_fortified_plate_arms
     STR 40
     DECAY
     VALUE 193
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2667,7 +2511,6 @@ SECTION ITEM $item_a_indestructible_platemail
     STR 60
     DECAY
     VALUE 265
-    RESTOCK 10
     COLOR 0961
     WEIGHT 1000
 }
@@ -2685,7 +2528,6 @@ SECTION ITEM $item_a_indestructible_plate_gorget
     STR 40
     DECAY
     VALUE 115
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2703,7 +2545,6 @@ SECTION ITEM $item_indestructible_plate_gloves
     STR 40
     DECAY
     VALUE 135
-    RESTOCK 10
     COLOR 0961
     WEIGHT 200
 }
@@ -2721,7 +2562,6 @@ SECTION ITEM $item_a_indestructible_plate_helm
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2739,7 +2579,6 @@ SECTION ITEM $item_indestructible_plate_legs
     STR 60
     DECAY
     VALUE 231
-    RESTOCK 10
     COLOR 0961
     WEIGHT 700
 }
@@ -2757,7 +2596,6 @@ SECTION ITEM $item_a_indestructible_plate_arms
     STR 40
     DECAY
     VALUE 193
-    RESTOCK 10
     COLOR 0961
     WEIGHT 500
 }
@@ -2773,7 +2611,6 @@ SECTION ITEM $item_chainmail_of_defence
     STR 35
     DECAY
     VALUE 200
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2788,7 +2625,6 @@ SECTION ITEM $item_chain_legs_of_defence
     STR 35
     DECAY
     VALUE 170
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2803,7 +2639,6 @@ SECTION ITEM $item_chain_coif_of_defence
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2818,7 +2653,6 @@ SECTION ITEM $item_chainmail_of_guarding
     STR 35
     DECAY
     VALUE 230
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2833,7 +2667,6 @@ SECTION ITEM $item_chain_legs_of_guarding
     STR 35
     DECAY
     VALUE 220
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2848,7 +2681,6 @@ SECTION ITEM $item_chain_coif_of_guarding
     STR 35
     DECAY
     VALUE 190
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2863,7 +2695,6 @@ SECTION ITEM $item_chainmail_of_hardening
     STR 35
     DECAY
     VALUE 300
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2878,7 +2709,6 @@ SECTION ITEM $item_chain_legs_of_hardening
     STR 35
     DECAY
     VALUE 290
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2893,7 +2723,6 @@ SECTION ITEM $item_chain_coif_of_hardening
     STR 35
     DECAY
     VALUE 250
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2908,7 +2737,6 @@ SECTION ITEM $item_chainmail_of_fortification
     STR 35
     DECAY
     VALUE 400
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2923,7 +2751,6 @@ SECTION ITEM $item_chain_legs_of_fortification
     STR 35
     DECAY
     VALUE 375
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2938,7 +2765,6 @@ SECTION ITEM $item_chain_coif_of_fortification
     STR 35
     DECAY
     VALUE 360
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2953,7 +2779,6 @@ SECTION ITEM $item_chainmail_of_invulnerability
     STR 35
     DECAY
     VALUE 600
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2968,7 +2793,6 @@ SECTION ITEM $item_chain_legs_of_invulnerability
     STR 35
     DECAY
     VALUE 500
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2983,7 +2807,6 @@ SECTION ITEM $item_chain_coif_of_invulnerability
     STR 35
     DECAY
     VALUE 490
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -2999,7 +2822,6 @@ SECTION ITEM $item_magic_plate_of_defense
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -3015,7 +2837,6 @@ SECTION ITEM $item_magic_plate_of_guarding
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -3031,7 +2852,6 @@ SECTION ITEM $item_magic_plate_of_hardening
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -3047,7 +2867,6 @@ SECTION ITEM $item_magic_plate_of_fortification
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -3063,7 +2882,6 @@ SECTION ITEM $item_magic_plate_of_invulnerability
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -3079,7 +2897,6 @@ SECTION ITEM $item_shadow_female_plate
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -3095,7 +2912,6 @@ SECTION ITEM $item_merkite_female_plate
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -3111,7 +2927,6 @@ SECTION ITEM $item_plate_armor
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 475
 }
 
@@ -3127,7 +2942,6 @@ SECTION ITEM $item_verite_female_plate
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 525
 }
 
@@ -3143,7 +2957,6 @@ SECTION ITEM $item_agapite_female_plate
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -3159,7 +2972,6 @@ SECTION ITEM $item_bronze_female_plate
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -3175,7 +2987,6 @@ SECTION ITEM $item_copper_female_plate
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -3191,7 +3002,6 @@ SECTION ITEM $item_valorite_female_plate
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -3207,7 +3017,6 @@ SECTION ITEM $item_silver_female_plate
     HP 20
     STR 20
     VALUE 100
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -3223,7 +3032,6 @@ SECTION ITEM $item_shadow_ringmail_tunic
     STR 30
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 540
 }
 
@@ -3239,7 +3047,6 @@ SECTION ITEM $item_shadow_ringmail_sleeves
     STR 30
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 360
 }
 
@@ -3255,7 +3062,6 @@ SECTION ITEM $item_ringmail_leggings_1
     STR 30
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 540
 }
 
@@ -3271,7 +3077,6 @@ SECTION ITEM $item_shadow_ringmail_gloves
     STR 30
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -3287,7 +3092,6 @@ SECTION ITEM $item_merkite_ringmail_tunic
     STR 30
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 660
 }
 
@@ -3303,7 +3107,6 @@ SECTION ITEM $item_merkite_ringmail_sleeves
     STR 30
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 440
 }
 
@@ -3319,7 +3122,6 @@ SECTION ITEM $item_ringmail_leggings_2
     STR 30
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 660
 }
 
@@ -3335,7 +3137,6 @@ SECTION ITEM $item_merkite_ringmail_gloves
     STR 30
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 220
 }
 
@@ -3351,7 +3152,6 @@ SECTION ITEM $item_golden_ringmail_tunic
     STR 30
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 570
 }
 
@@ -3367,7 +3167,6 @@ SECTION ITEM $item_golden_ringmail_sleeves
     STR 30
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 380
 }
 
@@ -3383,7 +3182,6 @@ SECTION ITEM $item_golden_ringmail_leggings
     STR 30
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 580
 }
 
@@ -3399,7 +3197,6 @@ SECTION ITEM $item_golden_ringmail_gloves
     STR 30
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -3415,7 +3212,6 @@ SECTION ITEM $item_verite_ringmail_tunic
     STR 30
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -3431,7 +3227,6 @@ SECTION ITEM $item_verite_ringmail_sleeves
     STR 30
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 420
 }
 
@@ -3447,7 +3242,6 @@ SECTION ITEM $item_verite_ringmail_leggings
     STR 30
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -3463,7 +3257,6 @@ SECTION ITEM $item_verite_ringmail_gloves
     STR 30
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 210
 }
 
@@ -3479,7 +3272,6 @@ SECTION ITEM $item_agapite_ringmail_tunic
     STR 30
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 540
 }
 
@@ -3495,7 +3287,6 @@ SECTION ITEM $item_agapite_ringmail_sleeves
     STR 30
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 360
 }
 
@@ -3511,7 +3302,6 @@ SECTION ITEM $item_agapite_ringmail_leggings
     STR 30
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 540
 }
 
@@ -3527,7 +3317,6 @@ SECTION ITEM $item_agapite_ringmail_gloves
     STR 30
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -3543,7 +3332,6 @@ SECTION ITEM $item_bronze_ringmail_tunic
     STR 30
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 660
 }
 
@@ -3559,7 +3347,6 @@ SECTION ITEM $item_bronze_ringmail_sleeves
     STR 30
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 440
 }
 
@@ -3575,7 +3362,6 @@ SECTION ITEM $item_ringmail_leggings_3
     STR 30
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 660
 }
 
@@ -3591,7 +3377,6 @@ SECTION ITEM $item_bronze_ringmail_gloves
     STR 30
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 220
 }
 
@@ -3607,7 +3392,6 @@ SECTION ITEM $item_copper_ringmail_tunic
     STR 30
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 540
 }
 
@@ -3623,7 +3407,6 @@ SECTION ITEM $item_copper_ringmail_sleeves
     STR 30
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 360
 }
 
@@ -3639,7 +3422,6 @@ SECTION ITEM $item_copper_ringmail_leggings
     STR 30
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 540
 }
 
@@ -3655,7 +3437,6 @@ SECTION ITEM $item_copper_ringmail_gloves
     STR 30
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -3671,7 +3452,6 @@ SECTION ITEM $item_valorite_ringmail_tunic
     STR 30
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 600
 }
 
@@ -3687,7 +3467,6 @@ SECTION ITEM $item_valorite_ringmail_sleeves
     STR 30
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 400
 }
 
@@ -3703,7 +3482,6 @@ SECTION ITEM $item_valorite_ringmail_leggings
     STR 30
     DECAY
     VALUE 85
-    RESTOCK 10
     WEIGHT 600
 }
 
@@ -3719,7 +3497,6 @@ SECTION ITEM $item_valorite_ringmail_gloves
     STR 30
     DECAY
     VALUE 75
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -3735,7 +3512,6 @@ SECTION ITEM $item_copper_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -3751,7 +3527,6 @@ SECTION ITEM $item_copper_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -3767,7 +3542,6 @@ SECTION ITEM $item_copper_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -3783,7 +3557,6 @@ SECTION ITEM $item_daemon_bone_chest
     STR 40
     DECAY
     VALUE 130
-    RESTOCK 10
     WEIGHT 540
 }
 
@@ -3799,7 +3572,6 @@ SECTION ITEM $item_daemon_bone_arms
     STR 40
     DECAY
     VALUE 90
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -3815,7 +3587,6 @@ SECTION ITEM $item_daemon_bone_gloves
     STR 40
     DECAY
     VALUE 80
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -3861,7 +3632,6 @@ SECTION ITEM $item_nose_helm_1
     STR 40
     DECAY
     VALUE 275
-    RESTOCK 10
     WEIGHT 475
 }
 
@@ -3879,7 +3649,6 @@ SECTION ITEM $item_merkite_platemail
     STR 60
     DECAY
     VALUE 550
-    RESTOCK 10
     WEIGHT 1100
 }
 
@@ -3896,7 +3665,6 @@ SECTION ITEM $item_merkite_plate_gorget
     STR 40
     DECAY
     VALUE 200
-    RESTOCK 10
     WEIGHT 220
 }
 
@@ -3913,7 +3681,6 @@ SECTION ITEM $item_merkite_plate_gloves
     STR 40
     DECAY
     VALUE 200
-    RESTOCK 10
     WEIGHT 220
 }
 
@@ -3930,7 +3697,6 @@ SECTION ITEM $item_merkite_plate_helm
     STR 40
     DECAY
     VALUE 225
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -3947,7 +3713,6 @@ SECTION ITEM $item_merkite_plate_legs
     STR 60
     DECAY
     VALUE 425
-    RESTOCK 10
     WEIGHT 770
 }
 
@@ -3964,7 +3729,6 @@ SECTION ITEM $item_merkite_plate_arms
     STR 40
     DECAY
     VALUE 375
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -3981,7 +3745,6 @@ SECTION ITEM $item_merkite_nose_helm
     STR 40
     DECAY
     VALUE 350
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -3998,7 +3761,6 @@ SECTION ITEM $item_merkite_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -4015,7 +3777,6 @@ SECTION ITEM $item_merkite_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -4033,7 +3794,6 @@ SECTION ITEM $item_shadow_platemail
     STR 60
     DECAY
     VALUE 550
-    RESTOCK 10
     WEIGHT 900
 }
 
@@ -4050,7 +3810,6 @@ SECTION ITEM $item_shadow_plate_gorget
     STR 40
     DECAY
     VALUE 200
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -4067,7 +3826,6 @@ SECTION ITEM $item_shadow_plate_gloves
     STR 40
     DECAY
     VALUE 200
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -4084,7 +3842,6 @@ SECTION ITEM $item_shadow_plate_helm
     STR 40
     DECAY
     VALUE 225
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4101,7 +3858,6 @@ SECTION ITEM $item_shadow_plate_legs
     STR 60
     DECAY
     VALUE 425
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -4118,7 +3874,6 @@ SECTION ITEM $item_shadow_plate_arms
     STR 40
     DECAY
     VALUE 375
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4135,7 +3890,6 @@ SECTION ITEM $item_shadow_nose_helm
     STR 40
     DECAY
     VALUE 350
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4152,7 +3906,6 @@ SECTION ITEM $item_shadow_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4169,7 +3922,6 @@ SECTION ITEM $item_shadow_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4186,7 +3938,6 @@ SECTION ITEM $item_copper_nose_helm
     STR 40
     DECAY
     VALUE 350
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4203,7 +3954,6 @@ SECTION ITEM $item_copper_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4220,7 +3970,6 @@ SECTION ITEM $item_copper_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4236,7 +3985,6 @@ SECTION ITEM $item_silver_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -4252,7 +4000,6 @@ SECTION ITEM $item_silver_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -4268,7 +4015,6 @@ SECTION ITEM $item_silver_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -4286,7 +4032,6 @@ SECTION ITEM $item_golden_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 475
 }
 
@@ -4304,7 +4049,6 @@ SECTION ITEM $item_golden_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 475
 }
 
@@ -4321,7 +4065,6 @@ SECTION ITEM $item_valorite_platemail
     STR 60
     DECAY
     VALUE 450
-    RESTOCK 10
     WEIGHT 1000
 }
 
@@ -4338,7 +4081,6 @@ SECTION ITEM $item_valorite_plate_gorget
     STR 40
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -4355,7 +4097,6 @@ SECTION ITEM $item_valorite_plate_gloves
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -4372,7 +4113,6 @@ SECTION ITEM $item_valorite_plate_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4389,7 +4129,6 @@ SECTION ITEM $item_valorite_plate_legs
     STR 60
     DECAY
     VALUE 390
-    RESTOCK 10
     WEIGHT 700
 }
 //Valorite Plate Sleeves
@@ -4405,7 +4144,6 @@ SECTION ITEM $item_valorite_plate_arms
     STR 40
     DECAY
     VALUE 300
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4422,7 +4160,6 @@ SECTION ITEM $item_valorite_nose_helm
     STR 40
     DECAY
     VALUE 275
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4439,7 +4176,6 @@ SECTION ITEM $item_valorite_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4456,7 +4192,6 @@ SECTION ITEM $item_valorite_helmet
     STR 30
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4473,7 +4208,6 @@ SECTION ITEM $item_valorite_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4491,7 +4225,6 @@ SECTION ITEM $item_silver_nose_helm
     STR 40
     DECAY
     VALUE 275
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4508,7 +4241,6 @@ SECTION ITEM $item_silver_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4525,7 +4257,6 @@ SECTION ITEM $item_silver_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -4542,7 +4273,6 @@ SECTION ITEM $item_verite_platemail
     STR 60
     DECAY
     VALUE 450
-    RESTOCK 10
     WEIGHT 1050
 }
 
@@ -4559,7 +4289,6 @@ SECTION ITEM $item_verite_plate_gorget
     STR 40
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 210
 }
 
@@ -4576,7 +4305,6 @@ SECTION ITEM $item_verite_plate_gloves
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     WEIGHT 210
 }
 
@@ -4593,7 +4321,6 @@ SECTION ITEM $item_verite_plate_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 525
 }
 
@@ -4610,7 +4337,6 @@ SECTION ITEM $item_verite_plate_legs
     STR 60
     DECAY
     VALUE 390
-    RESTOCK 10
     WEIGHT 735
 }
 //Verite Plate Sleeves
@@ -4626,7 +4352,6 @@ SECTION ITEM $item_verite_plate_arms
     STR 40
     DECAY
     VALUE 300
-    RESTOCK 10
     WEIGHT 525
 }
 
@@ -4642,7 +4367,6 @@ SECTION ITEM $item_verite_nose_helm
     STR 40
     DECAY
     VALUE 275
-    RESTOCK 10
     WEIGHT 525
 }
 
@@ -4659,7 +4383,6 @@ SECTION ITEM $item_verite_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 525
 }
 
@@ -4676,7 +4399,6 @@ SECTION ITEM $item_verite_helmet
     STR 30
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 525
 }
 
@@ -4693,7 +4415,6 @@ SECTION ITEM $item_verite_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 525
 }
 
@@ -4710,7 +4431,6 @@ SECTION ITEM $item_bronze_platemail
     STR 60
     DECAY
     VALUE 450
-    RESTOCK 10
     WEIGHT 1100
 }
 
@@ -4727,7 +4447,6 @@ SECTION ITEM $item_bronze_plate_gorget
     STR 40
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 220
 }
 
@@ -4744,7 +4463,6 @@ SECTION ITEM $item_bronze_plate_gloves
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     WEIGHT 220
 }
 
@@ -4761,7 +4479,6 @@ SECTION ITEM $item_bronze_plate_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -4778,7 +4495,6 @@ SECTION ITEM $item_bronze_plate_legs
     STR 60
     DECAY
     VALUE 390
-    RESTOCK 10
     WEIGHT 770
 }
 
@@ -4795,7 +4511,6 @@ SECTION ITEM $item_bronze_plate_arms
     STR 40
     DECAY
     VALUE 300
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -4811,7 +4526,6 @@ SECTION ITEM $item_bronze_nose_helm
     STR 40
     DECAY
     VALUE 275
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -4828,7 +4542,6 @@ SECTION ITEM $item_bronze_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -4845,7 +4558,6 @@ SECTION ITEM $item_bronze_helmet
     STR 30
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -4862,7 +4574,6 @@ SECTION ITEM $item_bronze_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 550
 }
 
@@ -4879,7 +4590,6 @@ SECTION ITEM $item_agapite_platemail
     STR 60
     DECAY
     VALUE 450
-    RESTOCK 10
     WEIGHT 900
 }
 
@@ -4896,7 +4606,6 @@ SECTION ITEM $item_agapite_plate_gorget
     STR 40
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -4913,7 +4622,6 @@ SECTION ITEM $item_agapite_plate_gloves
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     WEIGHT 180
 }
 
@@ -4930,7 +4638,6 @@ SECTION ITEM $item_agapite_plate_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4947,7 +4654,6 @@ SECTION ITEM $item_agapite_plate_legs
     STR 60
     DECAY
     VALUE 390
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -4964,7 +4670,6 @@ SECTION ITEM $item_agapite_plate_arms
     STR 40
     DECAY
     VALUE 300
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4981,7 +4686,6 @@ SECTION ITEM $item_agapite_nose_helm
     STR 40
     DECAY
     VALUE 275
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -4998,7 +4702,6 @@ SECTION ITEM $item_agapite_close_helm
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -5015,7 +4718,6 @@ SECTION ITEM $item_agapite_helmet
     STR 30
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -5032,7 +4734,6 @@ SECTION ITEM $item_agapite_bascinet
     STR 40
     DECAY
     VALUE 195
-    RESTOCK 10
     WEIGHT 450
 }
 
@@ -5047,7 +4748,6 @@ SECTION ITEM $item_polar_bear_mask
     DECAY
     VALUE 40
     COLOR 0481
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -5063,7 +4763,6 @@ SECTION ITEM $item_shadow_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -5079,7 +4778,6 @@ SECTION ITEM $item_shadow_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -5095,7 +4793,6 @@ SECTION ITEM $item_shadow_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -5111,7 +4808,6 @@ SECTION ITEM $item_golden_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 665
 }
 
@@ -5127,7 +4823,6 @@ SECTION ITEM $item_golden_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 665
 }
 
@@ -5143,7 +4838,6 @@ SECTION ITEM $item_golden_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 665
 }
 
@@ -5159,7 +4853,6 @@ SECTION ITEM $item_merkite_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 770
 }
 
@@ -5175,7 +4868,6 @@ SECTION ITEM $item_merkite_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 770
 }
 
@@ -5191,7 +4883,6 @@ SECTION ITEM $item_merkite_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 770
 }
 
@@ -5207,7 +4898,6 @@ SECTION ITEM $item_verite_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 735
 }
 
@@ -5223,7 +4913,6 @@ SECTION ITEM $item_verite_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 735
 }
 
@@ -5239,7 +4928,6 @@ SECTION ITEM $item_verite_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 735
 }
 
@@ -5255,7 +4943,6 @@ SECTION ITEM $item_valorite_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -5271,7 +4958,6 @@ SECTION ITEM $item_valorite_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -5287,7 +4973,6 @@ SECTION ITEM $item_valorite_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -5303,7 +4988,6 @@ SECTION ITEM $item_bronze_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 770
 }
 
@@ -5319,7 +5003,6 @@ SECTION ITEM $item_bronze_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 770
 }
 
@@ -5335,7 +5018,6 @@ SECTION ITEM $item_bronze_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 770
 }
 
@@ -5351,7 +5033,6 @@ SECTION ITEM $item_agapite_chain_tunic
     STR 35
     DECAY
     VALUE 150
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -5367,7 +5048,6 @@ SECTION ITEM $item_agapite_chain_leggings
     STR 35
     DECAY
     VALUE 120
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -5383,7 +5063,6 @@ SECTION ITEM $item_agapite_chain_coif
     STR 35
     DECAY
     VALUE 100
-    RESTOCK 10
     WEIGHT 630
 }
 
@@ -5426,7 +5105,6 @@ SECTION ITEM $item_silver_platemail
     STR 60
     DECAY
     VALUE 265
-    RESTOCK 10
     WEIGHT 1000
 }
 
@@ -5444,7 +5122,6 @@ SECTION ITEM $item_silver_plate_gorget
     STR 40
     DECAY
     VALUE 115
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -5462,7 +5139,6 @@ SECTION ITEM $item_silver_plate_gloves
     STR 40
     DECAY
     VALUE 135
-    RESTOCK 10
     WEIGHT 200
 }
 
@@ -5480,7 +5156,6 @@ SECTION ITEM $item_silver_plate_helm
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -5498,7 +5173,6 @@ SECTION ITEM $item_silver_plate_legs
     STR 60
     DECAY
     VALUE 231
-    RESTOCK 10
     WEIGHT 700
 }
 
@@ -5516,7 +5190,6 @@ SECTION ITEM $item_silver_plate_arms
     STR 40
     DECAY
     VALUE 193
-    RESTOCK 10
     WEIGHT 500
 }
 
@@ -5532,7 +5205,6 @@ SECTION ITEM $item_copper_platemail
     STR 60
     DECAY
     VALUE 265
-    RESTOCK 10
     WEIGHT 900
     COLOR 046E
 }
@@ -5549,7 +5221,6 @@ SECTION ITEM $item_copper_plate_gorget
     STR 40
     DECAY
     VALUE 115
-    RESTOCK 10
     WEIGHT 180
     COLOR 046E
 }
@@ -5566,7 +5237,6 @@ SECTION ITEM $item_copper_plate_gloves
     STR 40
     DECAY
     VALUE 135
-    RESTOCK 10
     WEIGHT 180
     COLOR 046E
 }
@@ -5583,7 +5253,6 @@ SECTION ITEM $item_copper_plate_helm
     STR 40
     DECAY
     VALUE 175
-    RESTOCK 10
     WEIGHT 450
     COLOR 046E
 }
@@ -5600,7 +5269,6 @@ SECTION ITEM $item_copper_plate_legs
     STR 60
     DECAY
     VALUE 231
-    RESTOCK 10
     WEIGHT 630
     COLOR 046E
 }
@@ -5617,7 +5285,6 @@ SECTION ITEM $item_copper_plate_arms
     STR 40
     DECAY
     VALUE 193
-    RESTOCK 10
     WEIGHT 450
     COLOR 046E
 }
@@ -5633,7 +5300,6 @@ SECTION ITEM $item_ranger_tunic
     STR 25
     DECAY
     VALUE 90
-    RESTOCK 10
     WEIGHT 600
     GOOD 10
 }
@@ -5650,7 +5316,6 @@ SECTION ITEM $item_ranger_gorget
     STR 25
     DECAY
     VALUE 60
-    RESTOCK 10
     WEIGHT 200
     GOOD 10
 }
@@ -5666,7 +5331,6 @@ SECTION ITEM $item_ranger_gloves
     STR 25
     DECAY
     VALUE 60
-    RESTOCK 10
     WEIGHT 200
     GOOD 10
 }
@@ -5682,7 +5346,6 @@ SECTION ITEM $item_ranger_sleeves
     STR 25
     DECAY
     VALUE 65
-    RESTOCK 10
     WEIGHT 400
     GOOD 10
 }
@@ -5698,7 +5361,6 @@ SECTION ITEM $item_ranger_leggings
     STR 25
     DECAY
     VALUE 70
-    RESTOCK 10
     WEIGHT 500
     GOOD 10
 }
