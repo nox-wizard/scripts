@@ -374,4 +374,48 @@ native  set_addBanned ( const set, const house);
 */
 native  set_addOwnedHouses ( const set, const house);
 
+/*
+\brief Add to given set all items inside house
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the house
+\param 3 optional a type to filter the returned items
+\return 0
+*/
+native set_getItemsInHouse (const set, const house, const type=-1);
+
+/*
+\brief Add to given set all items inside house
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the house
+\param 3 optional a type to filter the returned items
+\return 0
+*/
+native set_getItemsOutsideHouse (const set, const house, const type=-1);
+
+/*
+\brief Add to given set all chars inside house
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the house
+\param 3 optional a type to filter the returned items
+\return 0
+*/
+native set_getCharsInHouse (const set, const house);
+
+/*
+\brief Add to given set all chars inside house
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the house
+\param 3 optional a type to filter the returned items
+\return 0
+*/
+native set_getCharsOutsideHouse (const set, const house);
+
 /*! }@ */
