@@ -40,6 +40,9 @@
 
 #include scripts/symbols/tracking.xss
 
+#include scripts/symbols/areas.xss
+#include scripts/symbols/locations.xss
+
 //
 // Local include
 //
