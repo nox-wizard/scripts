@@ -18,6 +18,7 @@
 	<LI> "ai": npcai
 	<LI> "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
 	<LI> "gmfx": gm moving effect
+	<LI> "light": character fixed light level
 	<LI> "owner": owner serial
 	<LI> "shop": is character is a shopkeeper (0 no - 1 yes)
 	<LI> "spattack": type of spell attack
@@ -123,6 +124,7 @@ static readPropAndVal(chr,&prop,&val)
 			}
 
 		case 'g': prop = CP_GMMOVEEFF;
+		case 'l':prop = CP_FIXEDLIGHT;
 		case 'o': prop = CP_OWNSERIAL;
 		case 's':
 			switch(__cmdParams[0][1])

@@ -67,7 +67,6 @@ regioncp,150,cmd_regioncp
 resend,50,cmd_resend
 resurrect,100,cmd_resurrect
 save,200,cmd_save
-setdir,150,cmd_setdir
 setmorexyz,150,cmd_setmorexyz
 setmoreb12,150,cmd_setmoreb12
 setmoreb34,150,cmd_setmoreb34
@@ -80,6 +79,7 @@ skills,0,cmd_skills
 solvepage,100,cmd_solvepage
 stamina,200,cmd_stamina
 stats,0,cmd_stats
+summon,100,cmd_summon
 sysm,100,cmd_sysm
 tile,150,cmd_tile
 tweak,100,cmd_tweak

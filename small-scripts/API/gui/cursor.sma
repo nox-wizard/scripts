@@ -133,14 +133,16 @@ stock cursor_up(...)
 {
 	new n = 1;
 	if(numargs()) n = getarg(0);
-	return cursor_down(-1*n);
+	crp[CRP_CURRENT_Y] -= n*(crp[CRP_INTERLINE]*crp[CRP_GRID_Y])/10;
+	return checkPosition();
 }
 
 stock cursor_left(...)
 {
 	new n = 1;
 	if(numargs()) n = getarg(0);
-	return cursor_right(-1*n);
+	crp[CRP_CURRENT_X] -= n*crp[CRP_GRID_X];
+	return checkPosition();
 }
 
 stock cursor_tab(...)

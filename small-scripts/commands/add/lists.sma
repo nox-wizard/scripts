@@ -164,13 +164,13 @@ enum additemEntry
 #define NUM_CARPENTER1 36
 #define IDX_CARPENTER1 TOOLS_MENU_IDX
 
-#define NUM_CARPENTER2 53
+#define NUM_CARPENTER2 52
 #define IDX_CARPENTER2 IDX_CARPENTER1 + NUM_CARPENTER1
 
 #define NUM_TAILOR 15
 #define IDX_TAILOR IDX_CARPENTER2 + NUM_CARPENTER2
 
-#define NUM_BLACKSMITH 19
+#define NUM_BLACKSMITH 18
 #define IDX_BLACKSMITH IDX_TAILOR + NUM_TAILOR
 
 #define NUM_MUSICIAN 7
@@ -1406,22 +1406,22 @@ new __addMenuList[NUM_ADD_ITEMS][additemEntry] =
 	{0x1027,"$item_chisel2                          ","chisel"},
 	{0x1028,"$item_dovetail_saw                     ","dovetail saw"},
 	{0x1029,"$item_dovetail_saw2                    ","dovetail saw"},
-	{0x102A,"$item_hammer                           ",""},
-	{0x102B,"$item_hammer2                          ",""},
-	{0x102C,"$item_moulding_planes                  ",""},
-	{0x102d,"$item_moulding_planes2                 ",""},
-	{0x102E,"$item_nails                            ",""},
-	{0x102f,"$item_nails2                           ",""},
-	{0x1030,"$item_jointing_plane                   ",""},
-	{0x1031,"$item_jointing_plane2                  ",""},
-	{0x1032,"$item_smoothing_plane                  ",""},
-	{0x1033,"$item_smoothing_plane2                 ",""},
-	{0x1034,"$item_saw                              ",""},
-	{0x1035,"$item_saw2                             ",""},
-	{0x10E4,"$item_draw_knife                       ",""},
-	{0x10E5,"$item_froe                             ",""},
-	{0x10E6,"$item_inshave                          ",""},
-	{0x10E7,"$item_scorp                            ",""},
+	{0x102A,"$item_hammer                           ","hammer"},
+	{0x102B,"$item_hammer2                          ","hammer"},
+	{0x102C,"$item_moulding_planes                  ","mould. planes"},
+	{0x102d,"$item_moulding_planes2                 ","mould. planes"},
+	{0x102E,"$item_nails                            ","nails"},
+	{0x102f,"$item_nails2                           ","nails"},
+	{0x1030,"$item_jointing_plane                   ","joint. plane"},
+	{0x1031,"$item_jointing_plane2                  ","joint. plane"},
+	{0x1032,"$item_smoothing_plane                  ","smooth. plane"},
+	{0x1033,"$item_smoothing_plane2                 ","smooth. plane"},
+	{0x1034,"$item_saw                              ","saw"},
+	{0x1035,"$item_saw2                             ","saw"},
+	{0x10E4,"$item_draw_knife                       ","knife"},
+	{0x10E5,"$item_froe                             ","froe"},
+	{0x10E6,"$item_inshave                          ","inshave"},
+	{0x10E7,"$item_scorp                            ","scorp"},
 	{0x19f1,"$item_woodworkers_bench1_1             ","woodworkers bench"},
 	{0x19f2,"$item_woodworkers_bench1_2             ","woodworkers bench"},
 	{0x19f3,"$item_woodworkers_bench1_3             ","woodworkers bench"},
@@ -1470,7 +1470,6 @@ new __addMenuList[NUM_ADD_ITEMS][additemEntry] =
 	{0x0B15,"$item_display_case_17                  ","display case"},
 	{0x0B16,"$item_display_case_18                  ","display case"},
 	{0x0B17,"$item_display_case_19                  ","display case"},
-	{0x0E3C,"$item_large_wooden_crate               ","large wooden crate"},
 	{0x0E3E,"$item_medium_wooden_crate1             ","medium wooden crate"},
 	{0x0e3f,"$item_medium_wooden_crate2             ","medium wooden crate"},
 	{0x0E42,"$item_wooden_chest1                    ","wooden chest"},
@@ -1491,25 +1490,24 @@ new __addMenuList[NUM_ADD_ITEMS][additemEntry] =
 	
 	//Tailor
 	{0x0FA9,"$item_dyes                             ","dyes"},
-	{0x0FAB,"$item_dying_tub                      ","a dying tub"},
+	{0x0FAB,"$item_dying_tub                        ","a dying tub"},
 	{0x0F9D,"$item_sewing_kit                       ","sewing kit"},
 	{0x1766,"$item_cut_cloth                        ","cut cloth"},
 	{0x0F9E,"$item_scissors                         ","scissors"},
-	{0x101d,"$item_spinning_wheel                   ","spinning wheel"},
-	{0x10A4,"$item_spinning_wheel_1                 ","spinning wheel"},
-	{0x10A5,"$item_spinning_wheel_2                 ","spinning wheel"},
+	{0x101d,"$item_spinning_wheel1                  ","spinning wheel"},
+	{0x10A4,"$item_spinning_wheel2                  ","spinning wheel"},
+	{0x10A5,"$item_spinning_wheel3                  ","spinning wheel"},
 	{0x0DF8,"$item_piles_of_wool_1                  ","piles of wool"},
-	{0x0E1D,"$item_balls_of_yarn                    ","balls of yarn"},
-	{0x0E1E,"$item_balls_of_yarn_1                  ","balls of yarn"},
-	{0x0E1F,"$item_balls_of_yarn_2                  ","balls of yarn"},
+	{0x0E1D,"$item_balls_of_yarn1                   ","balls of yarn"},
+	{0x0E1E,"$item_balls_of_yarn2                   ","balls of yarn"},
+	{0x0E1F,"$item_balls_of_yarn3                   ","balls of yarn"},
 	{0x0DF9,"$item_bales_of_cotton                  ","bales of cotton"},
 	{0x0FA0,"$item_spools_of_thread_1               ","spools of thread"},
 	{0x0EC6,"$item_dress_form                       ","dress form"},
 	
 	//Blacksmith
-	{0x0FB1,"$item_forge                            ",""},
-	{0x0FAF,"$item_anvil                            ",""},
-	{0x0FB0,"$item_anvil_1                          ",""},
+	{0x0FAF,"$item_anvil_1                          ",""},
+	{0x0FB0,"$item_anvil_2                          ",""},
 	{0x197A,"$item_bellows                          ",""},
 	{0x0FB1,"$item_forge1                           ",""},
 	{0x197A,"$item_forge2_1_1                       ",""},
@@ -1528,43 +1526,43 @@ new __addMenuList[NUM_ADD_ITEMS][additemEntry] =
 	{0x1BF2,"$item_iron_ingots                      ",""},
 	
 	//Musician
-	{0x0E9C,"$item_drum                             ",""},
-	{0x0E9D,"$item_tambourine                       ",""},
-	{0x0E9E,"$item_tambourine_1                     ",""},
-	{0x0EB1,"$item_standing_harp                    ",""},
-	{0x0EB2,"$item_lap_harp                         ",""},
-	{0x0EB3,"$item_lute                             ",""},
-	{0x0EB4,"$item_lute_1                           ",""},
+	{0x0E9C,"$item_drum                             ","drum"},
+	{0x0E9D,"$item_tambourine1                      ","tambourine"},
+	{0x0E9E,"$item_tambourine2                      ","tambourine"},
+	{0x0EB1,"$item_standing_harp                    ","stand. harp"},
+	{0x0EB2,"$item_lap_harp                         ","lap harp"},
+	{0x0EB3,"$item_lute_1                           ","lute"},
+	{0x0EB4,"$item_lute_2                           ","lute"},
 	
 	//Thief
-	{0x14FB,"$item_lockpicks                        ",""},
+	{0x14FB,"$item_lockpicks                        ","lockpicks"},
 	
 	//Fisher
-	{0x0DBF,"$item_fishing_pole","Fishing Pole"},
+	{0x0DBF,"$item_fishing_pole                     ","Fishing Pole"},
 	
 	//Tinker
-	{0x104F,"$item_clock_parts                      ",""},
-	{0x1051,"$item_axles_with_gears                 ",""},
-	{0x1053,"$item_gears                            ",""},
-	{0x1055,"$item_hinges                           ",""},
-	{0x1059,"$item_sextant_parts                    ",""},
-	{0x105B,"$item_axles                            ",""},
-	{0x105D,"$item_springs                          ",""},
-	{0x1EBC,"$item_tinkers_tools                    ",""},
+	{0x104F,"$item_clock_parts                      ","clock parts"},
+	{0x1051,"$item_axles_with_gears                 ","axles/gears"},
+	{0x1053,"$item_gears                            ","gears"},
+	{0x1055,"$item_hinges                           ","hinges"},
+	{0x1059,"$item_sextant_parts                    ","sextant parts"},
+	{0x105B,"$item_axles                            ","axles"},
+	{0x105D,"$item_springs                          ","springs"},
+	{0x1EBC,"$item_tinkers_tools                    ","tools"},
 	{0x104F,"$item_clock                            ","clock"},
 	{0x104D,"$item_clock_frames                     ","clock frame"},
 	
 	//Bowyer
-	{0x100A,"$item_archery_butte                    ",""},
-	{0x100B,"$item_archery_butte_1                  ",""},
-	{0x1020,"$item_feathers_1                       ",""},
-	{0x1021,"$item_feathers_2                       ",""},
-	{0x1022,"$item_arrow_fletching                  ",""},
-	{0x1023,"$item_arrow_fletching_1                ",""},
-	{0x1024,"$item_arrow_shafts                     ",""},
-	{0x1025,"$item_arrow_shafts_1                   ",""},
-	{0x0F3F,"$item_arrow                            ",""},
-	{0x1BFB,"$item_crossbow_bolt                    ",""},
+	{0x100A,"$item_archery_butte_1                  ","butte"},
+	{0x100B,"$item_archery_butte_2                  ","butte"},
+	{0x1020,"$item_feathers_1                       ","feathers"},
+	{0x1021,"$item_feathers_2                       ","feathers"},
+	{0x1022,"$item_arrow_fletching_1                ","fletching"},
+	{0x1023,"$item_arrow_fletching_2                ","fletching"},
+	{0x1024,"$item_arrow_shafts_1                   ","shafts"},
+	{0x1025,"$item_arrow_shafts_2                   ","shafts"},
+	{0x0F3F,"$item_arrow                            ","arrow"},
+	{0x1BFB,"$item_crossbow_bolt                    ","bolt"},
 
 	//Spawners
 	{INVALID,"$item_orc_lord_spawner                 ","orc lord spawner"},

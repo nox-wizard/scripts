@@ -354,6 +354,32 @@ public xss_scanFile(filename[],callback[])
 //=========================================================================================//
 //                              CHARACTER HELP FUNCTIONS                                   //
 //=========================================================================================//
+
+/*!
+\author Fax
+\fn getOnlineCharFromName(name[])
+\param name[]: the name
+\since 0.82
+\brief returns character with given name
+\return character serial or INVALID if character is not online
+*/
+stock getOnlineCharFromName(name[])
+{
+	new chr2, name1[50];
+	new s = set_create(),found = false;
+	set_addAllOnlinePl(s);
+	for(set_rewind(s); !set_end(s) && !found; )
+	{
+		chr2 = set_getChar(s);
+		chr_getProperty(chr2,CP_STR_NAME,0,name1);
+		if(!strcmp(name1,name)) found = true;
+	}
+	
+	if(found)
+		return chr2;
+	return INVALID;
+}
+
 /*!
 \author Fax
 \fn chr_getRace(const chr)
@@ -599,6 +625,71 @@ stock chr_canMoveItem(const chr, const itm, const msg)
 		}
 	
 	return ratio;
+}
+
+enum
+{
+	SIDE_FRONTRIGHT = -3,
+	SIDE_RIGHT = -2, 
+	SIDE_BACKRIGHT = -1, 
+	SIDE_BACK = 0, 
+	SIDE_BACKLEFT = 1, 
+	SIDE_LEFT = 2, 
+	SIDE_FRONTLEFT = 3, 
+	SIDE_FRONT = 4 
+}//!< values returned by chr_getHitSide()
+
+/*!
+\author Keldan
+\fn chr_getHitSide (const defender, const attacker)
+\param chr: the character
+\since 0.82
+\brief returns the hit side of a character
+
+The hit side is the defender's side hit by the attacker
+The return value is one of the SIDE_* constants
+\return SIDE_* constants
+*/
+public chr_getHitSide (const defender, const attacker) 
+{ 
+	new Diff = chr_getProperty(attacker, CP_DIR, 0) - chr_getProperty(defender, CP_DIR, 0); //get dir of defender 
+	switch(Diff) 
+	{ 
+		case -7 : Diff = 1; 
+		case -6 : Diff = 2; 
+		case -5 : Diff = 3; 
+		case -4 : Diff = 4; 
+		case 5 : Diff = -3; 
+		case 6 : Diff = -2; 
+		case 7 : Diff = -1; 
+	} 
+	return Diff; 
+}
+
+
+enum
+{
+	MOVE_STANDING = 0,      //the character is not moving 
+	MOVE_WALKING = 1,      //the character is walking without mount 
+	MOVE_RUNNING = 2,      //the character is running without mount 
+	MOVE_MOUNTEDSTANDING = 3, //the character is standing on a mount
+	MOVE_TROTING = 4,      //the character is walking with a mount 
+	MOVE_GALLOPING = 5   //the character is running with a mount 
+}//!< values returned by chr_getMove()
+
+/*!
+\author Keldan
+\fn chr_getMove(const chr)
+\param chr: the character
+\since 0.82
+\brief gets the moving status of a character
+\return MOVE_STANDING, MOVE_WALKING, MOVE_RUNNING,MOVE_HORSESTANDING, MOVE_TROTING, MOVE_GALLOPING
+*/
+public chr_getMove(const chr)   
+{
+	if ( (getCurrentTime() - chr_getProperty(chr, CP_LASTMOVETIME, 0)) < 1000) 
+       		return MOVE_WALKING + (chr_getProperty(chr, CP_ONHORSE, 0)*2) + min(chr_getProperty(chr, CP_RUNNING, 0),1); 
+   	return MOVE_STANDING; 
 }
 //===============================================================================//
 //                             ITEM HELP FUNCTIONS                               //

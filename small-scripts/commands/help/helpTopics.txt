@@ -62,13 +62,32 @@ deletes a previously defined one.
 TOPIC 'cset
 TEXT
 Sets a character's property
-syntax: 'cset property value 
+syntax: 'cset property value
+ 
+property can be:
+"ai": npcai
+"dir": direction - (n/ne/e/se/s/sw/w/nw)
+"gmfx": gm moving effect
+"owner": owner serial
+"shop": if character is a shopkeeper (0 no - 1 yes)
+"spattack": type of spell attack
+"spadelay": delay between 2 spell attacks
+"speech": speech block
+"split": split
+"splitchance": splitchance
+"train": if npc can train (0 no - 1 yes)
+"trigger": npc trigger
 
 TOPIC 'csetxyz
 TEXT
 Sets a 3-value character's property (like food 
 position)
 syntax: 'csetxyz property x y z
+ 
+property can be:
+"food": food position, for freely wandering npcs
+"home": home position, for freely wandering npcs
+"work": work place, for freely wandering npcs
 
 TOPIC 'damage
 TEXT
@@ -160,6 +179,13 @@ TOPIC 'iset
 TEXT
 Sets an item's property
 syntax: 'iset property value
+ 
+propery can be:
+"amount": amount
+"dir": direction (n/ne/e/se/s/sw/w/nw)
+"type": item type
+"value": item price
+"restock": restock rate
 
 TOPIC 'jail
 TEXT

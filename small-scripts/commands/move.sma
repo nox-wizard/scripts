@@ -10,7 +10,7 @@
 \fn cmd_move(const chr)
 \brief moves objects
 
-<B>syntax:<B> 'move x y ["abs"/"rel"] or 'move me or 'move here or 'move loc
+<B>syntax:<B> 'move x y ["abs"/"rel"] or 'move me or 'move here or 'move loc or 'move here [name]
 
 <B>command params:</B>
 <UL>
@@ -46,11 +46,29 @@ public cmd_move(const chr)
 
 	//called 'move here
 	if(!strcmp(__cmdParams[0],"here"))
-	{
-		chr_message(chr,_,"Select an object to move to you");
-		target_create(chr,chr,_,_,"cmd_move_targ_here");
-		return;
-	}
+		if(strlen(__cmdParams[1]))
+		{
+			//handle multi word names (john smith the cool guy)
+			for(new i = 2; i < __MAX_PARAMS; i++)
+				if(strlen(__cmdParams[i]))
+					sprintf(__cmdParams[1],"%s %s",__cmdParams[1],__cmdParams[i]);
+					
+			new chr2 = getOnlineCharFromName(__cmdParams[1]);
+			if(!isChar(chr2))
+			{
+				chr_message(chr,_,"%s is not online",__cmdParams[1]);
+				return;
+			}
+			
+			cmd_move_targ_here(INVALID,chr,chr2,INVALID,INVALID,INVALID,INVALID,INVALID);
+			return;
+		}
+		else
+		{
+			chr_message(chr,_,"Select an object to move to you");
+			target_create(chr,chr,_,_,"cmd_move_targ_here");
+			return;
+		}
 
 	//called 'move loc
 	if(!strcmp(__cmdParams[0],"loc"))

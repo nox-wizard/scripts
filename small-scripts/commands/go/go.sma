@@ -98,19 +98,11 @@ public cmd_go(const chr)
 				if(strlen(__cmdParams[i]))
 					sprintf(__cmdParams[0],"%s %s",__cmdParams[0],__cmdParams[i]);
 	
-			new chr2, name[50];
-			new s = set_create();
-			set_addAllOnlinePl(s);
-			for(set_rewind(s); !set_end(s); )
-			{
-				chr2 = set_getChar(s);
-				chr_getProperty(chr2,CP_STR_NAME,0,name);
-				if(!strcmp(__cmdParams[0],name)) break;
-			}
+			new chr2 = getOnlineCharFromName(__cmdParams[0]);
 	
-			if(set_end(s) && !isChar(chr2))
+			if(!isChar(chr2))
 			{
-				chr_message(chr,_,"%s is not online");
+				chr_message(chr,_,"%s is not online",__cmdParams[0]);
 				return;
 			}
 	

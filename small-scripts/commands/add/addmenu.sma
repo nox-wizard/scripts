@@ -273,10 +273,10 @@ public addgui_combat(chr,itemsInBackpack,amount)
 				menu_addLabeledButtonFn(p,"addgui_armor_cback","create in backpack");
 				cursor_down();
 				
-				menu_addLabeledButtonFn(p,"addgui_armor_cback","Equip");
+				menu_addLabeledButtonFn(p + 1000,"addgui_armor_cback","Equip");
 				cursor_down();
 				
-				menu_addLabeledButtonFn(p,"addgui_armor_cback","Equip to character");
+				menu_addLabeledButtonFn(p + 10000,"addgui_armor_cback","Equip to character");
 			}
 	
 			case P_AXES..P_OTHER:
@@ -493,21 +493,32 @@ public addgui_weapon_cback(menu,chr,weapon)
 	sprintf(def,"$item%s_%s%s",material,__weapons[weapon][__name],suffix);
 
 	new item,scriptID = getIntFromDefine(def,false); 
-	item = itm_createInBp(scriptID,chr);
 			
-	if(itm_getProperty(item,IP_PILEABLE))
-	{
-		itm_createInBp(scriptID,chr,n - 1);
-		chr_message(chr,_,"Item %d created",item);
-	}
-	else
-		for(new i = 0; i < n -1; i++)
+	if(itemsInBackpack)
+	{ 
+		item = itm_createInBp(scriptID,chr);
+				
+		if(itm_getProperty(item,IP_PILEABLE))
 		{
-			item = itm_createInBp(scriptID,chr);
+			itm_createInBp(scriptID,chr,n - 1);
 			chr_message(chr,_,"Item %d created",item);
 		}
+		else
+			for(new i = 0; i < n -1; i++)
+			{
+				item = itm_createInBp(scriptID,chr);
+				chr_message(chr,_,"Item %d created",item);
+			}
+		
+		addgui_combat(chr,itemsInBackpack,n);
+	}
 
-	addgui_combat(chr,itemsInBackpack,n);
+	else
+	{
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
+		chr_message(chr,_,"click to position the item");
+		target_create(chr,scriptID,_,_,"cmd_add_itm_targ");
+	}
 }
 
 //==================================================================================//
@@ -1127,7 +1138,7 @@ public addgui_tools(chr,itemsInBackpack,amount)
 			case P_CARPENTER1: {i_col = 13; interline = 20; tab = 25;}
 			case P_CARPENTER2:{i_col = 12; interline = 20; tab = 10; label = 0;}
 			case P_TAILOR:{	i_col = 9; interline = 25;}
-			case P_BLACKSMITH:{ i_col = 6; interline = 30;}
+			case P_BLACKSMITH:{ i_col = 7; interline = 33; tab = 25;}
 			case P_MUSICIAN:{i_col = 6; interline = 35;}
 			case P_TINKER: {interline = 20;}
 			case P_BOWYER:{i_col = 5; interline = 35;}

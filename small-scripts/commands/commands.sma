@@ -46,7 +46,7 @@
 #include "small-scripts/commands/resend.sma"
 #include "small-scripts/commands/resurrect.sma"
 #include "small-scripts/commands/save.sma"
-#include "small-scripts/commands/setdir.sma"
+//#include "small-scripts/commands/setdir.sma"
 #include "small-scripts/commands/setmoreb12.sma"
 #include "small-scripts/commands/setmoreb34.sma"
 #include "small-scripts/commands/setmorexyz.sma"
@@ -58,6 +58,7 @@
 #include "small-scripts/commands/stamina.sma"
 #include "small-scripts/commands/stats/stats.sma"
 #include "small-scripts/commands/stats/setstats.sma"
+#include "small-scripts/commands/summon.sma"
 #include "small-scripts/commands/sysm.sma"
 #include "small-scripts/commands/tile.sma"
 #include "small-scripts/commands/tweak/tweak.sma"
@@ -91,10 +92,6 @@ public readCommandParams(const chr)
 		
 		//delete empty params
 		if(__cmdParams[p - 1][0] == '_') __cmdParams[p - 1][0] = 0;
-		
-		#if _CMD_DEBUG_
-			log_message("^t->param %d: %s",p,__cmdParams[p - 1]);
-		#endif
 	}
 }
 
