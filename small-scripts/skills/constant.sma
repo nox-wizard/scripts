@@ -102,7 +102,7 @@ public skillName[SK_COUNT][] = {
 "Inscription",
 "Lockpicking",
 "Magery",
-"Magic Resistance",
+"Magic resistance",
 "Tactics",
 "Snooping",
 "Musicianship",
