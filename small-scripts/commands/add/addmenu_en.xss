@@ -470,7 +470,7 @@ SECTION PAGE
 	ITEM 1416 $item*_platemail chest
 	ITEM 1410 $item*_plate_sleeves sleeves
 	ITEM 1414 $item*_plate_gloves gloves
-	ITEM 141A $item*_plate_legs legs
+	ITEM 141A $item*_plate_leggingss legs
 	ITEM 1C04 $item*_female_plate female
 }
 SECTION PAGE
@@ -481,7 +481,7 @@ SECTION PAGE
 	
 	ITEM 13BB $item*_chain_coif coif
 	ITEM 13C4 $item*_chain_tunic tunic
-	ITEM 13C3 $item*_chain_legs legs
+	ITEM 13C3 $item*_chain_leggings legs
 	
 }
 SECTION PAGE
@@ -493,7 +493,7 @@ SECTION PAGE
 	ITEM 13ED $item*_ringmail_tunic tunic
 	ITEM 13EF $item*_ringmail_sleeves sleeves
 	ITEM 13F2 $item*_ringmail_gloves gloves
-	ITEM 13F1 $item*_ringmail_legs legs
+	ITEM 13F1 $item*_ringmail_leggings legs
 	
 }
 SECTION PAGE
