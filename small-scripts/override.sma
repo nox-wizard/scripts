@@ -99,6 +99,7 @@
 #include "small-scripts/gumps/gumps.sma"
 #include "small-scripts/guild/guildstone.sma"
 #include "small-scripts/check/check.sma"
+#include "small-scripts/skills/misc/scissors.sma"
 //
 // Include the Shard's script
 //
