@@ -66,37 +66,6 @@ SECTION IDLIST WTRIGR x105fx1060x1061x1062x1063x1064x1065x1066
 }
 
 
-//cutting up hides to make leather
-SECTION IDLIST WTRIGR x1078
-{
-    REQ xf9e
-    NEED x1078
-    USEUP 1
-    SND 02 48
-    IADD $item_leather $trg_intoBackpack 2
-    MSG You make some leather.
-}
-
-SECTION IDLIST WTRIGR x11fa
-{ Orchish Leather Tailoring
-    REQ xf9d
-    NEED x11fa
-    FMSG You aren't skilled enough to manipulate the Orchish skin!
-    IFSKL 34 400
-    MAKE 133 34 11 fa
-    STAM -5
-}
-
-SECTION IDLIST WTRIGR x1079
-{ Dragon Scale Tailoring
-    REQ xf9d
-    NEED x1079
-    FMSG You aren't skilled enough to manipulate the dragon scales!
-    IFSKL 34 900
-    MAKE 138 34 10 79
-    STAM -10
-}
-
 SECTION IDLIST WTRIGR x12b8x12b9x12bax12bbxcd0xccd
 { Chop at a Yew tree, yields more wood
     REQ x13b0xf43xf47xf49xf4bxf51x13fbx1442
@@ -204,30 +173,6 @@ SECTION IDLIST WTRIGR x0cf
     MSG You take some unspoon wool.
     DISABLEMSG You must wait until the sheep respawns its wool!
     DISABLE 600
-}
-
-
-SECTION IDLIST WTRIGR xf95xf96xf97xf98xf99xf9axf9bxf9c
-{ // Cutting up bolts of cloth
-    REQ xf9exf9d // scissors
-    NEED xf95xf96xf97xf98xf99xf9axf9bxf9c
-    USEUP 1
-    ACT 13
-    SND 02 48
-    IADD $item_cut_cloth $trg_intoBackpack 
-    MSG You make cloths.
-}
-
-SECTION IDLIST WTRIGR x175dx1766
-{ // Cutting cloth to make bandages or tailoring
-    REQ xf9exf9d
-    NEED x175dx1766
-    USEUP 1
-    IFREQ xf9d 503
-    SND 02 48
-    FMSG You try to cut the cloth but ruin it!
-    IADD $item_clean_bandages $trg_intoBackpack 3
-    MSG You make a bandage.
 }
 
 
