@@ -106,6 +106,7 @@
 #include "small-scripts/skills/misc/scissors.sma"
 #include "small-scripts/race/menu/menu.sma"
 #include "small-scripts/party/party.sma"
+#include "small-scripts/guild/guild.sma"
 //
 // Include the Shard's script
 //

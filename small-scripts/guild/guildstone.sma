@@ -36,55 +36,87 @@ public guild_dclickDeed( const deed, const socket ) {
     new master = getCharFromSocket(socket);
     if( master<=INVALID ) return;
 
+	bypass();
+
 	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
-		nprintf( socket, "Resign from your guild before creating a new guild" );
+		sysmessage( master, _, "Resign from your guild before creating a new guild" );
 		return;
 	}
 	
-	static fnGuildPlace =  INVALID;
-	if( fnGuildPlace==INVALID )
-		fnGuildPlace=funcidx("guildPlace");
-		
-	getTarget( socket, fnGuildPlace, "Where you want place guildstone?");
+	sysmessage( master, _, "Where you want place guildstone?" );
+	target_create( master, deed, _, true, "guildPlace" );
 
 }
+	
+public guildPlace( const target, const master, const obj, const x, const y, const z, const model, const deed )
+{
 
-public guildPlace( const s, const target, const item, const x, const y, const z ) {
-
-	if( s<=INVALID ) return;	
-	new master = getCharFromSocket(s);
 	if( master<=INVALID ) return;
 	
 	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
-		nprintf( s, "Resign from your guild before creating a new guild" );
+		sysmessage( master, _, "Resign from your guild before creating a new guild" );
 		return;
 	}
 	
 #if defined( GUILD_POSITION_WITH_TARGET )
 	if( x==INVALID || y==INVALID || z==INVALID ) {
-		nprintf(s, "This is not a valid place" );
+		sysmessage( master, _, "This is not a valid place" );
 		return;
 	}
 #endif
 		
-	new stone = itm_createByDef( "$item_guildstone" );
-	new guild = guild_create( stone );
-	
 #if defined( GUILD_POSITION_WHERE_PLAYER )
 	x = chr_getProperty( master, CP_POSITION, CP2_X );
 	y = chr_getProperty( master, CP_POSITION, CP2_Y );
 	z = chr_getProperty( master, CP_POSITION, CP2_Z );
 #endif
 
-	itm_setProperty( stone, IP_POSITION, IP2_X, x );
-	itm_setProperty( stone, IP_POSITION, IP2_Y, y );
-	itm_setProperty( stone, IP_POSITION, IP2_Z, z );
+	new gui = gui_create( 40, 40, true, true, true, "guildgui_callback" );
+	gui_addGump( gui, 0, 0, 0x04CC, 0 );
+	gui_setProperty( gui, MP_BUFFER, 0, deed );
+	gui_setProperty( gui, MP_BUFFER, 1, x );
+	gui_setProperty( gui, MP_BUFFER, 2, y );
+	gui_setProperty( gui, MP_BUFFER, 3, z );
+	gui_addButton( gui, 100, 100, 0x084A, 0x084B, 1 );
+	gui_addText( gui, 20, 20, _, "Enter Guild Name " );
+	gui_addInputField( gui, 20, 50, 250, 50, 55, _, "" );
+	gui_show( gui, master );
+
+	
+}
+
+public guildgui_callback( const socket, const gui, const button )
+{
+	if( button<=MENU_CLOSED )
+		return;
+
+    new master = getCharFromSocket(socket);
+    if( master<=INVALID ) return;
+
+	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
+		sysmessage( master, _, "Resign from your guild before creating a new guild" );
+		return;
+	}
+	
+	new name[150];
+	gui_getProperty( gui, MP_UNI_TEXT, 55, name );
+	
+	new stone = itm_createByDef( "$item_guildstone" );
+	new guild = _guild_createStandardGuild( stone, master ); // create a standard guild.. see guild.sma
+	guild_setProperty( guild, GP_STR_NAME, _, name ); 
+	
+	itm_setProperty( stone, IP_POSITION, IP2_X, gui_getProperty( gui, MP_BUFFER, 1 ) );
+	itm_setProperty( stone, IP_POSITION, IP2_Y, gui_getProperty( gui, MP_BUFFER, 2 ) );
+	itm_setProperty( stone, IP_POSITION, IP2_Z, gui_getProperty( gui, MP_BUFFER, 3 ) );
 	
 	itm_setProperty( stone, IP_PRIV, _, 0 );
 	
 	itm_refresh( stone );
 	
+	new deed = gui_getProperty( gui, MP_BUFFER, 0 );
 }
+
+
 
 /*!
 \author Doctor X
@@ -93,8 +125,6 @@ public guildPlace( const s, const target, const item, const x, const y, const z 
 */
 public guild_dclickStone( const guild, const socket )
 {
-	//show menu
-	//gui_guildStone( guild, getCharFromSocket( socket ) );
 	bypass();
 }
 
@@ -106,7 +136,7 @@ public guild_dclickStone( const guild, const socket )
 public guild_sclickStone( const guild, const socket )
 {
 	new guildName[64];
-	guild_getProperty( guild, GP_NAME, _, guildName );
+	guild_getProperty( guild, GP_STR_NAME, _, guildName );
 	sprintf( guildName, "Guildstone for %s", guildName );
 	itm_speech( socket, guild, guildName );
 	bypass();

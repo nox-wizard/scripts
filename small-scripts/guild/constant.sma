@@ -19,13 +19,11 @@ const PROP_GUILD = 3;
  */
 
 	const GP_TYPE = 100;
-	
-	const GP_NAME = 450;
-	const GP_WEBPAGE = 451;
-	const GP_ABBREVIATION = 452;
-	
-	const GP_CHARTER = 500;
-	
+	const GP_STR_NAME = 450;
+	const GP_STR_WEBPAGE = 451;
+	const GP_STR_ABBREVIATION = 452;
+	const GP_UNI_CHARTER = 500;
+
 	enum GUILD_TYPE {
 		GUILD_TYPE_NORMAL = 0,
 		GUILD_TYPE_CHAOS,
@@ -33,6 +31,11 @@ const PROP_GUILD = 3;
 		GUILD_TYPE_CITY
 	}
 	
+	const GMP_RANK = 100;
+	const GMP_TITLETOGGLE = 101;
+	const GMP_STR_TITLE = 450;
+
+	const GRP_I_RECRUITER = 200;
 	
 
  
