@@ -51,7 +51,7 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"move",		""},
 	{PRIV_CNS,	"options",	""},
 	{PRIV_PLAYER,	"playerlist",	""},
-	{PRIV_CNS,	"polimorph",	""},
+	{PRIV_CNS,	"polymorph",	""},
 	{PRIV_SEER,	"regioncp",	""},
 	{PRIV_CNS,	"resurrect",	""},
 	{PRIV_ADMIN,	"setpriv",	""},
