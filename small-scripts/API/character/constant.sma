@@ -41,7 +41,7 @@ const CP_FROZEN = 17;		//!< true if frozen
 
 const CP_BLOCKED = 101;		//!< ??
 const CP_CELL = 102;		//!< ??
-const CP_COMMANDLEVEL = 103;	//!< the command level: 0:player 1:counselor 2:GM
+const CP_PRIVLEVEL = 103;	//!< the command priv level: 255 admin
 const CP_DIR = 104;		//!< direction, one of the DIR_* constants TODO: link to list
 const CP_DIR2 = 105;		//!< ??
 const CP_FIXEDLIGHT = 106;	//!< fixed light level TODO: link to light levels
