@@ -22,8 +22,8 @@
 34=__nxw_sk_tailoring,BYPASS
 35=__nxw_sk_taming,BYPASS
 18=__nxw_sk_fishing,BYPASS
-21=__nxw_sk_hiding, BYPASS
-14=__nxw_sk_dtchidden, BYPASS
+21=__nxw_sk_hiding,BYPASS
+0=__nxw_sk_alchemy,BYPASS
 
 [triggers]
 
@@ -39,6 +39,7 @@ StartChar=__charLogin,AFTER
 
 [speech]
 '=detectCommand,BEFORE
++=bla_char,BEFORE
 
 
 
