@@ -773,8 +773,6 @@
 #define $item_palisade_24 55775
 #define $item_palisade_25 55776
 #define $item_palisade_26 55777
- 55778
- $item_ 55779
 #define $item_marble_stairs_1 55780
 #define $item_marble_stairs_2 55781
 #define $item_marble_stairs_3 55782

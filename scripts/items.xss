@@ -17,7 +17,7 @@
 #include scripts/items/race_items.xss
 #include scripts/items/spawners.xss
 #include scripts/items/guild.xss
-//#include scripts/items/floortiles.xss
+#include scripts/items/floortiles.xss
 #include scripts/items/clothes.xss
 #include scripts/items/buildings.xss
 #include scripts/items/magic.xss

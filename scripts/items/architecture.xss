@@ -5566,16 +5566,6 @@ SECTION ITEM $item_sandstone_floor_12
     ID 052C
 }
 
-SECTION ITEM $item_
-{
-    ID 052D
-}
-
-SECTION ITEM $item_
-{
-    ID 052E
-}
-
 SECTION ITEM $item_sandstone_floor_13
 {
     ID 052F
