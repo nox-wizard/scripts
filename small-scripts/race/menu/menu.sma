@@ -7,51 +7,51 @@ public race_enlistDialog1( const socket, const race )
 		
 	new chr = getCharFromSocket( socket );
 	
-	new menu = menu_create( 30, 30, true, false, false, "handle_race_enlist1" );
+	new menu = gui_create( 30, 30, true, false, false, "handle_race_enlist1" );
 
-	menu_addBackground( menu, 5120, 320,  340 );
-	menu_addGump( menu, 20, 80, 1418 );
+	gui_addBackground( menu, 5120, 320,  340 );
+	gui_addGump( menu, 20, 80, 1418 );
 	
 	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
-		menu_addTilePic( menu, 286, 8, 3811 );
-		menu_addButtonFn( menu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
+		gui_addTilePic( menu, 286, 8, 3811 );
+		gui_addButtonFn( menu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
 	}
 
-	menu_addText( menu, 73,   8,  152,  "N" );
-	menu_addText( menu, 85,   8,   95,  "oxwizard" );
-	menu_addText( menu, 151,   8,  152,  "R" );
-	menu_addText( menu, 163,   8,   95,  "ace" );
-	menu_addText( menu, 189,   8,  152,  "S" );
-	menu_addText( menu, 201,   8,   95,  "ystem" );
+	gui_addText( menu, 73,   8,  152,  "N" );
+	gui_addText( menu, 85,   8,   95,  "oxwizard" );
+	gui_addText( menu, 151,   8,  152,  "R" );
+	gui_addText( menu, 163,   8,   95,  "ace" );
+	gui_addText( menu, 189,   8,  152,  "S" );
+	gui_addText( menu, 201,   8,   95,  "ystem" );
 
-	menu_addText( menu, 13,  42, 1153,  "D" );
-	menu_addText( menu, 25,  42,   95,  "ear player the Noxwizard Race System" );
-	menu_addText( menu, 13,  58,   95,  "has been activated on this shard." );
+	gui_addText( menu, 13,  42, 1153,  "D" );
+	gui_addText( menu, 25,  42,   95,  "ear player the Noxwizard Race System" );
+	gui_addText( menu, 13,  58,   95,  "has been activated on this shard." );
 
-	menu_addText( menu, 13,  88, 1153, "A" );
-	menu_addText( menu, 25,  88,   95, "s you do not belong to a race yet....." );
-	menu_addText( menu, 13, 106,   95, "you must choose one now!" );
+	gui_addText( menu, 13,  88, 1153, "A" );
+	gui_addText( menu, 25,  88,   95, "s you do not belong to a race yet....." );
+	gui_addText( menu, 13, 106,   95, "you must choose one now!" );
 
 	new offset = 0;
 	if( race_getProperty( race, RP_TELEPORT_ON_ENLIST ) )
 	{
-		menu_addText( menu, 13, 136, 1153, "Y" );
-		menu_addText( menu, 25, 136,   95, "ou have been transported to a safe location" );
-		menu_addText( menu, 13, 154,   95, "and will be returned after you've made your" );
-		menu_addText( menu, 13, 172,   95, "choice." );
+		gui_addText( menu, 13, 136, 1153, "Y" );
+		gui_addText( menu, 25, 136,   95, "ou have been transported to a safe location" );
+		gui_addText( menu, 13, 154,   95, "and will be returned after you've made your" );
+		gui_addText( menu, 13, 172,   95, "choice." );
 
 		offset=60;
 	}
 
-	menu_addButton( menu, 13, 139 +offset, 1209, 1210, 1 ); // Information about races
-	menu_addText( menu, 33, 136 +offset, 1153, "I" );
-	menu_addText( menu, 42, 136 +offset,   95, "nformation about races" );
-	menu_addButton( menu, 13, 169 +offset, 1209, 1209, 2 ); // Choose a race
-	menu_addText( menu, 33, 166 +offset, 1153, "S" );
-	menu_addText( menu, 45, 166 +offset,   95, "elect your race" );
+	gui_addButton( menu, 13, 139 +offset, 1209, 1210, 1 ); // Information about races
+	gui_addText( menu, 33, 136 +offset, 1153, "I" );
+	gui_addText( menu, 42, 136 +offset,   95, "nformation about races" );
+	gui_addButton( menu, 13, 169 +offset, 1209, 1209, 2 ); // Choose a race
+	gui_addText( menu, 33, 166 +offset, 1153, "S" );
+	gui_addText( menu, 45, 166 +offset,   95, "elect your race" );
 	
-	menu_show( menu, chr );
+	gui_show( menu, chr );
 
 }
 
@@ -64,46 +64,46 @@ public race_dialogRaceInfo( const socket, const race )
 		
 	new chr = getCharFromSocket( socket );
 	
-	new menu = menu_create( 30, 30, true, false, false, "handle_race_raceInfo" );
+	new menu = gui_create( 30, 30, true, false, false, "handle_race_raceInfo" );
 
-	menu_addBackground( menu, 5120, 320,  340 );
-	menu_addGump( menu, 20, 80, 1418 );
+	gui_addBackground( menu, 5120, 320,  340 );
+	gui_addGump( menu, 20, 80, 1418 );
 
-	menu_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
+	gui_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
 
-	menu_addText( menu, 73, 8, 152, "N" );
-	menu_addText( menu, 85, 8, 95, "oxwizard" );
-	menu_addText( menu, 151, 8, 152, "R" );
-	menu_addText( menu, 163, 8, 95, "ace" );
-	menu_addText( menu, 189, 8, 152, "S" );
-	menu_addText( menu, 201, 8, 95, "ystem" );
+	gui_addText( menu, 73, 8, 152, "N" );
+	gui_addText( menu, 85, 8, 95, "oxwizard" );
+	gui_addText( menu, 151, 8, 152, "R" );
+	gui_addText( menu, 163, 8, 95, "ace" );
+	gui_addText( menu, 189, 8, 152, "S" );
+	gui_addText( menu, 201, 8, 95, "ystem" );
 
-	menu_addText( menu, 13, 42, 1153, "C" );
-	menu_addText( menu, 25, 42, 95, "hoose an option" );
+	gui_addText( menu, 13, 42, 1153, "C" );
+	gui_addText( menu, 25, 42, 95, "hoose an option" );
 
-	menu_addButton( menu, 13, 82, 1209, 1210, 1 ); // General Information
-	menu_addText( menu, 33, 82, 1153, "G" );
-	menu_addText( menu, 45, 82, 95, "eneral information" );
+	gui_addButton( menu, 13, 82, 1209, 1210, 1 ); // General Information
+	gui_addText( menu, 33, 82, 1153, "G" );
+	gui_addText( menu, 45, 82, 95, "eneral information" );
 
-	menu_addButton( menu, 13, 102, 1209, 1210, 2 ); // Player races
-	menu_addText( menu, 33, 102, 1153, "P" );
-	menu_addText( menu, 45, 102, 95, "layer races" );
+	gui_addButton( menu, 13, 102, 1209, 1210, 2 ); // Player races
+	gui_addText( menu, 33, 102, 1153, "P" );
+	gui_addText( menu, 45, 102, 95, "layer races" );
 
-	menu_addButton( menu, 13, 122, 1209, 1210, 3 ); // Non player races
-	menu_addText( menu, 33, 122, 1153, "N" );
-	menu_addText( menu, 45, 122, 95, "on player races" );
+	gui_addButton( menu, 13, 122, 1209, 1210, 3 ); // Non player races
+	gui_addText( menu, 33, 122, 1153, "N" );
+	gui_addText( menu, 45, 122, 95, "on player races" );
 
-	menu_addButton( menu, 13, 142, 1209, 1210, 4 ); // All races
-	menu_addText( menu, 33, 142, 1153, "A" );
-	menu_addText( menu, 45, 142, 95, "ll races" );
+	gui_addButton( menu, 13, 142, 1209, 1210, 4 ); // All races
+	gui_addText( menu, 33, 142, 1153, "A" );
+	gui_addText( menu, 45, 142, 95, "ll races" );
 
 	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
-		menu_addTilePic( menu, 286, 8, 3811 );
-		menu_addButtonFn( menu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
+		gui_addTilePic( menu, 286, 8, 3811 );
+		gui_addButtonFn( menu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
 	}
 
-	menu_show( menu, chr );
+	gui_show( menu, chr );
 
 }
 
@@ -117,22 +117,22 @@ public race_nameList( const socket, const raceType, const canClose, const canMov
 		
 	new chr = getCharFromSocket( socket );
 	
-	new menu = menu_create( 30, 30, canMove, canClose, false, "handle_race_nameList" );
+	new menu = gui_create( 30, 30, canMove, canClose, false, "handle_race_nameList" );
 
-	menu_addBackground( menu, 5120, 320,  340 );
-	menu_addGump( menu, 20, 80, 1418 );
+	gui_addBackground( menu, 5120, 320,  340 );
+	gui_addGump( menu, 20, 80, 1418 );
 
 	if ( withOk )
-		menu_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
+		gui_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
 
-	menu_addText( menu, 73,   8,  152,  "N" );
-	menu_addText( menu, 84,   8,   95,  "oxwizard" );
-	menu_addText( menu, 151,  8,  152, "R" );
-	menu_addText( menu, 162,  8,   95,  "ace" );
-	menu_addText( menu, 189,  8,  152,  "S" );
-	menu_addText( menu, 200,  8,   95,  "ystem" );
-	menu_addText( menu, 20,  32, 1153,  "C" );
-	menu_addText( menu, 31,  32,   95,  "hoose a race:" );
+	gui_addText( menu, 73,   8,  152,  "N" );
+	gui_addText( menu, 84,   8,   95,  "oxwizard" );
+	gui_addText( menu, 151,  8,  152, "R" );
+	gui_addText( menu, 162,  8,   95,  "ace" );
+	gui_addText( menu, 189,  8,  152,  "S" );
+	gui_addText( menu, 200,  8,   95,  "ystem" );
+	gui_addText( menu, 20,  32, 1153,  "C" );
+	gui_addText( menu, 31,  32,   95,  "hoose a race:" );
 
 	new set = set_create();
 	set_addAllRaces( set, true );
@@ -156,14 +156,14 @@ public race_nameList( const socket, const raceType, const canClose, const canMov
 			{
 				position=62;
 				page++;
-				menu_addPage( menu, page );
+				gui_addPage( menu, page );
 			}
 			
 			new name[100];
 			race_getProperty( race, RP_STR_NAME, _, name );
 			
-			menu_addText( menu, 40, position-4, 95, name );
-			menu_addButton( menu, 20, position, 1209, 1210, race );
+			gui_addText( menu, 40, position-4, 95, name );
+			gui_addButton( menu, 20, position, 1209, 1210, race );
 
 			position+=20;
 			raceCount++;
@@ -173,23 +173,23 @@ public race_nameList( const socket, const raceType, const canClose, const canMov
 
 	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
-		menu_addTilePic( menu, 286, 8, 3811 );
-		menu_addButtonFn( menu, 294, 30, 1209, 1210, INVALID, _, "race_webInterface" )
+		gui_addTilePic( menu, 286, 8, 3811 );
+		gui_addButtonFn( menu, 294, 30, 1209, 1210, INVALID, _, "race_webInterface" )
 	}
 
 	new pagenum = 0;
 	for( new i=1; i<page; ++i )
 	{
-		menu_addPage( menu, i );
+		gui_addPage( menu, i );
 		if( i>1 )
-			menu_addPageButton( menu, 270, 303, 2223, 2223, i-1 )
+			gui_addPageButton( menu, 270, 303, 2223, 2223, i-1 )
 
 		if( i<page )
-			menu_addPageButton( menu, 290, 303, 2224, 2224, i+1 )
+			gui_addPageButton( menu, 290, 303, 2224, 2224, i+1 )
 		
 	}
 
-	menu_show( menu, chr );
+	gui_show( menu, chr );
 
 }
 
@@ -201,30 +201,30 @@ public race_description( const socket, const race, const canClose, const canMove
 		
 	new chr = getCharFromSocket( socket );
 	
-	new menu = menu_create( 30, 30, canMove, canClose, false, "handle_race_description" );
+	new menu = gui_create( 30, 30, canMove, canClose, false, "handle_race_description" );
 
-	menu_addBackground( menu, 5120, 640,  340 );
-	menu_addGump( menu, 340, 80, 1418 );
+	gui_addBackground( menu, 5120, 640,  340 );
+	gui_addGump( menu, 340, 80, 1418 );
 
 	if ( withOk )
-		menu_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
+		gui_addButton( menu, 10, 300, 2130, 2129, 1 ); 	// OKAY
 
-	menu_addText( menu, 233, 8,  152,  "N" );
-	menu_addText( menu, 244, 8,   95,  "oxwizard" );
-	menu_addText( menu, 311, 8,  152,  "R" );
-	menu_addText( menu, 322, 8,   95,  "ace" );
-	menu_addText( menu, 349, 8,  152,  "S" );
-	menu_addText( menu, 360, 8,   95,  "ystem" );
+	gui_addText( menu, 233, 8,  152,  "N" );
+	gui_addText( menu, 244, 8,   95,  "oxwizard" );
+	gui_addText( menu, 311, 8,  152,  "R" );
+	gui_addText( menu, 322, 8,   95,  "ace" );
+	gui_addText( menu, 349, 8,  152,  "S" );
+	gui_addText( menu, 360, 8,   95,  "ystem" );
 
 	new name[100];
 	race_getProperty( race, RP_STR_NAME, _, name );
 	new footerCenter = ( 640 - ( strlen(name) * PIXELFORCHAR ) ) / 2;
-	menu_addText( menu, footerCenter, 300, 152,  name );
+	gui_addText( menu, footerCenter, 300, 152,  name );
 
 	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
-		menu_addTilePic( menu, 606, 8, 3811 );
-		menu_addButtonFn( menu, 614, 30, 1209, 1210, race, _, "race_webInterface" )
+		gui_addTilePic( menu, 606, 8, 3811 );
+		gui_addButtonFn( menu, 614, 30, 1209, 1210, race, _, "race_webInterface" )
 	}
 
 
@@ -241,7 +241,7 @@ const descForPage = 11;
 		{
 			position=62;
 			page++;
-			menu_addPage( menu, page );
+			gui_addPage( menu, page );
 		}
 
 		k++;
@@ -257,7 +257,7 @@ const descForPage = 11;
 		}
 		
 		
-		menu_addText( menu, 20, position-4, 95, desc );
+		gui_addText( menu, 20, position-4, 95, desc );
 
 		position+=20;
 
@@ -265,16 +265,16 @@ const descForPage = 11;
 
 	for( new i=1; i<page; ++i )
 	{
-		menu_addPage( menu, i );
+		gui_addPage( menu, i );
 		if( i>1 )
-			menu_addPageButton( menu, 590, 303, 2223, 2223, i-1 )
+			gui_addPageButton( menu, 590, 303, 2223, 2223, i-1 )
 
 		if( i<page )
-			menu_addPageButton( menu, 610, 303, 2224, 2224, i+1 )
+			gui_addPageButton( menu, 610, 303, 2224, 2224, i+1 )
 			
 	}
 
-	menu_show( menu, chr );
+	gui_show( menu, chr );
 }
 
 

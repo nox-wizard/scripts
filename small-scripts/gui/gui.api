@@ -5,10 +5,10 @@
 // || Designed for NXW 	: 0.82						||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-#if defined _nxw_menu_api_
+#if defined _nxw_gui_api_
   #endinput
 #endif
-#define _nxw_menu_api_
+#define _nxw_gui_api_
 
 /** \defgroup script_API_menu Menu
  *  \ingroup script_API
@@ -25,18 +25,18 @@
 \param 5 is disposeable
 \param 6 function callback
 \return the menu serial
-\fn menu_create( const x, const y, const canmove, const canclose, const candispose, const callback[] )
+\fn gui_create( const x, const y, const canmove, const canclose, const candispose, const callback[] )
 */
-native menu_create( const x, const y, const canmove, const canclose, const candispose, const callback[] );
+native gui_create( const x, const y, const canmove, const canclose, const candispose, const callback[] );
 
 /*!
 \brief Delete a menu
 \author Endymion
 \param 1 the menu serial
 \return true if is deleted or false if error
-\fn menu_delete( const menu )
+\fn gui_delete( const menu )
 */
-native menu_delete( const menu );
+native gui_delete( const menu );
 
 /*!
 \brief Delete a menu
@@ -44,9 +44,9 @@ native menu_delete( const menu );
 \param 1 the menu serial
 \param 2 the character
 \return true if is show or false if error
-\fn menu_show( const menu, const chr )
+\fn gui_show( const menu, const chr )
 */
-native menu_show( const menu, const chr );
+native gui_show( const menu, const chr );
 
 /*!
 \brief Get a menu property
@@ -55,9 +55,9 @@ native menu_show( const menu, const chr );
 \param 2 the property
 \param 3 the sub property
 \return the property
-\fn menu_getProperty( const menu, const property )
+\fn gui_getProperty( const menu, const property )
 */
-native menu_getProperty( const menu, const property, const subProp=0, ... );
+native gui_getProperty( const menu, const property, const subProp=0, ... );
 
 /*!
 \brief Set a menu property
@@ -67,9 +67,9 @@ native menu_getProperty( const menu, const property, const subProp=0, ... );
 \param 3 the sub property
 \param 3 the value
 \return false if error, true else
-\fn menu_setProperty( const menu, const property, const subProp=0, ... )
+\fn gui_setProperty( const menu, const property, const subProp=0, ... )
 */
-native menu_setProperty( const menu, const property, const subProp=0, ... );
+native gui_setProperty( const menu, const property, const subProp=0, ... );
 
 /*!
 \brief Add background at given menu
@@ -79,9 +79,9 @@ native menu_setProperty( const menu, const property, const subProp=0, ... );
 \param 3 the width
 \param 4 the height
 \return false if error, true else
-\fn menu_addBackground( const menu, const gump, const width, const height )
+\fn gui_addBackground( const menu, const gump, const width, const height )
 */
-native menu_addBackground( const menu, const gump, const width, const height );
+native gui_addBackground( const menu, const gump, const width, const height );
 
 /*!
 \brief Add a new button at given menu
@@ -94,9 +94,9 @@ native menu_addBackground( const menu, const gump, const width, const height );
 \param 6 return code
 \param 7 pressable, if true can be pressed
 \return false if error, true else
-\fn menu_addButton( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true )
+\fn gui_addButton( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true )
 */
-native menu_addButton( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true );
+native gui_addButton( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true );
 
 /*!
 \brief Add a new button at given menu
@@ -109,9 +109,9 @@ native menu_addButton( const menu, const x, const y, const up, const down, const
 \param 6 pressable, if true can be pressed
 \param 7 function callback
 \return false if error, true else
-\fn menu_addButtonFn( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true, const callback[], ... )
+\fn gui_addButtonFn( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true, const callback[], ... )
 */
-native menu_addButtonFn( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true, const callback[], ... );
+native gui_addButtonFn( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true, const callback[], ... );
 
 /*!
 \brief Add a new checkbox at given menu
@@ -124,9 +124,9 @@ native menu_addButtonFn( const menu, const x, const y, const up, const down, con
 \param 6 checked
 \param 7 result
 \return false if error, true else
-\fn menu_addCheckbox( const menu, const x, const y,  const off, const on, const checked, const result )
+\fn gui_addCheckbox( const menu, const x, const y,  const off, const on, const checked, const result )
 */
-native menu_addCheckbox( const menu, const x, const y,  const off, const on, const checked, const result );
+native gui_addCheckbox( const menu, const x, const y,  const off, const on, const checked, const result );
 
 /*!
 \brief Add a new ?? at given menu
@@ -137,9 +137,9 @@ native menu_addCheckbox( const menu, const x, const y,  const off, const on, con
 \param 4 width
 \param 5 height
 \return false if error, true else
-\fn menu_addCheckTrans( const menu, const x, const y, const width, const height )
+\fn gui_addCheckTrans( const menu, const x, const y, const width, const height )
 */
-native menu_addCheckTrans( const menu, const x, const y, const width, const height );
+native gui_addCheckTrans( const menu, const x, const y, const width, const height );
 
 /*!
 \brief Add a new gump at given menu
@@ -150,9 +150,9 @@ native menu_addCheckTrans( const menu, const x, const y, const width, const heig
 \param 4 gump
 \param 5 color
 \return false if error, true else
-\fn menu_addGump( const menu, const x, const y, const gump, const color=0 )
+\fn gui_addGump( const menu, const x, const y, const gump, const color=0 )
 */
-native menu_addGump( const menu, const x, const y, const gump, const color=0 );
+native gui_addGump( const menu, const x, const y, const gump, const color=0 );
 
 /*!
 \brief Add a new html gump at given menu
@@ -166,9 +166,9 @@ native menu_addGump( const menu, const x, const y, const gump, const color=0 );
 \param 7 Has back ??
 \param 8 can scroll
 \return false if error, true else
-\fn menu_addHtmlGump( const menu, const x, const y, const width, const height, const html[], const hasBack, const canScroll )
+\fn gui_addHtmlGump( const menu, const x, const y, const width, const height, const html[], const hasBack, const canScroll )
 */
-native menu_addHtmlGump( const menu, const x, const y, const width, const height, const html[], const hasBack, const canScroll );
+native gui_addHtmlGump( const menu, const x, const y, const width, const height, const html[], const hasBack, const canScroll );
 
 /*!
 \brief Add a new input field at given menu
@@ -182,9 +182,9 @@ native menu_addHtmlGump( const menu, const x, const y, const width, const height
 \param 7 color
 \param 8 initial value
 \return false if error, true else
-\fn menu_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[], ...  )
+\fn gui_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[], ...  )
 */
-native menu_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[], ...  );
+native gui_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[], ...  );
 
 /*!
 \brief Add a new property field at given menu
@@ -198,9 +198,9 @@ native menu_addInputField( const menu, const x, const y, const width, const heig
 \param 7 sub property
 \param 8 color
 \return false if error, true else
-\fn menu_addPropField( const menu, const x, const y, const width, const height, const property, const subPro=0, const color = 0 )
+\fn gui_addPropField( const menu, const x, const y, const width, const height, const property, const subPro=0, const color = 0 )
 */
-native menu_addPropField( const menu, const x, const y, const width, const height, const property, const subPro=0, const color = 0 );
+native gui_addPropField( const menu, const x, const y, const width, const height, const property, const subPro=0, const color = 0 );
 
 /*!
 \brief Add a new radio button at given menu
@@ -213,9 +213,9 @@ native menu_addPropField( const menu, const x, const y, const width, const heigh
 \param 6 checked
 \param 7 result
 \return false if error, true else
-\fn menu_addRadioButton( const menu, const x, const y, const off, const on, const checked, const result )
+\fn gui_addRadioButton( const menu, const x, const y, const off, const on, const checked, const result )
 */
-native menu_addRadioButton( const menu, const x, const y, const off, const on, const checked, const result );
+native gui_addRadioButton( const menu, const x, const y, const off, const on, const checked, const result );
 
 /*!
 \brief Add a resized gump at given menu
@@ -227,9 +227,9 @@ native menu_addRadioButton( const menu, const x, const y, const off, const on, c
 \param 5 width
 \param 6 height
 \return false if error, true else
-\fn menu_addResizeGump( const menu, const x, const y, const gump, const width, const height )
+\fn gui_addResizeGump( const menu, const x, const y, const gump, const width, const height )
 */
-native menu_addResizeGump( const menu, const x, const y, const gump, const width, const height );
+native gui_addResizeGump( const menu, const x, const y, const gump, const width, const height );
 
 /*!
 \brief Add text at given menu
@@ -240,9 +240,9 @@ native menu_addResizeGump( const menu, const x, const y, const gump, const width
 \param 4 color
 \param 5 text
 \return false if error, true else
-\fn menu_addText( const menu, const x, const y, const color=0, const text[], ... )
+\fn gui_addText( const menu, const x, const y, const color=0, const text[], ... )
 */
-native menu_addText( const menu, const x, const y, const color=0, const text[], ...  );
+native gui_addText( const menu, const x, const y, const color=0, const text[], ...  );
 
 /*!
 \brief Add a new Cropped text at given menu
@@ -255,9 +255,9 @@ native menu_addText( const menu, const x, const y, const color=0, const text[], 
 \param 6 hue
 \param 7 text
 \return false if error, true else
-\fn menu_addCroppedtext( const menu, const x, const y, const width, const height, const hue=0, const text[], ... )
+\fn gui_addCroppedtext( const menu, const x, const y, const width, const height, const hue=0, const text[], ... )
 */
-native menu_addCroppedtext( const menu, const x, const y, const width, const height, const hue=0, const text[], ... );
+native gui_addCroppedtext( const menu, const x, const y, const width, const height, const hue=0, const text[], ... );
 
 /*!
 \brief Add a new tile picture at given menu
@@ -268,9 +268,9 @@ native menu_addCroppedtext( const menu, const x, const y, const width, const hei
 \param 4 tile
 \param 5 color
 \return false if error, true else
-\fn menu_addTilePic( const menu, const x, const y, const tile, const color=0 )
+\fn gui_addTilePic( const menu, const x, const y, const tile, const color=0 )
 */
-native menu_addTilePic( const menu, const x, const y, const tile, const color=0 );
+native gui_addTilePic( const menu, const x, const y, const tile, const color=0 );
 
 /*!
 \brief Add a new tiled gump at given menu
@@ -283,9 +283,9 @@ native menu_addTilePic( const menu, const x, const y, const tile, const color=0 
 \param 6 gump
 \param 7 color
 \return false if error, true else
-\fn menu_addTiledGump( const menu, const x, const y, const width, const height, const gump, const color=0 );
+\fn gui_addTiledGump( const menu, const x, const y, const width, const height, const gump, const color=0 );
 */
-native menu_addTiledGump( const menu, const x, const y, const width, const height, const gump, const color=0 );
+native gui_addTiledGump( const menu, const x, const y, const width, const height, const gump, const color=0 );
 
 /*!
 \brief Add a new ?? at given menu
@@ -299,9 +299,9 @@ native menu_addTiledGump( const menu, const x, const y, const width, const heigh
 \param 7 Has back ??
 \param 8 can scroll
 \return false if error, true else
-\fn menu_addXmfHtmlGump( const menu, const x, const y, const width, const height, const clilocid[], const hasBack, const canScroll )
+\fn gui_addXmfHtmlGump( const menu, const x, const y, const width, const height, const clilocid[], const hasBack, const canScroll )
 */
-native menu_addXmfHtmlGump( const menu, const x, const y, const width, const height, const clilocid[], const hasBack, const canScroll );
+native gui_addXmfHtmlGump( const menu, const x, const y, const width, const height, const clilocid[], const hasBack, const canScroll );
 
 /*!
 \brief Add a new page at given menu
@@ -309,9 +309,9 @@ native menu_addXmfHtmlGump( const menu, const x, const y, const width, const hei
 \param 1 the menu serial
 \param 2 the page
 \return false if error, true else
-\fn menu_addPage( const menu, const page )
+\fn gui_addPage( const menu, const page )
 */
-native menu_addPage( const menu, const page );
+native gui_addPage( const menu, const page );
 
 /*!
 \brief Add a new page button at given menu
@@ -324,9 +324,9 @@ native menu_addPage( const menu, const page );
 \param 5 down
 \param 6 page to go
 \return false if error, true else
-\fn menu_addPageButton( const menu, const x, const y, const up, const down, const page )
+\fn gui_addPageButton( const menu, const x, const y, const up, const down, const page )
 */
-native menu_addPageButton( const menu, const x, const y, const up, const down, const page );
+native gui_addPageButton( const menu, const x, const y, const up, const down, const page );
 
 
 
@@ -338,7 +338,7 @@ native menu_addPageButton( const menu, const x, const y, const up, const down, c
 \param 2 question
 \return the menu serial
 */
-native menu_createIconList( const callback[], const question[], ... );
+native gui_createIconList( const callback[], const question[], ... );
 
 /*!
 \brief Add a new icon at given menu
@@ -349,9 +349,9 @@ native menu_createIconList( const callback[], const question[], ... );
 \param 4 data
 \param 5 response
 \return false if error, true else
-\fn menu_addIcon( const menu, const model, const color, const response[], ... )
+\fn gui_addIcon( const menu, const model, const color, const response[], ... )
 */
-native menu_addIcon( const menu, const model, const color=0, const data=INVALID, const response[], ... );
+native gui_addIcon( const menu, const model, const color=0, const data=INVALID, const response[], ... );
 
 
 /** @} */ // end of script_API_menu

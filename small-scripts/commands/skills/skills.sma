@@ -17,14 +17,14 @@ public target_skills( const socket, const target, const item )
 public skills_char( const socket, const chr )
 {
 	nprintf( socket, "ciao" );
-	new menu = menu_create( 50, 50, true, true, true, "handle_skills_char" );
-	menu_addGump( menu, 0, 0, 0x04CC, 0 );
-//	menu_addBackground( menu, 0x0E14, 128, 128 );
-	menu_setProperty( menu, MP_BUFFER, 0, PROP_CHARACTER );
-	menu_setProperty( menu, MP_BUFFER, 1, chr );
-	menu_setProperty( menu, MP_BUFFER, 3, 1 );
+	new menu = gui_create( 50, 50, true, true, true, "handle_skills_char" );
+	gui_addGump( menu, 0, 0, 0x04CC, 0 );
+//	gui_addBackground( menu, 0x0E14, 128, 128 );
+	gui_setProperty( menu, MP_BUFFER, 0, PROP_CHARACTER );
+	gui_setProperty( menu, MP_BUFFER, 1, chr );
+	gui_setProperty( menu, MP_BUFFER, 3, 1 );
 	
-	menu_addButton( menu, 250, 265, 0x084A, 0x084B, 1 );
+	gui_addButton( menu, 250, 265, 0x084A, 0x084B, 1 );
 	
 	const colorEdit = 32;
 	
@@ -36,19 +36,19 @@ public skills_char( const socket, const chr )
 	for( new i=0; i<SK_COUNT; ++i ) {
 	
 		if( (i%skForPage)==0 ) {
-			menu_addPage( menu, page );
+			gui_addPage( menu, page );
 			if( page>1 )
-				menu_addPageButton( menu, 356,  6, 0x824, GUMP_INVALID, page-1 );
+				gui_addPageButton( menu, 356,  6, 0x824, GUMP_INVALID, page-1 );
 			if( page<=(SK_COUNT/skForPage) )
-				menu_addPageButton( menu, 350, 265, 0x825, GUMP_INVALID, page+1 );
+				gui_addPageButton( menu, 350, 265, 0x825, GUMP_INVALID, page+1 );
 			++page;
 		}
 
-		menu_addText( menu, 28, 38+(20*(i%skForPage)), _, "%s : ", skillName[ skillByName[i] ] );
-		menu_addPropField( menu, 220, 38+(20*(i%skForPage)), 50, 30, CP_BASESKILL, skillByName[i], colorEdit );
+		gui_addText( menu, 28, 38+(20*(i%skForPage)), _, "%s : ", skillName[ skillByName[i] ] );
+		gui_addPropField( menu, 220, 38+(20*(i%skForPage)), 50, 30, CP_BASESKILL, skillByName[i], colorEdit );
 	}
 	
-	menu_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, getCharFromSocket(socket) );
 }
 
 public handle_skills_char( const socket, const menu, const button )
@@ -57,7 +57,7 @@ public handle_skills_char( const socket, const menu, const button )
 		return;
 		
 	if( button==1 ) { //apply
-		chr_teleport( menu_getProperty( menu, MP_BUFFER, 1 ) );
+		chr_teleport( gui_getProperty( menu, MP_BUFFER, 1 ) );
 	}
 		
 }

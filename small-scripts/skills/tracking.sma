@@ -17,13 +17,13 @@ static where[8][] = {
 
 public __nxw_sk_tracking( const socket )
 {
-	new menu = menu_createIconList( "handle_tracking", "What do you wish to track?"  );
+	new menu = gui_createIconList( "handle_tracking", "What do you wish to track?"  );
 
-	menu_addIcon( menu, 0x20D4, _, _, "Animals" );
-	menu_addIcon( menu, 0x20E9, _, _, "Creatures" );
-	menu_addIcon( menu, 0x2106, _, _, "Players" );
+	gui_addIcon( menu, 0x20D4, _, _, "Animals" );
+	gui_addIcon( menu, 0x20E9, _, _, "Creatures" );
+	gui_addIcon( menu, 0x2106, _, _, "Players" );
 	
-	menu_show( menu, getCharFromSocket( socket ) );
+	gui_show( menu, getCharFromSocket( socket ) );
 }
 
 
@@ -77,7 +77,7 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 			if( (id>=id1) && (id<=id2) ) {
 			
 				if( menu==INVALID )
-					menu = menu_createIconList( "handle_track_choose", typeQuestion[button-1] );
+					menu = gui_createIconList( "handle_track_choose", typeQuestion[button-1] );
 
 				new whereIdx = chr_getDirForSee( chr, chr_getProperty( c, CP_POSITION, CP2_X ), chr_getProperty( c, CP_POSITION, CP2_Y ) );
 				
@@ -88,15 +88,15 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 				if( seeName ) {
 					new name[100];
 					chr_getProperty( c, CP_STR_NAME, _, name );
-					menu_addIcon( menu, icon, _, c, "%s to the %s", name, where[ whereIdx ]  );
+					gui_addIcon( menu, icon, _, c, "%s to the %s", name, where[ whereIdx ]  );
 				}
 				else {
 					if(id == BODY_MALE)
-						menu_addIcon( menu, icon, _, c, "a man to the %s", where[ whereIdx ] );
+						gui_addIcon( menu, icon, _, c, "a man to the %s", where[ whereIdx ] );
 					else if( id == BODY_FEMALE )
-						menu_addIcon( menu, icon, _, c, "a woman to the %s", where[ whereIdx ] );
+						gui_addIcon( menu, icon, _, c, "a woman to the %s", where[ whereIdx ] );
 					else
-						menu_addIcon( menu, icon, _, c, "a creature to the %s", where[ whereIdx ] );
+						gui_addIcon( menu, icon, _, c, "a creature to the %s", where[ whereIdx ] );
 				}
 			}
 		}
@@ -104,7 +104,7 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 	
 	set_delete( set );
 	if ( menu != INVALID )
-		menu_show( menu, chr );
+		gui_show( menu, chr );
 	else {
 		switch( button )
 		{

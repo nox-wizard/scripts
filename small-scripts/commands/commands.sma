@@ -22,8 +22,8 @@ public command_playerlist( const socket )
 		return;
 	}*/
 	
-	new menu = menu_create( 50, 50, true, true, true, "handle_playerlist" );
-	menu_addGump( menu, 0, 0, 0x0027, 0 );
+	new menu = gui_create( 50, 50, true, true, true, "handle_playerlist" );
+	gui_addGump( menu, 0, 0, 0x0027, 0 );
 	
 	const chrForPage = 14;
 	new page=1;
@@ -33,24 +33,24 @@ public command_playerlist( const socket )
 		new chr=set_getChar(set);
 
 		if( (i%chrForPage)==0 ) {
-			menu_addPage( menu, page );
+			gui_addPage( menu, page );
 			if( page>1 )
-				menu_addPageButton( menu, 205,   6, 0x824, GUMP_INVALID, page-1 );
+				gui_addPageButton( menu, 205,   6, 0x824, GUMP_INVALID, page-1 );
 			if( page<=(count/chrForPage) )
-				menu_addPageButton( menu, 202, 265, 0x825, GUMP_INVALID, page+1 );
+				gui_addPageButton( menu, 202, 265, 0x825, GUMP_INVALID, page+1 );
 			++page;
 		}
 	
-		menu_addButton( menu, 32, 39+(i%chrForPage)*15, 0x4B9, 0x4BA, chr );
+		gui_addButton( menu, 32, 39+(i%chrForPage)*15, 0x4B9, 0x4BA, chr );
 		new str[100];
 		chr_getProperty( chr, CP_STR_NAME, 0, str );
-		menu_addText( menu, 52, 35+(i%chrForPage)*15, _, str );
+		gui_addText( menu, 52, 35+(i%chrForPage)*15, _, str );
 
 	}
 	
 	set_delete(set);
 	
-	menu_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, getCharFromSocket(socket) );
 }
 
 public handle_playerlist( const socket, const menu, const button )
