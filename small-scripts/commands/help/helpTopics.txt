@@ -175,6 +175,11 @@ Calls a Small public function
 syntax: 'func function [param0][param1][param2][param3][param4]
 Parameters can only be integers
 
+TOPIC 'gmhide
+TEXT
+hides / unhides a gm-character permanently
+syntax: 'gmhide "on"/"off"
+
 TOPIC 'gmopen
 TEXT
 Opens a character's backpack

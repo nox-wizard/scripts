@@ -102,4 +102,5 @@ tweak,100,cmd_tweak
 unjail,200,cmd_unjail
 where,0,cmd_where
 wipe,100,cmd_wipe
+gmhide,200,cmd_gmhide
 

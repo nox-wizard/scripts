@@ -83,6 +83,7 @@
 #include "small-scripts/commands/unjail.sma"
 #include "small-scripts/commands/where.sma"
 #include "small-scripts/commands/wipe.sma"
+#include "small-scripts/commands/gmhide.sma"
 
 //COMMANDS DOCUMENTATION
 /*!
