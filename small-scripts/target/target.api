@@ -17,5 +17,44 @@
 \param callback: the function index that will be invoked by the target
 \param format[]: the message that will be sent with the target
 \brief Brings up a target, that will invoke the specific callback when the choice is made
+\note old style, deprecated
 */
 native getTarget(const socket, const callback, const format[], ...);
+
+/*!
+\brief Create a new target
+\author Endymion
+\since 0.82
+\param chr the character
+\param param1 a param
+\param param2 a param
+\param doNow if true target is will be executed
+\param callback the function callback
+\return the target serial or INVALID if error
+\fn target_create( const chr, const param1=INVALID, const param2=INVALID, const doNow=true, callback[], ... )
+*/
+native target_create( const chr, const param1=INVALID, const param2=INVALID, const doNow=true, callback[], ... );
+
+/*!
+\brief Execute target to character
+\author Endymion
+\since 0.82
+\param target the target serial
+\param chr the player to send to
+\return true if sended, false if error
+\fn target_do( const target, const chr )
+*/
+native target_do( const target, const chr );
+
+/*!
+\brief Example of target callback
+\example public callback( const target, const chr, const obj, const x, const y, const z, const model, const param1 )
+\param target the target serial
+\param chr the character who targetted
+\param obj the object ( item or character ) clicked, or INVALID if no obj targetted
+\param x, y, z the location or INVALID if not a location targetted
+\param model the id of object clicked or static clicked, or INVALID if not valid
+\note model is valid when targetted an item or a static tile, not when a land tile is targetted
+\param param1 is the first param passed
+\note the param2 passed to target_create can be getted using the target_getProperty, with TP_BUFFER and 1 for index
+*/
