@@ -19,6 +19,10 @@ Shows the ingame house gump that allows all kinds of modifications<BR>
 #define _AUTOBOUNCE_KEY 1 // this decides if the autoban should be only active if a non-friend/non-coowner enters the house and the door us looked, so _AUTOBOUNCE_KEY 1 means that player still need to take care for locked doors even if auto-bounce is active
 const AUTOBOUNCEVAR = 9000;
 
+#define HOUSE_COOWNER 5
+#define HOUSE_FRIENDS 15
+#define HOUSE_BANNED 50
+
 const BUTTON_APPLY=11;
 const housepages=3; //one line for one page, two rows for one page
 const housepic1 = 5002;
@@ -40,13 +44,16 @@ static houseButton[housepages][house_buttons] = {
 {5209, 5003, 5209, 5003, 5003, 5209}
 };
 
+static houseuser[3][] = {
+"Co-Owner", "Friends", "Banned"
+};
+
 static xstart = 28;
 static ystart = 114;
 
 public housestart(const itm, const chr)
 {
 	bypass();
-	//new tempStr[100];
         new more1 = itm_getProperty(itm, IP_MORE, 1);
         more1 = (more1&0xff)<<24;
 	new more2 = itm_getProperty(itm, IP_MORE, 2);
@@ -56,12 +63,11 @@ public housestart(const itm, const chr)
 	new more4 = itm_getProperty(itm, IP_MORE, 4);
 	more4 = (more4&0xff)<<0;
 	new house=more4+more3+more2+more1;
-	printf("start house gump, house ser is %d, item ser is: %d^n", house, itm);
-	printf("more4 verschoben: %d, more3: %d, more2: %d, more1: %d^n", more4, more3, more2, more1);
+	//printf("start house gump, house ser is %d, item ser is: %d^n", house, itm);
 	menu_house(chr, house, 1);
 }
 
-public menu_house(const chr, const house, const pagenumber)
+public menu_house(const chrsource, const house, const pagenumber)
 {
 	new tempStr[100];
 	new checklev = 0;
@@ -129,63 +135,134 @@ if( pagenumber ==1)
 //friends & owner
 else if(pagenumber ==2)
 {
-	gui_addButton(houseMenu,60,114,housepic1,housepic2,11);
-	gui_addText(houseMenu,90,111,1310,"List of Co-Owner");
+	new chr;
+	new i=1;
+	new j;
+	//page 1, coowner
+	gui_addPage(houseMenu,1);
+	gui_addPageButton(houseMenu,xstart+200,ystart-50,2224,2117,2);
+	sprintf(tempStr, houseuser[1]);
+	gui_addText(houseMenu,xstart+200+20,ystart-50,1310,tempStr);
 	
-	gui_addButton(houseMenu,60,114+23*1,housepic1,housepic2,12);
-	gui_addText(houseMenu,90,111+23*1,1310,"Add a Co-Owner");
+	gui_addPageButton(houseMenu,xstart+350,ystart-50,2224,2117,3);
+	sprintf(tempStr, houseuser[2]);
+	gui_addText(houseMenu,xstart+350+20,ystart-50,1310,tempStr);
 	
-	gui_addButton(houseMenu,60,114+23*2,housepic1,housepic2,13);
-	gui_addText(houseMenu,90,111+23*2,1310,"Remove a Co-Owner");
+	sprintf(tempStr, "Add a %s", houseuser[0]);
+	gui_addButton(houseMenu,xstart+50,ystart-10,housepic1,housepic2,12);
+	gui_addText(houseMenu,xstart+80,ystart-13,1310,tempStr);
 	
-	gui_addButton(houseMenu,60,114+23*3,housepic1,housepic2,14);
-	gui_addText(houseMenu,90,111+23*3,1310,"Delete all Co-Owner");
+	sprintf(tempStr, "Delete all %s", houseuser[0]);
+	gui_addButton(houseMenu,xstart+250,ystart-10,housepic1,housepic2,13);
+	gui_addText(houseMenu,xstart+280,ystart-13,1310,tempStr);
 	
-	gui_addButton(houseMenu,290,114,housepic1,housepic2,15);
-	gui_addText(houseMenu,320,111,1310,"List of Friends");
+	new coownerlist = set_create();
+	set_getCoOwners ( coownerlist, house);
+	for (set_rewind(coownerlist);!set_end(coownerlist);)
+	{
+		chr = set_getChar( coownerlist );
+		chr_getProperty(chr, CP_STR_NAME, _, tempStr);
+		if(i>8)
+			j=150;
+		else j=0;
+		gui_addCheckbox(houseMenu,xstart+10+j,ystart+21*i,housepic1,housepic2,1,10+i);
+		gui_addText(houseMenu,xstart+30+j,ystart+3+21*i,1310,tempStr);
+		i++;
+	}
+	set_delete(coownerlist);
 	
-	gui_addButton(houseMenu,290,114+23*1,housepic1,housepic2,16);
-	gui_addText(houseMenu,320,111+23*1,1310,"Add a Friend");
+	//page 2, friends
+	i=1;
+	gui_addPage(houseMenu,2);
+	gui_addPageButton(houseMenu,xstart+50,ystart-50,2224,2117,1);
+	sprintf(tempStr, houseuser[0]);
+	gui_addText(houseMenu,xstart+50+20,ystart-50,1310,tempStr);
 	
-	gui_addButton(houseMenu,290,114+23*2,housepic1,housepic2,17);
-	gui_addText(houseMenu,320,111+23*2,1310,"Remove a Friend");
+	gui_addPageButton(houseMenu,xstart+350,ystart-50,2224,2117,3);
+	sprintf(tempStr, houseuser[2]);
+	gui_addText(houseMenu,xstart+350+20,ystart-50,1310,tempStr);
 	
-	gui_addButton(houseMenu,290,114+23*3,housepic1,housepic2,18);
-	gui_addText(houseMenu,320,111+23*3,1310,"Delete all Friends");
+	sprintf(tempStr, "Add a %s", houseuser[1]);
+	gui_addButton(houseMenu,xstart+50,ystart-10,housepic1,housepic2,14);
+	gui_addText(houseMenu,xstart+80,ystart-13,1310,tempStr);
 	
-	gui_addButton(houseMenu,116,230+23*0,housepic1,housepic2,19);
-	gui_addText(houseMenu,146,227+23*0,1310,"Ban someone from the house");
+	sprintf(tempStr, "Delete all %s", houseuser[1]);
+	gui_addButton(houseMenu,xstart+250,ystart-10,housepic1,housepic2,15);
+	gui_addText(houseMenu,xstart+280,ystart-13,1310,tempStr);
 	
-	gui_addButton(houseMenu,116,230+23*1,housepic1,housepic2,20);
-	gui_addText(houseMenu,146,227+23*1,1310,"Bounce someone out of the house");
+	new friendlist = set_create();
+	set_getFriends( friendlist, house);
+	for (set_rewind(friendlist);!set_end(friendlist);)
+	{
+		chr = set_getChar( friendlist );
+		chr_getProperty(chr, CP_STR_NAME, _, tempStr);
+		if(i>8)
+			j=150;
+		else j=0;
+		gui_addCheckbox(houseMenu,xstart+10+j,ystart+21*i,housepic1,housepic2,1,30+i);
+		gui_addText(houseMenu,xstart+30+j,ystart+3+21*i,1310,tempStr);
+		i++;
+	}
+	set_delete(friendlist);
 	
-	gui_addButton(houseMenu,116,230+23*2,housepic1,housepic2,21);
-	gui_addText(houseMenu,146,227+23*2,1310,"View list of banned people");
+	//page 3, banned
+	i=1;
+	gui_addPage(houseMenu,3);
+	gui_addPageButton(houseMenu,xstart+50,ystart-50,2224,2117,1);
+	sprintf(tempStr, houseuser[0]);
+	gui_addText(houseMenu,xstart+50+20,ystart-50,1310,tempStr);
 	
-	gui_addButton(houseMenu,116,230+23*3,housepic1,housepic2,22);
-	gui_addText(houseMenu,146,227+23*3,1310,"Unban somone");
+	gui_addPageButton(houseMenu,xstart+200,ystart-50,2224,2117,2);
+	sprintf(tempStr, houseuser[1]);
+	gui_addText(houseMenu,xstart+200+20,ystart-50,1310,tempStr);
+	
+	sprintf(tempStr, "Add to %s list", houseuser[2]);
+	gui_addButton(houseMenu,xstart+50,ystart-10,housepic1,housepic2,16);
+	gui_addText(houseMenu,xstart+80,ystart-13,1310,tempStr);
+	
+	sprintf(tempStr, "Clean %s list", houseuser[2]);
+	gui_addButton(houseMenu,xstart+250,ystart-10,housepic1,housepic2,17);
+	gui_addText(houseMenu,xstart+280,ystart-13,1310,tempStr);
+	
+	new banlist = set_create();
+	set_getBanned( banlist, house);
+	for (set_rewind(banlist);!set_end(banlist);)
+	{
+		chr = set_getChar( banlist );
+		chr_getProperty(chr, CP_STR_NAME, _, tempStr);
+		if(i>8)
+			j=150;
+		else j=0;
+		gui_addCheckbox(houseMenu,xstart+10+j,ystart+21*i,housepic1,housepic2,1,50+i);
+		gui_addText(houseMenu,xstart+30+j,ystart+3+21*i,1310,tempStr);
+		i++;
+	}
+	set_delete(banlist);
+	
+	gui_addButton(houseMenu,116,230+23*5,housepic1,housepic2,18);
+	gui_addText(houseMenu,146,227+23*5,1310,"Bounce someone out of the house");
 }
 //options
 else if(pagenumber ==3)
 {
 	
-	gui_addButton(houseMenu,117,114,housepic1,housepic2,23);
+	gui_addButton(houseMenu,117,114,housepic1,housepic2,19);
 	gui_addText(houseMenu,138,111+28*0,1310,"Transform house back into a deed");
 	
-	gui_addButton(houseMenu,117,114+28*1,housepic1,housepic2,24);
+	gui_addButton(houseMenu,117,114+28*1,housepic1,housepic2,20);
 	gui_addText(houseMenu,138,111+28*1,1310,"Change the house locks");
 	
-	gui_addButton(houseMenu,117,114+28*2,housepic1,housepic2,25);
+	gui_addButton(houseMenu,117,114+28*2,housepic1,housepic2,21);
 	gui_addText(houseMenu,138,111+28*2,1310,"Declare this house as public");
 	gui_addText(houseMenu,138,111+28*3,1310,"- its not lockable then!");
 	
-	gui_addButton(houseMenu,117,114+28*4,housepic1,housepic2,26);
+	gui_addButton(houseMenu,117,114+28*4,housepic1,housepic2,22);
 	gui_addText(houseMenu,138,111+28*4,1310,"Access your bank account");
 	
-	gui_addButton(houseMenu,117,114+28*5,housepic1,housepic2,27);
+	gui_addButton(houseMenu,117,114+28*5,housepic1,housepic2,23);
 	gui_addText(houseMenu,138,111+28*5,1310,"Transfer ownership of the house");
 }
-gui_show(houseMenu, chr);
+gui_show(houseMenu, chrsource);
 }
 
 public house_cllbck(const houseMenu, const chrsource, const buttonCode)
@@ -194,11 +271,13 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 	new pagenumber = gui_getProperty(houseMenu, MP_BUFFER, 4);
 	new house = gui_getProperty(houseMenu, MP_BUFFER, 1);
 	new i;
+	new chr;
 	switch(buttonCode)
 	{
 		case 1..3: menu_house(chrsource, house, buttonCode);
 		case 11:
 		{
+			new setlist = set_create();
 			for(i=11; i<=12;++i)
 			{
 				if(i==11) //house name
@@ -216,7 +295,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				#if _AUTOBOUNCE_AVAIL
 				else if(i==12) //autobounce
 				{
-					new checked = gui_getProperty(twkChrMenu,MP_CHECK,i);
+					new checked = gui_getProperty(houseMenu,MP_CHECK,i);
 					if( itm_isaLocalVar( house, AUTOBOUNCEVAR, VAR_TYPE_ANY ) == 0) //0 means no var at globalVar
 						itm_addLocalIntVar( house, AUTOBOUNCEVAR, checked );
 					else if(itm_isaLocalVar( house, AUTOBOUNCEVAR, VAR_TYPE_STRING ) == 1) //there already is a string variable (shouldn't happen)
@@ -235,7 +314,139 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				}
 				#endif
 			}//for
+			set_clear( setlist );
+			set_getCoOwners( setlist, house);
+			i=21;
+			for (set_rewind(setlist);!set_end(setlist);)
+			{
+				chr = set_getChar( setlist );
+				if(gui_getProperty(houseMenu,MP_CHECK,i)==0)
+					house_removeCoOwner(house, chr);
+				i++;
+			}
+			set_clear( setlist );
+			set_getFriends( setlist, house);
+			i=31;
+			for (set_rewind(setlist);!set_end(setlist);)
+			{
+				chr = set_getChar( setlist );
+				if(gui_getProperty(houseMenu,MP_CHECK,i)==0)
+					house_removeFriend(house, chr);
+				i++;
+			}
+			set_clear( setlist );
+			set_getBanned( setlist, house);
+			i=51;
+			for (set_rewind(setlist);!set_end(setlist);)
+			{
+				chr = set_getChar( setlist );
+				if(gui_getProperty(houseMenu,MP_CHECK,i)==0)
+					house_removeBan(house, chr);
+				i++;
+			}
+			set_delete(setlist);
+		}
+		case 12..17: //add/clean lists
+		{
+			if((buttonCode==12)||(buttonCode==14)||(buttonCode==16))
+			{
+				new setlist = set_create();
+				new listsize;
+				if(buttonCode==12)
+				{
+					set_getCoOwners( setlist, house);
+					listsize = set_size( setlist );
+					if( listsize<HOUSE_COOWNER)
+					{
+						chr_message( chrsource, _, "Whom you want to become co-owner?");
+						target_create( chrsource, house,_, _,  "Addcoowner" );
+						return;
+					}
+					else chr_message(chrsource,chrsource, "You already have %d coowner.", HOUSE_COOWNER);
+				}
+				else if(buttonCode==14)
+				{
+					set_getFriends( setlist, house);
+					listsize = set_size( setlist );
+					if( listsize<HOUSE_FRIENDS)
+					{
+						chr_message( chrsource, _, "Whom you want to become friend?");
+						target_create( chrsource,house, _, _, "Addfriend" );
+						return;
+					}
+					else chr_message(chrsource,chrsource, "You already have %d friends.", HOUSE_COOWNER);
+				}
+				else if(buttonCode==16)
+				{
+					set_getBanned( setlist, house);
+					listsize = set_size( setlist );
+					if( listsize<HOUSE_BANNED)
+					{
+						chr_message( chrsource, _, "Whom you want to ban?");
+						target_create( chrsource,house, _, _, "AddBanned" );
+						return;
+					}
+					else chr_message(chrsource,chrsource, "You already have %d banned people at your list.", HOUSE_COOWNER);
+				}
+			}
+			else if( (buttonCode==13)||(buttonCode==15)||(buttonCode==17))
+			{
+				new setlist = set_create();
+				if(buttonCode==13)
+				{
+					set_getCoOwners( setlist, house);
+					for (set_rewind(setlist);!set_end(setlist);)
+					{
+						chr = set_getChar( setlist );
+						house_removeCoOwner(house, chr);
+					}
+				}
+				else if(buttonCode==15)
+				{
+					set_getFriends( setlist, house);
+					for (set_rewind(setlist);!set_end(setlist);)
+					{
+						chr = set_getChar( setlist );
+						house_removeFriend(house, chr);
+					}
+				}
+				else if(buttonCode==17)
+				{
+					set_getBanned( setlist, house);
+					for (set_rewind(setlist);!set_end(setlist);)
+					{
+						chr = set_getChar( setlist );
+						house_removeBan(house, chr);
+					}
+				}
+			}
 		}
 		default: printf("unknown button");
 	}
+}
+
+public Addcoowner( const t, const chrsource, const target, const x, const y, const z, const model, const house )
+{
+	//if ( isChar(target) && !chr_isNpc(target)) //is player char
+	printf("enter addcoowner^n");
+	if ( isChar(target)) //is player char
+	{
+		house_addCoOwner(house, target);
+		printf("add char as coowner^n");
+	}
+	else chr_message(chrsource, chrsource, "Only player can be co-owner!");
+}
+
+public Addfriend( const t, const chrsource, const target, const x, const y, const z, const model, const house )
+{
+	if ( isChar(target) && !chr_isNpc(target)) //is player char
+		house_addFriend(house, target);
+	else chr_message(chrsource, chrsource, "Only player can be friends!");
+}
+
+public AddBanned( const t, const chrsource, const target, const x, const y, const z, const model, const house )
+{
+	if ( isChar(target) && !chr_isNpc(target)) //is player char
+		house_addBan(house, target);
+	else chr_message(chrsource, chrsource, "Only player can be banned!");
 }
