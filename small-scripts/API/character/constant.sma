@@ -192,6 +192,7 @@ const CP_XSKIN = 406;		//!<
 const CP_ICON = 407;		//!<
 const CP_SOUND = 408;		//!<
 const CP_RACE = 409;		//!<
+const CP_TOTALSKILL = 410;
 
 const CP_STR_DISABLEDMSG = 450;	//!<
 const CP_STR_GUILDTITLE = 451;	//!<

@@ -14,7 +14,7 @@ Begin Customizable Logs
 \*----------------------------------------------------------------------------------------*/
 
 
-enum 
+enum
 {
 	 pine=0, yew, maple, alder, walnut, cedar, oak, beech, mahogany, ebony
 };
@@ -49,11 +49,11 @@ static logProperty[NUM_LOGS][] = {
 /*----------------------------------------------------------------------------------------
 End Customizable Logs
 ----------------------------------------------------------------------------------------*/
-  
+
 /*----------------------------------------------------------------------------------------
 Begin Customizable Regions
 ----------------------------------------------------------------------------------------*/
-                                                                                        
+
 static ENABLE_logRegions = 0;//This must be 1 if you want region lumberjacking to be activated
 const NUM_logRegions = 2;
 
@@ -83,9 +83,9 @@ number of boards needed, minimal skill, maximum skill with gain, skill needed to
 */
 const NUM_woodITEMS = 71;
 enum carpprop
-{ 
-boardnumber, 
-skillmincarp, 
+{
+boardnumber,
+skillmincarp,
 skillmaxcarp,
 repairskillcarp,
 repairboard,
@@ -266,7 +266,7 @@ static msg_carpenterDef[NUM_carpSENTENCE][]={
 "Bed feet left A2",
 "Bed feet right A2",
 "Bed head right A2",
-"Bed feet A5", 
+"Bed feet A5",
 "     big beds menu!",
 "You have no idea how to make this.",
 "You don't have enough boards."
@@ -290,36 +290,41 @@ public __nxw_sk_lumber(const cc)
 	new skill = chr_getSkill(cc, SK_LUMBERJACKING);
 	new region = -1;
 
-	if (ENABLE_logRegions == 1) 
+	if (ENABLE_logRegions == 1)
 	{
 		new x = chr_getProperty(cc, CP_POSITION, CP2_X);
 		new y = chr_getProperty(cc, CP_POSITION, CP2_Y);
-		for (index = 0; index < NUM_logRegions; index++) 
+		for (index = 0; index < NUM_logRegions; index++)
 			if ((logRegions[index][0] <= x <= logRegions[index][2]) && (logRegions[index][1] <= y <= logRegions[index][3]))
 				region = index;
 	}
-	
-	
-	for (index = 0; index < NUM_LOGS; index++) 
+
+
+	for (index = 0; index < NUM_LOGS; index++)
 	{
-		if (ENABLE_logRegions == 1 && region < 0) break;
-		if (skill > logProperty[index][1] && random(100) < logProperty[index][2]) 
+		if (ENABLE_logRegions == 1 && region < 0)
+			break;
+		if (skill > logProperty[index][1] && random(100) < logProperty[index][2])
 		{
-			if (ENABLE_logRegions == 1 && region > -1) 
+			if (ENABLE_logRegions == 1 && region > -1)
+			{
 				if (random(100) < regionLogChance[region][index])
+				{
 					logFound = index;
-			 
-		else logFound = index;
+				}
+			}
+			else
+				logFound = index;
 		}
 
 	}
-	
+
 	if (ENABLE_logRegions == 1 && region < 0) logFound = pine;
         	logAmount = random(100);
 
-	if (logAmount > 8) 
+	if (logAmount > 8)
 		logAmount = 1;
-	
+
 
 	new str[50];//Adjust the size if you create new logs with long names!
 	sprintf(str, "%s", logProperty[logFound][logname]);
@@ -341,14 +346,14 @@ public __nxw_sk_lumber(const cc)
  AUTHOR   : Horian, modified after Luxor
  PURPOSE  : The function called by Item to cut logs to boards
  ****************************************************************************/
- 
+
 public _cutlog(const log, const cc)
 {
     bypass();
     new skill = chr_getSkill(cc, SK_LUMBERJACKING);
     new color = itm_getProperty(log, IP_COLOR);
     new index = 0;
-    for (index = 0; index < NUM_LOGS; index++) 
+    for (index = 0; index < NUM_LOGS; index++)
         {
         if (color == logProperty[index][3])
         {
@@ -383,15 +388,15 @@ public _cutlog(const log, const cc)
                new backpack = chr_getBackpack( cc, true );
                new board = itm_createByDef( "$item_boards", backpack );
                itm_setProperty(board, IP_WEIGHT, _, 100);
-               itm_setProperty(board, IP_COLOR, _,logProperty[index][3]); 
+               itm_setProperty(board, IP_COLOR, _,logProperty[index][3]);
                itm_setProperty(board, IP_STR_NAME, 0, boardname);
                itm_refresh(board);
                chr_message( cc, _, "You create boards out of the wood.");
                chr_message( cc, _, "Carefully you put the %s in your pack.",boardname);
                itm_remove(log);
                }
-        }//color if           
-    }//for   
+        }//color if
+    }//for
 }
 
 //////////////////////////////////////////////////////////////////
@@ -417,7 +422,7 @@ else if(nails1 < 1 && nails2 <1) //no nails inside the pack
 chr_message( chr, _,"%s", msg_carpenterDef[2]);
 return;
 }
-else 
+else
 {
 chr_message( chr, _, "%s", msg_carpenterDef[1]);
 target_create( chr, _, _, _, "carpentertwo" );
@@ -430,7 +435,7 @@ new itemid=itm_getProperty(target, IP_ID);
 new saw1 = chr_countItems(chr, 0x1028, -1); //saw is searched for in pack
 new saw2 = chr_countItems(chr, 0x1029, -1); //saw is searched for in pack
 new nails1 = chr_countItems(chr, 0x102E, -1); //nails pack is searched for in backpack
-new nails2 = chr_countItems(chr, 0x102F, -1); //nails pack is searched for in backpack 
+new nails2 = chr_countItems(chr, 0x102F, -1); //nails pack is searched for in backpack
 
 if((saw1 >= 1 || saw2 >=1) && (itemid == 0x1BD7) && (nails1 >= 1 || nails2 >=1)) //boards are target, nails and saw is there
    {
@@ -446,7 +451,7 @@ if((saw1 >= 1 || saw2 >=1) && (itemid == 0x1BD7) && (nails1 >= 1 || nails2 >=1))
        new color = itm_getProperty(target, IP_COLOR);//wood color is called
        new carpskill;
        //color defines the skill needed to use the wood
-           switch(color) 
+           switch(color)
             {
        case 0251:  carpskill=logProperty[0][loguseskill]; //pine
        case 0149:  carpskill=logProperty[1][loguseskill]; //yew
@@ -495,7 +500,7 @@ public carp_BtnPress (const chr, const pg, const idx)
 {
 switch (idx)
 {
-case 0: menu_normal_tables_1(chr); //normal tables 1  
+case 0: menu_normal_tables_1(chr); //normal tables 1
 case 1: menu_normal_tables_2(chr); //normal tables 2
 case 2: menu_normal_tables_3(chr); //normal tables 3
 case 3: menu_other_furniture(chr); //other_furnituree
@@ -841,9 +846,9 @@ switch(colornum)//get color name
        default: chr_message( chr, _, "wood of unknown color!");
 }
 trim(color);   //remove triming spaces
-new name[50]; 
+new name[50];
 sprintf(name, "%s", itemcarpDef[carptyp][carpname]);
-trim(name); 
+trim(name);
 sprintf(name, "$item_%s%s", color, itemcarpDef[carptyp][carpname]);
 new carpitem = itm_createByDef(name, backpack); //item-Script-Name is composed and item created in backpack
 itm_refresh(carpitem);

@@ -85,5 +85,5 @@ native broadcast(const format[], ...);
 \param 2: checkDefine: true if a logmessage should be displayed in the console if the define is not available
 \brief Get define Number
 */
-native getIntFromDefine(const define[], const bool checkDefine=true);
+native getIntFromDefine(const define[],  checkDefine=true);
 

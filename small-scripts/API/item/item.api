@@ -24,8 +24,8 @@
 \return true if is an item serial, false else
 \note INVALID return false
 */
-public isItem( const serial ) { 
-	return ( ( serial>=FIRST_ITEM_SERIAL ) && ( serial!=INVALID ) ); 
+public isItem( const serial ) {
+	return ( ( serial>=FIRST_ITEM_SERIAL ) && ( serial!=INVALID ) );
 }
 
 /*!
@@ -175,7 +175,7 @@ native itm_pileItem(const container, const item);
 \author Xanathar
 \fn itm_reduceAmount(const item, const amount)
 \param item the piled item
-\param the amount to be reduced 
+\param the amount to be reduced
 \brief reduce the amount of the given pileable item
 */
 native itm_reduceAmount(const item, const amount);
@@ -529,5 +529,14 @@ stock itm_setAmxFlags(const itm, const idx, const value)
 	itm_setProperty(itm, IP_AMXFLAGS, idx, value);
 }
 
+/*!
+\author Wintermute
+\fn itm_showContainer(const itm, const chr)
+\brief show the itm if it is an container to character chr
+\param 1: the item to be displayed
+\param 2: the character the item is shown to
+*/
+
+native itm_showContainer(const itm, const chr);
 
 /** @} */
