@@ -8,7 +8,7 @@
 /*!
 \author Fax
 \fn cmd_shutdown(const chr)
-\brief shutdowns accounts/XSS/commands
+\brief shutdowns
 
 <B>syntax:</B> 'shutdown seconds
 */

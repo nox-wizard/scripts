@@ -8,7 +8,7 @@
 /*!
 \author Fax
 \fn cmd_timespeed(const chr)
-\brief timespeeds accounts/XSS/commands
+\brief timespeeds
 
 <B>syntax:</B> 'timespeed seconds
 */

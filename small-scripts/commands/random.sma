@@ -18,7 +18,7 @@
 </UL>
 
 This command apllies a given command randomly on online characters.<br>
-You the applied command can only be a command with 0 or 1 parameters.<br>
+The applied command can only be a command with 0 or 1 parameters.<br>
 If the command takes a parameter you can specify it with param.<br>
 Examples:
 - 'random 10 kill : kills 10% of characters

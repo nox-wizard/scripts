@@ -1,7 +1,7 @@
 #include "small-scripts/nxw_lib2.sma"
 #include "small-scripts/commands/constant.sma"
 
-//here are all command scripts (Horian: test cvs)
+//here are all command scripts
 #include "small-scripts/commands/area.sma"
 #include "small-scripts/commands/action.sma"
 #include "small-scripts/commands/accountscp.sma"
@@ -26,7 +26,6 @@
 #include "small-scripts/commands/hiding.sma"
 #include "small-scripts/commands/hunger.sma"
 #include "small-scripts/commands/help/help.sma"
-#include "small-scripts/commands/imore.sma"
 #include "small-scripts/commands/invul.sma"
 #include "small-scripts/commands/iset.sma"
 #include "small-scripts/commands/jail.sma"
@@ -41,7 +40,6 @@
 #include "small-scripts/commands/move.sma"
 #include "small-scripts/commands/npcwander.sma"
 #include "small-scripts/commands/page/onlinegm.sma"
-//#include "small-scripts/commands/options/options.sma" removed
 #include "small-scripts/commands/page/pagelist.sma"
 #include "small-scripts/commands/page/page.sma"
 #include "small-scripts/commands/page/pages.sma"
@@ -55,16 +53,15 @@
 #include "small-scripts/commands/random.sma"
 #include "small-scripts/commands/regioncp.sma"
 #include "small-scripts/commands/reload.sma"
-//#include "small-scripts/commands/reloadsmall.sma" removed
+#include "small-scripts/commands/rename.sma"
 #include "small-scripts/commands/resend.sma"
 #include "small-scripts/commands/respawn.sma"
 #include "small-scripts/commands/resurrect.sma"
 #include "small-scripts/commands/save.sma"
 #include "small-scripts/commands/sell.sma"
-//#include "small-scripts/commands/setdir.sma" replaced by 'iset dir
 #include "small-scripts/commands/setmoreb12.sma"
 #include "small-scripts/commands/setmoreb34.sma"
-//#include "small-scripts/commands/setmorexyz.sma" replaced by imore
+#include "small-scripts/commands/setmorexyz.sma"
 #include "small-scripts/commands/setpriv.sma"
 #include "small-scripts/commands/settype.sma"
 #include "small-scripts/commands/showbank.sma"

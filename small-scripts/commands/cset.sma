@@ -9,11 +9,11 @@
 	-# "ai": npcai
 	-# "dex": dexterity
 	-# "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
-	-# "full": set all stats to full
 	-# "gmfx": gm moving effect
 	-# "int": intelligence
 	-# "light": character fixed light level
 	-# "owner": owner serial
+	-# "privon/privoff": special privs (1: can broadcast, 2: see serial numbers by single click, 3: no skill titles,4: Can snoop other,5: Allmove,6: View houses as icons,7: need no mana, 8: permanent magic reflect, 9:needs no reagents, 10: dispelable
 	-# "shop": character is a shopkeeper (0 no - 1 yes)
 	-# "spattack": type of spell attack
 	-# "spadelay": delay between 2 spell attacks
@@ -35,7 +35,7 @@ more letters.
 */
 
 /*!
-\author Fax
+\author Fax, modified by Horian
 \fn cmd_cset(const chr)
 \param chr: the character who used the command
 \since 0.82
@@ -45,8 +45,20 @@ This function is called by sources on 'cset command detection.\n
 You can change it in commands.txt.
 
 */
+public priv_array[10] = {
+2,
+8,
+10,
+40,
+1,
+4,
+10,
+40,
+80,
+20
+};
 
-new cset_subprop = '_';
+new cset_subprop;
 
 public cmd_cset(const chr)
 {
@@ -119,6 +131,7 @@ static readPropAndVal(chr,&prop,&val)
 	//switch on first property letter, if there is ambiguity add 
 	//another switch on the second letter __cmdParams[0][1]
 	
+	
 	switch(__cmdParams[0][0])
 	{
 		case 'a':  prop = CP_NPCAI;
@@ -155,14 +168,6 @@ static readPropAndVal(chr,&prop,&val)
 					return INVALID;
 				}
 			}
-		case 'f':
-		{
-			prop = CP_DEXTERITY;
-			val = chr_getProperty(chr,prop,CP2_REAL);
-			cset_subprop = CP2_EFF;
-			chr_setProperty(chr, CP_STRENGTH, CP2_EFF, chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
-			chr_setProperty(chr, CP_INTELLIGENCE, CP2_EFF, chr_getProperty(chr,CP_INTELLIGENCE, CP2_REAL));
-		}
 		case 'g': prop = CP_GMMOVEEFF;
 		case 'i':
 		{
@@ -171,6 +176,39 @@ static readPropAndVal(chr,&prop,&val)
 		}
 		case 'l':prop = CP_FIXEDLIGHT;
 		case 'o': prop = CP_OWNSERIAL;
+		case 'p':
+		{
+			if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
+			return INVALID;
+			
+			val = str2Int(__cmdParams[2]);
+			
+			switch(val)
+			{
+				case 1..4:
+				{
+					if (__cmdParams[0][6]== 'f') //off
+					{
+						chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~priv_array[val-1]);
+					}
+					else chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | priv_array[val-1]);
+				}
+				case 5..10:
+				{
+					if (__cmdParams[0][6]== 'f') //off
+					{
+						chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) & ~priv_array[val-1]);
+					}
+					else chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | priv_array[val-1]);
+				}
+				default:
+				{
+					chr_message(chr,_,msg_commandsDef[106]);
+					return INVALID;
+				}
+			}
+			return OK;
+		}
 		case 's':
 			switch(__cmdParams[0][1])
 			{ 
@@ -197,7 +235,7 @@ static readPropAndVal(chr,&prop,&val)
 				case 't':
 				{
 					prop = CP_STRENGTH;
-					cset_subprop = CP2_STRREAL;
+					cset_subprop = CP2_REAL;
 				}
 				default:
 				{
@@ -205,7 +243,6 @@ static readPropAndVal(chr,&prop,&val)
 					return INVALID;
 				}
 			}
-
 		case 't': 
 			switch(__cmdParams[0][1])
 			{ 
@@ -231,6 +268,7 @@ static readPropAndVal(chr,&prop,&val)
 
 	if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
 		return INVALID;
+	
 	
 	val = str2Int(__cmdParams[1]);
 	return OK;

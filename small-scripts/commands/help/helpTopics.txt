@@ -66,7 +66,7 @@ possible items.
 'add reload reloads teh items from addmenu.xss.
 'add lang changes the addmenu language
 'add menu x y shows the menu at x y
- 
+
 The add menu contains subsections to add specific items.
 The "current adding mode" button switches between
 "continuous adding mode" and "single adding mode".
@@ -106,18 +106,17 @@ TOPIC 'cset
 TEXT
 Sets a character's property
 syntax: 'cset property [value]
- 
-If value is not specified you will be told
+if value is not specified you will be told
 the current property value.
 property can be:
 "ai": npcai
 "dex": dexterity
 "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
-"full": set all stats to full
 "gmfx": gm moving effect
 "int": intelligence
 "light": character fixed light level
 "owner": owner serial
+"privon/privoff": special privs (1: can broadcast, 2: see serial numbers by single click, 3: no skill titles,4: Can snoop other,5: Allmove,6: View houses as icons,7: need no mana, 8: permanent magic reflect, 9:needs no reagents, 10: dispelable
 "shop": character is a shopkeeper (0 no - 1 yes)
 "spattack": type of spell attack
 "spadelay": delay between 2 spell attacks
@@ -216,7 +215,7 @@ syntax: 'go [x y z / x y / n / name / "s" serial]
 
 TOPIC 'gy
 TEXT
-Yells a message to allonline gm's
+Yells a message to all online gm's
 syntax: 'gy message
 
 TOPIC 'hiding
@@ -235,6 +234,11 @@ Shows help on a topic
 syntax: 'help [topic]
 'help without parameters shows a list of
 available topics
+
+TOPIC 'hunger
+TEXT
+Shows hunger and thirst of char
+syntax: 'hunger
 
 TOPIC 'invul
 TEXT
@@ -283,6 +287,10 @@ TEXT
 Kills a character's hair
 syntax: 'killhair
 
+TOPIC 'loaddefaults
+TEXT
+Loads server defaults.
+syntax: 'loaddefaults
 
 TOPIC 'lightlevel
 TEXT
@@ -314,6 +322,20 @@ params will be read as relative movement
 if no signs are specified the params will be interpreted 
 as absolute position
 
+TOPIC 'npcwander
+TEXT
+Defines character's wander mode.
+syntax: 'npcwander
+
+"amx": AMX defined wandering (?)
+"rectangle": wander inside rectangle
+"circle": wander inside circle
+"nomove": stay still - NOT the same like frozen!
+"follow": follow target
+"flee": run away from target
+"free": walk around freely
+
+
 TOPIC 'onlinegm
 TEXT
 Shows a list of online GMs and counselors
@@ -341,25 +363,60 @@ syntax: 'pdump
 
 TOPIC 'playerlist
 TEXT
-Showsconnected players list
+Shows list of connected players
 syntax: 'playerlist
 
 TOPIC 'polymorph
 TEXT
+morphes the char into some other monster
 syntax: 'polymorph
+
+TOPIC 'popup
+TEXT
+Used for GM/CNS communication
+syntax: 'popup
+This command submits a popup to the GM popup list and sends a message to online GMs and counselors
+to say that a popup has been submitted
 
 TOPIC 'possess
 TEXT
 Possesses an npc
-sysntax: 'possess
+syntax: 'possess
 to switch back possession use 'possess again 
 and target yourself
+
+TOPIC 'racelang
+TEXT
+Says something a language only chars of same race can read
+syntax: 'racelang
+
+TOPIC 'random
+TEXT
+performs a command at a given percentage of player randomly
+syntax: 'radom percent command
+This command performs a given command randomly on online characters.<br>
+The applied command can only be a command with 0 or 1 parameters.<br>
+If the command takes a parameter you can specify it with param.<br>
+Examples:
+- 'random 10 kill : kills 10% of characters
+- 'random 100 freeze 1 : freezes all charcaters
 
 TOPIC 'regioncp
 TEXT
 Opens the region control panel
 syntax: 'regioncp
 You must be in a region to use this command
+
+TOPIC 'reload
+TEXT
+reloads accounts/XSS/commands/small
+syntax: 'reload what
+what: "commands" or "XSS" or "accounts" or "Small"
+
+TOPIC 'rename
+TEXT
+Rename a char or item
+syntax: 'rename name
 
 TOPIC 'resend
 TEXT
@@ -373,8 +430,7 @@ Respawns regions
 syntax: 'respawn region amount
 region: the region number or "this" or "all"
 amount: the amount to be spawned or "max" or "rand"
- 
-Default is: 'respawn = 'respawn all rand
+The default is: 'respawn = 'respawn all rand
 
 TOPIC 'resurrect
 TEXT
@@ -389,20 +445,30 @@ timeout is the time it will take to save the world,
 at the end of the save you will be sent a message
 saying how long the save took to be performed.
 
+TOPIC 'sell
+TEXT
+the targetted character will show you his sell gump
+syntax: 'sell
+
 TOPIC 'setmorexyz
 TEXT
-Sets morex morey morez
+Sets morex morey morez or combinations of them
 syntax: 'setmorexyz x y z
 
 TOPIC 'setmoreb12
 TEXT
-Sets moreb12 (for spawner minimal to spawn amount)
+Sets moreb12 (for spawner: minimal amount to spawn)
 syntax: 'setmoreb12 value
 
 TOPIC 'setmoreb34
 TEXT
-Sets moreb34 (for spawner maximum to spawn amount)
+Sets moreb34 (for spawner: maximum amount to spawn )
 syntax: 'setmoreb34 value
+
+TOPIC 'setpriv
+TEXT
+Sets priv value = command clearance
+syntax: 'setpriv value
 
 TOPIC 'setskills
 TEXT
@@ -415,11 +481,27 @@ If 'skill' is greater than the number
 of available skills then all skills will
 set to 'value'.
 
+TOPIC 'setstats
+TEXT
+Shows char stats menu.
+syntax: 'setstas
+
+TOPIC 'settype
+TEXT
+Sets item type.
+syntax: 'settype
+syntax: 'settype type ["t"]
+
 TOPIC 'showbank
 TEXT
 Open character's bank box
 syntax: 'showbank ["gold"]
 'showbank gold : opens gold-only bank
+
+TOPIC 'shutdown
+TEXT
+Shuts server down with "time left" message
+syntax: 'shutdown seconds
 
 TOPIC 'skills
 TEXT
@@ -433,12 +515,11 @@ syntax: 'solvepage [pagenumber]
 
 TOPIC 'spawnkill
 TEXT
-Clears spwns in region(s)
+Clears spawns in region(s)
 syntax: 'spawnkill region type
-region: teh region number or "this" or "all"
+region: the region number or "this" or "all"
 type: "stat" "dyn" "all"
- 
-Default is: 'spawnkill = 'spawnkill all all
+The default is: 'spawnkill = 'spawnkill all all
 
 TOPIC 'stamina
 TEXT
@@ -468,6 +549,11 @@ Tiles an item along x y z axis
 syntax: 'tile [nX nY] [nZ zScale]
 nX,nY,nZ: number of copies
 zScal: Z spacing
+
+TOPIC 'timespeed
+TEXT
+Set how many seconds make one UO minute
+syntax: 'timespeed seconds
 
 TOPIC 'tweak
 TEXT

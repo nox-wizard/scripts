@@ -6,75 +6,97 @@
 */
 
 /*!
-\author Fax
+\author fax + Horian
 \fn cmd_setmorexyz(const chr)
-\brief setmorexyzs an item
+\brief sets different setmorexyz properties of an item
 
-<B>syntax:<B> 'setmorexyz morex morey morez 
+<B>syntax:<B> 'setmorexyz x y z ["t"] 
+<B>command params:</B>
+<UL>
+	<LI> x: more x
+	<LI> y: more y
+	<LI> z: more z
+	<LI> "t": bypass the area effect and get a target
+</UL>
 
-If area effect is active, all items in area will have morex morey morez set.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted itemwill be affected
+Passing '_' means "keepold value" so:<br>
+setmorexyz _ 23 _<br>
+will set only morey and keep old morex and morez values.
 */
+
 public cmd_setmorexyz(const chr)
 {
 	readCommandParams(chr);
-
-	if(!strlen(__cmdParams[0]) || !strlen(__cmdParams[1]) || !strlen(__cmdParams[2]))
-	{
-		chr_message(chr,_,msg_commandsDef[231]);
-		return;
-	}
-
-	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]) || !isStrInt(__cmdParams[2]))
-	{
-		chr_message(chr,_,msg_commandsDef[232]);
-		return;
-	}
-
+	
+	new more;
 	new morex = str2Int(__cmdParams[0]);
 	new morey = str2Int(__cmdParams[1]);
 	new morez = str2Int(__cmdParams[2]);
-
-
-
+	
+	//these flags are true if we want tokeep the old value
+	new keep_morex = __cmdParams[0][0] == '_';
+	new keep_morey = __cmdParams[1][0] == '_';
+	new keep_morez = __cmdParams[2][0] == '_';
+	
 	new area = chr_getCmdArea(chr);
 	new i = 0, item;
 	//apply command to all items in area
-	if(area_isValid(area) && __cmdParams[*][0] != 't')
+	if(area_isValid(area) && __cmdParams[3][0] != 't')
 	{
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
 		{
-				item = set_getItem(area_items(area));
-				itm_setProperty(item,IP_MORE,IP2_X,morex);
-				itm_setProperty(item,IP_MORE,IP2_Y,morey);
-				itm_setProperty(item,IP_MORE,IP2_Z,morez);
+			item = set_getItem(area_items(area));
+			more = itm_getProperty(item,IP_MORE);
+			
+			//update the value only if it is different from '_'
+			morex = keep_morex ? (more >> 16) & 0xFF : morex;
+			morey = keep_morey ? (more >> 8) & 0xFF : morey;
+			morez = keep_morez ? more & 0xFF : morez;
+			
+			more = (morex << 16) + (morey << 8) + morez;
+			itm_setProperty(item,IP_MORE,_,more);
 		}
-
-		chr_message(chr,_,msg_commandsDef[233],i);		
+		chr_message(chr,_,msg_commandsDef[160],__cmdParams[0],i);		
 		return;
 	}
-
-	chr_message(chr,_,msg_commandsDef[234]);
-	target_create(chr,(morex << 16) + (morey << 8) + morez,_,_,"cmd_setmorexyz_targ");
+		
+	//store the parameters to set
+	chr_setTempIntVec(chr,CLV_CMDTEMP,morex,morey,morez,keep_morex,keep_morey,keep_morez);
+	
+	chr_message(chr,_,msg_commandsDef[161],__cmdParams[0]);
+	target_create(chr,_,_,_,"cmd_setmorexyz_targ");
 }
 
 /*!
 \author Fax
-\fn cmd_setmorexyz_targ(target, chr, object, x, y, z, unused, area)
+\fn cmd_setdir_targ(target, chr, item, x, y, z, unused, area)
 \params all standard target callback params
+\brief handles single character targetting and setdiring
 */
-public cmd_setmorexyz_targ(target, chr, object, x, y, z, unused, morexyz)
+public cmd_setmorexyz_targ(target, chr, item, x, y, z, unused, unused1)
 {
-	if(isItem(object))
+	new m[6]; 	//m[0] to m[2] -> morex,morey,morez
+			//m[3] to m[5] -> keep_ flags
+	new more;
+	chr_getTempIntVec(chr,CLV_CMDTEMP,m);
+	
+	if(isItem(item))
 	{
-		itm_setProperty(object,IP_MORE,IP2_X, morexyz >> 16);
-		itm_setProperty(object,IP_MORE,IP2_Y,(morexyz >> 8) & 0xFF);
-		itm_setProperty(object,IP_MORE,IP2_Z, morexyz & 0xFF);
-		chr_message(chr,_,msg_commandsDef[235],itm_getProperty(object,IP_MORE,IP2_X),itm_getProperty(object,IP_MORE,IP2_Y),itm_getProperty(object,IP_MORE,IP2_Z));
+		more = itm_getProperty(item,IP_MORE);
+			
+		//update the value only if it is different from '_'
+		m[0] = m[3] ? (more >> 16) & 0xFF : m[0];
+		m[1] = m[4] ? (more >> 8) & 0xFF : m[1];
+		m[2] = m[5] ? more & 0xFF : m[2];
+		
+		more = (m[0] << 16) + (m[1] << 8) + m[2];
+		itm_setProperty(item,IP_MORE,_,more);
+		
+		itm_refresh(item);
+		chr_message(chr,_,msg_commandsDef[279]);
 	}
-	else chr_message(chr,_,msg_commandsDef[103]);
+	else chr_message(chr,_,msg_commandsDef[2]);
 }
 
 /*! }@ */

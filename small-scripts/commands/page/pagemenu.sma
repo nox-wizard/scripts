@@ -34,7 +34,7 @@ public drawPageListMenu(const solver, const chr)
 		s = set_create();
 		set_add(s,chr);
 	}
-	else 	if(!getGmPageList(s)) //orwe want all pages
+	else 	if(!getGmPageList(s)) //or we want all pages
 		{
 			log_error("There was an error reading the GM page list");
 			chr_message(solver,_,"There was an error reading the GM page list");
