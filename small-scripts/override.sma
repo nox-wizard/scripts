@@ -60,6 +60,5 @@
 #include "small-scripts/guild/guildstone.sma"
 
 
-#include "small-scripts/myshard.sma"
 
 
