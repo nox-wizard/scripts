@@ -551,7 +551,7 @@ stock str2Int( const string[] )
 		new factor = 1;
 		while( (index >= signed) && isDigit( (packed ? string{index} : string[index] ) ) )
 		{
-			value += factor * ( packed ? string{index} - '0' : string{index} - '0' );
+			value += factor * ( packed ? string{index} - '0' : string[index] - '0' );
 			factor*= 10;
 			--index;
 		}
