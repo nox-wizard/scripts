@@ -174,6 +174,7 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 		log_message("^tadding item %d at: %d %d %d",scriptID,x,y,z);
 	#endif
 	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	printf("amount: %d", amount);
 	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isChar(object))
@@ -181,7 +182,10 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 		{
 			new item = itm_createInBp(scriptID,object);
 			if(itm_getProperty(item,IP_PILEABLE))
+			{
 				itm_setProperty(item,IP_AMOUNT,_,amount);
+				itm_refresh(item);
+			}
 			else
 				for(new i = 0; i < amount - 1; i++)
 					itm_createInBp(scriptID,object);
@@ -205,7 +209,10 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 	chr_message(chr,_,"Item %d created",itm);
 	
 	if(itm_getProperty(itm,IP_PILEABLE))
+	{
 		itm_setProperty(itm,IP_AMOUNT,_,amount);
+		itm_refresh(itm);
+	}
 	else
 		for(new i = 0; i < amount - 1; i++)
 		{
