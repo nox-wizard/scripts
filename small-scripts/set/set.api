@@ -257,10 +257,10 @@ native set_addAllOnlinePl( const set );
 \param 4 distance
 \return 0
 \note are added ONLY client chaarcter online
-\fn set_addOnlinePlNearChar( const set, const chr, const excludeThis, const distance )
+\fn set_addOnPlNearChar( const set, const chr, const excludeThis, const distance )
 \note if object is an item and is in a subcontainer, is returned the true location, the ocation of in world container
 */
-native set_addOnlinePlNearObj( const set, const chr, const excludeThis=true, const distance=VISRANGE );
+native set_addOnPlNearObj( const set, const chr, const excludeThis=true, const distance=VISRANGE );
 
 /*!
 \brief Add to given set all online players near location
@@ -272,6 +272,6 @@ native set_addOnlinePlNearObj( const set, const chr, const excludeThis=true, con
 \param 4 distance
 \return 0
 \note are added ONLY client chaarcter online
-\fn set_addOnlinePlNearXY( const set, const x, const y, const distance=VISRANGE )
+\fn set_addOnPlNearXY( const set, const x, const y, const distance=VISRANGE )
 */
-native set_addOnlinePlNearXY( const set, const x, const y, const distance );
+native set_addOnPlNearXY( const set, const x, const y, const distance );
