@@ -378,6 +378,7 @@ public addgui_standard_cback(menu,chr,btncode)
 
 	else
 	{	//store amount for cmd_add_* functions
+		chr_delLocalVar(chr,CLV_CMDTEMP);
 		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
 		
 		//distinguish between items and NPC
