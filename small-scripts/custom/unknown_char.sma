@@ -88,7 +88,7 @@ public stop_unknown_char(const viewerchr)
         	chr_delEventHandler(viewerchr, 28);
 	}
 	
-	chr_getEventHandler(viewerchr, 41, tempStr);
+	chr_getEventHandler(viewerchr, 28, tempStr);
         trim(tempStr);
         if( !strcmp(tempStr, "unknown_dblclick")) //we have an event here that is SAME to char unknown system function so DON'T KEEP this and delete it for further use because "unknown char" is now shut off ! Otherwise we need to keep this!
         {
