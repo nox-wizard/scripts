@@ -136,8 +136,6 @@ Shows an ingame menu that allows to choose from all available bodys to polymorph
 */
 public cmd_polymorph(const chrsource)
 {
-	if( (chr_isGM(chrsource)!=0) || (chr_getProperty(chrsource, CP_ACCOUNT)!= 0)) //no admin or gm -> abort
-		return;
 	chr_message( chrsource, _, "Whom do you want to polymorph/unmorph?");
 	target_create( chrsource, _, _, _, "polymMenuCallback" );
 }
