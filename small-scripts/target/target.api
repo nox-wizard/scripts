@@ -11,17 +11,6 @@
 #define _nxw_target_api_
 
 /*!
-\author Xanathar
-\fn getTarget(const socket, const callback, const format[], ...)
-\param socket: the socket of the client in which the target will be brought up
-\param callback: the function index that will be invoked by the target
-\param format[]: the message that will be sent with the target
-\brief Brings up a target, that will invoke the specific callback when the choice is made
-\note old style, deprecated
-*/
-native getTarget(const socket, const callback, const format[], ...);
-
-/*!
 \brief Create a new target
 \author Endymion
 \since 0.82

@@ -25,21 +25,6 @@ public isItem( const serial ) {
 }
 
 /*!
-\author Luxor
-\fn getItemFromSerial(const serial)
-\param serial: the serial
-\brief Gets the item of the given serial
-*/
-native getItemFromSerial(const serial);
-
-/*!
-\author Xanathar
-\fn getItemFromSerial(const chr)
-\param chr: the character
-\brief Gets the socket of the given char
-*/
-native getSocketFromChar(const chr);
-/*!
 \author Xanathar
 \fn itm_getProperty(const item, const property, const subprop=0, ...)
 \brief

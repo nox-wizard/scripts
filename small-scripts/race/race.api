@@ -3,7 +3,7 @@ native race_getProperty( const race, const property, const subProp=0, ... );
 
 native race_getGlobalProp( const property, const subProp=0, ... );
 
-public __race_enlist( const socket )
+public __race_enlist( const chr )
 {
 	if( socket<0 )
 		return;

@@ -31,16 +31,6 @@ stock isChar( const serial ) {
 	return ( ( serial>=FIRST_CHAR_SERIAL ) && ( serial<FIRST_ITEM_SERIAL ) ); 
 }
 
-/*!
-\author Xanathar
-\fn getCharFromSerial(const serial)
-\param serial the serial
-\brief Gets the char of the given serial
-
-this function is useless since internal serial management is changed
-\note useless
-*/
-native getCharFromSerial(const serial);
 
 //====================== PROPERTIES INTERFACE  ============================
 /*!
@@ -389,6 +379,21 @@ stock chr_makePlayer(const chr)
 	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~(PRIV_ISGM + PRIV_ISCOUNSELOR));
 	return OK;
 }
+
+
+/*!
+\brief Prints a message of given color to the given character
+\author Endymion
+\fn chr_message( const chr, const color=0x0387, const format[], ... )
+\param chr the player
+\param color the color
+\param format the message
+*/
+native chr_message( const chr, const color=0x0387, const format[], ... );
+
+
+
+
 /** @} */
 //============================  PRIV2  ================================
 /** \defgroup script_API_character_priv2 privileges2
@@ -803,14 +808,12 @@ stock chr_isNpc (const chr)
 
 /*!
 \author Fax
-\fn chr_isPc(const chr)
+\fn chr_isPlayer(const chr)
 \param chr the character
 \brief checks if a character is a playing character
-
-A PC (Non Playing Character) is a character controlled by a player
-\return true if character is NPC
+\return true if character is a player
 */
-stock chr_isPc (const chr)
+stock chr_isPlayer(const chr)
 {
 	return !chr_getProperty(chr, CP_NPC);
 }
@@ -838,8 +841,6 @@ stock chr_isUndead (const chr)
 }
 /** @} */
 //=====================  JAIL  =========================
-
-//chr_getJailTimeLeft(chr)  needed?
 
 /*!
 \author Endymion

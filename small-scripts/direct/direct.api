@@ -15,21 +15,6 @@
  *  @{
  */
  
-/*!
-\brief
-\author Xanathar
-\fn direct_castSpell(const socket)
-\todo document
-*/
-native direct_castSpell(const socket);
-
-/*!
-\brief
-\author Xanathar
-\fn direct_setSpellType(const socket, const type)
-\todo document
-*/
-native direct_setSpellType(const socket, const type);
 
 /*!
 \brief calls a function without parameters

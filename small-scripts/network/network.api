@@ -12,52 +12,17 @@
 
 /*!
 \author Xanathar
-\fn getSocketCount()
-\brief Gets the number of sockets connected
-*/
-native getSocketCount();
-
-/*!
-\brief Tell if a socket is valid
-\author Luxor
-*/
-public isValidSocket( const socket )
-{
-	return ( socket >= 0 && socket < getSocketCount() );
-}
-
-/*!
-\author Xanathar
-\since 0.10
-\fn getCurrentSocket()
-\return the socket, if error is INVALID
-\brief get current socket
-\note deprecated
-*/
-native getCurrentSocket();
-
-/*!
-\author Xanathar
-\fn getCharFromSocket(const socket)
-\param socket: the socket
-\return serial of char
-\brief Gets the char currently used by the given socket
-*/
-native getCharFromSocket(const socket);
-
-/*!
-\author Xanathar
-\fn send_send(const socket, const lenght, const data[])
+\fn send_send(const chr, const lenght, const data[])
 \brief
 */
-native send_send(const socket, const lenght, const data[]);
+native send_send(const chr, const lenght, const data[]);
 
 /*!
 \author Xanathar
-\fn send_confirmAttack(const socket, const chr)
+\fn send_confirmAttack(const chr, const chr)
 \brief
 */
-native send_confirmAttack(const socket, const chr);
+native send_confirmAttack(const chr, const chr);
 
 /*!
 \author Xanathar
@@ -94,21 +59,4 @@ native send_staticfx(const chr, const effect);
 */
 native send_questArrow( const chr, const active, const x, const y );
 
-/*!
-\brief test if status request from client is for character skills
-\author Sparhawk
-\since 0.82
-\fn rcve_skillsRequest( const socket )
-\return true or false
-*/
-native rcve_skillsRequest( const socket );
-
-/*!
-\brief test if status request from client is for character stats
-\author Sparhawk
-\since 0.82
-\fn rcve_statsRequest (const socket)
-\return true or false
-*/
-native rcve_statsRequest (const socket);
 
