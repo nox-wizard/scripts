@@ -16,24 +16,27 @@
 
 //      name_of_the_command,priv_level,callback
 
-area,0,cmd_area
-add,0,cmd_add
-dupe,0,cmd_dupe
-damage,0,cmd_damage
-freeze,0,cmd_freeze
-func,0,cmd_func
-hiding,0,cmd_hiding
-invul,0,cmd_invul
-kill,0,cmd_kill
-make,0,cmd_make
-move,0,cmd_move
-options,0,cmd_options
-playerlist,0,cmd_playerlist
-regioncp,0,cmd_regioncp
-resurrect,0,cmd_resurrect
+add,150,cmd_add
+area,100,cmd_area
+damage,150,cmd_damage
+dupe,150,cmd_dupe
+freeze,100,cmd_freeze
+func,150,cmd_func
+go,100,cmd_go
+hiding,100,cmd_hiding
+invul,100,cmd_invul
+kill,100,cmd_kill
+lightlevel,100,cmd_lightlevel
+make,255,cmd_make
+move,100,cmd_move
+options,100,cmd_options
+playerlist,50,cmd_playerlist
+polymorph,100,cmd_polymorph
+regioncp,150,cmd_regioncp
+resurrect,100,cmd_resurrect
+setpriv,255,cmd_setpriv
 skills,0,cmd_skills
 stats,0,cmd_stats
-tweak,0,cmd_tweak
-where,0,cmd_where
-wipe,0,cmd_wipe
-polymorph,0,cmd_polymorph
+tweak,100,cmd_tweak
+where,100,cmd_where
+wipe,100,cmd_wipe

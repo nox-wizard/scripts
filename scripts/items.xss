@@ -19,7 +19,6 @@
 #include scripts/items/guild.xss
 #include scripts/items/floortiles.xss
 #include scripts/items/clothes.xss
-#include scripts/items/buildings.xss
 #include scripts/items/magic.xss
 #include scripts/items/professions.xss
 #include scripts/items/boats.xss

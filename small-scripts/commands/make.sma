@@ -68,22 +68,26 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 		case 0: 
 		{
 			chr_makeGM(object);
-			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_GM);
-			chr_message(chr,_,"You are a GM now!");
+			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_GM);
 		}
 		case 1:
 		{ 
 			chr_makeCounselor(object);
-			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_CNS);
-			chr_message(chr,_,"You are a counselor now!");
+			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_CNS);
 		}
 		case 2: 
 		{
 			chr_makePlayer(object);
-			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_PLAYER);
-			chr_message(chr,_,"You are a player now!");
+			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_PLAYER);
 		}
 	}
+	
+	if(chr_getLocalVarErr() != VAR_ERROR_NONE)
+	{
+		chr_message(chr,_,"An error occurred!");
+		log_error("Unable to write local int var CLV_PRIVLEVEL - error: %d",chr_getLocalVarErr());
+	}
+	else chr_message(chr,_,"Privlevel of character set to %d",chr_getLocalIntVar(object,CLV_PRIVLEVEL));
 }
 
 /*! }@ */

@@ -317,11 +317,11 @@ const PRIV2_DISPELLABLE = 0x20;	//!<
 const PRIV2_PERMAMAGICREFLECT = 0x40;//!<
 const PRIV2_NONEEDREAGS = 0x80;	//!<
 
-#define CLV_PRIVLEVEL 9999	//!< character privlevel
-#define CLV_CMDTEMP 9996	//!< commands temp variable
-#define CLV_CMDADDTEMP 9995	//!< add command temp variable
+#define CLV_PRIVLEVEL 9999		//!< character privlevel
 #define CLV_ADDITIONALSKILLS 9998	//<! local variable to store additional skill values
 #define CLV_ADDITIONALSKILLSBASE 9997	//<! local variable to store addition base skill values
+#define CLV_CMDTEMP 9996		//!< commands temp variable
+#define CLV_CMDADDTEMP 9995		//!< 'add command temp variable
 
 
 /** @} */

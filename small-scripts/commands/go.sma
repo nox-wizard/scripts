@@ -53,7 +53,13 @@ public cmd_go(const chr)
 			set_rewind(s);
 			for(new c;  !set_end(s) && c < n; c++)
 				chr2 = set_getChar(s);
-							
+				
+			if(set_end(s) && c < n)
+			{
+				chr_message(chr,_,"There are less than %d players online",n);
+				return;
+			}			
+				
 			chr_getPosition(chr2,x,y,z);
 		}
 	else if(!strcmp(__cmdParams[0],"s"))
@@ -90,6 +96,12 @@ public cmd_go(const chr)
 				chr2 = set_getChar(s);
 				chr_getProperty(chr2,CP_STR_NAME,0,name);
 				if(!strcmp(__cmdParams[0],name)) break;
+			}
+			
+			if(set_end(s) && strcmp(__cmdParams[0],name))
+			{
+				chr_message(chr,_,"%s is not online",__cmdParams[0]);
+				return;
 			}
 			
 			chr_getPosition(chr2,x,y,z);

@@ -237,7 +237,7 @@ public startCommandSystem(const chr)
 		
 		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
 		{
-			log_error("Unable to create VAR_PRIVLEVEL");
+			log_error("Unable to create local int var CLV_PRIVLEVEL - error: %d",chr_getLocalVarErr());
 			return;
 		}
 		
