@@ -42,6 +42,28 @@ native set_open();
 native set_close(const set);
 
 /*!
+\author Endymion
+\fn set_rewind(const set)
+\brief Rewind the set
+*/
+native set_rewind(const set);
+
+/*!
+\author Endymion
+\fn set_end(const set)
+\brief check if given set is at end
+\return true if at end
+*/
+native set_end(const set);
+
+/*!
+\author Endymion
+\fn set_next(const set)
+\brief Move set to next item
+*/
+native set_next(const set);
+
+/*!
 \author Xanathar
 \fn set_pop(const set)
 \brief
