@@ -9,7 +9,6 @@
 
 
 #include "small-scripts/skills/constant.sma"
-#include "small-scripts/small_speech.sma"
 
 #include "small-scripts/nxw_lib"
 #include "small-scripts/API/API.sma"

@@ -62,7 +62,7 @@ public housestart(const itm, const chr)
 	//printf("start house gump, house ser is %d, item ser is: %d^n", house, itm);
 	if( (chr == house_getProperty(house, HP_OWNER)) || (chr_getProperty(chr, CP_PRIVLEVEL) >= 150) ) //seer, gm and admin can use house menu too
 		menu_house(chr, house, 1, itm);
-	else chr_message(chr, _, msg_housemenuDef[0]);
+	else chr_message(chr, _, "Only house owner are allowed to use the house menu");
 }
 
 public menu_house(const chrsource, const house, const pagenumber, sign)
@@ -358,11 +358,11 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 					listsize = set_size( setlist );
 					if( listsize<HOUSE_COOWNER)
 					{
-						chr_message( chrsource, _, msg_housemenuDef[1]);
+						chr_message( chrsource, _, "Whom you want to become co-owner?");
 						target_create( chrsource, house,_, _,  "Addcoowner" );
 						return;
 					}
-					else chr_message(chrsource,chrsource, msg_housemenuDef[2], HOUSE_COOWNER);
+					else chr_message(chrsource,chrsource, "You already have %d coowner.", HOUSE_COOWNER);
 				}
 				else if(buttonCode==14)
 				{
@@ -370,11 +370,11 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 					listsize = set_size( setlist );
 					if( listsize<HOUSE_FRIENDS)
 					{
-						chr_message( chrsource, _, msg_housemenuDef[3]);
+						chr_message( chrsource, _, "Whom you want to become friend?");
 						target_create( chrsource,house, _, _, "Addfriend" );
 						return;
 					}
-					else chr_message(chrsource,chrsource, msg_housemenuDef[4], HOUSE_COOWNER);
+					else chr_message(chrsource,chrsource, "You already have %d friends.", HOUSE_COOWNER);
 				}
 				else if(buttonCode==16)
 				{
@@ -382,11 +382,11 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 					listsize = set_size( setlist );
 					if( listsize<HOUSE_BANNED)
 					{
-						chr_message( chrsource, _, msg_housemenuDef[5]);
+						chr_message( chrsource, _, "Whom you want to ban?");
 						target_create( chrsource,house, _, _, "AddBanned" );
 						return;
 					}
-					else chr_message(chrsource,chrsource, msg_housemenuDef[6], HOUSE_COOWNER);
+					else chr_message(chrsource,chrsource, "You already have %d banned people at your list.", HOUSE_COOWNER);
 				}
 			}
 			else if( (buttonCode==13)||(buttonCode==15)||(buttonCode==17))
@@ -423,7 +423,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 		}
 		case 18: //bounce out
 		{
-			chr_message( chrsource, _, msg_housemenuDef[7]);
+			chr_message( chrsource, _, "Whom you want to bounce out of the house?");
 			target_create( chrsource,house, _, _, "Bounceout" );
 			return;
 		}
@@ -452,7 +452,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 		}
 		case 23: //transfer
 		{
-			chr_message( chrsource, _, msg_housemenuDef[8]);
+			chr_message( chrsource, _, "Whom do you want to make new Owner?");
 			target_create( chrsource,house, _, _, "TransferHouse" );
 			return;
 		}
@@ -467,14 +467,14 @@ public Addcoowner( const t, const chrsource, const target, const x, const y, con
 		house_addCoOwner(house, target);
 		printf("add char as coowner^n");
 	}
-	else chr_message(chrsource, chrsource, msg_housemenuDef[9]);
+	else chr_message(chrsource, chrsource, "Only player can be co-owner!");
 }
 
 public Addfriend( const t, const chrsource, const target, const x, const y, const z, const model, const house )
 {
 	if ( isChar(target) && !chr_isNpc(target)) //is player char
 		house_addFriend(house, target);
-	else chr_message(chrsource, chrsource, msg_housemenuDef[10]);
+	else chr_message(chrsource, chrsource, "Only player can be friends!");
 }
 
 public AddBanned( const t, const chrsource, const target, const x, const y, const z, const model, const house )
@@ -483,7 +483,7 @@ public AddBanned( const t, const chrsource, const target, const x, const y, cons
 	printf("enter addbanned^n");
 	if ( isChar(target)) //is player char
 		house_addBan(house, target);
-	else chr_message(chrsource, chrsource, );
+	else chr_message(chrsource, chrsource, "Only player can be banned!");
 }
 
 public Bounceout(const t, const chrsource, const target, const x, const y, const z, const model, const house)
@@ -492,28 +492,28 @@ public Bounceout(const t, const chrsource, const target, const x, const y, const
 	new hy1 = house_getProperty(house, HP_DIMENSION, 2);
 	printf("hx: %d, hy: %d", hx1, hy1);
 	chr_moveTo(target, hx1-1, hy1-1, chr_getProperty(target, CP_POSITION, CP2_X));
-	chr_message(target, _, );
+	chr_message(target, _, "You have been bounced out of the house.");
 	chr_update(target);
 }
 
 public TransferHouse(const t, const chrsource, const target, const x, const y, const z, const model, const house)
 {
 	house_setProperty(house, HP_OWNER, _, target);
-	chr_message(chrsource, _, msg_housemenuDef[13]);
-	chr_message(target, _, );
+	chr_message(chrsource, _, "You are no longer Owner of this house.");
+	chr_message(target, _, "You own now this house");
 }
 
 public BounceBan(const house, const enterchr, const chrdir, const sequence)
 {
-	//printf("enter multi, multi is %d, char is %d", house, enterchr);
+	printf("enter multi, multi is %d, char is %d", house, enterchr);
 	if(house_isBanned(house, enterchr) == 1)
 	{
 		Bounceout(0, 0, enterchr, 0, 0, 0, 0, house);
-		chr_message(enterchr, _, msg_housemenuDef[15]);
+		chr_message(enterchr, _, "Because you are at the Ban-list.");
 	}
 	else if( (itm_getLocalIntVar( house, AUTOBOUNCEVAR) == 1) && !(house_isFriend(house, enterchr)) && !(house_isCoOwner(house, enterchr)))
 	{
 		Bounceout(0, 0, enterchr, 0, 0, 0, 0, house);
-		chr_message(enterchr, _, msg_housemenuDef[16]);
+		chr_message(enterchr, _, "Because you are at the Ban-list.");
 	}
 }
