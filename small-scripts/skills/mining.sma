@@ -35,19 +35,20 @@ miningmin,
 orechance,
 orecolor,
 oreuseskill,
+oremaxamount,
 orescriptname: 9
 }
 public oreProperty[NUM_ORES][oreprop] = {
-{700, 000, 100, 0x0838, 000, "iron"},
-{700, 650, 60, 0x096c, 650, "shadow"},
-{700, 700, 55, 0x025e, 700, "merkite"},
-{700, 750, 50, 0x046E, 750, "copper"},
-{700, 790, 45, 0x0835, 790, "silver"},
-{700, 800, 40, 0x083b, 800, "bronze"},
-{700, 850, 35, 0x07d9, 850, "golden"},
-{700, 900, 30, 0x089d, 900, "agapite"},
-{700, 950, 25, 0x08a4, 950, "verite"},
-{700, 990, 20, 0x0191, 990, "valorite"}
+{700, 000, 100, 0x0838, 000, 15, "iron"},
+{700, 650, 60, 0x096c, 650, 10, "shadow"},
+{700, 700, 55, 0x025e, 700, 10, "merkite"},
+{700, 750, 50, 0x046E, 750, 8, "copper"},
+{700, 790, 45, 0x0835, 790, 5, "silver"},
+{700, 800, 40, 0x083b, 800, 5, "bronze"},
+{700, 850, 35, 0x07d9, 850, 3, "golden"},
+{700, 900, 30, 0x089d, 900, 2, "agapite"},
+{700, 950, 25, 0x08a4, 950, 2, "verite"},
+{700, 990, 20, 0x0191, 990, 1, "valorite"}
 };
 
 /*----------------------------------------------------------------------------------------
@@ -58,14 +59,11 @@ End Customizable Metals
 Begin Customizable Regions
 ----------------------------------------------------------------------------------------*/
                                                                                         
-static ENABLE_REGIONS = 0;//This must be 1 if you want region mining to be activated
+static ENABLE_REGIONS = 1;//This must be 1 if you want region mining to be activated
 const NUM_REGIONS = 2;
-
-static oreRegions[NUM_REGIONS][4] = {
-//Syntax: {x1,y1,x2,y2}
-{0,0,100,100}, //Region 1
-{200,200,400,400}  //Region 2
-};
+const ORERESPAWN_DELAY=3600; // Delay in seconds until ore can respawn
+static regionMiningMap = 0;
+static regionMiningRespawnMap = 0;
 
 static regionChance[NUM_REGIONS][NUM_ORES] = {
 {100, 100, 50, 50, 100, 20, 20, 20, 20, 20}, //Region 1
@@ -157,41 +155,88 @@ End Customizable blacksmithing system
  PURPOSE  :This function is called by Nox-Wizard engine after land and skill control,
  it chooses the picked up ore and put it in backpack.
  ****************************************************************************************/
-public __nxw_sk_mining(const cc)
+public __nxw_sk_mining(const cc, const x, const y, const mapTileId)
 {
 	new oreFound = iron;	//Ore found if nothing else will be found by the miner.
+	new oreMaxAmount=-1;
 	new oreAmount = 1;
 	new index = 0;
 	new skill = chr_getSkill(cc, SK_MINING);
-	new region = -1;
-	if (ENABLE_REGIONS == 1) {
-		new x = chr_getProperty(cc, CP_POSITION, CP2_X);
-		new y = chr_getProperty(cc, CP_POSITION, CP2_Y);
-		for (index = 0; index < NUM_REGIONS; index++) {
-			if ((x >= oreRegions[index][0] && x <= oreRegions[index][2]) && (y >= oreRegions[index][1] && y <= oreRegions[index][3])) {
-				region = index;
+	if (ENABLE_REGIONS == 1) 
+	{
+		if ( regionMiningMap == 0 )
+		{
+			// make a persistent map so the resources are saved during worldsave
+			regionMiningMap = createResourceMap();
+			regionMiningRespawnMap= createResourceMap();
+		}
+		new oreMemory=getResourceLocationValue(regionMiningMap, x,y,0);
+		new oreSpawnTime=getResourceLocationValue(regionMiningRespawnMap, x,y,0);
+		if ( oreMemory >= 0 )
+		{
+			oreMaxAmount=(oreMemory>>16)&0xFFFF;
+			oreFound=oreMemory&0xFFFF;
+		}
+		if ( oreSpawnTime > 0 && oreSpawnTime < getCurrentTime() )
+		{
+			oreMaxAmount=-1;
+			oreFound=iron;
+		}
+	}
+	if ( oreMaxAmount < 0 )
+	{
+		for (index = 0; index < NUM_ORES; index++) 
+		{
+			if (ENABLE_REGIONS == 1 && regionMiningMap == 0) 
+				break;
+			if (skill > oreProperty[index][miningmin] && random(100) < oreProperty[index][orechance]) 
+			{
+				/*
+				if (ENABLE_REGIONS == 1 && regionMiningMap > 0) 
+				{
+					if (random(100) < regionChance[region][index])
+						oreFound = index;
+				} 
+				else
+				*/
+					oreFound = index;
 			}
 		}
 	}
-
-	for (index = 0; index < NUM_ORES; index++) {
-		if (ENABLE_REGIONS == 1 && region < 0) break;
-		if (skill > oreProperty[index][miningmin] && random(100) < oreProperty[index][orechance]) {
-			if (ENABLE_REGIONS == 1 && region > -1) {
-				if (random(100) < regionChance[region][index])
-					oreFound = index;
-			} else
-				oreFound = index;
-		}
+	if (ENABLE_REGIONS == 1 && oreMaxAmount < 0 )
+	{
+		oreMaxAmount=random(oreProperty[oreFound][oremaxamount])+1;
 	}
-	if (ENABLE_REGIONS == 1 && region < 0) oreFound = iron;
-	
-	
-        oreAmount = random(100);
-	if (oreAmount > 8) {
-		oreAmount = 1;
-	}
-	
+	if ( oreMaxAmount > 0 )
+        	oreAmount = random(oreMaxAmount)+1;
+        else
+        	oreAmount = 0;
+        if ( oreAmount == 0 )
+        {
+		chr_message( cc, _, msg_sk_miningDef[18]);
+        	return;
+        }
+        oreMaxAmount -=oreAmount;
+        if ( ENABLE_REGIONS == 1 )
+        {
+        	// if the use the region map then save the amount and type now
+        	// since the value is a 32 bit unsigned WORD we save the remaining amount in the higher two bytes
+        	// and the ore type in the lower to byte
+        	setResourceLocationValue(
+        		regionMiningMap, 
+        		((oreMaxAmount&0xFFFF) <<16)+oreFound,
+        		x, 
+        		y, 
+        		0 
+        		);
+        	setResourceLocationValue(
+        		regionMiningRespawnMap, 
+        		getTimerValue(ORERESPAWN_DELAY),
+        		x, 
+        		y, 
+        		0 
+        		);
+        }
 	new str[50];	//Adjust the size if you create new ores with long names!
 	sprintf(str, "%s", msg_sk_miningDef[oreFound]);
 	trim(str);   //remove triming spaces

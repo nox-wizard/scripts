@@ -448,7 +448,7 @@ public msg_blacksmithDef[NUM_smithSENTENCE][]={
 "You repair the item."
 };
 
-const NUM_sk_miningSENT = 18;
+const NUM_sk_miningSENT = 19;
 public msg_sk_miningDef[NUM_sk_miningSENT][]={
 "iron    ",
 "shadow  ",
@@ -467,7 +467,8 @@ public msg_sk_miningDef[NUM_sk_miningSENT][]={
 "Your hand slips and you pour some of your ore into the blaze.",
 "%s ingots",
 "You smelt the ore.",
-"Carefully you place the %s in your backpack."
+"Carefully you place the %s in your backpack.",
+"There is no metal here to mine."
 };
 
 const NUM_sk_tailorSENT = 1;
