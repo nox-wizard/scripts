@@ -3122,4 +3122,110 @@ SECTION ITEM $item_pentagram_8
     ///SUBSECTION Pentagram
 }
 
+///////////////////////////
+// All Paintings Section///
+///////////////////////////
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EC8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_1
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EC9
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_2
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_3
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA0
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_4
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA1
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_5
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA2
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_6
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA3
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_7
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_8
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA5
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_9
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA6
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_A
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA7
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+/////////////////////
+// End Of Paintings//
+////////////////////
 

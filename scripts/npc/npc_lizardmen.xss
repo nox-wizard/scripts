@@ -4,18 +4,9 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-
-//****************************************************
-//********************** Lizardmen *******************
-//**********************           *******************
-//****************************************************
-
-// Lizardman with fencing weapon
-
 SECTION NPC $npc_lizardman_fencer
 {
     NAMELIST $names_lizardmen
-    //$$ lizardman fencer
     ID 0023
     SKIN 0000
     DIRECTION N
@@ -46,14 +37,15 @@ SECTION NPC $npc_lizardman_fencer
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-// Lizardman with macefighting weapon
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Fencer
+}
 
 SECTION NPC $npc_lizardman_macefighter
 {
     NAMELIST $names_lizardmen
-    //$$ lizardman macefighter
     ID 0024
     SKIN 0000
     DIRECTION N
@@ -84,14 +76,15 @@ SECTION NPC $npc_lizardman_macefighter
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-// Lizardman with small blades
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Macefighter
+}
 
 SECTION NPC $npc_lizardman_short_sword
 {
     NAMELIST $names_lizardmen
-    //$$ lizardman short sword
     ID 0021
     SKIN 0000
     DIRECTION N
@@ -120,14 +113,15 @@ SECTION NPC $npc_lizardman_short_sword
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-//lizardman archer
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Lizardman (with short sword)
+}
 
 SECTION NPC $npc_lizardman_archer
 {
     NAMELIST $names_lizardmen
-    //$$ lizardman archer
     ID 0021
     SKIN 0000
     DIRECTION N
@@ -160,14 +154,15 @@ SECTION NPC $npc_lizardman_archer
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-// a ice lizardman (unarmed)
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Archer
+}
 
 SECTION NPC $npc_lizardman
 {
     NAMELIST $names_lizardmen
-    //$$ lizardman
     ID 0021
     SKIN 0480
     DIRECTION N
@@ -196,14 +191,15 @@ SECTION NPC $npc_lizardman
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-//a ice lizardman (with spear)
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Ice Lizardman
+}
 
 SECTION NPC $npc_lizardman_spear
 {
     NAMELIST $names_lizardmen
-    //$$ lizardman spear
     ID 0023
     SKIN 0480
     DIRECTION N
@@ -234,14 +230,15 @@ SECTION NPC $npc_lizardman_spear
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-// a ice lizardman (with mace)
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Ice Lizardman (with spear)
+}
 
 SECTION NPC $npc_ice_lizardman
 {
     NAMELIST $names_lizardmen
-    //$$ ice lizardman
     ID 0024
     SKIN 0480
     DIRECTION N
@@ -272,14 +269,15 @@ SECTION NPC $npc_ice_lizardman
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-// a lava lizardman (unarmed)
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Ice Lizardman (with mace)
+}
 
 SECTION NPC $npc_lava_lizardman
 {
     NAMELIST $names_lizardmen
-    //$$ lava lizardman
     ID 0021
     SKIN 002b
     DIRECTION N
@@ -313,14 +311,15 @@ SECTION NPC $npc_lava_lizardman
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-//a lava lizardman (with spear)
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Lava Lizardman
+}
 
 SECTION NPC $npc_lava_lizardman_spear
 {
     NAMELIST $names_lizardmen
-    //$$ lava lizardman spear
     ID 0023
     SKIN 002b
     DIRECTION N
@@ -356,14 +355,15 @@ SECTION NPC $npc_lava_lizardman_spear
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
-}
 
-// a lava lizardman (with mace)
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Lava Lizardman (with spear)
+}
 
 SECTION NPC $npc_lava_lizardman_mace
 {
     NAMELIST $names_lizardmen
-    //$$ lava lizardman mace
     ID 0024
     SKIN 002b
     DIRECTION N
@@ -399,5 +399,9 @@ SECTION NPC $npc_lava_lizardman_mace
     TOTAME 1100
     RACE $race_lizardman
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Lizardmen
+    ///DESCRIPTION Lava Lizardman (with mace)
 }
 

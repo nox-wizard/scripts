@@ -4,12 +4,6 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//********************************************************************
-//**********************    Undead and  Liches      ******************
-//********************************************************************
-
-//a headless
-
 SECTION NPC $npc_a_headless
 {
     NAME a headless
@@ -39,9 +33,11 @@ SECTION NPC $npc_a_headless
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a skeleton
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Headless
+}
 
 SECTION NPC $npc_a_skeleton
 {
@@ -73,9 +69,11 @@ SECTION NPC $npc_a_skeleton
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a skeleton with axe
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Skeleton
+}
 
 SECTION NPC $npc_a_skeleton_1
 {
@@ -109,9 +107,11 @@ SECTION NPC $npc_a_skeleton_1
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-// a bone knight
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Skeleton (with axe)
+}
 
 SECTION NPC $npc_a_bone_knight
 {
@@ -147,9 +147,11 @@ SECTION NPC $npc_a_bone_knight
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a bone mage
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Bone Knight
+}
 
 SECTION NPC $npc_a_bone_magi
 {
@@ -195,9 +197,11 @@ SECTION NPC $npc_a_bone_magi
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a burning skeleton
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Bone Mage
+}
 
 SECTION NPC $npc_a_burning_skeleton
 {
@@ -240,9 +244,11 @@ SECTION NPC $npc_a_burning_skeleton
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-// a skeletal knight
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Skeleton (burning)
+}
 
 SECTION NPC $npc_a_skeletal_knight
 {
@@ -282,9 +288,11 @@ SECTION NPC $npc_a_skeletal_knight
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a skeletal mage
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Skeletal Knight
+}
 
 SECTION NPC $npc_a_skeletal_magi
 {
@@ -329,9 +337,11 @@ SECTION NPC $npc_a_skeletal_magi
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a zombie
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Skeletal Mage
+}
 
 SECTION NPC $npc_a_zombie
 {
@@ -361,9 +371,11 @@ SECTION NPC $npc_a_zombie
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-// a zombie elder
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Zombie
+}
 
 SECTION NPC $npc_a_zombie_elder
 {
@@ -403,6 +415,10 @@ SECTION NPC $npc_a_zombie_elder
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Zombie (elder)
 }
 
 SECTION NPC $npc_a_ghoul
@@ -437,9 +453,11 @@ SECTION NPC $npc_a_ghoul
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a spectre
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Ghoul
+}
 
 SECTION NPC $npc_a_spectre
 {
@@ -474,6 +492,10 @@ SECTION NPC $npc_a_spectre
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Spectre
 }
 
 SECTION NPC $npc_a_wraith
@@ -511,9 +533,11 @@ SECTION NPC $npc_a_wraith
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a mummy
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Wraith
+}
 
 SECTION NPC $npc_a_mummy
 {
@@ -549,9 +573,11 @@ SECTION NPC $npc_a_mummy
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a ghost
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Mummy
+}
 
 SECTION NPC $npc_a_ghost
 {
@@ -584,10 +610,11 @@ SECTION NPC $npc_a_ghost
     NPCAI $npc_ai_evil
     RACE $race_undead
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Ghost
 }
-
-
-//a lich
 
 SECTION NPC $npc_a_lich
 {
@@ -632,6 +659,10 @@ SECTION NPC $npc_a_lich
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Lich
 }
 
 SECTION NPC $npc_a_lich_lord
@@ -687,6 +718,10 @@ SECTION NPC $npc_a_lich_lord
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Lich Lord
 }
 
 SECTION NPC $npc_a_lich_elder
@@ -744,14 +779,15 @@ SECTION NPC $npc_a_lich_elder
     NPCAI $npc_ai_evil
     RACE $race_undead
     DOORUSE 1
-}
 
-//a vampire
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Lich Elder
+}
 
 SECTION NPC $npc_vampire
 {
     NAMELIST $names_males
-    //$$ vampire
     TITLE a vampire
     ID 0190
     ITEM $item_random_male_hair_list
@@ -797,14 +833,15 @@ SECTION NPC $npc_vampire
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a vampiress
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Vampire [M]
+}
 
 SECTION NPC $npc_vampiress
 {
     NAMELIST $names_females
-    //$$ vampiress
     TITLE a vampiress
     ID 0191
     SKIN 0000
@@ -846,9 +883,11 @@ SECTION NPC $npc_vampiress
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a floating skull
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Vampire [F]
+}
 
 SECTION NPC $npc_a_floating_skull
 {
@@ -882,14 +921,15 @@ SECTION NPC $npc_a_floating_skull
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
-}
 
-//a living armor
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Floating Skull
+}
 
 SECTION NPC $npc_living_armor
 {
     NAMELIST $names_necromancers
-    //$$ living armor
     TITLE a living Armor
     ID 0233
     ITEM $item_broad_sword_of_energy_bolt
@@ -922,6 +962,10 @@ SECTION NPC $npc_living_armor
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Undeads
+    ///DESCRIPTION Living Armor
 }
 
 //*********************************************************
@@ -956,6 +1000,7 @@ SECTION NPC $npc_a_zombie_1
     TOTAME 110
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
 
 SECTION NPC $npc_a_skeleton_2
@@ -984,6 +1029,7 @@ SECTION NPC $npc_a_skeleton_2
     TOTAME 110
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
 
 SECTION NPC $npc_a_spectre_1
@@ -1017,6 +1063,7 @@ SECTION NPC $npc_a_spectre_1
     TOTAME 110
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
 
 SECTION NPC $npc_a_wraith_1
@@ -1050,6 +1097,7 @@ SECTION NPC $npc_a_wraith_1
     TOTAME 110
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
 
 SECTION NPC $npc_a_bone_knight_1
@@ -1078,6 +1126,7 @@ SECTION NPC $npc_a_bone_knight_1
     TOTAME 110
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
 
 SECTION NPC $npc_a_lich_1
@@ -1111,6 +1160,7 @@ SECTION NPC $npc_a_lich_1
     TOTAME 110
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
 
 SECTION NPC $npc_a_bone_mage
@@ -1144,8 +1194,8 @@ SECTION NPC $npc_a_bone_mage
     TOTAME 110
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
-
 
 SECTION NPC $npc_a_lich_lord_1
 {
@@ -1178,9 +1228,8 @@ SECTION NPC $npc_a_lich_lord_1
     TOTAME 110
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
-
-//a wisp
 
 SECTION NPC $npc_a_wisp
 {
@@ -1212,6 +1261,6 @@ SECTION NPC $npc_a_wisp
     TOTAME 1100
     RACE $race_undead
     DOORUSE 1
+    ///NOTLIST
 }
-
 

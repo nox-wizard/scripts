@@ -4,13 +4,6 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//*********************************************************************
-//*************************** Terathens *******************************
-//***************************           *******************************
-//*********************************************************************
-
-//a terathan drone
-
 SECTION NPC $npc_a_terathan_drone
 {
     NAME a terathan drone
@@ -45,9 +38,11 @@ SECTION NPC $npc_a_terathan_drone
     TOTAME 1100
     RACE $race_terathan
     DOORUSE 1
-}
 
-// a terathan warrior
+    ///CATEGORY Evil
+    ///SUBSECTION Terathens
+    ///DESCRIPTION Terathan Drone
+}
 
 SECTION NPC $npc_a_terathan_warrior
 {
@@ -86,9 +81,11 @@ SECTION NPC $npc_a_terathan_warrior
     TOTAME 1100
     RACE $race_terathan
     DOORUSE 1
-}
 
-//a terathan avenger
+    ///CATEGORY Evil
+    ///SUBSECTION Terathens
+    ///DESCRIPTION Terathan Warrior
+}
 
 SECTION NPC $npc_a_terathan_avenger
 {
@@ -135,9 +132,11 @@ SECTION NPC $npc_a_terathan_avenger
     TOTAME 1100
     RACE $race_terathan
     DOORUSE 1
-}
 
-//a terathan matriarch
+    ///CATEGORY Evil
+    ///SUBSECTION Terathens
+    ///DESCRIPTION Terathan Avenger
+}
 
 SECTION NPC $npc_a_terathan_matriarch
 {
@@ -195,9 +194,11 @@ SECTION NPC $npc_a_terathan_matriarch
     TOTAME 1100
     RACE $race_terathan
     DOORUSE 1
-}
 
-//a terathan newt
+    ///CATEGORY Evil
+    ///SUBSECTION Terathens
+    ///DESCRIPTION Terathan Matriarch
+}
 
 SECTION NPC $npc_a_terathan_newt
 {
@@ -231,5 +232,9 @@ SECTION NPC $npc_a_terathan_newt
     TOTAME 1100
     RACE $race_terathan
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Terathens
+    ///DESCRIPTION Terathan Newt
 }
 

@@ -1,11 +1,8 @@
-
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (npc_humanoids.xss)                              ||
 // || Maintained by Xanathar and Kendra                                   ||
 // || Last Update 12-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-//a savage
 
 SECTION NPC $npc_a_savage
 {
@@ -49,9 +46,11 @@ SECTION NPC $npc_a_savage
     GOLD 15 50
     TOTAME 1100
     DOORUSE 1
-}
 
-//a savage
+    ///CATEGORY Evil
+    ///SUBSECTION Savages
+    ///DESCRIPTION Savage [M]
+}
 
 SECTION NPC $npc_a_savage_1
 {
@@ -93,9 +92,11 @@ SECTION NPC $npc_a_savage_1
     COLORLIST 11
     GOLD 15 50
     DOORUSE 1
-}
 
-// a savage shaman
+    ///CATEGORY Evil
+    ///SUBSECTION Savages
+    ///DESCRIPTION Savage [F]
+}
 
 SECTION NPC $npc_a_savage_shaman
 {
@@ -140,9 +141,11 @@ SECTION NPC $npc_a_savage_shaman
     SPATTACK 7552
     SPADELAY 6
     DOORUSE 1
-}
 
-//a savage chief
+    ///CATEGORY Evil
+    ///SUBSECTION Savages
+    ///DESCRIPTION Savage Shaman
+}
 
 SECTION NPC $npc_a_savage_chief
 {
@@ -184,6 +187,10 @@ SECTION NPC $npc_a_savage_chief
     COLORLIST 11
     GOLD 15 50
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Savages
+    ///DESCRIPTION Savage Chief
 }
 
 //*************************************************************************
@@ -224,6 +231,10 @@ SECTION NPC $npc_a_cottonmouth_dread
     LOOT $loot_reagents
     GOLD 100 150
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Dread
 }
 
 SECTION NPC $npc_a_cottonmouth_piercer
@@ -259,6 +270,10 @@ SECTION NPC $npc_a_cottonmouth_piercer
     LOOT $loot_reagents
     GOLD 150 250
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Piercer
 }
 
 SECTION NPC $npc_a_cottonmouth_fanger
@@ -297,6 +312,10 @@ SECTION NPC $npc_a_cottonmouth_fanger
     LOOT $loot_reagents
     GOLD 200 300
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Fanger
 }
 
 SECTION NPC $npc_a_cottonmouth_newt
@@ -335,6 +354,10 @@ SECTION NPC $npc_a_cottonmouth_newt
     LOOT $loot_jewelry
     GOLD 100 150
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Newt
 }
 
 SECTION NPC $npc_a_cottonmouth_nagi
@@ -374,6 +397,10 @@ SECTION NPC $npc_a_cottonmouth_nagi
     LOOT $loot_jewelry
     GOLD 200 250
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Nagi
 }
 
 SECTION NPC $npc_a_cottonmouth_layer
@@ -412,13 +439,16 @@ SECTION NPC $npc_a_cottonmouth_layer
     LOOT $loot_reagents
     GOLD 200 300
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Layer
 }
 
 // mounted npc's
 SECTION NPC $npc_knight
 {
     NAMELIST $names_males
-    //$$ knight
     TITLE the Knight
     ID 0190
     DIRECTION S
@@ -455,12 +485,15 @@ SECTION NPC $npc_knight
     ONHORSE
     RUNS
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Knight
 }
 
 SECTION NPC $npc_knight_1
 {
     NAMELIST $names_males
-    //$$ knight
     TITLE the Knight
     ID 0190
     DIRECTION S
@@ -498,6 +531,10 @@ SECTION NPC $npc_knight_1
     ONHORSE
     RUNS
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Knight
 }
 
 SECTION NPC $npc_the_black_knight
@@ -539,12 +576,15 @@ SECTION NPC $npc_the_black_knight
     ONHORSE
     RUNS
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Black Knight
 }
 
 SECTION NPC $npc_cultist
 {
     NAMELIST $names_males
-    //$$ cultist
     SPEECH $speech_cultist
     SKINLIST 5
     TITLE The Cultist
@@ -571,12 +611,15 @@ SECTION NPC $npc_cultist
     WRESTLING 600 700
     TACTICS 700 800
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Cultist
 }
 
 SECTION NPC $npc_priest_of_mondain
 {
     NAMELIST $names_males
-    //$$ priest of mondain
     TITLE the Priest of Mondain
     ID 0190
     SKINLIST 16
@@ -621,12 +664,15 @@ SECTION NPC $npc_priest_of_mondain
     FZ1 -1
     FX2 40
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Priest of Mondain [M]
 }
 
 SECTION NPC $npc_priestess_of_mondain
 {
     NAMELIST $names_females
-    //$$ priestess of mondain
     TITLE the Priestess of Mondain
     ID 0191
     SKINLIST 16
@@ -671,9 +717,11 @@ SECTION NPC $npc_priestess_of_mondain
     FZ1 -1
     FX2 40
     DOORUSE 1
-}
 
-//a fire knight
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Priest of Mondain [F]
+}
 
 SECTION NPC $npc_a_fire_knight
 {
@@ -720,9 +768,11 @@ SECTION NPC $npc_a_fire_knight
     FX2 15
     NPCAI $npc_ai_evil
     DOORUSE 1
-}
 
-//an ice knight
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Fire Knight
+}
 
 SECTION NPC $npc_an_ice_knight
 {
@@ -768,14 +818,15 @@ SECTION NPC $npc_an_ice_knight
     NPCAI $npc_ai_evil
     WATERWALK
     DOORUSE 1
-}
 
-//a converted quest knight
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Ice Knight
+}
 
 SECTION NPC $npc_converted_quest_knight
 {
     NAMELIST $names_males
-    //$$ converted quest knight
     TITLE a converted quest knight
     ID 0190
     ITEM $item_random_male_hair_list
@@ -810,14 +861,15 @@ SECTION NPC $npc_converted_quest_knight
     FX2 20
     NPCAI $npc_ai_evil
     DOORUSE 1
-}
 
-//a barbarian
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Converted Quest Knight
+}
 
 SECTION NPC $npc_barbarian
 {
     NAMELIST $names_males
-    //$$ barbarian
     TITLE a barbarian
     ID 0190
     SKINLIST 16
@@ -856,14 +908,15 @@ SECTION NPC $npc_barbarian
     FX2 30
     TOTAME 1100
     DOORUSE 1
-}
 
-//the executioner
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Barbarian
+}
 
 SECTION NPC $npc_executioner
 {
     NAMELIST $names_males
-    //$$ executioner
     TITLE the executioner
     ID 0190
     ITEM $item_random_male_hair_list
@@ -899,5 +952,9 @@ SECTION NPC $npc_executioner
     DAMAGE 40 60
     DEF 15
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Executioner
 }
 

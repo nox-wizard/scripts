@@ -4,13 +4,6 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//*************************************************************
-//*********************** Ophidians ***************************
-//***********************           ***************************
-//*************************************************************
-
-// ophidian warrior
-
 SECTION NPC $npc_an_ophidian_warrior
 {
     NAME an ophidian warrior
@@ -49,9 +42,11 @@ SECTION NPC $npc_an_ophidian_warrior
     TOTAME 1100
     RACE $race_ophidian
     DOORUSE 1
-}
 
-// ophidian enforcer
+    ///CATEGORY Evil
+    ///SUBSECTION Ophidians
+    ///DESCRIPTION Ophidian Warrior
+}
 
 SECTION NPC $npc_an_ophidian_enforcer
 {
@@ -90,9 +85,11 @@ SECTION NPC $npc_an_ophidian_enforcer
     TOTAME 1100
     RACE $race_ophidian
     DOORUSE 1
-}
 
-// ophidian knight
+    ///CATEGORY Evil
+    ///SUBSECTION Ophidians
+    ///DESCRIPTION Ophidian Enforcer
+}
 
 SECTION NPC $npc_an_ophidian_knight-errant
 {
@@ -133,9 +130,11 @@ SECTION NPC $npc_an_ophidian_knight-errant
     TOTAME 1100
     RACE $race_ophidian
     DOORUSE 1
-}
 
-// ophidian avenger
+    ///CATEGORY Evil
+    ///SUBSECTION Ophidians
+    ///DESCRIPTION Ophidian Knight
+}
 
 SECTION NPC $npc_an_ophidian_avenger
 {
@@ -190,9 +189,11 @@ SECTION NPC $npc_an_ophidian_avenger
     TOTAME 1100
     RACE $race_ophidian
     DOORUSE 1
-}
 
-//Ophidian with staff
+    ///CATEGORY Evil
+    ///SUBSECTION Ophidians
+    ///DESCRIPTION Ophidian Avenger
+}
 
 SECTION NPC $npc_an_ophidian_apprentice_mage
 {
@@ -252,9 +253,11 @@ SECTION NPC $npc_an_ophidian_apprentice_mage
     TOTAME 1100
     RACE $race_ophidian
     DOORUSE 1
-}
 
-// ophidian shaman
+    ///CATEGORY Evil
+    ///SUBSECTION Ophidians
+    ///DESCRIPTION Ophidian Apprentice Mace
+}
 
 SECTION NPC $npc_an_ophidian_shaman
 {
@@ -305,9 +308,11 @@ SECTION NPC $npc_an_ophidian_shaman
     TOTAME 1100
     RACE $race_ophidian
     DOORUSE 1
-}
 
-//an ophidian matriarch
+    ///CATEGORY Evil
+    ///SUBSECTION Ophidians
+    ///DESCRIPTION Ophidian Shaman
+}
 
 SECTION NPC $npc_an_ophidian_matriarch
 {
@@ -357,6 +362,9 @@ SECTION NPC $npc_an_ophidian_matriarch
     TOTAME 1100
     RACE $race_ophidian
     DOORUSE 1
-}
 
+    ///CATEGORY Evil
+    ///SUBSECTION Ophidians
+    ///DESCRIPTION Ophidian Matriarch
+}
 

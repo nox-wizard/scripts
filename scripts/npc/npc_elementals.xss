@@ -9,9 +9,6 @@
 //************************            *****************************
 //*****************************************************************
 
-
-//an air elemental
-
 SECTION NPC $npc_an_air_elemental
 {
     NAME an air elemental
@@ -50,9 +47,11 @@ SECTION NPC $npc_an_air_elemental
     TOTAME 1100
     RACE $race_elemental
     DOORUSE 1
-}
 
-// an earth elemental
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Air Elemental
+}
 
 SECTION NPC $npc_an_earth_elemental
 {
@@ -90,9 +89,11 @@ SECTION NPC $npc_an_earth_elemental
     TOTAME 1100
     RACE $race_elemental
     DOORUSE 1
-}
 
-//a fire elemental
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Earth Elemental
+}
 
 SECTION NPC $npc_a_fire_elemental
 {
@@ -131,9 +132,11 @@ SECTION NPC $npc_a_fire_elemental
     TOTAME 1100
     RACE $race_elemental
     DOORUSE 1
-}
 
-// a fire lord
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Fire Elemental
+}
 
 SECTION NPC $npc_a_fire_lord
 {
@@ -175,9 +178,11 @@ SECTION NPC $npc_a_fire_lord
     NPCAI $npc_ai_evil
     RACE $race_elemental
     DOORUSE 1
-}
 
-//a water elemental
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Fire Lord
+}
 
 SECTION NPC $npc_a_water_elemental
 {
@@ -219,9 +224,11 @@ SECTION NPC $npc_a_water_elemental
     WATERWALK
     RACE $race_elemental
     DOORUSE 1
-}
 
-// a blood elemental
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Water Elemental
+}
 
 SECTION NPC $npc_a_blood_elemental
 {
@@ -262,9 +269,11 @@ SECTION NPC $npc_a_blood_elemental
     TOTAME 1100
     RACE $race_elemental
     DOORUSE 1
-}
 
-// a poison elemental
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Blood Elemental
+}
 
 SECTION NPC $npc_a_poison_elemental
 {
@@ -304,9 +313,11 @@ SECTION NPC $npc_a_poison_elemental
     TOTAME 1100
     RACE $race_elemental
     DOORUSE 1
-}
 
-// a snow elemental
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Poison Elemental
+}
 
 SECTION NPC $npc_a_snow_elemental
 {
@@ -343,9 +354,11 @@ SECTION NPC $npc_a_snow_elemental
     TOTAME 1100
     RACE $race_elemental
     DOORUSE 1
-}
 
-// an ice elemental
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Snow Elemental
+}
 
 SECTION NPC $npc_an_ice_elemental
 {
@@ -383,6 +396,10 @@ SECTION NPC $npc_an_ice_elemental
     WATERWALK
     RACE $race_elemental
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Ice Elemental
 }
 
 SECTION NPC $npc_an_acid_elemental
@@ -422,9 +439,11 @@ SECTION NPC $npc_an_acid_elemental
     TOTAME 1100
     RACE $race_elemental
     DOORUSE 1
-}
 
-// an effreet
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Acid Elemental
+}
 
 SECTION NPC $npc_an_efreet
 {
@@ -463,6 +482,10 @@ SECTION NPC $npc_an_efreet
     TOTAME 1100
     RACE $race_elemental
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Elementals
+    ///DESCRIPTION Efreet
 }
 
 

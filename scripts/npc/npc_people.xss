@@ -4,14 +4,9 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-// ##########################################
-// #    Start Of The People Section         #
-// ##########################################
-
 SECTION NPC $npc_chaos_guard_f
 {
     NAMELIST $names_females
-    //$$ chaos guard f
     TITLE a chaos guard
     ID 0191
     ITEM $item_random_female_hair_list
@@ -43,12 +38,15 @@ SECTION NPC $npc_chaos_guard_f
     NPCAI $npc_ai_chaosguard
     NOTRAIN
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Chaos Guard [F]
 }
 
 SECTION NPC $npc_chaos_guard_m
 {
     NAMELIST $names_males
-    //$$ chaos guard m
     TITLE a chaos guard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -86,12 +84,15 @@ SECTION NPC $npc_chaos_guard_m
     NPCAI $npc_ai_chaosguard
     NOTRAIN
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Chaos Guard [M]
 }
 
 SECTION NPC $npc_order_guard_f
 {
     NAMELIST $names_females
-    //$$ order guard f
     TITLE a order guard
     ID 0191
     ITEM $item_random_female_hair_list
@@ -123,12 +124,15 @@ SECTION NPC $npc_order_guard_f
     NPCAI $npc_ai_orderguard
     NOTRAIN
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Order Guard [F]
 }
 
 SECTION NPC $npc_order_guard_m
 {
     NAMELIST $names_males
-    //$$ order guard m
     TITLE a order guard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -166,6 +170,10 @@ SECTION NPC $npc_order_guard_m
     NPCAI $npc_ai_orderguard
     NOTRAIN
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Order Guard [M]
 }
 
 SECTION NPC $npc_dark_knight
@@ -212,12 +220,15 @@ SECTION NPC $npc_dark_knight
     FZ1 -1
     FX2 10
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Dark Knight
 }
 
 SECTION NPC $npc_pirate_m
 {
     NAMELIST $names_males
-    //$$ pirate m
     TITLE the pirate
     ID 0190
     ITEM $item_random_male_hair_list
@@ -259,12 +270,15 @@ SECTION NPC $npc_pirate_m
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Pirate [M]
 }
 
 SECTION NPC $npc_pirate_f
 {
     NAMELIST $names_females
-    //$$ pirate f
     TITLE the pirate
     ID 0191
     ITEM $item_random_female_hair_list
@@ -303,12 +317,15 @@ SECTION NPC $npc_pirate_f
     DEF 5
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Pirate [F]
 }
 
 SECTION NPC $npc_fighter_m
 {
     NAMELIST $names_males
-    //$$ fighter m
     TITLE the fighter
     ID 0190
     ITEM $item_random_male_hair_list
@@ -343,12 +360,15 @@ SECTION NPC $npc_fighter_m
     DAMAGE 10 17
     DEF 18
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Fighter [M]
 }
 
 SECTION NPC $npc_fighter_f
 {
     NAMELIST $names_females
-    //$$ fighter f
     TITLE the fighter
     ID 0191
     ITEM $item_random_female_hair_list
@@ -383,12 +403,15 @@ SECTION NPC $npc_fighter_f
     DAMAGE 10 17
     DEF 18
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Figher [F]
 }
 
 SECTION NPC $npc_cultist_m
 {
     NAMELIST $names_males
-    //$$ cultist m
     TITLE the cultist
     ID 0190
     ITEM $item_random_male_hair_list
@@ -433,12 +456,15 @@ SECTION NPC $npc_cultist_m
     SPATTACK 7552
     SPADELAY 10
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Cultist [M]
 }
 
 SECTION NPC $npc_cultist_f
 {
     NAMELIST $names_females
-    //$$ cultist f
     TITLE the cultist
     ID 0191
     ITEM $item_random_female_hair_list
@@ -482,12 +508,15 @@ SECTION NPC $npc_cultist_f
     SPATTACK 7552
     SPADELAY 10
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Cultist [F]
 }
 
 SECTION NPC $npc_sailor_m
 {
     NAMELIST $names_males
-    //$$ sailor m
     TITLE the sailor
     ID 0190
     ITEM $item_random_male_hair_list
@@ -525,12 +554,15 @@ SECTION NPC $npc_sailor_m
     DEF 5
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Sailor [M]
 }
 
 SECTION NPC $npc_sailor_f
 {
     NAMELIST $names_females
-    //$$ sailor f
     TITLE the sailor
     ID 0191
     ITEM $item_random_female_hair_list
@@ -566,12 +598,15 @@ SECTION NPC $npc_sailor_f
     DEF 5
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Sailor [F]
 }
 
 SECTION NPC $npc_brigand_m
 {
     NAMELIST $names_males
-    //$$ brigand m
     TITLE the brigand
     ID 0190
     ITEM $item_random_male_hair_list
@@ -614,12 +649,15 @@ SECTION NPC $npc_brigand_m
     DAMAGE 4 15
     DEF 15
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Brigand [M]
 }
 
 SECTION NPC $npc_brigand_f
 {
     NAMELIST $names_females
-    //$$ brigand f
     TITLE the brigand
     ID 0191
     ITEM $item_random_female_hair_list
@@ -660,12 +698,15 @@ SECTION NPC $npc_brigand_f
     DAMAGE 4 15
     DEF 15
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Brigand [F]
 }
 
 SECTION NPC $npc_beggar_m
 {
     NAMELIST $names_males
-    //$$ beggar m
     TITLE the beggar
     NPCAI $npc_ai_beggar
     ID 0190
@@ -700,12 +741,15 @@ SECTION NPC $npc_beggar_m
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Beggar [M]
 }
 
 SECTION NPC $npc_beggar_f
 {
     NAMELIST $names_females
-    //$$ beggar f
     TITLE the beggar
     NPCAI $npc_ai_beggar
     ID 0191
@@ -740,12 +784,15 @@ SECTION NPC $npc_beggar_f
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Beggar [F]
 }
 
 SECTION NPC $npc_noble_m
 {
     NAMELIST $names_males
-    //$$ noble m
     TITLE the noble
     SPEECH $speech_noble
     ID 0190
@@ -783,12 +830,15 @@ SECTION NPC $npc_noble_m
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Noble [M]
 }
 
 SECTION NPC $npc_noble_f
 {
     NAMELIST $names_females
-    //$$ noble f
     TITLE the noble
     ID 0191
     ITEM $item_random_female_hair_list
@@ -826,12 +876,15 @@ SECTION NPC $npc_noble_f
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Noble [F]
 }
 
 SECTION NPC $npc_thief_m
 {
     NAMELIST $names_males
-    //$$ thief m
     TITLE the thief
     ID 0190
     ITEM $item_random_male_hair_list
@@ -875,12 +928,15 @@ SECTION NPC $npc_thief_m
     DEF 5
     NPCAI $npc_ai_good
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Thief [M]
 }
 
 SECTION NPC $npc_register_of_names
 { Invul Spawner
     NAMELIST $names_males
-    //$$ register of names
     TITLE the Register of names
     ID 0190
     PRIV1 4
@@ -927,7 +983,6 @@ SECTION NPC $npc_register_of_names
 SECTION NPC $npc_thief_f
 {
     NAMELIST $names_females
-    //$$ thief f
     TITLE the thief
     ID 0191
     ITEM $item_random_female_hair_list
@@ -968,12 +1023,15 @@ SECTION NPC $npc_thief_f
     DEF 5
     NPCAI $npc_ai_good
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Thief [F]
 }
 
 SECTION NPC $npc_peasant_m
 {
     NAMELIST $names_males
-    //$$ peasant m
     TITLE the peasant
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1007,12 +1065,15 @@ SECTION NPC $npc_peasant_m
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Peasant [M]
 }
 
 SECTION NPC $npc_peasant_f
 {
     NAMELIST $names_females
-    //$$ peasant f
     TITLE the peasant
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1045,12 +1106,15 @@ SECTION NPC $npc_peasant_f
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Peasant [F]
 }
 
 SECTION NPC $npc_gypsy_m
 {
     NAMELIST $names_males
-    //$$ gypsy m
     TITLE the gypsy
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1085,12 +1149,15 @@ SECTION NPC $npc_gypsy_m
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gypsy [M]
 }
 
 SECTION NPC $npc_gypsy_f
 {
     NAMELIST $names_females
-    //$$ gypsy f
     TITLE the gypsy
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1124,12 +1191,15 @@ SECTION NPC $npc_gypsy_f
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gypsy [F]
 }
 
 SECTION NPC $npc_adventurer_m
 {
     NAMELIST $names_males
-    //$$ adventurer m
     TITLE the seeker of adventure
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1167,12 +1237,15 @@ SECTION NPC $npc_adventurer_m
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Adventurer [M]
 }
 
 SECTION NPC $npc_adventurer_f
 {
     NAMELIST $names_females
-    //$$ adventurer f
     TITLE the seeker of adventure
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1210,11 +1283,14 @@ SECTION NPC $npc_adventurer_f
     DEF 5
     DOORUSE 1
 }
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Adventurer [F]
+
 
 SECTION NPC $npc_murderer
 {
     NAMELIST $names_murderers
-    //$$ murderer
     TITLE the murderer
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1252,6 +1328,10 @@ SECTION NPC $npc_murderer
     DAMAGE 10 25
     DEF 18
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Murderer
 }
 
 SECTION NPC $npc_len_ikbaan
@@ -1295,6 +1375,9 @@ SECTION NPC $npc_len_ikbaan
     DEF 18
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
 }
 
 SECTION NPC $npc_sammy
@@ -1328,6 +1411,9 @@ SECTION NPC $npc_sammy
     SPEECH $speech_jeweler
     NPCAI $npc_ai_evil
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
 }
 
 SECTION NPC $npc_isabel
@@ -1361,6 +1447,9 @@ SECTION NPC $npc_isabel
     SPEECH $speech_leatherworker
     NPCAI $npc_ai_evil
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
 }
 
 SECTION NPC $npc_mondain
@@ -1411,12 +1500,14 @@ SECTION NPC $npc_mondain
     MAGERY 1000
     SPEECH $speech_mondain
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
 }
 
 SECTION NPC $npc_jailor_m
 {
     NAMELIST $names_males
-    //$$ jailor m
     TITLE the jailor
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1451,12 +1542,15 @@ SECTION NPC $npc_jailor_m
     DEF 5
     SPEECH $speech_guard
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Jailor [M]
 }
 
 SECTION NPC $npc_jailor_f
 {
     NAMELIST $names_females
-    //$$ jailor f
     TITLE the jailor
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1490,6 +1584,10 @@ SECTION NPC $npc_jailor_f
     DEF 5
     SPEECH $speech_guard
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Jailor [F]
 }
 
 SECTION NPC $npc_billy
@@ -1522,6 +1620,9 @@ SECTION NPC $npc_billy
     SPADELAY 10
     MAGERY 500 700
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Characters
 }
 
 SECTION NPC $npc_cassandra
@@ -1554,12 +1655,14 @@ SECTION NPC $npc_cassandra
     SPADELAY 10
     MAGERY 500 700
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Characters
 }
 
 SECTION NPC $npc_towncrier_m
 {
     NAMELIST $names_males
-    //$$ towncrier m
     TITLE the Town Crier
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1589,12 +1692,15 @@ SECTION NPC $npc_towncrier_m
     COLORLIST 11
     PRIV1 4
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Towncrier [M]
 }
 
 SECTION NPC $npc_towncrier_f
 {
     NAMELIST $names_females
-    //$$ towncrier f
     TITLE the town crier
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1630,12 +1736,15 @@ SECTION NPC $npc_towncrier_f
     COLORLIST 11
     PRIV1 4
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Towncrier [F]
 }
 
 SECTION NPC $npc_veterinarian_m
 {
     NAMELIST $names_males
-    //$$ veterinarian m
     TITLE the veterinarian
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1668,12 +1777,15 @@ SECTION NPC $npc_veterinarian_m
     ITEM $item_male_plain_robe_list
     COLORLIST 11
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Veterinarian [M]
 }
 
 SECTION NPC $npc_veterinarian_f
 {
     NAMELIST $names_females
-    //$$ veterinarian f
     TITLE the veterinarian
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1713,12 +1825,15 @@ SECTION NPC $npc_veterinarian_f
     COLORLIST 11
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Veterinarian [F]
 }
 
 SECTION NPC $npc_artist_m
 {
     NAMELIST $names_males
-    //$$ artist m
     TITLE the artist
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1750,12 +1865,15 @@ SECTION NPC $npc_artist_m
     ITEM $item_male_fancy_cape_list
     COLORLIST 11
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Artist [M]
 }
 
 SECTION NPC $npc_artist_f
 {
     NAMELIST $names_females
-    //$$ artist f
     TITLE the artist
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1787,12 +1905,15 @@ SECTION NPC $npc_artist_f
     ITEM $item_female_fancy_cape_list
     COLORLIST 11
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Artist [F]
 }
 
 SECTION NPC $npc_archmage
 {
     NAMELIST $names_necromancers
-    //$$ archmage
     TITLE the arch-mage
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1836,6 +1957,10 @@ SECTION NPC $npc_archmage
     SPADELAY 10
     MAGERY 900 990
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Archmage
 }
 
 SECTION NPC $npc_akbaar
@@ -1883,6 +2008,9 @@ SECTION NPC $npc_akbaar
     SPADELAY 10
     MAGERY 900 990
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
 }
 
 SECTION NPC $npc_kindor_aedrat
@@ -1931,12 +2059,14 @@ SECTION NPC $npc_kindor_aedrat
     DAMAGE 5 15
     DEF 18
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
 }
 
 SECTION NPC $npc_quest_knight_m
 {
     NAMELIST $names_males
-    //$$ quest knight m
     TITLE a Quest Knight
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1971,13 +2101,15 @@ SECTION NPC $npc_quest_knight_m
     NPCAI $npc_ai_good
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Quest Knight [M]
 }
 
-// Henchman Master
 SECTION NPC $npc_henchman_master
 {
     NAMELIST $names_males
-    //$$ henchman master
     TITLE the Henchman Master
     ID 0190
     PRIV1 4
@@ -2014,13 +2146,16 @@ SECTION NPC $npc_henchman_master
     SELLITEM $item_medium_henchman
     SELLITEM $item_strong_henchman
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Henchman Master
 }
 
 // weak henchman
 SECTION NPC $npc_henchman_weak
 {
     NAMELIST $names_males
-    //$$ henchman weak
     TITLE the henchman
     ID 0190
     ITEM $item_random_male_hair_list
@@ -2060,13 +2195,15 @@ SECTION NPC $npc_henchman_weak
     DAMAGE 3 15
     DEF 0
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Henchman Weak
 }
 
-// strong henchman
 SECTION NPC $npc_henchman_strong
 {
     NAMELIST $names_males
-    //$$ henchman strong
     TITLE the henchman
     ID 0190
     ITEM $item_random_male_hair_list
@@ -2106,13 +2243,16 @@ SECTION NPC $npc_henchman_strong
     DAMAGE 8 40
     DEF 0
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Henchman Strong
 }
 
 // medium henchman
 SECTION NPC $npc_henchman_mid
 {
     NAMELIST $names_males
-    //$$ henchman mid
     TITLE the henchman
     ID 0190
     ITEM $item_random_male_hair_list
@@ -2152,12 +2292,15 @@ SECTION NPC $npc_henchman_mid
     DAMAGE 5 25
     DEF 0
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Henchman Medium
 }
 
 SECTION NPC $npc_slut
 {
     NAMELIST $names_females
-    //$$ slut
     TITLE the slut
     ID 0191
     SKIN 83ea
@@ -2179,6 +2322,190 @@ SECTION NPC $npc_slut
     FZ1 -1
     FX2 20
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Slut
 }
 
+SECTION NPC $npc_mage_f_1
+{
+    NAMELIST $names_males
+    TITLE the mage
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_a_wizards_hat
+    COLORLIST 2
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 2
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 2
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_robe_list
+    COLORLIST 2
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 2
+    SPEECH $speech_mage
+    STR 130 160
+    DEX 40 80
+    INT 75 140
+    KARMA -5000
+    FAME 3500
+    TOTAME 1100
+    MAGERY 800 1000
+    TACTICS 700 800
+    PARRYING 600 800
+    WRESTLING 700 800
+    MACEFIGHTING 600 700
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    DAMAGE 3 15
+    DEF 5
+    SPATTACK 7552
+    SPADELAY 10
+    GOLD 80 150
+    NPCAI $npc_ai_evil
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Mage
+}
+
+SECTION NPC $npc_mage_m_2
+{
+    NAMELIST $names_males
+    TITLE the mage
+    ID 0191
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    SPEECH $speech_mage
+    STR 130 160
+    DEX 40 80
+    INT 75 140
+    KARMA -2000
+    FAME 2500
+    TOTAME 1100
+    MAGERY 800 1000
+    TACTICS 700 800
+    PARRYING 600 800
+    WRESTLING 700 800
+    MACEFIGHTING 600 700
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    DAMAGE 3 15
+    DEF 5
+    SPATTACK 7552
+    SPADELAY 10
+    GOLD 10 50
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Mage
+}
+
+SECTION NPC $npc_mage_m_3
+{
+    NAMELIST $names_males
+    TITLE the mage
+    ID 0191
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    COLORMATCHHAIR
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_a_robe
+    COLORLIST 2
+    SPEECH $speech_mage
+    STR 130 160
+    DEX 40 80
+    INT 75 140
+    KARMA -5000
+    FAME 3500
+    TOTAME 1100
+    MAGERY 800 1000
+    TACTICS 700 800
+    PARRYING 600 800
+    WRESTLING 700 800
+    MACEFIGHTING 600 700
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    DAMAGE 3 15
+    DEF 5
+    SPATTACK 7552
+    SPADELAY 10
+    GOLD 10 50
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Mage
+}
+
+SECTION NPC $npc_guildmaster_mage_m
+{
+    NAMELIST $names_males
+    TITLE the guildmaster mage
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_a_robe
+    COLORLIST 2
+    SPEECH $speech_mage
+    STR 130 160
+    DEX 40 80
+    INT 75 140
+    KARMA -2000
+    FAME 2500
+    TOTAME 1100
+    MAGERY 800 1000
+    TACTICS 700 800
+    PARRYING 600 800
+    WRESTLING 700 800
+    MACEFIGHTING 600 700
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    DAMAGE 3 15
+    DEF 5
+    SPATTACK 7552
+    SPADELAY 10
+    GOLD 10 50
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Guildmaster Mage
+}
 

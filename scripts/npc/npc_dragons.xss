@@ -9,8 +9,6 @@
 //**************************                  *****************************
 //*************************************************************************
 
-// a wyvern
-
 SECTION NPC $npc_a_wyvern
 {
     NAME a wyvern
@@ -45,9 +43,11 @@ SECTION NPC $npc_a_wyvern
     POISON 2
     RACE $race_insect
     DOORUSE 0
-}
 
-//a drake
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Wyvern
+}
 
 SECTION NPC $npc_a_drake
 {
@@ -84,9 +84,11 @@ SECTION NPC $npc_a_drake
     TOTAME 961
     RACE $race_dragon
     DOORUSE 0
-}
 
-//a red drake
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Drake
+}
 
 SECTION NPC $npc_a_drake_1
 {
@@ -123,9 +125,11 @@ SECTION NPC $npc_a_drake_1
     TOTAME 961
     RACE $race_dragon
     DOORUSE 0
-}
 
-//a drake  - Chromatic
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Red Drake
+}
 
 SECTION NPC $npc_a_drake_2
 {
@@ -162,9 +166,11 @@ SECTION NPC $npc_a_drake_2
     TOTAME 961
     RACE $race_dragon
     DOORUSE 0
-}
 
-// a brown dragon
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Drake (Chromatic)
+}
 
 SECTION NPC $npc_a_dragon
 {
@@ -211,9 +217,11 @@ SECTION NPC $npc_a_dragon
     TOTAME 991
     RACE $race_dragon
     DOORUSE 0
-}
 
-//a chromatic dragon
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Dragon (Brown)
+}
 
 SECTION NPC $npc_a_dragon_1
 {
@@ -260,9 +268,11 @@ SECTION NPC $npc_a_dragon_1
     TOTAME 991
     RACE $race_dragon
     DOORUSE 0
-}
 
-//a red dragon
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Dragon (Chromatic)
+}
 
 SECTION NPC $npc_a_dragon_2
 {
@@ -309,9 +319,11 @@ SECTION NPC $npc_a_dragon_2
     TOTAME 991
     RACE $race_dragon
     DOORUSE 0
-}
 
-//a pure white wyrm
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Dragon (Red)
+}
 
 SECTION NPC $npc_a_white_wyrm
 {
@@ -359,9 +371,11 @@ SECTION NPC $npc_a_white_wyrm
     TOTAME 999
     RACE $race_insect
     DOORUSE 0
-}
 
-//a white wyrm
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Wyrm (pure white)
+}
 
 SECTION NPC $npc_a_white_wyrm_1
 {
@@ -409,9 +423,11 @@ SECTION NPC $npc_a_white_wyrm_1
     TOTAME 999
     RACE $race_insect
     DOORUSE 0
-}
 
-//a fire wyrm
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Wyrm (white)
+}
 
 SECTION NPC $npc_a_fire_wyrm
 {
@@ -446,9 +462,11 @@ SECTION NPC $npc_a_fire_wyrm
     TOTAME 1100
     RACE $race_insect
     DOORUSE 0
-}
 
-//a brown ancient wyrm
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Wyrm (fire)
+}
 
 SECTION NPC $npc_an_ancient_wyrm
 {
@@ -509,9 +527,11 @@ SECTION NPC $npc_an_ancient_wyrm
     TOTAME 1100
     RACE $race_insect
     DOORUSE 0
-}
 
-//a red ancient wyrm
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Ancient Wyrm (brown)
+}
 
 SECTION NPC $npc_an_ancient_wyrm_1
 {
@@ -572,9 +592,11 @@ SECTION NPC $npc_an_ancient_wyrm_1
     TOTAME 1100
     RACE $race_insect
     DOORUSE 0
-}
 
-//a chromatic ancient wyrm
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Ancient Wyrm (red)
+}
 
 SECTION NPC $npc_an_ancient_wyrm_2
 {
@@ -635,9 +657,11 @@ SECTION NPC $npc_an_ancient_wyrm_2
     TOTAME 1100
     RACE $race_insect
     DOORUSE 0
-}
 
-//a shadow wyrm
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Ancient Wyrm (chromatic)
+}
 
 SECTION NPC $npc_a_shadow_wyrm
 {
@@ -698,6 +722,10 @@ SECTION NPC $npc_a_shadow_wyrm
     TOTAME 1100
     RACE $race_insect
     DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Wyrm (shadow)
 }
 
 SECTION NPC $npc_a_poison_dragon
@@ -746,6 +774,10 @@ SECTION NPC $npc_a_poison_dragon
     TOTAME 991
     RACE $race_dragon
     DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Dragons
+    ///DESCRIPTION Poison Dragon
 }
 
 

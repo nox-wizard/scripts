@@ -4,17 +4,8 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//*************************************************
-//*************************************************
-//******************** Orcs ***********************
-//*************************************************
-//*************************************************
-
-// Orc with punching
-
 SECTION NPC $npc_orc
 {
-    //$$ orc
     NAMELIST $names_orcs
     ID 0011
     SKIN 0000
@@ -47,14 +38,15 @@ SECTION NPC $npc_orc
     TOTAME 1100
     RACE $race_orc
     DOORUSE 1
-}
 
-// Orc with macefighting weapon
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc (with punching)
+}
 
 SECTION NPC $npc_orc_mace
 {
     NAMELIST $names_orcs
-    //$$ orc mace
     ID 0029
     SKIN 0000
     DIRECTION E
@@ -87,9 +79,11 @@ SECTION NPC $npc_orc_mace
     TOTAME 1100
     RACE $race_orc
     DOORUSE 1
-}
 
-// Orc mage
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc Macefighter
+}
 
 SECTION NPC $npc_an_orcish_mage
 {
@@ -137,13 +131,14 @@ SECTION NPC $npc_an_orcish_mage
     TOTAME 1100
     RACE $race_orc
     DOORUSE 1
-}
 
-// Orc with two handed axes
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc Mage
+}
 
 SECTION NPC $npc_orc_2_hand_axe
 {
-    //$$ orc 2 hand axe
     NAMELIST $names_orcs
     ID 0007
     SKIN 0000
@@ -180,14 +175,15 @@ SECTION NPC $npc_orc_2_hand_axe
     TOTAME 1100
     RACE $race_orc
     DOORUSE 1
-}
 
-//Orcish Captain
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc (with axe)
+}
 
 SECTION NPC $npc_orc_captain
 {
     NAMELIST $names_orcs
-    //$$ orc captain
     ID 0007
     SKIN 0000
     DIRECTION E
@@ -223,9 +219,11 @@ SECTION NPC $npc_orc_captain
     TOTAME 1100
     RACE $race_orc
     DOORUSE 1
-}
 
-// Orc Lord with two handed axes
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc Captain
+}
 
 SECTION NPC $npc_an_orcish_lord
 {
@@ -265,18 +263,15 @@ SECTION NPC $npc_an_orcish_lord
     TOTAME 1100
     RACE $race_orc
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc Lord (with axe)
 }
-
-
-//************************************************************************
-//*************************  Goblins *************************************
-//*************************          *************************************
-//************************************************************************
 
 SECTION NPC $npc_goblin
 {
     NAMELIST $names_orcs
-    //$$ goblin
     ID 0011
     SKIN 08a4
     DIRECTION E
@@ -302,13 +297,15 @@ SECTION NPC $npc_goblin
     NPCAI $npc_ai_evil
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin
 }
 
-//a goblin with club
 SECTION NPC $npc_goblin_club
 {
     NAMELIST $names_orcs
-    //$$ goblin club
     ID 0029
     SKIN 08a4
     DIRECTION E
@@ -335,9 +332,12 @@ SECTION NPC $npc_goblin_club
     NPCAI $npc_ai_evil
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin (with club)
 }
 
-// a goblin mage
 SECTION NPC $npc_a_goblin_mage
 {
     NAME a goblin mage
@@ -370,13 +370,16 @@ SECTION NPC $npc_a_goblin_mage
     NPCAI $npc_ai_evil
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin Mage
 }
 
 // Goblin with two handed axes
-SECTION NPC $npc_ratman_mage
+SECTION NPC $npc_a_goblin_axe
 {
     NAMELIST $names_orcs
-    //$$ goblin 2 hand axe
     ID 0007
     SKIN 08a4
     DIRECTION E
@@ -411,13 +414,15 @@ SECTION NPC $npc_ratman_mage
     NPCAI $npc_ai_evil
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin (with axe)
 }
 
-//Goblin Captain
 SECTION NPC $npc_goblin_captain
 {
     NAMELIST $names_orcs
-    //$$ goblin captain
     ID 0007
     SKIN 08a4
     DIRECTION E
@@ -452,9 +457,12 @@ SECTION NPC $npc_goblin_captain
     NPCAI $npc_ai_evil
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin Captain
 }
 
-// Goblin Lord with two handed axes
 SECTION NPC $npc_a_goblin_lord
 {
     NAME A Goblin Lord
@@ -492,6 +500,9 @@ SECTION NPC $npc_a_goblin_lord
     NPCAI $npc_ai_evil
     TOTAME 1100
     DOORUSE 1
-}
 
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin Lord
+}
 

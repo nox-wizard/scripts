@@ -4447,70 +4447,6 @@ SECTION ITEM $item_clean_bandages_1
     AMOUNT 3
 }
 
-///////////////////////////
-// All Paintings Section///
-///////////////////////////
-
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EC8
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_1
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EC9
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_2
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA8
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_3
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA0
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_4
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA1
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_5
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA2
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_6
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA3
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_7
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA4
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_8
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA5
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_9
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA6
-}
-SECTION ITEM $item_painting_recoverd_from_a_shipwreck_A
-{
-    NAME painting recoverd from a shipwreck
-    ID 0EA7
-}
-
-/////////////////////
-// End Of Paintings//
-////////////////////
-
 SECTION ITEM $item_gm_ticket
 {
     NAME A GM visited you while you were away. Plz Page again.
@@ -4521,7 +4457,7 @@ SECTION ITEM $item_gm_ticket
     TRIGGER $itrg_blesser
 
     ///CATEGORY Miscellaneous
-    ///DESCRIPTION GM Items
+    ///SUBSECTION GM Items
     ///DESCRIPTION GM Ticket
 }
 

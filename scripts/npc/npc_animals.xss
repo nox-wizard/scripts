@@ -4,14 +4,6 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-
-//*****************************************************************
-//*********************** Common animals       ********************
-//***********************                      ********************
-//*****************************************************************
-
-//a horse (light brown)
-
 SECTION NPC $npc_a_horse
 {
     NAME a horse
@@ -38,9 +30,11 @@ SECTION NPC $npc_a_horse
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a horse (light gray)
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Horse (Light Brown)
+}
 
 SECTION NPC $npc_a_horse_1
 {
@@ -68,9 +62,12 @@ SECTION NPC $npc_a_horse_1
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Horse (Light Gray)
 }
 
-//a horse (gray-brown)
 SECTION NPC $npc_a_horse_2
 {
     NAME a horse
@@ -97,9 +94,11 @@ SECTION NPC $npc_a_horse_2
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a horse (dark brown)
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Horse (Gray Brown)
+}
 
 SECTION NPC $npc_a_horse_3
 {
@@ -127,9 +126,11 @@ SECTION NPC $npc_a_horse_3
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a pack horse
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Horse (Dark Brown)
+}
 
 SECTION NPC $npc_a_pack_horse
 {
@@ -156,9 +157,11 @@ SECTION NPC $npc_a_pack_horse
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a cow (black and white)
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Pack Horse
+}
 
 SECTION NPC $npc_a_cow
 {
@@ -185,9 +188,11 @@ SECTION NPC $npc_a_cow
     TOTAME 111
     RACE $race_animal
     DOORUSE 0
-}
 
-//a cow (brown and white)
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Cow (Black and White)
+}
 
 SECTION NPC $npc_a_cow_1
 {
@@ -214,9 +219,11 @@ SECTION NPC $npc_a_cow_1
     TOTAME 111
     RACE $race_animal
     DOORUSE 0
-}
 
-//a bull (solid)
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Cow (Brown and White)
+}
 
 SECTION NPC $npc_a_bull
 {
@@ -244,9 +251,11 @@ SECTION NPC $npc_a_bull
     TOTAME 711
     RACE $race_animal
     DOORUSE 0
-}
 
-//a bull (solid with spots)
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Bull (Solid)
+}
 
 SECTION NPC $npc_a_bull_1
 {
@@ -274,9 +283,11 @@ SECTION NPC $npc_a_bull_1
     TOTAME 711
     RACE $race_animal
     DOORUSE 0
-}
 
-//a sheep
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Bull (Solid with spots)
+}
 
 SECTION NPC $npc_a_sheep
 {
@@ -304,9 +315,11 @@ SECTION NPC $npc_a_sheep
     TOTAME 111
     RACE $race_animal
     DOORUSE 0
-}
 
-//a goat
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Sheep
+}
 
 SECTION NPC $npc_a_goat
 {
@@ -334,9 +347,11 @@ SECTION NPC $npc_a_goat
     TOTAME 111
     RACE $race_animal
     DOORUSE 0
-}
 
-//a rideable llama
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Goat
+}
 
 SECTION NPC $npc_a_rideable_llama
 {
@@ -364,9 +379,11 @@ SECTION NPC $npc_a_rideable_llama
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a llama
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Llama
+}
 
 SECTION NPC $npc_a_llama
 {
@@ -394,9 +411,11 @@ SECTION NPC $npc_a_llama
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a pack llama
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Llama
+}
 
 SECTION NPC $npc_a_pack_llama
 {
@@ -423,9 +442,11 @@ SECTION NPC $npc_a_pack_llama
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a black bear
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Pack Llama
+}
 
 SECTION NPC $npc_a_black_bear
 {
@@ -453,9 +474,11 @@ SECTION NPC $npc_a_black_bear
     TOTAME 351
     RACE $race_animal
     DOORUSE 0
-}
 
-//a brown bear
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Bear (Black)
+}
 
 SECTION NPC $npc_a_brown_bear
 {
@@ -483,9 +506,11 @@ SECTION NPC $npc_a_brown_bear
     TOTAME 411
     RACE $race_animal
     DOORUSE 0
-}
 
-//a grizzly bear
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Bear (Brown)
+}
 
 SECTION NPC $npc_a_grizzly_bear
 {
@@ -513,9 +538,11 @@ SECTION NPC $npc_a_grizzly_bear
     TOTAME 591
     RACE $race_animal
     DOORUSE 0
-}
 
-//a polar bear
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Bear (Grizzly)
+}
 
 SECTION NPC $npc_a_polar_bear
 {
@@ -543,9 +570,11 @@ SECTION NPC $npc_a_polar_bear
     TOTAME 351
     RACE $race_animal
     DOORUSE 0
-}
 
-//a vera bear
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Bear (Polar)
+}
 
 SECTION NPC $npc_a_vera_bear
 {
@@ -572,9 +601,11 @@ SECTION NPC $npc_a_vera_bear
     TOTAME 801
     RACE $race_animal
     DOORUSE 0
-}
 
-//a cave bear
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Bear (Vera)
+}
 
 SECTION NPC $npc_a_cave_bear
 {
@@ -602,10 +633,11 @@ SECTION NPC $npc_a_cave_bear
     TOTAME 701
     RACE $race_animal
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Bear (Cave)
 }
-
-
-//a walrus
 
 SECTION NPC $npc_a_walrus
 {
@@ -634,9 +666,11 @@ SECTION NPC $npc_a_walrus
     WATERWALK
     RACE $race_animal
     DOORUSE 0
-}
 
-//a gorilla
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Walrus
+}
 
 SECTION NPC $npc_a_gorilla
 {
@@ -664,9 +698,11 @@ SECTION NPC $npc_a_gorilla
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a rabbit
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Gorilla
+}
 
 SECTION NPC $npc_a_rabbit
 {
@@ -694,9 +730,11 @@ SECTION NPC $npc_a_rabbit
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a dolphin
+    ///CATEGORY Animals
+    ///SUBSECTION Farmland
+    ///DESCRIPTION Rabbit
+}
 
 SECTION NPC $npc_a_dolphin
 {
@@ -725,9 +763,11 @@ SECTION NPC $npc_a_dolphin
     WATERWALK
     RACE $race_animal
     DOORUSE 0
-}
 
-//a sparrow
+    ///CATEGORY Animals
+    ///SUBSECTION Sea
+    ///DESCRIPTION Dolphin
+}
 
 SECTION NPC $npc_a_sparrow
 {
@@ -754,14 +794,15 @@ SECTION NPC $npc_a_sparrow
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-// a bird
+    ///CATEGORY Animals
+    ///SUBSECTION Birds
+    ///DESCRIPTION Sparrow
+}
 
 SECTION NPC $npc_forest_bird
 {
     NAMELIST $names_forest_birds
-    //$$ forest bird
     ID 0006
     SKINLIST 11
     DIRECTION E
@@ -785,9 +826,11 @@ SECTION NPC $npc_forest_bird
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a chicken
+    ///CATEGORY Animals
+    ///SUBSECTION Birds
+    ///DESCRIPTION Forest Bird
+}
 
 SECTION NPC $npc_a_chicken
 {
@@ -812,9 +855,11 @@ SECTION NPC $npc_a_chicken
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a falcon
+    ///CATEGORY Animals
+    ///SUBSECTION Birds
+    ///DESCRIPTION Chicken
+}
 
 SECTION NPC $npc_a_falcon
 {
@@ -843,9 +888,11 @@ SECTION NPC $npc_a_falcon
     WATERWALK
     RACE $race_animal
     DOORUSE 0
-}
 
-//a hawk
+    ///CATEGORY Animals
+    ///SUBSECTION Birds
+    ///DESCRIPTION Falcon
+}
 
 SECTION NPC $npc_a_hawk
 {
@@ -874,9 +921,11 @@ SECTION NPC $npc_a_hawk
     WATERWALK
     RACE $race_animal
     DOORUSE 0
-}
 
-//an eagle
+    ///CATEGORY Animals
+    ///SUBSECTION Birds
+    ///DESCRIPTION Hawk
+}
 
 SECTION NPC $npc_an_eagle
 {
@@ -905,9 +954,11 @@ SECTION NPC $npc_an_eagle
     WATERWALK
     RACE $race_animal
     DOORUSE 0
-}
 
-//a blue bird
+    ///CATEGORY Animals
+    ///SUBSECTION Birds
+    ///DESCRIPTION Eagle
+}
 
 SECTION NPC $npc_a_blue_bird
 {
@@ -936,9 +987,11 @@ SECTION NPC $npc_a_blue_bird
     WATERWALK
     RACE $race_animal
     DOORUSE 0
-}
 
-//a cardinal
+    ///CATEGORY Animals
+    ///SUBSECTION Birds
+    ///DESCRIPTION Blue Bird
+}
 
 SECTION NPC $npc_a_cardinal
 {
@@ -966,9 +1019,11 @@ SECTION NPC $npc_a_cardinal
     WATERWALK
     RACE $race_animal
     DOORUSE 0
-}
 
-//a snake
+    ///CATEGORY Animals
+    ///SUBSECTION Birds
+    ///DESCRIPTION Cardinal
+}
 
 SECTION NPC $npc_a_snake
 {
@@ -998,9 +1053,11 @@ SECTION NPC $npc_a_snake
     TOTAME 591
     RACE $race_animal
     DOORUSE 0
-}
 
-//an ice serpent
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Snake
+}
 
 SECTION NPC $npc_an_ice_serpent
 {
@@ -1029,9 +1086,11 @@ SECTION NPC $npc_an_ice_serpent
     TOTAME 1100
     RACE $race_animal
     DOORUSE 0
-}
 
-//a cat
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Serpent (Ice)
+}
 
 SECTION NPC $npc_a_cat
 {
@@ -1057,9 +1116,11 @@ SECTION NPC $npc_a_cat
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a cougar
+    ///CATEGORY Animals
+    ///SUBSECTION Farmland
+    ///DESCRIPTION Cat
+}
 
 SECTION NPC $npc_a_cougar
 {
@@ -1087,9 +1148,11 @@ SECTION NPC $npc_a_cougar
     TOTAME 411
     RACE $race_animal
     DOORUSE 0
-}
 
-//a panther
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Cougar
+}
 
 SECTION NPC $npc_a_panther
 {
@@ -1117,9 +1180,11 @@ SECTION NPC $npc_a_panther
     TOTAME 531
     RACE $race_animal
     DOORUSE 0
-}
 
-//a snow leopard
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Panther
+}
 
 SECTION NPC $npc_a_snow_leopard
 {
@@ -1147,9 +1212,11 @@ SECTION NPC $npc_a_snow_leopard
     TOTAME 531
     RACE $race_animal
     DOORUSE 0
-}
 
-//a forest ostard
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Leopard
+}
 
 SECTION NPC $npc_a_forest_ostard
 {
@@ -1178,9 +1245,11 @@ SECTION NPC $npc_a_forest_ostard
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a desert ostard
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Ostard (Forest)
+}
 
 SECTION NPC $npc_a_desert_ostard
 {
@@ -1208,9 +1277,11 @@ SECTION NPC $npc_a_desert_ostard
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a hind
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Ostard (Desert)
+}
 
 SECTION NPC $npc_a_hind
 {
@@ -1237,9 +1308,11 @@ SECTION NPC $npc_a_hind
     TOTAME 231
     RACE $race_animal
     DOORUSE 0
-}
 
-//a great hart
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Hind
+}
 
 SECTION NPC $npc_a_great_hart
 {
@@ -1266,9 +1339,11 @@ SECTION NPC $npc_a_great_hart
     TOTAME 591
     RACE $race_animal
     DOORUSE 0
-}
 
-//a pig
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Great Hard
+}
 
 SECTION NPC $npc_a_pig
 {
@@ -1296,9 +1371,11 @@ SECTION NPC $npc_a_pig
     TOTAME 111
     RACE $race_animal
     DOORUSE 0
-}
 
-//a boar
+    ///CATEGORY Animals
+    ///SUBSECTION Farmland
+    ///DESCRIPTION Pig
+}
 
 SECTION NPC $npc_a_boar
 {
@@ -1326,9 +1403,11 @@ SECTION NPC $npc_a_boar
     TOTAME 291
     RACE $race_animal
     DOORUSE 0
-}
 
-//a dog
+    ///CATEGORY Animals
+    ///SUBSECTION Farmland
+    ///DESCRIPTION Boar
+}
 
 SECTION NPC $npc_a_dog
 {
@@ -1354,9 +1433,11 @@ SECTION NPC $npc_a_dog
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a dog
+    ///CATEGORY Animals
+    ///SUBSECTION Farmland
+    ///DESCRIPTION Dog
+}
 
 SECTION NPC $npc_a_dog_1
 {
@@ -1382,9 +1463,11 @@ SECTION NPC $npc_a_dog_1
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a dog
+    ///CATEGORY Animals
+    ///SUBSECTION Farmland
+    ///DESCRIPTION Dog
+}
 
 SECTION NPC $npc_a_dog_2
 {
@@ -1410,9 +1493,11 @@ SECTION NPC $npc_a_dog_2
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a dog
+    ///CATEGORY Animals
+    ///SUBSECTION Farmland
+    ///DESCRIPTION Dog
+}
 
 SECTION NPC $npc_a_dog_3
 {
@@ -1438,9 +1523,11 @@ SECTION NPC $npc_a_dog_3
     TOTAME 90
     RACE $race_animal
     DOORUSE 0
-}
 
-//a timber wolf
+    ///CATEGORY Animals
+    ///SUBSECTION Farmland
+    ///DESCRIPTION Dog
+}
 
 SECTION NPC $npc_a_timber_wolf
 {
@@ -1468,9 +1555,11 @@ SECTION NPC $npc_a_timber_wolf
     TOTAME 231
     RACE $race_animal
     DOORUSE 0
-}
 
-//a grey wolf
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Wolf (Timber)
+}
 
 SECTION NPC $npc_a_grey_wolf
 {
@@ -1498,9 +1587,11 @@ SECTION NPC $npc_a_grey_wolf
     TOTAME 531
     RACE $race_animal
     DOORUSE 0
-}
 
-//a white wolf
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Wolf (Gray)
+}
 
 SECTION NPC $npc_a_white_wolf
 {
@@ -1528,9 +1619,11 @@ SECTION NPC $npc_a_white_wolf
     TOTAME 651
     RACE $race_animal
     DOORUSE 0
-}
 
-//a silver wolf
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Wolf (White)
+}
 
 SECTION NPC $npc_a_silver_wolf
 {
@@ -1564,13 +1657,16 @@ SECTION NPC $npc_a_silver_wolf
     TOTAME 800
     RACE $race_animal
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Wolf (Silver)
 }
 
 //****************************************************************
 //************************** Spiders *****************************
 //**************************         *****************************
 //****************************************************************
-
 
 SECTION NPC $npc_a_dark_spider
 {
@@ -1603,9 +1699,11 @@ SECTION NPC $npc_a_dark_spider
     TOTAME 910
     RACE $race_arachnid
     DOORUSE 0
-}
 
-// a dread spider
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Spider (Dark)
+}
 
 SECTION NPC $npc_a_dread_spider
 {
@@ -1652,8 +1750,11 @@ SECTION NPC $npc_a_dread_spider
     TOTAME 700
     RACE $race_arachnid
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Spider (Dread)
 }
-// Spiders
 
 SECTION NPC $npc_a_giant_spider
 {
@@ -1687,6 +1788,10 @@ SECTION NPC $npc_a_giant_spider
     TACTICS 350 500
     RACE $race_arachnid
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Spider (Giant)
 }
 
 SECTION NPC $npc_a_frost_spider
@@ -1722,10 +1827,11 @@ SECTION NPC $npc_a_frost_spider
     TOTAME 747
     RACE $race_arachnid
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Spider (Frost)
 }
-
-
-//a sewer rat
 
 SECTION NPC $npc_a_sewer_rat
 {
@@ -1754,9 +1860,11 @@ SECTION NPC $npc_a_sewer_rat
     TOTAME 1100
     RACE $race_animal
     DOORUSE 0
-}
 
-//a bullfrog
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Sewer Rat
+}
 
 SECTION NPC $npc_a_bullfrog
 {
@@ -1784,10 +1892,11 @@ SECTION NPC $npc_a_bullfrog
     TOTAME 231
     RACE $race_animal
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Bullfrog
 }
-
-
-//a giant scorpion
 
 SECTION NPC $npc_a_giant_scorpion
 {
@@ -1817,5 +1926,9 @@ SECTION NPC $npc_a_giant_scorpion
     TOTAME 800
     RACE $race_arachnid
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Scorpion
 }
 

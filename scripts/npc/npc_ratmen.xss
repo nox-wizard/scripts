@@ -4,17 +4,9 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//***********************************************************
-//************************ Ratmen ***************************
-//************************        ***************************
-//***********************************************************
-
-// ratman with sword
-
 SECTION NPC $npc_ratman
 {
     NAMELIST $names_ratmen
-    //$$ ratman
     ID 002d
     SKIN 0000
     DIRECTION N
@@ -42,14 +34,15 @@ SECTION NPC $npc_ratman
     TOTAME 1100
     RACE $race_ratman
     DOORUSE 1
-}
 
-// ratman with axe
+    ///CATEGORY Evil
+    ///SUBSECTION Ratmen
+    ///DESCRIPTION Ratman (with sword)
+}
 
 SECTION NPC $npc_ratman_axe
 {
     NAMELIST $names_ratmen
-    //$$ ratman axe
     ID 002c
     SKIN 0000
     DIRECTION N
@@ -77,14 +70,15 @@ SECTION NPC $npc_ratman_axe
     TOTAME 1100
     RACE $race_ratman
     DOORUSE 1
-}
 
-//ratman archer
+    ///CATEGORY Evil
+    ///SUBSECTION Ratmen
+    ///DESCRIPTION Ratman (with axe)
+}
 
 SECTION NPC $npc_ratman_archer
 {
     NAMELIST $names_ratmen
-    //$$ ratman archer
     ID 002a
     SKIN 0000
     DIRECTION N
@@ -112,14 +106,15 @@ SECTION NPC $npc_ratman_archer
     TOTAME 1100
     RACE $race_ratman
     DOORUSE 1
-}
 
-//ratman mage
+    ///CATEGORY Evil
+    ///SUBSECTION Ratmen
+    ///DESCRIPTION Ratman Archer
+}
 
 SECTION NPC $npc_ratman_mage
 {
     NAMELIST $names_ratmen
-    //$$ ratman mage
     ID 002a
     SKIN 0000
     DIRECTION N
@@ -160,6 +155,9 @@ SECTION NPC $npc_ratman_mage
     TOTAME 1100
     RACE $race_ratman
     DOORUSE 1
-}
 
+    ///CATEGORY Evil
+    ///SUBSECTION Ratmen
+    ///DESCRIPTION Ratman Mage
+}
 

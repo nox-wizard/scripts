@@ -4,7 +4,6 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//a gargoyle
 SECTION NPC $npc_a_gargoyle
 {
     NAME a gargoyle
@@ -44,9 +43,11 @@ SECTION NPC $npc_a_gargoyle
     TOTAME 1100
     RACE $race_gargoyle
     DOORUSE 1
-}
 
-//a stone gargoyle
+    ///CATEGORY Evil
+    ///SUBSECTION Daemons & Gargoyles
+    ///DESCRIPTION Gargoyle
+}
 
 SECTION NPC $npc_a_stone_gargoyle
 {
@@ -81,14 +82,15 @@ SECTION NPC $npc_a_stone_gargoyle
     TOTAME 1100
     RACE $race_gargoyle
     DOORUSE 1
-}
 
-// Fire Gargoyle
+    ///CATEGORY Evil
+    ///SUBSECTION Daemons & Gargoyles
+    ///DESCRIPTION Gargoyle (stone)
+}
 
 SECTION NPC $npc_gargoyle
 {
     NAMELIST $names_gargoyles
-    //$$ gargoyle
     ID 0004
     SKINLIST 1
     DIRECTION N
@@ -122,9 +124,11 @@ SECTION NPC $npc_gargoyle
     TOTAME 1100
     RACE $race_gargoyle
     DOORUSE 1
-}
 
-//a frankenstein
+    ///CATEGORY Evil
+    ///SUBSECTION Daemons & Gargoyles
+    ///DESCRIPTION Gargoyle (fire)
+}
 
 SECTION NPC $npc_a_frankenstein
 {
@@ -163,10 +167,11 @@ SECTION NPC $npc_a_frankenstein
     TOTAME 1100
     RACE $race_construct
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Frankenstein
 }
-
-
-//a reaper
 
 SECTION NPC $npc_a_reaper
 {
@@ -210,9 +215,11 @@ SECTION NPC $npc_a_reaper
     PRIV2 2
     RACE $race_vegetable
     DOORUSE 0
-}
 
-//a swamp tentacle
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Reaper
+}
 
 SECTION NPC $npc_a_swamp_tentacle
 {
@@ -245,9 +252,11 @@ SECTION NPC $npc_a_swamp_tentacle
     TOTAME 1100
     RACE $race_vegetable
     DOORUSE 0
-}
 
-//a corpser
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Swamp Tentacle
+}
 
 SECTION NPC $npc_a_corpser
 {
@@ -275,9 +284,11 @@ SECTION NPC $npc_a_corpser
     TOTAME 1100
     RACE $race_vegetable
     DOORUSE 0
-}
 
-// a giant rat
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Corpser
+}
 
 SECTION NPC $npc_a_giant_rat
 {
@@ -307,9 +318,11 @@ SECTION NPC $npc_a_giant_rat
     TOTAME 450
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a gazer
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Giant Rat
+}
 
 SECTION NPC $npc_a_gazer
 {
@@ -355,9 +368,11 @@ SECTION NPC $npc_a_gazer
     TOTAME 1100
     RACE $race_aberration
     DOORUSE 0
-}
 
-//an elder gazer
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gazer
+}
 
 SECTION NPC $npc_an_elder_gazer
 {
@@ -403,8 +418,11 @@ SECTION NPC $npc_an_elder_gazer
     TOTAME 1100
     RACE $race_aberration
     DOORUSE 0
-}
 
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gazer Elder
+}
 
 SECTION NPC $npc_xanathar
 {
@@ -452,9 +470,11 @@ SECTION NPC $npc_xanathar
     TOTAME 1100
     RACE $race_aberration
     DOORUSE 0
-}
 
-// a giant serpent
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Xanathar
+}
 
 SECTION NPC $npc_a_giant_serpent
 {
@@ -485,9 +505,11 @@ SECTION NPC $npc_a_giant_serpent
     TOTAME 1200
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a giant ice serpent
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Giant Serpent
+}
 
 SECTION NPC $npc_a_giant_ice_serpent
 {
@@ -524,9 +546,11 @@ SECTION NPC $npc_a_giant_ice_serpent
     WATERWALK
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a lava serpent
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Giant Serpent (ice)
+}
 
 SECTION NPC $npc_a_giant_lava_serpent
 {
@@ -558,6 +582,10 @@ SECTION NPC $npc_a_giant_lava_serpent
     WATERWALK
     RACE $race_animal_aberration
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Giant Serpent (lava)
 }
 
 
@@ -590,6 +618,10 @@ SECTION NPC $npc_a_hellcat
     TOTAME 760
     RACE $race_animal_aberration
     DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Hellcat
 }
 
 SECTION NPC $npc_a_hellcat_predator
@@ -621,8 +653,11 @@ SECTION NPC $npc_a_hellcat_predator
     TOTAME 930
     RACE $race_animal_aberration
     DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Hellcat Predator
 }
-//a frenzied ostard
 
 SECTION NPC $npc_a_frenzied_ostard
 {
@@ -652,6 +687,10 @@ SECTION NPC $npc_a_frenzied_ostard
     TOTAME 771
     RACE $race_animal
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Ostard (frenzied)
 }
 
 SECTION NPC $npc_a_hell_hound
@@ -685,9 +724,11 @@ SECTION NPC $npc_a_hell_hound
     TOTAME 855
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-// Mongbats
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Hell hound
+}
 
 SECTION NPC $npc_a_mongbat
 {
@@ -715,9 +756,11 @@ SECTION NPC $npc_a_mongbat
     TOTAME 50
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a giant toad
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Mongbat
+}
 
 SECTION NPC $npc_a_giant_toad
 {
@@ -746,6 +789,10 @@ SECTION NPC $npc_a_giant_toad
     TOTAME 771
     RACE $race_animal_aberration
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Giant Toad
 }
 
 //a harpy
@@ -778,9 +825,11 @@ SECTION NPC $npc_a_harpy
     TOTAME 1100
     RACE $race_humanoid_aberration
     DOORUSE 0
-}
 
-//a harpy hen
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Harpy
+}
 
 SECTION NPC $npc_a_harpy_hen
 {
@@ -809,9 +858,11 @@ SECTION NPC $npc_a_harpy_hen
     TOTAME 1100
     RACE $race_humanoid_aberration
     DOORUSE 0
-}
 
-//a stome harpy
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Harpy (hen)
+}
 
 SECTION NPC $npc_a_stone_harpy
 {
@@ -839,9 +890,11 @@ SECTION NPC $npc_a_stone_harpy
     TOTAME 1100
     RACE $race_humanoid_aberration
     DOORUSE 0
-}
 
-//a frost ooze
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Harpy (Stone)
+}
 
 SECTION NPC $npc_a_frost_ooze
 {
@@ -873,9 +926,11 @@ SECTION NPC $npc_a_frost_ooze
     TOTAME 1200
     RACE $race_slime
     DOORUSE 0
-}
 
-//a slime
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Frost Ooze
+}
 
 SECTION NPC $npc_a_slime
 {
@@ -906,9 +961,11 @@ SECTION NPC $npc_a_slime
     POISON 1
     RACE $race_slime
     DOORUSE 0
-}
 
-//a kraken
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Slime
+}
 
 SECTION NPC $npc_a_kraken
 {
@@ -941,9 +998,11 @@ SECTION NPC $npc_a_kraken
     WATERWALK
     RACE $race_aberration
     DOORUSE 0
-}
 
-//an alligator
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Kraken
+}
 
 SECTION NPC $npc_an_alligator
 {
@@ -973,6 +1032,10 @@ SECTION NPC $npc_an_alligator
     NPCAI $npc_ai_good
     RACE $race_animal
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Alligator
 }
 
 SECTION NPC $npc_a_lava_lizard
@@ -1006,9 +1069,11 @@ SECTION NPC $npc_a_lava_lizard
     WATERWALK
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-// a silver serpent
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Lava Lizard
+}
 
 SECTION NPC $npc_a_silver_serpent
 {
@@ -1038,9 +1103,11 @@ SECTION NPC $npc_a_silver_serpent
     TOTAME 700
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a giant silver serpent
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Serpent (silver)
+}
 
 SECTION NPC $npc_a_giant_silver_serpent
 {
@@ -1070,9 +1137,11 @@ SECTION NPC $npc_a_giant_silver_serpent
     TOTAME 1100
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a dark wolf
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Giant Serpent (silver)
+}
 
 SECTION NPC $npc_a_dark_wolf
 {
@@ -1102,9 +1171,11 @@ SECTION NPC $npc_a_dark_wolf
     TOTAME 750
     RACE $race_animal
     DOORUSE 0
-}
 
-//a sea serpent
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Wolf (dark)
+}
 
 SECTION NPC $npc_a_sea_serpent
 {
@@ -1135,10 +1206,11 @@ SECTION NPC $npc_a_sea_serpent
     TOTAME 1000
     RACE $race_animal_aberration
     DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Sea
+    ///DESCRIPTION Sea Serpent
 }
-
-
-//a plague rat
 
 SECTION NPC $npc_a_plague_rat
 {
@@ -1171,9 +1243,11 @@ SECTION NPC $npc_a_plague_rat
     TOTAME 1100
     RACE $race_animal
     DOORUSE 0
-}
 
-//a giant plague rat
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Plague Rat
+}
 
 SECTION NPC $npc_a_giant_plague_rat
 {
@@ -1209,9 +1283,11 @@ SECTION NPC $npc_a_giant_plague_rat
     TOTAME 1100
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a cranium rat
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Plague Rat (giant)
+}
 
 SECTION NPC $npc_a_cranium_rat
 {
@@ -1246,9 +1322,11 @@ SECTION NPC $npc_a_cranium_rat
     TOTAME 1100
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a giant cranium rat
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Cranium Rat
+}
 
 SECTION NPC $npc_a_giant_cranium_rat
 {
@@ -1287,9 +1365,11 @@ SECTION NPC $npc_a_giant_cranium_rat
     TOTAME 1100
     RACE $race_animal_aberration
     DOORUSE 0
-}
 
-//a gelatinous ooze
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Cranium Rat (giant)
+}
 
 SECTION NPC $npc_a_gelatinous_ooze
 {
@@ -1332,9 +1412,11 @@ SECTION NPC $npc_a_gelatinous_ooze
     TOTAME 1100
     RACE $race_slime
     DOORUSE 0
-}
 
-//a slithering tracker
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gelatinous Ooze
+}
 
 SECTION NPC $npc_a_slithering_tracker
 {
@@ -1369,9 +1451,11 @@ SECTION NPC $npc_a_slithering_tracker
     TOTAME 1100
     RACE $race_slime
     DOORUSE 0
-}
 
-//a floating book
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Slithering tracker
+}
 
 SECTION NPC $npc_a_floating_book
 {
@@ -1407,9 +1491,11 @@ SECTION NPC $npc_a_floating_book
     TOTAME 1100
     RACE $race_aberration
     DOORUSE 0
-}
 
-//a yellow mold
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Floating Book
+}
 
 SECTION NPC $npc_a_yellow_mold
 {
@@ -1440,9 +1526,11 @@ SECTION NPC $npc_a_yellow_mold
     TOTAME 110
     RACE $race_slime
     DOORUSE 0
-}
 
-//a olive slime
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Yellow mold
+}
 
 SECTION NPC $npc_an_olive_slime
 {
@@ -1472,9 +1560,11 @@ SECTION NPC $npc_an_olive_slime
     TOTAME 400
     RACE $race_slime
     DOORUSE 0
-}
 
-//a giant slime
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Olive Slime
+}
 
 SECTION NPC $npc_a_giant_slime
 {
@@ -1507,10 +1597,11 @@ SECTION NPC $npc_a_giant_slime
     GOLD 150 170
     RACE $race_slime
     DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Giant Slime
 }
-
-
-//an efreeti
 
 SECTION NPC $npc_efreeti
 {
@@ -1539,9 +1630,11 @@ SECTION NPC $npc_efreeti
     NPCAI $npc_ai_healer
     TOTAME 110
     DOORUSE 0
-}
 
-//a phoenix
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Efreeti
+}
 
 SECTION NPC $npc_a_phoenix
 {
@@ -1572,9 +1665,11 @@ SECTION NPC $npc_a_phoenix
     NPCAI $npc_ai_evil
     TOTAME 1100
     DOORUSE 0
-}
 
-//a nightmare
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Phoenix
+}
 
 SECTION NPC $npc_a_nightmare
 {
@@ -1606,9 +1701,11 @@ SECTION NPC $npc_a_nightmare
     NPCAI $npc_ai_evil
     TOTAME 954
     DOORUSE 0
-}
 
-//a sliver steed
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Nightmare
+}
 
 SECTION NPC $npc_a_silver_steed
 {
@@ -1639,6 +1736,9 @@ SECTION NPC $npc_a_silver_steed
     GOLD 1200 2400
     TOTAME 954
     DOORUSE 0
-}
 
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Silver Steed
+}
 

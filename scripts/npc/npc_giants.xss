@@ -9,8 +9,6 @@
 //********************** Titans, Cycloptians, Giants **************
 //*****************************************************************
 
-//an ogre with club
-
 SECTION NPC $npc_an_ogre
 {
     NAME an ogre
@@ -48,9 +46,11 @@ SECTION NPC $npc_an_ogre
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-//an ettin
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Ogre (with club)
+}
 
 SECTION NPC $npc_an_ettin
 {
@@ -85,9 +85,11 @@ SECTION NPC $npc_an_ettin
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-//an ogre lord
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Ettin
+}
 
 SECTION NPC $npc_an_ogre_lord
 {
@@ -126,9 +128,11 @@ SECTION NPC $npc_an_ogre_lord
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-//an artice ogre lord
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Ogre Lord
+}
 
 SECTION NPC $npc_an_arctic_ogre_lord
 {
@@ -166,9 +170,11 @@ SECTION NPC $npc_an_arctic_ogre_lord
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-// ettin with large macefighting weapon
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Arctic Ogre Lord
+}
 
 SECTION NPC $npc_an_ettin_1
 {
@@ -212,9 +218,11 @@ SECTION NPC $npc_an_ettin_1
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-// troll with two handed axes
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Ettin with weapon
+}
 
 SECTION NPC $npc_a_troll
 {
@@ -248,9 +256,11 @@ SECTION NPC $npc_a_troll
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-//a troll
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Troll (with axe)
+}
 
 SECTION NPC $npc_a_troll_1
 {
@@ -281,9 +291,11 @@ SECTION NPC $npc_a_troll_1
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-// Troll with macefighting weapon
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Troll
+}
 
 SECTION NPC $npc_a_troll_2
 {
@@ -318,9 +330,11 @@ SECTION NPC $npc_a_troll_2
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-// troll with two handed axes
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Troll (with mace)
+}
 
 SECTION NPC $npc_a_frost_troll
 {
@@ -354,9 +368,11 @@ SECTION NPC $npc_a_frost_troll
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-// a cyclopedian warrior
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Troll (frost)
+}
 
 SECTION NPC $npc_a_cyclopedian_warrior
 {
@@ -393,9 +409,11 @@ SECTION NPC $npc_a_cyclopedian_warrior
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-//a titan
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Cyclopedian Warrior
+}
 
 SECTION NPC $npc_a_titan
 {
@@ -434,9 +452,11 @@ SECTION NPC $npc_a_titan
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-//an ice titan
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Titan
+}
 
 SECTION NPC $npc_an_ice_titan
 {
@@ -475,8 +495,11 @@ SECTION NPC $npc_an_ice_titan
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Titan (ice)
 }
-//a giant
 
 SECTION NPC $npc_a_giant
 {
@@ -507,9 +530,11 @@ SECTION NPC $npc_a_giant
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-//an ice giant
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Giant
+}
 
 SECTION NPC $npc_an_ice_giant
 {
@@ -541,6 +566,10 @@ SECTION NPC $npc_an_ice_giant
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Giant (ice)
 }
 
 //a forest giant
@@ -574,9 +603,11 @@ SECTION NPC $npc_a_forest_giant
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
-//a fire giant
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Giant (forest)
+}
 
 SECTION NPC $npc_a_fire_giant
 {
@@ -608,6 +639,9 @@ SECTION NPC $npc_a_fire_giant
     TOTAME 1100
     RACE $race_giant
     DOORUSE 1
-}
 
+    ///CATEGORY Evil
+    ///SUBSECTION Giants
+    ///DESCRIPTION Giant (fire)
+}
 

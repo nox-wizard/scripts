@@ -4,16 +4,9 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-//******************************************************
-//***************** Guards and Merchants ***************
-//*****************                      ***************
-//******************************************************
-
-
 SECTION NPC $npc_guard_f
 {
     NAMELIST $names_females
-    //$$ guard f
     TITLE the guard
     ID 0191
     ITEM $item_random_female_hair_list
@@ -44,12 +37,15 @@ SECTION NPC $npc_guard_f
     FX2 15
     NPCAI $npc_ai_guard
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Guard [F]
 }
 
 SECTION NPC $npc_guard_f_1
 {
     NAMELIST $names_females
-    //$$ guard f
     TITLE the guard
     ID 0191
     ITEM $item_random_female_hair_list
@@ -83,12 +79,15 @@ SECTION NPC $npc_guard_f_1
     FX2 15
     NPCAI $npc_ai_teleportguard
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Guard [F]
 }
 
 SECTION NPC $npc_guard_m
 {
     NAMELIST $names_males
-    //$$ guard m
     TITLE the guard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -127,12 +126,15 @@ SECTION NPC $npc_guard_m
     FX2 15
     NPCAI $npc_ai_teleportguard
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Guard [M]
 }
 
 SECTION NPC $npc_knight_2
 {
     NAMELIST $names_males
-    //$$ knight
     TITLE the Knight
     SKINLIST 16
     DIRECTION N
@@ -171,12 +173,15 @@ SECTION NPC $npc_knight_2
     FZ1 -1
     FX2 20
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Knight
 }
 
 SECTION NPC $npc_knight_3
 {
     NAMELIST $names_males
-    //$$ knight
     TITLE the Knight
     ID 0190
     ITEM $item_random_male_hair_list
@@ -216,12 +221,15 @@ SECTION NPC $npc_knight_3
     FZ1 -1
     FX2 20
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Knight
 }
 
 SECTION NPC $npc_land_lord
 {
     NAMELIST $names_males
-    //$$ land lord
     TITLE the Lord of the Land
     ID 0190
     ITEM $item_random_male_hair_list
@@ -263,12 +271,15 @@ SECTION NPC $npc_land_lord
     FX2 20
     NPCAI $npc_ai_evil
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Land Lord
 }
 
 SECTION NPC $npc_guard
 {
     NAMELIST $names_males
-    //$$ guard
     TITLE the guard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -308,12 +319,15 @@ SECTION NPC $npc_guard
     FX2 15
     NPCAI $npc_ai_guard
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Guard [M]
 }
 
 SECTION NPC $npc_banker_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ banker f
     TITLE the banker
     ID 0191
     PRIV1 4
@@ -351,12 +365,15 @@ SECTION NPC $npc_banker_f
     NPCAI $npc_ai_banker
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Banker [F]
 }
 
 SECTION NPC $npc_bard_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ bard f
     TITLE the bard
     ID 0191
     PRIV1 4
@@ -408,12 +425,15 @@ SECTION NPC $npc_bard_f
     SELLITEM $item_lute_1
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Bard [F]
 }
 
 SECTION NPC $npc_miner_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ miner m
     TITLE the miner
     ID 0190
     PRIV1 4
@@ -455,12 +475,15 @@ SECTION NPC $npc_miner_m
     SELLITEM $item_iron_ingots
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Miner [M]
 }
 
 SECTION NPC $npc_miner_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ miner f
     TITLE the miner
     ID 0191
     PRIV1 4
@@ -502,12 +525,15 @@ SECTION NPC $npc_miner_f
     SELLITEM $item_iron_ingots
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Miner [F]
 }
 
 SECTION NPC $npc_weaponsmith_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ weaponsmith m
     TITLE the Weaponsmith
     ID 0190
     PRIV1 4
@@ -781,13 +807,16 @@ SECTION NPC $npc_weaponsmith_m
     SELLITEM $item_a_magic_war_mace_of_vanquishing
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Weaponsmith [M]
 }
 
 
 SECTION NPC $npc_weaponsmith_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ weaponsmith f
     TITLE the Weaponsmith
     ID 0191
     PRIV1 4
@@ -1062,12 +1091,15 @@ SECTION NPC $npc_weaponsmith_f
     SELLITEM $item_a_magic_war_mace_of_ruin
     SELLITEM $item_a_magic_war_mace_of_vanquishing
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Weaponsmith [F]
 }
 
-SECTION NPC $npc_maker_m
+SECTION NPC $npc_baker_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ maker m
     TITLE the baker
     ID 0190
     PRIV1 4
@@ -1158,12 +1190,15 @@ SECTION NPC $npc_maker_m
     SELLITEM $item_watermelons
     SELLITEM $item_cookie_mix
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Baker [M]
 }
 
 SECTION NPC $npc_baker_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ baker f
     TITLE the baker
     ID 0191
     PRIV1 4
@@ -1254,12 +1289,15 @@ SECTION NPC $npc_baker_f
     SELLITEM $item_watermelons
     SELLITEM $item_cookie_mix
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Baker [F]
 }
 
 SECTION NPC $npc_provisioner_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ provisioner m
     TITLE the provisioner
     ID 0190
     PRIV1 4
@@ -1513,12 +1551,15 @@ SECTION NPC $npc_provisioner_m
     SELLITEM $item_torch
     SELLITEM $item_lantern
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Provisioner [M]
 }
 
 SECTION NPC $npc_provisioner_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ provisioner f
     TITLE the provisioner
     ID 0191
     PRIV1 4
@@ -1772,12 +1813,15 @@ SECTION NPC $npc_provisioner_f
     SELLITEM $item_torch
     SELLITEM $item_lantern
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Provisioner [F]
 }
 
 SECTION NPC $npc_cobbler_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ cobbler m
     TITLE the cobbler
     ID 0190
     PRIV1 4
@@ -1818,12 +1862,15 @@ SECTION NPC $npc_cobbler_m
     SELLITEM $item_shoes
     SELLITEM $item_thigh_boots
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Cobbler [M]
 }
 
 SECTION NPC $npc_cobbler_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ cobbler f
     TITLE the cobbler
     ID 0191
     PRIV1 4
@@ -1864,12 +1911,15 @@ SECTION NPC $npc_cobbler_f
     SELLITEM $item_shoes
     SELLITEM $item_thigh_boots
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Cobbler [F]
 }
 
 SECTION NPC $npc_innkeeper_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ innkeeper m
     TITLE the innkeeper
     ID 0190
     PRIV1 4
@@ -1917,12 +1967,15 @@ SECTION NPC $npc_innkeeper_m
     SELLITEM $item_bread_loaves
     SELLITEM $item_cuts_of_ribs
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Innkeeper [M]
 }
 
 SECTION NPC $npc_innkeeper_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ innkeeper f
     TITLE the innkeeper
     ID 0191
     PRIV1 4
@@ -1970,12 +2023,15 @@ SECTION NPC $npc_innkeeper_f
     SELLITEM $item_bread_loaves
     SELLITEM $item_cuts_of_ribs
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Innkeeper [F]
 }
 
 SECTION NPC $npc_mage_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ mage m
     TITLE the mage
     ID 0190
     PRIV1 4
@@ -2148,12 +2204,15 @@ SECTION NPC $npc_mage_m
     SELLITEM $item_a_earthquake_scroll
     SELLITEM $item_blank_scrolls
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Mage [M]
 }
 
 SECTION NPC $npc_mage_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ mage f
     TITLE the mage
     ID 0191
     PRIV1 4
@@ -2323,12 +2382,15 @@ SECTION NPC $npc_mage_f
     SELLITEM $item_a_earthquake_scroll
     SELLITEM $item_blank_scrolls
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Mage [F]
 }
 
 SECTION NPC $npc_herbalist_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ herbalist m
     TITLE the herbalist
     ID 0190
     PRIV1 4
@@ -2378,12 +2440,15 @@ SECTION NPC $npc_herbalist_m
     SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Herbalist [M]
 }
 
 SECTION NPC $npc_herbalist_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ herbalist f
     TITLE the herbalist
     ID 0191
     PRIV1 4
@@ -2433,12 +2498,15 @@ SECTION NPC $npc_herbalist_f
     SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Herbalist [F]
 }
 
 SECTION NPC $npc_butcher_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ butcher m
     TITLE the butcher
     ID 0190
     PRIV1 4
@@ -2488,12 +2556,15 @@ SECTION NPC $npc_butcher_m
     SELLITEM $item_slices_of_bacon
     SELLITEM $item_cuts_of_raw_ribs
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Butcher [M]
 }
 
 SECTION NPC $npc_butcher_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ butcher f
     TITLE the butcher
     ID 0191
     PRIV1 4
@@ -2543,12 +2614,15 @@ SECTION NPC $npc_butcher_f
     SELLITEM $item_cuts_of_raw_ribs
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Butcher [F]
 }
 
 SECTION NPC $npc_tailor_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ tailor m
     TITLE the tailor
     ID 0190
     PRIV1 4
@@ -2661,12 +2735,15 @@ SECTION NPC $npc_tailor_m
     SELLITEM $item_bolts_of_cloth_6
     SELLITEM $item_bolts_of_cloth_7
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Tailor [M]
 }
 
 SECTION NPC $npc_tailor_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ tailor f
     TITLE the tailor
     ID 0191
     PRIV1 4
@@ -2777,12 +2854,15 @@ SECTION NPC $npc_tailor_f
     SELLITEM $item_bolts_of_cloth_6
     SELLITEM $item_bolts_of_cloth_7
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Tailor [F]
 }
 
 SECTION NPC $npc_bowyer_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ bowyer m
     TITLE the bowyer
     ID 0190
     PRIV1 4
@@ -2849,11 +2929,14 @@ SECTION NPC $npc_bowyer_m
     SELLITEM $item_a_magic_heavy_crossbow_of_vanquishing
     DOORUSE 1
 }
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Bowyer [M]
+
 
 SECTION NPC $npc_bowyer_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ bowyer f
     TITLE the bowyer
     ID 0191
     PRIV1 4
@@ -2919,11 +3002,14 @@ SECTION NPC $npc_bowyer_f
     SELLITEM $item_a_magic_heavy_crossbow_of_ruin
     SELLITEM $item_a_magic_heavy_crossbow_of_vanquishing
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Bowyer [F]
 }
 
 SECTION NPC $npc_jeweler_m
 { Invul Spawner
-    //$$ jeweler m
     NAMELIST $names_males
     TITLE the jeweler
     ID 0190
@@ -3037,12 +3123,15 @@ SECTION NPC $npc_jeweler_m
     SELLITEM $item_necklace_2
     SELLITEM $item_ring
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Jeweler [M]
 }
 
 SECTION NPC $npc_jeweler_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ jeweler f
     TITLE the jeweler
     ID 0191
     PRIV1 4
@@ -3155,12 +3244,15 @@ SECTION NPC $npc_jeweler_f
     SELLITEM $item_necklace_2
     SELLITEM $item_ring
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Jeweler [F]
 }
 
 SECTION NPC $npc_leather_worker_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ leather worker m
     TITLE the leather worker
     ID 0190
     PRIV1 4
@@ -3257,12 +3349,15 @@ SECTION NPC $npc_leather_worker_m
     SELLITEM $item_boots
     SELLITEM $item_thigh_boots
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Leather Worker [M]
 }
 
 SECTION NPC $npc_leather_worker_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ leather worker f
     TITLE the leather worker
     ID 0191
     PRIV1 4
@@ -3360,12 +3455,15 @@ SECTION NPC $npc_leather_worker_f
     SELLITEM $item_boots
     SELLITEM $item_thigh_boots
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Leather Worker [F]
 }
 
 SECTION NPC $npc_shipwright_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ shipwright m
     TITLE the shipwright
     ID 0190
     PRIV1 4
@@ -3401,12 +3499,15 @@ SECTION NPC $npc_shipwright_m
     DEF 5
     SHOPKEEPER
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Shipwright [M]
 }
 
 SECTION NPC $npc_shipwright_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ shipwright f
     TITLE the shipwright
     ID 0191
     PRIV1 4
@@ -3454,12 +3555,15 @@ SECTION NPC $npc_shipwright_f
     SELLITEM
     SELLITEM
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Shipwright [F]
 }
 
 SECTION NPC $npc_spinner_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ spinner m
     TITLE the spinner
     ID 0190
     PRIV1 4
@@ -3529,12 +3633,15 @@ SECTION NPC $npc_spinner_m
     SELLITEM $item_bolts_of_cloth_6
     SELLITEM $item_bolts_of_cloth_7
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Spinner [M]
 }
 
 SECTION NPC $npc_spinner_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ spinner f
     TITLE the spinner
     ID 0191
     PRIV1 4
@@ -3603,12 +3710,15 @@ SECTION NPC $npc_spinner_f
     SELLITEM $item_bolts_of_cloth_6
     SELLITEM $item_bolts_of_cloth_7
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Spinner [F]
 }
 
 SECTION NPC $npc_armorer_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ armorer m
     TITLE the armorer
     ID 0190
     PRIV1 4
@@ -3842,12 +3952,15 @@ SECTION NPC $npc_armorer_m
     SELLITEM $item_a_wooden_shield_of_hardening
     SELLITEM $item_a_wooden_shield_of_invulnerablity
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Armorer [M]
 }
 
 SECTION NPC $npc_armorer_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ armorer f
     TITLE the armorer
     ID 0191
     PRIV1 4
@@ -4081,12 +4194,15 @@ SECTION NPC $npc_armorer_f
     SELLITEM $item_a_wooden_shield_of_hardening
     SELLITEM $item_a_wooden_shield_of_invulnerablity
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Armorer [F]
 }
 
 SECTION NPC $npc_blacksmith_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ blacksmith m
     TITLE the Blacksmith
     ID 0190
     PRIV1 4
@@ -4243,12 +4359,15 @@ SECTION NPC $npc_blacksmith_m
     SELLITEM $item_battle_axe
     SELLITEM $item_kindling
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Blacksmith [M]
 }
 
 SECTION NPC $npc_blacksmith_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ blacksmith f
     TITLE the Blacksmith
     ID 0191
     PRIV1 4
@@ -4405,12 +4524,15 @@ SECTION NPC $npc_blacksmith_f
     SELLITEM $item_battle_axe
     SELLITEM $item_kindling
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Blacksmith [F]
 }
 
 SECTION NPC $npc_architech_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ architech m
     TITLE the architect
     ID 0190
     PRIV1 4
@@ -4491,12 +4613,15 @@ SECTION NPC $npc_architech_m
     SELLITEM $item_large_marble_patio_house_deed
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Architect [M]
 }
 
 SECTION NPC $npc_architect_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ architect f
     TITLE the architect
     ID 0191
     PRIV1 4
@@ -4578,12 +4703,15 @@ SECTION NPC $npc_architect_f
     SELLITEM $item_large_marble_patio_house_deed
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Architect [F]
 }
 
 SECTION NPC $npc_carpenter_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ carpenter m
     TITLE the Carpenter
     ID 0190
     PRIV1 4
@@ -4699,12 +4827,15 @@ SECTION NPC $npc_carpenter_m
     SELLITEM $item_table_1
     SELLITEM $item_table_2
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Carpenter [M]
 }
 
 SECTION NPC $npc_carpenter_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ carpenter f
     TITLE the Carpenter
     ID 0191
     PRIV1 4
@@ -4819,12 +4950,15 @@ SECTION NPC $npc_carpenter_f
     SELLITEM $item_table_1
     SELLITEM $item_table_2
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Carpenter [F]
 }
 
 SECTION NPC $npc_farmer_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ farmer m
     TITLE the Farmer
     ID 0190
     PRIV1 4
@@ -4899,12 +5033,15 @@ SECTION NPC $npc_farmer_m
     SELLITEM $item_watermelons
     SELLITEM $item_sheaf_of_hay
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Farmer [M]
 }
 
 SECTION NPC $npc_farmer_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ farmer f
     TITLE the Farmer
     ID 0191
     PRIV1 4
@@ -4978,12 +5115,15 @@ SECTION NPC $npc_farmer_f
     SELLITEM $item_watermelons
     SELLITEM $item_sheaf_of_hay
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Farmer [F]
 }
 
 SECTION NPC $npc_cook_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ cook m
     TITLE the cook
     ID 0190
     PRIV1 4
@@ -5059,12 +5199,15 @@ SECTION NPC $npc_cook_m
     SELLITEM $item_bowl_of_stew
     SELLITEM $item_tomato_soup
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Cook [M]
 }
 
 SECTION NPC $npc_cook_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ cook f
     TITLE the cook
     ID 0191
     PRIV1 4
@@ -5139,12 +5282,15 @@ SECTION NPC $npc_cook_f
     SELLITEM $item_bowl_of_stew
     SELLITEM $item_tomato_soup
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Cook [F]
 }
 
 SECTION NPC $npc_animal_trainer_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ animal trainer m
     TITLE the Animal Trainer
     STABLEMASTER
     ID 0190
@@ -5202,12 +5348,15 @@ SECTION NPC $npc_animal_trainer_m
     SELLITEM $item_pet_ostard
     SELLITEM $item_pet_llama
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Animal Trainer [M]
 }
 
 SECTION NPC $npc_animal_trainer_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ animal trainer f
     TITLE the Animal Trainer
     STABLEMASTER
     ID 0191
@@ -5264,12 +5413,15 @@ SECTION NPC $npc_animal_trainer_f
     SELLITEM $item_pet_ostard
     SELLITEM $item_pet_llama
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Animal Trainer [F]
 }
 
 SECTION NPC $npc_fisherman_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ fisherman m
     TITLE The Fisherman
     ID 0190
     PRIV1 4
@@ -5312,12 +5464,15 @@ SECTION NPC $npc_fisherman_m
     SELLITEM $item_fish
     SELLITEM $item_raw_fish
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Fisherman [M]
 }
 
 SECTION NPC $npc_fisherman_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ fisherman f
     TITLE The Fisherlady
     ID 0191
     PRIV1 4
@@ -5360,12 +5515,15 @@ SECTION NPC $npc_fisherman_f
     SELLITEM $item_fish
     SELLITEM $item_raw_fish
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Fisherman [F]
 }
 
 SECTION NPC $npc_alchemist_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ alchemist m
     TITLE the Alchemist
     ID 0190
     PRIV1 4
@@ -5458,12 +5616,15 @@ SECTION NPC $npc_alchemist_m
     FX2 5
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Alchemist [M]
 }
 
 SECTION NPC $npc_alchemist_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ alchemist f
     TITLE the Alchemist
     ID 0191
     PRIV1 4
@@ -5554,12 +5715,15 @@ SECTION NPC $npc_alchemist_f
     FX2 5
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Alchemist [F]
 }
 
 SECTION NPC $npc_tinker_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ tinker m
     TITLE the Tinker
     ID 0190
     PRIV1 4
@@ -5613,12 +5777,15 @@ SECTION NPC $npc_tinker_m
     SELLITEM $item_springs
     SELLITEM $item_tinkers_tools
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Tinker [M]
 }
 
 SECTION NPC $npc_tinker_f
 { Invul Spawner
     NAMELIST $names_females
-    //$$ tinker f
     TITLE the Tinker
     ID 0191
     PRIV1 4
@@ -5674,6 +5841,10 @@ SECTION NPC $npc_tinker_f
     SELLITEM $item_springs
     SELLITEM $item_tinkers_tools
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Tinker [F]
 }
 
 SECTION NPC $npc_que
@@ -5716,6 +5887,10 @@ SECTION NPC $npc_que
     SELLITEM $item_a_cannon_ball
     SELLITEM $item_iron_ingots
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Engineer [M]
 }
 
 SECTION NPC $npc_jessie
@@ -5751,12 +5926,15 @@ SECTION NPC $npc_jessie
     LOCKPICKING 400 600
     DAMAGE 3 15
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Engineer [F]
 }
 
 SECTION NPC $npc_banker_m
 { Invul Spawner
     NAMELIST $names_males
-    //$$ banker m
     TITLE the banker
     ID 0190
     PRIV1 4
@@ -5793,12 +5971,15 @@ SECTION NPC $npc_banker_m
     NPCAI $npc_ai_banker
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Banker [M]
 }
 
 SECTION NPC $npc_wandering_healer_m
 {
     NAMELIST $names_males
-    //$$ wandering healer m
     TITLE the wandering healer
     ID 0190
     SKINLIST 16
@@ -5850,12 +6031,15 @@ SECTION NPC $npc_wandering_healer_m
     SELLITEM $item_cut_cloth
     SELLITEM $item_clean_bandages
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Wandering Healer [M]
 }
 
 SECTION NPC $npc_wandering_healer_f
 {
     NAMELIST $names_females
-    //$$ wandering healer f
     TITLE the wandering healer
     ID 0191
     ITEM $item_random_female_hair_list
@@ -5906,12 +6090,15 @@ SECTION NPC $npc_wandering_healer_f
     SELLITEM $item_clean_bandages
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Wandering Healer [F]
 }
 
 SECTION NPC $npc_bard_m
 {
     NAMELIST $names_males
-    //$$ bard m
     TITLE the bard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -5962,13 +6149,16 @@ SECTION NPC $npc_bard_m
     NPCWANDER 3
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Bard [M]
 }
 
 SECTION NPC $npc_baker_m
 {
     NAMELIST $names_males
     TITLE the baker
-    //$$ baker m
     ID 0190
     ITEM $item_random_male_hair_list
     HAIRCOLOR 15
@@ -6057,182 +6247,15 @@ SECTION NPC $npc_baker_m
     SELLITEM $item_watermelons
     SELLITEM $item_cookie_mix
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Baker [M]
 }
 
-SECTION NPC $npc_mage_f_1
-{
-    NAMELIST $names_males
-    TITLE the mage
-    //$$ mage f
-    ID 0190
-    ITEM $item_random_male_hair_list
-    HAIRCOLOR 15
-    SKINLIST 16
-    DIRECTION N
-    BACKPACK
-    NPCWANDER 4
-    FX1 -1
-    FY1 -1
-    FZ1 -1
-    FX2 5
-    ITEM $item_a_wizards_hat
-    COLORLIST 2
-    ITEM $item_male_fancy_shirts_list
-    COLORLIST 2
-    ITEM $item_male_fancy_pants_list
-    COLORLIST 2
-    ITEM $item_male_fancy_footwear_list
-    ITEM $item_male_fancy_robe_list
-    COLORLIST 2
-    ITEM $item_male_fancy_cape_list
-    COLORLIST 2
-    SPEECH $speech_mage
-    STR 130 160
-    DEX 40 80
-    INT 75 140
-    KARMA -5000
-    FAME 3500
-    TOTAME 1100
-    MAGERY 800 1000
-    TACTICS 700 800
-    PARRYING 600 800
-    WRESTLING 700 800
-    MACEFIGHTING 600 700
-    MAGICRESISTANCE 600 800
-    MEDITATION 400 600
-    DAMAGE 3 15
-    DEF 5
-    SPATTACK 7552
-    SPADELAY 10
-    GOLD 80 150
-    NPCAI $npc_ai_evil
-    DOORUSE 1
-}
-
-SECTION NPC $npc_mage_m_2
-{
-    NAMELIST $names_males
-    TITLE the mage
-    //$$ mage m
-    ID 0191
-    ITEM $item_random_male_hair_list
-    HAIRCOLOR 15
-    SKINLIST 16
-    DIRECTION N
-    BACKPACK
-    NPCWANDER 4
-    FX1 -1
-    FY1 -1
-    FZ1 -1
-    FX2 5
-    SPEECH $speech_mage
-    STR 130 160
-    DEX 40 80
-    INT 75 140
-    KARMA -2000
-    FAME 2500
-    TOTAME 1100
-    MAGERY 800 1000
-    TACTICS 700 800
-    PARRYING 600 800
-    WRESTLING 700 800
-    MACEFIGHTING 600 700
-    MAGICRESISTANCE 600 800
-    MEDITATION 400 600
-    DAMAGE 3 15
-    DEF 5
-    SPATTACK 7552
-    SPADELAY 10
-    GOLD 10 50
-    DOORUSE 1
-}
-
-SECTION NPC $npc_mage_m_3
-{
-    NAMELIST $names_males
-    TITLE the mage
-    //$$ mage m
-    ID 0191
-    ITEM $item_random_male_hair_list
-    HAIRCOLOR 15
-    COLORMATCHHAIR
-    SKINLIST 16
-    DIRECTION N
-    BACKPACK
-    NPCWANDER 4
-    FX1 -1
-    FY1 -1
-    FZ1 -1
-    FX2 5
-    ITEM $item_a_robe
-    COLORLIST 2
-    SPEECH $speech_mage
-    STR 130 160
-    DEX 40 80
-    INT 75 140
-    KARMA -5000
-    FAME 3500
-    TOTAME 1100
-    MAGERY 800 1000
-    TACTICS 700 800
-    PARRYING 600 800
-    WRESTLING 700 800
-    MACEFIGHTING 600 700
-    MAGICRESISTANCE 600 800
-    MEDITATION 400 600
-    DAMAGE 3 15
-    DEF 5
-    SPATTACK 7552
-    SPADELAY 10
-    GOLD 10 50
-    DOORUSE 1
-}
-
-SECTION NPC $npc_guildmaster_mage_m
-{
-    NAMELIST $names_males
-    TITLE the guildmaster mage
-    //$$ guildmaster mage m
-    ID 0190
-    ITEM $item_random_male_hair_list
-    HAIRCOLOR 15
-    SKINLIST 16
-    DIRECTION N
-    BACKPACK
-    NPCWANDER 4
-    FX1 -1
-    FY1 -1
-    FZ1 -1
-    FX2 5
-    ITEM $item_a_robe
-    COLORLIST 2
-    SPEECH $speech_mage
-    STR 130 160
-    DEX 40 80
-    INT 75 140
-    KARMA -2000
-    FAME 2500
-    TOTAME 1100
-    MAGERY 800 1000
-    TACTICS 700 800
-    PARRYING 600 800
-    WRESTLING 700 800
-    MACEFIGHTING 600 700
-    MAGICRESISTANCE 600 800
-    MEDITATION 400 600
-    DAMAGE 3 15
-    DEF 5
-    SPATTACK 7552
-    SPADELAY 10
-    GOLD 10 50
-    DOORUSE 1
-}
-
-// Wandering Healer
 SECTION NPC $npc_healer_m
 {
     NAMELIST $names_males
-    //$$ healer m
     TITLE the healer
     ID 0190
     ITEM $item_random_male_hair_list
@@ -6296,13 +6319,15 @@ SECTION NPC $npc_healer_m
     SELLITEM $item_lesser_heal_potion
     SELLITEM $item_mortar_and_pestal
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Healer [M]
 }
 
-// Wandering Healer
 SECTION NPC $npc_healer_f
 {
     NAMELIST $names_females
-    //$$ healer f
     TITLE the healer
     ID 0191
     ITEM $item_random_female_hair_list
@@ -6365,12 +6390,15 @@ SECTION NPC $npc_healer_f
     SELLITEM $item_lesser_heal_potion
     SELLITEM $item_mortar_and_pestal
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Healer [F]
 }
 
 SECTION NPC $npc_architect_m
 {
     NAMELIST $names_males
-    //$$ architect m
     TITLE the architect
     ID 0190
     ITEM $item_random_male_hair_list
@@ -6450,12 +6478,15 @@ SECTION NPC $npc_architect_m
     SELLITEM $item_large_marble_patio_house_deed
     TOTAME 1100
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Architect [M]
 }
 
 SECTION NPC $npc_tavernkeeper_m
 {
     NAMELIST $names_males
-    //$$ tavernkeeper m
     TITLE the Tavernkeeper
     ID 0191
     SKINLIST 16
@@ -6517,12 +6548,15 @@ SECTION NPC $npc_tavernkeeper_m
     SELLITEM $item_pitcher_of_wine
     SELLITEM $item_glass_of_milk
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Tavernkeeper [M]
 }
 
 SECTION NPC $npc_tavernkeeper_f
 {
     NAMELIST $names_females
-    //$$ tavernkeeper f
     TITLE the Tavernkeeper
     ID 0190
     SKINLIST 16
@@ -6584,12 +6618,15 @@ SECTION NPC $npc_tavernkeeper_f
     SELLITEM $item_pitcher_of_wine
     SELLITEM $item_glass_of_milk
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Tavernkeeper [M]
 }
 
 SECTION NPC $npc_fisherman
 {
     NAMELIST $names_males
-    //$$ fisherman
     TITLE the fisherman
     ID 0190
     ITEM $item_random_male_hair_list
@@ -6631,12 +6668,15 @@ SECTION NPC $npc_fisherman
     SELLITEM $item_fish
     SELLITEM $item_raw_fish
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Fisherman [M]
 }
 
 SECTION NPC $npc_fisherlady
 {
     NAMELIST $names_females
-    //$$ fisherlady
     TITLE the fisherlady
     ID 0191
     ITEM $item_random_female_hair_list
@@ -6678,12 +6718,15 @@ SECTION NPC $npc_fisherlady
     SELLITEM $item_fish
     SELLITEM $item_raw_fish
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Fisherman [F]
 }
 
 SECTION NPC $npc_necromancer
 {
     NAMELIST $names_necromancers
-    //$$ necromancer
     TITLE the necromancer
     ID 0190
     ITEM $item_random_male_hair_list
@@ -6784,12 +6827,15 @@ SECTION NPC $npc_necromancer
     SELLITEM $item_a_summon_zombie_scroll
 
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Necromancer [M]
 }
 
 SECTION NPC $npc_beekeeper_m
 {
     NAMELIST $names_males
-    //$$ beekeeper m
     TITLE the beekeeper
     ID 0190
     ITEM $item_random_male_hair_list
@@ -6834,12 +6880,15 @@ SECTION NPC $npc_beekeeper_m
     SELLITEM $item_candle_3
     SELLITEM $item_skull_candle
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Beekeper [M]
 }
 
 SECTION NPC $npc_beekeper_f
 {
     NAMELIST $names_females
-    //$$ beekeper f
     TITLE the beekeeper
     ID 0191
     ITEM $item_random_female_hair_list
@@ -6884,6 +6933,10 @@ SECTION NPC $npc_beekeper_f
     SELLITEM $item_candle_3
     SELLITEM $item_skull_candle
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Beekeper [F]
 }
 
 SECTION NPC $npc_que_1
@@ -6925,12 +6978,15 @@ SECTION NPC $npc_que_1
     SELLITEM $item_a_cannon_ball
     SELLITEM $item_iron_ingots
     DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Merchants
+    ///DESCRIPTION Engineer [M]
 }
 
 SECTION NPC $npc_player_vendor_template
 {
     NAMELIST $names_males
-    //$$ player vendor template
     SKINLIST 16
     SPEECH $speech_peasant
     TITLE The Vendor
@@ -6958,6 +7014,7 @@ SECTION NPC $npc_player_vendor_template
     WRESTLING 1000 900
     TACTICS 1000 900
     DOORUSE 1
-}
 
+    ///NOTLIST
+}
 
