@@ -73,7 +73,7 @@ SECTION IDLIST WTRIGR x1078
     NEED x1078
     USEUP 1
     SND 02 48
-    IDADD $item_leather $trg_intoBackpack 2
+    IADD $item_leather $trg_intoBackpack 2
     MSG You make some leather.
 }
 
