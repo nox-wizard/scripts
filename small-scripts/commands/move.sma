@@ -178,9 +178,11 @@ public cmd_move_targ_dst(target, chr, unused, x, y, z, unused2, param)
 			chr_moveTo(param,x,y,z);
 		if(isItem(param))
 		{	
+			new cont = itm_getProperty(param,IP_CONTAINERSERIAL);
 			itm_setProperty(param,IP_CONTAINERSERIAL,_,INVALID);
 			itm_moveTo(param,x,y,z);
 			itm_refresh(param);
+			if(isItem(cont)) itm_refresh(cont);
 		}
 		area_refresh(chr_getCmdArea(chr));
 		return;
