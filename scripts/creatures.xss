@@ -690,7 +690,7 @@ SECTION CREATURE $creature_dog
 	ICON 8405
 }
 
-SECTION CREATURE $creature_llama 
+SECTION CREATURE $creature_llama
 {
 	START_ATTACK 183
 	ATTACK 184
@@ -698,7 +698,7 @@ SECTION CREATURE $creature_llama
 	ICON 8438
 }
 
-SECTION CREATURE $creature_walrus 
+SECTION CREATURE $creature_walrus
 {
 	START_ATTACK 224
 	IDLE 225
