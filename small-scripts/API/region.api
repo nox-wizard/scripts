@@ -120,7 +120,102 @@ native rgn_getName(const region, regionName[]);
 */
 native rgn_getRegion(const x, const y);
 
+/*!
+\author Wintermute
+\fn rgn_respawn(const region, const spawnWhat, const amount = 0)
+\param 1 the region
+\param 2 enum value SPAWN_AMOUNT,	SPAWN_RANDOM or	SPAWN_MAX (fixed amount, random amount, spawn to the max
+\brief respawns dynamic and static spawns in a given region
+*/
+native rgn_respawn(const region, const spawnWhat, const amount = 0);
 
+/*!
+\author Wintermute
+\fn rgn_respawn(const region, const spawnWhat, const amount = 0)
+\param 1 the region
+\param 2 enum value SPAWN_ALL, SPAWN_DYNAMIC, SPAWN_STATIC
+\brief clears the given spawn type in a region
+*/
+native rgn_clearSpawn(const region, const spawntype);
+
+/*!
+\author Wintermute
+\fn rgn_respawn(const region, const amount = 0)
+\param 1 the region
+\param 2 the amount how often region spawning should be triggered
+\brief respawns dynamic and static spawns in a given region with the given amount (may vary a bit depending on spawn settings of region)
+*/
+stock rgn_respawnRegion ( const region, const amount)
+{
+	rgn_respawn( region, SPAWN_AMOUNT, amount);
+}
+
+/*!
+\author Wintermute
+\fn rgn_respawn(const region, const amount = 0)
+\param 1 the region
+\brief respawns dynamic and static spawns in a given region with a random amount of spawn trigger calls
+*/
+
+stock rgn_respawnRegionRandom ( const region)
+{
+	rgn_respawn( region, SPAWN_RANDOM);
+}
+
+/*!
+\author Wintermute
+\fn rgn_respawn(const region, const amount = 0)
+\param 1 the region
+\brief respawns dynamic and static spawns in a given region until they are spawned to the max
+*/
+
+stock rgn_respawnRegionMax ( const region)
+{
+	rgn_respawn( region, SPAWN_MAX);
+}
+
+/*!
+\author Wintermute
+\fn rgn_respawn()
+\brief respawns all dynamic and static spawns in every region 
+*/
+
+stock rgn_respawnAll ( )
+{
+	for (new i=0;i<256;i++)
+	{	
+		rgn_respawn( i, 1);
+	}
+}
+
+/*!
+\author Wintermute
+\fn rgn_respawnAllRandom()
+\brief respawns all dynamic and static spawns in every region with a random amount of spawn invocations
+*/
+
+stock rgn_respawnAllRandom ( )
+{
+	for (new i=0;i<256;i++)
+	{	
+		rgn_respawn( i, SPAWN_RANDOM);
+	}
+}
+
+/*!
+\author Wintermute
+\fn rgn_respawnAllMax()
+\brief respawns all dynamic and static spawns in every region to the max
+*/
+
+
+stock rgn_respawnAllMax ( )
+{
+	for (new i=0;i<256;i++)
+	{	
+		rgn_respawn( i, SPAWN_MAX );
+	}
+}
 
 
 /** @} */ // end of script_API_reg

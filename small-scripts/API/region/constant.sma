@@ -21,6 +21,19 @@ const RG2_Y1=1;
 const RG2_X2=2;
 const RG2_Y2=3;
 
+enum SPAWNFLAG_ENUM
+{
+	SPAWN_AMOUNT,
+	SPAWN_RANDOM,
+	SPAWN_MAX
+} ;
+
+enum SPAWNTYPE_ENUM
+{
+	SPAWN_ALL,
+	SPAWN_DYNAMIC,
+	SPAWN_STATIC
+} ;
 
 
 /* @} */
