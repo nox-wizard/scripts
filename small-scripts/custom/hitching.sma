@@ -54,10 +54,10 @@ if((DeltaY > 2) || (DeltaY < (-2)) || (DeltaX > 2) || (DeltaX < (-2)))
 }
 else
 {
-	if( chr_getProperty(target, CP_NPC, _) == 1 && ((petid != 0x0190) || (petid != 0x0191) )) //ist ein NPC, kein Vendor)
+	if( chr_getProperty(target, CP_NPC, _) == 1 && ((petid != 0x0190) || (petid != 0x0191) )) //ist NPC, no vendor/human char)
 	{
 		new owner = chr_getProperty(target, CP_OWNSERIAL);
-		//printf("owner: %d, char: %d, item: %d", owner, chr, pfosten);
+		//printf("owner: %d, char: %d, item: %d", owner, chr, post);
 		if( owner == chr)
 		{
 			new animal = itm_getLocalIntVar(pfosten, freeze_animal);
@@ -65,7 +65,7 @@ else
 			{
 				chr_setProperty(target,CP_PRIV2,_,2); //freeze
 				if(PetX < 0 || PetY < 0 || PfostenX < 0 || PfostenY < 0) richtung = DIR_UNDEF; //one coordinates is wrong
-				else if(PetX == PfostenX && PetY == PfostenY) richtung = DIR_UNDEF; //Same position ? No richtungection ! 
+				else if(PetX == PfostenX && PetY == PfostenY) richtung = DIR_UNDEF; //Same position ? No direction ! 
 				else if(DeltaY < 0) //north half 
 				{
 					if(DeltaX > 0) //north east quater 
@@ -106,8 +106,8 @@ else
 				chr_setProperty(target, CP_DIR, _, richtung); //turn to pfosten
 				chr_teleport(target);
 				
-				chr_speech(NPC_EMOTE_ALL,-1,chr,("%s", msg_freezeDef[2]),0); //emote
-				itm_setLocalIntVar(pfosten, freeze_animal, target); //Tierserial speichern auf Pfosten
+				chr_speech(chr, INVALID, SPEECH_EMOTE, _, _, ("%s", msg_freezeDef[2])); //emote
+				itm_setLocalIntVar(pfosten, freeze_animal, target); //animal serial store at post
 				itm_delEventHandler(pfosten, EVENT_ITM_ONDBLCLICK);
 				itm_setEventHandler(pfosten, EVENT_ITM_ONDBLCLICK, EVENTTYPE_STATIC, "_unfreezing"); //change doubleclick event
 			}
