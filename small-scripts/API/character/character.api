@@ -2068,7 +2068,7 @@ native chr_showMessage(const chrWhoSeesMsg, const chrWhoHasMsg, const msg[], con
 \since 0.60 
 \param 1 speaker 
 \param 2 listener 
-\param 3 version ( RUNIC or EMOTE or _ for plain text ) 
+\param 3 version ( RUNIC or EMOTE or TALK for plain text ) 
 \param 4 color 
 \param 5 antispam flag 
 \param 6 text 
