@@ -346,6 +346,40 @@ SECTION NPC $npc_a_sheep
     ///DESCRIPTION Sheep
 }
 
+//a sheered sheep
+
+SECTION NPC $npc_sheered_sheep
+{
+    NAME a sheep
+    ID 00df
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 50
+    DEX 15 20
+    INT 25
+    KARMA 0
+    FAME 0
+    PARRYING 250
+    MAGICRESISTANCE 250
+    TACTICS 250
+    WRESTLING 250
+    DAMAGE 1 5
+    DEF 5
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 111
+    RACE $race_animal
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Sheep
+}
+
 //a goat
 
 SECTION NPC $npc_a_goat
