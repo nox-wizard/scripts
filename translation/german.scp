@@ -1,16 +1,12 @@
 ///////////////////////////////////////////////////////////////////////////////
+//
 //   Questo file e' stato tradotto e modificato da Tancredi d'Altavilla
-//
-//
-//
+//   Updated 23 Sep 2003 by sirprize@sodge.org (English or German please)
 //
 //   you have to add your translation of the sentence right near the $
-//   Remember you MUST put the right number of %s ,%c ecc like in the original sentence
-//   and you MUST NOT use special key like ò à è ì * ° £ because 
-//   the Ultima Online client doesn't print them on screen
-//
-//
-//
+//   Remember you MUST put the right number of %s, %c and %i like in the
+//   original sentence and you MUST NOT use special key like ò à è ì * ° £ 
+//   because the Ultima Online client doesn't print them on screen
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -18,108 +14,113 @@
 
 
 
-// C:\noxwizard2\nox-wizard\src/amx.c
+// src/amx.c
 
 
-// C:\noxwizard2\nox-wizard\src/amx_comp.c
+// src/amx_comp.c
 
 
-// C:\noxwizard2\nox-wizard\src/amx_dbg.c
+// src/amx_dbg.c
 
 
-// C:\noxwizard2\nox-wizard\src/amxcons.c
+// src/amxcons.c
 
 
-// C:\noxwizard2\nox-wizard\src/amxcore.c
+// src/amxcore.c
 
 
-// C:\noxwizard2\nox-wizard\src/accounts.cpp
+// src/accounts.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/addmenu.cpp
+// src/addmenu.cpp
 
 Sorry, this menu was rather old :($Dieses Menue ist leider ziemlich alt :( 
 
-// C:\noxwizard2\nox-wizard\src/amxcback.cpp
+// src/amxcback.cpp
 
 You should be faster when choosing an option in your life..$Wuerdest Du eine Moeglichkeit auswaehlen, waerst Du schneller...
-*You should install a callback for the menu to work*$*Damit das Menue funktioniert, solltest Du ein Callback einbauen.
+*You should install a callback for the menu to work*$*Damit das Menue funktioniert, solltest Du ein Callback einbauen*
 
-// C:\noxwizard2\nox-wizard\src/amxscript.cpp
-
-
-// C:\noxwizard2\nox-wizard\src/amxwrap2.cpp
+// src/amxscript.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/amxwraps.cpp
+// src/amxwrap2.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/archive.cpp
+// src/amxwraps.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/basics.cpp
+// src/archive.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/boats.cpp
+// src/basics.cpp
+
+
+// src/boats.cpp
 
 you entered a boat$Ihr betretet das Schiff.
 You left the boat.$Ihr verlasst das Schiff.
 You cannot get off here!$Hier koennt Ihr nicht aussteigen!
-There was an error creating that boat.$Beim Erschaffen des Schiffes trat ein Fehler auf.
+There was an error creating that boat.$Beim Erschaffen dieses Schiffes trat ein Fehler auf.
 The deed is broken, please contact a Game Master.$Das Deed ist defekt, bitte ruft einen Gamemaster.
 You cannot place your boat there.$Hierhin koennt Ihr Euer Schiff nicht plazieren.
 Arr, Sir, we've hit rough waters!$Arg, Kapitaen, wir sind in stuermisches Wasser geraten!
-Arr, somethings in the way!$Arg etwas versperrt uns den Weg!
-Arr, something's in the way!$Arg da ist etwas im Weg!
+Arr, somethings in the way!$Arg, etwas versperrt uns den Weg!
+Arr, something's in the way!$Arg, da ist etwas im Weg!
 Aye, sir.$Aye, Sir!
-Arr,somethings in the way$Uff da ist was im Weg!
+Arr,somethings in the way$Uff, da ist was im Weg!
 
-// C:\noxwizard2\nox-wizard\src/books.cpp
-
-
-// C:\noxwizard2\nox-wizard\src/bounty.cpp
+// src/books.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/cache.cpp
+// src/bounty.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/calendar.cpp
+// src/cache.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/cfile.cpp
+// src/calendar.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/char_array.cpp
+// src/cfile.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/charwrap.cpp
+// src/char_array.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/client.cpp
+// src/chars.cpp
+// There should be more here, but they are spread across the whole file.
+[%i spells]$[%i Zaubersprueche]
 
 
-// C:\noxwizard2\nox-wizard\src/cmdtable.cpp
+// src/charwrap.cpp
+
+
+// src/client.cpp
+
+
+// src/cmdtable.cpp
 
 The bounty system is not active.$Das Kopfgeldsystem ist nicht aktiv.
 You can only place a bounty while you are a ghost.$Ihr koennt nur ein Kopfgeld aussetzen wenn Ihr ein Geist seid.
 You can only place a bounty once after someone has murdered you.$Erst wenn Euch jemand getoetet hat, koennt Ihr ein Kopfgeld aussetzen.
-You have placed a bounty of %d gold coins on %s.$Ihr habt ein Kopfgeld von %d Goldstuecken auf %s ausgestzt.
-You were not able to place a bounty (System Error)$Das Kopfgeld konnte nicht ausgesetzt werden (Server Fehler).
-You do not have enough gold to cover the bounty.$Ihr habt nicht genug Gold, um das Kopfgeld zu begleichen.
-To place a bounty on a murderer, use BOUNTY <amount>$Um ein Kopfgeld auf Euren Moerder auszusetzen, benutzt BOUNTY<Menge in Goldstuecken>
+You have placed a bounty of %d gold coins on %s.$Ihr habt ein Kopfgeld von %d Goldstuecken auf %s ausgesetzt.
+You were not able to place a bounty (System Error)$Das Kopfgeld konnte nicht ausgesetzt werden (Server-Fehler).
+You do not have enough gold to cover the bounty.$Ihr habt nicht genug Gold, um das Kopfgeld zu bezahlen.
+To place a bounty on a murderer, use BOUNTY <amount>$Um ein Kopfgeld auf Euren Moerder auszusetzen, benutzt BOUNTY <Menge in Goldstuecken>
 server is going to sleep for %i seconds!$Der Server wird in %i Sekunden angehalten.
 server is back from a %i second break$Der Server ist nach einer Unterbrechung von %i Sekunden wieder verfuegbar.
 Shutdown has been interrupted.$Server Shutdown wurde unterbrochen.
 This command is simply no more supported. Sorry :[$Dieser Befehl wird nicht mehr unterstuetzt, sorry. :[
-World is now respawning, expect some lag!$Es findet gerade ein World Respawn statt, bitte bereitet Euch auf etwas Lag vor!
+World is now respawning, expect some lag!$Es findet gerade ein Respawn der Welt statt, bitte bereitet Euch auf etwas Lag vor!
 Guards have been reactivated.$Die Wachen wurden wieder aktiviert.
 Warning: Guards have been deactivated globally.$Achtung: Die Wachen wurden global deaktiviert!
 WorldStat Saves will be displayed.$Speicherung des Serverstatus wird nun angezeigt.
 WorldStat Saves will not be displayed.$Speicherung des Serverstatus wird nun nicht mehr angezeigt.
-ALL Regions Spawning to MAX, this will cause some lag.$Alle Region Spawns sind auf Maximum, es wird etwas Lag auftreten.
+ALL Regions Spawning to MAX, this will cause some lag.$Alle Regionen werden maximal bespawnt, es wird etwas Lag auftreten.
 All NPC's have been wiped.$Alle NPC wurden geloescht.
 
-// C:\noxwizard2\nox-wizard\src/combat.cpp
+// src/combat.cpp
 
 This item is out of charges.$Dieser Gegenstand hat keine Ladungen mehr.
 You have been poisoned!$Ihr wurdet vergiftet!
@@ -128,7 +129,7 @@ Your shield has been destroyed$Euer Schild ist kaputt gegangen.
 hits you in your Chest!$trifft Euch am Brustkorb!
 lands a terrible blow to your Chest!$trifft Euch mit einem schrecklichen Schlag am Brustkorb!
 lands a blow to your Stomach!$trifft Euch am Bauch!
-knocks the wind out of you!$trifft Euch, dass Ihr nach Luft schnappt!
+knocks the wind out of you!$trifft Euch, dass Ihr nach Luft schnappen muesst!
 hits you in your Ribs!$trifft Eure Rippen!
 broken your Rib?!$hat Eure Rippe gebrochen?!
 hits you in Left Arm!$trifft Euren linken Arm!
@@ -143,11 +144,11 @@ hits you in Left Thigh!$trifft Euch in den linken Oberschenkel!
 hits you in Right Thigh!$trifft Euch in den rechten Oberschenkel! 
 hits you in Groin!$trifft Euch schmerzhaft in den Unterleib! 
 hits you to your Throat!$trifft Euch in den Hals!
-hits you in Left Hand!$trifft Dich in die linke Hand!
-hits you in Right Hand!$trifft Dich in die rechte Hand!
-You delivered a paralyzing blow$Du landest einen betaeubenden Schlag!
-Halt, scoundrel!$Halt du Schuft!
-You are out of ammunitions!Eure Munition ist alle!
+hits you in Left Hand!$trifft Euch in die linke Hand!
+hits you in Right Hand!$trifft Euch in die rechte Hand!
+You delivered a paralyzing blow$Ihr landet einen betaeubenden Schlag!
+Halt, scoundrel!$Halt, Du Schuft!
+You are out of ammunitions!$Eure Munition ist alle!
 You are too tired to attack.$Ihr seid zu muede um anzugreifen!
 You have killed %i innocent people.$Ihr habt %i unschuldige Personen getoetet.
 You are now a murderer!$Jetzt seid Ihr ein Moerder!
@@ -155,10 +156,10 @@ Your %s has been destroyed$Euer %s ist kaputt!
 Thou shalt regret thine actions, swine!$Das werdet Ihr bereuen, verdammter Schuft!
 *Doing a summoning ritual.*$*Beschwoert etwas.*
 
-// C:\noxwizard2\nox-wizard\src/commands.cpp
+// src/commands.cpp
 
-Region %d is Spawning %d items/NPCs, this will cause some lag.$In Region %d wird Item/NPC %d gespawnt, dies wird etwas Lag verursachen.
-Region %d is Spawning %d NPCs/items, this will cause some lag.$In Region %d wird Item/NPC %d gespawnt, dies wird etwas Lag verursachen.
+Region %d is Spawning %d items/NPCs, this will cause some lag.$In Region %d werden %d Gegenstaende/Personen gespawnt, dies wird etwas Lag verursachen.
+Region %d is Spawning %d NPCs/items, this will cause some lag.$In Region %d werden %d Personen/Gegenstaende gespawnt, dies wird etwas Lag verursachen.
 Killing all characters, this may cause some lag...$Alle Spieler werden getoetet, dies wird etwas Lag verursachen...
 The Counselor Queue is currently full. Contact the shard operator$Die Liste fuer Counseloranfragen ist voll. Bitte wendet Euch an den Shardadmin
 and ask them to increase the size of the queue.$und bittet Ihn, die Liste zu verlaengern.
@@ -169,39 +170,40 @@ The GM Queue is currently full. Contact the shard operator$Die Liste fuer GM-Anf
 Available Game Masters have been notified of your request.$Die verfuegbaren GMs wurden ueber Eure Anfrage informiert.
 There was no Game Master available to take your call.$Es ist kein GM verfuegbar, um sich um Eure Anfrage zu kuemmern.
 Please enter the reason for your GM request$Bitte gebt den Grund fuer Eure Anfrage ein
-All items have been wiped.$Alle Item wurden geloescht.
+All items have been wiped.$Alle Gegenstaende wurden geloescht.
 
-// C:\noxwizard2\nox-wizard\src/common_libs.cpp
-
-
-// C:\noxwizard2\nox-wizard\src/console.cpp
+// src/common_libs.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/crontab.cpp
+// src/console.cpp
+
+
+// src/crontab.cpp
 
 World will be saved in 30 seconds..$Weltsicherung erfolgt in 30 Sekunden...
 
-// C:\noxwizard2\nox-wizard\src/custmenu.cpp
+// src/custmenu.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/dbl_single_click.cpp
+// src/dbl_single_click.cpp
 
-ghosts cant do that!$Geiste sind dazu nicht in derLage!
-you need to be closer to play!$Um zu spielen, muesst Ihr naeher heran!
-you dont have enough gold to play!$Ihr habt nicht genug Gold, um zu spielen!
-Single bars, you are a winner!!$Ein Barren, Ihr habt gewonnen!!
-Double bars, you are a winner!!$Zwei Barren, Ihr habt gewonnen!!
-Triple bars, you are a winner!!$Drei Barren, Ihr habt gewonnen!!
-Any three 7`s, you are a winner!!$Drei Siebenen, Treffer!!
-Three blue 7`s, you are a winner!!$Drei blaue Siebenen, Treffer!!
-Three white 7`s, you are a winner!!$Drei weisse Siebenen, Treffer!!
-Three red 7`s, you are a winner!!$Drei rote Siebenen, Treffer!!
-Jackpot, you are a winner!!$Jackpot, Volltreffer!!
-Sorry,not a winner,please insert coins.$Leider verloren. Bitte Muenzen einwerfen zum Weiterspielen.
+// Not found in that file:
+// ghosts cant do that!$Geister sind dazu nicht in der Lage!
+// you need to be closer to play!$Um zu spielen, muesst Ihr naeher heran!
+// you dont have enough gold to play!$Ihr habt nicht genug Gold, um zu spielen!
+// Single bars, you are a winner!!$Ein Barren, Ihr habt gewonnen!!
+// Double bars, you are a winner!!$Zwei Barren, Ihr habt gewonnen!!
+// Triple bars, you are a winner!!$Drei Barren, Ihr habt gewonnen!!
+// Any three 7`s, you are a winner!!$Drei Siebener, Treffer!!
+// Three blue 7`s, you are a winner!!$Drei blaue Siebener, Treffer!!
+// Three white 7`s, you are a winner!!$Drei weisse Siebener, Treffer!!
+// Three red 7`s, you are a winner!!$Drei rote Siebenen, Treffer!!
+// Jackpot, you are a winner!!$Jackpot, Volltreffer!!
+// Sorry,not a winner,please insert coins.$Leider verloren. Bitte Muenzen einwerfen zum Weiterspielen.
 You must wait to perform another action.$Ihr muesst etwas abwarten, bevor Ihr wieder etwas ausfuehren koennt.
 That is a secured chest!$Diese Truhe ist gesichert!
 You may not do that as a ghost.$Das kann man als Geist nicht tun.
-You cannot use items equipped by other players.$Gegenstaende, die andere Spieler besitzen, kann man nicht benutzen.
+You cannot use items equipped by other players.$Gegenstaende, die andere Spieler tragen, kann man nicht benutzen.
 The scroll must be in your backpack to envoke its magic.$Um die Magie dieser Spruchrolle zu entfalten muesst Ihr sie in Eurem Rucksack haben.
 That doesnt seem to work right now.$Das scheint momentan nicht zu funktionieren.
 You are not close enough to use that.$Ihr muesst dazu naeher heran.
@@ -222,44 +224,44 @@ Select item to use the key on?$Womit wollt Ihr den Schluessel verwenden?
 This item is locked.$Das ist verschlossen.
 If you wish to open a spellbook, it must be equipped or in your main backpack.$Um ein Zauberbuch zu oeffnen, muesst Ihr es in Eurem Besitz haben.
 Books are currently disabled, sorry :($Buecher sind leider momentan unbrauchbar. :(
-You quickly unlock, use, and then relock the door.$Ihr schliesst die Tuer auf, geht hinein und schliesst hinter Euch wieder zu.
+You quickly unlock, use, and then relock the door.$Ihr schliesst die Tuer leise auf, geht hinein und schliesst hinter Euch wieder zu.
 This door is locked.$Diese Tuer ist verschlossen.
 You are simply too full to eat any more!$Ihr bekommt keinen Bissen mehr herunter!
 You eat the food, but are still extremely hungry.$Ihr verzehrt das Essen, aber auch danach seid Ihr noch furchtbar hungrig.
-After eating the food, you feel much less hungry.$Das Essen reicht, dass Ihr Euch hungrig fuehlt.
+After eating the food, you feel much less hungry.$Nach dem Essen fuehlt Ihr Euch weniger hungrig.
 You eat the food, and begin to feel more satiated.$Ihr verzehrt das Essen und seid satt.
-You feel quite full after consuming the food.$Jetzt seid Ihr ganzschoen voll.
-You are nearly stuffed, but manage to eat the food.$Ihr seid zwar schon total vollgestopft, bringt diese Essen aber trotzdem noch herunter.
+You feel quite full after consuming the food.$Nach dem Essen seid Ihr ganz schoen voll.
+You are nearly stuffed, but manage to eat the food.$Ihr seid zwar schon total vollgestopft, wuergt das Essen aber trotzdem noch herunter.
 The food was poisoned!$Das Essen war vergiftet!
-If you wish to use this, it must be equipped or in your backpack.$Es muss sich in Eurem Gepaeck befinden, damit Ihr es nutzen koennt.
-Seek out the mystic llama herder.$Sucht den geheimnisvollen Lama-Hirten.
-Wherever you go, there you are.$Wohin Ihr geht, da seid Ihr auch.
-Quick! Lord Binary is giving away gold at the castle!$Schnell, Lord Binary verschenkt Gold auf seinem Schloss!
-Ripper is watching you every move.$Der Ripper beobachtet jede Deiner Bewegungen.
-The message appears to be too cloudy to make anything out of it.$Die Nachricht ist zu unklar, um irgendetwas davon zu verstehn.
-You have just lost five strength.. not!$Du hast 5 Kraftpunkte verloren!
-You're really playing a game you know$Ihr spielt ein Spielchen, dass Ihr wirklich kennt.
-You will be successful in all you do.$Ihr werdet in allem erfolgreich sein, dass Ihr versucht.
-You are a person of culture.$Ihr seid eine kultivierte Person.
-Give me a break! How much good fortune do you expect!$Ah, bitte! Wieviel Glueck erwartet Ihr denn?!?
+If you wish to use this, it must be equipped or in your backpack.$Das muss sich in Eurem Gepaeck befinden, damit Ihr es nutzen koennt.
+// Seek out the mystic llama herder.$Sucht den geheimnisvollen Lama-Hirten.
+// Wherever you go, there you are.$Wohin Ihr geht, da seid Ihr auch.
+// Quick! Lord Binary is giving away gold at the castle!$Schnell, Lord Binary verschenkt Gold am Schloss!
+// Ripper is watching you every move.$Der Ripper beobachtet jede Deiner Bewegungen.
+// The message appears to be too cloudy to make anything out of it.$Die Nachricht ist zu unklar, um irgendetwas davon zu verstehen.
+// You have just lost five strength.. not!$Du hast 5 Kraftpunkte verloren!
+// You're really playing a game you know$Ihr spielt ein Spielchen, dass Ihr wirklich kennt.
+// You will be successful in all you do.$Ihr werdet in allem erfolgreich sein, dass Ihr versucht.
+// You are a person of culture.$Ihr seid eine kultivierte Person.
+// Give me a break! How much good fortune do you expect!$Ah, bitte! Wieviel Glueck erwartet Ihr denn?!?
 That rune is not yet marked!$Diese Rune ist nicht markiert!
-Enter new rune name.$Tragt den neuen Runenamen ein.
+Enter new rune name.$Tragt den neuen Namen der Rune ein.
 That is out of charges.$Das hat keine Ladungen mehr.
 Your wand now has %i charges left$Euer Zauberstab hat %i Ladungen uebrig.
-This is not a rename deed!$Das ist kein Deed, welches Umbenennung erlaubt!
+This is not a rename deed!$Das ist kein Umbenennungsdeed!
 Enter your new name.$Gebt Euren neuen Namen ein.
 Gulp !$*schluckt*
 You can not use that.$Das koennt Ihr nicht verwenden.
 That item is locked down.$Dieser Gegenstand wurde am Boden befestigt.
 Hello sir! My name is %s and i will be working for you.$Gruesse Herr! Mein Name ist %s und ich werde von nun an fuer Euch arbeiten.
 You must be close to a house and have a key in your pack to place that.$Um das zu befestigen, muesst Ihr nahe eines Hauses sein und einen Schluessel im Gepaeck haben.
-You have %i seconds left in the jail$Euch stehen noch %i Sekunden im Gefaengnis bevor.
+You have %i seconds left in the jail$Ihr muesst noch %i Sekunden im Gefaengnis verbringen.
 Crystall ball shatters..$Die Kristallkugel zerbricht..
 What do you wish to identify?$Was wollt Ihr identifizieren?
 Which dye vat will you use this on?$Mit welcher Faerbeschuessel wollt Ihr das benutzen?
 Must be closer to use this!$Ihr muesst naeher dran sein!
-Select item to be repaired.$Waehlt das zu reparierende Item aus.
-What item would you like to Smelt?$Was wollt Ihr schmelzen?
+Select item to be repaired.$Waehlt den zu reparierenden Gegenstand aus.
+What item would you like to Smelt?$Was wollt Ihr einschmelzen?
 Select the clothing to use this on.$Welches Kleidungstueck soll verwendet werden?
 What would you like to use that on ?$Womit wollt Ihr das benutzen?
 Select material to use.$Welches Material wollt Ihr nehmen?
@@ -275,7 +277,7 @@ Select flour to pour this on.$Mit welchem Mehl?
 Select dough to put this on.$Zu welchem Teig wollt Ihr das hinzufuegen?
 Select your spin wheel to spin wool.$Auf welchem Spinnrad soll die Wolle gesponnen werden?
 Select forge to smelt ore on.$Welche Schmelze wollt Ihr zum Erzschmelzen verwenden?
-You fail to light a fire.$Es gelingt Euch nicht das Feuer anzuzuenden.
+You fail to light a fire.$Es gelingt Euch nicht, das Feuer anzuzuenden.
 You failed to use this statue.$Ihr schafft es nicht, die Statue zu nutzen.
 You failed to use this.$Ihr schafft es nicht, das zu verwenden.
 Fish where?$Wo wollt Ihr Fische fangen?
@@ -295,7 +297,6 @@ you fail to create the sextant.$Es gelingt Euch nicht, den Sextanten zusammenzus
 You need to be closer to use that.$Um das zu benutzen, muesst Ihr naeher heran.
 You must wait for it to stop swinging !$Ihr muesst warten, bis es sich nicht mehr bewegt!
 You can't think of a way to use that item.$Ihr habt keine Ahnung, wie das zu verwenden ist.
-[%i spells]$[%i Zauberspruch]
 %s %s by %s$%s %s von %s
 %s at %igp$%s fuer %i Goldstuecke
 %s %i charge$%s %i Ladung
@@ -314,15 +315,15 @@ That is not your beast of burden!$Das ist nicht Eure Last!
 You cannot open monsters paperdolls.$Ihr koennt den Charakterbogen des Monsters nicht oeffnen.
 Take a look at my goods.$Schaut Euch meine Waren an.
 
-// C:\noxwizard2\nox-wizard\src/debug.cpp
+// src/debug.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/dragdrop.cpp
+// src/dragdrop.cpp
 
 You are loosing karma!$Ihr verliert Karma!
 You can't wear that$Das koennt Ihr nicht tragen!
 You are not strong enough to use that.$Dafuer seid Ihr zu schwach.
-You cant wear female armor!$Ah das geht nicht. Ihr seid nicht fuer Frauenruestungen gebaut!
+You cant wear female armor!$Das geht nicht. Ihr seid nicht fuer Frauenruestungen gebaut!
 You already have a weapon equipped!$Ihr tragt bereits eine Waffe!
 Your hands are both occupied!$Ihr habt keine Hand frei!
 You cannot equip a two handed weapon with a weapon equipped!$Wenn Ihr bereits eine Waffe benutzt, koennt Ihr nicht einen Zweihaender verwenden!
@@ -337,27 +338,27 @@ You can't put items on players! [it could damage stats]$Ihr koennt Gegenstaende 
 It doesn't appear to want the item$Es scheint das nicht zu wollen.
 Excellent work! You have brought us the head of %s. Here is your reward of %d gold coins.$Hervoragende Arbeit! Ihr habt uns endlich den Kopf von %s gebracht, hier ist die Belohnung von %d Goldstuecken.
 You can not claim that prize scoundrel. You are lucky I don't strike you down where you stand!$Schurke! Diesen Preis werdet Ihr nicht einfordern. Seid froh, dass ich Euch nicht nierderschlage!
-Sorry %s i can only use gold$Verzeiht, ich kann nur  %s verwenden.
-Thank you %s for the %i gold!$Taussend Dank, %s fuer die %i Goldstuecke!
+Sorry %s i can only use gold$Verzeiht, %s, doch ich kann nur mit Gold etwas anfangen.
+Thank you %s for the %i gold!$Tausend Dank, %s, fuer die %i Goldstuecke!
 You have gain a little karma!$Ihr habt ein bischen Karma gewonnen!
 You have gain some karma!$Ihr habt etwas Karma gewonnen!
 I thank thee for thy payment. That should give thee a good start on thy way. Farewell!$Habt Dank fuer das Gold. Das sollte Euch einen guten Anfang erlauben. Lebt wohl!
-I am sorry, but I can only accept gold.$Das tut mir aber leid - ich nehme nur Gold an.
-Hey, putting houses in your pack crashes your back and client !$He, Haeuser in Dein Gepaeck zu packen bricht Dir den Ruecken und crashed Deinen Clienten!
+I am sorry, but I can only accept gold.$Tut mir leid - ich nehme nur Gold an.
+Hey, putting houses in your pack crashes your back and client !$He, Haeuser in Dein Gepaeck zu packen bricht Dir den Ruecken und crashed Deinen Client!
 Thank thee kindly, but I have done nothing to warrant a gift.$Habt herzlichen Dank, aber ich kann Euch nichts im Gegenzug fuer ein Geschenk anbieten.
-Hey, putting houses in your pack crashes your back and client!$He, Haeuser in Dein Gepaeck zu packen bricht Dir den Ruecken und crashed Deinen Clienten!
+Hey, putting houses in your pack crashes your back and client!$He, Haeuser in Dein Gepaeck zu packen bricht Dir den Ruecken und crashed Deinen Client!
 This aint your vendor!$Dieser Haendler arbeitet nicht fuer Euch!
 You can only put golds in this bank box!$Dieses Bankfach ist nur fuer Geld geeignet!
 As you let go of the item it disappears.$Als Ihr den Gegenstand loslasst, verschwindet er.
-You can only place spell scrolls in a spellbook!$Spruchrollen koennen nur in Zauberbuecher eingebunden werden!
+You can only place spell scrolls in a spellbook!$Ein Zauberbuch kann nur Spruchrollen aufnehmen!
 You cannot place spells in other peoples spellbooks.$Ihr koennt Spruchrollen nicht in die Buecher anderer Leute einbinden.
-You already have that spell!$Diesen Spruch habt Ihr bereits eingebunden!
+You already have that spell!$Diesen Spruch habt Ihr bereits in dem Buch!
 Set a price for this item.$Legt einen Preis fuer diesen Gegenstand fest.
 
-// C:\noxwizard2\nox-wizard\src/encryption.cpp
+// src/encryption.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/fishing.cpp
+// src/fishing.cpp
 
 You are too far away to reach that$Ihr seid zu weit weg.
 You need to be closer to the water to fish!$Soweit weg vom Wasser fangt Ihr niemals Fische!
@@ -380,32 +381,32 @@ you catch a fish, but no place for it left$Ihr fangt einen Fisch aber habt keine
 You pull out an exotic fish!$Na das ist ein ungewoehnlicher Fisch!
 You pull out a fish!$Das Glueck ist Euch gewogen, Ihr zieht einen Fisch an Land!
 
-// C:\noxwizard2\nox-wizard\src/globals.cpp
+// src/globals.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/guildstones.cpp
+// src/guildstones.cpp
 
 You cannot place guildstones at any other location than your house$Gildensteine koennt Ihr nur bei Eurem Haus aufstellen.
 You are already in a guild.$Ihr seid bereits Mitglied einer Gilde.
 There are already enough guildstones placed.$Hier stehen schon genug Gildensteine.
-Cannot create guildstone$Der Gildenstein laesst sich nicht aufstellen.
-Enter a name for the guild.$Welchen Namen soll die Gilde tragen.
+Cannot create guildstone$Der Gildenstein kann nicht erstellt werden.
+Enter a name for the guild.$Welchen Namen soll die Gilde tragen?
 Guildstone for %s$Gildenstein von %s.
 You are not the guildmaster of this guild. Only the guildmaster may use this guildstone teleporter.$Ihr seid nicht Gildenmeister dieser Gilde - und nur dieser kann den Gildensteinteleporter benutzen..
 You are not a member of this guild. Ask an existing guildmember to invite you into this guild.$Ihr seid kein Gildenmitglied. Bittet ein Mitglied, Euch aufzunehmen.
 Recruit someone into the guild.$Nimmt jemanden in die Gilde auf.
-View the current roster.$Leggi la lista dei membri.
-View the guild's charter.$Leggi lo statuto della gilda.
-Declare your fealty. You are currently loyal to %s.$Dichiara la tua fedelta' a qualcuno.Attualmente sei fedele a %s.
-Toggle showing the guild's abbreviation in your name to unguilded people. Currently %s.$Abilita/Disabilita la visualizzazione dell'abbreviazione della tua gilda nel tuo nome a chi non e' un membro. Attualmente %s.
+View the current roster.$Mitgliederliste ansehen.
+View the guild's charter.$Gildenregelwerk ansehen.
+Declare your fealty. You are currently loyal to %s.$Gildentreue erklaeren, gegenwaertig seid Ihr loyal zu %s.
+Toggle showing the guild's abbreviation in your name to unguilded people. Currently %s.$Nichtmitgliedern das Gildenkuerzel zeigen? Momentan: %s.
 Resign from the guild.$Verlasse die Gilde.
-View list of candidates who have been sponsored to the guild.$Sieh Dir die Liste der Kandidaten an, die fuer die Gilde vorgeschlagen worden.
+View list of candidates who have been sponsored to the guild.$Sieh Dir die Liste der vorgeschlagenen Mitgliedskandidaten an.
 Access %s functions.$Greife auf %s Funktion zu.
-View list of guild that %s has declared war on.$Sieh Dir die Liste der  Gilde an, denen %s den Krieg erklaert hat.
+View list of guild that %s has declared war on.$Sieh Dir die Liste der Gilden an, denen %s den Krieg erklaert hat.
 View list of guilds that have declared war on %s.$Sieh Dir die Liste der Gilden an, die %s den Krieg erklaert haben.
-View list of guilds that %s have declared war on.$Sie Dir die Liste der Gilden an, denen %s den Krieg erklaert haben.
+View list of guilds that %s have declared war on.$Sieh Dir die Liste der Gilden an, denen %s den Krieg erklaert hat.
 %s, %s functions$%s, %s Funktionen.
-Set the guild name.$Setze den Gildenamen fest.
+Set the guild name.$Setze den Gildennamen fest.
 Set the guild's abbreviation.$Setze das Gildenkuerzel fest.
 Change the type of the guild. (Currently a%s guild.)$Veraendere die Art der Gilde. (momentan %s).
 Set the guild's charter.$Lege die Gildenregeln fest.
@@ -488,7 +489,7 @@ Your guild is now a Chaos guild.$Eure Gilde gehorcht nun der Ausrichtung Chaos.
 A chaos shield has been placed in your pack!$In Eurem Rucksack befindet sich nun ein Chaos-Schild!
 Your guild is now a Standard guild.$Eure Gilde gehorcht nun keiner besonderen Ausrichtung.
 
-// C:\noxwizard2\nox-wizard\src/gumps.cpp
+// src/gumps.cpp
 
 House sign changed.$Das Hausschild wurde geaendert.
 Select person to transfer ownership to.$Welche Person soll es besitzen?
@@ -499,7 +500,7 @@ Select person to make a friend of the house.$Welche Person wollt Ihr zum Freund 
 HouseGump Called - Button=%i$Das Hausmenue wird genutzt - Button=%i
 You fail your attempt at tracking.$Es gelingt Euch nicht, dies zu verfolgen.
 
-// C:\noxwizard2\nox-wizard\src/house.cpp
+// src/house.cpp
 
 Select a place for your structure: $Sucht einen Platz dafuer aus:
 Select location for building.$An welche Stelle soll das Gebaeude?.
@@ -519,16 +520,16 @@ Select item to release$Welcher Gegenstand soll losgemacht werden?
 Select item to secure$Welcher Gegenstand soll gesichert werden?
 Only the house owner can lock down items!$Nur der Hausbesitzer darf Gegenstaende befestigen!
 
-// C:\noxwizard2\nox-wizard\src/html.cpp
+// src/html.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/im.cpp
+// src/im.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/item_array.cpp
+// src/item_array.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/itemid.cpp
+// src/itemid.cpp
 
 This item is a musical instrument. You can use it for bardic skills like enticement or provocation$Dies ist ein Musikinstrument, es kann fuer bardische Faehigkeiten wie Provokation oder Beruhigung genutzt werden.
 This a door. To open or close it, double click on it.$Das ist eine Tuer, um sie zu oeffnen oder schliessen, doppelklicke auf sie.
@@ -543,19 +544,19 @@ He/She is a player like you. You've met new people!!$Das ist auch ein Spieler - 
 He/She is a Counselor. You can ask him if you need help on the game$Das ist ein Berater (Counselor). Wenn Ihr Hilfe im Spiel benoetigt, koennt Ihr ihn fragen.
 He/She is a Game Master. You can ask his help if you're stuck or have bugs or other problems$Das ist ein Spielleiter (Game Master). Ihr koennt ihn um Hilfe bitten, wenn Ihr Fehler (Bugs) im Spiel entdeckt, festhaengt (stuck) oder andere Probleme habt.
 He/She is a vendor which sells items owned by a player. Good shopping!$Das ist ein Haendler (vendor) welcher Gegenstaende verkauft, die einem Spieler gehoeren. Guten Einkauf!
-Run AWAY!!! It will kill you!!$LAUFT!!! Es wird Euch toeten wollen!!
+Run AWAY!!! It will kill you!!$LAUFT!!! Es wird Euch toeten !!
 
-// C:\noxwizard2\nox-wizard\src/items.cpp
+// src/items.cpp
 
 You are not strong enough to keep %s equipped!$Ihr seid nicht stark genug, um %s zu benutzen!
 
-// C:\noxwizard2\nox-wizard\src/itemwrap.cpp
+// src/itemwrap.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/los.cpp
+// src/los.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/magic.cpp
+// src/magic.cpp
 
 In order to open spellbook, it must be equipped in your hand or in the first layer of your backpack.$Um das Zauberbuch zu oeffnen, muss es in der Hand getragen werden!
 Contact your shard op to setup the summon list!$Kontaktiert Eure Shardleitung, damit die Summon Liste erzeugt wird!
@@ -616,15 +617,14 @@ Not a valid recall target$Das ist fuer den Spruch der Rueckkehr (recall) kein gu
 Not a valid mark target$Das ist kein gueltiges Ziel fuer den Zauber "an Ort binden" (mark).
 Not a valid gate target$Kein gueltiges Ziel fuer den Zauber "Tor".
 
-// C:\noxwizard2\nox-wizard\src/mapstuff.cpp
+// src/mapstuff.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/msgboard.cpp
+// src/msgboard.cpp
 
 Currently posting LOCAL messages$Nachrichtenart steht auf LOKALE Nachrichten.
 Currently posting REGIONAL messages$Nachrichtenart steht auf REGIONALE Nachrichten.
 Currently posting GLOBAL messages$Nachrichtenart steht auf GLOBALE Nachrichten.
-$
 Post type set to LOCAL$Nachrichtenart auf LOKAL geaendert.
 Post type set to REGIONAL$Nachrichtenart auf REGIONAL geaendert
 Post type set to GLOBAL$Nachrichtenart auf GLOBAL geaendert
@@ -640,7 +640,7 @@ Thank you %s for thy service. We have made it safely to %s. Alas, I seem to be a
 Thank you %s for thy service. We have made it safely to %s. Here is thy pay as promised.$%s,Habt vielen Dank fuer Eure Hilfe. Wir sind sicher in %s angekommen. Hier ist Eure versprochene Belohnung.
 You have just received %d gold coins from %s %s$Euch wurde gerade %d Goldstuecke von %s, %s gegeben. 
 
-// C:\noxwizard2\nox-wizard\src/necro.cpp
+// src/necro.cpp
 
 You are too wounded to continue.$Ihr seid zu verwundet, um weiterzumachen.
 You prick your finger and fill the vial.$Ihr stecht Euren Finger und fuellt das Gefaess.
@@ -651,7 +651,7 @@ You examine the corpse but, decide any further blood samples would be to contami
 That is not a person or a corpse!$Das ist keine Person oder Koerper!
 You do not have a dagger equipped.$Ihr muesst dazu einen Dolch verwenden.
 
-// C:\noxwizard2\nox-wizard\src/network.cpp
+// src/network.cpp
 
 %s has left the realm$%s hat die Welt verlassen!
 %s %s %s [%s] Compiled by %s$%s %s %s [%s] kompiliert von %s
@@ -671,10 +671,10 @@ You are now a ghost.$Ihr seid nun ein Geist
 The connection between your spirit and the world is too weak.$Die Verbindung zwischen Euch und der Welt ist zu schwach.
 You are using a %iD client, version %s$Ihr verwendet den %iD Clienten, Version %s.
 
-// C:\noxwizard2\nox-wizard\src/newbie.cpp
+// src/newbie.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/nox-wizard.cpp
+// src/nox-wizard.cpp
 
 You cannot reach the handle from here$Von hier ist der Griff nicht erreichbar
 You refreshed your friend's house$Ihr habt das Haus Eures Hauses refreshed.
@@ -743,20 +743,20 @@ You have gained a huge amount of fame.$Ihr habt sehr deutlich an Ruf gewonnen.
 You have lost a huge amount of fame.$Ihr habt sehr deutlich an Ruf verloren.
 You are now a criminal!$Ihr seid jetzt ein Krimineller.
 
-// C:\noxwizard2\nox-wizard\src/npcs.cpp
+// src/npcs.cpp
 
-You break your concentration.$Perdi la concentrazione.
+You break your concentration.$Ihr koennt Euch nicht mehr konzentrieren.
 
-// C:\noxwizard2\nox-wizard\src/ntservice.cpp
-
-
-// C:\noxwizard2\nox-wizard\src/nxw_utils.cpp
+// src/ntservice.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/nxwgui.cpp
+// src/nxw_utils.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/p_ai.cpp
+// src/nxwgui.cpp
+
+
+// src/p_ai.cpp
 
 Hello %s, Welcome to my shop, How may i help thee?.$Gruesse %s.Willkommen in meinem Laden. Wie kann ich Euch helfen?
 Thou art dead, but 'tis within my power to resurrect thee.  Live!$Ihr seid tot - aber es steht in meiner Macht, Euch wiederzubeleben. LEBT!
@@ -777,9 +777,9 @@ Hey buddy can you spare some gold?$He mein Freund, koennt Ihr mir nicht ein bisc
 I have a family to feed, think of the children.$Ich muss eine Familie ernaehren - denkt an die Kinder.
 You better watch your step %s, I am watching thee!!$Passt besser auf Eure Schritte auf, %s - ich beobachte sie!!!
 %s is an upstanding citizen, I will protect thee in %s.$%s ist ein aufrechter Buerger, ich werde Euch in %s beschuetzen.
-Foolish Mortal!$Erbaermliche Sterbliche!
+Foolish Mortal!$Erbaermlicher Sterblicher!
 
-// C:\noxwizard2\nox-wizard\src/party.cpp
+// src/party.cpp
 
 This party is no more valid. Sorry.$Diese Gruppe ist leider nicht mehr gueltig.
 The party is full. Sorry.$Diese Gruppe ist leider vollbesetzt.
@@ -798,13 +798,13 @@ You're not in a party!$Ihr seid in keiner Gruppe.
 Private message from %s : %s$Private Mitteilung von %s: %s
 Party message from %s : %s$Gruppenmitteilung von %s: %s
 
-// C:\noxwizard2\nox-wizard\src/pointer.cpp
+// src/pointer.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/qsf.cpp
+// src/qsf.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/rcvpkg.cpp
+// src/rcvpkg.cpp
 
 Perhaps thou shouldst be more careful. Here, I shall resurrect thee.$Ihr solltet vorsichtiger sein. Hier, ich werde Euch wiederbeleben.
 Come nearer, ghost, and i'll give you life!$Komm naeher Geist und ich werde Euch das Leben wiederschenken.
@@ -817,25 +817,25 @@ Help! Guards! I've been attacked!$HILFE! WACHEN! Ich werde angegriffen!
 Help! Guards! Tis a murder being commited!$HILFE! WACHEN! Ein Mord wurde veruebt!
 You've gained a little karma.$Euer Karma wurde ein bischen besser.
 
-// C:\noxwizard2\nox-wizard\src/regions.cpp
+// src/regions.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/remadmin.cpp
+// src/remadmin.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/scp_parser.cpp
+// src/scp_parser.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/scriptc.cpp
+// src/scriptc.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/scripts.cpp
+// src/scripts.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/set.cpp
+// src/set.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/skills.cpp
+// src/skills.cpp
 
 You made an item with no quality!$Ihr habt einen lausigen Gegenstand hergestellt!Von Qualitaet kann man da garnicht sprechen.
 You made an item very below standard quality!$Ihr stellt einen Gegenstand her, der weit unter der gewoehnlichen Qualitaet liegt
@@ -1010,7 +1010,7 @@ You fail to decipher the map$Es gelingt Euch nicht, die Karte zu entziffern.
 You put the deciphered tresure map in your pack$Ihr packt die entzifferte Schatzkarte in Euer Gepaeck.
 You must wait to perform another action$Ihr muesst einen Moment abwarten bevor Ihr etwas anderes tun koennt.
 
-// C:\noxwizard2\nox-wizard\src/skitarg.cpp
+// src/skitarg.cpp
 
 Time to buy a backpack$Es wird Zeit, sich einen Rucksack zu kaufen.
 You can't use material outside your backpack$Ihr koennt Ausgangsstoffe nicht ausserhalb Eures Gepaecks bearbeiten.
@@ -1109,7 +1109,7 @@ Because of your skill, you were able to counter the poison.$Ihr seid geuebt genu
 You fail to counter the poison$Euer Versuch, das Gift zu bekaempfen, scheitert.
 That being is not damaged$Das ist nicht beschaedigt.
 You apply the bandages, but they barely help!$Ihr legt die Bandagen an aber sie helfen kaum!
-You are not skilled enough to heal that creature.Eure Fertigkeiten sind zu begrenzt, um diese Kreatur zu heilen.
+You are not skilled enough to heal that creature.$Eure Fertigkeiten sind zu begrenzt, um diese Kreatur zu heilen.
 You apply the bandages and the creature looks a bit healthier.$Ihr legt die Verbaende an und die Kreatur scheint ein wenig gesuender zu sein.
 That does not appear to be a weapon.$Das scheint keine Waffe zu sein.
 Attack [%i] Defense [%i] Lodamage [%i] Hidamage [%i]$Angriff [%i] Verteidigung [%i] Minimalschaden [%i] Maximalschaden [%i]
@@ -1256,13 +1256,13 @@ You cant smelt that item!$Das kann man nicht einschmelzen!
 The item must be in your backpack$Dazu muss es sich in Eurem Gepaeck befinden
 you smelt the item and place some ingots in your pack.$Ihr schmelzt es ein und packt die Barren  in Euer Gepaeck
 
-// C:\noxwizard2\nox-wizard\src/sndpkg.cpp
+// src/sndpkg.cpp
 
 Launching your web browser. Please wait...$Euer Webbrowser wird gestartet, bittet wartet...
 Thou doth posses nothing of interest to me.$Ihr habt nichts, dass fuer mich von Interesse waere.
 GM tells %s: %s$Ein GM teilt %s mit: %s
 
-// C:\noxwizard2\nox-wizard\src/speech.cpp
+// src/speech.cpp
 
 no stablemaster around$Es ist kein Stallmeister in der Naehe
 which pet?$Welches Tier?
@@ -1322,7 +1322,7 @@ Counselor Page from %s [%x %x %x %x]: %s$Beratermitteilung von %s [%x %x %x %x]:
 You have been squelched.$Ihr wurdet zum Schweigen gebracht.
 
 
-// C:\noxwizard2\nox-wizard\src/sregions.cpp
+// src/sregions.cpp
 
 You have left %s.$Ihr habt %s verlassen.
 You have entered %s.$Ihr betretet %s.
@@ -1332,10 +1332,10 @@ You are no longer under the protection of the guards.$Ihr seid nun nicht mehr du
 You are no longer under the protection of %s guards.$Die Wachen von %s schuetzen Euch nicht laenger.
 Respawn now complete.$Respawn ist fertig.
 
-// C:\noxwizard2\nox-wizard\src/srvparms.cpp
+// src/srvparms.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/targeting.cpp
+// src/targeting.cpp
 
 That is not a character.$Das ist keine Person.
 That is not an item.$Das ist kein Gegenstand.
@@ -1441,11 +1441,11 @@ That doesn't work in cannon.$Das funktioniert nicht mit einer Kanone
 That object doesn't fit into cannon.$Dieser Gegenstand ist zu gross und passt nicht hinein.
 What item do you want to poison?$Welchen Gegenstand wollt Ihr vergiften?
 
-// C:\noxwizard2\nox-wizard\src/telport.cpp
+// src/telport.cpp
 
 You have already used an advancement object with this character.$Ihr habt mit diesem Charakter bereits eine Verbesserungs-Objekt benutzt!
 
-// C:\noxwizard2\nox-wizard\src/timing.cpp
+// src/timing.cpp
 
 *Drags in deep*$*zieht in die Tiefe*
 *Coughs*$*Hustet*
@@ -1481,7 +1481,7 @@ The poison has worn off.$Das Gift hat Euch geschwaecht.
 * %s appears to have decided that it is better off without a master *$* %s scheint zu dem Schluss gekommen zu sein, dass es ohne Herrn besser dran ist*
 * %s must eat very soon or he will die! *$* %s wirkt voellig verhungert und dem Tod sehr nahe*
 
-// C:\noxwizard2\nox-wizard\src/titles.cpp
+// src/titles.cpp
 
 The Murderous Lady $Die moerderische Lady
 The Murderer Lord $Der moerderische Lord
@@ -1490,7 +1490,7 @@ The %sLord $Lord %s
 The Murderer $Moerder  
 The %s$ %s
 
-// C:\noxwizard2\nox-wizard\src/tmpeff.cpp
+// src/tmpeff.cpp
 
 *%s continues grinding.*$*%s mahlt weiter*
 LSD has worn off$Die Droge hat Euch geschwaecht
@@ -1499,7 +1499,7 @@ Hmmm, tasty, LSD$Hm wunderbar, Drogen.
 You start healing yourself...$Ihr beginnt, Euch selbst zu heilen.
 You continue to heal...$Ihr heilt weiter...
 
-// C:\noxwizard2\nox-wizard\src/trade.cpp
+// src/trade.cpp
 
 Alas, I no longer have all those goods in stock. Let me know if there is something else thou wouldst buy.$Leider habe ich nicht mehr alles vorraetig, bitte sagt mir ob ich Euch nicht etwas anderes verkaufen kann?
 Here you are, %s. Someone as special as thee will receive my wares for free of course.$Bitte sehr, %s. Und jemand wie Ihr bekommt meine Waren natuerlich umsonst .
@@ -1511,7 +1511,7 @@ Cheating scum! Leave now, before I call the guards!$Verdammter Abschaum! Verschw
 Time to buy a backpack!$Es ist an der Zeit, einen Rucksack zu kaufen!
 %s doesnt have a backpack!$%s hat ja kein Gepaeck!
 
-// C:\noxwizard2\nox-wizard\src/trigger.cpp
+// src/trigger.cpp
 
 You need more %s to do that!$Ihr benoetigt dafuer mehr %s!
 You need less %s to do that!$Ihr benoetigt weniger %s dafuer!
@@ -1543,13 +1543,13 @@ You increased the maximum durability of your %s !$Ihr habt seine ( %s ) maximale
 Your %s was too old and it has been destoryed!$Es ( %s ) war zu alt und ging kaputt.
 You can't increase durability of %s !$Die Haltbarkeit davon ( %s ) kann nicht erhoeht werden!
 
-// C:\noxwizard2\nox-wizard\src/uglyed.cpp
+// src/uglyed.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/utils.cpp
+// src/utils.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/walking.cpp
+// src/walking.cpp
 
 You are too fatigued to move.$Ihr seid zu erschoepft um Euch zu bewegen.
 You cannot move while casting.$Ihr koennt Euch nicht bewegen, waehrend Ihr einen Zauber wirkt.
@@ -1558,293 +1558,293 @@ You are banned from that location.$Ihr wurdet von diesem Ort verbannt.
 You shoved something invisible aside.$Ihr schiebt etwas Unsichtbares beiseite.
 Being perfectly rested, you shove %s out of the way.$Ihr schiebt %s zur Seite.
 
-// C:\noxwizard2\nox-wizard\src/weight.cpp
+// src/weight.cpp
 
 You are overloaded! You can't hold all this weight..$Ihr seid vollkommen ueberladen und es koennt das nicht alles tragen.
 
-// C:\noxwizard2\nox-wizard\src/wip.cpp
+// src/wip.cpp
 
 
-// C:\noxwizard2\nox-wizard\src/worldmain.cpp
+// src/worldmain.cpp
 
 World data saving...$Die Welt wird gesichert...
 Worldsave Done!\n$Welt erfolgreich gesichert!\n
 
-// C:\noxwizard2\nox-wizard\src/accounts.h
+// src/accounts.h
 
 
-// C:\noxwizard2\nox-wizard\src/amx.h
+// src/amx.h
 
 
-// C:\noxwizard2\nox-wizard\src/amx_api.h
+// src/amx_api.h
 
 
-// C:\noxwizard2\nox-wizard\src/amx_comp.h
+// src/amx_comp.h
 
 
-// C:\noxwizard2\nox-wizard\src/amxcback.h
+// src/amxcback.h
 
 
-// C:\noxwizard2\nox-wizard\src/amxscript.h
+// src/amxscript.h
 
 
-// C:\noxwizard2\nox-wizard\src/amxwraps.h
+// src/amxwraps.h
 
 
-// C:\noxwizard2\nox-wizard\src/basetype.h
+// src/basetype.h
 
 
-// C:\noxwizard2\nox-wizard\src/basics.h
+// src/basics.h
 
 
-// C:\noxwizard2\nox-wizard\src/boats.h
+// src/boats.h
 
 
-// C:\noxwizard2\nox-wizard\src/books.h
+// src/books.h
 
 
-// C:\noxwizard2\nox-wizard\src/bounty.h
+// src/bounty.h
 
 
-// C:\noxwizard2\nox-wizard\src/calendar.h
+// src/calendar.h
 
 
-// C:\noxwizard2\nox-wizard\src/char_array.h
+// src/char_array.h
 
 
-// C:\noxwizard2\nox-wizard\src/chars.h
+// src/chars.h
 
 
-// C:\noxwizard2\nox-wizard\src/charwrap.h
+// src/charwrap.h
 
 
-// C:\noxwizard2\nox-wizard\src/classes.h
+// src/classes.h
 
 
-// C:\noxwizard2\nox-wizard\src/client.h
+// src/client.h
 
 
-// C:\noxwizard2\nox-wizard\src/cmdtable.h
+// src/cmdtable.h
 
 
-// C:\noxwizard2\nox-wizard\src/common_libs.h
+// src/common_libs.h
 
 
-// C:\noxwizard2\nox-wizard\src/console.h
+// src/console.h
 
 
-// C:\noxwizard2\nox-wizard\src/constants.h
+// src/constants.h
 
 
-// C:\noxwizard2\nox-wizard\src/crontab.h
+// src/crontab.h
 
 
-// C:\noxwizard2\nox-wizard\src/custmenu.h
+// src/custmenu.h
 
 
-// C:\noxwizard2\nox-wizard\src/debug.h
+// src/debug.h
 
 
-// C:\noxwizard2\nox-wizard\src/dragdrop.h
+// src/dragdrop.h
 
 
-// C:\noxwizard2\nox-wizard\src/encryption.h
+// src/encryption.h
 
 
-// C:\noxwizard2\nox-wizard\src/globals.h
+// src/globals.h
 
 
-// C:\noxwizard2\nox-wizard\src/hcache.h
+// src/hcache.h
 
 
-// C:\noxwizard2\nox-wizard\src/hfile.h
+// src/hfile.h
 
 
-// C:\noxwizard2\nox-wizard\src/im.h
+// src/im.h
 
 
-// C:\noxwizard2\nox-wizard\src/inlines.h
+// src/inlines.h
 
 
-// C:\noxwizard2\nox-wizard\src/item_array.h
+// src/item_array.h
 
 
-// C:\noxwizard2\nox-wizard\src/itemid.h
+// src/itemid.h
 
 
-// C:\noxwizard2\nox-wizard\src/items.h
+// src/items.h
 
 
-// C:\noxwizard2\nox-wizard\src/itemwrp.h
+// src/itemwrp.h
 
 
-// C:\noxwizard2\nox-wizard\src/msgboard.h
+// src/msgboard.h
 
 
-// C:\noxwizard2\nox-wizard\src/necro.h
+// src/necro.h
 
 
-// C:\noxwizard2\nox-wizard\src/ntservice.h
+// src/ntservice.h
 
 
-// C:\noxwizard2\nox-wizard\src/nxw_utils.h
+// src/nxw_utils.h
 
 
-// C:\noxwizard2\nox-wizard\src/nxwcommn.h
+// src/nxwcommn.h
 
 
-// C:\noxwizard2\nox-wizard\src/nxwgui.h
+// src/nxwgui.h
 
 
-// C:\noxwizard2\nox-wizard\src/osdefs.h
+// src/osdefs.h
 
 
-// C:\noxwizard2\nox-wizard\src/party.h
+// src/party.h
 
 
-// C:\noxwizard2\nox-wizard\src/prototypes.h
+// src/prototypes.h
 
 
-// C:\noxwizard2\nox-wizard\src/range.h
+// src/range.h
 
 
-// C:\noxwizard2\nox-wizard\src/rcvpkg.h
+// src/rcvpkg.h
 
 
-// C:\noxwizard2\nox-wizard\src/regions.h
+// src/regions.h
 
 
-// C:\noxwizard2\nox-wizard\src/remadmin.h
+// src/remadmin.h
 
 
-// C:\noxwizard2\nox-wizard\src/resource.h
+// src/resource.h
 
 
-// C:\noxwizard2\nox-wizard\src/sclinux.h
+// src/sclinux.h
 
 
-// C:\noxwizard2\nox-wizard\src/scp_parser.h
+// src/scp_parser.h
 
 
-// C:\noxwizard2\nox-wizard\src/scriptc.h
+// src/scriptc.h
 
 
-// C:\noxwizard2\nox-wizard\src/set.h
+// src/set.h
 
 
-// C:\noxwizard2\nox-wizard\src/sndpkg.h
+// src/sndpkg.h
 
 
-// C:\noxwizard2\nox-wizard\src/speech.h
+// src/speech.h
 
 
-// C:\noxwizard2\nox-wizard\src/sregions.h
+// src/sregions.h
 
 
-// C:\noxwizard2\nox-wizard\src/srvparms.h
+// src/srvparms.h
 
 
-// C:\noxwizard2\nox-wizard\src/targeting.h
+// src/targeting.h
 
 
-// C:\noxwizard2\nox-wizard\src/tmpeff.h
+// src/tmpeff.h
 
 
-// C:\noxwizard2\nox-wizard\src/trigger.h
+// src/trigger.h
 
 
-// C:\noxwizard2\nox-wizard\src/typedefs.h
+// src/typedefs.h
 
 
-// C:\noxwizard2\nox-wizard\src/uglyed.h
+// src/uglyed.h
 
 
-// C:\noxwizard2\nox-wizard\src/version.h
+// src/version.h
 
 
-// C:\noxwizard2\nox-wizard\src/wip.h
+// src/wip.h
 
 
-// C:\noxwizard2\nox-wizard\src/worldmain.h
+// src/worldmain.h
 
 
-// C:\noxwizard2\nox-wizard\src\CVS/Root
+// src\CVS/Root
 
 
-// C:\noxwizard2\nox-wizard\src\CVS/Repository
+// src\CVS/Repository
 
 
-// C:\noxwizard2\nox-wizard\src\CVS/Entries
+// src\CVS/Entries
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/scexpand.c
+// src\compiler/scexpand.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sc1.c
+// src\compiler/sc1.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sc2.c
+// src\compiler/sc2.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sc3.c
+// src\compiler/sc3.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sc4.c
+// src\compiler/sc4.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sc5.c
+// src\compiler/sc5.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sc6.c
+// src\compiler/sc6.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sc7.c
+// src\compiler/sc7.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sclib.c
+// src\compiler/sclib.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sclist.c
+// src\compiler/sclist.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/scpack.c
+// src\compiler/scpack.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/scvars.c
+// src\compiler/scvars.c
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/amx.h
+// src\compiler/amx.h
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/osdefs.h
+// src\compiler/osdefs.h
 
 
-// C:\noxwizard2\nox-wizard\src\compiler/sc.h
+// src\compiler/sc.h
 
 
-// C:\noxwizard2\nox-wizard\src\compiler\CVS/Root
+// src\compiler\CVS/Root
 
 
-// C:\noxwizard2\nox-wizard\src\compiler\CVS/Repository
+// src\compiler\CVS/Repository
 
 
-// C:\noxwizard2\nox-wizard\src\compiler\CVS/Entries
+// src\compiler\CVS/Entries
 
 
-// C:\noxwizard2\nox-wizard\src/makefile
+// src/makefile
 
 
-// C:\noxwizard2\nox-wizard\src\old_amx_vm/amx_vm.c
+// src\old_amx_vm/amx_vm.c
 
 
-// C:\noxwizard2\nox-wizard\src\old_amx_vm/amx_vm.h
+// src\old_amx_vm/amx_vm.h
 
 
-// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Root
+// src\old_amx_vm\CVS/Root
 
 
-// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Repository
+// src\old_amx_vm\CVS/Repository
 
 
-// C:\noxwizard2\nox-wizard\src\old_amx_vm\CVS/Entries
+// src\old_amx_vm\CVS/Entries
 
