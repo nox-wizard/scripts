@@ -78,11 +78,11 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 	gui_setProperty( gui, MP_BUFFER, 1, x );
 	gui_setProperty( gui, MP_BUFFER, 2, y );
 	gui_setProperty( gui, MP_BUFFER, 3, z );
-	gui_addButton( gui, 243, 265, 0x084A, 0x084B, 1 );
-	gui_addText( gui, 20, 30, _, "Enter Guild Name " );
-	gui_addInputField( gui, 170, 30, 125, 30, 55, colorEdit, "Guild");
-	gui_addText( gui, 20, 30, _, "Enter Guild Abbreviation " );
-	gui_addInputField( gui, 170, 30, 125, 30, 56, colorEdit, "Guild Short Name");
+	gui_addButton( gui, 250, 265, 0x084A, 0x084B, 1 );
+	gui_addText( gui, 20, 30, _, "   Guild Name " );
+	gui_addInputField( gui, 190, 30, 125, 30, 55, colorEdit, "Guild");
+	gui_addText( gui, 20, 70, _, "   Guild Short Name " );
+	gui_addInputField( gui, 190, 70, 125, 30, 56, colorEdit, "Guild Short Name");
 
 	
 	gui_show( gui, master );
@@ -132,9 +132,40 @@ public guildgui_callback( const socket, const gui, const button )
 \fn guild_dclickStone( const guild, const socket )
 \brief a guild stone double-click
 */
-public guild_dclickStone( const guild, const socket )
-{
-	bypass();
+public guild_dclickStone( const guild, const socket ){
+	
+	const colorEdit = 32;
+	new gui = gui_create( 40, 40, true, true, true, "guildDclick_callback" );
+	gui_addGump( gui, 0, 0, 0x04CC, 0 );
+	
+	gui_setProperty( gui, MP_BUFFER, 0, guild );
+	
+	gui_addText( gui, 40, 30, colorEdit, "Recruit someone in the gild" );
+	gui_addButton( gui, 20, 30, 0x4B9, 0x4BA, 1 );
+	
+	gui_addText( gui, 40, 60, colorEdit, "See the member list" );
+	gui_addButton( gui, 20, 60, 0x4B9, 0x4BA, 1 );
+	
+	gui_addText( gui, 40, 90, colorEdit, "Reath the guild description" );
+	gui_addButton( gui, 20, 90, 0x4B9, 0x4BA, 1 );
+	
+	gui_addText( gui, 40, 120, colorEdit, "Resign From Guild" );
+	gui_addButton( gui, 20, 120, 0x4B9, 0x4BA, 1 );
+	
+	gui_addText( gui, 40, 150, colorEdit, "Read the candidates list" );
+	gui_addButton( gui, 20, 150, 0x4B9, 0x4BA, 1 );
+	
+	gui_addText( gui, 40, 180, colorEdit, "Advanced Menu" );
+	gui_addButton( gui, 20, 180, 0x4B9, 0x4BA, 1 );
+	
+	gui_addText( gui, 40, 210, colorEdit, "Read the guilds that are in war with you " );
+	gui_addButton( gui, 20, 210, 0x4B9, 0x4BA, 1 );
+	
+	gui_addText( gui, 40, 240, colorEdit, "Read the guilds that you have declared war" );
+	gui_addButton( gui, 20, 240, 0x4B9, 0x4BA, 1 );
+	
+	gui_show( gui, socket );
+	
 }
 
 /*!

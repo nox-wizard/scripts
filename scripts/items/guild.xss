@@ -1,22 +1,10 @@
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (guild.xss)                                      ||
-// || Last Update 09-aug-2003                                             ||
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.70s or later                      ||
-// || Compatible with Unicorn Categorization                              ||
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 SECTION ITEM $item_guildstone
 {
     NAME a guildstone
     ID 0ED5
     VALUE 500000
-    MOVEABLE 0
-    @ONCLICK guild_sclickStone
     @ONDBLCLICK guild_dclickStone
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Deeds
+    @ONCLICK guild_sclickStone
 }
 
 SECTION ITEM $item_guildstone_deed
@@ -25,7 +13,4 @@ SECTION ITEM $item_guildstone_deed
     ID 14F0
     VALUE 35000
     @ONDBLCLICK guild_dclickDeed
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Deeds
 }
