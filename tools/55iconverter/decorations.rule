@@ -1,0 +1,1318 @@
+[0BCD]
+MAPPING $item_bowyer_sign_1
+
+[0C0A]
+MAPPING $item_merchants_guild_sign_2
+
+[01ACA]
+MAPPING $item_lighthouse_Z4
+
+[0EA8]
+MAPPING $item_painting_recoverd_from_a_shipwreck_2
+
+[012AE]
+MAPPING $item_statue7
+
+[I_STATUE_STONE_LG_2]
+MAPPING $item_statue7
+
+[01ABC]
+MAPPING $item_lighthouse_N
+
+[0BFC]
+MAPPING $item_thieves_guild_sign_2
+
+[0A0A]
+MAPPING $item_wall_torch1_2
+
+[I_TORCH_WALL2]
+MAPPING $item_wall_torch1_2
+
+[01472]
+MAPPING $item_telescope_P
+
+[0A0C]
+MAPPING $item_wall_torch2_2
+
+[I_TORCH_WALL2_LIT]
+MAPPING $item_wall_torch2_2
+
+[0A0B]
+MAPPING $item_torch_holder_2
+
+[I_TORCH_WALL2_EMPTY]
+MAPPING $item_torch_holder_2
+
+[01AD2]
+MAPPING $item_lighthouse_ZB
+
+[01AD1]
+MAPPING $item_lighthouse_ZA
+
+[01AD0]
+MAPPING $item_lighthouse_ZC
+
+[01433]
+MAPPING $item_candle_1
+
+[I_CANDLE_LG]
+MAPPING $item_candle_1
+
+[01D98]
+MAPPING $item_ankh2_1_2
+
+[0FEA]
+MAPPING $item_pentagram_5
+
+[01ACE]
+MAPPING $item_lighthouse_Z8
+
+[0B95]
+MAPPING $item_library_sign_1
+
+[0B96]
+MAPPING $item_library_sign_2
+
+[0BF4]
+MAPPING $item_fishermans_guild_sign_2
+
+[0BF5]
+MAPPING $item_sailors_guild_sign_1
+
+[0BF6]
+MAPPING $item_sailors_guild_sign_2
+
+[0BF7]
+MAPPING $item_shipwrights_guild_sign_1
+
+[0BF0]
+MAPPING $item_archers_guild_sign_2
+
+[0BF1]
+MAPPING $item_seamans_guild_sign_1
+
+[0BF2]
+MAPPING $item_seamans_guild_sign_2
+
+[0BF3]
+MAPPING $item_fishermans_guild_sign_1
+
+[0C43]
+MAPPING $item_beekeeper_sign_1
+
+[I_SIGN_BEEKEEPER]
+MAPPING $item_beekeeper_sign_1
+
+[01471]
+MAPPING $item_telescope_O
+
+[0BF8]
+MAPPING $item_shipwrights_guild_sign_2
+
+[0BF9]
+MAPPING $item_tailors_guild_sign_1
+
+[0146E]
+MAPPING $item_telescope_L
+
+[01459]
+MAPPING $item_telescope
+
+[I_TELESCOPE]
+MAPPING $item_telescope
+
+[01492]
+MAPPING $item_telescope_ZG
+
+[0147E]
+MAPPING $item_telescope_Z2
+
+[0FEB]
+MAPPING $item_pentagram_6
+
+[01474]
+MAPPING $item_telescope_R
+
+[01467]
+MAPPING $item_telescope_E
+
+[0BC9]
+MAPPING $item_artist_sign_1
+
+[0B1A]
+MAPPING $item_candle
+
+[I_CANDLE2_LIT]
+MAPPING $item_candle
+
+[0BFE]
+MAPPING $item_rouges_guild_sign_2
+
+[0BFF]
+MAPPING $item_assassins_guild_sign_1
+
+[0BC8]
+MAPPING $item_armorer_sign_2
+
+[0EA7]
+MAPPING $item_painting_recoverd_from_a_shipwreck_A
+
+[I_PORTRAIT_5]
+MAPPING $item_painting_recoverd_from_a_shipwreck_A
+
+[012D5]
+MAPPING $item_statue9
+
+[I_STATUE_STONE_SM_2]
+MAPPING $item_statue9
+
+[012D6]
+MAPPING $item_statue10
+
+[I_STATUE_STONE_LG_3]
+MAPPING $item_statue10
+
+[012D7]
+MAPPING $item_statue8
+
+[01854]
+MAPPING $item_skull_candle
+
+[I_SKULL_CANDLE_LIT]
+MAPPING $item_skull_candle
+
+[01ABD]
+MAPPING $item_lighthouse_O
+
+[0FEE]
+MAPPING $item_pentagram_9
+
+[01F28]
+MAPPING $item_sign_2
+
+[I_SIGN_BLANK]
+MAPPING $item_sign_2
+
+[01F29]
+MAPPING $item_sign_1
+
+[0C07]
+MAPPING $item_fighters_guild_sign_1
+
+[0C06]
+MAPPING $item_cavalry_guild_sign_2
+
+[0A05]
+MAPPING $item_wall_torch1_1
+
+[I_TORCH_WALL]
+MAPPING $item_wall_torch1_1
+
+[0A07]
+MAPPING $item_wall_torch2_1
+
+[I_TORCH_WALL_LIT]
+MAPPING $item_wall_torch2_1
+
+[0A06]
+MAPPING $item_torch_holder_1
+
+[I_TORCH_WALL_EMPTY]
+MAPPING $item_torch_holder_1
+
+[0A00]
+MAPPING $item_wall_sconce_2
+
+[I_SCONCE2]
+MAPPING $item_wall_sconce_2
+
+[01482]
+MAPPING $item_telescope_Z6
+
+[0C04]
+MAPPING $item_warriors_guild_sign_2
+
+[01476]
+MAPPING $item_telescope_T
+
+[0146A]
+MAPPING $item_telescope_H
+
+[01464]
+MAPPING $item_telescope_B
+
+[0BC7]
+MAPPING $item_armorer_sign_1
+
+[01AAA]
+MAPPING $item_lighthouse_6
+
+[0BC6]
+MAPPING $item_alchemist_sign_2
+
+[01AB9]
+MAPPING $item_lighthouse_L
+
+[0BCC]
+MAPPING $item_provisioner_sign_2
+
+[0EA6]
+MAPPING $item_painting_recoverd_from_a_shipwreck_9
+
+[01481]
+MAPPING $item_telescope_Z5
+
+[0C01]
+MAPPING $item_tinkers_guild_sign_1
+
+[0BCB]
+MAPPING $item_provisioner_sign_1
+
+[0BEE]
+MAPPING $item_miners_guild_sign_2
+
+[0BED]
+MAPPING $item_miners_guild_sign_1
+
+[01AB3]
+MAPPING $item_lighthouse_F
+
+[0BEF]
+MAPPING $item_archers_guild_sign_1
+
+[0BEA]
+MAPPING $item_sorcerers_guild_sign_2
+
+[0BCA]
+MAPPING $item_artist_sign_2
+
+[0BEC]
+MAPPING $item_illusionists_guild_sign_2
+
+[0BEB]
+MAPPING $item_illusionists_guild_sign_1
+
+# Hausschild
+# Wooden sign
+
+[0bd0]
+T;DISPID;ID;=self.calculateID("3024")
+T;LINK;SCRIPTID;=self.useIfNotNULL(value, "1013")
+I;;NAME2;#
+T;TYPE;TYPE;=mapSphereType(value, "t_sign_gump")
+C;LINK;MORE;=findHouseLink(value)
+I;;MOREX;4
+I;;MOVABLE;2
+C;MORE1;OWNER;=getHouseOwner(None, value)
+T;NAME;NAME;a wooden sign
+
+[i_sign_blank]
+T;DISPID;ID;=self.calculateID("7976")
+T;LINK;SCRIPTID;=self.useIfNotNULL(value, "1013")
+I;;NAME2;#
+T;TYPE;TYPE;=mapSphereType(value, "t_sign_gump")
+C;LINK;MORE;=findHouseLink(value)
+I;;MOREX;4
+I;;MOVABLE;2
+C;MORE1;OWNER;=getHouseOwner(None, value)
+T;NAME;NAME;a blank sign
+
+[01f29]
+T;DISPID;ID;=self.calculateID("7977")
+T;LINK;SCRIPTID;=self.useIfNotNULL(value, "1013")
+I;;NAME2;#
+T;TYPE;TYPE;=mapSphereType(value, "t_sign_gump")
+C;LINK;MORE;=findHouseLink(value)
+I;;MOREX;4
+I;;MOVABLE;2
+C;MORE1;OWNER;=getHouseOwner(None, value)
+T;NAME;NAME;a blank sign
+
+[0bcf]
+T;DISPID;ID;=self.calculateID("3023")
+T;LINK;SCRIPTID;=self.useIfNotNULL(value, "1013")
+I;;NAME2;#
+T;TYPE;TYPE;=mapSphereType(value, "t_sign_gump")
+C;LINK;MORE;=findHouseLink(value)
+I;;MOREX;4
+I;;MOVABLE;2
+C;MORE1;OWNER;=getHouseOwner(None, value)
+T;NAME;NAME;a wooden sign
+
+# Hausschild brass sign
+[i_sign_brass]
+T;DISPID;ID;=self.calculateID("3025")
+T;LINK;SCRIPTID;=self.useIfNotNULL(value, "1013")
+I;;NAME2;#
+T;TYPE;TYPE;=mapSphereType(value, "t_sign_gump")
+C;LINK;MORE;=findHouseLink(value)
+I;;MOREX;4
+I;;MOVABLE;2
+C;MORE1;OWNER;=getHouseOwner(None, value)
+T;NAME;NAME;a brass sign
+
+[i_sign_brass_2]
+T;DISPID;ID;=self.calculateID("3026")
+T;LINK;SCRIPTID;=self.useIfNotNULL(value, "1013")
+I;;NAME2;#
+T;TYPE;TYPE;=mapSphereType(value, "t_sign_gump")
+C;LINK;MORE;=findHouseLink(value)
+I;;MOREX;4
+I;;MOVABLE;2
+C;MORE1;OWNER;=getHouseOwner(None, value)
+T;NAME;NAME;a brass sign
+
+[0bd1]
+T;DISPID;ID;=self.calculateID("3025")
+T;LINK;SCRIPTID;=self.useIfNotNULL(value, "1013")
+I;;NAME2;#
+T;TYPE;TYPE;=mapSphereType(value, "t_sign_gump")
+C;LINK;MORE;=findHouseLink(value)
+I;;MOREX;4
+I;;MOVABLE;2
+C;MORE1;OWNER;=getHouseOwner(None, value)
+T;NAME;NAME;a brass sign
+
+[0b95]
+MAPPING $item_library
+
+[i_sign_bakery]
+MAPPING $item_bakery
+[0ba4]
+MAPPING $item_bakery_1
+
+[0ba9]
+MAPPING $item_butcher
+[0bab]
+MAPPING $item_healer
+[0bad]
+MAPPING $item_magic_shop
+[0baf]
+MAPPING $item_carpenter
+
+[0bb1]
+MAPPING $item_harbor_master
+
+[0bb3]
+MAPPING $item_inn
+
+[0bb5]
+MAPPING $item_shipwright
+
+[0bb7]
+MAPPING $item_stables
+
+[0bb9]
+MAPPING $item_barber
+
+[0bbb]
+MAPPING $item_musician
+
+[0bbf]
+MAPPING $item_armorer
+
+[0bc1]
+MAPPING $item_jewler
+
+[0bc3]
+MAPPING $item_tavern
+
+[0bc5]
+MAPPING $item_alchemist
+
+[0bc7]
+MAPPING $item_blacksmith
+
+[0bc9]
+MAPPING $item_artist
+
+[0bcb]
+MAPPING $item_provisioner
+
+[0bcd]
+MAPPING $item_bowyer
+
+[0bd3]
+MAPPING $item_armaments_guild
+
+[0bd5]
+MAPPING $item_armorers_guild
+
+[0bd7]
+MAPPING $item_blacksmiths_guild
+
+[0bd9]
+MAPPING $item_weapons_guild
+
+[0bdb]
+MAPPING $item_bardic_guild
+
+[0bdd]
+MAPPING $item_miners_guild
+
+[0c01]
+MAPPING $item_tinkers_guild
+
+[0c02]
+MAPPING $item_tinkers_guild_1
+
+[0c03]
+MAPPING $item_warriors_guild
+
+[0c04]
+MAPPING $item_warriors_guild_1
+
+[0c05]
+MAPPING $item_cavalry_guild
+
+[0c06]
+MAPPING $item_cavalry_guild_1
+
+[0c07]
+MAPPING $item_fighters_guild
+
+[0c08]
+MAPPING $item_fighters_guild_1
+
+[0c09]
+MAPPING $item_merchants_guild
+
+[0c0a]
+MAPPING $item_merchants_guild_1
+[01ACB]
+MAPPING $item_lighthouse_Z5
+
+[01ACC]
+MAPPING $item_lighthouse_Z6
+
+[0BD8]
+MAPPING $item_blacksmiths_guild_sign_2
+
+[0BD9]
+MAPPING $item_weapons_guild_sign_1
+
+[01ACF]
+MAPPING $item_lighthouse_Z9
+
+[01466]
+MAPPING $item_telescope_D
+
+[01ACD]
+MAPPING $item_lighthouse_Z7
+
+[0C0B]
+MAPPING $item_bank_sign_1
+
+[01E69]
+MAPPING $item_trophy10
+
+[01E68]
+MAPPING $item_trophy9
+
+[0BCE]
+MAPPING $item_bowyer_sign_2
+
+[0EC9]
+MAPPING $item_painting_recoverd_from_a_shipwreck_1
+
+[01E61]
+MAPPING $item_trophy2
+
+[I_TROPHY_DEERHEAD]
+MAPPING $item_trophy2
+
+[01E60]
+MAPPING $item_trophy1
+
+[I_TROPHY_BEARHEAD]
+MAPPING $item_trophy1
+
+[01E63]
+MAPPING $item_trophy4
+
+[I_TROPHY_GORILLAHEAD]
+MAPPING $item_trophy4
+
+[01E62]
+MAPPING $item_trophy3
+
+[I_TROPHY_FISH]
+MAPPING $item_trophy3
+
+[01E65]
+MAPPING $item_trophy6
+
+[I_TROPHY_POLARBEARHEAD]
+MAPPING $item_trophy6
+
+[01E64]
+MAPPING $item_trophy5
+
+[I_TROPHY_ORCHEAD]
+MAPPING $item_trophy5
+
+[01E67]
+MAPPING $item_trophy8
+
+[01E66]
+MAPPING $item_trophy7
+
+[I_TROPHY_TROLLHEAD]
+MAPPING $item_trophy7
+
+[012A3]
+MAPPING $item_statue6
+
+[01AB2]
+MAPPING $item_lighthouse_E
+
+[01215]
+MAPPING $item_ltar_2
+
+[0145F]
+MAPPING $item_telescope_6
+
+[0BB9]
+MAPPING $item_barber_sign_1
+
+[01E6A]
+MAPPING $item_trophy11
+
+[01AAC]
+MAPPING $item_lighthouse_8
+
+[01E6C]
+MAPPING $item_trophy13
+
+[01E6B]
+MAPPING $item_trophy12
+
+[01E6D]
+MAPPING $item_trophy14
+
+[0BDB]
+MAPPING $item_bardic_guild_sign_1
+
+[0BDC]
+MAPPING $item_bardic_guild_sign_2
+
+[01AC8]
+MAPPING $item_lighthouse_Z2
+
+[0BDA]
+MAPPING $item_weapons_guild_sign_2
+
+[0BDF]
+MAPPING $item_provisioners_guild_sign_1
+
+[0FED]
+MAPPING $item_pentagram_8
+
+[0BDD]
+MAPPING $item_barders_guild_sign_1
+
+[0BDE]
+MAPPING $item_barders_guild_sign_2
+
+[01AC2]
+MAPPING $item_lighthouse_V
+
+[01AC3]
+MAPPING $item_lighthouse_W
+
+[01AC0]
+MAPPING $item_lighthouse_T
+
+[01AC1]
+MAPPING $item_lighthouse_U
+
+[01AC6]
+MAPPING $item_lighthouse_Z
+
+[01AC7]
+MAPPING $item_lighthouse_Z1
+
+[01AC4]
+MAPPING $item_lighthouse_X
+
+[01AC5]
+MAPPING $item_lighthouse_Y
+
+[0145E]
+MAPPING $item_telescope_5
+
+[0BE9]
+MAPPING $item_sorcerers_guild_sign_1
+
+[0BE8]
+MAPPING $item_mages_guild_sign_2
+
+[0145D]
+MAPPING $item_telescope_4
+
+[0BE5]
+MAPPING $item_healers_guild_sign_1
+
+[0BE4]
+MAPPING $item_cooks_guild_sign_2
+
+[0BE7]
+MAPPING $item_mages_guild_sign_1
+
+[0BE6]
+MAPPING $item_healers_guild_sign_2
+
+[0BE1]
+MAPPING $item_traders_guild_sign_1
+
+[0BE0]
+MAPPING $item_provisioners_guild_sign_2
+
+[0BE3]
+MAPPING $item_cooks_guild_sign_1
+
+[0BE2]
+MAPPING $item_traders_guild_sign_2
+
+[01AC9]
+MAPPING $item_lighthouse_Z3
+
+[09FF]
+MAPPING $item_wall_sconce_1
+
+[0C05]
+MAPPING $item_cavalry_guild_sign_1
+
+[0145A]
+MAPPING $item_telescope_1
+
+[0C44]
+MAPPING $item_beekeeper_sign_2
+
+[01479]
+MAPPING $item_telescope_W
+
+[01478]
+MAPPING $item_telescope_V
+
+[01AA6]
+MAPPING $item_lighthouse_2
+
+[0145C]
+MAPPING $item_telescope_3
+
+[01473]
+MAPPING $item_telescope_Q
+
+[01461]
+MAPPING $item_telescope_8
+
+[0145B]
+MAPPING $item_telescope_2
+
+[0146D]
+MAPPING $item_telescope_K
+
+[01460]
+MAPPING $item_telescope_7
+
+[01E5C]
+MAPPING $item_ankh2_2_1
+
+[I_ANKH_SACRIFICE_2]
+MAPPING $item_ankh2_2_1
+
+[01E5D]
+MAPPING $item_ankh2_2_2
+
+[0129C]
+MAPPING $item_road_sign3_2
+
+[I_SIGN_090]
+MAPPING $item_road_sign3_2
+
+[0129B]
+MAPPING $item_road_sign3_1
+
+[I_SIGN_135]
+MAPPING $item_road_sign3_1
+
+[0129A]
+MAPPING $item_road_sign2_2
+
+[I_SIGN_270]
+MAPPING $item_road_sign2_2
+
+[0C0D]
+MAPPING $item_theater_sign_1
+
+[0C0C]
+MAPPING $item_bank_sign_2
+
+[0129F]
+MAPPING $item_statue2
+
+[I_STATUE_STONE_LG]
+MAPPING $item_statue2
+
+[0129E]
+MAPPING $item_road_sign4_2
+
+[I_SIGN_225]
+MAPPING $item_road_sign4_2
+
+[0129D]
+MAPPING $item_road_sign4_1
+
+[I_SIGN_180]
+MAPPING $item_road_sign4_1
+
+[0BB8]
+MAPPING $item_stables_sign_2
+
+[012A2]
+MAPPING $item_statue5
+
+[012A1]
+MAPPING $item_statue1
+
+[012A0]
+MAPPING $item_statue2
+
+[01477]
+MAPPING $item_telescope_U
+
+[01462]
+MAPPING $item_telescope_9
+
+[01475]
+MAPPING $item_telescope_S
+
+[012A4]
+MAPPING $item_statue4
+
+[0BB0]
+MAPPING $item_carpenter_sign_2
+
+[0BB1]
+MAPPING $item_shipwright_sign_1
+
+[0BB2]
+MAPPING $item_shipwright_sign_2
+
+[0BB3]
+MAPPING $item_inn_sign_1
+
+[0BB4]
+MAPPING $item_inn_sign_2
+
+[0BB5]
+MAPPING $item_harbor_master_sign_1
+
+[0BB6]
+MAPPING $item_harbor_master_sign_2
+
+[0BB7]
+MAPPING $item_stables_sign_1
+
+[01226]
+MAPPING $item_statue13
+
+[01227]
+MAPPING $item_statue14
+
+[01224]
+MAPPING $item_statue11
+
+[I_STATUE_STONE_SM]
+MAPPING $item_statue11
+
+[01225]
+MAPPING $item_statue12
+
+[01AAD]
+MAPPING $item_lighthouse_9
+
+[01AAE]
+MAPPING $item_lighthouse_A
+
+[01AAF]
+MAPPING $item_lighthouse_B
+
+[01498]
+MAPPING $item_telescope_ZM
+
+[0FE9]
+MAPPING $item_pentagram_4
+
+[0EC8]
+MAPPING $item_painting_recoverd_from_a_shipwreck
+
+[I_PORTRAIT_6]
+MAPPING $item_painting_recoverd_from_a_shipwreck
+
+[01228]
+MAPPING $item_statue15
+
+[01212]
+MAPPING $item_ltar_7
+
+[01C14]
+MAPPING $item_candle_of_love
+
+[I_CANDLE_OF_LOVE]
+MAPPING $item_candle_of_love
+
+[01463]
+MAPPING $item_telescope_A
+
+[01C12]
+MAPPING $item_bell_of_courage
+
+[I_BELL_OF_COURAGE]
+MAPPING $item_bell_of_courage
+
+[01C13]
+MAPPING $item_book_of_truth
+
+[I_BOOK_OF_TRUTH]
+MAPPING $item_book_of_truth
+
+[01AA8]
+MAPPING $item_lighthouse_4
+
+[01AA9]
+MAPPING $item_lighthouse_5
+
+[0146F]
+MAPPING $item_telescope_M
+
+[0EA5]
+MAPPING $item_painting_recoverd_from_a_shipwreck_8
+
+[I_PORTRAIT_4]
+MAPPING $item_painting_recoverd_from_a_shipwreck_8
+
+[0EA2]
+MAPPING $item_painting_recoverd_from_a_shipwreck_5
+
+[0EA3]
+MAPPING $item_painting_recoverd_from_a_shipwreck_6
+
+[I_PORTRAIT_3]
+MAPPING $item_painting_recoverd_from_a_shipwreck_6
+
+[0EA0]
+MAPPING $item_painting_recoverd_from_a_shipwreck_3
+
+[I_PORTRAIT_BIG]
+MAPPING $item_painting_recoverd_from_a_shipwreck_3
+
+[0EA1]
+MAPPING $item_painting_recoverd_from_a_shipwreck_4
+
+[I_PORTRAIT_2]
+MAPPING $item_painting_recoverd_from_a_shipwreck_4
+
+[0147C]
+MAPPING $item_telescope_Z
+
+[0147B]
+MAPPING $item_telescope_Y
+
+[0147A]
+MAPPING $item_telescope_X
+
+[0147F]
+MAPPING $item_telescope_Z3
+
+[01D97]
+MAPPING $item_ankh2_1_1
+
+[I_ANKH_SACRIFICE]
+MAPPING $item_ankh2_1_1
+
+[0147D]
+MAPPING $item_telescope_Z1
+
+[0BBA]
+MAPPING $item_barber_sign_2
+
+[0BBB]
+MAPPING $item_musician_sign_1
+
+[0BBC]
+MAPPING $item_musician_sign_2
+
+[0BBD]
+MAPPING $item_archer_sign_1
+
+[0BBE]
+MAPPING $item_archer_sign_2
+
+[0BBF]
+MAPPING $item_blacksmith_sign_1
+
+[01299]
+MAPPING $item_road_sign2_1
+
+[I_SIGN_000]
+MAPPING $item_road_sign2_1
+
+[01298]
+MAPPING $item_road_sign1_2
+
+[I_SIGN_315]
+MAPPING $item_road_sign1_2
+
+[01468]
+MAPPING $item_telescope_F
+
+[01469]
+MAPPING $item_telescope_G
+
+[0C09]
+MAPPING $item_merchants_guild_sign_1
+
+[0C08]
+MAPPING $item_fighters_guild_sign_2
+
+[0BC3]
+MAPPING $item_tavern_sign_1
+
+[0BC2]
+MAPPING $item_jewler_sign_2
+
+[0BC1]
+MAPPING $item_jewler_sign_1
+
+[0BC0]
+MAPPING $item_blacksmith_sign_2
+
+[01297]
+MAPPING $item_road_sign1_1
+
+[I_SIGN_45]
+MAPPING $item_road_sign1_1
+
+[01296]
+MAPPING $item_signpost
+
+[I_SIGN_POST]
+MAPPING $item_signpost
+
+[0BC5]
+MAPPING $item_alchemist_sign_1
+
+[0BC4]
+MAPPING $item_tavern_sign_2
+
+[01213]
+MAPPING $item_ltar
+
+[01ABA]
+MAPPING $item_lighthouse_M
+
+[01211]
+MAPPING $item_ltar_6
+
+[01210]
+MAPPING $item_ltar_5
+
+[01465]
+MAPPING $item_telescope_C
+
+[01214]
+MAPPING $item_ltar_1
+
+[0B20]
+MAPPING $item_lamp_post1_1
+
+[I_LAMPPOST1_LIT]
+MAPPING $item_lamp_post1_1
+
+[0B21]
+MAPPING $item_lamp_post1_2
+
+[I_LAMPPOST1]
+MAPPING $item_lamp_post1_2
+
+[0B22]
+MAPPING $item_lamp_post2_1
+
+[I_LAMPPOST2_LIT]
+MAPPING $item_lamp_post2_1
+
+[0B23]
+MAPPING $item_lamp_post2_2
+
+[I_LAMPPOST2]
+MAPPING $item_lamp_post2_2
+
+[0B24]
+MAPPING $item_lamp_post3_1
+
+[I_LAMPPOST3_LIT]
+MAPPING $item_lamp_post3_1
+
+[0B25]
+MAPPING $item_lamp_post3_2
+
+[I_LAMPPOST3]
+MAPPING $item_lamp_post3_2
+
+[01491]
+MAPPING $item_telescope_ZF
+
+[0C03]
+MAPPING $item_warriors_guild_sign_1
+
+[01493]
+MAPPING $item_telescope_ZH
+
+[0C00]
+MAPPING $item_assassins_guild_sign_2
+
+[01495]
+MAPPING $item_telescope_ZJ
+
+[01494]
+MAPPING $item_telescope_ZI
+
+[01497]
+MAPPING $item_telescope_ZL
+
+[01496]
+MAPPING $item_telescope_ZK
+
+[01499]
+MAPPING $item_telescope_ZN
+
+[01ABE]
+MAPPING $item_lighthouse_R
+
+[0C0E]
+MAPPING $item_theater_sign_2
+
+[01AB1]
+MAPPING $item_lighthouse_D
+
+[0BFB]
+MAPPING $item_thieves_guild_sign_1
+
+[0E31]
+MAPPING $item_brazier
+
+[I_BRAZIER_2]
+MAPPING $item_brazier
+
+[01483]
+MAPPING $item_telescope_Z7
+
+[0148B]
+MAPPING $item_telescope_ZQ
+
+[01AB0]
+MAPPING $item_lighthouse_C
+
+[01AB8]
+MAPPING $item_lighthouse_K
+
+[01AA4]
+MAPPING $item_lighthouse
+
+[I_LIGHTHOUSE]
+MAPPING $item_lighthouse
+
+[01ABF]
+MAPPING $item_lighthouse_S
+
+[0FEC]
+MAPPING $item_pentagram_7
+
+[01AA5]
+MAPPING $item_lighthouse_1
+
+[0BAA]
+MAPPING $item_butcher_sign_2
+
+[0149A]
+MAPPING $item_telescope_ZO
+
+[0BAC]
+MAPPING $item_healer_sign_2
+
+[0BAB]
+MAPPING $item_healer_sign_1
+
+[0BAE]
+MAPPING $item_magic_shop_sign_2
+
+[0BAD]
+MAPPING $item_magic_shop_sign_1
+
+[0BAF]
+MAPPING $item_carpenter_sign_1
+
+[01ABB]
+MAPPING $item_lighthouse_ZD
+
+[01AB5]
+MAPPING $item_lighthouse_H
+
+[01490]
+MAPPING $item_telescope_ZE
+
+[01AA7]
+MAPPING $item_lighthouse_3
+
+[01AAB]
+MAPPING $item_lighthouse_7
+
+[01AB4]
+MAPPING $item_lighthouse_G
+
+[01480]
+MAPPING $item_telescope_Z4
+
+[0148C]
+MAPPING $item_telescope_ZR
+
+[0148A]
+MAPPING $item_telescope_ZP
+
+[0148F]
+MAPPING $item_telescope_ZU
+
+[01AB7]
+MAPPING $item_lighthouse_J
+
+[0148D]
+MAPPING $item_telescope_ZS
+
+[0148E]
+MAPPING $item_telescope_ZT
+
+[01AB6]
+MAPPING $item_lighthouse_I
+
+[0EA4]
+MAPPING $item_painting_recoverd_from_a_shipwreck_7
+
+[01E2E]
+MAPPING $item_dartboard_1
+
+[I_DARTBOARD]
+MAPPING $item_dartboard_1
+
+[0C02]
+MAPPING $item_tinkers_guild_sign_2
+
+[0146B]
+MAPPING $item_telescope_I
+
+[01E2F]
+MAPPING $item_dartboard_2
+
+[0BCF]
+MAPPING $item_wooden_sign_1
+
+[01487]
+MAPPING $item_telescope_ZB
+
+[01484]
+MAPPING $item_telescope_Z8
+
+[01485]
+MAPPING $item_telescope_Z9
+
+[0120E]
+MAPPING $item_ltar_3
+
+[I_ALTAR_STONE]
+MAPPING $item_ltar_3
+
+[01488]
+MAPPING $item_telescope_ZC
+
+[01489]
+MAPPING $item_telescope_ZD
+
+[0BA3]
+MAPPING $item_bakery_sign_1
+
+[I_SIGN_BAKERY]
+MAPPING $item_bakery_sign_1
+
+[0BA5]
+MAPPING $item_tailor_sign_1
+
+[I_SIGN_TAILOR]
+MAPPING $item_tailor_sign_1
+
+[0BA4]
+MAPPING $item_bakery_sign_2
+
+[0BA7]
+MAPPING $item_tinker_sign_1
+
+[I_SIGN_TINKER]
+MAPPING $item_tinker_sign_1
+
+[0BA6]
+MAPPING $item_tailor_sign_2
+
+[0BA9]
+MAPPING $item_butcher_sign_1
+
+[0BA8]
+MAPPING $item_tinker_sign_2
+
+[0146C]
+MAPPING $item_telescope_J
+
+[0BFD]
+MAPPING $item_rouges_guild_sign_1
+
+[0FE7]
+MAPPING $item_pentagram_2
+
+[0FE6]
+MAPPING $item_pentagram_1
+
+[I_PENTAGRAM]
+MAPPING $item_pentagram_1
+
+[01486]
+MAPPING $item_telescope_ZA
+
+[01470]
+MAPPING $item_telescope_N
+
+[0A27]
+MAPPING $item_candelabra
+
+[I_CANDLEABRA]
+MAPPING $item_candelabra
+
+[0A26]
+MAPPING $item_tall_candle
+
+[I_CANDLE2]
+MAPPING $item_tall_candle
+
+[0FE8]
+MAPPING $item_pentagram_3
+
+[0120F]
+MAPPING $item_ltar_4
+
+[0A29]
+MAPPING $item_candelabra
+
+[I_CANDLEABRA2]
+MAPPING $item_candelabra
+
+[0BFA]
+MAPPING $item_tailors_guild_sign_2
+
