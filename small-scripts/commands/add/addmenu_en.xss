@@ -1960,6 +1960,7 @@ SECTION PAGE
 	ITEM 0F39 $item_shovel 
 	ITEM 0F39 $item_tongs 
 	ITEM 1BF2 $item_iron_ingots 
+	ITEM 0E85 $item_pickaxe 
 }
 SECTION PAGE
 {
