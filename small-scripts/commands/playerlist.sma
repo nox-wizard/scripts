@@ -60,7 +60,7 @@ public cmd_playerlist( const caller )
 	gui_show( menu, caller);
 }
 
-public handle_playerlist( const caller, const menu, const button )
+public handle_playerlist( const menu, const caller, const button )
 {
 	//on button press open character's options
 	if( button == MENU_CLOSED )	return;
