@@ -10,6 +10,9 @@
 #endif
 #define _nxw_character_constant_
 
+const PROP_CHARACTER = 0;
+
+
 //second cp for positions
 const CP2_X = 0;
 const CP2_Y = 1;

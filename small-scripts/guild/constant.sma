@@ -10,6 +10,9 @@
 #endif
 #define _nxw_guild_constant_
 
+
+const PROP_GUILD = 3;
+
 /** \defgroup script_const_guild Guild constants
  *  \ingroup script_API_guild
  *  @{

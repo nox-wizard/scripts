@@ -14,11 +14,11 @@ public target_options( const socket, const target, const item )
 
 }
 
-options_char( const socket, const chr )
+public options_char( const socket, const chr )
 {
 	new menu = menu_create( 50, 50, true, true, true, "handle_options_char" );
-//	menu_addGump( menu, 0, 0, 0x04CC, 0 );
-	menu_addBackground( menu, 0x0E14, 128, 128 );
+	menu_addGump( menu, 0, 0, 0x04CC, 0 );
+//	menu_addBackground( menu, 0x0E14, 128, 128 );
 	
 	new str[100];
 	
@@ -26,6 +26,7 @@ options_char( const socket, const chr )
 	menu_addText( menu, 53, 63, _, "Name : %s", str );
 	
 	menu_addText( menu, 195, 78, _, "Serial : %d", chr );
+	menu_setProperty( menu, MP_BUFFER, 0, chr );
 	menu_addText( menu, 195, 93, _, "Account : %d", chr_getProperty( chr, CP_ACCOUNT ) );
 
 	menu_addButton( menu, 53, 95, 0x08B0, 0x08B0, 1 );
@@ -50,8 +51,30 @@ options_char( const socket, const chr )
 	menu_show( menu, getCharFromSocket(socket) );
 }
 
+public handle_options_char( const socket, const menu, const button )
+{
+	if( button==MENU_CLOSED )
+		return;
+		
+	new curr = getCharFromSocket( socket );
+	new chr = menu_getProperty( menu, MP_BUFFER, 0 );
+		
+	switch( button ) {
+		case 1:
+			stats_char( socket, chr );
+		case 2:
+			tweak_char( socket, chr );
+		case 3:
+			chr_moveTo( chr, chr_getProperty( curr, CP_POSITION, CP2_X ), chr_getProperty( curr, CP_POSITION, CP2_Y ), chr_getProperty( curr, CP_POSITION, CP2_Z ) );
+		case 4:
+			chr_moveTo( curr, chr_getProperty( chr, CP_POSITION, CP2_X ), chr_getProperty( chr, CP_POSITION, CP2_Y ), chr_getProperty( chr, CP_POSITION, CP2_Z ) );
+		case 5:
+			nprintf( socket, "jail" );
+	}
+}
 
-options_item( const socket, const item )
+
+public options_item( const socket, const item )
 {
 	nprintf( socket, "Options on item" );
 }

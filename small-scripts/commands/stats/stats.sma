@@ -14,13 +14,13 @@ public target_stats( const socket, const target, const item )
 
 }
 
-stats_char( const socket, const chr )
+public stats_char( const socket, const chr )
 {
 	nprintf( socket, "stats on character" );
 }
 
 
-stats_item( const socket, const item )
+public stats_item( const socket, const item )
 {
 	nprintf( socket, "stats on item" );
 }

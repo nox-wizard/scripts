@@ -3,11 +3,14 @@
 #endif
 #define _nxw_calendar_constant_
 
+const PROP_CALENDAR = 2;
 
 /** \defgroup script_const_calendar Calendar
  *  \ingroup script_constants
  *  @{
  */
+ 
+ 
 
 const CALP_YEAR = 200
 const CALP_MONTH = 201

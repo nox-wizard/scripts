@@ -10,6 +10,8 @@
 #endif
 #define _nxw_item_constant_
 
+const PROP_ITEM = 1;
+
 //second cp for positions
 const IP2_X = 0;
 const IP2_Y = 1;
