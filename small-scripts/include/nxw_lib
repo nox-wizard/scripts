@@ -14,8 +14,8 @@
 #endif
 #define _nxwlib_included
 
-#include "../kernel/core.api"
-#include "../string/string.api"
+#include "small-scripts/kernel/core.api"
+#include "small-scripts/string/string.api"
 
 /*************************************************************************
  PRECOMPILATION PROPERTIES

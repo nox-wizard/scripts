@@ -3,7 +3,7 @@
 #endif
 #define _itemid_included
 
-#include "../include/nxw_lib"
+#include "small-scripts/include/nxw_lib"
 
 enum eWeapontype
 {
