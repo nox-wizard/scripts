@@ -313,8 +313,9 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 						itm_setLocalIntVar( house, AUTOBOUNCEVAR, checked );
 						if(checked = 1)
 						{
-							new autobounce = file_open(autobouncelist,"r");
+							itm_setEventHandler(house, EVENT_CHR_ONMULTIENTER, EVENTTYPE_STATIC, "BounceBan");
 						}
+						else itm_delEventHandler(house, EVENT_CHR_ONMULTIENTER, EVENTTYPE_STATIC, "BounceBan");
 					}
 				}
 				#endif
@@ -508,7 +509,17 @@ public TransferHouse(const t, const chrsource, const target, const x, const y, c
 	chr_message(target, _, "You own now this house");
 }
 
-public multienter(const multi, const chr)
+public BounceBan(const house, const enterchr, const chrdir, const sequence)
 {
-	printf("enter multi, multi is %d, char is %d", multi, chr);
+	printf("enter multi, multi is %d, char is %d", house, enterchr);
+	if(house_isBanned(house, chr) == 1)
+	{
+		Bounceout(0, 0, enterchr, 0, 0, 0, 0, house);
+		chr_message(enterchr, _, "Because you are at the Ban-list.");
+	}
+	else if( (itm_getLocalIntVar( house, AUTOBOUNCEVAR) == 1) && !(house_isFriend(house, enterchr)) && !(house_isCoOwner(house, enterchr)))
+	{
+		Bounceout(0, 0, enterchr, 0, 0, 0, 0, house);
+		chr_message(enterchr, _, "Because you are at the Ban-list.");
+	}
 }
