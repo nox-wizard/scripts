@@ -134,7 +134,7 @@ public __inscription_copy(const socket, const target, const item)
 static __inscription_book(const socket, const book)
 {
 	new book_ser = itm_getProperty(book,IP_SERIAL);
-	new book_set = set_open();
+	new book_set = set_create();
 	set_addItemsInCont( book_set, book_ser, false, _ );
 	new book_size = set_size( book_set );
 	new i,j;
@@ -148,7 +148,7 @@ static __inscription_book(const socket, const book)
 			book_array[id-7981]=item;
 		}
 	}
-	set_close( book_set );
+	set_delete( book_set );
 
 	mnu_prepare(socket,8,8);
 	mnu_setStyle(socket,MENUSTYLE_SCROLL, 0x481);
