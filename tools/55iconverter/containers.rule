@@ -1,0 +1,60 @@
+[0E80]
+MAPPING $item_brass_box
+
+[0E83]
+MAPPING $item_tub
+
+[I_TUB_EMPTY]
+MAPPING $item_tub
+
+[0E78]
+MAPPING $item_round_basket
+
+[I_BASKET_ROUND]
+MAPPING $item_round_basket
+
+[0E79]
+MAPPING $item_pouch
+
+[0E75]
+MAPPING $item_backpack
+
+[I_BACKPACK]
+MAPPING $item_backpack
+
+[0E76]
+MAPPING $item_leather_bag
+
+[I_BAG]
+MAPPING $item_leather_bag
+
+[09AA]
+MAPPING $item_wooden_box1_2
+
+[I_BOX_WOOD]
+MAPPING $item_wooden_box1_2
+
+[09A8]
+MAPPING $item_metal_box
+
+[I_BOX_BRASS]
+MAPPING $item_metal_box
+
+[0E40]
+MAPPING $item_metal_chest1
+
+[I_CHEST_METAL_BRASS]
+MAPPING $item_metal_chest1
+
+[0E7D]
+MAPPING $item_wooden_box1_1
+
+[0E7A]
+MAPPING $item_square_basket
+
+[I_BASKET_SQUARE]
+MAPPING $item_square_basket
+
+[0E7C]
+MAPPING $item_silver_chest
+
