@@ -304,7 +304,7 @@ public itm_potionUse(const item, const socket)
 		      );
 
 #endif
-		nprintf( socket, !"You don't feel up to this yet!^n" );
+		chr_message( socket, _, !"You don't feel up to this yet!^n" );
 		bypass();
 	}
 	else

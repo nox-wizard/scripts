@@ -19,10 +19,10 @@ native send_send(const chr, const lenght, const data[]);
 
 /*!
 \author Xanathar
-\fn send_confirmAttack(const chr, const chr)
+\fn send_confirmAttack(const who, const to)
 \brief
 */
-native send_confirmAttack(const chr, const chr);
+native send_confirmAttack(const who, const to);
 
 /*!
 \author Xanathar

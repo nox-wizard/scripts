@@ -39,11 +39,11 @@ public guild_dclickDeed( const deed, const socket ) {
 	bypass();
 
 	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
-		sysmessage( master, _, "Resign from your guild before creating a new guild" );
+		chr_message( master, _, "Resign from your guild before creating a new guild" );
 		return;
 	}
 	
-	sysmessage( master, _, "Where you want place guildstone?" );
+	chr_message( master, _, "Where you want place guildstone?" );
 	target_create( master, deed, _, true, "guildPlace" );
 
 }
@@ -54,13 +54,13 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 	if( master<=INVALID ) return;
 	
 	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
-		sysmessage( master, _, "Resign from your guild before creating a new guild" );
+		chr_message( master, _, "Resign from your guild before creating a new guild" );
 		return;
 	}
 	
 #if defined( GUILD_POSITION_WITH_TARGET )
 	if( x==INVALID || y==INVALID ) {
-		sysmessage( master, _, "This is not a valid place" );
+		chr_message( master, _, "This is not a valid place" );
 		return;
 	}
 #endif
@@ -99,7 +99,7 @@ public guildgui_callback( const socket, const gui, const button )
     if( master<=INVALID ) return;
 
 	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
-		sysmessage( master, _, "Resign from your guild before creating a new guild" );
+		chr_message( master, _, "Resign from your guild before creating a new guild" );
 		return;
 	}
 	
@@ -196,7 +196,7 @@ public guildDclick_callback( const socket, const gui, const button ){
 		case 8: return;
 		
 		default:{
-			nprintf(socket, "Something gone wrong!");
+			chr_message(socket, _, "Something gone wrong!");
 			return;
 		}
 	}

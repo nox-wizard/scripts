@@ -31,7 +31,7 @@ native party_delMember( const party, const member );
 
 public party_kickMember( const party, const kicked )
 {
-	sysmessage( kicked, _, "You've been kicked from the party" );
+	chr_message( kicked, _, "You've been kicked from the party" );
 	party_delMember( party, kicked );
 }
 

@@ -5,10 +5,5 @@ native race_getGlobalProp( const property, const subProp=0, ... );
 
 public __race_enlist( const chr )
 {
-	if( socket<0 )
-		return;
-		
-	new chr = getCharFromSocket(socket);
-		
-	sysmessage( chr, _, "Race system work in progress" );
+	chr_message( chr, _, "Race system work in progress" );
 }
