@@ -3400,18 +3400,6 @@ SECTION NPC $npc_shipwright_m
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
     DOORUSE 1
 }
 
@@ -5723,24 +5711,8 @@ SECTION NPC $npc_que
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
     RSHOPITEM $item_a_cannon_ball
     RSHOPITEM $item_iron_ingots
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
     SELLITEM $item_a_cannon_ball
     SELLITEM $item_iron_ingots
     DOORUSE 1
@@ -6948,24 +6920,8 @@ SECTION NPC $npc_que_1
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
     RSHOPITEM $item_a_cannon_ball
     RSHOPITEM $item_iron_ingots
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    RSHOPITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
-    SELLITEM
     SELLITEM $item_a_cannon_ball
     SELLITEM $item_iron_ingots
     DOORUSE 1
