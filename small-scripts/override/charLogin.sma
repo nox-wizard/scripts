@@ -23,7 +23,7 @@ public __charLogin(const chr)
 
 public createPrivlevelVar(const chr)
 {
-	printf("creating local var %d",CLV_PRIVLEEVEL);
+	printf("creating local var %d",CLV_PRIVLEVEL);
 	
 	if(!chr_isaLocalVar(chr,CLV_PRIVLEVEL))
 	{

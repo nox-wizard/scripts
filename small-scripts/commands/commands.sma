@@ -136,7 +136,7 @@ public detectCommand(const chr)
 	}
 	
 	//privlevel check
-	if(chr_getLocalIntVar(chr,VAR_PRIVLEVEL) < __commands[cmd][__cmdPriv])
+	if(chr_getLocalIntVar(chr,CLV_PRIVLEVEL) < __commands[cmd][__cmdPriv])
 	{
 		
 		#if _CMD_SHOW_MSG
