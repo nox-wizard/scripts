@@ -100,8 +100,6 @@ static event_array[NUM_chrevent][event_prop] = {
 
 public cmd_tweak(const chrsource)
 {
-	if( (chr_isGM(chrsource)!=0) || (chr_getProperty(chrsource, CP_ACCOUNT)!= 0)) //no admin or gm -> abort
-		return;
 	chr_message( chrsource, _, "About whom/what do you want info ?");
 	target_create( chrsource, _, _, _, "TweakStart" );
 }

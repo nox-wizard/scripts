@@ -3,11 +3,13 @@
 #include "small-scripts/commands/align.sma"
 #include "small-scripts/commands/dupe.sma"
 #include "small-scripts/commands/damage.sma"
+#include "small-scripts/commands/decay.sma"
 #include "small-scripts/commands/dye.sma"
 #include "small-scripts/commands/freeze.sma"
 #include "small-scripts/commands/func.sma"
 #include "small-scripts/commands/go/go.sma"
 #include "small-scripts/commands/hiding.sma"
+#include "small-scripts/commands/help/help.sma"
 #include "small-scripts/commands/invul.sma"
 #include "small-scripts/commands/kill.sma"
 #include "small-scripts/commands/make.sma"
@@ -18,9 +20,12 @@
 #include "small-scripts/commands/regioncp.sma"
 #include "small-scripts/commands/resurrect.sma"
 #include "small-scripts/commands/setdir.sma"
+#include "small-scripts/commands/setmorexyz.sma"
 #include "small-scripts/commands/setpriv.sma"
+#include "small-scripts/commands/settype.sma"
 #include "small-scripts/commands/skills/skills.sma"
 #include "small-scripts/commands/stats/stats.sma"
+#include "small-scripts/commands/tile.sma"
 #include "small-scripts/commands/tweak/tweak.sma"
 #include "small-scripts/commands/where.sma"
 #include "small-scripts/commands/wipe.sma"
@@ -50,7 +55,6 @@ public detectCommand(const chr)
 #if !_USE_SOURCE_CMDSYS_
 	bypass();
 #endif
-
 	new speech[150];	 
 	new command[30]; 
 	
@@ -65,13 +69,7 @@ public detectCommand(const chr)
 	 
 	trim(command);
 	str2lower(command);
-
-#if _CMD_DEBUG_
-	new name[50];
-	chr_getProperty(chr,CP_STR_NAME,0,name);
-	log_message("DEBUG: %s is using command: %s",name,command);
-#endif
-
+	
 //Small command system is bypassed if source command system is selected
 #if !_USE_SOURCE_CMDSYS_
 
@@ -100,7 +98,42 @@ public detectCommand(const chr)
 		
 		return;
 	}	 
+
+	//build command function name as: cmd_commandname or read the function to call if it has been specified
+	new function[20];
+	if(strlen(__commands[cmd][__cmdFunc]))
+		strcpy(function,__commands[cmd][__cmdFunc]);
+	else sprintf(function,"cmd_%s",command);
+	
+	#if _CMD_DEBUG_
+		new name[50];
+		chr_getProperty(chr,CP_STR_NAME,0,name);
+		log_message("DEBUG: %s is using command: %s",name,command);
+		log_message("^t->calling function: %s",function);
+	#endif
+
+
+	//call command function
+	callFunction1P(funcidx(function),chr);
 #endif
+}
+
+public readCommandParams(const chr)
+{
+	new speech[150];	 
+	new command[30]; 
+	
+	chr_getProperty(chr, CP_STR_SPEECH, 0, speech);
+			 	
+	speech[0]=' ';	//delete ' 							
+	ltrim(speech); 							
+	
+	//read command
+	str2Token(speech, command, 0,speech,0);
+	trim(speech);
+	 
+	trim(command);
+	str2lower(command);
 
 	//read parameters and store them in __params[][]
 	new param = 0;
@@ -121,27 +154,7 @@ public detectCommand(const chr)
 		
 		param++;
 	}
-	
-//Small command system is bypassed if source command system is selected
-#if !_USE_SOURCE_CMDSYS_
-
-	//build command function name as: cmd_commandname or read the function to call if it has been specified
-	new function[20];
-	if(strlen(__commands[cmd][__cmdFunc]))
-		strcpy(function,__commands[cmd][__cmdFunc]);
-	else sprintf(function,"cmd_%s",command);
-	
-	#if _CMD_DEBUG_
-		log_message("^t->calling function: %s",function);
-	#endif
-
-
-	//call command function
-	callFunction1P(funcidx(function),chr);
-#endif
 }
-
-
 /*!
 \author Fax
 \since 0.82
@@ -231,6 +244,49 @@ public deleteCommand(name[])
 
 /*!
 \author Fax
+\fn initCommandSystem()
+\since 0.82
+\brief initializes command system
+
+Prints a message saying wich system is active.<br>
+Executes any needed startup function for the command system, put a function call here if some of
+your commands needs setup functions.
+Loads needed XSS data.<br>
+\return nothing
+*/
+public initCommandSystem()
+{
+	//Command system type message
+	#if _CMD_DEBUG_
+		#if _USE_SOURCE_CMDSYS_
+			log_message("^nSOURCE command system selected^n^n");
+		#else
+			log_message("^nSMALL command system selected^n^n");
+		#endif
+	#endif
+		
+	//command system test
+	#if _CMD_DEBUG_
+		commandSystemTest();
+	#endif
+	
+	//Commands list, you can switch this off setting _CMD_SHOWLIST_ to 0
+	#if _CMD_SHOWLIST_
+		showCommandsList();
+	#endif
+	
+	//setup 'area command
+	resetCmdAreas(); //DO NOT REMOVE!! this initializes data for command areas
+	
+	//setup 'go command
+	//loadLocations();
+	
+	//setup 'help command
+	loadHelpTopics();
+}
+	
+/*!
+\author Fax
 \fn startCommandSystem(const chr)
 \param chr: the character
 \since 0.82
@@ -279,7 +335,7 @@ public startCommandSystem(const chr)
 	{
 		log_warning("Creating command temp var (CLV_CMDTEMP) for character %d ... ",chr);
 		
-		chr_addLocalIntVar(chr,CLV_CMDTEMP,0);
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,INVALID);
 		
 		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
 		{

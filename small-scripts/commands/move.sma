@@ -10,12 +10,13 @@
 \fn cmd_move(const chr)
 \brief moves objects
 
-<B>syntax:<B> 'move [x][y]["abs"/"rel"]["target"] or 'move me
+<B>syntax:<B> 'move [x][y]["abs"/"rel"]["target"] or 'move me or 'move here
 
 <B>command params:</B>
 <UL>
 <LI> me: if command is called as 'move me, the character is teleported in a targetted location
 When using this option no other parameters are needed.<br>
+<LI> here: if command is called as 'move here, the targetted character is teleported to the command user<br>
 <LI> x: x movement
 <LI> y : y movement
 <LI> 
@@ -33,11 +34,21 @@ and the destination
 */
 public cmd_move(const chr)
 {	
+	readCommandParams(chr);
+	
 	//called 'move me
 	if(!strcmp(__cmdParams[0],"me"))
 	{
 		chr_message(chr,_,"Select a location where to go");
 		target_create(chr,chr,_,_,"cmd_move_targ_dst");
+		return;
+	}
+	
+	//called 'move here
+	if(!strcmp(__cmdParams[0],"here"))
+	{
+		chr_message(chr,_,"Select an object to move to you");
+		target_create(chr,chr,_,_,"cmd_move_targ_here");
 		return;
 	}
 	
@@ -53,19 +64,13 @@ public cmd_move(const chr)
 	
 	//-------------------  x y ------------------
 	new x,y;
-	if(!isStrInt(__cmdParams[0]))
+	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]))
 	{
 		chr_message(chr,_,"x and y must be numbers");
 		return;
 	}
 	
 	x = str2Int(__cmdParams[0]);
-	if(!isStrInt(__cmdParams[1]))
-	{
-		chr_message(chr,_,"x and y must be numbers");
-		return;
-	}
-	
 	y = str2Int(__cmdParams[1]);
 		
 	//---------------  mode  ------------------
@@ -76,11 +81,8 @@ public cmd_move(const chr)
 	{
 		if(!strcmp(__cmdParams[2],"abs"))
 			mode = 0;
-		else 	if (strcmp(__cmdParams[2],"rel"))
-			{
-				chr_message(chr,_,"mode must be 'abs' or 'rel'");
-				return;
-			}
+		else 	if (!strcmp(__cmdParams[2],"rel"))
+				mode = 1;
 		
 		if(!strcmp(__cmdParams[3],"target"))
 			target = true;
@@ -162,6 +164,28 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 	
 	chr_message(chr,_,"Select the destination");
 	target_create(chr,object,_,_,"cmd_move_targ_dst");
+}
+
+
+/*!
+\author Fax
+\fn cmd_move_targ_here(target, chr, object, x, y, z, unused, unused2)
+\params all standard target callback params
+\brief handles 'move here commmand
+*/
+public cmd_move_targ_here(target, chr, object, x, y, z, unused, unused2)
+{
+	chr_getPosition(chr,x,y,z);
+	
+	if(isChar(object))
+		chr_moveTo(object,x,y,z)
+	else 	if(isItem(object))
+			itm_moveTo(object,x,y,z)
+		else
+		{
+			chr_message(chr,_,"You must select an object");
+			return;
+		}
 }
 
 /*!

@@ -25,6 +25,8 @@ the targetted char will be affected
 */
 public cmd_setpriv(const chr)
 {
+	readCommandParams(chr);
+	
 	new target = false;
 	new priv = PRIV_PLAYER;
 	

@@ -4,6 +4,8 @@
 @{
 */
 
+//new __locationsFile[] = "scripts/location.xss";
+
 enum locationStruct
 {
 	__locX,

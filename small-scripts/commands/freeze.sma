@@ -26,6 +26,8 @@ the targetted char will be frozen
 */
 public cmd_freeze(const chr)
 {
+	readCommandParams(chr);
+	
 	new target = false;
 	new freeze = false;
 	

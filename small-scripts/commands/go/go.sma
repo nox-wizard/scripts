@@ -27,6 +27,8 @@ When using this option no other parameters are needed.<br>
 
 public cmd_go(const chr)
 {	
+	readCommandParams(chr);
+	
 	new x,y,z;
 	if(!strlen(__cmdParams[0]))
 	{
@@ -112,4 +114,56 @@ public cmd_go(const chr)
 		chr_moveTo(chr,x,y,z);	
 }
 
+
+//==============  EXPERIMENTAL XSS LOADING FUNCTIONS ==============
+/*!
+\author Fax
+\fn
+\param chr: the character
+\since 0.82
+\brief
+\return nothing
+*/
+/*
+public loadLocations()
+{
+	log_message("Loading locations.xss for 'go command ...");
+	
+	xss_parseFile(__locationsFile,"LOCATION","loadXssEntry");
+	
+	new error,i = 0, section = 0,name[50];
+	while(i < NUM_LOCATIONS)
+	{
+		section++;
+		
+		__locations[i][__locX] = xss_getProperty(__locationsFile,"LOCATION",section,"X");
+		error = xss_getError(); 
+		if(error == XSS_OK)
+		{
+			strcpy(__locations[i][__locName],name);
+			xss_getStrProperty(__locationsFile,"LOCATION",section,"//",__locations[i][__locName]);
+			__locations[i][__locY] = xss_getProperty(__locationsFile,"LOCATION",section,"Y");
+			__locations[i][__locZ] = xss_getProperty(__locationsFile,"LOCATION",section,"Z");
+			
+			i++;
+		}
+		else
+		{ 
+			xss_getErrorMsg();
+			if(error != XSS_SECTION_NOT_FOUND) return;		
+		}
+	}
+	
+	log_message("%d locations loaded",i);
+	printf("^n");
+}
+
+public loadXssEntry(scriptID,value)
+{
+	static idx,lastScriptID;
+	
+	new prop[20];
+	xss_getCurrentProp(prop[]);	
+}
+*/
 /*! }@ */

@@ -239,6 +239,8 @@ will only delete the area, and no new area is set.
 */
 public cmd_area(const chr)
 {
+	readCommandParams(chr);
+	
 	//get current character command area
 	new area = chr_getCmdArea(chr);
 	

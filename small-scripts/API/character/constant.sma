@@ -151,7 +151,7 @@ const CP_SPADELAY = 281;	//!< delay between spell attacks
 const CP_SPATIMER = 282;	//!< spell attack timer
 const CP_SPATTACK = 283;	//!< type of spell attack
 const CP_SPAWNREGION = 284;	//!< region from wich the char spawned
-const CP_SPAWNSERIAL = 285;	//!< serial fo the spawner
+const CP_SPAWNSERIAL = 285;	//!< serial of the spawner
 const CP_SPELL = 286;		//!< the spell the character is casting
 const CP_SPELLACTION = 287;	//!<
 const CP_SPELLTIME = 288;	//!<
@@ -319,11 +319,13 @@ const PRIV2_DISPELLABLE = 0x20;	//!<
 const PRIV2_PERMAMAGICREFLECT = 0x40;//!<
 const PRIV2_NONEEDREAGS = 0x80;	//!<
 
+//these local vars are reserved
 #define CLV_PRIVLEVEL 9999		//!< character privlevel
 #define CLV_ADDITIONALSKILLS 9998	//<! local variable to store additional skill values
 #define CLV_ADDITIONALSKILLSBASE 9997	//<! local variable to store addition base skill values
-#define CLV_CMDTEMP 9996		//!< commands temp variable
+#define CLV_CMDTEMP 9996		//!< commands temp variable - created at startup, never delete!
 #define CLV_CMDADDTEMP 9995		//!< 'add command temp variable
+#define CLV_TEMP1 9994			//!< generic temp var 1 - now used for getRectangle() - created on the fly, delete after use.
 
 
 /** @} */

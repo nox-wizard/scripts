@@ -24,6 +24,8 @@ If no params are specified the add menu is opened.<BR>
 #include "small-scripts/commands/add/addmenu.sma"
 public cmd_add(const chr)
 {
+	readCommandParams(chr);
+	
 	new type[6];
 	new amount = 1;
 		
@@ -86,22 +88,29 @@ public cmd_add(const chr)
 public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 {
 	#if _CMD_DEBUG_
-		printf("^tadding npc at: %d %d %d ^n",x,y,z);
+		log_message("^tadding npc at: %d %d %d ^n",x,y,z);
 	#endif
 	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-	if(x != INVALID && y != INVALID)
+	
+	if(isChar(object))
+		chr_getPosition(object,x,y,z);
+	else 	if(isItem(object))
+			itm_getPosition(object,x,y,z);
+		else 	if(x == INVALID || y == INVALID)
+			{
+				chr_message(chr,_,"Invalid map location %d %d",x,y);
+				log_error("Target returned invalid map location %d %d %d",x,y,z);
+				return;	
+			}
+	
+	for(new i = 0; i < amount; i++)
 	{
-		for(new i = 0; i < amount; i++)
-		{
-			new npc = chr_addNPC(scriptID,x,y,z);
-			chr_message(chr,_,"Character %d created",npc);
-			#if _CMD_DEBUG_
-				printf("^tCharacter %d created",npc);
-			#endif
-		}
-		return;
+		new npc = chr_addNPC(scriptID,x,y,z);
+		chr_message(chr,_,"Character %d created",npc);
+		#if _CMD_DEBUG_
+			log_message("^tCharacter %d created",npc);
+		#endif
 	}
-	chr_message(chr,_,"Invalid map location");
 }
 
 /*!
@@ -112,47 +121,52 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 {
 	#if _CMD_DEBUG_
-		printf("^tadding item at: %d %d %d ^n",x,y,z);
+		log_message("^tadding item at: %d %d %d ^n",x,y,z);
 	#endif
 	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
 	
-	if(isChar(object) && !chr_isNpc(object))
-	{
-		new item = itm_createInBp(scriptID,object);
-		if(itm_getProperty(item,IP_PILEABLE))
-			itm_setProperty(item,IP_AMOUNT,_,amount);
-		else
-			for(new i = 0; i < amount - 1; i++)
-				itm_createInBp(scriptID,object);
-		chr_message(chr,_,"item %d created",item);
-		return;
-	}
-	
-	if(x != INVALID && y != INVALID)
-	{
-		new itm = itm_create(scriptID);
-		itm_moveTo(itm,x,y,z);
-		itm_refresh(itm);
-		chr_message(chr,_,"Item %d created",itm);
-				
-		if(itm_getProperty(itm,IP_PILEABLE))
-			itm_setProperty(itm,IP_AMOUNT,_,amount);
-		else
-			for(new i = 0; i < amount - 1; i++)
+	if(isChar(object))
+		if(!chr_isNpc(object))
+		{
+			new item = itm_createInBp(scriptID,object);
+			if(itm_getProperty(item,IP_PILEABLE))
+				itm_setProperty(item,IP_AMOUNT,_,amount);
+			else
+				for(new i = 0; i < amount - 1; i++)
+					itm_createInBp(scriptID,object);
+			chr_message(chr,_,"item %d created in backpack",item,object);
+			return;
+		}
+		else chr_getPosition(object,x,y,z);
+		
+	else 	if(isItem(object))
+			itm_getPosition(object,x,y,z);
+		else 	if(x == INVALID || y == INVALID)
 			{
-				itm = itm_create(scriptID);
-				itm_moveTo(itm,x,y,z);
-				itm_refresh(itm);
-				chr_message(chr,_,"Item %d created",itm);
+				chr_message(chr,_,"Invalid map location %d %d",x,y);
+				log_error("Target returned invalid map location %d %d %d",x,y,z);
+				return;	
 			}
-				
-		#if _CMD_DEBUG_
-			printf("^tItem %d created^n",itm);
-		#endif
 	
-		return;
-	}
-	chr_message(chr,_,"Invalid map location");
+	new itm = itm_create(scriptID);
+	itm_moveTo(itm,x,y,z);
+	itm_refresh(itm);
+	chr_message(chr,_,"Item %d created",itm);
+			
+	if(itm_getProperty(itm,IP_PILEABLE))
+		itm_setProperty(itm,IP_AMOUNT,_,amount);
+	else
+		for(new i = 0; i < amount - 1; i++)
+		{
+			itm = itm_create(scriptID);
+			itm_moveTo(itm,x,y,z);
+			itm_refresh(itm);
+			chr_message(chr,_,"Item %d created",itm);
+		}
+			
+	#if _CMD_DEBUG_
+		log_message("^tItem %d created^n",itm);
+	#endif
 }
 
 /*! }@ */

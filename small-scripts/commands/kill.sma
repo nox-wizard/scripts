@@ -22,6 +22,8 @@ the targetted char will be killed
 */
 public cmd_kill(const chr)
 {
+	readCommandParams(chr);
+	
 	new target = false;
 	
 	if(!strcmp(__cmdParams[0],"target"))

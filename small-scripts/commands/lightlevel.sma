@@ -23,6 +23,8 @@ the targetted char will be affected
 */
 public cmd_lightlevel(const chr)
 {
+	readCommandParams(chr);
+	
 	new level,target = false;
 	
 	if(!isStrInt(__cmdParams[0]))

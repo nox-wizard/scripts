@@ -26,6 +26,7 @@ When using this option no other parameters are needed.<br>
 public cmd_go(const chr)
 {	
 	new x,y,z;
+	readCommandParams(chr);
 	
 	if(isStrInt(__cmdParams[0]))
 		if(isStrInt(__cmdParams[1]))

@@ -27,6 +27,8 @@ the targetted char will be affected.
 */
 public cmd_invul(const chr)
 {
+	readCommandParams(chr);
+	
 	new makeinvul = false;
 	new target = false;
 	

@@ -11,7 +11,7 @@
 #define _CMD_SHOW_MSG 1		//!< set to 1 if you want users to be warned when they try to use commands they are not authorized to use or that not exist
 #define __MAX_PARAMS 6		//!< maximum number of parameters a command can have
 #define __MAX_PARAM_LENGTH 20	//!< maximum number of character a parameter can be made of
-#define __CMD_COUNT 30		//!< number of available commands
+#define __CMD_COUNT 40		//!< number of available commands
 
 enum
 {
@@ -39,12 +39,14 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"align",	""},
 	{PRIV_CNS,	"area",		""},
 	{PRIV_SEER,	"damage",	""},
+	{PRIV_SEER,	"decay",	""},
 	{PRIV_SEER,	"dye",		""},
 	{PRIV_SEER,	"dupe",		""},
 	{PRIV_CNS,	"freeze",	""},
 	{PRIV_GM,	"func",		""},
 	{PRIV_CNS,	"go",		""},
 	{PRIV_CNS,	"hiding",	""},
+	{PRIV_CNS,	"help",		""},
 	{PRIV_CNS,	"invul",	""},
 	{PRIV_CNS,	"kill",		""},
 	{PRIV_CNS,	"lightlevel",	""},
@@ -56,14 +58,24 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_SEER,	"regioncp",	""},
 	{PRIV_CNS,	"resurrect",	""},
 	{PRIV_SEER,	"setdir",	""},
+	{PRIV_SEER,	"setmorexyz",	""},
 	{PRIV_ADMIN,	"setpriv",	""},
+	{PRIV_SEER,	"settype",	""},
 	{PRIV_GUEST,	"skills",	""},
 	{PRIV_GUEST,	"stats",	""},
+	{PRIV_SEER,	"tile",		""},
 	{PRIV_CNS,	"tweak",	""},
 	{PRIV_CNS,	"where",	""},
 	{PRIV_CNS,	"wipe",		""},
-		
-	{0,"",""},{0,"",""},{0,"",""}
+	
+	{0,	"",	""},
+	{0,	"",	""},
+	{0,	"",	""},
+	{0,	"",	""},
+	{0,	"",	""},
+	{0,	"",	""},
+	{0,	"",	""},
+	{0,	"",	""}
 }; //!< names of commands, are used to create function names. Due to the 19 characters function name limit, command names are limited to 15 characters in length.
 
 new __cmdParams[__MAX_PARAMS][__MAX_PARAM_LENGTH]; //!< array that is filled with paramters when a command is called

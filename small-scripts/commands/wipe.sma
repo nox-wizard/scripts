@@ -10,22 +10,23 @@
 \fn cmd_wipe
 \brief wipes items or characters or both
 
-<B>syntax:<B> 'wipe ["target"]
-<B>command params:</B>
-<UL>
-<LI> needed only if area effect is active:
-	<UL>
-	<LI> "target": wipe targetted object  
-	</UL>
-</UL>
+<B>syntax:<B> 'wipe ["rect"/"target"]
 
 If area effect is active, all objects included in area will be removed.
 If no area effect is active, or if you pass "target", a target will appear and only the targetted
 object will be removed
-\todo make this function work when commands are done in sources
+If you pass "rect" as parameter, then you will be asked to target 2 map locations wich will be
+the corners of a rectangular area that will be wiped.
 */
 public cmd_wipe(const chr)
 {	
+	readCommandParams(chr);
+	
+	if(!strcmp(__cmdParams[0],"rect"))
+	{
+		getRectangle(chr,"cmd_wipe_rect");
+		return;	
+	}
 	
 	new area = chr_getCmdArea(chr)
 	new target = false;
@@ -99,4 +100,29 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 	area_refresh(area);
 }
 
+public cmd_wipe_rect(chr,x0,y0,x1,y1)
+{
+	#if _CMD_DEBUG_
+		log_message("^t->deleting items in rectangle %d %d %d %d",x0,y0,x1,y1);
+	#endif
+	
+	new s = set_create();
+	new x,y;
+	for(x = x0; x <= x1; x++)
+		for(y = y0; y <= y1; y++)
+			set_addItemsNearXY(s,x,y,1);
+	
+	new itm;
+	for(set_rewind(s);!set_end(s);)
+	{
+		itm = set_getItem(s);
+		itm_remove(itm);
+		
+		#if _CMD_DEBUG_
+			log_message("^t->item %d removed",itm);
+		#endif
+	
+	}
+	chr_message(chr,_,"Items removed");
+}
 /*! }@ */

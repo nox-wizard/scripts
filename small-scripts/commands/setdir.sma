@@ -20,6 +20,7 @@
 */
 public cmd_setdir(const chr)
 {
+	readCommandParams(chr);
 	
 	if(!strlen(__cmdParams[0]))
 	{

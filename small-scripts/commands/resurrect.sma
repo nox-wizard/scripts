@@ -22,6 +22,8 @@ the targetted char will be resurrected
 */
 public cmd_resurrect(const chr)
 {
+	readCommandParams(chr);
+	
 	new target = false;
 		
 	//parameters handling, if no parameters are given, keep defaults, else

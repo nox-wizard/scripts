@@ -29,6 +29,8 @@ the targetted char will be damaged.
 */
 public cmd_damage(const chr)
 {
+	readCommandParams(chr);
+	
 	new target = false;
 	new stat = 0;
 	new amount = STAT_HP;

@@ -22,15 +22,20 @@ This command does not support command areas
 */
 public cmd_align(const chr)
 {	
-	if(!strlen(__cmdParams[0]))
-		
-	new dir = 0; //0:x 1:y 2:z
+	readCommandParams(chr);
 	
+	if(!strlen(__cmdParams[0]))
+	{
+		chr_message(chr,_,"You must specify the alignment direction: x y z");
+		return;	
+	}
+		
+	new d = 0;
 	switch(__cmdParams[0][0])
 	{
-		case 'x': dir = CP2_X;
-		case 'y': dir = CP2_Y;
-		case 'z': dir = CP2_Z;	
+		case 'x': d = CP2_X;
+		case 'y': d = CP2_Y;
+		case 'z': d = CP2_Z;	
 		default:
 		{
 			chr_message(chr,_,"Alignment direction MUST be x y or z");
@@ -39,7 +44,7 @@ public cmd_align(const chr)
 	}
 	
 	chr_message(chr,_,"Select reference item or character");
-	target_create(chr,dir,_,_,"cmd_align_targ_ref");	
+	target_create(chr,d,_,_,"cmd_align_targ_ref");	
 }
 
 /*!
@@ -52,7 +57,6 @@ public cmd_align(const chr)
 public cmd_align_targ_ref(target, chr, object, x, y, z, unused, dir)
 {
 	new pos;
-	
 	if(isItem(object))
 		pos = itm_getProperty(object,IP_POSITION,dir);
 	else if(isChar(object))
@@ -93,30 +97,30 @@ public cmd_align_targ(target, chr, object, x, y, z, unused, posAndDir)
 		itm_getPosition(object,newx,newy,newz);
 		switch(dir)
 		{
-			case CP2_X: newx += pos;
-			case CP2_Y: newy += pos;
-			case CP2_Z: newz += pos;
+			case CP2_X: newx = pos;
+			case CP2_Y: newy = pos;
+			case CP2_Z: newz = pos;
 		}
 		itm_moveTo(object,newx,newy,newz);
 	
 	}
 	else if(isChar(object))
-	{
-		chr_getPosition(object,newx,newy,newz);
-		switch(dir)
 		{
-			case CP2_X: newx += pos;
-			case CP2_Y: newy += pos;
-			case CP2_Z: newz += pos;
+			chr_getPosition(object,newx,newy,newz);
+			switch(dir)
+			{
+				case CP2_X: newx = pos;
+				case CP2_Y: newy = pos;
+				case CP2_Z: newz = pos;
+			}
+			chr_moveTo(object,newx,newy,newz);
 		}
-		chr_moveTo(object,newx,newy,newz);
-	}
-	else
-	{
-		chr_message(chr,_,"You must select an item or a character");
-		return;
-	}
-	
+		else
+		{
+			chr_message(chr,_,"You must select an item or a character");
+			return;
+		}
+		
 	chr_message(chr,_,"Object moved to %d %d %d",newx,newy,newz);	
 }
 

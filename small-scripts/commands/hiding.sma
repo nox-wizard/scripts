@@ -34,6 +34,8 @@ Passing no paramteres will toggle the charcater's hiding staus between permahidd
 */
 public cmd_hiding(const chr)
 {
+	readCommandParams(chr);
+	
 	new target = false;
 	new mode = 2; //0:skill 1:spell 2:perma
 	new action = -1; //0:on 1:off 2:toggle

@@ -25,6 +25,8 @@ Doesn't support command areas
 */
 public cmd_make(const chr)
 {
+	readCommandParams(chr);
+	
 	new makewhat = 2;
 	
 	if(!strcmp(__cmdParams[0],"gm"))

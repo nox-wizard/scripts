@@ -21,6 +21,7 @@
  PRECOMPILATION PROPERTIES
  *************************************************************************/
 const NXWLIB_VERSION = 0x082;
+#define AMX_FUNCTION_LENGTH 30
 
 /*************************************************************************
  Boolean enums
@@ -33,6 +34,7 @@ enum eBoolean
 };
 
 const INVALID = -1;
+const OK = 0;
 const VISRANGE = 18;
 
 
@@ -782,3 +784,4 @@ stock guild_getGuildFromStone(const stone)
 }
 
 /** @} */ // end of script_API_guild
+

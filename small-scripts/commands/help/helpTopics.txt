@@ -1,0 +1,24 @@
+In this file you can write all help topics you want, the syntax is simple:
+-TOPIC is the topic title
+-TEXT starts the help text, what will be shown when a player types 'help topictitle.
+You can leave blanks before keywords, they will be recognized anyway.
+
+Leaving a blank line after the help text closes the topic, after the blank line you can start a new topic.
+Between the blank line and the next TOPIC you can write what you want, it won't be read.
+
+TOPIC add command
+TEXT
+syntax: 'add [ID/scriptID][amount]
+command params:
+ID/scriptID: scriptID ($item_.../$npc_...) of the object, or ID as exadecimal or integer number 
+amount: how many objects you want
+If no params are specified the add menu is opened.
+
+This is not read
+This is not read too ...
+TOPIC test topic 
+TEXT
+ta ata tat 
+tet et ete
+y ey ey yeye
+

@@ -24,6 +24,7 @@ the targetted char will be dyed
 */
 public cmd_dye(const chr)
 {
+	readCommandParams(chr);
 	
 	if(!strlen(__cmdParams[0]))
 	{
