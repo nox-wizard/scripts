@@ -402,7 +402,6 @@ native set_getItemsOutsideHouse (const set, const house, const type=-1);
 \since 0.82
 \param 1 the set
 \param 2 the house
-\param 3 optional a type to filter the returned items
 \return 0
 */
 native set_getCharsInHouse (const set, const house);
@@ -413,9 +412,19 @@ native set_getCharsInHouse (const set, const house);
 \since 0.82
 \param 1 the set
 \param 2 the house
-\param 3 optional a type to filter the returned items
 \return 0
 */
 native set_getCharsOutsideHouse (const set, const house);
+
+/*
+\brief Add to given set all chars of an account
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the account number
+\return 0
+*/
+native set_addAccountChars(const set, const accountnum);
+
 
 /*! }@ */
