@@ -33,7 +33,6 @@ if(sex == 1)
 chr_setProperty(animal, CP_STR_TITLE, _ , "adult, female");
 chr_setLocalIntVar(animal, adultcheck, 1);
 tempfx_activate(_, animal, animal, 0, Delay_fertile,funcidx("fertiletimer"));
-
 }
 else if (sex == 0)
 {
