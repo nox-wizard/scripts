@@ -189,17 +189,23 @@ native itm_getCharBackPack(const chr);
 
 /*!
 \author Xanathar
-\fn itm_create(const itemtype, const container = -1)
-\brief
+\fn itm_create(const itemtype, const container = -1, const amount = -1)
+\brief Create a new item
+\param itemtype the scriptid
+\param container the container to put into
+\param amount the amount ( if INVALID use default xss amount )
 */
-native itm_create(const itemtype, const container = -1);
+native itm_create(const itemtype, const container = -1, const amount = -1);
 
 /*!
 \author Luxor
-\fn itm_createByDef(const def[], const container = -1)
-\brief
+\fn itm_createByDef(const def[], const container = -1, const amount = -1);
+\brief Craete a new item
+\param def the define
+\param container the container to put into
+\param amount the amount ( if INVALID use default xss amount )
 */
-native itm_createByDef(const def[], const container = -1);
+native itm_createByDef(const def[], const container = -1, const amount = -1);
 
 /*!
 \author Xanathar
