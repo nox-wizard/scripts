@@ -913,7 +913,7 @@ SECTION NPC $npc_a_slime
 SECTION NPC $npc_a_kraken
 {
     NAME a kraken
-    ID 005f
+    ID 0007
     SKIN 0000
     SPEECH $speech_none
     DIRECTION E
@@ -1479,7 +1479,7 @@ SECTION NPC $npc_an_olive_slime
 SECTION NPC $npc_a_giant_slime
 {
     NAME a giant slime
-    ID 005f
+    ID 005e
     SKIN 0487
     SPEECH $speech_none
     DIRECTION E
