@@ -38,13 +38,13 @@ public cmd_flip_targ(target, chr, object, x, y, z, unused, color)
 {
 	if(isItem(object))
 	{
-		/*
+
 		//SEERs and higher players can flip every item without stamina loss
 		if(chr_getProperty(chr,CP_PRIVLEVEL) >= PRIV_SEER)
 		{
 			itm_flip(object);
 			return;
-		}*/
+		}
 		
 		//check if character can move the item
 		//ratio = -1: item too far
