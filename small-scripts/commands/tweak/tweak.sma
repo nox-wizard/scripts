@@ -107,13 +107,13 @@ public handle_tweak_item( const socket, const menu, const button )
 		tweak_item( socket, item, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	}
 	if (button == 10001){
-		chr_teleport( chr );
-		tweak_char( socket, chr, gui_getProperty( menu, MP_BUFFER, 2 ) );
+		chr_teleport( item );
+		tweak_item( socket, item, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	}
 	
 }
 
-public tweak_iten( const socket, const item, const page )
+public tweak_item( const socket, const item, const page )
 {
 	new menu = gui_create( 50, 50, true, true, true, "handle_tweak_item" );
 	//gui_addGump( menu, 0, 0, 0x0898, 0 );
