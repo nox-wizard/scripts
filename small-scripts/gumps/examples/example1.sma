@@ -39,7 +39,7 @@ public showGump( const chr )
 	//
 	// Set the callback function
 	//
-	gui_setCallback( XRGUI_CHRSHEET, "gumpCallback" );
+	gui_setCallback( MYGUMP, "gumpCallback" );
 
 	gui_addPage( MYGUMP, 0 );
 	gui_addResizeGump( MYGUMP, 0, 0, 0xA3C, 300, 400 );
