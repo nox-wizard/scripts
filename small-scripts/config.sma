@@ -27,7 +27,7 @@
 
 //commands system
 #define MAX_AREAS 32;	//!< max number of areas for commands system, should be >= to the number of players that can access the 'area command
-#define _CMD_DEBUG_  1		//!< command system debug switch set to 1 to have debug messages shown, 0 else.
+#define _CMD_DEBUG_  0		//!< command system debug switch set to 1 to have debug messages shown, 0 else.
 #define _CMD_SHOWLIST_ 1	//!< set to 1 if you want to see a list of available commands at startup
 #define _CMD_SHOW_MSG 1		//!< set to 1 if you want users to be warned when they try to use commands they are not authorized to use or that not exist
 //these vars are deleted at character's login (globaltags(c) function in charLogin.sma), DON'T change!
