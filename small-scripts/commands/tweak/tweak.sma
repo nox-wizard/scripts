@@ -5,7 +5,7 @@
 
 <B>syntax:</B> 'tweak
 Shows an ingame menu that allows all kinds of modifications to chars and items<BR>
-\todo make this function work when commands are done in sources
+\todo rename this function when commands are done in sources to cmd_tweak
 <br>
 */
 
@@ -91,12 +91,14 @@ static event_array[NUM_chrevent][event_prop] = {
 {"on click:             ", 28}
 };
 
-public cmd_tweak (const target)
+public command_tweak (const chrsource)
 {
-	bypass();
-	if (! chr_isGM(target)) return;
-	chr_message( target, _, "About whom/what do you want info ?");
-	target_create( target, target, _, _, "TweakStart" );
+	if(chr_getProperty(chrsource, CP_SERIAL) != chrsource) //as long sockets are still given instead serial
+		return;
+	else if (! chr_isGM(chrsource))
+		return;
+	chr_message( chrsource, _, "About whom/what do you want info ?");
+	target_create( chrsource, _, _, _, "TweakStart" );
 }
 
 public TweakStart( const t, const chrsource, const target, const x, const y, const z, const model, const param1 )

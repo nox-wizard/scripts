@@ -129,13 +129,14 @@ static animProperty[NUM_anims][animprop] = {
 {0225, 0x00e1, 0x2122, "wolf"}
 };
 
-cmd_polymorph (const target)
+cmd_polymorph (const chrsource)
 {
-	if (! chr_isGM(target))
+	if(chr_getProperty(chrsource, CP_SERIAL) != chrsource) //as long sockets are still given instead serial
 		return;
-	bypass();
-	chr_message( target, _, "Whom do you want to polymorph?");
-	target_create( target, _, _, _, "polymMenuCallback" );
+	if (!chr_isGM(chrsource))
+		return;
+	chr_message( chrsource, _, "About whom/what do you want info ?");
+	target_create( chrsource, _, _, _, "polymMenuCallback" );
 }
 
 public polymMenuCallback( const t, const chrsource, const target, const x, const y, const z, const model, const param1 )

@@ -1,21 +1,36 @@
+/*!
+\author Sparhawk?
+\fn cmd_stats(const chr)
+\brief small ingame char/item editing
+
+<B>syntax:</B> 'small
+Shows a small ingame menu that allows all kinds of modifications to chars and items<BR>
+\todo rename this function when commands are done in sources to cmd_stats
+<br>
+*/
+
 public command_stats( const caller )
 {
+	if(chr_getProperty(caller, CP_SERIAL) != caller) //as long sockets are still given instead serial
+		return;
 	chr_message(caller, _, "Select object to inspect.. " );
 	target_create( caller, _, _, _, "target_stats");
 }
 
-public target_stats( const chr, const target, const item )
+public target_stats( const t, const chrsource, const target, const x, const y, const z, const model, const param1 )
 {
-	if(!isChar(chr)) 
+	if(!isChar(chrsource)) 
 		return;
 		
-	if( isChar(target) ) {
-		stats_char( chr, target, 1 );
+	if ( (t == 1) || (t==3)) //is npc/char
+	{
+		stats_char( chrsource, target, 1 );
 	}
-	else if( isItem( item ) ) {
-		stats_item( chr, item, 1 );
+	else if ( t==2)
+	{
+		stats_item( chrsource, target, 1 );
 	}
-	else chr_message(chr,_ , "stats work only on object" );
+	else chr_message(chrsource,_ , "stats work only on object" );
 
 }
 
