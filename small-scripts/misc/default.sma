@@ -18,31 +18,29 @@ public __get_milk_target(const itm, const s)
     getTarget(s, funcidx("__get_milk_from_cow"), "Choose the cow to milk...");
 }
 
-public __get_milk_from_cow(const s, const c, const this_is_useless)
+public __get_milk_from_cow( const cc, const c, const this_is_useless)
 {
     //something wrong : goes out and drops trigging
     if ((c<0)||(s<0)) return;
 
 
-    new cc = getCharFromSocket(s);
-
     new id = (chr_getProperty(c, CP_ID, 2)<<8) + chr_getProperty(c, CP_ID, 1);
 
     if ((id!=0xD8)&&(id!=0xE7)) {
-        nprintf(s, "It's not  cow!!!");
+        chr_message( cc, _, "It's not  cow!!!");
         return;
     }
 
     new disabledtime = chr_getProperty(c, CP_DISABLED);
     if (disabledtime!=0) {
-        nprintf(s, "It has been milked recently");
+        chr_message( cc, _, "It has been milked recently");
         return;
     }
 
     new jars = chr_countItems(cc, 0x1005);
 
     if (jars <= 0) {
-        nprintf(s, "You have not jars");
+        chr_message( cc, _, "You have not jars");
         return;
     }
 
@@ -61,9 +59,8 @@ public __get_milk_from_cow(const s, const c, const this_is_useless)
  AUTHOR   : Xanathar
  PURPOSE  : shows target stamina to GM anatomists
  ****************************************************************************/
-public __anatomy_target(const s, const target, const obj)
+public __anatomy_target(const cc, const target, const obj)
 {
-    new cc = getCharFromSocket(s);
 
     if (chr_getProperty(cc, CP_SKILL, SK_ANATOMY) < 950) return;
 
@@ -76,29 +73,29 @@ public __anatomy_target(const s, const target, const obj)
 
     switch(prc/10) {
         case 0:
-            nprintf(s, "He/She is completely tired [%d%%]", prc);
+            chr_message( cc, _, "He/She is completely tired [%d%%]", prc);
         case 1:
-            nprintf(s, "He/She is extremely tired [%d%%]", prc);
+            chr_message( cc, _, "He/She is extremely tired [%d%%]", prc);
         case 2:
-            nprintf(s, "He/She is very much tired [%d%%]", prc);
+            chr_message( cc, _, "He/She is very much tired [%d%%]", prc);
         case 3:
-            nprintf(s, "He/She is very tired [%d%%]", prc);
+            chr_message( cc, _, "He/She is very tired [%d%%]", prc);
         case 4:
-            nprintf(s, "He/She is tired [%d%%]", prc);
+            chr_message( cc, _, "He/She is tired [%d%%]", prc);
         case 5:
-            nprintf(s, "He/She is slightly tired [%d%%]", prc);
+            chr_message( cc, _, "He/She is slightly tired [%d%%]", prc);
         case 6:
-            nprintf(s, "He/She is not tired [%d%%]", prc);
+            chr_message( cc, _, "He/She is not tired [%d%%]", prc);
         case 7:
-            nprintf(s, "He/She is slightly fresh [%d%%]", prc);
+            chr_message( cc, _, "He/She is slightly fresh [%d%%]", prc);
         case 8:
-            nprintf(s, "He/She is almost fresh [%d%%]", prc);
+            chr_message( cc, _, "He/She is almost fresh [%d%%]", prc);
         case 9:
-            nprintf(s, "He/She is fresh [%d%%]", prc);
+            chr_message( cc, _, "He/She is fresh [%d%%]", prc);
         case 10:
-            nprintf(s, "He/She is fully fresh [%d%%]", prc);
+            chr_message( cc, _, "He/She is fully fresh [%d%%]", prc);
         default:
-            nprintf(s, "He/She is at %d%% stamina", prc);
+            chr_message( cc, _, "He/She is at %d%% stamina", prc);
         }
 }
 
@@ -108,21 +105,19 @@ public __anatomy_target(const s, const target, const obj)
  AUTHOR   : Xanathar (originally coded in C++ by Blackwinds :))
  PURPOSE  : tells a player its reputation
  ****************************************************************************/
-public __crystBall (const ball, const s)
+public __crystBall (const ball, const cc)
 {
     bypass();
-
-    new cc = getCharFromSocket(s);
 
     new karma = chr_getProperty(cc, CP_KARMA, 1);
     new fame = chr_getProperty(cc, CP_FAME, 1);
     new kills = chr_getProperty(cc, CP_KILLS, 1);
     new deaths = chr_getProperty(cc, CP_DEATHS, 1);
 
-    nprintf(s, "You have %d karma", karma);
-    nprintf(s, "You have %d fame", fame);
-    nprintf(s, "You have killed %d persons", kills);
-    nprintf(s, "You have died %d times", deaths);
+    chr_message( cc, _, "You have %d karma", karma);
+    chr_message( cc, _, "You have %d fame", fame);
+    chr_message( cc, _, "You have killed %d persons", kills);
+    chr_message( cc, _, "You have died %d times", deaths);
 
     itm_reduceAmount(ball, 1);
 }
@@ -154,27 +149,6 @@ public __nxwBench()
     for (i = 0; i<10000; i++) getNXWVersion();
 }
 
-/****************************************************************************
- FUNCTION : __smoke
- AUTHOR   : Rage
- PURPOSE  : makes a Char smoke
- ****************************************************************************/
-public __smoke(const itm, const s)
-{
-	bypass();
-    new c = getCharFromSocket(s);
-    new container = itm_getProperty(itm, IP_CONTAINERSERIAL);
-	if( container==INVALID )
-		itm_remove(itm);
-	else 
-		itm_contDelAmount(container, 1, itm_getProperty(itm, IP_ID), itm_getProperty(itm, IP_COLOR));
-    nprintf(s, "You start smoking");
-    timer_add(c, 5, 0, funcidx("__smoke_cback"), 0, 5, 0 );
-}
 
-public __smoke_cback(const c, const more1, const more2)
-{
-	chr_speech(NPC_EMOTE_ALL,-1,c,"*Coff Coff*",0);
-}
 
 

@@ -10,24 +10,23 @@
  FUNCTION : __anatomyTarget
  AUTHOR   : Luxor
  *********************************************************************************************/
-public __anatomyTarget(const s, const target, const item)
+public __anatomyTarget(const cc, const target, const item)
 {
-	if (s < 0) return;
 	if (target < 0) {
-		ntprintf(s, "Target invalid");
+		chr_message( cc, _, "Target invalid");
 		return;
 	}
-	new cc = getCharFromSocket(s);
+
 	if (cc == target) {
-		ntprintf(s, "You cannot analize yourself!");
+		chr_message( cc, _, "You cannot analize yourself!");
 		return;
 	}
 	if (chr_distance(cc, target) >= 10) {
-		ntprintf(s, "You need to be closer to find out more about them");
+		chr_message( cc, _, "You need to be closer to find out more about them");
 		return;
 	}
 	if (!chr_checkSkill(cc, SK_ANATOMY, 0, 1000)) {
-                ntprintf (s, "You are not certain..");
+                chr_message( cc, _, "You are not certain..");
                 return;
         }
 	new str = chr_getStr(target);
@@ -88,7 +87,7 @@ public __anatomyTarget(const s, const target, const item)
 		}
 	}
 
-	ntprintf(s, "That person looks %s and %s.", strDes, dexDes);
+	chr_message( cc, "That person looks %s and %s.", strDes, dexDes);
 
 	if (chr_getSkill(cc, SK_ANATOMY) < 950) return;
 
@@ -98,29 +97,29 @@ public __anatomyTarget(const s, const target, const item)
 	switch(prc/10)
 	{
 		case 0:
-			ntprintf(s, "He/She is completely tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is completely tired [%d%%]", prc);
  		case 1:
-			ntprintf(s, "He/She is extremely tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is extremely tired [%d%%]", prc);
 		case 2:
-			ntprintf(s, "He/She is very much tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is very much tired [%d%%]", prc);
 		case 3:
-			ntprintf(s, "He/She is very tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is very tired [%d%%]", prc);
 		case 4:
-			ntprintf(s, "He/She is tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is tired [%d%%]", prc);
 		case 5:
-			ntprintf(s, "He/She is slightly tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is slightly tired [%d%%]", prc);
 		case 6:
-			ntprintf(s, "He/She is not tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is not tired [%d%%]", prc);
 		case 7:
-			ntprintf(s, "He/She is slightly fresh [%d%%]", prc);
+			chr_message( cc, _, "He/She is slightly fresh [%d%%]", prc);
 		case 8:
-			ntprintf(s, "He/She is almost fresh [%d%%]", prc);
+			chr_message( cc, _, "He/She is almost fresh [%d%%]", prc);
 		case 9:
-			ntprintf(s, "He/She is fresh [%d%%]", prc);
+			chr_message( cc, _, "He/She is fresh [%d%%]", prc);
 		case 10:
-			ntprintf(s, "He/She is fully fresh [%d%%]", prc);
+			chr_message( cc, _, "He/She is fully fresh [%d%%]", prc);
 		default:
-			ntprintf(s, "He/She is at %d%% stamina", prc);
+			chr_message( cc, _, "He/She is at %d%% stamina", prc);
 	}
 }
 
@@ -129,9 +128,9 @@ public __anatomyTarget(const s, const target, const item)
  AUTHOR   : Luxor
  PURPOSE  : This function is called by Nox-Wizard when a char clicks Anatomy on the skills list
  *********************************************************************************************/
-public __nxw_sk_anatomy(const s)
+public __nxw_sk_anatomy( const chr )
 {
-	if (s < 0) return;
-	getTarget(s, funcidx("__anatomyTarget"), "Whom shall I examine?");
+	chr_message( chr, _, "Whom shall I examine?");
+	getTarget(s, funcidx("__anatomyTarget"), 
 }
 

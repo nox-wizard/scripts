@@ -6,39 +6,38 @@ public __nxw_sk_inscript( const socket )
     getTarget( socket ,funcidx("__inscription_copy"), "Select scroll...");
 }
 
-public __inscription_copy(const socket, const target, const item)
+public __inscription_copy(const chr, const target, const item)
 {
 
-	if ( socket < 0 || item < 0 )
+	if ( chr < 0 || item < 0 )
 	    exit;
 
 	new id = itm_getProperty(item,IP_ID);
 
 	if ( id == 3643 || id == 3834 )
 	{
-		__inscription_book(socket, item);
+		__inscription_book(chr, item);
 		exit;
 	}
 
 	if ((id < 7981) || (id > 8044))
 	{
-		nprintf(socket,"That's not a scroll %d",id);
+		chr_message( chr, _,"That's not a scroll %d",id);
 		exit;
 	}
 
-	new chr = getCharFromSocket(socket);
 	new backpack = chr_getBackpack( chr );
 	new cont_ser = itm_getProperty(item,IP_CONTAINERSERIAL);
 
 	if ( itm_contCountItems(backpack, 3636,0) < 1 )
 	{
-		nprintf(socket,"You dont have blank scroll in your backpack");
+		chr_message( chr, _,"You dont have blank scroll in your backpack");
 		exit;
 	}
 
 	if ( backpack != cont_ser && target ==-1 )
 	{
-		nprintf(socket,"It must be in your backpack");
+		chr_message( chr, _,"It must be in your backpack");
 		exit;
 	}
 
@@ -106,7 +105,7 @@ public __inscription_copy(const socket, const target, const item)
 		// printf("%d",START_SCROLL+id-7981);
 		itm_contDelAmount(backpack, 1, 3636 );
 		itm_createInBp( START_SCROLL+id-7981, chr );
-		nprintf(socket,"You success to copy that spell");
+		chr_message( chr, _,"You success to copy that spell");
 	}
 	else
 	{
@@ -114,16 +113,16 @@ public __inscription_copy(const socket, const target, const item)
 		itm_contDelAmount(backpack, 1, 3636 );
 		if (luck < 80 )
 		{
-			nprintf(socket,"You failed to copy that spell");
+			chr_message( chr, _,"You failed to copy that spell");
 		}
 		else if (luck < 90)
 		{
-			nprintf(socket,"You destroyed the orginal scroll !");
+			chr_message( chr, _,"You destroyed the orginal scroll !");
 			itm_reduceAmount(item,1);
 		}
 		else if (luck < 100)
 		{
-			nprintf(socket,"You suffered serious magic damage !");
+			chr_message( chr, _,"You suffered serious magic damage !");
 			chr_damage( chr, random(8)*skill_hi/10 );
 			magic_castExplosion( chr, chr, 0);
 		}
