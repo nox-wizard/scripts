@@ -87,7 +87,7 @@ static eventItm_array[NUM_itmevent][eventItm_prop] = {
 {"on chr walks over it:  ", 16}
 };
 
-const NUM_itmtweak = 83;
+const NUM_itmtweak = 89;
 static it_pg1_l =0; //number of lines at left row
 static it_pg1_r =0; //number of lines at right row
 static it_pg2_l =0;
@@ -121,9 +121,9 @@ it_inputname: 10
 //4: checkbox
 //5: radiobutton
 //6: subproperties (morex/morey/morez)
+//7: stock function call: ct_propnumber is number of stock function, ct_infotype: string:1 and integer: 0
 static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {1,"Itemname:        ", 454, 0, 0, "         "},
-{1,"Creator:         ", 450, 0, 0, "         "},
 {1,"Attackpower:     ", 200, 0, 0, "         "},
 {1,"Armorvalue:      ", 204, 0, 0, "         "},
 {1,"Dex bonus:       ", 205, 0, 0, "         "},
@@ -135,8 +135,21 @@ static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {1,"Int bonus:       ", 214, 0, 0, "         "},
 {1,"Int required:    ", 215, 0, 0, "         "},
 {1,"Str bonus:       ", 238, 0, 0, "         "},
-{2,"Weight:          ", 248, 0, 0, "         "},
-{1,"Good:          ? ", 211, 0, 0, "         "},
+{1,"Weight:          ", 248, 0, 0, "         "},
+{1,"Color:           ", 403, 0, 0, "         "},
+{2,"Scriptid:        ", 251, 0, 0, "         "},
+{5,"Visible by:  all:", 120, 0, 2, "         "},
+{5,"   owner & GM:   ", 120, 1, 0, "         "},
+{5,"   only GM:      ", 120, 2, 0, "         "},
+{5,"Movable default: ", 111, 0, 3, "         "},
+{5,"   all:          ", 111, 1, 0, "         "},
+{5,"   never:        ", 111, 2, 0, "         "},
+{5,"   owner only:   ", 111, 3, 0, "         "},
+{2,"Pile able:       ", 454, 0, 0, "         "},
+{4,"Is Newbie-Item:  ", 118, 2, 0, "         "},
+{6,"X Position:      ", 227, 0, 3, "         "},
+{6,"Y Position:      ", 227, 1, 0, "         "},
+{6,"Z Position:      ", 227, 2, 0, "         "},
 {6,"More1:           ", 112, 1, 3, "         "},
 {6,"More2:           ", 112, 2, 0, "         "},
 {6,"More3:           ", 112, 3, 0, "         "},
@@ -145,64 +158,58 @@ static itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {6,"MoreB 2:         ", 113, 2, 0, "         "},
 {6,"MoreB 3:         ", 113, 3, 0, "         "},
 {6,"MoreB 4:         ", 113, 4, 0, "         "},
-{4,"Can Decay:       ", 118, 1, 0, "         "},
-{2,"Layer:           ", 110, 0, 0, "         "},
-{1,"Money Value:     ", 247, 0, 0, "         "},
-{1,"Can be dyed:     ", 105, 0, 0, "         "},
 {6,"MoreX:           ", 220, 1, 2, "         "},
 {6,"MoreY:           ", 220, 2, 0, "         "},
 {6,"MoreZ:           ", 220, 3, 0, "         "},
-{5,"Visible by:  all:", 120, 0, 2, "         "},
-{5,"   owner & GM:   ", 120, 1, 0, "         "},
-{5,"   only GM:      ", 120, 2, 0, "         "},
-{2,"Is Corpse:       ", 102, 0, 0, "         "},
-{2,"Door-Dir:        ", 103, 0, 0, "         "},
-{2,"Door is open:    ", 104, 0, 0, "         "},
-{5,"Movable default: ", 111, 0, 3, "         "},
-{5,"   all:          ", 111, 1, 0, "         "},
-{5,"   never:        ", 111, 2, 0, "         "},
-{5,"   owner only:   ", 111, 3, 0, "         "},
-{2,"Pile able:       ", 454, 0, 0, "         "},
-{4,"Is Newbie-Item:  ", 118, 2, 0, "         "},
-{1,"Damagetype:      ", 121, 0, 0, "         "},
-{1,"Magic dmg type:  ", 122, 0, 0, "         "},
-{1,"Is in Container: ", 202, 0, 0, "         "},
-{1,"Decay after msec:", 203, 0, 0, "         "},
-{2,"Is disabled:     ", 207, 0, 0, "         "},
-{1,"Gatenumber:   ?  ", 208, 0, 0, "         "},
-{1,"Gatetime:     ?  ", 209, 0, 0, "         "},
-{1,"Multiserial:     ", 221, 0, 0, "         "},
-{1,"Is poisoned:  ?  ", 217, 0, 0, "         "},
-{6,"X Position:      ", 227, 0, 3, "         "},
-{6,"Y Position:      ", 227, 1, 0, "         "},
-{6,"Z Position:      ", 227, 2, 0, "         "},
-{1,"Rank:            ", 228, 0, 0, "         "},
-{1,"Restockrate:  ?  ", 230, 0, 0, "         "},
+{1,"Good:          ? ", 211, 0, 0, "         "},
+{1,"Money Value:     ", 247, 0, 0, "         "},
 {2,"Random valuerate:", 231, 0, 0, "         "},
-{1,"Is secure chest: ", 232, 0, 0, "         "},
-{1,"smelt:        ?  ", 234, 0, 0, "         "},
-{1,"Spawn Region:    ", 235, 0, 0, "         "},
-{1,"Spawner serial:  ", 236, 0, 0, "         "},
-{2,"Weapon Speed:    ", 237, 0, 0, "         "},
+{1,"Rank:            ", 228, 0, 0, "         "},
+{1,"Creator:         ", 450, 0, 0, "         "},
+{4,"Can Decay:       ", 118, 1, 0, "         "},
+{1,"Decay after msec:", 203, 0, 0, "         "},
+{1,"Wipeable:        ", 249, 0, 0, "         "},
+{1,"Can be dyed:     ", 105, 0, 0, "         "},
+{2,"Is Corpse:       ", 102, 0, 0, "         "},
+{1,"Is in Container: ", 202, 0, 0, "         "},
+{2,"Is disabled:     ", 207, 0, 0, "         "},
 {1,"Time unused:   ? ", 240, 0, 0, "         "},
 {1,"How long unused? ", 241, 0, 0, "         "},
-{6,"Item type2:    ? ", 246, 0, 0, "         "},
-{1,"Wipeable:        ", 249, 0, 0, "         "},
-{1,"Scriptid:        ", 251, 0, 0, "         "},
-{2,"Animation ID:    ", 252, 0, 0, "         "},
-{1,"resists type:    ", 253, 0, 0, "         "},
+{1,"Gatenumber:   ?  ", 208, 0, 0, "         "},
+{1,"Gatetime:     ?  ", 209, 0, 0, "         "},
+{2,"Door-Dir:        ", 103, 0, 0, "         "},
+{2,"Door is open:    ", 104, 0, 0, "         "},
+{2,"Layer:           ", 110, 0, 0, "         "},
+{1,"Damagetype:      ", 121, 0, 0, "         "},
+{2,"Weapon Speed:    ", 237, 0, 0, "         "},
+{1,"Magic dmg type:  ", 122, 0, 0, "         "},
+{1,"Resists type:    ", 253, 0, 0, "         "},
 {1,"Magic Dmg-power: ", 254, 0, 0, "         "},
 {2,"Used Ammo type:  ", 255, 0, 0, "         "},
 {1,"Used Ammo Fx:    ", 256, 0, 0, "         "},
-{1,"Amount:          ", 400, 0, 0, "         "},
-{1,"Amount 2:        ", 401, 0, 0, "         "},
+{1,"Is poisoned:  ?  ", 217, 0, 0, "         "},
+{1,"Multiserial:     ", 221, 0, 0, "         "},
+{1,"Is secure chest: ", 232, 0, 0, "         "},
+{1,"smelt:        ?  ", 234, 0, 0, "         "},
+{6,"Item type2:    ? ", 246, 0, 0, "         "},
+{2,"Animation ID:    ", 252, 0, 0, "         "},
+{0,"Spawner Stuff    ",   0, 0, 0, "         "},
+{1,"Max at Spawner:  ", 400, 0, 0, "         "},
+{1,"Now at Spawner:  ", 401, 0, 0, "         "},
+{6,"Script to Spawn: ", 220, 1, 2, "         "},
+{6,"Minimal time(min)", 220, 2, 0, "         "},
+{6,"Maximum time(min)", 220, 3, 0, "         "},
+{1,"Item=61 or NPC=62", 245, 0, 0, "         "},
+{7,"Min. to Spawn:   ",   0, 0, 0, "         "},
+{7,"Max. to Spawn:   ",   1, 0, 0, "         "},
+{1,"Spawn Region:    ", 235, 0, 0, "         "},
+{1,"Spawner serial:  ", 236, 0, 0, "         "},
+{1,"Restockrate:  ?  ", 230, 0, 0, "         "},
 {1,"Direction:       ", 402, 0, 0, "         "},
-{2,"Color:           ", 403, 0, 0, "         "},
 {1,"Hex ID:          ", 404, 0, 0, "         "},
 {6,"Description:     ", 451, 0, 0, "         "},
 {1,"Disabled-Message:", 452, 0, 0, "         "},
 {1,"Corpse-Murderer: ", 453, 0, 0, "         "},
-{2,"Itemname:        ", 454, 0, 0, "         "},
 {1,"Item-ID name:  ? ", 455, 0, 0, "         "},
 {1,"Incognito:  ?    ", 455, 0, 0, "         "}
 };
@@ -979,7 +986,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 							u=itm_twkarray[i][it_propval]+1;
 							gui_addGroup( twkItmMenu, u );
 						}
-						if(itm_twkarray[i][ct_infotype] == itm_getProperty( target,itm_twkarray[i][it_propnumber]))
+						if(itm_twkarray[i][it_infotype] == itm_getProperty( target,itm_twkarray[i][it_propnumber]))
 							checklev = 1;
 						if(itm_twkarray[i][it_propnumber] == 120) //visible
 							{
@@ -998,6 +1005,23 @@ public tweak_itm(const chrsource, const target, pagenumber)
 						gui_addGump(twkItmMenu,it_gu+k,181+(n*20), 0x827);
 						gui_addText(twkItmMenu,it_tex+k,180+(n*20),1310, itm_twkarray[i][it_linename]);
 						gui_addPropField( twkItmMenu, (it_prop+k), (180+(n*20)),150,30, (itm_twkarray[i][it_propnumber]), (itm_twkarray[i][it_infotype]));
+					}
+					case 7:
+					{
+						new stocktype = itm_twkarray[i][it_propnumber];
+						if( (stocktype == 0) || (stocktype == 1)) //MoreB1+2
+						{
+							new moreb1 = itm_getProperty(target, IP_MOREB, 1+2*stocktype);
+							new moreb2 = itm_getProperty(target, IP_MOREB, 2+2*stocktype);
+							moreb1 = (moreb1&0xff);
+							moreb2 = (moreb2&0xff)<<8;
+							sprintf(tempItmStr, "%d", moreb1+moreb2);
+							gui_addGump(twkItmMenu,it_gu+k, 181+(n*20), 0x827);
+							gui_addText(twkItmMenu,it_tex+k,180+(n*20),1310,itm_twkarray[i][it_linename]);
+							gui_addInputField( twkItmMenu,it_prop+k,180+(n*20),50,20,i,1110,tempItmStr);
+							gui_addCheckbox( twkItmMenu,it_check+k-10,180+(n*20),oldpic,newpic,checklev,i);
+							checklev=0;
+						}
 					}
 					default: printf("unknown item-tweak case!");
 				}//linetype
@@ -1060,7 +1084,29 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 				}
 				limit = 0;
 			}
-			//gui_delete( twkItmMenu );
+			else if(linetype == 7) //stock function
+			{
+				new stocktype = itm_twkarray[i][it_propnumber];
+				if( (stocktype == 0) || (stocktype == 1)) //MoreB1+2
+				{
+					new textbuf_input[15];
+		        		new value=0;
+		        		new checked = gui_getProperty(twkItmMenu,MP_CHECK,i);
+		        		gui_getProperty(twkItmMenu,MP_UNI_TEXT,i,textbuf_input);
+		        		trim(textbuf_input);
+		        		if (isStrUnsignedInt(textbuf_input)) //should be an integer, is it?
+		        		{
+		        			value = str2UnsignedInt(textbuf_input);
+						new moreb1 = value%256;
+						new moreb2 = value/256;
+						printf("moreb1: %d, moreb2: %d^n", moreb1, moreb2);
+						itm_setProperty(target, IP_MOREB, 1+2*stocktype, moreb1);
+						itm_setProperty(target, IP_MOREB, 2+2*stocktype, moreb2);
+						printf("moreb1-subprop: %d, moreb2-subprop: %d^n", 1+2*stocktype*(9/10), 2+2*stocktype*(9/10));
+		        		}
+			        	else chr_message( chrsource, _,"A number must be inserted!");
+			        }
+			}//linetype
 		}//for
 		itm_refresh(target);
 	}//apply button
@@ -1501,8 +1547,8 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 		gui_addText(twkChrMenu,195,79,33,"Skills");
 	
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
-	gui_addText(twkChrMenu,285,79,33,"Layer");
+		gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+		gui_addText(twkChrMenu,285,79,33,"Layer");
 		
 		gui_addText(twkChrMenu,66,120,33,"Account number :");
 		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
@@ -1869,6 +1915,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        			new textbuf_origin[15];
 		        			new value=0;
 		        			checked = gui_getProperty(twkChrMenu,MP_CHECK,i);
+		        			gui_getProperty(twkChrMenu,MP_UNI_TEXT,i,textbuf_input);
 		        			if( type== 1) //TFX function
 		        			{
 		        				sprintf(textbuf_origin, "%s", chr_twkarray[i][ct_inputname]);
