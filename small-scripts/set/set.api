@@ -28,102 +28,231 @@
 
 
 /*!
-\author Xanathar
-\fn set_open()
-\brief
-*/
-native set_open();
-
-/*!
-\author Xanathar
-\fn set_close(const set)
-\brief
-*/
-native set_close(const set);
-
-/*!
+\brief Open a set
 \author Endymion
-\fn set_rewind(const set)
-\brief Rewind the set
+\since 0.82
+\return the set
+\fn set_create( )
 */
-native set_rewind(const set);
+native set_create( );
 
 /*!
+\brief Close a set
 \author Endymion
-\fn set_end(const set)
-\brief check if given set is at end
-\return true if at end
+\since 0.82
+\param 1 the set
+\fn set_delete( const set )
+\return 0
 */
-native set_end(const set);
+native set_delete( const set );
 
 /*!
+\brief Rewind a set
 \author Endymion
-\fn set_next(const set)
-\brief Move set to next item
+\since 0.82
+\param 1 the set
+\return 0
+\fn set_rewind( const set )
 */
-native set_next(const set);
+native set_rewind( const set );
 
 /*!
-\author Xanathar
-\fn set_pop(const set)
-\brief
+\brief Move to next item
+\author Endymion
+\since 0.82
+\param 1 the set
+\return 0
+\fn set_next( const set )
 */
-native set_pop(const set);
+native set_next( const set );
 
 /*!
-\author Xanathar
-\fn set_push(const set, const value)
-\brief
+\brief Check if at end of the given set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return 1 if at end, 0 else
+\fn set_end( const set )
 */
-native set_push(const set, const value);
+native set_end( const set );
+
 
 /*!
-\author Xanathar
-\fn set_fillOwnedChars(const set, const chrowner, const includestabled = 1, const includeonlyfollowing = 0)
-\brief
+\brief Get number of element contained in a set
+\author Endymion
+\since 0.82
+\param 1: the set
+\return element count
+\fn set_size( const set )
 */
-native set_fillOwnedChars(const set, const chrowner, const includestabled = 1, const includeonlyfollowing = 0);
+native set_size( const set );
 
 /*!
-\author Xanathar
-\fn set_fillChrNearXY(const set, const x, const y, const distance = 10, const excludeofflineplayers = 1)
-\brief
+\brief Get current object of given set
+\author Endymion
+\since 0.82
+\param 1: the set
+\return the object
+\note move index to next item
+\fn set_get( const set )
 */
-native set_fillChrNearXY(const set, const x, const y, const distance = 10, const excludeofflineplayers = 1);
+native set_get( const set );
 
 /*!
-\author Xanathar
-\fn set_fillItemsInCont(const set, const serial, const includeSubCont = 1)
-\brief
+\brief Add object to given set
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the object
+\return 0
+\fn set_add( const set, const value )
 */
-native set_fillItemsInCont(const set, const serial, const includeSubCont = 1);
+native set_add( const set, const value );
 
 /*!
-\author Xanathar
-\fn set_size(const set)
-\brief
+\brief Add to given set the owned npc of given character
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the owner
+\param 3 include stabled
+\param 4 only following
+\return 0
+\fn set_addOwnedNpcs( const set, const owner, const includeStabled, const onlyFollowing )
 */
-native set_size(const set);
+native set_addOwnedNpcs( const set, const owner, const includeStabled, const onlyFollowing );
 
 /*!
-\author Xanathar
-\fn set_fillItemsAtXY(const set, const x, const y, const type = -1, const id = -1)
-\brief
+\brief Add to given set the character near location
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the x location
+\param 3 the y location
+\param 4 distance
+\param 5 exclude offline
+\param 6 only player
+\return 0
+\fn set_addCharsNearXYZ( const set, const x, const y, const distance, const excludeOffline, const onlyPlayer ) 
 */
-native set_fillItemsAtXY(const set, const x, const y, const type = -1, const id = -1 );
+native set_addCharsNearXYZ( const set, const x, const y, const distance, const excludeOffline, const onlyPlayer );
 
 /*!
-\name set_fillItemsNearXY
-\author Luxor
-\fn set_fillItemsNearXY(const set, const x, const y, const distance = 10, const bExcludeNotMovableItems = 1)
-\brief
+\brief Add to given set the party friend of given character
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the character
+\param 3 distance
+\param 4 exclude this
+\return 0
+\fn set_addPartyFriend( const set, const chr, const distance, const excludeThis )
 */
-native set_fillItemsNearXY(const set, const x, const y, const distance = 10, const bExcludeNotMovableItems = 1 );
+native set_addPartyFriend( const set, const chr, const distance, const excludeThis );
 
 /*!
-\author Sparhawk
-\fn set_fillOnline( const set, const onlyNearThisChar = -1, const range = 18 )
-\brief Fill set with all online characters unless onlyNearThisChar is a valid char serial then only online pcs within range of char will be collected
+\brief Add to given set the item in given container
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 item
+\param 3 include sub containers
+\param 4 only first subcontainer
+\return 0
+\fn set_addItemsInContainer( const set, const item, const includeSubCont, const onlyFirstSubCont )
 */
-native set_fillOnline( const set, const onlyNearThisChar = -1, const range = 18 );
+native set_addItemsInContainer( const set, const item, const includeSubCont, const onlyFirstSubCont );
 
+/*!
+\brief Add to given set the items weared by given character
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 character
+\param 3 include like hair
+\param 4 include protected layer
+\param 5 exclude illegar layer
+\return 0
+\fn set_addItemWeared( const set, const chr, const includeLikeHair, const includeProtected, const includeIllegal )
+*/
+native set_addItemWeared( const set, const chr, const includeLikeHair, const includeProtected, const includeIllegal );
+
+/*!
+\brief Add to given set the items at given location
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 x
+\param 3 y
+\param 4 type
+\return 0
+\fn set_addItemsAtXY( const set, const x, const y, const type )
+*/
+native set_addItemsAtXY( const set, const x, const y, const type );
+
+/*!
+\brief Add to given set the items near given location
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 x
+\param 3 y
+\param 4 distance
+\param 5 exclude not moveable
+\return 0
+\fn set_addItemsNearXYZ( const set, const x, const y, const distance, const excludeNotMoveable )
+*/
+native set_addItemsNearXYZ( const set, const x, const y, const distance, const excludeNotMoveable );
+
+/*!
+\brief Add to given set all online players
+\author Endymion
+\since 0.82
+\param 1 the set
+\return 0
+\note are added ONLY client chaarcter online
+\fn set_addAllOnlinePlayers( const set )
+*/
+native set_addAllOnlinePlayers( const set );
+
+/*!
+\brief Add to given set all online players near given character
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 character
+\param 3 exclude this
+\param 4 distance
+\return 0
+\note are added ONLY client chaarcter online
+\fn set_addOnlinePlayersNearChar( const set, const chr, const excludeThis, const distance )
+*/
+native set_addOnlinePlayersNearChar( const set, const chr, const excludeThis, const distance );
+
+/*!
+\brief Add to given set all online players near item
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the item
+\param 3 distance
+\return 0
+\note are added ONLY client chaarcter online
+\note if item is in a subcontainer, is returned the true location, the ocation of in world container
+\fn set_addOnlinePlayersNearItem( const set, const itm, const distance )
+*/
+native set_addOnlinePlayersNearItem( const set, const itm, const distance );
+
+/*!
+\brief Add to given set all online players near location
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 x
+\param 3 y
+\param 4 distance
+\return 0
+\note are added ONLY client chaarcter online
+\fn set_addOnlinePlayersNearXY( const set, const x, const y, const distance )
+*/
+native set_addOnlinePlayersNearXY( const set, const x, const y, const distance );

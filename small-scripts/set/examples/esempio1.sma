@@ -11,17 +11,16 @@ public example1(const s)
     
     nprintf(s, "Player near you");
 
-    new cc;
-    
     // fill the set with all chars in range
-    set_fillChrNearXY(set, chr_getProperty(c, CP2_X), chr_getProperty(c, CP2_Y), 10, 1);
+	set_addCharsNearXYZ( set, chr_getProperty(c, CP2_X), chr_getProperty(c, CP2_Y), _, true, false );
 
     //set_rewind reinitialize internal set index, so now point to first element
     //!set_isEmpty check if is not at end of set
-    //set_get get the current set element
-    for( set_rewind(set); !set_isEmpty(set); cc=set_get(set) ) 
+    
+    for( set_rewind(set); !set_end(set);  ) 
     {
-		if(cc>0) // if is valid char
+		new cc=set_get(set); //set_get get the current set element na dmove internal index to next
+		if(cc!=INVALID) // if is valid char
 			nprintf(s, chr_getProperty(cc, CP_NAME));
     }
 
