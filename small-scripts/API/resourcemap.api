@@ -29,7 +29,7 @@
 native createResourceMap( const type=RESOURCEMAP_LOCATION, const inMemory=1, ... );
 
 /*!
-\brief Remove a resource map from memory 
+\brief Remove a resource map from memory
 \author Wintermute
 \since 0.82
 \param 1 the index of the resource map
@@ -39,21 +39,21 @@ native createResourceMap( const type=RESOURCEMAP_LOCATION, const inMemory=1, ...
 native deleteResourceMap( const map );
 
 /*!
-\brief set a value in a resource map 
+\brief set a value in a resource map
 \author Wintermute
 \since 0.82
 \param 1 the index of the resource map
-\param 2 the first position parameter
-\param 3 the second position parameter
-\param 4 the third position parameter
-\param 5 the actual position parameter
+\param 2 the value
+\param 3 the first position parameter
+\param 4 the second position parameter
+\param 5 the third position parameter
 \fn setResourceLocationValue( const set )
 \return 0
 */
 native setResourceLocationValue( const map, const value, const x, const y, const z );
 
 /*!
-\brief get a value in a resource map 
+\brief get a value in a resource map
 \author Wintermute
 \since 0.82
 \param 1 the index of the resource map
@@ -67,7 +67,7 @@ native setResourceLocationValue( const map, const value, const x, const y, const
 native getResourceLocationValue( const map, const x, const y, const z );
 
 /*!
-\brief get a value in a resource map 
+\brief get a value in a resource map
 \author Wintermute
 \since 0.82
 \param 1 the index of the resource map
@@ -79,7 +79,7 @@ native getResourceLocationValue( const map, const x, const y, const z );
 native getResourceStringValue( const map, const key[], ... );
 
 /*!
-\brief set a value in a resource map 
+\brief set a value in a resource map
 \author Wintermute
 \since 0.82
 \param 1 the index of the resource map
@@ -90,4 +90,55 @@ native getResourceStringValue( const map, const key[], ... );
 */
 native setResourceStringValue( const map, const value, const key[], ... );
 
+/*!
+\brief set a value in a resource map
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\param 2 the string value
+\param 3 the first position parameter
+\param 4 the second position parameter
+\param 5 the third position parameter
+\fn setResourceLocationValue( const set )
+\return 0
+*/
+native setResourceLocationString( const map, const x, const y, const z, value[] );
+
+/*!
+\brief get a value in a resource map
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\param 2 the first position parameter
+\param 3 the second position parameter
+\param 4 the third position parameter
+\return the value of the resource map entry
+\fn getResourceLocationValue( const set )
+\return 0
+*/
+native getResourceLocationString( const map, const x, const y, const z, value[]);
+
+/*!
+\brief get a value in a resource map
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\param 2 the string used as key
+\return the value of the resource map entry
+\fn getResourceStringValue( const set )
+\return 0
+*/
+native getResourceStringString( const map, const key[], value[] );
+
+/*!
+\brief set a value in a resource map
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\param 2 the new value of the entry
+\param 3 the string used as key
+\fn setResourceStringValue( const set )
+\return 0
+*/
+native setResourceStringString( const map, const key[], value[] );
 /*! }@ */
