@@ -328,10 +328,8 @@ SECTION BESTSKILL $skill_remove_traps
 
 UNIQUE SECTION ALLNEWBIES
 { // THIS GOES TO ALL NEWBIES DESPITE SKILL
-  // ATTENTION! PUT THE $item_backpack BEFORE ANY PACKITEM!!!
     EQUIPITEM $item_shoes
-    EQUIPITEM $item_fancy_shirt
-    EQUIPITEM $item_backpack
+    EQUIPITEM $item_dagger
     PACKITEM $item_bread_loaves
     PACKITEM $item_bread_loaves
     PACKITEM $item_book
@@ -340,10 +338,8 @@ UNIQUE SECTION ALLNEWBIES
 
 UNIQUE SECTION MALENEWBIES
 {
-    EQUIPITEM $item_long_pants
 }
 
 UNIQUE SECTION FEMALENEWBIES
 {
-    EQUIPITEM $item_a_skirt
 }
