@@ -120,7 +120,7 @@ native set_add( const set, const value );
 \return 0
 \fn set_addOwnedNpcs( const set, const owner, const includeStabled, const onlyFollowing )
 */
-native set_addOwnedNpcs( const set, const owner, const includeStabled, const onlyFollowing );
+native set_addOwnedNpcs( const set, const owner, const includeStabled=false, const onlyFollowing=true );
 
 /*!
 \brief Add to given set the character near location
@@ -135,7 +135,7 @@ native set_addOwnedNpcs( const set, const owner, const includeStabled, const onl
 \return 0
 \fn set_addCharsNearXYZ( const set, const x, const y, const distance, const excludeOffline, const onlyPlayer ) 
 */
-native set_addCharsNearXYZ( const set, const x, const y, const distance, const excludeOffline, const onlyPlayer );
+native set_addCharsNearXYZ( const set, const x, const y, const distance=VISRANGE, const excludeOffline=true, const onlyPlayer=false );
 
 /*!
 \brief Add to given set the party friend of given character
@@ -148,7 +148,7 @@ native set_addCharsNearXYZ( const set, const x, const y, const distance, const e
 \return 0
 \fn set_addPartyFriend( const set, const chr, const distance, const excludeThis )
 */
-native set_addPartyFriend( const set, const chr, const distance, const excludeThis );
+native set_addPartyFriend( const set, const chr, const distance=VISRANGE, const excludeThis=true );
 
 /*!
 \brief Add to given set the item in given container
@@ -161,7 +161,7 @@ native set_addPartyFriend( const set, const chr, const distance, const excludeTh
 \return 0
 \fn set_addItemsInContainer( const set, const item, const includeSubCont, const onlyFirstSubCont )
 */
-native set_addItemsInContainer( const set, const item, const includeSubCont, const onlyFirstSubCont );
+native set_addItemsInContainer( const set, const item, const includeSubCont=false, const onlyFirstSubCont=true );
 
 /*!
 \brief Add to given set the items weared by given character
@@ -175,7 +175,7 @@ native set_addItemsInContainer( const set, const item, const includeSubCont, con
 \return 0
 \fn set_addItemWeared( const set, const chr, const includeLikeHair, const includeProtected, const includeIllegal )
 */
-native set_addItemWeared( const set, const chr, const includeLikeHair, const includeProtected, const includeIllegal );
+native set_addItemWeared( const set, const chr, const includeLikeHair=false, const includeProtected=false, const includeIllegal=false );
 
 /*!
 \brief Add to given set the items at given location
@@ -202,7 +202,7 @@ native set_addItemsAtXY( const set, const x, const y, const type );
 \return 0
 \fn set_addItemsNearXYZ( const set, const x, const y, const distance, const excludeNotMoveable )
 */
-native set_addItemsNearXYZ( const set, const x, const y, const distance, const excludeNotMoveable );
+native set_addItemsNearXYZ( const set, const x, const y, const distance=VISRANGE, const excludeNotMoveable=true );
 
 /*!
 \brief Add to given set all online players
@@ -227,7 +227,7 @@ native set_addAllOnlinePlayers( const set );
 \note are added ONLY client chaarcter online
 \fn set_addOnlinePlayersNearChar( const set, const chr, const excludeThis, const distance )
 */
-native set_addOnlinePlayersNearChar( const set, const chr, const excludeThis, const distance );
+native set_addOnlinePlayersNearChar( const set, const chr, const excludeThis=true, const distance=VISRANGE );
 
 /*!
 \brief Add to given set all online players near item
@@ -241,7 +241,7 @@ native set_addOnlinePlayersNearChar( const set, const chr, const excludeThis, co
 \note if item is in a subcontainer, is returned the true location, the ocation of in world container
 \fn set_addOnlinePlayersNearItem( const set, const itm, const distance )
 */
-native set_addOnlinePlayersNearItem( const set, const itm, const distance );
+native set_addOnlinePlayersNearItem( const set, const itm, const distance=VISRANGE );
 
 /*!
 \brief Add to given set all online players near location
@@ -253,6 +253,6 @@ native set_addOnlinePlayersNearItem( const set, const itm, const distance );
 \param 4 distance
 \return 0
 \note are added ONLY client chaarcter online
-\fn set_addOnlinePlayersNearXY( const set, const x, const y, const distance )
+\fn set_addOnlinePlayersNearXY( const set, const x, const y, const distance=VISRANGE )
 */
 native set_addOnlinePlayersNearXY( const set, const x, const y, const distance );
