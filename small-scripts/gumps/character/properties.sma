@@ -142,7 +142,7 @@ static const propLocalVariables	= 200;
 //
 // Button Identifiers
 //
-static const buttonCancel	= 0;
+static const buttonCancel	= 65533;
 static const buttonPreferences	= 65534;
 static const buttonMinimize	= 65535;
 
@@ -1852,7 +1852,15 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 		//
 		if( page == 1 )
 		{
-			addProperty( "Class", (chr_getProperty( clickedChar, CP_NPC, _ ) ? "Non player character" : "Player character") );
+			//<Luxor>
+			if ( chr_getProperty( clickedChar, CP_NPC ) )
+				addProperty( "Class", "Non player character" );
+			else {
+				sprintf( str, "%d", chr_getProperty( clickedChar, CP_ACCOUNT ) );
+				addProperty( "PC Account", str );
+			}
+			//</Luxor>
+			
 			//
 			addProperty( "All move ability", ((chr_getProperty( clickedChar, CP_PRIV2, _)&0x1) ? "True" : "False" ), 0, 0, ( edit ? propAllMove : 0 ) );
 			//
