@@ -7,102 +7,134 @@
 // || Compatible with Unicorn Categorization				  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+//To declare that an item can burn only a certain time, add
+//	AMXINT $lclvar_usagetimer (time in seconds it can burn)
+//	AMXINT $lclvar_usagestart 0 (always zero!)
+//to an unlit item.
+//the handling is than done by light_unlight.sma in small-scripts/custom folder.
+
 //hanging lights
 SECTION ITEM $item_wall_sconce_unlit_1
 {
+	NAME wall sconce
 	ID 09Fb
-	TRIGGER $itrg_light_n-s_candle
+	@ONDBLCLICK light_something
 	AMXINT $localvar_flipitem $item_wall_sconce_unlit_2
 }
 
 SECTION ITEM $item_wall_sconce_unlit_2
 {
+	NAME wall sconce
 	ID 0A00
-	TRIGGER $itrg_light_e-w_candle
+	@ONDBLCLICK light_something
 	AMXINT $localvar_flipitem $item_wall_sconce_unlit_1
 }
 
 SECTION ITEM $item_wall_sconce_empty_1
 {
+	NAME empty wall sconce
 	ID 09Fc
 	AMXINT $localvar_flipitem $item_wall_sconce_empty_2
 }
 
 SECTION ITEM $item_wall_sconce_empty_2
 {
+	NAME empty wall sconce
 	ID 0a01
 	AMXINT $localvar_flipitem $item_wall_sconce_empty_1
 }
 
 SECTION ITEM $item_wall_sconce_lit_1
 {
+	NAME wall sconce
 	ID 09Fd
+	@ONDBLCLICK unlight_something
 	AMXINT $localvar_flipitem $item_wall_sconce_lit_2
 }
 
 SECTION ITEM $item_wall_sconce_lit_2
 {
+	NAME wall sconce
 	ID 0a03
+	@ONDBLCLICK unlight_something
 	AMXINT $localvar_flipitem $item_wall_sconce_lit_1
 }
 
 SECTION ITEM $item_wall_torch_unlit_1
 {
+	NAME torch
 	ID 0A05
+	@ONDBLCLICK light_something
 	AMXINT $localvar_flipitem $item_wall_torch_unlit_2
 }
 
 SECTION ITEM $item_wall_torch_unlit_2
 {
+	NAME torch
 	ID 0A0A
+	@ONDBLCLICK light_something
 	AMXINT $localvar_flipitem $item_wall_torch_unlit_1
 }
 
 SECTION ITEM $item_wall_torch_empty_1
 {
+	NAME torch holder
 	ID 0A06
 	AMXINT $localvar_flipitem $item_wall_torch_empty_2
 }
 
 SECTION ITEM $item_wall_torch_empty_2
 {
+	NAME torch holder
 	ID 0A0B
 	AMXINT $localvar_flipitem $item_wall_torch_empty_1
 }
 
 SECTION ITEM $item_wall_torch_lit_1
 {
+	NAME torch
 	ID 0A07
+	@ONDBLCLICK unlight_something
 	AMXINT $localvar_flipitem $item_wall_torch_lit_2
 }
 
 SECTION ITEM $item_wall_torch_lit_2
 {
+	NAME torch
 	ID 0A0C
+	@ONDBLCLICK unlight_something
 	AMXINT $localvar_flipitem $item_wall_torch_lit_1
 }
 
 SECTION ITEM $item_hanging_lantern_lit_1
 {
+	NAME lantern
 	ID 0A1A
+	@ONDBLCLICK unlight_something
 	AMXINT $localvar_flipitem $item_hanging_lantern_lit_2
 }
 
 SECTION ITEM $item_hanging_lantern_lit_2
 {
+	NAME lantern
 	ID 0A22
+	@ONDBLCLICK unlight_something
 	AMXINT $localvar_flipitem $item_hanging_lantern_lit_1
 }
 
 SECTION ITEM $item_hanging_lantern_unlit_1
 {
+	NAME lantern
 	ID 0A1D
+	@ONDBLCLICK light_something
 	AMXINT $localvar_flipitem $item_hanging_lantern_unlit_2
 }
 
 SECTION ITEM $item_hanging_lantern_unlit_2
 {
+	NAME lantern
 	ID 0A25
+	@ONDBLCLICK light_something
 	AMXINT $localvar_flipitem $item_hanging_lantern_unlit_1
 }
 SECTION ITEM $item_lantern_post_1
@@ -120,9 +152,9 @@ SECTION ITEM $item_lantern_post_2
 //table/floor lights
 SECTION ITEM $item_tall_candelabra_lit
 {
-	NAME A candelabra
+	NAME candelabra
 	ID 0B26
-	TRIGGER $itrg_unlight_floor_candelabra
+	@ONDBLCLICK unlight_something
 
 	///CATEGORY Decorations
 	///SUBSECTION Candles & Candelabras
@@ -130,8 +162,8 @@ SECTION ITEM $item_tall_candelabra_lit
 
 SECTION ITEM $item_tall_candelabra_unlit
 {
-	NAME A candelabra
-	TRIGGER $itrg_light_floor_candelabra
+	NAME candelabra
+	@ONDBLCLICK light_something
 	ID 0A29
 
 	///CATEGORY Decorations
@@ -140,9 +172,9 @@ SECTION ITEM $item_tall_candelabra_unlit
 
 SECTION ITEM $item_small_candelabra_unlit
 {
-	NAME A candelabra
+	NAME candelabra
 	ID 0A27
-	TRIGGER $itrg_light_table_candelabra
+	@ONDBLCLICK light_something
 	VALUE 40
 	WEIGHT 200
 
@@ -152,9 +184,9 @@ SECTION ITEM $item_small_candelabra_unlit
 
 SECTION ITEM $item_small_candelabra_lit
 {
-	NAME A candelabra
+	NAME candelabra
 	ID 0B1D
-	TRIGGER $itrg_light_table_candelabra
+	@ONDBLCLICK unlight_something
 	VALUE 40
 	WEIGHT 200
 
@@ -166,9 +198,11 @@ SECTION ITEM $item_tall_candle_unlit
 {
 	NAME tall candle
 	ID 0a26
-	TRIGGER $itrg_light_table_candle
+	@ONDBLCLICK light_something
 	WEIGHT 100
 	VALUE 10
+	AMXINT $lclvar_usagetimer 10
+	AMXINT $lclvar_usagestart 0
 
 	///CATEGORY Decorations
 	///SUBSECTION Candles & Candelabras
@@ -176,9 +210,11 @@ SECTION ITEM $item_tall_candle_unlit
 
 SECTION ITEM $item_tall_candle_lit
 {
+	NAME tall candle
 	ID 0B1A
 	WEIGHT 100
 	VALUE 10
+	@ONDBLCLICK unlight_something
 	///CATEGORY Decorations
 	///SUBSECTION Candles & Candelabras
 	///DESCRIPTION Candle
@@ -186,9 +222,9 @@ SECTION ITEM $item_tall_candle_lit
 
 SECTION ITEM $item_little_candle_unlit
 {
-	NAME tall candle
+	NAME little candle
 	ID 0a28
-	TRIGGER $itrg_light_table_candle
+	@ONDBLCLICK light_something
 	WEIGHT 100
 	VALUE 10
 
@@ -198,9 +234,11 @@ SECTION ITEM $item_little_candle_unlit
 
 SECTION ITEM $item_little_candle_lit
 {
+	NAME little candle
 	ID 0a0f
 	WEIGHT 100
 	VALUE 10
+	@ONDBLCLICK unlight_something
 	///CATEGORY Decorations
 	///SUBSECTION Candles & Candelabras
 	///DESCRIPTION Candle
@@ -212,7 +250,7 @@ SECTION ITEM $item_big_simple_candle_unlit
 	ID 1433
 	DECAY
 	VALUE 35
-	TRIGGER $itrg_new_candle
+	@ONDBLCLICK light_something
 }
 
 SECTION ITEM $item_big_simple_candle_lit
@@ -221,7 +259,7 @@ SECTION ITEM $item_big_simple_candle_lit
 	ID 1430
 	DECAY
 	VALUE 35
-	TRIGGER $itrg_new_candle
+	@ONDBLCLICK unlight_something
 }
 
 SECTION ITEM $item_small_simple_candle_unlit
@@ -230,6 +268,7 @@ SECTION ITEM $item_small_simple_candle_unlit
 	ID 142F
 	DECAY
 	VALUE 35
+	@ONDBLCLICK light_something
 }
 
 SECTION ITEM $item_small_simple_candle_lit
@@ -238,6 +277,7 @@ SECTION ITEM $item_small_simple_candle_lit
 	ID 142c
 	DECAY
 	VALUE 35
+	@ONDBLCLICK unlight_something
 }
 
 
@@ -247,6 +287,7 @@ SECTION ITEM $item_thin_simple_candle_unlit
 	ID 1437
 	DECAY
 	VALUE 35
+	@ONDBLCLICK light_something
 }
 
 SECTION ITEM $item_thin_simple_candle_lit
@@ -255,11 +296,12 @@ SECTION ITEM $item_thin_simple_candle_lit
 	ID 1434
 	DECAY
 	VALUE 35
+	@ONDBLCLICK unlight_something
 }
 
 SECTION ITEM $item_medium_brazier_lit
 {
-	NAME a brazier
+	NAME brazier
 	ID 0E31
 
 	///CATEGORY Decorations
@@ -269,7 +311,7 @@ SECTION ITEM $item_medium_brazier_lit
 
 SECTION ITEM $item_tall_brazier_unlit
 {
-	NAME a brazier
+	NAME brazier
 	ID 19aa
 
 	///CATEGORY Decorations
@@ -279,7 +321,7 @@ SECTION ITEM $item_tall_brazier_unlit
 
 SECTION ITEM $item_small_brazier_unlit
 {
-	NAME a brazier
+	NAME brazier
 	ID 19bb
 
 	///CATEGORY Decorations
@@ -289,7 +331,7 @@ SECTION ITEM $item_small_brazier_unlit
 
 SECTION ITEM $item_tiny_brazier_unlit
 {
-	NAME a brazier
+	NAME brazier
 	ID 1f2b
 
 	///CATEGORY Decorations
@@ -304,6 +346,7 @@ SECTION ITEM $item_skull_candle_lit_1
 	DIR 2
 	VALUE 50
 	ITEMHAND 3
+	@ONDBLCLICK unlight_something
 	AMXINT $localvar_flipitem $item_skull_candle_lit_2
 }
 
@@ -314,6 +357,7 @@ SECTION ITEM $item_skull_candle_lit_2
 	DIR 2
 	VALUE 50
 	ITEMHAND 3
+	@ONDBLCLICK unlight_something
 	AMXINT $localvar_flipitem $item_skull_candle_lit_1
 }
 
@@ -324,6 +368,7 @@ SECTION ITEM $item_skull_candle_unlit_1
 	DIR 2
 	VALUE 50
 	ITEMHAND 3
+	@ONDBLCLICK light_something
 	AMXINT $localvar_flipitem $item_skull_candle_unlit_2
 }
 
@@ -334,6 +379,7 @@ SECTION ITEM $item_skull_candle_unlit_2
 	DIR 2
 	VALUE 50
 	ITEMHAND 3
+	@ONDBLCLICK light_something
 	AMXINT $localvar_flipitem $item_skull_candle_unlit_1
 }
 
@@ -341,37 +387,44 @@ SECTION ITEM $item_lamp_post_lit_1
 {
 	ID 0B20
 	DIR 1
-	NAME A lit lamppost
+	NAME lamppost
+	@ONDBLCLICK unlight_something
 }
 
 SECTION ITEM $item_lamp_post_unlit_1
 {
-	NAME An unlit lamppost
+	NAME lamppost
 	ID 0B21
+	@ONDBLCLICK light_something
 }
 
 SECTION ITEM $item_lamp_post_lit_2
 {
 	ID 0B22
 	DIR 1
-	NAME A lit lamp post
-	TRIGGER $itrg_light_lamp_post_2
+	NAME lamp post
+	@ONDBLCLICK unlight_something
 }
 
 SECTION ITEM $item_lamp_post_unlit_2
 {
+	NAME lamppost
 	ID 0B23
+	@ONDBLCLICK light_something
 }
 
 SECTION ITEM $item_lamp_post_lit_3
 {
+	NAME lamppost
 	ID 0B24
-	TRIGGER $itrg_light_lamp_post_1
+	@ONDBLCLICK unlight_something
 }
 
 SECTION ITEM $item_lamp_post_unlit_3
 {
+	NAME lamppost
 	ID 0B25
+	@ONDBLCLICK light_something
 }
 
 //Hand lights

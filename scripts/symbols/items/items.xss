@@ -1,6 +1,7 @@
-//localvar used to store flipped item scriptID
 //nox internal local vars 9000-9500
+//localvar used to store flipped item scriptID
 #define $localvar_flipitem 9000
+//nox internal plant crossing
 #define $lclvar_plantcross_status 9001
 #define $lclvar_plantcross_water 9002
 #define $lclvar_plantcross_fungus 9003
@@ -8,6 +9,9 @@
 #define $lclvar_plantcross_poison 9005
 #define $lclvar_plantcross_bonus_str 9006
 #define $lclvar_plantcross_bonus_hea 9007
+//nox internal usage time (candle burn time etc.), time in seconds still left
+#define $lclvar_usagetimer 9008
+#define $lclvar_usagestart 9009
 
 //
 // GM ROBES

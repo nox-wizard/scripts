@@ -28,6 +28,8 @@
 #include scripts/items/treasures.xss
 #include scripts/items/deeds.xss
 #include scripts/items/dungeonchest.xss
+#include scripts/items/lightsources.xss
+#include scripts/items/signs_posts.xss
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || Include your scripts after these lines.                             ||

@@ -414,38 +414,6 @@ SECTION ITEMTRG $itrg_stop_dummy
     SETID 10 70
 }
 
-SECTION ITEMTRG $itrg_light_lantern
-{ Light lantern
-    //$$ light lantern
-    SND 01 dd
-    SETID a 15
-    SETTRG $itrg_unlight_lantern
-}
-
-SECTION ITEMTRG $itrg_unlight_lantern
-{ Unlight lantern
-    //$$ unlight lantern
-    SND 00 4f
-    SETID a 25
-    SETTRG $itrg_light_lantern
-}
-
-SECTION ITEMTRG $itrg_light_torch
-{ Light torch
-    //$$ light torch
-    SND 01 dd
-    SETID a 12
-    SETTRG $itrg_unlight_torch
-}
-
-SECTION ITEMTRG $itrg_unlight_torch
-{ Unlight torch
-    //$$ unlight torch
-    SND 00 4f
-    SETID f 6b
-    SETTRG $itrg_light_torch
-}
-
 SECTION ITEMTRG $itrg_magic_ingot
 { Magic ingot
     //$$ magic ingot
@@ -468,41 +436,6 @@ SECTION ITEMTRG $itrg_ingot_to_order_shield
     SETID 1b ef
     SETTRG $itrg_magic_ingot
     SND 02 46
-}
-
-SECTION ITEMTRG $itrg_light_candle
-{ Light candle
-    //$$ light candle
-    SND 01 dd
-    SETID 14 30
-    SETTRG $itrg_unlight_candle
-    CALCUSES -1
-    SETID 14 2c
-    SETTRG $itrg_unlight_burned_candle
-}
-
-SECTION ITEMTRG $itrg_unlight_candle
-{ Unlight candle
-    //$$ unlight candle
-    SND 00 4f
-    SETID 14 33
-    SETTRG $itrg_light_candle
-}
-
-SECTION ITEMTRG $itrg_unlight_burned_candle
-{ Unlight burned candle
-    //$$ unlight burned candle
-    SND 00 4f
-    SETID 14 2f
-    SETTRG $itrg_remove_burned_candle
-}
-
-SECTION ITEMTRG $itrg_remove_burned_candle
-{ remove burned candle
-    //$$ remove burned candle
-    SND 00 4f
-    REMOVE
-    MSG You destroyed the burned candle in the attemp to light it
 }
 
 SECTION ITEMTRG $itrg_new_candle

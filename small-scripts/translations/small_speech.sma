@@ -956,10 +956,11 @@ public alignments[GUILD_TOWN][] = {
 	"lawful"
 	};
 	
-const NUM_MiscSENT = 4;
+const NUM_MiscSENT = 5;
 public msg_MiscDef[NUM_MiscSENT][]={
 "You lit the %s",
 "*lights the",
 "You extinguis %s",
-"*extinguishs the"
+"*extinguishs the",
+"The last rest of the %s burns away."
 }
