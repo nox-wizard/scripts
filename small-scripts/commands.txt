@@ -23,8 +23,8 @@
 //Here is the command's declaration syntax:
 //name_of_the_command,priv_level,callback
 
-action,100,cmd_action
 accountscp,255,cmd_accountscp
+action,100,cmd_action
 add,150,cmd_add
 align,100,cmd_align
 area,100,cmd_area
@@ -45,20 +45,19 @@ gmopen,200,cmd_gmopen
 go,100,cmd_go
 gy,100,cmd_gy
 hiding,100,cmd_hiding
-hunger,0,cmd_hunger
 heal,200,cmd_heal
 help,100,cmd_help
-morei,150,cmd_imore
+hunger,0,cmd_hunger
 introduce,0,chr_introduce_name
 invul,100,cmd_invul
 iset,200,cmd_iset
 jail,100,cmd_jail
-kill,100,cmd_kill
 kick,150,cmd_kick
-killhair,150,cmd_killhair
+kill,100,cmd_kill
 killbeard,150,cmd_killbeard
-lightlevel,100,cmd_lightlevel
+killhair,150,cmd_killhair
 loaddefaults,255,cmd_loaddefaults
+lightlevel,100,cmd_lightlevel
 make,255,cmd_make
 mana,200,cmd_mana
 move,100,cmd_move
@@ -76,11 +75,13 @@ racelang,0,cmd_racelang
 random,150,cmd_random
 regioncp,150,cmd_regioncp
 reload,255,cmd_reload
+rename,100,cmd_rename
 resend,50,cmd_resend
 respawn,150,cmd_respawn
 resurrect,100,cmd_resurrect
 save,200,cmd_save
 sell,100,cmd_sell
+setmorexyz,150,cmd_setmorexyz
 setmoreb12,150,cmd_setmoreb12
 setmoreb34,150,cmd_setmoreb34
 setpriv,255,cmd_setpriv

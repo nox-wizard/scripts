@@ -359,7 +359,7 @@ native chr_canSnoop(const chr);
 stock chr_setCanSnoop(const chr)
 {
 	if(!isChar(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_CANSNOOP);
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_CANSNOOP);
 	return OK;
 }
 
@@ -373,7 +373,7 @@ stock chr_setCanSnoop(const chr)
 stock chr_resetCanSnoop(const chr)
 {
 	if(!isChar(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_CANSNOOP);
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_CANSNOOP);
 	return OK;
 }
 
@@ -453,6 +453,7 @@ The priv2 flag is an 8bit flag, bitfields are:
      - 0x04: View houses as icons
      - 0x08: permanently hidden, character can't be unhidden
      - 0x10: no need mana, charcater doesn't need mana to cast
+     - 0x20: dispellable
      - 0x40: permanent magic reflect
      - 0x80: no need reagents, character doesn't neeed reagents to cast
 */

@@ -285,7 +285,7 @@ const WANDER_FREELY_CIRCLE = 2;	//!<
 const WANDER_FREELY_BOX = 3;	//!< npc will wander in box with corners in CP_FPOS1_NPCWANDER, CP_FPOS2_NPCWANDER
 const WANDER_FREELY = 4;	//!<
 const WANDER_FLEE = 5;		//!<
-const WANDER_AMX = 6;		//!<
+const WANDER_AMX = 6;		//!< ???
 
 const BODY_MALE = 0x190;	//!<
 const BODY_FEMALE = 0x191;	//!<
