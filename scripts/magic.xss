@@ -1,0 +1,56 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (polymorph.scp)                                  ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// Usage:
+// <PolimorphIcon> <Name>
+// POLIMORPHID <ID>
+//
+// For the icon, check with InsideUO the Artwork/Static Tiles section.
+// For the ID of the creature to polymorph into, check with InsideUO the
+// Animation section ( Model No. )
+//
+// Maximum number of polymorphable creatures: 50
+// ***********************************************************************
+
+SECTION POLYMORPHMENU
+{
+	20CF SKILL 250 $npc_a_black_bear Black Bear
+	20DB SKILL 250 $npc_a_grizzly_bear Grizzly Bear
+	20E1 SKILL 250 $npc_a_polar_bear Polar Bear
+	20D1 SKILL 250 $npc_a_chicken Chicken
+	20D3 SKILL 950 $npc_a_daemon Daemon
+	20D8 SKILL 800 $npc_an_ettin Ettin
+	20D9 SKILL 650 $npc_a_gargoyle Gargoyle
+	20D6 SKILL 1000 $npc_a_dragon Dragon
+	20C9 SKILL 350 $npc_a_gorilla Gorilla
+	20CA SKILL 550 $npc_lizardman_fencer Lizardman
+	20DF SKILL 750 $npc_an_ogre Ogre
+	20D0 SKILL 350 $npc_a_giant_rat Rat
+	20D4 SKILL 350 $npc_a_great_hart Deer
+	20D7 SKILL 550 $npc_an_earth_elemental Earth Elemental
+	20E7 SKILL 450 $npc_a_skeleton Skeleton
+	2100 SKILL 850 $npc_a_wisp Wisp
+	211F SKILL 150 $npc_a_horse Horse
+	210B SKILL 750 $npc_a_water_elemental Water Elemental
+}
+
+SECTION CREATEFOODMENU
+{
+	9D0 SKILL 150 $item_apples Apple
+	103C SKILL 150 $item_bread_loaves_1 Bread
+	97C SKILL 150 $item_wedges_of_cheese_1 Cheese
+	9F2 SKILL 150 $item_cuts_of_ribs Cut of ribs
+	97B SKILL 150 $item_fish_steaks Fish steak
+	9D1 SKILL 150 $item_grape_bunches_1 Grape bunch
+	9C9 SKILL 150 $item_hams_1 Ham
+	9EA SKILL 150 $item_muffins1 Muffin
+	9D2 SKILL 150 $item_peaches_1 Peach
+	9C0 SKILL 150 $item_sausages_1 Sausage
+}
+
+
+
