@@ -7,82 +7,250 @@
 // || Compatible with Unicorn Categorization				  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-SECTION ITEM $item_ankh1_1_1
+//religion
+SECTION ITEM $item_ankh1A_1
 {
 	NAME ankh
 	ID 0002
-	AMXINT $localvar_flipitem $item_ankh1_2_1
+	AMXINT $localvar_flipitem $item_ankh1A_2
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Left Ankh
 }
 
-SECTION ITEM $item_ankh1_1_2
+SECTION ITEM $item_ankh1B_1
 {
 	NAME ankh
 	ID 0003
-	AMXINT $localvar_flipitem $item_ankh1_2_2
+	AMXINT $localvar_flipitem $item_ankh1B_2
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Right Ankh
 }
 
 
-SECTION ITEM $item_ankh1_2_1
+SECTION ITEM $item_ankh1A_2
 {
 	NAME ankh
 	ID 0004
-	AMXINT $localvar_flipitem $item_ankh1_1_1
+	AMXINT $localvar_flipitem $item_ankh1A_1
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Left Ankh
 }
 
-SECTION ITEM $item_ankh1_2_2
+SECTION ITEM $item_ankh1B_2
 {
 	NAME ankh
 	ID 0005
-	AMXINT $localvar_flipitem $item_ankh1_1_2
+	AMXINT $localvar_flipitem $item_ankh1B_1
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Right Ankh
 }
 
-SECTION ITEM $item_ankh2_1_1
+SECTION ITEM $item_bloody_ankh1A_1
 {
 	ID 1D97
-	AMXINT $localvar_flipitem $item_ankh2_2_1
+	AMXINT $localvar_flipitem $item_ankh1A_2
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Ankh of Sacrifice
 }
 
-SECTION ITEM $item_ankh2_1_2
+SECTION ITEM $item_bloody_ankh1B_1
 {
 	ID 1D98
-	AMXINT $localvar_flipitem $item_ankh2_2_2
+	AMXINT $localvar_flipitem $item_ankh1B_2
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Ankh of Sacrifice
 }
 
-SECTION ITEM $item_ankh2_2_1
+SECTION ITEM $item_bloody_ankh1A_2
 {
 	ID 1E5C
-	AMXINT $localvar_flipitem $item_ankh2_1_1
+	AMXINT $localvar_flipitem $item_ankh1A_1
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Ankh of Sacrifice
 }
 
-SECTION ITEM $item_ankh2_2_2
+SECTION ITEM $item_bloody_ankh1B_2
 {
 	ID 1E5D
-	AMXINT $localvar_flipitem $item_ankh2_1_2
+	AMXINT $localvar_flipitem $item_ankh1B_1
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Ankh of Sacrifice
 }
+
+/////// altar pieces /////////////
+SECTION ITEM $item_altar
+{
+	NAME altar
+	ID 1213
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_altar_1
+{
+	NAME altar
+	ID 1214
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_altar_2
+{
+	NAME altar
+	ID 1215
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_altar_3
+{
+	NAME altar
+	ID 120E
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_altar_4
+{
+	NAME altar
+	ID 120F
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_altar_5
+{
+	NAME altar
+	ID 1210
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_altar_6
+{
+	NAME altar
+	ID 1211
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_altar_7
+{
+	NAME altar
+	ID 1212
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_altar_8
+{
+	NAME altar
+	ID 1216
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION altar
+}
+
+SECTION ITEM $item_pentagram_1
+{
+	NAME Pentagram
+	ID 0fe6
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_2
+{
+	NAME Pentagram
+	ID 0fe7
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_3
+{
+	NAME Pentagram
+	ID 0fe8
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_4
+{
+	NAME Pentagram
+	ID 0fe9
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_5
+{
+	NAME Pentagram
+	ID 0fea
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_6
+{
+	NAME Pentagram
+	ID 0feb
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_7
+{
+	NAME Pentagram
+	ID 0fec
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_8
+{
+	NAME Pentagram
+	ID 0fed
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_9
+{
+	NAME Pentagram
+	ID 0fee
+
+	///CATEGORY Puzzle Pieces
+	///SUBSECTION Pentagram
+}
+
+///////////////////////////
+//////////STATUE///////////
+///////////////////////////
 
 SECTION ITEM $item_statue1
 {
@@ -219,6 +387,9 @@ SECTION ITEM $item_statue15
 	///DESCRIPTION Statue
 }
 
+//////////////////////////////
+////////////Trophys///////////
+//////////////////////////////
 SECTION ITEM $item_trophy1
 {
 	ID 1E60
@@ -344,6 +515,265 @@ SECTION ITEM $item_trophy14
 	///SUBSECTION Trophies
 	///DESCRIPTION Trophy
 }
+
+//////////////////////////////////////
+////////////Cave Decoration///////////
+//////////////////////////////////////
+
+SECTION ITEM $item_stalagmite1_1
+{
+	ID 08e0
+	AMXINT $localvar_flipitem $item_stalagmite1_2
+}
+
+SECTION ITEM $item_stalagmite1_2
+{
+	ID 08e1
+	AMXINT $localvar_flipitem $item_stalagmite1_1
+}
+
+SECTION ITEM $item_stalagmite2_1
+{
+	ID 08e2
+	AMXINT $localvar_flipitem $item_stalagmite2_2
+}
+
+SECTION ITEM $item_stalagmite2_2
+{
+	ID 08e8
+	AMXINT $localvar_flipitem $item_stalagmite2_1
+}
+
+SECTION ITEM $item_stalagmite3
+{
+	ID 08e3
+}
+
+SECTION ITEM $item_stalagmite4_1
+{
+	ID 08e4
+	AMXINT $localvar_flipitem $item_stalagmite4_2
+}
+
+SECTION ITEM $item_stalagmite4_2
+{
+	ID 08e5
+	AMXINT $localvar_flipitem $item_stalagmite4_1
+}
+
+SECTION ITEM $item_stalagmite5
+{
+	ID 08e6
+}
+
+SECTION ITEM $item_stalagmite6
+{
+	ID 08e7
+}
+
+SECTION ITEM $item_stalagmite7_1
+{
+	ID 08e9
+	AMXINT $localvar_flipitem $item_stalagmite7_2
+}
+
+SECTION ITEM $item_stalagmite7_2
+{
+	ID 08ea
+	AMXINT $localvar_flipitem $item_stalagmite7_1
+}
+
+//////////////////////////////////////
+//////////////Fountain////////////////
+//////////////////////////////////////
+SECTION ITEM $item_fountain
+{
+	ID 090d
+}
+	
+SECTION ITEM $item_stone_fountain1
+{
+	ID 1731
+}
+	
+SECTION ITEM $item_stone_fountain2
+{
+	ID 1732
+}
+	
+SECTION ITEM $item_stone_fountain3
+{
+	ID 1733
+}
+	
+SECTION ITEM $item_stone_fountain4
+{
+	ID 1734
+}
+	
+SECTION ITEM $item_stone_fountain5
+{
+	ID 1735
+}
+	
+SECTION ITEM $item_stone_fountain6
+{
+	ID 1736
+}
+	
+SECTION ITEM $item_stone_fountain7
+{
+	ID 1737
+}
+	
+SECTION ITEM $item_stone_fountain8
+{
+	ID 1738
+}
+	
+SECTION ITEM $item_stone_fountain9
+{
+	ID 1739
+}
+	
+SECTION ITEM $item_stone_fountain10
+{
+	ID 173a
+}
+	
+SECTION ITEM $item_stone_fountain11
+{
+	ID 173b
+}
+	
+SECTION ITEM $item_stone_fountain12
+{
+	ID 173c
+}
+	
+SECTION ITEM $item_stone_fountain13
+{
+	ID 173d
+}
+	
+SECTION ITEM $item_stone_fountain14
+{
+	ID 173e
+}
+	
+SECTION ITEM $item_stone_fountain15
+{
+	ID 173f
+}
+	
+SECTION ITEM $item_stone_fountain16
+{
+	ID 1740
+}
+	
+SECTION ITEM $item_stone_fountain17
+{
+	ID 1753
+}
+	
+SECTION ITEM $item_stone_fountain18
+{
+	ID 1757
+}
+	
+SECTION ITEM $item_sandstone_fountain1
+{
+	ID 19c3
+}
+	
+SECTION ITEM $item_sandstone_fountain2
+{
+	ID 19c4
+}
+	
+SECTION ITEM $item_sandstone_fountain3
+{
+	ID 19c5
+}
+	
+SECTION ITEM $item_sandstone_fountain4
+{
+	ID 19c6
+}
+	
+SECTION ITEM $item_sandstone_fountain5
+{
+	ID 19c7
+}
+	
+SECTION ITEM $item_sandstone_fountain6
+{
+	ID 19c8
+}
+	
+SECTION ITEM $item_sandstone_fountain7
+{
+	ID 19c9
+}
+	
+SECTION ITEM $item_sandstone_fountain8
+{
+	ID 19ca
+}
+	
+SECTION ITEM $item_sandstone_fountain9
+{
+	ID 19cb
+}
+	
+SECTION ITEM $item_sandstone_fountain10
+{
+	ID 19cc
+}
+	
+SECTION ITEM $item_sandstone_fountain11
+{
+	ID 19cd
+}
+	
+SECTION ITEM $item_sandstone_fountain12
+{
+	ID 19ce
+}
+	
+SECTION ITEM $item_sandstone_fountain13
+{
+	ID 19cf
+}
+	
+SECTION ITEM $item_sandstone_fountain14
+{
+	ID 19d0
+}
+	
+SECTION ITEM $item_sandstone_fountain15
+{
+	ID 19d1
+}
+	
+SECTION ITEM $item_sandstone_fountain16
+{
+	ID 19d2
+}
+	
+SECTION ITEM $item_sandstone_fountain17
+{
+	ID 19e5
+}
+	
+SECTION ITEM $item_sandstone_fountain18
+{
+	ID 19e9
+}
+
+//////////////////////////////////////
+///////////Special Items//////////////
+//////////////////////////////////////
 
 SECTION ITEM $item_book_of_truth
 {
@@ -1421,160 +1851,6 @@ SECTION ITEM $item_telescope_ZU
 	///SUBSECTION Telescope
 }
 
-/////// Arbitoir pieces /////////////
-
-SECTION ITEM $item_altar
-{
-	NAME Arbitoir
-	ID 1213
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Albitoir
-}
-
-SECTION ITEM $item_altar_1
-{
-	NAME Arbitoir
-	ID 1214
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Albitoir
-}
-
-SECTION ITEM $item_altar_2
-{
-	NAME Arbitoir
-	ID 1215
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Albitoir
-}
-
-SECTION ITEM $item_altar_3
-{
-	NAME Arbitoir
-	ID 120E
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Albitoir
-}
-
-SECTION ITEM $item_altar_4
-{
-	NAME Arbitoir
-	ID 120F
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Albitoir
-}
-
-SECTION ITEM $item_altar_5
-{
-	NAME Arbitoir
-	ID 1210
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Albitoir
-}
-
-SECTION ITEM $item_altar_6
-{
-	NAME Arbitoir
-	ID 1211
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Albitoir
-}
-
-SECTION ITEM $item_altar_7
-{
-	NAME Arbitoir
-	ID 1212
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Albitoir
-}
-
-SECTION ITEM $item_pentagram_1
-{
-	NAME Pentagram
-	ID 0fe6
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
-
-SECTION ITEM $item_pentagram_2
-{
-	NAME Pentagram
-	ID 0fe7
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
-
-SECTION ITEM $item_pentagram_3
-{
-	NAME Pentagram
-	ID 0fe8
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
-
-SECTION ITEM $item_pentagram_4
-{
-	NAME Pentagram
-	ID 0fe9
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
-
-SECTION ITEM $item_pentagram_5
-{
-	NAME Pentagram
-	ID 0fea
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
-
-SECTION ITEM $item_pentagram_6
-{
-	NAME Pentagram
-	ID 0feb
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
-
-SECTION ITEM $item_pentagram_7
-{
-	NAME Pentagram
-	ID 0fec
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
-
-SECTION ITEM $item_pentagram_8
-{
-	NAME Pentagram
-	ID 0fed
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
-
-SECTION ITEM $item_pentagram_9
-{
-	NAME Pentagram
-	ID 0fee
-
-	///CATEGORY Puzzle Pieces
-	///SUBSECTION Pentagram
-}
 
 ///////////////////////////
 // All Paintings Section///

@@ -14,6 +14,47 @@
 #define $lclvar_usagestart 9009
 
 //
+// fountain
+//
+#define $item_fountain 2701
+#define $item_stone_fountain1 2702
+#define $item_stone_fountain2 2703
+#define $item_stone_fountain3 2704
+#define $item_stone_fountain4 2705
+#define $item_stone_fountain5 2706
+#define $item_stone_fountain6 2707
+#define $item_stone_fountain7 2708
+#define $item_stone_fountain8 2709
+#define $item_stone_fountain9 2710
+#define $item_stone_fountain10 2711
+#define $item_stone_fountain11 2712
+#define $item_stone_fountain12 2713
+#define $item_stone_fountain13 2714
+#define $item_stone_fountain14 2715
+#define $item_stone_fountain15 2716
+#define $item_stone_fountain16 2717
+#define $item_stone_fountain17 2718
+#define $item_stone_fountain18 2719
+#define $item_sandstone_fountain1 2720
+#define $item_sandstone_fountain2 2721
+#define $item_sandstone_fountain3 2722
+#define $item_sandstone_fountain4 2723
+#define $item_sandstone_fountain5 2724
+#define $item_sandstone_fountain6 2725
+#define $item_sandstone_fountain7 2726
+#define $item_sandstone_fountain8 2727
+#define $item_sandstone_fountain9 2728
+#define $item_sandstone_fountain10 2729
+#define $item_sandstone_fountain11 2730
+#define $item_sandstone_fountain12 2731
+#define $item_sandstone_fountain13 2732
+#define $item_sandstone_fountain14 2733
+#define $item_sandstone_fountain15 2734
+#define $item_sandstone_fountain16 2735
+#define $item_sandstone_fountain17 2736
+#define $item_sandstone_fountain18 2737
+
+//
 // GM ROBES
 //
 
@@ -68,16 +109,30 @@
 //
 //ANKHS
 //
+#define $item_ankh1A_1 200
+#define $item_ankh1B_1 201
+#define $item_ankh1A_2 202
+#define $item_ankh1B_2 203
 
-#define $item_ankh1_1_1 200
-#define $item_ankh1_1_2 201
-#define $item_ankh1_2_1 202
-#define $item_ankh1_2_2 203
+#define $item_bloody_ankh1A_1 204
+#define $item_bloody_ankh1B_1 205
+#define $item_bloody_ankh1A_2 206
+#define $item_bloody_ankh1B_2 207
 
-#define $item_ankh2_1_1 204
-#define $item_ankh2_1_2 205
-#define $item_ankh2_2_1 206
-#define $item_ankh2_2_2 207
+//
+// Cave deco
+//
+#define $item_stalagmite1_1 208
+#define $item_stalagmite1_2 209
+#define $item_stalagmite2_1 210
+#define $item_stalagmite2_2 211
+#define $item_stalagmite3 212
+#define $item_stalagmite4_1 213
+#define $item_stalagmite4_2 214
+#define $item_stalagmite5 215
+#define $item_stalagmite6 216
+#define $item_stalagmite7_1 217
+#define $item_stalagmite7_2 218
 
 //
 // NON-Metal ARMOR
@@ -201,7 +256,6 @@
 #define $item_map 1452
 #define $item_book 1453
 
-
 //
 //CLOTHING
 //
@@ -252,6 +306,11 @@
 #define $item_more_weapons_and_armors_list 1502
 #define $item_dyes 1505
 #define $item_dying_tub 1506
+#define $item_nodraw 1507
+#define $item_empty 1508
+#define $item_dark_source 1509
+#define $item_light_source 1510
+#define $item_target 1511
 
 //
 //TROPHIES
@@ -1735,6 +1794,7 @@
 #define $item_altar_5 160166
 #define $item_altar_6 160167
 #define $item_altar_7 160168
+#define $item_altar_8 160169
 
 #define $item_lsd_potion 160297
 #define $item_the_book_of_the_dead 185000

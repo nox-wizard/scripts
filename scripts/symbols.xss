@@ -32,6 +32,7 @@
 #include scripts/symbols/items/treasure.xss
 #include scripts/symbols/items/lightsources.xss
 #include scripts/symbols/items/signs_posts.xss
+#include scripts/symbols/items/garbage.xss
 
 #include scripts/symbols/skills.xss
 #include scripts/symbols/lootlists.xss

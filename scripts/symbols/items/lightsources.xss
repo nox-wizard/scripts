@@ -1,0 +1,57 @@
+//light sources 2501-2700
+
+//wall lights
+#define $item_wall_sconce_unlit_1 2501
+#define $item_wall_sconce_unlit_2 2502
+#define $item_wall_sconce_empty_1 2503
+#define $item_wall_sconce_empty_2 2504
+#define $item_wall_sconce_lit_1 2505
+#define $item_wall_sconce_lit_2 2506
+#define $item_wall_torch_unlit_1 2507
+#define $item_wall_torch_unlit_2 2508
+#define $item_wall_torch_empty_1 2509
+#define $item_wall_torch_empty_2 2510
+#define $item_wall_torch_lit_1 2511
+#define $item_wall_torch_lit_2 2512
+#define $item_hanging_lantern_lit_1 2513
+#define $item_hanging_lantern_lit_2 2514
+#define $item_hanging_lantern_unlit_1 2515
+#define $item_hanging_lantern_unlit_2 2516
+#define $item_lantern_post_1 2517
+#define $item_lantern_post_2 2518
+
+//table/floor lights
+#define $item_tall_candelabra_lit 2550
+#define $item_tall_candelabra_unlit 2551
+#define $item_small_candelabra_unlit 2552
+#define $item_small_candelabra_lit 2553
+#define $item_tall_candle_unlit 2554
+#define $item_tall_candle_lit 2555
+#define $item_little_candle_unlit 2556
+#define $item_little_candle_lit 2557
+#define $item_big_simple_candle_unlit 2558
+#define $item_big_simple_candle_lit 2559
+#define $item_small_simple_candle_unlit 2560
+#define $item_small_simple_candle_lit 2561
+#define $item_thin_simple_candle_unlit 2520
+#define $item_thin_simple_candle_lit 2563
+#define $item_medium_brazier_lit 2564
+#define $item_tall_brazier_unlit 2565
+#define $item_small_brazier_unlit 2566
+#define $item_tiny_brazier_unlit 2567
+#define $item_skull_candle_lit_1 2568
+#define $item_skull_candle_lit_2 2569
+#define $item_skull_candle_unlit_1 2570
+#define $item_skull_candle_unlit_2 2571
+#define $item_lamp_post_lit_1 2572
+#define $item_lamp_post_unlit_1 2573
+#define $item_lamp_post_lit_2 2574
+#define $item_lamp_post_unlit_2 2575
+#define $item_lamp_post_lit_3 2576
+#define $item_lamp_post_unlit_3 2577
+
+//Hand lights
+#define $item_hand_candle_lit 2650
+#define $item_hand_torch_lit 2651
+#define $item_hand_lantern_lit 2652
+#define $item_skull_candle_deed 2680

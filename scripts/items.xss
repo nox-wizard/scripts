@@ -30,6 +30,7 @@
 #include scripts/items/dungeonchest.xss
 #include scripts/items/lightsources.xss
 #include scripts/items/signs_posts.xss
+#include scripts/items/garbage.xss
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || Include your scripts after these lines.                             ||

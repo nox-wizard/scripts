@@ -1,2064 +1,2090 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (items.xss)                                      ||
-// || Maintained by Sparhawk		                                  ||
-// || Last Update 04-aug-2002                                             ||
+// || NoX-Wizard Scripts (items.xss)									  ||
+// || Maintained by Sparhawk										  ||
+// || Last Update 04-aug-2002											 ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.70s or later                      ||
+// || This script requires NoX-Wizard 0.70s or later					  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_nodraw
+{
+	ID 0001
+}
+
+SECTION ITEM $item_empty
+{
+	ID 1018
+}
+
+
+SECTION ITEM $item_dark_source
+{
+	ID 1646
+}
+
+SECTION ITEM $item_light_source
+{
+	ID 1647
+}
+
+SECTION ITEM $item_target
+{
+	ID 1b70
+}
 
 SECTION ITEM $item_worldgem_bit
 {
-    NAME a Worldgem bit
-    ID 1ea7
+	NAME a Worldgem bit
+	ID 1ea7
 }
 
 // teleport rune
 SECTION ITEM $item_teleport_rune
 {
-    NAME a teleport rune
-    ID 1F14
-    TYPE $itype_teleportrune
+	NAME a teleport rune
+	ID 1F14
+	TYPE $itype_teleportrune
 }
 
 SECTION ITEM $item_stone_of_humility
 {
-    NAME stone of humility
-    ID 1869
+	NAME stone of humility
+	ID 1869
 }
 
 SECTION ITEM $item_stone_of_honesty
 {
-    NAME stone of honesty
-    ID 186A
+	NAME stone of honesty
+	ID 186A
 }
 
 SECTION ITEM $item_stone_of_justice
 {
-    NAME stone of justice
-    ID 186B
+	NAME stone of justice
+	ID 186B
 }
 
 SECTION ITEM $item_stone_of_sacrifice
 {
-    NAME stone of sacrifice
-    ID 186C
+	NAME stone of sacrifice
+	ID 186C
 }
 
 SECTION ITEM $item_stone_of_honor
 {
-    NAME stone of honor
-    ID 186D
+	NAME stone of honor
+	ID 186D
 }
 
 SECTION ITEM $item_stone_of_valor
 {
-    NAME stone of valor
-    ID 186E
+	NAME stone of valor
+	ID 186E
 }
 
 SECTION ITEM $item_stone_of_spirituality
 {
-    NAME stone of spirituality
-    ID 186F
+	NAME stone of spirituality
+	ID 186F
 }
 
 SECTION ITEM $item_stone_of_compassion
 {
-    NAME stone of compassion
-    ID 1870
+	NAME stone of compassion
+	ID 1870
 }
 
 SECTION ITEM $item_backpack
 {
-    NAME backpack
-    ID 0E75
-    TYPE $itype_container
-    LAYER $layer_backpack
-    DYE 1
-    VALUE 30
-    WEIGHT 100
+	NAME backpack
+	ID 0E75
+	TYPE $itype_container
+	LAYER $layer_backpack
+	DYE 1
+	VALUE 30
+	WEIGHT 100
 }
 
 SECTION ITEM $item_leather_bag
 {
-    NAME leather bag
-    ID 0E76
-    TYPE $itype_container
-    DYE 1
-    VALUE 25
-    WEIGHT 100
+	NAME leather bag
+	ID 0E76
+	TYPE $itype_container
+	DYE 1
+	VALUE 25
+	WEIGHT 100
 }
 
 SECTION ITEM $item_pouch
 {
-    NAME pouch
-    ID 0E79
-    TYPE $itype_container
-    DYE 1
-    VALUE 30
-    WEIGHT 100
+	NAME pouch
+	ID 0E79
+	TYPE $itype_container
+	DYE 1
+	VALUE 30
+	WEIGHT 100
 }
 
 SECTION ITEM $item_silver_chest
 {
-    NAME silver chest
-    SMELT 2
-    ID 0E7C
-    TYPE $itype_container
-    VALUE 60
-    WEIGHT 300
-    MOVABLE 1
+	NAME silver chest
+	SMELT 2
+	ID 0E7C
+	TYPE $itype_container
+	VALUE 60
+	WEIGHT 300
+	MOVABLE 1
 }
 
 SECTION ITEM $item_wooden_box_1
 {
-    NAME wooden box
-    ID 0E7D
-    TYPE $itype_container
-    VALUE 55
-    WEIGHT 100
-    MOVABLE 1
-    AMXINT $localvar_flipitem $item_wooden_box_2
+	NAME wooden box
+	ID 0E7D
+	TYPE $itype_container
+	VALUE 55
+	WEIGHT 100
+	MOVABLE 1
+	AMXINT $localvar_flipitem $item_wooden_box_2
 }
 
 SECTION ITEM $item_wooden_box_2
 {
-    NAME wooden box
-    ID 09aa
-    TYPE $itype_container
-    VALUE 55
-    WEIGHT 100
-    MOVABLE 1
-    AMXINT $localvar_flipitem $item_wooden_box_1
+	NAME wooden box
+	ID 09aa
+	TYPE $itype_container
+	VALUE 55
+	WEIGHT 100
+	MOVABLE 1
+	AMXINT $localvar_flipitem $item_wooden_box_1
 }
 
 SECTION ITEM $item_brass_box
 {
-    NAME brass box
-    ID 0E80
-    TYPE $itype_container
-    VALUE 50
-    WEIGHT 100
-    MOVABLE 1
+	NAME brass box
+	ID 0E80
+	TYPE $itype_container
+	VALUE 50
+	WEIGHT 100
+	MOVABLE 1
 }
 
 SECTION ITEM $item_gold_key
 {
-    NAME gold key
-    ID 100F
-    TYPE $itype_key
-    DECAY
-    VALUE 15
-    WEIGHT 2
+	NAME gold key
+	ID 100F
+	TYPE $itype_key
+	DECAY
+	VALUE 15
+	WEIGHT 2
 }
 
 SECTION ITEM $item_iron_key
 {
-    NAME iron key
-    ID 1010
-    TYPE $itype_key
-    DECAY
-    VALUE 10
-    WEIGHT 2
+	NAME iron key
+	ID 1010
+	TYPE $itype_key
+	DECAY
+	VALUE 10
+	WEIGHT 2
 }
 
 SECTION ITEM $item_magic_key
 {
-    NAME magic key
-    ID 1012
-    TYPE $itype_key
-    VALUE 35
-    WEIGHT 2
+	NAME magic key
+	ID 1012
+	TYPE $itype_key
+	VALUE 35
+	WEIGHT 2
 }
 
 SECTION ITEM $item_bronze_key
 {
-    NAME bronze key
-    ID 1013
-    TYPE $itype_key
-    DECAY
-    VALUE 10
-    WEIGHT 2
+	NAME bronze key
+	ID 1013
+	TYPE $itype_key
+	DECAY
+	VALUE 10
+	WEIGHT 2
 }
 
 // a map
 SECTION ITEM $item_map
 {
-    NAME a map
-    ID 14EB
-    TYPE $itype_map
-    VALUE 40
+	NAME a map
+	ID 14EB
+	TYPE $itype_map
+	VALUE 40
 }
 
 // a book
 SECTION ITEM $item_book
 {
-    NAME a book
-    ID 0FF1
-    TYPE $itype_book
-    VALUE 20
+	NAME a book
+	ID 0FF1
+	TYPE $itype_book
+	VALUE 20
 }
 
 //All Circle Scrolls
 SECTION ITEM $item_all_circle_scrolls_list
 {
-    //$$ all circle scrolls list
-    ITEMLIST $itemlist_all_scrolls
+	//$$ all circle scrolls list
+	ITEMLIST $itemlist_all_scrolls
 }
 
 //Varios Weapons and Armor
 SECTION ITEM $item_various_weapons_and_armors_list
 {
-    //$$ various weapons and armors list
-    ITEMLIST $itemlist_various_weapons_and_armor
+	//$$ various weapons and armors list
+	ITEMLIST $itemlist_various_weapons_and_armor
 }
 
 //More Weapons and Armor
 SECTION ITEM $item_more_weapons_and_armors_list
 {
-    //$$ more weapons and armors list
-    ITEMLIST $itemlist_more_weapons_and_armor
+	//$$ more weapons and armors list
+	ITEMLIST $itemlist_more_weapons_and_armor
 }
 
 SECTION ITEM $item_trashcan
 {
-    NAME trashcan
-    ID 0e77
-    COLOR 0515
-    TYPE $itype_trash
-    VALUE 50
-    WEIGHT 200
+	NAME trashcan
+	ID 0e77
+	COLOR 0515
+	TYPE $itype_trash
+	VALUE 50
+	WEIGHT 200
 }
 
 // headwear
 SECTION ITEM $item_headwear_list
 {
-    //$$ headwear list
-    ITEMLIST $itemlist_headwears
+	//$$ headwear list
+	ITEMLIST $itemlist_headwears
 }
 
 // weapon
 SECTION ITEM $item_weapons_list
 {
-    //$$ weapons list
-    ITEMLIST $itemlist_weapons_1
+	//$$ weapons list
+	ITEMLIST $itemlist_weapons_1
 }
 
 
 // Weak Henchman
 SECTION ITEM $item_weak_henchman
 {
-    NAME weak henchman
-    ID 2106
-    TRIGGER $itrg_henchman
-    VALUE 1500
+	NAME weak henchman
+	ID 2106
+	TRIGGER $itrg_henchman
+	VALUE 1500
 }
 
 // Medium Henchman
 SECTION ITEM $item_medium_henchman
 {
-    NAME medium henchman
-    ID 2106
-    TRIGGER $itrg_henchman_1
-    VALUE 2500
+	NAME medium henchman
+	ID 2106
+	TRIGGER $itrg_henchman_1
+	VALUE 2500
 }
 
 // Strong Henchman
 SECTION ITEM $item_strong_henchman
 {
-    NAME strong henchman
-    ID 2106
-    TRIGGER $itrg_henchman_2
-    VALUE 4000
+	NAME strong henchman
+	ID 2106
+	TRIGGER $itrg_henchman_2
+	VALUE 4000
 }
 
 
 SECTION ITEM $item_bugmans_brew
 {
-    NAME bugmans brew
-    ID 1F7F
-    VALUE 50
-    TRIGGER $itrg_drink_ale
-    GOOD 3
+	NAME bugmans brew
+	ID 1F7F
+	VALUE 50
+	TRIGGER $itrg_drink_ale
+	GOOD 3
 }
 
 SECTION ITEM $item_efreeti_bottle
 {
-    NAME a strange looking bottle
-    NAME2 an efreeti bottle
-    ID 0EFC
-    TRIGGER $itrg_efreeti
+	NAME a strange looking bottle
+	NAME2 an efreeti bottle
+	ID 0EFC
+	TRIGGER $itrg_efreeti
 }
 
 SECTION ITEM $item_seasons_greetings
 {
-    NAME Seasons Greetings
-    ID 14F0
-    TRIGTYPE 0
-    TRIGGER $itrg_happy_holidays
-    NEWBIE
-    COLOR 0027
-    DECAY
+	NAME Seasons Greetings
+	ID 14F0
+	TRIGTYPE 0
+	TRIGGER $itrg_happy_holidays
+	NEWBIE
+	COLOR 0027
+	DECAY
 }
 
 SECTION ITEM $item_fishing_pole
 {
-    NAME a fishing pole
-    ITEMHAND 2
-    ID 0DBF
-    DECAY
-    VALUE 14
-    @ONDBLCLICK __nxw_sk_fishing
+	NAME a fishing pole
+	ITEMHAND 2
+	ID 0DBF
+	DECAY
+	VALUE 14
+	@ONDBLCLICK __nxw_sk_fishing
 }
 
 SECTION ITEM $item_black_smith
 {
-    NAME black smith
-    ID 0dda
-    COLOR 331
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 1
+	NAME black smith
+	ID 0dda
+	COLOR 331
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 1
 }
 
 SECTION ITEM $item_swordsman
 {
-    NAME swordsman
-    ID 0dda
-    COLOR 22
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 2
+	NAME swordsman
+	ID 0dda
+	COLOR 22
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 2
 }
 
 SECTION ITEM $item_archer
 {
-    NAME archer
-    ID 0dda
-    COLOR 233
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 5
+	NAME archer
+	ID 0dda
+	COLOR 233
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 5
 }
 
 SECTION ITEM $item_mage
 {
-    NAME mage
-    ID 0dda
-    COLOR 6
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 6
+	NAME mage
+	ID 0dda
+	COLOR 6
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 6
 }
 
 SECTION ITEM $item_rmsman
 {
-    NAME armsman
-    ID 0dda
-    COLOR 157
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 3
+	NAME armsman
+	ID 0dda
+	COLOR 157
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 3
 }
 
 SECTION ITEM $item_gem_of_immortality
 {
-    NAME gem of immortality
-    ID 1870
-    COLOR 03B7
+	NAME gem of immortality
+	ID 1870
+	COLOR 03B7
 }
 
 SECTION ITEM $item_gold_coin
 {
-    ID 0EED
-    PILE 1
-    AMOUNT 1
-    DECAY
+	ID 0EED
+	PILE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_dispel-wall-spawner
 {
-    NAME dispel-wall-spawner
-    ID 1820
-    COLOR 008A
-    TYPE $itype_item_spawner
-    MOREX 2002
-    MOREY 2
-    MOREZ 2
-    VISIBLE 3
+	NAME dispel-wall-spawner
+	ID 1820
+	COLOR 008A
+	TYPE $itype_item_spawner
+	MOREX 2002
+	MOREY 2
+	MOREZ 2
+	VISIBLE 3
 }
 
 SECTION ITEM $item_stone_wall
 {
-    NAME a stone wall
-    ID 0080
-    DISPELLABLE 1
+	NAME a stone wall
+	ID 0080
+	DISPELLABLE 1
 }
 
 SECTION ITEM $item_metal_chest1
 {
-    NAME metal chest
-    ID 0E40
-    TYPE $itype_container
-    VALUE 45
-    WEIGHT 300
-    MOVABLE 1
+	NAME metal chest
+	ID 0E40
+	TYPE $itype_container
+	VALUE 45
+	WEIGHT 300
+	MOVABLE 1
 }
 
 SECTION ITEM $item_empty_vials
 { a empty vial
-    ID 0E24
-    PILE 1
-    DECAY
-    VALUE 5
+	ID 0E24
+	PILE 1
+	DECAY
+	VALUE 5
 }
 
 SECTION ITEM $item_bottle1
 {
-    NAME bottle
-    ID 0E25
-    DECAY
+	NAME bottle
+	ID 0E25
+	DECAY
 }
 
 SECTION ITEM $item_bottle2
 {
-    NAME bottle
-    ID 0E26
-    DECAY
+	NAME bottle
+	ID 0E26
+	DECAY
 }
 
 SECTION ITEM $item_bottle3
 {
-    NAME bottle
-    ID 0E27
-    DECAY
+	NAME bottle
+	ID 0E27
+	DECAY
 }
 
 SECTION ITEM $item_bottle4
 {
-    NAME bottle
-    ID 0E28
-    DECAY
+	NAME bottle
+	ID 0E28
+	DECAY
 }
 
 SECTION ITEM $item_bottle5
 {
-    NAME bottle
-    ID 0E29
-    DECAY
+	NAME bottle
+	ID 0E29
+	DECAY
 }
 
 SECTION ITEM $item_bottle6
 {
-    NAME bottle
-    ID 0E2A
-    DECAY
+	NAME bottle
+	ID 0E2A
+	DECAY
 }
 
 SECTION ITEM $item_bottle7
 {
-    NAME bottle
-    ID 0E2B
-    DECAY
+	NAME bottle
+	ID 0E2B
+	DECAY
 }
 
 SECTION ITEM $item_bottle8
 {
-    NAME bottle
-    ID 0E2C
-    DECAY
+	NAME bottle
+	ID 0E2C
+	DECAY
 }
 
 SECTION ITEM $item_bottle9
 {
-    NAME bottle
-    ID 0EFB
-    DECAY
+	NAME bottle
+	ID 0EFB
+	DECAY
 }
 
 SECTION ITEM $item_bottle10
 {
-    NAME bottle
-    ID 0EFC
-    DECAY
+	NAME bottle
+	ID 0EFC
+	DECAY
 }
 
 SECTION ITEM $item_bottle11
 {
-    NAME bottle
-    ID 0F0E
-    DECAY
-    VALUE 5
+	NAME bottle
+	ID 0F0E
+	DECAY
+	VALUE 5
 }
 
 SECTION ITEM $item_blue_moongate
 {
-    NAME a blue moongate
-    ID 0F6C
-    TYPE $itype_moongate
+	NAME a blue moongate
+	ID 0F6C
+	TYPE $itype_moongate
 
 }
 
 SECTION ITEM $item_red_moongate
 {
-    NAME a red moongate
-    ID 0DDA
-    TYPE $itype_moongate
+	NAME a red moongate
+	ID 0DDA
+	TYPE $itype_moongate
 }
 
 SECTION ITEM $item_black_moongate
 {
-    NAME a black moongate
-    ID 1FD4
-    TYPE $itype_moongate
+	NAME a black moongate
+	ID 1FD4
+	TYPE $itype_moongate
 }
 
 SECTION ITEM $item_master_shard_key
 {
-    NAME a master shard key
-    ID 1012
-    TYPE $itype_key
-    //MORE FF FF FF FF
-    MORE -1
+	NAME a master shard key
+	ID 1012
+	TYPE $itype_key
+	//MORE FF FF FF FF
+	MORE -1
 }
 
 SECTION ITEM $item_banner1_1_1
 {
-    ID 042A
-    AMXINT $localvar_flipitem $item_banner1_2_1
+	ID 042A
+	AMXINT $localvar_flipitem $item_banner1_2_1
 }
 
 SECTION ITEM $item_banner1_1_2
 {
-    ID 042B
-    AMXINT $localvar_flipitem $item_banner1_2_2
+	ID 042B
+	AMXINT $localvar_flipitem $item_banner1_2_2
 }
 
 SECTION ITEM $item_banner1_2_1
 {
-    ID 042E
-    AMXINT $localvar_flipitem $item_banner1_1_1
+	ID 042E
+	AMXINT $localvar_flipitem $item_banner1_1_1
 }
 
 SECTION ITEM $item_banner1_2_2
 {
-    ID 042F
-    AMXINT $localvar_flipitem $item_banner1_1_2
+	ID 042F
+	AMXINT $localvar_flipitem $item_banner1_1_2
 }
 
 SECTION ITEM $item_banner2_1_1
 {
-    ID 0426
-    AMXINT $localvar_flipitem $item_banner2_2_1
+	ID 0426
+	AMXINT $localvar_flipitem $item_banner2_2_1
 }
 
 SECTION ITEM $item_banner2_1_2
 {
-    ID 0427
-    AMXINT $localvar_flipitem $item_banner2_2_2
+	ID 0427
+	AMXINT $localvar_flipitem $item_banner2_2_2
 }
 
 SECTION ITEM $item_banner2_2_1
 {
-    ID 042C
-    AMXINT $localvar_flipitem $item_banner2_1_1
+	ID 042C
+	AMXINT $localvar_flipitem $item_banner2_1_1
 }
 
 SECTION ITEM $item_banner2_2_2
 {
-    ID 042D
-    AMXINT $localvar_flipitem $item_banner2_1_2
+	ID 042D
+	AMXINT $localvar_flipitem $item_banner2_1_2
 }
 
 SECTION ITEM $item_curtain_2
 {
-    ID 0432
-    AMXINT $localvar_flipitem $item_curtain_1
+	ID 0432
+	AMXINT $localvar_flipitem $item_curtain_1
 }
 
 SECTION ITEM $item_curtain_rod_2
 {
-    ID 0433
-    AMXINT $localvar_flipitem $item_curtain_rod_1
+	ID 0433
+	AMXINT $localvar_flipitem $item_curtain_rod_1
 }
 
 SECTION ITEM $item_curtain_1
 {
-    ID 0435
-    AMXINT $localvar_flipitem $item_curtain_2
+	ID 0435
+	AMXINT $localvar_flipitem $item_curtain_2
 }
 
 SECTION ITEM $item_curtain_rod_1
 {
-    ID 0434
-    AMXINT $localvar_flipitem $item_curtain_rod_2
+	ID 0434
+	AMXINT $localvar_flipitem $item_curtain_rod_2
 }
 
 SECTION ITEM $item_gruesome1_1
 {
-    ID 0420
-    AMXINT $localvar_flipitem $item_gruesome1_2
+	ID 0420
+	AMXINT $localvar_flipitem $item_gruesome1_2
 }
 
 SECTION ITEM $item_gruesome1_2
 {
-    ID 0429
-    AMXINT $localvar_flipitem $item_gruesome1_1
+	ID 0429
+	AMXINT $localvar_flipitem $item_gruesome1_1
 }
 
 SECTION ITEM $item_gruesome2_1
 {
-    ID 041F
-    AMXINT $localvar_flipitem $item_gruesome2_2
+	ID 041F
+	AMXINT $localvar_flipitem $item_gruesome2_2
 }
 
 SECTION ITEM $item_gruesome2_2
 {
-    ID 0428
-    AMXINT $localvar_flipitem $item_gruesome2_1
+	ID 0428
+	AMXINT $localvar_flipitem $item_gruesome2_1
 }
 
 SECTION ITEM $item_door
 {
-    ID 022E
+	ID 022E
 }
 
 SECTION ITEM $item_door_1
 {
-    ID 022F
+	ID 022F
 }
 
 SECTION ITEM $item_door_2
 {
-    ID 022C
+	ID 022C
 }
 
 SECTION ITEM $item_door_3
 {
-    ID 022D
+	ID 022D
 }
 
 SECTION ITEM $item_silver_coin
 {
-    NAME silver coin
-    ID 0EED
-    COLOR 02B8
-    PILE 1
-    AMOUNT 1
-    DECAY
+	NAME silver coin
+	ID 0EED
+	COLOR 02B8
+	PILE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_copper_coin
 {
-    NAME copper coin
-    ID 0EED
-    COLOR 002F
-    PILE 1
-    AMOUNT 1
-    DECAY
+	NAME copper coin
+	ID 0EED
+	COLOR 002F
+	PILE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_amethysts1
 {
-    ID 0F16
-    DECAY
-    VALUE 105
+	ID 0F16
+	DECAY
+	VALUE 105
 }
 
 SECTION ITEM $item_amethysts2
 {
-    ID 0F17
-    DECAY
-    VALUE 105
+	ID 0F17
+	DECAY
+	VALUE 105
 }
 
 SECTION ITEM $item_citrines1
 {
-    ID 0F15
-    DECAY
-    VALUE 95
+	ID 0F15
+	DECAY
+	VALUE 95
 }
 
 SECTION ITEM $item_emeralds1
 {
-    ID 0F10
-    DECAY
-    VALUE 115
+	ID 0F10
+	DECAY
+	VALUE 115
 }
 
 SECTION ITEM $item_rubies1
 {
-    ID 0F13
-    DECAY
-    VALUE 100
+	ID 0F13
+	DECAY
+	VALUE 100
 }
 
 SECTION ITEM $item_rubies2
 {
-    ID 0F14
-    DECAY
-    VALUE 100
+	ID 0F14
+	DECAY
+	VALUE 100
 }
 
 SECTION ITEM $item_rubies3
 {
-    ID 0F1A
-    DECAY
-    VALUE 100
+	ID 0F1A
+	DECAY
+	VALUE 100
 }
 
 SECTION ITEM $item_rubies4
 {
-    ID 0F1C
-    DECAY
-    VALUE 100
+	ID 0F1C
+	DECAY
+	VALUE 100
 }
 
 SECTION ITEM $item_rubies5
 {
-    ID 0F1D
-    DECAY
-    VALUE 100
+	ID 0F1D
+	DECAY
+	VALUE 100
 }
 
 SECTION ITEM $item_sapphires1
 {
-    ID 0F11
-    DECAY
-    VALUE 110
+	ID 0F11
+	DECAY
+	VALUE 110
 }
 
 SECTION ITEM $item_sapphires2
 {
-    ID 0F12
-    DECAY
-    VALUE 110
+	ID 0F12
+	DECAY
+	VALUE 110
 }
 
 SECTION ITEM $item_sapphires3
 {
-    ID 0F19
-    DECAY
-    VALUE 110
+	ID 0F19
+	DECAY
+	VALUE 110
 }
 
 SECTION ITEM $item_sapphires4
 {
-    ID 0F1F
-    DECAY
-    VALUE 110
+	ID 0F1F
+	DECAY
+	VALUE 110
 }
 
 SECTION ITEM $item_star_sapphires1
 {
-    ID 0F0F
-    DECAY
-    VALUE 130
+	ID 0F0F
+	DECAY
+	VALUE 130
 }
 
 SECTION ITEM $item_star_sapphires2
 {
-    ID 0F1B
-    DECAY
-    VALUE 130
+	ID 0F1B
+	DECAY
+	VALUE 130
 }
 
 SECTION ITEM $item_tourmalines1
 {
-    ID 0F18
-    DECAY
-    VALUE 90
+	ID 0F18
+	DECAY
+	VALUE 90
 }
 
 SECTION ITEM $item_tourmalines2
 {
-    ID 0F1E
-    DECAY
-    VALUE 90
+	ID 0F1E
+	DECAY
+	VALUE 90
 }
 
 SECTION ITEM $item_tourmalines3
 {
-    ID 0F20
-    DECAY
-    VALUE 90
+	ID 0F20
+	DECAY
+	VALUE 90
 }
 
 SECTION ITEM $item_pieces_of_amber
 {
-    ID 0F25
-    DECAY
-    VALUE 65
+	ID 0F25
+	DECAY
+	VALUE 65
 }
 
 SECTION ITEM $item_amethysts3
 {
-    ID 0F22
-    DECAY
-    VALUE 75
+	ID 0F22
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_amethysts4
 {
-    ID 0F2E
-    DECAY
-    VALUE 75
+	ID 0F2E
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_citrines2
 {
-    ID 0F23
-    DECAY
-    VALUE 55
+	ID 0F23
+	DECAY
+	VALUE 55
 }
 
 SECTION ITEM $item_citrines3
 {
-    ID 0F24
-    DECAY
-    VALUE 55
+	ID 0F24
+	DECAY
+	VALUE 55
 }
 
 SECTION ITEM $item_citrines4
 {
-    ID 0F2C
-    DECAY
-    VALUE 55
+	ID 0F2C
+	DECAY
+	VALUE 55
 }
 
 SECTION ITEM $item_diamonds1
 {
-    ID 0F27
-    DECAY
-    VALUE 90
+	ID 0F27
+	DECAY
+	VALUE 90
 }
 
 SECTION ITEM $item_diamonds2
 {
-    ID 0F28
-    DECAY
-    VALUE 90
+	ID 0F28
+	DECAY
+	VALUE 90
 }
 
 SECTION ITEM $item_diamonds3
 {
-    ID 0F29
-    DECAY
-    VALUE 90
+	ID 0F29
+	DECAY
+	VALUE 90
 }
 
 SECTION ITEM $item_diamonds4
 {
-    ID 0F30
-    DECAY
-    VALUE 90
+	ID 0F30
+	DECAY
+	VALUE 90
 }
 
 SECTION ITEM $item_emeralds2
 {
-    ID 0F2F
-    DECAY
-    VALUE 80
+	ID 0F2F
+	DECAY
+	VALUE 80
 }
 
 SECTION ITEM $item_rubies6
 {
-    ID 0F2A
-    DECAY
-    VALUE 65
+	ID 0F2A
+	DECAY
+	VALUE 65
 }
 
 SECTION ITEM $item_rubies7
 {
-    ID 0F2B
-    DECAY
-    VALUE 65
+	ID 0F2B
+	DECAY
+	VALUE 65
 }
 
 SECTION ITEM $item_star_sapphires3
 {
-    ID 0F21
-    DECAY
-    VALUE 75
+	ID 0F21
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_tourmalines4
 {
-    ID 0F2D
-    DECAY
-    VALUE 85
+	ID 0F2D
+	DECAY
+	VALUE 85
 }
 
 SECTION ITEM $item_beads
 {
-    ID 108B
-    DECAY
-    VALUE 35
+	ID 108B
+	DECAY
+	VALUE 35
 }
 
 SECTION ITEM $item_bracelet
 {
-    ID 1086
-    DECAY
-    VALUE 40
+	ID 1086
+	DECAY
+	VALUE 40
 }
 
 SECTION ITEM $item_earrings
 {
-    ID 1087
-    DECAY
-    VALUE 40
+	ID 1087
+	DECAY
+	VALUE 40
 }
 
 SECTION ITEM $item_necklace1
 {
-    ID 1085
-    DECAY
-    VALUE 45
+	ID 1085
+	DECAY
+	VALUE 45
 }
 
 SECTION ITEM $item_necklace2
 {
-    ID 1088
-    DECAY
-    VALUE 45
+	ID 1088
+	DECAY
+	VALUE 45
 }
 
 SECTION ITEM $item_necklace3
 {
-    ID 1089
-    DECAY
-    VALUE 45
+	ID 1089
+	DECAY
+	VALUE 45
 }
 
 SECTION ITEM $item_ring
 {
-    ID 108A
-    DECAY
-    VALUE 35
+	ID 108A
+	DECAY
+	VALUE 35
 }
 
 SECTION ITEM $item_diamonds5
 {
-    ID 0F26
-    DECAY
-    VALUE 145
+	ID 0F26
+	DECAY
+	VALUE 145
 }
 
 
 SECTION ITEM $item_townstone
 { Townstone
-    NAME Townstone
-    ID 0edt
-    TYPE 35
-    MOREY 0
-    MOREZ 5
+	NAME Townstone
+	ID 0edt
+	TYPE 35
+	MOREY 0
+	MOREZ 5
 }
 
 SECTION ITEM $item_orchish_skin
 {
-    NAME orchish skin
-    ID 11FA
-    DECAY
-    COLOR 021a
-    VALUE 18
-    AMOUNT 5
-    WEIGHT 250
-    GOOD 33
+	NAME orchish skin
+	ID 11FA
+	DECAY
+	COLOR 021a
+	VALUE 18
+	AMOUNT 5
+	WEIGHT 250
+	GOOD 33
 }
 
 // Dragon Scales
 SECTION ITEM $item_dragon_scale
 {
-    NAME dragon scale
-    ID 1079
-    COLOR 02FC
-    DECAY
-    PILE 1
-    VALUE 2000
-    AMOUNT 60
-    WEIGHT 1000
-    GOOD 33
+	NAME dragon scale
+	ID 1079
+	COLOR 02FC
+	DECAY
+	PILE 1
+	VALUE 2000
+	AMOUNT 60
+	WEIGHT 1000
+	GOOD 33
 }
 
 SECTION ITEM $item_pots_of_wax
 { pot of wax
-    ID 142a
-    VALUE 30
+	ID 142a
+	VALUE 30
 }
 
 SECTION ITEM $item_dipping_stick
 { dipping stick
-    ID 1428
-    VALUE 20
+	ID 1428
+	VALUE 20
 }
 
 SECTION ITEM $item_metal_box
 {
-    NAME metal box
-    ID 09a8
-    TYPE $itype_container
-    
-    VALUE 10
-    WEIGHT 100
+	NAME metal box
+	ID 09a8
+	TYPE $itype_container
+	
+	VALUE 10
+	WEIGHT 100
 }
 
 SECTION ITEM $item_knife
 {
-    NAME knife
-    ID 09a6
-    
-    VALUE 10
-    WEIGHT 100
+	NAME knife
+	ID 09a6
+	
+	VALUE 10
+	WEIGHT 100
 }
 
 SECTION ITEM $item_fire_pit
 { Fire Pit
-    ID 0fac
+	ID 0fac
 }
 
 SECTION ITEM $item_rolls_of_string
 {
-    ID 1420
+	ID 1420
 }
 
 SECTION ITEM $item_books1
 {
-    ID 1e24
+	ID 1e24
 }
 
 SECTION ITEM $item_books2
 {
-    ID 1e25
+	ID 1e25
 }
 
 SECTION ITEM $item_shafts
 {
-    ID 1BD4
-    VALUE 4
-    AMOUNT 5
-    DECAY
+	ID 1BD4
+	VALUE 4
+	AMOUNT 5
+	DECAY
 }
 // end vagrant
 
 SECTION ITEM $item_clock_frames
 {
-    ID 104D
-    DECAY
+	ID 104D
+	DECAY
 }
 
 SECTION ITEM $item_fishing_net
 {
-    NAME a fishing net
-    ID 1ea5
-    COLOR 07d3
-    DECAY
+	NAME a fishing net
+	ID 1ea5
+	COLOR 07d3
+	DECAY
 }
 
 SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck
 {
-    NAME a fishing net recovered from a shipwreck
-    ID 1ea5
-    COLOR 0579
-    DECAY
+	NAME a fishing net recovered from a shipwreck
+	ID 1ea5
+	COLOR 0579
+	DECAY
 }
 
 SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck_1
 {
-    NAME a fishing net recovered from a shipwreck
-    ID 1ea3
-    COLOR 0579
-    DECAY
+	NAME a fishing net recovered from a shipwreck
+	ID 1ea3
+	COLOR 0579
+	DECAY
 }
 
 SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck_2
 {
-    NAME a fishing net recovered from a shipwreck
-    ID 0dca
-    COLOR 07d3
-    DECAY
+	NAME a fishing net recovered from a shipwreck
+	ID 0dca
+	COLOR 07d3
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0ed2
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0ed2
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_1
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0ed1
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0ed1
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_2
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0ed0
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0ed0
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_3
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0ecf
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0ecf
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_4
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0ece
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0ece
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_5
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0ecd
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0ecd
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_6
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0ecc
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0ecc
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_7
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0ecb
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0ecb
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_8
 {
-    NAME a pile of bones recoverd from a shipwreck
-    ID 0eca
-    DECAY
+	NAME a pile of bones recoverd from a shipwreck
+	ID 0eca
+	DECAY
 }
 
 SECTION ITEM $item_pile_of_skulls_recoverd_from_a_shipwreck
 {
-    NAME a pile of skulls recoverd from a shipwreck
-    ID 1ad8
-    DECAY
+	NAME a pile of skulls recoverd from a shipwreck
+	ID 1ad8
+	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck
 {
-    NAME a skull recoverd from a shipwreck
-    ID 1AE4
-    DECAY
+	NAME a skull recoverd from a shipwreck
+	ID 1AE4
+	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck_1
 {
-    NAME a skull recoverd from a shipwreck
-    ID 1AE3
-    DECAY
+	NAME a skull recoverd from a shipwreck
+	ID 1AE3
+	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck_2
 {
-    NAME a skull recoverd from a shipwreck
-    ID 1AE2
-    DECAY
+	NAME a skull recoverd from a shipwreck
+	ID 1AE2
+	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck_3
 {
-    NAME a skull recoverd from a shipwreck
-    ID 1AE1
-    DECAY
+	NAME a skull recoverd from a shipwreck
+	ID 1AE1
+	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck_4
 {
-    NAME a skull recoverd from a shipwreck
-    ID 1AE0
-    DECAY
+	NAME a skull recoverd from a shipwreck
+	ID 1AE0
+	DECAY
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fc4
+	NAME shell recoverd from a shipwreck
+	ID 0fc4
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck_1
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fc5
+	NAME shell recoverd from a shipwreck
+	ID 0fc5
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck_2
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fc6
+	NAME shell recoverd from a shipwreck
+	ID 0fc6
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck_3
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fc7
+	NAME shell recoverd from a shipwreck
+	ID 0fc7
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck_4
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fc8
+	NAME shell recoverd from a shipwreck
+	ID 0fc8
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck_5
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fc9
+	NAME shell recoverd from a shipwreck
+	ID 0fc9
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck_6
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fca
+	NAME shell recoverd from a shipwreck
+	ID 0fca
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck_7
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fcb
+	NAME shell recoverd from a shipwreck
+	ID 0fcb
 }
 
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck_8
 {
-    NAME shell recoverd from a shipwreck
-    ID 0fcc
+	NAME shell recoverd from a shipwreck
+	ID 0fcc
 }
 
 SECTION ITEM $item_metal_chest_recoverd_from_a_shipwreck
 {
-    NAME metal chest recoverd from a shipwreck
-    ID 0E40
-    TYPE $itype_container
-    VALUE 0
-    WEIGHT 300
-    MOVABLE 1
+	NAME metal chest recoverd from a shipwreck
+	ID 0E40
+	TYPE $itype_container
+	VALUE 0
+	WEIGHT 300
+	MOVABLE 1
 }
 
 SECTION ITEM $item_wooden_chest_recoverd_from_a_shipwreck
 {
-    NAME wooden chest recoverd from a shipwreck
-    ID 0E43
-    TYPE $itype_container
-    VALUE 0
-    WEIGHT 200
-    MOVABLE 1
+	NAME wooden chest recoverd from a shipwreck
+	ID 0E43
+	TYPE $itype_container
+	VALUE 0
+	WEIGHT 200
+	MOVABLE 1
 }
 
 SECTION ITEM $item_metal_chest_recoverd_from_a_shipwreck-faceing_west
 {
-    NAME metal chest recoverd from a shipwreck-faceing west
-    ID 0E41
-    TYPE $itype_container
-    VALUE 0
-    WEIGHT 300
-    MOVABLE 1
+	NAME metal chest recoverd from a shipwreck-faceing west
+	ID 0E41
+	TYPE $itype_container
+	VALUE 0
+	WEIGHT 300
+	MOVABLE 1
 }
 
 SECTION ITEM $item_wooden_chest_recoverd_from_a_shipwreck-faceing_east
 {
-    NAME wooden chest recoverd from a shipwreck-faceing east
-    ID 0E42
-    TYPE $itype_container
-    VALUE 0
-    WEIGHT 200
-    MOVABLE 1
+	NAME wooden chest recoverd from a shipwreck-faceing east
+	ID 0E42
+	TYPE $itype_container
+	VALUE 0
+	WEIGHT 200
+	MOVABLE 1
 }
 
 SECTION ITEM $item_cannon_ball
 {
-    NAME a cannon ball
-    ID 0E73
-    VALUE 10
+	NAME a cannon ball
+	ID 0E73
+	VALUE 10
 }
 
 // potions
 SECTION ITEM $item_potions_list
 {
-    //$$ potions list
-    ITEMLIST $itemlist_potions
+	//$$ potions list
+	ITEMLIST $itemlist_potions
 }
 
 //regs
 SECTION ITEM $item_reagents_list
 {
-    //$$ reagents list
-    ITEMLIST $itemlist_reagents
+	//$$ reagents list
+	ITEMLIST $itemlist_reagents
 }
 
 //instruments
 SECTION ITEM $item_instruments_list
 {
-    //$$ instruments list
-    ITEMLIST $itemlist_instruments
+	//$$ instruments list
+	ITEMLIST $itemlist_instruments
 }
 
 // blacksmith tools
 SECTION ITEM $item_blacksmith_tools_list
 {
-    //$$ blacksmith tools list
-    ITEMLIST $itemlist_blacksmith_tools
+	//$$ blacksmith tools list
+	ITEMLIST $itemlist_blacksmith_tools
 }
 
 SECTION ITEM $item_clean_bandages
 {
-    // bandages
-    ID 0E21
-    PILE 1
-    DECAY
-    DYE 1
-    VALUE 6
+	// bandages
+	ID 0E21
+	PILE 1
+	DECAY
+	DYE 1
+	VALUE 6
 }
 
 // Weapons
 SECTION ITEM $item_weapons_list_1
 {
-    //$$ weapons list
-    ITEMLIST $itemlist_weapons
+	//$$ weapons list
+	ITEMLIST $itemlist_weapons
 }
 
 SECTION ITEM $item_feathers
 {// feather
-    ID 1BD1
-    AMOUNT 5
-    VALUE 2
-    WEIGHT 2
-    DECAY
+	ID 1BD1
+	AMOUNT 5
+	VALUE 2
+	WEIGHT 2
+	DECAY
 }
 
 SECTION ITEM $item_bedroll
 {// bedroll
-    ID 0A58
-    VALUE 20
-    WEIGHT 3
-    TRIGTYPE 0
-    TRIGGER $itrg_unroll_bedroll
+	ID 0A58
+	VALUE 20
+	WEIGHT 3
+	TRIGTYPE 0
+	TRIGGER $itrg_unroll_bedroll
 }
 
 // 1st circle scrolls
 SECTION ITEM $item_first_circle_scrolls_list
 {
-    //$$ first circle scrolls list
-    ITEMLIST $itemlist_first_circle_scrolls
+	//$$ first circle scrolls list
+	ITEMLIST $itemlist_first_circle_scrolls
 }
 
 SECTION ITEM $item_kindling
 {//kindling
-    ID 0DE1
-    VALUE 1
-    WEIGHT 2
+	ID 0DE1
+	VALUE 1
+	WEIGHT 2
 }
 
 SECTION ITEM $item_sextant
 {// sextant
-    ID 1057
-    VALUE 30
-    WEIGHT 2
+	ID 1057
+	VALUE 30
+	WEIGHT 2
 }
 
 // TINKERPARTS
 SECTION ITEM $item_tinker_parts_list
 {
-    //$$ tinker parts list
-    ITEMLIST $itemlist_tinker_parts
+	//$$ tinker parts list
+	ITEMLIST $itemlist_tinker_parts
 }
 
 SECTION ITEM $item_book
 {// book
-    ID 0FF1
-    TYPE $itype_book
-    VALUE 18
-    DECAY
-    MOREX 666
-    MOREY 100
+	ID 0FF1
+	TYPE $itype_book
+	VALUE 18
+	DECAY
+	MOREX 666
+	MOREY 100
 }
 
 SECTION ITEM $item_little_candle_lit
 {// candle
-    ID 0A0F
-    DIR 2
-    VALUE 6
-    ITEMHAND 3
-    TRIGGER $itrg_light_handheld_candle
+	ID 0A0F
+	DIR 2
+	VALUE 6
+	ITEMHAND 3
+	TRIGGER $itrg_light_handheld_candle
 }
 
 SECTION ITEM $item_hand_torch_lit
 {// torch
-    ID 0A12
-    DIR 1
-    VALUE 7
-    DECAY
-    ITEMHAND 3
-    TRIGGER $itrg_light_handheld_torch
-    WEIGHT 100
+	ID 0A12
+	DIR 1
+	VALUE 7
+	DECAY
+	ITEMHAND 3
+	TRIGGER $itrg_light_handheld_torch
+	WEIGHT 100
 }
 
 SECTION ITEM $item_hand_lantern_lit
 {// lantern
-    ID 0A15
-    DIR 2
-    VALUE 7
-    ITEMHAND 3
-    TRIGGER $itrg_light_handheld_lantern
-    WEIGHT 100
+	ID 0A15
+	DIR 2
+	VALUE 7
+	ITEMHAND 3
+	TRIGGER $itrg_light_handheld_lantern
+	WEIGHT 100
 }
 
 SECTION ITEM $item_virtue
 {
-    NAME Virtue
-    ID 0FF1
-    TYPE $itype_book
-    MORE 11
-    VALUE 23
+	NAME Virtue
+	ID 0FF1
+	TYPE $itype_book
+	MORE 11
+	VALUE 23
 }
 
 // Regent Spawners
 SECTION ITEM $item_black_pearl_spawner
 {
-    NAME black pearl spawner
-    ID 0f7a
-    TYPE $itype_item_spawner
-    MOREX 428
-    MOREY 1
-    MOREZ 5
-    VISIBLE 1
-    AMOUNT 1
-    DECAY
+	NAME black pearl spawner
+	ID 0f7a
+	TYPE $itype_item_spawner
+	MOREX 428
+	MOREY 1
+	MOREZ 5
+	VISIBLE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_mandrake_root_spawner
 {
-    NAME mandrake root spawner
-    ID 0F86
-    TYPE $itype_item_spawner
-    MOREX 440
-    MOREY 1
-    MOREZ 5
-    VISIBLE 1
-    AMOUNT 1
-    DECAY
+	NAME mandrake root spawner
+	ID 0F86
+	TYPE $itype_item_spawner
+	MOREX 440
+	MOREY 1
+	MOREZ 5
+	VISIBLE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_bloodmoss_spawner
 {
-    NAME bloodmoss spawner
-    ID 0F7B
-    TYPE $itype_item_spawner
-    MOREX 429
-    MOREY 1
-    MOREZ 5
-    VISIBLE 1
-    AMOUNT 1
-    DECAY
+	NAME bloodmoss spawner
+	ID 0F7B
+	TYPE $itype_item_spawner
+	MOREX 429
+	MOREY 1
+	MOREZ 5
+	VISIBLE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_garlic_spawner
 {
-    NAME garlic spawner
-    ID 0F84
-    TYPE $itype_item_spawner
-    MOREX 438
-    MOREY 1
-    MOREZ 5
-    VISIBLE 1
-    AMOUNT 1
-    DECAY
+	NAME garlic spawner
+	ID 0F84
+	TYPE $itype_item_spawner
+	MOREX 438
+	MOREY 1
+	MOREZ 5
+	VISIBLE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_gensing_spawner
 {
-    NAME gensing spawner
-    ID 0F85
-    TYPE $itype_item_spawner
-    MOREX 439
-    MOREY 1
-    MOREZ 5
-    VISIBLE 1
-    AMOUNT 1
-    DECAY
+	NAME gensing spawner
+	ID 0F85
+	TYPE $itype_item_spawner
+	MOREX 439
+	MOREY 1
+	MOREZ 5
+	VISIBLE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_nightshade_spawner
 {
-    NAME nightshade spawner
-    ID 0F88
-    TYPE $itype_item_spawner
-    MOREX 442
-    MOREY 1
-    MOREZ 5
-    VISIBLE 1
-    AMOUNT 1
-    DECAY
+	NAME nightshade spawner
+	ID 0F88
+	TYPE $itype_item_spawner
+	MOREX 442
+	MOREY 1
+	MOREZ 5
+	VISIBLE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_spidersilk_spawner
 {
-    NAME spidersilk spawner
-    ID 0F8D
-    TYPE $itype_item_spawner
-    MOREX 447
-    MOREY 1
-    MOREZ 5
-    VISIBLE 1
-    AMOUNT 1
-    DECAY
+	NAME spidersilk spawner
+	ID 0F8D
+	TYPE $itype_item_spawner
+	MOREX 447
+	MOREY 1
+	MOREZ 5
+	VISIBLE 1
+	AMOUNT 1
+	DECAY
 }
 
 SECTION ITEM $item_sulfuric_ash_spawner
 {
-    NAME sulfuric ash spawner
-    ID 0F8C
-    TYPE $itype_item_spawner
-    MOREX 446
-    MOREY 1
-    MOREZ 5
-    VISIBLE 1
-    AMOUNT 1
+	NAME sulfuric ash spawner
+	ID 0F8C
+	TYPE $itype_item_spawner
+	MOREX 446
+	MOREY 1
+	MOREZ 5
+	VISIBLE 1
+	AMOUNT 1
 }
 
 SECTION ITEM $item_pet_horse
 {
-    NAME pet horse
-    ID 2120
-    TRIGGER $itrg_spawn_horse
-    VALUE 550
+	NAME pet horse
+	ID 2120
+	TRIGGER $itrg_spawn_horse
+	VALUE 550
 }
 
 SECTION ITEM $item_pet_ostard
 {
-    NAME pet ostard
-    ID 2135
-    TRIGGER $itrg_spawn_ostard
-    VALUE 650
+	NAME pet ostard
+	ID 2135
+	TRIGGER $itrg_spawn_ostard
+	VALUE 650
 }
 
 SECTION ITEM $item_pet_llama
 {
-    NAME pet llama
-    ID 20F6
-    TRIGGER $itrg_spawn_llama
-    VALUE 450
+	NAME pet llama
+	ID 20F6
+	TRIGGER $itrg_spawn_llama
+	VALUE 450
 }
 
 SECTION ITEM $item_pet_rabbit
 {
-    NAME pet rabbit
-    ID 2125
-    TRIGGER $itrg_spawn_rabbit
-    VALUE 30
+	NAME pet rabbit
+	ID 2125
+	TRIGGER $itrg_spawn_rabbit
+	VALUE 30
 }
 
 SECTION ITEM $item_pet_cat
 {
-    NAME pet cat
-    ID 211B
-    TRIGGER $itrg_spawn_cat
-    VALUE 30
+	NAME pet cat
+	ID 211B
+	TRIGGER $itrg_spawn_cat
+	VALUE 30
 }
 
 SECTION ITEM $item_pet_dog
 {
-    NAME pet dog
-    ID 211C
-    TRIGGER $itrg_spawn_dog
-    VALUE 30
+	NAME pet dog
+	ID 211C
+	TRIGGER $itrg_spawn_dog
+	VALUE 30
 }
 
 SECTION ITEM $item_pet_eagle
 {
-    NAME pet eagle
-    ID 211D
-    TRIGGER $itrg_spawn_eagle
-    VALUE 30
+	NAME pet eagle
+	ID 211D
+	TRIGGER $itrg_spawn_eagle
+	VALUE 30
 }
 
 SECTION ITEM $item_pet_pack_horse
 {
-    NAME pet pack horse
-    ID 2126
-    TRIGGER $itrg_spawn_pack_horse
-    VALUE 650
+	NAME pet pack horse
+	ID 2126
+	TRIGGER $itrg_spawn_pack_horse
+	VALUE 650
 }
 
 SECTION ITEM $item_pet_pack_llama
 {
-    NAME pet pack llama
-    ID 2127
-    TRIGGER $itrg_spawn_pack_llama
-    VALUE 650
+	NAME pet pack llama
+	ID 2127
+	TRIGGER $itrg_spawn_pack_llama
+	VALUE 650
 }
 
 SECTION ITEM $item_wash_basin
 {
-    NAME wash basin with water
-    ID 1008
-    DECAY
+	NAME wash basin with water
+	ID 1008
+	DECAY
 }
 
 SECTION ITEM $item_spittoon
 {
-    NAME spittoon
-    ID 1003
-    DECAY
+	NAME spittoon
+	ID 1003
+	DECAY
 }
 
 //training dummy (facing south)
 SECTION ITEM $item_training_dummy_2
 {
-    NAME training dummy (facing south)
-    ID 1070
-    AMXINT $localvar_flipitem $item_training_dummy_1
+	NAME training dummy (facing south)
+	ID 1070
+	AMXINT $localvar_flipitem $item_training_dummy_1
 }
 
 // training dummy (facing east)
 SECTION ITEM $item_training_dummy_1
 {
-    NAME training dummy
-    ID 1074
-    AMXINT $localvar_flipitem $item_training_dummy_2
+	NAME training dummy
+	ID 1074
+	AMXINT $localvar_flipitem $item_training_dummy_2
 }
 
 //pickpocket dip (facing south)
 SECTION ITEM $item_pickpocket_dip
 {
-    NAME pickpocket dip
-    ID 1E2C
+	NAME pickpocket dip
+	ID 1E2C
 }
 
 //pickpocket dip (facing east)
 SECTION ITEM $item_pickpocket_dip_1
 {
-    NAME pickpocket dip
-    ID 1E2D
+	NAME pickpocket dip
+	ID 1E2D
 }
 
 SECTION ITEM $item_slotmachine_5gp_
 {
-    NAME slotmachine [5gp]
-    ID 1ea8
-    TYPE $itype_slotmachine
-    WEIGHT 12
-    COLOR 386
+	NAME slotmachine [5gp]
+	ID 1ea8
+	TYPE $itype_slotmachine
+	WEIGHT 12
+	COLOR 386
 }
 
 
 
 SECTION ITEM $item_bolts_of_cloth1
 {
-    ID 0F95
-    NAME bolt of cloth
-    DECAY
-    VALUE 75
+	ID 0F95
+	NAME bolt of cloth
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_bolts_of_cloth2
 {
-    ID 0F96
-    NAME bolt of cloth
-    DECAY
-    VALUE 75
+	ID 0F96
+	NAME bolt of cloth
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_bolts_of_cloth3
 {
-    ID 0F97
-    NAME bolt of cloth
-    DECAY
-    VALUE 75
+	ID 0F97
+	NAME bolt of cloth
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_bolts_of_cloth4
 {
-    ID 0F98
-    NAME bolt of cloth
-    DECAY
-    VALUE 75
+	ID 0F98
+	NAME bolt of cloth
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_bolts_of_cloth5
 {
-    ID 0F99
-    NAME bolt of cloth
-    DECAY
-    VALUE 75
+	ID 0F99
+	NAME bolt of cloth
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_bolts_of_cloth6
 {
-    ID 0F9A
-    NAME bolt of cloth
-    DECAY
-    VALUE 75
+	ID 0F9A
+	NAME bolt of cloth
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_bolts_of_cloth7
 {
-    ID 0F9B
-    NAME bolt of cloth
-    DECAY
-    VALUE 75
+	ID 0F9B
+	NAME bolt of cloth
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_bolts_of_cloth8
 {
-    ID 0F9C
-    NAME bolt of cloth
-    DECAY
-    VALUE 75
+	ID 0F9C
+	NAME bolt of cloth
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_fencer
 {
-    NAME fencer
-    ID 0DDA
-    COLOR 22
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 4
+	NAME fencer
+	ID 0DDA
+	COLOR 22
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 4
 }
 
 SECTION ITEM $item_black_smith_1
 {
-    NAME black smith
-    ID 0dda
-    COLOR 331
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 1
+	NAME black smith
+	ID 0dda
+	COLOR 331
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 1
 }
 
 SECTION ITEM $item_swordsman_1
 {
-    NAME swordsman
-    ID 0dda
-    COLOR 22
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 2
+	NAME swordsman
+	ID 0dda
+	COLOR 22
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 2
 }
 
 SECTION ITEM $item_archer_3
 {
-    NAME archer
-    ID 0dda
-    COLOR 233
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 5
+	NAME archer
+	ID 0dda
+	COLOR 233
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 5
 }
 
 SECTION ITEM $item_mage_1
 {
-    NAME mage
-    ID 0dda
-    COLOR 6
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 6
+	NAME mage
+	ID 0dda
+	COLOR 6
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 6
 }
 
 SECTION ITEM $item_rmsman_1
 {
-    NAME armsman
-    ID 0dda
-    COLOR 157
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 3
+	NAME armsman
+	ID 0dda
+	COLOR 157
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 3
 }
 
 SECTION ITEM $item_fencer_1
 {
-    NAME fencer
-    ID 0DDA
-    COLOR 22
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 4
+	NAME fencer
+	ID 0DDA
+	COLOR 22
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 4
 }
 
 SECTION ITEM $item_orc
 {
-    NAME orc
-    ID 0DDA
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 1
+	NAME orc
+	ID 0DDA
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 1
 }
 
 SECTION ITEM $item_ettin
 {
-    NAME ettin
-    ID 0DDA
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 12
+	NAME ettin
+	ID 0DDA
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 12
 }
 
 SECTION ITEM $item_troll
 {
-    NAME troll
-    ID 0DDA
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 41
+	NAME troll
+	ID 0DDA
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 41
 }
 
 SECTION ITEM $item_skeleton
 {
-    NAME skeleton
-    ID 0DDA
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 76
+	NAME skeleton
+	ID 0DDA
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 76
 }
 
 SECTION ITEM $item_liche
 {
-    NAME liche
-    ID 0DDA
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 24
+	NAME liche
+	ID 0DDA
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 24
 }
 
 SECTION ITEM $item_daemon
 {
-    NAME daemon
-    ID 0DDA
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 65
+	NAME daemon
+	ID 0DDA
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 65
 }
 
 SECTION ITEM $item_dragon
 {
-    NAME dragon
-    ID 0DDA
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 66
+	NAME dragon
+	ID 0DDA
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 66
 }
 
 SECTION ITEM $item_drake
 {
-    NAME Drake
-    ID 0DDA
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 78
+	NAME Drake
+	ID 0DDA
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 78
 }
 
 SECTION ITEM $item_bulletin_board
 {
-    NAME a bulletin board
-    ID 1E5E
+	NAME a bulletin board
+	ID 1E5E
 }
 
 SECTION ITEM $item_male_human
 {
-    NAME male human
-    ID 0dda
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 94
+	NAME male human
+	ID 0dda
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 94
 }
 
 SECTION ITEM $item_female_human
 {
-    NAME female human
-    ID 0dda
-    DIR 1
-    TYPE $itype_advencemet_gate_sex
-    MOREX 95
+	NAME female human
+	ID 0dda
+	DIR 1
+	TYPE $itype_advencemet_gate_sex
+	MOREX 95
 }
 
 SECTION ITEM $item_thief
 {
-    NAME thief
-    ID 0DDA
-    COLOR 331
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 7
+	NAME thief
+	ID 0DDA
+	COLOR 331
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 7
 }
 
 SECTION ITEM $item_bard
 {
-    NAME bard
-    ID 0DDA
-    COLOR 22
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 8
+	NAME bard
+	ID 0DDA
+	COLOR 22
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 8
 }
 
 SECTION ITEM $item_ranger
 {
-    NAME ranger
-    ID 0DDA
-    COLOR 233
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 9
+	NAME ranger
+	ID 0DDA
+	COLOR 233
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 9
 }
 
 SECTION ITEM $item_ssassin
 {
-    NAME assassin
-    ID 0DDA
-    COLOR 6
-    DIR 1
-    TYPE $itype_advencemet_gate1
-    MOREX 10
+	NAME assassin
+	ID 0DDA
+	COLOR 6
+	DIR 1
+	TYPE $itype_advencemet_gate1
+	MOREX 10
 }
 
 SECTION ITEM $item_thief_1
 {
-    NAME thief
-    ID 0DDA
-    COLOR 157
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 7
+	NAME thief
+	ID 0DDA
+	COLOR 157
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 7
 }
 
 SECTION ITEM $item_bard_1
 {
-    NAME bard
-    ID 0DDA
-    COLOR 22
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 8
+	NAME bard
+	ID 0DDA
+	COLOR 22
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 8
 }
 
 SECTION ITEM $item_ranger_1
 {
-    NAME ranger
-    ID 0DDA
-    COLOR 233
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 9
+	NAME ranger
+	ID 0DDA
+	COLOR 233
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 9
 }
 
 SECTION ITEM $item_ssassin_1
 {
-    NAME assassin
-    ID 0DDA
-    COLOR 331
-    DIR 1
-    TYPE $itype_advencemet_gate2
-    MOREX 10
+	NAME assassin
+	ID 0DDA
+	COLOR 331
+	DIR 1
+	TYPE $itype_advencemet_gate2
+	MOREX 10
 }
 
 SECTION ITEM $item_vase
 {
-    NAME a vase
-    ID 0B45
-    VALUE 20
-    DECAY
-    WEIGHT 200
+	NAME a vase
+	ID 0B45
+	VALUE 20
+	DECAY
+	WEIGHT 200
 }
 
 SECTION ITEM $item_jars
 {
-    NAME jars
-    ID 0e4B
-    VALUE 20
-    DECAY
-    WEIGHT 100
+	NAME jars
+	ID 0e4B
+	VALUE 20
+	DECAY
+	WEIGHT 100
 }
 
 SECTION ITEM $item_boat_model
 {
-    NAME a boat model
-    ID 14f4
-    VALUE 20
-    DECAY
-    WEIGHT 100
+	NAME a boat model
+	ID 14f4
+	VALUE 20
+	DECAY
+	WEIGHT 100
 }
 
 SECTION ITEM $item_set_of_vials
 {
-    NAME a set of vials
-    ID 185B
-    VALUE 20
-    DECAY
-    WEIGHT 100
+	NAME a set of vials
+	ID 185B
+	VALUE 20
+	DECAY
+	WEIGHT 100
 }
 
 SECTION ITEM $item_skull
 {
-    NAME a skull
-    ID 1AE0
-    VALUE 20
-    DECAY
-    WEIGHT 100
+	NAME a skull
+	ID 1AE0
+	VALUE 20
+	DECAY
+	WEIGHT 100
 }
 
 SECTION ITEM $item_small_vase1
 {
-    NAME a small vase
-    ID 0B46
-    VALUE 20
-    DECAY
-    WEIGHT 100
+	NAME a small vase
+	ID 0B46
+	VALUE 20
+	DECAY
+	WEIGHT 100
 }
 
 SECTION ITEM $item_small_vase2
 {
-    NAME a small vase
-    ID 0b48
-    VALUE 20
-    DECAY
-    WEIGHT 100
+	NAME a small vase
+	ID 0b48
+	VALUE 20
+	DECAY
+	WEIGHT 100
 }
 
 SECTION ITEM $item_large_vase
 {
-    NAME a large vase
-    ID 0b47
-    VALUE 20
-    DECAY
-    WEIGHT 200
+	NAME a large vase
+	ID 0b47
+	VALUE 20
+	DECAY
+	WEIGHT 200
 }
 
 SECTION ITEM $item_damaged_books
 {
-    NAME damaged books
-    ID 0c16
-    VALUE 20
-    DECAY
-    WEIGHT 100
+	NAME damaged books
+	ID 0c16
+	VALUE 20
+	DECAY
+	WEIGHT 100
 }
 
 SECTION ITEM $item_piwafwi
 {
-    NAME a piwafwi
-    ID 1515
-    LAYER $layer_bracelet
-    COLOR 0142
-    DEF 5
-    HP 150
-    DECAY
-    VALUE 750
-    STR 15
-    SPD 20
+	NAME a piwafwi
+	ID 1515
+	LAYER $layer_bracelet
+	COLOR 0142
+	DEF 5
+	HP 150
+	DECAY
+	VALUE 750
+	STR 15
+	SPD 20
 }
 
 //**************************************************
@@ -2066,978 +2092,978 @@ SECTION ITEM $item_piwafwi
 //**************************************************
 SECTION ITEM $item_arm_2
 {
-    NAME an arm
-    ID 1CE5
-    WEIGHT 200
-    DECAY
+	NAME an arm
+	ID 1CE5
+	WEIGHT 200
+	DECAY
 }
 
 SECTION ITEM $item_arm_1
 {
-    NAME an arm
-    ID 1CDD
-    WEIGHT 200
-    DECAY
+	NAME an arm
+	ID 1CDD
+	WEIGHT 200
+	DECAY
 }
 
 SECTION ITEM $item_body
 {
-    NAME a body
-    ID 1ce6
-    DECAY
+	NAME a body
+	ID 1ce6
+	DECAY
 }
 
 SECTION ITEM $item_legs
 {
-    NAME legs
-    ID 1ce7
-    DECAY
+	NAME legs
+	ID 1ce7
+	DECAY
 }
 
 SECTION ITEM $item_torso
 {
-    NAME a torso
-    ID 1ce8
-    DECAY
+	NAME a torso
+	ID 1ce8
+	DECAY
 }
 
 SECTION ITEM $item_head_2
 {
-    NAME a head
-    ID 1ce9
-    DECAY
-    AMXINT $localvar_flipitem $item_head_1
+	NAME a head
+	ID 1ce9
+	DECAY
+	AMXINT $localvar_flipitem $item_head_1
 }
 
 SECTION ITEM $item_head_1
 {
-    NAME a head
-    ID 1CE1
-    WEIGHT 200
-    DECAY
-    AMXINT $localvar_flipitem $item_head_2
+	NAME a head
+	ID 1CE1
+	WEIGHT 200
+	DECAY
+	AMXINT $localvar_flipitem $item_head_2
 }
 
 SECTION ITEM $item_body_part
 {
-    NAME a body part
-    ID 1cea
-    DECAY
+	NAME a body part
+	ID 1cea
+	DECAY
 }
 
 SECTION ITEM $item_brain
 {
-    NAME a brain
-    ID 1CF0
-    WEIGHT 100
-    DECAY
+	NAME a brain
+	ID 1CF0
+	WEIGHT 100
+	DECAY
 }
 
 SECTION ITEM $item_entrails
 {
-    NAME entrails
-    ID 1CEF
-    WEIGHT 200
-    DECAY
+	NAME entrails
+	ID 1CEF
+	WEIGHT 200
+	DECAY
 }
 
 SECTION ITEM $item_heart
 {
-    NAME a heart
-    ID 1CED
-    WEIGHT 100
-    DECAY
+	NAME a heart
+	ID 1CED
+	WEIGHT 100
+	DECAY
 }
 
 SECTION ITEM $item_skull_1
 { // -s-
-    NAME a skull
-    ID 1ae3
-    WEIGHT 100
-    DECAY
-    AMXINT $localvar_flipitem $item_skull_2
+	NAME a skull
+	ID 1ae3
+	WEIGHT 100
+	DECAY
+	AMXINT $localvar_flipitem $item_skull_2
 }
 
 SECTION ITEM $item_skull_2
 { // -e-
-    NAME a skull
-    ID 1AE2
-    WEIGHT 100
-    DECAY
-    AMXINT $localvar_flipitem $item_skull_1
+	NAME a skull
+	ID 1AE2
+	WEIGHT 100
+	DECAY
+	AMXINT $localvar_flipitem $item_skull_1
 }
 
 SECTION ITEM $item_ribcage
 {
-    NAME a ribcage
-    ID 1B17
-    WEIGHT 100
-    DECAY
+	NAME a ribcage
+	ID 1B17
+	WEIGHT 100
+	DECAY
 }
 
 SECTION ITEM $item_spine
 {
-    NAME a spine
-    ID 1B1B
-    WEIGHT 100
-    DECAY
+	NAME a spine
+	ID 1B1B
+	WEIGHT 100
+	DECAY
 }
 
 // Terathan Cocoon 1
 SECTION ITEM $item_strange_cocoon
 {holds newt
-    NAME strange cocoon
-    ID 10da
-    TRIGTYPE 0
-    TRIGGER $itrg_cocoon_to_terathan
+	NAME strange cocoon
+	ID 10da
+	TRIGTYPE 0
+	TRIGGER $itrg_cocoon_to_terathan
 }
 
 // Terathan Cocoon 2
 SECTION ITEM $item_strange_cocoon_1
 {holds treasure
-    NAME strange cocoon
-    ID 10da
-    TRIGTYPE 0
-    TRIGGER $itrg_cocoon_to_treasure
+	NAME strange cocoon
+	ID 10da
+	TRIGTYPE 0
+	TRIGGER $itrg_cocoon_to_treasure
 }
 
 SECTION ITEM $item_silk_scraps_might_be_useful_
 {cocoon remnants
-    NAME  silk scraps (might be useful)
-    ID 10d9
-    DECAY
-    MOVABLE 1
+	NAME  silk scraps (might be useful)
+	ID 10d9
+	DECAY
+	MOVABLE 1
 }
 
 SECTION ITEM $item_silk_fluxing_tool
 {makes silk from scraps
-    NAME silk fluxing tool
-    ID 0df6
-    DECAY
-    VALUE 20
+	NAME silk fluxing tool
+	ID 0df6
+	DECAY
+	VALUE 20
 }
 
 // spawn chest
 SECTION ITEM $item_metal_chest2
 {
-    NAME metal chest
-    ID 0E40
-    TYPE $itype_locked_container
-    MOREX 70
-    MOREY 1
-    MOREZ 2
+	NAME metal chest
+	ID 0E40
+	TYPE $itype_locked_container
+	MOREX 70
+	MOREY 1
+	MOREZ 2
 }
 
 SECTION ITEM $item_hide
 {
-    NAME hide
-    ID 1078
-    DECAY
-    VALUE 3
-    PILE 1
+	NAME hide
+	ID 1078
+	DECAY
+	VALUE 3
+	PILE 1
 }
 
 SECTION ITEM $item_leather
 {
-    NAME leather
-    ID 1081
-    DECAY
-    VALUE 3
-    PILE 1
+	NAME leather
+	ID 1081
+	DECAY
+	VALUE 3
+	PILE 1
 }
 
 // Random Male Hair
 SECTION ITEM $item_random_male_hair_list
 {
-    //$$ random male hair list
-    ITEMLIST $itemlist_hairs
+	//$$ random male hair list
+	ITEMLIST $itemlist_hairs
 }
 
 // Random Beard
 SECTION ITEM $item_random_beard_list
 {
-    //$$ random beard list
-    ITEMLIST $itemlist_beard
+	//$$ random beard list
+	ITEMLIST $itemlist_beard
 }
 
 // Random Female Hair
 SECTION ITEM $item_random_female_hair_list
 {
-    //$$ random female hair list
-    ITEMLIST $itemlist_female_hairs
+	//$$ random female hair list
+	ITEMLIST $itemlist_female_hairs
 }
 
 // Male Plain Hats
 SECTION ITEM $item_male_plain_hats_list
 {
-    //$$ male plain hats list
-    ITEMLIST $itemlist_male_plain_hats
+	//$$ male plain hats list
+	ITEMLIST $itemlist_male_plain_hats
 }
 
 // Male Plain Shirts
 SECTION ITEM $item_male_plain_shirts_list
 {
-    //$$ male plain shirts list
-    ITEMLIST $itemlist_male_plain_shirts
+	//$$ male plain shirts list
+	ITEMLIST $itemlist_male_plain_shirts
 }
 
 // Male Plain Pants
 SECTION ITEM $item_male_plain_pants_list
 {
-    //$$ male plain pants list
-    ITEMLIST $itemlist_male_plain_pants
+	//$$ male plain pants list
+	ITEMLIST $itemlist_male_plain_pants
 }
 
 // Male Plain Footwear
 SECTION ITEM $item_male_plain_footwear_list
 {
-    //$$ male plain footwear list
-    ITEMLIST $itemlist_male_plain_footwear
+	//$$ male plain footwear list
+	ITEMLIST $itemlist_male_plain_footwear
 }
 
 // Male Plain Tunic
 SECTION ITEM $item_male_plain_tunic_list
 {
-    //$$ male plain tunic list
-    ITEMLIST $itemlist_male_plain_tunic_and_aprons
+	//$$ male plain tunic list
+	ITEMLIST $itemlist_male_plain_tunic_and_aprons
 }
 
 // Male Plain Robe
 SECTION ITEM $item_male_plain_robe_list
 {
-    //$$ male plain robe list
-    ITEMLIST $itemlist_male_plain_tunic_and_robe
+	//$$ male plain robe list
+	ITEMLIST $itemlist_male_plain_tunic_and_robe
 }
 
 // Male Plain Cape
 SECTION ITEM $item_male_plain_cape_list
 {
-    //$$ male plain cape list
-    ITEMLIST $itemlist_male_plain_cape
+	//$$ male plain cape list
+	ITEMLIST $itemlist_male_plain_cape
 }
 
 // Male Fancy Hats
 SECTION ITEM $item_male_fancy_hats_list
 {
-    //$$ male fancy hats list
-    ITEMLIST $itemlist_male_fancy_hats
+	//$$ male fancy hats list
+	ITEMLIST $itemlist_male_fancy_hats
 }
 
 // Male Fancy Shirts
 SECTION ITEM $item_male_fancy_shirts_list
 {
-    //$$ male fancy shirts list
-    ITEMLIST $itemlist_male_fancy_shirts
+	//$$ male fancy shirts list
+	ITEMLIST $itemlist_male_fancy_shirts
 }
 
 // Male Fancy Pants
 SECTION ITEM $item_male_fancy_pants_list
 {
-    //$$ male fancy pants list
-    ITEMLIST $itemlist_male_fancy_pants
+	//$$ male fancy pants list
+	ITEMLIST $itemlist_male_fancy_pants
 }
 
 // Male Fancy Footwear
 SECTION ITEM $item_male_fancy_footwear_list
 {
-    //$$ male fancy footwear list
-    ITEMLIST $itemlist_male_fancy_footwear
+	//$$ male fancy footwear list
+	ITEMLIST $itemlist_male_fancy_footwear
 }
 
 // Male Fancy Tunic
 SECTION ITEM $item_male_fancy_tunic_list
 {
-    //$$ male fancy tunic list
-    ITEMLIST $itemlist_male_fancy_surcoat
+	//$$ male fancy tunic list
+	ITEMLIST $itemlist_male_fancy_surcoat
 }
 
 // Male Fancy Robe
 SECTION ITEM $item_male_fancy_robe_list
 {
-    //$$ male fancy robe list
-    ITEMLIST $itemlist_male_fancy_robe
+	//$$ male fancy robe list
+	ITEMLIST $itemlist_male_fancy_robe
 }
 
 // Male Fancy Cape
 SECTION ITEM $item_male_fancy_cape_list
 {
-    //$$ male fancy cape list
-    ITEMLIST $itemlist_male_fancy_cape
+	//$$ male fancy cape list
+	ITEMLIST $itemlist_male_fancy_cape
 }
 
 // Female Plain Hats
 SECTION ITEM $item_female_plain_hats_list
 {
-    //$$ female plain hats list
-    ITEMLIST $itemlist_female_plain_hats
+	//$$ female plain hats list
+	ITEMLIST $itemlist_female_plain_hats
 }
 
 // Female Plain Shirts
 SECTION ITEM $item_female_plain_shirts_list
 {
-    //$$ female plain shirts list
-    ITEMLIST $itemlist_female_plain_shirts
+	//$$ female plain shirts list
+	ITEMLIST $itemlist_female_plain_shirts
 }
 
 // Female Plain Pants
 SECTION ITEM $item_female_plain_pants_list
 {
-    //$$ female plain pants list
-    ITEMLIST $itemlist_female_plain_skirts
+	//$$ female plain pants list
+	ITEMLIST $itemlist_female_plain_skirts
 }
 
 // Female Plain Footwear
 SECTION ITEM $item_female_plain_footwear_list
 {
-    //$$ female plain footwear list
-    ITEMLIST $itemlist_female_plain_footwear
+	//$$ female plain footwear list
+	ITEMLIST $itemlist_female_plain_footwear
 }
 
 // Female Plain Tunic
 SECTION ITEM $item_female_plain_tunic_list
 {
-    //$$ female plain tunic list
-    ITEMLIST $itemlist_female_plain_tunic_and_apron
+	//$$ female plain tunic list
+	ITEMLIST $itemlist_female_plain_tunic_and_apron
 }
 
 // Female Plain Robe
 SECTION ITEM $item_female_plain_robe_list
 {
-    //$$ female plain robe list
-    ITEMLIST $itemlist_female_plain_tunic
+	//$$ female plain robe list
+	ITEMLIST $itemlist_female_plain_tunic
 }
 
 // Female Plain Cape
 SECTION ITEM $item_female_plain_cape_list
 {
-    //$$ female plain cape list
-    ITEMLIST $itemlist_female_plain_cape
+	//$$ female plain cape list
+	ITEMLIST $itemlist_female_plain_cape
 }
 
 SECTION ITEM $item_loom_deed_2
 {
-    NAME loom-south deed
-    ID 14F0
-    NEWBIE
-    DECAY
-    MOREX 19
+	NAME loom-south deed
+	ID 14F0
+	NEWBIE
+	DECAY
+	MOREX 19
 }
 
 SECTION ITEM $item_loom_deed_1
 {
-    NAME loom-east deed
-    ID 14F0
-    NEWBIE
-    DECAY
-    MOREX 207
+	NAME loom-east deed
+	ID 14F0
+	NEWBIE
+	DECAY
+	MOREX 207
 }
 
 // Female Fancy Hats
 SECTION ITEM $item_female_fancy_hats_list
 {
-    //$$ female fancy hats list
-    ITEMLIST $itemlist_female_fancy_hats
+	//$$ female fancy hats list
+	ITEMLIST $itemlist_female_fancy_hats
 }
 
 // Female Fancy Shirts
 SECTION ITEM $item_female_fancy_shirts_list
 {
-    //$$ female fancy shirts list
-    ITEMLIST $itemlist_female_fancy_shirts
+	//$$ female fancy shirts list
+	ITEMLIST $itemlist_female_fancy_shirts
 }
 
 // Female Fancy Pants
 SECTION ITEM $item_female_fancy_pants_list
 {
-    //$$ female fancy pants list
-    ITEMLIST $itemlist_female_fancy_skirt
+	//$$ female fancy pants list
+	ITEMLIST $itemlist_female_fancy_skirt
 }
 
 // Female Fancy Footwear
 SECTION ITEM $item_female_fancy_footwear_list
 {
-    //$$ female fancy footwear list
-    ITEMLIST $itemlist_female_fancy_shoes
+	//$$ female fancy footwear list
+	ITEMLIST $itemlist_female_fancy_shoes
 }
 
 // Female Fancy Tunic
 SECTION ITEM $item_female_fancy_tunic_list
 {
-    //$$ female fancy tunic list
-    ITEMLIST $itemlist_female_fancy_tunic
+	//$$ female fancy tunic list
+	ITEMLIST $itemlist_female_fancy_tunic
 }
 
 // Female Fancy Robe
 SECTION ITEM $item_female_fancy_robe_list
 {
-    //$$ female fancy robe list
-    ITEMLIST $itemlist_female_fancy_robe
+	//$$ female fancy robe list
+	ITEMLIST $itemlist_female_fancy_robe
 }
 
 // Female Fancy Cape
 SECTION ITEM $item_female_fancy_cape_list
 {
-    //$$ female fancy cape list
-    ITEMLIST $itemlist_female_fancy_cape
+	//$$ female fancy cape list
+	ITEMLIST $itemlist_female_fancy_cape
 }
 
 SECTION ITEM $item_magical_stone
 {
-    NAME a magical stone
-    ID 186E
-    TRIGTYPE 0
-    TRIGGER $itrg_spawn_reagents
+	NAME a magical stone
+	ID 186E
+	TRIGTYPE 0
+	TRIGGER $itrg_spawn_reagents
 }
 
 SECTION ITEM $item_wooden_chest
 { // standard wooden chest spawn container
-    NAME a wooden chest
-    ID 0E43
-    TYPE $itype_locked_container
-    MOREY 1
-    MOREZ 2
-    AMOUNT 1
+	NAME a wooden chest
+	ID 0E43
+	TYPE $itype_locked_container
+	MOREY 1
+	MOREZ 2
+	AMOUNT 1
 }
 
 SECTION ITEM $item_christmas_tree
 {
-    NAME christmas tree
-    ID 0CD7
+	NAME christmas tree
+	ID 0CD7
 }
 
 SECTION ITEM $item_christmas_gift_chest
 { //  wooden chest
-    NAME a Christmas gift chest
-    ID 0E43
-    COLOR 0107
-    TYPE $itype_decaying_item_spawner
-    MOREX 98000
-    MOREY 1
-    MOREZ 2
-    AMOUNT 1
+	NAME a Christmas gift chest
+	ID 0E43
+	COLOR 0107
+	TYPE $itype_decaying_item_spawner
+	MOREX 98000
+	MOREY 1
+	MOREZ 2
+	AMOUNT 1
 }
 
 SECTION ITEM $item_vials_of_blood
 { vial of blood
-    ID 0F7D
-    PILE 3
-    DECAY
-    VALUE 100
-    WEIGHT 6
+	ID 0F7D
+	PILE 3
+	DECAY
+	VALUE 100
+	WEIGHT 6
 }
 
 SECTION ITEM $item_magical_wizards_hat
 {
-    NAME a magical wizard`s hat
-    ID 1718
-    LAYER $layer_helm
-    STRADD -5
-    DEXADD -5
-    INTADD 10
-    DYE 1
-    DECAY
-    VALUE 75
+	NAME a magical wizard`s hat
+	ID 1718
+	LAYER $layer_helm
+	STRADD -5
+	DEXADD -5
+	INTADD 10
+	DYE 1
+	DECAY
+	VALUE 75
 }
 
 SECTION ITEM $item_large_leather_pillow
 {
-    NAME a large leather pillow
-    ID 163A
-    TYPE 0
-    LAYER 0
-    DYE 0
-    VALUE 10
-    WEIGHT 100
-    COLOR 0709
+	NAME a large leather pillow
+	ID 163A
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 100
+	COLOR 0709
 }
 
 SECTION ITEM $item_medium_leather_pillow
 {
-    NAME a medium leather pillow
-    ID 163B
-    TYPE 0
-    LAYER 0
-    DYE 0
-    VALUE 15
-    WEIGHT 80
-    COLOR 0709
+	NAME a medium leather pillow
+	ID 163B
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 80
+	COLOR 0709
 }
 
 SECTION ITEM $item_small_leather_pillow
 {
-    NAME a small leather pillow
-    ID 163C
-    TYPE 0
-    LAYER 0
-    DYE 0
-    VALUE 20
-    WEIGHT 70
-    COLOR 0709
+	NAME a small leather pillow
+	ID 163C
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 70
+	COLOR 0709
 }
 
 SECTION ITEM $item_bedroll_1
 {
-    NAME bedroll
-    ID 0a59
-    TYPE 0
-    LAYER 0
-    DYE 0
-    VALUE 20
-    WEIGHT 300
-    COLOR 0709
+	NAME bedroll
+	ID 0a59
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 300
+	COLOR 0709
 }
 
 SECTION ITEM $item_folded_blanket_poo
 {
-    NAME folded blanket poo
-    ID 0a6c
-    TYPE 0
-    LAYER 0
-    DYE 0
-    VALUE 15
-    WEIGHT 200
-    COLOR 0709
+	NAME folded blanket poo
+	ID 0a6c
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 200
+	COLOR 0709
 }
 
 SECTION ITEM $item_folded_sheet
 {
-    NAME folded sheet
-    ID 0a92
-    TYPE 0
-    LAYER 0
-    DYE 0
-    VALUE 10
-    WEIGHT 125
-    COLOR 0709
+	NAME folded sheet
+	ID 0a92
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 125
+	COLOR 0709
 }
 
 SECTION ITEM $item_small_pillow
 {
-    NAME small pillow
-    ID 1397
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 10
-    WEIGHT 60
-    COLOR 0709
+	NAME small pillow
+	ID 1397
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 10
+	WEIGHT 60
+	COLOR 0709
 }
 
 SECTION ITEM $item_e
 {
-    NAME E/W curtain
-    ID 160e
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 300
-    WEIGHT 500
+	NAME E/W curtain
+	ID 160e
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 300
+	WEIGHT 500
 }
 
 SECTION ITEM $item_n
 {
-    NAME N/S curtain
-    ID 160d
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 300
-    WEIGHT 500
+	NAME N/S curtain
+	ID 160d
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 300
+	WEIGHT 500
 }
 
 SECTION ITEM $item_small_n
 {
-    NAME small N/S banner
-    ID 15d0
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 75
-    WEIGHT 300
+	NAME small N/S banner
+	ID 15d0
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 75
+	WEIGHT 300
 }
 
 SECTION ITEM $item_small_e
 {
-    NAME small E/W banner
-    ID 15d1
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 75
-    WEIGHT 300
+	NAME small E/W banner
+	ID 15d1
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 75
+	WEIGHT 300
 }
 
 SECTION ITEM $item_1
 {
-    NAME N/S banner
-    ID 15bc
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 150
-    WEIGHT 400
+	NAME N/S banner
+	ID 15bc
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 150
+	WEIGHT 400
 }
 
 SECTION ITEM $item_e_1
 {
-    NAME E/W banner
-    ID 15bb
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 150
-    WEIGHT 400
+	NAME E/W banner
+	ID 15bb
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 150
+	WEIGHT 400
 }
 
 SECTION ITEM $item_e_2
 {
-    NAME E/W banner
-    ID 15cb
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 175
-    WEIGHT 400
+	NAME E/W banner
+	ID 15cb
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 175
+	WEIGHT 400
 }
 
 SECTION ITEM $item_2
 {
-    NAME N/S banner
-    ID 15cc
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 175
-    WEIGHT 400
+	NAME N/S banner
+	ID 15cc
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 175
+	WEIGHT 400
 }
 
 SECTION ITEM $item_e_3
 {
-    NAME E/W banner
-    ID 15c7
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 200
-    WEIGHT 400
+	NAME E/W banner
+	ID 15c7
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 200
+	WEIGHT 400
 }
 
 SECTION ITEM $item_3
 {
-    NAME N/S banner
-    ID 15c8
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 200
-    WEIGHT 400
+	NAME N/S banner
+	ID 15c8
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 200
+	WEIGHT 400
 }
 
 SECTION ITEM $item_e_4
 {
-    NAME E/W banner pt 1
-    ID 1586
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 100
-    WEIGHT 200
+	NAME E/W banner pt 1
+	ID 1586
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 100
+	WEIGHT 200
 }
 
 SECTION ITEM $item_e_5
 {
-    NAME E/W banner pt 2
-    ID 1587
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 200
-    WEIGHT 300
+	NAME E/W banner pt 2
+	ID 1587
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 200
+	WEIGHT 300
 }
 
 SECTION ITEM $item_e_6
 {
-    NAME E/W banner pt 3
-    ID 1588
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 100
-    WEIGHT 200
+	NAME E/W banner pt 3
+	ID 1588
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 100
+	WEIGHT 200
 }
 
 SECTION ITEM $item_e_7
 {
-    NAME E/W banner pt 1
-    ID 158c
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 125
-    WEIGHT 200
+	NAME E/W banner pt 1
+	ID 158c
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 125
+	WEIGHT 200
 }
 
 SECTION ITEM $item_e_8
 {
-    NAME E/W banner pt 2
-    ID 158d
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 250
-    WEIGHT 300
+	NAME E/W banner pt 2
+	ID 158d
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 250
+	WEIGHT 300
 }
 
 SECTION ITEM $item_e_9
 {
-    NAME E/W banner pt 3
-    ID 158e
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 125
-    WEIGHT 200
+	NAME E/W banner pt 3
+	ID 158e
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 125
+	WEIGHT 200
 }
 
 SECTION ITEM $item_e_A
 {
-    NAME E/W banner pt 3
-    ID 15a0
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 200
-    WEIGHT 250
+	NAME E/W banner pt 3
+	ID 15a0
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 200
+	WEIGHT 250
 }
 
 SECTION ITEM $item_e_B
 {
-    NAME E/W banner pt 3
-    ID 15a1
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 200
-    WEIGHT 250
+	NAME E/W banner pt 3
+	ID 15a1
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 200
+	WEIGHT 250
 }
 
 SECTION ITEM $item_e_C
 {
-    NAME E/W banner pt 3
-    ID 15a8
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 250
-    WEIGHT 250
+	NAME E/W banner pt 3
+	ID 15a8
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 250
+	WEIGHT 250
 }
 
 SECTION ITEM $item_e_D
 {
-    NAME E/W banner pt 3
-    ID 15a9
-    TYPE 0
-    LAYER 0
-    DYE 1
-    VALUE 250
-    WEIGHT 250
+	NAME E/W banner pt 3
+	ID 15a9
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 250
+	WEIGHT 250
 }
 
 //********************mounts for npcs**********************
 SECTION ITEM $item_tan_horse
 {
-    NAME a tan horse
-    ID 3e9f
-    LAYER $layer_mount
-    NEWBIE
+	NAME a tan horse
+	ID 3e9f
+	LAYER $layer_mount
+	NEWBIE
 }
 
 SECTION ITEM $item_grey_horse
 {
-    NAME a grey horse
-    ID 3ea0
-    LAYER $layer_mount
-    NEWBIE
+	NAME a grey horse
+	ID 3ea0
+	LAYER $layer_mount
+	NEWBIE
 }
 
 SECTION ITEM $item_light_brown_horse
 {
-    NAME a light brown horse
-    ID 3ea1
-    LAYER $layer_mount
-    NEWBIE
+	NAME a light brown horse
+	ID 3ea1
+	LAYER $layer_mount
+	NEWBIE
 }
 
 SECTION ITEM $item_dark_brown_horse
 {
-    NAME a dark brown horse
-    ID 3ea2
-    LAYER $layer_mount
-    NEWBIE
+	NAME a dark brown horse
+	ID 3ea2
+	LAYER $layer_mount
+	NEWBIE
 }
 
 SECTION ITEM $item_nightmare
 {
-    NAME a nightmare
-    ID 3ea2
-    COLOR 0455
-    LAYER $layer_mount
-    NEWBIE
+	NAME a nightmare
+	ID 3ea2
+	COLOR 0455
+	LAYER $layer_mount
+	NEWBIE
 }
 
 //********************Lists for monster weapons**********************
 SECTION ITEM $item_npc_equiplist_balron_weapon
 {
-    //$$ npc equiplist balron weapon
-    ITEMLIST $itemlist_npc_equiplist_balron_weapon
+	//$$ npc equiplist balron weapon
+	ITEMLIST $itemlist_npc_equiplist_balron_weapon
 }
 
 SECTION ITEM $item_npc_equiplist_deamon_sword
 {
-    //$$ npc equiplist deamon sword
-    ITEMLIST $itemlist_npc_equiplist_deamon_sword
+	//$$ npc equiplist deamon sword
+	ITEMLIST $itemlist_npc_equiplist_deamon_sword
 }
 
 SECTION ITEM $item_npc_equiplist_double_axe
 {
-    //$$ npc equiplist double axe
-    ITEMLIST $itemlist_npc_equiplist_double_axe
+	//$$ npc equiplist double axe
+	ITEMLIST $itemlist_npc_equiplist_double_axe
 }
 
 SECTION ITEM $item_npc_equiplist_scimitar
 {
-    //$$ npc equiplist scimitar
-    ITEMLIST $itemlist_npc_equiplist_scimitar
+	//$$ npc equiplist scimitar
+	ITEMLIST $itemlist_npc_equiplist_scimitar
 }
 
 SECTION ITEM $item_npc_equiplist_war_hammer
 {
-    //$$ npc equiplist war hammer
-    ITEMLIST $itemlist_npc_equiplist_war_hammer
+	//$$ npc equiplist war hammer
+	ITEMLIST $itemlist_npc_equiplist_war_hammer
 }
 
 SECTION ITEM $item_npc_equiplist_bardiches
 {
-    //$$ npc equiplist bardiches
-    ITEMLIST $itemlist_npc_equiplist_bardiches
+	//$$ npc equiplist bardiches
+	ITEMLIST $itemlist_npc_equiplist_bardiches
 }
 
 SECTION ITEM $item_npc_equiplist_longswords
 {
-    //$$ npc equiplist longswords
-    ITEMLIST $itemlist_npc_equiplist_longswords
+	//$$ npc equiplist longswords
+	ITEMLIST $itemlist_npc_equiplist_longswords
 }
 
 SECTION ITEM $item_noble_escort-m
 {
-    NAME Noble escort-m
-    ID 1397
-    TYPE $itype_escortspawn
-    MORE 514
-    MOREX 219
-    MOREY 5
-    MOREZ 10
-    VISIBLE 1
+	NAME Noble escort-m
+	ID 1397
+	TYPE $itype_escortspawn
+	MORE 514
+	MOREX 219
+	MOREY 5
+	MOREZ 10
+	VISIBLE 1
 }
 
 SECTION ITEM $item_noble_escort-f
 {
-    NAME Noble escort-f
-    ID 1397
-    TYPE $itype_escortspawn
-    MORE 514
-    MOREX 220
-    MOREY 5
-    MOREZ 10
-    VISIBLE 1
+	NAME Noble escort-f
+	ID 1397
+	TYPE $itype_escortspawn
+	MORE 514
+	MOREX 220
+	MOREY 5
+	MOREZ 10
+	VISIBLE 1
 }
 // Practice Weapons for Newbie.scp..Ripper
 // Regs For Newbie.scp
 
 SECTION ITEM $item_pure_red_hairdye
 {
-    NAME pure red hairdye
-    ID 0E27
-    COLOR 0026
-    VALUE 20000
+	NAME pure red hairdye
+	ID 0E27
+	COLOR 0026
+	VALUE 20000
 }
 
 SECTION ITEM $item_pure_black_hairdye
 {
-    NAME pure black hairdye
-    ID 0E27
-    COLOR 0001
-    VALUE 50000
+	NAME pure black hairdye
+	ID 0E27
+	COLOR 0001
+	VALUE 50000
 }
 
 SECTION ITEM $item_bronze_hairdye
 {
-    NAME bronze hairdye
-    ID 0E27
-    COLOR 045D
-    VALUE 2000
+	NAME bronze hairdye
+	ID 0E27
+	COLOR 045D
+	VALUE 2000
 }
 
 SECTION ITEM $item_gold_hairdye
 {
-    NAME gold hairdye
-    ID 0E27
-    COLOR 0465
-    VALUE 20000
+	NAME gold hairdye
+	ID 0E27
+	COLOR 0465
+	VALUE 20000
 }
 
 SECTION ITEM $item_dark_gold_hairdye
 {
-    NAME dark gold hairdye
-    ID 0E27
-    COLOR 046D
-    VALUE 2000
+	NAME dark gold hairdye
+	ID 0E27
+	COLOR 046D
+	VALUE 2000
 }
 
 SECTION ITEM $item_copper_hairdye
 {
-    NAME copper hairdye
-    ID 0E27
-    COLOR 0475
-    VALUE 2000
+	NAME copper hairdye
+	ID 0E27
+	COLOR 0475
+	VALUE 2000
 }
 
 SECTION ITEM $item_dark_copper_hairdye
 {
-    NAME dark copper hairdye
-    ID 0E27
-    COLOR 047D
-    VALUE 2000
+	NAME dark copper hairdye
+	ID 0E27
+	COLOR 047D
+	VALUE 2000
 }
 
 SECTION ITEM $item_dark_blue_hairdye
 {
-    NAME dark blue hairdye
-    ID 0E27
-    COLOR 051D
-    VALUE 2000
+	NAME dark blue hairdye
+	ID 0E27
+	COLOR 051D
+	VALUE 2000
 }
 
 SECTION ITEM $item_pure_white_hairdye
 {
-    NAME pure white hairdye
-    ID 0E27
-    COLOR 0481
-    VALUE 50000
+	NAME pure white hairdye
+	ID 0E27
+	COLOR 0481
+	VALUE 50000
 }
 
 SECTION ITEM $item_red_hairdye
 {
-    NAME red hairdye
-    ID 0E27
-    COLOR 0664
-    VALUE 20000
+	NAME red hairdye
+	ID 0E27
+	COLOR 0664
+	VALUE 20000
 }
 
 SECTION ITEM $item_christmas_list
 {
-    //$$ christmas list
-    ITEMLIST $itemlist_christmas
+	//$$ christmas list
+	ITEMLIST $itemlist_christmas
 }
 
 
@@ -3045,37 +3071,37 @@ SECTION ITEM $item_christmas_list
 
 SECTION ITEM $item_cristall_ball_of_reputation
 {
-    NAME a Cristall Ball of Reputation
-    ID 0E2D
-    VALUE 1500
-    @ONDBLCLICK _crystBall
+	NAME a Cristall Ball of Reputation
+	ID 0E2D
+	VALUE 1500
+	@ONDBLCLICK _crystBall
 }
 
 SECTION ITEM $item_cigar
 {
-    NAME a cigar
-    ID 979
-    VALUE 10
-    @ONDBLCLICK _smoke
+	NAME a cigar
+	ID 979
+	VALUE 10
+	@ONDBLCLICK _smoke
 }
 
 
 SECTION ITEM $item_sledge_hammer
 {
-    ID 0FB4
-    VALUE 32
-    DECAY
-    @ONDBLCLICK blacksmith
+	ID 0FB4
+	VALUE 32
+	DECAY
+	@ONDBLCLICK blacksmith
 }
 
 // campfire
 SECTION ITEM $item_campfire
 {
-    NAME a campfire
-    ID 0DE3
-    DECAY
-    VALUE 0
-    WEIGHT 100
+	NAME a campfire
+	ID 0DE3
+	DECAY
+	VALUE 0
+	WEIGHT 100
 }
 
 SECTION ITEM $item_mount
@@ -3094,133 +3120,133 @@ SECTION ITEM $item_hardcoded
 
 SECTION ITEM $item_blood_puddle
 {
-    ID 122F
-    DECAY
+	ID 122F
+	DECAY
 }
 
 SECTION ITEM $item_jar_for_milk
 {
-    NAME jar for milk
-    ID 1005
-    @ONDBLCLICK __get_milk_target
+	NAME jar for milk
+	ID 1005
+	@ONDBLCLICK __get_milk_target
 
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION NoX-Wizard Custom Items
+	///CATEGORY Miscellaneous
+	///SUBSECTION NoX-Wizard Custom Items
 }
 
 SECTION ITEM $item_jar_full_of_milk
 {
-    NAME a jar full of milk
-    ID 1006
-    TYPE $itype_food
+	NAME a jar full of milk
+	ID 1006
+	TYPE $itype_food
 
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION NoX-Wizard Custom Items
+	///CATEGORY Miscellaneous
+	///SUBSECTION NoX-Wizard Custom Items
 }
 
 SECTION ITEM $item_cristall_ball_of_reputation
 {
-    NAME a Cristall Ball of Reputation
-    ID 0E2D
-    VALUE 1500
-    @ONDBLCLICK __crystBall
+	NAME a Cristall Ball of Reputation
+	ID 0E2D
+	VALUE 1500
+	@ONDBLCLICK __crystBall
 
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION NoX-Wizard Custom Items
+	///CATEGORY Miscellaneous
+	///SUBSECTION NoX-Wizard Custom Items
 }
 
 SECTION ITEM $item_cigar
 {
-    NAME a cigar
-    ID 979
-    VALUE 10
-    @ONDBLCLICK __smoke
+	NAME a cigar
+	ID 979
+	VALUE 10
+	@ONDBLCLICK __smoke
 
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION NoX-Wizard Custom Items
+	///CATEGORY Miscellaneous
+	///SUBSECTION NoX-Wizard Custom Items
 }
 
 SECTION ITEM $item_magical_wizards_hat
 {
-    NAME a magical wizard`s hat
-    ID 1718
-    LAYER $layer_helm
-    STRADD -5
-    DEXADD -5
-    INTADD 10
-    DYE 1
-    DECAY
-    VALUE 75
+	NAME a magical wizard`s hat
+	ID 1718
+	LAYER $layer_helm
+	STRADD -5
+	DEXADD -5
+	INTADD 10
+	DYE 1
+	DECAY
+	VALUE 75
 
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION NoX-Wizard Custom Items
+	///CATEGORY Miscellaneous
+	///SUBSECTION NoX-Wizard Custom Items
 }
 
 SECTION ITEM $item_smithy_hammer
 {
-    NAME smithy's hammer
-    ID 13E4
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 6
-    HIDAMAGE 18
-    HP 42
-    VALUE 25
-    //RESTOCK 10
-    STR 25
-    SPD 28
-    WEIGHT 500
-    DAMAGETYPE $damage_bludgeon
-    @ONDBLCLICK blacksmith
+	NAME smithy's hammer
+	ID 13E4
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 6
+	HIDAMAGE 18
+	HP 42
+	VALUE 25
+	//RESTOCK 10
+	STR 25
+	SPD 28
+	WEIGHT 500
+	DAMAGETYPE $damage_bludgeon
+	@ONDBLCLICK blacksmith
 }
 
 // PickAxe
 SECTION ITEM $item_pickaxe
 {
-    NAME pickaxe
-    ID 0E85
-    LAYER $layer_1hand_weapon
-    TYPE $itype_mining
-    ITEMHAND 1
-    LODAMAGE 1
-    HIDAMAGE 15
-    HP 50
-    VALUE 25
-    //RESTOCK 10
-    STR 40
-    SPD 33
-    WEIGHT 800
+	NAME pickaxe
+	ID 0E85
+	LAYER $layer_1hand_weapon
+	TYPE $itype_mining
+	ITEMHAND 1
+	LODAMAGE 1
+	HIDAMAGE 15
+	HP 50
+	VALUE 25
+	//RESTOCK 10
+	STR 40
+	SPD 33
+	WEIGHT 800
 }
 
 SECTION ITEM $item_iron_ore
 {
-    NAME ore
-    ID 19b9
-    WEIGHT 800
+	NAME ore
+	ID 19b9
+	WEIGHT 800
 }
 
 SECTION ITEM $item_tongs
 {
-    NAME tongs
-    ID 0FBC
-    HP 60
-    VALUE 15
-    //RESTOCK 10
-    @ONDBLCLICK blacksmith
+	NAME tongs
+	ID 0FBC
+	HP 60
+	VALUE 15
+	//RESTOCK 10
+	@ONDBLCLICK blacksmith
 }
 
 SECTION ITEM $item_hitching_post
 {
-    NAME hitching post
-    ID 14e7
-    @ONDBLCLICK _freezing
-    AMXINT 1009 0
+	NAME hitching post
+	ID 14e7
+	@ONDBLCLICK _freezing
+	AMXINT 1009 0
 }
 
 SECTION ITEM $item_hitching_post2
 {
-    NAME hitching post
-    ID 14e8
-    @ONDBLCLICK _freezing
-    AMXINT 1009 0
+	NAME hitching post
+	ID 14e8
+	@ONDBLCLICK _freezing
+	AMXINT 1009 0
 }

@@ -1,0 +1,589 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (garbage.xss)		        		 ||
+// || Maintained by Horian						 ||
+// || Last Update 27-feb-2005						 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82 or later			  ||
+// || Compatible with Unicorn Categorization				  ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//all kinds of garbage and debris for decorations
+
+SECTION ITEM $item_dirt_patch1
+{
+	ID 0911
+}
+
+SECTION ITEM $item_dirt_patch2
+{
+	ID 0912
+}
+
+SECTION ITEM $item_dirt_patch3
+{
+	ID 0913
+}
+
+SECTION ITEM $item_dirt_patch4
+{
+	ID 0914
+}
+
+SECTION ITEM $item_debris1_1
+{
+	ID 0c2d
+	AMXINT $localvar_flipitem $item_debris1_2
+}
+
+SECTION ITEM $item_debris2_1
+{
+	ID 0c2e
+	AMXINT $localvar_flipitem $item_debris2_2
+}
+
+SECTION ITEM $item_debris1_2
+{
+	ID 0c2f
+	AMXINT $localvar_flipitem $item_debris1_1
+}
+
+SECTION ITEM $item_debris2_2
+{
+	ID 0c30
+	AMXINT $localvar_flipitem $item_debris2_1
+}
+
+SECTION ITEM $item_hay1
+{
+	ID 1036
+}
+
+SECTION ITEM $item_hay2
+{
+	ID 1037
+}
+
+SECTION ITEM $item_hay3
+{
+	ID 0f34
+}
+
+SECTION ITEM $item_hay4
+{
+	ID 0f35
+}
+
+SECTION ITEM $item_loose_grain
+{
+	ID 1449
+}
+
+SECTION ITEM $item_wood_curls
+{
+	ID 1038
+}
+
+SECTION ITEM $item_garbage1
+{
+	ID 10ee
+}
+
+SECTION ITEM $item_garbage2
+{
+	ID 10ef
+}
+
+SECTION ITEM $item_garbage3
+{
+	ID 10f0
+}
+
+SECTION ITEM $item_garbage4
+{
+	ID 10f1
+}
+
+SECTION ITEM $item_pile_of_garbage1_1
+{
+	ID 10f2
+	AMXINT $localvar_flipitem $item_pile_of_garbage1_2
+}
+
+SECTION ITEM $item_pile_of_garbage1_2
+{
+	ID 10f3
+	AMXINT $localvar_flipitem $item_pile_of_garbage1_1
+}
+
+SECTION ITEM $item_horse_dung1
+{
+	ID 0f3b
+}
+
+SECTION ITEM $item_horse_dung2
+{
+	ID 0f3c
+}
+
+SECTION ITEM $item_spilled_flour1
+{
+	ID 187e
+}
+
+SECTION ITEM $item_spilled_flour2
+{
+	ID 187f
+}
+
+SECTION ITEM $item_spilled_flour3
+{
+	ID 1880
+}
+
+SECTION ITEM $item_spilled_flour4
+{
+	ID 1881
+}
+
+SECTION ITEM $item_leaves1
+{
+	ID 1b1f
+}
+
+SECTION ITEM $item_leaves2
+{
+	ID 1b20
+}
+
+SECTION ITEM $item_leaves3
+{
+	ID 1b21
+}
+
+SECTION ITEM $item_leaves4
+{
+	ID 1b22
+}
+
+SECTION ITEM $item_leaves5
+{
+	ID 1b23
+}
+
+SECTION ITEM $item_leaves6
+{
+	ID 1b24
+}
+
+SECTION ITEM $item_leaves7
+{
+	ID 1b25
+}
+
+SECTION ITEM $item_leaves8
+{
+	ID 1b26
+}
+
+SECTION ITEM $item_dirt1_1
+{
+	ID 1b27
+	AMXINT $localvar_flipitem $item_dirt1_2
+}
+
+SECTION ITEM $item_dirt1_2
+{
+	ID 1b29
+	AMXINT $localvar_flipitem $item_dirt1_3
+}
+
+SECTION ITEM $item_dirt1_3
+{
+	ID 1b28
+	AMXINT $localvar_flipitem $item_dirt1_4
+}
+
+SECTION ITEM $item_dirt1_4
+{
+	ID 1b2a
+	AMXINT $localvar_flipitem $item_dirt1_1
+}
+
+SECTION ITEM $item_dirt2_1
+{
+	ID 1b2b
+	AMXINT $localvar_flipitem $item_dirt2_2
+}
+
+SECTION ITEM $item_dirt2_2
+{
+	ID 1b2c
+	AMXINT $localvar_flipitem $item_dirt2_3
+}
+
+SECTION ITEM $item_dirt2_3
+{
+	ID 1b2d
+	AMXINT $localvar_flipitem $item_dirt2_4
+}
+
+SECTION ITEM $item_dirt2_4
+{
+	ID 1b2e
+	AMXINT $localvar_flipitem $item_dirt2_1
+}
+
+SECTION ITEM $item_dirt3_1
+{
+	ID 1b2f
+	AMXINT $localvar_flipitem $item_dirt3_2
+}
+
+SECTION ITEM $item_dirt3_2
+{
+	ID 1b30
+	AMXINT $localvar_flipitem $item_dirt3_3
+}
+
+SECTION ITEM $item_dirt3_3
+{
+	ID 1b31
+	AMXINT $localvar_flipitem $item_dirt3_4
+}
+
+SECTION ITEM $item_dirt3_4
+{
+	ID 1b32
+	AMXINT $localvar_flipitem $item_dirt3_1
+}
+
+SECTION ITEM $item_dirt4_1
+{
+	ID 1b33
+	AMXINT $localvar_flipitem $item_dirt4_2
+}
+
+SECTION ITEM $item_dirt4_2
+{
+	ID 1b34
+	AMXINT $localvar_flipitem $item_dirt4_3
+}
+
+SECTION ITEM $item_dirt4_3
+{
+	ID 1b35
+	AMXINT $localvar_flipitem $item_dirt4_4
+}
+
+SECTION ITEM $item_dirt4_4
+{
+	ID 1b36
+	AMXINT $localvar_flipitem $item_dirt4_1
+}
+
+SECTION ITEM $item_dirt5_1
+{
+	ID 1b37
+	AMXINT $localvar_flipitem $item_dirt5_2
+}
+
+SECTION ITEM $item_dirt5_2
+{
+	ID 1b38
+	AMXINT $localvar_flipitem $item_dirt5_3
+}
+
+SECTION ITEM $item_dirt5_3
+{
+	ID 1b39
+	AMXINT $localvar_flipitem $item_dirt5_4
+}
+
+SECTION ITEM $item_dirt5_4
+{
+	ID 1b3a
+	AMXINT $localvar_flipitem $item_dirt5_1
+}
+
+SECTION ITEM $item_dirt6_1
+{
+	ID 1b3b
+	AMXINT $localvar_flipitem $item_dirt6_2
+}
+
+SECTION ITEM $item_dirt6_2
+{
+	ID 1b3c
+	AMXINT $localvar_flipitem $item_dirt6_3
+}
+
+SECTION ITEM $item_dirt6_3
+{
+	ID 1b3d
+	AMXINT $localvar_flipitem $item_dirt6_4
+}
+
+SECTION ITEM $item_dirt6_4
+{
+	ID 1b3e
+	AMXINT $localvar_flipitem $item_dirt6_1
+}
+
+SECTION ITEM $item_burned_wood
+{
+	ID 0dea
+}
+
+SECTION ITEM $item_refuse1
+{
+	ID 1b9f
+}
+
+SECTION ITEM $item_refuse2
+{
+	ID 1ba0
+}
+
+SECTION ITEM $item_refuse3
+{
+	ID 1ba1
+}
+
+SECTION ITEM $item_refuse4
+{
+	ID 1ba2
+}
+
+SECTION ITEM $item_refuse5
+{
+	ID 1ba3
+}
+
+SECTION ITEM $item_refuse6
+{
+	ID 1ba4
+}
+
+SECTION ITEM $item_refuse7
+{
+	ID 1ba5
+}
+
+SECTION ITEM $item_refuse8
+{
+	ID 1ba6
+}
+
+SECTION ITEM $item_refuse9
+{
+	ID 1ba7
+}
+
+SECTION ITEM $item_refuse10
+{
+	ID 1ba8
+}
+
+SECTION ITEM $item_refuse11
+{
+	ID 1ba9
+}
+
+SECTION ITEM $item_refuse12
+{
+	ID 1baa
+}
+
+SECTION ITEM $item_refuse13
+{
+	ID 1bab
+}
+
+SECTION ITEM $item_refuse14
+{
+	ID 1bac
+}
+
+SECTION ITEM $item_refuse15
+{
+	ID 1bad
+}
+
+SECTION ITEM $item_refuse16
+{
+	ID 1bae
+}
+
+SECTION ITEM $item_refuse17
+{
+	ID 1baf
+}
+
+SECTION ITEM $item_refuse18
+{
+	ID 1bb0
+}
+
+SECTION ITEM $item_refuse19
+{
+	ID 1bb1
+}
+
+SECTION ITEM $item_refuse20
+{
+	ID 1bb2
+}
+
+SECTION ITEM $item_refuse21
+{
+	ID 1bb4
+}
+
+SECTION ITEM $item_refuse22
+{
+	ID 1bb5
+}
+
+SECTION ITEM $item_refuse23
+{
+	ID 1bb6
+}
+
+SECTION ITEM $item_refuse24
+{
+	ID 1bb7
+}
+
+SECTION ITEM $item_refuse25
+{
+	ID 1bb8
+}
+
+SECTION ITEM $item_refuse26
+{
+	ID 1bb9
+}
+
+SECTION ITEM $item_refuse27
+{
+	ID 1bba
+}
+
+SECTION ITEM $item_refuse28
+{
+	ID 1bbb
+}
+
+SECTION ITEM $item_refuse29
+{
+	ID 1bbc
+}
+
+SECTION ITEM $item_refuse30
+{
+	ID 1bbd
+}
+
+SECTION ITEM $item_dirtdot1
+{
+	ID 1dfd
+}
+
+SECTION ITEM $item_dirtdot2
+{
+	ID 1dfe
+}
+
+SECTION ITEM $item_dirtdot3
+{
+	ID 1dff
+}
+
+SECTION ITEM $item_dirtdot4
+{
+	ID 1e00
+}
+
+SECTION ITEM $item_mud1
+{
+	ID 1e01
+}
+
+SECTION ITEM $item_mud2
+{
+	ID 1e02
+}
+
+SECTION ITEM $item_footprint1_1
+{
+	ID 1e03
+	AMXINT $localvar_flipitem $item_footprint1_2
+}
+
+SECTION ITEM $item_footprint1_2
+{
+	ID 1e04
+	AMXINT $localvar_flipitem $item_footprint1_3
+}
+
+SECTION ITEM $item_footprint1_3
+{
+	ID 1e05
+	AMXINT $localvar_flipitem $item_footprint1_4
+}
+
+SECTION ITEM $item_footprint1_4
+{
+	ID 1e06
+	AMXINT $localvar_flipitem $item_footprint1_1
+}
+
+SECTION ITEM $item_stain1
+{
+	ID 1e07
+}
+
+SECTION ITEM $item_stain2
+{
+	ID 1e08
+}
+
+SECTION ITEM $item_stain3
+{
+	ID 1e09
+}
+
+SECTION ITEM $item_stain4
+{
+	ID 1e0a
+}
+
+SECTION ITEM $item_stain5
+{
+	ID 1e0b
+}
+
+SECTION ITEM $item_stain6
+{
+	ID 1e0c
+}
+
+SECTION ITEM $item_stain7
+{
+	ID 1e0d
+}
+
+SECTION ITEM $item_stain8
+{
+	ID 1e0e
+}
+
+SECTION ITEM $item_burned_food
+{
+	ID 1eb0
+}
+
+SECTION ITEM $item_cut_hair
+{
+	ID 0dfe
+}
