@@ -3,6 +3,10 @@
 #endif
 #define _nxw_lib2_included_
 
+/** \defgroup script_helper_nxwlib2
+ *  @{
+ */
+
 //=========================================================================================//
 //                              TARGET HELP FUNCTIONS                                      //
 //=========================================================================================//
@@ -846,7 +850,6 @@ stock itm_copyProperties(const item, const copy)
 \param item: the item
 \since 0.82
 \brief duplicates an item
-
 The returned item will have all the properties set to the starting item's ones
 \see itm_copy(const item)
 \return new item's serial
@@ -857,3 +860,37 @@ stock itm_duplicate(const item)
 	itm_copyProperties(item,copy);
 	return copy;
 }
+
+
+/*!
+\author Horian
+\fn chr_LocalVarMaker(const chr, const vartype, const varnum)
+\param chr: the char
+\param vartype: the vartype, String is 1, integer is 0
+\param varnum: the localvar number
+\since 0.82
+\brief checks if a localvar already exists, throws an error if yes and applys the wanted one
+*/
+stock chr_LocalVarMaker(const chr, const vartype, const varnum, const Integer=INVALID, const String[]="")
+{
+	if(chr_isaLocalVar( chr, varnum, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
+        {
+        	if(vartype == 0)
+        		chr_addLocalIntVar( chr, varnum, Integer);
+        	else chr_addLocalStrVar( chr, varnum, String);
+        }
+        else if((chr_isaLocalVar( chr, varnum, VAR_TYPE_STRING ) == 1) && (vartype==0)) //there already is a string variable (shouldn't happen)
+        {
+        	chr_delLocalVar(chr, varnum, VAR_TYPE_STRING);
+        	chr_addLocalIntVar( chr, varnum, Integer );
+        	log_error("Char %d got int var %d, but before already had a string var at this place that now was deleted!^n", chr, varnum);
+        }
+        else if((chr_isaLocalVar( chr, varnum, VAR_TYPE_INTEGER ) == 1) && (vartype==1)) //there already is a integer variable (shouldn't happen)
+        {
+        	chr_delLocalVar(chr, varnum, VAR_TYPE_INTEGER);
+        	chr_addLocalStrVar( chr, varnum, String );
+        	log_error("Char %d got string var %d, but before already had an integer var at this place that now was deleted!^n", chr, varnum);
+        }
+}
+
+/** @} */

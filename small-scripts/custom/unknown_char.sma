@@ -126,7 +126,7 @@ both combined should be unique even when the char is deleted later*/
 public stop_unknown_char(const viewerchr)
 {
 	new tempStr[100];
-	
+	printf("stopping char unknown");
 	//delete the onsingleclick event handler so the function is not fired
 	chr_getEventHandler(viewerchr, 28, tempStr);
         trim(tempStr);
@@ -137,7 +137,7 @@ public stop_unknown_char(const viewerchr)
 	
 	chr_getEventHandler(viewerchr, 41, tempStr);
         trim(tempStr);
-        if( !strcmp(tempStr, "unknown_dblclick")) //we have an event here that is SAME to char unknown system function so DON'T KEEP this and delete it for further use because "unknown char" is now shut off ! Otherwise we need to keep this!
+        if( !strcmp(tempStr, "unknown_sglclick")) //we have an event here that is SAME to char unknown system function so DON'T KEEP this and delete it for further use because "unknown char" is now shut off ! Otherwise we need to keep this!
         {
         	chr_delEventHandler(viewerchr, 41);
 	}
@@ -149,7 +149,7 @@ public stop_unknown_char(const viewerchr)
         	chr_delEventHandler(viewerchr, 32);
 	}
 	
-		chr_getEventHandler(viewerchr, 35, tempStr);
+	chr_getEventHandler(viewerchr, 35, tempStr);
         trim(tempStr);
         if( !strcmp(tempStr, "unknown_speech")) //we have an event here that is SAME to char unknown system function so DON'T KEEP this and delete it for further use because "unknown char" is now shut off ! Otherwise we need to keep this!
         {
