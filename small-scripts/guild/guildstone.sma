@@ -11,6 +11,18 @@
  *  @{
  */
  
+ 
+//if define guildstone place is get from target, else from player position
+#define GUILD_POSITION_WITH_TARGET
+
+#if defined( GUILD_POSITION_WITH_TARGET )
+#else 
+	#define GUILD_POSITION_WHERE_PLAYER
+#endif
+
+ 
+ 
+ 
 /*!
 \brief a guild deed double-click
 \author Endymion
@@ -29,13 +41,13 @@ public guild_dclickDeed( const deed, const socket ) {
 		return;
 	}
 	
-	static fnGuildPlace =  funcidx("guildPlace");
+	static fnGuildPlace =  INVALID;
+	if( fnGuildPlace==INVALID )
+		fnGuildPlace=funcidx("guildPlace");
+		
 	getTarget( socket, fnGuildPlace, "Where you want place guildstone?");
 
 }
-
-//if define guildstone place is get from target, else from player position
-#define GUILD_POSITION_WITH_TARGET
 
 public guildPlace( const s, const target, const item, const x, const y, const z ) {
 
@@ -50,23 +62,23 @@ public guildPlace( const s, const target, const item, const x, const y, const z 
 	
 #if defined( GUILD_POSITION_WITH_TARGET )
 	if( x==INVALID || y==INVALID || z==INVALID ) {
-		nprintf(s, "This is not a valid place", name);
+		nprintf(s, "This is not a valid place" );
 		return;
 	}
 #endif
 		
 	new stone = itm_createByDef( "$item_guildstone" );
-	guild_makeGuildstone( stone, master );
+	guild_guildstone( stone, master );
 	
-#if not defined( GUILD_POSITION_WITH_TARGET )
-	x = chr_getProperty( master, CP_POSITION, CP_X );
-	y = chr_getProperty( master, CP_POSITION, CP_Y );
-	z = chr_getProperty( master, CP_POSITION, CP_Z );
+#if defined( GUILD_POSITION_WHERE_PLAYER )
+	x = chr_getProperty( master, CP_POSITION, CP2_X );
+	y = chr_getProperty( master, CP_POSITION, CP2_Y );
+	z = chr_getProperty( master, CP_POSITION, CP2_Z );
 #endif
 
-	itm_setProperty( stone, IP_POSITION, IP_X, x );
-	itm_setProperty( stone, IP_POSITION, IP_Y, y );
-	itm_setProperty( stone, IP_POSITION, IP_Z, z );
+	itm_setProperty( stone, IP_POSITION, IP2_X, x );
+	itm_setProperty( stone, IP_POSITION, IP2_Y, y );
+	itm_setProperty( stone, IP_POSITION, IP2_Z, z );
 	
 	itm_setProperty( stone, IP_PRIV, _, 0 );
 	
