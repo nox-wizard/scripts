@@ -1277,7 +1277,8 @@ native chr_setMultiSerial(const chr, const serial);
 \param 2 the target ( can be INVALID )
 \return true or false ( false also if not valid character )
 */
-native (_chr_showStatus );
+native chr_showStatus(const chr, const target) ;
+
 
 /*!
 \author Endymion, mod by Luxor
@@ -2384,4 +2385,67 @@ stock chr_setAmxFlags(const chr, const idx, const value)
 */
 native chr_showPaperdoll(const chr, const target);
 
+/*!
+\author Wintermute
+\fn chr_showSellGump(const chr, const target)
+\param seller: the character who is selling things
+\param target: the character whom shall be shown the gump
+\brief shows a npcs sell gump to another character
+\return 1 or INVALID if chr is not a valid character serial
+*/
+native chr_showSellGump(const seller, const target);
+
+/*!
+\author Wintermute
+\fn chr_showBuyGump(const chr, const target)
+\param buyer: the character who is selling things
+\param target: the character whom shall be shown the gump
+\brief shows a npcs sell gump to another character
+\return 1 or INVALID if chr is not a valid character serial
+*/
+native chr_showBuyGump(const buyer, const target);
+
 /** @} */ // end of script_API_character_basicgumps
+
+//============================   Account things =================================
+/** \defgroup script_API_character_account
+ *  @{
+ */
+/*!
+\author Wintermute
+\fn chr_disconnect(const chr)
+\param chr: the character who should be disconnected
+\brief disconnect a character
+\return 1 or INVALID if chr is not a valid character serial
+*/
+native chr_disconnect(const chr);
+
+/*!
+\author Wintermute
+\fn chr_ban(const chr)
+\param chr: the character who should be banned (bans the whole account)
+\brief ban a characters account
+\return 1 or INVALID if chr is not a valid character serial
+*/
+native chr_ban(const chr);
+
+
+/*!
+\author Wintermute
+\fn chr_unban(const chr)
+\param chr: the character who should be unbanned (unbans the whole account)
+\brief unban a characters account
+\return 1 or INVALID if chr is not a valid character serial
+*/
+native chr_unban(const chr);
+
+/*
+\brief returns the current ip of the account as a string delimited by .
+\fn chr_getIP(const chr)
+\param 1 account number
+\param 2 a string buffer capable to hold 16 bytes
+*/
+native chr_getIP (const account_num, const ip[]);
+
+
+/** @} */ // end of script_API_character_account

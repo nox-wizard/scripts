@@ -1,0 +1,27 @@
+/*
+\brief Deletes the account number denoted by param 1
+\param 1 account number to be deleted
+*/
+native account_delete(const account_num);
+
+/*
+\brief Blocks the account number denoted by param 1
+\param 1 account number to be blocked
+*/
+native account_block (const account_num);
+
+/*
+\brief changes the password for the account
+\param 1 account number to be changed
+\param 2 new password
+*/
+native account_changePW (const account_num, const password[]);
+
+/*
+\brief returns the current ip of the account as a string delimited by .
+\param 1 account number
+\param 2 a string buffer capable to hold 16 bytes
+*/
+native account_getLastIP (const account_num, const ip[]);
+
+

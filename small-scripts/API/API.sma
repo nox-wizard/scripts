@@ -12,6 +12,7 @@
 #include "small-scripts/API/race/constant.sma"
 #include "small-scripts/API/region/constant.sma"
 
+#include "small-scripts/API/accounts.api"
 #include "small-scripts/API/calendar/calendar.api"
 #include "small-scripts/API/character/character.api"
 #include "small-scripts/API/core.api"
