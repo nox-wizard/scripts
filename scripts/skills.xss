@@ -1006,6 +1006,16 @@ SECTION SKILL $skill_remove_traps
 }
 
 // Strength
+SECTION SKILL $stat_strength
+{
+    SKILLPOINT 0 20 5
+    SKILLPOINT 50 10 5
+    SKILLPOINT 90 10 0
+    SKILLPOINT 99 5 0
+    SKILLPOINT 100 0 0
+}
+
+// Strength (obsolete, do NOT use that anymore)
 SECTION SKILL $stat_strenght
 {
     SKILLPOINT 0 20 5
@@ -1014,6 +1024,7 @@ SECTION SKILL $stat_strenght
     SKILLPOINT 99 5 0
     SKILLPOINT 100 0 0
 }
+
 
 // Dexterity
 SECTION SKILL $stat_dexterity
