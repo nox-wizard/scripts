@@ -131,5 +131,6 @@
 #define $itrg_drink_ale 30013
 #define $itrg_potted_tree 2061
 #define $itrg_potted_tree_1 2060
+#define $itrg_happy_holidays 2062
 #define $itrg_blesser 2063
 #define $itrg_bless_this 2064

@@ -1,5 +1,3 @@
-
-
 #define $creature_ogre 1
 #define $creature_ettin 2
 #define $creature_zombie 3
