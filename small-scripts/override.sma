@@ -25,7 +25,7 @@
 //
 #include "small-scripts/calendar/calendar.api"
 #include "small-scripts/character/character.api"
-#include "small-scripts/core/core.api"
+#include "small-scripts/kernel/core.api"
 #include "small-scripts/direct/direct.api"
 #include "small-scripts/effects/effects.api"
 #include "small-scripts/event/trigger.api"
