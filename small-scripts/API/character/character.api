@@ -1021,6 +1021,15 @@ native chr_flee( const npc, const from, const seconds );
 native chr_resurrect(const chr);
 
 /*!
+\author Wintermute
+\fn chr_kill(const chr)
+\param chr the character
+\brief kills the character (setting hitpoints to zero does only updates char status every heartbeat so the char may have already recovered at this)
+\return 0 or INVALID if chr is not a valid character serial (or if character is alive)
+*/
+native chr_kill(const chr);
+
+/*!
 \author Xanathar
 \fn chr_disturbMed(const chr)
 \param chr the character

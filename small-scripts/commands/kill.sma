@@ -33,7 +33,7 @@ public cmd_kill(const chr)
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 		{
 				chr2 = set_getChar(area_chars(area));
-				if(chr2 != chr) chr_setHitPoints(chr2,0);
+				if(chr2 != chr) chr_kill(chr2);
 		}
 
 		chr_message(chr,_,"%d characters killed",i);
@@ -55,7 +55,7 @@ public cmd_kill_targ(target, chr, object, x, y, z, unused, area)
 {
 	if(isChar(object))
 	{
-		chr_setHitPoints(object,0);
+		chr_kil(object);
 		area_refresh(area);
 	}
 	else chr_message(chr,_,"You must target a character");

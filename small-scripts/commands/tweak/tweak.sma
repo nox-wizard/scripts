@@ -2058,8 +2058,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 							new status = chr_getProperty(target, chr_twkarray[i][ct_propval]);
 							if( (status == 0) && checked) //not dead but checked now
 							{
-								chr_setHitPoints(target,0);
-								printf("DIE!");
+								chr_kill(target);
 							}
 							else if ((status == 1) && !checked) //dead but no more checked
 								chr_resurrect(target);
