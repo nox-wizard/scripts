@@ -23,7 +23,7 @@ public eventItm_array[NUM_itmevent][eventItm_prop] = {
 {"on chr walks over it:  ", 16}
 };
 
-const NUM_itmtweak = 96;
+const NUM_itmtweak = 97;
 enum Itm_tweaklines
 {
 it_linetype,
@@ -42,7 +42,10 @@ it_inputname: 10
 //6: subproperties (morex/morey/morez)
 //7: stock function call: ct_propnumber is number of stock function, ct_infotype: string:1 and integer: 0
 public itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
-{1,"Itemname:        ", 454, 0, 0, "         "},
+{1,"Ownerserial:     ", 225, 0, 0, "         "},
+{2,"Serial:          ", 233, 0, 0, "         "},
+{1,"Itemtype:        ", 245, 0, 0, "         "},
+{1,"Incognito:  ?    ",   0, 0, 0, "         "},
 {1,"Attackpower:     ", 200, 0, 0, "         "},
 {1,"Armorvalue:      ", 204, 0, 0, "         "},
 {1,"Dex bonus:       ", 205, 0, 0, "         "},
@@ -135,9 +138,7 @@ public itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {1,"Hex ID:          ", 404, 0, 0, "         "},
 {6,"Description:     ", 451, 0, 0, "         "},
 {1,"Disabled-Message:", 452, 0, 0, "         "},
-{1,"Corpse-Murderer: ", 453, 0, 0, "         "},
-{1,"Item-ID name:  ? ", 455, 0, 0, "         "},
-{1,"Incognito:  ?    ", 455, 0, 0, "         "}
+{1,"Corpse-Murderer: ", 453, 0, 0, "         "}
 };
 
 const NUM_lay = 24;

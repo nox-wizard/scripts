@@ -647,9 +647,9 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Flags4",
 "Skills",
 "Layer",
-"Owner :",//50
+"Name:",//50
 "Serial:",
-"Itemtype:",
+"Hidden Name:",
 "LocalVars 1",
 "Add LocalVar:",
 "Str:",

@@ -518,17 +518,13 @@ public tweak_itm(const chrsource, const target, pagenumber)
 	gui_addButton(twkItmMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkItmMenu,60,79,33,msg_commandsDef[45]); //localvars
 	
-	gui_addText(twkItmMenu,66,120,33,msg_commandsDef[50]);
-	sprintf( tempItmStr,"%d",itm_getProperty(target, IP_OWNERSERIAL));
-	gui_addText( twkItmMenu, 130, 120,0,tempItmStr);
+	gui_addGump(twkItmMenu,50,111, 0x827);
+	gui_addText(twkItmMenu,66,110,33,msg_commandsDef[50]);
+	gui_addPropField( twkItmMenu, 10, 120,150,150,454);
 	
-	gui_addText(twkItmMenu,220,120,33,msg_commandsDef[51]);
-	sprintf( tempItmStr,"%d",itm_getProperty(target,IP_SERIAL));
-	gui_addText( twkItmMenu, 276, 120,0,tempItmStr);
-	
-	gui_addGump(twkItmMenu,400,121, 0x827);
-	gui_addText(twkItmMenu,421,120,33,msg_commandsDef[52]);
-	gui_addPropField( twkItmMenu,485,120,50,150,245);
+	gui_addGump(twkItmMenu,50,131, 0x827);
+	gui_addText(twkItmMenu,66,130,33,msg_commandsDef[52]);
+	gui_addPropField( twkItmMenu, 180, 130,300,150,455);
 	
 	new startline;
 	new leftrow;
