@@ -8684,6 +8684,7 @@ SECTION ITEM $item_scissors
     DECAY
     VALUE 13
     WEIGHT 100
+    @ONDBLCLICK _scissorsDbClick
 }
 
 SECTION ITEM $item_torch
