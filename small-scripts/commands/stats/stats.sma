@@ -214,11 +214,18 @@ public MakeMorePD( const target, const chr, const key, const x, const y, const z
 	// nprintf(socket, "target %d, key %d,unused %d, ItemT %d", target, key, unused, itemTweaked);
 	
 	new MoreA = key>>16 ; 
-	// nprintf(socket, "MoreA %d", MoreA);
-	new MoreB = key&0xFFFF; 
-	// nprintf(socket, "MoreB %d", MoreB);
+	new MoreB = key&0xFFFF;
+
+	// nprintf(socket, "MoreA %d, MoreB %d", MoreA, MoreB);
+		
+	// Setto i more Nell'item che e' stato targhettato da 'stats
 	itm_setProperty(itemTweaked,IP_MORE,_,MoreA);
 	itm_setProperty(itemTweaked,IP_MOREB,_,MoreB);
+	
+	// Setto i more nella chiave (usando il serial della chiave stessa)
+	itm_setProperty(key,IP_MORE,_,MoreA);
+	itm_setProperty(key,IP_MORE,_,MoreB);
+	
 	stats_item( socket, itemTweaked, 4 );
 }
 
