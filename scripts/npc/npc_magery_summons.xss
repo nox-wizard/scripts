@@ -7,6 +7,7 @@
 // summoncreature list
 SECTION NPCLIST $npclist_summon_list
 {
+    //$$ summon list
     $npc_a_chicken
     $npc_a_horse
     $npc_a_rabbit
@@ -28,10 +29,12 @@ SECTION NPCLIST $npclist_summon_list
     $npc_a_horse_3
 }
 
+
 // a Summoned daemon
 SECTION NPC $npc_summoned_deamon
 {
     NAME a daemon
+    //$$ summoned deamon
     ID 000a
     SKIN 0000
     DIRECTION N
@@ -64,6 +67,7 @@ SECTION NPC $npc_summoned_deamon
 SECTION NPC $npc_summoned_air_elemental
 {
     NAME an air elemental
+    //$$ summoned air elemental
     ID 000d
     SKIN 5555
     DIRECTION N
@@ -94,6 +98,7 @@ SECTION NPC $npc_summoned_air_elemental
 SECTION NPC $npc_summoned_earth_elemental
 {
     NAME an earth elemental
+    //$$ summoned earth elemental
     ID 000e
     SKIN 0000
     DIRECTION N
@@ -124,6 +129,7 @@ SECTION NPC $npc_summoned_earth_elemental
 SECTION NPC $npc_summoned_fire_elemental
 {
     NAME a fire elemental
+    //$$ summoned fire elemental
     ID 000f
     SKIN 0000
     DIRECTION N
@@ -155,6 +161,7 @@ SECTION NPC $npc_summoned_fire_elemental
 SECTION NPC $npc_summoned_water_elemental
 {
     NAME a water elemental
+    //$$ summoned water elemental
     ID 0010
     SKIN 0000
     DIRECTION N
@@ -186,6 +193,7 @@ SECTION NPC $npc_summoned_water_elemental
 SECTION NPC $npc_summoned_energy_vortex
 {
     NAME an energy vortex
+    //$$ summoned energy vortex
     ID 000d
     SKIN 0144
     DIRECTION N
@@ -216,6 +224,7 @@ SECTION NPC $npc_summoned_energy_vortex
 SECTION NPC $npc_summoned_blade_spirit
 {
     NAME a blade spirit
+    //$$ summoned blade spirit
     ID 023e
     SKIN 0000
     DIRECTION N

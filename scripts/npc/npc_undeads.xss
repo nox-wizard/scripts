@@ -4,6 +4,12 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+//********************************************************************
+//**********************    Undead and  Liches      ******************
+//********************************************************************
+
+//a headless
+
 SECTION NPC $npc_a_headless
 {
     NAME a headless
@@ -38,6 +44,8 @@ SECTION NPC $npc_a_headless
     ///SUBSECTION Undeads
     ///DESCRIPTION Headless
 }
+
+//a skeleton
 
 SECTION NPC $npc_a_skeleton
 {
@@ -74,6 +82,8 @@ SECTION NPC $npc_a_skeleton
     ///SUBSECTION Undeads
     ///DESCRIPTION Skeleton
 }
+
+//a skeleton with axe
 
 SECTION NPC $npc_a_skeleton_1
 {
@@ -112,6 +122,8 @@ SECTION NPC $npc_a_skeleton_1
     ///SUBSECTION Undeads
     ///DESCRIPTION Skeleton (with axe)
 }
+
+// a bone knight
 
 SECTION NPC $npc_a_bone_knight
 {
@@ -152,6 +164,8 @@ SECTION NPC $npc_a_bone_knight
     ///SUBSECTION Undeads
     ///DESCRIPTION Bone Knight
 }
+
+//a bone mage
 
 SECTION NPC $npc_a_bone_magi
 {
@@ -203,6 +217,8 @@ SECTION NPC $npc_a_bone_magi
     ///DESCRIPTION Bone Mage
 }
 
+//a burning skeleton
+
 SECTION NPC $npc_a_burning_skeleton
 {
     NAME a burning skeleton
@@ -250,6 +266,8 @@ SECTION NPC $npc_a_burning_skeleton
     ///DESCRIPTION Skeleton (burning)
 }
 
+// a skeletal knight
+
 SECTION NPC $npc_a_skeletal_knight
 {
     NAME a skeletal knight
@@ -257,8 +275,8 @@ SECTION NPC $npc_a_skeletal_knight
     SKIN 0000
     DIRECTION N
     BACKPACK
-    ITEM $item_scimitar
-    PACKITEM $item_scimitar
+    ITEM $item_iron_scimitar
+    PACKITEM $item_iron_scimitar
     PACKITEM $item_wooden_shield
     PACKITEM $item_arrow 10
     LOOT $loot_jewelry
@@ -293,6 +311,8 @@ SECTION NPC $npc_a_skeletal_knight
     ///SUBSECTION Undeads
     ///DESCRIPTION Skeletal Knight
 }
+
+//a skeletal mage
 
 SECTION NPC $npc_a_skeletal_magi
 {
@@ -343,6 +363,8 @@ SECTION NPC $npc_a_skeletal_magi
     ///DESCRIPTION Skeletal Mage
 }
 
+//a zombie
+
 SECTION NPC $npc_a_zombie
 {
     NAME a zombie
@@ -376,6 +398,8 @@ SECTION NPC $npc_a_zombie
     ///SUBSECTION Undeads
     ///DESCRIPTION Zombie
 }
+
+// a zombie elder
 
 SECTION NPC $npc_a_zombie_elder
 {
@@ -418,7 +442,7 @@ SECTION NPC $npc_a_zombie_elder
 
     ///CATEGORY Evil
     ///SUBSECTION Undeads
-    ///DESCRIPTION Zombie (elder)
+    ///DESCRIPTION Zombie Elder
 }
 
 SECTION NPC $npc_a_ghoul
@@ -458,6 +482,8 @@ SECTION NPC $npc_a_ghoul
     ///SUBSECTION Undeads
     ///DESCRIPTION Ghoul
 }
+
+//a spectre
 
 SECTION NPC $npc_a_spectre
 {
@@ -539,6 +565,8 @@ SECTION NPC $npc_a_wraith
     ///DESCRIPTION Wraith
 }
 
+//a mummy
+
 SECTION NPC $npc_a_mummy
 {
     NAME a mummy
@@ -547,7 +575,7 @@ SECTION NPC $npc_a_mummy
     DIRECTION N
     BACKPACK
     PACKITEM $item_garlic 250
-    PACKITEM $item_clean_bandages_1
+    PACKITEM $item_clean_bandages 3
     LOOT $loot_circle_1-5_spells
     LOOT $loot_potions
     LOOT $loot_jewelry
@@ -578,6 +606,8 @@ SECTION NPC $npc_a_mummy
     ///SUBSECTION Undeads
     ///DESCRIPTION Mummy
 }
+
+//a ghost
 
 SECTION NPC $npc_a_ghost
 {
@@ -615,6 +645,9 @@ SECTION NPC $npc_a_ghost
     ///SUBSECTION Undeads
     ///DESCRIPTION Ghost
 }
+
+
+//a lich
 
 SECTION NPC $npc_a_lich
 {
@@ -731,7 +764,7 @@ SECTION NPC $npc_a_lich_elder
     SKIN 084C
     DIRECTION N
     BACKPACK
-    PACKITEM $item_a_katana_of_vanquishing
+    PACKITEM $item_iron_katana_of_vanquishing
     PACKITEM $item_a_wand_of_greater_heal
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_6-8_spells
@@ -785,9 +818,12 @@ SECTION NPC $npc_a_lich_elder
     ///DESCRIPTION Lich Elder
 }
 
+//a vampire
+
 SECTION NPC $npc_vampire
 {
     NAMELIST $names_males
+    //$$ vampire
     TITLE a vampire
     ID 0190
     ITEM $item_random_male_hair_list
@@ -839,9 +875,12 @@ SECTION NPC $npc_vampire
     ///DESCRIPTION Vampire [M]
 }
 
+//a vampiress
+
 SECTION NPC $npc_vampiress
 {
     NAMELIST $names_females
+    //$$ vampiress
     TITLE a vampiress
     ID 0191
     SKIN 0000
@@ -889,6 +928,8 @@ SECTION NPC $npc_vampiress
     ///DESCRIPTION Vampire [F]
 }
 
+//a floating skull
+
 SECTION NPC $npc_a_floating_skull
 {
     NAME a floating skull
@@ -927,12 +968,15 @@ SECTION NPC $npc_a_floating_skull
     ///DESCRIPTION Floating Skull
 }
 
+//a living armor
+
 SECTION NPC $npc_living_armor
 {
     NAMELIST $names_necromancers
+    //$$ living armor
     TITLE a living Armor
     ID 0233
-    ITEM $item_broad_sword_of_energy_bolt
+    ITEM $item_iron_broad_sword_of_energy_bolt
     NPCAI $npc_ai_evil
     SPEECH $speech_drow
     SKIN 02e6
@@ -940,8 +984,8 @@ SECTION NPC $npc_living_armor
     BACKPACK
     GOLD 300 400
     ITEM
-    ITEM $item_a_buckler_of_invulnerablity
-    ITEM $item_chain_coif
+    ITEM $item_iron_buckler_of_invulnerablity
+    ITEM $item_iron_chain_coif
     STR 100 100
     DEX 15 20
     INT 60 90
@@ -1197,6 +1241,7 @@ SECTION NPC $npc_a_bone_mage
     ///NOTLIST
 }
 
+
 SECTION NPC $npc_a_lich_lord_1
 {
     NAME a lich lord
@@ -1231,6 +1276,8 @@ SECTION NPC $npc_a_lich_lord_1
     ///NOTLIST
 }
 
+//a wisp
+
 SECTION NPC $npc_a_wisp
 {
     NAME a wisp
@@ -1263,4 +1310,5 @@ SECTION NPC $npc_a_wisp
     DOORUSE 1
     ///NOTLIST
 }
+
 

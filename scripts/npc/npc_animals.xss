@@ -4,6 +4,14 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+
+//*****************************************************************
+//*********************** Common animals       ********************
+//***********************                      ********************
+//*****************************************************************
+
+//a horse (light brown)
+
 SECTION NPC $npc_a_horse
 {
     NAME a horse
@@ -35,6 +43,8 @@ SECTION NPC $npc_a_horse
     ///SUBSECTION Mounts
     ///DESCRIPTION Horse (Light Brown)
 }
+
+//a horse (light gray)
 
 SECTION NPC $npc_a_horse_1
 {
@@ -68,6 +78,7 @@ SECTION NPC $npc_a_horse_1
     ///DESCRIPTION Horse (Light Gray)
 }
 
+//a horse (gray-brown)
 SECTION NPC $npc_a_horse_2
 {
     NAME a horse
@@ -97,8 +108,10 @@ SECTION NPC $npc_a_horse_2
 
     ///CATEGORY Animals
     ///SUBSECTION Mounts
-    ///DESCRIPTION Horse (Gray Brown)
+    ///DESCRIPTION Horse (Brown Gray)
 }
+
+//a horse (dark brown)
 
 SECTION NPC $npc_a_horse_3
 {
@@ -132,6 +145,8 @@ SECTION NPC $npc_a_horse_3
     ///DESCRIPTION Horse (Dark Brown)
 }
 
+//a pack horse
+
 SECTION NPC $npc_a_pack_horse
 {
     NAME a pack horse
@@ -162,6 +177,8 @@ SECTION NPC $npc_a_pack_horse
     ///SUBSECTION Farmlands
     ///DESCRIPTION Pack Horse
 }
+
+//a cow (black and white)
 
 SECTION NPC $npc_a_cow
 {
@@ -194,6 +211,8 @@ SECTION NPC $npc_a_cow
     ///DESCRIPTION Cow (Black and White)
 }
 
+//a cow (brown and white)
+
 SECTION NPC $npc_a_cow_1
 {
     NAME a cow
@@ -225,6 +244,8 @@ SECTION NPC $npc_a_cow_1
     ///DESCRIPTION Cow (Brown and White)
 }
 
+//a bull (solid)
+
 SECTION NPC $npc_a_bull
 {
     NAME a bull
@@ -254,8 +275,10 @@ SECTION NPC $npc_a_bull
 
     ///CATEGORY Animals
     ///SUBSECTION Farmlands
-    ///DESCRIPTION Bull (Solid)
+    ///DESCRIPTION a bull (solid)
 }
+
+//a bull (solid with spots)
 
 SECTION NPC $npc_a_bull_1
 {
@@ -286,8 +309,10 @@ SECTION NPC $npc_a_bull_1
 
     ///CATEGORY Animals
     ///SUBSECTION Farmlands
-    ///DESCRIPTION Bull (Solid with spots)
+    ///DESCRIPTION a bull (solid with spots)
 }
+
+//a sheep
 
 SECTION NPC $npc_a_sheep
 {
@@ -321,6 +346,8 @@ SECTION NPC $npc_a_sheep
     ///DESCRIPTION Sheep
 }
 
+//a goat
+
 SECTION NPC $npc_a_goat
 {
     NAME a goat
@@ -352,6 +379,8 @@ SECTION NPC $npc_a_goat
     ///SUBSECTION Farmlands
     ///DESCRIPTION Goat
 }
+
+//a rideable llama
 
 SECTION NPC $npc_a_rideable_llama
 {
@@ -385,6 +414,8 @@ SECTION NPC $npc_a_rideable_llama
     ///DESCRIPTION Llama
 }
 
+//a llama
+
 SECTION NPC $npc_a_llama
 {
     NAME a llama
@@ -417,6 +448,8 @@ SECTION NPC $npc_a_llama
     ///DESCRIPTION Llama
 }
 
+//a pack llama
+
 SECTION NPC $npc_a_pack_llama
 {
     NAME a pack llama
@@ -447,6 +480,8 @@ SECTION NPC $npc_a_pack_llama
     ///SUBSECTION Farmlands
     ///DESCRIPTION Pack Llama
 }
+
+//a black bear
 
 SECTION NPC $npc_a_black_bear
 {
@@ -480,6 +515,8 @@ SECTION NPC $npc_a_black_bear
     ///DESCRIPTION Bear (Black)
 }
 
+//a brown bear
+
 SECTION NPC $npc_a_brown_bear
 {
     NAME a brown bear
@@ -511,6 +548,8 @@ SECTION NPC $npc_a_brown_bear
     ///SUBSECTION Wild
     ///DESCRIPTION Bear (Brown)
 }
+
+//a grizzly bear
 
 SECTION NPC $npc_a_grizzly_bear
 {
@@ -544,6 +583,8 @@ SECTION NPC $npc_a_grizzly_bear
     ///DESCRIPTION Bear (Grizzly)
 }
 
+//a polar bear
+
 SECTION NPC $npc_a_polar_bear
 {
     NAME a polar bear
@@ -576,6 +617,8 @@ SECTION NPC $npc_a_polar_bear
     ///DESCRIPTION Bear (Polar)
 }
 
+//a vera bear
+
 SECTION NPC $npc_a_vera_bear
 {
     NAME a vera bear
@@ -606,6 +649,8 @@ SECTION NPC $npc_a_vera_bear
     ///SUBSECTION Wild
     ///DESCRIPTION Bear (Vera)
 }
+
+//a cave bear
 
 SECTION NPC $npc_a_cave_bear
 {
@@ -638,6 +683,8 @@ SECTION NPC $npc_a_cave_bear
     ///SUBSECTION Wild
     ///DESCRIPTION Bear (Cave)
 }
+
+//a walrus
 
 SECTION NPC $npc_a_walrus
 {
@@ -672,6 +719,8 @@ SECTION NPC $npc_a_walrus
     ///DESCRIPTION Walrus
 }
 
+//a gorilla
+
 SECTION NPC $npc_a_gorilla
 {
     NAME a gorilla
@@ -704,6 +753,8 @@ SECTION NPC $npc_a_gorilla
     ///DESCRIPTION Gorilla
 }
 
+//a rabbit
+
 SECTION NPC $npc_a_rabbit
 {
     NAME a rabbit
@@ -735,6 +786,8 @@ SECTION NPC $npc_a_rabbit
     ///SUBSECTION Farmland
     ///DESCRIPTION Rabbit
 }
+
+//a dolphin
 
 SECTION NPC $npc_a_dolphin
 {
@@ -769,6 +822,8 @@ SECTION NPC $npc_a_dolphin
     ///DESCRIPTION Dolphin
 }
 
+//a sparrow
+
 SECTION NPC $npc_a_sparrow
 {
     NAME a sparrow
@@ -800,9 +855,12 @@ SECTION NPC $npc_a_sparrow
     ///DESCRIPTION Sparrow
 }
 
+// a bird
+
 SECTION NPC $npc_forest_bird
 {
     NAMELIST $names_forest_birds
+    //$$ forest bird
     ID 0006
     SKINLIST 11
     DIRECTION E
@@ -832,6 +890,8 @@ SECTION NPC $npc_forest_bird
     ///DESCRIPTION Forest Bird
 }
 
+//a chicken
+
 SECTION NPC $npc_a_chicken
 {
     NAME a chicken
@@ -860,6 +920,8 @@ SECTION NPC $npc_a_chicken
     ///SUBSECTION Birds
     ///DESCRIPTION Chicken
 }
+
+//a falcon
 
 SECTION NPC $npc_a_falcon
 {
@@ -894,6 +956,8 @@ SECTION NPC $npc_a_falcon
     ///DESCRIPTION Falcon
 }
 
+//a hawk
+
 SECTION NPC $npc_a_hawk
 {
     NAME a hawk
@@ -926,6 +990,8 @@ SECTION NPC $npc_a_hawk
     ///SUBSECTION Birds
     ///DESCRIPTION Hawk
 }
+
+//an eagle
 
 SECTION NPC $npc_an_eagle
 {
@@ -960,6 +1026,8 @@ SECTION NPC $npc_an_eagle
     ///DESCRIPTION Eagle
 }
 
+//a blue bird
+
 SECTION NPC $npc_a_blue_bird
 {
     NAME a blue bird
@@ -993,6 +1061,8 @@ SECTION NPC $npc_a_blue_bird
     ///DESCRIPTION Blue Bird
 }
 
+//a cardinal
+
 SECTION NPC $npc_a_cardinal
 {
     NAME a cardinal
@@ -1024,6 +1094,8 @@ SECTION NPC $npc_a_cardinal
     ///SUBSECTION Birds
     ///DESCRIPTION Cardinal
 }
+
+//a snake
 
 SECTION NPC $npc_a_snake
 {
@@ -1059,6 +1131,8 @@ SECTION NPC $npc_a_snake
     ///DESCRIPTION Snake
 }
 
+//an ice serpent
+
 SECTION NPC $npc_an_ice_serpent
 {
     NAME an ice serpent
@@ -1092,6 +1166,8 @@ SECTION NPC $npc_an_ice_serpent
     ///DESCRIPTION Serpent (Ice)
 }
 
+//a cat
+
 SECTION NPC $npc_a_cat
 {
     NAME a cat
@@ -1121,6 +1197,8 @@ SECTION NPC $npc_a_cat
     ///SUBSECTION Farmland
     ///DESCRIPTION Cat
 }
+
+//a cougar
 
 SECTION NPC $npc_a_cougar
 {
@@ -1154,6 +1232,8 @@ SECTION NPC $npc_a_cougar
     ///DESCRIPTION Cougar
 }
 
+//a panther
+
 SECTION NPC $npc_a_panther
 {
     NAME a panther
@@ -1186,6 +1266,8 @@ SECTION NPC $npc_a_panther
     ///DESCRIPTION Panther
 }
 
+//a snow leopard
+
 SECTION NPC $npc_a_snow_leopard
 {
     NAME a snow leopard
@@ -1215,8 +1297,10 @@ SECTION NPC $npc_a_snow_leopard
 
     ///CATEGORY Animals
     ///SUBSECTION Wild
-    ///DESCRIPTION Leopard
+    ///DESCRIPTION Snow Leopard
 }
+
+//a forest ostard
 
 SECTION NPC $npc_a_forest_ostard
 {
@@ -1251,6 +1335,8 @@ SECTION NPC $npc_a_forest_ostard
     ///DESCRIPTION Ostard (Forest)
 }
 
+//a desert ostard
+
 SECTION NPC $npc_a_desert_ostard
 {
     NAME a desert ostard
@@ -1283,6 +1369,8 @@ SECTION NPC $npc_a_desert_ostard
     ///DESCRIPTION Ostard (Desert)
 }
 
+//a hind
+
 SECTION NPC $npc_a_hind
 {
     NAME a hind
@@ -1314,6 +1402,8 @@ SECTION NPC $npc_a_hind
     ///DESCRIPTION Hind
 }
 
+//a great hart
+
 SECTION NPC $npc_a_great_hart
 {
     NAME a great hart
@@ -1342,8 +1432,10 @@ SECTION NPC $npc_a_great_hart
 
     ///CATEGORY Animals
     ///SUBSECTION Wild
-    ///DESCRIPTION Great Hard
+    ///DESCRIPTION Hart
 }
+
+//a pig
 
 SECTION NPC $npc_a_pig
 {
@@ -1377,6 +1469,8 @@ SECTION NPC $npc_a_pig
     ///DESCRIPTION Pig
 }
 
+//a boar
+
 SECTION NPC $npc_a_boar
 {
     NAME a boar
@@ -1409,6 +1503,8 @@ SECTION NPC $npc_a_boar
     ///DESCRIPTION Boar
 }
 
+//a dog
+
 SECTION NPC $npc_a_dog
 {
     NAME a dog
@@ -1438,6 +1534,8 @@ SECTION NPC $npc_a_dog
     ///SUBSECTION Farmland
     ///DESCRIPTION Dog
 }
+
+//a dog
 
 SECTION NPC $npc_a_dog_1
 {
@@ -1469,6 +1567,8 @@ SECTION NPC $npc_a_dog_1
     ///DESCRIPTION Dog
 }
 
+//a dog
+
 SECTION NPC $npc_a_dog_2
 {
     NAME a dog
@@ -1499,6 +1599,8 @@ SECTION NPC $npc_a_dog_2
     ///DESCRIPTION Dog
 }
 
+//a dog
+
 SECTION NPC $npc_a_dog_3
 {
     NAME a dog
@@ -1528,6 +1630,8 @@ SECTION NPC $npc_a_dog_3
     ///SUBSECTION Farmland
     ///DESCRIPTION Dog
 }
+
+//a timber wolf
 
 SECTION NPC $npc_a_timber_wolf
 {
@@ -1561,6 +1665,8 @@ SECTION NPC $npc_a_timber_wolf
     ///DESCRIPTION Wolf (Timber)
 }
 
+//a grey wolf
+
 SECTION NPC $npc_a_grey_wolf
 {
     NAME a grey wolf
@@ -1590,8 +1696,10 @@ SECTION NPC $npc_a_grey_wolf
 
     ///CATEGORY Animals
     ///SUBSECTION Wild
-    ///DESCRIPTION Wolf (Gray)
+    ///DESCRIPTION Wolf (Grey)
 }
+
+//a white wolf
 
 SECTION NPC $npc_a_white_wolf
 {
@@ -1624,6 +1732,8 @@ SECTION NPC $npc_a_white_wolf
     ///SUBSECTION Wild
     ///DESCRIPTION Wolf (White)
 }
+
+//a silver wolf
 
 SECTION NPC $npc_a_silver_wolf
 {
@@ -1668,6 +1778,7 @@ SECTION NPC $npc_a_silver_wolf
 //**************************         *****************************
 //****************************************************************
 
+
 SECTION NPC $npc_a_dark_spider
 {
     NAME a dark spider
@@ -1704,6 +1815,8 @@ SECTION NPC $npc_a_dark_spider
     ///SUBSECTION Reptiles & Insects
     ///DESCRIPTION Spider (Dark)
 }
+
+// a dread spider
 
 SECTION NPC $npc_a_dread_spider
 {
@@ -1833,6 +1946,7 @@ SECTION NPC $npc_a_frost_spider
     ///DESCRIPTION Spider (Frost)
 }
 
+//a sewer rat
 SECTION NPC $npc_a_sewer_rat
 {
     NAME a sewer rat
@@ -1866,6 +1980,8 @@ SECTION NPC $npc_a_sewer_rat
     ///DESCRIPTION Sewer Rat
 }
 
+//a bullfrog
+
 SECTION NPC $npc_a_bullfrog
 {
     NAME a bullfrog
@@ -1897,6 +2013,8 @@ SECTION NPC $npc_a_bullfrog
     ///SUBSECTION Wild
     ///DESCRIPTION Bullfrog
 }
+
+//a giant scorpion
 
 SECTION NPC $npc_a_giant_scorpion
 {

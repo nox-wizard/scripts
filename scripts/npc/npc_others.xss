@@ -4,6 +4,7 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+//a gargoyle
 SECTION NPC $npc_a_gargoyle
 {
     NAME a gargoyle
@@ -49,6 +50,8 @@ SECTION NPC $npc_a_gargoyle
     ///DESCRIPTION Gargoyle
 }
 
+//a stone gargoyle
+
 SECTION NPC $npc_a_stone_gargoyle
 {
     NAME a stone gargoyle
@@ -88,9 +91,12 @@ SECTION NPC $npc_a_stone_gargoyle
     ///DESCRIPTION Gargoyle (stone)
 }
 
+// Fire Gargoyle
+
 SECTION NPC $npc_gargoyle
 {
     NAMELIST $names_gargoyles
+    //$$ gargoyle
     ID 0004
     SKINLIST 1
     DIRECTION N
@@ -129,6 +135,8 @@ SECTION NPC $npc_gargoyle
     ///SUBSECTION Daemons & Gargoyles
     ///DESCRIPTION Gargoyle (fire)
 }
+
+//a frankenstein
 
 SECTION NPC $npc_a_frankenstein
 {
@@ -172,6 +180,8 @@ SECTION NPC $npc_a_frankenstein
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Frankenstein
 }
+
+//a reaper
 
 SECTION NPC $npc_a_reaper
 {
@@ -221,6 +231,8 @@ SECTION NPC $npc_a_reaper
     ///DESCRIPTION Reaper
 }
 
+//a swamp tentacle
+
 SECTION NPC $npc_a_swamp_tentacle
 {
     NAME a swamp tentacle
@@ -258,6 +270,8 @@ SECTION NPC $npc_a_swamp_tentacle
     ///DESCRIPTION Swamp Tentacle
 }
 
+//a corpser
+
 SECTION NPC $npc_a_corpser
 {
     NAME a corpser
@@ -289,6 +303,8 @@ SECTION NPC $npc_a_corpser
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Corpser
 }
+
+// a giant rat
 
 SECTION NPC $npc_a_giant_rat
 {
@@ -323,6 +339,8 @@ SECTION NPC $npc_a_giant_rat
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Giant Rat
 }
+
+//a gazer
 
 SECTION NPC $npc_a_gazer
 {
@@ -373,6 +391,8 @@ SECTION NPC $npc_a_gazer
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Gazer
 }
+
+//an elder gazer
 
 SECTION NPC $npc_an_elder_gazer
 {
@@ -476,6 +496,8 @@ SECTION NPC $npc_xanathar
     ///DESCRIPTION Xanathar
 }
 
+// a giant serpent
+
 SECTION NPC $npc_a_giant_serpent
 {
     NAME a giant serpent
@@ -510,6 +532,8 @@ SECTION NPC $npc_a_giant_serpent
     ///SUBSECTION Reptiles & Insects
     ///DESCRIPTION Giant Serpent
 }
+
+//a giant ice serpent
 
 SECTION NPC $npc_a_giant_ice_serpent
 {
@@ -551,6 +575,8 @@ SECTION NPC $npc_a_giant_ice_serpent
     ///SUBSECTION Reptiles & Insects
     ///DESCRIPTION Giant Serpent (ice)
 }
+
+//a lava serpent
 
 SECTION NPC $npc_a_giant_lava_serpent
 {
@@ -658,6 +684,7 @@ SECTION NPC $npc_a_hellcat_predator
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Hellcat Predator
 }
+//a frenzied ostard
 
 SECTION NPC $npc_a_frenzied_ostard
 {
@@ -730,6 +757,8 @@ SECTION NPC $npc_a_hell_hound
     ///DESCRIPTION Hell hound
 }
 
+// Mongbats
+
 SECTION NPC $npc_a_mongbat
 {
     NAME a mongbat
@@ -762,6 +791,8 @@ SECTION NPC $npc_a_mongbat
     ///DESCRIPTION Mongbat
 }
 
+//a giant toad
+
 SECTION NPC $npc_a_giant_toad
 {
     NAME a giant toad
@@ -789,10 +820,6 @@ SECTION NPC $npc_a_giant_toad
     TOTAME 771
     RACE $race_animal_aberration
     DOORUSE 0
-
-    ///CATEGORY Animals
-    ///SUBSECTION Wild
-    ///DESCRIPTION Giant Toad
 }
 
 //a harpy
@@ -831,6 +858,8 @@ SECTION NPC $npc_a_harpy
     ///DESCRIPTION Harpy
 }
 
+//a harpy hen
+
 SECTION NPC $npc_a_harpy_hen
 {
     NAME a harpy hen
@@ -864,6 +893,8 @@ SECTION NPC $npc_a_harpy_hen
     ///DESCRIPTION Harpy (hen)
 }
 
+//a stome harpy
+
 SECTION NPC $npc_a_stone_harpy
 {
     NAME a stone harpy
@@ -895,6 +926,8 @@ SECTION NPC $npc_a_stone_harpy
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Harpy (Stone)
 }
+
+//a frost ooze
 
 SECTION NPC $npc_a_frost_ooze
 {
@@ -932,6 +965,8 @@ SECTION NPC $npc_a_frost_ooze
     ///DESCRIPTION Frost Ooze
 }
 
+//a slime
+
 SECTION NPC $npc_a_slime
 {
     NAME a slime
@@ -967,10 +1002,12 @@ SECTION NPC $npc_a_slime
     ///DESCRIPTION Slime
 }
 
+//a kraken
+
 SECTION NPC $npc_a_kraken
 {
     NAME a kraken
-    ID 0007
+    ID 005f
     SKIN 0000
     SPEECH $speech_none
     DIRECTION E
@@ -1003,6 +1040,8 @@ SECTION NPC $npc_a_kraken
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Kraken
 }
+
+//an alligator
 
 SECTION NPC $npc_an_alligator
 {
@@ -1075,6 +1114,8 @@ SECTION NPC $npc_a_lava_lizard
     ///DESCRIPTION Lava Lizard
 }
 
+// a silver serpent
+
 SECTION NPC $npc_a_silver_serpent
 {
     NAME a silver serpent
@@ -1108,6 +1149,8 @@ SECTION NPC $npc_a_silver_serpent
     ///SUBSECTION Reptiles & Insects
     ///DESCRIPTION Serpent (silver)
 }
+
+//a giant silver serpent
 
 SECTION NPC $npc_a_giant_silver_serpent
 {
@@ -1143,6 +1186,8 @@ SECTION NPC $npc_a_giant_silver_serpent
     ///DESCRIPTION Giant Serpent (silver)
 }
 
+//a dark wolf
+
 SECTION NPC $npc_a_dark_wolf
 {
     NAME a dark wolf
@@ -1176,6 +1221,8 @@ SECTION NPC $npc_a_dark_wolf
     ///SUBSECTION Wild
     ///DESCRIPTION Wolf (dark)
 }
+
+//a sea serpent
 
 SECTION NPC $npc_a_sea_serpent
 {
@@ -1211,6 +1258,8 @@ SECTION NPC $npc_a_sea_serpent
     ///SUBSECTION Sea
     ///DESCRIPTION Sea Serpent
 }
+
+//a plague rat
 
 SECTION NPC $npc_a_plague_rat
 {
@@ -1248,6 +1297,8 @@ SECTION NPC $npc_a_plague_rat
     ///SUBSECTION Wild
     ///DESCRIPTION Plague Rat
 }
+
+//a giant plague rat
 
 SECTION NPC $npc_a_giant_plague_rat
 {
@@ -1289,6 +1340,8 @@ SECTION NPC $npc_a_giant_plague_rat
     ///DESCRIPTION Plague Rat (giant)
 }
 
+//a cranium rat
+
 SECTION NPC $npc_a_cranium_rat
 {
     NAME a cranium rat
@@ -1327,6 +1380,8 @@ SECTION NPC $npc_a_cranium_rat
     ///SUBSECTION Wild
     ///DESCRIPTION Cranium Rat
 }
+
+//a giant cranium rat
 
 SECTION NPC $npc_a_giant_cranium_rat
 {
@@ -1370,6 +1425,8 @@ SECTION NPC $npc_a_giant_cranium_rat
     ///SUBSECTION Wild
     ///DESCRIPTION Cranium Rat (giant)
 }
+
+//a gelatinous ooze
 
 SECTION NPC $npc_a_gelatinous_ooze
 {
@@ -1418,6 +1475,8 @@ SECTION NPC $npc_a_gelatinous_ooze
     ///DESCRIPTION Gelatinous Ooze
 }
 
+//a slithering tracker
+
 SECTION NPC $npc_a_slithering_tracker
 {
     NAME a slithering tracker
@@ -1456,6 +1515,8 @@ SECTION NPC $npc_a_slithering_tracker
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Slithering tracker
 }
+
+//a floating book
 
 SECTION NPC $npc_a_floating_book
 {
@@ -1497,6 +1558,8 @@ SECTION NPC $npc_a_floating_book
     ///DESCRIPTION Floating Book
 }
 
+//a yellow mold
+
 SECTION NPC $npc_a_yellow_mold
 {
     NAME a yellow mold
@@ -1532,6 +1595,8 @@ SECTION NPC $npc_a_yellow_mold
     ///DESCRIPTION Yellow mold
 }
 
+//a olive slime
+
 SECTION NPC $npc_an_olive_slime
 {
     NAME an olive slime
@@ -1566,10 +1631,12 @@ SECTION NPC $npc_an_olive_slime
     ///DESCRIPTION Olive Slime
 }
 
+//a giant slime
+
 SECTION NPC $npc_a_giant_slime
 {
     NAME a giant slime
-    ID 005e
+    ID 005f
     SKIN 0487
     SPEECH $speech_none
     DIRECTION E
@@ -1603,6 +1670,8 @@ SECTION NPC $npc_a_giant_slime
     ///DESCRIPTION Giant Slime
 }
 
+//an efreeti
+
 SECTION NPC $npc_efreeti
 {
     NAME efreeti
@@ -1635,6 +1704,8 @@ SECTION NPC $npc_efreeti
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Efreeti
 }
+
+//a phoenix
 
 SECTION NPC $npc_a_phoenix
 {
@@ -1670,6 +1741,8 @@ SECTION NPC $npc_a_phoenix
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Phoenix
 }
+
+//a nightmare
 
 SECTION NPC $npc_a_nightmare
 {
@@ -1707,6 +1780,8 @@ SECTION NPC $npc_a_nightmare
     ///DESCRIPTION Nightmare
 }
 
+//a sliver steed
+
 SECTION NPC $npc_a_silver_steed
 {
     NAME a silver steed
@@ -1741,4 +1816,5 @@ SECTION NPC $npc_a_silver_steed
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Silver Steed
 }
+
 

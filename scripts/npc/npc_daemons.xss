@@ -62,7 +62,7 @@ SECTION NPC $npc_deamon_unarmed
     SKIN 0000
     DIRECTION N
     BACKPACK
-    PACKITEM $item_viking_sword
+    PACKITEM $item_iron_viking_sword
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells

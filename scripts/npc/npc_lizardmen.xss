@@ -4,15 +4,24 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+
+//****************************************************
+//********************** Lizardmen *******************
+//**********************           *******************
+//****************************************************
+
+// Lizardman with fencing weapon
+
 SECTION NPC $npc_lizardman_fencer
 {
     NAMELIST $names_lizardmen
+    //$$ lizardman fencer
     ID 0023
     SKIN 0000
     DIRECTION N
     BACKPACK
-    ITEM $item_kryss
-    PACKITEM $item_spear
+    ITEM plate_iron_kryss
+    PACKITEM $item_iron_spear
     GOLD 0 50
     STR 96 120
     LOOT $loot_food_wine_bread_cheese_meat
@@ -43,15 +52,18 @@ SECTION NPC $npc_lizardman_fencer
     ///DESCRIPTION Fencer
 }
 
+// Lizardman with macefighting weapon
+
 SECTION NPC $npc_lizardman_macefighter
 {
     NAMELIST $names_lizardmen
+    //$$ lizardman macefighter
     ID 0024
     SKIN 0000
     DIRECTION N
     BACKPACK
-    ITEM $item_mace
-    PACKITEM $item_war_mace
+    ITEM $item_iron_mace
+    PACKITEM plate_iron_war_mace
     NPCWANDER 4
     SPEECH $speech_lizardman
     FX1 -1
@@ -82,9 +94,12 @@ SECTION NPC $npc_lizardman_macefighter
     ///DESCRIPTION Macefighter
 }
 
+// Lizardman with small blades
+
 SECTION NPC $npc_lizardman_short_sword
 {
     NAMELIST $names_lizardmen
+    //$$ lizardman short sword
     ID 0021
     SKIN 0000
     DIRECTION N
@@ -119,9 +134,12 @@ SECTION NPC $npc_lizardman_short_sword
     ///DESCRIPTION Lizardman (with short sword)
 }
 
+//lizardman archer
+
 SECTION NPC $npc_lizardman_archer
 {
     NAMELIST $names_lizardmen
+    //$$ lizardman archer
     ID 0021
     SKIN 0000
     DIRECTION N
@@ -160,9 +178,12 @@ SECTION NPC $npc_lizardman_archer
     ///DESCRIPTION Archer
 }
 
+// a ice lizardman (unarmed)
+
 SECTION NPC $npc_lizardman
 {
     NAMELIST $names_lizardmen
+    //$$ lizardman
     ID 0021
     SKIN 0480
     DIRECTION N
@@ -197,15 +218,18 @@ SECTION NPC $npc_lizardman
     ///DESCRIPTION Ice Lizardman
 }
 
+//a ice lizardman (with spear)
+
 SECTION NPC $npc_lizardman_spear
 {
     NAMELIST $names_lizardmen
+    //$$ lizardman spear
     ID 0023
     SKIN 0480
     DIRECTION N
     BACKPACK
-    ITEM $item_spear
-    PACKITEM $item_spear
+    ITEM $item_iron_spear
+    PACKITEM $item_iron_spear
     GOLD 100 120
     STR 130 170
     DEX 86 105
@@ -236,14 +260,17 @@ SECTION NPC $npc_lizardman_spear
     ///DESCRIPTION Ice Lizardman (with spear)
 }
 
+// a ice lizardman (with mace)
+
 SECTION NPC $npc_ice_lizardman
 {
     NAMELIST $names_lizardmen
+    //$$ ice lizardman
     ID 0024
     SKIN 0480
     DIRECTION N
     BACKPACK
-    ITEM $item_mace
+    ITEM $item_iron_mace
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
     LOOT $loot_food_wine_bread_cheese_meat
@@ -275,9 +302,12 @@ SECTION NPC $npc_ice_lizardman
     ///DESCRIPTION Ice Lizardman (with mace)
 }
 
+// a lava lizardman (unarmed)
+
 SECTION NPC $npc_lava_lizardman
 {
     NAMELIST $names_lizardmen
+    //$$ lava lizardman
     ID 0021
     SKIN 002b
     DIRECTION N
@@ -317,15 +347,18 @@ SECTION NPC $npc_lava_lizardman
     ///DESCRIPTION Lava Lizardman
 }
 
+//a lava lizardman (with spear)
+
 SECTION NPC $npc_lava_lizardman_spear
 {
     NAMELIST $names_lizardmen
+    //$$ lava lizardman spear
     ID 0023
     SKIN 002b
     DIRECTION N
     BACKPACK
-    ITEM $item_spear
-    PACKITEM $item_spear
+    ITEM $item_iron_spear
+    PACKITEM $item_iron_spear
     GOLD 100 120
     STR 120 150
     DEX 86 105
@@ -361,14 +394,17 @@ SECTION NPC $npc_lava_lizardman_spear
     ///DESCRIPTION Lava Lizardman (with spear)
 }
 
+// a lava lizardman (with mace)
+
 SECTION NPC $npc_lava_lizardman_mace
 {
     NAMELIST $names_lizardmen
+    //$$ lava lizardman mace
     ID 0024
     SKIN 002b
     DIRECTION N
     BACKPACK
-    ITEM $item_mace
+    ITEM $item_iron_mace
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
     LOOT $loot_food_wine_bread_cheese_meat

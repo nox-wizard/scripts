@@ -9,6 +9,8 @@
 //********************** Titans, Cycloptians, Giants **************
 //*****************************************************************
 
+//an ogre with club
+
 SECTION NPC $npc_an_ogre
 {
     NAME an ogre
@@ -52,6 +54,8 @@ SECTION NPC $npc_an_ogre
     ///DESCRIPTION Ogre (with club)
 }
 
+//an ettin
+
 SECTION NPC $npc_an_ettin
 {
     NAME an ettin
@@ -90,6 +94,8 @@ SECTION NPC $npc_an_ettin
     ///SUBSECTION Giants
     ///DESCRIPTION Ettin
 }
+
+//an ogre lord
 
 SECTION NPC $npc_an_ogre_lord
 {
@@ -134,6 +140,8 @@ SECTION NPC $npc_an_ogre_lord
     ///DESCRIPTION Ogre Lord
 }
 
+//an artice ogre lord
+
 SECTION NPC $npc_an_arctic_ogre_lord
 {
     NAME an arctic ogre lord
@@ -176,6 +184,8 @@ SECTION NPC $npc_an_arctic_ogre_lord
     ///DESCRIPTION Arctic Ogre Lord
 }
 
+// ettin with large macefighting weapon
+
 SECTION NPC $npc_an_ettin_1
 {
     NAME an ettin
@@ -183,7 +193,7 @@ SECTION NPC $npc_an_ettin_1
     SKIN 0000
     DIRECTION N
     BACKPACK
-    ITEM $item_mace
+    ITEM $item_iron_mace
     SPEECH $speech_none
     DIRECTION E
     BACKPACK
@@ -224,13 +234,15 @@ SECTION NPC $npc_an_ettin_1
     ///DESCRIPTION Ettin with weapon
 }
 
+// troll with two handed axes
+
 SECTION NPC $npc_a_troll
 {
     NAME a troll
     ID 0035
     SKIN 0000
     DIRECTION N
-    ITEM $item_battle_axe
+    ITEM $item_iron_battle_axe
     BACKPACK
     LOOT $loot_uncut_gems
     LOOT $loot_omnivores_food
@@ -261,6 +273,8 @@ SECTION NPC $npc_a_troll
     ///SUBSECTION Giants
     ///DESCRIPTION Troll (with axe)
 }
+
+//a troll
 
 SECTION NPC $npc_a_troll_1
 {
@@ -297,6 +311,8 @@ SECTION NPC $npc_a_troll_1
     ///DESCRIPTION Troll
 }
 
+// Troll with macefighting weapon
+
 SECTION NPC $npc_a_troll_2
 {
     NAME a troll
@@ -304,7 +320,7 @@ SECTION NPC $npc_a_troll_2
     SKIN 0000
     DIRECTION N
     BACKPACK
-    ITEM $item_mace
+    ITEM $item_iron_mace
     LOOT $loot_uncut_gems
     LOOT $loot_omnivores_food
     LOOT $loot_large_maces
@@ -335,6 +351,8 @@ SECTION NPC $npc_a_troll_2
     ///SUBSECTION Giants
     ///DESCRIPTION Troll (with mace)
 }
+
+// troll with two handed axes
 
 SECTION NPC $npc_a_frost_troll
 {
@@ -373,6 +391,8 @@ SECTION NPC $npc_a_frost_troll
     ///SUBSECTION Giants
     ///DESCRIPTION Troll (frost)
 }
+
+// a cyclopedian warrior
 
 SECTION NPC $npc_a_cyclopedian_warrior
 {
@@ -414,6 +434,8 @@ SECTION NPC $npc_a_cyclopedian_warrior
     ///SUBSECTION Giants
     ///DESCRIPTION Cyclopedian Warrior
 }
+
+//a titan
 
 SECTION NPC $npc_a_titan
 {
@@ -458,6 +480,8 @@ SECTION NPC $npc_a_titan
     ///DESCRIPTION Titan
 }
 
+//an ice titan
+
 SECTION NPC $npc_an_ice_titan
 {
     NAME an ice titan
@@ -500,6 +524,7 @@ SECTION NPC $npc_an_ice_titan
     ///SUBSECTION Giants
     ///DESCRIPTION Titan (ice)
 }
+//a giant
 
 SECTION NPC $npc_a_giant
 {
@@ -535,6 +560,8 @@ SECTION NPC $npc_a_giant
     ///SUBSECTION Giants
     ///DESCRIPTION Giant
 }
+
+//an ice giant
 
 SECTION NPC $npc_an_ice_giant
 {
@@ -609,6 +636,8 @@ SECTION NPC $npc_a_forest_giant
     ///DESCRIPTION Giant (forest)
 }
 
+//a fire giant
+
 SECTION NPC $npc_a_fire_giant
 {
     NAME a fire giant
@@ -644,4 +673,5 @@ SECTION NPC $npc_a_fire_giant
     ///SUBSECTION Giants
     ///DESCRIPTION Giant (fire)
 }
+
 

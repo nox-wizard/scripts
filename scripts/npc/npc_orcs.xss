@@ -4,8 +4,17 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+//*************************************************
+//*************************************************
+//******************** Orcs ***********************
+//*************************************************
+//*************************************************
+
+// Orc with punching
+
 SECTION NPC $npc_orc
 {
+    //$$ orc
     NAMELIST $names_orcs
     ID 0011
     SKIN 0000
@@ -44,14 +53,17 @@ SECTION NPC $npc_orc
     ///DESCRIPTION Orc (with punching)
 }
 
+// Orc with macefighting weapon
+
 SECTION NPC $npc_orc_mace
 {
     NAMELIST $names_orcs
+    //$$ orc mace
     ID 0029
     SKIN 0000
     DIRECTION E
     BACKPACK
-    ITEM $item_mace
+    ITEM $item_iron_mace
     GOLD 0 50
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
@@ -84,6 +96,8 @@ SECTION NPC $npc_orc_mace
     ///SUBSECTION Orcs
     ///DESCRIPTION Orc Macefighter
 }
+
+// Orc mage
 
 SECTION NPC $npc_an_orcish_mage
 {
@@ -137,16 +151,19 @@ SECTION NPC $npc_an_orcish_mage
     ///DESCRIPTION Orc Mage
 }
 
+// Orc with two handed axes
+
 SECTION NPC $npc_orc_2_hand_axe
 {
+    //$$ orc 2 hand axe
     NAMELIST $names_orcs
     ID 0007
     SKIN 0000
     DIRECTION E
     SPEECH $speech_orcish
     BACKPACK
-    ITEM $item_ringmail_tunic
-    PACKITEM $item_ringmail_tunic
+    ITEM $item_iron_ringmail_tunic
+    PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_boots
     PACKITEM $item_a_orc_helm
     LOOT $loot_uncut_gems
@@ -181,16 +198,19 @@ SECTION NPC $npc_orc_2_hand_axe
     ///DESCRIPTION Orc (with axe)
 }
 
+//Orcish Captain
+
 SECTION NPC $npc_orc_captain
 {
     NAMELIST $names_orcs
+    //$$ orc captain
     ID 0007
     SKIN 0000
     DIRECTION E
     SPEECH $speech_orcish
     BACKPACK
-    ITEM $item_ringmail_tunic
-    PACKITEM $item_ringmail_tunic
+    ITEM $item_iron_ringmail_tunic
+    PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_thigh_boots
     PACKITEM $item_a_orc_mask
     LOOT $loot_uncut_gems
@@ -225,6 +245,8 @@ SECTION NPC $npc_orc_captain
     ///DESCRIPTION Orc Captain
 }
 
+// Orc Lord with two handed axes
+
 SECTION NPC $npc_an_orcish_lord
 {
     NAME An Orcish Lord
@@ -233,8 +255,8 @@ SECTION NPC $npc_an_orcish_lord
     DIRECTION E
     SPEECH $speech_orcish
     BACKPACK
-    ITEM $item_ringmail_tunic
-    PACKITEM $item_ringmail_tunic
+    ITEM $item_iron_ringmail_tunic
+    PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_boots
     PACKITEM $item_a_orc_mask
     LOOT $loot_uncut_gems
@@ -269,9 +291,16 @@ SECTION NPC $npc_an_orcish_lord
     ///DESCRIPTION Orc Lord (with axe)
 }
 
+
+//************************************************************************
+//*************************  Goblins *************************************
+//*************************          *************************************
+//************************************************************************
+
 SECTION NPC $npc_goblin
 {
     NAMELIST $names_orcs
+    //$$ goblin
     ID 0011
     SKIN 08a4
     DIRECTION E
@@ -303,9 +332,11 @@ SECTION NPC $npc_goblin
     ///DESCRIPTION Goblin
 }
 
+//a goblin with club
 SECTION NPC $npc_goblin_club
 {
     NAMELIST $names_orcs
+    //$$ goblin club
     ID 0029
     SKIN 08a4
     DIRECTION E
@@ -338,6 +369,7 @@ SECTION NPC $npc_goblin_club
     ///DESCRIPTION Goblin (with club)
 }
 
+// a goblin mage
 SECTION NPC $npc_a_goblin_mage
 {
     NAME a goblin mage
@@ -377,16 +409,17 @@ SECTION NPC $npc_a_goblin_mage
 }
 
 // Goblin with two handed axes
-SECTION NPC $npc_a_goblin_axe
+SECTION NPC $npc_ratman_mage
 {
     NAMELIST $names_orcs
+    //$$ goblin 2 hand axe
     ID 0007
     SKIN 08a4
     DIRECTION E
     SPEECH $speech_orcish
     BACKPACK
-    ITEM $item_a_two-handed_axe
-    PACKITEM $item_ringmail_tunic
+    ITEM $item_iron_two-handed_axe
+    PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_boots
     PACKITEM $item_a_orc_helm
     LOOT $loot_uncut_gems
@@ -420,16 +453,18 @@ SECTION NPC $npc_a_goblin_axe
     ///DESCRIPTION Goblin (with axe)
 }
 
+//Goblin Captain
 SECTION NPC $npc_goblin_captain
 {
     NAMELIST $names_orcs
+    //$$ goblin captain
     ID 0007
     SKIN 08a4
     DIRECTION E
     SPEECH $speech_orcish
     BACKPACK
-    ITEM $item_a_two-handed_axe
-    PACKITEM $item_ringmail_tunic
+    ITEM $item_iron_two-handed_axe
+    PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_thigh_boots
     PACKITEM $item_a_orc_mask
     LOOT $loot_uncut_gems
@@ -463,6 +498,7 @@ SECTION NPC $npc_goblin_captain
     ///DESCRIPTION Goblin Captain
 }
 
+// Goblin Lord with two handed axes
 SECTION NPC $npc_a_goblin_lord
 {
     NAME A Goblin Lord
@@ -471,8 +507,8 @@ SECTION NPC $npc_a_goblin_lord
     DIRECTION E
     SPEECH $speech_orcish
     BACKPACK
-    ITEM $item_a_two-handed_axe
-    PACKITEM $item_ringmail_tunic
+    ITEM $item_iron_two-handed_axe
+    PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_boots
     PACKITEM $item_a_orc_mask
     LOOT $loot_uncut_gems
@@ -505,4 +541,5 @@ SECTION NPC $npc_a_goblin_lord
     ///SUBSECTION Goblins
     ///DESCRIPTION Goblin Lord
 }
+
 

@@ -15,7 +15,7 @@ SECTION LOOTLIST $loot_circle_1-5_spells
     $item_a_create_food_scroll
     $item_a_feeblemind_scroll
     $item_a_heal_scroll
-    $item_a_magic_arrow_scroll
+    $item_magic_arrow_scroll
     $item_a_night_sight_scroll
     $item_a_reactive_armor_scroll
     $item_a_weaken_scroll
@@ -23,13 +23,13 @@ SECTION LOOTLIST $loot_circle_1-5_spells
     $item_a_cunning_scroll
     $item_a_cure_scroll
     $item_a_harm_scroll
-    $item_a_magic_trap_scroll
-    $item_a_magic_untrap_scroll
+    $item_magic_trap_scroll
+    $item_magic_untrap_scroll
     $item_a_protection_scroll
     $item_a_strength_scroll
     $item_a_bless_scroll
     $item_a_fireball_scroll
-    $item_a_magic_lock_scroll
+    $item_magic_lock_scroll
     $item_a_poison_scroll
     $item_a_telekinesis_scroll
     $item_a_teleport_scroll
@@ -46,7 +46,7 @@ SECTION LOOTLIST $loot_circle_1-5_spells
     $item_a_blade_spirits_scroll
     $item_a_dispel_field_scroll
     $item_an_incognito_scroll
-    $item_a_magic_reflection_scroll
+    $item_magic_reflection_scroll
     $item_a_mind_blast_scroll
     $item_a_paralyze_scroll
     $item_a_poison_field_scroll
@@ -223,19 +223,19 @@ SECTION LOOTLIST $loot_omnivores_food
     $item_grape_bunches
     $item_peaches
     $item_fruit_basket
-    $item_heads_of_lettuce
-    $item_squash
+    $item_lettuce1
+    $item_squash1
     $item_heads_of_cabbage
-    $item_ears_of_corn
+    $item_ears_of_corn1_4
     $item_jars_of_honey
-    $item_pumpkins
+    $item_pumpkin1
     $item_onions
     $item_coconuts
-    $item_bananas
+    $item_banana
     $item_bunches_of_dates
     $item_lemons
     $item_limes
-    $item_honeydew_melons
+    $item_honeydew_melons1
     $item_canteloupes
     $item_watermelons
 }
@@ -252,14 +252,14 @@ SECTION LOOTLIST $loot_food_wine_bread_cheese_meat
     $item_wheels_of_cheese
     $item_bread_loaves
     $item_cooked_birds
-    $item_a_cleaver_of_might
+    $item_iron_cleaver_of_might
     $item_sausages
     $item_hams
-    $item_a_cleaver_of_ruin
+    $item_iron_cleaver_of_ruin
     $item_cuts_of_ribs
     $item_fish_steaks
     $item_slabs_of_bacon
-    $item_a_butcher_knife_of_vanquishing
+    $item_iron_butcher_knife_of_vanquishing
     $item_slices_of_bacon
 }
 //***********************************************
@@ -314,8 +314,8 @@ SECTION LOOTLIST $loot_small_blades
     $item_butcher_knife
     $item_skinning_knife
     $item_meat_cleaver
-    $item_dagger
-    $item_kryss
+    $item_iron_dagger
+    $item_iron_kryss
 }
 
 //***********************************************
@@ -324,12 +324,12 @@ SECTION LOOTLIST $loot_small_blades
 SECTION LOOTLIST $loot_swords
 {
     //$$ swords
-    $item_kryss
-    $item_scimitar
-    $item_long_sword
-    $item_broadsword
-    $item_cutlass
-    $item_katana
+    $item_iron_kryss
+    $item_iron_scimitar
+    $item_iron_long_sword
+    $item_iron_broadsword
+    $item_iron_cutlass
+    $item_iron_katana
 }
 
 //***********************************************
@@ -339,17 +339,17 @@ SECTION LOOTLIST $loot_axes
 {
     //$$ axes
     $item_hatchet
-    $item_a_axe_of_ruin
-    $item_a_axe_of_force
-    $item_a_axe_of_vanquishing
-    $item_battle_axe
-    $item_a_magic_bardiche_of_vanquishing
-    $item_a_magic_halberd_of_vanquishing
-    $item_a_hammer_pick_of_might
-    $item_a_hammer_pick_of_vanquishing
-    $item_a_hatchet_of_power
-    $item_a_long_sword_of_power
-    $item_a_hatchet_of_vanquishing
+    $item_iron_axe_of_ruin
+    $item_iron_axe_of_force
+    $item_iron_axe_of_vanquishing
+    $item_iron_battle_axe
+    $item_iron_bardiche_of_vanquishing
+    $item_iron_halberd_of_vanquishing
+    $item_iron_hammer_pick_of_might
+    $item_iron_hammer_pick_of_vanquishing
+    $item_iron_hatchet_of_power
+    $item_iron_long_sword_of_power
+    $item_iron_hatchet_of_vanquishing
 }
 
 //***********************************************
@@ -358,9 +358,9 @@ SECTION LOOTLIST $loot_axes
 SECTION LOOTLIST $loot_large_axes
 {
     //$$ large axes
-    $item_double_axe
-    $item_large_battle_axe
-    $item_a_two-handed_axe
+    $item_iron_double_axe
+    $item_iron_large_battle_axe
+    $item_iron_two-handed_axe
 
 }
 
@@ -370,8 +370,8 @@ SECTION LOOTLIST $loot_large_axes
 SECTION LOOTLIST $loot_polearms
 {
     //$$ polearms
-    $item_bardiche
-    $item_halberd
+    $item_iron_bardiche
+    $item_iron_halberd
 }
 
 //***********************************************
@@ -381,9 +381,9 @@ SECTION LOOTLIST $loot_medium_maces
 {
     //$$ medium maces
     $item_club
-    $item_hammer_pick
-    $item_mace
-    $item_maul
+    $item_iron_hammer_pick
+    $item_iron_mace
+    $item_iron_maul
 }
 
 //***********************************************
@@ -392,8 +392,8 @@ SECTION LOOTLIST $loot_medium_maces
 SECTION LOOTLIST $loot_large_maces
 {
     //$$ large maces
-    $item_war_hammer
-    $item_war_mace
+    $item_iron_war_hammer
+    $item_iron_war_mace
 }
 
 //***********************************************
@@ -413,9 +413,9 @@ SECTION LOOTLIST $loot_staves
 SECTION LOOTLIST $loot_spears
 {
     //$$ spears
-    $item_spear
-    $item_short_spear
-    $item_war_fork
+    $item_iron_spear
+    $item_iron_short_spear
+    $item_iron_war_fork
 }
 
 //***********************************************
@@ -424,26 +424,26 @@ SECTION LOOTLIST $loot_spears
 SECTION LOOTLIST $loot_vikings
 {
     //$$ vikings
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_a_viking_sword_of_ruin
-    $item_a_viking_sword_of_force
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_viking_sword
-    $item_a_viking_sword_of_ruin
-    $item_a_viking_sword_of_might
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword_of_ruin
+    $item_iron_viking_sword_of_force
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword
+    $item_iron_viking_sword_of_ruin
+    $item_iron_viking_sword_of_might
 }
 
 //***********************************************
@@ -524,11 +524,11 @@ SECTION LOOTLIST $loot_heavy_crossbows
 SECTION LOOTLIST $loot_small_shields
 {
     //$$ small shields
-    $item_wooden_kite_shield
+    $item_iron_wooden_kite_shield
     $item_wooden_shield
-    $item_metal_shield
-    $item_bronze_shield
-    $item_buckler
+    $item_iron_metal_shield
+    $item_iron_bronze_shield
+    $item_iron_buckler
 }
 
 // Random Minor Head Protection
@@ -541,7 +541,7 @@ SECTION LOOTLIST $loot_minor_helms
     $item_a_orc_mask
     $item_a_tribal_mask
     $item_a_tribal_mask_1
-    $item_chain_coif
+    $item_iron_chain_coif
     $item_bone_helm
 }
 
@@ -563,7 +563,7 @@ SECTION LOOTLIST $loot_minor_arms
     $item_studded_leather_sleeves
     $item_leather_sleeves
     $item_studded_leather_sleeves
-    $item_ringmail_sleeves
+    $item_iron_ringmail_sleeves
     $item_bone_arms
 }
 
@@ -576,7 +576,7 @@ SECTION LOOTLIST $loot_minor_gloves
     $item_studded_leather_gloves
     $item_leather_gloves
     $item_studded_leather_gloves
-    $item_ringmail_gloves
+    $item_iron_ringmail_gloves
     $item_bone_gloves
 }
 
@@ -589,8 +589,8 @@ SECTION LOOTLIST $loot_minor_chest_armor
     $item_studded_leather_tunic
     $item_leather_tunic
     $item_studded_leather_tunic
-    $item_ringmail_tunic
-    $item_chain_tunic
+    $item_iron_ringmail_tunic
+    $item_iron_chain_tunic
     $item_bone_chest
 }
 
@@ -603,8 +603,8 @@ SECTION LOOTLIST $loot_minor_leggings
     $item_studded_leather_leggings
     $item_leather_leggings
     $item_studded_leather_leggings
-    $item_ringmail_leggings
-    $item_chain_leggings
+    $item_iron_ringmail_leggings
+    $item_iron_chain_leggings
     $item_bone_legs
 }
 
@@ -628,29 +628,29 @@ SECTION LOOTLIST $loot_minor_shoes
 SECTION LOOTLIST $loot_major_helms
 {
     //$$ major helms
-    $item_chain_coif
+    $item_iron_chain_coif
     $item_bone_helm
-    $item_plate_helm
-    $item_close_helm
-    $item_a_helmet
-    $item_bascinet
-    $item_nose_helm
+    $item_iron_plate_helm
+    $item_iron_close_helm
+    $item_iron_helmet
+    $item_iron_bascinet
+    $item_iron_nose_helm
 }
 
 // Random Major Neck Protection
 SECTION LOOTLIST $loot_major_neck
 {
     //$$ major neck
-    $item_plate_gorget
+    $item_iron_plate_gorget
 }
 
 // Random Major Arms Protection
 SECTION LOOTLIST $loot_major_arms
 {
     //$$ major arms
-    $item_ringmail_sleeves
+    $item_iron_ringmail_sleeves
     $item_bone_arms
-    $item_plate_sleeves
+    $item_iron_plate_sleeves
 }
 
 // Random Major Hand Protection
@@ -658,25 +658,25 @@ SECTION LOOTLIST $loot_major_hand
 {
     //$$ major hand
     $item_bone_gloves
-    $item_plate_gloves
+    $item_iron_plate_gloves
 }
 
 // Random Major Body Protection
 SECTION LOOTLIST $loot_major_body
 {
     //$$ major body
-    $item_chain_tunic
+    $item_iron_chain_tunic
     $item_bone_chest
-    $item_platemail
+    $item_iron_platemail
 }
 
 // Random Major Legs Protection
 SECTION LOOTLIST $loot_major_legs
 {
     //$$ major legs
-    $item_chain_leggings
+    $item_iron_chain_leggings
     $item_bone_legs
-    $item_plate_leggings
+    $item_iron_plate_leggings
 }
 
 // Random Major Feet Protection
@@ -746,12 +746,12 @@ SECTION LOOTLIST $loot_bone_armor
 SECTION LOOTLIST $loot_platemail
 {
     //$$ platemail
-    $item_platemail
-    $item_plate_gorget
-    $item_plate_gloves
-    $item_plate_helm
-    $item_plate_leggings
-    $item_plate_sleeves
+    $item_iron_platemail
+    $item_iron_plate_gorget
+    $item_iron_plate_gloves
+    $item_iron_plate_helm
+    $item_iron_plate_leggings
+    $item_iron_plate_sleeves
 }
 
 
@@ -762,23 +762,23 @@ SECTION LOOTLIST $loot_platemail
 SECTION LOOTLIST $loot_weak_magical_armor
 {
     //$$ weak magical armor
-    $item_chainmail_of_defence
-    $item_chain_legs_of_defence
-    $item_chain_coif_of_defence
-    $item_chainmail_of_guarding
-    $item_chain_legs_of_guarding
-    $item_chain_coif_of_guarding
-    $item_plate_gorget_of_defence
-    $item_plate_gloves_of_defence
-    $item_plate_helm_of_defence
-    $item_plate_legs_of_defence
-    $item_plate_arms_of_defence
-    $item_platemail_of_guarding
-    $item_plate_gorget_of_guarding
-    $item_plate_gloves_of_guarding
-    $item_plate_helm_of_guarding
-    $item_plate_legs_of_guarding
-    $item_plate_arms_of_guarding
+    $item_iron_chainmail_of_defence
+    $item_iron_chain_legs_of_defence
+    $item_iron_chain_coif_of_defence
+    $item_iron_chainmail_of_guarding
+    $item_iron_chain_legs_of_guarding
+    $item_iron_chain_coif_of_guarding
+    $item_iron_plate_gorget_of_defence
+    $item_iron_plate_gloves_of_defence
+    $item_iron_plate_helm_of_defence
+    $item_iron_plate_leggings_of_defence
+    $item_iron_plate_sleeves_of_defence
+    $item_iron_platemail_of_guarding
+    $item_iron_plate_gorget_of_guarding
+    $item_iron_plate_gloves_of_guarding
+    $item_iron_plate_helm_of_guarding
+    $item_iron_plate_leggings_of_guarding
+    $item_iron_plate_sleeves_of_guarding
 }
 
 // *******************
@@ -788,33 +788,33 @@ SECTION LOOTLIST $loot_weak_magical_armor
 SECTION LOOTLIST $loot_strong_magical_armor
 {
     //$$ strong magical armor
-    $item_chainmail_of_hardening
-    $item_chain_legs_of_hardening
-    $item_chain_coif_of_hardening
-    $item_chainmail_of_fortification
-    $item_chain_legs_of_fortification
-    $item_chain_coif_of_fortification
-    $item_chainmail_of_invulnerability
-    $item_chain_legs_of_invulnerability
-    $item_chain_coif_of_invulnerability
-    $item_plate_of_hardening
-    $item_plate_gorget_of_hardening
-    $item_plate_gloves_of_hardening
-    $item_plate_helm_of_hardening
-    $item_plate_legs_of_hardening
-    $item_plate_arms_of_hardening
-    $item_platemail_of_fortification
-    $item_plate_gorget_of_fortification
-    $item_plate_gloves_of_fortification
-    $item_plate_helm_of_fortification
-    $item_plate_legs_of_fortification
-    $item_plate_arms_of_fortification
-    $item_magic_platemail_of_invulnerability
-    $item_magic_plate_gorget_of_invulnerability
-    $item_magic_plate_gloves_of_invulnerability
-    $item_magic_plate_helm_of_invulnerability
-    $item_magic_plate_legs_of_invulnerability
-    $item_magic_plate_arms_of_invulnerability
+    $item_iron_chainmail_of_hardening
+    $item_iron_chain_legs_of_hardening
+    $item_iron_chain_coif_of_hardening
+    $item_iron_chainmail_of_fortification
+    $item_iron_chain_legs_of_fortification
+    $item_iron_chain_coif_of_fortification
+    $item_iron_chainmail_of_invulnerability
+    $item_iron_chain_legs_of_invulnerability
+    $item_iron_chain_coif_of_invulnerability
+    $item_iron_plate_of_hardening
+    $item_iron_plate_gorget_of_hardening
+    $item_iron_plate_gloves_of_hardening
+    $item_iron_plate_helm_of_hardening
+    $item_iron_plate_leggings_of_hardening
+    $item_iron_plate_sleeves_of_hardening
+    $item_iron_platemail_of_fortification
+    $item_iron_plate_gorget_of_fortification
+    $item_iron_plate_gloves_of_fortification
+    $item_iron_plate_helm_of_fortification
+    $item_iron_plate_leggings_of_fortification
+    $item_iron_plate_sleeves_of_fortification
+    $item_iron_platemail_of_invulnerability
+    $item_iron_plate_gorget_of_invulnerability
+    $item_iron_plate_gloves_of_invulnerability
+    $item_iron_plate_helm_of_invulnerability
+    $item_iron_plate_leggings_of_invulnerability
+    $item_iron_plate_sleeves_of_invulnerability
 }
 
 // *********************
@@ -824,72 +824,72 @@ SECTION LOOTLIST $loot_strong_magical_armor
 SECTION LOOTLIST $loot_weak_magical_weapons
 {
     //$$ weak magical weapons
-    $item_a_long_sword_of_ruin
-    $item_a_long_sword_of_might
-    $item_a_viking_sword_of_ruin
-    $item_a_viking_sword_of_might
-    $item_a_broad_sword_of_ruin
-    $item_a_broad_sword_of_might
-    $item_a_scimitar_of_ruin
-    $item_a_scimitar_of_might
-    $item_a_cutlass_of_ruin
-    $item_a_cutlass_of_might
-    $item_a_katana_of_ruin
-    $item_a_katana_of_might
-    $item_a_hatchet_of_ruin
-    $item_a_hatchet_of_might
-    $item_a_executionners_axe_of_ruin
-    $item_a_executionners_axe_of_might
-    $item_a_axe_of_ruin
-    $item_a_axe_of_might
-    $item_a_double_axe_of_ruin
-    $item_a_double_axe_of_might
-    $item_a_large_battle_axe_of_ruin
-    $item_a_large_battle_axe_of_might
-    $item_a_pick_axe_of_ruin
-    $item_a_pick_axe_of_might
-    $item_a_war_axe_of_ruin
-    $item_a_war_axe_of_might
-    $item_a_butcher_knife_of_ruin
-    $item_a_butcher_knife_of_might
-    $item_a_skinning_knife_of_ruin
-    $item_a_skinning_knife_of_might
-    $item_a_cleaver_of_ruin
-    $item_a_cleaver_of_might
-    $item_a_dagger_of_ruin
-    $item_a_dagger_of_might
-    $item_a_kryss_of_ruin
-    $item_a_kryss_of_might
-    $item_a_club_of_ruin
-    $item_a_club_of_might
-    $item_a_hammer_pick_of_ruin
-    $item_a_hammer_pick_of_might
-    $item_a_magic_mace_of_ruin
-    $item_a_magic_mace_of_might
-    $item_a_magic_maul_of_ruin
-    $item_a_magic_maul_of_might
-    $item_a_magic_smiths_hammer_of_ruin
-    $item_a_magic_smiths_hammer_of_might
-    $item_a_magic_war_hammer_of_ruin
-    $item_a_magic_war_hammer_of_might
-    $item_a_magic_war_mace_of_ruin
-    $item_a_magic_war_mace_of_might
-    $item_a_magic_pitch_fork_of_ruin
-    $item_a_magic_pitch_fork_of_might
-    $item_a_magic_spear_of_ruin
-    $item_a_magic_spear_of_might
-    $item_a_magic_war_fork_of_ruin
-    $item_a_magic_war_fork_of_might
-    $item_a_magic_bardiche_of_ruin
-    $item_a_magic_bardiche_of_might
-    $item_a_magic_halberd_of_ruin
-    $item_a_magic_halberd_of_might
-    $item_a_magic_bow_of_ruin
-    $item_a_magic_bow_of_might
-    $item_a_magic_crossbow_of_ruin
-    $item_a_magic_crossbow_of_might
-    $item_a_magic_heavy_crossbow_of_ruin
-    $item_a_magic_heavy_crossbow_of_might
+    $item_iron_long_sword_of_ruin
+    $item_iron_long_sword_of_might
+    $item_iron_viking_sword_of_ruin
+    $item_iron_viking_sword_of_might
+    $item_iron_broad_sword_of_ruin
+    $item_iron_broad_sword_of_might
+    $item_iron_scimitar_of_ruin
+    $item_iron_scimitar_of_might
+    $item_iron_cutlass_of_ruin
+    $item_iron_cutlass_of_might
+    $item_iron_katana_of_ruin
+    $item_iron_katana_of_might
+    $item_iron_hatchet_of_ruin
+    $item_iron_hatchet_of_might
+    $item_iron_executionners_axe_of_ruin
+    $item_iron_executionners_axe_of_might
+    $item_iron_axe_of_ruin
+    $item_iron_axe_of_might
+    $item_iron_double_axe_of_ruin
+    $item_iron_double_axe_of_might
+    $item_iron_large_battle_axe_of_ruin
+    $item_iron_large_battle_axe_of_might
+    $item_iron_pick_axe_of_ruin
+    $item_iron_pick_axe_of_might
+    $item_iron_war_axe_of_ruin
+    $item_iron_war_axe_of_might
+    $item_iron_butcher_knife_of_ruin
+    $item_iron_butcher_knife_of_might
+    $item_iron_skinning_knife_of_ruin
+    $item_iron_skinning_knife_of_might
+    $item_iron_cleaver_of_ruin
+    $item_iron_cleaver_of_might
+    $item_iron_dagger_of_ruin
+    $item_iron_dagger_of_might
+    $item_iron_kryss_of_ruin
+    $item_iron_kryss_of_might
+    $item_iron_club_of_ruin
+    $item_iron_club_of_might
+    $item_iron_hammer_pick_of_ruin
+    $item_iron_hammer_pick_of_might
+    $item_iron_mace_of_ruin
+    $item_iron_mace_of_might
+    $item_iron_maul_of_ruin
+    $item_iron_maul_of_might
+    $item_iron_smiths_hammer_of_ruin
+    $item_iron_smiths_hammer_of_might
+    $item_iron_war_hammer_of_ruin
+    $item_iron_war_hammer_of_might
+    $item_iron_war_mace_of_ruin
+    $item_iron_war_mace_of_might
+    $item_iron_pitch_fork_of_ruin
+    $item_iron_pitch_fork_of_might
+    $item_iron_spear_of_ruin
+    $item_iron_spear_of_might
+    $item_iron_war_fork_of_ruin
+    $item_iron_war_fork_of_might
+    $item_iron_bardiche_of_ruin
+    $item_iron_bardiche_of_might
+    $item_iron_halberd_of_ruin
+    $item_iron_halberd_of_might
+    $item_iron_bow_of_ruin
+    $item_iron_bow_of_might
+    $item_iron_crossbow_of_ruin
+    $item_iron_crossbow_of_might
+    $item_iron_heavy_crossbow_of_ruin
+    $item_iron_heavy_crossbow_of_might
 }
 
 // ***********************
@@ -899,112 +899,112 @@ SECTION LOOTLIST $loot_weak_magical_weapons
 SECTION LOOTLIST $loot_strong_magical_weapons
 {
     //$$ strong magical weapons
-    $item_a_long_sword_of_force
-    $item_a_long_sword_of_power
-    $item_a_long_sword_of_vanquishing
-    $item_a_viking_sword_of_force
-    $item_a_viking_sword_of_power
-    $item_a_viking_sword_of_vanquishing
-    $item_a_broad_sword_of_force
-    $item_a_broad_sword_of_power
-    $item_a_broad_sword_of_vanquishing
-    $item_a_scimitar_of_force
-    $item_a_scimitar_of_power
-    $item_a_scimitar_of_vanquishing
-    $item_a_cutlass_of_force
-    $item_a_cutlass_of_power
-    $item_a_cutlass_of_vanquishing
-    $item_a_katana_of_force
-    $item_a_katana_of_power
-    $item_a_katana_of_vanquishing
-    $item_a_hatchet_of_force
-    $item_a_hatchet_of_power
-    $item_a_hatchet_of_vanquishing
-    $item_a_executionners_axe_of_force
-    $item_a_executionners_axe_of_power
-    $item_a_executionners_axe_of_vanquishing
-    $item_a_axe_of_force
-    $item_a_axe_of_power
-    $item_a_axe_of_vanquishing
-    $item_a_double_axe_of_force
-    $item_a_double_axe_of_power
-    $item_a_double_axe_of_vanquishing
-    $item_a_large_battle_axe_of_force
-    $item_a_large_battle_axe_of_power
-    $item_a_large_battle_axe_of_vanquishing
-    $item_a_pick_axe_of_force
-    $item_a_pick_axe_of_power
-    $item_a_pick_axe_of_vanquishing
-    $item_a_war_axe_of_force
-    $item_a_war_axe_of_power
-    $item_a_war_axe_of_vanquishing
-    $item_a_butcher_knife_of_force
-    $item_a_butcher_knife_of_power
-    $item_a_butcher_knife_of_vanquishing
-    $item_a_skinning_knife_of_force
-    $item_a_skinning_knife_of_power
-    $item_a_skinning_knife_of_vanquishing
-    $item_a_cleaver_of_force
-    $item_a_cleaver_of_power
-    $item_a_cleaver_of_vanquishing
-    $item_a_dagger_of_force
-    $item_a_dagger_of_power
-    $item_a_dagger_of_vanquishing
-    $item_a_kryss_of_force
-    $item_a_kryss_of_power
-    $item_a_kryss_of_vanquishing
-    $item_a_club_of_force
-    $item_a_club_of_power
-    $item_a_club_of_vanquishing
-    $item_a_hammer_pick_of_force
-    $item_a_hammer_pick_of_power
-    $item_a_hammer_pick_of_vanquishing
-    $item_a_magic_mace_of_force
-    $item_a_magic_mace_of_power
-    $item_a_magic_mace_of_vanquishing
-    $item_a_magic_maul_of_force
-    $item_a_magic_maul_of_power
-    $item_a_magic_maul_of_vanquishing
-    $item_a_magic_smiths_hammer_of_force
-    $item_a_magic_smiths_hammer_of_power
-    $item_a_magic_smiths_hammer_of_vanquishing
-    $item_a_magic_war_hammer_of_force
-    $item_a_magic_war_hammer_of_power
-    $item_a_magic_war_hammer_of_vanquishing
-    $item_a_magic_war_mace_of_force
-    $item_a_magic_war_mace_of_power
-    $item_a_magic_war_mace_of_vanquishing
-    $item_a_magic_pitch_fork_of_force
-    $item_a_magic_pitch_fork_of_power
-    $item_a_magic_pitch_fork_of_vanquishing
-    $item_a_magic_spear_of_force
-    $item_a_magic_spear_of_power
-    $item_a_magic_spear_of_vanquishing
-    $item_a_magic_war_fork_of_force
-    $item_a_magic_war_fork_of_power
-    $item_a_magic_war_fork_of_vanquishing
-    $item_a_magic_bardiche_of_force
-    $item_a_magic_bardiche_of_power
-    $item_a_magic_bardiche_of_vanquishing
-    $item_a_magic_halberd_of_force
-    $item_a_magic_halberd_of_power
-    $item_a_magic_halberd_of_vanquishing
-    $item_a_magic_bow_of_force
-    $item_a_magic_bow_of_power
-    $item_a_magic_bow_of_vanquishing
-    $item_a_magic_crossbow_of_force
-    $item_a_magic_crossbow_of_power
-    $item_a_magic_crossbow_of_vanquishing
-    $item_a_magic_heavy_crossbow_of_force
-    $item_a_magic_heavy_crossbow_of_power
-    $item_a_magic_heavy_crossbow_of_vanquishing
+    $item_iron_long_sword_of_force
+    $item_iron_long_sword_of_power
+    $item_iron_long_sword_of_vanquishing
+    $item_iron_viking_sword_of_force
+    $item_iron_viking_sword_of_power
+    $item_iron_viking_sword_of_vanquishing
+    $item_iron_broad_sword_of_force
+    $item_iron_broad_sword_of_power
+    $item_iron_broad_sword_of_vanquishing
+    $item_iron_scimitar_of_force
+    $item_iron_scimitar_of_power
+    $item_iron_scimitar_of_vanquishing
+    $item_iron_cutlass_of_force
+    $item_iron_cutlass_of_power
+    $item_iron_cutlass_of_vanquishing
+    $item_iron_katana_of_force
+    $item_iron_katana_of_power
+    $item_iron_katana_of_vanquishing
+    $item_iron_hatchet_of_force
+    $item_iron_hatchet_of_power
+    $item_iron_hatchet_of_vanquishing
+    $item_iron_executionners_axe_of_force
+    $item_iron_executionners_axe_of_power
+    $item_iron_executionners_axe_of_vanquishing
+    $item_iron_axe_of_force
+    $item_iron_axe_of_power
+    $item_iron_axe_of_vanquishing
+    $item_iron_double_axe_of_force
+    $item_iron_double_axe_of_power
+    $item_iron_double_axe_of_vanquishing
+    $item_iron_large_battle_axe_of_force
+    $item_iron_large_battle_axe_of_power
+    $item_iron_large_battle_axe_of_vanquishing
+    $item_iron_pick_axe_of_force
+    $item_iron_pick_axe_of_power
+    $item_iron_pick_axe_of_vanquishing
+    $item_iron_war_axe_of_force
+    $item_iron_war_axe_of_power
+    $item_iron_war_axe_of_vanquishing
+    $item_iron_butcher_knife_of_force
+    $item_iron_butcher_knife_of_power
+    $item_iron_butcher_knife_of_vanquishing
+    $item_iron_skinning_knife_of_force
+    $item_iron_skinning_knife_of_power
+    $item_iron_skinning_knife_of_vanquishing
+    $item_iron_cleaver_of_force
+    $item_iron_cleaver_of_power
+    $item_iron_cleaver_of_vanquishing
+    $item_iron_dagger_of_force
+    $item_iron_dagger_of_power
+    $item_iron_dagger_of_vanquishing
+    $item_iron_kryss_of_force
+    $item_iron_kryss_of_power
+    $item_iron_kryss_of_vanquishing
+    $item_iron_club_of_force
+    $item_iron_club_of_power
+    $item_iron_club_of_vanquishing
+    $item_iron_hammer_pick_of_force
+    $item_iron_hammer_pick_of_power
+    $item_iron_hammer_pick_of_vanquishing
+    $item_iron_mace_of_force
+    $item_iron_mace_of_power
+    $item_iron_mace_of_vanquishing
+    $item_iron_maul_of_force
+    $item_iron_maul_of_power
+    $item_iron_maul_of_vanquishing
+    $item_iron_smiths_hammer_of_force
+    $item_iron_smiths_hammer_of_power
+    $item_iron_smiths_hammer_of_vanquishing
+    $item_iron_war_hammer_of_force
+    $item_iron_war_hammer_of_power
+    $item_iron_war_hammer_of_vanquishing
+    $item_iron_war_mace_of_force
+    $item_iron_war_mace_of_power
+    $item_iron_war_mace_of_vanquishing
+    $item_iron_pitch_fork_of_force
+    $item_iron_pitch_fork_of_power
+    $item_iron_pitch_fork_of_vanquishing
+    $item_iron_spear_of_force
+    $item_iron_spear_of_power
+    $item_iron_spear_of_vanquishing
+    $item_iron_war_fork_of_force
+    $item_iron_war_fork_of_power
+    $item_iron_war_fork_of_vanquishing
+    $item_iron_bardiche_of_force
+    $item_iron_bardiche_of_power
+    $item_iron_bardiche_of_vanquishing
+    $item_iron_halberd_of_force
+    $item_iron_halberd_of_power
+    $item_iron_halberd_of_vanquishing
+    $item_iron_bow_of_force
+    $item_iron_bow_of_power
+    $item_iron_bow_of_vanquishing
+    $item_iron_crossbow_of_force
+    $item_iron_crossbow_of_power
+    $item_iron_crossbow_of_vanquishing
+    $item_iron_heavy_crossbow_of_force
+    $item_iron_heavy_crossbow_of_power
+    $item_iron_heavy_crossbow_of_vanquishing
 }
 
 //Seph's Stuff loot (trinkets and such)
 SECTION LOOTLIST $loot_misc_stuff
 {
     //$$ misc stuff
-    $item_barrel
+    $item_barrel_without_lid
     $item_gold_key
     $item_iron_key
     $item_magic_key
@@ -1012,7 +1012,7 @@ SECTION LOOTLIST $loot_misc_stuff
     $item_a_recall_rune
     $item_empty_vials
     $item_bottle_5
-    $item_silver_coin_2
+    $item_silver_coin 6
     $item_copper_coin
     $item_balls_of_yarn
     $item_drum
@@ -1057,15 +1057,15 @@ SECTION LOOTLIST $loot_pagan_reagents
 SECTION LOOTLIST $loot_colored_armor
 {
     //$$ colored armor
-    $item_nose_helm_1
+    $item_iron_nose_helm_1
     $item_fish
     $item_raw_fish
     $item_merkite_platemail
     $item_merkite_plate_gorget
     $item_merkite_plate_gloves
     $item_merkite_plate_helm
-    $item_merkite_plate_legs
-    $item_merkite_plate_arms
+    $item_merkite_plate_leggings
+    $item_merkite_plate_sleeves
     $item_merkite_nose_helm
     $item_merkite_close_helm
     $item_merkite_bascinet
@@ -1073,8 +1073,8 @@ SECTION LOOTLIST $loot_colored_armor
     $item_valorite_plate_gorget
     $item_valorite_plate_gloves
     $item_valorite_plate_helm
-    $item_valorite_plate_legs
-    $item_valorite_plate_arms
+    $item_valorite_plate_leggings
+    $item_valorite_plate_sleeves
     $item_valorite_nose_helm
     $item_valorite_close_helm
     $item_valorite_helmet
@@ -1083,8 +1083,8 @@ SECTION LOOTLIST $loot_colored_armor
     $item_verite_plate_gorget
     $item_verite_plate_gloves
     $item_verite_plate_helm
-    $item_verite_plate_legs
-    $item_verite_plate_arms
+    $item_verite_plate_leggings
+    $item_verite_plate_sleeves
     $item_verite_nose_helm
     $item_verite_close_helm
     $item_verite_helmet
@@ -1093,8 +1093,8 @@ SECTION LOOTLIST $loot_colored_armor
     $item_bronze_plate_gorget
     $item_bronze_plate_gloves
     $item_bronze_plate_helm
-    $item_bronze_plate_legs
-    $item_bronze_plate_arms
+    $item_bronze_plate_leggings
+    $item_bronze_plate_sleeves
     $item_bronze_nose_helm
     $item_bronze_close_helm
     $item_bronze_helmet
@@ -1103,8 +1103,8 @@ SECTION LOOTLIST $loot_colored_armor
     $item_agapite_plate_gorget
     $item_agapite_plate_gloves
     $item_agapite_plate_helm
-    $item_agapite_plate_legs
-    $item_agapite_plate_arms
+    $item_agapite_plate_leggings
+    $item_agapite_plate_sleeves
     $item_agapite_nose_helm
     $item_agapite_close_helm
     $item_agapite_helmet
@@ -1137,93 +1137,93 @@ SECTION LOOTLIST $loot_poison_potion
 SECTION LOOTLIST $loot_magic_axes
 {
     //$$ magic axes
-    $item_a_axe_of_force
-    $item_a_axe_of_might
-    $item_a_axe_of_power
-    $item_a_axe_of_ruin
-    $item_a_axe_of_vanquishing
-    $item_a_magic_bardiche_of_force
-    $item_a_magic_bardiche_of_might
-    $item_a_magic_bardiche_of_power
-    $item_a_magic_bardiche_of_ruin
-    $item_a_magic_bardiche_of_vanquishing
-    $item_a_double_axe_of_force
-    $item_a_double_axe_of_might
-    $item_a_double_axe_of_power
-    $item_a_double_axe_of_ruin
-    $item_a_double_axe_of_vanquishing
-    $item_a_executionners_axe_of_force
-    $item_a_executionners_axe_of_might
-    $item_a_executionners_axe_of_power
-    $item_a_executionners_axe_of_ruin
-    $item_a_executionners_axe_of_vanquishing
-    $item_a_hatchet_of_force
-    $item_a_hatchet_of_might
-    $item_a_hatchet_of_power
-    $item_a_hatchet_of_ruin
-    $item_a_hatchet_of_vanquishing
-    $item_a_magic_halberd_of_force
-    $item_a_magic_halberd_of_might
-    $item_a_magic_halberd_of_power
-    $item_a_magic_halberd_of_ruin
-    $item_a_magic_halberd_of_vanquishing
+    $item_iron_axe_of_force
+    $item_iron_axe_of_might
+    $item_iron_axe_of_power
+    $item_iron_axe_of_ruin
+    $item_iron_axe_of_vanquishing
+    $item_iron_bardiche_of_force
+    $item_iron_bardiche_of_might
+    $item_iron_bardiche_of_power
+    $item_iron_bardiche_of_ruin
+    $item_iron_bardiche_of_vanquishing
+    $item_iron_double_axe_of_force
+    $item_iron_double_axe_of_might
+    $item_iron_double_axe_of_power
+    $item_iron_double_axe_of_ruin
+    $item_iron_double_axe_of_vanquishing
+    $item_iron_executionners_axe_of_force
+    $item_iron_executionners_axe_of_might
+    $item_iron_executionners_axe_of_power
+    $item_iron_executionners_axe_of_ruin
+    $item_iron_executionners_axe_of_vanquishing
+    $item_iron_hatchet_of_force
+    $item_iron_hatchet_of_might
+    $item_iron_hatchet_of_power
+    $item_iron_hatchet_of_ruin
+    $item_iron_hatchet_of_vanquishing
+    $item_iron_halberd_of_force
+    $item_iron_halberd_of_might
+    $item_iron_halberd_of_power
+    $item_iron_halberd_of_ruin
+    $item_iron_halberd_of_vanquishing
 }
 
 // MAGIC BOWS LOOTLIST
 SECTION LOOTLIST $loot_magic_bows
 {
     //$$ magic bows
-    $item_a_magic_bow_of_force
-    $item_a_magic_bow_of_might
-    $item_a_magic_bow_of_power
-    $item_a_magic_bow_of_ruin
-    $item_a_magic_bow_of_vanquishing
-    $item_a_magic_crossbow_of_force
-    $item_a_magic_crossbow_of_might
-    $item_a_magic_crossbow_of_power
-    $item_a_magic_crossbow_of_ruin
-    $item_a_magic_crossbow_of_vanquishing
-    $item_a_magic_heavy_crossbow_of_force
-    $item_a_magic_heavy_crossbow_of_might
-    $item_a_magic_heavy_crossbow_of_power
-    $item_a_magic_heavy_crossbow_of_ruin
-    $item_a_magic_heavy_crossbow_of_vanquishing
+    $item_iron_bow_of_force
+    $item_iron_bow_of_might
+    $item_iron_bow_of_power
+    $item_iron_bow_of_ruin
+    $item_iron_bow_of_vanquishing
+    $item_iron_crossbow_of_force
+    $item_iron_crossbow_of_might
+    $item_iron_crossbow_of_power
+    $item_iron_crossbow_of_ruin
+    $item_iron_crossbow_of_vanquishing
+    $item_iron_heavy_crossbow_of_force
+    $item_iron_heavy_crossbow_of_might
+    $item_iron_heavy_crossbow_of_power
+    $item_iron_heavy_crossbow_of_ruin
+    $item_iron_heavy_crossbow_of_vanquishing
 }
 
 // MAGIC SWORDS LOOTLIST
 SECTION LOOTLIST $loot_magic_swords
 {
     //$$ magic swords
-    $item_a_broad_sword_of_force
-    $item_a_broad_sword_of_might
-    $item_a_broad_sword_of_power
-    $item_a_broad_sword_of_ruin
-    $item_a_broad_sword_of_vanquishing
-    $item_a_cutlass_of_force
-    $item_a_cutlass_of_might
-    $item_a_cutlass_of_power
-    $item_a_cutlass_of_ruin
-    $item_a_cutlass_of_vanquishing
-    $item_a_katana_of_force
-    $item_a_katana_of_might
-    $item_a_katana_of_power
-    $item_a_katana_of_ruin
+    $item_iron_broad_sword_of_force
+    $item_iron_broad_sword_of_might
+    $item_iron_broad_sword_of_power
+    $item_iron_broad_sword_of_ruin
+    $item_iron_broad_sword_of_vanquishing
+    $item_iron_cutlass_of_force
+    $item_iron_cutlass_of_might
+    $item_iron_cutlass_of_power
+    $item_iron_cutlass_of_ruin
+    $item_iron_cutlass_of_vanquishing
+    $item_iron_katana_of_force
+    $item_iron_katana_of_might
+    $item_iron_katana_of_power
+    $item_iron_katana_of_ruin
 }
 
 // MAGIC MACES LOOTLIST
 SECTION LOOTLIST $loot_magic_maces
 {
     //$$ magic maces
-    $item_a_magic_mace_of_force
-    $item_a_magic_mace_of_might
-    $item_a_magic_mace_of_power
-    $item_a_magic_mace_of_ruin
-    $item_a_magic_mace_of_vanquishing
-    $item_a_magic_maul_of_force
-    $item_a_magic_maul_of_might
-    $item_a_magic_maul_of_power
-    $item_a_magic_maul_of_ruin
-    $item_a_magic_maul_of_vanquishing
+    $item_iron_mace_of_force
+    $item_iron_mace_of_might
+    $item_iron_mace_of_power
+    $item_iron_mace_of_ruin
+    $item_iron_mace_of_vanquishing
+    $item_iron_maul_of_force
+    $item_iron_maul_of_might
+    $item_iron_maul_of_power
+    $item_iron_maul_of_ruin
+    $item_iron_maul_of_vanquishing
 }
 
 

@@ -1,17 +1,21 @@
+
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (npc_elves.xss)                                  ||
 // || Maintained by Xanathar and Kendra                                   ||
 // || Last Update 12-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+
 //********************************************************************
 //*************************** Wood Elves *****************************
 //***************************            *****************************
 //********************************************************************
 
+//Basic Wood Elf (Male)
 SECTION NPC $npc_wood_elf_male
 {
     NAMELIST $names_wood_elf_male
+    //$$ wood elf male
     TITLE the wood elf
     ID 0190
     ITEM $item_random_male_hair_list
@@ -49,9 +53,11 @@ SECTION NPC $npc_wood_elf_male
     ///DESCRIPTION Basic Wood Elf [M]
 }
 
+//Basic Wood Elf (Female)
 SECTION NPC $npc_wood_elf_female
 {
     NAMELIST $names_wood_elf_female
+    //$$ wood elf female
     TITLE the wood elf
     ID 0191
     ITEM $item_random_male_hair_list
@@ -89,9 +95,11 @@ SECTION NPC $npc_wood_elf_female
     ///DESCRIPTION Basic Wood Elf [F]
 }
 
+//Wood Elf King 2-10-99 (Magda)
 SECTION NPC $npc_wood_elf_king
 {
     NAMELIST $names_wood_elf_male
+    //$$ wood elf king
     TITLE the Wood Elf King
     ID 0190
     ITEM $item_random_male_hair_list
@@ -109,10 +117,10 @@ SECTION NPC $npc_wood_elf_king
     ITEM $item_valorite_chain_leggings
     ITEM $item_cloak
     COLOR 015f
-    ITEM $item_valorite_plate_arms
+    ITEM $item_valorite_plate_sleeves
     ITEM $item_sandles
     COLOR 0191
-    ITEM $item_a_broad_sword_of_power
+    ITEM $item_iron_broad_sword_of_power
     STR 45
     DEX 15 20
     INT 100
@@ -129,9 +137,11 @@ SECTION NPC $npc_wood_elf_king
     ///DESCRIPTION King
 }
 
+//Wood Elf Queen 2-10-99 (Magda)
 SECTION NPC $npc_wood_elf_queen
 {
     NAMELIST $names_wood_elf_female
+    //$$ wood elf queen
     TITLE the Wood Elf Queen
     ID 0191
     ITEM $item_random_female_hair_list
@@ -163,9 +173,11 @@ SECTION NPC $npc_wood_elf_queen
     ///DESCRIPTION Queen
 }
 
+//Wood Elf Archer (Male)
 SECTION NPC $npc_wood_elf_archer_m
 {
     NAMELIST $names_wood_elf_male
+    //$$ wood elf archer m
     TITLE the Wood Elf Archer
     ID 0190
     ITEM $item_random_male_hair_list
@@ -187,7 +199,7 @@ SECTION NPC $npc_wood_elf_archer_m
     COLOR 0599
     ITEM $item_cloak
     COLOR 0599
-    ITEM $item_a_magic_bow_of_force
+    ITEM $item_iron_bow_of_force
     COLOR 096d
     PACKITEM $item_arrow
     AMOUNT 150
@@ -211,9 +223,11 @@ SECTION NPC $npc_wood_elf_archer_m
     ///DESCRIPTION Archer [M]
 }
 
+//Wood Elf Archer (Female)
 SECTION NPC $npc_wood_elf_archer_f
 {
     NAMELIST $names_wood_elf_female
+    //$$ wood elf archer f
     TITLE the Wood Elf Archer
     ID 0191
     ITEM $item_random_female_hair_list
@@ -235,7 +249,7 @@ SECTION NPC $npc_wood_elf_archer_f
     COLOR 0599
     ITEM $item_cloak
     COLOR 0599
-    ITEM $item_a_magic_bow_of_force
+    ITEM $item_iron_bow_of_force
     COLOR 096d
     PACKITEM $item_arrow
     AMOUNT 150
@@ -256,12 +270,14 @@ SECTION NPC $npc_wood_elf_archer_f
 
     ///CATEGORY Evil Elves
     ///SUBSECTION Wood Elves
-    ///DESCRIPTION Archer [F]
+    ///DESCRIPTION Archer [M]
 }
 
+//Wood Elf Wizard
 SECTION NPC $npc_wood_elf_wizard
 {
     NAMELIST $names_wood_elf_male
+    //$$ wood elf wizard
     TITLE the Wood Elf Wizard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -302,9 +318,11 @@ SECTION NPC $npc_wood_elf_wizard
     ///DESCRIPTION Wizard [M]
 }
 
+//Wood Elf Enchantress
 SECTION NPC $npc_wood_elf_enchantress
 {
     NAMELIST $names_wood_elf_female
+    //$$ wood elf enchantress
     TITLE the Wood Elf Enchantress
     ID 0191
     ITEM $item_random_male_hair_list
@@ -345,9 +363,11 @@ SECTION NPC $npc_wood_elf_enchantress
     ///DESCRIPTION Enchantress [F]
 }
 
+//Wood Elf Priest
 SECTION NPC $npc_wood_elf_priest
 {
     NAMELIST $names_wood_elf_male
+    //$$ wood elf priest
     TITLE the Wood Elf Priest
     ID 0190
     ITEM $item_random_male_hair_list
@@ -389,9 +409,11 @@ SECTION NPC $npc_wood_elf_priest
     ///DESCRIPTION Priest [M]
 }
 
+//Wood Elf Priestess
 SECTION NPC $npc_wood_elf_priestess
 {
     NAMELIST $names_wood_elf_female
+    //$$ wood elf priestess
     TITLE the Wood Elf Priestess
     ID 0191
     ITEM $item_random_female_hair_list
@@ -438,9 +460,11 @@ SECTION NPC $npc_wood_elf_priestess
 //*****************************             ******************************
 //************************************************************************
 
+// Frost Elf
 SECTION NPC $npc_frost_elf_m
 {
     NAMELIST $names_high_elf_male
+    //$$ frost elf m
     TITLE the Frost Elf
     ID 0190
     ITEM
@@ -449,7 +473,7 @@ SECTION NPC $npc_frost_elf_m
     DIRECTION W
     BACKPACK
     GOLD 76 95
-    ITEM $item_short_spear
+    ITEM $item_iron_short_spear
     ITEM $item_thigh_boots
     COLOR 0482
     ITEM $item_cloak
@@ -487,9 +511,11 @@ SECTION NPC $npc_frost_elf_m
     ///DESCRIPTION Basic [M]
 }
 
+// Frost Elf
 SECTION NPC $npc_frost_elf_f
 {
     NAMELIST $names_high_elf_female
+    //$$ frost elf f
     TITLE the Frost Elf
     ID 0191
     ITEM
@@ -498,7 +524,7 @@ SECTION NPC $npc_frost_elf_f
     DIRECTION W
     BACKPACK
     GOLD 76 95
-    ITEM $item_short_spear
+    ITEM $item_iron_short_spear
     ITEM $item_thigh_boots
     COLOR 0482
     ITEM $item_cloak
@@ -536,9 +562,11 @@ SECTION NPC $npc_frost_elf_f
     ///DESCRIPTION Basic [F]
 }
 
+// Frost Elf Warrior
 SECTION NPC $npc_frost_elf_warrior
 {
     NAMELIST $names_high_elf_male
+    //$$ frost elf warrior
     TITLE the Frost Elf Warrior
     ID 0190
     ITEM
@@ -547,16 +575,16 @@ SECTION NPC $npc_frost_elf_warrior
     DIRECTION W
     BACKPACK
     GOLD 10 88
-    ITEM $item_spear
+    ITEM $item_iron_spear
     ITEM $item_thigh_boots
     COLOR 0482
     ITEM $item_cloak
     COLOR 0482
-    ITEM $item_chain_tunic
+    ITEM $item_iron_chain_tunic
     COLOR 0481
     ITEM $item_leather_gloves
     COLOR 0482
-    ITEM $item_chain_leggings
+    ITEM $item_iron_chain_leggings
     COLOR 0481
     ITEM $item_a_leather_gorget
     COLOR 0481
@@ -588,9 +616,66 @@ SECTION NPC $npc_frost_elf_warrior
     ///DESCRIPTION Warrior [M]
 }
 
+// Frost Elf Archer
 SECTION NPC $npc_frost_elf_archer
 {
     NAMELIST $names_high_elf_female
+    //$$ frost elf archer
+    TITLE the Frost Elf Archer
+    ID 0191
+    BACKPACK
+    ITEM
+    HAIRCOLOR 0481
+    SKIN 0482
+    DIRECTION W
+    GOLD 10 88
+    ITEM $item_bow
+    ITEM $item_thigh_boots
+    COLOR 0482
+    ITEM $item_cloak
+    COLOR 0482
+    ITEM $item_iron_chain_tunic
+    COLOR 0481
+    ITEM $item_leather_gloves
+    COLOR 0482
+    ITEM $item_iron_chain_leggings
+    COLOR 0481
+    ITEM $item_a_leather_gorget
+    COLOR 0481
+    PACKITEM $item_arrow 100
+    LOOT $loot_uncut_gems
+    LOOT $loot_omnivores_food
+    LOOT $loot_misc_stuff
+    TOTAME 1100
+    STR 75 115
+    DEX 100 150
+    INT 35 65
+    KARMA 1000
+    FAME 1000
+    MAGICRESISTANCE 300 450
+    TACTICS 450 600
+    WRESTLING 400 600
+    ARCHERY 750 850
+    //As per weapon
+    DAMAGE 4 35
+    DEF 4
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 1
+
+    ///CATEGORY Evil Elves
+    ///SUBSECTION Frost Elves
+    ///DESCRIPTION Archer [M]
+}
+
+// Frost Elf Magus
+SECTION NPC $npc_frost_elf_wizard
+{
+    NAMELIST $names_high_elf_male
+    //$$ frost elf wizard
     TITLE the Frost Elf Wizard
     ID 0190
     ITEM
@@ -609,11 +694,11 @@ SECTION NPC $npc_frost_elf_archer
     COLOR 0481
     ITEM $item_long_pants
     COLOR 0481
-    ITEM $item_chain_tunic
+    ITEM $item_iron_chain_tunic
     COLOR 0481
     ITEM $item_leather_gloves
     COLOR 0482
-    ITEM $item_chain_leggings
+    ITEM $item_iron_chain_leggings
     COLOR 0481
     ITEM $item_a_leather_gorget
     COLOR 0481
@@ -655,6 +740,7 @@ SECTION NPC $npc_frost_elf_archer
 SECTION NPC $npc_elf_f
 {
     NAMELIST $names_females
+    //$$ elf f
     TITLE the Elven Female
     ID 0191
     ITEM $item_random_female_hair_list
@@ -667,7 +753,7 @@ SECTION NPC $npc_elf_f
     ITEM $item_studded_leather_sleeves
     ITEM $item_leather_skirt
     ITEM $item_studded_leather_bustier
-    ITEM $item_spear
+    ITEM $item_iron_spear
     ITEM $item_sandles
     LOOT $loot_uncut_gems
     LOOT $loot_reagents
@@ -698,6 +784,7 @@ SECTION NPC $npc_elf_f
 SECTION NPC $npc_elf_m
 {
     NAMELIST $names_males
+    //$$ elf m
     TITLE the Elven Male
     ID 0190
     ITEM $item_random_male_hair_list
@@ -705,13 +792,13 @@ SECTION NPC $npc_elf_m
     SKIN 0308
     DIRECTION W
     BACKPACK
-    ITEM $item_wooden_kite_shield
+    ITEM $item_iron_wooden_kite_shield
     ITEM $item_studded_leather_gorget
     ITEM $item_studded_leather_gloves
     ITEM $item_studded_leather_sleeves
     ITEM $item_studded_leather_leggings
     ITEM $item_studded_leather_tunic
-    ITEM $item_kryss
+    ITEM $item_iron_kryss
     ITEM $item_sandles
     LOOT $loot_reagents
     LOOT $loot_jewelry
@@ -739,6 +826,7 @@ SECTION NPC $npc_elf_m
     ///DESCRIPTION Basic [M]
 }
 
+
 //*************************************************************************
 //***************************** Drow Elves ********************************
 //*****************************            ********************************
@@ -747,6 +835,7 @@ SECTION NPC $npc_elf_m
 SECTION NPC $npc_drow_weapon_lord
 {
     NAMELIST $names_dark_elf_male
+    //$$ drow weapon lord
     TITLE the Drow Weapon Lord
     ID 0190
     ITEM $item_random_male_hair_list
@@ -764,7 +853,7 @@ SECTION NPC $npc_drow_weapon_lord
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_body_sash
     COLOR 0142
@@ -796,6 +885,7 @@ SECTION NPC $npc_drow_weapon_lord
 SECTION NPC $npc_drow_assassin
 {
     NAMELIST $names_dark_elf_male
+    //$$ drow assassin
     TITLE the Drow Assassin
     ID 0190
     ITEM $item_random_male_hair_list
@@ -813,12 +903,12 @@ SECTION NPC $npc_drow_assassin
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_body_sash
     COLOR 0142
     ITEM $item_a_piwafwi
-    ITEM $item_a_kryss_of_vanquishing
+    ITEM $item_iron_kryss_of_vanquishing
     TOTAME 1100
     STR 100 100
     DEX 15 20
@@ -843,6 +933,7 @@ SECTION NPC $npc_drow_assassin
 SECTION NPC $npc_drow_mistress
 {
     NAMELIST $names_dark_elf_male
+    //$$ drow mistress
     TITLE the Matron Mistress
     ID 0191
     ITEM $item_random_female_hair_list
@@ -860,7 +951,7 @@ SECTION NPC $npc_drow_mistress
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_piwafwi
     ITEM $item_a_robe
@@ -894,6 +985,7 @@ SECTION NPC $npc_drow_mistress
 SECTION NPC $npc_drow_warrior
 {
     NAMELIST $names_dark_elf_male
+    //$$ drow warrior
     TITLE the Drow Warrior
     ID 0190
     ITEM $item_random_male_hair_list
@@ -911,12 +1003,12 @@ SECTION NPC $npc_drow_warrior
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_body_sash
     COLOR 0142
     ITEM $item_a_piwafwi
-    ITEM $item_a_scimitar_of_force
+    ITEM $item_iron_scimitar_of_force
     TOTAME 1100
     STR 100 150
     DEX 15 20
@@ -941,6 +1033,7 @@ SECTION NPC $npc_drow_warrior
 SECTION NPC $npc_drow_drow_priestess
 {
     NAMELIST $names_dark_elf_male
+    //$$ drow drow priestess
     TITLE the Drow Priestess
     ID 0191
     ITEM $item_random_female_hair_list
@@ -958,12 +1051,12 @@ SECTION NPC $npc_drow_drow_priestess
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_piwafwi
     ITEM $item_a_robe
     COLOR 0369
-    ITEM $item_a_magic_war_fork_of_power
+    ITEM $item_iron_war_fork_of_power
     TOTAME 1100
     STR 100 170
     DEX 15 20
@@ -991,6 +1084,7 @@ SECTION NPC $npc_drow_drow_priestess
 SECTION NPC $npc_drow_high_priestess
 {
     NAMELIST $names_dark_elf_male
+    //$$ drow high priestess
     TITLE the Drow High Priestess
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1008,12 +1102,12 @@ SECTION NPC $npc_drow_high_priestess
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_piwafwi
     ITEM $item_a_robe
     COLOR 01b6
-    ITEM $item_a_magic_mace_of_force
+    ITEM $item_iron_mace_of_force
     TOTAME 1100
     STR 100 170
     DEX 15 20
@@ -1042,6 +1136,7 @@ SECTION NPC $npc_drow_high_priestess
 SECTION NPC $npc_drow_archer
 {
     NAMELIST $names_dark_elf_male
+    //$$ drow archer
     TITLE the Drow Archer
     ID 0190
     ITEM $item_random_female_hair_list
@@ -1059,12 +1154,12 @@ SECTION NPC $npc_drow_archer
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_body_sash
     COLOR 0142
     ITEM $item_a_piwafwi
-    ITEM $item_a_magic_crossbow_of_force
+    ITEM $item_iron_crossbow_of_force
     PACKITEM $item_crossbow_bolt
     AMOUNT 150
     TOTAME 1100
@@ -1092,6 +1187,7 @@ SECTION NPC $npc_drow_archer
 SECTION NPC $npc_drow_wizard
 {
     NAMELIST $names_dark_elf_male
+    //$$ drow wizard
     TITLE the Drow Wizard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1109,7 +1205,7 @@ SECTION NPC $npc_drow_wizard
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_body_sash
     COLOR 0142
@@ -1143,7 +1239,7 @@ SECTION NPC $npc_gromph
     NAME Gromph
     TITLE the Drow ArchMage
     ID 0190
-    ITEM $item_a_magic_crossbow_of_might
+    ITEM $item_iron_crossbow_of_might
     NPCAI $npc_ai_evil
     SPEECH $speech_drow
     SKIN 02e6
@@ -1158,7 +1254,7 @@ SECTION NPC $npc_gromph
     ITEM $item_shadow_chain_leggings
     ITEM $item_boots
     COLOR 096c
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_a_body_sash
     ITEM $item_a_robe
@@ -1195,6 +1291,7 @@ SECTION NPC $npc_gromph
 SECTION NPC $npc_high_elf_king
 {
     NAMELIST $names_high_elf_male
+    //$$ high elf king
     TITLE the High Elven King
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1215,8 +1312,8 @@ SECTION NPC $npc_high_elf_king
     ITEM $item_golden_chain_leggings
     ITEM $item_sandles
     COLOR 096d
-    ITEM $item_golden_plate_arms
-    ITEM $item_a_long_sword_of_vanquishing
+    ITEM $item_golden_plate_sleeves
+    ITEM $item_iron_long_sword_of_vanquishing
     COLOR 096d
     ITEM $item_cloak
     COLOR 01b6
@@ -1246,6 +1343,7 @@ SECTION NPC $npc_high_elf_king
 SECTION NPC $npc_high_elf_prince
 {
     NAMELIST $names_high_elf_male
+    //$$ high elf prince
     TITLE the High Elven Prince
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1266,8 +1364,8 @@ SECTION NPC $npc_high_elf_prince
     ITEM $item_golden_chain_leggings
     ITEM $item_sandles
     COLOR 096d
-    ITEM $item_golden_plate_arms
-    ITEM $item_a_long_sword_of_vanquishing
+    ITEM $item_golden_plate_sleeves
+    ITEM $item_iron_long_sword_of_vanquishing
     COLOR 096d
     ITEM $item_cloak
     COLOR 01b6
@@ -1297,6 +1395,7 @@ SECTION NPC $npc_high_elf_prince
 SECTION NPC $npc_high_elf_mage
 {
     NAMELIST $names_high_elf_male
+    //$$ high elf mage
     TITLE the High Elven Mage
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1312,7 +1411,7 @@ SECTION NPC $npc_high_elf_mage
     FX2 10
     ITEM $item_a_robe
     COLOR 02a8
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     ITEM $item_sandles
     ITEM $item_a_wizards_hat
     COLOR 02a8
@@ -1338,6 +1437,7 @@ SECTION NPC $npc_high_elf_mage
 SECTION NPC $npc_high_elf_enchantress
 {
     NAMELIST $names_high_elf_female
+    //$$ high elf enchantress
     TITLE the High Elven Enchantress
     ID 0191
     ITEM $item_random_male_hair_list
@@ -1354,7 +1454,7 @@ SECTION NPC $npc_high_elf_enchantress
     FX2 10
     ITEM $item_a_robe
     COLOR 02a8
-    ITEM $item_ringmail_gloves
+    ITEM $item_iron_ringmail_gloves
     ITEM $item_sandles
     ITEM $item_a_wizards_hat
     COLOR 02a8
@@ -1380,6 +1480,7 @@ SECTION NPC $npc_high_elf_enchantress
 SECTION NPC $npc_high_elf_m
 {
     NAMELIST $names_males
+    //$$ high elf m
     TITLE the High Elf
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1430,4 +1531,5 @@ SECTION NPC $npc_high_elf_m
     ///SUBSECTION Hight Elves
     ///DESCRIPTION Basic [M]
 }
+
 

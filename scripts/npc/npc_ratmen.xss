@@ -4,15 +4,23 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+//***********************************************************
+//************************ Ratmen ***************************
+//************************        ***************************
+//***********************************************************
+
+// ratman with sword
+
 SECTION NPC $npc_ratman
 {
     NAMELIST $names_ratmen
+    //$$ ratman
     ID 002d
     SKIN 0000
     DIRECTION N
     BACKPACK
-    ITEM $item_broadsword
-    PACKITEM $item_broadsword
+    ITEM $item_iron_broadsword
+    PACKITEM $item_iron_broadsword
     NPCWANDER 4
     FX1 -1
     FY1 -1
@@ -40,15 +48,18 @@ SECTION NPC $npc_ratman
     ///DESCRIPTION Ratman (with sword)
 }
 
+// ratman with axe
+
 SECTION NPC $npc_ratman_axe
 {
     NAMELIST $names_ratmen
+    //$$ ratman axe
     ID 002c
     SKIN 0000
     DIRECTION N
     BACKPACK
-    ITEM $item_axe
-    PACKITEM $item_axe
+    ITEM $item_iron_axe
+    PACKITEM $item_iron_axe
     GOLD 25 45
     STR 96 120
     DEX 15 20
@@ -76,9 +87,12 @@ SECTION NPC $npc_ratman_axe
     ///DESCRIPTION Ratman (with axe)
 }
 
+//ratman archer
+
 SECTION NPC $npc_ratman_archer
 {
     NAMELIST $names_ratmen
+    //$$ ratman archer
     ID 002a
     SKIN 0000
     DIRECTION N
@@ -112,9 +126,12 @@ SECTION NPC $npc_ratman_archer
     ///DESCRIPTION Ratman Archer
 }
 
+//ratman mage
+
 SECTION NPC $npc_ratman_mage
 {
     NAMELIST $names_ratmen
+    //$$ ratman mage
     ID 002a
     SKIN 0000
     DIRECTION N
@@ -160,4 +177,5 @@ SECTION NPC $npc_ratman_mage
     ///SUBSECTION Ratmen
     ///DESCRIPTION Ratman Mage
 }
+
 

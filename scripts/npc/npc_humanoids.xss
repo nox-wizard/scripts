@@ -1,8 +1,11 @@
+
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (npc_humanoids.xss)                              ||
 // || Maintained by Xanathar and Kendra                                   ||
 // || Last Update 12-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//a savage
 
 SECTION NPC $npc_a_savage
 {
@@ -37,7 +40,7 @@ SECTION NPC $npc_a_savage
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_spear
+    ITEM plate_iron_spear
     ITEM $item_a_bear_mask
     ITEM $item_a_kilt
     COLORLIST 11
@@ -51,6 +54,8 @@ SECTION NPC $npc_a_savage
     ///SUBSECTION Savages
     ///DESCRIPTION Savage [M]
 }
+
+//a savage
 
 SECTION NPC $npc_a_savage_1
 {
@@ -84,7 +89,7 @@ SECTION NPC $npc_a_savage_1
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_spear
+    ITEM plate_iron_spear
     ITEM $item_a_bear_mask
     ITEM $item_a_kilt
     COLORLIST 11
@@ -97,6 +102,8 @@ SECTION NPC $npc_a_savage_1
     ///SUBSECTION Savages
     ///DESCRIPTION Savage [F]
 }
+
+// a savage shaman
 
 SECTION NPC $npc_a_savage_shaman
 {
@@ -147,6 +154,8 @@ SECTION NPC $npc_a_savage_shaman
     ///DESCRIPTION Savage Shaman
 }
 
+//a savage chief
+
 SECTION NPC $npc_a_savage_chief
 {
     NAME a savage chief
@@ -179,7 +188,7 @@ SECTION NPC $npc_a_savage_chief
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_spear
+    ITEM plate_iron_spear
     ITEM $item_a_tribal_mask
     ITEM $item_a_kilt
     COLORLIST 11
@@ -449,6 +458,7 @@ SECTION NPC $npc_a_cottonmouth_layer
 SECTION NPC $npc_knight
 {
     NAMELIST $names_males
+    //$$ knight
     TITLE the Knight
     ID 0190
     DIRECTION S
@@ -465,13 +475,13 @@ SECTION NPC $npc_knight
     DEF 4
     DAMAGE 5 40
     BACKPACK
-    ITEM $item_plate_helm
-    ITEM $item_platemail
-    ITEM $item_plate_sleeves
-    ITEM $item_plate_gloves
-    ITEM $item_plate_leggings
-    ITEM $item_long_sword
-    ITEM $item_wooden_kite_shield
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_long_sword
+    ITEM $item_iron_wooden_kite_shield
     ITEM $item_a_body_sash
     COLORLIST 11
     ITEM $item_a_tan_horse
@@ -494,6 +504,7 @@ SECTION NPC $npc_knight
 SECTION NPC $npc_knight_1
 {
     NAMELIST $names_males
+    //$$ knight
     TITLE the Knight
     ID 0190
     DIRECTION S
@@ -510,14 +521,14 @@ SECTION NPC $npc_knight_1
     DEF 4
     DAMAGE 5 40
     BACKPACK
-    ITEM $item_platemail
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_helm
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
-    ITEM $item_long_sword
-    ITEM $item_wooden_kite_shield
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_long_sword
+    ITEM $item_iron_wooden_kite_shield
     ITEM $item_a_body_sash
     COLORLIST 11
     ITEM $item_a_dark_brown_horse
@@ -561,8 +572,8 @@ SECTION NPC $npc_the_black_knight
     ITEM $item_merkite_plate_gorget
     ITEM $item_merkite_plate_gloves
     ITEM $item_merkite_plate_helm
-    ITEM $item_merkite_plate_legs
-    ITEM $item_merkite_plate_arms
+    ITEM $item_merkite_plate_leggings
+    ITEM plate_sleeves
     ITEM $item_cloak
     COLOR 0455
     ITEM $item_a_nightmare
@@ -585,6 +596,7 @@ SECTION NPC $npc_the_black_knight
 SECTION NPC $npc_cultist
 {
     NAMELIST $names_males
+    //$$ cultist
     SPEECH $speech_cultist
     SKINLIST 5
     TITLE The Cultist
@@ -620,6 +632,7 @@ SECTION NPC $npc_cultist
 SECTION NPC $npc_priest_of_mondain
 {
     NAMELIST $names_males
+    //$$ priest of mondain
     TITLE the Priest of Mondain
     ID 0190
     SKINLIST 16
@@ -673,6 +686,7 @@ SECTION NPC $npc_priest_of_mondain
 SECTION NPC $npc_priestess_of_mondain
 {
     NAMELIST $names_females
+    //$$ priestess of mondain
     TITLE the Priestess of Mondain
     ID 0191
     SKINLIST 16
@@ -723,6 +737,8 @@ SECTION NPC $npc_priestess_of_mondain
     ///DESCRIPTION Priest of Mondain [F]
 }
 
+//a fire knight
+
 SECTION NPC $npc_a_fire_knight
 {
     NAME a Fire Knight
@@ -742,20 +758,20 @@ SECTION NPC $npc_a_fire_knight
     DAMAGE 20 40
     DEF 14
     BACKPACK
-    ITEM $item_katana
-    ITEM $item_plate_gorget
+    ITEM $item_iron_katana
+    ITEM $item_iron_plate_gorget
     COLOR 04b9
-    ITEM $item_platemail
+    ITEM $item_iron_platemail
     COLOR 04b9
-    ITEM $item_plate_gloves
+    ITEM $item_iron_plate_gloves
     COLOR 04b9
-    ITEM $item_plate_helm
+    ITEM $item_iron_plate_helm
     COLOR 04b9
-    ITEM $item_plate_leggings
+    ITEM $item_iron_plate_leggings
     COLOR 04b9
-    ITEM $item_plate_sleeves
+    ITEM $item_iron_plate_sleeves
     COLOR 04b9
-    ITEM $item_halberd
+    ITEM $item_iron_halberd
     LOOT $loot_jewelry
     LOOT $loot_jewelry
     LOOT $loot_strong_magical_armor
@@ -773,6 +789,8 @@ SECTION NPC $npc_a_fire_knight
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Fire Knight
 }
+
+//an ice knight
 
 SECTION NPC $npc_an_ice_knight
 {
@@ -793,20 +811,20 @@ SECTION NPC $npc_an_ice_knight
     DAMAGE 20 40
     DEF 8
     BACKPACK
-    ITEM $item_katana
-    ITEM $item_plate_gorget
+    ITEM $item_iron_katana
+    ITEM $item_iron_plate_gorget
     COLOR 0481
-    ITEM $item_platemail
+    ITEM $item_iron_platemail
     COLOR 0481
-    ITEM $item_plate_gloves
+    ITEM $item_iron_plate_gloves
     COLOR 0481
-    ITEM $item_plate_helm
+    ITEM $item_iron_plate_helm
     COLOR 0481
-    ITEM $item_plate_leggings
+    ITEM $item_iron_plate_leggings
     COLOR 0481
-    ITEM $item_plate_sleeves
+    ITEM $item_iron_plate_sleeves
     COLOR 0481
-    ITEM $item_halberd
+    ITEM $item_iron_halberd
     LOOT $loot_strong_magical_armor
     LOOT $loot_strong_magical_weapons
     GOLD 200 500
@@ -824,9 +842,12 @@ SECTION NPC $npc_an_ice_knight
     ///DESCRIPTION Ice Knight
 }
 
+//a converted quest knight
+
 SECTION NPC $npc_converted_quest_knight
 {
     NAMELIST $names_males
+    //$$ converted quest knight
     TITLE a converted quest knight
     ID 0190
     ITEM $item_random_male_hair_list
@@ -836,13 +857,13 @@ SECTION NPC $npc_converted_quest_knight
     SPEECH $speech_none
     TOTAME 1100
     BACKPACK
-    ITEM $item_platemail
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_helm
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
-    ITEM $item_viking_sword
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_viking_sword
     STR 50 66
     DEX 15 20
     INT 50 64
@@ -867,9 +888,12 @@ SECTION NPC $npc_converted_quest_knight
     ///DESCRIPTION Converted Quest Knight
 }
 
+//a barbarian
+
 SECTION NPC $npc_barbarian
 {
     NAMELIST $names_males
+    //$$ barbarian
     TITLE a barbarian
     ID 0190
     SKINLIST 16
@@ -892,8 +916,8 @@ SECTION NPC $npc_barbarian
     LOOT $loot_omnivores_food
     LOOT $loot_food_wine_bread_cheese_meat
     GOLD 20 100
-    ITEM $item_plate_helm
-    ITEM $item_plate_leggings
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
     ITEM $item_cloak
     ITEM $item_a_robe
     ITEM $item_boots
@@ -914,9 +938,12 @@ SECTION NPC $npc_barbarian
     ///DESCRIPTION Barbarian
 }
 
+//the executioner
+
 SECTION NPC $npc_executioner
 {
     NAMELIST $names_males
+    //$$ executioner
     TITLE the executioner
     ID 0190
     ITEM $item_random_male_hair_list
@@ -926,7 +953,7 @@ SECTION NPC $npc_executioner
     DIRECTION W
     BACKPACK
     GOLD 150 200
-    ITEM $item_executioners_axe
+    ITEM $item_iron_executioners_axe
     ITEM $item_male_plain_pants_list
     COLORLIST 21
     ITEM $item_male_plain_footwear_list

@@ -4,6 +4,13 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+//*************************************************************
+//*********************** Ophidians ***************************
+//***********************           ***************************
+//*************************************************************
+
+// ophidian warrior
+
 SECTION NPC $npc_an_ophidian_warrior
 {
     NAME an ophidian warrior
@@ -11,7 +18,7 @@ SECTION NPC $npc_an_ophidian_warrior
     SKIN 0000
     DIRECTION E
     BACKPACK
-    ITEM $item_halberd
+    ITEM $item_iron_halberd
     PACKITEM $item_arrow 10
     LOOT $loot_uncut_gems
     LOOT $loot_potions
@@ -48,6 +55,8 @@ SECTION NPC $npc_an_ophidian_warrior
     ///DESCRIPTION Ophidian Warrior
 }
 
+// ophidian enforcer
+
 SECTION NPC $npc_an_ophidian_enforcer
 {
     NAME an ophidian enforcer
@@ -55,7 +64,7 @@ SECTION NPC $npc_an_ophidian_enforcer
     SKIN 0000
     DIRECTION E
     BACKPACK
-    ITEM $item_halberd
+    ITEM $item_iron_halberd
     PACKITEM $item_arrow 10
     LOOT $loot_potions
     LOOT $loot_potions
@@ -90,6 +99,8 @@ SECTION NPC $npc_an_ophidian_enforcer
     ///SUBSECTION Ophidians
     ///DESCRIPTION Ophidian Enforcer
 }
+
+// ophidian knight
 
 SECTION NPC $npc_an_ophidian_knight-errant
 {
@@ -135,6 +146,8 @@ SECTION NPC $npc_an_ophidian_knight-errant
     ///SUBSECTION Ophidians
     ///DESCRIPTION Ophidian Knight
 }
+
+// ophidian avenger
 
 SECTION NPC $npc_an_ophidian_avenger
 {
@@ -194,6 +207,8 @@ SECTION NPC $npc_an_ophidian_avenger
     ///SUBSECTION Ophidians
     ///DESCRIPTION Ophidian Avenger
 }
+
+//Ophidian with staff
 
 SECTION NPC $npc_an_ophidian_apprentice_mage
 {
@@ -259,6 +274,8 @@ SECTION NPC $npc_an_ophidian_apprentice_mage
     ///DESCRIPTION Ophidian Apprentice Mace
 }
 
+// ophidian shaman
+
 SECTION NPC $npc_an_ophidian_shaman
 {
     NAME an ophidian shaman
@@ -314,6 +331,8 @@ SECTION NPC $npc_an_ophidian_shaman
     ///DESCRIPTION Ophidian Shaman
 }
 
+//an ophidian matriarch
+
 SECTION NPC $npc_an_ophidian_matriarch
 {
     NAME an ophidian matriarch
@@ -362,9 +381,10 @@ SECTION NPC $npc_an_ophidian_matriarch
     TOTAME 1100
     RACE $race_ophidian
     DOORUSE 1
-
+    
     ///CATEGORY Evil
     ///SUBSECTION Ophidians
     ///DESCRIPTION Ophidian Matriarch
 }
+
 

@@ -9,6 +9,9 @@
 //************************            *****************************
 //*****************************************************************
 
+
+//an air elemental
+
 SECTION NPC $npc_an_air_elemental
 {
     NAME an air elemental
@@ -53,6 +56,8 @@ SECTION NPC $npc_an_air_elemental
     ///DESCRIPTION Air Elemental
 }
 
+// an earth elemental
+
 SECTION NPC $npc_an_earth_elemental
 {
     NAME an earth elemental
@@ -94,6 +99,8 @@ SECTION NPC $npc_an_earth_elemental
     ///SUBSECTION Elementals
     ///DESCRIPTION Earth Elemental
 }
+
+//a fire elemental
 
 SECTION NPC $npc_a_fire_elemental
 {
@@ -137,6 +144,8 @@ SECTION NPC $npc_a_fire_elemental
     ///SUBSECTION Elementals
     ///DESCRIPTION Fire Elemental
 }
+
+// a fire lord
 
 SECTION NPC $npc_a_fire_lord
 {
@@ -184,6 +193,8 @@ SECTION NPC $npc_a_fire_lord
     ///DESCRIPTION Fire Lord
 }
 
+//a water elemental
+
 SECTION NPC $npc_a_water_elemental
 {
     NAME a water elemental
@@ -230,6 +241,8 @@ SECTION NPC $npc_a_water_elemental
     ///DESCRIPTION Water Elemental
 }
 
+// a blood elemental
+
 SECTION NPC $npc_a_blood_elemental
 {
     NAME a blood elemental
@@ -275,6 +288,8 @@ SECTION NPC $npc_a_blood_elemental
     ///DESCRIPTION Blood Elemental
 }
 
+// a poison elemental
+
 SECTION NPC $npc_a_poison_elemental
 {
     NAME a poison elemental
@@ -319,6 +334,8 @@ SECTION NPC $npc_a_poison_elemental
     ///DESCRIPTION Poison Elemental
 }
 
+// a snow elemental
+
 SECTION NPC $npc_a_snow_elemental
 {
     NAME a snow elemental
@@ -359,6 +376,8 @@ SECTION NPC $npc_a_snow_elemental
     ///SUBSECTION Elementals
     ///DESCRIPTION Snow Elemental
 }
+
+// an ice elemental
 
 SECTION NPC $npc_an_ice_elemental
 {
@@ -445,6 +464,8 @@ SECTION NPC $npc_an_acid_elemental
     ///DESCRIPTION Acid Elemental
 }
 
+// an effreet
+
 SECTION NPC $npc_an_efreet
 {
     NAME an efreet
@@ -487,5 +508,4 @@ SECTION NPC $npc_an_efreet
     ///SUBSECTION Elementals
     ///DESCRIPTION Efreet
 }
-
 

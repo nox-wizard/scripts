@@ -9,6 +9,8 @@
 //**************************                  *****************************
 //*************************************************************************
 
+// a wyvern
+
 SECTION NPC $npc_a_wyvern
 {
     NAME a wyvern
@@ -48,6 +50,8 @@ SECTION NPC $npc_a_wyvern
     ///SUBSECTION Dragons
     ///DESCRIPTION Wyvern
 }
+
+//a drake
 
 SECTION NPC $npc_a_drake
 {
@@ -90,6 +94,8 @@ SECTION NPC $npc_a_drake
     ///DESCRIPTION Drake
 }
 
+//a red drake
+
 SECTION NPC $npc_a_drake_1
 {
     NAME a drake
@@ -131,6 +137,8 @@ SECTION NPC $npc_a_drake_1
     ///DESCRIPTION Red Drake
 }
 
+//a drake  - Chromatic
+
 SECTION NPC $npc_a_drake_2
 {
     NAME a drake
@@ -169,8 +177,10 @@ SECTION NPC $npc_a_drake_2
 
     ///CATEGORY Evil
     ///SUBSECTION Dragons
-    ///DESCRIPTION Drake (Chromatic)
+    ///DESCRIPTION Chromatic Drake
 }
+
+// a brown dragon
 
 SECTION NPC $npc_a_dragon
 {
@@ -223,6 +233,8 @@ SECTION NPC $npc_a_dragon
     ///DESCRIPTION Dragon (Brown)
 }
 
+//a chromatic dragon
+
 SECTION NPC $npc_a_dragon_1
 {
     NAME a dragon
@@ -274,6 +286,8 @@ SECTION NPC $npc_a_dragon_1
     ///DESCRIPTION Dragon (Chromatic)
 }
 
+//a red dragon
+
 SECTION NPC $npc_a_dragon_2
 {
     NAME a dragon
@@ -324,6 +338,8 @@ SECTION NPC $npc_a_dragon_2
     ///SUBSECTION Dragons
     ///DESCRIPTION Dragon (Red)
 }
+
+//a pure white wyrm
 
 SECTION NPC $npc_a_white_wyrm
 {
@@ -377,6 +393,8 @@ SECTION NPC $npc_a_white_wyrm
     ///DESCRIPTION Wyrm (pure white)
 }
 
+//a white wyrm
+
 SECTION NPC $npc_a_white_wyrm_1
 {
     NAME a white wyrm
@@ -429,6 +447,8 @@ SECTION NPC $npc_a_white_wyrm_1
     ///DESCRIPTION Wyrm (white)
 }
 
+//a fire wyrm
+
 SECTION NPC $npc_a_fire_wyrm
 {
     NAME a fire wyrm
@@ -467,6 +487,8 @@ SECTION NPC $npc_a_fire_wyrm
     ///SUBSECTION Dragons
     ///DESCRIPTION Wyrm (fire)
 }
+
+//a brown ancient wyrm
 
 SECTION NPC $npc_an_ancient_wyrm
 {
@@ -533,6 +555,8 @@ SECTION NPC $npc_an_ancient_wyrm
     ///DESCRIPTION Ancient Wyrm (brown)
 }
 
+//a red ancient wyrm
+
 SECTION NPC $npc_an_ancient_wyrm_1
 {
     NAME an ancient wyrm
@@ -598,6 +622,8 @@ SECTION NPC $npc_an_ancient_wyrm_1
     ///DESCRIPTION Ancient Wyrm (red)
 }
 
+//a chromatic ancient wyrm
+
 SECTION NPC $npc_an_ancient_wyrm_2
 {
     NAME an ancient wyrm
@@ -662,6 +688,8 @@ SECTION NPC $npc_an_ancient_wyrm_2
     ///SUBSECTION Dragons
     ///DESCRIPTION Ancient Wyrm (chromatic)
 }
+
+//a shadow wyrm
 
 SECTION NPC $npc_a_shadow_wyrm
 {

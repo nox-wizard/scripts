@@ -4,6 +4,13 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+//*********************************************************************
+//*************************** Terathens *******************************
+//***************************           *******************************
+//*********************************************************************
+
+//a terathan drone
+
 SECTION NPC $npc_a_terathan_drone
 {
     NAME a terathan drone
@@ -44,6 +51,8 @@ SECTION NPC $npc_a_terathan_drone
     ///DESCRIPTION Terathan Drone
 }
 
+// a terathan warrior
+
 SECTION NPC $npc_a_terathan_warrior
 {
     NAME a terathan warrior
@@ -51,7 +60,7 @@ SECTION NPC $npc_a_terathan_warrior
     SKIN 0000
     DIRECTION E
     BACKPACK
-    ITEM $item_halberd
+    ITEM $item_iron_halberd
     PACKITEM $item_arrow 10
     LOOT $loot_potions
     LOOT $loot_potions
@@ -87,6 +96,8 @@ SECTION NPC $npc_a_terathan_warrior
     ///DESCRIPTION Terathan Warrior
 }
 
+//a terathan avenger
+
 SECTION NPC $npc_a_terathan_avenger
 {
     NAME a terathan avenger
@@ -94,7 +105,7 @@ SECTION NPC $npc_a_terathan_avenger
     SKIN 066d
     DIRECTION E
     BACKPACK
-    ITEM $item_halberd
+    ITEM $item_iron_halberd
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_6-8_spells
@@ -137,6 +148,8 @@ SECTION NPC $npc_a_terathan_avenger
     ///SUBSECTION Terathens
     ///DESCRIPTION Terathan Avenger
 }
+
+//a terathan matriarch
 
 SECTION NPC $npc_a_terathan_matriarch
 {
@@ -199,6 +212,8 @@ SECTION NPC $npc_a_terathan_matriarch
     ///SUBSECTION Terathens
     ///DESCRIPTION Terathan Matriarch
 }
+
+//a terathan newt
 
 SECTION NPC $npc_a_terathan_newt
 {

@@ -4,9 +4,14 @@
 // || Last Update 28-nov-2001                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+// ##########################################
+// #    Start Of The People Section         #
+// ##########################################
+
 SECTION NPC $npc_chaos_guard_f
 {
     NAMELIST $names_females
+    //$$ chaos guard f
     TITLE a chaos guard
     ID 0191
     ITEM $item_random_female_hair_list
@@ -26,11 +31,11 @@ SECTION NPC $npc_chaos_guard_f
     DEF 100
     BACKPACK
     NPCWANDER 4
-    ITEM $item_chaos_shield
-    ITEM $item_female_plate
+    ITEM $item_iron_chaos_shield
+    ITEM plate_iron_female_plate
     ITEM $item_leather_skirt
-    ITEM $item_halberd
-    ITEM $item_viking_sword
+    ITEM $item_iron_halberd
+    ITEM $item_iron_viking_sword
     FX1 -1
     FY1 -1
     FZ1 -1
@@ -47,6 +52,7 @@ SECTION NPC $npc_chaos_guard_f
 SECTION NPC $npc_chaos_guard_m
 {
     NAMELIST $names_males
+    //$$ chaos guard m
     TITLE a chaos guard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -67,16 +73,16 @@ SECTION NPC $npc_chaos_guard_m
     DEF 100
     BACKPACK
     NPCWANDER 4
-    ITEM $item_chaos_shield
-    ITEM $item_platemail
+    ITEM $item_iron_chaos_shield
+    ITEM $item_iron_platemail
     ITEM $item_a_doublet
     COLORLIST 2
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
-    ITEM $item_halberd
-    ITEM $item_viking_sword
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
+    ITEM $item_iron_viking_sword
     FX1 -1
     FY1 -1
     FZ1 -1
@@ -93,6 +99,7 @@ SECTION NPC $npc_chaos_guard_m
 SECTION NPC $npc_order_guard_f
 {
     NAMELIST $names_females
+    //$$ order guard f
     TITLE a order guard
     ID 0191
     ITEM $item_random_female_hair_list
@@ -112,11 +119,11 @@ SECTION NPC $npc_order_guard_f
     DEF 100
     BACKPACK
     NPCWANDER 4
-    ITEM $item_order_shield
-    ITEM $item_female_plate
+    ITEM $item_iron_order_shield
+    ITEM plate_iron_female_plate
     ITEM $item_leather_skirt
-    ITEM $item_halberd
-    ITEM $item_viking_sword
+    ITEM $item_iron_halberd
+    ITEM $item_iron_viking_sword
     FX1 -1
     FY1 -1
     FZ1 -1
@@ -133,6 +140,7 @@ SECTION NPC $npc_order_guard_f
 SECTION NPC $npc_order_guard_m
 {
     NAMELIST $names_males
+    //$$ order guard m
     TITLE a order guard
     ID 0190
     ITEM $item_random_male_hair_list
@@ -153,16 +161,16 @@ SECTION NPC $npc_order_guard_m
     DEF 100
     BACKPACK
     NPCWANDER 4
-    ITEM $item_order_shield
-    ITEM $item_platemail
+    ITEM $item_iron_order_shield
+    ITEM $item_iron_platemail
     ITEM $item_a_doublet
     COLORLIST 2
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
-    ITEM $item_halberd
-    ITEM $item_viking_sword
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
+    ITEM $item_iron_viking_sword
     FX1 -1
     FY1 -1
     FZ1 -1
@@ -187,21 +195,21 @@ SECTION NPC $npc_dark_knight
     DIRECTION S
     SPEECH $speech_guard
     BACKPACK
-    ITEM $item_platemail
+    ITEM $item_iron_platemail
     COLOR 096c
-    ITEM $item_plate_gorget
+    ITEM $item_iron_plate_gorget
     COLOR 096c
-    ITEM $item_plate_gloves
+    ITEM $item_iron_plate_gloves
     COLOR 096c
-    ITEM $item_plate_helm
+    ITEM $item_iron_plate_helm
     COLOR 096c
-    ITEM $item_plate_leggings
+    ITEM $item_iron_plate_leggings
     COLOR 096c
     ITEM $item_cloak
     COLOR 096c
-    ITEM $item_plate_sleeves
+    ITEM $item_iron_plate_sleeves
     COLOR 096c
-    ITEM $item_halberd
+    ITEM $item_iron_halberd
     TOTAME 1100
     STR 1000 1500
     DEX 1000 1000
@@ -229,6 +237,7 @@ SECTION NPC $npc_dark_knight
 SECTION NPC $npc_pirate_m
 {
     NAMELIST $names_males
+    //$$ pirate m
     TITLE the pirate
     ID 0190
     ITEM $item_random_male_hair_list
@@ -244,7 +253,7 @@ SECTION NPC $npc_pirate_m
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_scimitar
+    ITEM $item_iron_scimitar
     ITEM $item_male_plain_hats_list
     COLORLIST 11
     ITEM $item_male_fancy_shirts_list
@@ -279,6 +288,7 @@ SECTION NPC $npc_pirate_m
 SECTION NPC $npc_pirate_f
 {
     NAMELIST $names_females
+    //$$ pirate f
     TITLE the pirate
     ID 0191
     ITEM $item_random_female_hair_list
@@ -291,7 +301,7 @@ SECTION NPC $npc_pirate_f
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_scimitar
+    ITEM $item_iron_scimitar
     ITEM $item_female_fancy_hats_list
     COLORLIST 11
     ITEM $item_female_fancy_shirts_list
@@ -326,6 +336,7 @@ SECTION NPC $npc_pirate_f
 SECTION NPC $npc_fighter_m
 {
     NAMELIST $names_males
+    //$$ fighter m
     TITLE the fighter
     ID 0190
     ITEM $item_random_male_hair_list
@@ -339,12 +350,12 @@ SECTION NPC $npc_fighter_m
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_chain_coif
-    ITEM $item_ringmail_tunic
-    ITEM $item_ringmail_sleeves
+    ITEM $item_iron_chain_coif
+    ITEM $item_iron_ringmail_tunic
+    ITEM $item_iron_ringmail_sleeves
     ITEM $item_studded_leather_leggings
     ITEM $item_wooden_shield
-    ITEM $item_long_sword
+    ITEM $item_iron_long_sword
     TOTAME 1100
     STR 100 150
     DEX 15 20
@@ -369,6 +380,7 @@ SECTION NPC $npc_fighter_m
 SECTION NPC $npc_fighter_f
 {
     NAMELIST $names_females
+    //$$ fighter f
     TITLE the fighter
     ID 0191
     ITEM $item_random_female_hair_list
@@ -382,12 +394,12 @@ SECTION NPC $npc_fighter_f
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_chain_coif
-    ITEM $item_ringmail_tunic
-    ITEM $item_ringmail_sleeves
+    ITEM $item_iron_chain_coif
+    ITEM $item_iron_ringmail_tunic
+    ITEM $item_iron_ringmail_sleeves
     ITEM $item_studded_leather_leggings
     ITEM $item_wooden_shield
-    ITEM $item_long_sword
+    ITEM $item_iron_long_sword
     TOTAME 1100
     STR 100 150
     DEX 15 20
@@ -406,12 +418,13 @@ SECTION NPC $npc_fighter_f
 
     ///CATEGORY Humans
     ///SUBSECTION Miscellaneous
-    ///DESCRIPTION Figher [F]
+    ///DESCRIPTION Fighter [F]
 }
 
 SECTION NPC $npc_cultist_m
 {
     NAMELIST $names_males
+    //$$ cultist m
     TITLE the cultist
     ID 0190
     ITEM $item_random_male_hair_list
@@ -465,6 +478,7 @@ SECTION NPC $npc_cultist_m
 SECTION NPC $npc_cultist_f
 {
     NAMELIST $names_females
+    //$$ cultist f
     TITLE the cultist
     ID 0191
     ITEM $item_random_female_hair_list
@@ -511,12 +525,13 @@ SECTION NPC $npc_cultist_f
 
     ///CATEGORY Humans
     ///SUBSECTION Miscellaneous
-    ///DESCRIPTION Cultist [F]
+    ///DESCRIPTION Cultist [M]
 }
 
 SECTION NPC $npc_sailor_m
 {
     NAMELIST $names_males
+    //$$ sailor m
     TITLE the sailor
     ID 0190
     ITEM $item_random_male_hair_list
@@ -531,7 +546,7 @@ SECTION NPC $npc_sailor_m
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_kryss
+    ITEM plate_iron_kryss
     ITEM $item_male_plain_hats_list
     COLORLIST 11
     ITEM $item_male_plain_shirts_list
@@ -563,6 +578,7 @@ SECTION NPC $npc_sailor_m
 SECTION NPC $npc_sailor_f
 {
     NAMELIST $names_females
+    //$$ sailor f
     TITLE the sailor
     ID 0191
     ITEM $item_random_female_hair_list
@@ -575,7 +591,7 @@ SECTION NPC $npc_sailor_f
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_kryss
+    ITEM plate_iron_kryss
     ITEM $item_female_plain_hats_list
     COLORLIST 11
     ITEM $item_female_plain_shirts_list
@@ -607,6 +623,7 @@ SECTION NPC $npc_sailor_f
 SECTION NPC $npc_brigand_m
 {
     NAMELIST $names_males
+    //$$ brigand m
     TITLE the brigand
     ID 0190
     ITEM $item_random_male_hair_list
@@ -622,7 +639,7 @@ SECTION NPC $npc_brigand_m
     ITEM $item_leather_sleeves
     ITEM $item_leather_leggings
     ITEM $item_leather_tunic
-    ITEM $item_spear
+    ITEM plate_iron_spear
     ITEM $item_a_leather_gorget
     ITEM $item_male_plain_footwear_list
     ITEM $item_male_plain_robe_list
@@ -658,6 +675,7 @@ SECTION NPC $npc_brigand_m
 SECTION NPC $npc_brigand_f
 {
     NAMELIST $names_females
+    //$$ brigand f
     TITLE the brigand
     ID 0191
     ITEM $item_random_female_hair_list
@@ -671,7 +689,7 @@ SECTION NPC $npc_brigand_f
     ITEM $item_leather_sleeves
     ITEM $item_leather_leggings
     ITEM $item_leather_tunic
-    ITEM $item_spear
+    ITEM plate_iron_spear
     ITEM $item_a_leather_gorget
     ITEM $item_female_plain_footwear_list
     ITEM $item_female_plain_robe_list
@@ -707,6 +725,7 @@ SECTION NPC $npc_brigand_f
 SECTION NPC $npc_beggar_m
 {
     NAMELIST $names_males
+    //$$ beggar m
     TITLE the beggar
     NPCAI $npc_ai_beggar
     ID 0190
@@ -750,6 +769,7 @@ SECTION NPC $npc_beggar_m
 SECTION NPC $npc_beggar_f
 {
     NAMELIST $names_females
+    //$$ beggar f
     TITLE the beggar
     NPCAI $npc_ai_beggar
     ID 0191
@@ -793,6 +813,7 @@ SECTION NPC $npc_beggar_f
 SECTION NPC $npc_noble_m
 {
     NAMELIST $names_males
+    //$$ noble m
     TITLE the noble
     SPEECH $speech_noble
     ID 0190
@@ -802,7 +823,7 @@ SECTION NPC $npc_noble_m
     SKINLIST 16
     DIRECTION N
     GOLD 75
-    ITEM $item_broadsword
+    ITEM $item_iron_broadsword
     ITEM $item_male_fancy_shirts_list
     COLORLIST 11
     ITEM $item_male_fancy_pants_list
@@ -839,6 +860,7 @@ SECTION NPC $npc_noble_m
 SECTION NPC $npc_noble_f
 {
     NAMELIST $names_females
+    //$$ noble f
     TITLE the noble
     ID 0191
     ITEM $item_random_female_hair_list
@@ -847,7 +869,7 @@ SECTION NPC $npc_noble_f
     BACKPACK
     DIRECTION N
     GOLD 75
-    ITEM $item_broadsword
+    ITEM $item_iron_broadsword
     ITEM $item_female_fancy_shirts_list
     COLORLIST 11
     ITEM $item_female_fancy_pants_list
@@ -885,6 +907,7 @@ SECTION NPC $npc_noble_f
 SECTION NPC $npc_thief_m
 {
     NAMELIST $names_males
+    //$$ thief m
     TITLE the thief
     ID 0190
     ITEM $item_random_male_hair_list
@@ -893,7 +916,7 @@ SECTION NPC $npc_thief_m
     COLORMATCHHAIR
     SKINLIST 16
     BACKPACK
-    ITEM $item_kryss
+    ITEM plate_iron_kryss
     ITEM $item_male_plain_hats_list
     COLORLIST 11
     ITEM $item_male_plain_shirts_list
@@ -937,6 +960,7 @@ SECTION NPC $npc_thief_m
 SECTION NPC $npc_register_of_names
 { Invul Spawner
     NAMELIST $names_males
+    //$$ register of names
     TITLE the Register of names
     ID 0190
     PRIV1 4
@@ -983,6 +1007,7 @@ SECTION NPC $npc_register_of_names
 SECTION NPC $npc_thief_f
 {
     NAMELIST $names_females
+    //$$ thief f
     TITLE the thief
     ID 0191
     ITEM $item_random_female_hair_list
@@ -990,7 +1015,7 @@ SECTION NPC $npc_thief_f
     SKINLIST 16
     BACKPACK
     DIRECTION N
-    ITEM $item_kryss
+    ITEM plate_iron_kryss
     ITEM $item_female_plain_shirts_list
     COLORLIST 11
     ITEM $item_female_plain_pants_list
@@ -1032,6 +1057,7 @@ SECTION NPC $npc_thief_f
 SECTION NPC $npc_peasant_m
 {
     NAMELIST $names_males
+    //$$ peasant m
     TITLE the peasant
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1074,6 +1100,7 @@ SECTION NPC $npc_peasant_m
 SECTION NPC $npc_peasant_f
 {
     NAMELIST $names_females
+    //$$ peasant f
     TITLE the peasant
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1115,6 +1142,7 @@ SECTION NPC $npc_peasant_f
 SECTION NPC $npc_gypsy_m
 {
     NAMELIST $names_males
+    //$$ gypsy m
     TITLE the gypsy
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1122,7 +1150,7 @@ SECTION NPC $npc_gypsy_m
     SKINLIST 16
     DIRECTION N
     BACKPACK
-    ITEM $item_kryss
+    ITEM plate_iron_kryss
     ITEM $item_male_plain_shirts_list
     COLORLIST 11
     ITEM $item_male_plain_pants_list
@@ -1158,13 +1186,14 @@ SECTION NPC $npc_gypsy_m
 SECTION NPC $npc_gypsy_f
 {
     NAMELIST $names_females
+    //$$ gypsy f
     TITLE the gypsy
     ID 0191
     ITEM $item_random_female_hair_list
     HAIRCOLOR 15
     SKINLIST 16
     BACKPACK
-    ITEM $item_kryss
+    ITEM plate_iron_kryss
     ITEM $item_female_plain_shirts_list
     COLORLIST 11
     ITEM $item_female_plain_pants_list
@@ -1200,6 +1229,7 @@ SECTION NPC $npc_gypsy_f
 SECTION NPC $npc_adventurer_m
 {
     NAMELIST $names_males
+    //$$ adventurer m
     TITLE the seeker of adventure
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1208,12 +1238,12 @@ SECTION NPC $npc_adventurer_m
     DIRECTION N
     BACKPACK
     COLOR 0455
-    ITEM $item_chain_tunic
-    ITEM $item_chain_leggings
-    ITEM $item_chain_coif
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_coif
     ITEM $item_studded_leather_gloves
-    ITEM $item_long_sword
-    ITEM $item_bronze_shield
+    ITEM $item_iron_long_sword
+    ITEM $item_iron_bronze_shield
     ITEM $item_male_plain_footwear_list
     ITEM $item_male_plain_cape_list
     COLORLIST 11
@@ -1246,6 +1276,7 @@ SECTION NPC $npc_adventurer_m
 SECTION NPC $npc_adventurer_f
 {
     NAMELIST $names_females
+    //$$ adventurer f
     TITLE the seeker of adventure
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1253,12 +1284,12 @@ SECTION NPC $npc_adventurer_f
     SKINLIST 16
     DIRECTION N
     BACKPACK
-    ITEM $item_chain_tunic
-    ITEM $item_chain_leggings
-    ITEM $item_chain_coif
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_coif
     ITEM $item_studded_leather_gloves
-    ITEM $item_viking_sword
-    ITEM $item_buckler
+    ITEM $item_iron_viking_sword
+    ITEM $item_iron_buckler
     ITEM $item_female_plain_footwear_list
     ITEM $item_female_plain_cape_list
     COLORLIST 11
@@ -1282,15 +1313,16 @@ SECTION NPC $npc_adventurer_f
     DAMAGE 3 10
     DEF 5
     DOORUSE 1
-}
+
     ///CATEGORY Humans
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Adventurer [F]
-
+}
 
 SECTION NPC $npc_murderer
 {
     NAMELIST $names_murderers
+    //$$ murderer
     TITLE the murderer
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1303,13 +1335,13 @@ SECTION NPC $npc_murderer
     FY1 -1
     FZ1 -1
     FX2 15
-    ITEM $item_platemail
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_helm
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
-    ITEM $item_halberd
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
     ITEM $item_male_fancy_cape_list
     COLORLIST 11
     GOLD 500 600
@@ -1331,7 +1363,7 @@ SECTION NPC $npc_murderer
 
     ///CATEGORY Humans
     ///SUBSECTION Evils
-    ///DESCRIPTION Murderer
+    ///DESCRIPTION Murderer[M]
 }
 
 SECTION NPC $npc_len_ikbaan
@@ -1350,13 +1382,13 @@ SECTION NPC $npc_len_ikbaan
     FZ1 -1
     FX2 15
     BACKPACK
-    ITEM $item_platemail
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_helm
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
-    ITEM $item_halberd
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
     ITEM $item_female_fancy_cape_list
     COLORLIST 11
     GOLD 500 600
@@ -1378,6 +1410,7 @@ SECTION NPC $npc_len_ikbaan
 
     ///CATEGORY Humans
     ///SUBSECTION Evils
+    ///DESCRIPTION Murderer[F]
 }
 
 SECTION NPC $npc_sammy
@@ -1446,7 +1479,6 @@ SECTION NPC $npc_isabel
     MAGERY 500 700
     SPEECH $speech_leatherworker
     NPCAI $npc_ai_evil
-    DOORUSE 1
 
     ///CATEGORY Humans
     ///SUBSECTION Evils
@@ -1508,6 +1540,7 @@ SECTION NPC $npc_mondain
 SECTION NPC $npc_jailor_m
 {
     NAMELIST $names_males
+    //$$ jailor m
     TITLE the jailor
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1516,13 +1549,13 @@ SECTION NPC $npc_jailor_m
     DIRECTION N
     NPCWANDER 4
     BACKPACK
-    ITEM $item_plate_gloves
-    ITEM $item_chain_tunic
-    ITEM $item_chain_leggings
-    ITEM $item_chain_coif
-    ITEM $item_plate_sleeves
-    ITEM $item_broadsword
-    ITEM $item_bronze_shield
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_coif
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_broadsword
+    ITEM $item_iron_bronze_shield
     ITEM $item_male_fancy_footwear_list
     FX1 -1
     FY1 -1
@@ -1551,6 +1584,7 @@ SECTION NPC $npc_jailor_m
 SECTION NPC $npc_jailor_f
 {
     NAMELIST $names_females
+    //$$ jailor f
     TITLE the jailor
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1559,12 +1593,12 @@ SECTION NPC $npc_jailor_f
     DIRECTION N
     NPCWANDER 4
     BACKPACK
-    ITEM $item_chain_tunic
-    ITEM $item_plate_gloves
-    ITEM $item_chain_leggings
-    ITEM $item_chain_coif
-    ITEM $item_plate_sleeves
-    ITEM $item_bronze_shield
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_coif
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_bronze_shield
     ITEM $item_female_fancy_footwear_list
     FX1 -1
     FY1 -1
@@ -1663,6 +1697,7 @@ SECTION NPC $npc_cassandra
 SECTION NPC $npc_towncrier_m
 {
     NAMELIST $names_males
+    //$$ towncrier m
     TITLE the Town Crier
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1701,6 +1736,7 @@ SECTION NPC $npc_towncrier_m
 SECTION NPC $npc_towncrier_f
 {
     NAMELIST $names_females
+    //$$ towncrier f
     TITLE the town crier
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1745,6 +1781,7 @@ SECTION NPC $npc_towncrier_f
 SECTION NPC $npc_veterinarian_m
 {
     NAMELIST $names_males
+    //$$ veterinarian m
     TITLE the veterinarian
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1786,6 +1823,7 @@ SECTION NPC $npc_veterinarian_m
 SECTION NPC $npc_veterinarian_f
 {
     NAMELIST $names_females
+    //$$ veterinarian f
     TITLE the veterinarian
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1828,12 +1866,13 @@ SECTION NPC $npc_veterinarian_f
 
     ///CATEGORY Humans
     ///SUBSECTION Miscellaneous
-    ///DESCRIPTION Veterinarian [F]
+    ///DESCRIPTION Veterinarian [f]
 }
 
 SECTION NPC $npc_artist_m
 {
     NAMELIST $names_males
+    //$$ artist m
     TITLE the artist
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1874,6 +1913,7 @@ SECTION NPC $npc_artist_m
 SECTION NPC $npc_artist_f
 {
     NAMELIST $names_females
+    //$$ artist f
     TITLE the artist
     ID 0191
     ITEM $item_random_female_hair_list
@@ -1914,6 +1954,7 @@ SECTION NPC $npc_artist_f
 SECTION NPC $npc_archmage
 {
     NAMELIST $names_necromancers
+    //$$ archmage
     TITLE the arch-mage
     ID 0190
     ITEM $item_random_male_hair_list
@@ -1979,12 +2020,12 @@ SECTION NPC $npc_akbaar
     FY1 -1
     FZ1 -1
     FX2 15
-    ITEM $item_platemail
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_helm
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
     ITEM $item_male_fancy_robe_list
     COLORLIST 1
     ITEM $item_male_fancy_cape_list
@@ -2031,12 +2072,12 @@ SECTION NPC $npc_kindor_aedrat
     FY1 -1
     FZ1 -1
     FX2 15
-    ITEM $item_platemail
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_helm
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
     ITEM $item_bow
     PACKITEM $item_arrow 100
     ITEM $item_male_plain_robe_list
@@ -2067,6 +2108,7 @@ SECTION NPC $npc_kindor_aedrat
 SECTION NPC $npc_quest_knight_m
 {
     NAMELIST $names_males
+    //$$ quest knight m
     TITLE a Quest Knight
     ID 0190
     ITEM $item_random_male_hair_list
@@ -2075,13 +2117,13 @@ SECTION NPC $npc_quest_knight_m
     DIRECTION N
     SPEECH $speech_none
     BACKPACK
-    ITEM $item_platemail
-    ITEM $item_plate_gorget
-    ITEM $item_plate_gloves
-    ITEM $item_plate_helm
-    ITEM $item_plate_leggings
-    ITEM $item_plate_sleeves
-    ITEM $item_viking_sword
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_viking_sword
     STR 50 66
     DEX 15 20
     INT 50 64
@@ -2107,9 +2149,11 @@ SECTION NPC $npc_quest_knight_m
     ///DESCRIPTION Quest Knight [M]
 }
 
+// Henchman Master
 SECTION NPC $npc_henchman_master
 {
     NAMELIST $names_males
+    //$$ henchman master
     TITLE the Henchman Master
     ID 0190
     PRIV1 4
@@ -2117,10 +2161,10 @@ SECTION NPC $npc_henchman_master
     HAIRCOLOR 15
     SKINLIST 16
     ITEM $item_boots
-    ITEM $item_chain_tunic
-    ITEM $item_ringmail_gloves
-    ITEM $item_ringmail_sleeves
-    ITEM $item_chain_leggings
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_ringmail_gloves
+    ITEM $item_iron_ringmail_sleeves
+    ITEM $item_iron_chain_leggings
     DIRECTION E
     STR 60 70
     DEX 0 0
@@ -2156,6 +2200,7 @@ SECTION NPC $npc_henchman_master
 SECTION NPC $npc_henchman_weak
 {
     NAMELIST $names_males
+    //$$ henchman weak
     TITLE the henchman
     ID 0190
     ITEM $item_random_male_hair_list
@@ -2201,9 +2246,11 @@ SECTION NPC $npc_henchman_weak
     ///DESCRIPTION Henchman Weak
 }
 
+// strong henchman
 SECTION NPC $npc_henchman_strong
 {
     NAMELIST $names_males
+    //$$ henchman strong
     TITLE the henchman
     ID 0190
     ITEM $item_random_male_hair_list
@@ -2219,12 +2266,12 @@ SECTION NPC $npc_henchman_strong
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_nose_helm
-    ITEM $item_chain_leggings
-    ITEM $item_chain_tunic
-    ITEM $item_plate_gloves
-    ITEM $item_plate_sleeves
-    ITEM $item_plate_gorget
+    ITEM $item_iron_nose_helm
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_plate_gorget
     ITEM
     ITEM
     ITEM $item_male_plain_footwear_list
@@ -2253,6 +2300,7 @@ SECTION NPC $npc_henchman_strong
 SECTION NPC $npc_henchman_mid
 {
     NAMELIST $names_males
+    //$$ henchman mid
     TITLE the henchman
     ID 0190
     ITEM $item_random_male_hair_list
@@ -2301,6 +2349,7 @@ SECTION NPC $npc_henchman_mid
 SECTION NPC $npc_slut
 {
     NAMELIST $names_females
+    //$$ slut
     TITLE the slut
     ID 0191
     SKIN 83ea
@@ -2508,4 +2557,6 @@ SECTION NPC $npc_guildmaster_mage_m
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Guildmaster Mage
 }
+
+
 
