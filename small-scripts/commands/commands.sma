@@ -67,6 +67,7 @@
 #include "small-scripts/commands/unjail.sma"
 #include "small-scripts/commands/where.sma"
 #include "small-scripts/commands/wipe.sma"
+#include "small-scripts/commands/reloadsmall.sma"
 
 /** \defgroup script_commands_system system functions
  *  \ingroup script_commands

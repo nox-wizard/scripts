@@ -106,3 +106,5 @@ light level is 0 (brightest) to 15 (darkest), -1 enables day/night cycle
 \return nothing
 */
 native setLightLevel(const level);
+
+native recompileSmall();

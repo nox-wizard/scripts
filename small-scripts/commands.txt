@@ -85,5 +85,6 @@ sysm,100,cmd_sysm
 tile,150,cmd_tile
 tweak,100,cmd_tweak
 unjail,200,cmd_unjail
-where,100,cmd_where
+where,0,cmd_where
 wipe,100,cmd_wipe
+recompile_small,255,cmd_recompile_small
