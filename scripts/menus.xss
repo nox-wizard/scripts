@@ -2676,7 +2676,7 @@ SECTION MENU $menu_brick_walls_ii
     0044 Really Small Post
     ADDITEM $item_brick_arch
     0045 SE Corner Arch
-    ADDITEM $item_gold_coin 1
+    ADDITEM $item_gold_coin 10
     0046 N-S Arch
     ADDITEM $item_brick_arch_1
     0047 E-W Arch
@@ -5125,9 +5125,9 @@ SECTION MENU $menu_coins
     0EED Gold Single
     ADDITEM $item_gold_coin 1
     0EEE Gold Few
-    ADDITEM $item_gold_coin 3
+    ADDITEM $item_gold_coin 5
     0EEF Gold Pile
-    ADDITEM $item_gold_coin 6
+    ADDITEM $item_gold_coin 50
     0EF0 Silver Single
     ADDITEM $item_silver_coin
     0EF1 Silver Few
@@ -7404,15 +7404,15 @@ SECTION MENU $menu_magic_sheilds_2
     < magic wooden shield
     ADDITEM $item_a_wooden_shield_of_invulnerablity
     < magic heater
-    ADDITEM $item_a_heater_sheild_of_defence
+    ADDITEM $item_a_heater_shield_of_defence
     < magic heater
-    ADDITEM $item_a_heater_sheild_of_guarding
+    ADDITEM $item_a_heater_shield_of_guarding
     < magic heater
-    ADDITEM $item_a_heater_sheild_of_hardening
+    ADDITEM $item_a_heater_shield_of_hardening
     < magic heater
-    ADDITEM $item_a_heater_sheild_of_fortification
+    ADDITEM $item_a_heater_shield_of_fortification
     < magic heater
-    ADDITEM $item_a_heater_sheild_of_invulnerablity
+    ADDITEM $item_a_heater_shield_of_invulnerablity
 }
 
 SECTION MENU $menu_colored_chain_mail
