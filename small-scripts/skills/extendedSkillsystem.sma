@@ -4,7 +4,7 @@
 @{
 */
 
-#define ACTIVATE_EXTENDED_SKILLSYSTEM 1	//!< set to 1 to activate the extended skillsystem
+#define ACTIVATE_EXTENDED_SKILLSYSTEM 0	//!< set to 1 to activate the extended skillsystem
 #define SK_ADDITIONAL_COUNT 1		//number of additional skills
 #define CLV_ADDITIONALSKILLS 9998	//<! local variable to store additional skill values
 
