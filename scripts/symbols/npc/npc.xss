@@ -218,7 +218,7 @@
 #define $npc_an_earth_elemental 914
 #define $npc_a_fire_elemental 915
 #define $npc_a_fire_lord 916
-#define $npc_a_water_elemental 917
+#define $npc_a_fire_elemental 917
 #define $npc_a_blood_elemental 918
 #define $npc_a_poison_elemental 919
 #define $npc_a_snow_elemental 920
@@ -358,10 +358,8 @@
 #define $npc_cavalier 1233
 #define $npc_priest 1234
 #define $npc_apprentice 1235
-#define $npc_piss_ant 1236
 #define $npc_laborer 1237
 #define $npc_barbarian_1 1238
-#define $npc_newbie_spammer 1239
 #define $npc_paladin 1240
 #define $npc_fancy_nobleman 1241
 #define $npc_redlady 1242

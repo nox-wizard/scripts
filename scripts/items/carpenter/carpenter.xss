@@ -93,7 +93,7 @@ SECTION ITEM $item_dovetail_saw
     DECAY
     VALUE 35
     WEIGHT 400
-    @ONDBLCLICK _carpenter
+    @ONDBLCLICK carpenter
 }
 
 SECTION ITEM $item_dovetail_saw2
@@ -103,7 +103,7 @@ SECTION ITEM $item_dovetail_saw2
     DECAY
     VALUE 35
     WEIGHT 400
-    @ONDBLCLICK _carpenter
+    @ONDBLCLICK carpenter
 }
 
 SECTION ITEM $item_hammer

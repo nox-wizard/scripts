@@ -4608,7 +4608,7 @@ SECTION ITEM $item_sledge_hammer
     ID 0FB4
     VALUE 32
     DECAY
-    @ONDBLCLICK schmieden
+    @ONDBLCLICK blacksmith
 }
 
 // campfire

@@ -144,7 +144,7 @@ SECTION ITEM $item_club
     SPD 38
     WEIGHT 600
     DAMAGETYPE $damage_bludgeon
-    @ONDBLCLICK schmieden
+    @ONDBLCLICK blacksmith
 }
 
 
@@ -164,7 +164,7 @@ STR 25
 SPD 28
 WEIGHT 500
 DAMAGETYPE $damage_bludgeon
-@ONDBLCLICK schmieden
+@ONDBLCLICK blacksmith
 }
 
 
