@@ -274,9 +274,31 @@ public createPotion(const chr, const arrayline, const amount)
 			itm_delAmountByID(backpack, ((potionProperty[arrayline][reagentneed])*amount)/2, reagscript); //we delete the half amount of needed reagents
 			itm_delAmountByID(backpack, amount/2, bottlescript);
 			chr_message( chr, _, msg_sk_alchDef[15]);
+			return;
 		}
-		itm_delAmountByID(backpack, (potionProperty[arrayline][reagentneed])*amount, reagscript); //and we delete the needed reagents
-		itm_delAmountByID(backpack, amount, bottlescript);
+		else if(chr_getProperty(chr,CP_SKILL,0) == 1000) //we have an GM, still there is a success chance for some things
+		{
+			new checkchance = random[100];
+			if( checkchance < potionProperty[arrayline][potionchance] ) //hehe, even GM fail sometimes
+			{
+				itm_delAmountByID(backpack, ((potionProperty[arrayline][reagentneed])*amount)/2, reagscript); //we delete the half amount of needed reagents
+				itm_delAmountByID(backpack, amount/2, bottlescript);
+				chr_message( chr, _, msg_sk_alchDef[15]);
+				return;
+			}
+		}
+		else
+		{
+			itm_delAmountByID(backpack, (potionProperty[arrayline][reagentneed])*amount, reagscript); //and we delete the needed reagents
+			itm_delAmountByID(backpack, amount, bottlescript);
+			
+			//combine the potion scriptname out of array and $item_
+			sprintf(tempStr, potionProperty[arrayline][potionscript]);
+			trim(tempStr);
+			sprintf(tempStr, "$%s_potion", tempStr);
+			itm_createByDef(tempStr, backpack, 1*amount);
+		}
+
 		chr_sound(chr, 0x242); //do sound
 		
 		//call char name
@@ -286,12 +308,6 @@ public createPotion(const chr, const arrayline, const amount)
 		new emotetext[50];
 		sprintf(emotetext, msg_sk_alchDef[16], msg_sk_alchDef[(potionProperty[arrayline][reagentname])]); //combine the names
 		chr_emoteAll( chr, emotetext);
-		
-		//combine the potion scriptname out of array and $item_
-		sprintf(tempStr, potionProperty[arrayline][potionscript]);
-		trim(tempStr);
-		sprintf(tempStr, "$%s_potion", tempStr);
-		itm_createByDef(tempStr, backpack, 1*amount);
 	}
 	else if(reagnumber < potionProperty[arrayline][reagentneed])
 	{
