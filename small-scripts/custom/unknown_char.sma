@@ -83,9 +83,16 @@ public stop_unknown_char(const viewerchr)
 	//delete the onsingleclick event handler so the function is not fired
 	chr_getEventHandler(viewerchr, 28, tempStr);
         trim(tempStr);
-        if( !strcmp(tempStr, "chr_unknown_singleclick")) //we have an event here that is SAME to char unknown system function so DON'T KEEP this and delete it for further use because "unknown char" is now shut off ! Otherwise we need to keep this!
+        if( !strcmp(tempStr, "unknown_sglclick")) //we have an event here that is SAME to char unknown system function so DON'T KEEP this and delete it for further use because "unknown char" is now shut off ! Otherwise we need to keep this!
         {
         	chr_delEventHandler(viewerchr, 28);
+	}
+	
+	chr_getEventHandler(viewerchr, 41, tempStr);
+        trim(tempStr);
+        if( !strcmp(tempStr, "unknown_dblclick")) //we have an event here that is SAME to char unknown system function so DON'T KEEP this and delete it for further use because "unknown char" is now shut off ! Otherwise we need to keep this!
+        {
+        	chr_delEventHandler(viewerchr, 41);
 	}
 	
 	//delete the localVar to save space

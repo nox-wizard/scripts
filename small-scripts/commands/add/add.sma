@@ -174,7 +174,7 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 		log_message("^tadding item %d at: %d %d %d",scriptID,x,y,z);
 	#endif
 	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-	printf("amount: %d", amount);
+	//printf("amount: %d", amount);
 	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isChar(object))
