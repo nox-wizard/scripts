@@ -211,7 +211,7 @@ SECTION CREATURE $creature_liche
 	ATTACK 414
 	DEFEND 415
 	DIE 416
-	ICON 8440;
+	ICON 8440
 }
 
 SECTION CREATURE $creature_ghost1
@@ -510,14 +510,11 @@ SECTION CREATURE $creature_smaller_green_dragon
 
 SECTION CREATURE $creature_sea_serpent
 {
-	creatures[0x96].basesound=477;								
-	creatures[0x96].basesound=3;
-	START_ATTACK 
-	IDLE 
-	ATTACK 
-	DEFEND 
-	DIE 
-	ICON 8446;
+	START_ATTACK 477
+	ATTACK 478
+	DEFEND 479
+	DIE 480
+	ICON 8446
 }
 
 SECTION CREATURE $creature_dolphin
@@ -527,7 +524,7 @@ SECTION CREATURE $creature_dolphin
 	ATTACK 140
 	DEFEND 141
 	DIE 142
-	ICON 8433;
+	ICON 8433
 }
 
 SECTION CREATURE $creature_white_horse
@@ -616,7 +613,7 @@ SECTION CREATURE $creature_goat
 	ATTACK 155
 	DEFEND 156
 	DIE 157
-	ICON 8422;
+	ICON 8422
 }
 
 SECTION CREATURE $creature_brown_bear
