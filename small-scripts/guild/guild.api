@@ -19,7 +19,7 @@
 /*!
 \author Endymion
 \fn guild_setProperty(const guild, const property, const subprop=0, ...)
-\brief
+\brief set an guild property
 */
 native guild_setProperty( const guild, const property, const subprop=0, ...);
 
@@ -32,36 +32,39 @@ native guild_getProperty( const guild, const property, const subprop=0, ...);
 
 /*!
 \author Endymion
-\fn guild_placeStone(const chr, const itm)
-\brief
+\fn guild_makeGuildstone( cosnt stone, const master )
+\brief Make a guildstone with given guild master and given stone
+\param stone the stone to make guildstone
+\param master the guild master
 */
-native guild_placeStone( const chr, const itm );
+native guild_makeGuildstone( const stone, const master );
 
 /*!
 \author Endymion
 \fn guild_addMember(const guild, const chr)
-\brief
+\brief add a new member to guild
+\param guild the guild
+\param chr the new member
 */
 native guild_addMember( const guild, const chr );
 
 /*!
-\brief return the number of members in a guild
-\author Sparhawk
+\brief A member resign from his guild
+\author Endymion
 \since 0.82
-\fn guild_countMember( const guild )
-\param 1: the guild
-\return number of members or invalid when guild does not exist
+\param guild the guild
+\param chr the member
+\fn guild_resignMember (const guild, const chr)
 */
-native guild_countMember( const guild );
+native guild_resignMember (const guild, const chr);
 
 /*!
 \brief Add a recuit to a guild
 \author Endymion
 \since 0.82
 \fn guild_addRecruit( const guild, const chr )
-\param 1: the guild
-\param 2: the new recruit
-\return true or false
+\param 1 the guild
+\param 2 the new recruit
 */
 native guild_addRecruit( const guild, const chr );
 
@@ -70,34 +73,15 @@ native guild_addRecruit( const guild, const chr );
 \author Endymion
 \since 0.82
 \fn guild_refuseRecruit( const guild, const chr )
-\param 1: the guild
-\param 2: the recruit
-\return true or false
+\param 1 the guild
+\param 2 the recruit
 */
 native guild_refuseRecruit( const guild, const chr );
 
 /*!
-\brief return the number of recruits in a guild
-\author Sparhawk
-\since 0.82
-\fn guild_countRecruit( const guild )
-\param 1: the guild
-\return number of recruits or invalid
-*/
-native guild_countRecruit( const guild );
-
-/*!
-\author Endymion
-\fn guild_getMbrByIdx(const guild, const idx)
-\brief
-\deprecated use set instead
-*/
-native guild_getMbrByIdx( const guild, const idx );
-
-/*!
 \author Sparhawk
 \fn guild_getMaster(const guild)
-\param guild: the guild from which you want to get the master
+\param guild the guild from which you want to get the master
 \return serial of guildmaster or invalid
 \brief Return the guildmaster for a given guild
 */
@@ -114,18 +98,6 @@ native guild_getMaster( const guild );
 native guild_exists( const guild );
 
 /*!
-\brief Get the recruit by given index
-\author Endymion
-\since 0.82
-\param 1: the guild
-\param 2: the recruit index
-\return the recruit or INVALID
-\fn guild_getRecByIdx( const guild, const idx )
-*/
-native guild_getRecByIdx( const guild, const idx );
-
-
-/*!
 \brief Set the guild the char is a member of
 \author Sparhawk
 \since 0.82.rc3
@@ -136,16 +108,5 @@ native guild_getRecByIdx( const guild, const idx );
 \fn chr_setGuild()
 */
 native chr_setGuild();
-
-/*!
-\brief A member resign from his guild
-\author Endymion
-\since 0.82
-\param guild the guild
-\param chr the member
-\todo Handle situation if member is guildmaster & if guild is empty after resign
-\fn guild_resignMember (const guild, const chr)
-*/
-native guild_resignMember (const guild, const chr);
 
 /** @} */ // end of script_API_guild
