@@ -2345,12 +2345,4 @@ stock chr_setAmxFlags(const chr, const idx, const value)
 */
 native chr_showPaperdoll(const chr, const target);
 
-/*!
-\author Wintermute
-\fn itm_showContainer(const itm, const chr)
-\brief show the itm if it is an container to character chr
-\param 1: the item to be displayed (can be bank box, backpack, whatever)
-\param 2: the character the item is shown to
-*/
-
 /** @} */ // end of script_API_character_basicgumps 
