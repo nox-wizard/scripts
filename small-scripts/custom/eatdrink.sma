@@ -183,7 +183,7 @@ public hungerandthirst(const c)
 		return;
 	else if ( (tempfx_isActive( c, _, funcidx("hungertimer")) == 1) && (chr_getProperty(c,CP_PRIVLEVEL) >= PRIV_CNS) )
 	{
-		tempf_delete( c, _, false, funcidx("hungertimer");
+		tempfx_delete( c, _, false, funcidx("hungertimer"));
 		return;
 	}
 	if(chr_getProperty(c,CP_PRIVLEVEL) < PRIV_CNS)
