@@ -90,7 +90,7 @@ SECTION NPC $npc_guard_m
 	NPCWANDER 4
 	HIRE 2000
 	ITEM $item_iron_platemail
-	ITEM $item_doublet
+	ITEM $item_doublet1_1
 	COLORLIST 2
 	ITEM $item_iron_plate_gorget
 	ITEM $item_iron_plate_gloves
@@ -188,7 +188,7 @@ SECTION NPC $npc_chaos_guard_m
 	NPCWANDER 4
 	ITEM $item_iron_chaos_shield
 	ITEM $item_iron_platemail
-	ITEM $item_doublet
+	ITEM $item_doublet1_1
 	COLORLIST 2
 	ITEM $item_iron_plate_gorget
 	ITEM $item_iron_plate_gloves
@@ -276,7 +276,7 @@ SECTION NPC $npc_order_guard_m
 	NPCWANDER 4
 	ITEM $item_iron_order_shield
 	ITEM $item_iron_platemail
-	ITEM $item_doublet
+	ITEM $item_doublet1_1
 	COLORLIST 2
 	ITEM $item_iron_plate_gorget
 	ITEM $item_iron_plate_gloves
@@ -311,7 +311,7 @@ SECTION NPC $npc_knight_m
 	ITEM $item_random_beard_list
 	COLORMATCHHAIR
 	GOLD 300 400
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 3a
 	TOTAME 1100
 	ITEM $item_iron_long_sword
@@ -357,7 +357,7 @@ SECTION NPC $npc_knight_f
 	ITEM $item_random_female_hair_list
 	HAIRCOLOR 15
 	GOLD 300 400
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 3a
 	TOTAME 1100
 	ITEM $item_iron_long_sword
@@ -1782,7 +1782,7 @@ SECTION NPC $npc_henchman_master
 	ITEM $item_random_male_hair_list
 	HAIRCOLOR 15
 	SKINLIST 16
-	ITEM $item_boots
+	ITEM $item_boots1_1
 	ITEM $item_iron_chain_tunic
 	ITEM $item_iron_ringmail_gloves
 	ITEM $item_iron_ringmail_sleeves
@@ -2014,13 +2014,13 @@ SECTION NPC $npc_wandering_healer_m
 	SHOPKEEPER
 	RSHOPITEM $item_gnarled_staff
 	RSHOPITEM $item_quarter_staff
-	RSHOPITEM $item_scissors
-	RSHOPITEM $item_cut_cloth
+	RSHOPITEM $item_scissors1_1
+	RSHOPITEM $item_folded_cloth1_1
 	RSHOPITEM $item_clean_bandages
 	SELLITEM $item_gnarled_staff
 	SELLITEM $item_quarter_staff
-	SELLITEM $item_scissors
-	SELLITEM $item_cut_cloth
+	SELLITEM $item_scissors1_1
+	SELLITEM $item_folded_cloth1_1
 	SELLITEM $item_clean_bandages
 	DOORUSE 1
 	
@@ -2073,13 +2073,13 @@ SECTION NPC $npc_wandering_healer_f
 	SHOPKEEPER
 	RSHOPITEM $item_gnarled_staff
 	RSHOPITEM $item_quarter_staff
-	RSHOPITEM $item_scissors
-	RSHOPITEM $item_cut_cloth
+	RSHOPITEM $item_scissors1_1
+	RSHOPITEM $item_folded_cloth1_1
 	RSHOPITEM $item_clean_bandages
 	SELLITEM $item_gnarled_staff
 	SELLITEM $item_quarter_staff
-	SELLITEM $item_scissors
-	SELLITEM $item_cut_cloth
+	SELLITEM $item_scissors1_1
+	SELLITEM $item_folded_cloth1_1
 	SELLITEM $item_clean_bandages
 	TOTAME 1100
 	DOORUSE 1
@@ -2136,8 +2136,8 @@ SECTION NPC $npc_healer_m
 	SHOPKEEPER
 	RSHOPITEM $item_gnarled_staff
 	RSHOPITEM $item_quarter_staff
-	RSHOPITEM $item_scissors
-	RSHOPITEM $item_cut_cloth
+	RSHOPITEM $item_scissors1_1
+	RSHOPITEM $item_folded_cloth1_1
 	RSHOPITEM $item_clean_bandages
 	RSHOPITEM $item_cure_potion
 	RSHOPITEM $item_lesser_heal_potion
@@ -2147,8 +2147,8 @@ SECTION NPC $npc_healer_m
 	RSHOPITEM $item_ginseng
 	SELLITEM $item_gnarled_staff
 	SELLITEM $item_quarter_staff
-	SELLITEM $item_scissors
-	SELLITEM $item_cut_cloth
+	SELLITEM $item_scissors1_1
+	SELLITEM $item_folded_cloth1_1
 	SELLITEM $item_clean_bandages
 	SELLITEM $item_garlic
 	SELLITEM $item_ginseng
@@ -2209,8 +2209,8 @@ SECTION NPC $npc_healer_f
 	SHOPKEEPER
 	RSHOPITEM $item_gnarled_staff
 	RSHOPITEM $item_quarter_staff
-	RSHOPITEM $item_scissors
-	RSHOPITEM $item_cut_cloth
+	RSHOPITEM $item_scissors1_1
+	RSHOPITEM $item_folded_cloth1_1
 	RSHOPITEM $item_clean_bandages
 	RSHOPITEM $item_cure_potion
 	RSHOPITEM $item_lesser_heal_potion
@@ -2220,8 +2220,8 @@ SECTION NPC $npc_healer_f
 	RSHOPITEM $item_ginseng
 	SELLITEM $item_gnarled_staff
 	SELLITEM $item_quarter_staff
-	SELLITEM $item_scissors
-	SELLITEM $item_cut_cloth
+	SELLITEM $item_scissors1_1
+	SELLITEM $item_folded_cloth1_1
 	SELLITEM $item_clean_bandages
 	SELLITEM $item_garlic
 	SELLITEM $item_ginseng
@@ -2357,7 +2357,7 @@ SECTION NPC $npc_mage_m_3
 	FY1 -1
 	FZ1 -1
 	FX2 5
-	ITEM $item_robe1
+	ITEM $item_robe1_1
 	COLORLIST 2
 	SPEECH $speech_mage
 	STR 130 160
@@ -2400,7 +2400,7 @@ SECTION NPC $npc_guildmaster_mage_m
 	FY1 -1
 	FZ1 -1
 	FX2 5
-	ITEM $item_robe1
+	ITEM $item_robe1_1
 	COLORLIST 2
 	SPEECH $speech_mage
 	STR 130 160

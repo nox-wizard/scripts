@@ -33,9 +33,9 @@ SECTION NPC $npc_wood_elf_male
     ITEM $item_dragonskin_tunic
     ITEM $item_male_plain_footwear_list
     COLOR 0287
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0599
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -75,9 +75,9 @@ SECTION NPC $npc_wood_elf_female
     ITEM $item_dragonskin_tunic
     ITEM $item_male_plain_footwear_list
     COLOR 0287
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0599
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -115,10 +115,10 @@ SECTION NPC $npc_wood_elf_king
     FX2 10
     ITEM $item_valorite_chain_tunic
     ITEM $item_valorite_chain_leggings
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 015f
     ITEM $item_valorite_plate_sleeves
-    ITEM $item_sandles
+    ITEM $item_sandles1_1
     COLOR 0191
     ITEM $item_iron_broad_sword_of_power
     STR 45
@@ -155,7 +155,7 @@ SECTION NPC $npc_wood_elf_queen
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 015f
     STR 45
     DEX 15 20
@@ -195,9 +195,9 @@ SECTION NPC $npc_wood_elf_archer_m
     ITEM $item_dragonskin_tunic
     ITEM $item_male_plain_footwear_list
     COLOR 0287
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0599
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0599
     ITEM $item_iron_bow_of_force
     COLOR 096d
@@ -245,9 +245,9 @@ SECTION NPC $npc_wood_elf_archer_f
     ITEM $item_dragonskin_tunic
     ITEM $item_male_plain_footwear_list
     COLOR 0287
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0599
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0599
     ITEM $item_iron_bow_of_force
     COLOR 096d
@@ -295,9 +295,9 @@ SECTION NPC $npc_wood_elf_wizard
     ITEM $item_dragonskin_tunic
     ITEM $item_male_plain_footwear_list
     COLOR 0287
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0599
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -340,9 +340,9 @@ SECTION NPC $npc_wood_elf_enchantress
     ITEM $item_dragonskin_tunic
     ITEM $item_male_plain_footwear_list
     COLOR 0287
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0599
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -386,9 +386,9 @@ SECTION NPC $npc_wood_elf_priest
     ITEM $item_dragonskin_tunic
     ITEM $item_male_plain_footwear_list
     COLOR 0287
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0599
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -432,9 +432,9 @@ SECTION NPC $npc_wood_elf_priestess
     ITEM $item_dragonskin_tunic
     ITEM $item_male_plain_footwear_list
     COLOR 0287
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0599
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -474,15 +474,15 @@ SECTION NPC $npc_frost_elf_m
     BACKPACK
     GOLD 76 95
     ITEM $item_iron_short_spear
-    ITEM $item_thigh_boots
+    ITEM $item_thigh_boots1_1
     COLOR 0482
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0481
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0481
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0481
-    ITEM $item_long_pants
+    ITEM $item_long_pants1_1
     COLOR 0481
     LOOT $loot_uncut_gems
     LOOT $loot_omnivores_food
@@ -525,15 +525,15 @@ SECTION NPC $npc_frost_elf_f
     BACKPACK
     GOLD 76 95
     ITEM $item_iron_short_spear
-    ITEM $item_thigh_boots
+    ITEM $item_thigh_boots1_1
     COLOR 0482
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0481
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0481
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0481
-    ITEM $item_long_pants
+    ITEM $item_long_pants1_1
     COLOR 0481
     LOOT $loot_uncut_gems
     LOOT $loot_omnivores_food
@@ -576,9 +576,9 @@ SECTION NPC $npc_frost_elf_warrior
     BACKPACK
     GOLD 10 88
     ITEM $item_iron_spear
-    ITEM $item_thigh_boots
+    ITEM $item_thigh_boots1_1
     COLOR 0482
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0482
     ITEM $item_iron_chain_tunic
     COLOR 0481
@@ -630,9 +630,9 @@ SECTION NPC $npc_frost_elf_archer
     DIRECTION W
     GOLD 10 88
     ITEM $item_bow
-    ITEM $item_thigh_boots
+    ITEM $item_thigh_boots1_1
     COLOR 0482
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0482
     ITEM $item_iron_chain_tunic
     COLOR 0481
@@ -684,15 +684,15 @@ SECTION NPC $npc_frost_elf_wizard
     DIRECTION W
     BACKPACK
     GOLD 50 150
-    ITEM $item_thigh_boots
+    ITEM $item_thigh_boots1_1
     COLOR 0482
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0481
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0481
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0481
-    ITEM $item_long_pants
+    ITEM $item_long_pants1_1
     COLOR 0481
     ITEM $item_iron_chain_tunic
     COLOR 0481
@@ -754,7 +754,7 @@ SECTION NPC $npc_elf_f
     ITEM $item_leather_skirt
     ITEM $item_studded_leather_bustier
     ITEM $item_iron_spear
-    ITEM $item_sandles
+    ITEM $item_sandles1_1
     LOOT $loot_uncut_gems
     LOOT $loot_reagents
     TOTAME 1100
@@ -799,7 +799,7 @@ SECTION NPC $npc_elf_m
     ITEM $item_studded_leather_leggings
     ITEM $item_studded_leather_tunic
     ITEM $item_iron_kryss
-    ITEM $item_sandles
+    ITEM $item_sandles1_1
     LOOT $loot_reagents
     LOOT $loot_jewelry
     TOTAME 1100
@@ -851,11 +851,11 @@ SECTION NPC $npc_drow_weapon_lord
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_body_sash
+    ITEM $item_body_sash1_1
     COLOR 0142
     ITEM $item_piwafwi
     TOTAME 1100
@@ -901,11 +901,11 @@ SECTION NPC $npc_drow_assassin
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_body_sash
+    ITEM $item_body_sash1_1
     COLOR 0142
     ITEM $item_piwafwi
     ITEM $item_iron_kryss_of_vanquishing
@@ -949,12 +949,12 @@ SECTION NPC $npc_drow_mistress
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_piwafwi
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0086
     ITEM $item_agapite_chain_tunic
     TOTAME 1100
@@ -1001,11 +1001,11 @@ SECTION NPC $npc_drow_warrior
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_body_sash
+    ITEM $item_body_sash1_1
     COLOR 0142
     ITEM $item_piwafwi
     ITEM $item_iron_scimitar_of_force
@@ -1049,12 +1049,12 @@ SECTION NPC $npc_drow_drow_priestess
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_piwafwi
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0369
     ITEM $item_iron_war_fork_of_power
     TOTAME 1100
@@ -1100,12 +1100,12 @@ SECTION NPC $npc_drow_high_priestess
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
     ITEM $item_piwafwi
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 01b6
     ITEM $item_iron_mace_of_force
     TOTAME 1100
@@ -1152,11 +1152,11 @@ SECTION NPC $npc_drow_archer
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_body_sash
+    ITEM $item_body_sash1_1
     COLOR 0142
     ITEM $item_piwafwi
     ITEM $item_iron_crossbow_of_force
@@ -1203,11 +1203,11 @@ SECTION NPC $npc_drow_wizard
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_body_sash
+    ITEM $item_body_sash1_1
     COLOR 0142
     ITEM $item_piwafwi
     TOTAME 1100
@@ -1252,12 +1252,12 @@ SECTION NPC $npc_gromph
     FX2 10
     ITEM $item_shadow_chain_tunic
     ITEM $item_shadow_chain_leggings
-    ITEM $item_boots
+    ITEM $item_boots1_1
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_body_sash
-    ITEM $item_robe1
+    ITEM $item_body_sash1_1
+    ITEM $item_robe1_1
     COLOR 0386
     ITEM $item_fire_mace
     TOTAME 1100
@@ -1310,14 +1310,14 @@ SECTION NPC $npc_high_elf_king
     FX2 10
     ITEM $item_golden_chain_tunic
     ITEM $item_golden_chain_leggings
-    ITEM $item_sandles
+    ITEM $item_sandles1_1
     COLOR 096d
     ITEM $item_golden_plate_sleeves
     ITEM $item_iron_long_sword_of_vanquishing
     COLOR 096d
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 01b6
-    ITEM $item_body_sash
+    ITEM $item_body_sash1_1
     COLOR 01b6
     TOTAME 1100
     STR 95 100
@@ -1362,14 +1362,14 @@ SECTION NPC $npc_high_elf_prince
     FX2 10
     ITEM $item_golden_chain_tunic
     ITEM $item_golden_chain_leggings
-    ITEM $item_sandles
+    ITEM $item_sandles1_1
     COLOR 096d
     ITEM $item_golden_plate_sleeves
     ITEM $item_iron_long_sword_of_vanquishing
     COLOR 096d
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 01b6
-    ITEM $item_body_sash
+    ITEM $item_body_sash1_1
     COLOR 01b6
     TOTAME 1100
     STR 95 100
@@ -1409,10 +1409,10 @@ SECTION NPC $npc_high_elf_mage
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 02a8
     ITEM $item_iron_ringmail_gloves
-    ITEM $item_sandles
+    ITEM $item_sandles1_1
     ITEM $item_wizards_hat
     COLOR 02a8
     ITEM $item_gnarled_staff
@@ -1452,10 +1452,10 @@ SECTION NPC $npc_high_elf_enchantress
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 02a8
     ITEM $item_iron_ringmail_gloves
-    ITEM $item_sandles
+    ITEM $item_sandles1_1
     ITEM $item_wizards_hat
     COLOR 02a8
     ITEM $item_gnarled_staff
@@ -1489,19 +1489,19 @@ SECTION NPC $npc_high_elf_m
     DIRECTION W
     BACKPACK
     GOLD 76 95
-    ITEM $item_sandles
+    ITEM $item_sandles1_1
     COLOR 0238
     ITEM $item_wizards_hat
     COLOR 0170
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 0238
-    ITEM $item_fancy_shirt
+    ITEM $item_fancy_shirt1_1
     COLOR 0238
-    ITEM $item_tunic
+    ITEM $item_tunic1_1
     COLOR 0238
-    ITEM $item_robe1
+    ITEM $item_robe1_1
     COLOR 0238
-    ITEM $item_long_pants
+    ITEM $item_long_pants1_1
     COLOR 0238
     PACKITEM $item_spellbook
     TOTAME 1100

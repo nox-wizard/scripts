@@ -72,9 +72,9 @@ SECTION FISHLIST 4
 // boots for fishing...(skill>20)
 SECTION FISHLIST 5
 {
-	$item_boots
-	$item_thigh_boots
-	$item_thigh_boots_1
+	$item_boots1_1
+	$item_thigh_boots1_1
+	$item_thigh_boots1_1_1
 }
 
 // chests for fishing...(skill>80)

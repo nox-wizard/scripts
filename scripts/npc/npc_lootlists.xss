@@ -222,20 +222,20 @@ SECTION LOOTLIST $loot_omnivores_food
 	$item_grape_bunches_1
 	$item_peaches_1
 	$item_fruit_basket
-	$item_lettuce1
-	$item_squash1
-	$item_heads_of_cabbage
-	$item_ears_of_corn1_4
+	$item_lettuce1_1
+	$item_squash1_1
+	$item_heads_of_cabbage1_1
+	$item_ears_of_corn3_1
 	$item_jars_of_honey
 	$item_pumpkin1
-	$item_onions
+	$item_onions1
 	$item_coconuts1
 	$item_banana_1
 	$item_bunches_of_dates
 	$item_lemons1
 	$item_limes1
-	$item_honeydew_melons1
-	$item_canteloupes
+	$item_honeydew_melons1_1
+	$item_canteloupes1_1
 	$item_watermelons
 }
 
@@ -610,16 +610,16 @@ SECTION LOOTLIST $loot_minor_leggings
 SECTION LOOTLIST $loot_minor_shoes
 {
 	//$$ minor shoes
-	$item_sandles
-	$item_sandles
-	$item_shoes
-	$item_sandles
-	$item_shoes
-	$item_boots
-	$item_sandles
-	$item_shoes
-	$item_boots
-	$item_thigh_boots
+	$item_sandles1_1
+	$item_sandles1_1
+	$item_shoes1_1
+	$item_sandles1_1
+	$item_shoes1_1
+	$item_boots1_1
+	$item_sandles1_1
+	$item_shoes1_1
+	$item_boots1_1
+	$item_thigh_boots1_1
 }
 
 // Random Major Head Protection
@@ -681,16 +681,16 @@ SECTION LOOTLIST $loot_major_legs
 SECTION LOOTLIST $loot_major_shoes
 {
 	//$$ major shoes
-	$item_sandles
-	$item_sandles
-	$item_shoes
-	$item_sandles
-	$item_shoes
-	$item_boots
-	$item_sandles
-	$item_shoes
-	$item_boots
-	$item_thigh_boots
+	$item_sandles1_1
+	$item_sandles1_1
+	$item_shoes1_1
+	$item_sandles1_1
+	$item_shoes1_1
+	$item_boots1_1
+	$item_sandles1_1
+	$item_shoes1_1
+	$item_boots1_1
+	$item_thigh_boots1_1
 }
 
 // Random Misc Items
@@ -1021,7 +1021,7 @@ SECTION LOOTLIST $loot_misc_stuff
 	$item_lute_2
 	$item_lute_1
 	$item_arrow 25
-	$item_scissors
+	$item_scissors1_1
 	$item_hand_torch_lit
 	$item_hand_lantern_lit
 	$item_wash_basin

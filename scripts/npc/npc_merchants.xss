@@ -863,21 +863,21 @@ SECTION NPC $npc_baker_m
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
-	SELLITEM $item_lettuce1
-	SELLITEM $item_squash1
-	SELLITEM $item_heads_of_cabbage
-	SELLITEM $item_ears_of_corn1_4
+	SELLITEM $item_lettuce1_1
+	SELLITEM $item_squash1_1
+	SELLITEM $item_heads_of_cabbage1_1
+	SELLITEM $item_ears_of_corn3_1
 	SELLITEM $item_donuts
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
-	SELLITEM $item_onions
+	SELLITEM $item_onions1
 	SELLITEM $item_coconuts1
 	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
 	SELLITEM $item_lemons1
 	SELLITEM $item_limes1
-	SELLITEM $item_honeydew_melons1
-	SELLITEM $item_canteloupes
+	SELLITEM $item_honeydew_melons1_1
+	SELLITEM $item_canteloupes1_1
 	SELLITEM $item_watermelons
 	SELLITEM $item_cookie_mix
 	DOORUSE 1
@@ -963,21 +963,21 @@ SECTION NPC $npc_baker_f
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
-	SELLITEM $item_lettuce1
-	SELLITEM $item_squash1
-	SELLITEM $item_heads_of_cabbage
-	SELLITEM $item_ears_of_corn1_4
+	SELLITEM $item_lettuce1_1
+	SELLITEM $item_squash1_1
+	SELLITEM $item_heads_of_cabbage1_1
+	SELLITEM $item_ears_of_corn3_1
 	SELLITEM $item_donuts
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
-	SELLITEM $item_onions
+	SELLITEM $item_onions1
 	SELLITEM $item_coconuts1
 	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
 	SELLITEM $item_lemons1
 	SELLITEM $item_limes1
-	SELLITEM $item_honeydew_melons1
-	SELLITEM $item_canteloupes
+	SELLITEM $item_honeydew_melons1_1
+	SELLITEM $item_canteloupes1_1
 	SELLITEM $item_watermelons
 	SELLITEM $item_cookie_mix
 	DOORUSE 1
@@ -1056,22 +1056,22 @@ SECTION NPC $npc_provisioner_m
 	RSHOPITEM $item_ginseng
 	RSHOPITEM $item_map
 	RSHOPITEM $item_book
-	RSHOPITEM $item_boots
-	RSHOPITEM $item_sandles
-	RSHOPITEM $item_shoes
-	RSHOPITEM $item_thigh_boots
+	RSHOPITEM $item_boots1_1
+	RSHOPITEM $item_sandles1_1
+	RSHOPITEM $item_shoes1_1
+	RSHOPITEM $item_thigh_boots1_1
 	RSHOPITEM $item_floopy_hat
 	RSHOPITEM $item_straw_hat
-	RSHOPITEM $item_cloak
-	RSHOPITEM $item_shirt
-	RSHOPITEM $item_plain_dress
-	RSHOPITEM $item_skirt
-	RSHOPITEM $item_short_pants
-	RSHOPITEM $item_kilt
-	RSHOPITEM $item_long_pants
-	RSHOPITEM $item_half_apron
-	RSHOPITEM $item_full_apron
-	RSHOPITEM $item_bandana
+	RSHOPITEM $item_cloak1_1
+	RSHOPITEM $item_shirt1_1
+	RSHOPITEM $item_plain_dress1_1
+	RSHOPITEM $item_skirt1_1
+	RSHOPITEM $item_short_pants1_1
+	RSHOPITEM $item_kilt1_1
+	RSHOPITEM $item_long_pants1_1
+	RSHOPITEM $item_half_apron1_1
+	RSHOPITEM $item_full_apron1_1
+	RSHOPITEM $item_bandana1_1
 	RSHOPITEM $item_skullcap
 	RSHOPITEM $item_deer_mask
 	RSHOPITEM $item_bear_mask
@@ -1104,16 +1104,16 @@ SECTION NPC $npc_provisioner_m
 	RSHOPITEM $item_pears_1
 	RSHOPITEM $item_apples
 	RSHOPITEM $item_peaches_1
-	RSHOPITEM $item_bedroll
+	RSHOPITEM $item_closed_bedroll1_1
 	RSHOPITEM $item_kindling
 	RSHOPITEM $item_sextant
 	RSHOPITEM $item_sack_of_flour_1
 	RSHOPITEM $item_lockpicks
-	RSHOPITEM $item_cut_cloth
+	RSHOPITEM $item_folded_cloth1_1
 	RSHOPITEM $item_iron_ingots
 	RSHOPITEM $item_tinkers_tools
 	RSHOPITEM $item_little_candle_lit
-	RSHOPITEM $item_scissors
+	RSHOPITEM $item_scissors1_1
 	RSHOPITEM $item_hand_torch_lit
 	RSHOPITEM $item_hand_lantern_lit
 	SELLITEM $item_wooden_shield
@@ -1149,22 +1149,22 @@ SECTION NPC $npc_provisioner_m
 	SELLITEM $item_ginseng
 	SELLITEM $item_map
 	SELLITEM $item_book
-	SELLITEM $item_boots
-	SELLITEM $item_sandles
-	SELLITEM $item_shoes
-	SELLITEM $item_thigh_boots
+	SELLITEM $item_boots1_1
+	SELLITEM $item_sandles1_1
+	SELLITEM $item_shoes1_1
+	SELLITEM $item_thigh_boots1_1
 	SELLITEM $item_floopy_hat
 	SELLITEM $item_straw_hat
-	SELLITEM $item_cloak
-	SELLITEM $item_shirt
-	SELLITEM $item_plain_dress
-	SELLITEM $item_skirt
-	SELLITEM $item_short_pants
-	SELLITEM $item_kilt
-	SELLITEM $item_long_pants
-	SELLITEM $item_half_apron
-	SELLITEM $item_full_apron
-	SELLITEM $item_bandana
+	SELLITEM $item_cloak1_1
+	SELLITEM $item_shirt1_1
+	SELLITEM $item_plain_dress1_1
+	SELLITEM $item_skirt1_1
+	SELLITEM $item_short_pants1_1
+	SELLITEM $item_kilt1_1
+	SELLITEM $item_long_pants1_1
+	SELLITEM $item_half_apron1_1
+	SELLITEM $item_full_apron1_1
+	SELLITEM $item_bandana1_1
 	SELLITEM $item_skullcap
 	SELLITEM $item_deer_mask
 	SELLITEM $item_bear_mask
@@ -1230,16 +1230,16 @@ SECTION NPC $npc_provisioner_m
 	SELLITEM $item_pears_1
 	SELLITEM $item_apples
 	SELLITEM $item_peaches_1
-	SELLITEM $item_bedroll
+	SELLITEM $item_closed_bedroll1_1
 	SELLITEM $item_kindling
 	SELLITEM $item_sextant
 	SELLITEM $item_sack_of_flour_1
 	SELLITEM $item_lockpicks
-	SELLITEM $item_cut_cloth
+	SELLITEM $item_folded_cloth1_1
 	SELLITEM $item_iron_ingots
 	SELLITEM $item_tinkers_tools
 	SELLITEM $item_little_candle_lit
-	SELLITEM $item_scissors
+	SELLITEM $item_scissors1_1
 	SELLITEM $item_hand_torch_lit
 	SELLITEM $item_hand_lantern_lit
 	DOORUSE 1
@@ -1318,22 +1318,22 @@ SECTION NPC $npc_provisioner_f
 	RSHOPITEM $item_ginseng
 	RSHOPITEM $item_map
 	RSHOPITEM $item_book
-	RSHOPITEM $item_boots
-	RSHOPITEM $item_sandles
-	RSHOPITEM $item_shoes
-	RSHOPITEM $item_thigh_boots
+	RSHOPITEM $item_boots1_1
+	RSHOPITEM $item_sandles1_1
+	RSHOPITEM $item_shoes1_1
+	RSHOPITEM $item_thigh_boots1_1
 	RSHOPITEM $item_floopy_hat
 	RSHOPITEM $item_straw_hat
-	RSHOPITEM $item_cloak
-	RSHOPITEM $item_shirt
-	RSHOPITEM $item_plain_dress
-	RSHOPITEM $item_skirt
-	RSHOPITEM $item_short_pants
-	RSHOPITEM $item_kilt
-	RSHOPITEM $item_long_pants
-	RSHOPITEM $item_half_apron
-	RSHOPITEM $item_full_apron
-	RSHOPITEM $item_bandana
+	RSHOPITEM $item_cloak1_1
+	RSHOPITEM $item_shirt1_1
+	RSHOPITEM $item_plain_dress1_1
+	RSHOPITEM $item_skirt1_1
+	RSHOPITEM $item_short_pants1_1
+	RSHOPITEM $item_kilt1_1
+	RSHOPITEM $item_long_pants1_1
+	RSHOPITEM $item_half_apron1_1
+	RSHOPITEM $item_full_apron1_1
+	RSHOPITEM $item_bandana1_1
 	RSHOPITEM $item_skullcap
 	RSHOPITEM $item_deer_mask
 	RSHOPITEM $item_bear_mask
@@ -1366,16 +1366,16 @@ SECTION NPC $npc_provisioner_f
 	RSHOPITEM $item_pears_1
 	RSHOPITEM $item_apples
 	RSHOPITEM $item_peaches_1
-	RSHOPITEM $item_bedroll
+	RSHOPITEM $item_closed_bedroll1_1
 	RSHOPITEM $item_kindling
 	RSHOPITEM $item_sextant
 	RSHOPITEM $item_sack_of_flour_1
 	RSHOPITEM $item_lockpicks
-	RSHOPITEM $item_cut_cloth
+	RSHOPITEM $item_folded_cloth1_1
 	RSHOPITEM $item_iron_ingots
 	RSHOPITEM $item_tinkers_tools
 	RSHOPITEM $item_little_candle_lit
-	RSHOPITEM $item_scissors
+	RSHOPITEM $item_scissors1_1
 	RSHOPITEM $item_hand_torch_lit
 	RSHOPITEM $item_hand_lantern_lit
 	SELLITEM $item_wooden_shield
@@ -1411,22 +1411,22 @@ SECTION NPC $npc_provisioner_f
 	SELLITEM $item_ginseng
 	SELLITEM $item_map
 	SELLITEM $item_book
-	SELLITEM $item_boots
-	SELLITEM $item_sandles
-	SELLITEM $item_shoes
-	SELLITEM $item_thigh_boots
+	SELLITEM $item_boots1_1
+	SELLITEM $item_sandles1_1
+	SELLITEM $item_shoes1_1
+	SELLITEM $item_thigh_boots1_1
 	SELLITEM $item_floopy_hat
 	SELLITEM $item_straw_hat
-	SELLITEM $item_cloak
-	SELLITEM $item_shirt
-	SELLITEM $item_plain_dress
-	SELLITEM $item_skirt
-	SELLITEM $item_short_pants
-	SELLITEM $item_kilt
-	SELLITEM $item_long_pants
-	SELLITEM $item_half_apron
-	SELLITEM $item_full_apron
-	SELLITEM $item_bandana
+	SELLITEM $item_cloak1_1
+	SELLITEM $item_shirt1_1
+	SELLITEM $item_plain_dress1_1
+	SELLITEM $item_skirt1_1
+	SELLITEM $item_short_pants1_1
+	SELLITEM $item_kilt1_1
+	SELLITEM $item_long_pants1_1
+	SELLITEM $item_half_apron1_1
+	SELLITEM $item_full_apron1_1
+	SELLITEM $item_bandana1_1
 	SELLITEM $item_skullcap
 	SELLITEM $item_deer_mask
 	SELLITEM $item_bear_mask
@@ -1492,16 +1492,16 @@ SECTION NPC $npc_provisioner_f
 	SELLITEM $item_pears_1
 	SELLITEM $item_apples
 	SELLITEM $item_peaches_1
-	SELLITEM $item_bedroll
+	SELLITEM $item_closed_bedroll1_1
 	SELLITEM $item_kindling
 	SELLITEM $item_sextant
 	SELLITEM $item_sack_of_flour_1
 	SELLITEM $item_lockpicks
-	SELLITEM $item_cut_cloth
+	SELLITEM $item_folded_cloth1_1
 	SELLITEM $item_iron_ingots
 	SELLITEM $item_tinkers_tools
 	SELLITEM $item_little_candle_lit
-	SELLITEM $item_scissors
+	SELLITEM $item_scissors1_1
 	SELLITEM $item_hand_torch_lit
 	SELLITEM $item_hand_lantern_lit
 	DOORUSE 1
@@ -1546,14 +1546,14 @@ SECTION NPC $npc_cobbler_m
 	DAMAGE 3 15
 	DEF 5
 	SHOPKEEPER
-	RSHOPITEM $item_boots
-	RSHOPITEM $item_sandles
-	RSHOPITEM $item_shoes
-	RSHOPITEM $item_thigh_boots
-	SELLITEM $item_boots
-	SELLITEM $item_sandles
-	SELLITEM $item_shoes
-	SELLITEM $item_thigh_boots
+	RSHOPITEM $item_boots1_1
+	RSHOPITEM $item_sandles1_1
+	RSHOPITEM $item_shoes1_1
+	RSHOPITEM $item_thigh_boots1_1
+	SELLITEM $item_boots1_1
+	SELLITEM $item_sandles1_1
+	SELLITEM $item_shoes1_1
+	SELLITEM $item_thigh_boots1_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -1596,14 +1596,14 @@ SECTION NPC $npc_cobbler_f
 	DAMAGE 3 15
 	DEF 5
 	SHOPKEEPER
-	RSHOPITEM $item_boots
-	RSHOPITEM $item_sandles
-	RSHOPITEM $item_shoes
-	RSHOPITEM $item_thigh_boots
-	SELLITEM $item_boots
-	SELLITEM $item_sandles
-	SELLITEM $item_shoes
-	SELLITEM $item_thigh_boots
+	RSHOPITEM $item_boots1_1
+	RSHOPITEM $item_sandles1_1
+	RSHOPITEM $item_shoes1_1
+	RSHOPITEM $item_thigh_boots1_1
+	SELLITEM $item_boots1_1
+	SELLITEM $item_sandles1_1
+	SELLITEM $item_shoes1_1
+	SELLITEM $item_thigh_boots1_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -2363,22 +2363,22 @@ SECTION NPC $npc_tailor_m
 	RSHOPITEM $item_wide_brim_hat
 	RSHOPITEM $item_wizards_hat
 	RSHOPITEM $item_jester_hat
-	RSHOPITEM $item_cloak
-	RSHOPITEM $item_fancy_shirt
-	RSHOPITEM $item_shirt
-	RSHOPITEM $item_tunic
-	RSHOPITEM $item_robe1
-	RSHOPITEM $item_doublet
-	RSHOPITEM $item_fancy_dress
-	RSHOPITEM $item_plain_dress
-	RSHOPITEM $item_skirt
-	RSHOPITEM $item_short_pants
-	RSHOPITEM $item_kilt
-	RSHOPITEM $item_long_pants
-	RSHOPITEM $item_half_apron
-	RSHOPITEM $item_full_apron
-	RSHOPITEM $item_bandana
-	RSHOPITEM $item_body_sash
+	RSHOPITEM $item_cloak1_1
+	RSHOPITEM $item_fancy_shirt1_1
+	RSHOPITEM $item_shirt1_1
+	RSHOPITEM $item_tunic1_1
+	RSHOPITEM $item_robe1_1
+	RSHOPITEM $item_doublet1_1
+	RSHOPITEM $item_fancy_dress1_1
+	RSHOPITEM $item_plain_dress1_1
+	RSHOPITEM $item_skirt1_1
+	RSHOPITEM $item_short_pants1_1
+	RSHOPITEM $item_kilt1_1
+	RSHOPITEM $item_long_pants1_1
+	RSHOPITEM $item_half_apron1_1
+	RSHOPITEM $item_full_apron1_1
+	RSHOPITEM $item_bandana1_1
+	RSHOPITEM $item_body_sash1_1
 	RSHOPITEM $item_skullcap
 	RSHOPITEM $item_dyes
 	RSHOPITEM $item_dying_tub
@@ -2386,38 +2386,38 @@ SECTION NPC $npc_tailor_m
 	RSHOPITEM $item_balls_of_yarn1
 	RSHOPITEM $item_balls_of_yarn2
 	RSHOPITEM $item_bales_of_cotton
-	RSHOPITEM $item_piles_of_wool
+	RSHOPITEM $item_piles_of_wool_1
 	RSHOPITEM $item_sewing_kit
-	RSHOPITEM $item_cut_cloth
-	RSHOPITEM $item_scissors
-	RSHOPITEM $item_bolts_of_cloth1
-	RSHOPITEM $item_bolts_of_cloth1
-	RSHOPITEM $item_bolts_of_cloth2
-	RSHOPITEM $item_bolts_of_cloth3
-	RSHOPITEM $item_bolts_of_cloth4
-	RSHOPITEM $item_bolts_of_cloth5
-	RSHOPITEM $item_bolts_of_cloth6
-	RSHOPITEM $item_bolts_of_cloth7
+	RSHOPITEM $item_folded_cloth1_1
+	RSHOPITEM $item_scissors1_1
+	RSHOPITEM $item_bolts_of_cloth1_1
+	RSHOPITEM $item_bolts_of_cloth1_1
+	RSHOPITEM $item_bolts_of_cloth1_2
+	RSHOPITEM $item_bolts_of_cloth2_1
+	RSHOPITEM $item_bolts_of_cloth2_2
+	RSHOPITEM $item_bolts_of_cloth3_1
+	RSHOPITEM $item_bolts_of_cloth4_1
+	RSHOPITEM $item_bolts_of_cloth4_2
 	SELLITEM $item_floopy_hat
 	SELLITEM $item_wide_brim_hat
 	SELLITEM $item_wizards_hat
 	SELLITEM $item_jester_hat
-	SELLITEM $item_cloak
-	SELLITEM $item_fancy_shirt
-	SELLITEM $item_shirt
-	SELLITEM $item_tunic
-	SELLITEM $item_robe1
-	SELLITEM $item_doublet
-	SELLITEM $item_fancy_dress
-	SELLITEM $item_plain_dress
-	SELLITEM $item_skirt
-	SELLITEM $item_short_pants
-	SELLITEM $item_kilt
-	SELLITEM $item_long_pants
-	SELLITEM $item_half_apron
-	SELLITEM $item_full_apron
-	SELLITEM $item_bandana
-	SELLITEM $item_body_sash
+	SELLITEM $item_cloak1_1
+	SELLITEM $item_fancy_shirt1_1
+	SELLITEM $item_shirt1_1
+	SELLITEM $item_tunic1_1
+	SELLITEM $item_robe1_1
+	SELLITEM $item_doublet1_1
+	SELLITEM $item_fancy_dress1_1
+	SELLITEM $item_plain_dress1_1
+	SELLITEM $item_skirt1_1
+	SELLITEM $item_short_pants1_1
+	SELLITEM $item_kilt1_1
+	SELLITEM $item_long_pants1_1
+	SELLITEM $item_half_apron1_1
+	SELLITEM $item_full_apron1_1
+	SELLITEM $item_bandana1_1
+	SELLITEM $item_body_sash1_1
 	SELLITEM $item_skullcap
 	SELLITEM $item_dyes
 	SELLITEM $item_dying_tub
@@ -2425,18 +2425,18 @@ SECTION NPC $npc_tailor_m
 	SELLITEM $item_balls_of_yarn1
 	SELLITEM $item_balls_of_yarn2
 	SELLITEM $item_bales_of_cotton
-	SELLITEM $item_piles_of_wool
+	SELLITEM $item_piles_of_wool_1
 	SELLITEM $item_sewing_kit
-	SELLITEM $item_cut_cloth
-	SELLITEM $item_scissors
-	SELLITEM $item_bolts_of_cloth1
-	SELLITEM $item_bolts_of_cloth1
-	SELLITEM $item_bolts_of_cloth2
-	SELLITEM $item_bolts_of_cloth3
-	SELLITEM $item_bolts_of_cloth4
-	SELLITEM $item_bolts_of_cloth5
-	SELLITEM $item_bolts_of_cloth6
-	SELLITEM $item_bolts_of_cloth7
+	SELLITEM $item_folded_cloth1_1
+	SELLITEM $item_scissors1_1
+	SELLITEM $item_bolts_of_cloth1_1
+	SELLITEM $item_bolts_of_cloth1_1
+	SELLITEM $item_bolts_of_cloth1_2
+	SELLITEM $item_bolts_of_cloth2_1
+	SELLITEM $item_bolts_of_cloth2_2
+	SELLITEM $item_bolts_of_cloth3_1
+	SELLITEM $item_bolts_of_cloth4_1
+	SELLITEM $item_bolts_of_cloth4_2
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -2483,22 +2483,22 @@ SECTION NPC $npc_tailor_f
 	RSHOPITEM $item_wide_brim_hat
 	RSHOPITEM $item_wizards_hat
 	RSHOPITEM $item_jester_hat
-	RSHOPITEM $item_cloak
-	RSHOPITEM $item_fancy_shirt
-	RSHOPITEM $item_shirt
-	RSHOPITEM $item_tunic
-	RSHOPITEM $item_robe1
-	RSHOPITEM $item_doublet
-	RSHOPITEM $item_fancy_dress
-	RSHOPITEM $item_plain_dress
-	RSHOPITEM $item_skirt
-	RSHOPITEM $item_short_pants
-	RSHOPITEM $item_kilt
-	RSHOPITEM $item_long_pants
-	RSHOPITEM $item_half_apron
-	RSHOPITEM $item_full_apron
-	RSHOPITEM $item_bandana
-	RSHOPITEM $item_body_sash
+	RSHOPITEM $item_cloak1_1
+	RSHOPITEM $item_fancy_shirt1_1
+	RSHOPITEM $item_shirt1_1
+	RSHOPITEM $item_tunic1_1
+	RSHOPITEM $item_robe1_1
+	RSHOPITEM $item_doublet1_1
+	RSHOPITEM $item_fancy_dress1_1
+	RSHOPITEM $item_plain_dress1_1
+	RSHOPITEM $item_skirt1_1
+	RSHOPITEM $item_short_pants1_1
+	RSHOPITEM $item_kilt1_1
+	RSHOPITEM $item_long_pants1_1
+	RSHOPITEM $item_half_apron1_1
+	RSHOPITEM $item_full_apron1_1
+	RSHOPITEM $item_bandana1_1
+	RSHOPITEM $item_body_sash1_1
 	RSHOPITEM $item_skullcap
 	RSHOPITEM $item_dyes
 	RSHOPITEM $item_dying_tub
@@ -2506,38 +2506,38 @@ SECTION NPC $npc_tailor_f
 	RSHOPITEM $item_balls_of_yarn1
 	RSHOPITEM $item_balls_of_yarn2
 	RSHOPITEM $item_bales_of_cotton
-	RSHOPITEM $item_piles_of_wool
+	RSHOPITEM $item_piles_of_wool_1
 	RSHOPITEM $item_sewing_kit
-	RSHOPITEM $item_cut_cloth
-	RSHOPITEM $item_scissors
-	RSHOPITEM $item_bolts_of_cloth1
-	RSHOPITEM $item_bolts_of_cloth1
-	RSHOPITEM $item_bolts_of_cloth2
-	RSHOPITEM $item_bolts_of_cloth3
-	RSHOPITEM $item_bolts_of_cloth4
-	RSHOPITEM $item_bolts_of_cloth5
-	RSHOPITEM $item_bolts_of_cloth6
-	RSHOPITEM $item_bolts_of_cloth7
+	RSHOPITEM $item_folded_cloth1_1
+	RSHOPITEM $item_scissors1_1
+	RSHOPITEM $item_bolts_of_cloth1_1
+	RSHOPITEM $item_bolts_of_cloth1_1
+	RSHOPITEM $item_bolts_of_cloth1_2
+	RSHOPITEM $item_bolts_of_cloth2_1
+	RSHOPITEM $item_bolts_of_cloth2_2
+	RSHOPITEM $item_bolts_of_cloth3_1
+	RSHOPITEM $item_bolts_of_cloth4_1
+	RSHOPITEM $item_bolts_of_cloth4_2
 	SELLITEM $item_floopy_hat
 	SELLITEM $item_wide_brim_hat
 	SELLITEM $item_wizards_hat
 	SELLITEM $item_jester_hat
-	SELLITEM $item_cloak
-	SELLITEM $item_fancy_shirt
-	SELLITEM $item_shirt
-	SELLITEM $item_tunic
-	SELLITEM $item_robe1
-	SELLITEM $item_doublet
-	SELLITEM $item_fancy_dress
-	SELLITEM $item_plain_dress
-	SELLITEM $item_skirt
-	SELLITEM $item_short_pants
-	SELLITEM $item_kilt
-	SELLITEM $item_long_pants
-	SELLITEM $item_half_apron
-	SELLITEM $item_full_apron
-	SELLITEM $item_bandana
-	SELLITEM $item_body_sash
+	SELLITEM $item_cloak1_1
+	SELLITEM $item_fancy_shirt1_1
+	SELLITEM $item_shirt1_1
+	SELLITEM $item_tunic1_1
+	SELLITEM $item_robe1_1
+	SELLITEM $item_doublet1_1
+	SELLITEM $item_fancy_dress1_1
+	SELLITEM $item_plain_dress1_1
+	SELLITEM $item_skirt1_1
+	SELLITEM $item_short_pants1_1
+	SELLITEM $item_kilt1_1
+	SELLITEM $item_long_pants1_1
+	SELLITEM $item_half_apron1_1
+	SELLITEM $item_full_apron1_1
+	SELLITEM $item_bandana1_1
+	SELLITEM $item_body_sash1_1
 	SELLITEM $item_skullcap
 	SELLITEM $item_dyes
 	SELLITEM $item_dying_tub
@@ -2545,18 +2545,18 @@ SECTION NPC $npc_tailor_f
 	SELLITEM $item_balls_of_yarn1
 	SELLITEM $item_balls_of_yarn2
 	SELLITEM $item_bales_of_cotton
-	SELLITEM $item_piles_of_wool
+	SELLITEM $item_piles_of_wool_1
 	SELLITEM $item_sewing_kit
-	SELLITEM $item_cut_cloth
-	SELLITEM $item_scissors
-	SELLITEM $item_bolts_of_cloth1
-	SELLITEM $item_bolts_of_cloth1
-	SELLITEM $item_bolts_of_cloth2
-	SELLITEM $item_bolts_of_cloth3
-	SELLITEM $item_bolts_of_cloth4
-	SELLITEM $item_bolts_of_cloth5
-	SELLITEM $item_bolts_of_cloth6
-	SELLITEM $item_bolts_of_cloth7
+	SELLITEM $item_folded_cloth1_1
+	SELLITEM $item_scissors1_1
+	SELLITEM $item_bolts_of_cloth1_1
+	SELLITEM $item_bolts_of_cloth1_1
+	SELLITEM $item_bolts_of_cloth1_2
+	SELLITEM $item_bolts_of_cloth2_1
+	SELLITEM $item_bolts_of_cloth2_2
+	SELLITEM $item_bolts_of_cloth3_1
+	SELLITEM $item_bolts_of_cloth4_1
+	SELLITEM $item_bolts_of_cloth4_2
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -3016,12 +3016,12 @@ SECTION NPC $npc_leather_worker_m
 	RSHOPITEM $item_bone_chest
 	RSHOPITEM $item_backpack
 	RSHOPITEM $item_leather_bag
-	RSHOPITEM $item_sandles
-	RSHOPITEM $item_shoes
-	RSHOPITEM $item_boots
-	RSHOPITEM $item_thigh_boots
-	RSHOPITEM $item_hide
-	SELLITEM $item_hide
+	RSHOPITEM $item_sandles1_1
+	RSHOPITEM $item_shoes1_1
+	RSHOPITEM $item_boots1_1
+	RSHOPITEM $item_thigh_boots1_1
+	RSHOPITEM $item_hide1_1
+	SELLITEM $item_hide1_1
 	SELLITEM $item_skullcap
 	SELLITEM $item_studded_leather_gorget
 	SELLITEM $item_studded_leather_gloves
@@ -3049,10 +3049,10 @@ SECTION NPC $npc_leather_worker_m
 	SELLITEM $item_bone_chest
 	SELLITEM $item_backpack
 	SELLITEM $item_leather_bag
-	SELLITEM $item_sandles
-	SELLITEM $item_shoes
-	SELLITEM $item_boots
-	SELLITEM $item_thigh_boots
+	SELLITEM $item_sandles1_1
+	SELLITEM $item_shoes1_1
+	SELLITEM $item_boots1_1
+	SELLITEM $item_thigh_boots1_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -3123,12 +3123,12 @@ SECTION NPC $npc_leather_worker_f
 	RSHOPITEM $item_bone_chest
 	RSHOPITEM $item_backpack
 	RSHOPITEM $item_leather_bag
-	RSHOPITEM $item_sandles
-	RSHOPITEM $item_shoes
-	RSHOPITEM $item_boots
-	RSHOPITEM $item_thigh_boots
-	RSHOPITEM $item_hide
-	SELLITEM $item_hide
+	RSHOPITEM $item_sandles1_1
+	RSHOPITEM $item_shoes1_1
+	RSHOPITEM $item_boots1_1
+	RSHOPITEM $item_thigh_boots1_1
+	RSHOPITEM $item_hide1_1
+	SELLITEM $item_hide1_1
 	SELLITEM $item_skullcap
 	SELLITEM $item_studded_leather_gorget
 	SELLITEM $item_studded_leather_gloves
@@ -3156,10 +3156,10 @@ SECTION NPC $npc_leather_worker_f
 	SELLITEM $item_bone_chest
 	SELLITEM $item_backpack
 	SELLITEM $item_leather_bag
-	SELLITEM $item_sandles
-	SELLITEM $item_shoes
-	SELLITEM $item_boots
-	SELLITEM $item_thigh_boots
+	SELLITEM $item_sandles1_1
+	SELLITEM $item_shoes1_1
+	SELLITEM $item_boots1_1
+	SELLITEM $item_thigh_boots1_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -3296,39 +3296,39 @@ SECTION NPC $npc_spinner_m
 	RSHOPITEM $item_dyes
 	RSHOPITEM $item_dying_tub
 	RSHOPITEM $item_sewing_kit
-	RSHOPITEM $item_cut_cloth
-	RSHOPITEM $item_scissors
+	RSHOPITEM $item_folded_cloth1_1
+	RSHOPITEM $item_scissors1_1
 	RSHOPITEM $item_balls_of_yarn1
 	RSHOPITEM $item_balls_of_yarn1
 	RSHOPITEM $item_balls_of_yarn2
 	RSHOPITEM $item_bales_of_cotton
-	RSHOPITEM $item_piles_of_wool
-	RSHOPITEM $item_bolts_of_cloth1
-	RSHOPITEM $item_bolts_of_cloth1
-	RSHOPITEM $item_bolts_of_cloth2
-	RSHOPITEM $item_bolts_of_cloth3
-	RSHOPITEM $item_bolts_of_cloth4
-	RSHOPITEM $item_bolts_of_cloth5
-	RSHOPITEM $item_bolts_of_cloth6
-	RSHOPITEM $item_bolts_of_cloth7
+	RSHOPITEM $item_piles_of_wool_1
+	RSHOPITEM $item_bolts_of_cloth1_1
+	RSHOPITEM $item_bolts_of_cloth1_1
+	RSHOPITEM $item_bolts_of_cloth1_2
+	RSHOPITEM $item_bolts_of_cloth2_1
+	RSHOPITEM $item_bolts_of_cloth2_2
+	RSHOPITEM $item_bolts_of_cloth3_1
+	RSHOPITEM $item_bolts_of_cloth4_1
+	RSHOPITEM $item_bolts_of_cloth4_2
 	SELLITEM $item_dyes
 	SELLITEM $item_dying_tub
 	SELLITEM $item_sewing_kit
-	SELLITEM $item_cut_cloth
-	SELLITEM $item_scissors
+	SELLITEM $item_folded_cloth1_1
+	SELLITEM $item_scissors1_1
 	SELLITEM $item_balls_of_yarn1
 	SELLITEM $item_balls_of_yarn1
 	SELLITEM $item_balls_of_yarn2
 	SELLITEM $item_bales_of_cotton
-	SELLITEM $item_piles_of_wool
-	SELLITEM $item_bolts_of_cloth1
-	SELLITEM $item_bolts_of_cloth1
-	SELLITEM $item_bolts_of_cloth2
-	SELLITEM $item_bolts_of_cloth3
-	SELLITEM $item_bolts_of_cloth4
-	SELLITEM $item_bolts_of_cloth5
-	SELLITEM $item_bolts_of_cloth6
-	SELLITEM $item_bolts_of_cloth7
+	SELLITEM $item_piles_of_wool_1
+	SELLITEM $item_bolts_of_cloth1_1
+	SELLITEM $item_bolts_of_cloth1_1
+	SELLITEM $item_bolts_of_cloth1_2
+	SELLITEM $item_bolts_of_cloth2_1
+	SELLITEM $item_bolts_of_cloth2_2
+	SELLITEM $item_bolts_of_cloth3_1
+	SELLITEM $item_bolts_of_cloth4_1
+	SELLITEM $item_bolts_of_cloth4_2
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -3374,39 +3374,39 @@ SECTION NPC $npc_spinner_f
 	RSHOPITEM $item_dyes
 	RSHOPITEM $item_dying_tub
 	RSHOPITEM $item_sewing_kit
-	RSHOPITEM $item_cut_cloth
-	RSHOPITEM $item_scissors
+	RSHOPITEM $item_folded_cloth1_1
+	RSHOPITEM $item_scissors1_1
 	RSHOPITEM $item_balls_of_yarn1
 	RSHOPITEM $item_balls_of_yarn1
 	RSHOPITEM $item_balls_of_yarn2
 	RSHOPITEM $item_bales_of_cotton
-	RSHOPITEM $item_piles_of_wool
-	RSHOPITEM $item_bolts_of_cloth1
-	RSHOPITEM $item_bolts_of_cloth1
-	RSHOPITEM $item_bolts_of_cloth2
-	RSHOPITEM $item_bolts_of_cloth3
-	RSHOPITEM $item_bolts_of_cloth4
-	RSHOPITEM $item_bolts_of_cloth5
-	RSHOPITEM $item_bolts_of_cloth6
-	RSHOPITEM $item_bolts_of_cloth7
+	RSHOPITEM $item_piles_of_wool_1
+	RSHOPITEM $item_bolts_of_cloth1_1
+	RSHOPITEM $item_bolts_of_cloth1_1
+	RSHOPITEM $item_bolts_of_cloth1_2
+	RSHOPITEM $item_bolts_of_cloth2_1
+	RSHOPITEM $item_bolts_of_cloth2_2
+	RSHOPITEM $item_bolts_of_cloth3_1
+	RSHOPITEM $item_bolts_of_cloth4_1
+	RSHOPITEM $item_bolts_of_cloth4_2
 	SELLITEM $item_dyes
 	SELLITEM $item_dying_tub
 	SELLITEM $item_sewing_kit
-	SELLITEM $item_cut_cloth
-	SELLITEM $item_scissors
+	SELLITEM $item_folded_cloth1_1
+	SELLITEM $item_scissors1_1
 	SELLITEM $item_balls_of_yarn1
 	SELLITEM $item_balls_of_yarn1
 	SELLITEM $item_balls_of_yarn2
 	SELLITEM $item_bales_of_cotton
-	SELLITEM $item_piles_of_wool
-	SELLITEM $item_bolts_of_cloth1
-	SELLITEM $item_bolts_of_cloth1
-	SELLITEM $item_bolts_of_cloth2
-	SELLITEM $item_bolts_of_cloth3
-	SELLITEM $item_bolts_of_cloth4
-	SELLITEM $item_bolts_of_cloth5
-	SELLITEM $item_bolts_of_cloth6
-	SELLITEM $item_bolts_of_cloth7
+	SELLITEM $item_piles_of_wool_1
+	SELLITEM $item_bolts_of_cloth1_1
+	SELLITEM $item_bolts_of_cloth1_1
+	SELLITEM $item_bolts_of_cloth1_2
+	SELLITEM $item_bolts_of_cloth2_1
+	SELLITEM $item_bolts_of_cloth2_2
+	SELLITEM $item_bolts_of_cloth3_1
+	SELLITEM $item_bolts_of_cloth4_1
+	SELLITEM $item_bolts_of_cloth4_2
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -4287,9 +4287,9 @@ SECTION NPC $npc_architect_m
 	RSHOPITEM $item_small_marble_shop_deed
 	RSHOPITEM $item_farm_house_deed
 	RSHOPITEM $item_small_stone_shop_deed
-	RSHOPITEM $item_2-story_villa_deed
+	RSHOPITEM $item_banner31_1-story_villa_deed
 	RSHOPITEM $item_sandstone_patio_house_deed
-	RSHOPITEM $item_2-story_log_cabin_deed
+	RSHOPITEM $item_banner31_1-story_log_cabin_deed
 	RSHOPITEM $item_large_marble_patio_house_deed
 	SELLITEM $item_small_stone_plaster_house_deed
 	SELLITEM $item_small_stone_house_deed
@@ -4310,9 +4310,9 @@ SECTION NPC $npc_architect_m
 	SELLITEM $item_small_marble_shop_deed
 	SELLITEM $item_farm_house_deed
 	SELLITEM $item_small_stone_shop_deed
-	SELLITEM $item_2-story_villa_deed
+	SELLITEM $item_banner31_1-story_villa_deed
 	SELLITEM $item_sandstone_patio_house_deed
-	SELLITEM $item_2-story_log_cabin_deed
+	SELLITEM $item_banner31_1-story_log_cabin_deed
 	SELLITEM $item_large_marble_patio_house_deed
 	TOTAME 1100
 	DOORUSE 1
@@ -4378,9 +4378,9 @@ SECTION NPC $npc_architect_f
 	RSHOPITEM $item_small_marble_shop_deed
 	RSHOPITEM $item_farm_house_deed
 	RSHOPITEM $item_small_stone_shop_deed
-	RSHOPITEM $item_2-story_villa_deed
+	RSHOPITEM $item_banner31_1-story_villa_deed
 	RSHOPITEM $item_sandstone_patio_house_deed
-	RSHOPITEM $item_2-story_log_cabin_deed
+	RSHOPITEM $item_banner31_1-story_log_cabin_deed
 	RSHOPITEM $item_large_marble_patio_house_deed
 	SELLITEM $item_small_stone_plaster_house_deed
 	SELLITEM $item_small_stone_house_deed
@@ -4401,9 +4401,9 @@ SECTION NPC $npc_architect_f
 	SELLITEM $item_small_marble_shop_deed
 	SELLITEM $item_farm_house_deed
 	SELLITEM $item_small_stone_shop_deed
-	SELLITEM $item_2-story_villa_deed
+	SELLITEM $item_banner31_1-story_villa_deed
 	SELLITEM $item_sandstone_patio_house_deed
-	SELLITEM $item_2-story_log_cabin_deed
+	SELLITEM $item_banner31_1-story_log_cabin_deed
 	SELLITEM $item_large_marble_patio_house_deed
 	TOTAME 1100
 	DOORUSE 1
@@ -4703,42 +4703,42 @@ SECTION NPC $npc_farmer_m
 	RSHOPITEM $item_grape_bunches_1
 	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_fruit_basket
-	RSHOPITEM $item_squash1
-	RSHOPITEM $item_heads_of_cabbage
-	RSHOPITEM $item_ears_of_corn1_4
+	RSHOPITEM $item_squash1_1
+	RSHOPITEM $item_heads_of_cabbage1_1
+	RSHOPITEM $item_ears_of_corn3_1
 	RSHOPITEM $item_jars_of_honey
 	RSHOPITEM $item_pumpkin1
-	RSHOPITEM $item_onions
+	RSHOPITEM $item_onions1
 	RSHOPITEM $item_coconuts1
 	RSHOPITEM $item_banana_1
 	RSHOPITEM $item_bunches_of_dates
 	RSHOPITEM $item_lemons1
 	RSHOPITEM $item_limes1
-	RSHOPITEM $item_honeydew_melons1
-	RSHOPITEM $item_canteloupes
+	RSHOPITEM $item_honeydew_melons1_1
+	RSHOPITEM $item_canteloupes1_1
 	RSHOPITEM $item_watermelons
-	RSHOPITEM $item_sheaf_of_hay1
+	RSHOPITEM $item_sheaf_of_hay1_1
 	SELLITEM $item_eggs
 	SELLITEM $item_pears_1
 	SELLITEM $item_apples
 	SELLITEM $item_grape_bunches_1
 	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
-	SELLITEM $item_squash1
-	SELLITEM $item_heads_of_cabbage
-	SELLITEM $item_ears_of_corn1_4
+	SELLITEM $item_squash1_1
+	SELLITEM $item_heads_of_cabbage1_1
+	SELLITEM $item_ears_of_corn3_1
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
-	SELLITEM $item_onions
+	SELLITEM $item_onions1
 	SELLITEM $item_coconuts1
 	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
 	SELLITEM $item_lemons1
 	SELLITEM $item_limes1
-	SELLITEM $item_honeydew_melons1
-	SELLITEM $item_canteloupes
+	SELLITEM $item_honeydew_melons1_1
+	SELLITEM $item_canteloupes1_1
 	SELLITEM $item_watermelons
-	SELLITEM $item_sheaf_of_hay1
+	SELLITEM $item_sheaf_of_hay1_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -4786,42 +4786,42 @@ SECTION NPC $npc_farmer_f
 	RSHOPITEM $item_grape_bunches_1
 	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_fruit_basket
-	RSHOPITEM $item_squash1
-	RSHOPITEM $item_heads_of_cabbage
-	RSHOPITEM $item_ears_of_corn1_4
+	RSHOPITEM $item_squash1_1
+	RSHOPITEM $item_heads_of_cabbage1_1
+	RSHOPITEM $item_ears_of_corn3_1
 	RSHOPITEM $item_jars_of_honey
 	RSHOPITEM $item_pumpkin1
-	RSHOPITEM $item_onions
+	RSHOPITEM $item_onions1
 	RSHOPITEM $item_coconuts1
 	RSHOPITEM $item_banana_1
 	RSHOPITEM $item_bunches_of_dates
 	RSHOPITEM $item_lemons1
 	RSHOPITEM $item_limes1
-	RSHOPITEM $item_honeydew_melons1
-	RSHOPITEM $item_canteloupes
+	RSHOPITEM $item_honeydew_melons1_1
+	RSHOPITEM $item_canteloupes1_1
 	RSHOPITEM $item_watermelons
-	RSHOPITEM $item_sheaf_of_hay1
+	RSHOPITEM $item_sheaf_of_hay1_1
 	SELLITEM $item_eggs
 	SELLITEM $item_pears_1
 	SELLITEM $item_apples
 	SELLITEM $item_grape_bunches_1
 	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
-	SELLITEM $item_squash1
-	SELLITEM $item_heads_of_cabbage
-	SELLITEM $item_ears_of_corn1_4
+	SELLITEM $item_squash1_1
+	SELLITEM $item_heads_of_cabbage1_1
+	SELLITEM $item_ears_of_corn3_1
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
-	SELLITEM $item_onions
+	SELLITEM $item_onions1
 	SELLITEM $item_coconuts1
 	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
 	SELLITEM $item_lemons1
 	SELLITEM $item_limes1
-	SELLITEM $item_honeydew_melons1
-	SELLITEM $item_canteloupes
+	SELLITEM $item_honeydew_melons1_1
+	SELLITEM $item_canteloupes1_1
 	SELLITEM $item_watermelons
-	SELLITEM $item_sheaf_of_hay1
+	SELLITEM $item_sheaf_of_hay1_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -4885,20 +4885,20 @@ SECTION NPC $npc_cook_m
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
-	SELLITEM $item_lettuce1
-	SELLITEM $item_squash1
-	SELLITEM $item_heads_of_cabbage
-	SELLITEM $item_ears_of_corn1_4
+	SELLITEM $item_lettuce1_1
+	SELLITEM $item_squash1_1
+	SELLITEM $item_heads_of_cabbage1_1
+	SELLITEM $item_ears_of_corn3_1
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
-	SELLITEM $item_onions
+	SELLITEM $item_onions1
 	SELLITEM $item_coconuts1
 	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
 	SELLITEM $item_lemons1
 	SELLITEM $item_limes1
-	SELLITEM $item_honeydew_melons1
-	SELLITEM $item_canteloupes
+	SELLITEM $item_honeydew_melons1_1
+	SELLITEM $item_canteloupes1_1
 	SELLITEM $item_watermelons
 	SELLITEM $item_bowl_of_carrots1
 	SELLITEM $item_bowl_of_corn1
@@ -4969,20 +4969,20 @@ SECTION NPC $npc_cook_f
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
-	SELLITEM $item_lettuce1
-	SELLITEM $item_squash1
-	SELLITEM $item_heads_of_cabbage
-	SELLITEM $item_ears_of_corn1_4
+	SELLITEM $item_lettuce1_1
+	SELLITEM $item_squash1_1
+	SELLITEM $item_heads_of_cabbage1_1
+	SELLITEM $item_ears_of_corn3_1
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
-	SELLITEM $item_onions
+	SELLITEM $item_onions1
 	SELLITEM $item_coconuts1
 	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
 	SELLITEM $item_lemons1
 	SELLITEM $item_limes1
-	SELLITEM $item_honeydew_melons1
-	SELLITEM $item_canteloupes
+	SELLITEM $item_honeydew_melons1_1
+	SELLITEM $item_canteloupes1_1
 	SELLITEM $item_watermelons
 	SELLITEM $item_bowl_of_carrots1
 	SELLITEM $item_bowl_of_corn1
@@ -5932,15 +5932,15 @@ SECTION NPC $npc_player_vendor_template
 	ID 0190
 	ITEM $item_short_hair
 	HAIRCOLOR 15
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLORLIST 2
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLORLIST 3
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLORLIST 3
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	COLORLIST 4
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLORLIST 1
 	NPCWANDER 0
 	STR 100

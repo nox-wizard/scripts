@@ -892,10 +892,10 @@ SECTION NPC $npc_vampiress
     LOOT $loot_reagents
     ITEM $item_random_female_hair_list
     COLOR 0001
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 066d
-    ITEM $item_shirt
-    ITEM $item_robe1
+    ITEM $item_shirt1_1
+    ITEM $item_robe1_1
     COLOR 066d
     STR 100 180
     DEX 80 110

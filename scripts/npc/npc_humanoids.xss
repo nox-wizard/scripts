@@ -42,9 +42,9 @@ SECTION NPC $npc_a_savage
 	FX2 10
 	ITEM plate_iron_spear
 	ITEM $item_bear_mask
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLORLIST 11
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLORLIST 11
 	GOLD 15 50
 	TOTAME 1100
@@ -91,9 +91,9 @@ SECTION NPC $npc_a_savage_1
 	FX2 10
 	ITEM plate_iron_spear
 	ITEM $item_bear_mask
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLORLIST 11
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLORLIST 11
 	GOLD 15 50
 	DOORUSE 1
@@ -140,9 +140,9 @@ SECTION NPC $npc_a_savage_shaman
 	FX2 10
 	ITEM $item_gnarled_staff
 	ITEM $item_tribal_mask_1
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLORLIST 11
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLORLIST 11
 	GOLD 25 50
 	SPATTACK 7552
@@ -190,9 +190,9 @@ SECTION NPC $npc_a_savage_chief
 	FX2 10
 	ITEM plate_iron_spear
 	ITEM $item_tribal_mask
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLORLIST 11
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLORLIST 11
 	GOLD 15 50
 	DOORUSE 1

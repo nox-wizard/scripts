@@ -43,7 +43,7 @@ SECTION NPC $npc_knight_f
 	SPEECH $speech_none
 	BACKPACK
 	GOLD 300 400
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLORLIST 11
 	ITEM $item_iron_long_sword
 	ITEM $item_iron_metal_kite_shield
@@ -93,7 +93,7 @@ SECTION NPC $npc_land_lord
 	BACKPACK
 	GOLD 79 98
 	TOTAME 1100
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	ITEM $item_iron_long_sword
 	ITEM $item_iron_metal_kite_shield
 	ITEM $item_iron_platemail
@@ -304,7 +304,7 @@ SECTION NPC $npc_dark_knight
     COLOR 096c
     ITEM $item_iron_plate_leggings
     COLOR 096c
-    ITEM $item_cloak
+    ITEM $item_cloak1_1
     COLOR 096c
     ITEM $item_iron_plate_sleeves
     COLOR 096c
@@ -894,7 +894,7 @@ SECTION NPC $npc_knight
 	ITEM $item_iron_plate_leggings
 	ITEM $item_iron_long_sword
 	ITEM $item_iron_wooden_kite_shield
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLORLIST 11
 	ITEM $item_tan_horse
 	NPCWANDER 4
@@ -940,7 +940,7 @@ SECTION NPC $npc_knight_1
 	ITEM $item_iron_plate_sleeves
 	ITEM $item_iron_long_sword
 	ITEM $item_iron_wooden_kite_shield
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLORLIST 11
 	ITEM $item_dark_brown_horse
 	NPCWANDER 4
@@ -984,7 +984,7 @@ SECTION NPC $npc_the_black_knight
 	ITEM $item_merkite_plate_helm
 	ITEM $item_merkite_plate_leggings
 	ITEM plate_sleeves
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 0455
 	ITEM $item_nightmare
 	NPCWANDER 4
@@ -1012,9 +1012,9 @@ SECTION NPC $npc_cultist
 	ID 0190
 	ITEM $item_long_beard
 	HAIRCOLOR 0
-	ITEM $item_robe1
+	ITEM $item_robe1_1
 	COLOR 220
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	COLOR 0001
 	ITEM
 	NPCWANDER 4
@@ -1327,9 +1327,9 @@ SECTION NPC $npc_barbarian
 	GOLD 20 100
 	ITEM $item_iron_plate_helm
 	ITEM $item_iron_plate_leggings
-	ITEM $item_cloak
-	ITEM $item_robe1
-	ITEM $item_boots
+	ITEM $item_cloak1_1
+	ITEM $item_robe1_1
+	ITEM $item_boots1_1
 	ITEM $item_bone_chest
 	ITEM $item_leather_leggings
 	ITEM $item_leather_gloves
@@ -1471,18 +1471,18 @@ SECTION NPC $npc_official
 	BACKPACK
 	ITEM $item_short_hair
 	ITEM $item_goatee
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	ITEM $item_skullcap
 	COLOR 25
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 17
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 18
-	ITEM $item_robe1
+	ITEM $item_robe1_1
 	COLOR 39
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 14
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 20
 }
 
@@ -1491,16 +1491,16 @@ SECTION NPC $npc_foreman
 	#copy NPC $npc_person_basic
 	TITLE the foreman
 	BACKPACK
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	COLOR 17
 	COLOR 12
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 39
-	ITEM $item_robe1
+	ITEM $item_robe1_1
 	COLOR 12
-	ITEM $item_skirt
+	ITEM $item_skirt1_1
 	COLOR 5
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 0
 }
 
@@ -1511,17 +1511,17 @@ SECTION NPC $npc_mercenary
 	//$$ mercenary
 	BACKPACK
 	ITEM $item_long_beard
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	ITEM $item_wizards_hat
 	COLOR 1
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 10
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 18
 	COLOR 21
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLOR 11
-	ITEM $item_half_apron
+	ITEM $item_half_apron1_1
 	COLOR 30
 }
 
@@ -1531,15 +1531,15 @@ SECTION NPC $npc_guardsman
 	TITLE the guardsman
 	//$$ guardsman
 	BACKPACK
-	ITEM $item_shoes
+	ITEM $item_shoes1_1
 	COLOR 18
 	COLOR 13
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 17
 	COLOR 3
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 20
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 36
 	ITEM $item_quarter_staff
 }
@@ -1550,17 +1550,17 @@ SECTION NPC $npc_watchman
 	TITLE the watchman
 	//$$ watchman
 	BACKPACK
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	COLOR 26
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 8
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 21
-	ITEM $item_plain_dress
+	ITEM $item_plain_dress1_1
 	COLOR 34
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 14
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 18
 }
 
@@ -1570,16 +1570,16 @@ SECTION NPC $npc_cleric
 	TITLE the cleric
 	//$$ cleric
 	BACKPACK
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	COLOR 0
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 18
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 9
 	COLOR 38
-	ITEM $item_short_pants
+	ITEM $item_short_pants1_1
 	COLOR 39
-	ITEM $item_half_apron
+	ITEM $item_half_apron1_1
 	COLOR 2 9
 }
 
@@ -1589,16 +1589,16 @@ SECTION NPC $npc_solem_priest
 	TITLE the solem priest
 	//$$ solem priest
 	BACKPACK
-	ITEM $item_boots
+	ITEM $item_boots1_1
 	COLOR 1
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 19
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 17
 	COLOR 8
-	ITEM $item_skirt
+	ITEM $item_skirt1_1
 	COLOR 1
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 19
 	ITEM $item_quarter_staff
 }
@@ -1611,16 +1611,16 @@ SECTION NPC $npc_magician
 	BACKPACK
 	ITEM $item_long_hair
 	ITEM $item_mustache
-	ITEM $item_boots
+	ITEM $item_boots1_1
 	COLOR 19
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 10
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 19
 	COLOR 7
-	ITEM $item_short_pants
+	ITEM $item_short_pants1_1
 	COLOR 6
-	ITEM $item_half_apron
+	ITEM $item_half_apron1_1
 	COLOR 0
 }
 
@@ -1631,17 +1631,17 @@ SECTION NPC $npc_outlander
 	//$$ outlander
 	BACKPACK
 	ITEM $item_vandyke
-	ITEM $item_boots
+	ITEM $item_boots1_1
 	ITEM $item_bear_mask
 	COLOR 9
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 17
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 32
 	COLOR 5
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLOR 25
-	ITEM $item_half_apron
+	ITEM $item_half_apron1_1
 	COLOR 29
 }
 
@@ -1651,17 +1651,17 @@ SECTION NPC $npc_mountain_man
 	TITLE the mountain man
 	//$$ mountain man
 	BACKPACK
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	ITEM $item_wide_brim_hat
 	COLOR 6
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 14
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 7
 	COLOR 4
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLOR 14
-	ITEM $item_half_apron
+	ITEM $item_half_apron1_1
 	COLOR 4
 }
 
@@ -1672,15 +1672,15 @@ SECTION NPC $npc_buccaneer
 	//$$ buccaneer
 	BACKPACK
 	ITEM $item_buns_hair
-	ITEM $item_shoes
+	ITEM $item_shoes1_1
 	COLOR 21
 	COLOR 25
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 6
 	COLOR 38
-	ITEM $item_skirt
+	ITEM $item_skirt1_1
 	COLOR 37
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 14
 	ITEM $item_quarter_staff
 }
@@ -1692,16 +1692,16 @@ SECTION NPC $npc_cavalier
 	//$$ cavalier
 	BACKPACK
 	ITEM $item_med_short_beard
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	COLOR 21
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 27
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 14
 	COLOR 36
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLOR 32
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 21
 	ITEM $item_gnarled_staff
 }
@@ -1713,18 +1713,18 @@ SECTION NPC $npc_priest
 	//$$ priest
 	BACKPACK
 	ITEM $item_med_short_beard_1
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	ITEM $item_tribal_mask_1
 	COLOR 0
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 13
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 20
-	ITEM $item_jesters_suit
+	ITEM $item_jesters_suit1_1
 	COLOR 10
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLOR 6
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 35
 }
 
@@ -1735,17 +1735,17 @@ SECTION NPC $npc_magician_1
 	//$$ magician
 	BACKPACK
 	ITEM $item_mustache
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	ITEM $item_orc_helm
 	COLOR 2
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 6
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 22
 	COLOR 6
-	ITEM $item_short_pants
+	ITEM $item_short_pants1_1
 	COLOR 28
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 5
 }
 
@@ -1755,16 +1755,16 @@ SECTION NPC $npc_apprentice
 	TITLE the apprentice
 	//$$ apprentice
 	BACKPACK
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	ITEM $item_floopy_hat
 	COLOR 7
 	COLOR 22
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 30
 	COLOR 6
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 31
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 20
 }
 
@@ -1775,16 +1775,16 @@ SECTION NPC $npc_wizard
 	//$$ wizard
 	BACKPACK
 	ITEM $item_krisna_hair
-	ITEM $item_shoes
+	ITEM $item_shoes1_1
 	ITEM $item_feathered_hat
 	COLOR 27
 	COLOR 10
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 6
 	COLOR 31
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 14
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 26
 }
 
@@ -1794,16 +1794,16 @@ SECTION NPC $npc_mage
 	TITLE the mage
 	//$$ mage
 	BACKPACK
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	ITEM $item_straw_hat
 	COLOR 32
 	COLOR 7
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 23
 	COLOR 6
-	ITEM $item_skirt
+	ITEM $item_skirt1_1
 	COLOR 1
-	ITEM $item_half_apron
+	ITEM $item_half_apron1_1
 	COLOR 26
 }
 
@@ -1815,16 +1815,16 @@ SECTION NPC $npc_laborer
 	BACKPACK
 	ITEM $item_mohawk
 	ITEM $item_short_beard
-	ITEM $item_shoes
+	ITEM $item_shoes1_1
 	COLOR 5
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 35
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 31
 	COLOR 17
-	ITEM $item_short_pants
+	ITEM $item_short_pants1_1
 	COLOR 0
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 17
 }
 
@@ -1836,16 +1836,16 @@ SECTION NPC $npc_barbarian_1
 	BACKPACK
 	ITEM $item_krisna_hair
 	ITEM $item_long_beard
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	COLOR 32
 	COLOR 31
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 3
-	ITEM $item_tunic
+	ITEM $item_tunic1_1
 	COLOR 37
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 23
-	ITEM $item_half_apron
+	ITEM $item_half_apron1_1
 	COLOR 10
 }
 
@@ -1855,16 +1855,16 @@ SECTION NPC $npc_wizard_1
 	TITLE the wizard
 	//$$ wizard
 	BACKPACK
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	COLOR 8
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 14
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 17
 	COLOR 13
-	ITEM $item_short_pants
+	ITEM $item_short_pants1_1
 	COLOR 18
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 2
 	ITEM $item_quarter_staff
 }
@@ -1875,16 +1875,16 @@ SECTION NPC $npc_paladin
 	TITLE the paladin
 	//$$ paladin
 	BACKPACK
-	ITEM $item_boots
+	ITEM $item_boots1_1
 	COLOR 10
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 31
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 3
 	COLOR 11
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 17
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 27
 }
 
@@ -1894,16 +1894,16 @@ SECTION NPC $npc_fancy_nobleman
 	TITLE the fancy nobleman
 	//$$ fancy nobleman
 	BACKPACK
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	ITEM $item_jester_hat
 	COLOR 9
 	COLOR 33
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 10
 	COLOR 11
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLOR 2
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 39
 }
 
@@ -1914,17 +1914,17 @@ SECTION NPC $npc_redlady
 	//$$ redlady
 	BACKPACK
 	ITEM $item_mohawk
-	ITEM $item_boots
+	ITEM $item_boots1_1
 	COLOR 4
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 11
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 34
-	ITEM $item_robe1
+	ITEM $item_robe1_1
 	COLOR 21
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 20
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 5
 	ITEM $item_black_staff
 }
@@ -1935,16 +1935,16 @@ SECTION NPC $npc_magician_2
 	TITLE the magician
 	//$$ magician
 	BACKPACK
-	ITEM $item_shoes
+	ITEM $item_shoes1_1
 	ITEM $item_bonnet
 	COLOR 27
 	COLOR 38
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 10
 	COLOR 18
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 8
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 3
 }
 
@@ -1954,15 +1954,15 @@ SECTION NPC $npc_thief
 	TITLE the thief
 	//$$ thief
 	BACKPACK
-	ITEM $item_boots
+	ITEM $item_boots1_1
 	COLOR 22
 	COLOR 26
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 29
 	COLOR 35
-	ITEM $item_kilt
+	ITEM $item_kilt1_1
 	COLOR 35
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 37
 }
 
@@ -1974,17 +1974,17 @@ SECTION NPC $npc_vandal
 	BACKPACK
 	ITEM $item_krisna_hair
 	ITEM $item_short_beard
-	ITEM $item_shoes
+	ITEM $item_shoes1_1
 	ITEM $item_straw_hat
 	COLOR 37
 	COLOR 31
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 8
-	ITEM $item_plain_dress
+	ITEM $item_plain_dress1_1
 	COLOR 36
-	ITEM $item_skirt
+	ITEM $item_skirt1_1
 	COLOR 20
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 25
 }
 
@@ -1996,16 +1996,16 @@ SECTION NPC $npc_cutpurse
 	BACKPACK
 	ITEM $item_receding_hair
 	ITEM $item_mustache
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	COLOR 17
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 24
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 6
 	COLOR 14
-	ITEM $item_short_pants
+	ITEM $item_short_pants1_1
 	COLOR 24
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 14
 }
 
@@ -2016,15 +2016,15 @@ SECTION NPC $npc_bandit
 	//$$ bandit
 	BACKPACK
 	ITEM $item_mohawk
-	ITEM $item_sandles
+	ITEM $item_sandles1_1
 	COLOR 20
 	COLOR 18
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 18
 	COLOR 12
-	ITEM $item_long_pants
+	ITEM $item_long_pants1_1
 	COLOR 18
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 30
 }
 
@@ -2035,16 +2035,16 @@ SECTION NPC $npc_night_prowler
 	//$$ night prowler
 	BACKPACK
 	ITEM $item_krisna_hair
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	ITEM $item_floopy_hat
 	COLOR 32
 	COLOR 20
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 7
 	COLOR 18
-	ITEM $item_skirt
+	ITEM $item_skirt1_1
 	COLOR 34
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 30
 }
 
@@ -2056,16 +2056,16 @@ SECTION NPC $npc_ruffian
 	BACKPACK
 	ITEM $item_pony_tail
 	ITEM $item_med_short_beard
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	COLOR 29
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 	COLOR 28
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 2
 	COLOR 30
-	ITEM $item_skirt
+	ITEM $item_skirt1_1
 	COLOR 15
-	ITEM $item_full_apron
+	ITEM $item_full_apron1_1
 	COLOR 31
 }
 
@@ -2076,16 +2076,16 @@ SECTION NPC $npc_stinky_pimp
 	//$$ stinky pimp
 	BACKPACK
 	ITEM $item_vandyke
-	ITEM $item_thigh_boots
+	ITEM $item_thigh_boots1_1
 	COLOR 25
 	COLOR 5
-	ITEM $item_fancy_shirt
+	ITEM $item_fancy_shirt1_1
 	COLOR 35
-	ITEM $item_jesters_suit
+	ITEM $item_jesters_suit1_1
 	COLOR 20
-	ITEM $item_skirt
+	ITEM $item_skirt1_1
 	COLOR 23
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 37
 }
 
@@ -2097,17 +2097,17 @@ SECTION NPC $npc_thug
 	BACKPACK
 	ITEM $item_buns_hair
 	ITEM $item_vandyke
-	ITEM $item_boots
+	ITEM $item_boots1_1
 	ITEM $item_jester_hat
 	COLOR 9
 	COLOR 11
-	ITEM $item_shirt
+	ITEM $item_shirt1_1
 	COLOR 10
-	ITEM $item_plain_dress
+	ITEM $item_plain_dress1_1
 	COLOR 38
-	ITEM $item_short_pants
+	ITEM $item_short_pants1_1
 	COLOR 30
-	ITEM $item_body_sash
+	ITEM $item_body_sash1_1
 	COLOR 12
 	ITEM $item_quarter_staff
 }

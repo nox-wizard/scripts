@@ -1795,13 +1795,13 @@ SECTION BATCH $batch_polymorph_cns
 //{
 //    Boots
 //    170B Boots
-//    ADDITEM $item_boots
+//    ADDITEM $item_boots1_1
 //    170D Sandals
-//    ADDITEM $item_sandles
+//    ADDITEM $item_sandles1_1
 //    170F Shoes
-//    ADDITEM $item_shoes
+//    ADDITEM $item_shoes1_1
 //    1711 Thigh boots
-//    ADDITEM $item_thigh_boots
+//    ADDITEM $item_thigh_boots1_1
 //    < Previous Menu
 //    OPENMENU $menu_clothes__footwear
 //}
@@ -1839,25 +1839,25 @@ SECTION BATCH $batch_polymorph_cns
 //{
 //    Shirts & Robes
 //    1515 Cape
-//    ADDITEM $item_cloak
+//    ADDITEM $item_cloak1_1
 //    1EFD Fancy shirt
-//    ADDITEM $item_fancy_shirt
+//    ADDITEM $item_fancy_shirt1_1
 //    1517 Plain shirt
-//    ADDITEM $item_shirt
+//    ADDITEM $item_shirt1_1
 //    1FFD Surcoat
-//    ADDITEM $item_surcoat
+//    ADDITEM $item_surcoat1_1
 //    1FA1 Tunic
-//    ADDITEM $item_tunic
+//    ADDITEM $item_tunic1_1
 //    1F03 Robe
-//    ADDITEM $item_robe1
+//    ADDITEM $item_robe1_1
 //    1F9F Fancy suit
-//    ADDITEM $item_jesters_suit
+//    ADDITEM $item_jesters_suit1_1
 //    1F7B Doublet
-//    ADDITEM $item_doublet
+//    ADDITEM $item_doublet1_1
 //    1EFF Fancy Dress
-//    ADDITEM $item_fancy_dress
+//    ADDITEM $item_fancy_dress1_1
 //    1F01 Plain Dress
-//    ADDITEM $item_plain_dress
+//    ADDITEM $item_plain_dress1_1
 //    < Previous Menu
 //    OPENMENU $menu_clothes__footwear
 //}
@@ -1866,13 +1866,13 @@ SECTION BATCH $batch_polymorph_cns
 //{
 //    Pants
 //    1516 Skirt
-//    ADDITEM $item_skirt
+//    ADDITEM $item_skirt1_1
 //    152E Short pants
-//    ADDITEM $item_short_pants
+//    ADDITEM $item_short_pants1_1
 //    1537 Kilt
-//    ADDITEM $item_kilt
+//    ADDITEM $item_kilt1_1
 //    1539 Long pants
-//    ADDITEM $item_long_pants
+//    ADDITEM $item_long_pants1_1
 //    < Previous Menu
 //    OPENMENU $menu_clothes__footwear
 //}
@@ -1881,13 +1881,13 @@ SECTION BATCH $batch_polymorph_cns
 //{
 //    Misc
 //    153B Half apron
-//    ADDITEM $item_half_apron
+//    ADDITEM $item_half_apron1_1
 //    153D Full apron
-//    ADDITEM $item_full_apron
+//    ADDITEM $item_full_apron1_1
 //    1540 Bandana
-//    ADDITEM $item_bandana
+//    ADDITEM $item_bandana1_1
 //    1541 Body sash
-//    ADDITEM $item_body_sash
+//    ADDITEM $item_body_sash1_1
 //    1544 Skullcap
 //    ADDITEM $item_skullcap
 //    < Previous Menu
@@ -2960,13 +2960,13 @@ SECTION BATCH $batch_polymorph_cns
 //    172B Limes
 //    ADDITEM $item_limes1
 //    0C74 Honeydew Melon
-//    ADDITEM $item_honeydew_melons1
+//    ADDITEM $item_honeydew_melons1_1
 //    0C79 Canteloupe
-//    ADDITEM $item_canteloupes
+//    ADDITEM $item_canteloupes1_1
 //    0C5D Water Melon
 //    ADDITEM $item_watermelons
 //    0F36 Sheaf of Hay
-//    ADDITEM $item_sheaf_of_hay1
+//    ADDITEM $item_sheaf_of_hay1_1
 //    < Previous Menu
 //    OPENMENU $menu_food_items
 //}
@@ -6708,15 +6708,15 @@ SECTION BATCH $batch_polymorph_cns
 //    103F Cookie Mix
 //    ADDITEM $item_cookie_mix
 //    0C70 Lettuce
-//    ADDITEM $item_lettuce1
+//    ADDITEM $item_lettuce1_1
 //    0C72 Squash
-//    ADDITEM $item_squash1
+//    ADDITEM $item_squash1_1
 //    0C76 Carrots
-//    ADDITEM $item_carrots
+//    ADDITEM $item_carrots1
 //    0C7B Cabbage
-//    ADDITEM $item_heads_of_cabbage
+//    ADDITEM $item_heads_of_cabbage1_1
 //    0C7F Ear of Corn
-//    ADDITEM $item_ears_of_corn1_4
+//    ADDITEM $item_ears_of_corn3_1
 //    1AD3 Donuts
 //    ADDITEM $item_donuts
 //    09EC Jar of Honey
@@ -6728,7 +6728,7 @@ SECTION BATCH $batch_polymorph_cns
 //    0C6A Pumpkin
 //    ADDITEM $item_pumpkin1
 //    0C6D Onion
-//    ADDITEM $item_onions
+//    ADDITEM $item_onions1
 //    < Previous Menu
 //    OPENMENU $menu_food_items
 //}
@@ -6797,27 +6797,27 @@ SECTION BATCH $batch_polymorph_cns
 //    0E1D Ball of Yarn
 //    ADDITEM $item_balls_of_yarn1
 //    175D Folded Cloth
-//    ADDITEM $item_cut_cloth
+//    ADDITEM $item_folded_cloth1_1
 //    0F9D Sewing Kit
 //    ADDITEM $item_sewing_kit
 //    0F9E Scissors
-//    ADDITEM $item_scissors
+//    ADDITEM $item_scissors1_1
 //    0F95 Bolt of Cloth
-//    ADDITEM $item_bolts_of_cloth1
+//    ADDITEM $item_bolts_of_cloth1_1
 //    0F96 Bolt of Cloth
-//    ADDITEM $item_bolts_of_cloth2
+//    ADDITEM $item_bolts_of_cloth1_2
 //    0F97 Bolt of Cloth
-//    ADDITEM $item_bolts_of_cloth3
+//    ADDITEM $item_bolts_of_cloth2_1
 //    0F98 Bolt of Cloth
-//    ADDITEM $item_bolts_of_cloth4
+//    ADDITEM $item_bolts_of_cloth2_2
 //    0F99 Bolt of Cloth
-//    ADDITEM $item_bolts_of_cloth5
+//    ADDITEM $item_bolts_of_cloth3_1
 //    0F9A Bolt of Cloth
-//    ADDITEM $item_bolts_of_cloth6
+//    ADDITEM $item_bolts_of_cloth4_1
 //    0F9B Bolt of Cloth
-//    ADDITEM $item_bolts_of_cloth7
+//    ADDITEM $item_bolts_of_cloth4_2
 //    0F9C Bolt of Cloth
-//    ADDITEM $item_bolts_of_cloth8
+//    ADDITEM $item_bolts_of_cloth3_2
 //    < Previous Menu
 //    OPENMENU $menu_skills_related_menu
 //}
@@ -8405,11 +8405,11 @@ SECTION BATCH $batch_polymorph_cns
 //    14F0 2-Story Stone Shop
 //    ADDITEM $item_small_stone_shop_deed
 //    14F0 2-story Villa
-//    ADDITEM $item_2-story_villa_deed
+//    ADDITEM $item_banner31_1-story_villa_deed
 //    14F0 Sandstone Patio House
 //    ADDITEM $item_sandstone_patio_house_deed
 //    14F0 2-Story Log Cabin
-//    ADDITEM $item_2-story_log_cabin_deed
+//    ADDITEM $item_banner31_1-story_log_cabin_deed
 //    14F0 Large Marble Patio house
 //    ADDITEM $item_large_marble_patio_house_deed
 //}

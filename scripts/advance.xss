@@ -119,7 +119,7 @@ SECTION ADVANCEMENT $advance_thief
 	ITEM $item_lockpicks
 	ITEM $item_lockpicks
 	ITEM $item_lockpicks
-	ITEM $item_cloak
+	ITEM $item_cloak1_1
 }
 
 // Bard
@@ -148,7 +148,7 @@ SECTION ADVANCEMENT $advance_ranger
 	ITEM $item_kindling
 	ITEM $item_kindling
 	ITEM $item_kindling
-	ITEM $item_bedroll
+	ITEM $item_closed_bedroll1_1
 }
 
 // Assassin

@@ -775,7 +775,7 @@ SECTION MAKEMENU 31
     1540 Bandana
     RESOURCE 2
     SKILL 10
-    ADDITEM $item_bandana
+    ADDITEM $item_bandana1_1
     1544 Skullcap
     RESOURCE 2
     SKILL 10
@@ -828,43 +828,43 @@ SECTION MAKEMENU 32
     1F7B Doublet
     RESOURCE 8
     SKILL 10
-    ADDITEM $item_doublet
+    ADDITEM $item_doublet1_1
     1517 Plain shirt
     RESOURCE 8
     SKILL 227
-    ADDITEM $item_shirt
+    ADDITEM $item_shirt1_1
     1EFD Fancy shirt
     RESOURCE 8
     SKILL 272
-    ADDITEM $item_fancy_shirt
+    ADDITEM $item_fancy_shirt1_1
     1F01 Plain Dress
     RESOURCE 10
     SKILL 363
-    ADDITEM $item_plain_dress
+    ADDITEM $item_plain_dress1_1
     1FA1 Tunic
     RESOURCE 12
     SKILL 10
-    ADDITEM $item_tunic
+    ADDITEM $item_tunic1_1
     1EFF Fancy Dress
     RESOURCE 12
     SKILL 136
-    ADDITEM $item_fancy_dress
+    ADDITEM $item_fancy_dress1_1
     1FFD Surcoat
     RESOURCE 14
     SKILL 90
-    ADDITEM $item_surcoat
+    ADDITEM $item_surcoat1_1
     1515 Cape
     RESOURCE 14
     SKILL 454
-    ADDITEM $item_cloak
+    ADDITEM $item_cloak1_1
     1F03 Robe
     RESOURCE 16
     SKILL 590
-    ADDITEM $item_robe1
+    ADDITEM $item_robe1_1
     1F9F Jester's suit
     RESOURCE 24
     SKILL 90
-    ADDITEM $item_jesters_suit
+    ADDITEM $item_jesters_suit1_1
 }
 
 SECTION MAKEMENU 33
@@ -873,19 +873,19 @@ SECTION MAKEMENU 33
     152E Short pants
     RESOURCE 6
     SKILL 190
-    ADDITEM $item_short_pants
+    ADDITEM $item_short_pants1_1
     1537 Kilt
     RESOURCE 8
     SKILL 227
-    ADDITEM $item_kilt
+    ADDITEM $item_kilt1_1
     1539 Long pants
     RESOURCE 8
     SKILL 272
-    ADDITEM $item_long_pants
+    ADDITEM $item_long_pants1_1
     1516 Skirt
     RESOURCE 10
     SKILL 318
-    ADDITEM $item_skirt
+    ADDITEM $item_skirt1_1
 }
 
 SECTION MAKEMENU 34
@@ -894,36 +894,36 @@ SECTION MAKEMENU 34
     1541 Body sash
     RESOURCE 4
     SKILL 45
-    ADDITEM $item_body_sash
+    ADDITEM $item_body_sash1_1
     153B Half apron
     RESOURCE 6
     SKILL 227
-    ADDITEM $item_half_apron
+    ADDITEM $item_half_apron1_1
     153D Full apron
     RESOURCE 10
     SKILL 318
-    ADDITEM $item_full_apron
+    ADDITEM $item_full_apron1_1
 }
 
 SECTION MAKEMENU 35
 {
     Bedding
-    01397 Pillow
+    13AB Pillow
     RESOURCE 4
     SKILL 250
-    ADDITEM $item_small_pillow
-    0a6c Folded Blanket Poo
+    ADDITEM $item_small_pillow2_1
+    0a6c Folded Blanket
     RESOURCE 6
     SKILL 300
-    ADDITEM $item_folded_blanket_poo
+    ADDITEM $item_folded_blanket1_1
     0a59 Bedroll
     RESOURCE 7
     SKILL 300
-    ADDITEM $item_bedroll
+    ADDITEM $item_closed_bedroll1_1
     0a92 Folded Sheet
     RESOURCE 5
     SKILL 340
-    ADDITEM $item_folded_sheet
+    ADDITEM $item_folded_sheet1_1
 }
 
 SECTION MAKEMENU 36
@@ -932,43 +932,43 @@ SECTION MAKEMENU 36
     0x15d0 N/S Small Banner
     RESOURCE 20
     SKILL 600
-    ADDITEM $item_small_n
+    ADDITEM $item_banner33_1
     0x15d1 E/W Small Banner
     RESOURCE 20
     SKILL 600
-    ADDITEM $item_small_e
+    ADDITEM $item_banner33_2
     0x15bc N/S Banner
     RESOURCE 30
     SKILL 650
-    ADDITEM $item_1
+    ADDITEM $item_banner23_1
     0x15bb E/W Banner
     RESOURCE 30
     SKILL 650
-    ADDITEM $item_e_1
+    ADDITEM $item_banner22_2
     0x15cc N/S Banner
     RESOURCE 30
     SKILL 700
-    ADDITEM $item_2
+    ADDITEM $item_banner31_1
     0x15cb E/W Banner
     RESOURCE 30
     SKILL 700
-    ADDITEM $item_e_2
+    ADDITEM $item_banner30_2
     0x15c8 N/S Banner
     RESOURCE 30
     SKILL 750
-    ADDITEM $item_3
+    ADDITEM $item_banner29_1
     0x15c7 E/W Banner
     RESOURCE 30
     SKILL 750
-    ADDITEM $item_e_3
+    ADDITEM $item_banner28_2
     0x160d N/S Fine Curtain
     RESOURCE 40
     SKILL 800
-    ADDITEM $item_n
+    ADDITEM $item_curtain2_2
     0x160e E/W Fine Curtain
     RESOURCE 40
     SKILL 800
-    ADDITEM $item_e
+    ADDITEM $item_curtain2_1
 }
 
 SECTION MAKEMENU 37
@@ -977,43 +977,43 @@ SECTION MAKEMENU 37
     0x1586 E/W Banner pt 1
     RESOURCE 25
     SKILL 610
-    ADDITEM $item_e_4
+    ADDITEM $item_banner1A_1
     0x1587 E/W Banner pt 2
     RESOURCE 25
     SKILL 610
-    ADDITEM $item_e_5
+    ADDITEM $item_banner1B_1
     0x1588 E/W Banner pt 3
     RESOURCE 25
     SKILL 610
-    ADDITEM $item_e_6
+    ADDITEM $item_banner1C_1
     0x158c E/W Banner pt 1
     RESOURCE 25
     SKILL 660
-    ADDITEM $item_e_7
+    ADDITEM $item_banner3A_1
     0x158d E/W Banner pt 2
     RESOURCE 25
     SKILL 660
-    ADDITEM $item_e_8
+    ADDITEM $item_banner3B_1
     0x158e E/W Banner pt 3
     RESOURCE 25
     SKILL 660
-    ADDITEM $item_e_9
+    ADDITEM $item_banner3C_1
     0x15a0 E/W Banner pt 1
     RESOURCE 25
     SKILL 710
-    ADDITEM $item_e_A
+    ADDITEM $item_banner9A_1
     0x15a1 E/W Banner pt 2
     RESOURCE 25
     SKILL 710
-    ADDITEM $item_e_B
+    ADDITEM $item_banner9B_1
     0x15a8 E/W Banner pt 1
     RESOURCE 25
     SKILL 780
-    ADDITEM $item_e_C
+    ADDITEM $item_banner13A_1
     0x15a9 E/W Banner pt 2
     RESOURCE 25
     SKILL 780
-    ADDITEM $item_e_D
+    ADDITEM $item_banner13B_1
 }
 
 
@@ -1051,19 +1051,19 @@ SECTION MAKEMENU 41
     170D Sandals
     RESOURCE 4
     SKILL 136
-    ADDITEM $item_sandles
+    ADDITEM $item_sandles1_1
     170F Shoes
     RESOURCE 6
     SKILL 181
-    ADDITEM $item_shoes
+    ADDITEM $item_shoes1_1
     170B Boots
     RESOURCE 8
     SKILL 363
-    ADDITEM $item_boots
+    ADDITEM $item_boots1_1
     1711 Thigh boots
     RESOURCE 10
     SKILL 454
-    ADDITEM $item_thigh_boots
+    ADDITEM $item_thigh_boots1_1
 }
 
 SECTION MAKEMENU 42
@@ -1596,7 +1596,7 @@ SECTION MAKEMENU 83
     0F9E scissors
     RESOURCE 4
     SKILL 100
-    ADDITEM $item_scissors
+    ADDITEM $item_scissors1_1
     0F39 shovel
     RESOURCE 4
     SKILL 100
@@ -1747,11 +1747,11 @@ SECTION MAKEMENU 123
     0fa0 spool of thread
     RESOURCE 1
     SKILL 100
-    ADDITEM $item_spools_of_thread
+    ADDITEM $item_spools_of_thread1_1
     1420 roll of string
     RESOURCE 1
     SKILL 100
-    ADDITEM $item_rolls_of_string
+    ADDITEM $item_rolls_of_string1_1
 }
 
 //New smithing addon (Ray)

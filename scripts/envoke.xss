@@ -359,7 +359,7 @@ SECTION IDLIST WTRIGR xc6f
     STAM -5
     SND 02 34
     ACT 9
-    IADD $item_onions 2
+    IADD $item_onions1 2
     DISABLE 30
     MSG You harvest some onions
 }
@@ -371,7 +371,7 @@ SECTION IDLIST WTRIGR xc76
     STAM -5
     SND 02 34
     ACT 9
-    IADD $item_carrots 2
+    IADD $item_carrots1 2
     DISABLE 30
     MSG You harvest some carrots
 }
@@ -383,7 +383,7 @@ SECTION IDLIST WTRIGR xc7d
     STAM -5
     SND 02 34
     ACT 9
-    IADD $item_ears_of_corn1_2 2
+    IADD $item_ears_of_corn3_1 2
     DISABLE 30
     MSG You harvest some corn
 }
