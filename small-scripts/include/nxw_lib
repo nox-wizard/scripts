@@ -32,6 +32,7 @@ enum eBoolean
 };
 
 const INVALID = -1;
+const VISRANGE = 18;
 
 /*************************************************************************
  STRING FUNCTIONS
