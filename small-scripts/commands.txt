@@ -6,37 +6,72 @@
 // || This script requires NoX-Wizard 0.82 or later                       ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+//Here you can define commands and commands callbacks, for every command you 
+//must specify the privlevel needed toacces the command and function to be 
+//called when that command is used.
+//You can change the command triggering character in server.cfg, by default
+//it's set to '
 
-//	PRIVLEVEL_ADMIN = 255
-//	PRIVLEVEL_GM	= 200
-//	PRIVLEVEL_SEER	= 150
-//	PRIVLEVEL_CNS	= 100
-//	PRIVLEVEL_PLAYER = 50
-//	PRIVLEVEL_GUEST = 0
+//here are the predefined privlevels:
+//PRIVLEVEL_ADMIN = 255
+//PRIVLEVEL_GM= 200
+//PRIVLEVEL_SEER= 150
+//PRIVLEVEL_CNS= 100
+//PRIVLEVEL_PLAYER = 50
+//PRIVLEVEL_GUEST = 0
 
-//      name_of_the_command,priv_level,callback
+//Here is the command's declaration syntax:
+//name_of_the_command,priv_level,callback
 
 add,150,cmd_add
+align,100,cmd_align
 area,100,cmd_area
+cset,200,cmd_cset
+csetxyz,150,cmd_csetxyz
 damage,150,cmd_damage
+decay,150,cmd_decay
+dye,150,cmd_dye
 dupe,150,cmd_dupe
 freeze,100,cmd_freeze
-func,150,cmd_func
+fullstats,200,cmd_fullstats
+func,200,cmd_func
+gmopen,200,cmd_gmopen
 go,100,cmd_go
+gy,100,cmd_gy
 hiding,100,cmd_hiding
+heal,200,cmd_heal
+help,100,cmd_help
 invul,100,cmd_invul
+iset,200,cmd_iset
+jail,100,cmd_jail
 kill,100,cmd_kill
 lightlevel,100,cmd_lightlevel
 make,255,cmd_make
+mana,200,cmd_mana
 move,100,cmd_move
+onlinegm,0,cmd_onlinegm
 options,100,cmd_options
+page,0,cmd_page
+pages,100,cmd_pages
+pagelist,100,cmd_pagelist
 playerlist,50,cmd_playerlist
 polymorph,100,cmd_polymorph
 regioncp,150,cmd_regioncp
+resend,50,cmd_resend
 resurrect,100,cmd_resurrect
+setdir,150,cmd_setdir
+setmorexyz,150,cmd_setmorexyz
 setpriv,255,cmd_setpriv
+setskills,200,cmd_setskills
+settype,150,cmd_settype
+showbank,200,cmd_showbank
 skills,0,cmd_skills
+solvepage,100,cmd_solvepage
+stamina,200,cmd_stamina
 stats,0,cmd_stats
+sysm,100,cmd_sysm
+tile,150,cmd_tile
 tweak,100,cmd_tweak
+unjail,200,cmd_unjail
 where,100,cmd_where
 wipe,100,cmd_wipe

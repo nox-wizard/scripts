@@ -10,10 +10,10 @@
 \fn cmd_kill
 \brief kills a character
 
-<B>syntax:<B> 'kill ["target"]
+<B>syntax:<B> 'kill 
 <B>command params:</B>
 <UL>
-<LI> "target": pass this paramter if you want to bypass the area effect
+
 </UL>
 
 If area effect is active, all characters in area will die.
@@ -22,17 +22,12 @@ the targetted char will be killed
 */
 public cmd_kill(const chr)
 {
-	readCommandParams(chr);
-	
-	new target = false;
-	
-	if(!strcmp(__cmdParams[0],"target"))
-		target = true;
-	
+
+
 	new area = chr_getCmdArea(chr);
 	new i = 0, chr2;
 	//apply command to all characters in area
-	if(area_isValid(area) && !target)
+	if(area_isValid(area))
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
@@ -40,9 +35,9 @@ public cmd_kill(const chr)
 				chr2 = set_getChar(area_chars(area));
 				if(chr2 != chr) chr_setHitPoints(chr2,0);
 		}
-		
-		chr_message(chr,_,"%d characters killed",i);	
-		area_refresh(area);			
+
+		chr_message(chr,_,"%d characters killed",i);
+		area_refresh(area);	
 		return;
 	}
 
@@ -61,7 +56,7 @@ public cmd_kill_targ(target, chr, object, x, y, z, unused, area)
 	if(isChar(object))
 	{
 		chr_setHitPoints(object,0);
-		area_refresh(area);	
+		area_refresh(area);
 	}
 	else chr_message(chr,_,"You must target a character");
 }

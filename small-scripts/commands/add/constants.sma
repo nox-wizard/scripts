@@ -6,8 +6,9 @@
 */
 
 enum
-{		
-	P_REAGENTS = 1,
+{
+	P_MAGICALITEMS = 1,
+	P_REAGENTS,
 	P_REAGENTS2,
 	P_BOTTLES,
 	P_POTIONS,
@@ -21,7 +22,7 @@ enum
 	P_SCROLLS6,
 	P_SCROLLS7,
 	P_SCROLLS8,
-	
+
 	P_PLATEMAIL = 1,
 	P_CHAINMAIL,
 	P_RINGMAIL,
@@ -34,7 +35,7 @@ enum
 	P_SWORDS,
 	P_BLADES,
 	P_OTHER,
-		
+
 	P_ANIMALS = 1,
 	P_T2A_MONSTERS,
 	P_DEAMONS,
@@ -49,7 +50,7 @@ enum
 	P_PEOPLE_F,
 	P_MERCHANTS_M,
 	P_MERCHANTS_F,
-	
+
 	P_BEVERAGES = 1,
 	P_BAKED,
 	P_BOWLSMEATFRUIT,
@@ -61,7 +62,7 @@ enum
 	P_RUGS,
 	P_CLOTHING,
 	P_JEWELS,
-	
+
 	P_CARPENTER = 1,
 	P_BLACKSMITH,
 	P_MUSICIAN,
@@ -97,20 +98,21 @@ new addMenuItems[ADD_MENU_ENTRIES][__addMenuStruct] =
 	{"Treasure    ","addgui_treasure"}
 }
 
-#define MAGIC_MENU_ITEM_ENTRIES 6
+#define MAGIC_MENU_ITEM_ENTRIES 7
 #define MAGIC_MENU_SCROLL_ENTRIES 8
 #define MAGIC_MENU_ENTRIES MAGIC_MENU_ITEM_ENTRIES + MAGIC_MENU_SCROLL_ENTRIES
 #define MAGIC_MENU_ENTRIES_L 12
 #define MAGIC_MENU_ROWS 3
 new magicMenuTxt[MAGIC_MENU_ENTRIES][MAGIC_MENU_ENTRIES_L] =
 {
+	"basic",
 	"reagents",
 	"reagents 2",
 	"bottles",
 	"potions",
 	"wands",
 	"gates",
-	
+
 	"circle 1",
 	"circle 2",
 	"circle 3",
@@ -118,7 +120,7 @@ new magicMenuTxt[MAGIC_MENU_ENTRIES][MAGIC_MENU_ENTRIES_L] =
 	"circle 5",
 	"circle 6",
 	"circle 7",
-	"circle 8"	
+	"circle 8"
 }
 
 #define COMBAT_MENU_ARMOR_ENTRIES 8
@@ -136,11 +138,11 @@ new combatMenuTxt[COMBAT_MENU_ENTRIES][COMBAT_MENU_ENTRIES_L] =
 	"Bone",
 	"Helms",
 	"Shields",
-	
+
 	"Axes",
 	"Blades",
 	"Maces",
-	"Other"	
+	"Other"
 }
 
 #define NPC_MENU_MONSTERS_ENTRIES 10
@@ -160,11 +162,11 @@ new npcMenuTxt[NPC_MENU_ENTRIES][NPC_MENU_ENTRIES_L] =
 	"Unique",
 	"Frost-stone",
 	"Dragons",
-	
+
 	"males",
 	"females",
 	"merchants",
-	"merchants-f"	
+	"merchants-f"
 }
 
 #define SUPPLY_MENU_FOOD_ENTRIES 3

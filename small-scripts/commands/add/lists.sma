@@ -10,11 +10,11 @@ enum additemEntry
 	__ID,
 	__def: 40,
 	__name: 30,
-	
+
 };
 
-#define NUM_MAGICAL_ITEMS 4
-new magicalItems[NUM_MAGICAL_ITEMS][additemEntry] =
+#define NUM_MAGICALITEMS 4
+new __magicalItems[NUM_MAGICALITEMS][additemEntry] =
 {
 	{0x1F14,"$item_a_recall_rune                    ","Recall rune"}, 
 	{0x0EFA,"$item_a_spellbook                      ","Spellbook"}, 
@@ -98,7 +98,6 @@ new __potions[NUM_POTIONS][additemEntry] =
 	{0x0F0D,"$item_greater_explosion_potion         ","Greater Explosion Potion"}
 }
 
-
 #define NUM_WANDS 9
 new __wands[NUM_WANDS][additemEntry] =
 {
@@ -113,7 +112,6 @@ new __wands[NUM_WANDS][additemEntry] =
 	{0x0F5C,"$item_a_wand_of_ressurection           ","ressurection wand"}
 }
 
-
 #define NUM_GATES 3
 new __gates[NUM_GATES][additemEntry] =
 {
@@ -121,7 +119,6 @@ new __gates[NUM_GATES][additemEntry] =
 	{0x0DDA,"$item_a_red_moongate                   ","A Red Moongate"},
 	{0x1FD4,"$item_a_black_moongate                 ","A Black Moongate"}
 }
-
 
 #define MAX_SCROLLS 64
 #define SCROLLS_PER_CIRCLE 8
@@ -147,7 +144,6 @@ new __scrolls[ MAX_SCROLLS][additemEntry] =
 	{0x1F33,"$item_a_protection_scroll              ","Night Sight Scroll"},
 	{0x1F34,"$item_a_strength_scroll                ","Weaken Scroll"},
 
-
 	//3rd circle
 	{0x1F3D,"$item_a_bless_scroll                   ","Bless Scroll"},
 	{0x1F3E,"$item_a_fireball_scroll                ","Fireball Scroll"},
@@ -167,7 +163,7 @@ new __scrolls[ MAX_SCROLLS][additemEntry] =
 	{0x1F4A,"$item_a_lightning_scroll               ","Lightning Scroll"},
 	{0x1F4B,"$item_a_mana_drain_scroll              ","ManaDrain Scroll"},
 	{0x1F4C,"$item_a_recall_scroll                  ","Recall Scroll"},
-	
+
 	//5th circle
 	{0x1F4D,"$item_a_blade_spirits_scroll           ","Blade Spirits Scroll"},
 	{0x1F4E,"$item_a_dispel_field_scroll            ","Dispel Field Scroll"},
@@ -177,7 +173,7 @@ new __scrolls[ MAX_SCROLLS][additemEntry] =
 	{0x1F52,"$item_a_paralyze_scroll                ","Paralyze Scroll"},
 	{0x1F53,"$item_a_poison_field_scroll            ","Poison Field Scroll"},
 	{0x1F54,"$item_a_summon_creature_scroll         ","Summon Creature Scroll"},
-	
+
 	//6th circle
 	{0x1F55,"$item_a_dispel_scroll                  ","Dispel Scroll"},
 	{0x1F56,"$item_an_energy_bolt_scroll            ","Energy Bolt Scroll"},
@@ -197,7 +193,7 @@ new __scrolls[ MAX_SCROLLS][additemEntry] =
 	{0x1F62,"$item_a_mass_dispel_scroll             ","Mass Dispel Scroll"},
 	{0x1F63,"$item_a_meteor_swarm_scroll            ","Meteor Storm Scroll"},
 	{0x1F64,"$item_a_polymorph_scroll               ","Polymorph Scroll"},
-	
+
 	//8th circle
 	{0x1F65,"$item_a_earthquake_scroll              ","Earthquake Scroll"},
 	{0x1F66,"$item_a_energy_vortex_scroll           ","Energy Vortex Scroll"},
@@ -222,7 +218,7 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 	{0x1414,"                                       ","gloves"},
 	{0x141A,"                                       ","legs"},
 	{0x1C04,"                                       ","female"},
-	
+
 	//chainmail
 	{0x13BB, "                                       ","coif"},
 	{INVALID,"                                       ","gorget"},
@@ -231,7 +227,7 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 	{INVALID,"                                       ","gloves"},
 	{0x13C3, "                                       ","legs"},
 	{INVALID,"                                       ","female"},
-	
+
 	//ringmail
 	{INVALID,"                                       ","coif"},
 	{INVALID,"                                       ","gorget"},
@@ -240,7 +236,7 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 	{0x13F2, "                                       ","gloves"},
 	{0x13F1, "                                       ","legs"},
 	{INVALID,"                                       ","female"},
-	
+
 	//studded
 	{INVALID,"                                       ","cap"},
 	{0x13D6, "                                       ","gorget"},
@@ -249,7 +245,7 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 	{0x13DD, "                                       ","gloves"},
 	{0x13E1, "                                       ","legs"},
 	{0x1C02, "                                       ","female"},
-	
+
 	//leather
 	{0x1DBA, "                                       ","cap"},
 	{INVALID,"                                       ","gorget"},
@@ -258,7 +254,7 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 	{0x13CE, "                                       ","gloves"},
 	{0x13D2, "                                       ","legs"},
 	{0x1C06, "                                       ","female"},
-	
+
 	//bone
 	{0x1451, "                                       ","helm"},
 	{INVALID,"                                       ","gorget"},
@@ -267,7 +263,7 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 	{0x1450, "                                       ","gloves"},
 	{0x1452, "                                       ","legs"},
 	{INVALID,"                                       ","female"},
-	
+
 	//helms
 	{0x1412, "                                       ","plate_helm"},
 	{0x140C, "                                       ","bascinet"},
@@ -276,7 +272,7 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 	{0x140E, "                                       ","nose_helm"},
 	{INVALID,"                                       ","legs"},
 	{INVALID,"                                       ","female"},
-	
+
 	//Shields
 	{0x1B73, "                                       ","buckler"},
 	{0x1B7B, "                                       ","metal_shield"},
@@ -285,7 +281,7 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 	{0x1B74, "                                       ","metal_kite_shield"},
 	{0x1B76, "                                       ","heater"},
 	{INVALID,"                                       ","female"}
-}	
+}
 
 #define NUM_WEAPONS 4
 #define WEAPONS_PER_GROUP 8
@@ -300,7 +296,7 @@ new __weapons[NUM_WEAPONS*WEAPONS_PER_GROUP][additemEntry] =
 	{0x0F45, "                                       ","executioners_axe"},
 	{0x13B0, "                                       ","war-axe"},
 	{INVALID,"                                       ",""},
-	
+
 	//swords/blades
 	{0x0F51,"                                       ","dagger"},
 	{0x1440,"                                       ","cutlass"},
@@ -310,7 +306,7 @@ new __weapons[NUM_WEAPONS*WEAPONS_PER_GROUP][additemEntry] =
 	{0x0F5E,"                                       ","broadsword"},
 	{0x13B8,"                                       ","long_sword"},
 	{0x13BA,"                                       ","viking_sword"},
-	
+
 	//maces
 	{0x0F5C,"                                       ","mace"},
 	{0x143A,"                                       ","maul"},
@@ -320,7 +316,7 @@ new __weapons[NUM_WEAPONS*WEAPONS_PER_GROUP][additemEntry] =
 	{INVALID,"                                       ","legs"},
 	{INVALID,"                                       ","legs"},
 	{INVALID,"                                       ","legs"},
-	
+
 	//spears/forks/pole arms/bows
 	{0x0F62,"                                       ","short_spear"},
 	{0x1405,"                                       ","war_fork"},
@@ -508,7 +504,7 @@ new __uniqueMonsters[NUM_UNIQUE][additemEntry] =
 	{0x20D3,"$npc_lord_of_the_abyss                 ","the Lord of the Abyss"},
 	{0x20D3,"$npc_slayer                            ","the Slayer"},
 	{0x20F4,"$npc_xanathar                          ","Xanathar"}
-}	
+}
 
 #define NUM_FROST_STONE 7
 new __frost_stone_monsters[NUM_FROST_STONE][additemEntry] =
@@ -521,7 +517,7 @@ new __frost_stone_monsters[NUM_FROST_STONE][additemEntry] =
 	{0x0000,"$npc_a_frost_ooze                      ","frost Ooze"},
 	{0x0000,"$npc_a_frost_spider                    ","frost spider"},
 	{0x0000,"$npc_a_stone_harpy                     ","stone harpy"}
-}	
+}
 
 #define NUM_DRAGONS 13
 new __dragons[NUM_DRAGONS][additemEntry] =
@@ -540,9 +536,8 @@ new __dragons[NUM_DRAGONS][additemEntry] =
 	{0x0000,"$npc_a_dragon_1                        ","a Dragon (brown)"},
 	{0x0000,"$npc_a_drake_2                         ","a Drake (brown)"},
 	{0x0000,"$npc_a_fire_wyrm                       ","a fire wyrm"}
-}	
+}
 
-	
 #define NUM_PEOPLE_M 29
 new __people_male[NUM_PEOPLE_M][additemEntry] =
 {
@@ -577,12 +572,11 @@ new __people_male[NUM_PEOPLE_M][additemEntry] =
 	{0x2026,"$npc_towncrier_m                       ","Town Crier"},
 	{0x2037,"$npc_veterinarian_m                    ","Veterinarian"}
 }
-	
-	
+
 #define NUM_PEOPLE_F 22
 new __people_female[NUM_PEOPLE_F][additemEntry] =
 {
-	//people - female	
+	//people - female
 	{0x2022,"$npc_artist_f                          ","Artist"},
 	{0x202B,"$npc_beggar_f                          ","Beggar"},
 	{0x2030,"$npc_brigand_f                         ","Brigand"},
@@ -645,7 +639,6 @@ new __merchants_male[NUM_MERCHANTS_M][additemEntry] =
 	{0x201F,"$npc_weaponsmith_m                     ","Weaponsmith"}
 }
 
-
 #define NUM_MERCHANTS_F 30
 new __merchants_female[NUM_MERCHANTS_F][additemEntry] =
 {
@@ -681,7 +674,6 @@ new __merchants_female[NUM_MERCHANTS_F][additemEntry] =
 	{0x2021,"$npc_tinker_f                          ","Tinker"},
 	{0x201F,"$npc_weaponsmith_f                     ","Weaponsmith"}
 }
-
 
 //===================================================================================
 //==========================   ITEMS   ==============================================
@@ -803,7 +795,7 @@ new __bowlsMeatFruit[NUM_BOWLSMEATFRUIT][additemEntry] =
 
 #define NUM_PLANTS 19
 new __plants[NUM_PLANTS][additemEntry] =
-{	
+{
 	{0x14f0,"$item_potted_tree                      ","potted tree"},
 	{0x14f0,"$item_potted_plant                     ","potted tree"},
 	{0x1E0F,"$item_potted_cactus3                   ","Potted Cactus w/flowers"},
@@ -847,7 +839,6 @@ new __lights[NUM_LIGHTS][additemEntry] =
 	{0x09FF,"$item_wall_sconce_1                    ","Wall Candle"},
 	{0x0A00,"$item_wall_sconce_2                    ","Wall Candle"}
 }
-
 
 #define NUM_SIGNS 125
 new __signs[NUM_SIGNS][additemEntry] =
@@ -986,23 +977,23 @@ new __signs[NUM_SIGNS][additemEntry] =
 	{0x0C07,"$item_fighters_guild                   ","Fighters Guild"},
 	{0x0C08,"$item_fighters_guild_1                 ","Fighters Guild"},
 	{0x0C09,"$item_merchants_guild                  ","Merchants Guild"},
-	{0x0C0A,"$item_merchants_guild_1                ","Merchants Guild"}	
+	{0x0C0A,"$item_merchants_guild_1                ","Merchants Guild"}
 }
 
 #define NUM_CONTAINERS 18
 new __containers[NUM_CONTAINERS][additemEntry] = 
 {
-	//Containers                                                                																																																																		
-	{0x0E75,"$item_backpack                         ","Backpack"},          																																																																		
-	{0x0E76,"$item_leather_bag                      ","Leather Bag"},       																																																																		
-	{0x0E78,"$item_round_basket                     ","Round Basket"},      																																																																		
-	{0x0E79,"$item_pouch                            ","Pouch"},             																																																																		
-	{0x0E7A,"$item_square_basket                    ","Square Basket"},     																																																																		
-	{0x0E42,"$item_wooden_chest1                    ","Wooden Chest"},      																																																																		
-	{0x0E7C,"$item_silver_chest                     ","Silver Chest"},      																																																																		
-	{0x0E40,"$item_metal_chest                      ","Metal Chest"},       																																																																		
-	{0x0E7D,"$item_wooden_box                       ","Wooden Box"},        																																																																		
-	{0x0E7E,"$item_small_wooden_crate               ","Small Wooden Crate"},																																																																		
+	//Containers                                                                																																																																
+	{0x0E75,"$item_backpack                         ","Backpack"},          																																																																
+	{0x0E76,"$item_leather_bag                      ","Leather Bag"},       																																																																
+	{0x0E78,"$item_round_basket                     ","Round Basket"},      																																																																
+	{0x0E79,"$item_pouch                            ","Pouch"},             																																																																
+	{0x0E7A,"$item_square_basket                    ","Square Basket"},     																																																																
+	{0x0E42,"$item_wooden_chest1                    ","Wooden Chest"},      																																																																
+	{0x0E7C,"$item_silver_chest                     ","Silver Chest"},      																																																																
+	{0x0E40,"$item_metal_chest                      ","Metal Chest"},       																																																																
+	{0x0E7D,"$item_wooden_box                       ","Wooden Box"},        																																																																
+	{0x0E7E,"$item_small_wooden_crate               ","Small Wooden Crate"},																																																																
 	{0x0E3E,"$item_medium_wooden_crate1             ","Medium Wooden Crate"}																																																																		,
 	{0x0E3C,"$item_large_wooden_crate1              ","Large Wooden Crate"},																																																																		
 	{0x0E7F,"$item_open_wooden_keg                  ","Wooden Keg"},        																																																																		
@@ -1071,7 +1062,6 @@ new __hairBeard[NUM_HAIR_BEARD][additemEntry] =
 	{0x203F,"$item_short_beard                      ","Short Beard"},
 	{0x204B,"$item_med_short_beard                  ","Short/Moustache"}
 }
-
 
 #define NUM_RUGS 90
 new __rugs[NUM_RUGS][additemEntry] =
@@ -1622,7 +1612,7 @@ new __musician[NUM_MUSICIAN][additemEntry] =
 
 #define NUM_THIEF 1
 new __thief[NUM_THIEF][additemEntry] =
-{	
+{
 	{0x14FB,"$item_lockpicks                        ",""}
 }
 
@@ -1649,7 +1639,7 @@ new __tinker[NUM_TINKER][additemEntry] =
 
 #define NUM_BOWYER 10
 new __bowyer[NUM_BOWYER][additemEntry] =
-{	
+{
 	{0x100A,"$item_archery_butte                    ",""},
 	{0x100B,"$item_archery_butte_1                  ",""},
 	{0x1020,"$item_feathers_1                       ",""},
@@ -1660,5 +1650,124 @@ new __bowyer[NUM_BOWYER][additemEntry] =
 	{0x1025,"$item_arrow_shafts_1                   ",""},
 	{0x0F3F,"$item_arrow                            ",""},
 	{0x1BFB,"$item_crossbow_bolt                    ",""}
+}
+
+#define NUM_SPAWNERS 114
+new __spawners[NUM_SPAWNERS][additemEntry] =
+{
+	{INVALID,"$item_orc_lord_spawner                 ","orc lord spawner"},
+	{INVALID,"$item_orc_spawner                      ","orc spawner"},
+	{INVALID,"$item_orc_mage_spawner                 ","orc mage spawner"},
+	{INVALID,"$item_ettin_spawner                    ","ettin spawner"},
+	{INVALID,"$item_ogre_spawner                     ","ogre spawner"},
+	{INVALID,"$item_troll_spawner                    ","troll spawner"},
+	{INVALID,"$item_harpy_spawner                    ","harpy spawner"},
+	{INVALID,"$item_banker_spawner-f                 ","female banker spawner"},
+	{INVALID,"$item_bard_spawner-f                   ","female bard spawner"},
+	{INVALID,"$item_bard_spawner-m                   ","male bard spawner"},
+	{INVALID,"$item_miner_spawner-m                  ","male miner spawner"},
+	{INVALID,"$item_miner_spawner-f                  ","female miner spawner"},
+	{INVALID,"$item_weaponsmith_spawner-m            ","male weaponsmith spawner"},
+	{INVALID,"$item_weaponsmith_spawner-f            ","female weaponsmith spawner"},
+	{INVALID,"$item_baker_spawner-m                  ","male baker spawner"},
+	{INVALID,"$item_baker_spawner-f                  ","female baker spawner"},
+	{INVALID,"$item_provisioner_spawner-m            ","male provisioner spawner"},
+	{INVALID,"$item_provisioner_spawner-f            ","female provisioner spawner"},
+	{INVALID,"$item_cobbler_spawner-m                ","male cobbler spawner"},
+	{INVALID,"$item_cobbler_spawner-f                ","female cobbler spawner"},
+	{INVALID,"$item_innkeeper_spawner-m              ","male innkeeper spawner"},
+	{INVALID,"$item_innkeeper_spawner-f              ","female innkeeper spawner"},
+	{INVALID,"$item_mage_spawner-m                   ","male mage spawner"},
+	{INVALID,"$item_mage_spawner-f                   ","female mage spawner"},
+	{INVALID,"$item_herbalist_spawner-m              ","male herbalist spawner"},
+	{INVALID,"$item_herbalist_spawner-f              ","female herbalist spawner"},
+	{INVALID,"$item_butcher_spawner-m                ","male butcher spawner"},
+	{INVALID,"$item_butcher_spawner-f                ","female butcher spawner"},
+	{INVALID,"$item_tailor_spawner-m                 ","male tailor spawner"},
+	{INVALID,"$item_tailor_spawner-f                 ","female tailor spawner"},
+	{INVALID,"$item_bowyer_spawner-m                 ","male bowyer spawner"},
+	{INVALID,"$item_bowyer_spawner-f                 ","female bowyer spawner"},
+	{INVALID,"$item_jewler_spawner-m                 ","male jewler spawner"},
+	{INVALID,"$item_jewler_spawner-f                 ","female jewler spawner"},
+	{INVALID,"$item_leather_worker_spawner-m         ","male leather worker spawner"},
+	{INVALID,"$item_leather_worker_spawner-f         ","female leather worker spawner"},
+	{INVALID,"$item_shipwright_spawner-m             ","male shipwright spawner"},
+	{INVALID,"$item_shipwright_spawner-f             ","female shipwright spawner"},
+	{INVALID,"$item_spinner_spawner-m                ","male spinner spawner"},
+	{INVALID,"$item_spinner_spawner-f                ","female spinner spawner"},
+	{INVALID,"$item_armorer_spawner-m                ","male ar"},
+	{INVALID,"$item_armorer_spawner-f                ","female ar"},
+	{INVALID,"$item_blacksmith_spawner-m             ","male blacksmith spawner"},
+	{INVALID,"$item_blacksmith_spawner-f             ","female blacksmith spawner"},
+	{INVALID,"$item_architect_spawner-m              ","male architect spawner"},
+	{INVALID,"$item_architect_spawner-f              ","female architect spawner"},
+	{INVALID,"$item_carpenter_spawner-m              ","male carpenter spawner"},
+	{INVALID,"$item_carpenter_spawner-f              ","female carpenter spawner"},
+	{INVALID,"$item_farmer_spawner-m                 ","male farmer spawner"},
+	{INVALID,"$item_farmer_spawner-f                 ","female farmer spawner"},
+	{INVALID,"$item_cook_spawner-m                   ","male cook spawner"},
+	{INVALID,"$item_cook_spawner-f                   ","female cook spawner"},
+	{INVALID,"$item_animal_trainer_spawner-m         ","male animal trainer spawner"},
+	{INVALID,"$item_animal_trainer_spawner-f         ","female animal trainer spawner"},
+	{INVALID,"$item_fisherman_spawner                ","fisherman spawner"},
+	{INVALID,"$item_fisherlady_spawner               ","fisherlady spawner"},
+	{INVALID,"$item_alchemist_spawner-m              ","male alchemist spawner"},
+	{INVALID,"$item_alchemist_spawner-f              ","female alchemist spawner"},
+	{INVALID,"$item_tinker_spawner-m                 ","male tinker spawner"},
+	{INVALID,"$item_tinker_spawner-f                 ","female tinker spawner"},
+	{INVALID,"$item_engineer_spawner-m               ","male engineer spawner"},
+	{INVALID,"$item_engineer_spawner-f               ","female engineer spawner"},
+	{INVALID,"$item_banker_spawner-m                 ","male banker spawner"},
+	{INVALID,"$item_random_orc_spawn                 ","random orc spawn"},
+	{INVALID,"$item_random_lizard_spawn              ","random lizard spawn"},
+	{INVALID,"$item_random_ratmen_rpawn              ","random ratmen rpawn"},
+	{INVALID,"$item_random_dragon_and_drake          ","random dragon and drake"},
+	{INVALID,"$item_random_cows_horses_etc           ","random cows horses etc"},
+	{INVALID,"$item_goat_spawner                     ","goat spawner"},
+	{INVALID,"$item_random_arctic_spawner            ","random arctic spawner"},
+	{INVALID,"$item_random_cave_spawner              ","random cave spawner"},
+	{INVALID,"$item_random_desert_spawner            ","random desert spawner"},
+	{INVALID,"$item_random_dungeon_spawner           ","random dungeon spawner"},
+	{INVALID,"$item_random_eerie_place_spawner       ","random eerie place spawner"},
+	{INVALID,"$item_random_farm_spawner              ","random farm spawner"},
+	{INVALID,"$item_random_forest_spawner            ","random forest spawner"},
+	{INVALID,"$item_random_jungle_spawner            ","random jungle spawner"},
+	{INVALID,"$item_random_mountain_spawner          ","random mountain spawner"},
+	{INVALID,"$item_random_ocean_spawner             ","random ocean spawner"},
+	{INVALID,"$item_random_swamp_spawner             ","random swamp spawner"},
+	{INVALID,"$item_random_town_spawner              ","random town spawner"},
+	{INVALID,"$item_random_volcanic_spawner          ","random volcanic spawner"},
+	{INVALID,"$item_random_drow_spawner              ","random drow spawner"},
+	{INVALID,"$item_random_diablo_spawner            ","random diablo spawner"},
+	{INVALID,"$item_random_wood_elves_spawner        ","random wood elves spawner"},
+	{INVALID,"$item_random_high_elves_spawner        ","random high elves spawner"},
+	{INVALID,"$item_town_crier_spawner-m             ","male town crier spawner"},
+	{INVALID,"$item_town_crier_spawner-f             ","female town crier spawner"},
+	{INVALID,"$item_register_of_names                ","Register of names"},
+	{INVALID,"$item_random_cowshorsesect             ","random cowshorsesect"},
+	{INVALID,"$item_random_dragon_and_drake_1        ","random dragon and drake"},
+	{INVALID,"$item_random_ratmen                    ","random ratmen"},
+	{INVALID,"$item_random_lizzardmen                ","random lizzardmen"},
+	{INVALID,"$item_random_orcs                      ","random orcs"},
+	{INVALID,"$item_random_birds                     ","random birds"},
+	{INVALID,"$item_random_all_animals               ","random all animals"},
+	{INVALID,"$item_random_small_animals             ","random small animals"},
+	{INVALID,"$item_random_productive_animals        ","random productive animals"},
+	{INVALID,"$item_random_bears                     ","random bears"},
+	{INVALID,"$item_random_overworld_monsters        ","random overworld monsters"},
+	{INVALID,"$item_random_strong_undead             ","random strong undead"},
+	{INVALID,"$item_random_weak_undead               ","random weak undead"},
+	{INVALID,"$item_random_all_undead                ","random all undead"},
+	{INVALID,"$item_random_daemons                   ","random daemons"},
+	{INVALID,"$item_random_elementals                ","random elementals"},
+	{INVALID,"$item_random_elementals_and_daemons    ","random elementals and daemons"},
+	{INVALID,"$item_random_ettinsogres_and_trolls    ","random ettinsogres and trolls"},
+	{INVALID,"$item_random_med_orcs                  ","random med orcs"},
+	{INVALID,"$item_random_weaker_orcs               ","random weaker orcs"},
+	{INVALID,"$item_random_crc-kin                   ","random crc"},
+	{INVALID,"$item_town_area_spawner                ","town area spawner"},
+	{INVALID,"$item_swamp_area_spawner               ","swamp area spawner"},
+	{INVALID,"$item_jungle_area_spawner              ","jungle area spawner"},
+	{INVALID,"$item_cocoon_spawner                   ","cocoon spawner"}
 }
 /*! }@ */

@@ -10,11 +10,11 @@
 \fn cmd_dye(const chr)
 \brief dyes an item
 
-<B>syntax:<B> 'dye color ["target"]
+<B>syntax:<B> 'dye color 
 <B>command params:</B>
 <UL>
 <LI> color: color code, integer or hexadecimal (preceded by 0x)
-<LI> "target": pass this paramter if you want to bypass the area effect
+
 </UL>
 
 If area effect is active, all characters in area will be dyed.
@@ -25,13 +25,13 @@ the targetted char will be dyed
 public cmd_dye(const chr)
 {
 	readCommandParams(chr);
-	
+
 	if(!strlen(__cmdParams[0]))
 	{
 		chr_message(chr,_,"Sorry, the dye menu hasn't been done yet");
 		return;
 	}
-	
+
 	new color;
 	if(!isStrHex(__cmdParams[0]))
 		if(!isStrInt(__cmdParams[0]))
@@ -41,17 +41,13 @@ public cmd_dye(const chr)
 		}
 		else color = str2Int(__cmdParams[0]);
 	else color = str2Hex(__cmdParams[0]);
-	
-	
-	new target = false;
-	
-	if(!strcmp(__cmdParams[1],"target"))
-		target = true;
-	
+
+
+
 	new area = chr_getCmdArea(chr);
 	new i = 0, item;
 	//apply command to all items in area
-	if(area_isValid(area) && !target)
+	if(area_isValid(area))
 	{
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
@@ -60,8 +56,8 @@ public cmd_dye(const chr)
 				itm_setProperty(item,IP_COLOR,_,color);
 				itm_refresh(item);
 		}
-		
-		chr_message(chr,_,"%d items dyed",i);				
+
+		chr_message(chr,_,"%d items dyed",i);		
 		return;
 	}
 

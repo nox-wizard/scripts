@@ -119,6 +119,9 @@ const IP_STR_NAME2 = 455;              //!< item-id name of the item
 /** @} */
 /** @} */
 
+#define BANKBOX_NORMAL 0
+#define BANKBOX_GOLDONLY 123
+
 enum {
 	TYPE_KNIFE,	
 	TYPE_SWORD,

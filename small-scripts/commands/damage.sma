@@ -10,7 +10,7 @@
 \fn cmd_freeze(const chr)
 \brief freezes a character
 
-<B>syntax:<B> 'damage [amount]["hp"/"stam"/"mana"]["target"]
+<B>syntax:<B> 'damage [amount]["hp"/"stam"/"mana"]
 <B>command params:</B>
 <UL>
 <LI> amount: hoe much damage you want to do
@@ -20,7 +20,6 @@
 	<LI> "mana": decrease mana
 	</UL>
 
-<LI> "target": pass this paramter if you want to bypass the area effect
 </UL>
 
 If area effect is active, all characters in area will be damaged.
@@ -30,22 +29,20 @@ the targetted char will be damaged.
 public cmd_damage(const chr)
 {
 	readCommandParams(chr);
-	
-	new target = false;
+
 	new stat = 0;
 	new amount = STAT_HP;
-	
+
 	//parameters handling, if no parameters are given, keep defaults, else
 	//read them
-	
+
 	if(!isStrInt(__cmdParams[0]))
 	{
 		chr_message(chr,_,"You must specify the amount of damage to do");
 		return;
 	}
-	
+
 	amount = str2Int(__cmdParams[0]);
-	printf("--%s--^n",__cmdParams[1]);
 	if(!strcmp(__cmdParams[1],"stam"))
 		stat = STAT_STAMINA;
 	else 	if(!strcmp(__cmdParams[1],"mana"))
@@ -56,14 +53,11 @@ public cmd_damage(const chr)
 			return;
 		}
 
-	if(!strcmp(__cmdParams[2],"target"))
-		target = true;
-		
-	
+
 	new area = chr_getCmdArea(chr);
 	new chr2,i = 0;
 	//apply command to all characters in area if an area is defined
-	if(area_isValid(area) && !target)
+	if(area_isValid(area))
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
@@ -72,9 +66,9 @@ public cmd_damage(const chr)
 				if(chr2 != chr) 
 					chr_applyDamage(chr2,amount,DAMAGE_PURE,stat);
 		}
-	
+
 		chr_message(chr,_,"%d characters damaged",i);
-		
+
 		return;
 	}
 

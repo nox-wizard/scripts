@@ -10,7 +10,7 @@
 \fn cmd_move(const chr)
 \brief moves objects
 
-<B>syntax:<B> 'move [x][y]["abs"/"rel"]["target"] or 'move me or 'move here
+<B>syntax:<B> 'move x y ["abs"/"rel"] or 'move me or 'move here or 'move loc
 
 <B>command params:</B>
 <UL>
@@ -33,9 +33,9 @@ If you don't pass any parameter, you will be prompted to target both the object 
 and the destination
 */
 public cmd_move(const chr)
-{	
+{
 	readCommandParams(chr);
-	
+
 	//called 'move me
 	if(!strcmp(__cmdParams[0],"me"))
 	{
@@ -43,7 +43,7 @@ public cmd_move(const chr)
 		target_create(chr,chr,_,_,"cmd_move_targ_dst");
 		return;
 	}
-	
+
 	//called 'move here
 	if(!strcmp(__cmdParams[0],"here"))
 	{
@@ -51,7 +51,15 @@ public cmd_move(const chr)
 		target_create(chr,chr,_,_,"cmd_move_targ_here");
 		return;
 	}
-	
+
+	//called 'move loc
+	if(!strcmp(__cmdParams[0],"loc"))
+	{
+		chr_message(chr,_,"Select an object to move to a location");
+		target_create(chr,chr,_,_,"cmd_move_targ_loc");
+		return;
+	}
+
 	//called with no params
 	if(!strlen(__cmdParams[0]))
 	{
@@ -60,8 +68,8 @@ public cmd_move(const chr)
 		return;
 	}
 
-	//READ PARAMETERS	
-	
+	//READ PARAMETERS
+
 	//-------------------  x y ------------------
 	new x,y;
 	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]))
@@ -69,25 +77,23 @@ public cmd_move(const chr)
 		chr_message(chr,_,"x and y must be numbers");
 		return;
 	}
-	
+
 	x = str2Int(__cmdParams[0]);
 	y = str2Int(__cmdParams[1]);
-		
+
 	//---------------  mode  ------------------
 	new mode = 1; //0:abs 1:rel
-	new target = false;
-	
+
 	if(strlen(__cmdParams[2]))
 	{
 		if(!strcmp(__cmdParams[2],"abs"))
 			mode = 0;
 		else 	if (!strcmp(__cmdParams[2],"rel"))
 				mode = 1;
-		
-		if(!strcmp(__cmdParams[3],"target"))
-			target = true;
-	}
+
 	
+	}
+
 	//check sign of x and y only in abs mode
 	if((y < 0 || x < 0) && !mode)
 	{
@@ -95,12 +101,12 @@ public cmd_move(const chr)
 		return;
 	}
 	new area = chr_getCmdArea(chr);
-	
+
 	//command areas only in "rel" mode without "target"
-	if(area_isValid(area) && !target && mode)
+	if(area_isValid(area)  && mode)
 	{
 		new oldx,oldy,oldz,newx,newy,i;
-		
+
 		if(area_itemsIncluded(area))
 			for(set_rewind(area_items(area)); !set_end(area_items(area));i++)
 			{
@@ -108,15 +114,15 @@ public cmd_move(const chr)
 				itm_getPosition(itm,oldx,oldy,oldz);
 				newx = oldx + x;
 				newy += oldy + y;
-				
+		
 				itm_moveTo(itm,newx,newy,map_getZ(newx,newy));
-				
+		
 				#if _CMD_DEBUG_
 					printf("^tMoving item %d to %d %d %d^n",itm,newx,newy,map_getZ(newx,newy));
-				#endif	
+				#endif
 			}
-			
-		
+	
+
 		if(area_charsIncluded(area))
 			for(set_rewind(area_chars(area)); !set_end(area_chars(area));i++)
 			{
@@ -124,14 +130,14 @@ public cmd_move(const chr)
 				chr_getPosition(chr2,oldx,oldy,oldz);
 				newx = oldx + x;
 				newy = oldy + y;
-				
+		
 				chr_moveTo(chr2,newx,newy,map_getZ(newx,newy));
-				
+		
 				#if _CMD_DEBUG_
 					printf("^tMoving character %d to %d %d %d^n",chr2,newx,newy,map_getZ(newx,newy));
-				#endif	
+				#endif
 			}
-			
+	
 		chr_message(chr,_,"%d objects moved",i);
 		area_refresh(area);
 		area_useCommand(area);
@@ -140,10 +146,10 @@ public cmd_move(const chr)
 
 	//move by target
 	if(mode)
-		target_create(chr,(x << 16) + y,_,_,"cmd_move_targ_rel");	
+		target_create(chr,(x << 16) + y,_,_,"cmd_move_targ_rel");
 	else 
 	{
-		chr_message(chr,_,"Select an object to move");	
+		chr_message(chr,_,"Select an object to move");
 		target_create(chr,(x << 16) + y,_,_,"cmd_move_targ_abs");
 	}
 }
@@ -161,11 +167,10 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 		chr_message(chr,_,"You must select an object");
 		return;
 	}
-	
+
 	chr_message(chr,_,"Select the destination");
 	target_create(chr,object,_,_,"cmd_move_targ_dst");
 }
-
 
 /*!
 \author Fax
@@ -176,7 +181,7 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 public cmd_move_targ_here(target, chr, object, x, y, z, unused, unused2)
 {
 	chr_getPosition(chr,x,y,z);
-	
+
 	if(isChar(object))
 		chr_moveTo(object,x,y,z)
 	else 	if(isItem(object))
@@ -190,6 +195,25 @@ public cmd_move_targ_here(target, chr, object, x, y, z, unused, unused2)
 
 /*!
 \author Fax
+\fn cmd_move_targ_loc(target, chr, object, x, y, z, unused, unused2)
+\params all standard target callback params
+\brief handles 'move loc commmand
+*/
+public cmd_move_targ_loc(target, chr, object, x, y, z, unused, unused2)
+{
+	chr_getPosition(chr,x,y,z);
+
+	if(isChar(object) || isItem(object))
+		locationsMenu(chr,object)
+	else
+	{
+		chr_message(chr,_,"You must select an object");
+		return;
+	}
+}
+
+/*!
+\author Fax
 \fn cmd_move_targ_dst(target, chr, object, x, y, z, unused, param)
 \params all standard target callback params
 \brief handles the destination targetting in 'move when called without params
@@ -197,16 +221,16 @@ public cmd_move_targ_here(target, chr, object, x, y, z, unused, unused2)
 public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 {
 	printf("t: %d - chr:%d - o:%d - x,y,z:%d %d %d - %d^n",target,chr,object,x,y,z,unused2);
-	
+
 	if((x != INVALID && y != INVALID) || object != INVALID)
 	{
 		if(isItem(object)) itm_getPosition(object,x,y,z);
 		else if(isChar(object)) chr_getPosition(object,x,y,z);
-		
+
 		if(isChar(param))
 			chr_moveTo(param,x,y,z);
 		if(isItem(param))
-		{	
+		{
 			new cont = itm_getProperty(param,IP_CONTAINERSERIAL);
 			itm_setProperty(param,IP_CONTAINERSERIAL,_,INVALID);
 			itm_moveTo(param,x,y,z);
@@ -216,7 +240,7 @@ public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 		area_refresh(chr_getCmdArea(chr));
 		return;
 	}
-	chr_message(chr,_,"You must target a location or an object!");	
+	chr_message(chr,_,"You must target a location or an object!");
 }
 
 /*!
@@ -229,24 +253,24 @@ public cmd_move_targ_rel(target, chr, object, x, y, z, unused2, param)
 {
 	new deltax = param  >> 16;
 	new deltay = param & 0xFFFF;
-	
+
 	if(isChar(object))
 	{
 		chr_getPosition(object,x,y,z);
 		chr_moveTo(object,x + deltax,y + deltay,map_getZ(x + deltax, y + deltay));
 		area_refresh(chr_getCmdArea(chr));
-		return;	
+		return;
 	}
-	
+
 	if(isItem(object))
 	{
 		itm_getPosition(object,x,y,z);
 		itm_moveTo(object,x + deltax,y + deltay,map_getZ(x + deltax, y + deltay));
 		area_refresh(chr_getCmdArea(chr));
-		return;	
+		return;
 	}
-		
-	chr_message(chr,_,"You must select an object!");	
+
+	chr_message(chr,_,"You must select an object!");
 }
 
 /*!
@@ -263,17 +287,17 @@ public cmd_move_targ_abs(target, chr, object, x, y, z, unused2, param)
 	{
 		chr_moveTo(object,newx,newy,map_getZ(newx,newy));
 		area_refresh(chr_getCmdArea(chr));
-		return;	
+		return;
 	}
-	
+
 	if(isItem(object))
 	{
 		itm_moveTo(object,newx,newy,map_getZ(newx,newy));
 		area_refresh(chr_getCmdArea(chr));
-		return;	
+		return;
 	}
-	
-	chr_message(chr,_,"You must select an object!");	
+
+	chr_message(chr,_,"You must select an object!");
 }
 
 /*! }@ */

@@ -24,7 +24,7 @@ enum __skill
 	_skUnhideOnFail,	//<! true if character is unhidden when fails skill check
 	_skUnhideOnUse,		//!< true if charcater is unhidden when he uses the skill
 	_skName: 30,		//!< skill name
-}	//<! skill data type, you can modify this to your needs, bt remember to update __skillinfo[][] too
+}	//<! skill data type, you can modify this to your needs, but remember to update __skillinfo[][] too
 
 new __skillinfo[SK_ADDITIONAL_COUNT][__skill] =
 {
@@ -112,8 +112,8 @@ public chr_getSkillcap(const chr)
 {
 	if(!isChar(chr)) return -1;
 	
-	new skillcap = 0;
-	for(new sk = 0; sk < SK_EXT_COUNT; sk++)
+	new skillcap = chr_getProperty(chr,CP_TOTALSKILL);
+	for(new sk = SK_COUNT; sk < SK_EXT_COUNT; sk++)
 		skillcap += chr_getSkill(chr,sk);
 	return skillcap; 
 }
@@ -122,6 +122,7 @@ public chr_getSkillcap(const chr)
 #if !ACTIVATE_EXTENDED_SKILLSYSTEM
 	#endinput
 #endif
+
 
 
 /*!

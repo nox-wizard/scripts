@@ -16,6 +16,7 @@
 
 #include "small-scripts/API/core.api"
 #include "small-scripts/API/string.api"
+#include "small-scripts/API/constant.sma"
 
 /*************************************************************************
  PRECOMPILATION PROPERTIES
@@ -681,6 +682,40 @@ stock str2Hex( const string[] )
 	return value;
 }
 
+/*!
+\author Sparhawk
+\fn str2Dirconst string[])
+\param string	: string to transform
+\return		: one of the DIR_* constants or INVALID
+\brief Transform strin into DIR_* constant
+
+allowed direction strings are: n ne e se s sw w nw
+*/
+stock str2Dir(const string[])
+{		
+	switch(string[0])
+	{
+		case 'n':
+			switch(string[1])
+			{
+				case 'e': return DIR_NORTHEAST;
+				case 'w': return DIR_NORTHWEST;
+				default:  return DIR_NORTH;
+			}
+		case 's':
+			switch(string[1])
+			{
+				case 'e': return DIR_SOUTHEAST;
+				case 'w': return DIR_SOUTHWEST;
+				default:  return DIR_SOUTH;
+			}
+		case 'e': return DIR_EAST;
+		case 'w': return DIR_WEST;
+		default: return INVALID;
+	}
+
+	return INVALID;
+}
 /*!
 \author Sparhawk
 \fn isStrBooleanFalse(const string[])

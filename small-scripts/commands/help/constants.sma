@@ -4,6 +4,6 @@ new helpFile[] = "small-scripts/commands/help/helpTopics.txt";
 enum helpTopicStruct
 {
 	__helpTopic: 20,
-	__helpText: 1000
+	__helpText: 512
 }
 new helpTopics[NUM_HELP_TOPICS][helpTopicStruct];

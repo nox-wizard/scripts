@@ -1,3 +1,8 @@
+#if defined _nxw_lib2_included_
+	#endinput
+#endif
+#define _nxw_lib2_included_
+
 //=========================================================================================//
 //                              TARGET HELP FUNCTIONS                                      //
 //=========================================================================================//
@@ -126,4 +131,113 @@ public rectangle_cback_2(target, chr, object, x, y, z, unused, xy)
 	chr_delLocalVar(chr,CLV_TEMP1);
 	
 	callFunction5P(funcidx(callback),chr,x0,y0,x1,y1);
+}
+
+/*!
+\author Fax
+\fn set_remove(const set,const value)
+\param set: the set
+\param value: the value to be removed
+\since 0.82
+\brief removes a value from a set
+
+Removes a value from a set, if the value is found more than once, all occurrencies will be removed.
+\return nothing
+*/
+stock set_remove(const set,const value)
+{
+	new t,tset = set_create();
+	for(set_rewind(set);!set_end(set);)
+	{
+		t = set_get(set);
+		if(t != value)	set_add(tset,t);
+	}
+	
+	set_clear(set);
+	for(set_rewind(tset);!set_end(tset);)
+		set_add(set,set_get(tset));
+	set_delete(tset);
+}
+
+//=======================================================================================//
+//                              FILE HELP FUNCTIONS                                      //
+//=======================================================================================//
+#define FILE_SCAN_BUFFER_SIZE 512
+new __fileScanBuffer[FILE_SCAN_BUFFER_SIZE]; //!< global variable used to read the scanned line in file scanning functions
+
+/*!
+\author Fax
+\fn file_scan(file[], callback[], exclude[])
+\param file[]: the file to be scanned, path starts from NOX folder.
+\param callback[]: the function to be called for each line
+\param exclude[]: list of "comment" charatcers
+\since 0.82
+\brief scans a file and calls the callback for every line
+
+The file is scanned line by line and calls the callback for each line.<BR>
+If the line starts with one of the tokens specified in the
+exclude string, the line is skipped, this allows toput comments in files.<BR>
+
+The callback will be passed the file handle and the line number, read the line with file_getScanLine().<BR>
+line number = INVALID means EOF (End Of File).
+A typical callback will be structured as follows:
+
+\code
+public process_line(file,line)
+{
+	if(line == INVALID)
+	{ 
+		printf("EOF^n");
+		return;
+	}
+	
+	printf("scanning line %d^n",line);
+	
+	new line[FILE_SCAN_BUFFER_SIZE];
+	file_getScanLine(line);
+}
+\endcode
+
+\example file_scan(file,"process_line","//")
+\return the number of scanned lines or INVALID if file does not exist
+*/
+public file_scan(filename[], callback[], exclude[])
+{
+	new file = file_open(filename,"r");
+	if(file == INVALID) return INVALID;
+	
+	new line,token[50];
+	
+	for(file_read(file,__fileScanBuffer); !file_eof(file); file_read(file,__fileScanBuffer))
+	{
+		line++
+		
+		if(!strlen(__fileScanBuffer)) continue;
+		
+		substring(__fileScanBuffer,0,strlen(exclude)-1,token,0);
+		
+		if(!strcmp(token,exclude)) continue;
+		
+		callFunction2P(funcidx(callback),file,line);
+	}
+	
+	//call the callback with EOF line
+	callFunction2P(funcidx(callback),file,INVALID);
+	return line;
+}
+
+/*!
+\author Fax
+\fn file_getScanLine(line[FILE_SCAN_BUFFER_SIZE])
+\param line[]: a preallocated string
+\since 0.82
+\brief returns the scanned line filling line[]
+
+Use this function at the beginning of your callback to read the scan line
+\note you can directly use __file_scan_buffer[] if you want
+\return nothing
+*/
+public file_getScanLine(line[FILE_SCAN_BUFFER_SIZE])
+{
+	strcpy(line,__fileScanBuffer);
 }

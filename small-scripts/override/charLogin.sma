@@ -27,6 +27,9 @@ public __charLogin(const chr)
 	itm_potionStart(chr);//every function you want to start with char login put in here
 	
 	hungerandthirst(chr);
+	
+	//add the character to the pageable staff list if needed
+	addOnlineStaff(chr);
 }
 
 

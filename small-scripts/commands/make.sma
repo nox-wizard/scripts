@@ -10,12 +10,13 @@
 \fn cmd_make(const chr)
 \brief makes a character GM, counselor or player
 
-<B>syntax:<B> 'make ["gm"/"cns"/"player"]
+<B>syntax:<B> 'make ["gm"/"gmpageable"/"cns"/"player"]
 <B>command params:</B>
 <UL>
 <LI> 
 	<UL>
 	<LI> "gm": make the charcater a GM
+	<LI> "gmpageable":make the charcater a pageable GM
 	<LI> "cns": make tha charcater a counselor (default)
 	<LI> "player": make the character a player
 	</UL> 
@@ -26,29 +27,32 @@ Doesn't support command areas
 public cmd_make(const chr)
 {
 	readCommandParams(chr);
-	
+
 	new makewhat = 2;
-	
+
 	if(!strcmp(__cmdParams[0],"gm"))
 		makewhat = 0;
 	else 	if(!strcmp(__cmdParams[0],"cns"))
 			makewhat = 1;
 		else 	if(!strcmp(__cmdParams[0],"player"))
 				makewhat = 2;
-			else
-			{
-				chr_message(chr,_,"You must specify 'gm', 'cns' or 'player'");
-				return;
-			}
-		
+			else 	if(!strcmp(__cmdParams[0],"gmpageable"))
+					makewhat = 3;
+				else
+				{
+					chr_message(chr,_,"You must specify 'gm','gmpageable', 'cns' or 'player'");
+					return;
+				}
+
 	switch(makewhat)
-	{	
+	{
 		case 0: chr_message(chr,_,"Choose a player to make GM");
 		case 1: chr_message(chr,_,"Choose a player to make counselor");
 		case 2: chr_message(chr,_,"Choose a GM or couselor to make player");
+		case 3: chr_message(chr,_,"Choose a player to make pageable GM");
 	}
 
-target_create(chr,makewhat,_,_,"cmd_make_targ");	
+target_create(chr,makewhat,_,_,"cmd_make_targ");
 }
 
 /*!
@@ -63,10 +67,10 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 	{
 		chr_message(chr,_,"You must target a character");
 		return;
-	}	
-	
+	}
+
 	switch(makewhat)
-	{	
+	{
 		case 0: 
 		{
 			chr_makeGM(object);
@@ -82,8 +86,14 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 			chr_makePlayer(object);
 			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_PLAYER);
 		}
+		case 3: 
+		{
+			chr_makeGM(object);
+			chr_makeGMPageable(object);
+			chr_setLocalIntVar(object,CLV_PRIVLEVEL,PRIV_GM);
+		}
 	}
-	
+
 	if(chr_getLocalVarErr() != VAR_ERROR_NONE)
 	{
 		chr_message(chr,_,"An error occurred!");

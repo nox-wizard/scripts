@@ -55,6 +55,15 @@ Works exactly as chr_setProperty, simply the first parameter is an item serial
 native itm_setProperty(const item, const property, const subprop=0, ...);
 
 /*!
+\author Wintermute
+\fn itm_showContainer(const itm, const chr)
+\brief show the itm if it is an container to character chr
+\param 1: the item to be displayed
+\param 2: the character the item is shown to
+*/
+native itm_showContainer(const itm, const chr);
+
+/*!
 \brief Add the item to container
 \author Xanathar
 \fn itm_contAddItem(const container, const item, const x=INVALID, const y=INVALID)
@@ -529,14 +538,6 @@ stock itm_setAmxFlags(const itm, const idx, const value)
 	itm_setProperty(itm, IP_AMXFLAGS, idx, value);
 }
 
-/*!
-\author Wintermute
-\fn itm_showContainer(const itm, const chr)
-\brief show the itm if it is an container to character chr
-\param 1: the item to be displayed
-\param 2: the character the item is shown to
-*/
 
-native itm_showContainer(const itm, const chr);
 
 /** @} */

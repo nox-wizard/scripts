@@ -10,7 +10,7 @@
 \fn cmd_setdir(const chr)
 \brief setdirs an item
 
-<B>syntax:<B> 'setdir dir ["target"]
+<B>syntax:<B> 'setdir dir 
 <B>command params:</B>
 <UL>
 <LI> dir: the direction -  "n" "ne" "e" "se" "s" "sw" "w" "nw"
@@ -21,13 +21,13 @@
 public cmd_setdir(const chr)
 {
 	readCommandParams(chr);
-	
+
 	if(!strlen(__cmdParams[0]))
 	{
 		chr_message(chr,_,"You must specify the direction: n ne e se s sw w nw");
 		return;
 	}
-	
+
 	new dir = 0;
 	switch(__cmdParams[0][0])
 	{
@@ -53,16 +53,13 @@ public cmd_setdir(const chr)
 				return;
 			}
 	}
-	
-	new target = false;
-	
-	if(!strcmp(__cmdParams[1],"target"))
-		target = true;
-	
+
+
+
 	new area = chr_getCmdArea(chr);
 	new i = 0, item,chr2;
 	//apply command to all items in area
-	if(area_isValid(area) && !target)
+	if(area_isValid(area))
 	{
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
@@ -71,14 +68,14 @@ public cmd_setdir(const chr)
 				itm_setProperty(item,IP_DIR,_,dir);
 				itm_refresh(item);
 		}
-		
+
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 		{
 				chr2 = set_getChar(area_chars(area));
 				chr_setProperty(chr2,CP_DIR,_,dir);
 				chr_update(chr2);
 		}
-		chr_message(chr,_,"%d objects directed",i);				
+		chr_message(chr,_,"%d objects directed",i);		
 		return;
 	}
 

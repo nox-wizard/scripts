@@ -288,7 +288,7 @@ stock chr_hideSerials(const chr)
 stock chr_isGMPageable(const chr)
 {
 	if(!isChar(chr) || !chr_isTrueGM(chr)) return 0;
-	return chr_getProperty( chr, CP_PRIV) & PRIV_ISGMPAGEABLE;
+	return chr_getProperty( chr, CP_PRIV) & PRIV_GMPAGEABLE;
 }
 
 /*!
@@ -301,7 +301,7 @@ stock chr_isGMPageable(const chr)
 stock chr_makeGMPageable(const chr)
 {
 	if(!isChar(chr) || !chr_isTrueGM(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_ISGMPAGEABLE);
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_GMPAGEABLE);
 	return OK;
 }
 
@@ -315,7 +315,7 @@ stock chr_makeGMPageable(const chr)
 stock chr_makeGMUnpageable(const chr)
 {
 	if(!isChar(chr) || !chr_isTrueGM(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_ISGMPAGEABLE);
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_GMPAGEABLE);
 	return OK;
 }
 
@@ -404,6 +404,11 @@ stock chr_makePlayer(const chr)
 
 /*!
 \brief Prints a message of given color to the given character
+
+Prints a message of given color to the given character, the message willappear on the bottom left corner
+of the screen.<br>
+Message may be up to 511 characters long, longer messages will be cut before being sent to the client.
+
 \author Endymion
 \fn chr_message( const chr, const color=0x0387, const format[], ... )
 \param chr the player
@@ -877,8 +882,8 @@ native chr_jail( const jailer, const player, const seconds );
 /*!
 \author Endymion
 \fn chr_unjail( const releaser, const player )
-\param releaser the releaser
-\param player the player to be released
+\param releaser: the releaser
+\param player: the player to be released
 \brief Release the given player from jail
 \note this is an hlper functions that calls chr_jail( releaser, player, 0 )
 */
@@ -920,12 +925,16 @@ native chr_countItems(const chr, const itemtype, const color = -1);
 
 /*!
 \author Xanathar
-\fn chr_getBankBox(const chr, const bankboxtype)
+\fn chr_getBankBox(const chr, const bankboxtype = 0)
 \param chr tha character
-\param bankboxtype ??
-\brief ??
+\param bankboxtype the bank box type, normal(0) or gold-only(123) bank.
+\brief opens character's bankbox
+
+normal bankbox(BANKBOX_NORMAL) contains gold and items, gold-only bankbox (BANKBOX_GOLDONLY)
+contains only gold pieces. gold-only bank can be opened only if the extended bank system
+is activated in server.cfg
 */
-native chr_getBankBox(const chr, const bankboxtype);
+native chr_getBankBox(const chr, const bankboxtype = BANKBOX_NORMAL);
 
 /*
 \fn chr_getBackpack( const chr, const createIfNotExist = false )
@@ -1565,7 +1574,7 @@ native chr_applyDamage(const chr, const damage, const damagetype, const stat);
 \param basedamage damage amount
 \param attacker the attacker character
 \param magiclike true if the damage is magical
-\param damagetype one fo the DAMAGE_* contants
+\param damagetype one fo the DAMAGE_* constants
 \param stattobedamaged the stat that will be damaged
 \brief damages a char, differnely from chr_applyDamage
 TODO: detailed description of internal

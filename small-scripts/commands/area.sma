@@ -47,7 +47,6 @@ by the area_ functions
 */
 static areas[MAX_AREAS][areaParams]; 
 
-
 /*!
 \author Fax
 \fn resetCmdAreas()
@@ -58,7 +57,7 @@ public resetCmdAreas()
 	#if _CMD_DEBUG_
 		printf("DEBUG: Resetting command areas^n");
 	#endif
-	
+
 	new area;
 	for(area = 0; area < MAX_AREAS; area++)
 		areas[area][area_user] = INVALID;
@@ -106,7 +105,7 @@ public cmds_getNewArea()
 	for(area = 0; area < MAX_AREAS; area++)
 		if(!isChar(areas[area][area_user]))
 			return area;
-	
+
 	log_warning("No more command areas available!");
 	return AREA_INVALID;
 }
@@ -135,21 +134,21 @@ public area_useCommand(const area)
 public area_refresh(const area)
 {
 	if(area < 0 || area > MAX_AREAS) return;
-	
+
 	//delete old sets
 	set_delete(areas[area][area_chrs]);
 	set_delete(areas[area][area_itms]);
-	
+
 	areas[area][area_chrs] = set_create();
 	areas[area][area_itms] = set_create();
-	
+
 	//reload objects in the lists
 	if(areas[area][area_incl] & INCLUDE_CHR)
 	{
 		set_addNpcsNearXY(area_chars(area),areas[area][area_x],areas[area][area_y],areas[area][area_R]);
 		set_addOnPlNearXY(area_chars(area),areas[area][area_x],areas[area][area_y],areas[area][area_R]);
 	}
-	
+
 	if(areas[area][area_incl] & INCLUDE_ITM)
 		set_addItemsNearXY(area_items(area),areas[area][area_x],areas[area][area_y],areas[area][area_R],false);
 }
@@ -240,10 +239,10 @@ will only delete the area, and no new area is set.
 public cmd_area(const chr)
 {
 	readCommandParams(chr);
-	
+
 	//get current character command area
 	new area = chr_getCmdArea(chr);
-	
+
 	//if no params are passed and an area is set, delete it and return
 	if(!strlen(__cmdParams[0]) && area != AREA_INVALID)
 	{
@@ -251,11 +250,11 @@ public cmd_area(const chr)
 		chr_message(chr,_,"Command area cleared");
 		return;
 	}
-	
+
 	//if character doesn't have an active area yet, create one
 	//else current area will be updated (thus removed)
 	if(area == AREA_INVALID)
-	{	
+	{
 		area = cmds_getNewArea();
 		if(area == AREA_INVALID)
 		{
@@ -263,8 +262,7 @@ public cmd_area(const chr)
 			return;
 		}
 	}
-	
-	
+
 	//handle no params call, set defaults
 	if(!strlen(__cmdParams[0]))
 	{
@@ -280,65 +278,65 @@ public cmd_area(const chr)
 		areas[area][area_cmdsLeft] = DEFAULT_CMDS;
 		area_refresh(area);
 		chr_message(chr,_,"Standard area set");
-		
+
 		#if _CMD_DEBUG_
 			printf("^tNew standard command area set for character %d^n",areas[area][area_user]);
 			printf("^tR:%d^n",areas[area][area_R]);
 			printf("^tx,y: %d,%d^n",areas[area][area_x],areas[area][area_y]);
 			printf("^tcommands:%d^n",areas[area][area_cmdsLeft]);
 		#endif
-		
-		return;		
+
+		return;
 	}
-	
+
 	//READ AND CHECK PARAMETERS
-	
+
 	//---------------  radius  ----------------------
 	if(!isStrInt(__cmdParams[0]))
 	{
 		chr_message(chr,_,"First parameter must be the area radius");
 		return;
 	}
-	
+
 	new R = str2Int(__cmdParams[0]);
 	if(R < 0)
 	{
 		chr_message(chr,_,"Radius must be a positive number");
 		return;
 	}
-	
+
 	//set radius
 	areas[area][area_R] = R;
-	
+
 	//---------------  include mode  ----------------------
 	if(!strlen(__cmdParams[1]))
 	{
 		chr_message(chr,_,"You must specify all parameters");
 		return;
 	}
-	
+
 	if(!strcmp(__cmdParams[1],"itm"))
 		areas[area][area_incl] = INCLUDE_ITM;
-	
+
 	else 	if(!strcmp(__cmdParams[1],"chr"))
 			areas[area][area_incl] = INCLUDE_CHR;
-		
+
 		else if(!strcmp(__cmdParams[1],"all"))
 			areas[area][area_incl] = INCLUDE_ALL;
-		
+
 			else
 			{
 				chr_message(chr,_,"The include mode can only be: itm chr all");
 				return;
 			}
-	
+
 	//---------------  number of commands  -----------------
 	if(!strlen(__cmdParams[2]))
 	{
 		chr_message(chr,_,"You must specify all parameters");
 		return;
 	}
-	
+
 	if(!strcmp(__cmdParams[2],"unlimited"))
 		areas[area][area_cmdsLeft] = 0xFFFFFFFF;
 	else 	if(!isStrInt(__cmdParams[2]))
@@ -346,17 +344,16 @@ public cmd_area(const chr)
 			chr_message(chr,_,"Number of commands must be a number or 'unlimited'");
 			return;
 		}
-		
+
 		else areas[area][area_cmdsLeft] = str2Int(__cmdParams[2]);
-	
-	
+
 	//recreate items and chars sets
 	set_delete(area_items(area));
 	areas[area][area_itms] = set_create();
-	
+
 	set_delete(area_chars(area));
 	areas[area][area_chrs] = set_create();
-	
+
 	//ask for target
 	chr_message(chr,_,"Target the area center");
 	target_create(chr,area,_,_,"cmd_area_targ");
@@ -378,7 +375,7 @@ public cmd_area_targ(target, chr, object, x, y, z, unused1, area)
 		chr_message(chr,_,"Invalid map location");
 		return;
 	}
-	
+
 	//if an object has been targetted, its position is the area centre
 	//if a map location has been targetted x y and z are automatically set
 	if(isChar(object))
@@ -388,14 +385,14 @@ public cmd_area_targ(target, chr, object, x, y, z, unused1, area)
 
 	//fill area with items or chars
 	area_refresh(area);
-	
+
 	//set area center
 	areas[area][area_x] = x;
 	areas[area][area_y] = y;
-	
+
 	//finally we can assign area to character
 	areas[area][area_user] = chr;
-	
+
 	chr_message(chr,_,"area set");
 	#if _CMD_DEBUG_
 		printf("^tNew command area set for character %d^n",areas[area][area_user]);
@@ -403,7 +400,7 @@ public cmd_area_targ(target, chr, object, x, y, z, unused1, area)
 		printf("^tx,y: %d,%d^n",areas[area][area_x],areas[area][area_y]);
 		printf("^tcommands:%d^n",areas[area][area_cmdsLeft]);
 		printf("^tinclude:%d^n",areas[area][area_incl]);
-	#endif	
+	#endif
 }
 
 /*! }@ */  //end of script_commad_area

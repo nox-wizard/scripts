@@ -21,9 +21,9 @@ Calls a PUBLIC function in the scripts passing given parameters.
 public cmd_func(const chr)
 {
 	readCommandParams(chr);
-	
+
 	new params[5], nparams = 0;
-	
+
 	//count parameters and assign them to params[]
 	if(strlen(__cmdParams[1])) 
 	{
@@ -50,7 +50,7 @@ public cmd_func(const chr)
 			}
 		}
 	}
-		
+
 	switch(nparams)
 	{
 		case 0: callFunction(funcidx(__cmdParams[0]));

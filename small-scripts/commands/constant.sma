@@ -11,7 +11,7 @@
 #define _CMD_SHOW_MSG 1		//!< set to 1 if you want users to be warned when they try to use commands they are not authorized to use or that not exist
 #define __MAX_PARAMS 6		//!< maximum number of parameters a command can have
 #define __MAX_PARAM_LENGTH 20	//!< maximum number of character a parameter can be made of
-#define __CMD_COUNT 40		//!< number of available commands
+#define __CMD_COUNT 60		//!< number of available commands
 
 enum
 {
@@ -23,51 +23,69 @@ enum
 	PRIV_ADMIN = 255
 };//!< predefined privlevels, insert you own privs between existing ones
 
-
 enum __cmdEntry
 {
 	__cmdPriv,
-	__cmdName: 15, //do not increase this value !!
+	__cmdName: 16, //do not increase this value !!
 	__cmdFunc: 20
 };//!< command data structure, first field is command privlevel, second is command name, third is function to call
-
 
 //insert your custom commands here.
 new __commands[__CMD_COUNT][__cmdEntry] =
 {
-	{PRIV_SEER,	"add",		""},
+	{PRIV_SEER,	"add",	""},
 	{PRIV_CNS,	"align",	""},
-	{PRIV_CNS,	"area",		""},
+	{PRIV_CNS,	"area",	""},
+	{PRIV_GM,	"cset",	""},
+	{PRIV_SEER,	"csetxyz",	""},
 	{PRIV_SEER,	"damage",	""},
 	{PRIV_SEER,	"decay",	""},
-	{PRIV_SEER,	"dye",		""},
-	{PRIV_SEER,	"dupe",		""},
+	{PRIV_SEER,	"dye",	""},
+	{PRIV_SEER,	"dupe",	""},
 	{PRIV_CNS,	"freeze",	""},
-	{PRIV_GM,	"func",		""},
-	{PRIV_CNS,	"go",		""},
+	{PRIV_GM,	"fullstats",	""},
+	{PRIV_GM,	"func",	""},
+	{PRIV_GM,	"gmopen",	""},
+	{PRIV_CNS,	"go",	""},
+	{PRIV_CNS,	"gy",	""},
 	{PRIV_CNS,	"hiding",	""},
-	{PRIV_CNS,	"help",		""},
+	{PRIV_GM,	"heal",	""},
+	{PRIV_CNS,	"help",	""},
 	{PRIV_CNS,	"invul",	""},
-	{PRIV_CNS,	"kill",		""},
+	{PRIV_GM,	"iset",	""},
+	{PRIV_CNS,	"jail",	""},
+	{PRIV_CNS,	"kill",	""},
 	{PRIV_CNS,	"lightlevel",	""},
-	{PRIV_ADMIN,	"make",		""},
-	{PRIV_CNS,	"move",		""},
+	{PRIV_ADMIN,	"make",	""},
+	{PRIV_GM,	"mana",	""},
+	{PRIV_CNS,	"move",	""},
+	{PRIV_GUEST,	"onlinegm",	""},
 	{PRIV_CNS,	"options",	""},
+	{PRIV_GUEST,	"page",	""},
+	{PRIV_CNS,	"pages",	""},
+	{PRIV_CNS,	"pagelist",	""},
 	{PRIV_PLAYER,	"playerlist",	""},
 	{PRIV_CNS,	"polymorph",	""},
 	{PRIV_SEER,	"regioncp",	""},
+	{PRIV_PLAYER,	"resend",	""},
 	{PRIV_CNS,	"resurrect",	""},
 	{PRIV_SEER,	"setdir",	""},
 	{PRIV_SEER,	"setmorexyz",	""},
 	{PRIV_ADMIN,	"setpriv",	""},
+	{PRIV_GM,	"setskills",	""},
 	{PRIV_SEER,	"settype",	""},
+	{PRIV_GM,	"showbank",	""},
 	{PRIV_GUEST,	"skills",	""},
+	{PRIV_CNS,	"solvepage",	""},
+	{PRIV_GM,	"stamina",	""},
 	{PRIV_GUEST,	"stats",	""},
-	{PRIV_SEER,	"tile",		""},
+	{PRIV_CNS,	"sysm",	""},
+	{PRIV_SEER,	"tile",	""},
 	{PRIV_CNS,	"tweak",	""},
+	{PRIV_GM,	"unjail",	""},
 	{PRIV_CNS,	"where",	""},
-	{PRIV_CNS,	"wipe",		""},
-	
+	{PRIV_CNS,	"wipe",	""},
+
 	{0,	"",	""},
 	{0,	"",	""},
 	{0,	"",	""},

@@ -87,7 +87,7 @@ const CP_DEXTERITY = 216;	//!< dexterity, use stat subproperties to get appropri
 const CP_DISABLED = 217;	//!< true if the char is disabled
 const CP_FAME = 218;		//!< fame
 const CP_FLEEAT = 219;		//!< HP at wich the char starts fleeing
-const CP_FOODPOSITION = 220;	//!<
+const CP_FOODPOSITION = 220;	//!<location where npc goes to eat, CP_NPCWANDER must be WANDER_FREELY, use CP2_X CP2_Y CP2_Z as subproperties
 const CP_FPOS1_NPCWANDER = 221;	//!< first box corner when wnader mode is WANDER_FREELY_BOX, use CP2_X, CP2_Y, CP2_Z as subproperties
 const CP_FPOS2_NPCWANDER = 222;	//!< second box corner when wnader mode is WANDER_FREELY_BOX, use CP2_X, CP2_Y, CP2_Z as subproperties
 const CP_FTARG = 223;		//!< npc follow target
@@ -99,7 +99,7 @@ const CP_HAIRSERIAL = 229;	//!< serial of the hair item
 const CP_HAIRSTYLE = 230;	//!< hair style TODO: link to hair styles
 const CP_HIDAMAGE = 231;	//!< npc only - maximum damage an NPC can do in combat
 const CP_HOLDGOLD = 232;	//!< gold kept by player vendors
-const CP_HOMELOCPOS = 233;	//!<
+const CP_HOMELOCPOS = 233;	//!< location where npc goes to sleep, CP_NPCWANDER must be WANDER_FREELY, use CP2_X CP2_Y CP2_Z as subproperties
 const CP_HUNGER = 234;		//!< level of hungerness 6= full  0=empty
 const CP_HUNGERTIME = 235;	//!< timer used for hungerness
 const CP_INTELLIGENCE = 236;	//!< intelligence
@@ -176,7 +176,7 @@ const CP_TRAINER = 309;		//!< if npc can train players
 const CP_FLEETIMER = 310;	//!<
 const CP_TRIGGER = 311;		//!< trigger for NPCs
 const CP_WEIGHT = 312;		//!< weight
-const CP_WORKLOCPOS = 313;	//!<
+const CP_WORKLOCPOS = 313;	//!< location where the npc goes to work at day, CP_NPCWANDER must be WANDER_FREELY. UseCP2_x CP2_Y CP2_Z as subproperties
 const CP_AMXFLAGS = 314;	//!< use local vars instead
 const CP_NPCRACE = 315;		//!<
 const CP_LASTMOVETIME = 319;	//!<
@@ -192,7 +192,7 @@ const CP_XSKIN = 406;		//!<
 const CP_ICON = 407;		//!<
 const CP_SOUND = 408;		//!<
 const CP_RACE = 409;		//!<
-const CP_TOTALSKILL = 410;
+const CP_TOTALSKILL = 410;	//!< sum of the skills values
 
 const CP_STR_DISABLEDMSG = 450;	//!<
 const CP_STR_GUILDTITLE = 451;	//!<
@@ -202,9 +202,9 @@ const CP_STR_TITLE = 455;	//!< title of the character
 const CP_STR_TRIGWORD = 456;	//!<
 const CP_STR_SPEECHWORD = 457;	//!< word/phrase in speech that triggered speech override
 const CP_STR_SPEECH = 458; 	//!< entire speech that contains word/phrase that triggered speech override
-const CP_STR_ACCOUNT = 459; // Account name of current player
-const CP_STR_PASSWORD = 460; // Account name of current player
-const CP_STR_PARAM = 461; // Params given by the character with the last command called
+const CP_STR_ACCOUNT = 459; 	//!< Account name of current player
+const CP_STR_PASSWORD = 460; 	//!< password of current player
+const CP_STR_PARAM = 461; 	//!< Params given by the character with the last command called
 
 const CP_UNI_SPEECH_CURRENT = 500;//!<
 const CP_UNI_PROFILE = 501;	//!<
@@ -326,8 +326,10 @@ const PRIV2_NONEEDREAGS = 0x80;	//!<
 #define CLV_ADDITIONALSKILLS 9998	//<! local variable to store additional skill values
 #define CLV_ADDITIONALSKILLSBASE 9997	//<! local variable to store addition base skill values
 #define CLV_CMDTEMP 9996		//!< commands temp variable - created at startup, never delete!
-#define CLV_CMDADDTEMP 9995		//!< 'add command temp variable
-#define CLV_TEMP1 9994			//!< generic temp var 1 - now used for getRectangle() - created on the fly, delete after use.
-
+#define CLV_CMDTEMPVEC 9995		//!< commands temp variable for vectors - created on the fly,delete after use
+#define CLV_CMDTEMPSTR 9994		//!< commands temp variable for strings - created on the fly,delete after use
+#define CLV_CMDTEMPSTR1 9993		//!< commands temp variable for strings - created on the fly,delete after use
+#define CLV_CMDADDTEMP 9992		//!< 'add command temp variable - created on the fly, delete after use.
+#define CLV_TEMP1 9991			//!< generic temp var 1 - now used for getRectangle() - created on the fly, delete after use.
 
 /** @} */

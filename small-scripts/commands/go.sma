@@ -24,10 +24,10 @@ When using this option no other parameters are needed.<br>
 
 */
 public cmd_go(const chr)
-{	
+{
 	new x,y,z;
 	readCommandParams(chr);
-	
+
 	if(isStrInt(__cmdParams[0]))
 		if(isStrInt(__cmdParams[1]))
 			if(isStrInt(__cmdParams[2]))
@@ -47,20 +47,20 @@ public cmd_go(const chr)
 			//'go n
 			new chr2;
 			new n = str2Int(__cmdParams[0]);
-			
+	
 			//seek in the online players list the nth player connected
 			new s = set_create();
 			set_addAllOnlinePl(s);
 			set_rewind(s);
 			for(new c;  !set_end(s) && c < n; c++)
 				chr2 = set_getChar(s);
-				
+		
 			if(set_end(s) && c < n)
 			{
 				chr_message(chr,_,"There are less than %d players online",n);
 				return;
-			}			
-				
+			}	
+		
 			chr_getPosition(chr2,x,y,z);
 		}
 	else if(!strcmp(__cmdParams[0],"s"))
@@ -70,25 +70,25 @@ public cmd_go(const chr)
 				chr_message(chr,_,"you must specify a character serial");
 				return;
 			}
-			
+	
 			new chr2 = str2Int(__cmdParams[1]);
-			
+	
 			if(!isChar(chr2))
 			{
 				chr_message(chr,_,"you must specify a valid character serial");
 				return;
 			}
-			
+	
 			chr_getPosition(chr2,x,y,z);
 		}
 		else
 		{//'go "name"
-			
+	
 			//handle multi word names (john smith the cool guy)
 			for(new i = 1; i < __MAX_PARAMS; i++)
 				if(strlen(__cmdParams[i]))
 					sprintf(__cmdParams[0],"%s %s",__cmdParams[0],__cmdParams[i]);
-			
+	
 			new chr2, name[50];
 			new s = set_create();
 			set_addAllOnlinePl(s);
@@ -98,24 +98,24 @@ public cmd_go(const chr)
 				chr_getProperty(chr2,CP_STR_NAME,0,name);
 				if(!strcmp(__cmdParams[0],name)) break;
 			}
-			
+	
 			if(set_end(s) && strcmp(__cmdParams[0],name))
 			{
 				chr_message(chr,_,"%s is not online",__cmdParams[0]);
 				return;
 			}
-			
+	
 			chr_getPosition(chr2,x,y,z);
 		}
-		
+
 		//move char to the target
 		if(x < 0 || y < 0)
 		{
 			chr_message(chr,_,"Invalid map location");
 			return;
 		}
-		
-		chr_moveTo(chr,x,y,z);	
+
+		chr_moveTo(chr,x,y,z);
 }
 
 /*! }@ */

@@ -10,7 +10,7 @@
 \fn cmd_setpriv(const chr)
 \brief sets the privlevel of a character
 
-<B>syntax:<B> 'setpriv [priv]["target"]
+<B>syntax:<B> 'setpriv [priv]
 <B>command params:</B>
 <UL>
 	<UL>
@@ -26,10 +26,9 @@ the targetted char will be affected
 public cmd_setpriv(const chr)
 {
 	readCommandParams(chr);
-	
-	new target = false;
+
 	new priv = PRIV_PLAYER;
-	
+
 	//parameters handling, if no parameters are given, keep defaults, else
 	//read them
 	if(!strlen(__cmdParams[0]))
@@ -37,32 +36,30 @@ public cmd_setpriv(const chr)
 		chr_message(chr,_,"You must enter the privlevel to set");
 		return;
 	}
-	
+
 	if(!isStrInt(__cmdParams[0]))
 	{
 		chr_message(chr,_,"privlevel must be number");
 		return;
 	}
-	
+
 	priv = str2Int(__cmdParams[0]);
-	if(!strcmp(__cmdParams[1],"target"))
-		target = true;
-		
-	
+
+
 	new area = chr_getCmdArea(chr);
 	new chr2,i = 0;
 	//apply command to all characters in area if an area is defined
-	if(area_isValid(area) && !target)
+	if(area_isValid(area))
 	{
 		area_useCommand(area);
-		
+
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 		{
 				chr2 = set_getChar(area_chars(area));
 				if(chr2 != chr) chr_setLocalIntVar(chr2,CLV_PRIVLEVEL,priv);
 		}
 
-		chr_message(chr,_,"Privlevel set to %d characters ",i);		
+		chr_message(chr,_,"Privlevel set to %d characters ",i);
 		return;
 	}
 

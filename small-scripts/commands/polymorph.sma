@@ -165,7 +165,7 @@ public callPolyMenu(const chrsource,const target, const page)
 {
 	new oldpic = 5002;
 	new newpic = 5003;
-	
+
 	new polymMenu = gui_create( 10,10,1,1,1,"infoPolyCallback" );
 	gui_setProperty( polymMenu,MP_BUFFER,0,PROP_CHARACTER );
 	gui_setProperty( polymMenu,MP_BUFFER,1,target );
@@ -175,29 +175,29 @@ public callPolyMenu(const chrsource,const target, const page)
 	gui_addResizeGump(polymMenu,10,65,5054,550,500 );
 	gui_addResizeGump(polymMenu,20,75,3500,530,475);
 	gui_addResizeGump(polymMenu,33,79,5100,505,21);
-	
+
 	gui_addText( polymMenu,215,80,1310,"Polymorph Menu");
 	if(page !=8)	gui_addButton( polymMenu,503,83,2224,2224, 2); //button right
 	if(page !=1)	gui_addButton( polymMenu,40,83,2223,2223, 1); //button left
 	gui_addText( polymMenu,230,500,1310,"page: %d", page);
-	
+
 	gui_addText( polymMenu,50,120,1310,"custom name:" );
 	gui_addInputField( polymMenu,140,120,100,20,3,1110,"(name)" );
 	gui_addText( polymMenu,210,120,1310,"custom color:" );
 	gui_addInputField( polymMenu,300,120,100,20,4,1110,"(decimal)" );
 	gui_addText( polymMenu,385,120,1310,"keep stats:" );
 	gui_addCheckbox( polymMenu,485,120,oldpic,newpic,0,5); //custom stats
-	
+
 	new i=(page-1)*14; //start line of array for first row of page
 	new j=i+7; //end line of array for first row of page and start of second
 	new k=i+14; //end line of array for second row of page
-	
+
 	new lastpage = NUM_anims/14;
 	new lastpagerest = NUM_anims%14;
 	if(lastpagerest)
 	{
 		lastpage = lastpage + 1;
-	}	
+	}
 	//printf("lastpage: %d", lastpage);
 	//printf("lastpagerest: %d^n", lastpagerest);
 	if(page == lastpage)
@@ -223,7 +223,7 @@ public callPolyMenu(const chrsource,const target, const page)
 			//111: lastpagerest = 13, i=98, j=105, k= 111
 		}
 	}
-	
+
 	new l = i;
 	for ( i;i<j;++i)
 	{
@@ -231,7 +231,7 @@ public callPolyMenu(const chrsource,const target, const page)
 		gui_addText( polymMenu,110,150+50*(i-l),1310,"%s : ",animProperty[i][animname] );
 		gui_addButton( polymMenu,140,170+50*(i-l),oldpic,newpic, i+10);
 	}
-	
+
 	i=j;
 	for ( i;i<k;++i)
 	{
@@ -239,7 +239,7 @@ public callPolyMenu(const chrsource,const target, const page)
 		gui_addText( polymMenu,381,150+50*(i-j),1310,"%s : ",animProperty[i][animname] );
 		gui_addButton( polymMenu,411,170+50*(i-j),oldpic,newpic, i+10);
 	}
-		
+
 	gui_show(polymMenu,chrsource); 
 }
 
@@ -249,7 +249,7 @@ public infoPolyCallback(const polymMenu, const chrsource, const buttonCode)
 	new page = gui_getProperty( polymMenu,MP_BUFFER,3 ); //page number
 	printf("page: %d", page);
 	printf("buttonCode: %d", buttonCode);
-	
+
 	//0: rechtsklick, 1: vorhergehendes, 2: folgendes Menü, 3: custom name, 4: custom color, 5: custom stats, 10 u. folgende: bodyID
 
 	if(buttonCode == 0) return;
@@ -265,9 +265,9 @@ public infoPolyCallback(const polymMenu, const chrsource, const buttonCode)
 			sprintf(chrname, "%s", animProperty[arrayline][animname]);
 		}
 		new color[15];
-		new skincolor = 0000;		
+		new skincolor = 0000;
 		gui_getProperty(polymMenu,MP_UNI_TEXT,4,color);
-		if( strcmp( color,"(decimal)") ) //entry made (no more "(decimal)")
+		if( strcmp( color,"(decimal)")) //entry made (no more "(decimal)")
 		{
 			trim(color);
 			if (isStrUnsignedInt(color))	skincolor = str2UnsignedInt(color);

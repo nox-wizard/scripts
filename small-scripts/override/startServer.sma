@@ -1,6 +1,9 @@
 public __startServer()
 {
-	printf("^n################  Small scripts started  ###################^n^n");
+	printf("^n================  SMALL SCRIPTS STARTED  ===================^n^n");
 	
 	initCommandSystem();
+	initPageSystem();
+	
+	printf("^n================  END OF STARTUP SCRIPTS ===================^n^n");
 }

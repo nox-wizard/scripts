@@ -25,26 +25,26 @@ All parameters must be < 256.
 public cmd_tile(const chr)
 {
 	readCommandParams(chr);
-	
+
 	//call with no params -> ask for rectangle
 	if(!strlen(__cmdParams[0]))
 	{
 		getRectangle(chr,"cmd_tile_rect");
 		return;
 	}
-	
+
 	if(!strlen(__cmdParams[1]))
 	{
 		chr_message(chr,_,"If you want to pass parameters you must pass at least nX and nY");
 		return;
 	}
-	
+
 	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]) || (strlen(__cmdParams[2]) && !isStrInt(__cmdParams[2])) || (strlen(__cmdParams[3]) && !isStrInt(__cmdParams[3])))
 	{
 		chr_message(chr,_,"x y z and z-scale must be integer numbers");
 		return;
 	}
-	
+
 	new nX = str2Int(__cmdParams[0]);
 	new nY = str2Int(__cmdParams[1]);
 	new nZ = isStrInt(__cmdParams[2]) ? str2Int(__cmdParams[2]) : 1;
@@ -83,10 +83,10 @@ public cmd_tile_rect(chr,x0,y0,x1,y1)
 	new nX = x1 - x0 + 1;
 	new nY = y1 - y0 + 1;
 	new nXnY = (nX << 16) + nY;
-	
+
 	new xy = (x0 << 16) + y0;
 	chr_setLocalIntVar(chr,CLV_CMDTEMP,xy);
-	
+
 	chr_message(chr,_,"Select an item to tile");
 	target_create(chr,nXnY,_,_,"cmd_tile_targ1");
 }
@@ -128,7 +128,7 @@ static cmd_tile_copyItem(object,x,y,z,nX,nY,nZ,zScale)
 	 		{
 	 			//skip item position
 	 			if(x + i == iX && y + j == iY && z + k*zScale == iZ) continue;
-	 			
+	 	
 	 			item = itm_copy(object);
 	 			itm_moveTo(item,x + i,y + j,z + k*zScale);
 	 		}

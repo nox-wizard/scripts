@@ -6,10 +6,12 @@
 // || This script requires NoX-Wizard 0.10 or later                       ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-
 [skilltargets]
 1=__anatomy_target,AFTER
 
+//Put here overrides that will be called when player presses the blue skill button.
+//To override other skills you need to put appropriate event handlers on skill 
+//triggering items.
 [skills]
 46=__meditation,BYPASS
 38=__nxw_sk_tracking,BYPASS
@@ -31,12 +33,19 @@
 
 [magiccast]
 
+//We recommend you to use the provided override callbacks instead of declaring new ones
+//in this section because many important scripts are run with these overrides and not 
+//executing them will cause errors in the standard scripts.
 [special]
 OnStart=__startServer,AFTER
 StartChar=__charLogin,AFTER
+OnLogOut=__charLogout,BEFORE
 
 [networkrcv]
 
+//Speech override is only available as BEFORE, to get the speech or the triggering word
+//you have to use chr_getProperty(chr,CP_STR_TRIGWORD) or chr_getProperty(chr,CP_STR_SPEECH);
+//inside your callback
 [speech]
 '=detectCommand,BEFORE
 +=bla_char,BEFORE

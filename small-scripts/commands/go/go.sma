@@ -26,16 +26,16 @@ When using this option no other parameters are needed.<br>
 #include "small-scripts/commands/go/locationsMenu.sma"
 
 public cmd_go(const chr)
-{	
+{
 	readCommandParams(chr);
-	
+
 	new x,y,z;
 	if(!strlen(__cmdParams[0]))
 	{
-		locationsMenu(chr);
+		locationsMenu(chr,chr);
 		return;
 	}
-	
+
 	if(isStrInt(__cmdParams[0]))
 		if(isStrInt(__cmdParams[1]))
 			if(isStrInt(__cmdParams[2]))
@@ -55,14 +55,21 @@ public cmd_go(const chr)
 			//'go n
 			new chr2;
 			new n = str2Int(__cmdParams[0]);
-			
+	
 			//seek in the online players list the nth player connected
-			new s = set_create();
+			new c,s = set_create();
 			set_addAllOnlinePl(s);
 			set_rewind(s);
-			for(new c;  !set_end(s) && c < n; c++)
+			for(c = 0;  !set_end(s) && c < n; c++)
 				chr2 = set_getChar(s);
-							
+	
+	
+			if(set_end(s) && c >= n)
+			{
+				chr_message(chr,_,"there are less than n players online");
+				return;
+			}
+	
 			chr_getPosition(chr2,x,y,z);
 		}
 	else if(!strcmp(__cmdParams[0],"s"))
@@ -72,25 +79,25 @@ public cmd_go(const chr)
 				chr_message(chr,_,"you must specify a character serial");
 				return;
 			}
-			
+	
 			new chr2 = str2Int(__cmdParams[1]);
-			
+	
 			if(!isChar(chr2))
 			{
 				chr_message(chr,_,"you must specify a valid character serial");
 				return;
 			}
-			
+	
 			chr_getPosition(chr2,x,y,z);
 		}
 		else
 		{//'go "name"
-			
+	
 			//handle multi word names (john smith the cool guy)
 			for(new i = 1; i < __MAX_PARAMS; i++)
 				if(strlen(__cmdParams[i]))
 					sprintf(__cmdParams[0],"%s %s",__cmdParams[0],__cmdParams[i]);
-			
+	
 			new chr2, name[50];
 			new s = set_create();
 			set_addAllOnlinePl(s);
@@ -100,20 +107,25 @@ public cmd_go(const chr)
 				chr_getProperty(chr2,CP_STR_NAME,0,name);
 				if(!strcmp(__cmdParams[0],name)) break;
 			}
-			
+	
+			if(set_end(s) && !isChar(chr2))
+			{
+				chr_message(chr,_,"%s is not online");
+				return;
+			}
+	
 			chr_getPosition(chr2,x,y,z);
 		}
-		
+
 		//move char to the target
 		if(x < 0 || y < 0)
 		{
 			chr_message(chr,_,"Invalid map location");
 			return;
 		}
-		
-		chr_moveTo(chr,x,y,z);	
-}
 
+		chr_moveTo(chr,x,y,z);
+}
 
 //==============  EXPERIMENTAL XSS LOADING FUNCTIONS ==============
 /*!
@@ -128,14 +140,14 @@ public cmd_go(const chr)
 public loadLocations()
 {
 	log_message("Loading locations.xss for 'go command ...");
-	
+
 	xss_parseFile(__locationsFile,"LOCATION","loadXssEntry");
-	
+
 	new error,i = 0, section = 0,name[50];
 	while(i < NUM_LOCATIONS)
 	{
 		section++;
-		
+
 		__locations[i][__locX] = xss_getProperty(__locationsFile,"LOCATION",section,"X");
 		error = xss_getError(); 
 		if(error == XSS_OK)
@@ -144,16 +156,16 @@ public loadLocations()
 			xss_getStrProperty(__locationsFile,"LOCATION",section,"//",__locations[i][__locName]);
 			__locations[i][__locY] = xss_getProperty(__locationsFile,"LOCATION",section,"Y");
 			__locations[i][__locZ] = xss_getProperty(__locationsFile,"LOCATION",section,"Z");
-			
+	
 			i++;
 		}
 		else
 		{ 
 			xss_getErrorMsg();
-			if(error != XSS_SECTION_NOT_FOUND) return;		
+			if(error != XSS_SECTION_NOT_FOUND) return;
 		}
 	}
-	
+
 	log_message("%d locations loaded",i);
 	printf("^n");
 }
@@ -161,9 +173,9 @@ public loadLocations()
 public loadXssEntry(scriptID,value)
 {
 	static idx,lastScriptID;
-	
+
 	new prop[20];
-	xss_getCurrentProp(prop[]);	
+	xss_getCurrentProp(prop[]);
 }
 */
 /*! }@ */

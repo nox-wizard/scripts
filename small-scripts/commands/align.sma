@@ -21,30 +21,30 @@
 This command does not support command areas
 */
 public cmd_align(const chr)
-{	
+{
 	readCommandParams(chr);
-	
+
 	if(!strlen(__cmdParams[0]))
 	{
 		chr_message(chr,_,"You must specify the alignment direction: x y z");
-		return;	
+		return;
 	}
-		
+
 	new d = 0;
 	switch(__cmdParams[0][0])
 	{
 		case 'x': d = CP2_X;
 		case 'y': d = CP2_Y;
-		case 'z': d = CP2_Z;	
+		case 'z': d = CP2_Z;
 		default:
 		{
 			chr_message(chr,_,"Alignment direction MUST be x y or z");
 			return;
 		}
 	}
-	
+
 	chr_message(chr,_,"Select reference item or character");
-	target_create(chr,d,_,_,"cmd_align_targ_ref");	
+	target_create(chr,d,_,_,"cmd_align_targ_ref");
 }
 
 /*!
@@ -74,7 +74,7 @@ public cmd_align_targ_ref(target, chr, object, x, y, z, unused, dir)
 				return;
 			}
 		}
-	
+
 	chr_message(chr,_,"Select the object to be moved");
 	target_create(chr,dir*100000 + pos,_,_,"cmd_align_targ");
 }
@@ -91,7 +91,7 @@ public cmd_align_targ(target, chr, object, x, y, z, unused, posAndDir)
 	new dir = posAndDir/100000;
 	new pos = posAndDir%100000;
 	new newx,newy,newz;
-		
+
 	if(isItem(object))
 	{
 		itm_getPosition(object,newx,newy,newz);
@@ -102,7 +102,7 @@ public cmd_align_targ(target, chr, object, x, y, z, unused, posAndDir)
 			case CP2_Z: newz = pos;
 		}
 		itm_moveTo(object,newx,newy,newz);
-	
+
 	}
 	else if(isChar(object))
 		{
@@ -120,8 +120,8 @@ public cmd_align_targ(target, chr, object, x, y, z, unused, posAndDir)
 			chr_message(chr,_,"You must select an item or a character");
 			return;
 		}
-		
-	chr_message(chr,_,"Object moved to %d %d %d",newx,newy,newz);	
+
+	chr_message(chr,_,"Object moved to %d %d %d",newx,newy,newz);
 }
 
 /*! }@ */

@@ -19,24 +19,21 @@ If you pass "rect" as parameter, then you will be asked to target 2 map location
 the corners of a rectangular area that will be wiped.
 */
 public cmd_wipe(const chr)
-{	
+{
 	readCommandParams(chr);
-	
+
 	if(!strcmp(__cmdParams[0],"rect"))
 	{
 		getRectangle(chr,"cmd_wipe_rect");
-		return;	
+		return;
 	}
-	
+
 	new area = chr_getCmdArea(chr)
-	new target = false;
-	
-	if(!strcmp(__cmdParams[0],"target"))
-		target = true;
-	
+
+
 	//if character activated a command area
-	if(area_isValid(area) && !target)
-	{	
+	if(area_isValid(area))
+	{
 		//wipe items if required
 		new i = 0;
 		if(area_itemsIncluded(area))
@@ -46,9 +43,9 @@ public cmd_wipe(const chr)
 				itm_remove(itm);
 				#if _CMD_DEBUG_
 					printf("^titem %d removed^n",itm);
-				#endif	
+				#endif
 			}
-			
+	
 		//wipe chars if required
 		if(area_charsIncluded(area))
 			for(set_rewind(area_chars(area)); !set_end(area_chars(area));i++)
@@ -57,13 +54,13 @@ public cmd_wipe(const chr)
 				if(chr_isNpc(chr2)) chr_remove(chr2);
 				#if _CMD_DEBUG_
 					printf("^tcharacter %d removed^n",chr2);
-				#endif	
+				#endif
 			}
-		
+
 		chr_message(chr,_,"%d objects removed",i);
 		area_refresh(area);
 		area_useCommand(area);
-		return;	
+		return;
 	}
 
 //do a single object wipe
@@ -86,7 +83,7 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 			if(chr_isNpc(object))
 				chr_remove(object);
 			else 
-			{	
+			{
 				new s = set_create();
 				new bp = chr_getBackpack(chr);
 				set_addItemsInCont(s,bp);
@@ -96,7 +93,7 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 			}
 		else { chr_message(chr,_,"You must target a removable object"); return; }
 	chr_message(chr,_,"Object removed");
-	
+
 	area_refresh(area);
 }
 
@@ -105,23 +102,23 @@ public cmd_wipe_rect(chr,x0,y0,x1,y1)
 	#if _CMD_DEBUG_
 		log_message("^t->deleting items in rectangle %d %d %d %d",x0,y0,x1,y1);
 	#endif
-	
+
 	new s = set_create();
 	new x,y;
 	for(x = x0; x <= x1; x++)
 		for(y = y0; y <= y1; y++)
 			set_addItemsNearXY(s,x,y,1);
-	
+
 	new itm;
 	for(set_rewind(s);!set_end(s);)
 	{
 		itm = set_getItem(s);
 		itm_remove(itm);
-		
+
 		#if _CMD_DEBUG_
 			log_message("^t->item %d removed",itm);
 		#endif
-	
+
 	}
 	chr_message(chr,_,"Items removed");
 }

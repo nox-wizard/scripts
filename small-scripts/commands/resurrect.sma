@@ -10,10 +10,10 @@
 \fn cmd_resurrect(const chr)
 \brief resurrects a character
 
-<B>syntax:<B> 'resurrect ["target"]
+<B>syntax:<B> 'resurrect 
 <B>command params:</B>
 <UL>
-<LI> "target": pass this paramter if you want to bypass the area effect
+
 </UL>
 
 If area effect is active, all characters in area will be resurrected.
@@ -23,19 +23,15 @@ the targetted char will be resurrected
 public cmd_resurrect(const chr)
 {
 	readCommandParams(chr);
-	
-	new target = false;
-		
+
 	//parameters handling, if no parameters are given, keep defaults, else
 	//read them
+
 	
-	if(!strcmp(__cmdParams[0],"target"))
-		target = true;
-			
 	new area = chr_getCmdArea(chr);
 	new chr2,i = 0;
 	//apply command to all characters in area if an area is defined
-	if(area_isValid(area) && !target)
+	if(area_isValid(area))
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
@@ -43,7 +39,7 @@ public cmd_resurrect(const chr)
 				chr2 = set_getChar(area_chars(area));
 				if(chr2 != chr) chr_resurrect(chr2);
 		}
-		
+
 		chr_message(chr,_,"%d characters resurrected",i);
 		return;
 	}
@@ -62,9 +58,9 @@ public cmd_resurrect(const chr)
 public cmd_resurrect_targ(target, chr, object, x, y, z, unused, unused2)
 {
 	if(isChar(object))
-	{	
+	{
 		chr_resurrect(object);
-		chr_message(chr,_,"charcater resurrectd");		
+		chr_message(chr,_,"charcater resurrectd");
 	}
 	else chr_message(chr,_,"You must target a character");
 }
