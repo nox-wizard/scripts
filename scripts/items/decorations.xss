@@ -1535,3 +1535,1591 @@ SECTION ITEM $item_brass_sign_3
     ///SUBSECTION Signs
 }
 
+/////// treasure pieces ///////////////
+
+SECTION ITEM $item_treasure
+{ treasure 1
+    ID 1B3F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_1
+{ treasure 2
+    ID 1B40
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_2
+{ treasure 3
+    ID 1B41
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_3
+{ treasure 4
+    ID 1B42
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_4
+{ treasure 6
+    ID 1B43
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_5
+{ treasure 7
+    ID 1B44
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_6
+{ treasure 8
+    ID 1B45
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_7
+{ treasure 9
+    ID 1B46
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_8
+{ treasure 10
+    ID 1B47
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_9
+{ treasure 11
+    ID 1B48
+    NODECAY
+}
+
+// Not used ... delete later
+SECTION ITEM $item__1
+{ treasure 12
+    ID 1B49
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_A
+{ treasure 13
+    ID 1B4A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_B
+{ treasure 14
+    ID 1B4B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_C
+{ treasure 15
+    ID 1B4C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_D
+{ treasure 16
+    ID 1B4D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_E
+{ treasure 17
+    ID 1B4E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_F
+{ treasure 18
+    ID 1B4F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_G
+{ treasure 19
+    ID 1B50
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_H
+{ treasure 20
+    ID 1B51
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item__2
+{ treasure 21
+    ID 1B52
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_I
+{ treasure 22
+    ID 1B53
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_J
+{ treasure 23
+    ID 1B54
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_K
+{ treasure 24
+    ID 1B55
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_L
+{ treasure 25
+    ID 1B56
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_M
+{ treasure 26
+    ID 1B57
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_N
+{ treasure 27
+    ID 1B58
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_O
+{ treasure 28
+    ID 1B59
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_P
+{ treasure 29
+    ID 1B5A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_Q
+{ treasure 30
+    ID 1B5B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_R
+{ treasure 31
+    ID 1B5C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_S
+{ treasure 32
+    ID 1B5D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+// not used, delete later
+SECTION ITEM $item__3
+{ treasure 33
+    ID 1B5E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_T
+{ treasure 34
+    ID 1B5F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_U
+{ treasure 35
+    ID 1B60
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_V
+{ treasure 36
+    ID 1B61
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_W
+{ treasure 37
+    ID 1B62
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_X
+{ treasure 38
+    ID 1B63
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_Y
+{ treasure 39
+    ID 1B64
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_Z
+{ treasure 40
+    ID 1B65
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_Z1
+{ treasure 41
+    ID 1B66
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_Z2
+{ treasure 42
+    ID 1B67
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_Z3
+{ treasure 43
+    ID 1B68
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_Z4
+{ treasure 44
+    ID 1B69
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_treasure_Z5
+{ treasure 45
+    ID 1B6A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+SECTION ITEM $item_wall_cracks
+{ treasure 46
+    ID 1B6B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Treasure
+}
+
+//////// lighthouse pieces ////////////
+
+SECTION ITEM $item_lighthouse
+{ lighthouse 1
+    ID 1AA4
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_1
+{ lighthouse 2
+    ID 1AA5
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_2
+{ lighthouse 3
+    ID 1AA6
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_3
+{ lighthouse 4
+    ID 1AA7
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_4
+{ lighthouse 5
+    ID 1AA8
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_5
+{ lighthouse 6
+    ID 1AA9
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_6
+{ lighthouse 7
+    ID 1AAA
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_7
+{ lighthouse 8
+    ID 1AAB
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_8
+{ lighthouse 9
+    ID 1AAC
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_9
+{ lighthouse 10
+    ID 1AAD
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_A
+{ lighthouse 11
+    ID 1AAE
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_B
+{ lighthouse 12
+    ID 1AAF
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_C
+{ lighthouse 13
+    ID 1AB0
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_D
+{ lighthouse 14
+    ID 1AB1
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_E
+{ lighthouse 15
+    ID 1AB2
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_F
+{ lighthouse 16
+    ID 1AB3
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_G
+{ lighthouse 17
+    ID 1AB4
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_H
+{ lighthouse 18
+    ID 1AB5
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_I
+{ lighthouse 19
+    ID 1AB6
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_J
+{ lighthouse 20
+    ID 1AB7
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_K
+{ lighthouse 21
+    ID 1AB8
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_L
+{ lighthouse 22
+    ID 1AB9
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_M
+{ lighthouse 23
+    ID 1ABA
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_N
+{ lighthouse 24
+    ID 1ABC
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_O
+{ lighthouse 25
+    ID 1ABD
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_P
+{ lighthouse 26
+    ID 1ABC
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Q
+{ lighthouse 27
+    ID 1ABD
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_R
+{ lighthouse 28
+    ID 1ABE
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_S
+{ lighthouse 29
+    ID 1ABF
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_T
+{ lighthouse 30
+    ID 1AC0
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_U
+{ lighthouse 31
+    ID 1AC1
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_V
+{ lighthouse 32
+    ID 1AC2
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_W
+{ lighthouse 33
+    ID 1AC3
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_X
+{ lighthouse 34
+    ID 1AC4
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Y
+{ lighthouse 35
+    ID 1AC5
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z
+{ lighthouse 36
+    ID 1AC6
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z1
+{ lighthouse 37
+    ID 1AC7
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z2
+{ lighthouse 38
+    ID 1AC8
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z3
+{ lighthouse 39
+    ID 1AC9
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z4
+{ lighthouse 40
+    ID 1ACA
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z5
+{ lighthouse 41
+    ID 1ACB
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z6
+{ lighthouse 42
+    ID 1ACC
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z7
+{ lighthouse 43
+    ID 1ACD
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z8
+{ lighthouse 44
+    ID 1ACE
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z9
+{ lighthouse 45
+    ID 1ACF
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_ZA
+{ lighthouse 46
+    ID 1AD1
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_ZB
+{ lighthouse 47
+    ID 1AD2
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_ZC
+{ lighthouse 48
+    ID 1AD0
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_ZD
+{ lighthouse 49
+    ID 1ABB
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+
+///////  telescope pieces ///////////
+
+
+SECTION ITEM $item_telescope
+{ telescope 1
+    ID 1459
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_1
+{ telescope 2
+    ID 145A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_2
+{ telescope 3
+    ID 145B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_3
+{ telescope 4
+    ID 145C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_4
+{ telescope 5
+    ID 145D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_5
+{ telescope 6
+    ID 145E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_6
+{ telescope 7
+    ID 145F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_7
+{ telescope 8
+    ID 1460
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_8
+{ telescope 9
+    ID 1461
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_9
+{ telescope 10
+    ID 1462
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_A
+{ telescope 11
+    ID 1463
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_B
+{ telescope 12
+    ID 1464
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_C
+{ telescope 13
+    ID 1465
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_D
+{ telescope 14
+    ID 1466
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_E
+{ telescope 15
+    ID 1467
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_F
+{ telescope 16
+    ID 1468
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_G
+{ telescope 17
+    ID 1469
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_H
+{ telescope 18
+    ID 146A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_I
+{ telescope 19
+    ID 146B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_J
+{ telescope 20
+    ID 146C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_K
+{ telescope 21
+    ID 146D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_L
+{ telescope 22
+    ID 146E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_M
+{ telescope 23
+    ID 146F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_N
+{ telescope 24
+    ID 1470
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_O
+{ telescope 25
+    ID 1471
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_P
+{ telescope 26
+    ID 1472
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Q
+{ telescope 27
+    ID 1473
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_R
+{ telescope 28
+    ID 1474
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_S
+{ telescope 29
+    ID 1475
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_T
+{ telescope 30
+    ID 1476
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_U
+{ telescope 31
+    ID 1477
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_V
+{ telescope 32
+    ID 1478
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_W
+{ telescope 33
+    ID 1479
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_X
+{ telescope 34
+    ID 147A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Y
+{ telescope 35
+    ID 147B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z
+{ telescope 36
+    ID 147C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z1
+{ telescope 37
+    ID 147D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z2
+{ telescope 38
+    ID 147E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z3
+{ telescope 39
+    ID 147F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z4
+{ telescope 40
+    ID 1480
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z5
+{ telescope 41
+    ID 1481
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z6
+{ telescope 42
+    ID 1482
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z7
+{ telescope 43
+    ID 1483
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z8
+{ telescope 44
+    ID 1484
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z9
+{ telescope 45
+    ID 1485
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZA
+{ telescope 46
+    ID 1486
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZB
+{ telescope 47
+    ID 1487
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZC
+{ telescope 48
+    ID 1488
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZD
+{ telescope 49
+    ID 1489
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZE
+{ telescope 50
+    ID 1490
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZF
+{ telescope 51
+    ID 1491
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZG
+{ telescope 52
+    ID 1492
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZH
+{ telescope 53
+    ID 1493
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZI
+{ telescope 54
+    ID 1494
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZJ
+{ telescope 55
+    ID 1495
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZK
+{ telescope 56
+    ID 1496
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZL
+{ telescope 57
+    ID 1497
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZM
+{ telescope 58
+    ID 1498
+    NODECAY
+}
+
+SECTION ITEM $item_telescope_ZN
+{ telescope 59
+    ID 1499
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZO
+{ telescope 60
+    ID 149A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZP
+{ telescope 61
+    ID 148A
+    NODECAY
+}
+
+SECTION ITEM $item_telescope_ZQ
+{ telescope 62
+    ID 148B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZR
+{ telescope 63
+    ID 148C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZS
+{ telescope 64
+    ID 148D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZT
+{ telescope 65
+    ID 148E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZU
+{ telescope 66
+    ID 148F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+/////// Arbitoir pieces /////////////
+
+SECTION ITEM $item_altar
+{ Arbitoir 1
+    ID 1213
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_1
+{ Arbitoir 2
+    ID 1214
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_2
+{ Arbitoir 3
+    ID 1215
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_3
+{ Arbitoir 4
+    ID 120E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_4
+{ Arbitoir 5
+    ID 120F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_5
+{ Arbitoir 6
+    ID 1210
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_6
+{ Arbitoir 7
+    ID 1211
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_7
+{ Arbitoir 8
+    ID 1212
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_pentagram
+{ PENTAGRAM1
+    ID 0fe6
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_1
+{ PENTAGRAM2
+    ID 0fe7
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_2
+{PENTAGRAM3
+    ID 0fe8
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_3
+{ PENTAGRAM4
+    ID 0fe9
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_4
+{
+    ID 0fea
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_5
+{
+    ID 0feb
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_6
+{
+    ID 0fec
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_7
+{
+    ID 0fed
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_8
+{
+    ID 0fee
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+

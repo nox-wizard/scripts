@@ -103,3 +103,114 @@ SECTION ITEM $item_krisna_hair
 	///CATEGORY Miscellaneous
 	///SUBSECTION Hair & Beard
 }
+
+SECTION ITEM $item_pure_red_hairdye
+{
+    NAME pure red hairdye
+    ID 0E27
+    COLOR 0026
+    VALUE 20000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_pure_black_hairdye
+{
+    NAME pure black hairdye
+    ID 0E27
+    COLOR 0001
+    VALUE 50000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_bronze_hairdye
+{
+    NAME bronze hairdye
+    ID 0E27
+    COLOR 045D
+    VALUE 2000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_gold_hairdye
+{
+    NAME gold hairdye
+    ID 0E27
+    COLOR 0465
+    VALUE 20000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_dark_gold_hairdye
+{
+    NAME dark gold hairdye
+    ID 0E27
+    COLOR 046D
+    VALUE 2000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_copper_hairdye
+{
+    NAME copper hairdye
+    ID 0E27
+    COLOR 0475
+    VALUE 2000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_dark_copper_hairdye
+{
+    NAME dark copper hairdye
+    ID 0E27
+    COLOR 047D
+    VALUE 2000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_dark_blue_hairdye
+{
+    NAME dark blue hairdye
+    ID 0E27
+    COLOR 051D
+    VALUE 2000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_pure_white_hairdye
+{
+    NAME pure white hairdye
+    ID 0E27
+    COLOR 0481
+    VALUE 50000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+
+SECTION ITEM $item_red_hairdye
+{
+    NAME red hairdye
+    ID 0E27
+    COLOR 0664
+    VALUE 20000
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Hair & Beard
+}
+

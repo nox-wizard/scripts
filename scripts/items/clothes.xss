@@ -506,3 +506,162 @@ SECTION ITEM $item_a_body_sash
     ///SUBSECTION Accessories
 }
 
+SECTION ITEM $item_robe
+{
+    ID 1F03
+    LAYER $layer_outer_torso
+    COLOR 0021
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+    ///DESCRIPTION Red Robe
+}
+
+SECTION ITEM $item_robe_1
+{
+    ID 1F03
+    LAYER $layer_outer_torso
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+    ///DESCRIPTION Grey Robe
+}
+
+SECTION ITEM $item_robe_2
+{
+    ID 1F03
+    LAYER $layer_outer_torso
+    COLOR 01D3
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+    ///DESCRIPTION Green Robe
+}
+
+//red sandles
+SECTION ITEM $item_red_sandals
+{
+    NAME Red sandals
+    ID 170D
+    COLOR 04b9
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// blue sandles
+SECTION ITEM $item_blue_sandals
+{
+    NAME Blue sandals
+    ID 170D
+    COLOR 04e6
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// green sandles
+SECTION ITEM $item_green_sandals
+{
+    NAME Green sandals
+    ID 170D
+    COLOR 058a
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// silver sandles
+SECTION ITEM $item_silver_sandals
+{
+    NAME Silver sandals
+    ID 170D
+    COLOR 0962
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// gold sandles
+SECTION ITEM $item_gold_sandals
+{
+    NAME Gold sandals
+    ID 170D
+    COLOR 0466
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// black sandles
+SECTION ITEM $item_black_sandals
+{
+    NAME Black sandals
+    ID 170D
+    COLOR 0001
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// pink sandles
+SECTION ITEM $item_pink_sandals
+{
+    NAME Pink sandals
+    ID 170D
+    COLOR 0641
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+SECTION ITEM $item_thigh_boots_1
+{
+    ID 1711
+    NAME old boots
+    LAYER $layer_shoes
+    DECAY
+    VALUE 25
+    COLOR 2f0
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+

@@ -19,6 +19,10 @@
 #include scripts/items/buildings.xss
 #include scripts/items/fooddrinks.xss
 #include scripts/items/professions.xss
+#include scripts/items/boats.xss
+#include scripts/items/custom.xss
+#include scripts/items/treasures.xss
+#include scripts/items/deeds.xss
 #include scripts/items/items.xss
 #include scripts/items/potions.xss
 #include scripts/items/weapons.xss

@@ -706,4 +706,52 @@ SECTION ITEM $item_fish_3
     ///SUBSECTION Fisher
 }
 
+SECTION ITEM $item_arrow
+{
+    ID 0F3F
+    VALUE 4
+    DECAY
+    WEIGHT 2
+
+    ///CATEGORY Professions
+    ///SUBSECTION Bowyer / Fletcher
+    ///DESCRIPTION Arrow
+}
+
+SECTION ITEM $item_crossbow_bolt
+{
+    ID 1BFB
+    VALUE 4
+    DECAY
+    WEIGHT 2
+
+    ///CATEGORY Professions
+    ///SUBSECTION Bowyer / Fletcher
+    ///DESCRIPTION Bolt
+}
+
+SECTION ITEM $item_clock
+{
+	NAME a clock
+	ID 104F
+	VALUE 100
+	WEIGHT 100
+	DECAY
+	
+	///CATEGORY Professions
+	///SUBSECTION Tinker
+}
+
+SECTION ITEM $item_leather_piece
+{
+	NAME leather piece
+	ID 1067
+	VALUE 100
+	WEIGHT 100
+	PILE 1
+	DECAY
+
+	///CATEGORY Professions
+	///SUBSECTION Tanner
+}
 

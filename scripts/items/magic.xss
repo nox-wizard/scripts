@@ -1,7 +1,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (magic.xss)                                      ||
 // || Maintained by Akron                                                 ||
-// || Last Update 09-aug-2003                                             ||
+// || Last Update 10-aug-2003                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || This script requires NoX-Wizard 0.70s or later                      ||
 // || Compatible with Unicorn Categorization                              ||
@@ -1384,7 +1384,22 @@ SECTION ITEM $item_blank_scrolls
     DECAY
 
     ///CATEGORY Alchemy & Magic
-    ///SUBSECTION Necromancy
+    ///SUBSECTION Misc
     ///DESCRIPTION Blank Scroll
+}
+
+SECTION ITEM $item_a_recall_rune_1
+{
+    NAME a recall rune
+    ID 1F14
+    TYPE $itype_rune
+    MOREX 0
+    MOREY 0
+    MOREZ 0
+    VALUE 14
+    AMOUNT 50
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Misc
 }
 

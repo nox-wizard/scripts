@@ -842,7 +842,6 @@ SECTION ITEM $item_leather_cap
     ///SUBSECTION Leather
 }
 
-// boots
 SECTION ITEM $item_boots
 {
     NAME boots

@@ -13,6 +13,10 @@ SECTION ITEM $item_bottle_of_ale
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottle of Ale
 }
 
 SECTION ITEM $item_bottles_of_ale
@@ -21,6 +25,10 @@ SECTION ITEM $item_bottles_of_ale
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Ale
 }
 
 SECTION ITEM $item_bottles_of_ale_1
@@ -29,6 +37,10 @@ SECTION ITEM $item_bottles_of_ale_1
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Ale
 }
 
 SECTION ITEM $item_bottles_of_ale_2
@@ -37,6 +49,10 @@ SECTION ITEM $item_bottles_of_ale_2
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Ale
 }
 
 SECTION ITEM $item_bottle_of_liquor
@@ -45,6 +61,10 @@ SECTION ITEM $item_bottle_of_liquor
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottle of Liquor
 }
 
 SECTION ITEM $item_bottles_of_liquor
@@ -53,20 +73,34 @@ SECTION ITEM $item_bottles_of_liquor
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Liquor
 }
+
 SECTION ITEM $item_bottles_of_liquor_1
 {
     ID 099D
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Liquor
 }
+
 SECTION ITEM $item_bottles_of_liquor_2
 {
     ID 099E
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Liquor
 }
 
 SECTION ITEM $item_bottle_of_wine
@@ -75,6 +109,10 @@ SECTION ITEM $item_bottle_of_wine
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottle of Wine
 }
 
 SECTION ITEM $item_bottles_of_wine
@@ -83,6 +121,10 @@ SECTION ITEM $item_bottles_of_wine
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Wine
 }
 
 SECTION ITEM $item_bottles_of_wine_1
@@ -91,6 +133,10 @@ SECTION ITEM $item_bottles_of_wine_1
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Wine
 }
 
 SECTION ITEM $item_bottles_of_wine_2
@@ -99,6 +145,10 @@ SECTION ITEM $item_bottles_of_wine_2
     TYPE $itype_drink
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bottles of Wine
 }
 
 SECTION ITEM $item_bucket_of_water
@@ -107,6 +157,10 @@ SECTION ITEM $item_bucket_of_water
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bucket of Water
 }
 
 SECTION ITEM $item_mug_of_ale
@@ -115,6 +169,10 @@ SECTION ITEM $item_mug_of_ale
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Mug of Ale
 }
 
 SECTION ITEM $item_glass_of_cider
@@ -123,6 +181,10 @@ SECTION ITEM $item_glass_of_cider
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Glass of Cider
 }
 
 SECTION ITEM $item_glass_of_liquor
@@ -131,6 +193,10 @@ SECTION ITEM $item_glass_of_liquor
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Glass of Liquor
 }
 
 SECTION ITEM $item_glass_of_milk
@@ -139,6 +205,10 @@ SECTION ITEM $item_glass_of_milk
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Glass of Milk
 }
 
 SECTION ITEM $item_glass_of_water
@@ -147,6 +217,10 @@ SECTION ITEM $item_glass_of_water
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Glass of Water
 }
 
 SECTION ITEM $item_glass_of_wine
@@ -155,6 +229,10 @@ SECTION ITEM $item_glass_of_wine
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Glass of Wine
 }
 
 SECTION ITEM $item_jugs_of_cider
@@ -163,6 +241,10 @@ SECTION ITEM $item_jugs_of_cider
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Jugs of Cider
 }
 
 SECTION ITEM $item_jugs_of_cider_1
@@ -171,6 +253,10 @@ SECTION ITEM $item_jugs_of_cider_1
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Jugs of Cider
 }
 
 SECTION ITEM $item_pitcher_of_ale
@@ -179,6 +265,10 @@ SECTION ITEM $item_pitcher_of_ale
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pitcher of Ale
 }
 
 SECTION ITEM $item_pitcher_of_cider
@@ -187,6 +277,10 @@ SECTION ITEM $item_pitcher_of_cider
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pitcher of Cider
 }
 
 SECTION ITEM $item_pitcher_of_liquor
@@ -195,6 +289,10 @@ SECTION ITEM $item_pitcher_of_liquor
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pitcher of Liquor
 }
 
 SECTION ITEM $item_pitcher_of_milk
@@ -203,6 +301,10 @@ SECTION ITEM $item_pitcher_of_milk
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pitcher of Milk
 }
 
 SECTION ITEM $item_pitcher_of_water
@@ -211,6 +313,10 @@ SECTION ITEM $item_pitcher_of_water
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pitcher of Water
 }
 
 SECTION ITEM $item_pitcher_of_wine
@@ -219,6 +325,10 @@ SECTION ITEM $item_pitcher_of_wine
     TYPE $itype_drink
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pitcher of Wine
 }
 
 SECTION ITEM $item_baked_pie
@@ -227,6 +337,10 @@ SECTION ITEM $item_baked_pie
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Baked Pie
 }
 
 SECTION ITEM $item_unbaked_pie
@@ -235,6 +349,10 @@ SECTION ITEM $item_unbaked_pie
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Unbaken Pie
 }
 
 SECTION ITEM $item_cake
@@ -243,6 +361,10 @@ SECTION ITEM $item_cake
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Cake
 }
 
 SECTION ITEM $item_wedges_of_cheese
@@ -251,6 +373,10 @@ SECTION ITEM $item_wedges_of_cheese
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Cheese
 }
 
 SECTION ITEM $item_wedges_of_cheese_1
@@ -259,6 +385,10 @@ SECTION ITEM $item_wedges_of_cheese_1
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Wedges of Cheese
 }
 
 SECTION ITEM $item_wheels_of_cheese
@@ -268,6 +398,10 @@ SECTION ITEM $item_wheels_of_cheese
     TRIGGER $itrg_cut_cheese
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Wheels of Cheese
 }
 
 SECTION ITEM $item_french_bread
@@ -277,6 +411,10 @@ SECTION ITEM $item_french_bread
     DECAY
     PILE 1
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=French Bread
 }
 
 SECTION ITEM $item_muffins
@@ -286,6 +424,10 @@ SECTION ITEM $item_muffins
     DECAY
     PILE 1
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Muffins
 }
 
 SECTION ITEM $item_muffins_1
@@ -294,6 +436,10 @@ SECTION ITEM $item_muffins_1
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Muffins
 }
 
 SECTION ITEM $item_muffins_2
@@ -302,6 +448,10 @@ SECTION ITEM $item_muffins_2
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Muffins
 }
 
 SECTION ITEM $item_bread_loaves
@@ -311,6 +461,10 @@ SECTION ITEM $item_bread_loaves
     DECAY
     PILE 1
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bread Loaves
 }
 
 SECTION ITEM $item_pizzas
@@ -320,6 +474,10 @@ SECTION ITEM $item_pizzas
     DECAY
     PILE 1
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pizzas
 }
 
 SECTION ITEM $item_uncooked_pizzas
@@ -329,6 +487,10 @@ SECTION ITEM $item_uncooked_pizzas
     DECAY
     PILE 1
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Uncooked Pizzas
 }
 
 SECTION ITEM $item_pan_of_cookies
@@ -337,6 +499,10 @@ SECTION ITEM $item_pan_of_cookies
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pan of Cookies
 }
 
 SECTION ITEM $item_plate_of_cookies
@@ -345,6 +511,10 @@ SECTION ITEM $item_plate_of_cookies
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Plate of Cookies
 }
 
 SECTION ITEM $item_eggshells
@@ -353,6 +523,10 @@ SECTION ITEM $item_eggshells
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Eggshells
 }
 
 SECTION ITEM $item_eggs
@@ -362,6 +536,10 @@ SECTION ITEM $item_eggs
     TRIGGER $itrg_fry_eggs
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Eggs
 }
 
 SECTION ITEM $item_fried_eggs
@@ -370,6 +548,10 @@ SECTION ITEM $item_fried_eggs
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Eggs
 }
 
 SECTION ITEM $item_cooked_birds
@@ -378,12 +560,20 @@ SECTION ITEM $item_cooked_birds
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bird (Cooked)
 }
 
 SECTION ITEM $item_raw_bird 
 { 
     ID 09B9 
     DECAY 
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bird (Raw)
 }
 
 SECTION ITEM $item_roast_pigs
@@ -392,6 +582,10 @@ SECTION ITEM $item_roast_pigs
     TYPE $itype_food
     DECAY
     VALUE 50
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Roast Pigs
 }
 
 SECTION ITEM $item_sausages
@@ -400,6 +594,10 @@ SECTION ITEM $item_sausages
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Sausages
 }
 
 SECTION ITEM $item_hams
@@ -408,6 +606,10 @@ SECTION ITEM $item_hams
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Hams
 }
 
 SECTION ITEM $item_cuts_of_ribs
@@ -416,6 +618,10 @@ SECTION ITEM $item_cuts_of_ribs
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Cuts of Ribs
 }
 
 SECTION ITEM $item_fish_steaks
@@ -424,6 +630,10 @@ SECTION ITEM $item_fish_steaks
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Fish Steaks
 }
 
 SECTION ITEM $item_slabs_of_bacon
@@ -432,6 +642,10 @@ SECTION ITEM $item_slabs_of_bacon
     TYPE $itype_food
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Slabs of Bacon
 }
 
 SECTION ITEM $item_slices_of_bacon
@@ -440,6 +654,10 @@ SECTION ITEM $item_slices_of_bacon
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Slices of Bacon
 }
 
 SECTION ITEM $item_pears
@@ -448,6 +666,10 @@ SECTION ITEM $item_pears
     TYPE $itype_food
     DECAY
     VALUE 3
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pears
 }
 
 SECTION ITEM $item_apples
@@ -456,6 +678,10 @@ SECTION ITEM $item_apples
     TYPE $itype_food
     DECAY
     VALUE 3
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Apples
 }
 
 SECTION ITEM $item_grape_bunches
@@ -464,6 +690,10 @@ SECTION ITEM $item_grape_bunches
     TYPE $itype_food
     DECAY
     VALUE 3
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bunches
 }
 
 SECTION ITEM $item_peaches
@@ -472,6 +702,10 @@ SECTION ITEM $item_peaches
     TYPE $itype_food
     DECAY
     VALUE 3
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Peaches
 }
 
 SECTION ITEM $item_fruit_basket
@@ -480,6 +714,10 @@ SECTION ITEM $item_fruit_basket
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Fruit Basket
 }
 
 SECTION ITEM $item_heads_of_lettuce
@@ -488,6 +726,10 @@ SECTION ITEM $item_heads_of_lettuce
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Heads of Lettuce
 }
 
 SECTION ITEM $item_squash
@@ -496,38 +738,58 @@ SECTION ITEM $item_squash
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Squash
 }
 
 SECTION ITEM $item_carrots
-{carrots
+{
     ID 0C76
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Carrots
 }
 
 SECTION ITEM $item_heads_of_cabbage
-{cabbage
+{
     ID 0C7B
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Heads of Cabbage
 }
 
 SECTION ITEM $item_ears_of_corn
-{ear of corn
+{
     ID 0C7F
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Ear of Corn
 }
 
 SECTION ITEM $item_donuts
-{donuts
+{
     ID 1AD3
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Donuts
 }
 
 SECTION ITEM $item_jars_of_honey
@@ -536,126 +798,190 @@ SECTION ITEM $item_jars_of_honey
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Jars of Honey
 }
 
 SECTION ITEM $item_turnip
-{turnip
+{
     ID 0C61
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Turnip
 }
 
 SECTION ITEM $item_sprouts
-{sprouts
+{
     ID 0C68
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Sprouts
 }
 
 SECTION ITEM $item_pumpkins
-{pumpkin
+{
     ID 0C6A
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pumpkin
 }
 
 SECTION ITEM $item_onions
-{onion
+{
     ID 0C6D
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Onions
 }
 
 SECTION ITEM $item_coconuts
-{coconut
+{
     ID 1726
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Coconut
 }
 
 SECTION ITEM $item_bananas
-{banana
+{
     ID 1720
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Banana
 }
 
 SECTION ITEM $item_bananas_1
-{bananas
+{
     ID 1721
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bananas
 }
 
 SECTION ITEM $item_bunches_of_dates
-{dates
+{
     ID 1727
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bunches of Dates
 }
 
 SECTION ITEM $item_lemons
-{lemon
+{
     ID 1728
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Lemons
 }
 
 SECTION ITEM $item_lemons_1
-{lemons
+{
     ID 1729
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Lemons
 }
 
 SECTION ITEM $item_limes
-{lime
+{
     ID 172A
     TYPE $itype_food
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Lime
 }
 
 SECTION ITEM $item_limes_1
-{limes
+{
     ID 172B
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Limes
 }
 
 SECTION ITEM $item_honeydew_melons
-{honeydew melon
+{
     ID 0C74
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Honeydew Melon
 }
 
 SECTION ITEM $item_canteloupes
-{canteloupe
+{
     ID 0C79
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Canteloupe
 }
 
 SECTION ITEM $item_watermelons
-{water melon
+{
     ID 0C5D
     TYPE $itype_food
     DECAY
     VALUE 15
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Watermelon
 }
 
 SECTION ITEM $item_cookie_mix
@@ -664,13 +990,21 @@ SECTION ITEM $item_cookie_mix
     TYPE $itype_food
     DECAY
     VALUE 20
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Cookie Mix
 }
 
 SECTION ITEM $item_dough_bowl
-{dough
+{
     ID 10E3
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Dough Bowl
 }
 
 SECTION ITEM $item_bowl_of_carrots
@@ -679,46 +1013,70 @@ SECTION ITEM $item_bowl_of_carrots
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bowl of Carrots
 }
 
 SECTION ITEM $item_bowl_of_corn
-{corn
+{
     ID 15FF
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bowl of Corn
 }
 
 SECTION ITEM $item_bowl_of_lettuce
-{lettuce
+{
     ID 1600
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bowl of lettuce
 }
 
 SECTION ITEM $item_bowl_of_peas
-{peas
+{
     ID 1601
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bowl of Peas
 }
 
 SECTION ITEM $item_bowl_of_potatoes
-{potatoes
+{
     ID 1602
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bowl of Potatoes
 }
 
 SECTION ITEM $item_bowl_of_stew
-{stew
+{
     ID 1604
     TYPE $itype_food
     DECAY
     VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Bowl of Stew
 }
 
 SECTION ITEM $item_tomato_soup
@@ -730,10 +1088,25 @@ SECTION ITEM $item_tomato_soup
 }
 
 SECTION ITEM $item_pewter_bowl
-{pewter
+{
     ID 15FD
     DECAY
     VALUE 5
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+    ///DESCRIPTION=Pewter Boul
 }
 
+SECTION ITEM $item_spam
+{
+    NAME spam
+    ID 1044
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+
+    ///CATEGORY=Miscellaneous
+    ///SUBSECTION=Food & Drinks
+}
 
