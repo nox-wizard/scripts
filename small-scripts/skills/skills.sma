@@ -34,11 +34,11 @@
  *********************************************************************************************/
 public __nxw_sk_main(const s, const skill_num)
 {
-	if (s < 0 || skill_num < 0) return;
+	if ( !isValidSocket( s ) || skill_num < 0 ) return;
 
 	new cc = getCharFromSocket(s)
 	
-	if (chr_getProperty(cc, CP_SKILLDELAY) > getCurrentTime()) {
+	if ( !chr_isGM( cc ) && chr_getProperty(cc, CP_SKILLDELAY) > getCurrentTime() ) {
 		ntprintf(s, "You must wait a few moments before using another skill.");
 		return;
 	}
