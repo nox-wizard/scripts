@@ -188,5 +188,12 @@ enum
 	ACTION_DRINK = 33,
 }
 
+enum 
+{ 
+	RESOURCEMAP_LOCATION = 0, 
+	RESOURCEMAP_STRING=1 
+};
+
+
 /* @} */
 /* @} */

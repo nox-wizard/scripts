@@ -1,0 +1,93 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts		||
+// || Maintained by	: Luxor, Sparhawk, Endymion		||
+// || Last Update	: 19-may-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_resourcemap_api_
+  #endinput
+#endif
+#define _nxw_resourcemap_api_
+
+/*!
+\defgroup script_API_resourcemap Resourcemap
+\ingroup script_API
+@{
+*/
+
+/*!
+\brief Open a resource map in memory
+\author Wintermute
+\since 0.82
+\param 1 the type of the resource map
+\param 2 bool flag if the map should be kept in memory
+\param 3 optional filename if the map should be made persistent on disk on worldsave
+\return the index of the resource map
+\fn createResourceMap( )
+*/
+native createResourceMap( const type=RESOURCEMAP_LOCATION, const inMemory=1, ... );
+
+/*!
+\brief Remove a resource map from memory 
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\fn deleteResourceMap( const set )
+\return 0
+*/
+native deleteResourceMap( const map );
+
+/*!
+\brief set a value in a resource map 
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\param 2 the first position parameter
+\param 3 the second position parameter
+\param 4 the third position parameter
+\param 5 the actual position parameter
+\fn setResourceLocationValue( const set )
+\return 0
+*/
+native setResourceLocationValue( const map, const value, const x, const y, const z );
+
+/*!
+\brief get a value in a resource map 
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\param 2 the first position parameter
+\param 3 the second position parameter
+\param 4 the third position parameter
+\return the value of the resource map entry
+\fn getResourceStringValue( const set )
+\return 0
+*/
+native getResourceLocationValue( const map, const x, const y, const z );
+
+/*!
+\brief get a value in a resource map 
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\param 2 the string used as key
+\return the value of the resource map entry
+\fn getResourceStringValue( const set )
+\return 0
+*/
+native getResourceStringValue( const map, const key[], ... );
+
+/*!
+\brief set a value in a resource map 
+\author Wintermute
+\since 0.82
+\param 1 the index of the resource map
+\param 2 the new value of the entry
+\param 3 the string used as key
+\fn setResourceStringValue( const set )
+\return 0
+*/
+native setResourceStringValue( const map, const value, const key[], ... );
+
+/*! }@ */

@@ -42,3 +42,4 @@
 #include "small-scripts/API/time.api"
 #include "small-scripts/API/party/party.api"
 #include "small-scripts/API/region/regionproperty.api"
+#include "small-scripts/API/resourcemap.api"
