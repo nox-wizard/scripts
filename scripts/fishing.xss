@@ -130,11 +130,11 @@ SECTION FISHLIST 10
 // gold for fishing...(skill>90)
 SECTION FISHLIST 11
 {
-	$item_gold_coin_K
-	$item_gold_coin_L
-	$item_gold_coin_M
-	$item_gold_coin_N
-	$item_gold_coin_O
+	$item_gold_coin 1000
+	$item_gold_coin 2000
+	$item_gold_coin 3000
+	$item_gold_coin 4000
+	$item_gold_coin 5000
 }
 
 // bones for fishing...(skill>40)

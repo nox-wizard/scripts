@@ -1242,39 +1242,39 @@ SECTION MAKEMENU 51
     0EED 10 Gold Coins
     RESOURCE 10
     SKILL 920
-    ADDITEM $item_gold_coin_B
+    ADDITEM $item_gold_coin 10
     0EED 20 Gold Coins
     RESOURCE 20
     SKILL 920
-    ADDITEM $item_gold_coin_C
+    ADDITEM $item_gold_coin 20
     0EED 40 Gold Coins
     RESOURCE 40
     SKILL 930
-    ADDITEM $item_gold_coin_D
+    ADDITEM $item_gold_coin 40
     0EED 80 Gold Coins
     RESOURCE 80
     SKILL 930
-    ADDITEM $item_gold_coin_E
+    ADDITEM $item_gold_coin 80
     0EED 160 Gold Coins
     RESOURCE 160
     SKILL 950
-    ADDITEM $item_gold_coin_F
+    ADDITEM $item_gold_coin 160
     0EED 320 Gold Coins
     RESOURCE 320
     SKILL 950
-    ADDITEM $item_gold_coin_G
+    ADDITEM $item_gold_coin 320
     0EED 640 Gold Coins
     RESOURCE 640
     SKILL 960
-    ADDITEM $item_gold_coin_H
+    ADDITEM $item_gold_coin 640
     0EED 1280 Gold Coins
     RESOURCE 1280
     SKILL 960
-    ADDITEM $item_gold_coin_I
+    ADDITEM $item_gold_coin 1280
     0EED 2560 Gold Coins
     RESOURCE 2560
     SKILL 970
-    ADDITEM $item_gold_coin_J
+    ADDITEM $item_gold_coin 2560
 }
 
 SECTION MAKEMENU 52
