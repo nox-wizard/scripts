@@ -175,7 +175,6 @@ public handle_stats_char( const socket, const menu, const button )
 	new chr = gui_getProperty( menu, MP_BUFFER, 1 );
 		
 	if( button>10 ) { //page button
-		chr_sound(chr, 0x249);
 		stats_char( socket, chr, button-10 );
 	}
 	else { //apply button, so resend current page
@@ -193,7 +192,6 @@ public handle_stats_item( const socket, const menu, const button )
 	new chr = gui_getProperty( menu, MP_BUFFER, 1 );
 		
 	if( button>10 ) { //page button
-		chr_sound(chr, 0x249);
 		stats_item( socket, chr, button-10 );
 	}
 	else { //apply button, so resend current page
