@@ -16,116 +16,116 @@
 // GM Special Locations
 // ********************
 
+SECTION LOCATION 0
+{
+	NAME Jail Cell 1
+	X 5276
+	Y 1164
+	Z 0
+}
+
 SECTION LOCATION 1
 {
-// Jail Cell 1
-X 5276
-Y 1164
-Z 0
+	NAME Jail Cell 2
+	X 5286
+	Y 1164
+	Z 0
 }
 
 SECTION LOCATION 2
 {
-// Jail Cell 2
-X 5286
-Y 1164
-Z 0
+	NAME Jail Cell 3
+	X 5296
+	Y 1164
+	Z 0
 }
 
 SECTION LOCATION 3
 {
-// Jail Cell 3
-X 5296
-Y 1164
-Z 0
+	NAME Jail Cell 4
+	X 5306
+	Y 1164
+	Z 0
 }
 
 SECTION LOCATION 4
 {
-// Jail Cell 4
-X 5306
-Y 1164
-Z 0
+	NAME Jail Cell 5
+	X 5276
+	Y 1174
+	Z 0
 }
 
 SECTION LOCATION 5
 {
-// Jail Cell 5
-X 5276
-Y 1174
-Z 0
+	NAME Jail Cell 6
+	X 5286
+	Y 1174
+	Z 0
 }
 
 SECTION LOCATION 6
 {
-// Jail Cell 6
-X 5286
-Y 1174
-Z 0
+	NAME Jail Cell 7
+	X 5296
+	Y 1174
+	Z 0
 }
 
 SECTION LOCATION 7
 {
-// Jail Cell 7
-X 5296
-Y 1174
-Z 0
+	NAME Jail Cell 8
+	X 5306
+	Y 1174
+	Z 0
 }
 
 SECTION LOCATION 8
 {
-// Jail Cell 8
-X 5306
-Y 1174
-Z 0
+	NAME Jail Cell 9
+	X 5283
+	Y 1184
+	Z 0
 }
 
 SECTION LOCATION 9
 {
-// Jail Cell 9
-X 5283
-Y 1184
-Z 0
+	NAME Jail Cell 10
+	X 5304
+	Y 1184
+	Z 0
 }
 
 SECTION LOCATION 10
 {
-// Jail Cell 10
-X 5304
-Y 1184
-Z 0
+	NAME Help Desk of Hell
+	X 5691
+	Y 1501
+	Z 0
 }
 
 SECTION LOCATION 11
 {
-// Help Desk of Hell
-X 5691
-Y 1501
-Z 0
+	NAME Help Room Backdoor
+	X 5681
+	Y 1497
+	Z 0
 }
 
 SECTION LOCATION 12
 {
-// Help Room Backdoor
-X 5681
-Y 1497
-Z 0
+	NAME Green Acres
+	X 5445
+	Y 1153
+	Z 0
 }
 
 SECTION LOCATION 13
 {
-// Green Acres
-X 5445
-Y 1153
-Z 0
-}
-
-SECTION LOCATION 14
-{
-// Error Spawn Location
-X 0
-Y 0
-Z 0
+	NAME Error Spawn Location
+	X 0
+	Y 0
+	Z 0
 }
 
 // **************
@@ -133,1070 +133,1045 @@ Z 0
 // **************
 
 
+SECTION LOCATION 14
+{
+	NAME Britain - Lord British's Throne
+	X 1323
+	Y 1624
+	Z 55
+}
+
 SECTION LOCATION 15
 {
-// Lord British's Throne
-X 1323
-Y 1624
-Z 55
+	NAME Britain - Blackthorne's Castle
+	X 1533
+	Y 1415
+	Z 56
 }
 
 SECTION LOCATION 16
 {
-// Blackthorne's Castle
-X 1533
-Y 1415
-Z 56
+	NAME Britain - Center
+	X 1475
+	Y 1645
+	Z 20
 }
 
-// RESERVED FOR CGMT
-// SECTION LOCATION 17
-// {
-// }
+SECTION LOCATION 17
+{
+	NAME Britain - Lord British Castle Entrance
+	X 1401
+	Y 1625
+	Z 28
+}
 
-// RESERVED FOR CGMT
-// SECTION LOCATION 18
-// {
-// }
+SECTION LOCATION 18
+{
+	NAME Britain - Blackthorn Castle Entrance
+	X 1523
+	Y 1456
+	Z 15
+}
+
+SECTION LOCATION 19
+{
+	NAME Britain - Suburbs
+	X 1662
+	Y 1572
+	Z 5
+}
 
 SECTION LOCATION 20
 {
-// Center
-X 1475
-Y 1645
-Z 20
+	NAME Britain - Park
+	X 1614
+	Y 1641
+	Z 35
 }
 
 SECTION LOCATION 21
 {
-// Lord British Castle Entrance
-X 1401
-Y 1625
-Z 28
+	NAME Britain - Farmlands
+	X 1228
+	Y 1705
+	Z 0
 }
 
 SECTION LOCATION 22
 {
-// Blackthorn Castle Entrance
-X 1523
-Y 1456
-Z 15
+	NAME Graveyard
+	X 1384
+	Y 1497
+	Z 10
 }
 
 SECTION LOCATION 23
 {
-// Suburbs
-X 1662
-Y 1572
-Z 5
+	NAME Bucca - Docks
+	X 2736
+	Y 2166
+	Z 0
 }
 
 SECTION LOCATION 24
 {
-// Park
-X 1614
-Y 1641
-Z 35
+	NAME Bucca - Bathhouse
+	X 2667
+	Y 2084
+	Z 5
 }
 
 SECTION LOCATION 25
 {
-// Farmlands
-X 1228
-Y 1705
-Z 0
+	NAME Bucca - Pirate's Plunder Tavern
+	X 2691
+	Y 2233
+	Z 2
 }
 
 SECTION LOCATION 26
 {
-// Graveyard
-X 1384
-Y 1497
-Z 10
+	NAME Hidden Caves
+	X 2667
+	Y 2069
+	Z 236
+}
+
+SECTION LOCATION 27
+{
+	NAME Cove - Gates
+	X 2285
+	Y 1209
+	Z 0
+}
+
+SECTION LOCATION 28
+{
+	NAME Guard Post
+	X 2218
+	Y 1116
+	Z 19
+}
+
+SECTION LOCATION 29
+{
+	NAME Orc Fort
+	X 2171
+	Y 1332
+	Z 0
 }
 
 SECTION LOCATION 30
 {
-// Docks
-X 2736
-Y 2166
-Z 0
+	NAME Cemetary
+	X 2443
+	Y 1123
+	Z 5
 }
 
 SECTION LOCATION 31
 {
-// Bathhouse
-X 2667
-Y 2084
-Z 5
+	NAME Jhelom - Main Island
+	X 1414
+	Y 3816
+	Z 0
 }
 
 SECTION LOCATION 32
 {
-// Pirates Plunder Tavern
-X 2691
-Y 2233
-Z 2
+	NAME Jhelom - Fighting Pit
+	X 1398
+	Y 3742
+	Z 235
 }
 
 SECTION LOCATION 33
 {
-// Hidden Caves
-X 2667
-Y 2069
-Z 236
+	NAME Jhelom - East Docks
+	X 1492
+	Y 3696
+	Z 0
+}
+
+SECTION LOCATION 34
+{
+	NAME Jhelom - Cemetary
+	X 1296
+	Y 3719
+	Z 0
+}
+
+SECTION LOCATION 35
+{
+	NAME Jhelom - Medium Island
+	X 1124
+	Y 3623
+	Z 5
+}
+
+SECTION LOCATION 36
+{
+	NAME Jhelom - Small Island
+	X 1466
+	Y 4015
+	Z 5
+}
+
+SECTION LOCATION 37
+{
+	NAME Magincia - Docks
+	X 3675
+	Y 2259
+	Z 20
+}
+
+SECTION LOCATION 38
+{
+	NAME Magincia - Parliament
+	X 3792
+	Y 2248
+	Z 20
+}
+
+SECTION LOCATION 39
+{
+	NAME Magincia - Park
+	X 3719
+	Y 2063
+	Z 25
 }
 
 SECTION LOCATION 40
 {
-// Gates
-X 2285
-Y 1209
-Z 0
+	NAME Minoc - North
+	X 2475
+	Y 417
+	Z 15
 }
 
 SECTION LOCATION 41
 {
-// Guard Post
-X 2218
-Y 1116
-Z 19
+	NAME Minoc - South
+	X 2526
+	Y 583
+	Z 0
 }
 
 SECTION LOCATION 42
 {
-// Orc Fort
-X 2171
-Y 1332
-Z 0
+	NAME Minoc - Gypsy Camp
+	X 2540
+	Y 651
+	Z 0
 }
 
 SECTION LOCATION 43
 {
-// Cemetary
-X 2443
-Y 1123
-Z 5
+	NAME Minoc - Bridge
+	X 2539
+	Y 501
+	Z 30
+}
+
+SECTION LOCATION 44
+{
+	NAME Minoc - Mining Camp
+	X 2583
+	Y 528
+	Z 15
+}
+
+SECTION LOCATION 45
+{
+	NAME Moonglow - Center
+	X 4442
+	Y 1122
+	Z 5
+}
+
+SECTION LOCATION 46
+{
+	NAME Moonglow - Docks
+	X 4406
+	Y 1045
+	Z 5
+}
+
+SECTION LOCATION 47
+{
+	NAME Moonglow - Telescope
+	X 4707
+	Y 1124
+	Z 0
+}
+
+SECTION LOCATION 48
+{
+	NAME Moonglow - Zoo
+	X 4549
+	Y 1378
+	Z 8
+}
+
+SECTION LOCATION 49
+{
+	NAME Moonglow - Cemetary
+	X 4546
+	Y 1338
+	Z 8
 }
 
 SECTION LOCATION 50
 {
-// Main Island
-X 1414
-Y 3816
-Z 0
+	NAME Nujel'm - Docks
+	X 3803
+	Y 1279
+	Z 5
 }
 
 SECTION LOCATION 51
 {
-// Fighting Pit
-X 1398
-Y 3742
-Z 235
+	NAME Nujel'm - Palace
+	X 3698
+	Y 1279
+	Z 20
 }
 
 SECTION LOCATION 52
 {
-// East Docks
-X 1492
-Y 3696
-Z 0
+	NAME Nujel'm - North
+	X 3668
+	Y 1116
+	Z 0
 }
-
 
 SECTION LOCATION 53
 {
-// Cemetary
-X 1296
-Y 3719
-Z 0
+	NAME Nujel'm - East
+	X 3755
+	Y 1227
+	Z 0
 }
 
 SECTION LOCATION 54
 {
-// Medium Island
-X 1124
-Y 3623
-Z 5
+	NAME Nujel'm - West
+	X 3572
+	Y 1211
+	Z 0
 }
 
 SECTION LOCATION 55
 {
-// Small Island
-X 1466
-Y 4015
-Z 5
+	NAME Nujel'm - Chess board
+	X 3728
+	Y 1360
+	Z 5
+}
+
+SECTION LOCATION 56
+{
+	NAME Nujel'm - Cemetary
+	X 3536
+	Y 1156
+	Z 20
+}
+
+SECTION LOCATION 57
+{
+	NAME Guard post - Docks
+	X 3650
+	Y 2653
+	Z 0
+}
+
+SECTION LOCATION 58
+{
+	NAME Guard post - North
+	X 3650
+	Y 2516
+	Z 0
+}
+
+SECTION LOCATION 59
+{
+	NAME Guard post - Farmlands
+	X 3722
+	Y 2647
+	Z 20
 }
 
 SECTION LOCATION 60
 {
-// Docks
-X 3675
-Y 2259
-Z 20
+	NAME Serpent's - North
+	X 3023
+	Y 3417
+	Z 15
 }
 
 SECTION LOCATION 61
 {
-// Parliament
-X 3792
-Y 2248
-Z 20
+	NAME Serpent's - West Docks
+	X 2945
+	Y 3393
+	Z 15
 }
 
 SECTION LOCATION 62
 {
-// Park
-X 3719
-Y 2063
-Z 25
+	NAME Serpent's - South
+	X 2906
+	Y 3505
+	Z 10
+}
+
+SECTION LOCATION 63
+{
+	NAME Serpent's - South Guardpost
+	X 3011
+	Y 3526
+	Z 15
+}
+
+SECTION LOCATION 64
+{
+	NAME Skara brae - West Docks
+	X 639
+	Y 2236
+	Z 0
+}
+
+SECTION LOCATION 65
+{
+	NAME Skara brae - West
+	X 601
+	Y 2171
+	Z 0
+}
+
+SECTION LOCATION 66
+{
+	NAME Skara brae - East Docks
+	X 716
+	Y 2233
+	Z 253
+}
+
+SECTION LOCATION 67
+{
+	NAME Skara brae - South
+	X 899
+	Y 2381
+	Z 0
+}
+
+SECTION LOCATION 68
+{
+	NAME Skara brae - North
+	X 746
+	Y 2165
+	Z 0
+}
+
+SECTION LOCATION 69
+{
+	NAME Skara brae - East
+	X 811
+	Y 2243
+	Z 0
 }
 
 SECTION LOCATION 70
 {
-// North
-X 2475
-Y 417
-Z 15
+	NAME Trinsic - Center
+	X 1927
+	Y 2779
+	Z 0
 }
 
 SECTION LOCATION 71
 {
-// South
-X 2526
-Y 583
-Z 0
+	NAME Trinsic - West Gate
+	X 1832
+	Y 2779
+	Z 0
 }
 
 SECTION LOCATION 72
 {
-// Gypsy Camp
-X 2540
-Y 651
-Z 0
+	NAME Trinsic - South Gate
+	X 2000
+	Y 2930
+	Z 0
 }
 
 SECTION LOCATION 73
 {
-// Bridge
-X 2539
-Y 501
-Z 30
+	NAME Trinsic - North
+	X 1894
+	Y 2666
+	Z 0
 }
 
 SECTION LOCATION 74
 {
-// Mining Camp
-X 2583
-Y 528
-Z 15
+	NAME Trinsic - South
+	X 1891
+	Y 2850
+	Z 20
+}
+
+SECTION LOCATION 75
+{
+	NAME Trinsic - East Docks
+	X 2071
+	Y 2855
+	Z 253
+}
+
+SECTION LOCATION 76
+{
+	NAME Trinsic - Island Park
+	X 2108
+	Y 2793
+	Z 2
+}
+
+SECTION LOCATION 77
+{
+	NAME Vesper - Center
+	X 2882
+	Y 788
+	Z 0
+}
+
+SECTION LOCATION 78
+{
+	NAME Vesper - Docks
+	X 3013
+	Y 828
+	Z 253
+}
+
+SECTION LOCATION 79
+{
+	NAME Vesper - North
+	X 2907
+	Y 603
+	Z 0
 }
 
 SECTION LOCATION 80
 {
-// Center
-X 4442
-Y 1122
-Z 5
+	NAME Vesper - East
+	X 276
+	Y 981
+	Z 0
 }
 
 SECTION LOCATION 81
 {
-// Docks
-X 4406
-Y 1045
-Z 254
+	NAME Vesper - Grave Yard
+	X 2786
+	Y 867
+	Z 0
 }
 
 SECTION LOCATION 82
 {
-// Telescope
-X 4707
-Y 1124
-Z 0
+	NAME Wind - Outside Entrance
+	X 1362
+	Y 896
+	Z 0
 }
 
 SECTION LOCATION 83
 {
-// Zoo
-X 4549
-Y 1378
-Z 8
+	NAME Wind - Caves
+	X 5166
+	Y 244
+	Z 15
 }
 
 SECTION LOCATION 84
 {
-// Cemetary
-X 4546
-Y 1338
-Z 8
+	NAME Wind - South
+	X 5223
+	Y 189
+	Z 5
+}
+
+SECTION LOCATION 85
+{
+	NAME Wind - East
+	X 5336
+	Y 88
+	Z 25
+}
+
+SECTION LOCATION 86
+{
+	NAME Wind - West
+	X 5180
+	Y 90
+	Z 26
+}
+
+SECTION LOCATION 87
+{
+	NAME Wind - Park
+	X 5211
+	Y 22
+	Z 15
+}
+
+SECTION LOCATION 88
+{
+	NAME Wind - Center
+	X 535
+	Y 992
+	Z 0
+}
+
+SECTION LOCATION 89
+{
+	NAME Empath Abbey
+	X 635
+	Y 860
+	Z 0
 }
 
 SECTION LOCATION 90
 {
-// Docks
-X 3803
-Y 1279
-Z 5
+	NAME Courts & Prisons
+	X 354
+	Y 836
+	Z 20
 }
 
 SECTION LOCATION 91
 {
-// Palace
-X 3698
-Y 1279
-Z 20
+	NAME Hidden Cave
+	X 313
+	Y 787
+	Z 230
 }
 
 SECTION LOCATION 92
 {
-// North
-X 3668
-Y 1116
-Z 0
+	NAME Cemetary
+	X 724
+	Y 1138
+	Z 0
 }
 
 SECTION LOCATION 93
 {
-// East
-X 3755
-Y 1227
-Z 0
+	NAME Orc Fort
+	X 633
+	Y 1499
+	Z 0
 }
 
 SECTION LOCATION 94
 {
-// West
-X 3572
-Y 1211
-Z 0
+	NAME Srine - Chaos
+	X 1456
+	Y 854
+	Z 0
 }
 
 SECTION LOCATION 95
 {
-// Chess board
-X 3728
-Y 1360
-Z 5
+	NAME Srine - Compassion
+	X 1856
+	Y 872
+	Z 255
 }
 
 SECTION LOCATION 96
 {
-// Cemetary
-X 3536
-Y 1156
-Z 20
+	NAME Srine - Honesty
+	X 4217
+	Y 564
+	Z 35
+}
+
+SECTION LOCATION 97
+{
+	NAME Srine - Honor
+	X 1730
+	Y 3528
+	Z 0
+}
+
+SECTION LOCATION 98
+{
+	NAME Srine - Humility
+	X 4276
+	Y 3699
+	Z 0
+}
+
+SECTION LOCATION 99
+{
+	NAME Srine - Justice
+	X 1301
+	Y 639
+	Z 15
 }
 
 SECTION LOCATION 100
 {
-// Docks
-X 3650
-Y 2653
-Z 0
+	NAME Srine - Sacrifice
+	X 3355
+	Y 299
+	Z 9
 }
 
 SECTION LOCATION 101
 {
-// North
-X 3650
-Y 2516
-Z 0
+	NAME Srine - Spirituality
+	X 1589
+	Y 2485
+	Z 5
 }
 
 SECTION LOCATION 102
 {
-// Farmlands
-X 3722
-Y 2647
-Z 20
+	NAME Srine - Valor
+	X 2496
+	Y 3932
+	Z 0
 }
 
+SECTION LOCATION 103
+{
+	NAME Covetous - Outside Entrance
+	X 2499
+	Y 919
+	Z 0
+}
+
+SECTION LOCATION 104
+{
+	NAME Covetous - Level 1
+	X 5456
+	Y 1863
+	Z 0
+}
+
+SECTION LOCATION 105
+{
+	NAME Covetous - Level 2
+	X 5614
+	Y 1997
+	Z 0
+}
+
+SECTION LOCATION 106
+{
+	NAME Covetous - Level 3
+	X 5579
+	Y 1924
+	Z 0
+}
+
+SECTION LOCATION 107
+{
+	NAME Covetous - Lake Room
+	X 5467
+	Y 1805
+	Z 5
+}
+
+SECTION LOCATION 108
+{
+	NAME Covetous - Torture Rooms
+	X 5552
+	Y 1807
+	Z 0
+}
+
+SECTION LOCATION 109
+{
+	NAME Outside Entrance
+	X 4111
+	Y 432
+	Z 5
+}
 
 SECTION LOCATION 110
 {
-// North
-X 3023
-Y 3417
-Z 15
+	NAME Level 1
+	X 5188
+	Y 638
+	Z 0
 }
 
 SECTION LOCATION 111
 {
-// West Docks
-X 2945
-Y 3393
-Z 15
+	NAME Level 2
+	X 5305
+	Y 533
+	Z 2
 }
 
 SECTION LOCATION 112
 {
-// South
-X 2906
-Y 3505
-Z 10
+	NAME Level 3
+	X 5137
+	Y 650
+	Z 5
 }
 
 SECTION LOCATION 113
 {
-// South Guardpost
-X 3011
-Y 3526
-Z 15
+	NAME Level 4
+	X 5306
+	Y 652
+	Z 2
+}
+
+SECTION LOCATION 114
+{
+	NAME Despise - Outside Entrance
+	X 1298
+	Y 1080
+	Z 0
+}
+
+SECTION LOCATION 115
+{
+	NAME Despise - Entryway
+	X 5587
+	Y 631
+	Z 30
+}
+
+SECTION LOCATION 116
+{
+	NAME Despise - Level 1 *UP*
+	X 5501
+	Y 570
+	Z 59
+}
+
+SECTION LOCATION 117
+{
+	NAME Despise - Level 2 *DOWN*
+	X 5519
+	Y 673
+	Z 20
+}
+
+SECTION LOCATION 118
+{
+	NAME Despise - Level 3
+	X 5407
+	Y 859
+	Z 45
+}
+
+SECTION LOCATION 119
+{
+	NAME Destard - Outside Entrance
+	X 1176
+	Y 2637
+	Z 0
 }
 
 SECTION LOCATION 120
 {
-// West Docks
-X 639
-Y 2236
-Z 0
+	NAME Destard - Level 1
+	X 5243
+	Y 1006
+	Z 0
 }
 
 SECTION LOCATION 121
 {
-// West
-X 601
-Y 2171
-Z 0
+	NAME Destard - Level 2
+	X 5143
+	Y 801
+	Z 5
 }
 
 SECTION LOCATION 122
 {
-// East Docks
-X 716
-Y 2233
-Z 253
+	NAME Destard - Level 3
+	X 5137
+	Y 986
+	Z 5
 }
 
 SECTION LOCATION 123
 {
-// South
-X 899
-Y 2381
-Z 0
+	NAME Outside Entrance
+	X 4721
+	Y 3822
+	Z 0
 }
 
 SECTION LOCATION 124
 {
-// North
-X 746
-Y 2165
-Z 0
+	NAME Level 1
+	X 5905
+	Y 20
+	Z 46
 }
 
 SECTION LOCATION 125
 {
-// East
-X 811
-Y 2243
-Z 0
+	NAME Level 2
+	X 5976
+	Y 169
+	Z 0
+}
+
+SECTION LOCATION 126
+{
+	NAME Level 3
+	X 6083
+	Y 145
+	Z 236
+}
+
+SECTION LOCATION 127
+{
+	NAME Level 4
+	X 6059
+	Y 89
+	Z 24
+}
+
+SECTION LOCATION 128
+{
+	NAME Outside Entrance
+	X 514
+	Y 1561
+	Z 0
+}
+
+SECTION LOCATION 129
+{
+	NAME Level 1
+	X 5395
+	Y 126
+	Z 0
 }
 
 SECTION LOCATION 130
 {
-// Center
-X 1927
-Y 2779
-Z 0
+	NAME Level 2
+	X 5515
+	Y 11
+	Z 5
 }
 
 SECTION LOCATION 131
 {
-// West Gate
-X 1832
-Y 2779
-Z 0
+	NAME Level 3
+	X 5514
+	Y 148
+	Z 25
 }
 
 SECTION LOCATION 132
 {
-// South Gate
-X 2000
-Y 2930
-Z 0
+	NAME Level 4
+	X 5875
+	Y 20
+	Z 251
 }
 
 SECTION LOCATION 133
 {
-// North
-X 1894
-Y 2666
-Z 0
+	NAME Wrong - Outside Entrance
+	X 2043
+	Y 238
+	Z 10
 }
 
 SECTION LOCATION 134
 {
-// South
-X 1891
-Y 2850
-Z 20
+	NAME Wrong - Level 1
+	X 5825
+	Y 630
+	Z 0
 }
-
 
 SECTION LOCATION 135
 {
-// East Docks
-X 2071
-Y 2855
-Z 253
+	NAME Wrong - Level 2
+	X 5690
+	Y 569
+	Z 25
 }
 
 SECTION LOCATION 136
 {
-// Island Park
-X 2108
-Y 2793
-Z 2
+	NAME Wrong - Level 3
+	X 5703
+	Y 639
+	Z 0
+}
+
+SECTION LOCATION 137
+{
+	NAME Hythloth Firepit
+	X 4596
+	Y 3630
+	Z 30
+}
+
+SECTION LOCATION 138
+{
+	NAME Yew/Britain Brigand Camp
+	X 885
+	Y 1682
+	Z 0
+}
+
+SECTION LOCATION 139
+{
+	NAME Yew Fort of the Damned
+	X 972
+	Y 768
+	Z 0
 }
 
 SECTION LOCATION 140
 {
-// Center
-X 2882
-Y 788
-Z 0
+	NAME Britain Sewers
+	X 6032
+	Y 1499
+	Z 27
 }
 
 SECTION LOCATION 141
 {
-// Docks
-X 3013
-Y 828
-Z 253
+	NAME Papua - mage shop
+	X 5736
+	Y 3196
+	Z 11
 }
 
 SECTION LOCATION 142
 {
-// North
-X 2907
-Y 603
-Z 0
+	NAME Delucia center
+	X 5219
+	Y 4028
+	Z 37
 }
 
 SECTION LOCATION 143
 {
-// East
-X 276
-Y 981
-Z 0
+	NAME Ice Dungeon
+	X 1998
+	Y 81
+	Z 5
 }
 
-SECTION LOCATION 144
-{
-// Grave Yard
-X 2786
-Y 867
-Z 0
-}
-
-SECTION LOCATION 150
-{
-// Outside Entrance
-X 1362
-Y 896
-Z 0
-}
-
-SECTION LOCATION 151
-{
-// Caves
-X 5166
-Y 244
-Z 15
-}
-
-SECTION LOCATION 152
-{
-// South
-X 5223
-Y 189
-Z 5
-}
-
-SECTION LOCATION 153
-{
-// East
-X 5336
-Y 88
-Z 25
-}
-
-SECTION LOCATION 154
-{
-// West
-X 5180
-Y 90
-Z 26
-}
-
-SECTION LOCATION 155
-{
-// Park
-X 5211
-Y 22
-Z 15
-}
-
-SECTION LOCATION 160
-{
-// Center
-X 535
-Y 992
-Z 0
-}
-
-SECTION LOCATION 161
-{
-// Empath Abbey
-X 635
-Y 860
-Z 0
-}
-
-SECTION LOCATION 162
-{
-// Courts & Prisons
-X 354
-Y 836
-Z 20
-}
-
-SECTION LOCATION 163
-{
-// Hidden Cave
-X 313
-Y 787
-Z 230
-}
-
-SECTION LOCATION 164
-{
-// Cemetary
-X 724
-Y 1138
-Z 0
-}
-
-SECTION LOCATION 165
-{
-// Orc Fort
-X 633
-Y 1499
-Z 0
-}
-
-
-// *******
-// Shrines
-// *******
-
-SECTION LOCATION 170
-{
-// Chaos
-X 1456
-Y 854
-Z 0
-}
-
-SECTION LOCATION 171
-{
-// Compassion
-X 1856
-Y 872
-Z 255
-}
-
-SECTION LOCATION 172
-{
-// Honesty
-X 4217
-Y 564
-Z 35
-}
-
-SECTION LOCATION 173
-{
-// Honor
-X 1730
-Y 3528
-Z 0
-}
-
-SECTION LOCATION 174
-{
-// Humility
-X 4276
-Y 3699
-Z 0
-}
-
-SECTION LOCATION 175
-{
-// Justice
-X 1301
-Y 639
-Z 15
-}
-
-SECTION LOCATION 176
-{
-// Sacrifice
-X 3355
-Y 299
-Z 9
-}
-
-SECTION LOCATION 177
-{
-// Spirituality
-X 1589
-Y 2485
-Z 5
-}
-
-SECTION LOCATION 178
-{
-// Valor
-X 2496
-Y 3932
-Z 0
-}
-
-
-// ********
-// Dungeons
-// ********
-
-
-SECTION LOCATION 200
-{
-// Outside Entrance
-X 2499
-Y 919
-Z 0
-}
-
-SECTION LOCATION 201
-{
-// Level 1
-X 5456
-Y 1863
-Z 0
-}
-
-SECTION LOCATION 202
-{
-// Level 2
-X 5614
-Y 1997
-Z 0
-}
-
-SECTION LOCATION 203
-{
-// Level 3
-X 5579
-Y 1924
-Z 0
-}
-
-SECTION LOCATION 204
-{
-// Lake Room
-X 5467
-Y 1805
-Z 5
-}
-
-SECTION LOCATION 205
-{
-// Torture Rooms
-X 5552
-Y 1807
-Z 0
-}
-
-SECTION LOCATION 210
-{
-// Outside Entrance
-X 4111
-Y 432
-Z 5
-}
-
-SECTION LOCATION 211
-{
-// Level 1
-X 5188
-Y 638
-Z 0
-}
-
-SECTION LOCATION 212
-{
-// Level 2
-X 5305
-Y 533
-Z 2
-}
-
-SECTION LOCATION 213
-{
-// Level 3
-X 5137
-Y 650
-Z 5
-}
-
-SECTION LOCATION 214
-{
-// Level 4
-X 5306
-Y 652
-Z 2
-}
-
-SECTION LOCATION 220
-{
-// Outside Entrance
-X 1298
-Y 1080
-Z 0
-}
-
-SECTION LOCATION 221
-{
-// Entryway
-X 5587
-Y 631
-Z 30
-}
-
-SECTION LOCATION 222
-{
-// Level 1 *UP*
-X 5501
-Y 570
-Z 59
-}
-
-SECTION LOCATION 223
-{
-// Level 2 *DOWN*
-X 5519
-Y 673
-Z 20
-}
-
-SECTION LOCATION 224
-{
-// Level 3
-X 5407
-Y 859
-Z 45
-}
-
-SECTION LOCATION 230
-{
-// Outside Entrance
-X 1176
-Y 2637
-Z 0
-}
-
-SECTION LOCATION 231
-{
-// Level 1
-X 5243
-Y 1006
-Z 0
-}
-
-SECTION LOCATION 232
-{
-// Level 2
-X 5143
-Y 801
-Z 5
-}
-
-SECTION LOCATION 233
-{
-// Level 3
-X 5137
-Y 986
-Z 5
-}
-
-SECTION LOCATION 240
-{
-// Outside Entrance
-X 4721
-Y 3822
-Z 0
-}
-
-SECTION LOCATION 241
-{
-// Level 1
-X 5905
-Y 20
-Z 46
-}
-
-SECTION LOCATION 242
-{
-// Level 2
-X 5976
-Y 169
-Z 0
-}
-
-SECTION LOCATION 243
-{
-// Level 3
-X 6083
-Y 145
-Z 236
-}
-
-SECTION LOCATION 244
-{
-// Level 4
-X 6059
-Y 89
-Z 24
-}
-
-SECTION LOCATION 250
-{
-// Outside Entrance
-X 514
-Y 1561
-Z 0
-}
-
-SECTION LOCATION 251
-{
-// Level 1
-X 5395
-Y 126
-Z 0
-}
-
-SECTION LOCATION 252
-{
-// Level 2
-X 5515
-Y 11
-Z 5
-}
-
-SECTION LOCATION 253
-{
-// Level 3
-X 5514
-Y 148
-Z 25
-}
-
-SECTION LOCATION 254
-{
-// Level 4
-X 5875
-Y 20
-Z 251
-}
-
-SECTION LOCATION 260
-{
-// Outside Entrance
-X 2043
-Y 238
-Z 10
-}
-
-SECTION LOCATION 261
-{
-// Level 1
-X 5825
-Y 630
-Z 0
-}
-
-SECTION LOCATION 262
-{
-// Level 2
-X 5690
-Y 569
-Z 25
-}
-
-SECTION LOCATION 263
-{
-// Level 3
-X 5703
-Y 639
-Z 0
-}
-
-SECTION LOCATION 300
-{
-// Hythloth Firepit
-X 4596
-Y 3630
-Z 30
-}
-
-SECTION LOCATION 301
-{
-// Yew/Britain Brigand Camp
-X 885
-Y 1682
-Z 0
-}
-
-SECTION LOCATION 302
-{
-// Yew Fort of the Damned
-X 972
-Y 768
-Z 0
-}
-// **********
-// Lost Lands
-// **********
-SECTION LOCATION 303
-{ 
-// Britain Sewers
-X 6032
-Y 1499
-Z 27
-}
-SECTION LOCATION 304
-{ 
-// Papua - mage shop
-X 5736
-Y 3196
-Z 11
-}
-SECTION LOCATION 305
-{ 
-// Delucia center
-X 5219
-Y 4028
-Z 37
-}
-SECTION LOCATION 306
-{ 
-// Ice Dungeon
-X 1998
-Y 81
-Z 5
-}
-
-// END of LOCATION Area
-
+//EOF: leave this line at the end of the file
 EOF
-
