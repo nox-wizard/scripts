@@ -24,9 +24,10 @@ public options_char( const socket, const chr )
 	menu_setProperty( menu, MP_BUFFER, 3, 111 );
 	
 	menu_addButton( menu, 250, 265, 0x084A, 0x084B, 111 );
+	const colorEdit = 32;
 	
 	menu_addText( menu, 53, 63, _, "Name : " );
-	menu_addPropField( menu, 108, 63, 125, 30, CP_STR_NAME, _, 0 );
+	menu_addPropField( menu, 108, 63, 125, 30, CP_STR_NAME, _, colorEdit );
 	
 	menu_addText( menu, 195, 78, _, "Serial : %d", chr );
 	menu_addText( menu, 195, 93, _, "Account : %d", chr_getProperty( chr, CP_ACCOUNT ) );

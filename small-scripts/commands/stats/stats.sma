@@ -25,6 +25,7 @@ public stats_char( const socket, const chr, const page )
 	
 	menu_addButton( menu, 300, 185, 0x084A, 0x084B, 1 );
 
+	const colorEdit = 32;
 	new i=0;
 	
 	switch( page) {
@@ -35,30 +36,30 @@ public stats_char( const socket, const chr, const page )
 	menu_addText( menu, 228, 10+(20*i++), _, "%d", chr_getProperty( chr, CP_ACCOUNT ) );
 
 	menu_addText( menu, 58, 10+(20*i), _, "Name : " );
-	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, 0 );
+	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
 
 	menu_addText( menu, 58, 10+(20*i), _, "Title : " );
-	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_TITLE, _, 0 );
+	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_TITLE, _, colorEdit );
 
 	menu_addText( menu, 58, 10+(20*i), _, "Dexterity : " );
-	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_DEXTERITY, CP2_REAL, 0 );
+	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_DEXTERITY, CP2_REAL, colorEdit );
 
 	menu_addText( menu, 58, 10+(20*i), _, "Strength : " );
-	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STRENGHT, CP2_REAL, 0 );
+	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STRENGHT, CP2_REAL, colorEdit );
 
 	menu_addText( menu, 58, 10+(20*i), _, "Intelligence : " );
-	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_INTELLIGENCE, CP2_REAL, 0 );
+	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_INTELLIGENCE, CP2_REAL, colorEdit );
 
 	menu_addText( menu, 58, 10+(20*i), _, "Location : " );
-	menu_addPropField( menu, 228, 10+(20*i), 35, 30, CP_POSITION, CP2_X, 0 );
-	menu_addPropField( menu, 258, 10+(20*i), 35, 30, CP_POSITION, CP2_Y, 0 );
-	menu_addPropField( menu, 298, 10+(20*i++), 35, 30, CP_POSITION, CP2_Z, 0 );
+	menu_addPropField( menu, 228, 10+(20*i), 35, 30, CP_POSITION, CP2_X, colorEdit );
+	menu_addPropField( menu, 258, 10+(20*i), 35, 30, CP_POSITION, CP2_Y, colorEdit );
+	menu_addPropField( menu, 298, 10+(20*i++), 35, 30, CP_POSITION, CP2_Z, colorEdit );
 
 	menu_addText( menu, 58, 10+(20*i), _, "Fame : " );
-	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_FAME, _, 0 );
+	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_FAME, _, colorEdit );
 
 	menu_addText( menu, 58, 10+(20*i), _, "Karma : " );
-	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_KARMA, _, 0 );
+	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_KARMA, _, colorEdit );
 	
 	menu_addButton( menu, 321, 8, 0x089E, GUMP_INVALID, 10+2 );
 
@@ -69,30 +70,30 @@ public stats_char( const socket, const chr, const page )
 	menu_addButton( menu, 50, 8, 0x089D, GUMP_INVALID, 10+1 );
 
 	menu_addText( menu, 58, 20+(20*i), _, "Direction : " );
-	menu_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_DIR, _, 0 );
+	menu_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_DIR, _, colorEdit );
 
 	menu_addText( menu, 58, 20+(20*i), _, "Weight : " );
-	menu_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_WEIGHT, _, 0 );
+	menu_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_WEIGHT, _, colorEdit );
 
 //	menu_addText( menu, 58, 10+(20*i), _, "Frozen : " );
-//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, 0 );
+//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
 
 //	menu_addText( menu, 58, 10+(20*i), _, "Criminal : " );
-//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_CRIMINAL, _, 0 );
+//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_CRIMINAL, _, colorEdit );
 
 //	menu_addText( menu, 58, 10+(20*i), _, "Guild Title : " );
-//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, 0 );
+//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
 
 //	menu_addText( menu, 58, 10+(20*i), _, "Invulnerable : " );
-//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, 0 );
+//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
 
 //stat gain today se si puo' farlo andare sarebbe ottimo 
 //	menu_addText( menu, 58, 10+(20*i), _, "Name : " );
-//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, 0 );
+//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
 
 //skills
 //	menu_addText( menu, 58, 10+(20*i), _, "Name : " );
-//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, 0 );
+//	menu_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
 	
 
 	}

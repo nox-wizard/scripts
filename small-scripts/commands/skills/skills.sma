@@ -26,6 +26,7 @@ public skills_char( const socket, const chr )
 	
 	menu_addButton( menu, 250, 265, 0x084A, 0x084B, 1 );
 	
+	const colorEdit = 32;
 	
 	new str[100];
 	
@@ -44,7 +45,7 @@ public skills_char( const socket, const chr )
 		}
 
 		menu_addText( menu, 28, 38+(20*(i%skForPage)), _, "%s : ", skillName[ skillByName[i] ] );
-		menu_addPropField( menu, 220, 38+(20*(i%skForPage)), 50, 30, CP_BASESKILL, skillByName[i], 0 );
+		menu_addPropField( menu, 220, 38+(20*(i%skForPage)), 50, 30, CP_BASESKILL, skillByName[i], colorEdit );
 	}
 	
 	menu_show( menu, getCharFromSocket(socket) );
