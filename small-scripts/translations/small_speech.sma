@@ -913,5 +913,5 @@ public msg_chrUnknownDef[NUM_chrUnknownSENT][]={
 "Unknown",
 "To whom do you want to introduce your name?",
 "My name is %s.",
-"%s already knows your name."
+"This char already knows you under the name %s."
 };
