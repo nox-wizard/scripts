@@ -1196,7 +1196,7 @@ native chr_flee( const npc, const from, const seconds );
 
 /*!
 \brief Get the direction for see location
-\author Endymion
+\author Endymion, mod by Luxor
 \param chr
 \param x the x location
 \param y the y location
@@ -1218,30 +1218,28 @@ public chr_getDirForSee( const chr, const x, const y )
 	}
 	else
 	{
-		/*new coef;
-		float(coef)
-		coef =(y - chr_y) / (x - chr_x);
+		new coef;
+		coef = ( (y - chr_y) * 100 ) / (x - chr_x);
 		if (chr_x < x) // facing east
-			if (coef > 2)
+			if (coef > 200)
 				return SOUTH;
-			else if (coef > 0.5)
+			else if (coef > 50)
 				return SOUTHEAST;
-			else if (coef > -0.5)
+			else if (coef > -50)
 				return EAST;
-			else if (coef > -2)
+			else if (coef > -200)
 				return NORTHEAST;
 			else return NORTH;
 		else // facing west
-			if (coef > 2)
+			if (coef > 200)
 				return NORTH;
-			else if (coef > 0.5)
+			else if (coef > 50)
 				return NORTHWEST; // south-west
-			else if (coef > -0.5)
+			else if (coef > -50)
 				return WEST; // west
-			else if (coef > -2)
+			else if (coef > -200)
 				return SOUTHWEST; // north-west
 			else return SOUTH;
-		*/
 	}
 	return SOUTH;
 }
