@@ -10,26 +10,27 @@
  FUNCTION : __evintTarget
  AUTHOR   : Luxor
  *********************************************************************************************/
-public __evintTarget(const s, const target, const item)
+public __evintTarget( const t, const cc, const target, const x, const y, const z, const model, const param1 )
 {
-	if (s < 0) return;
+
 	if (target < 0) {
-		ntprintf(s, "Target invalid");
+		chr_message( cc, _, "Target invalid");
 		return;
 	}
-	new cc = getCharFromSocket(s);
+
 	if (cc == target) {
-		ntprintf(s, "You cannot analize yourself!");
+		chr_message( cc, _, "You cannot analize yourself!");
 		return;
 	}
 	if (chr_distance(cc, target) >= 10) {
-		ntprintf(s, "You need to be closer to find out more about them");
+		chr_message( cc, _, "You need to be closer to find out more about them");
 		return;
 	}
 	if (!chr_checkSkill(cc, SK_EVALUATINGINTEL, 0, 1000)) {
-                ntprintf (s, "You are not certain..");
-                return;
-        }
+        chr_message( cc, _, "You are not certain..");
+        return;
+    }
+        
 	new int = chr_getInt(target);
 	new intDes[60];
 	if (int > 100) strunpack(intDes, "superhumanly intelligent in a manner you cannot comprehend");
@@ -61,7 +62,7 @@ public __evintTarget(const s, const target, const item)
 		}
 	}
 
-	ntprintf(s, "That person looks %s.", intDes);
+	chr_message( cc, _, "That person looks %s.", intDes);
 
 	if (chr_getSkill(cc, SK_EVALUATINGINTEL) < 950) return;
 
@@ -71,29 +72,29 @@ public __evintTarget(const s, const target, const item)
 	switch(prc/10)
 	{
 		case 0:
-			ntprintf(s, "He/She is completely tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is completely tired [%d%%]", prc);
  		case 1:
-			ntprintf(s, "He/She is extremely tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is extremely tired [%d%%]", prc);
 		case 2:
-			ntprintf(s, "He/She is very much tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is very much tired [%d%%]", prc);
 		case 3:
-			ntprintf(s, "He/She is very tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is very tired [%d%%]", prc);
 		case 4:
-			ntprintf(s, "He/She is tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is tired [%d%%]", prc);
 		case 5:
-			ntprintf(s, "He/She is slightly tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is slightly tired [%d%%]", prc);
 		case 6:
-			ntprintf(s, "He/She is not tired [%d%%]", prc);
+			chr_message( cc, _, "He/She is not tired [%d%%]", prc);
 		case 7:
-			ntprintf(s, "He/She is slightly fresh [%d%%]", prc);
+			chr_message( cc, _, "He/She is slightly fresh [%d%%]", prc);
 		case 8:
-			ntprintf(s, "He/She is almost fresh [%d%%]", prc);
+			chr_message( cc, _, "He/She is almost fresh [%d%%]", prc);
 		case 9:
-			ntprintf(s, "He/She is fresh [%d%%]", prc);
+			chr_message( cc, _, "He/She is fresh [%d%%]", prc);
 		case 10:
-			ntprintf(s, "He/She is fully fresh [%d%%]", prc);
+			chr_message( cc, _, "He/She is fully fresh [%d%%]", prc);
 		default:
-			ntprintf(s, "He/She is at %d%% mana", prc);
+			chr_message( cc, _, "He/She is at %d%% mana", prc);
 	}
 }
 
@@ -102,9 +103,9 @@ public __evintTarget(const s, const target, const item)
  AUTHOR   : Luxor
  PURPOSE  : This function is called by Nox-Wizard when a char clicks Evaluating Intelligence on the skills list
  *************************************************************************************************************/
-public __nxw_sk_evint(const s)
+public __nxw_sk_evint( const chr )
 {
-	if (s < 0) return;
-	getTarget(s, funcidx("__evintTarget"), "Whom shall I examine?");
+	chr_message( chr, _, "Whom shall I examine?" );
+	target_create( chr, _, _, _, "__evintTarget" );
 }
 

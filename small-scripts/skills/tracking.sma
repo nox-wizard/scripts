@@ -15,10 +15,9 @@ static where[8][] = {
 "Northwest"
 };
 
-public __nxw_sk_tracking( const socket )
+public __nxw_sk_tracking( const chr )
 {
-	new chr=getCharFromSocket( socket );
-	
+
 	new menu = gui_createIconList( "handle_tracking", "What do you wish to track?"  );
 
 	gui_addIcon( menu, 0x20D4, _, _, "Animals" );
@@ -29,18 +28,13 @@ public __nxw_sk_tracking( const socket )
 }
 
 
-public handle_tracking( const socket, const oldmenu, const button, const model, const color, const data )
+public handle_tracking( const chr, const oldmenu, const button, const model, const color, const data )
 {
-	if( !isValidSocket( socket ) )
-		return;
-	
 	if( button==MENU_CLOSED )
 		return;
 		
-	new chr=getCharFromSocket( socket );
-	
 	if ( !chr_checkSkill(chr, SK_TRACKING, 0, 1000, 1) ) {
-		ntprintf( socket, "You cannot see any sign" ); 
+		chr_message( chr, _, "You cannot see any sign" ); 
 		return;
 	}
 	
@@ -117,16 +111,16 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 		switch( button )
 		{
 			case 1:
-				ntprintf( socket, "You see no signs of any animals." );
+				chr_message( chr, _, "You see no signs of any animals." );
 			case 2:
-				ntprintf( socket, "You see no signs of any creatures." );
+				chr_message( chr, _, "You see no signs of any creatures." );
 			case 3:
-				ntprintf( socket, "You see no signs of anyone." );
+				chr_message( chr, _, "You see no signs of anyone." );
 		}
 	}
 }
 
-public handle_track_choose( const socket, const menu, const button, const model, const color, const data )
+public handle_track_choose( const chr, const menu, const button, const model, const color, const data )
 {
 	if( button==MENU_CLOSED )
 		return;
@@ -134,7 +128,6 @@ public handle_track_choose( const socket, const menu, const button, const model,
 	new x=chr_getProperty( data, CP_POSITION, CP2_X );
 	new y=chr_getProperty( data, CP_POSITION, CP2_Y );
 	
-	new chr = getCharFromSocket( socket );
 	send_questArrow( chr, true, x, y );
 	
 	new seconds=25;

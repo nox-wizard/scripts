@@ -32,33 +32,31 @@
  FUNCTION : __nxw_sk_main
  AUTHOR   : Luxor
  *********************************************************************************************/
-public __nxw_sk_main(const s, const skill_num)
+public __nxw_sk_main(const cc, const skill_num)
 {
-	if ( !isValidSocket( s ) || skill_num < 0 ) return;
+	if ( skill_num < 0 ) return;
 
-	new cc = getCharFromSocket(s)
-	
 	if ( !chr_isGM( cc ) && chr_getProperty(cc, CP_SKILLDELAY) > getCurrentTime() ) {
-		ntprintf(s, "You must wait a few moments before using another skill.");
+		chr_message( cc, _, "You must wait a few moments before using another skill.");
 		return;
 	}
 	if (chr_getProperty(cc, CP_DEAD) == 1) {
-		ntprintf(s, "You cannot do that as a ghost.");
+		chr_message( cc, _, "You cannot do that as a ghost.");
 		return;
 	}
 
 	switch (skill_num)
 	{
 		case SK_ANATOMY:
-			__nxw_sk_anatomy(s);
+			__nxw_sk_anatomy(cc);
 		case SK_EVALUATINGINTEL:
-			__nxw_sk_evint(s);
+			__nxw_sk_evint(cc);
 		case SK_INSCRIPTION:
-			__nxw_sk_inscript(s);
+			__nxw_sk_inscript(cc);
 		case SK_TASTEID:
-			__nxw_sk_tasteid(s);
+			__nxw_sk_tasteid(cc);
 		case SK_TRACKING:
-			__nxw_sk_tracking(s);
+			__nxw_sk_tracking(cc);
 		default:
 			return;
 	}

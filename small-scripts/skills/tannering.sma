@@ -75,7 +75,7 @@ public checkInitTannering() {
 }
 
 
-public _doLeatherPiece( const s, const hide ) {
+public _doLeatherPiece( const chr, const hide ) {
 
 	checkInitTannering();
 
@@ -99,7 +99,6 @@ public _doLeatherPiece( const s, const hide ) {
 		return;
 	}
 
-	new chr = getCharFromSocket(s);
 	chr_sound( chr, 0x0248 );
 
 	new leather = itm_createInBpDef( leathers[type], chr, 2 );
@@ -119,15 +118,10 @@ public _doLeatherPiece( const s, const hide ) {
  FUNCTION :	__nxw_sk_tannering
  AUTHOR   :	Endymion
  ****************************************************************************************/
-public __nxw_sk_tannering(const s, const itm)
+public __nxw_sk_tannering(const cc, const itm)
 {
 
 	checkInitTannering();
-
-	if (s < 0) {
-		printf ("WARNING: SOCKET PASSED TO __nxw_sk_tannering IS INVALID");
-		return;
-	}
 
 	if (itm < 0) {
 		printf ("WARNING: ITEM PASSED TO __nxw_sk_tannering IS INVALID");
@@ -135,7 +129,6 @@ public __nxw_sk_tannering(const s, const itm)
 	}
 	
 	//At this point, we're already sure that we're analyzing an leather, because the engine did the check for us.
-	new cc = getCharFromSocket(s);
 	new type = INVALID;
 	new skill = chr_getSkill(cc, SK_TAILORING);
 	new scriptid = itm_getProperty( itm, IP_SCRIPTID );
@@ -151,7 +144,7 @@ public __nxw_sk_tannering(const s, const itm)
 		return;
 	}
 	if (skill < leatherSkill[type]) {
-		ntprintf(s, "You are not skilled enough for this kind of material.");
+		chr_message( cc, _, "You are not skilled enough for this kind of material.");
 		return;
 	}
 	chr_skillMakeMenu(cc, leatherMakeMenu[type], SK_TAILORING, itm);

@@ -10,7 +10,7 @@
  FUNCTION : __anatomyTarget
  AUTHOR   : Luxor
  *********************************************************************************************/
-public __anatomyTarget(const cc, const target, const item)
+public __anatomyTarget( const t, const cc, const target, const x, const y, const z, const model, const param1 )
 {
 	if (target < 0) {
 		chr_message( cc, _, "Target invalid");
@@ -26,9 +26,10 @@ public __anatomyTarget(const cc, const target, const item)
 		return;
 	}
 	if (!chr_checkSkill(cc, SK_ANATOMY, 0, 1000)) {
-                chr_message( cc, _, "You are not certain..");
-                return;
-        }
+        chr_message( cc, _, "You are not certain..");
+        return;
+    }
+
 	new str = chr_getStr(target);
 	new dex = chr_getDex(target);
 	new strDes[60];
@@ -87,7 +88,7 @@ public __anatomyTarget(const cc, const target, const item)
 		}
 	}
 
-	chr_message( cc, "That person looks %s and %s.", strDes, dexDes);
+	chr_message( cc, _, "That person looks %s and %s.", strDes, dexDes);
 
 	if (chr_getSkill(cc, SK_ANATOMY) < 950) return;
 
@@ -131,6 +132,6 @@ public __anatomyTarget(const cc, const target, const item)
 public __nxw_sk_anatomy( const chr )
 {
 	chr_message( chr, _, "Whom shall I examine?");
-	getTarget(s, funcidx("__anatomyTarget"), 
+	target_create( chr, _, _, _, "__anatomyTarget" );
 }
 

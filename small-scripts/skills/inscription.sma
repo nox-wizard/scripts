@@ -1,29 +1,30 @@
 static const START_SCROLL = 810;
 static book_array[64];
 
-public __nxw_sk_inscript( const socket )
+public __nxw_sk_inscript( const chr )
 {
-    getTarget( socket ,funcidx("__inscription_copy"), "Select scroll...");
+	chr_message( chr, _, "Select scroll...");
+	target_create( chr, _, _, _, "__inscription_copy" );
 }
 
-public __inscription_copy(const chr, const target, const item)
+public __inscription_copy( const t, const chr, const item, const x, const y, const z, const model, const param1 )
 {
 
 	if ( chr < 0 || item < 0 )
-	    exit;
+	    return;
 
 	new id = itm_getProperty(item,IP_ID);
 
 	if ( id == 3643 || id == 3834 )
 	{
 		__inscription_book(chr, item);
-		exit;
+		return;
 	}
 
 	if ((id < 7981) || (id > 8044))
 	{
 		chr_message( chr, _,"That's not a scroll %d",id);
-		exit;
+		return;
 	}
 
 	new backpack = chr_getBackpack( chr );
@@ -32,13 +33,13 @@ public __inscription_copy(const chr, const target, const item)
 	if ( itm_contCountItems(backpack, 3636,0) < 1 )
 	{
 		chr_message( chr, _,"You dont have blank scroll in your backpack");
-		exit;
+		return;
 	}
 
-	if ( backpack != cont_ser && target ==-1 )
+	if ( backpack != cont_ser )
 	{
 		chr_message( chr, _,"It must be in your backpack");
-		exit;
+		return;
 	}
 
 	new skill_low;
@@ -96,7 +97,7 @@ public __inscription_copy(const chr, const target, const item)
 	{
 		//shouldnt happen
 		printf("Player %d tried to use rewrite on item %d", chr, item);
-		exit;
+		return;
 	}
 
 	if ( chr_checkSkill( chr, 23, skill_low, skill_hi, 1) )
@@ -129,7 +130,7 @@ public __inscription_copy(const chr, const target, const item)
 	}
 }
 
-static __inscription_book(const socket, const book)
+static __inscription_book(const chr, const book)
 {
 	new book_ser = itm_getProperty(book,IP_SERIAL);
 	new book_set = set_create();
@@ -148,9 +149,9 @@ static __inscription_book(const socket, const book)
 	}
 	set_delete( book_set );
 
-	mnu_prepare(socket,8,8);
-	mnu_setStyle(socket,MENUSTYLE_SCROLL, 0x481);
-	mnu_setTitle(socket,"Select spell");
+	mnu_prepare(chr,8,8);
+	mnu_setStyle(chr,MENUSTYLE_SCROLL, 0x481);
+	mnu_setTitle(chr,"Select spell");
 
 	for( i = 0; i < 8; i++)
 		for (j = 0 ; j < 8; j++)
@@ -160,18 +161,18 @@ static __inscription_book(const socket, const book)
 				//          printf("add %d %d %d^n",book_array[i*8+j],i,j);
 				new spell_name[50];
 				itm_getProperty(book_array[i*8+j],IP_STR_NAME,_,spell_name);
-				mnu_addItem(socket,i,j,spell_name);
+				mnu_addItem(chr,i,j,spell_name);
 			}
 			else
-				mnu_addItem(socket,i,j,"Empty");
+				mnu_addItem(chr,i,j,"Empty");
 		}
 
-	mnu_setCallback(socket, funcidx("__inscription_cbck"));
-	mnu_show(socket);
+	mnu_setCallback(chr, funcidx("__inscription_cbck"));
+	mnu_show(chr);
 }
 
-public __inscription_cbck(const socket,const pg,const idx)
+public __inscription_cbck( const chr, const pg, const idx )
 {
 	if ( book_array[pg*8+idx] !=0 )
-		__inscription_copy(socket,-2,book_array[pg*8+idx])
+		__inscription_copy( -1, chr, book_array[pg*8+idx] )
 }

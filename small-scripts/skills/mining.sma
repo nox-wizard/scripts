@@ -135,16 +135,13 @@ End Customizable Regions
  PURPOSE  :	This function is called by Nox-Wizard engine after land and skill control,
  		it chooses the picked up ore and put it in backpack.
  ****************************************************************************************/
-public __nxw_sk_mining(const s)
+public __nxw_sk_mining(const cc)
 {
-	if (s < 0) {
-		printf ("WARNING: SOCKET PASSED TO __nxw_sk_mining IS INVALID");
-		return;
-	}
+
 	new oreFound = IRON;	//Ore found if nothing else will be found by the miner.
 	new oreAmount = 1;
 	new index = 0;
-	new cc = getCharFromSocket(s);
+
 	new skill = chr_getSkill(cc, SK_MINING);
 	new region = -1;
 	if (ENABLE_REGIONS == 1) {
@@ -167,6 +164,7 @@ public __nxw_sk_mining(const s)
 				oreFound = index;
 		}
 	}
+
 	if (ENABLE_REGIONS == 1 && region < 0) oreFound = IRON;
 
         oreAmount = random(100);
@@ -175,7 +173,7 @@ public __nxw_sk_mining(const s)
 	}
 	/*if (skill >= 850 && random(99) >= 92) {
 		itm_spawnNecroItem(s, 1, "999");
-		ntprintf(s, "You place a gem in your pack.");
+		chr_message( cc, _, "You place a gem in your pack.");
 		return;
 	}*/
 	new str[50];	//Adjust the size if you create new ores with long names!
@@ -190,31 +188,27 @@ public __nxw_sk_mining(const s)
 	itm_setProperty( ore, IP_WEIGHT, _, 100 );
 	
 	itm_setProperty(ore, IP_WEIGHT, _, oreWeight[oreFound]);
-	ntprintf(s, "You place some %s in your pack.", str);
+	chr_message( cc, _, "You place some %s in your pack.", str);
 	itm_contPileItem( bp, ore );
 }
 
 
-public __nxw_smeltOre2(const s, const ore, const minskill, const id1, const id2, const col1, const col2, const orename[])
+public __nxw_smeltOre2( const cc, const ore, const minskill, const id, const color, const orename[])
 {
-    if (s < 0) {
-        printf("ERROR RUNNING __nxw_smeltOre2");
-        return;
-    }
-    new cc = getCharFromSocket(s);
+
     new skill = chr_getSkill(cc, SK_MINING);
     if (skill < minskill) {
-        ntprintf(s, "You have no idea what to do with this strange ore");
+        chr_message( cc, _, "You have no idea what to do with this strange ore");
         return;
     }
 
     new ore_amount = itm_getProperty(ore, IP_AMOUNT);
     if (!chr_checkSkill(cc, SK_MINING, 0, 1000, 1)) {
         if (ore_amount == 1) {
-            ntprintf(s, "Your hand slips and the last of your materials are destroyed.");
+            chr_message( cc, _, "Your hand slips and the last of your materials are destroyed.");
             itm_remove(ore);
         } else {
-            ntprintf(s, "Your hand slips and some of your materials are destroyed.");
+            chr_message( cc, _, "Your hand slips and some of your materials are destroyed.");
             itm_setProperty(ore, IP_AMOUNT, _, ore_amount/2);
             itm_refresh(ore);                   // tell the client item has been changed
         }
@@ -224,13 +218,12 @@ public __nxw_smeltOre2(const s, const ore, const minskill, const id1, const id2,
     new ingot = itm_createByDef( "$item_iron_ingots" );
 	itm_setProperty( ingot, IP_AMOUNT, _, numingots );
 	itm_setProperty( ingot, IP_STR_NAME, 0, orename );
-	new color = (col1<<8) + col2;
 	itm_setProperty( ingot, IP_COLOR, _, color );
 	itm_setContSerial( ingot, bp );
 	itm_setProperty( ingot, IP_WEIGHT, _, 100 );
 
-        ntprintf(s, "You have smelted your ore");
-        ntprintf(s, "You place some %s in your pack.",orename);
+    chr_message( cc, _, "You have smelted your ore");
+    chr_message( cc, _, "You place some %s in your pack.",orename);
 	itm_contPileItem( bp, ingot );
         itm_remove(ore);
     }
@@ -242,24 +235,24 @@ public __nxw_smeltOre2(const s, const ore, const minskill, const id1, const id2,
  PURPOSE  : The function called by Nox-Wizard engine to smelt ores
  ****************************************************************************/
 
-public __nxw_smeltOre(const s, const color1, const color2, ore)
+public __nxw_smeltOre(const chr, const color, ore)
 {
-	if (s < 0 || color1 < 0 || color2 < 0) {
+	if ( chr < 0 || color < 0) {
 		printf("ERROR RUNNING __nxw_smeltOre");
 		return;
 	}
-	new color = (color1 << 8) + color2;
+
 	new str[50];	//Adjust the size if you create new ores with long names!
 	new index = 0;
 	for (index = 0; index < NUM_ORES; index++) {
 		if (color == oreColor[index]) {
 			sprintf(str, "%s Ingot", oreName[index]);
-                        if (index == IRON) { //Iron and Silver have discordant ore/ingot colors
-				__nxw_smeltOre2(s, ore,   0, 0x1B, 0xF2, 0x09, 0x61,str);
+            if (index == IRON) { //Iron and Silver have discordant ore/ingot colors
+				__nxw_smeltOre2( chr, ore,   0, 0x1BF2, 0x0961, str);
 			} else if (index == SILVER) {
-				__nxw_smeltOre2(s, ore,   0, 0x1B, 0xF2, 0, 0,str);
+				__nxw_smeltOre2( chr, ore,   0, 0x1BF2, 0, str);
 			} else {
-				__nxw_smeltOre2(s, ore,   0, 0x1B, 0xF2, color1, color2,str);
+				__nxw_smeltOre2( chr, ore,   0, 0x1BF2, color, str);
 			}
 		}
 	}

@@ -69,7 +69,7 @@ public checkInitTailoring() {
 	
 }
 
-public _doCloth( const s, const cloth ) {
+public _doCloth( const chr, const cloth ) {
 
 	checkInitTailoring();
 	
@@ -94,7 +94,6 @@ public _doCloth( const s, const cloth ) {
 		return;
 	}
 	
-	new chr = getCharFromSocket(s);
 	chr_sound( chr, 0x0248 );
 
 	new cutcloth = itm_createInBpDef( cloths[type], chr, 40 );
@@ -112,12 +111,12 @@ public _doCloth( const s, const cloth ) {
  FUNCTION :	__nxw_sk_tailoring
  AUTHOR   :	Endymion
  ****************************************************************************************/
-public __nxw_sk_tailoring(const s, const itm)
+public __nxw_sk_tailoring(const cc, const itm)
 {
 	checkInitTailoring();
 	
-	if (s < 0) {
-		printf ("WARNING: SOCKET PASSED TO __nxw_sk_tailoring IS INVALID");
+	if (cc < 0) {
+		printf ("WARNING: CHARACTER PASSED TO __nxw_sk_tailoring IS INVALID");
 		return;
 	}
 
@@ -127,7 +126,6 @@ public __nxw_sk_tailoring(const s, const itm)
 	}
 	
 	//At this point, we're already sure that we're analyzing an cloth, because the engine did the check for us.
-	new cc = getCharFromSocket(s);
 	new type = INVALID;
 	new skill = chr_getSkill(cc, SK_TAILORING);
 	//new color = itm_getProperty(itm, IP_COLOR);  Fax 28-11-03: color is unused.. why?
@@ -144,7 +142,7 @@ public __nxw_sk_tailoring(const s, const itm)
 		return;
 	}
 	if (skill < clothSkill[type]) {
-		ntprintf(s, "You are not skilled enough for this kind of material.");
+		chr_message( cc, _, "You are not skilled enough for this kind of material.");
 		return;
 	}
 	chr_skillMakeMenu(cc, clothMakeMenu[type], SK_TAILORING, itm);

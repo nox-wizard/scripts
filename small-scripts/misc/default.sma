@@ -12,19 +12,20 @@
  PURPOSE  : implements milkable cows, through ITEMS $item_jar_for_milk and
             $item_a_jar_full_of_milk
  ****************************************************************************/
-public __get_milk_target(const itm, const s)
+public __get_milk_target( const itm, const chr )
 {
     bypass();
-    getTarget(s, funcidx("__get_milk_from_cow"), "Choose the cow to milk...");
+    chr_message( chr, _, "Choose the cow to milk...");
+	target_create( chr, _, _, _, "__get_milk_from_cow" );
 }
 
-public __get_milk_from_cow( const cc, const c, const this_is_useless)
+public __get_milk_from_cow( const t, const cc, const c, const x, const y, const z, const model, const param1 )
 {
-    //something wrong : goes out and drops trigging
-    if ((c<0)||(s<0)) return;
+    
+    if ( c<0 ) //something wrong : goes out and drops trigging
+    	return;
 
-
-    new id = (chr_getProperty(c, CP_ID, 2)<<8) + chr_getProperty(c, CP_ID, 1);
+    new id = (chr_getProperty(c, CP_ID )<<8) + chr_getProperty(c, CP_ID, 1);
 
     if ((id!=0xD8)&&(id!=0xE7)) {
         chr_message( cc, _, "It's not  cow!!!");
@@ -120,21 +121,6 @@ public __crystBall (const ball, const cc)
     chr_message( cc, _, "You have died %d times", deaths);
 
     itm_reduceAmount(ball, 1);
-}
-
-
-/****************************************************************************
- FUNCTION : __nxwGumps
- AUTHOR   : Juliunus
- PURPOSE  : support for user-scripted gumps
- ****************************************************************************/
-public __nxwGumps(const s, const gump, const button, const radio)
-{
-//	printf("Gump: %d, Button: %d, S: %d", gump, button, s);
-    switch (gump)
-	{
-	default: nprintf(s,"Warning : no behavior defined for button %d, from gump number %d, radio value %d",button, gump, radio);
-	}
 }
 
 
