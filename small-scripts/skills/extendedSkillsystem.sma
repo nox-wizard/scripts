@@ -328,7 +328,7 @@ public startExtSkillsystem(const chr)
 		chr_addLocalIntVec(chr,CLV_ADDITIONALSKILLS,SK_ADDITIONAL_COUNT,0);
 		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
 		{
-			chr_message(chr,_,msg_sk_miscDef[3]);
+			chr_message(chr,_,"An error occurred while creating additional skills, please contact a GM");
 			log_error("^nUnable to create local var %d (skills)for char %d - error: %d",CLV_ADDITIONALSKILLS,chr,chr_getLocalVarErr());
 			return;	
 		}
@@ -336,7 +336,7 @@ public startExtSkillsystem(const chr)
 		chr_addLocalIntVec(chr,CLV_ADDITIONALSKILLSBASE,SK_ADDITIONAL_COUNT,0);
 		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
 		{
-			chr_message(chr,_,msg_sk_miscDef[3]);
+			chr_message(chr,_,"An error occurred while creating additional skills, please contact a GM");
 			log_error("^nUnable to create local var %d (base skills) for char %d - error: %d",CLV_ADDITIONALSKILLSBASE,chr,chr_getLocalVarErr());
 			return;	
 		}

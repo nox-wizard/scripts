@@ -11,7 +11,7 @@ static book_array[NUM_SCROLLS];  //scrolls in a spellbook
 */
 public __nxw_sk_inscript( const chr )
 {
-	chr_message( chr, _, msg_sk_inscripDef[0]);
+	chr_message( chr, _, "Select scroll...");
 	target_create( chr, _, _, _, "__inscriptTarget" );
 }
 
@@ -26,7 +26,7 @@ public __inscriptTarget( const t, const chr, const item, const x, const y, const
 {	    
 	if (!isItem(item))
 	{
-		chr_message(chr,_,msg_sk_inscripDef[1]);
+		chr_message(chr,_,"What are you trying to do?");
 	    	return;
 	}
 	
@@ -45,7 +45,7 @@ public __inscriptTarget( const t, const chr, const item, const x, const y, const
 		return;
 	}
 
-	chr_message( chr, _,msg_sk_inscripDef[2] ,id);
+	chr_message( chr, _,"That's not a scroll %d",id);
 }
 
 static __inscription_scroll(const chr, const scroll)
@@ -57,14 +57,14 @@ static __inscription_scroll(const chr, const scroll)
 	new cont_ser = itm_getProperty(scroll,IP_CONTAINERSERIAL);
 	if ( backpack != cont_ser )
 	{
-		chr_message( chr, _,msg_sk_inscripDef[3]);
+		chr_message( chr, _,"It must be in your backpack");
 		return;
 	}
 
 	//count blank scrolls in backpack
 	if ( itm_contCountItems(backpack, 3636,0) < 1 )
 	{
-		chr_message( chr, _,msg_sk_inscripDef[4]);
+		chr_message( chr, _,"You dont have blank scroll in your backpack");
 		return;
 	}
 	
@@ -88,7 +88,7 @@ static __inscription_scroll(const chr, const scroll)
 	{
 		itm_contDelAmount(backpack, 1, BLANK_SCROLL_ID );
 		itm_createInBp(id, chr );
-		chr_message( chr, _,msg_sk_inscripDef[5]);
+		chr_message( chr, _,"You success to copy that spell");
 	}
 	
 	//else see if character only fails or destroys the scroll too
@@ -98,15 +98,15 @@ static __inscription_scroll(const chr, const scroll)
 		itm_contDelAmount(backpack, 1, BLANK_SCROLL_ID );
 		switch(luck)
 		{
-		case 0..80: chr_message( chr, _,msg_sk_inscripDef[6]);
+		case 0..80: chr_message( chr, _,"You failed to copy that spell");
 		case 81..90:
 			{
-				chr_message( chr, _,msg_sk_inscripDef[7]);
+				chr_message( chr, _,"You destroyed the orginal scroll !");
 				itm_reduceAmount(scroll,1);
 			}
 		case 91..100:
 			{
-				chr_message( chr, _,msg_sk_inscripDef[8]);
+				chr_message( chr, _,"You suffered serious magic damage !");
 				chr_damage( chr, random(8)*skill_hi/10 );
 				magic_castExplosion( chr, chr, 0);
 			}
@@ -138,7 +138,7 @@ static __inscription_book(const chr, const book)
 	//build a menu to select scrolls in the book
 	mnu_prepare(chr,8,8);
 	mnu_setStyle(chr,MENUSTYLE_SCROLL, 0x481);
-	mnu_setTitle(chr,);
+	mnu_setTitle(chr,"Select spell");
 
 	new i,j;
 	for( i = 0; i < 8; i++)
@@ -151,7 +151,7 @@ static __inscription_book(const chr, const book)
 				mnu_addItem(chr,i,j,spell_name);
 			}
 			else
-				mnu_addItem(chr,i,j,msg_sk_inscripDef[10]);
+				mnu_addItem(chr,i,j,"Empty");
 		}
 	mnu_setCallback(chr, funcidx("__inscription_cbck"));
 	mnu_show(chr);

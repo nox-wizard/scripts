@@ -85,7 +85,7 @@ public _doCloth( const chr, const cloth ) {
 	}
 	
 	if(type == INVALID) {
-		printf ("WARNING: _doCloth received an unknown bolt of cloth %d", type);
+		printf ("WARNING: _doCloth received an unknown bolt of cloth");
 		return;
 	}
 	
@@ -142,7 +142,7 @@ public __nxw_sk_tailoring(const cc, const itm)
 		return;
 	}
 	if (skill < clothSkill[type]) {
-		chr_message( cc, _, msg_sk_tailorDef[0]);
+		chr_message( cc, _, "You are not skilled enough for this kind of material.");
 		return;
 	}
 	chr_skillMakeMenu(cc, clothMakeMenu[type], SK_TAILORING, itm);

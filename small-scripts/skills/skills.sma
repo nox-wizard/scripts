@@ -64,13 +64,13 @@ public __nxw_sk_main(const chr, const skill_num)
 	
 	if ( !chr_isGM( chr ) && chr_getProperty(chr, CP_SKILLDELAY) > getCurrentTime() ) 
 	{
-		chr_message( chr, _, msg_sk_mainDef[0]);
+		chr_message( chr, _, "You must wait a few moments before using another skill.");
 		return;
 	}
 	
 	if (chr_getProperty(chr, CP_DEAD) == 1) 
 	{
-		chr_message( chr, _, msg_sk_mainDef[1]);
+		chr_message( chr, _, "You cannot do that as a ghost.");
 		return;
 	}
 	
@@ -87,170 +87,170 @@ public __nxw_sk_main(const chr, const skill_num)
 
 public __nxw_sk_animalLore(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_itemId(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_armsLore(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_begging(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_peace(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_camping(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_cartography(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_cooking(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_dtchidden(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_enticement(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_healing(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_forensic(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_herding(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_provocat(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_lockpick(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_magery(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_magicRes(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_tactics(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_snooping(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_musician(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_poisoning(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_archery(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_spiritSp(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_stealing(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_tinkering(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_veterinary(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_sword(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_mace(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_fencing(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_wrestling(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_lumberjack(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_meditation(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_stealth(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }
 
 public __nxw_sk_removeTrap(const chr)
 {
-	chr_message(chr,_,msg_sk_mainDef[2]);
+	chr_message(chr,_,"This skill is not yet implemented, use the standard skills menu");
 }

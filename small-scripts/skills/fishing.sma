@@ -19,10 +19,10 @@ public __nxw_sk_fishing(const item, const chr)
 	bypass();
 	if(itm_getProperty(item, IP_LAYER) == 0)
 	{
-		chr_message(chr, _ , msg_sk_fishDef[0]);
+		chr_message(chr, _ , "You have to equip it!");
 		return;
 	}
-	chr_message( chr, _ , msg_sk_fishDef[1]);
+	chr_message( chr, _ , "Where do you want to fish?");
 	target_create( chr, _ , _, _, "__fishingTarget" );
 }
 
@@ -30,7 +30,7 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 {
 	if ((x < 0) || (target < 0))
 	{
-		chr_message(chr, _ , msg_sk_fishDef[2]);
+		chr_message(chr, _ , "Invalid target");
 		return;
 	}
 	new xx = chr_getProperty(chr, CP_POSITION, CP2_X);
@@ -39,7 +39,7 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 	new disty = (y - yy);
 	if((distx > 6) || (distx < -6) || (disty < -6) || (disty > 6))
 	{
-		chr_message(chr, _ , msg_sk_fishDef[3]);
+		chr_message(chr, _ , "This is too far!");
 		return;
 	}
 	
@@ -49,13 +49,13 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 		tile = map_getFloorTileID(x, y);
 		if((tile < 168) || (tile > 171))
 		{
-			chr_message(chr, _ , msg_sk_fishDef[4]);
+			chr_message(chr, _ , "You can't fish here!");
 			return;
 		}
 	}
 	else if((6066 < tile) || (tile < 6039))
 	{
-		chr_message(chr, _ , msg_sk_fishDef[4]);
+		chr_message(chr, _ , "You can't fish here!");
 		return
 	}
 	
@@ -66,10 +66,10 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 	{
 		if(random(100) > 8)
 		{
-			chr_message(chr, _ , msg_sk_fishDef[5]);
+			chr_message(chr, _ , "You didn't catch any fish...");
 			return;
 		}
-		chr_message(chr, _ , msg_sk_fishDef[6]);
+		chr_message(chr, _ , "You caught a ... water elemental!");
 		new npc = chr_addNPC(22, x, y, z);
 		chr_sound(npc, 40);
 		chr_moveTo(npc, x, y, z);
@@ -92,14 +92,14 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 	
 	switch(nmb)
 	{
-		case 0: chr_message(chr, _ , msg_sk_fishDef[7]);
-		case 1: chr_message(chr, _ , msg_sk_fishDef[8]);
-		case 2..3: chr_message(chr, _ , msg_sk_fishDef[9]);
-		case 4: chr_message(chr, _ , msg_sk_fishDef[10]);
-		case 5: chr_message(chr, _ , msg_sk_fishDef[11]);
-		case 6: chr_message(chr, _ , msg_sk_fishDef[12]);
-		case 7..9: chr_message(chr, _ , msg_sk_fishDef[13]);
-		default: chr_message(chr, _, msg_sk_fishDef[14]);
+		case 0: chr_message(chr, _ , "You caught a fish!");
+		case 1: chr_message(chr, _ , "Hah, the old boots...");
+		case 2..3: chr_message(chr, _ , "Hmm, good painting...");
+		case 4: chr_message(chr, _ , "It could be tasty....");
+		case 5: chr_message(chr, _ , "Yhm...");
+		case 6: chr_message(chr, _ , "You are now the owner of a strong, good chest!");
+		case 7..9: chr_message(chr, _ , "Hmm, a strange magic item!");
+		default: chr_message(chr, _, "Unknown.");
 	}
 }
 

@@ -34,16 +34,16 @@ loguseskill,
 logscriptname: 9
 }
 static logProperty[NUM_LOGS][] = {
-{700, 000, 100, 0x00fb, msg_sk_lumbDef[0], 000, "pine"},
-{700, 150, 60, 0x0095, msg_sk_lumbDef[1], 650, "yew"},
-{700, 250, 55, 0x015e, msg_sk_lumbDef[2], 700, "maple"},
-{700, 350, 50, 0x0283, msg_sk_lumbDef[3], 750, "alder"},
-{700, 450, 45, 0x02eb, msg_sk_lumbDef[4], 790, "walnut"},
-{700, 550, 40, 0x06b9, msg_sk_lumbDef[5], 800, "cedar"},
-{700, 650, 35, 0x01c0, msg_sk_lumbDef[6], 850, "oak"},
-{700, 750, 30, 0x0159, msg_sk_lumbDef[7], 900, "beech"},
-{700, 850, 25, 0x01ba, msg_sk_lumbDef[8], 950, "mahogany"},
-{700, 950, 20, 0x0345, msg_sk_lumbDef[9], 990, "ebony"}
+{700, 000, 100, 0x00fb, "pine    ", 000, "pine"},
+{700, 150, 60, 0x0095, "yew     ", 650, "yew"},
+{700, 250, 55, 0x015e, "maple   ", 700, "maple"},
+{700, 350, 50, 0x0283, "alder   ", 750, "alder"},
+{700, 450, 45, 0x02eb, "walnut  ", 790, "walnut"},
+{700, 550, 40, 0x06b9, "cedar   ", 800, "cedar"},
+{700, 650, 35, 0x01c0, "oak     ", 850, "oak"},
+{700, 750, 30, 0x0159, "beech   ", 900, "beech"},
+{700, 850, 25, 0x01ba, "mahogany", 950, "mahogany"},
+{700, 950, 20, 0x0345, "ebony   ", 990, "ebony"}
 };
 
 /*----------------------------------------------------------------------------------------
@@ -166,6 +166,112 @@ static itemcarpDef[NUM_woodITEMS][carpprop]={
 {40, 947, 1000, 967, 19, "_bigbed_headright_A2_1"}
 };
 
+/*customizable ingame messages*/
+const NUM_carpSENTENCE = 101;
+static msg_carpenterDef[NUM_carpSENTENCE][]={
+"You need a saw inside your backpack!", //0
+"Which boards do you want to use?", //1
+"You need at least one pack nails.", //2
+"The boards need to be in your backpack.", //3
+"You are not skilled enough to use this boards.", //4
+"You have to choose boards to use.", //5
+"     carpenter menu", //6
+"normal tables 1", //7
+"normal tables 2", //8
+"normal tables 3", //9
+"other furniture", //10
+"benchs",
+"chairs",
+"small beds",
+"big beds",
+"last crafted", //15
+"     normal tables 1 Menu!",
+"Counter 1",
+"Counter 2",
+"Table A 1",
+"Table A 2", //20
+"Table B 1",
+"Table B 2",
+"Table B 3",
+"Table B 4",
+"Table B 5",
+"Table E ",
+"     normal tables 2 Menue!",
+"Table C 1",
+"Table C 2",
+"Table D 1", //30
+"Table D 2",
+"Table D 3",
+"Table D 4",
+"Table D 5",
+"Table E",
+"Table F",
+"Table G 1",
+"Table G 2",
+"     normal table 3 menu!",
+"Table H 1", //40
+"Table H 2",
+"Table H 3",
+"Table I",
+"Table J",
+"Table K",
+"Table L",
+"Table M 1",
+"Table M 2", //48
+"     other furniture menu!",
+"Writing desk", //50
+"Chest of drawers",
+"Fancy chest of drawers",
+"Dresser 1",
+"Dresser 2",
+"Armoire",
+"Fancy armoire",
+"filled bookcase 1",
+"filled bookcase 2",
+"filled bookcase 3",
+"empty bookcase", //60
+"     benches menu!",
+"Bench A1",
+"Bench A2",
+"Bench A3",
+"Bench B1",
+"Bench B2",
+"Bench B3",
+"Bench C1",
+"Bench C2",
+"Bench D", //70
+"     chairs menu!",
+"Stool A",
+"Stool B",
+"Throne",
+"Chair 1",
+"Chair 2",
+"Fancy chair 1",
+"Fancy chair 2",
+"Straw chair",
+"     small beds menu!", //80
+"Bed headboard A1",
+"Bed headboard A2",
+"Bed headboard A3",
+"Bed headboard A4",
+"Bed feet A1",
+"Bed feet A2",
+"Bed feet A3",
+"     big beds menu!",
+"Bed head left A1",
+"Bed feet left A1",//90
+"Bed feet right A1",
+"Bed head right A1",
+"Bed head left A2",
+"Bed feet left A2",
+"Bed feet right A2",
+"Bed head right A2",
+"Bed feet A5",
+"     big beds menu!",
+"You have no idea how to make this.",
+"You don't have enough boards."
+};
+
 
 /*----------------------------------------------------------------------------------------*\
 End Customizable carpenter system
@@ -222,7 +328,7 @@ public __nxw_sk_lumber(const cc)
 	new str[50];//Adjust the size if you create new logs with long names!
 	sprintf(str, "%s", logProperty[logFound][logname]);
 	trim(str);   //remove triming spaces
-	sprintf(str, msg_sk_lumbDef[10], str);
+	sprintf(str, "%s wood", str);
 	new backpack = chr_getBackpack( cc, true );
 	new log = itm_createByDef( "$item_logs", backpack );
 	itm_setProperty( log, IP_AMOUNT, _, logAmount );
@@ -231,7 +337,7 @@ public __nxw_sk_lumber(const cc)
 	itm_setProperty(log, IP_STR_NAME, 0, str);
 	itm_contPileItem( backpack, log );
 	itm_refresh(log);
-	chr_message( cc, _, msg_sk_lumbDef[11], str);
+	chr_message( cc, _, "You lumber some %s and put it in your pack.", str);
 }
 
 /****************************************************************************
@@ -253,7 +359,7 @@ public _cutlog(const log, const cc)
               new minskill = logProperty[index][1]
               if (skill < minskill)
               {
-                     chr_message( cc, _, msg_sk_lumbDef[12]);
+                     chr_message( cc, _, "You are too unexperienced to work with this kind of wood");
                      return;
               }
               new log_amount = itm_getProperty(log, IP_AMOUNT);
@@ -261,12 +367,12 @@ public _cutlog(const log, const cc)
               {
                      if (log_amount == 1)
                      {
-                     chr_message( cc, _, msg_sk_lumbDef[13]);
+                     chr_message( cc, _, "Your hand slips and you destroy the left over wood.");
                      itm_remove(log);
                      }
                      else
                      {
-                     chr_message( cc, _, msg_sk_lumbDef[14]);
+                     chr_message( cc, _, "Euch rutscht die Hand aus und ein Teil des woodes ist Abfall.");
                      itm_setProperty(log, IP_AMOUNT, _, log_amount/2);
                      itm_refresh(log); // tell the client item has been changed
                      }
@@ -277,14 +383,15 @@ public _cutlog(const log, const cc)
                new boardname[50]
                sprintf(boardname, "%s", logProperty[index][logname]);
                trim(boardname);   //remove triming spaces
-               sprintf(boardname, msg_sk_lumbDef[15], boardname);
+               sprintf(boardname, "%s board", boardname);
                new backpack = chr_getBackpack( cc, true );
                new board = itm_createByDef( "$item_boards", backpack );
                itm_setProperty(board, IP_WEIGHT, _, 100);
                itm_setProperty(board, IP_COLOR, _,logProperty[index][3]);
                itm_setProperty(board, IP_STR_NAME, 0, boardname);
                itm_refresh(board);
-               chr_message( cc, _, msg_sk_lumbDef[16] ,boardname);
+               chr_message( cc, _, "You create boards out of the wood.");
+               chr_message( cc, _, "Carefully you put the %s in your pack.",boardname);
                itm_remove(log);
                }
         }//color if
@@ -735,7 +842,7 @@ switch(colornum)//get color name
        case 0345:  sprintf(color, "%s", logProperty[7][logscriptname]); //beech
        case 0442:  sprintf(color, "%s", logProperty[8][logscriptname]); //mahogany
        case 0837:  sprintf(color, "%s", logProperty[9][logscriptname]); //ebony
-       default: chr_message( chr, _, msg_carpenterDef[101], colornum);
+       default: chr_message( chr, _, "wood of unknown color!");
 }
 trim(color);   //remove triming spaces
 new name[50];
