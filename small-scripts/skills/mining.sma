@@ -180,7 +180,8 @@ public __nxw_sk_mining(const s)
 	}*/
 	new str[50];	//Adjust the size if you create new ores with long names!
 	sprintf(str, "%s ore", oreName[oreFound]);
-	new bp = itm_getCharBackPack( cc );
+	
+	new bp = chr_getBackpack( cc, true );
 	new ore = itm_createByDef( "$item_iron_ore" );
 	itm_setProperty( ore, IP_AMOUNT, _, oreAmount );
 	itm_setProperty( ore, IP_STR_NAME, 0, str );
@@ -219,8 +220,8 @@ public __nxw_smeltOre2(const s, const ore, const minskill, const id1, const id2,
         }
     } else {
         new numingots=ore_amount*2;         // one ore gives two ingots
-	new bp = itm_getCharBackPack( cc );
-        new ingot = itm_createByDef( "$item_iron_ingots" );
+	new bp = chr_getBackpack( cc, true );
+    new ingot = itm_createByDef( "$item_iron_ingots" );
 	itm_setProperty( ingot, IP_AMOUNT, _, numingots );
 	itm_setProperty( ingot, IP_STR_NAME, 0, orename );
 	new color = (col1<<8) + col2;

@@ -22,18 +22,16 @@ public __nxw_sk_lumber(const s)
 		return;
 	}
 	new cc = getCharFromSocket(s);
-	new bp = itm_getCharBackPack( cc );
-	    
-	new logs = itm_createByDef( "$item_logs" );
-	if (logs == -1) return;
-	itm_setProperty( logs, IP_AMOUNT, _, NXW_LUMBERLOGS );
-	itm_setContSerial( logs, bp );
-	if (itm_getProperty(logs, IP_AMOUNT) > NXW_LUMBERLOGS) {
+
+	new logs = itm_createInBpDef( "$item_logs", cc, NXW_LUMBERLOGS );
+	if (logs == INVALID) 
+		return;
+	
+	if( itm_getProperty(logs, IP_AMOUNT) > NXW_LUMBERLOGS ) {
 		ntprintf(s, "You place more logs in your pack.");
 	} else {
 		ntprintf(s, "You place some logs in your pack.");
 	}
 
-	itm_contPileItem( bp, logs ); 
 }
 

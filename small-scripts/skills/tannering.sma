@@ -102,8 +102,7 @@ public _doLeatherPiece( const s, const hide ) {
 	new chr = getCharFromSocket(s);
 	chr_sound( chr, 0x0248 );
 
-	new bp = itm_getCharBackPack( chr );
-	new leather = itm_createByDef( leathers[type], bp, 2 );
+	new leather = itm_createInBpDef( leathers[type], chr, 2 );
 	itm_reduceAmount( hide, 1 );
 	
 }

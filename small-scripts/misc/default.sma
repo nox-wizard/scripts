@@ -46,7 +46,7 @@ public __get_milk_from_cow(const s, const c, const this_is_useless)
         return;
     }
 
-    itm_contDelAmount(itm_getCharBackPack(cc), 1, 0x1005);
+    itm_contDelAmount( chr_getBackpack(cc), 1, 0x1005);
     itm_createInBp( 199001, c);
 
     chr_setProperty(c, CP_DISABLED, 0 , getCurrentTime()+60000);
@@ -163,9 +163,11 @@ public __smoke(const itm, const s)
 {
 	bypass();
     new c = getCharFromSocket(s);
-    new container = itm_getMultiByteProperty(itm, IP_CONTAINERSERIAL);
-	if (!container) itm_remove(itm);
-	if (container) itm_contDelAmount(container, 1, itm_getProperty(itm, IP_ID), itm_getProperty(itm, IP_COLOR));
+    new container = itm_getProperty(itm, IP_CONTAINERSERIAL);
+	if( container==INVALID )
+		itm_remove(itm);
+	else 
+		itm_contDelAmount(container, 1, itm_getProperty(itm, IP_ID), itm_getProperty(itm, IP_COLOR));
     nprintf(s, "You start smoking");
     timer_add(c, 5, 0, funcidx("__smoke_cback"), 0, 5, 0 );
 }

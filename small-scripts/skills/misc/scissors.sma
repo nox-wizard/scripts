@@ -34,8 +34,7 @@ public _scissorsTarget( const s, const target, const itm )
 
 		chr_sound( chr, 0x0248 );
 		ntprintf(s,"You cut some cloth into bandages, and put it in your backpack");
-		new bp = itm_getCharBackPack( chr );
-		new benda = itm_createByDef( "$item_clean_bandages", bp, 3 );
+		new benda = itm_createInBpDef( "$item_clean_bandages", chr, 3 );
 		itm_reduceAmount(itm, 1);
 		
 	}

@@ -94,7 +94,6 @@
 // Include the NoX-Wizard small scripts
 //
 #include "small-scripts/include/nxw_lib"
-#include "small-scripts/race/menu/menu.sma"
 #include "small-scripts/calendar/calendar.sma"
 #include "small-scripts/skills/skills.sma"
 #include "small-scripts/misc/default.sma"
@@ -104,6 +103,7 @@
 #include "small-scripts/guild/guildstone.sma"
 #include "small-scripts/check/check.sma"
 #include "small-scripts/skills/misc/scissors.sma"
+#include "small-scripts/race/menu/menu.sma"
 //
 // Include the Shard's script
 //

@@ -27,8 +27,7 @@ public __inscription_copy(const socket, const target, const item)
 	}
 
 	new chr = getCharFromSocket(socket);
-	new backpack = itm_getCharBackPack( chr );
-	new backpack_ser = itm_getProperty(backpack,IP_SERIAL);
+	new backpack = chr_getBackpack( chr );
 	new cont_ser = itm_getProperty(item,IP_CONTAINERSERIAL);
 
 	if ( itm_contCountItems(backpack, 3636,0) < 1 )
@@ -37,7 +36,7 @@ public __inscription_copy(const socket, const target, const item)
 		exit;
 	}
 
-	if ( backpack_ser != cont_ser && target ==-1 )
+	if ( backpack != cont_ser && target ==-1 )
 	{
 		nprintf(socket,"It must be in your backpack");
 		exit;

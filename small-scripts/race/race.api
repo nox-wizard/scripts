@@ -2,3 +2,4 @@
 native race_getProperty( const race, const property, const subProp=0, ... );
 
 native race_getGlobalProp( const property, const subProp=0, ... );
+

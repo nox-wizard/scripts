@@ -97,8 +97,7 @@ public _doCloth( const s, const cloth ) {
 	new chr = getCharFromSocket(s);
 	chr_sound( chr, 0x0248 );
 
-	new bp = itm_getCharBackPack( chr );
-	new cutcloth = itm_createByDef( cloths[type], bp, 40 );
+	new cutcloth = itm_createInBpDef( cloths[type], chr, 40 );
 
 	itm_reduceAmount( cloth, 1 );
 

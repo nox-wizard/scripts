@@ -413,3 +413,4 @@ public race_make( const socket, const menu, const race, const chr )
 
 }
 
+}
