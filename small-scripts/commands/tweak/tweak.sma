@@ -2038,7 +2038,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        		else if(linetype == 5) //radiobutton
 		        		{
 		        			checked = gui_getProperty(twkChrMenu,MP_RADIO,i);
-		        			new privvalue = chr_twkarray[i][ct_propval];
+		        			new privvalue = chr_twkarray[i][ct_infotype];
 		        			if(type == 121) //bitfields (for example visibility)
 						{
 							new originalvalue = chr_getProperty( target,type)&privvalue;
