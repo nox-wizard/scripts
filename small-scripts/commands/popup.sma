@@ -23,12 +23,10 @@ to say that a popup has been submitted
 */
 public cmd_popup(const chr)
 {
-	new speech[200],temp[25],message[100];
+	new name[50],message[200];
 
-	chr_getProperty(chr,CP_STR_SPEECH,0,speech);
-	str2Token(speech,temp,0,speech,0);
-
-	strcpy(message,speech);
+	chr_getSpeech(chr,message);
+	
 	trim(message);
 	
 	new lasti;

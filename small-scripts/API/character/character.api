@@ -92,7 +92,18 @@ for addressing subproperties
 */
 native chr_setProperty(const chr, const property, const subprop=0, ...);
 
+/*!
+\author Frodo
+\fn chr_getSpeech(char, speech[], no_command = true)
+\param chr: the character
+\param speech[]: the string that will be filled with speech
+\param no_command: if tru, the command name will be deleted, useful only with commands
+\since 0.82
+\brief returns a character's speech
+\return the speech
+*/
 
+native chr_getSpeech(const chr, speech[], no_command = true)
 //============================= PRIVS ===============================
 /** \defgroup script_API_character_privs Privileges
  *  @{

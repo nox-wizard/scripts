@@ -14,11 +14,13 @@
 */
 public cmd_sysm(const chr)
 {
-	new speech[200],message[200],temp[20];
+	new message[200],name[50];
 
-	chr_getProperty(chr,CP_STR_SPEECH,0,speech);
-	str2Token(speech,temp,0,message,0);
-
+	chr_getSpeech(chr,message);
+	
+	chr_getProperty(chr,CP_STR_NAME,0,name);
+	sprintf(message,"%s: %s",name,message);
+	
 	broadcast(message);
 }
 

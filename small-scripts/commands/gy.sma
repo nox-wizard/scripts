@@ -16,13 +16,12 @@
 */
 public cmd_gy(const chr)
 {
-	new speech[200],message[200],temp[20];
+	new message[200],name[50];
 
-	chr_getProperty(chr,CP_STR_SPEECH,0,speech);
-	str2Token(speech,temp,0,message,0);
-	chr_getProperty(chr,CP_STR_NAME,0,temp);
+	chr_getSpeech(chr,message);
+	chr_getProperty(chr,CP_STR_NAME,0,name);
 	
-	sprintf(message,"%s: %s",temp,message);
+	sprintf(message,"%s: %s",name,message);
 	new chr2 = INVALID;
 	for(set_rewind(__onlineStaff);!set_end(__onlineStaff);)
 	{
