@@ -71,7 +71,7 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 	z = chr_getProperty( master, CP_POSITION, CP2_Z );
 #endif
 
-	new gui = gui_create( 40, 40, true, true, true, "guildgui_callback" );
+	new gui = gui_create( 40, 40, true, true, true, "guildgui_new" );
 	gui_addGump( gui, 0, 0, 0x04CC, 0 );
 	gui_setProperty( gui, MP_BUFFER, 0, deed );
 	gui_setProperty( gui, MP_BUFFER, 1, x );
@@ -85,7 +85,7 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 	
 }
 
-public guildgui_callback( const socket, const gui, const button )
+public guildgui_new( const socket, const gui, const button )
 {
 	if( button<=MENU_CLOSED )
 		return;
@@ -119,12 +119,13 @@ public guildgui_callback( const socket, const gui, const button )
 
 
 /*!
-\author Doctor X
+\author Endymion
 \fn guild_dclickStone( const guild, const socket )
 \brief a guild stone double-click
 */
 public guild_dclickStone( const guild, const socket )
 {
+	guildgui_show( guild, getCharFromSocket( socket ) );
 	bypass();
 }
 
@@ -137,7 +138,7 @@ public guild_sclickStone( const guild, const socket )
 {
 	new guildName[64];
 	guild_getProperty( guild, GP_STR_NAME, _, guildName );
-	sprintf( guildName, "Guildstone for %s", guildName );
+	sprintf( guildName, "Guildstone of %s", guildName );
 	itm_speech( socket, guild, guildName );
 	bypass();
 }

@@ -48,3 +48,49 @@ public _guild_createStandardGuild( const stone, const master )
 	
 	return guild;
 }
+
+public	guildgui_show( const guild, const who )
+{
+	if( guild==INVALID )
+		return;
+		
+	if( guild!=chr_getGuild( who ) ) 
+		guildgui_notmember( guild, who );
+	else
+		guildgui_member( guild, who );
+	
+}
+
+public guildgui_notmember( const guild, const who )
+{
+	new gui = gui_create( 40, 40, true, true, true, "guildgui_notmemberH" );
+	gui_addGump( gui, 0, 0, 0x04CC, 0 );
+	gui_setProperty( gui, MP_BUFFER, 0, guild );
+	
+	new name[100];
+	guild_getProperty( guild, GP_STR_NAME, _, name );
+	
+	new abbr[100];
+	guild_getProperty( guild, GP_STR_ABBREVIATION, _, abbr );
+	
+	gui_addText( gui, 20, 20, _, "Guild of %s [ %s ]", name, abbr );
+	gui_show( gui, who );
+}
+
+public guildgui_member( const guild, const member )
+{
+	new gui = gui_create( 40, 40, true, true, true, "guildgui_notmemberH" );
+	gui_addGump( gui, 0, 0, 0x04CC, 0 );
+	gui_setProperty( gui, MP_BUFFER, 0, guild );
+	
+	new name[100];
+	guild_getProperty( guild, GP_STR_NAME, _, name );
+	
+	new abbr[100];
+	guild_getProperty( guild, GP_STR_ABBREVIATION, _, abbr );
+	
+	gui_addText( gui, 20, 20, _, "Guild of %s [ %s ]", name, abbr );
+	gui_show( gui, member );
+	
+}
+

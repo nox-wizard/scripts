@@ -373,13 +373,14 @@ native chr_calcDef (const chr);
 native chr_fish (const chr);
 
 /*!
-\author Sparhawk
-\since 0.82.rc3
+\brief Get guild of character
+\author Endymion
 \fn chr_getGuild( const chr )
-\brief Get guild serial for new guild system
 */
-native chr_getGuild( const chr );
-
+public chr_getGuild( const chr )
+{
+	return chr_getProperty( chr, CP_GUILD );
+}
 
 /*!
 \author Xanathar

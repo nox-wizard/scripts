@@ -81,7 +81,6 @@ native guild_addRecruit( const guild, const chr );
 */
 native guild_refuseRecruit( const guild, const chr );
 
-
 /*!
 \brief set a guild member property
 \author Endymion
