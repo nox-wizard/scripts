@@ -1,5 +1,12 @@
-// Define the gump id
-// Note: users gumps must have an id >= 999
+/*!
+\file
+\brief Gumps' usage example 
+*/
+
+/*!
+\brief Define the gump id
+\note users gumps must have an id >= 999
+*/
 #define MYGUMP 1000
 
 const btnFirst = 1;
