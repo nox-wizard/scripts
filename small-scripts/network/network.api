@@ -18,6 +18,15 @@
 native getSocketCount();
 
 /*!
+\brief Tell if a socket is valid
+\author Luxor
+*/
+public isValidSocket( const socket )
+{
+	return ( socket >= 0 && socket < getSocketCount() );
+}
+
+/*!
 \author Xanathar
 \since 0.10
 \fn getCurrentSocket()

@@ -10,7 +10,7 @@
 #endif
 #define _nxw_character_api_
 
-#include "small-scripts/include/nxw_lib"
+#include "../include/nxw_lib"
 
 /*!
 \brief Check if a serial is a char serial
@@ -420,13 +420,6 @@ native chr_unmountHorse(const chr);
 native chr_mountHorse(const chr, const horse_chr);
 
 /*!
-\brief Equip given item
-\author Endymion
-\fn chr_equip(const chr, const item)
-*/
-native chr_equip(const chr, const item);
-
-/*!
 \author Xanathar
 \fn chr_resurrect(const chr)
 \brief
@@ -671,15 +664,6 @@ native chr_morph( const chr, const bodyid, const skincolor, const hairstyle, con
 \brief
 */
 native chr_unmorph( const chr );
-
-/*!
-\brief Get character backpack
-\author Endymion
-\fn chr_getBackpack(const chr)
-\param chr the character
-\param createIfNotExist if true backpack is created if not exist
-*/
-native chr_getBackpack( const chr, const createIfNotExist = true );
 
 /*!
 \author Keldan
@@ -1063,7 +1047,7 @@ stock chr_setBaseSkill(const chr, const skill, const value)
 }
 
 /*!
-\author ???
+\author Luxor
 \fn chr_damage(const chr, const basedamage, const attacker = -1, const magiclike = 0, const damagetype = DAMAGE_PURE, const stattobedamaged = 0)
 \brief
 */
@@ -1153,14 +1137,12 @@ stock chr_emoteall(const npc, const text[], const antispam = 1)
 public chr_isNpc (const chr)
 {
 	new npc = chr_getProperty(chr, CP_NPC);
-	//new acc = chr_getProperty(chr, CP_ACCOUNT);
 
-	//if (acc!=-1) return 0;
 	return npc;
 }
 
 /*!
-\author ???
+\author Luxor
 \fn chr_isUndead(const chr)
 \brief
 */
@@ -1245,3 +1227,6 @@ public chr_getDirForSee( const chr, const x, const y )
 	}
 	return SOUTH;
 }
+
+
+
