@@ -420,7 +420,11 @@ stock createSimpleListMenu(startx,starty,rows,cols,nitems,title[],callback[],men
 {
 	//create a temporary menu, just to call drawSimpleListMenu() as if it was called by
 	//one of the "prev" "next" buttons
+	//This menu is shown only if nitems == 0
 	new m = createFramedMenu(startx,starty,2,rows,cols,menuCallback);
+	cursor_right(cols/2 - strlen(title)/2);
+	menu_addTitle(title);
+	cursor_newline(4);
 	
 	//store parameters so the function can draw the menu
 	menu_storeValue(0,startx);
@@ -433,12 +437,13 @@ stock createSimpleListMenu(startx,starty,rows,cols,nitems,title[],callback[],men
 	menu_storeString(2,menuCallback);
 	
 	//draw the first page
-	return drawSimpleListMenuPage(m,INVALID,(rows > nitems ? nitems : rows) - 1);	
+	return drawSimpleListMenuPage(m,INVALID,(rows > nitems ? nitems : rows));	
 }
 
 public drawSimpleListMenuPage(menu,chr,btncode)
 {
 	if(!btncode) return INVALID;
+	btncode--;
 	
 	//read data to draw the menu
 	new startx = menu_readValue(menu,0);
@@ -485,7 +490,7 @@ public drawSimpleListMenuPage(menu,chr,btncode)
 		new idx1 = startIdx - rows;
 		new idx2 = startIdx - 1;
 		cursor_right(cols/2 - 8);
-		menu_addLabeledButtonFn((idx1 << 16) + idx2,"drawSimpleListMenuPage","Prev");
+		menu_addLabeledButtonFn((idx1 << 16) + idx2 + 1,"drawSimpleListMenuPage","Prev");
 		cursor_back();
 	}
 	
@@ -496,7 +501,7 @@ public drawSimpleListMenuPage(menu,chr,btncode)
 		new idx2 = stopIdx + rows;
 		if(idx2 >= nitems) idx2 = nitems - 1;
 		cursor_right(cols/2 + 2);
-		menu_addLabeledButtonFn((idx1 << 16) + idx2,"drawSimpleListMenuPage","Next");
+		menu_addLabeledButtonFn((idx1 << 16) + idx2 + 1,"drawSimpleListMenuPage","Next");
 		cursor_back();
 	}
 	
