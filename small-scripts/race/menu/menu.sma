@@ -7,7 +7,6 @@ public race_menu( const chr, const race )
 	new racemenu = gui_create( 10,10,1,0,0,tempStr );
 	
 	gui_setProperty( racemenu,MP_BUFFER,0,PROP_CHARACTER );
-	printf("errorcheck^n");
 	gui_setProperty( racemenu,MP_BUFFER,3,BUTTON_APPLY );
 
 	gui_addPage(racemenu,0);
@@ -19,9 +18,7 @@ public race_menu( const chr, const race )
 		gui_addTilePic( racemenu, 286, 8, 3811 );
 		gui_addButtonFn( racemenu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
 		race_getGlobalProp( RP_STR_WEBLINK,_, tempStr );
-		printf("weblink: %s, ", tempStr);
 		race_getGlobalProp( RP_STR_WEBROOT, _, tempStr );
-		printf("webroot: %s^n", tempStr);
 	}
 	
 	gui_addText( racemenu, 73,   8,  152,  "N" );
@@ -71,6 +68,9 @@ public race_menu( const chr, const race )
 	gui_addButton( racemenu, 13, 169 +offset, 1209, 1209, 2 ); // Choose a race
 	gui_addText( racemenu, 33, 166 +offset, 1153, "S" );
 	gui_addText( racemenu, 45, 166 +offset,   95, "elect your race" );
+	
+	new skincolor = race_getProperty(1,400);
+	printf("skincolor: %d", skincolor);
 
 	gui_show( racemenu, chr );
 
@@ -320,7 +320,7 @@ public race_make( const racemenu, const curr, const race, const chr )
 	//
 	// Only alter skincolor if set in race.xss
 	//
-	new skincolor = race_getProperty( race, RP_SKIN );
+	new skincolor = race_getProperty( race, RP_SKINCOLOR );
 	if( skincolor!=INVALID )
 	{
 		chr_setProperty( chr, CP_XSKIN, _, skincolor );
