@@ -926,6 +926,7 @@ stock itm_flip(itm)
 	
 	//get the flippeditem scriptID and create a new item with the same properties as the previous
 	new scriptID = itm_getLocalIntVar(itm,var);
+	printf("flip happens now, new item is %d^n", scriptID);
 	new flippedItem = itm_create(scriptID);
 	itm_copyProperties(itm,flippedItem);
 	

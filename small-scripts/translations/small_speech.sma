@@ -955,3 +955,11 @@ public alignments[GUILD_TOWN][] = {
 	"chaotic",
 	"lawful"
 	};
+	
+const NUM_MiscSENT = 4;
+public msg_MiscDef[NUM_MiscSENT][]={
+"You lit the %s",
+"*lights the",
+"You extinguis %s",
+"*extinguishs the"
+}
