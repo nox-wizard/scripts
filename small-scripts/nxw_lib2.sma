@@ -18,7 +18,7 @@
 Tis function is designed to be used to find out the targetted map location from the parameters of
 a target callback,this is to be used this way:<br>
 \code
-public cmd_tile_targ(target, chr, object, x, y, z, unused, nXnYnZ)
+stock cmd_tile_targ(target, chr, object, x, y, z, unused, nXnYnZ)
 {
 	getMapLocation(object,x,y,z);	
 }
@@ -26,7 +26,7 @@ public cmd_tile_targ(target, chr, object, x, y, z, unused, nXnYnZ)
 this will fill x y z with a valid map location even if an item or character has been targetted.
 \return INVALID if no valid map location can be retrieved.
 */
-public getMapLocation(object,&x,&y,&z)
+stock getMapLocation(object,&x,&y,&z)
 {
 	if(isItem(object))
 		itm_getPosition(object,x,y,z);
@@ -49,14 +49,14 @@ This function is used to ask a player for a map rectangle, player hasto target 2
 will be called and it will be passed the rectangle.<br>
 Callback proptotype must be:<br>
 \code
-public callback(chr,x0,y0,x1,y1)
+stock callback(chr,x0,y0,x1,y1)
 \endcode
 x0,y0 are the top left corner coords<br>
 x1,y1 are the bottom right corner coords<br>
 It's always x0 <= x1 && y0 <= y1.
 \return nothing
 */
-public getRectangle(const chr, callback[])
+stock getRectangle(const chr, callback[])
 {
 	chr_delLocalVar(chr,CLV_TEMP1);
 	chr_addLocalStrVar(chr,CLV_TEMP1,callback);
@@ -75,7 +75,7 @@ You shouldn't need to look edit this function
 */
 new rect_z;
 new rect_object;
-public rectangle_cback_1(target, chr, object, x, y, z, staticid, unused1)
+stock rectangle_cback_1(target, chr, object, x, y, z, staticid, unused1)
 {
 	//get xyz no matter if item, char or object was targeted
 	if(getMapLocation(object,x,y,z) == INVALID)
@@ -103,7 +103,7 @@ public rectangle_cback_1(target, chr, object, x, y, z, staticid, unused1)
 You shouldn't need to look edit this function
 \return nothing
 */
-public rectangle_cback_2(target, chr, object1, x, y, z, unused, xy)
+stock rectangle_cback_2(target, chr, object1, x, y, z, unused, xy)
 {
 	if(getMapLocation(object1,x,y,z) == INVALID)
 	{
@@ -151,14 +151,14 @@ This function is used to ask a player for a map rectangle, player hasto target 2
 will be called and it will be passed the rectangle.<br>
 Callback proptotype must be:<br>
 \code
-public callback(chr,x0,y0,x1,y1)
+stock callback(chr,x0,y0,x1,y1)
 \endcode
 x0,y0 are the top left corner coords<br>
 x1,y1 are the bottom right corner coords<br>
 It's always x0 <= x1 && y0 <= y1.
 \return nothing
 */
-public getRectangleTop(const chr, callback[])
+stock getRectangleTop(const chr, callback[])
 {
 	//printf("enter rect^n");
 	chr_delLocalVar(chr,CLV_TEMP1);
@@ -177,7 +177,7 @@ Gives the top of the target for adding stuff on top of other items
 You shouldn't need to look edit this function
 \return nothing
 */
-public rectangleTop_cback_1(target, chr, object, x, y, z, itemid, unused1)
+stock rectangleTop_cback_1(target, chr, object, x, y, z, itemid, unused1)
 {
 	//get xyz no matter if item, char or object was targeted
 	if(getMapLocation(object,x,y,z) == INVALID)
@@ -225,7 +225,7 @@ Gives the top of the target for adding stuff on top of other items
 You shouldn't need to look edit this function
 \return nothing
 */
-public rectangleTop_cback_2(target, chr, object, x, y, z, itemid, xy)
+stock rectangleTop_cback_2(target, chr, object, x, y, z, itemid, xy)
 {
 	if(getMapLocation(object,x,y,z) == INVALID)
 	{
@@ -326,7 +326,7 @@ The callback will be passed the file handle and the line number, read the line w
 line number = INVALID means EOF (End Of File).
 A typical callback will be structured as follows:
 \code
-public process_line(file,line)
+stock process_line(file,line)
 {
 	if(line == INVALID)
 	{ 
@@ -343,7 +343,7 @@ public process_line(file,line)
 \example file_scan(file,"process_line","//")
 \return the number of scanned lines or INVALID if file does not exist
 */
-public file_scan(filename[], callback[], exclude[])
+stock file_scan(filename[], callback[], exclude[])
 {
 	new file = file_open(filename,"r");
 	if(file == INVALID) return INVALID;
@@ -378,7 +378,7 @@ Use this function at the beginning of your callback to read the scan line
 \note you can directly use __file_scan_buffer[] if you want
 \return nothing
 */
-public file_getScanLine(line[FILE_SCAN_BUFFER_SIZE])
+stock file_getScanLine(line[FILE_SCAN_BUFFER_SIZE])
 {
 	strcpy(line,__fileScanBuffer);
 }
@@ -404,7 +404,7 @@ You can read XSS section type, section number, command and value with:<BR>
 	
 \return the number of scanned sections or INVALID if file does not exist
 */
-public xss_scanFile(filename[],callback[])
+stock xss_scanFile(filename[],callback[])
 {
 	new file = file_open(filename,"r");
 	if(file == INVALID) return INVALID;
@@ -583,7 +583,7 @@ the new character will have properties set to the standard value given in the XS
 \see chr_duplicate(const chr)
 \return copied character's serial
 */
-public chr_copy(const chr)
+stock chr_copy(const chr)
 {
 	return chr_addNPC(chr_getProperty(chr,CP_SCRIPTID),1,1,0);
 }
@@ -598,7 +598,7 @@ The starting character's equipment is copied and equipped to the new character.
 \see chr_copy(const chr)
 \return new character's serial
 */
-public chr_duplicate(const chr)
+stock chr_duplicate(const chr)
 {
 	new subprop;
 	new copy = chr_copy(chr);
@@ -766,7 +766,7 @@ The hit side is the defender's side hit by the attacker
 The return value is one of the SIDE_* constants
 \return SIDE_* constants
 */
-public chr_getHitSide (const defender, const attacker) 
+stock chr_getHitSide (const defender, const attacker) 
 { 
 	new Diff = chr_getProperty(attacker, CP_DIR, 0) - chr_getProperty(defender, CP_DIR, 0); //get dir of defender 
 	switch(Diff) 
@@ -799,7 +799,7 @@ enum
 \brief gets the moving status of a character
 \return MOVE_STANDING, MOVE_WALKING, MOVE_RUNNING,MOVE_HORSESTANDING, MOVE_TROTING, MOVE_GALLOPING
 */
-public chr_getMove(const chr)   
+stock chr_getMove(const chr)   
 {
 	if ( (getCurrentTime() - chr_getProperty(chr, CP_LASTMOVETIME, 0)) < 1000) 
        		return MOVE_WALKING + (chr_getProperty(chr, CP_ONHORSE, 0)*2) + min(chr_getProperty(chr, CP_RUNNING, 0),1); 
@@ -969,6 +969,37 @@ stock chr_LocalVarMaker(const chr, const vartype, const varnum, const Integer=IN
         	log_error("Char %d got string var %d, but before already had an integer var at this place that now was deleted!^n", chr, varnum);
         }
 }
+
+/*!
+\author Horian
+\fn itm_LocalVarMaker(const itm, const vartype, const varnum)
+\param itm: the Item
+\param vartype: the vartype, String is 1, integer is 0
+\param varnum: the localvar number
+\since 0.82
+\brief checks if a localvar already exists, throws an error if yes and applys the wanted one
+*/
+stock itm_LocalVarMaker(const itm, const vartype, const varnum, const Integer=INVALID, const String[]="")
+{
+	if(itm_isaLocalVar( itm, varnum, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
+        {
+        	if(vartype == 0)
+        		itm_addLocalIntVar( itm, varnum, Integer);
+        	else itm_addLocalStrVar( itm, varnum, String);
+        }
+        else if((itm_isaLocalVar( itm, varnum, VAR_TYPE_STRING ) == 1) && (vartype==0)) //there already is a string variable (shouldn't happen)
+        {
+        	itm_delLocalVar(itm, varnum, VAR_TYPE_STRING);
+        	itm_addLocalIntVar( itm, varnum, Integer );
+        	log_error("Item %d got int var %d, but before already had a string var at this place that now was deleted!^n", itm, varnum);
+        }
+        else if((itm_isaLocalVar( itm, varnum, VAR_TYPE_INTEGER ) == 1) && (vartype==1)) //there already is a integer variable (shouldn't happen)
+        {
+        	itm_delLocalVar(itm, varnum, VAR_TYPE_INTEGER);
+        	itm_addLocalStrVar( itm, varnum, String );
+        	log_error("Item %d got string var %d, but before already had an integer var at this place that now was deleted!^n", itm, varnum);
+        }
+}
 /*!
 \author Fax
 \fn chr_setTempIntVar(chr,var,value)
@@ -1065,7 +1096,7 @@ stock chr_getTempIntVec(chr,var,vec[])
 const DVCT_GROWTHSIZE = 10;
 //symbolic number to mark end of vector. Take care to don't use equal element...
 const DVCT_END = 0x7FFFFFFF;
-public DVct_Create(const chr, const AmxID)
+stock DVct_Create(const chr, const AmxID)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 	{
@@ -1083,7 +1114,7 @@ public DVct_Create(const chr, const AmxID)
 \brief delete the dynamic vector.
 \return 1 if succes, else 0
 */
-public DVct_Delete(const chr, const AmxID)
+stock DVct_Delete(const chr, const AmxID)
 {
 	if (chr_isaLocalVar(chr, AmxID))
 	{
@@ -1101,7 +1132,7 @@ public DVct_Delete(const chr, const AmxID)
 \brief return the (virtual) size of the dynamic vector
 \return return the size or -1 if invalid vector
 */
-public DVct_GetSize(const chr, const AmxID)
+stock DVct_GetSize(const chr, const AmxID)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 	return -1;
@@ -1123,7 +1154,7 @@ public DVct_GetSize(const chr, const AmxID)
 \brief return position of first occurence of element in vector
 \return position of first occurence of element in vector, -1 if no occurence found
 */
-public DVct_SearchElement(const chr, const AmxID, const element)
+stock DVct_SearchElement(const chr, const AmxID, const element)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 		return -1;
@@ -1146,7 +1177,7 @@ public DVct_SearchElement(const chr, const AmxID, const element)
 \brief return the element at the given index
 \return return the element at the given index, -1 if no occurence found
 */
-public DVct_GetElement(const chr, const AmxID, const index)
+stock DVct_GetElement(const chr, const AmxID, const index)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 		return -1;
@@ -1166,7 +1197,7 @@ public DVct_GetElement(const chr, const AmxID, const index)
 \brief add element at the end of vector
 \return -1 if invalid
 */
-public DVct_AddElement(const chr, const AmxID, const element)
+stock DVct_AddElement(const chr, const AmxID, const element)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 		return -1;
@@ -1186,7 +1217,7 @@ public DVct_AddElement(const chr, const AmxID, const element)
 \brief remove the fist occurence of element
 \return -1 if invalid, 0 if not found, 1 if success
 */
-public DVct_DelElement(const chr, const AmxID, const element)
+stock DVct_DelElement(const chr, const AmxID, const element)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 		return -1;
@@ -1219,7 +1250,7 @@ public DVct_DelElement(const chr, const AmxID, const element)
 \brief remove the element at the given index
 \return -1 if invalid, 1 if success
 */
-public DVct_DelIndex(const chr, const AmxID, const index)
+stock DVct_DelIndex(const chr, const AmxID, const index)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 		return -1;
@@ -1246,7 +1277,7 @@ public DVct_DelIndex(const chr, const AmxID, const index)
 \brief set element at given index, changing the old value
 \return 1 if successful, -1 if invalid
 */
-public DVct_SetElement(const chr, const AmxID, const index, const element)
+stock DVct_SetElement(const chr, const AmxID, const index, const element)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 		return -1;
@@ -1264,7 +1295,7 @@ public DVct_SetElement(const chr, const AmxID, const index, const element)
 \brief made grow the dynamic vector by DVCT_GROWTHSIZE (private use only)
 \return -1 if invalid
 */
-public DVct_Grow(const chr, const AmxID)
+stock DVct_Grow(const chr, const AmxID)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 		return -1;
@@ -1288,7 +1319,7 @@ public DVct_Grow(const chr, const AmxID)
 \brief reduce the dynamic vector by DVCT_GROWTHSIZE (private use only)
 \return -1 if invalid
 */
-public DVct_Reduce(const chr, const AmxID)
+stock DVct_Reduce(const chr, const AmxID)
 {
 	if (!chr_isaLocalVar(chr, AmxID))
 		return -1;
@@ -1306,7 +1337,7 @@ public DVct_Reduce(const chr, const AmxID)
 
 /* Example usage of Dynamic Vector System:
 const AMX_VECTOR = 1000;
-public Test_Noob (const chr)
+stock Test_Noob (const chr)
 {
 	printf("^n################^nCreation^n");
 	DVct_Create(chr, AMX_VECTOR);
@@ -1321,42 +1352,42 @@ public Test_Noob (const chr)
 	DVct_AddElement(chr, AMX_VECTOR, 6);
 	DVct_AddElement(chr, AMX_VECTOR, 7);
 	DVct_AddElement(chr, AMX_VECTOR, 8);
-	
+	printf("first show^n");
 	DisplayVector(chr);
 	
 	DVct_AddElement(chr, AMX_VECTOR, 9);
 	DVct_AddElement(chr, AMX_VECTOR, 10);
 	DVct_AddElement(chr, AMX_VECTOR, 11);
 	DVct_AddElement(chr, AMX_VECTOR, 12);
-	
+	printf("second show^n");
 	DisplayVector(chr);
 	
 	DVct_DelElement(chr, AMX_VECTOR, 2);
 	DVct_DelElement(chr, AMX_VECTOR, 4);
 	DVct_DelElement(chr, AMX_VECTOR, 6);
 	DVct_DelElement(chr, AMX_VECTOR, 8);
-	
+	printf("third show^n");
 	DisplayVector(chr);
 	
 	DVct_DelIndex(chr, AMX_VECTOR, 0);
 	DVct_DelIndex(chr, AMX_VECTOR, 0);
 	DVct_DelIndex(chr, AMX_VECTOR, 0);
 	DVct_DelIndex(chr, AMX_VECTOR, 0);
-	
+	printf("fourth show^n");
 	DisplayVector(chr);
 	
 	DVct_SetElement(chr, AMX_VECTOR, 0, 20)
 	DVct_SetElement(chr, AMX_VECTOR, 1, 30)
 	DVct_SetElement(chr, AMX_VECTOR, 2, 40)
 	DVct_SetElement(chr, AMX_VECTOR, 3, 50)
-	
+	printf("fifst show^n");
 	DisplayVector(chr);
 	
 	printf("^nDestruction^n################^n");
 	DVct_Delete(chr, AMX_VECTOR);
 }
 	
-public DisplayVector(const chr)
+stock DisplayVector(const chr)
 {
 	printf("size : %d^n", DVct_GetSize(chr, AMX_VECTOR));
 	
@@ -1387,6 +1418,260 @@ public DisplayVector(const chr)
 	printf("pos of 10 : %d^n", DVct_SearchElement(chr, AMX_VECTOR, 10));
 	printf("pos of 11 : %d^n", DVct_SearchElement(chr, AMX_VECTOR, 11));
 	printf("pos of 12 : %d^n", DVct_SearchElement(chr, AMX_VECTOR, 12));
+}
+*/
+
+/*!
+\author Keldan
+\fn DVit_Create(const itm, const AmxID)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief creates a dynamic vector.
+\return 1 if succes, else 0
+*/
+
+//physical segment size of dynamic vector
+const DVit_GROWTHSIZE = 10;
+//symbolic number to mark end of vector. Take care to don't use equal element...
+const DVit_END = 0x7FFFFFFF;
+stock DVit_Create(const itm, const AmxID)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+	{
+		itm_addLocalIntVec(itm, AmxID, DVit_GROWTHSIZE+1, DVit_END);
+		return 1;
+	}
+	return 0;
+}
+/*!
+\author Keldan
+\fn DVit_Delete(const itm, const AmxID)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief delete the dynamic vector.
+\return 1 if succes, else 0
+*/
+stock DVit_Delete(const itm, const AmxID)
+{
+	if (itm_isaLocalVar(itm, AmxID))
+	{
+		itm_delLocalVar(itm, AmxID);
+		return 1;
+	}
+	return 0;
+}
+/*!
+\author Keldan
+\fn DVit_GetSize(const itm, const AmxID)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief return the (virtual) size of the dynamic vector
+\return return the size or -1 if invalid vector
+*/
+stock DVit_GetSize(const itm, const AmxID)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+	return -1;
+	new counter;
+	new PhySize = itm_sizeofLocalVar(itm, AmxID);
+	for (counter = 0; counter < PhySize; counter++)
+	{
+		if (itm_getLocalIntVec(itm, AmxID, counter) == DVit_END)
+			return counter;
+	}
+	return -1;
+}
+/*!
+\author Keldan
+\fn DVit_SearchElement(const itm, const AmxID, const element)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief return position of first occurence of element in vector
+\return position of first occurence of element in vector, -1 if no occurence found
+*/
+stock DVit_SearchElement(const itm, const AmxID, const element)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+		return -1;
+	new PhySize = itm_sizeofLocalVar(itm, AmxID);
+	for (new counter = 0; counter < PhySize; counter++)
+	{
+		if (itm_getLocalIntVec(itm, AmxID, counter) == element)
+			return counter;
+		else if (itm_getLocalIntVec(itm, AmxID, counter) == DVit_END)
+			return -1;
+	}
+	return -1;
+}
+/*!
+\author Keldan
+\fn DVit_GetElement(const itm, const AmxID, const index)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief return the element at the given index
+\return return the element at the given index, -1 if no occurence found
+*/
+stock DVit_GetElement(const itm, const AmxID, const index)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+		return -1;
+	if (index >= itm_sizeofLocalVar(itm, AmxID))
+		return -1;
+	new element = itm_getLocalIntVec(itm, AmxID, index);
+	if (element == DVit_END)
+		return -1;
+	return element;
+}
+/*!
+\author Keldan
+\fn DVit_AddElement(const itm, const AmxID, const element)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief add element at the end of vector
+\return -1 if invalid
+*/
+stock DVit_AddElement(const itm, const AmxID, const element)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+		return -1;
+	new size = DVit_GetSize(itm, AmxID);
+	if (size%DVit_GROWTHSIZE == 0)//if no more free slot, grow physical size
+		DVit_Grow(itm, AmxID);
+	itm_setLocalIntVec(itm, AmxID, size, element);
+	itm_setLocalIntVec(itm, AmxID, size+1, DVit_END);
+	return 1;
+}
+/*!
+\author Keldan
+\fn DVit_DelElement(const itm, const AmxID, const element)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief remove the fist occurence of element
+\return -1 if invalid, 0 if not found, 1 if success
+*/
+stock DVit_DelElement(const itm, const AmxID, const element)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+		return -1;
+	new ret=-1;
+	new mode = 0;//0 => search, 1 => resize
+	new PhySize = itm_sizeofLocalVar(itm, AmxID);
+	for (new counter = 0; (counter < PhySize) && (ret == -1); counter++)
+	{
+		if (mode)
+		{
+			itm_setLocalIntVec(itm, AmxID, counter-1,itm_getLocalIntVec(itm, AmxID, counter));
+			if (itm_getLocalIntVec(itm, AmxID, counter-1) == DVit_END)
+				ret = 1;
+		}
+		else if (itm_getLocalIntVec(itm, AmxID, counter) == element)
+			mode = 1;
+		else if (itm_getLocalIntVec(itm, AmxID, counter) == DVit_END)
+			ret = 0;
+	}
+	if (DVit_GetSize(itm, AmxID)%DVit_GROWTHSIZE == 0)
+		DVit_Reduce(itm, AmxID);
+	return ret;
+}
+/*!
+\author Keldan
+\fn DVit_DelIndex(const itm, const AmxID, const index)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief remove the element at the given index
+\return -1 if invalid, 1 if success
+*/
+stock DVit_DelIndex(const itm, const AmxID, const index)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+		return -1;
+	new ret=-1;
+	new PhySize = itm_sizeofLocalVar(itm, AmxID);
+	if (index >= PhySize)
+		return -1;
+	for (new counter = index+1; (counter < PhySize) && (ret == -1); counter++)
+	{
+		itm_setLocalIntVec(itm, AmxID, counter-1, itm_getLocalIntVec(itm, AmxID, counter));
+		if (itm_getLocalIntVec(itm, AmxID, counter-1) == DVit_END)
+			ret = 1;
+	}
+	if (DVit_GetSize(itm, AmxID)%DVit_GROWTHSIZE == 0)
+	DVit_Reduce(itm, AmxID);
+	return ret;
+}
+/*!
+\author Keldan
+\fn DVit_SetElement(const itm, const AmxID, const index, const element)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief set element at given index, changing the old value
+\return 1 if successful, -1 if invalid
+*/
+stock DVit_SetElement(const itm, const AmxID, const index, const element)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+		return -1;
+	if (index >= DVit_GetSize(itm, AmxID))
+		return -1;
+	itm_setLocalIntVec(itm, AmxID, index, element);
+		return 1;
+}
+/*!
+\author Keldan
+\fn DVit_Grow(const itm, const AmxID)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief made grow the dynamic vector by DVit_GROWTHSIZE (private use only)
+\return -1 if invalid
+*/
+stock DVit_Grow(const itm, const AmxID)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+		return -1;
+	new PhySize = itm_sizeofLocalVar(itm, AmxID);
+	new TmpArray[2048];
+	//transfert vector element in temp array
+	for (new counter = 0; counter < PhySize; counter++)
+		TmpArray[counter] = itm_getLocalIntVec(itm, AmxID, counter);
+	itm_delLocalVar(itm, AmxID);
+	itm_addLocalIntVec(itm, AmxID, PhySize+DVit_GROWTHSIZE, DVit_END);
+	for (new counter = 0; counter < PhySize; counter++)
+		itm_setLocalIntVec(itm, AmxID, counter, TmpArray[counter]);
+	return 1;
+}
+/*!
+\author Keldan
+\fn DVit_Reduce(const itm, const AmxID)
+\param itm: the item
+\param var: the variable index
+\since 0.82
+\brief reduce the dynamic vector by DVit_GROWTHSIZE (private use only)
+\return -1 if invalid
+*/
+stock DVit_Reduce(const itm, const AmxID)
+{
+	if (!itm_isaLocalVar(itm, AmxID))
+		return -1;
+	new NewSize = itm_sizeofLocalVar(itm, AmxID) - DVit_GROWTHSIZE;
+	new TmpArray[2048];
+	//transfert vector element in temp array
+	for (new counter = 0; counter < NewSize; counter++)
+		TmpArray[counter] = itm_getLocalIntVec(itm, AmxID, counter);
+	itm_delLocalVar(itm, AmxID);
+	itm_addLocalIntVec(itm, AmxID, NewSize, DVit_END);
+	for (new counter = 0; counter < NewSize; counter++)
+		itm_setLocalIntVec(itm, AmxID, counter, TmpArray[counter]);
+	return 1;
 }
 */
 /** @} */
