@@ -3,7 +3,7 @@
 // || Maintained by Sparhawk						  ||
 // || Last Update 04-aug-2002						  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.70s or later			  ||
+// || This script requires NoX-Wizard 0.82 or later			  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 SECTION ITEM $item_nodraw
@@ -394,14 +394,6 @@ SECTION ITEM $item_gem_of_immortality
 	COLOR 03B7
 }
 
-SECTION ITEM $item_gold_coin
-{
-	ID 0EED
-	PILE 1
-	AMOUNT 1
-	DECAY
-}
-
 SECTION ITEM $item_dispel-wall-spawner
 {
 	NAME dispel-wall-spawner
@@ -663,314 +655,6 @@ SECTION ITEM $item_door_3
 {
 	ID 022D
 }
-
-SECTION ITEM $item_silver_coin
-{
-	NAME silver coin
-	ID 0EED
-	COLOR 02B8
-	PILE 1
-	AMOUNT 1
-	DECAY
-}
-
-SECTION ITEM $item_copper_coin
-{
-	NAME copper coin
-	ID 0EED
-	COLOR 002F
-	PILE 1
-	AMOUNT 1
-	DECAY
-}
-
-SECTION ITEM $item_amethysts1
-{
-	ID 0F16
-	DECAY
-	VALUE 105
-}
-
-SECTION ITEM $item_amethysts2
-{
-	ID 0F17
-	DECAY
-	VALUE 105
-}
-
-SECTION ITEM $item_citrines1
-{
-	ID 0F15
-	DECAY
-	VALUE 95
-}
-
-SECTION ITEM $item_emeralds1
-{
-	ID 0F10
-	DECAY
-	VALUE 115
-}
-
-SECTION ITEM $item_rubies1
-{
-	ID 0F13
-	DECAY
-	VALUE 100
-}
-
-SECTION ITEM $item_rubies2
-{
-	ID 0F14
-	DECAY
-	VALUE 100
-}
-
-SECTION ITEM $item_rubies3
-{
-	ID 0F1A
-	DECAY
-	VALUE 100
-}
-
-SECTION ITEM $item_rubies4
-{
-	ID 0F1C
-	DECAY
-	VALUE 100
-}
-
-SECTION ITEM $item_rubies5
-{
-	ID 0F1D
-	DECAY
-	VALUE 100
-}
-
-SECTION ITEM $item_sapphires1
-{
-	ID 0F11
-	DECAY
-	VALUE 110
-}
-
-SECTION ITEM $item_sapphires2
-{
-	ID 0F12
-	DECAY
-	VALUE 110
-}
-
-SECTION ITEM $item_sapphires3
-{
-	ID 0F19
-	DECAY
-	VALUE 110
-}
-
-SECTION ITEM $item_sapphires4
-{
-	ID 0F1F
-	DECAY
-	VALUE 110
-}
-
-SECTION ITEM $item_star_sapphires1
-{
-	ID 0F0F
-	DECAY
-	VALUE 130
-}
-
-SECTION ITEM $item_star_sapphires2
-{
-	ID 0F1B
-	DECAY
-	VALUE 130
-}
-
-SECTION ITEM $item_tourmalines1
-{
-	ID 0F18
-	DECAY
-	VALUE 90
-}
-
-SECTION ITEM $item_tourmalines2
-{
-	ID 0F1E
-	DECAY
-	VALUE 90
-}
-
-SECTION ITEM $item_tourmalines3
-{
-	ID 0F20
-	DECAY
-	VALUE 90
-}
-
-SECTION ITEM $item_pieces_of_amber
-{
-	ID 0F25
-	DECAY
-	VALUE 65
-}
-
-SECTION ITEM $item_amethysts3
-{
-	ID 0F22
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_amethysts4
-{
-	ID 0F2E
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_citrines2
-{
-	ID 0F23
-	DECAY
-	VALUE 55
-}
-
-SECTION ITEM $item_citrines3
-{
-	ID 0F24
-	DECAY
-	VALUE 55
-}
-
-SECTION ITEM $item_citrines4
-{
-	ID 0F2C
-	DECAY
-	VALUE 55
-}
-
-SECTION ITEM $item_diamonds1
-{
-	ID 0F27
-	DECAY
-	VALUE 90
-}
-
-SECTION ITEM $item_diamonds2
-{
-	ID 0F28
-	DECAY
-	VALUE 90
-}
-
-SECTION ITEM $item_diamonds3
-{
-	ID 0F29
-	DECAY
-	VALUE 90
-}
-
-SECTION ITEM $item_diamonds4
-{
-	ID 0F30
-	DECAY
-	VALUE 90
-}
-
-SECTION ITEM $item_emeralds2
-{
-	ID 0F2F
-	DECAY
-	VALUE 80
-}
-
-SECTION ITEM $item_rubies6
-{
-	ID 0F2A
-	DECAY
-	VALUE 65
-}
-
-SECTION ITEM $item_rubies7
-{
-	ID 0F2B
-	DECAY
-	VALUE 65
-}
-
-SECTION ITEM $item_star_sapphires3
-{
-	ID 0F21
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_tourmalines4
-{
-	ID 0F2D
-	DECAY
-	VALUE 85
-}
-
-SECTION ITEM $item_beads
-{
-	ID 108B
-	DECAY
-	VALUE 35
-}
-
-SECTION ITEM $item_bracelet
-{
-	ID 1086
-	DECAY
-	VALUE 40
-}
-
-SECTION ITEM $item_earrings
-{
-	ID 1087
-	DECAY
-	VALUE 40
-}
-
-SECTION ITEM $item_necklace1
-{
-	ID 1085
-	DECAY
-	VALUE 45
-}
-
-SECTION ITEM $item_necklace2
-{
-	ID 1088
-	DECAY
-	VALUE 45
-}
-
-SECTION ITEM $item_necklace3
-{
-	ID 1089
-	DECAY
-	VALUE 45
-}
-
-SECTION ITEM $item_ring
-{
-	ID 108A
-	DECAY
-	VALUE 35
-}
-
-SECTION ITEM $item_diamonds5
-{
-	ID 0F26
-	DECAY
-	VALUE 145
-}
-
 
 SECTION ITEM $item_townstone
 { Townstone
@@ -2446,6 +2130,7 @@ SECTION ITEM $item_loom_deed_2
 	ID 14F0
 	NEWBIE
 	DECAY
+	TYPE $itype_multideed
 	MOREX 19
 }
 
@@ -2455,6 +2140,7 @@ SECTION ITEM $item_loom_deed_1
 	ID 14F0
 	NEWBIE
 	DECAY
+	TYPE $itype_multideed
 	MOREX 207
 }
 
@@ -2523,12 +2209,6 @@ SECTION ITEM $item_wooden_chest
 	MOREY 1
 	MOREZ 2
 	AMOUNT 1
-}
-
-SECTION ITEM $item_christmas_tree
-{
-	NAME christmas tree
-	ID 0CD7
 }
 
 SECTION ITEM $item_christmas_gift_chest

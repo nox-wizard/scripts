@@ -306,6 +306,7 @@
 #define $item_egg_nest1_2 121002
 #define $item_christmas_tree 121011
 #define $item_christmas_tree_deed 121012
+#define $item_christmas_needles 121013
 
 #define $item_plough1 121021
 #define $item_plough1_2 121022

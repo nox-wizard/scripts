@@ -5204,8 +5204,6 @@ SECTION BATCH $batch_polymorph_cns
 //    ADDITEM $item_emeralds1
 //    0F13 Ruby
 //    ADDITEM $item_rubies1
-//    0F14 Ruby
-//    ADDITEM $item_rubies2
 //    0F1A Ruby
 //    ADDITEM $item_rubies3
 //    0F1C Ruby

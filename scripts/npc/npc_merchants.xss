@@ -1187,7 +1187,6 @@ SECTION NPC $npc_provisioner_m
 	SELLITEM $item_citrines1
 	SELLITEM $item_emeralds1
 	SELLITEM $item_rubies1
-	SELLITEM $item_rubies2
 	SELLITEM $item_rubies3
 	SELLITEM $item_rubies4
 	SELLITEM $item_rubies5
@@ -1450,7 +1449,6 @@ SECTION NPC $npc_provisioner_f
 	SELLITEM $item_citrines1
 	SELLITEM $item_emeralds1
 	SELLITEM $item_rubies1
-	SELLITEM $item_rubies2
 	SELLITEM $item_rubies3
 	SELLITEM $item_rubies4
 	SELLITEM $item_rubies5
@@ -2757,7 +2755,6 @@ SECTION NPC $npc_jeweler_m
 	RSHOPITEM $item_diamonds5
 	RSHOPITEM $item_emeralds1
 	RSHOPITEM $item_rubies1
-	RSHOPITEM $item_rubies2
 	RSHOPITEM $item_rubies3
 	RSHOPITEM $item_rubies4
 	RSHOPITEM $item_rubies5
@@ -2796,7 +2793,6 @@ SECTION NPC $npc_jeweler_m
 	SELLITEM $item_diamonds5
 	SELLITEM $item_emeralds1
 	SELLITEM $item_rubies1
-	SELLITEM $item_rubies2
 	SELLITEM $item_rubies3
 	SELLITEM $item_rubies4
 	SELLITEM $item_rubies5
@@ -2879,7 +2875,6 @@ SECTION NPC $npc_jeweler_f
 	RSHOPITEM $item_diamonds5
 	RSHOPITEM $item_emeralds1
 	RSHOPITEM $item_rubies1
-	RSHOPITEM $item_rubies2
 	RSHOPITEM $item_rubies3
 	RSHOPITEM $item_rubies4
 	RSHOPITEM $item_rubies5
@@ -2918,7 +2913,6 @@ SECTION NPC $npc_jeweler_f
 	SELLITEM $item_diamonds5
 	SELLITEM $item_emeralds1
 	SELLITEM $item_rubies1
-	SELLITEM $item_rubies2
 	SELLITEM $item_rubies3
 	SELLITEM $item_rubies4
 	SELLITEM $item_rubies5

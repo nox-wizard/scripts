@@ -31,6 +31,7 @@
 #include scripts/items/lightsources.xss
 #include scripts/items/signs_posts.xss
 #include scripts/items/garbage.xss
+#include scripts/items/jewelery.xss
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || Include your scripts after these lines.                             ||

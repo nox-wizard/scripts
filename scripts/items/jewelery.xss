@@ -1,0 +1,669 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (jewelery.xss)					  ||
+// || Maintained by Horian						  ||
+// || Last Update 05-mar-2005						  ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.85 or later			  ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//
+//money
+//
+SECTION ITEM $item_gold_coin
+{
+	NAME gold coin
+	ID 0EED
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+SECTION ITEM $item_silver_coin
+{
+	NAME silver coin
+	ID 0EF0
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+SECTION ITEM $item_copper_coin
+{
+	NAME copper coin
+	ID 0EEA
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+SECTION ITEM $item_few_gold_coin
+{
+	NAME gold coins
+	ID 0EEE
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+SECTION ITEM $item_few_silver_coin
+{
+	NAME silver coins
+	ID 0EF1
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+SECTION ITEM $item_few_copper_coin
+{
+	NAME copper coins
+	ID 0EEB
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+SECTION ITEM $item_many_gold_coin
+{
+	NAME gold coins
+	ID 0EEF
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+SECTION ITEM $item_many_silver_coin
+{
+	NAME silver coins
+	ID 0EF2
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+SECTION ITEM $item_many_copper_coin
+{
+	NAME copper coins
+	ID 0EEC
+	PILE 1
+	AMOUNT 1
+	DECAY
+}
+
+//
+//jewels
+//
+
+SECTION ITEM $item_amethysts1
+{
+	ID 0F16
+	DECAY
+	VALUE 105
+}
+
+SECTION ITEM $item_amethysts2
+{
+	ID 0F17
+	DECAY
+	VALUE 105
+}
+
+SECTION ITEM $item_amethysts3
+{
+	ID 0F22
+	DECAY
+	VALUE 75
+}
+
+SECTION ITEM $item_amethysts4
+{
+	ID 0F2E
+	DECAY
+	VALUE 75
+}
+
+SECTION ITEM $item_citrines1
+{
+	ID 0F15
+	DECAY
+	VALUE 95
+}
+
+SECTION ITEM $item_citrines2
+{
+	ID 0F23
+	DECAY
+	VALUE 55
+}
+
+SECTION ITEM $item_citrines3
+{
+	ID 0F24
+	DECAY
+	VALUE 55
+}
+
+SECTION ITEM $item_citrines4
+{
+	ID 0F2C
+	DECAY
+	VALUE 55
+}
+
+SECTION ITEM $item_emeralds1
+{
+	ID 0F10
+	DECAY
+	VALUE 115
+}
+
+SECTION ITEM $item_emeralds2
+{
+	ID 0F2F
+	DECAY
+	VALUE 80
+}
+
+SECTION ITEM $item_rubies1
+{
+	ID 0F13
+	DECAY
+	VALUE 100
+}
+
+SECTION ITEM $item_rubies3
+{
+	ID 0F1A
+	DECAY
+	VALUE 100
+}
+
+SECTION ITEM $item_rubies4
+{
+	ID 0F1C
+	DECAY
+	VALUE 100
+}
+
+SECTION ITEM $item_rubies5
+{
+	ID 0F1D
+	DECAY
+	VALUE 100
+}
+
+SECTION ITEM $item_rubies6
+{
+	ID 0F2A
+	DECAY
+	VALUE 65
+}
+
+SECTION ITEM $item_rubies7
+{
+	ID 0F2B
+	DECAY
+	VALUE 65
+}
+
+SECTION ITEM $item_sapphires1
+{
+	ID 0F11
+	DECAY
+	VALUE 110
+}
+
+SECTION ITEM $item_sapphires2
+{
+	ID 0F12
+	DECAY
+	VALUE 110
+}
+
+SECTION ITEM $item_sapphires3
+{
+	ID 0F19
+	DECAY
+	VALUE 110
+}
+
+SECTION ITEM $item_sapphires4
+{
+	ID 0F1F
+	DECAY
+	VALUE 110
+}
+
+SECTION ITEM $item_star_sapphires1
+{
+	ID 0F0F
+	DECAY
+	VALUE 130
+}
+
+SECTION ITEM $item_star_sapphires2
+{
+	ID 0F1B
+	DECAY
+	VALUE 130
+}
+
+SECTION ITEM $item_star_sapphires3
+{
+	ID 0F21
+	DECAY
+	VALUE 75
+}
+
+SECTION ITEM $item_tourmalines1
+{
+	ID 0F18
+	DECAY
+	VALUE 90
+}
+
+SECTION ITEM $item_tourmalines2
+{
+	ID 0F1E
+	DECAY
+	VALUE 90
+}
+
+SECTION ITEM $item_tourmalines3
+{
+	ID 0F20
+	DECAY
+	VALUE 90
+}
+
+SECTION ITEM $item_tourmalines4
+{
+	ID 0F2D
+	DECAY
+	VALUE 85
+}
+
+SECTION ITEM $item_pieces_of_amber
+{
+	ID 0F25
+	DECAY
+	VALUE 65
+}
+
+SECTION ITEM $item_diamonds1
+{
+	ID 0F27
+	DECAY
+	VALUE 90
+}
+
+SECTION ITEM $item_diamonds2
+{
+	ID 0F28
+	DECAY
+	VALUE 90
+}
+
+SECTION ITEM $item_diamonds3
+{
+	ID 0F29
+	DECAY
+	VALUE 90
+}
+
+SECTION ITEM $item_diamonds4
+{
+	ID 0F30
+	DECAY
+	VALUE 90
+}
+
+SECTION ITEM $item_diamonds5
+{
+	ID 0F26
+	DECAY
+	VALUE 145
+}
+
+//
+//jewelery
+//
+SECTION ITEM $item_beads
+{
+	ID 108B
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_bracelet
+{
+	ID 1086
+	DECAY
+	VALUE 40
+}
+
+SECTION ITEM $item_earrings
+{
+	ID 1087
+	DECAY
+	VALUE 40
+}
+
+SECTION ITEM $item_necklace1
+{
+	ID 1085
+	DECAY
+	VALUE 45
+}
+
+SECTION ITEM $item_necklace2
+{
+	ID 1088
+	DECAY
+	VALUE 45
+}
+
+SECTION ITEM $item_necklace3
+{
+	ID 1089
+	DECAY
+	VALUE 45
+}
+
+SECTION ITEM $item_ring
+{
+	ID 108A
+	DECAY
+	VALUE 35
+}
+
+//
+//treasure deeds
+//
+
+SECTION ITEM $item_treasure_deed1
+{
+	NAME treasure deed
+	ID 14F0
+	NEWBIE
+	TYPE $itype_multideed
+	MOREX 200
+}
+
+SECTION ITEM $item_treasure_deed2
+{
+	NAME treasure deed
+	ID 14F0
+	NEWBIE
+	TYPE $itype_multideed
+	MOREX 201
+}
+
+SECTION ITEM $item_treasure_deed3
+{
+	NAME treasure deed
+	ID 14F0
+	NEWBIE
+	DECAY
+	TYPE $itype_multideed
+	MOREX 202
+}
+
+SECTION ITEM $item_treasure_deed4
+{
+	NAME treasure deed
+	ID 14F0
+	NEWBIE
+	DECAY
+	TYPE $itype_multideed
+	MOREX 203
+}
+
+//
+// treasure pieces
+//
+//
+// corner left bottom
+//
+
+SECTION ITEM $item_treasure1A
+{
+	ID 1b40
+}
+
+SECTION ITEM $item_treasure1B
+{
+	ID 1b4a
+}
+
+SECTION ITEM $item_treasure1C
+{
+	ID 1b4e
+}
+
+SECTION ITEM $item_treasure1D
+{
+	ID 1b5f
+}
+
+SECTION ITEM $item_treasure1E
+{
+	ID 1b5b
+}
+
+SECTION ITEM $item_treasure1F
+{
+	ID 1b62
+}
+
+SECTION ITEM $item_treasure1G
+{
+	ID 1b53
+}
+
+SECTION ITEM $item_treasure1H
+{
+	ID 1b54
+}
+
+//
+// left top corner
+//
+
+SECTION ITEM $item_treasure2A
+{
+	ID 1b41
+}
+
+SECTION ITEM $item_treasure2B
+{
+	ID 1b63
+}
+
+SECTION ITEM $item_treasure2C
+{
+	ID 1b64
+}
+
+
+//
+// top right corner
+//
+
+SECTION ITEM $item_treasure3A
+{
+	ID 1b47
+}
+
+SECTION ITEM $item_treasure3B
+{
+	ID 1b57
+}
+
+SECTION ITEM $item_treasure3C
+{
+	ID 1b46
+}
+
+//
+// left side
+//
+
+SECTION ITEM $item_treasure4A
+{
+	ID 1b3f
+}
+
+SECTION ITEM $item_treasure4B
+{
+	ID 1b55
+}
+
+SECTION ITEM $item_treasure4C
+{
+	ID 1b60
+}
+
+//
+// bottom side
+//
+
+SECTION ITEM $item_treasure5A
+{
+	ID 1b45
+}
+
+SECTION ITEM $item_treasure5B
+{
+	ID 1b50
+}
+
+SECTION ITEM $item_treasure5C
+{
+	ID 1b4f
+}
+
+SECTION ITEM $item_treasure5D
+{
+	ID 1b44
+}
+
+//
+// center
+//
+
+SECTION ITEM $item_treasure6A
+{
+	ID 1b43
+}
+
+SECTION ITEM $item_treasure6B
+{
+	ID 1b58
+}
+
+SECTION ITEM $item_treasure6C
+{
+	ID 1b42
+}
+
+SECTION ITEM $item_treasure6D
+{
+	ID 1b5c
+}
+
+SECTION ITEM $item_treasure6E
+{
+	ID 1b5d
+}
+
+SECTION ITEM $item_treasure6F
+{
+	ID 1b61
+}
+
+SECTION ITEM $item_treasure6G
+{
+	ID 1b67
+}
+
+SECTION ITEM $item_treasure6H
+{
+	ID 1b56
+}
+
+//
+// right side
+//
+
+SECTION ITEM $item_treasure7A
+{
+	ID 1b48
+}
+
+SECTION ITEM $item_treasure7B
+{
+	ID 1b68
+}
+
+SECTION ITEM $item_treasure7C
+{
+	ID 1b69
+}
+
+SECTION ITEM $item_treasure7D
+{
+	ID 1b59
+}
+
+//
+// top side
+//
+
+SECTION ITEM $item_treasure8A
+{
+	ID 1b65
+}
+SECTION ITEM $item_treasure8B
+{
+	ID 1b4b
+}
+
+SECTION ITEM $item_treasure8C
+{
+	ID 1b4d
+}
+
+SECTION ITEM $item_treasure8D
+{
+	ID 1b66
+}
+
+SECTION ITEM $item_treasure8E
+{
+	ID 1b4c
+}
+
+SECTION ITEM $item_treasure8F
+{
+	ID 1b5a
+}
+
+//
+// corner bottom right
+//
+
+SECTION ITEM $item_treasure9A
+{
+	ID 1b6a
+}
+
+SECTION ITEM $item_treasure9B
+{
+	ID 1b6b
+}
+
+SECTION ITEM $item_treasure9C
+{
+	ID 1b51
+}

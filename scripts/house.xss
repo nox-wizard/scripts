@@ -1,25 +1,47 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (house.scp)                                      ||
-// || Maintained by Xanathar and Kendra                                   ||
+// || NoX-Wizard Scripts (house.xss)                                      ||
+// || Maintained by Horian                                                ||
 // || Last Update - N/A -                                                 ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.70s or later                      ||
+// || This script requires NoX-Wizard 0.82 or later                      ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 //use the SECTION HOUSE # in your deed (14 f0) 's morex
 //(/setmorex #)
 
-// new keywords by LB
+// NOREALMULTI ... multi is not real, that means it is only defined in nox but not in multi.mul, so nox server tells the
+// player every piece individually, that means NOREALMULTI are good for easy non-static building or fast adding deeds but cause lag the
+// same as normal items placed. NOREALMULTI can not be turned back into deeds too.
+// Be aware that NOREALMULTI must consist completelly out of HOUSE ITEM, so the ID keyword is ignored
 
-// NOREALMULTI - houses or structures that aren't "from" multi file
-// (ID >=40XX) but build out of multiple "normal" tiles need that keyword.
-// If you dont, client will behave strangely on placing (freeze !)
+// normal multi: needs ID <hex> (InsideUO Hex-ID from multi-mul plus 4000)
 
 // NOKEY ... no key is generated.
 // "overrules" the normal key generation logic and forces not to make a key.
+// NOKEY allows never later to add keys! It is useful for NONREALMULTI and for normal multi.mul things that
+// should not have a key (like treasures in multi.mul or stairs etc.). If no key is generated, the LOCK
+// keyword can't used either, as it uses the key to be locked and unlocked.
 
-// NAME  ... guess ...
+// NAME  <name> ... guess ...
+
+// HOUSE_ITEM <number> ... what items are inside the multi, place chests, doors etc., number it
+// the number must be unique and targets to SECTION HOUSE ITEM <number> later in that file
+
+// SPACEX1, SPACEY1, SPACEX2, SPACEY2 <number> ... define the space needed to reserve. Prevents overlapping
+// house placing or exploits building one house into another one to gain access and allows to add room around the 
+// house too. Locking is possible inside the SPACE area.
+
+// CHARX, CHARY, CHARZ <number> ... defines were to place the char from the house 0/0/0 relative position
+
+// ITEMSDECAY ... defines if HOUSE_ITEMS decay?
+
+// HOUSE_DEED <scriptID> ... important, defines the scriptID the house deed has, important for all boats and houses for re-deeding!
+
+// MAXLOCKED, MAXSECURED <number> ... Defines how many items can be locked down inside SPACE area and how many container are
+// allowed to be defined as secured (maximum by source is 480 and 3)
+
+// BOAT ... multi is a boat (water placing and movement by ingame commands)
 
 
 SECTION HOUSE 1
@@ -356,9 +378,7 @@ SECTION HOUSE 17
 
 SECTION HOUSE 18
 {
-	ID 0FEA
-	NAME  a pentagram
-	TYPE 1
+	NAME a pentagram
 	NOREALMULTI
 	NOKEY
 	SPACEX1 2
@@ -368,8 +388,6 @@ SECTION HOUSE 18
 	CHARX 0
 	CHARY 0
 	CHARZ 0
-	MAXLOCKED 480
-	MAXSECURED 3
 	HOUSE_ITEM 43
 	HOUSE_ITEM 44
 	HOUSE_ITEM 45
@@ -384,8 +402,8 @@ SECTION HOUSE 18
 SECTION HOUSE 19
 {
 	NAME  Upright Loom
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -619,8 +637,8 @@ SECTION HOUSE 32
 SECTION HOUSE 33
 {
 	NAME Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -637,8 +655,8 @@ SECTION HOUSE 33
 SECTION HOUSE 34
 {
 	NAME Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -655,8 +673,8 @@ SECTION HOUSE 34
 SECTION HOUSE 35
 {
 	NAME Large forge facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -672,8 +690,8 @@ SECTION HOUSE 35
 SECTION HOUSE 36
 {
 	NAME Large forge facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -752,19 +770,19 @@ SECTION HOUSE 100
 	HOUSE_DEED 6037
 }
 
+//treasure 1
 SECTION HOUSE 200
 {
-	ID 43E8
+	NAME Treasure
 	NOKEY
-	NAME  Treasure
-	SPACEX1 2
-	SPACEX2 2
-	SPACEY1 2
-	SPACEY2 2
-	CHARX 1
-	CHARY 1
+	NOREALMULTI
+	SPACEX1 1
+	SPACEY1 1
+	SPACEX2 1
+	SPACEY2 1
+	CHARX 2
+	CHARY 2
 	CHARZ 0
-	HOUSE_DEED 6100
 	HOUSE_ITEM 143
 	HOUSE_ITEM 144
 	HOUSE_ITEM 145
@@ -772,13 +790,15 @@ SECTION HOUSE 200
 	HOUSE_ITEM 147
 	HOUSE_ITEM 148
 	HOUSE_ITEM 149
+	HOUSE_ITEM 150
 }
 
+//treasure 2
 SECTION HOUSE 201
 {
-	ID 43EB
 	NOKEY
 	NAME  Treasure
+	NOREALMULTI
 	SPACEX1 3
 	SPACEX2 3
 	SPACEY1 3
@@ -786,8 +806,6 @@ SECTION HOUSE 201
 	CHARX -2
 	CHARY -2
 	CHARZ 0
-	HOUSE_DEED 6101
-	HOUSE_ITEM 150
 	HOUSE_ITEM 151
 	HOUSE_ITEM 152
 	HOUSE_ITEM 153
@@ -798,20 +816,22 @@ SECTION HOUSE 201
 	HOUSE_ITEM 158
 	HOUSE_ITEM 159
 	HOUSE_ITEM 160
+	HOUSE_ITEM 161
 }
 
+//treasure 3
 SECTION HOUSE 202
 {
-	ID 43EA
 	NOKEY
+	NOREALMULTI
 	NAME  Treasure
-	SPACEX 3
-	SPACEY 3
+	SPACEX1 1
+	SPACEY1 1
+	SPACEX2 2
+	SPACEY2 2
 	CHARX -2
 	CHARY -2
 	CHARZ 0
-	HOUSE_DEED 6102
-	HOUSE_ITEM 161
 	HOUSE_ITEM 162
 	HOUSE_ITEM 163
 	HOUSE_ITEM 164
@@ -822,11 +842,13 @@ SECTION HOUSE 202
 	HOUSE_ITEM 169
 	HOUSE_ITEM 170
 	HOUSE_ITEM 171
+	HOUSE_ITEM 172
 }
 
+//treasure 4
 SECTION HOUSE 203
 {
-	ID 43E9
+	NOREALMULTI
 	NOKEY
 	NAME  Treasure
 	SPACEX1 2
@@ -836,8 +858,6 @@ SECTION HOUSE 203
 	CHARX -2
 	CHARY -2
 	CHARZ 0
-	HOUSE_DEED 6103
-	HOUSE_ITEM 172
 	HOUSE_ITEM 173
 	HOUSE_ITEM 174
 	HOUSE_ITEM 175
@@ -846,15 +866,17 @@ SECTION HOUSE 203
 	HOUSE_ITEM 178
 	HOUSE_ITEM 179
 	HOUSE_ITEM 180
+	HOUSE_ITEM 520
+	HOUSE_ITEM 521
+	HOUSE_ITEM 522
 }
 
 
 SECTION HOUSE 204
 {
 	NAME Lighthouse
-	ID 1AD0
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 3
 	SPACEX2 3
 	SPACEY1 3
@@ -862,7 +884,6 @@ SECTION HOUSE 204
 	CHARX -6
 	CHARY -6
 	CHARZ 0
-	HOUSE_DEED 6105
 	HOUSE_ITEM 181
 	HOUSE_ITEM 182
 	HOUSE_ITEM 183
@@ -891,20 +912,21 @@ SECTION HOUSE 204
 	HOUSE_ITEM 206
 	HOUSE_ITEM 207
 	HOUSE_ITEM 208
+	HOUSE_ITEM 512
 }
 
 SECTION HOUSE 205
 {
 	NAME Telescope
-	ID 1463
-	NOKEY
 	NOREALMULTI
-	SPACEX 11
-	SPACEY 7
+	NOKEY
+	SPACEX1 5
+	SPACEY1 3
+	SPACEX2 6
+	SPACEY2 4
 	CHARX -11
 	CHARY -7
 	CHARZ 0
-	HOUSE_DEED 6106
 	HOUSE_ITEM 209
 	HOUSE_ITEM 210
 	HOUSE_ITEM 211
@@ -971,14 +993,15 @@ SECTION HOUSE 205
 	HOUSE_ITEM 272
 	HOUSE_ITEM 273
 	HOUSE_ITEM 274
+	HOUSE_ITEM 274	
+	HOUSE_ITEM 513
 }
 
 SECTION HOUSE 206
 {
 	NAME Arbitoir
-	ID 1216
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -986,7 +1009,6 @@ SECTION HOUSE 206
 	CHARX -2
 	CHARY -2
 	CHARZ 0
-	HOUSE_DEED 6107
 	HOUSE_ITEM 275
 	HOUSE_ITEM 276
 	HOUSE_ITEM 277
@@ -995,13 +1017,14 @@ SECTION HOUSE 206
 	HOUSE_ITEM 280
 	HOUSE_ITEM 281
 	HOUSE_ITEM 282
+	HOUSE_ITEM 514
 }
 
 SECTION HOUSE 207
 {
 	NAME  Upright Loom
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1016,9 +1039,8 @@ SECTION HOUSE 207
 SECTION HOUSE 208
 {
 	NAME Brick Fireplace
-	ID 0937
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1027,14 +1049,14 @@ SECTION HOUSE 208
 	CHARY 0
 	CHARZ 8
 	HOUSE_ITEM 56
+	HOUSE_ITEM 515
 }
 
 SECTION HOUSE 209
 {
 	NAME Brick Fireplace
-	ID 0945
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1043,13 +1065,14 @@ SECTION HOUSE 209
 	CHARY 0
 	CHARZ 8
 	HOUSE_ITEM 57
+	HOUSE_ITEM 516
 }
 
 SECTION HOUSE 210
 {
 	NAME  Bed
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1064,8 +1087,8 @@ SECTION HOUSE 210
 SECTION HOUSE 211
 {
 	NAME  Bed
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1080,9 +1103,8 @@ SECTION HOUSE 211
 SECTION HOUSE 212
 {
 	NAME christmas tree
-	ID 0CD6
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 0
 	CHARY 0
 	CHARZ 8
@@ -1103,14 +1125,14 @@ SECTION HOUSE 212
 	HOUSE_ITEM 353
 	HOUSE_ITEM 354
 	HOUSE_ITEM 355
+	HOUSE_ITEM 517
 }
 
 SECTION HOUSE 213
 {
 	NAME Brick Oven
-	ID 092b
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1119,14 +1141,14 @@ SECTION HOUSE 213
 	CHARY 0
 	CHARZ 8
 	HOUSE_ITEM 60
+	HOUSE_ITEM 518
 }
 
 SECTION HOUSE 214
 {
 	NAME Brick Oven
-	ID 0930
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1135,14 +1157,15 @@ SECTION HOUSE 214
 	CHARY 0
 	CHARZ 8
 	HOUSE_ITEM 61
+	HOUSE_ITEM 519
 }
 
 //alder
 SECTION HOUSE 215
 {
 	NAME big Alder Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1159,8 +1182,8 @@ SECTION HOUSE 215
 SECTION HOUSE 216
 {
 	NAME big Alder Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1177,8 +1200,8 @@ SECTION HOUSE 216
 SECTION HOUSE 217
 {
 	NAME small alder Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1193,8 +1216,8 @@ SECTION HOUSE 217
 SECTION HOUSE 218
 {
 	NAME small alder Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1210,8 +1233,8 @@ SECTION HOUSE 218
 SECTION HOUSE 219
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1228,8 +1251,8 @@ SECTION HOUSE 219
 SECTION HOUSE 220
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1246,8 +1269,8 @@ SECTION HOUSE 220
 SECTION HOUSE 221
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1262,8 +1285,8 @@ SECTION HOUSE 221
 SECTION HOUSE 222
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1279,8 +1302,8 @@ SECTION HOUSE 222
 SECTION HOUSE 223
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1297,8 +1320,8 @@ SECTION HOUSE 223
 SECTION HOUSE 224
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1315,8 +1338,8 @@ SECTION HOUSE 224
 SECTION HOUSE 225
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1331,8 +1354,8 @@ SECTION HOUSE 225
 SECTION HOUSE 226
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1348,8 +1371,8 @@ SECTION HOUSE 226
 SECTION HOUSE 227
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1366,8 +1389,8 @@ SECTION HOUSE 227
 SECTION HOUSE 228
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1384,8 +1407,8 @@ SECTION HOUSE 228
 SECTION HOUSE 229
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1400,8 +1423,8 @@ SECTION HOUSE 229
 SECTION HOUSE 230
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1417,8 +1440,8 @@ SECTION HOUSE 230
 SECTION HOUSE 231
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1435,8 +1458,8 @@ SECTION HOUSE 231
 SECTION HOUSE 232
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1453,8 +1476,8 @@ SECTION HOUSE 232
 SECTION HOUSE 233
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1469,8 +1492,8 @@ SECTION HOUSE 233
 SECTION HOUSE 234
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1486,8 +1509,8 @@ SECTION HOUSE 234
 SECTION HOUSE 235
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1504,8 +1527,8 @@ SECTION HOUSE 235
 SECTION HOUSE 236
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1522,8 +1545,8 @@ SECTION HOUSE 236
 SECTION HOUSE 237
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1538,8 +1561,8 @@ SECTION HOUSE 237
 SECTION HOUSE 238
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1555,8 +1578,8 @@ SECTION HOUSE 238
 SECTION HOUSE 239
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1573,8 +1596,8 @@ SECTION HOUSE 239
 SECTION HOUSE 240
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1591,8 +1614,8 @@ SECTION HOUSE 240
 SECTION HOUSE 241
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1607,8 +1630,8 @@ SECTION HOUSE 241
 SECTION HOUSE 242
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1624,8 +1647,8 @@ SECTION HOUSE 242
 SECTION HOUSE 243
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1642,8 +1665,8 @@ SECTION HOUSE 243
 SECTION HOUSE 244
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1660,8 +1683,8 @@ SECTION HOUSE 244
 SECTION HOUSE 245
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1676,8 +1699,8 @@ SECTION HOUSE 245
 SECTION HOUSE 246
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1693,8 +1716,8 @@ SECTION HOUSE 246
 SECTION HOUSE 247
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1711,8 +1734,8 @@ SECTION HOUSE 247
 SECTION HOUSE 248
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1729,8 +1752,8 @@ SECTION HOUSE 248
 SECTION HOUSE 249
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1745,8 +1768,8 @@ SECTION HOUSE 249
 SECTION HOUSE 250
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1762,8 +1785,8 @@ SECTION HOUSE 250
 SECTION HOUSE 251
 {
 	NAME big Bed facing south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1780,8 +1803,8 @@ SECTION HOUSE 251
 SECTION HOUSE 252
 {
 	NAME big Bed facing east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	CHARX 3
 	CHARY 3
 	CHARZ 8
@@ -1798,8 +1821,8 @@ SECTION HOUSE 252
 SECTION HOUSE 253
 {
 	NAME small Bed south
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1814,8 +1837,8 @@ SECTION HOUSE 253
 SECTION HOUSE 254
 {
 	NAME small Bed east
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -1830,8 +1853,8 @@ SECTION HOUSE 254
 SECTION HOUSE 255
 {
 	NAME stone fountain
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 2
 	SPACEX2 2
 	SPACEY1 2
@@ -1861,8 +1884,8 @@ SECTION HOUSE 255
 SECTION HOUSE 256
 {
 	NAME stone fountain
-	NOKEY
 	NOREALMULTI
+	NOKEY
 	SPACEX1 2
 	SPACEX2 2
 	SPACEY1 2
@@ -2305,8 +2328,7 @@ SECTION HOUSE ITEM 42
 
 SECTION HOUSE ITEM 43
 {
-	//NAME PENTA-MIDDLE
-	ITEM $item_pentagram_4
+	ITEM $item_pentagram_2
 	X 0
 	Y 0
 	Z 0
@@ -2314,55 +2336,51 @@ SECTION HOUSE ITEM 43
 
 SECTION HOUSE ITEM 44
 {
-	//NAME PENTA-T-LEFT
-	ITEM $item_pentagram_1
-	X -1
-	Y -1
+	ITEM $item_pentagram_3
+	X 1
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 45
 {
-	//NAME PENTA-TOP
-	ITEM $item_pentagram_2
-	X 0
-	Y -1
+	ITEM $item_pentagram_6
+	X 2
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 46
 {
-	//NAME PENTA-B-LEFT
-	ITEM $item_pentagram_3
-	X -1
+	ITEM $item_pentagram_1
+	X 0
 	Y 1
 	Z 0
 }
 
 SECTION HOUSE ITEM 47
 {
-	//NAME PENTA-LEFT
-	ITEM $item_pentagram_1
-	X -1
-	Y 0
+	ITEM $item_pentagram_5
+	X 1
+	Y 1
 	Z 0
 }
 
 SECTION HOUSE ITEM 48
 {
 	//NAME TOP-RIGHT
-	ITEM $item_pentagram_5
-	X 1
-	Y -1
+	ITEM $item_pentagram_9
+	X 2
+	Y 1
 	Z 0
 }
 
 SECTION HOUSE ITEM 49
 {
 	//NAME BOTTOM
-	ITEM $item_pentagram_6
+	ITEM $item_pentagram_4
 	X 0
-	Y 1
+	Y 2
 	Z 0
 }
 
@@ -2371,7 +2389,7 @@ SECTION HOUSE ITEM 50
 	//NAME BOTTOM-RIGHT
 	ITEM $item_pentagram_7
 	X 1
-	Y 1
+	Y 2
 	Z 0
 }
 
@@ -2379,8 +2397,8 @@ SECTION HOUSE ITEM 51
 {
 	//NAME RIGHT
 	ITEM $item_pentagram_8
-	X 1
-	Y 0
+	X 2
+	Y 2
 	Z 0
 }
 
@@ -2804,27 +2822,27 @@ SECTION HOUSE ITEM 118
 SECTION HOUSE ITEM 143
 {
 	//NAME Treasure piece1
-	ITEM $item_treasure_C
+	ITEM $item_treasure8C
 	X -1
-	Y 0
+	Y -1
 	Z 0
 }
 
 SECTION HOUSE ITEM 144
 {
 	//NAME Treasure piece2
-	ITEM $item_treasure_B
-	X -1
-	Y 1
+	ITEM $item_treasure9C
+	X 0
+	Y -1
 	Z 0
 }
 
 SECTION HOUSE ITEM 145
 {
 	//NAME Treasure piece3
-	ITEM $item_treasure_A
-	X 0
-	Y 1
+	ITEM $item_treasure5B
+	X 1
+	Y -1
 	Z 0
 }
 
@@ -2832,9 +2850,9 @@ SECTION HOUSE ITEM 145
 SECTION HOUSE ITEM 146
 {
 	//NAME Treasure piece4
-	ITEM $item_treasure_D
+	ITEM $item_treasure8E
 	X -1
-	Y -1
+	Y 0
 	Z 0
 }
 
@@ -2842,9 +2860,9 @@ SECTION HOUSE ITEM 146
 SECTION HOUSE ITEM 147
 {
 	//NAME Treasure piece5
-	ITEM $item_treasure_H
+	ITEM $item_treasure1C
 	X 0
-	Y -1
+	Y 0
 	Z 0
 }
 
@@ -2852,43 +2870,44 @@ SECTION HOUSE ITEM 147
 SECTION HOUSE ITEM 148
 {
 	//NAME Treasure piece6
-	ITEM $item_treasure_G
+	ITEM $item_treasure5C
 	X 1
-	Y -1
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 149
 {
 	//NAME Treasure piece7
-	ITEM $item_treasure_F
-	X 1
-	Y 0
+	ITEM $item_treasure8B
+	X -1
+	Y 1
 	Z 0
 }
 
 SECTION HOUSE ITEM 150
 {
 	//NAME Treasure piece8
-	ITEM $item_treasure_J
+	ITEM $item_treasure1B
 	X 0
 	Y 1
 	Z 0
 }
 
+//treasure 2
 SECTION HOUSE ITEM 151
 {
 	//NAME Treasure piece9
-	ITEM $item_treasure_K
-	X -1
-	Y 1
+	ITEM $item_treasure6A
+	X 0
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 152
 {
 	//NAME Treasure piece10
-	ITEM $item_treasure_L
+	ITEM $item_treasure6C
 	X -1
 	Y 0
 	Z 0
@@ -2897,17 +2916,17 @@ SECTION HOUSE ITEM 152
 SECTION HOUSE ITEM 153
 {
 	//NAME Treasure piece11
-	ITEM $item_treasure_I
+	ITEM $item_treasure5D
 	X 1
-	Y 1
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 154
 {
 	//NAME Treasure piece12
-	ITEM $item_treasure_Z1
-	X 0
+	ITEM $item_treasure3C
+	X -1
 	Y -1
 	Z 0
 }
@@ -2915,27 +2934,25 @@ SECTION HOUSE ITEM 154
 SECTION HOUSE ITEM 155
 {
 	//NAME Treasure piece13
-	ITEM $item_treasure_N
+	ITEM $item_treasure3A
 	X 0
 	Y -1
-	// remark: no bug, on the same place 2 parts !
-	// (gap if not done)
 	Z 0
 }
 
 SECTION HOUSE ITEM 156
 {
 	//NAME Treasure piece14
-	ITEM $item_treasure_M
-	X -1
+	ITEM $item_treasure7A
+	X 1
 	Y -1
-	Z 0
+	Z 1
 }
 
 SECTION HOUSE ITEM 157
 {
 	//NAME Treasure piece15
-	ITEM $item_treasure_O
+	ITEM $item_treasure8D
 	X 1
 	Y -1
 	Z 0
@@ -2944,80 +2961,81 @@ SECTION HOUSE ITEM 157
 SECTION HOUSE ITEM 158
 {
 	//NAME Treasure piece16
-	ITEM $item_treasure_R
-	X 1
-	Y 0
+	ITEM $item_treasure5A
+	X 2
+	Y -1
 	Z 0
 }
 
 SECTION HOUSE ITEM 159
 {
 	//NAME Treasure piece17
-	ITEM $item_treasure_P
-	X 2
-	Y -1
+	ITEM $item_treasure2A
+	X -1
+	Y 1
 	Z 0
 }
 
 SECTION HOUSE ITEM 160
 {
 	//NAME Treasure piece18
-	ITEM $item_treasure_Q
-	X 2
-	Y 0
+	ITEM $item_treasure1A
+	X 0
+	Y 1
 	Z 0
 }
 
 SECTION HOUSE ITEM 161
 {
 	//NAME Treasure piece19
-	ITEM $item_treasure_X
-	X 0
+	ITEM $item_treasure4A
+	X 1
 	Y 1
 	Z 0
 }
 
+//treasure 3
 SECTION HOUSE ITEM 162
 {
 	//NAME Treasure piece20
-	ITEM $item_treasure_W
-	X 1
-	Y 1
+	ITEM $item_treasure6F
+	X 0
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 163
 {
 	//NAME Treasure piece21
-	ITEM $item_treasure_Y
+	ITEM $item_treasure7B
 	X -1
-	Y 1
+	Y -1
 	Z 0
 }
 
 SECTION HOUSE ITEM 164
 {
 	//NAME Treasure piece22
-	ITEM $item_treasure_V
-	X 1
-	Y 0
+	ITEM $item_treasure7C
+	X 0
+	Y -1
 	Z 0
 }
 
 SECTION HOUSE ITEM 165
 {
 	//NAME Treasure piece23
-	ITEM $item_treasure_Z
-	X -1
-	Y 0
+	ITEM $item_treasure9A
+	X 1
+	Y -1
 	Z 0
 }
 
 SECTION HOUSE ITEM 166
 {
 	//NAME Treasure piece24
-	ITEM $item_treasure_Z1
-	X -1
+	ITEM $item_treasure9B
+	X 2
 	Y -1
 	Z 0
 }
@@ -3025,26 +3043,26 @@ SECTION HOUSE ITEM 166
 SECTION HOUSE ITEM 167
 {
 	//NAME Treasure piece25
-	ITEM $item_treasure_Z3
-	X 0
-	Y -1
+	ITEM $item_treasure8A
+	X -2
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 168
 {
 	//NAME Treasure piece26
-	ITEM $item_treasure_Z4
-	X 1
-	Y -1
+	ITEM $item_treasure6G
+	X -1
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 169
 {
 	//NAME Treasure piece27
-	ITEM $item_treasure_U
-	X 2
+	ITEM $item_treasure4C
+	X 1
 	Y 0
 	Z 0
 }
@@ -3052,8 +3070,8 @@ SECTION HOUSE ITEM 169
 SECTION HOUSE ITEM 170
 {
 	//NAME Treasure piece28
-	ITEM $item_treasure_T
-	X 3
+	ITEM $item_treasure1D
+	X 2
 	Y 0
 	Z 0
 }
@@ -3062,44 +3080,45 @@ SECTION HOUSE ITEM 170
 SECTION HOUSE ITEM 171
 {
 	//NAME Treasure piece29
-	ITEM $item_treasure_Z5
-	X 2
-	Y -1
+	ITEM $item_treasure2B
+	X -1
+	Y 1
 	Z 0
 }
 
 SECTION HOUSE ITEM 172
 {
 	//NAME Treasure piece30
-	ITEM $item_treasure_1
+	ITEM $item_treasure1F
 	X 0
 	Y 1
 	Z 0
 }
 
+//treasure 4
 SECTION HOUSE ITEM 173
 {
 	//NAME Treasure piece31
-	ITEM $item_treasure_2
-	X -1
-	Y 1
+	ITEM $item_treasure6E
+	X 0
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 174
 {
 	//NAME Treasure piece32
-	ITEM $item_treasure_3
+	ITEM $item_treasure3B
 	X -1
-	Y 0
+	Y -1
 	Z 0
 }
 
 SECTION HOUSE ITEM 175
 {
 	//NAME Treasure piece33
-	ITEM $item_treasure_7
-	X -1
+	ITEM $item_treasure6B
+	X 0
 	Y -1
 	Z 0
 }
@@ -3107,8 +3126,8 @@ SECTION HOUSE ITEM 175
 SECTION HOUSE ITEM 176
 {
 	//NAME Treasure piece34
-	ITEM $item_treasure_8
-	X 0
+	ITEM $item_treasure7D
+	X 1
 	Y -1
 	Z 0
 }
@@ -3116,36 +3135,36 @@ SECTION HOUSE ITEM 176
 SECTION HOUSE ITEM 177
 {
 	//NAME Treasure piece35
-	ITEM $item_treasure_5
-	X 1
-	Y 0
+	ITEM $item_treasure8F
+	X 2
+	Y -1
 	Z 0
 }
 
 SECTION HOUSE ITEM 178
 {
 	//NAME Treasure piece36
-	ITEM $item_treasure
-	X 1
-	Y 1
+	ITEM $item_treasure6H
+	X -1
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 179
 {
 	//NAME Treasure piece37
-	ITEM $item_treasure_9
+	ITEM $item_treasure6D
 	X 1
-	Y -1
+	Y 0
 	Z 0
 }
 
 SECTION HOUSE ITEM 180
 {
 	//NAME Treasure piece38
-	ITEM $item_treasure_6
+	ITEM $item_treasure1E
 	X 2
-	Y -1
+	Y 0
 	Z 0
 }
 
@@ -3402,6 +3421,14 @@ SECTION HOUSE ITEM 208
 	ITEM $item_lighthouse_ZD
 	X -5
 	Y -5
+	Z 0
+}
+
+SECTION HOUSE ITEM 512
+{
+	ITEM $item_lighthouse_ZC
+	X 0
+	Y 0
 	Z 0
 }
 
@@ -4464,7 +4491,7 @@ SECTION HOUSE ITEM 342
 SECTION HOUSE ITEM 343
 {
 	//NAME // christmas tree needles
-	ITEM $item_christmas_tree
+	ITEM $item_christmas_needles
 	X 0
 	Y 0
 	Z 0
@@ -4537,7 +4564,7 @@ Z 15
 
 SECTION HOUSE ITEM 352
 {
-	//NAME // christmas tree ordament
+	// christmas tree ordament
 	ITEM $item_earrings
 	X 1
 	Y 0
@@ -6059,6 +6086,93 @@ SECTION HOUSE ITEM 511
 	X 0
 	Y 3
 	Z 5
+}
+
+SECTION HOUSE ITEM 513
+{
+	//NAME Telescope piece2
+	ITEM $item_telescope_A
+	X 0
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 514
+{
+	//NAME arbitoir
+	ITEM $item_altar_8
+	X 0
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 515
+{
+	//NAME Fireplace-PT2-brick-east
+	ITEM $item_fireplace_stone7_1
+	X 0
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 516
+{
+	//NAME Fireplace-PT2-brick-south
+	ITEM $item_fireplace_stone7_2
+	X o
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 517
+{
+	// christmas tree
+	ITEM $item_christmas_tree
+	X 0
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 518
+{
+	//NAME Fireplace-PT2-brick-east
+	ITEM $item_oven_stone1_1
+	X 0
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 519
+{
+	//NAME Fireplace-PT2-brick-south
+	ITEM $item_oven_stone1_2
+	X 0
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 520
+{
+	ITEM $item_treasure4B
+	X -1
+	Y 1
+	Z 0
+}
+
+SECTION HOUSE ITEM 521
+{
+	ITEM $item_treasure1H
+	X 0
+	Y 1
+	Z 0
+}
+
+SECTION HOUSE ITEM 522
+{
+	ITEM $item_treasure1G
+	X 1
+	Y 1
+	Z 0
 }
 
 EOF

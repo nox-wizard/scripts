@@ -413,8 +413,6 @@
 
 ///////////////////////////////////////////////////
 
-#define $item_christmas_tree 1597
-
 #define $item_guildstone 12123
 
 #define $item_dartboard_2 1600
@@ -654,9 +652,14 @@
 
 //////////////////////////////////////////////
 
-#define $item_silver_coin 13188
-
-#define $item_copper_coin 13191
+#define $item_silver_coin 13185
+#define $item_copper_coin 13186
+#define $item_few_gold_coin 13187
+#define $item_few_silver_coin 13188
+#define $item_few_copper_coin 13189
+#define $item_many_gold_coin 13190
+#define $item_many_silver_coin 13191
+#define $item_many_copper_coin 13192
 
 //
 //JEWELS
@@ -672,7 +675,6 @@
 #define $item_emeralds1 13197
 #define $item_emeralds2 13222
 #define $item_rubies1 13198
-#define $item_rubies2 13199
 #define $item_rubies3 13200
 #define $item_rubies4 13201
 #define $item_rubies5 13202
@@ -704,6 +706,92 @@
 #define $item_necklace3 13232
 #define $item_ring 13233
 
+//
+// treasure pieces
+//
+//
+// corner left bottom
+//
+#define $item_treasure1A 160001
+#define $item_treasure1B 160004
+#define $item_treasure1C 160005
+#define $item_treasure1D 160010
+#define $item_treasure1E 160009
+#define $item_treasure1F 160011
+#define $item_treasure1G 160007
+#define $item_treasure1H 160008
+
+//
+// left top corner
+//
+#define $item_treasure2A 160013
+#define $item_treasure2B 160014
+#define $item_treasure2C 160012
+
+//
+// top right corner
+//
+#define $item_treasure3A 160016
+#define $item_treasure3B 160017
+#define $item_treasure3C 160036
+
+//
+// left side
+//
+#define $item_treasure4A 160019
+#define $item_treasure4B 160020
+#define $item_treasure4C 160021
+
+//
+// bottom side
+//
+#define $item_treasure5A 160022
+#define $item_treasure5B 160023
+#define $item_treasure5C 160006
+#define $item_treasure5D 160003
+
+//
+// center
+//
+#define $item_treasure6A 160026
+#define $item_treasure6B 160027
+#define $item_treasure6C 160002
+#define $item_treasure6D 160029
+#define $item_treasure6E 160030
+#define $item_treasure6F 160031
+#define $item_treasure6G 160032
+#define $item_treasure6H 160041
+
+//
+// right side
+//
+#define $item_treasure7A 160033
+#define $item_treasure7B 160034
+#define $item_treasure7C 160035
+#define $item_treasure7D 160028
+
+//
+// top side
+//
+#define $item_treasure8A 160015
+#define $item_treasure8B 160037
+#define $item_treasure8C 160038
+#define $item_treasure8D 160039
+#define $item_treasure8E 160040
+#define $item_treasure8F 160025
+
+//
+// corner bottom right
+//
+#define $item_treasure9A 160042
+#define $item_treasure9B 160018
+#define $item_treasure9C 160024
+
+
+#define $item_treasure_deed1 160170
+#define $item_treasure_deed2 160171
+#define $item_treasure_deed3 160172
+#define $item_treasure_deed4 160173
 
 /////////////////////////////////////////////////
 
@@ -1702,52 +1790,6 @@
 #define $item_dark_blue_hairdye 150028
 #define $item_pure_white_hairdye 150029
 #define $item_red_hairdye 150030
-
-
-#define $item_treasure 160001
-#define $item_treasure_1 160002
-#define $item_treasure_2 160003
-#define $item_treasure_3 160004
-#define $item_treasure_4 160005
-#define $item_treasure_5 160006
-#define $item_treasure_6 160007
-#define $item_treasure_7 160008
-#define $item_treasure_8 160009
-#define $item_treasure_9 160010
-#define $item_1 160011
-#define $item_treasure_A 160012
-#define $item_treasure_B 160013
-#define $item_treasure_C 160014
-#define $item_treasure_D 160015
-#define $item_treasure_E 160016
-#define $item_treasure_F 160017
-#define $item_treasure_G 160018
-#define $item_treasure_H 160019
-#define $item_2 160020
-#define $item_treasure_I 160021
-#define $item_treasure_J 160022
-#define $item_treasure_K 160023
-#define $item_treasure_L 160024
-#define $item_treasure_M 160025
-#define $item_treasure_N 160026
-#define $item_treasure_O 160027
-#define $item_treasure_P 160028
-#define $item_treasure_Q 160029
-#define $item_treasure_R 160030
-#define $item_treasure_S 160031
-#define $item_3 160032
-#define $item_treasure_T 160033
-#define $item_treasure_U 160034
-#define $item_treasure_V 160035
-#define $item_treasure_W 160036
-#define $item_treasure_X 160037
-#define $item_treasure_Y 160038
-#define $item_treasure_Z 160039
-#define $item_treasure_Z1 160040
-#define $item_treasure_Z2 160041
-#define $item_treasure_Z3 160042
-#define $item_treasure_Z4 160043
-#define $item_treasure_Z5 160044
 
 #define $item_wall_cracks 160045
 

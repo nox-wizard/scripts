@@ -1856,10 +1856,17 @@ SECTION ITEM $item_egg_nest1_2
 }
 
 // christmas tree needles
-SECTION ITEM $item_christmas_tree
+SECTION ITEM $item_christmas_needles
 {
 	NAME christmas tree
 	ID 0CD7
+}
+
+// christmas tree needles
+SECTION ITEM $item_christmas_tree
+{
+	NAME christmas tree
+	ID 0CD6
 }
 
 SECTION ITEM $item_plough1
