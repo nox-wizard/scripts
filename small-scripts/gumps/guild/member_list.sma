@@ -1,3 +1,4 @@
+/*
 static const rowSpacing	= 2;
 static const rowHeight	= 25;
 static rowDistance	= 0;
@@ -14,7 +15,7 @@ static currentPageRow	= 0;
 //
 static const buttonCancel	= 0;
 static const pageOffSet		= 100;
-
+*/
 /*!
 \syntax gui_guildMemberLR( const gump, const serial, const button, const pc )
 \brief respond to choice int list of guild members
@@ -28,7 +29,7 @@ static const pageOffSet		= 100;
 */
 public gui_guildMemberLR( const gump, const guild, const button, const pc )
 {
-	if( button != buttonCancel )
+/*	if( button != buttonCancel )
 	{
 		if( button < pageOffSet )
 			gui_guildMemberLP( guild, pc, button )
@@ -36,7 +37,7 @@ public gui_guildMemberLR( const gump, const guild, const button, const pc )
 			printf(!"gui_guildMemberLR member button %d pressed^n", button - pageOffSet );
 	}
 	else
-		gui_guildStone( guild, pc );
+		gui_guildStone( guild, pc );*/
 }
 
 /*!
@@ -50,11 +51,14 @@ public gui_guildMemberLR( const gump, const guild, const button, const pc )
 */
 public gui_guildMemberL( const guild, const showToWhom )
 {
+/*
 	gui_guildMemberLP( guild, showToWhom, 1 );
+*/
 }
 
 static gui_guildMemberLP( const guild, const showToWhom, const page )
 {
+/*
 	rowDistance	= rowSpacing + rowHeight;
 	colXTxt		= colX + 20;
 
@@ -100,10 +104,12 @@ static gui_guildMemberLP( const guild, const showToWhom, const page )
 		gui_show( GUI_GUILDMEMLIST, showToWhom );
 		gui_delete( GUI_GUILDMEMLIST );
 	}
+*/
 }
 
 static addProperty( const memberId, const memberName[] )
 {
+/*
 	//if( ++currentPageRow == rowsPerPage )
 	//{
 	//	gui_addPage( GUI_GUILDMEMLIST, ++lastPage );
@@ -114,10 +120,12 @@ static addProperty( const memberId, const memberName[] )
 	gui_addTiledGump(  GUI_GUILDMEMLIST,  colX,  rowY, 342, rowHeight, colBackGump, 0 );
 	gui_addButton( GUI_GUILDMEMLIST, colX, rowY+4, 1210, 1210, memberId + pageOffSet )
 	gui_addText( GUI_GUILDMEMLIST, colXTxt, rowY+2, memberName, 45);
+*/
 }
 
 static addToolBars( const page )
 {
+/*
 	rowY = 10 + rowDistance * 11;
 	gui_addPageButton( GUI_GUILDMEMLIST, colX + 2,  rowY+2, 1210, 1210, 1 );
 	gui_addPageButton( GUI_GUILDMEMLIST,  40,  rowY+2, 1210, 1210, ( page == 1 ? 1 : page - 1) );
@@ -128,5 +136,5 @@ static addToolBars( const page )
 	gui_addText(	   GUI_GUILDMEMLIST,  40, rowY+2, "<", 45);
 	gui_addText(	   GUI_GUILDMEMLIST,  312, rowY+2, ">", 45);
 	gui_addText(	   GUI_GUILDMEMLIST,  337, rowY+2, ">|", 45);
+*/
 }
-

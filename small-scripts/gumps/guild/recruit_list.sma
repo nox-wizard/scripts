@@ -1,3 +1,4 @@
+/*
 static const rowSpacing	= 2;
 static const rowHeight	= 25;
 static rowDistance	= 0;
@@ -14,7 +15,7 @@ static currentPageRow	= 0;
 //
 static const buttonCancel	= 0;
 static const pageOffSet		= 100;
-
+*/
 /*!
 \syntax gui_guildRecruitLR( const gump, const serial, const button, const pc )
 \brief respond to choice in list of guild candidates
@@ -28,6 +29,7 @@ static const pageOffSet		= 100;
 */
 public gui_guildRecruitLR( const gump, const guild, const button, const pc )
 {
+/*
 	if( button != buttonCancel )
 	{
 		if( button < pageOffSet )
@@ -37,6 +39,7 @@ public gui_guildRecruitLR( const gump, const guild, const button, const pc )
 	}
 	else
 		gui_guildStone( guild, pc );
+*/
 }
 
 /*!
@@ -50,11 +53,14 @@ public gui_guildRecruitLR( const gump, const guild, const button, const pc )
 */
 public gui_guildRecruitL( const guild, const showToWhom )
 {
+/*
 	guildRecruitLP( guild, showToWhom, 1 );
+*/
 }
 
 static guildRecruitLP( const guild, const showToWhom, const page )
 {
+/*
 	rowDistance	= rowSpacing + rowHeight;
 	colXTxt		= colX + 20;
 
@@ -100,18 +106,22 @@ static guildRecruitLP( const guild, const showToWhom, const page )
 		gui_show( GUI_GUILDRCRLIST, showToWhom );
 		gui_delete( GUI_GUILDRCRLIST );
 	}
+*/
 }
 
 static addProperty( const recruitId, const recruitName[] )
 {
+/*
 	rowY += rowDistance;
 	gui_addTiledGump(  GUI_GUILDRCRLIST,  colX,  rowY, 342, rowHeight, colBackGump, 0 );
 	gui_addButton( GUI_GUILDRCRLIST, colX, rowY+4, 1210, 1210, recruitId + pageOffSet )
 	gui_addText( GUI_GUILDRCRLIST, colXTxt, rowY+2, recruitName, 45);
+*/
 }
 
 static addToolBars( const page )
 {
+/*
 	rowY = 10 + rowDistance * 11;
 	gui_addPageButton( GUI_GUILDRCRLIST, colX + 2,  rowY+2, 1210, 1210, 1 );
 	gui_addPageButton( GUI_GUILDRCRLIST,  40,  rowY+2, 1210, 1210, ( page == 1 ? 1 : page - 1) );
@@ -122,5 +132,5 @@ static addToolBars( const page )
 	gui_addText(	   GUI_GUILDRCRLIST,  40, rowY+2, "<", 45);
 	gui_addText(	   GUI_GUILDRCRLIST,  312, rowY+2, ">", 45);
 	gui_addText(	   GUI_GUILDRCRLIST,  337, rowY+2, ">|", 45);
+*/
 }
-

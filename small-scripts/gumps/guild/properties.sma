@@ -1,3 +1,4 @@
+/*
 static const rowSpacing	= 2;
 static const rowHeight	= 25;
 static rowDistance	= 0;
@@ -26,14 +27,17 @@ static const propType		= 5;
 // Button Identifiers
 //
 static const buttonCancel	= 0;
-
+*/
 public gui_guildProps( const guild, const showToWhom, const edit )
 {
+/*
 	guildPropsPage( guild, showToWhom, edit, 1 );
+*/
 }
 
 public gui_guildPropsResp( const gump, const guild, const button, const pc )
 {
+/*
 	if( button != buttonCancel )
 	{
 		new page;
@@ -127,10 +131,12 @@ public gui_guildPropsResp( const gump, const guild, const button, const pc )
 			return;
 		}
 	}
+*/
 }
 
 static guildPropsRespInit( const button, &edit, &page )
 {
+/*
 	if( button > lastPage )
 		if( button > lastPage * 2 )
 		{
@@ -154,19 +160,23 @@ static guildPropsRespInit( const button, &edit, &page )
 	//
 	if( !stringMode )
 		setStringMode( 1 );
+*/		
 }
 
 static guildPropsRespExit( const guildSerial, const pc, const page, const edit )
 {
+/*
 	//
 	// reset original stringmode
 	//
 	setStringMode( stringMode );
 	guildPropsPage( guildSerial, pc, edit, page );
+*/
 }
 
 static guildPropsPage( const guild, const showToWhom, const edit, const page )
 {
+/*
 	rowDistance	= rowSpacing + rowHeight;
 	col2X		= col1X + col1Len + colSpacing;
 	col1XTxt	= col1X + 5;
@@ -249,10 +259,12 @@ static guildPropsPage( const guild, const showToWhom, const edit, const page )
 		gui_show( GUI_GUILDPROP, showToWhom );
 		gui_delete( GUI_GUILDPROP );
 	}
+*/
 }
 
 static addProperty( const colVal1[], colVal2[], const cropCol1 = 0, const cropCol2 = 0, const editField = 0 )
 {
+/*
 	rowY += rowDistance;
 	gui_addTiledGump( GUI_GUILDPROP, col1X,   rowY,   col1Len, rowHeight, colBackGump, 0 );
 	if ( cropCol1 )
@@ -267,10 +279,12 @@ static addProperty( const colVal1[], colVal2[], const cropCol1 = 0, const cropCo
 			gui_addCroppedText( GUI_GUILDPROP, col2XTxt,rowY+2, col2Len, rowHeight, colVal2, 45);
 		else
 			gui_addText( GUI_GUILDPROP, col2XTxt,rowY+2, colVal2, 45);
+*/
 }
 
 static addToolBars( const page, const edit )
 {
+/*
 	new pagebuttonOffset = ( edit ? lastPage * 2 : lastPage );
 
 	rowY = 10 + rowDistance * 11;
@@ -289,5 +303,6 @@ static addToolBars( const page, const edit )
 	gui_addText(	   GUI_CHARPROP,  40, rowY+2, "<", 45);
 	gui_addText(	   GUI_CHARPROP,  312, rowY+2, ">", 45);
 	gui_addText(	   GUI_CHARPROP,  337, rowY+2, ">|", 45);
+*/
 }
 
