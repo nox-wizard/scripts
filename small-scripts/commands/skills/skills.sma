@@ -32,6 +32,7 @@ public skills_char( const socket, const chr )
 	
 	const skForPage = 10;
 	new page=1;
+	new position = 38;
 	
 	for( new i=0; i<SK_COUNT; ++i ) {
 	
@@ -42,10 +43,13 @@ public skills_char( const socket, const chr )
 			if( page<=(SK_COUNT/skForPage) )
 				gui_addPageButton( menu, 350, 265, 0x825, GUMP_INVALID, page+1 );
 			++page;
+			position=38;
 		}
 
-		gui_addText( menu, 28, 38+(20*(i%skForPage)), _, "%s : ", skillName[ skillByName[i] ] );
-		gui_addPropField( menu, 220, 38+(20*(i%skForPage)), 50, 30, CP_BASESKILL, skillByName[i], colorEdit );
+		gui_addText( menu, 28, position, _, "%s : ", skillName[ skillByName[i] ] );
+		gui_addPropField( menu, 220, position, 50, 30, CP_SKILL, skillByName[i], colorEdit );
+		
+		position+=20;
 	}
 	
 	gui_show( menu, getCharFromSocket(socket) );
