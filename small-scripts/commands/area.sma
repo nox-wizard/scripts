@@ -289,10 +289,10 @@ public cmd_area(const chr)
 		chr_message(chr,_,msg_commandsDef[90]);
 
 		#if _CMD_DEBUG_
-			printf("^tNew standard command area set for character %d^n",areas[area][area_user]);
-			printf("^tR:%d^n",areas[area][area_R]);
-			printf("^tx,y: %d,%d^n",areas[area][area_x],areas[area][area_y]);
-			printf("^tcommands:%d^n",areas[area][area_cmdsLeft]);
+			log_message("^tNew standard command area set for character %d^n",areas[area][area_user]);
+			log_message("^tR:%d^n",areas[area][area_R]);
+			log_message("^tx,y: %d,%d^n",areas[area][area_x],areas[area][area_y]);
+			log_message("^tcommands:%d^n",areas[area][area_cmdsLeft]);
 		#endif
 
 		return;
@@ -404,11 +404,11 @@ public cmd_area_targ(target, chr, object, x, y, z, unused1, area)
 
 	chr_message(chr,_,msg_commandsDef[98]);
 	#if _CMD_DEBUG_
-		printf("^tNew command area set for character %d^n",areas[area][area_user]);
-		printf("^tR:%d^n",areas[area][area_R]);
-		printf("^tx,y: %d,%d^n",areas[area][area_x],areas[area][area_y]);
-		printf("^tcommands:%d^n",areas[area][area_cmdsLeft]);
-		printf("^tinclude:%d^n",areas[area][area_incl]);
+		log_message("^tNew command area set for character %d^n",areas[area][area_user]);
+		log_message("^tR:%d^n",areas[area][area_R]);
+		log_message("^tx,y: %d,%d^n",areas[area][area_x],areas[area][area_y]);
+		log_message("^tcommands:%d^n",areas[area][area_cmdsLeft]);
+		log_message("^tinclude:%d^n",areas[area][area_incl]);
 	#endif
 }
 

@@ -121,9 +121,9 @@ public cmd_move(const chr)
 				new itm = set_getItem(area_items(area));
 				itm_getPosition(itm,oldx,oldy,oldz);
 				newx = oldx + x;
-				newy += oldy + y;
+				newy = oldy + y;
 				newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
-		
+				printf("moving %d to %d %d %d^n",itm,newx,newy,newz);
 				itm_moveTo(itm,newx,newy,newz);
 			}
 	
