@@ -49,15 +49,13 @@ public tweak_char( const socket, const chr, const page )
 	new num=0;
 	new Flag[128];
 	new LocalV[512];
-	new buffer = 3;
-	new ValueNumbar = 50000;
-	
+
 	const colorEdit = 32;
 	
 	gui_addText( menu, 50, 5, 0x999, "Char" );
 	gui_addText( menu, 230, 5, 0x999, "LocalVar" );
 	
-	for (num=0;num<10000;num++) {
+	for (num=0;num<3000;num++) {
 		if (chr_isaLocalVar(chr, num)){
 			sprintf(Flag,"       Flag %d", num);
 			gui_addText( menu, 30, 10+(20*i), _, Flag);
@@ -70,11 +68,8 @@ public tweak_char( const socket, const chr, const page )
 				gui_addText( menu, 30, 10+(20*i), _, "String");
 			}
 			
-			gui_addInputField( menu, 170, 10+(20*i), 125, 30, ValueNumbar, colorEdit, LocalV);
-			gui_setProperty( menu, MP_BUFFER, 4, ValueNumbar );
-			buffer++;
-			ValueNumbar++;
-			
+			gui_addInputField( menu, 170, 10+(20*i), 125, 30, num, colorEdit, LocalV);
+						
 			gui_addText( menu, 270, 10+(20*i), _, "Del");
 			gui_addButton( menu, 300, 10+(20*i++), 0x4B9, 0x4BA, num );
 		}
@@ -85,33 +80,35 @@ public tweak_char( const socket, const chr, const page )
 
 public handle_tweak_char( const socket, const menu, const button )
 {
-	nprintf(socket,"bottone %d", button);
+
 	if( button==MENU_CLOSED )
-		return;
+	return;
 		
 	new chr = gui_getProperty( menu, MP_BUFFER, 1 );
 		
-	if( button < 49999 ) { //page button
-		chr_delLocalVar(chr, button);
-		tweak_char( socket, chr, gui_getProperty( menu, MP_BUFFER, 2 ) );
-	}
+	if( button < 49999 ) chr_delLocalVar(chr, button);
+
+
 	if (button == 10001){
-		
-		nprintf(socket,"Ci sono");
-		new value = 50000;
-		new i = 3;
-		new Valore;
-		for (value=50000;value<55000;value++) {
-			i++;
-			if (button == value) {
-				Valore = gui_getProperty( menu, MP_UNI_TEXT, _, i );
-				nprintf(socket,"%s",Valore);
+		new num=0;
+		new Name[512];
+		new value;
+		for (num=0;num<3000;num++) {
+			if (chr_isaLocalVar(chr, num)){
+				gui_getProperty( menu, MP_UNI_TEXT, num, Name );
+				trim(Name);
+				nprintf(socket,"Stringa REcuperata %s",Name);
+				if (isStrInt(Name)){
+					value = str2Int(Name);
+					chr_setLocalIntVar(chr,num,value);
+				}
+				else chr_setLocalStrVar(chr,num,Name);
 			}
 		}
-	
-		chr_teleport( chr );
-		tweak_char( socket, chr, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	}
+	
+	chr_teleport( chr );
+	tweak_char( socket, chr, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	
 }
 
@@ -126,11 +123,25 @@ public handle_tweak_item( const socket, const menu, const button )
 		itm_delLocalVar(item, button);
 		tweak_item( socket, item, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	}
+	
+	new num=0;
+	new Name[512];
+	new value;
 	if (button == 10001){
+		
+		for (num=0;num<3000;num++) {
+			if (itm_isaLocalVar(item, num)){
+				gui_getProperty( menu, MP_UNI_TEXT, num, Name );
+				if (isStrInt(Name)){
+					value = str2Int(Name);
+					itm_setLocalIntVar(item,num,value);
+				}
+				else itm_setLocalStrVar(item,num,Name);
+			}
+		}
 		chr_teleport( item );
 		tweak_item( socket, item, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	}
-	
 }
 
 public tweak_item( const socket, const item, const page )
@@ -169,7 +180,7 @@ public tweak_item( const socket, const item, const page )
 	gui_addText( menu, 50, 5, 0x999, "Item" );
 	gui_addText( menu, 230, 5, 0x999, "LocalVar" );
 	
-	for (num=0;num<10000;num++) {
+	for (num=0;num<3000;num++) {
 		if (itm_isaLocalVar(item, num)){
 			sprintf(Flag,"       Flag %d", num);
 			gui_addText( menu, 30, 10+(20*i), _, Flag);
@@ -182,7 +193,7 @@ public tweak_item( const socket, const item, const page )
 				gui_addText( menu, 30, 10+(20*i), _, "String");
 			}
 			
-			gui_addInputField( menu, 170, 10+(20*i), 125, 30, 50001, colorEdit, LocalV);
+			gui_addInputField( menu, 170, 10+(20*i), 125, 30, num, colorEdit, LocalV);
 
 			gui_addText( menu, 270, 10+(20*i), _, "Del");
 			gui_addButton( menu, 300, 10+(20*i++), 0x4B9, 0x4BA, num );
