@@ -1,0 +1,251 @@
+
+/*!
+\brief returns the given property and subpropoerty value for the house
+\author Wintermute
+\since 0.82
+\fn house_getProperty
+\param house, the house serial to get the property from
+\param property, the house property to get
+\param subproperty, the subproperty to get
+
+*/
+native house_getProperty(const house, const property, const subproperty, ...);
+
+/*!
+\brief sets the given property and subpropoerty value for the house
+\author Wintermute
+\since 0.82
+\fn house_setProperty
+\param house, the house serial to get the property from
+\param property, the house property to set
+\param subproperty, the subproperty to set
+*/
+
+native house_setProperty(const house, const property, const subproperty, const value, ...);
+
+/*!
+\brief locks the given item, making it unmovable and increase the number of locked items by one in the house, fails if maximum amount of lockable items is exceeded
+\author Wintermute
+\since 0.82
+\fn house_lockItem
+\param house, the house serial to get the property from
+\param item, the serial of the item to lock
+
+*/
+
+native house_lockItem(const house, const item);
+
+/*!
+\brief unlocks the given item, making it movable and decrease the number of locked items by one in the house
+\author Wintermute
+\since 0.82
+\fn house_unlockItem
+\param house, the house serial
+\param item, the serial of the item to unlock
+
+*/
+
+native house_unlockItem(const house, const item);
+
+/*!
+\brief secures the given container, making it openable only by owner and coowner and increase the number of secured items by one in the house, fails if maximum amount of secured items is exceeded
+\author Wintermute
+\since 0.82
+\fn house_secureContainer
+\param house, the house serial to get the property from
+\param item, the serial of the container to secure
+
+*/
+native house_secureContainer(const house, const container);
+
+/*!
+\brief unsecures the given container, making it openable only by everyone and decrease the number of secured items by one in the house
+\author Wintermute
+\since 0.82
+\fn house_unsecureContainer
+\param house, the house serial
+\param item, the serial of the container to secure
+
+*/
+native house_unsecureContainer(const house, const container);
+
+/*!
+\brief place a trace barrel at the given location
+\author Wintermute
+\since 0.82
+\fn house_placeTrashBarrel
+\param house, the house serial
+\param x,y,z position of the trashbarrel
+*/
+
+native house_placeTrashBarrel(const house, const x, const y, const z);
+
+/*!
+\brief returns a boolean if the given obj is inside a house (meaning it is below a roof)
+\author Wintermute
+\since 0.82
+\fn house_isInsideHouse
+\param house, the house serial
+\param obj, the item or char serial
+\return boolean
+*/
+
+
+native house_isInsideHouse(const house, const obj);
+
+/*!
+\brief returns a boolean if the given obj is inside a house area (meaning it is within the limits of spacex and spacey from the center of the house)
+\author Wintermute
+\since 0.82
+\fn house_isInHouse
+\param house, the house serial
+\param obj, the item or char serial
+\return boolean
+*/
+
+native house_isInHouse(const house, const obj);
+
+/*!
+\brief adds a friend to the list of house friends
+\author Wintermute
+\since 0.82
+\fn house_addFriend
+\param house, the house serial
+\param the char serial of the new friend
+\return boolean
+*/
+
+native house_addFriend(const house, const chr);
+
+/*!
+\brief removes a friend from the list of house friends
+\author Wintermute
+\since 0.82
+\fn house_removeFriend
+\param house, the house serial
+\param the char serial of the new friend
+\return boolean
+*/
+
+native house_removeFriend(const house, const chr);
+
+/*!
+\brief tells if a char is friend of the house
+\author Wintermute
+\since 0.82
+\fn house_isFriend
+\param house, the house serial
+\param the char serial of the character
+\return boolean
+*/
+native house_isFriend(const house, const chr);
+
+/*!
+\brief adds a co owner  to the list of house owners
+\author Wintermute
+\since 0.82
+\fn house_addCoOwner
+\param house, the house serial
+\param the char serial of the new co owner
+\return boolean
+*/
+
+native house_addCoOwner(const house, const chr);
+
+/*!
+\brief removes a co owner from the list of house owners
+\author Wintermute
+\since 0.82
+\fn house_removeCoOwner
+\param house, the house serial
+\param the char serial of the new co owner
+\return boolean
+*/
+
+native house_removeCoOwner(const house, const chr);
+
+/*!
+\brief tells if a char is friend of the house
+\author Wintermute
+\since 0.82
+\fn house_isCoOwner
+\param house, the house serial
+\param the char serial of the character
+\return boolean
+*/
+
+native house_isCoOwner(const house, const chr);
+
+/*!
+\brief adds a character to the list of banned people
+\author Wintermute
+\since 0.82
+\fn house_addBan
+\param house, the house serial
+\param the char serial of the banned character
+\return boolean
+*/
+native house_addBan(const house, const chr);
+/*!
+\brief removes  a character from the list of banned people
+\author Wintermute
+\since 0.82
+\fn house_removeBan
+\param house, the house serial
+\param the char serial of the banned character
+\return boolean
+*/
+native house_removeBan(const house, const chr);
+
+/*!
+\brief tells if  a character is on the list of banned people
+\author Wintermute
+\since 0.82
+\fn house_isBanned
+\param house, the house serial
+\param the char serial of the banned character
+\return boolean
+*/
+
+native house_isBanned(const house, const chr);
+
+/*!
+\brief transfers the house to a new owner, removing all people from the friend, coowner and banned list, removing all keys to the house and making a new pair for the new owner
+\author Wintermute
+\since 0.82
+\fn house_addBan
+\param house, the house serial
+\param the char serial of the new owner
+\return boolean
+*/
+
+native house_transfer(const house, const newOwner);
+
+/*!
+\brief changes the locks on the house, making a new keycode, therefore rendering all previous keys useless
+\author Wintermute
+\since 0.82
+\fn house_changeLocks
+\param house, the house serial
+*/
+
+native house_changeLocks(const house);
+
+/*!
+\brief creates a new pair of keys for the current keycode
+\author Wintermute
+\since 0.82
+\fn house_makeKeys
+\param house, the house serial
+*/
+native house_makeKeys(const house, const chr);
+
+/*!
+\brief remove all keys currently in the worldsave for this house
+\author Wintermute
+\since 0.82
+\fn house_deleteKeys
+\param house, the house serial
+*/
+native house_deleteKeys(const house);
+
