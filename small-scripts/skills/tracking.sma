@@ -1,29 +1,12 @@
 const seconds = 25;
 
-static typeQuestion[3][] = {
-	"Which animal do you wish to track?",
-	"Which creature do you wish to track?",
-	"Whom do you wish to track?"
-};
-
-static where[8][] = {
-"North", 
-"Northeast",
-"East", 
-"Southeast", 
-"South", 
-"Southwest", 
-"West", 
-"Northwest"
-};
-
 public __nxw_sk_tracking( const chr )
 {
 	new menu = gui_createIconList( "handle_tracking", "What do you wish to track?"  );
 
-	gui_addIcon( menu, 0x20D4, _, _, "Animals" );
-	gui_addIcon( menu, 0x20E9, _, _, "Creatures" );
-	gui_addIcon( menu, 0x2106, _, _, "Players" );
+	gui_addIcon( menu, 0x20D4, _, _, msg_sk_trackDef[0] );
+	gui_addIcon( menu, 0x20E9, _, _, msg_sk_trackDef[1] );
+	gui_addIcon( menu, 0x2106, _, _, msg_sk_trackDef[2] );
 	
 	gui_show( menu, chr );
 }
@@ -35,7 +18,7 @@ public handle_tracking( const oldtrackMenu, const chr, const button, const model
 		return;
 
 	if ( !chr_checkSkill(chr, SK_TRACKING, 0, 1000, 1) ) {
-		chr_message( chr, _, "You cannot see any signs" ); 
+		chr_message( chr, _, msg_sk_trackDef[3] ); 
 		return;
 	}
 	
@@ -91,15 +74,15 @@ public handle_tracking( const oldtrackMenu, const chr, const button, const model
 				if( seeName ) {
 					new name[100];
 					chr_getProperty( c, CP_STR_NAME, _, name );
-					gui_addIcon( trackMenu, icon, _, c, "%s to the %s", name, where[ whereIdx ]  );
+					gui_addIcon( trackMenu, icon, _, c, msg_sk_trackDef[4], name, where[ whereIdx ]  );
 				}
 				else {
 					if(id == BODY_MALE)
-						gui_addIcon( trackMenu, icon, _, c, "a man to the %s", where[ whereIdx ] );
+						gui_addIcon( trackMenu, icon, _, c, msg_sk_trackDef[5], where[ whereIdx ] );
 					else if( id == BODY_FEMALE )
-						gui_addIcon( trackMenu, icon, _, c, "a woman to the %s", where[ whereIdx ] );
+						gui_addIcon( trackMenu, icon, _, c, msg_sk_trackDef[6], where[ whereIdx ] );
 					else
-						gui_addIcon( trackMenu, icon, _, c, "a creature to the %s", where[ whereIdx ] );
+						gui_addIcon( trackMenu, icon, _, c, msg_sk_trackDef[7], where[ whereIdx ] );
 				}
 			}
 		}
@@ -112,11 +95,11 @@ public handle_tracking( const oldtrackMenu, const chr, const button, const model
 		switch( button )
 		{
 			case 1:
-				chr_message( chr, _, "You see no signs of any animals." );
+				chr_message( chr, _, msg_sk_trackDef[8] );
 			case 2:
-				chr_message( chr, _, "You see no signs of any creatures." );
+				chr_message( chr, _, msg_sk_trackDef[9] );
 			case 3:
-				chr_message( chr, _, "You see no signs of anyone." );
+				chr_message( chr, _, msg_sk_trackDef[10] );
 		}
 	}
 }

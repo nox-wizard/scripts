@@ -14,7 +14,7 @@
 */
 public __nxw_sk_tasteid(const chr)
 {
-	chr_message( chr, _, "What do you want to taste?");
+	chr_message( chr, _, msg_sk_tasteDef[0]);
 	target_create( chr, _, _, _, "__tasteIDTarget" );
 }
 
@@ -28,7 +28,7 @@ public __tasteIDTarget( const t, const cc, const item, const x, const y, const z
 {
 	if (!isItem(item)) 
 	{
-		chr_message( cc, _, "You can't taste that!");
+		chr_message( cc, _, msg_sk_tasteDef[1]);
 		return;
 	}
 
@@ -36,12 +36,12 @@ public __tasteIDTarget( const t, const cc, const item, const x, const y, const z
 	{
 		new poisonLvl = itm_getProperty(item, IP_POISONED);
 		if (poisonLvl > 0) 
-			chr_message( cc, _, "This item is poisoned!");
+			chr_message( cc, _, msg_sk_tasteDef[2]);
 		 else 
-			chr_message( cc, _, "This item shows no poison");
+			chr_message( cc, _, msg_sk_tasteDef[3]);
 		
 	} 
-	else 	chr_message( cc, _, "You do not understand if this item is poisoned or not");
+	else 	chr_message( cc, _, msg_sk_tasteDef[4]);
 }
 
 

@@ -10,8 +10,9 @@
 
 #include "small-scripts/skills/constant.sma"
 
-#include "small-scripts/nxw_lib"
+#include "small-scripts/nxw_lib.sma"
 #include "small-scripts/API/API.sma"
+#include "small-scripts/small_speech.sma"
 #include "small-scripts/nxw_lib2.sma"
 #include "small-scripts/skills/skills.sma"
 #include "small-scripts/commands/commands.sma"

@@ -72,29 +72,29 @@ public __anatomy_target(const cc)
 
     switch(prc/10) {
         case 0:
-            chr_message( cc, _, "He/She is completely tired [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[28], prc);
         case 1:
-            chr_message( cc, _, "He/She is extremely tired [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[29], prc);
         case 2:
-            chr_message( cc, _, "He/She is very much tired [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[30], prc);
         case 3:
-            chr_message( cc, _, "He/She is very tired [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[31], prc);
         case 4:
-            chr_message( cc, _, "He/She is tired [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[32], prc);
         case 5:
-            chr_message( cc, _, "He/She is slightly tired [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[33], prc);
         case 6:
-            chr_message( cc, _, "He/She is not tired [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[34], prc);
         case 7:
-            chr_message( cc, _, "He/She is slightly fresh [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[35], prc);
         case 8:
-            chr_message( cc, _, "He/She is almost fresh [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[36], prc);
         case 9:
-            chr_message( cc, _, "He/She is fresh [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[37], prc);
         case 10:
-            chr_message( cc, _, "He/She is fully fresh [%d%%]", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[38], prc);
         default:
-            chr_message( cc, _, "He/She is at %d%% stamina", prc);
+            chr_message( cc, _, msg_sk_anatomyDef[39], prc);
         }
 }
 

@@ -3,7 +3,7 @@
 public __nxw_sk_dtchidden(const chr)
 {
 bypass();
-	chr_message( chr, _ , "Where do you want to search for someone?");
+	chr_message( chr, _ , msg_sk_dhiddenDef[0]);
 	target_create( chr, _ , _, _, "detecthidtwo" );
 }
 
@@ -56,18 +56,18 @@ new set = set_create(); // creating a new set
 		else if ( skillmin > 999 ) skillmin = 999;
 		if(chr_checkSkill(c, 14, skillmin, 1000, 1))
 		      {
-		      chr_message(cc, _, "You have been revealed");
+		      chr_message(cc, _, msg_sk_dhiddenDef[2]);
 		      chr_setProperty( cc,CP_HIDDEN,_,0); //becomes visible
 		      chr_setProperty( cc,CP_PRIV2,_, chr_getProperty( target,CP_PRIV2,_) &~0x08 ); //not permahidden
 		      chr_update(cc);
 		      new chrname[30]; //neuer leerer String fuer das auslesen des Charnamens
 		      chr_getProperty(cc, CP_STR_NAME, 0, chrname); //auslesen des Charnamen
-		      chr_message(c, _,"You revealed %s.", chrname);
+		      chr_message(c, _,msg_sk_dhiddenDef[3], chrname);
 		      return;
 		      }
 		} //if closed
 	} //for searches whole range, if not stopped before than goes on
-	chr_message(c, _, "You fail to find anyone.");
+	chr_message(c, _, msg_sk_dhiddenDef[4]);
 	return;
 } //else closed
 } //function closed

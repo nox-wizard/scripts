@@ -4,13 +4,13 @@ public _cooking(const i, const chr)
     new backpack = chr_getBackpack( chr);
       if ((itm_getProperty(i, IP_CONTAINERSERIAL)) != (itm_getProperty(backpack,IP_SERIAL)))
       {
-      chr_message( chr, _,"It must be in your backpack.");
+      chr_message( chr, _,msg_sk_cookDef[0]);
       return;
       }
     chr_delLocalVar(chr, 1002, VAR_TYPE_INTEGER);
     chr_addLocalIntVar(chr, 1002, 0);
     chr_setLocalIntVar(chr, 1002, i); //selected Item is stored on char
-    chr_message( chr, _, "What do you want to use this on?");
+    chr_message( chr, _, msg_sk_cookDef[1]);
     target_create( chr, _, _, _, "_cookingtwo" );
 }
 
@@ -32,13 +32,13 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
             }
         else 
             {
-            chr_message( chr, _, "You can use this only at items!");
+            chr_message( chr, _, msg_sk_cookDef[2]);
             return;
             }
         }
     else if(isChar(target))//click on char
         {
-        chr_message( chr, _, "You can use this only at items!"); 
+        chr_message( chr, _, msg_sk_cookDef[2]); 
         return;
         }
     else if(isItem(target) && (itemscript == 105106))//click on item
@@ -65,7 +65,7 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                itm_refresh(i);
                                itm_createInBp( (itemscript + 1), chr );
                                }
-                  else chr_message( chr, _, "You need 4 sheeves of wheat for this.");
+                  else chr_message( chr, _, msg_sk_cookDef[3]);
                   }
     case 100093..100096: //pitcher with water
                    {
@@ -82,7 +82,7 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                      new mapname = 0;
                                       //_farming3(chr, i, itemscript, mapname, target);//go to farming system
                                     }
-                   else chr_message( chr, _, "This can't be combined.");
+                   else chr_message( chr, _, msg_sk_cookDef[4]);
                    }
      case 101508..101512: //sack or bowl of flour
                    {
@@ -94,7 +94,7 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                      {
                                      add_and_del_both(chr, 105324, 101524, i, target);//empty pitcher, cake mix
                                      }
-                   else chr_message( chr, _, "This can't be combined.");
+                   else chr_message( chr, _, msg_sk_cookDef[4]);
                    }
      case 101513: //dough
                               {
@@ -106,7 +106,7 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                         }
                                         else
                                         {
-                                        chr_message( chr, _, "You are not skilled enough to make this.");
+                                        chr_message( chr, _, msg_sk_cookDef[5]);
                                         return;
                                         }
                                      }
@@ -150,7 +150,7 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                      {
                                      add1_and_del2(chr, 101514, i, target);//sweet dough
                                      }                   
-                              else chr_message( chr, _, "This can't be combined.");
+                              else chr_message( chr, _, msg_sk_cookDef[4]);
                               }
       case 101514: //sweet dough
                               {
@@ -166,7 +166,7 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                         }
                                     else
                                         {
-                                        chr_message( chr, _, "You are not skilled enough to make this.");
+                                        chr_message( chr, _, msg_sk_cookDef[5]);
                                         return;
                                         }
                                     }
@@ -174,7 +174,7 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                      {
                                      add1_and_del2(chr, 101524, i, target);//cake mix
                                      }
-                              else chr_message( chr, _, "This can't be combined.");
+                              else chr_message( chr, _, msg_sk_cookDef[4]);
                               }                     
       case 101517..101543: //unbaked dough, pie or pizza
                               {
@@ -186,7 +186,7 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                         }
                                         else
                                         {
-                                        chr_message( chr, _, "You are not skilled enough to make this.");
+                                        chr_message( chr, _, msg_sk_cookDef[5]);
                                         return;
                                         }
                                      }
@@ -202,13 +202,13 @@ public _cookingtwo(const target, const chr, const obj, const x, const y, const z
                                         }
                                         else
                                         {
-                                        chr_message( chr, _, "You are not skilled enough to make this.");
+                                        chr_message( chr, _, msg_sk_cookDef[5]);
                                         return;
                                         }
                                     }
                                else chr_message( chr, _, "You must cook it on a heat source.");
                                }
-     default: chr_message( chr, _, "This can't be combined.");
+     default: chr_message( chr, _, msg_sk_cookDef[4]);
      }
      }
      else chr_message( chr, _, "Error, please contact a GM!");

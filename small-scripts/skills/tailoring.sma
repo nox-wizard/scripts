@@ -142,7 +142,7 @@ public __nxw_sk_tailoring(const cc, const itm)
 		return;
 	}
 	if (skill < clothSkill[type]) {
-		chr_message( cc, _, "You are not skilled enough for this kind of material.");
+		chr_message( cc, _, msg_sk_tailorDef[0]);
 		return;
 	}
 	chr_skillMakeMenu(cc, clothMakeMenu[type], SK_TAILORING, itm);
