@@ -364,4 +364,14 @@ native  set_getFriends ( const set, const house);
 */
 native  set_getBanned ( const set, const house);
 
+/*
+\brief Add to given set all owned house (serials)
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the house
+\return 0
+*/
+native  set_getOwnedHouses ( const set, const house);
+
 /*! }@ */
