@@ -44,7 +44,7 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 		return;
 	}
 	
-	new range = VISRANGE * 2;
+	new range = VISRANGE;
 	new set = set_create();
 		
 	new id1, id2;
