@@ -334,4 +334,34 @@ native set_addAllRaces( const set, const onlyActive=true );
 */
 native set_getRaceStuff( const set, const race, const prop, const subProp=0  );
 
+/*
+\brief Add to given set all house co owners (serials)
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the house
+\return 0
+*/
+native  set_getCoOwners ( const set, const house);
+
+/*
+\brief Add to given set all house friends (serials)
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the house
+\return 0
+*/
+native  set_getFriends ( const set, const house);
+
+/*
+\brief Add to given set all house banned (serials)
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the house
+\return 0
+*/
+native  set_getBanned ( const set, const house);
+
 /*! }@ */

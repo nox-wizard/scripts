@@ -8,7 +8,7 @@
 \param property, the house property to get
 \param subproperty, the subproperty to get
 */
-native house_getProperty(const house, const property, const subproperty, ...);
+native house_getProperty(const house, const property, const subproperty=0, ...);
 
 /*!
 \brief sets the given property and subpropoerty value for the house
@@ -19,7 +19,7 @@ native house_getProperty(const house, const property, const subproperty, ...);
 \param property, the house property to set
 \param subproperty, the subproperty to set
 */
-native house_setProperty(const house, const property, const subproperty, const value, ...);
+native house_setProperty(const house, const property, const subprop=0, ...);
 
 /*!
 \brief locks the given item, making it unmovable and increase the number of locked items by one in the house, fails if maximum amount of lockable items is exceeded
