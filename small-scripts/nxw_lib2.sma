@@ -172,7 +172,7 @@ It's always x0 <= x1 && y0 <= y1.
 */
 public getRectangleTop(const chr, callback[])
 {
-	printf("enter rect^n");
+	//printf("enter rect^n");
 	chr_delLocalVar(chr,CLV_TEMP1);
 	chr_addLocalStrVar(chr,CLV_TEMP1,callback);
 	

@@ -118,7 +118,7 @@ static readProp(chr,&prop)
 			return INVALID;
 		}
 	}
-	printf("prop is: %d^n", prop);
+	//printf("prop is: %d^n", prop);
 	
 	return OK;
 }

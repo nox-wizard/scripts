@@ -956,11 +956,26 @@ public alignments[GUILD_TOWN][] = {
 	"lawful"
 	};
 	
-const NUM_MiscSENT = 5;
+const NUM_MiscSENT = 6;
 public msg_MiscDef[NUM_MiscSENT][]={
 "You lit the %s",
 "*lights the",
 "You extinguis %s",
 "*extinguishs the",
-"The last rest of the %s burns away."
+"The last rest of the %s burns away.",
+"Where you want to place the building?"
 }
+
+
+/*Ab hier beliebig einstellbare Ingamemeldungen*/
+const NUM_hitchSENTENCE = 8;
+public msg_hitchDef[NUM_hitchSENTENCE][]={
+"You are too far away from that.", 
+"What animal you want to hitch?", 
+"*binds it to the post*",
+"You can only hitch pets you ownn!",
+"You can't hitch people!",
+"There is already another animal bound at this post.",
+"The animal at this post isn't yours.",
+"That animal is too far away from the post."
+};

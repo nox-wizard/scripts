@@ -22,18 +22,22 @@ With this command you can easily build floors and walls.<br>
 Passing no parameters will make the command ask for 2 map locations that will define the tiling rectangle.<br>
 All parameters must be < 256.
 */
-
-new itemStr[100];
+new ItemStr[100] 
 
 public cmd_tile(const chr)
 {
 	readCommandParams(chr);
+	
+	new tempStr[100];
+	chr_getSpeech(chr, tempStr);
+	trim(tempStr);
 
 	new type[6];
-	substring(__cmdParams[0],0,4,type,false);
+	//substring(__cmdParams[0],0,4,type,false); //does not work as only small letters are reported back by readCommandParams
+	substring(tempStr,0,4,type,false);
 	if(!strcmp(type,"$item")) //add an item
 	{
-		sprintf(itemStr, "%s", __cmdParams[0]); 
+		sprintf(ItemStr, "%s", tempStr);
 	}
 	else
 	{
@@ -123,14 +127,14 @@ public cmd_tile_rect(chr,xy0,xy1,z0,z1)
 	//printf("z for tile is %d^n",z0);
 
 	//which item?
-	if(!strlen(itemStr))
+	if(!strlen(ItemStr))
 	{
 		chr_message(chr,_,msg_commandsDef[253]);
 		target_create(chr,nXnY,_,_,"cmd_tile_targ1"); //no item defined, so which item to place?
 		return;
 	}
 	else
-		new object = itm_createByDef(itemStr);
+		new object = itm_createByDef(ItemStr);
 		
 		cmd_tile_copyItem(object,x0,y0,z0,nX,nY,1,1);
 		itm_remove(object);
