@@ -1461,7 +1461,6 @@ stock chr_addNPCVec(const npcScriptID, pos[3])
 \brief creates a new npc from the xss npc list at a given location
 \return npc serial if the npc has been createdr, else INVALID
 */
-
 native chr_addRandomNPC(const npclistScriptID, const x, const y, const z);
 
 /*!
@@ -1529,10 +1528,12 @@ native chr_calcDef (const chr, const bodyPart = 0);
 
 /*!
 \author Xanathar
-\fn chr_attackStuff(const chr_defender, const socket_attacker)
-\brief ??
+\fn chr_attackStuff(const chr_defender, const chr_attacker)
+\param chr_defender: the character defending
+\param chr_attacker: the character who attacks
+\brief checks if defender is attacked by attacker?
 */
-native chr_attackStuff (const chr_defender, const socket_attacker);
+native chr_attackStuff (const chr_defender, const chr_attacker);
 
 /*!
 \author Luxor
