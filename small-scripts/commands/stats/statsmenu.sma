@@ -3,7 +3,6 @@
 #endif
 #define statsmenu_included
 
-#define TXT_COLOR 33
 /*!
 \defgroup script_command_stats_menu menu
 \ingroup script_commands_stats

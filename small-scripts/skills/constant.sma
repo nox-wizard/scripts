@@ -15,14 +15,6 @@
 @{
 */
 
-#define _SKILLS_DEBUG_ 1 //<! set to 1 if you want debug messages to be printed
-#define ACTIVATE_EXTENDED_SKILLSYSTEM 0	//!< set to 1 to activate the extended skillsystem
-#define EXT_SKILLSYSTEM_TEST 0	//!< set to 1 if you want a skillsystem test performed on char login (VERY MUCH LAG at char login) then look in skilltest.txt the results
-#define MAX_SKILL_SUM 7000	//!< maximum value the skillsumcan reach
-#define MAX_SKILL_VALUE 1000 	//!< maximum value a skill can reach, not considering modifiers
-#define SK_ADDITIONAL_MAX 10	//!< max number of additional skills in skills2.xss, change it if you need more skills
-
-
 //==================   DO NOT MODIFY ANYTHING BELOW THIS LINE  ======================== 
 
 /*!

@@ -15,13 +15,7 @@ Shows the ingame house gump that allows all kinds of modifications<BR>
 <br>
 */
 
-#define _AUTOBOUNCE_AVAIL 0 // this activates auto-bounce option in gumps to prevent house looting by exploiter (getting into a house without using the door), 1 means ON (only friends and co-owner can enter the house no matter if the door is open or locked)
-#define _AUTOBOUNCE_KEY 1 // this decides if the autoban should be only active if a non-friend/non-coowner enters the house and the door us looked, so _AUTOBOUNCE_KEY 1 means that player still need to take care for locked doors even if auto-bounce is active
 const AUTOBOUNCEVAR = 9000;
-
-#define HOUSE_COOWNER 5
-#define HOUSE_FRIENDS 15
-#define HOUSE_BANNED 50
 
 const BUTTON_HOUSEAPPLY=11;
 const housepages=3; //one line for one page, two rows for one page

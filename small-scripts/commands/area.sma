@@ -39,8 +39,6 @@ enum areaParams
 		area_cmdsLeft   //!< number of comands left for this area
 	};
 
-#define MAX_AREAS 32;	//!< max number of areas, should be >= to the number of players that can access the 'area command
-
 /*!
 Main area system data structure, this array contains all the areas and their data, can be modified only
 by the area_ functions

@@ -9,7 +9,7 @@
 
 @{
 */
-#define _PAGESYSTEM_DEBUG_ 1 	//!< set to 1 toenable pagesystemdebug messages
+
 #define MAX_GM_PAGES_PER_CHAR 3 //!< maximum number of pages per character, you can't modify this valueas it is defined in sources too.
 
 new __onlineStaff; //!< set that is filled with all pageable online staff

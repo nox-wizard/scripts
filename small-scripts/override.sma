@@ -7,6 +7,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
+#include "small-scripts/config.sma"
 
 #include "small-scripts/skills/constant.sma"
 

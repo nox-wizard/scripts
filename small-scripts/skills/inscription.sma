@@ -1,5 +1,3 @@
-#define BLANK_SCROLL_ID 3636
-
 #define NUM_SCROLLS 64
 static book_array[NUM_SCROLLS];  //scrolls in a spellbook
 /*!

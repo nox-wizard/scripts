@@ -1,7 +1,6 @@
 new chr_x[512];  
 new chr_y[512];  
 //new chr_z;  
-#define REGEN_RATE 4;  
  
 public __meditation(const c)  
  {  
