@@ -22,7 +22,7 @@ public __charLogin(const chr)
 	//defined in "small-scripts/skills/extendedSkillsystem.sma"
 	startExtSkillsystem(chr);
 		
-	//itm_potionStart(chr);
+	itm_potionStart(chr);
 	
 	
 	//defined in "small-scripts/comands/page/pagesystem.sma"

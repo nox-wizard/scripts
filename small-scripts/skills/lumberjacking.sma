@@ -349,7 +349,7 @@ public _cutlog(const log, const cc)
 //////////////////////////////////////////////////////////////////
 
 
-public _carpenter(const itm, const chr) //itm is serial of saw, s is socket of char
+public carpenter(const itm, const chr) //itm is serial of saw, s is socket of char
 {
 bypass();
 new saw1 = chr_countItems(chr, 0x1028, -1); //saw is searched for in pack

@@ -29,6 +29,7 @@
 #include "small-scripts/custom/speech.sma"
 #include "small-scripts/custom/eatdrink.sma"
 #include "small-scripts/custom/flipitem.sma"
+#include "small-scripts/custom/potiondelay.sma"
 
 #include "small-scripts/override/startServer.sma"
 #include "small-scripts/override/charLogin.sma"
