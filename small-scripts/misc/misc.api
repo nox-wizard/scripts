@@ -41,12 +41,12 @@ native ntprintf(const socket,const format[], ...);
 /*!
 \brief Prints a message of given color to the given socket
 \author Endymion
-\fn sysmessage( const socket, const color=0x0387, const format[], ... )
-\param socket the socket
+\fn sysmessage( const chr, const color=0x0387, const format[], ... )
+\param chr the player
 \param color the color
 \param format the message
 */
-native sysmessage( const socket, const color=0x0387, const format[], ... );
+native sysmessage( const chr, const color=0x0387, const format[], ... );
 
 
 /*!

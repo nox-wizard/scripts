@@ -8,5 +8,7 @@ public __race_enlist( const socket )
 	if( socket<0 )
 		return;
 		
-	sysmessage( socket, _, "Race system work in progress" );
+	new chr = getCharFromSocket(socket);
+		
+	sysmessage( chr, _, "Race system work in progress" );
 }

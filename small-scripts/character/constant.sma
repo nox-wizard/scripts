@@ -224,6 +224,7 @@ const CP_WORKLOCPOS = 313;
 const CP_AMXFLAGS = 314;
 const CP_NPCRACE = 315;
 const CP_LASTMOVETIME = 319;
+const CP_PARTY = 320;
 
 const CP_BASESKILL = 400;
 const CP_SKILL = 401;

@@ -61,6 +61,7 @@
 #include "small-scripts/timer/constant.sma"
 #include "small-scripts/variable/constant.sma"
 #include "small-scripts/race/constant.sma"
+#include "small-scripts/party/constant.sma"
 //
 // Include the NoX-Wizard small api
 //
@@ -90,6 +91,7 @@
 #include "small-scripts/timer/timer.api"
 #include "small-scripts/variable/variable.api"
 #include "small-scripts/race/race.api"
+#include "small-scripts/party/party.api"
 //
 // Include the NoX-Wizard small scripts
 //
@@ -103,6 +105,7 @@
 #include "small-scripts/check/check.sma"
 #include "small-scripts/skills/misc/scissors.sma"
 #include "small-scripts/race/menu/menu.sma"
+#include "small-scripts/party/party.sma"
 //
 // Include the Shard's script
 //
