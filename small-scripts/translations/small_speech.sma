@@ -338,7 +338,7 @@ public msg_carpenterDef[NUM_carpSENTENCE][]={
 "wood of unknown color %d!"
 };
 
-const NUM_sk_lumbSENT = 18;
+const NUM_sk_lumbSENT = 22;
 public msg_sk_lumbDef[NUM_sk_lumbSENT][]={
 "pine    ",
 "yew     ",
@@ -357,7 +357,11 @@ public msg_sk_lumbDef[NUM_sk_lumbSENT][]={
 "Your hand slips and a part of your wood is destroied.",
 "%s board",
 "You create boards out of the wood.^nCarefully you put the %s in your pack.",
-"There is no more wood left to chop."
+"There is no more wood left to chop.",
+"What logs you want to cut into logs?",
+"You are too unexperienced to work with this kind of wood",
+"You can only cut logs into boards.",
+"Your hand slips and a part of your logs is now destroyed."
 };
 
 const NUM_sk_meditSENT = 8;

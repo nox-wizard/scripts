@@ -181,6 +181,7 @@ End Customizable carpenter system
 public __nxw_sk_lumber(const cc, const x, const y, const mapid)
 {
 	bypass();
+	
 	new logFound = pine;//log found if nothing else will be found by the miner.
 	new logAmount = 1;
 	new logMaxAmount = -1;
@@ -289,58 +290,73 @@ public __nxw_sk_lumber(const cc, const x, const y, const mapid)
 /****************************************************************************
  FUNCTION : __nxw_cutlog
  AUTHOR   : Horian, modified after Luxor
- PURPOSE  : The function called by Item to cut logs to boards
+ PURPOSE  : The function called by Item to cut logs to boards, trigger is dovetail saw
  ****************************************************************************/
 
-public _cutlog(const log, const cc)
+public _cutlog(const saw, const chr)
 {
-    bypass();
-    new skill = chr_getSkill(cc, SK_LUMBERJACKING);
-    new color = itm_getProperty(log, IP_COLOR);
-    new index = 0;
-    for (index = 0; index < NUM_LOGS; index++)
+	bypass();
+	new scriptid = itm_getProperty(saw, IP_SCRIPTID);
+	if((itm_getProperty(saw, IP_SCRIPTID) != getIntFromDefine("$item_saw")) && (itm_getProperty(saw, IP_SCRIPTID) != getIntFromDefine("$item_saw2")) && (itm_getProperty(saw, IP_SCRIPTID) != getIntFromDefine("$item_dovetail_saw")) && (itm_getProperty(saw, IP_SCRIPTID) != getIntFromDefine("$item_dovetail_saw2")))
+		return;
+	
+	chr_message( chr, _, "%s", msg_carpenterDef[18]);
+	target_create( chr, _, _, _, "_cutlog_targ" );
+}
+
+public _cutlog_targ(const target, const cc, const log)
+{
+	if(itm_getProperty(log, IP_SCRIPTID) != getIntFromDefine("$item_logs"))
+	{
+		chr_message( cc, _, msg_sk_lumbDef[20]);
+		return;
+	}
+	new skill = chr_getSkill(cc, SK_LUMBERJACKING);
+	new color = itm_getProperty(log, IP_COLOR);
+	new index = 0;
+	for (index = 0; index < NUM_LOGS; index++)
         {
-        if (color == logProperty[index][3])
-        {
-              new minskill = logProperty[index][1]
-              if (skill < minskill)
-              {
-                     chr_message( cc, _, "You are too unexperienced to work with this kind of wood");
-                     return;
-              }
-              new log_amount = itm_getProperty(log, IP_AMOUNT);
-              if (!chr_checkSkill(cc, SK_LUMBERJACKING, 0, 1000, 1))
-              {
-                     if (log_amount == 1)
-                     {
-                     chr_message( cc, _, msg_sk_lumbDef[13]);
-                     itm_remove(log);
-                     }
-                     else
-                     {
-                     chr_message( cc, _, "Euch rutscht die Hand aus und ein Teil des woodes ist Abfall.");
-                     itm_setProperty(log, IP_AMOUNT, _, log_amount/2);
-                     itm_refresh(log); // tell the client item has been changed
-                     }
-               }
-               else
-               {
-               //new numboards=log_amount*2;         // one log gives two boards
-               new boardname[50]
-               sprintf(boardname, "%s", logProperty[index][logname]);
-               trim(boardname);   //remove triming spaces
-               sprintf(boardname, msg_sk_lumbDef[15], boardname);
-               new backpack = chr_getBackpack( cc, true );
-               new board = itm_createByDef( "$item_boards", backpack );
-               itm_setProperty(board, IP_WEIGHT, _, 100);
-               itm_setProperty(board, IP_COLOR, _,logProperty[index][3]);
-               itm_setProperty(board, IP_STR_NAME, 0, boardname);
-               itm_refresh(board);
-               chr_message( cc, _,msg_sk_lumbDef[16],boardname);
-               itm_remove(log);
-               }
-        }//color if
-    }//for
+        	if (color == logProperty[index][3])
+        	{
+        		new minskill = logProperty[index][1]
+        		if (skill < minskill)
+        		{
+        			chr_message( cc, _, msg_sk_lumbDef[19]);
+        			return;
+        		}
+        		new log_amount = itm_getProperty(log, IP_AMOUNT);
+        		if (!chr_checkSkill(cc, SK_LUMBERJACKING, 0, 1000, 1))
+        		{
+        			if (log_amount == 1)
+        			{
+        				 chr_message( cc, _, msg_sk_lumbDef[13]);
+        				 itm_remove(log);
+        			}
+        			else
+        			{
+        				chr_message( cc, _, msg_sk_lumbDef[21]);
+        				itm_setProperty(log, IP_AMOUNT, _, log_amount/2);
+        				itm_refresh(log); // tell the client item has been changed
+        			}
+        		}
+        		else
+        		{
+        			//new numboards=log_amount*2;         // one log gives two boards
+        			new boardname[50]
+        			sprintf(boardname, "%s", logProperty[index][logname]);
+        			trim(boardname);   //remove triming spaces
+        			sprintf(boardname, msg_sk_lumbDef[15], boardname);
+        			new backpack = chr_getBackpack( cc, true );
+        			new board = itm_createByDef( "$item_boards", backpack );
+        			itm_setProperty(board, IP_WEIGHT, _, 100);
+        			itm_setProperty(board, IP_COLOR, _,logProperty[index][3]);
+        			itm_setProperty(board, IP_STR_NAME, 0, boardname);
+        			itm_refresh(board);
+        			chr_message( cc, _,msg_sk_lumbDef[16],boardname);
+        			itm_remove(log);
+        		}
+        	}//color if
+        }//for
 }
 
 //////////////////////////////////////////////////////////////////
@@ -352,16 +368,10 @@ public _cutlog(const log, const cc)
 public carpenter(const itm, const chr) //itm is serial of saw, s is socket of char
 {
 bypass();
-new saw1 = chr_countItems(chr, 0x1028, -1); //saw is searched for in pack
-new saw2 = chr_countItems(chr, 0x1029, -1); //saw is searched for in pack
 new nails1 = chr_countItems(chr, 0x102E, -1); //nails pack is searched for in backpack
 new nails2 = chr_countItems(chr, 0x102F, -1); //nails pack is searched for in backpack
-if(saw1 < 1 && saw2 <1) //saw is not inside the pack
-{
-chr_message( chr, _,"%s", msg_carpenterDef[0]);
-return;
-}
-else if(nails1 < 1 && nails2 <1) //no nails inside the pack
+
+if(nails1 < 1 && nails2 <1) //no nails inside the pack
 {
 chr_message( chr, _,"%s", msg_carpenterDef[2]);
 return;

@@ -93,7 +93,7 @@ SECTION ITEM $item_dovetail_saw
     DECAY
     VALUE 35
     WEIGHT 400
-    @ONDBLCLICK carpenter
+    @ONDBLCLICK _cutlog
 }
 
 SECTION ITEM $item_dovetail_saw2
@@ -103,7 +103,7 @@ SECTION ITEM $item_dovetail_saw2
     DECAY
     VALUE 35
     WEIGHT 400
-    @ONDBLCLICK carpenter
+    @ONDBLCLICK _cutlog
 }
 
 SECTION ITEM $item_hammer
@@ -133,6 +133,7 @@ SECTION ITEM $item_moulding_planes2
     ID 102d
     DECAY
     VALUE 15
+    @ONDBLCLICK carpenter
 }
 
 SECTION ITEM $item_nails
@@ -154,6 +155,7 @@ SECTION ITEM $item_jointing_plane
     ID 1030
     DECAY
     VALUE 15
+    @ONDBLCLICK carpenter
 }
 
 SECTION ITEM $item_jointing_plane2
@@ -161,6 +163,7 @@ SECTION ITEM $item_jointing_plane2
     ID 1031
     DECAY
     VALUE 15
+    @ONDBLCLICK carpenter
 }
 
 SECTION ITEM $item_smoothing_plane
@@ -168,6 +171,7 @@ SECTION ITEM $item_smoothing_plane
     ID 1032
     DECAY
     VALUE 15
+    @ONDBLCLICK carpenter
 }
 
 SECTION ITEM $item_smoothing_plane2
@@ -182,6 +186,7 @@ SECTION ITEM $item_saw
     ID 1034
     DECAY
     VALUE 20
+    @ONDBLCLICK _cutlog
 }
 
 SECTION ITEM $item_saw2
@@ -189,6 +194,7 @@ SECTION ITEM $item_saw2
     ID 1035
     DECAY
     VALUE 20
+    @ONDBLCLICK _cutlog
 }
 
 SECTION ITEM $item_draw_knife
