@@ -303,7 +303,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 						{
 							itm_setEventHandler(house, EVENT_CHR_ONMULTIENTER, EVENTTYPE_STATIC, "BounceBan");
 						}
-						else itm_delEventHandler(house, EVENT_CHR_ONMULTIENTER, EVENTTYPE_STATIC, "BounceBan");
+						else itm_delEventHandler(house, EVENT_CHR_ONMULTIENTER);
 					}
 				}
 				#endif

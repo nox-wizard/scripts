@@ -26,10 +26,18 @@ Your privlevel can be set by the shard admins,
 by default you are a 'player'.
 
 ====== HERE START THE COMMANDS HELP TOPICS =======
+TOPIC 'accountscp
+TEXT
+Shows the accounts control panel
+syntax: 'accountscp [accountlist]
+if the account list is not given you will be prompted to target a character.
+With the accounts control panel you can manage accounts and characters, you can delete/block accounts
+and ban/unban characters.
+
 TOPIC 'action
 TEXT
 Makes a character perform an action
-sysntax: 'action actionnumber
+syntax: 'action actionnumber
  
 actionnumber can be:
 0: walk unarmed 1:walk armed
@@ -103,15 +111,21 @@ If value is not specified you will be told
 the current property value.
 property can be:
 "ai": npcai
-"dir": direction - (n/ne/e/se/s/sw/w/nw)
+"dex": dexterity
+"dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
+"full": set all stats to full
 "gmfx": gm moving effect
+"int": intelligence
+"light": character fixed light level
 "owner": owner serial
-"shop": if character is a shopkeeper (0 no - 1 yes)
+"shop": character is a shopkeeper (0 no - 1 yes)
 "spattack": type of spell attack
 "spadelay": delay between 2 spell attacks
 "speech": speech block
 "split": split
 "splitchance": splitchance
+"squelch": 1 squelched - 0 not squelched
+"str": strength
 "train": if npc can train (0 no - 1 yes)
 "trigger": npc trigger
 
@@ -174,6 +188,12 @@ TEXT
 Calls a Small public function
 syntax: 'func function [param0][param1][param2][param3][param4]
 Parameters can only be integers
+syntax: 'gmopen
+
+TOPIC 'gcollect
+TEXT
+perform garbage collection and prints a message in console.
+syntax: 'gcollect
 
 TOPIC 'gmhide
 TEXT
@@ -182,8 +202,8 @@ syntax: 'gmhide "on"/"off"
 
 TOPIC 'gmopen
 TEXT
-Opens a character's backpack
-syntax: 'gmopen
+Opens a character's backpack or container at the defined layer: 26(sell) 27(buy) 28(bought) 29(bank) 30(gold bank)
+syntax: 'gmopen [special]
 
 TOPIC 'go
 TEXT
@@ -241,6 +261,11 @@ Jails a character
 syntax: 'jail [days][hours][minutes]
 If not jailing time is specified, the character 
 will be jailed forever (until someone unjails him)
+
+TOPIC 'kick
+TEXT
+the targetted character will be disconnected from server
+syntax: 'kill 
 
 TOPIC 'kill
 TEXT
@@ -308,6 +333,11 @@ TOPIC 'pagelist
 TEXT
 Shows page list
 syntax: 'pagelist
+
+TOPIC 'pdump
+TEXT
+dump to the calling char the current performance statistics
+syntax: 'pdump
 
 TOPIC 'playerlist
 TEXT

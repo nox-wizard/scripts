@@ -38,6 +38,9 @@
 //treasurehunt
 #include "small-scripts/custom/treasurehunt/treasurehunt.sma"
 
+//plant growing, crossing, breeding
+#include "small-scripts/custom/plantcrossing.sma"
+
 #include "small-scripts/override/startServer.sma"
 #include "small-scripts/override/charLogin.sma"
 #include "small-scripts/override/charLogout.sma"

@@ -12,7 +12,7 @@
 
 <B>syntax:<B> 'gmopen [special]
 <UL>
-	<LI> special: can be 26(sell) 27(buy) 28(bought)
+	<LI> special: can be 26(sell) 27(buy) 28(bought) 29(bank box) 30(gold bank)
 </UL>
 
 the targetted character's backpack will be opened
@@ -38,8 +38,11 @@ public cmd_gmopen_targ(target, chr, object, x, y, z, unused, layer)
 {
 	if(isChar(object))
 	{
-		new cont = chr_getItemOnLayer(object,layer);
-		
+		new cont;
+		if(layer != 30)
+			cont = chr_getItemOnLayer(object,layer);
+		else
+			cont = chr_getBankBox(object, BANKBOX_GOLDONLY);
 		if(!isItem(cont))
 		{
 			chr_message(chr,_,msg_commandsDef[142],layer);

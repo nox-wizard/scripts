@@ -18,6 +18,7 @@
 #include "small-scripts/commands/freeze.sma"
 #include "small-scripts/commands/fullstats.sma"
 #include "small-scripts/commands/func.sma"
+#include "small-scripts/commands/gcollect.sma"
 #include "small-scripts/commands/gmopen.sma"
 #include "small-scripts/commands/go/go.sma"
 #include "small-scripts/commands/gy.sma"

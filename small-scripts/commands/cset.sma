@@ -7,8 +7,11 @@
 
 - property/value: the property to be set,choose from the list below,each property allows different values:
 	-# "ai": npcai
+	-# "dex": dexterity
 	-# "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
+	-# "full": set all stats to full
 	-# "gmfx": gm moving effect
+	-# "int": intelligence
 	-# "light": character fixed light level
 	-# "owner": owner serial
 	-# "shop": character is a shopkeeper (0 no - 1 yes)
@@ -18,6 +21,7 @@
 	-# "split": split
 	-# "splitchance": splitchance
 	-# "squelch": 1 squelched - 0 not squelched
+	-# "str": strength
 	-# "train": if npc can train (0 no - 1 yes)
 	-# "trigger": npc trigger
 	
@@ -41,9 +45,14 @@ This function is called by sources on 'cset command detection.\n
 You can change it in commands.txt.
 
 */
+
+new cset_subprop = '_';
+
 public cmd_cset(const chr)
 {
 	readCommandParams(chr);
+	
+	cset_subprop = '_';
 
 	if(!strlen(__cmdParams[0]))
 	{
@@ -65,7 +74,7 @@ public cmd_cset(const chr)
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 		{
 				chr2 = set_getChar(area_chars(area));
-				if(chr2 != chr) chr_setProperty(item,prop,_,val);
+				if(chr2 != chr) chr_setProperty(item,prop,cset_subprop,val);
 				chr_update(item);
 		}
 
@@ -95,7 +104,7 @@ public cmd_cset_targ(target, chr, object, x, y, z, unused, val)
 	{
 		if(val != -1000)
 		{
-			chr_setProperty(object,prop,_,val);
+			chr_setProperty(object,prop,cset_subprop,val);
 			chr_update(object);
 			chr_message(chr,_,msg_commandsDef[102],val);
 		}
@@ -109,36 +118,63 @@ static readPropAndVal(chr,&prop,&val)
 {
 	//switch on first property letter, if there is ambiguity add 
 	//another switch on the second letter __cmdParams[0][1]
+	
 	switch(__cmdParams[0][0])
 	{
-		case 'a': prop = CP_NPCAI;
+		case 'a':  prop = CP_NPCAI;
 		case 'd':
+			switch(__cmdParams[0][1])
 			{
-				if(!strlen(__cmdParams[0]))
+				case 'i':
 				{
-					chr_message(chr,_,msg_commandsDef[104]);
+					if(!strlen(__cmdParams[0]))
+					{
+						chr_message(chr,_,msg_commandsDef[104]);
+						return INVALID;
+					}
+		
+					prop = CP_DIR;
+					val = str2Dir(__cmdParams[1]);
+		
+					if(val == INVALID)
+					{
+						chr_message(chr,_,msg_commandsDef[105]);
+						return INVALID;
+					}
+		
+					return OK;
+				}
+				case 'e':
+				{
+					prop = CP_DEXTERITY;
+					cset_subprop = CP2_REAL;
+				}
+				default:
+				{
+					chr_message(chr,_,msg_commandsDef[106]);
 					return INVALID;
 				}
-		
-				prop = CP_DIR;
-				val = str2Dir(__cmdParams[1]);
-		
-				if(val == INVALID)
-				{
-					chr_message(chr,_,msg_commandsDef[105]);
-					return INVALID;
-				}
-		
-				return OK;
 			}
-
+		case 'f':
+		{
+			prop = CP_DEXTERITY;
+			val = chr_getProperty(chr,prop,CP2_REAL);
+			cset_subprop = CP2_EFF;
+			chr_setProperty(chr, CP_STRENGTH, CP2_EFF, chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
+			chr_setProperty(chr, CP_INTELLIGENCE, CP2_EFF, chr_getProperty(chr,CP_INTELLIGENCE, CP2_REAL));
+		}
 		case 'g': prop = CP_GMMOVEEFF;
+		case 'i':
+		{
+			prop = CP_INTELLIGENCE;
+			cset_subprop = CP2_INTREAL;
+		}
 		case 'l':prop = CP_FIXEDLIGHT;
 		case 'o': prop = CP_OWNSERIAL;
 		case 's':
 			switch(__cmdParams[0][1])
 			{ 
-				case 's': prop = CP_SHOPKEEPER;
+				case 'h': prop = CP_SHOPKEEPER;
 				case 'p': 
 					switch(__cmdParams[0][1])
 					{ 
@@ -158,7 +194,11 @@ static readPropAndVal(chr,&prop,&val)
 						}
 					}
 				case 'q': prop = CP_SQUELCHED;
-		
+				case 't':
+				{
+					prop = CP_STRENGTH;
+					cset_subprop = CP2_STRREAL;
+				}
 				default:
 				{
 					chr_message(chr,_,msg_commandsDef[106]);

@@ -79,21 +79,28 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 	//remove object and print messages
 	if(isItem(object))
 		itm_remove(object);
-	else 	if(isChar(object))
-			if(chr_isNpc(object))
-				chr_remove(object);
-			else 
+	else if(isChar(object))
+	{
+		if(chr_isNpc(object))
+			chr_remove(object);
+		else 
+		{
+			new s = set_create();
+			new bp = chr_getBackpack(chr);
+			set_addItemsInCont(s,bp);
+			for(set_rewind(s);!set_end(s);)
 			{
-				new s = set_create();
-				new bp = chr_getBackpack(chr);
-				set_addItemsInCont(s,bp);
-				for(set_rewind(s);!set_end(s);)
-					itm_remove(set_getItem(s));
-				
-				set_delete(s);
-				return; 
+				itm_remove(set_getItem(s));
 			}
-		else { chr_message(chr,_,msg_commandsDef[257]); return; }
+			set_delete(s);
+			return; 
+		}
+	}
+	else
+	{
+		chr_message(chr,_,msg_commandsDef[257]);
+		return;
+	}
 	chr_message(chr,_,msg_commandsDef[258]);
 
 	area_refresh(area);

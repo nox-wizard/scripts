@@ -8,13 +8,13 @@
 /*!
 \author Fax
 \fn cmd_gcollect(const chr)
-\brief gcollects accounts/XSS/commands
+\brief garbage collection at shard
 
 <B>syntax:</B> 'gcollect
 */
 public cmd_gcollect(chr)
 {
-	garbageCollection(seconds);
+	garbageCollection();
 	chr_message(chr,_,"Done");
 }
 

@@ -4,12 +4,12 @@
 
 \brief sets a command area for a character
 
-\b syntax: 'area [R][include][ncommands]
-- R: the area radius (default = VISRANGE)
+\b syntax: 'area [include][R][ncommands]
 - include:
 	-# "itm": include items only
 	-# "chr": include chr only (default)
 	-# "all": include all 
+- R: the area radius (default = VISRANGE)
 - ncommands: number of commands that will be affected from the area effect. (default = 1000000000) 
 
 Calling 'area with no parameters will result in a default area to be set, centered at the 
@@ -299,15 +299,37 @@ public cmd_area(const chr)
 	}
 
 	//READ AND CHECK PARAMETERS
+	
+	//---------------  include mode  ----------------------
+	if(!strlen(__cmdParams[0]))
+	{
+		chr_message(chr,_,msg_commandsDef[93]);
+		return;
+	}
+
+	if(!strcmp(__cmdParams[0],"itm"))
+		areas[area][area_incl] = INCLUDE_ITM;
+
+	else 	if(!strcmp(__cmdParams[0],"chr"))
+			areas[area][area_incl] = INCLUDE_CHR;
+
+		else if(!strcmp(__cmdParams[0],"all"))
+			areas[area][area_incl] = INCLUDE_ALL;
+
+			else
+			{
+				chr_message(chr,_,msg_commandsDef[94]);
+				return;
+			}
 
 	//---------------  radius  ----------------------
-	if(!isStrInt(__cmdParams[0]))
+	if(!isStrInt(__cmdParams[1]))
 	{
 		chr_message(chr,_,msg_commandsDef[91]);
 		return;
 	}
 
-	new R = str2Int(__cmdParams[0]);
+	new R = str2Int(__cmdParams[1]);
 	if(R < 0)
 	{
 		chr_message(chr,_,msg_commandsDef[92]);
@@ -317,27 +339,6 @@ public cmd_area(const chr)
 	//set radius
 	areas[area][area_R] = R;
 
-	//---------------  include mode  ----------------------
-	if(!strlen(__cmdParams[1]))
-	{
-		chr_message(chr,_,msg_commandsDef[93]);
-		return;
-	}
-
-	if(!strcmp(__cmdParams[1],"itm"))
-		areas[area][area_incl] = INCLUDE_ITM;
-
-	else 	if(!strcmp(__cmdParams[1],"chr"))
-			areas[area][area_incl] = INCLUDE_CHR;
-
-		else if(!strcmp(__cmdParams[1],"all"))
-			areas[area][area_incl] = INCLUDE_ALL;
-
-			else
-			{
-				chr_message(chr,_,msg_commandsDef[94]);
-				return;
-			}
 
 	//---------------  number of commands  -----------------
 	if(!strlen(__cmdParams[2]))

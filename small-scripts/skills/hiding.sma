@@ -12,7 +12,7 @@ if(chr_getProperty( c,CP_HIDDEN,_) == 1)
 }
 new char_x = chr_getProperty(c, CP_POSITION, CP2_X);  
 new char_y = chr_getProperty(c, CP_POSITION, CP2_Y); 
-new char_z = chr_getProperty(c, CP_POSITION, CP2_Z); 
+//new char_z = chr_getProperty(c, CP_POSITION, CP2_Z); 
 new hidingskill = chr_getProperty(c,CP_SKILL,21);
 
 new set = set_create(); // creating a new set

@@ -11,7 +11,7 @@ public detecthidtwo( const t, const c, const target, const trgx, const trgy, con
 {
 	new char_x = chr_getProperty(c, CP_POSITION, CP2_X);  
 	new char_y = chr_getProperty(c, CP_POSITION, CP2_Y); 
-	new char_z = chr_getProperty(c, CP_POSITION, CP2_Z); 
+	//new char_z = chr_getProperty(c, CP_POSITION, CP2_Z); //todo: LoS check
 	new detectskill = chr_getProperty(c,CP_SKILL,14); //range for detect is as smaller as lower skill is and chance for detect is lower when other char has higher hiding skill
 	
 	new dx = char_x - trgx;

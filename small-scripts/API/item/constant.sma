@@ -109,7 +109,7 @@ const IP_AMOUNT = 400;                 //!< amount
 const IP_AMOUNT2 = 401;                //!<
 const IP_DIR = 402;                    //!< direction
 const IP_COLOR = 403;                  //!< color
-const IP_ID = 404;                     //!< item ID
+const IP_ID = 404;                     //!< item hex ID
 const IP_SFX = 404;                     //!< item sound fx used when double clicking item
 
 const IP_STR_CREATOR = 450;            //!< name of the character who created the item

@@ -69,14 +69,15 @@ public deathsavevalue( const c, const serialcorps) //called by ONAFTERDEATH mons
 		itm_addLocalIntVar(map, maporigin, mobscript);
 		itm_addLocalIntVar(map, mapintelligence, decipherlevel );
 		
-		//add double click event for deciphering function		
-		if(treas_sys_type == 1) //old, osi-like system (treasure is only spawned when digging at treasure location)
+		//add double click event for deciphering function
+		#if treas_sys_type //old, osi-like system (treasure is only spawned when digging at treasure location)
 		{
 			itm_setEventHandler(map, EVENT_ITM_ONDBLCLICK, EVENTTYPE_STATIC, "deciphermapold");
 			return;
 		}
+		#endif
 		
-		else if(treas_sys_type == 0) //new system, treasure is spawned immediatelly = world gets a treasure that can be found no matter if someone searches for it
+		#if !treas_sys_type //new system, treasure is spawned immediatelly = world gets a treasure that can be found no matter if someone searches for it
 		{
 			itm_setEventHandler(map, EVENT_ITM_ONDBLCLICK, EVENTTYPE_STATIC, "deciphermapnew");
 			new mlx, mty, mrx, mby, tx, ty;
@@ -114,6 +115,7 @@ public deathsavevalue( const c, const serialcorps) //called by ONAFTERDEATH mons
 			itm_refresh(treasure);
 			//printf("treasure chest spawned at %d, %d, %d^n", tx, ty, map_getZ(tx, ty))
 		}
+		#endif
 	}
 }
 
@@ -228,7 +230,7 @@ public deciphermapnew (const map, const c)
 		chr_setProperty( c, CP_SKILLDELAY, _, (getCurrentTime() + decipherdelay) ); // Set the skill delay, no matter if it was a success or not
 		chr_sound (c, 91); //inscription sound, soundeffect(s, 0x02, 0x49); // Do some inscription sound regardless of success or failure
 		chr_message( c, _, "You put the deciphered map in your pack");
-		itm_delEventHandler(map, EVENT_ITM_ONDBLCLICK, EVENTTYPE_STATIC, "deciphermapold");
+		itm_delEventHandler(map, EVENT_ITM_ONDBLCLICK);
 		itm_setProperty(map, IP_TYPE, _, 302);
 		
 		itm_delLocalVar(map, mapintelligence);
@@ -357,7 +359,7 @@ public treasureposition_one( &mlx, &mty, &mrx, &mby, &tx, &ty) //& before the va
 
 public initTreasure()
 {
-	if(REGIONBASING == 1) //treasure rect
+	#if REGIONBASING //treasure rect
 	{		
 		log_message("Loading region rectangles borders for treasure hunt ...");
 		regionRecAmount = xss_scanFile(filename_rec,"scan_regions_rect");
@@ -368,6 +370,7 @@ public initTreasure()
 		}
 		log_message("Region rectangles borders for treasure hunt loaded^n");
 	}
+	#endif
 }
 
 public scan_regions_rect(file,line)

@@ -271,7 +271,6 @@ public init_tweak_itm()
 					it_pg5_r = i; //maximum 14 lines that fit at row
 			}
 		}//for
-		new tempStr[50];
 		for(new i=0; i<NUM_chrtweak; ++i)
 		{
 			new j;

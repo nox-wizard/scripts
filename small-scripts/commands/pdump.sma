@@ -8,7 +8,7 @@
 /*!
 \author Fax
 \fn cmd_pdump(const chr)
-\brief shows character's position
+\brief dump to the calling char the current performance statistics
 
 <B>syntax:</B> 'pdump
 
