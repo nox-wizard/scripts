@@ -277,3 +277,37 @@ native set_addOnPlNearObj( const set, const chr, const excludeThis=true, const d
 \fn set_addOnPlNearXY( const set, const x, const y, const distance=VISRANGE )
 */
 native set_addOnPlNearXY( const set, const x, const y, const distance );
+
+/*!
+\brief Add to given set all guild member
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the guild
+\return 0
+\fn set_addGuildMembers( const set, const guild )
+*/
+native set_addGuildMembers( const set, const guild );
+
+/*!
+\brief Add to given set all guild recruit
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the guild
+\return 0
+\fn set_addGuildRecruit( const set, const guild )
+*/
+native set_addGuildRecruit( const set, const guild );
+
+/*!
+\brief Add to given set all guild or guild political
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the guild ( if INVALID all, else use options )
+\param 3 the options ( WAR, ALLIED )
+\return 0
+\fn set_addGuilds( const set, const guild=INVALID, const options=INVALID )
+*/
+native set_addGuilds( const set, const guild=INVALID, const options=INVALID ) 
