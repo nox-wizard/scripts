@@ -229,6 +229,14 @@ SECTION ITEM $greater_poison_potion
 	VALUE $greater_potion_value
 }
 
+SECTION ITEM $deadly_poison_potion
+{
+	#copy DEFAULT POISON_POTION
+	NAME2 a deadly poison potion
+	MOREZ 4
+	VALUE $greater_potion_value
+}
+
 //
 // Energy
 //

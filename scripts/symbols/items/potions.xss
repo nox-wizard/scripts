@@ -20,6 +20,7 @@
 #define $lesser_poison_potion 660
 #define $normal_poison_potion $item_poison_potion
 #define $greater_poison_potion 661
+#define $deadly_poison_potion 667
 
 #define $lesser_energy_potion 662
 #define $normal_energy_potion $item_energy_potion
