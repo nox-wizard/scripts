@@ -1,9 +1,9 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (farmitems.xss)									  ||
-// || Maintained by Horian										  ||
-// || Last Update 27-feb-2003											 ||
+// || NoX-Wizard Scripts (farmitems.xss)				  ||
+// || Maintained by Horian						  ||
+// || Last Update 27-feb-2003						  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.82 or later					  ||
+// || This script requires NoX-Wizard 0.82 or later			  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 SECTION ITEM $item_small_flower_pot
@@ -1939,16 +1939,30 @@ SECTION ITEM $item_seed
 
 SECTION ITEM $item_bowl_with_soil1
 {
-	NAME bowl with
+	NAME bowl with soil
 	ID 1602
-	@ONDBLCLICK _farming
+	@ONDBLCLICK plantcrossing2
+	AMXINT $lclvar_plantcross_status 0
+	AMXINT $lclvar_plantcross_water 0
+	AMXINT $lclvar_plantcross_fungus 0
+	AMXINT $lclvar_plantcross_infest 0
+	AMXINT $lclvar_plantcross_poison 0
+	AMXINT $lclvar_plantcross_bonus_str 0
+	AMXINT $lclvar_plantcross_bonus_hea 0
 }
 
 SECTION ITEM $item_bowl_with_soil2
 {
-	NAME bowl with fertile
+	NAME bowl with fertile soil
 	ID 1602
-	@ONDBLCLICK _farming
+	@ONDBLCLICK plantcrossing2
+	AMXINT $lclvar_plantcross_status 0
+	AMXINT $lclvar_plantcross_water 0
+	AMXINT $lclvar_plantcross_fungus 0
+	AMXINT $lclvar_plantcross_infest 0
+	AMXINT $lclvar_plantcross_poison 0
+	AMXINT $lclvar_plantcross_bonus_str 0
+	AMXINT $lclvar_plantcross_bonus_hea 0
 }
 
 SECTION ITEM $item_dirt_patch

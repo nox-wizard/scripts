@@ -31,3 +31,11 @@ SECTION ITEM $item_treasure_chest
     WEIGHT 600
     MOVABLE 1
 }
+
+#define $item_plantcross 9000003
+SECTION ITEM $item_plantcross
+{
+	NAME Plant cross check
+	ID 13D3
+	@ONDBLCLICK plantcross_show
+}

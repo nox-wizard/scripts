@@ -1,5 +1,12 @@
 //localvar used to store flipped item scriptID
 #define $localvar_flipitem 9000
+#define $lclvar_plantcross_status 9001
+#define $lclvar_plantcross_water 9002
+#define $lclvar_plantcross_fungus 9003
+#define $lclvar_plantcross_invest 9004
+#define $lclvar_plantcross_poison 9005
+#define $lclvar_plantcross_bonus_str 9006
+#define $lclvar_plantcross_bonus_hea 9007
 
 //
 // GM ROBES
