@@ -620,7 +620,6 @@
 #define $item_potted_tree_2 650
 #define $item_potted_tree_3 651
 #define $item_bottle_of_pink_champaine 666
-#define $item_a_pink_champaine_flute 667
 #define $item_a_wand_of_greater_healing 680
 #define $item_a_wand_of_energy_vortex 681
 #define $item_a_wand_of_magic_arrow 682

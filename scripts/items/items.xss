@@ -4058,16 +4058,6 @@ SECTION ITEM $item_bottle_of_pink_champaine
     GOOD 3
 }
 
-SECTION ITEM $item_a_pink_champaine_flute
-{
-    NAME a pink champaine flute
-    ID 099a
-    COLOR 04B1
-    DECAY
-    VALUE 0
-    GOOD 3
-}
-
 SECTION ITEM $item_a_wand_of_greater_healing
 {
     NAME a magic wand
