@@ -29,6 +29,7 @@ public __charLogin(const chr)
 	
 	hungerandthirst(chr);
 	
+	/*
 	new race = chr_getProperty(chr, CP_NPCRACE);
 	printf("race is: %d", race);
 	if( race < 0)
@@ -36,6 +37,7 @@ public __charLogin(const chr)
 		printf("call racemenu now");
 		race_menu(chr, race);
 	}
+	*/
 	
 	//put here any function you want to be executed at character login
 		
