@@ -52,12 +52,16 @@ enum
 	
 	P_BEVERAGES = 1,
 	P_BAKED,
-	P_BOWLSMEATFRUIT
+	P_BOWLSMEATFRUIT,
+	P_PLANTS,
+	P_DOORS,
+	P_LIGHTS,
+	P_SIGNS
 };
 
-#define ADD_MENU_ENTRIES 10	//! number of items in the ad menu
+#define ADD_MENU_ENTRIES 12	//! number of items in the ad menu
 #define ADD_MENU_ENTRIES_L 10	//! string length of add menu items
-#define ADD_MENU_ROWS 2		//! number of rows the items will be displayed in
+#define ADD_MENU_ROWS 3		//! number of rows the items will be displayed in
 enum __addMenuStruct
 {
 	__addGuiText: ADD_MENU_ENTRIES_L,
@@ -72,6 +76,8 @@ new addMenuItems[ADD_MENU_ENTRIES][__addMenuStruct] =
 	{"Spawner  ","addgui_spawner"},
 	{"Supply   ","addgui_supply"},
 	{"Skills   ","addgui_skills"},
+	{"Build    ","addgui_architecture"},
+	{"Floors   ","addgui_floors"},
 	{"Special  ","addgui_special"},
 	{"Shard    ","addgui_shard"},
 	{"Treasure ","addgui_treasure"}
@@ -148,14 +154,18 @@ new npcMenuTxt[NPC_MENU_ENTRIES][NPC_MENU_ENTRIES_L] =
 }
 
 #define SUPPLY_MENU_FOOD_ENTRIES 3
-#define SUPPLY_MENU_ENTRIES SUPPLY_MENU_FOOD_ENTRIES
+#define SUPPLY_MENU_ENTRIES SUPPLY_MENU_FOOD_ENTRIES + 4
 #define SUPPLY_MENU_ENTRIES_L 15
-#define SUPPLY_MENU_ROWS 1
+#define SUPPLY_MENU_ROWS 2
 new supplyMenuTxt[SUPPLY_MENU_ENTRIES][SUPPLY_MENU_ENTRIES_L] =
 {
 	"Beverages",
 	"Backed & meat",
-	"Fruit & veggys"
+	"Fruit & veggys",
+	"Plants",
+	"Doors",
+	"Lights",
+	"Signs"
 }
 
 enum {AR_HELM,AR_GORGET,AR_CHEST,AR_ARMS,AR_GLOVES,AR_LEGS,AR_FEMALE}

@@ -858,26 +858,7 @@
 #define $item_ettin_spawner 3003
 #define $item_ogre_spawner 3004
 #define $item_troll_spawner 3005
-#define $item_wooden_wall 3006
-#define $item_wooden_wall_1 3007
-#define $item_wooden_wall_2 3008
-#define $item_wooden_post 3009
-#define $item_wooden_wall_3 3010
-#define $item_wooden_wall_4 3011
-#define $item_wooden_wall_5 3012
-#define $item_wooden_wall_6 3013
-#define $item_window 3014
-#define $item_window_1 3015
-#define $item_wooden_wall_7 3016
-#define $item_wooden_wall_8 3017
-#define $item_wooden_wall_9 3018
-#define $item_wooden_post_1 3019
-#define $item_wooden_wall_A 3020
-#define $item_wooden_wall_B 3021
-#define $item_wooden_wall_C 3022
-#define $item_wooden_post_2 3023
-#define $item_wooden_wall_D 3024
-#define $item_wooden_wall_E 3025
+
 #define $item_harpy_spawner 3026
 #define $item_tattered_banner 3027
 #define $item_tattered_banner_1 3028
@@ -891,13 +872,6 @@
 #define $item_curtain_rod 3036
 #define $item_curtain_1 3037
 #define $item_curtain_rod_1 3038
-#define $item_palisade 3039
-#define $item_palisade_1 3040
-#define $item_palisade_2 3041
-#define $item_palisade_3 3042
-#define $item_palisade_4 3043
-#define $item_palisade_5 3044
-#define $item_palisade_6 3045
 #define $item_gruesome_standard 3046
 #define $item_gruesome_standard_1 3047
 #define $item_gruesome_standard_2 3048
@@ -907,86 +881,12 @@
 #define $item_door_2 3052
 #define $item_door_3 3053
 #define $item_wooden_post_3 3054
-#define $item_palisade_7 3055
-#define $item_palisade_8 3056
-#define $item_palisade_9 3057
-#define $item_palisade_A 3058
-#define $item_wooden_wall_F 3059
-#define $item_wooden_wall_G 3060
-#define $item_wooden_wall_H 3061
-#define $item_wooden_wall_I 3062
-#define $item_wooden_wall_J 3063
-#define $item_palisade_B 3064
-#define $item_palisade_C 3065
-#define $item_palisade_D 3066
-
 #define $item_arrow 3070
 #define $item_crossbow_bolt 3071
 
 /////////////////////////////////////////////////
 
-#define $item_stone_wall 3100
-#define $item_stone_wall_1 3101
-#define $item_stone_wall_2 3102
-#define $item_stone_wall_3 3103
-#define $item_stone_wall_4 3104
-#define $item_stone_wall_5 3105
-#define $item_stone_wall_6 3106
-#define $item_stone_wall_7 3107
-#define $item_window_2 3108
-#define $item_window_3 3109
-#define $item_stone_wall_8 3110
-#define $item_stone_wall_9 3111
-#define $item_stone_wall_A 3112
-#define $item_stone_wall_B 3113
-#define $item_stone_arch 3114
-#define $item_stone_arch_1 3115
-#define $item_stone_arch_2 3116
-#define $item_stone_arch_3 3117
-#define $item_stone_arch_4 3118
-#define $item_stone_wall_C 3119
-#define $item_stone_wall_D 3120
-#define $item_stone_wall_E 3121
-#define $item_stone_wall_F 3122
-#define $item_stone_wall_G 3123
-#define $item_stone_wall_H 3124
-#define $item_brick_wall 3150
-#define $item_brick_wall_1 3151
-#define $item_brick_wall_2 3152
-#define $item_brick_wall_3 3153
-#define $item_brick_wall_4 3154
-#define $item_brick_wall_5 3155
-#define $item_brick_wall_6 3156
-#define $item_brick_wall_7 3157
-#define $item_window_4 3158
-#define $item_window_5 3159
-#define $item_brick_wall_8 3160
-#define $item_brick_wall_9 3161
-#define $item_brick_wall_A 3162
-#define $item_brick_wall_B 3163
-#define $item_brick_wall_C 3164
-#define $item_brick_wall_D 3165
-#define $item_brick_wall_E 3166
-#define $item_brick_arch 3167
-#define $item_brick_arch_1 3168
-#define $item_brick_arch_2 3169
-#define $item_brick_arch_3 3170
-#define $item_brick_arch_4 3171
-#define $item_brick_wall_F 3172
-#define $item_brick_wall_G 3173
-#define $item_brick_wall_H 3174
-#define $item_brick_wall_I 3175
-#define $item_brick_wall_J 3176
-#define $item_brick_wall_K 3177
-#define $item_brick_wall_L 3178
-#define $item_brick_wall_M 3179
-#define $item_brick_wall_N 3180
-#define $item_brick_wall_O 3181
-#define $item_brick_wall_P 3182
-#define $item_brick_wall_Q 3183
-#define $item_brick_wall_R 3184
-
-/////////////////////////////////////////////////
+//////////////////////////////////////////////
 
 #define $item_silver_coin 3188
 
@@ -1204,8 +1104,6 @@
 #define $item_iron_hammer_pick_of_vanquishing 3399
 
 /////////////////////////////////////////////////
-
-#define $item_brick_arch_5 3534
 
 #define $item_golden_bow 4021
 

@@ -334,8 +334,6 @@ public addgui_magic_cback(menu,chr,btncode)
 				item = itm_createInBp(btncode,chr);
 				chr_message(chr,_,"Item %d created",item);		
 			}
-		
-		addgui_magic(chr,true,n);
 	}
 	
 	else
@@ -344,6 +342,8 @@ public addgui_magic_cback(menu,chr,btncode)
 		chr_message(chr,_,"click to position the item");
 		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 	}
+	
+	addgui_magic(chr,itemsInBackpack,n);
 }
 
 
@@ -1090,6 +1090,62 @@ public addgui_supply(chr,itemsInBackpack,amount)
 					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__bowlsMeatFruit[i][__name]);
 				}
 			}
+			
+			case P_PLANTS:
+			{	
+				i_row = 7;
+				tab = 27;
+				for(new i = 0; i < NUM_PLANTS; i++, y+= 2*ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__plants[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__plants[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__plants[i][__name]);
+				}
+			}
+			
+			case P_DOORS:
+			{	
+				i_row = 6;
+				tab = 7;
+				for(new i = 0; i < NUM_DOORS; i++, y+= (25*ROW)/10)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__doors[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y - BTNW,__doors[i][__ID]);
+					//gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__doors[i][__name]);
+				}
+			}
+			
+			case P_LIGHTS:
+			{	
+				i_row = 10;
+				tab = 27;
+				for(new i = 0; i < NUM_LIGHTS; i++, y+= (15*ROW)/10)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__lights[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__lights[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__lights[i][__name]);
+				}
+			}
+			
+			case P_SIGNS:
+			{	
+				i_row = 15;
+				tab = 10;
+				for(new i = 0; i < NUM_SIGNS; i++, y+= ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__signs[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y - BTNW,__signs[i][__ID]);
+					//gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__signs[i][__name]);
+				}
+			}
 		}
 	}
 
@@ -1139,6 +1195,241 @@ public addgui_supply_cback(menu,chr,btncode)
 		chr_message(chr,_,"click to position the item");
 		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 	}
+}
+
+
+//==================================================================================//
+//                                  ARCHITECTURE MENU                                      //
+//==================================================================================//
+/*!
+\author Fax
+\fn addgui_architecture(chr,itemsInBackpack,amount)
+\param chr: the character
+\param itemsInBackpack: true if items are to be created in backpack
+\amount:how many items we need
+\since 0.82
+\brief architecture page
+
+\return nothing
+*/
+
+public addgui_architecture(chr,itemsInBackpack,amount)
+{
+	if(!isChar(chr)) return;
+	
+	#if _CMD_DEBUG_
+	log_message("^t->drawing architecture menu");
+	#endif
+	
+	new  START_X = 0;
+	new  START_Y = 0;
+	
+	new COLS = 30;
+	new ROWS = 4;
+	
+	new  WIDTH =  COLS*COL;
+	new  HEIGHT = (ROWS + 2)*ROW;
+	
+	new tab = 12;	
+		
+	new x,y;
+	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_arch_cback");
+	
+	//draw menu frame
+	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT + ROW );
+	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT);
+		
+	x = START_X + L_MARG;
+	y = START_Y + ROW/2 + ROW;
+	
+	gui_addText(menu,x,y,TXT_COLOR,"Item type:");
+	gui_addInputField(menu,x + tab*COL,y,10*COL,ROW,0,TXT_COLOR,"wall");
+	y += ROW;
+	
+	gui_addText(menu,x,y,TXT_COLOR,"Material:");
+	gui_addInputField(menu,x + tab*COL,y,10*COL,ROW,1,TXT_COLOR,"stone");
+	y += ROW;
+	
+	gui_addText(menu,x,y,TXT_COLOR,"Subtype:");
+	gui_addInputField(menu,x + tab*COL,y,10*COL,ROW,2,TXT_COLOR,"0");	
+	y += ROW;
+	
+	gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,1);
+	gui_addText(menu,x + BTNW,y,TXT_COLOR,"Open menu");
+	
+	gui_show(menu,chr);
+}
+
+public addgui_arch_cback(menu,chr,btncode)
+{
+	new def[100],basedef[100],type[20],material[20],subtype[2];
+	gui_getProperty(menu,MP_UNI_TEXT,0,type);
+	gui_getProperty(menu,MP_UNI_TEXT,1,material);
+	gui_getProperty(menu,MP_UNI_TEXT,2,subtype);
+	
+	sprintf(type,"_%s",type);
+	if(strcmp(material,"")) sprintf(material,"_%s",material);
+	if(!strcmp(subtype,"0") || !strcmp(subtype,"1")) sprintf(subtype,"");
+		
+	sprintf(basedef,"$item%s%s%s",material,type,subtype);
+	sprintf(def,"%s_1",basedef);
+	
+	if(getIntFromDefine(def) <= 0)
+	{
+		chr_message(chr,_,"%s %s %s is not defined",material,type,subtype);
+		return;
+	}
+
+	new  START_X = 0;
+	new  START_Y = 0;
+	
+	new COLS = 40;
+	new ROWS = 19;
+	
+	new  WIDTH =  COLS*COL;
+	new  HEIGHT = (ROWS + 2)*ROW;
+	
+	new tabx = 10;	
+	new taby = 7;
+		
+	new x,y;
+	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_arch_cback2");
+	
+	//draw menu frame
+	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT + ROW );
+	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT);
+		
+	x = START_X + L_MARG;
+	y = START_Y + ROW/2 + ROW;
+	
+	new scriptID = 0,itm,ID,i=1,p=1;
+	
+	gui_addPage(menu,p);
+	
+	while(getIntFromDefine(def) != 0)
+	{
+		if(y >= START_Y + HEIGHT)
+		{
+			y = START_Y + ROW/2 + ROW;
+			++p;
+			gui_addPageButton(menu,(START_X + WIDTH)/2 + 2*PBTNW,START_Y + HEIGHT,PBTN_UP,PBTN_DOWN,p);
+			gui_addPage(menu,p);
+			gui_addPageButton(menu,(START_X + WIDTH)/2 - 2*PBTNW,START_Y + HEIGHT,PBTN_UP,PBTN_DOWN,p - 1);
+		}
+		
+		scriptID = getIntFromDefine(def);
+		itm = itm_create(scriptID);
+		ID = itm_getProperty(itm,IP_ID);
+		itm_remove(itm);
+		
+		gui_addTilePic(menu,x,y,ID);
+		gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,scriptID);
+		
+		
+		x += tabx*COL;
+		if(x >= START_X + WIDTH) 
+		{ 
+			x = START_X + L_MARG; 
+			y += taby*ROW;
+		}
+		
+		sprintf(def,"%s_%d",basedef,++i);	
+	}
+	
+	gui_show(menu,chr);
+}
+
+public addgui_arch_cback2(menu,chr,btncode)
+{
+	if(!btncode)	return;
+	
+	chr_message(chr,_,"click to position the item");
+	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
+}
+
+//==================================================================================//
+//                                  FLOORS MENU                                      //
+//==================================================================================//
+/*!
+\author Fax
+\fn addgui_floors(chr,itemsInBackpack,amount)
+\param chr: the character
+\param itemsInBackpack: true if items are to be created in backpack
+\amount:how many items we need
+\since 0.82
+\brief supply items page
+
+\return nothing
+*/
+
+public addgui_floors(chr,itemsInBackpack,amount)
+{
+	if(!isChar(chr)) return;
+	
+	#if _CMD_DEBUG_
+	log_message("^t->drawing floors menu");
+	#endif
+	
+	new  START_X = 0;
+	new  START_Y = 0;
+	
+	new h = 3,w = 8;
+	new i_row = 6;
+	new i_col = 7;
+	new COLS = i_row*w;
+	
+	new  WIDTH =  COLS*COL;
+	new  HEIGHT1 = 4*ROW;
+	new HEIGHT2 = i_col*h*ROW;
+	
+	new x,y;
+	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_floors_cback");
+	
+	//draw menu frame
+	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT1 + HEIGHT2 + ROW );
+	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT1);
+	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2 + HEIGHT1,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT2);
+	
+	
+	x = (START_X + WIDTH)/2;
+	y = START_Y + HEIGHT1 + HEIGHT2 - 2*ROW;
+	
+	new idx,npag = 1 + NUM_FLOORS/(i_row*i_col);
+	
+	for(new p = 1; p <= npag && idx < NUM_FLOORS; p++)
+	{
+		gui_addPage(menu,p);
+		//next button
+		if(p < npag) gui_addPageButton(menu,x + COL,y,PBTN_UP,PBTN_DOWN,p + 1);
+		if(p > 1) gui_addPageButton(menu,x - COL,y,PBTN_UP,PBTN_DOWN,p - 1);	
+		
+		for(new i = 0; i< i_row && idx < NUM_FLOORS; i++)
+			for(new j = 0; j < i_col && idx < NUM_FLOORS; j++)
+			{
+				gui_addTilePic(menu,START_X + L_MARG + i*w*COL,START_Y + HEIGHT1 + j*h*ROW,__floors[idx][__ID]);
+				gui_addButton(menu,START_X + L_MARG + i*w*COL,START_Y + HEIGHT1 + j*h*ROW,BTN_UP,BTN_DOWN,getIntFromDefine(__floors[idx++][__def]));
+			}
+	}
+	
+	gui_show(menu,chr);
+}
+
+/*!
+\author Fax
+\fn addgui_floors_cback(menu,chr,btncode)
+\param all: standard menu callback params
+\since 0.82
+\brief callback for floors menu
+
+Creates the item selected in the gump
+\return nothing
+*/
+public addgui_floors_cback(menu,chr,btncode)
+{
+	if(!btncode)	return;
+	
+	chr_message(chr,_,"click to position the item");
+	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 }
 
 

@@ -6,6 +6,7 @@
 // || This script requires NoX-Wizard 0.70s or later                      ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+#include scripts/items/architecture.xss
 #include scripts/items/armour.xss
 #include scripts/items/beard.xss
 #include scripts/items/hair.xss

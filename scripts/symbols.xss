@@ -24,6 +24,7 @@
 #include scripts/symbols/items/smithitem.xss
 #include scripts/symbols/items/cookitems.xss
 #include scripts/symbols/items/farmitems.xss
+#include scripts/symbols/items/architecture.xss
 
 #include scripts/symbols/skills.xss
 #include scripts/symbols/lootlists.xss
