@@ -365,7 +365,7 @@ SECTION CREATURE $creature_ratman3
 	ICON 8419
 }
 
-SECTION CREATURE $creature_reaper 
+SECTION CREATURE $creature_reaper
 {
 	START_ATTACK 0x01ba
 	IDLE 0x01bB
@@ -375,7 +375,7 @@ SECTION CREATURE $creature_reaper
 	ICON 8442
 }
 
-SECTION CREATURE $creature_giant_scorpion 
+SECTION CREATURE $creature_giant_scorpion
 {
 	START_ATTACK 397
 	IDLE 398
@@ -385,7 +385,7 @@ SECTION CREATURE $creature_giant_scorpion
 	ICON 8420
 }
 
-SECTION CREATURE $creature_skeleton2 
+SECTION CREATURE $creature_skeleton2
 {
 	START_ATTACK 452
 	IDLE 453
@@ -395,7 +395,7 @@ SECTION CREATURE $creature_skeleton2
 	ICON 8423
 }
 
-SECTION CREATURE $creature_slime 
+SECTION CREATURE $creature_slime
 {
 	START_ATTACK 456
 	IDLE 457
@@ -405,7 +405,7 @@ SECTION CREATURE $creature_slime
 	ICON 8424
 }
 
-SECTION CREATURE $creature_snake 
+SECTION CREATURE $creature_snake
 {
 	START_ATTACK 219
 	IDLE 220
@@ -415,7 +415,7 @@ SECTION CREATURE $creature_snake
 	ICON 8444
 }
 
-SECTION CREATURE $creature_troll 
+SECTION CREATURE $creature_troll
 {
 	START_ATTACK 461
 	IDLE 462
@@ -425,7 +425,7 @@ SECTION CREATURE $creature_troll
 	ICON 8425
 }
 
-SECTION CREATURE $creature_troll2 
+SECTION CREATURE $creature_troll2
 {
 	START_ATTACK 461
 	IDLE 462
@@ -435,7 +435,7 @@ SECTION CREATURE $creature_troll2
 	ICON 8425
 }
 
-SECTION CREATURE $creature_troll3 
+SECTION CREATURE $creature_troll3
 {
 	START_ATTACK 461
 	IDLE 462
@@ -445,7 +445,7 @@ SECTION CREATURE $creature_troll3
 	ICON 8425
 }
 
-SECTION CREATURE $creature_skeleton3 
+SECTION CREATURE $creature_skeleton3
 {
 	START_ATTACK 452
 	IDLE 453
@@ -455,7 +455,7 @@ SECTION CREATURE $creature_skeleton3
 	ICON 8423
 }
 
-SECTION CREATURE $creature_skeleton4 
+SECTION CREATURE $creature_skeleton4
 {
 	START_ATTACK 452
 	IDLE 453
@@ -465,7 +465,7 @@ SECTION CREATURE $creature_skeleton4
 	ICON 8423
 }
 
-SECTION CREATURE $creature_wisp 
+SECTION CREATURE $creature_wisp
 {
 	START_ATTACK 466
 	IDLE 467
@@ -475,7 +475,7 @@ SECTION CREATURE $creature_wisp
 	ICON 8448
 }
 
-SECTION CREATURE $creature_red_dragon 
+SECTION CREATURE $creature_red_dragon
 {
 	START_ATTACK 362
 	IDLE 363
@@ -486,7 +486,7 @@ SECTION CREATURE $creature_red_dragon
 	ICON 8406
 }
 
-SECTION CREATURE $creature_smaller_red_dragon 
+SECTION CREATURE $creature_smaller_red_dragon
 {
 	START_ATTACK 362
 	IDLE 363
@@ -497,7 +497,7 @@ SECTION CREATURE $creature_smaller_red_dragon
 	ICON 8406
 }
 
-SECTION CREATURE $creature_smaller_green_dragon 
+SECTION CREATURE $creature_smaller_green_dragon
 {
 	START_ATTACK 362
 	IDLE 363
@@ -508,7 +508,7 @@ SECTION CREATURE $creature_smaller_green_dragon
 	ICON 8406
 }
 
-SECTION CREATURE $creature_sea_serpent 
+SECTION CREATURE $creature_sea_serpent
 {
 	creatures[0x96].basesound=477;								
 	creatures[0x96].basesound=3;
@@ -520,7 +520,7 @@ SECTION CREATURE $creature_sea_serpent
 	ICON 8446;
 }
 
-SECTION CREATURE $creature_dolphin 
+SECTION CREATURE $creature_dolphin
 {
 	START_ATTACK 138
 	IDLE 139
@@ -530,7 +530,7 @@ SECTION CREATURE $creature_dolphin
 	ICON 8433;
 }
 
-SECTION CREATURE $creature_white_horse 
+SECTION CREATURE $creature_white_horse
 {
 	START_ATTACK 168
 	IDLE 169
@@ -540,7 +540,7 @@ SECTION CREATURE $creature_white_horse
 	ICON 8479
 }
 
-SECTION CREATURE $creature_cat 
+SECTION CREATURE $creature_cat
 {
 	START_ATTACK 105
 	IDLE 106
@@ -551,7 +551,7 @@ SECTION CREATURE $creature_cat
 	ICON 8475
 }
 
-SECTION CREATURE $creature_alligator 
+SECTION CREATURE $creature_alligator
 {
 	START_ATTACK 90
 	IDLE 91
@@ -561,7 +561,7 @@ SECTION CREATURE $creature_alligator
 	ICON 8410
 }
 
-SECTION CREATURE $creature_small_pig 
+SECTION CREATURE $creature_small_pig
 {
 	START_ATTACK 196
 	IDLE 197
@@ -571,7 +571,7 @@ SECTION CREATURE $creature_small_pig
 	ICON 8449
 }
 
-SECTION CREATURE $creature_brown_horse 
+SECTION CREATURE $creature_brown_horse
 {
 	START_ATTACK 168
 	IDLE 169
@@ -581,7 +581,7 @@ SECTION CREATURE $creature_brown_horse
 	ICON 8481
 }
 
-SECTION CREATURE $creature_rabbit 
+SECTION CREATURE $creature_rabbit
 {
 	START_ATTACK 201
 	ATTACK 202
@@ -589,7 +589,7 @@ SECTION CREATURE $creature_rabbit
 	ICON 8485
 }
 
-SECTION CREATURE $creature_wooly_sheep 
+SECTION CREATURE $creature_wooly_sheep
 {
 	START_ATTACK 214
 	IDLE 215
@@ -599,7 +599,7 @@ SECTION CREATURE $creature_wooly_sheep
 	ICON 8427
 }
 
-SECTION CREATURE $creature_chicken 
+SECTION CREATURE $creature_chicken
 {
 	START_ATTACK 110
 	IDLE 111
@@ -609,7 +609,7 @@ SECTION CREATURE $creature_chicken
 	ICON 8401
 }
 
-SECTION CREATURE $creature_goat 
+SECTION CREATURE $creature_goat
 {
 	START_ATTACK 153
 	IDLE 154
@@ -619,7 +619,7 @@ SECTION CREATURE $creature_goat
 	ICON 8422;
 }
 
-SECTION CREATURE $creature_brown_bear 
+SECTION CREATURE $creature_brown_bear
 {
 	START_ATTACK 95
 	IDLE 96
@@ -629,7 +629,7 @@ SECTION CREATURE $creature_brown_bear
 	ICON 8399
 }
 
-SECTION CREATURE $creature_grizzly_bear 
+SECTION CREATURE $creature_grizzly_bear
 {
 	START_ATTACK 95
 	IDLE 96
@@ -639,7 +639,7 @@ SECTION CREATURE $creature_grizzly_bear
 	ICON 8411
 }
 
-SECTION CREATURE $creature_polar_bear 
+SECTION CREATURE $creature_polar_bear
 {
 	START_ATTACK 95
 	IDLE 96
@@ -649,7 +649,7 @@ SECTION CREATURE $creature_polar_bear
 	ICON 8417
 }
 
-SECTION CREATURE $creature_panther 
+SECTION CREATURE $creature_panther
 {
 	START_ATTACK 186
 	IDLE 187
@@ -660,7 +660,7 @@ SECTION CREATURE $creature_panther
 	ICON 8473
 }
 
-SECTION CREATURE $creature_giant_rat 
+SECTION CREATURE $creature_giant_rat
 {
 	START_ATTACK 392
 	IDLE 393
@@ -670,7 +670,7 @@ SECTION CREATURE $creature_giant_rat
 	ICON 8400
 }
 
-SECTION CREATURE $creature_cow 
+SECTION CREATURE $creature_cow
 {
 	START_ATTACK 120
 	IDLE 121
@@ -680,7 +680,7 @@ SECTION CREATURE $creature_cow
 	ICON 8432
 }
 
-SECTION CREATURE $creature_dog 
+SECTION CREATURE $creature_dog
 {
 	START_ATTACK 133
 	IDLE 134
@@ -708,7 +708,7 @@ SECTION CREATURE $creature_walrus
 	ICON 8447
 }
 
-SECTION CREATURE $creature_shorn_sheep 
+SECTION CREATURE $creature_shorn_sheep
 {
 	START_ATTACK 216
 	ATTACK 217
@@ -716,7 +716,7 @@ SECTION CREATURE $creature_shorn_sheep
 	ICON 8422
 }
 
-SECTION CREATURE $creature_jackal 
+SECTION CREATURE $creature_jackal
 {
 	START_ATTACK 229
 	IDLE 230
@@ -727,7 +727,7 @@ SECTION CREATURE $creature_jackal
 	ICON 8426
 }
 
-SECTION CREATURE $creature_horse2 
+SECTION CREATURE $creature_horse2
 {
 	START_ATTACK 168
 	IDLE 169
@@ -737,7 +737,7 @@ SECTION CREATURE $creature_horse2
 	ICON 8484
 }
 
-SECTION CREATURE $creature_horse3 
+SECTION CREATURE $creature_horse3
 {
 	START_ATTACK 168
 	IDLE 169
@@ -747,7 +747,7 @@ SECTION CREATURE $creature_horse3
 	ICON 8480
 }
 
-SECTION CREATURE $creature_brown_cow 
+SECTION CREATURE $creature_brown_cow
 {
 	START_ATTACK 120
 	IDLE 121
@@ -758,7 +758,7 @@ SECTION CREATURE $creature_brown_cow
 	ICON 8432
 }
 
-SECTION CREATURE $creature_bull 
+SECTION CREATURE $creature_bull
 {
 	START_ATTACK 100
 	IDLE 101
@@ -769,7 +769,7 @@ SECTION CREATURE $creature_bull
 	ICON 8431
 }
 
-SECTION CREATURE $creature_bw_cow 
+SECTION CREATURE $creature_bw_cow
 {
 	START_ATTACK 120
 	IDLE 121
@@ -780,7 +780,7 @@ SECTION CREATURE $creature_bw_cow
 	ICON 8451
 }
 
-SECTION CREATURE $creature_deer 
+SECTION CREATURE $creature_deer
 {
 	START_ATTACK 130
 	ATTACK 131
@@ -788,7 +788,7 @@ SECTION CREATURE $creature_deer
 	ICON 8404
 }
 
-SECTION CREATURE $creature_small_deer 
+SECTION CREATURE $creature_small_deer
 {
 	START_ATTACK 130
 	ATTACK 131
@@ -796,7 +796,7 @@ SECTION CREATURE $creature_small_deer
 	ICON 8404
 }
 
-SECTION CREATURE $creature_rat 
+SECTION CREATURE $creature_rat
 {
 	START_ATTACK 204
 	IDLE 205
@@ -806,7 +806,7 @@ SECTION CREATURE $creature_rat
 	ICON 8483
 }
 
-SECTION CREATURE $creature_boar 
+SECTION CREATURE $creature_boar
 {
 	START_ATTACK 196
 	IDLE 197
@@ -816,7 +816,7 @@ SECTION CREATURE $creature_boar
 	ICON 8449
 }
 
-SECTION CREATURE $creature_pack_horse 
+SECTION CREATURE $creature_pack_horse
 {
 	START_ATTACK 168
 	IDLE 169
@@ -826,7 +826,7 @@ SECTION CREATURE $creature_pack_horse
 	ICON 8486
 }
 
-SECTION CREATURE $creature_pack_llama 
+SECTION CREATURE $creature_pack_llama
 {
 	START_ATTACK 183
 	ATTACK 184
@@ -834,7 +834,7 @@ SECTION CREATURE $creature_pack_llama
 	ICON 8487
 }
 
-SECTION CREATURE $creature_e-vortex 
+SECTION CREATURE $creature_e-vortex
 {
 	START_ATTACK 263
 	IDLE 264
@@ -843,12 +843,12 @@ SECTION CREATURE $creature_e-vortex
 	DIE 267
 }
 
-SECTION CREATURE $creature_blade_spirit 
+SECTION CREATURE $creature_blade_spirit
 {
 	START_ATTACK 512
 }
 
-SECTION CREATURE $creature_cougar 
+SECTION CREATURE $creature_cougar
 {
 	START_ATTACK 115
 	IDLE 116
@@ -858,12 +858,12 @@ SECTION CREATURE $creature_cougar
 	ICON 8473
 }
 
-SECTION CREATURE $creature_male 
+SECTION CREATURE $creature_male
 {
 	ICON 8454
 }
 
-SECTION CREATURE $creature_female 
+SECTION CREATURE $creature_female
 {
 	ICON 8455
 }
