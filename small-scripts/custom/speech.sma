@@ -3,7 +3,6 @@ public bla_char(const c)
 {
 new speech[20];
 chr_getProperty(c, CP_STR_SPEECHWORD, 0, speech );
-printf("speech1: %s", speech);
 if( !strcmp( speech, "+" ) )
 {
 CHI_CommandMgt(c);
@@ -13,7 +12,6 @@ bypass();
 
 public CHI_CommandMgt(const c)
 {
-printf("speech2");
 new speech[150];
 new command[30];
 new parameter[120];
@@ -33,14 +31,14 @@ else if( !strcmp(command, "LANG") ) //to make sure: was said  LANG?
 _racelang(c); //a command that takes no param
 bypass();
 }
-else if( !strcmp(command, "TWEAK") ) //to make sure: was said  EDIT?
+else if( !strcmp(command, "TWEAK") ) //to make sure: was said  TWEAK?
 {
-command_tweak(c); //a command that takes no param
+command_tweak( 0, c); //a command that takes no param
 bypass();
 }
 else if( !strcmp(command, "POLY") ) //to make sure: was said  POLY?
 {
-command_polymorph(c); //a command that takes no param
+command_polymorph( 0, c); //a command that takes no param
 bypass();
 }
 }
