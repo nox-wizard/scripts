@@ -74,7 +74,7 @@ public _doCloth( const s, const cloth ) {
 	checkInitTailoring();
 	
 	new scriptid = itm_getProperty( cloth, IP_SCRIPTID );
-	new color = itm_getProperty( cloth, IP_COLOR );
+	//new color = itm_getProperty( cloth, IP_COLOR );  Fax 28-11-03: color is unused.. why?
 	
 	new type=INVALID;
 	for( new i=0; i<ALL_BOLTS_CLOTH; ++i ) {
@@ -98,7 +98,10 @@ public _doCloth( const s, const cloth ) {
 	chr_sound( chr, 0x0248 );
 
 	new cutcloth = itm_createInBpDef( cloths[type], chr, 40 );
-
+	if(cutcloth == INVALID) {
+		printf ("WARNING: _doCloth can't create cutcloths^n");
+		return;
+	}
 	itm_reduceAmount( cloth, 1 );
 
 }
@@ -127,7 +130,7 @@ public __nxw_sk_tailoring(const s, const itm)
 	new cc = getCharFromSocket(s);
 	new type = INVALID;
 	new skill = chr_getSkill(cc, SK_TAILORING);
-	new color = itm_getProperty(itm, IP_COLOR);
+	//new color = itm_getProperty(itm, IP_COLOR);  Fax 28-11-03: color is unused.. why?
 	new scriptid = itm_getProperty( itm, IP_SCRIPTID );
 
 	for( new index = 0; index < ALL_CLOTHS; index++) {

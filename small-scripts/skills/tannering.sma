@@ -103,6 +103,10 @@ public _doLeatherPiece( const s, const hide ) {
 	chr_sound( chr, 0x0248 );
 
 	new leather = itm_createInBpDef( leathers[type], chr, 2 );
+	if(leather == INVALID)
+	{
+		printf("WARNING: _doLeatherPiece can't create leather^n"); 
+	}
 	itm_reduceAmount( hide, 1 );
 	
 }

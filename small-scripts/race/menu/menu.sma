@@ -177,7 +177,7 @@ public race_nameList( const socket, const raceType, const canClose, const canMov
 		gui_addButtonFn( menu, 294, 30, 1209, 1210, INVALID, _, "race_webInterface" )
 	}
 
-	new pagenum = 0;
+	//new pagenum = 0;
 	for( new i=1; i<page; ++i )
 	{
 		gui_addPage( menu, i );
@@ -325,8 +325,8 @@ public race_make( const socket, const menu, const race, const chr )
 		chr_setProperty( chr, CP_SKIN,  _, skincolor );
 	}
 	
-	new killBeard = ( race_getProperty( race, RP_LAYER_PERMITTED, LAYER_BEARD ) == RT_PROHIBITED )? true : false;
-	new killHair = ( race_getProperty( race, RP_LAYER_PERMITTED, LAYER_HAIR ) == RT_PROHIBITED )? true : false;
+	//new killBeard = ( race_getProperty( race, RP_LAYER_PERMITTED, LAYER_BEARD ) == RT_PROHIBITED )? true : false;
+	//new killHair = ( race_getProperty( race, RP_LAYER_PERMITTED, LAYER_HAIR ) == RT_PROHIBITED )? true : false;
 		
 	
 	//

@@ -122,7 +122,7 @@ public guildgui_callback( const socket, const gui, const button )
 	
 	itm_refresh( stone );
 	
-	new deed = gui_getProperty( gui, MP_BUFFER, 0 );
+	/*new deed =*/ gui_getProperty( gui, MP_BUFFER, 0 );
 }
 
 

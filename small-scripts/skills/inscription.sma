@@ -135,7 +135,7 @@ static __inscription_book(const socket, const book)
 	new book_ser = itm_getProperty(book,IP_SERIAL);
 	new book_set = set_create();
 	set_addItemsInCont( book_set, book_ser, false, _ );
-	new book_size = set_size( book_set );
+	//new book_size = set_size( book_set );
 	new i,j;
 	//printf("Size %d^n", book_size);
 	for( set_rewind( book_set); !set_end( book_set ); )

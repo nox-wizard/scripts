@@ -28,7 +28,7 @@ public skills_char( const socket, const chr )
 	
 	const colorEdit = 32;
 	
-	new str[100];
+	//new str[100];
 	
 	const skForPage = 10;
 	new page=1;

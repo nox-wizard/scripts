@@ -21,7 +21,7 @@ public party_onAddMember( const chr )
 	new chr_party = chr_getProperty( chr, CP_PARTY );
 
 	if( chr_party!=INVALID ) {
-		if( party_isLeader( chr_party, chr )==false ) {	
+		if( !party_isLeader( chr_party, chr )) {	
 			sysmessage( chr, _, "You may only add members to the party if you are the leader." );
 			return;
 		}
@@ -113,7 +113,7 @@ public handle_party_onDelM( const target, const chr, const kicked )
 	}
 	else {
 		new kicked_party = chr_getProperty( kicked, CP_PARTY );
-		if( party_isLeader( kicked_party, chr )==false )
+		if( !party_isLeader( kicked_party, chr ))
 			sysmessage( chr, _, "You may only remove yourself from a party if you are not the leader." );
 		else
 			party_kickMember( chr_party, kicked );
