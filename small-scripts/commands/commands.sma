@@ -16,11 +16,11 @@ public command_playerlist( const socket )
 	set_addAllOnlinePl( set );
 	
 	new count=set_size(set);
-	/*if( count==1 ) {
+	if( count==1 ) {
 		nprintf( socket, "No other player connected" );
 		set_delete(set);
 		return;
-	}*/
+	}
 	
 	new menu = gui_create( 50, 50, true, true, true, "handle_playerlist" );
 	gui_addGump( menu, 0, 0, 0x0027, 0 );
