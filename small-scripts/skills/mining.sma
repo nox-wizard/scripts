@@ -195,7 +195,7 @@ public __nxw_sk_mining(const cc)
 	new str[50];	//Adjust the size if you create new ores with long names!
 	sprintf(str, "%s", msg_sk_miningDef[oreFound]);
 	trim(str);   //remove triming spaces
-	sprintf(str, "%s Erz", str);
+	sprintf(str, msg_sk_miningDef[10], str);
 	
 	new bp = chr_getBackpack( cc, true );
 	new ore = itm_createByDef( "$item_iron_ore" );
@@ -204,7 +204,7 @@ public __nxw_sk_mining(const cc)
 	itm_setProperty(ore, IP_COLOR, _, oreProperty[oreFound][orecolor]);
 	itm_setContSerial( ore, bp );
 	itm_setProperty(ore, IP_WEIGHT, _, oreProperty[oreFound][oreweight]);
-	chr_message( cc, _, "Ihr findet etwas %s und packt es in Euer Gepaeck.", str);
+	chr_message( cc, _, msg_sk_miningDef[11], str);
 	itm_contPileItem( bp, ore );
 	itm_refresh(ore);
 }
@@ -226,7 +226,7 @@ public __nxw_smeltOre(const cc, const color, ore)
               new minskill = oreProperty[index][miningmin]
               if (skill < minskill)
               {
-                     chr_message( cc, _, "Ihr seid zu unerfahren, um dieses Erz schmelzen zu koennen.");
+                     chr_message( cc, _, msg_sk_miningDef[12]);
                      return;
               }
               new ore_amount = itm_getProperty(ore, IP_AMOUNT);
@@ -234,12 +234,12 @@ public __nxw_smeltOre(const cc, const color, ore)
               {
                      if (ore_amount == 1)
                      {
-                     chr_message( cc, _, "Eure Hand zuckt und Ihr schuettet den Rest des fluessigen Erzes in die Glut.");
+                     chr_message( cc, _, msg_sk_miningDef[13]);
                      itm_remove(ore);
                      }
                      else
                      {
-                     chr_message( cc, _, "Euch rutscht die Hand aus und ein Teil des Erzes faellt in die Glut.");
+                     chr_message( cc, _, msg_sk_miningDef[14]);
                      itm_setProperty(ore, IP_AMOUNT, _, ore_amount/2);
                      itm_refresh(ore); // tell the client item has been changed
                      }
