@@ -94,12 +94,12 @@ static it_pg3_r =0;
 static it_pg4_l =0;
 static it_pg4_r =0;
 
-new it_gu = 40; //254
-new it_tex = 56; //right: 270 = delta 104
-new it_prop = 190; //right: 284
+new it_gu = 40;
+new it_tex = 56;
+new it_prop = 190;
 new it_check = 275;
 new it_radio = 190;
-new it_desc = 190; //description
+new it_desc = 190;
 
 enum Itm_tweaklines
 {
@@ -271,58 +271,75 @@ static ct_pg6_r =0;
 static ct_pg7_l =0;
 static ct_pg7_r =0;
 
+const NUM_chrtweak = 50;
 enum Chr_tweaklines
 {
 ct_linetype,
-ct_linename: 18,
+ct_linename: 19,
 ct_propnumber,
 ct_infotype,
 ct_propval,
 ct_inputname: 10
 };
-const NUM_chrtweak = 14;
 
 //1: property field, eg itemname
-//2: infofield, eg weight
+//2: infofield (for example weight): ct_propnumber is property num to get info or if 0 custom info function (then ct_infotype defines the number for custom function), ct_propval: string:1 and integer: 0
 //3: inputfield, eg Nightsight
-//4: checkbox
+//4: checkbox: ct_propnumber is property num to change or 0 if custom function (then ct_infotype defines the number for custom function)
 //5: radiobutton
 //6: subproperties (morex/morey/morez)
-//7: stock function call
+//7: stock function call: ct_propnumber is number of stock function, ct_infotype: string:1 and integer: 0
 static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
-{1, "Char name:       ", 453, 0, 0, "         "},
-{1, "Char title:      ", 455, 0, 0, "         "},
-{1, "Karma:           ", 237, 0, 0, "         "},
-{1, "Fame:            ", 218, 0, 0, "         "},
-{6, "Strength:        ", 295, 0, 0, "         "},
-{6, "Hits:            ", 295, 3, 0, "         "},
-{6, "Dexterity:       ", 216, 0, 0, "         "},
-{6, "Stamina:         ", 216, 3, 0, "         "},
-{6, "Intelligence:    ", 236, 0, 0, "         "},
-{6, "Mana:            ", 236, 3, 0, "         "},
-{1, "Kills:           ", 239, 0, 0, "         "},
-{1, "Foodposition:    ", 220, 0, 0, "         "},
-{2, "Weight:          ", 312, 0, 0, "         "},
-{7, "Skill sum:       ",   0, 0, 0, "         "}
-};
-
-const NUM_chrstock = 2;
-enum Chr_tweakstock
-{
-ct_stockname: 18,
-ct_numberpara,
-ct_param1: 10,
-ct_type1,
-ct_param2: 10,
-ct_type2,
-ct_param3: 10,
-ct_type3
-};
-
-//param type 1 = string value, propnumber 0 = integer
-static chr_stockarray[NUM_chrstock][Chr_tweakstock] = {
-{"chr_getSkillsum  ", 2, "chr      ", 0, "skillsum ", 0, "         ", 0},
-{"chr_getSkillsum  ", 2, "chr      ", 0, "skillsum ", 0, "         ", 0}
+{1, "Char name:        ", 453, 0, 0, "         "},
+{1, "Char title:       ", 455, 0, 0, "         "},
+{1, "Karma:            ", 237, 0, 0, "         "},
+{1, "Fame:             ", 218, 0, 0, "         "},
+{6, "Strength:         ", 295, 0, 0, "         "},
+{6, "Hits:             ", 295, 3, 0, "         "},
+{6, "Dexterity:        ", 216, 0, 0, "         "},
+{6, "Stamina:          ", 216, 3, 0, "         "},
+{6, "Intelligence:     ", 236, 0, 0, "         "},
+{6, "Mana:             ", 236, 3, 0, "         "},
+{1, "Kills:            ", 239, 0, 0, "         "},
+{1, "Foodposition:     ", 220, 0, 0, "         "},
+{2, "Weight:           ", 312, 0, 0, "         "},
+{7, "Skill sum:        ",   0, 0, 0, "         "},
+{7, "Bank gold:        ",   1, 0, 0, "         "},
+{4, "Open Bank box:    ",   0, 1, 0, "         "},
+{4, "Open Gold bank:   ",   0, 2, 0, "         "},
+{1, "Body color:       ", 404, 0, 0, "         "},
+{1, "Body old color:   ", 406, 0, 0, "         "},
+{1, "Body hexID:       ", 403, 0, 0, "         "},
+{1, "Body old hexID:   ", 405, 0, 0, "         "},
+{2, "ScriptID:         ", 272, 0, 0, "         "},
+{2, "Skill used:       ", 242, 0, 0, "         "},
+{6, "X Position:       ", 262, 0, 0, "         "},
+{6, "Y Position:       ", 262, 1, 0, "         "},
+{6, "Z Position:       ", 262, 2, 0, "         "},
+{6, "X Work Position:  ", 262, 0, 0, "         "},
+{6, "Y Work Position:  ", 262, 1, 0, "         "},
+{6, "Z Work Position:  ", 262, 2, 0, "         "},
+{7, "Guild name:       ",   2, 1, 0, "         "},
+{7, "Guild leader:     ",   3, 1, 0, "         "},
+{4, "Go to Guild:      ",   0, 3, 0, "         "},
+{7, "Char created at:  ",   4, 0, 0, "         "},
+{4, "Invulnerable:     ", 134, 4, 0, "         "},
+{4, "Kill/Dead:        ",   1, 0, 0, "         "},
+{4, "Freeze:           ", 121, 2, 0, "         "},
+{5, "Invis by skill:   ", 110, 3, 1, "         "},
+{5, "Invis by spell:   ", 110, 0, 2, "         "},
+{5, "permanent Invis:  ", 121, 0, 8, "         "},
+{5, "Visible:          ", 121, 0, 0, "         "},
+{4, "Warmode:          ", 128, 0, 0, "         "},
+{2, "Reactive Armor:   ",   0, 1, 0, "         "},
+{1, "Poisoned:         ", 258, 0, 0, "         "},
+{1, "NPC Poison attack:", 257, 0, 0, "         "},
+{1, "Poison time:      ", 261, 0, 0, "         "},
+{1, "Face direction:   ", 104, 0, 0, "         "},
+{3, "Nightsight:       ",   1, 0, 0, "millisec "},
+{4, "Magic reflect:    ", 121,40, 0, "         "},
+{4, "Polymorph:        ",   0, 4, 0, "         "},
+{2, "Incognito:        ",   0, 2, 0, "         "}
 };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -926,7 +943,7 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 
 public tweak_char(const chrsource, const target, pagenumber)
 {
-	new skillsum;
+	init_tweak_itm();
 	new tempChrStr[100];
 	new tweakchr_cllbck[15];
 	sprintf( tweakchr_cllbck,"tweakchrBck%d",pagenumber);
@@ -956,17 +973,17 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
 	gui_addText(twkChrMenu,60,49,33,"Main infos");
 	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-	gui_addText(twkChrMenu,195,49,33,"Skills");
+	gui_addText(twkChrMenu,195,49,33,"Flags1");
 	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-	gui_addText(twkChrMenu,285,49,33,"Flags");
+	gui_addText(twkChrMenu,285,49,33,"Flags2");
 	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-	gui_addText(twkChrMenu,380,49,33,"Layer");
+	gui_addText(twkChrMenu,380,49,33,"Flags3");
 	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 	gui_addText(twkChrMenu,470,49,33,"Events");
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkChrMenu,60,79,33,"LocalVars");
 	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-	gui_addText(twkChrMenu,195,79,33,"Flags 2");
+	gui_addText(twkChrMenu,195,79,33,"Skills");
 	
 	gui_addText(twkChrMenu,66,120,33,"Account number :");
 	sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
@@ -1019,265 +1036,167 @@ public tweak_char(const chrsource, const target, pagenumber)
 		leftrow = ct_pg4_l;
 		rightrow = ct_pg4_r;
 	}
-	
+	printf("rightrow: %d, leftrow: %d", rightrow, leftrow);
 	if( 1<= pagenumber <= 4)
 	{
+		printf("chartweak enter page");
 		new linetype; //type of the line (propertyfield, inputfield, radiobutton ...)
 		new p; //creates several property fields if splitted (more is splitted into 4 more values and so p for more is 4)
 		new k=0; //multiplier how many pixel right row is pushed to the right compared to the left row
 		new n=0; //counts the line numbers per row, max is 14 lines
+		new endline
 		if((rightrow == 0) && (leftrow != 0))
-			rightrow = leftrow;
+			endline = leftrow;
 		else if((rightrow != 0) && (leftrow != 0))
+			endline = rightrow;
+		for(new i=startline; i<=endline; ++i)
 		{
-			for(new i=startline; i<=rightrow; ++i)
+			//printf("i: %d, pagenumber: %d^n", i, pagenumber);
+			if(i==(leftrow+1))
 			{
-				//printf("i: %d, pagenumber: %d^n", i, pagenumber);
-				if(i==(leftrow+1))
-				{
-					k=254;
+				k=254;
 					n=0;
-				}
-				linetype = itm_twkarray[i][it_linetype];
-				//printf("linetype: %d, i: %d^n, m: %d, n:%d^n", linetype, i, m, n);
-				switch(linetype)
+			}
+			linetype = chr_twkarray[i][ct_linetype];
+			//printf("linetype: %d, i: %d^n, m: %d, n:%d^n", linetype, i, m, n);
+			switch(linetype)
+			{
+				case 1: //property field, eg itemname
 				{
-					case 1: //property field, eg itemname
+					gui_addGump(twkChrMenu,ct_gu+k,181+(n*20), 0x827);
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
+					if(chr_twkarray[i][ct_infotype] != 0) //its a splitted property (more is more1, more2, more3 ...)
 					{
-						gui_addGump(twkChrMenu,it_gu+k,181+(n*20), 0x827);
-						gui_addText(twkChrMenu,it_tex+k,180+(n*20),1310, itm_twkarray[i][it_linename]);
-						if(itm_twkarray[i][it_infotype] != 0) //its a splitted property (more is more1, more2, more3 ...)
+						for(p = 1; p<= chr_twkarray[i][ct_infotype]; p++)
 						{
-							for(p = 1; p<= itm_twkarray[i][it_infotype]; p++)
-							{
-								gui_addPropField( twkChrMenu, it_prop+k-30+p*30, (180+(n*20)),150,30, itm_twkarray[i][it_propnumber]);
-							}
+							gui_addPropField( twkChrMenu, ct_prop+k-30+p*30, (180+(n*20)),150,30, chr_twkarray[i][ct_propnumber]);
 						}
-						else gui_addPropField( twkChrMenu, it_prop+k, (180+(n*20)),150,30, itm_twkarray[i][it_propnumber]);
 					}
-					case 2: //infofield, eg weight
+					else gui_addPropField( twkChrMenu, ct_prop+k, (180+(n*20)),150,30, chr_twkarray[i][ct_propnumber]);
+				}
+				case 2: //infofield, eg weight
+				{
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
+					if(chr_twkarray[i][ct_propnumber]==0) //custom info function
 					{
-						gui_addText(twkChrMenu,it_tex+k,180+(n*20),1310,itm_twkarray[i][it_linename]);
-						if(itm_twkarray[i][it_infotype]==0)
-						{
-							sprintf( tempChrStr,"%d",itm_getProperty(target,itm_twkarray[i][it_propnumber]));
-						}
-						gui_addText( twkChrMenu, it_desc+k, 180+(n*20),0,tempChrStr);
-						sprintf( tempChrStr,"");
+						if(chr_twkarray[i][ct_infotype]==1)
+							sprintf( tempChrStr,"%d",tempfx_isActive( target,TFX_SPELL_REACTARMOR));
+						else if(chr_twkarray[i][ct_infotype]==2)
+							sprintf( tempChrStr,"%d",tempfx_isActive( target,TFX_SPELL_INCOGNITO));
 					}
-					case 3: //inputfield, eg Nightsight
+					else if(chr_twkarray[i][ct_propval]==0) //is an integer information
 					{
-						gui_addGump(twkChrMenu,it_gu+k, 181+(n*20), 0x827);
-						if( isStrContainedInStr(itm_twkarray[i][it_linename], "Nightsight"))
-						{
-							if(tempfx_isActive( target,TFX_SPELL_LIGHT) == 1)
+						sprintf( tempChrStr,"%d",chr_getProperty(target,chr_twkarray[i][ct_propnumber]));
+					}
+					gui_addText( twkChrMenu, ct_desc+k, 180+(n*20),0,tempChrStr);
+					sprintf( tempChrStr,"");
+				}
+				case 3: //inputfield, eg Nightsight
+				{
+					
+					if( chr_twkarray[i][ct_propnumber] == 1)
+					{
+						if(tempfx_isActive( target,TFX_SPELL_LIGHT) == 1)
+						checklev = 1;
+					}
+					gui_addGump(twkChrMenu,ct_gu+k, 181+(n*20), 0x827);
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
+					gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,chr_twkarray[i][ct_inputname]);
+					gui_addCheckbox( twkChrMenu,ct_check+k,180+(n*20),oldpic,newpic,checklev,i+10);
+					checklev=0;
+				}
+				case 4: //checkbox
+				{
+					if((chr_twkarray[i][ct_propnumber] == 134) || (chr_twkarray[i][ct_propnumber] == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
+					{
+						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] != chr_twkarray[i][ct_infotype]) //for example is frozen
 							checklev = 1;
-						}
-						gui_addText(twkChrMenu,it_tex+k,180+(n*20),1310,itm_twkarray[i][it_linename]);
-						gui_addInputField( twkChrMenu,it_prop+k,180+(n*20),50,20,i,1110,itm_twkarray[i][it_inputname]);
-						gui_addCheckbox( twkChrMenu,it_check+k,180+(n*20),oldpic,newpic,checklev,i+10);
-						checklev=0;
 					}
-					case 4: //checkbox
+					else if(chr_twkarray[i][ct_propnumber] == 0) //customized button function, for example open bank box
 					{
-						if(itm_twkarray[i][it_propnumber] == 118) //decay
-						{
-							if(itm_getProperty( target,IP_PRIV)&itm_twkarray[i][it_infotype] != itm_twkarray[i][it_infotype]) //can decay
-								checklev = 1;
-						}
-						gui_addText(twkChrMenu,it_tex+k,180+(n*20),1310,itm_twkarray[i][it_linename]);
-						gui_addCheckbox( twkChrMenu,it_prop+k,181+(n*20),oldpic,newpic,checklev,i+10);
-						checklev=0;
+						if( chr_twkarray[i][ct_infotype] == 4)
+						       if( (chr_getProperty( target,CP_ID)) != (chr_getProperty(target,CP_XID))) //if(chr_getProperty( target,CP_POLYMORPH) == 1) //polymorphed
+						              checklev = 1;
 					}
-					case 5: //radiobutton
+					else //on/off check only
 					{
-						if(itm_twkarray[i][it_propval] == itm_getProperty( target,itm_twkarray[i][it_propnumber]))
+						if(chr_getProperty(target,chr_twkarray[i][ct_propnumber]) == 1)
 							checklev = 1;
-						if(itm_twkarray[i][it_propnumber] == 120) //visible
-							{
-							gui_addText(twkChrMenu,it_tex+k,180+(n*20),1310, itm_twkarray[i][it_linename]);
-							gui_addRadioButton( twkChrMenu,it_radio+k,(180+(n*20)), oldpic,newpic,checklev,i+10);
-							}
-						if(itm_twkarray[i][it_propnumber] == 111) //moveable
+					}
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
+					gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,0,i+10);
+					checklev = 0;
+				}
+				case 5: //radiobutton
+				{
+					if((chr_twkarray[i][ct_propnumber] == 110) || (chr_twkarray[i][ct_propnumber] == 121)) //visible or Priv (bitfields)
+					{
+						if(chr_getProperty( target,IP_PRIV)&chr_twkarray[i][ct_infotype] != chr_twkarray[i][ct_infotype]) //can decay
+							checklev = 1;
+						gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
+						gui_addRadioButton( twkChrMenu,ct_radio+k,(180+(n*20)), oldpic,newpic,checklev,i+10);
+					}
+					if(chr_twkarray[i][ct_propnumber] == 111) //moveable
+					{
+						if(chr_twkarray[i][ct_propval] == chr_getProperty( target,chr_twkarray[i][ct_propnumber]))
+							checklev = 1;
+						gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
+						gui_addRadioButton( twkChrMenu,ct_radio+k,(180+(n*20)), oldpic,newpic,checklev,i+10);
+					}
+					checklev=0;
+				}
+				case 6: //splitted properties (more for example)
+				{
+					gui_addGump(twkChrMenu,ct_gu+k,181+(n*20), 0x827);
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
+					gui_addPropField( twkChrMenu, (ct_prop+k), (180+(n*20)),150,30, (chr_twkarray[i][ct_propnumber]), (chr_twkarray[i][ct_infotype]));
+				}
+				case 7: //stock function call
+				{
+					new p = (chr_twkarray[i][ct_propnumber]); //line in chr_stockarray
+					new output;
+					if(p==0)
+						output = chr_getSkillSum(target);
+					else if(p==1)
+						output = chr_countBankGold(target);
+					else if(p=2)
+					{
+						if ( chr_getGuild(target) >= 0 )
+							guild_getProperty( chr_getGuild(target),GP_STR_NAME,_,0,tempChrStr );
+						else	tempChrStr="None";
+					}
+					else if(p==3)
+					{
+						if ( chr_getGuild(target) >= 0 )
+							chr_getProperty(getGuildMaster(chr_getGuild(target)), CP_STR_NAME, _, tempChrStr);
+						else	tempChrStr="None";
+					}
+					else if(p==4)
+					{
+						new age=chr_getProperty(target,CP_CREATIONDAY);
+						if ( age > 0 )
 						{
-							gui_addText(twkChrMenu,it_tex+k,180+(n*20),1310, itm_twkarray[i][it_linename]);
-							gui_addRadioButton( twkChrMenu,it_radio+k,(180+(n*20)), oldpic,newpic,checklev,i+10);
+							new year=cal_getRealYear(age);
+							new dayInYear=cal_getDayInYear(age);
+							new month=cal_getRealMonth(dayInYear,year);
+							new day=cal_getDayInMonth(dayInYear,year);
+							sprintf(tempChrStr,"%d/%d/%d",day,month,year);
 						}
-						checklev=0;
+						else	tempChrStr="----";
 					}
-					case 6: //splitted properties (more for example)
-					{
-						gui_addGump(twkChrMenu,it_gu+k,181+(n*20), 0x827);
-						gui_addText(twkChrMenu,it_tex+k,180+(n*20),1310, itm_twkarray[i][it_linename]);
-						gui_addPropField( twkChrMenu, (it_prop+k), (180+(n*20)),150,30, (itm_twkarray[i][it_propnumber]), (itm_twkarray[i][it_infotype]));
-					}
-					case 7: //stock function call
-					{
-						new p = itm_twkarray[i][it_propnumber];
-						/*for(new o =1; o<= (chr_stockarray[p][ct_numberpara]); ++o)
-						{
-							new paramname[10];
-							sprintf(paramname, "ct_param%d", o); //get x in ct_paramx
-							if((chr_stockarray[p][paramname])== 1) //is a string
-							{
-								new param[10];
-							}
-						}*/
-						callFunction2P(funcidx(chr_stockarray[p][ct_stockname]),chr_stockarray[p][ct_param1],chr_stockarray[p][ct_param2]);
-					}
-					default: printf("unknown item-tweak case!");
-				}//linetype
-				n=n+1;
-			}//for
-		}
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
+					if(chr_twkarray[i][ct_infotype] == 0) //integer value to display
+						sprintf(tempChrStr, "%d", output);
+					gui_addText( twkChrMenu, ct_desc+k, 180+(n*20),0,tempChrStr);
+					tempChrStr=" ";
+				}
+				default: printf("unknown item-tweak case!");
+			}//linetype
+			n=n+1;
+		}//for
 	}//if pagenumber
 
-	if( pagenumber == 1)
-	{
-		gui_addGump(twkChrMenu,50,181, 0x827);
-		gui_addText(twkChrMenu,66,180,1310,"eventname :");
-		gui_addPropField( twkChrMenu, 130, 180,150,30,CP_STR_NAME);
-		
-		gui_addGump(twkChrMenu,50,201, 0x827);
-		gui_addText(twkChrMenu,66,200,1310,"Title:");
-		gui_addPropField( twkChrMenu, 130, 200,150,30,CP_STR_TITLE);
-		
-		gui_addGump(twkChrMenu,50,221, 0x827);
-		gui_addText(twkChrMenu,66,220,1310,"Karma:");
-		gui_addPropField( twkChrMenu, 130, 220,150,30,CP_KARMA);
-		
-		gui_addGump(twkChrMenu,50,241, 0x827);
-		gui_addText(twkChrMenu,66,240,1310,"Fame :");
-		gui_addPropField( twkChrMenu, 130, 240,150,30,CP_FAME);
-		
-		gui_addGump(twkChrMenu,50,261, 0x827);
-		gui_addText(twkChrMenu,66,260,1310,"Strength :");
-		gui_addPropField( twkChrMenu, 130, 260,150,30,CP_STRENGTH,CP2_STR);
-		
-		gui_addGump(twkChrMenu,50,281, 0x827);
-		gui_addText(twkChrMenu,66,280,1310,"Hits :");
-		gui_addPropField( twkChrMenu, 130, 280,150,30,CP_STRENGTH,CP2_HITPOINTS);
-		
-		gui_addGump(twkChrMenu,50,301, 0x827);
-		gui_addText(twkChrMenu,66,300,1310,"Dex :");
-		gui_addPropField( twkChrMenu, 130, 300,150,30,CP_DEXTERITY,CP2_DEX);
-		
-		gui_addGump(twkChrMenu,50,321, 0x827);
-		gui_addText(twkChrMenu,66,320,1310,"Stamina:");
-		gui_addPropField( twkChrMenu, 130, 320,150,30,CP_DEXTERITY,CP2_STAMINA);
-		
-		gui_addGump(twkChrMenu,50,341, 0x827);
-		gui_addText(twkChrMenu,66,340,1310,"Int :");
-		gui_addPropField( twkChrMenu, 130, 340,150,30,CP_INTELLIGENCE,CP2_INT);
-		
-		gui_addGump(twkChrMenu,50,361, 0x827);
-		gui_addText(twkChrMenu,66,360,1310,"Mana :");
-		gui_addPropField( twkChrMenu, 130, 360,150,30,CP_INTELLIGENCE,CP2_MANA);
-		
-		gui_addGump(twkChrMenu,50,381, 0x827);
-		gui_addText(twkChrMenu,66,380,1310,"Kills :");
-		gui_addPropField( twkChrMenu, 130, 380,150,30,CP_KILLS);
-		
-		gui_addGump(twkChrMenu,50,401, 0x827);
-		gui_addText(twkChrMenu,66,400,1310,"Food Pos. :");
-		gui_addPropField( twkChrMenu, 130, 400,150,30,CP_FOODPOSITION);
-		
-		gui_addText(twkChrMenu,66,420,1310,"Weight:");
-		sprintf( tempChrStr,"%d",chr_getProperty( target,CP_WEIGHT));
-		gui_addText( twkChrMenu, 130, 420,0,tempChrStr);
-		//gui_addPropField( twkChrMenu, 130, 420,150,30,CP_WEIGHT);
-
-		gui_addText(twkChrMenu,270,180,1310,"Summ Skills :"); // Skillsumme
-		new i;
-		new skillsum;
-		for (i=0;i<49;++i)
-		{
-			skillsum=skillsum+chr_getProperty(target,CP_BASESKILL,i);
-		}
-		new skillsumStr[10];
-		sprintf(skillsumStr,"%d",skillsum);
-
-		gui_addText(twkChrMenu,420,180,0,skillsumStr);
-		
-		gui_addText(twkChrMenu,270,200,1310,"Gold bankbox :"); //Gold
-		sprintf( tempChrStr,"%d",chr_countBankGold(target));
-		gui_addText( twkChrMenu, 420, 200,0,tempChrStr);
-		
-		gui_addText(twkChrMenu,270,220,1310,"bankbox open");
-		gui_addButton(twkChrMenu,420,220,2224,2117,11);
-		gui_addGump(twkChrMenu,254,241, 0x827);
-		
-		gui_addText(twkChrMenu,270,240,1310,"Body color :");
-		gui_addPropField( twkChrMenu, 420, 240,150,30,CP_SKIN); // Color
-		
-		gui_addGump(twkChrMenu,254,261, 0x827);		
-		gui_addText(twkChrMenu,270,260,1310,"Body oskin :");
-		gui_addPropField( twkChrMenu, 420, 260,150,30,CP_XSKIN);
-		
-		gui_addGump(twkChrMenu,254,281, 0x827);
-		gui_addText(twkChrMenu,270,280,1310,"ID :");
-		gui_addPropField( twkChrMenu, 420, 280,150,30,CP_ID);
-		
-		gui_addGump(twkChrMenu,254,321, 0x827);
-		gui_addText(twkChrMenu,270,300,1310,"O Body :");
-		gui_addPropField( twkChrMenu, 420, 300,150,30,CP_XID);
-		
-		gui_addGump(twkChrMenu,254,301, 0x827);
-		gui_addText(twkChrMenu,270,320,1310,"Script :");
-		gui_addPropField( twkChrMenu, 420, 320,150,30,CP_SCRIPTID);
-		
-		gui_addGump(twkChrMenu,254,341, 0x827);
-		gui_addText(twkChrMenu,270,340,1310,"Action (Skill) :");
-		gui_addPropField( twkChrMenu, 420, 340,150,30,CP_MAKING);
-		
-		gui_addGump(twkChrMenu,254,361, 0x827);
-		gui_addText(twkChrMenu,270,360,1310,"Position :");
-		gui_addPropField( twkChrMenu, 390, 360,150,30,CP_POSITION,CP2_X);
-		gui_addPropField( twkChrMenu, 440, 360,150,30,CP_POSITION,CP2_Y);
-		gui_addPropField( twkChrMenu, 490, 360,150,30,CP_POSITION,CP2_Z);
-		
-		gui_addGump(twkChrMenu,254,381, 0x827);
-		gui_addText(twkChrMenu,270,380,1310,"Workposition :");
-		gui_addPropField( twkChrMenu, 390, 380,150,30,CP_POSITION,CP2_X);
-		gui_addPropField( twkChrMenu, 440, 380,150,30,CP_POSITION,CP2_Y);
-		gui_addPropField( twkChrMenu, 490, 380,150,30,CP_POSITION,CP2_Z);
-		
-		gui_addText(twkChrMenu,270,400,1310,"Script ID:");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_SCRIPTID));
-		
-		gui_addText(twkChrMenu,66,460,1310,"guild eventname :");
-
-		if ( chr_getGuild(target) >= 0 )
-
-			guild_getProperty( chr_getGuild(target),GP_STR_NAME,_,0,tempChrStr );
-		else	tempChrStr="Keine";
-		gui_addText( twkChrMenu, 200, 460,0,tempChrStr);
-		
-		gui_addText(twkChrMenu,66,480,1310,"guild master :");
-		gui_addText(twkChrMenu,200,480,0,"Not yet available");
-		gui_addText(twkChrMenu,66,500,1310,"Go to guild");
-		
-		gui_addText(twkChrMenu,66,520,1310,"Char since");
-
-		new age=chr_getProperty(target,CP_CREATIONDAY);
-		if ( age > 0 )
-		{	new year=cal_getRealYear(age);
-			new dayInYear=cal_getDayInYear(age);
-			new month=cal_getRealMonth(dayInYear,year);
-			new day=cal_getDayInMonth(dayInYear,year);
-			sprintf( tempChrStr,"%d/%d/%d ",day,month,year);
-		}
-
-		else	tempChrStr="--------";
-		gui_addText( twkChrMenu, 180, 520,0,tempChrStr);
-		gui_addText(twkChrMenu,270,520,1310,"existent");
-		
-		//gui_addText(twkChrMenu,270,420,1310,"Rewardpoints");
-		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
-
-		
-	}
-	else if(pagenumber ==2)
+	else if(pagenumber ==7)
 	{
 		gui_addText(twkChrMenu,100,150,33,"Miscellaneous");
 		new miscSkills[21]={ SK_ALCHEMY,SK_BLACKSMITHING,SK_BOWCRAFT,SK_CARPENTRY,SK_COOKING,SK_FISHING,SK_HEALING,SK_HERDING,SK_LOCKPICKING,SK_LUMBERJACKING,SK_MAGERY,SK_MEDITATION,SK_MINING,SK_MUSICIANSHIP,SK_REMOVETRAPS,	SK_MAGICRESISTANCE,SK_SNOOPING,SK_STEALING,SK_TAILORING,SK_TINKERING,SK_VETERINARY};
@@ -1364,115 +1283,6 @@ public tweak_char(const chrsource, const target, pagenumber)
 	}
 	else if(pagenumber == 3)
 	{
-		new checklev = 0;
-		new poisonText[5][10]={"None","Lightly","Normal","Heavy","Deadly"};
-
-		gui_addText(twkChrMenu,100,150,33,"Flags");
-		
-		//Invul
-		if(chr_isInvul(target) == 1) //invul
-		      checklev = 1;
-		gui_addCheckbox( twkChrMenu,190,173, oldpic,newpic,checklev,12);
-		gui_addText(twkChrMenu,66,170,1310,"Invulnerable :");
-		checklev=0;
-
-		// Dead
-		if(chr_getProperty(target,CP_DEAD) == 1) //tot
-		       checklev = 1;
-		gui_addText(twkChrMenu,66,190,1310,"Dead :");
-		gui_addCheckbox( twkChrMenu,190,193, oldpic,newpic,checklev,13);
-		checklev=0;
-
-		//Freeze
-		if((chr_getProperty(target,CP_PRIV2)&0x02) == 2) //eingefroren
-		       checklev = 1;
-		gui_addCheckbox( twkChrMenu,190,213, oldpic,newpic,checklev,14);
-		gui_addText(twkChrMenu,66,210,1310,"Frozen :");
-		checklev=0;
-
-		//Invis
-		new checklev2=0;
-		new checklev3=0;
-		new checklev4=0;
-		if((chr_getProperty(target,CP_HIDDEN) == 1) && ((chr_getProperty( target,CP_PRIV2) & PRIV2_PERMAHIDDEN) != 8)) //invis skill
-			checklev=1;
-		else if((chr_getProperty(target,CP_HIDDEN) == 2) && ((chr_getProperty( target,CP_PRIV2) & PRIV2_PERMAHIDDEN) != 8)) //invis spell
-			checklev2=1;
-		else if((chr_getProperty(target,CP_PRIV2) & PRIV2_PERMAHIDDEN) == 8) //invis perma
-			checklev3=1; //button is checked
-		else checklev4=1;
-		gui_addText(twkChrMenu,66,230,1310,"Invisible");
-		gui_addText(twkChrMenu,66,245,1310,"  by:");
-		gui_addText(twkChrMenu,140,237,0,"Skill");
-		gui_addRadioButton( twkChrMenu,180,240, oldpic,newpic,checklev,15);
-		gui_addText(twkChrMenu,216,237,0,"Spell");
-		gui_addRadioButton( twkChrMenu,256,240, oldpic,newpic,checklev2,16);
-		gui_addText(twkChrMenu,292,237,0,"Perma");
-		gui_addRadioButton( twkChrMenu,337,240, oldpic,newpic,checklev3,17);
-		gui_addText(twkChrMenu,370,237,0,"Visible");
-		gui_addRadioButton( twkChrMenu,427,240, oldpic,newpic,checklev4,18);
-		checklev=0;
-		
-		// gui_addButton(twkChrMenu,43,253,2224,2117,10);
-		// gui_addText(twkChrMenu,66,250,1310,"Sleeping :");
-		// gui_addText(twkChrMenu,190,250,1110,"<eval (<src.targ.flags>&010)==010>");
-		
-		//Warmode
-		if(chr_getProperty(target,CP_WAR) == 1) //Warmode
-		        checklev = 1;
-		gui_addText(twkChrMenu,66,270,1310,"Warmode :");
-		gui_addCheckbox( twkChrMenu,190,270,oldpic,newpic,checklev,19);
-		checklev=0;
-		
-		gui_addText(twkChrMenu,66,290,1310,"Reactive Armor :");
-		sprintf( tempChrStr,"%d",tempfx_isActive( target,TFX_SPELL_REACTARMOR));
-		gui_addText(twkChrMenu,190,290,1110,tempChrStr);
-		
-		//Poison
-		gui_addGump(twkChrMenu,50,310, 0x827);
-		gui_addText(twkChrMenu,66,310,1310,"Poisoned :");
-		gui_addPropField( twkChrMenu,190,310,125,30,CP_POISONED,_,1110);
-		
-		gui_addGump(twkChrMenu,50,330, 0x827);
-		gui_addText( twkChrMenu,66,330,1310,"NPC Poison Attack: ");
-		gui_addPropField( twkChrMenu,190,330,125,30,CP_POISON,_,1110);
-		
-		gui_addGump(twkChrMenu,50,350, 0x827);
-		gui_addText( twkChrMenu,66,350,1310,"Poison Time : ");
-		gui_addPropField(twkChrMenu,190,350,125,30,CP_POISONWEAROFFTIME,_,1110);
-		
-		gui_addGump(twkChrMenu,50,370, 0x827);
-		gui_addText( twkChrMenu,66,370,1310,"Direction : ");
-		gui_addPropField(twkChrMenu,190,370,125,30,CP_DIR,_,1110 );
-		
-		//Nightsight
-		gui_addGump(twkChrMenu,50,390, 0x827);
-		if(tempfx_isActive( target,TFX_SPELL_LIGHT) == 1) //Nightsight
-		       checklev = 1;
-		gui_addText(twkChrMenu,66,390,1310,"Nightsight:");
-		gui_addInputField( twkChrMenu,190,390,50,20,20,1110,"millisec");
-		gui_addCheckbox( twkChrMenu,265,393,oldpic,newpic,checklev,20);
-		checklev=0;
-
-		//Magic Reflect
-		if(chr_getProperty( target, CP_PRIV2, _)&0x40 == 40) //Magic Reflection
-		       checklev = 1;
-		gui_addText(twkChrMenu,66,410,1310,"Magic Reflect :");
-		gui_addCheckbox( twkChrMenu,190,413,oldpic,newpic,checklev,21);
-		checklev=0;
-
-		//Polymorph
-		if( (chr_getProperty( target,CP_ID)) != (chr_getProperty(target,CP_XID))) //if(chr_getProperty( target,CP_POLYMORPH) == 1) //polymorphed
-		       checklev = 1;
-		gui_addText(twkChrMenu,66,430,1310,"Polymorph:");
-		gui_addCheckbox( twkChrMenu,265,430, oldpic,newpic,checklev,22);
-		checklev = 0;
-		
-		gui_addButton(twkChrMenu,43,453,2224,2117,23);
-		gui_addText(twkChrMenu,66,450,1310,"Incognito :");
-		sprintf( tempChrStr,"%d",tempfx_isActive( target,TFX_SPELL_INCOGNITO));
-		gui_addText(twkChrMenu,190,450,1110,tempChrStr);
-		
 		gui_addButton(twkChrMenu,317,173,2224,2117,24);
 		gui_addText(twkChrMenu,340,170,1310,"Has Shield :");
 
@@ -1581,22 +1391,22 @@ public tweak_char(const chrsource, const target, pagenumber)
 		{
 			new item = set_get(itemSet);
 			new itemName[30];
-			itm_getProperty(item,IP_STR_NAME,_,itemName);
-			new layer= itm_getProperty(item,IP_LAYER);
+			chr_getProperty(item,IP_STR_NAME,_,itemName);
+			new layer= chr_getProperty(item,IP_LAYER);
 			if ( layer <= 24)
 			{
 				wornLayer[layer]=1;
 		
 				if ( layer <= 12 )
 				{
-					gui_addTilePic(twkChrMenu,40+(layer-1)*40,150,itm_getProperty(item,IP_ID));
+					gui_addTilePic(twkChrMenu,40+(layer-1)*40,150,chr_getProperty(item,IP_ID));
 					gui_addCheckbox(twkChrMenu,43,243+(layer-1)*20, oldpic, newpic, 1, 6+(layer-1));
 					gui_addText(twkChrMenu,66,240+(layer-1)*20,0,layerText[layer-1]);
 					gui_addText(twkChrMenu,140,240+(layer-1)*20,1310,itemName);
 				}
 				else
 				{
-					gui_addTilePic(twkChrMenu,(layer-12)*40,190,itm_getProperty(item,IP_ID));
+					gui_addTilePic(twkChrMenu,(layer-12)*40,190,chr_getProperty(item,IP_ID));
 					gui_addCheckbox(twkChrMenu,317,203+(layer-11)*20, oldpic, newpic, 1, 6+(layer-1));
 					gui_addText(twkChrMenu,340,200+(layer-11)*20,0,layerText[layer-1]);
 					gui_addText(twkChrMenu,420,200+(layer-11)*20,1310,itemName);
@@ -2258,8 +2068,8 @@ public tweakchrBck4(const twkChrMenu, const chrsource, const buttonCode)
 			{
 				new item = set_get(itemSet);
 				new itemName[30];
-				itm_getProperty(item,IP_STR_NAME,_,itemName);
-				new layer= itm_getProperty(item,IP_LAYER);
+				chr_getProperty(item,IP_STR_NAME,_,itemName);
+				new layer= chr_getProperty(item,IP_LAYER);
 				if ( layer <= 24)
 				{
 					if(!gui_getProperty(twkChrMenu,MP_CHECK,6+(layer-1)))
