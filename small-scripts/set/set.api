@@ -48,6 +48,16 @@ native set_create( );
 native set_delete( const set );
 
 /*!
+\brief Clear a set
+\author Endymion
+\since 0.82
+\param 1 the set
+\fn set_clear( const set )
+\return 0
+*/
+native set_clear( const set );
+
+/*!
 \brief Rewind a set
 \author Endymion
 \since 0.82

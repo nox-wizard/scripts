@@ -12,7 +12,7 @@ public race_enlistDialog1( const socket, const race )
 	menu_addBackground( menu, 5120, 320,  340 );
 	menu_addGump( menu, 20, 80, 1418 );
 	
-	if( race_getSettings( RP_WITH_WEB_INTERFACE ) )
+	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
 		menu_addTilePic( menu, 286, 8, 3811 );
 		menu_addButtonFn( menu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
@@ -97,7 +97,7 @@ public race_dialogRaceInfo( const socket, const race )
 	menu_addText( menu, 33, 142, 1153, "A" );
 	menu_addText( menu, 45, 142, 95, "ll races" );
 
-	if( race_getSettings( RP_WITH_WEB_INTERFACE ) )
+	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
 		menu_addTilePic( menu, 286, 8, 3811 );
 		menu_addButtonFn( menu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
@@ -160,7 +160,7 @@ public race_nameList( const socket, const raceType, const canClose, const canMov
 			}
 			
 			new name[100];
-			race_getProperty( race, RP_NAME, _, name );
+			race_getProperty( race, RP_STR_NAME, _, name );
 			
 			menu_addText( menu, 40, position-4, 95, name );
 			menu_addButton( menu, 20, position, 1209, 1210, race );
@@ -171,7 +171,7 @@ public race_nameList( const socket, const raceType, const canClose, const canMov
 		}
 	}
 
-	if( race_getSettings( RP_WITH_WEB_INTERFACE ) )
+	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
 		menu_addTilePic( menu, 286, 8, 3811 );
 		menu_addButtonFn( menu, 294, 30, 1209, 1210, INVALID, _, "race_webInterface" )
@@ -217,11 +217,11 @@ public race_description( const socket, const race, const canClose, const canMove
 	menu_addText( menu, 360, 8,   95,  "ystem" );
 
 	new name[100];
-	race_getProperty( race, RP_NAME, _, name );
+	race_getProperty( race, RP_STR_NAME, _, name );
 	new footerCenter = ( 640 - ( strlen(name) * PIXELFORCHAR ) ) / 2;
 	menu_addText( menu, footerCenter, 300, 152,  name );
 
-	if( race_getSettings( RP_WITH_WEB_INTERFACE ) )
+	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) )
 	{
 		menu_addTilePic( menu, 606, 8, 3811 );
 		menu_addButtonFn( menu, 614, 30, 1209, 1210, race, _, "race_webInterface" )
@@ -234,7 +234,7 @@ const descForPage = 11;
 
 	new k = 0;
 	new position = 62;
-	new descCount = race_getProperty( race, RP_DESCRIPTION, RP2_DESCRIPTION_COUNT );
+	new descCount = race_getProperty( race, RP_STR_DESCRIPTION, RP2_DESCRIPTION_COUNT );
 	for( new i=0; i<descCount; ++i )
 	{
 		if( ( k % descForPage )==0 )
@@ -247,7 +247,7 @@ const descForPage = 11;
 		k++;
 		
 		new desc[200];
-		race_getProperty( race, RP_DESCRIPTION, _, desc );
+		race_getProperty( race, RP_STR_DESCRIPTION, _, desc );
 		
 		
 		//note 0x5E is '^'
@@ -284,11 +284,11 @@ public race_webInterface( const socket, const menu, const race )
 		return;
 		
 	new root[200];
-	race_getOptions( RP_WEBROOT, _, root );
+	race_getGlobalProp( RP_STR_WEBROOT, _, root );
 	
 	if( race!=INVALID ) {
 		new link[100];
-		race_getProperty( race, RP_WEBLINK, _, link );
+		race_getProperty( race, RP_STR_WEBLINK, _, link );
 		weblaunch( socket, "%s%s", root, link );
 	}
 	else
@@ -325,8 +325,8 @@ public race_make( const socket, const menu, const race, const chr )
 		chr_setProperty( chr, CP_SKIN,  _, skincolor );
 	}
 	
-	bool killBeard == race_getProperty( race, RP_LAYER_PERMITTED, LAYER_BEARD )== RT_PROHIBITED;
-	bool killHair == race_getProperty( race, RP_LAYER_PERMITTED, LAYER_HAIR )== RT_PROHIBITED;
+	new killBeard = ( race_getProperty( race, RP_LAYER_PERMITTED, LAYER_BEARD ) == RT_PROHIBITED )? true : false;
+	new killHair = ( race_getProperty( race, RP_LAYER_PERMITTED, LAYER_HAIR ) == RT_PROHIBITED )? true : false;
 		
 	
 	//
@@ -334,70 +334,82 @@ public race_make( const socket, const menu, const race, const chr )
 	//
 
 
-	new backpack = chr_getBackPack( chr );
+	new backpack = chr_getBackpack( chr, true );
 
 	new set = set_create();
 	set_addItemWeared( set, chr, false, false, false );
 	
 	for( set_rewind(set); !set_end(set); ) {
 		new item = set_getItem( set );
-		if( item!=INVALID ) {
-			if( backpack!=INVALID )
-				backpack->AddItem( pi );
-			else { // put on ground 
-			}
-		}
+		if( item!=INVALID )
+			itm_contAddItem( backpack, item );
 	}
 	
 	//
 	// equip / wear items or put them in backpack
-					//
-					if ( !race->startItems.empty() )
-					{
-						vector< class RaceStartItem >::iterator iter( race->startItems.begin() ), end( race->startItems.end() );
-						for( ; iter != end; ++iter )
-						{
-						   	pi = item::CreateScriptItem( socket, static_cast< int >(iter->itemReference), 0);
-    						if ( ISVALIDPI( pi ) )
-							{
-								if( ( (pc->GetBodyType() == BODY_MALE) && (iter->gender == MALE) ) ||
-								    ( (pc->GetBodyType() == BODY_FEMALE) && (iter->gender == FEMALE) ) ||
-									( iter->gender == FEMALE_OR_MALE)
-									)
-								{
-									if( iter->protectedItem )
-										pi->magic = 2;
-									if( pi->layer && !pc->GetItemOnLayer( pi->layer ) )
-									{
-										if( iter->skinColor )
-											pi->setColor( pc->getSkinColor() );
+	//
+	
+	new item_set = set_create();
+	set_getRaceStuff( item_set, race, RP_BACKPACK_ITEM, chr  );
+	new amount_set = set_create();
+	set_getRaceStuff( amount_set, race, RP_BACKPACK_ITEM, chr  );
+	
+	for( set_rewind( item_set ); !set_end( item_set ); ) {
+		new def = set_get( item_set );
+		new amount = set_get( amount_set );
+		
+		itm_createInBp( def, chr, amount );
 
-										pi->setContSerial( pc->getSerial32() );
-									}
-									else
-										backpack->AddItem( pi );
-								}
-								else	
-									pi->Delete();
-							}
-						}
-					}
-					//
-					// if teleported to safe location return player to original position
-					// TODO allow pc to be teleported to racial home region
-					//
-					if ( teleportOnEnlist )
-					{
-						/*
-						pc->x = pc->oldx;
-						pc->y = pc->oldy;
-						pc->z = pc->oldz;
-						*/
-						pc->setPosition( pc->getOldPosition() );
-						pc->MoveTo( pc->getPosition() );
-					}
-					pc->teleport();
-					sysmessage( socket, "You have become a %s", getName( pc->race  )->c_str() );
-					}
-					break;
+	}
+	
+
+	set_clear( item_set );
+	set_getRaceStuff( item_set, race, RP_BANK_ITEM, chr  );
+	set_clear( amount_set );
+	set_getRaceStuff( amount_set, race, RP_BANK_ITEM, chr  );
+	
+	for( set_rewind( item_set ); !set_end( item_set ); ) {
+		new def = set_get( item_set );
+		new amount = set_get( amount_set );
+		
+		itm_createInBank( def, chr, amount );
+
+	}
+	
+	set_clear( item_set );
+	set_getRaceStuff( item_set, race, RP_EQUIP_ITEM, chr  );
+	set_clear( amount_set );
+	set_getRaceStuff( amount_set, race, RP_EQUIP_ITEM, chr  );
+	
+	for( set_rewind( item_set ); !set_end( item_set ); ) {
+		new def = set_get( item_set );
+		new amount = set_get( amount_set );
+		
+		new item = itm_create( def, INVALID, amount );
+		
+		//TODO if layer is occupied, move or remove item
+		chr_equip( chr, item );
+
+	}
+	
+	// if teleported to safe location return player to original position
+	if( race_getGlobalProp( RP_TELEPORT_ON_ENLIST  ) ) {
+	{
+		// TODO allow pc to be teleported to racial home region
+		chr_moveTo( chr, chr_getProperty( chr, CP_OLDPOS, CP2_X ), chr_getProperty( chr, CP_OLDPOS, CP2_Y ), chr_getProperty( chr, CP_OLDPOS, CP2_Z ) );
+	}
+
+	chr_teleport(chr);
+	
+	new race_name[100];
+	race_getProperty( race, CP_STR_NAME, _, race_name );
+	sysmessage( socket, _, "You have become a %s", race_name );
+	
+	if( curr!=chr ) {
+		new name[100];
+		chr_getProperty( chr, CP_STR_NAME, _, name );
+		sysmessage( socket, _, "Now %s is a %s", name, race_name );
+	}
+
 }
+

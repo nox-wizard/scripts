@@ -39,6 +39,17 @@ native ntprintf(const socket,const format[], ...);
 
 
 /*!
+\brief Prints a message of given color to the given socket
+\author Endymion
+\fn sysmessage( const socket, const color=0x0387, const format[], ... )
+\param socket the socket
+\param color the color
+\param format the message
+*/
+native sysmessage( const socket, const color=0x0387, const format[], ... );
+
+
+/*!
 \author Xanathar
 \fn bypass()
 \brief Bypasses default server behaviour

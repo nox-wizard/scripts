@@ -1,14 +1,19 @@
 
 const RP_TELEPORT_ON_ENLIST = 2;
 const RP_TYPE = 3;
-const RP_DESCRIPTION = 5;
 const RP2_DESCRIPTION_COUNT = 1;
-const RP_NAME = 6;
 const RP_LAYER_PERMITTED = 7;
-const RP_WEBLINK = 8;
+const RP_STR_NAME = 6;
+const RP_STR_DESCRIPTION = 5;
+const RP_STR_WEBLINK = 8;
+const RP_SKIN = 5;
+const RP_BACKPACK_ITEM = 1;
+const RP_BANK_ITEM = 1;
+const RP_EQUIP_ITEM = 1;
+
 
 const RP_WITH_WEB_INTERFACE = 1;
-const RP_WEB_ROOT = 2;
+const RP_STR_WEBROOT = 2;
 
 const RT_OPTIONAL = 0;
 const RT_PROHIBITED = 1;

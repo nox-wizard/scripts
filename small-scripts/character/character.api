@@ -420,6 +420,13 @@ native chr_unmountHorse(const chr);
 native chr_mountHorse(const chr, const horse_chr);
 
 /*!
+\brief Equip given item
+\author Endymion
+\fn chr_equip(const chr, const item)
+*/
+native chr_equip(const chr, const item);
+
+/*!
 \author Xanathar
 \fn chr_resurrect(const chr)
 \brief
@@ -664,6 +671,15 @@ native chr_morph( const chr, const bodyid, const skincolor, const hairstyle, con
 \brief
 */
 native chr_unmorph( const chr );
+
+/*!
+\brief Get character backpack
+\author Endymion
+\fn chr_getBackpack(const chr)
+\param chr the character
+\param createIfNotExist if true backpack is created if not exist
+*/
+native chr_getBackpack( const chr, const createIfNotExist = true );
 
 /*!
 \author Keldan

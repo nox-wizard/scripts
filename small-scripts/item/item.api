@@ -62,11 +62,15 @@ native itm_getProperty(const item, const property, const subprop=0, ...);
 native itm_setProperty(const item, const property, const subprop=0, ...);
 
 /*!
+\brief Add the item to container
 \author Xanathar
-\fn itm_contAddItem(const container, const item, const x, const y)
-\brief
+\fn itm_contAddItem(const container, const item, const x=INVALID, const y=INVALID)
+\param 1 the container
+\param 2 the item
+\param 3 x location or INVALID if rand pos
+\param 4 y location or INVALID if rand pos
 */
-native itm_contAddItem(const container, const item, const x, const y);
+native itm_contAddItem(const container, const item, const x=INVALID, const y=INVALID);
 
 /*!
 \author Xanathar
@@ -172,13 +176,6 @@ native itm_setOwnSerOnly(const item, const serial);
 \brief
 */
 native itm_setSerial(const item, const serial);
-
-/*!
-\author Xanathar
-\fn itm_getCharBackPack(const chr)
-\brief
-*/
-native itm_getCharBackPack(const chr);
 
 /*!
 \author Xanathar
@@ -303,13 +300,6 @@ native itm_refresh(const itm);
 \brief
 */
 native itm_speech(const s, const itm, const text[]);
-
-/*!
-\author Anthalir
-\fn itm_equip(const chr, const item)
-\brief
-*/
-native itm_equip(const chr, const item);
 
 /*!
 \author Anthalir
