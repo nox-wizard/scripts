@@ -41,7 +41,7 @@ public race_menu( const chr, const race )
 	
 	new offset = 0;
 	new telecheck = race_getGlobalProp( RP_TELEPORT_ON_ENLIST );
-	printf("teleport check: %d", telecheck);
+	printf("teleport check: %d^n", telecheck);
 	if( telecheck == 1)
 	{
 		gui_addText( racemenu, 13, 136, 1153, "Y" );
@@ -52,11 +52,12 @@ public race_menu( const chr, const race )
 		new racex = race_getGlobalProp( RP_STARTLOCATION,RP2_X );
 		new racey = race_getGlobalProp( RP_STARTLOCATION,RP2_Y);
 		new racez = race_getGlobalProp( RP_STARTLOCATION,RP2_Z );
-		
+		printf("blub^n");
 		new chrx = chr_getProperty(chr,CP_POSITION,CP2_X);
+		printf("^nchrx: %d^n", chrx);
 		new chry = chr_getProperty(chr,CP_POSITION,CP2_Y);
 		new chrz = chr_getProperty(chr,CP_POSITION,CP2_Z);
-		
+
 		chr_LocalVarMaker(chr, 0, RACE_STARTX, chrx, _);
 		chr_LocalVarMaker(chr, 0, RACE_STARTY, chry, _);
 		chr_LocalVarMaker(chr, 0, RACE_STARTZ, chrz, _);
@@ -70,15 +71,14 @@ public race_menu( const chr, const race )
 	gui_addButton( racemenu, 13, 169 +offset, 1209, 1209, 2 ); // Choose a race
 	gui_addText( racemenu, 33, 166 +offset, 1153, "S" );
 	gui_addText( racemenu, 45, 166 +offset,   95, "elect your race" );
-	
-	printf("blab");
+
 	gui_show( racemenu, chr );
 
 }
 
 public race_menu_Bck(const racemenu, const chrsource, const buttonCode)
 {
-	printf("bla");
+
 }
 
 public race_dialogRaceInfo( const chr, const race )
