@@ -24,6 +24,8 @@ public command_playerlist( const socket )
 	
 	new menu = gui_create( 50, 50, true, true, true, "handle_playerlist" );
 	gui_addGump( menu, 0, 0, 0x0027, 0 );
+	gui_addText( menu, 20, 4, _, "User Online : " );
+	gui_addText( menu, 150, 4, _, "%d", count );
 	
 	const chrForPage = 14;
 	new page=1;
