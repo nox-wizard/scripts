@@ -56,7 +56,12 @@ enum
 	P_MERCHANTS_F,
 	
 	P_SPAWNER_MENU,
+	
 	P_SUPPLY_MENU,
+	P_BEVERAGES,
+	P_BAKED,
+	P_BOWLSMEATFRUIT,
+	
 	P_SKILLS_MENU,
 	P_SPECIAL_MENU,
 	P_SHARD_MENU,
@@ -114,6 +119,15 @@ new npcMenuTxt[NPC_MENU_ENTRIES][20] =
 	"females",
 	"merchants",
 	"merchants-f"	
+}
+
+#define SUPPLY_MENU_FOOD_ENTRIES 3
+#define SUPPLY_MENU_ENTRIES SUPPLY_MENU_FOOD_ENTRIES
+new supplyMenuTxt[SUPPLY_MENU_ENTRIES][20] =
+{
+	"Beverages",
+	"Backed",
+	"Bowls, Meat and Fruit"
 }
 
 enum {AR_HELM,AR_GORGET,AR_CHEST,AR_ARMS,AR_GLOVES,AR_LEGS,AR_FEMALE}

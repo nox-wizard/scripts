@@ -684,6 +684,122 @@ new __merchants_female[NUM_MERCHANTS_F][additemEntry] =
 }
 
 
+//===================================================================================
+//==========================   ITEMS   ==============================================
+
+//^([0-9,A-F][0-9,A-F][0-9,A-F][0-9,A-F]^) ^([a-z,A-Z, ,',0-9,(,),&,/,^-]+^)^p    ADDITEM ^(^$[a-z,A-Z,0-9,_,]+^)
+//{0x^1,"^3","^2"},
+
+#define NUM_BEVERAGES 27
+new __beverages[NUM_BEVERAGES][additemEntry] =
+{
+	//Bottled beverages
+	{0x099F,"$item_bottle_of_ale                    ","Bottle of Ale"},
+	{0x09A0,"$item_bottles_of_ale                   ","Bottles of Ale"},
+	{0x09A1,"$item_bottles_of_ale_1                 ","Bottles of Ale"},
+	{0x09A2,"$item_bottles_of_ale_2                 ","Bottles of Ale"},
+	{0x099B,"$item_bottle_of_liquor                 ","Bottle of Liquor"},
+	{0x099C,"$item_bottles_of_liquor                ","Bottles of Liquor"},
+	{0x099D,"$item_bottles_of_liquor_1              ","Bottles of Liquor"},
+	{0x099E,"$item_bottles_of_liquor_2              ","Bottles of Liquor"},
+	{0x09C7,"$item_bottle_of_wine                   ","Bottle of Wine"},
+	{0x09C6,"$item_bottles_of_wine                  ","Bottles of Wine"},
+	{0x09C5,"$item_bottles_of_wine                  ","Bottles of Wine"},
+	{0x09C4,"$item_bottles_of_wine_2                ","Bottles of Wine"},
+	{0x0FFA,"$item_bucket_of_water                  ","Bucket of Water"},
+	{0x09EE,"$item_mug_of_ale                       ","Glass of Ale"},
+	{0x1F7D,"$item_glass_of_cider                   ","Glass of Cider"},
+	{0x1F85,"$item_glass_of_liquor                  ","Glass of Liquor"},
+	{0x1F89,"$item_glass_of_milk                    ","Glass of Milk"},
+	{0x1F91,"$item_glass_of_water                   ","Glass of Water"},
+	{0x1F8D,"$item_glass_of_wine                    ","Glass of Wine"},
+	{0x098E,"$item_jugs_of_cider                    ","Jugs of Cider"},
+	{0x098D,"$item_jugs_of_cider_1                  ","Jugs of Cider"},
+	{0x1F95,"$item_pitcher_of_ale                   ","Pitcher of Ale"},
+	{0x1F97,"$item_pitcher_of_cider                 ","Pitcher of Cider"},
+	{0x1F99,"$item_pitcher_of_liquor                ","Pitcher of Liquor"},
+	{0x09AD,"$item_pitcher_of_milk                  ","Pitcher of Milk"},
+	{0x0FF9,"$item_pitcher_of_water                 ","Pitcher of Water"},
+	{0x1F9B,"$item_pitcher_of_wine                  ","Pitcher of Wine"}
+}    
+
+#define NUM_BAKED 30
+new __bakedAndVeggys[NUM_BAKED][additemEntry] =
+{    
+	//Baked and Veggys
+	{0x1041,"$item_baked_pie                        ","Baked Pie"},
+	{0x1042,"$item_unbaked_pie                      ","Unbaked Pie"},
+	{0x09E9,"$item_cake                             ","Cake"},
+	{0x097C,"$item_wedges_of_cheese                 ","Wedge of Cheese"},
+	{0x097D,"$item_wedges_of_cheese_1               ","Cut Cheese"},
+	{0x097E,"$item_wheels_of_cheese                 ","Wheel of Cheese"},
+	{0x098C,"$item_french_bread                     ","French Bread"},
+	{0x09EA,"$item_muffins                          ","Muffin"},
+	{0x09FA,"$item_muffins_1                        ","Muffins"},
+	{0x09EB,"$item_muffins_2                        ","Muffins"},
+	{0x103C,"$item_bread_loaves                     ","Loaf of Bread"},
+	{0x1040,"$item_pizzas                           ","Pizza"},
+	{0x1083,"$item_uncooked_pizza                   ","Unbaked Pizza"},
+	{0x160B,"$item_pan_of_cookies                   ","Pan of Cookies"},
+	{0x160C,"$item_plate_of_cookies                 ","Plate of Cookies"},
+	{0x09B4,"$item_eggshells                        ","Eggshells"},
+	{0x09B5,"$item_eggs                             ","Eggs"},
+	{0x09B6,"$item_fried_eggs                       ","Fried Eggs"},
+	{0x103F,"$item_cookie_mix                       ","Cookie Mix"},
+	{0x0C70,"$item_lettuce1                         ","Lettuce"},
+	{0x0C72,"$item_squash1                          ","Squash"},
+	{0x0C76,"$item_carrots                          ","Carrots"},
+	{0x0C7B,"$item_heads_of_cabbage                 ","Cabbage"},
+	{0x0C7F,"$item_ears_of_corn1_4                  ","Ear of Corn"},
+	{0x1AD3,"$item_donuts                           ","Donuts"},
+	{0x09EC,"$item_jars_of_honey                    ","Jar of Honey"},
+	{0x0C61,"$item_turnip1                          ","Turnip"},
+	{0x0C68,"$item_sprouts                          ","Sprouts"},
+	{0x0C6A,"$item_pumpkin1                         ","Pumpkin"},
+	{0x0C6D,"$item_onions                           ","Onion"}
+}
+
+#define NUM_BOWLSMEATFRUIT 34
+new __bowlsMeatFruit[NUM_BOWLSMEATFRUIT][additemEntry] =
+{
+	//Bowls, meat, fruit
+	{0x10E3,"$item_dough_bowl                       ","Dough"},
+	{0x15FE,"$item_bowl_of_carrots                  ","Carrots"},
+	{0x15FF,"$item_bowl_of_corn                     ","Corn"},
+	{0x1600,"$item_bowl_of_lettuce                  ","Lettuce"},
+	{0x1601,"$item_bowl_of_peas                     ","Peas"},
+	{0x1602,"$item_bowl_of_potatoes                 ","Potatoes"},
+	{0x1604,"$item_bowl_of_stew                     ","Stew"},
+	{0x1606,"$item_tomato_soup                      ","Tomato Soup"},
+	{0x15FD,"$item_pewter_bowl                      ","Pewter"},
+	{0x09B7,"$item_cooked_birds                     ","Cooked Bird"},
+	{0x09BB,"$item_roast_pigs                       ","Roast Pig"},
+	{0x09C0,"$item_sausages                         ","Sausages"},
+	{0x09C9,"$item_hams                             ","Ham"},
+	{0x09F2,"$item_cuts_of_ribs                     ","Ribs"},
+	{0x097B,"$item_fish_steaks                      ","Fish Steak"},
+	{0x0976,"$item_slabs_of_bacon                   ","Slabs of Bacon"},
+	{0x0978,"$item_slices_of_bacon                  ","Slice of Bacon"},
+	{0x0994,"$item_pears                            ","Pear"},
+	{0x09D0,"$item_apples                           ","Apple"},
+	{0x09D1,"$item_grape_bunches                    ","Grape Bunch"},
+	{0x09D2,"$item_peaches                          ","Peach"},
+	{0x0993,"$item_fruit_basket                     ","Fruit Basket"},
+	{0x1726,"$item_coconuts                         ","Coconut"},
+	{0x1720,"$item_banana                           ","Banana"},
+	{0x1721,"$item_banana                           ","Bananas"},
+	{0x1727,"$item_bunches_of_dates                 ","Dates"},
+	{0x1728,"$item_lemons                           ","Lemon"},
+	{0x1729,"$item_lemons_1                         ","Lemons"},
+	{0x172A,"$item_limes                            ","Lime"},
+	{0x172B,"$item_limes_1                          ","Limes"},
+	{0x0C74,"$item_honeydew_melons1                 ","Honeydew Melon"},
+	{0x0C79,"$item_canteloupes                      ","Canteloupe"},
+	{0x0C5D,"$item_watermelons                      ","Water Melon"},
+	{0x0F36,"$item_sheaf_of_hay1                    ","Sheaf of Hay"}
+}
+
+
 
 
 

@@ -304,6 +304,47 @@ case P_NPC_MENU:
 	}
 }
 	 
+case P_SUPPLY_MENU:
+{
+	pag = P_BEVERAGES;
+	x = L_MARG + (t++*tab)*COL;
+	y = 7*ROW;
+	
+	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Food:");
+	y += ROW;
+	
+	for(t = 0; t < SUPPLY_MENU_FOOD_ENTRIES; t++)
+	{
+		x = L_MARG + (t%4*tab)*COL;
+		if(t%4 == 0 && t != 0) y += ROW;
+		
+		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
+		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,supplyMenuTxt[t]);	
+	}
+	
+	/*
+	x = L_MARG;
+	y += 2*ROW;
+	gui_addText(menu,x,y,TXT_COLOR ,"People:");
+	y += ROW;
+	
+	for(t = 0; t < NPC_MENU_PEOPLE_ENTRIES; t++)
+	{
+		x = L_MARG + (t%4*tab)*COL;
+		if(t%4 == 0 && t != 0) y += ROW;
+		
+		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
+		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,npcMenuTxt[t + NPC_MENU_MONSTERS_ENTRIES]);	
+	}
+	*/
+	
+	for(new i = P_BEVERAGES; i <= P_BEVERAGES + SUPPLY_MENU_ENTRIES; i++)
+	{
+		gui_addPage(menu,i);
+		drawSubPage(menu,i);
+	}
+}	 
+	 
 } //end of switch(page)
 }
 
@@ -631,7 +672,48 @@ switch(page)
 		}		
 	}
 	
-
+	case P_BEVERAGES:
+	{
+		i_row = 15;
+		tab = 27;
+		for(new i = 0; i < NUM_BEVERAGES; i++, y+= ROW)
+		{
+			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__beverages[i][__def]));
+			gui_addTilePic(menu,x + BTNW,y,__beverages[i][__ID]);
+			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__beverages[i][__name]);
+		}
+	}
+	
+	case P_BAKED:
+	{
+		i_row = 15;
+		tab = 27;
+		
+		for(new i = 0; i < NUM_BAKED; i++, y+= ROW)
+		{
+			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__bakedAndVeggys[i][__def]));
+			gui_addTilePic(menu,x + BTNW,y,__bakedAndVeggys[i][__ID]);
+			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__bakedAndVeggys[i][__name]);
+		}
+	}
+	
+	case P_BOWLSMEATFRUIT:
+	{	
+		i_row = 17;
+		tab = 27;
+		for(new i = 0; i < NUM_BOWLSMEATFRUIT; i++, y+= ROW)
+		{
+			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__bowlsMeatFruit[i][__def]));
+			gui_addTilePic(menu,x + BTNW,y,__bowlsMeatFruit[i][__ID]);
+			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__bowlsMeatFruit[i][__name]);
+		}
+	}
 }//end of switch(page)
 
 }
