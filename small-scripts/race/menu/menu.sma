@@ -1,11 +1,10 @@
 public race_menu( const chr, const race )
 {
 	new tempStr[50];
-	if( (race_getGlobalProp( RP_WITH_WEB_INTERFACE )) == 1)
-	{
-		new racemenu = gui_create( 10,10,1,0,0,"race_webInterface" );
-	}
-	else new racemenu = gui_create( 10,10,1,0,0,"race_menu_Bck" );
+	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) == 1)
+		sprintf(tempStr,"race_webInterface");
+	else sprintf(tempStr, "race_menu_Bck");
+	new racemenu = gui_create( 10,10,1,0,0,tempStr );
 	
 	gui_setProperty( racemenu,MP_BUFFER,0,PROP_CHARACTER );
 	printf("errorcheck^n");
@@ -72,13 +71,14 @@ public race_menu( const chr, const race )
 	gui_addText( racemenu, 33, 166 +offset, 1153, "S" );
 	gui_addText( racemenu, 45, 166 +offset,   95, "elect your race" );
 	
+	printf("blab");
 	gui_show( racemenu, chr );
 
 }
 
 public race_menu_Bck(const racemenu, const chrsource, const buttonCode)
 {
-	
+	printf("bla");
 }
 
 public race_dialogRaceInfo( const chr, const race )
