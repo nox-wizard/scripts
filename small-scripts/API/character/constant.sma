@@ -277,12 +277,9 @@ enum {
 	GENDER_UNDEFINED	//!< ??
 	}
 
-const NPC_TALK = 1;		//!<
-const NPC_TALK_ALL = 2;		//!<
-const NPC_TALK_RUNIC = 3;	//!<
-const NPC_TALK_ALL_RUNIC = 4;	//!<
-const NPC_EMOTE = 5;		//!<
-const NPC_EMOTE_ALL = 6;	//!<
+const TALK = 1;			//!<
+const TALK_RUNIC = 2;	//!<
+const EMOTE = 3;		//!<
 
 const NXWF0_GREY = 1;		//!<
 const NXWF0_PERMAGREY = 2;	//!<
