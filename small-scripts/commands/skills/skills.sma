@@ -44,7 +44,7 @@ public skills_char( const socket, const chr )
 		}
 
 		menu_addText( menu, 28, 38+(20*(i%skForPage)), _, "%s : ", skillName[ skillByName[i] ] );
-		menu_addPropField( menu, 220, 38+(20*(i%skForPage)), 50, 30, CP_BASESKILL, i, 0 );
+		menu_addPropField( menu, 220, 38+(20*(i%skForPage)), 50, 30, CP_BASESKILL, skillByName[i], 0 );
 	}
 	
 	menu_show( menu, getCharFromSocket(socket) );
@@ -54,6 +54,10 @@ public handle_skills_char( const socket, const menu, const button )
 {
 	if( button==MENU_CLOSED )
 		return;
+		
+	if( button==1 ) { //apply
+		chr_teleport( menu_getProperty( menu, MP_BUFFER, 1 ) );
+	}
 		
 }
 

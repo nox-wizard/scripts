@@ -114,6 +114,7 @@ public handle_stats_char( const socket, const menu, const button )
 		stats_char( socket, chr, button-10 );
 	}
 	else { //apply button, so resend current page
+		chr_teleport( chr );
 		stats_char( socket, chr, menu_getProperty( menu, MP_BUFFER, 2 ) );
 	}
 	
