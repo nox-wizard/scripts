@@ -24,11 +24,14 @@ public __charLogin(const chr)
 		
 	itm_potionStart(chr);
 	
-	
 	//defined in "small-scripts/comands/page/pagesystem.sma"
 	addOnlineStaff(chr);
 	
 	hungerandthirst(chr);
+	
+	new race = chr_getProperty(chr, CP_NPCRACE);
+	if( race == 0)
+		race_enlistDialog1(chr, race);
 	
 	//put here any function you want to be executed at character login
 		

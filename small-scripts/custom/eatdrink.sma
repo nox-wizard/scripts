@@ -98,7 +98,7 @@ public _onEatandDrink(const itm, const chr, const leftover)
 			new thirst = (olddrink + drinkvalue);
 			if (thirst > 100)
 	         	{
-			        chr_message( chr, _, "You are not able to drink one more drop.");
+			        chr_message( chr, _, msg_EatDrinkDef[24]);
 			        bypass();
 			        exit;
 	         	}
@@ -135,7 +135,7 @@ public _onEatandDrink(const itm, const chr, const leftover)
 			//   printf("hunger: %d", hunger);
    			if (hunger > 100)
         		{
-        			chr_message( chr, _, "You are not able to eat one more piece.");
+        			chr_message( chr, _, msg_EatDrinkDef[25]);
         			bypass();
         			exit;
         		}
@@ -180,13 +180,13 @@ const Delay_HungerThirst = 180;
 public hungerandthirst(const c)
 {
 	if(chr_getProperty(c,CP_PRIVLEVEL) < PRIV_CNS)
-		tempfx_activate(_, c, c, 0, Delay_HungerThirst,funcidx("hungertimer"));
+		tempfx_activate(_, c, c, 500, Delay_HungerThirst,funcidx("hungertimer"));
 }
 
 public hungertimer(const source, const dest, const power, const mode)
 {
 	if(mode != TFXM_END) return;
-	
+	printf("power: %d",power);
 	new c = source;
 
     	new hunger = chr_getLocalIntVar(c, 1002);//Hunger
@@ -199,18 +199,18 @@ public hungertimer(const source, const dest, const power, const mode)
     
     	switch(newhunger)
         {
-	        case 0..1: chr_message( c, _, "You must eat something immediatelly or you will die in 1 minute!");
-	        case 2..11: chr_message( c, _, "You must eat something very very fast or you will die from hunger!");
-	        case 12..21: chr_message( c, _, "You are extremly hungry!");
-	        case 22..31: chr_message( c, _, "You are very hungry and start feeling dizzy!");
-	        case 32..41: chr_message( c, _, "You are really hungry and your stomache growls loudly!");
-	        case 42..51: chr_message( c, _, "You stomach starts growling by hunger!");
-	        case 52..61: chr_message( c, _, "You are bit hungry.");
-	        case 62..71: chr_message( c, _, "You could have something to eat.");
-	        case 72..81: chr_message( c, _, "You feel satisfied.");
-	        case 82..91: chr_message( c, _, "You are well fed.");
-	        case 92..100: chr_message( c, _, "You are absolutly stuffed.");
-	        default: chr_message( c, _, "You die from starving too long!");
+	        case 0..1: chr_message( c, _, msg_EatDrinkDef[0]);
+	        case 2..11: chr_message( c, _, msg_EatDrinkDef[1]);
+	        case 12..21: chr_message( c, _, msg_EatDrinkDef[2]);
+	        case 22..31: chr_message( c, _, msg_EatDrinkDef[3]);
+	        case 32..41: chr_message( c, _, msg_EatDrinkDef[4]);
+	        case 42..51: chr_message( c, _, msg_EatDrinkDef[5]);
+	        case 52..61: chr_message( c, _, msg_EatDrinkDef[6]);
+	        case 62..71: chr_message( c, _, msg_EatDrinkDef[7]);
+	        case 72..81: chr_message( c, _, msg_EatDrinkDef[8]);
+	        case 82..91: chr_message( c, _, msg_EatDrinkDef[9]);
+	        case 92..100: chr_message( c, _, msg_EatDrinkDef[10]);
+	        default: chr_message( c, _, msg_EatDrinkDef[11]);
         }
         
     	new thirst = chr_getLocalIntVar(c, 1003);//thirst value
@@ -223,18 +223,18 @@ public hungertimer(const source, const dest, const power, const mode)
     
     	switch(newthirst)
       	{
-	      case 0..1: chr_message( c, _, "And you must drink something immediatelly or you will die in 1 minute!^n");
-	      case 2..11: chr_message( c, _, "And you must drink something very very fast or you will die from thirst!^n");
-	      case 12..21: chr_message( c, _, "And you are extremly thirsty!^n");
-	      case 22..31: chr_message( c, _, "And you are very thirsty and start feeling dizzy!^n");
-	      case 32..41: chr_message( c, _, "And you are really hungry and your tongue sticks in your mouth!^n");
-	      case 42..51: chr_message( c, _, "And your tongue starts becoming sticky by thirst!^n");
-	      case 52..61: chr_message( c, _, "And you are bit thirsty.^n");
-	      case 62..71: chr_message( c, _, "And you could have something to drink.^n");
-	      case 72..81: chr_message( c, _, "And you don't need to drink anything.^n");
-	      case 82..91: chr_message( c, _, "And you feel absolutely no thirst.^n");
-	      case 92..100: chr_message( c, _, "And your belly is filled with liquid.^n");
-	      default: chr_message( c, _, "And you die from being thirsty too long!^n");
+	      case 0..1: chr_message( c, _, msg_EatDrinkDef[12]);
+	      case 2..11: chr_message( c, _, msg_EatDrinkDef[13]);
+	      case 12..21: chr_message( c, _, msg_EatDrinkDef[14]);
+	      case 22..31: chr_message( c, _, msg_EatDrinkDef[15]);
+	      case 32..41: chr_message( c, _, msg_EatDrinkDef[16]);
+	      case 42..51: chr_message( c, _, msg_EatDrinkDef[17]);
+	      case 52..61: chr_message( c, _, msg_EatDrinkDef[18]);
+	      case 62..71: chr_message( c, _, msg_EatDrinkDef[19]);
+	      case 72..81: chr_message( c, _, msg_EatDrinkDef[20]);
+	      case 82..91: chr_message( c, _, msg_EatDrinkDef[21]);
+	      case 92..100: chr_message( c, _, msg_EatDrinkDef[22]);
+	      default: chr_message( c, _, msg_EatDrinkDef[23]);
       	}
       	
 	tempfx_activate(_, c, c, 0, Delay_HungerThirst,funcidx("hungertimer"));
