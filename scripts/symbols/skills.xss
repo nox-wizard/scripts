@@ -50,6 +50,7 @@
 #define $skill_remove_traps 48
 
 #define $stat_strenght 49
+#define $stat_strength 49
 #define $stat_str 49
 #define $stat_dexterity 50
 #define $stat_dex 50

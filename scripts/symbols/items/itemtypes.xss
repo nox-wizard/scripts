@@ -17,6 +17,7 @@
 #define $itype_manareq_wand 17
 #define $itype_potion 19
 #define $itype_rune 50
+#define $itype_moongate 51
 #define $itype_item_spawner 61
 #define $itype_npc_spawner 62
 #define $itype_unlocked_container 63

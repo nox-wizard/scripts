@@ -503,18 +503,22 @@ SECTION ITEM $item_blue_moongate
 {
     NAME a blue moongate
     ID 0F6C
+    TYPE $itype_moongate
+
 }
 
 SECTION ITEM $item_red_moongate
 {
     NAME a red moongate
     ID 0DDA
+    TYPE $itype_moongate
 }
 
 SECTION ITEM $item_black_moongate
 {
     NAME a black moongate
     ID 1FD4
+    TYPE $itype_moongate
 }
 
 SECTION ITEM $item_master_shard_key
