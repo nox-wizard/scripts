@@ -708,6 +708,7 @@ SECTION PAGE
 	NPC 211F $npc_a_horse_1 Horse 2
 	NPC 2124 $npc_a_horse_2 Horse 3
 	NPC 2121 $npc_a_horse_3 Horse 4
+	NPC 20F6 $npc_a_rideable_llama a llama
 	NPC 20DB $npc_a_grizzly_bear a grizzly bear
 	NPC 20F5 $npc_a_gorilla a gorilla
 	NPC 20CF $npc_a_black_bear a brown bear
@@ -721,8 +722,7 @@ SECTION PAGE
 	NPC 20E2 $npc_a_rabbit a rabbit
 	NPC 20EB $npc_a_sheep a sheep
 	NPC 20EE $npc_forest_bird a bird
-	NPC 211D $npc_an_eagle an eagle
-	NPC 20F6 $npc_a_rideable_llama a llama
+	NPC 211D $npc_an_eagle an eagle	
 	NPC 2101 $npc_a_pig a pig
 	NPC 2102 $npc_a_panther a panther
 	NPC 2103 $npc_a_cow a cow
@@ -879,15 +879,100 @@ SECTION PAGE
 SECTION PAGE
 {
 	SUBMENU 3
-	TITLE Unique
+	TITLE Special (war)
 	INTERLINE 10
 	TAB 30
 	LABEL
-	NPC 20D3 $npc_the_collector_of_souls the Collector of Souls
-	NPC 20DC $npc_a_harpy_hen a harpy hen
-	NPC 20D3 $npc_lord_of_the_abyss the Lord of the Abyss
+	NPC 20D3 $npc_the_collector_of_souls Collector of Souls
+	NPC 20DC $npc_a_harpy_hen Harpy Hen
+	NPC 20D3 $npc_lord_of_the_abyss Lord of the Abyss
 	NPC 20D3 $npc_slayer the Slayer
 	NPC 20F4 $npc_xanathar Xanathar
+	NPC 20F4 $npc_henchman_master Henchman Master
+	NPC 20F4 $npc_henchman_weak Henchman Weak
+	NPC 20F4 $npc_henchman_strong Henchman Strong
+	NPC 20F4 $npc_henchman_mid Henchman Medium
+	NPC 20F4 $npc_slut Slut
+	NPC 0000 $npc_murderer Murderer
+	NPC 2107 $npc_len_ikbaan PK female
+	NPC 2106 $npc_mondain Mondain
+	NPC 2106 $npc_priest_of_mondain Mondain Priest
+	NPC 2106 $npc_priestess_of_mondain Mondain Priestess
+	NPC 0000 $npc_akbaar PK Mage
+	NPC 0000 $npc_kindor_aedrat PK Archer
+	NPC 200E $npc_barbarian Barbarian 1
+	NPC 200E $npc_barbarian_1 Barbarian 2
+	NPC 200E $npc_paladin Paladin
+	NPC 200E $npc_thief Thief
+	NPC 200E $npc_cutpurse Cutpurse
+	NPC 200E $npc_vandal Vandal
+	NPC 200E $npc_bandit Bandit
+	NPC 200E $npc_night_prowler Night Prowler
+	NPC 200E $npc_ruffian Ruffian
+	NPC 200E $npc_knight Knight 1
+	NPC 200E $npc_knight_1 Knight 2
+	NPC 200E $npc_converted_quest_knight Converted Quest Knight
+	NPC 200E $npc_a_fire_knight Fire Knight
+	NPC 200E $npc_an_ice_knight Ice Knight
+	NPC 200E $npc_dark_knight Dark Knight
+	NPC 0000 $npc_archmage Archmage
+	NPC 200E $npc_guildmaster_mage_m Guildmaster Mage
+	NPC 200E $npc_a_savage Savage 1
+	NPC 200E $npc_a_savage_1 Savage 2
+	NPC 200E $npc_a_savage_shaman Savage Shaman
+	NPC 200E $npc_a_savage_chief Savage Chief
+	NPC 200E $npc_mage_m_1 Mage 1
+	NPC 200E $npc_mage_m_2 Mage 2
+	NPC 200E $npc_mage_m_3 Mage 3
+	NPC 200E $npc_mage Mage 4
+	NPC 200E $npc_magician Magician 1
+	NPC 200E $npc_magician_1 Magician 2
+	NPC 200E $npc_magician_2 Magician 3
+	NPC 200E $npc_executioner Executioner
+	NPC 200E $npc_necromancer Necromancer
+	NPC 2037 $npc_wizard Wizard 1
+	NPC 2037 $npc_wizard_1 Wizard 2
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Special (peace)
+	INTERLINE 10
+	TAB 30
+	LABEL
+
+	NPC 200E $npc_apprentice Apprentice
+	NPC 0000 $npc_sammy Boy
+	NPC 2106 $npc_billy Boy 2
+	NPC 200E $npc_buccaneer Buccaneer
+	NPC 200E $npc_cavalier Cavalier
+	NPC 200E $npc_cleric Cleric
+	NPC 200E $npc_cultist Cultist
+	NPC 200E $npc_executioner Executioner
+	NPC 200E $npc_fancy_nobleman Fancy Nobleman
+	NPC 200E $npc_foreman Foreman
+	NPC 2107 $npc_cassandra Girl
+	NPC 2107 $npc_isabel Girl
+	NPC 200E $npc_guardsman Guardsman
+	NPC 20F4 $npc_register_of_names Name Registerer
+	NPC 200E $npc_quest_knight_m Quest Knight
+	NPC 200E $npc_converted_quest_knight Converted Quest Knight
+	NPC 0000 $npc_que the Engineer
+	NPC 200E $npc_jessie Jessie
+	NPC 200E $npc_jessie_1 Jessie 2
+	NPC 200E $npc_laborer Laborer
+	NPC 200E $npc_land_lord Landlord
+	NPC 200E $npc_mercenary Mercenary
+	NPC 200E $npc_mountain_man Mountain Man
+	NPC 200E $npc_official Official
+	NPC 200E $npc_outlander Outlander
+	NPC 200E $npc_player_vendor_template Player Vendor
+	NPC 200E $npc_solem_priest Solem Priest
+	NPC 200E $npc_priest Priest
+	NPC 200E $npc_stinky_pimp Stinky Pimp
+	NPC 200E $npc_redlady Red Lady
+	NPC 200E $npc_thug Thug
+	NPC 200E $npc_watchman Watchman
 }
 SECTION PAGE
 {
@@ -932,35 +1017,26 @@ SECTION PAGE
 	INTERLINE 10
 	TAB 30
 	LABEL
-	NPC 0000 $npc_murderer Murderer
+	NPC 2022 $npc_adventurer_m Adventurer
 	NPC 2022 $npc_artist_m Artist
 	NPC 202B $npc_beggar_m Beggar
-	NPC 0000 $npc_sammy Boy
-	NPC 2106 $npc_billy Boy 2
 	NPC 2030 $npc_brigand_m Brigand
-	NPC 0000 $npc_cobbler_m Cobbler
 	NPC 2106 $npc_cultist_m Cultist
 	NPC 2106 $npc_fighter_m Fighter
-	NPC 200E $npc_guard Guard
-	NPC 200E $npc_dark_knight Guard Personal
+	NPC 200E $npc_guard_m Guard
+	NPC 200E $npc_teleportguard_m Guard (teleporting)
 	NPC 0000 $npc_chaos_guard_m Guard Chaos
 	NPC 0000 $npc_order_guard_m Guard Order
 	NPC 2033 $npc_gypsy_m Gypsy
 	NPC 2011 $npc_jailor_m Jailor
-	NPC 2106 $npc_mondain Mondain
+	NPC 2011 $npc_knight_m Knight
 	NPC 2009 $npc_noble_m Noble
-	NPC 0000 $npc_archmage Necromancer
 	NPC 2008 $npc_peasant_m Peasant
 	NPC 2015 $npc_pirate_m Pirate
-	NPC 0000 $npc_murderer PK
-	NPC 0000 $npc_akbaar PK Mage
-	NPC 0000 $npc_kindor_aedrat PK Archer
 	NPC 2017 $npc_sailor_m Sailor
-	NPC 2106 $npc_adventurer_m Adventurer
 	NPC 2018 $npc_shipwright_m Shipwright
 	NPC 201C $npc_thief_m Thief
 	NPC 2026 $npc_towncrier_m Town Crier
-	NPC 2037 $npc_veterinarian_m Veterinarian
 }
 SECTION PAGE
 {
@@ -969,40 +1045,38 @@ SECTION PAGE
 	INTERLINE 10
 	TAB 30
 	LABEL
+	NPC 2022 $npc_adventurer_f Adventurer
 	NPC 2022 $npc_artist_f Artist
 	NPC 202B $npc_beggar_f Beggar
 	NPC 2030 $npc_brigand_f Brigand
-	NPC 2107 $npc_cultist_f Cultist
-	NPC 2107 $npc_fighter_f Fighter
-	NPC 2107 $npc_cassandra Girl
-	NPC 2107 $npc_isabel Girl
+	NPC 2106 $npc_cultist_f Cultist
+	NPC 2106 $npc_fighter_f Fighter
 	NPC 200E $npc_guard_f Guard
+	NPC 200E $npc_teleportguard_f Guard (teleporting)
 	NPC 0000 $npc_chaos_guard_f Guard Chaos
 	NPC 0000 $npc_order_guard_f Guard Order
 	NPC 2033 $npc_gypsy_f Gypsy
 	NPC 2011 $npc_jailor_f Jailor
+	NPC 2011 $npc_knight_f Knight
 	NPC 2009 $npc_noble_f Noble
 	NPC 2008 $npc_peasant_f Peasant
 	NPC 2015 $npc_pirate_f Pirate
-	NPC 2107 $npc_len_ikbaan PK
 	NPC 2017 $npc_sailor_f Sailor
-	NPC 2107 $npc_adventurer_f Adventurer
 	NPC 2018 $npc_shipwright_f Shipwright
 	NPC 201C $npc_thief_f Thief
-	NPC 2027 $npc_towncrier_f Town Crier
-	NPC 2038 $npc_veterinarian_f Veterinarian
+	NPC 2026 $npc_towncrier_f Town Crier
 }
 SECTION PAGE
 {
 	SUBMENU 3
-	TITLE merchants
+	TITLE merchants (m)
 	INTERLINE 10
 	TAB 30
 	LABEL
 	NPC 2023 $npc_alchemist_m Alchemist
-	NPC 2035 $npc_animal_trainer_m Animal Trainer
-	NPC 2031 $npc_architect_m Architect
-	NPC 200A $npc_armorer_m Armorer
+	NPC 2022 $npc_animal_trainer_m Animal Trainer
+	NPC 2022 $npc_architect_m Architect
+	NPC 2022 $npc_armorer_m Armorer
 	NPC 200B $npc_baker_m Baker
 	NPC 0C0B $npc_banker_m Banker
 	NPC 2106 $npc_bard_m Bard
@@ -1013,9 +1087,8 @@ SECTION PAGE
 	NPC 2020 $npc_carpenter_m Carpenter
 	NPC 202A $npc_cobbler_m Cobbler
 	NPC 0190 $npc_cook_m Cook
-	NPC 0000 $npc_que_1 the Engineer
 	NPC 2022 $npc_farmer_m Farmer
-	NPC 8414 $npc_fisherman Fisherman
+	NPC 8414 $npc_fisherman_m Fisherman
 	NPC 200F $npc_wandering_healer_m Healer (wandering)
 	NPC 200F $npc_healer_m Healer
 	NPC 2034 $npc_herbalist_m Herbalist
@@ -1024,10 +1097,10 @@ SECTION PAGE
 	NPC 2013 $npc_leather_worker_m Leather Worker
 	NPC 2014 $npc_mage_m Mage
 	NPC 202D $npc_miner_m Miner
-	NPC 0000 $npc_necromancer Necromancer
 	NPC 2016 $npc_provisioner_m Provisioner
 	NPC 201A $npc_spinner_m Spinner
 	NPC 2019 $npc_tailor_m Tailor
+	NPC 2017 $npc_tavernkeeper_m Tavernkeeper
 	NPC 2021 $npc_tinker_m Tinker
 	NPC 0000 $npc_veterinarian_m Veterinarian
 	NPC 201F $npc_weaponsmith_m Weaponsmith
@@ -1035,27 +1108,26 @@ SECTION PAGE
 SECTION PAGE
 {
 	SUBMENU 3
-	TITLE merchants-f
+	TITLE merchants (f)
 	INTERLINE 10
 	TAB 30
 	LABEL
 	NPC 2023 $npc_alchemist_f Alchemist
-	NPC 2036 $npc_animal_trainer_f Animal Trainer
-	NPC 2031 $npc_architect_f Architect
-	NPC 200A $npc_armorer_f Armorer
+	NPC 2022 $npc_animal_trainer_f Animal Trainer
+	NPC 2022 $npc_architect_f Architect
+	NPC 2022 $npc_armorer_f Armorer
 	NPC 200B $npc_baker_f Baker
-	NPC 2107 $npc_banker_f Banker
-	NPC 2107 $npc_bard_f Bard
-	NPC 0000 $npc_beekeper_f The Beekeeper
-	NPC 2107 $npc_blacksmith_f Blacksmith
+	NPC 0C0B $npc_banker_f Banker
+	NPC 2106 $npc_bard_f Bard
+	NPC 0000 $npc_beekeeper_f The BeeKeeper
+	NPC 2106 $npc_blacksmith_f Blacksmith
 	NPC 200C $npc_bowyer_f Bowyer
 	NPC 200D $npc_butcher_f Butcher
 	NPC 2020 $npc_carpenter_f Carpenter
 	NPC 202A $npc_cobbler_f Cobbler
-	NPC 0191 $npc_cook_f Cook
-	NPC 0000 $npc_jessie the Engineer
-	NPC 2024 $npc_farmer_f Farmer
-	NPC 8415 $npc_fisherlady Fisherlady
+	NPC 0190 $npc_cook_f Cook
+	NPC 2022 $npc_farmer_f Farmer
+	NPC 8414 $npc_fisherman_f Fisherman
 	NPC 200F $npc_wandering_healer_f Healer (wandering)
 	NPC 200F $npc_healer_f Healer
 	NPC 2034 $npc_herbalist_f Herbalist
@@ -1064,10 +1136,12 @@ SECTION PAGE
 	NPC 2013 $npc_leather_worker_f Leather Worker
 	NPC 2014 $npc_mage_f Mage
 	NPC 202D $npc_miner_f Miner
-	NPC 2016 $npc_provisioner_f Provisoner
+	NPC 2016 $npc_provisioner_f Provisioner
 	NPC 201A $npc_spinner_f Spinner
 	NPC 2019 $npc_tailor_f Tailor
+	NPC 2017 $npc_tavernkeeper_f Tavernkeeper
 	NPC 2021 $npc_tinker_f Tinker
+	NPC 0000 $npc_veterinarian_f Veterinarian
 	NPC 201F $npc_weaponsmith_f Weaponsmith
 }
 
