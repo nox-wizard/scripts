@@ -10,9 +10,12 @@
  *  \attention not used now
  *  @{
  */
+#include "small-scripts/API/guild/constant.sma"
+
 
 #define RENAMEPRICE 40000
 #define ABBREVPRICE 40000
+#define ALIGNMENTPRICE 25000
 
 //if define guildstone place is get from target, else from player position
 #define GUILD_POSITION_WITH_TARGET
@@ -23,20 +26,33 @@
 #endif
 
 // Duplicate definition from guild/constants.sma, since small doesn't seem to handle static defs in include right
-const ALL_RANKS = 2;
+
+enum GUILD_RANK {
+		RANK_GUILDMASTER=0,
+		RANK_GUILDVICE,
+		RANK_GUILDMEMBER,
+		RANK_GUILDRECRUIT,
+		ALL_RANKS
+		};
 
 static ranks[ALL_RANKS][] = { //rank name
 	"GuildMaster",
-	"Member"
+	"GuildVice",
+	"Member",
+	"Recruit"
 };
 
 static rank_male_name[ALL_RANKS][] = {	//rank male name
 	"GuildMaster",
+	"Vice guild master",
+	"Member",
 	"Novice"
 };
 
 static rank_female_name[ALL_RANKS][] = {	//rank female name
-	"GuildMistress",
+	"Guild Mistress",
+	"Vice guild mistress",
+	"Member",
 	"Novice"
 };
 
@@ -49,8 +65,8 @@ static rank_female_name[ALL_RANKS][] = {	//rank female name
 */
 public guild_dclickDeed( const deed, const chr ) {
 
-    new master = chr;
-    if( master<=INVALID ) return;
+	new master = chr;
+	if( master<=INVALID ) return;
 
 	bypass();
 
@@ -130,8 +146,9 @@ public guildgui_callback( const chr, const gui, const button )
 	if( button<=MENU_CLOSED )
 		return;
 
-    new master = chr;
-    if( master<=INVALID ) return;
+	new master = chr;
+	if( master<=INVALID )
+		return;
 
 	if( chr_getProperty( master, CP_GUILD )!=INVALID )
 	{
@@ -145,7 +162,7 @@ public guildgui_callback( const chr, const gui, const button )
 	gui_getProperty( gui, MP_UNI_TEXT, 56, shortname );
 
 	new stone = itm_createByDef( "$item_guildstone" );
-	new guild = guild_createStd( stone, master ); // create a standard guild.. see guild.sma
+	new guild = _createStdGuild( stone, master ); // create a standard guild.. see guild.sma
 	guild_setProperty( guild, GP_STR_NAME, _, name );
 	guild_setProperty( guild, GP_STR_ABBREVIATION, _, shortname );
 
@@ -177,14 +194,17 @@ public getGuildMaster(const guild)
 	for ( set_rewind(guildMemberSet);!set_end(guildMemberSet);)
 	{
 		member=set_get(guildMemberSet);
-		if ( gmember_getProperty(member, GMP_RANK) == RANK_GUILDMASTER )
-			return member
+		new rank = gmember_getProperty(member, GMP_RANK, _ );
+		if ( rank == 0 )
+		{
+			return member;
+		}
 	}
 	return -1;
 }
 
 /*!
-\author Tuzzi, modified by Straylight
+\author Tuzzi, modified by Wintermute
 \fn guild_dclickStone( const guild, const chr )
 \brief a guild stone double-click, opens the guild menu gump
 */
@@ -216,9 +236,13 @@ public guild_dclickStone( const guild, const chr )
 	{
 		// if the master cannot be found, the klicking char becomes guildmaster
 		if( chr_getProperty( master, CP_ID )==BODY_MALE )
+		{
 			guild_addMember( guild, master, RANK_GUILDMASTER, 0, rank_male_name[ RANK_GUILDMASTER ][RANK_GUILDMASTER] );
+		}
 		else
+		{
 			guild_addMember( guild, master, RANK_GUILDMASTER, 0, rank_female_name[ RANK_GUILDMASTER ][RANK_GUILDMASTER] );
+		}
 
 		gui_addText( gui, 45, 20, colorEdit, "GuildStone Menu" );
 	}
@@ -390,9 +414,13 @@ public guild_viewRoster(const chr, const guild)
 			member=set_get(guildMemberSet);
 			rank = gmember_getProperty(member, GMP_RANK);
 			if ((  rank == RANK_GUILDMASTER ) && page == 1 ) // only put Guildmaster on position 1
+			{
 				pageMembers[0]=member;
+			}
 			else if 	( rank != RANK_GUILDMASTER )
+			{
 				pageMembers[position++]=member;
+			}
 		}
 		for ( new i=0;i< 10; ++i)
 		{
@@ -488,7 +516,7 @@ public declareFealty(const chr, const guild)
 		{
 			member=set_get(guildMemberSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
-			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, page*10+i ); // Buttons start at 10
+			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getMemberIdx(guild, member) ); // Use internal numbering
 			gui_addText( gui, 25, 55+i*30, _, membername);
 		}
 		if ( page < set_size(guildMemberSet)/10+1)
@@ -501,17 +529,12 @@ public declareFealty(const chr, const guild)
 
 public fealtyCB( const chr, const gui, const button )
 {
-	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
-
 	switch(button)
 	{
 		case 0:
 			return;
-	}
-	new guildMemberSet=set_create();
-	set_addGuildMembers( guildMemberSet, guild );
-	for ( set_rewind(guildMemberSet);!set_end(guildMemberSet);)
-	{
+		default:
+			gmember_setProperty(chr, GMP_FEALTY, _, guild_memberAtIndex(gui_getProperty( gui, MP_BUFFER, 0 ), button));
 	}
 }
 
@@ -550,7 +573,6 @@ public viewCandidatesList(const chr, const guild)
 	new guildMemberSet=set_create();
 	new member;
 	new membername[30];
-	new rank;
 	new page;
 	set_addGuildRecruit( guildMemberSet, guild );
 	for ( set_rewind(guildMemberSet);!set_end(guildMemberSet);)
@@ -696,6 +718,8 @@ public guildMasterMenuCB( const chr, const gui, const buttonCode )
 			refuseCandidate(chr, guild);
 		case 10:
 			setMemberTitle(chr, guild);
+		case 11:
+			issueGuildShields(chr, guild);
 	}
 
 }
@@ -800,7 +824,43 @@ public changeAlignment(const chr, const guild)
 	new guildName[60];
 	guild_getProperty(guild, GP_STR_NAME, _, guildName );
 	gui_setProperty( gui, MP_BUFFER, 0 , guild);
+	gui_addText( gui, 45, 29, _, "Changing the alignment will cost you %d gp", ALIGNMENTPRICE );
+	gui_addText( gui, 85, 75, _, "Neutral" );
+	gui_addButton( gui, 45, 75, 0x4B9, 0x4BA, 1 );
+	gui_addText( gui, 85, 105, _, "Order" );
+	gui_addButton( gui, 45, 105, 0x4B9, 0x4BA, 2 );
+	gui_addText( gui, 85, 135, _, "Chaos" );
+	gui_addButton( gui, 45, 135, 0x4B9, 0x4BA, 3 );
+	gui_show( gui, chr );
 
+}
+
+public changeAlignCB(const chr, const gui, const buttonCode)
+{
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	if ( buttonCode == 1 )
+	{
+		new name [60];
+		new oldAbbrev[60];
+		guild_getProperty(guild, GP_STR_ABBREVIATION, _, oldAbbrev);
+		gui_getProperty(gui, MP_UNI_TEXT, 1, name);
+		if ( strcmp(name, oldAbbrev) == 0 )
+			return; // name wasn't changed
+		if ( chr_countGold(chr) > ABBREVPRICE )
+		{
+			itm_delAmountByID(chr_getBackpack(chr), ABBREVPRICE, getIntFromDefine("$item_gold_coin"));
+		}
+		else if ( chr_countBankGold(chr) > ABBREVPRICE )
+		{
+			itm_delAmountByID(chr_getBankBox(chr, 0), ABBREVPRICE, getIntFromDefine("$item_gold_coin"));
+		}
+		else
+		{
+			chr_message(chr,_,"You need %d gold coins.", ABBREVPRICE );
+			return;
+		}
+		guild_setProperty(guild, GP_STR_ABBREVIATION, _, name);
+	}
 }
 
 public setCharter(const chr, const guild)
@@ -826,16 +886,26 @@ public dismissMember(const chr, const guild)
 		for ( new i=1;i < 10;++i)
 		{
 			member=set_get(guildMemberSet);
-			member=set_get(guildMemberSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
-			gui_addText( gui, 25, 55+i*30, _, membername);
+			gui_addText( gui, 65, 55+i*30, _, membername);
+			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getMemberIdx (guild,  member) );
 		}
 		if ( page < set_size(guildMemberSet)/10+1)
-			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
+			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
 		if ( page > 1 )
-			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1)
+			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
 	gui_show( gui, chr );
+}
+
+public dismissMemberCB(const chr, const gui, const buttonCode)
+{
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	if ( buttonCode > 0 )
+	{
+		new dismissedMember=guild_memberAtIndex ( guild,  buttonCode);
+		guild_resignMember ( guild,  dismissedMember);
+	}
 }
 
 public declareWar(const chr, const guild)
@@ -856,13 +926,12 @@ public declareWar(const chr, const guild)
 			member=set_get(guildSet);
 			chr_getProperty(member, GP_STR_NAME, _, membername);
 			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, page*10+i ); // Buttons start at 10
-			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, page*10+i ); // Buttons start at 10
 			gui_addText( gui, 25, 55+i*30, _, membername);
 		}
 		if ( page < set_size(guildSet)/10+1)
-			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
+			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
 		if ( page > 1 )
-			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1)
+			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
 	gui_show( gui, chr );
 }
@@ -884,8 +953,8 @@ public declareWarCB(const chr, const gui, const buttonCode)
 			guildAtWar=set_get(guildSet);
 			if ( count==buttonCode )
 			{
-//				guild_setProperty(guild, GP_WAR, _, guildAtWar);
-//				guild_setProperty(guildAtWar, GP_WAR, _, guild);
+				guild_setProperty(guild, GP_WAR, _, guildAtWar);
+				guild_setProperty(guildAtWar, GP_WAR, _, guild);
 				break;
 			}
 		}
@@ -914,9 +983,9 @@ public declarePeace(const chr, const guild)
 			gui_addText( gui, 25, 55+i*30, _, membername);
 		}
 		if ( page < set_size(guildSet)/10+1)
-			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
+			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
 		if ( page > 1 )
-			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1)
+			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
 	gui_show( gui, chr );
 }
@@ -939,7 +1008,7 @@ public declarePeaceCB(const chr, const gui, const buttonCode)
 			guildAtWar=set_get(guildSet);
 			if ( count==buttonCode )
 			{
-//				guild_setProperty(guild, GP_PEACE, _, guildAtWar);
+				guild_setProperty(guild, GP_PEACE, _, guildAtWar);
 				break;
 			}
 		}
@@ -965,13 +1034,25 @@ public acceptMember(const chr, const guild)
 			member=set_get(guildRecruitSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 25, 55+i*30, _, membername);
+			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getMemberIdx (guild,  member) );
+
 		}
 		if ( page < set_size(guildRecruitSet)/10+1)
-			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
+			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
 		if ( page > 1 )
-			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1)
+			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
 	gui_show( gui, chr );
+}
+
+public acceptMemberCB(const chr, const gui, const buttonCode)
+{
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	if ( buttonCode > 0 )
+	{
+		new acceptedMember=guild_memberAtIndex ( guild,  buttonCode);
+		guild_addMember ( guild, acceptedMember,RANK_GUILDMEMBER, true, "a loyal member");
+	}
 }
 
 public refuseCandidate(const chr, const guild)
@@ -993,6 +1074,7 @@ public refuseCandidate(const chr, const guild)
 			member=set_get(guildRecruitSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 25, 55+i*30, _, membername);
+//			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getCandIdx (guild,  member) );
 		}
 		if ( page < set_size(guildRecruitSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
@@ -1003,12 +1085,23 @@ public refuseCandidate(const chr, const guild)
 
 }
 
+public refuseMemberCB(const chr, const gui, const buttonCode)
+{
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	if ( buttonCode > 0 )
+	{
+		new refusedMember=guild_memberAtIndex ( guild,  buttonCode);
+		guild_refuseRecruit ( guild, refusedMember );
+	}
+}
+
+
 public setMemberTitle(const chr, const guild)
 {
 
 }
 
-public issueAlignmentShields(const chr, const guild)
+public issueGuildShields(const chr, const guild)
 {
 	if ( gui_getProperty(guild, GP_TYPE, _) == GUILD_TYPE_CHAOS )
 	{

@@ -62,6 +62,25 @@ native guild_addMember( const guild, const member, const rank, const title_toggl
 native guild_resignMember (const guild, const chr);
 
 /*!
+\brief Get the index number of a member
+\author Wintermute
+\since 0.82
+\param guild the guild
+\param chr the member
+\fn guild_getMemberIdx (const guild, const chr)
+*/
+native guild_getMemberIdx (const guild, const chr);
+/*!
+\brief Get the member at index
+\author Wintermute
+\since 0.82
+\param guild the guild
+\param index
+\fn guild_memberAtIndex (const guild, const index)
+*/
+native guild_memberAtIndex (const guild, const index);
+
+/*!
 \brief Add a recuit to a guild
 \author Endymion
 \since 0.82

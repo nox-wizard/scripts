@@ -23,20 +23,25 @@ const PROP_GUILD = 3;
 	const GP_STR_WEBPAGE = 451;
 	const GP_STR_ABBREVIATION = 452;
 	const GP_UNI_CHARTER = 500;
+	const GP_WAR=200;
+	const GP_PEACE=201;
 
-	enum GUILD_TYPE {
-		GUILD_TYPE_NORMAL = 0,
-		GUILD_TYPE_CHAOS,
-		GUILD_TYPE_ORDER,
-		GUILD_TYPE_CITY
-	}
-	
+	const GUILD_TYPE_NORMAL = 0;
+	const GUILD_TYPE_CHAOS = 1;
+	const GUILD_TYPE_ORDER = 2;
+	const GUILD_TYPE_CITY = 5;
+
 	const GMP_RANK = 100;
 	const GMP_TITLETOGGLE = 101;
 	const GMP_STR_TITLE = 450;
+	const GMP_FEALTY = 200;
 
 	const GRP_I_RECRUITER = 200;
-	
 
- 
+	const RANK_GUILDMASTER = 0;
+	const RANK_GUILDVICE = 1;
+	const RANK_GUILDMEMBER =2;
+	const RANK_GUILDRECRUIT = 3;
+	const ALL_RANKS = 4;
+
 /** @} */ // end of script_const_guild
