@@ -25,16 +25,16 @@ public cmd_save(const chr)
 	broadcast("World will be saved in %d seconds",timeout);
 	
 	if(timeout < 10)
-		tempfx_activate(_,chr,chr,0,timeout,funcidx("cmd_save_cback"));
+		tempfx_activate(_,chr,chr,0,timeout,funcidx("cmd_save_cback")); //means instant worldsave after <timeout> seconds
 	else
-		tempfx_activate(_,chr,chr,timeout - 10,10,funcidx("cmd_save_cback"));
+		tempfx_activate(_,chr,chr,timeout - 10,10,funcidx("cmd_save_cback")); //means worldsave check after 10 seconds
 }
 
 public cmd_save_cback(const chr1, const chr2, const timeout, const mode)
 {
 	if(mode != TFXM_END) return;
 	
-	if(!timeout)
+	if(!timeout) //timeout is now 0 or lower
 	{
 		new time = getCurrentTime();
 		world_save()
@@ -47,7 +47,7 @@ public cmd_save_cback(const chr1, const chr2, const timeout, const mode)
 	broadcast("World will be saved in %d seconds",timeout);
 	
 	if(timeout < 10)
-		tempfx_activate(_,chr1,chr1,0,timeout,funcidx("cmd_save_cback"));
+		tempfx_activate(_,chr1,chr1,0,timeout,funcidx("cmd_save_cback")); //next cycle
 	else
 		tempfx_activate(_,chr1,chr1,timeout - 10,10,funcidx("cmd_save_cback"));
 }

@@ -52,15 +52,15 @@ public cmd_setmoreb12(const chr)
 	}
 
 	chr_message(chr,_,msg_commandsDef[225]);
-	target_create(chr,moreb12,_,_,"cmd_setmoreb12_targ");
+	target_create(chr,moreb12,_,_,"cmd_moreb12_targ");
 }
 
 /*!
 \author Fax
-\fn cmd_setmoreb12_targ(target, chr, object, x, y, z, unused, value)
+\fn cmd_targ_setmoreb12(target, chr, object, x, y, z, unused, value)
 \params all standard target callback params
 */
-public cmd_setmoreb12_targ(target, chr, object, x, y, z, unused, moreb12)
+public cmd_moreb12_targ(target, chr, object, x, y, z, unused, moreb12)
 {
 	if(isItem(object))
 	{

@@ -17,7 +17,7 @@ the targetted character will show you his sell gump
 public cmd_sell(const chr)
 {
 	chr_message(chr,_,msg_commandsDef[31]);
-	target_create(chr,_,_,_,"cmd_sell_targ");
+	target_create(chr,_,_,_,"cmd_soll_targ");
 }
 
 /*!
@@ -26,11 +26,15 @@ public cmd_sell(const chr)
 \params all standard target callback params
 \brief handles single character targetting and selling
 */
-public cmd_sell_targ(target, chr, object, x, y, z, unused, unused1)
+public cmd_soll_targ(target, chr, object, x, y, z, unused, unused1)
 {
 	if(isChar(object))
 		chr_showSellGump(object,chr);
-	else chr_message(chr,_,msg_commandsDef[32]);
+	else
+	{
+	chr_message(chr,_,msg_commandsDef[32]);
+	chr_message(chr,_,"sell call");
+	}
 }
 
 /*! }@ */
