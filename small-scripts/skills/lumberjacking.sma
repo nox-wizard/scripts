@@ -316,7 +316,6 @@ public __nxw_sk_lumber(const cc)
 			else
 				logFound = index;
 		}
-
 	}
 
 	if (ENABLE_logRegions == 1 && region < 0) logFound = pine;
