@@ -8461,14 +8461,6 @@ SECTION ITEM $item_clean_bandages
     VALUE 6
 }
 
-SECTION ITEM $item_arrow_6
-{ // stack of 25 arrows
-    ID 0F3F
-    VALUE 4
-    AMOUNT 25
-    DECAY
-}
-
 // Weapons
 SECTION ITEM $item_weapons_list_1
 {

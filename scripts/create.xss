@@ -1404,19 +1404,19 @@ SECTION MAKEMENU 62
     1BFC Five Crossbow Bolts
     RESOURCE 5
     SKILL 150
-    ADDITEM $item_crossbow_bolt_1
+    ADDITEM $item_crossbow_bolt 5
     1BFD Ten Crossbow Bolts
     RESOURCE 10
     SKILL 150
-    ADDITEM $item_crossbow_bolt_2
+    ADDITEM $item_crossbow_bolt 10
     1BFD Twenty Crossbow Bolts
     RESOURCE 20
     SKILL 150
-    ADDITEM $item_crossbow_bolt_3
+    ADDITEM $item_crossbow_bolt 20
     1BFD Fifty Crossbow Bolts
     RESOURCE 50
     SKILL 150
-    ADDITEM $item_crossbow_bolt_4
+    ADDITEM $item_crossbow_bolt 50
 }
 // end fletching section
 

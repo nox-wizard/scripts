@@ -1462,10 +1462,6 @@
 #define $item_piles_of_wool 5144
 #define $item_goat_spawner 5145
 #define $item_glacial_staff 5146
-#define $item_crossbow_bolt_1 5501
-#define $item_crossbow_bolt_2 5503
-#define $item_crossbow_bolt_3 5505
-#define $item_crossbow_bolt_4 5507
 #define $item_shafts 5508
 #define $item_shafts_1 5509
 #define $item_shafts_2 5510
@@ -2247,7 +2243,6 @@
 #define $item_a_treasure_map_lv3_ 20024
 #define $item_a_treasure_map_lv5_ 20025
 #define $item_a_magical_wizard`s_hat 20026
-#define $item_crossbow_bolt_5 20068
 #define $item_a_large_leather_pillow 20101
 #define $item_a_medium_leather_pillow 20102
 #define $item_a_small_leather_pillow 20103
