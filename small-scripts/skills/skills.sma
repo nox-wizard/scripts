@@ -34,11 +34,12 @@
 #include "small-scripts/skills/taming.sma"
 //fishing
 #include "small-scripts/skills/fishing.sma"
+//Alchemy
+#include "small-scripts/skills/alchemy.sma"
 //hiding
 #include "small-scripts/skills/hiding.sma"
 //detect hidden
-#include "small-scripts/skills/detecthidden.sma"
-
+//#include "small-scripts/skills/detecthidden.sma"
 
 
 /*!
