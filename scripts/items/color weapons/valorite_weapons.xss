@@ -325,20 +325,20 @@ SECTION ITEM $item_valorite_viking_sword
 // mace
 SECTION ITEM $item_valorite_mace
 {
-    NAME valorite mace
-    ID 0F5C
+	NAME valorite mace
+	ID 0F5C
     COLOR 0191
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 8
-    HIDAMAGE 32
-    HP 40
-    DECAY
-    VALUE 30
-    //RESTOCK 10
-    STR 45
-    SPD 28
-    WEIGHT 1100
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 8
+	HIDAMAGE 32
+	HP 40
+	DECAY
+	VALUE 30
+	//RESTOCK 10
+	STR 45
+	SPD 28
+	WEIGHT 1100
     DAMAGETYPE $damage_bludgeon
 }
 

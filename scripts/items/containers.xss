@@ -34,18 +34,6 @@ SECTION ITEM $item_leather_bag
     ///SUBSECTION Containers
 }
 
-SECTION ITEM $item_barrel
-{
-    NAME barrel
-    ID 0E77
-    TYPE $itype_container
-    VALUE 35
-    WEIGHT 200
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
 SECTION ITEM $item_round_basket
 {
     NAME round basket
@@ -125,45 +113,6 @@ SECTION ITEM $item_wooden_box_1
     ///SUBSECTION Containers
 }
 
-SECTION ITEM $item_small_wooden_crate
-{
-    NAME small wooden crate
-    ID 0E7E
-    TYPE $itype_container
-    VALUE 45
-    WEIGHT 100
-    MOVABLE 1
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
-SECTION ITEM $item_small_wooden_crate_1
-{
-    NAME small wooden crate
-    ID 09a9
-    TYPE $itype_container
-    VALUE 45
-    WEIGHT 100
-    MOVABLE 1
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
-SECTION ITEM $item_wooden_keg
-{
-    NAME wooden keg
-    ID 0E7F
-    TYPE $itype_container
-    VALUE 40
-    WEIGHT 200
-    MOVABLE 1
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
 SECTION ITEM $item_brass_box
 {
     NAME brass box
@@ -177,57 +126,7 @@ SECTION ITEM $item_brass_box
     ///SUBSECTION Containers
 }
 
-SECTION ITEM $item_large_wooden_crate
-{
-    NAME large wooden crate
-    ID 0E3C
-    TYPE $itype_container
-    VALUE 60
-    WEIGHT 300
-    MOVABLE 1
 
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
-SECTION ITEM $item_medium_wooden_crate
-{
-    NAME medium wooden crate
-    ID 0E3E
-    TYPE $itype_container
-    VALUE 55
-    WEIGHT 200
-    MOVABLE 1
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
-SECTION ITEM $item_medium_wooden_crate_1
-{
-    NAME medium wooden crate
-    ID 0e3f
-    TYPE $itype_container
-    VALUE 55
-    WEIGHT 200
-    MOVABLE 1
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
-SECTION ITEM $item_large_wooden_crate_1
-{
-    NAME large wooden crate
-    ID 0e3d
-    TYPE $itype_container
-    VALUE 60
-    WEIGHT 300
-    MOVABLE 1
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
 
 SECTION ITEM $item_metal_chest
 {
@@ -235,33 +134,6 @@ SECTION ITEM $item_metal_chest
     ID 0E40
     TYPE $itype_container
     VALUE 45
-    WEIGHT 300
-    MOVABLE 1
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
-SECTION ITEM $item_wooden_chest
-{
-    NAME wooden chest
-    ID 0E42
-    TYPE $itype_container
-    VALUE 55
-    WEIGHT 300
-    MOVABLE 1
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Containers
-}
-
-SECTION ITEM $item_wooden_chest_1
-{
-    NAME wooden chest
-    ID 0E43
-    TYPE $itype_container
-    VALUE 55
-    
     WEIGHT 300
     MOVABLE 1
 
@@ -287,7 +159,6 @@ SECTION ITEM $item_metal_box
     NAME metal box
     ID 09a8
     TYPE $itype_container
-    
     VALUE 10
     WEIGHT 100
 

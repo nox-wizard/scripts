@@ -531,7 +531,6 @@ SECTION ITEM $item_blessed_water
 	MOREY $cure_potion
 	MOREZ $normal_potion_strength
 	TRIGGER $itrg_drink_blessed_water
-	NODECAY
 	VALUE 50
 	GOOD 30
 

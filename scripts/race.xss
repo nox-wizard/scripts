@@ -182,12 +182,12 @@
 //					default		raceid 0.0 100.0 0.0
 //
 //		--
-//		-- resistances
+//		-- RESISTANCEs
 //		--
 //		MAGICRESISTANCE		domain:		yes=1 no=0
 //					notes:		needs further development
 //		POISONRESISTANCE	% % % % %
-//					Notes:		for each poison level 1 resistance percentage
+//					Notes:		for each poison level 1 RESISTANCE percentage
 //		--
 //		-- damage
 //		--

@@ -27,6 +27,7 @@ SECTION NPC $npc_random_weaker_orc-kin
     NAME Random Weaker Orc-Kin
     NPCLIST $npclist_misc_orc_kin
 }
+
 SECTION NPC $npc_random_medium_orc-kin
 {
     NAME Random Medium Orc-Kin
@@ -142,7 +143,6 @@ SECTION NPCLIST $npclist_ettins_ogres_trolls
     $npc_a_troll_1
     $npc_a_troll_2
     $npc_an_ogre_lord
-
 }
 
 ///////////////////////////
@@ -177,10 +177,8 @@ SECTION NPC $npc_ratmen_list
 SECTION NPCLIST $npclist_ratmen
 {
     //$$ ratmen
-
     $npc_ratman_axe
     $npc_ratman
-
 }
 
 /////////////////////////////
@@ -793,6 +791,7 @@ SECTION NPC $npc_random_town_spawn
     //$$ random town spawn
     NPCLIST $npclist_town_spawns
 }
+
 SECTION NPCLIST $npclist_town_spawns
 {
     //$$ town spawns
@@ -805,6 +804,7 @@ SECTION NPC $npc_random_swamp_spawn
     //$$ random swamp spawn
     NPCLIST $npclist_swamp_spawns
 }
+
 SECTION NPCLIST $npclist_swamp_spawns
 {
     //$$ swamp spawns
@@ -836,6 +836,7 @@ SECTION NPC $npc_jungle_spawn
     NPCLIST $npclist_jungle_spawns
     //$$ jungle spawn
 }
+
 SECTION NPCLIST $npclist_jungle_spawns
 {
     //$$ jungle spawns
@@ -853,11 +854,13 @@ SECTION NPCLIST $npclist_jungle_spawns
     $npc_a_hawk
     $npc_a_falcon
 }
+
 SECTION NPC $npc_arctic_spawn
 { Random Arctic Spawn
     NPCLIST $npclist_arctic_spawns
     //$$ arctic spawn
 }
+
 SECTION NPCLIST $npclist_arctic_spawns
 {
     //$$ arctic spawns
@@ -877,6 +880,7 @@ SECTION NPC $npc_cave_spawn
     NPCLIST $npclist_cave_spawns
     //$$ cave spawn
 }
+
 SECTION NPCLIST $npclist_cave_spawns
 {
     //$$ cave spawns
@@ -1863,6 +1867,7 @@ SECTION NPCLIST $npclist_dungeon_spawn_P
     $npc_a_wisp
     $npc_a_zombie
 }
+
 SECTION NPCLIST $npclist_dungeon_spawn_Q
 {
     //$$ dungeon spawn

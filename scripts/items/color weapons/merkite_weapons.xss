@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////
-/////////////////////// Farbige Waffen by Saber ///////////////////////////////////////////////
+/////////////////////// colored weapon by Saber ///////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////
-////////////////////// Aexte ////////////////////////////////
+////////////////////// axes ////////////////////////////////
 ////////////////////////////////////////////////////////////
 
 // battle axe
@@ -322,26 +322,27 @@ SECTION ITEM $item_merkite_viking_sword
 ////////////////////////Kriegskeule///////////////////////////////
 
 // mace
-SECTION ITKriegskeuleitem_merkite_mace
+SECTION ITEM $item_merkite_mace
 {
-    NAME merkite mace
-    ID 0F5C
+	NAME merkite mace
+	ID 0F5C
     COLOR 025e
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 8
-    HIDAMAGE 32
-    HP 40
-    DECAY
-    VALUE 30
-    //RESTOCK 10
-    STR 45
-    SPD 28
-    WEIGHT 110Streitkolben   DAMAGETYPE $damage_bludgeon
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 8
+	HIDAMAGE 32
+	HP 40
+	DECAY
+	VALUE 30
+	//RESTOCK 10
+	STR 45
+	SPD 28
+	WEIGHT 110
+    DAMAGETYPE $damage_bludgeon
 }
 
 // maul
-SECTION Streitkolben $item_merkite_maul
+SECTION ITEM $item_merkite_maul
 {
     NAME merkite maul
     ID 143A
@@ -356,12 +357,13 @@ SECTION Streitkolben $item_merkite_maul
     //RESTOCK 10
     STR 20
     SPD 28
-    WEIGHT 110StachelkeuleAMAGETYPE $damage_bludgeon
+    WEIGHT 110
+    DAMAGETYPE $damage_bludgeon
 }
 
 
 // war mace
-SECTION ITStachelkeule_merkite_war_mace
+SECTION ITEM $item_merkite_war_mace
 {
     NAME merkite war mace
     ID 1406
@@ -376,11 +378,12 @@ SECTION ITStachelkeule_merkite_war_mace
     //RESTOCK 10
     STR 30
     SPD 30
-    WEIGHTStreithammer DAMAGETYPE $damage_bludgeon
+    WEIGHT 110
+    DAMAGETYPE $damage_bludgeon
 }
 
 // war hammer
-SECTION ITStreithammererkitee_war_hammer
+SECTION ITEM $item_merkite_war_hammer
 {
     NAME merkite war hammer
     ID 1438
@@ -395,11 +398,12 @@ SECTION ITStreithammererkitee_war_hammer
     //RESTOCK 10
     STR 40
     SPD 29
-    WEIKriegshammer  DAMAGETYPE $damage_bludgeon
+    WEIGHT 110
+    DAMAGETYPE $damage_bludgeon
 }
 
 // hammer pick
-SECTION IKriegshammererkitee_hammer_pick
+SECTION ITEM $item_merkite_hammer_pick
 {
     NAME merkite hammer pick
     ID 143C
@@ -423,7 +427,7 @@ SECTION IKriegshammererkitee_hammer_pick
 ////////////////Kurzspeer///////////////////////////////////
 
 //short spear
-SECTIONKurzspeer_merkite_short_spear
+SECTION ITEM $item_merkite_short_spear
 {
     NAME merkite short spear
     ID 1403
@@ -438,12 +442,12 @@ SECTIONKurzspeer_merkite_short_spear
     //RESTOCK 10
     STR 15
     SPD 35
-KampfspiessHT 200
+    WEIGHT 200
     DAMAGETYPE $damage_pierce
 }
 
 //war fork
-SEKampfspiessEM $item_merkite_war_fork
+SECTION ITEM $item_merkite_war_fork
 {
     NAME merkite war fork
     ID 1405
@@ -457,11 +461,13 @@ SEKampfspiessEM $item_merkite_war_fork
     VALUE 90
     //RESTOCK 10
     STR 35
-    SPD 35Speer WEIGHT 600
+    SPD 35
+    WEIGHT 600
     DAMAGETYPE $damage_pierce
 }
 
-//speaSpeerCTION ITEM $item_merkite_spear
+//spear, Speer
+SECTION ITEM $item_merkite_spear
 {
     NAME merkite spear
     ID 0F62
@@ -484,7 +490,8 @@ SEKampfspiessEM $item_merkite_war_fork
 //////////////////////// Pole Arms ///////////////////////////
 ///////////Bartaxt///////////////////////////////////////////
 
-// bardicheBartaxtN ITEM $item_merkite_bardiche
+// bardiche, Bartaxt
+SECTION ITEM $item_merkite_bardiche
 {
     NAME merkite bardiche
     ID 0F4D
@@ -498,11 +505,13 @@ SEKampfspiessEM $item_merkite_war_fork
     VALUE 70
     //RESTOCK 10
     STR 50
-    SPHellebarde   WEIGHT 400
+    SPD 24
+    WEIGHT 400
     DAMAGETYPE $damage_slash
 }
 
-// halbHellebardeCTION ITEM $item_merkite_halberd
+// halberd, Hellebarde
+SECTION ITEM $item_merkite_halberd
 {
     NAME merkite halberd
     ID 143E

@@ -388,7 +388,7 @@ SECTION MENU $menu_leather_armor
     13CE Leather Gloves
     ADDITEM $item_leather_gloves
     13C7 Leather Gorget
-    ADDITEM $item_a_leather_gorget
+    ADDITEM $item_leather_gorget
     < Previous Menu
     OPENMENU $menu_armor_1
 }
@@ -1245,7 +1245,7 @@ SECTION MENU $menu_containers
     0E3E Medium Wooden Crate
     ADDITEM $item_medium_wooden_crate1
     0E3C Large Wooden Crate
-    ADDITEM $item_large_wooden_crate
+    ADDITEM $item_large_wooden_crate1
     0E7F Wooden Keg
     ADDITEM $item_open_wooden_keg
     0E83 Tub
@@ -2083,13 +2083,13 @@ SECTION MENU $menu_metal_door_1
 {
     Metal Door 1
     0675 West Door
-    ADDITEM $item_a_metal_door
+    ADDITEM $item_metal_door_1
     0677 East Door
-    ADDITEM $item_a_metal_door_1
+    ADDITEM $item_metal_door_2
     067D South Door
-    ADDITEM $item_a_metal_door_2
+    ADDITEM $item_metal_door_3
     067F North Door
-    ADDITEM $item_a_metal_door_3
+    ADDITEM $item_metal_door_4
     < Previous Menu
     OPENMENU $menu_doors
 }
@@ -2098,13 +2098,13 @@ SECTION MENU $menu_barred_metal_door
 {
     Barred Metal Door
     0685 West Door
-    ADDITEM $item_a_barred_metal_door
+    ADDITEM $item_metal_door_5
     0687 East Door
-    ADDITEM $item_barred_metal_door
+    ADDITEM $item_metal_door_6
     068D South Door
-    ADDITEM $item_barred_metal_door_1
+    ADDITEM $item_metal_door_7
     068F North Door
-    ADDITEM $item_barred_metal_door_2
+    ADDITEM $item_metal_door_8
     < Previous Menu
     OPENMENU $menu_doors
 }
@@ -2113,7 +2113,7 @@ SECTION MENU $menu_rattan_door
 {
     Rattan Door
     0695 West Door
-    ADDITEM $item_rattan_door
+    ADDITEM $item_rattan_door_1
     0697 East Door
     ADDITEM $item_rattan_door_1
     069D South Door
@@ -2128,7 +2128,7 @@ SECTION MENU $menu_wooden_door_1
 {
     Wooden Door 1
     06A5 West Door
-    ADDITEM $item_wooden_door
+    ADDITEM $item_wooden_door_1
     06A7 East Door
     ADDITEM $item_wooden_door_1
     06AD South Door
@@ -2158,7 +2158,7 @@ SECTION MENU $menu_metal_door_2
 {
     Metal Door 2
     06C5 West Door
-    ADDITEM $item_metal_door
+    ADDITEM $item_metal_door_9
     06C7 East Door
     ADDITEM $item_metal_door_1
     06CD South Door
@@ -2177,9 +2177,9 @@ SECTION MENU $menu_wooden_door_3
     06D7 East Door
     ADDITEM $item_wooden_door_9
     06DD South Door
-    ADDITEM $item_wooden_door_A
+    ADDITEM $item_wooden_door_11
     06DF North Door
-    ADDITEM $item_wooden_door_B
+    ADDITEM $item_wooden_door_12
     < Previous Menu
     OPENMENU $menu_doors
 }
@@ -2188,13 +2188,13 @@ SECTION MENU $menu_wooden_door_4
 {
     Wooden Door 4
     06E5 West Door
-    ADDITEM $item_wooden_door_C
+    ADDITEM $item_wooden_door_13
     06E7 East Door
-    ADDITEM $item_wooden_door_D
+    ADDITEM $item_wooden_door_14
     06ED South Door
-    ADDITEM $item_wooden_door_E
+    ADDITEM $item_wooden_door_15
     06EF North Door
-    ADDITEM $item_wooden_door_F
+    ADDITEM $item_wooden_door_16
     < Previous Menu
     OPENMENU $menu_doors
 }
@@ -2203,7 +2203,7 @@ SECTION MENU $menu_wooden_gate_1
 {
     Wooden Gate 1
     0839 West Door
-    ADDITEM $item_wooden_gate
+    ADDITEM $item_wooden_gate_1
     083B East Door
     ADDITEM $item_wooden_gate_1
     0841 South Door
@@ -2218,7 +2218,7 @@ SECTION MENU $menu_iron_gate
 {
     Iron Gate
     084C West Door
-    ADDITEM $item_iron_gate
+    ADDITEM $item_iron_gate_1
     084E East Door
     ADDITEM $item_iron_gate_1
     0854 South Door
@@ -2579,11 +2579,11 @@ SECTION MENU $menu_wooden_walls_i
 {
     Wooden Walls I
     0006 SE Corner
-    ADDITEM $item_wooden_wall
+    ADDITEM $item_wooden_wall_1
     0010 SE Corner Small
     ADDITEM $item_wooden_wall_7
     0014 SE Corner Really Small
-    ADDITEM $item_wooden_wall_A
+    ADDITEM $item_wooden_wall_15
     0007 E-W Wall
     ADDITEM $item_wooden_wall_1
     000a E-W Wall
@@ -2591,11 +2591,11 @@ SECTION MENU $menu_wooden_walls_i
     000c E-W Wall
     ADDITEM $item_wooden_wall_5
     000e E-W Wall with Window
-    ADDITEM $item_window
+    ADDITEM $item_wooden_wall_9
     0012 E-W Small Wall
     ADDITEM $item_wooden_wall_9
     0016 E-W Really Small Wall
-    ADDITEM $item_wooden_wall_C
+    ADDITEM $item_wooden_wall_17
     < Previous Menu
     OPENMENU $menu_wooden_walls
 }
@@ -2604,11 +2604,11 @@ SECTION MENU $menu_stone_walls_i
 {
     Stone Walls I
     001A SE Corner
-    ADDITEM $item_stone_wall
+    ADDITEM $item_stone_wall_1
     0024 SE Small Corner
     ADDITEM $item_stone_wall_8
     002D Really Small SE Corner
-    ADDITEM $item_stone_wall_C
+    ADDITEM $item_stone_wall_20
     001C E-W Wall
     ADDITEM $item_stone_wall_2
     001E E-W Wall with Wood
@@ -2616,11 +2616,11 @@ SECTION MENU $menu_stone_walls_i
     0021 E-W Wall with Wood
     ADDITEM $item_stone_wall_7
     0022 E-W Wall with Window
-    ADDITEM $item_window_2
+    ADDITEM $item_stone_wall_9
     002F Really Small E-W Wall
-    ADDITEM $item_stone_wall_E
+    ADDITEM $item_stone_wall_22
     0031 Really Small E-W Wall 2
-    ADDITEM $item_stone_wall_G
+    ADDITEM $item_stone_wall_24
     0025 E-W Small Wall
     ADDITEM $item_stone_wall_9
     001B N-S Wall
@@ -2633,7 +2633,7 @@ SECTION MENU $menu_brick_walls_i
 {
     Brick Walls I
     0033 SE Corner
-    ADDITEM $item_brick_wall
+    ADDITEM $item_brick_wall_1
     0034 E-W Wall
     ADDITEM $item_brick_wall_1
     0035 N-S Wall
@@ -2649,15 +2649,15 @@ SECTION MENU $menu_brick_walls_i
     003A N-S Wall with Wood
     ADDITEM $item_brick_wall_7
     003B E-W Wall with Window
-    ADDITEM $item_window_4
+    ADDITEM $item_brick_wall_9
     003C N-S Wall with Window
-    ADDITEM $item_window_5
+    ADDITEM $item_brick_wall_10
     003D SE Corner Small
     ADDITEM $item_brick_wall_8
     003E E-W Wall Small
     ADDITEM $item_brick_wall_9
     003F N-S Wall Small
-    ADDITEM $item_brick_wall_A
+    ADDITEM $item_brick_wall_13
     < Previous Menu
     OPENMENU $menu_brick_walls
 }
@@ -2666,35 +2666,35 @@ SECTION MENU $menu_brick_walls_ii
 {
     Brick Walls II
     0040 Small Brick Post
-    ADDITEM $item_brick_wall_B
+    ADDITEM $item_brick_wall_14
     0041 SE Corner
-    ADDITEM $item_brick_wall_C
+    ADDITEM $item_brick_wall_15
     0042 E-W Wall Really Small
-    ADDITEM $item_brick_wall_D
+    ADDITEM $item_brick_wall_16
     0043 N-S Wall Really Small
-    ADDITEM $item_brick_wall_E
+    ADDITEM $item_brick_wall_17
     0044 Really Small Post
-    ADDITEM $item_brick_arch
+    ADDITEM $item_brick_wall_19
     0045 SE Corner Arch
-    ADDITEM $item_brick_arch
+    ADDITEM $item_brick_wall_19
     0046 N-S Arch
-    ADDITEM $item_brick_arch_1
+    ADDITEM $item_brick_wall_20
     0047 E-W Arch
-    ADDITEM $item_brick_arch_2
+    ADDITEM $item_brick_wall_21
     0048 E-W Arch
-    ADDITEM $item_brick_arch_3
+    ADDITEM $item_brick_wall_22
     0049 N-S Arch
-    ADDITEM $item_brick_arch_4
+    ADDITEM $item_brick_wall_23
     004A E-W Arched Top Wall
-    ADDITEM $item_brick_wall_F
+    ADDITEM $item_brick_wall_24
     004B N-S Arched Top Wall
-    ADDITEM $item_brick_wall_G
+    ADDITEM $item_brick_wall_25
     004C N-S Arched Top Wall
-    ADDITEM $item_brick_wall_H
+    ADDITEM $item_brick_wall_26
     004D E-W Arched Top Wall
-    ADDITEM $item_brick_wall_I
+    ADDITEM $item_brick_wall_27
     004E E-W Top Arch End
-    ADDITEM $item_brick_wall_J
+    ADDITEM $item_brick_wall_28
     < Previous Menu
     OPENMENU $menu_brick_walls
 }
@@ -2703,21 +2703,21 @@ SECTION MENU $menu_brick_walls_iii
 {
     Brick Walls III
     004F N-S Top Arch End
-    ADDITEM $item_brick_wall_K
+    ADDITEM $item_brick_wall_29
     0050 E-W Top Arch Middle
-    ADDITEM $item_brick_wall_L
+    ADDITEM $item_brick_wall_30
     0051 N-S Top Arch Middle
-    ADDITEM $item_brick_wall_M
+    ADDITEM $item_brick_wall_31
     0052 SE Corner Blocks
-    ADDITEM $item_brick_wall_N
+    ADDITEM $item_brick_wall_32
     0053 E-W Blocks
-    ADDITEM $item_brick_wall_O
+    ADDITEM $item_brick_wall_33
     0054 N-S Blocks
-    ADDITEM $item_brick_wall_P
+    ADDITEM $item_brick_wall_34
     0055 E-W Blocks
-    ADDITEM $item_brick_wall_Q
+    ADDITEM $item_brick_wall_35
     0056 N-S Blocks
-    ADDITEM $item_brick_wall_R
+    ADDITEM $item_brick_wall_36
     < Previous Menu
     OPENMENU $menu_brick_walls
 }
@@ -2739,7 +2739,7 @@ SECTION MENU $menu_wooden_walls_ii
 {
     Wooden Walls II
     0018 E-W Really Small Wall
-    ADDITEM $item_wooden_wall_D
+    ADDITEM $item_wooden_wall_19
     0008 N-S Wall
     ADDITEM $item_wooden_wall_2
     000b N-S Wall
@@ -2747,19 +2747,19 @@ SECTION MENU $menu_wooden_walls_ii
     000d N-S Wall
     ADDITEM $item_wooden_wall_6
     000f N-S Wall with Window
-    ADDITEM $item_window_1
+    ADDITEM $item_wooden_wall_10
     0011 N-S Small Wall
     ADDITEM $item_wooden_wall_8
     0015 N-S Really Small Wall
-    ADDITEM $item_wooden_wall_B
+    ADDITEM $item_wooden_wall_16
     0019 N-S Really Small Wall
-    ADDITEM $item_wooden_wall_E
+    ADDITEM $item_wooden_wall_20
     0009 Wooden Post
-    ADDITEM $item_wooden_post
+    ADDITEM $item_wooden_wall_4
     0013 Wooden Post
-    ADDITEM $item_wooden_post_1
+    ADDITEM $item_wooden_wall_14
     0017 Small Corner Post
-    ADDITEM $item_wooden_post_2
+    ADDITEM 0017
     < Previous Menu
     OPENMENU $menu_wooden_walls
 }
@@ -2783,29 +2783,29 @@ SECTION MENU $menu_stone_walls_ii
     0020 N-S Wall with Wood
     ADDITEM $item_stone_wall_6
     0023 N-S Wall with Window
-    ADDITEM $item_window_3
+    ADDITEM $item_stone_wall_10
     0026 N-S Small Wall
-    ADDITEM $item_stone_wall_A
+    ADDITEM $item_stone_wall_13
     002E Really Small N-S Wall
-    ADDITEM $item_stone_wall_D
+    ADDITEM $item_stone_wall_21
     0032 Really Small N-S Wall 2
-    ADDITEM $item_stone_wall_H
+    ADDITEM $item_stone_wall_25
     0030 Really Small Stone Post
-    ADDITEM $item_stone_wall_F
+    ADDITEM $item_stone_wall_23
     001D Stone Post
     ADDITEM $item_stone_wall_3
     0027 Small Stone Post
-    ADDITEM $item_stone_wall_B
+    ADDITEM $item_stone_wall_14
     0028 SE Arch
-    ADDITEM $item_stone_arch
+    ADDITEM $item_stone_wall_15
     0029 E-W Arch
-    ADDITEM $item_stone_arch_1
+    ADDITEM $item_stone_wall_16
     002A N-S Arch
-    ADDITEM $item_stone_arch_2
+    ADDITEM $item_stone_wall_17
     002B N-S Arch
-    ADDITEM $item_stone_arch_3
+    ADDITEM $item_stone_wall_18
     002C E-W Arch
-    ADDITEM $item_stone_arch_4
+    ADDITEM $item_stone_wall_19
     < Previous Menu
     OPENMENU $menu_stone_walls
 }
@@ -2827,11 +2827,11 @@ SECTION MENU $menu_walls
     0229 Corner Pole
     ADDITEM $item_wooden_post_3
     0223 Palisade Corner
-    ADDITEM $item_palisade_B
+    ADDITEM $item_palisade_7
     0221 Palisade N-S
-    ADDITEM $item_palisade_B
+    ADDITEM $item_palisade_7
     0222 Palisade E-W
-    ADDITEM $item_palisade_B
+    ADDITEM $item_palisade_7
     0421 Palisade Skull N-S
     ADDITEM $item_palisade_2
     0422 Palisade Skull E-W 1
@@ -2841,7 +2841,7 @@ SECTION MENU $menu_walls
     0430 Palisade Skull E-W 3
     ADDITEM $item_palisade_5
     0425 Small Palisade Corner
-    ADDITEM $item_palisade
+    ADDITEM $item_palisade_24
     0424 Small Palisade N-S
     ADDITEM $item_palisade_1
     0423 Small Palisade E-W
@@ -2853,17 +2853,17 @@ SECTION MENU $menu_walls
     021D Small Palisade Slant E-W 1
     ADDITEM $item_palisade_9
     021F Small Palisade Slant E-W 2
-    ADDITEM $item_palisade_A
+    ADDITEM $item_palisade_3
     0226 Un-spiked Palisade Corner
-    ADDITEM $item_wooden_wall_F
+    ADDITEM $item_palisade_8
     0227 Un-spiked Palisade N-S
-    ADDITEM $item_wooden_wall_G
+    ADDITEM $item_palisade_9
     022B Un-spiked Palisade N-S
-    ADDITEM $item_wooden_wall_H
+    ADDITEM $item_palisade_10
     0228 Un-spiked Palisade E-W
-    ADDITEM $item_wooden_wall_I
+    ADDITEM $item_palisade_11
     022A Un-spiked Palisade E-W
-    ADDITEM $item_wooden_wall_J
+    ADDITEM $item_palisade_12
     < Previous Menu
     OPENMENU $menu_palisade_walls_
 }

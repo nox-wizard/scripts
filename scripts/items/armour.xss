@@ -333,6 +333,7 @@ SECTION ITEM $item_leather_skirt
 
     ///CATEGORY Armours
     ///SUBSECTION Leather
+}
 
 // leather bustier
 SECTION ITEM $item_leather_bustier
@@ -2625,6 +2626,7 @@ SECTION ITEM $item_dragonskin_legs
     VALUE 700
     WEIGHT 500
 }
+
 SECTION ITEM $item_dragonskin_tunic
 {
     NAME dragonskin tunic
@@ -2637,7 +2639,6 @@ SECTION ITEM $item_dragonskin_tunic
     VALUE 800
     WEIGHT 700
 }
-
 
 SECTION ITEM $item_ranger_tunic
 {

@@ -11,7 +11,7 @@
 
 
 // ***********************************************************************
-// * Test Run 1.0, Please post feedback at the NoX-Wizard Forums         *
+// * Test run 1.0, Please post feedback at the NoX-Wizard Forums         *
 // * Adjustments will be made as needed.                                 *
 // ***********************************************************************
 
@@ -199,7 +199,7 @@ SECTION SKILL $skill_bowcrafting
     SKILLPOINT 1000 0 0
 }
 
-// Peacemaking
+// //PEACEMAKING
 SECTION SKILL $skill_peacemaking
 {
     STR 0
@@ -321,7 +321,7 @@ SECTION SKILL $skill_detect_hidden
     SKILLPOINT 1000 0 0
 }
 
-// Enticement
+// //ENTICEMENT
 SECTION SKILL $skill_enticement
 {
     STR 0
@@ -544,8 +544,8 @@ SECTION SKILL $skill_magery
     SKILLPOINT 1000 0 0
 }
 
-// Resisting Spells
-SECTION SKILL $skill_magic_resistance
+// RESISTSing Spells
+SECTION SKILL $skill_magic_RESISTANCE
 {
     STR 25
     DEX 25

@@ -586,7 +586,7 @@ SECTION NPC $npc_frost_elf_warrior
     COLOR 0482
     ITEM $item_iron_chain_leggings
     COLOR 0481
-    ITEM $item_a_leather_gorget
+    ITEM $item_leather_gorget
     COLOR 0481
     LOOT $loot_uncut_gems
     LOOT $loot_omnivores_food
@@ -640,7 +640,7 @@ SECTION NPC $npc_frost_elf_archer
     COLOR 0482
     ITEM $item_iron_chain_leggings
     COLOR 0481
-    ITEM $item_a_leather_gorget
+    ITEM $item_leather_gorget
     COLOR 0481
     PACKITEM $item_arrow 100
     LOOT $loot_uncut_gems
@@ -700,7 +700,7 @@ SECTION NPC $npc_frost_elf_wizard
     COLOR 0482
     ITEM $item_iron_chain_leggings
     COLOR 0481
-    ITEM $item_a_leather_gorget
+    ITEM $item_leather_gorget
     COLOR 0481
     PACKITEM $item_a_spellbook
     LOOT $loot_circle_1-5_spells

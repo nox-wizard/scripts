@@ -77,7 +77,7 @@ SECTION ITEM $item_pine_writing_desk_4
     NAME pine writing desk
     ID 0B49
     VALUE 60
-    _FE_GTOCK 10
+    //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
     COLOR 00fb 
@@ -334,7 +334,7 @@ SECTION ITEM $item_pine_table_G1_1
     NAME pine table
     ID 0B34
     VALUE 50
-    _FE_GTOCK 10
+    //RESTOCK 10
     MOVABLE 0
     COLOR 00fb 
 }

@@ -237,7 +237,7 @@ SECTION ITEM $item_iron_long_sword_of_invisibility
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -261,7 +261,7 @@ SECTION ITEM $item_iron_long_sword_of_invisibility
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -286,7 +286,7 @@ SECTION ITEM $item_iron_long_sword_of_resurrection
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -761,6 +761,7 @@ SECTION ITEM $item_a_golden_bow
     GOOD 12
     DAMAGETYPE $damage_pierce
 }
+
 SECTION ITEM $item_iron_bow_of_ruin
 {
     NAME a magic bow
@@ -2020,7 +2021,7 @@ SECTION ITEM $item_iron_long_sword_of_flamestrike
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -2045,7 +2046,7 @@ SECTION ITEM $item_iron_long_sword_of_feeblemind
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -2070,7 +2071,7 @@ SECTION ITEM $item_iron_long_sword_of_mana_drain
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -2095,7 +2096,7 @@ SECTION ITEM $item_iron_long_sword_of_lightning
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -2120,7 +2121,7 @@ SECTION ITEM $item_iron_long_sword_of_energy_bolt
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -2145,7 +2146,7 @@ SECTION ITEM $item_iron_long_sword_of_invisibility
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25
@@ -2170,7 +2171,7 @@ SECTION ITEM $item_iron_long_sword_of_resurrection
     LODAMAGE 5
     HIDAMAGE 25
     HP 110
-    SKILL 40
+    FIGHTSKILL 40
     DECAY
     VALUE 70
     STR 25

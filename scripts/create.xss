@@ -462,11 +462,11 @@ SECTION MAKEMENU 22
     0E3C Large Wooden Crate - East
     RESOURCE 18
     SKILL 473
-    ADDITEM $item_large_wooden_crate
+    ADDITEM $item_large_wooden_crate1
     0E3d Large Wooden Crate - South
     RESOURCE 18
     SKILL 473
-    ADDITEM $item_large_wooden_crate
+    ADDITEM $item_large_wooden_crate1
     0E42 Wooden Chest - East
     RESOURCE 15
     SKILL 736
@@ -1080,7 +1080,7 @@ SECTION MAKEMENU 42
     13C7 Leather gorget
     RESOURCE 4
     SKILL 590
-    ADDITEM $item_a_leather_gorget
+    ADDITEM $item_leather_gorget
     13CD Leather sleeves
     RESOURCE 4
     SKILL 590

@@ -640,7 +640,7 @@ SECTION NPC $npc_brigand_m
     ITEM $item_leather_leggings
     ITEM $item_leather_tunic
     ITEM plate_iron_spear
-    ITEM $item_a_leather_gorget
+    ITEM $item_leather_gorget
     ITEM $item_male_plain_footwear_list
     ITEM $item_male_plain_robe_list
     COLORLIST 11
@@ -690,7 +690,7 @@ SECTION NPC $npc_brigand_f
     ITEM $item_leather_leggings
     ITEM $item_leather_tunic
     ITEM plate_iron_spear
-    ITEM $item_a_leather_gorget
+    ITEM $item_leather_gorget
     ITEM $item_female_plain_footwear_list
     ITEM $item_female_plain_robe_list
     COLORLIST 11
@@ -2218,7 +2218,7 @@ SECTION NPC $npc_henchman_weak
     FX2 10
     ITEM $item_leather_cap
     ITEM $item_leather_gloves
-    ITEM $item_a_leather_gorget
+    ITEM $item_leather_gorget
     ITEM $item_leather_leggings
     ITEM $item_leather_sleeves
     ITEM $item_leather_tunic

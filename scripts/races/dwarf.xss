@@ -46,7 +46,7 @@ SECTION RACE $race_dwarf
 	LUMBERJACKING $skill_lumberjacking
 	MACEFIGHTING $skill_macefighting
 	MAGERY $skill_magery
-	MAGICRESISTANCE $skill_magic_resistance
+	MAGICRESISTANCE $skill_magic_RESISTANCE
 	MEDITATION $skill_meditation
 	MINING $skill_mining
 	MUSICIANSHIP $skill_musicianship

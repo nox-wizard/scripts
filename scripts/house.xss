@@ -913,7 +913,7 @@ HOUSE_ITEM 61
 
 SECTION HOUSE ITEM 1
 { Wooden Door (Small house)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X 0
 Y 3
@@ -941,7 +941,7 @@ Z 0
 
 SECTION HOUSE ITEM 4
 { GHall Inner Door (left)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X 3
 Y -1
@@ -950,7 +950,7 @@ Z 8
 
 SECTION HOUSE ITEM 5
 { GHall Inner Door (right)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X -3
 Y -1
@@ -959,7 +959,7 @@ Z 8
 
 SECTION HOUSE ITEM 6
 { GHall Outer Door (left)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X -1
 Y 6
@@ -986,7 +986,7 @@ Z 5
 
 SECTION HOUSE ITEM 9
 { 2 Story Inner Door (lower level)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X -3
 Y 0
@@ -995,7 +995,7 @@ Z 7
 
 SECTION HOUSE ITEM 10
 { 2 Story Inner Door (Upper level (Wood & plaster)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X -2
 Y 0
@@ -1004,7 +1004,7 @@ Z 27
 
 SECTION HOUSE ITEM 11
 { 2 Story Outer door (left)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X -3
 Y 6
@@ -1031,7 +1031,7 @@ Z 5
 
 SECTION HOUSE ITEM 14
 { 2 Story Inner Door (Upper level (plaster)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X -3
 Y 0
@@ -1040,7 +1040,7 @@ Z 27
 
 SECTION HOUSE ITEM 15
 { Tower Outer door (left)
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X 0
 Y 6
@@ -1049,7 +1049,7 @@ Z 7
 
 SECTION HOUSE ITEM 16
 { Tower Outer door (right)
-ITEM $item_a_metal_door_1
+ITEM $item_metal_door_2
 LOCK
 X 1
 Y 6
@@ -1058,7 +1058,7 @@ Z 7
 
 SECTION HOUSE ITEM 17
 { Tower Door (lev 1)
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X 3
 Y -2
@@ -1076,7 +1076,7 @@ Z 5
 
 SECTION HOUSE ITEM 19
 { Tower Door (lev 2)
-ITEM $item_a_metal_door_2
+ITEM $item_metal_door_3
 LOCK
 X 1
 Y 4
@@ -1085,7 +1085,7 @@ Z 26
 
 SECTION HOUSE ITEM 20
 { Tower Door (lev 3)
-ITEM $item_a_metal_door_2
+ITEM $item_metal_door_3
 LOCK
 X 1
 Y 4
@@ -1094,7 +1094,7 @@ Z 46
 
 SECTION HOUSE ITEM 21
 { keep door (left)
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X 0
 Y 10
@@ -1103,7 +1103,7 @@ Z 7
 
 SECTION HOUSE ITEM 22
 { keep door (right)
-ITEM $item_a_metal_door_1
+ITEM $item_metal_door_2
 LOCK
 X 1
 Y 10
@@ -1121,7 +1121,7 @@ Z 5
 
 SECTION HOUSE ITEM 24
 { castle door (middle (right))
-ITEM $item_a_metal_door_1
+ITEM $item_metal_door_2
 LOCK
 X 1
 Y 5
@@ -1130,7 +1130,7 @@ Z 6
 
 SECTION HOUSE ITEM 25
 { castle door (middle (left))
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X 0
 Y 5
@@ -1139,7 +1139,7 @@ Z 6
 
 SECTION HOUSE ITEM 26
 { castle door (outer inner (left))
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X 0
 Y 11
@@ -1148,7 +1148,7 @@ Z 6
 
 SECTION HOUSE ITEM 27
 { castle door (outer inner (right))
-ITEM $item_a_metal_door_1
+ITEM $item_metal_door_2
 LOCK
 X 1
 Y 11
@@ -1157,7 +1157,7 @@ Z 6
 
 SECTION HOUSE ITEM 28
 { castle door (outer (left))
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X 0
 Y 15
@@ -1166,7 +1166,7 @@ Z 7
 
 SECTION HOUSE ITEM 29
 { castle door (outer (right))
-ITEM $item_a_metal_door_1
+ITEM $item_metal_door_2
 LOCK
 X 1
 Y 15
@@ -1193,7 +1193,7 @@ Z 8
 
 SECTION HOUSE ITEM 33
 { Shop Inner door (middle)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X 4
 Y -1
@@ -1211,7 +1211,7 @@ Z 8
 
 SECTION HOUSE ITEM 35
 { Shop outer (left)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X -4
 Y 6
@@ -1270,7 +1270,7 @@ Z 8
 
 SECTION HOUSE ITEM 42
 { Farm house Door
-ITEM $item_wooden_door_A
+ITEM $item_wooden_door_11
 X 4
 Y 0
 Z 0
@@ -1536,7 +1536,7 @@ Z 8
 }
 SECTION HOUSE ITEM 100
 { Door (small tower)
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X 3
 Y 3
@@ -1553,7 +1553,7 @@ Z 5
 }
 SECTION HOUSE ITEM 102
 { Door (marble 2-story)
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X -2
 Y 0
@@ -1569,7 +1569,7 @@ Z 5
 }
 SECTION HOUSE ITEM 104
 { Door (stone 2-story)
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X -2
 Y 0
@@ -1593,7 +1593,7 @@ Z 3
 }
 SECTION HOUSE ITEM 107
 { Door (front left)
-ITEM $item_wooden_door_C
+ITEM $item_wooden_door_13
 LOCK
 X 3
 Y 1
@@ -1601,7 +1601,7 @@ Z 5
 }
 SECTION HOUSE ITEM 108
 { Door (front right)
-ITEM $item_wooden_door_D
+ITEM $item_wooden_door_14
 LOCK
 X 4
 Y 1
@@ -1609,7 +1609,7 @@ Z 5
 }
 SECTION HOUSE ITEM 109
 { Door (inside bedroom)
-ITEM $item_wooden_door_D
+ITEM $item_wooden_door_14
 LOCK
 X -3
 Y -1
@@ -1617,7 +1617,7 @@ Z 25
 }
 SECTION HOUSE ITEM 110
 { Door (balcony)
-ITEM $item_wooden_door_E
+ITEM $item_wooden_door_15
 LOCK
 X 1
 Y 0
@@ -1649,7 +1649,7 @@ Z 14
 }
 SECTION HOUSE ITEM 114
 { Door (2-story log, front)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X 1
 Y 4
@@ -1657,7 +1657,7 @@ Z 8
 }
 SECTION HOUSE ITEM 115
 { Door (2-story log, balcony)
-ITEM $item_wooden_door
+ITEM $item_wooden_door_1
 LOCK
 X 1
 Y 0
@@ -1675,7 +1675,7 @@ Z 0
 
 SECTION HOUSE ITEM 117
 { Door (3-story marble, left)
-ITEM $item_a_metal_door
+ITEM $item_metal_door_1
 LOCK
 X -4
 Y 3
@@ -1684,7 +1684,7 @@ Z 4
 
 SECTION HOUSE ITEM 118
 { Door (3-story marble, right)
-ITEM $item_a_metal_door_1
+ITEM $item_metal_door_2
 LOCK
 X -3
 Y 3

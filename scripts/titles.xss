@@ -46,7 +46,7 @@ UNIQUE SECTION SKILL
     //Bowcrafting
     TITLE Bowyer
 
-    //Peacemaking
+    //PEACEMAKING
     TITLE Minstrel
 
     //Camping
@@ -64,7 +64,7 @@ UNIQUE SECTION SKILL
     //Detect Hidden
     TITLE Scout
 
-    //Enticement
+    //ENTICEMENT
     TITLE Bard
 
     //Evaluating Inteligence
@@ -97,7 +97,7 @@ UNIQUE SECTION SKILL
     //Magery
     TITLE Magus
 
-    //Magic Resist
+    //Magic RESISTS
     TITLE Sorceror
 
     //Tactics
@@ -227,7 +227,7 @@ UNIQUE SECTION FAME
 
 UNIQUE SECTION OTHER
 {
-    ///////////// criminal stuff -> paperdoll
+    /////// criminal stuff -> paperdoll
     The Criminal
     // criminal flag
     The Serial Killer
@@ -242,7 +242,7 @@ UNIQUE SECTION OTHER
     // > 100 kills
     The shard admin
     // shard admin flag - paperdoll
-    //////////////// other stuff that goes to single clicking players
+    //////// other stuff that goes to single clicking players
     squelched
     // squelched tag
     OFF

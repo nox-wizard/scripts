@@ -324,20 +324,20 @@ SECTION ITEM $item_iron_viking_sword
 // mace
 SECTION ITEM $item_iron_mace
 {
-    NAME iron mace
-    ID 0F5B
+	NAME iron mace
+	ID 0F5B
     COLOR 0838
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 8
-    HIDAMAGE 32
-    HP 40
-    DECAY
-    VALUE 30
-    ////RESTOCK 10
-    STR 45
-    SPD 28
-    WEIGHT 1100
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 8
+	HIDAMAGE 32
+	HP 40
+	DECAY
+	VALUE 30
+	////RESTOCK 10
+	STR 45
+	SPD 28
+	WEIGHT 1100
     DAMAGETYPE $damage_bludgeon
 }
 

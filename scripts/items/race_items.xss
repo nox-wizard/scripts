@@ -14,7 +14,7 @@ SECTION ITEM $item_race_male_leather_tunic
 	DECAY
 	VALUE 80
 	WEIGHT 500
-	GENDER MALE
+	//GENDER MALE
 }
 
 SECTION ITEM $item_race_female_leather_tunic
@@ -28,7 +28,7 @@ SECTION ITEM $item_race_female_leather_tunic
 	STR 10
 	VALUE 80
 	WEIGHT 500
-	GENDER FEMALE
+	//GENDER FEMALE
 }
 
 SECTION ITEM $item_race_colored_male_leather_tunic
@@ -43,7 +43,7 @@ SECTION ITEM $item_race_colored_male_leather_tunic
 	DECAY
 	VALUE 80
 	WEIGHT 500
-	GENDER MALE
+	//GENDER MALE
 	COLORLIST 11
 }
 
@@ -59,7 +59,7 @@ SECTION ITEM $item_race_colored_female_leather_tunic
 	STR 10
 	VALUE 80
 	WEIGHT 500
-	GENDER FEMALE
+	//GENDER FEMALE
 	COLORLIST 11
 }
 
@@ -69,14 +69,13 @@ SECTION ITEM $item_race_colored_female_leather_tunic
 SECTION ITEM $item_race_orc_face
 {
 	#copy ITEM $item_orc_mask
-	RACE $race_orc
+	//RACE $race_orc
 	NAME orc face
     	DEF 4
     	STR 10
     	DECAY
     	MOVABLE 2
 	WEIGHT 1
-	SKINCOLOR
 }
 
 //
@@ -92,7 +91,6 @@ SECTION ITEM $item_race_orc_face
 //	MOVABLE 2
 //	WEIGHT 1
 //	LAYER 20
-//	SKINCOLOR
 //}
 
 SECTION ITEM $item_race_avariel_male_leather_tunic
@@ -107,7 +105,7 @@ SECTION ITEM $item_race_avariel_male_leather_tunic
 	DECAY
 	VALUE 80
 	WEIGHT 500
-	GENDER MALE
+	//GENDER MALE
 	COLOR 084e
 }
 
@@ -123,7 +121,7 @@ SECTION ITEM $item_race_avariel_female_leather_tunic
 	STR 10
 	VALUE 80
 	WEIGHT 500
-	GENDER FEMALE
+	//GENDER FEMALE
 	COLOR 084e
 }
 

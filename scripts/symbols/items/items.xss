@@ -793,7 +793,7 @@
 #define $item_brass_sign_3 2531
 
 #define $item_leather_gloves 2532
-#define $item_a_leather_gorget 2533
+#define $item_leather_gorget 2533
 	
 
 #define $item_mortar_and_pestal 2600
@@ -1599,7 +1599,6 @@
 #define $item_a_small_vase_1 10196
 #define $item_a_large_vase 10197
 #define $item_damaged_books 10198
-#define $item_spam 10199
 #define $item_a_piwafwi 10200
 #define $item_dragonskin_legs 10201
 #define $item_dragonskin_tunic 10202

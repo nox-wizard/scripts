@@ -4358,7 +4358,7 @@ SECTION SPEECH $speech_little_brat
     ON Child
     ON Son
     ON Lad
-    ON Runt
+    ON runt
     ON Menace
     ON Kid
     SAY Waaaaaaaan! Mommy! The bad person is scaring me!
@@ -4385,7 +4385,7 @@ SECTION SPEECH $speech_little_jerk
     ON Child
     ON Son
     ON Lad
-    ON Runt
+    ON runt
     ON Menace
     ON Kid
     SAY Blah! Your not my dad booger brains

@@ -1157,7 +1157,6 @@ SECTION ITEMLIST $itemlist_npc_equiplist_deamon_sword
 }
 // normal and weak double axe (for frost troll or other double axe)
 
-item 25502
 SECTION ITEMLIST $itemlist_npc_equiplist_double_axe
 {
     //$$ npc equiplist double axe

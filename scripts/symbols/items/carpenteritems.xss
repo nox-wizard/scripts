@@ -77,24 +77,27 @@
 #define $item_display_case_19 140319
 
 //container 140401-140600
-#define $item_large_wooden_crate 140401
-#define $item_medium_wooden_crate1 140402
-#define $item_medium_wooden_crate2 140403
-#define $item_wooden_chest1 140405
-#define $item_wooden_chest2 140406
-#define $item_tub 140407
-#define $item_wooden_keg1_1 140408
-#define $item_wooden_keg1_2 140409
-#define $item_wooden_keg2_1 140410
-#define $item_open_wooden_keg 140411
-#define $item_bucket 140412
-#define $item_barrel_lid 140413
-#define $item_barrel_without_lid 140414
-#define $item_barrel_with_lid 140415
-#define $item_barrel_staves 140416
-#define $item_barrel_hoops 140417
-#define $item_barrel_hoops2 140418
-#define $item_barrel_hoops3 140419
+#define $item_large_wooden_crate1 140401
+#define $item_large_wooden_crate2 140402
+#define $item_medium_wooden_crate1 140403
+#define $item_medium_wooden_crate2 140404
+#define $item_small_wooden_crate1 140405
+#define $item_small_wooden_crate2 140406
+#define $item_wooden_chest1 140407
+#define $item_wooden_chest2 140408
+#define $item_tub 140409
+#define $item_wooden_keg1_1 140410
+#define $item_wooden_keg1_2 140411
+#define $item_wooden_keg2_1 140412
+#define $item_open_wooden_keg 140413
+#define $item_bucket 140414
+#define $item_barrel_lid 140415
+#define $item_barrel_without_lid 140416
+#define $item_barrel_with_lid 140417
+#define $item_barrel_staves 140418
+#define $item_barrel_hoops 140419
+#define $item_barrel_hoops2 140420
+#define $item_barrel_hoops3 140421
 
 //furniture 200000-300000
 //yew 200000-200499

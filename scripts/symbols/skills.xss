@@ -25,7 +25,7 @@
 #define $skill_inscription 23
 #define $skill_lockpicking 24
 #define $skill_magery 25
-#define $skill_magic_resistance 26
+#define $skill_magic_RESISTANCE 26
 #define $skill_tactics 27
 #define $skill_snooping 28
 #define $skill_musicianship 29

@@ -124,26 +124,6 @@ SECTION ITEM $item_wooden_box_1
     MOVABLE 1
 }
 
-SECTION ITEM $item_small_wooden_crate
-{
-    NAME small wooden crate
-    ID 0E7E
-    TYPE $itype_container
-    VALUE 45
-    WEIGHT 100
-    MOVABLE 1
-}
-
-SECTION ITEM $item_small_wooden_crate_1
-{
-    NAME small wooden crate
-    ID 09a9
-    TYPE $itype_container
-    VALUE 45
-    WEIGHT 100
-    MOVABLE 1
-}
-
 SECTION ITEM $item_brass_box
 {
     NAME brass box
@@ -236,8 +216,6 @@ SECTION ITEM $item_bar_door
 {
     NAME bar door
     ID 190E
-    OPENFX 235
-    CLOSEFX 242
     TYPE $itype_door
 }
 
@@ -245,8 +223,6 @@ SECTION ITEM $item_bar_door_1
 {
     NAME bar door
     ID 190F
-    OPENFX 235
-    CLOSEFX 242
     TYPE $itype_door
 }
 
@@ -309,7 +285,6 @@ SECTION ITEM $item_bugmans_brew
     ID 1F7F
     VALUE 50
     TRIGGER $itrg_drink_ale
-    NODECAY
     GOOD 3
 }
 
@@ -545,7 +520,7 @@ SECTION ITEM $item_a_master_shard_key
     NAME a master shard key
     ID 1012
     TYPE $itype_key
-#MORE FF FF FF FF
+    //MORE FF FF FF FF
     MORE -1
 }
 
@@ -1623,38 +1598,44 @@ SECTION ITEM $item_pet_pack_llama
 }
 
 SECTION ITEM $item_wash_basin
-{ wash basin with water
+{
+    NAME wash basin with water
     ID 1008
     DECAY
-    TRIGTYPE 0
-    TRIGGER
 }
 
 SECTION ITEM $item_spittoon
-{ spittoon
+{
+    NAME spittoon
     ID 1003
     DECAY
-    TRIGTYPE 0
-    TRIGGER 
 }
 
+//training dummy (facing south)
 SECTION ITEM $item_training_dummy
-{ training dummy (facing south)
+{
+    NAME training dummy (facing south)
     ID 1070
 }
 
+// training dummy (facing east)
 SECTION ITEM $item_training_dummy_1
-{ training dummy (facing east)
+{
+    NAME training dummy
     ID 1074
 }
 
+//pickpocket dip (facing south)
 SECTION ITEM $item_pickpocket_dip
-{ pickpocket dip (facing south)
+{
+    NAME pickpocket dip
     ID 1E2C
 }
 
+//pickpocket dip (facing east)
 SECTION ITEM $item_pickpocket_dip_1
-{ pickpocket dip (facing east)
+{
+    NAME pickpocket dip
     ID 1E2D
 }
 
@@ -2566,7 +2547,6 @@ SECTION ITEM $item_a_wooden_chest
     MOREY 1
     MOREZ 2
     AMOUNT 1
-    NODECAY
 }
 
 SECTION ITEM $item_christmas_tree
@@ -2585,7 +2565,6 @@ SECTION ITEM $item_a_christmas_gift_chest
     MOREY 1
     MOREZ 2
     AMOUNT 1
-    NODECAY
 }
 
 SECTION ITEM $item_a_wooden_chest_1
@@ -2670,7 +2649,6 @@ SECTION ITEM $item_a_chest_item_spawner_spawner_-low-
     MOREY 2
     MOREZ 3
     AMOUNT 1
-    NODECAY
     VISIBLE 1
 }
 
@@ -2683,7 +2661,6 @@ SECTION ITEM $item_a_chest_item_spawner_spawner_-mid-
     MOREY 2
     MOREZ 3
     AMOUNT 1
-    NODECAY
     VISIBLE 1
 }
 
@@ -2696,7 +2673,6 @@ SECTION ITEM $item_a_chest_item_spawner_spawner_-high-
     MOREY 2
     MOREZ 3
     AMOUNT 1
-    NODECAY
     VISIBLE 1
 }
 

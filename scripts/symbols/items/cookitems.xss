@@ -152,6 +152,7 @@
 #define $item_slices_of_bacon_2 102708
 #define $item_bowl_of_stew 102709
 #define $item_stew 102710
+#define $item_spam 102711
 
 #define $item_eggs 102901
 #define $item_eggshells 102902
@@ -303,8 +304,8 @@
 #define $item_tray_2 105203
 #define $item_plate 105204
 #define $item_dirty_plate 105205
-#define $item_dirty plate_2 105206
-#define $item_dirty plate_3 105207
+#define $item_dirty_plate_2 105206
+#define $item_dirty_plate_3 105207
 #define $item_plate_of_food 105208
 #define $item_plate_of_food_2 105209
 #define $item_plate_of_food_3 105210

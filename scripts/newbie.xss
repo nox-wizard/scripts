@@ -76,7 +76,7 @@ SECTION BESTSKILL $skill_bowcrafting
 }
 
 SECTION BESTSKILL $skill_peacemaking
-{ // PEACEMAKING
+{ // //PEACEMAKING
     PACKITEM $item_instruments_list
 }
 
@@ -113,7 +113,7 @@ SECTION BESTSKILL $skill_detect_hidden
 }
 
 SECTION BESTSKILL $skill_enticement
-{ // ENTICEMENT
+{ // //ENTICEMENT
     PACKITEM $item_instruments_list
 }
 
@@ -178,7 +178,7 @@ SECTION BESTSKILL $skill_magery
     PACKITEM $item_first_circle_scrolls_list
 }
 
-SECTION BESTSKILL $skill_magic_resistance
+SECTION BESTSKILL $skill_magic_RESISTANCE
 { // MAGIC RESISTANCE
 }
 

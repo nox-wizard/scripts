@@ -12,18 +12,18 @@ SECTION RACE $race_avariel
 	MODE ON
 	NAME Avariel
 	RACETYPE NPC NPC
-  #COPY GENDER DEFAULT
-	FAMILY $race_elf
+	#copy GENDER DEFAULT
+	//FAMILY $race_elf
 	DESCRIPTION $race_avariel
 	//
 	// Stats
 	//
-  	STRSTART  15
-	STRCAP    85
-	DEXSTART  25
-	DEXCAP   120
-	INTSTART  20
-	INTCAP   110
+	STRSTART 15
+	STRCAP	85
+	DEXSTART 25
+	DEXCAP 120
+	INTSTART 20
+	INTCAP 110
 	//
 	// Appearance
 	//
@@ -31,9 +31,9 @@ SECTION RACE $race_avariel
 	HAIR OPTIONAL
 	SKINCOLOR $race_avariel
 	//
-	// Resistances
+	// RESISTANCEs
 	//
-  #copy POISONRESISTANCE DEFAULT
+	#copy POISONRESISTANCE DEFAULT
 	//
 	// Miscellaneous
 	//
@@ -69,7 +69,7 @@ SECTION RACE $race_avariel
 	LUMBERJACKING $skill_lumberjacking
 	MACEFIGHTING $skill_macefighting
 	MAGERY $skill_magery
-	MAGICRESISTANCE $skill_magic_resistance
+	MAGICRESISTANCE $skill_magic_RESISTANCE
 	MEDITATION $skill_meditation
 	MINING $skill_mining
 	MUSICIANSHIP $skill_musicianship

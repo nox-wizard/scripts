@@ -573,19 +573,19 @@ SECTION RACESKILLADVANCE $skill_magery
 // --------------------------------------------------------------------
 //
 
-SECTION RACESKILL $skill_magic_resistance
+SECTION RACESKILL $skill_magic_RESISTANCE
 {
-	ID $skill_magic_resistance
+	ID $skill_magic_RESISTANCE
   	MODIFIER $race_skill_modifier_default
-  	ADVANCE $skill_magic_resistance
+  	ADVANCE $skill_magic_RESISTANCE
 	CANUSESKILL
 	CANUSEADVANCE
 	CANUSEMODIFIER
 }
 
-SECTION RACESKILLADVANCE $skill_magic_resistance
+SECTION RACESKILLADVANCE $skill_magic_RESISTANCE
 {
-  #copy SKILL $skill_magic_resistance
+  #copy SKILL $skill_magic_RESISTANCE
 }
 
 //

@@ -527,7 +527,20 @@ SECTION ITEM $item_display_case_19
     ID 0B17
 }
 
-SECTION ITEM $item_large_wooden_crate
+SECTION ITEM $item_large_wooden_crate1
+{
+    NAME large wooden crate
+    ID 0e3d
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 300
+    MOVABLE 1
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
+}
+
+SECTION ITEM $item_large_wooden_crate2
 {
     NAME large wooden crate
     ID 0E3C
@@ -535,6 +548,9 @@ SECTION ITEM $item_large_wooden_crate
     VALUE 60
     WEIGHT 300
     MOVABLE 1
+    
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
 }
 
 SECTION ITEM $item_medium_wooden_crate1
@@ -545,6 +561,9 @@ SECTION ITEM $item_medium_wooden_crate1
     VALUE 55
     WEIGHT 200
     MOVABLE 1
+    
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
 }
 
 
@@ -556,6 +575,35 @@ SECTION ITEM $item_medium_wooden_crate2
     VALUE 55
     WEIGHT 200
     MOVABLE 1
+    
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
+}
+
+SECTION ITEM $item_small_wooden_crate1
+{
+    NAME small wooden crate
+    ID 0E7E
+    TYPE $itype_container
+    VALUE 45
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
+}
+
+SECTION ITEM $item_small_wooden_crate2
+{
+    NAME small wooden crate
+    ID 09a9
+    TYPE $itype_container
+    VALUE 45
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
 }
 
 SECTION ITEM $item_wooden_chest1
@@ -566,6 +614,9 @@ SECTION ITEM $item_wooden_chest1
     VALUE 55
     WEIGHT 300
     MOVABLE 1
+    
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
 }
 
 SECTION ITEM $item_wooden_chest2
@@ -576,6 +627,9 @@ SECTION ITEM $item_wooden_chest2
     VALUE 55
     WEIGHT 300
     MOVABLE 1
+    
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
 }
 
 SECTION ITEM $item_tub
@@ -596,6 +650,9 @@ SECTION ITEM $item_barrel_without_lid
     VALUE 35
     WEIGHT 200
     @ONDBLCLICK _cooking
+    
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
 }
 
 SECTION ITEM $item_barrel_with_lid
@@ -657,6 +714,9 @@ SECTION ITEM $item_open_wooden_keg
     WEIGHT 200
     MOVABLE 1
     @ONDBLCLICK _cooking
+    
+    ///CATEGORY Miscellaneous
+    ///SUBSECTION Containers
 }
 
 SECTION ITEM $item_wooden_keg1_1

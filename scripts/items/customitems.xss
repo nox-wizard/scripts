@@ -1,3 +1,4 @@
+
 SECTION ITEM $item_smithy_hammer
 {
     NAME smithy's hammer
@@ -14,7 +15,6 @@ SECTION ITEM $item_smithy_hammer
     WEIGHT 500
     DAMAGETYPE $damage_bludgeon
 }
-
 
 SECTION ITEM $item_forge
 { 
@@ -92,6 +92,5 @@ SECTION ITEM $item_tweaktest
 {
     NAME Test Tweak
     ID 14e7
-    @ONDBLCLICK command_tweak
+    @ONDBLCLICK housestart
 }
-
