@@ -170,10 +170,15 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 \params all standard target callback params
 \brief handles the destination targetting in 'move when called without params
 */
-public cmd_move_targ_dst(target, chr, unused, x, y, z, unused2, param)
+public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 {
-	if(x != INVALID && y != INVALID && param != INVALID)
+	printf("t: %d - chr:%d - o:%d - x,y,z:%d %d %d - %d^n",target,chr,object,x,y,z,unused2);
+	
+	if((x != INVALID && y != INVALID) || object != INVALID)
 	{
+		if(isItem(object)) itm_getPosition(object,x,y,z);
+		else if(isChar(object)) chr_getPosition(object,x,y,z);
+		
 		if(isChar(param))
 			chr_moveTo(param,x,y,z);
 		if(isItem(param))
@@ -187,7 +192,7 @@ public cmd_move_targ_dst(target, chr, unused, x, y, z, unused2, param)
 		area_refresh(chr_getCmdArea(chr));
 		return;
 	}
-	chr_message(chr,_,"You must target a location!");	
+	chr_message(chr,_,"You must target a location or an object!");	
 }
 
 /*!

@@ -1224,8 +1224,8 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 	new  START_X = 0;
 	new  START_Y = 0;
 	
-	new COLS = 30;
-	new ROWS = 4;
+	new COLS = 70;
+	new ROWS = 20;
 	
 	new  WIDTH =  COLS*COL;
 	new  HEIGHT = (ROWS + 2)*ROW;
@@ -1257,33 +1257,58 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 	gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,1);
 	gui_addText(menu,x + BTNW,y,TXT_COLOR,"Open menu");
 	
+	y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"This menu will generate a list of items"); 			y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"basing on the informations provided above.");			y += 2*ROW;
+	
+	gui_addText(menu,x,y,TXT_COLOR,"'Item type' can be: wall, stairs, floor, roof");		y += 2*ROW;
+	
+	gui_addText(menu,x,y,TXT_COLOR,"'Material' depends on the itemtype:");				y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"wall: stone, brick, log, marble, rattan, hide, tent, ruined");	y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"      sandstone, wooden, bamboo, plaster, cave, dungeon");	y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"stairs: marble, stone, sandstone, wooden, carpeted, cave");	y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"floor: marble, sandstone, planks, boards, logs, bricks, tiles");	y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"       flagstones, cobblestones, cave");			y += 2*ROW;
+	
+	gui_addText(menu,x,y,TXT_COLOR,"'subtype': a number 2,3,4 ...");
+	
 	gui_show(menu,chr);
 }
 
 public addgui_arch_cback(menu,chr,btncode)
 {
+	if(!btncode) return;
+	
 	new def[100],basedef[100],type[20],material[20],subtype[2];
-	gui_getProperty(menu,MP_UNI_TEXT,0,type);
-	gui_getProperty(menu,MP_UNI_TEXT,1,material);
-	gui_getProperty(menu,MP_UNI_TEXT,2,subtype);
-	
-	sprintf(type,"_%s",type);
-	if(strcmp(material,"")) sprintf(material,"_%s",material);
-	if(!strcmp(subtype,"0") || !strcmp(subtype,"1")) sprintf(subtype,"");
+	if(menu != INVALID)
+	{
+		gui_getProperty(menu,MP_UNI_TEXT,0,type);
+		gui_getProperty(menu,MP_UNI_TEXT,1,material);
+		gui_getProperty(menu,MP_UNI_TEXT,2,subtype);
 		
-	sprintf(basedef,"$item%s%s%s",material,type,subtype);
+		sprintf(type,"_%s",type);
+		if(strcmp(material,"")) sprintf(material,"_%s",material);
+		if(!strcmp(subtype,"0") || !strcmp(subtype,"1")) sprintf(subtype,"");
+			
+		sprintf(basedef,"$item%s%s%s",material,type,subtype);
+		
+		
+		chr_addLocalStrVar(chr,CLV_CMDADDTEMP,basedef);
+	}
+	else chr_getLocalStrVar(chr,CLV_CMDADDTEMP,basedef);
+
 	sprintf(def,"%s_1",basedef);
-	
+		
 	if(getIntFromDefine(def) <= 0)
 	{
 		chr_message(chr,_,"%s %s %s is not defined",material,type,subtype);
 		return;
 	}
-
+	
 	new  START_X = 0;
 	new  START_Y = 0;
 	
-	new COLS = 40;
+	new COLS = 39;
 	new ROWS = 19;
 	
 	new  WIDTH =  COLS*COL;
@@ -1291,9 +1316,15 @@ public addgui_arch_cback(menu,chr,btncode)
 	
 	new tabx = 10;	
 	new taby = 7;
+	
+	if(isStrContainedInStr("floor",def) || isStrContainedInStr("roof",def))
+	{
+		tabx = 7;
+		taby = 3;
+	}
 		
 	new x,y;
-	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_arch_cback2");
+	menu = gui_create(START_X,START_Y,true,true,true,"addgui_arch_cback2");
 	
 	//draw menu frame
 	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT + ROW );
@@ -1312,9 +1343,11 @@ public addgui_arch_cback(menu,chr,btncode)
 		{
 			y = START_Y + ROW/2 + ROW;
 			++p;
-			gui_addPageButton(menu,(START_X + WIDTH)/2 + 2*PBTNW,START_Y + HEIGHT,PBTN_UP,PBTN_DOWN,p);
+			gui_addText(menu,(START_X + WIDTH)/2 + 2*BTNW,START_Y + HEIGHT,TXT_COLOR,"next");
+			gui_addPageButton(menu,(START_X + WIDTH)/2 + BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p);
 			gui_addPage(menu,p);
-			gui_addPageButton(menu,(START_X + WIDTH)/2 - 2*PBTNW,START_Y + HEIGHT,PBTN_UP,PBTN_DOWN,p - 1);
+			gui_addText(menu,(START_X + WIDTH)/2 - 6*COL,START_Y + HEIGHT,TXT_COLOR,"prev");
+			gui_addPageButton(menu,(START_X + WIDTH)/2 - BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p - 1);
 		}
 		
 		scriptID = getIntFromDefine(def);
@@ -1341,10 +1374,16 @@ public addgui_arch_cback(menu,chr,btncode)
 
 public addgui_arch_cback2(menu,chr,btncode)
 {
-	if(!btncode)	return;
+	if(!btncode)
+	{
+		chr_delLocalVar(chr,CLV_CMDADDTEMP);
+		return;
+	}
 	
 	chr_message(chr,_,"click to position the item");
 	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
+	addgui_arch_cback(INVALID,chr,1)
+	
 }
 
 //==================================================================================//

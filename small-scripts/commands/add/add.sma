@@ -147,7 +147,7 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 			}
 				
 		#if _CMD_DEBUG_
-			printf("^tItem %d created",itm);
+			printf("^tItem %d created^n",itm);
 		#endif
 	
 		return;

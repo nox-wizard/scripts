@@ -1,3 +1,31 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (architecture.xss)                                ||
+// || Maintained by Fax		                                           ||
+// || Last Update 20-mar-2004                                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82 or later                        ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//=========================================================================//
+//This file contains ALL building items(walls, floors, stairs, roofs)      
+//Every item is defined only with the ID.
+//If you keep the same name structure when you add an item it will automatically
+//be added in the 'add menu, the structure is:
+//$item_<material>_<type><subtype>_<number>
+//
+//material: is the material the item is made of
+//type:is the item type,i.e.: roof,floor...
+//subtype: is a number to distinguish between two items of the same type
+//number: a progressive number starting from 1 that identifies different items of the same kind
+//
+//To better understand the naming rules look at the defined items and compare them with
+// the UO .mul entries (with insideUO), you will immediatly understand what I mean.
+//=========================================================================//
+
+
+//=========================================================================//
+//                                 WALLS                                   //
+//=========================================================================//
 SECTION ITEM $item_wooden_wall_1
 {
     ID 0006
@@ -3735,6 +3763,10 @@ SECTION ITEM $item_stone_wall6_24
     ID 03E2
 }
 
+
+//=========================================================================//
+//                                 STAIRS                                  //
+//=========================================================================//
 SECTION ITEM $item_sandostone_stairs_1
 {
     ID 03EF
@@ -4758,4 +4790,2336 @@ SECTION ITEM $item_stone_stairs_32
 SECTION ITEM $item_stone_stairs_33
 {
     ID 07E0
+}
+
+
+//=========================================================================//
+//                                 FLOORS                                  //
+//=========================================================================//
+SECTION ITEM $item_floor_1
+{
+    ID 0491
+}
+
+SECTION ITEM $item_floor_2
+{
+    ID 0492
+}
+
+SECTION ITEM $item_floor_3
+{
+    ID 0493
+}
+
+SECTION ITEM $item_floor_4
+{
+    ID 0494
+}
+
+SECTION ITEM $item_marble_floor_1
+{
+    ID 0495
+}
+
+SECTION ITEM $item_marble_floor_2
+{
+    ID 0496
+}
+
+SECTION ITEM $item_marble_floor_3
+{
+    ID 0497
+}
+
+SECTION ITEM $item_marble_floor_4
+{
+    ID 0498
+}
+
+SECTION ITEM $item_floor_5
+{
+    ID 049B
+}
+
+SECTION ITEM $item_floor_6
+{
+    ID 049C
+}
+
+SECTION ITEM $item_sandstone_floor_1
+{
+    ID 049D
+}
+
+SECTION ITEM $item_sandstone_floor_2
+{
+    ID 049E
+}
+
+SECTION ITEM $item_sandstone_floor_3
+{
+    ID 049F
+}
+
+SECTION ITEM $item_sandstone_floor_4
+{
+    ID 04A0
+}
+
+SECTION ITEM $item_planks_floor_1
+{
+    ID 04A1
+}
+
+SECTION ITEM $item_planks_floor_2
+{
+    ID 04A2
+}
+
+SECTION ITEM $item_planks_floor_3
+{
+    ID 04A3
+}
+
+SECTION ITEM $item_planks_floor_4
+{
+    ID 04A4
+}
+
+SECTION ITEM $item_boards_floor_1
+{
+    ID 04A5
+}
+ 
+SECTION ITEM $item_boards_floor_2
+{
+    ID 04A6
+}
+ 
+SECTION ITEM $item_boards_floor_3
+{
+    ID 04A7
+}
+ 
+SECTION ITEM $item_boards_floor_4
+{
+    ID 04A8
+}
+ 
+SECTION ITEM $item_boards_floor_5
+{
+    ID 04A9
+}
+ 
+SECTION ITEM $item_boards_floor_6
+{
+    ID 04AA
+}
+ 
+SECTION ITEM $item_boards_floor_7
+{
+    ID 04AB
+}
+ 
+SECTION ITEM $item_boards_floor_8
+{
+    ID 04AC
+}
+ 
+SECTION ITEM $item_boards_floor_9
+{
+    ID 04AD
+}
+ 
+SECTION ITEM $item_boards_floor_10
+{
+    ID 04AE
+}
+
+SECTION ITEM $item_boards_floor_11
+{
+    ID 04AF
+}
+
+SECTION ITEM $item_boards_floor_12
+{
+    ID 04B0
+}
+
+SECTION ITEM $item_boards_floor_13
+{
+    ID 04B1
+}
+
+SECTION ITEM $item_boards_floor_14
+{
+    ID 04B2
+}
+
+SECTION ITEM $item_boards_floor_15
+{
+    ID 04B3
+}
+
+SECTION ITEM $item_boards_floor_16
+{
+    ID 04B4
+}
+
+SECTION ITEM $item_boards_floor_17
+{
+    ID 04B5
+}
+
+SECTION ITEM $item_boards_floor_18
+{
+    ID 04B6
+}
+
+SECTION ITEM $item_boards_floor_19
+{
+    ID 04B7
+}
+
+SECTION ITEM $item_boards_floor_20
+{
+    ID 04B8
+}
+
+SECTION ITEM $item_boards_floor_21
+{
+    ID 04B9
+}
+
+SECTION ITEM $item_boards_floor_22
+{
+    ID 04BA
+}
+
+SECTION ITEM $item_boards_floor_23
+{
+    ID 04BB
+}
+
+SECTION ITEM $item_boards_floor_24
+{
+    ID 04BC
+}
+
+SECTION ITEM $item_boards_floor_25
+{
+    ID 04BD
+}
+
+SECTION ITEM $item_boards_floor_26
+{
+    ID 04BE
+}
+
+SECTION ITEM $item_boards_floor_27
+{
+    ID 04BF
+}
+
+SECTION ITEM $item_boards_floor_28
+{
+    ID 04C0
+}
+
+SECTION ITEM $item_logs_floor_1
+{
+    ID 04C1
+}
+
+SECTION ITEM $item_logs_floor_2
+{
+    ID 04C2
+}
+
+SECTION ITEM $item_logs_floor_3
+{
+    ID 04C3
+}
+
+SECTION ITEM $item_logs_floor_4
+{
+    ID 04C4
+}
+
+SECTION ITEM $item_logs_floor_5
+{
+    ID 04C5
+}
+
+SECTION ITEM $item_planks_floor_5
+{
+    ID 04C6
+}
+ 
+SECTION ITEM $item_planks_floor_6
+{
+    ID 04C7
+}
+ 
+SECTION ITEM $item_planks_floor_7
+{
+    ID 04C8
+}
+ 
+SECTION ITEM $item_planks_floor_8
+{
+    ID 04C9
+}
+ 
+SECTION ITEM $item_planks_floor_9
+{
+    ID 04CA
+}
+ 
+SECTION ITEM $item_planks_floor_10
+{
+    ID 04CB
+}
+
+SECTION ITEM $item_planks_floor_11
+{
+    ID 04CC
+}
+
+SECTION ITEM $item_planks_floor_12
+{
+    ID 04CD
+}
+
+SECTION ITEM $item_planks_floor_13
+{
+    ID 04CE
+}
+
+SECTION ITEM $item_planks_floor_14
+{
+    ID 04CF
+}
+
+SECTION ITEM $item_planks_floor_15
+{
+    ID 04D0
+}
+
+SECTION ITEM $item_planks_floor_16
+{
+    ID 04D1
+}
+
+SECTION ITEM $item_planks_floor_17
+{
+    ID 04D2
+}
+
+SECTION ITEM $item_planks_floor_18
+{
+    ID 04D3
+}
+
+SECTION ITEM $item_planks_floor_19
+{
+    ID 04D4
+}
+
+SECTION ITEM $item_planks_floor_20
+{
+    ID 04D5
+}
+
+SECTION ITEM $item_planks_floor_21
+{
+    ID 04D6
+}
+
+SECTION ITEM $item_planks_floor_22
+{
+    ID 04D7
+}
+
+SECTION ITEM $item_planks_floor_23
+{
+    ID 04D8
+}
+
+SECTION ITEM $item_planks_floor_24
+{
+    ID 04D9
+}
+
+SECTION ITEM $item_planks_floor_25
+{
+    ID 04DA
+}
+
+SECTION ITEM $item_planks_floor_26
+{
+    ID 04DB
+}
+
+SECTION ITEM $item_planks_floor_27
+{
+    ID 04DC
+}
+
+SECTION ITEM $item_planks_floor_28
+{
+    ID 04DD
+}
+
+SECTION ITEM $item_planks_floor_29
+{
+    ID 04DE
+}
+
+SECTION ITEM $item_planks_floor_30
+{
+    ID 04DF
+}
+
+SECTION ITEM $item_planks_floor_31
+{
+    ID 04E0
+}
+
+SECTION ITEM $item_planks_floor_32
+{
+    ID 04E1
+}
+
+SECTION ITEM $item_bricks_floor_1
+{
+    ID 04E2
+}
+
+SECTION ITEM $item_bricks_floor_2
+{
+    ID 04E3
+}
+
+SECTION ITEM $item_bricks_floor_3
+{
+    ID 04E4
+}
+
+SECTION ITEM $item_bricks_floor_4
+{
+    ID 04E5
+}
+
+SECTION ITEM $item_bricks_floor_5
+{
+    ID 04E6
+}
+
+SECTION ITEM $item_bricks_floor_6
+{
+    ID 04E7
+}
+
+SECTION ITEM $item_bricks_floor_7
+{
+    ID 04E8
+}
+
+SECTION ITEM $item_bricks_floor_8
+{
+    ID 04E9
+}
+
+SECTION ITEM $item_tiles_floor_1
+{
+    ID 04EA
+}
+ 
+SECTION ITEM $item_tiles_floor_2
+{
+    ID 04EB
+}
+ 
+SECTION ITEM $item_tiles_floor_3
+{
+    ID 04EC
+}
+ 
+SECTION ITEM $item_tiles_floor_4
+{
+    ID 04ED
+}
+ 
+SECTION ITEM $item_tiles_floor_5
+{
+    ID 04EE
+}
+ 
+SECTION ITEM $item_tiles_floor_6
+{
+    ID 04EF
+}
+ 
+SECTION ITEM $item_tiles_floor_7
+{
+    ID 04F0
+}
+ 
+SECTION ITEM $item_tiles_floor_8
+{
+    ID 04F1
+}
+ 
+SECTION ITEM $item_tiles_floor_9
+{
+    ID 04F2
+}
+ 
+SECTION ITEM $item_tiles_floor_10
+{
+    ID 04F3
+}
+
+SECTION ITEM $item_tiles_floor_11
+{
+    ID 04F4
+}
+
+SECTION ITEM $item_tiles_floor_12
+{
+    ID 04F5
+}
+
+SECTION ITEM $item_tiles_floor_13
+{
+    ID 04F6
+}
+
+SECTION ITEM $item_tiles_floor_14
+{
+    ID 04F7
+}
+
+SECTION ITEM $item_tiles_floor_15
+{
+    ID 04F8
+}
+
+SECTION ITEM $item_tiles_floor_16
+{
+    ID 04F9
+}
+
+SECTION ITEM $item_tiles_floor_17
+{
+    ID 04FA
+}
+
+SECTION ITEM $item_tiles_floor_18
+{
+    ID 04FB
+}
+
+SECTION ITEM $item_flagstones_floor_1
+{
+    ID 04FC
+}
+
+SECTION ITEM $item_flagstones_floor_2
+{
+    ID 04FD
+}
+
+SECTION ITEM $item_flagstones_floor_3
+{
+    ID 04FE
+}
+
+SECTION ITEM $item_flagstones_floor_4
+{
+    ID 04FF
+}
+
+SECTION ITEM $item_flagstones_floor_5
+{
+    ID 0500
+}
+
+SECTION ITEM $item_flagstones_floor_6
+{
+    ID 0501
+}
+
+SECTION ITEM $item_flagstones_floor_7
+{
+    ID 0502
+}
+
+SECTION ITEM $item_flagstones_floor_8
+{
+    ID 0503
+}
+
+SECTION ITEM $item_logs_floor_6
+{
+    ID 0504
+}
+ 
+SECTION ITEM $item_logs_floor_7
+{
+    ID 0505
+}
+ 
+SECTION ITEM $item_logs_floor_8
+{
+    ID 0506
+}
+ 
+SECTION ITEM $item_logs_floor_9
+{
+    ID 0507
+}
+ 
+SECTION ITEM $item_logs_floor_10
+{
+    ID 0508
+}
+
+SECTION ITEM $item_logs_floor_11
+{
+    ID 0509
+}
+
+SECTION ITEM $item_logs_floor_12
+{
+    ID 050A
+}
+
+SECTION ITEM $item_logs_floor_13
+{
+    ID 050B
+}
+
+SECTION ITEM $item_logs_floor_14
+{
+    ID 050C
+}
+
+SECTION ITEM $item_marble_floor_5
+{
+    ID 050D
+}
+ 
+SECTION ITEM $item_marble_floor_6
+{
+    ID 050E
+}
+ 
+SECTION ITEM $item_marble_floor_7
+{
+    ID 050F
+}
+ 
+SECTION ITEM $item_marble_floor_8
+{
+    ID 0510
+}
+ 
+SECTION ITEM $item_marble_floor_9
+{
+    ID 0511
+}
+ 
+SECTION ITEM $item_marble_floor_10
+{
+    ID 0512
+}
+
+SECTION ITEM $item_marble_floor_11
+{
+    ID 0513
+}
+
+SECTION ITEM $item_marble_floor_12
+{
+    ID 0514
+}
+
+SECTION ITEM $item_cobblestones_floor_1
+{
+    ID 0515
+}
+
+SECTION ITEM $item_cobblestones_floor_2
+{
+    ID 0516
+}
+
+SECTION ITEM $item_cobblestones_floor_3
+{
+    ID 0517
+}
+
+SECTION ITEM $item_cobblestones_floor_4
+{
+    ID 0518
+}
+
+SECTION ITEM $item_stone_floor_1
+{
+    ID 0519
+}
+ 
+SECTION ITEM $item_stone_floor_2
+{
+    ID 051A
+}
+ 
+SECTION ITEM $item_stone_floor_3
+{
+    ID 051B
+}
+ 
+SECTION ITEM $item_stone_floor_4
+{
+    ID 051C
+}
+ 
+SECTION ITEM $item_stone_floor_5
+{
+    ID 051D
+}
+ 
+SECTION ITEM $item_stone_floor_6
+{
+    ID 051E
+}
+ 
+SECTION ITEM $item_stone_floor_7
+{
+    ID 051F
+}
+ 
+SECTION ITEM $item_stone_floor_8
+{
+    ID 0520
+}
+ 
+SECTION ITEM $item_stone_floor_9
+{
+    ID 0521
+}
+ 
+SECTION ITEM $item_stone_floor_10
+{
+    ID 0522
+}
+
+SECTION ITEM $item_stone_floor_11
+{
+    ID 0523
+}
+
+SECTION ITEM $item_stone_floor_12
+{
+    ID 0524
+}
+
+SECTION ITEM $item_sandstone_floor_5
+{
+    ID 0525
+}
+ 
+SECTION ITEM $item_sandstone_floor_6
+{
+    ID 0526
+}
+ 
+SECTION ITEM $item_sandstone_floor_7
+{
+    ID 0527
+}
+ 
+SECTION ITEM $item_sandstone_floor_8
+{
+    ID 0528
+}
+ 
+SECTION ITEM $item_sandstone_floor_9
+{
+    ID 0529
+}
+ 
+SECTION ITEM $item_sandstone_floor_10
+{
+    ID 052A
+}
+
+SECTION ITEM $item_sandstone_floor_11
+{
+    ID 052B
+}
+
+SECTION ITEM $item_sandstone_floor_12
+{
+    ID 052C
+}
+
+SECTION ITEM $item_
+{
+    ID 052D
+}
+
+SECTION ITEM $item_
+{
+    ID 052E
+}
+
+SECTION ITEM $item_sandstone_floor_13
+{
+    ID 052F
+}
+
+SECTION ITEM $item_sandstone_floor_14
+{
+    ID 0530
+}
+
+SECTION ITEM $item_sandstone_floor_15
+{
+    ID 0531
+}
+
+SECTION ITEM $item_sandstone_floor_16
+{
+    ID 0532
+}
+
+SECTION ITEM $item_sandstone_floor_17
+{
+    ID 0533
+}
+
+SECTION ITEM $item_sandstone_floor_18
+{
+    ID 0534
+}
+
+SECTION ITEM $item_sandstone_floor_19
+{
+    ID 0535
+}
+
+SECTION ITEM $item_sandstone_floor_20
+{
+    ID 0536
+}
+
+SECTION ITEM $item_bricks_floor_9
+{
+    ID 0537
+}
+
+SECTION ITEM $item_bricks_floor_10
+{
+    ID 0538
+}
+
+SECTION ITEM $item_bricks_floor_11
+{
+    ID 0539
+}
+
+SECTION ITEM $item_bricks_floor_12
+{
+    ID 053A
+}
+
+SECTION ITEM $item_cave_floor_1
+{
+    ID 053B
+}
+ 
+SECTION ITEM $item_cave_floor_2
+{
+    ID 053C
+}
+ 
+SECTION ITEM $item_cave_floor_3
+{
+    ID 053D
+}
+ 
+SECTION ITEM $item_cave_floor_4
+{
+    ID 053E
+}
+ 
+SECTION ITEM $item_cave_floor_5
+{
+    ID 053F
+}
+ 
+SECTION ITEM $item_cave_floor_6
+{
+    ID 0540
+}
+ 
+SECTION ITEM $item_cave_floor_7
+{
+    ID 0541
+}
+ 
+SECTION ITEM $item_cave_floor_8
+{
+    ID 0542
+}
+ 
+SECTION ITEM $item_cave_floor_9
+{
+    ID 0543
+}
+ 
+SECTION ITEM $item_cave_floor_10
+{
+    ID 0544
+}
+
+SECTION ITEM $item_cave_floor_11
+{
+    ID 0545
+}
+
+SECTION ITEM $item_cave_floor_12
+{
+    ID 0546
+}
+
+SECTION ITEM $item_cave_floor_13
+{
+    ID 0547
+}
+
+SECTION ITEM $item_cave_floor_14
+{
+    ID 0548
+}
+
+SECTION ITEM $item_cave_floor_15
+{
+    ID 0549
+}
+
+SECTION ITEM $item_cave_floor_16
+{
+    ID 054A
+}
+
+SECTION ITEM $item_cave_floor_17
+{
+    ID 054B
+}
+
+SECTION ITEM $item_cave_floor_18
+{
+    ID 054C
+}
+
+SECTION ITEM $item_cave_floor_19
+{
+    ID 054D
+}
+
+SECTION ITEM $item_cave_floor_20
+{
+    ID 054E
+}
+
+SECTION ITEM $item_cave_floor_21
+{
+    ID 054F
+}
+
+//=========================================================================//
+//                                 ROOFS                                   //
+//=========================================================================//
+SECTION ITEM $item_stone_roof_1
+{
+    ID 0554
+}
+ 
+SECTION ITEM $item_stone_roof_2
+{
+    ID 0555
+}
+ 
+SECTION ITEM $item_stone_roof_3
+{
+    ID 0556
+}
+ 
+SECTION ITEM $item_stone_roof_4
+{
+    ID 0557
+}
+ 
+SECTION ITEM $item_stone_roof_5
+{
+    ID 0558
+}
+ 
+SECTION ITEM $item_stone_roof_6
+{
+    ID 0559
+}
+ 
+SECTION ITEM $item_stone_roof_7
+{
+    ID 055A
+}
+ 
+SECTION ITEM $item_stone_roof_8
+{
+    ID 055B
+}
+ 
+SECTION ITEM $item_stone_roof_9
+{
+    ID 055C
+}
+ 
+SECTION ITEM $item_stone_roof_10
+{
+    ID 055D
+}
+
+SECTION ITEM $item_stone_roof_11
+{
+    ID 055E
+}
+
+SECTION ITEM $item_stone_roof_12
+{
+    ID 055F
+}
+
+SECTION ITEM $item_stone_roof_13
+{
+    ID 0560
+}
+
+SECTION ITEM $item_stone_roof_14
+{
+    ID 0561
+}
+
+SECTION ITEM $item_stone_roof_15
+{
+    ID 0562
+}
+
+SECTION ITEM $item_stone_roof_16
+{
+    ID 0563
+}
+
+SECTION ITEM $item_stone_roof_17
+{
+    ID 0564
+}
+
+SECTION ITEM $item_stone_roof_18
+{
+    ID 0565
+}
+
+SECTION ITEM $item_stone_roof_19
+{
+    ID 0566
+}
+
+SECTION ITEM $item_stone_roof_20
+{
+    ID 0567
+}
+
+SECTION ITEM $item_stone_roof_21
+{
+    ID 0568
+}
+
+SECTION ITEM $item_stone_roof_22
+{
+    ID 0569
+}
+
+SECTION ITEM $item_stone_roof_23
+{
+    ID 056A
+}
+
+SECTION ITEM $item_stone_roof_24
+{
+    ID 056B
+}
+
+SECTION ITEM $item_stone_roof_25
+{
+    ID 056C
+}
+
+SECTION ITEM $item_stone_roof_26
+{
+    ID 056D
+}
+
+SECTION ITEM $item_stone_roof_27
+{
+    ID 056E
+}
+
+SECTION ITEM $item_stone_roof_28
+{
+    ID 056F
+}
+
+SECTION ITEM $item_stone_roof_29
+{
+    ID 0570
+}
+
+SECTION ITEM $item_stone_roof_30
+{
+    ID 0571
+}
+
+SECTION ITEM $item_stone_roof_31
+{
+    ID 0572
+}
+
+SECTION ITEM $item_stone_roof_32
+{
+    ID 0573
+}
+
+SECTION ITEM $item_stone_roof_33
+{
+    ID 0574
+}
+
+SECTION ITEM $item_stone_roof_34
+{
+    ID 0575
+}
+
+SECTION ITEM $item_stone_roof_35
+{
+    ID 0576
+}
+
+SECTION ITEM $item_stone_roof_36
+{
+    ID 0577
+}
+
+SECTION ITEM $item_stone_roof_37
+{
+    ID 0578
+}
+
+SECTION ITEM $item_stone_roof_38
+{
+    ID 0579
+}
+
+SECTION ITEM $item_stone_roof_39
+{
+    ID 057A
+}
+
+SECTION ITEM $item_stone_roof_40
+{
+    ID 057B
+}
+
+SECTION ITEM $item_stone_roof_41
+{
+    ID 057C
+}
+
+SECTION ITEM $item_stone_roof_42
+{
+    ID 057D
+}
+
+SECTION ITEM $item_stone_roof_43
+{
+    ID 057E
+}
+
+SECTION ITEM $item_slate_roof_1
+{
+    ID 057F
+}
+
+SECTION ITEM $item_slate_roof_2
+{
+    ID 0580
+}
+
+SECTION ITEM $item_slate_roof_3
+{
+    ID 0581
+}
+
+SECTION ITEM $item_slate_roof_4
+{
+    ID 0582
+}
+
+SECTION ITEM $item_slate_roof_5
+{
+    ID 0583
+}
+
+SECTION ITEM $item_slate_roof_6
+{
+    ID 0584
+}
+
+SECTION ITEM $item_slate_roof_7
+{
+    ID 0585
+}
+
+SECTION ITEM $item_palm_roof_1
+{
+    ID 0586
+}
+ 
+SECTION ITEM $item_palm_roof_2
+{
+    ID 0587
+}
+ 
+SECTION ITEM $item_palm_roof_3
+{
+    ID 0588
+}
+ 
+SECTION ITEM $item_palm_roof_4
+{
+    ID 0589
+}
+ 
+SECTION ITEM $item_palm_roof_5
+{
+    ID 058A
+}
+ 
+SECTION ITEM $item_palm_roof_6
+{
+    ID 058B
+}
+ 
+SECTION ITEM $item_palm_roof_7
+{
+    ID 058C
+}
+ 
+SECTION ITEM $item_palm_roof_8
+{
+    ID 058D
+}
+ 
+SECTION ITEM $item_palm_roof_9
+{
+    ID 058E
+}
+ 
+SECTION ITEM $item_palm_roof_10
+{
+    ID 058F
+}
+
+SECTION ITEM $item_palm_roof_11
+{
+    ID 0590
+}
+
+SECTION ITEM $item_palm_roof_12
+{
+    ID 0591
+}
+
+SECTION ITEM $item_palm_roof_13
+{
+    ID 0592
+}
+
+SECTION ITEM $item_palm_roof_14
+{
+    ID 0593
+}
+
+SECTION ITEM $item_palm_roof_15
+{
+    ID 0594
+}
+
+SECTION ITEM $item_slate_roof_8
+{
+    ID 0595
+}
+ 
+SECTION ITEM $item_slate_roof_9
+{
+    ID 0596
+}
+ 
+SECTION ITEM $item_slate_roof_10
+{
+    ID 0597
+}
+
+SECTION ITEM $item_slate_roof_11
+{
+    ID 0598
+}
+
+SECTION ITEM $item_slate_roof_12
+{
+    ID 0599
+}
+
+SECTION ITEM $item_slate_roof_13
+{
+    ID 059A
+}
+
+SECTION ITEM $item_slate_roof_14
+{
+    ID 059B
+}
+
+SECTION ITEM $item_slate_roof_15
+{
+    ID 059C
+}
+
+SECTION ITEM $item_slate_roof_16
+{
+    ID 059D
+}
+
+SECTION ITEM $item_slate_roof_17
+{
+    ID 059E
+}
+
+SECTION ITEM $item_slate_roof_18
+{
+    ID 059F
+}
+
+SECTION ITEM $item_slate_roof_19
+{
+    ID 05A0
+}
+
+SECTION ITEM $item_slate_roof_20
+{
+    ID 05A1
+}
+
+SECTION ITEM $item_slate_roof_21
+{
+    ID 05A2
+}
+
+SECTION ITEM $item_slate_roof_22
+{
+    ID 05A3
+}
+
+SECTION ITEM $item_thatch_roof_1
+{
+    ID 05A4
+}
+ 
+SECTION ITEM $item_thatch_roof_2
+{
+    ID 05A5
+}
+ 
+SECTION ITEM $item_thatch_roof_3
+{
+    ID 05A6
+}
+ 
+SECTION ITEM $item_thatch_roof_4
+{
+    ID 05A7
+}
+ 
+SECTION ITEM $item_thatch_roof_5
+{
+    ID 05A8
+}
+ 
+SECTION ITEM $item_thatch_roof_6
+{
+    ID 05A9
+}
+ 
+SECTION ITEM $item_thatch_roof_7
+{
+    ID 05AA
+}
+ 
+SECTION ITEM $item_thatch_roof_8
+{
+    ID 05AB
+}
+ 
+SECTION ITEM $item_thatch_roof_9
+{
+    ID 05AC
+}
+ 
+SECTION ITEM $item_thatch_roof_10
+{
+    ID 05AD
+}
+
+SECTION ITEM $item_thatch_roof_11
+{
+    ID 05AE
+}
+
+SECTION ITEM $item_thatch_roof_12
+{
+    ID 05AF
+}
+
+SECTION ITEM $item_thatch_roof_13
+{
+    ID 05B0
+}
+
+SECTION ITEM $item_thatch_roof_14
+{
+    ID 05B1
+}
+
+SECTION ITEM $item_thatch_roof_15
+{
+    ID 05B2
+}
+
+SECTION ITEM $item_tile_roof_1
+{
+    ID 05B3
+}
+ 
+SECTION ITEM $item_tile_roof_2
+{
+    ID 05B4
+}
+ 
+SECTION ITEM $item_tile_roof_3
+{
+    ID 05B5
+}
+ 
+SECTION ITEM $item_tile_roof_4
+{
+    ID 05B6
+}
+ 
+SECTION ITEM $item_tile_roof_5
+{
+    ID 05B7
+}
+ 
+SECTION ITEM $item_tile_roof_6
+{
+    ID 05B8
+}
+ 
+SECTION ITEM $item_tile_roof_7
+{
+    ID 05B9
+}
+ 
+SECTION ITEM $item_tile_roof_8
+{
+    ID 05BA
+}
+ 
+SECTION ITEM $item_tile_roof_9
+{
+    ID 05BB
+}
+ 
+SECTION ITEM $item_tile_roof_10
+{
+    ID 05BC
+}
+
+SECTION ITEM $item_tile_roof_11
+{
+    ID 05BD
+}
+
+SECTION ITEM $item_tile_roof_12
+{
+    ID 05BE
+}
+
+SECTION ITEM $item_tile_roof_13
+{
+    ID 05BF
+}
+
+SECTION ITEM $item_tile_roof_14
+{
+    ID 05C0
+}
+
+SECTION ITEM $item_tile_roof_15
+{
+    ID 05C1
+}
+
+SECTION ITEM $item_tile_roof_16
+{
+    ID 05C2
+}
+
+SECTION ITEM $item_tile_roof_17
+{
+    ID 05C3
+}
+
+SECTION ITEM $item_tile_roof_18
+{
+    ID 05C4
+}
+
+SECTION ITEM $item_tile_roof_19
+{
+    ID 05C5
+}
+
+SECTION ITEM $item_tile_roof_20
+{
+    ID 05C6
+}
+
+SECTION ITEM $item_tile_roof_21
+{
+    ID 05C7
+}
+
+SECTION ITEM $item_tile_roof_22
+{
+    ID 05C8
+}
+
+SECTION ITEM $item_tile_roof_23
+{
+    ID 05C9
+}
+
+SECTION ITEM $item_tile_roof_24
+{
+    ID 05CA
+}
+
+SECTION ITEM $item_tile_roof_25
+{
+    ID 05CB
+}
+
+SECTION ITEM $item_tile_roof_26
+{
+    ID 05CC
+}
+
+SECTION ITEM $item_tile_roof_27
+{
+    ID 05CD
+}
+
+SECTION ITEM $item_tile_roof_28
+{
+    ID 05CE
+}
+
+SECTION ITEM $item_tile_roof_29
+{
+    ID 05CF
+}
+
+SECTION ITEM $item_tile_roof_30
+{
+    ID 05D0
+}
+
+SECTION ITEM $item_palm_roof_16
+{
+    ID 05D1
+}
+
+SECTION ITEM $item_palm_roof_17
+{
+    ID 05D2
+}
+
+SECTION ITEM $item_palm_roof_18
+{
+    ID 05D3
+}
+
+SECTION ITEM $item_palm_roof_19
+{
+    ID 05D4
+}
+
+SECTION ITEM $item_palm_roof_20
+{
+    ID 05D6
+}
+
+SECTION ITEM $item_palm_roof_21
+{
+    ID 05D7
+}
+
+SECTION ITEM $item_palm_roof_22
+{
+    ID 05D8
+}
+
+SECTION ITEM $item_palm_roof_23
+{
+    ID 05D9
+}
+
+SECTION ITEM $item_palm_roof_24
+{
+    ID 05DA
+}
+
+SECTION ITEM $item_palm_roof_25
+{
+    ID 05DB
+}
+
+SECTION ITEM $item_palm_roof_26
+{
+    ID 05DC
+}
+
+SECTION ITEM $item_palm_roof_27
+{
+    ID 05DD
+}
+
+SECTION ITEM $item_palm_roof_28
+{
+    ID 05DE
+}
+
+SECTION ITEM $item_palm_roof_29
+{
+    ID 05DF
+}
+
+SECTION ITEM $item_palm_roof_30
+{
+    ID 05E0
+}
+
+SECTION ITEM $item_palm_roof_31
+{
+    ID 05E1
+}
+
+SECTION ITEM $item_palm_roof_32
+{
+    ID 05E2
+}
+
+SECTION ITEM $item_palm_roof_33
+{
+    ID 05E3
+}
+
+SECTION ITEM $item_palm_roof_34
+{
+    ID 05E4
+}
+
+SECTION ITEM $item_palm_roof_35
+{
+    ID 05E5
+}
+
+SECTION ITEM $item_palm_roof_36
+{
+    ID 05E6
+}
+
+SECTION ITEM $item_palm_roof_37
+{
+    ID 05E7
+}
+
+SECTION ITEM $item_palm_roof_38
+{
+    ID 05E8
+}
+
+SECTION ITEM $item_palm_roof_39
+{
+    ID 05E9
+}
+
+SECTION ITEM $item_palm_roof_40
+{
+    ID 05EA
+}
+
+SECTION ITEM $item_palm_roof_41
+{
+    ID 05EB
+}
+
+SECTION ITEM $item_palm_roof_42
+{
+    ID 05EC
+}
+
+SECTION ITEM $item_log_roof_1
+{
+    ID 05F0
+}
+ 
+SECTION ITEM $item_log_roof_2
+{
+    ID 05F1
+}
+ 
+SECTION ITEM $item_log_roof_3
+{
+    ID 05F2
+}
+ 
+SECTION ITEM $item_log_roof_4
+{
+    ID 05F3
+}
+ 
+SECTION ITEM $item_log_roof_5
+{
+    ID 05F4
+}
+ 
+SECTION ITEM $item_log_roof_6
+{
+    ID 05F5
+}
+ 
+SECTION ITEM $item_log_roof_7
+{
+    ID 05F6
+}
+ 
+SECTION ITEM $item_log_roof_8
+{
+    ID 05F7
+}
+ 
+SECTION ITEM $item_log_roof_9
+{
+    ID 05F8
+}
+ 
+SECTION ITEM $item_log_roof_10
+{
+    ID 05F9
+}
+
+SECTION ITEM $item_log_roof_11
+{
+    ID 05FA
+}
+
+SECTION ITEM $item_log_roof_12
+{
+    ID 05FB
+}
+
+SECTION ITEM $item_log_roof_13
+{
+    ID 05FC
+}
+
+SECTION ITEM $item_log_roof_14
+{
+    ID 05FD
+}
+
+SECTION ITEM $item_log_roof_15
+{
+    ID 05FE
+}
+
+SECTION ITEM $item_tent_roof_1
+{
+    ID 05FF
+}
+ 
+SECTION ITEM $item_tent_roof_2
+{
+    ID 0600
+}
+ 
+SECTION ITEM $item_tent_roof_3
+{
+    ID 0601
+}
+ 
+SECTION ITEM $item_tent_roof_4
+{
+    ID 0602
+}
+ 
+SECTION ITEM $item_tent_roof_5
+{
+    ID 0603
+}
+ 
+SECTION ITEM $item_tent_roof_6
+{
+    ID 0604
+}
+ 
+SECTION ITEM $item_tent_roof_7
+{
+    ID 0605
+}
+ 
+SECTION ITEM $item_tent_roof_8
+{
+    ID 0606
+}
+ 
+SECTION ITEM $item_tent_roof_9
+{
+    ID 0607
+}
+ 
+SECTION ITEM $item_tent_roof_10
+{
+    ID 0608
+}
+
+SECTION ITEM $item_tent_roof_11
+{
+    ID 0609
+}
+
+SECTION ITEM $item_tent_roof_12
+{
+    ID 060A
+}
+
+SECTION ITEM $item_tent_roof_13
+{
+    ID 060B
+}
+
+SECTION ITEM $item_tent_roof_14
+{
+    ID 060C
+}
+
+SECTION ITEM $item_tent_roof_15
+{
+    ID 060D
+}
+
+SECTION ITEM $item_tent_roof_16
+{
+    ID 060E
+}
+
+SECTION ITEM $item_tent_roof_17
+{
+    ID 060F
+}
+
+SECTION ITEM $item_tent_roof_18
+{
+    ID 0610
+}
+
+SECTION ITEM $item_tent_roof_19
+{
+    ID 0611
+}
+
+SECTION ITEM $item_tent_roof_20
+{
+    ID 0612
+}
+
+SECTION ITEM $item_tent_roof_21
+{
+    ID 0613
+}
+
+SECTION ITEM $item_tent_roof_22
+{
+    ID 0614
+}
+
+SECTION ITEM $item_tent_roof_23
+{
+    ID 0615
+}
+
+SECTION ITEM $item_tent_roof_24
+{
+    ID 0616
+}
+
+SECTION ITEM $item_tent_roof_25
+{
+    ID 0617
+}
+
+SECTION ITEM $item_tent_roof_26
+{
+    ID 0618
+}
+
+SECTION ITEM $item_tent_roof_27
+{
+    ID 0619
+}
+
+SECTION ITEM $item_tent_roof_28
+{
+    ID 061A
+}
+
+SECTION ITEM $item_tent_roof_29
+{
+    ID 061B
+}
+
+SECTION ITEM $item_tent_roof_30
+{
+    ID 061C
+}
+
+SECTION ITEM $item_tent_roof_31
+{
+    ID 061D
+}
+
+SECTION ITEM $item_tent_roof_32
+{
+    ID 061E
+}
+
+SECTION ITEM $item_tent_roof_33
+{
+    ID 061F
+}
+
+SECTION ITEM $item_tent_roof_34
+{
+    ID 0620
+}
+
+SECTION ITEM $item_tent_roof_35
+{
+    ID 0621
+}
+
+SECTION ITEM $item_tent_roof_36
+{
+    ID 0622
+}
+
+SECTION ITEM $item_tent_roof_37
+{
+    ID 0623
+}
+
+SECTION ITEM $item_tent_roof_38
+{
+    ID 0624
+}
+
+SECTION ITEM $item_tent_roof_39
+{
+    ID 0625
+}
+
+SECTION ITEM $item_tent_roof_40
+{
+    ID 0626
+}
+
+SECTION ITEM $item_tent_roof_41
+{
+    ID 0627
+}
+
+SECTION ITEM $item_tent_roof_42
+{
+    ID 0628
+}
+
+SECTION ITEM $item_tent_roof_43
+{
+    ID 0629
+}
+
+SECTION ITEM $item_tent_roof_44
+{
+    ID 062A
+}
+
+SECTION ITEM $item_stone_roof_43
+{
+    ID 062B
+}
+
+SECTION ITEM $item_stone_roof_44
+{
+    ID 062C
+}
+
+SECTION ITEM $item_stone_roof_45
+{
+    ID 062D
+}
+
+SECTION ITEM $item_stone_roof_46
+{
+    ID 062E
+}
+
+SECTION ITEM $item_stone_roof_47
+{
+    ID 062F
+}
+
+SECTION ITEM $item_stone_roof_48
+{
+    ID 0630
+}
+
+SECTION ITEM $item_stone_roof_49
+{
+    ID 0631
+}
+
+SECTION ITEM $item_stone_roof_50
+{
+    ID 0632
+}
+
+SECTION ITEM $item_tent_roof_45
+{
+    ID 0633
+}
+
+SECTION ITEM $item_tent_roof_46
+{
+    ID 0634
+}
+
+SECTION ITEM $item_tent_roof_47
+{
+    ID 0635
+}
+
+SECTION ITEM $item_tent_roof_48
+{
+    ID 0636
+}
+
+SECTION ITEM $item_stone_roof_51
+{
+    ID 0637
+}
+
+SECTION ITEM $item_stone_roof_52
+{
+    ID 0638
+}
+
+SECTION ITEM $item_stone_roof_53
+{
+    ID 0639
+}
+
+SECTION ITEM $item_stone_roof_54
+{
+    ID 063A
+}
+
+SECTION ITEM $item_stone_roof_55
+{
+    ID 063B
+}
+
+SECTION ITEM $item_stone_roof_56
+{
+    ID 063C
+}
+
+SECTION ITEM $item_stone_roof_57
+{
+    ID 063D
+}
+
+SECTION ITEM $item_stone_roof_58
+{
+    ID 063E
+}
+
+SECTION ITEM $item_tent_roof_49
+{
+    ID 0648
+}
+
+SECTION ITEM $item_tent_roof_50
+{
+    ID 0649
+}
+
+SECTION ITEM $item_tent_roof_51
+{
+    ID 064A
+}
+
+SECTION ITEM $item_tent_roof_52
+{
+    ID 064B
+}
+
+SECTION ITEM $item_tent_roof_53
+{
+    ID 064C
+}
+
+SECTION ITEM $item_tent_roof_54
+{
+    ID 064D
+}
+
+SECTION ITEM $item_tent_roof_55
+{
+    ID 064E
+}
+
+SECTION ITEM $item_tent_roof_56
+{
+    ID 064F
+}
+
+SECTION ITEM $item_tent_roof_57
+{
+    ID 0650
+}
+
+SECTION ITEM $item_tent_roof_58
+{
+    ID 0651
+}
+
+SECTION ITEM $item_stone_roof_59
+{
+    ID 0652
+}
+
+SECTION ITEM $item_stone_roof_60
+{
+    ID 0653
+}
+
+SECTION ITEM $item_stone_roof_61
+{
+    ID 0654
+}
+
+SECTION ITEM $item_stone_roof_62
+{
+    ID 0655
+}
+
+SECTION ITEM $item_stone_roof_63
+{
+    ID 0656
+}
+
+SECTION ITEM $item_stone_roof_64
+{
+    ID 0657
+}
+
+SECTION ITEM $item_stone_roof_65
+{
+    ID 0658
+}
+
+SECTION ITEM $item_stone_roof_66
+{
+    ID 0659
+}
+
+SECTION ITEM $item_stone_roof_67
+{
+    ID 065A
+}
+
+SECTION ITEM $item_stone_roof_68
+{
+    ID 065B
+}
+
+SECTION ITEM $item_stone_roof_69
+{
+    ID 065C
+}
+
+SECTION ITEM $item_stone_roof_70
+{
+    ID 065D
+}
+
+SECTION ITEM $item_tent_roof_57
+{
+    ID 065E
+}
+
+SECTION ITEM $item_tent_roof_58
+{
+    ID 065F
+}
+
+SECTION ITEM $item_tent_roof_59
+{
+    ID 0660
+}
+
+SECTION ITEM $item_tent_roof_60
+{
+    ID 0661
+}
+
+SECTION ITEM $item_tent_roof_61
+{
+    ID 0662
+}
+
+SECTION ITEM $item_tent_roof_62
+{
+    ID 0663
+}
+
+SECTION ITEM $item_tent_roof_63
+{
+    ID 0664
+}
+
+SECTION ITEM $item_tent_roof_64
+{
+    ID 0665
+}
+
+SECTION ITEM $item_tent_roof_65
+{
+    ID 0666
+}
+
+SECTION ITEM $item_tent_roof_66
+{
+    ID 0667
+}
+
+SECTION ITEM $item_tent_roof_67
+{
+    ID 0668
+}
+
+SECTION ITEM $item_tent_roof_68
+{
+    ID 0669
+}
+
+SECTION ITEM $item_tent_roof_69
+{
+    ID 066A
+}
+
+SECTION ITEM $item_tent_roof_70
+{
+    ID 066B
+}
+
+SECTION ITEM $item_tent_roof_71
+{
+    ID 066C
+}
+
+SECTION ITEM $item_tent_roof_72
+{
+    ID 066D
+}
+
+SECTION ITEM $item_tent_roof_73
+{
+    ID 066E
+}
+
+SECTION ITEM $item_tent_roof_74
+{
+    ID 066F
+}
+
+SECTION ITEM $item_tent_roof_75
+{
+    ID 0670
+}
+
+SECTION ITEM $item_tent_roof_76
+{
+    ID 0671
+}
+
+SECTION ITEM $item_tent_roof_77
+{
+    ID 0672
+}
+
+SECTION ITEM $item_tent_roof_78
+{
+    ID 0673
+}
+
+SECTION ITEM $item_tent_roof_79
+{
+    ID 0674
 }
