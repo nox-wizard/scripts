@@ -43,8 +43,8 @@ static const propDoorOpen	= 23;
 static const propDyeable	= 24;
 static const propGateNumber	= 25;
 static const propGateTime	= 26;
-static const propGlow		= 27;
-static const propGlowFx		= 28;
+//static const propGlow		= 27;
+//static const propGlowFx	= 28;
 static const propGood		= 29;
 static const propHitPoints	= 30;
 static const propHitPointsMax	= 31;
@@ -137,6 +137,7 @@ static const propRndValueRate	= 101;
 static const propMoreX		= 102;
 static const propMoreY		= 103;
 static const propMoreZ		= 104;
+static const propOnTakeFromCont	= 105;
 
 static const propLocalVariables	= 200;
 //
@@ -688,6 +689,19 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 				itm_setEventHandler( serial, EVENT_ITM_ONWALKOVER, EVENTTYPE_STATIC, newString );
 			}
 			//
+			// process changes to: Event On Take From Container
+			// ------------------------------------------------
+			//
+			gui_getInputField( propOnTakeFromCont, newString );
+			trim( newString );
+			itm_getEventHandler( serial, EVENT_ITM_ONTAKEFROMCONTAINER, oldString );
+			if( strcmp( newString, oldString ) )
+			{
+				if( strlen( oldString ) )
+					itm_delEventHandler( serial, EVENT_ITM_ONTAKEFROMCONTAINER );
+				itm_setEventHandler( serial, EVENT_ITM_ONTAKEFROMCONTAINER, EVENTTYPE_STATIC, newString );
+			}
+			//
 			// process changes to: Gatenumber
 			// -----------------------------------
 			//
@@ -706,23 +720,23 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_GATETIME, _, newNumeric );
 			//
-			// process changes to: Glow
+			// process changes to: Glow - discontinued
 			// ------------------------
 			//
-			gui_getInputField( propGlow, newString );
-			oldNumeric = itm_getProperty( serial, IP_GLOW, _ );
-			newNumeric = prop2Unsigned( newString, oldNumeric );
-			if( newNumeric != oldNumeric )
-				itm_setProperty( serial, IP_GLOW, _, newNumeric );
+			//gui_getInputField( propGlow, newString );
+			//oldNumeric = itm_getProperty( serial, IP_GLOW, _ );
+			//newNumeric = prop2Unsigned( newString, oldNumeric );
+			//if( newNumeric != oldNumeric )
+			//	itm_setProperty( serial, IP_GLOW, _, newNumeric );
 			//
-			// process changes to: GlowFx
-			// ------------------------
+			// process changes to: GlowFx - discontinued
+			// --------------------------
 			//
-			gui_getInputField( propGlowFx, newString );
-			oldNumeric = itm_getProperty( serial, IP_GLOWFX, _ );
-			newNumeric = prop2Unsigned( newString, oldNumeric );
-			if( newNumeric != oldNumeric )
-				itm_setProperty( serial, IP_GLOWFX, _, newNumeric );
+			//gui_getInputField( propGlowFx, newString );
+			//oldNumeric = itm_getProperty( serial, IP_GLOWFX, _ );
+			//newNumeric = prop2Unsigned( newString, oldNumeric );
+			//if( newNumeric != oldNumeric )
+			//	itm_setProperty( serial, IP_GLOWFX, _, newNumeric );
 			//
 			// process changes to: Hit points
 			// ------------------------------
@@ -742,6 +756,14 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_MAXHP, _, newNumeric );
 			//
+			// Finish
+			//
+			itemPropsRespExit( updateItem, serial, pc, page, edit );
+			return;
+		}
+		if( page == 6 )
+		{
+			//
 			// process changes to: Intelligence bonus
 			// --------------------------------------
 			//
@@ -750,14 +772,6 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Signed( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_INTBONUS, _, newNumeric );
-			//
-			// Finish
-			//
-			itemPropsRespExit( updateItem, serial, pc, page, edit );
-			return;
-		}
-		if( page == 6 )
-		{
 			//
 			// process changes to: Intelligence required
 			// -----------------------------------------
@@ -924,6 +938,14 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_MAGIC, _, newNumeric );
 			//
+			// Finish
+			//
+			itemPropsRespExit( updateItem, serial, pc, page, edit );
+			return;
+		}
+		if( page == 7 )
+		{
+			//
 			// process changes to: More 1
 			// --------------------------
 			//
@@ -932,14 +954,6 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_MORE, 1, newNumeric );
-			//
-			// Finish
-			//
-			itemPropsRespExit( updateItem, serial, pc, page, edit );
-			return;
-		}
-		if( page == 7 )
-		{
 			//
 			// process changes to: More 2
 			// --------------------------
@@ -1022,6 +1036,14 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_MOREPOSITION, IP2_Y, newNumeric );
 			//
+			// Finish
+			//
+			itemPropsRespExit( updateItem, serial, pc, page, edit );
+			return;
+		}
+		if( page == 8 )
+		{
+			//
 			// process changes to: MoreZ
 			// -------------------------
 			//
@@ -1030,14 +1052,6 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_MOREPOSITION, IP2_Z, newNumeric );
-			//
-			// Finish
-			//
-			itemPropsRespExit( updateItem, serial, pc, page, edit );
-			return;
-		}
-		if( page == 8 )
-		{
 			//
 			// process changes to: Multi Serial
 			// --------------------------------
@@ -1141,6 +1155,14 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_RNDVALUERATE, _, newNumeric );
 			//
+			// Finish
+			//
+			itemPropsRespExit( updateItem, serial, pc, page, edit );
+			return;
+		}
+		if( page == 9 )
+		{
+			//
 			// process changes to: Rank
 			// ------------------------
 			//
@@ -1149,14 +1171,6 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_RANK, _, newNumeric );
-			//
-			// Finish
-			//
-			itemPropsRespExit( updateItem, serial, pc, page, edit );
-			return;
-		}
-		if( page == 9 )
-		{
 			//
 			// process changes to: Restock
 			// ---------------------------
@@ -1241,6 +1255,14 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_SPEED, _, newNumeric );
 			//
+			// Finish
+			//
+			itemPropsRespExit( updateItem, serial, pc, page, edit );
+			return;
+		}
+		if( page == 10 )
+		{
+			//
 			// process changes to: Strength bonus
 			// ----------------------------------
 			//
@@ -1249,14 +1271,6 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Signed( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_STRBONUS, _, newNumeric );
-			//
-			// Finish
-			//
-			itemPropsRespExit( updateItem, serial, pc, page, edit );
-			return;
-		}
-		if( page == 10 )
-		{
 			//
 			// process changes to: Strength required
 			// -------------------------------------
@@ -1321,6 +1335,14 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				itm_setProperty( serial, IP_VALUE, _, newNumeric );
 			//
+			// Finish
+			//
+			itemPropsRespExit( updateItem, serial, pc, page, edit );
+			return;
+		}
+		if( page == 11 )
+		{
+			//
 			// process changes to: Visible to
 			// ------------------------------
 			//
@@ -1347,14 +1369,6 @@ public gui_itemPropsResp( const gump, const serial, const button, const pc )
 					updateItem = 1;
 				}
 			}
-			//
-			// Finish
-			//
-			itemPropsRespExit( updateItem, serial, pc, page, edit );
-			return;
-		}
-		if( page == 11 )
-		{
 			//
 			// process changes to: Visual Id
 			// -----------------------------
@@ -1752,17 +1766,22 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 			itm_getEventHandler( clickedItem, EVENT_ITM_ONWALKOVER, str );
 			addProperty( "Event walk over", str, 0, 0, ( edit ? propOnWalkOver : 0 ) );
 			//
+			itm_getEventHandler( clickedItem, EVENT_ITM_ONTAKEFROMCONTAINER, str );
+			addProperty( "Event take from container", str, 0, 0, ( edit ? propOnTakeFromCont : 0 ) );
+			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_GATENUMBER, _) );
 			addProperty( "Gate number", str, 0, 0, ( edit ? propGateNumber : 0 ) );
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_GATETIME, _) );
 			addProperty( "Gate time", str, 0, 0, ( edit ? propGateTime : 0 ) );
 			//
-			sprintf( str, "%d", itm_getProperty( clickedItem, IP_GLOW, _) );
-			addProperty( "Glow", str, 0, 0, ( edit ? propGlow : 0 ) );
+			//sprintf( str, "%d", itm_getProperty( clickedItem, IP_GLOW, _) );
+			//addProperty( "Glow", str, 0, 0, ( edit ? propGlow : 0 ) );
+			addProperty( "Glow", "n/a" );
 			//
-			sprintf( str, "%d", itm_getProperty( clickedItem, IP_GLOWFX, _) );
-			addProperty( "GlowFx", str, 0, 0, ( edit ? propGlowFx : 0 ) );
+			//sprintf( str, "%d", itm_getProperty( clickedItem, IP_GLOWFX, _) );
+			//addProperty( "GlowFx", str, 0, 0, ( edit ? propGlowFx : 0 ) );
+			addProperty( "GlowFx", "n/a" );
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_GOOD, _) );
 			addProperty( "Good", str, 0, 0, ( edit ? propGood : 0 ) );
@@ -1775,12 +1794,12 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_INCOGNITO, _) );
 			addProperty( "Incognito", str );
-			//
-			sprintf( str, "%d", itm_getProperty( clickedItem, IP_INTBONUS, _) );
-			addProperty( "Intelligence bonus", str, 0, 0, ( edit ? propIntBonus : 0 ) );
 		}
 		if( page == 6 )
 		{
+			//
+			sprintf( str, "%d", itm_getProperty( clickedItem, IP_INTBONUS, _) );
+			addProperty( "Intelligence bonus", str, 0, 0, ( edit ? propIntBonus : 0 ) );
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_INTREQUIRED, _) );
 			addProperty( "Intelligence required", str, 0, 0, ( edit ? propIntRequired : 0 ) );
@@ -1821,12 +1840,12 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_MAGIC, _) );
 			addProperty( "Magic", str, 0, 0, ( edit ? propMagic : 0 ) );
-			//
-			sprintf( str, "%d", itm_getProperty( clickedItem, IP_MORE, 1) );
-			addProperty( "More 1", str, 0, 0, ( edit ? propMore1 : 0 ) );
 		}
 		if( page == 7 )
 		{
+			//
+			sprintf( str, "%d", itm_getProperty( clickedItem, IP_MORE, 1) );
+			addProperty( "More 1", str, 0, 0, ( edit ? propMore1 : 0 ) );
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_MORE, 2) );
 			addProperty( "More 2", str, 0, 0, ( edit ? propMore2 : 0 ) );
@@ -1855,8 +1874,6 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 				addProperty( "Item to spawn", str, 0, 0, ( edit ? propMoreX : 0 ) );
 				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Y ) );
 				addProperty( "Min spawn time", str, 0, 0, ( edit ? propMoreY : 0 ) );
-				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Z ) );
-				addProperty( "Max spawn time", str, 0, 0, ( edit ? propMoreZ : 0 ) );
 			}
 			else if	( itm_getProperty( clickedItem, IP_TYPE, _) == 62 )
 			{
@@ -1864,8 +1881,6 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 				addProperty( "Npc to spawn", str, 0, 0, ( edit ? propMoreX : 0 ) );
 				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Y ) );
 				addProperty( "Min spawn time", str, 0, 0, ( edit ? propMoreY : 0 ) );
-				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Z ) );
-				addProperty( "Max spawn time", str, 0, 0, ( edit ? propMoreZ : 0 ) );
 			}
 			else
 			{
@@ -1873,12 +1888,26 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 				addProperty( "MoreX", str, 0, 0, ( edit ? propMoreX : 0 ) );
 				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Y ) );
 				addProperty( "MoreY", str, 0, 0, ( edit ? propMoreY : 0 ) );
-				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Z ) );
-				addProperty( "MoreZ", str, 0, 0, ( edit ? propMoreZ : 0 ) );
 			}
 		}
 		if( page == 8 )
 		{
+			if	( itm_getProperty( clickedItem, IP_TYPE, _) == 61 )
+			{
+				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Z ) );
+				addProperty( "Max spawn time", str, 0, 0, ( edit ? propMoreZ : 0 ) );
+			}
+			else if	( itm_getProperty( clickedItem, IP_TYPE, _) == 62 )
+			{
+				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Z ) );
+				addProperty( "Max spawn time", str, 0, 0, ( edit ? propMoreZ : 0 ) );
+			}
+			else
+			{
+				sprintf( str, "%d", itm_getProperty( clickedItem, IP_MOREPOSITION, IP2_Z ) );
+				addProperty( "MoreZ", str, 0, 0, ( edit ? propMoreZ : 0 ) );
+			}
+			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_MULTISERIAL, _) );
 			addProperty( "Multi serial", str, 0, 0, ( edit ? propMultiSerial : 0 ) );
 			//
@@ -1903,12 +1932,12 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_RNDVALUERATE, _) );
 			addProperty( "Random value rate", str, 0, 0, ( edit ? propRndValueRate : 0 ) );
-			//
-			sprintf( str, "%d", itm_getProperty( clickedItem, IP_RANK, _) );
-			addProperty( "Rank", str, 0, 0, ( edit ? propRank : 0 ) );
 		}
 		if( page == 9 )
 		{
+			//
+			sprintf( str, "%d", itm_getProperty( clickedItem, IP_RANK, _) );
+			addProperty( "Rank", str, 0, 0, ( edit ? propRank : 0 ) );
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_RESTOCK, _) );
 			addProperty( "Restock", str, 0, 0, ( edit ? propRestock : 0 ) );
@@ -1936,12 +1965,12 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_SPEED, _) );
 			addProperty( "Speed", str, 0, 0, ( edit ? propSpeed : 0 ) );
-			//
-			sprintf( str, "%d", itm_getProperty( clickedItem, IP_STRBONUS, _) );
-			addProperty( "Strength bonus", str, 0, 0, ( edit ? propStrBonus : 0 ) );
 		}
 		if( page == 10 )
 		{
+			//
+			sprintf( str, "%d", itm_getProperty( clickedItem, IP_STRBONUS, _) );
+			addProperty( "Strength bonus", str, 0, 0, ( edit ? propStrBonus : 0 ) );
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_STRREQUIRED, _) );
 			addProperty( "Strength required", str, 0, 0, ( edit ? propStrRequired : 0 ) );
@@ -1969,6 +1998,9 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_VALUE, _) );
 			addProperty( "Value", str, 0, 0, ( edit ? propValue : 0 ) );
+		}
+		if( page == 11 )
+		{
 			//
 			switch( itm_getProperty( clickedItem, IP_VISIBLE, _) )
 			{
@@ -1978,9 +2010,6 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 				default: str = "Unknown";
 			}
 			addProperty( "Visible to", str, 0, 0, ( edit ? propVisible : 0 ) );
-		}
-		if( page == 11 )
-		{
 			//
 			sprintf( str, "%d", itm_getDualByteProperty( clickedItem, IP_ID ) );
 			addProperty( "Visual id", str, 0, 0, ( edit ? propVisualId : 0 ) );
@@ -1990,8 +2019,6 @@ static itemPropsPage( const clickedItem, const showToWhom, const edit, const pag
 			//
 			sprintf( str, "%d", itm_getProperty( clickedItem, IP_WIPE, _) );
 			addProperty( "Wipe", str, 0, 0, ( edit ? propWipe : 0 ) );
-			//
-			addProperty( "", "" );
 			//
 			addProperty( "", "" );
 			//
