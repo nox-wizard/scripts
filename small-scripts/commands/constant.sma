@@ -3,7 +3,8 @@
 \ingroup script_commands
 
 To add new commands simply adda a name in the __commands[][] array and put somewhere a
-public function named cmd_nameofyournewcommand(chr).
+public function named cmd_nameofyournewcommand(chr).<br>
+If you want to call another function instead of the cmd_commandname function, put it in __commands[][__cmdFunc]
 @{
 */
 
@@ -12,7 +13,7 @@ public function named cmd_nameofyournewcommand(chr).
 #define _CMD_SHOW_MSG 1		//!< set to 1 if you want users to be warned when they try to use commands they are not authorized to use or that not exist
 #define __MAX_PARAMS 6		//!< maximum number of parameters a command can have
 #define __MAX_PARAM_LENGTH 20	//!< maximum number of character a parameter can be made of
-#define __CMD_COUNT 50		//!< number of available commands
+#define __CMD_COUNT 30		//!< number of available commands
 
 enum
 {
@@ -28,37 +29,37 @@ enum __cmdEntry
 {
 	__cmdPriv,
 	__cmdName: 15, //do not increase this value !!
+	__cmdFunc: 20
 };//!< command data structure, first field is command name, second is command privlevel
 
 
 //insert your custom commands here.
 new __commands[__CMD_COUNT][__cmdEntry] =
 {
-	{PRIV_GM,	"add"},
-	{PRIV_CNS,	"area"},
-	{PRIV_CNS,	"freeze"},
-	{PRIV_SCRIPTER,	"func"},
-	{PRIV_CNS,	"hiding"},
-	{PRIV_CNS,	"invul"},
-	{PRIV_CNS,	"kill"},
-	{PRIV_ADMIN,	"make"},
-	{PRIV_CNS,	"move"},
-	{PRIV_CNS,	"options"},
+	{PRIV_GM,	"add",		""},
+	{PRIV_CNS,	"area",		""},
+	{PRIV_CNS,	"freeze",	""},
+	{PRIV_SCRIPTER,	"func",		""},
+	{PRIV_CNS,	"hiding",	""},
+	{PRIV_CNS,	"invul",	""},
+	{PRIV_CNS,	"kill",		""},
+	{PRIV_ADMIN,	"make",		""},
+	{PRIV_CNS,	"move",		""},
+	{PRIV_CNS,	"options",	""},
 
-	{PRIV_PLAYER,	"playerlist"},
-	{PRIV_PLAYER,	"skills"},
-	{PRIV_PLAYER,	"stats"},
-	{PRIV_CNS,	"tweak"},
-	{PRIV_CNS,	"where"},
-	{PRIV_CNS,	"wipe"},
-	{PRIV_CNS,	"polimorph"},
-	{PRIV_ADMIN,	"setpriv"},
-	{PRIV_GM,	"dupe"},
-	{0,""},
+	{PRIV_PLAYER,	"playerlist",	""},
+	{PRIV_PLAYER,	"skills",	""},
+	{PRIV_PLAYER,	"stats",	""},
+	{PRIV_CNS,	"tweak",	""},
+	{PRIV_CNS,	"where",	""},
+	{PRIV_CNS,	"wipe",		""},
+	{PRIV_CNS,	"polimorph",	""},
+	{PRIV_ADMIN,	"setpriv",	""},
+	{PRIV_GM,	"dupe",		""},
+	{0,"",""},
 	
-	{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},
-	{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},
-	{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""}
+	{0,"",""},{0,"",""},{0,"",""},{0,"",""},{0,"",""},
+	{0,"",""},{0,"",""},{0,"",""},{0,"",""},{0,"",""}
 }; //!< names of commands, are used to create function names. Due to the 19 characters function name limit, command names are limited to 15 characters in length.
 
 new __cmdParams[__MAX_PARAMS][__MAX_PARAM_LENGTH]; //!< array that is filled with paramters when a command is called

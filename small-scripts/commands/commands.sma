@@ -80,7 +80,7 @@ public detectCommand(const chr)
 	{
 		
 		#if _CMD_SHOW_MSG
-			chr_message(chr,_,"You are nt authorized to use that command");
+			chr_message(chr,_,"You are not authorized to use that command");
 		#endif
 		
 		return;
@@ -106,9 +106,11 @@ public detectCommand(const chr)
 		param++;
 	}
 	
-	//build command function name as: cmd_commandname
+	//build command function name as: cmd_commandname or read the function to call if it has been specified
 	new function[20];
-	sprintf(function,"cmd_%s",command);
+	if(strlen(__commands[cmd][__cmdFunc]))
+		strcpy(function,__commands[cmd][__cmdFunc]);
+	else sprintf(function,"cmd_%s",command);
 	
 	#if _CMD_DEBUG_
 		printf("^t->calling function: %s^n",function);
@@ -121,15 +123,27 @@ public detectCommand(const chr)
 /*!
 \author Fax
 \since 0.82
-\fn addCommand(name[],priv)
+\fn addCommand(name[],priv,func[])
 \param name[]: the command name
 \param priv: the command privlevel
+\param func[]: the function to be called, pass "" if you want a standard cmd_commandname function to be called
 \brief Adds a new command
 
-This is an helper function that can be called by scripts to add commands at runtime. 
+This is an helper function that can be called by scripts to add commands at runtime.<br>
+Usually you can  use this function like this:
+\code
+addCommand("mycommand",mypriv,"");
+\endcode
+and cmd_mycommand will be called on command use.
 */
-public addCommand(name[],priv)
+public addCommand(name[],priv, func[])
 {
+	if(!strlen(name))
+	{
+		log_warning("addCommand called with empty command name");
+		return CMD_ERROR;
+	}
+	
 	//seek an empty cell
 	new i = 0;
 	for(i = 0; i < __CMD_COUNT && strlen(__commands[i][__cmdName]); i++)
@@ -144,7 +158,11 @@ public addCommand(name[],priv)
 	strcpy(__commands[i][__cmdName],name);
 	__commands[i][__cmdPriv] = priv;
 	
-	printf("Command '%s (priv:%d) succesfully added^n",__commands[i][__cmdName],__commands[i][__cmdPriv]);
+	if(strlen(func))
+		strcpy(__commands[i][__cmdFunc],func);
+	else sprintf(__commands[i][__cmdFunc],"cmd_%s",name);
+	
+	printf("Command '%s (priv:%d func:%s) succesfully added^n",__commands[i][__cmdName],__commands[i][__cmdPriv],__commands[i][__cmdFunc]);
 	return CMD_OK;
 }
 
@@ -172,6 +190,7 @@ public deleteCommand(name[])
 	
 	strcpy(__commands[cmd][__cmdName],"");
 	__commands[cmd][__cmdPriv] = PRIV_ADMIN;
+	strcpy(__commands[cmd][__cmdFunc],"");
 	
 	printf("Command '%s succesfully deleted^n",name);
 	return CMD_OK

@@ -14,11 +14,11 @@ public __charLogin(const chr)
 	
 	createPrivlevelVar(chr); //creates the privlevel variable
 		
-	//globaltags(chr);
+	globaltags(chr);
 	
-	//itm_potionStart(chr);//every function you want to start with char login put in here
+	itm_potionStart(chr);//every function you want to start with char login put in here
 	
-	//hungerandthirst(chr);
+	hungerandthirst(chr);
 }
 
 public createPrivlevelVar(const chr)

@@ -12,7 +12,7 @@ public __startServer()
 		for(new i = 0; i <  __CMD_COUNT && result == CMD_OK; i++)
 		{
 			sprintf(name,"testCmd%d",i);
-			result = addCommand(name,5);
+			result = addCommand(name,5,"");
 		}
 		
 		
