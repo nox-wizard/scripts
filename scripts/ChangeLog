@@ -1,0 +1,960 @@
+2004-09-28	horiansf
+	* house.xss 1.14:
+	* items/decorations.xss 1.8:
+	* symbols/items/items.xss 1.27:
+		fixed bug 254 and a few naming errors for some items (ltar 
+		instead of altar)
+
+2004-08-11	horiansf
+	* symbols.xss 1.16:
+	* symbols/items/items.xss 1.26:
+	* symbols/items/stone_furniture.xss 1.1:
+		fixed missing item defines for stone furniture
+
+2004-08-09	horiansf
+	* items/furniture.xss 1.6:
+		re-added the file
+
+2004-08-01	horiansf
+	* items/carpenter/carpenter.xss 1.6:
+		extended lumberjacking/carpenting and exported last lines into 
+		small-speech
+
+2004-07-30	horiansf
+	* items/cooking/cookitems.xss 1.7:
+		added new split function basing at ONDROPINLAND for cookitems
+
+2004-07-28	horiansf
+	* items/items.xss 1.29:
+	* items/magic.xss 1.6:
+		fixed wrong skill link (spelling error)
+
+2004-07-24	ai_wintermute
+	* html.xss 1.4:
+	* html.xss 1.5:
+		fixed a hard reference to d:\games\uox
+
+2004-07-23	horiansf
+	* items/color armour/agapite_armour.xss 1.3:
+		fixed writing error with agapite lossing the first "a"
+
+	* create.xss 1.12:
+	* fishing.xss 1.7:
+	* items.xss 1.12:
+	* items/color weapons/agapite_weapons.xss 1.4:
+	* items/color weapons/bronze_weapons.xss 1.3:
+	* items/color weapons/copper_weapons.xss 1.3:
+	* items/color weapons/golden_weapons.xss 1.3:
+	* items/color weapons/iron_weapons.xss 1.4:
+	* items/color weapons/merkite_weapons.xss 1.3:
+	* items/color weapons/shadow_weapons.xss 1.3:
+	* items/color weapons/silver_weapons.xss 1.3:
+	* items/color weapons/valorite_weapons.xss 1.3:
+	* items/color weapons/verite_weapons.xss 1.3:
+	* items/itemlists.xss 1.10:
+	* items/magic_weapon.xss 1.2:
+	* items/weapons.xss 1.9:
+	* menus.xss 1.14:
+	* necro.xss 1.4:
+	* npc/npc_elves.xss 1.8:
+	* npc/npc_lootlists.xss 1.9:
+	* npc/npc_merchants.xss 1.17:
+	* npc/npc_people.xss 1.9:
+	* npc/npc_ratmen.xss 1.5:
+	* symbols/items/items.xss 1.25:
+	* symbols/items/smithitem.xss 1.3:
+	* symbols/menus.xss 1.2:
+	* triggers/item_triggers.xss 1.8:
+		fixed missing magic weapon and definitions
+
+	* races/avariel.xss 1.4:
+	* symbols/race.xss 1.2:
+		race sorting and re-definition, work in progress for race system 
+		reworking
+
+	* items/color weapons/iron_weapons.xss 1.3:
+	* items/magic_weapon.xss 1.1:
+	* items/weapons.xss 1.8:
+		fixed missing magic weapon
+
+2004-07-17	ai_wintermute
+	* items/furniture.xss 1.5:
+		furniture.xss is unused right now
+
+	* items/floortiles.xss 1.4:
+		floortiles.xss is unused right now
+
+2004-07-10	horiansf
+	* location.xss 1.3:
+		changed location.xss according to fax location if command
+
+2004-07-04	horiansf
+	* items/carpenter/carpenter.xss 1.4:
+	* items/items.xss 1.28:
+	* items/weapons.xss 1.7:
+	* symbols/npc/npc.xss 1.6:
+		carpenter and "schmieden" xss->small funtcion links fixed
+
+	* symbols.xss 1.14:
+	* symbols.xss 1.15:
+		deleted wrong link to speech.xss
+
+	* items/carpenter/carpenter.xss 1.5:
+	* symbols/items/carpenteritems.xss 1.5:
+		brought coopers_bench and woodworkers_bench in line with add 
+		menu and other naming conventions
+
+	* fishing.xss 1.6:
+	* magic.xss 1.2:
+	* menus.xss 1.13:
+	* npc/npc_elementals.xss 1.6:
+	* npc/npc_npclists.xss 1.3:
+	* triggers/item_triggers.xss 1.7:
+		fixed water elemental script name
+
+2004-06-27	ai_wintermute
+	* spawn.xss 1.2:
+		fixed a wrong npc id in spawns.xss
+		added support for resource maps to lumberjacking
+
+2004-06-26	faxsf
+	* items/architecture.xss 1.7:
+	* symbols.xss 1.13:
+	* symbols/items/architecture.xss 1.6:
+	* symbols/items/items.xss 1.24:
+		-changed 'wipe sysntax
+			now "'wipe r" asks for rectangle to wipe (beforewas "'wipe rect")
+		-changed 'move syntax, now it's 'move a/r x y z
+			z is optional, a/r replace old abs/rel
+		-added 'respawn and 'spawnkill commands
+			'respawn replaces all old spawning commands ('respawnall 'respawnmax ...)
+		-added a little library of buildings for 'build command
+			for now all 'build xssfiles are in small-scripts/commands/build
+		-added deeds sections to add menu
+			now it works
+		-modified add/architecture menu
+			now the menu is a thin horizontal bar on the top of the screen so it's
+			less annoying while building
+		-added "continuous adding mode" for 'add menu
+			pressing on the new button in add menu will activate the
+			continuous adding mode, that is, you can add as many items as you
+			want by targetting different locations until you switch back to
+			single adding mode.
+			This applies to all 'add submenus.
+		-rewrote add menu script
+			now the add menu data is stored in addmenu.xss and is much more easily editable
+			"'add reload" or the "reload" button reload the data so you can modify the
+			menu without restarting NOX.
+			You can specify the language of the menu in the constants section of addmenu.sma.
+		-modified 'cset and 'iset:
+			 now if no value is given a sysmessage
+			 tells the current value of the property
+		-fixed add/magic menu, second circle scrolls created first circle scrolls
+		-fixed add/magic menu not closing when "create items in backpack" wasn't selected
+		-fixed some definitions in symbols/items/architecture.xss, some were duplicated
+
+2004-06-19	ai_wintermute
+	* items/items.xss 1.27:
+	* items/professions.xss 1.8:
+	* symbols/items/itemtypes.xss 1.6:
+		added new type ITYPE_MINING and the other skill types, to fix 
+		mining with shovels
+
+	* magic.xss 1.1:
+	* polymorph.xss 1.4:
+		added new file magic.xss to define menus used in magic spells
+
+2004-06-14	horiansf
+	* items/customitems.xss 1.4:
+	* items/items.xss 1.25:
+	* items/professions.xss 1.6:
+	* npc/npc_lootlists.xss 1.8:
+	* npc/npc_merchants.xss 1.15:
+	* symbols/items/cookitems.xss 1.6:
+	* symbols/items/items.xss 1.21:
+		fixed some problems including smelting and blacksmithing
+
+	* items/cooking/cookitems.xss 1.6:
+	* items/custom.xss 1.3:
+		back to original version, there was no way to set cvs back by 
+		date, is it?!?
+
+	* items/spawners.xss 1.6:
+	* symbols/items/items.xss 1.23:
+		fixed an missing "a" I introduced
+
+	* create.xss 1.11:
+	* items/itemlists.xss 1.9:
+	* items/items.xss 1.26:
+	* items/professions.xss 1.7:
+	* npc/npc_merchants.xss 1.16:
+	* symbols/items/items.xss 1.22:
+		added a few missing items to tools section of add menu and fixed 
+		woodworking benches naming
+
+2004-06-12	horiansf
+	* menus.xss 1.12:
+	* npc/npc_humanoids.xss 1.6:
+	* npc/npc_merchants.xss 1.14:
+	* npc/npc_people.xss 1.8:
+	* npc/npc_specialpeople.xss 1.3:
+	* symbols/items/items.xss 1.20:
+	* symbols/npc/npc.xss 1.4:
+	* symbols/npc/npc.xss 1.5:
+		sorted npc and brought naming into convention
+
+	* npc.xss 1.4:
+		former npc_mlist renamed, now contains all special single human 
+		npc with copy command
+
+	* npc/npc_merchants.xss 1.12:
+		fixed and sorted several npc, two of every kind necessary, 
+		several missing or double before
+
+	* npc/npc_animals.xss 1.6:
+		fixed and sorted several npc
+
+	* create.xss 1.10:
+	* fishing.xss 1.5:
+	* house.xss 1.13:
+	* items/carpenter/alder_furniture.xss 1.4:
+	* items/carpenter/beech_furniture.xss 1.4:
+	* items/carpenter/carpenter.xss 1.3:
+	* items/carpenter/cedar_furniture.xss 1.4:
+	* items/carpenter/ebony_furniture.xss 1.4:
+	* items/carpenter/mahogany_furniture.xss 1.4:
+	* items/carpenter/maple_furniture.xss 1.4:
+	* items/carpenter/oak_furniture.xss 1.4:
+	* items/carpenter/pine_furniture.xss 1.4:
+	* items/carpenter/walnut_furniture.xss 1.3:
+	* items/carpenter/yew_furniture.xss 1.4:
+	* items/clothes.xss 1.5:
+	* items/color armour/agapite_armour.xss 1.2:
+	* items/color weapons/agapite_weapons.xss 1.3:
+	* items/cooking/cookitems.xss 1.5:
+	* items/decorations.xss 1.7:
+	* items/furniture.xss 1.4:
+	* items/itemlists.xss 1.8:
+	* items/items.xss 1.24:
+	* items/professions.xss 1.5:
+	* items/spawners.xss 1.5:
+	* menus.xss 1.11:
+	* npc.xss 1.5:
+	* npc/npc_elves.xss 1.7:
+	* npc/npc_lootlists.xss 1.7:
+	* npc/npc_merchants.xss 1.13:
+	* npc/npc_mlist.xss 1.4:
+	* npc/npc_specialpeople.xss 1.2:
+	* speech.xss 1.4:
+	* symbols/items/carpenteritems.xss 1.4:
+	* symbols/items/cookitems.xss 1.5:
+	* symbols/items/items.xss 1.19:
+	* symbols/items/smithitem.xss 1.2:
+	* symbols/npc/npc.xss 1.3:
+		fixed several problems with item/npc renaming to fit them into 
+		naming convention
+
+	* npc/npc_specialpeople.xss 1.1:
+		former npc_mlist but now contains all special single human npc 
+		with copy command
+
+2004-06-11	ai_wintermute
+	* html.xss 1.3:
+		added IP to html creation
+
+2004-06-05	ai_wintermute
+	* items/items.xss 1.23:
+	* symbols/items/itemtypes.xss 1.5:
+	* symbols/skills.xss 1.3:
+		moongates can now be marked by gms, so they can set their current position as the gate target position
+		added missing symbol $stat_strength needed by source
+
+2004-06-04	faxsf
+	* items.xss 1.11:
+	* symbols.xss 1.12:
+		removed floortiles.xss from #includes
+
+2004-06-02	ai_wintermute
+	* skills.xss 1.3:
+		fixed crash bug when multis where near char
+		fixed stat gain so it really uses the values for statgain as defined in skills.xss
+
+2004-05-31	ai_wintermute
+	* html.xss 1.2:
+		added ACCOUNT, P, PRIVLEVEL and REGION as Keywords for the 
+		WHOLIST command, fixed npcCount, charCount, itemCount
+
+2004-05-31	horiansf
+	* symbols.xss 1.11:
+	* symbols/customtriggers.xss 1.1:
+	* symbols/npc/customtriggers.xss 1.2:
+		added customtriggers.xss in symbols folder for shards custom 
+		files
+
+	* symbols/npc/customspeech.xss 1.1:
+		added this for shards custom files
+
+	* symbols/npc/speech.xss 1.1:
+	* symbols/speech.xss 1.2:
+		forgot to move this to npc folder
+
+	* symbols.xss 1.10:
+		added customtriggers.xss in npc symbols folder for shards custom 
+		files
+
+	* npc.xss 1.3:
+		added customspeech.xss linker to npc folder for shards custom 
+		files
+
+2004-05-30	faxsf
+	* advance.xss 1.5:
+	* carve.xss 1.3:
+	* create.xss 1.9:
+	* envoke.xss 1.7:
+	* fishing.xss 1.4:
+	* house.xss 1.12:
+	* items.xss 1.10:
+	* items/architecture.xss 1.6:
+	* items/armour.xss 1.8:
+	* items/books.xss 1.2:
+	* items/carpenter/alder_furniture.xss 1.3:
+	* items/carpenter/beech_furniture.xss 1.3:
+	* items/carpenter/cedar_furniture.xss 1.3:
+	* items/carpenter/ebony_furniture.xss 1.3:
+	* items/carpenter/mahogany_furniture.xss 1.3:
+	* items/carpenter/maple_furniture.xss 1.3:
+	* items/carpenter/oak_furniture.xss 1.3:
+	* items/carpenter/pine_furniture.xss 1.3:
+	* items/carpenter/walnut_furniture.xss 1.2:
+	* items/carpenter/yew_furniture.xss 1.3:
+	* items/clothes.xss 1.4:
+	* items/containers.xss 1.3:
+	* items/cooking/cookitems.xss 1.4:
+	* items/decorations.xss 1.6:
+	* items/deeds.xss 1.6:
+	* items/floortiles.xss 1.3:
+	* items/furniture.xss 1.3:
+	* items/itemlists.xss 1.7:
+	* items/items.xss 1.22:
+	* items/magic.xss 1.5:
+	* items/professions.xss 1.4:
+	* items/treasures.xss 1.2:
+	* items/weapons.xss 1.6:
+	* location.xss 1.2:
+	* menus.xss 1.10:
+	* necro.xss 1.3:
+	* newbie.xss 1.9:
+	* npc/npc_elves.xss 1.6:
+	* npc/npc_humanoids.xss 1.5:
+	* npc/npc_lootlists.xss 1.6:
+	* npc/npc_merchants.xss 1.11:
+	* npc/npc_mlist.xss 1.3:
+	* npc/npc_orcs.xss 1.6:
+	* npc/npc_people.xss 1.7:
+	* npc/npc_undeads.xss 1.7:
+	* races/halforc.xss 1.3:
+	* skills2.xss 1.2:
+	* symbols/items/architecture.xss 1.5:
+	* symbols/items/carpenteritems.xss 1.3:
+	* symbols/items/cookitems.xss 1.4:
+	* symbols/items/items.xss 1.18:
+	* symbols/items/potions.xss 1.3:
+	* triggers/item_triggers.xss 1.6:
+		renamed XSS defs and added localvar for item flipping
+
+2004-05-27	horiansf
+	* npc/customnpc.xss 1.1:
+	* npc/customspeech.xss 1.1:
+	* npc/npc_animals.xss 1.5:
+	* npc/speech.xss 1.1:
+	* speech.xss 1.3:
+	* symbols.xss 1.8:
+	* symbols.xss 1.9:
+		to make it more comfortable for shards to have own files and 
+		stay up-to-date speech.xss brought into npc scripts folder and 
+		added customspeech.xss and customnpc.xss
+
+	* items/custom.xss 1.2:
+	* items/customitems.xss 1.3:
+	* items/items.xss 1.21:
+	* symbols/items/customitems.xss 1.2:
+	* symbols/items/items.xss 1.17:
+	* symbols/npc/customnpc.xss 1.2:
+	* symbols/npc/npc.xss 1.2:
+		transfered all items and npc from custom_bla_.xss files into the 
+		appropriate other files to clean them for custom shard scripts
+
+2004-05-22	horiansf
+	* house.xss 1.11:
+		should work fine now
+
+	* house.xss 1.10:
+		kills server when compiling
+
+2004-05-21	ai_wintermute
+	* house.xss 1.9:
+		changed set_getCoowners and the other house sets to set_add to be conform to the other set fill functions
+		
+		fixed a bug in the get functions for the set contents which returned a wrong value
+
+2004-05-15	horiansf
+	* house.xss 1.8:
+		forgot @ before ONDBLCLICK
+
+	* house.xss 1.7:
+		added ONDBLCKICK for house gump starter, fixed several missing 
+		empty lines
+
+2004-04-28	horiansf
+	* symbols/items/cookitems.xss 1.3:
+	* triggers/npc_triggers.xss 1.4:
+		update to naming convention for xss defines
+
+2004-04-25	ai_wintermute
+	* house.xss 1.6:
+	* items/deeds.xss 1.5:
+	* symbols/items/itemtypes.xss 1.4:
+		finished boat system, no real multi
+
+2004-04-25	horiansf
+	* create.xss 1.8:
+	* items/cooking/cookitems.xss 1.3:
+	* items/itemlists.xss 1.6:
+	* menus.xss 1.9:
+	* newbie.xss 1.8:
+	* npc/npc_lootlists.xss 1.5:
+	* npc/npc_merchants.xss 1.10:
+		changed some food/drink item defines to make all fit into same 
+		naming convention
+
+2004-04-24	ai_wintermute
+	* house.xss 1.5:
+	* items/boats.xss 1.2:
+	* symbols/items/itemtypes.xss 1.3:
+		additional fixes to boat system, fixed reloading boats during 
+		worldload
+
+2004-04-24	faxsf
+	* menus.xss 1.8:
+	* newbie.xss 1.7:
+	* skills2.xss 1.1:
+		added extended skillsystem, fixed inscription bug
+
+2004-04-23	faxsf
+	* items.xss 1.9:
+		*** empty log message ***
+
+2004-04-18	ai_wintermute
+	* house.xss 1.4:
+	* items/deeds.xss 1.4:
+	* symbols/items/itemtypes.xss 1.2:
+		reenabled house placing/deeding
+
+2004-04-03	ai_wintermute
+	* items/guild.xss 1.6:
+	* symbols/items/items.xss 1.16:
+		added guild shields
+
+2004-04-01	ai_wintermute
+	* neueitems.xss 1.2:
+		removed old file from horian
+
+	* items/buildings.xss 1.2:
+	* items/fooddrinks.xss 1.5:
+		removed obsolete files
+
+2004-04-01	horiansf
+	* envoke.xss 1.6:
+		raw fish steaks appear after slicing a fish, not cooked fish 
+		steaks as before ;)
+
+	* create.xss 1.7:
+	* house.xss 1.3:
+	* items/architecture.xss 1.5:
+	* items/armour.xss 1.7:
+	* items/carpenter/alder_furniture.xss 1.2:
+	* items/carpenter/beech_furniture.xss 1.2:
+	* items/carpenter/carpenter.xss 1.2:
+	* items/carpenter/cedar_furniture.xss 1.2:
+	* items/carpenter/ebony_furniture.xss 1.2:
+	* items/carpenter/mahogany_furniture.xss 1.2:
+	* items/carpenter/maple_furniture.xss 1.2:
+	* items/carpenter/oak_furniture.xss 1.2:
+	* items/carpenter/pine_furniture.xss 1.2:
+	* items/carpenter/yew_furniture.xss 1.2:
+	* items/color weapons/agapite_weapons.xss 1.2:
+	* items/color weapons/bronze_weapons.xss 1.2:
+	* items/color weapons/copper_weapons.xss 1.2:
+	* items/color weapons/golden_weapons.xss 1.2:
+	* items/color weapons/iron_weapons.xss 1.2:
+	* items/color weapons/merkite_weapons.xss 1.2:
+	* items/color weapons/shadow_weapons.xss 1.2:
+	* items/color weapons/silver_weapons.xss 1.2:
+	* items/color weapons/valorite_weapons.xss 1.2:
+	* items/color weapons/verite_weapons.xss 1.2:
+	* items/containers.xss 1.2:
+	* items/cooking/cookitems.xss 1.2:
+	* items/cooking/farmitems.xss 1.2:
+	* items/customitems.xss 1.2:
+	* items/decorations.xss 1.5:
+	* items/fooddrinks.xss 1.4:
+	* items/itemlists.xss 1.5:
+	* items/items.xss 1.20:
+	* items/potions.xss 1.5:
+	* items/race_items.xss 1.4:
+	* items/weapons.xss 1.5:
+	* menus.xss 1.7:
+	* misc.xss 1.2:
+	* newbie.xss 1.6:
+	* npc/npc_elves.xss 1.5:
+	* npc/npc_humanoids.xss 1.4:
+	* npc/npc_lootlists.xss 1.4:
+	* npc/npc_merchants.xss 1.9:
+	* npc/npc_mlist.xss 1.2:
+	* npc/npc_npclists.xss 1.2:
+	* npc/npc_orcs.xss 1.5:
+	* npc/npc_others.xss 1.7:
+	* npc/npc_people.xss 1.6:
+	* npc/npc_terathans.xss 1.5:
+	* npc/npc_undeads.xss 1.6:
+	* race.xss 1.2:
+	* races/avariel.xss 1.3:
+	* races/default/skills.xss 1.2:
+	* races/dwarf.xss 1.2:
+	* races/elf.xss 1.2:
+	* races/halfelf.xss 1.2:
+	* races/halfling.xss 1.2:
+	* races/halforc.xss 1.2:
+	* races/human.xss 1.2:
+	* races/orc.xss 1.2:
+	* races/troll.xss 1.2:
+	* races/unknown.xss 1.2:
+	* skills.xss 1.2:
+	* speech.xss 1.2:
+	* symbols/items/carpenteritems.xss 1.2:
+	* symbols/items/cookitems.xss 1.2:
+	* symbols/items/items.xss 1.15:
+	* symbols/skills.xss 1.2:
+	* titles.xss 1.2:
+	* triggers/item_triggers.xss 1.5:
+		fixed many xss errors depending at wintermutes parser
+
+2004-03-29	horiansf
+	* items/magic.xss 1.4:
+		added alchemy call for mortar (@ONDBLCLICK)
+
+2004-03-26	faxsf
+	* items.xss 1.8:
+		fixed 'make 'go - updated commands.txt with commands privs
+
+2004-03-25	faxsf
+	* items/architecture.xss 1.4:
+	* symbols/items/architecture.xss 1.4:
+	* symbols/items/items.xss 1.14:
+		added 'go command, finished 'add menu
+
+2004-03-21	faxsf
+	* items.xss 1.6:
+	* items.xss 1.7:
+	* items/architecture.xss 1.2:
+	* items/architecture.xss 1.3:
+	* symbols/items/architecture.xss 1.2:
+	* symbols/items/architecture.xss 1.3:
+	* symbols/items/items.xss 1.12:
+	* symbols/items/items.xss 1.13:
+		*** empty log message ***
+
+2004-03-20	faxsf
+	* items.xss 1.5:
+	* items/architecture.xss 1.1:
+	* items/items.xss 1.19:
+	* symbols.xss 1.7:
+	* symbols/items/architecture.xss 1.1:
+	* symbols/items/items.xss 1.11:
+		added build section to 'add menu
+		added architecture.xss
+
+2004-03-04	faxsf
+	* items/armour.xss 1.6:
+		updated server.cfg
+
+2004-03-03	horiansf
+	* symbols.xss 1.6:
+	* triggers/customtriggers.xss 1.1:
+	* triggers/item_triggers.xss 1.4:
+	* triggers/npc_triggers.xss 1.3:
+		added missing files (hope this time they REALLY are in cvs)
+
+2004-03-02	horiansf
+	* items/carpenter/alder_furniture.xss 1.1:
+	* items/carpenter/beech_furniture.xss 1.1:
+	* items/carpenter/carpenter.xss 1.1:
+	* items/carpenter/cedar_furniture.xss 1.1:
+	* items/carpenter/ebony_furniture.xss 1.1:
+	* items/carpenter/mahogany_furniture.xss 1.1:
+	* items/carpenter/maple_furniture.xss 1.1:
+	* items/carpenter/oak_furniture.xss 1.1:
+	* items/carpenter/pine_furniture.xss 1.1:
+	* items/carpenter/walnut_furniture.xss 1.1:
+	* items/carpenter/yew_furniture.xss 1.1:
+	* items/color armour/agapite_armour.xss 1.1:
+	* items/color armour/bronze_armour.xss 1.1:
+	* items/color armour/copper_armour.xss 1.1:
+	* items/color armour/golden_armour.xss 1.1:
+	* items/color armour/iron_armour.xss 1.1:
+	* items/color armour/merkite_armour.xss 1.1:
+	* items/color armour/shadow_armour.xss 1.1:
+	* items/color armour/silver_armour.xss 1.1:
+	* items/color armour/valorite_armour.xss 1.1:
+	* items/color armour/verite_armour.xss 1.1:
+	* items/color weapons/agapite_weapons.xss 1.1:
+	* items/color weapons/bronze_weapons.xss 1.1:
+	* items/color weapons/copper_weapons.xss 1.1:
+	* items/color weapons/golden_weapons.xss 1.1:
+	* items/color weapons/iron_weapons.xss 1.1:
+	* items/color weapons/merkite_weapons.xss 1.1:
+	* items/color weapons/shadow_weapons.xss 1.1:
+	* items/color weapons/silver_weapons.xss 1.1:
+	* items/color weapons/valorite_weapons.xss 1.1:
+	* items/color weapons/verite_weapons.xss 1.1:
+	* items/cooking/cookitems.xss 1.1:
+	* items/cooking/farmitems.xss 1.1:
+	* npc/npc_animals.xss 1.4:
+	* npc/npc_daemons.xss 1.2:
+	* npc/npc_deamons.xss 1.2:
+	* npc/npc_dragons.xss 1.3:
+	* npc/npc_elementals.xss 1.5:
+	* npc/npc_elves.xss 1.4:
+	* npc/npc_giants.xss 1.4:
+	* npc/npc_humanoids.xss 1.3:
+	* npc/npc_lizardmen.xss 1.4:
+	* npc/npc_lootlists.xss 1.3:
+	* npc/npc_magery_summons.xss 1.3:
+	* npc/npc_merchants.xss 1.8:
+	* npc/npc_ophidians.xss 1.4:
+	* npc/npc_orcs.xss 1.4:
+	* npc/npc_others.xss 1.6:
+	* npc/npc_people.xss 1.5:
+	* npc/npc_ratmen.xss 1.4:
+	* npc/npc_terathans.xss 1.4:
+	* npc/npc_undeads.xss 1.5:
+	* symbols/creatures.xss 1.3:
+	* symbols/items/carpenteritems.xss 1.1:
+	* symbols/items/cookitems.xss 1.1:
+	* symbols/items/customitems.xss 1.1:
+	* symbols/items/farmitems.xss 1.1:
+	* symbols/items/items.xss 1.10:
+	* symbols/items/smithitem.xss 1.1:
+	* symbols/itrigrs.xss 1.2:
+	* symbols/npc.xss 1.3:
+	* symbols/npc/creatures.xss 1.1:
+	* symbols/npc/customnpc.xss 1.1:
+	* symbols/npc/customtriggers.xss 1.1:
+	* symbols/npc/npc.xss 1.1:
+	* symbols/npc/npcextras.xss 1.1:
+	* symbols/npc/npclists.xss 1.1:
+	* symbols/npc/ntrigrs.xss 1.1:
+	* symbols/npcextras.xss 1.2:
+	* symbols/npclists.xss 1.2:
+	* symbols/ntrigrs.xss 1.2:
+		added missing files (hope this time they REALLY are in cvs)
+
+2004-02-08	horiansf
+	* items/customitems.xss 1.1:
+		update, merged scripts with akrons unicorn changes, new scripts 
+		from Nox community at official boards or gernox.de
+
+2004-02-07	horiansf
+	* advance.xss 1.4:
+	* carve.xss 1.2:
+	* create.xss 1.6:
+	* envoke.xss 1.5:
+	* fishing.xss 1.3:
+	* gumps.xss 1.2:
+	* house.xss 1.2:
+	* items.xss 1.4:
+	* items/armour.xss 1.5:
+	* items/clothes.xss 1.3:
+	* items/decorations.xss 1.4:
+	* items/deeds.xss 1.3:
+	* items/floortiles.xss 1.2:
+	* items/furniture.xss 1.2:
+	* items/hair.xss 1.4:
+	* items/itemlists.xss 1.4:
+	* items/items.xss 1.18:
+	* items/magic.xss 1.3:
+	* items/professions.xss 1.3:
+	* items/race_items.xss 1.3:
+	* items/spawners.xss 1.4:
+	* items/weapons.xss 1.4:
+	* menus.xss 1.6:
+	* necro.xss 1.2:
+	* neueitems.xss 1.1:
+	* newbie.xss 1.5:
+	* npc.xss 1.2:
+	* polymorph.xss 1.3:
+	* spells.xss 1.3:
+	* symbols.xss 1.5:
+	* tracking.xss 1.3:
+		update, merged scripts with akrons unicorn changes, new scripts 
+		from Nox community at official boards or gernox.de
+
+2003-12-21	dgp85
+	* items/decorations.xss 1.3:
+	* items/deeds.xss 1.2:
+	* items/items.xss 1.17:
+	* npc/npc_animals.xss 1.3:
+	* npc/npc_daemons.xss 1.1:
+	* npc/npc_dragons.xss 1.2:
+	* npc/npc_elementals.xss 1.4:
+	* npc/npc_elves.xss 1.3:
+	* npc/npc_giants.xss 1.3:
+	* npc/npc_humanoids.xss 1.2:
+	* npc/npc_lizardmen.xss 1.3:
+	* npc/npc_magery_summons.xss 1.2:
+	* npc/npc_merchants.xss 1.7:
+	* npc/npc_ophidians.xss 1.3:
+	* npc/npc_orcs.xss 1.3:
+	* npc/npc_others.xss 1.5:
+	* npc/npc_people.xss 1.4:
+	* npc/npc_ratmen.xss 1.3:
+	* npc/npc_terathans.xss 1.3:
+	* npc/npc_undeads.xss 1.4:
+		added categorization for Unicorn
+
+2003-09-28	endymionsf
+	* items/guild.xss 1.5:
+		*** empty log message ***
+
+2003-09-16	endymionsf
+	* create.xss 1.5:
+	* make.xss 1.2:
+		95% of makemenu and target
+
+2003-09-10	endymionsf
+	* creatures.xss 1.5:
+		fixed
+
+2003-09-09	endymionsf
+	* creatures.xss 1.4:
+		fixed
+
+	* creatures.xss 1.3:
+	* symbols.xss 1.4:
+	* symbols/creatures.xss 1.2:
+		new creatures
+
+2003-09-08	luxornox
+	* polymorph.xss 1.2:
+	* spells.xss 1.2:
+		*** empty log message ***
+
+2003-09-06	endymionsf
+	* tracking.xss 1.2:
+		new tracking
+
+	* creatures.xss 1.1:
+	* creatures.xss 1.2:
+	* symbols/creatures.xss 1.1:
+		new creatures
+
+2003-08-19	dgp85
+	* items/fooddrinks.xss 1.3:
+		typos in categorization
+
+2003-08-14	dgp85
+	* items.xss 1.3:
+	* items/armour.xss 1.4:
+	* items/boats.xss 1.1:
+	* items/clothes.xss 1.2:
+	* items/custom.xss 1.1:
+	* items/decorations.xss 1.2:
+	* items/deeds.xss 1.1:
+	* items/fooddrinks.xss 1.2:
+	* items/hair.xss 1.3:
+	* items/items.xss 1.16:
+	* items/magic.xss 1.2:
+	* items/professions.xss 1.2:
+	* items/spawners.xss 1.3:
+	* items/treasures.xss 1.1:
+		continued the categorization
+
+2003-08-10	dgp85
+	* items.xss 1.2:
+	* items/armour.xss 1.3:
+	* items/beard.xss 1.2:
+	* items/books.xss 1.1:
+	* items/buildings.xss 1.1:
+	* items/clothes.xss 1.1:
+	* items/containers.xss 1.1:
+	* items/decorations.xss 1.1:
+	* items/floortiles.xss 1.1:
+	* items/fooddrinks.xss 1.1:
+	* items/furniture.xss 1.1:
+	* items/guild.xss 1.4:
+	* items/hair.xss 1.2:
+	* items/items.xss 1.15:
+	* items/magic.xss 1.1:
+	* items/potions.xss 1.4:
+	* items/professions.xss 1.1:
+	* items/race_items.xss 1.2:
+		started splitting down items.xss
+
+2003-07-20	sparhawksf
+	* npc/npc_others.xss 1.4:
+		Fixed bad body id's for kraken and giant slime causing client 
+		crashes
+
+2003-07-12	endymionsf
+	* items/items.xss 1.13:
+	* symbols/items/items.xss 1.9:
+		added $raw_bird
+
+	* items/items.xss 1.14:
+		fixed dying tub now is dyeable
+
+2003-07-10	endymionsf
+	* envoke.xss 1.4:
+		fix
+
+2003-07-09	endymionsf
+	* items/items.xss 1.11:
+		fix
+
+	* items/items.xss 1.12:
+		*** empty log message ***
+
+	* items/items.xss 1.10:
+	* symbols/items/items.xss 1.8:
+		fixed deadly
+
+2003-07-08	endymionsf
+	* envoke.xss 1.3:
+		fix for pig when cut hides
+
+2003-06-30	endymionsf
+	* symbols.xss 1.3:
+	* symbols/triggers.xss 1.1:
+		added trigeer options symbols
+
+	* envoke.xss 1.2:
+		fix for some creation item like bandages, cut cloth ect
+
+2003-06-12	endymionsf
+	* menus.xss 1.5:
+		fix
+
+	* items/spawners.xss 1.2:
+	* menus.xss 1.4:
+	* npc/npc_merchants.xss 1.5:
+	* npc/npc_people.xss 1.3:
+	* symbols/npc.xss 1.2:
+		clean, removed double npc vendor
+
+	* npc/npc_merchants.xss 1.6:
+		clean
+
+2003-06-10	endymionsf
+	* areas.xss 1.2:
+	* symbols/areas.xss 1.2:
+		*** empty log message ***
+
+2003-06-08	endymionsf
+	* symbols/areas.xss 1.1:
+	* symbols/locations.xss 1.1:
+		added location and areas
+
+	* symbols.xss 1.2:
+		*** empty log message ***
+
+2003-06-06	endymionsf
+	* symbols/items/items.xss 1.7:
+		now define item for guild
+
+2003-06-05	endymionsf
+	* items/guild.xss 1.3:
+		ending new guild
+
+2003-06-04	endymionsf
+	* items/weapons.xss 1.3:
+		fixed mace
+
+2003-06-03	endymionsf
+	* items/armour.xss 1.2:
+	* items/guild.xss 1.2:
+	* items/items.xss 1.4:
+	* items/potions.xss 1.3:
+	* items/weapons.xss 1.2:
+		clean for restock restyle
+
+	* advance.xss 1.2:
+	* items/items.xss 1.6:
+	* menus.xss 1.3:
+	* newbie.xss 1.3:
+	* npc/npc_elementals.xss 1.2:
+	* npc/npc_merchants.xss 1.2:
+	* npc/npc_others.xss 1.2:
+	* npc/npc_undeads.xss 1.2:
+	* symbols/items/items.xss 1.4:
+	* triggers/item_triggers.xss 1.3:
+		clean, removing define of new evetns with only different amount, 
+		use new amount system instead
+
+	* create.xss 1.4:
+	* items/itemlists.xss 1.2:
+	* items/items.xss 1.5:
+	* items/items.xss 1.8:
+	* items/items.xss 1.9:
+	* menus.xss 1.2:
+	* npc/npc_merchants.xss 1.4:
+	* symbols/items/items.xss 1.3:
+	* symbols/items/items.xss 1.6:
+	* triggers/item_triggers.xss 1.2:
+	* triggers/npc_triggers.xss 1.2:
+		*** empty log message ***
+
+	* create.xss 1.2:
+	* fishing.xss 1.2:
+		clean
+
+	* advance.xss 1.3:
+	* create.xss 1.3:
+	* items/itemlists.xss 1.3:
+	* items/items.xss 1.7:
+	* newbie.xss 1.4:
+	* npc/npc_animals.xss 1.2:
+	* npc/npc_elementals.xss 1.3:
+	* npc/npc_elves.xss 1.2:
+	* npc/npc_giants.xss 1.2:
+	* npc/npc_lizardmen.xss 1.2:
+	* npc/npc_lootlists.xss 1.2:
+	* npc/npc_merchants.xss 1.3:
+	* npc/npc_ophidians.xss 1.2:
+	* npc/npc_orcs.xss 1.2:
+	* npc/npc_others.xss 1.3:
+	* npc/npc_people.xss 1.2:
+	* npc/npc_ratmen.xss 1.2:
+	* npc/npc_terathans.xss 1.2:
+	* npc/npc_undeads.xss 1.3:
+	* races/avariel.xss 1.2:
+	* symbols/items/items.xss 1.5:
+		clean now there are only $item_arrow
+
+	* containers.xss 1.2:
+		added restock container
+
+2003-05-31	luxornox
+	* items/items.xss 1.2:
+	* items/items.xss 1.3:
+	* symbols/items/items.xss 1.2:
+		*** empty log message ***
+
+2003-05-27	luxornox
+	* items/potions.xss 1.2:
+	* symbols/items/potions.xss 1.2:
+		Added deadly poison
+
+2003-04-30	dgp85
+	* newbie.xss 1.2:
+		fix bug 0000032
+

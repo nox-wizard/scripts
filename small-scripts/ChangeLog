@@ -1,0 +1,2518 @@
+2004-09-28	horiansf
+	* commands/add/addmenu_en.xss 1.3:
+		fixed npc add menu section, added several missing npc and 
+		resorted several npc
+
+	* custom/eatdrink.sma 1.6:
+		fixed the eternal hunger timer creation after logout now with 
+		tempfx saved after logout
+
+2004-09-22	slashi83
+	* API/misc.api 1.12:
+		Changed api definition for function weblaunch().
+		It now takes a chr and not a socket as first parameter.
+
+2004-09-21	slashi83
+	* commands.txt 1.22:
+	* commands/commands.sma 1.48:
+	* commands/gmhide.sma 1.1:
+	* commands/help/helpTopics.txt 1.11:
+		*** empty log message ***
+
+2004-09-21	horiansf
+	* commands/tweak/tweak.sma 1.53:
+		fixed a bug with visible/invis people flags, thanks slasher for 
+		reporting :)
+
+	* commands/commands.sma 1.47:
+		only a sticky-test
+
+2004-09-07	faxsf
+	* commands/area.sma 1.12:
+	* commands/move.sma 1.16:
+		bugfix
+
+2004-09-05	horiansf
+	* custom/unknown_char.sma 1.13:
+		logging error messages now, still not working in paperdoll
+
+2004-09-03	faxsf
+	* API/gui/menu.sma 1.10:
+		bugfix
+
+2004-09-02	faxsf
+	* commands/add/addmenu.sma 1.28:
+		bugfix
+
+2004-08-28	faxsf
+	* commands/accountscp.sma 1.2:
+	* commands/action.sma 1.3:
+	* commands/add/add.sma 1.13:
+	* commands/add/addmenu.sma 1.27:
+	* commands/align.sma 1.5:
+	* commands/area.sma 1.11:
+	* commands/bolt.sma 1.4:
+	* commands/buy.sma 1.2:
+	* commands/commands.sma 1.46:
+	* commands/cset.sma 1.10:
+	* commands/csetxyz.sma 1.5:
+	* commands/damage.sma 1.9:
+	* commands/decay.sma 1.11:
+	* commands/dupe.sma 1.11:
+	* commands/dye.sma 1.8:
+	* commands/flip.sma 1.4:
+	* commands/freeze.sma 1.10:
+	* commands/fullstats.sma 1.6:
+	* commands/func.sma 1.6:
+	* commands/kick.sma 1.2:
+	* commands/summon.sma 1.4:
+	* translations/helpTopics.txt 1.5:
+		updated documentation
+		some bugfixes
+
+2004-08-20	faxsf
+	* commands/add/addmenu.sma 1.26:
+		fixed 'add menu not creating NPCs in single adding mode
+
+2004-08-15	horiansf
+	* custom/unknown_char.sma 1.12:
+		update, still not really working
+
+	* race/menu/menu.sma 1.20:
+		update, still work in progress
+
+2004-08-14	faxsf
+	* API/gui/menu.sma 1.8:
+	* commands/bolt.sma 1.2:
+	* commands/damage.sma 1.7:
+	* commands/decay.sma 1.9:
+	* commands/dupe.sma 1.9:
+	* commands/dye.sma 1.6:
+	* commands/freeze.sma 1.8:
+	* commands/fullstats.sma 1.4:
+	* commands/go/go.sma 1.12:
+	* commands/go/locationsMenu.sma 1.5:
+	* commands/heal.sma 1.4:
+	* commands/help/help.sma 1.6:
+	* commands/hiding.sma 1.9:
+	* commands/imore.sma 1.2:
+	* commands/invul.sma 1.8:
+	* commands/iset.sma 1.8:
+	* commands/kill.sma 1.10:
+	* commands/mana.sma 1.4:
+	* commands/resend.sma 1.3:
+	* commands/resurrect.sma 1.6:
+	* commands/setdir.sma 1.5:
+	* commands/setpriv.sma 1.9:
+	* commands/settype.sma 1.6:
+	* commands/stamina.sma 1.4:
+	* commands/summon.sma 1.3:
+		removed wrong comment saying that the "target" parameter was 
+		active in commands
+
+	* API/gui/cursor.sma 1.3:
+	* API/gui/menu.sma 1.9:
+	* commands/bolt.sma 1.3:
+	* commands/commands.sma 1.45:
+	* commands/cset.sma 1.9:
+	* commands/csetxyz.sma 1.4:
+	* commands/damage.sma 1.8:
+	* commands/decay.sma 1.10:
+	* commands/dupe.sma 1.10:
+	* commands/dye.sma 1.7:
+	* commands/freeze.sma 1.9:
+	* commands/fullstats.sma 1.5:
+	* commands/go/locationsMenu.sma 1.6:
+	* commands/heal.sma 1.5:
+	* commands/hiding.sma 1.10:
+	* commands/imore.sma 1.3:
+	* commands/invul.sma 1.9:
+	* commands/iset.sma 1.9:
+	* commands/kill.sma 1.11:
+	* commands/mana.sma 1.5:
+	* commands/posttype.sma 1.2:
+	* commands/resend.sma 1.4:
+	* commands/resurrect.sma 1.7:
+	* commands/setdir.sma 1.6:
+	* commands/setmoreb12.sma 1.5:
+	* commands/setmoreb34.sma 1.3:
+	* commands/setmorexyz.sma 1.4:
+	* commands/setpriv.sma 1.10:
+	* commands/settype.sma 1.7:
+	* commands/stamina.sma 1.5:
+	* commands/wipe.sma 1.11:
+	* nxw_lib2.sma 1.17:
+		reactivated the optional "t" parameter in commands to bypass the 
+		command area
+
+2004-08-13	horiansf
+	* commands/bolt.sma 1.1:
+	* commands/imore.sma 1.1:
+		added imore command, allows to set all possible more values or 
+		value-combinations for more, replaces setmorexyz and bolt to 
+		kill people ingame with lightning bolt FX
+
+	* commands/decay.sma 1.6:
+	* commands/decay.sma 1.7:
+	* commands/help/helpTopics.txt 1.10:
+		fixed an error that prevented single target decay setting
+
+	* commands.txt 1.21:
+	* commands/commands.sma 1.44:
+	* translations/small_speech.sma 1.17:
+		added imore command, allows to set all possible more values or 
+		value-combinations for more, replaces setmorexyz
+
+	* commands/decay.sma 1.8:
+	* commands/dye.sma 1.5:
+	* commands/iset.sma 1.7:
+	* commands/settype.sma 1.4:
+	* commands/settype.sma 1.5:
+		fixed an error that prevented single target setting instead 
+		always used area
+
+	* override/charLogin.sma 1.19:
+	* override/startServer.sma 1.13:
+		fixed an error in race menu
+
+2004-08-12	horiansf
+	* API/race/constant.sma 1.4:
+		fixed an error in race menu
+
+2004-08-11	horiansf
+	* API/race/constant.sma 1.3:
+	* race/menu/menu.sma 1.16:
+	* race/menu/menu.sma 1.17:
+	* race/menu/menu.sma 1.18:
+	* race/menu/menu.sma 1.19:
+		fixed an error in race menu
+
+	* API/race/constant.sma 1.2:
+	* API/race/race.api 1.2:
+		updated race properties and api file, race api is still work in 
+		progress
+
+	* API/race/race.api 1.3:
+	* API/race/race.api 1.4:
+	* custom/unknown_char.sma 1.10:
+	* custom/unknown_char.sma 1.11:
+	* nxw_lib2.sma 1.16:
+	* override.sma 1.41:
+	* override/charLogin.sma 1.17:
+	* override/charLogin.sma 1.18:
+	* race/menu/menu.sma 1.14:
+	* race/menu/menu.sma 1.15:
+		added race menu call basing at xss switch
+
+2004-08-10	faxsf
+	* API/gui/menu.sma 1.7:
+	* commands/add/addmenu.sma 1.25:
+	* commands/random.sma 1.2:
+		fixed 'add menu
+		little addons to menu_ library
+
+2004-08-09	faxsf
+	* commands/add/add.sma 1.12:
+	* commands/add/addmenu.sma 1.24:
+		modified 'add menu to fix client crash
+
+2004-08-09	horiansf
+	* commands/tweak/tweak.sma 1.52:
+	* race/menu/menu.sma 1.13:
+		re-added the file
+
+2004-08-08	horiansf
+	* API/guild/constant.sma 1.4:
+	* commands/polymorph.sma 1.12:
+	* commands/tweak/tweak.sma 1.51:
+	* guild/guild.sma 1.5:
+	* guild/guildstone.sma 1.28:
+	* nxw_lib2.sma 1.15:
+	* skills/lumberjacking.sma 1.19:
+	* skills/mining.sma 1.16:
+	* translations/small_speech.sma 1.16:
+		fixed man warnings, added guild text lines and text arrays to 
+		small translation folder
+
+	* custom/flipitem.sma 1.3:
+	* custom/pregnant.sma 1.3:
+	* custom/unknown_char.sma 1.9:
+		deleted debug stuff in flipitem and extended unknown char system 
+		by ONHEARPLAYER
+
+2004-08-07	ai_wintermute
+	* override.scp 1.10:
+		changed lumberjacking and mining to adhere to the override skill section in override.scp
+		corrected amxexecsvtarget so that it no longer core dumps
+
+2004-08-07	horiansf
+	* translations/small_speech.sma 1.15:
+		fixed some errors
+
+2004-08-02	horiansf
+	* custom/unknown_char.sma 1.8:
+		fixed some errors
+
+2004-08-01	horiansf
+	* skills/lumberjacking.sma 1.18:
+	* translations/small_speech.sma 1.14:
+		extended lumberjacking/carpenting and exported last lines into 
+		small-speech
+
+	* skills/alchemy.sma 1.9:
+		fixed [ instead (
+
+2004-07-31	horiansf
+	* commands/tweak/tweak.sma 1.50:
+		fixed missing char events and allowed longer function names to 
+		hook at
+
+	* custom/unknown_char.sma 1.5:
+		fixed unknown char system, should work now perfect
+
+	* commands/add/add.sma 1.10:
+		fixed add menu bug that added xss-script-definition-item-amount 
+		but lowered it to 1 -> wrong number of item compared to pic
+
+	* commands/add/add.sma 1.11:
+	* custom/unknown_char.sma 1.6:
+	* custom/unknown_char.sma 1.7:
+		little fix for stop unknown-char-sys function
+
+	* skills/alchemy.sma 1.7:
+	* skills/alchemy.sma 1.8:
+	* translations/small_speech.sma 1.13:
+		extended and fixed alchemy
+
+	* commands/save.sma 1.4:
+	* commands/sell.sma 1.2:
+	* commands/setmoreb12.sma 1.4:
+		tracking down save error ...
+
+2004-07-30	horiansf
+	* custom/unknown_char.sma 1.4:
+		fixed error, wrong target serial
+
+2004-07-29	horiansf
+	* API/item/constant.sma 1.8:
+	* API/item/item.api 1.8:
+	* commands/flip.sma 1.3:
+	* custom/flipitem.sma 1.2:
+	* nxw_lib2.sma 1.14:
+	* skills/mining.sma 1.15:
+		several print-lines to find the bug in flipping with 
+		ONDROPINLAND
+
+2004-07-28	horiansf
+	* custom/hitching.sma 1.2:
+		fixed speech error
+
+	* custom/unknown_char.sma 1.3:
+		fixed error with one */ too many
+
+	* custom/unknown_char.sma 1.2:
+	* override.sma 1.40:
+		added link for hitching post script and little change in unknown 
+		char sys
+
+2004-07-26	horiansf
+	* API/character/character.api 1.30:
+	* API/character/constant.sma 1.21:
+	* API/event/constant.sma 1.4:
+	* commands.txt 1.20:
+	* commands/dupe.sma 1.8:
+	* commands/tweak/tweak.sma 1.49:
+	* config.sma 1.2:
+	* custom/unknown_char.sma 1.1:
+	* nxw_lib2.sma 1.13:
+	* override.sma 1.39:
+	* override/charLogin.sma 1.16:
+	* override/startServer.sma 1.12:
+	* translations/small_speech.sma 1.12:
+	* translations/tweak_lines.sma 1.4:
+		added "unknown char" system with switch in config.sma and fixed 
+		another tweak thing
+
+2004-07-25	ai_wintermute
+	* API/event/constant.sma 1.3:
+		added the three new events to constants.sma
+
+2004-07-23	horiansf
+	* translations/small_speech.sma 1.10:
+	* translations/small_speech.sma 1.11:
+		fixes, cvs does not like new version it seems :(
+
+	* commands/area.sma 1.10:
+	* commands/constant.sma 1.25:
+	* commands/page/constants.sma 1.3:
+	* commands/stats/statsmenu.sma 1.4:
+	* config.sma 1.1:
+	* house/housemenu.sma 1.15:
+	* override.sma 1.38:
+	* skills/constant.sma 1.13:
+	* skills/inscription.sma 1.18:
+	* skills/meditation.sma 1.9:
+		exported define lines into new file config.sma
+
+	* override/charLogin.sma 1.15:
+		outcommented race menu
+
+2004-07-22	horiansf
+	* commands/tweak/tweak.sma 1.48:
+	* translations/small_speech.sma 1.9:
+		tweak fixes and additions
+
+	* API/character/constant.sma 1.20:
+	* commands/tweak/tweak.sma 1.47:
+	* override.sma 1.37:
+	* override/charLogin.sma 1.14:
+	* race/menu/menu.sma 1.12:
+	* translations/tweak_lines.sma 1.3:
+		race menu changes (outcommented untill race api is available), 
+		tweak fixes, hunger timer now is deleted at logout, some 
+		translation-small changes
+
+2004-07-21	faxsf
+	* commands.txt 1.19:
+	* commands/commands.sma 1.43:
+	* commands/loaddefaults.sma 1.2:
+	* commands/random.sma 1.1:
+	* translations/helpTopics.txt 1.4:
+	* translations/small_speech.sma 1.8:
+		added 'random
+
+2004-07-16	ai_wintermute
+	* API/misc.api 1.11:
+		fixed a possible ase bug in loadDefaults
+
+2004-07-16	faxsf
+	* API/gui/menu.sma 1.6:
+	* API/item/constant.sma 1.7:
+	* API/misc.api 1.10:
+	* commands.txt 1.18:
+	* commands/accountscp.sma 1.1:
+	* commands/buy.sma 1.1:
+	* commands/commands.sma 1.42:
+	* commands/cset.sma 1.8:
+	* commands/gmopen.sma 1.3:
+	* commands/go.sma 1.6:
+	* commands/go/go.sma 1.11:
+	* commands/guards.sma 1.1:
+	* commands/iset.sma 1.6:
+	* commands/kick.sma 1.1:
+	* commands/loaddefaults.sma 1.1:
+	* commands/page/pagemenu.sma 1.5:
+	* commands/page/pagesystem.sma 1.7:
+	* commands/pdump.sma 1.1:
+	* commands/sell.sma 1.1:
+	* commands/tell.sma 1.1:
+	* commands/wipe.sma 1.10:
+	* custom/default.sma 1.3:
+	* nxw_lib2.sma 1.12:
+	* skills/hiding.sma 1.8:
+	* translations/helpTopics.txt 1.3:
+	* translations/small_speech.sma 1.7:
+		- added new commands
+		'guards: sets guards globally or in given region
+		'cset squelch : to mute charcaters
+		'kick: disconnects a character
+		'accountscp: manage accounts
+		'sell:
+		'buy:
+		'pdump:
+		'loaddefaults:
+		'tell:
+		
+		-modified commands
+		'gmopen: now can open special containers like old mopen command
+		
+		checked set_delete() for each set_create()
+
+2004-07-14	ai_wintermute
+	* API/constant.sma 1.6:
+	* API/resourcemap.api 1.3:
+		added string saving capability for resourcemaps in form of two 
+		new types RESOURCE_STRINGSTRING and RESOURCELOCATIONSTRING
+
+	* API/misc.api 1.9:
+	* API/set.api 1.9:
+		added set function to get all chars of an account and pdump, 
+		loaddefaults native functions
+
+2004-07-13	horiansf
+	* override/charLogout.sma 1.2:
+		stopped hunger/thirst on logout, else all our people die from 
+		starvation while being logged out :P
+
+2004-07-12	ai_wintermute
+	* API/API.sma 1.7:
+	* API/accounts.api 1.1:
+	* API/character/character.api 1.29:
+	* API/item/constant.sma 1.6:
+		added several functions needed for commands
+
+	* API/accounts.api 1.2:
+		added removeAccount(account number)
+		add account_getName
+
+2004-07-11	ai_wintermute
+	* API/character/character.api 1.28:
+		added chr_showStatus
+
+	* API/character/character.api 1.27:
+	* API/item/item.api 1.7:
+		changed isItem and isChar to Native functions
+
+2004-07-10	faxsf
+	* API/misc.api 1.8:
+	* commands.txt 1.17:
+	* commands/commands.sma 1.41:
+	* commands/gcollect.sma 1.1:
+	* commands/go/go.sma 1.8:
+	* commands/go/locations.sma 1.4:
+	* commands/go/locations.xss 1.1:
+	* commands/go/locationsMenu.sma 1.4:
+	* commands/help/help.sma 1.5:
+	* commands/page/pagemenu.sma 1.4:
+	* commands/reload.sma 1.1:
+	* commands/reloadsmall.sma 1.4:
+	* commands/shutdown.sma 1.1:
+	* commands/timespeed.sma 1.1:
+	* translations/helpTopics.txt 1.2:
+	* translations/small_speech.sma 1.5:
+		-modified 'go: now uses locations.xss
+		-added 'gcollect 'reload 'shutdown 'timespeed
+		- 'recompile_smal is now 'reload small
+
+2004-07-10	horiansf
+	* commands/go/go.sma 1.10:
+		changed go command according to fax location system to read 
+		location.xss inside scripts folder and reload xss files when 
+		deleting a location with ingame commands usage, fixed spelling 
+		error
+
+	* custom/eatdrink.sma 1.5:
+	* override/charLogin.sma 1.13:
+		exported hunger/drink system speech lines for translation
+
+	* API/character/character.api 1.26:
+	* API/character/constant.sma 1.19:
+	* commands/tweak/tweak.sma 1.46:
+	* translations/small_speech.sma 1.6:
+	* translations/tweak_lines.sma 1.2:
+		added several properties, added a char tweak page, fixed some 
+		spelling errors, added comments to constants
+
+	* commands/go/go.sma 1.9:
+	* commands/go/locations.xss 1.2:
+		changed go command according to fax location system to read 
+		location.xss inside scripts folder and reload xss files when 
+		deleting a location with ingame commands usage
+
+2004-07-09	faxsf
+	* API/gmpage.api 1.2:
+	* API/gui/menu.sma 1.5:
+	* API/resourcemap.api 1.2:
+	* commands/commands.sma 1.40:
+	* commands/go/go.sma 1.7:
+	* commands/page/constants.sma 1.2:
+	* commands/page/page.sma 1.3:
+	* commands/page/pagelist.sma 1.3:
+	* commands/page/pagemenu.sma 1.3:
+	* commands/page/pagesystem.sma 1.6:
+	* commands/page/solvepage.sma 1.4:
+	* override/startServer.sma 1.11:
+	* translations/small_speech.sma 1.4:
+		-added temporary Small based gm-pages APIs and commented out natives
+		-fixed createSetListMenu
+		-fixed 'go with a workaround
+
+2004-07-04	faxsf
+	* commands/add/addmenu.sma 1.23:
+		fixed add menu adding items instead of chars
+
+2004-07-04	horiansf
+	* API/character/character.api 1.25:
+	* API/item/item.api 1.6:
+	* commands/action.sma 1.2:
+	* commands/align.sma 1.4:
+	* commands/area.sma 1.9:
+	* commands/cset.sma 1.7:
+	* commands/csetxyz.sma 1.3:
+	* commands/damage.sma 1.6:
+	* commands/decay.sma 1.4:
+	* commands/decay.sma 1.5:
+	* commands/dupe.sma 1.7:
+	* commands/dye.sma 1.4:
+	* commands/flip.sma 1.2:
+	* commands/freeze.sma 1.7:
+	* commands/fullstats.sma 1.3:
+	* commands/gmopen.sma 1.2:
+	* commands/go.sma 1.5:
+	* commands/go/go.sma 1.6:
+	* commands/heal.sma 1.3:
+	* commands/help/constants.sma 1.5:
+	* commands/hiding.sma 1.8:
+	* commands/invul.sma 1.7:
+	* commands/iset.sma 1.4:
+	* commands/iset.sma 1.5:
+	* commands/jail.sma 1.2:
+	* commands/kill.sma 1.9:
+	* commands/killbeard.sma 1.2:
+	* commands/killhair.sma 1.2:
+	* commands/lightlevel.sma 1.6:
+	* commands/make.sma 1.11:
+	* commands/mana.sma 1.3:
+	* commands/move.sma 1.15:
+	* commands/npcwander.sma 1.3:
+	* commands/options/options.sma 1.12:
+	* commands/page/onlinegm.sma 1.3:
+	* commands/page/pages.sma 1.3:
+	* commands/page/pagesystem.sma 1.5:
+	* commands/page/solvepage.sma 1.3:
+	* commands/playerlist.sma 1.7:
+	* commands/polymorph.sma 1.11:
+	* commands/popup.sma 1.5:
+	* commands/possess.sma 1.2:
+	* commands/racelang.sma 1.4:
+	* commands/regioncp.sma 1.6:
+	* commands/resend.sma 1.2:
+	* commands/resurrect.sma 1.5:
+	* commands/setdir.sma 1.4:
+	* commands/setmoreb12.sma 1.3:
+	* commands/setmoreb34.sma 1.2:
+	* commands/setmorexyz.sma 1.3:
+	* commands/setpriv.sma 1.8:
+	* commands/settype.sma 1.3:
+	* commands/showbank.sma 1.2:
+	* commands/skills/setskills.sma 1.3:
+	* commands/skills/skillsmenu.sma 1.3:
+	* commands/stamina.sma 1.3:
+	* commands/stats/setstats.sma 1.2:
+	* commands/stats/statsmenu.sma 1.3:
+	* commands/summon.sma 1.2:
+	* commands/tile.sma 1.4:
+	* commands/tweak/tweak.sma 1.44:
+	* commands/unjail.sma 1.2:
+	* commands/where.sma 1.5:
+	* commands/wipe.sma 1.9:
+	* override.sma 1.35:
+	* skills/lumberjacking.sma 1.16:
+	* small_speech.sma 1.7:
+	* translations/helpTopics.txt 1.1:
+	* translations/polymorph_lines.sma 1.1:
+	* translations/small_speech.sma 1.1:
+	* translations/small_speech.sma 1.3:
+	* translations/tweak_lines.sma 1.1:
+		all small script text lines have been exported to translations 
+		folder inside small-scripts directory
+
+	* translations/small_speech.sma 1.2:
+		added lumber message "no more wood left"
+
+	* commands/add/lists.sma 1.18:
+	* custom/potiondelay.sma 1.1:
+	* custom/potiondelay_complete_save.sma 1.2:
+	* override.sma 1.36:
+	* override/charLogin.sma 1.12:
+	* skills/lumberjacking.sma 1.17:
+		re-added potiondelay function
+
+	* commands/add/addmenu_en.xss 1.2:
+		added pickaxe
+
+	* commands/tweak/tweak.sma 1.45:
+		fixed a bug with local vars
+
+2004-07-02	faxsf
+	* API/character/character.api 1.24:
+	* API/character/constant.sma 1.18:
+	* commands/posttype.sma 1.1:
+	* commands/racelang.sma 1.3:
+	* custom/eatdrink.sma 1.3:
+	* override/charLogin.sma 1.11:
+	* skills/alchemy.sma 1.6:
+	* skills/meditation.sma 1.8:
+	* skills/taming.sma 1.7:
+		-removed hunger loop for GMs
+		-rearranged SPEECH_* constants and fixedscripts
+		-rearranged speaking functions
+		-moved hungersystem to eatdrink.sma
+
+	* custom/eatdrink.sma 1.4:
+		ops.. I mistyped a >=
+
+2004-06-27	ai_wintermute
+	* skills/lumberjacking.sma 1.15:
+	* small_speech.sma 1.6:
+		fixed a wrong npc id in spawns.xss
+		added support for resource maps to lumberjacking
+
+2004-06-27	faxsf
+	* API/time.api 1.2:
+	* commands/add/add.sma 1.9:
+	* commands/add/addmenu.sma 1.22:
+	* commands/decay.sma 1.3:
+	* commands/move.sma 1.14:
+	* commands/reloadsmall.sma 1.3:
+	* commands/save.sma 1.3:
+	* nxw_lib.sma 1.8:
+	* override.scp 1.9:
+		- added timer to 'save command
+		- added recompile time information to 'recompile_small
+		- modified 'move syntax (+ - for abs/rel)
+		- added getCurrentTimeSring(string[])
+		- removed speech override on + (blah_char is no more defined)
+		- added "menu" param to 'add to specify menu position
+		- modified isStrINt() and str2Int() to support '+' character
+
+	* commands/help/helpTopics.txt 1.9:
+		*** empty log message ***
+
+2004-06-26	ai_wintermute
+	* API/API.sma 1.6:
+	* API/constant.sma 1.5:
+	* API/resourcemap.api 1.1:
+		added support for resource maps which can be used from small to 
+		have a fast and memory efficient access to SI32 values if an 
+		array solution would be sparsely populated
+
+	* skills/mining.sma 1.14:
+	* small_speech.sma 1.5:
+		changed mining callback so that it gets the targetted location and the tile id so that custom scripts may examine the target more closely
+		new callback syntax
+		public __nxw_sk_mining(const cc, const x, const y, const mapTileId)
+		
+		added usage of resource maps to mining
+
+2004-06-26	faxsf
+	* API/character/constant.sma 1.17:
+	* API/gui/menu.sma 1.4:
+	* API/region.api 1.4:
+	* API/region/constant.sma 1.3:
+	* commands.txt 1.16:
+	* commands/add/add.sma 1.8:
+	* commands/add/addmenu.sma 1.21:
+	* commands/add/addmenu_en.xss 1.1:
+	* commands/add/constants.sma 1.15:
+	* commands/add/lists.sma 1.17:
+	* commands/commands.sma 1.39:
+	* commands/constant.sma 1.24:
+	* commands/cset.sma 1.6:
+	* commands/go/go.sma 1.5:
+	* commands/help/helpTopics.txt 1.8:
+	* commands/iset.sma 1.3:
+	* commands/move.sma 1.13:
+	* commands/popup.sma 1.4:
+	* commands/reloadsmall.sma 1.2:
+	* commands/respawn.sma 1.1:
+	* commands/save.sma 1.2:
+	* commands/spawnkill.sma 1.1:
+	* commands/wipe.sma 1.8:
+	* nxw_lib2.sma 1.11:
+	* override/charLogin.sma 1.10:
+	* small_speech.sma 1.4:
+		-changed 'wipe sysntax
+			now "'wipe r" asks for rectangle to wipe (beforewas "'wipe rect")
+		-changed 'move syntax, now it's 'move a/r x y z
+			z is optional, a/r replace old abs/rel
+		-added 'respawn and 'spawnkill commands
+			'respawn replaces all old spawning commands ('respawnall 'respawnmax ...)
+		-added a little library of buildings for 'build command
+			for now all 'build xssfiles are in small-scripts/commands/build
+		-added deeds sections to add menu
+			now it works
+		-modified add/architecture menu
+			now the menu is a thin horizontal bar on the top of the screen so it's
+			less annoying while building
+		-added "continuous adding mode" for 'add menu
+			pressing on the new button in add menu will activate the
+			continuous adding mode, that is, you can add as many items as you
+			want by targetting different locations until you switch back to
+			single adding mode.
+			This applies to all 'add submenus.
+		-rewrote add menu script
+			now the add menu data is stored in addmenu.xss and is much more easily editable
+			"'add reload" or the "reload" button reload the data so you can modify the
+			menu without restarting NOX.
+			You can specify the language of the menu in the constants section of addmenu.sma.
+		-modified 'cset and 'iset:
+			 now if no value is given a sysmessage
+			 tells the current value of the property
+		-fixed add/magic menu, second circle scrolls created first circle scrolls
+		-fixed add/magic menu not closing when "create items in backpack" wasn't selected
+		-fixed some definitions in symbols/items/architecture.xss, some were duplicated
+
+2004-06-19	ai_wintermute
+	* API/region.api 1.3:
+	* API/region/constant.sma 1.2:
+		added
+		native rgn_respawn(const region, const spawnWhat, const amount = 0);
+		native rgn_clearSpawn(const region, const spawntype);
+		stock rgn_respawnRegion ( const region, const amount)
+		stock rgn_respawnRegionRandom ( const region)
+		stock rgn_respawnRegionMax ( const region)
+		stock rgn_respawnAll ( )
+		stock rgn_respawnAllRandom ( )
+		stock rgn_respawnAllMax ( )
+
+2004-06-14	horiansf
+	* skills/mining.sma 1.13:
+		some speech lines I had forgotten to add into speech array file
+
+	* commands/polymorph.sma 1.10:
+		polymorph now contains scriptID based array
+
+	* skills/mining.sma 1.12:
+		fixed some problems including smelting and blacksmithing
+
+	* custom/default.sma 1.2:
+	* house/housemenu.sma 1.14:
+	* nxw_lib2.sma 1.10:
+	* override.sma 1.34:
+	* party/party.sma 1.5:
+	* skills/alchemy.sma 1.5:
+	* skills/anatomy.sma 1.8:
+	* skills/cooking.sma 1.6:
+	* skills/detecthidden.sma 1.7:
+	* skills/evalint.sma 1.8:
+	* skills/extendedSkillsystem.sma 1.16:
+	* skills/fishing.sma 1.7:
+	* skills/hiding.sma 1.7:
+	* skills/inscription.sma 1.17:
+	* skills/lumberjacking.sma 1.14:
+	* skills/meditation.sma 1.7:
+	* skills/mining.sma 1.11:
+	* skills/misc/scissors.sma 1.15:
+	* skills/skills.sma 1.17:
+	* skills/tailoring.sma 1.20:
+	* skills/taming.sma 1.6:
+	* skills/tannering.sma 1.18:
+	* skills/tasteid.sma 1.8:
+	* skills/tracking.sma 1.20:
+		extracted speech/message lines into small_array.sma for language 
+		localisation
+
+	* small_speech.sma 1.3:
+		extracted all small script speech/message lines into 
+		small_array.sma for language localisation
+
+	* commands/add/lists.sma 1.16:
+		added a few missing items to tools section
+
+2004-06-13	ai_wintermute
+	* API/character/character.api 1.21:
+	* commands/racelang.sma 1.2:
+	* custom/eatdrink.sma 1.2:
+	* skills/meditation.sma 1.2:
+		grr@frodos speech changes
+
+	* API/misc.api 1.7:
+	* commands.txt 1.15:
+	* commands/commands.sma 1.38:
+	* commands/reloadsmall.sma 1.1:
+		added experimental function for recompiling small functions
+
+2004-06-13	horiansf
+	* skills/constant.sma 1.11:
+	* skills/cooking.sma 1.3:
+	* skills/detecthidden.sma 1.4:
+	* skills/evalint.sma 1.5:
+	* skills/extendedSkillsystem.sma 1.13:
+	* skills/fishing.sma 1.4:
+	* skills/hiding.sma 1.4:
+	* skills/inscription.sma 1.14:
+	* skills/lumberjacking.sma 1.11:
+	* skills/meditation.sma 1.4:
+	* skills/mining.sma 1.8:
+	* skills/skillcap.sma 1.2:
+	* skills/skills.sma 1.14:
+	* skills/tailoring.sma 1.17:
+	* skills/taming.sma 1.3:
+	* skills/tannering.sma 1.15:
+	* skills/tasteid.sma 1.5:
+	* skills/tracking.sma 1.17:
+	* small_speech.sma 1.1:
+		added small_speech.sma which contains all speech messages/text 
+		line of small scripts in one file in arrays to allow shard 
+		localisation for language
+
+	* API/character/character.api 1.22:
+	* API/character/character.api 1.23:
+		new chr_speech syntax as frodo told me to change it
+
+	* house/housemenu.sma 1.13:
+	* nxw_lib.sma 1.6:
+	* nxw_lib.sma 1.7:
+	* nxw_lib2.sma 1.9:
+	* override.sma 1.33:
+	* skills/alchemy.sma 1.4:
+	* skills/anatomy.sma 1.7:
+	* skills/constant.sma 1.12:
+	* skills/cooking.sma 1.4:
+	* skills/cooking.sma 1.5:
+	* skills/detecthidden.sma 1.5:
+	* skills/detecthidden.sma 1.6:
+	* skills/evalint.sma 1.6:
+	* skills/evalint.sma 1.7:
+	* skills/extendedSkillsystem.sma 1.14:
+	* skills/extendedSkillsystem.sma 1.15:
+	* skills/fishing.sma 1.5:
+	* skills/fishing.sma 1.6:
+	* skills/hiding.sma 1.5:
+	* skills/hiding.sma 1.6:
+	* skills/inscription.sma 1.15:
+	* skills/inscription.sma 1.16:
+	* skills/lumberjacking.sma 1.12:
+	* skills/lumberjacking.sma 1.13:
+	* skills/meditation.sma 1.5:
+	* skills/meditation.sma 1.6:
+	* skills/mining.sma 1.10:
+	* skills/mining.sma 1.9:
+	* skills/misc/scissors.sma 1.14:
+	* skills/skillcap.sma 1.3:
+	* skills/skills.sma 1.15:
+	* skills/skills.sma 1.16:
+	* skills/tailoring.sma 1.18:
+	* skills/tailoring.sma 1.19:
+	* skills/taming.sma 1.4:
+	* skills/taming.sma 1.5:
+	* skills/tannering.sma 1.16:
+	* skills/tannering.sma 1.17:
+	* skills/tasteid.sma 1.6:
+	* skills/tasteid.sma 1.7:
+	* skills/tracking.sma 1.18:
+	* skills/tracking.sma 1.19:
+	* small_speech.sma 1.2:
+		back to original version, there was no way to set cvs back by 
+		date, is it?!?
+
+	* API/party/party.sma 1.2:
+	* house/housemenu.sma 1.12:
+	* nxw_lib2.sma 1.8:
+	* override.sma 1.32:
+	* skills/alchemy.sma 1.3:
+	* skills/anatomy.sma 1.6:
+	* skills/cooking.sma 1.2:
+	* skills/detecthidden.sma 1.3:
+	* skills/evalint.sma 1.4:
+	* skills/extendedSkillsystem.sma 1.12:
+	* skills/fishing.sma 1.3:
+	* skills/hiding.sma 1.3:
+	* skills/inscription.sma 1.13:
+	* skills/lumberjacking.sma 1.10:
+	* skills/meditation.sma 1.3:
+	* skills/mining.sma 1.7:
+	* skills/misc/scissors.sma 1.13:
+	* skills/skills.sma 1.13:
+	* skills/tailoring.sma 1.16:
+	* skills/taming.sma 1.2:
+	* skills/tannering.sma 1.14:
+	* skills/tasteid.sma 1.4:
+	* skills/tracking.sma 1.16:
+		sorted npc and brought naming into convention
+
+2004-06-12	ai_wintermute
+	* API/set.api 1.8:
+		set functions for getting Items/chars inside/outside house
+
+2004-06-12	faxsf
+	* commands/add/addmenu.sma 1.20:
+		fixed spawners menu error
+
+	* skills/extendedSkillsystem.sma 1.11:
+		fixed mistyping
+
+2004-06-12	frodosf
+	* API/character/character.api 1.20:
+	* API/character/constant.sma 1.16:
+		new speech function api
+
+2004-06-12	horiansf
+	* commands/add/lists.sma 1.14:
+	* commands/add/lists.sma 1.15:
+		fixed several problems with item/npc renaming to fit them into 
+		naming convention
+
+2004-06-09	horiansf
+	* custom/speech.sma 1.4:
+	* house/housemenu.sma 1.11:
+		fixed some stuff, sorted stuff from speech.sma into ingame 
+		commands system
+
+	* commands.txt 1.14:
+	* commands/commands.sma 1.37:
+	* commands/hunger.sma 1.1:
+	* commands/racelang.sma 1.1:
+		added hunger and racelang as ingame commands, available for 
+		guests and higher
+
+	* commands/tweak/tweak.sma 1.43:
+		fixed some little things, added another page for flags (work in 
+		progress to extend char tweak with several more interesting 
+		properties to modify char)
+
+2004-06-07	ai_wintermute
+	* API/character/character.api 1.18:
+		changed chr_morph from amx to take only two params
+		chr_morph(npcNumber, backup)
+		changed chr_getCmdSpeech to chr_getSpeech
+
+	* API/character/character.api 1.19:
+		changed chr_setPostTypee to chr_setPostType
+
+2004-06-06	faxsf
+	* API/character/character.api 1.16:
+	* commands/gy.sma 1.3:
+	* commands/popup.sma 1.3:
+	* commands/sysm.sma 1.2:
+		added chr_getSpeech() and fixed bugs in 'sysm 'gy and 'popup
+
+	* API/character/character.api 1.17:
+	* API/misc.api 1.6:
+	* commands/damage.sma 1.5:
+	* commands/lightlevel.sma 1.5:
+		renamed chr_getSpeech() to chr_getCmdSpeech()
+		modified 'lightlevel, now sets the world light level
+
+2004-06-04	ai_wintermute
+	* commands/kill.sma 1.8:
+		fixed a small typo
+
+2004-06-04	faxsf
+	* commands.txt 1.13:
+	* commands/commands.sma 1.36:
+	* commands/dupe.sma 1.6:
+	* commands/help/helpTopics.txt 1.7:
+	* commands/playerlist.sma 1.6:
+	* commands/setmoreb12.sma 1.2:
+		some bugfixes, added parameter for 'dupe
+
+	* API/gui/cursor.sma 1.2:
+	* API/gui/menu.sma 1.3:
+	* commands.txt 1.12:
+	* commands/add/addmenu.sma 1.19:
+	* commands/add/lists.sma 1.13:
+	* commands/commands.sma 1.35:
+	* commands/constant.sma 1.23:
+	* commands/cset.sma 1.5:
+	* commands/go/go.sma 1.4:
+	* commands/help/helpTopics.txt 1.6:
+	* commands/move.sma 1.12:
+	* commands/summon.sma 1.1:
+	* nxw_lib2.sma 1.7:
+		some bugfixes, added 'summon command
+
+2004-06-03	horiansf
+	* commands/tweak/tweak.sma 1.41:
+		fixed movable/visible bug
+
+	* API/character/character.api 1.15:
+	* commands/kill.sma 1.7:
+	* commands/tweak/tweak.sma 1.42:
+		added chr_kill because setting hitpoints to zero is not 
+		sufficient (heartbeat as updater too slow to kill the char 
+		immediatelly so might recover)
+
+	* commands.txt 1.11:
+	* commands/commands.sma 1.34:
+	* commands/constant.sma 1.22:
+	* commands/help/helpTopics.txt 1.5:
+	* commands/setmoreb12.sma 1.1:
+	* commands/setmoreb34.sma 1.1:
+	* commands/tweak/tweak.sma 1.40:
+		added setmoreb12 and setmoreb34 for ingame commands (minimal and 
+		maximum spawner amount), seer level
+
+	* commands/tweak/tweak.sma 1.39:
+		fixed morex/y/z, added chr kill functionality
+
+2004-06-01	horiansf
+	* commands/tweak/tweak.sma 1.38:
+		fixed some stuff, added min/maxamount callback for spawner
+
+2004-05-31	horiansf
+	* commands/tweak/tweak.sma 1.36:
+	* commands/tweak/tweak.sma 1.37:
+		fixed some bugs, sorted char tweak lines, added empty/topic line
+
+	* commands/polymorph.sma 1.9:
+		removed old gm-check since its now done inside source
+
+2004-05-30	ai_wintermute
+	* API/character/character.api 1.13:
+		fixed a small bug with a comment within another comment
+
+2004-05-30	faxsf
+	* API/character/character.api 1.14:
+	* API/character/constant.sma 1.15:
+	* API/constant.sma 1.4:
+	* API/gui/menu.sma 1.2:
+	* API/item/constant.sma 1.5:
+	* API/misc.api 1.5:
+	* commands.txt 1.10:
+	* commands/add/add.sma 1.7:
+	* commands/add/addmenu.sma 1.18:
+	* commands/add/lists.sma 1.12:
+	* commands/area.sma 1.8:
+	* commands/commands.sma 1.33:
+	* commands/constant.sma 1.21:
+	* commands/cset.sma 1.4:
+	* commands/damage.sma 1.4:
+	* commands/dupe.sma 1.5:
+	* commands/flip.sma 1.1:
+	* commands/help/constants.sma 1.4:
+	* commands/help/help.sma 1.4:
+	* commands/help/helpTopics.txt 1.4:
+	* commands/iset.sma 1.2:
+	* commands/make.sma 1.10:
+	* commands/npcwander.sma 1.2:
+	* commands/page/onlinegm.sma 1.2:
+	* commands/page/page.sma 1.2:
+	* commands/page/pagelist.sma 1.2:
+	* commands/page/pages.sma 1.2:
+	* commands/page/pagesystem.sma 1.4:
+	* commands/page/solvepage.sma 1.2:
+	* commands/popup.sma 1.2:
+	* commands/save.sma 1.1:
+	* commands/setpriv.sma 1.7:
+	* commands/skills/setskills.sma 1.2:
+	* commands/skills/skillsmenu.sma 1.2:
+	* commands/stats/statsmenu.sma 1.2:
+	* commands/tile.sma 1.3:
+	* nxw_lib2.sma 1.6:
+	* override.scp 1.8:
+	* override/charLogin.sma 1.9:
+	* override/startServer.sma 1.10:
+	* skills/constant.sma 1.10:
+	* skills/extendedSkillsystem.sma 1.10:
+	* skills/skills.sma 1.12:
+		switched to source command system, added 'flip and 'save, added 
+		ACTION_* constants, improved 'setskills'skills and 'help with 
+		new gumps, added search option for 'add command
+
+2004-05-28	frodosf
+	* commands/constant.sma 1.20:
+		max number of params is now 7
+
+2004-05-27	horiansf
+	* API/event/constant.sma 1.2:
+	* house/housemenu.sma 1.10:
+		added ONMULTIENTER description
+
+	* house/housemenu.sma 1.8:
+		added re-deeding
+
+	* house/housemenu.sma 1.9:
+		added re-deeding and auto-bounce option
+
+2004-05-26	ai_wintermute
+	* API/house/house.api 1.4:
+		house api extended by house_delete
+
+2004-05-23	ai_wintermute
+	* API/character/character.api 1.8:
+		added
+		native chr_showPaperdoll(const chr, const target);
+
+2004-05-23	horiansf
+	* API/character/character.api 1.11:
+		little clean up for api to show ingame/basic gumps by small (now 
+		without native declaration, since only description is needed 
+		second time)
+
+	* house/housemenu.sma 1.7:
+		works now as intended except: house bouncing needs fix for 
+		HP_DIMENSION, ONENTERMULTI source needed for auto-bounce option, 
+		source needed for house_redeed small api, locking doors for 
+		multis seems not possible
+
+	* API/character/character.api 1.9:
+		added description to chr_attackStuff
+
+	* API/character/character.api 1.10:
+	* API/character/character.api 1.12:
+		little clean up for api to show ingame/basic gumps by small
+
+	* commands/tweak/tweak.sma 1.35:
+		fixed problem with secondary stats setting (mana, stamina, hits)
+
+2004-05-22	horiansf
+	* house/housemenu.sma 1.6:
+		finished except ENTERMULTI event and getLockStatus of the door 
+		for autobounce, and delete house still missing
+
+	* house/housemenu.sma 1.5:
+		kills server when compiling
+
+2004-05-21	ai_wintermute
+	* API/set.api 1.6:
+		changed set_getCoowners and the other house sets to set_add to 
+		be conform to the other set fill functions
+
+	* API/set.api 1.7:
+		changed set_getCoowners and the other house sets to set_add to be conform to the other set fill functions
+		
+		fixed a bug in the get functions for the set contents which returned a wrong value
+
+2004-05-21	horiansf
+	* house/housemenu.sma 1.4:
+		house menu with client crash/server crash set for coowner - 
+		WARNING, for dev-checking purpose ONLY!
+
+2004-05-20	ai_wintermute
+	* API/effects/effects.api 1.3:
+	* API/set.api 1.5:
+		extended set api with set_getOwnedHouses
+
+	* API/house/house.api 1.3:
+	* API/set.api 1.4:
+		extend set api to contain house coowner, friends banned list, 
+		chnaged house_setProperty to correct value
+
+2004-05-19	horiansf
+	* house/housemenu.sma 1.3:
+		house menu for testing purpose, not finished version because 
+		autobounce still not completelly decided how to do
+
+2004-05-13	horiansf
+	* commands/tweak/tweak.sma 1.34:
+		*** empty log message ***
+
+2004-05-09	faxsf
+	* commands/playerlist.sma 1.5:
+		fixed callback prototype
+
+2004-05-08	horiansf
+	* commands/tweak/tweak.sma 1.33:
+		everything should work now, missing step: find localVar error
+
+	* commands/tweak/tweak.sma 1.30:
+		lets test this, its completelly checkbox nonsense - anyone finds 
+		the error?
+
+	* commands/tweak/tweak.sma 1.32:
+		update again, layer page now kills client and server ...
+
+	* commands/tweak/tweak.sma 1.31:
+		found several bugs, most stuff should work now, still layer page 
+		(8) gives index out of bounds error >:(
+
+2004-05-05	horiansf
+	* commands/tweak/tweak.sma 1.27:
+		only CP2_REAL allows to change stats in gui's by 
+		gui_addPropertyfield -> fixed
+
+	* commands/tweak/tweak.sma 1.29:
+		some other small changes, still final bug nor fixed :(
+
+	* commands/tweak/tweak.sma 1.28:
+		added radiobutton groups (allows several radiobuttons sets that 
+		are nonlinked at one page)
+
+2004-05-02	horiansf
+	* commands/tweak/tweak.sma 1.26:
+		strange error in char tweak layer showing
+
+2004-04-30	faxsf
+	* API/API.sma 1.5:
+	* API/character/constant.sma 1.14:
+	* API/gui/cursor.sma 1.1:
+	* API/gui/defines.sma 1.2:
+	* API/gui/menu.sma 1.1:
+	* commands.txt 1.9:
+	* commands/add/addmenu.sma 1.17:
+	* commands/add/constants.sma 1.14:
+	* commands/add/lists.sma 1.11:
+	* commands/commands.sma 1.32:
+	* commands/constant.sma 1.19:
+	* commands/func.sma 1.5:
+	* commands/go/locationsMenu.sma 1.3:
+	* commands/page/pagemenu.sma 1.2:
+	* commands/popup.sma 1.1:
+	* commands/regioncp.sma 1.5:
+	* nxw_lib.sma 1.5:
+		added menu_* library, rewrote all gumps with new library, added '
+		popup command
+
+2004-04-28	horiansf
+	* commands/tweak/tweak.sma 1.25:
+		still not finished, so work in progress, but last structure 
+		problems should be figured out now
+
+2004-04-26	faxsf
+	* API/character/constant.sma 1.13:
+	* commands.txt 1.8:
+	* commands/action.sma 1.1:
+	* commands/add/addmenu.sma 1.16:
+	* commands/add/lists.sma 1.10:
+	* commands/commands.sma 1.31:
+	* commands/constant.sma 1.18:
+	* commands/cset.sma 1.3:
+	* commands/fullstats.sma 1.2:
+	* commands/gy.sma 1.2:
+	* commands/heal.sma 1.2:
+	* commands/help/constants.sma 1.3:
+	* commands/help/help.sma 1.3:
+	* commands/help/helpTopics.txt 1.3:
+	* commands/killbeard.sma 1.1:
+	* commands/killhair.sma 1.1:
+	* commands/mana.sma 1.2:
+	* commands/npcwander.sma 1.1:
+	* commands/options/options.sma 1.11:
+	* commands/possess.sma 1.1:
+	* commands/setpriv.sma 1.6:
+	* commands/skills/setskills.sma 1.1:
+	* commands/skills/skills.sma 1.13:
+	* commands/skills/skillsmenu.sma 1.1:
+	* commands/stamina.sma 1.2:
+	* commands/stats/setstats.sma 1.1:
+	* commands/stats/stats.sma 1.20:
+	* commands/stats/statsmenu.sma 1.1:
+	* override/charLogin.sma 1.8:
+	* override/startServer.sma 1.9:
+	* skills/constant.sma 1.9:
+	* skills/extendedSkillsystem.sma 1.9:
+		added 'action 'killhair'killbeard 'possess 'npcwander 'setstats commands
+		some fixes to other files
+
+2004-04-25	ai_wintermute
+	* API/gui/gui.api 1.2:
+		groups enabled for menus
+
+2004-04-25	faxsf
+	* commands/cset.sma 1.2:
+	* commands/csetxyz.sma 1.2:
+	* commands/move.sma 1.11:
+	* commands/page/pagesystem.sma 1.3:
+	* nxw_lib2.sma 1.5:
+	* override/charLogin.sma 1.7:
+	* override/onSkillAdvance.sma 1.1:
+	* skills/constant.sma 1.8:
+	* skills/extendedSkillsystem.sma 1.8:
+		fixed some extended skillsystem bugs and some commands bugs
+
+2004-04-25	horiansf
+	* custom/flipitem.sma 1.1:
+	* override.sma 1.31:
+		flipitem-function was missing, still needs a getDefinefromInt to 
+		work
+
+	* commands/add/lists.sma 1.9:
+		changed some food/drink item defines to make all fit into same 
+		naming convention
+
+	* commands/tweak/tweak.sma 1.24:
+		newer version (still unfinished but a step to prevent me by 
+		checkout always to get merge files :)
+
+2004-04-24	faxsf
+	* API/character/constant.sma 1.12:
+	* commands/commands.sma 1.30:
+	* commands/constant.sma 1.17:
+	* commands/lightlevel.sma 1.4:
+	* commands/page/pagesystem.sma 1.2:
+	* commands/regioncp.sma 1.4:
+	* commands/skills/skills.sma 1.12:
+	* commands/tweak/tweak.sma 1.23:
+	* nxw_lib2.sma 1.3:
+	* override.sma 1.28:
+	* override/startServer.sma 1.7:
+	* race/menu/menu.sma 1.11:
+	* skills/constant.sma 1.6:
+	* skills/extendedSkillsystem.sma 1.6:
+	* skills/inscription.sma 1.12:
+		added extended skillsystem, fixed inscription bug
+
+2004-04-24	horiansf
+	* skills/lumberjacking.sma 1.9:
+		fixed a merge input line causing errors
+
+	* override/startServer.sma 1.8:
+	* skills/constant.sma 1.7:
+	* skills/extendedSkillsystem.sma 1.7:
+		fixed some bugs with not activated extended skill sys (
+		deactivated by default now due to missing file)
+
+	* override.sma 1.29:
+		added eatdrink.sma include
+
+	* override.sma 1.30:
+		outcommented onskilladvance.sma-link
+
+	* nxw_lib2.sma 1.4:
+		added chr_getSkillsum
+
+2004-04-22	faxsf
+	* API/character/character.api 1.7:
+	* API/character/constant.sma 1.11:
+	* API/item/constant.sma 1.4:
+	* API/item/item.api 1.5:
+	* commands.txt 1.7:
+	* commands/add/add.sma 1.6:
+	* commands/add/addmenu.sma 1.15:
+	* commands/add/constants.sma 1.13:
+	* commands/add/lists.sma 1.8:
+	* commands/align.sma 1.3:
+	* commands/area.sma 1.7:
+	* commands/commands.sma 1.29:
+	* commands/constant.sma 1.16:
+	* commands/cset.sma 1.1:
+	* commands/csetxyz.sma 1.1:
+	* commands/damage.sma 1.3:
+	* commands/decay.sma 1.2:
+	* commands/dupe.sma 1.4:
+	* commands/dye.sma 1.3:
+	* commands/freeze.sma 1.6:
+	* commands/fullstats.sma 1.1:
+	* commands/func.sma 1.4:
+	* commands/gmopen.sma 1.1:
+	* commands/go.sma 1.4:
+	* commands/go/go.sma 1.3:
+	* commands/go/locations.sma 1.3:
+	* commands/go/locationsMenu.sma 1.2:
+	* commands/gy.sma 1.1:
+	* commands/heal.sma 1.1:
+	* commands/help/constants.sma 1.2:
+	* commands/help/help.sma 1.2:
+	* commands/help/helpTopics.txt 1.2:
+	* commands/hiding.sma 1.7:
+	* commands/invul.sma 1.6:
+	* commands/iset.sma 1.1:
+	* commands/jail.sma 1.1:
+	* commands/kill.sma 1.6:
+	* commands/lightlevel.sma 1.3:
+	* commands/make.sma 1.9:
+	* commands/mana.sma 1.1:
+	* commands/move.sma 1.10:
+	* commands/options/options.sma 1.10:
+	* commands/page/constants.sma 1.1:
+	* commands/page/onlinegm.sma 1.1:
+	* commands/page/page.sma 1.1:
+	* commands/page/pagelist.sma 1.1:
+	* commands/page/pagemenu.sma 1.1:
+	* commands/page/pages.sma 1.1:
+	* commands/page/pagesystem.sma 1.1:
+	* commands/page/solvepage.sma 1.1:
+	* commands/playerlist.sma 1.4:
+	* commands/polymorph.sma 1.8:
+	* commands/regioncp.sma 1.3:
+	* commands/resend.sma 1.1:
+	* commands/resurrect.sma 1.4:
+	* commands/setdir.sma 1.3:
+	* commands/setmorexyz.sma 1.2:
+	* commands/setpriv.sma 1.5:
+	* commands/settype.sma 1.2:
+	* commands/showbank.sma 1.1:
+	* commands/skills/skills.sma 1.11:
+	* commands/stamina.sma 1.1:
+	* commands/stats/stats.sma 1.19:
+	* commands/sysm.sma 1.1:
+	* commands/tile.sma 1.2:
+	* commands/tweak/tweak.sma 1.22:
+	* commands/unjail.sma 1.1:
+	* commands/wipe.sma 1.7:
+	* nxw_lib.sma 1.4:
+	* nxw_lib2.sma 1.2:
+	* override.scp 1.7:
+	* override.sma 1.27:
+	* override/charLogin.sma 1.6:
+	* override/startServer.sma 1.6:
+	* skills/extendedSkillsystem.sma 1.5:
+		added many new commands, removed "target" parameter from all 
+		commands, added help topics for 'help command
+
+	* override/charLogout.sma 1.1:
+		*** empty log message ***
+
+2004-04-21	frodosf
+	* API/character/constant.sma 1.10:
+		cp_commandlevel --->  cp_privlevel
+
+2004-04-21	horiansf
+	* house/housemenu.sma 1.2:
+		little updates, work in progress
+
+	* API/house/house.api 1.2:
+		little cosmetic changes (missing empty lines to seperate natives,
+		 too many empty line sometimes in between to confuse)
+
+	* commands/add/lists.sma 1.7:
+	* commands/constant.sma 1.15:
+	* custom/pregnant.sma 1.2:
+	* skills/constant.sma 1.5:
+		*** empty log message ***
+
+2004-04-20	ai_wintermute
+	* API/API.sma 1.4:
+	* API/house/house.api 1.1:
+	* API/house/house.sma 1.2:
+		enabled house api
+
+2004-04-18	ai_wintermute
+	* API/house/constant.sma 1.1:
+	* API/house/house.sma 1.1:
+		reenabled house placing/deeding
+
+2004-04-15	frodosf
+	* API/character/constant.sma 1.9:
+		new command system features (params)
+
+2004-04-10	faxsf
+	* API/gmpage.api 1.1:
+	* commands/commands.sma 1.28:
+	* override.sma 1.26:
+		added gmpage.api and included nxw_lib2.sma in override.sma
+
+	* API/API.sma 1.3:
+	* API/misc.api 1.4:
+		*** empty log message ***
+
+2004-04-09	ai_wintermute
+	* API/misc.api 1.2:
+		changed getIntFromDefine
+
+	* API/character/constant.sma 1.8:
+	* API/item/item.api 1.4:
+	* API/misc.api 1.3:
+	* skills/lumberjacking.sma 1.8:
+		lumberjacking: bugfix for one of the methods doing a conidtion wrong
+		misc api: added
+		character/constant.sma: added CP_TOTALSKILL as char property for reading
+		item.api: changed getIntFromDefine(format) to getIntFromDefine(format, boolean check) to disable/enable console output
+
+2004-04-09	faxsf
+	* API/character/constant.sma 1.7:
+	* API/item/item.api 1.3:
+	* commands/add/add.sma 1.5:
+	* commands/align.sma 1.2:
+	* commands/area.sma 1.6:
+	* commands/commands.sma 1.27:
+	* commands/constant.sma 1.14:
+	* commands/damage.sma 1.2:
+	* commands/decay.sma 1.1:
+	* commands/dupe.sma 1.3:
+	* commands/dye.sma 1.2:
+	* commands/freeze.sma 1.5:
+	* commands/func.sma 1.3:
+	* commands/go.sma 1.3:
+	* commands/go/go.sma 1.2:
+	* commands/go/locations.sma 1.2:
+	* commands/help/constants.sma 1.1:
+	* commands/help/help.sma 1.1:
+	* commands/help/helpTopics.txt 1.1:
+	* commands/hiding.sma 1.6:
+	* commands/invul.sma 1.5:
+	* commands/kill.sma 1.5:
+	* commands/lightlevel.sma 1.2:
+	* commands/make.sma 1.8:
+	* commands/move.sma 1.9:
+	* commands/resurrect.sma 1.3:
+	* commands/setdir.sma 1.2:
+	* commands/setmorexyz.sma 1.1:
+	* commands/setpriv.sma 1.4:
+	* commands/settype.sma 1.1:
+	* commands/tile.sma 1.1:
+	* commands/tweak/tweak.sma 1.21:
+	* commands/wipe.sma 1.6:
+	* nxw_lib.sma 1.3:
+	* nxw_lib2.sma 1.1:
+	* override/startServer.sma 1.5:
+		added 'help, 'tile, 'settype, 'setmorexyz, 'decay commands, improved 'move with 'move here option.
+		modified all command functions, now parameters reading is done by each function at the beginning.
+		Added nxw_lib2.sma with some useful functions.
+		Added itm_setDecay(itm,decayTime)
+		declared CLV_TEMP1 local var
+
+2004-04-04	ai_wintermute
+	* API/character/constant.sma 1.6:
+		Property for account name and password
+
+	* API/API.sma 1.2:
+	* API/region.api 1.2:
+	* API/region/constant.sma 1.1:
+	* API/region/regionproperty.api 1.1:
+	* guild/guildstone.sma 1.27:
+		added region functions for rgn_getRegion(x,y), rgn_getProperty, 
+		rgn_setProperty
+
+2004-04-03	ai_wintermute
+	* API/guild/guild.api 1.5:
+	* API/set.api 1.3:
+	* guild/guildstone.sma 1.26:
+		guild system finished
+
+2004-04-01	ai_wintermute
+	* guild/guildstone.sma 1.25:
+		several bugfixes
+
+2004-04-01	faxsf
+	* API/item/constant.sma 1.2:
+	* commands/add.sma 1.6:
+	* commands/add/add.sma 1.4:
+	* commands/add/addmenu.sma 1.14:
+	* commands/add/constants.sma 1.12:
+	* commands/add/lists.sma 1.6:
+	* commands/area.sma 1.5:
+	* commands/commands.sma 1.26:
+	* commands/constant.sma 1.13:
+	* commands/dupe.sma 1.2:
+	* commands/dye.sma 1.1:
+	* commands/setdir.sma 1.1:
+		added 'dye and 'setdir commands, removed redundant add.sma in 
+		commands folder, improved 'dupe command
+
+2004-04-01	horiansf
+	* API/character/constant.sma 1.5:
+		update comments
+
+	* API/item/constant.sma 1.3:
+		updated comments with stonedz help
+
+2004-03-31	ai_wintermute
+	* guild/guildstone.sma 1.24:
+		fixed bug in callbacks
+
+2004-03-29	ai_wintermute
+	* API/character/character.api 1.6:
+	* API/guild/constant.sma 1.3:
+	* API/guild/guild.api 1.4:
+	* guild/guildstone.sma 1.23:
+		guild bugfixes and extensions
+		added chr_addRandomNpc(npclist id )
+
+2004-03-29	horiansf
+	* override.scp 1.6:
+		includes link to speech override for hunger-status, racelang and 
+		whatever people want to use as speech command, works with + as 
+		trigger
+
+	* skills/alchemy.sma 1.2:
+		alchemy now shows only potions if the skill is high enough, 
+		fixed a bug with normal strengh displayed as number, gump shows 
+		number of needed reagents, skillgain and fail is added
+
+	* commands/constant.sma 1.12:
+		fixed a spelling issue (polimorph instead polymorph)
+
+	* skills/hiding.sma 1.2:
+		some fixes and additions
+
+	* skills/skills.sma 1.11:
+		added alchemy, commented detecthidden out (invis chars are not 
+		found by sets?)
+
+	* house/housemenu.sma 1.1:
+		first version of house menu, far away from functionallity ;)
+
+	* override.sma 1.25:
+		added housemenu.sma and speech.sma (necessary for shard-specific 
+		ingame commands and hunger, racelang etc.)
+
+	* custom/speech.sma 1.3:
+		polymorph and tweak deleted
+
+	* nxw_lib.sma 1.2:
+		new stock: replaceStr, allows to replace letter in a string, 
+		saves space in arrays (only scriptname defining, item name is 
+		done by replacing the _ with blanks)
+
+	* skills/detecthidden.sma 1.2:
+		small fixes but still outcommented, because hidden chars are 
+		never found by set?
+
+	* skills/alchemy.sma 1.1:
+		last potion does not work because ongoing discussion how to 
+		implement that feature for all skills
+
+2004-03-28	faxsf
+	* commands/add/constants.sma 1.11:
+	* commands/commands.sma 1.25:
+	* commands/constant.sma 1.11:
+	* commands/setpriv.sma 1.3:
+	* override/startServer.sma 1.4:
+		some fixes
+
+	* commands/align.sma 1.1:
+		added 'align command
+
+2004-03-26	faxsf
+	* API/character/constant.sma 1.4:
+	* commands.txt 1.6:
+	* commands/commands.sma 1.24:
+	* commands/constant.sma 1.10:
+	* commands/go.sma 1.2:
+	* commands/make.sma 1.7:
+		fixed 'make 'go - updated commands.txt with commands privs
+
+2004-03-25	faxsf
+	* API/character/character.api 1.5:
+	* commands/add/addmenu.sma 1.13:
+	* commands/add/constants.sma 1.10:
+	* commands/add/lists.sma 1.5:
+	* commands/commands.sma 1.23:
+	* commands/go/go.sma 1.1:
+	* commands/go/locations.sma 1.1:
+	* commands/go/locationsMenu.sma 1.1:
+	* commands/hiding.sma 1.5:
+	* commands/make.sma 1.6:
+		added 'go command, finished 'add menu
+
+2004-03-21	faxsf
+	* commands/commands.sma 1.22:
+	* commands/constant.sma 1.9:
+	* commands/go.sma 1.1:
+		added 'go comand
+
+	* API/character/constant.sma 1.3:
+	* commands/add/add.sma 1.3:
+	* commands/add/addmenu.sma 1.11:
+	* commands/add/addmenu.sma 1.12:
+	* commands/commands.sma 1.21:
+	* commands/move.sma 1.8:
+		*** empty log message ***
+
+2004-03-20	faxsf
+	* commands/add/addmenu.sma 1.10:
+	* commands/add/constants.sma 1.9:
+	* commands/add/lists.sma 1.4:
+		added build section to 'add menu
+		added architecture.xss
+
+2004-03-16	ai_wintermute
+	* guild/guildstone.sma 1.22:
+		fixed fealty and recruiting
+
+2004-03-14	ai_wintermute
+	* API/guild/constant.sma 1.2:
+	* API/guild/guild.api 1.2:
+	* API/item/itemId.api 1.3:
+	* guild/guild.sma 1.4:
+	* guild/guildstone.sma 1.20:
+		Extensions to guild menu
+		Bugfix in itemid isWeaponLike now is itm_isWeaponlike like in source code
+
+	* API/guild/guild.api 1.3:
+	* guild/guildstone.sma 1.21:
+		Extensions to guild menu
+
+2004-03-12	faxsf
+	* commands/add/addmenu.sma 1.9:
+	* commands/add/constants.sma 1.8:
+	* commands/add/lists.sma 1.3:
+		'addmenu client crash fixed, menu style changed
+
+	* commands/commands.sma 1.20:
+	* commands/resurrect.sma 1.2:
+		*** empty log message ***
+
+2004-03-07	faxsf
+	* commands/add/addmenu.sma 1.8:
+	* commands/add/constants.sma 1.7:
+	* commands/add/lists.sma 1.2:
+		added food section to 'add menu
+
+2004-03-06	faxsf
+	* commands/move.sma 1.7:
+		*** empty log message ***
+
+2004-03-05	faxsf
+	* commands/add/addmenu.sma 1.5:
+	* commands/add/constants.sma 1.4:
+	* commands/commands.sma 1.19:
+	* commands/constant.sma 1.8:
+		added npc sction to 'add menu
+
+	* commands/lightlevel.sma 1.1:
+		added 'lightlevel command
+
+	* commands/add/add.sma 1.2:
+	* commands/add/addmenu.sma 1.6:
+	* commands/add/addmenu.sma 1.7:
+	* commands/add/constants.sma 1.5:
+	* commands/add/constants.sma 1.6:
+	* commands/add/lists.sma 1.1:
+	* commands/move.sma 1.6:
+		finished npc section in 'add menu
+
+2004-03-04	faxsf
+	* commands/add/addmenu.sma 1.4:
+	* commands/add/constants.sma 1.3:
+		added combat sction to 'add menu
+
+	* API/character/character.api 1.4:
+	* API/constant.sma 1.3:
+		updated chr_calcDef with additional bodyPart parameter
+
+	* commands/add/addmenu.sma 1.3:
+	* commands/add/constants.sma 1.2:
+		updated server.cfg
+
+2004-03-03	faxsf
+	* commands/add/add.sma 1.1:
+	* commands/add/addmenu.sma 1.1:
+	* commands/add/constants.sma 1.1:
+	* commands/commands.sma 1.18:
+	* commands/constant.sma 1.7:
+	* commands/move.sma 1.5:
+	* commands/regioncp.sma 1.2:
+	* commands/wipe.sma 1.5:
+		added 'add menu, modifyed some commands
+
+	* API/gui/defines.sma 1.1:
+	* commands/add/addmenu.sma 1.2:
+		*** empty log message ***
+
+2004-02-28	faxsf
+	* API/character/constant.sma 1.2:
+	* commands.txt 1.5:
+	* commands/commands.sma 1.17:
+	* commands/constant.sma 1.6:
+	* commands/damage.sma 1.1:
+	* commands/make.sma 1.5:
+	* commands/regioncp.sma 1.1:
+	* commands/resurrect.sma 1.1:
+	* skills/extendedSkillsystem.sma 1.4:
+		added 'resurrect 'regioncp 'damage commands
+
+2004-02-22	faxsf
+	* skills/extendedSkillsystem.sma 1.3:
+	* skills/skillcap.sma 1.1:
+		added skillcap.sma for custom skillcap handling
+
+	* commands/constant.sma 1.5:
+	* skills/extendedSkillsystem.sma 1.2:
+		*** empty log message ***
+
+	* API/character/character.api 1.3:
+	* commands/commands.sma 1.16:
+	* commands/skills/skills.sma 1.10:
+	* override.sma 1.24:
+	* override/charLogin.sma 1.5:
+	* skills/anatomy.sma 1.5:
+	* skills/extendedSkillsystem.sma 1.1:
+	* skills/fishing.sma 1.2:
+	* skills/lumberjacking.sma 1.7:
+	* skills/skills.sma 1.10:
+		created extended skillsystem
+
+2004-02-21	faxsf
+	* commands.txt 1.3:
+	* commands/add.sma 1.5:
+	* commands/commands.sma 1.15:
+	* commands/constant.sma 1.4:
+	* override.sma 1.23:
+	* override/startServer.sma 1.3:
+		Activated command system switch
+
+2004-02-21	frodosf
+	* commands.txt 1.4:
+		little fixes
+
+2004-02-20	faxsf
+	* API/calendar/calendar.api 1.1:
+	* API/calendar/calendar.sma 1.1:
+	* API/calendar/constant.sma 1.1:
+	* API/character/character.api 1.1:
+	* API/character/constant.sma 1.1:
+	* API/effects/constant.sma 1.1:
+	* API/effects/effects.api 1.1:
+	* API/event/constant.sma 1.1:
+	* API/event/trigger.api 1.1:
+	* API/gui/constant.sma 1.1:
+	* API/gui/gui.api 1.1:
+	* API/gui/mnu.api 1.1:
+	* API/guild/constant.sma 1.1:
+	* API/guild/guild.api 1.1:
+	* API/item/constant.sma 1.1:
+	* API/item/item.api 1.1:
+	* API/item/itemId.api 1.1:
+	* API/magic/constant.sma 1.1:
+	* API/magic/magic.api 1.1:
+	* API/party/constant.sma 1.1:
+	* API/party/party.api 1.1:
+	* API/party/party.sma 1.1:
+		... still creating new scripts module ...
+
+	* commands/commands.sma 1.14:
+	* commands/constant.sma 1.3:
+	* override/charLogin.sma 1.4:
+	* override/startServer.sma 1.2:
+		modified addCommand, now it takes the callback as parameter too
+
+	* commands/add.sma 1.4:
+	* commands/area.sma 1.4:
+	* commands/commands.sma 1.13:
+	* commands/constant.sma 1.2:
+	* commands/freeze.sma 1.4:
+	* commands/func.sma 1.2:
+	* commands/hiding.sma 1.4:
+	* commands/invul.sma 1.4:
+	* commands/kill.sma 1.4:
+	* commands/make.sma 1.4:
+	* commands/move.sma 1.4:
+	* commands/options/options.sma 1.9:
+	* commands/playerlist.sma 1.3:
+	* commands/polymorph.sma 1.7:
+	* commands/setpriv.sma 1.2:
+	* commands/skills/skills.sma 1.9:
+	* commands/stats/stats.sma 1.18:
+	* commands/tweak/tweak.sma 1.20:
+	* commands/where.sma 1.4:
+	* commands/wipe.sma 1.4:
+	* override.sma 1.20:
+	* override.sma 1.22:
+	* override/charLogin.sma 1.3:
+	* race/constant.sma 1.4:
+	* race/race.api 1.8:
+	* skills/constant.sma 1.4:
+	* skills/skills.sma 1.9:
+		*** empty log message ***
+
+	* API/check.sma 1.1:
+	* API/constant.sma 1.1:
+	* API/core.api 1.1:
+	* API/direct.api 1.1:
+	* API/file.api 1.1:
+	* API/float.api 1.1:
+	* API/log.api 1.1:
+	* API/map.api 1.1:
+	* API/misc.api 1.1:
+	* API/network.api 1.1:
+	* API/region.api 1.1:
+	* API/set.api 1.1:
+	* API/string.api 1.1:
+	* API/target.api 1.1:
+	* API/time.api 1.1:
+		creating new scripts module ...
+
+	* guild/constant.sma 1.7:
+	* guild/guild.api 1.9:
+	* item/constant.sma 1.8:
+	* item/item.api 1.18:
+	* item/itemId.api 1.6:
+	* party/constant.sma 1.2:
+	* party/party.api 1.3:
+		deleted all APIs from old folders
+
+	* API/API.sma 1.1:
+	* API/character/character.api 1.2:
+	* API/constant.sma 1.2:
+	* API/effects/effects.api 1.2:
+	* API/item/item.api 1.2:
+	* API/item/itemId.api 1.2:
+	* API/race/constant.sma 1.1:
+	* API/race/race.api 1.1:
+	* API/set.api 1.2:
+	* commands/dupe.sma 1.1:
+	* custom/default.sma 1.1:
+	* nxw_lib.sma 1.1:
+	* override.sma 1.21:
+	* script_dummies.api 1.2:
+	* small.api 1.4:
+		made new scripts module
+
+2004-02-20	frodosf
+	* commands.txt 1.1:
+	* commands.txt 1.2:
+		Last New Commands System Implementations
+
+2004-02-19	faxsf
+	* commands/add.sma 1.3:
+	* commands/area.sma 1.3:
+	* commands/commands.sma 1.11:
+	* commands/constant.sma 1.1:
+	* commands/freeze.sma 1.3:
+	* commands/func.sma 1.1:
+	* commands/hiding.sma 1.3:
+	* commands/invul.sma 1.3:
+	* commands/kill.sma 1.3:
+	* commands/make.sma 1.3:
+	* commands/move.sma 1.3:
+	* commands/playerlist.sma 1.2:
+	* commands/polymorph.sma 1.6:
+	* commands/setpriv.sma 1.1:
+	* commands/tweak/tweak.sma 1.19:
+	* commands/where.sma 1.3:
+	* commands/wipe.sma 1.3:
+	* custom/charlogin.sma 1.2:
+	* item/item.api 1.17:
+	* override.scp 1.5:
+	* override.sma 1.19:
+	* override/charLogin.sma 1.1:
+	* override/startServer.sma 1.1:
+		added Small command system
+		added "override" folder
+
+	* commands/commands.sma 1.12:
+	* override/charLogin.sma 1.2:
+		*** empty log message ***
+
+2004-02-09	horiansf
+	* commands/polymorph.sma 1.5:
+		several polymorph fix, now checks if user is gm or admin, spell 
+		fixes
+
+	* commands/tweak/tweak.sma 1.18:
+		several tweak fix, now checks if user is gm or admin
+
+	* custom/speech.sma 1.2:
+		noe polymorph menu (+poly ingame) and tweak menu (+tweak) are 
+		available as speech commands including +hunger and racelang (+
+		lang)
+
+2004-02-08	horiansf
+	* commands/polymorph.sma 1.4:
+	* commands/tweak/tweak.sma 1.17:
+	* custom/charlogin.sma 1.1:
+	* custom/eatdrink.sma 1.1:
+	* custom/hitching.sma 1.1:
+	* custom/potiondelay_complete_save.sma 1.1:
+	* custom/pregnant.sma 1.1:
+	* custom/speech.sma 1.1:
+	* guild/guildstone.sma 1.19:
+	* override.scp 1.4:
+	* override.sma 1.18:
+	* potiondelay.sma 1.4:
+	* skills/cooking.sma 1.1:
+	* skills/detecthidden.sma 1.1:
+	* skills/fishing.sma 1.1:
+	* skills/hiding.sma 1.1:
+	* skills/lumberjacking.sma 1.6:
+	* skills/meditation.sma 1.1:
+	* skills/mining.sma 1.6:
+	* skills/skills.sma 1.8:
+	* skills/taming.sma 1.1:
+	* skills/tracking.sma 1.15:
+		update, merged scripts with akrons unicorn changes, new scripts 
+		from Nox community at official boards or gernox.de
+
+2004-01-16	ai_wintermute
+	* guild/guildstone.sma 1.18:
+		Alpha Version oof guildstone menu...many callbacks waiting on 
+		sourcecode implementation of guild system
+
+2004-01-06	horiansf
+	* commands/tweak/tweak.sma 1.16:
+		updated target callback considering new syntax
+
+2004-01-05	horiansf
+	* commands/tweak/tweak.sma 1.12:
+		New tweak gump, item tweak not finished so far
+
+	* commands/polymorph.sma 1.1:
+		New polymorph gump, called from tweak or as ingame command
+
+	* commands/polymorph.sma 1.2:
+	* commands/tweak/tweak.sma 1.14:
+		*** empty log message ***
+
+	* commands/polymorph.sma 1.3:
+	* commands/stats/stats.sma 1.17:
+	* commands/tweak/tweak.sma 1.15:
+		added check for socket given instead of serial (if socket, then 
+		leave script)
+
+	* commands/tweak/tweak.sma 1.13:
+		translations into english I forgot ;)
+
+	* commands/commands.sma 1.10:
+		Added polymorph (needed for tweak)
+
+2003-12-28	faxsf
+	* commands/add.sma 1.2:
+	* commands/area.sma 1.2:
+	* commands/commands.sma 1.9:
+	* commands/freeze.sma 1.2:
+	* commands/hiding.sma 1.2:
+	* commands/invul.sma 1.2:
+	* commands/kill.sma 1.2:
+	* commands/make.sma 1.2:
+	* commands/move.sma 1.2:
+	* commands/where.sma 1.2:
+	* commands/wipe.sma 1.2:
+		added \todo lines in functions docu
+
+	* commands/add.sma 1.1:
+	* commands/area.sma 1.1:
+	* commands/commands.sma 1.8:
+	* commands/freeze.sma 1.1:
+	* commands/hiding.sma 1.1:
+	* commands/invul.sma 1.1:
+	* commands/kill.sma 1.1:
+	* commands/make.sma 1.1:
+	* commands/move.sma 1.1:
+	* commands/options/options.sma 1.8:
+	* commands/playerlist.sma 1.1:
+	* commands/skills/skills.sma 1.8:
+	* commands/stats/stats.sma 1.16:
+	* commands/tweak/tweak.sma 1.11:
+	* commands/where.sma 1.1:
+	* commands/wipe.sma 1.1:
+	* item/item.api 1.16:
+	* skills/skills.sma 1.7:
+		added chr_checkLos
+		added command scripts
+
+2003-12-23	faxsf
+	* item/itemId.api 1.5:
+	* skills/anatomy.sma 1.4:
+	* skills/constant.sma 1.3:
+	* skills/evalint.sma 1.3:
+	* skills/inscription.sma 1.11:
+	* skills/lumberjacking.sma 1.5:
+	* skills/skills.sma 1.6:
+	* skills/tasteid.sma 1.3:
+		*** empty log message ***
+
+2003-12-22	faxsf
+	* commands/commands.sma 1.7:
+	* commands/options/options.sma 1.7:
+	* commands/skills/skills.sma 1.7:
+	* commands/stats/stats.sma 1.15:
+	* commands/tweak/tweak.sma 1.10:
+	* guild/guild.sma 1.3:
+	* guild/guildstone.sma 1.17:
+	* item/item.api 1.15:
+	* item/itemId.api 1.4:
+	* override.sma 1.17:
+	* skills/inscription.sma 1.10:
+	* small.api 1.3:
+		fixed ALL warnings and errors!! 8-)
+
+2003-12-20	faxsf
+	* item/constant.sma 1.7:
+		added chr_message
+		redefined some modules names
+
+2003-12-15	faxsf
+	* item/constant.sma 1.6:
+	* item/item.api 1.14:
+		documented items.api
+
+2003-12-07	faxsf
+	* item/constant.sma 1.5:
+	* item/item.api 1.13:
+	* small.api 1.2:
+		*** empty log message ***
+
+2003-12-05	endymionsf
+	* guild/guildstone.sma 1.16:
+	* party/party.sma 1.4:
+	* race/menu/menu.sma 1.10:
+	* skills/misc/scissors.sma 1.12:
+	* skills/tracking.sma 1.14:
+		removed socket from scripts
+
+2003-12-02	endymionsf
+	* guild/guildstone.sma 1.15:
+	* item/potiondelay.sma 1.3:
+	* party/party.api 1.2:
+	* party/party.sma 1.3:
+	* potiondelay.sma 1.3:
+	* race/menu/menu.sma 1.9:
+	* race/race.api 1.7:
+	* skills/anatomy.sma 1.2:
+	* skills/anatomy.sma 1.3:
+	* skills/evalint.sma 1.2:
+	* skills/inscription.sma 1.8:
+	* skills/inscription.sma 1.9:
+	* skills/lumberjacking.sma 1.4:
+	* skills/mining.sma 1.5:
+	* skills/skills.sma 1.5:
+	* skills/tailoring.sma 1.15:
+	* skills/tannering.sma 1.13:
+	* skills/tasteid.sma 1.2:
+	* skills/tracking.sma 1.13:
+		update to standard
+
+	* item/item.api 1.12:
+	* myshard.sma 1.6:
+	* race/race.api 1.6:
+	* variable/variable.api 1.2:
+		restiled,, remvoed all socket and unused stuff
+
+2003-11-28	faxsf
+	* commands/skills/skills.sma 1.6:
+	* guild/guildstone.sma 1.14:
+	* party/party.sma 1.2:
+	* race/menu/menu.sma 1.8:
+	* skills/inscription.sma 1.7:
+	* skills/misc/scissors.sma 1.11:
+	* skills/tailoring.sma 1.14:
+	* skills/tannering.sma 1.12:
+		*** empty log message ***
+
+2003-09-29	endymionsf
+	* commands/stats/stats.sma 1.13:
+	* commands/stats/stats.sma 1.14:
+	* guild/guildstone.sma 1.13:
+		*** empty log message ***
+
+2003-09-28	endymionsf
+	* commands/stats/stats.sma 1.12:
+	* commands/tweak/tweak.sma 1.9:
+	* guild/guildstone.sma 1.11:
+	* guild/guildstone.sma 1.12:
+		*** empty log message ***
+
+2003-09-27	endymionsf
+	* commands/stats/stats.sma 1.10:
+	* commands/stats/stats.sma 1.11:
+	* commands/tweak/tweak.sma 1.6:
+	* commands/tweak/tweak.sma 1.7:
+	* commands/tweak/tweak.sma 1.8:
+	* guild/guildstone.sma 1.10:
+		*** empty log message ***
+
+	* guild/constant.sma 1.6:
+	* guild/guild.api 1.7:
+	* guild/guild.api 1.8:
+	* guild/guild.sma 1.1:
+	* guild/guild.sma 1.2:
+	* guild/guildstone.sma 1.8:
+	* guild/guildstone.sma 1.9:
+	* override.sma 1.16:
+		new guild
+
+2003-09-25	endymionsf
+	* guild/constant.sma 1.5:
+	* guild/guild.api 1.6:
+	* guild/guildstone.sma 1.7:
+		new guild api
+
+	* skills/tracking.sma 1.12:
+		*** empty log message ***
+
+2003-09-24	endymionsf
+	* skills/tracking.sma 1.10:
+	* skills/tracking.sma 1.11:
+		*** empty log message ***
+
+2003-09-21	endymionsf
+	* override.sma 1.15:
+	* race/race.api 1.5:
+		some fix
+
+	* race/menu/menu.sma 1.7:
+		fix
+
+	* party/constant.sma 1.1:
+	* party/party.api 1.1:
+	* party/party.sma 1.1:
+		added new party
+
+	* commands/stats/stats.sma 1.8:
+	* commands/stats/stats.sma 1.9:
+		*** empty log message ***
+
+2003-09-20	endymionsf
+	* commands/commands.sma 1.6:
+	* commands/stats/stats.sma 1.7:
+		*** empty log message ***
+
+2003-09-18	endymionsf
+	* commands/commands.sma 1.5:
+		fix
+
+	* item/item.api 1.11:
+		clean
+
+2003-09-16	endymionsf
+	* skills/tailoring.sma 1.13:
+	* skills/tannering.sma 1.11:
+	* skills/tracking.sma 1.9:
+		*** empty log message ***
+
+2003-09-13	luxornox
+	* skills/tracking.sma 1.8:
+		*** empty log message ***
+
+2003-09-12	endymionsf
+	* commands/skills/skills.sma 1.5:
+		fix
+
+2003-09-12	luxornox
+	* commands/commands.sma 1.4:
+	* commands/options/options.sma 1.6:
+	* commands/skills/skills.sma 1.4:
+	* commands/stats/stats.sma 1.6:
+	* commands/tweak/tweak.sma 1.5:
+	* override.sma 1.14:
+	* race/menu/menu.sma 1.6:
+	* skills/tracking.sma 1.7:
+		*** empty log message ***
+
+2003-09-09	endymionsf
+	* skills/tracking.sma 1.6:
+		some fix
+
+2003-09-08	endymionsf
+	* race/constant.sma 1.3:
+	* race/menu/menu.sma 1.5:
+	* race/race.api 1.4:
+		race function and other stuff
+
+	* item/item.api 1.10:
+	* race/menu/menu.sma 1.3:
+	* skills/tracking.sma 1.4:
+		race
+
+	* item/item.api 1.9:
+	* race/constant.sma 1.2:
+	* race/menu/menu.sma 1.2:
+	* race/race.api 1.2:
+		new race stuff, added function: sysmessage, chr_getBackpack
+
+	* override.sma 1.13:
+	* race/menu/menu.sma 1.4:
+	* race/race.api 1.3:
+	* skills/inscription.sma 1.6:
+	* skills/lumberjacking.sma 1.3:
+	* skills/mining.sma 1.4:
+	* skills/misc/scissors.sma 1.10:
+	* skills/tailoring.sma 1.12:
+	* skills/tannering.sma 1.10:
+	* skills/tracking.sma 1.5:
+		removed multiProperty ( NOT USED ), now compile
+
+	* commands/options/options.sma 1.5:
+	* commands/skills/skills.sma 1.3:
+	* commands/stats/stats.sma 1.5:
+	* commands/tweak/tweak.sma 1.4:
+		*** empty log message ***
+
+2003-09-08	luxornox
+	* myshard.sma 1.5:
+	* override.scp 1.3:
+	* skills/skills.sma 1.4:
+	* skills/tracking.sma 1.3:
+		*** empty log message ***
+
+2003-09-07	endymionsf
+	* item/item.api 1.8:
+	* override.sma 1.12:
+	* race/constant.sma 1.1:
+	* race/menu/menu.sma 1.1:
+	* race/race.api 1.1:
+		new race menu and race function
+
+2003-09-06	endymionsf
+	* item/constant.sma 1.4:
+	* skills/tracking.sma 1.2:
+		new tracking
+
+	* skills/skills.sma 1.3:
+	* skills/tracking.sma 1.1:
+		new tracking scripted
+
+2003-09-05	endymionsf
+	* myshard.sma 1.4:
+	* override.scp 1.2:
+		added chr_flee
+
+	* item/constant.sma 1.3:
+	* item/item.api 1.7:
+	* item/potiondelay.sma 1.2:
+	* potiondelay.sma 1.2:
+	* skills/inscription.sma 1.5:
+	* skills/mining.sma 1.3:
+	* skills/misc/scissors.sma 1.9:
+	* skills/tailoring.sma 1.11:
+		removed dual byte
+
+	* commands/options/options.sma 1.4:
+	* commands/skills/skills.sma 1.2:
+	* commands/stats/stats.sma 1.4:
+		new menu
+
+2003-09-04	endymionsf
+	* commands/commands.sma 1.3:
+	* commands/options/options.sma 1.3:
+	* commands/skills/skills.sma 1.1:
+	* commands/stats/stats.sma 1.3:
+	* commands/tweak/tweak.sma 1.3:
+	* skills/constant.sma 1.2:
+		new menu
+
+2003-09-03	endymionsf
+	* commands/options/options.sma 1.1:
+	* commands/stats/stats.sma 1.1:
+		new menu system
+
+	* commands/commands.sma 1.2:
+	* commands/options/options.sma 1.2:
+	* commands/stats/stats.sma 1.2:
+	* commands/tweak/tweak.sma 1.2:
+	* guild/constant.sma 1.4:
+	* item/constant.sma 1.2:
+		new tweak
+
+2003-09-01	endymionsf
+	* commands/tweak/tweak.sma 1.1:
+		new commands like tweak, pl
+
+	* guild/guildstone.sma 1.6:
+		new menu
+
+2003-08-29	endymionsf
+	* commands/commands.sma 1.1:
+	* override.sma 1.11:
+		new menu system
+
+2003-07-12	endymionsf
+	* skills/tannering.sma 1.9:
+		make more osi style
+
+	* skills/inscription.sma 1.4:
+		update
+
+	* item/item.api 1.6:
+		added some function, removed some
+
+2003-07-10	endymionsf
+	* skills/misc/scissors.sma 1.5:
+	* skills/tailoring.sma 1.5:
+	* skills/tannering.sma 1.4:
+		work in progress.. new style, removed color check and used 
+		scriptid checlk instead
+
+	* skills/tailoring.sma 1.7:
+	* skills/tannering.sma 1.5:
+		clean up
+
+	* skills/misc/scissors.sma 1.6:
+	* skills/misc/scissors.sma 1.7:
+	* skills/misc/scissors.sma 1.8:
+	* skills/tailoring.sma 1.10:
+	* skills/tailoring.sma 1.6:
+	* skills/tailoring.sma 1.8:
+	* skills/tailoring.sma 1.9:
+	* skills/tannering.sma 1.6:
+	* skills/tannering.sma 1.7:
+	* skills/tannering.sma 1.8:
+		*** empty log message ***
+
+	* item/item.api 1.5:
+		added amount to item_create
+
+2003-07-09	endymionsf
+	* override.sma 1.10:
+	* skills/misc/misc.sma 1.1:
+		adding scissors
+
+	* skills/misc/scissors.sma 1.2:
+	* skills/tailoring.sma 1.2:
+	* skills/tannering.sma 1.1:
+		adding tailoing and tannering full scripter.. also scissor
+
+	* skills/misc/scissors.sma 1.1:
+	* skills/misc/scissors.sma 1.4:
+	* skills/skills.sma 1.2:
+	* skills/tailoring.sma 1.4:
+	* skills/tannering.sma 1.3:
+		*** empty log message ***
+
+	* skills/misc/scissors.sma 1.3:
+	* skills/tailoring.sma 1.3:
+	* skills/tannering.sma 1.2:
+		work in progress
+
+2003-06-12	dgp85
+	* override.sma 1.9:
+		merged doxygen documentation
+
+2003-06-10	endymionsf
+	* item/itemId.api 1.3:
+		added isWeaponLike
+
+2003-06-07	endymionsf
+	* item/itemId.api 1.2:
+		fix by fidor
+
+	* guild/guild.api 1.5:
+		fixing native not used cause not work of all functions
+
+2003-06-06	endymionsf
+	* guild/guild.api 1.4:
+	* guild/guildstone.sma 1.4:
+	* guild/guildstone.sma 1.5:
+		fix
+
+	* guild/guild.api 1.3:
+		clean
+
+2003-06-05	endymionsf
+	* guild/constant.sma 1.3:
+		charter now is unicode
+
+	* guild/constant.sma 1.2:
+	* guild/guildstone.sma 1.3:
+		ending new guild
+
+2003-06-04	endymionsf
+	* myshard.sma 1.3:
+		*** empty log message ***
+
+	* override.sma 1.8:
+		addoin myshard.sma and check
+
+2003-05-31	luxornox
+	* item/item.api 1.4:
+	* skills/lumberjacking.sma 1.2:
+	* skills/mining.sma 1.2:
+		*** empty log message ***
+
+2003-05-29	endymionsf
+	* item/item.api 1.3:
+		adding isItem and isChar
+
+2003-05-20	endymionsf
+	* skills/inscription.sma 1.3:
+		restyle set
+
+	* skills/inscription.sma 1.2:
+		*** empty log message ***
+
+2003-05-18	luxornox
+	* myshard.sma 1.2:
+	* override.sma 1.7:
+		*** empty log message ***
+
+2003-05-12	endymionsf
+	* override.sma 1.5:
+		restyle
+
+	* myshard.sma 1.1:
+	* override.sma 1.6:
+		added myshard.sma.. so scripter can put include list in this 
+		file and don't need to modify override.sma when upodate from cvs 
+		script
+
+2003-04-30	endymionsf
+	* item/itemId.api 1.1:
+		itemid added
+
+	* override.sma 1.4:
+		item id added
+
+2003-04-27	kheru
+	* default.sma 1.2:
+	* guild/guild.api 1.2:
+	* guild/guildstone.sma 1.2:
+	* guildstone.sma 1.2:
+	* item/item.api 1.2:
+		api clean
+
+2003-04-27	luxornox
+	* override.sma 1.3:
+		NXWToolset compatibility fix.
+
+2003-04-26	dgp85
+	* XSS.api 1.2:
+		clening up
+
+2003-04-22	dgp85
+	* override.sma 1.2:
+		*** empty log message ***
+
