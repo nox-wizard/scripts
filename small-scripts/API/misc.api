@@ -186,12 +186,12 @@ native garbageCollection();
 
 /*!
 \author Wintermute
-\fn loaddefaults()
+\fn loadDefaults()
 \since 0.82
 \brief load serverdefaults
 \return nothing
 */
-//native loaddefaults();
+native loadDefaults();
 
 /*!
 \author Wintermute
