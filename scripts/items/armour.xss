@@ -385,69 +385,6 @@ SECTION ITEM $item_leather_cap
     ///SUBSECTION Leather
 }
 
-SECTION ITEM $item_boots
-{
-    NAME boots
-    ID 170B
-    LAYER $layer_shoes
-    DEF 1
-    HP 10
-    STR 10
-    DYE 1
-    DECAY
-    VALUE 30
-    WEIGHT 100
-
-    ///CATEGORY Clothes
-    ///SUBSECTION Footwears
-}
-
-// sandles
-SECTION ITEM $item_sandles
-{
-    NAME sandles
-    ID 170D
-    LAYER $layer_shoes
-    DYE 0
-    DECAY
-    VALUE 20
-
-    ///CATEGORY Clothes
-    ///SUBSECTION Footwears
-}
-
-// shoes
-SECTION ITEM $item_shoes
-{
-    NAME shoes
-    ID 170F
-    LAYER $layer_shoes
-    DECAY
-    DYE 1
-    VALUE 15
-
-    ///CATEGORY Clothes
-    ///SUBSECTION Footwears
-}
-
-// thigh boots
-SECTION ITEM $item_thigh_boots
-{
-    NAME thigh boots
-    ID 1711
-    LAYER $layer_shoes
-    DEF 2
-    HP 20
-    STR 20
-    DYE 1
-    DECAY
-    VALUE 55
-    WEIGHT 100
-
-    ///CATEGORY Clothes
-    ///SUBSECTION Footwears
-}
-
 // a skullcap
 SECTION ITEM $item_skullcap
 {
