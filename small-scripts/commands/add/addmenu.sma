@@ -1267,8 +1267,9 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 	gui_addText(menu,x,y,TXT_COLOR,"wall: stone, brick, log, marble, rattan, hide, tent, ruined");	y += ROW;
 	gui_addText(menu,x,y,TXT_COLOR,"      sandstone, wooden, bamboo, plaster, cave, dungeon");	y += ROW;
 	gui_addText(menu,x,y,TXT_COLOR,"stairs: marble, stone, sandstone, wooden, carpeted, cave");	y += ROW;
-	gui_addText(menu,x,y,TXT_COLOR,"floor: marble, sandstone, planks, boards, logs, bricks, tiles");	y += ROW;
-	gui_addText(menu,x,y,TXT_COLOR,"       flagstones, cobblestones, cave");			y += 2*ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"floor: marble, sandstone, planks, boards, logs, bricks, tiles");y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"       flagstones, cobblestones, cave");			y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"roof: stone, slate, tiles, palm, logs, tent, thatch");		y += 2*ROW;
 	
 	gui_addText(menu,x,y,TXT_COLOR,"'subtype': a number 2,3,4 ...");
 	
