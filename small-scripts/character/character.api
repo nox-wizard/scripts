@@ -828,3 +828,19 @@ native chr_isFrozen(const chr);
 */
 native chr_doCombatAction(const chr);
 
+/*!
+\brief Stable an npc
+\author Endymion
+\fn chr_stable(const chr, const stablemaster)
+\param chr the npc to stable
+\param stablemaster the stablemaster
+*/
+native chr_stable(const chr, const stablemaster);
+
+/*!
+\brief Unstable an npc
+\author Endymion
+\fn chr_unStable(const chr)
+\param chr the npc
+*/
+native chr_unStable(const chr);
