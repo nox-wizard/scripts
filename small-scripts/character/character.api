@@ -11,452 +11,396 @@
 #define _nxw_character_api_
 
 /*!
-\name getCharFromSerial
 \author Xanathar
-\syntax getCharFromSerial(const serial)
+\fn getCharFromSerial(const serial)
 \param serial: the serial
 \brief Gets the char of the given serial
 */
 native getCharFromSerial(const serial);
 
 /*!
-\name getCharTarget
 \author Xanathar
-\syntax getCharTarget()
+\fn getCharTarget()
 \brief Gets the targetted char
 */
 native getCharTarget();
 
 /*!
-\name chr_getProperty
 \author Xanathar
-\syntax chr_getProperty(const chr, const property, const subprop=0, ...)
+\fn chr_getProperty(const chr, const property, const subprop=0, ...)
 \brief
 */
 native chr_getProperty(const chr, const property, const subprop=0, ...);
 
 /*!
-\name chr_setProperty
 \author Xanathar
-\syntax chr_setProperty(const chr, const property, const subprop=0, ...)
+\fn chr_setProperty(const chr, const property, const subprop=0, ...)
 \brief
 */
 native chr_setProperty(const chr, const property, const subprop=0, ...);
 
 /*!
-\name chr_canBroadcast
 \author Xanathar
-\syntax chr_canBroadcast(const chr)
+\fn chr_canBroadcast(const chr)
 \brief
 */
 native chr_canBroadcast(const chr);
 
 /*!
-\name chr_canSeeSerials
 \author Xanathar
-\syntax chr_canSeeSerials(const chr)
+\fn chr_canSeeSerials(const chr)
 \brief
 */
 native chr_canSeeSerials(const chr);
 
 /*!
-\name chr_canSnoop
 \author Xanathar
-\syntax chr_canSnoop(const chr)
+\fn chr_canSnoop(const chr)
 \brief
 */
 native chr_canSnoop(const chr);
 
 /*!
-\name chr_countBankGold
 \author Xanathar
-\syntax chr_countBankGold(const chr)
+\fn chr_countBankGold(const chr)
 \brief
 */
 native chr_countBankGold(const chr);
 
 /*!
-\name chr_countGold
 \author Xanathar
-\syntax chr_countGold(const chr)
+\fn chr_countGold(const chr)
 \brief
 */
 native chr_countGold(const chr);
 
 /*!
-\name chr_countItems
 \author Xanathar
-\syntax chr_countItems(const chr, const itemtype, const color = -1)
+\fn chr_countItems(const chr, const itemtype, const color = -1)
 \brief
 */
 native chr_countItems(const chr, const itemtype, const color = -1);
 
 /*!
-\name chr_disturbMed
 \author Xanathar
-\syntax chr_disturbMed(const chr)
+\fn chr_disturbMed(const chr)
 \brief
 */
 native chr_disturbMed(const chr);
 
 /*!
-\name chr_getBankBox
 \author Xanathar
-\syntax chr_getBankBox(const chr, const bankboxtype)
+\fn chr_getBankBox(const chr, const bankboxtype)
 \brief
 */
 native chr_getBankBox(const chr, const bankboxtype);
 
 /*!
-\name chr_getItemOnLayer
 \author Xanathar
-\syntax chr_getItemOnLayer(const chr, const layer)
+\fn chr_getItemOnLayer(const chr, const layer)
 \brief
 */
 native chr_getItemOnLayer(const chr, const layer);
 
 /*!
-\name chr_getPriv
 \author Xanathar
-\syntax chr_getPriv(const chr)
+\fn chr_getPriv(const chr)
 \brief
 */
 native chr_getPriv(const chr);
 
 /*!
-\name chr_getShield
 \author Xanathar
-\syntax chr_getShield(const chr)
+\fn chr_getShield(const chr)
 \brief
 */
 native chr_getShield(const chr);
 
 /*!
-\name chr_getWeapon
 \author Xanathar
-\syntax chr_getWeapon(const chr)
+\fn chr_getWeapon(const chr)
 \brief
 */
 native chr_getWeapon(const chr);
 
 /*!
-\name chr_isCounselor
 \author Xanathar
-\syntax chr_isCounselor(const chr)
+\fn chr_isCounselor(const chr)
 \brief
 */
 native chr_isCounselor(const chr);
 
 /*!
-\name chr_isCriminal
 \author Xanathar
-\syntax chr_isCriminal(const chr)
+\fn chr_isCriminal(const chr)
 \brief
 */
 native chr_isCriminal(const chr);
 
 /*!
-\name chr_isGM
 \author Xanathar
-\syntax chr_isGM(const chr)
+\fn chr_isGM(const chr)
 \brief
 */
 native chr_isGM(const chr);
 
 /*!
-\name chr_isGMorCns
 \author Xanathar
-\syntax chr_isGMorCns(const chr)
+\fn chr_isGMorCns(const chr)
 \brief
 */
 native chr_isGMorCns(const chr);
 
 /*!
-\name chr_isGrey
 \author Xanathar
-\syntax chr_isGrey(const chr)
+\fn chr_isGrey(const chr)
 \brief
 */
 native chr_isGrey(const chr);
 
 /*!
-\name chr_isHuman
 \author Xanathar
-\syntax chr_isHuman(const chr)
+\fn chr_isHuman(const chr)
 \brief
 */
 native chr_isHuman(const chr);
 
 /*!
-\name chr_isInnocent
 \author Xanathar
-\syntax chr_isInnocent(const chr)
+\fn chr_isInnocent(const chr)
 \brief
 */
 native chr_isInnocent(const chr);
 
 /*!
-\name chr_isInvul
 \author Xanathar
-\syntax chr_isInvul(const chr)
+\fn chr_isInvul(const chr)
 \brief
 */
 native chr_isInvul(const chr);
 
 /*!
-\name chr_isMurderer
 \author Xanathar
-\syntax chr_isMurderer(const chr)
+\fn chr_isMurderer(const chr)
 \brief
 */
 native chr_isMurderer(const chr);
 
 /*!
-\name chr_isTrueGM
 \author Xanathar
-\syntax chr_isTrueGM(const chr)
+\fn chr_isTrueGM(const chr)
 \brief
 */
 native chr_isTrueGM(const chr);
 
 /*!
-\name chr_makeInvul
 \author Xanathar
-\syntax chr_makeInvul(const chr)
+\fn chr_makeInvul(const chr)
 \brief
 */
 native chr_makeInvul(const chr);
 
 /*!
-\name chr_makeVulnerable
 \author Xanathar
-\syntax chr_makeVulnerable(const chr)
+\fn chr_makeVulnerable(const chr)
 \brief
 */
 native chr_makeVulnerable(const chr);
 
 /*!
-\name chr_moveTo
 \author Xanathar
-\syntax chr_moveTo(const chr, const x, const y, const z)
+\fn chr_moveTo(const chr, const x, const y, const z)
 \brief
 */
 native chr_moveTo(const chr, const x, const y, const z);
 
 /*!
-\name chr_setCriminal
 \author Xanathar
-\syntax chr_setCriminal(const chr)
+\fn chr_setCriminal(const chr)
 \brief
 */
 native chr_setCriminal(const chr);
 
 /*!
-\name chr_setGrey
 \author Xanathar
-\syntax chr_setGrey(const chr)
+\fn chr_setGrey(const chr)
 \brief
 */
 native chr_setGrey(const chr);
 
 /*!
-\name chr_setPermaGrey
 \author Xanathar
-\syntax chr_setPermaGrey(const chr)
+\fn chr_setPermaGrey(const chr)
 \brief
 */
 native chr_setPermaGrey(const chr);
 
 /*!
-\name chr_setInnocent
 \author Xanathar
-\syntax chr_setInnocent(const chr)
+\fn chr_setInnocent(const chr)
 \brief
 */
 native chr_setInnocent(const chr);
 
 /*!
-\name chr_setMurderer
 \author Xanathar
-\syntax chr_setMurderer(const chr)
+\fn chr_setMurderer(const chr)
 \brief
 */
 native chr_setMurderer(const chr);
 
 /*!
-\name chr_setPriv
 \author Xanathar
-\syntax chr_setPriv(const chr, const priv)
+\fn chr_setPriv(const chr, const priv)
 \brief
 */
 native chr_setPriv(const chr, const priv);
 
 /*!
-\name chr_unhide
 \author Xanathar
-\syntax chr_unhide(const chr)
+\fn chr_unhide(const chr)
 \brief
 */
 native chr_unhide(const chr);
 
 /*!
-\name chr_setMultiSerial
 \author Xanathar
-\syntax chr_setMultiSerial(const chr, const serial)
+\fn chr_setMultiSerial(const chr, const serial)
 \brief
 */
 native chr_setMultiSerial(const chr, const serial);
 
 /*!
-\name chr_setOwnSerial
 \author Xanathar
-\syntax chr_setOwnSerial(const chr, const serial)
+\fn chr_setOwnSerial(const chr, const serial)
 \brief
 */
 native chr_setOwnSerial(const chr, const serial);
 
 /*!
-\name chr_setOwnSerOnly
 \author Xanathar
-\syntax chr_setOwnSerOnly(const chr, const serial)
+\fn chr_setOwnSerOnly(const chr, const serial)
 \brief
 */
 native chr_setOwnSerOnly(const chr, const serial);
 
 /*!
-\name chr_checkEquipment
 \author Xanathar
-\syntax chr_checkEquipment(const chr)
+\fn chr_checkEquipment(const chr)
 \brief
 */
 native chr_checkEquipment(const chr);
 
 /*!
-\name chr_spawnIteminBank
 \author Xanathar
-\syntax chr_spawnIteminBank(const chr, const itemid)
+\fn chr_spawnIteminBank(const chr, const itemid)
 \brief
 */
 native chr_spawnIteminBank(const chr, const itemid);
 
 /*!
-\name chr_addNPC
 \author Xanathar
-\syntax chr_addNPC(const npcnum, const x, const y, const z)
+\fn chr_addNPC(const npcnum, const x, const y, const z)
 \brief
 */
 native chr_addNPC(const npcnum, const x, const y, const z);
 
 /*!
-\name chr_remove
 \author Xanathar
-\syntax chr_remove(const chr)
+\fn chr_remove(const chr)
 \brief
 */
 native chr_remove(const chr);
 
 /*!
-\name chr_calcAtt
 \author Xanathar
-\syntax chr_calcAtt(const chr)
+\fn chr_calcAtt(const chr)
 \brief
 */
 native chr_calcAtt (const chr);
 
 /*!
-\name chr_calcDef
 \author Xanathar
-\syntax chr_calcDef(const chr)
+\fn chr_calcDef(const chr)
 \brief
 */
 native chr_calcDef (const chr);
 
 /*!
-\name chr_fish
 \author Xanathar
-\syntax chr_fish(const chr)
+\fn chr_fish(const chr)
 \brief
 */
 native chr_fish (const chr);
 
 /*!
-\name chr_getGuild
 \author Sparhawk
 \since 0.82.rc3
-\syntax chr_getGuild( const chr )
+\fn chr_getGuild( const chr )
 \brief Get guild serial for new guild system
 */
 native chr_getGuild( const chr );
 
 
 /*!
-\name chr_guildCompare
 \author Xanathar
-\syntax chr_guildCompare(const chr1, const chr2)
+\fn chr_guildCompare(const chr1, const chr2)
 \brief
 */
 native chr_guildCompare (const chr1, const chr2);
 
 /*!
-\name chr_attackStuff
 \author Xanathar
-\syntax chr_attackStuff(const chr_defender, const socket_attacker)
+\fn chr_attackStuff(const chr_defender, const socket_attacker)
 \brief
 */
 native chr_attackStuff (const chr_defender, const socket_attacker);
 
 /*!
-\name chr_helpStuff
 \author Xanathar
-\syntax chr_helpStuff(const chr_target, const socket_helper)
+\fn chr_helpStuff(const chr_target, const socket_helper)
 \brief
 */
 native chr_helpStuff (const chr_target, const socket_helper);
 
 /*!
-\name chr_action
 \author Xanathar
-\syntax chr_action(const chr, const action)
+\fn chr_action(const chr, const action)
 \brief
 */
 native chr_action (const chr, const action);
 
 /*!
-\name chr_checkSkill
 \author Xanathar
-\syntax chr_checkSkill(const chr, const skill, const min=0, const max=1000, const raise=1)
+\fn chr_checkSkill(const chr, const skill, const min=0, const max=1000, const raise=1)
 \brief
 */
 native chr_checkSkill(const chr, const skill, const min=0, const max=1000, const raise=1);
 
 /*!
-\name chr_unmountHorse
 \author Xanathar
-\syntax chr_unmountHorse(const chr)
+\fn chr_unmountHorse(const chr)
 \brief
 */
 native chr_unmountHorse(const chr);
 
 /*!
-\name chr_mountHorse
 \author Xanathar
-\syntax chr_mountHorse(const chr, const horse_chr)
+\fn chr_mountHorse(const chr, const horse_chr)
 \brief
 */
 native chr_mountHorse(const chr, const horse_chr);
 
 /*!
-\name chr_resurrect
 \author Xanathar
-\syntax chr_resurrect(const chr)
+\fn chr_resurrect(const chr)
 \brief
 */
 native chr_resurrect(const chr);
 
 /*!
-\name chr_getEventHandler
 \author Sparhawk
-\syntax chr_getEventHandler(const chr, const event, handler[])
+\fn chr_getEventHandler(const chr, const event, handler[])
 \param chr:	character serial
 \param event:	character event identifier (EVENT_CHR_ON*)
 \brief Returns name of small function bound to the specified event into handler
@@ -464,9 +408,8 @@ native chr_resurrect(const chr);
 native chr_getEventHandler(const chr, const event, handler[]);
 
 /*!
-\name chr_setEventHandler
 \author Xanathar
-\syntax chr_setEventHandler(const chr, const event, const evtype, const format[], ...)
+\fn chr_setEventHandler(const chr, const event, const evtype, const format[], ...)
 \param chr:	character serial
 \param event:	character event identifier (EVENT_CHR_ON*)
 \param evtype:	sets dynamic or static event type (EVENTTYPE_STATIC or EVENTTYPE_DYNAMIC). Static events will be saved in worldfile.
@@ -476,9 +419,8 @@ native chr_getEventHandler(const chr, const event, handler[]);
 native chr_setEventHandler(const chr, const event, const evtype, const format[], ...);
 
 /*!
-\name chr_delEventHandler
 \author Xanathar
-\syntax chr_delEventHandler(const chr, const event)
+\fn chr_delEventHandler(const chr, const event)
 \param chr:	character serial
 \param event:	character event identifier (EVENT_CHR_ON*)
 \brief Unbinds link between a character event and a small function
@@ -486,266 +428,233 @@ native chr_setEventHandler(const chr, const event, const evtype, const format[],
 native chr_delEventHandler(const chr, const event);
 
 /*!
-\name chr_sound
 \author Xanathar
-\syntax chr_sound(const chr, const soundfx)
+\fn chr_sound(const chr, const soundfx)
 \brief
 */
 native chr_sound(const chr, const soundfx);
 
 /*!
-\name chr_distance
 \author Xanathar
-\syntax chr_distance(const chr1, const chr2)
+\fn chr_distance(const chr1, const chr2)
 \brief
 */
 native chr_distance(const chr1, const chr2);
 
 /*!
-\name chr_npcAttack
 \author Luxor
-\syntax chr_npcAttack(const attacker, const target)
+\fn chr_npcAttack(const attacker, const target)
 \brief
 */
 native chr_npcAttack(const attacker, const target);
 
 /*!
-\name chr_update
 \author Luxor
-\syntax chr_update(const chr)
+\fn chr_update(const chr)
 \brief
 */
 native chr_update(const chr);
 
 /*!
-\name chr_npcRelease
 \author Luxor
-\syntax chr_npcRelease(const chr)
+\fn chr_npcRelease(const chr)
 \brief
 */
 native chr_npcRelease(const chr);
 
 /*!
-\name chr_owns
 \author Luxor
-\syntax chr_owns(const chr1, const chr2)
+\fn chr_owns(const chr1, const chr2)
 \brief
 */
 native chr_owns(const chr1, const chr2);
 
 /*!
-\name chr_speech
 \author Sparhawk
-\syntax chr_speech(const function, const chr = -1, const npc, const text[], const antispam = 1)
+\fn chr_speech(const function, const chr = -1, const npc, const text[], const antispam = 1)
 \brief
 */
 native chr_speech(const function, const chr = -1, const npc, const text[], const antispam = 1);
 
 /*!
-\name chr_teleport
 \author Luxor
-\syntax chr_teleport(const chr)
+\fn chr_teleport(const chr)
 \brief
 */
 native chr_teleport(const chr);
 
 /*!
-\name chr_lineOfSight
 \author Luxor
-\syntax chr_lineOfSight(const s, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor)
+\fn chr_lineOfSight(const s, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor)
 \brief
 */
 native chr_lineOfSight(const s, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor);
 
 /*!
-\name chr_poison
 \author Luxor
-\syntax chr_poison(const chr, const poisontype, const secs = -1)
+\fn chr_poison(const chr, const poisontype, const secs = -1)
 \brief
 */
 native chr_poison(const chr, const poisontype, const secs = -1);
 
 /*!
-\name chr_hide
 \author Luxor
-\syntax chr_hide(const chr, const hidden)
+\fn chr_hide(const chr, const hidden)
 \brief
 */
 native chr_hide(const chr, const hidden);
 
 /*!
-\name chr_applyDamage
 \author Luxor
-\syntax chr_applyDamage(const chr, const damage, const damagetype, const stattobedamaged)
+\fn chr_applyDamage(const chr, const damage, const damagetype, const stattobedamaged)
 \brief
 */
 native chr_applyDamage(const chr, const damage, const damagetype, const stattobedamaged);
 
 /*!
-\name chr_setRandomName
 \author Luxor
-\syntax chr_setRandomName(const chr, const namelist[])
+\fn chr_setRandomName(const chr, const namelist[])
 \brief
 */
 native chr_setRandomName(const chr, const namelist[]);
 
 /*!
-\name chr_showMessage
 \author Sparhawk
-\syntax (const showToWhom, const showWhom, const msg[], const color = 0x0481)
+\fn (const showToWhom, const showWhom, const msg[], const color = 0x0481)
 \brief
 */
 native chr_showMessage(const showToWhom, const showWhom, const msg[], const color = 0x0481);
 
 /*!
-\name chr_getGuildType
 \author Sparhawk
-\syntax chr_getGuildType(const chr)
+\fn chr_getGuildType(const chr)
 \brief
 */
 native chr_getGuildType( const chr );
 
 /*!
-\name chr_setGuildType
 \author Sparhawk
-\syntax chr_setGuildType(const chr, const type)
+\fn chr_setGuildType(const chr, const type)
 \brief
 */
 native chr_setGuildType( const chr, const type );
 
 /*!
-\name chr_isGuildTraitor
 \author Sparhawk
-\syntax chr_isGuildTraitor(const chr)
+\fn chr_isGuildTraitor(const chr)
 \brief
 */
 native chr_isGuildTraitor( const chr );
 
 /*!
-\name chr_setGuildTraitor
 \author Sparhawk
-\syntax chr_setGuildTraitor(const chr, const traitor = 1)
+\fn chr_setGuildTraitor(const chr, const traitor = 1)
 \brief
 */
 native chr_setGuildTraitor( const chr, const traitor = 1 );
 
 /*!
-\name chr_hasGuildToggle
 \author Sparhawk
-\syntax chr_hasGuildToggle(const chr)
+\fn chr_hasGuildToggle(const chr)
 \brief
 */
 native chr_hasGuildToggle( const chr );
 
 /*!
-\name chr_setGuildToggle
 \author Sparhawk
-\syntax chr_setGuildToggle(const chr, const toggle = 1)
+\fn chr_setGuildToggle(const chr, const toggle = 1)
 \brief
 */
 native chr_setGuildToggle( const chr, const toggle = 1 );
 
 /*!
-\name chr_getGuildFealty
 \author Sparhawk
-\syntax chr_getGuildFealty(const chr)
+\fn chr_getGuildFealty(const chr)
 \brief
 */
 native chr_getGuildFealty( const chr );
 
 /*!
-\name chr_setGuildFealty
 \author Sparhawk
-\syntax chr_setGuildFealty(const chr, const fealty)
+\fn chr_setGuildFealty(const chr, const fealty)
 \brief
 */
 native chr_setGuildFealty( const chr, const fealty );
 
 /*!
-\name chr_getGuildNumber
 \author Sparhawk
-\syntax chr_getGuildNumber(const chr)
+\fn chr_getGuildNumber(const chr)
 \brief
 */
 native chr_getGuildNumber( const chr );
 
 /*!
-\name chr_setGuildNumber
 \author Sparhawk
-\syntax chr_setGuildNumber(const chr)
+\fn chr_setGuildNumber(const chr)
 \brief
 */
 native chr_setGuildNumber( const chr, const number );
 
 /*!
-\name chr_getGuildTitle
 \author Sparhawk
-\syntax chr_getGuildTitle(const chr, title[])
+\fn chr_getGuildTitle(const chr, title[])
 \brief
 */
 native chr_getGuildTitle( const chr, title[] );
 
 /*!
-\name chr_setGuildTitle
 \author Sparhawk
-\syntax chr_setGuildTitle(const chr, const title[])
+\fn chr_setGuildTitle(const chr, const title[])
 \brief
 */
 native chr_setGuildTitle( const chr, const title[] );
 
 /*!
-\name chr_getCreationDay
 \author Sparhawk
-\syntax chr_getCreationDay(const chr)
+\fn chr_getCreationDay(const chr)
 \brief
 */
 native chr_getCreationDay( const chr );
 
 /*!
-\name chr_setCreationDay
 \author Sparhawk
-\syntax chr_setCreationDay(const chr, const day)
+\fn chr_setCreationDay(const chr, const day)
 \brief
 */
 native chr_setCreationDay( const chr, const day );
 
 /*!
-\name chr_morph
 \author Luxor
-\syntax chr_morph(const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ...)
+\fn chr_morph(const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ...)
 \brief
 */
 native chr_morph( const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ... );
 
 /*!
-\name chr_unmorph
 \author Luxor
-\syntax chr_unmorph(const chr)
+\fn chr_unmorph(const chr)
 \brief
 */
 native chr_unmorph( const chr );
 
 /*!
-\name chr_possess
 \author Keldan
-\syntax chr_possess(const possessor, const possessed)
+\fn chr_possess(const possessor, const possessed)
 \brief made "possessor" character possess "possessed" character. Possessor can't be NPC.
 */
 native chr_possess(const possessor, const possessed);
 
 /*!
-\name chr_getLocalVarErr
 \author Sparhawk
-\syntax chr_getLocalVarErr()
+\fn chr_getLocalVarErr()
 \brief Returns result for all operations on character variables
 \brief Returned value is one of VAR_ERROR_NONE, VAR_ERROR_UNKNOWN_VAR, VAR_ERROR_DUPLICATE_VAR, VAR_ERROR_WRONG_TYPE, VAR_ERROR_ACCESS_DENIED
 */
 native chr_getLocalVarErr();
 
 /*!
-\name chr_isaLocalVar
 \author Sparhawk
-\syntax chr_isaLocalVar(const chr, const var, const type = 0)
+\fn chr_isaLocalVar(const chr, const var, const type = 0)
 \param chr:	character serial
 \param var:	variable identifier
 \param type:	type of variable (VAR_TYPE_ANY, VAR_TYPE_INTEGER, VAR_TYPE_STRING )
@@ -754,17 +663,15 @@ native chr_getLocalVarErr();
 native chr_isaLocalVar( const chr, const var, const type = 0 );
 
 /*!
-\name chr_sizeofLocalVar
 \author Sparhawk
-\syntax chr_sizeofLocalVar( const serial, const var, const index = -1 )
+\fn chr_sizeofLocalVar( const serial, const var, const index = -1 )
 \brief Returns length of a local variable, number of elements in a vector, or length of variable in a vector
 */
 native chr_sizeofLocalVar( const serial, const var, const index = -1 );
 
 /*!
-\name chr_delLocalVar
 \author Sparhawk
-\syntax chr_delLocalVar(const chr, const var, const type = 0)
+\fn chr_delLocalVar(const chr, const var, const type = 0)
 \param chr:	character serial
 \param var:	variable identifier
 \param type:	type of variable (VAR_TYPE_ANY, VAR_TYPE_INTEGER, VAR_TYPE_STRING )
@@ -773,9 +680,8 @@ native chr_sizeofLocalVar( const serial, const var, const index = -1 );
 native chr_delLocalVar( const chr, const var, const type = 0 );
 
 /*!
-\name chr_addLocalIntVar
 \author Sparhawk
-\syntax chr_addLocalIntVar(const chr, const var, const value = 0)
+\fn chr_addLocalIntVar(const chr, const var, const value = 0)
 \param chr:	character serial
 \param var:	variable identifier
 \param value:	initial value
@@ -784,9 +690,8 @@ native chr_delLocalVar( const chr, const var, const type = 0 );
 native chr_addLocalIntVar( const chr, const var, const value = 0 );
 
 /*!
-\name chr_getLocalIntVar
 \author Sparhawk
-\syntax chr_getLocalIntVar(const chr, const var)
+\fn chr_getLocalIntVar(const chr, const var)
 \param chr:	character serial
 \param var:	variable identifier
 \brief Get value of specified integer variable from character
@@ -794,9 +699,8 @@ native chr_addLocalIntVar( const chr, const var, const value = 0 );
 native chr_getLocalIntVar( const chr, const var );
 
 /*!
-\name chr_setLocalIntVar
 \author Sparhawk
-\syntax chr_setLocalIntVar(const chr, const var, const value = 0)
+\fn chr_setLocalIntVar(const chr, const var, const value = 0)
 \param chr:	character serial
 \param var:	variable identifier
 \param value:	new value
@@ -805,9 +709,8 @@ native chr_getLocalIntVar( const chr, const var );
 native chr_setLocalIntVar( const chr, const var, const value = 0 );
 
 /*!
-\name chr_addLocalIntVec
 \author Sparhawk
-\syntax chr_addLocalIntVec(const chr, const var, const size = 1, const value = 0)
+\fn chr_addLocalIntVec(const chr, const var, const size = 1, const value = 0)
 \param chr:	character serial
 \param var:	variable identifier
 \param size	number of array elements
@@ -817,9 +720,8 @@ native chr_setLocalIntVar( const chr, const var, const value = 0 );
 native chr_addLocalIntVec( const chr, const var, const size = 1, const value = 0 );
 
 /*!
-\name chr_getLocalIntVec
 \author Sparhawk
-\syntax chr_getLocalIntVec(const chr, const var, const index = 0)
+\fn chr_getLocalIntVec(const chr, const var, const index = 0)
 \param chr:	character serial
 \param var:	variable identifier
 \param index:	0 based index into array
@@ -828,9 +730,8 @@ native chr_addLocalIntVec( const chr, const var, const size = 1, const value = 0
 native chr_getLocalIntVec( const chr, const var, const index = 0);
 
 /*!
-\name chr_setLocalIntVec
 \author Sparhawk
-\syntax chr_setLocalIntVec(const chr, const var, const index = 0, const value = 0)
+\fn chr_setLocalIntVec(const chr, const var, const index = 0, const value = 0)
 \param chr:	character serial
 \param var:	variable identifier
 \param index:	0 based index into array
@@ -840,9 +741,8 @@ native chr_getLocalIntVec( const chr, const var, const index = 0);
 native chr_setLocalIntVec( const chr, const var, const index = 0, const value = 0 );
 
 /*!
-\name chr_addLocalStrVar
 \author Sparhawk
-\syntax chr_addLocalStrVar(const chr, const var, const value[] = "")
+\fn chr_addLocalStrVar(const chr, const var, const value[] = "")
 \param chr:	character serial
 \param var:	variable identifier
 \param value:	initial value
@@ -851,9 +751,8 @@ native chr_setLocalIntVec( const chr, const var, const index = 0, const value = 
 native chr_addLocalStrVar( const chr, const var, const value[] = "" );
 
 /*!
-\name chr_getLocalStrVar
 \author Sparhawk
-\syntax chr_getLocalStrVar(const chr, const var, value[])
+\fn chr_getLocalStrVar(const chr, const var, value[])
 \param chr:	character serial
 \param var:	variable identifier
 \brief Get value of specified string variable from character into value.
@@ -861,9 +760,8 @@ native chr_addLocalStrVar( const chr, const var, const value[] = "" );
 native chr_getLocalStrVar( const chr, const var, value[] );
 
 /*!
-\name chr_setLocalStrVar
 \author Sparhawk
-\syntax chr_setLocalStrVar(const chr, const var, const value[] = "")
+\fn chr_setLocalStrVar(const chr, const var, const value[] = "")
 \param chr:	character serial
 \param var:	variable identifier
 \param value:	new value
@@ -872,9 +770,8 @@ native chr_getLocalStrVar( const chr, const var, value[] );
 native chr_setLocalStrVar( const chr, const var, const value[] = "" );
 
 /*!
-\name chr_countLocalVar
 \author Sparhawk
-\syntax chr_countLocalVar(const chr)
+\fn chr_countLocalVar(const chr)
 \param chr:	character serial
 \return number of variables defined
 \brief Count the number of local variables defined for specified character
@@ -882,9 +779,8 @@ native chr_setLocalStrVar( const chr, const var, const value[] = "" );
 native chr_countLocalVar( const chr );
 
 /*!
-\name chr_firstLocalVar
 \author Sparhawk
-\syntax chr_firstLocalVar(const chr)
+\fn chr_firstLocalVar(const chr)
 \param chr:	character serial
 \return first defined local variable or INVALID
 \brief get id of first defined local variable
@@ -892,9 +788,8 @@ native chr_countLocalVar( const chr );
 native chr_firstLocalVar( const chr );
 
 /*!
-\name chr_nextLocalVar
 \author Sparhawk
-\syntax chr_nextLocalVar(const chr, const previous)
+\fn chr_nextLocalVar(const chr, const previous)
 \param chr:	character serial
 \param previous: variable id of previous variable
 \return next defined local variable or INVALID
@@ -903,36 +798,32 @@ native chr_firstLocalVar( const chr );
 native chr_nextLocalVar( const chr, const previous );
 
 /*!
-\name chr_skillMakeMenu
 \author Luxor
-\syntax chr_skillMakeMenu(const chr, const makeMenu, const skill)
+\fn chr_skillMakeMenu(const chr, const makeMenu, const skill)
 \brief
 */
 native chr_skillMakeMenu(const chr, const makeMenu, const skill);
 
 
 /*!
-\name chr_isOnline
 \author Luxor
-\syntax chr_isOnline(const chr)
+\fn chr_isOnline(const chr)
 \brief
 */
 native chr_isOnline(const chr);
 
 
 /*!
-\name chr_isFrozen
 \author Luxor
-\syntax chr_isFrozen(const chr)
+\fn chr_isFrozen(const chr)
 \brief
 */
 native chr_isFrozen(const chr);
 
 
 /*!
-\name chr_doCombatAction
 \author Luxor
-\syntax chr_doCombatAction(const chr)
+\fn chr_doCombatAction(const chr)
 \brief
 */
 native chr_doCombatAction(const chr);
