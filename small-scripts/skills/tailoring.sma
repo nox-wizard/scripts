@@ -39,7 +39,7 @@ static clothSkill[] = {
 
 //Make menu for that cloth
 static clothMakeMenu[] = {
-40   //NORMAL_CLOTH
+30   //NORMAL_CLOTH
 };
 
 //Cloths define
