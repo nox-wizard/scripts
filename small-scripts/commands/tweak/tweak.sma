@@ -114,6 +114,7 @@ it_propval,
 it_inputname: 10
 };
 
+//0: empty line for sorting lines at pages or use with text entry if helpful
 //1: property field, eg itemname
 //2: infofield, eg weight
 //3: inputfield, eg Nightsight
@@ -921,7 +922,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 				{
 					case 0:
 					{
-						gui_addText(twkItmMenu,it_tex+k,180+(n*20),1310, itm_twkarray[i][it_linename]);					
+						gui_addText(twkItmMenu,it_tex+k,180+(n*20),33, itm_twkarray[i][it_linename]);					
 					}
 					case 1: //property field, eg itemname
 					{
@@ -1185,6 +1186,10 @@ public tweak_char(const chrsource, const target, pagenumber)
 			
 			switch(linetype)
 			{
+				case 0:
+				{
+					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),33, chr_twkarray[i][ct_linename]);
+				}
 				case 1: //property field, eg itemname
 				{
 					gui_addGump(twkChrMenu,ct_gu+k,181+(n*20), 0x827);
