@@ -1,0 +1,55 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_target_api_
+  #endinput
+#endif
+#define _nxw_target_api_
+
+/*! \defgroup script_API_target target handling
+\ingroup script_API
+@{
+*/
+
+/*!
+\brief Create a new target
+\author Endymion
+\since 0.82
+\param chr the character
+\param param1 a param you can freeley use
+\param param2 a param you can freely use
+\param doNow if true target is will be executed
+\param callback the function callback
+\param ... additional paramteres for C style format string to define the callback name
+\return the target serial or INVALID if error
+\fn target_create( const chr, const param1=INVALID, const param2=INVALID, const doNow=true, callback[], ... )
+*/
+native target_create( const chr, const param1=INVALID, const param2=INVALID, const doNow=true, callback[], ... );
+
+/*!
+\brief Execute target to character
+\author Endymion
+\since 0.82
+\param target the target serial
+\param chr the player to send to
+\return true if sended, false if error
+\fn target_do( const target, const chr )
+*/
+native target_do( const target, const chr );
+
+/*}@ */
+/*!
+\brief Example of target callback
+\example public callback( const targetnum, const chrsource, const target, const x, const y, const z, const model, const param1 )
+\param targetnum - the number of targetcalls
+\param chrsource - the character that started the target-function
+\param target - the serial of the item/npc targetted, -1 if ground
+\param x, y, z - the location or INVALID if not a location targetted
+\param model - the decimal ID of object clicked or static clicked, or INVALID if land tile is targeted
+\param param1 is the first param passed
+\note the param2 passed to target_create can be getted using the target_getProperty, with TP_BUFFER and 1 for index
+*/

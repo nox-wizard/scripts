@@ -1,0 +1,354 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts		||
+// || Maintained by	: Luxor, Sparhawk, Endymion		||
+// || Last Update	: 19-may-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_set_api_
+  #endinput
+#endif
+#define _nxw_set_api_
+
+/*! \page p_set Set
+* \section set Set, Contenitori di oggetti
+* <br>
+* <br>
+* Un set é un vettore che può contenere un qualsiasi oggetto, quindi sia item che char. <br>
+* Può essere riempito attraverso le funzioni predefinite oppure "manualmente" dallo scripter <br><br>
+* Alcuni esempi:
+* <UL>
+* <LI>un semplice esempio di come mandare a un player la lista degli altri giocatori in zona ( \ref esempio1.sma )
+* </UL>
+*/
+
+/** \example esempio1.sma
+ * Primo esempio sui set
+ */
+
+#include "small-scripts/include/nxw_lib"
+/*!
+\defgroup script_API_set Set
+\ingroup script_API
+@{
+*/
+
+/*!
+\brief Open a set
+\author Endymion
+\since 0.82
+\return the set
+\fn set_create( )
+*/
+native set_create( );
+
+/*!
+\brief Close a set
+\author Endymion
+\since 0.82
+\param 1 the set
+\fn set_delete( const set )
+\return 0
+*/
+native set_delete( const set );
+
+/*!
+\brief Clear a set
+\author Endymion
+\since 0.82
+\param 1 the set
+\fn set_clear( const set )
+\return 0
+*/
+native set_clear( const set );
+
+/*!
+\brief Rewind a set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return 0
+\fn set_rewind( const set )
+*/
+native set_rewind( const set );
+
+/*!
+\brief Move to next item
+\author Endymion
+\since 0.82
+\param 1 the set
+\return 0
+\fn set_next( const set )
+*/
+native set_next( const set );
+
+/*!
+\brief Check if at end of the given set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return 1 if at end, 0 else
+\fn set_end( const set )
+*/
+native set_end( const set );
+
+
+/*!
+\brief Get number of element contained in a set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return element count
+\fn set_size( const set )
+*/
+native set_size( const set );
+
+/*!
+\brief Add to given set the value
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the value
+\return 0
+*/
+native set_add( const set, const value );
+
+/*!
+\brief Get current object of given set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return the object
+\note move index to next item
+\fn set_get( const set )
+*/
+native set_get( const set );
+
+/*!
+\brief Get current character of given set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return the character
+\note move index to next
+\fn set_getChar( const set )
+*/
+native set_getChar( const set );
+
+/*!
+\brief Get current item of given set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return the item
+\note move index to next
+\fn set_getItem( const set )
+*/
+native set_getItem( const set );
+
+/*!
+\brief Add to given set the owned npc of given character
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the owner
+\param 3 include stabled
+\param 4 only following
+\return 0
+\fn set_addOwnedNpcs( const set, const owner, const includeStabled, const onlyFollowing )
+*/
+native set_addOwnedNpcs( const set, const owner, const includeStabled=false, const onlyFollowing=true );
+
+/*!
+\brief Add to given set the npcs near location
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the x location
+\param 3 the y location
+\param 4 distance
+\return 0
+\fn set_addNpcsNearXY( const set, const x, const y, const distance ) 
+*/
+native set_addNpcsNearXY( const set, const x, const y, const distance=VISRANGE );
+
+/*!
+\brief Add to given set the npcs near object
+\author Endymion
+\since 0.82
+\param set the set
+\param obj the object
+\param distance the distance
+\return 0
+\note object can be an item or a char
+\note if object is an item, the location is out most container location
+\fn set_addNpcsNearObj( const set, const obj, const distance )
+*/
+native set_addNpcsNearObj( const set, const obj, const distance=VISRANGE );
+
+/*!
+\brief Add to given set the party friend of given character
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the character
+\param 3 distance
+\param 4 exclude this
+\return 0
+\fn set_addPartyFriend( const set, const chr, const distance, const excludeThis )
+*/
+native set_addPartyFriend( const set, const chr, const distance=VISRANGE, const excludeThis=true );
+
+/*!
+\brief Add to given set the item in given container
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 item
+\param 3 include sub containers
+\param 4 only first subcontainer
+\return 0
+\fn set_addItemsInCont( const set, const item, const includeSubCont, const onlyFirstSubCont )
+*/
+native set_addItemsInCont( const set, const item, const includeSubCont=false, const onlyFirstSubCont=true );
+
+/*!
+\brief Add to given set the items weared by given character
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 character
+\param 3 include like hair
+\param 4 include protected layer
+\param 5 exclude illegar layer
+\return 0
+\fn set_addItemWeared( const set, const chr, const includeLikeHair, const includeProtected, const includeIllegal )
+*/
+native set_addItemWeared( const set, const chr, const includeLikeHair=false, const includeProtected=false, const includeIllegal=false );
+
+/*!
+\brief Add to given set the items at given location
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 x
+\param 3 y
+\param 4 type
+\return 0
+\fn set_addItemsAtXY( const set, const x, const y, const type )
+*/
+native set_addItemsAtXY( const set, const x, const y, const type );
+
+/*!
+\brief Add to given set the items near given location
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 x
+\param 3 y
+\param 4 distance
+\param 5 exclude not moveable
+\return 0
+\fn set_addItemsNearXY( const set, const x, const y, const distance, const excludeNotMoveable )
+*/
+native set_addItemsNearXY( const set, const x, const y, const distance=VISRANGE, const excludeNotMoveable=true );
+
+/*!
+\brief Add to given set all online players
+\author Endymion
+\since 0.82
+\param 1 the set
+\return 0
+\note are added ONLY client chaarcter online
+\fn set_addAllOnlinePl( const set )
+*/
+native set_addAllOnlinePl( const set );
+
+/*!
+\brief Add to given set all online players near given character
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 character
+\param 3 exclude this
+\param 4 distance
+\return 0
+\note are added ONLY client chaarcter online
+\fn set_addOnPlNearChar( const set, const chr, const excludeThis, const distance )
+\note if object is an item and is in a subcontainer, is returned the true location, the ocation of in world container
+*/
+native set_addOnPlNearObj( const set, const chr, const excludeThis=true, const distance=VISRANGE );
+
+/*!
+\brief Add to given set all online players near location
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 x
+\param 3 y
+\param 4 distance
+\return 0
+\note are added ONLY client chaarcter online
+\fn set_addOnPlNearXY( const set, const x, const y, const distance=VISRANGE )
+*/
+native set_addOnPlNearXY( const set, const x, const y, const distance );
+
+/*!
+\brief Add to given set all guild member
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the guild
+\return 0
+\fn set_addGuildMembers( const set, const guild )
+*/
+native set_addGuildMembers( const set, const guild );
+
+/*!
+\brief Add to given set all guild recruit
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the guild
+\return 0
+\fn set_addGuildRecruit( const set, const guild )
+*/
+native set_addGuildRecruit( const set, const guild );
+
+/*!
+\brief Add to given set all guild or guild political
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the guild ( if INVALID all, else use options )
+\param 3 the options ( WAR, ALLIED )
+\return 0
+\fn set_addGuilds( const set, const guild=INVALID, const options=INVALID )
+*/
+native set_addGuilds( const set, const guild=INVALID, const options=INVALID ) 
+
+/*!
+\brief Add to given set all race
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 onlyActive if true are added only active races
+\return 0
+\fn set_addAllRaces( const set, const onlyActive=true )
+*/
+native set_addAllRaces( const set, const onlyActive=true );
+
+/*!
+\brief Add to given set all race
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 race the race
+\param 3 prop the property
+\param 4 subProp the sub property
+\return 0
+\fn set_getRaceStuff( const set, const race, const prop, const subProp=0  )
+*/
+native set_getRaceStuff( const set, const race, const prop, const subProp=0  );
+
+/*! }@ */
