@@ -1,105 +1,74 @@
 #define $race_skill_modifier_default 0
 
+// Default race - we don't need this one, do we???
 #define $race_none 0
-#define $race_undead 0
 
-//#define race_orc 2
-//#define race_deamon 3
-//#define race_elemental 4
-//#define race_dragon 5
-
-#define $race_animal 0
-#define $race_insect 0
-#define $race_arachnid 0
-#define $race_terathan 0
-#define $race_slime 0
-#define $race_aberration 0
-//#define race_gargoyle 12
-#define $race_lizardman 0
-#define $race_ratman 0
-#define $race_ophidian 0
-#define $race_giant 0
-#define $race_construct 0
-#define $race_humanoid_aberration 0
-#define $race_vegetable 0
-#define $race_animal_aberration 0
-
-// Default race
-
-
-// Human races
-
-#define $race_human 100
-
-// Dwarven races
-
-#define $race_dwarf 200
-#define $race_hill_dwarf 200
-#define $race_mountain_dwarf 200
-#define $race_gully_dwarf 200
-#define $race_deep_dwarf 200
-#define $race_duergar 200
+// Orc races
+#define $race_orc 1
+#define $race_halforc 2
 
 // Elf races
-
-#define $race_elf 300
-#define $race_wood_elf 300
-#define $race_sea_elf 300
-#define $race_drow 300
-#define $race_dark_elf 300
-#define $race_avariel 300
-
-// Halfling races
-
-#define $race_halfling 400
+#define $race_avariel 3
+#define $race_elf 4
+#define $race_wood_elf 5
+#define $race_sea_elf 6
+#define $race_drow 7
+#define $race_dark_elf 8
 
 // Halfelf races
+#define $race_halfelf 9
 
-#define $race_halfelf 500
+// Human races
+#define $race_human 10
+
+// Dwarven races
+#define $race_dwarf 11
+#define $race_hill_dwarf 12
+#define $race_mountain_dwarf 13
+#define $race_gully_dwarf 14
+#define $race_deep_dwarf 15
+#define $race_duergar 16
+
+// Halfling races
+#define $race_halfling 17
+
+// Troll races
+#define $race_troll 18
 
 // Kender races
-
-#define $race_kender 600
-// Troll races
-
-#define $race_troll 0
+#define $race_kender 19
 
 // Ogre races
+#define $race_ogre 20
 
-#define $race_ogre 0
-
-#define $race_ape 0
-
-#define $race_bird 0
-
-#define $race_bullfrog 0
-
-#define $race_corpser 0
-
-#define $race_cyclops 0
-
-#define $race_deamon 0
-
-#define $race_dolphin 0
-
-#define $race_dragon 0
-
-#define $race_drake 0
-
-#define $race_eagle 0
-
-#define $race_elemental 0
-
-#define $race_ettin 0
-
-#define $race_gargoyle 0
-
-#define $race_gazer 0
-
-#define $race_toad 0
-
-#define $race_harpie 0
-
-#define $race_orc 2500
-
-#define $race_halforc 2510
+#define $race_ape 100
+#define $race_bird 101
+#define $race_bullfrog 102
+#define $race_corpser 103
+#define $race_cyclops 104
+#define $race_deamon 105
+#define $race_dolphin 106
+#define $race_dragon 107
+#define $race_drake 108
+#define $race_eagle 109
+#define $race_elemental 110
+#define $race_ettin 111
+#define $race_gargoyle 112
+#define $race_gazer 113
+#define $race_toad 114
+#define $race_harpie 115
+#define $race_undead 116
+#define $race_animal 117
+#define $race_insect 118
+#define $race_arachnid 119
+#define $race_terathan 120
+#define $race_slime 121
+#define $race_aberration 122
+#define $race_lizardman 123
+#define $race_ratman 124
+#define $race_ophidian 125
+#define $race_giant 126
+#define $race_construct 127
+#define $race_humanoid_aberration 128
+#define $race_vegetable 129
+#define $race_animal_aberration 130
