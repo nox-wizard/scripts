@@ -131,11 +131,9 @@ static animProperty[NUM_anims][animprop] = {
 
 public command_polymorph(const itm, const chrsource)
 {
-	if(chr_getProperty(chrsource, CP_SERIAL) != chrsource) //as long sockets are still given instead serial
+	if( (chr_isGM(chrsource)!=0) || (chr_getProperty(chrsource, CP_ACCOUNT)!= 0)) //no admin or gm -> abort
 		return;
-	if (!chr_isGM(chrsource))
-		return;
-	chr_message( chrsource, _, "About whom/what do you want info ?");
+	chr_message( chrsource, _, "Whom do you want to polymorph/unmorph?");
 	target_create( chrsource, _, _, _, "polymMenuCallback" );
 }
 
@@ -144,7 +142,7 @@ public polymMenuCallback( const t, const chrsource, const target, const x, const
 	//printf("chrsource: %d, target: %d, modell: %d, t: %d^n", chrsource, target, model, t);
 	if ( chrsource < 0 )
 		return;
-	if ( (t == 1) || (t==3) ) //ist npc/char
+	if ( isChar(target)) //is npc/char
 	{
 		if(chr_getProperty( target,CP_ID) != chr_getProperty(target,CP_XID))
 			chr_unmorph(target);
@@ -153,7 +151,7 @@ public polymMenuCallback( const t, const chrsource, const target, const x, const
 	}
 	else
 	{
-		chr_message( chrsource, _,"Select a char or item,please");
+		chr_message( chrsource, _,"Select a char/npc,please");
 		return;
 	}
 }
