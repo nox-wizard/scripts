@@ -1257,7 +1257,7 @@ SECTION ITEM $item_mortar_and_pestal
     ID 0E9B
     VALUE 6
     DECAY
-    @ONDBLCLICK _nxw_sk_alchemy
+    @ONDBLCLICK __nxw_sk_alchemy
 
     ///CATEGORY Alchemy & Magic
     ///SUBSECTION Misc

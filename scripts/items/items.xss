@@ -316,7 +316,7 @@ SECTION ITEM $item_fishing_pole
     ID 0DBF
     DECAY
     VALUE 14
-    @ONDBLCLICK _nxw_sk_fishing
+    @ONDBLCLICK __nxw_sk_fishing
 }
 
 SECTION ITEM $item_black_smith
