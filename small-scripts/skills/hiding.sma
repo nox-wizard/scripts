@@ -3,6 +3,13 @@
 public __nxw_sk_hiding(const c)
 {
 bypass();
+if(chr_getProperty( c,CP_HIDDEN,_) == 1)
+{
+	chr_setProperty( c,CP_HIDDEN,_,0);
+	chr_setProperty( c,CP_PRIV2,_, chr_getProperty( c,CP_PRIV2,_) &~0x08 ); //not hidden by skill and not permahidden
+	chr_update(c);
+	return;
+}
 new char_x = chr_getProperty(c, CP_POSITION, CP2_X);  
 new char_y = chr_getProperty(c, CP_POSITION, CP2_Y); 
 new char_z = chr_getProperty(c, CP_POSITION, CP2_Z); 
@@ -10,7 +17,9 @@ new hidingskill = chr_getProperty(c,CP_SKILL,21);
 
 new set = set_create(); // creating a new set
     // fill the set with all chars in range
-	set_addNpcsNearXY( set, char_x,char_y,((2000-(2*hidingskill))/2));
+    new range = ((2000-(2*hidingskill))/150);
+    if(range <= 4) range = 4; //you can't hide standing right next to someone, TODO: LOS 
+	set_addNpcsNearXY( set, char_x,char_y,range);
 
     //set_rewind reinitialize internal set index, so now point to first element
     //!set_isEmpty check if is not at end of set
@@ -28,10 +37,13 @@ there is nobody permahidden or hidden itself (exploit prevention: use hide for d
 		}
 	} //for searches whole range, if not stopped before than goes on
 	new checkskill = random(1000)
-	if( hidingskill >= checkskill && chr_checkSkill(c, SK_HIDING, 0, 1000, 1))
+	printf("checkskill: %d, hidingskill: %d", checkskill, hidingskill);
+	if( (hidingskill > checkskill) && (chr_checkSkill(c, 21, 0, 1000, 1)))
 	{
+	chr_message(c, _, "You slip inconspicuous into the shadows.");
 	chr_setProperty( c,CP_HIDDEN,_,1);
 	chr_setProperty( c,CP_PRIV2,_, chr_getProperty( c,CP_PRIV2,_) &~0x08 ); //hidden by skill and not permahidden
+	chr_update(c);
 	}
 	else chr_message(c, _, "Your attempt to hide is not succesfull.");
 }
