@@ -18,16 +18,16 @@
 /*!
 \brief Create a new menu
 \author Endymion
-\param 1 the menu id
-\param 2 x
-\param 3 y
-\param 2 is moveable
-\param 2 is closeable
-\param 3 is disposeable
+\param 1 x
+\param 2 y
+\param 3 is moveable
+\param 4 is closeable
+\param 5 is disposeable
+\param 6 function callback
 \return the menu serial
-\fn menu_create( const id, const x, const y, const moveable, const closeable, const disposeable )
+\fn menu_create( const x, const y, const canmove, const canclose, const candispose, const callback[] )
 */
-native menu_create( const id, const x, const y, const moveable, const closeable, const disposeable );
+native menu_create( const x, const y, const canmove, const canclose, const candispose, const callback[] );
 
 /*!
 \brief Delete a menu
@@ -49,29 +49,169 @@ native menu_delete( const menu );
 native menu_show( const menu, const chr );
 
 /*!
-\brief Add a new button at given menu
+\brief Get a menu property
 \author Endymion
 \param 1 the menu serial
-\param 2 x
-\param 3 y
-\param 4 up
-\param 5 down
-\param 6 return code
-\param 7 page ( default 1 )
-\return false if error, true else
-\fn menu_addButton( const menu, const x, const y, const up, const down, returnCode, page )
+\param 2 the property
+\return the property
+\fn menu_getProperty( const menu, const property )
 */
-native menu_addButton( const menu, const x, const y, const up, const down, returnCode, page );
+native menu_getProperty( const menu, const property );
+
+/*!
+\brief Set a menu property
+\author Endymion
+\param 1 the menu serial
+\param 2 the property
+\param 3 the value
+\return false if error, true else
+\fn menu_setProperty( const menu, const property )
+*/
+native menu_setProperty( const menu, const property );
+
+/*!
+\brief Add background at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 the gump
+\param 3 the width
+\param 4 the height
+\return false if error, true else
+\fn menu_addBackground( const menu, const gump, const width, const height )
+*/
+native menu_addBackground( const menu, const gump, const width, const height );
 
 /*!
 \brief Add a new button at given menu
 \author Endymion
 \param 1 the menu serial
-\param 2 page number
+\param 2 x
+\param 3 y
+\param 4 button up gump
+\param 5 button down gump
+\param 6 return code
 \return false if error, true else
-\fn menu_addPage( const menu, const page )
+\fn menu_addButton( const menu, const x, const y, const up, const down, const result=INVALID )
 */
-native menu_addPage( const menu, const page );
+native menu_addButton( const menu, const x, const y, const up, const down, const result=INVALID );
+
+/*!
+\brief Add a new button at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 button up gump
+\param 5 button down gump
+\param 6 function callback
+\return false if error, true else
+\fn menu_addButtonFn( const menu, const x, const y, const up, const down, const callback[] )
+*/
+native menu_addButtonFn( const menu, const x, const y, const up, const down, const callback[] );
+
+/*!
+\brief Add a new checkbox at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 off gump
+\param 5 on gump
+\param 6 checked
+\param 7 result
+\return false if error, true else
+\fn menu_addCheckbox( const menu, const x, const y,  const off, const on, const checked, const result )
+*/
+native menu_addCheckbox( const menu, const x, const y,  const off, const on, const checked, const result );
+
+/*!
+\brief Add a new ?? at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 width
+\param 5 height
+\return false if error, true else
+\fn menu_addCheckTrans( const menu, const x, const y, const width, const height )
+*/
+native menu_addCheckTrans( const menu, const x, const y, const width, const height );
+
+/*!
+\brief Add a new gump at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 gump
+\param 5 color
+\return false if error, true else
+\fn menu_addGump( const menu, const x, const y, const gump, const color=0 )
+*/
+native menu_addGump( const menu, const x, const y, const gump, const color=0 );
+
+/*!
+\brief Add a new html gump at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 width
+\param 5 height
+\param 6 html
+\param 7 Has back ??
+\param 8 can scroll
+\return false if error, true else
+\fn menu_addHtmlGump( const menu, const x, const y, const width, const height, const html[], const hasBack, const canScroll )
+*/
+native menu_addHtmlGump( const menu, const x, const y, const width, const height, const html[], const hasBack, const canScroll );
+
+/*!
+\brief Add a new input field at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 width
+\param 5 height
+\param 6 text id
+\param 7 initial value
+\param 8 color
+\return false if error, true else
+\fn menu_addInputField( const menu, const x, const y, const width, const height, const textId, const text, const color=0 )
+*/
+native menu_addInputField( const menu, const x, const y, const width, const height, const textId, const text, const color=0 );
+
+/*!
+\brief Add a new property field at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 width
+\param 5 height
+\param 6 property
+\param 7 sub property
+\param 8 color
+\return false if error, true else
+\fn menu_addPropField( const menu, const x, const y, const width, const height, const property, const subPro, const color = 0 )
+*/
+native menu_addPropField( const menu, const x, const y, const width, const height, const property, const subPro, const color = 0 );
+
+/*!
+\brief Add a new radio button at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 off gump
+\param 5 on gump
+\param 6 checked
+\param 7 result
+\return false if error, true else
+\fn menu_addRadioButton( const menu, const x, const y, const off, const on, const checked, const result )
+*/
+native menu_addRadioButton( const menu, const x, const y, const off, const on, const checked, const result );
 
 /*!
 \brief Add a resized gump at given menu
@@ -88,20 +228,6 @@ native menu_addPage( const menu, const page );
 native menu_addResizeGump( const menu, const x, const y, const gump, const width, const height );
 
 /*!
-\brief Add a page button at given menu
-\author Endymion
-\param 1 the menu serial
-\param 2 x
-\param 3 y
-\param 4 up gump
-\param 5 down gump
-\param 6 page
-\return false if error, true else
-\fn menu_addPageButton( const menu, const x, const y, const gumpUp, const gumpDown, const page )
-*/
-native menu_addPageButton( const menu, const x, const y, const gumpUp, const gumpDown, const page );
-
-/*!
 \brief Add text at given menu
 \author Endymion
 \param 1 the menu serial
@@ -110,8 +236,78 @@ native menu_addPageButton( const menu, const x, const y, const gumpUp, const gum
 \param 4 text
 \param 5 color
 \return false if error, true else
-\fn menu_addText( const menu, const x, const y, const text[], const color )
+\fn menu_addText( const menu, const x, const y, const text[], const color=0 )
 */
-native menu_addText( const menu, const x, const y, const text[], const color );
+native menu_addText( const menu, const x, const y, const text[], const color=0 );
+
+/*!
+\brief Add a new tile picture at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 tile
+\param 5 color
+\return false if error, true else
+\fn menu_addTilePic( const menu, const x, const y, const tile, const color=0 )
+*/
+native menu_addTilePic( const menu, const x, const y, const tile, const color=0 );
+
+/*!
+\brief Add a new tiled gump at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 width
+\param 5 height
+\param 6 gump
+\param 7 color
+\return false if error, true else
+\fn menu_addTiledGump( const menu, const x, const y, const width, const height, const gump, const color=0 );
+*/
+native menu_addTiledGump( const menu, const x, const y, const width, const height, const gump, const color=0 );
+
+/*!
+\brief Add a new ?? at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 width
+\param 5 height
+\param 6 clilocid
+\param 7 Has back ??
+\param 8 can scroll
+\return false if error, true else
+\fn menu_addXmfHtmlGump( const menu, const x, const y, const width, const height, const clilocid[], const hasBack, const canScroll )
+*/
+native menu_addXmfHtmlGump( const menu, const x, const y, const width, const height, const clilocid[], const hasBack, const canScroll );
+
+/*!
+\brief Add a new page at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 the page
+\return false if error, true else
+\fn menu_addPage( const menu, const page )
+*/
+native menu_addPage( const menu, const page );
+
+/*!
+\brief Add a new page button at given menu
+\author Endymion
+\since 0.82
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 up
+\param 5 down
+\param 6 page to go
+\return false if error, true else
+\fn menu_addPageButton( const menu, const x, const y, const up, const down, const page )
+*/
+native menu_addPageButton( const menu, const x, const y, const up, const down, const page );
+
 
 /** @} */ // end of script_API_menu
