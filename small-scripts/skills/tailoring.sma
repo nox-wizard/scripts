@@ -20,36 +20,59 @@ Begin Customizable Hides
 \*----------------------------------------------------------------------------------------*/
 
 enum {
-	NORMAL_HIDE = 0
+	NORMAL_CLOTH = 0
 };
 
-//How many hides have we got?
-const NUM_HIDES = 1;
+//How many cloths have we got?
+const NUM_CLOTHS = 1;
 
 //Skill value required to work an hide
-static hideSkill[] = {
-0   //Normal Hide
+static clothSkill[] = {
+0   //Normal Cloth
 };
 
-//Colors of hides
-//Remember that you can't have two hides with the same color
-static hideColor[] = {
-0x0000 //Normal Hide
+//Colors of cloths
+//Remember that you can't have two cloths with the same color
+static clothColor[] = {
+0x0000 //Normal cloth
 };
 
 //Make menu for that hide
-static hideMakeMenu[] = {
-40   //Normal Hide
+static clothMakeMenu[] = {
+40   //Normal cloth
 };
 
-//Hides names
-static hideName[NUM_HIDES][] = {
-"Hide"
+//Cloths names
+static clothName[NUM_CLOTHS][] = {
+"Cloth"
 };
 
 /*----------------------------------------------------------------------------------------*\
-End Customizable Hides
+End Customizable Cloths
 \*----------------------------------------------------------------------------------------*/
+
+
+public _doCloth( const s, const cloth ) {
+	new amt = 40;
+	new color = itm_getProperty( itm, IP_COLOR );
+	if( pi->amount>1 )
+       	amt = (pi->amount*40);//-Frazurbluu- changed to reflect current OSI
+
+	chr_sound( chr, 0x0248 );
+
+	new bp = itm_getCharBackPack( chr );
+	new cutcloth = itm_createByDef( "$item_cut_cloth" );
+	itm_setProperty( ore, IP_AMOUNT, _, oreAmount );
+	itm_setProperty( ore, IP_STR_NAME, 0, str );
+	itm_setDualByteProperty( ore, IP_COLOR, oreColor[oreFound] );
+	itm_setContSerial( cutcloth, bp );
+
+	pcc->setColor( color );
+    pcc->amount=amt;
+	itm_contPileItem( bp, cutcloth );
+}
+
+
                                                                                             
 /*****************************************************************************************
  FUNCTION :	__nxw_sk_tailoring
@@ -67,24 +90,24 @@ public __nxw_sk_tailoring(const s, const itm)
 		return;
 	}
 	
-	//At this point, we're already sure that we're analyzing an hide, because the engine did the check for us.
+	//At this point, we're already sure that we're analyzing an cloth, because the engine did the check for us.
 	new cc = getCharFromSocket(s);
-	new hideNum = -1;
+	new clothNum = -1;
 	new skill = chr_getSkill(cc, SK_TAILORING);
 	new color = itm_getDualByteProperty(itm, IP_COLOR);
 	new index;
-	for (index = 0; index < NUM_HIDES; index++) {
-		if (hideColor[index] == color) {
-			hideNum = index;
+	for (index = 0; index < NUM_CLOTHS; index++) {
+		if (clothColor[index] == color) {
+			clothNum = index;
 		}
 	}
-	if (hideNum == -1) {
-		printf ("WARNING: __nxw_sk_tailoring received an unknown hide");
+	if (clothNum == -1) {
+		printf ("WARNING: __nxw_sk_tailoring received an unknown cloth");
 		return;
 	}
-	if (skill < hideSkill[hideNum]) {
+	if (skill < clothSkill[clothNum]) {
 		ntprintf(s, "You are not skilled enough for this kind of material.");
 		return;
 	}
-	chr_skillMakeMenu(cc, hideMakeMenu[hideNum], SK_TAILORING);
+	chr_skillMakeMenu(cc, clothMakeMenu[hideNum], SK_TAILORING);
 }
