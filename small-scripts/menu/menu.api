@@ -1,7 +1,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard	: Embedded Small Scripts			||
-// || Maintained by	: Luxor, Sparhawk				||
-// || Last Update	: 06-apr-2003					||
+// || NoX-Wizard	: Embedded Small Scripts		||
+// || Maintained by	: Endymion						||
+// || Last Update	: 06-may-2003					||
 // || Designed for NXW 	: 0.82						||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -15,6 +15,103 @@
  *  @{
  */
 
+/*!
+\brief Create a new menu
+\author Endymion
+\param 1 the menu id
+\param 2 x
+\param 3 y
+\param 2 is moveable
+\param 2 is closeable
+\param 3 is disposeable
+\return the menu serial
+\fn menu_create( const id, const x, const y, const moveable, const closeable, const disposeable )
+*/
+native menu_create( const id, const x, const y, const moveable, const closeable, const disposeable );
 
+/*!
+\brief Delete a menu
+\author Endymion
+\param 1 the menu serial
+\return true if is deleted or false if error
+\fn menu_delete( const menu )
+*/
+native menu_delete( const menu );
+
+/*!
+\brief Delete a menu
+\author Endymion
+\param 1 the menu serial
+\param 2 the character
+\return true if is show or false if error
+\fn menu_show( const menu, const chr )
+*/
+native menu_show( const menu, const chr );
+
+/*!
+\brief Add a new button at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 up
+\param 5 down
+\param 6 return code
+\param 7 page ( default 1 )
+\return false if error, true else
+\fn menu_addButton( const menu, const x, const y, const up, const down, returnCode, page )
+*/
+native menu_addButton( const menu, const x, const y, const up, const down, returnCode, page );
+
+/*!
+\brief Add a new button at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 page number
+\return false if error, true else
+\fn menu_addPage( const menu, const page )
+*/
+native menu_addPage( const menu, const page );
+
+/*!
+\brief Add a resized gump at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 gump
+\param 5 width
+\param 6 height
+\return false if error, true else
+\fn menu_addResizeGump( const menu, const x, const y, const gump, const width, const height )
+*/
+native menu_addResizeGump( const menu, const x, const y, const gump, const width, const height );
+
+/*!
+\brief Add a page button at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 up gump
+\param 5 down gump
+\param 6 page
+\return false if error, true else
+\fn menu_addPageButton( const menu, const x, const y, const gumpUp, const gumpDown, const page )
+*/
+native menu_addPageButton( const menu, const x, const y, const gumpUp, const gumpDown, const page );
+
+/*!
+\brief Add text at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 text
+\param 5 color
+\return false if error, true else
+\fn menu_addText( const menu, const x, const y, const text[], const color )
+*/
+native menu_addText( const menu, const x, const y, const text[], const color );
 
 /** @} */ // end of script_API_menu
