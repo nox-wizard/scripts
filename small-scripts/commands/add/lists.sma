@@ -64,10 +64,9 @@ new __reagents2[NUM_REAGENTS2][additemEntry] =
                                                         
                                                         
                                                         
-#define NUM_BOTTLES 13                                  
+#define NUM_BOTTLES 12                                  
 new __bottles[NUM_BOTTLES][additemEntry] =              
 {                                                       
-	{0x0E9B,"$item_mortar_and_pestal                ","Mortar And Pestal"},
 	{0x0F0E,"$item_bottle_A                         ","Bottle"},
 	{0x0E24,"$item_empty_vials                      ","Empty vial"},
 	{0x0E25,"$item_bottle                           ","Bottle"},
@@ -723,7 +722,7 @@ new __beverages[NUM_BEVERAGES][additemEntry] =
 	{0x1F9B,"$item_pitcher_of_wine                  ","Pitcher of Wine"}
 }    
 
-#define NUM_BAKED 30
+#define NUM_BAKED 36
 new __bakedAndVeggys[NUM_BAKED][additemEntry] =
 {    
 	//Baked and Veggys
@@ -746,23 +745,6 @@ new __bakedAndVeggys[NUM_BAKED][additemEntry] =
 	{0x09B5,"$item_eggs                             ","Eggs"},
 	{0x09B6,"$item_fried_eggs                       ","Fried Eggs"},
 	{0x103F,"$item_cookie_mix                       ","Cookie Mix"},
-	{0x0C70,"$item_lettuce1                         ","Lettuce"},
-	{0x0C72,"$item_squash1                          ","Squash"},
-	{0x0C76,"$item_carrots                          ","Carrots"},
-	{0x0C7B,"$item_heads_of_cabbage                 ","Cabbage"},
-	{0x0C7F,"$item_ears_of_corn1_4                  ","Ear of Corn"},
-	{0x1AD3,"$item_donuts                           ","Donuts"},
-	{0x09EC,"$item_jars_of_honey                    ","Jar of Honey"},
-	{0x0C61,"$item_turnip1                          ","Turnip"},
-	{0x0C68,"$item_sprouts                          ","Sprouts"},
-	{0x0C6A,"$item_pumpkin1                         ","Pumpkin"},
-	{0x0C6D,"$item_onions                           ","Onion"}
-}
-
-#define NUM_BOWLSMEATFRUIT 34
-new __bowlsMeatFruit[NUM_BOWLSMEATFRUIT][additemEntry] =
-{
-	//Bowls, meat, fruit
 	{0x10E3,"$item_dough_bowl                       ","Dough"},
 	{0x15FE,"$item_bowl_of_carrots                  ","Carrots"},
 	{0x15FF,"$item_bowl_of_corn                     ","Corn"},
@@ -779,7 +761,13 @@ new __bowlsMeatFruit[NUM_BOWLSMEATFRUIT][additemEntry] =
 	{0x09F2,"$item_cuts_of_ribs                     ","Ribs"},
 	{0x097B,"$item_fish_steaks                      ","Fish Steak"},
 	{0x0976,"$item_slabs_of_bacon                   ","Slabs of Bacon"},
-	{0x0978,"$item_slices_of_bacon                  ","Slice of Bacon"},
+	{0x0978,"$item_slices_of_bacon                  ","Slice of Bacon"}
+}
+
+#define NUM_BOWLSMEATFRUIT 28
+new __bowlsMeatFruit[NUM_BOWLSMEATFRUIT][additemEntry] =
+{
+	//Bowls, meat, fruit
 	{0x0994,"$item_pears                            ","Pear"},
 	{0x09D0,"$item_apples                           ","Apple"},
 	{0x09D1,"$item_grape_bunches                    ","Grape Bunch"},
@@ -796,12 +784,18 @@ new __bowlsMeatFruit[NUM_BOWLSMEATFRUIT][additemEntry] =
 	{0x0C74,"$item_honeydew_melons1                 ","Honeydew Melon"},
 	{0x0C79,"$item_canteloupes                      ","Canteloupe"},
 	{0x0C5D,"$item_watermelons                      ","Water Melon"},
-	{0x0F36,"$item_sheaf_of_hay1                    ","Sheaf of Hay"}
+	{0x0F36,"$item_sheaf_of_hay1                    ","Sheaf of Hay"},
+	{0x0C70,"$item_lettuce1                         ","Lettuce"},
+	{0x0C72,"$item_squash1                          ","Squash"},
+	{0x0C76,"$item_carrots                          ","Carrots"},
+	{0x0C7B,"$item_heads_of_cabbage                 ","Cabbage"},
+	{0x0C7F,"$item_ears_of_corn1_4                  ","Ear of Corn"},
+	{0x1AD3,"$item_donuts                           ","Donuts"},
+	{0x09EC,"$item_jars_of_honey                    ","Jar of Honey"},
+	{0x0C61,"$item_turnip1                          ","Turnip"},
+	{0x0C68,"$item_sprouts                          ","Sprouts"},
+	{0x0C6A,"$item_pumpkin1                         ","Pumpkin"},
+	{0x0C6D,"$item_onions                           ","Onion"}
 }
-
-
-
-
-
 
 /*! }@ */
