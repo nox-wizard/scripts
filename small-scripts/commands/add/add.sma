@@ -49,14 +49,22 @@ $item_stone_chair_4<br>
 public cmd_add(const chr)
 {
 	readCommandParams(chr);
-
+	
+	new startx = 0, starty = 245;
 	new type[6];
 	new amount = 1;
 
 	//if no parameters are given, show add menu
 	if(!strlen(__cmdParams[0]))
 	{
-		addMenu(chr);
+		addMenu(chr,startx,starty);
+		return;
+	}
+	
+	//show menu
+	if(!strcmp(__cmdParams[0],"menu"))
+	{
+		addMenu(chr,str2Int(__cmdParams[1]),str2Int(__cmdParams[2]));
 		return;
 	}
 	

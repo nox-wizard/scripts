@@ -10,7 +10,7 @@
 \fn cmd_move(const chr)
 \brief moves objects
 
-<B>syntax:<B> 'move "a"/"r" x y [z] or 'move me or 'move here or 'move loc
+<B>syntax:<B> 'move x y [z] or 'move me or 'move here or 'move loc
 
 <B>command params:</B>
 <UL>
@@ -19,14 +19,10 @@ When using this option no other parameters are needed.<br>
 <LI> here: if command is called as 'move here, the targetted character is teleported to the command user<br>
 <LI> x: x movement
 <LI> y : y movement
-<LI> z : z movement
-<LI> 
-	<UL>
-	<LI> "abs": x,y and z are intended as absolute (non-negative) coordinates, new position is x,y
-	<LI> "rel": x,y and z are intended as relative movement, new position is oldx + x, oldy + y (default)
-	</UL> 
+<LI> z : z movement 
 </UL>
 
+You can perform relative movement by specifing at least 1 sign ('move 0 0 +4  'move +1 -2 0) 
 this command supports command areas only in "rel" mode, in that case all items in the area are
 moved to new positions.
 If you don't pass any parameter, you will be prompted to target both the object to move
@@ -89,27 +85,22 @@ public cmd_move(const chr)
 	//READ PARAMETERS
 
 	
-	//---------------  mode  ------------------
-	new mode = 1; //0:abs 1:rel
-
-	if(__cmdParams[0][0] == 'a')
-			mode = 0;
-		else 	if (__cmdParams[0][0]=='r')
-				mode = 1;
-
 	//-------------------  x y ------------------
 	new x,y,z = -1000;
-	if(!isStrInt(__cmdParams[1]) || !isStrInt(__cmdParams[2]))
+	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]))
 	{
 		chr_message(chr,_,"x and y must be numbers");
 		return;
 	}
-
-	x = str2Int(__cmdParams[1]);
-	y = str2Int(__cmdParams[2]);
 	
-	if(isStrInt(__cmdParams[3]))
-		z = str2Int(__cmdParams[3]);
+	x = str2Int(__cmdParams[0]);
+	y = str2Int(__cmdParams[1]);
+	
+	if(isStrInt(__cmdParams[2]))
+		z = str2Int(__cmdParams[2]);
+	
+	//if one of the parameters has a sign character (+/-) the mode is "rel"
+	new mode = __cmdParams[0][0] == '+' || __cmdParams[0][0] == '-' || __cmdParams[1][0] == '+' || __cmdParams[1][0] == '-';
 	
 	//check sign of x and y only in abs mode
 	if((y < 0 || x < 0) && !mode)
@@ -134,10 +125,6 @@ public cmd_move(const chr)
 				newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
 		
 				itm_moveTo(itm,newx,newy,newz);
-		
-				#if _CMD_DEBUG_
-					printf("^tMoving item %d to %d %d %d^n",itm,newx,newy,map_getZ(newx,newy));
-				#endif
 			}
 	
 
@@ -152,11 +139,7 @@ public cmd_move(const chr)
 		
 				chr_moveTo(chr2,newx,newy,newz);
 				
-				chr_moveTo(chr2,newx,newy,newz);
-		
-				#if _CMD_DEBUG_
-					printf("^tMoving character %d to %d %d %d^n",chr2,newx,newy,map_getZ(newx,newy));
-				#endif
+				chr_moveTo(chr2,newx,newy,newz);	
 			}
 	
 		chr_message(chr,_,"%d objects moved",i);
@@ -165,18 +148,15 @@ public cmd_move(const chr)
 		return;
 	}
 	
-	//store z if needed
-	if(z != -1000)
-		chr_addLocalIntVar(chr,CLV_CMDTEMP,z);
-		
-	//move by target
-	if(mode)
-		target_create(chr,(x << 16) + y,_,_,"cmd_move_targ_rel");
-	else 
-	{
-		chr_message(chr,_,"Select an object to move");
-		target_create(chr,(x << 16) + y,_,_,"cmd_move_targ_abs");
-	}
+	//store mode and values
+	chr_addLocalIntVec(chr,CLV_CMDTEMP,4);
+	chr_setLocalIntVec(chr,CLV_CMDTEMP,0,mode);
+	chr_setLocalIntVec(chr,CLV_CMDTEMP,1,x);
+	chr_setLocalIntVec(chr,CLV_CMDTEMP,2,y);
+	chr_setLocalIntVec(chr,CLV_CMDTEMP,3,z);
+	
+	chr_message(chr,_,"Select an object to move");
+	target_create(chr,_,_,_,"cmd_move_targ");
 }
 
 /*!
@@ -192,9 +172,52 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 		chr_message(chr,_,"You must select an object");
 		return;
 	}
+	
+	//this happens if we didn't specify parameters, so we nedd the destination
+	if(!chr_isaLocalVar(chr,CLV_CMDTEMP))
+	{
+		chr_message(chr,_,"Select the destination");
+		target_create(chr,object,_,_,"cmd_move_targ_dst");
+		return;
+	}
+	
+	
+	new mode = chr_getLocalIntVec(chr,CLV_CMDTEMP,0);
+	
+	if(isChar(object))
+	{	
+		new newx,newy,newz;
+		if(mode) //rel
+			chr_getPosition(object,newx,newy,newz);
+		
+		newx += chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+		newy += chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+		newz += chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+		chr_moveTo(object,newx,newy,newz);
+		area_refresh(chr_getCmdArea(chr));
+		return;
+	}
 
-	chr_message(chr,_,"Select the destination");
-	target_create(chr,object,_,_,"cmd_move_targ_dst");
+	if(isItem(object))
+	{
+		new newx,newy,newz;
+		if(mode) //rel
+			itm_getPosition(object,newx,newy,newz);
+		
+		
+		newx += chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+		
+		newy += chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+		
+		newz += chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+		
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+		
+		itm_moveTo(object,newx,newy,newz);
+		area_refresh(chr_getCmdArea(chr));
+		return;
+	}
 }
 
 /*!
@@ -280,86 +303,5 @@ public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 	chr_message(chr,_,"You must target a location or an object!");
 }
 
-/*!
-\author Fax
-\fn cmd_move_targ_rel(target, chr, object, x, y, z, unused, x)
-\params all standard target callback params
-\brief handles the destination targetting in 'move when called with "rel" param
-*/
-public cmd_move_targ_rel(target, chr, object, x, y, z, unused2, param)
-{
-	new deltax = param  >> 16;
-	new deltay = param & 0xFFFF;
-	new deltaz = -1000;
-	new newx,newy,newz;
-	
-	if(chr_isaLocalVar(chr,CLV_CMDTEMP))
-	{
-		deltaz = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-		chr_delLocalVar(chr,CLV_CMDTEMP);
-	}
-	
-	if(isChar(object))
-	{
-		chr_getPosition(object,x,y,z);
-		newx = x + deltax;
-		newy = y + deltay;
-		newz = deltaz == -1000 ? newz = map_getZ(newx,newy) : newz = z + deltaz;
-		
-		chr_moveTo(object,newx,newy,newz);
-		area_refresh(chr_getCmdArea(chr));
-		return;
-	}
-
-	if(isItem(object))
-	{
-		itm_getPosition(object,x,y,z);
-		newx = x + deltax;
-		newy = y + deltay;
-		newz = deltaz == -1000 ? newz = map_getZ(newx,newy) : newz = z + deltaz;
-		
-		itm_moveTo(object,newx,newy,newz);
-		area_refresh(chr_getCmdArea(chr));
-		return;
-	}
-
-	chr_message(chr,_,"You must select an object!");
-}
-
-/*!
-\author Fax
-\fn cmd_move_targ_abs(target, chr, object, x, y, z, unused, x)
-\params all standard target callback params
-\brief handles the destination targetting in 'move when called with "abs" param
-*/
-public cmd_move_targ_abs(target, chr, object, x, y, z, unused2, param)
-{
-	new newx = param  >> 16;
-	new newy = param & 0xFFFF;
-	new newz;
-	
-	if(chr_isaLocalVar(chr,CLV_CMDTEMP))
-	{
-		newz = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-		chr_delLocalVar(chr,CLV_CMDTEMP);
-	}
-	else newz = map_getZ(newx,newy);
-	
-	if(isChar(object))
-	{
-		chr_moveTo(object,newx,newy,newz);
-		area_refresh(chr_getCmdArea(chr));
-		return;
-	}
-
-	if(isItem(object))
-	{
-		itm_moveTo(object,newx,newy,newz);
-		area_refresh(chr_getCmdArea(chr));
-		return;
-	}
-
-	chr_message(chr,_,"You must select an object!");
-}
 
 /*! }@ */

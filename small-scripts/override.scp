@@ -47,7 +47,7 @@ OnLogOut=__charLogout,BEFORE
 //you have to use chr_getProperty(chr,CP_STR_TRIGWORD) or chr_getProperty(chr,CP_STR_SPEECH);
 //inside your callback
 [speech]
-+=bla_char,BEFORE
+
 
 
 

@@ -111,7 +111,7 @@ This function shows the main add menu page, you can configure the page's content
 functions the functions that draw other pages by editing the contents of __addMenuItems[][] array
 \return the menu serial
 */
-public addMenu(const chr)
+public addMenu(const chr, const startx, const starty)
 {	                  
 	//calculate menu dimensions
 	new ROWS = submenuCount/ITEMS_PER_ROW + (submenuCount%ITEMS_PER_ROW > 0 ? 1 : 0)
@@ -124,7 +124,9 @@ public addMenu(const chr)
 	#endif
 	
 	//create a framed menu with a 1-row body
-	new menu = createFramedMenu(0,245,ROWS,1,COLS,"addgui_cback");
+	createFramedMenu(startx,starty,ROWS,1,COLS,"addgui_cback");
+	menu_storeValue(0,startx);
+	menu_storeValue(1,starty);
 	cursor_setProperty(CRP_TAB,tab);
 	
 	//draw buttons for submenus
@@ -151,7 +153,6 @@ public addMenu(const chr)
 	
 	//show menu
 	menu_show(chr);
-	return menu;
 }
 
 /*!
@@ -184,7 +185,7 @@ public addgui_cback(menu,chr,btn)
 	}
 	
 	//show main menu again
-	addMenu(chr);
+	addMenu(chr,menu_readValue(menu,0),menu_readValue(menu,1));
 	
 	//this means we didn't press a submenu button
 	if(btn >= 1000) return;

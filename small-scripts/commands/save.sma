@@ -22,15 +22,33 @@ public cmd_save(const chr)
 	if(isStrInt(__cmdParams[0]))
 		timeout = str2Int(__cmdParams[0]);
 	
-	if(timeout > 1)
-		broadcast("World will be saved in %d seconds",timeout);
-	tempfx_activate(_,chr,chr,0,timeout,funcidx("cmd_save_cback"));
+	broadcast("World will be saved in %d seconds",timeout);
+	
+	if(timeout < 10)
+		tempfx_activate(_,chr,chr,0,timeout,funcidx("cmd_save_cback"));
+	else
+		tempfx_activate(_,chr,chr,timeout - 10,10,funcidx("cmd_save_cback"));
 }
 
-public cmd_save_cback(const chr1, const chr2, const power, const mode)
+public cmd_save_cback(const chr1, const chr2, const timeout, const mode)
 {
 	if(mode != TFXM_END) return;
-
-	world_save();
+	
+	if(!timeout)
+	{
+		new time = getCurrentTime();
+		world_save()
+		time = getCurrentTime() - time;
+		log_message("Save time: %dms",time);
+		chr_message(chr1,_,"Save time: %dms",time);
+		return;
+	}
+	
+	broadcast("World will be saved in %d seconds",timeout);
+	
+	if(timeout < 10)
+		tempfx_activate(_,chr1,chr1,0,timeout,funcidx("cmd_save_cback"));
+	else
+		tempfx_activate(_,chr1,chr1,timeout - 10,10,funcidx("cmd_save_cback"));
 }
 /*! @}*/

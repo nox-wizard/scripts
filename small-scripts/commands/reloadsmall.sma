@@ -20,15 +20,16 @@ public cmd_recompile_small(chr)
 	chr_getProperty(chr,CP_STR_NAME,0,name);
 	
 	//let's warn everyone that someone is recompiling
-	broadcast("Recompiling Small scripts...");
 	log_message("%s(%d) is recompiling Small scripts",name,chr);
 	log_warning("%s(%d) is recompiling Small scripts",name,chr);
 	
 	//recompile scripts
+	new time = getSystemTime();
 	recompileSmall();
+	time = getSystemTime() - time;
 	
-	broadcast("DONE");
-	
+	log_message("Recompiled in %ds",time);
+	chr_message(chr,_,"Recompiled in %ds",time);
 }
 
 /*! }@ */

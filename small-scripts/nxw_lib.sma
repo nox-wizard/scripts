@@ -575,7 +575,7 @@ stock isStrInt( const string[] )
 		new signed = 0;
 		if( packed )
 		{
-			if( string{index} == '-' )
+			if( string{index} == '-' || string{index} == '+')
 			{
 				signed = 1;
 				++index;
@@ -585,7 +585,7 @@ stock isStrInt( const string[] )
 		}
 		else
 		{
-			if( string[index] == '-' )
+			if( string[index] == '-' || string[index] == '+' )
 			{
 				signed = 1;
 				++index;
@@ -613,7 +613,14 @@ stock str2Int( const string[] )
 	if( length )
 	{
 		new packed = isstrpacked( string );
-		new signed = packed ? string{0} == '-' : string[0] == '-';
+		new sign = 1,signed;
+		
+		switch(packed ? string{0} : string[0])
+		{
+			case '-': {signed = 1; sign = -1; }
+			case '+': {signed = 1; sign = 1; }
+		}
+		
 		new index  = length - 1;
 		new factor = 1;
 		while( (index >= signed) && isDigit( (packed ? string{index} : string[index] ) ) )
@@ -622,8 +629,8 @@ stock str2Int( const string[] )
 			factor*= 10;
 			--index;
 		}
-		if( signed )
-			value *= -1;
+		
+		value *= sign;
 	}
 	return value;
 }

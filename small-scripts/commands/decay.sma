@@ -32,7 +32,8 @@ public cmd_decay(const chr)
 	}
 
 	new decay = INVALID;
-	if(isStrInt(__cmdParams[0]))	decay = getCurrentTime() + str2Int(__cmdParams[0]);
+	if(isStrInt(__cmdParams[0]))	
+		decay = getTimerValue(str2Int(__cmdParams[0]));
 
 
 
@@ -66,7 +67,7 @@ public cmd_decay_targ(target, chr, object, x, y, z, unused, decay)
 	if(isItem(object))
 	{
 		itm_setDecay(object,decay);
-		chr_message(chr,_,"Decay set");
+		chr_message(chr,_,"Item will decay at %dms",itm_getProperty(object,IP_DECAYTIME));
 	}
 	else chr_message(chr,_,"You must target an item");
 }

@@ -35,3 +35,29 @@ public getTimerValue( const seconds )
 {
 	return getCurrentTime()+1000*seconds;
 }
+
+/*
+\brief Get the timer value
+\author Endymion
+\param seconds the seconds
+*/
+public getCurrentTimeString(string[])
+{
+	new time = getCurrentTime();
+	
+	new ms = time%1000;
+	time = time/1000;
+	
+	new s = time%60;
+	time /= 60;
+	
+	new m = time%60;
+	time /= 60;
+	
+	new h = time%24;
+	time /= 24;
+	
+	new d = time;
+	
+	sprintf(string,"%d:%d:%d:%d:%d",d,h,m,s,ms);
+}
