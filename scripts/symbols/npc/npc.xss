@@ -387,7 +387,6 @@
 #define $npc_magician_2 1264
 #define $npc_knight 1265
 #define $npc_knight_1 1266
-#define $npc_the_black_knight 1267
 #define $npc_cultist 1268
 #define $npc_priest_of_mondain 1269
 #define $npc_priestess_of_mondain 1270

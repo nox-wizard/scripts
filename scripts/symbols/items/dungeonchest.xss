@@ -1,0 +1,20 @@
+#define $item_chest_item_spawner_spawner_-low- 15200
+#define $item_low_chest_spawner_list 15225
+#define $item_wooden_chest_1 15120
+#define $item_wooden_chest_2 15121
+#define $item_low_level_dungeon_chest_spawner_list 98001
+#define $item_low_level_dungeon_chest_list 99030
+
+#define $item_chest_item_spawner_spawner_-mid- 15201
+#define $item_mid_chest_spawner_list 15226
+#define $item_metal_chest1 15122
+#define $item_metal_chest2 15123
+#define $item_mid_level_dungeon_chest_spawner_list 98002
+#define $item_mid_level_dungeon_chest_list 99031
+
+#define $item_chest_item_spawner_spawner_-high- 15202
+#define $item_high_chest_spawner_list 15227
+#define $item_metal_chest3 15124
+#define $item_metal_chest4 15125
+#define $item_high_level_dungeon_chest_spawner_list 98003
+#define $item_high_level_dungeon_chest_list 99032

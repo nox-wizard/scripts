@@ -26,6 +26,8 @@
 #include scripts/symbols/items/farmitems.xss
 #include scripts/symbols/items/architecture.xss
 #include scripts/symbols/items/stone_furniture.xss
+#include scripts/symbols/items/dungeonchest.xss
+#include scripts/symbols/items/treasure.xss
 
 #include scripts/symbols/skills.xss
 #include scripts/symbols/lootlists.xss

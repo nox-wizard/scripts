@@ -25,6 +25,7 @@
 #include scripts/items/boats.xss
 #include scripts/items/treasures.xss
 #include scripts/items/deeds.xss
+#include scripts/items/dungeonchest.xss
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || Include your scripts after these lines.                             ||

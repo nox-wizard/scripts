@@ -1,0 +1,37 @@
+#define $item_treasure_map_lv1_ 20022
+#define $item_treasure_chest_lv1_ 15109
+#define $item_treasure_chest_lv1_1 30000
+#define $item_treasure_chest_lv1_2 30001
+#define $item_treasure_chest_lv1_3 30002
+
+#define $item_treasure_map_lv2_ 20023
+#define $item_treasure_chest_lv2_ 15111
+#define $item_treasure_chest_lv2_1 30008
+#define $item_treasure_chest_lv2_2 30009
+#define $item_treasure_chest_lv2_3 30010
+
+#define $item_treasure_map_lv4_ 20003
+#define $item_treasure_map_lv3_ 20024
+#define $item_treasure_chest_lv3_ 15112
+#define $item_treasure_chest_lv3_1 30011
+#define $item_treasure_chest_lv3_2 30012
+#define $item_treasure_chest_lv3_3 30013
+
+#define $item_treasure_chest_lv4_ 15110
+#define $item_treasure_chest_lv4_1 30003
+#define $item_treasure_chest_lv4_2 30004
+#define $item_treasure_chest_lv4_3 30005
+#define $item_treasure_chest_lv4_4 30006
+#define $item_treasure_chest_lv4_5 30007
+
+#define $item_treasure_map_lv5_ 20025
+#define $item_treasure_chest_lv5_ 15113
+#define $item_treasure_chest_lv5_1 30014
+#define $item_treasure_chest_lv5_2 30015
+#define $item_treasure_chest_lv5_3 30016
+#define $item_treasure_chest_lv5_4 30017
+#define $item_treasure_chest_lv5_5 30018
+#define $item_treasure_chest_lv5_6 30019
+#define $item_treasure_chest_lv5_7 30020
+
+#define $item_treasure_hunt_lootlist 20001

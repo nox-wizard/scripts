@@ -7,3 +7,27 @@
 // || Compatible with Unicorn Categorization                              ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+#define $item_paperdoll 9000000
+SECTION ITEM $item_paperdoll
+{
+	NAME Paperdollcheck
+	ID 13D3
+	@ONDBLCLICK _paperdolltest
+}
+
+#define $item_treasure_map 9000001
+SECTION ITEM $item_treasure_map
+{
+    ID 14ec
+}
+
+#define $item_treasure_chest 9000002
+SECTION ITEM $item_treasure_chest
+{
+    NAME treasure chest
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    MOVABLE 1
+}

@@ -7,3 +7,39 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || Contains all custom npc script definitions of YOUR shard            ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//a sheep
+#define $npc_treasure_sheep 9000000
+SECTION NPC $npc_treasure_sheep
+{
+    NAME treasure sheep
+    ID 00cf
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 10
+    DEX 15 20
+    INT 5
+    KARMA 0
+    FAME 0
+    PARRYING 10
+    MAGICRESISTANCE 10
+    TACTICS 10
+    WRESTLING 10
+    DAMAGE 1 5
+    DEF 5
+    NPCWANDER 0
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 111
+    RACE $race_animal
+    DOORUSE 0
+    @ONDIED deathsavevalue
+    AMXINT Treasure_MAP_DROP 100
+
+    ///CATEGORY Animals
+    ///SUBSECTION Farmlands
+    ///DESCRIPTION Sheep
+}
