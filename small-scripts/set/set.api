@@ -88,6 +88,16 @@ native set_end( const set );
 native set_size( const set );
 
 /*!
+\brief Add to given set the value
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 the value
+\return 0
+*/
+native set_add( const set, const value );
+
+/*!
 \brief Get current object of given set
 \author Endymion
 \since 0.82
