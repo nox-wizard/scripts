@@ -6,130 +6,36 @@
 // || This script requires NoX-Wizard 0.70s or later                      ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-#include "small-scripts/API/gui/defines.sma"
 #include "small-scripts/commands/add/constants.sma"
+#include "small-scripts/API/gui/defines.sma"
+#include "small-scripts/commands/add/lists.sma"
 
-static p;
-enum
-{
-	P_GM_MENU = 1,
-	
-	P_MAGIC_MENU,
-	P_REAGENTS,
-	P_REAGENTS2,
-	P_BOTTLES,
-	P_POTIONS,
-	P_WANDS,
-	P_GATES,
-	P_SCROLLS1,
-	P_SCROLLS2,
-	P_SCROLLS3,
-	P_SCROLLS4,
-	P_SCROLLS5,
-	P_SCROLLS6,
-	P_SCROLLS7,
-	P_SCROLLS8,
-	
-	P_COMBAT_MENU,
-	P_PLATEMAIL,
-	P_CHAINMAIL,
-	P_RINGMAIL,
-	P_STUDDED,
-	P_LEATHER,
-	P_BONE,
-	P_HELMS,
-	P_SHIELDS,
-	P_AXES,
-	P_SWORDS,
-	P_BLADES,
-	P_FORKS,
-	
-	P_BUILDING_MENU,
-	
-	P_NPC_MENU,
-	P_ANIMALS,
-	P_T2A_MONSTERS,
-	P_DEAMONS,
-	P_ELEMENTALS,
-	P_ORCS,
-	P_MONSTERS,
-	P_UNDEADS,
-	P_UNIQUE,
-	P_FROST_STONE,
-	P_DRAGONS,
-	
-	P_SPAWNER_MENU,
-	P_GATE_MENU,
-	P_SUPPLY_MENU,
-	P_SKILLS_MENU,
-	P_SPECIAL_MENU,
-	P_SHARD_MENU,
-	P_TREASURE_MENU,
-};
 
-#define MAGIC_MENU_ENTRIES 6
-static magicMenuTxt[MAGIC_MENU_ENTRIES][20] =
-{
-	"reagents",
-	"reagents 2",
-	"bottles",
-	"potions",
-	"wands",
-	"gates"	
-}
+/*!
+\defgroup script_command_add_menu menu
+\ingroup script_commands_add
 
-#define COMBAT_MENU_ARMOR_ENTRIES 8
-#define COMBAT_MENU_WEAPON_ENTRIES 4
-#define COMBAT_MENU_ENTRIES COMBAT_MENU_ARMOR_ENTRIES + COMBAT_MENU_WEAPON_ENTRIES
-static combatMenuTxt[COMBAT_MENU_ENTRIES][20] =
-{
-	"Platemail",
-	"Chainmail",
-	"Ringmail",
-	"Studded",
-	"Leather",
-	"Bone",
-	"Helms",
-	"Shields",
-	
-	"Axes",
-	"Blades",
-	"Maces",
-	"Forks"	
-}
+@{
+*/
 
-#define NPC_MENU_ENTRIES 10
-static npcMenuTxt[NPC_MENU_ENTRIES][20] =
-{
-	"Animals",
-	"T2A monsters",
-	"Deamons",
-	"Elementals",
-	"Orcs",
-	"Monsters",
-	"Undeads",
-	"Unique",
-	"Frost-stone",
-	"Dragons"	
-}
+static PBTN_UP;			//!< page buttons up gump
+static PBTN_DOWN;		//!< page buttons down gump
+static PBTNW;			//!< page button width
 
-enum {AR_HELM,AR_GORGET,AR_CHEST,AR_ARMS,AR_GLOVES,AR_LEGS,AR_FEMALE}
+static BTN_UP;			//!< buttons up gump
+static BTN_DOWN;		//!< buttons down gump
+static BTNW;			//!< button width
 
-static PBTN_UP;
-static PBTN_DOWN;
-static PBTNW;
-static BTNW;
-static PICW;
-
-static BTN_UP;
-static BTN_DOWN;
-static L_MARG;
+static PICW;			//!< pics width
+static L_MARG;			//!< left margin, in columns
 
 #define INPUT_AMOUNT 0
 #define INPUT_MATERIAL 1
 
 public addMenu(const chr)
 {
+	
+	//initialize here the constants
 	
 	//BTN_UP = 0x09aa;
 	//BTN_DOWN = 0x09a9;
@@ -152,22 +58,22 @@ public addMenu(const chr)
 	new  START_X = 0;
 	new  START_Y = 0;
 	new  COLS = 60;
-	new  ROWS = 24;
+	new  ROWS = 25;
 	new  WIDTH = COLS*COL;
 	new  HEIGHT = ROWS*ROW;
 	
 	
-	new tab = 13;
-	
-	p = 1;
-	
+	new tab = 13;	
 	new t = 4;
 	new x,y;
 	new menu = gui_create(START_X,START_Y,true,true,true,"addmenu_cback");
+	
+	//draw menu frame
 	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT );
 	gui_addResizeGump(menu,START_X + COL ,START_Y + COL,RESIZEGUMP1,WIDTH - 2*COL,6*ROW);
 	gui_addResizeGump(menu,START_X + COL ,START_Y + 6*ROW,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT - 6*ROW - COL);
         
+        //add main menu page buttons
         x = L_MARG + (t%4*tab)*COL;
 	y = (t++/4)*ROW;
 	gui_addText(menu,PBTNW + x,y,TXT_COLOR,"GM menu");
@@ -226,7 +132,7 @@ public addMenu(const chr)
 	x = L_MARG + (t%4*tab)*COL;
 	y = (t++/4)*ROW;
 	gui_addText(menu,PBTNW + x,y,TXT_COLOR,"Treasure");
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,p++);
+	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_TREASURE_MENU);
 	
 	x = L_MARG;
 	y += ROW;
@@ -374,16 +280,31 @@ case P_NPC_MENU:
 	pag = P_ANIMALS;
 	x = L_MARG + (t++*tab)*COL;
 	y = 7*ROW;
-	//gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Armor:");
+	
+	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Monsters:");
 	y += ROW;
 	
-	for(t = 0; t < NPC_MENU_ENTRIES; t++)
+	for(t = 0; t < NPC_MENU_MONSTERS_ENTRIES; t++)
 	{
 		x = L_MARG + (t%4*tab)*COL;
 		if(t%4 == 0 && t != 0) y += ROW;
 		
 		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
 		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,npcMenuTxt[t]);	
+	}
+	
+	x = L_MARG;
+	y += 2*ROW;
+	gui_addText(menu,x,y,TXT_COLOR ,"People:");
+	y += ROW;
+	
+	for(t = 0; t < NPC_MENU_PEOPLE_ENTRIES; t++)
+	{
+		x = L_MARG + (t%4*tab)*COL;
+		if(t%4 == 0 && t != 0) y += ROW;
+		
+		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
+		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,npcMenuTxt[t + NPC_MENU_MONSTERS_ENTRIES]);	
 	}
 	
 	for(new i = P_ANIMALS; i <= P_ANIMALS + NPC_MENU_ENTRIES; i++)
@@ -403,7 +324,7 @@ new x = L_MARG;
 new y = 7*ROW;
 new startRow = y;
 new tab = 20;
-new i_row = 10;
+new i_row = 11;
 
 switch(page)
 {
@@ -666,7 +587,61 @@ switch(page)
 			//gui_addTilePic(menu,x + BTNW,y,__dragons[i][__ID]);
 			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__dragons[i][__name]);
 		}		
-	}		
+	}
+	
+	case P_PEOPLE_M:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_PEOPLE_M; i++, y+= (15*ROW)/10)
+		{
+			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__people_male[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__people_male[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__people_male[i][__name]);
+		}		
+	}
+	
+	case P_PEOPLE_F:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_PEOPLE_F; i++, y+= (15*ROW)/10)
+		{
+			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__people_female[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__people_female[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__people_female[i][__name]);
+		}		
+	}
+	
+	case P_MERCHANTS_M:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_MERCHANTS_M; i++, y+= (15*ROW)/10)
+		{
+			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__merchants_male[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__merchants_male[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__merchants_male[i][__name]);
+		}		
+	}
+	
+	case P_MERCHANTS_F:		
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_MERCHANTS_F; i++, y+= (15*ROW)/10)
+		{
+			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__merchants_female[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__merchants_female[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__merchants_female[i][__name]);
+		}		
+	}
+	
+
 }//end of switch(page)
 
 }
@@ -861,3 +836,5 @@ public addmenu_npc(menu,chr,scriptID)
 	chr_message(chr,_,"click to position the NPC");
 	target_create(chr,scriptID,n,_,"cmd_add_targ");
 }
+
+/*! }@ */
