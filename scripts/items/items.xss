@@ -225,7 +225,6 @@ SECTION ITEM $item_key_ring1
 {
 	NAME key ring
 	ID 1011
-	TYPE $itype_keyring
 	VALUE 10
 	WEIGHT 2
 }
@@ -234,7 +233,6 @@ SECTION ITEM $item_key_ring2
 {
 	NAME key ring
 	ID 1769
-	TYPE $itype_keyring
 	VALUE 10
 	WEIGHT 2
 }
@@ -243,7 +241,6 @@ SECTION ITEM $item_key_ring3
 {
 	NAME key ring
 	ID 176a
-	TYPE $itype_keyring
 	VALUE 10
 	WEIGHT 2
 }
@@ -252,7 +249,6 @@ SECTION ITEM $item_key_ring4
 {
 	NAME key ring
 	ID 176b
-	TYPE $itype_keyring
 	VALUE 10
 	WEIGHT 2
 }
