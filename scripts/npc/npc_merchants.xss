@@ -1153,8 +1153,8 @@ SECTION NPC $npc_maker_m
 	RSHOPITEM $item_cake
 	RSHOPITEM $item_wheels_of_cheese
 	RSHOPITEM $item_french_bread
-	RSHOPITEM $item_muffins
-	RSHOPITEM $item_bread_loaves
+	RSHOPITEM $item_muffins1
+	RSHOPITEM $item_bread_loaves_1
 	RSHOPITEM $item_pizzas
 	RSHOPITEM $item_uncooked_pizza
 	RSHOPITEM $item_pan_of_cookies
@@ -1168,23 +1168,23 @@ SECTION NPC $npc_maker_m
 	SELLITEM $item_cake
 	SELLITEM $item_wheels_of_cheese
 	SELLITEM $item_french_bread
-	SELLITEM $item_muffins
-	SELLITEM $item_bread_loaves
+	SELLITEM $item_muffins1
+	SELLITEM $item_bread_loaves_1
 	SELLITEM $item_pizzas
 	SELLITEM $item_uncooked_pizza
 	SELLITEM $item_pan_of_cookies
 	SELLITEM $item_plate_of_cookies
 	SELLITEM $item_eggs
 	SELLITEM $item_fried_eggs
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_slices_of_bacon
-	SELLITEM $item_pears
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_grape_bunches
-	SELLITEM $item_peaches
+	SELLITEM $item_grape_bunches_1
+	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
@@ -1196,11 +1196,11 @@ SECTION NPC $npc_maker_m
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
 	SELLITEM $item_onions
-	SELLITEM $item_coconuts
-	SELLITEM $item_banana
+	SELLITEM $item_coconuts1
+	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
-	SELLITEM $item_lemons
-	SELLITEM $item_limes
+	SELLITEM $item_lemons1
+	SELLITEM $item_limes1
 	SELLITEM $item_honeydew_melons1
 	SELLITEM $item_canteloupes
 	SELLITEM $item_watermelons
@@ -1253,8 +1253,8 @@ SECTION NPC $npc_baker_f
 	RSHOPITEM $item_cake
 	RSHOPITEM $item_wheels_of_cheese
 	RSHOPITEM $item_french_bread
-	RSHOPITEM $item_muffins
-	RSHOPITEM $item_bread_loaves
+	RSHOPITEM $item_muffins1
+	RSHOPITEM $item_bread_loaves_1
 	RSHOPITEM $item_pizzas
 	RSHOPITEM $item_uncooked_pizza
 	RSHOPITEM $item_pan_of_cookies
@@ -1268,23 +1268,23 @@ SECTION NPC $npc_baker_f
 	SELLITEM $item_cake
 	SELLITEM $item_wheels_of_cheese
 	SELLITEM $item_french_bread
-	SELLITEM $item_muffins
-	SELLITEM $item_bread_loaves
+	SELLITEM $item_muffins1
+	SELLITEM $item_bread_loaves_1
 	SELLITEM $item_pizzas
 	SELLITEM $item_uncooked_pizza
 	SELLITEM $item_pan_of_cookies
 	SELLITEM $item_plate_of_cookies
 	SELLITEM $item_eggs
 	SELLITEM $item_fried_eggs
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_slices_of_bacon
-	SELLITEM $item_pears
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_grape_bunches
-	SELLITEM $item_peaches
+	SELLITEM $item_grape_bunches_1
+	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
@@ -1296,11 +1296,11 @@ SECTION NPC $npc_baker_f
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
 	SELLITEM $item_onions
-	SELLITEM $item_coconuts
-	SELLITEM $item_banana
+	SELLITEM $item_coconuts1
+	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
-	SELLITEM $item_lemons
-	SELLITEM $item_limes
+	SELLITEM $item_lemons1
+	SELLITEM $item_limes1
 	SELLITEM $item_honeydew_melons1
 	SELLITEM $item_canteloupes
 	SELLITEM $item_watermelons
@@ -1414,25 +1414,25 @@ SECTION NPC $npc_provisioner_m
 	RSHOPITEM $item_leather_gloves
 	RSHOPITEM $item_leather_gorget
 	RSHOPITEM $item_arrow
-	RSHOPITEM $item_bottle_of_ale
-	RSHOPITEM $item_bottle_of_liquor
-	RSHOPITEM $item_bottle_of_wine
+	RSHOPITEM $item_bottles_of_ale1
+	RSHOPITEM $item_bottles_of_liquor1
+	RSHOPITEM $item_bottles_of_wine1
 	RSHOPITEM $item_wheels_of_cheese
 	RSHOPITEM $item_french_bread
-	RSHOPITEM $item_bread_loaves
-	RSHOPITEM $item_cooked_birds
-	RSHOPITEM $item_sausages
-	RSHOPITEM $item_hams
+	RSHOPITEM $item_bread_loaves_1
+	RSHOPITEM $item_cooked_birds_1
+	RSHOPITEM $item_sausages_1
+	RSHOPITEM $item_hams_1
 	RSHOPITEM $item_cuts_of_ribs
 	RSHOPITEM $item_fish_steaks
-	RSHOPITEM $item_slabs_of_bacon
-	RSHOPITEM $item_pears
+	RSHOPITEM $item_slabs_of_bacon_1
+	RSHOPITEM $item_pears_1
 	RSHOPITEM $item_apples
-	RSHOPITEM $item_peaches
+	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_bedroll
 	RSHOPITEM $item_kindling
 	RSHOPITEM $item_sextant
-	RSHOPITEM $item_sack_of_flour
+	RSHOPITEM $item_sack_of_flour_1
 	RSHOPITEM $item_lockpicks
 	RSHOPITEM $item_cut_cloth
 	RSHOPITEM $item_iron_ingots
@@ -1541,25 +1541,25 @@ SECTION NPC $npc_provisioner_m
 	SELLITEM $item_star_sapphires_2
 	SELLITEM $item_tourmalines_3
 	SELLITEM $item_diamonds_4
-	SELLITEM $item_bottle_of_ale
-	SELLITEM $item_bottle_of_liquor
-	SELLITEM $item_bottle_of_wine
+	SELLITEM $item_bottles_of_ale1
+	SELLITEM $item_bottles_of_liquor1
+	SELLITEM $item_bottles_of_wine1
 	SELLITEM $item_wheels_of_cheese
 	SELLITEM $item_french_bread
-	SELLITEM $item_bread_loaves
-	SELLITEM $item_cooked_birds
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	SELLITEM $item_bread_loaves_1
+	SELLITEM $item_cooked_birds_1
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_cuts_of_ribs
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_pears
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_peaches
+	SELLITEM $item_peaches_1
 	SELLITEM $item_bedroll
 	SELLITEM $item_kindling
 	SELLITEM $item_sextant
-	SELLITEM $item_sack_of_flour
+	SELLITEM $item_sack_of_flour_1
 	SELLITEM $item_lockpicks
 	SELLITEM $item_cut_cloth
 	SELLITEM $item_iron_ingots
@@ -1677,25 +1677,25 @@ SECTION NPC $npc_provisioner_f
 	RSHOPITEM $item_leather_gloves
 	RSHOPITEM $item_leather_gorget
 	RSHOPITEM $item_arrow
-	RSHOPITEM $item_bottle_of_ale
-	RSHOPITEM $item_bottle_of_liquor
-	RSHOPITEM $item_bottle_of_wine
+	RSHOPITEM $item_bottles_of_ale1
+	RSHOPITEM $item_bottles_of_liquor1
+	RSHOPITEM $item_bottles_of_wine1
 	RSHOPITEM $item_wheels_of_cheese
 	RSHOPITEM $item_french_bread
-	RSHOPITEM $item_bread_loaves
-	RSHOPITEM $item_cooked_birds
-	RSHOPITEM $item_sausages
-	RSHOPITEM $item_hams
+	RSHOPITEM $item_bread_loaves_1
+	RSHOPITEM $item_cooked_birds_1
+	RSHOPITEM $item_sausages_1
+	RSHOPITEM $item_hams_1
 	RSHOPITEM $item_cuts_of_ribs
 	RSHOPITEM $item_fish_steaks
-	RSHOPITEM $item_slabs_of_bacon
-	RSHOPITEM $item_pears
+	RSHOPITEM $item_slabs_of_bacon_1
+	RSHOPITEM $item_pears_1
 	RSHOPITEM $item_apples
-	RSHOPITEM $item_peaches
+	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_bedroll
 	RSHOPITEM $item_kindling
 	RSHOPITEM $item_sextant
-	RSHOPITEM $item_sack_of_flour
+	RSHOPITEM $item_sack_of_flour_1
 	RSHOPITEM $item_lockpicks
 	RSHOPITEM $item_cut_cloth
 	RSHOPITEM $item_iron_ingots
@@ -1804,25 +1804,25 @@ SECTION NPC $npc_provisioner_f
 	SELLITEM $item_star_sapphires_2
 	SELLITEM $item_tourmalines_3
 	SELLITEM $item_diamonds_4
-	SELLITEM $item_bottle_of_ale
-	SELLITEM $item_bottle_of_liquor
-	SELLITEM $item_bottle_of_wine
+	SELLITEM $item_bottles_of_ale1
+	SELLITEM $item_bottles_of_liquor1
+	SELLITEM $item_bottles_of_wine1
 	SELLITEM $item_wheels_of_cheese
 	SELLITEM $item_french_bread
-	SELLITEM $item_bread_loaves
-	SELLITEM $item_cooked_birds
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	SELLITEM $item_bread_loaves_1
+	SELLITEM $item_cooked_birds_1
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_cuts_of_ribs
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_pears
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_peaches
+	SELLITEM $item_peaches_1
 	SELLITEM $item_bedroll
 	SELLITEM $item_kindling
 	SELLITEM $item_sextant
-	SELLITEM $item_sack_of_flour
+	SELLITEM $item_sack_of_flour_1
 	SELLITEM $item_lockpicks
 	SELLITEM $item_cut_cloth
 	SELLITEM $item_iron_ingots
@@ -1972,21 +1972,21 @@ SECTION NPC $npc_innkeeper_m
 	DAMAGE 3 15
 	DEF 5
 	SHOPKEEPER
-	RSHOPITEM $item_bottle_of_ale
-	RSHOPITEM $item_bottle_of_liquor
-	RSHOPITEM $item_bottle_of_wine
+	RSHOPITEM $item_bottles_of_ale1
+	RSHOPITEM $item_bottles_of_liquor1
+	RSHOPITEM $item_bottles_of_wine1
 	RSHOPITEM $item_wheels_of_cheese
 	RSHOPITEM $item_french_bread
-	RSHOPITEM $item_bread_loaves
+	RSHOPITEM $item_bread_loaves_1
 	RSHOPITEM $item_cuts_of_ribs
 	RSHOPITEM $item_employment_deed
 	RSHOPITEM $item_guildstone_deed
-	SELLITEM $item_bottle_of_ale
-	SELLITEM $item_bottle_of_liquor
-	SELLITEM $item_bottle_of_wine
+	SELLITEM $item_bottles_of_ale1
+	SELLITEM $item_bottles_of_liquor1
+	SELLITEM $item_bottles_of_wine1
 	SELLITEM $item_wheels_of_cheese
 	SELLITEM $item_french_bread
-	SELLITEM $item_bread_loaves
+	SELLITEM $item_bread_loaves_1
 	SELLITEM $item_cuts_of_ribs
 	DOORUSE 1
 	
@@ -2029,21 +2029,21 @@ SECTION NPC $npc_innkeeper_f
 	DAMAGE 3 15
 	DEF 5
 	SHOPKEEPER
-	RSHOPITEM $item_bottle_of_ale
-	RSHOPITEM $item_bottle_of_liquor
-	RSHOPITEM $item_bottle_of_wine
+	RSHOPITEM $item_bottles_of_ale1
+	RSHOPITEM $item_bottles_of_liquor1
+	RSHOPITEM $item_bottles_of_wine1
 	RSHOPITEM $item_wheels_of_cheese
 	RSHOPITEM $item_french_bread
-	RSHOPITEM $item_bread_loaves
+	RSHOPITEM $item_bread_loaves_1
 	RSHOPITEM $item_cuts_of_ribs
 	RSHOPITEM $item_employment_deed
 	RSHOPITEM $item_guildstone_deed
-	SELLITEM $item_bottle_of_ale
-	SELLITEM $item_bottle_of_liquor
-	SELLITEM $item_bottle_of_wine
+	SELLITEM $item_bottles_of_ale1
+	SELLITEM $item_bottles_of_liquor1
+	SELLITEM $item_bottles_of_wine1
 	SELLITEM $item_wheels_of_cheese
 	SELLITEM $item_french_bread
-	SELLITEM $item_bread_loaves
+	SELLITEM $item_bread_loaves_1
 	SELLITEM $item_cuts_of_ribs
 	DOORUSE 1
 	
@@ -2567,21 +2567,21 @@ SECTION NPC $npc_butcher_m
 	DAMAGE 3 15
 	DEF 5
 	SHOPKEEPER
-	RSHOPITEM $item_cooked_birds
-	RSHOPITEM $item_sausages
-	RSHOPITEM $item_hams
+	RSHOPITEM $item_cooked_birds_1
+	RSHOPITEM $item_sausages_1
+	RSHOPITEM $item_hams_1
 	RSHOPITEM $item_cuts_of_ribs
 	RSHOPITEM $item_fish_steaks
-	RSHOPITEM $item_slabs_of_bacon
-	RSHOPITEM $item_slices_of_bacon
-	SELLITEM $item_cooked_birds
-	SELLITEM $item_roast_pigs
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	RSHOPITEM $item_slabs_of_bacon_1
+	RSHOPITEM $item_slabs_of_bacon_1
+	SELLITEM $item_cooked_birds_1
+	SELLITEM $item_roast_pigs_1
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_cuts_of_ribs
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_slices_of_bacon
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_cuts_of_raw_ribs
 	DOORUSE 1
 	
@@ -2625,21 +2625,21 @@ SECTION NPC $npc_butcher_f
 	DAMAGE 3 15
 	DEF 5
 	SHOPKEEPER
-	RSHOPITEM $item_cooked_birds
-	RSHOPITEM $item_sausages
-	RSHOPITEM $item_hams
+	RSHOPITEM $item_cooked_birds_1
+	RSHOPITEM $item_sausages_1
+	RSHOPITEM $item_hams_1
 	RSHOPITEM $item_cuts_of_ribs
 	RSHOPITEM $item_fish_steaks
-	RSHOPITEM $item_slabs_of_bacon
-	RSHOPITEM $item_slices_of_bacon
-	SELLITEM $item_cooked_birds
-	SELLITEM $item_roast_pigs
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	RSHOPITEM $item_slabs_of_bacon_1
+	RSHOPITEM $item_slabs_of_bacon_1
+	SELLITEM $item_cooked_birds_1
+	SELLITEM $item_roast_pigs_1
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_cuts_of_ribs
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_slices_of_bacon
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_slabs_of_bacon_1
 	SELLITEM $item_cuts_of_raw_ribs
 	TOTAME 1100
 	DOORUSE 1
@@ -5029,10 +5029,10 @@ SECTION NPC $npc_farmer_m
 	COLORLIST 11
 	SHOPKEEPER
 	RSHOPITEM $item_eggs
-	RSHOPITEM $item_pears
+	RSHOPITEM $item_pears_1
 	RSHOPITEM $item_apples
-	RSHOPITEM $item_grape_bunches
-	RSHOPITEM $item_peaches
+	RSHOPITEM $item_grape_bunches_1
+	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_fruit_basket
 	RSHOPITEM $item_squash1
 	RSHOPITEM $item_heads_of_cabbage
@@ -5040,20 +5040,20 @@ SECTION NPC $npc_farmer_m
 	RSHOPITEM $item_jars_of_honey
 	RSHOPITEM $item_pumpkin1
 	RSHOPITEM $item_onions
-	RSHOPITEM $item_coconuts
-	RSHOPITEM $item_banana
+	RSHOPITEM $item_coconuts1
+	RSHOPITEM $item_banana_1
 	RSHOPITEM $item_bunches_of_dates
-	RSHOPITEM $item_lemons
-	RSHOPITEM $item_limes
+	RSHOPITEM $item_lemons1
+	RSHOPITEM $item_limes1
 	RSHOPITEM $item_honeydew_melons1
 	RSHOPITEM $item_canteloupes
 	RSHOPITEM $item_watermelons
 	RSHOPITEM $item_sheaf_of_hay1
 	SELLITEM $item_eggs
-	SELLITEM $item_pears
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_grape_bunches
-	SELLITEM $item_peaches
+	SELLITEM $item_grape_bunches_1
+	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_squash1
 	SELLITEM $item_heads_of_cabbage
@@ -5061,11 +5061,11 @@ SECTION NPC $npc_farmer_m
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
 	SELLITEM $item_onions
-	SELLITEM $item_coconuts
-	SELLITEM $item_banana
+	SELLITEM $item_coconuts1
+	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
-	SELLITEM $item_lemons
-	SELLITEM $item_limes
+	SELLITEM $item_lemons1
+	SELLITEM $item_limes1
 	SELLITEM $item_honeydew_melons1
 	SELLITEM $item_canteloupes
 	SELLITEM $item_watermelons
@@ -5112,10 +5112,10 @@ SECTION NPC $npc_farmer_f
 	COLORLIST 11
 	SHOPKEEPER
 	RSHOPITEM $item_eggs
-	RSHOPITEM $item_pears
+	RSHOPITEM $item_pears_1
 	RSHOPITEM $item_apples
-	RSHOPITEM $item_grape_bunches
-	RSHOPITEM $item_peaches
+	RSHOPITEM $item_grape_bunches_1
+	RSHOPITEM $item_peaches_1
 	RSHOPITEM $item_fruit_basket
 	RSHOPITEM $item_squash1
 	RSHOPITEM $item_heads_of_cabbage
@@ -5123,20 +5123,20 @@ SECTION NPC $npc_farmer_f
 	RSHOPITEM $item_jars_of_honey
 	RSHOPITEM $item_pumpkin1
 	RSHOPITEM $item_onions
-	RSHOPITEM $item_coconuts
-	RSHOPITEM $item_banana
+	RSHOPITEM $item_coconuts1
+	RSHOPITEM $item_banana_1
 	RSHOPITEM $item_bunches_of_dates
-	RSHOPITEM $item_lemons
-	RSHOPITEM $item_limes
+	RSHOPITEM $item_lemons1
+	RSHOPITEM $item_limes1
 	RSHOPITEM $item_honeydew_melons1
 	RSHOPITEM $item_canteloupes
 	RSHOPITEM $item_watermelons
 	RSHOPITEM $item_sheaf_of_hay1
 	SELLITEM $item_eggs
-	SELLITEM $item_pears
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_grape_bunches
-	SELLITEM $item_peaches
+	SELLITEM $item_grape_bunches_1
+	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_squash1
 	SELLITEM $item_heads_of_cabbage
@@ -5144,11 +5144,11 @@ SECTION NPC $npc_farmer_f
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
 	SELLITEM $item_onions
-	SELLITEM $item_coconuts
-	SELLITEM $item_banana
+	SELLITEM $item_coconuts1
+	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
-	SELLITEM $item_lemons
-	SELLITEM $item_limes
+	SELLITEM $item_lemons1
+	SELLITEM $item_limes1
 	SELLITEM $item_honeydew_melons1
 	SELLITEM $item_canteloupes
 	SELLITEM $item_watermelons
@@ -5196,23 +5196,23 @@ SECTION NPC $npc_cook_m
 	DAMAGE 3 15
 	DEF 5
 	SHOPKEEPER
-	RSHOPITEM $item_bowl_of_carrots
-	RSHOPITEM $item_bowl_of_corn
-	RSHOPITEM $item_bowl_of_lettuce
-	RSHOPITEM $item_bowl_of_peas
+	RSHOPITEM $item_bowl_of_carrots1
+	RSHOPITEM $item_bowl_of_corn1
+	RSHOPITEM $item_bowl_of_lettuce1
+	RSHOPITEM $item_bowl_of_peas1
 	RSHOPITEM $item_bowl_of_potatoes
 	RSHOPITEM $item_bowl_of_stew
 	RSHOPITEM $item_tomato_soup
 	SELLITEM $item_wheels_of_cheese
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_slices_of_bacon
-	SELLITEM $item_pears
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_grape_bunches
-	SELLITEM $item_peaches
+	SELLITEM $item_grape_bunches_1
+	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
@@ -5223,18 +5223,18 @@ SECTION NPC $npc_cook_m
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
 	SELLITEM $item_onions
-	SELLITEM $item_coconuts
-	SELLITEM $item_banana
+	SELLITEM $item_coconuts1
+	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
-	SELLITEM $item_lemons
-	SELLITEM $item_limes
+	SELLITEM $item_lemons1
+	SELLITEM $item_limes1
 	SELLITEM $item_honeydew_melons1
 	SELLITEM $item_canteloupes
 	SELLITEM $item_watermelons
-	SELLITEM $item_bowl_of_carrots
-	SELLITEM $item_bowl_of_corn
-	SELLITEM $item_bowl_of_lettuce
-	SELLITEM $item_bowl_of_peas
+	SELLITEM $item_bowl_of_carrots1
+	SELLITEM $item_bowl_of_corn1
+	SELLITEM $item_bowl_of_lettuce1
+	SELLITEM $item_bowl_of_peas1
 	SELLITEM $item_bowl_of_potatoes
 	SELLITEM $item_bowl_of_stew
 	SELLITEM $item_tomato_soup
@@ -5280,23 +5280,23 @@ SECTION NPC $npc_cook_f
 	DAMAGE 3 15
 	DEF 5
 	SHOPKEEPER
-	RSHOPITEM $item_bowl_of_carrots
-	RSHOPITEM $item_bowl_of_corn
-	RSHOPITEM $item_bowl_of_lettuce
-	RSHOPITEM $item_bowl_of_peas
+	RSHOPITEM $item_bowl_of_carrots1
+	RSHOPITEM $item_bowl_of_corn1
+	RSHOPITEM $item_bowl_of_lettuce1
+	RSHOPITEM $item_bowl_of_peas1
 	RSHOPITEM $item_bowl_of_potatoes
 	RSHOPITEM $item_bowl_of_stew
 	RSHOPITEM $item_tomato_soup
 	SELLITEM $item_wheels_of_cheese
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_slices_of_bacon
-	SELLITEM $item_pears
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_grape_bunches
-	SELLITEM $item_peaches
+	SELLITEM $item_grape_bunches_1
+	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
@@ -5307,18 +5307,18 @@ SECTION NPC $npc_cook_f
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
 	SELLITEM $item_onions
-	SELLITEM $item_coconuts
-	SELLITEM $item_banana
+	SELLITEM $item_coconuts1
+	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
-	SELLITEM $item_lemons
-	SELLITEM $item_limes
+	SELLITEM $item_lemons1
+	SELLITEM $item_limes1
 	SELLITEM $item_honeydew_melons1
 	SELLITEM $item_canteloupes
 	SELLITEM $item_watermelons
-	SELLITEM $item_bowl_of_carrots
-	SELLITEM $item_bowl_of_corn
-	SELLITEM $item_bowl_of_lettuce
-	SELLITEM $item_bowl_of_peas
+	SELLITEM $item_bowl_of_carrots1
+	SELLITEM $item_bowl_of_corn1
+	SELLITEM $item_bowl_of_lettuce1
+	SELLITEM $item_bowl_of_peas1
 	SELLITEM $item_bowl_of_potatoes
 	SELLITEM $item_bowl_of_stew
 	SELLITEM $item_tomato_soup
@@ -5499,14 +5499,14 @@ SECTION NPC $npc_fisherman_m
 	SHOPKEEPER
 	RSHOPITEM $item_a_fishing_pole
 	RSHOPITEM $item_fish_steaks
-	RSHOPITEM $item_fish_head
-	RSHOPITEM $item_fish
-	RSHOPITEM $item_raw_fish
+	RSHOPITEM $item_fish_head1_1
+	RSHOPITEM $item_fish1
+	RSHOPITEM $item_raw_fish_1
 	SELLITEM $item_a_fishing_pole
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_fish_head
-	SELLITEM $item_fish
-	SELLITEM $item_raw_fish
+	SELLITEM $item_fish_head1_1
+	SELLITEM $item_fish1
+	SELLITEM $item_raw_fish_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -5551,14 +5551,14 @@ SECTION NPC $npc_fisherman_f
 	SHOPKEEPER
 	RSHOPITEM $item_a_fishing_pole
 	RSHOPITEM $item_fish_steaks
-	RSHOPITEM $item_fish_head
-	RSHOPITEM $item_fish
-	RSHOPITEM $item_raw_fish
+	RSHOPITEM $item_fish_head1_1
+	RSHOPITEM $item_fish1
+	RSHOPITEM $item_raw_fish_1
 	SELLITEM $item_a_fishing_pole
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_fish_head
-	SELLITEM $item_fish
-	SELLITEM $item_raw_fish
+	SELLITEM $item_fish_head1_1
+	SELLITEM $item_fish1
+	SELLITEM $item_raw_fish_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -6264,8 +6264,8 @@ SECTION NPC $npc_baker_m
 	RSHOPITEM $item_cake
 	RSHOPITEM $item_wheels_of_cheese
 	RSHOPITEM $item_french_bread
-	RSHOPITEM $item_muffins
-	RSHOPITEM $item_bread_loaves
+	RSHOPITEM $item_muffins1
+	RSHOPITEM $item_bread_loaves_1
 	RSHOPITEM $item_pizzas
 	RSHOPITEM $item_uncooked_pizza
 	RSHOPITEM $item_pan_of_cookies
@@ -6279,23 +6279,23 @@ SECTION NPC $npc_baker_m
 	SELLITEM $item_cake
 	SELLITEM $item_wheels_of_cheese
 	SELLITEM $item_french_bread
-	SELLITEM $item_muffins
-	SELLITEM $item_bread_loaves
+	SELLITEM $item_muffins1
+	SELLITEM $item_bread_loaves_1
 	SELLITEM $item_pizzas
 	SELLITEM $item_uncooked_pizza
 	SELLITEM $item_pan_of_cookies
 	SELLITEM $item_plate_of_cookies
 	SELLITEM $item_eggs
 	SELLITEM $item_fried_eggs
-	SELLITEM $item_sausages
-	SELLITEM $item_hams
+	SELLITEM $item_sausages_1
+	SELLITEM $item_hams_1
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_slabs_of_bacon
-	SELLITEM $item_slices_of_bacon
-	SELLITEM $item_pears
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_slabs_of_bacon_1
+	SELLITEM $item_pears_1
 	SELLITEM $item_apples
-	SELLITEM $item_grape_bunches
-	SELLITEM $item_peaches
+	SELLITEM $item_grape_bunches_1
+	SELLITEM $item_peaches_1
 	SELLITEM $item_fruit_basket
 	SELLITEM $item_kindling
 	SELLITEM $item_cuts_of_raw_ribs
@@ -6307,11 +6307,11 @@ SECTION NPC $npc_baker_m
 	SELLITEM $item_jars_of_honey
 	SELLITEM $item_pumpkin1
 	SELLITEM $item_onions
-	SELLITEM $item_coconuts
-	SELLITEM $item_banana
+	SELLITEM $item_coconuts1
+	SELLITEM $item_banana_1
 	SELLITEM $item_bunches_of_dates
-	SELLITEM $item_lemons
-	SELLITEM $item_limes
+	SELLITEM $item_lemons1
+	SELLITEM $item_limes1
 	SELLITEM $item_honeydew_melons1
 	SELLITEM $item_canteloupes
 	SELLITEM $item_watermelons
@@ -6595,34 +6595,34 @@ SECTION NPC $npc_tavernkeeper_m
 	COLORLIST 11
 	GOLD 15
 	SHOPKEEPER
-	RSHOPITEM $item_bottle_of_ale
-	RSHOPITEM $item_bottle_of_liquor
-	RSHOPITEM $item_bottle_of_wine
-	RSHOPITEM $item_glass_of_cider
-	RSHOPITEM $item_glass_of_liquor
-	RSHOPITEM $item_glass_of_wine
-	RSHOPITEM $item_mug_of_ale
-	RSHOPITEM $item_pitcher_of_ale
-	RSHOPITEM $item_pitcher_of_cider
-	RSHOPITEM $item_pitcher_of_liquor
-	RSHOPITEM $item_pitcher_of_milk
-	RSHOPITEM $item_pitcher_of_water
-	RSHOPITEM $item_pitcher_of_wine
-	RSHOPITEM $item_glass_of_milk
-	SELLITEM $item_bottle_of_ale
-	SELLITEM $item_bottle_of_liquor
-	SELLITEM $item_bottle_of_wine
-	SELLITEM $item_glass_of_cider
-	SELLITEM $item_glass_of_liquor
-	SELLITEM $item_glass_of_wine
-	SELLITEM $item_mug_of_ale
-	SELLITEM $item_pitcher_of_ale
-	SELLITEM $item_pitcher_of_cider
-	SELLITEM $item_pitcher_of_liquor
-	SELLITEM $item_pitcher_of_milk
-	SELLITEM $item_pitcher_of_water
-	SELLITEM $item_pitcher_of_wine
-	SELLITEM $item_glass_of_milk
+	RSHOPITEM $item_bottles_of_ale1
+	RSHOPITEM $item_bottles_of_liquor1
+	RSHOPITEM $item_bottles_of_wine1
+	RSHOPITEM $item_glass_of_cider_1
+	RSHOPITEM $item_glass_of_liquor_1
+	RSHOPITEM $item_glass_of_wine_1
+	RSHOPITEM $item_mug_of_ale_1
+	RSHOPITEM $item_pitcher_of_ale_1
+	RSHOPITEM $item_pitcher_of_cider_1
+	RSHOPITEM $item_pitcher_of_liquor_1
+	RSHOPITEM $item_pitcher_of_milk_1
+	RSHOPITEM $item_pitcher_of_water_1
+	RSHOPITEM $item_pitcher_of_wine_1
+	RSHOPITEM $item_glass_of_milk_1
+	SELLITEM $item_bottles_of_ale1
+	SELLITEM $item_bottles_of_liquor1
+	SELLITEM $item_bottles_of_wine1
+	SELLITEM $item_glass_of_cider_1
+	SELLITEM $item_glass_of_liquor_1
+	SELLITEM $item_glass_of_wine_1
+	SELLITEM $item_mug_of_ale_1
+	SELLITEM $item_pitcher_of_ale_1
+	SELLITEM $item_pitcher_of_cider_1
+	SELLITEM $item_pitcher_of_liquor_1
+	SELLITEM $item_pitcher_of_milk_1
+	SELLITEM $item_pitcher_of_water_1
+	SELLITEM $item_pitcher_of_wine_1
+	SELLITEM $item_glass_of_milk_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -6666,34 +6666,34 @@ SECTION NPC $npc_tavernkeeper_f
 	COLORLIST 11
 	GOLD 18
 	SHOPKEEPER
-	RSHOPITEM $item_bottle_of_ale
-	RSHOPITEM $item_bottle_of_liquor
-	RSHOPITEM $item_bottle_of_wine
-	RSHOPITEM $item_glass_of_cider
-	RSHOPITEM $item_glass_of_liquor
-	RSHOPITEM $item_glass_of_wine
-	RSHOPITEM $item_mug_of_ale
-	RSHOPITEM $item_pitcher_of_ale
-	RSHOPITEM $item_pitcher_of_cider
-	RSHOPITEM $item_pitcher_of_liquor
-	RSHOPITEM $item_pitcher_of_milk
-	RSHOPITEM $item_pitcher_of_water
-	RSHOPITEM $item_pitcher_of_wine
-	RSHOPITEM $item_glass_of_milk
-	SELLITEM $item_bottle_of_ale
-	SELLITEM $item_bottle_of_liquor
-	SELLITEM $item_bottle_of_wine
-	SELLITEM $item_glass_of_cider
-	SELLITEM $item_glass_of_liquor
-	SELLITEM $item_glass_of_wine
-	SELLITEM $item_mug_of_ale
-	SELLITEM $item_pitcher_of_ale
-	SELLITEM $item_pitcher_of_cider
-	SELLITEM $item_pitcher_of_liquor
-	SELLITEM $item_pitcher_of_milk
-	SELLITEM $item_pitcher_of_water
-	SELLITEM $item_pitcher_of_wine
-	SELLITEM $item_glass_of_milk
+	RSHOPITEM $item_bottles_of_ale1
+	RSHOPITEM $item_bottles_of_liquor1
+	RSHOPITEM $item_bottles_of_wine1
+	RSHOPITEM $item_glass_of_cider_1
+	RSHOPITEM $item_glass_of_liquor_1
+	RSHOPITEM $item_glass_of_wine_1
+	RSHOPITEM $item_mug_of_ale_1
+	RSHOPITEM $item_pitcher_of_ale_1
+	RSHOPITEM $item_pitcher_of_cider_1
+	RSHOPITEM $item_pitcher_of_liquor_1
+	RSHOPITEM $item_pitcher_of_milk_1
+	RSHOPITEM $item_pitcher_of_water_1
+	RSHOPITEM $item_pitcher_of_wine_1
+	RSHOPITEM $item_glass_of_milk_1
+	SELLITEM $item_bottles_of_ale1
+	SELLITEM $item_bottles_of_liquor1
+	SELLITEM $item_bottles_of_wine1
+	SELLITEM $item_glass_of_cider_1
+	SELLITEM $item_glass_of_liquor_1
+	SELLITEM $item_glass_of_wine_1
+	SELLITEM $item_mug_of_ale_1
+	SELLITEM $item_pitcher_of_ale_1
+	SELLITEM $item_pitcher_of_cider_1
+	SELLITEM $item_pitcher_of_liquor_1
+	SELLITEM $item_pitcher_of_milk_1
+	SELLITEM $item_pitcher_of_water_1
+	SELLITEM $item_pitcher_of_wine_1
+	SELLITEM $item_glass_of_milk_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -6737,14 +6737,14 @@ SECTION NPC $npc_fisherman
 	SHOPKEEPER
 	RSHOPITEM $item_a_fishing_pole
 	RSHOPITEM $item_fish_steaks
-	RSHOPITEM $item_fish_head
-	RSHOPITEM $item_fish
-	RSHOPITEM $item_raw_fish
+	RSHOPITEM $item_fish_head1_1
+	RSHOPITEM $item_fish1
+	RSHOPITEM $item_raw_fish_1
 	SELLITEM $item_a_fishing_pole
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_fish_head
-	SELLITEM $item_fish
-	SELLITEM $item_raw_fish
+	SELLITEM $item_fish_head1_1
+	SELLITEM $item_fish1
+	SELLITEM $item_raw_fish_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -6788,14 +6788,14 @@ SECTION NPC $npc_fisherlady
 	SHOPKEEPER
 	RSHOPITEM $item_a_fishing_pole
 	RSHOPITEM $item_fish_steaks
-	RSHOPITEM $item_fish_head
-	RSHOPITEM $item_fish
-	RSHOPITEM $item_raw_fish
+	RSHOPITEM $item_fish_head1_1
+	RSHOPITEM $item_fish1
+	RSHOPITEM $item_raw_fish_1
 	SELLITEM $item_a_fishing_pole
 	SELLITEM $item_fish_steaks
-	SELLITEM $item_fish_head
-	SELLITEM $item_fish
-	SELLITEM $item_raw_fish
+	SELLITEM $item_fish_head1_1
+	SELLITEM $item_fish1
+	SELLITEM $item_raw_fish_1
 	DOORUSE 1
 	
 	//CATEGORY Humans

@@ -205,23 +205,23 @@ SECTION LOOTLIST $loot_fishing_net
 SECTION LOOTLIST $loot_omnivores_food
 {
 	//$$ omnivores food
-	$item_bottle_of_ale
-	$item_bottle_of_liquor
-	$item_bottle_of_wine
+	$item_bottles_of_ale1
+	$item_bottles_of_liquor1
+	$item_bottles_of_wine1
 	$item_wheels_of_cheese
-	$item_bread_loaves
+	$item_bread_loaves_1
 	$item_eggs
-	$item_cooked_birds
-	$item_sausages
-	$item_hams
+	$item_cooked_birds_1
+	$item_sausages_1
+	$item_hams_1
 	$item_cuts_of_ribs
 	$item_fish_steaks
-	$item_slabs_of_bacon
-	$item_slices_of_bacon
-	$item_pears
+	$item_slabs_of_bacon_1
+	$item_slabs_of_bacon_1
+	$item_pears_1
 	$item_apples
-	$item_grape_bunches
-	$item_peaches
+	$item_grape_bunches_1
+	$item_peaches_1
 	$item_fruit_basket
 	$item_lettuce1
 	$item_squash1
@@ -230,11 +230,11 @@ SECTION LOOTLIST $loot_omnivores_food
 	$item_jars_of_honey
 	$item_pumpkin1
 	$item_onions
-	$item_coconuts
-	$item_banana
+	$item_coconuts1
+	$item_banana_1
 	$item_bunches_of_dates
-	$item_lemons
-	$item_limes
+	$item_lemons1
+	$item_limes1
 	$item_honeydew_melons1
 	$item_canteloupes
 	$item_watermelons
@@ -246,21 +246,21 @@ SECTION LOOTLIST $loot_omnivores_food
 SECTION LOOTLIST $loot_food_wine_bread_cheese_meat
 {
 	//$$ food wine bread cheese meat
-	$item_bottle_of_ale
-	$item_bottle_of_liquor
-	$item_bottle_of_wine
+	$item_bottles_of_ale1
+	$item_bottles_of_liquor1
+	$item_bottles_of_wine1
 	$item_wheels_of_cheese
-	$item_bread_loaves
-	$item_cooked_birds
+	$item_bread_loaves_1
+	$item_cooked_birds_1
 	$item_iron_cleaver_of_might
-	$item_sausages
-	$item_hams
+	$item_sausages_1
+	$item_hams_1
 	$item_iron_cleaver_of_ruin
 	$item_cuts_of_ribs
 	$item_fish_steaks
-	$item_slabs_of_bacon
+	$item_slabs_of_bacon_1
 	$item_iron_butcher_knife_of_vanquishing
-	$item_slices_of_bacon
+	$item_slabs_of_bacon_1
 }
 //***********************************************
 //************* Random Body Parts ***************
@@ -1057,8 +1057,8 @@ SECTION LOOTLIST $loot_colored_armor
 {
 	//$$ colored armor
 	$item_iron_nose_helm_1
-	$item_fish
-	$item_raw_fish
+	$item_fish1
+	$item_raw_fish_1
 	$item_merkite_platemail
 	$item_merkite_plate_gorget
 	$item_merkite_plate_gloves
