@@ -39,7 +39,7 @@
 //hiding
 #include "small-scripts/skills/hiding.sma"
 //detect hidden
-//#include "small-scripts/skills/detecthidden.sma"
+#include "small-scripts/skills/detecthidden.sma"
 
 
 /*!
@@ -121,11 +121,6 @@ public __nxw_sk_cartography(const chr)
 }
 
 public __nxw_sk_cooking(const chr)
-{
-	chr_message(chr,_,msg_sk_mainDef[2]);
-}
-
-public __nxw_sk_dtchidden(const chr)
 {
 	chr_message(chr,_,msg_sk_mainDef[2]);
 }
