@@ -29,22 +29,25 @@ static hides[ALL_HIDES][] = {
 };
 
 enum {
-	NORMAL_LEATHER = 0, ALL_LEATHERS
+	NORMAL_LEATHER = 0, NORMAL_HIDELEATHER, ALL_LEATHERS
 };
 
 //Skill value required to work a leather
 static leatherSkill[] = {
-0   // NORMAL_LEATHER
+0,   // NORMAL_LEATHER
+0	// NORMAL_HIDELEATHER
 };
 
 //Make menu for that leather
 static leatherMakeMenu[] = {
-40   // NORMAL_LEATHER
+40,   // NORMAL_LEATHER
+40
 };
 
 //Leathers define
 static leathers[ALL_LEATHERS][] = {
-"$item_leather_piece"
+"$item_leather_piece",
+"$item_hide"
 };
 
 /*----------------------------------------------------------------------------------------*\
