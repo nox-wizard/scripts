@@ -33,12 +33,10 @@ SECTION ITEM $item_treasure_chest_lv1_
 {
 	NAME treasure chest
 	ID 0E7C
-	TYPE $itype_container
 	VALUE 60
 	WEIGHT 600
 	TRIGTYPE 0
 	TRIGGER $itrg_treasure_chest_lvl1
-	MOVABLE 1
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
