@@ -10,6 +10,20 @@
 #endif
 #define _nxw_item_api_
 
+#include "../include/nxw_lib"
+
+/*!
+\brief Check if a serial is an item serial
+\author Endymion
+\fn isItem( const serial )
+\param serial the serial
+\return true if is an item serial, false else
+\note INVALID return false
+*/
+public isItem( const serial ) { 
+	return ( ( serial>=FIRST_ITEM_SERIAL ) && ( serial!=INVALID ) ); 
+}
+
 /*!
 \author Xanathar
 \fn getItemTarget()
@@ -399,3 +413,67 @@ native itm_nextLocalVar( const item, const previous );
 \brief
 */
 native itm_getCombatSkill(const itm);
+
+/*!
+\author ???
+\fn itm_getDualByteProperty(const itm, const property)
+\brief
+*/
+stock itm_getDualByteProperty(const itm, const property)
+{
+	return (itm_getProperty(itm, property, 2) << 8) + itm_getProperty(itm, property, 1);
+}
+
+/*!
+\author ???
+\fn itm_setDualByteProperty(const itm, const property, const value)
+\brief
+*/
+stock itm_setDualByteProperty(const itm, const property, const value)
+{
+	itm_setProperty(itm, property, 2, value>>8);
+	itm_setProperty(itm, property, 1, value&0xFF);
+}
+
+/*!
+\author ???
+\fn itm_getAmxFlags(const itm, const idx)
+\brief
+*/
+stock itm_getAmxFlags(const itm, const idx)
+{
+	return itm_getProperty(itm, IP_AMXFLAGS, idx);
+}
+
+/*!
+\author ???
+\fn itm_setAmxFlags(const itm, const idx, const value)
+\brief
+*/
+stock itm_setAmxFlags(const itm, const idx, const value)
+{
+	itm_setProperty(itm, IP_AMXFLAGS, idx, value);
+}
+
+/*!
+\author Rage
+\fn itm_setMultiByteProperty(const itm, const property, const value)
+\brief
+*/
+stock itm_setMultiByteProperty(const itm, const property, const value)
+{
+	itm_setProperty(itm, property, 1, value>>24);
+	itm_setProperty(itm, property, 2, (value>>16)&0xFF);
+	itm_setProperty(itm, property, 3, (value>>8)&0xFF);
+	itm_setProperty(itm, property, 4, value&0xFF);
+}
+
+/*!
+\author Rage
+\fn itm_getMultiByteProperty(const itm, const property)
+\brief
+*/
+stock itm_getMultiByteProperty(const itm, const property)
+{
+	return (itm_getProperty(itm, property, 1) << 24) + (itm_getProperty(itm, property, 2) << 16) + (itm_getProperty(itm, property, 3) << 8) + (itm_getProperty(itm, property, 4));
+}
