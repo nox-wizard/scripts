@@ -94,16 +94,29 @@ native chr_setProperty(const chr, const property, const subprop=0, ...);
 
 /*!
 \author Frodo
-\fn chr_getSpeech(char, speech[], no_command = true)
+\fn chr_getCmdSpeech(char, speech[], no_command = true)
 \param chr: the character
 \param speech[]: the string that will be filled with speech
-\param no_command: if tru, the command name will be deleted, useful only with commands
+\param no_command: if true, the command name will be deleted, useful only with commands
 \since 0.82
-\brief returns a character's speech
+\brief returns a character's speech on command use
+
+To be used only in commands scripts
 \return the speech
 */
+native chr_getCmdSpeech(const chr, speech[], no_command = true)
 
-native chr_getSpeech(const chr, speech[], no_command = true)
+/*!
+\author Stonedz
+\fn chr_setPostType( const chr,const PostType )
+\param chr: the character
+\param PostType: the post type (0=local post, 1=regional post, 2= global post)
+\since 0.82
+\brief sets the post type atmessage boards for character
+\return nothing
+*/
+native chr_setPostTypee( const chr,const PostType )
+
 //============================= PRIVS ===============================
 /** \defgroup script_API_character_privs Privileges
  *  @{

@@ -1,5 +1,5 @@
 /*!
-\defgroup script_command_freeze 'freeze
+\defgroup script_command_damage 'damage
 \ingroup script_commands
 
 @{
@@ -7,8 +7,8 @@
 
 /*!
 \author Fax
-\fn cmd_freeze(const chr)
-\brief freezes a character
+\fn cmd_damage(const chr)
+\brief damages a character
 
 <B>syntax:<B> 'damage [amount]["hp"/"stam"/"mana"]
 <B>command params:</B>

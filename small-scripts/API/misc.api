@@ -93,3 +93,16 @@ native getIntFromDefine(const define[],  checkDefine=true);
 \brief performs a worldsave
 */
 native world_save();
+
+
+/*!
+\author Fax
+\fn setLightLevel(const level)
+\param level: light level
+\since 0.82
+\brief sets world's light level
+
+light level is 0 (brightest) to 15 (darkest), -1 enables day/night cycle
+\return nothing
+*/
+native setLightLevel(const level);
