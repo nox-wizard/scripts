@@ -12,7 +12,7 @@ SECTION NPCTRG $ntrg_tell_tavern_keeper_your_thirsty
     //$$ tell tavern keeper your thirsty
     TALK Thar ya be yer warshipness!  Drinks are on the house!
     SND 00 42
-    IADD $item_bottle_of_liquor
+    IADD $item_bottles_of_liquor1
     NPCACT 13
     DISABLE 10
 }
