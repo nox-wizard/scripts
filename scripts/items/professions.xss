@@ -204,7 +204,7 @@ SECTION ITEM $item_shovel
     HP 30
     VALUE 15
     //RESTOCK 10
-    
+    TYPE $itype_mining
     ///CATEGORY Professions
     ///SUBSECTION Miner & Blacksmith
     ///DESCRIPTION Shovel

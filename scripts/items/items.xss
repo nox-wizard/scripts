@@ -4723,6 +4723,7 @@ SECTION ITEM $item_pickaxe
     NAME pickaxe
     ID 0E85
     LAYER $layer_1hand_weapon
+    TYPE $itype_mining
     ITEMHAND 1
     LODAMAGE 1
     HIDAMAGE 15
