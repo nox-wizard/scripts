@@ -1,16 +1,16 @@
 
-public target_tweak( const socket, const target, const item )
+public target_tweak( const caller, const target, const item )
 {
-	if(socket < 0) 
+	if(!isChar(caller)) 
 		return;
 		
 	if( isChar(target) ) {
-		tweak_char( socket, target, 1 );
+		tweak_char( caller, target, 1 );
 	}
 	else if( isItem( item ) ) {
-		tweak_item( socket, item, 1 );
+		tweak_item( caller, item, 1 );
 	}
-	else nprintf( socket, "Tweak work only on object" );
+	else chr_message( caller,_, "Tweak work only on object" );
 
 }
 
@@ -19,7 +19,7 @@ public IsNumero(const int){
 	return 0;
 }
 
-public tweak_char( const socket, const chr, const page )
+public tweak_char( const caller, const chr, const page )
 {
 	new menu = gui_create( 50, 50, true, true, true, "handle_tweak_char" );
 	//gui_addGump( menu, 0, 0, 0x0898, 0 );
@@ -75,10 +75,10 @@ public tweak_char( const socket, const chr, const page )
 		}
 	}
 
-	gui_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, caller);
 }
 
-public handle_tweak_char( const socket, const menu, const button )
+public handle_tweak_char( const caller, const menu, const button )
 {
 
 	if( button==MENU_CLOSED )
@@ -97,7 +97,7 @@ public handle_tweak_char( const socket, const menu, const button )
 			if (chr_isaLocalVar(chr, num)){
 				gui_getProperty( menu, MP_UNI_TEXT, num, Name );
 				trim(Name);
-				nprintf(socket,"Stringa REcuperata %s",Name);
+				chr_message(chr, _,"Stringa REcuperata %s",Name);
 				if (isStrInt(Name)){
 					value = str2Int(Name);
 					chr_setLocalIntVar(chr,num,value);
@@ -108,11 +108,11 @@ public handle_tweak_char( const socket, const menu, const button )
 	}
 	
 	chr_teleport( chr );
-	tweak_char( socket, chr, gui_getProperty( menu, MP_BUFFER, 2 ) );
+	tweak_char( caller, chr, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	
 }
 
-public handle_tweak_item( const socket, const menu, const button )
+public handle_tweak_item( const chr, const menu, const button )
 {
 	if( button==MENU_CLOSED )
 		return;
@@ -121,7 +121,7 @@ public handle_tweak_item( const socket, const menu, const button )
 		
 	if( button < 49999 ) { //page button
 		itm_delLocalVar(item, button);
-		tweak_item( socket, item, gui_getProperty( menu, MP_BUFFER, 2 ) );
+		tweak_item( chr, item, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	}
 	
 	new num=0;
@@ -140,11 +140,11 @@ public handle_tweak_item( const socket, const menu, const button )
 			}
 		}
 		chr_teleport( item );
-		tweak_item( socket, item, gui_getProperty( menu, MP_BUFFER, 2 ) );
+		tweak_item( chr, item, gui_getProperty( menu, MP_BUFFER, 2 ) );
 	}
 }
 
-public tweak_item( const socket, const item, const page )
+public tweak_item( const caller, const item, const page )
 {
 	new menu = gui_create( 50, 50, true, true, true, "handle_tweak_item" );
 	//gui_addGump( menu, 0, 0, 0x0898, 0 );
@@ -200,5 +200,5 @@ public tweak_item( const socket, const item, const page )
 		}
 	}
 
-	gui_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, caller);
 }

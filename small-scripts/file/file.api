@@ -10,6 +10,11 @@
 #endif
 #define _nxw_file_api_
 
+/*! \defgroup script_API_file File handling
+\ingroup script_API
+@{
+*/
+
 /*!
 \author Sparhawk
 \since 0.82
@@ -62,3 +67,5 @@ native file_write(const handle, const text[] );
 \brief Read a line from a file
 */
 native file_read(const handle, line[] );
+
+/*! }@*/

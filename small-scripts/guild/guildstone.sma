@@ -103,7 +103,7 @@ public guildgui_callback( const gui, const master, const button )
 	gui_getProperty( gui, MP_UNI_TEXT, 56, name );
 	
 	new stone = itm_createByDef( "$item_guildstone" );
-	new guild = _guild_createStandardGuild( stone, master ); // create a standard guild.. see guild.sma
+	new guild = guild_createStd( stone, master ); // create a standard guild.. see guild.sma
 	guild_setProperty( guild, GP_STR_NAME, _, name ); 
 	guild_setProperty( guild, GP_STR_ABBREVIATION, _, shortname ); 
 	
@@ -130,7 +130,7 @@ public guild_dclickStone( const guild, const curr ){
 	bypass();
 	
 	const colorEdit = 32;
-	new gui = gui_create( 40, 40, true, true, true, "guildDclick_callback" );
+	new gui = gui_create( 40, 40, true, true, true, "guildDclick_cback" );
 	gui_addGump( gui, 0, 0, 0x04CC, 0 );
 	
 	gui_setProperty( gui, MP_BUFFER, 0, guild );
@@ -165,10 +165,10 @@ public guild_dclickStone( const guild, const curr ){
 	
 }
 
-public guildDclick_callback( const gui, const curr, const button )
+public guildDclick_cback( const gui, const curr, const button )
 {
 
-	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	//new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	
 	switch(button){
 		case 0: return;
@@ -190,7 +190,7 @@ public guildDclick_callback( const gui, const curr, const button )
 		case 8: return;
 		
 		default:{
-			chr_message( curr, _, "Something gone wrong!");
+			chr_message( curr, _, "Something went wrong!");
 			return;
 		}
 	}

@@ -4,12 +4,13 @@
 #include "small-scripts/commands/options/options.sma"
 #include "small-scripts/commands/skills/skills.sma"
 
-public command_tweak( const socket )
+public command_tweak( const caller )
 {
-	getTarget( socket, funcidx("target_tweak"), "Select Object to tweak.. " );
+	chr_message(caller, _, "Select Object to tweak.. ");
+	target_create( caller, _, _, _, "target_tweak");
 }
 
-public command_playerlist( const socket )
+public command_playerlist( const caller )
 {
 	new set=set_create();
 	
@@ -17,7 +18,7 @@ public command_playerlist( const socket )
 	
 	new count=set_size(set);
 	if( count==1 ) {
-		nprintf( socket, "No other player connected" );
+		chr_message(caller,_ , "No other player connected" );
 		set_delete(set);
 		return;
 	}
@@ -52,31 +53,34 @@ public command_playerlist( const socket )
 	
 	set_delete(set);
 	
-	gui_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, caller);
 }
 
-public handle_playerlist( const socket, const menu, const button )
+public handle_playerlist( const caller, const menu, const button )
 {
 	if( button==MENU_CLOSED )
 		return;
 		
-	options_char( socket, button );
+	options_char( caller, button );
 }
 
 
 
 
-public command_stats( const socket )
+public command_stats( const caller )
 {
-	getTarget( socket, funcidx("target_stats"), "Select object to inspect.. " );
+	chr_message(caller, _, "Select object to inspect.. " );
+	target_create( caller, _, _, _, "target_stats");
 }
 
-public command_options( const socket )
+public command_options( const caller )
 {
-	getTarget( socket, funcidx("target_options"), "Select object.. " );
+	chr_message(caller, _, "Select object.. ");
+	target_create( caller, _, _, _, "target_options");
 }
 
-public command_skills( const socket )
+public command_skills( const caller )
 {
-	getTarget( socket, funcidx("target_skills"), "Select character.. " );
+	chr_message(caller, _, "Select character.. "); 
+	target_create( caller, _, _, _, "target_skills");
 }

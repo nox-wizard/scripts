@@ -46,6 +46,10 @@
  * <BR><BR>
  */
 
+/*!
+\defgroup script_API script API
+*/
+
 //
 // Include NoX-Wizard small constants
 //

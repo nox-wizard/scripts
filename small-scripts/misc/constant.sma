@@ -10,7 +10,7 @@
 #endif
 #define _nxw_misc_constant_
 
-/*!  \defgroup script_API_constants general constants
+/*!  \defgroup script_API_constants General constants
 *    \ingroup script_API
 * @{
 */

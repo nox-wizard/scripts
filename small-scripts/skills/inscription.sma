@@ -174,5 +174,5 @@ static __inscription_book(const chr, const book)
 public __inscription_cbck( const chr, const pg, const idx )
 {
 	if ( book_array[pg*8+idx] !=0 )
-		__inscription_copy( -1, chr, book_array[pg*8+idx] )
+		__inscription_copy( -1, chr, book_array[pg*8+idx],0,0,0,0,0 )
 }

@@ -15,6 +15,10 @@ enum {
 
 const ALL_RANKS = 2;
 
+/*
+Fax 22-12-2003: commented out to prevent compilation warnings, take out
+comments when you use these variables
+
 static ranks[ALL_RANKS][] = { //rank name
 	"GuildMaster",
 	"Member"
@@ -24,6 +28,7 @@ static rank_priv[ALL_RANKS] = {	//rank privileges
 	PRIV_ALL,
 	PRIV_NONE
 };
+*/
 
 static rank_male_name[ALL_RANKS][] = {	//rank male name
 	"GuildMaster",
@@ -37,7 +42,7 @@ static rank_female_name[ALL_RANKS][] = {	//rank female name
 
 
 
-public _guild_createStandardGuild( const stone, const master )
+public guild_createStd( const stone, const master )
 {
 	new guild = guild_create( stone );
 	

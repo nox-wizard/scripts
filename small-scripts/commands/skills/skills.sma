@@ -1,22 +1,21 @@
 
-public target_skills( const socket, const target, const item )
+public target_skills( const caller, const target, const item )
 {
-	if(socket < 0) 
+	if(!isChar(caller)) 
 		return;
 		
 	if( isChar(target) ) {
-		skills_char( socket, target );
+		skills_char( caller, target );
 	}
-	else nprintf( socket, "Skills work only on character" );
+	else chr_message(caller,_ , "Skills work only on character" );
 
 }
 
 
 
 
-public skills_char( const socket, const chr )
+public skills_char( const caller, const chr )
 {
-	nprintf( socket, "ciao" );
 	new menu = gui_create( 50, 50, true, true, true, "handle_skills_char" );
 	gui_addGump( menu, 0, 0, 0x04CC, 0 );
 //	gui_addBackground( menu, 0x0E14, 128, 128 );
@@ -52,10 +51,10 @@ public skills_char( const socket, const chr )
 		position+=20;
 	}
 	
-	gui_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, caller);
 }
 
-public handle_skills_char( const socket, const menu, const button )
+public handle_skills_char( const caller, const menu, const button )
 {
 	if( button==MENU_CLOSED )
 		return;

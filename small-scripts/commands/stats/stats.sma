@@ -1,20 +1,20 @@
 
-public target_stats( const socket, const target, const item )
+public target_stats( const chr, const target, const item )
 {
-	if(socket < 0) 
+	if(!isChar(chr)) 
 		return;
 		
 	if( isChar(target) ) {
-		stats_char( socket, target, 1 );
+		stats_char( chr, target, 1 );
 	}
 	else if( isItem( item ) ) {
-		stats_item( socket, item, 1 );
+		stats_item( chr, item, 1 );
 	}
-	else nprintf( socket, "stats work only on object" );
+	else chr_message(chr,_ , "stats work only on object" );
 
 }
 
-public stats_char( const socket, const chr, const page )
+public stats_char( const caller, const chr, const page )
 {
 	new menu = gui_create( 50, 50, true, true, true, "handle_stats_char" );
 	gui_addGump( menu, 0, 0, 0x08AC, 0 );
@@ -163,11 +163,11 @@ public stats_char( const socket, const chr, const page )
 		}
 	}
 	
-	gui_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, caller);
 	
 }
 
-public handle_stats_char( const socket, const menu, const button )
+public handle_stats_char( const caller, const menu, const button )
 {
 	if( button==MENU_CLOSED )
 		return;
@@ -175,16 +175,16 @@ public handle_stats_char( const socket, const menu, const button )
 	new chr = gui_getProperty( menu, MP_BUFFER, 1 );
 		
 	if( button>10 ) { //page button
-		stats_char( socket, chr, button-10 );
+		stats_char( caller, chr, button-10 );
 	}
 	else { //apply button, so resend current page
 		chr_teleport( chr );
-		stats_char( socket, chr, gui_getProperty( menu, MP_BUFFER, 3 ) );
+		stats_char( caller, chr, gui_getProperty( menu, MP_BUFFER, 3 ) );
 	}
 	
 }
 
-public handle_stats_item( const socket, const menu, const button )
+public handle_stats_item( const caller, const menu, const button )
 {
 	if( button==MENU_CLOSED )
 		return;
@@ -194,23 +194,23 @@ public handle_stats_item( const socket, const menu, const button )
 	
 	if( button == 1 ) { //apply button
 		chr_teleport( item );
-		stats_item( socket, item, page );
+		stats_item( caller, item, page );
 	}
 	
 	if (button == 2) { // more button
-		nprintf( socket,"Click on a Key" );
-		target_create( getCharFromSocket(socket), item, _, true, "MakeMorePD" );
+		chr_message( caller,_ ,"Click on a Key" );
+		target_create( caller, item, _, true, "MakeMorePD" );
 	}
 		
 	if( button>10 ) { //page button
-		stats_item( socket, item, button-10 );
+		stats_item( caller, item, button-10 );
 	}
 
 	
 }
 
 public MakeMorePD( const target, const chr, const key, const x, const y, const z, const unused, const itemTweaked ){
-	new socket = getSocketFromChar(chr);
+	
 	// nprintf(socket, "target %d, key %d,unused %d, ItemT %d", target, key, unused, itemTweaked);
 	
 	new MoreA = key>>16 ; 
@@ -226,10 +226,10 @@ public MakeMorePD( const target, const chr, const key, const x, const y, const z
 	itm_setProperty(key,IP_MORE,_,MoreA);
 	itm_setProperty(key,IP_MORE,_,MoreB);
 	
-	stats_item( socket, itemTweaked, 4 );
+	stats_item( chr, itemTweaked, 4 );
 }
 
-public stats_item( const socket, const item, const page )
+public stats_item( const caller, const item, const page )
 {
 	new menu = gui_create( 50, 50, true, true, true, "handle_stats_item" );
 	gui_addGump( menu, 0, 0, 0x08AC, 0 );
@@ -385,6 +385,6 @@ public stats_item( const socket, const item, const page )
 	
 	}
 	
-	gui_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, caller );
 }
 

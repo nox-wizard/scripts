@@ -10,15 +10,21 @@
 #endif
 #define _nxw_target_api_
 
+/*! \defgroup script_API_target target handling
+\ingroup script_API
+@{
+*/
+
 /*!
 \brief Create a new target
 \author Endymion
 \since 0.82
 \param chr the character
-\param param1 a param
-\param param2 a param
+\param param1 a param you can freeley use
+\param param2 a param you can freely use
 \param doNow if true target is will be executed
 \param callback the function callback
+\param ... additional paramteres for C style format string to define the callback name
 \return the target serial or INVALID if error
 \fn target_create( const chr, const param1=INVALID, const param2=INVALID, const doNow=true, callback[], ... )
 */
@@ -35,6 +41,7 @@ native target_create( const chr, const param1=INVALID, const param2=INVALID, con
 */
 native target_do( const target, const chr );
 
+/*}@ */
 /*!
 \brief Example of target callback
 \example public callback( const target, const chr, const obj, const x, const y, const z, const model, const param1 )

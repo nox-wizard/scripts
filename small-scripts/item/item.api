@@ -11,7 +11,7 @@
 #define _nxw_item_api_
 
 #include "small-scripts/include/nxw_lib"
-/** \defgroup script_API_item items
+/** \defgroup script_API_item Items
  *  \ingroup script_API
  *  @{
  */

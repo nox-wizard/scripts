@@ -1201,9 +1201,9 @@ public chr_getDirForSee( const chr, const x, const y )
 
 	if (chr_x == x) {
 		if (chr_y > y)
-			return NORTH; // north
+			return DIR_NORTH; // north
 		else
-			return SOUTH; // south
+			return DIR_SOUTH; // south
 	}
 	else
 	{
@@ -1211,26 +1211,26 @@ public chr_getDirForSee( const chr, const x, const y )
 		coef = ( (y - chr_y) * 100 ) / (x - chr_x);
 		if (chr_x < x) // facing east
 			if (coef > 200)
-				return SOUTH;
+				return DIR_SOUTH;
 			else if (coef > 50)
-				return SOUTHEAST;
+				return DIR_SOUTHEAST;
 			else if (coef > -50)
-				return EAST;
+				return DIR_EAST;
 			else if (coef > -200)
-				return NORTHEAST;
-			else return NORTH;
+				return DIR_NORTHEAST;
+			else return DIR_NORTH;
 		else // facing west
 			if (coef > 200)
-				return NORTH;
+				return DIR_NORTH;
 			else if (coef > 50)
-				return NORTHWEST; // south-west
+				return DIR_NORTHWEST; // south-west
 			else if (coef > -50)
-				return WEST; // west
+				return DIR_WEST; // west
 			else if (coef > -200)
-				return SOUTHWEST; // north-west
-			else return SOUTH;
+				return DIR_SOUTHWEST; // north-west
+			else return DIR_SOUTH;
 	}
-	return SOUTH;
+	return DIR_SOUTH;
 }
 
 //=======================  MOVEMENT/POSITION =========================

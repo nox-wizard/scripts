@@ -1,20 +1,20 @@
 
-public target_options( const socket, const target, const item )
+public target_options( const chr, const target, const item )
 {
-	if(socket < 0) 
+	if(!isChar(chr)) 
 		return;
 		
 	if( isChar(target) ) {
-		options_char( socket, target );
+		options_char( chr, target );
 	}
 	else if( isItem( item ) ) {
-		options_item( socket, item );
+		options_item( chr, item );
 	}
-	else nprintf( socket, "Options work only on object" );
+	else chr_message(chr,_ , "Options work only on object" );
 
 }
 
-public options_char( const socket, const chr )
+public options_char( const caller, const chr )
 {
 	new menu = gui_create( 50, 50, true, true, true, "handle_options_char" );
 	gui_addGump( menu, 0, 0, 0x04CC, 0 );
@@ -55,42 +55,41 @@ public options_char( const socket, const chr )
 	gui_addText( menu, 53, 195, _, "Frozen" );
 	gui_addPropField( menu, 103, 195, 30, 30, CP_FROZEN, _, 0 );
 	
-	gui_show( menu, getCharFromSocket(socket) );
+	gui_show( menu, caller);
 }
 
-public handle_options_char( const socket, const menu, const button )
+public handle_options_char( const caller, const menu, const button )
 {
 	if( button==MENU_CLOSED )
 		return;
 		
-	new curr = getCharFromSocket( socket );
 	new chr = gui_getProperty( menu, MP_BUFFER, 1 );
 		
 	switch( button ) {
 		case 1:
-			stats_char( socket, chr, 1 );
+			stats_char( caller, chr, 1 );
 		case 2:
-			tweak_char( socket, chr, 1 );
+			tweak_char( caller, chr, 1 );
 		case 3: {
-			chr_moveTo( chr, chr_getProperty( curr, CP_POSITION, CP2_X ), chr_getProperty( curr, CP_POSITION, CP2_Y ), chr_getProperty( curr, CP_POSITION, CP2_Z ) );
+			chr_moveTo( chr, chr_getProperty( caller, CP_POSITION, CP2_X ), chr_getProperty( caller, CP_POSITION, CP2_Y ), chr_getProperty( caller, CP_POSITION, CP2_Z ) );
 			chr_teleport( chr );
 		}
 		case 4: {
-			chr_moveTo( curr, chr_getProperty( chr, CP_POSITION, CP2_X ), chr_getProperty( chr, CP_POSITION, CP2_Y ), chr_getProperty( chr, CP_POSITION, CP2_Z ) );
-			chr_teleport( curr );
+			chr_moveTo( caller, chr_getProperty( chr, CP_POSITION, CP2_X ), chr_getProperty( chr, CP_POSITION, CP2_Y ), chr_getProperty( chr, CP_POSITION, CP2_Z ) );
+			chr_teleport( caller );
 		}
 		case 5: {
 			if( chr_getProperty( chr, CP_JAILED ) )
-				chr_unjail( curr, chr );
+				chr_unjail( caller, chr );
 			else 
-				chr_jail( curr, chr, 60*60*24 ); // jailed a day for now, need to add a edit
+				chr_jail( caller, chr, 60*60*24 ); // jailed a day for now, need to add a edit
 		}
 	}
 }
 
 
-public options_item( const socket, const item )
+public options_item( const caller, const item )
 {
-	nprintf( socket, "Options on item" );
+	chr_message(caller,_ , "Options on item" );
 }
 

@@ -256,14 +256,14 @@ public isBolt( const id )
 }
 
 
-public isChaosOrOrderShield( const id )
+public isChaosOrderShield( const id )
 {
 	return (id>=0x1BC3 && id<=0x1BC5);
 }
 
 public isShield( const id )
 {
-	return ((id>=0x1B72 && id<=0x1B7B) || isChaosOrOrderShield( id ));
+	return ((id>=0x1B72 && id<=0x1B7B) || isChaosOrderShield( id ));
 }
 
 public isLog( const id ) 
