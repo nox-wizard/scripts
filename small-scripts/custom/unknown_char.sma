@@ -43,7 +43,7 @@ both combined should be unique even when the char is deleted later*/
 	if(chr_isaLocalVar( viewerchr, UNKNOWN_CHAR_VAR, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
         {
         	chr_addLocalIntVar( viewerchr, UNKNOWN_CHAR_VAR, char_unknown_map );
-        	printf("char %d got 'unknown char system' var %d^n", viewerchr, UNKNOWN_CHAR_VAR);
+        	log_message("char %d got 'unknown char system' var %d^n", viewerchr, UNKNOWN_CHAR_VAR);
         }
         if((chr_isaLocalVar( viewerchr, UNKNOWN_CHAR_VAR, VAR_TYPE_STRING ) == 1)) //there already is a string variable (shouldn't happen)
         {
@@ -59,7 +59,7 @@ both combined should be unique even when the char is deleted later*/
         }
         else if( (polycheck != 1) && (chr_isaLocalVar( viewerchr, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 0) && (strcmp(tempStr, msg_chrUnknownDef[0])) ) //char is not polymorph, chars name is not "unknown" and string var does not exist -> create it
         {
-        	printf("now set char original name to: %s^n", tempStr);
+        	log_message("now set char original name to: %s^n", tempStr);
         	chr_addLocalStrVar( viewerchr, UNKNOWN_CHAR_NAME, tempStr );
         }
         
@@ -76,7 +76,7 @@ both combined should be unique even when the char is deleted later*/
         		log_error("This previous event function was %s^n", tempStr);
         	}
         	chr_setEventHandler(viewerchr, 28, EVENTTYPE_STATIC, "unknown_sglclick");
-        	printf("added singleclick event^n");
+        	log_message("added singleclick event^n");
         }
         //add ondoubleclick event to the char
         chr_getEventHandler(viewerchr, 41, tempStr);
@@ -89,7 +89,7 @@ both combined should be unique even when the char is deleted later*/
         		log_error("This previous event function was %s^n", tempStr);
         	}
         	chr_setEventHandler(viewerchr, 41, EVENTTYPE_STATIC, "unknown_sglclick");
-        	printf("added doubleclick event^n");
+        	log_message("added doubleclick event^n");
         }
                 
         //add onhearplayer event to the char
@@ -103,7 +103,7 @@ both combined should be unique even when the char is deleted later*/
         		log_error("This previous event function was %s^n", tempStr);
         	}
         	chr_setEventHandler(viewerchr, 32, EVENTTYPE_STATIC, "unknown_hearPl");
-        	printf("added hearplayer event^n");
+        	log_message("added hearplayer event^n");
 
         }
         
@@ -118,7 +118,7 @@ both combined should be unique even when the char is deleted later*/
         		log_error("This previous event function was %s^n", tempStr);
         	}
         	chr_setEventHandler(viewerchr, 35, EVENTTYPE_STATIC, "unknown_speech");
-        	printf("added speech event^n");
+        	log_message("added speech event^n");
 
         }
 }
@@ -168,8 +168,12 @@ public stop_unknown_char(const viewerchr)
 
 public unknown_speech(const speaker)
 {
-	printf("enter unknown-speech^n");
+	log_message("enter unknown-speech^n");
 	new tempStr[100];
+	new tempStr2[256];
+	chr_getProperty(speaker,CP_STR_NAME,0,tempStr);
+	chr_getProperty(speaker, CP_UNI_SPEECH_CURRENT,_,tempStr2);
+	log_message("char %d heisst %s und sagte gerade: %s^n", speaker, tempStr, tempStr2);
 	if(chr_isaLocalVar( speaker, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 1 ) //1 means there is a var at globalVar
 	{
 		chr_getLocalStrVar( speaker, UNKNOWN_CHAR_NAME, tempStr); //now replace recent char name in tempStr with real name speaker char, if we have this one
@@ -179,15 +183,21 @@ public unknown_speech(const speaker)
 
 public unknown_hearPl(const listener, const speaker)
 {
-	new tempStr[100];
+	if(chr_isNpc(speaker))
+	{
+		return;
+	}
+	new tempStr2[256];
+	new tempStr[50];
+	new tempStr3[256];
 	chr_getProperty(listener, CP_STR_ACCOUNT, _,tempStr);
 	new charmap = chr_getLocalIntVar( listener, UNKNOWN_CHAR_VAR);
 	new polycheck = chr_getProperty(listener, CP_POLYMORPH);
-	printf("enter unknown-hear^n");
+	log_message("enter unknown-hear^n");
         //emergency: what happens if we don't have the originals char name for checking because the char was polymorphed at login? Well, only chance is we try to get every single/double-click its real name again ...
         if( (polycheck != 1) && (chr_isaLocalVar( listener, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 0) && (strcmp(tempStr, msg_chrUnknownDef[0])) ) //char is not polymorph, chars name is not "unknown" and string var does not exist -> create it
         {
-        	printf("now set char original name to: %s^n", tempStr);
+        	log_message("now set char original name to: %s^n", tempStr);
         	chr_addLocalStrVar( listener, UNKNOWN_CHAR_NAME, tempStr );
         }
 	
@@ -199,7 +209,7 @@ public unknown_hearPl(const listener, const speaker)
 		if(chr_isaLocalVar( speaker, UNKNOWN_CHAR_NAME, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
 		{
 			chr_addLocalStrVar( speaker, UNKNOWN_CHAR_NAME, tempStr );
-			printf("char %d got 'unknown char system' var %d^n", speaker, UNKNOWN_CHAR_NAME);
+			log_message("char %d got 'unknown char system' var %d^n", speaker, UNKNOWN_CHAR_NAME);
 		}
 		if((chr_isaLocalVar( speaker, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER ) == 1)) //there already is a integer variable (shouldn't happen)
 		{
@@ -214,17 +224,42 @@ public unknown_hearPl(const listener, const speaker)
 	}
 		
 	new status = getResourceStringValue(charmap, tempStr);
-
+	
 	//if ((chr_isNpc(speaker)) || (listener == speaker) || (chr_isGMorCns(listener)) || (chr_isGMorCns(speaker)))
 	if (listener == speaker)
+	{
 		status=1;
-	printf("listener is: %d, speaker is: %d, status: %d^n^n", listener, speaker, status);	
-	//printf("char listener is: %d and status towards %s is: %d^n", listener, tempStr, status);
+		log_message("listener is: %d, speaker is: %d, status: %d^n^n", listener, speaker, status);
+		return;
+	}
+	
+	log_message("listener is: %d, speaker is: %d, status: %d^n^n", listener, speaker, status);
+
+	new token[50];
+	chr_getProperty(speaker, CP_UNI_SPEECH_CURRENT,_,tempStr2);
+	log_message("char %d heißt gerade %s und %d hat gehört: %s^n", speaker, tempStr, listener, tempStr2);
+	trim(tempStr2);
+	str2Token(tempStr2,token,0,tempStr2,0);
+	log_message("token ist: %s^n", token);
+	trim(tempStr2);
+	//log_message("char listener is: %d and status towards %s is: %d^n", listener, tempStr, status);
+	
 			
+	if( status == -1)
+		sprintf(tempStr3, "%s: %s",msg_chrUnknownDef[0],token);
+	else
+	{
+		sprintf(tempStr3, "%s: %s",tempStr,token);
+	}
+	log_message("NACH check: char %d heißt gerade %s und %d sollte nun hören: %s^n", speaker, tempStr, listener, tempStr3);
+	chr_setProperty(speaker,CP_UNI_SPEECH_CURRENT,_,tempStr3);
+	
+	/*
 	if( status == -1)
 		chr_setProperty(speaker,CP_STR_NAME,0,msg_chrUnknownDef[0]);
 	else
 		chr_setProperty(speaker,CP_STR_NAME,0,tempStr);
+	chr_speech(speaker, listener, _, _, _, tempStr2);*/
 }
 
 public unknown_sglclick(const clicked, const viewer)
@@ -237,7 +272,7 @@ public unknown_sglclick(const clicked, const viewer)
         //emergency: what happens if we don't have the originals char name for checking because the char was polymorphed at login? Well, only chance is we try to get every single/double-click its real name again ...
         if( (polycheck != 1) && (chr_isaLocalVar( viewer, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 0) && (strcmp(tempStr, msg_chrUnknownDef[0])) ) //char is not polymorph, chars name is not "unknown" and string var does not exist -> create it
         {
-        	printf("now set char original name to: %s^n", tempStr);
+        	log_message("now set char original name to: %s^n", tempStr);
         	chr_addLocalStrVar( viewer, UNKNOWN_CHAR_NAME, tempStr );
         }
 	
@@ -249,7 +284,7 @@ public unknown_sglclick(const clicked, const viewer)
 		if(chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
 		{
 			chr_addLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr );
-			printf("char %d got 'unknown char system' var %d^n", clicked, UNKNOWN_CHAR_NAME);
+			log_message("char %d got 'unknown char system' var %d^n", clicked, UNKNOWN_CHAR_NAME);
 		}
 		if((chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER ) == 1)) //there already is a integer variable (shouldn't happen)
 		{
@@ -267,8 +302,9 @@ public unknown_sglclick(const clicked, const viewer)
 	//if ((chr_isNpc(clicked)) || (viewer == clicked) || (chr_isGMorCns(viewer)) || (chr_isGMorCns(clicked)))
 	if (viewer == clicked)
 		status=1;
-		printf("Enter single/double click, viewer is: %d, clicked is: %d, status: %d^n^n", viewer, clicked, status);
-			
+	
+	log_message("Enter single/double click, viewer is: %d, clicked is: %d, status: %d^n^n", viewer, clicked, status);
+	
 	if( status == -1)
 		chr_setProperty(clicked,CP_STR_NAME,0,msg_chrUnknownDef[0]);
 	else
@@ -288,7 +324,7 @@ public introduce_name_targ(target, viewer, clicked, x, y, z, unused, param)
 	new charmap = chr_getLocalIntVar( clicked, UNKNOWN_CHAR_VAR);
 	chr_getProperty(viewer, CP_STR_NAME, _,tempStr); //here we better use the RECENT name of the introducing char to prevent name check exploit
 	new status = getResourceStringValue(charmap, tempStr);
-	//printf("%s status towards target is: %d", tempStr, status);
+	//log_message("%s status towards target is: %d", tempStr, status);
 	if( status == -1)
 	{
 		setResourceStringValue(charmap, 1, tempStr ); //store introducing at targets map
@@ -302,5 +338,5 @@ public introduce_name_targ(target, viewer, clicked, x, y, z, unused, param)
 
 public delete_char()
 {
-	printf("bla");
+	log_message("bla");
 }
