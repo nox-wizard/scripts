@@ -115,7 +115,7 @@ native chr_getSpeech(const chr, speech[], no_command = true)
 \brief sets the post type atmessage boards for character
 \return nothing
 */
-native chr_setPostTypee( const chr,const PostType )
+native chr_setPostType( const chr,const PostType )
 
 //============================= PRIVS ===============================
 /** \defgroup script_API_character_privs Privileges
