@@ -11,6 +11,19 @@
 1=__anatomy_target,AFTER
 
 [skills]
+46=__meditation,BYPASS
+38=__nxw_sk_tracking,BYPASS
+49=__nxw_sk_lumber,BYPASS
+2=__nxw_sk_anatomy,BYPASS
+17=__nxw_sk_evint,BYPASS
+24=__nxw_sk_inscript,BYPASS
+50=__nxw_sk_mining,BYPASS
+37=__nxw_sk_tasteid,BYPASS
+34=__nxw_sk_tailoring,BYPASS
+35=__nxw_sk_taming,BYPASS
+18=__nxw_sk_fishing,BYPASS
+21=__nxw_sk_hiding, BYPASS
+14=__nxw_sk_dtchidden, BYPASS
 
 [triggers]
 
@@ -19,11 +32,13 @@
 [magiccast]
 
 [special]
-StartChar=itm_potionStart,AFTER
+StartChar=_charlogin,AFTER
 
 [networkrcv]
 
 [speech]
++=bla_char,BEFORE
+
 
 
 
