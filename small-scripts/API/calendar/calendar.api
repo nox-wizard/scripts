@@ -1,0 +1,23 @@
+#if defined _nxw_calendar_api_
+    #endinput
+#endif
+#define _nxw_calendar_api_
+
+/** \defgroup script_API_calendar Calendar
+ *  \ingroup script_API
+ *  @{
+ */
+
+
+/*!
+\fn cal_getProperty(const property, const subprop=0, ...)
+\brief get any calendar property
+\author Sparhawk
+\since 0.54b
+\return the property
+\param property the property we want to know the value
+\param subprop actually unused
+*/
+native cal_getProperty(const property, const subprop=0, ...);
+
+/** @} */ // end of script_API_calendar

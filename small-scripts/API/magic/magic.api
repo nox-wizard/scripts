@@ -1,0 +1,138 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_magic_api_
+  #endinput
+#endif
+#define _nxw_magic_api_
+
+/** \defgroup script_API_magic Magic
+ *  \ingroup script_API
+ *  \todo specific function call magic_cast
+ *  @{
+ */
+
+/*!
+\author Endymion
+\fn magic_cast(const chr_caster, const chr_target, const spell)
+\brief
+*/
+native magic_cast(const chr_caster, const chr_target, const spell);
+
+/*!
+\author Xanathar
+\fn magic_castField(const chr_caster, const x, const y, const z, const fieldtype)
+\brief
+*/
+native magic_castField(const chr_caster, const x, const y, const z, const fieldtype);
+
+/*!
+\author Xanathar
+\fn magic_chkSpellbook(const itm_spellbook,const circle, const spell)
+\brief
+*/
+native magic_chkSpellbook(const itm_spellbook,const circle, const spell);
+
+/*!
+\author Xanathar
+\fn magic_chkMagicRef(&chr_attacker, &chr_defender)
+\brief
+*/
+native magic_chkMagicRef(&chr_attacker, &chr_defender);
+
+/*!
+\author Xanathar
+\fn magic_chkMana(const chr_caster, const spell_number)
+\brief
+*/
+native magic_chkMana(const chr_caster, const spell_number);
+
+/*!
+\author Xanathar
+\fn magic_castExplosion(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castExplosion(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castClumsy(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castClumsy(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castCurse(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castCurse(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castFeeblem(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castFeeblem(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castFireball(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castFireball(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castFlameStr(const chr_att, const chr_def, const ignored=1)
+\brief
+*/
+native magic_castFlameStr(const chr_att, const chr_def, const ignored=1);
+
+/*!
+\author Xanathar
+\fn magic_castHarm(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castHarm(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castMagicArr(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castMagicArr(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castLightning(const chr_att, const chr_def, const ignored=1)
+\brief
+*/
+native magic_castLightning(const chr_att, const chr_def, const ignored=1);
+
+/*!
+\author Xanathar
+\fn magic_castMindBlast(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castMindBlast(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castParalyze(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castParalyze(const chr_att, const chr_def, const use_mana=1);
+
+/*!
+\author Xanathar
+\fn magic_castWeaken(const chr_att, const chr_def, const use_mana=1)
+\brief
+*/
+native magic_castWeaken(const chr_att, const chr_def, const use_mana=1);
+
+/** @} */ // end of script_API_menu

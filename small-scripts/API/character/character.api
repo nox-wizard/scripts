@@ -1,0 +1,2341 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Luxor, Sparhawk				||
+// || Last Update	: 06-apr-2003					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+#if defined _nxw_character_api_
+  #endinput
+#endif
+#define _nxw_character_api_
+#define OK 0 //to be moved in nxw_lib
+#include "small-scripts/include/nxw_lib"
+
+/** \defgroup script_API_character Character
+ *  \ingroup script_API
+ *  @{
+ */
+ 
+/*!
+\author Endymion
+\fn isChar( const serial )
+\param serial the serial
+\brief Check if a serial is a char serial
+
+checks the character's serial to be between FIRST_CHAR_SERIAL and FIRST_ITEM_SERIAL 
+\note INVALID return false
+\return true if is a char serial, false else
+*/
+stock isChar( const serial ) {
+	return ( ( serial>=FIRST_CHAR_SERIAL ) && ( serial<FIRST_ITEM_SERIAL ) ); 
+}
+
+
+//====================== PROPERTIES INTERFACE  ============================
+/*!
+\author Xanathar
+\fn chr_getProperty(const chr, const property, const subprop=0, ...)
+\param chr the character we want to get a property from
+\param property the property we want to read
+\param subprop the subproperty we want to read 
+\param ... optional parameter, needed for some kind of properties
+\brief gets a character's property
+
+With this function you can get the value of a character's property.
+Some properies are splitted into subproperies, when reading these properties you
+must specify what subproperty you need, else subproperty 0 is returned.
+Use the CP_* constants for addressing properties, CP2_* constants
+for addressing subproperties
+*/
+native chr_getProperty(const chr, const property, const subprop=0, ...);
+
+/*!
+\author Xanathar
+\fn chr_setProperty(const chr, const property, const subprop=0, ...)
+\param chr the character we want to set a property to
+\param property the property we want to set
+\param subprop the subproperty we want to set. 
+\param 5  the value we want the property to be set to
+\param 6 other subproperties
+\brief sets a character's property
+
+With this function you can set the value of a charachter's property.
+Rules for subproperties addressing are the same as for chr_getProperty.
+You MUST always specify the subproperty, in the case of properties without subproperties,
+pass 0 (underscore) as the subproperty parameter.
+Not all properties are settable, pay attention on this, as may lead to hard-to-find errors,
+the properties list shows if a property is settable or not.
+Use the CP_* constants for addressing properties, CP2_* constants
+for addressing subproperties
+*/
+native chr_setProperty(const chr, const property, const subprop=0, ...);
+
+
+//============================= PRIVS ===============================
+/** \defgroup script_API_character_privs Privileges
+ *  @{
+\brief these functions are helpers provided to safely read,check and set the priv flag
+
+The priv flag provides information about some character's privileges, bitfields are:
+- 0x01: GM clearance, the character is a GM
+- 0x02: can broadcast, the character can send broadcast messages
+- 0x04: Invulnerable, the character is invulnerable
+- 0x08: single click serial numbers, character can see serial numbers by clicking objects
+- 0x10: Don't show skill titles
+- 0x20: GM Pageable, the GM cab receive pages
+- 0x40: Can snoop others packs, the bcharacter can snoop
+- 0x80: Counselor clearance, the charcater is counselor
+ */
+/*!
+\author Xanathar
+\fn chr_getPriv(const chr)
+\param chr the character
+\brief gets the priv flags 
+\return the priv flags (8-bit number)
+*/
+native chr_getPriv(const chr);
+
+/*!
+\author Xanathar
+\fn chr_setPriv(const chr, const priv)
+\param chr the character
+\param priv the priv flags
+\brief sets the priv flags of a character
+
+You can set the priv flag as follows:
+(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_*)
+where PRIV_* is the priv flag you want to set
+
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_setPriv(const chr, const priv);
+
+/*!
+\author Xanathar
+\fn chr_isGM(const chr)
+\param chr the character
+\brief check if charcter is GM
+
+GMs can be restricted to a a region, in this case the function returns false,
+use chr_isTrueGM to check if the character is GM independently from retrictions
+\see CP_GMRESTRICT
+\return true if character is GM
+*/
+native chr_isGM(const chr);
+
+/*!
+\author Xanathar
+\fn chr_isTrueGM(const chr)
+\param chr the character
+\brief check  if character is true GM
+
+This function does'n see restriction, it returns true if the PRIV_GMCLEARANCE flag
+is true
+\return true if character is true GM
+*/
+native chr_isTrueGM(const chr);
+
+/*!
+\author Fax
+\fn chr_makeGM(const chr)
+\param chr the character
+\brief makes a character GM
+
+This function sets the PRIV_GMCLEARANCE flag, to set GM restriction use CP_GMRESTRICT
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_makeGM(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_ISGM);
+	return OK;
+}
+
+/*!
+\author Xanathar
+\fn chr_canBroadcast(const chr)
+\param chr the character
+\brief returns true if a character can send broadcast messages
+*/
+native chr_canBroadcast(const chr);
+
+/*!
+\author Fax
+\fn chr_setBroadcast(const chr)
+\param chr the character
+\brief makes a character able to broadcast
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_setBroadcast(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_CANBROADCAST);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_resetBroadcast(const chr)
+\param chr the character
+\brief stops broadcasting ability
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_resetBroadcast(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_CANBROADCAST);
+	return OK;
+}
+
+/*!
+\author Xanathar
+\fn chr_isInvul(const chr)
+\param chr the character
+\brief check if charcter is invul
+\return true if character is invul
+*/
+native chr_isInvul(const chr);
+
+/*!
+\author Xanathar
+\fn chr_makeInvul(const chr)
+\param chr the character
+\brief makes a character invulnerable
+
+makes a character invulnerable, wich means:
+   - character can't lose HP
+   - character can't die (even with 0 HP)
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_makeInvul(const chr);
+
+/*!
+\author Xanathar
+\fn chr_makeVulnerable(const chr)
+\param chr the character
+\brief makes a character vulnerable
+
+A vulnerable character can loose HP and die
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_makeVulnerable(const chr);
+
+/*!
+\author Xanathar
+\fn chr_canSeeSerials(const chr)
+\param chr the character
+\brief returns true if the character can see serial numbers
+*/
+native chr_canSeeSerials(const chr);
+
+/*!
+\author Fax
+\fn chr_showSerials(const chr)
+\param chr the character
+\brief makes a character see the serials with left click
+\return OK or INVALID if chr is not a valid character serial, ot if char is not GM
+*/
+stock chr_showSerials(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_CANSEESERIALS);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_hideSerials(const chr)
+\param chr the character
+\brief makes a character unable to see serials by left click
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_hideSerials(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_CANSEESERIALS);
+	return OK;
+}
+
+/*!
+\author Xanathar
+\fn chr_isGMPageable(const chr)
+\param chr the character
+\brief check  if a GM is pageable
+\return true if the GM is pageable
+*/
+stock chr_isGMPageable(const chr)
+{
+	if(!isChar(chr) || !chr_isTrueGM(chr)) return 0;
+	return chr_getProperty( chr, CP_PRIV) & PRIV_ISGMPAGEABLE;	
+}
+
+/*!
+\author Fax
+\fn chr_makeGMpageable(const chr)
+\param chr the character
+\brief makes a GM pageable
+\return OK or INVALID if chr is not a valid character serial, or if char is not GM
+*/
+stock chr_makeGMPageable(const chr)
+{
+	if(!isChar(chr) || !chr_isTrueGM(chr)) return INVALID;
+	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_ISGMPAGEABLE);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_makeGMUnpageable(const chr)
+\param chr the character
+\brief makes a GM unpageable
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_makeGMUnpageable(const chr)
+{
+	if(!isChar(chr) || !chr_isTrueGM(chr)) return INVALID;
+	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_ISGMPAGEABLE);
+	return OK;
+}
+
+/*!
+\author Xanathar
+\fn chr_canSnoop(const chr)
+\param chr the character
+\brief returns true if the character can snoop everywhere and always
+*/
+native chr_canSnoop(const chr);
+
+/*!
+\author Fax
+\fn chr_setCanSnoop(const chr)
+\param chr the character
+\brief makes the character able to snoop everywhere and always
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_setCanSnoop(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_CANSNOOP);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_resetCanSnoop(const chr)
+\param chr the character
+\brief removes snoop ability
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_resetCanSnoop(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_CANSNOOP);
+	return OK;
+}
+
+/*!
+\author Xanathar
+\fn chr_isCounselor(const chr)
+\param chr the character
+\brief check if character is counselor
+\return true if character is couselor
+*/
+native chr_isCounselor(const chr);
+
+/*!
+\author Fax
+\fn chr_makeCounselor(const chr)
+\param chr the character
+\brief makes a character counselor
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_makeCounselor(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_ISCOUNSELOR);
+	return OK;
+}
+
+/*!
+\author Xanathar
+\fn chr_isGMorCns(const chr)
+\param chr the character
+\brief check if character is GM or counselor
+\return true if character is GM or couselor
+*/
+native chr_isGMorCns(const chr);
+
+/*!
+\author Fax
+\fn chr_makePlayer(const chr)
+\param chr the character
+\brief makes a GM or Counselor a player
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_makePlayer(const chr)
+{ 
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~(PRIV_ISGM + PRIV_ISCOUNSELOR));
+	return OK;
+}
+
+
+/*!
+\brief Prints a message of given color to the given character
+\author Endymion
+\fn chr_message( const chr, const color=0x0387, const format[], ... )
+\param chr the player
+\param color the color
+\param format the message
+*/
+native chr_message( const chr, const color=0x0387, const format[], ... );
+
+
+
+
+/** @} */
+//============================  PRIV2  ================================
+/** \defgroup script_API_character_priv2 privileges2
+ *  @{
+\brief these functions provide helpers to set\get\check the priv2 flag.
+The priv2 flag is an 8bit flag, bitfields are:
+     - 0x01: Allmove (??)
+     - 0x02: frozen, charcater won't be able to move, cast ..
+     - 0x04: View houses as icons
+     - 0x08: permanently hidden, character can't be unhidden
+     - 0x10: no need mana, charcater doesn't need mana to cast
+     - 0x40: permanent magic reflect
+     - 0x80: no need reagents, character doesn't neeed reagents to cast
+*/
+
+/*!
+\author Fax
+\fn chr_getPriv2(const chr)
+\param chr the character
+\brief gets the priv2 flag
+\return 8bit priv2 flag
+*/
+stock chr_getPriv2(const chr)
+{
+	return chr_getProperty( chr, CP_PRIV2 );
+}
+
+/*!
+\author Fax
+\fn chr_setPriv2(const chr, const priv2)
+\param chr the character
+\param priv2 the priv2 flag
+\brief sets the priv2 flag
+\return OK or INVALID if chr is not a valid character
+*/
+stock chr_setPriv2(const chr, const priv2)
+{
+	return chr_getProperty( chr, CP_PRIV2, _, priv2 );
+}
+
+/*!
+\author Endymion, modified by Fax
+\fn chr_isFrozen(const chr)
+\param chr the character
+\brief Check if character is frozen
+\note this is an helper function that calls chr_getProperty( chr, CP_FROZEN )
+\return true if charcater is frozen
+*/
+stock chr_isFrozen(const chr) 
+{
+	return (chr_getProperty( chr, CP_PRIV2 ) & PRIV2_FROZEN) != 0;
+}
+
+/*!
+\author Fax
+\fn chr_freeze(const chr)
+\param chr the character
+\brief freezes a character
+
+Character won't be able to move, cast ...
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_freeze(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_FROZEN);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_unfreeze(const chr)
+\param chr the character
+\brief unfreezes a character
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_unfreeze(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) & ~PRIV2_FROZEN);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_isPermahidden(const chr)
+\param chr the character
+\brief check if a character is permanently hidden
+\return true if character is permanently hidden
+*/
+stock chr_isPermahidden(const chr)
+{
+	return (chr_getProperty( chr, CP_PRIV2) & PRIV2_PERMAHIDDEN) != 0;
+}
+
+/*!
+\author Fax
+\fn chr_permahide(const chr)
+\param chr the character
+\brief sets a character permanently hidden
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_permahide(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_PERMAHIDDEN);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_unpermahide(const chr)
+\param chr the character
+\brief reset the permahidden status, character is no more permanently hidden
+\note the character is not unhidden
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_unpermahide(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) & ~PRIV2_PERMAHIDDEN);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_needsMana(const chr)
+\param chr the character
+\brief check if a character needs mana to cast
+\return true if character needs mana to cast
+*/
+stock chr_needsMana(const chr)
+{
+	return (chr_getProperty( chr, CP_PRIV2) & PRIV2_NONEEDMANA) == 0;
+}
+
+/*!
+\author Fax
+\fn chr_doesntNeedMana(const chr)
+\param chr the character
+\brief makes a character not to need mana to cast
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_doesntNeedMana(const chr) 
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_NONEEDMANA);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_mustUseMana(const chr)
+\param chr the character
+\brief the character will need mana to cast
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_mustUseMana(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) & ~PRIV2_NONEEDMANA);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_isDispellable(const chr)
+\param chr the character
+\brief check if a character is dispellable
+\return true if character is dispellable
+*/
+stock chr_isDispellable(const chr)
+{
+	return (chr_getProperty( chr, CP_PRIV2) & PRIV2_DISPELLABLE) != 0;
+}
+
+/*!
+\author Fax
+\fn chr_makeDispellable(const chr)
+\param chr the character
+\brief makes a character dispellable
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_makeDispellable(const chr) 
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_DISPELLABLE);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_notDispellable(const chr)
+\param chr the character
+\brief the character will not be dispellable
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_notDispellable(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) & ~PRIV2_DISPELLABLE);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_hasPermaReflect(const chr)
+\param chr the character
+\brief check if a character has permanent magic reflect
+\return true if character has permanent magic reflect
+*/
+stock chr_hasPermaReflect(const chr)
+{
+	return (chr_getProperty( chr, CP_PRIV2) & PRIV2_PERMAMAGICREFLECT) != 0;
+}
+
+/*!
+\author Fax
+\fn chr_setPermaReflect(const chr)
+\param chr the character
+\brief puts permanent magic reflect on a character
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_setPermaReflect(const chr) 
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_PERMAMAGICREFLECT);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_noPermaReflect(const chr)
+\param chr the character
+\brief stops permanent magic reflect from a character
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_noPermaReflect(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) & ~PRIV2_PERMAMAGICREFLECT);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_needsReags(const chr)
+\param chr the character
+\brief check if a character needs reagents to cast
+\return true if character needs reagents to cast
+*/
+stock chr_needsReags(const chr)
+{
+	return (chr_getProperty( chr, CP_PRIV2) & PRIV2_NONEEDREAGS) == 0;
+}
+
+/*!
+\author Fax
+\fn chr_doesntNeedReags(const chr)
+\param chr the character
+\brief character won't need reagents to cast
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_doesntNeedReags(const chr) 
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_NONEEDREAGS);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_mustUseReags(const chr)
+\param chr the character
+\brief character will need reagents to cast
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_mustUseReags(const chr)
+{
+	if(!isChar(chr)) return INVALID;
+	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) & ~PRIV2_NONEEDREAGS);
+	return OK;
+}
+
+/** @} */
+//============================  FLAGS  ================================
+/** \defgroup script_API_character_flags flags
+ *  @{
+ */
+/*
+Flag is an 8bit number containing information about reputation status, bitfields are:
+    - 0x1: red 
+    - 0x2: grey 
+    - 0x4: Blue 
+    - 0x8: green 
+    - 0x10: Orange
+*/
+
+/*!
+\author Fax
+\fn chr_getFlag(const chr)
+\param chr the character
+\brief gets character flag
+\note a chr_setFlag function is not provided as the flag must hav only 1 bit set at a time
+\return the 8bit character flag
+*/
+stock chr_getFlag(const chr)
+{
+	return chr_setProperty( chr, CP_FLAG);
+}
+
+/*!
+\author Xanathar
+\fn chr_isCriminal(const chr)
+\param chr the character
+\brief check if character is criminal
+\return true if character is criminal
+*/
+native chr_isCriminal(const chr);
+
+/*!
+\author Xanathar
+\fn chr_setCriminal(const chr)
+\param chr the character
+\brief sets a character criminal
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_setCriminal(const chr);
+
+/*!
+\author Xanathar
+\fn chr_isGrey(const chr)
+\param chr the character
+\brief check if character is grey
+\return true if character is grey
+*/
+native chr_isGrey(const chr);
+
+/*!
+\author Xanathar
+\fn chr_setGrey(const chr)
+\param chr the character
+\brief sets a character grey
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_setGrey(const chr);
+
+/*!
+\author Xanathar
+\fn chr_setPermaGrey(const chr)
+\param chr the character
+\brief sets a character permagrey
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_setPermaGrey(const chr);
+
+/*!
+\author Xanathar
+\fn chr_isInnocent(const chr)
+\param chr the character
+\brief charck if charcacter is innocent
+\return true if character is innocent
+*/
+native chr_isInnocent(const chr);
+
+/*!
+\author Xanathar
+\fn chr_setInnocent(const chr)
+\param che the character
+\brief sets a character innocent
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_setInnocent(const chr);
+
+/*!
+\author Xanathar
+\fn chr_isMurderer(const chr)
+\param chr the character
+\brief check if character is murderer
+\return true if character is murderer
+*/
+native chr_isMurderer(const chr);
+
+/*!
+\author Xanathar
+\fn chr_setMurderer(const chr)
+\param che the character
+\brief sets a character murderer
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_setMurderer(const chr);
+
+/** @} */
+//===================================  RACES  ======================
+/** \defgroup script_API_character_races races
+ *  @{
+ */
+/*!
+\author Luxor
+\fn chr_isNpc(const chr)
+\param chr the character
+\brief checks if a character is an NPC
+
+An NPC (Non Playing Character) is a character controlled by the server, he acts
+following a particular AI (Artificial Intelligence) that defines NPC's decisions
+\return true if character is NPC
+*/
+stock chr_isNpc (const chr)
+{
+	return chr_getProperty(chr, CP_NPC);
+}
+
+/*!
+\author Fax
+\fn chr_isPlayer(const chr)
+\param chr the character
+\brief checks if a character is a playing character
+\return true if character is a player
+*/
+stock chr_isPlayer(const chr)
+{
+	return !chr_getProperty(chr, CP_NPC);
+}
+
+/*!
+\author Xanathar
+\fn chr_isHuman(const chr)
+\param chr the character
+\brief check if character is human
+\note the check is not on RACE, is on BODY
+\return true if character has human body
+*/
+native chr_isHuman(const chr);
+
+/*!
+\author Luxor
+\fn chr_isUndead(const chr)
+\param chr the character
+\brief checks if a character is an undead
+\return true if character is an undead
+*/
+stock chr_isUndead (const chr)
+{
+	return ( chr_getProperty(chr, CP_NPCRACE) == 1 );
+}
+/** @} */
+//=====================  JAIL  =========================
+
+/*!
+\author Endymion
+\fn chr_jail( const jailer, const player, const seconds )
+\param jailer the jailer
+\param player the player to be jailed
+\param seconds how long the player will be jailed, in seconds
+\brief Jail the given player
+\note if seconds is 0 and player is jailed, player is released
+*/
+native chr_jail( const jailer, const player, const seconds );
+
+/*!
+\author Endymion
+\fn chr_unjail( const releaser, const player )
+\param releaser the releaser
+\param player the player to be released
+\brief Release the given player from jail
+\note this is an hlper functions that calls chr_jail( releaser, player, 0 )
+*/
+stock chr_unjail( const releaser, const player ) {
+	chr_jail( releaser, player, 0 );
+}
+
+//=========================  CHARACTER's ITEMS  ======================
+/** \defgroup script_API_character_items Character's items
+ *  @{
+ */
+/*!
+\author Xanathar
+\fn chr_countBankGold(const chr)
+\param chr the character
+\brief counts the bank gold of a player
+\return the gold amount or INVALID if chr is not a valid character serial
+*/
+native chr_countBankGold(const chr);
+
+/*!
+\author Xanathar
+\fn chr_countGold(const chr)
+\param chr the character
+\brief counts the gold in character's backpack
+\return the gold amount or INVALID if chr is not a valid character serial
+*/
+native chr_countGold(const chr);
+
+/*!
+\author Xanathar
+\fn chr_countItems(const chr, const itemtype, const color = -1)
+\param chr the character
+\param itemtype the item ID
+\param color the color of the items that should be counted
+\brief counts the items of the specified type and color (if specified) in the character's backpack
+*/
+native chr_countItems(const chr, const itemtype, const color = -1);
+
+/*!
+\author Xanathar
+\fn chr_getBankBox(const chr, const bankboxtype)
+\param chr tha character
+\param bankboxtype ??
+\brief ??
+*/
+native chr_getBankBox(const chr, const bankboxtype);
+
+/*
+\fn chr_getBackpack( const chr, const createIfNotExist = false )
+\author Endymion
+\param chr the character
+\param createIfNotExist if true backpack is created if not exist
+\brief get the backpack of given character
+\return backpack item or INVALID if not valid char or haven't backpack
+*/
+native chr_getBackpack( const chr, const createIfNotExist = false );
+
+/*!
+\author Xanathar
+\fn chr_getItemOnLayer(const chr, const layer)
+\param chr the character
+\param layer the layer the item sould be on
+\brief returns the item equipped by the character on the specified layer
+TODO: add layer list link
+\return the item serial or INVALID if layer is empty
+*/
+native chr_getItemOnLayer(const chr, const layer);
+
+/*!
+\author Xanathar
+\fn chr_getShield(const chr)
+\param chr the character
+\brief get the shield item of the character
+\return the shield's serial or INVALID
+*/
+native chr_getShield(const chr);
+
+/*!
+\author Xanathar
+\fn chr_getWeapon(const chr)
+\param chr the character
+\brief get the weapon item held by the character
+\return the weapon's serial or INVALID
+*/
+native chr_getWeapon(const chr);
+
+//TODO: add helpers to get other layer's items
+/** @} */
+//===================  ACTIONS ===========================
+/** \defgroup script_API_character_sctions Actions
+ *  @{
+ */
+/*!
+\author Xanathar
+\fn chr_mountHorse(const chr, const horse)
+\param chr the character
+\param horse the character to be mounted
+\brief mounts a character on a rideable character (horse, ostard, lama etc..)
+\return 0 or INVALID if chr or horse is not a valid character serial
+*/
+native chr_mountHorse(const chr, const horse_chr);
+
+/*!
+\author Xanathar
+\fn chr_unmountHorse(const chr)
+\param chr the character
+\brief unmounts a character from his horse (or ostard or whatever)
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_unmountHorse(const chr);
+
+/*!
+\author Endymion
+\fn chr_flee( const npc, const from, const seconds )
+\param npc the npc wich will flee
+\param from the character who made the npc flee
+\param seconds how long will the npc flee
+\brief makes a character flee
+\return 0 or INVALID if npc or from is not a valid character serial
+*/
+native chr_flee( const npc, const from, const seconds );
+
+/*!
+\author Xanathar
+\fn chr_resurrect(const chr)
+\param chr the character
+\brief resurrects a character
+\return 0 or INVALID if chr is not a valid character serial (or if character is not dead)
+*/
+native chr_resurrect(const chr);
+
+/*!
+\author Xanathar
+\fn chr_disturbMed(const chr)
+\param chr the character
+\brief disturbs a character's meditation
+\return INVALID if chr is not a valid char serial, else 0
+*/
+native chr_disturbMed(const chr);
+
+/*!
+\author Xanathar
+\fn chr_fish(const chr)
+\param chr the character
+\brief makes a character fish
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_fish (const chr);
+
+/*!
+\author Xanathar
+\fn chr_action(const chr, const action)
+\param chr the character
+\param action the action to be played
+\brief makes a character play an action
+TODO: link to action list
+*/
+native chr_action (const chr, const action);
+
+/*!
+\author Luxor
+\fn chr_doCombatAction(const chr)
+\param chr tha character
+\brief makes the character play a combat action
+\return 1 or INVALID if chr is not a valid character serial
+*/
+native chr_doCombatAction(const chr);
+
+/*
+\author Endymion
+\fn chr_equip( const chr, const item )
+\param chr character
+\param item item
+\brief makes a character equip an item
+\return INVALID if not valid character or item, or if layer is already in use.
+*/
+native chr_equip( const chr, const item );
+
+/*!
+\author Xanathar
+\fn chr_sound(const chr, const soundfx)
+\param chr the character
+\param soundfx the sound ID
+\brief makes a character play a sound
+*/
+native chr_sound(const chr, const soundfx);
+
+/*!
+\author Luxor
+\fn chr_poison(const chr, const poisontype, const secs = -1)
+\param chr the character to be poisoned
+\param poisontype the poison type
+\param secs duration of poison, if -1 standard poison is used
+\brief poisons a character with given poison and for given time
+\return poison type or INVALID if chr is not a valid character serial
+*/
+native chr_poison(const chr, const poisontype, const secs = -1);
+
+/*!
+\author Luxor
+\fn chr_morph(const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ...)
+\param chr the character to be morphed
+\param bodyid new body ID
+\param skincolor new skin color
+\param hairstyle new hair style
+\param haircolor new hair color
+\param beardstyle new beard style
+\param beardcolor new beard color
+\param backup if true old character will be saved
+\param name[] format string for the name
+\param ...  parameters of the format string
+\brief changes character's appearance
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_morph( const chr, const bodyid, const skincolor, const hairstyle, const haircolor, const beardstyle, const beardcolor, const backup, const format[], ... );
+
+/*!
+\author Luxor
+\fn chr_unmorph(const chr)
+\param chr the character
+\brief unmorphs the character, restoring old appearance
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_unmorph( const chr );
+
+/*!
+\author Keldan
+\fn chr_possess(const possessor, const possessed)
+\param pssessor the char who possesses
+\param the char possessed
+\brief makes "possessor" character possess "possessed" character.
+
+A character can only possess npcs, when a character possess an npc he starts controlling it as if it
+were his character, all privs and commandlevel is moved to the possessed character, 
+all other characters properties (stats, skills etc..) are changed to the possessed's ones.
+So if a GM possesses a chicken, he will still be a GM, will still be invulnerable, but with the chicken's skills and stats.
+The original (possessor) character is set offline, the possessed one is set online.
+A character can't possess an npc wich is already possessed by someone.
+When you call chr_possess(possessor,possessed) and possessor is a possessed character,
+the possessed argument is not read, and the possession is switched back.
+Use chr_unpossess(chr) as helper to remove possession.
+\return OK or INVALID if chr is not a valid charcater serial
+*/
+native chr_possess(const possessor, const possessed);
+
+/*
+\author Fax
+\fn chr_unpossess(chr)
+\param chr the character
+\brief removes possession from a character, it calls chr_possess(chr,chr)
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_unpossess(chr)
+{
+	chr_possess(chr,chr);
+}
+/** @} */
+//=========================== MISC ============================
+/*!
+\author Luxor
+\fn chr_isOnline(const chr)
+\param chr the character
+\brief check if a character is online
+\return true if character is online
+*/
+native chr_isOnline(const chr);
+
+/*!
+\author Luxor
+\fn chr_setRandomName(const chr, const namelist[])
+\brief ??
+*/
+native chr_setRandomName(const chr, const namelist[]);
+
+/*!
+\author Luxor
+\fn chr_lineOfSight(const chr, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor)
+\param chr the character
+\param x1,y1,z1 character's location
+\param x2,y2,z2 location to check the LOS
+\param checkfor items that can block the LOS
+\brief checks the Line Of Sight between two locations
+TODO: checkfor values
+\return 0 if LOS is not blocked, 1 if it's blocked, INVALIDE for invalid socket
+*/
+native chr_lineOfSight(const chr, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor);
+
+/*!
+\author Fax
+\fn chr_checkLos(const chr1, const chr2)
+\param chr1 first character
+\param chr2 second character
+\brief checks the Line Of Sight between two characters
+\return 0 if LOS is not blocked, 1 if it's blocked, INVALID for invalid characters
+*/
+stock chr_checkLos(const chr1, const chr2)
+{
+	new pos1[3], pos2[3];
+	chr_getPositionVec(chr1,pos1);
+	chr_getPositionVec(chr2,pos2);
+	return chr_lineOfSight(chr1,pos1[0],pos1[1],pos1[2],pos2[0],pos2[1],pos2[2],0);
+}
+
+/*!
+\author Xanathar
+\fn chr_distance(const chr1, const chr2)
+\param chr1 first chracter
+\param chr2 second character
+\brief calculates distance between 2 characters
+\return the distance
+*/
+native chr_distance(const chr1, const chr2);
+
+/*!
+\author Luxor
+\fn chr_update(const chr)
+\param chr the character
+\brief ??
+*/
+native chr_update(const chr);
+
+/*!
+\author Xanathar
+\fn chr_checkEquipment(const chr)
+\param che the character
+\brief check if character can keep the equipment worn
+
+If character can't keep some equipment worn (due to stas change for example) the equipment
+is unequipped
+*/
+native chr_checkEquipment(const chr);
+
+/*!
+\author Xanathar
+\fn chr_setMultiSerial(const chr, const serial)
+\brief ??
+*/
+native chr_setMultiSerial(const chr, const serial);
+
+/*!
+\author Endymion, mod by Luxor
+\param chr the  character
+\param x the x location
+\param y the y location
+\brief Get the direction for see location
+TODO: link to directions list
+\return the direction
+*/
+public chr_getDirForSee( const chr, const x, const y )
+{
+	new chr_x = chr_getProperty( chr, CP_POSITION, CP2_X );
+	new chr_y = chr_getProperty( chr, CP_POSITION, CP2_Y );
+	
+	if ((chr_x == x) && (chr_y == y))
+		return chr_getProperty( chr, CP_DIR );
+
+	if (chr_x == x) {
+		if (chr_y > y)
+			return DIR_NORTH; // north
+		else
+			return DIR_SOUTH; // south
+	}
+	else
+	{
+		new coef;
+		coef = ( (y - chr_y) * 100 ) / (x - chr_x);
+		if (chr_x < x) // facing east
+			if (coef > 200)
+				return DIR_SOUTH;
+			else if (coef > 50)
+				return DIR_SOUTHEAST;
+			else if (coef > -50)
+				return DIR_EAST;
+			else if (coef > -200)
+				return DIR_NORTHEAST;
+			else return DIR_NORTH;
+		else // facing west
+			if (coef > 200)
+				return DIR_NORTH;
+			else if (coef > 50)
+				return DIR_NORTHWEST; // south-west
+			else if (coef > -50)
+				return DIR_WEST; // west
+			else if (coef > -200)
+				return DIR_SOUTHWEST; // north-west
+			else return DIR_SOUTH;
+	}
+	return DIR_SOUTH;
+}
+
+//=======================  MOVEMENT/POSITION =========================
+/** \defgroup script_API_character_move movement
+ *  @{
+ */
+/*!
+\author Xanathar
+\fn chr_moveTo(const chr, const x, const y, const z)
+\param chr the character
+\param x,y,z coords of the place
+\brief moves a character to a given place
+\note you can't move to 0,0
+\note if character is casting, the cast will be interrupted
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_moveTo(const chr, const x, const y, const z);
+
+/*!
+\author Fax
+\fn chr_moveToVec(const chr, pos[3])
+\params chr the character
+\params pos[3] a vector where x,y,z will be store
+\brief return the x,y,z coordinates of a character in a vector
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_moveToVec(const chr, pos[3])
+{
+	return chr_moveTo(chr,pos[0],pos[1],pos[2]);
+}
+
+/*!
+\author Luxor
+\fn chr_teleport(const chr)
+\brief teleports the character to his X,Y cooordinates
+TODO: is this needed?
+*/
+native chr_teleport(const chr);
+
+/*!
+\author Fax
+\fn chr_getPosition(const chr, &x, &y, &z)
+\params chr the character
+\params &x,&y,&z variables where position will be stored
+\brief return the x,y,z coordinates of a character
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_getPosition(const chr, &x, &y, &z)
+{
+	if(!isChar(chr)) return INVALID
+	x = chr_getProperty(chr,CP_POSITION,CP2_X);
+	y = chr_getProperty(chr,CP_POSITION,CP2_Y);
+	z = chr_getProperty(chr,CP_POSITION,CP2_Z);
+	return OK;
+}
+
+/*!
+\author Fax
+\fn chr_getPositionVec(const chr, pos[3])
+\params chr the character
+\params pos[3] a vector where x,y,z will be store
+\brief return the x,y,z coordinates of a character in a vector
+\return OK or INVALID if chr is not a valid character serial
+*/
+stock chr_getPositionVec(const chr, pos[3])
+{
+	if(!isChar(chr)) return INVALID
+	pos[0] = chr_getProperty(chr,CP_POSITION,CP2_X);
+	pos[1] = chr_getProperty(chr,CP_POSITION,CP2_Y);
+	pos[2] = chr_getProperty(chr,CP_POSITION,CP2_Z);
+	return OK;
+}
+
+/** @} */
+//=================  HIDING  ======================
+/*!
+\author Luxor
+\fn chr_hide(const chr, const mode)
+\params chr the character to be hidden
+\params mode what to do: 0 - unhide, 1 - hide, 2 - hidebyspell
+\brief hides a character
+
+TODO: remove unhide mode? ther is chr_unhide already
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_hide(const chr, const mode);
+
+/*!
+\author Xanathar
+\fn chr_unhide(const chr)
+\param chr the character
+\brief unhides a character
+\note character is unhidden only if it was hidden by skill and it wasn't permanently hidden
+*/
+native chr_unhide(const chr);
+
+
+//===================  TAMING  ========================
+/*!
+\author Xanathar
+\fn chr_setOwnSerial(const chr, const serial)
+\param chr the character wich needs a new owner
+\param serial the new owner's serial
+\brief sets a character's owner
+*/
+native chr_setOwnSerial(const chr, const serial);
+
+/*!
+\author Xanathar
+\fn chr_setOwnSerOnly(const chr, const serial)
+\brief ??
+*/
+native chr_setOwnSerOnly(const chr, const serial);
+
+/*!
+\author Luxor
+\fn chr_npcRelease(const chr)
+\param chr the animal to be released
+\brief release a tamed animal
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_npcRelease(const chr);
+
+/*!
+\author Luxor
+\fn chr_setTamed(const chr, const npc)
+\param chr the character that will become owner
+\param npc tha character that will become tamed
+\brief sets a character tamed
+\return 0 or INVALID if chr or npc is not a valid character serial
+*/
+public chr_setTamed (const chr, const npc)
+{	
+	if(!isChar(chr) || !isChar(npc))
+		return INVALID;
+		
+	new ownser = chr_getProperty(chr, CP_SERIAL);
+	chr_setOwnSerial(npc, ownser);
+
+	chr_setProperty(npc, CP_TAMED, _, 1);
+	chr_setProperty(npc, CP_NPCWANDER, _, 0);
+	chr_setProperty(npc, CP_NPCAI, _, 10);
+	return OK;
+}
+
+/*!
+\author Luxor
+\fn chr_owns(const owner, const owned)
+\param owner character owner
+\param owned character owned
+\brief checks if a character owns another
+\return 0 if no, 1 if yes or INVALID if not valid character
+*/
+native chr_owns(const owner, const owned);
+
+/*!
+\author Endymion
+\fn chr_stable(const chr, const stablemaster)
+\param chr the npc to stable
+\param stablemaster the stablemaster
+\brief Stable an npc
+*/
+native chr_stable(const chr, const stablemaster);
+
+/*!
+\author Endymion
+\fn chr_unStable(const chr)
+\param chr the npc
+\brief Unstable an npc
+*/
+native chr_unStable(const chr);
+
+//==================== ADD/REMOVE FUNCTIONS  =======================
+/*!
+\author Xanathar
+\fn chr_addNPC(const npcScriptID, const x, const y, const z)
+\param npcScriptID the npc's XSS script ID
+\param x,y,z where npc will be created 
+\brief creates a new npc at a given location
+\return npc serial if the npc has been createdr, else INVALID
+*/
+native chr_addNPC(const npcScriptID, const x, const y, const z);
+
+/*!
+\author Fax
+\fn chr_addNPC(const npcScriptID, pos[3])
+\param npcScriptID the npc's XSS script ID
+\param pos[3] vector with the position (x,y,z) where npc will be created 
+\brief creates a new npc at a given location
+\return npc serial if the npc has been createdr, else INVALID
+*/
+stock chr_addNPCVec(const npcScriptID, pos[3])
+{
+	return chr_addNPC(npcScriptID, pos[0], pos[1], pos[2]);	
+}
+
+/*!
+\author Xanathar
+\fn chr_remove(const chr)
+\param chr the character to be deleted
+\brief removes a character
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_remove(const chr);
+
+/*!
+\author Sparhawk
+\fn chr_getCreationDay(const chr)
+\param chr the character
+\brief gets the day the character was created
+TODO: day format?
+\return the day
+*/
+native chr_getCreationDay( const chr );
+
+/*!
+\author Sparhawk
+\fn chr_setCreationDay(const chr, const day)
+\param chr the character
+\param day the day
+\brief sets the character's creation day
+TODO: quite nonsense ...
+*/
+native chr_setCreationDay( const chr, const day );
+
+//======================== COMBAT =====================
+/** \defgroup script_API_character_combat Combat
+ *  @{
+ */
+/*!
+\author Xanathar
+\fn chr_calcAtt(const chr)
+\param chr the character
+\brief calculates a character's attack power
+TODO: attack power description
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_calcAtt (const chr);
+
+/*!
+\author Xanathar
+\fn chr_calcDef(const chr)
+\param chr the character
+\brief calculates a character's defense power
+TODO: defense power description
+TODO: check for another paramater (body location), used in sources
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_calcDef (const chr);
+
+/*!
+\author Xanathar
+\fn chr_attackStuff(const chr_defender, const socket_attacker)
+\brief ??
+*/
+native chr_attackStuff (const chr_defender, const socket_attacker);
+
+/*!
+\author Luxor
+\fn chr_npcAttack(const attacker, const target)
+\param attacker the character who attacks
+\param defender the character who is attacked
+\brief makes an npc attack another character
+\return 0 or INVALID if attacker or defender is not a valid character serial
+*/
+native chr_npcAttack(const attacker, const target);
+
+/*!
+\author Xanathar
+\fn chr_helpStuff(const helped, const helper)
+\param helped the character being helped
+\param helper the character who helps
+\brief Does all the stuff involved in a player helping another ( like healing criminal as such )
+\return 0 or INVALID if helper and helped are not valid character serials
+*/
+native chr_helpStuff (const helped, const helper);
+
+/*!
+\author Luxor
+\fn chr_applyDamage(const chr, const damage, const damagetype, const stat)
+\param che the character
+\param damage the damage amount
+\param damagetype the damage type (one of the DAMAGE_* constants)
+\param stat the sta to be damaged
+TODO: link to damage types list
+\return 1 or INVALID if chr is not a valid character serial
+\brief
+*/
+native chr_applyDamage(const chr, const damage, const damagetype, const stat);
+
+/*!
+\author Luxor
+\fn chr_damage(const chr, const basedamage, const attacker = -1, const magiclike = 0, const damagetype = DAMAGE_PURE, const stattobedamaged = 0)
+\param chr thae character to be damaged
+\param basedamage damage amount
+\param attacker the attacker character
+\param magiclike true if the damage is magical
+\param damagetype one fo the DAMAGE_* contants
+\param stattobedamaged the stat that will be damaged
+\brief damages a char, differnely from chr_applyDamage
+TODO: detailed description of internal
+\return applied damage
+*/
+stock chr_damage(const chr, const basedamage, const attacker = -1, const magiclike = 0, const damagetype = DAMAGE_PURE, const stattobedamaged = 0)
+{
+	new ai = chr_getProperty(chr, CP_NPCAI);
+	new damage = basedamage;
+
+	if (chr_isInvul(chr)) return OK;
+	if (ai==17) return OK; //player vendors
+
+	if (magiclike!=0) {
+		if (0!=chr_getProperty(chr, CP_NPC)) damage *= 2;
+	}
+
+	chr_applyDamage(chr, damage, damagetype, stattobedamaged);
+
+	if (attacker>=0) chr_attackStuff(chr, attacker);
+	return damage;
+}
+
+/** @} */
+//==============================  GUILD FUNCTIONS  ==================
+/** \defgroup script_API_character_guild Guild
+ *  @{
+ */
+/*!
+\author Endymion
+\fn chr_getGuild( const chr )
+\param chr the character
+\brief Get the guild the char is a member of if any
+\return serial of the guild or 0 if not member of a guild
+*/
+public chr_getGuild( const chr )
+{
+	return chr_getProperty( chr, CP_GUILD );
+}
+
+/*!
+\author Xanathar
+\fn chr_guildCompare(const chr1, const chr2)
+\param chr1 first character
+\param chr2 second character
+\brief compare 2 guild members to check for war
+\return 1 if same guild, 2 if guild are in war ( war o chaos/order ), 0 else or INVALID if not valid character
+*/
+native chr_guildCompare (const chr1, const chr2);
+
+/*!
+\author Sparhawk
+\fn chr_getGuildType(const chr)
+\param chr the character
+\brief gets the guild type of a character
+TODO: link to guild type list (0:standard 1:chaos 2:order)
+\return the guild type
+*/
+native chr_getGuildType( const chr );
+
+/*!
+\author Fax
+\fn chr_isInStdGuild(const chr)
+\param chr the character
+\brief checks if character is in a standard guild
+\return true if character is in standard guild
+*/
+stock chr_isInStdGuild(const chr)
+{
+	return chr_getGuildType( const chr ) == 0;
+}
+
+/*!
+\author Fax
+\fn chr_isInChaosGuild(const chr)
+\param chr the character
+\brief checks if character is in a chaos guild
+\return true if character is in chaos guild
+*/
+stock chr_isInChaosGuild(const chr)
+{
+	return chr_getGuildType( const chr ) == 1;
+}
+
+/*!
+\author Fax
+\fn chr_isInOrderGuild(const chr)
+\param chr the character
+\brief checks if character is in a Order guild
+\return true if character is in Order guild
+*/
+stock chr_isInOrderGuild(const chr)
+{
+	return chr_getGuildType( const chr ) == 2;
+}
+
+/*!
+\author Sparhawk
+\fn chr_setGuildType(const chr, const type)
+\param chr the character
+\param type the guild type
+\brief sets the guild type of a character
+TODO: link to guild type list (0:std 1:chaos 2:order)
+\return 0 or INVALID if chr is not a valid character serial 
+*/
+native chr_setGuildType( const chr, const type );
+
+/*!
+\author Sparhawk
+\fn chr_isGuildTraitor(const chr)
+\param chr the character
+\brief check if character is a guild traitor
+\return true if character is a guild traitor
+*/
+native chr_isGuildTraitor( const chr );
+
+/*!
+\author Sparhawk
+\fn chr_setGuildTraitor(const chr, const traitor = 1)
+\param chr the character
+\param traitor 1 if character is to be set traitor
+\brief sets the guild-traitor flag of a character
+\return 0 or INVALID if chr is not a valid character serial 
+*/
+native chr_setGuildTraitor( const chr, const traitor = 1 );
+
+/*!
+\author Sparhawk
+\fn chr_hasGuildToggle(const chr)
+\param chr the character
+\brief gets the guild name toggle status of a character
+TODO: what is guild toggle status?
+\return the guild name toggle status
+*/
+native chr_hasGuildToggle( const chr );
+
+/*!
+\author Sparhawk
+\fn chr_setGuildToggle(const chr, const toggle = 1)
+\param chr the character
+\param toggle the name toggle status to be set
+\brief sets the name toggle status
+\return the new guild neam toggle status value
+*/
+native chr_setGuildToggle( const chr, const toggle = 1 );
+
+/*!
+\author Sparhawk
+\fn chr_getGuildFealty(const chr)
+\param chr the character
+\brief gets the guild fealty of a character
+TODO: what is guild fealty serial?
+\return the guild fealty serial
+*/
+native chr_getGuildFealty( const chr );
+
+/*!
+\author Sparhawk
+\fn chr_setGuildFealty(const chr, const fealty)
+\param chr the character
+\param fealty the new guild fealty
+\brief sets a character's guild fealty
+\return 0 or INVALID if chr is not a valid character serial 
+*/
+native chr_setGuildFealty( const chr, const fealty );
+
+/*!
+\author Sparhawk
+\fn chr_getGuildNumber(const chr)
+\param chr the character
+\brief gets the character's guild number
+\return the guild number
+*/
+native chr_getGuildNumber( const chr );
+
+/*!
+\author Sparhawk
+\fn chr_setGuildNumber(const chr, const number)
+\param chr the character
+\param number the new guild number
+\brief sets the character's guild number
+\return 0 or INVALID if chr is not a valid character serial 
+*/
+native chr_setGuildNumber( const chr, const number );
+
+/*!
+\author Sparhawk
+\fn chr_getGuildTitle(const chr, title[])
+\param chr the character
+\param title[] empty string to store the guild title
+\brief gets the character's guild title
+\return the length of the title string
+*/
+native chr_getGuildTitle( const chr, title[] );
+
+/*!
+\author Sparhawk
+\fn chr_setGuildTitle(const chr, const title[])
+\param chr the character
+\param title[] the guild title
+\brief sets the character's guild title
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_setGuildTitle( const chr, const title[] );
+/** @} */
+//=====================  SKILLS  ===========================
+/** \defgroup script_API_character_skillstats Skills and Stats
+ *  @{
+ */
+/*!
+\author Xanathar
+\fn chr_checkSkill(const chr, const skill, const min=0, const max=1000, const raise=1)
+\param chr the character
+\param skill the skill to be checked
+\param min minimun skill required
+\param max maximum skill required
+\param raise true if skill should be raise in case of success
+\brief check if a skill action succeedes or fails
+
+Use this function to check if a player succeedes in using a skill, if raise is set to true
+the skill is raised if the action takes place. 
+TODO: explain how it owrks (look in sources)
+\return  0 failed, 1 right or INVALID if not valid character or socket
+*/
+native chr_checkSkill(const chr, const skill, const min=0, const max=1000, const raise=1);
+
+/*!
+\author Luxor
+\fn chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1, const material2 )
+\param chr the character
+\param makeMenu the number of the make menu to be opened
+\param skill the skill that's using the makemenu
+\param material1 the first material
+\param material2 the second material
+\brief opens a skill make menu
+\return 1 if the makemenu was opened, -1 if not.
+*/
+native chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1, const material2=INVALID );
+
+/*!
+\author ???
+\fn chr_getSkill(const chr, const skill)
+\param chr the character
+\param skill the skill to be read
+\brief gets a character's skill value
+TODO: description of skill values (base, normal)
+\return the skill value
+*/
+stock chr_getSkill(const chr, const skill)
+{
+	return chr_getProperty(chr, CP_SKILL, skill);
+}
+
+/*!
+\author ???
+\fn chr_getBaseSkill(const chr, const skill)
+\param chr the character
+\param skill the skill to be read
+\brief gets a character's base skill value
+TODO: description of skill values (base, normal)
+\return the base skill value
+*/
+stock chr_getBaseSkill(const chr, const skill)
+{
+	return chr_getProperty(chr, CP_BASESKILL, skill);
+}
+
+/*!
+\author ???
+\fn chr_setBaseSkill(const chr, const skill, const value)
+\param chr the character
+\param skill the skill to be set
+\param value the value the skill will be set to
+\brief sets a character's base skill value
+TODO: description of skill values (base, normal)
+\return 0 or INVALID if chr is not a valid character serial
+*/
+stock chr_setBaseSkill(const chr, const skill, const value)
+{
+	chr_setProperty(chr, CP_BASESKILL, skill, value);
+}
+//================================  STATS  ==================================
+/*!
+\author ???
+\fn chr_getInt(const chr)
+\brief gets effective inteliigence of character
+\note this is a helper function who calls chr_getProperty(chr, CP_INTELLIGENCE, CP2_EFF)
+\return effective intelligence value
+*/
+stock chr_getInt(const chr)
+{
+	return chr_getProperty(chr, CP_INTELLIGENCE, CP2_EFF);
+}
+
+/*!
+\author ???
+\fn chr_getRealInt(const chr)
+\brief gets real inteliigence of character
+\note this is a helper function who calls chr_getProperty(chr, CP_INTELLIGENCE, CP2_REAL)
+\return real intelligence value
+*/
+stock chr_getRealInt(const chr)
+{
+	return chr_getProperty(chr, CP_INTELLIGENCE, CP2_REAL);
+}
+
+/*!
+\author ???
+\fn chr_getMana(const chr)
+\param chr the character
+\brief gets character's mana
+\return character's mana
+*/
+stock chr_getMana(const chr)
+{
+	return chr_getProperty(chr, CP_INTELLIGENCE, CP2_ACT);
+}
+
+/*!
+\author ???
+\fn chr_getDex(const chr)
+\param chr the character
+\brief gets chracter's effective dexterity
+\return character's effective dexterity
+*/
+stock chr_getDex(const chr)
+{
+	return chr_getProperty(chr, CP_DEXTERITY, CP2_EFF);
+}
+
+/*!
+\author ???
+\fn chr_getRealDex(const chr)
+\param chr the character
+\brief gets chracter's real dexterity
+\return character's real dexterity
+*/
+stock chr_getRealDex(const chr)
+{
+	return chr_getProperty(chr, CP_DEXTERITY, CP2_REAL);
+}
+
+/*!
+\author ???
+\fn chr_getStamina(const chr)
+\param chr the character
+\brief gets chracter's stamina
+\return character's stamina
+*/
+stock chr_getStamina(const chr)
+{
+	return chr_getProperty(chr, CP_DEXTERITY, CP2_ACT);
+}
+
+/*!
+\author ???
+\fn chr_getStr(const chr)
+\param chr the character
+\brief gets chracter's effective strenght
+\return character's effective strenght
+*/
+stock chr_getStr(const chr)
+{
+	return chr_getProperty(chr, CP_STRENGHT, CP2_EFF);
+}
+
+/*!
+\author ???
+\fn chr_getRealStr(const chr)
+\param chr the character
+\brief gets chracter's real dexterity
+\return character's real dexterity
+*/
+stock chr_getRealStr(const chr)
+{
+	return chr_getProperty(chr, CP_STRENGHT, CP2_REAL);
+}
+
+/*!
+\author ???
+\fn chr_getHitPoints(const chr)
+\param chr the character
+\brief gets chracter's HPs
+\return character's HPs
+*/
+stock chr_getHitPoints(const chr)
+{
+	return chr_getProperty(chr, CP_STRENGHT, CP2_ACT);
+}
+
+/*!
+\author ???
+\fn chr_setHitPoints(const chr, const value)
+\param chr the character
+\param value new HP value
+\brief sets chracter's HPs
+*/
+stock chr_setHitPoints(const chr, const value)
+{
+	chr_setProperty(chr, CP_STRENGHT, CP2_ACT, value);
+}
+
+/*!
+\author ???
+\fn chr_setStamina(const chr, const value)
+\param chr the character
+\param value new stamina value
+\brief sets chracter's stamina
+*/
+stock chr_setStamina(const chr, const value)
+{
+	chr_setProperty(chr, CP_DEXTERITY, CP2_ACT, value);
+}
+
+/*!
+\author ???
+\fn chr_setMana(const chr, const value)
+\param chr the character
+\param value new mana value
+\brief sets chracter's mana
+*/
+stock chr_setMana(const chr, const value)
+{
+	chr_setProperty(chr, CP_INTELLIGENCE, CP2_ACT, value);
+}
+
+/** @} */
+//============================  EVENT HANDLERS =======================
+/** \defgroup script_API_character_events Event handlers
+ *  @{
+ */
+/*!
+\author Sparhawk
+\fn chr_getEventHandler(const chr, const event, handler[])
+\param chr	character serial
+\param event	character event identifier (EVENT_CHR_ON*)
+\param handler  string in wich the callback name will be stored
+\brief Returns name of small function bound to the specified event into handler
+TODO: report sparhawk's post on this topic
+\return the callback name in the handler[] parameter
+*/
+native chr_getEventHandler(const chr, const event, handler[]);
+
+/*!
+\author Xanathar
+\fn chr_setEventHandler(const chr, const event, const evtype, const format[], ...)
+\param chr	character serial
+\param event	character event identifier (EVENT_CHR_ON*)
+\param evtype	sets dynamic or static event type (EVENTTYPE_STATIC or EVENTTYPE_DYNAMIC). Static events will be saved in worldfile.
+\param format	Name of small function to bind to the event
+\brief Binds a small function to a character event
+TODO: events explanation, link to events list
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_setEventHandler(const chr, const event, const evtype, const format[], ...);
+
+/*!
+\author Xanathar
+\fn chr_delEventHandler(const chr, const event)
+\param chr	character serial
+\param event	character event identifier (EVENT_CHR_ON*)
+\brief Unbinds link between a character event and a small function
+TODO: report sparhawk's post on this topic
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_delEventHandler(const chr, const event);
+
+/** @} */
+//==============================  SPEECH/MESSAGES  =================================
+/** \defgroup script_API_character_speech Speech
+ *  @{
+ */
+/*!
+\author Sparhawk
+\fn chr_showMessage(const chrWhoSeesMsg, const chrWhoHasMsg, const msg[], const color = 0x0481)
+\param chrWhoSeesMsg the character who sees the message
+\param chrWhoHasMsg the character above whose head the message is shown
+\param msg[] the message to be shown
+\param color the color of the message
+\brief shows a message anove the head of a character, visible only to one another character
+TODO: is really needed? why don't use chr_speech?
+\return 1 or INVALID if chr is not a valid character serial
+*/
+native chr_showMessage(const chrWhoSeesMsg, const chrWhoHasMsg, const msg[], const color = 0x0481)
+
+/*!
+\author Sparhawk
+\fn chr_speech(const function, const listener = -1, const speaker, const speech[], const antispam = 1)
+\param function speech type, one of the TALK_* constants
+\param listener the character who hears the speech
+\param speaker the character who speaks
+\param speech[] the spoken text
+\param antispam activates the antispam timer
+\brief makes a character speak
+TODO: explain speech modes
+*/
+native chr_speech(const function, const listener = -1, const speaker, const speech[], const antispam = 1);
+
+/*!
+\author ???
+\fn chr_talk(const listener, const speaker, const text[], const antispam = 1)
+\param listener the character who hears the speech
+\param speaker the character who speaks
+\param text[] the speech
+\param antispam antispam flag
+\brief helper that calls chr_speech(NPC_TALK, listener, speaker, text, antispam)
+TODO: link to chr_speech
+*/
+stock chr_talk(const listener, const speaker, const text[], const antispam = 1)
+{ 
+	chr_speech(NPC_TALK, listener, speaker, text, antispam);
+} 
+
+/*!
+\author ???
+\fn chr_talkall(const chr, const text[], const antispam = 1)
+\param chr the character who speaks
+\param text[] the speech
+\param antispam antispam flag
+\brief helper that calls chr_speech(NPC_TALK_ALL, _, chr, text, antispam)
+TODO: link to chr_speech
+*/
+stock chr_talkall(const chr, const text[], const antispam = 1)
+{ 
+	chr_speech(NPC_TALK_ALL, _, chr, text, antispam);
+}
+
+/*!
+\author ???
+\fn chr_talkRunic(const listener, const speaker, const text[], const antispam = 1)
+\param listener the character who hears the speech
+\param speaker the character who speaks
+\param text[] the speech
+\param antispam antispam flag
+\brief helper that calls chr_speech(NPC_TALK_RUNIC, listener, speaker, text, antispam)
+TODO: link to chr_speech
+*/
+stock chr_talkRunic(const listener, const speaker, const text[], const antispam = 1)
+{ 
+	chr_speech(NPC_TALK_RUNIC, listener, speaker, text, antispam);
+} 
+
+/*!
+\author ???
+\fn chr_talkallRunic(const chr, const text[], const antispam = 1)
+\param chr the character who speaks
+\param text[] the speech
+\param antispam antispam flag
+\brief helper that calls chr_speech(NPC_TALK_ALL_RUNIC, _, chr, text, antispam)
+TODO: link to chr_speech
+*/
+stock chr_talkallRunic(const chr, const text[], const antispam = 1)
+{ 
+	chr_speech(NPC_TALK_ALL_RUNIC, _, chr, text, antispam);
+} 
+
+/*!
+\author ???
+\fn chr_emote(const listener, const speaker, const text[], const antispam = 1)
+\param listener the character who hears the emote
+\param speaker the character who emotes
+\param text[] the speech
+\param antispam antispam flag
+\brief helper that calls chr_speech(NPC_EMOTE, listener, speaker, text, antispam)
+TODO: link to chr_speech
+*/
+stock chr_emote(const listener, const speaker, const text[], const antispam = 1)
+{ 
+	chr_speech(NPC_EMOTE, listener, speaker, text, antispam);
+} 
+
+/*!
+\author ???
+\fn chr_emoteall(const chr, const text[], const antispam = 1)
+\param chr the character who emotes
+\param text[] the speech
+\param antispam antispam flag
+\brief helper that calls chr_speech(NPC_EMOTE_ALL, _, chr, text, antispam)
+TODO: link to chr_speech
+*/
+stock chr_emoteall(const chr, const text[], const antispam = 1)
+{
+	chr_speech(NPC_EMOTE_ALL, _, chr, text, antispam);
+}
+/** @} */
+//============================   LOCAL VARS/AMX FLAGS  =================================
+/** \defgroup script_API_character_vars Local Vars
+ *  @{
+ */
+/*!
+\author Sparhawk
+\fn chr_getLocalVarErr()
+\brief Returns result for all operations on character variables
+TODO: link to local vars explanation
+\Return one of VAR_ERROR_NONE, VAR_ERROR_UNKNOWN_VAR, VAR_ERROR_DUPLICATE_VAR, VAR_ERROR_WRONG_TYPE, VAR_ERROR_ACCESS_DENIED
+
+*/
+native chr_getLocalVarErr();
+
+/*!
+\author Sparhawk
+\fn chr_isaLocalVar(const chr, const var, const type = 0)
+\param chr	character serial
+\param var	variable identifier
+\param type	type of variable (VAR_TYPE_ANY, VAR_TYPE_INTEGER, VAR_TYPE_STRING )
+\brief checks if a local var exists for a character 
+
+Can also be used to check wether variable is of a specific type
+TODO: link to local vars explanation
+\return true when variable exists for character. 
+*/
+native chr_isaLocalVar( const chr, const var, const type = 0 );
+
+/*!
+\author Sparhawk
+\fn chr_sizeofLocalVar( const chr, const var, const index = -1 )
+\param chr	character serial
+\param var	variable identifier
+\param index    index in the array (if is an array variable)
+\brief gets size of a local var
+TODO: link to local vars explanation
+\Return length of a local variable, number of elements in a vector, or length of variable in a vector
+*/
+native chr_sizeofLocalVar( const chr, const var, const index = -1 );
+
+/*!
+\author Sparhawk
+\fn chr_delLocalVar(const chr, const var, const type = 0)
+\param chr:	character serial
+\param var:	variable identifier
+\param type:	type of variable (VAR_TYPE_ANY, VAR_TYPE_INTEGER, VAR_TYPE_STRING )
+\brief Deletes character variable. When type is not VAR_TYPE_ANY variable is only deleted if of same type as specified.
+TODO: link to local vars explanation
+*/
+native chr_delLocalVar( const chr, const var, const type = 0 );
+
+/*!
+\author Sparhawk
+\fn chr_addLocalIntVar(const chr, const var, const value = 0)
+\param chr:	character serial
+\param var:	variable identifier
+\param value:	initial value
+\brief Adds a new integer variable to the character
+TODO: link to local vars explanation
+*/
+native chr_addLocalIntVar( const chr, const var, const value = 0 );
+
+/*!
+\author Sparhawk
+\fn chr_getLocalIntVar(const chr, const var)
+\param chr:	character serial
+\param var:	variable identifier
+\brief Get value of specified integer variable from character
+TODO: link to local vars explanation
+*/
+native chr_getLocalIntVar( const chr, const var );
+
+/*!
+\author Sparhawk
+\fn chr_setLocalIntVar(const chr, const var, const value = 0)
+\param chr:	character serial
+\param var:	variable identifier
+\param value:	new value
+\brief Set the value of specified integer variable for the character
+TODO: link to local vars explanation
+*/
+native chr_setLocalIntVar( const chr, const var, const value = 0 );
+
+/*!
+\author Sparhawk
+\fn chr_addLocalIntVec(const chr, const var, const size = 1, const value = 0)
+\param chr:	character serial
+\param var:	variable identifier
+\param size	number of array elements
+\param value:	initial value
+\brief Adds a new integer variable array to the character
+TODO: link to local vars explanation
+*/
+native chr_addLocalIntVec( const chr, const var, const size = 1, const value = 0 );
+
+/*!
+\author Sparhawk
+\fn chr_getLocalIntVec(const chr, const var, const index = 0)
+\param chr:	character serial
+\param var:	variable identifier
+\param index:	0 based index into array
+\brief Get value of specified integer variable from character
+TODO: link to local vars explanation
+*/
+native chr_getLocalIntVec( const chr, const var, const index = 0);
+
+/*!
+\author Sparhawk
+\fn chr_setLocalIntVec(const chr, const var, const index = 0, const value = 0)
+\param chr:	character serial
+\param var:	variable identifier
+\param index:	0 based index into array
+\param value:	new value
+\brief Set the value of specified integer variable for the character
+TODO: link to local vars explanation
+*/
+native chr_setLocalIntVec( const chr, const var, const index = 0, const value = 0 );
+
+/*!
+\author Sparhawk
+\fn chr_addLocalStrVar(const chr, const var, const value[] = "")
+\param chr:	character serial
+\param var:	variable identifier
+\param value:	initial value
+\brief Adds a new string variable to the character
+TODO: link to local vars explanation
+*/
+native chr_addLocalStrVar( const chr, const var, const value[] = "" );
+
+/*!
+\author Sparhawk
+\fn chr_getLocalStrVar(const chr, const var, value[])
+\param chr:	character serial
+\param var:	variable identifier
+\brief Get value of specified string variable from character into value.
+TODO: link to local vars explanation
+*/
+native chr_getLocalStrVar( const chr, const var, value[] );
+
+/*!
+\author Sparhawk
+\fn chr_setLocalStrVar(const chr, const var, const value[] = "")
+\param chr:	character serial
+\param var:	variable identifier
+\param value:	new value
+\brief Set the value of specified string variable for the character
+TODO: link to local vars explanation
+*/
+native chr_setLocalStrVar( const chr, const var, const value[] = "" );
+
+/*!
+\author Sparhawk
+\fn chr_countLocalVar(const chr)
+\param chr:	character serial
+\return number of variables defined
+\brief Count the number of local variables defined for specified character
+TODO: link to local vars explanation
+*/
+native chr_countLocalVar( const chr );
+
+/*!
+\author Sparhawk
+\fn chr_firstLocalVar(const chr)
+\param chr:	character serial
+\return first defined local variable or INVALID
+\brief get id of first defined local variable
+TODO: link to local vars explanation
+*/
+native chr_firstLocalVar( const chr );
+
+/*!
+\author Sparhawk
+\fn chr_nextLocalVar(const chr, const previous)
+\param chr:	character serial
+\param previous: variable id of previous variable
+\return next defined local variable or INVALID
+\brief get id of next defined local variable
+TODO: link to local vars explanation
+*/
+native chr_nextLocalVar( const chr, const previous );
+
+/*!
+\author ???
+\fn chr_getAmxFlags(const chr, const idx)
+\param chr the character
+\param idx AMXFlag number
+\brief gets the value stored in an AMXFlag
+\return the stored value
+*/
+stock chr_getAmxFlags(const chr, const idx)
+{
+	return chr_getProperty(chr, CP_AMXFLAGS, idx);
+}
+
+/*!
+\author ???
+\fn chr_setAmxFlags(const chr, const idx, const value)
+\param chr the character
+\param idx the AMXFlag number
+\param value the value to be stored
+\brief sets the value of an AMXFlag
+\return ??
+*/
+stock chr_setAmxFlags(const chr, const idx, const value)
+{
+	chr_setProperty(chr, CP_AMXFLAGS, idx, value);
+}
+/** @} */
+/** @} */ // end of script_API_calendar
