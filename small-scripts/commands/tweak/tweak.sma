@@ -46,7 +46,7 @@ static twkButton[twkpages][twk_buttons] = {
 
 enum event_prop
 {
-name: 23,
+eventname: 23,
 eventnum
 };
 
@@ -109,13 +109,13 @@ public TweakStart( const t, const chrsource, const target, const x, const y, con
 		chr_message( chrsource, _,"Select a char or item,please");
 		return;
 	}
-	if ( (t == 1) || (t==3) //is npc/char
-	        basicChrTweak(chrsource,target, 1);
-	else if ( t=2)
+	if ( (t == 1) || (t==3)) //is npc/char
+	        tweak_char(chrsource,target, 1);
+	else if ( t==2)
 		callItemMenu(chrsource,target, 1);
 }
 
-public basicChrTweak(const chrsource, const target, pagenumber)
+public tweak_char(const chrsource, const target, pagenumber)
 {
 	new tempStr[100];
 	new tweak_cllbck[15];
@@ -168,7 +168,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addText(twkMenu,230,150,33,"Main info");
 		
 		gui_addGump(twkMenu,50,181, 0x827);
-		gui_addText(twkMenu,66,180,1310,"Name :");
+		gui_addText(twkMenu,66,180,1310,"eventname :");
 		gui_addPropField( twkMenu, 130, 180,150,30,CP_STR_NAME);
 		
 		gui_addGump(twkMenu,50,201, 0x827);
@@ -277,7 +277,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addText(twkMenu,270,400,1310,"Script ID:");
 		sprintf( tempStr,"%d",chr_getProperty(target,CP_SCRIPTID));
 		
-		gui_addText(twkMenu,66,460,1310,"guild name :");
+		gui_addText(twkMenu,66,460,1310,"guild eventname :");
 		if ( chr_getGuild(target) >= 0 )
 			guild_getProperty( chr_getGuild(target),GP_STR_NAME,_,0,tempStr );
 		else	tempStr="Keine";
@@ -657,7 +657,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		for ( i=0;i <= 15;++i)
 		{
 			gui_addGump(twkMenu,50,173+(i*20), 0x827);
-			gui_addText(twkMenu,66,170+(i*20),1310,event_array[i][name]);
+			gui_addText(twkMenu,66,170+(i*20),1310,event_array[i][eventname]);
 			chr_getEventHandler(target,event_array[i][eventnum],tempStr);
 			gui_addInputField( twkMenu,220,170+(i*20),150,20,i+1,0,tempStr);
 			gui_addCheckbox( twkMenu, 200, 173+(i*20), oldpic, newpic, 1, i+1 );
@@ -700,7 +700,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		for ( i=16;i <= 31;++i)
 		{
 			gui_addGump(twkMenu,50,173+((i-16)*20), 0x827);
-			gui_addText(twkMenu,66,170+((i-16)*20),1310,event_array[i][name]);
+			gui_addText(twkMenu,66,170+((i-16)*20),1310,event_array[i][eventname]);
 			chr_getEventHandler(target,event_array[i][eventnum],tempStr);
 			gui_addInputField( twkMenu,220,170+((i-16)*20),150,20,i+1,0,tempStr);
 			gui_addCheckbox( twkMenu, 200, 173+((i-16)*20), oldpic, newpic, 1, i+1 );
@@ -743,7 +743,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		for ( i=32;i <= 37;++i)
 		{
 			gui_addGump(twkMenu,50,173+((i-32)*20), 0x827);
-			gui_addText(twkMenu,66,170+((i-32)*20),1310,event_array[i][name]);
+			gui_addText(twkMenu,66,170+((i-32)*20),1310,event_array[i][eventname]);
 			gui_addCheckbox( twkMenu, 200, 173+((i-32)*20), oldpic, newpic, 1, i+1 );
 			chr_getEventHandler(target,event_array[i][eventnum],tempStr);
 			gui_addInputField( twkMenu,220,170+((i-32)*20),150,20,i+1,0,tempStr);
@@ -1073,13 +1073,13 @@ public viewMenu(const chrsource, const target, const buttonCode)
 	//printf("enter viewmenu, page: %d", buttonCode);
 	switch(buttonCode)
 	{
-		case 1: basicChrTweak(chrsource, target, 1);
-		case 2: basicChrTweak(chrsource, target, 2);
-		case 3: basicChrTweak(chrsource, target, 3);
-		case 4: basicChrTweak(chrsource, target, 4);
-		case 5: basicChrTweak(chrsource, target, 5);
-		case 6: basicChrTweak(chrsource, target, 6);
-		case 7: basicChrTweak(chrsource, target, 7);
+		case 1: tweak_char(chrsource, target, 1);
+		case 2: tweak_char(chrsource, target, 2);
+		case 3: tweak_char(chrsource, target, 3);
+		case 4: tweak_char(chrsource, target, 4);
+		case 5: tweak_char(chrsource, target, 5);
+		case 6: tweak_char(chrsource, target, 6);
+		case 7: tweak_char(chrsource, target, 7);
 	}
 }
 
@@ -1564,7 +1564,7 @@ public callItemMenu(const chrsource,const target, const pagenumber)
 		gui_addText(menuitemprop1,160,150,0,tempStr,0);
 		gui_addText(menuitemprop1,70,170,1310,"Script ID :");
 		gui_addPropField( menuitemprop1, 160, 170,150,30,IP_SCRIPTID);
-		gui_addText(menuitemprop1,70,190,1310,"Name :");
+		gui_addText(menuitemprop1,70,190,1310,"eventname :");
 		gui_addPropField( menuitemprop1, 160, 190,150,30,IP_STR_NAME);
 		gui_addText(menuitemprop1,70,210,1310,"Farbe :");
 		gui_addPropField( menuitemprop1, 160, 210,150,30,IP_COLOR);

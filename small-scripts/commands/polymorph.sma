@@ -140,12 +140,12 @@ cmd_polymorph (const target)
 
 public polymMenuCallback( const t, const chrsource, const target, const x, const y, const z, const model, const param1 )
 {
-	printf("chrsource: %d, target: %d, modell: %d, t: %d^n", chrsource, target, model, t);
+	//printf("chrsource: %d, target: %d, modell: %d, t: %d^n", chrsource, target, model, t);
 	if ( chrsource < 0 )
 		return;
-	if ( (t == 1) || (t==3) //ist npc/char
+	if ( (t == 1) || (t==3) ) //ist npc/char
 	{
-		if(chr_getProperty( target,CP_ID)) != (chr_getProperty(target,CP_XID))
+		if(chr_getProperty( target,CP_ID) != chr_getProperty(target,CP_XID))
 			chr_unmorph(target);
 		else
 			callPolyMenu(chrsource,target, 1);
@@ -254,11 +254,11 @@ public infoPolyCallback(const polymMenu, const chrsource, const buttonCode)
 	else if(buttonCode >= 10)
 	{
 		new arrayline = buttonCode-10;
-		new name[15];
-		gui_getProperty(polymMenu,MP_UNI_TEXT,3,name);
-		if( !strcmp( name,"(name)" )) //is Entry not made (is still "(name)")
+		new chrname[30];
+		gui_getProperty(polymMenu,MP_UNI_TEXT,3,chrname);
+		if( !strcmp( chrname,"(name)" )) //is Entry not made (is still "(name)")
 		{
-			sprintf(name, "%s", animProperty[arrayline][animname]);
+			sprintf(chrname, "%s", animProperty[arrayline][animname]);
 		}
 		new color[15];
 		new skincolor = 0000;		
@@ -268,7 +268,7 @@ public infoPolyCallback(const polymMenu, const chrsource, const buttonCode)
 			trim(color);
 			if (isStrUnsignedInt(color))	skincolor = str2UnsignedInt(color);
 		}
-		chr_morph( target, animProperty[arrayline][decbody], skincolor,-1,-1,-1,-1,1,name); //polymorphes body with backup for name and body
+		chr_morph( target, animProperty[arrayline][decbody], skincolor,-1,-1,-1,-1,1,chrname); //polymorphes body with backup for name and body
 		chr_update(target);
 	}
 }
