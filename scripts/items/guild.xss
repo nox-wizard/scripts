@@ -14,3 +14,45 @@ SECTION ITEM $item_guildstone_deed
     VALUE 35000
     @ONDBLCLICK guild_dclickDeed
 }
+
+//Chaos Shield
+SECTION ITEM $item_chaos_shield
+{
+	NAME chaos shield
+	ID 1BC3
+	DEF 25
+	HP 500
+	STR 0
+	LAYER $layer_2hand_weapon
+	ITEMHAND 3
+	DECAY
+	VALUE 50
+	WEIGHT 800
+	RESISTS $damage_slash 3
+	RESISTS $damage_pierce 3
+	RESISTS $damage_bludgeon 3
+///CATEGORY Provisions - Armor
+///SUBSECTION Shields
+///DESCRIPTION Chaos Shield
+}
+
+//Order Shield
+SECTION ITEM $item_order_shield
+{
+	NAME order shield
+	ID 1BC4
+	DEF 25
+	HP 500
+	STR 0
+	LAYER $layer_2hand_weapon
+	ITEMHAND 3
+	DECAY
+	VALUE 50
+	WEIGHT 800
+	RESISTS $damage_slash 3
+	RESISTS $damage_pierce 3
+	RESISTS $damage_bludgeon 3
+///CATEGORY Provisions - Armor
+///SUBSECTION Shields
+///DESCRIPTION Order Shield
+}

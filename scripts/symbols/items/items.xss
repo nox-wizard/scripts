@@ -794,7 +794,7 @@
 
 #define $item_leather_gloves 2532
 #define $item_leather_gorget 2533
-	
+
 
 #define $item_mortar_and_pestal 2600
 #define $item_lamp_post 2610
@@ -2127,6 +2127,8 @@
 #define $item_deed_large_dragon_ship 2122
 #define $item_guildstone 2123
 #define $item_guildstone_deed 2124
+#define $item_chaos_shield 2125
+#define $item_order_shield 2126
 // several stuff //
 #define $item_dupre 400002
 #define $item_a_golden_goblet 400003
