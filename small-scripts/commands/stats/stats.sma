@@ -152,7 +152,7 @@ public handle_stats_char( const socket, const menu, const button )
 	}
 	else { //apply button, so resend current page
 		chr_teleport( chr );
-		stats_char( socket, chr, gui_getProperty( menu, MP_BUFFER, 2 ) );
+		stats_char( socket, chr, gui_getProperty( menu, MP_BUFFER, 3 ) );
 	}
 	
 }
@@ -169,7 +169,7 @@ public handle_stats_item( const socket, const menu, const button )
 	}
 	else { //apply button, so resend current page
 		chr_teleport( chr );
-		stats_item( socket, chr, gui_getProperty( menu, MP_BUFFER, 2 ) );
+		stats_item( socket, chr, gui_getProperty( menu, MP_BUFFER, 3 ) );
 	}
 	
 }
