@@ -73,7 +73,7 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 
 	for( set_rewind(set); !set_end( set ); ) {
 		new c=set_getChar( set );
-		if( c!=INVALID !chr_getProperty( c, CP_DEAD ) ) {
+		if( c!=INVALID && !chr_getProperty( c, CP_DEAD ) ) {
 			
 			new str[100]
 			chr_getProperty( c, CP_STR_NAME, _, str );
