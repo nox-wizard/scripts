@@ -19,11 +19,12 @@
 // NOKEY ... no key is generated.
 // "overrules" the normal key generation logic and forces not to make a key.
 
-// NAME ... guess ...
+// NAME  ... guess ...
 	
 	
 SECTION HOUSE 1
-{Small Brick
+{
+	NAME Small Brick
 	ID 4068
 	SPACEX1 3
 	SPACEX2 4
@@ -40,7 +41,8 @@ SECTION HOUSE 1
 }
 	
 SECTION HOUSE 2
-{Small Plaster
+{
+	NAME Small Plaster
 	ID 4064
 	SPACEX1 3
 	SPACEX2 4
@@ -57,7 +59,8 @@ SECTION HOUSE 2
 }
 	
 SECTION HOUSE 3
-{Small Field Stone
+{
+	NAME Small Field Stone
 	ID 4066
 	SPACEX1 3
 	SPACEX2 4
@@ -74,7 +77,8 @@ SECTION HOUSE 3
 }
 	
 SECTION HOUSE 4
-{Small Wood
+{
+	NAME Small Wood
 	ID 406A
 	SPACEX1 3
 	SPACEX2 4
@@ -91,7 +95,8 @@ SECTION HOUSE 4
 }
 	
 SECTION HOUSE 5
-{Small Wood & Plaster
+{
+	NAME Small Wood & Plaster
 	ID 406C
 	SPACEX1 3
 	SPACEX2 4
@@ -101,14 +106,15 @@ SECTION HOUSE 5
 	CHARY 0
 	CHARZ 8
 	MAXLOCKED 480
-	MAXSECURED3
+	MAXSECURED 3
 	HOUSE_ITEM 1
 	HOUSE_ITEM 2
 	HOUSE_DEED 6004
 }
 	
 SECTION HOUSE 6
-{Small Hut
+{
+	NAME Small Hut
 	ID 406E
 	SPACEX1 3
 	SPACEX2 4
@@ -118,14 +124,15 @@ SECTION HOUSE 6
 	CHARY 0
 	CHARZ 8
 	MAXLOCKED 480
-	MAXSECURED3
+	MAXSECURED 3
 	HOUSE_ITEM 1
 	HOUSE_ITEM 2
 	HOUSE_DEED 6005
 }
 	
 SECTION HOUSE 7
-{Blue tent
+{
+	NAME Blue tent
 	ID 4070
 	SPACEX1 3
 	SPACEX2 4
@@ -133,12 +140,15 @@ SECTION HOUSE 7
 	SPACEY2 4CHARX 0
 	CHARY 0
 	CHARZ 0
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 3
 	HOUSE_DEED 6006
 }
 	
 SECTION HOUSE 8
-{Green tent
+{
+	NAME Green tent
 	ID 4072
 	SPACEX1 3
 	SPACEX2 4
@@ -146,12 +156,15 @@ SECTION HOUSE 8
 	SPACEY2 4CHARX 0
 	CHARY 0
 	CHARZ 0
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 3
 	HOUSE_DEED 6007
 }
 	
 SECTION HOUSE 9
-{Guild Hall
+{
+	NAME Guild Hall
 	ID 4074
 	SPACEX1 7
 	SPACEX2 6
@@ -160,6 +173,8 @@ SECTION HOUSE 9
 	CHARX 0
 	CHARY 0
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 4
 	HOUSE_ITEM 5
 	HOUSE_ITEM 6
@@ -169,7 +184,8 @@ SECTION HOUSE 9
 }
 	
 SECTION HOUSE 10
-{2 Story (Wood & Plaster)
+{
+	NAME 2 Story (Wood & Plaster)
 	ID 4076
 	SPACEX1 7
 	SPACEX2 6
@@ -178,6 +194,8 @@ SECTION HOUSE 10
 	CHARX -1
 	CHARY 1
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 9
 	HOUSE_ITEM 10
 	HOUSE_ITEM 11
@@ -187,7 +205,8 @@ SECTION HOUSE 10
 }
 	
 SECTION HOUSE 11
-{2 Story (Plaster)
+{
+	NAME 2 Story (Plaster)
 	ID 4078
 	SPACEX1 7
 	SPACEX2 6
@@ -196,6 +215,8 @@ SECTION HOUSE 11
 	CHARX -1
 	CHARY 1
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 9
 	HOUSE_ITEM 14
 	HOUSE_ITEM 11
@@ -205,7 +226,8 @@ SECTION HOUSE 11
 }
 	
 SECTION HOUSE 12
-{Tower (3 story Stone)
+{
+	NAME Tower (3 story Stone)
 	ID 407A
 	SPACEX1 11
 	SPACEX2 7
@@ -214,6 +236,8 @@ SECTION HOUSE 12
 	CHARX 0
 	CHARY 0
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 15
 	HOUSE_ITEM 16
 	HOUSE_ITEM 17
@@ -224,7 +248,8 @@ SECTION HOUSE 12
 }
 	
 SECTION HOUSE 13
-{Keep (mini castle)
+{
+	NAME Keep (mini castle)
 	ID 407C
 	SPACEX1 11
 	SPACEX2 12
@@ -233,6 +258,8 @@ SECTION HOUSE 13
 	CHARX 0
 	CHARY 0
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 21
 	HOUSE_ITEM 22
 	HOUSE_ITEM 23
@@ -240,7 +267,8 @@ SECTION HOUSE 13
 }
 	
 SECTION HOUSE 14
-{Castle
+{
+	NAME Castle
 	ID 407E
 	SPACEX1 15
 	SPACEX2 15
@@ -249,6 +277,8 @@ SECTION HOUSE 14
 	CHARX 1
 	CHARY 6
 	CHARZ 6
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 24
 	HOUSE_ITEM 25
 	HOUSE_ITEM 26
@@ -260,7 +290,8 @@ SECTION HOUSE 14
 }
 	
 SECTION HOUSE 15
-{Shop (Generic)
+{
+	NAME Shop (Generic)
 	ID 408C
 	SPACEX1 7
 	SPACEX2 7
@@ -269,6 +300,8 @@ SECTION HOUSE 15
 	CHARX -2
 	CHARY 2
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 31
 	HOUSE_ITEM 32
 	HOUSE_ITEM 33
@@ -279,7 +312,8 @@ SECTION HOUSE 15
 }
 	
 SECTION HOUSE 16
-{Shop (Smith's)
+{
+	NAME Shop (Smith's)
 	ID 408C
 	SPACEX1 7
 	SPACEX2 7
@@ -288,6 +322,8 @@ SECTION HOUSE 16
 	CHARX -2
 	CHARY 2
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 31
 	HOUSE_ITEM 32
 	HOUSE_ITEM 33
@@ -303,7 +339,8 @@ SECTION HOUSE 16
 }
 	
 SECTION HOUSE 17
-{Farm House
+{
+	NAME Farm House
 	ID 4BB8
 	SPACEX1 4
 	SPACEX2 5
@@ -312,13 +349,15 @@ SECTION HOUSE 17
 	CHARX 0
 	CHARY 0
 	CHARZ 0
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 42
 }
 	
 SECTION HOUSE 18
-{// Pentagram
+{
 	ID 0FEA
-	NAME a pentagram
+	NAME  a pentagram
 	TYPE 1
 	NOREALMULTI
 	NOKEY
@@ -329,6 +368,8 @@ SECTION HOUSE 18
 	CHARX 0
 	CHARY 0
 	CHARZ 0
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 43
 	HOUSE_ITEM 44
 	HOUSE_ITEM 45
@@ -341,8 +382,8 @@ SECTION HOUSE 18
 }
 	
 SECTION HOUSE 19
-{LOOM-south
-	NAME Upright Loom
+{
+	NAME  Upright Loom
 	NOKEY
 	NOREALMULTI
 	SPACEX1 1
@@ -352,26 +393,28 @@ SECTION HOUSE 19
 	CHARX 0
 	CHARY 0
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 52
 	HOUSE_ITEM 53
 }
 	
 SECTION HOUSE 20
-{Small Boat
+{
+	NAME Small Boat
 	ID 4000
 	SPACEX1 2
 	SPACEX2 2
 	SPACEY1 4
 	SPACEY2 3
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_DEED 2117
 	BOAT
 	CHARX 1
 }
 	
 SECTION HOUSE 21
-{Small Dragon Boat
+{
+	NAME Small Dragon Boat
 	ID 4004
 	BOAT
 	SPACEX1 2
@@ -379,11 +422,14 @@ SECTION HOUSE 21
 	SPACEY1 4
 	SPACEY2 3
 	CHARX 1
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_DEED 2118
 }
 	
 SECTION HOUSE 22
-{Medium Boat
+{
+	NAME Medium Boat
 	ID 4008
 	BOAT
 	SPACEX1 2
@@ -391,11 +437,14 @@ SECTION HOUSE 22
 	SPACEY1 5
 	SPACEY2 4
 	CHARX 1
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_DEED 2119
 }
 	
 SECTION HOUSE 23
-{Medium Dragon Boat
+{
+	NAME Medium Dragon Boat
 	ID 400C
 	BOAT
 	SPACEX1 2
@@ -403,11 +452,14 @@ SECTION HOUSE 23
 	SPACEY1 5
 	SPACEY2 4
 	CHARX 1
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_DEED 2120
 }
 	
 SECTION HOUSE 24
-{Large Boat
+{
+	NAME Large Boat
 	ID 4010
 	BOAT
 	SPACEX1 2
@@ -415,24 +467,27 @@ SECTION HOUSE 24
 	SPACEY1 6
 	SPACEY2 5
 	CHARX 1
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_DEED 2121
 }
 	
 SECTION HOUSE 25
-{Large Dragon Boat
+{
+	NAME Large Dragon Boat
 	ID 4014
 	BOAT
 	SPACEX1 2
 	SPACEX2 2
 	SPACEY1 6
 	SPACEY2 5
-	CHARX 1
+	CHARX 1Small 2-story Tower
 	HOUSE_DEED 2122
 }
-	
-	// Small 2-story Tower
+
 SECTION HOUSE 26
-	{
+{
+	NAME Small 2-story Tower
 	ID 4098
 	SPACEX1 3
 	SPACEX2 4
@@ -442,14 +497,15 @@ SECTION HOUSE 26
 	CHARY 0
 	CHARZ 8
 	MAXLOCKED 480
-	MAXSECURED3
+	MAXSECURED 3
 	HOUSE_ITEM 100
 	HOUSE_ITEM 101
 	HOUSE_DEED 50032
 }
-	// Marble 2-story
+
 SECTION HOUSE 27
-	{
+{
+	NAME Marble 2-story
 	ID 40A2
 	SPACEX1 3
 	SPACEX2 3
@@ -458,13 +514,16 @@ SECTION HOUSE 27
 	CHARX 0
 	CHARY 0
 	CHARZ 24
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 102
 	HOUSE_ITEM 103
 	HOUSE_DEED 50033
 }
-	// Stone 2-story
+
 SECTION HOUSE 28
-	{
+{
+	NAME Stone 2-story
 	ID 40A0
 	SPACEX1 3
 	SPACEX2 3
@@ -473,13 +532,16 @@ SECTION HOUSE 28
 	CHARX 0
 	CHARY 0
 	CHARZ 27
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 104
 	HOUSE_ITEM 105
 	HOUSE_DEED 50035
 }
 	
 SECTION HOUSE 29
-{New 2-story tavern
+{
+	NAME New 2-story tavern
 	ID 409e
 	SPACEX1 5
 	SPACEX2 5
@@ -488,6 +550,8 @@ SECTION HOUSE 29
 	CHARX -2
 	CHARY 2
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 106
 	HOUSE_ITEM 107
 	HOUSE_ITEM 108
@@ -497,7 +561,8 @@ SECTION HOUSE 29
 }
 	
 SECTION HOUSE 30
-{New adobe type house
+{
+	NAME New adobe type house
 	ID 409c
 	SPACEX1 5
 	SPACEX2 6
@@ -506,13 +571,16 @@ SECTION HOUSE 30
 	CHARX -2
 	CHARY 2
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 111
 	HOUSE_ITEM 112
 	HOUSE_DEED 50037
 }
 	
 SECTION HOUSE 31
-{2-story log house
+{
+	NAME 2-story log house
 	ID 409a
 	SPACEX1 3
 	SPACEX2 4
@@ -521,6 +589,8 @@ SECTION HOUSE 31
 	CHARX 0
 	CHARY 0
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 113
 	HOUSE_ITEM 114
 	HOUSE_ITEM 115
@@ -528,7 +598,8 @@ SECTION HOUSE 31
 }
 	
 SECTION HOUSE 32
-{3-Story Marble House
+{
+	NAME 3-Story Marble House
 	ID 4096
 	SPACEX1 7
 	SPACEX2 7
@@ -537,6 +608,8 @@ SECTION HOUSE 32
 	CHARX -3
 	CHARY 0
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 116
 	HOUSE_ITEM 117
 	HOUSE_ITEM 118
@@ -544,7 +617,8 @@ SECTION HOUSE 32
 }
 	
 SECTION HOUSE 33
-{Bed facing south
+{
+	NAME Bed facing south
 	NOKEY
 	NOREALMULTI
 	SPACEX1 1
@@ -554,8 +628,6 @@ SECTION HOUSE 33
 	CHARX 3
 	CHARY 3
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 63
 	HOUSE_ITEM 64
 	HOUSE_ITEM 65
@@ -563,7 +635,8 @@ SECTION HOUSE 33
 }
 	
 SECTION HOUSE 34
-{Bed facing east
+{
+	NAME Bed facing east
 	NOKEY
 	NOREALMULTI
 	CHARX 3
@@ -580,7 +653,8 @@ SECTION HOUSE 34
 }
 	
 SECTION HOUSE 35
-{Large forge facing east
+{
+	NAME Large forge facing east
 	NOKEY
 	NOREALMULTI
 	CHARX 3
@@ -596,7 +670,8 @@ SECTION HOUSE 35
 }
 	
 SECTION HOUSE 36
-{Large forge facing south
+{
+	NAME Large forge facing south
 	NOKEY
 	NOREALMULTI
 	CHARX 3
@@ -610,9 +685,10 @@ SECTION HOUSE 36
 	HOUSE_ITEM 75
 	HOUSE_ITEM 76
 }
-	// Addons by Magius(CHE)
+
 SECTION HOUSE 100
-{Shop (Magician) Large
+{
+	NAME Shop (Magician) Large
 	ID 408C
 	SPACEX1 7
 	SPACEX2 7
@@ -621,6 +697,8 @@ SECTION HOUSE 100
 	CHARX -2
 	CHARY 2
 	CHARZ 7
+	MAXLOCKED 480
+	MAXSECURED 3
 	HOUSE_ITEM 31
 	HOUSE_ITEM 32
 	HOUSE_ITEM 33
@@ -674,13 +752,11 @@ SECTION HOUSE 100
 	HOUSE_DEED 6037
 }
 	
-	// Addons by Lord Binary
-	
 SECTION HOUSE 200
-{Treasure 1
+{
 	ID 43E8
 	NOKEY
-	NAME Treasure
+	NAME  Treasure
 	SPACEX1 2
 	SPACEX2 2
 	SPACEY1 2
@@ -689,9 +765,6 @@ SECTION HOUSE 200
 	CHARY 1
 	CHARZ 0
 	HOUSE_DEED 6100
-	// due to a bug either in the multi file or in uox I cant find
-	// only the middle piece of that multi is shown when placed,
-	// so I add the rest via house_items
 	HOUSE_ITEM 143
 	HOUSE_ITEM 144
 	HOUSE_ITEM 145
@@ -700,13 +773,12 @@ SECTION HOUSE 200
 	HOUSE_ITEM 148
 	HOUSE_ITEM 149
 }
-	
-	
+
 SECTION HOUSE 201
-{Treasure 2
+{
 	ID 43EB
 	NOKEY
-	NAME Treasure
+	NAME  Treasure
 	SPACEX1 3
 	SPACEX2 3
 	SPACEY1 3
@@ -729,10 +801,10 @@ SECTION HOUSE 201
 }
 	
 SECTION HOUSE 202
-{Treasure 3
+{
 	ID 43EA
 	NOKEY
-	NAME Treasure
+	NAME  Treasure
 	SPACEX 3
 	SPACEY 3
 	CHARX -2
@@ -753,10 +825,10 @@ SECTION HOUSE 202
 }
 	
 SECTION HOUSE 203
-{Treasure 3
+{
 	ID 43E9
 	NOKEY
-	NAME TREASURE
+	NAME  Treasure
 	SPACEX1 2
 	SPACEX2 2
 	SPACEY1 2
@@ -778,11 +850,11 @@ SECTION HOUSE 203
 	
 	
 SECTION HOUSE 204
-{Lighthouse
+{
+	NAME Lighthouse
 	ID 1AD0
 	NOKEY
 	NOREALMULTI
-	NAME Lighthouse
 	SPACEX1 3
 	SPACEX2 3
 	SPACEY1 3
@@ -822,11 +894,11 @@ SECTION HOUSE 204
 }
 	
 SECTION HOUSE 205
-{Telescope
+{
+	NAME Telescope
 	ID 1463
 	NOKEY
 	NOREALMULTI
-	NAME TELESCOPE
 	SPACEX 11
 	SPACEY 7
 	CHARX -11
@@ -902,11 +974,11 @@ SECTION HOUSE 205
 }
 	
 SECTION HOUSE 206
-{Arbitoir
+{
+	NAME Arbitoir
 	ID 1216
 	NOKEY
 	NOREALMULTI
-	NAME Arbitoir
 	SPACEX1 1
 	SPACEX2 1
 	SPACEY1 1
@@ -926,8 +998,8 @@ SECTION HOUSE 206
 }
 	
 SECTION HOUSE 207
-{LOOM-east
-	NAME Upright Loom
+{
+	NAME  Upright Loom
 	NOKEY
 	NOREALMULTI
 	SPACEX1 1
@@ -937,15 +1009,13 @@ SECTION HOUSE 207
 	CHARX 0
 	CHARY 0
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 55
 	HOUSE_ITEM 54
 }
 	
 SECTION HOUSE 208
-{// brick east
-	NAME Fireplace
+{
+	NAME Brick Fireplace
 	ID 0937
 	NOKEY
 	NOREALMULTI
@@ -956,14 +1026,12 @@ SECTION HOUSE 208
 	CHARX 0
 	CHARY 0
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 56
 }
 	
 SECTION HOUSE 209
-{// brick south
-	NAME Fireplace
+{
+	NAME Brick Fireplace
 	ID 0945
 	NOKEY
 	NOREALMULTI
@@ -974,14 +1042,12 @@ SECTION HOUSE 209
 	CHARX 0
 	CHARY 0
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 57
 }
 	
 SECTION HOUSE 210
-{// Bed- east
-	NAME Bed
+{
+	NAME  Bed
 	ID 0A5D
 	NOKEY
 	NOREALMULTI
@@ -992,14 +1058,12 @@ SECTION HOUSE 210
 	CHARX 0
 	CHARY 0
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 58
 }
 	
 SECTION HOUSE 211
-{// Bed- south
-	NAME Bed
+{
+	NAME  Bed
 	ID 0A63
 	NOKEY
 	NOREALMULTI
@@ -1010,14 +1074,12 @@ SECTION HOUSE 211
 	CHARX 0
 	CHARY 0
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 59
 }
 	
 SECTION HOUSE 212
-{// Christmas tree
-	NAME christmas tree
+{
+	NAME  christmas tree
 	ID 0CD6
 	NOKEY
 	NOREALMULTI
@@ -1044,8 +1106,8 @@ SECTION HOUSE 212
 }
 	
 SECTION HOUSE 213
-{// brick east
-	NAME Oven
+{
+	NAME Brick Oven
 	ID 092b
 	NOKEY
 	NOREALMULTI
@@ -1056,14 +1118,12 @@ SECTION HOUSE 213
 	CHARX 0
 	CHARY 0
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 60
 }
 	
 SECTION HOUSE 214
-{// brick south
-	NAME Oven
+{
+	NAME Brick Oven
 	ID 0930
 	NOKEY
 	NOREALMULTI
@@ -1074,13 +1134,12 @@ SECTION HOUSE 214
 	CHARX 0
 	CHARY 0
 	CHARZ 8
-	MAXLOCKED 480
-	MAXSECURED3
 	HOUSE_ITEM 61
 }
 	
 SECTION HOUSE ITEM 1
-{Wooden Door (Small house)
+{
+	//NAME Wooden Door
 	ITEM $item_wooden_door_1
 	LOCK
 	X 0
@@ -1089,7 +1148,8 @@ SECTION HOUSE ITEM 1
 }
 	
 SECTION HOUSE ITEM 2
-{Sign (Small house)
+{
+	//NAME Sign
 	ITEM $item_brass_sign_1
 	LOCK
 	X 2
@@ -1099,7 +1159,8 @@ SECTION HOUSE ITEM 2
 }
 	
 SECTION HOUSE ITEM 3
-{Chest (tent)
+{
+	//NAME Chest
 	ITEM $item_wooden_chest1
 	LOCK
 	NODECAY
@@ -1107,27 +1168,33 @@ SECTION HOUSE ITEM 3
 	Y -2
 	Z 0
 }
-	
+
+//Guild Hall Inner Door(left)
 SECTION HOUSE ITEM 4
-{GHall Inner Door (left)
+{
+	//NAME Wooden Door 
 	ITEM $item_wooden_door_1
 	LOCK
 	X 3
 	Y -1
 	Z 8
 }
-	
+
+//Guild Hall Inner Door(right)
 SECTION HOUSE ITEM 5
-{GHall Inner Door (right)
+{
+	//NAME Wooden Door 
 	ITEM $item_wooden_door_1
 	LOCK
 	X -3
 	Y -1
 	Z 8
 }
-	
+
+//Guild Hall Outer Door(left)	
 SECTION HOUSE ITEM 6
-{GHall Outer Door (left)
+{
+	//NAME Wooden Door 
 	ITEM $item_wooden_door_1
 	LOCK
 	X -1
@@ -1136,7 +1203,8 @@ SECTION HOUSE ITEM 6
 }
 	
 SECTION HOUSE ITEM 7
-{GHall Outer Door (right)
+{
+	//NAME GHall Outer Door (right)
 	ITEM $item_wooden_door_1
 	LOCK
 	X 0
@@ -1145,7 +1213,8 @@ SECTION HOUSE ITEM 7
 }
 	
 SECTION HOUSE ITEM 8
-{GHall Sign
+{
+	//NAME GHall Sign
 	ITEM $item_brass_sign_1
 	LOCK
 	X 3
@@ -1155,7 +1224,8 @@ SECTION HOUSE ITEM 8
 }
 	
 SECTION HOUSE ITEM 9
-{2 Story Inner Door (lower level)
+{
+	//NAME 2 Story Inner Door (lower level)
 	ITEM $item_wooden_door_1
 	LOCK
 	X -3
@@ -1164,7 +1234,8 @@ SECTION HOUSE ITEM 9
 }
 	
 SECTION HOUSE ITEM 10
-{2 Story Inner Door (Upper level (Wood & plaster)
+{
+	//NAME 2 Story Inner Door (Upper level (Wood & plaster)
 	ITEM $item_wooden_door_1
 	LOCK
 	X -2
@@ -1173,7 +1244,8 @@ SECTION HOUSE ITEM 10
 }
 	
 SECTION HOUSE ITEM 11
-{2 Story Outer door (left)
+{
+	//NAME 2 Story Outer door (left)
 	ITEM $item_wooden_door_1
 	LOCK
 	X -3
@@ -1182,7 +1254,8 @@ SECTION HOUSE ITEM 11
 }
 	
 SECTION HOUSE ITEM 12
-{2 Story Outer door (right)
+{
+	//NAME 2 Story Outer door (right)
 	ITEM $item_wooden_door_1
 	LOCK
 	X -2
@@ -1191,7 +1264,8 @@ SECTION HOUSE ITEM 12
 }
 	
 SECTION HOUSE ITEM 13
-{2 Story Sign
+{
+	//NAME 2 Story Sign
 	ITEM $item_brass_sign_1
 	LOCK
 	X 1
@@ -1201,7 +1275,8 @@ SECTION HOUSE ITEM 13
 }
 	
 SECTION HOUSE ITEM 14
-{2 Story Inner Door (Upper level (plaster)
+{
+	//NAME 2 Story Inner Door (Upper level (plaster)
 	ITEM $item_wooden_door_1
 	LOCK
 	X -3
@@ -1210,7 +1285,8 @@ SECTION HOUSE ITEM 14
 }
 	
 SECTION HOUSE ITEM 15
-{Tower Outer door (left)
+{
+	//NAME Tower Outer door (left)
 	ITEM $item_metal_door_1
 	LOCK
 	X 0
@@ -1219,7 +1295,8 @@ SECTION HOUSE ITEM 15
 }
 	
 SECTION HOUSE ITEM 16
-{Tower Outer door (right)
+{
+	//NAME Tower Outer door (right)
 	ITEM $item_metal_door_2
 	LOCK
 	X 1
@@ -1228,7 +1305,8 @@ SECTION HOUSE ITEM 16
 }
 	
 SECTION HOUSE ITEM 17
-{Tower Door (lev 1)
+{
+	//NAME Tower Door (lev 1)
 	ITEM $item_metal_door_1
 	LOCK
 	X 3
@@ -1237,7 +1315,8 @@ SECTION HOUSE ITEM 17
 }
 	
 SECTION HOUSE ITEM 18
-{Tower Sign
+{
+	//NAME Tower Sign
 	ITEM $item_brass_sign_1
 	LOCK
 	X 4
@@ -1247,7 +1326,8 @@ SECTION HOUSE ITEM 18
 }
 	
 SECTION HOUSE ITEM 19
-{Tower Door (lev 2)
+{
+	//NAME Tower Door (lev 2)
 	ITEM $item_metal_door_3
 	LOCK
 	X 1
@@ -1256,7 +1336,8 @@ SECTION HOUSE ITEM 19
 }
 	
 SECTION HOUSE ITEM 20
-{Tower Door (lev 3)
+{
+	//NAME Tower Door (lev 3)
 	ITEM $item_metal_door_3
 	LOCK
 	X 1
@@ -1265,7 +1346,8 @@ SECTION HOUSE ITEM 20
 }
 	
 SECTION HOUSE ITEM 21
-{keep door (left)
+{
+	//NAME keep door (left)
 	ITEM $item_metal_door_1
 	LOCK
 	X 0
@@ -1274,7 +1356,8 @@ SECTION HOUSE ITEM 21
 }
 	
 SECTION HOUSE ITEM 22
-{keep door (right)
+{
+	//NAME keep door (right)
 	ITEM $item_metal_door_2
 	LOCK
 	X 1
@@ -1283,7 +1366,8 @@ SECTION HOUSE ITEM 22
 }
 	
 SECTION HOUSE ITEM 23
-{keep sign
+{
+	//NAME keep sign
 	ITEM $item_brass_sign_1
 	LOCK
 	X 4
@@ -1293,7 +1377,8 @@ SECTION HOUSE ITEM 23
 }
 	
 SECTION HOUSE ITEM 24
-{castle door (middle (right))
+{
+	//NAME castle door (middle (right))
 	ITEM $item_metal_door_2
 	LOCK
 	X 1
@@ -1302,7 +1387,8 @@ SECTION HOUSE ITEM 24
 }
 	
 SECTION HOUSE ITEM 25
-{castle door (middle (left))
+{
+	//NAME castle door (middle (left))
 	ITEM $item_metal_door_1
 	LOCK
 	X 0
@@ -1311,7 +1397,8 @@ SECTION HOUSE ITEM 25
 }
 	
 SECTION HOUSE ITEM 26
-{castle door (outer inner (left))
+{
+	//NAME castle door (outer inner (left))
 	ITEM $item_metal_door_1
 	LOCK
 	X 0
@@ -1320,7 +1407,8 @@ SECTION HOUSE ITEM 26
 }
 	
 SECTION HOUSE ITEM 27
-{castle door (outer inner (right))
+{
+	//NAME castle door (outer inner (right))
 	ITEM $item_metal_door_2
 	LOCK
 	X 1
@@ -1329,7 +1417,8 @@ SECTION HOUSE ITEM 27
 }
 	
 SECTION HOUSE ITEM 28
-{castle door (outer (left))
+{
+	//NAME castle door (outer (left))
 	ITEM $item_metal_door_1
 	LOCK
 	X 0
@@ -1338,7 +1427,8 @@ SECTION HOUSE ITEM 28
 }
 	
 SECTION HOUSE ITEM 29
-{castle door (outer (right))
+{
+	//NAME castle door (outer (right))
 	ITEM $item_metal_door_2
 	LOCK
 	X 1
@@ -1347,7 +1437,8 @@ SECTION HOUSE ITEM 29
 }
 	
 SECTION HOUSE ITEM 30
-{castle sign
+{
+	//NAME castle sign
 	ITEM $item_brass_sign_1
 	LOCK
 	X 4
@@ -1357,7 +1448,8 @@ SECTION HOUSE ITEM 30
 }
 	
 SECTION HOUSE ITEM 31
-{Shop Inner door (left)
+{
+	//NAME Shop Inner door (left)
 	ITEM $item_wooden_door_2
 	LOCK
 	X 1
@@ -1366,7 +1458,8 @@ SECTION HOUSE ITEM 31
 }
 	
 SECTION HOUSE ITEM 33
-{Shop Inner door (middle)
+{
+	//NAME Shop Inner door (middle)
 	ITEM $item_wooden_door_1
 	LOCK
 	X 4
@@ -1375,7 +1468,8 @@ SECTION HOUSE ITEM 33
 }
 	
 SECTION HOUSE ITEM 34
-{Shop outer (right)
+{
+	//NAME Shop outer (right)
 	ITEM $item_wooden_door_1
 	LOCK
 	X -3
@@ -1384,7 +1478,8 @@ SECTION HOUSE ITEM 34
 }
 	
 SECTION HOUSE ITEM 35
-{Shop outer (left)
+{
+	//NAME Shop outer (left)
 	ITEM $item_wooden_door_1
 	LOCK
 	X -4
@@ -1393,7 +1488,8 @@ SECTION HOUSE ITEM 35
 }
 	
 SECTION HOUSE ITEM 36
-{Shop sign
+{
+	//NAME Shop sign
 	ITEM $item_brass_sign_1
 	LOCK
 	X 0
@@ -1403,7 +1499,8 @@ SECTION HOUSE ITEM 36
 }
 	
 SECTION HOUSE ITEM 37
-{Shop Inner door (right)
+{
+	//NAME Shop Inner door (right)
 	ITEM $item_wooden_door_3
 	LOCK
 	X 1
@@ -1412,7 +1509,8 @@ SECTION HOUSE ITEM 37
 }
 	
 SECTION HOUSE ITEM 38
-{Shop forge part 1
+{
+	//NAME Shop forge part 1
 	ITEM $item_bellows
 	X 3
 	Y 2
@@ -1420,7 +1518,8 @@ SECTION HOUSE ITEM 38
 }
 	
 SECTION HOUSE ITEM 39
-{Shop forge part 2
+{
+	//NAME Shop forge part 2
 	ITEM $item_forge
 	X 4
 	Y 2
@@ -1428,7 +1527,8 @@ SECTION HOUSE ITEM 39
 }
 	
 SECTION HOUSE ITEM 40
-{Shop forge part 3
+{
+	//NAME Shop forge part 3
 	ITEM $item_forge_2
 	X 5
 	Y 2
@@ -1436,7 +1536,8 @@ SECTION HOUSE ITEM 40
 }
 	
 SECTION HOUSE ITEM 41
-{Shop anvil
+{
+	//NAME Shop anvil
 	ITEM $item_anvil
 	X 5
 	Y 4
@@ -1444,7 +1545,8 @@ SECTION HOUSE ITEM 41
 }
 	
 SECTION HOUSE ITEM 42
-{Farm house Door
+{
+	//NAME Farm house Door
 	ITEM $item_wooden_door_11
 	X 4
 	Y 0
@@ -1452,7 +1554,8 @@ SECTION HOUSE ITEM 42
 }
 	
 SECTION HOUSE ITEM 43
-{PENTA-MIDDLE
+{
+	//NAME PENTA-MIDDLE
 	ITEM $item_pentagram_4
 	X 0
 	Y 0
@@ -1460,7 +1563,8 @@ SECTION HOUSE ITEM 43
 }
 	
 SECTION HOUSE ITEM 44
-{PENTA-T-LEFT
+{
+	//NAME PENTA-T-LEFT
 	ITEM $item_pentagram_1
 	X -1
 	Y -1
@@ -1468,7 +1572,8 @@ SECTION HOUSE ITEM 44
 }
 	
 SECTION HOUSE ITEM 45
-{PENTA-TOP
+{
+	//NAME PENTA-TOP
 	ITEM $item_pentagram_2
 	X 0
 	Y -1
@@ -1476,7 +1581,8 @@ SECTION HOUSE ITEM 45
 }
 	
 SECTION HOUSE ITEM 46
-{PENTA-B-LEFT
+{
+	//NAME PENTA-B-LEFT
 	ITEM $item_pentagram_3
 	X -1
 	Y 1
@@ -1484,7 +1590,8 @@ SECTION HOUSE ITEM 46
 }
 	
 SECTION HOUSE ITEM 47
-{PENTA-LEFT
+{
+	//NAME PENTA-LEFT
 	ITEM $item_pentagram
 	X -1
 	Y 0
@@ -1492,7 +1599,8 @@ SECTION HOUSE ITEM 47
 }
 	
 SECTION HOUSE ITEM 48
-{TOP-RIGHT
+{
+	//NAME TOP-RIGHT
 	ITEM $item_pentagram_5
 	X 1
 	Y -1
@@ -1500,7 +1608,8 @@ SECTION HOUSE ITEM 48
 }
 	
 SECTION HOUSE ITEM 49
-{BOTTOM
+{
+	//NAME BOTTOM
 	ITEM $item_pentagram_6
 	X 0
 	Y 1
@@ -1508,7 +1617,8 @@ SECTION HOUSE ITEM 49
 }
 	
 SECTION HOUSE ITEM 50
-{BOTTOM-RIGHT
+{
+	//NAME BOTTOM-RIGHT
 	ITEM $item_pentagram_7
 	X 1
 	Y 1
@@ -1516,7 +1626,8 @@ SECTION HOUSE ITEM 50
 }
 	
 SECTION HOUSE ITEM 51
-{RIGHT
+{
+	//NAME RIGHT
 	ITEM $item_pentagram_8
 	X 1
 	Y 0
@@ -1524,7 +1635,8 @@ SECTION HOUSE ITEM 51
 }
 	
 SECTION HOUSE ITEM 52
-{LOOM-PT1-south
+{
+	//NAME LOOM-PT1-south
 	ITEM $item_upright_loom
 	X 0
 	Y 0
@@ -1532,7 +1644,8 @@ SECTION HOUSE ITEM 52
 }
 	
 SECTION HOUSE ITEM 53
-{LOOM-PT2-south
+{
+	//NAME LOOM-PT2-south
 	ITEM $item_upright_loom_1
 	X 1
 	Y 0
@@ -1540,7 +1653,8 @@ SECTION HOUSE ITEM 53
 }
 	
 SECTION HOUSE ITEM 54
-{LOOM-PT1-east
+{
+	//NAME LOOM-PT1-east
 	ITEM $item_upright_loom_2
 	X 0
 	Y 0
@@ -1548,7 +1662,8 @@ SECTION HOUSE ITEM 54
 }
 	
 SECTION HOUSE ITEM 55
-{LOOM-PT2-east
+{
+	//NAME LOOM-PT2-east
 	ITEM $item_upright_loom_3
 	X 0
 	Y -1
@@ -1556,7 +1671,8 @@ SECTION HOUSE ITEM 55
 }
 	
 SECTION HOUSE ITEM 56
-{Fireplace-PT2-brick-east
+{
+	//NAME Fireplace-PT2-brick-east
 	ITEM $item_fireplace
 	X 0
 	Y -1
@@ -1564,7 +1680,8 @@ SECTION HOUSE ITEM 56
 }
 	
 SECTION HOUSE ITEM 57
-{Fireplace-PT2-brick-south
+{
+	//NAME Fireplace-PT2-brick-south
 	ITEM $item_fireplace_1
 	X -1
 	Y 0
@@ -1572,7 +1689,8 @@ SECTION HOUSE ITEM 57
 }
 	
 SECTION HOUSE ITEM 58
-{Bed-PT2-east
+{
+	//NAME Bed-PT2-east
 	ITEM $item_pine_bed_feet_A1_1
 	X 1
 	Y 0
@@ -1580,7 +1698,8 @@ SECTION HOUSE ITEM 58
 }
 	
 SECTION HOUSE ITEM 59
-{Bed-PT2-south
+{
+	//NAME Bed-PT2-south
 	ITEM $item_pine_bed_feet_A2_1
 	X 0
 	Y 1
@@ -1588,7 +1707,8 @@ SECTION HOUSE ITEM 59
 }
 	
 SECTION HOUSE ITEM 60
-{Fireplace-PT2-brick-east
+{
+	//NAME Fireplace-PT2-brick-east
 	ITEM $item_oven
 	X 0
 	Y -1
@@ -1596,7 +1716,8 @@ SECTION HOUSE ITEM 60
 }
 	
 SECTION HOUSE ITEM 61
-{Fireplace-PT2-brick-south
+{
+	//NAME Fireplace-PT2-brick-south
 	ITEM $item_oven_1
 	X -1
 	Y 0
@@ -1604,7 +1725,8 @@ SECTION HOUSE ITEM 61
 }
 	
 SECTION HOUSE ITEM 63
-{bed large facing south part 1
+{
+	//NAME bed large facing south part 1
 	ITEM $item_pine_bigbed_headleft_A2_4
 	LOCK
 	X 0
@@ -1613,7 +1735,8 @@ SECTION HOUSE ITEM 63
 }
 	
 SECTION HOUSE ITEM 64
-{bed large facing south part 2
+{
+	//NAME bed large facing south part 2
 	ITEM $item_pine_bigbed_feetleft_A2_3
 	LOCK
 	X 0
@@ -1622,7 +1745,8 @@ SECTION HOUSE ITEM 64
 }
 	
 SECTION HOUSE ITEM 65
-{bed large facing south part 3
+{
+	//NAME bed large facing south part 3
 	ITEM $item_pine_bigbed_headright_A2_4
 	LOCK
 	X 1
@@ -1631,7 +1755,8 @@ SECTION HOUSE ITEM 65
 }
 	
 SECTION HOUSE ITEM 66
-{bed large facing south part 4
+{
+	//NAME bed large facing south part 4
 	ITEM $item_pine_bigbed_feetright_A2_3
 	LOCK
 	X 1
@@ -1640,7 +1765,8 @@ SECTION HOUSE ITEM 66
 }
 	
 SECTION HOUSE ITEM 67
-{bed large facing east part 1
+{
+	//NAME bed large facing east part 1
 	ITEM $item_pine_bigbed_headright_A1_4
 	LOCK
 	X 0
@@ -1649,7 +1775,8 @@ SECTION HOUSE ITEM 67
 }
 	
 SECTION HOUSE ITEM 68
-{bed large facing south part 2
+{
+	//NAME bed large facing south part 2
 	ITEM $item_pine_bigbed_headleft_A1_4
 	LOCK
 	X 0
@@ -1658,7 +1785,8 @@ SECTION HOUSE ITEM 68
 }
 	
 SECTION HOUSE ITEM 69
-{bed large facing south part 3
+{
+	//NAME bed large facing south part 3
 	ITEM $item_pine_bigbed_feetleft_A1_3
 	LOCK
 	X 1
@@ -1667,7 +1795,8 @@ SECTION HOUSE ITEM 69
 }
 	
 SECTION HOUSE ITEM 70
-{bed large facing south part 4
+{
+	//NAME bed large facing south part 4
 	ITEM $item_pine_bigbed_feetright_A1_3
 	LOCK
 	X 1
@@ -1676,7 +1805,8 @@ SECTION HOUSE ITEM 70
 }
 	
 SECTION HOUSE ITEM 71
-{large forge facing east part 1
+{
+	//NAME large forge facing east part 1
 	ITEM $item_bellows_2
 	LOCK
 	X 0
@@ -1685,7 +1815,8 @@ SECTION HOUSE ITEM 71
 }
 	
 SECTION HOUSE ITEM 72
-{large forge facing east part 2
+{
+	//NAME large forge facing east part 2
 	ITEM $item_forge_5
 	LOCK
 	X 0
@@ -1694,7 +1825,8 @@ SECTION HOUSE ITEM 72
 }
 	
 SECTION HOUSE ITEM 73
-{large forge facing east part 3
+{
+	//NAME large forge facing east part 3
 	ITEM $item_forge_6
 	LOCK
 	X 0
@@ -1703,7 +1835,8 @@ SECTION HOUSE ITEM 73
 }
 	
 SECTION HOUSE ITEM 74
-{large forge facing south part 1
+{
+	//NAME large forge facing south part 1
 	ITEM $item_bellows_1
 	LOCK
 	X 0
@@ -1712,7 +1845,8 @@ SECTION HOUSE ITEM 74
 }
 	
 SECTION HOUSE ITEM 75
-{large forge facing south part 2
+{
+	//NAME large forge facing south part 2
 	ITEM $item_forge_3
 	LOCK
 	X 1
@@ -1721,7 +1855,8 @@ SECTION HOUSE ITEM 75
 }
 	
 SECTION HOUSE ITEM 76
-{large forge facing south part 3
+{
+	//NAME large forge facing south part 3
 	ITEM $item_forge_4
 	LOCK
 	X 2
@@ -1730,7 +1865,8 @@ SECTION HOUSE ITEM 76
 }
 	
 SECTION HOUSE ITEM 100
-{Door (small tower)
+{
+	//NAME Door (small tower)
 	ITEM $item_metal_door_1
 	LOCK
 	X 3
@@ -1739,7 +1875,8 @@ SECTION HOUSE ITEM 100
 }
 	
 SECTION HOUSE ITEM 101
-{Sign (Small tower)
+{
+	//NAME Sign (Small tower)
 	ITEM $item_brass_sign_1
 	LOCK
 	X 1
@@ -1749,7 +1886,8 @@ SECTION HOUSE ITEM 101
 }
 	
 SECTION HOUSE ITEM 102
-{Door (marble 2-story)
+{
+	//NAME Door (marble 2-story)
 	ITEM $item_metal_door_1
 	LOCK
 	X -2
@@ -1758,7 +1896,8 @@ SECTION HOUSE ITEM 102
 }
 	
 SECTION HOUSE ITEM 103
-{Sign (marble 2-story)
+{
+	//NAME Sign (marble 2-story)
 	ITEM $item_brass_sign_1
 	LOCK
 	X 3
@@ -1768,7 +1907,8 @@ SECTION HOUSE ITEM 103
 }
 	
 SECTION HOUSE ITEM 104
-{Door (stone 2-story)
+{
+	//NAME Door (stone 2-story)
 	ITEM $item_metal_door_1
 	LOCK
 	X -2
@@ -1777,7 +1917,8 @@ SECTION HOUSE ITEM 104
 }
 	
 SECTION HOUSE ITEM 105
-{Sign (marble 2-story)
+{
+	//NAME Sign (marble 2-story)
 	ITEM $item_brass_sign_1
 	LOCK
 	X 3
@@ -1787,7 +1928,8 @@ SECTION HOUSE ITEM 105
 }
 	
 SECTION HOUSE ITEM 106
-{Sign (2-story tavern)
+{
+	//NAME Sign (2-story tavern)
 	ITEM $item_brass_sign_1
 	LOCK
 	X 1
@@ -1797,7 +1939,8 @@ SECTION HOUSE ITEM 106
 }
 	
 SECTION HOUSE ITEM 107
-{Door (front left)
+{
+	//NAME Door (front left)
 	ITEM $item_wooden_door_13
 	LOCK
 	X 3
@@ -1806,7 +1949,8 @@ SECTION HOUSE ITEM 107
 }
 	
 SECTION HOUSE ITEM 108
-{Door (front right)
+{
+	//NAME Door (front right)
 	ITEM $item_wooden_door_14
 	LOCK
 	X 4
@@ -1815,7 +1959,8 @@ SECTION HOUSE ITEM 108
 }
 	
 SECTION HOUSE ITEM 109
-{Door (inside bedroom)
+{
+	//NAME Door (inside bedroom)
 	ITEM $item_wooden_door_14
 	LOCK
 	X -3
@@ -1824,7 +1969,8 @@ SECTION HOUSE ITEM 109
 }
 	
 SECTION HOUSE ITEM 110
-{Door (balcony)
+{
+	//NAME Door (balcony)
 	ITEM $item_wooden_door_15
 	LOCK
 	X 1
@@ -1833,7 +1979,8 @@ SECTION HOUSE ITEM 110
 }
 	
 SECTION HOUSE ITEM 111
-{Sign (adobe)
+{
+	//NAME Sign (adobe)
 	ITEM $item_brass_sign_1
 	LOCK
 	X 3
@@ -1843,7 +1990,8 @@ SECTION HOUSE ITEM 111
 }
 	
 SECTION HOUSE ITEM 112
-{Door (adobe)
+{
+	//NAME Door (adobe)
 	ITEM $item_wooden_door_1
 	LOCK
 	X -1
@@ -1852,7 +2000,8 @@ SECTION HOUSE ITEM 112
 }
 	
 SECTION HOUSE ITEM 113
-{Sign (2-story log)
+{
+	//NAME Sign (2-story log)
 	ITEM $item_brass_sign_1
 	LOCK
 	X 4
@@ -1862,7 +2011,8 @@ SECTION HOUSE ITEM 113
 }
 	
 SECTION HOUSE ITEM 114
-{Door (2-story log, front)
+{
+	//NAME Door (2-story log, front)
 	ITEM $item_wooden_door_1
 	LOCK
 	X 1
@@ -1871,7 +2021,8 @@ SECTION HOUSE ITEM 114
 }
 	
 SECTION HOUSE ITEM 115
-{Door (2-story log, balcony)
+{
+	//NAME Door (2-story log, balcony)
 	ITEM $item_wooden_door_1
 	LOCK
 	X 1
@@ -1880,7 +2031,8 @@ SECTION HOUSE ITEM 115
 }
 	
 SECTION HOUSE ITEM 116
-{Sign (3-story marble)
+{
+	//NAME Sign (3-story marble)
 	ITEM $item_brass_sign_1
 	LOCK
 	X 0
@@ -1890,7 +2042,8 @@ SECTION HOUSE ITEM 116
 }
 	
 SECTION HOUSE ITEM 117
-{Door (3-story marble, left)
+{
+	//NAME Door (3-story marble, left)
 	ITEM $item_metal_door_1
 	LOCK
 	X -4
@@ -1899,7 +2052,8 @@ SECTION HOUSE ITEM 117
 }
 	
 SECTION HOUSE ITEM 118
-{Door (3-story marble, right)
+{
+	//NAME Door (3-story marble, right)
 	ITEM $item_metal_door_2
 	LOCK
 	X -3
@@ -1908,7 +2062,8 @@ SECTION HOUSE ITEM 118
 }
 	
 SECTION HOUSE ITEM 143
-{Treasure piece1
+{
+	//NAME Treasure piece1
 	ITEM $item_treasure_C
 	X -1
 	Y 0
@@ -1916,7 +2071,8 @@ SECTION HOUSE ITEM 143
 }
 	
 SECTION HOUSE ITEM 144
-{Treasure piece2
+{
+	//NAME Treasure piece2
 	ITEM $item_treasure_B
 	X -1
 	Y 1
@@ -1924,7 +2080,8 @@ SECTION HOUSE ITEM 144
 }
 	
 SECTION HOUSE ITEM 145
-{Treasure piece3
+{
+	//NAME Treasure piece3
 	ITEM $item_treasure_A
 	X 0
 	Y 1
@@ -1933,7 +2090,8 @@ SECTION HOUSE ITEM 145
 	
 	
 SECTION HOUSE ITEM 146
-{Treasure piece4
+{
+	//NAME Treasure piece4
 	ITEM $item_treasure_D
 	X -1
 	Y -1
@@ -1942,7 +2100,8 @@ SECTION HOUSE ITEM 146
 	
 	
 SECTION HOUSE ITEM 147
-{Treasure piece5
+{
+	//NAME Treasure piece5
 	ITEM $item_treasure_H
 	X 0
 	Y -1
@@ -1951,7 +2110,8 @@ SECTION HOUSE ITEM 147
 	
 	
 SECTION HOUSE ITEM 148
-{Treasure piece6
+{
+	//NAME Treasure piece6
 	ITEM $item_treasure_G
 	X 1
 	Y -1
@@ -1959,7 +2119,8 @@ SECTION HOUSE ITEM 148
 }
 	
 SECTION HOUSE ITEM 149
-{Treasure piece7
+{
+	//NAME Treasure piece7
 	ITEM $item_treasure_F
 	X 1
 	Y 0
@@ -1967,7 +2128,8 @@ SECTION HOUSE ITEM 149
 }
 	
 SECTION HOUSE ITEM 150
-{Treasure piece8
+{
+	//NAME Treasure piece8
 	ITEM $item_treasure_J
 	X 0
 	Y 1
@@ -1975,7 +2137,8 @@ SECTION HOUSE ITEM 150
 }
 	
 SECTION HOUSE ITEM 151
-{Treasure piece9
+{
+	//NAME Treasure piece9
 	ITEM $item_treasure_K
 	X -1
 	Y 1
@@ -1983,7 +2146,8 @@ SECTION HOUSE ITEM 151
 }
 	
 SECTION HOUSE ITEM 152
-{Treasure piece10
+{
+	//NAME Treasure piece10
 	ITEM $item_treasure_L
 	X -1
 	Y 0
@@ -1991,7 +2155,8 @@ SECTION HOUSE ITEM 152
 }
 	
 SECTION HOUSE ITEM 153
-{Treasure piece11
+{
+	//NAME Treasure piece11
 	ITEM $item_treasure_I
 	X 1
 	Y 1
@@ -1999,7 +2164,8 @@ SECTION HOUSE ITEM 153
 }
 	
 SECTION HOUSE ITEM 154
-{Treasure piece12
+{
+	//NAME Treasure piece12
 	ITEM $item_treasure_Z1
 	X 0
 	Y -1
@@ -2007,7 +2173,8 @@ SECTION HOUSE ITEM 154
 }
 	
 SECTION HOUSE ITEM 155
-{Treasure piece13
+{
+	//NAME Treasure piece13
 	ITEM $item_treasure_N
 	X 0
 	Y -1
@@ -2017,7 +2184,8 @@ SECTION HOUSE ITEM 155
 }
 	
 SECTION HOUSE ITEM 156
-{Treasure piece14
+{
+	//NAME Treasure piece14
 	ITEM $item_treasure_M
 	X -1
 	Y -1
@@ -2025,7 +2193,8 @@ SECTION HOUSE ITEM 156
 }
 	
 SECTION HOUSE ITEM 157
-{Treasure piece15
+{
+	//NAME Treasure piece15
 	ITEM $item_treasure_O
 	X 1
 	Y -1
@@ -2033,7 +2202,8 @@ SECTION HOUSE ITEM 157
 }
 	
 SECTION HOUSE ITEM 158
-{Treasure piece16
+{
+	//NAME Treasure piece16
 	ITEM $item_treasure_R
 	X 1
 	Y 0
@@ -2041,7 +2211,8 @@ SECTION HOUSE ITEM 158
 }
 	
 SECTION HOUSE ITEM 159
-{Treasure piece17
+{
+	//NAME Treasure piece17
 	ITEM $item_treasure_P
 	X 2
 	Y -1
@@ -2049,7 +2220,8 @@ SECTION HOUSE ITEM 159
 }
 	
 SECTION HOUSE ITEM 160
-{Treasure piece18
+{
+	//NAME Treasure piece18
 	ITEM $item_treasure_Q
 	X 2
 	Y 0
@@ -2057,7 +2229,8 @@ SECTION HOUSE ITEM 160
 }
 	
 SECTION HOUSE ITEM 161
-{Treasure piece19
+{
+	//NAME Treasure piece19
 	ITEM $item_treasure_X
 	X 0
 	Y 1
@@ -2065,7 +2238,8 @@ SECTION HOUSE ITEM 161
 }
 	
 SECTION HOUSE ITEM 162
-{Treasure piece20
+{
+	//NAME Treasure piece20
 	ITEM $item_treasure_W
 	X 1
 	Y 1
@@ -2073,7 +2247,8 @@ SECTION HOUSE ITEM 162
 }
 	
 SECTION HOUSE ITEM 163
-{Treasure piece21
+{
+	//NAME Treasure piece21
 	ITEM $item_treasure_Y
 	X -1
 	Y 1
@@ -2081,7 +2256,8 @@ SECTION HOUSE ITEM 163
 }
 	
 SECTION HOUSE ITEM 164
-{Treasure piece22
+{
+	//NAME Treasure piece22
 	ITEM $item_treasure_V
 	X 1
 	Y 0
@@ -2089,7 +2265,8 @@ SECTION HOUSE ITEM 164
 }
 	
 SECTION HOUSE ITEM 165
-{Treasure piece23
+{
+	//NAME Treasure piece23
 	ITEM $item_treasure_Z
 	X -1
 	Y 0
@@ -2097,7 +2274,8 @@ SECTION HOUSE ITEM 165
 }
 	
 SECTION HOUSE ITEM 166
-{Treasure piece24
+{
+	//NAME Treasure piece24
 	ITEM $item_treasure_Z1
 	X -1
 	Y -1
@@ -2105,7 +2283,8 @@ SECTION HOUSE ITEM 166
 }
 	
 SECTION HOUSE ITEM 167
-{Treasure piece25
+{
+	//NAME Treasure piece25
 	ITEM $item_treasure_Z3
 	X 0
 	Y -1
@@ -2113,7 +2292,8 @@ SECTION HOUSE ITEM 167
 }
 	
 SECTION HOUSE ITEM 168
-{Treasure piece26
+{
+	//NAME Treasure piece26
 	ITEM $item_treasure_Z4
 	X 1
 	Y -1
@@ -2121,7 +2301,8 @@ SECTION HOUSE ITEM 168
 }
 	
 SECTION HOUSE ITEM 169
-{Treasure piece27
+{
+	//NAME Treasure piece27
 	ITEM $item_treasure_U
 	X 2
 	Y 0
@@ -2129,7 +2310,8 @@ SECTION HOUSE ITEM 169
 }
 	
 SECTION HOUSE ITEM 170
-{Treasure piece28
+{
+	//NAME Treasure piece28
 	ITEM $item_treasure_T
 	X 3
 	Y 0
@@ -2138,7 +2320,8 @@ SECTION HOUSE ITEM 170
 	
 	
 SECTION HOUSE ITEM 171
-{Treasure piece29
+{
+	//NAME Treasure piece29
 	ITEM $item_treasure_Z5
 	X 2
 	Y -1
@@ -2146,7 +2329,8 @@ SECTION HOUSE ITEM 171
 }
 	
 SECTION HOUSE ITEM 172
-{Treasure piece30
+{
+	//NAME Treasure piece30
 	ITEM $item_treasure_1
 	X 0
 	Y 1
@@ -2154,7 +2338,8 @@ SECTION HOUSE ITEM 172
 }
 	
 SECTION HOUSE ITEM 173
-{Treasure piece31
+{
+	//NAME Treasure piece31
 	ITEM $item_treasure_2
 	X -1
 	Y 1
@@ -2162,7 +2347,8 @@ SECTION HOUSE ITEM 173
 }
 	
 SECTION HOUSE ITEM 174
-{Treasure piece32
+{
+	//NAME Treasure piece32
 	ITEM $item_treasure_3
 	X -1
 	Y 0
@@ -2170,7 +2356,8 @@ SECTION HOUSE ITEM 174
 }
 	
 SECTION HOUSE ITEM 175
-{Treasure piece33
+{
+	//NAME Treasure piece33
 	ITEM $item_treasure_7
 	X -1
 	Y -1
@@ -2178,7 +2365,8 @@ SECTION HOUSE ITEM 175
 }
 	
 SECTION HOUSE ITEM 176
-{Treasure piece34
+{
+	//NAME Treasure piece34
 	ITEM $item_treasure_8
 	X 0
 	Y -1
@@ -2186,7 +2374,8 @@ SECTION HOUSE ITEM 176
 }
 	
 SECTION HOUSE ITEM 177
-{Treasure piece35
+{
+	//NAME Treasure piece35
 	ITEM $item_treasure_5
 	X 1
 	Y 0
@@ -2194,7 +2383,8 @@ SECTION HOUSE ITEM 177
 }
 	
 SECTION HOUSE ITEM 178
-{Treasure piece36
+{
+	//NAME Treasure piece36
 	ITEM $item_treasure
 	X 1
 	Y 1
@@ -2202,7 +2392,8 @@ SECTION HOUSE ITEM 178
 }
 	
 SECTION HOUSE ITEM 179
-{Treasure piece37
+{
+	//NAME Treasure piece37
 	ITEM $item_treasure_9
 	X 1
 	Y -1
@@ -2210,7 +2401,8 @@ SECTION HOUSE ITEM 179
 }
 	
 SECTION HOUSE ITEM 180
-{Treasure piece38
+{
+	//NAME Treasure piece38
 	ITEM $item_treasure_6
 	X 2
 	Y -1
@@ -2218,7 +2410,8 @@ SECTION HOUSE ITEM 180
 }
 	
 SECTION HOUSE ITEM 181
-{Lighthouse piece1
+{
+	//NAME Lighthouse piece1
 	ITEM $item_lighthouse_3
 	X 0
 	Y 1
@@ -2226,7 +2419,8 @@ SECTION HOUSE ITEM 181
 }
 	
 SECTION HOUSE ITEM 182
-{Lighthouse piece2
+{
+	//NAME Lighthouse piece2
 	ITEM $item_lighthouse_5
 	X 1
 	Y 0
@@ -2234,7 +2428,8 @@ SECTION HOUSE ITEM 182
 }
 	
 SECTION HOUSE ITEM 183
-{Lighthouse piece3
+{
+	//NAME Lighthouse piece3
 	ITEM $item_lighthouse_6
 	X 1
 	Y -1
@@ -2242,7 +2437,8 @@ SECTION HOUSE ITEM 183
 }
 	
 SECTION HOUSE ITEM 184
-{Lighthouse piece4
+{
+	//NAME Lighthouse piece4
 	ITEM $item_lighthouse_7
 	X 1
 	Y -2
@@ -2250,7 +2446,8 @@ SECTION HOUSE ITEM 184
 }
 	
 SECTION HOUSE ITEM 185
-{Lighthouse piece5
+{
+	//NAME Lighthouse piece5
 	ITEM $item_lighthouse_4
 	X 1
 	Y 1
@@ -2258,7 +2455,8 @@ SECTION HOUSE ITEM 185
 }
 	
 SECTION HOUSE ITEM 186
-{Lighthouse piece6
+{
+	//NAME Lighthouse piece6
 	ITEM $item_lighthouse_2
 	X -1
 	Y 1
@@ -2267,7 +2465,8 @@ SECTION HOUSE ITEM 186
 	
 	
 SECTION HOUSE ITEM 187
-{Lighthouse piece7
+{
+	//NAME Lighthouse piece7
 	ITEM $item_lighthouse_1
 	X -2
 	Y 1
@@ -2275,7 +2474,8 @@ SECTION HOUSE ITEM 187
 }
 	
 SECTION HOUSE ITEM 188
-{Lighthouse piece8
+{
+	//NAME Lighthouse piece8
 	ITEM $item_lighthouse_8
 	X 1
 	Y -3
@@ -2283,7 +2483,8 @@ SECTION HOUSE ITEM 188
 }
 	
 SECTION HOUSE ITEM 189
-{Lighthouse piece9
+{
+	//NAME Lighthouse piece9
 	ITEM $item_lighthouse_9
 	X 0
 	Y -3
@@ -2291,7 +2492,8 @@ SECTION HOUSE ITEM 189
 }
 	
 SECTION HOUSE ITEM 190
-{Lighthouse piece10
+{
+	//NAME Lighthouse piece10
 	ITEM $item_lighthouse_C
 	X -1
 	Y -3
@@ -2299,7 +2501,8 @@ SECTION HOUSE ITEM 190
 }
 	
 SECTION HOUSE ITEM 191
-{Lighthouse piece11
+{
+	//NAME Lighthouse piece11
 	ITEM $item_lighthouse_Z6
 	X -2
 	Y -3
@@ -2307,7 +2510,8 @@ SECTION HOUSE ITEM 191
 }
 	
 SECTION HOUSE ITEM 192
-{Lighthouse piece12
+{
+	//NAME Lighthouse piece12
 	ITEM $item_lighthouse_Z4
 	X -3
 	Y -2
@@ -2315,7 +2519,8 @@ SECTION HOUSE ITEM 192
 }
 	
 SECTION HOUSE ITEM 193
-{Lighthouse piece13
+{
+	//NAME Lighthouse piece13
 	ITEM $item_lighthouse_Z5
 	X -3
 	Y -3
@@ -2323,7 +2528,8 @@ SECTION HOUSE ITEM 193
 }
 	
 SECTION HOUSE ITEM 194
-{Lighthouse piece14
+{
+	//NAME Lighthouse piece14
 	ITEM $item_lighthouse_Z1
 	X -3
 	Y -1
@@ -2331,7 +2537,8 @@ SECTION HOUSE ITEM 194
 }
 	
 SECTION HOUSE ITEM 195
-{Lighthouse piece15
+{
+	//NAME Lighthouse piece15
 	ITEM $item_lighthouse_X
 	X -3
 	Y 0
@@ -2339,7 +2546,8 @@ SECTION HOUSE ITEM 195
 }
 	
 SECTION HOUSE ITEM 196
-{Lighthouse piece16
+{
+	//NAME Lighthouse piece16
 	ITEM $item_lighthouse_R
 	X -4
 	Y -2
@@ -2348,7 +2556,8 @@ SECTION HOUSE ITEM 196
 	
 	
 SECTION HOUSE ITEM 197
-{Lighthouse piece17
+{
+	//NAME Lighthouse piece17
 	ITEM $item_lighthouse_U
 	X -4
 	Y -1
@@ -2356,7 +2565,8 @@ SECTION HOUSE ITEM 197
 }
 	
 SECTION HOUSE ITEM 198
-{Lighthouse piece18
+{
+	//NAME Lighthouse piece18
 	ITEM $item_lighthouse_I
 	X -2
 	Y -4
@@ -2364,7 +2574,8 @@ SECTION HOUSE ITEM 198
 }
 	
 SECTION HOUSE ITEM 199
-{Lighthouse piece19
+{
+	//NAME Lighthouse piece19
 	ITEM $item_lighthouse_F
 	X -1
 	Y -4
@@ -2372,7 +2583,8 @@ SECTION HOUSE ITEM 199
 }
 	
 SECTION HOUSE ITEM 200
-{Lighthouse piece20
+{
+	//NAME Lighthouse piece20
 	ITEM $item_lighthouse_Z7
 	X -4
 	Y -3
@@ -2380,7 +2592,8 @@ SECTION HOUSE ITEM 200
 }
 	
 SECTION HOUSE ITEM 201
-{Lighthouse piece21
+{
+	//NAME Lighthouse piece21
 	ITEM $item_lighthouse_Z8
 	X -4
 	Y -4
@@ -2389,7 +2602,8 @@ SECTION HOUSE ITEM 201
 	
 	
 SECTION HOUSE ITEM 202
-{Lighthouse piece22
+{
+	//NAME Lighthouse piece22
 	ITEM $item_lighthouse_Z9
 	X -3
 	Y -4
@@ -2397,7 +2611,8 @@ SECTION HOUSE ITEM 202
 }
 	
 SECTION HOUSE ITEM 203
-{Lighthouse piece23
+{
+	//NAME Lighthouse piece23
 	ITEM $item_lighthouse_N
 	X -5
 	Y -4
@@ -2405,7 +2620,8 @@ SECTION HOUSE ITEM 203
 }
 	
 SECTION HOUSE ITEM 204
-{Lighthouse piece24
+{
+	//NAME Lighthouse piece24
 	ITEM $item_lighthouse_M
 	X -4
 	Y -5
@@ -2413,7 +2629,8 @@ SECTION HOUSE ITEM 204
 }
 	
 SECTION HOUSE ITEM 205
-{Lighthouse piece25
+{
+	//NAME Lighthouse piece25
 	ITEM $item_lighthouse_L
 	X -3
 	Y -5
@@ -2421,7 +2638,8 @@ SECTION HOUSE ITEM 205
 }
 	
 SECTION HOUSE ITEM 206
-{Lighthouse piece26
+{
+	//NAME Lighthouse piece26
 	ITEM $item_lighthouse_O
 	X -5
 	Y -3
@@ -2430,7 +2648,8 @@ SECTION HOUSE ITEM 206
 	
 	
 SECTION HOUSE ITEM 207
-{Lighthouse piece27
+{
+	//NAME Lighthouse piece27
 	ITEM $item_lighthouse
 	X -3
 	Y 1
@@ -2438,7 +2657,8 @@ SECTION HOUSE ITEM 207
 }
 	
 SECTION HOUSE ITEM 208
-{Lighthouse piece27
+{
+	//NAME Lighthouse piece27
 	ITEM $item_lighthouse_ZD
 	X -5
 	Y -5
@@ -2446,7 +2666,8 @@ SECTION HOUSE ITEM 208
 }
 	
 SECTION HOUSE ITEM 209
-{Telescope piece1
+{
+	//NAME Telescope piece1
 	ITEM $item_telescope_7
 	X -2
 	Y -1
@@ -2454,7 +2675,8 @@ SECTION HOUSE ITEM 209
 }
 	
 SECTION HOUSE ITEM 210
-{Telescope piece2
+{
+	//NAME Telescope piece2
 	ITEM $item_telescope_9
 	X -2
 	Y 0
@@ -2462,7 +2684,8 @@ SECTION HOUSE ITEM 210
 }
 	
 SECTION HOUSE ITEM 211
-{Telescope piece3
+{
+	//NAME Telescope piece3
 	ITEM $item_telescope_ZC
 	X -2
 	Y -2
@@ -2470,7 +2693,8 @@ SECTION HOUSE ITEM 211
 }
 	
 SECTION HOUSE ITEM 212
-{Telescope piece4
+{
+	//NAME Telescope piece4
 	ITEM $item_telescope_Z9
 	X -1
 	Y -2
@@ -2478,7 +2702,8 @@ SECTION HOUSE ITEM 212
 }
 	
 SECTION HOUSE ITEM 213
-{Telescope piece5
+{
+	//NAME Telescope piece5
 	ITEM $item_telescope_Z8
 	X 0
 	Y -2
@@ -2486,7 +2711,8 @@ SECTION HOUSE ITEM 213
 }
 	
 SECTION HOUSE ITEM 214
-{Telescope piece6
+{
+	//NAME Telescope piece6
 	ITEM $item_telescope_ZB
 	X 0
 	Y -3
@@ -2494,7 +2720,8 @@ SECTION HOUSE ITEM 214
 }
 	
 SECTION HOUSE ITEM 215
-{Telescope piece7
+{
+	//NAME Telescope piece7
 	ITEM $item_telescope_ZD
 	X 0
 	Y -4
@@ -2502,7 +2729,8 @@ SECTION HOUSE ITEM 215
 }
 	
 SECTION HOUSE ITEM 216
-{Telescope piece8
+{
+	//NAME Telescope piece8
 	ITEM $item_telescope_ZP
 	X -1
 	Y -4
@@ -2510,7 +2738,8 @@ SECTION HOUSE ITEM 216
 }
 	
 SECTION HOUSE ITEM 217
-{Telescope piece9
+{
+	//NAME Telescope piece9
 	ITEM $item_telescope_ZS
 	X -2
 	Y -4
@@ -2518,7 +2747,8 @@ SECTION HOUSE ITEM 217
 }
 	
 SECTION HOUSE ITEM 218
-{Telescope piece10
+{
+	//NAME Telescope piece10
 	ITEM $item_telescope_ZT
 	X -4
 	Y -4
@@ -2526,7 +2756,8 @@ SECTION HOUSE ITEM 218
 }
 	
 SECTION HOUSE ITEM 219
-{Telescope piece11
+{
+	//NAME Telescope piece11
 	ITEM $item_telescope_ZH
 	X -4
 	Y -3
@@ -2534,7 +2765,8 @@ SECTION HOUSE ITEM 219
 }
 	
 SECTION HOUSE ITEM 220
-{Telescope piece12
+{
+	//NAME Telescope piece12
 	ITEM $item_telescope_ZG
 	X -4
 	Y -2
@@ -2542,7 +2774,8 @@ SECTION HOUSE ITEM 220
 }
 	
 SECTION HOUSE ITEM 221
-{Telescope piece13
+{
+	//NAME Telescope piece13
 	ITEM $item_telescope_8
 	X -3
 	Y 0
@@ -2550,7 +2783,8 @@ SECTION HOUSE ITEM 221
 }
 	
 SECTION HOUSE ITEM 222
-{Telescope piece14
+{
+	//NAME Telescope piece14
 	ITEM $item_telescope_6
 	X -3
 	Y -1
@@ -2558,7 +2792,8 @@ SECTION HOUSE ITEM 222
 }
 	
 SECTION HOUSE ITEM 223
-{Telescope piece15
+{
+	//NAME Telescope piece15
 	ITEM $item_telescope_5
 	X -4
 	Y -1
@@ -2566,7 +2801,8 @@ SECTION HOUSE ITEM 223
 }
 	
 SECTION HOUSE ITEM 224
-{Telescope piece16
+{
+	//NAME Telescope piece16
 	ITEM $item_telescope
 	X -4
 	Y 0
@@ -2574,7 +2810,8 @@ SECTION HOUSE ITEM 224
 }
 	
 SECTION HOUSE ITEM 225
-{Telescope piece17
+{
+	//NAME Telescope piece17
 	ITEM $item_telescope_4
 	X -5
 	Y -2
@@ -2582,7 +2819,8 @@ SECTION HOUSE ITEM 225
 }
 	
 SECTION HOUSE ITEM 226
-{Telescope piece18
+{
+	//NAME Telescope piece18
 	ITEM $item_telescope_3
 	X -5
 	Y -3
@@ -2590,7 +2828,8 @@ SECTION HOUSE ITEM 226
 }
 	
 SECTION HOUSE ITEM 227
-{Telescope piece19
+{
+	//NAME Telescope piece19
 	ITEM $item_telescope_1
 	X -6
 	Y -3
@@ -2598,7 +2837,8 @@ SECTION HOUSE ITEM 227
 }
 	
 SECTION HOUSE ITEM 228
-{Telescope piece20
+{
+	//NAME Telescope piece20
 	ITEM $item_telescope_2
 	X -6
 	Y -4
@@ -2606,7 +2846,8 @@ SECTION HOUSE ITEM 228
 }
 	
 SECTION HOUSE ITEM 229
-{Telescope piece21
+{
+	//NAME Telescope piece21
 	ITEM $item_telescope_B
 	X 1
 	Y -1
@@ -2614,7 +2855,8 @@ SECTION HOUSE ITEM 229
 }
 	
 SECTION HOUSE ITEM 230
-{Telescope piece22
+{
+	//NAME Telescope piece22
 	ITEM $item_telescope_C
 	X 1
 	Y -2
@@ -2622,7 +2864,8 @@ SECTION HOUSE ITEM 230
 }
 	
 SECTION HOUSE ITEM 231
-{Telescope piece23
+{
+	//NAME Telescope piece23
 	ITEM $item_telescope_D
 	X 2
 	Y -2
@@ -2630,7 +2873,8 @@ SECTION HOUSE ITEM 231
 }
 	
 SECTION HOUSE ITEM 232
-{Telescope piece24
+{
+	//NAME Telescope piece24
 	ITEM $item_telescope_E
 	X 2
 	Y -3
@@ -2638,7 +2882,8 @@ SECTION HOUSE ITEM 232
 }
 	
 SECTION HOUSE ITEM 233
-{Telescope piece25
+{
+	//NAME Telescope piece25
 	ITEM $item_telescope_F
 	X 1
 	Y -3
@@ -2646,7 +2891,8 @@ SECTION HOUSE ITEM 233
 }
 	
 SECTION HOUSE ITEM 234
-{Telescope piece26
+{
+	//NAME Telescope piece26
 	ITEM $item_telescope_I
 	X 3
 	Y -3
@@ -2654,7 +2900,8 @@ SECTION HOUSE ITEM 234
 }
 	
 SECTION HOUSE ITEM 235
-{Telescope piece27
+{
+	//NAME Telescope piece27
 	ITEM $item_telescope_H
 	X 2
 	Y -4
@@ -2662,7 +2909,8 @@ SECTION HOUSE ITEM 235
 }
 	
 SECTION HOUSE ITEM 236
-{Telescope piece28
+{
+	//NAME Telescope piece28
 	ITEM $item_telescope_Z7
 	X 2
 	Y -5
@@ -2670,7 +2918,8 @@ SECTION HOUSE ITEM 236
 }
 	
 SECTION HOUSE ITEM 237
-{Telescope piece29
+{
+	//NAME Telescope piece29
 	ITEM $item_telescope_K
 	X 3
 	Y -4
@@ -2678,7 +2927,8 @@ SECTION HOUSE ITEM 237
 }
 	
 SECTION HOUSE ITEM 238
-{Telescope piece30
+{
+	//NAME Telescope piece30
 	ITEM $item_telescope_P
 	X 4
 	Y -4
@@ -2686,7 +2936,8 @@ SECTION HOUSE ITEM 238
 }
 	
 SECTION HOUSE ITEM 239
-{Telescope piece31
+{
+	//NAME Telescope piece31
 	ITEM $item_telescope_O
 	X 4
 	Y -5
@@ -2694,7 +2945,8 @@ SECTION HOUSE ITEM 239
 }
 	
 SECTION HOUSE ITEM 240
-{Telescope piece32
+{
+	//NAME Telescope piece32
 	ITEM $item_telescope_M
 	X 3
 	Y -6
@@ -2702,7 +2954,8 @@ SECTION HOUSE ITEM 240
 }
 	
 SECTION HOUSE ITEM 241
-{Telescope piece33
+{
+	//NAME Telescope piece33
 	ITEM $item_telescope_N
 	X 4
 	Y -6
@@ -2710,7 +2963,8 @@ SECTION HOUSE ITEM 241
 }
 	
 SECTION HOUSE ITEM 242
-{Telescope piece34
+{
+	//NAME Telescope piece34
 	ITEM $item_telescope_Q
 	X 4
 	Y -7
@@ -2718,7 +2972,8 @@ SECTION HOUSE ITEM 242
 }
 	
 SECTION HOUSE ITEM 243
-{Telescope piece35
+{
+	//NAME Telescope piece35
 	ITEM $item_telescope_R
 	X 3
 	Y -7
@@ -2726,7 +2981,8 @@ SECTION HOUSE ITEM 243
 }
 	
 SECTION HOUSE ITEM 244
-{Telescope piece36
+{
+	//NAME Telescope piece36
 	ITEM $item_telescope_T
 	X 4
 	Y -8
@@ -2734,7 +2990,8 @@ SECTION HOUSE ITEM 244
 }
 	
 SECTION HOUSE ITEM 245
-{Telescope piece37
+{
+	//NAME Telescope piece37
 	ITEM $item_telescope_S
 	X 3
 	Y -8
@@ -2742,7 +2999,8 @@ SECTION HOUSE ITEM 245
 }
 	
 SECTION HOUSE ITEM 246
-{Telescope piece38
+{
+	//NAME Telescope piece38
 	ITEM $item_telescope_Z2
 	X 2
 	Y -7
@@ -2750,7 +3008,8 @@ SECTION HOUSE ITEM 246
 }
 	
 SECTION HOUSE ITEM 247
-{Telescope piece39
+{
+	//NAME Telescope piece39
 	ITEM $item_telescope_U
 	X 2
 	Y -8
@@ -2758,7 +3017,8 @@ SECTION HOUSE ITEM 247
 }
 	
 SECTION HOUSE ITEM 248
-{Telescope piece40
+{
+	//NAME Telescope piece40
 	ITEM $item_telescope_Z5
 	X 2
 	Y -6
@@ -2766,7 +3026,8 @@ SECTION HOUSE ITEM 248
 }
 	
 SECTION HOUSE ITEM 249
-{Telescope piece41
+{
+	//NAME Telescope piece41
 	ITEM $item_telescope_G
 	X 1
 	Y -4
@@ -2774,7 +3035,8 @@ SECTION HOUSE ITEM 249
 }
 	
 SECTION HOUSE ITEM 250
-{Telescope piece42
+{
+	//NAME Telescope piece42
 	ITEM $item_telescope_ZR
 	X 0
 	Y -5
@@ -2782,7 +3044,8 @@ SECTION HOUSE ITEM 250
 }
 	
 SECTION HOUSE ITEM 251
-{Telescope piece43
+{
+	//NAME Telescope piece43
 	ITEM $item_telescope_Z3
 	X 1
 	Y -7
@@ -2790,7 +3053,8 @@ SECTION HOUSE ITEM 251
 }
 	
 SECTION HOUSE ITEM 252
-{Telescope piece44
+{
+	//NAME Telescope piece44
 	ITEM $item_telescope_ZF
 	X 0
 	Y -6
@@ -2798,7 +3062,8 @@ SECTION HOUSE ITEM 252
 }
 	
 SECTION HOUSE ITEM 253
-{Telescope piece45
+{
+	//NAME Telescope piece45
 	ITEM $item_telescope_ZE
 	X -1
 	Y -6
@@ -2806,7 +3071,8 @@ SECTION HOUSE ITEM 253
 }
 	
 SECTION HOUSE ITEM 254
-{Telescope piece46
+{
+	//NAME Telescope piece46
 	ITEM $item_telescope_ZU
 	X -2
 	Y -6
@@ -2814,7 +3080,8 @@ SECTION HOUSE ITEM 254
 }
 	
 SECTION HOUSE ITEM 255
-{Telescope piece47
+{
+	//NAME Telescope piece47
 	ITEM $item_telescope_ZN
 	X -4
 	Y -6
@@ -2822,7 +3089,8 @@ SECTION HOUSE ITEM 255
 }
 	
 SECTION HOUSE ITEM 256
-{Telescope piece48
+{
+	//NAME Telescope piece48
 	ITEM $item_telescope_ZI
 	X -6
 	Y -5
@@ -2830,7 +3098,8 @@ SECTION HOUSE ITEM 256
 }
 	
 SECTION HOUSE ITEM 257
-{Telescope piece49
+{
+	//NAME Telescope piece49
 	ITEM $item_telescope_ZJ
 	X -5
 	Y -6
@@ -2838,7 +3107,8 @@ SECTION HOUSE ITEM 257
 }
 	
 SECTION HOUSE ITEM 258
-{Telescope piece50
+{
+	//NAME Telescope piece50
 	ITEM $item_telescope_ZK
 	X -4
 	Y -7
@@ -2846,7 +3116,8 @@ SECTION HOUSE ITEM 258
 }
 	
 SECTION HOUSE ITEM 259
-{Telescope piece51
+{
+	//NAME Telescope piece51
 	ITEM $item_telescope_ZL
 	X -3
 	Y -8
@@ -2854,7 +3125,8 @@ SECTION HOUSE ITEM 259
 }
 	
 SECTION HOUSE ITEM 260
-{Telescope piece52
+{
+	//NAME Telescope piece52
 	ITEM $item_telescope_ZM
 	X -2
 	Y -8
@@ -2862,7 +3134,8 @@ SECTION HOUSE ITEM 260
 }
 	
 SECTION HOUSE ITEM 261
-{Telescope piece53
+{
+	//NAME Telescope piece53
 	ITEM $item_telescope_ZO
 	X -2
 	Y -9
@@ -2870,7 +3143,8 @@ SECTION HOUSE ITEM 261
 }
 	
 SECTION HOUSE ITEM 262
-{Telescope piece54
+{
+	//NAME Telescope piece54
 	ITEM $item_telescope_Z
 	X 0
 	Y -10
@@ -2878,7 +3152,8 @@ SECTION HOUSE ITEM 262
 }
 	
 SECTION HOUSE ITEM 263
-{Telescope piece55
+{
+	//NAME Telescope piece55
 	ITEM $item_telescope_Y
 	X 1
 	Y -10
@@ -2886,7 +3161,8 @@ SECTION HOUSE ITEM 263
 }
 	
 SECTION HOUSE ITEM 264
-{Telescope piece56
+{
+	//NAME Telescope piece56
 	ITEM $item_telescope_V
 	X 3
 	Y -9
@@ -2894,7 +3170,8 @@ SECTION HOUSE ITEM 264
 }
 	
 SECTION HOUSE ITEM 265
-{Telescope piece57
+{
+	//NAME Telescope piece57
 	ITEM $item_telescope_W
 	X 2
 	Y -9
@@ -2902,7 +3179,8 @@ SECTION HOUSE ITEM 265
 }
 	
 SECTION HOUSE ITEM 266
-{Telescope piece58
+{
+	//NAME Telescope piece58
 	ITEM $item_telescope_Z
 	X 0
 	Y -10
@@ -2910,7 +3188,8 @@ SECTION HOUSE ITEM 266
 }
 	
 SECTION HOUSE ITEM 267
-{Telescope piece59
+{
+	//NAME Telescope piece59
 	ITEM $item_telescope_Z1
 	X -1
 	Y -10
@@ -2918,7 +3197,8 @@ SECTION HOUSE ITEM 267
 }
 	
 SECTION HOUSE ITEM 268
-{Telescope piece60
+{
+	//NAME Telescope piece60
 	ITEM $item_telescope_X
 	X 2
 	Y -10
@@ -2926,7 +3206,8 @@ SECTION HOUSE ITEM 268
 }
 	
 SECTION HOUSE ITEM 269
-{Telescope piece61
+{
+	//NAME Telescope piece61
 	ITEM $item_telescope_U
 	X 2
 	Y -8
@@ -2934,7 +3215,8 @@ SECTION HOUSE ITEM 269
 }
 	
 SECTION HOUSE ITEM 270
-{Telescope piece62
+{
+	//NAME Telescope piece62
 	ITEM $item_telescope_L
 	X 3
 	Y -5
@@ -2942,7 +3224,8 @@ SECTION HOUSE ITEM 270
 }
 	
 SECTION HOUSE ITEM 271
-{Telescope piece63
+{
+	//NAME Telescope piece63
 	ITEM $item_telescope_ZA
 	X -1
 	Y -3
@@ -2950,7 +3233,8 @@ SECTION HOUSE ITEM 271
 }
 	
 SECTION HOUSE ITEM 272
-{Telescope piece64
+{
+	//NAME Telescope piece64
 	ITEM $item_telescope_Z6
 	X 1
 	Y -5
@@ -2958,7 +3242,8 @@ SECTION HOUSE ITEM 272
 }
 	
 SECTION HOUSE ITEM 273
-{Telescope piece65
+{
+	//NAME Telescope piece65
 	ITEM $item_telescope_ZQ
 	X -1
 	Y -5
@@ -2966,7 +3251,8 @@ SECTION HOUSE ITEM 273
 }
 	
 SECTION HOUSE ITEM 274
-{Telescope piece66
+{
+	//NAME Telescope piece66
 	ITEM $item_telescope_Z4
 	X 1
 	Y -6
@@ -2974,7 +3260,8 @@ SECTION HOUSE ITEM 274
 }
 	
 SECTION HOUSE ITEM 275
-{arbitoir 1
+{
+	//NAME arbitoir 1
 	ITEM $item_altar
 	X 0
 	Y 1
@@ -2982,7 +3269,8 @@ SECTION HOUSE ITEM 275
 }
 	
 SECTION HOUSE ITEM 276
-{arbitoir 2
+{
+	//NAME arbitoir 2
 	ITEM $item_altar_1
 	X -1
 	Y 1
@@ -2990,7 +3278,8 @@ SECTION HOUSE ITEM 276
 }
 	
 SECTION HOUSE ITEM 277
-{arbitoir 3
+{
+	//NAME arbitoir 3
 	ITEM $item_altar_2
 	X -1
 	Y 0
@@ -2998,7 +3287,8 @@ SECTION HOUSE ITEM 277
 }
 	
 SECTION HOUSE ITEM 278
-{arbitoir 4
+{
+	//NAME arbitoir 4
 	ITEM $item_altar_3
 	X -1
 	Y -1
@@ -3006,7 +3296,8 @@ SECTION HOUSE ITEM 278
 }
 	
 SECTION HOUSE ITEM 279
-{arbitoir 5
+{
+	//NAME arbitoir 5
 	ITEM $item_altar_4
 	X 0
 	Y -1
@@ -3014,7 +3305,8 @@ SECTION HOUSE ITEM 279
 }
 	
 SECTION HOUSE ITEM 280
-{arbitor 6
+{
+	//NAME arbitor 6
 	ITEM $item_altar_5
 	X 1
 	Y -1
@@ -3022,7 +3314,8 @@ SECTION HOUSE ITEM 280
 }
 	
 SECTION HOUSE ITEM 281
-{arbitoir 7
+{
+	//NAME arbitoir 7
 	ITEM $item_altar_6
 	X 1
 	Y 0
@@ -3030,7 +3323,8 @@ SECTION HOUSE ITEM 281
 }
 	
 SECTION HOUSE ITEM 282
-{arbitoir 8
+{
+	//NAME arbitoir 8
 	ITEM $item_altar_7
 	X 1
 	Y 1
@@ -3040,7 +3334,8 @@ SECTION HOUSE ITEM 282
 	
 	// Addons by Magius(CHE)
 SECTION HOUSE ITEM 300
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 2
 	Y 6
@@ -3048,7 +3343,8 @@ SECTION HOUSE ITEM 300
 }
 	
 SECTION HOUSE ITEM 301
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 2
 	Y 5
@@ -3056,7 +3352,8 @@ SECTION HOUSE ITEM 301
 }
 	
 SECTION HOUSE ITEM 302
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 2
 	Y 4
@@ -3064,7 +3361,8 @@ SECTION HOUSE ITEM 302
 }
 	
 SECTION HOUSE ITEM 303
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 2
 	Y 3
@@ -3072,7 +3370,8 @@ SECTION HOUSE ITEM 303
 }
 	
 SECTION HOUSE ITEM 304
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 2
 	Y 2
@@ -3080,7 +3379,8 @@ SECTION HOUSE ITEM 304
 }
 	
 SECTION HOUSE ITEM 305
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 2
 	Y 1
@@ -3088,7 +3388,8 @@ SECTION HOUSE ITEM 305
 }
 	
 SECTION HOUSE ITEM 306
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 2
 	Y 0
@@ -3096,7 +3397,8 @@ SECTION HOUSE ITEM 306
 }
 	
 SECTION HOUSE ITEM 307
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 3
 	Y 6
@@ -3104,7 +3406,8 @@ SECTION HOUSE ITEM 307
 }
 	
 SECTION HOUSE ITEM 308
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 3
 	Y 5
@@ -3112,7 +3415,8 @@ SECTION HOUSE ITEM 308
 }
 	
 SECTION HOUSE ITEM 309
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 3
 	Y 4
@@ -3120,7 +3424,8 @@ SECTION HOUSE ITEM 309
 }
 	
 SECTION HOUSE ITEM 310
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 3
 	Y 3
@@ -3128,7 +3433,8 @@ SECTION HOUSE ITEM 310
 }
 	
 SECTION HOUSE ITEM 311
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 3
 	Y 2
@@ -3136,7 +3442,8 @@ SECTION HOUSE ITEM 311
 }
 	
 SECTION HOUSE ITEM 312
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 3
 	Y 1
@@ -3144,7 +3451,8 @@ SECTION HOUSE ITEM 312
 }
 	
 SECTION HOUSE ITEM 313
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 3
 	Y 0
@@ -3152,7 +3460,8 @@ SECTION HOUSE ITEM 313
 }
 	
 SECTION HOUSE ITEM 314
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 4
 	Y 6
@@ -3160,7 +3469,8 @@ SECTION HOUSE ITEM 314
 }
 	
 SECTION HOUSE ITEM 315
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 4
 	Y 5
@@ -3168,7 +3478,8 @@ SECTION HOUSE ITEM 315
 }
 	
 SECTION HOUSE ITEM 316
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 4
 	Y 4
@@ -3176,7 +3487,8 @@ SECTION HOUSE ITEM 316
 }
 	
 SECTION HOUSE ITEM 317
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 4
 	Y 3
@@ -3184,7 +3496,8 @@ SECTION HOUSE ITEM 317
 }
 	
 SECTION HOUSE ITEM 318
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 4
 	Y 2
@@ -3192,7 +3505,8 @@ SECTION HOUSE ITEM 318
 }
 	
 SECTION HOUSE ITEM 319
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 4
 	Y 1
@@ -3200,7 +3514,8 @@ SECTION HOUSE ITEM 319
 }
 	
 SECTION HOUSE ITEM 320
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 4
 	Y 0
@@ -3208,7 +3523,8 @@ SECTION HOUSE ITEM 320
 }
 	
 SECTION HOUSE ITEM 321
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 5
 	Y 5
@@ -3216,7 +3532,8 @@ SECTION HOUSE ITEM 321
 }
 	
 SECTION HOUSE ITEM 322
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 5
 	Y 6
@@ -3224,7 +3541,8 @@ SECTION HOUSE ITEM 322
 }
 	
 SECTION HOUSE ITEM 323
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 5
 	Y 4
@@ -3232,7 +3550,8 @@ SECTION HOUSE ITEM 323
 }
 	
 SECTION HOUSE ITEM 324
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 5
 	Y 3
@@ -3240,7 +3559,8 @@ SECTION HOUSE ITEM 324
 }
 	
 SECTION HOUSE ITEM 325
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 5
 	Y 2
@@ -3248,7 +3568,8 @@ SECTION HOUSE ITEM 325
 }
 	
 SECTION HOUSE ITEM 326
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 5
 	Y 1
@@ -3256,7 +3577,8 @@ SECTION HOUSE ITEM 326
 }
 	
 SECTION HOUSE ITEM 327
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 5
 	Y 0
@@ -3264,7 +3586,8 @@ SECTION HOUSE ITEM 327
 }
 	
 SECTION HOUSE ITEM 328
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 6
 	Y 6
@@ -3272,7 +3595,8 @@ SECTION HOUSE ITEM 328
 }
 	
 SECTION HOUSE ITEM 329
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 6
 	Y 5
@@ -3280,7 +3604,8 @@ SECTION HOUSE ITEM 329
 }
 	
 SECTION HOUSE ITEM 330
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 6
 	Y 4
@@ -3288,7 +3613,8 @@ SECTION HOUSE ITEM 330
 }
 	
 SECTION HOUSE ITEM 331
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 6
 	Y 3
@@ -3296,7 +3622,8 @@ SECTION HOUSE ITEM 331
 }
 	
 SECTION HOUSE ITEM 332
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 6
 	Y 2
@@ -3304,7 +3631,8 @@ SECTION HOUSE ITEM 332
 }
 	
 SECTION HOUSE ITEM 333
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 6
 	Y 1
@@ -3312,7 +3640,8 @@ SECTION HOUSE ITEM 333
 }
 	
 SECTION HOUSE ITEM 334
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 6
 	Y 0
@@ -3320,7 +3649,8 @@ SECTION HOUSE ITEM 334
 }
 	
 SECTION HOUSE ITEM 335
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 7
 	Y 6
@@ -3328,7 +3658,8 @@ SECTION HOUSE ITEM 335
 }
 	
 SECTION HOUSE ITEM 336
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 7
 	Y 5
@@ -3336,7 +3667,8 @@ SECTION HOUSE ITEM 336
 }
 	
 SECTION HOUSE ITEM 337
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 7
 	Y 4
@@ -3344,7 +3676,8 @@ SECTION HOUSE ITEM 337
 }
 	
 SECTION HOUSE ITEM 338
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 7
 	Y 3
@@ -3352,7 +3685,8 @@ SECTION HOUSE ITEM 338
 }
 	
 SECTION HOUSE ITEM 339
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 7
 	Y 2
@@ -3360,7 +3694,8 @@ SECTION HOUSE ITEM 339
 }
 	
 SECTION HOUSE ITEM 340
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 7
 	Y 1
@@ -3368,7 +3703,8 @@ SECTION HOUSE ITEM 340
 }
 	
 SECTION HOUSE ITEM 341
-{Dirt with Reagent Seeds
+{
+	//NAME Dirt with Reagent Seeds
 	ITEM
 	X 7
 	Y 0
@@ -3376,7 +3712,8 @@ SECTION HOUSE ITEM 341
 }
 	
 SECTION HOUSE ITEM 342
-{Sign Plants
+{
+	//NAME Sign Plants
 	ITEM
 	LOCK
 	X 2
@@ -3385,7 +3722,8 @@ SECTION HOUSE ITEM 342
 }
 	
 SECTION HOUSE ITEM 343
-{// christmas tree needles
+{
+	//NAME // christmas tree needles
 	ITEM $item_christmas_tree
 	X 0
 	Y 0
@@ -3393,7 +3731,8 @@ SECTION HOUSE ITEM 343
 }
 	
 SECTION HOUSE ITEM 344
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_pieces_of_amber
 	X 0
 	Y 1
@@ -3401,7 +3740,8 @@ SECTION HOUSE ITEM 344
 }
 	
 SECTION HOUSE ITEM 345
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_amethysts_2
 	X 1
 	Y 0
@@ -3409,7 +3749,8 @@ SECTION HOUSE ITEM 345
 }
 	
 SECTION HOUSE ITEM 346
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_citrines_1
 	X 0
 	Y 2
@@ -3417,7 +3758,8 @@ SECTION HOUSE ITEM 346
 }
 	
 SECTION HOUSE ITEM 347
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_diamonds
 	X -1
 	Y 0
@@ -3425,7 +3767,8 @@ SECTION HOUSE ITEM 347
 }
 	
 SECTION HOUSE ITEM 348
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_emeralds_1
 	X 0
 	Y 0
@@ -3433,7 +3776,8 @@ SECTION HOUSE ITEM 348
 }
 	
 SECTION HOUSE ITEM 349
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_rubies_5
 	X 0
 	Y 1
@@ -3441,7 +3785,8 @@ SECTION HOUSE ITEM 349
 }
 	
 SECTION HOUSE ITEM 350
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_star_sapphires_2
 	X 1
 	Y 0
@@ -3449,7 +3794,8 @@ SECTION HOUSE ITEM 350
 }
 	
 SECTION HOUSE ITEM 351
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_tourmalines_3
 	X 2
 	Y 0
@@ -3457,7 +3803,8 @@ SECTION HOUSE ITEM 351
 }
 	
 SECTION HOUSE ITEM 352
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_earrings
 	X 1
 	Y 0
@@ -3465,7 +3812,8 @@ SECTION HOUSE ITEM 352
 }
 	
 SECTION HOUSE ITEM 353
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_necklace
 	X 0
 	Y 0
@@ -3473,7 +3821,8 @@ SECTION HOUSE ITEM 353
 }
 	
 SECTION HOUSE ITEM 354
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_necklace_1
 	X 0
 	Y 0
@@ -3481,7 +3830,8 @@ SECTION HOUSE ITEM 354
 }
 	
 SECTION HOUSE ITEM 355
-{// christmas tree ordament
+{
+	//NAME // christmas tree ordament
 	ITEM $item_necklace_2
 	X 0
 	Y 0
