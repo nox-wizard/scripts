@@ -189,10 +189,17 @@ native itm_getCharBackPack(const chr);
 
 /*!
 \author Xanathar
-\fn itm_create(const itemtype)
+\fn itm_create(const itemtype, const container = -1)
 \brief
 */
-native itm_create(const itemtype);
+native itm_create(const itemtype, const container = -1);
+
+/*!
+\author Luxor
+\fn itm_createByDef(const def[], const container = -1)
+\brief
+*/
+native itm_createByDef(const def[], const container = -1);
 
 /*!
 \author Xanathar
@@ -250,20 +257,6 @@ native itm_delEventHandler(const itm, const event);
 \brief
 */
 native itm_sound(const itm, const soundfx);
-
-/*!
-\author Luxor
-\fn itm_spawnItem(const s, const chr, const amount, const format[], const stackable, const cItemId1, const cItemId2, const cColorId1, const cColorId2, const pack, const send)
-\brief
-*/
-native itm_spawnItem(const s, const chr, const amount, const format[], const stackable, const cItemId1, const cItemId2, const cColorId1, const cColorId2, const pack, const send);
-
-/*!
-\author Luxor
-\fn itm_spawnNecroItem(const s, const inPack, const format[])
-\brief
-*/
-native itm_spawnNecroItem(const s, const inPack, const format[]);
 
 /*!
 \author Luxor

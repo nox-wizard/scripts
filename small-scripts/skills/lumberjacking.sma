@@ -17,17 +17,23 @@ const NXW_LUMBERLOGS = 10;
  ****************************************************************************/
 public __nxw_sk_lumber(const s)
 {
-    if (s < 0)
-    {
-        printf ("WARNING: SOCKET PASSED TO __nxw_sk_lumber IS UNVALID");
-        return;
-    }
-    new cc = getCharFromSocket(s);
-    new logs = itm_spawnItem(s,cc,NXW_LUMBERLOGS,"#",1,0x1B,0xE0, 0, 0,1,1);
-    if (logs == -1) return;
-    if (itm_getProperty(logs, IP_AMOUNT) > NXW_LUMBERLOGS) {
-        ntprintf(s, "You place more logs in your pack."); }
-    else {
-        ntprintf(s, "You place some logs in your pack."); }
+	if ( s < 0 || s >= getSocketCount() ) {
+		printf ("WARNING: SOCKET PASSED TO __nxw_sk_lumber IS UNVALID");
+		return;
+	}
+	new cc = getCharFromSocket(s);
+	new bp = itm_getCharBackPack( cc );
+	    
+	new logs = itm_createByDef( "$item_logs" );
+	if (logs == -1) return;
+	itm_setProperty( logs, IP_AMOUNT, _, NXW_LUMBERLOGS );
+	itm_setContSerial( logs, bp );
+	if (itm_getProperty(logs, IP_AMOUNT) > NXW_LUMBERLOGS) {
+		ntprintf(s, "You place more logs in your pack.");
+	} else {
+		ntprintf(s, "You place some logs in your pack.");
+	}
+
+	itm_contPileItem( bp, logs ); 
 }
 

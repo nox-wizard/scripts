@@ -173,16 +173,24 @@ public __nxw_sk_mining(const s)
 	if (oreAmount > 8) {
 		oreAmount = 1;
 	}
-	if (skill >= 850 && random(99) >= 92) {
+	/*if (skill >= 850 && random(99) >= 92) {
 		itm_spawnNecroItem(s, 1, "999");
 		ntprintf(s, "You place a gem in your pack.");
 		return;
-	}
+	}*/
 	new str[50];	//Adjust the size if you create new ores with long names!
 	sprintf(str, "%s ore", oreName[oreFound]);
-	new ore = itm_spawnItem(s,cc,oreAmount,str,1,0x19,0xB9, oreColor[oreFound] >> 8, oreColor[oreFound] & 0x00FF,1,1);
+	new bp = itm_getCharBackPack( cc );
+	new ore = itm_createByDef( "$item_iron_ore" );
+	itm_setProperty( ore, IP_AMOUNT, _, oreAmount );
+	itm_setProperty( ore, IP_STR_NAME, 0, str );
+	itm_setDualByteProperty( ore, IP_COLOR, oreColor[oreFound] );
+	itm_setContSerial( ore, bp );
+	itm_setProperty( ore, IP_WEIGHT, _, 100 );
+	
 	itm_setProperty(ore, IP_WEIGHT, _, oreWeight[oreFound]);
 	ntprintf(s, "You place some %s in your pack.", str);
+	itm_contPileItem( bp, ore );
 }
 
 
@@ -211,12 +219,18 @@ public __nxw_smeltOre2(const s, const ore, const minskill, const id1, const id2,
         }
     } else {
         new numingots=ore_amount*2;         // one ore gives two ingots
-        new ingot = itm_spawnItem(s,cc,numingots,orename,1,id1,id2, col1, col2,1,1);
-	
-	itm_setProperty(ingot, IP_WEIGHT, _, 100);
+	new bp = itm_getCharBackPack( cc );
+        new ingot = itm_createByDef( "$item_iron_ingots" );
+	itm_setProperty( ingot, IP_AMOUNT, _, numingots );
+	itm_setProperty( ingot, IP_STR_NAME, 0, orename );
+	new color = (col1<<8) + col2;
+	itm_setDualByteProperty( ingot, IP_COLOR, color );
+	itm_setContSerial( ingot, bp );
+	itm_setProperty( ingot, IP_WEIGHT, _, 100 );
 
         ntprintf(s, "You have smelted your ore");
         ntprintf(s, "You place some %s in your pack.",orename);
+	itm_contPileItem( bp, ingot );
         itm_remove(ore);
     }
 }
