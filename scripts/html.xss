@@ -133,8 +133,11 @@ LINE </font></td>
 LINE                <td bgcolor="#001B35">
 LINE                  <p align="right"><font color="#C0C0C0">Privlevel&nbsp;
 LINE </font></td>
+LINE                <td bgcolor="#001B35">
+LINE                  <p align="right"><font color="#C0C0C0">Login IP &nbsp;
+LINE </font></td>
 LINE              </tr>
-WHOLIST P REGION ACCOUNT PRIVLEVEL
+WHOLIST P REGION ACCOUNT PRIVLEVEL IP
 LINE </table>
 LINE              <tr>
 LINE                <td width="50%" bgcolor="#001B35">
