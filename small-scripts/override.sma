@@ -9,7 +9,6 @@
 
 
 #include "small-scripts/skills/constant.sma"
-#include "small-scripts/race/constant.sma"
 #include "small-scripts/commands/constant.sma"
 
 #include "small-scripts/nxw_lib"
