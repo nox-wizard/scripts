@@ -27,21 +27,18 @@ public _scissorsTarget( const s, const target, const itm )
 	
 	if( isCloth( id ) || isCutCloth( id ) ) {
 
-		new amt = itm_getProperty( itm, IP_AMOUNT );
-		if( amt<0 ) {
+		if( itm_getProperty( itm, IP_AMOUNT )<0 ) {
 			itm_remove(itm);
 			return;
 		}
 
-		amt=amt*3;
-		
 		chr_sound( chr, 0x0248 );
 		ntprintf(s,"You cut some cloth into bandages, and put it in your backpack");
 		new bp = itm_getCharBackPack( chr );
 		new benda = itm_createByDef( "$item_clean_bandages" );
-		itm_setProperty( benda, IP_AMOUNT, _, amt );
+		itm_setProperty( benda, IP_AMOUNT, _, 3 );
 		itm_contPileItem( bp, benda );
-		itm_remove(itm);
+		itm_reduceAmount(itm, 1);
 		
 	}
 
