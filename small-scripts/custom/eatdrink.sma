@@ -103,7 +103,7 @@ if(itype == 105)
    chr_action (chr, 34);//eating movement
    new emote[50];
    sprintf(emote, "*drinks %s *", itmname);
-   chr_speech(NPC_EMOTE_ALL, -1, chr, emote, 0);
+   chr_speech(EMOTE, -1, chr, 0,0,emote);
    if((leftover != -1) && (container == backpack))
          {
          new left = itm_createInBp(leftover, chr);
@@ -133,7 +133,7 @@ else if(itype == 14)
    chr_action (chr, 34);//eating movement
    new emote[50];
    sprintf(emote, "*eats %s *", itmname);
-   chr_speech(NPC_EMOTE_ALL, -1, chr, emote,0);
+   chr_speech(EMOTE, -1, chr,0,0, emote);
    if((leftover != -1) && (container == backpack))
         {
         new left = itm_createInBp(leftover, chr);
