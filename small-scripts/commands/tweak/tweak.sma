@@ -1102,7 +1102,7 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 						printf("moreb1: %d, moreb2: %d^n", moreb1, moreb2);
 						itm_setProperty(target, IP_MOREB, 1+2*stocktype, moreb1);
 						itm_setProperty(target, IP_MOREB, 2+2*stocktype, moreb2);
-						printf("moreb1-subprop: %d, moreb2-subprop: %d^n", 1+2*stocktype*(9/10), 2+2*stocktype*(9/10));
+						//printf("moreb1-subprop: %d, moreb2-subprop: %d^n", 1+2*stocktype*(9/10), 2+2*stocktype*(9/10));
 		        		}
 			        	else chr_message( chrsource, _,"A number must be inserted!");
 			        }

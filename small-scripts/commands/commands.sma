@@ -47,6 +47,8 @@
 #include "small-scripts/commands/resurrect.sma"
 #include "small-scripts/commands/save.sma"
 #include "small-scripts/commands/setdir.sma"
+#include "small-scripts/commands/setmoreb12.sma"
+#include "small-scripts/commands/setmoreb34.sma"
 #include "small-scripts/commands/setmorexyz.sma"
 #include "small-scripts/commands/setpriv.sma"
 #include "small-scripts/commands/settype.sma"

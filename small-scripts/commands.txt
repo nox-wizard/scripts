@@ -7,7 +7,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 //Here you can define commands and commands callbacks, for every command you 
-//must specify the privlevel needed toacces the command and function to be 
+//must specify the privlevel needed to access the command and function to be 
 //called when that command is used.
 //You can change the command triggering character in server.cfg, by default
 //it's set to '
@@ -69,6 +69,8 @@ resurrect,100,cmd_resurrect
 save,200,cmd_save
 setdir,150,cmd_setdir
 setmorexyz,150,cmd_setmorexyz
+setmoreb12,150,cmd_setmoreb12
+setmoreb34,150,cmd_setmoreb34
 setpriv,255,cmd_setpriv
 setskills,200,cmd_setskills
 setstats,200,cmd_setstats
