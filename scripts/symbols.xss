@@ -28,14 +28,15 @@
 
 #include scripts/symbols/skills.xss
 #include scripts/symbols/lootlists.xss
-#include scripts/symbols/speech.xss
 
+#include scripts/symbols/npc/speech.xss
 #include scripts/symbols/npc/npclists.xss
 #include scripts/symbols/npc/npc.xss
 #include scripts/symbols/npc/npcextras.xss
 #include scripts/symbols/npc/creatures.xss
 #include scripts/symbols/npc/customnpc.xss
 #include scripts/symbols/npc/ntrigrs.xss
+#include scripts/symbols/npc/customnpc.xss
 
 #include scripts/symbols/menus.xss
 #include scripts/symbols/triggers.xss
