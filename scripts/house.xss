@@ -465,6 +465,7 @@ HOUSE_ITEM 104
 HOUSE_ITEM 105
 HOUSE_DEED 50035
 }
+
 SECTION HOUSE 29
 { New 2-story tavern
 ID 409e
@@ -482,6 +483,7 @@ HOUSE_ITEM 109
 HOUSE_ITEM 110
 HOUSE_DEED 50036
 }
+
 SECTION HOUSE 30
 { New adobe type house
 ID 409c
@@ -512,6 +514,7 @@ HOUSE_ITEM 114
 HOUSE_ITEM 115
 HOUSE_DEED 50038
 }
+
 SECTION HOUSE 32
 { 3-Story Marble House
 ID 4096
@@ -561,6 +564,7 @@ HOUSE_ITEM 68
 HOUSE_ITEM 69
 HOUSE_ITEM 70
 }
+
 SECTION HOUSE 35
 { Large forge facing east
 NOKEY
@@ -576,6 +580,7 @@ HOUSE_ITEM 71
 HOUSE_ITEM 72
 HOUSE_ITEM 73
 }
+
 SECTION HOUSE 36
 { Large forge facing south
 NOKEY
@@ -1062,6 +1067,7 @@ LOCK
 X 2
 Y 4
 Z 5
+ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 3
@@ -1117,6 +1123,7 @@ LOCK
 X 3
 Y 7
 Z 5
+ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 9
@@ -1162,6 +1169,7 @@ LOCK
 X 1
 Y 7
 Z 5
+ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 14
@@ -1207,6 +1215,7 @@ LOCK
 X 4
 Y 7
 Z 5
+ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 19
@@ -1252,6 +1261,7 @@ LOCK
 X 4
 Y 11
 Z 5
+ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 24
@@ -1315,6 +1325,7 @@ LOCK
 X 4
 Y 16
 Z 5
+ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 31
@@ -1360,6 +1371,7 @@ LOCK
 X 0
 Y 7
 Z 5
+ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 37
@@ -1418,6 +1430,7 @@ X 0
 Y 0
 Z 0
 }
+
 SECTION HOUSE ITEM 44
 { PENTA-T-LEFT
 ITEM $item_pentagram_1
@@ -1425,6 +1438,7 @@ X -1
 Y -1
 Z 0
 }
+
 SECTION HOUSE ITEM 45
 { PENTA-TOP
 ITEM $item_pentagram_2
@@ -1432,6 +1446,7 @@ X 0
 Y -1
 Z 0
 }
+
 SECTION HOUSE ITEM 46
 { PENTA-B-LEFT
 ITEM $item_pentagram_3
@@ -1439,6 +1454,7 @@ X -1
 Y 1
 Z 0
 }
+
 SECTION HOUSE ITEM 47
 { PENTA-LEFT
 ITEM $item_pentagram
@@ -1446,6 +1462,7 @@ X -1
 Y 0
 Z 0
 }
+
 SECTION HOUSE ITEM 48
 { TOP-RIGHT
 ITEM $item_pentagram_5
@@ -1453,6 +1470,7 @@ X 1
 Y -1
 Z 0
 }
+
 SECTION HOUSE ITEM 49
 { BOTTOM
 ITEM $item_pentagram_6
@@ -1565,6 +1583,7 @@ X 0
 Y 0
 Z 8
 }
+
 SECTION HOUSE ITEM 64
 { bed large facing south part 2
 ITEM $item_pine_bigbed_feetleft_A2_3
@@ -1573,6 +1592,7 @@ X 0
 Y 1
 Z 8
 }
+
 SECTION HOUSE ITEM 65
 { bed large facing south part 3
 ITEM $item_pine_bigbed_headright_A2_4
@@ -1581,6 +1601,7 @@ X 1
 Y 0
 Z 8
 }
+
 SECTION HOUSE ITEM 66
 { bed large facing south part 4
 ITEM $item_pine_bigbed_feetright_A2_3
@@ -1589,6 +1610,7 @@ X 1
 Y 1
 Z 8
 }
+
 SECTION HOUSE ITEM 67
 { bed large facing east part 1
 ITEM $item_pine_bigbed_headright_A1_4
@@ -1597,6 +1619,7 @@ X 0
 Y 0
 Z 8
 }
+
 SECTION HOUSE ITEM 68
 { bed large facing south part 2
 ITEM $item_pine_bigbed_headleft_A1_4
@@ -1605,6 +1628,7 @@ X 0
 Y 1
 Z 8
 }
+
 SECTION HOUSE ITEM 69
 { bed large facing south part 3
 ITEM $item_pine_bigbed_feetleft_A1_3
@@ -1613,6 +1637,7 @@ X 1
 Y 1
 Z 8
 }
+
 SECTION HOUSE ITEM 70
 { bed large facing south part 4
 ITEM $item_pine_bigbed_feetright_A1_3
@@ -1621,6 +1646,7 @@ X 1
 Y 0
 Z 8
 }
+
 SECTION HOUSE ITEM 71
 { large forge facing east part 1
 ITEM $item_bellows_2
@@ -1629,6 +1655,7 @@ X 0
 Y 0
 Z 8
 }
+
 SECTION HOUSE ITEM 72
 { large forge facing east part 2
 ITEM $item_forge_5
@@ -1637,6 +1664,7 @@ X 0
 Y 1
 Z 8
 }
+
 SECTION HOUSE ITEM 73
 { large forge facing east part 3
 ITEM $item_forge_6
@@ -1645,6 +1673,7 @@ X 0
 Y 2
 Z 8
 }
+
 SECTION HOUSE ITEM 74
 { large forge facing south part 1
 ITEM $item_bellows_1
@@ -1653,6 +1682,7 @@ X 0
 Y 0
 Z 8
 }
+
 SECTION HOUSE ITEM 75
 { large forge facing south part 2
 ITEM $item_forge_3
@@ -1661,6 +1691,7 @@ X 1
 Y
 Z 8
 }
+
 SECTION HOUSE ITEM 76
 { large forge facing south part 3
 ITEM $item_forge_4
@@ -1669,6 +1700,7 @@ X 2
 Y 0
 Z 8
 }
+
 SECTION HOUSE ITEM 100
 { Door (small tower)
 ITEM $item_metal_door_1
@@ -1685,7 +1717,9 @@ LOCK
 X 1
 Y 4
 Z 5
+ONDBLCLICK housestart
 }
+
 SECTION HOUSE ITEM 102
 { Door (marble 2-story)
 ITEM $item_metal_door_1
@@ -1694,6 +1728,7 @@ X -2
 Y 0
 Z 24
 }
+
 SECTION HOUSE ITEM 103
 { Sign (marble 2-story)
 ITEM $item_brass_sign_1
@@ -1701,7 +1736,9 @@ LOCK
 X 3
 Y 4
 Z 5
+ONDBLCLICK housestart
 }
+
 SECTION HOUSE ITEM 104
 { Door (stone 2-story)
 ITEM $item_metal_door_1
@@ -1710,6 +1747,7 @@ X -2
 Y 0
 Z 27
 }
+
 SECTION HOUSE ITEM 105
 { Sign (marble 2-story)
 ITEM $item_brass_sign_1
@@ -1717,7 +1755,9 @@ LOCK
 X 3
 Y 4
 Z 6
+ONDBLCLICK housestart
 }
+
 SECTION HOUSE ITEM 106
 { Sign (2-story tavern)
 ITEM $item_brass_sign_1
@@ -1725,7 +1765,9 @@ LOCK
 X 1
 Y 6
 Z 3
+ONDBLCLICK housestart
 }
+
 SECTION HOUSE ITEM 107
 { Door (front left)
 ITEM $item_wooden_door_13
@@ -1734,6 +1776,7 @@ X 3
 Y 1
 Z 5
 }
+
 SECTION HOUSE ITEM 108
 { Door (front right)
 ITEM $item_wooden_door_14
@@ -1742,6 +1785,7 @@ X 4
 Y 1
 Z 5
 }
+
 SECTION HOUSE ITEM 109
 { Door (inside bedroom)
 ITEM $item_wooden_door_14
@@ -1750,6 +1794,7 @@ X -3
 Y -1
 Z 25
 }
+
 SECTION HOUSE ITEM 110
 { Door (balcony)
 ITEM $item_wooden_door_15
@@ -1758,6 +1803,7 @@ X 1
 Y 0
 Z 25
 }
+
 SECTION HOUSE ITEM 111
 { Sign (adobe)
 ITEM $item_brass_sign_1
@@ -1765,7 +1811,9 @@ LOCK
 X 3
 Y 5
 Z 12
+ONDBLCLICK housestart
 }
+
 SECTION HOUSE ITEM 112
 { Door (adobe)
 ITEM $item_wooden_door_1
@@ -1774,6 +1822,7 @@ X -1
 Y 3
 Z 6
 }
+
 SECTION HOUSE ITEM 113
 { Sign (2-story log)
 ITEM $item_brass_sign_1
@@ -1781,7 +1830,9 @@ LOCK
 X 4
 Y 5
 Z 14
+ONDBLCLICK housestart
 }
+
 SECTION HOUSE ITEM 114
 { Door (2-story log, front)
 ITEM $item_wooden_door_1
@@ -1790,6 +1841,7 @@ X 1
 Y 4
 Z 8
 }
+
 SECTION HOUSE ITEM 115
 { Door (2-story log, balcony)
 ITEM $item_wooden_door_1
@@ -1806,6 +1858,7 @@ LOCK
 X 0
 Y 7
 Z 0
+ONDBLCLICK housestart
 }
 
 SECTION HOUSE ITEM 117
@@ -1825,6 +1878,7 @@ X -3
 Y 3
 Z 4
 }
+
 SECTION HOUSE ITEM 143
 { Treasure piece1
 ITEM $item_treasure_C
