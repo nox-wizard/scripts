@@ -845,10 +845,10 @@ native chr_nextLocalVar( const chr, const previous );
 
 /*!
 \author Luxor
-\fn chr_skillMakeMenu(const chr, const makeMenu, const skill)
+\fn chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1, const material2 )
 \brief
 */
-native chr_skillMakeMenu(const chr, const makeMenu, const skill);
+native chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1, const material2 );
 
 
 /*!
