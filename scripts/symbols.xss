@@ -52,6 +52,7 @@
 
 #include scripts/symbols/areas.xss
 #include scripts/symbols/locations.xss
+#include scripts/symbols/speech.xss
 
 //
 // Local include
