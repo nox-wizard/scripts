@@ -512,7 +512,7 @@ public TransferHouse(const t, const chrsource, const target, const x, const y, c
 public BounceBan(const house, const enterchr, const chrdir, const sequence)
 {
 	printf("enter multi, multi is %d, char is %d", house, enterchr);
-	if(house_isBanned(house, chr) == 1)
+	if(house_isBanned(house, enterchr) == 1)
 	{
 		Bounceout(0, 0, enterchr, 0, 0, 0, 0, house);
 		chr_message(enterchr, _, "Because you are at the Ban-list.");

@@ -531,10 +531,10 @@ const EVENT_CHR_ONTRANSFER	= 14;
 <UL>
 <LI>
 </UL>
-<B>called when:</B> <br>
+<B>called when:</B>Char enters a multi (the whole area that is part of the multi, not only inside)<br>
 <B>bypass:</B> <br>
-<B>return:</B> <br>
-<B>notes:</B>
+<B>return:</B> house serial, char serial, dir, sequence<br>
+<B>notes:</B> this needs to be hooked to the HOUSE in house.xss, its not hooked at chars because it needs to be triggered at npc entering too to prevent fetch-exploit for house looting
 */
 const EVENT_CHR_ONMULTIENTER	= 15;
 
