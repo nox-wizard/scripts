@@ -128,6 +128,36 @@ native guild_addRecruit( const guild, const recruit, const recruiter );
 native guild_refuseRecruit( const guild, const chr );
 
 /*!
+\brief returns if the two guilds are at war
+\author Wintermute
+\since 0.82
+\fn guild_hasWarWith( const guild, const otherguild )
+\param 1 the guild
+\param 2 the recruit
+*/
+native guild_hasWarWith( const guild, const otherguild );
+
+/*!
+\brief returns if the first guild has offered peace to another warring guild
+\author Wintermute
+\since 0.82
+\fn guild_hasPeaceWith( const guild, const otherguild )
+\param 1 the guild
+\param 2 the other guild
+*/
+native guild_hasPeaceWith( const guild, const otherguild );
+
+/*!
+\brief returns if the first guild has an alliance with another guild
+\author Wintermute
+\since 0.82
+\fn guild_hasAllianceWith( const guild, const otherguild )
+\param 1 the guild
+\param 2 the other guild
+*/
+native guild_hasAllianceWith( const guild, const otherguild );
+
+/*!
 \brief set a guild member property
 \author Endymion
 \fn gmember_setProperty( const member, const property, const subprop=0, ...)

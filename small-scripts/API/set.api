@@ -151,7 +151,7 @@ native set_addOwnedNpcs( const set, const owner, const includeStabled=false, con
 \param 3 the y location
 \param 4 distance
 \return 0
-\fn set_addNpcsNearXY( const set, const x, const y, const distance ) 
+\fn set_addNpcsNearXY( const set, const x, const y, const distance )
 */
 native set_addNpcsNearXY( const set, const x, const y, const distance=VISRANGE );
 
@@ -304,11 +304,11 @@ native set_addGuildRecruit( const set, const guild );
 \since 0.82
 \param 1 the set
 \param 2 the guild ( if INVALID all, else use options )
-\param 3 the options ( WAR, ALLIED )
+\param 3 the options ( GUILD_POLITICS_WAR, GUILD_POLITICS_PEACE, GUILD_POLITICS_ALLIED )
 \return 0
 \fn set_addGuilds( const set, const guild=INVALID, const options=INVALID )
 */
-native set_addGuilds( const set, const guild=INVALID, const options=INVALID ) 
+native set_addGuilds( const set, const guild=INVALID, const options=INVALID )
 
 /*!
 \brief Add to given set all race

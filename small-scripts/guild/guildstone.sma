@@ -17,6 +17,10 @@
 #define ABBREVPRICE 40000
 #define ALIGNMENTPRICE 25000
 
+#define GUILD_POLITICS_WAR 0
+#define	GUILD_POLITICS_PEACE 1
+#define	GUILD_POLITICS_ALLIED 2
+
 //if define guildstone place is get from target, else from player position
 #define GUILD_POSITION_WITH_TARGET
 
@@ -465,9 +469,17 @@ public guild_viewRoster(const chr, const guild)
 public guild_viewDesc(const chr, const guild)
 {
 	new gui = gui_create( 40, 40, true, true, true, "viewCB" );
+	gui_setProperty( gui, MP_BUFFER, 0, guild );
+	gui_addResizeGump( gui, 0, 0, 0x0A28, 420, 400);
+	gui_addButton(gui, 330, 350, 0xf9, 0xf7, 1); // ok button
 	new charter[500];
-//	guild_getProperty(guild, GP_UNI_CHARTER, charter);
-	gui_addHtmlGump( gui, 0, 0, 200, 300, charter, 1, 1 );
+	guild_getProperty(guild, GP_UNI_CHARTER, _, charter);
+	for ( new i=1;i<=10;i++)
+	{
+		new charterline[31];
+		strncpy( charterline, charter[(i-1)*30], 30 )
+		gui_addText( gui, 40, 40+i*25, _, charterline );
+	}
 	gui_show( gui, chr );
 }
 
@@ -623,6 +635,7 @@ public viewCandidatesList(const chr, const guild)
 		if ( page > 1 )
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1)
 	}
+	// OK Button
 	gui_show( gui, chr );
 }
 
@@ -638,15 +651,17 @@ public viewGuildAtWar(const chr, const guild)
 	new membername[30];
 	new page;
 	new guildMemberSet=set_create();
-	// set_addGuilds( guildMemberSet, guild, WAR );
-	set_addGuilds( guildMemberSet, guild);
+	set_addGuilds( guildMemberSet, guild, GUILD_POLITICS_WAR );
+	// set_addGuilds( guildMemberSet, guild);
 	for ( set_rewind(guildMemberSet);!set_end(guildMemberSet);)
 	{
 		gui_addPage(gui, ++page);
 		for ( new i=1;i < 10;++i)
 		{
 			member=set_get(guildMemberSet);
-			chr_getProperty(member, CP_STR_NAME, _, membername);
+
+			guild_getProperty(member, GP_STR_NAME, _, membername);
+
 			gui_addText( gui, 25, 55+i*30, _, membername);
 			if ( set_end(guildMemberSet))
 				break;
@@ -692,8 +707,7 @@ public guildmasterMenu(const chr, const guild)
 
 	ypos+=30;
 	new alignment = guild_getProperty(guild, GP_TYPE, _);
-	chr_message(chr, _, "Alignment Code is: %d", alignment);
-	sprintf(name, "Change the alignment of guild. (currently %s)" , alignments[alignment ]);
+	sprintf(name, "Change the alignment of guild. (currently %s)" , alignments[alignment]);
 	gui_addText( gui, 45, ypos, _,  name);
 	gui_addButton( gui, 25, ypos, 0x4B9, 0x4BA, 3 );
 
@@ -818,6 +832,7 @@ public renameGuildCB(const gui, const chr, const buttonCode)
 		}
 		guild_setProperty(guild, GP_STR_NAME, _, name);
 	}
+	guildmasterMenu(chr, guild);
 }
 
 public changeAbbreviation(const chr, const guild)
@@ -832,9 +847,9 @@ public changeAbbreviation(const chr, const guild)
 	gui_addText( gui, 45, 59, _, "What shall be the new name of the guild ?" );
 	gui_addInputField( gui,  45,  90, 150, 30, 1, 0, guildAbbrev);
 	// Cancel Button plazieren
-	gui_addButton( gui, 230, 120, 0xf3, 0xf1, 0, 1);
+	gui_addButton( gui, 230, 95, 0xf3, 0xf1, 0, 1);
 	// OK Button
-	gui_addButton( gui, 300, 120, 0xf9, 0xf7, 1, 1);
+	gui_addButton( gui, 300, 95, 0xf9, 0xf7, 1, 1);
 	gui_show( gui, chr );
 }
 
@@ -913,7 +928,45 @@ public changeAlignCB(const gui, const chr, const buttonCode)
 
 public setCharter(const chr, const guild)
 {
+	new gui = gui_create( 40, 40, true, true, true, "setCharterCB" );
+	gui_setProperty( gui, MP_BUFFER, 0 , guild);
+	gui_addResizeGump( gui, 0, 0, 0x0A28, 420, 400);
+	gui_addText( gui, 115, 10, _, "Set guild charter and web link");
+	new charter[500];
+	guild_getProperty(guild, GP_UNI_CHARTER, _, charter);
+	new charterline[31];
+	for ( new i=1;i<=10;i++)
+	{
+		strncpy( charterline, charter[(i-1)*30], 31 )
+		gui_addResizeGump( gui, 40,40+i*25, 5054,300,20);
+		gui_addInputField( gui, 40, 40+i*25, 340, 20, i, _, charterline );
+	}
+	// Cancel Button plazieren
+	gui_addButton( gui, 260, 350, 0xf3, 0xf1, 0, 1);
+	// OK Button
+	gui_addButton( gui, 320, 350, 0xf9, 0xf7, 1, 1);
+	gui_show( gui, chr );
+}
 
+public setCharterCB(const gui, const chr, const buttonCode)
+{
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	if ( buttonCode == 1)
+	{
+		new charter[500];
+		new charterline[500];
+		new realline[31];
+		gui_getProperty( gui, MP_UNI_TEXT, 1, charterline);
+		strncpy( charter, charterline, 30 )
+		for ( new i=2;i<=10;i++)
+		{
+			gui_getProperty( gui, MP_UNI_TEXT, i, charterline);
+			strncpy( realline, charterline, 30 )
+			sprintf(charter, "%s%s", charter, realline);
+		}
+		guild_setProperty(guild, GP_UNI_CHARTER, _, charter);
+	}
+	guildmasterMenu(chr, guild);
 }
 
 public dismissMember(const chr, const guild)
@@ -967,24 +1020,32 @@ public dismissMemberCB(const gui, const chr, const buttonCode)
 public declareWar(const chr, const guild)
 {
 	new gui = gui_create( 40, 40, true, true, true, "declareWarCB" );
-	gui_addResizeGump( gui, 0, 0,  0x0A28, 400, 250 );
+	gui_addResizeGump( gui, 0, 0,  0x0A28, 400, 350 );
 	gui_setProperty( gui, MP_BUFFER, 0 , guild);
 
 	new guildSet=set_create();
 	new page;
 	new member;
 	new membername[50];
-	// set_addGuilds( guildSet, guild, WAR );
-	set_addGuilds( guildSet, guild);
+	set_addGuilds( guildSet);
 	for ( set_rewind(guildSet);!set_end(guildSet);)
 	{
 		gui_addPage(gui, ++page);
-		for ( new i=1;i < 10;++i)
+		new i = 1;
+		new guildIndex=0;
+		while ( i <= 10)
 		{
 			member=set_get(guildSet);
-			chr_getProperty(member, GP_STR_NAME, _, membername);
-			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, page*10+i ); // Buttons start at 10
-			gui_addText( gui, 55, 55+i*30, _, membername);
+			guildIndex++;
+			if ( ! guild_hasWarWith(guild, member) && guild != member)
+			{
+				guild_getProperty(member, GP_STR_NAME, _, membername);
+				gui_addButton( gui, 25, 25+i*30, 0x4B9, 0x4BA, page*10+guildIndex ); // Buttons start at 10
+				gui_addText( gui, 55, 25+i*30, _, membername);
+				i++;
+			}
+			if ( set_end(guildSet) )
+				break;
 		}
 		if ( page < set_size(guildSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
@@ -1003,23 +1064,27 @@ public declareWarCB(const gui, const chr, const buttonCode)
 	{
 		new guildSet=set_create();
 		new guildAtWar=INVALID;
-		new count=0;
+		new count=10;
 		// Searching through list of guilds, hopefully they didn't change in the meantime
 		// Better would be storing the guild serial with the button code, but how to store it ?
-		set_addGuilds( guildSet, guild);
+		set_addGuilds( guildSet);
 		for ( set_rewind(guildSet);!set_end(guildSet);)
 		{
 			count++;
 			guildAtWar=set_get(guildSet);
 			if ( count==buttonCode )
 			{
-				guild_setProperty(guild, GP_WAR, _, guildAtWar);
-				guild_setProperty(guildAtWar, GP_WAR, _, guild);
-				break;
+				if ( ! guild_hasWarWith(guild, guildAtWar) && guild != guildAtWar)
+				{
+					guild_setProperty(guild, GP_WAR, _, guildAtWar);
+					guild_setProperty(guildAtWar, GP_WAR, _, guild);
+					break;
+				}
 			}
 		}
 		set_delete(guildSet);
 	}
+	guildmasterMenu(chr, guild);
 }
 
 public declarePeace(const chr, const guild)
@@ -1032,18 +1097,26 @@ public declarePeace(const chr, const guild)
 	new page;
 	new member;
 	new membername[50];
-	// set_addGuilds( guildMemberSet, guild, PEACE );
-	set_addGuilds( guildSet, guild);
+	set_addGuilds( guildSet, guild, GUILD_POLITICS_WAR );
+	// set_addGuilds( guildSet, guild);
 	for ( set_rewind(guildSet);!set_end(guildSet);)
 	{
 		gui_addPage(gui, ++page);
-		for ( new i=1;i < 10;++i)
+		new guildIndex=0;
+		new i=1;
+		while ( i <= 10)
 		{
 			member=set_get(guildSet);
-			chr_getProperty(member, GP_STR_NAME, _, membername);
-			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, page*10+i ); // Buttons start at 10
-			gui_addText( gui, 55, 55+i*30, _, membername);
-			if ( set_end(guildSet))
+			guildIndex++;
+			if ( ! guild_hasPeaceWith(guild, member) && guild != member)
+			{
+				guild_getProperty(member, GP_STR_NAME, _, membername);
+				chr_message(chr, _, "Have Guild %s Adding index %d", membername, guildIndex );
+				gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, page*10+guildIndex ); // Buttons start at 10
+				gui_addText( gui, 55, 55+i*30, _, membername);
+				i++;
+			}
+			if ( set_end(guildSet) )
 				break;
 		}
 		if ( page < set_size(guildSet)/10+1)
@@ -1064,10 +1137,10 @@ public declarePeaceCB(const gui, const chr, const buttonCode)
 	{
 		new guildSet=set_create();
 		new guildAtWar=INVALID;
-		new count=0;
+		new count=10;
 		// Searching through list of guilds, hopefully they didn't change in the meantime
 		// Better would be storing the guild serial with the button code, but how to store it ?
-		set_addGuilds( guildSet, guild);
+		set_addGuilds( guildSet, guild, GUILD_POLITICS_WAR);
 		for ( set_rewind(guildSet);!set_end(guildSet);)
 		{
 			count++;
@@ -1080,6 +1153,75 @@ public declarePeaceCB(const gui, const chr, const buttonCode)
 		}
 		set_delete(guildSet);
 	}
+	guildmasterMenu(chr, guild);
+}
+
+public declareAlliance(const chr, const guild)
+{
+	new gui = gui_create( 40, 40, true, true, true, "declareAllianceCB" );
+	gui_addResizeGump( gui, 0, 0,  0x0A28, 400, 250 );
+	gui_setProperty( gui, MP_BUFFER, 0 , guild);
+
+	new guildSet=set_create();
+	new page;
+	new member;
+	new membername[50];
+	set_addGuilds( guildSet, guild, GUILD_POLITICS_ALLIED );
+	// set_addGuilds( guildSet, guild);
+	for ( set_rewind(guildSet);!set_end(guildSet);)
+	{
+		gui_addPage(gui, ++page);
+		new guildIndex=0;
+		new i=1;
+		while ( i <= 10)
+		{
+			member=set_get(guildSet);
+			guildIndex++;
+			member=set_get(guildSet);
+			if ( ! guild_hasAllianceWith(guild, member) && guild != member)
+			{
+				guild_getProperty(member, GP_STR_NAME, _, membername);
+				gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, page*10+ guildIndex); // Buttons start at 10
+				gui_addText( gui, 55, 55+i*30, _, membername);
+			}
+			if ( set_end(guildSet))
+				break;
+		}
+		if ( page < set_size(guildSet)/10+1)
+			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
+		if ( page > 1 )
+			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
+	}
+	// Cancel Button plazieren
+	gui_addButton( gui, 300, 180, 0xf3, 0xf1, 0, 1);
+	gui_show( gui, chr );
+}
+
+public declareAllianceCB(const gui, const chr, const buttonCode)
+{
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+
+	if ( buttonCode >= 10 )
+	{
+		new guildSet=set_create();
+		new guildAtWar=INVALID;
+		new count=10;
+		// Searching through list of guilds, hopefully they didn't change in the meantime
+		// Better would be storing the guild serial with the button code, but how to store it ?
+		set_addGuilds( guildSet, guild, GUILD_POLITICS_ALLIED);
+		for ( set_rewind(guildSet);!set_end(guildSet);)
+		{
+			count++;
+			guildAtWar=set_get(guildSet);
+			if ( count==buttonCode )
+			{
+				guild_setProperty(guild, GP_PEACE, _, guildAtWar);
+				break;
+			}
+		}
+		set_delete(guildSet);
+	}
+	guildmasterMenu(chr, guild);
 }
 
 
@@ -1124,6 +1266,7 @@ public acceptMemberCB(const gui, const chr, const buttonCode)
 		new acceptedMember=guild_memberAtIndex ( guild,  buttonCode);
 		guild_addMember ( guild, acceptedMember,RANK_GUILDMEMBER, true, "a loyal member");
 	}
+	guildmasterMenu(chr, guild);
 }
 
 public refuseCandidate(const chr, const guild)
@@ -1169,12 +1312,89 @@ public refuseMemberCB(const gui, const chr, const buttonCode)
 		new refusedMember=guild_getRecrAtIdx ( guild,  buttonCode);
 		guild_refuseRecruit ( guild, refusedMember );
 	}
+	guildmasterMenu(chr, guild);
 }
 
 
 public setMemberTitle(const chr, const guild)
 {
+	new gui = gui_create( 40, 40, true, true, true, "setMemberTitleCB" );
+	gui_setProperty( gui, MP_BUFFER, 0 , guild);
+	gui_addResizeGump( gui, 0, 0,  0x0A28, 300, 400 );
+	new guildMemberSet=set_create();
+	new membername[50];
+	new page;
+	new member;
+	set_addGuildMembers( guildMemberSet, guild );
+	for ( set_rewind(guildMemberSet);!set_end(guildMemberSet);)
+	{
+		gui_addPage(gui, ++page);
+		for ( new i=1;i < 10;++i)
+		{
+			member=set_get(guildMemberSet);
+			chr_getProperty(member, CP_STR_NAME, _, membername);
+			gui_addText( gui, 65, 35+i*30, _, membername);
+			gui_addButton( gui, 25, 35+i*30, 0x4B9, 0x4BA, guild_getMemberIdx (guild,  member)+10 );
+			if ( set_end(guildMemberSet))
+				break;
+		}
+		if ( page < set_size(guildMemberSet)/10+1)
+			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
+		if ( page > 1 )
+			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
+	}
+	set_delete(guildMemberSet);
+	// Cancel Button plazieren
+	gui_addButton( gui, 130, 360, 0xf3, 0xf1, 0, 1);
+	// OK Button
+	gui_addButton( gui, 200, 360, 0xf9, 0xf7, 1, 1);
+	gui_show( gui, chr );
+}
 
+public setMemberTitleCB(const gui, const chr, const buttonCode)
+{
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	if ( buttonCode > 0 )
+	{
+		new newTitleMember=guild_memberAtIndex ( guild,  buttonCode-10);
+		new currTitle[31];
+		chr_getProperty(newTitleMember, CP_STR_TITLE, _, currTitle);
+
+		new gui2 = gui_create( 40, 40, true, true, true, "changeMemberTitleCB" );
+		gui_setProperty( gui2, MP_BUFFER, 0 , guild);
+		gui_setProperty( gui2, MP_BUFFER, 1 , newTitleMember);
+		gui_addResizeGump( gui2, 0, 0,  0x0A28, 300, 150 );
+		gui_addInputField( gui2, 130, 40, 290, 30, 1, _, currTitle);
+		gui_addText( gui2, 40, 40, _, "New Title: " );
+		// Cancel Button plazieren
+		gui_addButton( gui2, 140, 110, 0xf3, 0xf1, 0, 1);
+		// OK Button
+		gui_addButton( gui2, 210, 110, 0xf9, 0xf7, 1, 1);
+		gui_show( gui2, chr );
+		return;
+	}
+	guildmasterMenu(chr, guild);
+}
+
+public changeMemberTitleCB(const gui, const chr, const buttonCode)
+{
+	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
+	new newTitleMember= gui_getProperty( gui, MP_BUFFER, 1 );
+	if ( buttonCode > 0 )
+	{
+		if ( ( chr_getProperty(newTitleMember, CP_GUILD) != guild) && (! chr_isGMorCns(chr)))
+		{
+			chr_message(chr, _, "That player does not belong to your guild !");
+			guildmasterMenu(chr, guild);
+			return;
+		}
+		new titleCandidate[500];
+		new title[30];
+		gui_getProperty( gui, MP_UNI_TEXT, 1, titleCandidate);
+		strncpy(title, titleCandidate, 30);
+		chr_setProperty(newTitleMember, CP_STR_TITLE, _, title);
+	}
+	guildmasterMenu(chr, guild);
 }
 
 public issueGuildShields(const chr, const guild)
