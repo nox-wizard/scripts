@@ -29,7 +29,7 @@ const SKILLADV_DONTRAISE = 0;
 const SKILLADV_RAISE = 1;
 
 /*!
-\brief constants for the type parameter in the @ONDISPEL event 
+\brief constants for the type parameter in the @ONDISPEL event
 */
 enum
 {
@@ -83,7 +83,7 @@ enum
 	/*!
 	<B>callback prototype:</B> <br>
 	<UL>
-	<LI> 
+	<LI>
 	</UL>
 	<B>called when:</B><br>
 	<B>bypass:</B><br>
@@ -91,7 +91,7 @@ enum
 	<B>notes:</B>
 	*/
 	EVENT_ITM_ONSTART = 0,
-        
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, victim, damage, attacker)<br>
 	<UL>
@@ -106,7 +106,7 @@ enum
 	<B>notes:</B> called after EVENT_CHR_ONWOUNDED, returning 0 is better than bypassing
 	*/
 	EVENT_ITM_ONDAMAGE,
-       
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr)<br>
 	<UL>
@@ -119,7 +119,7 @@ enum
 	<B>notes:</B>
 	*/
 	EVENT_ITM_ONEQUIP,
-        
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr)<br>
 	<UL>
@@ -129,10 +129,10 @@ enum
 	<B>called when:</B> an item is unequipped<br>
 	<B>bypass:</B> keeps the item equipped<br>
 	<B>return:</B> nothing<br>
-	<B>notes:</B> 
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONUNEQUIP,
-	
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr)<br>
 	<UL>
@@ -142,10 +142,10 @@ enum
 	<B>called when:</B> an item is clicked once<br>
 	<B>bypass:</B> avoids the standard code<br>
 	<B>return:</B> nothing<br>
-	<B>notes:</B> 
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONCLICK,
-        
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr)<br>
 	<UL>
@@ -158,7 +158,7 @@ enum
 	<B>notes:</B>
 	*/
 	EVENT_ITM_ONDBLCLICK,
-	
+
         /*!
 	<B>callback prototype:</B><br>
 	<UL>
@@ -167,34 +167,34 @@ enum
 	<B>called when:</B><br>
 	<B>bypass:</B> <br>
 	<B>return:</B> <br>
-	<B>notes:</B> 
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONPUTINBACKPACK,
-	
+
         /*!
 	<B>callback prototype:</B> <br>
 	<UL>
-	<LI> 
+	<LI>
 	</UL>
 	<B>called when:</B> <br>
 	<B>bypass:</B> <br>
 	<B>return:</B> <br>
-	<B>notes:</B> 
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONDROPINLAND,
-	
+
         /*!
 	<B>callback prototype:</B> <br>
 	<UL>
-	<LI> 
+	<LI>
 	</UL>
 	<B>called when:</B> <br>
 	<B>bypass:</B> <br>
 	<B>return:</B> <br>
-	<B>notes:</B> 
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONCHECKCANUSE,
-	
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr1, chr2)<br>
 	<UL>
@@ -208,7 +208,7 @@ enum
 	<B>notes:</B> when transfering a container this event is called for each item in the container
 	*/
 	EVENT_ITM_ONTRANSFER,
-        
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr, victim)<br>
 	<UL>
@@ -219,10 +219,10 @@ enum
 	<B>called when:</B> an item is stolen<br>
 	<B>bypass:</B> avoids the stealing<br>
 	<B>return:</B> nothing<br>
-	<B>notes:</B> 
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONSTOLEN,
-	
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr, poison)<br>
 	<UL>
@@ -236,7 +236,7 @@ enum
 	<B>notes:</B> returning POISON_NONE will delete the bottle
 	*/
 	EVENT_ITM_ONPOISONED,
-	
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr, decaytipe)<br>
 	<UL>
@@ -247,14 +247,14 @@ enum
 	<B>called when:</B> an item is decaying<br>
 	<B>bypass:</B> avoids decay, not allowed if decaytype is DECAYTYPE_GMREMOVE<br>
 	<B>return:</B> nothing<br>
-	<B>notes:</B> 
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONDECAY,
-	
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr)<br>
 	<UL>
-	<LI> itm: the item 
+	<LI> itm: the item
 	<LI> chr: the disarmer
 	</UL>
 	<B>called when:</B> someone tries to disarm a trap<br>
@@ -263,11 +263,11 @@ enum
 	<B>notes:</B> used to implement custom traps
 	*/
 	EVENT_ITM_ONREMOVETRAP,
-	
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr)<br>
 	<UL>
-	<LI> itm: the item 
+	<LI> itm: the item
 	<LI> chr: the thief
 	</UL>
 	<B>called when:</B> someone tries to lockpick an item<br>
@@ -276,7 +276,7 @@ enum
 	<B>notes:</B> called befor checking if the item is lockpickable
 	*/
 	EVENT_ITM_ONLOCKPICK,
-	
+
         /*!
 	<B>callback prototype:</B> public mycallback(itm, chr)<br>
 	<UL>
@@ -286,22 +286,10 @@ enum
 	<B>called when:</B> someone is walking over an item<br>
 	<B>bypass:</B> avoids the standard code<br>
 	<B>return:</B> nothing<br>
-	<B>notes:</B> 
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONWALKOVER,
-	
-        /*!
-	<B>callback prototype:</B> <br>
-	<UL>
-	<LI> 
-	</UL>
-	<B>called when:</B> <br>
-	<B>bypass:</B> <br>
-	<B>return:</B> <br>
-	<B>notes:</B> 
-	*/
-	EVENT_ITM_ONPUTITEM,
-        
+
         /*!
 	<B>callback prototype:</B> <br>
 	<UL>
@@ -310,10 +298,22 @@ enum
 	<B>called when:</B> <br>
 	<B>bypass:</B> <br>
 	<B>return:</B> <br>
-	<B>notes:</B> 
+	<B>notes:</B>
+	*/
+	EVENT_ITM_ONPUTITEM,
+
+        /*!
+	<B>callback prototype:</B> <br>
+	<UL>
+	<LI>
+	</UL>
+	<B>called when:</B> <br>
+	<B>bypass:</B> <br>
+	<B>return:</B> <br>
+	<B>notes:</B>
 	*/
 	EVENT_ITM_ONTAKEFROMCONTAINER,
-        
+
 	ALLITEMEVENTS
 };
 /* @} */
@@ -333,8 +333,8 @@ enum
 <B>return:</B> nothing<br>
 <B>notes:</B> not called for pplayer vendors, dead characters and invulnerable characters
 */
-const EVENT_CHR_ONDEATH		=  0; 
-const EVENT_CHR_ONBEFOREDEATH	=  0; 
+const EVENT_CHR_ONDEATH		=  0;
+const EVENT_CHR_ONBEFOREDEATH	=  0;
 
 /*!
 <B>callback prototype:</B> public mycallback(chr,damage,attacker)<br>
@@ -348,7 +348,7 @@ const EVENT_CHR_ONBEFOREDEATH	=  0;
 <B>return:</B> nothing<br>
 <B>notes:</B>
 */
-const EVENT_CHR_ONWOUNDED	=  1; 
+const EVENT_CHR_ONWOUNDED	=  1;
 
 /*!
 <B>callback prototype:</B> public mycallback(attacker, defender)<br>
@@ -625,7 +625,7 @@ const EVENT_CHR_ONCASTSPELL	= 21;
 <B>called when:</B> NOX checks for a custom skillcap<br>
 <B>bypass:</B> NO<br>
 <B>return:</B> the skill cap value (not multiplied by 10, so 700 for a 700 skillpoints cap you shuld return 700)<br>
-<B>notes:</B> 
+<B>notes:</B>
 */
 const EVENT_CHR_ONGETSKILLCAP	= 22;
 
@@ -650,7 +650,7 @@ const EVENT_CHR_ONGETSTATCAP	= 23;
 <LI> dir: the character's direction
 <LI> newx: the x coordinate of the blocking cause
 <LI> newy: the y coordinate of the blocking cause
-<LI> 
+<LI>
 </UL>
 <B>called when:</B> a character gest blocked while walking<br>
 <B>bypass:</B> NO<br>
@@ -831,8 +831,56 @@ synonim of EVENT_CHR_ONDIED
 const EVENT_CHR_ONAFTERDEATH	= 37;
 
 /*!
+<B>callback prototype:</B> public mycallback(chr)<br>
+<UL>
+<LI> chr: the chat opener
+</UL>
+<B>called when:</B> player presses chat button<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONOPENCHAT		= 38;
+/*!
+<B>callback prototype:</B> public mycallback(status_requester, chr_status_requested)<br>
+<UL>
+<LI> status_requester: the char who requests the stat window
+<LI> chr_status_requested: the char whose the stat window was requested
+</UL>
+<B>called when:</B> player presses chat button<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+const EVENT_CHR_ONOPENSTATUS		= 39;
+/*!
+<B>callback prototype:</B> public mycallback(skill_requester)<br>
+<UL>
+<LI> skill_requester: the chat opener
+</UL>
+<B>called when:</B> player presses chat button<br>
+<B>bypass:</B> NO<br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+
+const EVENT_CHR_ONOPENSKILLS		= 40;
+/*!
+<B>callback prototype:</B> public mycallback(clicked, clicker)<br>
+<UL>
+<LI> clicked: the character who has been clicked over
+<LI> clicker: the character who clicked
+</UL>
+<B>called when:</B> a charcater is clicked over<br>
+<B>bypass:</B><br>
+<B>return:</B> nothing<br>
+<B>notes:</B>
+*/
+
+const EVENT_CHR_ONDBLCLICK		=41;
+/*!
 number of events
 */
-const EVENT_CHR_MAX		= 38;
+const EVENT_CHR_MAX		= 42;
 
 /* @} */
