@@ -31,7 +31,7 @@
 #include "small-scripts/override/startServer.sma"
 #include "small-scripts/override/charLogin.sma"
 #include "small-scripts/override/charLogout.sma"
-#include "small-scripts/override/onSkillAdvance.sma"
+//#include "small-scripts/override/onSkillAdvance.sma"
 //
 // Include the Shard's script
 //
