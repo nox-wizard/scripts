@@ -20,8 +20,8 @@ public stats_char( const socket, const chr, const page )
 	gui_addGump( menu, 0, 0, 0x08AC, 0 );
 	gui_setProperty( menu, MP_BUFFER, 0, PROP_CHARACTER );
 	gui_setProperty( menu, MP_BUFFER, 1, chr );
-	gui_setProperty( menu, MP_BUFFER, 2, page );
-	gui_setProperty( menu, MP_BUFFER, 3, 1 );
+	gui_setProperty( menu, MP_BUFFER, 3, page );
+	gui_setProperty( menu, MP_BUFFER, 5, 1 );
 	
 	gui_addButton( menu, 300, 185, 0x084A, 0x084B, 1 );
 
@@ -31,73 +31,109 @@ public stats_char( const socket, const chr, const page )
 	switch( page) {
 	
 	case 1: {
-	
-	gui_addText( menu, 58, 10+(20*i), _, "Account : " );
-	gui_addText( menu, 228, 10+(20*i++), _, "%d", chr_getProperty( chr, CP_ACCOUNT ) );
-
-	gui_addText( menu, 58, 10+(20*i), _, "Name : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
-
-	gui_addText( menu, 58, 10+(20*i), _, "Title : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_TITLE, _, colorEdit );
-
-	gui_addText( menu, 58, 10+(20*i), _, "Dexterity : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_DEXTERITY, CP2_REAL, colorEdit );
-
-	gui_addText( menu, 58, 10+(20*i), _, "Strength : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STRENGHT, CP2_REAL, colorEdit );
-
-	gui_addText( menu, 58, 10+(20*i), _, "Intelligence : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_INTELLIGENCE, CP2_REAL, colorEdit );
-
-	gui_addText( menu, 58, 10+(20*i), _, "Location : " );
-	gui_addPropField( menu, 228, 10+(20*i), 35, 30, CP_POSITION, CP2_X, colorEdit );
-	gui_addPropField( menu, 258, 10+(20*i), 35, 30, CP_POSITION, CP2_Y, colorEdit );
-	gui_addPropField( menu, 298, 10+(20*i++), 35, 30, CP_POSITION, CP2_Z, colorEdit );
-
-	gui_addText( menu, 58, 10+(20*i), _, "Fame : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_FAME, _, colorEdit );
-
-	gui_addText( menu, 58, 10+(20*i), _, "Karma : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_KARMA, _, colorEdit );
-	
-	gui_addButton( menu, 321, 8, 0x089E, GUMP_INVALID, 10+2 );
+			gui_addButton( menu, 321, 8, 0x089E, GUMP_INVALID, 10+2 );
+			gui_addText( menu, 58, 10+(20*i), _, "Account : " );
+			gui_addText( menu, 228, 10+(20*i++), _, "%d", chr_getProperty( chr, CP_ACCOUNT ) );
+		
+			gui_addText( menu, 58, 10+(20*i), _, "Name : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
+		
+			gui_addText( menu, 58, 10+(20*i), _, "Title : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_TITLE, _, colorEdit );
+		
+			gui_addText( menu, 58, 10+(20*i), _, "Dexterity : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_DEXTERITY, CP2_REAL, colorEdit );
+		
+			gui_addText( menu, 58, 10+(20*i), _, "Strength : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STRENGHT, CP2_REAL, colorEdit );
+		
+			gui_addText( menu, 58, 10+(20*i), _, "Intelligence : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_INTELLIGENCE, CP2_REAL, colorEdit );
+			
+			gui_addText( menu, 58, 10+(20*i), _, "Weight : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_WEIGHT, _, colorEdit );
+			
+			gui_addText( menu, 58, 10+(20*i), _, "Body : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_ID, _, colorEdit );
+		
+			gui_addText( menu, 58, 10+(20*i), _, "Skin : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_SKIN , _, colorEdit );
 
 	}
 
 	case 2: {
 
-	gui_addButton( menu, 50, 8, 0x089D, GUMP_INVALID, 10+1 );
+			gui_addButton( menu, 50, 8, 0x089D, GUMP_INVALID, 10+1 );
+			gui_addButton( menu, 321, 8, 0x089E, GUMP_INVALID, 10+3 );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Npc Ai : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_NPCAI , _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "NPC Defence power : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_DEF  , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "NPC Attack power : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_ATT  , _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "High Damage : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_HIDAMAGE   , _, colorEdit );
 
-	gui_addText( menu, 58, 20+(20*i), _, "Direction : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_DIR, _, colorEdit );
-
-	gui_addText( menu, 58, 20+(20*i), _, "Weight : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_WEIGHT, _, colorEdit );
-
-	gui_addText( menu, 58, 20+(20*i), _, "Body : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_ID, _, colorEdit );
-
-	gui_addText( menu, 58, 20+(20*i), _, "Criminal : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_CRIMINALFLAG , _, colorEdit );
-
-	gui_addText( menu, 58, 20+(20*i), _, "Guild Title : " );
-	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_GUILDNUMBER , _, colorEdit );
-
-//	gui_addText( menu, 58, 10+(20*i), _, "Invulnerable : " );
-//	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
-
-//stat gain today se si puo' farlo andare sarebbe ottimo 
-//	gui_addText( menu, 58, 10+(20*i), _, "Name : " );
-//	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
-
-//skills
-//	gui_addText( menu, 58, 10+(20*i), _, "Name : " );
-//	gui_addPropField( menu, 228, 10+(20*i++), 125, 30, CP_STR_NAME, _, colorEdit );
+			gui_addText( menu, 58, 20+(20*i), _, "Low Damage : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_HIDDEN, _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Criminal : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_CRIMINALFLAG , _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Time to be Murder : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_MURDERRATE     , _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Deaths : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_DEATHS , _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Kills : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_KILLS , _, colorEdit );
 	
 
 	}
 	
+	case 3: {
+
+			gui_addButton( menu, 50, 8, 0x089D, GUMP_INVALID, 10+2 );
+			
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Fame : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_FAME, _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Karma : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_KARMA, _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Hunger : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_HUNGER  , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Hunger Time : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_HUNGERTIME , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Poisoned : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_POISONED  , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Poison Attack for NPC: " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_POISON  , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Poison Time : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_POISONWEAROFFTIME , _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Direction : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, CP_DIR, _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Location : " );
+			gui_addPropField( menu, 228, 20+(20*i), 35, 30, CP_POSITION, CP2_X, colorEdit );
+			gui_addPropField( menu, 278, 20+(20*i), 35, 30, CP_POSITION, CP2_Y, colorEdit );
+			gui_addPropField( menu, 318, 20+(20*i++), 35, 30, CP_POSITION, CP2_Z, colorEdit );
+	
+
+	}
+	
+
 	}
 	
 	gui_show( menu, getCharFromSocket(socket) );
@@ -144,8 +180,8 @@ public stats_item( const socket, const item, const page )
 	gui_addGump( menu, 0, 0, 0x08AC, 0 );
 	gui_setProperty( menu, MP_BUFFER, 0, PROP_ITEM );
 	gui_setProperty( menu, MP_BUFFER, 1, item );
-	gui_setProperty( menu, MP_BUFFER, 3, page );
-	gui_setProperty( menu, MP_BUFFER, 3, 1 );
+	gui_setProperty( menu, MP_BUFFER, 4, page );
+	gui_setProperty( menu, MP_BUFFER, 5, 1 );
 	
 	gui_addButton( menu, 300, 185, 0x084A, 0x084B, 1 );
 
@@ -223,8 +259,10 @@ public stats_item( const socket, const item, const page )
 		
 		case 3: {
 	
+	
 			gui_addButton( menu, 50, 8, 0x089D, GUMP_INVALID, 10+2 );
-		
+			gui_addButton( menu, 321, 8, 0x089E, GUMP_INVALID, 10+4 );
+			
 			gui_addText( menu, 58, 20+(20*i), _, "Dyeable : " );
 			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_DYE , _, colorEdit );
 		
@@ -249,7 +287,41 @@ public stats_item( const socket, const item, const page )
 			gui_addText( menu, 58, 20+(20*i), _, "Value : " );
 			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_VALUE, _, colorEdit );
 			
+			gui_addText( menu, 58, 20+(20*i), _, "Weight : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_WEIGHT, _, colorEdit );
 		}
+		
+		case 4: {
+	
+	
+			gui_addButton( menu, 50, 8, 0x089D, GUMP_INVALID, 10+3 );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Unloot : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_PRIV , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Visible : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_VISIBLE , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Attack Power : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_ATT , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Visible : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_VISIBLE   , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Disabled : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_DISABLED   , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Creator : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_STR_CREATOR  , _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Description : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_STR_DESCRIPTION, _, colorEdit );
+		
+			gui_addText( menu, 58, 20+(20*i), _, "Murder (if a Corpse) : " );
+			gui_addPropField( menu, 228, 10+(20*i++), 125, 30, IP_STR_MURDERER , _, colorEdit );
+			
+		}
+		
 	
 	}
 	
