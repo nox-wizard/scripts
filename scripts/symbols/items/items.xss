@@ -53,6 +53,52 @@
 #define $item_sandstone_fountain18 2737
 
 //
+// Spider Stuff
+//
+#define $item_spiderweb1A_1 3001
+#define $item_spiderweb1A_2 3002
+#define $item_spiderweb1B_1 3003
+#define $item_spiderweb1B_2 3004
+#define $item_spiderweb1C_1 3005
+#define $item_spiderweb1C_2 3006
+#define $item_spiderweb1D_1 3007
+#define $item_spiderweb1D_2 3008
+#define $item_spiderweb1E_1 3009
+#define $item_spiderweb1E_2 3010
+#define $item_spiderweb2A_1 3011
+#define $item_spiderweb2A_2 3012
+#define $item_spiderweb2B_1 3013
+#define $item_spiderweb2B_2 3014
+#define $item_spiderweb2C_1 3015
+#define $item_spiderweb2C_2 3016
+#define $item_spiderweb2D_1 3017
+#define $item_spiderweb2D_2 3018
+#define $item_spiderweb3A_1 3019
+#define $item_spiderweb3A_2 3020
+#define $item_spiderweb3B_1 3021
+#define $item_spiderweb3B_2 3022
+#define $item_spiderweb3C_1 3023
+#define $item_spiderweb3C_2 3024
+#define $item_spiderweb3D_1 3025
+#define $item_spiderweb3D_2 3026
+#define $item_small_spiderweb4_1 3027
+#define $item_small_spiderweb4_2 3028
+#define $item_small_spiderweb5_1 3029
+#define $item_small_spiderweb5_2 3030
+#define $item_small_spiderweb6_1 3031
+#define $item_small_spiderweb6_2 3032
+#define $item_small_spiderweb7_1 3033
+#define $item_small_spiderweb7_2 3034
+#define $item_small_spiderweb8_1 3035
+#define $item_small_spiderweb8_2 3036
+#define $item_spideregg_case1 3037
+#define $item_spideregg_case2 3038
+#define $item_cocoon1 3039
+#define $item_cocoon2 3040
+#define $item_cocoon3 3041
+#define $item_cocoon_open 3042
+
+//
 // GM ROBES
 //
 

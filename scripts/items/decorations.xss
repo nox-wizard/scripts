@@ -797,6 +797,256 @@ SECTION ITEM $item_sandstone_fountain18
 }
 
 //////////////////////////////////////
+///////////  Spiderweb  //////////////
+//////////////////////////////////////
+
+SECTION ITEM $item_spiderweb1A_1
+{
+	ID 10b8
+	AMXINT $localvar_flipitem $item_spiderweb1A_2 
+}
+
+SECTION ITEM $item_spiderweb1A_2
+{
+	ID 10bd
+	AMXINT $localvar_flipitem $item_spiderweb1A_1
+}
+
+SECTION ITEM $item_spiderweb1B_1
+{
+	ID 10c1
+	AMXINT $localvar_flipitem $item_spiderweb1B_2
+}
+
+SECTION ITEM $item_spiderweb1B_2
+{
+	ID 10bc
+	AMXINT $localvar_flipitem $item_spiderweb1B_1
+}
+
+SECTION ITEM $item_spiderweb1C_1
+{
+	ID 10c0
+	AMXINT $localvar_flipitem $item_spiderweb1C_2
+}
+
+SECTION ITEM $item_spiderweb1C_2
+{
+	ID 10bb
+	AMXINT $localvar_flipitem $item_spiderweb1C_1
+}
+
+SECTION ITEM $item_spiderweb1D_1
+{
+	ID 10ba
+	AMXINT $localvar_flipitem $item_spiderweb1D_2
+}
+
+SECTION ITEM $item_spiderweb1D_2
+{
+	ID 10bf
+	AMXINT $localvar_flipitem $item_spiderweb1D_1
+}
+
+SECTION ITEM $item_spiderweb1E_1
+{
+	ID 10b9
+	AMXINT $localvar_flipitem $item_spiderweb1E_2
+}
+
+SECTION ITEM $item_spiderweb1E_2
+{
+	ID 10be
+	AMXINT $localvar_flipitem $item_spiderweb1E_1
+}
+
+SECTION ITEM $item_spiderweb2A_1
+{
+	ID 10c2
+	AMXINT $localvar_flipitem $item_spiderweb2A_2
+}
+
+SECTION ITEM $item_spiderweb2A_2
+{
+	ID 10c6
+	AMXINT $localvar_flipitem $item_spiderweb2A_1
+}
+
+SECTION ITEM $item_spiderweb2B_1
+{
+	ID 10c3
+	AMXINT $localvar_flipitem $item_spiderweb2B_2
+}
+
+SECTION ITEM $item_spiderweb2B_2
+{
+	ID 10c7
+	AMXINT $localvar_flipitem $item_spiderweb2B_1
+}
+
+SECTION ITEM $item_spiderweb2C_1
+{
+	ID 10c4
+	AMXINT $localvar_flipitem $item_spiderweb2C_2
+}
+
+SECTION ITEM $item_spiderweb2C_2
+{
+	ID 10c8
+	AMXINT $localvar_flipitem $item_spiderweb2C_1
+}
+
+SECTION ITEM $item_spiderweb2D_1
+{
+	ID 10c5
+	AMXINT $localvar_flipitem $item_spiderweb2D_2
+}
+
+SECTION ITEM $item_spiderweb2D_2
+{
+	ID 10c9
+	AMXINT $localvar_flipitem $item_spiderweb2D_1
+}
+
+SECTION ITEM $item_spiderweb3A_1
+{
+	ID 10ca
+	AMXINT $localvar_flipitem $item_spiderweb3A_2
+}
+
+SECTION ITEM $item_spiderweb3A_2
+{
+	ID 10ce
+	AMXINT $localvar_flipitem $item_spiderweb3A_1
+}
+
+SECTION ITEM $item_spiderweb3B_1
+{
+	ID 10cb
+	AMXINT $localvar_flipitem $item_spiderweb3B_2
+}
+
+SECTION ITEM $item_spiderweb3B_2
+{
+	ID 10cf
+	AMXINT $localvar_flipitem $item_spiderweb3B_1
+}
+
+SECTION ITEM $item_spiderweb3C_1
+{
+	ID 10cc
+	AMXINT $localvar_flipitem $item_spiderweb3C_2
+}
+
+SECTION ITEM $item_spiderweb3C_2
+{
+	ID 10d0
+	AMXINT $localvar_flipitem $item_spiderweb3C_1
+}
+
+SECTION ITEM $item_spiderweb3D_1
+{
+	ID 10cd
+	AMXINT $localvar_flipitem $item_spiderweb3D_2
+}
+
+SECTION ITEM $item_spiderweb3D_2
+{
+	ID 10d1
+	AMXINT $localvar_flipitem $item_spiderweb3D_1
+}
+
+SECTION ITEM $item_small_spiderweb4_1
+{
+	ID 10d2
+	AMXINT $localvar_flipitem $item_small_spiderweb4_2
+}
+
+SECTION ITEM $item_small_spiderweb4_2
+{
+	ID 10d3
+	AMXINT $localvar_flipitem $item_small_spiderweb4_1
+}
+
+SECTION ITEM $item_small_spiderweb5_1
+{
+	ID 10d4
+	AMXINT $localvar_flipitem $item_small_spiderweb5_2
+}
+
+SECTION ITEM $item_small_spiderweb5_2
+{
+	ID 10d5
+	AMXINT $localvar_flipitem $item_small_spiderweb5_1
+}
+
+SECTION ITEM $item_small_spiderweb6_1
+{
+	ID 10d6
+	AMXINT $localvar_flipitem $item_small_spiderweb6_2
+}
+
+SECTION ITEM $item_small_spiderweb6_2
+{
+	ID 10d7
+	AMXINT $localvar_flipitem $item_small_spiderweb6_1
+}
+
+SECTION ITEM $item_small_spiderweb7_1
+{
+	ID 0ee3
+	AMXINT $localvar_flipitem $item_small_spiderweb7_2
+}
+
+SECTION ITEM $item_small_spiderweb7_2
+{
+	ID 0ee4
+	AMXINT $localvar_flipitem $item_small_spiderweb7_1
+}
+
+SECTION ITEM $item_small_spiderweb8_1
+{
+	ID 0ee5
+	AMXINT $localvar_flipitem $item_small_spiderweb8_2
+}
+
+SECTION ITEM $item_small_spiderweb8_2
+{
+	ID 0ee6
+	AMXINT $localvar_flipitem $item_small_spiderweb8_1
+}
+
+SECTION ITEM $item_spideregg_case1
+{
+	ID 10d8
+}
+
+SECTION ITEM $item_spideregg_case2
+{
+	ID 10d9
+}
+
+SECTION ITEM $item_cocoon1
+{
+	ID 10da
+}
+
+SECTION ITEM $item_cocoon2
+{
+	ID 10db
+}
+
+SECTION ITEM $item_cocoon3
+{
+	ID 10dc
+}
+
+SECTION ITEM $item_cocoon_open
+{
+	ID 10dd
+}
+
+//////////////////////////////////////
 ///////////Special Items//////////////
 //////////////////////////////////////
 
