@@ -27,9 +27,7 @@ checks the character's serial to be between FIRST_CHAR_SERIAL and FIRST_ITEM_SER
 \note INVALID return false
 \return true if is a char serial, false else
 */
-stock isChar( const serial ) {
-	return ( ( serial>=FIRST_CHAR_SERIAL ) && ( serial<FIRST_ITEM_SERIAL ) );
-}
+native isChar( const serial );
 
 //=================  HIDING  ======================
 /*!
@@ -2062,17 +2060,17 @@ TODO: is really needed? why don't use chr_speech?
 */
 native chr_showMessage(const chrWhoSeesMsg, const chrWhoHasMsg, const msg[], const color = 0x0481)
 
-/* 
-\brief generic npctalk/npcemote handler 
-\author Sparhawk modified by Frodo 
-\since 0.60 
-\param 1 speaker 
-\param 2 listener 
-\param 3 mode ( SPEECH_RUNIC or SPEECH_EMOTE or SPEECH_TALK for plain text ) 
-\param 4 color 
-\param 5 antispam flag 
-\param 6 text 
-\return 0 or INVALID if not valid characters 
+/*
+\brief generic npctalk/npcemote handler
+\author Sparhawk modified by Frodo
+\since 0.60
+\param 1 speaker
+\param 2 listener
+\param 3 mode ( SPEECH_RUNIC or SPEECH_EMOTE or SPEECH_TALK for plain text )
+\param 4 color
+\param 5 antispam flag
+\param 6 text
+\return 0 or INVALID if not valid characters
 */
 native chr_speech(const speaker, const listener, const mode = SPEECH_NORMAL, const color = 1310, const antispam = 1, const speech[]);
 
@@ -2363,7 +2361,7 @@ stock chr_setAmxFlags(const chr, const idx, const value)
 
 /** @} */ // script_API_character_vars Local Vars
 //============================   Basic Gumps  =================================
-/** \defgroup script_API_character_basicgumps 
+/** \defgroup script_API_character_basicgumps
  *  @{
  */
 /*!
@@ -2376,4 +2374,4 @@ stock chr_setAmxFlags(const chr, const idx, const value)
 */
 native chr_showPaperdoll(const chr, const target);
 
-/** @} */ // end of script_API_character_basicgumps 
+/** @} */ // end of script_API_character_basicgumps

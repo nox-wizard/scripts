@@ -24,9 +24,7 @@
 \return true if is an item serial, false else
 \note INVALID return false
 */
-public isItem( const serial ) {
-	return ( ( serial>=FIRST_ITEM_SERIAL ) && ( serial!=INVALID ) );
-}
+native isItem( const serial );
 
 /*!
 \author Xanathar
@@ -307,7 +305,7 @@ native itm_checkDecay(const itm);
 \author Fax
 \fn itm_setDecay(const itm, const decayTime)
 \param itm: the item
-\param decayTime: time the itemwill decay, INVALID means decay off 
+\param decayTime: time the itemwill decay, INVALID means decay off
 \since 0.82
 \brief sets the item's decay time
 \return nothing
@@ -315,10 +313,10 @@ native itm_checkDecay(const itm);
 stock itm_setDecay(const itm, const decayTime)
 {
 	if(!isItem(itm)) return;
-		 
-	if(decayTime == INVALID) 
+
+	if(decayTime == INVALID)
 		itm_setProperty(itm,IP_PRIV,_,itm_getProperty(itm,IP_PRIV) & ~0x1);
-	else 
+	else
 	{
 		itm_setProperty(itm,IP_PRIV,_,itm_getProperty(itm,IP_PRIV) | 0x1);
 		itm_setProperty(itm,IP_DECAYTIME,_,decayTime);
@@ -356,7 +354,7 @@ native itm_setEventHandler(const itm, const event, const evtype, const format[],
 \author Xanathar
 \fn itm_delEventHandler(const item, const event)
 \param itm:	item serial
-\param event:	item event identifier 
+\param event:	item event identifier
 \ref EVENT_ITM_ON
 \brief Unbinds link between small function an item event
 */
