@@ -1,0 +1,404 @@
+#if defined _itemid_included
+  #endinput
+#endif
+#define _itemid_included
+
+#include "../include/nxw_lib"
+
+enum eWeapontype
+{
+	WEAPON_INVALID=INVALID,
+	SWORD1H=0,
+	SWORD2H,
+	AXE1H,
+	AXE2H,
+	MACE1H,
+	MACE2H,
+	FENCING1H,
+	FENCING2H,
+	STAVE1H,
+	STAVE2H,
+	BOW,
+	CROSSBOW,
+	HEAVYCROSSBOW
+};
+
+public isWeaponLike3( const id, type1, type2, type3 ) 
+{
+	return false;
+}
+
+stock isWeaponLike( const id, type1, type2 = WEAPON_INVALID, type3 = WEAPON_INVALID ) isWeaponLike3( id, type1, type2, type3 );
+
+
+/*!
+\author Endymion
+\fn iSword( const id )
+\brief check if is a sword
+*/
+stock isSword( const id )
+{
+	return isWeaponLike( id, SWORD1H );
+}
+
+/*!
+\author Endymion
+\fn isAxe( const id )
+\brief check if is an axe
+*/
+stock isAxe( const id )
+{
+	return isWeaponLike( id, AXE1H);
+}
+
+/*!
+\author Endymion
+\fn isWeaponLike( const id )
+\brief check if is a sword like
+*/
+stock isSwordType( const id )
+{
+	return isWeaponLike( id, SWORD1H, AXE1H );
+}
+
+/*!
+\author Endymion
+\fn isMace1H( const id )
+\brief check if is a mace 1 handed
+*/
+stock isMace1H( const id )
+{
+	return isWeaponLike( id, MACE1H);
+}
+
+/*!
+\author Endymion
+\fn isMace2H( const id )
+\brief check if is a mace 1 handed
+*/
+stock isMace2H( const id )
+{
+	return isWeaponLike( id, MACE2H);
+
+}
+
+/*!
+\author Endymion
+\fn isMaceType( const id )
+\brief check if is a mace like
+*/
+stock isMaceType( const id )
+{
+	return isWeaponLike( id, MACE1H, MACE2H );
+}
+
+/*!
+\author Endymion
+\fn isFencing1H( const id )
+\brief check if is a fencing 2 handed
+*/
+stock isFencing1H( const id )
+{
+	return isWeaponLike( id, FENCING1H);
+
+}
+
+/*!
+\author Endymion
+\fn isFencing2H( const id )
+\brief check if is a fencing 1 handed
+*/
+stock isFencing2H( const id )
+{
+	return isWeaponLike( id, FENCING2H);
+}
+
+/*!
+\author Endymion
+\fn isFencingType( const id )
+\brief check if is a fencing like
+*/
+stock isFencingType( const id )
+{
+	return isWeaponLike( id, FENCING1H, FENCING2H );
+}
+
+/*!
+\author Endymion
+\fn isBow( const id )
+\brief check if is a bow
+*/
+stock isBow( const id )
+{
+	return isWeaponLike( id, BOW );
+}
+/*!
+\author Endymion
+\fn isCrossbow( const id )
+\brief check if is a crossbow
+*/
+stock isCrossbow( const id )	
+{
+	return isWeaponLike( id, CROSSBOW );
+
+}
+
+/*!
+\author Endymion
+\fn isHeavyCrossbow( const id )
+\brief check if is an heavy crossbow
+*/
+stock isHeavyCrossbow( const id )
+{
+	return isWeaponLike( id, HEAVYCROSSBOW );
+
+}
+
+/*!
+\author Endymion
+\fn isBowType( const id )
+\brief check if is an bow like
+*/
+stock isBowType( const id )
+{
+	return isWeaponLike( id, BOW, CROSSBOW, HEAVYCROSSBOW );
+}
+
+/*!
+\author Endymion
+\fn isStave( const id )
+\brief check if is an stave like
+*/
+stock isStave( const id )
+{
+	return isWeaponLike( id, STAVE1H, STAVE2H );
+
+}
+
+/*!
+\author Endymion
+\fn isSpecialMace( const id )
+\brief check if is an special mace like
+*/
+stock isSpecialMace( const id )
+{
+	return isWeaponLike( id, STAVE1H, STAVE2H, MACE2H );
+}
+
+/*!
+\author Endymion
+\fn isFieldSpellItem( const id )
+\brief check if is an field spell item
+*/
+public isFieldSpellItem( const id )
+{
+	if( (id==0x3996) || (id==0x398C) ) return 1; // fire field 
+	else if( (id==0x3915) || (id==0x3920) ) return 2; // poison field 
+	else if( (id==0x3979) || (id==0x3967) ) return 3; // paralyse field
+	else if( (id==0x3956) || (id==0x3946) ) return 4; // energy field;
+	return 0;
+}
+
+/*!
+\author Endymion
+\fn isDagger( const id )
+\brief check if is a dagger
+*/
+public isDagger( const id )
+{
+    return ( id==0x0F51 || id==0x0F52 );
+}
+
+public isCorpse( const id ) 
+{
+	return (id==0x2006);
+}
+
+public isTree( const id )
+{
+	return (id==0x0CD0 || id==0x0CD3 || id==0x0CD6 ||
+		id==0x0CD8 || id==0x0CDA || id==0x0CDD ||
+		id==0x0CE0 || id==0x0CE3 || id==0x0CE6 ||
+		(id>=0x0CCA && id<=0x0CCD) ||
+		(id>=0x12B8 && id<=0x12BB) ||
+		id==0x0D42 || id==0x0D43 || id==0x0D58 ||
+		id==0x0D59 || id==0x0D70 || id==0x0D85 ||
+		id==0x0D94 || id==0x0D95 || id==0x0D98 ||
+		id==0x0Da4 || id==0x0Da8 || id==0x0D58);
+}
+
+public isSpellScroll( const id )
+{
+	return (id>0x1F2C && id<0x1F6D);
+}
+
+public isSpellScroll72( const id )
+{
+	return (id >= 0x1F2D && id <= 0x1F72);
+}
+
+public isInstrument( const id )
+{
+	return (id==0x0E9C || id==0x0E9D || id==0x0E9E || id==0x0EB1 || id==0x0EB2 || id==0x0EB3 || id==0x0EB4);
+}
+
+public isArrow( const id )
+{
+	return ((id==0x0F3F)||(id==0x0F42));
+}
+
+public isBolt( const id )
+{
+	return ((id==0x1BFB)||(id==0x1BFE));
+}
+
+
+public isChaosOrOrderShield( const id )
+{
+	return (id>=0x1BC3 && id<=0x1BC5);
+}
+
+public isShield( const id )
+{
+	return ((id>=0x1B72 && id<=0x1B7B) || isChaosOrOrderShield( id ));
+}
+
+public isLog( const id ) 
+{ 
+	return ( id>=0x1BDD && id<=0x1BE2 );
+}
+
+
+public isShaft( const id ) 
+{ 
+	return ( id>=0x1BD4 && id<=0x1BD6 );
+}
+
+
+public isBoard( const id )
+{
+	return ( id>=0x1BD7 && id<=0x1BDC );
+}
+
+public isFeather( const id ) 
+{ 
+	return ( id>=0x1BD1 && id<=0x1BD3 );
+}
+
+public isCutLeather( const id )
+{
+	return ( id==0x1067 || id==0x1068 || id==0x1081 || id==0x1082 );
+}
+
+public isHide( const id )
+{
+	return ( id==0x1078 || id==0x1079 );
+}
+
+
+public isForge( const id )
+{
+	return ( id==0x0FB1 || ( id>=0x197A && id<=0x19A9 ) );
+}
+
+public isAnvil( const id )
+{
+	return ( id==0x0FAF || id==0x0FB0 );
+}
+
+public isCookingPlace( const id )
+{
+	return ((id>=0x0DE3 && id<=0x0DE9)||
+			(id==0x0FAC || id==0x0FB1)||
+			(id>=0x197A && id<=0x19B6)||
+			(id>=0x0461 && id<=0x0480)||
+			(id>=0x0E31 && id<=0x0E33)||
+			(id==0x19BB || id==0x1F2B)||
+			(id>=0x092B && id<=0x0934)||
+			(id>=0x0937 && id<=0x0942)||
+			(id>=0x0945 && id<=0x0950)||
+			(id>=0x0953 && id<=0x095E)||
+			(id>=0x0961 && id<=0x096C) );
+}
+
+public isCutCloth( const id )
+{
+	return ( id>=0x1766 && id<=0x1768 );
+}
+
+public isCloth( const id )
+{
+	return ((id>=0x175D && id<=0x1765)|| isCutCloth( id ) );
+}
+
+public isBoltOfCloth( const id )
+{
+	return ( id>=0x0F95 && id<=0x0F9C );
+}
+
+public isChest( const id )
+{
+	return (( id>=0x09A8 && id<=0x09AB) ||
+		    ( id>=0x0E40 && id<=0x0E43) ||
+		    ( id==0x0E7C) || (id==0x0E7D) ||
+		    ( id==0x0E80));
+}
+
+public isFishWater( const id ) // -Fraz- needed water tiles for fishing
+{
+	return ((id==0x1798) || (id==0x179B) ||
+			(id==0x179C) || (id==0x1799) ||
+			(id==0x1797) || (id==0x179A) ||
+			(id==0x346E) || (id==0x346F) ||
+			(id>=0x3470) && (id<=0x3485) ||
+			(id>=0x3494) && (id<=0x349F) ||
+			(id>=0x34A0) && (id<=0x34AB) ||
+			(id>=0x34B8) && (id<=0x34BB) ||
+			(id>=0x34BD) && (id<=0x34BF) ||
+			(id>=0x34C0) || (id<=0x34C2) ||
+			(id>=0x34C3) && (id<=0x34C5) ||
+			(id>=0x34C7) && (id<=0x34CA) ||
+			(id>=0x34D1) && (id<=0x34D5));
+}
+
+public isFish( const id )
+{
+	return ( id>=0x09CC && id<=0x09CF );
+}
+
+
+public isSign( const id ) 
+{ 
+	return ((id==0x0B95 || id==0x0B96)|| (id>=0x0BA3 && id<=0x0C0E)|| (id==0x0C43 || id==0x0C44)); 
+} 
+
+public isWoodenSign( const id ) 
+{ 
+	return ((id==0x0BCF || id==0x0BD0)); 
+} 
+
+public isBrassSign( const id ) 
+{ 
+	return ((id==0x0BD1 || id==0x0BD2)); 
+}
+
+public isGuildSign( const id ) 
+{ 
+	return ((id >= 0x0BD3 && id <= 0x0C0A)); 
+} 
+
+public isTradeSign( const id ) 
+{ 
+	return ((id==0x0B95 || id==0x0B96) || 
+			(id >= 0x0BA3 && id <= 0x0BCE)); 
+} 
+
+public isBankSign( const id ) 
+{ 
+	return ((id >= 0x0C0B && id <= 0x0C0C)); 
+} 
+
+public isTheatreSign( const id ) 
+{ 
+	return ((id >= 0x0C0D && id <= 0x0C0E)); 
+}
