@@ -28,25 +28,30 @@ public __nxw_sk_anatomy( const chr )
 */
 public __anatomyTarget( const t, const cc, const target, const x, const y, const z, const model, const param1 )
 {
-	if (target < 0) {
+	if (target < 0) 
+	{
 		chr_message( cc, _, "Target invalid");
 		return;
 	}
 
-	if (cc == target) {
+	if (cc == target) 
+	{
 		chr_message( cc, _, "You cannot analize yourself!");
 		return;
 	}
 	
 	
-	if (chr_distance(cc, target) >= 10) {
+	if (chr_distance(cc, target) >= 10) 
+	{
 		chr_message( cc, _, "You need to be closer to find out more about them");
 		return;
 	}
-	if (!chr_checkSkill(cc, SK_ANATOMY, 0, 1000)) {
-        chr_message( cc, _, "You are not certain..");
-        return;
-    }
+	
+	if (!chr_checkSkill(cc, SK_ANATOMY, 0, 1000)) 
+	{
+	        chr_message( cc, _, "You are not certain..");
+	        return;
+    	}
 
 	new str = chr_getStr(target);
 	new dex = chr_getDex(target);

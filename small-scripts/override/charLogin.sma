@@ -12,7 +12,15 @@ public __charLogin(const chr)
 {
 	if( chr_isNpc (chr)) return;
 	
-	createPrivlevelVar(chr); //creates the privlevel variable
+	//start scripted command system if needed
+	#if !_USE_SOURCE_CMDSYS_
+		startCommandSystem(chr); 
+	#endif
+	
+	//start extended skillsystem if required
+	#if ACTIVATE_EXTENDED_SKILLSYSTEM
+		startExtSkillsystem(chr);
+	#endif	
 		
 	globaltags(chr);
 	
@@ -21,39 +29,7 @@ public __charLogin(const chr)
 	hungerandthirst(chr);
 }
 
-public createPrivlevelVar(const chr)
-{
-	printf("creating local var %d^n",CLV_PRIVLEVEL);
-	
-	if(!chr_isaLocalVar(chr,CLV_PRIVLEVEL))
-	{
-		//enter as a player
-		chr_addLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_PLAYER);
-		
-		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
-		{
-			log_error("Unable to create VAR_PRIVLEVEL");
-			return;
-		}
-		
-		//set PRIV_ADMIN to the admins		
-		if(chr_getProperty(chr, CP_ACCOUNT)== 0)
-		{
-			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_ADMIN);
-			
-			if(chr_getLocalVarErr() != VAR_ERROR_NONE)
-			{
-				log_error("Unable set admin privlevel");
-				return;
-			}
-			
-			chr_message(chr,_,"You have been set admin");
-			new name[20];
-			chr_getProperty(chr,CP_STR_NAME,0,name);
-			log_warning("%s is new admin",name);
-		}
-	}
-}
+
 
 
 const Delay_Maptile = 300;

@@ -6,7 +6,8 @@
 // || This files contains NoX-Wizard skills handling functions            ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-
+//extended skillsystem
+#include "small-scripts/skills/extendedSkillsystem.sma"
 //Anatomy
 #include "small-scripts/skills/anatomy.sma"
 //Evaluating Intelligence

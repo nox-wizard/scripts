@@ -283,50 +283,57 @@ End Customizable carpenter system
  ****************************************************************************/
 public __nxw_sk_lumber(const cc)
 {
-bypass();
-new logFound = pine;//log found if nothing else will be found by the miner.
-new logAmount = 1;
-new index = 0;
-new skill = chr_getSkill(cc, SK_LUMBERJACKING);
-new region = -1;
-if (ENABLE_logRegions == 1) {
-new x = chr_getProperty(cc, CP_POSITION, CP2_X);
-new y = chr_getProperty(cc, CP_POSITION, CP2_Y);
-for (index = 0; index < NUM_logRegions; index++) {
-if ((x >= logRegions[index][0] && x <= logRegions[index][2]) && (y >= logRegions[index][1] && y <= logRegions[index][3])) {
-region = index;
-}
-}
-}
-for (index = 0; index < NUM_LOGS; index++) {
-if (ENABLE_logRegions == 1 && region < 0) break;
-if (skill > logProperty[index][1] && random(100) < logProperty[index][2]) {
-if (ENABLE_logRegions == 1 && region > -1) {
-if (random(100) < regionLogChance[region][index])
-logFound = index;
-} else
-logFound = index;
-}
-}
-if (ENABLE_logRegions == 1 && region < 0) logFound = pine;
-        logAmount = random(100);
-if (logAmount > 8) {
-logAmount = 1;
-}
+	bypass();
+	new logFound = pine;//log found if nothing else will be found by the miner.
+	new logAmount = 1;
+	new index = 0;
+	new skill = chr_getSkill(cc, SK_LUMBERJACKING);
+	new region = -1;
 
-new str[50];//Adjust the size if you create new logs with long names!
-sprintf(str, "%s", logProperty[logFound][logname]);
-trim(str);   //remove triming spaces
-sprintf(str, "%s wood", str);
-new backpack = chr_getBackpack( cc, true );
-new log = itm_createByDef( "$item_logs", backpack );
-itm_setProperty( log, IP_AMOUNT, _, logAmount );
-itm_setProperty(log, IP_WEIGHT, _, logProperty[logFound][logweight]);
-itm_setProperty(log, IP_COLOR, _,logProperty[logFound][logcolor]);
-itm_setProperty(log, IP_STR_NAME, 0, str);
-itm_contPileItem( backpack, log );
-itm_refresh(log);
-chr_message( cc, _, "You lumber some %s and put it in your pack.", str);
+	if (ENABLE_logRegions == 1) 
+	{
+		new x = chr_getProperty(cc, CP_POSITION, CP2_X);
+		new y = chr_getProperty(cc, CP_POSITION, CP2_Y);
+		for (index = 0; index < NUM_logRegions; index++) 
+			if ((logRegions[index][0] <= x <= logRegions[index][2]) && (logRegions[index][1] <= y <= logRegions[index][3]))
+				region = index;
+	}
+	
+	
+	for (index = 0; index < NUM_LOGS; index++) 
+	{
+		if (ENABLE_logRegions == 1 && region < 0) break;
+		if (skill > logProperty[index][1] && random(100) < logProperty[index][2]) 
+		{
+			if (ENABLE_logRegions == 1 && region > -1) 
+				if (random(100) < regionLogChance[region][index])
+					logFound = index;
+			 
+		else logFound = index;
+		}
+
+	}
+	
+	if (ENABLE_logRegions == 1 && region < 0) logFound = pine;
+        	logAmount = random(100);
+
+	if (logAmount > 8) 
+		logAmount = 1;
+	
+
+	new str[50];//Adjust the size if you create new logs with long names!
+	sprintf(str, "%s", logProperty[logFound][logname]);
+	trim(str);   //remove triming spaces
+	sprintf(str, "%s wood", str);
+	new backpack = chr_getBackpack( cc, true );
+	new log = itm_createByDef( "$item_logs", backpack );
+	itm_setProperty( log, IP_AMOUNT, _, logAmount );
+	itm_setProperty(log, IP_WEIGHT, _, logProperty[logFound][logweight]);
+	itm_setProperty(log, IP_COLOR, _,logProperty[logFound][logcolor]);
+	itm_setProperty(log, IP_STR_NAME, 0, str);
+	itm_contPileItem( backpack, log );
+	itm_refresh(log);
+	chr_message( cc, _, "You lumber some %s and put it in your pack.", str);
 }
 
 /****************************************************************************

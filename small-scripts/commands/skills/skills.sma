@@ -12,16 +12,23 @@ public cmd_skills( const caller )
 }
 
 
-public target_skills( const caller, const target, const item )
+public target_skills( const target, const caller, const chr)
 {
-	if(!isChar(caller)) 
+	if(!isChar(chr)) 
+	{
+		chr_message(caller,_ , "Skills work only on character" );
 		return;
-		
-	if( isChar(target) ) {
-		skills_char( caller, target );
+	}	
+	
+	//if extended skillsystem is active print additional skill values
+	#if ACTIVATE_EXTENDED_SKILLSYSTEM
+	for(new sk = SK_COUNT; sk < SK_EXT_COUNT; sk++)
+	{
+		chr_message(caller,_,"%s %d (%d)",__skillinfo[sk - SK_COUNT][_skName],chr_getSkill(chr,sk),chr_getBaseSkill(chr,sk));
 	}
-	else chr_message(caller,_ , "Skills work only on character" );
-
+	#endif
+	
+	skills_char( caller, chr );
 }
 
 

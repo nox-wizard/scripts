@@ -14,6 +14,18 @@ static itm_fishing[10][] = {
 {629, 638, 627, 704}
 };
 
+public __nxw_sk_fishing(const item, const chr)
+{
+	bypass();
+	if(itm_getProperty(item, IP_LAYER) == 0)
+	{
+		chr_message(chr, _ , "You have to equip it!");
+		return;
+	}
+	chr_message( chr, _ , "Where do you want to fish?");
+	target_create( chr, _ , _, _, "__fishingTarget" );
+}
+
 public __fishingTarget( const t, const chr, const target, const x, const y, const z, const model, const param1 )
 {
 	if ((x < 0) || (target < 0))
@@ -30,23 +42,26 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 		chr_message(chr, _ , "This is too far!");
 		return;
 	}
-	new title = map_getTileID(x, y, z);
-	if(title < 0)
+	
+	new tile = map_getTileID(x, y, z);
+	if(tile < 0)
 	{
-		title = map_getFloorTileID(x, y);
-		if((title < 168) || (title > 171))
+		tile = map_getFloorTileID(x, y);
+		if((tile < 168) || (tile > 171))
 		{
 			chr_message(chr, _ , "You can't fish here!");
 			return;
 		}
 	}
-	else if((6066 < title) || (title < 6039))
+	else if((6066 < tile) || (tile < 6039))
 	{
 		chr_message(chr, _ , "You can't fish here!");
 		return
 	}
+	
 	chr_sound (chr, 39);
 	chr_action (chr, 11);
+	
 	if(!chr_checkSkill(chr,18,0,1000,1))
 	{
 		if(random(100) > 8)
@@ -59,6 +74,7 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 		chr_sound(npc, 40);
 		chr_moveTo(npc, x, y, z);
 	}
+	
 	new skill = chr_getSkill(chr, 18);
 	new typ = random(3);
 	new nmb = 0;
@@ -71,7 +87,9 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 		else if((skill >= 750) && (i > 3)) { nmb = (random(5)+1); }
 		else if(skill >= 550) { nmb = 1; }
 	}
+	
 	itm_createInBp(itm_fishing[nmb][typ], chr);
+	
 	switch(nmb)
 	{
 		case 0: chr_message(chr, _ , "You caught a fish!");
@@ -85,14 +103,3 @@ public __fishingTarget( const t, const chr, const target, const x, const y, cons
 	}
 }
 
-public __nxw_sk_fishing(const item, const chr)
-{
-	bypass();
-	if(itm_getProperty(item, IP_LAYER) == 0)
-	{
-		chr_message(chr, _ , "You have to equip it!");
-		return;
-	}
-	chr_message( chr, _ , "Where do you want to fish?");
-	target_create( chr, _ , _, _, "__fishingTarget" );
-}

@@ -1766,7 +1766,6 @@ native chr_setGuildTitle( const chr, const title[] );
 
 Use this function to check if a player succeedes in using a skill, if raise is set to true
 the skill is raised if the action takes place. 
-TODO: explain how it owrks (look in sources)
 \return  0 failed, 1 right or INVALID if not valid character or socket
 */
 native chr_checkSkill(const chr, const skill, const min=0, const max=1000, const raise=1);
@@ -1784,48 +1783,7 @@ native chr_checkSkill(const chr, const skill, const min=0, const max=1000, const
 */
 native chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1, const material2=INVALID );
 
-/*!
-\author ???
-\fn chr_getSkill(const chr, const skill)
-\param chr the character
-\param skill the skill to be read
-\brief gets a character's skill value
-TODO: description of skill values (base, normal)
-\return the skill value
-*/
-stock chr_getSkill(const chr, const skill)
-{
-	return chr_getProperty(chr, CP_SKILL, skill);
-}
 
-/*!
-\author ???
-\fn chr_getBaseSkill(const chr, const skill)
-\param chr the character
-\param skill the skill to be read
-\brief gets a character's base skill value
-TODO: description of skill values (base, normal)
-\return the base skill value
-*/
-stock chr_getBaseSkill(const chr, const skill)
-{
-	return chr_getProperty(chr, CP_BASESKILL, skill);
-}
-
-/*!
-\author ???
-\fn chr_setBaseSkill(const chr, const skill, const value)
-\param chr the character
-\param skill the skill to be set
-\param value the value the skill will be set to
-\brief sets a character's base skill value
-TODO: description of skill values (base, normal)
-\return 0 or INVALID if chr is not a valid character serial
-*/
-stock chr_setBaseSkill(const chr, const skill, const value)
-{
-	chr_setProperty(chr, CP_BASESKILL, skill, value);
-}
 //================================  STATS  ==================================
 /*!
 \author ???

@@ -221,5 +221,38 @@ public deleteCommand(name[])
 }
 //#endif
 
-
+public startCommandSystem(const chr)
+{
+	printf("creating privlevel for character %d ... ",chr);
+	if(!chr_isaLocalVar(chr,CLV_PRIVLEVEL))
+	{
+		//enter as a player
+		chr_addLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_PLAYER);
+		
+		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
+		{
+			log_error("Unable to create VAR_PRIVLEVEL");
+			return;
+		}
+		
+		//set PRIV_ADMIN to the admins		
+		if(chr_getProperty(chr, CP_ACCOUNT)== 0)
+		{
+			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_ADMIN);
+			
+			if(chr_getLocalVarErr() != VAR_ERROR_NONE)
+			{
+				log_error("Unable set admin privlevel");
+				return;
+			}
+			
+			chr_message(chr,_,"You have been set admin");
+			new name[20];
+			chr_getProperty(chr,CP_STR_NAME,0,name);
+			log_warning("%s is new admin",name);
+		}
+		
+		printf("[DONE]^n");
+	}
+}
 /*! @} */ //end of scripts_commands_system
