@@ -81,6 +81,25 @@ native guild_getMemberIdx (const guild, const chr);
 native guild_memberAtIndex (const guild, const index);
 
 /*!
+\brief Get the index number of a recruit
+\author Wintermute
+\since 0.82
+\param guild the guild
+\param chr the member
+\fn guild_getRecruitIdx (const guild, const chr)
+*/
+native guild_getRecruitIdx (const guild, const chr);
+/*!
+\brief Get the recruit at index
+\author Wintermute
+\since 0.82
+\param guild the guild
+\param index
+\fn guild_getRecrAtIdx (const guild, const index)
+*/
+native guild_getRecrAtIdx (const guild, const index);
+
+/*!
 \brief Add a recuit to a guild
 \author Endymion
 \since 0.82

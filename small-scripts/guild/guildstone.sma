@@ -1074,7 +1074,7 @@ public refuseCandidate(const chr, const guild)
 			member=set_get(guildRecruitSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 25, 55+i*30, _, membername);
-//			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getCandIdx (guild,  member) );
+			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getRecruitIdx (guild,  member) );
 		}
 		if ( page < set_size(guildRecruitSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
@@ -1090,7 +1090,7 @@ public refuseMemberCB(const chr, const gui, const buttonCode)
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	if ( buttonCode > 0 )
 	{
-		new refusedMember=guild_memberAtIndex ( guild,  buttonCode);
+		new refusedMember=guild_getRecrAtIdx ( guild,  buttonCode);
 		guild_refuseRecruit ( guild, refusedMember );
 	}
 }
