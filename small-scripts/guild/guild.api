@@ -79,15 +79,6 @@ native guild_addRecruit( const guild, const chr );
 native guild_refuseRecruit( const guild, const chr );
 
 /*!
-\author Sparhawk
-\fn guild_getMaster(const guild)
-\param guild the guild from which you want to get the master
-\return serial of guildmaster or invalid
-\brief Return the guildmaster for a given guild
-*/
-native guild_getMaster( const guild );
-
-/*!
 \brief check if guild exists
 \author Sparhawk
 \since 0.82
@@ -96,17 +87,5 @@ native guild_getMaster( const guild );
 \fn guild_exists( const guild )
 */
 native guild_exists( const guild );
-
-/*!
-\brief Set the guild the char is a member of
-\author Sparhawk
-\since 0.82.rc3
-\param 1 character serial
-\param 2 guild serial
-\note	Not implemented yet...
-\return 1
-\fn chr_setGuild()
-*/
-native chr_setGuild();
 
 /** @} */ // end of script_API_guild

@@ -70,7 +70,7 @@ public gui_guildStoneResp( const gump, const guild, const button, const pc )
 		//
 		// view/edit guild info
 		//
-		if( pc == guild_getMaster( guild ) )
+		if( pc == guild_getProperty( guild, GP_GUILDMASTER ) )
 			gui_guildProps( guild, pc, 1 );
 		else
 			gui_guildProps( guild, pc, 0 );
