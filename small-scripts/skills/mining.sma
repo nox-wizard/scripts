@@ -39,16 +39,16 @@ oreuseskill,
 orescriptname: 9
 }
 static oreProperty[NUM_ORES][oreprop] = {
-{700, 000, 100, 0x0838, "iron   ", 000, "iron    "},
-{700, 650, 60, 0x096c, "shadow", 650, "shadow  "},
-{700, 700, 55, 0x025e, "Merkit  ", 700, "merkite "},
-{700, 750, 50, 0x046E, "Kupfer  ", 750, "copper  "},
-{700, 790, 45, 0x0835, "silver  ", 790, "silver  "},
-{700, 800, 40, 0x083b, "Bronze  ", 800, "bronze  "},
-{700, 850, 35, 0x07d9, "Gold    ", 850, "golden  "},
-{700, 900, 30, 0x089d, "Agapit  ", 900, "agapite "},
-{700, 950, 25, 0x08a4, "Verit   ", 950, "verite  "},
-{700, 990, 20, 0x0191, "Mythril ", 990, "valorite"}
+{700, 000, 100, 0x0838, msg_sk_miningDef[0], 000, "iron    "},
+{700, 650, 60, 0x096c, msg_sk_miningDef[1], 650, "shadow  "},
+{700, 700, 55, 0x025e, msg_sk_miningDef[2], 700, "merkite "},
+{700, 750, 50, 0x046E, msg_sk_miningDef[3], 750, "copper  "},
+{700, 790, 45, 0x0835, msg_sk_miningDef[4], 790, "silver  "},
+{700, 800, 40, 0x083b, msg_sk_miningDef[5], 800, "bronze  "},
+{700, 850, 35, 0x07d9, msg_sk_miningDef[6], 850, "golden  "},
+{700, 900, 30, 0x089d, msg_sk_miningDef[7], 900, "agapite "},
+{700, 950, 25, 0x08a4, msg_sk_miningDef[8], 950, "verite  "},
+{700, 990, 20, 0x0191, msg_sk_miningDef[9], 990, "valorite"}
 };
 
 /*----------------------------------------------------------------------------------------
@@ -148,100 +148,6 @@ static itemDef[NUM_ITEMS][smithprop]={
 {20, 391, 654, 411, 7, "_halberd"}
 };
 
-/*Here all ingame messages used in blacksmith menu, order of sentences is essential!*/
-const NUM_smithSENTENCE = 89;
-static msg_blacksmithDef[NUM_smithSENTENCE][]={
-"You are to far away from forge.", 
-"Choose the item you want to repair or the ingots you want to use", 
-"You have no tong or smithy hammer to blacksmith.",
-"The ingots need to be inside your backpack!",
-"You are not skilled enough to use this metall.",
-"You need to select ingots or an item a blacksmith can create!",
-"     Blacksmith Menu",
-"ringmail",
-"chainmail",
-"platemail",
-"helms",
-"shields",
-"swords/blades",
-"maces/Haemmer",
-"spears",
-"aces",
-"pole arms",
-"repeat last item",
-"     ringmail menu!",
-"gloves",
-"sleeves",
-"leggings",
-"tunic",
-"     chainmail menu!",
-"coif",
-"     platemail menu!",
-"gorget",
-"plate helm",
-"female plate",
-"     helms menu!",
-"bascinet",
-"close helm",
-"helmet",
-"nose helm",
-"     shield menu!",
-"buckler",
-"metal shield",
-"round shield",
-"Drachenschild",
-"metal kite shield",
-"heater",
-"     sword and blades menu!",
-"dagger",
-"cutlass",
-"kryss",
-"katana",
-"scimitar",
-"broad sword",
-"long sword",
-"viking sword",
-"mace",
-"maul",
-"war mace",
-"war hammer",
-"hammer pick",
-"     spears and forks menu!",
-"short spear",
-"war fork",
-"spear",
-"     axes menu!",
-"double axe",
-"battle axe",
-"large battle axe",
-"axe",
-"two handed axe",
-"executioners axe",
-"war axe",
-"     Pole Arms menu!",
-"bardiche",
-"halberd",
-"You have no idea how to make this.",
-"You have to few ingots.",
-"mady by",
-"ERROR! PUBLIC ITEM_CREATION: outside parameter(0..9)",
-"exceptional",
-"You create the item with exceptional quality.",
-"You create the item.",
-"ERROR! PUBLIC ITEM_CREATION:outside of parameter(90..100)",
-"You create the item with a quality below average.",
-"ERROR! PUBLIC ITEM_CREATION: outside of parameter(0-100)",
-"You are not skilled enough to repair something.",
-"It must be inside your backpack.",
-"This can not be repaired.",
-"This is already in best shape.",
-"You have too few ingots of this metall to repair it.",
-"Your try to repair fails and now the item is even in worse shape.",
-"Your try to repair fails and the item has been weakened.",
-"     mace menu!",
-"You repair the item."
-};
-
 /*----------------------------------------------------------------------------------------*\
 End Customizable blacksmithing system
 \*----------------------------------------------------------------------------------------*/
@@ -295,7 +201,7 @@ public __nxw_sk_mining(const cc)
 	new str[50];	//Adjust the size if you create new ores with long names!
 	sprintf(str, "%s", oreProperty[oreFound][orename]);
 	trim(str);   //remove triming spaces
-	sprintf(str, "%s Erz", str);
+	sprintf(str, msg_sk_miningDef[10], str);
 	
 	new bp = chr_getBackpack( cc, true );
 	new ore = itm_createByDef( "$item_iron_ore" );
@@ -304,7 +210,7 @@ public __nxw_sk_mining(const cc)
 	itm_setProperty(ore, IP_COLOR, _, oreProperty[oreFound][orecolor]);
 	itm_setContSerial( ore, bp );
 	itm_setProperty(ore, IP_WEIGHT, _, oreProperty[oreFound][oreweight]);
-	chr_message( cc, _, "Ihr findet etwas %s und packt es in Euer Gepaeck.", str);
+	chr_message( cc, _, msg_sk_miningDef[11], str);
 	itm_contPileItem( bp, ore );
 	itm_refresh(ore);
 }
@@ -327,7 +233,7 @@ public __nxw_smeltOre(const cc, const color1, const color2, ore)
               new minskill = oreProperty[index][miningmin]
               if (skill < minskill)
               {
-                     chr_message( cc, _, "Ihr seid zu unerfahren, um dieses Erz schmelzen zu koennen.");
+                     chr_message( cc, _, msg_sk_miningDef[12]);
                      return;
               }
               new ore_amount = itm_getProperty(ore, IP_AMOUNT);
@@ -335,12 +241,12 @@ public __nxw_smeltOre(const cc, const color1, const color2, ore)
               {
                      if (ore_amount == 1)
                      {
-                     chr_message( cc, _, "Eure Hand zuckt und Ihr schuettet den Rest des fluessigen Erzes in die Glut.");
+                     chr_message( cc, _, msg_sk_miningDef[13]);
                      itm_remove(ore);
                      }
                      else
                      {
-                     chr_message( cc, _, "Euch rutscht die Hand aus und ein Teil des Erzes faellt in die Glut.");
+                     chr_message( cc, _, msg_sk_miningDef[14]);
                      itm_setProperty(ore, IP_AMOUNT, _, ore_amount/2);
                      itm_refresh(ore); // tell the client item has been changed
                      }
@@ -351,7 +257,7 @@ public __nxw_smeltOre(const cc, const color1, const color2, ore)
                new ingotname[50]
                sprintf(ingotname, "%s", oreProperty[index][orename]);
                trim(ingotname);   //remove triming spaces
-               sprintf(ingotname, "%s Barren", ingotname);
+               sprintf(ingotname, msg_sk_miningDef[15], ingotname);
                new backpack = chr_getBackpack( cc, true );
                new ingot = itm_createByDef( "$item_iron_ingots");
                itm_setProperty(ingot, IP_WEIGHT, _, 100);
@@ -360,8 +266,8 @@ public __nxw_smeltOre(const cc, const color1, const color2, ore)
                itm_setContSerial( ingot, backpack );
                itm_contPileItem( backpack, ingot );
                itm_refresh(ingot);
-               chr_message( cc, _, "Ihr habt das Erz geschmolzen.");
-               chr_message( cc, _, "Sorgfaeltig verstaut Ihr %s in Eurem Gepaeck.",ingotname);
+               chr_message( cc, _, msg_sk_miningDef[16]);
+               chr_message( cc, _, msg_sk_miningDef[17],ingotname);
                itm_remove(ore);
                }
         }//color if           

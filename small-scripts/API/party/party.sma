@@ -8,11 +8,11 @@ public party_invite( party, const leader, const candidate )
 	if ( !party_isCandidate( party, candidate ) )
 		party_addCandidate( party, leader, candidate );
 
-	chr_message( leader, _, "You have invited them to join the party." );
+	chr_message( leader, _,  msg_api_partyDef[0]);
 
 	new name[150];
 	chr_getProperty( leader, CP_STR_NAME, _, name );
-	chr_message( candidate, _, "%s : You are invited to join the party. Type /accept to join or /decline to decline the offer.", name );
+	chr_message( candidate, _, msg_api_partyDef[1], name );
 	
 }
 
@@ -22,17 +22,17 @@ public party_onAddMember( const chr )
 
 	if( chr_party!=INVALID ) {
 		if( !party_isLeader( chr_party, chr )) {	
-			chr_message( chr, _, "You may only add members to the party if you are the leader." );
+			chr_message( chr, _,  msg_api_partyDef[2]);
 			return;
 		}
 		else if( party_getProperty( chr_party, PP_MEMBERS ) + party_getProperty( chr_party, PP_CANDIDATES ) >=10 ) {
-			chr_message( chr, _, "You may only have 10 in your party (this includes candidates)." );
+			chr_message( chr, _, msg_api_partyDef[3] );
 			return;
 		}
 	}
 
 	target_create( chr, _, _, _, "handle_party_onAddM" );
-	chr_message( chr, _, "Who would you like to add to your party?" );
+	chr_message( chr, _, msg_api_partyDef[4] );
 
 }
 
@@ -43,38 +43,38 @@ public handle_party_onAddM( const target, const chr, const obj, const x, const y
 	new obj_party = chr_getProperty( obj, CP_PARTY );
 		
 	if( !isChar( obj ) ) {
-		chr_message( chr, _, "You may only add living things to your party!" );
+		chr_message( chr, _, msg_api_partyDef[5] );
 		return;
 	}
 	if( chr==obj ) {
-		chr_message( chr, _, "You cannot add yourself to a party." );
+		chr_message( chr, _, msg_api_partyDef[6] );
 		return;
 	}
 	if( !chr_isHuman( obj ) ) {
-		 chr_message( chr, _, "Nay, I would rather stay here and watch a nail rust." );
+		 chr_message( chr, _, msg_api_partyDef[7] );
 		 return;
 	}
 	if( chr_party!=INVALID ) {
 		if( !party_isLeader( chr_party, chr ) ) {	
-			chr_message( chr, _, "You may only add members to the party if you are the leader." );
+			chr_message( chr, _, msg_api_partyDef[8] );
 			return;
 		}
 		else if( party_getProperty( chr_party, PP_MEMBERS ) + party_getProperty( chr_party, PP_CANDIDATES ) >=10 ) {
-			chr_message( chr, _, "You may only have 10 in your party (this includes candidates)." );
+			chr_message( chr, _,  msg_api_partyDef[9]);
 			return;
 		}
 	}
 	
 	if( chr_isNpc( obj ) ) {
-		chr_message( chr, _, "The creature ignores your offer." );
+		chr_message( chr, _, msg_api_partyDef[10] );
 		return;
 	}
 	if( chr_party!=INVALID && chr_party==obj_party ) {
-		chr_message( chr, _, "This person is already in your party!" );
+		chr_message( chr, _, msg_api_partyDef[11] );
 		return;
 	}
 	if( obj_party!=INVALID ) {
-		chr_message( chr, _, "This person is already in a party!" );
+		chr_message( chr, _, msg_api_partyDef[12]  );
 		return;
 	}
 	
@@ -91,7 +91,7 @@ public party_onDelMember( const chr, const kicked )
 {
 	if( kicked==INVALID ) {
 		target_create( chr, _, _, _, "handle_party_onDelM" );
-		chr_message( chr, _, "Select the one to remove to the party.." );
+		chr_message( chr, _,  msg_api_partyDef[13] );
 	}
 	else 
 		handle_party_onDelM( INVALID, chr, kicked );
@@ -106,7 +106,7 @@ public handle_party_onDelM( const target, const chr, const kicked )
 	new chr_party = chr_getProperty( chr, CP_PARTY );
 	
 	if( chr_party==INVALID ) {
-		chr_message( chr, _, "You're not in a party!" );
+		chr_message( chr, _, msg_api_partyDef[14] );
 	}
 	else if( chr==kicked ) {
 		party_delMember( chr_party, chr );
@@ -114,7 +114,7 @@ public handle_party_onDelM( const target, const chr, const kicked )
 	else {
 		new kicked_party = chr_getProperty( kicked, CP_PARTY );
 		if( !party_isLeader( kicked_party, chr ))
-			chr_message( chr, _, "You may only remove yourself from a party if you are not the leader." );
+			chr_message( chr, _, msg_api_partyDef[15] );
 		else
 			party_kickMember( chr_party, kicked );
 	}
@@ -131,13 +131,13 @@ public party_onLootMode( const chr, const loot )
 	new chr_party = chr_getProperty( chr, CP_PARTY );
 	
 	if( chr_party==INVALID ) {
-		chr_message( chr, _, "You're not in a party!" );
+		chr_message( chr, _, msg_api_partyDef[14] );
 	} else if( loot ) {
-		chr_message( chr, _, "You have chosen to allow your party to loot your corpse." );
+		chr_message( chr, _, msg_api_partyDef[16] );
 		party_setProperty( chr_party, PP_CANLOOT, chr, loot );
 	}
 	else {
-		chr_message( chr, _, "You have chosen to prevent your party from looting your corpse." );
+		chr_message( chr, _, msg_api_partyDef[17] );
 		party_setProperty( chr_party, PP_CANLOOT, chr, loot );
 	}
 }
@@ -156,10 +156,10 @@ public party_onAccept( const chr, const leader  )
 	
 	new name[150];
 	chr_getProperty( chr, CP_STR_NAME, _, name );
-	party_broadcast( party, _, "%s  : joined the party.", name );
+	party_broadcast( party, _, msg_api_partyDef[18], name );
 	
 	party_addMember( party, chr );
-	chr_message( chr, _, "You have been added to the party." );
+	chr_message( chr, _, msg_api_partyDef[19]);
 	
 }
 
@@ -174,9 +174,9 @@ public party_onDecline( const chr, const leader  )
 		
 	new name[150];
 	chr_getProperty( chr, CP_STR_NAME, _, name );
-	party_broadcast( party, _, "%s  : Does not wish to join the party.", name );
+	party_broadcast( party, _, msg_api_partyDef[20], name );
 	
-	chr_message( chr, _, "You notify them that you do not wish to join the party." );
+	chr_message( chr, _, msg_api_partyDef[21] );
 	
 	party_delCandidate( party, chr );
 	

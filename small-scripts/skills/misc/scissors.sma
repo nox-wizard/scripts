@@ -1,7 +1,7 @@
 
 public _scissorsDbClick( const scissor, const chr ) 
 {  
-	chr_message( chr, _, "What cloth should I use these scissors on?" );
+	chr_message( chr, _,  msg_sk_miscDef[0]);
 	target_create( chr, _, _, _, "_scissorsTarget" );
 	bypass();
 } 
@@ -28,7 +28,7 @@ public _scissorsTarget( const target, const chr, const itm )
 		}
 
 		chr_sound( chr, 0x0248 );
-		chr_message( chr, _, "You cut some cloth into bandages, and put it in your backpack" );
+		chr_message( chr, _,  msg_sk_miscDef[1]);
 		/*new benda =*/ itm_createInBpDef( "$item_clean_bandages", chr, 3 );
 		itm_reduceAmount(itm, 1);
 		
@@ -39,6 +39,6 @@ public _scissorsTarget( const target, const chr, const itm )
 	else if( isHide( id ) ) 
 		_doLeatherPiece( chr, itm );
 	else
-    	chr_message( chr, _, "You cannot cut anything from that item." );
+    	chr_message( chr, _, msg_sk_miscDef[2] );
 
 }

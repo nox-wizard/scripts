@@ -15,7 +15,7 @@
 */
 public __nxw_sk_anatomy( const chr )
 {
-	chr_message( chr, _, "Whom shall I examine?");
+	chr_message( chr, _, msg_sk_anatomyDef[0]);
 	target_create( chr, _, _, _, "__anatomyTarget" );
 }
 
@@ -30,26 +30,26 @@ public __anatomyTarget( const t, const cc, const target, const x, const y, const
 {
 	if (target < 0) 
 	{
-		chr_message( cc, _, "Target invalid");
+		chr_message( cc, _, msg_sk_anatomyDef[1]);
 		return;
 	}
 
 	if (cc == target) 
 	{
-		chr_message( cc, _, "You cannot analize yourself!");
+		chr_message( cc, _, msg_sk_anatomyDef[2]);
 		return;
 	}
 	
 	
 	if (chr_distance(cc, target) >= 10) 
 	{
-		chr_message( cc, _, "You need to be closer to find out more about them");
+		chr_message( cc, _, msg_sk_anatomyDef[3]);
 		return;
 	}
 	
 	if (!chr_checkSkill(cc, SK_ANATOMY, 0, 1000)) 
 	{
-	        chr_message( cc, _, "You are not certain..");
+	        chr_message( cc, _, msg_sk_anatomyDef[4]);
 	        return;
     	}
 
@@ -57,61 +57,61 @@ public __anatomyTarget( const t, const cc, const target, const x, const y, const
 	new dex = chr_getDex(target);
 	new strDes[60];
 	new dexDes[60];
-	if (str > 90) strunpack(dexDes, "superhumanly strong");
+	if (str > 90) strunpack(dexDes, msg_sk_anatomyDef[5]);
 	else {
 		switch(str)
 		{
 			case 0..10:
-				strunpack(strDes, "rather feeble");
+				strunpack(strDes, msg_sk_anatomyDef[6]);
 			case 11..20:
-				strunpack(strDes, "somewhat weak");
+				strunpack(strDes, msg_sk_anatomyDef[7]);
 			case 21..30:
-				strunpack(strDes, "to be of normal strength");
+				strunpack(strDes, msg_sk_anatomyDef[8]);
 			case 31..40:
-				strunpack(strDes, "somewhat strong");
+				strunpack(strDes, msg_sk_anatomyDef[9]);
 			case 41..50:
-				strunpack(strDes, "very strong");
+				strunpack(strDes, msg_sk_anatomyDef[10]);
 			case 51..60:
-				strunpack(strDes, "extremely strong");
+				strunpack(strDes, msg_sk_anatomyDef[11]);
 			case 61..70:
-				strunpack(strDes, "extraordinarily strong");
+				strunpack(strDes, msg_sk_anatomyDef[12]);
 			case 71..80:
-				strunpack(strDes, "as strong as an ox");
+				strunpack(strDes, msg_sk_anatomyDef[13]);
 			case 81..90:
-				strunpack(strDes, "like one of the strongest people you have ever seen");
+				strunpack(strDes, msg_sk_anatomyDef[14]);
 			default:
-				strunpack(strDes, "of unknown strenght");
+				strunpack(strDes, msg_sk_anatomyDef[15]);
 		}
 	}
 
-	if (dex > 90) strunpack(dexDes, "superhumanly agile");
+	if (dex > 90) strunpack(dexDes, msg_sk_anatomyDef[16]);
 	else {
 		switch(dex)
 		{
 			case 0..10:
-				strunpack(dexDes, "very clumsy");
+				strunpack(dexDes, msg_sk_anatomyDef[17]);
 			case 11..20:
-				strunpack(dexDes, "somewhat uncoordinated");
+				strunpack(dexDes, msg_sk_anatomyDef[18]);
 			case 21..30:
-				strunpack(dexDes, "moderately dexterous");
+				strunpack(dexDes, msg_sk_anatomyDef[19]);
 			case 31..40:
-				strunpack(dexDes, "somewhat agile");
+				strunpack(dexDes, msg_sk_anatomyDef[20]);
 			case 41..50:
-				strunpack(dexDes, "very agile");
+				strunpack(dexDes, msg_sk_anatomyDef[21]);
 			case 51..60:
-				strunpack(dexDes, "extremely agile");
+				strunpack(dexDes, msg_sk_anatomyDef[22]);
 			case 61..70:
-				strunpack(dexDes, "extraordinarily agile");
+				strunpack(dexDes, msg_sk_anatomyDef[23]);
 			case 71..80:
-				strunpack(dexDes, "like they move like quicksilver");
+				strunpack(dexDes, msg_sk_anatomyDef[24]);
 			case 81..90:
-				strunpack(dexDes, "like one of the fastest people you have ever seen");
+				strunpack(dexDes, msg_sk_anatomyDef[25]);
 			default:
-				strunpack(dexDes, "of unknown dexterity");
+				strunpack(dexDes, msg_sk_anatomyDef[26]);
 		}
 	}
 
-	chr_message( cc, _, "That person looks %s and %s.", strDes, dexDes);
+	chr_message( cc, _, msg_sk_anatomyDef[27], strDes, dexDes);
 
 	if (chr_getSkill(cc, SK_ANATOMY) < 950) return;
 
@@ -121,29 +121,29 @@ public __anatomyTarget( const t, const cc, const target, const x, const y, const
 	switch(prc/10)
 	{
 		case 0:
-			chr_message( cc, _, "He/She is completely tired [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[28], prc);
  		case 1:
-			chr_message( cc, _, "He/She is extremely tired [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[29], prc);
 		case 2:
-			chr_message( cc, _, "He/She is very much tired [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[30], prc);
 		case 3:
-			chr_message( cc, _, "He/She is very tired [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[31], prc);
 		case 4:
-			chr_message( cc, _, "He/She is tired [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[32], prc);
 		case 5:
-			chr_message( cc, _, "He/She is slightly tired [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[33], prc);
 		case 6:
-			chr_message( cc, _, "He/She is not tired [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[34], prc);
 		case 7:
-			chr_message( cc, _, "He/She is slightly fresh [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[35], prc);
 		case 8:
-			chr_message( cc, _, "He/She is almost fresh [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[36], prc);
 		case 9:
-			chr_message( cc, _, "He/She is fresh [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[37], prc);
 		case 10:
-			chr_message( cc, _, "He/She is fully fresh [%d%%]", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[38], prc);
 		default:
-			chr_message( cc, _, "He/She is at %d%% stamina", prc);
+			chr_message( cc, _, msg_sk_anatomyDef[39], prc);
 	}
 }
 

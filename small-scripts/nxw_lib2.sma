@@ -3,6 +3,7 @@
 #endif
 #define _nxw_lib2_included_
 
+
 //=========================================================================================//
 //                              TARGET HELP FUNCTIONS                                      //
 //=========================================================================================//
@@ -62,7 +63,7 @@ public getRectangle(const chr, callback[])
 	chr_delLocalVar(chr,CLV_TEMP1);
 	chr_addLocalStrVar(chr,CLV_TEMP1,callback);
 	
-	chr_message(chr,_,"Select first rectangle corner");
+	chr_message(chr,_,msg_nxwlibDef[0]);
 	target_create(chr,_,_,_,"rectangle_cback_1");
 }
 
@@ -80,11 +81,11 @@ public rectangle_cback_1(target, chr, object, x, y, z, unused, unused1)
 {
 	if(getMapLocation(object,x,y,z) == INVALID)
 	{
-		chr_message(chr,_,"Invalid map location!");
+		chr_message(chr,_,msg_nxwlibDef[1]);
 		return;
 	}
 	
-	chr_message(chr,_,"Select second rectangle corner");
+	chr_message(chr,_,msg_nxwlibDef[2]);
 	new xy = (x << 16) + y;
 	target_create(chr,xy,_,_,"rectangle_cback_2");
 
@@ -105,7 +106,7 @@ public rectangle_cback_2(target, chr, object, x, y, z, unused, xy)
 {
 	if(getMapLocation(object,x,y,z) == INVALID)
 	{
-		chr_message(chr,_,"Invalid map location!");
+		chr_message(chr,_,msg_nxwlibDef[1]);
 		return;
 	}
 	
@@ -610,7 +611,7 @@ stock chr_canMoveItem(const chr, const itm, const msg)
 {
 	if(!chr_canReachItem(chr,itm)) 
 	{
-		chr_message(chr,_,"You can't reach that! go closer!");
+		chr_message(chr,_,msg_nxwlibDef[3]);
 		return -1;
 	}
 	
@@ -618,10 +619,10 @@ stock chr_canMoveItem(const chr, const itm, const msg)
 	if(msg)
 		switch(ratio)
 		{
-			case 0..5: {chr_message(chr,_,"That's far beyond you possibilities"); return 0;}
-			case 6..9: {chr_message(chr,_,"It's too heavy for you, get stronger!"); return 0;}
-			case 10..14: {chr_message(chr,_,"You moved that"); return ratio;}
-			default: {chr_message(chr,_,"You easily moved that"); return ratio;}
+			case 0..5: {chr_message(chr,_,msg_nxwlibDef[4]); return 0;}
+			case 6..9: {chr_message(chr,_,msg_nxwlibDef[5]); return 0;}
+			case 10..14: {chr_message(chr,_,msg_nxwlibDef[6]); return ratio;}
+			default: {chr_message(chr,_,msg_nxwlibDef[7]); return ratio;}
 		}
 	
 	return ratio;

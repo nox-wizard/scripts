@@ -32,18 +32,18 @@ new set = set_create(); // creating a new set
 /* if is valid char and not our char and not intelligent enough to realize we hide us or something and
 there is nobody permahidden or hidden itself (exploit prevention: use hide for detect hidden player)- prevent hiding*/
 		{
-		chr_message(c, _,"There is someone nearby who prevents you to hide.");
+		chr_message(c, _,msg_sk_dhiddenDef[5]);
 		return;
 		}
 	} //for searches whole range, if not stopped before than goes on
 	new checkskill = random(1000)
-	printf("checkskill: %d, hidingskill: %d", checkskill, hidingskill);
+	//printf("checkskill: %d, hidingskill: %d", checkskill, hidingskill);
 	if( (hidingskill > checkskill) && (chr_checkSkill(c, 21, 0, 1000, 1)))
 	{
-	chr_message(c, _, "You slip inconspicuous into the shadows.");
+	chr_message(c, _, msg_sk_dhiddenDef[6]);
 	chr_setProperty( c,CP_HIDDEN,_,1);
 	chr_setProperty( c,CP_PRIV2,_, chr_getProperty( c,CP_PRIV2,_) &~0x08 ); //hidden by skill and not permahidden
 	chr_update(c);
 	}
-	else chr_message(c, _, "Your attempt to hide is not succesfull.");
+	else chr_message(c, _, msg_sk_dhiddenDef[7]);
 }
