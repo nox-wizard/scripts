@@ -426,15 +426,17 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				}
 			}
 		}
-		case 18:
+		case 18: //bounce out
 		{
 			chr_message( chrsource, _, "Whom you want to bounce out of the house?");
 			target_create( chrsource,house, _, _, "Bounceout" );
 			return;
 		}
-		case 19: 
-		{//redeed
-			printf("leer");
+		case 19: //redeed
+		{
+			new deed = house_getProperty(house, HP_HOUSEDEED,_);
+			house_delete(house);
+			itm_createInBp( deed, chrsource, true);
 		}
 		case 20: //change locks
 		{
@@ -453,7 +455,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 			new bank = chr_getBankBox(chrsource, BANKBOX_NORMAL);
 			itm_showContainer(bank,chrsource);
 		}
-		case 23:
+		case 23: //transfer
 		{
 			chr_message( chrsource, _, "Whom do you want to make new Owner?");
 			target_create( chrsource,house, _, _, "TransferHouse" );
