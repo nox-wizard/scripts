@@ -19,6 +19,7 @@
 #include "small-scripts/API/event/trigger.api"
 #include "small-scripts/API/file.api"
 #include "small-scripts/API/float.api"
+#include "small-scripts/API/gmpage.api"
 #include "small-scripts/API/gui/mnu.api"
 #include "small-scripts/API/gui/gui.api"
 #include "small-scripts/API/guild/guild.api"

@@ -80,9 +80,9 @@ native broadcast(const format[], ...);
 
 /*!
 \author Endymion, changed by Wintermute
-\fn getIntFromDefine(const define[], ...)
+\fn getIntFromDefine(const define[], const checkDefine = true)
 \param define[]: the define
-\param 2: checkDefine: true if a logmessage should be displayed in the console if the define is not available
+\param checkDefine: true if a logmessage should be displayed in the console if the define is not available
 \brief Get define Number
 */
 native getIntFromDefine(const define[],  checkDefine=true);
