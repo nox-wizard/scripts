@@ -205,3 +205,128 @@ new __scrolls[ MAX_SCROLLS][additemEntry] =
 	{0x1F6B,"$item_a_summon_fire_elemental_scroll   ","Summon Fire Elemental Scroll"},
 	{0x1F6C,"$item_a_summon_water_elemental_scroll  ","Summon Water Elemental Scroll"}
 }
+
+//the XSS def name string is not necessary as it is generated automatically
+#define NUM_ARMORS 8
+#define ARMOR_PARTS 7
+new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
+{
+	//platemail
+	{0x1412,"                                       ","helm"},
+	{0x1413,"                                       ","gorget"},
+	{0x1416,"                                       ","chest"},
+	{0x1410,"                                       ","sleeves"},
+	{0x1414,"                                       ","gloves"},
+	{0x141A,"                                       ","legs"},
+	{0x1C04,"                                       ","female"},
+	
+	//chainmail
+	{0x13BB, "                                       ","coif"},
+	{INVALID,"                                       ","gorget"},
+	{0x13C4, "                                       ","tunic"},
+	{INVALID,"                                       ","sleeves"},
+	{INVALID,"                                       ","gloves"},
+	{0x13C3, "                                       ","legs"},
+	{INVALID,"                                       ","female"},
+	
+	//ringmail
+	{INVALID,"                                       ","coif"},
+	{INVALID,"                                       ","gorget"},
+	{0x13ED, "                                       ","tunic"},
+	{0x13EF, "                                       ","sleeves"},
+	{0x13F2, "                                       ","gloves"},
+	{0x13F1, "                                       ","legs"},
+	{INVALID,"                                       ","female"},
+	
+	//studded
+	{INVALID,"                                       ","cap"},
+	{0x13D6, "                                       ","gorget"},
+	{0x13E2, "                                       ","tunic"},
+	{0x13D4, "                                       ","sleeves"},
+	{0x13DD, "                                       ","gloves"},
+	{0x13E1, "                                       ","legs"},
+	{0x1C02, "                                       ","female"},
+	
+	//leather
+	{0x1DBA, "                                       ","cap"},
+	{INVALID,"                                       ","gorget"},
+	{0x13D3, "                                       ","tunic"},
+	{0x13CD, "                                       ","sleeves"},
+	{0x13CE, "                                       ","gloves"},
+	{0x13D2, "                                       ","legs"},
+	{0x1C06, "                                       ","female"},
+	
+	//bone
+	{0x1451, "                                       ","helm"},
+	{INVALID,"                                       ","gorget"},
+	{0x144F, "                                       ","chest"},
+	{0x144E, "                                       ","sleeves"},
+	{0x1450, "                                       ","gloves"},
+	{0x1452, "                                       ","legs"},
+	{INVALID,"                                       ","female"},
+	
+	//helms
+	{0x1412, "                                       ","plate_helm"},
+	{0x140C, "                                       ","bascinet"},
+	{0x1408, "                                       ","close_helm"},
+	{0x140A, "                                       ","helmet"},
+	{0x140E, "                                       ","nose_helm"},
+	{INVALID,"                                       ","legs"},
+	{INVALID,"                                       ","female"},
+	
+	//Shields
+	{0x1B73, "                                       ","buckler"},
+	{0x1B7B, "                                       ","metal_shield"},
+	{0x1B72, "                                       ","bronze_shield"},
+	{0x1B78, "                                       ","wooden_kite_shield"},
+	{0x1B74, "                                       ","metal_kite_shield"},
+	{0x1B76, "                                       ","heater"},
+	{INVALID,"                                       ","female"}
+}	
+
+#define NUM_WEAPONS 4
+#define WEAPONS_PER_GROUP 8
+new __weapons[NUM_WEAPONS*WEAPONS_PER_GROUP][additemEntry] =
+{
+	//Axes
+	{0x0F4B, "                                       ","double_axe"},
+	{0x0F47, "                                       ","battle_axe"},
+	{0x13FB, "                                       ","large_battle_axe"},
+	{0x0F49, "                                       ","axe"},
+	{0x1442, "                                       ","two-handed_axe"},
+	{0x0F45, "                                       ","executioners_axe"},
+	{0x13B0, "                                       ","war-axe"},
+	{INVALID,"                                       ",""},
+	
+	//swords/blades
+	{0x0F51,"                                       ","dagger"},
+	{0x1440,"                                       ","cutlass"},
+	{0x1400,"                                       ","kryss"},
+	{0x13FF,"                                       ","katana"},
+	{0x13B6,"                                       ","scimitar"},
+	{0x0F5E,"                                       ","broadsword"},
+	{0x13B8,"                                       ","long_sword"},
+	{0x13BA,"                                       ","viking_sword"},
+	
+	//maces
+	{0x0F5C,"                                       ","mace"},
+	{0x143A,"                                       ","maul"},
+	{0x1406,"                                       ","war_mace"},
+	{0x1438,"                                       ","war_hammer"},
+	{0x143C,"                                       ","hammer_pick"},
+	{INVALID,"                                       ","legs"},
+	{INVALID,"                                       ","legs"},
+	{INVALID,"                                       ","legs"},
+	
+	//spears/forks/pole arms
+	{0x0F62,"                                       ","short_spear"},
+	{0x1405,"                                       ","war_fork"},
+	{0x0F62,"                                       ","spear"},
+	{0x0F42,"                                       ","bardiche"},
+	{0x143E,"                                       ","halberd"},
+	{INVALID,"                                       ","legs"},
+	{INVALID,"                                       ","legs"},
+	{INVALID,"                                       ","legs"}
+}
+
+	

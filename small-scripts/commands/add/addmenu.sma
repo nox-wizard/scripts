@@ -37,8 +37,12 @@ enum
 	P_STUDDED,
 	P_LEATHER,
 	P_BONE,
-	P_FEMALE,
 	P_HELMS,
+	P_SHIELDS,
+	P_AXES,
+	P_SWORDS,
+	P_BLADES,
+	P_FORKS,
 	
 	P_BUILDING_MENU,
 	P_NPC_MENU,
@@ -51,7 +55,38 @@ enum
 	P_TREASURE_MENU,
 };
 
-enum {AR_HELM,AR_GORGET,AR_CHEST,AR_ARMS,AR_GLOVES,AR_LEGS}
+#define MAGIC_MENU_ENTRIES 6
+static magicMenuTxt[MAGIC_MENU_ENTRIES][20] =
+{
+	"reagents",
+	"reagents 2",
+	"bottles",
+	"potions",
+	"wands",
+	"gates"	
+}
+
+#define COMBAT_MENU_ARMOR_ENTRIES 8
+#define COMBAT_MENU_WEAPON_ENTRIES 4
+#define COMBAT_MENU_ENTRIES COMBAT_MENU_ARMOR_ENTRIES + COMBAT_MENU_WEAPON_ENTRIES
+static combatMenuTxt[COMBAT_MENU_ENTRIES][20] =
+{
+	"Platemail",
+	"Chainmail",
+	"Ringmail",
+	"Studded",
+	"Leather",
+	"Bone",
+	"Helms",
+	"Shields",
+	
+	"Axes",
+	"Blades",
+	"Maces",
+	"Forks"	
+}
+
+enum {AR_HELM,AR_GORGET,AR_CHEST,AR_ARMS,AR_GLOVES,AR_LEGS,AR_FEMALE}
 
 static PBTN_UP;
 static PBTN_DOWN;
@@ -90,7 +125,7 @@ public addMenu(const chr)
 	new  START_X = 0;
 	new  START_Y = 0;
 	new  COLS = 60;
-	new  ROWS = 22;
+	new  ROWS = 24;
 	new  WIDTH = COLS*COL;
 	new  HEIGHT = ROWS*ROW;
 	
@@ -212,50 +247,35 @@ public addMenu(const chr)
 public drawPage(const menu, const page)
 {
 	
-	new x,y,t,tab = 15,pag = P_REAGENTS;
+	new x,y,t,tab = 13,pag;
 	
 switch(page)
 {	
 case P_MAGIC_MENU:
 {
-	x = L_MARG + (t++*tab)*COL;
+	pag = P_REAGENTS;
 	y = 7*ROW;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"reagents");
 	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"reagents 2");
-	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"bottles");
-	
-	t = 0;
-	y += ROW;
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"potions");
-	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"wands");
-	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"gates");
+	for(t = 0; t < MAGIC_MENU_ENTRIES; t++)
+	{
+		x = L_MARG + (t%4*tab)*COL;
+		if(t%4 == 0 && t != 0) y += ROW;
+		
+		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
+		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,magicMenuTxt[t]);	
+	}
 	
 	x = L_MARG;
 	y += 2*ROW;
 	gui_addText(menu,x,y,TXT_COLOR ,"scrolls");
 	
 	y += ROW;
-	tab = 12;
 	
 	for(t = 0; t < 8; t++)
 	{
 		x = L_MARG + (t%4*tab)*COL;
-		y = t%4 == 0 && t ? y + ROW : y;
+		if(t%4 == 0 && t != 0) y += ROW;
+		
 		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"circle %d",t+1);
 		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++); 
 	}
@@ -285,51 +305,37 @@ case P_MAGIC_MENU:
 
 case P_COMBAT_MENU:
 {
-	tab = 15;
+	pag = P_PLATEMAIL;
 	x = L_MARG + (t++*tab)*COL;
 	y = 7*ROW;
 	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Armor:");
 	y += ROW;
 	
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_PLATEMAIL);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Platemail");
-	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_CHAINMAIL);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Chainmail");
-	
-	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_RINGMAIL);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Ringmail");
-	
-	t = 0;
-	y += ROW;
-	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_STUDDED);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Studded");
-	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_LEATHER);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Leather");
-	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_BONE);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Bone");
+	for(t = 0; t < COMBAT_MENU_ARMOR_ENTRIES; t++)
+	{
+		x = L_MARG + (t%4*tab)*COL;
+		if(t%4 == 0 && t != 0) y += ROW;
 		
-	t = 0;
+		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
+		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,combatMenuTxt[t]);	
+	}
+	
+	y += 2*ROW;
+	x = L_MARG;
+	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Weapons:");
 	y += ROW;
+		
+	for(t = 0; t < COMBAT_MENU_WEAPON_ENTRIES; t++)
+	{
+		x = L_MARG + (t%4*tab)*COL;
+		if(t%4 == 0 && t != 0) y += ROW;
+		
+		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
+		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,combatMenuTxt[t + COMBAT_MENU_ARMOR_ENTRIES]);	
+	}
 	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_FEMALE);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Female");
 	
-	x = L_MARG + (t++*tab)*COL;
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_HELMS);
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Helms");
-	
-	for(new i = P_PLATEMAIL; i <= P_HELMS; i++)
+	for(new i = P_PLATEMAIL; i <= P_FORKS; i++)
 	{
 		gui_addPage(menu,i);
 		drawSubPage(menu,i);
@@ -437,237 +443,51 @@ switch(page)
 		}
 	}
 	
-	case P_PLATEMAIL:
+	case P_PLATEMAIL..P_SHIELDS:
 	{
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_PLATEMAIL*10 + AR_HELM);
-		gui_addTilePic(menu,x + BTNW,y,0x1412);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Helm");
-		
 		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
-		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*P_PLATEMAIL,TXT_COLOR,"iron");
+		new material[5] = "";
+		if(page != P_LEATHER && page!= P_STUDDED && page != P_BONE) sprintf(material,"iron");
+		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*page,TXT_COLOR,"%s",material);
 		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_PLATEMAIL*10 + AR_GORGET);
-		gui_addTilePic(menu,x + BTNW,y,0x1413);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gorget");
+		gui_addButtonFn(menu,x + tab*COL,y  + 2*ROW,BTN_UP,BTN_DOWN,page,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y + 2*ROW,TXT_COLOR,"create in backpack");
 		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_PLATEMAIL*10 + AR_CHEST);
-		gui_addTilePic(menu,x + BTNW,y,0x1416);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Chest");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_PLATEMAIL*10 + AR_ARMS);
-		gui_addTilePic(menu,x + BTNW,y,0x1410);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Arms");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_PLATEMAIL*10 + AR_GLOVES);
-		gui_addTilePic(menu,x + BTNW,y,0x1414);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_PLATEMAIL*10 + AR_LEGS);
-		gui_addTilePic(menu,x + BTNW,y,0x141A);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_PLATEMAIL,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_PLATEMAIL + 1000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
+		gui_addButtonFn(menu,x + tab*COL,y + 3*ROW,BTN_UP,BTN_DOWN,page + 1000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y + 3*ROW,TXT_COLOR,"Equip");
 
-		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_PLATEMAIL + 10000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
-	}
-	
-	case P_CHAINMAIL:
-	{
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_CHAINMAIL*10 + AR_HELM);
-		gui_addTilePic(menu,x + BTNW,y,0x13BB);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Coif");
-		
-		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
-		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL  + 10*P_CHAINMAIL,TXT_COLOR,"iron");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_CHAINMAIL*10 + AR_CHEST);
-		gui_addTilePic(menu,x + BTNW,y,0x13C4);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Tunic");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_CHAINMAIL*10 + AR_LEGS);
-		gui_addTilePic(menu,x + BTNW,y,0x13C3);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_CHAINMAIL,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_CHAINMAIL + 1000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
-
-		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_CHAINMAIL + 10000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
-	}
-	
-	case P_RINGMAIL:
-	{
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_RINGMAIL*10 + AR_CHEST);
-		gui_addTilePic(menu,x + BTNW,y,0x13ED);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Tunic");
-		
-		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
-		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL  + 10*P_RINGMAIL,TXT_COLOR,"iron");
-		
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_RINGMAIL*10 + AR_ARMS);
-		gui_addTilePic(menu,x + BTNW,y,0x13EF);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Sleeves");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_RINGMAIL*10 + AR_GLOVES);
-		gui_addTilePic(menu,x + BTNW,y,0x13F2);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_RINGMAIL*10 + AR_LEGS);
-		gui_addTilePic(menu,x + BTNW,y,0x13F1);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_RINGMAIL,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_RINGMAIL + 1000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
-
-		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_RINGMAIL + 10000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
-	}
-	
-	case P_STUDDED:
-	{
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_GORGET);
-		gui_addTilePic(menu,x + BTNW,y,0x13D6);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gorget");
-		
-		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
-		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*P_STUDDED,TXT_COLOR,"");
-				
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_CHEST);
-		gui_addTilePic(menu,x + BTNW,y,0x13E2);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Tunic");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_ARMS);
-		gui_addTilePic(menu,x + BTNW,y,0x13D4);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Sleeves");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_GLOVES);
-		gui_addTilePic(menu,x + BTNW,y,0x13DD);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_LEGS);
-		gui_addTilePic(menu,x + BTNW,y,0x13E1);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_STUDDED,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_STUDDED + 1000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
-
-		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_STUDDED + 10000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
-	}
-
-	case P_LEATHER:
-	{
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_HELM);
-		gui_addTilePic(menu,x + BTNW,y,0x1DBA);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Cap");
-		
-		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
-		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*P_LEATHER,TXT_COLOR,"");
-				
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_GORGET);
-		gui_addTilePic(menu,x + BTNW,y,0x13C7);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gorget");
-						
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_CHEST);
-		gui_addTilePic(menu,x + BTNW,y,0x13D3);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Tunic");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_ARMS);
-		gui_addTilePic(menu,x + BTNW,y,0x13CD);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Sleeves");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_GLOVES);
-		gui_addTilePic(menu,x + BTNW,y,0x13CE);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_LEGS);
-		gui_addTilePic(menu,x + BTNW,y,0x13D2);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_LEATHER,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_LEATHER + 1000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
-
-		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_LEATHER + 10000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
-	}		
-	
-	case P_BONE:
-	{
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_HELM);
-		gui_addTilePic(menu,x + BTNW,y,0x1451);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Helm");
-		
-		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Beast:");
-		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*P_BONE,TXT_COLOR,"");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_CHEST);
-		gui_addTilePic(menu,x + BTNW,y,0x144F);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Chest");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_ARMS);
-		gui_addTilePic(menu,x + BTNW,y,0x144E);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Arms");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_GLOVES);
-		gui_addTilePic(menu,x + BTNW,y,0x1450);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
-		
-		y += 2*ROW;
-		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_LEGS);
-		gui_addTilePic(menu,x + BTNW,y,0x1452);
-		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_BONE,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
-		
-		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_BONE + 1000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
-
-		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_BONE + 10000,true,"addmenu_armor");
-		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
-	}
-
+		gui_addButtonFn(menu,x + tab*COL,y + 4*ROW,BTN_UP,BTN_DOWN,page + 10000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y + 4*ROW,TXT_COLOR,"Equip to character");
+					
+		new artype = page - P_PLATEMAIL;
+		for(new i = 0; i < ARMOR_PARTS; i++)
+		{
+			if(__armor[artype*ARMOR_PARTS + i][__ID] == INVALID) continue;
 			
+			gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,false,page*10 + i);
+			gui_addTilePic(menu,x + BTNW,y,__armor[artype*ARMOR_PARTS + i][__ID]);
+			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__armor[artype*ARMOR_PARTS + i][__name]);
+			y += 2*ROW;
+		}		
+	}
+	
+	case P_AXES..P_FORKS:
+	{
+		
+		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
+		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*page,TXT_COLOR,"iron");
+					
+		new wpntype = page - P_AXES;
+		for(new i = 0; i < WEAPONS_PER_GROUP; i++)
+		{
+			if(__weapons[wpntype*WEAPONS_PER_GROUP + i][__ID] == INVALID) continue;
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,wpntype*WEAPONS_PER_GROUP + i,true,"addmenu_weapons");
+			gui_addTilePic(menu,x + BTNW,y,__weapons[wpntype*WEAPONS_PER_GROUP + i][__ID]);
+			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__weapons[wpntype*WEAPONS_PER_GROUP + i][__name]);
+			y += 2*ROW;
+		}		
+	}		
 }//end of switch(page)
 
 }
@@ -723,23 +543,24 @@ public addmenu_armor(menu,chr,armor)
 	if(strlen(material)) sprintf(material,"_%s",material);
 	
 	
-	new artype[20];	
+	new artype[20] = "";	
 	switch(armor)
 	{
 		case P_PLATEMAIL: sprintf(artype,"_plate");
 		case P_CHAINMAIL: sprintf(artype,"_chain");
-		case P_RINGMAIL: sprintf(artype,"_ringmail");
-		case P_STUDDED: sprintf(artype,"_studded_leather");
-		case P_LEATHER:	sprintf(artype,"_leather");
-		case P_BONE:	sprintf(artype,"_bone");
+		case P_RINGMAIL:  sprintf(artype,"_ringmail");
+		case P_STUDDED:   sprintf(artype,"_studded_leather");
+		case P_LEATHER:	  sprintf(artype,"_leather");
+		case P_BONE:	  sprintf(artype,"_bone");
 	}
 	
-	new arpart[20],r,buffer[6];
-	for(new i = AR_HELM; i <= AR_LEGS; i++)
+	new arpart[20] = "", gender[10] = "",r,buffer[ARMOR_PARTS];
+	for(new i = 0; i < ARMOR_PARTS; i++)
 	{
 		r = gui_getProperty(menu,MP_CHECK,armor*10 + i); 
 		if(r)
 		{
+			if(armor != P_HELMS && armor != P_SHIELDS)
 			switch(i)
 		 	{
 		 		case AR_HELM:
@@ -760,6 +581,12 @@ public addmenu_armor(menu,chr,armor)
 		 			default: sprintf(arpart,"_tunic");
 		 		}
 		 		
+		 		case AR_FEMALE:
+		 		{
+		 			if(armor == P_LEATHER) sprintf(arpart,"_armor");
+		 			sprintf(gender,"_female");
+		 		}
+		 		
 		 		case AR_ARMS: 
 		 		switch(armor)
 		 		{
@@ -776,9 +603,10 @@ public addmenu_armor(menu,chr,armor)
 		 			default: sprintf(arpart,"_leggings");
 		 		}
 			}
+			else sprintf(arpart,"_%s",__armor[(armor - P_PLATEMAIL)*ARMOR_PARTS + i][__name]);
 		
 		new def[100],itm;
-		sprintf(def,"$item%s%s%s",material,artype,arpart);
+		sprintf(def,"$item%s%s%s%s",material,gender,artype,arpart);
 		
 		switch(action)
 		{
@@ -827,4 +655,18 @@ public equip2char_targ(t,chr,obj)
 	chr_addLocalIntVar(chr,CLV_CMDTEMP);
 		
 	addMenu(chr);
+}
+
+
+public addmenu_weapons(menu,chr,weapon)
+{
+	new weapongrp = weapon/WEAPONS_PER_GROUP;
+	
+	new material[20];
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL + 10*(weapongrp + P_AXES),material);
+		
+	new def[100];
+	sprintf(def,"$item_%s_%s",material,__weapons[weapon][__name]);
+		
+	addmenu_cback(menu,chr,getIntFromDefine(def));
 }
