@@ -1,7 +1,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (mining.sma -> override.amx)                     ||
 // || Maintained by Luxor   	                                          ||
-// || Last Update (18-feb-03)                                             ||
+// || Last Update (01-feb-03)                                             ||
 // || -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ||
 // || This file contains NoX-Wizard functions to support mining skill     ||
 // || If you want a different mining system, change this.                 ||
@@ -10,107 +10,56 @@
 /*************************************************************************************
  AUTHOR:	Luxor
  DESCRIPTION:	In this file you can change the mining system, add new ores and so on.
+ modified:	Horian
  ************************************************************************************/
-
-
 
 
 /*----------------------------------------------------------------------------------------*\
 Begin Customizable Metals
 \*----------------------------------------------------------------------------------------*/
 
-enum {
-	IRON = 0, SHADOW, MERKITE, COPPER, SILVER, BRONZE, GOLD, AGAPITE, VERITE, MYTHRIL
+enum 
+{
+	 iron=0, shadow, merkite, copper, silver, bronze, gold, agapite, verite, mythril
 };
 
 //How many ores have we got?
 const NUM_ORES = 10;
+/*Numeric properties of metals
+{oreweight, minskill for mining, chance to find ore, hex color of ore, ingame name of ore/ingot, minimal skill to use ingots as smith, scriptname of color}*/
 
-//Weight of ores
-static oreWeight[] = {
-700, //Iron
-700, //Shadow
-700, //Merkite
-700, //Copper
-700, //Silver
-700, //Bronze
-700, //Gold
-700, //Agapite
-700, //Verite
-700  //Mythril
+enum oreprop
+{
+oreweight,
+miningmin,
+orechance,
+orecolor,
+orename: 9,
+oreuseskill,
+orescriptname: 9
+}
+static oreProperty[NUM_ORES][oreprop] = {
+{700, 000, 100, 0x0838, "iron   ", 000, "iron    "},
+{700, 650, 60, 0x096c, "shadow", 650, "shadow  "},
+{700, 700, 55, 0x025e, "Merkit  ", 700, "merkite "},
+{700, 750, 50, 0x046E, "Kupfer  ", 750, "copper  "},
+{700, 790, 45, 0x0835, "silver  ", 790, "silver  "},
+{700, 800, 40, 0x083b, "Bronze  ", 800, "bronze  "},
+{700, 850, 35, 0x07d9, "Gold    ", 850, "golden  "},
+{700, 900, 30, 0x089d, "Agapit  ", 900, "agapite "},
+{700, 950, 25, 0x08a4, "Verit   ", 950, "verite  "},
+{700, 990, 20, 0x0191, "Mythril ", 990, "valorite"}
 };
 
-//Skill value required to find an ore
-static oreSkill[] = {
-0,   //Iron
-650, //Shadow
-700, //Merkite
-750, //Copper
-790, //Silver
-800, //Bronze
-850, //Gold
-900, //Agapite
-950, //Verite
-990  //Mythril
-};
-
-//Chance to find an ore
-static oreChance[] = {
-100, //Iron
-60,  //Shadow
-55,  //Merkite
-50,  //Copper
-45,  //Silver
-40,  //Bronze
-35,  //Gold
-30,  //Agapite
-25,  //Verite
-20  //Mythril
-};
-
-//Colors of ores
-//Remember that you can't have two ores with the same color
-static oreColor[] = {
-0x0000, //Iron
-0x0386, //Shadow
-0x02C3, //Merkite
-0x046E, //Copper
-0x0961, //Silver
-0x02E7, //Bronze
-0x0466, //Gold
-0x0150, //Agapite
-0x022F, //Verite
-0x0191  //Mythril
-};
-
-//Blacksmithing make menu for that ore
-static oreMakeMenu[] = {
-1,   //Iron
-800, //Shadow
-804, //Merkite
-814, //Copper
-813, //Silver
-801, //Bronze
-50,  //Gold
-806, //Agapite
-802, //Verite
-803  //Mythril
-};
-
-//Ores names
-static oreName[NUM_ORES][] = {
-"Iron", "Shadow", "Merkite", "Copper", "Silver", "Bronze", "Golden", "Agapite", "Verite", "Mythril"
-};
-
-/*----------------------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------------------
 End Customizable Metals
-\*----------------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------------------*/
   
-/*----------------------------------------------------------------------------------------*\
+/*----------------------------------------------------------------------------------------
 Begin Customizable Regions
-\*----------------------------------------------------------------------------------------*/
+----------------------------------------------------------------------------------------*/
                                                                                         
-static ENABLE_REGIONS = 0;	//This must be 1 if you want region mining to be activated
+static ENABLE_REGIONS = 0;//This must be 1 if you want region mining to be activated
 const NUM_REGIONS = 2;
 
 static oreRegions[NUM_REGIONS][4] = {
@@ -123,25 +72,191 @@ static regionChance[NUM_REGIONS][NUM_ORES] = {
 {100, 100, 50, 50, 100, 20, 20, 20, 20, 20}, //Region 1
 {100, 0, 40, 40, 0, 0, 100, 60, 60, 50}      //Region 2
 };
-
 /*----------------------------------------------------------------------------------------*\
 End Customizable Regions
 \*----------------------------------------------------------------------------------------*/
 
+/*----------------------------------------------------------------------------------------
+Begin Customizable blacksmithing system by GerNox
+----------------------------------------------------------------------------------------*/
+
+const globalSkillVar1 = 1004; //first global Var to store data of skill use
+const globalSkillVar2 = 1005; //second global Var to store data of skill use
+
+/*Here starts the definition of item properties a blacksmith can do and you can customize, this order:
+number of ingots needed for creation, minimal necessary skill, max. Skill with gain, Skill needed for succesful repair, number of ingots needed to repair
+*/
+const NUM_ITEMS = 49;
+enum smithprop
+{ 
+ingotnumber, 
+skillminsmith, 
+skillmaxsmith,
+repairskillsmith,
+repairingot,
+itemname: 20
+};
+static itemDef[NUM_ITEMS][smithprop]={ 
+{10, 120, 240, 140, 2, "_ringmail_gloves"},
+{14, 169, 401, 189, 4, "_ringmail_sleeves"},
+{16, 194, 449, 214, 5, "_ringmail_leggings"},
+{18, 219, 451, 239, 6, "_ringmail_tunic"},
+{10, 145, 410, 165, 2, "_chain_coif"},
+{18, 367, 609, 387, 6, "_chain_leggings"},
+{20, 391, 650, 411, 7, "_chain_tunic"},
+{10, 564, 804, 584, 2, "_plate_gorget"},
+{12, 589, 857, 609, 3, "_plate_gloves"},
+{15, 636, 902, 656, 4, "_plate_helm"},
+{18, 663, 903, 683, 6, "_plate_sleeves"},
+{20, 688, 971, 708, 7, "_plate_leggings"},
+{12, 441, 712, 461, 3, "_female_plate"},
+{25, 750, 1000, 770, 9, "_platemail"},
+{15, 083, 190, 103, 4, "_bascinet"},
+{15, 379, 455, 399, 4, "_close_helm"},
+{15, 379, 403, 399, 4, "_helmet"},
+{15, 379, 423, 399, 4, "_nose_helm"},
+{10, 000, 200, 020, 2, "_buckler"},
+{14, 000, 255, 020, 4, "_metal_shield"},
+{12, 000, 250, 020, 3, "_bronze_shield"},
+{08, 000, 167, 020, 1, "_wooden_kite_shield"},
+{16, 046, 250, 066, 5, "_metal_kite_shield"},
+{18, 243, 505, 263, 6, "_heater"},
+{03, 000, 100, 020, 1, "_dagger"},
+{08, 243, 507, 263, 1, "_cutlass"},
+{08, 367, 604, 387, 1, "_iron_kryss"},
+{08, 441, 712, 461, 1, "_katana"},
+{10, 317, 549, 337, 2, "_scimitar"},
+{10, 354, 613, 374, 2, "_broadsword"},
+{12, 280, 567, 300, 3, "_long_sword"},
+{14, 243, 511, 263, 4, "_viking_sword"},
+{06, 145, 401, 165, 1, "_mace"},
+{10, 194, 454, 214, 2, "_maul"},
+{14, 028, 552, 048, 4, "_war_mace"},
+{16, 342, 605, 362, 5, "_war_hammer"},
+{18, 342, 515, 362, 6, "_hammer_pick"},
+{06, 453, 708, 573, 1, "_short_spear"},
+{12, 429, 643, 449, 3, "_war_fork"},
+{12, 490, 753, 510, 3, "_spear"},
+{12, 293, 568, 313, 3, "_double_axe"},
+{14, 305, 558, 325, 4, "_battle_axe"},
+{14, 280, 558, 300, 4, "_large_battle_axe"},
+{14, 342, 603, 362, 4, "_axe"},
+{16, 330, 606, 350, 5, "_two-handed_axe"},
+{14, 342, 613, 362, 4, "_executioners_axe"},
+{14, 391, 673, 411, 4, "_war_axe"},
+{18, 317, 553, 337, 6, "_bardiche"},
+{20, 391, 654, 411, 7, "_halberd"}
+};
+
+/*Here all ingame messages used in blacksmith menu, order of sentences is essential!*/
+const NUM_smithSENTENCE = 89;
+static msg_blacksmithDef[NUM_smithSENTENCE][]={
+"You are to far away from forge.", 
+"Choose the item you want to repair or the ingots you want to use", 
+"You have no tong or smithy hammer to blacksmith.",
+"The ingots need to be inside your backpack!",
+"You are not skilled enough to use this metall.",
+"You need to select ingots or an item a blacksmith can create!",
+"     Blacksmith Menu",
+"ringmail",
+"chainmail",
+"platemail",
+"helms",
+"shields",
+"swords/blades",
+"maces/Haemmer",
+"spears",
+"aces",
+"pole arms",
+"repeat last item",
+"     ringmail menu!",
+"gloves",
+"sleeves",
+"leggings",
+"tunic",
+"     chainmail menu!",
+"coif",
+"     platemail menu!",
+"gorget",
+"plate helm",
+"female plate",
+"     helms menu!",
+"bascinet",
+"close helm",
+"helmet",
+"nose helm",
+"     shield menu!",
+"buckler",
+"metal shield",
+"round shield",
+"Drachenschild",
+"metal kite shield",
+"heater",
+"     sword and blades menu!",
+"dagger",
+"cutlass",
+"kryss",
+"katana",
+"scimitar",
+"broad sword",
+"long sword",
+"viking sword",
+"mace",
+"maul",
+"war mace",
+"war hammer",
+"hammer pick",
+"     spears and forks menu!",
+"short spear",
+"war fork",
+"spear",
+"     axes menu!",
+"double axe",
+"battle axe",
+"large battle axe",
+"axe",
+"two handed axe",
+"executioners axe",
+"war axe",
+"     Pole Arms menu!",
+"bardiche",
+"halberd",
+"You have no idea how to make this.",
+"You have to few ingots.",
+"mady by",
+"ERROR! PUBLIC ITEM_CREATION: outside parameter(0..9)",
+"exceptional",
+"You create the item with exceptional quality.",
+"You create the item.",
+"ERROR! PUBLIC ITEM_CREATION:outside of parameter(90..100)",
+"You create the item with a quality below average.",
+"ERROR! PUBLIC ITEM_CREATION: outside of parameter(0-100)",
+"You are not skilled enough to repair something.",
+"It must be inside your backpack.",
+"This can not be repaired.",
+"This is already in best shape.",
+"You have too few ingots of this metall to repair it.",
+"Your try to repair fails and now the item is even in worse shape.",
+"Your try to repair fails and the item has been weakened.",
+"     mace menu!",
+"You repair the item."
+};
+
+/*----------------------------------------------------------------------------------------*\
+End Customizable blacksmithing system
+\*----------------------------------------------------------------------------------------*/
 
 /*****************************************************************************************
- FUNCTION :	__nxw_sk_mining
- AUTHOR   :	Luxor
- PURPOSE  :	This function is called by Nox-Wizard engine after land and skill control,
- 		it chooses the picked up ore and put it in backpack.
+ FUNCTION :__nxw_sk_mining
+ AUTHOR   :Luxor
+ PURPOSE  :This function is called by Nox-Wizard engine after land and skill control,
+ it chooses the picked up ore and put it in backpack.
  ****************************************************************************************/
 public __nxw_sk_mining(const cc)
 {
-
-	new oreFound = IRON;	//Ore found if nothing else will be found by the miner.
+	new oreFound = iron;	//Ore found if nothing else will be found by the miner.
 	new oreAmount = 1;
 	new index = 0;
-
 	new skill = chr_getSkill(cc, SK_MINING);
 	new region = -1;
 	if (ENABLE_REGIONS == 1) {
@@ -156,7 +271,7 @@ public __nxw_sk_mining(const cc)
 
 	for (index = 0; index < NUM_ORES; index++) {
 		if (ENABLE_REGIONS == 1 && region < 0) break;
-		if (skill > oreSkill[index] && random(100) < oreChance[index]) {
+		if (skill > oreProperty[index][miningmin] && random(100) < oreProperty[index][orechance]) {
 			if (ENABLE_REGIONS == 1 && region > -1) {
 				if (random(100) < regionChance[region][index])
 					oreFound = index;
@@ -164,9 +279,9 @@ public __nxw_sk_mining(const cc)
 				oreFound = index;
 		}
 	}
-
-	if (ENABLE_REGIONS == 1 && region < 0) oreFound = IRON;
-
+	if (ENABLE_REGIONS == 1 && region < 0) oreFound = iron;
+	
+	
         oreAmount = random(100);
 	if (oreAmount > 8) {
 		oreAmount = 1;
@@ -176,101 +291,762 @@ public __nxw_sk_mining(const cc)
 		chr_message( cc, _, "You place a gem in your pack.");
 		return;
 	}*/
+	
 	new str[50];	//Adjust the size if you create new ores with long names!
-	sprintf(str, "%s ore", oreName[oreFound]);
+	sprintf(str, "%s", oreProperty[oreFound][orename]);
+	trim(str);   //remove triming spaces
+	sprintf(str, "%s Erz", str);
 	
 	new bp = chr_getBackpack( cc, true );
 	new ore = itm_createByDef( "$item_iron_ore" );
 	itm_setProperty( ore, IP_AMOUNT, _, oreAmount );
-	itm_setProperty( ore, IP_STR_NAME, 0, str );
-	itm_setProperty( ore, IP_COLOR, _, oreColor[oreFound] );
+	itm_setProperty(ore, IP_STR_NAME, 0, str);
+	itm_setProperty(ore, IP_COLOR, _, oreProperty[oreFound][orecolor]);
 	itm_setContSerial( ore, bp );
-	itm_setProperty( ore, IP_WEIGHT, _, 100 );
-	
-	itm_setProperty(ore, IP_WEIGHT, _, oreWeight[oreFound]);
-	chr_message( cc, _, "You place some %s in your pack.", str);
+	itm_setProperty(ore, IP_WEIGHT, _, oreProperty[oreFound][oreweight]);
+	chr_message( cc, _, "Ihr findet etwas %s und packt es in Euer Gepaeck.", str);
 	itm_contPileItem( bp, ore );
+	itm_refresh(ore);
 }
 
-
-public __nxw_smeltOre2( const cc, const ore, const minskill, const id, const color, const orename[])
-{
-
-    new skill = chr_getSkill(cc, SK_MINING);
-    if (skill < minskill) {
-        chr_message( cc, _, "You have no idea what to do with this strange ore");
-        return;
-    }
-
-    new ore_amount = itm_getProperty(ore, IP_AMOUNT);
-    if (!chr_checkSkill(cc, SK_MINING, 0, 1000, 1)) {
-        if (ore_amount == 1) {
-            chr_message( cc, _, "Your hand slips and the last of your materials are destroyed.");
-            itm_remove(ore);
-        } else {
-            chr_message( cc, _, "Your hand slips and some of your materials are destroyed.");
-            itm_setProperty(ore, IP_AMOUNT, _, ore_amount/2);
-            itm_refresh(ore);                   // tell the client item has been changed
-        }
-    } else {
-        new numingots=ore_amount*2;         // one ore gives two ingots
-	new bp = chr_getBackpack( cc, true );
-    new ingot = itm_createByDef( "$item_iron_ingots" );
-	itm_setProperty( ingot, IP_AMOUNT, _, numingots );
-	itm_setProperty( ingot, IP_STR_NAME, 0, orename );
-	itm_setProperty( ingot, IP_COLOR, _, color );
-	itm_setContSerial( ingot, bp );
-	itm_setProperty( ingot, IP_WEIGHT, _, 100 );
-
-    chr_message( cc, _, "You have smelted your ore");
-    chr_message( cc, _, "You place some %s in your pack.",orename);
-	itm_contPileItem( bp, ingot );
-        itm_remove(ore);
-    }
-}
 
 /****************************************************************************
  FUNCTION : __nxw_smeltOre
  AUTHOR   : Luxor
  PURPOSE  : The function called by Nox-Wizard engine to smelt ores
  ****************************************************************************/
-
-public __nxw_smeltOre(const chr, const color, ore)
+public __nxw_smeltOre(const cc, const color1, const color2, ore)
 {
-	if ( chr < 0 || color < 0) {
-		printf("ERROR RUNNING __nxw_smeltOre");
-		return;
-	}
-
-	new str[50];	//Adjust the size if you create new ores with long names!
-	new index = 0;
-	for (index = 0; index < NUM_ORES; index++) {
-		if (color == oreColor[index]) {
-			sprintf(str, "%s Ingot", oreName[index]);
-            if (index == IRON) { //Iron and Silver have discordant ore/ingot colors
-				__nxw_smeltOre2( chr, ore,   0, 0x1BF2, 0x0961, str);
-			} else if (index == SILVER) {
-				__nxw_smeltOre2( chr, ore,   0, 0x1BF2, 0, str);
-			} else {
-				__nxw_smeltOre2( chr, ore,   0, 0x1BF2, color, str);
-			}
-		}
-	}
+    new skill = chr_getSkill(cc, SK_MINING);
+    new color = itm_getProperty(ore, IP_COLOR);
+    new index = 0;
+    for (index = 0; index < NUM_ORES; index++) 
+        {
+        if (color == oreProperty[index][orecolor])
+        {
+              new minskill = oreProperty[index][miningmin]
+              if (skill < minskill)
+              {
+                     chr_message( cc, _, "Ihr seid zu unerfahren, um dieses Erz schmelzen zu koennen.");
+                     return;
+              }
+              new ore_amount = itm_getProperty(ore, IP_AMOUNT);
+              if (!chr_checkSkill(cc, SK_MINING, 0, 1000, 1))
+              {
+                     if (ore_amount == 1)
+                     {
+                     chr_message( cc, _, "Eure Hand zuckt und Ihr schuettet den Rest des fluessigen Erzes in die Glut.");
+                     itm_remove(ore);
+                     }
+                     else
+                     {
+                     chr_message( cc, _, "Euch rutscht die Hand aus und ein Teil des Erzes faellt in die Glut.");
+                     itm_setProperty(ore, IP_AMOUNT, _, ore_amount/2);
+                     itm_refresh(ore); // tell the client item has been changed
+                     }
+               }
+               else
+               {
+               //new numingots=ore_amount*2;         // one ore gives two ingots
+               new ingotname[50]
+               sprintf(ingotname, "%s", oreProperty[index][orename]);
+               trim(ingotname);   //remove triming spaces
+               sprintf(ingotname, "%s Barren", ingotname);
+               new backpack = chr_getBackpack( cc, true );
+               new ingot = itm_createByDef( "$item_iron_ingots");
+               itm_setProperty(ingot, IP_WEIGHT, _, 100);
+               itm_setProperty(ingot, IP_COLOR, _, oreProperty[index][orecolor]); 
+               itm_setProperty(ingot, IP_STR_NAME, 0, ingotname);
+               itm_setContSerial( ingot, backpack );
+               itm_contPileItem( backpack, ingot );
+               itm_refresh(ingot);
+               chr_message( cc, _, "Ihr habt das Erz geschmolzen.");
+               chr_message( cc, _, "Sorgfaeltig verstaut Ihr %s in Eurem Gepaeck.",ingotname);
+               itm_remove(ore);
+               }
+        }//color if           
+    }//for
 }
 
-/********************************************************************************************
- FUNCTION : __nxw_ingot_mm
- AUTHOR   : Luxor
- PURPOSE  : The function called by Nox-Wizard engine to choose the makemenu for blacksmithing
- *******************************************************************************************/
+//////////////////////////////////////////////////////////////////
+///////// smith system by GerNoX /////////////////////////////////
+//////////////////////////////////////////////////////////////////
+//////////////////////// Horian + Saber //////////////////////////
+//////////////////////////////////////////////////////////////////
 
-public __nxw_ingot_mm(const color)
+public blacksmith(const itm, const chr)
 {
-	new index = 0;
-	for (index = 0; index < NUM_ORES; index++) {
-		if (color == oreColor[index]) {
-			return oreMakeMenu[index];
-		}
-	}
-	return oreMakeMenu[IRON];
+bypass();
+new itmx = itm_getProperty(itm, IP_POSITION, IP2_X); // Ausgabe der
+new itmy = itm_getProperty(itm, IP_POSITION, IP2_Y); // Char und der Item Position
+new itmz = itm_getProperty(itm, IP_POSITION, IP2_Z);
+new chrz = chr_getProperty(chr, CP_POSITION, CP2_Z);
+new chrx = chr_getProperty(chr, CP_POSITION, CP2_X); // um den Abstand bestimmen 
+new chry = chr_getProperty(chr, CP_POSITION, CP2_Y); // zu koennen
+new x = itmx - chrx;
+new y = itmy - chry;
+new triggerscript = itm_getProperty(itm, IP_SCRIPTID);
+new tonge = chr_countItems(chr, 0x0FBC, -1); //tonge is searched in pack
+new hammer = chr_countItems(chr, 0x13E4, -1); //hammer is searched in pack
+if((602 <= triggerscript <= 603) && (chr_lineOfSight(chr, chrx, chry, chrz, itmx, itmy, itmz, 63) == 1)) //trigger was anvil and Line of sight is ok
+{
+     //chr_message( chr, _, " x = %d y = %d", x, y);
+     if ((x > 2)|(x < -2)) // distance to anvil?
+         {
+         chr_message( chr, _, "%s", msg_blacksmithDef[0]);
+         return;
+         }
+     else if ((y > 2)|(y < -2))
+         {
+         chr_message( chr, _, "%s", msg_blacksmithDef[0]);
+         return;
+         }
+     else if ((tonge || hammer) < 1) //if tools are there?
+        {
+        chr_message( chr, _, "%s", msg_blacksmithDef[2]);
+        return;
+        }
+}
+else if(triggerscript == 98) //trigger was smithy hammer
+        {
+        new itm_near = set_create(); // creating a new set, fill the set with all items in range
+	set_addItemsNearXY( itm_near, chrx, chry, 2, false);
+	for (set_rewind(itm_near); !set_end(itm_near);)  
+	    {
+	    new item = set_getItem(itm_near);
+	    new itemid = itm_getProperty(item, IP_ID);
+	    itmx = itm_getProperty(item, IP_POSITION, IP2_X); // gives item position
+	    itmy = itm_getProperty(item, IP_POSITION, IP2_Y); 
+	    itmz = itm_getProperty(item, IP_POSITION, IP2_Z);
+	    new los = chr_lineOfSight(chr, chrx, chry, chrz, itmx, itmy, itmz, 63);
+	    if (((itemid == 0x0FAF ) ||( itemid == 0x0FB0 )) &&  los == 1  )  //check for anvil in range and Line of sight is ok 
+	        {
+	        chr_message( chr, _, "%s", msg_blacksmithDef[1]);
+	        target_create( chr, _, _, _, "blacksmithtwo" );
+	        return;
+	        }
+            }//for closed
+        set_delete(itm_near);
+        chr_message( chr, _, "%s", msg_blacksmithDef[0]);
+        return;
+        }  //if closed
+chr_message( chr, _, "%s", msg_blacksmithDef[1]);
+target_create( chr, _, _, _, "blacksmithtwo" );
+}
+
+
+public blacksmithtwo( const t, const chr, const target, const x, const y, const z, const model, const param1 )
+{
+new itemscript = itm_getProperty(target, IP_SCRIPTID);
+new itemid=itm_getProperty(target, IP_ID);
+if (300001 <= itemscript <= 390002)//weapon/armor was target
+    {
+    _repair(chr, target)
+    }
+else if (itemid == 0x1bf2) //ingots was target
+   {
+   new backpack = chr_getBackpack( chr, true );
+   if ((itm_getProperty(target, IP_CONTAINERSERIAL)) != (itm_getProperty(backpack,IP_SERIAL))) //ingots in pack?
+       {
+       chr_message( chr, _,"%s", msg_blacksmithDef[3]);
+       return;
+       }
+   else
+       {
+       chr_setLocalIntVar(chr, globalSkillVar1, target); //Serial ingot-target stored at char
+       new color = itm_getProperty(target, IP_COLOR);//color of ingots?
+       new actualskill;
+       //is char good enough to work with this kind of ingots?
+           switch(color) 
+            {
+       case 2104:  actualskill=oreProperty[0][oreuseskill]; //iron
+       case 2412:  actualskill=oreProperty[1][oreuseskill]; //shadow
+       case 0606:  actualskill=oreProperty[2][oreuseskill]; //Merkit
+       case 1134:  actualskill=oreProperty[3][oreuseskill]; //Kupfer
+       case 2101:  actualskill=oreProperty[4][oreuseskill]; //silver
+       case 2107:  actualskill=oreProperty[5][oreuseskill]; //Bronze
+       case 2009:  actualskill=oreProperty[6][oreuseskill]; //Gold
+       case 2205:  actualskill=oreProperty[7][oreuseskill]; //Agapit
+       case 2212:  actualskill=oreProperty[8][oreuseskill]; //Verit
+       case 0401:  actualskill=oreProperty[9][oreuseskill]; //Mythril
+       default: chr_message( chr, _, "Ingots of unknown color!");
+             }
+       if (chr_getSkill(chr, SK_BLACKSMITHING) < actualskill)
+              {
+              chr_message( chr, _, "%s", msg_blacksmithDef[4]);
+              return;
+              }
+       else menu_smith(chr)
+       }
+    }
+else chr_message( chr, _, "%s", msg_blacksmithDef[5]);
+}
+
+
+// Main smith menu
+public menu_smith (const chr)
+{
+mnu_prepare(chr, 1, 11);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[6]);
+
+mnu_addItem(chr, 0, 0, msg_blacksmithDef[7]);
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[8]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[9]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[10]);
+mnu_addItem(chr, 0, 4, msg_blacksmithDef[11]);
+mnu_addItem(chr, 0, 5, msg_blacksmithDef[12]);
+mnu_addItem(chr, 0, 6, msg_blacksmithDef[13]);
+mnu_addItem(chr, 0, 7, msg_blacksmithDef[14]);
+mnu_addItem(chr, 0, 8, msg_blacksmithDef[15]);
+mnu_addItem(chr, 0, 9, msg_blacksmithDef[16]);
+mnu_addItem(chr, 0,10, msg_blacksmithDef[17]);
+
+mnu_setCallback(chr, funcidx("smithBtnPress"));
+mnu_show(chr)
+}
+
+public smithBtnPress (const chr, const pg, const idx)
+{
+switch (idx)
+{
+case 0: menu_armor_ring(chr);
+case 1: menu_armor_chain(chr);
+case 2: menu_armor_plate(chr);
+case 3: menu_helm(chr);
+case 4: menu_schield(chr);
+case 5: menu_weapon_sword(chr);
+case 6: menu_weapon_mace(chr);
+case 7: menu_weapon_Speer(chr);
+case 8: menu_weapon_axe(chr);
+case 9: menu_weapon_pole(chr);
+case 10: last_smithitem(chr);
+default: return;
+}
+}
+
+public menu_armor_ring (const chr)
+{
+mnu_prepare(chr, 1, 5);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[18]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[19]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[20]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[21]);
+mnu_addItem(chr, 0, 4, msg_blacksmithDef[22]);
+
+mnu_setCallback(chr, funcidx("armorbtn_ring"));
+mnu_show(chr)
+}
+
+public armorbtn_ring (const chr, const pg, const idx)
+{ //IDX definition and item calculation
+new itemtyp = -1 + idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public menu_armor_chain (const chr)
+{
+mnu_prepare(chr, 1, 4);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[23]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[24]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[21]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[22]);
+
+mnu_setCallback(chr, funcidx("armorbtn_chain"));
+mnu_show(chr)
+}
+
+public armorbtn_chain (const chr, const pg, const idx)
+{
+new starter = 3;
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+//Platenmail
+public menu_armor_plate (const chr)
+{
+mnu_prepare(chr, 1, 8);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[25]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[26]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[19]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[27]);
+mnu_addItem(chr, 0, 4, msg_blacksmithDef[20]);
+mnu_addItem(chr, 0, 5, msg_blacksmithDef[21]);
+mnu_addItem(chr, 0, 6, msg_blacksmithDef[28]);
+mnu_addItem(chr, 0, 7, msg_blacksmithDef[22]);
+
+mnu_setCallback(chr, funcidx("armorbtn_plate"));
+mnu_show(chr)
+}
+
+public armorbtn_plate (const chr, const pg, const idx)
+{
+new starter = 6;
+//printf("%d",idx);
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public menu_helm (const chr)
+{
+mnu_prepare(chr, 1, 5);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[29]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[30]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[31]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[32]);
+mnu_addItem(chr, 0, 4, msg_blacksmithDef[33]);
+
+mnu_setCallback(chr, funcidx("helmbtn"));
+mnu_show(chr)
+}
+
+public helmbtn (const chr, const pg, const idx)
+{
+new starter = 13;
+//printf("%d",idx);
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public menu_schield (const chr)
+{
+mnu_prepare(chr, 1, 7);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[34]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[35]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[36]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[37]);
+mnu_addItem(chr, 0, 4, msg_blacksmithDef[38]);
+mnu_addItem(chr, 0, 5, msg_blacksmithDef[39]);
+mnu_addItem(chr, 0, 6, msg_blacksmithDef[40]);
+
+mnu_setCallback(chr, funcidx("shieldbtn"));
+mnu_show(chr)
+}
+
+public shieldbtn (const chr, const pg, const idx)
+{
+new starter = 17;
+//printf("%d",idx);
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public menu_weapon_sword (const chr)
+{
+mnu_prepare(chr, 1, 9);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[41]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[42]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[43]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[44]);
+mnu_addItem(chr, 0, 4, msg_blacksmithDef[45]);
+mnu_addItem(chr, 0, 5, msg_blacksmithDef[46]);
+mnu_addItem(chr, 0, 6, msg_blacksmithDef[47]);
+mnu_addItem(chr, 0, 7, msg_blacksmithDef[48]);
+mnu_addItem(chr, 0, 8, msg_blacksmithDef[49]);
+
+mnu_setCallback(chr, funcidx("weaponbtn_Schwerter"));
+mnu_show(chr)
+}
+
+public weaponbtn_Schwerter (const chr, const pg, const idx)
+{
+new starter = 23;
+//printf("%d",idx);
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public menu_weapon_mace (const chr)
+{
+mnu_prepare(chr, 1, 6);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[87]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[50]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[51]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[52]);
+mnu_addItem(chr, 0, 4, msg_blacksmithDef[53]);
+mnu_addItem(chr, 0, 5, msg_blacksmithDef[54]);
+
+mnu_setCallback(chr, funcidx("weaponbtn_mace"));
+mnu_show(chr)
+}
+
+public weaponbtn_mace (const chr, const pg, const idx)
+{
+new starter = 31;
+//printf("%d",idx);
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public menu_weapon_Speer (const chr)
+{
+mnu_prepare(chr, 1, 4);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[55]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[56]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[57]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[58]);
+
+mnu_setCallback(chr, funcidx("weaponbtn_Speer"));
+mnu_show(chr)
+}
+
+public weaponbtn_Speer (const chr, const pg, const idx)
+{
+new starter = 36;
+//printf("%d",idx);
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public menu_weapon_axe (const chr)
+{
+mnu_prepare(chr, 1, 8);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[59]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[60]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[61]);
+mnu_addItem(chr, 0, 3, msg_blacksmithDef[62]);
+mnu_addItem(chr, 0, 4, msg_blacksmithDef[63]);
+mnu_addItem(chr, 0, 5, msg_blacksmithDef[64]);
+mnu_addItem(chr, 0, 6, msg_blacksmithDef[65]);
+mnu_addItem(chr, 0, 7, msg_blacksmithDef[66]);
+
+mnu_setCallback(chr, funcidx("weaponbtn_axe"));
+mnu_show(chr)
+}
+
+public weaponbtn_axe (const chr, const pg, const idx)
+{
+new starter = 39;
+//printf("%d",idx);
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public menu_weapon_pole (const chr)
+{
+mnu_prepare(chr, 1, 3);
+mnu_setStyle(chr, MENUSTYLE_STONE, 0x0);
+mnu_setTitle(chr, msg_blacksmithDef[67]);
+
+mnu_addItem(chr, 0, 0, " ");
+mnu_addItem(chr, 0, 1, msg_blacksmithDef[68]);
+mnu_addItem(chr, 0, 2, msg_blacksmithDef[69]);
+
+mnu_setCallback(chr, funcidx("weaponbtn_pole_arms"));
+mnu_show(chr)
+}
+
+public weaponbtn_pole_arms (const chr, const pg, const idx)
+{
+new starter = 46;
+//printf("%d",idx);
+new itemtyp = starter+idx;
+if( (idx == 0) || (idx == -1))
+{
+	menu_smith(chr);
+	return;
+}
+item_smith_create(chr, itemtyp);
+}
+
+public last_smithitem (const chr)
+{
+new itemtyp = chr_getLocalIntVar(chr, globalSkillVar2);
+item_smith_create( chr, itemtyp);
+}
+
+public item_smith_create(const chr,  const itemtyp)
+{
+new barrenid = chr_getLocalIntVar(chr, globalSkillVar1 );//serial of ingots is called
+new color = itm_getProperty(barrenid, IP_COLOR);//ingot color is called
+
+if (itm_getProperty(barrenid, IP_AMOUNT) >= itemDef[itemtyp][ingotnumber])
+{
+if (chr_checkSkill(chr, SK_BLACKSMITHING, itemDef[itemtyp][skillminsmith], itemDef[itemtyp][skillmaxsmith], 1)) //skillcheck and gain-decision
+{
+itm_reduceAmount(barrenid, itemDef[itemtyp][ingotnumber]); //fail but should be able? nevertheless ingot loss
+itm_refresh(barrenid);
+item_smith_create_two(chr, itemtyp, color)
+}
+else
+{
+itm_reduceAmount(barrenid, (itemDef[itemtyp][ingotnumber])/2); //is not able to create them? nevertheless half amount of needed ingots taken
+itm_refresh(barrenid);
+chr_message( chr, _,"%s", msg_blacksmithDef[70]);
+return;
+}
+}
+else
+{
+ chr_message( chr, _,"%s", msg_blacksmithDef[71]);
+ return;
+}
+}
+
+
+public item_smith_create_two (const chr, const itemtyp, const colornum)
+{
+new backpack = chr_getBackpack( chr, true );
+chr_setLocalIntVar(chr, globalSkillVar2, itemtyp);
+new color[50];
+switch(colornum) //get the color name for item creation
+{
+       case 2104:  sprintf(color, "%s", oreProperty[0][orescriptname]); //iron
+       case 2412:  sprintf(color, "%s", oreProperty[1][orescriptname]); //shadow
+       case 0606:  sprintf(color, "%s", oreProperty[2][orescriptname]); //Merkit
+       case 1134:  sprintf(color, "%s", oreProperty[3][orescriptname]); //Kupfer
+       case 2101:  sprintf(color, "%s", oreProperty[4][orescriptname]); //silver
+       case 2107:  sprintf(color, "%s", oreProperty[5][orescriptname]); //Bronze
+       case 2009:  sprintf(color, "%s", oreProperty[6][orescriptname]); //Gold
+       case 2205:  sprintf(color, "%s", oreProperty[7][orescriptname]); //Agapit
+       case 2212:  sprintf(color, "%s", oreProperty[8][orescriptname]); //Verit
+       case 0401:  sprintf(color, "%s", oreProperty[9][orescriptname]); //Mythril
+       default: chr_message( chr, _, "Ore of unknown color!");
+}
+trim(color);   //remove triming spaces
+new name[50];
+sprintf(name, "%s", itemDef[itemtyp][itemname]);
+trim(name); 
+sprintf(name, "$item_%s%s", color, itemDef[itemtyp][itemname]);
+new smithitem = itm_createByDef(name, backpack); //item-Script-Name is composed and item in Pack created
+itm_refresh(smithitem);
+
+chr_sound (chr, 42); //Sound blacksmith
+chr_action (chr, 11); //Animation blacksmiths
+
+//skill-dependent random number calculated
+new skillBS = chr_getSkill(chr, SK_BLACKSMITHING)/10;
+new skillAL = chr_getSkill(chr, SK_ARMSLORE)/100;
+new chance = random(100);//random between 0-100
+new itmrandom = ((chance*100) / skillBS - skillAL);
+//printf("SkillBS = %d, SkillAL = %d, Chance = %d, ItmRandom = %d^n", skillBS, skillAL, chance, itmrandom);
+if (itmrandom > 100)
+{
+itmrandom = 100;
+}
+else if (itmrandom < 0)
+{
+itmrandom = 0;
+}
+//printf("ItmRandom = %d^n",itmrandom);
+new chrstr[30]; //new empty string for creator name
+new chrname = chr_getProperty(chr, CP_STR_NAME, 0, chrstr); //call char name
+itm_setProperty(smithitem, IP_STR_CREATOR, _, chrname); // imprint the creator name at item
+
+//quality control
+new hp = itm_getProperty(smithitem, IP_HP); //HP is called
+new def = itm_getProperty(smithitem, IP_DEF); // defense value is called
+new mindamage = itm_getProperty(smithitem, IP_LODAMAGE); //minimal damage is called
+new itmname[50]; //new string for item name
+itm_getProperty(smithitem, IP_STR_NAME, 0, itmname); //item name is called
+if (chr_getProperty(chr, CP_SKILL, SK_BLACKSMITHING) == 1000)//creator was grandmaster?
+{
+itm_setProperty(smithitem, IP_STR_NAME, _, "%s %s %s", itmname, msg_blacksmithDef[72], chrname); //then extend the itemname
+
+}
+itm_getProperty(smithitem, IP_STR_NAME, 0, itmname); //item name again called
+
+new defrandom = random(18)+1 //RandomDefence
+new hprandom = random(20)+1 //RandomItemHP
+new damagerandom = random(4)+1 //RandomLODamage
+//printf("defrandom = %d, hp random = %d, damagerandom = %d^n", defrandom, hprandom, damagerandom);
+switch (itmrandom)
+{
+case 0..29:
+{
+if (0 < itemtyp < 24)//is armor
+{
+itm_setProperty(smithitem, IP_DEF, _, (def+def*defrandom/100)); // defense value is increased
+itm_setProperty(smithitem, IP_HP, _, (hp + (hprandom/2))); //hitpoint(robustness) value is increased
+itm_setProperty(smithitem, IP_MAXHP, _, (hp + (hprandom/2)));
+}
+else if (itemtyp >= 24) //is weapon
+{
+itm_setProperty(smithitem, IP_HP, _, (hp + hprandom)); //hitpoint(robustness) value is increased
+itm_setProperty(smithitem, IP_MAXHP, _, (hp + hprandom));
+itm_setProperty(smithitem, IP_LODAMAGE, _, mindamage+damagerandom);//minimal damage is increased
+
+}
+else log_message("%s", msg_blacksmithDef[73]);
+
+itm_setProperty(smithitem, IP_STR_NAME, _, "%s %s", msg_blacksmithDef[74], itmname); //"exeptional" added to itemname
+chr_message( chr, _, "%s", msg_blacksmithDef[75]);
+}
+case 30..79:chr_message( chr, _, "%s", msg_blacksmithDef[76]);
+case 80..100:
+{
+if (0 < itemtyp < 24)//is armor
+{
+itm_setProperty(smithitem, IP_DEF, _, (def-def*(defrandom/2)/100)); // defense value is lowered
+itm_setProperty(smithitem, IP_HP, _, (hp - (hprandom/2))); //hitpoint(robustness) value is lowered
+itm_setProperty(smithitem, IP_MAXHP, _, (hp - (hprandom/2)));
+}
+else if (itemtyp >= 24) //is weapon
+{
+itm_setProperty(smithitem, IP_HP, _, (hp - hprandom)); //hitpoint(robustness) value is lowered
+itm_setProperty(smithitem, IP_MAXHP, _, (hp - hprandom));
+itm_setProperty(smithitem, IP_LODAMAGE, _, mindamage-(damagerandom/2)); //minimal damage is lowered
+}
+else log_message("%s", msg_blacksmithDef[77]);
+
+chr_message( chr, _, "%s", msg_blacksmithDef[78]);
+}
+default: log_message("%s", msg_blacksmithDef[79]);
+}
+}
+
+/****************************************************
+************* Reparieren ****************************
+****************************************************/
+
+public _repair(const target, const chr)
+{
+new smithing = chr_getProperty(chr, CP_SKILL, SK_BLACKSMITHING);
+new hp = itm_getProperty(target, IP_HP);
+new maxhp = itm_getProperty(target, IP_MAXHP);
+//new magic = itm_getProperty(target, IP_MAGIC);
+new color = itm_getProperty(target, IP_COLOR);//color is called
+new itemid=itm_getProperty(target, IP_ID);//ItemID is called
+new barrennum  = chr_countItems(chr, 0x1bf2, color);
+new index = 0;
+for (index = 0; index < NUM_ITEMS; index++)
+   {
+   //if (itemid == itemDef[index][3])//Array-line calculation
+      //{
+      if (smithing < 500)
+         {
+         chr_message( chr, _,"%s", msg_blacksmithDef[80]);
+         return;
+         }
+      //if (magic!= 0) //right now every item has magic 0 so does not work at the moment
+      new backpack = chr_getBackpack( chr, true );
+      if ((itm_getProperty(target, IP_CONTAINERSERIAL)) != (itm_getProperty(backpack,IP_SERIAL)))
+         {
+         chr_message( chr, _,"%s", msg_blacksmithDef[81]);
+         return;
+         }
+      if (!hp)//does the item has an hp-value? if not we can't repair it
+         {
+         chr_message( chr, _,"%s", msg_blacksmithDef[82]);
+         return;
+         }
+      if (hp==maxhp)
+         {
+         chr_message( chr, _, "%s", msg_blacksmithDef[83]);
+         return;
+         }
+      if (barrennum <= itemDef[index][repairingot])
+         {
+         chr_message( chr, _, "%s", msg_blacksmithDef[84]);
+         return;
+         }
+      new dmg = 4;    // repairing creates a damage at max-damage possible
+      if((smithing>=900)) dmg=1;
+      else if ((smithing>=700)) dmg=2;
+      else if ((smithing>=500)) dmg=3;
+      if (chr_checkSkill(chr, SK_BLACKSMITHING, itemDef[index][repairskillsmith], itemDef[index][skillmaxsmith], 0))
+          {
+          new newmaxhp=maxhp-dmg;
+          itm_contDelAmount(backpack , itemDef[index][repairingot],  0x1bf2, color);
+          itm_setProperty(target, IP_HP, _, newmaxhp);
+          itm_setProperty(target, IP_MAXHP, _, newmaxhp);
+          chr_message( chr, _,"%s", msg_blacksmithDef[88]);
+          }
+          //smithing is too low for repair normally but nevertheless there is a random chance for repairing
+     
+    new chance = random(50)
+    switch(chance)
+               {
+               case 0..35:
+                   {
+                   new newhp=hp-2;
+                   itm_contDelAmount(backpack , (itemDef[index][repairingot])/2, 0x1bf2 , color);
+                   itm_setProperty(target, IP_HP, _, newhp);
+                   chr_message( chr, _,"%s", msg_blacksmithDef[85]);
+                   }
+               case 36..50:
+                   {
+                   new newmaxhp=maxhp-1;
+                   itm_contDelAmount(backpack , (itemDef[index][repairingot])/2, 0x1bf2 , color);
+                   itm_setProperty(target, IP_MAXHP, _, newmaxhp);
+                   chr_message( chr, _,"%s", msg_blacksmithDef[86]);
+                   }
+               default: return;
+               }//switch
+     /*}//if itemid
+   else chr_message( chr, _, "%s", msg_blacksmithDef[82]); */
+  }//for
 }

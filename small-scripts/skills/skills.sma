@@ -6,10 +6,6 @@
 // || This files contains NoX-Wizard skills handling functions            ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-/*!
-\defgroup script_skills Skills
-@{
-*/
 
 //Anatomy
 #include "small-scripts/skills/anatomy.sma"
@@ -29,42 +25,39 @@
 #include "small-scripts/skills/tasteid.sma"
 //Tracking
 #include "small-scripts/skills/tracking.sma"
+//cooking
+#include "small-scripts/skills/cooking.sma"
+//Meditation
+#include "small-scripts/skills/meditation.sma"
+//taming
+#include "small-scripts/skills/taming.sma"
+//fishing
+#include "small-scripts/skills/fishing.sma"
+//hiding
+#include "small-scripts/skills/hiding.sma"
+//detect hidden
+#include "small-scripts/skills/detecthidden.sma"
 
 
 
-/*!
-\fn __nxw_sk_main(const cc, const skill_num)
-\author Luxor
-\brief manages skill scripts calling
-
-This function is called by the engine when one of the scripted skills is used by a player.
-It works only for the skills with the blue button.
-Checks for the skill delay and for dead characters.
-The function called is stored in skillFunctions[][]
-*/
+/**********************************************************************************************
+ FUNCTION : __nxw_sk_main
+ AUTHOR   : Luxor
+ *********************************************************************************************/
 public __nxw_sk_main(const cc, const skill_num)
 {
-	//check for valid skill number
 	if ( skill_num < 0 ) return;
-
-	//check for skill delay
+	
 	if ( !chr_isGM( cc ) && chr_getProperty(cc, CP_SKILLDELAY) > getCurrentTime() ) {
 		chr_message( cc, _, "You must wait a few moments before using another skill.");
 		return;
 	}
-	
-	//check for dead characters
 	if (chr_getProperty(cc, CP_DEAD) == 1) {
 		chr_message( cc, _, "You cannot do that as a ghost.");
 		return;
 	}
-	
-	//read the function to call in skillFunctions[skill_num] and call it
-	callFunction1P(funcidx(skillFunctions[skill_num]),cc);
-	
-	
-	//old system: to restore it take out comments and comment out previous line
-	/*switch (skill_num)
+
+	switch (skill_num)
 	{
 		case SK_ANATOMY:
 			__nxw_sk_anatomy(cc);
@@ -76,9 +69,13 @@ public __nxw_sk_main(const cc, const skill_num)
 			__nxw_sk_tasteid(cc);
 		case SK_TRACKING:
 			__nxw_sk_tracking(cc);
+		case SK_TAMING:
+		        __nxw_sk_taming(cc);
+		case SK_HIDING:
+			__nxw_sk_hiding(cc);
+		case SK_DETECTINGHIDDEN:
+		        __nxw_sk_dtchidden(cc);
 		default:
 			return;
-	}*/
+	}
 }
-
-/*!  @}*/
