@@ -145,7 +145,7 @@ public guildgui_callback( const chr, const gui, const button )
 	gui_getProperty( gui, MP_UNI_TEXT, 56, shortname );
 
 	new stone = itm_createByDef( "$item_guildstone" );
-	new guild = _createStdGuild( stone, master ); // create a standard guild.. see guild.sma
+	new guild = guild_createStd( stone, master ); // create a standard guild.. see guild.sma
 	guild_setProperty( guild, GP_STR_NAME, _, name );
 	guild_setProperty( guild, GP_STR_ABBREVIATION, _, shortname );
 
@@ -884,8 +884,8 @@ public declareWarCB(const chr, const gui, const buttonCode)
 			guildAtWar=set_get(guildSet);
 			if ( count==buttonCode )
 			{
-				guild_setProperty(guild, GP_WAR, _, guildAtWar);
-				guild_setProperty(guildAtWar, GP_WAR, _, guild);
+//				guild_setProperty(guild, GP_WAR, _, guildAtWar);
+//				guild_setProperty(guildAtWar, GP_WAR, _, guild);
 				break;
 			}
 		}
@@ -939,7 +939,7 @@ public declarePeaceCB(const chr, const gui, const buttonCode)
 			guildAtWar=set_get(guildSet);
 			if ( count==buttonCode )
 			{
-				guild_setProperty(guild, GP_PEACE, _, guildAtWar);
+//				guild_setProperty(guild, GP_PEACE, _, guildAtWar);
 				break;
 			}
 		}

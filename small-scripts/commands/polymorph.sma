@@ -129,7 +129,7 @@ static animProperty[NUM_anims][animprop] = {
 {0225, 0x00e1, 0x2122, "wolf"}
 };
 
-cmd_polymorph (const chrsource)
+public command_polymorph(const itm, const chrsource)
 {
 	if(chr_getProperty(chrsource, CP_SERIAL) != chrsource) //as long sockets are still given instead serial
 		return;

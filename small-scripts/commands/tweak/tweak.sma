@@ -91,7 +91,7 @@ static event_array[NUM_chrevent][event_prop] = {
 {"on click:             ", 28}
 };
 
-public command_tweak (const chrsource)
+public command_tweak(const itm, const chrsource)
 {
 	if(chr_getProperty(chrsource, CP_SERIAL) != chrsource) //as long sockets are still given instead serial
 		return;

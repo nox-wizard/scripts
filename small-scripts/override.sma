@@ -46,10 +46,6 @@
  * <BR><BR>
  */
 
-/*!
-\defgroup script_API script API
-*/
-
 //
 // Include NoX-Wizard small constants
 //
@@ -103,19 +99,15 @@
 #include "small-scripts/calendar/calendar.sma"
 #include "small-scripts/skills/skills.sma"
 #include "small-scripts/misc/default.sma"
-#include "small-scripts/item/potiondelay.sma"
-#include "small-scripts/commands/commands.sma"
+#include "small-scripts/guild/guild.sma"
 #include "small-scripts/guild/guildstone.sma"
 #include "small-scripts/check/check.sma"
 #include "small-scripts/skills/misc/scissors.sma"
 #include "small-scripts/race/menu/menu.sma"
 #include "small-scripts/party/party.sma"
-#include "small-scripts/guild/guild.sma"
+#include "small-scripts/commands/commands.sma"
+
 //
 // Include the Shard's script
 //
 #include "small-scripts/myshard.sma"
-
-
-
-
