@@ -20,12 +20,20 @@ const PROP_GUILD = 3;
 
 	const GP_TYPE = 100;
 	
-	const GP_GUILDMASTER = 200;
-	
 	const GP_NAME = 450;
 	const GP_WEBPAGE = 451;
 	const GP_ABBREVIATION = 452;
 	
 	const GP_CHARTER = 500;
+	
+	enum GUILD_TYPE {
+		GUILD_TYPE_NORMAL = 0,
+		GUILD_TYPE_CHAOS,
+		GUILD_TYPE_ORDER,
+		GUILD_TYPE_CITY
+	}
+	
+	
+
  
 /** @} */ // end of script_const_guild

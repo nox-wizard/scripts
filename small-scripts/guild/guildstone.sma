@@ -68,7 +68,7 @@ public guildPlace( const s, const target, const item, const x, const y, const z 
 #endif
 		
 	new stone = itm_createByDef( "$item_guildstone" );
-	guild_guildstone( stone, master );
+	new guild = guild_create( stone );
 	
 #if defined( GUILD_POSITION_WHERE_PLAYER )
 	x = chr_getProperty( master, CP_POSITION, CP2_X );
