@@ -55,7 +55,7 @@ public cmd_kill_targ(target, chr, object, x, y, z, unused, area)
 {
 	if(isChar(object))
 	{
-		chr_kil(object);
+		chr_kill(object);
 		area_refresh(area);
 	}
 	else chr_message(chr,_,"You must target a character");
