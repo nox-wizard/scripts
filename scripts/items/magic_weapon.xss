@@ -1,0 +1,4627 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (magic_weapon.xss)                               ||
+// || Maintained by Horian                                                ||
+// || Last Update 22-jul-2004                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.80s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || In addition to standard fields :                                    ||
+// ||                                                                     ||
+// ||     DAMAGETYPE -> the damage type                                   ||
+// ||     AUXDAMAGETYPE -> the bonus damage type                          ||
+// ||     AUXDAMAGE -> the bonus damage                                   ||
+// ||                                                                     ||
+// || In this way one can easily script an enchanted version of a base    ||
+// || weapon, doing some damage bonus of a different type.                ||
+// || Standard sword of ruin...force...vanquishing have damage type magic ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || Standard bonuses                                                    ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION BONUS OF RUIN
+{
+    AUXDAMAGE 1
+    AUXDAMAGETYPE $damage_magic
+    INTADD 0
+}
+
+SECTION BONUS OF MIGHT
+{
+    AUXDAMAGE 3
+    AUXDAMAGETYPE $damage_magic
+    INTADD 0
+}
+
+SECTION BONUS OF FORCE
+{
+    AUXDAMAGE 5
+    AUXDAMAGETYPE $damage_magic
+    INTADD 0
+}
+
+SECTION BONUS OF POWER
+{
+    AUXDAMAGE 7
+    AUXDAMAGETYPE $damage_magic
+    INTADD 0
+}
+
+SECTION BONUS OF VANQUISHING
+{
+    AUXDAMAGE 9
+    AUXDAMAGETYPE $damage_magic
+    INTADD 0
+}
+
+
+SECTION BONUS OF HOLYNESS
+{
+    AUXDAMAGE 6
+    AUXDAMAGETYPE $damage_holy
+}
+
+SECTION BONUS OF VORPAL
+{
+    AUXDAMAGE 8
+    AUXDAMAGETYPE $damage_pure
+}
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || Magic Weapons (Higher Hitvalue and special damage type)             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_iron_butcher_knife_of_vanquishing
+{
+    NAME a magic butcher knife
+    NAME2 a butcher knife of vanquishing
+    ID 13F7
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 7
+    HIDAMAGE 20
+    HP 40
+    DECAY
+    VALUE 330
+    STR 5
+    SPD 41
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF VANQUISHING
+}
+
+SECTION ITEM $item_iron_butcher_knife_of_ruin
+{
+    NAME a magic butcher knife
+    NAME2 a butcher knife of ruin
+    ID 13F7
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 3
+    HIDAMAGE 12
+    HP 40
+    DECAY
+    VALUE 75
+    STR 5
+    SPD 40
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_butcher_knife_of_might
+{
+    NAME a magic butcher knife
+    NAME2 a butcher knife of might
+    ID 13F7
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 4
+    HIDAMAGE 14
+    HP 40
+    DECAY
+    VALUE 100
+    STR 5
+    SPD 40
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_butcher_knife_of_force
+{
+    NAME a magic butcher knife
+    NAME2 a butcher knife of force
+    ID 13F7
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 16
+    HP 40
+    DECAY
+    VALUE 190
+    STR 5
+    SPD 40
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_butcher_knife_of_power
+{
+    NAME a magic butcher knife
+    NAME2 a butcher knife of power
+    ID 13F7
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 18
+    HP 40
+    DECAY
+    VALUE 280
+    STR 5
+    SPD 41
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_cleaver_of_ruin
+{
+    NAME a magic cleaver
+    NAME2 a cleaver of ruin
+    ID 0EC2
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 3
+    HIDAMAGE 12
+    HP 50
+    DECAY
+    VALUE 90
+    STR 10
+    SPD 36
+    WEIGHT 100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_cleaver_of_might
+{
+    NAME a magic cleaver
+    NAME2 a cleaver of might
+    ID 0EC2
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 4
+    HIDAMAGE 14
+    HP 50
+    DECAY
+    VALUE 125
+    STR 10
+    SPD 36
+    WEIGHT 100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_cleaver_of_force
+{
+    NAME a magic cleaver
+    NAME2 a cleaver of force
+    ID 0EC2
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 16
+    HP 50
+    DECAY
+    VALUE 230
+    STR 10
+    SPD 36
+    WEIGHT 100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_cleaver_of_power
+{
+    NAME a magic cleaver
+    NAME2 a cleaver of power
+    ID 0EC2
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 18
+    HP 50
+    DECAY
+    VALUE 320
+    STR 10
+    SPD 36
+    WEIGHT 100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_cleaver_of_vanquishing
+{
+    NAME a magic cleaver
+    NAME2 a cleaver of vanquishing
+    ID 0EC2
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 7
+    HIDAMAGE 20
+    HP 50
+    DECAY
+    VALUE 360
+    STR 10
+    SPD 37
+    WEIGHT 100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF VANQUISHING
+}
+
+SECTION ITEM $item_iron_club_of_ruin
+{
+    NAME a magic club
+    NAME2 a club of ruin
+    ID 13B4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 22
+    HP 40
+    DECAY
+    VALUE 80
+    STR 10
+    SPD 41
+    WEIGHT 900
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_club_of_might
+{
+    NAME a magic club
+    NAME2 a club of might
+    ID 13B4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 24
+    HP 40
+    DECAY
+    VALUE 115
+    STR 10
+    SPD 41
+    WEIGHT 900
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_club_of_force
+{
+    NAME a magic club
+    NAME2 a club of force
+    ID 13B4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 7
+    HIDAMAGE 26
+    HP 40
+    DECAY
+    VALUE 195
+    STR 10
+    SPD 41
+    WEIGHT 900
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_club_of_power
+{
+    NAME a magic club
+    NAME2 a club of power
+    ID 13B4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 8
+    HIDAMAGE 28
+    HP 40
+    DECAY
+    VALUE 290
+    STR 10
+    SPD 42
+    WEIGHT 900
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_club_of_vanquishing
+{
+    NAME a magic club
+    NAME2 a club of vanquishing
+    ID 13B4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 9
+    HIDAMAGE 30
+    HP 40
+    DECAY
+    VALUE 330
+    STR 10
+    SPD 42
+    WEIGHT 900
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF VANQUISHING
+}
+
+SECTION ITEM $item_iron_bow_of_ruin
+{
+    NAME a magic bow
+    NAME2 a magic bow of ruin
+    ID 13B2
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 6
+    HIDAMAGE 22
+    HP 35
+    DECAY
+    VALUE 120
+//    INTADD -2
+    STR 20
+    INT 30
+    SPD 18
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_bow_of_might
+{
+    NAME a magic bow
+    NAME2 a magic bow of might
+    ID 13B2
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 8
+    HIDAMAGE 24
+    HP 35
+    DECAY
+    VALUE 230
+//	INTADD -4
+    STR 16
+    DEX 44
+    SPD 18
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_bow_of_force
+{
+    NAME a magic bow
+    NAME2 a magic bow of force
+    ID 13B2
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 12
+    HIDAMAGE 26
+    HP 35
+    DECAY
+    VALUE 340
+//    INTADD -6
+    STR 17
+    DEX 47
+    SPD 18
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_bow_of_power
+{
+    NAME a magic bow
+    NAME2 a magic bow of power
+    ID 13B2
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 12
+    HIDAMAGE 28
+    HP 35
+    DECAY
+    VALUE 450
+//    INTADD -8
+    STR 20
+    DEX 50
+    SPD 19
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_bow_of_vanquishing
+{
+    NAME a magic bow
+    NAME2 a magic bow of vanquishing
+    ID 13B2
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 14
+    HIDAMAGE 29
+    HP 60
+    DECAY
+    VALUE 530
+//    INTADD -10
+    STR 25
+    DEX 55
+    SPD 25
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF VANQUISHING
+}
+
+SECTION ITEM $item_iron_crossbow_of_ruin
+{
+    NAME a magic crossbow
+    NAME2 a magic crossbow of ruin
+    ID 0F50
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 7
+    HIDAMAGE 32
+    HP 80
+    DECAY
+    VALUE 140
+    STR 30
+    SPD 20
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_crossbow_of_might
+{
+    NAME a magic crossbow
+    NAME2 a magic crossbow of might
+    ID 0F4F
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 8
+    HIDAMAGE 34
+    HP 80
+    DECAY
+    VALUE 250
+    STR 30
+    SPD 20
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_crossbow_of_force
+{
+    NAME a magic crossbow
+    NAME2 a magic crossbow of force
+    ID 0F4F
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 9
+    HIDAMAGE 36
+    HP 80
+    DECAY
+    VALUE 360
+    STR 30
+    SPD 20
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_crossbow_of_power
+{
+    NAME a magic crossbow
+    NAME2 a magic crossbow of power
+    ID 0F4F
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 10
+    HIDAMAGE 38
+    HP 80
+    DECAY
+    VALUE 475
+    STR 30
+    SPD 20
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_crossbow_of_vanquishing
+{
+    NAME a magic crossbow
+    NAME2 a magic crossbow of vanquishing
+    ID 0F4F
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 11
+    HIDAMAGE 40
+    HP 80
+    DECAY
+    VALUE 550
+    STR 30
+    SPD 20
+    WEIGHT 700
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF VANQUISHING
+}
+
+SECTION ITEM $item_iron_heavy_crossbow_of_ruin
+{
+    NAME a magic heavy crossbow
+    NAME2 a magic heavy crossbow of ruin
+    ID 13FD
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 8
+    HIDAMAGE 37
+    HP 100
+    DECAY
+    VALUE 160
+    STR 40
+    SPD 15
+    WEIGHT 900
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_heavy_crossbow_of_might
+{
+    NAME a magic heavy crossbow
+    NAME2 a magic heavy crossbow of might
+    ID 13FD
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 9
+    HIDAMAGE 39
+    HP 100
+    DECAY
+    VALUE 290
+    STR 40
+    SPD 15
+    WEIGHT 900
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_heavy_crossbow_of_force
+{
+    NAME a magic heavy crossbow
+    NAME2 a magic heavy crossbow of force
+    ID 13FD
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 10
+    HIDAMAGE 41
+    HP 100
+    DECAY
+    VALUE 420
+    STR 40
+    SPD 15
+    WEIGHT 900
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_heavy_crossbow_of_power
+{
+    NAME a magic heavy crossbow
+    NAME2 a magic heavy crossbow of power
+    ID 13FD
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 11
+    HIDAMAGE 43
+    HP 100
+    DECAY
+    VALUE 520
+    STR 40
+    SPD 15
+    WEIGHT 900
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_heavy_crossbow_of_vanquishing
+{
+    NAME a magic heavy crossbow
+    NAME2 a magic heavy crossbow of vanquishing
+    ID 13FD
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 12
+    HIDAMAGE 45
+    HP 100
+    DECAY
+    VALUE 600
+    STR 40
+    SPD 15
+    WEIGHT 900
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF VANQUISHING
+}
+
+SECTION ITEM $item_iron_pick_axe_of_ruin
+{
+    NAME a magic pick axe
+    NAME2 a pick axe of ruin
+    ID 0E85
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 4
+    HIDAMAGE 17
+    HP 60
+    DECAY
+    VALUE 90
+    STR 25
+    SPD 34
+    WEIGHT 1100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_pick_axe_of_might
+{
+    NAME a magic pick axe
+    NAME2 a pick axe of might
+    ID 0E85
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 5
+    HIDAMAGE 19
+    HP 60
+    DECAY
+    VALUE 115
+    STR 25
+    SPD 34
+    WEIGHT 1100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_pick_axe_of_force
+{
+    NAME a magic pick axe
+    NAME2 a pick axe of force
+    ID 0E85
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 6
+    HIDAMAGE 21
+    HP 60
+    DECAY
+    VALUE 200
+    STR 25
+    SPD 34
+    WEIGHT 1100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_pick_axe_of_power
+{
+    NAME a magic pick axe
+    NAME2 a pick axe of power
+    ID 0E85
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 7
+    HIDAMAGE 23
+    HP 60
+    DECAY
+    VALUE 290
+    STR 25
+    SPD 35
+    WEIGHT 1100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_pick_axe_of_vanquishing
+{
+    NAME a magic pick axe
+    NAME2 a pick axe of vanquishing
+    ID 0E85
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 8
+    HIDAMAGE 25
+    HP 60
+    DECAY
+    VALUE 350
+    STR 25
+    SPD 35
+    WEIGHT 1100
+    DAMAGETYPE $damage_slash
+    #copy BONUS OF VANQUISHING
+}
+
+SECTION ITEM $item_iron_pitch_fork_of_ruin
+{
+    NAME a magic pitch fork
+    NAME2 a magic pitch fork of ruin
+    ID 0E87
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 4
+    HIDAMAGE 17
+    HP 60
+    DECAY
+    VALUE 80
+    STR 15
+    SPD 55
+    WEIGHT 1000
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_pitch_fork_of_might
+{
+    NAME a magic pitch fork
+    NAME2 a magic pitch fork of might
+    ID 0E87
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 19
+    HP 60
+    DECAY
+    VALUE 115
+    STR 15
+    SPD 55
+    WEIGHT 1000
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_pitch_fork_of_force
+{
+    NAME a magic pitch fork
+    NAME2 a magic pitch fork of force
+    ID 0E87
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 21
+    HP 60
+    DECAY
+    VALUE 195
+    STR 15
+    SPD 55
+    WEIGHT 1000
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_pitch_fork_of_power
+{
+    NAME a magic pitch fork
+    NAME2 a magic pitch fork of power
+    ID 0E87
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 7
+    HIDAMAGE 23
+    HP 60
+    DECAY
+    VALUE 290
+    STR 15
+    SPD 55
+    WEIGHT 1000
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_pitch_fork_of_vanquishing
+{
+    NAME a magic pitch fork
+    NAME2 a magic pitch fork of vanquishing
+    ID 0E87
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 8
+    HIDAMAGE 25
+    HP 60
+    DECAY
+    VALUE 330
+    STR 15
+    SPD 55
+    WEIGHT 1000
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF VANQUISHING
+}
+
+SECTION ITEM $item_iron_skinning_knife_of_ruin
+{
+    NAME a magic skinning knife
+    NAME2 a skinning knife of ruin
+    ID 0EC4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 3
+    HIDAMAGE 12
+    HP 40
+    DECAY
+    VALUE 75
+    STR 5
+    SPD 40
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_skinning_knife_of_might
+{
+    NAME a magic skinning knife
+    NAME2 a skinning knife of might
+    ID 0EC4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 4
+    HIDAMAGE 14
+    HP 40
+    DECAY
+    VALUE 100
+    STR 5
+    SPD 40
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_skinning_knife_of_force
+{
+    NAME a magic skinning knife
+    NAME2 a skinning knife of force
+    ID 0EC4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 16
+    HP 40
+    DECAY
+    VALUE 190
+    STR 5
+    SPD 40
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_skinning_knife_of_power
+{
+    NAME a magic skinning knife
+    NAME2 a skinning knife of power
+    ID 0EC4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 18
+    HP 40
+    DECAY
+    VALUE 280
+    STR 5
+    SPD 40
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_skinning_knife_of_vanquishing
+{
+    NAME a magic skinning knife
+    NAME2 a skinning knife of vanquishing
+    ID 0EC4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 7
+    HIDAMAGE 20
+    HP 40
+    DECAY
+    VALUE 330
+    STR 5
+    SPD 41
+    WEIGHT 100
+    DAMAGETYPE $damage_pierce
+    #copy BONUS OF VANQUISHING
+}
+
+
+SECTION ITEM $item_iron_smiths_hammer_of_ruin
+{
+    NAME a magic smith's hammer
+    NAME2 a magic smith's hammer of ruin
+    ID 13E4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 4
+    HIDAMAGE 17
+    HP 60
+    DECAY
+    VALUE 100
+    STR 30
+    SPD 50
+    WEIGHT 800
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF RUIN
+}
+
+SECTION ITEM $item_iron_smiths_hammer_of_might
+{
+    NAME a magic smith's hammer
+    NAME2 a magic smith's hammer of might
+    ID 13E4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 5
+    HIDAMAGE 19
+    HP 60
+    DECAY
+    VALUE 130
+    STR 30
+    SPD 50
+    WEIGHT 800
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF MIGHT
+}
+
+SECTION ITEM $item_iron_smiths_hammer_of_force
+{
+    NAME a magic smith's hammer
+    NAME2 a magic smith's hammer of force
+    ID 13E4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 21
+    HP 60
+    DECAY
+    VALUE 250
+    STR 30
+    SPD 50
+    WEIGHT 800
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF FORCE
+}
+
+SECTION ITEM $item_iron_smiths_hammer_of_power
+{
+    NAME a magic smith's hammer
+    NAME2 a magic smith's hammer of power
+    ID 13E4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 7
+    HIDAMAGE 23
+    HP 60
+    DECAY
+    VALUE 325
+    STR 30
+    SPD 50
+    WEIGHT 800
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF POWER
+}
+
+SECTION ITEM $item_iron_smiths_hammer_of_vanquishing
+{
+    NAME a magic smith's hammer
+    NAME2 a magic smith's hammer of vanquishing
+    ID 13E4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 8
+    HIDAMAGE 25
+    HP 60
+    DECAY
+    VALUE 390
+    STR 30
+    SPD 50
+    WEIGHT 800
+    DAMAGETYPE $damage_bludgeon
+    #copy BONUS OF VANQUISHING
+}
+
+// RUIN
+
+////////////////////////////////////////////////////////////
+////////////////////// Axes ////////////////////////////////
+////////////////////////////////////////////////////////////
+	
+// battle axe
+SECTION ITEM $item_iron_double_axe_of_ruin
+{
+	NAME magic iron double axe
+	NAME2 magic iron double axe of ruin
+	ID 0F4B
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 45
+	SPD 35
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+// war axe
+SECTION ITEM $item_iron_battle_axe_of_ruin
+{
+	NAME magic iron battle axe
+	NAME2 magic iron battle axe of ruin
+	ID 0F47
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 20
+	HP 110
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 30
+	SPD 45
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+// Lg. war axe
+SECTION ITEM $item_iron_large_battle_axe_of_ruin
+{
+	NAME magic iron large battle axe
+	NAME2 magic iron large battle axe of ruin
+	ID 13FB
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 37
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 44
+	SPD 29
+	WEIGHT 600
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+// axe
+SECTION ITEM $item_iron_axe_of_ruin
+{
+	NAME magic iron axe
+	NAME2 magic iron axe of ruin
+	ID 0F49
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 28
+	HP 65
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+// two-handed axe
+SECTION ITEM $item_iron_two-handed_axe_of_ruin
+{
+	NAME magic a iron two-handed axe
+	NAME2 magic a iron two-handed axe of ruin
+	ID 1442
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 60
+	SPD 35
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+// Execut. axe
+SECTION ITEM $item_iron_executioners_axe_of_ruin
+{
+	NAME magic iron executioners axe
+	NAME2 magic iron executioners axe of ruin
+	ID 0F45
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 60
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 40
+	SPD 28
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+// war axe
+SECTION ITEM $item_iron_war_axe_of_ruin
+{
+	NAME magic iron war axe
+	NAME2 magic iron war axe of ruin
+	ID 13B0
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 9
+	HIDAMAGE 27
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 38
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+///////////////////////////////////////////////////////////////
+//////////////// swords and blades ////////////////////////
+///////////////////////////////////////////////////////////////
+	
+// dagger
+SECTION ITEM $item_iron_dagger_of_ruin
+{
+	NAME magic iron dagger
+	NAME2 magic iron dagger of ruin
+	ID 0F51
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 3
+	HIDAMAGE 15
+	HP 35
+	DECAY
+	VALUE 15
+	RESTOCK 10
+	STR 1
+	SPD 40
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF RUIN
+}
+	
+//cutlass
+SECTION ITEM $item_iron_cutlass_of_ruin
+{
+	NAME magic iron cutlass
+	NAME2 magic iron cutlass of ruin
+	ID 1440
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 6
+	HIDAMAGE 28
+	HP 50
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 40
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+// kryss
+SECTION ITEM $item_iron_kryss_of_ruin
+{
+	NAME magic iron kryss
+	NAME2 magic iron kryss of ruin
+	ID 1400
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 70
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 22
+	SPD 45
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF RUIN
+}
+	
+//katana
+SECTION ITEM $item_iron_katana_of_ruin
+{
+	NAME magic iron katana
+	NAME2 magic iron katana of ruin
+	ID 13FF
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 45
+	DEF 8
+	DECAY
+	VALUE 75
+	RESTOCK 10
+	STR 10
+	SPD 40
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+//scimitar
+SECTION ITEM $item_iron_scimitar_of_ruin
+{
+	NAME magic iron scimitar
+	NAME2 magic iron scimitar of ruin
+	ID 13B6
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 4
+	HIDAMAGE 30
+	HP 45
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 32
+	SPD 41
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+//Broad Sword
+SECTION ITEM $item_iron_broadsword_of_ruin
+{
+	NAME magic iron broadsword
+	NAME2 magic iron broadsword of ruin
+	ID 0F5E
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 29
+	HP 65
+	DEF 5
+	DECAY
+	VALUE 80
+	RESTOCK 10
+	STR 25
+	SPD 39
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+//long sword
+SECTION ITEM $item_iron_long_sword_of_ruin
+{
+	NAME magic iron long sword
+	NAME2 magic iron long sword of ruin
+	ID 13B8
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	DEF 5
+	LODAMAGE 6
+	HIDAMAGE 27
+	HP 45
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 25
+	SPD 33
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+//Viking Sword
+SECTION ITEM $item_iron_viking_sword_of_ruin
+{
+	NAME magic iron viking sword
+	NAME2 magic iron viking sword of ruin
+	ID 13BA
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	HP 50
+	LODAMAGE 6
+	HIDAMAGE 34
+	HP 100
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 38
+	SPD 30
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+///////////////////////////////////////////////////////////
+///////////////////// Maces ///////////////////////////////
+///////////////////////////////////////////////////////////
+	
+// mace
+SECTION ITEM $item_iron_mace_of_ruin
+{
+	NAME magic iron mace
+	NAME2 magic iron mace of ruin
+	ID 0F5B
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 8
+	HIDAMAGE 32
+	HP 40
+	DECAY
+	VALUE 30
+	RESTOCK 10
+	STR 45
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF RUIN
+}
+	
+// maul
+SECTION ITEM $item_iron_maul_of_ruin
+{
+	NAME magic iron maul
+	NAME2 magic iron maul of ruin
+	ID 143A
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 7
+	HIDAMAGE 32
+	HP 50
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 20
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF RUIN
+}
+	
+// war mace
+SECTION ITEM $item_iron_war_mace_of_ruin
+{
+	NAME magic iron war mace
+	NAME2 magic iron war mace of ruin
+	ID 1406
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 10
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 60
+	RESTOCK 10
+	STR 30
+	SPD 30
+	WEIGHT 1400
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF RUIN
+}
+	
+// war hammer
+SECTION ITEM $item_iron_war_hammer_of_ruin
+{
+	NAME magic iron war hammer
+	NAME2 magic iron war hammer of ruin
+	ID 1438
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 38
+	HP 70
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 40
+	SPD 29
+	WEIGHT 700
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF RUIN
+}
+	
+// hammer pick
+SECTION ITEM $item_iron_hammer_pick_of_ruin
+{
+	NAME magic iron hammer pick
+	NAME2 magic iron hammer pick of ruin
+	ID 143C
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 24
+	HP 32
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 45
+	SPD 30
+	WEIGHT 600
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF RUIN
+}
+	
+//////////////////////////////////////////////////////////////
+///////////////// spears and forks //////////////////////////
+//////////////////////////////////////////////////////////////
+	
+//short spear
+SECTION ITEM $item_iron_short_spear_of_ruin
+{
+	NAME magic iron short spear
+	NAME2 magic iron short spear of ruin
+	ID 1403
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 45
+	RESTOCK 10
+	STR 15
+	SPD 35
+	WEIGHT 200
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF RUIN
+}
+	
+//war fork
+SECTION ITEM $item_iron_war_fork_of_ruin
+{
+	NAME magic iron war fork
+	NAME2 magic iron war fork of ruin
+	ID 1405
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 65
+	DECAY
+	VALUE 90
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 600
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF RUIN
+}
+	
+//spear
+SECTION ITEM $item_iron_spear_of_ruin
+{
+	NAME magic iron spear
+	NAME2 magic iron spear of ruin
+	ID 0F62
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 2
+	HIDAMAGE 36
+	HP 40
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 30
+	SPD 27
+	WEIGHT 300
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF RUIN
+}
+	
+//////////////////////////////////////////////////////////////
+//////////////////////// Pole Arms ///////////////////////////
+//////////////////////////////////////////////////////////////
+	
+// bardiche
+SECTION ITEM $item_iron_bardiche_of_ruin
+{
+	NAME magic iron bardiche
+	NAME2 magic iron bardiche of ruin
+	ID 0F4D
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 43
+	HP 62
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 50
+	SPD 24
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+	
+// halberd
+SECTION ITEM $item_iron_halberd_of_ruin
+{
+	NAME magic iron halberd
+	NAME2 magic iron halberd of ruin
+	ID 143E
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 49
+	HP 62
+	DEF 5
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 55
+	SPD 22
+	WEIGHT 1300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF RUIN
+}
+
+// MIGHT
+
+////////////////////////////////////////////////////////////
+////////////////////// Axes ////////////////////////////////
+////////////////////////////////////////////////////////////
+	
+// battle axe
+SECTION ITEM $item_iron_double_axe_of_might
+{
+	NAME magic iron double axe
+	NAME2 magic iron double axe of might
+	ID 0F4B
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 45
+	SPD 35
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+// war axe
+SECTION ITEM $item_iron_battle_axe_of_might
+{
+	NAME magic iron battle axe
+	NAME2 magic iron battle axe of might
+	ID 0F47
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 20
+	HP 110
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 30
+	SPD 45
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+// Lg. war axe
+SECTION ITEM $item_iron_large_battle_axe_of_might
+{
+	NAME magic iron large battle axe
+	NAME2 magic iron large battle axe of might
+	ID 13FB
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 37
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 44
+	SPD 29
+	WEIGHT 600
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+// axe
+SECTION ITEM $item_iron_axe_of_might
+{
+	NAME magic iron axe
+	NAME2 magic iron axe of might
+	ID 0F49
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 28
+	HP 65
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+// two-handed axe
+SECTION ITEM $item_iron_two-handed_axe_of_might
+{
+	NAME magic a iron two-handed axe
+	NAME2 magic a iron two-handed axe of might
+	ID 1442
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 60
+	SPD 35
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+// Execut. axe
+SECTION ITEM $item_iron_executioners_axe_of_might
+{
+	NAME magic iron executioners axe
+	NAME2 magic iron executioners axe of might
+	ID 0F45
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 60
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 40
+	SPD 28
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+// war axe
+SECTION ITEM $item_iron_war_axe_of_might
+{
+	NAME magic iron war axe
+	NAME2 magic iron war axe of might
+	ID 13B0
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 9
+	HIDAMAGE 27
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 38
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+///////////////////////////////////////////////////////////////
+//////////////// swords and blades ////////////////////////
+///////////////////////////////////////////////////////////////
+	
+// dagger
+SECTION ITEM $item_iron_dagger_of_might
+{
+	NAME magic iron dagger
+	NAME2 magic iron dagger of might
+	ID 0F51
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 3
+	HIDAMAGE 15
+	HP 35
+	DECAY
+	VALUE 15
+	RESTOCK 10
+	STR 1
+	SPD 40
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF MIGHT
+}
+	
+//cutlass
+SECTION ITEM $item_iron_cutlass_of_might
+{
+	NAME magic iron cutlass
+	NAME2 magic iron cutlass of might
+	ID 1440
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 6
+	HIDAMAGE 28
+	HP 50
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 40
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+// kryss
+SECTION ITEM $item_iron_kryss_of_might
+{
+	NAME magic iron kryss
+	NAME2 magic iron kryss of might
+	ID 1400
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 70
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 22
+	SPD 45
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF MIGHT
+}
+	
+//katana
+SECTION ITEM $item_iron_katana_of_might
+{
+	NAME magic iron katana
+	NAME2 magic iron katana of might
+	ID 13FF
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 45
+	DEF 8
+	DECAY
+	VALUE 75
+	RESTOCK 10
+	STR 10
+	SPD 40
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+//scimitar
+SECTION ITEM $item_iron_scimitar_of_might
+{
+	NAME magic iron scimitar
+	NAME2 magic iron scimitar of might
+	ID 13B6
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 4
+	HIDAMAGE 30
+	HP 45
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 32
+	SPD 41
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+//Broad Sword
+SECTION ITEM $item_iron_broadsword_of_might
+{
+	NAME magic iron broadsword
+	NAME2 magic iron broadsword of might
+	ID 0F5E
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 29
+	HP 65
+	DEF 5
+	DECAY
+	VALUE 80
+	RESTOCK 10
+	STR 25
+	SPD 39
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+//long sword
+SECTION ITEM $item_iron_long_sword_of_might
+{
+	NAME magic iron long sword
+	NAME2 magic iron long sword of might
+	ID 13B8
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	DEF 5
+	LODAMAGE 6
+	HIDAMAGE 27
+	HP 45
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 25
+	SPD 33
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+//Viking Sword
+SECTION ITEM $item_iron_viking_sword_of_might
+{
+	NAME magic iron viking sword
+	NAME2 magic iron viking sword of might
+	ID 13BA
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	HP 50
+	LODAMAGE 6
+	HIDAMAGE 34
+	HP 100
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 38
+	SPD 30
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+///////////////////////////////////////////////////////////
+///////////////////// Maces ///////////////////////////////
+///////////////////////////////////////////////////////////
+	
+// mace
+SECTION ITEM $item_iron_mace_of_might
+{
+	NAME magic iron mace
+	NAME2 magic iron mace of might
+	ID 0F5B
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 8
+	HIDAMAGE 32
+	HP 40
+	DECAY
+	VALUE 30
+	RESTOCK 10
+	STR 45
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF MIGHT
+}
+	
+// maul
+SECTION ITEM $item_iron_maul_of_might
+{
+	NAME magic iron maul
+	NAME2 magic iron maul of might
+	ID 143A
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 7
+	HIDAMAGE 32
+	HP 50
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 20
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF MIGHT
+}
+	
+// war mace
+SECTION ITEM $item_iron_war_mace_of_might
+{
+	NAME magic iron war mace
+	NAME2 magic iron war mace of might
+	ID 1406
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 10
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 60
+	RESTOCK 10
+	STR 30
+	SPD 30
+	WEIGHT 1400
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF MIGHT
+}
+	
+// war hammer
+SECTION ITEM $item_iron_war_hammer_of_might
+{
+	NAME magic iron war hammer
+	NAME2 magic iron war hammer of might
+	ID 1438
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 38
+	HP 70
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 40
+	SPD 29
+	WEIGHT 700
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF MIGHT
+}
+	
+// hammer pick
+SECTION ITEM $item_iron_hammer_pick_of_might
+{
+	NAME magic iron hammer pick
+	NAME2 magic iron hammer pick of might
+	ID 143C
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 24
+	HP 32
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 45
+	SPD 30
+	WEIGHT 600
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF MIGHT
+}
+	
+//////////////////////////////////////////////////////////////
+///////////////// spears and forks //////////////////////////
+//////////////////////////////////////////////////////////////
+	
+//short spear
+SECTION ITEM $item_iron_short_spear_of_might
+{
+	NAME magic iron short spear
+	NAME2 magic iron short spear of might
+	ID 1403
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 45
+	RESTOCK 10
+	STR 15
+	SPD 35
+	WEIGHT 200
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF MIGHT
+}
+	
+//war fork
+SECTION ITEM $item_iron_war_fork_of_might
+{
+	NAME magic iron war fork
+	NAME2 magic iron war fork of might
+	ID 1405
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 65
+	DECAY
+	VALUE 90
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 600
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF MIGHT
+}
+	
+//spear
+SECTION ITEM $item_iron_spear_of_might
+{
+	NAME magic iron spear
+	NAME2 magic iron spear of might
+	ID 0F62
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 2
+	HIDAMAGE 36
+	HP 40
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 30
+	SPD 27
+	WEIGHT 300
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF MIGHT
+}
+	
+//////////////////////////////////////////////////////////////
+//////////////////////// Pole Arms ///////////////////////////
+//////////////////////////////////////////////////////////////
+	
+// bardiche
+SECTION ITEM $item_iron_bardiche_of_might
+{
+	NAME magic iron bardiche
+	NAME2 magic iron bardiche of might
+	ID 0F4D
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 43
+	HP 62
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 50
+	SPD 24
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+	
+// halberd
+SECTION ITEM $item_iron_halberd_of_might
+{
+	NAME magic iron halberd
+	NAME2 magic iron halberd of might
+	ID 143E
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 49
+	HP 62
+	DEF 5
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 55
+	SPD 22
+	WEIGHT 1300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF MIGHT
+}
+
+// FORCE
+
+////////////////////////////////////////////////////////////
+////////////////////// Axes ////////////////////////////////
+////////////////////////////////////////////////////////////
+	
+// battle axe
+SECTION ITEM $item_iron_double_axe_of_force
+{
+	NAME magic iron double axe
+	NAME2 magic iron double axe of force
+	ID 0F4B
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 45
+	SPD 35
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+// war axe
+SECTION ITEM $item_iron_battle_axe_of_force
+{
+	NAME magic iron battle axe
+	NAME2 magic iron battle axe of force
+	ID 0F47
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 20
+	HP 110
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 30
+	SPD 45
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+// Lg. war axe
+SECTION ITEM $item_iron_large_battle_axe_of_force
+{
+	NAME magic iron large battle axe
+	NAME2 magic iron large battle axe of force
+	ID 13FB
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 37
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 44
+	SPD 29
+	WEIGHT 600
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+// axe
+SECTION ITEM $item_iron_axe_of_force
+{
+	NAME magic iron axe
+	NAME2 magic iron axe of force
+	ID 0F49
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 28
+	HP 65
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+// two-handed axe
+SECTION ITEM $item_iron_two-handed_axe_of_force
+{
+	NAME magic a iron two-handed axe
+	NAME2 magic a iron two-handed axe of force
+	ID 1442
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 60
+	SPD 35
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+// Execut. axe
+SECTION ITEM $item_iron_executioners_axe_of_force
+{
+	NAME magic iron executioners axe
+	NAME2 magic iron executioners axe of force
+	ID 0F45
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 60
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 40
+	SPD 28
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+// war axe
+SECTION ITEM $item_iron_war_axe_of_force
+{
+	NAME magic iron war axe
+	NAME2 magic iron war axe of force
+	ID 13B0
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 9
+	HIDAMAGE 27
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 38
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+///////////////////////////////////////////////////////////////
+//////////////// swords and blades ////////////////////////
+///////////////////////////////////////////////////////////////
+	
+// dagger
+SECTION ITEM $item_iron_dagger_of_force
+{
+	NAME magic iron dagger
+	NAME2 magic iron dagger of force
+	ID 0F51
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 3
+	HIDAMAGE 15
+	HP 35
+	DECAY
+	VALUE 15
+	RESTOCK 10
+	STR 1
+	SPD 40
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF FORCE
+}
+	
+//cutlass
+SECTION ITEM $item_iron_cutlass_of_force
+{
+	NAME magic iron cutlass
+	NAME2 magic iron cutlass of force
+	ID 1440
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 6
+	HIDAMAGE 28
+	HP 50
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 40
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+// kryss
+SECTION ITEM $item_iron_kryss_of_force
+{
+	NAME magic iron kryss
+	NAME2 magic iron kryss of force
+	ID 1400
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 70
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 22
+	SPD 45
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF FORCE
+}
+	
+//katana
+SECTION ITEM $item_iron_katana_of_force
+{
+	NAME magic iron katana
+	NAME2 magic iron katana of force
+	ID 13FF
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 45
+	DEF 8
+	DECAY
+	VALUE 75
+	RESTOCK 10
+	STR 10
+	SPD 40
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+//scimitar
+SECTION ITEM $item_iron_scimitar_of_force
+{
+	NAME magic iron scimitar
+	NAME2 magic iron scimitar of force
+	ID 13B6
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 4
+	HIDAMAGE 30
+	HP 45
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 32
+	SPD 41
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+//Broad Sword
+SECTION ITEM $item_iron_broadsword_of_force
+{
+	NAME magic iron broadsword
+	NAME2 magic iron broadsword of force
+	ID 0F5E
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 29
+	HP 65
+	DEF 5
+	DECAY
+	VALUE 80
+	RESTOCK 10
+	STR 25
+	SPD 39
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+//long sword
+SECTION ITEM $item_iron_long_sword_of_force
+{
+	NAME magic iron long sword
+	NAME2 magic iron long sword of force
+	ID 13B8
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	DEF 5
+	LODAMAGE 6
+	HIDAMAGE 27
+	HP 45
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 25
+	SPD 33
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+//Viking Sword
+SECTION ITEM $item_iron_viking_sword_of_force
+{
+	NAME magic iron viking sword
+	NAME2 magic iron viking sword of force
+	ID 13BA
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	HP 50
+	LODAMAGE 6
+	HIDAMAGE 34
+	HP 100
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 38
+	SPD 30
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+///////////////////////////////////////////////////////////
+///////////////////// Maces ///////////////////////////////
+///////////////////////////////////////////////////////////
+	
+// mace
+SECTION ITEM $item_iron_mace_of_force
+{
+	NAME magic iron mace
+	NAME2 magic iron mace of force
+	ID 0F5B
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 8
+	HIDAMAGE 32
+	HP 40
+	DECAY
+	VALUE 30
+	RESTOCK 10
+	STR 45
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF FORCE
+}
+	
+// maul
+SECTION ITEM $item_iron_maul_of_force
+{
+	NAME magic iron maul
+	NAME2 magic iron maul of force
+	ID 143A
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 7
+	HIDAMAGE 32
+	HP 50
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 20
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF FORCE
+}
+	
+// war mace
+SECTION ITEM $item_iron_war_mace_of_force
+{
+	NAME magic iron war mace
+	NAME2 magic iron war mace of force
+	ID 1406
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 10
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 60
+	RESTOCK 10
+	STR 30
+	SPD 30
+	WEIGHT 1400
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF FORCE
+}
+	
+// war hammer
+SECTION ITEM $item_iron_war_hammer_of_force
+{
+	NAME magic iron war hammer
+	NAME2 magic iron war hammer of force
+	ID 1438
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 38
+	HP 70
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 40
+	SPD 29
+	WEIGHT 700
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF FORCE
+}
+	
+// hammer pick
+SECTION ITEM $item_iron_hammer_pick_of_force
+{
+	NAME magic iron hammer pick
+	NAME2 magic iron hammer pick of force
+	ID 143C
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 24
+	HP 32
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 45
+	SPD 30
+	WEIGHT 600
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF FORCE
+}
+	
+//////////////////////////////////////////////////////////////
+///////////////// spears and forks //////////////////////////
+//////////////////////////////////////////////////////////////
+	
+//short spear
+SECTION ITEM $item_iron_short_spear_of_force
+{
+	NAME magic iron short spear
+	NAME2 magic iron short spear of force
+	ID 1403
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 45
+	RESTOCK 10
+	STR 15
+	SPD 35
+	WEIGHT 200
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF FORCE
+}
+	
+//war fork
+SECTION ITEM $item_iron_war_fork_of_force
+{
+	NAME magic iron war fork
+	NAME2 magic iron war fork of force
+	ID 1405
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 65
+	DECAY
+	VALUE 90
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 600
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF FORCE
+}
+	
+//spear
+SECTION ITEM $item_iron_spear_of_force
+{
+	NAME magic iron spear
+	NAME2 magic iron spear of force
+	ID 0F62
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 2
+	HIDAMAGE 36
+	HP 40
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 30
+	SPD 27
+	WEIGHT 300
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF FORCE
+}
+	
+//////////////////////////////////////////////////////////////
+//////////////////////// Pole Arms ///////////////////////////
+//////////////////////////////////////////////////////////////
+	
+// bardiche
+SECTION ITEM $item_iron_bardiche_of_force
+{
+	NAME magic iron bardiche
+	NAME2 magic iron bardiche of force
+	ID 0F4D
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 43
+	HP 62
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 50
+	SPD 24
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+	
+// halberd
+SECTION ITEM $item_iron_halberd_of_force
+{
+	NAME magic iron halberd
+	NAME2 magic iron halberd of force
+	ID 143E
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 49
+	HP 62
+	DEF 5
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 55
+	SPD 22
+	WEIGHT 1300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF FORCE
+}
+
+// POWER
+
+////////////////////////////////////////////////////////////
+////////////////////// Axes ////////////////////////////////
+////////////////////////////////////////////////////////////
+	
+// battle axe
+SECTION ITEM $item_iron_double_axe_of_power
+{
+	NAME magic iron double axe
+	NAME2 magic iron double axe of power
+	ID 0F4B
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 45
+	SPD 35
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+// war axe
+SECTION ITEM $item_iron_battle_axe_of_power
+{
+	NAME magic iron battle axe
+	NAME2 magic iron battle axe of power
+	ID 0F47
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 20
+	HP 110
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 30
+	SPD 45
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+// Lg. war axe
+SECTION ITEM $item_iron_large_battle_axe_of_power
+{
+	NAME magic iron large battle axe
+	NAME2 magic iron large battle axe of power
+	ID 13FB
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 37
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 44
+	SPD 29
+	WEIGHT 600
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+// axe
+SECTION ITEM $item_iron_axe_of_power
+{
+	NAME magic iron axe
+	NAME2 magic iron axe of power
+	ID 0F49
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 28
+	HP 65
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+// two-handed axe
+SECTION ITEM $item_iron_two-handed_axe_of_power
+{
+	NAME magic a iron two-handed axe
+	NAME2 magic a iron two-handed axe of power
+	ID 1442
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 60
+	SPD 35
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+// Execut. axe
+SECTION ITEM $item_iron_executioners_axe_of_power
+{
+	NAME magic iron executioners axe
+	NAME2 magic iron executioners axe of power
+	ID 0F45
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 60
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 40
+	SPD 28
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+// war axe
+SECTION ITEM $item_iron_war_axe_of_power
+{
+	NAME magic iron war axe
+	NAME2 magic iron war axe of power
+	ID 13B0
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 9
+	HIDAMAGE 27
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 38
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+///////////////////////////////////////////////////////////////
+//////////////// swords and blades ////////////////////////
+///////////////////////////////////////////////////////////////
+	
+// dagger
+SECTION ITEM $item_iron_dagger_of_power
+{
+	NAME magic iron dagger
+	NAME2 magic iron dagger of power
+	ID 0F51
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 3
+	HIDAMAGE 15
+	HP 35
+	DECAY
+	VALUE 15
+	RESTOCK 10
+	STR 1
+	SPD 40
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF POWER
+}
+	
+//cutlass
+SECTION ITEM $item_iron_cutlass_of_power
+{
+	NAME magic iron cutlass
+	NAME2 magic iron cutlass of power
+	ID 1440
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 6
+	HIDAMAGE 28
+	HP 50
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 40
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+// kryss
+SECTION ITEM $item_iron_kryss_of_power
+{
+	NAME magic iron kryss
+	NAME2 magic iron kryss of power
+	ID 1400
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 70
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 22
+	SPD 45
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF POWER
+}
+	
+//katana
+SECTION ITEM $item_iron_katana_of_power
+{
+	NAME magic iron katana
+	NAME2 magic iron katana of power
+	ID 13FF
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 45
+	DEF 8
+	DECAY
+	VALUE 75
+	RESTOCK 10
+	STR 10
+	SPD 40
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+//scimitar
+SECTION ITEM $item_iron_scimitar_of_power
+{
+	NAME magic iron scimitar
+	NAME2 magic iron scimitar of power
+	ID 13B6
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 4
+	HIDAMAGE 30
+	HP 45
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 32
+	SPD 41
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+//Broad Sword
+SECTION ITEM $item_iron_broadsword_of_power
+{
+	NAME magic iron broadsword
+	NAME2 magic iron broadsword of power
+	ID 0F5E
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 29
+	HP 65
+	DEF 5
+	DECAY
+	VALUE 80
+	RESTOCK 10
+	STR 25
+	SPD 39
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+//long sword
+SECTION ITEM $item_iron_long_sword_of_power
+{
+	NAME magic iron long sword
+	NAME2 magic iron long sword of power
+	ID 13B8
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	DEF 5
+	LODAMAGE 6
+	HIDAMAGE 27
+	HP 45
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 25
+	SPD 33
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+//Viking Sword
+SECTION ITEM $item_iron_viking_sword_of_power
+{
+	NAME magic iron viking sword
+	NAME2 magic iron viking sword of power
+	ID 13BA
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	HP 50
+	LODAMAGE 6
+	HIDAMAGE 34
+	HP 100
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 38
+	SPD 30
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+///////////////////////////////////////////////////////////
+///////////////////// Maces ///////////////////////////////
+///////////////////////////////////////////////////////////
+	
+// mace
+SECTION ITEM $item_iron_mace_of_power
+{
+	NAME magic iron mace
+	NAME2 magic iron mace of power
+	ID 0F5B
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 8
+	HIDAMAGE 32
+	HP 40
+	DECAY
+	VALUE 30
+	RESTOCK 10
+	STR 45
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF POWER
+}
+	
+// maul
+SECTION ITEM $item_iron_maul_of_power
+{
+	NAME magic iron maul
+	NAME2 magic iron maul of power
+	ID 143A
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 7
+	HIDAMAGE 32
+	HP 50
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 20
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF POWER
+}
+	
+// war mace
+SECTION ITEM $item_iron_war_mace_of_power
+{
+	NAME magic iron war mace
+	NAME2 magic iron war mace of power
+	ID 1406
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 10
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 60
+	RESTOCK 10
+	STR 30
+	SPD 30
+	WEIGHT 1400
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF POWER
+}
+	
+// war hammer
+SECTION ITEM $item_iron_war_hammer_of_power
+{
+	NAME magic iron war hammer
+	NAME2 magic iron war hammer of power
+	ID 1438
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 38
+	HP 70
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 40
+	SPD 29
+	WEIGHT 700
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF POWER
+}
+	
+// hammer pick
+SECTION ITEM $item_iron_hammer_pick_of_power
+{
+	NAME magic iron hammer pick
+	NAME2 magic iron hammer pick of power
+	ID 143C
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 24
+	HP 32
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 45
+	SPD 30
+	WEIGHT 600
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF POWER
+}
+	
+//////////////////////////////////////////////////////////////
+///////////////// spears and forks //////////////////////////
+//////////////////////////////////////////////////////////////
+	
+//short spear
+SECTION ITEM $item_iron_short_spear_of_power
+{
+	NAME magic iron short spear
+	NAME2 magic iron short spear of power
+	ID 1403
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 45
+	RESTOCK 10
+	STR 15
+	SPD 35
+	WEIGHT 200
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF POWER
+}
+	
+//war fork
+SECTION ITEM $item_iron_war_fork_of_power
+{
+	NAME magic iron war fork
+	NAME2 magic iron war fork of power
+	ID 1405
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 65
+	DECAY
+	VALUE 90
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 600
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF POWER
+}
+	
+//spear
+SECTION ITEM $item_iron_spear_of_power
+{
+	NAME magic iron spear
+	NAME2 magic iron spear of power
+	ID 0F62
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 2
+	HIDAMAGE 36
+	HP 40
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 30
+	SPD 27
+	WEIGHT 300
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF POWER
+}
+	
+//////////////////////////////////////////////////////////////
+//////////////////////// Pole Arms ///////////////////////////
+//////////////////////////////////////////////////////////////
+	
+// bardiche
+SECTION ITEM $item_iron_bardiche_of_power
+{
+	NAME magic iron bardiche
+	NAME2 magic iron bardiche of power
+	ID 0F4D
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 43
+	HP 62
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 50
+	SPD 24
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+	
+// halberd
+SECTION ITEM $item_iron_halberd_of_power
+{
+	NAME magic iron halberd
+	NAME2 magic iron halberd of power
+	ID 143E
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 49
+	HP 62
+	DEF 5
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 55
+	SPD 22
+	WEIGHT 1300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF POWER
+}
+
+// VANQUISHING
+
+////////////////////////////////////////////////////////////
+////////////////////// Axes ////////////////////////////////
+////////////////////////////////////////////////////////////
+	
+// battle axe
+SECTION ITEM $item_iron_double_axe_of_vanquishing
+{
+	NAME magic iron double axe
+	NAME2 magic iron double axe of vanquishing
+	ID 0F4B
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 45
+	SPD 35
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+// war axe
+SECTION ITEM $item_iron_battle_axe_of_vanquishing
+{
+	NAME magic iron battle axe
+	NAME2 magic iron battle axe of vanquishing
+	ID 0F47
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 20
+	HP 110
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 30
+	SPD 45
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+// Lg. war axe
+SECTION ITEM $item_iron_large_battle_axe_of_vanquishing
+{
+	NAME magic iron large battle axe
+	NAME2 magic iron large battle axe of vanquishing
+	ID 13FB
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 37
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 44
+	SPD 29
+	WEIGHT 600
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+// axe
+SECTION ITEM $item_iron_axe_of_vanquishing
+{
+	NAME magic iron axe
+	NAME2 magic iron axe of vanquishing
+	ID 0F49
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 4
+	HIDAMAGE 28
+	HP 65
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+// two-handed axe
+SECTION ITEM $item_iron_two-handed_axe_of_vanquishing
+{
+	NAME magic a iron two-handed axe
+	NAME2 magic a iron two-handed axe of vanquishing
+	ID 1442
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 60
+	SPD 35
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+// Execut. axe
+SECTION ITEM $item_iron_executioners_axe_of_vanquishing
+{
+	NAME magic iron executioners axe
+	NAME2 magic iron executioners axe of vanquishing
+	ID 0F45
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 60
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 40
+	SPD 28
+	WEIGHT 800
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+// war axe
+SECTION ITEM $item_iron_war_axe_of_vanquishing
+{
+	NAME magic iron war axe
+	NAME2 magic iron war axe of vanquishing
+	ID 13B0
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 9
+	HIDAMAGE 27
+	HP 75
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 38
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+///////////////////////////////////////////////////////////////
+//////////////// swords and blades ////////////////////////
+///////////////////////////////////////////////////////////////
+	
+// dagger
+SECTION ITEM $item_iron_dagger_of_vanquishing
+{
+	NAME magic iron dagger
+	NAME2 magic iron dagger of vanquishing
+	ID 0F51
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 3
+	HIDAMAGE 15
+	HP 35
+	DECAY
+	VALUE 15
+	RESTOCK 10
+	STR 1
+	SPD 40
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF VANQUISHING
+}
+	
+//cutlass
+SECTION ITEM $item_iron_cutlass_of_vanquishing
+{
+	NAME magic iron cutlass
+	NAME2 magic iron cutlass of vanquishing
+	ID 1440
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 6
+	HIDAMAGE 28
+	HP 50
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 35
+	SPD 40
+	WEIGHT 500
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+// kryss
+SECTION ITEM $item_iron_kryss_of_vanquishing
+{
+	NAME magic iron kryss
+	NAME2 magic iron kryss of vanquishing
+	ID 1400
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 70
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 22
+	SPD 45
+	WEIGHT 100
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF VANQUISHING
+}
+	
+//katana
+SECTION ITEM $item_iron_katana_of_vanquishing
+{
+	NAME magic iron katana
+	NAME2 magic iron katana of vanquishing
+	ID 13FF
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 26
+	HP 45
+	DEF 8
+	DECAY
+	VALUE 75
+	RESTOCK 10
+	STR 10
+	SPD 40
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+//scimitar
+SECTION ITEM $item_iron_scimitar_of_vanquishing
+{
+	NAME magic iron scimitar
+	NAME2 magic iron scimitar of vanquishing
+	ID 13B6
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 4
+	HIDAMAGE 30
+	HP 45
+	DEF 4
+	DECAY
+	VALUE 65
+	RESTOCK 10
+	STR 32
+	SPD 41
+	WEIGHT 200
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+//Broad Sword
+SECTION ITEM $item_iron_broadsword_of_vanquishing
+{
+	NAME magic iron broadsword
+	NAME2 magic iron broadsword of vanquishing
+	ID 0F5E
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 5
+	HIDAMAGE 29
+	HP 65
+	DEF 5
+	DECAY
+	VALUE 80
+	RESTOCK 10
+	STR 25
+	SPD 39
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+//long sword
+SECTION ITEM $item_iron_long_sword_of_vanquishing
+{
+	NAME magic iron long sword
+	NAME2 magic iron long sword of vanquishing
+	ID 13B8
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	DEF 5
+	LODAMAGE 6
+	HIDAMAGE 27
+	HP 45
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 25
+	SPD 33
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+//Viking Sword
+SECTION ITEM $item_iron_viking_sword_of_vanquishing
+{
+	NAME magic iron viking sword
+	NAME2 magic iron viking sword of vanquishing
+	ID 13BA
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	HP 50
+	LODAMAGE 6
+	HIDAMAGE 34
+	HP 100
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 38
+	SPD 30
+	WEIGHT 300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+///////////////////////////////////////////////////////////
+///////////////////// Maces ///////////////////////////////
+///////////////////////////////////////////////////////////
+	
+// mace
+SECTION ITEM $item_iron_mace_of_vanquishing
+{
+	NAME magic iron mace
+	NAME2 magic iron mace of vanquishing
+	ID 0F5B
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 8
+	HIDAMAGE 32
+	HP 40
+	DECAY
+	VALUE 30
+	RESTOCK 10
+	STR 45
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF VANQUISHING
+}
+	
+// maul
+SECTION ITEM $item_iron_maul_of_vanquishing
+{
+	NAME magic iron maul
+	NAME2 magic iron maul of vanquishing
+	ID 143A
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 7
+	HIDAMAGE 32
+	HP 50
+	DECAY
+	VALUE 35
+	RESTOCK 10
+	STR 20
+	SPD 28
+	WEIGHT 1100
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF VANQUISHING
+}
+	
+// war mace
+SECTION ITEM $item_iron_war_mace_of_vanquishing
+{
+	NAME magic iron war mace
+	NAME2 magic iron war mace of vanquishing
+	ID 1406
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 1
+	LODAMAGE 10
+	HIDAMAGE 30
+	HP 70
+	DECAY
+	VALUE 60
+	RESTOCK 10
+	STR 30
+	SPD 30
+	WEIGHT 1400
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF VANQUISHING
+}
+	
+// war hammer
+SECTION ITEM $item_iron_war_hammer_of_vanquishing
+{
+	NAME magic iron war hammer
+	NAME2 magic iron war hammer of vanquishing
+	ID 1438
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 38
+	HP 70
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 40
+	SPD 29
+	WEIGHT 700
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF VANQUISHING
+}
+	
+// hammer pick
+SECTION ITEM $item_iron_hammer_pick_of_vanquishing
+{
+	NAME magic iron hammer pick
+	NAME2 magic iron hammer pick of vanquishing
+	ID 143C
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 8
+	HIDAMAGE 24
+	HP 32
+	DECAY
+	VALUE 40
+	RESTOCK 10
+	STR 45
+	SPD 30
+	WEIGHT 600
+	DAMAGETYPE $damage_bludgeon
+	#copy BONUS OF VANQUISHING
+}
+	
+//////////////////////////////////////////////////////////////
+///////////////// spears and forks //////////////////////////
+//////////////////////////////////////////////////////////////
+	
+//short spear
+SECTION ITEM $item_iron_short_spear_of_vanquishing
+{
+	NAME magic iron short spear
+	NAME2 magic iron short spear of vanquishing
+	ID 1403
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 7
+	HIDAMAGE 35
+	HP 70
+	DECAY
+	VALUE 45
+	RESTOCK 10
+	STR 15
+	SPD 35
+	WEIGHT 200
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF VANQUISHING
+}
+	
+//war fork
+SECTION ITEM $item_iron_war_fork_of_vanquishing
+{
+	NAME magic iron war fork
+	NAME2 magic iron war fork of vanquishing
+	ID 1405
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 6
+	HIDAMAGE 30
+	HP 65
+	DECAY
+	VALUE 90
+	RESTOCK 10
+	STR 35
+	SPD 35
+	WEIGHT 600
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF VANQUISHING
+}
+	
+//spear
+SECTION ITEM $item_iron_spear_of_vanquishing
+{
+	NAME magic iron spear
+	NAME2 magic iron spear of vanquishing
+	ID 0F62
+	COLOR 0838
+	LAYER $layer_1hand_weapon
+	ITEMHAND 2
+	LODAMAGE 2
+	HIDAMAGE 36
+	HP 40
+	DECAY
+	VALUE 55
+	RESTOCK 10
+	STR 30
+	SPD 27
+	WEIGHT 300
+	DAMAGETYPE $damage_pierce
+	#copy BONUS OF VANQUISHING
+}
+	
+//////////////////////////////////////////////////////////////
+//////////////////////// Pole Arms ///////////////////////////
+//////////////////////////////////////////////////////////////
+	
+// bardiche
+SECTION ITEM $item_iron_bardiche_of_vanquishing
+{
+	NAME magic iron bardiche
+	NAME2 magic iron bardiche of vanquishing
+	ID 0F4D
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 43
+	HP 62
+	DECAY
+	VALUE 70
+	RESTOCK 10
+	STR 50
+	SPD 24
+	WEIGHT 400
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+	
+// halberd
+SECTION ITEM $item_iron_halberd_of_vanquishing
+{
+	NAME magic iron halberd
+	NAME2 magic iron halberd of vanquishing
+	ID 143E
+	COLOR 0838
+	LAYER $layer_2hand_weapon
+	ITEMHAND 2
+	LODAMAGE 5
+	HIDAMAGE 49
+	HP 62
+	DEF 5
+	DECAY
+	VALUE 85
+	RESTOCK 10
+	STR 55
+	SPD 22
+	WEIGHT 1300
+	DAMAGETYPE $damage_slash
+	#copy BONUS OF VANQUISHING
+}
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || Magic Weapons (Weapon with Spell effects)                           ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//Viking of Flamestrike
+SECTION ITEM $item_iron_viking_sword_of_flamestrike
+{
+    NAME a magic viking sword
+    NAME2 viking sword of flamestrike
+    ID 13BA
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    HP 50
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 100
+    DECAY
+    VALUE 85
+    STR 40
+    SPD 30
+    TYPE $itype_wand
+    MOREX 7
+    MOREY 3
+    MOREZ 10
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+//Viking of Feeblemind
+SECTION ITEM $item_iron_viking_sword_of_feeblemind
+{
+    NAME a magic viking sword
+    NAME2 viking sword of feeblemind
+    ID 13BA
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    HP 50
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 100
+    DECAY
+    VALUE 85
+    STR 40
+    SPD 30
+    TYPE $itype_wand
+    MOREX 1
+    MOREY 3
+    MOREZ 50
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+//Viking of Mana Drain
+SECTION ITEM $item_iron_viking_sword_of_mana_drain
+{
+    NAME a magic viking sword
+    NAME2 viking sword of mana drain
+    ID 13BA
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    HP 50
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 100
+    DECAY
+    VALUE 85
+    STR 40
+    SPD 30
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 7
+    MOREZ 40
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+//Viking of Lightning
+SECTION ITEM $item_iron_viking_sword_of_lightning
+{
+    NAME a magic viking sword
+    NAME2 viking sword of lightning
+    ID 13BA
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    HP 50
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 100
+    DECAY
+    VALUE 85
+    STR 40
+    SPD 30
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 6
+    MOREZ 30
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+//Viking of Energy Bolt
+SECTION ITEM $item_iron_viking_sword_of_energy_bolt
+{
+    NAME a magic viking sword
+    NAME2 viking sword of energy bolt
+    ID 13BA
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    HP 50
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 100
+    DECAY
+    VALUE 85
+    STR 40
+    SPD 30
+    TYPE $itype_wand
+    MOREX 6
+    MOREY 2
+    MOREZ 20
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+//Viking of Invisibility
+SECTION ITEM $item_iron_viking_sword_of_invisibility
+{
+    NAME a magic viking sword
+    NAME2 viking sword of invisibility
+    ID 13BA
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    HP 50
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 100
+    DECAY
+    VALUE 85
+    STR 40
+    SPD 30
+    TYPE $itype_wand
+    MOREX 6
+    MOREY 4
+    MOREZ 10
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+//Viking of Resurrection
+SECTION ITEM $item_iron_viking_sword_of_resurrection
+{
+    NAME a magic viking sword
+    NAME2 viking sword of resurrection
+    ID 13BA
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    HP 50
+    LODAMAGE 7
+    HIDAMAGE 35
+    HP 100
+    DECAY
+    VALUE 85
+    STR 40
+    SPD 30
+    TYPE $itype_wand
+    MOREX 8
+    MOREY 3
+    MOREZ 5
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+//Long Sword of Flamestrike
+SECTION ITEM $item_iron_long_sword_of_flamestrike
+{
+    NAME a magic longsword
+    NAME2 long sword of flamestrike
+    ID 13B8
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    DEF 5
+    LODAMAGE 5
+    HIDAMAGE 25
+    HP 110
+    FIGHTSKILL 40
+    DECAY
+    VALUE 70
+    STR 25
+    SPD 40
+    TYPE $itype_wand
+    MOREX 7
+    MOREY 3
+    MOREZ 10
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+//Long Sword of Feeblemind
+SECTION ITEM $item_iron_long_sword_of_feeblemind
+{
+    NAME a magic longsword
+    NAME2 long sword of feeblemind
+    ID 13B8
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    DEF 5
+    LODAMAGE 5
+    HIDAMAGE 25
+    HP 110
+    FIGHTSKILL 40
+    DECAY
+    VALUE 70
+    STR 25
+    SPD 40
+    TYPE $itype_wand
+    MOREX 1
+    MOREY 3
+    MOREZ 50
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+//Long Sword of Mana Drain
+SECTION ITEM $item_iron_long_sword_of_mana_drain
+{
+    NAME a magic longsword
+    NAME2 long sword of mana drain
+    ID 13B8
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    DEF 5
+    LODAMAGE 5
+    HIDAMAGE 25
+    HP 110
+    FIGHTSKILL 40
+    DECAY
+    VALUE 70
+    STR 25
+    SPD 40
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 7
+    MOREZ 40
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+//Long Sword of Lightning
+SECTION ITEM $item_iron_long_sword_of_lightning
+{
+    NAME a magic longsword
+    NAME2 long sword of lightning
+    ID 13B8
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    DEF 5
+    LODAMAGE 5
+    HIDAMAGE 25
+    HP 110
+    FIGHTSKILL 40
+    DECAY
+    VALUE 70
+    STR 25
+    SPD 40
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 6
+    MOREZ 30
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+//Long Sword of Energy Bolt
+SECTION ITEM $item_iron_long_sword_of_energy_bolt
+{
+    NAME a magic longsword
+    NAME2 long sword of energy bolt
+    ID 13B8
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    DEF 5
+    LODAMAGE 5
+    HIDAMAGE 25
+    HP 110
+    FIGHTSKILL 40
+    DECAY
+    VALUE 70
+    STR 25
+    SPD 40
+    TYPE $itype_wand
+    MOREX 6
+    MOREY 2
+    MOREZ 20
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+//Long Sword of Invisibility
+SECTION ITEM $item_iron_long_sword_of_invisibility
+{
+    NAME a magic longsword
+    NAME2 long sword of invisibility
+    ID 13B8
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    DEF 5
+    LODAMAGE 5
+    HIDAMAGE 25
+    HP 110
+    FIGHTSKILL 40
+    DECAY
+    VALUE 70
+    STR 25
+    SPD 40
+    TYPE $itype_wand
+    MOREX 6
+    MOREY 4
+    MOREZ 10
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+//Long Sword of Resurrection
+SECTION ITEM $item_iron_long_sword_of_resurrection
+{
+    NAME a magic longsword
+    NAME2 long sword of resurrection
+    ID 13B8
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    DEF 5
+    LODAMAGE 5
+    HIDAMAGE 25
+    HP 110
+    FIGHTSKILL 40
+    DECAY
+    VALUE 70
+    STR 25
+    SPD 40
+    TYPE $itype_wand
+    MOREX 8
+    MOREY 3
+    MOREZ 5
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+//Scimitar of Flamestrike
+SECTION ITEM $item_iron_scimitar_of_flamestrike
+{
+    NAME a magic scimitar
+    NAME2 scimitar of flamestrike
+    ID 13B6
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 90
+    DEF 4
+    DECAY
+    VALUE 65
+    STR 10
+    SPD 35
+    TYPE $itype_wand
+    MOREX 7
+    MOREY 3
+    MOREZ 10
+    WEIGHT 600
+    DAMAGETYPE $damage_slash
+}
+
+//Scimitar of Feeblemind
+SECTION ITEM $item_iron_scimitar_of_feeblemind
+{
+    NAME a magic scimitar
+    NAME2 scimitar of feeblemind
+    ID 13B6
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 90
+    DEF 4
+    DECAY
+    VALUE 65
+    STR 10
+    SPD 35
+    TYPE $itype_wand
+    MOREX 1
+    MOREY 3
+    MOREZ 50
+    WEIGHT 600
+    DAMAGETYPE $damage_slash
+}
+
+//Scimitar of Mana Drain
+SECTION ITEM $item_iron_scimitar_of_mana_drain
+{
+    NAME a magic scimiter
+    NAME2 scimitar of mana drain
+    ID 13B6
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 90
+    DEF 4
+    DECAY
+    VALUE 65
+    STR 10
+    SPD 35
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 7
+    MOREZ 40
+    WEIGHT 600
+    DAMAGETYPE $damage_slash
+}
+
+//Scimitar of Lightning
+SECTION ITEM $item_iron_scimitar_of_lightning
+{
+    NAME a magic scimitar
+    NAME2 scimitar of lightning
+    ID 13B6
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 90
+    DEF 4
+    DECAY
+    VALUE 65
+    STR 10
+    SPD 35
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 6
+    MOREZ 30
+    WEIGHT 600
+    DAMAGETYPE $damage_slash
+}
+
+//Scimitar of Energy Bolt
+SECTION ITEM $item_iron_scimitar_of_energy_bolt
+{
+    NAME a magic scimitar
+    NAME2 scimitar of energy bolt
+    ID 13B6
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 90
+    DEF 4
+    DECAY
+    VALUE 65
+    STR 10
+    SPD 35
+    TYPE $itype_wand
+    MOREX 6
+    MOREY 2
+    MOREZ 20
+    DAMAGETYPE $damage_slash
+}
+
+//Scimitar of Invisibility
+SECTION ITEM $item_iron_scimitar_of_invisibility
+{
+    NAME a magic scimitar
+    NAME2 scimitar of invisibility
+    ID 13B6
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 90
+    DEF 4
+    DECAY
+    VALUE 65
+    STR 10
+    SPD 35
+    TYPE $itype_wand
+    MOREX 6
+    MOREY 4
+    MOREZ 10
+    WEIGHT 600
+    DAMAGETYPE $damage_slash
+}
+
+//Scimitar of Resurrection
+SECTION ITEM $item_iron_scimitar_of_resurrection
+{
+    NAME a magic scimitar
+    NAME2 scimitar of resurrection
+    ID 13B6
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 90
+    DEF 4
+    DECAY
+    VALUE 65
+    STR 10
+    SPD 35
+    TYPE $itype_wand
+    MOREX 8
+    MOREY 3
+    MOREZ 5
+    WEIGHT 600
+    DAMAGETYPE $damage_slash
+}
+//Broad Sword of Flamestrike
+SECTION ITEM $item_iron_broad_sword_of_flamestrike
+{
+    NAME a magic broadsword
+    NAME2 broad sword of flamestrike
+    ID 0F5E
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 100
+    DEF 5
+    DECAY
+    VALUE 80
+    STR 25
+    SPD 35
+    TYPE $itype_wand
+    MOREX 7
+    MOREY 3
+    MOREZ 10
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+//Broad Sword of Feeblemind
+SECTION ITEM $item_iron_broad_sword_of_feeblemind
+{
+    NAME a magic broadsword
+    NAME2 broad sword of feeblemind
+    ID 0F5E
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 100
+    DEF 5
+    DECAY
+    VALUE 80
+    STR 25
+    SPD 35
+    TYPE $itype_wand
+    MOREX 1
+    MOREY 3
+    MOREZ 50
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+//Broad Sword of Mana Drain
+SECTION ITEM $item_iron_broad_sword_of_mana_drain
+{
+    NAME a magic boradsword
+    NAME2 broad sword of mana drain
+    ID 0F5E
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 100
+    DEF 5
+    DECAY
+    VALUE 80
+    STR 25
+    SPD 35
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 7
+    MOREZ 40
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+//Broad Sword of Lightning
+SECTION ITEM $item_iron_broad_sword_of_lightning
+{
+    NAME a magic broadsword
+    NAME2 broad sword of lightning
+    ID 0F5E
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 100
+    DEF 5
+    DECAY
+    VALUE 80
+    STR 25
+    SPD 35
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 6
+    MOREZ 30
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+//Broad Sword of Energy Bolt
+SECTION ITEM $item_iron_broad_sword_of_energy_bolt
+{
+    NAME a magic broadsword
+    NAME2 broad sword of energy bolt
+    ID 0F5E
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 100
+    DEF 5
+    DECAY
+    VALUE 80
+    STR 25
+    SPD 35
+    TYPE $itype_wand
+    MOREX 6
+    MOREY 2
+    MOREZ 20
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+//Broad Sword of Invisibility
+SECTION ITEM $item_iron_broad_sword_of_invisibility
+{
+    NAME a magic broadsword
+    NAME2 broad sword of invisibility
+    ID 0F5E
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 100
+    DEF 5
+    DECAY
+    VALUE 80
+    STR 25
+    SPD 35
+    TYPE $itype_wand
+    MOREX 6
+    MOREY 4
+    MOREZ 10
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+//Broad Sword of Resurrection
+SECTION ITEM $item_iron_broad_sword_of_resurrection
+{
+    NAME a magic broadsword
+    NAME2 broad sword of resurrection
+    ID 0F5E
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 30
+    HP 100
+    DEF 5
+    DECAY
+    VALUE 80
+    STR 25
+    SPD 35
+    TYPE $itype_wand
+    MOREX 8
+    MOREY 3
+    MOREZ 5
+    WEIGHT 500
+    DAMAGETYPE $damage_slash
+}
+
+// Black Staff
+SECTION ITEM $item_staff_of_lich_summoning
+{
+    NAME a staff of lich summoning
+    ID 0DF0
+    LAYER $layer_2hand_weapon
+    ITEMHAND 2
+    LODAMAGE 4
+    HIDAMAGE 34
+    HP 70
+    DEF 8
+    DECAY
+    VALUE 85
+    STR 40
+    SPD 35
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_lich_staff
+    DAMAGETYPE $damage_bludgeon
+}
