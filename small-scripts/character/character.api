@@ -1177,3 +1177,50 @@ public chr_setTamed (const chr, const npc)
 \param seconds
 */
 native chr_flee( const npc, const from, const seconds );
+
+/*!
+\brief Get the direction for see location
+\author Endymion
+\param chr
+\param x the x location
+\param y the y location
+\return the direction
+*/
+public chr_getDirForSee( const chr, const x, const y )
+{
+	new chr_x = chr_getProperty( chr, CP_POSITION, CP2_X );
+	new chr_y = chr_getProperty( chr, CP_POSITION, CP2_Y );
+	
+	if ((chr_x == x) && (chr_y == y))
+		return chr_getProperty( chr, CP_DIR );
+
+	if (chr_x == x)
+		if (chr_y > y)
+			dir = NORTH; // north
+		else
+			dir = SOUTH; // south
+	else
+	{
+		float coef =(y - chr_y) / (x - chr_x);
+		if (chr_x < x) // facing east
+			if (coef > 2)
+				dir = SOUTH;
+			else if (coef > 0.5)
+				dir = SOUTHEAST;
+			else if (coef > -0.5)
+				dir = EAST;
+			else if (coef > -2)
+				dir = NORTHEAST;
+			else dir = NORTH;
+		else // facing west
+			if (coef > 2)
+				dir = NORTH;
+			else if (coef > 0.5)
+				dir = NORTHWEST; // south-west
+			else if (coef > -0.5)
+				dir = WEST; // west
+			else if (coef > -2)
+				dir = SOUTHWEST; // north-west
+			else dir = SOUTH;
+	}
+}

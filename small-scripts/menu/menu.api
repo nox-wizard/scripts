@@ -329,4 +329,28 @@ native menu_addPage( const menu, const page );
 native menu_addPageButton( const menu, const x, const y, const up, const down, const page );
 
 
+
+/*!
+\brief Create a new icon list menu
+\author Endymion
+\since 0.82
+\param 1 function callback
+\param 2 question
+\return the menu serial
+*/
+native menu_createIconList( const callback[], const question[], ... );
+
+/*!
+\brief Add a new icon at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 model
+\param 3 color
+\param 4 response
+\return false if error, true else
+\fn menu_addIcon( const menu, const model, const color, const response[], ... )
+*/
+native menu_addIcon( const menu, const model, const color=0, const response[], ... );
+
+
 /** @} */ // end of script_API_menu

@@ -79,6 +79,13 @@ native send_statUpdate (const chr);
 native send_staticfx(const chr, const effect);
 
 /*!
+\brief Send a quest arrow
+\author Endymion
+\fn send_staticfx(const chr, const effect)
+*/
+native send_questArrow( const chr, const active, const x, const y );
+
+/*!
 \brief test if status request from client is for character skills
 \author Sparhawk
 \since 0.82
