@@ -101,7 +101,7 @@ public cmd_tweak (const target)
 
 public TweakStart( const t, const chrsource, const target, const x, const y, const z, const model, const param1 )
 {
-	printf("chrsource: %d, target: %d, modell: %d, t: %d^n", chrsource, target, model, t);
+	//printf("chrsource: %d, target: %d, modell: %d, t: %d^n", chrsource, target, model, t);
 	if ( chrsource < 0 )
 		return;
 	if ( target < 0)
@@ -109,7 +109,7 @@ public TweakStart( const t, const chrsource, const target, const x, const y, con
 		chr_message( chrsource, _,"Select a char or item,please");
 		return;
 	}
-	if ( (t == 1) || (t==3) //ist npc/char
+	if ( (t == 1) || (t==3) //is npc/char
 	        basicChrTweak(chrsource,target, 1);
 	else if ( t=2)
 		callItemMenu(chrsource,target, 1);
@@ -137,7 +137,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 	gui_addPage(twkMenu,1);
 	new arrayline = pagenumber-1;
 	gui_addButton(twkMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-	gui_addText(twkMenu,60,49,33,"Hauptinfos");
+	gui_addText(twkMenu,60,49,33,"Main infos");
 	gui_addButton(twkMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
 	gui_addText(twkMenu,195,49,33,"Skills");
 	gui_addButton(twkMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
@@ -165,7 +165,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 
 	if( pagenumber == 1)
 	{
-		gui_addText(twkMenu,230,150,33,"Hauptinfo");
+		gui_addText(twkMenu,230,150,33,"Main info");
 		
 		gui_addGump(twkMenu,50,181, 0x827);
 		gui_addText(twkMenu,66,180,1310,"Name :");
@@ -184,7 +184,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addPropField( twkMenu, 130, 240,150,30,CP_FAME);
 		
 		gui_addGump(twkMenu,50,261, 0x827);
-		gui_addText(twkMenu,66,260,1310,"Stärke :");
+		gui_addText(twkMenu,66,260,1310,"Strength :");
 		gui_addPropField( twkMenu, 130, 260,150,30,CP_STRENGTH,CP2_STR);
 		
 		gui_addGump(twkMenu,50,281, 0x827);
@@ -220,7 +220,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addText( twkMenu, 130, 420,0,tempStr);
 		//gui_addPropField( twkMenu, 130, 420,150,30,CP_WEIGHT);
 
-		gui_addText(twkMenu,270,180,1310,"Summe Skills :"); // Skillsumme
+		gui_addText(twkMenu,270,180,1310,"Summ Skills :"); // Skillsumme
 		new i;
 		new skillsum;
 		for (i=0;i<49;++i)
@@ -231,11 +231,11 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		sprintf(skillsumStr,"%d",skillsum);
 		gui_addText(twkMenu,420,180,0,skillsumStr);
 		
-		gui_addText(twkMenu,270,200,1310,"Gold Bankfach :"); //Gold
+		gui_addText(twkMenu,270,200,1310,"Gold bankbox :"); //Gold
 		sprintf( tempStr,"%d",chr_countBankGold(target));
 		gui_addText( twkMenu, 420, 200,0,tempStr);
 		
-		gui_addText(twkMenu,270,220,1310,"Bankfach öffnen");
+		gui_addText(twkMenu,270,220,1310,"bankbox open");
 		gui_addButton(twkMenu,420,220,2224,2117,11);
 		gui_addGump(twkMenu,254,241, 0x827);
 		
@@ -259,7 +259,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addPropField( twkMenu, 420, 320,150,30,CP_SCRIPTID);
 		
 		gui_addGump(twkMenu,254,341, 0x827);
-		gui_addText(twkMenu,270,340,1310,"Aktion (Skill) :");
+		gui_addText(twkMenu,270,340,1310,"Action (Skill) :");
 		gui_addPropField( twkMenu, 420, 340,150,30,CP_MAKING);
 		
 		gui_addGump(twkMenu,254,361, 0x827);
@@ -277,17 +277,17 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addText(twkMenu,270,400,1310,"Script ID:");
 		sprintf( tempStr,"%d",chr_getProperty(target,CP_SCRIPTID));
 		
-		gui_addText(twkMenu,66,460,1310,"Gildenname :");
+		gui_addText(twkMenu,66,460,1310,"guild name :");
 		if ( chr_getGuild(target) >= 0 )
 			guild_getProperty( chr_getGuild(target),GP_STR_NAME,_,0,tempStr );
 		else	tempStr="Keine";
 		gui_addText( twkMenu, 200, 460,0,tempStr);
 		
-		gui_addText(twkMenu,66,480,1310,"Gildenmaster :");
+		gui_addText(twkMenu,66,480,1310,"guild master :");
 		gui_addText(twkMenu,200,480,0,"Not yet available");
-		gui_addText(twkMenu,66,500,1310,"Gehe zur Gilde");
+		gui_addText(twkMenu,66,500,1310,"Go to guild");
 		
-		gui_addText(twkMenu,66,520,1310,"Char seit dem");
+		gui_addText(twkMenu,66,520,1310,"Char since");
 		new age=chr_getProperty(target,CP_CREATIONDAY);
 		if ( age > 0 )
 		{	new year=cal_getRealYear(age);
@@ -305,7 +305,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 	}
 	else if(pagenumber ==2)
 	{
-		gui_addText(twkMenu,100,150,33,"Gemischt (Miscellaneous)");
+		gui_addText(twkMenu,100,150,33,"Miscellaneous");
 		new miscSkills[21]={ SK_ALCHEMY,SK_BLACKSMITHING,SK_BOWCRAFT,SK_CARPENTRY,SK_COOKING,SK_FISHING,SK_HEALING,SK_HERDING,SK_LOCKPICKING,SK_LUMBERJACKING,SK_MAGERY,SK_MEDITATION,SK_MINING,SK_MUSICIANSHIP,SK_REMOVETRAPS,	SK_MAGICRESISTANCE,SK_SNOOPING,SK_STEALING,SK_TAILORING,SK_TINKERING,SK_VETERINARY};
 		for ( new i=0;i<13;++i)
 		{
@@ -328,7 +328,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addText(twkMenu,130,490,1310,"Skill Page 1 (Miscellaneous)");
 		
 		gui_addButton(twkMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-		gui_addText(twkMenu,60,49,33,"Hauptinfos");
+		gui_addText(twkMenu,60,49,33,"Main infos");
 		gui_addButton(twkMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
 		gui_addText(twkMenu,195,49,33,"Skills");
 		gui_addButton(twkMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
@@ -506,7 +506,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		//Hausicons
 		if(chr_getProperty(target,CP_PRIV2)&PRIV2_VIEWHOUSESASICON == 4 ) //Icon
 		      checklev = 1;
-		gui_addText(twkMenu,340,190,1310,"Haus als Icons :");
+		gui_addText(twkMenu,340,190,1310,"House as icons :");
 		gui_addCheckbox( twkMenu,470,193,oldpic,newpic,checklev,25);
 		checklev=0;
 		
@@ -670,7 +670,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addText(twkMenu,350,490,1310,"Events 3");
 		
 		gui_addButton(twkMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-		gui_addText(twkMenu,60,49,33,"Hauptinfos");
+		gui_addText(twkMenu,60,49,33,"Main infos");
 		gui_addButton(twkMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
 		gui_addText(twkMenu,195,49,33,"Skills");
 		gui_addButton(twkMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
@@ -713,7 +713,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 		gui_addText(twkMenu,240,490,1310,"Events 2");
 		
 		gui_addButton(twkMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-		gui_addText(twkMenu,60,49,33,"Hauptinfos");
+		gui_addText(twkMenu,60,49,33,"Main infos");
 		gui_addButton(twkMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
 		gui_addText(twkMenu,195,49,33,"Skills");
 		gui_addButton(twkMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
@@ -748,7 +748,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 			chr_getEventHandler(target,event_array[i][eventnum],tempStr);
 			gui_addInputField( twkMenu,220,170+((i-32)*20),150,20,i+1,0,tempStr);
 		}
-		printf("test gui, twkMenu: %d^n", twkMenu);
+		//printf("test gui, twkMenu: %d^n", twkMenu);
 	}
 	else if(pagenumber == 6)
 	{
@@ -805,7 +805,7 @@ public basicChrTweak(const chrsource, const target, pagenumber)
 						}
 												
 						gui_addButton(twkMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-						gui_addText(twkMenu,60,49,33,"Hauptinfos");
+						gui_addText(twkMenu,60,49,33,"Main infos");
 						gui_addButton(twkMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
 						gui_addText(twkMenu,195,49,33,"Skills");
 						gui_addButton(twkMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
