@@ -29,13 +29,14 @@ enum __cmdEntry
 	__cmdPriv,
 	__cmdName: 15, //do not increase this value !!
 	__cmdFunc: 20
-};//!< command data structure, first field is command name, second is command privlevel
+};//!< command data structure, first field is command privlevel, second is command name, third is function to call
 
 
 //insert your custom commands here.
 new __commands[__CMD_COUNT][__cmdEntry] =
 {
 	{PRIV_SEER,	"add",		""},
+	{PRIV_CNS,	"align",	""},
 	{PRIV_CNS,	"area",		""},
 	{PRIV_SEER,	"damage",	""},
 	{PRIV_SEER,	"dupe",		""},
@@ -60,7 +61,6 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"where",	""},
 	{PRIV_CNS,	"wipe",		""},
 		
-	{0,"",""},
 	{0,"",""},{0,"",""},{0,"",""},{0,"",""},{0,"",""}
 }; //!< names of commands, are used to create function names. Due to the 19 characters function name limit, command names are limited to 15 characters in length.
 

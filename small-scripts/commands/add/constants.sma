@@ -168,7 +168,7 @@ new npcMenuTxt[NPC_MENU_ENTRIES][NPC_MENU_ENTRIES_L] =
 }
 
 #define SUPPLY_MENU_FOOD_ENTRIES 3
-#define SUPPLY_MENU_ENTRIES SUPPLY_MENU_FOOD_ENTRIES + 9
+#define SUPPLY_MENU_ENTRIES SUPPLY_MENU_FOOD_ENTRIES + 8
 #define SUPPLY_MENU_ENTRIES_L 17
 #define SUPPLY_MENU_ROWS 3
 new supplyMenuTxt[SUPPLY_MENU_ENTRIES][SUPPLY_MENU_ENTRIES_L] =
@@ -177,7 +177,6 @@ new supplyMenuTxt[SUPPLY_MENU_ENTRIES][SUPPLY_MENU_ENTRIES_L] =
 	"Backed & meat",
 	"Fruit & veggys",
 	"Plants",
-	"Doors",
 	"Lights",
 	"Containers",
 	"Statues/Trophies",

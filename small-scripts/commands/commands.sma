@@ -1,5 +1,6 @@
 #include "small-scripts/commands/area.sma"
 #include "small-scripts/commands/add/add.sma"
+#include "small-scripts/commands/align.sma"
 #include "small-scripts/commands/dupe.sma"
 #include "small-scripts/commands/damage.sma"
 #include "small-scripts/commands/freeze.sma"
@@ -15,6 +16,7 @@
 #include "small-scripts/commands/playerlist.sma"
 #include "small-scripts/commands/regioncp.sma"
 #include "small-scripts/commands/resurrect.sma"
+#include "small-scripts/commands/setpriv.sma"
 #include "small-scripts/commands/skills/skills.sma"
 #include "small-scripts/commands/stats/stats.sma"
 #include "small-scripts/commands/tweak/tweak.sma"
@@ -185,7 +187,7 @@ public addCommand(name[],priv, func[])
 		strcpy(__commands[i][__cmdFunc],func);
 	else sprintf(__commands[i][__cmdFunc],"cmd_%s",name);
 	
-	printf("Command '%s (priv:%d func:%s) succesfully added^n",__commands[i][__cmdName],__commands[i][__cmdPriv],__commands[i][__cmdFunc]);
+	log_message("Command '%s (priv:%d func:%s) succesfully added",__commands[i][__cmdName],__commands[i][__cmdPriv],__commands[i][__cmdFunc]);
 	return CMD_OK;
 }
 //#endif
@@ -212,7 +214,7 @@ public deleteCommand(name[])
 	
 	if(cmd == __CMD_COUNT)
 	{
-		log_warning("Unable to delete '%s command. Invalid command^n",name);
+		log_warning("Unable to delete '%s command. Invalid command",name);
 		return CMD_ERROR;
 	}
 	
@@ -220,17 +222,28 @@ public deleteCommand(name[])
 	__commands[cmd][__cmdPriv] = PRIV_ADMIN;
 	strcpy(__commands[cmd][__cmdFunc],"");
 	
-	printf("Command '%s succesfully deleted^n",name);
+	log_message("Command '%s succesfully deleted",name);
 	return CMD_OK
 }
 //#endif
 
+/*!
+\author Fax
+\fn startCommandSystem(const chr)
+\param chr: the character
+\since 0.82
+\brief starts the scripted command system for the given character
+
+This funciton checks if the scripted command system's localVars are already set, and sets them if needed.<br>
+Usually this function will be completely executed only at the first character login.
+\return nothing
+*/
 public startCommandSystem(const chr)
 {
-	
+	printf("^n");
 	if(!chr_isaLocalVar(chr,CLV_PRIVLEVEL))
 	{
-		printf("creating privlevel for character %d ... ",chr);
+		log_message("Creating privlevel (CLV_PRIVLEVEL) for character %d ... ",chr);
 		
 		//enter as a player
 		chr_addLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_PLAYER);
@@ -248,30 +261,90 @@ public startCommandSystem(const chr)
 			
 			if(chr_getLocalVarErr() != VAR_ERROR_NONE)
 			{
-				log_error("Unable set admin privlevel");
+				log_error("Unable to set local int var CLV_PRIVLEVEL - error: %d",chr_getLocalVarErr());
 				return;
 			}
 			
 			chr_message(chr,_,"You have been set admin");
+			chr_makeGM(chr);
 			new name[20];
 			chr_getProperty(chr,CP_STR_NAME,0,name);
-			log_warning("%s is new admin",name);
+			log_message("%s has been set admin",name);
 		}
-		
-		printf("[DONE]^n");
 	}
 	
 	if(!chr_isaLocalVar(chr,CLV_CMDTEMP))
 	{
-		printf("creating command temp var for character %d ... ",chr);
+		log_warning("Creating command temp var (CLV_CMDTEMP) for character %d ... ",chr);
 		
 		chr_addLocalIntVar(chr,CLV_CMDTEMP,0);
 		
 		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
 		{
-			log_error("Unable to create CLV_CMDTEMP");
+			log_error("Unable to create CLV_CMDTEMP- error: %d",chr_getLocalVarErr());
 			return;
 		}
 	}
+	
+	log_message("Scripted command system check succesful");
+	printf("^n");
+}
+
+/*!
+\author Fax
+\fn commandSystemTest()
+\param chr: the character
+\since 0.82
+\brief tests command system functions
+
+This funciton tries to create and delete all possible commands and prints the result on the console
+\return nothing
+*/
+public commandSystemTest()
+{
+	printf("^n");
+	log_message("DEBUG: Testing command system");
+	log_message("^tYou should see some commands added and an error message at the end");
+	printf("^n");
+	new result = CMD_OK;
+	new name[15];
+	for(new i = 0; i <  __CMD_COUNT && result == CMD_OK; i++)
+	{
+		sprintf(name,"testCmd%d",i);
+		result = addCommand(name,5,"");
+	}
+	
+	
+	
+	log_message("^tNow you should see some commands removed and an error message at the end");
+	log_message("^tDeleted commands must be the same that were added before");
+	printf("^n");
+	result = CMD_OK;
+	for(new i = 0; i < __CMD_COUNT && result == CMD_OK; i++)
+	{
+		sprintf(name,"testCmd%d",i);
+		result = deleteCommand(name);
+	}
+	
+	log_message("^tEnd of command system test");
+	printf("^n");
+}
+
+/*!
+\author Fax
+\fn showCommandsList()
+\param chr: the character
+\since 0.82
+\brief shows a list of available commands
+\return nothing
+*/
+public showCommandsList()
+{
+	printf("^n");
+	log_message("Available commands:")
+	for(new i = 0; i < __CMD_COUNT ; i++)
+	if(strlen(__commands[i][__cmdName]))
+		log_message("^t%d - '%s (priv:%d)",i,__commands[i][__cmdName],__commands[i][__cmdPriv]);
+	printf("^n");
 }
 /*! @} */ //end of scripts_commands_system

@@ -23,7 +23,7 @@ If area effect is active, all characters in area will be set the privlevel.
 If no area effect is active, or if you pass "target", a target will appear and only 
 the targetted char will be affected
 */
-public cmd_freeze(const chr)
+public cmd_setpriv(const chr)
 {
 	new target = false;
 	new priv = PRIV_PLAYER;
@@ -57,7 +57,7 @@ public cmd_freeze(const chr)
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 		{
 				chr2 = set_getChar(area_chars(area));
-				if(chr2 != chr) chr_setLocalIntVar(object,CLV_PRIVLEVEL,priv);
+				if(chr2 != chr) chr_setLocalIntVar(chr2,CLV_PRIVLEVEL,priv);
 		}
 
 		chr_message(chr,_,"Privlevel set to %d characters ",i);		
@@ -75,10 +75,15 @@ public cmd_freeze(const chr)
 \params all standard target callback params
 \brief handles single character targetting
 */
-public cmd_freeze_targ(target, chr, object, x, y, z, unused, priv)
+public cmd_setpriv_targ(target, chr, object, x, y, z, unused, priv)
 {
 	if(isChar(object))
+	{
 		chr_setLocalIntVar(object,CLV_PRIVLEVEL,priv);
+		chr_message(chr,_,"Privlevel set to %d",chr_getLocalIntVar(object,CLV_PRIVLEVEL));
+		chr_message(object,_,"Your privlevel has been modified,now it's %d",chr_getLocalIntVar(object,CLV_PRIVLEVEL));
+		log_message("Charcter %d privlevel changed, now it's %d",object,chr_getLocalIntVar(object,CLV_PRIVLEVEL));
+	}
 	else chr_message(chr,_,"You must target a character");
 }
 
