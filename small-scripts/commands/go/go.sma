@@ -1,5 +1,5 @@
 
-static filename[] = "scripts/locations.xss";
+static filename[] = "scripts/location.xss";
 enum locationStruct
 {
 	__locX,
