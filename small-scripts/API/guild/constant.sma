@@ -19,6 +19,8 @@ const PROP_GUILD = 3;
  */
 
 	const GP_TYPE = 100;
+	const GP_STONE = 101;
+
 	const GP_STR_NAME = 450;
 	const GP_STR_WEBPAGE = 451;
 	const GP_STR_ABBREVIATION = 452;

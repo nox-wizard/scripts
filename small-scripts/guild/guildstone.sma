@@ -70,7 +70,7 @@ public guild_dclickDeed( const deed, const chr ) {
 
 	bypass();
 
-	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
+	if( chr_getProperty( master, CP_GUILD ) > 0 ) {
 		chr_message( master, _, "Resign from your guild before creating a new guild" );
 		return;
 	}
@@ -98,7 +98,8 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 {
 
 	if( master<=INVALID ) return;
-	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
+	if( chr_getProperty( master, CP_GUILD ) > 0 && ! chr_isGMorCns(master))
+	{
 		chr_message( master, _, "Resign from your guild before creating a new guild" );
 		return;
 	}
@@ -150,7 +151,7 @@ public guildgui_callback( const chr, const gui, const button )
 	if( master<=INVALID )
 		return;
 
-	if( chr_getProperty( master, CP_GUILD )!=INVALID )
+	if( chr_getProperty( master, CP_GUILD ) > 0 && ! chr_isGMorCns(master))
 	{
 		chr_message( master, _, "Resign from your guild before creating a new guild" );
 		return;
@@ -490,7 +491,7 @@ public addRecruit(const targetNum, const chr, const target, const x, const y, co
 				chr_message(chr, _, "He has to resign from his old guild first ! ");
 			return;
 		}
-		guild_addRecruit( chr_getProperty(chr, CP_GUILD), target );
+		guild_addRecruit( chr_getProperty(chr, CP_GUILD), target, chr );
 		if ( chr_getProperty(target, CP_ID) == BODY_FEMALE || chr_getProperty(target, CP_ID) == BODY_DEADFEMALE )
 			chr_message(chr, _, "She has been added into your guild ! ");
 		else
@@ -563,7 +564,20 @@ public resignGuild(const chr, const guild)
 		chr_message(chr, _, "You are not currently a member of a guild!");
 		return;
 	}
-	guild_resignMember (guild, chr);
+	new guildMemberSet=set_create();
+	set_addGuildMembers( guildMemberSet, guild );
+	if ( set_size(guildMemberSet) == 1 )
+	{
+		chr_message(chr, _, "You are the last member, the guild will be removed!");
+		guild_resignMember (guild, chr);
+		new stone = guild_getProperty(guild, GP_STONE);
+		guild_remove(guild);
+		itm_remove(stone);
+
+	}
+	else
+		guild_resignMember (guild, chr);
+	chr_message(chr, _, "You resigned from your guild");
 }
 
 public viewCandidatesList(const chr, const guild)
@@ -839,6 +853,8 @@ public changeAlignment(const chr, const guild)
 	gui_addButton( gui, 45, 105, 0x4B9, 0x4BA, 2 );
 	gui_addText( gui, 85, 135, _, "Chaos" );
 	gui_addButton( gui, 45, 135, 0x4B9, 0x4BA, 3 );
+	// Cancel Button plazieren
+	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 
 }
@@ -905,6 +921,8 @@ public dismissMember(const chr, const guild)
 		if ( page > 1 )
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
+	// Cancel Button plazieren
+	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 }
 
@@ -943,6 +961,8 @@ public declareWar(const chr, const guild)
 		if ( page > 1 )
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
+	// Cancel Button plazieren
+	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 }
 
@@ -999,6 +1019,10 @@ public declarePeace(const chr, const guild)
 		if ( page > 1 )
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
+	// Cancel Button plazieren
+	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
+	// OK Button
+	gui_addButton( gui, 350, 120, 0xf9, 0xf7, 1, 1);
 	gui_show( gui, chr );
 }
 
@@ -1032,6 +1056,7 @@ public declarePeaceCB(const chr, const gui, const buttonCode)
 public acceptMember(const chr, const guild)
 {
 	new gui = gui_create( 40, 40, true, true, true, "acceptMemberCB" );
+	gui_addResizeGump( gui, 0, 0,  0x0A28, 400, 250 );
 	new guildRecruitSet=set_create();
 	new membername[50];
 	new page;
@@ -1055,6 +1080,8 @@ public acceptMember(const chr, const guild)
 		if ( page > 1 )
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
+	// Cancel Button plazieren
+	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 }
 
@@ -1084,7 +1111,6 @@ public refuseCandidate(const chr, const guild)
 		for ( new i=1;i < 10;++i)
 		{
 			member=set_get(guildRecruitSet);
-			member=set_get(guildRecruitSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 25, 55+i*30, _, membername);
 			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getRecruitIdx (guild,  member) );
@@ -1096,6 +1122,8 @@ public refuseCandidate(const chr, const guild)
 		if ( page > 1 )
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1)
 	}
+	// Cancel Button plazieren
+	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 
 }

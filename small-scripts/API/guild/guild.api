@@ -39,6 +39,14 @@ native guild_getProperty( const guild, const property, const subprop=0, ...);
 native guild_create( const stone );
 
 /*!
+\author Wintermute
+\fn guild_removeGuild( const guild )
+\brief remove the guild from the list of guilds
+\param guild, the guild to be removed
+*/
+native guild_remove ( const guild);
+
+/*!
 \brief Add a new member to guild
 \author Endymion
 \fn guild_addMember( const guild, const member, const rank, const title_toggle, const title[] )
@@ -107,7 +115,7 @@ native guild_getRecrAtIdx (const guild, const index);
 \param 1 the guild
 \param 2 the new recruit
 */
-native guild_addRecruit( const guild, const chr );
+native guild_addRecruit( const guild, const recruit, const recruiter );
 
 /*!
 \brief Given recruit are refuse

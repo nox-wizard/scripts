@@ -16,19 +16,19 @@
  *  \ingroup script_API
  *  @{
  */
- 
+
 /*!
 \author Endymion
 \fn isChar( const serial )
 \param serial the serial
 \brief Check if a serial is a char serial
 
-checks the character's serial to be between FIRST_CHAR_SERIAL and FIRST_ITEM_SERIAL 
+checks the character's serial to be between FIRST_CHAR_SERIAL and FIRST_ITEM_SERIAL
 \note INVALID return false
 \return true if is a char serial, false else
 */
 stock isChar( const serial ) {
-	return ( ( serial>=FIRST_CHAR_SERIAL ) && ( serial<FIRST_ITEM_SERIAL ) ); 
+	return ( ( serial>=FIRST_CHAR_SERIAL ) && ( serial<FIRST_ITEM_SERIAL ) );
 }
 
 //=================  HIDING  ======================
@@ -59,7 +59,7 @@ native chr_unhide(const chr);
 \fn chr_getProperty(const chr, const property, const subprop=0, ...)
 \param chr the character we want to get a property from
 \param property the property we want to read
-\param subprop the subproperty we want to read 
+\param subprop the subproperty we want to read
 \param ... optional parameter, needed for some kind of properties
 \brief gets a character's property
 
@@ -76,7 +76,7 @@ native chr_getProperty(const chr, const property, const subprop=0, ...);
 \fn chr_setProperty(const chr, const property, const subprop=0, ...)
 \param chr the character we want to set a property to
 \param property the property we want to set
-\param subprop the subproperty we want to set. 
+\param subprop the subproperty we want to set.
 \param 5  the value we want the property to be set to
 \param 6 other subproperties
 \brief sets a character's property
@@ -112,7 +112,7 @@ The priv flag provides information about some character's privileges, bitfields 
 \author Xanathar
 \fn chr_getPriv(const chr)
 \param chr the character
-\brief gets the priv flags 
+\brief gets the priv flags
 \return the priv flags (8-bit number)
 */
 native chr_getPriv(const chr);
@@ -288,7 +288,7 @@ stock chr_hideSerials(const chr)
 stock chr_isGMPageable(const chr)
 {
 	if(!isChar(chr) || !chr_isTrueGM(chr)) return 0;
-	return chr_getProperty( chr, CP_PRIV) & PRIV_ISGMPAGEABLE;	
+	return chr_getProperty( chr, CP_PRIV) & PRIV_ISGMPAGEABLE;
 }
 
 /*!
@@ -395,7 +395,7 @@ native chr_isGMorCns(const chr);
 \return OK or INVALID if chr is not a valid character serial
 */
 stock chr_makePlayer(const chr)
-{ 
+{
 	if(!isChar(chr)) return INVALID;
 	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~(PRIV_ISGM + PRIV_ISCOUNSELOR));
 	return OK;
@@ -463,7 +463,7 @@ stock chr_setPriv2(const chr, const priv2)
 \note this is an helper function that calls chr_getProperty( chr, CP_FROZEN )
 \return true if charcater is frozen
 */
-stock chr_isFrozen(const chr) 
+stock chr_isFrozen(const chr)
 {
 	return (chr_getProperty( chr, CP_PRIV2 ) & PRIV2_FROZEN) != 0;
 }
@@ -558,7 +558,7 @@ stock chr_needsMana(const chr)
 \brief makes a character not to need mana to cast
 \return OK or INVALID if chr is not a valid character serial
 */
-stock chr_doesntNeedMana(const chr) 
+stock chr_doesntNeedMana(const chr)
 {
 	if(!isChar(chr)) return INVALID;
 	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_NONEEDMANA);
@@ -598,7 +598,7 @@ stock chr_isDispellable(const chr)
 \brief makes a character dispellable
 \return OK or INVALID if chr is not a valid character serial
 */
-stock chr_makeDispellable(const chr) 
+stock chr_makeDispellable(const chr)
 {
 	if(!isChar(chr)) return INVALID;
 	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_DISPELLABLE);
@@ -638,7 +638,7 @@ stock chr_hasPermaReflect(const chr)
 \brief puts permanent magic reflect on a character
 \return OK or INVALID if chr is not a valid character serial
 */
-stock chr_setPermaReflect(const chr) 
+stock chr_setPermaReflect(const chr)
 {
 	if(!isChar(chr)) return INVALID;
 	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_PERMAMAGICREFLECT);
@@ -678,7 +678,7 @@ stock chr_needsReags(const chr)
 \brief character won't need reagents to cast
 \return OK or INVALID if chr is not a valid character serial
 */
-stock chr_doesntNeedReags(const chr) 
+stock chr_doesntNeedReags(const chr)
 {
 	if(!isChar(chr)) return INVALID;
 	chr_setProperty( chr, CP_PRIV2, _, chr_getProperty(chr,CP_PRIV2) | PRIV2_NONEEDREAGS);
@@ -706,10 +706,10 @@ stock chr_mustUseReags(const chr)
  */
 /*
 Flag is an 8bit number containing information about reputation status, bitfields are:
-    - 0x1: red 
-    - 0x2: grey 
-    - 0x4: Blue 
-    - 0x8: green 
+    - 0x1: red
+    - 0x2: grey
+    - 0x4: Blue
+    - 0x8: green
     - 0x10: Orange
 */
 
@@ -1113,7 +1113,7 @@ native chr_unmorph( const chr );
 \brief makes "possessor" character possess "possessed" character.
 
 A character can only possess npcs, when a character possess an npc he starts controlling it as if it
-were his character, all privs and commandlevel is moved to the possessed character, 
+were his character, all privs and commandlevel is moved to the possessed character,
 all other characters properties (stats, skills etc..) are changed to the possessed's ones.
 So if a GM possesses a chicken, he will still be a GM, will still be invulnerable, but with the chicken's skills and stats.
 The original (possessor) character is set offline, the possessed one is set online.
@@ -1232,7 +1232,7 @@ public chr_getDirForSee( const chr, const x, const y )
 {
 	new chr_x = chr_getProperty( chr, CP_POSITION, CP2_X );
 	new chr_y = chr_getProperty( chr, CP_POSITION, CP2_Y );
-	
+
 	if ((chr_x == x) && (chr_y == y))
 		return chr_getProperty( chr, CP_DIR );
 
@@ -1380,10 +1380,10 @@ native chr_npcRelease(const chr);
 \return 0 or INVALID if chr or npc is not a valid character serial
 */
 public chr_setTamed (const chr, const npc)
-{	
+{
 	if(!isChar(chr) || !isChar(npc))
 		return INVALID;
-		
+
 	new ownser = chr_getProperty(chr, CP_SERIAL);
 	chr_setOwnSerial(npc, ownser);
 
@@ -1425,7 +1425,7 @@ native chr_unStable(const chr);
 \author Xanathar
 \fn chr_addNPC(const npcScriptID, const x, const y, const z)
 \param npcScriptID the npc's XSS script ID
-\param x,y,z where npc will be created 
+\param x,y,z where npc will be created
 \brief creates a new npc at a given location
 \return npc serial if the npc has been createdr, else INVALID
 */
@@ -1435,14 +1435,25 @@ native chr_addNPC(const npcScriptID, const x, const y, const z);
 \author Fax
 \fn chr_addNPC(const npcScriptID, pos[3])
 \param npcScriptID the npc's XSS script ID
-\param pos[3] vector with the position (x,y,z) where npc will be created 
+\param pos[3] vector with the position (x,y,z) where npc will be created
 \brief creates a new npc at a given location
 \return npc serial if the npc has been createdr, else INVALID
 */
 stock chr_addNPCVec(const npcScriptID, pos[3])
 {
-	return chr_addNPC(npcScriptID, pos[0], pos[1], pos[2]);	
+	return chr_addNPC(npcScriptID, pos[0], pos[1], pos[2]);
 }
+
+/*!
+\author Wintermute
+\fn chr_addRandomNPC(const npclistScriptID, pos[3])
+\param npclistScriptID the npclist's XSS script ID
+\param x,y,z where npc will be created
+\brief creates a new npc from the xss npc list at a given location
+\return npc serial if the npc has been createdr, else INVALID
+*/
+
+native chr_addRandomNPC(const npclistScriptID, const x, const y, const z);
 
 /*!
 \author Xanathar
@@ -1491,7 +1502,7 @@ native chr_calcAtt (const chr);
 \author Xanathar
 \fn chr_calcDef(const chr)
 \param chr the character
-\param bodyPart: the body part of wich you want to calculate the def value, 0 means the whole armor, 1-6 are the different body parts 
+\param bodyPart: the body part of wich you want to calculate the def value, 0 means the whole armor, 1-6 are the different body parts
 \brief calculates a character's defense power
 
 These are the body parts codes:
@@ -1658,7 +1669,7 @@ stock chr_isInOrderGuild(const chr)
 \param type the guild type
 \brief sets the guild type of a character
 TODO: link to guild type list (0:std 1:chaos 2:order)
-\return 0 or INVALID if chr is not a valid character serial 
+\return 0 or INVALID if chr is not a valid character serial
 */
 native chr_setGuildType( const chr, const type );
 
@@ -1677,7 +1688,7 @@ native chr_isGuildTraitor( const chr );
 \param chr the character
 \param traitor 1 if character is to be set traitor
 \brief sets the guild-traitor flag of a character
-\return 0 or INVALID if chr is not a valid character serial 
+\return 0 or INVALID if chr is not a valid character serial
 */
 native chr_setGuildTraitor( const chr, const traitor = 1 );
 
@@ -1717,7 +1728,7 @@ native chr_getGuildFealty( const chr );
 \param chr the character
 \param fealty the new guild fealty
 \brief sets a character's guild fealty
-\return 0 or INVALID if chr is not a valid character serial 
+\return 0 or INVALID if chr is not a valid character serial
 */
 native chr_setGuildFealty( const chr, const fealty );
 
@@ -1736,7 +1747,7 @@ native chr_getGuildNumber( const chr );
 \param chr the character
 \param number the new guild number
 \brief sets the character's guild number
-\return 0 or INVALID if chr is not a valid character serial 
+\return 0 or INVALID if chr is not a valid character serial
 */
 native chr_setGuildNumber( const chr, const number );
 
@@ -1775,7 +1786,7 @@ native chr_setGuildTitle( const chr, const title[] );
 \brief check if a skill action succeedes or fails
 
 Use this function to check if a player succeedes in using a skill, if raise is set to true
-the skill is raised if the action takes place. 
+the skill is raised if the action takes place.
 \return  0 failed, 1 right or INVALID if not valid character or socket
 */
 native chr_checkSkill(const chr, const skill, const min=0, const max=1000, const raise=1);
@@ -2022,9 +2033,9 @@ native chr_speech(const function, const listener = -1, const speaker, const spee
 TODO: link to chr_speech
 */
 stock chr_talk(const listener, const speaker, const text[], const antispam = 1)
-{ 
+{
 	chr_speech(NPC_TALK, listener, speaker, text, antispam);
-} 
+}
 
 /*!
 \author ???
@@ -2036,7 +2047,7 @@ stock chr_talk(const listener, const speaker, const text[], const antispam = 1)
 TODO: link to chr_speech
 */
 stock chr_talkall(const chr, const text[], const antispam = 1)
-{ 
+{
 	chr_speech(NPC_TALK_ALL, _, chr, text, antispam);
 }
 
@@ -2051,9 +2062,9 @@ stock chr_talkall(const chr, const text[], const antispam = 1)
 TODO: link to chr_speech
 */
 stock chr_talkRunic(const listener, const speaker, const text[], const antispam = 1)
-{ 
+{
 	chr_speech(NPC_TALK_RUNIC, listener, speaker, text, antispam);
-} 
+}
 
 /*!
 \author ???
@@ -2065,9 +2076,9 @@ stock chr_talkRunic(const listener, const speaker, const text[], const antispam 
 TODO: link to chr_speech
 */
 stock chr_talkallRunic(const chr, const text[], const antispam = 1)
-{ 
+{
 	chr_speech(NPC_TALK_ALL_RUNIC, _, chr, text, antispam);
-} 
+}
 
 /*!
 \author ???
@@ -2080,9 +2091,9 @@ stock chr_talkallRunic(const chr, const text[], const antispam = 1)
 TODO: link to chr_speech
 */
 stock chr_emote(const listener, const speaker, const text[], const antispam = 1)
-{ 
+{
 	chr_speech(NPC_EMOTE, listener, speaker, text, antispam);
-} 
+}
 
 /*!
 \author ???
@@ -2118,11 +2129,11 @@ native chr_getLocalVarErr();
 \param chr	character serial
 \param var	variable identifier
 \param type	type of variable (VAR_TYPE_ANY, VAR_TYPE_INTEGER, VAR_TYPE_STRING )
-\brief checks if a local var exists for a character 
+\brief checks if a local var exists for a character
 
 Can also be used to check wether variable is of a specific type
 TODO: link to local vars explanation
-\return true when variable exists for character. 
+\return true when variable exists for character.
 */
 native chr_isaLocalVar( const chr, const var, const type = 0 );
 
