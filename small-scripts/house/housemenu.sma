@@ -65,11 +65,11 @@ public housestart(const itm, const chr)
 	new house=more4+more3+more2+more1;
 	//printf("start house gump, house ser is %d, item ser is: %d^n", house, itm);
 	if(chr == house_getProperty(house, HP_OWNER))
-		menu_house(chr, house, 1);
-	else chr_message(chr, _, "Only house owner are allowed to use the house menu);
+		menu_house(chr, house, 1, itm);
+	else chr_message(chr, _, "Only house owner are allowed to use the house menu");
 }
 
-public menu_house(const chrsource, const house, const pagenumber)
+public menu_house(const chrsource, const house, const pagenumber, sign)
 {
 	new tempStr[100];
 	new checklev = 0;
@@ -79,7 +79,7 @@ public menu_house(const chrsource, const house, const pagenumber)
 
 	gui_setProperty( houseMenu,MP_BUFFER,1,house );
 	gui_setProperty( houseMenu,MP_BUFFER,3,BUTTON_HOUSEAPPLY );
-	gui_setProperty( houseMenu,MP_BUFFER,4,pagenumber );
+	gui_setProperty( houseMenu,MP_BUFFER,4,sign );
 
 	gui_addResizeGump(houseMenu,0,0,2600,507,384);
 	gui_addResizeGump(houseMenu,93,82,5100,0,0);
@@ -104,26 +104,26 @@ if( pagenumber ==1)
 	gui_addText(houseMenu,xstart+40,ystart,1310,"Owner is:");
 	new ownerser = house_getProperty(house, HP_OWNER, _);
 	chr_getProperty(ownerser, CP_STR_NAME, _, tempStr);
-	gui_addText(houseMenu,xstart+40+30,ystart,_,tempStr);
+	gui_addText(houseMenu,xstart+40+110,ystart,_,tempStr);
 	printf("ownerser: %d^n", ownerser);
 	
-	gui_addText(houseMenu,xstart+40+250,ystart,1310,"Account:");
+	gui_addText(houseMenu,xstart+40,ystart+20,1310,"Account:");
 	sprintf( tempStr,"%d",chr_getProperty(ownerser,CP_ACCOUNT));
-	gui_addText(houseMenu,xstart+40+330,ystart,_,tempStr);
+	gui_addText(houseMenu,xstart+40+233,ystart+20,_,tempStr);
 	
-	gui_addText(houseMenu,xstart+40,ystart+20,1310,"Number of locked down items:");
+	gui_addText(houseMenu,xstart+40,ystart+20*2,1310,"Number of locked down items:");
 	sprintf( tempStr,"%d (of %d)", house_getProperty(house, HP_LOCKEDITEMS, _), house_getProperty(house, HP_MAXLOCKEDITEMS, _));
-	gui_addText(houseMenu,xstart+40+253,ystart+20,_,tempStr);
+	gui_addText(houseMenu,xstart+40+233,ystart+20*2,_,tempStr);
 	
-	gui_addText(houseMenu,xstart+40,ystart+20*2,1310,"Number of secure container:");
+	gui_addText(houseMenu,xstart+40,ystart+20*3,1310,"Number of secure container:");
 	sprintf( tempStr,"%d (of %d)", house_getProperty(house, HP_SECUREDITEMS), house_getProperty(house, HP_MAXSECUREDITEMS));
-	gui_addText(houseMenu,xstart+40+253,ystart+20*2,_,tempStr);
+	gui_addText(houseMenu,xstart+40+233,ystart+20*3,_,tempStr);
 	
-	gui_addGump(houseMenu,xstart+20, ystart+20*3, 0x827);
-	gui_addText(houseMenu,xstart+40,ystart+20*3,1310,"This house is called:");
-	house_getProperty(house, HP_STR_HOUSENAME, _, tempStr);
-	gui_addInputField( houseMenu,xstart+40+253,ystart+20*3,150,20,11,_,tempStr);
-	
+	gui_addGump(houseMenu,xstart+20, ystart+20*4, 0x827);
+	gui_addText(houseMenu,xstart+40,ystart+20*4,1310,"This house is called:");
+	itm_getProperty(sign, IP_STR_NAME, _, tempStr);
+	gui_addInputField( houseMenu,xstart+40+233,ystart+20*4,150,20,11,_,tempStr);
+		
 #if _AUTOBOUNCE_AVAIL
 	if(itm_isaLocalVar(house, AUTOBOUNCEVAR))
 	{
@@ -272,8 +272,8 @@ gui_show(houseMenu, chrsource);
 
 public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 {
-	printf("start house callback, page: %d", buttonCode);
-	new pagenumber = gui_getProperty(houseMenu, MP_BUFFER, 4);
+	//printf("start house callback, page: %d", buttonCode);
+	new sign = gui_getProperty(houseMenu, MP_BUFFER, 4);
 	new house = gui_getProperty(houseMenu, MP_BUFFER, 1);
 	new i;
 	new chr;
@@ -285,16 +285,17 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 			new setlist = set_create();
 			for(i=11; i<=12;++i)
 			{
-				if(i==11) //house name
+				if(i==11) //house name (at sign)
 				{
 					new textbuf_input[50];
+					gui_getProperty(houseMenu, MP_UNI_TEXT, i, textbuf_input);
 		        		new textbuf_origin[50];
-		        		new value=0;
-		        		house_getProperty(house, HP_STR_HOUSENAME, _, textbuf_origin);
+		        		itm_getProperty(sign, IP_STR_NAME, _, textbuf_origin);
 		        		trim(textbuf_input);
 					if( strcmp( textbuf_input,textbuf_origin)) //go on to get the entry if input different from origin
-		        		{		        			
-		        			house_setProperty(house, HP_STR_HOUSENAME, _, textbuf_input);
+		        		{
+		        			//printf("set name of house to: %s", textbuf_input);
+		        			itm_setProperty(sign, IP_STR_NAME, _, textbuf_input);
 		        		}
 				}
 				#if _AUTOBOUNCE_AVAIL
@@ -431,7 +432,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 			chr_message( chrsource, _, "Whom you want to bounce out of the house?");
 			target_create( chrsource,house, _, _, "Bounceout" );
 			return;
-		}/*
+		}
 		case 19: 
 		{//redeed
 			printf("leer");
@@ -450,7 +451,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 		}
 		case 22: //access bank account
 		{
-			bank = chr_getBankBox(chrsource, BANKBOX_NORMAL);
+			new bank = chr_getBankBox(chrsource, BANKBOX_NORMAL);
 			itm_showContainer(bank,chrsource);
 		}
 		case 23:
@@ -458,7 +459,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 			chr_message( chrsource, _, "Whom do you want to make new Owner?");
 			target_create( chrsource,house, _, _, "TransferHouse" );
 			return;
-		}*/
+		}
 		default: printf("unknown button");
 	}
 }
@@ -493,7 +494,7 @@ public Bounceout(const t, const chrsource, const target, const x, const y, const
 {
 	new hx1 = house_getProperty(house, HP_DIMENSION, 0);
 	new hy1 = house_getProperty(house, HP_DIMENSION, 2);
-	chr_move(target, hx1-1, hy1-1, chr_getProperty(target, CP_POSITION, CP2_X));
+	chr_moveTo(target, hx1-1, hy1-1, chr_getProperty(target, CP_POSITION, CP2_X));
 	chr_message(target, _, "You have been bounced out of the house.");
 	chr_update(target);
 }
