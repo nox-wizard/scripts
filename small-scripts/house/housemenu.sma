@@ -23,7 +23,7 @@ const AUTOBOUNCEVAR = 9000;
 #define HOUSE_FRIENDS 15
 #define HOUSE_BANNED 50
 
-const BUTTON_APPLY=11;
+const BUTTON_HOUSEAPPLY=11;
 const housepages=3; //one line for one page, two rows for one page
 const housepic1 = 5002;
 const housepic2 = 5003;
@@ -64,7 +64,9 @@ public housestart(const itm, const chr)
 	more4 = (more4&0xff)<<0;
 	new house=more4+more3+more2+more1;
 	//printf("start house gump, house ser is %d, item ser is: %d^n", house, itm);
-	menu_house(chr, house, 1);
+	if(chr == house_getProperty(house, HP_OWNER))
+		menu_house(chr, house, 1);
+	else chr_message(chr, _, "Only house owner are allowed to use the house menu);
 }
 
 public menu_house(const chrsource, const house, const pagenumber)
@@ -76,7 +78,7 @@ public menu_house(const chrsource, const house, const pagenumber)
 	new y;
 
 	gui_setProperty( houseMenu,MP_BUFFER,1,house );
-	gui_setProperty( houseMenu,MP_BUFFER,3,BUTTON_APPLY );
+	gui_setProperty( houseMenu,MP_BUFFER,3,BUTTON_HOUSEAPPLY );
 	gui_setProperty( houseMenu,MP_BUFFER,4,pagenumber );
 
 	gui_addResizeGump(houseMenu,0,0,2600,507,384);
@@ -88,7 +90,7 @@ public menu_house(const chrsource, const house, const pagenumber)
 	new arrayline = pagenumber-1;
 	
 	gui_addText(houseMenu,210,12,1210,"House Menue");
-	gui_addButton( houseMenu,400,345, 0x084A, 0x084B,BUTTON_APPLY );
+	gui_addButton( houseMenu,400,345, 0x084A, 0x084B,BUTTON_HOUSEAPPLY );
 	gui_addText(houseMenu,58,41,33,"Info");
 	gui_addButton(houseMenu,100,43,houseButton[arrayline][newhous1],houseButton[arrayline][oldhouse1],1);
 	gui_addText(houseMenu,202,41,33,"Friends");
@@ -157,7 +159,7 @@ else if(pagenumber ==2)
 	gui_addText(houseMenu,xstart+280,ystart-13,1310,tempStr);
 	
 	new coownerlist = set_create();
-	set_getCoOwners ( coownerlist, house);
+	set_addCoOwners( coownerlist, house);
 	for (set_rewind(coownerlist);!set_end(coownerlist);)
 	{
 		chr = set_getChar( coownerlist );
@@ -165,8 +167,8 @@ else if(pagenumber ==2)
 		if(i>8)
 			j=150;
 		else j=0;
-		gui_addCheckbox(houseMenu,xstart+10+j,ystart+21*i,housepic1,housepic2,1,10+i);
-		gui_addText(houseMenu,xstart+30+j,ystart+3+21*i,1310,tempStr);
+		gui_addCheckbox(houseMenu,xstart+20+j,ystart+21*i,housepic1,housepic2,1,10+i);
+		gui_addText(houseMenu,xstart+40+j,ystart-1+21*i,1310,tempStr);
 		i++;
 	}
 	set_delete(coownerlist);
@@ -191,7 +193,7 @@ else if(pagenumber ==2)
 	gui_addText(houseMenu,xstart+280,ystart-13,1310,tempStr);
 	
 	new friendlist = set_create();
-	set_getFriends( friendlist, house);
+	set_addFriends( friendlist, house);
 	for (set_rewind(friendlist);!set_end(friendlist);)
 	{
 		chr = set_getChar( friendlist );
@@ -199,8 +201,8 @@ else if(pagenumber ==2)
 		if(i>8)
 			j=150;
 		else j=0;
-		gui_addCheckbox(houseMenu,xstart+10+j,ystart+21*i,housepic1,housepic2,1,30+i);
-		gui_addText(houseMenu,xstart+30+j,ystart+3+21*i,1310,tempStr);
+		gui_addCheckbox(houseMenu,xstart+20+j,ystart+21*i,housepic1,housepic2,1,30+i);
+		gui_addText(houseMenu,xstart+40+j,ystart-1+21*i,1310,tempStr);
 		i++;
 	}
 	set_delete(friendlist);
@@ -225,7 +227,7 @@ else if(pagenumber ==2)
 	gui_addText(houseMenu,xstart+280,ystart-13,1310,tempStr);
 	
 	new banlist = set_create();
-	set_getBanned( banlist, house);
+	set_addBanned( banlist, house);
 	for (set_rewind(banlist);!set_end(banlist);)
 	{
 		chr = set_getChar( banlist );
@@ -233,8 +235,8 @@ else if(pagenumber ==2)
 		if(i>8)
 			j=150;
 		else j=0;
-		gui_addCheckbox(houseMenu,xstart+10+j,ystart+21*i,housepic1,housepic2,1,50+i);
-		gui_addText(houseMenu,xstart+30+j,ystart+3+21*i,1310,tempStr);
+		gui_addCheckbox(houseMenu,xstart+20+j,ystart+21*i,housepic1,housepic2,1,50+i);
+		gui_addText(houseMenu,xstart+40+j,ystart-1+21*i,1310,tempStr);
 		i++;
 	}
 	set_delete(banlist);
@@ -253,8 +255,11 @@ else if(pagenumber ==3)
 	gui_addText(houseMenu,138,111+28*1,1310,"Change the house locks");
 	
 	gui_addButton(houseMenu,117,114+28*2,housepic1,housepic2,21);
-	gui_addText(houseMenu,138,111+28*2,1310,"Declare this house as public");
-	gui_addText(houseMenu,138,111+28*3,1310,"- its not lockable then!");
+	if(house_getProperty(house, HP_PUBLICHOUSE) == 0)
+		sprintf(tempStr, "Declare this house as public");
+	else sprintf(tempStr, "Declare this house as non-public");
+	gui_addText(houseMenu,138,111+28*2,1310,tempStr);
+	gui_addText(houseMenu,138,111+28*3,1310,"(Public means it's not lockable!)");
 	
 	gui_addButton(houseMenu,117,114+28*4,housepic1,housepic2,22);
 	gui_addText(houseMenu,138,111+28*4,1310,"Access your bank account");
@@ -315,7 +320,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				#endif
 			}//for
 			set_clear( setlist );
-			set_getCoOwners( setlist, house);
+			set_addCoOwners( setlist, house);
 			i=21;
 			for (set_rewind(setlist);!set_end(setlist);)
 			{
@@ -325,7 +330,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				i++;
 			}
 			set_clear( setlist );
-			set_getFriends( setlist, house);
+			set_addFriends( setlist, house);
 			i=31;
 			for (set_rewind(setlist);!set_end(setlist);)
 			{
@@ -335,7 +340,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				i++;
 			}
 			set_clear( setlist );
-			set_getBanned( setlist, house);
+			set_addBanned( setlist, house);
 			i=51;
 			for (set_rewind(setlist);!set_end(setlist);)
 			{
@@ -354,7 +359,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				new listsize;
 				if(buttonCode==12)
 				{
-					set_getCoOwners( setlist, house);
+					set_addCoOwners( setlist, house);
 					listsize = set_size( setlist );
 					if( listsize<HOUSE_COOWNER)
 					{
@@ -366,7 +371,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				}
 				else if(buttonCode==14)
 				{
-					set_getFriends( setlist, house);
+					set_addFriends( setlist, house);
 					listsize = set_size( setlist );
 					if( listsize<HOUSE_FRIENDS)
 					{
@@ -378,7 +383,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				}
 				else if(buttonCode==16)
 				{
-					set_getBanned( setlist, house);
+					set_addBanned( setlist, house);
 					listsize = set_size( setlist );
 					if( listsize<HOUSE_BANNED)
 					{
@@ -394,7 +399,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				new setlist = set_create();
 				if(buttonCode==13)
 				{
-					set_getCoOwners( setlist, house);
+					set_addCoOwners( setlist, house);
 					for (set_rewind(setlist);!set_end(setlist);)
 					{
 						chr = set_getChar( setlist );
@@ -403,7 +408,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				}
 				else if(buttonCode==15)
 				{
-					set_getFriends( setlist, house);
+					set_addFriends( setlist, house);
 					for (set_rewind(setlist);!set_end(setlist);)
 					{
 						chr = set_getChar( setlist );
@@ -412,7 +417,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				}
 				else if(buttonCode==17)
 				{
-					set_getBanned( setlist, house);
+					set_addBanned( setlist, house);
 					for (set_rewind(setlist);!set_end(setlist);)
 					{
 						chr = set_getChar( setlist );
@@ -421,15 +426,46 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 				}
 			}
 		}
+		case 18:
+		{
+			chr_message( chrsource, _, "Whom you want to bounce out of the house?");
+			target_create( chrsource,house, _, _, "Bounceout" );
+			return;
+		}/*
+		case 19: 
+		{//redeed
+			printf("leer");
+		}
+		case 20: //change locks
+		{
+			house_deleteKeys(house);
+			house_changeLocks(house);
+			house_makeKeys(house, chrsource);
+		}
+		case 21: //declare public
+		{
+			if(house_getProperty(house, HP_PUBLICHOUSE) == 0)
+				house_setProperty(house, HP_PUBLICHOUSE, _, 1);
+			else house_setProperty(house, HP_PUBLICHOUSE, _, 0);
+		}
+		case 22: //access bank account
+		{
+			bank = chr_getBankBox(chrsource, BANKBOX_NORMAL);
+			itm_showContainer(bank,chrsource);
+		}
+		case 23:
+		{
+			chr_message( chrsource, _, "Whom do you want to make new Owner?");
+			target_create( chrsource,house, _, _, "TransferHouse" );
+			return;
+		}*/
 		default: printf("unknown button");
 	}
 }
 
 public Addcoowner( const t, const chrsource, const target, const x, const y, const z, const model, const house )
 {
-	//if ( isChar(target) && !chr_isNpc(target)) //is player char
-	printf("enter addcoowner^n");
-	if ( isChar(target)) //is player char
+	if ( isChar(target) && !chr_isNpc(target)) //is player char
 	{
 		house_addCoOwner(house, target);
 		printf("add char as coowner^n");
@@ -446,7 +482,25 @@ public Addfriend( const t, const chrsource, const target, const x, const y, cons
 
 public AddBanned( const t, const chrsource, const target, const x, const y, const z, const model, const house )
 {
-	if ( isChar(target) && !chr_isNpc(target)) //is player char
+	//if ( isChar(target) && !chr_isNpc(target)) //is player char
+	printf("enter addbanned^n");
+	if ( isChar(target)) //is player char
 		house_addBan(house, target);
 	else chr_message(chrsource, chrsource, "Only player can be banned!");
+}
+
+public Bounceout(const t, const chrsource, const target, const x, const y, const z, const model, const house)
+{
+	new hx1 = house_getProperty(house, HP_DIMENSION, 0);
+	new hy1 = house_getProperty(house, HP_DIMENSION, 2);
+	chr_move(target, hx1-1, hy1-1, chr_getProperty(target, CP_POSITION, CP2_X));
+	chr_message(target, _, "You have been bounced out of the house.");
+	chr_update(target);
+}
+
+public TransferHouse(const t, const chrsource, const target, const x, const y, const z, const model, const house)
+{
+	house_setProperty(house, HP_OWNER, _, target);
+	chr_message(chrsource, _, "You are no longer Owner of this house.");
+	chr_message(target, _, "You own now this house");
 }
