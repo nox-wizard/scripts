@@ -44,13 +44,12 @@ native target_do( const target, const chr );
 /*}@ */
 /*!
 \brief Example of target callback
-\example public callback( const target, const chr, const obj, const x, const y, const z, const model, const param1 )
-\param target the target serial
-\param chr the character who targetted
-\param obj the object ( item or character ) clicked, or INVALID if no obj targetted
-\param x, y, z the location or INVALID if not a location targetted
-\param model the id of object clicked or static clicked, or INVALID if not valid
-\note model is valid when targetted an item or a static tile, not when a land tile is targetted
+\example public callback( const targettype, const chrsource, const target, const x, const y, const z, const model, const param1 )
+\param targettype - the kind of the target (1: playerchar, 2: item, 3: npc, 4: ground) the target serial
+\param chrsource - the character that started the target-function
+\param target - the serial of the item/npc targetted, -1 if ground
+\param x, y, z - the location or INVALID if not a location targetted
+\param model - the decimal ID of object clicked or static clicked, or INVALID if land tile is targeted
 \param param1 is the first param passed
 \note the param2 passed to target_create can be getted using the target_getProperty, with TP_BUFFER and 1 for index
 */
