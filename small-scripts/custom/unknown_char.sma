@@ -47,23 +47,32 @@ both combined should be unique even when the char is deleted later*/
         	chr_addLocalStrVar( viewerchr, UNKNOWN_CHAR_NAME, tempStr );
         	printf("char %d got 'unknown char system' var %d^n", viewerchr, UNKNOWN_CHAR_NAME);
         }
-        if((chr_isaLocalVar( viewerchr, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER ) == 1)) //there already is a string variable (shouldn't happen)
+        if((chr_isaLocalVar( viewerchr, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER ) == 1)) //there already is a integer variable (shouldn't happen)
         {
         	chr_delLocalVar( viewerchr, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER);
         	chr_addLocalStrVar( viewerchr, UNKNOWN_CHAR_NAME, tempStr );
         }
         if( chr_getProperty(viewerchr, CP_POLYMORPH) != 1) //lets hope this is enough so we store the real name of the char in the localVar
         {
+        	printf("now set char original name to: %s^n", tempStr);
         	chr_setLocalStrVar( viewerchr, UNKNOWN_CHAR_NAME, tempStr);
         }
         
         //add onsingleclick event to the char
         chr_getEventHandler(viewerchr, 28, tempStr);
         trim(tempStr);
-        if( strcmp(tempStr, "chr_unknown_singleclick")) //different event, that is bad, so make a log entry but change the event
+        if( strcmp(tempStr, "unknown_sglclick")) //different event, that is bad, so make a log entry but change the event
         {
-        	chr_setEventHandler(viewerchr, 28, EVENTTYPE_STATIC, "chr_unknown_singleclick");
+        	chr_setEventHandler(viewerchr, 28, EVENTTYPE_STATIC, "unknown_sglclick");
         	log_error("ERROR! Char %d already had a different single click event when single click for UNKNOWN CHAR SYSTEM was added! This previous event function was %s^n", viewerchr, tempStr);
+        }
+        //add onsingleclick event to the char
+        chr_getEventHandler(viewerchr, 41, tempStr);
+        trim(tempStr);
+        if( strcmp(tempStr, "unknown_dblclick")) //different event, that is bad, so make a log entry but change the event
+        {
+        	chr_setEventHandler(viewerchr, 41, EVENTTYPE_STATIC, "unknown_dblclick");
+        	log_error("ERROR! Char %d already had a different double click event when single click for UNKNOWN CHAR SYSTEM was added! This previous event function was %s^n", viewerchr, tempStr);
         }
 }
 
@@ -86,12 +95,29 @@ public stop_unknown_char(const viewerchr)
 	}
 }
 
-public chr_unknown_singleclick(const clicked, const viewer)
+public unknown_sglclick(const clicked, const viewer)
 {
-	bypass();
 	new tempStr[100];
-	new charmap = chr_getLocalIntVar( viewer, UNKNOWN_CHAR_VAR);
+	
+	/* npc-starte-function for testing system offline
+	if(chr_isNpc(clicked))
+	{
+		//char name - we have a problem here, what about polymorphed chars and the changed name?
+		chr_getProperty(clicked, CP_STR_NAME, _,tempStr);
+		if(chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
+		{
+			chr_addLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr );
+			printf("char %d got 'unknown char system' var %d^n", clicked, UNKNOWN_CHAR_NAME);
+		}
+		if((chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER ) == 1)) //there already is a integer variable (shouldn't happen)
+		{
+			chr_delLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER);
+			chr_addLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr );
+		}
+	}*/
 	chr_getLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr); //real name clicked char
+	new charmap = chr_getLocalIntVar( viewer, UNKNOWN_CHAR_VAR);
+		
 	new status = getResourceStringValue(charmap, tempStr);
 	new flag = chr_getRelation(viewer, clicked);
 	switch(flag)
@@ -104,24 +130,46 @@ public chr_unknown_singleclick(const clicked, const viewer)
 		default: log_error("unknown char relation between Char1 %d and Char2 %d^n", viewer, clicked);
 	}
 	if ((chr_isNpc(clicked)) || (viewer == clicked) || (chr_isGMorCns(viewer)) || (chr_isGMorCns(clicked)))
+	//if ((viewer == clicked) || (chr_isGMorCns(clicked)))
 		status=1;
-	if( status == 1)
-		chr_speech(clicked,viewer,_,flag,0,tempStr);
+	//printf("char viewer is: %d and status towards %s is: %d^n", viewer, tempStr, status);
+			
+	if( status == -1)
+		chr_setProperty(clicked,CP_STR_NAME,0,msg_chrUnknownDef[0]);
 	else
-		chr_speech(clicked,viewer,_,flag,0,msg_chrUnknownDef[0]);
+		chr_setProperty(clicked,CP_STR_NAME,0,tempStr);
 }
 
-public chr_unknown_dblclick(const clicked, const viewer)
+public unknown_dblclick(const clicked, const viewer)
 {
 	new tempStr[100];
-	new charmap = chr_getLocalIntVar( viewer, UNKNOWN_CHAR_VAR);
+	
+	/* npc-starte-function for testing system offline
+	if(chr_isNpc(clicked))
+	{
+		//char name - we have a problem here, what about polymorphed chars and the changed name?
+		chr_getProperty(clicked, CP_STR_NAME, _,tempStr);
+		if(chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
+		{
+			chr_addLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr );
+			printf("char %d got 'unknown char system' var %d^n", clicked, UNKNOWN_CHAR_NAME);
+		}
+		if((chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER ) == 1)) //there already is a integer variable (shouldn't happen)
+		{
+			chr_delLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER);
+			chr_addLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr );
+		}
+	}*/
 	chr_getLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr); //real name clicked char
+	new charmap = chr_getLocalIntVar( viewer, UNKNOWN_CHAR_VAR);
+		
 	new status = getResourceStringValue(charmap, tempStr);
 	chr_getLocalStrVar( viewer, UNKNOWN_CHAR_NAME, tempStr); //real Charname
 	
 	if ((chr_isNpc(clicked)) || (viewer == clicked) || (chr_isGMorCns(viewer)) || (chr_isGMorCns(clicked)))
+	//if ( (viewer == clicked) || (chr_isGMorCns(clicked)))
 		status=1;
-	if( status == 0)
+	if( status == -1)
 		chr_setProperty(clicked,CP_STR_NAME,0,msg_chrUnknownDef[0]);
 	else
 		chr_setProperty(clicked,CP_STR_NAME,0,tempStr);
@@ -134,21 +182,22 @@ public chr_introduce_name(const viewer)
 }
 
 //carefull here, if the person is under incognito or in polymorph the naming system needs to treat him accordingly, so don't use the localVar with the "real" name here
-public introduce_name_targ(target, viewerchr, clicked, x, y, z, unused, param)
+public introduce_name_targ(target, viewer, clicked, x, y, z, unused, param)
 {
 	new tempStr[100];
-	new charmap = chr_getLocalIntVar( viewerchr, UNKNOWN_CHAR_VAR);
+	new charmap = chr_getLocalIntVar( viewer, UNKNOWN_CHAR_VAR);
 	chr_getProperty(clicked, CP_STR_NAME, _,tempStr); //here we better use the RECENT name of the targeted char to prevent name check exploit
 	new status = getResourceStringValue(charmap, tempStr);
-	if( status == 0)
+	printf("status towards %s is: %d", tempStr, status);
+	if( status == -1)
 	{
-		chr_getProperty(viewerchr, CP_STR_NAME, _, tempStr); //here we better use the RECENT name of the targeted char to prevent name check exploit
+		chr_getProperty(clicked, CP_STR_NAME, _, tempStr); //here we better use the RECENT name of the targeted char to prevent name check exploit
 		setResourceStringValue(charmap, 1, tempStr );
-		chr_message(clicked,viewerchr,msg_chrUnknownDef[2],tempStr);
+		chr_message(viewer,clicked,msg_chrUnknownDef[2],tempStr);
 	}
 	else
 	{
-		chr_message(viewerchr,_,msg_chrUnknownDef[3],tempStr);
+		chr_message(viewer,_,msg_chrUnknownDef[3],tempStr);
 	}
 }
 
