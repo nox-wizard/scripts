@@ -1,7 +1,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (wtrigrs.scp)                                    ||
-// || Maintained by Xanathar and Kendra                                   ||
-// || Last Update - N/A -                                                 ||
+// || Maintained by Xanathar and DoctorX                                  ||
+// || Last Update - 21/12/01 -                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || This script requires NoX-Wizard 0.70s or later                      ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -73,7 +73,7 @@ SECTION IDLIST WTRIGR x1078
     NEED x1078
     USEUP 1
     SND 02 48
-    IDADD 10 81 2
+    IDADD $item_leather $trg_intoBackpack 2
     MSG You make some leather.
 }
 
@@ -105,7 +105,7 @@ SECTION IDLIST WTRIGR x12b8x12b9x12bax12bbxcd0xccd
     ACT d
     CSKL 44
     SKL 44 1
-    IDADD 1b e0 5
+    IADD $item_logs $trg_onGround 5
     MSG You chop for a while and get some wood
 }
 
@@ -115,7 +115,7 @@ SECTION IDLIST WTRIGR x9ccx9cdx9cex9cf
     MSG You cut the fish into steaks!
     SND 00 50
     REMOVE
-    IDADD 09 7a 5
+    IADD $item_fish_steaks $trg_intoBackpack 5
 }
 
 // BAKING TRIGGERS BY RETALIN
@@ -187,7 +187,7 @@ SECTION IDLIST WTRIGR x0d1
     EVDUR -1 15
     SND 02 48
     ACT 20
-    IADD $item_piles_of_wool_1 1
+    IADD $item_piles_of_wool_1 $trg_intoBackpack 1
     MSG You take some unspoon wool.
     DISABLEMSG You must wait until the goat respawns its wool!
     DISABLE 600
@@ -199,8 +199,8 @@ SECTION IDLIST WTRIGR x0cf
     EVDUR -1 15
     SND 02 48
     ACT 20
-    IADD $item_piles_of_wool_1 2
-    IADD $item_piles_of_wool_1 1
+    IADD $item_piles_of_wool_1 $trg_intoBackpack 2
+    IADD $item_piles_of_wool_1 $trg_intoBackpack 1
     MSG You take some unspoon wool.
     DISABLEMSG You must wait until the sheep respawns its wool!
     DISABLE 600
@@ -214,7 +214,7 @@ SECTION IDLIST WTRIGR xf95xf96xf97xf98xf99xf9axf9bxf9c
     USEUP 1
     ACT 13
     SND 02 48
-    IDADD 17 66 50
+    IADD $item_cut_cloth $trg_intoBackpack 
     MSG You make cloths.
 }
 
@@ -226,7 +226,7 @@ SECTION IDLIST WTRIGR x175dx1766
     IFREQ xf9d 503
     SND 02 48
     FMSG You try to cut the cloth but ruin it!
-    IDADD 0e 21 3
+    IADD $item_clean_bandages $trg_intoBackpack 3
     MSG You make a bandage.
 }
 
