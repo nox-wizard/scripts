@@ -1,0 +1,12 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (speech.xss)                                     ||
+// || Maintained by Horian                                                ||
+// || Last Update 12-jul-2004                                             ||
+// || Do not remove this file or rename it, otherwise npc speech fails!   ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//official nox speech file
+#include scripts/npc/speech.xss
+
+//shard custom speech file
+#include scripts/npc/customspeech.xss

@@ -1589,7 +1589,7 @@ SECTION HOUSE ITEM 46
 SECTION HOUSE ITEM 47
 {
 	//NAME PENTA-LEFT
-	ITEM $item_pentagram
+	ITEM $item_pentagram_1
 	X -1
 	Y 0
 	Z 0
@@ -1684,7 +1684,7 @@ SECTION HOUSE ITEM 57
 SECTION HOUSE ITEM 58
 {
 	//NAME Bed-PT2-east
-	ITEM $item_pine_bed_feet1_1_1
+	ITEM $item_pine_bed_feet_A1_1
 	X 1
 	Y 0
 	Z 0
@@ -1693,7 +1693,7 @@ SECTION HOUSE ITEM 58
 SECTION HOUSE ITEM 59
 {
 	//NAME Bed-PT2-south
-	ITEM $item_pine_bed_feet1_2_1
+	ITEM $item_pine_bed_feet_A2_1
 	X 0
 	Y 1
 	Z 0
@@ -1720,7 +1720,7 @@ SECTION HOUSE ITEM 61
 SECTION HOUSE ITEM 63
 {
 	//NAME bed large facing south part 1
-	ITEM $item_pine_bigbed_headleft1_2_4
+	ITEM $item_pine_bigbed_headleft_A2_4
 	LOCK
 	X 0
 	Y 0
@@ -1730,7 +1730,7 @@ SECTION HOUSE ITEM 63
 SECTION HOUSE ITEM 64
 {
 	//NAME bed large facing south part 2
-	ITEM $item_pine_bigbed_feetleft1_2_3
+	ITEM $item_pine_bigbed_feetleft_A2_3
 	LOCK
 	X 0
 	Y 1
@@ -1740,7 +1740,7 @@ SECTION HOUSE ITEM 64
 SECTION HOUSE ITEM 65
 {
 	//NAME bed large facing south part 3
-	ITEM $item_pine_bigbed_headright1_2_4
+	ITEM $item_pine_bigbed_headright_A2_4
 	LOCK
 	X 1
 	Y 0
@@ -1750,7 +1750,7 @@ SECTION HOUSE ITEM 65
 SECTION HOUSE ITEM 66
 {
 	//NAME bed large facing south part 4
-	ITEM $item_pine_bigbed_feetright1_2_3
+	ITEM $item_pine_bigbed_feetright_A2_3
 	LOCK
 	X 1
 	Y 1
@@ -1760,7 +1760,7 @@ SECTION HOUSE ITEM 66
 SECTION HOUSE ITEM 67
 {
 	//NAME bed large facing east part 1
-	ITEM $item_pine_bigbed_headright1_1_4
+	ITEM $item_pine_bigbed_headright_A1_4
 	LOCK
 	X 0
 	Y 0
@@ -1770,7 +1770,7 @@ SECTION HOUSE ITEM 67
 SECTION HOUSE ITEM 68
 {
 	//NAME bed large facing south part 2
-	ITEM $item_pine_bigbed_headleft1_1_4
+	ITEM $item_pine_bigbed_headleft_A1_4
 	LOCK
 	X 0
 	Y 1
@@ -1780,7 +1780,7 @@ SECTION HOUSE ITEM 68
 SECTION HOUSE ITEM 69
 {
 	//NAME bed large facing south part 3
-	ITEM $item_pine_bigbed_feetleft1_1_3
+	ITEM $item_pine_bigbed_feetleft_A1_3
 	LOCK
 	X 1
 	Y 1
@@ -1790,7 +1790,7 @@ SECTION HOUSE ITEM 69
 SECTION HOUSE ITEM 70
 {
 	//NAME bed large facing south part 4
-	ITEM $item_pine_bigbed_feetright1_1_3
+	ITEM $item_pine_bigbed_feetright_A1_3
 	LOCK
 	X 1
 	Y 0
@@ -3249,7 +3249,7 @@ SECTION HOUSE ITEM 274
 SECTION HOUSE ITEM 275
 {
 	//NAME arbitoir 1
-	ITEM $item_altar
+	ITEM $item_ltar
 	X 0
 	Y 1
 	Z 0
@@ -3258,7 +3258,7 @@ SECTION HOUSE ITEM 275
 SECTION HOUSE ITEM 276
 {
 	//NAME arbitoir 2
-	ITEM $item_altar_1
+	ITEM $item_ltar_1
 	X -1
 	Y 1
 	Z 0
@@ -3267,7 +3267,7 @@ SECTION HOUSE ITEM 276
 SECTION HOUSE ITEM 277
 {
 	//NAME arbitoir 3
-	ITEM $item_altar_2
+	ITEM $item_ltar_2
 	X -1
 	Y 0
 	Z 0
@@ -3276,7 +3276,7 @@ SECTION HOUSE ITEM 277
 SECTION HOUSE ITEM 278
 {
 	//NAME arbitoir 4
-	ITEM $item_altar_3
+	ITEM $item_ltar_3
 	X -1
 	Y -1
 	Z 0
@@ -3285,7 +3285,7 @@ SECTION HOUSE ITEM 278
 SECTION HOUSE ITEM 279
 {
 	//NAME arbitoir 5
-	ITEM $item_altar_4
+	ITEM $item_ltar_4
 	X 0
 	Y -1
 	Z 0
@@ -3294,7 +3294,7 @@ SECTION HOUSE ITEM 279
 SECTION HOUSE ITEM 280
 {
 	//NAME arbitor 6
-	ITEM $item_altar_5
+	ITEM $item_ltar_5
 	X 1
 	Y -1
 	Z 0
@@ -3303,7 +3303,7 @@ SECTION HOUSE ITEM 280
 SECTION HOUSE ITEM 281
 {
 	//NAME arbitoir 7
-	ITEM $item_altar_6
+	ITEM $item_ltar_6
 	X 1
 	Y 0
 	Z 0
@@ -3312,7 +3312,7 @@ SECTION HOUSE ITEM 281
 SECTION HOUSE ITEM 282
 {
 	//NAME arbitoir 8
-	ITEM $item_altar_7
+	ITEM $item_ltar_7
 	X 1
 	Y 1
 	Z 0

@@ -2853,7 +2853,7 @@ SECTION ITEM $item_telescope_ZU
 
 /////// Arbitoir pieces /////////////
 
-SECTION ITEM $item_altar
+SECTION ITEM $item_ltar
 {
 	NAME Arbitoir
 	ID 1213
@@ -2862,7 +2862,7 @@ SECTION ITEM $item_altar
 	///SUBSECTION Albitoir
 }
 
-SECTION ITEM $item_altar_1
+SECTION ITEM $item_ltar_1
 {
 	NAME Arbitoir
 	ID 1214
@@ -2871,7 +2871,7 @@ SECTION ITEM $item_altar_1
 	///SUBSECTION Albitoir
 }
 
-SECTION ITEM $item_altar_2
+SECTION ITEM $item_ltar_2
 {
 	NAME Arbitoir
 	ID 1215
@@ -2880,7 +2880,7 @@ SECTION ITEM $item_altar_2
 	///SUBSECTION Albitoir
 }
 
-SECTION ITEM $item_altar_3
+SECTION ITEM $item_ltar_3
 {
 	NAME Arbitoir
 	ID 120E
@@ -2889,7 +2889,7 @@ SECTION ITEM $item_altar_3
 	///SUBSECTION Albitoir
 }
 
-SECTION ITEM $item_altar_4
+SECTION ITEM $item_ltar_4
 {
 	NAME Arbitoir
 	ID 120F
@@ -2898,7 +2898,7 @@ SECTION ITEM $item_altar_4
 	///SUBSECTION Albitoir
 }
 
-SECTION ITEM $item_altar_5
+SECTION ITEM $item_ltar_5
 {
 	NAME Arbitoir
 	ID 1210
@@ -2907,7 +2907,7 @@ SECTION ITEM $item_altar_5
 	///SUBSECTION Albitoir
 }
 
-SECTION ITEM $item_altar_6
+SECTION ITEM $item_ltar_6
 {
 	NAME Arbitoir
 	ID 1211
@@ -2916,7 +2916,7 @@ SECTION ITEM $item_altar_6
 	///SUBSECTION Albitoir
 }
 
-SECTION ITEM $item_altar_7
+SECTION ITEM $item_ltar_7
 {
 	NAME Arbitoir
 	ID 1212

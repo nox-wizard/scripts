@@ -32,29 +32,29 @@ SECTION NPC $npc_person_basic
 
 SECTION NPC $npc_official
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the official
 	BACKPACK
 	ITEM $item_short_hair
 	ITEM $item_goatee
 	ITEM $item_sandles
-	ITEM $item_a_skullcap
+	ITEM $item_skullcap
 	COLOR 25
 	ITEM $item_cloak
 	COLOR 17
 	ITEM $item_shirt
 	COLOR 18
-	ITEM $item_a_robe
+	ITEM $item_robe1
 	COLOR 39
 	ITEM $item_long_pants
 	COLOR 14
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 20
 }
 
 SECTION NPC $npc_foreman
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the foreman
 	BACKPACK
 	ITEM $item_thigh_boots
@@ -62,38 +62,38 @@ SECTION NPC $npc_foreman
 	COLOR 12
 	ITEM $item_shirt
 	COLOR 39
-	ITEM $item_a_robe
+	ITEM $item_robe1
 	COLOR 12
-	ITEM $item_a_skirt
+	ITEM $item_skirt
 	COLOR 5
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 0
 }
 
 SECTION NPC $npc_mercenary
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the mercenary
 	//$$ mercenary
 	BACKPACK
 	ITEM $item_long_beard
 	ITEM $item_sandles
-	ITEM $item_a_wizards_hat
+	ITEM $item_wizards_hat
 	COLOR 1
 	ITEM $item_cloak
 	COLOR 10
 	ITEM $item_fancy_shirt
 	COLOR 18
 	COLOR 21
-	ITEM $item_a_kilt
+	ITEM $item_kilt
 	COLOR 11
-	ITEM $item_a_half_apron
+	ITEM $item_half_apron
 	COLOR 30
 }
 
 SECTION NPC $npc_guardsman
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the guardsman
 	//$$ guardsman
 	BACKPACK
@@ -105,14 +105,14 @@ SECTION NPC $npc_guardsman
 	COLOR 3
 	ITEM $item_long_pants
 	COLOR 20
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 36
 	ITEM $item_quarter_staff
 }
 
 SECTION NPC $npc_watchman
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the watchman
 	//$$ watchman
 	BACKPACK
@@ -122,17 +122,17 @@ SECTION NPC $npc_watchman
 	COLOR 8
 	ITEM $item_shirt
 	COLOR 21
-	ITEM $item_a_plain_dress
+	ITEM $item_plain_dress
 	COLOR 34
 	ITEM $item_long_pants
 	COLOR 14
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 18
 }
 
 SECTION NPC $npc_cleric
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the cleric
 	//$$ cleric
 	BACKPACK
@@ -145,13 +145,13 @@ SECTION NPC $npc_cleric
 	COLOR 38
 	ITEM $item_short_pants
 	COLOR 39
-	ITEM $item_a_half_apron
+	ITEM $item_half_apron
 	COLOR 2 9
 }
 
 SECTION NPC $npc_solem_priest
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the solem priest
 	//$$ solem priest
 	BACKPACK
@@ -162,16 +162,16 @@ SECTION NPC $npc_solem_priest
 	ITEM $item_shirt
 	COLOR 17
 	COLOR 8
-	ITEM $item_a_skirt
+	ITEM $item_skirt
 	COLOR 1
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 19
 	ITEM $item_quarter_staff
 }
 
 SECTION NPC $npc_magician
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the magician
 	//$$ magician
 	BACKPACK
@@ -186,34 +186,34 @@ SECTION NPC $npc_magician
 	COLOR 7
 	ITEM $item_short_pants
 	COLOR 6
-	ITEM $item_a_half_apron
+	ITEM $item_half_apron
 	COLOR 0
 }
 
 SECTION NPC $npc_outlander
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the outlander
 	//$$ outlander
 	BACKPACK
 	ITEM $item_vandyke
 	ITEM $item_boots
-	ITEM $item_a_bear_mask
+	ITEM $item_bear_mask
 	COLOR 9
 	ITEM $item_cloak
 	COLOR 17
 	ITEM $item_fancy_shirt
 	COLOR 32
 	COLOR 5
-	ITEM $item_a_kilt
+	ITEM $item_kilt
 	COLOR 25
-	ITEM $item_a_half_apron
+	ITEM $item_half_apron
 	COLOR 29
 }
 
 SECTION NPC $npc_mountain_man
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the mountain man
 	//$$ mountain man
 	BACKPACK
@@ -225,15 +225,15 @@ SECTION NPC $npc_mountain_man
 	ITEM $item_fancy_shirt
 	COLOR 7
 	COLOR 4
-	ITEM $item_a_kilt
+	ITEM $item_kilt
 	COLOR 14
-	ITEM $item_a_half_apron
+	ITEM $item_half_apron
 	COLOR 4
 }
 
 SECTION NPC $npc_buccaneer
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the buccaneer
 	//$$ buccaneer
 	BACKPACK
@@ -244,16 +244,16 @@ SECTION NPC $npc_buccaneer
 	ITEM $item_fancy_shirt
 	COLOR 6
 	COLOR 38
-	ITEM $item_a_skirt
+	ITEM $item_skirt
 	COLOR 37
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 14
 	ITEM $item_quarter_staff
 }
 
 SECTION NPC $npc_cavalier
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the cavalier
 	//$$ cavalier
 	BACKPACK
@@ -265,44 +265,44 @@ SECTION NPC $npc_cavalier
 	ITEM $item_fancy_shirt
 	COLOR 14
 	COLOR 36
-	ITEM $item_a_kilt
+	ITEM $item_kilt
 	COLOR 32
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 21
 	ITEM $item_gnarled_staff
 }
 
 SECTION NPC $npc_priest
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the priest
 	//$$ priest
 	BACKPACK
 	ITEM $item_med_short_beard_1
 	ITEM $item_thigh_boots
-	ITEM $item_a_tribal_mask_1
+	ITEM $item_tribal_mask_1
 	COLOR 0
 	ITEM $item_cloak
 	COLOR 13
 	ITEM $item_fancy_shirt
 	COLOR 20
-	ITEM $item_a_jesters_suit
+	ITEM $item_jesters_suit
 	COLOR 10
-	ITEM $item_a_kilt
+	ITEM $item_kilt
 	COLOR 6
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 35
 }
 
 SECTION NPC $npc_magician_1
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the magician
 	//$$ magician
 	BACKPACK
 	ITEM $item_mustache
 	ITEM $item_thigh_boots
-	ITEM $item_a_orc_helm
+	ITEM $item_orc_helm
 	COLOR 2
 	ITEM $item_cloak
 	COLOR 6
@@ -311,13 +311,13 @@ SECTION NPC $npc_magician_1
 	COLOR 6
 	ITEM $item_short_pants
 	COLOR 28
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 5
 }
 
 SECTION NPC $npc_apprentice
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the apprentice
 	//$$ apprentice
 	BACKPACK
@@ -330,13 +330,13 @@ SECTION NPC $npc_apprentice
 	COLOR 6
 	ITEM $item_long_pants
 	COLOR 31
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 20
 }
 
 SECTION NPC $npc_wizard
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the wizard
 	//$$ wizard
 	BACKPACK
@@ -350,13 +350,13 @@ SECTION NPC $npc_wizard
 	COLOR 31
 	ITEM $item_long_pants
 	COLOR 14
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 26
 }
 
 SECTION NPC $npc_mage
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the mage
 	//$$ mage
 	BACKPACK
@@ -367,15 +367,15 @@ SECTION NPC $npc_mage
 	ITEM $item_fancy_shirt
 	COLOR 23
 	COLOR 6
-	ITEM $item_a_skirt
+	ITEM $item_skirt
 	COLOR 1
-	ITEM $item_a_half_apron
+	ITEM $item_half_apron
 	COLOR 26
 }
 
 SECTION NPC $npc_laborer
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the laborer
 	//$$ laborer
 	BACKPACK
@@ -390,13 +390,13 @@ SECTION NPC $npc_laborer
 	COLOR 17
 	ITEM $item_short_pants
 	COLOR 0
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 17
 }
 
 SECTION NPC $npc_barbarian_1
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the barbarian
 	//$$ barbarian
 	BACKPACK
@@ -407,17 +407,17 @@ SECTION NPC $npc_barbarian_1
 	COLOR 31
 	ITEM $item_shirt
 	COLOR 3
-	ITEM $item_a_tunic
+	ITEM $item_tunic
 	COLOR 37
 	ITEM $item_long_pants
 	COLOR 23
-	ITEM $item_a_half_apron
+	ITEM $item_half_apron
 	COLOR 10
 }
 
 SECTION NPC $npc_wizard_1
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the wizard
 	//$$ wizard
 	BACKPACK
@@ -430,14 +430,14 @@ SECTION NPC $npc_wizard_1
 	COLOR 13
 	ITEM $item_short_pants
 	COLOR 18
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 2
 	ITEM $item_quarter_staff
 }
 
 SECTION NPC $npc_paladin
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the paladin
 	//$$ paladin
 	BACKPACK
@@ -450,13 +450,13 @@ SECTION NPC $npc_paladin
 	COLOR 11
 	ITEM $item_long_pants
 	COLOR 17
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 27
 }
 
 SECTION NPC $npc_fancy_nobleman
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the fancy nobleman
 	//$$ fancy nobleman
 	BACKPACK
@@ -467,15 +467,15 @@ SECTION NPC $npc_fancy_nobleman
 	ITEM $item_fancy_shirt
 	COLOR 10
 	COLOR 11
-	ITEM $item_a_kilt
+	ITEM $item_kilt
 	COLOR 2
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 39
 }
 
 SECTION NPC $npc_redlady
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the red lady
 	//$$ redlady
 	BACKPACK
@@ -486,18 +486,18 @@ SECTION NPC $npc_redlady
 	COLOR 11
 	ITEM $item_fancy_shirt
 	COLOR 34
-	ITEM $item_a_robe
+	ITEM $item_robe1
 	COLOR 21
 	ITEM $item_long_pants
 	COLOR 20
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 5
 	ITEM $item_black_staff
 }
 
 SECTION NPC $npc_magician_2
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the magician
 	//$$ magician
 	BACKPACK
@@ -510,13 +510,13 @@ SECTION NPC $npc_magician_2
 	COLOR 18
 	ITEM $item_long_pants
 	COLOR 8
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 3
 }
 
 SECTION NPC $npc_thief
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the thief
 	//$$ thief
 	BACKPACK
@@ -526,15 +526,15 @@ SECTION NPC $npc_thief
 	ITEM $item_shirt
 	COLOR 29
 	COLOR 35
-	ITEM $item_a_kilt
+	ITEM $item_kilt
 	COLOR 35
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 37
 }
 
 SECTION NPC $npc_vandal
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the vandal
 	//$$ vandal
 	BACKPACK
@@ -546,17 +546,17 @@ SECTION NPC $npc_vandal
 	COLOR 31
 	ITEM $item_shirt
 	COLOR 8
-	ITEM $item_a_plain_dress
+	ITEM $item_plain_dress
 	COLOR 36
-	ITEM $item_a_skirt
+	ITEM $item_skirt
 	COLOR 20
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 25
 }
 
 SECTION NPC $npc_cutpurse
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the cutpurse
 	//$$ cutpurse
 	BACKPACK
@@ -571,13 +571,13 @@ SECTION NPC $npc_cutpurse
 	COLOR 14
 	ITEM $item_short_pants
 	COLOR 24
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 14
 }
 
 SECTION NPC $npc_bandit
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the bandit
 	//$$ bandit
 	BACKPACK
@@ -590,13 +590,13 @@ SECTION NPC $npc_bandit
 	COLOR 12
 	ITEM $item_long_pants
 	COLOR 18
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 30
 }
 
 SECTION NPC $npc_night_prowler
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the night prowler
 	//$$ night prowler
 	BACKPACK
@@ -608,15 +608,15 @@ SECTION NPC $npc_night_prowler
 	ITEM $item_fancy_shirt
 	COLOR 7
 	COLOR 18
-	ITEM $item_a_skirt
+	ITEM $item_skirt
 	COLOR 34
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 30
 }
 
 SECTION NPC $npc_ruffian
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the ruffian
 	//$$ ruffian
 	BACKPACK
@@ -629,15 +629,15 @@ SECTION NPC $npc_ruffian
 	ITEM $item_shirt
 	COLOR 2
 	COLOR 30
-	ITEM $item_a_skirt
+	ITEM $item_skirt
 	COLOR 15
-	ITEM $item_a_full_apron
+	ITEM $item_full_apron
 	COLOR 31
 }
 
 SECTION NPC $npc_stinky_pimp
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the stinky pimp
 	//$$ stinky pimp
 	BACKPACK
@@ -647,17 +647,17 @@ SECTION NPC $npc_stinky_pimp
 	COLOR 5
 	ITEM $item_fancy_shirt
 	COLOR 35
-	ITEM $item_a_jesters_suit
+	ITEM $item_jesters_suit
 	COLOR 20
-	ITEM $item_a_skirt
+	ITEM $item_skirt
 	COLOR 23
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 37
 }
 
 SECTION NPC $npc_thug
 {
-	#copy $npc_person_basic
+	#copy NPC $npc_person_basic
 	TITLE the thug
 	//$$ thug
 	BACKPACK
@@ -669,11 +669,11 @@ SECTION NPC $npc_thug
 	COLOR 11
 	ITEM $item_shirt
 	COLOR 10
-	ITEM $item_a_plain_dress
+	ITEM $item_plain_dress
 	COLOR 38
 	ITEM $item_short_pants
 	COLOR 30
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLOR 12
 	ITEM $item_quarter_staff
 }

@@ -7,170 +7,170 @@
 // || Compatible with Unicorn Categorization                              ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-SECTION ITEM $item_marble_bench1_1
+SECTION ITEM $item_marble_bench_A1
 {
     NAME marble bench
     ID 0459
     
     VALUE 20000
     WEIGHT 10000
-    AMXINT $localvar_flipitem $item_marble_bench1_2
+    AMXINT $localvar_flipitem $item_marble_bench_A2
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
 }
 
-SECTION ITEM $item_marble_bench1_2
+SECTION ITEM $item_marble_bench_A2
 {
     NAME marble bench
     ID 045A
     VALUE 20000
     WEIGHT 10000
-    AMXINT $localvar_flipitem $item_marble_bench1_1
+    AMXINT $localvar_flipitem $item_marble_bench_A1
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
 }
 
-SECTION ITEM $item_marble_bench2_1_1
+SECTION ITEM $item_marble_bench_B1_1
 {
     ID 1DCD
-    AMXINT $localvar_flipitem $item_marble_bench2_2_1
+    AMXINT $localvar_flipitem $item_marble_bench_B2_1
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Marble Bench
 }
 
-SECTION ITEM $item_marble_bench2_1_2
+SECTION ITEM $item_marble_bench_B1_2
 {
     ID 1DCE
-    AMXINT $localvar_flipitem $item_marble_bench2_2_2
+    AMXINT $localvar_flipitem $item_marble_bench_B2_2
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Marble Bench
 }
 
-SECTION ITEM $item_marble_bench2_1_3
+SECTION ITEM $item_marble_bench_B1_3
 {
     ID 1DCF
-    AMXINT $localvar_flipitem $item_marble_bench2_2_3
+    AMXINT $localvar_flipitem $item_marble_bench_B2_3
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Marble Bench
 }
 
-SECTION ITEM $item_marble_bench2_2_1
+SECTION ITEM $item_marble_bench_B2_1
 {
     ID 1DD0
-    AMXINT $localvar_flipitem $item_marble_bench2_1_1
+    AMXINT $localvar_flipitem $item_marble_bench_B1_1
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Marble Bench
 }
 
-SECTION ITEM $item_marble_bench2_2_2
+SECTION ITEM $item_marble_bench_B2_2
 {
     ID 1DD1
-    AMXINT $localvar_flipitem $item_marble_bench2_1_2
+    AMXINT $localvar_flipitem $item_marble_bench_B1_2
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Marble Bench
 }
 
-SECTION ITEM $item_marble_bench2_2_3
+SECTION ITEM $item_marble_bench_B2_3
 {
     ID 1DD2
-    AMXINT $localvar_flipitem $item_marble_bench2_1_3
+    AMXINT $localvar_flipitem $item_marble_bench_B1_3
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Marble Bench
 }
 
-SECTION ITEM $item_sandstone_bench1_1
+SECTION ITEM $item_sandstone_bench_A1
 {
     NAME marble bench
     ID 045B
     VALUE 20000
     WEIGHT 10000
-    AMXINT $localvar_flipitem $item_sandstone_bench1_2
+    AMXINT $localvar_flipitem $item_sandstone_bench_A2
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
 }
 
-SECTION ITEM $item_sandstone_bench1_2
+SECTION ITEM $item_sandstone_bench_A2
 {
     NAME marble bench
     ID 045C
     VALUE 20000
     WEIGHT 10000
-    AMXINT $localvar_flipitem $item_sandstone_bench1_1
+    AMXINT $localvar_flipitem $item_sandstone_bench_A1
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
 }
 
 
-SECTION ITEM $item_sandstone_bench2_1_1
+SECTION ITEM $item_sandstone_bench_B1_1
 {
     ID 1DC7
-    AMXINT $localvar_flipitem $item_sandstone_bench2_2_1
+    AMXINT $localvar_flipitem $item_sandstone_bench_B2_1
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Marble Bench
 }
 
-SECTION ITEM $item_sandstone_bench2_1_2
+SECTION ITEM $item_sandstone_bench_B1_2
 {
     ID 1DC8
-    AMXINT $localvar_flipitem $item_sandstone_bench2_2_2
+    AMXINT $localvar_flipitem $item_sandstone_bench_B2_2
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Sandstone Bench
 }
 
-SECTION ITEM $item_sandstone_bench2_1_3
+SECTION ITEM $item_sandstone_bench_B1_3
 {
     ID 1DC9
-    AMXINT $localvar_flipitem $item_sandstone_bench2_2_3
+    AMXINT $localvar_flipitem $item_sandstone_bench_B2_3
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Sandstone Bench
 }
 
-SECTION ITEM $item_sandstone_bench2_2_1
+SECTION ITEM $item_sandstone_bench_B2_1
 {
     ID 1DCA
-    AMXINT $localvar_flipitem $item_sandstone_bench2_1_1
+    AMXINT $localvar_flipitem $item_sandstone_bench_B1_1
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Marble Bench
 }
 
-SECTION ITEM $item_sandstone_bench2_2_2
+SECTION ITEM $item_sandstone_bench_B2_2
 {
     ID 1DCB
-    AMXINT $localvar_flipitem $item_sandstone_bench2_1_2
+    AMXINT $localvar_flipitem $item_sandstone_bench_B1_2
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches
     ///DESCRIPTION Sandstone Bench
 }
 
-SECTION ITEM $item_sandstone_bench2_2_3
+SECTION ITEM $item_sandstone_bench_B2_3
 {
     ID 1DCC
-    AMXINT $localvar_flipitem $item_sandstone_bench2_1_3
+    AMXINT $localvar_flipitem $item_sandstone_bench_B1_3
 
     ///CATEGORY Furniture
     ///SUBSECTION Chairs & Benches

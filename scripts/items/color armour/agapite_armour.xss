@@ -8,7 +8,7 @@
 //////////// ringmail ///////////////
 
 // ring gloves
-SECTION ITEM $item_agapite_ringmail_gloves
+SECTION ITEM $item_gapite_ringmail_gloves
 {
     NAME agapite ringmail gloves
     ID 13F2
@@ -24,7 +24,7 @@ SECTION ITEM $item_agapite_ringmail_gloves
 }
 
 // ring sleeves
-SECTION ITEM $item_agapite_ringmail_sleeves
+SECTION ITEM $item_gapite_ringmail_sleeves
 {
     NAME agapite ringmail sleeves
     ID 13EF
@@ -40,7 +40,7 @@ SECTION ITEM $item_agapite_ringmail_sleeves
 }
 
 // ring leggings
-SECTION ITEM $item_agapite_ringmail_leggings
+SECTION ITEM $item_gapite_ringmail_leggings
 {
     NAME agapite ringmail leggings
     ID 13F1
@@ -55,7 +55,7 @@ SECTION ITEM $item_agapite_ringmail_leggings
     WEIGHT 600
 }
 // ringmail
-SECTION ITEM $item_agapite_ringmail_tunic
+SECTION ITEM $item_gapite_ringmail_tunic
 {
     NAME agapite ringmail tunic
     ID 13ED
@@ -75,7 +75,7 @@ SECTION ITEM $item_agapite_ringmail_tunic
 
 
 // chainmail coif
-SECTION ITEM $item_agapite_chain_coif
+SECTION ITEM $item_gapite_chain_coif
 {
     NAME agapite chainmail coif
     ID 13BB
@@ -90,7 +90,7 @@ SECTION ITEM $item_agapite_chain_coif
 }
 
 // chainmail Legs
-SECTION ITEM $item_agapite_chain_leggings
+SECTION ITEM $item_gapite_chain_leggings
 {
     NAME agapite chainmail leggings
     ID 13C3
@@ -106,7 +106,7 @@ SECTION ITEM $item_agapite_chain_leggings
 }
 
 // chainmail tunic
-SECTION ITEM $item_agapite_chain_tunic
+SECTION ITEM $item_gapite_chain_tunic
 {
     NAME agapite chainmail tunic
     ID 13C4
@@ -125,7 +125,7 @@ SECTION ITEM $item_agapite_chain_tunic
 //////////// platemail //////////////
 
 //plate gorget
-SECTION ITEM $item_agapite_plate_gorget
+SECTION ITEM $item_gapite_plate_gorget
 {
     NAME agapite plate gorget
     ID 1413
@@ -141,7 +141,7 @@ SECTION ITEM $item_agapite_plate_gorget
 }
 
 //plate gloves
-SECTION ITEM $item_agapite_plate_gloves
+SECTION ITEM $item_gapite_plate_gloves
 {
     NAME agapite plate gloves
     ID 1414
@@ -157,7 +157,7 @@ SECTION ITEM $item_agapite_plate_gloves
 }
 
 //helm
-SECTION ITEM $item_agapite_plate_helm
+SECTION ITEM $item_gapite_plate_helm
 {
     NAME agapite helm
     ID 1412
@@ -173,7 +173,7 @@ SECTION ITEM $item_agapite_plate_helm
 }
 
 //plate sleeves
-SECTION ITEM $item_agapite_plate_sleeves
+SECTION ITEM $item_gapite_plate_sleeves
 {
     NAME agapite plate sleeves
     ID 1410
@@ -189,7 +189,7 @@ SECTION ITEM $item_agapite_plate_sleeves
 }
 
 //plate Legs
-SECTION ITEM $item_agapite_plate_leggings
+SECTION ITEM $item_gapite_plate_leggings
 {
     NAME agapite plate leggings
     ID 141A
@@ -205,7 +205,7 @@ SECTION ITEM $item_agapite_plate_leggings
 }
 
 // female plate
-SECTION ITEM $item_agapite_female_plate
+SECTION ITEM $item_gapite_female_plate
 {
     NAME agapite female plate
     ID 1C04
@@ -221,7 +221,7 @@ SECTION ITEM $item_agapite_female_plate
 }
 
 //plate Mail
-SECTION ITEM $item_agapite_platemail
+SECTION ITEM $item_gapite_platemail
 {
     NAME agapite platemail
     ID 1416
@@ -240,7 +240,7 @@ SECTION ITEM $item_agapite_platemail
 //////////// helms //////////////////
 
 // a bascinet
-SECTION ITEM $item_agapite_bascinet
+SECTION ITEM $item_gapite_bascinet
 {
     NAME agapite bascinet
     ID 140C
@@ -255,7 +255,7 @@ SECTION ITEM $item_agapite_bascinet
 }
 
 // close helm
-SECTION ITEM $item_agapite_close_helm
+SECTION ITEM $item_gapite_close_helm
 {
     NAME agapite close helm
     ID 1408
@@ -271,7 +271,7 @@ SECTION ITEM $item_agapite_close_helm
 }
 
 // a helmet
-SECTION ITEM $item_agapite_helmet
+SECTION ITEM $item_gapite_helmet
 {
     NAME agapite helmet
     ID 140A
@@ -286,7 +286,7 @@ SECTION ITEM $item_agapite_helmet
 }
 
 // a nose helm
-SECTION ITEM $item_agapite_nose_helm
+SECTION ITEM $item_gapite_nose_helm
 {
     NAME agapite nose helm
     ID 140E
@@ -304,7 +304,7 @@ SECTION ITEM $item_agapite_nose_helm
 //////////// shields ///////////////
 
 //buckler
-SECTION ITEM $item_agapite_buckler
+SECTION ITEM $item_gapite_buckler
 {
     NAME agapite buckler
     ID 1B73
@@ -320,7 +320,7 @@ SECTION ITEM $item_agapite_buckler
 }
 
 //metal shield
-SECTION ITEM $item_agapite_metal_shield
+SECTION ITEM $item_gapite_metal_shield
 {
     NAME agapite metal shield
     ID 1B7B
@@ -336,7 +336,7 @@ SECTION ITEM $item_agapite_metal_shield
 }
 
 //round shield
-SECTION ITEM $item_agapite_bronze_shield
+SECTION ITEM $item_gapite_bronze_shield
 {
     NAME agapite round shield
     ID 1B72
@@ -352,7 +352,7 @@ SECTION ITEM $item_agapite_bronze_shield
 }
 
 //Kite Shield (Wooden)
-SECTION ITEM $item_agapite_wooden_kite_shield
+SECTION ITEM $item_gapite_wooden_kite_shield
 {
     NAME agapite wooden kite shield
     ID 1B78
@@ -368,7 +368,7 @@ SECTION ITEM $item_agapite_wooden_kite_shield
 }
 
 //Kite Shield (Metal)
-SECTION ITEM $item_agapite_metal_kite_shield
+SECTION ITEM $item_gapite_metal_kite_shield
 {
     NAME agapite metal kite shield
     ID 1B74
@@ -385,7 +385,7 @@ SECTION ITEM $item_agapite_metal_kite_shield
 }
 
 //heater
-SECTION ITEM $item_agapite_heater
+SECTION ITEM $item_gapite_heater
 {
     NAME agapite heater
     ID 1B76
@@ -402,7 +402,7 @@ SECTION ITEM $item_agapite_heater
 
 ///////////////// nicht herstellbar ////////////////////////////////
 //chaos shield
-SECTION ITEM $item_agapite_chaos_shield
+SECTION ITEM $item_gapite_chaos_shield
 {
     NAME agapite chaos shield
     ID 1BC3
@@ -418,7 +418,7 @@ SECTION ITEM $item_agapite_chaos_shield
 }
 
 //order shield
-SECTION ITEM $item_agapite_order_shield
+SECTION ITEM $item_gapite_order_shield
 {
     NAME agapite order shield
     ID 1BC4

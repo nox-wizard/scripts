@@ -58,7 +58,7 @@ SECTION FISHLIST 3
 	$item_valorite_platemail
 	$item_silver_close_helm
 	$item_verite_plate_gorget
-	$item_agapite_plate_helm
+	$item_gapite_plate_helm
 	$item_golden_chain_tunic
 	$item_merkite_chain_tunic
 }

@@ -9,7 +9,7 @@
 ////////////////////////////////////////////////////////////
 
 // double axe
-SECTION ITEM $item_agapite_double_axe
+SECTION ITEM $item_gapite_double_axe
 {
 	
 	NAME agapite double axe
@@ -30,7 +30,7 @@ SECTION ITEM $item_agapite_double_axe
 }
 
 // battle axe
-SECTION ITEM $item_agapite_battle_axe
+SECTION ITEM $item_gapite_battle_axe
 {
 	NAME agapite battle axe
 	ID 0F47
@@ -50,7 +50,7 @@ SECTION ITEM $item_agapite_battle_axe
 }
 
 // Lg. war axe
-SECTION ITEM $item_agapite_large_battle_axe
+SECTION ITEM $item_gapite_large_battle_axe
 {
 	NAME agapite large battle axe
 	ID 13FB
@@ -70,7 +70,7 @@ SECTION ITEM $item_agapite_large_battle_axe
 }
 
 // axe
-SECTION ITEM $item_agapite_axe
+SECTION ITEM $item_gapite_axe
 {
 	NAME agapite axe
 	ID 0F49
@@ -90,7 +90,7 @@ SECTION ITEM $item_agapite_axe
 }
 
 // two-handed axe
-SECTION ITEM $item_agapite_two-handed_axe
+SECTION ITEM $item_gapite_two-handed_axe
 {
 	NAME a agapite two-handed axe
 	ID 1442
@@ -110,7 +110,7 @@ SECTION ITEM $item_agapite_two-handed_axe
 }
 
 // Execut. axe
-SECTION ITEM $item_agapite_executioners_axe
+SECTION ITEM $item_gapite_executioners_axe
 {
 	NAME agapite executioners axe
 	ID 0F45
@@ -130,7 +130,7 @@ SECTION ITEM $item_agapite_executioners_axe
 }
 
 // war axe
-SECTION ITEM $item_agapite_war_axe
+SECTION ITEM $item_gapite_war_axe
 {
 	NAME agapite war axe
 	ID 13B0
@@ -154,7 +154,7 @@ SECTION ITEM $item_agapite_war_axe
 ///////////////////////////////////////////////////////////////
 
 // dagger
-SECTION ITEM $item_agapite_dagger
+SECTION ITEM $item_gapite_dagger
 {
 	NAME agapite dagger
 	ID 0F51
@@ -174,7 +174,7 @@ SECTION ITEM $item_agapite_dagger
 }
 
 //cutlass
-SECTION ITEM $item_agapite_cutlass
+SECTION ITEM $item_gapite_cutlass
 {
 	NAME agapite cutlass
 	ID 1440
@@ -195,7 +195,7 @@ SECTION ITEM $item_agapite_cutlass
 }
 
 // kryss
-SECTION ITEM $item_agapite_kryss
+SECTION ITEM $item_gapite_kryss
 {
 	NAME agapite kryss
 	ID 1400
@@ -215,7 +215,7 @@ SECTION ITEM $item_agapite_kryss
 }
 
 //katana
-SECTION ITEM $item_agapite_katana
+SECTION ITEM $item_gapite_katana
 {
 	NAME agapite katana
 	ID 13FF
@@ -236,7 +236,7 @@ SECTION ITEM $item_agapite_katana
 }
 
 //scimitar
-SECTION ITEM $item_agapite_scimitar
+SECTION ITEM $item_gapite_scimitar
 {
 	NAME agapite scimitar
 	ID 13B6
@@ -257,7 +257,7 @@ SECTION ITEM $item_agapite_scimitar
 }
 
 //Broad Sword
-SECTION ITEM $item_agapite_broadsword
+SECTION ITEM $item_gapite_broadsword
 {
 	NAME agapite broadsword
 	ID 0F5E
@@ -278,7 +278,7 @@ SECTION ITEM $item_agapite_broadsword
 }
 
 //long sword
-SECTION ITEM $item_agapite_long_sword
+SECTION ITEM $item_gapite_long_sword
 {
 	NAME agapite long sword
 	ID 13B8
@@ -299,7 +299,7 @@ SECTION ITEM $item_agapite_long_sword
 }
 
 //Viking Sword
-SECTION ITEM $item_agapite_viking_sword
+SECTION ITEM $item_gapite_viking_sword
 {
 	NAME agapite Wikingerschwert
 	ID 13BA
@@ -324,7 +324,7 @@ SECTION ITEM $item_agapite_viking_sword
 ///////////////////////////////////////////////////////////
 
 // mace
-SECTION ITEM $item_agapite_mace
+SECTION ITEM $item_gapite_mace
 {
 	NAME agapite mace
 	ID 0x0F5C
@@ -344,7 +344,7 @@ SECTION ITEM $item_agapite_mace
 }
 
 // maul
-SECTION ITEM $item_agapite_maul
+SECTION ITEM $item_gapite_maul
 {
 	NAME agapite maul
 	ID 143A
@@ -364,7 +364,7 @@ SECTION ITEM $item_agapite_maul
 }
 
 // war mace
-SECTION ITEM $item_agapite_war_mace
+SECTION ITEM $item_gapite_war_mace
 {
 	NAME agapite war mace
 	ID 1406
@@ -384,7 +384,7 @@ SECTION ITEM $item_agapite_war_mace
 }
 
 // war hammer
-SECTION ITEM $item_agapite_war_hammer
+SECTION ITEM $item_gapite_war_hammer
 {
 	NAME agapite war hammer
 	ID 1438
@@ -404,7 +404,7 @@ SECTION ITEM $item_agapite_war_hammer
 }
 
 // hammer pick
-SECTION ITEM $item_agapite_hammer_pick
+SECTION ITEM $item_gapite_hammer_pick
 {
 	NAME agapite hammer pick
 	ID 143C
@@ -428,7 +428,7 @@ SECTION ITEM $item_agapite_hammer_pick
 //////////////////////////////////////////////////////////////
 
 //short spear
-SECTION ITEM $item_agapite_short_spear
+SECTION ITEM $item_gapite_short_spear
 {
 	NAME agapite short spear
 	ID 1403
@@ -448,7 +448,7 @@ SECTION ITEM $item_agapite_short_spear
 }
 
 //war fork
-SECTION ITEM $item_agapite_war_fork
+SECTION ITEM $item_gapite_war_fork
 {
 	NAME agapite war fork
 	ID 1405
@@ -468,7 +468,7 @@ SECTION ITEM $item_agapite_war_fork
 }
 
 //spear
-SECTION ITEM $item_agapite_spear
+SECTION ITEM $item_gapite_spear
 {
 	NAME agapite spear
 	ID 0F62
@@ -492,7 +492,7 @@ SECTION ITEM $item_agapite_spear
 //////////////////////////////////////////////////////////////
 
 // bardiche
-SECTION ITEM $item_agapite_bardiche
+SECTION ITEM $item_gapite_bardiche
 {
 	NAME agapite bardiche
 	ID 0F4D
@@ -512,7 +512,7 @@ SECTION ITEM $item_agapite_bardiche
 }
 
 // halberd
-SECTION ITEM $item_agapite_halberd
+SECTION ITEM $item_gapite_halberd
 {
 	NAME agapite halberd
 	ID 143E

@@ -167,7 +167,7 @@ SECTION ITEM $item_baker_spawner-m
     NAME male baker spawner
     ID $_id_spawner2
     TYPE $itype_npc_spawner
-    MOREX $npc_maker_m
+    MOREX $npc_baker_m
     MOREY 0
     MOREZ 0
     VISIBLE 1
@@ -448,7 +448,7 @@ SECTION ITEM $item_spinner_spawner-f
     VISIBLE 1
 }
 
-SECTION ITEM $item_armorer_spawner-m
+SECTION ITEM $item_rmorer_spawner-m
 {
     NAME male armorer spawner
     ID $_id_spawner2
@@ -459,7 +459,7 @@ SECTION ITEM $item_armorer_spawner-m
     VISIBLE 1
 }
 
-SECTION ITEM $item_armorer_spawner-f
+SECTION ITEM $item_rmorer_spawner-f
 {
     NAME female armorer spawner
     ID $_id_spawner2
@@ -497,7 +497,7 @@ SECTION ITEM $item_architect_spawner-m
     NAME male architect spawner
     ID $_id_spawner2
     TYPE $itype_npc_spawner
-    MOREX $npc_architech_m
+    MOREX $npc_architect_m
     MOREY 0
     MOREZ 0
     VISIBLE 1
@@ -580,7 +580,7 @@ SECTION ITEM $item_cook_spawner-f
     VISIBLE 1
 }
 
-SECTION ITEM $item_animal_trainer_spawner-m
+SECTION ITEM $item_nimal_trainer_spawner-m
 {
     NAME male animal trainer spawner
     ID $_id_spawner2
@@ -591,7 +591,7 @@ SECTION ITEM $item_animal_trainer_spawner-m
     VISIBLE 1
 }
 
-SECTION ITEM $item_animal_trainer_spawner-f
+SECTION ITEM $item_nimal_trainer_spawner-f
 {
     NAME female animal trainer spawner
     ID $_id_spawner2
@@ -624,7 +624,7 @@ SECTION ITEM $item_fisherlady_spawner
     VISIBLE 1
 }
 
-SECTION ITEM $item_alchemist_spawner-m
+SECTION ITEM $item_lchemist_spawner-m
 {
     NAME male alchemist spawner
     ID $_id_spawner2
@@ -635,7 +635,7 @@ SECTION ITEM $item_alchemist_spawner-m
     VISIBLE 1
 }
 
-SECTION ITEM $item_alchemist_spawner-f
+SECTION ITEM $item_lchemist_spawner-f
 {
     NAME female alchemist spawner
     ID $_id_spawner2

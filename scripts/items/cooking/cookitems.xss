@@ -27,7 +27,7 @@ SECTION ITEM $item_empty_drink_bottle
 	GOOD 3
 }
 
-SECTION ITEM $item_bottle_of_pink_champaine
+SECTION ITEM $item_bottleof_pink_champaine
 {
 	NAME bottle of pink champaine
 	ID 09C7
@@ -916,7 +916,7 @@ SECTION ITEM $item_unbaked_apple_pie
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_apple_pie
+SECTION ITEM $item_pple_pie
 {
 	NAME apple pie
 	ID 1041
@@ -3085,7 +3085,7 @@ SECTION ITEM $item_pears_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_apples
+SECTION ITEM $item_pples
 {
 	NAME apple
 	ID 09D0

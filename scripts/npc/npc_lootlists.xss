@@ -126,12 +126,12 @@ SECTION LOOTLIST $loot_uncut_gems
 	$item_citrines2
 	$item_citrines3
 	$item_citrines4
-	$item_diamonds1
 	$item_diamonds2
 	$item_diamonds3
 	$item_diamonds4
+	$item_diamonds5
 	$item_emeralds2
-	$item_rubies6
+	$item_rubies7
 	$item_rubies7
 	$item_star_sapphires3
 	$item_tourmalines4
@@ -147,18 +147,18 @@ SECTION LOOTLIST $loot_jewelry
 	$item_amethysts2
 	$item_citrines1
 	$item_diamonds5
-	$item_emeralds1
-	$item_rubies1
+	$item_emeralds2
 	$item_rubies2
 	$item_rubies3
 	$item_rubies4
 	$item_rubies5
-	$item_sapphires1
+	$item_rubies6
 	$item_sapphires2
 	$item_sapphires3
 	$item_sapphires4
-	$item_star_sapphires1
+	$item_sapphires4
 	$item_star_sapphires2
+	$item_star_sapphires3
 	$item_tourmalines1
 	$item_tourmalines2
 	$item_tourmalines3
@@ -219,7 +219,7 @@ SECTION LOOTLIST $loot_omnivores_food
 	$item_slabs_of_bacon_1
 	$item_slabs_of_bacon_1
 	$item_pears_1
-	$item_apples
+	$item_pples
 	$item_grape_bunches_1
 	$item_peaches_1
 	$item_fruit_basket
@@ -1098,16 +1098,16 @@ SECTION LOOTLIST $loot_colored_armor
 	$item_bronze_close_helm
 	$item_bronze_helmet
 	$item_bronze_bascinet
-	$item_agapite_platemail
-	$item_agapite_plate_gorget
-	$item_agapite_plate_gloves
-	$item_agapite_plate_helm
-	$item_agapite_plate_leggings
-	$item_agapite_plate_sleeves
-	$item_agapite_nose_helm
-	$item_agapite_close_helm
-	$item_agapite_helmet
-	$item_agapite_bascinet
+	$item_gapite_platemail
+	$item_gapite_plate_gorget
+	$item_gapite_plate_gloves
+	$item_gapite_plate_helm
+	$item_gapite_plate_leggings
+	$item_gapite_plate_sleeves
+	$item_gapite_nose_helm
+	$item_gapite_close_helm
+	$item_gapite_helmet
+	$item_gapite_bascinet
 }
 
 SECTION LOOTLIST $loot_crook_practice_weapon

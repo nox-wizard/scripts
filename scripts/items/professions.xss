@@ -331,7 +331,7 @@ SECTION ITEM $item_clock_parts
     ///DESCRIPTION Clock Parts
 }
 
-SECTION ITEM $item_axles_with_gears
+SECTION ITEM $item_xles_with_gears
 {
     ID 1051
     VALUE 25
@@ -379,7 +379,7 @@ SECTION ITEM $item_sextant_parts
     ///DESCRIPTION Sextant Parts
 }
 
-SECTION ITEM $item_axles
+SECTION ITEM $item_xles
 {
     ID 105B
     VALUE 15

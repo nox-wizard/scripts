@@ -359,7 +359,7 @@ SECTION ITEM $item_mage
     MOREX 6
 }
 
-SECTION ITEM $item_armsman
+SECTION ITEM $item_rmsman
 {
     NAME armsman
     ID 0dda
@@ -1783,7 +1783,7 @@ SECTION ITEM $item_mage_1
     MOREX 6
 }
 
-SECTION ITEM $item_armsman_1
+SECTION ITEM $item_rmsman_1
 {
     NAME armsman
     ID 0dda
@@ -1929,7 +1929,7 @@ SECTION ITEM $item_ranger
     MOREX 9
 }
 
-SECTION ITEM $item_assassin
+SECTION ITEM $item_ssassin
 {
     NAME assassin
     ID 0DDA
@@ -1969,7 +1969,7 @@ SECTION ITEM $item_ranger_1
     MOREX 9
 }
 
-SECTION ITEM $item_assassin_1
+SECTION ITEM $item_ssassin_1
 {
     NAME assassin
     ID 0DDA
@@ -2773,7 +2773,7 @@ SECTION ITEM $item_treasure_map_lv5_
     TRIGGER $itrg_treasure_map_lvl5
 }
 
-SECTION ITEM $item_wizards_hat
+SECTION ITEM $item_magical_wizards_hat
 {
     NAME a magical wizard`s hat
     ID 1718
@@ -4651,7 +4651,7 @@ SECTION ITEM $item_jar_for_milk
     ///SUBSECTION NoX-Wizard Custom Items
 }
 
-SECTION ITEM $item_a_jar_full_of_milk
+SECTION ITEM $item_jar_full_of_milk
 {
     NAME a jar full of milk
     ID 1006
@@ -4661,7 +4661,7 @@ SECTION ITEM $item_a_jar_full_of_milk
     ///SUBSECTION NoX-Wizard Custom Items
 }
 
-SECTION ITEM $item_a_cristall_ball_of_reputation
+SECTION ITEM $item_cristall_ball_of_reputation
 {
     NAME a Cristall Ball of Reputation
     ID 0E2D
@@ -4672,7 +4672,7 @@ SECTION ITEM $item_a_cristall_ball_of_reputation
     ///SUBSECTION NoX-Wizard Custom Items
 }
 
-SECTION ITEM $item_a_cigar
+SECTION ITEM $item_cigar
 {
     NAME a cigar
     ID 979
@@ -4683,7 +4683,7 @@ SECTION ITEM $item_a_cigar
     ///SUBSECTION NoX-Wizard Custom Items
 }
 
-SECTION ITEM $item_a_magical_wizard`s_hat
+SECTION ITEM $item_magical_wizards_hat
 {
     NAME a magical wizard`s hat
     ID 1718
@@ -4716,14 +4716,14 @@ SECTION ITEM $item_smithy_hammer
     DAMAGETYPE $damage_bludgeon
 }
 
-SECTION ITEM $item_forge
+SECTION ITEM $item_forge1
 { 
     NAME forge
     ID 0FAF
     @ONDBLCLICK blacksmith
 }
 
-SECTION ITEM $item_forge_2
+SECTION ITEM $item_forge2_1_5
 { 
     NAME forge
     ID 0FB0

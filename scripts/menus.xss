@@ -1241,9 +1241,9 @@ SECTION BATCH $batch_polymorph_cns
 //    0E40 Metal Chest
 //    ADDITEM $item_metal_chest1
 //    0E7D Wooden Box
-//    ADDITEM $item_wooden_box
+//    ADDITEM $item_wooden_box_1
 //    0E7E Small Wooden Crate
-//    ADDITEM $item_small_wooden_crate
+//    ADDITEM $item_small_wooden_crate1_1
 //    0E3E Medium Wooden Crate
 //    ADDITEM $item_medium_wooden_crate1
 //    0E3C Large Wooden Crate
@@ -1445,9 +1445,9 @@ SECTION BATCH $batch_polymorph_cns
 //{
 //    Throne
 //    0B32 Throne
-//    ADDITEM $item_pine_throne1
+//    ADDITEM $item_pine_throne_1
 //    0B33 Throne
-//    ADDITEM $item_pine_throne2
+//    ADDITEM $item_pine_throne_2
 //    < Previous Menu
 //    OPENMENU $menu_chairs
 //}
@@ -1822,7 +1822,7 @@ SECTION BATCH $batch_polymorph_cns
 //    1718 Wizard's hat
 //    ADDITEM $item_wizards_hat
 //    1718 a Magical Wizard`s hat
-//    ADDITEM $item_magical_wizard`s_hat
+//    ADDITEM $item_magical_wizards_hat
 //    1719 Bonnet
 //    ADDITEM $item_bonnet
 //    171A Feathered hat
@@ -2428,7 +2428,7 @@ SECTION BATCH $batch_polymorph_cns
 //    < Previous Menu
 //    OPENMENU $menu_building_menu
 //    14F0 Small Stone & Plaster House
-//    ADDITEM $item_small_stone__plaster_house_deed
+//    ADDITEM $item_small_stone_plaster_house_deed
 //    14F0 Small Stone House
 //    ADDITEM $item_small_stone_house_deed
 //    14F0 Small Brick House
@@ -2436,7 +2436,7 @@ SECTION BATCH $batch_polymorph_cns
 //    14F0 Small Wood House
 //    ADDITEM $item_small_wood_house_deed
 //    14F0 Small Wood & Plaster House
-//    ADDITEM $item_small_wood__plaster_house_deed
+//    ADDITEM $item_small_wood_plaster_house_deed
 //    14F0 Small Wood House (Straw Roof)
 //    ADDITEM $item_small_wood_house_with_straw_roof_deed
 //    14F0 Blue Tent
@@ -2446,9 +2446,9 @@ SECTION BATCH $batch_polymorph_cns
 //    14F0 3 Room Brick House
 //    ADDITEM $item_3_room_brick_house_deed
 //    14F0 2 Story Wood & Plaster House
-//    ADDITEM $item_2_story_wood__plaster_house_deed
+//    ADDITEM $item_2_story_wood_plaster_house_deed
 //    14F0 2 Story Stone & Plaster House
-//    ADDITEM $item_2_story_stone__plaster_house_deed
+//    ADDITEM $item_2_story_stone_plaster_house_deed
 //    14F0 Stone Tower
 //    ADDITEM $item_tower_deed
 //    14F0 Stone Keep
@@ -4992,13 +4992,13 @@ SECTION BATCH $batch_polymorph_cns
 //    1BF2 5 Iron Ingots
 //    ADDITEM $item_iron_ingots
 //    0FB1 Forge
-//    ADDITEM $item_forge
+//    ADDITEM $item_forge1
 //    197A Partial Forge
 //    ADDITEM $item_bellows
 //    197E Partial Forge
-//    ADDITEM $item_forge
+//    ADDITEM $item_forge1
 //    1982 Partial Forge
-//    ADDITEM $item_forge_2
+//    ADDITEM $item_forge2_1_5
 //    0E85 Pick Axe
 //    ADDITEM $item_pickaxe
 //    0FAF Anvil
@@ -5826,29 +5826,29 @@ SECTION BATCH $batch_polymorph_cns
 //    0E9B Mortar And Pestal
 //    ADDITEM $item_mortar_and_pestal
 //    0F0E Bottle
-//    ADDITEM $item_bottle_A
+//    ADDITEM $item_bottle11
 //    0E24 a empty vial
 //    ADDITEM $item_empty_vials
 //    0E25 Bottle
 //    ADDITEM $item_bottle
 //    0E26 Bottle
-//    ADDITEM $item_bottle_1
+//    ADDITEM $item_bottle1
 //    0E27 Bottle
-//    ADDITEM $item_bottle_2
+//    ADDITEM $item_bottle2
 //    0E28 Bottle
-//    ADDITEM $item_bottle_3
+//    ADDITEM $item_bottle3
 //    0E29 Bottle
-//    ADDITEM $item_bottle_4
+//    ADDITEM $item_bottle4
 //    0E2A Bottle
-//    ADDITEM $item_bottle_5
+//    ADDITEM $item_bottle5
 //    0E2B Bottle
-//    ADDITEM $item_bottle_6
+//    ADDITEM $item_bottle6
 //    0E2C Bottle
-//    ADDITEM $item_bottle_7
+//    ADDITEM $item_bottle7
 //    0EFB Bottle
-//    ADDITEM $item_bottle_8
+//    ADDITEM $item_bottle8
 //    0EFC Bottle
-//    ADDITEM $item_bottle_9
+//    ADDITEM $item_bottle9
 //    < Previous Menu
 //    OPENMENU $menu_magic
 //}
@@ -6501,7 +6501,7 @@ SECTION BATCH $batch_polymorph_cns
 //    204F GM Robe (undyed)
 //    ADDITEM $item_gm_robe_undyed
 //    204F GM Robe (red)
-//    ADDITEM $item_gm_robe_red_
+//    ADDITEM $item_gm_robe_red
 //    204F GM Robe (green)
 //    ADDITEM $item_gm_robe_green_
 //    204F GM Robe (blue)

@@ -235,23 +235,23 @@
 // STONE FURNITURE
 //
 
-#define $item_marble_bench1_1 342
-#define $item_marble_bench1_2 343
-#define $item_marble_bench2_1_1 386
-#define $item_marble_bench2_1_2 387
-#define $item_marble_bench2_1_3 388
-#define $item_marble_bench2_2_1 346
-#define $item_marble_bench2_2_2 347
-#define $item_marble_bench2_2_3 248
+#define $item_marble_bench_A1 342
+#define $item_marble_bench_A2 343
+#define $item_marble_bench_B1_1 386
+#define $item_marble_bench_B1_2 387
+#define $item_marble_bench_B1_3 388
+#define $item_marble_bench_B2_1 346
+#define $item_marble_bench_B2_2 347
+#define $item_marble_bench_B2_3 248
 
-#define $item_sandstone_bench1_1 344
-#define $item_sandstone_bench1_2 345
-#define $item_sandstone_bench2_1_1 389
-#define $item_sandstone_bench2_1_2 390
-#define $item_sandstone_bench2_1_3 391
-#define $item_sandstone_bench2_2_1 349
-#define $item_sandstone_bench2_2_2 350
-#define $item_sandstone_bench2_2_3 351
+#define $item_sandstone_bench_A1 344
+#define $item_sandstone_bench_A2 345
+#define $item_sandstone_bench_B1_1 389
+#define $item_sandstone_bench_B1_2 390
+#define $item_sandstone_bench_B1_3 391
+#define $item_sandstone_bench_B2_1 349
+#define $item_sandstone_bench_B2_2 350
+#define $item_sandstone_bench_B2_3 351
 
 #define $item_stone_chair_1 392
 #define $item_stone_chair_2 393
@@ -485,7 +485,7 @@
 #define $item_swordsman 802
 #define $item_archer 803
 #define $item_mage 804
-#define $item_armsman 805
+#define $item_rmsman 805
 
 ///////////////////////////////////////////////////
 
@@ -869,8 +869,8 @@
 #define $item_shipwright_spawner-f 3265
 #define $item_spinner_spawner-m 3266
 #define $item_spinner_spawner-f 3267
-#define $item_armorer_spawner-m 3268
-#define $item_armorer_spawner-f 3269
+#define $item_rmorer_spawner-m 3268
+#define $item_rmorer_spawner-f 3269
 #define $item_blacksmith_spawner-m 3270
 #define $item_blacksmith_spawner-f 3271
 #define $item_architect_spawner-m 3272
@@ -881,12 +881,12 @@
 #define $item_farmer_spawner-f 3277
 #define $item_cook_spawner-m 3278
 #define $item_cook_spawner-f 3279
-#define $item_animal_trainer_spawner-m 3280
-#define $item_animal_trainer_spawner-f 3281
+#define $item_nimal_trainer_spawner-m 3280
+#define $item_nimal_trainer_spawner-f 3281
 #define $item_fisherman_spawner 3282
 #define $item_fisherlady_spawner 3283
-#define $item_alchemist_spawner-m 3284
-#define $item_alchemist_spawner-f 3285
+#define $item_lchemist_spawner-m 3284
+#define $item_lchemist_spawner-f 3285
 #define $item_tinker_spawner-m 3286
 #define $item_tinker_spawner-f 3287
 #define $item_engineer_spawner-m 3288
@@ -1323,11 +1323,11 @@
 #define $item_cut_cloth 7029
 #define $item_iron_ingots 7030
 #define $item_clock_parts 7031
-#define $item_axles_with_gears 7032
+#define $item_xles_with_gears 7032
 #define $item_gears 7033
 #define $item_hinges 7034
 #define $item_sextant_parts 7035
-#define $item_axles 7036
+#define $item_xles 7036
 #define $item_springs 7037
 #define $item_tinkers_tools 7038
 #define $item_tinker_parts_list 7039
@@ -1338,27 +1338,27 @@
 #define $item_lantern 7044
 
 #define $item_the_first_uox_book 7115
-#define $item_a_grammer_of_orchish 7116
+#define $item_grammer_of_orchish 7116
 #define $item_the_bold_stranger 7117
 #define $item_birds_of_brittannia 7118
 #define $item_reguarding_llamas 7119
 #define $item_talking_to_wisps 7120
 #define $item_taming_dragons 7121
-#define $item_a_politic_call_to_anarchy 7122
+#define $item_politic_call_to_anarchy 7122
 #define $item_ethical_hedonism_an_introduction 7123
 #define $item_on_the_diversity_of_our_lands 7124
 #define $item_virtue 7125
 #define $item_my_story 7126
 #define $item_the_burning_of_trinsic 7127
 #define $item_the_fight 7128
-#define $item_a_song_of_samlethe 7129
+#define $item_song_of_samlethe 7129
 #define $item_classic_childrens_tales_vol2 7130
 #define $item_classic_tales_of_vesper_vol1 7131
-#define $item_a_tale_of_three_tribes 7132
+#define $item_tale_of_three_tribes 7132
 #define $item_deceit_a_dungeon_of_horrors 7133
 #define $item_the_life_of_a_travelling_minstrel 7134
 #define $item_the_wild_girl_in_the_forest 7135
-#define $item_a_primer_on_arms_and_weopons 7136
+#define $item_primer_on_arms_and_weopons 7136
 #define $item_beltrans_guide_to_guilds 7137
 #define $item_brittannian_flora 7138
 #define $item_demensional_travel_a_monagraph 7139
@@ -1452,7 +1452,7 @@
 #define $item_swordsman_1 10059
 #define $item_archer_3 10060
 #define $item_mage_1 10061
-#define $item_armsman_1 10062
+#define $item_rmsman_1 10062
 #define $item_fencer_1 10063
 #define $item_orc 10064
 #define $item_ettin 10065
@@ -1496,11 +1496,11 @@
 #define $item_thief 10107
 #define $item_bard 10108
 #define $item_ranger 10109
-#define $item_assassin 10110
+#define $item_ssassin 10110
 #define $item_thief_1 10111
 #define $item_bard_1 10112
 #define $item_ranger_1 10113
-#define $item_assassin_1 10114
+#define $item_ssassin_1 10114
 
 #define $item_town_area_spawner 10115
 #define $item_swamp_area_spawner 10116
@@ -1752,7 +1752,6 @@
 
 #define $item_magical_wizards_hat 20026
 
-
 #define $item_large_leather_pillow 20101
 #define $item_medium_leather_pillow 20102
 #define $item_small_leather_pillow 20103
@@ -1765,12 +1764,12 @@
 #define $item_n 20110
 #define $item_small_n 20111
 #define $item_small_e 20112
-#define $item_n_1 20113
+#define $item_1 20113
 #define $item_e_1 20114
 #define $item_e_2 20115
-#define $item_n_2 20116
+#define $item_2 20116
 #define $item_e_3 20117
-#define $item_n_3 20118
+#define $item_3 20118
 #define $item_e_4 20119
 #define $item_e_5 20120
 #define $item_e_6 20121
@@ -1841,9 +1840,9 @@
 #define $item_skinning_knife_practice_weapon_ 50007
 #define $item_mace_practice_weapon_ 50008
 
-#define $item_robe1 50016
-#define $item_robe2 50017
-#define $item_robe3 50019
+#define $item_robe2 50016
+#define $item_robe3 50017
+#define $item_robe4 50019
 #define $item_recall_rune_1 50020
 
 #define $item_pure_red_hairdye 50021
@@ -2022,14 +2021,14 @@
 #define $item_telescope_ZT 60159
 #define $item_telescope_ZU 60160
 
-#define $item_altar 60161
-#define $item_altar_1 60162
-#define $item_altar_2 60163
-#define $item_altar_3 60164
-#define $item_altar_4 60165
-#define $item_altar_5 60166
-#define $item_altar_6 60167
-#define $item_altar_7 60168
+#define $item_ltar 60161
+#define $item_ltar_1 60162
+#define $item_ltar_2 60163
+#define $item_ltar_3 60164
+#define $item_ltar_4 60165
+#define $item_ltar_5 60166
+#define $item_ltar_6 60167
+#define $item_ltar_7 60168
 
 #define $item_lsd_potion 60297
 #define $item_the_book_of_the_dead 85000
@@ -2109,5 +2108,5 @@
 #define $item_hardcoded 2135
 #define $item_blood_puddle 2136
 #define $item_restock 2137
-#define $item_hitching_post 500500
-#define $item_hitching_post2 500501
+#define $item_hitching_post 400011
+#define $item_hitching_post2 400012

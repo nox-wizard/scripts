@@ -506,7 +506,7 @@ SECTION ITEM $item_body_sash
     ///SUBSECTION Accessories
 }
 
-SECTION ITEM $item_robe1
+SECTION ITEM $item_robe2
 {
     ID 1F03
     LAYER $layer_outer_torso
@@ -520,7 +520,7 @@ SECTION ITEM $item_robe1
     ///DESCRIPTION Red Robe
 }
 
-SECTION ITEM $item_robe2
+SECTION ITEM $item_robe3
 {
     ID 1F03
     LAYER $layer_outer_torso
@@ -533,7 +533,7 @@ SECTION ITEM $item_robe2
     ///DESCRIPTION Grey Robe
 }
 
-SECTION ITEM $item_robe3
+SECTION ITEM $item_robe4
 {
     ID 1F03
     LAYER $layer_outer_torso
