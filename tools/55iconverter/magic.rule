@@ -1,0 +1,602 @@
+[01F2F]
+MAPPING $item_create_food_scroll
+
+[I_SCROLL_CREATE_FOOD]
+MAPPING $item_create_food_scroll
+
+[01F2D]
+MAPPING $item_reactive_armor_scroll
+
+[I_SCROLL_REACTIVE_ARMOR]
+MAPPING $item_reactive_armor_scroll
+
+[01F2E]
+MAPPING $item_clumsy_scroll
+
+[I_SCROLL_CLUMSY]
+MAPPING $item_clumsy_scroll
+
+[0DF2]
+MAPPING $item_wand_of_greater_healing
+
+[I_WAND_1]
+MAPPING $item_wand_of_greater_healing
+
+[0DF3]
+MAPPING $item_wand_of_energy_vortex
+
+[I_WAND_2]
+MAPPING $item_wand_of_energy_vortex
+
+[0DF4]
+MAPPING $item_wand_of_magic_arrow
+
+[I_WAND_3]
+MAPPING $item_wand_of_magic_arrow
+
+[0DF4]
+MAPPING $item_wand_of_healing
+
+[I_WAND_3]
+MAPPING $item_wand_of_healing
+
+[0DF5]
+MAPPING $item_wand_of_ressurection
+
+[I_WAND_4]
+MAPPING $item_wand_of_ressurection
+
+[01F31]
+MAPPING $item_heal_scroll
+
+[I_SCROLL_HEAL]
+MAPPING $item_heal_scroll
+
+[01F30]
+MAPPING $item_feeblemind_scroll
+
+[I_SCROLL_FEEBLEMIND]
+MAPPING $item_feeblemind_scroll
+
+[01F33]
+MAPPING $item_night_sight_scroll
+
+[I_SCROLL_NIGHT_SIGHT]
+MAPPING $item_night_sight_scroll
+
+[01F32]
+MAPPING $item_magic_arrow_scroll
+
+[I_SCROLL_MAGIC_ARROW]
+MAPPING $item_magic_arrow_scroll
+
+[01F35]
+MAPPING $item_agility_scroll
+
+[I_SCROLL_AGILITY]
+MAPPING $item_agility_scroll
+
+[01F34]
+MAPPING $item_weaken_scroll
+
+[I_SCROLL_WEAKEN]
+MAPPING $item_weaken_scroll
+
+[01F37]
+MAPPING $item_cure_scroll
+
+[I_SCROLL_CURE]
+MAPPING $item_cure_scroll
+
+[01F36]
+MAPPING $item_cunning_scroll
+
+[I_SCROLL_CUNNING]
+MAPPING $item_cunning_scroll
+
+[01F39]
+MAPPING $item_magic_trap_scroll
+
+[I_SCROLL_MAGIC_TRAP]
+MAPPING $item_magic_trap_scroll
+
+[01F38]
+MAPPING $item_harm_scroll
+
+[I_SCROLL_HARM]
+MAPPING $item_harm_scroll
+
+[01F3A]
+MAPPING $item_magic_untrap_scroll
+
+[I_SCROLL_MAGIC_UNTRAP]
+MAPPING $item_magic_untrap_scroll
+
+[01F3C]
+MAPPING $item_strength_scroll
+
+[I_SCROLL_STRENGTH]
+MAPPING $item_strength_scroll
+
+[01F3B]
+MAPPING $item_protection_scroll
+
+[I_SCROLL_PROTECTION]
+MAPPING $item_protection_scroll
+
+[01F3E]
+MAPPING $item_fireball_scroll
+
+[I_SCROLL_FIREBALL]
+MAPPING $item_fireball_scroll
+
+[01F3D]
+MAPPING $item_bless_scroll
+
+[I_SCROLL_BLESS]
+MAPPING $item_bless_scroll
+
+[01F3F]
+MAPPING $item_magic_lock_scroll
+
+[I_SCROLL_MAGIC_LOCK]
+MAPPING $item_magic_lock_scroll
+
+[0EFA]
+MAPPING $item_spellbook
+
+[I_SPELLBOOK]
+MAPPING $item_spellbook
+
+[01F14]
+MAPPING $item_recall_rune
+T;MOREX;MOREX;0
+T;MOREY;MOREY;0
+T;MOREZ;MOREZ;0
+I;;TYPE;50
+
+[I_RUNE_MARKER]
+MAPPING $item_recall_rune
+T;MOREX;MOREX;0
+T;MOREY;MOREY;0
+T;MOREZ;MOREZ;0
+I;;TYPE;50
+
+[01F6D]
+MAPPING $item_all-spell_scroll
+
+[I_SCROLL_X_GREEN2]
+MAPPING $item_all-spell_scroll
+
+[01F6B]
+MAPPING $item_summon_fire_elemental_scroll
+
+[I_SCROLL_SUMMON_ELEM_FIRE]
+MAPPING $item_summon_fire_elemental_scroll
+
+[01F6C]
+MAPPING $item_summon_water_elemental_scroll
+
+[I_SCROLL_SUMMON_ELEM_WATER]
+MAPPING $item_summon_water_elemental_scroll
+
+[01F6A]
+MAPPING $item_summon_earth_elemental_scroll
+
+[I_SCROLL_SUMMON_ELEM_EARTH]
+MAPPING $item_summon_earth_elemental_scroll
+
+[0F88]
+MAPPING $item_nightshade
+
+[I_REAG_NIGHTSHADE]
+MAPPING $item_nightshade
+
+[0F89]
+MAPPING $item_obsidian
+
+[I_REAG_OBSIDIAN]
+MAPPING $item_obsidian
+
+[0F82]
+MAPPING $item_dragon_blood
+
+[I_REAG_DRAGON_BLOOD]
+MAPPING $item_dragon_blood
+
+[0F83]
+MAPPING $item_executioners_cap
+
+[I_REAG_EXECUTIONERS_CAP]
+MAPPING $item_executioners_cap
+
+[0F80]
+MAPPING $item_daemon_bone
+
+[I_REAG_DAEMON_BONE]
+MAPPING $item_daemon_bone
+
+[0F81]
+MAPPING $item_fertile_dirt
+
+[I_REAG_FERTILE_DIRT]
+MAPPING $item_fertile_dirt
+
+[0F86]
+MAPPING $item_mandrake_root
+
+[I_REAG_MANDRAKE_ROOT]
+MAPPING $item_mandrake_root
+
+[0F87]
+MAPPING $item_eye_of_newt
+
+[I_REAG_EYE_OF_NEWT]
+MAPPING $item_eye_of_newt
+
+[0F84]
+MAPPING $item_garlic
+
+[I_REAG_GARLIC]
+MAPPING $item_garlic
+
+[0F85]
+MAPPING $item_ginseng
+
+[I_REAG_GINSENG]
+MAPPING $item_ginseng
+
+[0F90]
+MAPPING $item_dead_wood
+
+[I_REAG_DEAD_WOOD]
+MAPPING $item_dead_wood
+
+[0F79]
+MAPPING $item_blackmoor
+
+[I_REAG_BLACKMOOR]
+MAPPING $item_blackmoor
+
+[01F47]
+MAPPING $item_curse_scroll
+
+[I_SCROLL_CURSE]
+MAPPING $item_curse_scroll
+
+[0F8B]
+MAPPING $item_pumice
+
+[I_REAG_PUMICE]
+MAPPING $item_pumice
+
+[0F8C]
+MAPPING $item_sulfurous_ash
+
+[I_REAG_SULFUR_ASH]
+MAPPING $item_sulfurous_ash
+
+[0F8A]
+MAPPING $item_pig_iron
+
+[I_REAG_PIG_IRON]
+MAPPING $item_pig_iron
+
+[0F8F]
+MAPPING $item_volcanic_ash
+
+[I_REAG_VOLCANIC_ASH]
+MAPPING $item_volcanic_ash
+
+[0F8D]
+MAPPING $item_spiders_silk
+
+[I_REAG_SPIDER_SILK]
+MAPPING $item_spiders_silk
+
+[0F8E]
+MAPPING $item_serpents_scale
+
+[I_REAG_SERPENT_SCALE]
+MAPPING $item_serpents_scale
+
+[01F68]
+MAPPING $item_summon_air_elemental_scroll
+
+[I_SCROLL_SUMMON_ELEM_AIR]
+MAPPING $item_summon_air_elemental_scroll
+
+[01F69]
+MAPPING $item_summon_daemon_scroll
+
+[I_SCROLL_SUMMON_DAEMON]
+MAPPING $item_summon_daemon_scroll
+
+[01F66]
+MAPPING $item_energy_vortex_scroll
+
+[I_SCROLL_ENERGY_VORTEX]
+MAPPING $item_energy_vortex_scroll
+
+[01F67]
+MAPPING $item_resurrection_scroll
+
+[I_SCROLL_RESURRECTION]
+MAPPING $item_resurrection_scroll
+
+[01F64]
+MAPPING $item_polymorph_scroll
+
+[I_SCROLL_POLYMORPH]
+MAPPING $item_polymorph_scroll
+
+[01F65]
+MAPPING $item_earthquake_scroll
+
+[I_SCROLL_EARTHQUAKE]
+MAPPING $item_earthquake_scroll
+
+[01F62]
+MAPPING $item_mass_dispel_scroll
+
+[I_SCROLL_MASS_DISPEL]
+MAPPING $item_mass_dispel_scroll
+
+[01F63]
+MAPPING $item_meteor_swarm_scroll
+
+[I_SCROLL_METEOR_SWARM]
+MAPPING $item_meteor_swarm_scroll
+
+[01F60]
+MAPPING $item_gate_travel_scroll
+
+[I_SCROLL_GATE_TRAVEL]
+MAPPING $item_gate_travel_scroll
+
+[01F61]
+MAPPING $item_mana_vampire_scroll
+
+[I_SCROLL_MANA_VAMPIRE]
+MAPPING $item_mana_vampire_scroll
+
+[01F4D]
+MAPPING $item_blade_spirits_scroll
+
+[I_SCROLL_BLADE_SPIRITS]
+MAPPING $item_blade_spirits_scroll
+
+[01F4E]
+MAPPING $item_dispel_field_scroll
+
+[I_SCROLL_DISPEL_FIELD]
+MAPPING $item_dispel_field_scroll
+
+[01F4F]
+MAPPING $item_incognito_scroll
+
+[I_SCROLL_INCOGNITO]
+MAPPING $item_incognito_scroll
+
+[0E34]
+MAPPING $item_blank_scrolls
+
+[I_SCROLL_BLANK]
+MAPPING $item_blank_scrolls
+
+[01F4A]
+MAPPING $item_lightning_scroll
+
+[I_SCROLL_LIGHTNING]
+MAPPING $item_lightning_scroll
+
+[01F4B]
+MAPPING $item_mana_drain_scroll
+
+[I_SCROLL_MANA_DRAIN]
+MAPPING $item_mana_drain_scroll
+
+[01F4C]
+MAPPING $item_recall_scroll
+
+[I_SCROLL_RECALL]
+MAPPING $item_recall_scroll
+
+[0F7C]
+MAPPING $item_bloodspawn
+
+[I_REAG_BLOOD_SPAWN]
+MAPPING $item_bloodspawn
+
+[0F7B]
+MAPPING $item_bloodmoss
+
+[I_REAG_BLOOD_MOSS]
+MAPPING $item_bloodmoss
+
+[0F7A]
+MAPPING $item_black_pearl
+
+[I_REAG_BLACK_PEARL]
+MAPPING $item_black_pearl
+
+[0F7F]
+MAPPING $item_brimstone
+
+[I_REAG_BRIMSTONE]
+MAPPING $item_brimstone
+
+[0F7E]
+MAPPING $item_bone
+
+[I_REAG_BONE]
+MAPPING $item_bone
+
+[0F7D]
+MAPPING $item_vial_of_blood
+
+[I_REAG_BLOOD_VIAL]
+MAPPING $item_vial_of_blood
+
+[01F59]
+MAPPING $item_mark_scroll
+
+[I_SCROLL_MARK]
+MAPPING $item_mark_scroll
+
+[01F58]
+MAPPING $item_invisibility_scroll
+
+[I_SCROLL_INVISIBILITY]
+MAPPING $item_invisibility_scroll
+
+[01F53]
+MAPPING $item_poison_field_scroll
+
+[I_SCROLL_POISON_FIELD]
+MAPPING $item_poison_field_scroll
+
+[01F52]
+MAPPING $item_paralyze_scroll
+
+[I_SCROLL_PARALYZE]
+MAPPING $item_paralyze_scroll
+
+[01F51]
+MAPPING $item_mind_blast_scroll
+
+[I_SCROLL_MIND_BLAST]
+MAPPING $item_mind_blast_scroll
+
+[01F50]
+MAPPING $item_magic_reflection_scroll
+
+[I_SCROLL_MAGIC_REFLECTION]
+MAPPING $item_magic_reflection_scroll
+
+[01F57]
+MAPPING $item_explosion_scroll
+
+[I_SCROLL_EXPLOSION]
+MAPPING $item_explosion_scroll
+
+[01F56]
+MAPPING $item_energy_bolt_scroll
+
+[I_SCROLL_ENERGY_BOLT]
+MAPPING $item_energy_bolt_scroll
+
+[01F55]
+MAPPING $item_dispel_scroll
+
+[I_SCROLL_DISPEL]
+MAPPING $item_dispel_scroll
+
+[01F54]
+MAPPING $item_summon_creature_scroll
+
+[I_SCROLL_SUMMON_CREATURE]
+MAPPING $item_summon_creature_scroll
+
+[01F5C]
+MAPPING $item_reveal_scroll
+
+[I_SCROLL_REVEAL]
+MAPPING $item_reveal_scroll
+
+[01F5B]
+MAPPING $item_paralyze_field_scroll
+
+[I_SCROLL_PARALYZE_FIELD]
+MAPPING $item_paralyze_field_scroll
+
+[01F5A]
+MAPPING $item_mass_curse_scroll
+
+[I_SCROLL_MASS_CURSE]
+MAPPING $item_mass_curse_scroll
+
+[01F5F]
+MAPPING $item_flamestrike_scroll
+
+[I_SCROLL_FLAMESTRIKE]
+MAPPING $item_flamestrike_scroll
+
+[01F5E]
+MAPPING $item_energy_field_scroll
+
+[I_SCROLL_ENERGY_FIELD]
+MAPPING $item_energy_field_scroll
+
+[01F5D]
+MAPPING $item_chain_lightning_scroll
+
+[I_SCROLL_CHAIN_LIGHTNING]
+MAPPING $item_chain_lightning_scroll
+
+[01F44]
+MAPPING $item_wall_of_stone_scroll
+
+[I_SCROLL_WALL_OF_STONE]
+MAPPING $item_wall_of_stone_scroll
+
+[01F45]
+MAPPING $item_archcure_scroll
+
+[I_SCROLL_ARCHCURE]
+MAPPING $item_archcure_scroll
+
+[01F46]
+MAPPING $item_arch_protection_scroll
+
+[I_SCROLL_ARCHPROTECTION]
+MAPPING $item_arch_protection_scroll
+
+[0F78]
+MAPPING $item_batwing
+
+[I_REAG_BATWING]
+MAPPING $item_batwing
+
+[01F40]
+MAPPING $item_poison_scroll
+
+[I_SCROLL_POISON]
+MAPPING $item_poison_scroll
+
+[01F41]
+MAPPING $item_telekinesis_scroll
+
+[I_SCROLL_TELEKINESIS]
+MAPPING $item_telekinesis_scroll
+
+[01F42]
+MAPPING $item_teleport_scroll
+
+[I_SCROLL_TELEPORT]
+MAPPING $item_teleport_scroll
+
+[01F43]
+MAPPING $item_unlock_scroll
+
+[I_SCROLL_UNLOCK]
+MAPPING $item_unlock_scroll
+
+[01F48]
+MAPPING $item_fire_field_scroll
+
+[I_SCROLL_FIRE_FIELD]
+MAPPING $item_fire_field_scroll
+
+[01F49]
+MAPPING $item_greater_heal_scroll
+
+[I_SCROLL_GREATER_HEAL]
+MAPPING $item_greater_heal_scroll
+
+[0E9B]
+MAPPING $item_mortar_and_pestal
+
+[I_MORTAR_PESTLE]
+MAPPING $item_mortar_and_pestal
+

@@ -459,7 +459,7 @@ def loadRules():
 	dirList=os.listdir(path)
 	workList=[]
 	for dirElem in dirList:
-		if ( dirElem.startswith("items_")):
+		if (( dirElem.endswith(".rule")) and ( dirElem != "player_chars.rule") and ( dirElem != "chars_mapping.rule" )):
 			workList.append(dirElem)
 
 	ruleCounter=0

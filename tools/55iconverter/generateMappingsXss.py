@@ -53,7 +53,6 @@ def loadFile (filename):
 def loadDirContents(directory):
 	if ( not directory.endswith(os.sep)):
 		directory+=os.sep
-	print "Dir", directory
 	inputdir=os.listdir(directory)
 	if ( directory.startswith(glob.sourcedir)):
 		subdir=directory[len(glob.sourcedir)+1:]
@@ -91,13 +90,14 @@ def readNoxItems(noxItemFile):
 		if ( line.startswith("ID ")):
 			id=line[line.index("ID ")+len("ID "):].upper()
 		if ( line.startswith("}")):
-			print "Adding map ", id, "to", itemName
-			if ( glob.noxItems.has_key(id)):
-				glob.noxItems[id].append(itemName)
-			elif ( id != None ):
+			# print "Adding map ", id, "to", itemName
+			if ( (id != None) and (itemName != None)):
 				if ( not id.startswith("0")):
 					id="0"+id
-				glob.noxItems[id]=[itemName]
+				if ( glob.noxItems.has_key(id)):
+					glob.noxItems[id].append(itemName)
+				else:
+					glob.noxItems[id]=[itemName]
 			itemName=None
 			lineindex +=1
 			continue
@@ -123,11 +123,11 @@ def parseSphereScript(linebuffer):
 			if ( (id == None) and (itemname == None) ):
 				pass
 			else:
+				#print "Debug: ", itemname, id
 				if ( itemname == None ):
 					itemname=id
 				if ( id == None and itemname.startswith("0")):
 					id=itemname
-
 				if ( not id.startswith ("0")):
 					# the id is the same as another object
 					if ( glob.allSphereIds.has_key(id) ):
@@ -149,8 +149,9 @@ def parseSphereScript(linebuffer):
 				itemname=temp
 			lineindex +=1
 			continue
-		if ( line.upper().startswith("DEFNAME") and itemname != None):
-			id=itemname
+		if ( line.upper().startswith("DEFNAME") and (itemname != None or id != None)):
+			if (  itemname != None ):
+				id=itemname
 			itemname=line[line.upper().index("DEFNAME")+len("DEFNAME "):].upper()
 			lineindex +=1
 			continue
@@ -194,6 +195,10 @@ def compareItems():
 			if ( len(mySphereArray) > 0):
 				for noxitem in myNoxArray:
 					for sphereitem in mySphereArray:
+						if ( not sphereitem.startswith("0")):
+							print "[" + itemid + "]"
+							print "MAPPING " + noxitem
+							print ""
 						print "[" + sphereitem + "]"
 						print "MAPPING " + noxitem
 						print ""

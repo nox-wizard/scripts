@@ -1,0 +1,330 @@
+[0EB3]
+MAPPING $item_lute_2
+
+[I_LUTE]
+MAPPING $item_lute_2
+
+[0EB2]
+MAPPING $item_lap_harp
+
+[I_LYRE]
+MAPPING $item_lap_harp
+
+[0EB1]
+MAPPING $item_standing_harp
+
+[I_HARP_LARGE]
+MAPPING $item_standing_harp
+
+[0E1E]
+MAPPING $item_balls_of_yarn2
+
+[01EBC]
+MAPPING $item_tinkers_tools
+
+[I_TINKER_TOOLS]
+MAPPING $item_tinkers_tools
+
+[0EB4]
+MAPPING $item_lute_1
+
+[01023]
+MAPPING $item_arrow_fletching_1
+
+[01024]
+MAPPING $item_arrow_shafts_2
+
+[I_ARROW_SHAFTS_2]
+MAPPING $item_arrow_shafts_2
+
+[010A5]
+MAPPING $item_spinning_wheel3
+
+[0DF8]
+MAPPING $item_piles_of_wool_1
+
+[I_WOOL]
+MAPPING $item_piles_of_wool_1
+
+[0DF9]
+MAPPING $item_bales_of_cotton
+
+[I_COTTON]
+MAPPING $item_bales_of_cotton
+
+[01020]
+MAPPING $item_feathers_1
+
+[I_FEATHERS_RED_WHITE]
+MAPPING $item_feathers_1
+
+[01021]
+MAPPING $item_feathers_2
+
+[01996]
+MAPPING $item_forge2_2_4
+
+[I_FORGE_2_PART_2_OF_3_S]
+MAPPING $item_forge2_2_4
+
+[010A4]
+MAPPING $item_spinning_wheel2
+
+[01BF2]
+MAPPING $item_iron_ingots
+
+[0101D]
+MAPPING $item_spinning_wheel1
+
+[01062]
+MAPPING $item_upright_loom_1_2
+
+[01067]
+MAPPING $item_leather_piece
+
+[I_HIDES_CUT]
+MAPPING $item_leather_piece
+
+[0198E]
+MAPPING $item_forge2_2_5
+
+[I_FORGE_2_PART_3_OF_3_N]
+MAPPING $item_forge2_2_5
+
+[0105B]
+MAPPING $item_axles
+
+[I_AXEL]
+MAPPING $item_axles
+
+[0105D]
+MAPPING $item_springs
+
+[I_SPRINGS]
+MAPPING $item_springs
+
+[0198A]
+MAPPING $item_forge2_2_2
+
+[I_FORGE_2_PART_2_OF_3_N]
+MAPPING $item_forge2_2_2
+
+[0105F]
+MAPPING $item_upright_loom_2_1
+
+[I_LOOM_UPRIGHT]
+MAPPING $item_upright_loom_2_1
+
+[01022]
+MAPPING $item_arrow_fletching_2
+
+[I_ARROW_FLETCHING]
+MAPPING $item_arrow_fletching_2
+
+[01766]
+MAPPING $item_cut_cloth
+
+[I_CLOTH_CUT_1]
+MAPPING $item_cut_cloth
+
+[0F9E]
+MAPPING $item_scissors
+
+[I_SCISSORS]
+MAPPING $item_scissors
+
+[0F9D]
+MAPPING $item_sewing_kit
+
+[I_SEWING_KIT]
+MAPPING $item_sewing_kit
+
+[0FA9]
+MAPPING $item_dyes
+
+[I_DYES]
+MAPPING $item_dyes
+
+[0FA0]
+MAPPING $item_spools_of_thread_1
+
+[I_THREAD]
+MAPPING $item_spools_of_thread_1
+
+[01060]
+MAPPING $item_upright_loom_2_2
+
+[01061]
+MAPPING $item_upright_loom_1_1
+
+[0EC6]
+MAPPING $item_dress_form
+
+[I_DRESS_FORM]
+MAPPING $item_dress_form
+
+[0FAF]
+MAPPING $item_anvil_1
+
+[I_ANVIL]
+MAPPING $item_anvil_1
+
+[014FB]
+MAPPING $item_lockpicks
+
+[I_LOCKPICK]
+MAPPING $item_lockpicks
+
+[0FAB]
+MAPPING $item_dying_tub
+
+[I_DYE_TUB]
+MAPPING $item_dying_tub
+
+[01051]
+MAPPING $item_axles_with_gears
+
+[I_AXEL_AND_GEARS]
+MAPPING $item_axles_with_gears
+
+[01986]
+MAPPING $item_bellows_1
+
+[I_FORGE_BELLOWS_2_PART_1_OF_3_N]
+MAPPING $item_bellows_1
+
+[0E9D]
+MAPPING $item_tambourine1
+
+[I_TAMBOURINE]
+MAPPING $item_tambourine1
+
+[0E9E]
+MAPPING $item_tambourine2
+
+[I_TAMBOURINE_TAS]
+MAPPING $item_tambourine2
+
+[01055]
+MAPPING $item_hinges
+
+[I_HINGE]
+MAPPING $item_hinges
+
+[0E9C]
+MAPPING $item_drum
+
+[I_DRUM]
+MAPPING $item_drum
+
+[01059]
+MAPPING $item_sextant_parts
+
+[I_SEXTANT_PARTS]
+MAPPING $item_sextant_parts
+
+[019A2]
+MAPPING $item_forge2_1_4
+
+[I_FORGE_2_PART_2_OF_3_E]
+MAPPING $item_forge2_1_4
+
+[0100B]
+MAPPING $item_archery_butte_1
+
+[I_ARCHERY_BUTTE2]
+MAPPING $item_archery_butte_1
+
+[019A6]
+MAPPING $item_forge2_1_3
+
+[I_FORGE_2_PART_3_OF_3_E]
+MAPPING $item_forge2_1_3
+
+[0100A]
+MAPPING $item_archery_butte_2
+
+[I_ARCHERY_BUTTE]
+MAPPING $item_archery_butte_2
+
+[0199A]
+MAPPING $item_forge2_2_3
+
+[I_FORGE_2_PART_3_OF_3_S]
+MAPPING $item_forge2_2_3
+
+[0104F]
+MAPPING $item_clock_parts
+
+[I_CLOCK_PARTS]
+MAPPING $item_clock_parts
+
+[0104D]
+MAPPING $item_clock_frames
+
+[I_CLOCK_FRAME]
+MAPPING $item_clock_frames
+
+[01025]
+MAPPING $item_arrow_shafts_1
+
+[0E1F]
+MAPPING $item_balls_of_yarn3
+
+[0E1D]
+MAPPING $item_balls_of_yarn1
+
+[I_YARN_BALL]
+MAPPING $item_balls_of_yarn1
+
+[0197E]
+MAPPING $item_forge2_1_2
+
+[I_FORGE_2_PART_2_OF_3_W]
+MAPPING $item_forge2_1_2
+
+[01053]
+MAPPING $item_gears
+
+[I_GEARS]
+MAPPING $item_gears
+
+[0F39]
+MAPPING $item_shovel
+
+[I_SHOVEL]
+MAPPING $item_shovel
+
+[0197A]
+MAPPING $item_bellows
+
+[I_FORGE_BELLOWS_2_PART_1_OF_3_W]
+MAPPING $item_bellows
+
+[01BFB]
+MAPPING $item_crossbow_bolt
+
+[I_XBOLT]
+MAPPING $item_crossbow_bolt
+
+[0FB0]
+MAPPING $item_anvil_2
+
+[0FB1]
+MAPPING $item_forge1
+
+[I_FORGE]
+MAPPING $item_forge1
+
+[0F3F]
+MAPPING $item_arrow
+
+[I_ARROW]
+MAPPING $item_arrow
+
+[01982]
+MAPPING $item_forge2_1_5
+
+[I_FORGE_2_PART_3_OF_3_W]
+MAPPING $item_forge2_1_5
+

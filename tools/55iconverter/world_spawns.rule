@@ -1,0 +1,13 @@
+[i_worldgem_bit]
+I;;ID;7955
+I;;NAME2;#
+C;MORE1;TYPE;=getSpawnType(value)
+C;MORE1;MOREX;=getCharMapping(value)
+C;MOREX;MOREY;=decimal(value)
+C;MOREY;MOREZ;=decimal(value)
+C;MORE2;AMOUNT;=decimal(value)
+I;;MOVABLE;2
+I;;VISIBLE;2
+I;;ATT;5
+D;COLOR;
+D;ATTR;

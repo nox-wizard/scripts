@@ -1,0 +1,468 @@
+[0E8A]
+MAPPING $item_quarter_staff
+
+[i_CUTLASS_RUIN]
+MAPPING $item_iron_cutlass_of_ruin
+
+[i_CUTLASS_MIGHT]
+MAPPING $item_iron_cutlass_of_might
+
+[i_CUTLASS_FORCE]
+MAPPING $item_iron_cutlass_of_force
+
+[i_CUTLASS_POWER]
+MAPPING $item_iron_cutlass_of_power
+
+[i_CUTLASS_vanq]
+MAPPING $item_iron_cutlass_of_vanquishing
+
+[i_sword_viking_RUIN]
+MAPPING $item_iron_viking_sword_of_ruin
+
+[i_sword_viking_MIGHT]
+MAPPING $item_iron_viking_sword_of_might
+
+[i_sword_viking_FORCE]
+MAPPING $item_iron_viking_sword_of_force
+
+[i_sword_viking_POWER]
+MAPPING $item_iron_viking_sword_of_power
+
+[i_sword_viking_vanq]
+MAPPING $item_iron_viking_sword_of_vanquishing
+
+[i_axe_exec_RUIN]
+MAPPING $item_iron_executionners_axe_of_ruin
+
+[i_axe_exec_MIGHT]
+MAPPING $item_iron_executionners_axe_of_might
+
+[i_axe_exec_FORCE]
+MAPPING $item_iron_executionners_axe_of_force
+
+[i_axe_exec_POWER]
+MAPPING $item_iron_executionners_axe_of_power
+
+[i_axe_exec_vanq]
+MAPPING $item_iron_executionners_axe_of_vanquishing
+
+[0F43]
+MAPPING $item_hatchet_practice_weapon_
+
+[I_HATCHET]
+MAPPING $item_hatchet_practice_weapon_
+
+[0DF2]
+MAPPING $item_scepter
+
+[I_WAND_1]
+MAPPING $item_scepter
+
+[0DF0]
+MAPPING $item_black_staff
+
+[I_STAFF_BLACK]
+MAPPING $item_black_staff
+
+[i_AXE_RUIN]
+MAPPING $item_iron_axe_of_ruin
+
+[i_AXE_MIGHT]
+MAPPING $item_iron_axe_of_might
+
+[i_AXE_FORCE]
+MAPPING $item_iron_axe_of_force
+
+[i_AXE_POWER]
+MAPPING $item_iron_axe_of_power
+
+[i_AXE_vanq]
+MAPPING $item_iron_axe_of_vanquishing
+
+[i_KATANA_RUIN]
+MAPPING $item_iron_katana_of_ruin
+
+[i_KATANA_MIGHT]
+MAPPING $item_iron_katana_of_might
+
+[i_KATANA_FORCE]
+MAPPING $item_iron_katana_of_force
+
+[i_KATANA_POWER]
+MAPPING $item_iron_katana_of_power
+
+[i_KATANA_vanq]
+MAPPING $item_iron_katana_of_vanquishing
+
+[0F5C]
+MAPPING $item_mace_practice_weapon_
+
+[I_MACE]
+MAPPING $item_mace_practice_weapon_
+
+[013FD]
+MAPPING $item_heavy_crossbow
+
+[i_crossbow_heavy]
+MAPPING $item_heavy_crossbow
+
+[i_crossbow_heavy_RUIN]
+MAPPING $item_iron_heavy_crossbow_of_ruin
+
+[i_crossbow_heavy_MIGHT]
+MAPPING $item_iron_heavy_crossbow_of_might
+
+[i_crossbow_heavy_FORCE]
+MAPPING $item_iron_heavy_crossbow_of_force
+
+[i_crossbow_heavy_POWER]
+MAPPING $item_iron_heavy_crossbow_of_power
+
+[i_crossbow_heavy_vanq]
+MAPPING $item_iron_heavy_crossbow_of_vanquishing
+
+[i_BROADSWORD_RUIN]
+MAPPING $item_iron_broad_sword_of_ruin
+
+[i_BROADSWORD_MIGHT]
+MAPPING $item_iron_broad_sword_of_might
+
+[i_BROADSWORD_FORCE]
+MAPPING $item_iron_broad_sword_of_force
+
+[i_BROADSWORD_POWER]
+MAPPING $item_iron_broad_sword_of_power
+
+[i_BROADSWORD_vanq]
+MAPPING $item_iron_broad_sword_of_vanquishing
+
+[i_axe_battle_RUIN]
+MAPPING $item_iron_large_battle_axe_of_ruin
+
+[i_axe_battle_MIGHT]
+MAPPING $item_iron_large_battle_axe_of_might
+
+[i_axe_battle_FORCE]
+MAPPING $item_iron_large_battle_axe_of_force
+
+[i_axe_battle_POWER]
+MAPPING $item_iron_large_battle_axe_of_power
+
+[i_axe_battle_vanq]
+MAPPING $item_iron_large_battle_axe_of_vanquishing
+
+[0F62]
+MAPPING $item_iron_spear_practice_weapon_
+
+[I_SPEAR]
+MAPPING $item_iron_spear_practice_weapon_
+
+[i_SPEAR_RUIN]
+MAPPING $item_iron_spear_of_ruin
+
+[i_SPEAR_MIGHT]
+MAPPING $item_iron_spear_of_might
+
+[i_SPEAR_FORCE]
+MAPPING $item_iron_spear_of_force
+
+[i_SPEAR_POWER]
+MAPPING $item_iron_spear_of_power
+
+[i_SPEAR_vanq]
+MAPPING $item_iron_spear_of_vanquishing
+
+[013E4]
+MAPPING $item_smithy_hammer
+
+[i_hammer_war_RUIN]
+MAPPING $item_iron_war_hammer_of_ruin
+
+[i_hammer_war_MIGHT]
+MAPPING $item_iron_war_hammer_of_might
+
+[i_hammer_war_FORCE]
+MAPPING $item_iron_war_hammer_of_force
+
+[i_hammer_war_POWER]
+MAPPING $item_iron_war_hammer_of_power
+
+[i_hammer_war_vanq]
+MAPPING $item_iron_war_hammer_of_vanquishing
+
+[0F4F]
+MAPPING $item_crossbow
+
+[I_CROSSBOW]
+MAPPING $item_crossbow
+
+[i_CROSSBOW_RUIN]
+MAPPING $item_iron_crossbow_of_ruin
+
+[i_CROSSBOW_FORCE]
+MAPPING $item_iron_crossbow_of_force
+
+[i_CROSSBOW_MIGHT]
+MAPPING $item_iron_crossbow_of_might
+
+[i_CROSSBOW_POWER]
+MAPPING $item_iron_crossbow_of_power
+
+[i_CROSSBOW_vanq]
+MAPPING $item_iron_crossbow_of_vanquishing
+
+[0EC2]
+MAPPING $item_meat_cleaver
+
+[I_CLEAVER_MEAT]
+MAPPING $item_meat_cleaver
+
+[0EC4]
+MAPPING $item_skinning_knife
+
+[I_KNIFE_SKINNING]
+MAPPING $item_skinning_knife
+
+[i_HALBERD_RUIN]
+MAPPING $item_iron_halberd_of_ruin
+
+[i_HALBERD_MIGHT]
+MAPPING $item_iron_halberd_of_might
+
+[i_HALBERD_FORCE]
+MAPPING $item_iron_halberd_of_force
+
+[i_HALBERD_POWER]
+MAPPING $item_iron_halberd_of_power
+
+[I_HALBERD_VANQ]
+MAPPING $item_iron_halberd_of_vanquishing
+
+[013F7]
+MAPPING $item_butcher_knife
+
+[i_HAMMER_PICK_RUIN]
+MAPPING $item_iron_hammer_pick_of_ruin
+
+[i_HAMMER_PICK_MIGHT]
+MAPPING $item_iron_hammer_pick_of_might
+
+[i_HAMMER_PICK_FORCE]
+MAPPING $item_iron_hammer_pick_of_force
+
+[i_HAMMER_PICK_POWER]
+MAPPING $item_iron_hammer_pick_of_power
+
+[i_HAMMER_PICK_vanq]
+MAPPING $item_iron_hammer_pick_of_vanquishing
+
+[013F9]
+MAPPING $item_gnarled_staff
+
+[0E81]
+MAPPING $item_sheperds_crook
+
+[I_CROOK_THIN]
+MAPPING $item_sheperds_crook
+
+[013B2]
+MAPPING $item_bow
+
+[i_BOW_RUIN]
+MAPPING $item_iron_bow_of_ruin
+
+[i_BOW_MIGHT]
+MAPPING $item_iron_bow_of_might
+
+[i_BOW_FORCE]
+MAPPING $item_iron_bow_of_force
+
+[i_BOW_POWER]
+MAPPING $item_iron_bow_of_power
+
+[i_BOW_vanq]
+MAPPING $item_iron_bow_of_vanquishing
+
+[i_BARDICHE_RUIN]
+MAPPING $item_iron_bardiche_of_ruin
+
+[i_BARDICHE_MIGHT]
+MAPPING $item_iron_bardiche_of_might
+
+[i_BARDICHE_FORCE]
+MAPPING $item_iron_bardiche_of_force
+
+[i_BARDICHE_POWER]
+MAPPING $item_iron_bardiche_of_power
+
+[i_BARDICHE_vanq]
+MAPPING $item_iron_bardiche_of_vanquishing
+
+[i_axe_war_RUIN]
+MAPPING $item_iron_war_axe_of_ruin
+
+[i_axe_war_MIGHT]
+MAPPING $item_iron_war_axe_of_might
+
+[i_axe_war_FORCE]
+MAPPING $item_iron_war_axe_of_force
+
+[i_axe_war_POWER]
+MAPPING $item_iron_war_axe_of_power
+
+[i_axe_war_VANQUISIHNG]
+MAPPING $item_iron_war_axe_of_vanquishing
+
+[i_axe_double_RUIN]
+MAPPING $item_iron_double_axe_of_ruin
+
+[i_axe_double_MIGHT]
+MAPPING $item_iron_double_axe_of_might
+
+[i_axe_double_FORCE]
+MAPPING $item_iron_double_axe_of_force
+
+[i_axe_double_POWER]
+MAPPING $item_iron_double_axe_of_power
+
+[i_axe_double_vanq]
+MAPPING $item_iron_double_axe_of_vanquishing
+
+[i_SCIMITAR_RUIN]
+MAPPING $item_iron_scimitar_of_ruin
+
+[i_SCIMITAR_MIGHT]
+MAPPING $item_iron_scimitar_of_might
+
+[i_SCIMITAR_FORCE]
+MAPPING $item_iron_scimitar_of_force
+
+[i_SCIMITAR_POWER]
+MAPPING $item_iron_scimitar_of_power
+
+[i_SCIMITAR_vanq]
+MAPPING $item_iron_scimitar_of_vanquishing
+
+[0E87]
+MAPPING $item_pitchfork
+
+[I_PITCHFORK]
+MAPPING $item_pitchfork
+
+[i_PITCHFORK_RUIN]
+MAPPING $item_iron_pitch_fork_of_ruin
+
+[i_PITCHFORK_MIGHT]
+MAPPING $item_iron_pitch_fork_of_might
+
+[i_PITCHFORK_FORCE]
+MAPPING $item_iron_pitch_fork_of_force
+
+[i_PITCHFORK_POWER]
+MAPPING $item_iron_pitch_fork_of_power
+
+[i_PITCHFORK_vanq]
+MAPPING $item_iron_pitch_fork_of_vanquishing
+
+[013B4]
+MAPPING $item_club
+
+[i_CLUB_RUIN]
+MAPPING $item_iron_club_of_ruin
+
+[i_CLUB_MIGHT]
+MAPPING $item_iron_club_of_might
+
+[i_CLUB_FORCE]
+MAPPING $item_iron_club_of_force
+
+[i_CLUB_POWER]
+MAPPING $item_iron_club_of_power
+
+[i_CLUB_vanq]
+MAPPING $item_iron_club_of_vanquishing
+
+[i_KRYSS_RUIN]
+MAPPING $item_iron_kryss_of_ruin
+
+[i_KRYSS_MIGHT]
+MAPPING $item_iron_kryss_of_might
+
+[I_KRYSS]
+MAPPING $item_iron_kryss_of_might
+
+[i_KRYSS_FORCE]
+MAPPING $item_iron_kryss_of_force
+
+[i_KRYSS_POWER]
+MAPPING $item_iron_kryss_of_power
+
+[i_KRYSS_vanq]
+MAPPING $item_iron_kryss_of_vanquishing
+
+[i_sword_long_RUIN]
+MAPPING $item_iron_long_sword_of_ruin
+
+[i_sword_long_MIGHT]
+MAPPING $item_iron_long_sword_of_might
+
+[i_sword_long_FORCE]
+MAPPING $item_iron_long_sword_of_force
+
+[i_sword_long_POWER]
+MAPPING $item_iron_long_sword_of_power
+
+[i_sword_long_vanq]
+MAPPING $item_iron_long_sword_of_vanquishing
+
+[i_mace_war_RUIN]
+MAPPING $item_iron_war_mace_of_ruin
+
+[i_mace_war_MIGHT]
+MAPPING $item_iron_war_mace_of_might
+
+[i_mace_war_FORCE]
+MAPPING $item_iron_war_mace_of_force
+
+[i_mace_war_POWER]
+MAPPING $item_iron_war_mace_of_power
+
+[i_mace_war_vanq]
+MAPPING $item_iron_war_mace_of_vanquishing
+
+[i_MAUL_RUIN]
+MAPPING $item_iron_maul_of_ruin
+
+[i_MAUL_MIGHT]
+MAPPING $item_iron_maul_of_might
+
+[i_MAUL_FORCE]
+MAPPING $item_iron_maul_of_force
+
+[i_MAUL_POWER]
+MAPPING $item_iron_maul_of_power
+
+[i_MAUL_vanq]
+MAPPING $item_iron_maul_of_vanquishing
+
+[i_WAR_FORK_RUIN]
+MAPPING $item_iron_war_fork_of_ruin
+
+[i_WAR_FORK_MIGHT]
+MAPPING $item_iron_war_fork_of_might
+
+[i_WAR_FORK_FORCE]
+MAPPING $item_iron_war_fork_of_force
+
+[i_WAR_FORK_POWER]
+MAPPING $item_iron_war_fork_of_power
+
+[i_WAR_FORK_vanq]
+MAPPING $item_iron_war_fork_of_vanquishing
+
+[0FB4]
+MAPPING $item_sledge_hammer_1
+
+[I_HAMMER_SLEDGE]
+MAPPING $item_sledge_hammer_1
+
