@@ -5185,8 +5185,314 @@ SECTION SPEECH $speech_register_of_names
     SAY Lets see if thee has a namedeed.
 }
 
-
-
+SECTION SPEECH $speech_player_vendor
+{
+    //$$ player vendor
+    DEFAULT
+    ON Hi
+    ON Greet
+    ON Hello
+    ON Sup
+    ON Howdy
+    ON Hey
+    ON Hail
+    ON Yo
+    SAY Hello!
+    ON buy
+    SAY
+    ON sell
+    SAY
+    SAY What would thee like to purchase?
+    ON Quest
+    ON Adventure
+    SAY I have no news of any adventures.
+    ON Avatar
+    ON Warrior
+    ON Paladin
+    ON Hero
+    SAY There are many people who serve to protect us from evil.
+    ON British
+    ON King
+    ON Ruler
+    SAY Lord British is a leader who believes in order.
+    ON Blackthorn
+    SAY Blackthorn is Lord British's closest friend.
+    ON Britannia
+    SAY Britannia is the world in which thou art standing in.
+    ON Shrine
+    ON Virtue
+    ON Temple
+    SAY There are many shrines in Britannia. Some say they have mystical powers!
+    ON Ankh
+    ON Healer
+    ON Resurrect
+    SAY Ankh's represent eternal life.  Some healers say that they have special powers.
+    ON Bank
+    SAY Banks are useful for storing thy belongings such as gold.
+    ON Bard
+    SAY Bard's sing of adventures of great heroes! But I think they can be really annoying sometimes.
+    ON Boat
+    ON Ship
+    ON Bay
+    ON River
+    SAY A boat is great tool for thee to get around and visit the lands of Britannia with.
+    ON Camp
+    ON Campfire
+    ON Tent
+    SAY A good place to set up camp is near a good fishing area.
+    ON Cemetery
+    ON Crypt
+    ON Death
+    ON Graves
+    ON Graveyard
+    ON Undead
+    SAY Some people just won't let the dead rest in peace.
+    ON Lost
+    ON Map
+    ON Advice
+    ON Where
+    SAY Just remember, where ever thou dost go - There thou art.
+    ON Orc
+    ON Lizardman
+    ON Monster
+    ON Skeleton
+    ON Zombie
+    ON Dungeon
+    ON Graveyard
+    SAY Monsters are everywhere... Especially in dungeons and graveyards.
+    ON Stable
+    ON Horse
+    ON Ride
+    SAY If thou hath some gold to spare, thou can seek out the stables to buy thyself a horse.
+    ON Gold
+    ON Money
+    ON Treasure
+    ON Gift
+    SAY If thee dost have any to spare, it would brighten my day.
+    ON Steal
+    ON Thief
+    ON Thiev
+    SAY A thief is annoying, but perhaps they need things more then we do.
+    ON Want
+    ON Well
+    ON Need
+    ON Wrong
+    ON Require
+    ON Fare
+    SAY I am doing fine thank thee.
+    ON Armor
+    ON Armour
+    ON Shield
+    ON Plate
+    ON Chain
+    ON Mail
+    ON Leather
+    ON Studded
+    ON Helm
+    ON Gloves
+    ON Leggings
+    ON Breast
+    ON Gorget
+    ON Bone
+    SAY Sounds like thou needst to find thyself an Armorer.
+    ON Weapon
+    ON Scimitar
+    ON Katana
+    ON Long Sword
+    ON Sword
+    ON Viking
+    ON Kryss
+    ON Dagger
+    ON Butchers Knife
+    ON Skinning Knife
+    ON Knife
+    ON Cleaver
+    ON Halberd
+    ON Bardiche
+    ON Hatchet
+    ON War Axe
+    ON Pick Axe
+    ON Executioners Axe
+    ON Double Axe
+    ON Battle Axe
+    ON Pick Axe
+    ON War Axe
+    ON Large Battle Axe
+    ON Axe
+    ON Spear
+    ON Staff
+    ON Mace
+    ON Maul
+    ON Club
+    ON Hammer
+    ON Pitchfork
+    ON Pitch
+    ON War Fork
+    ON Fork
+    ON Staff
+    ON Gnarled
+    ON Quarter
+    ON Shepherds Crook
+    ON Crook
+    ON Shepherd
+    SAY Those things may be bought from a Weaponsmith.
+    ON Egg
+    ON Flour
+    ON Honey
+    ON Loaf
+    ON Loaves
+    ON Milk
+    ON Pastry
+    ON Food
+    ON Bread
+    ON Cake
+    ON Cookie
+    ON Pizza
+    ON Dough
+    ON Pie
+    ON Muffin
+    ON Donut
+    ON Bake
+    ON Oven
+    ON Cook
+    ON Chicken
+    ON Hungry
+    SAY Food can be bought from many places.
+    ON Liquor
+    ON Beer
+    ON Wine
+    ON Ale
+    ON Alcohol
+    ON Spirit
+    ON Game
+    ON Sleep
+    ON Darts
+    SAY Such things may be purchased at an Inn or a Tavern.
+    ON Reagents
+    ON Regs
+    ON Reags
+    ON Ash
+    ON Blood
+    ON Garlic
+    ON Moss
+    ON Mandrake
+    ON Root
+    ON Black
+    ON Pearl
+    ON Nightshade
+    ON Ginseng
+    ON Ginsing
+    ON Sulfurous
+    ON Silk
+    ON Sceptre
+    ON Staff
+    ON Scroll
+    ON Spellbook
+    ON Potion
+    ON Mortar
+    ON Pestle
+    ON Magic
+    SAY A Mage or an Alchemist may sell thee such mystical artifacts.
+    ON Wyrm Heart
+    ON Serpent Scale
+    ON Bone
+    ON Pig Iron
+    ON Fertile Dirt
+    ON Eye of Newt
+    ON Daemon Bone
+    ON Blood Spawn
+    ON Obsidian
+    ON Dragon Blood
+    ON Vial of Blood
+    ON Bat Wing
+    ON Executioner Cap
+    ON Pumice
+    ON Dead Wood
+    ON Black Moor
+    ON Volcanic Ash
+    ON Brimstone
+    SAY I have no knowledge about such things.
+    ON Cloth
+    ON Shirt
+    ON Kilt
+    ON Cape
+    ON Robe
+    ON Sash
+    ON Tunic
+    ON Dress
+    ON Cap
+    ON Wear
+    ON Loom
+    ON Weave
+    ON Cotton
+    ON Wol
+    ON Dye
+    ON Yarn
+    ON Skirt
+    ON Apron
+    ON Coat
+    ON Garment
+    ON Pant
+    ON Sew
+    ON Shawl
+    ON Tailor
+    ON Thread
+    ON Vest
+    ON Bandanna
+    ON Bolt
+    ON Jester cap
+    ON Suit
+    ON Scissors
+    ON Tunic
+    SAY For some fine clothing, I suggest thou seekest a tailor.
+    ON Architect
+    ON Building
+    ON Home
+    ON Lot
+    ON House
+    ON Estate
+    ON Tower
+    ON Castle
+    ON Keep
+    SAY An architect might be able to grant thee a house deed.
+    ON Help
+    ON Hint
+    ON Info
+    ON GM
+    ON Gamemaster
+    ON Bug
+    ON Report
+    ON Cheat
+    SAY If thou in needth of some help, use the help button in thy paperdoll to page a GameMaster.
+    ON Bye
+    ON Goodbye
+    ON Farewell
+    ON See Ya
+    ON Take A Hike
+    ON Go Away
+    ON Hasta La Vista
+    ON Leave Me Alone
+    ON Later
+    ON L8r
+    SAY Goodbye to thee!
+    ON WORK
+    SAY I am a vendor of goods my owner told me to sell.
+    ON Fucker
+    ON Idiot
+    ON Snob
+    ON Moron
+    ON Stupid
+    ON Dumb
+    ON NPC
+    ON Retard
+    ON Ass
+    ON Dick
+    ON Fag
+    ON Gay
+    ON Bitch
+    ON Whore
+    SAY Such words are not kind to mine heart.
+}
 
 
 

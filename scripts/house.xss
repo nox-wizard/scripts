@@ -1048,7 +1048,6 @@ SECTION HOUSE 209
 SECTION HOUSE 210
 {
 	NAME  Bed
-	ID 0A5D
 	NOKEY
 	NOREALMULTI
 	SPACEX1 1
@@ -1058,13 +1057,13 @@ SECTION HOUSE 210
 	CHARX 0
 	CHARY 0
 	CHARZ 8
+	HOUSE_ITEM 477
 	HOUSE_ITEM 58
 }
 	
 SECTION HOUSE 211
 {
 	NAME  Bed
-	ID 0A63
 	NOKEY
 	NOREALMULTI
 	SPACEX1 1
@@ -1074,12 +1073,13 @@ SECTION HOUSE 211
 	CHARX 0
 	CHARY 0
 	CHARZ 8
+	HOUSE_ITEM 478
 	HOUSE_ITEM 59
 }
 	
 SECTION HOUSE 212
 {
-	NAME  christmas tree
+	NAME christmas tree
 	ID 0CD6
 	NOKEY
 	NOREALMULTI
@@ -1136,7 +1136,699 @@ SECTION HOUSE 214
 	CHARZ 8
 	HOUSE_ITEM 61
 }
+
+//alder
+SECTION HOUSE 215
+{
+	NAME big Alder Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 356
+	HOUSE_ITEM 357
+	HOUSE_ITEM 358
+	HOUSE_ITEM 359
+}
 	
+SECTION HOUSE 216
+{
+	NAME big Alder Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 360
+	HOUSE_ITEM 361
+	HOUSE_ITEM 362
+	HOUSE_ITEM 363
+}
+
+SECTION HOUSE 217
+{
+	NAME small alder Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 364
+	HOUSE_ITEM 365
+}
+	
+SECTION HOUSE 218
+{
+	NAME small alder Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 366
+	HOUSE_ITEM 367
+}
+
+//beech	
+SECTION HOUSE 219
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 368
+	HOUSE_ITEM 369
+	HOUSE_ITEM 370
+	HOUSE_ITEM 371
+}
+	
+SECTION HOUSE 220
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 372
+	HOUSE_ITEM 373
+	HOUSE_ITEM 374
+	HOUSE_ITEM 375
+}
+
+SECTION HOUSE 221
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 376
+	HOUSE_ITEM 377
+}
+	
+SECTION HOUSE 222
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 378
+	HOUSE_ITEM 379
+}
+
+//cedar	
+SECTION HOUSE 223
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 380
+	HOUSE_ITEM 381
+	HOUSE_ITEM 382
+	HOUSE_ITEM 383
+}
+	
+SECTION HOUSE 224
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 384
+	HOUSE_ITEM 385
+	HOUSE_ITEM 386
+	HOUSE_ITEM 387
+}
+
+SECTION HOUSE 225
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 388
+	HOUSE_ITEM 389
+}
+	
+SECTION HOUSE 226
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 390
+	HOUSE_ITEM 391
+}
+
+//ebony	
+SECTION HOUSE 227
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 392
+	HOUSE_ITEM 393
+	HOUSE_ITEM 394
+	HOUSE_ITEM 395
+}
+	
+SECTION HOUSE 228
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 396
+	HOUSE_ITEM 397
+	HOUSE_ITEM 398
+	HOUSE_ITEM 399
+}
+
+SECTION HOUSE 229
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 400
+	HOUSE_ITEM 401
+}
+	
+SECTION HOUSE 230
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 402
+	HOUSE_ITEM 403
+}
+
+//mahogany
+SECTION HOUSE 231
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 404
+	HOUSE_ITEM 405
+	HOUSE_ITEM 406
+	HOUSE_ITEM 407
+}
+	
+SECTION HOUSE 232
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 408
+	HOUSE_ITEM 409
+	HOUSE_ITEM 410
+	HOUSE_ITEM 411
+}
+
+SECTION HOUSE 233
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 412
+	HOUSE_ITEM 413
+}
+	
+SECTION HOUSE 234
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 414
+	HOUSE_ITEM 415
+}
+
+//maple	
+SECTION HOUSE 235
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 416
+	HOUSE_ITEM 417
+	HOUSE_ITEM 418
+	HOUSE_ITEM 419
+}
+	
+SECTION HOUSE 236
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 420
+	HOUSE_ITEM 421
+	HOUSE_ITEM 422
+	HOUSE_ITEM 423
+}
+
+SECTION HOUSE 237
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 424
+	HOUSE_ITEM 425
+}
+	
+SECTION HOUSE 238
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 426
+	HOUSE_ITEM 427
+}
+
+//oak	
+SECTION HOUSE 239
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 428
+	HOUSE_ITEM 429
+	HOUSE_ITEM 430
+	HOUSE_ITEM 431
+}
+	
+SECTION HOUSE 240
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 432
+	HOUSE_ITEM 433
+	HOUSE_ITEM 434
+	HOUSE_ITEM 435
+}
+
+SECTION HOUSE 241
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 436
+	HOUSE_ITEM 437
+}
+	
+SECTION HOUSE 242
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 438
+	HOUSE_ITEM 439
+}
+
+//pine
+SECTION HOUSE 243
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 440
+	HOUSE_ITEM 441
+	HOUSE_ITEM 442
+	HOUSE_ITEM 443
+}
+	
+SECTION HOUSE 244
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 445
+	HOUSE_ITEM 446
+	HOUSE_ITEM 447
+	HOUSE_ITEM 448
+}
+
+SECTION HOUSE 245
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 449
+	HOUSE_ITEM 450
+}
+	
+SECTION HOUSE 246
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 451
+	HOUSE_ITEM 452
+}
+
+//walnut
+SECTION HOUSE 247
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 453
+	HOUSE_ITEM 454
+	HOUSE_ITEM 455
+	HOUSE_ITEM 456
+}
+	
+SECTION HOUSE 248
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 457
+	HOUSE_ITEM 458
+	HOUSE_ITEM 459
+	HOUSE_ITEM 460
+}
+
+SECTION HOUSE 249
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 461
+	HOUSE_ITEM 462
+}
+	
+SECTION HOUSE 250
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 463
+	HOUSE_ITEM 464
+}
+
+//yew
+SECTION HOUSE 251
+{
+	NAME big Bed facing south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	HOUSE_ITEM 465
+	HOUSE_ITEM 466
+	HOUSE_ITEM 467
+	HOUSE_ITEM 468
+}
+	
+SECTION HOUSE 252
+{
+	NAME big Bed facing east
+	NOKEY
+	NOREALMULTI
+	CHARX 3
+	CHARY 3
+	CHARZ 8
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	HOUSE_ITEM 469
+	HOUSE_ITEM 470
+	HOUSE_ITEM 471
+	HOUSE_ITEM 472
+}
+
+SECTION HOUSE 253
+{
+	NAME small Bed south
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 473
+	HOUSE_ITEM 474
+}
+	
+SECTION HOUSE 254
+{
+	NAME small Bed east
+	NOKEY
+	NOREALMULTI
+	SPACEX1 1
+	SPACEX2 1
+	SPACEY1 1
+	SPACEY2 1
+	CHARX 0
+	CHARY 0
+	CHARZ 8
+	HOUSE_ITEM 475
+	HOUSE_ITEM 476
+}
+
+
+//////////////////House Item//////////////////////
 SECTION HOUSE ITEM 1
 {
 	//NAME Wooden Door
@@ -1675,7 +2367,7 @@ SECTION HOUSE ITEM 56
 SECTION HOUSE ITEM 57
 {
 	//NAME Fireplace-PT2-brick-south
-	ITEM $item_fireplace_1
+	ITEM $item_fireplace_stone8_2
 	X -1
 	Y 0
 	Z 0
@@ -1684,7 +2376,7 @@ SECTION HOUSE ITEM 57
 SECTION HOUSE ITEM 58
 {
 	//NAME Bed-PT2-east
-	ITEM $item_pine_bed_feet_A1_1
+	ITEM $item_basfur_bed_feet_A1_1
 	X 1
 	Y 0
 	Z 0
@@ -1693,7 +2385,7 @@ SECTION HOUSE ITEM 58
 SECTION HOUSE ITEM 59
 {
 	//NAME Bed-PT2-south
-	ITEM $item_pine_bed_feet_A2_1
+	ITEM $item_basfur_bed_feet_A2_1
 	X 0
 	Y 1
 	Z 0
@@ -1702,7 +2394,7 @@ SECTION HOUSE ITEM 59
 SECTION HOUSE ITEM 60
 {
 	//NAME Fireplace-PT2-brick-east
-	ITEM $item_oven
+	ITEM $item_oven_stone2_1
 	X 0
 	Y -1
 	Z 0
@@ -1711,7 +2403,7 @@ SECTION HOUSE ITEM 60
 SECTION HOUSE ITEM 61
 {
 	//NAME Fireplace-PT2-brick-south
-	ITEM $item_oven_1
+	ITEM $item_oven_stone2_2
 	X -1
 	Y 0
 	Z 0
@@ -1720,7 +2412,7 @@ SECTION HOUSE ITEM 61
 SECTION HOUSE ITEM 63
 {
 	//NAME bed large facing south part 1
-	ITEM $item_pine_bigbed_headleft_A2_4
+	ITEM $item_basfur_bigbed_headleft_A2_4
 	LOCK
 	X 0
 	Y 0
@@ -1730,7 +2422,7 @@ SECTION HOUSE ITEM 63
 SECTION HOUSE ITEM 64
 {
 	//NAME bed large facing south part 2
-	ITEM $item_pine_bigbed_feetleft_A2_3
+	ITEM $item_basfur_bigbed_feetleft_A2_3
 	LOCK
 	X 0
 	Y 1
@@ -1740,7 +2432,7 @@ SECTION HOUSE ITEM 64
 SECTION HOUSE ITEM 65
 {
 	//NAME bed large facing south part 3
-	ITEM $item_pine_bigbed_headright_A2_4
+	ITEM $item_basfur_bigbed_headright_A2_4
 	LOCK
 	X 1
 	Y 0
@@ -1750,7 +2442,7 @@ SECTION HOUSE ITEM 65
 SECTION HOUSE ITEM 66
 {
 	//NAME bed large facing south part 4
-	ITEM $item_pine_bigbed_feetright_A2_3
+	ITEM $item_basfur_bigbed_feetright_A2_3
 	LOCK
 	X 1
 	Y 1
@@ -1760,7 +2452,7 @@ SECTION HOUSE ITEM 66
 SECTION HOUSE ITEM 67
 {
 	//NAME bed large facing east part 1
-	ITEM $item_pine_bigbed_headright_A1_4
+	ITEM $item_basfur_bigbed_headright_A1_4
 	LOCK
 	X 0
 	Y 0
@@ -1770,7 +2462,7 @@ SECTION HOUSE ITEM 67
 SECTION HOUSE ITEM 68
 {
 	//NAME bed large facing south part 2
-	ITEM $item_pine_bigbed_headleft_A1_4
+	ITEM $item_basfur_bigbed_headleft_A1_4
 	LOCK
 	X 0
 	Y 1
@@ -1780,7 +2472,7 @@ SECTION HOUSE ITEM 68
 SECTION HOUSE ITEM 69
 {
 	//NAME bed large facing south part 3
-	ITEM $item_pine_bigbed_feetleft_A1_3
+	ITEM $item_basfur_bigbed_feetleft_A1_3
 	LOCK
 	X 1
 	Y 1
@@ -1790,7 +2482,7 @@ SECTION HOUSE ITEM 69
 SECTION HOUSE ITEM 70
 {
 	//NAME bed large facing south part 4
-	ITEM $item_pine_bigbed_feetright_A1_3
+	ITEM $item_basfur_bigbed_feetright_A1_3
 	LOCK
 	X 1
 	Y 0
@@ -3815,4 +4507,1198 @@ Y 0
 Z 25
 }
 
+	
+SECTION HOUSE ITEM 356
+{
+	//NAME bed large facing south part 1
+	ITEM $item_alder_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 357
+{
+	//NAME bed large facing south part 2
+	ITEM $item_alder_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 358
+{
+	//NAME bed large facing south part 3
+	ITEM $item_alder_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 359
+{
+	//NAME bed large facing south part 4
+	ITEM $item_alder_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 360
+{
+	//NAME bed large facing east part 1
+	ITEM $item_alder_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 361
+{
+	//NAME bed large facing south part 2
+	ITEM $item_alder_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 362
+{
+	//NAME bed large facing south part 3
+	ITEM $item_alder_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 363
+{
+	//NAME bed large facing south part 4
+	ITEM $item_alder_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 364
+{
+	//NAME Bed-PT2-east
+	ITEM $item_alder_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 365
+{
+	//NAME Bed-PT2-east
+	ITEM $item_alder_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 366
+{
+	//NAME Bed-PT2-south
+	ITEM $item_alder_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+	
+SECTION HOUSE ITEM 367
+{
+	//NAME Bed-PT2-south
+	ITEM $item_alder_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+	
+//beech	
+SECTION HOUSE ITEM 368
+{
+	//NAME bed large facing south part 1
+	ITEM $item_beech_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 369
+{
+	//NAME bed large facing south part 2
+	ITEM $item_beech_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 370
+{
+	//NAME bed large facing south part 3
+	ITEM $item_beech_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 371
+{
+	//NAME bed large facing south part 4
+	ITEM $item_beech_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 372
+{
+	//NAME bed large facing east part 1
+	ITEM $item_beech_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 373
+{
+	//NAME bed large facing south part 2
+	ITEM $item_beech_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 374
+{
+	//NAME bed large facing south part 3
+	ITEM $item_beech_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 375
+{
+	//NAME bed large facing south part 4
+	ITEM $item_beech_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 376
+{
+	//NAME Bed-PT2-east
+	ITEM $item_beech_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 377
+{
+	//NAME Bed-PT2-east
+	ITEM $item_beech_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 378
+{
+	//NAME Bed-PT2-south
+	ITEM $item_beech_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+	
+SECTION HOUSE ITEM 379
+{
+	//NAME Bed-PT2-south
+	ITEM $item_beech_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+
+//cedar
+SECTION HOUSE ITEM 380
+{
+	//NAME bed large facing south part 1
+	ITEM $item_cedar_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 381
+{
+	//NAME bed large facing south part 2
+	ITEM $item_cedar_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 382
+{
+	//NAME bed large facing south part 3
+	ITEM $item_cedar_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 383
+{
+	//NAME bed large facing south part 4
+	ITEM $item_cedar_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 384
+{
+	//NAME bed large facing east part 1
+	ITEM $item_cedar_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 385
+{
+	//NAME bed large facing south part 2
+	ITEM $item_cedar_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 386
+{
+	//NAME bed large facing south part 3
+	ITEM $item_cedar_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 387
+{
+	//NAME bed large facing south part 4
+	ITEM $item_cedar_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 388
+{
+	//NAME Bed-PT2-east
+	ITEM $item_cedar_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 389
+{
+	//NAME Bed-PT2-east
+	ITEM $item_cedar_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 390
+{
+	//NAME Bed-PT2-south
+	ITEM $item_cedar_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+	
+SECTION HOUSE ITEM 391
+{
+	//NAME Bed-PT2-south
+	ITEM $item_cedar_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+
+//ebony	
+SECTION HOUSE ITEM 392
+{
+	//NAME bed large facing south part 1
+	ITEM $item_ebony_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 393
+{
+	//NAME bed large facing south part 2
+	ITEM $item_ebony_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 394
+{
+	//NAME bed large facing south part 3
+	ITEM $item_ebony_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 395
+{
+	//NAME bed large facing south part 4
+	ITEM $item_ebony_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 396
+{
+	//NAME bed large facing east part 1
+	ITEM $item_ebony_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 397
+{
+	//NAME bed large facing south part 2
+	ITEM $item_ebony_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 398
+{
+	//NAME bed large facing south part 3
+	ITEM $item_ebony_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 399
+{
+	//NAME bed large facing south part 4
+	ITEM $item_ebony_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 400
+{
+	//NAME Bed-PT2-east
+	ITEM $item_ebony_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 401
+{
+	//NAME Bed-PT2-east
+	ITEM $item_ebony_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 402
+{
+	//NAME Bed-PT2-south
+	ITEM $item_ebony_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+	
+SECTION HOUSE ITEM 403
+{
+	//NAME Bed-PT2-south
+	ITEM $item_ebony_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+
+//mahogany	
+SECTION HOUSE ITEM 404
+{
+	//NAME bed large facing south part 1
+	ITEM $item_mahogany_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 405
+{
+	//NAME bed large facing south part 2
+	ITEM $item_mahogany_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 406
+{
+	//NAME bed large facing south part 3
+	ITEM $item_mahogany_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 407
+{
+	//NAME bed large facing south part 4
+	ITEM $item_mahogany_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 408
+{
+	//NAME bed large facing east part 1
+	ITEM $item_mahogany_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 409
+{
+	//NAME bed large facing south part 2
+	ITEM $item_mahogany_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 410
+{
+	//NAME bed large facing south part 3
+	ITEM $item_mahogany_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 411
+{
+	//NAME bed large facing south part 4
+	ITEM $item_mahogany_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 412
+{
+	//NAME Bed-PT2-east
+	ITEM $item_mahogany_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 413
+{
+	//NAME Bed-PT2-east
+	ITEM $item_mahogany_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 414
+{
+	//NAME Bed-PT2-south
+	ITEM $item_mahogany_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+	
+SECTION HOUSE ITEM 415
+{
+	//NAME Bed-PT2-south
+	ITEM $item_mahogany_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+
+//maple	
+SECTION HOUSE ITEM 416
+{
+	//NAME bed large facing south part 1
+	ITEM $item_maple_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 417
+{
+	//NAME bed large facing south part 2
+	ITEM $item_maple_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 418
+{
+	//NAME bed large facing south part 3
+	ITEM $item_maple_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 419
+{
+	//NAME bed large facing south part 4
+	ITEM $item_maple_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 420
+{
+	//NAME bed large facing east part 1
+	ITEM $item_maple_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 421
+{
+	//NAME bed large facing south part 2
+	ITEM $item_maple_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 422
+{
+	//NAME bed large facing south part 3
+	ITEM $item_maple_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 423
+{
+	//NAME bed large facing south part 4
+	ITEM $item_maple_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 424
+{
+	//NAME Bed-PT2-east
+	ITEM $item_maple_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 425
+{
+	//NAME Bed-PT2-east
+	ITEM $item_maple_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 426
+{
+	//NAME Bed-PT2-south
+	ITEM $item_maple_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+	
+SECTION HOUSE ITEM 427
+{
+	//NAME Bed-PT2-south
+	ITEM $item_maple_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+//oak
+SECTION HOUSE ITEM 428
+{
+	//NAME bed large facing south part 1
+	ITEM $item_oak_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 429
+{
+	//NAME bed large facing south part 2
+	ITEM $item_oak_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 430
+{
+	//NAME bed large facing south part 3
+	ITEM $item_oak_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 431
+{
+	//NAME bed large facing south part 4
+	ITEM $item_oak_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 432
+{
+	//NAME bed large facing east part 1
+	ITEM $item_oak_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 433
+{
+	//NAME bed large facing south part 2
+	ITEM $item_oak_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 434
+{
+	//NAME bed large facing south part 3
+	ITEM $item_oak_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 435
+{
+	//NAME bed large facing south part 4
+	ITEM $item_oak_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 436
+{
+	//NAME Bed-PT2-east
+	ITEM $item_oak_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 437
+{
+	//NAME Bed-PT2-east
+	ITEM $item_oak_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 438
+{
+	//NAME Bed-PT2-south
+	ITEM $item_oak_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+	
+SECTION HOUSE ITEM 439
+{
+	//NAME Bed-PT2-south
+	ITEM $item_oak_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+
+//pine	
+SECTION HOUSE ITEM 440
+{
+	//NAME bed large facing south part 1
+	ITEM $item_pine_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 441
+{
+	//NAME bed large facing south part 2
+	ITEM $item_pine_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 442
+{
+	//NAME bed large facing south part 3
+	ITEM $item_pine_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 443
+{
+	//NAME bed large facing south part 4
+	ITEM $item_pine_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 445
+{
+	//NAME bed large facing east part 1
+	ITEM $item_pine_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 446
+{
+	//NAME bed large facing south part 2
+	ITEM $item_pine_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 447
+{
+	//NAME bed large facing south part 3
+	ITEM $item_pine_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 448
+{
+	//NAME bed large facing south part 4
+	ITEM $item_pine_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 449
+{
+	//NAME Bed-PT2-east
+	ITEM $item_pine_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 450
+{
+	//NAME Bed-PT2-east
+	ITEM $item_pine_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 451
+{
+	//NAME Bed-PT2-south
+	ITEM $item_pine_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 452
+{
+	//NAME Bed-PT2-south
+	ITEM $item_pine_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+
+//walnut	
+SECTION HOUSE ITEM 453
+{
+	//NAME bed large facing south part 1
+	ITEM $item_walnut_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 454
+{
+	//NAME bed large facing south part 2
+	ITEM $item_walnut_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 455
+{
+	//NAME bed large facing south part 3
+	ITEM $item_walnut_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 456
+{
+	//NAME bed large facing south part 4
+	ITEM $item_walnut_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 457
+{
+	//NAME bed large facing east part 1
+	ITEM $item_walnut_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 458
+{
+	//NAME bed large facing south part 2
+	ITEM $item_walnut_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 459
+{
+	//NAME bed large facing south part 3
+	ITEM $item_walnut_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 460
+{
+	//NAME bed large facing south part 4
+	ITEM $item_walnut_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 461
+{
+	//NAME Bed-PT2-east
+	ITEM $item_walnut_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 462
+{
+	//NAME Bed-PT2-east
+	ITEM $item_walnut_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 463
+{
+	//NAME Bed-PT2-south
+	ITEM $item_walnut_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 464
+{
+	//NAME Bed-PT2-south
+	ITEM $item_walnut_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+
+//yew	
+SECTION HOUSE ITEM 465
+{
+	//NAME bed large facing south part 1
+	ITEM $item_yew_bigbed_headleft_A2_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 466
+{
+	//NAME bed large facing south part 2
+	ITEM $item_yew_bigbed_feetleft_A2_3
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+
+SECTION HOUSE ITEM 467
+{
+	//NAME bed large facing south part 3
+	ITEM $item_yew_bigbed_headright_A2_4
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+
+SECTION HOUSE ITEM 468
+{
+	//NAME bed large facing south part 4
+	ITEM $item_yew_bigbed_feetright_A2_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 469
+{
+	//NAME bed large facing east part 1
+	ITEM $item_yew_bigbed_headright_A1_4
+	LOCK
+	X 0
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 470
+{
+	//NAME bed large facing south part 2
+	ITEM $item_yew_bigbed_headleft_A1_4
+	LOCK
+	X 0
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 471
+{
+	//NAME bed large facing south part 3
+	ITEM $item_yew_bigbed_feetleft_A1_3
+	LOCK
+	X 1
+	Y 1
+	Z 8
+}
+	
+SECTION HOUSE ITEM 472
+{
+	//NAME bed large facing south part 4
+	ITEM $item_yew_bigbed_feetright_A1_3
+	LOCK
+	X 1
+	Y 0
+	Z 8
+}
+	
+SECTION HOUSE ITEM 473
+{
+	//NAME Bed-PT2-east
+	ITEM $item_yew_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 474
+{
+	//NAME Bed-PT2-east
+	ITEM $item_yew_bed_feet_A1_1
+	X 1
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 475
+{
+	//NAME Bed-PT2-south
+	ITEM $item_yew_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}
+
+SECTION HOUSE ITEM 476
+{
+	//NAME Bed-PT2-south
+	ITEM $item_yew_bed_feet_A2_1
+	X 0
+	Y 1
+	Z 0
+}
+	
+SECTION HOUSE ITEM 477
+{
+	//NAME Bed-PT2-east
+	ITEM $item_basfur_bed_headboard_A1_1
+	X 0
+	Y 0
+	Z 0
+}
+	
+SECTION HOUSE ITEM 478
+{
+	//NAME Bed-PT2-south
+	ITEM $item_basfur_bed_headboard_A2_1
+	X 0
+	Y 0
+	Z 0
+}	
+	
 EOF

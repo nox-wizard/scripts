@@ -93,4 +93,4 @@
 #define $speech_fool_on_the_hill 92
 #define $speech_morpheus 93
 #define $speech_register_of_names 94
-
+#define $speech_player_vendor 95

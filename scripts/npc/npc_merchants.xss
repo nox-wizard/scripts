@@ -5933,8 +5933,8 @@ SECTION NPC $npc_player_vendor_template
 	NAMELIST $names_males
 	//$$ player vendor template
 	SKINLIST 16
-	SPEECH $speech_peasant
-	TITLE The Vendor
+	SPEECH $speech_player_vendor
+	TITLE The Player Vendor
 	ID 0190
 	ITEM $item_short_hair
 	HAIRCOLOR 15

@@ -1862,15 +1862,6 @@ SECTION ITEM $item_christmas_tree
 	ID 0CD7
 }
 
-SECTION ITEM $item_christmas_tree_deed
-{
-	NAME christmas tree deed
-	ID 14F0
-	NEWBIE
-	DECAY
-	MOREX 212
-}
-
 SECTION ITEM $item_plough1
 {
 	NAME plough

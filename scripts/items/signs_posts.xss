@@ -1107,7 +1107,7 @@ SECTION ITEM $item_guild_Merchant1_2
 
 //Magic_sign1_1s
 
-SECTION ITEM $item_road_sign_magical1
+SECTION ITEM $item_sign_magical1
 {
 	ID 163d
 	AMXINT $localvar_flipitem $item_sign_magical2
@@ -1115,7 +1115,7 @@ SECTION ITEM $item_road_sign_magical1
 	//SUBSECTION Signs
 }
 
-SECTION ITEM $item_road_sign_magical2
+SECTION ITEM $item_sign_magical2
 {
 	ID 163e
 	AMXINT $localvar_flipitem $item_sign_magical3
@@ -1123,7 +1123,7 @@ SECTION ITEM $item_road_sign_magical2
 	//SUBSECTION Signs
 }
 
-SECTION ITEM $item_road_sign_magical3
+SECTION ITEM $item_sign_magical3
 {
 	ID 163f
 	AMXINT $localvar_flipitem $item_sign_magical4
@@ -1131,7 +1131,7 @@ SECTION ITEM $item_road_sign_magical3
 	//SUBSECTION Signs
 }
 
-SECTION ITEM $item_road_sign_magical4
+SECTION ITEM $item_sign_magical4
 {
 	ID 1641
 	AMXINT $localvar_flipitem $item_sign_magical5
@@ -1139,7 +1139,7 @@ SECTION ITEM $item_road_sign_magical4
 	//SUBSECTION Signs
 }
 
-SECTION ITEM $item_road_sign_magical5
+SECTION ITEM $item_sign_magical5
 {
 	ID 1642
 	AMXINT $localvar_flipitem $item_sign_magical6
@@ -1147,7 +1147,7 @@ SECTION ITEM $item_road_sign_magical5
 	//SUBSECTION Signs
 }
 
-SECTION ITEM $item_road_sign_magical6
+SECTION ITEM $item_sign_magical6
 {
 	ID 1643
 	AMXINT $localvar_flipitem $item_sign_magical1

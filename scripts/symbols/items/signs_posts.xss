@@ -107,7 +107,7 @@
 #define $item_guild_Bardic1_2 2109
 #define $item_guild_Barter1_1 2110
 #define $item_guild_Barter1_2 2111
-#define $item_guild_Provisioner1_2 2112
+#define $item_guild_Provisioner1_1 2112
 #define $item_guild_Provisioner1_2 2113
 #define $item_guild_Trader1_1 2114
 #define $item_guild_Trader1_2 2115
@@ -154,12 +154,12 @@
 
 //Magic_signs
 
-#define $item_road_sign_magical1 2155
-#define $item_road_sign_magical2 2156
-#define $item_road_sign_magical3 2157
-#define $item_road_sign_magical4 2158
-#define $item_road_sign_magical5 2159
-#define $item_road_sign_magical6 2160
+#define $item_sign_magical1 2155
+#define $item_sign_magical2 2156
+#define $item_sign_magical3 2157
+#define $item_sign_magical4 2158
+#define $item_sign_magical5 2159
+#define $item_sign_magical6 2160
 
 //Banner
 
@@ -240,7 +240,7 @@
 #define $item_banner16_1 2275
 #define $item_banner16_2 2276
 #define $item_banner17_1 2277
-#define $item_banner17_1 2278
+#define $item_banner17_2 2278
 #define $item_banner18_1 2279
 #define $item_banner18_2 2280
 #define $item_banner19_1 2281

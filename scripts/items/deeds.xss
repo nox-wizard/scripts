@@ -1,626 +1,626 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (magic.xss)                                      ||
-// || Maintained by Akron                                                 ||
-// || Last Update 10-aug-2003                                             ||
+// || NoX-Wizard Scripts (magic.xss)									  ||
+// || Maintained by Akron												 ||
+// || Last Update 10-aug-2003											 ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.70s or later                      ||
-// || Compatible with Unicorn Categorization                              ||
+// || This script requires NoX-Wizard 0.70s or later					  ||
+// || Compatible with Unicorn Categorization							  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 SECTION ITEM $item_lighthouse_deed
 {
-    NAME lighthouse deed
-    ID 14F0
-    DECAY
-    MOREX 204
+	NAME lighthouse deed
+	ID 14F0
+	DECAY
+	MOREX 204
 	TYPE $itype_multideed
-    ///CATEGORY Deeds
-    ///SUBSECTION Multis Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Multis Deeds
 }
 
 SECTION ITEM $item_telescope_deed
 {
-    NAME telescope deed
-    ID 14F0
-    DECAY
-    MOREX 205
+	NAME telescope deed
+	ID 14F0
+	DECAY
+	MOREX 205
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Multis Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Multis Deeds
 }
 
 SECTION ITEM $item_arbitoir_deed
 {
-    NAME arbitoir deed
-    ID 14F0
-    DECAY
-    MOREX 206
+	NAME arbitoir deed
+	ID 14F0
+	DECAY
+	MOREX 206
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Multis Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Multis Deeds
 }
 
 SECTION ITEM $item_deed
 {
-    ID 14F0
-    TYPE $itype_rename_deed
-    DECAY
-    VALUE 50000
+	ID 14F0
+	TYPE $itype_rename_deed
+	DECAY
+	VALUE 50000
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Miscellaneous
-    ///DESCRIPTION Rename Deed
+	///CATEGORY Deeds
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Rename Deed
 }
 
 SECTION ITEM $item_small_tower_deed
 {
-    NAME small tower deed
-    ID 14F0
-    NEWBIE
-    MOREX 26
-    VALUE 100000
-    TYPE $itype_housedeed
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	NAME small tower deed
+	ID 14F0
+	NEWBIE
+	MOREX 26
+	VALUE 100000
+	TYPE $itype_housedeed
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_small_marble_shop_deed
 {
-    NAME small marble shop deed
-    ID 14f0
-    NEWBIE
-    MOREX 27
-    VALUE 145000
-    TYPE $itype_housedeed
+	NAME small marble shop deed
+	ID 14f0
+	NEWBIE
+	MOREX 27
+	VALUE 145000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_farm_house_deed
 {
-    NAME farm house deed
-    ID 14f0
-    NEWBIE
-    MOREX 17
-    VALUE 67500
-    TYPE $itype_housedeed
+	NAME farm house deed
+	ID 14f0
+	NEWBIE
+	MOREX 17
+	VALUE 67500
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_small_stone_shop_deed
 {
-    NAME small stone shop deed
-    ID 14f0
-    NEWBIE
-    MOREX 28
-    VALUE 135000
-    TYPE $itype_housedeed
+	NAME small stone shop deed
+	ID 14f0
+	NEWBIE
+	MOREX 28
+	VALUE 135000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_2-story_villa_deed
 {
-    NAME 2-story villa deed
-    ID 14f0
-    NEWBIE
-    MOREX 29
-    VALUE 195000
-    TYPE $itype_housedeed
+	NAME 2-story villa deed
+	ID 14f0
+	NEWBIE
+	MOREX 29
+	VALUE 195000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_sandstone_patio_house_deed
 {
-    NAME sandstone patio house deed
-    ID 14F0
-    NEWBIE
-    MOREX 30
-    VALUE 80000
-    TYPE $itype_housedeed
+	NAME sandstone patio house deed
+	ID 14F0
+	NEWBIE
+	MOREX 30
+	VALUE 80000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_2-story_log_cabin_deed
 {
-    NAME 2-story log cabin deed
-    ID 14F0
-    NEWBIE
-    MOREX 31
-    VALUE 125000
-    TYPE $itype_housedeed
+	NAME 2-story log cabin deed
+	ID 14F0
+	NEWBIE
+	MOREX 31
+	VALUE 125000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_large_marble_patio_house_deed
 {
-    NAME large marble patio house deed
-    ID 14f0
-    NEWBIE
-    MOREX 32
-    VALUE 225000
-    TYPE $itype_housedeed
+	NAME large marble patio house deed
+	ID 14f0
+	NEWBIE
+	MOREX 32
+	VALUE 225000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_employment_deed
 {
-    NAME employment deed
-    ID 14F0
-    TYPE $itype_player_vendor_deed
-    VALUE 2000
+	NAME employment deed
+	ID 14F0
+	TYPE $itype_player_vendor_deed
+	VALUE 2000
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Miscellaneous
+	///CATEGORY Deeds
+	///SUBSECTION Miscellaneous
 }
 
 SECTION ITEM $item_christmas_tree_deed
 {
-    NAME christmas tree deed
-    ID 14F0
-    NEWBIE
-    DECAY
-    MOREX 212
+	NAME christmas tree deed
 	TYPE $itype_multideed
+	ID 14F0
+	DECAY
+	NEWBIE
+	MOREX 212
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 // Dartboard Deed
 SECTION ITEM $item_dartboard_deed
 {
-    NAME Dartboard Deed
-    ID 14f0
-    TRIGGER $itrg_dartboard_deed_1
-    TRIGTYPE 0
+	NAME Dartboard Deed
+	ID 14f0
+	TRIGGER $itrg_dartboard_deed_1
+	TRIGTYPE 0
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_dartboard_deed_1
 {
-    NAME Dartboard Deed
-    ID 14f0
-    TRIGGER $itrg_dartboard_deed
-    TRIGTYPE 0
+	NAME Dartboard Deed
+	ID 14f0
+	TRIGGER $itrg_dartboard_deed
+	TRIGTYPE 0
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_trashcan_deed
 {
-    NAME Trashcan Deed
-    ID 14f0
-    TRIGGER $itrg_trashcan_deed
-    TRIGTYPE 0
+	NAME Trashcan Deed
+	ID 14f0
+	TRIGGER $itrg_trashcan_deed
+	TRIGTYPE 0
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_townstone_deed
 {
-    NAME townstone deed
-    ID 14f0
-    TRIGGER $itrg_get_townstone_target
-    TRIGTYPE 0
+	NAME townstone deed
+	ID 14f0
+	TRIGGER $itrg_get_townstone_target
+	TRIGTYPE 0
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_small_stone_plaster_house_deed
 {
-    NAME small stone & plaster house deed
-    ID 14F0
-    NEWBIE
-    MOREX 2
-    VALUE 55000
-    TYPE $itype_housedeed
+	NAME small stone & plaster house deed
+	ID 14F0
+	NEWBIE
+	MOREX 2
+	VALUE 55000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_small_stone_house_deed
 {
-    NAME small stone house deed
-    ID 14F0
-    NEWBIE
-    MOREX 3
-    VALUE 55000
-    TYPE $itype_housedeed
+	NAME small stone house deed
+	ID 14F0
+	NEWBIE
+	MOREX 3
+	VALUE 55000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_small_brick_house_deed
 {
-    NAME small brick house deed
-    ID 14F0
-    NEWBIE
-    MOREX 1
-    VALUE 57000
-    TYPE $itype_housedeed
+	NAME small brick house deed
+	ID 14F0
+	NEWBIE
+	MOREX 1
+	VALUE 57000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_small_wood_house_deed
 {
-    NAME small wood house deed
-    ID 14F0
-    NEWBIE
-    MOREX 4
-    VALUE 55000
-    TYPE $itype_housedeed
+	NAME small wood house deed
+	ID 14F0
+	NEWBIE
+	MOREX 4
+	VALUE 55000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_small_wood_plaster_house_deed
 {
-    NAME small wood & plaster house deed
-    ID 14F0
-    NEWBIE
-    MOREX 5
-    VALUE 55000
-    TYPE $itype_housedeed
+	NAME small wood & plaster house deed
+	ID 14F0
+	NEWBIE
+	MOREX 5
+	VALUE 55000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_small_wood_house_with_straw_roof_deed
 {
-    NAME small wood house with straw roof deed
-    ID 14F0
-    NEWBIE
-    MOREX 6
-    VALUE 55000
-    TYPE $itype_housedeed
+	NAME small wood house with straw roof deed
+	ID 14F0
+	NEWBIE
+	MOREX 6
+	VALUE 55000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_blue_tent_deed
 {
-    NAME blue tent deed
-    ID 14F0
-    NEWBIE
-    MOREX 7
-    VALUE 12500
-    TYPE $itype_housedeed
+	NAME blue tent deed
+	ID 14F0
+	NEWBIE
+	MOREX 7
+	VALUE 12500
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_green_tent_deed
 {
-    NAME green tent deed
-    ID 14F0
-    NEWBIE
-    MOREX 8
-    VALUE 12500
-    TYPE $itype_housedeed
+	NAME green tent deed
+	ID 14F0
+	NEWBIE
+	MOREX 8
+	VALUE 12500
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_3_room_brick_house_deed
 {
-    NAME 3 room brick house deed
-    ID 14F0
-    NEWBIE
-    MOREX 9
-    VALUE 150000
-    TYPE $itype_housedeed
+	NAME 3 room brick house deed
+	ID 14F0
+	NEWBIE
+	MOREX 9
+	VALUE 150000
+	TYPE $itype_housedeed
 }
 
 SECTION ITEM $item_2_story_wood_plaster_house_deed
 {
-    NAME 2 story wood & plaster house deed
-    ID 14F0
-    NEWBIE
-    MOREX 10
-    VALUE 210000
-    TYPE $itype_housedeed
+	NAME 2 story wood & plaster house deed
+	ID 14F0
+	NEWBIE
+	MOREX 10
+	VALUE 210000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_2_story_stone_plaster_house_deed
 {
-    NAME 2 story stone & plaster house deed
-    ID 14F0
-    NEWBIE
-    MOREX 11
-    VALUE 210000
-    TYPE $itype_housedeed
+	NAME 2 story stone & plaster house deed
+	ID 14F0
+	NEWBIE
+	MOREX 11
+	VALUE 210000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_tower_deed
 {
-    NAME tower deed
-    ID 14F0
-    NEWBIE
-    MOREX 12
-    VALUE 350000
-    TYPE $itype_housedeed
+	NAME tower deed
+	ID 14F0
+	NEWBIE
+	MOREX 12
+	VALUE 350000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_keep_deed
 {
-    NAME keep deed
-    ID 14F0
-    NEWBIE
-    MOREX 13
-    VALUE 1000000
-    TYPE $itype_housedeed
+	NAME keep deed
+	ID 14F0
+	NEWBIE
+	MOREX 13
+	VALUE 1000000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_4_room_house_deed
 {
-    NAME 4 room house deed
-    ID 14F0
-    NEWBIE
-    MOREX 66
-    VALUE 265000
-    TYPE $itype_housedeed
+	NAME 4 room house deed
+	ID 14F0
+	NEWBIE
+	MOREX 66
+	VALUE 265000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_castle_deed
 {
-    NAME castle deed
-    ID 14F0
-    NEWBIE
-    MOREX 14
-    VALUE 2000000
-    TYPE $itype_housedeed
+	NAME castle deed
+	ID 14F0
+	NEWBIE
+	MOREX 14
+	VALUE 2000000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_large_smithy_deed
 {
-    NAME large smithy deed
-    ID 14F0
-    NEWBIE
-    MOREX 16
-    VALUE 200000
-    TYPE $itype_housedeed
+	NAME large smithy deed
+	ID 14F0
+	NEWBIE
+	MOREX 16
+	VALUE 200000
+	TYPE $itype_housedeed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION House Deeds
+	///CATEGORY Deeds
+	///SUBSECTION House Deeds
 }
 
 SECTION ITEM $item_forge_deed
 {
-    NAME a forge deed
-    ID 14F0
-    NEWBIE
-    VALUE 1200
-    TRIGGER $itrg_forge_deed
+	NAME a forge deed
+	ID 14F0
+	NEWBIE
+	VALUE 1200
+	TRIGGER $itrg_forge_deed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_anvil_deed_2
 {
-    NAME an anvil deed (facing south)
-    ID 14F0
-    NEWBIE
-    VALUE 1200
-    TRIGGER $itrg_anvil_deed_s
+	NAME an anvil deed (facing south)
+	ID 14F0
+	NEWBIE
+	VALUE 1200
+	TRIGGER $itrg_anvil_deed_s
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_anvil_deed_1
 {
-    NAME an anvil deed (facing east)
-    ID 14F0
-    NEWBIE
-    VALUE 1200
-    TRIGGER $itrg_anvil_deed_e
+	NAME an anvil deed (facing east)
+	ID 14F0
+	NEWBIE
+	VALUE 1200
+	TRIGGER $itrg_anvil_deed_e
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_spinning_wheel_deed_2
 {
-    NAME a spinning wheel deed (facing south)
-    ID 14F0
-    NEWBIE
-    VALUE 1000
-    TRIGGER $itrg_wheel_deed
+	NAME a spinning wheel deed (facing south)
+	ID 14F0
+	NEWBIE
+	VALUE 1000
+	TRIGGER $itrg_wheel_deed
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_archery_butte_deed_1
 {
-    NAME an archery butte deed (facing east)
-    ID 14F0
-    NEWBIE
-    VALUE 1000
-    TRIGGER $itrg_archery_butte_deed_e
+	NAME an archery butte deed (facing east)
+	ID 14F0
+	NEWBIE
+	VALUE 1000
+	TRIGGER $itrg_archery_butte_deed_e
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_archery_butte_deed_2
 {
-    NAME an archery butte deed (facing south)
-    ID 14F0
-    NEWBIE
-    VALUE 1000
-    TRIGGER $itrg_archery_butte_deed_s
+	NAME an archery butte deed (facing south)
+	ID 14F0
+	NEWBIE
+	VALUE 1000
+	TRIGGER $itrg_archery_butte_deed_s
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_training_dummy_deed_2
 {
-    NAME a training dummy deed (facing south)
-    ID 14F0
-    VALUE 1000
-    TRIGGER $itrg_train_dummy_s
+	NAME a training dummy deed (facing south)
+	ID 14F0
+	VALUE 1000
+	TRIGGER $itrg_train_dummy_s
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_training_dummy_deed_1
 {
-    NAME a training dummy deed (facing east)
-    ID 14F0
-    NEWBIE
-    VALUE 1000
-    TRIGGER $itrg_train_dummy_e
+	NAME a training dummy deed (facing east)
+	ID 14F0
+	NEWBIE
+	VALUE 1000
+	TRIGGER $itrg_train_dummy_e
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_pickpocket_dip_deed_2
 {
-    NAME a pickpocket dip deed (facing south)
-    ID 14F0
-    NEWBIE
-    VALUE 1000
-    TRIGGER $itrg_pickpocket_dip_s
+	NAME a pickpocket dip deed (facing south)
+	ID 14F0
+	NEWBIE
+	VALUE 1000
+	TRIGGER $itrg_pickpocket_dip_s
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_pickpocket_dip_deed_1
 {
-    NAME a pickpocket dip deed (facing east)
-    ID 14F0
-    NEWBIE
-    VALUE 1000
-    TRIGGER $itrg_pickpocket_dip_e
+	NAME a pickpocket dip deed (facing east)
+	ID 14F0
+	NEWBIE
+	VALUE 1000
+	TRIGGER $itrg_pickpocket_dip_e
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_pentagram_deed
 {
-    NAME pentagram deed
-    ID 14F0
-    NEWBIE
-    DECAY
-    MOREX 18
+	NAME pentagram deed
+	ID 14F0
+	NEWBIE
+	DECAY
+	MOREX 18
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Multis Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Multis Deeds
 }
 
 SECTION ITEM $item_cannon_deed
 {
-    NAME a cannon deed
-    ID 14ED
-    VALUE 3000
+	NAME a cannon deed
+	ID 14ED
+	VALUE 3000
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_large_forge_deed_2
 {
-    NAME a large forge facing south deed
-    ID 14F0
-    NEWBIE
-    MOREX 36
+	NAME a large forge facing south deed
+	ID 14F0
+	NEWBIE
+	MOREX 36
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_large_forge_deed_1
 {
-    NAME a large forge facing east deed
-    ID 14F0
-    NEWBIE
-    MOREX 35
+	NAME a large forge facing east deed
+	ID 14F0
+	NEWBIE
+	MOREX 35
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 SECTION ITEM $item_skull_candle_deed
 {
-    NAME a skull candle deed
-    ID 14f0
-    VALUE 5000
-    TRIGGER $itrg_skull_candle_deed
+	NAME a skull candle deed
+	ID 14f0
+	VALUE 5000
+	TRIGGER $itrg_skull_candle_deed
 	TYPE $itype_multideed
 
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
+	///CATEGORY Deeds
+	///SUBSECTION Objects Deeds
 }
 
 
