@@ -1,0 +1,22 @@
+
+const RP_TELEPORT_ON_ENLIST = 2;
+const RP_TYPE = 3;
+const RP_DESCRIPTION = 5;
+const RP2_DESCRIPTION_COUNT = 1;
+const RP_NAME = 6;
+const RP_LAYER_PERMITTED = 7;
+const RP_WEBLINK = 8;
+
+const RP_WITH_WEB_INTERFACE = 1;
+const RP_WEB_ROOT = 2;
+
+const RT_OPTIONAL = 0;
+const RT_PROHIBITED = 1;
+const RT_MANDATORY = 2;
+
+
+const RACETYPE_PC = 1;
+const RACETYPE_NPC = 2;
+const RACETYPE_PCNPC = 3;
+
+

@@ -60,6 +60,7 @@
 #include "small-scripts/skills/constant.sma"
 #include "small-scripts/timer/constant.sma"
 #include "small-scripts/variable/constant.sma"
+#include "small-scripts/race/constant.sma"
 //
 // Include the NoX-Wizard small api
 //
@@ -88,10 +89,12 @@
 #include "small-scripts/time/time.api"
 #include "small-scripts/timer/timer.api"
 #include "small-scripts/variable/variable.api"
+#include "small-scripts/race/race.api"
 //
 // Include the NoX-Wizard small scripts
 //
 #include "small-scripts/include/nxw_lib"
+#include "small-scripts/race/menu/menu.sma"
 #include "small-scripts/calendar/calendar.sma"
 #include "small-scripts/skills/skills.sma"
 #include "small-scripts/misc/default.sma"

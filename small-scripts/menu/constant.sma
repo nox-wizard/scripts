@@ -40,7 +40,7 @@ const MP_UNI_TEXT = 500;
 const MENU_CLOSED = 0;
 const GUMP_INVALID = 0x0068;
 
-
+const PIXELFORCHAR = 8;
 
 
 /** @} */ // end of script_const_mnu

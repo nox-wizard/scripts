@@ -10,7 +10,7 @@
 #endif
 #define _nxw_item_api_
 
-#include "../include/nxw_lib"
+#include "small-scripts/include/nxw_lib"
 
 /*!
 \brief Check if a serial is an item serial

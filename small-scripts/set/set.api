@@ -26,7 +26,7 @@
  * Primo esempio sui set
  */
 
-#include "../include/nxw_lib"
+#include "small-scripts/include/nxw_lib"
 
 /*!
 \brief Open a set
@@ -311,3 +311,27 @@ native set_addGuildRecruit( const set, const guild );
 \fn set_addGuilds( const set, const guild=INVALID, const options=INVALID )
 */
 native set_addGuilds( const set, const guild=INVALID, const options=INVALID ) 
+
+/*!
+\brief Add to given set all race
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 onlyActive if true are added only active races
+\return 0
+\fn set_addAllRaces( const set, const onlyActive=true )
+*/
+native set_addAllRaces( const set, const onlyActive=true );
+
+/*!
+\brief Add to given set all race
+\author Endymion
+\since 0.82
+\param 1 the set
+\param 2 race the race
+\param 3 prop the property
+\param 4 subProp the sub property
+\return 0
+\fn set_getRaceStuff( const set, const race, const prop, const subProp=0  )
+*/
+native set_getRaceStuff( const set, const race, const prop, const subProp=0  );
