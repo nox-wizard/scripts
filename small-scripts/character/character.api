@@ -307,13 +307,6 @@ native chr_checkEquipment(const chr);
 
 /*!
 \author Xanathar
-\fn chr_spawnIteminBank(const chr, const itemid)
-\brief
-*/
-native chr_spawnIteminBank(const chr, const itemid);
-
-/*!
-\author Xanathar
 \fn chr_addNPC(const npcnum, const x, const y, const z)
 \brief
 */

@@ -175,13 +175,6 @@ native itm_setSerial(const item, const serial);
 
 /*!
 \author Xanathar
-\fn itm_spawnBackpack(const socket, const itemid)
-\brief
-*/
-native itm_spawnBackpack(const socket, const itemid);
-
-/*!
-\author Xanathar
 \fn itm_getCharBackPack(const chr)
 \brief
 */
@@ -200,7 +193,7 @@ native itm_create(const itemtype, const container = -1, const amount = -1);
 /*!
 \author Luxor
 \fn itm_createByDef(const def[], const container = -1, const amount = -1);
-\brief Craete a new item
+\brief Create a new item
 \param def the define
 \param container the container to put into
 \param amount the amount ( if INVALID use default xss amount )
@@ -208,11 +201,44 @@ native itm_create(const itemtype, const container = -1, const amount = -1);
 native itm_createByDef(const def[], const container = -1, const amount = -1);
 
 /*!
-\author Xanathar
-\fn itm_spawnBank(const socket, const itemid)
-\brief
+\author Endymion
+\fn itm_createInBp(const itemtype, const chr, const amount = -1)
+\brief Create a new item into backpack
+\param itemtype the scriptid
+\param chr the character
+\param amount the amount ( if INVALID use default xss amount )
 */
-native itm_spawnBank(const socket, const itemid);
+native itm_createInBp(const itemtype, const chr, const amount = -1);
+
+/*!
+\author Endymion
+\fn itm_createInBpDef(const def[], const chr, const amount = -1)
+\brief Create a new item into backpack
+\param def the define
+\param chr the character
+\param amount the amount ( if INVALID use default xss amount )
+*/
+native itm_createInBpDef(const def[], const chr, const amount = -1);
+
+/*!
+\author Endymion
+\fn itm_createInBank(const itemtype, const chr, const amount = -1)
+\brief Create a new item into bank
+\param itemtype the scriptid
+\param chr the character
+\param amount the amount ( if INVALID use default xss amount )
+*/
+native itm_createInBank(const itemtype, const chr, const amount = -1);
+
+/*!
+\author Endymion
+\fn itm_createInBankDef(const def[], const chr, const amount = -1)
+\brief Create a new item into bank
+\param def the define
+\param chr the character
+\param amount the amount ( if INVALID use default xss amount )
+*/
+native itm_createInBankDef(const def[], const chr, const amount = -1);
 
 /*!
 \author Xanathar
