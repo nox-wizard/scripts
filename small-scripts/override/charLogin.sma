@@ -31,13 +31,13 @@ public __charLogin(const chr)
 	
 	new racemode = race_getGlobalProp( RP_MODE );
 	printf("racemode: %d^n", racemode);
-	/*if(racemode != 0)
-	{*/
+	if(racemode != 0)
+	{
 		new race = chr_getProperty(chr, CP_NPCRACE);
 		printf("race is: %d^n ", race);
 		if( race < 0)
 			race_menu(chr, race);
-	//}
+	}
 	
 	#if ACTIVATE_UKNOWN_CHARSYS
 		start_unknown_char(chr);

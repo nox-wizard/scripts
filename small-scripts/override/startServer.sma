@@ -1,9 +1,8 @@
 /*!
 \author Fax
 \fn __startServer()
-\param chr: the character
 \since 0.82
-\brief performs startup scripts
+\brief performs server startup scripts
 
 Called by OnStart override, use this function to perform code at server startup
 \return nothing
