@@ -55,8 +55,9 @@ native getCharFromSerial(const serial);
 With this function you can get the value of a character's property.
 Some properies are splitted into subproperies, when reading these properties you
 must specify what subproperty you need, else subproperty 0 is returned.
-Use the CP_* constants for addressing properties, CP2_* constants
+Use the \ref CP_ constants for addressing properties, \ref CP2_ constants
 for addressing subproperties
+\return the property value
 */
 native chr_getProperty(const chr, const property, const subprop=0, ...);
 
@@ -76,7 +77,7 @@ You MUST always specify the subproperty, in the case of properties without subpr
 pass 0 (underscore) as the subproperty parameter.
 Not all properties are settable, pay attention on this, as may lead to hard-to-find errors,
 the properties list shows if a property is settable or not.
-Use the CP_* constants for addressing properties, CP2_* constants
+Use the \ref CP_ constants for addressing properties, \ref CP2_ constants
 for addressing subproperties
 */
 native chr_setProperty(const chr, const property, const subprop=0, ...);

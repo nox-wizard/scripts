@@ -31,14 +31,26 @@ public isItem( const serial ) {
 /*!
 \author Xanathar
 \fn itm_getProperty(const item, const property, const subprop=0, ...)
-\brief
+\param item the item
+\param property the property, one of the \ref IP_ constants
+\param subprop the subproperty, one of the \ref IP2_ constants
+\param ... other sub-subproperties
+\brief gets an item's property
+
+This function works exactly like chr_getProperty, simply the first parameter is an item serial instaed of a character serial
+\return the property value
 */
 native itm_getProperty(const item, const property, const subprop=0, ...);
 
 /*!
 \author Xanathar
 \fn itm_setProperty(const item, const property, const subprop=0, ...)
-\brief
+\param item the item
+\param property the property, one of the \ref IP_ constants
+\param subproperty the subproperty, one of the \ref IP2_ constants
+\brief sets an item's property
+
+Works exactly as chr_setProperty, simply the first parameter is an item serial
 */
 native itm_setProperty(const item, const property, const subprop=0, ...);
 
@@ -56,41 +68,59 @@ native itm_contAddItem(const container, const item, const x=INVALID, const y=INV
 /*!
 \author Xanathar
 \fn itm_color(const item)
-\brief
+\brief gets the item color
+\return the color
 */
 native itm_color(const item);
 
 /*!
 \author Xanathar
 \fn itm_contPileItem(const container, const item)
-\brief
+\param constainer the container the item is in
+\param item the item to be piled
+\brief Pile an item into container
+\return true on success, else false
 */
 native itm_contPileItem(const container, const item);
 
 /*!
 \author Xanathar
 \fn itm_contCountItems(const container, const id, const color = -1)
-\brief
+\param container the container the items are in
+\param id the ID of the items to be counted
+\param color the color of the items to be counted
+\brief counts the items of a given ID and color in a container
+\return the number of items
 */
 native itm_contCountItems(const container, const id, const color = -1);
 
 /*!
 \author Keldan
 \fn itm_countItemsByID(const container, const ScriptID)
+\param container the container the items are in
+\param ScriptID the scriptID of the items to be counted
 \brief return amount of items identified by ScriptID
+\return the number of items
 */
 native itm_countItemsByID(const container, const ScriptID);
 
 /*!
 \author Xanathar
 \fn itm_contDelAmount(const container, const amount, const id, const color = -1)
-\brief
+\param container the container the items are in
+\param amount the amount to be deleted
+\param id the ID of the items to be deleted
+\param color the color of the items to be deleted
+\brief deletes a given amount of items of given id and color
 */
 native itm_contDelAmount(const container, const amount, const id, const color = -1);
 
 /*!
 \author Keldan
 \fn itm_delAmountByID(const container, const amount, const ScriptID)
+\param container the container the items are in
+\param amount the amount to be deleted
+\param id the scriptID of the items to be deleted
 \brief remove from container "amount" number of items, identified by ScriptID
 */
 native itm_delAmountByID(const container, const amount, const ScriptID);
@@ -98,28 +128,50 @@ native itm_delAmountByID(const container, const amount, const ScriptID);
 /*!
 \author Xanathar
 \fn itm_moveTo(const item, const x, const y, const z)
-\brief
+\param item the item
+\param x,y,z the x,y,z coords where to move the item
+\brief moves an tiem to a given location
 */
 native itm_moveTo(const item, const x, const y, const z);
 
 /*!
+\author Fax
+\fn itm_moveToVec(const item, pos[3])
+\param item the item
+\param pos[3] a 3D vector with the coordinates where to move the item
+\brief moves an tiem to a given location
+*/
+stock itm_moveToVec(const item, pos[3])
+{
+	itm_moveTo(item,pos[0],pos[1],pos[2]);
+}
+
+
+/*!
 \author Xanathar
-\fn itm_pileItem(const container, const item)
-\brief
+\fn itm_pileItem(const item1, const item2)
+\param item1 first item
+\param item2 second item
+\brief pile an item into another
+\return true if piled, false else
 */
 native itm_pileItem(const container, const item);
 
 /*!
 \author Xanathar
 \fn itm_reduceAmount(const item, const amount)
-\brief
+\param item the piled item
+\param the amount to be reduced 
+\brief reduce the amount of the given pileable item
 */
 native itm_reduceAmount(const item, const amount);
 
 /*!
 \author Xanathar
 \fn itm_setContSerial(const item, const serial)
-\brief
+\param item the item
+\param serial the new container serial
+\brief changes the container an item is in
 */
 native itm_setContSerial(const item, const serial);
 
@@ -139,10 +191,12 @@ native itm_setMultiSerial(const item, const serial);
 
 /*!
 \author Xanathar
-\fn itm_setOwnSerial(const item, const serial)
-\brief
+\fn itm_setOwnSerial(const item, const chr)
+\param item the item
+\param chr the new owner
+\brief sets the owner of an item
 */
-native itm_setOwnSerial(const item, const serial);
+native itm_setOwnSerial(const item, const chr);
 
 /*!
 \author Xanathar
@@ -221,14 +275,15 @@ native itm_createInBankDef(const def[], const chr, const amount = -1);
 /*!
 \author Xanathar
 \fn itm_checkDecay(const item)
-\brief
+\param item the item
+\brief Check the item for decay
 */
 native itm_checkDecay(const itm);
 
 /*!
 \author Xanathar
 \fn itm_remove(const item)
-\brief
+\brief removes an item
 */
 native itm_remove(const itm);
 
@@ -236,7 +291,7 @@ native itm_remove(const itm);
 \author Sparhawk
 \fn itm_getEventHandler(const chr, const event, handler[])
 \param itm:	item serial
-\param event:	item event identifier (EVENT_ITM_ON*)
+\param event:	item event identifier \ref EVENT_ITM_ON
 \brief Returns name of small function bound to the specified event into handler
 */
 native itm_getEventHandler(const chr, const event, handler[]);
@@ -245,7 +300,7 @@ native itm_getEventHandler(const chr, const event, handler[]);
 \author Xanathar
 \fn itm_setEventHandler(const itm, const event, const evtype, const format[], ...)
 \param itm:	item serial
-\param event:	item event identifier (EVENT_ITM_ON*)
+\param event:	item event identifier \ref EVENT_ITM_ON
 \param evtype:	sets dynamic or static event type (EVENTTYPE_STATIC or EVENTTYPE_DYNAMIC). Static events will be saved in worldfile.
 \param format:	Name of small function to bind to the event
 \brief Binds small function name to the specified event.
@@ -256,7 +311,7 @@ native itm_setEventHandler(const itm, const event, const evtype, const format[],
 \author Xanathar
 \fn itm_delEventHandler(const item, const event)
 \param itm:	item serial
-\param event:	item event identifier (EVENT_ITM_ON*)
+\param event:	item event identifier \ref EVENT_ITM_ON
 \brief Unbinds link between small function an item event
 */
 native itm_delEventHandler(const itm, const event);
@@ -264,28 +319,35 @@ native itm_delEventHandler(const itm, const event);
 /*!
 \author Xanathar
 \fn itm_sound(const item, const soundfx)
-\brief
+\param item the item
+\param soundfx the sound effect ID
+\brief makes an item play a sound effect
 */
 native itm_sound(const itm, const soundfx);
 
 /*!
 \author Luxor
 \fn itm_refresh(const item)
-\brief
+\brief use this function to apply changes to an item
 */
 native itm_refresh(const itm);
 
 /*!
 \author Anthalir
 \fn itm_speech(const s, const itm, const text[])
-\brief
+\param s the socket of the character who should hear the speech
+\param itm the item that speaks
+\param text[] the the speech
+\brief makes an item talk, is socket is -1 the speech is heard by all characters in range
 */
 native itm_speech(const s, const itm, const text[]);
 
 /*!
 \author Anthalir
 \fn itm_bounceToPack(const s, const item)
-\brief
+\param s the socket
+\param item the item
+\brief puts the item in the backpack of the character with soicket s
 */
 native itm_BounceToPack(const s, const item);
 
@@ -431,26 +493,5 @@ stock itm_setAmxFlags(const itm, const idx, const value)
 	itm_setProperty(itm, IP_AMXFLAGS, idx, value);
 }
 
-/*!
-\author Fax
-\fn itm_isArmor(const item)
-\param item the item
-\brief checks if an item is armor
-\return a TYPE_* constant
-*/
-stock itm_isArmor(const itm)
-{
-new scriptID = itm_getProperty(item,IP_SCRIPTID);
-switch(scriptID)
-	{
-	case 55..57:		return TYPE_CHAINMAIL;
-	case 67..69,78: 	return TYPE_LEATHER;
-	case 62..66,76,81: 	return TYPE_STUDDED;
-	case 58..61: 		return TYPE_RINGMAIL;
-	case 44..49,77:		return TYPE_PLATEMAIL;
-	case 50..54:		return TYPE_BONEARMOR;
-	case 70..74:		return TYPE_HELM;
-	default:		return TYPE_UNDEFINED;
-	}
-}
+
 /** @} */

@@ -98,7 +98,7 @@ enum
 };
 /* @} */
 
-/*! \defgroup EVENT_CHR_ON_ character events
+/*! \defgroup EVENT_CHR_ON_ EVENT_CHR_
     \ingroup script_API_character_constants
     @{
 */

@@ -17,7 +17,7 @@ const PROP_CHARACTER = 0;
  *  @{
  */
 
-/** \defgroup CP_* properties
+/** \defgroup CP_ CP_
  *  @{
  */
 const CP_CANTRAIN = 0;		//!< true if the character can train others
@@ -205,7 +205,7 @@ const CP_STR_SPEECH = 458; 	//!< entire speech that contains word/phrase that tr
 const CP_UNI_SPEECH_CURRENT = 500;//!<
 const CP_UNI_PROFILE = 501;	//!<
 /** @} */
-/** \defgroup CP2_* subproperties
+/** \defgroup CP2_ CP2_
  *  @{
  */
 //second cp for positions

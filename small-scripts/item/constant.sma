@@ -16,13 +16,20 @@ const PROP_ITEM = 1;
  *  \ingroup script_API_item
  *  @{
  */
-//second cp for positions
+
+/** \defgroup IP2_ IP2_
+ *  @{
+ */
 const IP2_X = 0;
 const IP2_Y = 1;
 const IP2_Z = 2;
 const IP2_DZ = 3;
 const IP2_DISPZ = 3;
+/** @} */
 
+/** \defgroup IP_ IP_
+ *  @{
+ */
 const IP_INCOGNITO = 0;
 const IP_CORPSE = 102;
 const IP_DOORDIR = 103;
@@ -110,6 +117,7 @@ const IP_STR_DISABLEDMSG = 452;
 const IP_STR_MURDERER = 453;
 const IP_STR_NAME = 454;
 const IP_STR_NAME2 = 455;
+/** @} */
 /** @} */
 
 enum {
