@@ -55,6 +55,32 @@ enum eStringMode
 };
 
 /*!
+\author Horian
+\fn replaceStr (const string[], const oldletter, const newletter)
+\param oldletter: the string to replace
+\param newletter: the string to use for replacing
+\return		: the replaced whole string
+\brief replace certain letter inside a string
+*/
+stock replaceStr (string[], oldletter[], newletter[])
+{
+	new stringlen = strlen( string );
+	for (new i = 0; i <= stringlen; ++i )
+	{
+		if ( eStringMode:getStringMode() == UNPACKED )
+		{
+			if ( string[i] == oldletter[0] )
+			string[i] = newletter[0];
+		}
+		else
+		{
+			if ( string{i} == oldletter{0} )
+				string{i} = newletter{0};
+		}
+	}
+}
+
+/*!
 \author Fax modified by Sparhawk
 \fn isStrContainedInStr( const string[], const container[])
 \param string   : the string to find in the container
