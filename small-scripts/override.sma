@@ -33,6 +33,7 @@
 #include "small-scripts/float/float.api"
 #include "small-scripts/guild/guild.api"
 #include "small-scripts/item/item.api"
+#include "small-scripts/item/itemId.api"
 #include "small-scripts/log/log.api"
 #include "small-scripts/magic/magic.api"
 #include "small-scripts/map/map.api"
@@ -49,8 +50,8 @@
 //
 // Include the NoX-Wizard small scripts
 //
-#include "small-scripts/calendar/calendar.sma"
 #include "small-scripts/include/nxw_lib"
+#include "small-scripts/calendar/calendar.sma"
 #include "small-scripts/skills/skills.sma"
 #include "small-scripts/misc/default.sma"
 #include "small-scripts/item/potiondelay.sma"
