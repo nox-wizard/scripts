@@ -5559,7 +5559,7 @@ SECTION ITEM $item_gold_coin
 {
     ID 0EED
     PILE 1
-    AMOUNT 20
+    AMOUNT 1
     DECAY
 }
 
@@ -5580,65 +5580,6 @@ SECTION ITEM $item_a_stone_wall
     NAME a stone wall
     ID 0080
     DISPELLABLE 1
-}
-
-// Gold piles
-SECTION ITEM $item_gold_coin_1
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 96
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_2
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 151
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_3
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 204
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_4
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 462
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_5
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 531
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_6
-{
-    NAME gold coin
-    ID 0EED
-    PILE 1
-    AMOUNT 774
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_7
-{
-    NAME gold coin
-    ID 0EED
-    PILE 1
-    AMOUNT 812
-    DECAY
 }
 
 SECTION ITEM $item_large_wooden_crate
@@ -6604,30 +6545,6 @@ SECTION ITEM $item_brick_wall_R
     ID 0056
 }
 
-SECTION ITEM $item_gold_coin_8
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 1
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_9
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 3
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_A
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 6
-    DECAY
-}
-
 SECTION ITEM $item_silver_coin
 {
     NAME silver coin
@@ -7075,81 +6992,6 @@ SECTION ITEM $item_brick_arch_5
 {
     ID 0045
 }
-
-SECTION ITEM $item_gold_coin_B
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 10
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_C
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 20
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_D
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 40
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_E
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 80
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_F
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 160
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_G
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 320
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_H
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 640
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_I
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 1280
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_J
-{
-    ID 0EED
-    PILE 1
-    AMOUNT 2560
-    DECAY
-}
-
-
-
 
 SECTION ITEM $item_orchish_skin
 {
@@ -11782,46 +11624,6 @@ SECTION ITEM $item_a_treasure_map_lv_4_
     NAME a treasure map [lv 4]
     ID 14ec
     TRIGGER $itrg_treasure_map_lvl4
-}
-
-SECTION ITEM $item_gold_coin_K
-{ // 1K GOLD
-    ID 0EED
-    PILE 1
-    AMOUNT 1000
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_L
-{ // 2K GOLD
-    ID 0EED
-    PILE 1
-    AMOUNT 2000
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_M
-{ // 3K GOLD
-    ID 0EED
-    PILE 1
-    AMOUNT 3000
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_N
-{ // 4K GOLD
-    ID 0EED
-    PILE 1
-    AMOUNT 4000
-    DECAY
-}
-
-SECTION ITEM $item_gold_coin_O
-{ // 5K GOLD
-    ID 0EED
-    PILE 1
-    AMOUNT 5000
-    DECAY
 }
 
 SECTION ITEM $item_a_treasure_map_lv1_
