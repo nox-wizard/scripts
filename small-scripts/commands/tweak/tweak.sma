@@ -1204,6 +1204,12 @@ public tweak_char(const chrsource, const target, pagenumber)
 				}
 				case 5: //radiobutton
 				{
+					new u; //how many radiobuttons are part of this group?
+					if( chr_twkarray[i][ct_infotype] != 0)
+					{
+						u=chr_twkarray[i][ct_infotype]+1;
+						gui_addGroup( twkChrMenu, u );
+					}
 					if((chr_twkarray[i][ct_propnumber] == 110) || (chr_twkarray[i][ct_propnumber] == 121)) //bitfields (for example visibility)
 					{
 						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] != chr_twkarray[i][ct_infotype]) //can decay
@@ -1215,6 +1221,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 					{
 						if(chr_twkarray[i][ct_propval] == chr_getProperty( target,chr_twkarray[i][ct_propnumber]))
 							checklev = 1;
+						
 						gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
 						gui_addRadioButton( twkChrMenu,ct_radio+k,(180+(n*20)), oldpic,newpic,checklev,i+10);
 					}
