@@ -7,8 +7,8 @@
 
 /*!
 \author Fax
-\fn cmd_freeze(const chr)
-\brief freezes a character
+\fn cmd_dupe(const chr)
+\brief duplicates an item
 
 <B>syntax:<B> 'dupe ["target"]
 <B>command params:</B>
@@ -40,7 +40,19 @@ public cmd_dupe(const chr)
 		{
 			item = set_getItem(area_items(area));
 			if(itm_getProperty(item,IP_CONTAINERSERIAL) != chr_getBackpack(chr)) 
-				duplicate(item,chr);
+			{	
+				new copy = itm_duplicate(item);
+	
+				if(!isItem(copy))
+				{
+					chr_message(chr,_,"That item can't be duplicated");
+					return;
+				}
+				
+				new x,y,z;
+				itm_getPosition(item,x,y,z);
+				itm_moveTo(copy,x,y,z);
+			}	
 		}
 
 		chr_message(chr,_,"%d items copied",i);
@@ -67,16 +79,58 @@ public cmd_dupe_targ(target, chr, object, x, y, z, unused, unused1)
 		return;
 	}
 	
-	duplicate(object,chr);
-	chr_message(chr,_,"Item copied");
+	if(itm_getProperty(object,IP_CONTAINERSERIAL) != INVALID)
+	{
+		chr_message(chr,_,"Item must not be in a container");
+		return;
+	}
+	
+	new copy = itm_duplicate(object);
+	
+	if(!isItem(copy))
+	{
+		chr_message(chr,_,"That item can't be duplicated");
+		return;
+	}
+	
+	itm_getPosition(object,x,y,z);
+	itm_moveTo(copy,x,y,z);
+	chr_message(chr,_,"Item %d created at %d %d %d",copy,x,y,z);
 }
 
 
-static duplicate(const item, const chr)
+public itm_duplicate(const item)
 {
 	new copy = itm_create(itm_getProperty(item,IP_SCRIPTID));
-	new x,y,z;
-	itm_getPosition(item,x,y,z);
-	itm_setProperty(copy,IP_CONTAINERSERIAL,_,chr_getBackpack(chr));	
+	
+	for(new prop = IP_DOORDIR; prop <= IP_AUXDAMAGETYPE; prop++)
+		if(	//These properties must not be copied
+			106 <= prop <= 109 ||
+			prop == 116 || prop == 119 )
+			continue;
+		else itm_setProperty(copy,prop,_,itm_getProperty(item,prop));
+	
+	
+	for(new prop = IP_ATT; prop <= IP_AMMOFX; prop++)
+		if(	//These properties must not be copied
+			prop == 210 ||
+			prop == IP_SERIAL ||	
+			prop == IP_AMXFLAGS ||
+			prop == IP_TIME_UNUSED ||
+			prop == IP_TIME_UNUSEDLAST)
+			continue;
+		else itm_setProperty(copy,prop,_,itm_getProperty(item,prop));
+		
+	for(new prop = IP_AMOUNT; prop < IP_ID; prop++)
+		itm_setProperty(copy,prop,_,itm_getProperty(item,prop));
+	
+	new string[100];
+	for(new prop = IP_STR_CREATOR; prop < IP_STR_NAME2; prop++)
+	{
+		itm_getProperty(item,prop,0,string);
+		itm_setProperty(copy,prop,0,string);
+	}
+	
+	return copy;	
 }
 /*! }@ */

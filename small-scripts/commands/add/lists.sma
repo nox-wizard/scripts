@@ -1,5 +1,5 @@
 /*!
-\defgroup script_command_add_lists items and NPCs lists
+\defgroup script_commands_add_lists items and NPCs lists
 \ingroup script_commands_add
 
 @{

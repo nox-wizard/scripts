@@ -16,7 +16,7 @@ const INCLUDE_ITM = 0x2; //!< include items in the area
 const INCLUDE_ALL = 0x3; //!< incllude all
 
 const DEFAULT_R = VISRANGE;		//!< default value for the area radius
-const DEFAULT_INCLUDE = INCLUDE_CHR;	//!< default value for the objects to include in an area
+const DEFAULT_INCLUDE = INCLUDE_ALL;	//!< default value for the objects to include in an area
 const DEFAULT_CMDS = 50000;	//!< default area duration (number of commands)
 
 #define AREA_INVALID -1 //!< invalid area serial
@@ -371,6 +371,12 @@ It creates the command area and initializes it.
 public cmd_area_targ(target, chr, object, x, y, z, unused1, area)
 {
 
+	if(x < 0 || y < 0)
+	{
+		chr_message(chr,_,"Invalid map location");
+		return;
+	}
+	
 	//if an object has been targetted, its position is the area centre
 	//if a map location has been targetted x y and z are automatically set
 	if(isChar(object))

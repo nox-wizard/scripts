@@ -39,6 +39,7 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"align",	""},
 	{PRIV_CNS,	"area",		""},
 	{PRIV_SEER,	"damage",	""},
+	{PRIV_SEER,	"dye",		""},
 	{PRIV_SEER,	"dupe",		""},
 	{PRIV_CNS,	"freeze",	""},
 	{PRIV_GM,	"func",		""},
@@ -54,6 +55,7 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"polymorph",	""},
 	{PRIV_SEER,	"regioncp",	""},
 	{PRIV_CNS,	"resurrect",	""},
+	{PRIV_SEER,	"setdir",	""},
 	{PRIV_ADMIN,	"setpriv",	""},
 	{PRIV_GUEST,	"skills",	""},
 	{PRIV_GUEST,	"stats",	""},
@@ -61,7 +63,7 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"where",	""},
 	{PRIV_CNS,	"wipe",		""},
 		
-	{0,"",""},{0,"",""},{0,"",""},{0,"",""},{0,"",""}
+	{0,"",""},{0,"",""},{0,"",""}
 }; //!< names of commands, are used to create function names. Due to the 19 characters function name limit, command names are limited to 15 characters in length.
 
 new __cmdParams[__MAX_PARAMS][__MAX_PARAM_LENGTH]; //!< array that is filled with paramters when a command is called

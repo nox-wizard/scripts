@@ -12,7 +12,7 @@
 
 
 /*!
-\defgroup script_command_add_menu menu
+\defgroup script_commands_add_menu menu
 \ingroup script_commands_add
 
 @{

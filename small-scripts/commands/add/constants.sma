@@ -1,5 +1,5 @@
 /*!
-\defgroup script_command_add_constants constants
+\defgroup script_commands_add_constants constants
 \ingroup script_commands_add
 
 @{
