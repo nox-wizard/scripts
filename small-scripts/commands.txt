@@ -28,6 +28,7 @@ accountscp,255,cmd_accountscp
 add,150,cmd_add
 align,100,cmd_align
 area,100,cmd_area
+bolt,100,cmd_bolt
 buy,100,cmd_buy
 cset,200,cmd_cset
 csetxyz,150,cmd_csetxyz
@@ -46,6 +47,7 @@ hiding,100,cmd_hiding
 hunger,0,cmd_hunger
 heal,200,cmd_heal
 help,100,cmd_help
+morei,150,cmd_imore
 introduce,0,chr_introduce_name
 invul,100,cmd_invul
 iset,200,cmd_iset
@@ -78,7 +80,6 @@ respawn,150,cmd_respawn
 resurrect,100,cmd_resurrect
 save,200,cmd_save
 sell,100,cmd_sell
-setmorexyz,150,cmd_setmorexyz
 setmoreb12,150,cmd_setmoreb12
 setmoreb34,150,cmd_setmoreb34
 setpriv,255,cmd_setpriv

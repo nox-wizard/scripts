@@ -25,6 +25,7 @@
 #include "small-scripts/commands/hiding.sma"
 #include "small-scripts/commands/hunger.sma"
 #include "small-scripts/commands/help/help.sma"
+#include "small-scripts/commands/imore.sma"
 #include "small-scripts/commands/invul.sma"
 #include "small-scripts/commands/iset.sma"
 #include "small-scripts/commands/jail.sma"
@@ -62,7 +63,7 @@
 //#include "small-scripts/commands/setdir.sma" removed
 #include "small-scripts/commands/setmoreb12.sma"
 #include "small-scripts/commands/setmoreb34.sma"
-#include "small-scripts/commands/setmorexyz.sma"
+//#include "small-scripts/commands/setmorexyz.sma" replaced by imore
 #include "small-scripts/commands/setpriv.sma"
 #include "small-scripts/commands/settype.sma"
 #include "small-scripts/commands/showbank.sma"

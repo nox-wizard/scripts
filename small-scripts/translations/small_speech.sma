@@ -595,7 +595,7 @@ public msg_api_partyDef[NUM_api_partySENT][]={
 "You notify them that you do not wish to join the party."
 };
 
-const NUM_commandsSENT = 278;
+const NUM_commandsSENT = 280;
 public msg_commandsDef[NUM_commandsSENT][]={
 "No other players connected",
 "Users Online : ",
@@ -713,7 +713,7 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "You must specify the stat to be damaged: hp stam or mana",
 "%d characters damaged",
 "Select a character to damage",
-"You have to specify the decay time, or 'off'",
+"You have to specify if area (a) or single target (t) and then the decay time, or 'off'",
 "%d items had decay set",
 "Select an item to set decay",
 "Item will decay at %dms",
@@ -874,7 +874,9 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Select a character to kick",
 "Invalid serial",
 "Command applied to %d characters",
-"You can't change the hair/beard color, if the person has no hair/beard!"
+"You can't change the hair/beard color, if the person has no hair/beard!",
+"You have to specify 1 value to set this more property",
+"More values were changed accordingly"
 };
 
 const NUM_EatDrinkSENT = 26;
