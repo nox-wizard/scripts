@@ -1,3 +1,5 @@
+//walls+doors 55000-60000
+
 //walls
 #define $item_wooden_wall1_1 55000
 #define $item_wooden_wall1_2 55001

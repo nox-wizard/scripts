@@ -65,6 +65,7 @@
 #include scripts/items/cooking/farmitems.xss
 #include scripts/items/carpenter/carpenter.xss
 
+#include scripts/items/carpenter/basic_furniture.xss
 #include scripts/items/carpenter/yew_furniture.xss
 #include scripts/items/carpenter/pine_furniture.xss
 #include scripts/items/carpenter/mahogany_furniture.xss
@@ -75,3 +76,5 @@
 #include scripts/items/carpenter/cedar_furniture.xss
 #include scripts/items/carpenter/alder_furniture.xss
 #include scripts/items/carpenter/maple_furniture.xss
+
+#include scripts/custom/items/items.xss

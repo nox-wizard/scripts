@@ -37,3 +37,4 @@
 // || upgrades.                                                           ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 #include scripts/npc/customnpc.xss
+#include scripts/custom/npc/npc.xss

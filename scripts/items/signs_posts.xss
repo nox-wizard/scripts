@@ -1,0 +1,2328 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (signs_posts.xss)                                ||
+// || Maintained by Horian		                                   ||
+// || Last Update 22-feb-2005                                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82 or later                        ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//This file contains all banner, signs, sign posts in UO
+
+//sign posts
+//Wooden
+
+SECTION ITEM $item_wooden_signpost1_1
+{
+	ID 0b97
+	AMXINT $localvar_flipitem $item_wooden_signpost1_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_wooden_signpost1_2
+{
+	ID 0b98
+	AMXINT $localvar_flipitem $item_wooden_signpost1_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_wooden_signpost2_1
+{
+	ID 0b99
+	AMXINT $localvar_flipitem $item_wooden_signpost2_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_wooden_signpost2_2
+{
+	ID 0b9a
+	AMXINT $localvar_flipitem $item_wooden_signpost2_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+
+//Metal
+
+SECTION ITEM $item_metal_signpost1_1
+{
+	ID 0b9b
+	AMXINT $localvar_flipitem $item_metal_signpost1_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_metal_signpost1_2
+{
+	ID 0b9c
+	AMXINT $localvar_flipitem $item_metal_signpost1_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_metal_signpost2_1
+{
+	ID 0b9d
+	AMXINT $localvar_flipitem $item_metal_signpost2_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_metal_signpost2_2
+{
+	ID 0b9e
+	AMXINT $localvar_flipitem $item_metal_signpost2_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_metal_signpost3_1
+{
+	ID 0b9f
+	AMXINT $localvar_flipitem $item_metal_signpost3_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_metal_signpost3_2
+{
+	ID 0ba0
+	AMXINT $localvar_flipitem $item_metal_signpost3_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_metal_signpost4_1
+{
+	ID 0ba1
+	AMXINT $localvar_flipitem $item_metal_signpost4_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_metal_signpost4_2
+{
+	ID 0ba2
+	AMXINT $localvar_flipitem $item_metal_signpost4_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+
+//Signs
+//Custom_signs
+
+SECTION ITEM $item_wooden_sign1_1
+{
+	ID 0bcf
+	AMXINT $localvar_flipitem $item_wooden_sign1_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_wooden_sign1_2
+{
+	ID 0bd0
+	AMXINT $localvar_flipitem $item_wooden_sign1_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_brass_sign1_1
+{
+	ID 0bd1
+	AMXINT $localvar_flipitem $item_brass_sign1_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_brass_sign1_2
+{
+	ID 0bd2
+	AMXINT $localvar_flipitem $item_brass_sign1_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_sign1_1
+{
+	ID 1f28
+	AMXINT $localvar_flipitem $item_sign1_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_sign1_2
+{
+	ID 1f29
+	AMXINT $localvar_flipitem $item_sign1_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+//direction sign1_1s
+
+SECTION ITEM $item_post
+{
+	ID 1296 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign1_1
+{
+	ID 1297
+	AMXINT $localvar_flipitem $item_road_sign1_2
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign1_2
+{
+	ID 1298
+	AMXINT $localvar_flipitem $item_road_sign1_3
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign1_3
+{
+	ID 1299
+	AMXINT $localvar_flipitem $item_road_sign1_4
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign1_4
+{
+	ID 129a
+	AMXINT $localvar_flipitem $item_road_sign1_5
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign1_5
+{
+	ID 129b
+	AMXINT $localvar_flipitem $item_road_sign1_6
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign1_6
+{
+	ID 129c
+	AMXINT $localvar_flipitem $item_road_sign1_7
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign1_7
+{
+	ID 129d
+	AMXINT $localvar_flipitem $item_road_sign1_8
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign1_8
+{
+	ID 129e
+	AMXINT $localvar_flipitem $item_road_sign1_1
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+//Professions
+
+SECTION ITEM $item_library1_1
+{
+	ID 0b95
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_library1_2
+{
+	ID 0b96
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Bank1_1
+{
+	ID 0c0b
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Bank1_2
+{
+	ID 0c0c
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Beekeeper1_1
+{
+	ID 0c43
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Beekeeper1_2
+{
+	ID 0c44
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Theatre1_1
+{
+	ID 0c0d
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Theatre1_2
+{
+	ID 0c0e
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Bakery1_1
+{
+	ID 0ba3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Bakery1_2
+{
+	ID 0ba4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Tailor1_1
+{
+	ID 0ba5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Tailor1_2
+{
+	ID 0ba6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Tinker1_1
+{
+	ID 0ba7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Tinker1_2
+{
+	ID 0ba8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Butcher1_1
+{
+	ID 0ba9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Butcher1_2
+{
+	ID 0baa
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Healer1_1
+{
+	ID 0bab
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Healer1_2
+{
+	ID 0bac
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Mage1_1
+{
+	ID 0bad
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Mage1_2
+{
+	ID 0bae
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Woodworker1_1
+{
+	ID 0baf
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Woodworker1_2
+{
+	ID 0bb0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Customs1_1
+{
+	ID 0bb1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Customs1_2
+{
+	ID 0bb2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Inn1_1
+{
+	ID 0bb3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Inn1_2
+{
+	ID 0bb4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Shipwright1_1
+{
+	ID 0bb5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Shipwright1_2
+{
+	ID 0bb6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Stables1_1
+{
+	ID 0bb7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Stables1_2
+{
+	ID 0bb8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Barber1_1
+{
+	ID 0bb9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Barber1_2
+{
+	ID 0bba
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Bard1_1
+{
+	ID 0bbb
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Bard1_2
+{
+	ID 0bbc
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Fletcher1_1
+{
+	ID 0bbd
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Fletcher1_2
+{
+	ID 0bbe
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Armorer1_1
+{
+	ID 0bbf
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Armorer1_2
+{
+	ID 0bc0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Jeweler1_1
+{
+	ID 0bc1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Jeweler1_2
+{
+	ID 0bc2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Tavern1_1
+{
+	ID 0bc3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Tavern1_2
+{
+	ID 0bc4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Reagents1_1
+{
+	ID 0bc5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Reagents1_2
+{
+	ID 0bc6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Blacksmith1_1
+{
+	ID 0bc7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Blacksmith1_2
+{
+	ID 0bc8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Painter1_1
+{
+	ID 0bc9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Painter1_2
+{
+	ID 0bca
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Provisioner1_1
+{
+	ID 0bcb
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Provisioner1_2
+{
+	ID 0bcc
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Bowyer1_1
+{
+	ID 0bcd
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_Bowyer1_2
+{
+	ID 0bce
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+
+//Guilds
+
+SECTION ITEM $item_guild_Armaments1_1
+{
+	ID 0bd3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Armaments1_2
+{
+	ID 0bd4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Armorer1_1
+{
+	ID 0bd5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Armorer1_2
+{
+	ID 0bd6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Blacksmith1_1
+{
+	ID 0bd7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Blacksmith1_2
+{
+	ID 0bd8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Weapons1_1
+{
+	ID 0bd9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Weapons1_2
+{
+	ID 0bda
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Bardic1_1
+{
+	ID 0bdb
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Bardic1_2
+{
+	ID 0bdc
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Barter1_1
+{
+	ID 0bdd
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Barter1_2
+{
+	ID 0bde
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Provisioner1_2
+{
+	ID 0bdf
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Provisioner1_2
+{
+	ID 0be0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Trader1_1
+{
+	ID 0be1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Trader1_2
+{
+	ID 0be2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Cook1_1
+{
+	ID 0be3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Cook1_2
+{
+	ID 0be4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Healer1_1
+{
+	ID 0be5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Healer1_2
+{
+	ID 0be6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Mage1_1
+{
+	ID 0be7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Mage1_2
+{
+	ID 0be8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Sorcerer1_1
+{
+	ID 0be9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Sorcerer1_2
+{
+	ID 0bea
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Illusionist1_1
+{
+	ID 0beb
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Illusionist1_2
+{
+	ID 0bec
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Miner1_1
+{
+	ID 0bed
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Miner1_2
+{
+	ID 0bee
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Archer1_1
+{
+	ID 0bef
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Archer1_2
+{
+	ID 0bf0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Seaman1_1
+{
+	ID 0bf1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Seaman1_2
+{
+	ID 0bf2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Fisher1_1
+{
+	ID 0bf3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Fisher1_2
+{
+	ID 0bf4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Sailor1_1
+{
+	ID 0bf5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Sailor1_2
+{
+	ID 0bf6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Shipwright1_1
+{
+	ID 0bf7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Shipwright1_2
+{
+	ID 0bf8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Tailor1_1
+{
+	ID 0bf9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Tailor1_2
+{
+	ID 0bfa
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Thief1_1
+{
+	ID 0bfb
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Thief1_2
+{
+	ID 0bfc
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Rogue1_1
+{
+	ID 0bfd
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Rogue1_2
+{
+	ID 0bfe
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Assassin1_1
+{
+	ID 0bff
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Assassin1_2
+{
+	ID 0c00
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Tinker1_1
+{
+	ID 0c01
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Tinker1_2
+{
+	ID 0c02
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Warrior1_1
+{
+	ID 0c03
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Warrior1_2
+{
+	ID 0c04
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Cavalry1_1
+{
+	ID 0c05
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Cavalry1_2
+{
+	ID 0c06
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Fighter1_1
+{
+	ID 0c07
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Fighter1_2
+{
+	ID 0c08
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Merchant1_1
+{
+	ID 0c09
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_guild_Merchant1_2
+{
+	ID 0c0a
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+
+//Magic_sign1_1s
+
+SECTION ITEM $item_road_sign_magical1
+{
+	ID 163d
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign_magical2
+{
+	ID 163e
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign_magical3
+{
+	ID 163f
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign_magical4
+{
+	ID 1641
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign_magical5
+{
+	ID 1642
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+SECTION ITEM $item_road_sign_magical6
+{
+	ID 1643
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTION Signs
+}
+
+
+//Banner
+
+SECTION ITEM $item_banner1A_1
+{
+	ID 1586
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner1A_2
+{
+	ID 161d
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner1B_1
+{
+	ID 1587
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner1B_2
+{
+	ID 161e
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner1C_1
+{
+	ID 1588
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner1C_2
+{
+	ID 161f
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner2A_1
+{
+	ID 1589
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner2A_2
+{
+	ID 1620
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner2B_1
+{
+	ID 158a
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner2B_2
+{
+	ID 1621
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner2C_1
+{
+	ID 158b
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner2C_2
+{
+	ID 1622
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner3A_1
+{
+	ID 158c
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner3A_2
+{
+	ID 1623
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner3B_1
+{
+	ID 158d
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner3B_2
+{
+	ID 1624
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner3C_1
+{
+	ID 158e
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner3C_2
+{
+	ID 1625
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_hanger_banner1_1
+{
+	ID 158f
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_hanger_banner1_2
+{
+	ID 1626
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner4A_1
+{
+	ID 1590
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner4A_2
+{
+	ID 1628
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner4B_1
+{
+	ID 1591
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner4B_2
+{
+	ID 1627
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner5A_1
+{
+	ID 1592
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner5A_2
+{
+	ID 162a
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner5B_1
+{
+	ID 1593
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner5B_2
+{
+	ID 1629
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner6A_1
+{
+	ID 1594
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner6A_2
+{
+	ID 162b
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner6B_1
+{
+	ID 1595
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner6B_2
+{
+	ID 162c
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner6C_1
+{
+	ID 1596
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner6C_2
+{
+	ID 162d
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner7A_1
+{
+	ID 1598
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner7A_2
+{
+	ID 162e
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner7B_1
+{
+	ID 159b
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner7B_2
+{
+	ID 1631
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner7C_1
+{
+	ID 159c
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner7C_2
+{
+	ID 1632
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner8A_1
+{
+	ID 1599
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner8A_2
+{
+	ID 162f
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner8B_1
+{
+	ID 159a
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner8B_2
+{
+	ID 1630
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner8C_1
+{
+	ID 159d
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner8C_2
+{
+	ID 1633
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner9A_1
+{
+	ID 15a0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner9A_2
+{
+	ID 160f
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner9B_1
+{
+	ID 15a1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner9B_2
+{
+	ID 1610
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner10A_1
+{
+	ID 15a2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner10A_2
+{
+	ID 1611
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner10B_1
+{
+	ID 15a3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner10B_2
+{
+	ID 1612
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner11A_1
+{
+	ID 15a4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner11A_2
+{
+	ID 1613
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner11B_1
+{
+	ID 15a5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner11B_2
+{
+	ID 1614
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner12A_1
+{
+	ID 15a6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner12A_2
+{
+	ID 1615
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner12B_1
+{
+	ID 15a7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner12B_2
+{
+	ID 1616
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner13A_1
+{
+	ID 15a8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner13A_2
+{
+	ID 1617
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner13B_1
+{
+	ID 15a9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner13B_2
+{
+	ID 1618
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner14A_1
+{
+	ID 15aa
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner14A_2
+{
+	ID 1619
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner14B_1
+{
+	ID 15ab
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner14B_2
+{
+	ID 161a
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner15A_1
+{
+	ID 15ac
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner15A_2
+{
+	ID 161b
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner15B_1
+{
+	ID 15ad
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner15B_2
+{
+	ID 161c
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner16_1
+{
+	ID 15ae
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner16_2
+{
+	ID 15af
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner17_1
+{
+	ID 15b0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner17_1
+{
+	ID 15b1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner18_1
+{
+	ID 15b2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner18_2
+{
+	ID 15b3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner19_1
+{
+	ID 15b4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner19_2
+{
+	ID 15b5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner20_1
+{
+	ID 15b6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner20_2
+{
+	ID 15b7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner21_1
+{
+	ID 15b8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner21_2
+{
+	ID 15b9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner22_1
+{
+	ID 15ba
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner22_2
+{
+	ID 15bb
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner23_1
+{
+	ID 15bc
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner23_2
+{
+	ID 15bd
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner24_1
+{
+	ID 15be
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner24_2
+{
+	ID 15bf
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner25_1
+{
+	ID 15c0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner25_2
+{
+	ID 15c1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner26_1
+{
+	ID 15c2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner26_2
+{
+	ID 15c3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner27_1
+{
+	ID 15c4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner27_2
+{
+	ID 15c5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner28_1
+{
+	ID 15c6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner28_2
+{
+	ID 15c7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner29_1
+{
+	ID 15c8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner29_2
+{
+	ID 15c9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner30_1
+{
+	ID 15ca
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner30_2
+{
+	ID 15cb
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner31_1
+{
+	ID 15cc
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner31_2
+{
+	ID 15cd
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner32_1
+{
+	ID 15ce
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner32_2
+{
+	ID 15cf
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner33_1
+{
+	ID 15d0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner33_2
+{
+	ID 15d1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner34_1
+{
+	ID 15d2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner34_2
+{
+	ID 15d3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner35_1
+{
+	ID 15d4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner35_2
+{
+	ID 15d5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner36_1
+{
+	ID 15d6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner36_2
+{
+	ID 15d7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner37_1
+{
+	ID 15d8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner37_2
+{
+	ID 15d9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner38_1
+{
+	ID 15da
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner38_2
+{
+	ID 15db
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner39_1
+{
+	ID 15dc
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner39_2
+{
+	ID 15dd
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner40_1
+{
+	ID 15de
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner40_2
+{
+	ID 15df
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner41_1
+{
+	ID 15e0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner41_2
+{
+	ID 15e1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner42_1
+{
+	ID 15e2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner42_2
+{
+	ID 15e3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner43_1
+{
+	ID 15e4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner43_2
+{
+	ID 15e5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner44_1
+{
+	ID 15e6
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner44_2
+{
+	ID 15e7
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner45_1
+{
+	ID 15e8
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner45_2
+{
+	ID 15e9
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner46_1
+{
+	ID 15ea
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner46_2
+{
+	ID 15eb
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner47_1
+{
+	ID 15ec
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner47_2
+{
+	ID 15ed
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner48_1
+{
+	ID 15ee
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner48_2
+{
+	ID 15ef
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner49_1
+{
+	ID 15f0
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner49_2
+{
+	ID 15f1
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner50_1
+{
+	ID 15f2
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner50_2
+{
+	ID 15f3
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner51_1
+{
+	ID 15f4
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+
+SECTION ITEM $item_banner51_2
+{
+	ID 15f5
+	AMXINT $localvar_flipitem 
+	///CATEGORY Decorations
+	//SUBSECTIONBanner
+}
+

@@ -1,6 +1,7 @@
 //flowers, farming and cross plants//
 //integrated and sorted by Horian//
 
+//deco flower/plant 120000-120299
 #define $item_small_flower_pot 120001
 #define $item_potted_orfluer 120002
 #define $item_potted_plant 120003
@@ -55,6 +56,7 @@
 #define $item_morning_glory6 120205
 #define $item_morning_glory7 120206
 
+//farming 120300-120640
 #define $item_sprouts 120300
 #define $item_sprouts_2 120300
 
@@ -171,6 +173,7 @@
 #define $item_banana_plant_2 120632
 #define $item_banana_plant_3 120633
 
+//outside plants 120641-120790
 #define $item_blade_plant 120641
 #define $item_bulrushes 120642
 #define $item_elephant_ear 120643
@@ -229,6 +232,7 @@
 #define $item_cattails2_1 120781
 #define $item_cattails2_2 120782
 
+//vines 120791-120830
 #define $item_vines1 120791
 #define $item_vines1_2 120792
 #define $item_vines1_3 120793
@@ -248,6 +252,7 @@
 #define $item_grape_vines9 120819
 #define $item_grape_vines10 120820
 
+//water plant + desert 120831-120930
 #define $item_water_plants 120831
 #define $item_reeds 120832
 #define $item_lily_pads1 120841
@@ -280,6 +285,7 @@
 #define $item_yucca 120921
 #define $item_yucca2 120922
 
+//resource plants 120931-121000
 #define $item_mandrake1_1 120931
 #define $item_mandrake1_2 120932
 #define $item_mandrake2_1 120941
@@ -295,6 +301,7 @@
 #define $item_ginseng2_1 120991
 #define $item_ginseng2_2 120992
 
+//deco plant/agriculture 121001-121070
 #define $item_egg_nest1_1 121001
 #define $item_egg_nest1_2 121002
 #define $item_christmas_tree 121011
@@ -311,6 +318,7 @@
 #define $item_scarecrow1_1 121061
 #define $item_scarecrow1_2 121062
 
+//plantcrossing sys 121071-121150
 #define $item_seed 121071
 #define $item_bowl_with_soil1 121072
 #define $item_bowl_with_soil2 121073

@@ -61,4 +61,4 @@
 //
 // Local include
 //
-
+#include scripts/custom/symbols/symbols.xss

@@ -1,3 +1,4 @@
+//fireplaces + ovens 20100-20250
 #define $item_oven-east_deed 20100
 #define $item_oven-south_deed 20101
 #define $item_fireplace-east_deed 20110
