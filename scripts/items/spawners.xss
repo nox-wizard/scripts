@@ -112,7 +112,7 @@ SECTION ITEM $item_bard_spawner-m
     NAME male bard spawner
     ID $_id_spawner2
     TYPE $itype_npc_spawner
-    MOREX $npc_bard_f_1
+    MOREX $npc_bard_f
     MOREY 0
     MOREZ 0
     VISIBLE 1

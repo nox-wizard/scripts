@@ -4190,7 +4190,7 @@ SECTION MENU $menu_people_-_male_-_h-z
     2106 Seeker of Adventure
     NPC $npc_adventurer_m
     2018 Shipwright
-    NPC $npc_shipwright_m_1
+    NPC $npc_shipwright_m
     201C Thief
     NPC $npc_thief_m
     2026 Town Crier
@@ -4209,29 +4209,29 @@ SECTION MENU $menu_merchants_-_females_-_h-z
     200F Healer
     NPC $npc_healer_f
     2034 Herbalist
-    NPC $npc_herbalist_f_1
+    NPC $npc_herbalist_f
     2010 Innkeeper
-    NPC $npc_innkeeper_f_1
+    NPC $npc_innkeeper_f
     2012 Jeweler
-    NPC $npc_jeweler_f_1
+    NPC $npc_jeweler_f
     2013 Leather Worker
-    NPC $npc_leather_worker_f_1
+    NPC $npc_leather_worker_f
     2014 Mage
-    NPC $npc_mage_f_2
+    NPC $npc_mage_f
     202D Miner
-    NPC $npc_miner_f_1
+    NPC $npc_miner_f
     2016 Provisoner
-    NPC $npc_provisioner_f_1
+    NPC $npc_provisioner_f
     201A Spinner
-    NPC $npc_spinner_f_1
+    NPC $npc_spinner_f
     2019 Tailor
-    NPC $npc_tailor_f_1
+    NPC $npc_tailor_f
     2021 Tinker
-    NPC $npc_tinker_f_1
+    NPC $npc_tinker_f
     < Veterinarian
     NPC
     201F Weaponsmith
-    NPC $npc_weaponsmith_f_1
+    NPC $npc_weaponsmith_f
 }
 
 SECTION MENU $menu_merchants_-_males_-_h-z
@@ -4244,31 +4244,31 @@ SECTION MENU $menu_merchants_-_males_-_h-z
     200F Healer
     NPC $npc_healer_m
     2034 Herbalist
-    NPC $npc_herbalist_m_1
+    NPC $npc_herbalist_m
     2010 Innkeeper
-    NPC $npc_innkeeper_m_1
+    NPC $npc_innkeeper_m
     2012 Jeweler
-    NPC $npc_jeweler_m_1
+    NPC $npc_jeweler_m
     2013 Leather Worker
-    NPC $npc_leather_worker_m_1
+    NPC $npc_leather_worker_m
     2014 Mage
-    NPC $npc_mage_m_1
+    NPC $npc_mage_m
     202D Miner
-    NPC $npc_miner_m_1
+    NPC $npc_miner_m
     < Necromancer
     NPC $npc_necromancer
     2016 Provisioner
-    NPC $npc_provisioner_m_1
+    NPC $npc_provisioner_m
     201A Spinner
-    NPC $npc_spinner_m_1
+    NPC $npc_spinner_m
     2019 Tailor
-    NPC $npc_tailor_m_1
+    NPC $npc_tailor_m
     2021 Tinker
-    NPC $npc_tinker_m_1
+    NPC $npc_tinker_m
     < Veterinarian
     NPC $npc_veterinarian_m
     201F Weaponsmith
-    NPC $npc_weaponsmith_m_1
+    NPC $npc_weaponsmith_m
 }
 
 SECTION MENU $menu_shop_signs_2
@@ -4529,37 +4529,37 @@ SECTION MENU $menu_merchants_-_males_-_a-g
     < Previous Menu
     OPENMENU $menu_merchants
     2023 Alchemist
-    NPC $npc_alchemist_m_1
+    NPC $npc_alchemist_m
     2035 Animal Trainer
-    NPC $npc_animal_trainer_m_1
+    NPC $npc_animal_trainer_m
     2031 Architect
     NPC $npc_architect_m
     200A Armorer
-    NPC $npc_armorer_m_1
+    NPC $npc_armorer_m
     200B Baker
     NPC $npc_baker_m
     0C0B Banker
-    NPC $npc_banker_m_1
+    NPC $npc_banker_m
     2106 Bard
     NPC $npc_bard_m
     < The BeeKeeper
     NPC $npc_beekeeper_m
     2106 Blacksmith
-    NPC $npc_blacksmith_m_1
+    NPC $npc_blacksmith_m
     200C Bowyer
-    NPC $npc_bowyer_m_1
+    NPC $npc_bowyer_m
     200D Butcher
-    NPC $npc_butcher_m_1
+    NPC $npc_butcher_m
     2020 Carpenter
-    NPC $npc_carpenter_m_1
+    NPC $npc_carpenter_m
     202A Cobbler
-    NPC $npc_cobbler_m_1
+    NPC $npc_cobbler_m
     0190 Cook
-    NPC $npc_cook_m_1
+    NPC $npc_cook_m
     < the Engineer
     NPC $npc_que_1
     2022 Farmer
-    NPC $npc_farmer_m_1
+    NPC $npc_farmer_m
     8414 Fisherman
     NPC $npc_fisherman
 }
@@ -4583,37 +4583,37 @@ SECTION MENU $menu_merchants_-_females_-_a-g
     < Previous Menu
     OPENMENU $menu_merchants
     2023 Alchemist
-    NPC $npc_alchemist_f_1
+    NPC $npc_alchemist_f
     2036 Animal Trainer
-    NPC $npc_animal_trainer_f_1
+    NPC $npc_animal_trainer_f
     2031 Architect
-    NPC $npc_architect_f_1
+    NPC $npc_architect_f
     200A Armorer
-    NPC $npc_armorer_f_1
+    NPC $npc_armorer_f
     200B Baker
-    NPC $npc_baker_f_1
+    NPC $npc_baker_f
     2107 Banker
-    NPC $npc_banker_f_1
+    NPC $npc_banker_f
     2107 Bard
-    NPC $npc_bard_f_2
+    NPC $npc_bard_f
     < The Beekeeper
     NPC $npc_beekeper_f
     2107 Blacksmith
-    NPC $npc_blacksmith_f_1
+    NPC $npc_blacksmith_f
     200C Bowyer
-    NPC $npc_bowyer_f_1
+    NPC $npc_bowyer_f
     200D Butcher
-    NPC $npc_butcher_f_1
+    NPC $npc_butcher_f
     2020 Carpenter
-    NPC $npc_carpenter_f_1
+    NPC $npc_carpenter_f
     202A Cobbler
-    NPC $npc_cobbler_f_1
+    NPC $npc_cobbler_f
     0191 Cook
-    NPC $npc_cook_f_1
+    NPC $npc_cook_f
     < the Engineer
-    NPC $npc_jessie_1
+    NPC $npc_jessie
     2024 Farmer
-    NPC $npc_farmer_f_1
+    NPC $npc_farmer_f
     8415 Fisherlady
     NPC $npc_fisherlady
 }
@@ -4737,7 +4737,7 @@ SECTION MENU $menu_people_-_female_-_h-z
     2107 Seeker of Adventure
     NPC $npc_adventurer_f
     2018 Shipwright
-    NPC $npc_shipwright_f_1
+    NPC $npc_shipwright_f
     201C Thief
     NPC $npc_thief_f
     2027 Town Crier
@@ -6048,7 +6048,7 @@ SECTION MENU $menu_people_-_males_-_a-g
     2030 Brigand
     NPC $npc_brigand_m
     < Cobbler
-    NPC $npc_cobbler_m_1
+    NPC $npc_cobbler_m
     2106 Cultist
     NPC $npc_cultist_m
     2106 Fighter
