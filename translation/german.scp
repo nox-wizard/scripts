@@ -1095,7 +1095,7 @@ Rune renamed to: %s$Rune umbenannt zu: %s
 Your new name is: %s$Ab jetzt heisst Ihr %s
 Invalid namedeed$UNgueltiges Namensdeed
 Key renamed to: %s$Schluessel wurde umbenannt zu: %s
-Counselor Page from %s [%08x]: %s$Counselor Page von %s
+Counselor Page from %s [%08x]: %s$Counselor Page von %s [%08x]: %s
 Which pet?$Welches Tier ?
 I have stabled %s$I habe %s in meinem Stall untergebracht.
 I have stabled %d pets$In meinem Stall stehen %d Tiere.
