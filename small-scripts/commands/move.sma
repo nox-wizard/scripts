@@ -180,6 +180,7 @@ public cmd_move_targ_dst(target, chr, unused, x, y, z, unused2, param)
 		{	
 			itm_setProperty(param,IP_CONTAINERSERIAL,_,INVALID);
 			itm_moveTo(param,x,y,z);
+			itm_refresh(param);
 		}
 		area_refresh(chr_getCmdArea(chr));
 		return;

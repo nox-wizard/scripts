@@ -43,27 +43,27 @@ public cmd_add(const chr)
 		return;
 	}
 	
-	if(isStrHex(__cmdParams[0]))
-	{
-		itm_createInBp(str2Hex(__cmdParams[0]),chr,amount);
-		chr_message(chr,_,"item created in your backpack");
-		return;
-	}
+	//if(isStrHex(__cmdParams[0]))
+	//{
+	//	itm_createInBp(str2Hex(__cmdParams[0]),chr,amount);
+	//	chr_message(chr,_,"item created in your backpack");
+	//	return;
+	//}
+	
+	chr_setLocalIntVar(chr,CLV_CMDTEMP,amount);
 	
 	if(isStrInt(__cmdParams[0]))
 	{
-		itm_createInBp(str2Int(__cmdParams[0]),chr,amount);
-		chr_message(chr,_,"item created in your backpack");
+		chr_message(chr,_,"click to position the item");
+		target_create(chr,str2Int(__cmdParams[0]),amount,_,"cmd_add_itm_targ");
 		return;
 	}
 		
 	substring(__cmdParams[0],0,4,type,false);
 	if(!strcmp(type,"$item")) //add an item
 	{
-		new item = itm_createInBpDef(__cmdParams[0],chr,amount);
-		if(isItem(item))
-			chr_message(chr,_,"Item %d created in your backpack",item);
-		else chr_message(chr,_,"An error occurred while creating the item");
+		chr_message(chr,_,"click to position the item");
+		target_create(chr,getIntFromDefine(__cmdParams[0]),amount,_,"cmd_add_itm_targ");
 		return;
 	}
 	
@@ -71,7 +71,7 @@ public cmd_add(const chr)
 	if(!strcmp(type,"$npc_"))  //add an NPC
 	{
 		chr_message(chr,_,"click to position the NPC");
-		target_create(chr,getIntFromDefine(__cmdParams[0]),amount,_,"cmd_add_targ");
+		target_create(chr,getIntFromDefine(__cmdParams[0]),amount,_,"cmd_add_npc_targ");
 		return;
 	}
 	
@@ -80,18 +80,17 @@ public cmd_add(const chr)
 
 /*!
 \author Fax
-\fn cmd_add_targ(target, chr, object, x, y, z, unused1, scriptID)
-\brief handles the area targetting
+\fn cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
+\brief handles targetting
 */
-public cmd_add_targ(target, chr, object, x, y, z, unused1, scriptID)
+public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 {
 	#if _CMD_DEBUG_
 		printf("^tadding npc at: %d %d %d ^n",x,y,z);
 	#endif
-	
+	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
 	if(x != INVALID && y != INVALID)
 	{
-		new amount = 1;//target_getProperty(target,TP_BUFFER,1);
 		for(new i = 0; i < amount; i++)
 		{
 			new npc = chr_addNPC(scriptID,x,y,z);
@@ -100,6 +99,57 @@ public cmd_add_targ(target, chr, object, x, y, z, unused1, scriptID)
 				printf("^tCharacter %d created",npc);
 			#endif
 		}
+		return;
+	}
+	chr_message(chr,_,"Invalid map location");
+}
+
+/*!
+\author Fax
+\fn cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
+\brief handles targetting
+*/
+public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
+{
+	#if _CMD_DEBUG_
+		printf("^tadding item at: %d %d %d ^n",x,y,z);
+	#endif
+	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	
+	if(isChar(object) && !chr_isNpc(object))
+	{
+		new item = itm_createInBp(scriptID,object);
+		if(itm_getProperty(item,IP_PILEABLE))
+			itm_setProperty(item,IP_AMOUNT,_,amount);
+		else
+			for(new i = 0; i < amount - 1; i++)
+				itm_createInBp(scriptID,object);
+		chr_message(chr,_,"item %d created",item);
+		return;
+	}
+	
+	if(x != INVALID && y != INVALID)
+	{
+		new itm = itm_create(scriptID);
+		itm_moveTo(itm,x,y,z);
+		itm_refresh(itm);
+		chr_message(chr,_,"Item %d created",itm);
+				
+		if(itm_getProperty(itm,IP_PILEABLE))
+			itm_setProperty(itm,IP_AMOUNT,_,amount);
+		else
+			for(new i = 0; i < amount - 1; i++)
+			{
+				itm = itm_create(scriptID);
+				itm_moveTo(itm,x,y,z);
+				itm_refresh(itm);
+				chr_message(chr,_,"Item %d created",itm);
+			}
+				
+		#if _CMD_DEBUG_
+			printf("^tItem %d created",itm);
+		#endif
+	
 		return;
 	}
 	chr_message(chr,_,"Invalid map location");

@@ -32,6 +32,8 @@ static L_MARG;			//!< left margin, in columns
 #define INPUT_AMOUNT 0
 #define INPUT_MATERIAL 1
 
+#define CHK_REOPENGUMP 0;
+
 public addMenu(const chr)
 {
 	
@@ -74,11 +76,7 @@ public addMenu(const chr)
 	gui_addResizeGump(menu,START_X + COL ,START_Y + 6*ROW,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT - 6*ROW - COL);
         
         //add main menu page buttons
-        x = L_MARG + (t%4*tab)*COL;
-	y = (t++/4)*ROW;
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR,"GM menu");
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_GM_MENU);
-		
+        		
 	x = L_MARG + (t%4*tab)*COL;
 	y = (t++/4)*ROW;
 	gui_addText(menu,PBTNW + x,y,TXT_COLOR,"Magic");
@@ -103,11 +101,6 @@ public addMenu(const chr)
 	y = (t++/4)*ROW;
 	gui_addText(menu,PBTNW + x,y,TXT_COLOR,"Spawner");
 	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_SPAWNER_MENU);
-		
-	x = L_MARG + (t%4*tab)*COL;
-	y = (t++/4)*ROW;
-	gui_addText(menu,PBTNW + x,y,TXT_COLOR,"Gates");
-	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_GATE_MENU);
 		
 	x = L_MARG + (t%4*tab)*COL;
 	y = (t++/4)*ROW;
@@ -139,8 +132,8 @@ public addMenu(const chr)
 	gui_addText(menu,x,y,TXT_COLOR,"Amount:");
 	gui_addInputField(menu,x + 8*COL,y,5*COL,ROW,INPUT_AMOUNT,TXT_COLOR,"1");
 	
-	gui_addPage(menu,P_GM_MENU);
-	drawPage(menu,P_GM_MENU);
+	gui_addText(menu,x + tab*COL + BTNW,y,TXT_COLOR,"Reopen menu after action");
+	gui_addCheckbox(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,true,CHK_REOPENGUMP);
 	
 	gui_addPage(menu,P_MAGIC_MENU);
 	drawPage(menu,P_MAGIC_MENU);
@@ -156,9 +149,6 @@ public addMenu(const chr)
 	
 	gui_addPage(menu,P_SPAWNER_MENU);
 	drawPage(menu,P_SPAWNER_MENU);
-	
-	gui_addPage(menu,P_GATE_MENU);
-	drawPage(menu,P_GATE_MENU);
 
 	gui_addPage(menu,P_SUPPLY_MENU);
 	drawPage(menu,P_SUPPLY_MENU);
@@ -657,6 +647,8 @@ public addmenu_cback(menu,chr,btncode)
 		n = 1;
 	else n = str2Int(amount);
 	
+	if(gui_getProperty(menu,MP_CHECK,CHK_REOPENGUMP))
+	{
 	new item; 
 	item = itm_createInBp(btncode,chr);
 	
@@ -673,6 +665,14 @@ public addmenu_cback(menu,chr,btncode)
 		}
 	
 	addMenu(chr);
+	}
+	
+	else
+	{
+		chr_setLocalIntVar(chr,CLV_CMDTEMP,n);
+		chr_message(chr,_,"click to position the item");
+		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
+	}
 }
 
 public addmenu_armor(menu,chr,armor)
@@ -788,12 +788,12 @@ public addmenu_armor(menu,chr,armor)
 		chr_addLocalIntVec(chr,CLV_CMDTEMP,6,INVALID);
 		for(new i = 0; i < 6; i++)
 			chr_setLocalIntVec(chr,CLV_CMDTEMP,i,buffer[i]);
-		target_create(chr,_,_,_,"equip2char_targ");
+		target_create(chr,menu,_,_,"equip2char_targ");
 	}
-	else addMenu(chr);
+	else if(gui_getProperty(menu,MP_CHECK,CHK_REOPENGUMP)) addMenu(chr);
 }
 
-public equip2char_targ(t,chr,obj)
+public equip2char_targ(t,chr,obj,x,y,z,unused,menu)
 {
 	if(!isChar(obj))
 	{
@@ -806,9 +806,9 @@ public equip2char_targ(t,chr,obj)
 		chr_equip(obj,chr_getLocalIntVec(chr,CLV_CMDTEMP,i));
 	
 	chr_delLocalVar(chr,CLV_CMDTEMP);
-	chr_addLocalIntVar(chr,CLV_CMDTEMP);
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,0);
 		
-	addMenu(chr);
+	if(gui_getProperty(menu,MP_CHECK,CHK_REOPENGUMP)) addMenu(chr);
 }
 
 
@@ -833,8 +833,9 @@ public addmenu_npc(menu,chr,scriptID)
 		n = 1;
 	else n = str2Int(amount);
 	
+	chr_setLocalIntVar(chr,CLV_CMDTEMP,n);
 	chr_message(chr,_,"click to position the NPC");
-	target_create(chr,scriptID,n,_,"cmd_add_targ");
+	target_create(chr,scriptID,_,_,"cmd_add_npc_targ");
 }
 
 /*! }@ */
