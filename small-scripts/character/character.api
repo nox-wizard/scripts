@@ -34,13 +34,6 @@ native getCharFromSerial(const serial);
 
 /*!
 \author Xanathar
-\fn getCharTarget()
-\brief Gets the targetted char
-*/
-native getCharTarget();
-
-/*!
-\author Xanathar
 \fn chr_getProperty(const chr, const property, const subprop=0, ...)
 \brief
 */
@@ -848,7 +841,7 @@ native chr_nextLocalVar( const chr, const previous );
 \fn chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1, const material2 )
 \brief
 */
-native chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1, const material2 );
+native chr_skillMakeMenu(const chr, const makeMenu, const skill, const material1, const material2=INVALID );
 
 
 /*!
