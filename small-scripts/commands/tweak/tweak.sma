@@ -1073,14 +1073,15 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 			else if(linetype == 5) //radiobutton
 			{
 				new limit;
-				if(itm_twkarray[i][it_infotype] != 0)
+				if(itm_twkarray[i][it_propval] != 0)
 				{
-					limit = itm_twkarray[i][it_infotype]
+					limit = itm_twkarray[i][it_propval];
 				}
 				for( new m = 0; m <= limit; ++m)
 				{
 					if(gui_getProperty(twkItmMenu,MP_RADIO,i))
-						itm_setProperty( target, itm_twkarray[i][it_propnumber], _, itm_twkarray[i][it_propval]);
+						itm_setProperty( target, itm_twkarray[i][it_propnumber], _, itm_twkarray[i][it_infotype]);
+					++i;
 				}
 				limit = 0;
 			}
@@ -1919,7 +1920,6 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        	{
 		        		checked=0;
 		        		new linetype = chr_twkarray[i][ct_linetype];
-		        		new propnumber = chr_twkarray[i][ct_propnumber];
 		        		new type=chr_twkarray[i][ct_propnumber];
 		        		checklev = 0;
 		        		if(linetype == 3) //input line
@@ -1975,20 +1975,20 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 			        	else if(linetype == 4) //checkbox
 		        		{
 		        			checked = gui_getProperty(twkChrMenu,MP_CHECK,i); //is it checked?
-		        			if((propnumber == 134) || (propnumber == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
+		        			if((type == 134) || (type == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
 						{
 							new privvalue = chr_twkarray[i][ct_infotype];
-							new originalvalue = chr_getProperty( target,propnumber)&privvalue;
+							new originalvalue = chr_getProperty( target,type)&privvalue;
 							if(privvalue >= 10)
 								privvalue = (privvalue/10)*16;
 							if( originalvalue == privvalue) //is already set
 								checklev = 1;
 							if( (checklev == 1) && (checked !=1) ) //is at TRUE and no longer checked
-								chr_setProperty( target,propnumber, _, chr_getProperty( target,propnumber) &~ privvalue );
+								chr_setProperty( target,type, _, chr_getProperty( target,type) &~ privvalue );
 							else if( (checklev != 1) && (checked == 1)) //is false and checked now
-								chr_setProperty( target,propnumber, _, chr_getProperty( target,propnumber) | privvalue );
+								chr_setProperty( target,type, _, chr_getProperty( target,type) | privvalue );
 						}
-						else if(propnumber == 0) //customized button function, for example open bank box
+						else if(type == 0) //customized button function, for example open bank box
 						{
 							new infotype = chr_twkarray[i][ct_infotype];
 							new bank;
@@ -2014,37 +2014,37 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 						}
 						else //on/off check only
 						{
-							checklev = chr_getProperty(target,propnumber); //status of property
+							checklev = chr_getProperty(target,type); //status of property
 							if((checklev == 0) && ( (checked == 1))) //is checked and was zero
-								chr_setProperty( target, (propnumber),_, 1);
+								chr_setProperty( target, (type),_, 1);
 							else if((checklev != 0) && (!(checked == 1))) //is not checked and was not zero
-								chr_setProperty( target,(propnumber) ,_, 1);
+								chr_setProperty( target,(type) ,_, 1);
 						}
 		        		}
 		        		else if(linetype == 5) //radiobutton
 		        		{
 		        			checked = gui_getProperty(twkChrMenu,MP_RADIO,i);
 		        			new privvalue = chr_twkarray[i][ct_propval];
-		        			if(propnumber == 121) //bitfields (for example visibility)
+		        			if(type == 121) //bitfields (for example visibility)
 						{
-							new originalvalue = chr_getProperty( target,propnumber)&privvalue;
+							new originalvalue = chr_getProperty( target,type)&privvalue;
 							if(privvalue >= 10)
 								privvalue = (privvalue/10)*16;
 							if( originalvalue == privvalue) //is already set
 								checklev = 1;
 							if( (checklev == 1) && (checked !=1) ) //is at TRUE and no longer checked
-								chr_setProperty( target,propnumber, _, chr_getProperty( target,propnumber) &~ privvalue );
+								chr_setProperty( target,type, _, chr_getProperty( target,type) &~ privvalue );
 							else if( (checklev != 1) && (checked == 1)) //is false and checked now
-								chr_setProperty( target,propnumber, _, chr_getProperty( target,propnumber) | privvalue );
+								chr_setProperty( target,type, _, chr_getProperty( target,type) | privvalue );
 							if((privvalue == 8)&& (checked == 1)) //perma invis flag needs additionally a hide property
 								chr_setProperty( target,110, _, 2);
 						}
-						else if(propnumber == 110)//visibility
+						else if(type == 110)//visibility
 						{
-							new originalvalue = chr_getProperty( target,propnumber);
+							new originalvalue = chr_getProperty( target,type);
 							if( (checked == 1) && (originalvalue != privvalue)) //is false and checked now
 							{
-								chr_setProperty( target,propnumber, _, privvalue);
+								chr_setProperty( target,type, _, privvalue);
 								chr_setProperty( target,121, _, chr_getProperty( target,121) | 8 ); //just to be carefull, perma invis is now set to false
 							}
 						}
