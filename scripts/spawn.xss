@@ -44,7 +44,7 @@
 SECTION REGIONSPAWN 1
 {
 NAME Test Sheep Spawn
-NPC 51
+NPC $npc_a_sheep
 //NLIST 505
 //ILIST 1
 MAX 1

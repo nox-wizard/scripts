@@ -29,26 +29,30 @@ logweight,
 lumbermin,
 logchance,
 logcolor,
-logname: 9,
 loguseskill,
+logmaxamount,
+logname: 9,
 logscriptname: 9
 }
 public logProperty[NUM_LOGS][] = {
-{700, 000, 100, 0x00fb, 000, "pine"},
-{700, 150, 60, 0x0095, 650, "yew"},
-{700, 250, 55, 0x015e, 700, "maple"},
-{700, 350, 50, 0x0283, 750, "alder"},
-{700, 450, 45, 0x02eb, 790, "walnut"},
-{700, 550, 40, 0x06b9, 800, "cedar"},
-{700, 650, 35, 0x01c0, 850, "oak"},
-{700, 750, 30, 0x0159, 900, "beech"},
-{700, 850, 25, 0x01ba, 950, "mahogany"},
-{700, 950, 20, 0x0345, 990, "ebony"}
+{700, 000, 100, 0x00fb, 000, 15,"pine"},
+{700, 150, 60, 0x0095, 650, 10,"yew"},
+{700, 250, 55, 0x015e, 700, 10,"maple"},
+{700, 350, 50, 0x0283, 750, 8,"alder"},
+{700, 450, 45, 0x02eb, 790, 5,"walnut"},
+{700, 550, 40, 0x06b9, 800, 5,"cedar"},
+{700, 650, 35, 0x01c0, 850, 3,"oak"},
+{700, 750, 30, 0x0159, 900, 2,"beech"},
+{700, 850, 25, 0x01ba, 950, 2,"mahogany"},
+{700, 950, 20, 0x0345, 990, 1,"ebony"}
 };
 
 /*----------------------------------------------------------------------------------------
 End Customizable Logs
 ----------------------------------------------------------------------------------------*/
+const LUMBERRESPAWN_DELAY=3600; // Delay in seconds until ore can respawn
+static resourceLumberMap = 0;
+static resourceLumberRespawnMap = 0;
 
 /*----------------------------------------------------------------------------------------
 Begin Customizable Regions
@@ -174,19 +178,37 @@ End Customizable carpenter system
  AUTHOR   : Luxor
  PURPOSE  : This function is called by Nox-Wizard engine after tree control
  ****************************************************************************/
-public __nxw_sk_lumber(const cc)
+public __nxw_sk_lumber(const cc, const x, const y, const mapid)
 {
 	bypass();
 	new logFound = pine;//log found if nothing else will be found by the miner.
 	new logAmount = 1;
+	new logMaxAmount = -1;
 	new index = 0;
 	new skill = chr_getSkill(cc, SK_LUMBERJACKING);
 	new region = -1;
 
+	if ( resourceLumberMap == 0 )
+	{
+		// make a persistent map so the resources are saved during worldsave
+		resourceLumberMap = createResourceMap(RESOURCEMAP_LOCATION, 1, "lumberjacking_type");
+		resourceLumberRespawnMap= createResourceMap(RESOURCEMAP_LOCATION, 1, "lumberjacking_time");
+	}
+	new lumberMemory=getResourceLocationValue(resourceLumberMap, x,y,0);
+	new lumberSpawnTime=getResourceLocationValue(resourceLumberRespawnMap, x,y,0);
+	if ( lumberMemory >= 0 )
+	{
+		logMaxAmount=(lumberMemory>>16)&0xFFFF;
+		logFound=lumberMemory&0xFFFF;
+	}
+	if ( lumberSpawnTime > 0 && lumberSpawnTime < getCurrentTime() )
+	{
+		logMaxAmount=-1;
+		logFound=pine;
+	}
+
 	if (ENABLE_logRegions == 1)
 	{
-		new x = chr_getProperty(cc, CP_POSITION, CP2_X);
-		new y = chr_getProperty(cc, CP_POSITION, CP2_Y);
 		for (index = 0; index < NUM_logRegions; index++)
 			if ((logRegions[index][0] <= x <= logRegions[index][2]) && (logRegions[index][1] <= y <= logRegions[index][3]))
 				region = index;
@@ -211,11 +233,42 @@ public __nxw_sk_lumber(const cc)
 		}
 	}
 
-	if (ENABLE_logRegions == 1 && region < 0) logFound = pine;
-        	logAmount = random(100);
-
-	if (logAmount > 8)
-		logAmount = 1;
+	if (ENABLE_logRegions == 1 && region < 0) 
+		logFound = pine;
+	if (logMaxAmount < 0 )
+	{
+		logMaxAmount=random(logProperty[logFound][logmaxamount])+1;
+	}
+	if ( logMaxAmount > 0 )
+        	logAmount = random(logMaxAmount)+1;
+        else
+        	logAmount = 0;
+        if ( logAmount == 0 )
+        {
+		chr_message( cc, _, msg_sk_lumbDef[18]);
+        	return;
+        }
+        logMaxAmount -=logAmount;
+        if ( resourceLumberMap > 0 )
+        {
+        	// if the use the region map then save the amount and type now
+        	// since the value is a 32 bit unsigned WORD we save the remaining amount in the higher two bytes
+        	// and the ore type in the lower to byte
+        	setResourceLocationValue(
+        		resourceLumberMap, 
+        		((logMaxAmount&0xFFFF) <<16)+logFound,
+        		x, 
+        		y, 
+        		0 
+        		);
+        	setResourceLocationValue(
+        		resourceLumberRespawnMap, 
+        		getTimerValue(LUMBERRESPAWN_DELAY),
+        		x, 
+        		y, 
+        		0 
+        		);
+        }
 
 
 	new str[50];//Adjust the size if you create new logs with long names!
