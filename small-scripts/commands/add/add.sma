@@ -45,6 +45,7 @@ $item_stone_chair_4<br>
 */
 
 #include "small-scripts/commands/add/addmenu.sma"
+
 public cmd_add(const chr)
 {
 	readCommandParams(chr);
@@ -59,6 +60,25 @@ public cmd_add(const chr)
 		return;
 	}
 	
+	if(!strcmp(__cmdParams[0],"reload"))
+	{
+		loadAddMenu(chr);
+		return;
+	}
+
+	if(!strcmp(__cmdParams[0],"lang"))
+	{
+		if(!isStrInt(__cmdParams[1]))
+		{
+			chr_message(chr,_,"invalid parameter - languages are 0:english 1:german 2:italian 3:french");
+			return;	
+		}
+		
+		currentAddmenuLanguage = str2Int(__cmdParams[1]);
+		loadAddMenu(chr);
+		return;
+	}
+		
 	if(isStrInt(__cmdParams[1]))
 		amount = str2Int(__cmdParams[1]);
 	
@@ -116,16 +136,7 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
 	chr_delLocalVar(chr,CLV_CMDTEMP);
 
-	if(isChar(object))
-		chr_getPosition(object,x,y,z);
-	else 	if(isItem(object))
-			itm_getPosition(object,x,y,z);
-		else 	if(x == INVALID || y == INVALID)
-			{
-				chr_message(chr,_,"Invalid map location %d %d",x,y);
-				log_error("Target returned invalid map location %d %d %d",x,y,z);
-				return;
-			}
+	getMapLocation(object,x,y,z);
 
 	for(new i = 0; i < amount; i++)
 	{
@@ -134,6 +145,13 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 		#if _CMD_DEBUG_
 			log_message("^tCharacter %d created",npc);
 		#endif
+	}
+	
+	//handle continuous adding mode
+	if(chr_isaLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE))
+	{
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,1);
+		target_create(chr,scriptID,_,_,"cmd_add_npc_targ");
 	}
 }
 
@@ -145,7 +163,7 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 {
 	#if _CMD_DEBUG_
-		log_message("^tadding item at: %d %d %d ^n",x,y,z);
+		log_message("^tadding item %d at: %d %d %d",scriptID,x,y,z);
 	#endif
 	new amount = chr_getLocalIntVar(chr,CLV_CMDTEMP);
 	chr_delLocalVar(chr,CLV_CMDTEMP);
@@ -190,8 +208,15 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 		}
 	
 	#if _CMD_DEBUG_
-		log_message("^tItem %d created^n",itm);
+		log_message("^tItem %d created",itm);
 	#endif
+	
+	//handle continuous adding mode
+	if(chr_isaLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE))
+	{
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,1);
+		target_create(chr,scriptID,_,_,"cmd_add_itm_targ");
+	}
 }
 
 static end;

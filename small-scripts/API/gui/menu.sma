@@ -119,7 +119,7 @@ static menu_drawStandardFrame(rows1,rows2,cols)
 	new grid_x = cursor_getProperty(CRP_GRID_X);
 	new grid_y = cursor_getProperty(CRP_GRID_Y);
 	new startx = cursor_getProperty(CRP_START_X);
-	new starty = cursor_getProperty(CRP_START_X);
+	new starty = cursor_getProperty(CRP_START_Y);
 	
 	cursor_setProperty(CRP_START_X,startx + 3*grid_x + grid_x/2);
 	cursor_setProperty(CRP_START_Y,starty + grid_y + grid_y/2);
@@ -134,8 +134,8 @@ static menu_drawStandardFrame(rows1,rows2,cols)
 	cursor_move(0,(rows1 + rows2 + n - 2)*grid_y);
 	
 	new noxTag[] = "NOX Wizard 0.82"
-	cursor_right(cols/2 - 3 - strlen(noxTag)/2);
-	menu_addTitle(noxTag);
+	if(!cursor_right(cols/2 - 3 - strlen(noxTag)/2))
+		menu_addTitle(noxTag);
 		
 	cursor_setProperty(CRP_MAX_X,cursor_getProperty(CRP_START_X) + cols*grid_x);
 	cursor_setProperty(CRP_MAX_Y,cursor_getProperty(CRP_START_Y) + (rows1 + rows2 + n - 4)*grid_y);

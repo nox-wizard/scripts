@@ -1,5 +1,5 @@
 /*!
-\defgroup script_command_where 'where
+\defgroup script_command_recompile_small 'recompile_small
 \ingroup script_commands
 
 @{
@@ -7,16 +7,28 @@
 
 /*!
 \author Fax
-\fn cmd_where(const chr)
-\brief shows character's position
+\fn cmd_recompile_small(const chr)
+\brief recompiles small scripts
 
-<B>syntax:</B> 'where
+<B>syntax:</B> 'recompile_small
 
 <br>
 */
-public cmd_recompile_small()
+public cmd_recompile_small(chr)
 {
+	new name[50];
+	chr_getProperty(chr,CP_STR_NAME,0,name);
+	
+	//let's warn everyone that someone is recompiling
+	broadcast("Recompiling Small scripts...");
+	log_message("%s(%d) is recompiling Small scripts",name,chr);
+	log_warning("%s(%d) is recompiling Small scripts",name,chr);
+	
+	//recompile scripts
 	recompileSmall();
+	
+	broadcast("DONE");
+	
 }
 
 /*! }@ */

@@ -38,8 +38,8 @@ public cmd_iset(const chr)
 		return;
 	}
 
-	new prop,val = 0;
-	if(readPropAndVal(chr,prop,val) == INVALID) return;
+	new prop,val = -1000;
+	readPropAndVal(chr,prop,val)
 
 
 
@@ -79,11 +79,14 @@ public cmd_iset_targ(target, chr, object, x, y, z, unused, val)
 	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isItem(object))
-	{
-		itm_setProperty(object,prop,_,val);
-		itm_refresh(object);
-		chr_message(chr,_,"property set");
-	}
+		if(val != -1000)
+		{
+			itm_setProperty(object,prop,_,val);
+			itm_refresh(object);
+			chr_message(chr,_,"property set");
+		}
+		else
+			chr_message(chr,_,"Property value is currently %d",itm_getProperty(object,prop));
 
 	else chr_message(chr,_,"You must target an item");
 }
@@ -139,11 +142,8 @@ static readPropAndVal(chr,&prop,&val)
 	}
 
 	if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
-	{
-		chr_message(chr,_,"Integer value required");
 		return INVALID;
-	}
-
+	
 	val = str2Int(__cmdParams[1]);
 	return OK;
 }

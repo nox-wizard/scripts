@@ -1,0 +1,2297 @@
+//addmenu.xss
+//Author: Fax
+//
+//This file contains the add menu structure, it's parsed and loaded at server startup
+//but you can reload it at any time with "'add reload".
+//
+//THE ADD MENU
+//The add menu is formed by a main page and many submenus.
+//The main page serves as a toolbar to open submenus.
+//To create a new submenu follow this syntax:
+//SECTION SUBMENU		:declares submenu, the section number will define the submenu order in 'add main menu
+//{
+//	TITLE 		: submenu title
+//	FUNCTION 	: function that will draw the menu, if not specified a standard submenu will be drawn
+//	HEIGHT		: menu height, higher menus contain more items in a column
+//}
+//
+//For custom submenus the callback functions prototype must be:
+//public mycallback(chr,submenu)
+//chr: the character who is using the menu
+//submenu: the submenu index
+//
+//Once you declared the submenu you have to decide if it will be a 
+//standard submenu or a custom one.
+//Standard submenus contain many pages, each of wich contains a list
+//of items, the items in those lists are declared in this file.
+//If you don't want a standard submenu (e.g.: the "architecture" submenu) you can
+//specify a custom function that will draw the menu.
+//If you want a standard menu you can declare it with the following sysntax:
+//SECTION PAGE		: declares a new page
+//{
+//	SUBMENU		:wich submenu the page belongs to
+//	TITLE		:page title
+//	FUNCTION 	:function that will draw the page, if left blank a standard page will be drawn
+//	INTERLINE	:rows spacing for standard pages (in tenths of row)
+//	TAB 		:columns spacing for standard pages
+//	LABEL		:draw labels
+//	PIC		:draw pics, no value required
+//	ITEM 		:add an item to the list, value must be: <ID> <scriptID> <name>
+//	NPC		:add an NPC to the list
+//}
+//
+//Again pages can be standard or custom, for custom pages you have to specify FUNCTION.
+//In that case your function must have the following prototype:
+//	callback(submenu,page)
+//submenu: the submenu
+//page: the page to draw
+//
+//and the given function will be called when it comes the time to draw the page(e.g.: the "combat" menu)
+//By default the page contains a list of all items specified with ITEM or NPC.
+//
+//You can edit the menu messages in SECTION MESSAGES
+//
+//RULES
+//This file is parsed by a Small scripted parser, so not all XSS features are available and
+//you shall be aware of what you can't do:
+//
+//You can't mix sections: this means that all pages of a submenu MUST
+//be declared sequentially.
+//You can mix SUBMENU sections (submenu 4 before submenu 2)
+//and their pages blocks too (submenu 4 pages before submenu 2 pages) but you can't
+//mix them up (a submenu 2 page, then a submenu 4 page, then 3 submenu 2 pages ...)
+//
+//Submenu numbers must be sequential
+//
+//You can use symbolic constants in this file but you can't declare them here, you can
+//declare them in another file you will include in the symbols.
+//
+//
+//COMMON PROBLEMS
+//You changed this file but the menu is still unmodified
+//	reload this file with "'add reload" and reopen the menu
+//
+//You added some items to a page and now they are shown outside of the menu limits
+//	reduce TAB and/or INTERLINE in the appropriate SECTION PAGE or 
+//	increase the submenu HEIGHT
+//
+//Client crashes when you open a submenu
+//	check TAB and INTERLINE in all pages, if you have many
+//	items in a page and a large TAB or INTERLINE items may go out of the menu boundaries.
+//	This is not usually a problem but if the items go outside of the screen the client may
+//	crash with a "socket send error WSA_10035" message or something like that.
+//	This also happens if your submenu contains too many items, in that case split it into 
+//	2 or more submenus.
+//	These are client related problems and we can't do anything
+//	to fix them.
+//
+//You added a page and it's shown in the wrong submenu
+//	When you copy-pasted the section header you forgot to update SUBMENU
+//
+//
+
+SECTION MESSAGES
+{
+	MESSAGE 0  current adding mode: continuous
+	MESSAGE 1  current adding mode: single
+	MESSAGE 2  reload
+	MESSAGE 3  create items in backpack
+	MESSAGE 4  Item %d created
+	MESSAGE 5  click to position the item
+	MESSAGE 6  click to position the character
+	MESSAGE 7  WARNING
+	MESSAGE 8  Some items couldn't be loaded^ncheck items definitions
+	MESSAGE 9  Item type: 
+	MESSAGE 10 Material: 
+	MESSAGE 11 Subtype: 
+	MESSAGE 12 Open menu
+	MESSAGE 13 This menu will generate a list of items^n
+	MESSAGE 14 basing on the informations provided above.^n^n
+	MESSAGE 15 'Item type' can be: wall, stairs, floor, roof, door, gate^n^n
+	MESSAGE 16 'Material' depends on the itemtype:^n
+	MESSAGE 17 'subtype': a number 2,3,4 ...
+	MESSAGE 18 %s is not defined
+	MESSAGE 19 Loading 'add menu
+	MESSAGE 20 Unable to read '%s', 'add menu won't work correctly
+	MESSAGE 21 %d items in %d pages loaded^n
+	MESSAGE 22 %s(%d): must be an integer number
+	MESSAGE 23 %s(%d): must be an Hex number
+	MESSAGE 24 Too many items - increase addMenuList[][] size in order to load more items
+}
+
+SECTION SUBMENU 0
+{
+	TITLE Magic
+	HEIGHT 15
+}
+
+SECTION SUBMENU 1
+{
+	TITLE Combat
+	HEIGHT 15
+}
+
+SECTION SUBMENU 2
+{
+	TITLE Deeds
+	HEIGHT 25
+}
+
+SECTION SUBMENU 3
+{
+	TITLE NPC
+	HEIGHT 25
+}
+
+SECTION SUBMENU 4
+{
+	TITLE Spawners
+	HEIGHT 31
+}
+
+SECTION SUBMENU 5
+{
+	TITLE Supply
+	HEIGHT 30
+}
+
+SECTION SUBMENU 6
+{
+	TITLE Signs
+	HEIGHT 20
+}
+
+SECTION SUBMENU 7
+{
+	TITLE Tools
+	HEIGHT 20
+}
+
+SECTION SUBMENU 8
+{
+	TITLE Architecture
+	FUNCTION addgui_architecture
+	HEIGHT 15
+}
+
+SECTION SUBMENU 9
+{
+	TITLE Furniture
+	HEIGHT 27
+}
+
+SECTION SUBMENU 10
+{
+	TITLE Shard
+	HEIGHT 15
+}
+
+//
+//MAGIC MENU
+//
+
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE basic
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F14 $item_recall_rune Recall rune 
+	ITEM 0EFA $item_spellbook Spellbook 
+	ITEM 0E34 $item_blank_scrolls Blank scrolls 
+	ITEM 1F6D $item_all-spell_scroll all-spell scroll
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE reagents
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 0F7A $item_black_pearl Black Pearl
+	ITEM 0F7B $item_bloodmoss Blood Moss
+	ITEM 0F84 $item_garlic Garlic
+	ITEM 0F85 $item_ginseng Ginseng
+	ITEM 0F86 $item_mandrake_root Mandrake Root
+	ITEM 0F88 $item_nightshade Nightshade
+	ITEM 0F8C $item_sulfurous_ash Sulfurous Ash
+	ITEM 0F8D $item_spiders_silk Spiders Silk
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE reagents
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL2
+	ITEM 0F78 $item_batwing Bat Wing
+	ITEM 0F79 $item_blackmoor Blackmoor
+	ITEM 0F7C $item_bloodspawn Bloodspawn
+	ITEM 0F7D $item_vial_of_blood Vial of Blood
+	ITEM 0F7E $item_bone Bone
+	ITEM 0F7F $item_brimstone Brimstone
+	ITEM 0F80 $item_daemon_bone Daemon Bone
+	ITEM 0F81 $item_fertile_dirt Fertile Dirt
+	ITEM 0F82 $item_dragon_blood Dragon Blood
+	ITEM 0F83 $item_executioners_cap Executioner's Cap
+	ITEM 0F87 $item_eye_of_newt Eye of Newt
+	ITEM 0F89 $item_obsidian Obsidian
+	ITEM 0F8A $item_pig_iron Pig Iron
+	ITEM 0F8B $item_pumice Pumice
+	ITEM 0F8E $item_serpents_scale Serpent Scales
+	ITEM 0F8F $item_volcanic_ash Volcanic Ash
+	ITEM 0F90 $item_dead_wood Dead Wood
+	ITEM 0F91 $item_wyrms_heart Worms Heart
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE bottles
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 0F0E $item_bottle10 Bottle
+	ITEM 0E24 $item_empty_vials Empty vial
+	ITEM 0E25 $item_bottle11 Bottle
+	ITEM 0E26 $item_bottle1 Bottle
+	ITEM 0E27 $item_bottle2 Bottle
+	ITEM 0E28 $item_bottle3 Bottle
+	ITEM 0E29 $item_bottle4 Bottle
+	ITEM 0E2A $item_bottle5 Bottle
+	ITEM 0E2B $item_bottle6 Bottle
+	ITEM 0E2C $item_bottle7 Bottle
+	ITEM 0EFB $item_bottle8 Bottle
+	ITEM 0EFC $item_bottle9 Bottle
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE potions
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 0E9B $item_mortar_and_pestal Mortar And Pestal
+	ITEM 0F06 $item_night_sight_potion Night Sight Potion
+	ITEM 0F07 $item_cure_potion Cure_Potion
+	ITEM 0F08 $item_agility_potion Agility Potion
+	ITEM 0F09 $item_strength_potion Strength Potion
+	ITEM 0F0A $item_poison_potion Poison Potion
+	ITEM 0F0B $item_energy_potion Resurrection Potion
+	ITEM 0F0C $item_lesser_heal_potion Lesser Heal Potion
+	ITEM 0F0C $item_greater_heal_potion Greater Heal Potion
+	ITEM 0F0D $item_lesser_explosion_potion Lesser Explosion Potion
+	ITEM 0F0D $item_explosion_potion Explosion Potion
+	ITEM 0F0D $item_greater_explosion_potion Greater Explosion Potion
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE wands
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 0DF2 $item_wand_of_greater_heal Greater Heal Wand
+	ITEM 0DF3 $item_wand_of_summon_daemon Summon Daemon Wand
+	ITEM 0DF4 $item_wand_of_healing Magic Arrow Wand
+	ITEM 0DF5 $item_wand_of_resurrection Resurrect Wand
+	ITEM 0F5C $item_fire_mace Fireball Mace
+	ITEM 0F5C $item_wand_of_greater_healing greater healing wand
+	ITEM 0F5C $item_wand_of_energy_vortex energy vortex wand
+	ITEM 0F5C $item_wand_of_magic_arrow magic arrow wand
+	ITEM 0F5C $item_wand_of_ressurection ressurection wand
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE gates
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 0F6C $item_blue_moongate Blue Moongate
+	ITEM 0DDA $item_red_moongate Red Moongate
+	ITEM 1FD4 $item_black_moongate Black Moongate
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE 1st circle
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F35 $item_reactive_armor_scroll reactive armor Scroll
+	ITEM 1F36 $item_clumsy_scroll clumsy Scroll
+	ITEM 1F37 $item_create_food_scroll create food Scroll
+	ITEM 1F38 $item_feeblemind_scroll feeblemind Scroll
+	ITEM 1F39 $item_heal_scroll heal TraP_Scroll
+	ITEM 1F3A $item_magic_arrow_scroll Magic arrow Scroll
+	ITEM 1F3B $item_night_sight_scroll night sight Scroll
+	ITEM 1F3C $item_weaken_scroll weaken Scroll
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE 2nd circle
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F2D $item_agility_scroll Agility Scroll 
+	ITEM 1F2E $item_cunning_scroll Cunning Scroll 
+	ITEM 1F2F $item_cure_scroll Cure Scroll 
+	ITEM 1F30 $item_harm_scroll Harm Scroll 
+	ITEM 1F31 $item_magic_trap_scroll Magic Trap Scroll 
+	ITEM 1F32 $item_magic_untrap_scroll Magic Untrap Scroll
+	ITEM 1F33 $item_protection_scroll Protection Scroll 
+	ITEM 1F34 $item_strength_scroll Strength Scroll
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE 3rd circle
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F3D $item_bless_scroll Bless Scroll
+	ITEM 1F3E $item_fireball_scroll Fireball Scroll
+	ITEM 1F3F $item_magic_lock_scroll Magic Lock Scroll
+	ITEM 1F40 $item_poison_scroll Poison Scroll
+	ITEM 1F41 $item_telekinesis_scroll Telekinesis Scroll
+	ITEM 1F42 $item_teleport_scroll Teleport Scroll
+	ITEM 1F43 $item_unlock_scroll Unlock Scroll
+	ITEM 1F44 $item_wall_of_stone_scroll Wall of Stone Scroll
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE 4th circle
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F45 $item_archcure_scroll Archcure Scroll
+	ITEM 1F46 $item_arch_protection_scroll Arch Protection Scroll
+	ITEM 1F47 $item_curse_scroll Curse Scroll
+	ITEM 1F48 $item_fire_field_scroll Fire Field Scroll
+	ITEM 1F49 $item_greater_heal_scroll Greater Heal Scroll
+	ITEM 1F4A $item_lightning_scroll Lightning Scroll
+	ITEM 1F4B $item_mana_drain_scroll ManaDrain Scroll
+	ITEM 1F4C $item_recall_scroll Recall Scroll
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE 5th circle
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F4D $item_blade_spirits_scroll Blade Spirits Scroll
+	ITEM 1F4E $item_dispel_field_scroll Dispel Field Scroll
+	ITEM 1F4F $item_incognito_scroll Incognito Scroll
+	ITEM 1F50 $item_magic_reflection_scroll Magic Reflection Scroll
+	ITEM 1F51 $item_mind_blast_scroll Mind Blast Scroll
+	ITEM 1F52 $item_paralyze_scroll Paralyze Scroll
+	ITEM 1F53 $item_poison_field_scroll Poison Field Scroll
+	ITEM 1F54 $item_summon_creature_scroll Summon Creature Scroll
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE 6th circle
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F55 $item_dispel_scroll Dispel Scroll
+	ITEM 1F56 $item_energy_bolt_scroll Energy Bolt Scroll
+	ITEM 1F57 $item_explosion_scroll Explosion Scroll
+	ITEM 1F58 $item_invisibility_scroll Invisibility Scroll
+	ITEM 1F59 $item_mark_scroll Mark Scroll
+	ITEM 1F5A $item_mass_curse_scroll Mass Curse Scroll
+	ITEM 1F5B $item_paralyze_field_scroll Paralyze Field Scroll
+	ITEM 1F5C $item_reveal_scroll Reveal Scroll
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE 7th circle
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F5D $item_chain_lightning_scroll Chain Lightning Scroll
+	ITEM 1F5E $item_energy_field_scroll Energy Field Scroll
+	ITEM 1F5F $item_flamestrike_scroll Flamestrike Scroll
+	ITEM 1F60 $item_gate_travel_scroll Gate Travel Scroll
+	ITEM 1F61 $item_mana_vampire_scroll Mana Vampire Scroll
+	ITEM 1F62 $item_mass_dispel_scroll Mass Dispel Scroll
+	ITEM 1F63 $item_meteor_swarm_scroll Meteor Storm Scroll
+	ITEM 1F64 $item_polymorph_scroll Polymorph Scroll
+}
+SECTION PAGE
+{
+	SUBMENU 0
+	TITLE 8th circle
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 1F65 $item_earthquake_scroll Earthquake Scroll
+	ITEM 1F66 $item_energy_vortex_scroll Energy Vortex Scroll
+	ITEM 1F67 $item_resurrection_scroll Resurrection Scroll
+	ITEM 1F68 $item_summon_air_elemental_scroll Summon Air Elemental Scroll
+	ITEM 1F69 $item_summon_daemon_scroll Summon Daemon Scroll
+	ITEM 1F6A $item_summon_earth_elemental_scroll Summon Earth Elemental Scroll
+	ITEM 1F6B $item_summon_fire_elemental_scroll Summon Fire Elemental Scroll
+	ITEM 1F6C $item_summon_water_elemental_scroll Summon Water Elemental Scroll
+}
+
+//
+//COMBAT MENU
+//
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Platemail
+	FUNCTION addgui_combat
+	
+	ITEM 1412 $item*_plate_helm helm
+	ITEM 1413 $item*_plate_gorget gorget
+	ITEM 1416 $item*_platemail chest
+	ITEM 1410 $item*_plate_sleeves sleeves
+	ITEM 1414 $item*_plate_gloves gloves
+	ITEM 141A $item*_plate_legs legs
+	ITEM 1C04 $item*_female_plate female
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Chainmail
+	FUNCTION addgui_combat
+	
+	ITEM 13BB $item*_chain_coif coif
+	ITEM 13C4 $item*_chain_tunic tunic
+	ITEM 13C3 $item*_chain_legs legs
+	
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Ringmail
+	FUNCTION addgui_combat
+	
+	ITEM 13ED $item*_ringmail_tunic tunic
+	ITEM 13EF $item*_ringmail_sleeves sleeves
+	ITEM 13F2 $item*_ringmail_gloves gloves
+	ITEM 13F1 $item*_ringmail_legs legs
+	
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Studded
+	FUNCTION addgui_combat
+	
+	ITEM 13D6 $item*_studded_leather_gorget gorget
+	ITEM 13E2 $item*_studded_leather_tunic tunic
+	ITEM 13D4 $item*_studded_leather_sleeves sleeves
+	ITEM 13DD $item*_studded_leather_gloves gloves
+	ITEM 13E1 $item*_studded_leather_legs legs
+	ITEM 1C02 $item*_female_studded_leather female
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Leather
+	FUNCTION addgui_combat
+	
+	ITEM 1DBA $item*_leather_cap cap
+	ITEM 13D3 $item*_leather_tunic tunic
+	ITEM 13CD $item*_leather_sleeves sleeves
+	ITEM 13CE $item*_leather_gloves gloves
+	ITEM 13D2 $item*_leather_legs legs
+	ITEM 1C06 $item*_leather_female female
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Bone
+	FUNCTION addgui_combat
+	
+	ITEM 1451 $item*_bone_helm helm
+	ITEM 144F $item*_bone_chest chest
+	ITEM 144E $item*_bone_sleeves sleeves
+	ITEM 1450 $item*_bone_gloves gloves
+	ITEM 1452 $item*_bone_legs legs
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Helms
+	FUNCTION addgui_combat
+	
+	ITEM 1412 $item*_plate_helm plate_helm
+	ITEM 140C $item*_bascinet bascinet
+	ITEM 1408 $item*_close_helm close_helm
+	ITEM 140A $item*_helmet helmet
+	ITEM 140E $item*_nose_helm nose_helm
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Shields
+	FUNCTION addgui_combat
+	ITEM 1B73 $item*_buckler buckler
+	ITEM 1B7B $item*_metal_shield metal_shield
+	ITEM 1B72 $item*_bronze_shield bronze_shield
+	ITEM 1B78 $item*_wooden_kite_shield wooden_kite_shield
+	ITEM 1B74 $item*_metal_kite_shield metal_kite_shield
+	ITEM 1B76 $item*_heater heater
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Axes
+	FUNCTION addgui_combat
+	
+	ITEM 0F4B $item*_double_axe double_axe
+	ITEM 0F47 $item*_battle_axe battle_axe
+	ITEM 13FB $item*_large_battle_axe large_battle_axe
+	ITEM 0F49 $item*_axe axe
+	ITEM 1442 $item*_two two-handed_axe
+	ITEM 0F45 $item*_executioners_axe executioners_axe
+	ITEM 13B0 $item*_war-axe war-axe
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Blades
+	FUNCTION addgui_combat
+	
+	ITEM 0F51 $item*_dagger dagger
+	ITEM 1440 $item*_cutlass cutlass
+	ITEM 1400 $item*_kryss kryss
+	ITEM 13FF $item*_katana katana
+	ITEM 13B6 $item*_scimitar scimitar
+	ITEM 0F5E $item*_broadsword broadsword
+	ITEM 13B8 $item*_long_sword long_sword
+	ITEM 13BA $item*_viking_sword viking_sword
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Maces
+	FUNCTION addgui_combat
+	
+	ITEM 0F5C $item*_mace mace
+	ITEM 143A $item*_maul maul
+	ITEM 1406 $item*_war_mace war_mace
+	ITEM 1438 $item*_war_hammer war_hammer
+	ITEM 143C $item*_hammer_pick hammer_pick
+}
+SECTION PAGE
+{
+	SUBMENU 1
+	TITLE Other
+	FUNCTION addgui_combat
+	
+	ITEM 0F62 $item*_short_spear short_spear
+	ITEM 1405 $item*_war_fork war_fork
+	ITEM 0F62 $item*_spear spear
+	ITEM 0F42 $item*_bardiche bardiche
+	ITEM 143E $item*_halberd halberd
+	ITEM 13B2 $item*_bow bow
+	ITEM 0F50 $item*_crossbow crossbow
+	ITEM 13FD $item*_heavy_crossbow heavy_crossbow
+}
+
+SECTION PAGE
+{
+	SUBMENU 2
+	TITLE Houses
+	INTERLINE 10
+	TAB 30
+	LABEL
+	ITEM 0000 $item_small_stone_plaster_house_deed small stone plaster house
+	ITEM 0000 $item_small_stone_house_deed small stone house
+	ITEM 0000 $item_small_brick_house_deed small brick house
+	ITEM 0000 $item_small_wood_house_deed small wood house
+	ITEM 0000 $item_small_wood_plaster_house_deed small wood plaster house
+	ITEM 0000 $item_small_wood_house_with_straw_roof_deed small wood house with straw roof
+	ITEM 0000 $item_blue_tent_deed blue tent
+	ITEM 0000 $item_green_tent_deed green tent
+	ITEM 0000 $item_3_room_brick_house_deed 3 room brick house
+	ITEM 0000 $item_4_room_house_deed 4 room house
+	ITEM 0000 $item_2_story_wood_plaster_house_deed 2 story wood plaster house
+	ITEM 0000 $item_2_story_stone_plaster_house_deed 2 story stone plaster house
+	ITEM 0000 $item_tower_deed tower
+	ITEM 0000 $item_keep_deed keep
+	ITEM 0000 $item_castle_deed castle
+	ITEM 0000 $item_small_tower_deed small tower
+	ITEM 0000 $item_small_marble_shop_deed marble shop
+	ITEM 0000 $item_farm_house_deed farm house
+	ITEM 0000 $item_small_stone_shop_deed stone shop
+	ITEM 0000 $item_2-story_villa_deed 2-story villa
+	ITEM 0000 $item_sandstone_patio_house_deed sandstone patio house
+	ITEM 0000 $item_2-story_log_cabin_deed 2-story log cabin
+	ITEM 0000 $item_large_marble_patio_house_deed large marble patio house
+}
+
+SECTION PAGE
+{
+	SUBMENU 2
+	TITLE Misc
+	INTERLINE 10
+	TAB 30
+	LABEL	
+	ITEM 0000 $item_trashcan_deed trashcan
+	ITEM 0000 $item_large_smithy_deed large smithy deed
+	ITEM 0000 $item_pentagram_deed pentagram
+	ITEM 0000 $item_cannon_deed cannon
+	ITEM 0000 $item_deed deed
+	ITEM 0000 $item_treasure_deed treasure 1
+	ITEM 0000 $item_treasure_deed_1 treasure 2
+	ITEM 0000 $item_treasure_deed_2 treasure 3
+	ITEM 0000 $item_treasure_deed_3 treasure 4
+	ITEM 0000 $item_lighthouse_deed lighthouse
+	ITEM 0000 $item_telescope_deed telescope
+	ITEM 0000 $item_arbitoir_deed arbitoir
+	ITEM 0000 $item_deed_small_ship small ship
+	ITEM 0000 $item_deed_small_dragon_ship small dragon ship
+	ITEM 0000 $item_deed_medium_ship medium ship
+	ITEM 0000 $item_deed_medium_dragon_ship medium dragon ship
+	ITEM 0000 $item_deed_large_ship large ship
+	ITEM 0000 $item_deed_large_dragon_ship large dragon ship
+	ITEM 0000 $item_guildstone_deed guildstone
+	ITEM 0000 $item_christmas_tree_deed christmas tree
+	ITEM 0000 $item_dartboard_deed dartboard 1
+	ITEM 0000 $item_dartboard_deed_1 dartboard 2
+	ITEM 0000 $item_townstone_deed townstone
+	ITEM 0000 $item_forge_deed forge
+	ITEM 0000 $item_large_forge_deed_1 forge 1
+	ITEM 0000 $item_large_forge_deed_2 forge 2
+	ITEM 0000 $item_anvil_deed_1 anvil 1
+	ITEM 0000 $item_anvil_deed_2 anvil 2
+	ITEM 0000 $item_spinning_wheel_deed_1 spinning wheel 1
+	ITEM 0000 $item_spinning_wheel_deed_2 spinning wheel 2
+	ITEM 0000 $item_archery_butte_deed_1 archery butte 1
+	ITEM 0000 $item_archery_butte_deed_2 archery butte 2
+	ITEM 0000 $item_training_dummy_deed_1 training dummy 1
+	ITEM 0000 $item_training_dummy_deed_2 training dummy 2
+	ITEM 0000 $item_pickpocket_dip_deed_1 pickpocket dip 1
+	ITEM 0000 $item_pickpocket_dip_deed_2 pickpocket dip 2
+	ITEM 0000 $item_loom_deed_1 loom 1
+	ITEM 0000 $item_loom_deed_2 loom 2
+}
+
+//
+//NPC MENU
+//
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Animals
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 2120 $npc_a_horse Horse 1
+	NPC 211F $npc_a_horse_1 Horse 2
+	NPC 2124 $npc_a_horse_2 Horse 3
+	NPC 2121 $npc_a_horse_3 Horse 4
+	NPC 20DB $npc_a_grizzly_bear a grizzly bear
+	NPC 20F5 $npc_a_gorilla a gorilla
+	NPC 20CF $npc_a_black_bear a brown bear
+	NPC 20D1 $npc_a_chicken a chicken
+	NPC 20D4 $npc_a_great_hart a deer
+	NPC 20D5 $npc_a_dog a dog
+	NPC 20DA $npc_an_alligator an alligator
+	NPC 20E1 $npc_a_polar_bear a polar bear
+	NPC 20E1 $npc_a_vera_bear a vera bear
+	NPC 20E1 $npc_a_cave_bear a cave bear 
+	NPC 20E2 $npc_a_rabbit a rabbit
+	NPC 20EB $npc_a_sheep a sheep
+	NPC 20EE $npc_forest_bird a bird
+	NPC 211D $npc_an_eagle an eagle
+	NPC 20F6 $npc_a_rideable_llama a llama
+	NPC 2101 $npc_a_pig a pig
+	NPC 2102 $npc_a_panther a panther
+	NPC 2103 $npc_a_cow a cow
+	NPC 2108 $npc_a_goat a goat
+	NPC 211B $npc_a_cat a cat
+	NPC 2126 $npc_a_pack_horse a pack horse
+	NPC 2127 $npc_a_pack_llama a pack llama
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE T2A
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 005F $npc_a_kraken Kraken
+	NPC 004B $npc_a_titan Titan
+	NPC 0050 $npc_a_giant_toad Giant Toad
+	NPC 0051 $npc_a_bullfrog Bullfrog
+	NPC 004C $npc_a_cyclopedian_warrior Cyclopedian Warrior
+	NPC 0003 $npc_a_mummy Mummy
+	NPC 000D $npc_a_snow_elemental Snow Elemental
+	NPC 0034 $npc_an_ice_serpent Ice Snake
+	NPC 0035 $npc_a_frost_troll Frost Troll
+	NPC 0008 $npc_a_swamp_tentacle Swamp Tentacle
+	NPC 0047 $npc_a_terathan_drone Terathen Drone
+	NPC 0048 $npc_a_terathan_warrior Terathen Warrior
+	NPC 0048 $npc_a_terathan_avenger Terathen Avenger
+	NPC 0046 $npc_a_terathan_matriarch Terathen Matriarche
+	NPC 0047 $npc_banker_f Terathen Newt
+	NPC 001E $npc_a_stone_harpy Stone Harpy
+	NPC 0004 $npc_a_stone_gargoyle Stone Gargoyle 
+	NPC 0027 $npc_an_imp Imp
+	NPC 0009 $npc_an_ice_fiend Ice Fiend 
+	NPC 0056 $npc_an_ophidian_warrior Ophidian Warrior
+	NPC 0056 $npc_an_ophidian_enforcer Ophidian Enforcer
+	NPC 0056 $npc_an_ophidian_avenger Ophidian Avenger
+	NPC 0055 $npc_an_ophidian_apprentice_mage Ophidian Apprentice
+	NPC 0055 $npc_an_ophidian_shaman Ophidian Shaman
+	NPC 0057 $npc_an_ophidian_matriarch Ophidian Matriarche
+	NPC 00CE $npc_a_lava_lizard Lava Lizard
+	NPC 00CC $npc_a_nightmare A Nightmare
+	NPC 00DA $npc_a_frenzied_ostard Frenzied Ostard
+	NPC 00DB $npc_a_forest_ostard Forest Ostard
+	NPC 00D2 $npc_a_desert_ostard Desert Ostard
+	NPC 000D $npc_an_efreet Efreet
+	NPC 0033 $npc_a_frost_ooze Frost Ooze
+	NPC 0016 $npc_an_elder_gazer Gazer Chief
+	NPC 00C9 $npc_a_hellcat Hellcat
+	NPC 00D6 $npc_a_hellcat_predator Hellcat Predator
+	NPC 000E $npc_an_ice_elemental Ice Elemental
+	NPC 0056 $npc_an_ophidian_knight-errant ","Ophidian Knight
+	NPC 0005 $npc_a_phoenix Phoenix
+	NPC 0015 $npc_a_giant_ice_serpent Ice Serpent
+	NPC 0015 $npc_a_giant_lava_serpent Lava Serpent
+	NPC 001C $npc_a_frost_spider Frost Spider
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Deamons
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 20D3 $npc_deamon_unarmed a daemon
+	NPC 20D3 $npc_a_daemon a daemon w/sword
+	NPC 0000 $npc_an_ice_fiend ice fiend
+	NPC 20D9 $npc_a_gargoyle a gargoyle
+	NPC 0000 $npc_a_stone_gargoyle stone gargoyle
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Elementals
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 20ED $npc_an_air_elemental an air elemental
+	NPC 20D7 $npc_an_earth_elemental an earth elemental
+	NPC 20F3 $npc_a_fire_elemental a fire elemental
+	NPC 210B $npc_a_water_elemental a water elemental 
+	NPC 210B $npc_a_blood_elemental a blood elemental
+	NPC 20ED $npc_a_poison_elemental a poison elemental
+	NPC 0000 $npc_an_ice_elemental ice elemental
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Orcs
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 20D8 $npc_an_ettin an ettin
+	NPC 20D8 $npc_an_ettin_1 an ettin with axe
+	NPC 20E0 $npc_orc an orc
+	NPC 20E0 $npc_orc_mace an orc with club
+	NPC 20E0 $npc_an_orcish_mage an orcish mage
+	NPC 20E0 $npc_orc_2_hand_axe an orcish captian
+	NPC 20E0 $npc_an_orcish_lord an orcish lord
+	NPC 20DF $npc_an_ogre an ogre
+	NPC 20DF $npc_an_ogre_lord an ogre lord
+	NPC 20E9 $npc_a_troll a troll
+	NPC 20E9 $npc_a_troll_1 a troll 2
+	NPC 20E9 $npc_a_troll_2 a troll 3
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Monsters
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 20D2 $npc_a_corpser a corpser
+	NPC 20d0 $npc_a_giant_rat a giant rat
+	NPC 20E4 $npc_a_giant_scorpion a giant scorpion
+	NPC 20FE $npc_a_giant_serpent a giant serpent
+	NPC 0096 $npc_a_sea_serpent a giant sea serpent
+	NPC 20FD $npc_a_giant_spider a giant spider
+	NPC 20FD $npc_a_dark_spider a dark spider
+	NPC 20DE $npc_lizardman_short_sword a lizardman
+	NPC 20DE $npc_lizardman_fencer a lizardman with spear
+	NPC 20DE $npc_lizardman_macefighter a lizardman with hammer
+	NPC 20F9 $npc_a_mongbat a mongbat
+	NPC 20E3 $npc_ratman_axe a ratman with club
+	NPC 20E3 $npc_ratman a ratman with sword
+	NPC 20FA $npc_a_reaper a reaper
+	NPC 2123 $npc_a_sewer_rat a sewer rat
+	NPC 20E8 $npc_a_slime a slime
+	NPC 20FC $npc_a_snake a snake
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Undeads
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 20F4 $npc_a_gazer a gazer
+	NPC 210A $npc_a_headless a headless
+	NPC 20F8 $npc_a_lich a lich
+	NPC 0000 $npc_a_lich_elder a liche elder
+ 	NPC 20F8 $npc_a_lich_lord a lich lord
+	NPC 20DC $npc_a_harpy a harpy
+	NPC 20E7 $npc_a_bone_knight a skeletal knight
+	NPC 20E7 $npc_a_bone_magi a skeletal mage
+	NPC 20E7 $npc_a_skeleton a skeleton
+	NPC 20E7 $npc_a_skeleton_1 a skeleton with axe
+	NPC 2109 $npc_a_spectre a spectre
+	NPC 2100 $npc_a_wisp a wisp
+	NPC 20EC $npc_a_zombie a zombie
+	NPC 0000 $npc_a_zombie_elder a zombie elder
+	NPC 0000 $npc_a_wraith a wraith
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Unique
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 20D3 $npc_the_collector_of_souls the Collector of Souls
+	NPC 20DC $npc_a_harpy_hen a harpy hen
+	NPC 20D3 $npc_lord_of_the_abyss the Lord of the Abyss
+	NPC 20D3 $npc_slayer the Slayer
+	NPC 20F4 $npc_xanathar Xanathar
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Frost/stone
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 0000 $npc_an_ice_serpent ice snake
+	NPC 0000 $npc_a_giant_ice_serpent ice serpent
+	NPC 0000 $npc_an_ice_giant ice giant
+	NPC 0000 $npc_a_frost_troll frost troll
+	NPC 0000 $npc_a_frost_ooze frost Ooze
+	NPC 0000 $npc_a_frost_spider frost spider
+	NPC 0000 $npc_a_stone_harpy stone harpy
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE Dragons
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 0000 $npc_a_wyvern a Wyvern (brown)
+	NPC 0000 $npc_a_drake a Drake (red)
+	NPC 0000 $npc_a_drake_1 a Drake (brown)
+	NPC 0000 $npc_a_dragon a Dragon (brown)
+	NPC 0000 $npc_a_dragon_2 a Dragon (red)
+	NPC 0000 $npc_an_ancient_wyrm an ancient Wyrm (brown)
+	NPC 0000 $npc_an_ancient_wyrm_2 an ancient Wyrm (brown)
+	NPC 0000 $npc_an_ancient_wyrm_1 an ancient Wyrm (red)
+	NPC 0000 $npc_a_white_wyrm_1 a white wyrm
+	NPC 0000 $npc_a_white_wyrm a pure white wyrm
+	NPC 0000 $npc_a_dragon_1 a Dragon (brown)
+	NPC 0000 $npc_a_drake_2 a Drake (brown)
+	NPC 0000 $npc_a_fire_wyrm a fire wyrm
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE males
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 0000 $npc_murderer Murderer
+	NPC 2022 $npc_artist_m Artist
+	NPC 202B $npc_beggar_m Beggar
+	NPC 0000 $npc_sammy Boy
+	NPC 2106 $npc_billy Boy 2
+	NPC 2030 $npc_brigand_m Brigand
+	NPC 0000 $npc_cobbler_m Cobbler
+	NPC 2106 $npc_cultist_m Cultist
+	NPC 2106 $npc_fighter_m Fighter
+	NPC 200E $npc_guard Guard
+	NPC 200E $npc_dark_knight Guard Personal
+	NPC 0000 $npc_chaos_guard_m Guard Chaos
+	NPC 0000 $npc_order_guard_m Guard Order
+	NPC 2033 $npc_gypsy_m Gypsy
+	NPC 2011 $npc_jailor_m Jailor
+	NPC 2106 $npc_mondain Mondain
+	NPC 2009 $npc_noble_m Noble
+	NPC 0000 $npc_archmage Necromancer
+	NPC 2008 $npc_peasant_m Peasant
+	NPC 2015 $npc_pirate_m Pirate
+	NPC 0000 $npc_murderer PK
+	NPC 0000 $npc_akbaar PK Mage
+	NPC 0000 $npc_kindor_aedrat PK Archer
+	NPC 2017 $npc_sailor_m Sailor
+	NPC 2106 $npc_adventurer_m Adventurer
+	NPC 2018 $npc_shipwright_m Shipwright
+	NPC 201C $npc_thief_m Thief
+	NPC 2026 $npc_towncrier_m Town Crier
+	NPC 2037 $npc_veterinarian_m Veterinarian
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE females
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 2022 $npc_artist_f Artist
+	NPC 202B $npc_beggar_f Beggar
+	NPC 2030 $npc_brigand_f Brigand
+	NPC 2107 $npc_cultist_f Cultist
+	NPC 2107 $npc_fighter_f Fighter
+	NPC 2107 $npc_cassandra Girl
+	NPC 2107 $npc_isabel Girl
+	NPC 200E $npc_guard_f Guard
+	NPC 0000 $npc_chaos_guard_f Guard Chaos
+	NPC 0000 $npc_order_guard_f Guard Order
+	NPC 2033 $npc_gypsy_f Gypsy
+	NPC 2011 $npc_jailor_f Jailor
+	NPC 2009 $npc_noble_f Noble
+	NPC 2008 $npc_peasant_f Peasant
+	NPC 2015 $npc_pirate_f Pirate
+	NPC 2107 $npc_len_ikbaan PK
+	NPC 2017 $npc_sailor_f Sailor
+	NPC 2107 $npc_adventurer_f Adventurer
+	NPC 2018 $npc_shipwright_f Shipwright
+	NPC 201C $npc_thief_f Thief
+	NPC 2027 $npc_towncrier_f Town Crier
+	NPC 2038 $npc_veterinarian_f Veterinarian
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE merchants
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 2023 $npc_alchemist_m Alchemist
+	NPC 2035 $npc_animal_trainer_m Animal Trainer
+	NPC 2031 $npc_architect_m Architect
+	NPC 200A $npc_armorer_m Armorer
+	NPC 200B $npc_baker_m Baker
+	NPC 0C0B $npc_banker_m Banker
+	NPC 2106 $npc_bard_m Bard
+	NPC 0000 $npc_beekeeper_m The BeeKeeper
+	NPC 2106 $npc_blacksmith_m Blacksmith
+	NPC 200C $npc_bowyer_m Bowyer
+	NPC 200D $npc_butcher_m Butcher
+	NPC 2020 $npc_carpenter_m Carpenter
+	NPC 202A $npc_cobbler_m Cobbler
+	NPC 0190 $npc_cook_m Cook
+	NPC 0000 $npc_que_1 the Engineer
+	NPC 2022 $npc_farmer_m Farmer
+	NPC 8414 $npc_fisherman Fisherman
+	NPC 200F $npc_wandering_healer_m Healer (wandering)
+	NPC 200F $npc_healer_m Healer
+	NPC 2034 $npc_herbalist_m Herbalist
+	NPC 2010 $npc_innkeeper_m Innkeeper
+	NPC 2012 $npc_jeweler_m Jeweler
+	NPC 2013 $npc_leather_worker_m Leather Worker
+	NPC 2014 $npc_mage_m Mage
+	NPC 202D $npc_miner_m Miner
+	NPC 0000 $npc_necromancer Necromancer
+	NPC 2016 $npc_provisioner_m Provisioner
+	NPC 201A $npc_spinner_m Spinner
+	NPC 2019 $npc_tailor_m Tailor
+	NPC 2021 $npc_tinker_m Tinker
+	NPC 0000 $npc_veterinarian_m Veterinarian
+	NPC 201F $npc_weaponsmith_m Weaponsmith
+}
+SECTION PAGE
+{
+	SUBMENU 3
+	TITLE merchants-f
+	INTERLINE 10
+	TAB 30
+	LABEL
+	NPC 2023 $npc_alchemist_f Alchemist
+	NPC 2036 $npc_animal_trainer_f Animal Trainer
+	NPC 2031 $npc_architect_f Architect
+	NPC 200A $npc_armorer_f Armorer
+	NPC 200B $npc_baker_f Baker
+	NPC 2107 $npc_banker_f Banker
+	NPC 2107 $npc_bard_f Bard
+	NPC 0000 $npc_beekeper_f The Beekeeper
+	NPC 2107 $npc_blacksmith_f Blacksmith
+	NPC 200C $npc_bowyer_f Bowyer
+	NPC 200D $npc_butcher_f Butcher
+	NPC 2020 $npc_carpenter_f Carpenter
+	NPC 202A $npc_cobbler_f Cobbler
+	NPC 0191 $npc_cook_f Cook
+	NPC 0000 $npc_jessie the Engineer
+	NPC 2024 $npc_farmer_f Farmer
+	NPC 8415 $npc_fisherlady Fisherlady
+	NPC 200F $npc_wandering_healer_f Healer (wandering)
+	NPC 200F $npc_healer_f Healer
+	NPC 2034 $npc_herbalist_f Herbalist
+	NPC 2010 $npc_innkeeper_f Innkeeper
+	NPC 2012 $npc_jeweler_f Jeweler
+	NPC 2013 $npc_leather_worker_f Leather Worker
+	NPC 2014 $npc_mage_f Mage
+	NPC 202D $npc_miner_f Miner
+	NPC 2016 $npc_provisioner_f Provisoner
+	NPC 201A $npc_spinner_f Spinner
+	NPC 2019 $npc_tailor_f Tailor
+	NPC 2021 $npc_tinker_f Tinker
+	NPC 201F $npc_weaponsmith_f Weaponsmith
+}
+
+//
+//SPAWNER MENU
+//
+SECTION PAGE
+{
+	SUBMENU 4
+	TITLE Monsters
+	INTERLINE 10
+	TAB 30
+	LABEL
+	ITEM 0000 $item_orc_lord_spawner orc lord spawner
+	ITEM 0000 $item_orc_spawner orc spawner
+	ITEM 0000 $item_orc_mage_spawner orc mage spawner
+	ITEM 0000 $item_ettin_spawner ettin spawner
+	ITEM 0000 $item_ogre_spawner ogre spawner
+	ITEM 0000 $item_troll_spawner troll spawner
+	ITEM 0000 $item_harpy_spawner harpy spawner
+	ITEM 0000 $item_random_dragon_and_drake_1 random dragon and drake
+	ITEM 0000 $item_random_ratmen random ratmen
+	ITEM 0000 $item_random_lizzardmen random lizzardmen
+	ITEM 0000 $item_random_orcs random orcs
+	ITEM 0000 $item_random_orc_spawn random orc spawn
+	ITEM 0000 $item_random_lizard_spawn random lizard spawn
+	ITEM 0000 $item_random_ratmen_rpawn random ratmen rpawn
+	ITEM 0000 $item_random_dragon_and_drake random dragon and drake
+	ITEM 0000 $item_random_dungeon_spawner random dungeon spawner
+	ITEM 0000 $item_random_drow_spawner random drow spawner
+	ITEM 0000 $item_random_diablo_spawner random diablo spawner
+	ITEM 0000 $item_random_wood_elves_spawner random wood elves spawner
+	ITEM 0000 $item_random_high_elves_spawner random high elves spawner
+	ITEM 0000 $item_random_strong_undead random strong undead
+	ITEM 0000 $item_random_weak_undead random weak undead
+	ITEM 0000 $item_random_all_undead random all undead
+	ITEM 0000 $item_random_daemons random daemons
+	ITEM 0000 $item_random_elementals random elementals
+	ITEM 0000 $item_random_elementals_and_daemons random elementals and daemons
+	ITEM 0000 $item_random_ettinsogres_and_trolls random ettinsogres and trolls
+	ITEM 0000 $item_random_med_orcs random med orcs
+	ITEM 0000 $item_random_weaker_orcs random weaker orcs
+	ITEM 0000 $item_random_crc-kin random crc
+	
+}
+
+SECTION PAGE
+{	
+	SUBMENU 4
+	TITLE People
+	INTERLINE 10
+	TAB 30
+	LABEL
+	ITEM 0000 $item_banker_spawner-f female banker spawner
+	ITEM 0000 $item_bard_spawner-f female bard spawner
+	ITEM 0000 $item_bard_spawner-m male bard spawner
+	ITEM 0000 $item_miner_spawner-m male miner spawner
+	ITEM 0000 $item_miner_spawner-f female miner spawner
+	ITEM 0000 $item_weaponsmith_spawner-m male weaponsmith spawner
+	ITEM 0000 $item_weaponsmith_spawner-f female weaponsmith spawner
+	ITEM 0000 $item_baker_spawner-m male baker spawner
+	ITEM 0000 $item_baker_spawner-f female baker spawner
+	ITEM 0000 $item_provisioner_spawner-m male provisioner spawner
+	ITEM 0000 $item_provisioner_spawner-f female provisioner spawner
+	ITEM 0000 $item_cobbler_spawner-m male cobbler spawner
+	ITEM 0000 $item_cobbler_spawner-f female cobbler spawner
+	ITEM 0000 $item_innkeeper_spawner-m male innkeeper spawner
+	ITEM 0000 $item_innkeeper_spawner-f female innkeeper spawner
+	ITEM 0000 $item_mage_spawner-m male mage spawner
+	ITEM 0000 $item_mage_spawner-f female mage spawner
+	ITEM 0000 $item_herbalist_spawner-m male herbalist spawner
+	ITEM 0000 $item_herbalist_spawner-f female herbalist spawner
+	ITEM 0000 $item_butcher_spawner-m male butcher spawner
+	ITEM 0000 $item_butcher_spawner-f female butcher spawner
+	ITEM 0000 $item_tailor_spawner-m male tailor spawner
+	ITEM 0000 $item_tailor_spawner-f female tailor spawner
+	ITEM 0000 $item_bowyer_spawner-m male bowyer spawner
+	ITEM 0000 $item_bowyer_spawner-f female bowyer spawner
+	ITEM 0000 $item_jewler_spawner-m male jewler spawner
+	ITEM 0000 $item_jewler_spawner-f female jewler spawner
+	ITEM 0000 $item_leather_worker_spawner-m male leather worker spawner
+	ITEM 0000 $item_leather_worker_spawner-f female leather worker spawner
+	ITEM 0000 $item_shipwright_spawner-m male shipwright spawner
+	ITEM 0000 $item_shipwright_spawner-f female shipwright spawner
+	ITEM 0000 $item_spinner_spawner-m male spinner spawner
+	ITEM 0000 $item_spinner_spawner-f female spinner spawner
+	ITEM 0000 $item_armorer_spawner-m male ar
+	ITEM 0000 $item_armorer_spawner-f female ar
+	ITEM 0000 $item_blacksmith_spawner-m male blacksmith spawner
+	ITEM 0000 $item_blacksmith_spawner-f female blacksmith spawner
+	ITEM 0000 $item_architect_spawner-m male architect spawner
+	ITEM 0000 $item_architect_spawner-f female architect spawner
+	ITEM 0000 $item_carpenter_spawner-m male carpenter spawner
+	ITEM 0000 $item_carpenter_spawner-f female carpenter spawner
+	ITEM 0000 $item_farmer_spawner-m male farmer spawner
+	ITEM 0000 $item_farmer_spawner-f female farmer spawner
+	ITEM 0000 $item_cook_spawner-m male cook spawner
+	ITEM 0000 $item_cook_spawner-f female cook spawner
+	ITEM 0000 $item_animal_trainer_spawner-m male animal trainer spawner
+	ITEM 0000 $item_animal_trainer_spawner-f female animal trainer spawner
+	ITEM 0000 $item_fisherman_spawner fisherman spawner
+	ITEM 0000 $item_fisherlady_spawner fisherlady spawner
+	ITEM 0000 $item_alchemist_spawner-m male alchemist spawner
+	ITEM 0000 $item_alchemist_spawner-f female alchemist spawner
+	ITEM 0000 $item_tinker_spawner-m male tinker spawner
+	ITEM 0000 $item_tinker_spawner-f female tinker spawner
+	ITEM 0000 $item_engineer_spawner-m male engineer spawner
+	ITEM 0000 $item_engineer_spawner-f female engineer spawner
+	ITEM 0000 $item_banker_spawner-m male banker spawner
+	ITEM 0000 $item_random_town_spawner random town spawner
+	ITEM 0000 $item_town_crier_spawner-m male town crier spawner
+	ITEM 0000 $item_town_crier_spawner-f female town crier spawner
+	ITEM 0000 $item_register_of_names Register of names
+	ITEM 0000 $item_town_area_spawner town area spawner
+}
+
+SECTION PAGE
+{	
+	SUBMENU 4
+	TITLE Animals
+	INTERLINE 10
+	TAB 30
+	LABEL
+	ITEM 0000 $item_random_cows_horses_etc random cows horses etc
+	ITEM 0000 $item_goat_spawner goat spawner
+	ITEM 0000 $item_random_arctic_spawner random arctic spawner
+	ITEM 0000 $item_random_cave_spawner random cave spawner
+	ITEM 0000 $item_random_desert_spawner random desert spawner
+	ITEM 0000 $item_random_eerie_place_spawner random eerie place spawner
+	ITEM 0000 $item_random_farm_spawner random farm spawner
+	ITEM 0000 $item_random_forest_spawner random forest spawner
+	ITEM 0000 $item_random_jungle_spawner random jungle spawner
+	ITEM 0000 $item_random_mountain_spawner random mountain spawner
+	ITEM 0000 $item_random_ocean_spawner random ocean spawner
+	ITEM 0000 $item_random_swamp_spawner random swamp spawner
+	ITEM 0000 $item_random_volcanic_spawner random volcanic spawner
+	ITEM 0000 $item_random_cowshorsesect random cowshorsesect
+	ITEM 0000 $item_random_birds random birds
+	ITEM 0000 $item_random_all_animals random all animals
+	ITEM 0000 $item_random_small_animals random small animals
+	ITEM 0000 $item_random_productive_animals random productive animals
+	ITEM 0000 $item_random_bears random bears
+	ITEM 0000 $item_random_overworld_monsters random overworld monsters
+	ITEM 0000 $item_swamp_area_spawner swamp area spawner
+	ITEM 0000 $item_jungle_area_spawner jungle area spawner
+	ITEM 0000 $item_cocoon_spawner cocoon spawner
+}
+
+//
+//SUPPLY MENU
+//
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Beverages
+	INTERLINE 15
+	TAB 29
+	PIC
+	LABEL
+	ITEM 099F $item_bottles_of_ale1 Bottle of Ale
+	ITEM 09A0 $item_bottles_of_ale2 Bottles of Ale
+	ITEM 09A1 $item_bottles_of_ale3 Bottles of Ale
+	ITEM 09A2 $item_bottles_of_ale4 Bottles of Ale
+	ITEM 099B $item_bottles_of_liquor1 Bottle of Liquor
+	ITEM 099C $item_bottles_of_liquor2 Bottles of Liquor
+	ITEM 099D $item_bottles_of_liquor3 Bottles of Liquor
+	ITEM 099E $item_bottles_of_liquor4 Bottles of Liquor
+	ITEM 09C7 $item_bottles_of_wine1 Bottle of Wine
+	ITEM 09C6 $item_bottles_of_wine2 Bottles of Wine
+	ITEM 09C5 $item_bottles_of_wine3 Bottles of Wine
+	ITEM 09C4 $item_bottles_of_wine4 Bottles of Wine
+	ITEM 0FFA $item_bucket_of_water Bucket of Water
+	ITEM 09EE $item_mug_of_ale_1 Glass of Ale
+	ITEM 1F7D $item_glass_of_cider_1 Glass of Cider
+	ITEM 1F85 $item_glass_of_liquor_1 Glass of Liquor
+	ITEM 1F89 $item_glass_of_milk_1 Glass of Milk
+	ITEM 1F91 $item_glass_of_water_1 Glass of Water
+	ITEM 1F8D $item_glass_of_wine_1 Glass of Wine
+	ITEM 098E $item_jugs_of_cider1 Jugs of Cider
+	ITEM 098D $item_jugs_of_cider2 Jugs of Cider
+	ITEM 1F95 $item_pitcher_of_ale_1 Pitcher of Ale
+	ITEM 1F97 $item_pitcher_of_cider_1 Pitcher of Cider
+	ITEM 1F99 $item_pitcher_of_liquor_1 Pitcher of Liquor
+	ITEM 09AD $item_pitcher_of_milk_1 Pitcher of Milk
+	ITEM 0FF9 $item_pitcher_of_water_1 Pitcher of Water
+	ITEM 1F9B $item_pitcher_of_wine_1 Pitcher of Wine
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Backed&meat
+	INTERLINE 15
+	TAB 30
+	PIC
+	LABEL
+	ITEM 1041 $item_baked_pie Baked Pie
+	ITEM 1042 $item_unbaked_pie Unbaked Pie
+	ITEM 09E9 $item_cake Cake
+	ITEM 097C $item_wedges_of_cheese_1 Wedge of Cheese
+	ITEM 097D $item_wedges_of_cheese_2 Cut Cheese
+	ITEM 097E $item_wheels_of_cheese Wheel of Cheese
+	ITEM 098C $item_french_bread French Bread
+	ITEM 09EA $item_muffins1 Muffin
+	ITEM 09FA $item_muffins2 Muffins
+	ITEM 09EB $item_muffins3 Muffins
+	ITEM 103C $item_bread_loaves_1 Loaf of Bread
+	ITEM 1040 $item_pizzas Pizza
+	ITEM 1083 $item_uncooked_pizza Unbaked Pizza
+	ITEM 160B $item_pan_of_cookies Pan of Cookies
+	ITEM 160C $item_plate_of_cookies Plate of Cookies
+	ITEM 09B4 $item_eggshells Eggshells
+	ITEM 09B5 $item_eggs Eggs
+	ITEM 09B6 $item_fried_eggs Fried Eggs
+	ITEM 103F $item_cookie_mix Cookie Mix
+	ITEM 10E3 $item_dough_bowl Dough
+	ITEM 15FE $item_bowl_of_carrots1 Carrots
+	ITEM 15FF $item_bowl_of_corn1 Corn
+	ITEM 1600 $item_bowl_of_lettuce1 Lettuce
+	ITEM 1601 $item_bowl_of_peas1 Peas
+	ITEM 1602 $item_bowl_of_potatoes Potatoes
+	ITEM 1604 $item_bowl_of_stew Stew
+	ITEM 1606 $item_tomato_soup Tomato Soup
+	ITEM 15FD $item_pewter_bowl Pewter
+	ITEM 09B7 $item_cooked_birds_1 Cooked Bird
+	ITEM 09BB $item_roast_pigs_1 Roast Pig
+	ITEM 09C0 $item_sausages_1 Sausages
+	ITEM 09C9 $item_hams_1 Ham
+	ITEM 09F2 $item_cuts_of_ribs Ribs
+	ITEM 097B $item_fish_steaks Fish Steak
+	ITEM 1E1A $item_fish_head1_1 Fish Head
+	ITEM 09CC $item_fish1 A fish
+	ITEM 1E17 $item_raw_fish_1 Raw Fish
+	ITEM 0976 $item_slabs_of_bacon_1 Slabs of Bacon
+	ITEM 0978 $item_slices_of_bacon_1 Slice of Bacon
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Fruit&veggys
+	INTERLINE 15
+	TAB 29
+	PIC
+	LABEL
+	ITEM 0994 $item_pears_1 Pear
+	ITEM 09D0 $item_apples Apple
+	ITEM 09D1 $item_grape_bunches_1 Grape Bunch
+	ITEM 09D2 $item_peaches_1 Peach
+	ITEM 0993 $item_fruit_basket Fruit Basket
+	ITEM 1726 $item_coconuts1 Coconut
+	ITEM 1720 $item_banana_2 Banana
+	ITEM 1721 $item_bunch_of_bananas_1 Bananas
+	ITEM 1727 $item_bunches_of_dates Dates
+	ITEM 1728 $item_lemons1 Lemon
+	ITEM 1729 $item_lemons2 Lemons
+	ITEM 172A $item_limes1 Lime
+	ITEM 172B $item_limes2 Limes
+	ITEM 0C74 $item_honeydew_melons1 Honeydew Melon
+	ITEM 0C79 $item_canteloupes Canteloupe
+	ITEM 0C5D $item_watermelons Water Melon
+	ITEM 0F36 $item_sheaf_of_hay1 Sheaf of Hay
+	ITEM 0C70 $item_lettuce1 Lettuce
+	ITEM 0C72 $item_squash1 Squash
+	ITEM 0C76 $item_carrots Carrots
+	ITEM 0C7B $item_heads_of_cabbage Cabbage
+	ITEM 0C7F $item_ears_of_corn1_4 Ear of Corn
+	ITEM 1AD3 $item_donuts Donuts
+	ITEM 09EC $item_jars_of_honey Jar of Honey
+	ITEM 0C61 $item_turnip1 Turnip
+	ITEM 0C68 $item_sprouts Sprouts
+	ITEM 0C6A $item_pumpkin1 Pumpkin
+	ITEM 0C6D $item_onions Onion
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Plants
+	INTERLINE 23
+	TAB 29
+	PIC
+	LABEL
+	ITEM 14f0 $item_potted_tree potted tree
+	ITEM 14f0 $item_potted_plant potted tree
+	ITEM 1E0F $item_potted_cactus3 Potted Cactus w/flowers
+	ITEM 1E10 $item_potted_cactus1 Potted Cactus
+	ITEM 1E11 $item_potted_cactus2 Potted Cactus w/bush
+	ITEM 1E12 $item_potted_cactus4 Potted Branched Cactus
+	ITEM 0C83 $item_campion_flowers Campion Flowers
+	ITEM 0C84 $item_potted_foxglove Foxglove Flowers
+	ITEM 0C85 $item_potted_orfluer Orfluer Flowers
+	ITEM 0C86 $item_red_poppies1 Red Poppies
+	ITEM 0C88 $item_snow_drops Snow Drops
+	ITEM 0C8F $item_hedge1 Hedge
+	ITEM 0C93 $item_blade_plant Blade Plant
+	ITEM 0CA1 $item_large_fern Large Fern
+	ITEM 0CA5 $item_pampas_grass1 Pampas Grass
+	ITEM 0CC9 $item_spider_tree Spider Tree
+	ITEM 0CC8 $item_juniper_bush Juniper Bush
+	ITEM 0CC7 $item_weed Weed
+	ITEM 0D38 $item_yucca Yucca
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Lights
+	INTERLINE 25
+	TAB 29
+	PIC
+	LABEL
+	ITEM 0A05 $item_wall_torch1_1 Wall Torch
+	ITEM 0A06 $item_torch_holder_1 Torch holder
+	ITEM 0A07 $item_wall_torch2_1 Wall Torch
+	ITEM 0A0A $item_wall_torch1_2 Wall Torch
+	ITEM 0A0B $item_torch_holder_2 Torch holder
+	ITEM 0A0C $item_wall_torch2_2 Wall Torch
+	ITEM 0E31 $item_brazier Brazier
+	ITEM 0B1A $item_candle Candle
+	ITEM 0B1D $item_candelabra Candelabra
+	ITEM 0B20 $item_lamp_post1_1 Lamp post
+	ITEM 0B21 $item_lamp_post1_2 Lamp Post
+	ITEM 0B22 $item_lamp_post2_1 Lamp Post
+	ITEM 0B23 $item_lamp_post2_2 Lamp Post
+	ITEM 0B24 $item_lamp_post3_1 Lamp Post
+	ITEM 0B25 $item_lamp_post3_2 Lamp Post
+	ITEM 0B26 $item_candelabra Tall Candelabra
+	ITEM 0A15 $item_lantern Lantern
+	ITEM 0A12 $item_torch Torch
+	ITEM 0A0F $item_candle_3 Candle
+	ITEM 1854 $item_skull_candle Skull candle
+	ITEM 09FF $item_wall_sconce_1 Wall Candle
+	ITEM 0A00 $item_wall_sconce_2 Wall Candle
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Containers
+	INTERLINE 23
+	TAB 29
+	PIC
+	LABEL
+	ITEM 0E75 $item_backpack Backpack 																																																																
+	ITEM 0E76 $item_leather_bag Leather Bag 																																																																
+	ITEM 0E78 $item_round_basket Round Basket 																																																																
+	ITEM 0E79 $item_pouch Pouch 																																																																
+	ITEM 0E7A $item_square_basket Square Basket 																																																																
+	ITEM 0E7C $item_silver_chest Silver Chest 																																																																
+	ITEM 0E40 $item_metal_chest1 Metal Chest 																																																																
+	ITEM 0E7F $item_open_wooden_keg Wooden Keg 																																																																		
+	ITEM 0E83 $item_tub Tub 																																																																		
+	ITEM 0E80 $item_brass_box Brass Box
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Statue/trophy
+	INTERLINE 40
+	TAB 14
+	PIC
+	ITEM 12A1 $item_statue1 Statue 1 Left
+	ITEM 129F $item_statue2 Statue 1 Center
+	ITEM 12A0 $item_statue3 Statue 1 Right
+	ITEM 12A4 $item_statue4 Statue 2 Left
+	ITEM 12A2 $item_statue5 Statue 2 Center
+	ITEM 12A3 $item_statue6 Statue 2 Right
+	ITEM 12AE $item_statue7 Statue 3 Left
+	ITEM 12D7 $item_statue8 Statue 3 Center
+	ITEM 12D5 $item_statue9 Statue 3 Right
+	ITEM 12D6 $item_statue10 Unfinished Statue
+	ITEM 1224 $item_statue11 Statue
+	ITEM 1225 $item_statue12 Statue
+	ITEM 1226 $item_statue13 Statue
+	ITEM 1227 $item_statue14 Statue
+	ITEM 1228 $item_statue15 Statue
+	ITEM 1E60 $item_trophy1 Trophy
+	ITEM 1E61 $item_trophy2 Trophy
+	ITEM 1E62 $item_trophy3 Trophy
+	ITEM 1E63 $item_trophy4 Trophy
+	ITEM 1E64 $item_trophy5 Trophy
+	ITEM 1E65 $item_trophy6 Trophy
+	ITEM 1E66 $item_trophy7 Trophy
+	ITEM 1E67 $item_trophy8 Trophy
+	ITEM 1E68 $item_trophy9 Trophy
+	ITEM 1E69 $item_trophy10 Trophy
+	ITEM 1E6A $item_trophy11 Trophy
+	ITEM 1E6B $item_trophy12 Trophy
+	ITEM 1E6C $item_trophy13 Trophy
+	ITEM 1E6D $item_trophy14 Trophy
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Hair/beard
+	INTERLINE 10
+	TAB 15
+	LABEL
+	ITEM 2046 $item_buns_hair Curly
+	ITEM 203C $item_long_hair Long Hair
+	ITEM 2044 $item_mohawk Mohawk
+	ITEM 2045 $item_pageboy Pageboy
+	ITEM 203D $item_pony_tail Pony Tail
+	ITEM 2048 $item_receding_hair Receding
+	ITEM 203B $item_short_hair Short Hair
+	ITEM 2049 $item_2_pig_tails 2 Tails
+	ITEM 204A $item_krisna_hair Topknot
+	//Beards
+	ITEM 2040 $item_goatee Goatee
+	ITEM 204D $item_vandyke Goatee/Moustache
+	ITEM 2041 $item_mustache Moustache
+	ITEM 203E $item_long_beard Long Beard
+	ITEM 204C $item_med_short_beard_1 Long/Moustache
+	ITEM 203F $item_short_beard Short Beard
+	ITEM 204B $item_med_short_beard Short/Moustache
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Clothing
+	INTERLINE 15
+	TAB 24
+	PIC
+	LABEL
+	//Boots
+	ITEM 170B $item_boots Boots
+	ITEM 170D $item_sandles Sandals
+	ITEM 170F $item_shoes Shoes
+	ITEM 1711 $item_thigh_boots Thigh boots
+	//Hats
+	ITEM 1713 $item_floopy_hat Floppy hat
+	ITEM 1714 $item_wide_brim_hat Wide-brim hat
+	ITEM 1715 $item_cap Cap
+	ITEM 1716 $item_tall_straw_hat Tall straw hat
+	ITEM 1717 $item_straw_hat Straw hat
+	ITEM 1718 $item_wizards_hat Wizard's hat
+	ITEM 1719 $item_bonnet Bonnet
+	ITEM 171A $item_feathered_hat Feathered hat
+	ITEM 171B $item_tricorne_hat Tricorne hat
+	ITEM 171C $item_jester_hat Jester hat
+	//Shirts & Robes
+	ITEM 1515 $item_cloak Cape
+	ITEM 1EFD $item_fancy_shirt Fancy shirt
+	ITEM 1517 $item_shirt Plain shirt
+	ITEM 1FFD $item_surcoat Surcoat
+	ITEM 1FA1 $item_tunic Tunic
+	ITEM 1F03 $item_robe1 Robe
+	ITEM 1F9F $item_jesters_suit Fancy suit
+	ITEM 1F7B $item_doublet Doublet
+	ITEM 1EFF $item_fancy_dress Fancy Dress
+	ITEM 1F01 $item_plain_dress Plain Dress
+	//Pants 
+	ITEM 1516 $item_skirt Skirt
+	ITEM 152E $item_short_pants Short pants
+	ITEM 1537 $item_kilt Kilt
+	ITEM 1539 $item_long_pants Long pants
+	//Misc 
+	ITEM 153B $item_half_apron Half apron
+	ITEM 153D $item_full_apron Full apron
+	ITEM 1540 $item_bandana Bandana
+	ITEM 1541 $item_body_sash Body sash
+	ITEM 1544 $item_skullcap Skullcap
+	//Masks 
+	ITEM 1547 $item_deer_mask Deer mask
+	ITEM 1545 $item_bear_mask Bear mask
+	ITEM 1F0B $item_orc_helm Orc helm
+	ITEM 141C $item_orc_mask Orc mask
+	ITEM 1549 $item_tribal_mask Tribal mask
+	ITEM 154B $item_tribal_mask_1 Voodoo mask
+	ITEM 1546 $item_polar_bear_mask Polar bear mask
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Rugs
+	INTERLINE 18
+	TAB 10
+	PIC
+	ITEM 0AA9 $item_rug1_1 Red Rug
+	ITEM 0AAA $item_rug1_2 Red Rug
+	ITEM 0AAB $item_rug1_3 Red Rug
+	ITEM 0AAC $item_rug1_4 Red Rug
+	ITEM 0AAD $item_rug1_5 Red Rug
+	ITEM 0AAE $item_rug1_6 Red Rug
+	ITEM 0AAF $item_rug1_7 Red Rug
+	ITEM 0AB0 $item_rug1_8 Red Rug
+	ITEM 0AB1 $item_rug1_9 Red Rug
+	ITEM 0AB2 $item_rug1_10 Red Rug
+	//Greenish Rug
+	ITEM 0AB3 $item_rug2_1 Greenish Rug
+	ITEM 0AB4 $item_rug2_2 Greenish Rug
+	ITEM 0AB5 $item_rug2_3 Greenish Rug
+	ITEM 0AB6 $item_rug2_4 Greenish Rug
+	ITEM 0AB7 $item_rug2_5 Greenish Rug
+	ITEM 0AB8 $item_rug2_6 Greenish Rug
+	ITEM 0AB9 $item_rug2_7 Greenish Rug
+	ITEM 0ABA $item_rug2_8 Greenish Rug
+	ITEM 0ABB $item_rug2_9 Greenish Rug
+	ITEM 0ABC $item_rug2_10 Greenish Rug
+	//Fancy Blue Rug
+	ITEM 0ABD $item_carpet1_1 Fancy Blue Rug
+	ITEM 0ABE $item_carpet1_2 Fancy Blue Rug
+	ITEM 0ABF $item_carpet1_3 Fancy Blue Rug
+	ITEM 0AC0 $item_carpet1_4 Fancy Blue Rug
+	ITEM 0AC1 $item_carpet1_5 Fancy Blue Rug
+	ITEM 0AC2 $item_carpet1_6 Fancy Blue Rug
+	ITEM 0AC3 $item_carpet1_7 Fancy Blue Rug
+	ITEM 0AC4 $item_carpet1_8 Fancy Blue Rug
+	ITEM 0AC5 $item_carpet1_9 Fancy Blue Rug
+	ITEM 0AF6 $item_carpet1_10 Fancy Blue Rug
+	ITEM 0AF7 $item_carpet1_11 Fancy Blue Rug
+	ITEM 0AF8 $item_carpet1_12 Fancy Blue Rug
+	ITEM 0AF9 $item_carpet1_13 Fancy Blue Rug
+	
+	//Fancy Red Rug
+	ITEM 0AC6 $item_carpet2_1 Fancy Red Rug
+	ITEM 0AC7 $item_carpet2_2 Fancy Red Rug
+	ITEM 0AC8 $item_carpet2_3 Fancy Red Rug
+	ITEM 0AC9 $item_carpet2_4 Fancy Red Rug
+	ITEM 0ACA $item_carpet2_5 Fancy Red Rug
+	ITEM 0ACB $item_carpet2_6 Fancy Red Rug
+	ITEM 0ACC $item_carpet2_7 Fancy Red Rug
+	ITEM 0ACD $item_carpet2_8 Fancy Red Rug
+	ITEM 0ACE $item_carpet2_9 Fancy Red Rug
+	ITEM 0ACF $item_carpet2_10 Fancy Red Rug
+	ITEM 0AD0 $item_carpet2_11 Fancy Red Rug
+	//Fancy Blue/Gold Rug
+	ITEM 0AD1 $item_carpet3_1 Fancy Blue/Gold Rug
+	ITEM 0AD2 $item_carpet3_2 Fancy Blue/Gold Rug
+	ITEM 0AD3 $item_carpet3_3 Fancy Blue/Gold Rug
+	ITEM 0AD4 $item_carpet3_4 Fancy Blue/Gold Rug
+	ITEM 0AD5 $item_carpet3_5 Fancy Blue/Gold Rug
+	ITEM 0AD6 $item_carpet3_6 Fancy Blue/Gold Rug
+	ITEM 0AD7 $item_carpet3_7 Fancy Blue/Gold Rug
+	ITEM 0AD8 $item_carpet3_8 Fancy Blue/Gold Rug
+	ITEM 0AD9 $item_carpet3_9 Fancy Blue/Gold Rug
+	//Fancy Golden Rug
+	ITEM 0ADA $item_carpet4_1 Fancy Golden Rug
+	ITEM 0ADB $item_carpet4_2 Fancy Golden Rug
+	ITEM 0ADC $item_carpet4_3 Fancy Golden Rug
+	ITEM 0ADD $item_carpet4_4 Fancy Golden Rug
+	ITEM 0ADE $item_carpet4_5 Fancy Golden Rug
+	ITEM 0ADF $item_carpet4_6 Fancy Golden Rug
+	ITEM 0AE0 $item_carpet4_7 Fancy Golden Rug
+	ITEM 0AE1 $item_carpet4_8 Fancy Golden Rug
+	ITEM 0AE2 $item_carpet4_9 Fancy Golden Rug
+	//Fancy Pink Rug
+	ITEM 0AE3 $item_carpet5_1 Fancy Pink Rug
+	ITEM 0AE4 $item_carpet5_2 Fancy Pink Rug
+	ITEM 0AE5 $item_carpet5_3 Fancy Pink Rug
+	ITEM 0AE6 $item_carpet5_4 Fancy Pink Rug
+	ITEM 0AE7 $item_carpet5_5 Fancy Pink Rug
+	ITEM 0AE8 $item_carpet5_6 Fancy Pink Rug
+	ITEM 0AE9 $item_carpet5_7 Fancy Pink Rug
+	ITEM 0AEA $item_carpet5_8 Fancy Pink Rug
+	ITEM 0AEB $item_carpet5_9 Fancy Pink Rug
+	//Fancy Pink & Blue Rug
+	ITEM 0AEC $item_carpet6_1 Fancy Pink & Blue Rug
+	ITEM 0AED $item_carpet6_2 Fancy Pink & Blue Rug
+	ITEM 0AEE $item_carpet6_3 Fancy Pink & Blue Rug
+	ITEM 0AEF $item_carpet6_4 Fancy Pink & Blue Rug
+	ITEM 0AF0 $item_carpet6_5 Fancy Pink & Blue Rug
+	ITEM 0AF1 $item_carpet6_6 Fancy Pink & Blue Rug
+	ITEM 0AF2 $item_carpet6_7 Fancy Pink & Blue Rug
+	ITEM 0AF3 $item_carpet6_8 Fancy Pink & Blue Rug
+	ITEM 0AF4 $item_carpet6_9 Fancy Pink & Blue Rug
+	ITEM 0AF5 $item_carpet6_10 Fancy Pink & Blue Rug
+	ITEM 0AFA $item_carpet6_11 Fancy Pink & Blue Rug
+}
+SECTION PAGE
+{
+	SUBMENU 5
+	TITLE Jewels
+	INTERLINE 12
+	TAB 20
+	PIC
+	LABEL
+	ITEM 100F $item_gold_key Gold Key
+	ITEM 1010 $item_iron_key Iron Key
+	ITEM 1012 $item_magic_key Magic Key
+	ITEM 1013 $item_bronze_key Bronze Key
+	//Coins
+	ITEM 0EEF $item_gold_coin Gold Pile
+	ITEM 0EF2 $item_silver_coin Silver Pile
+	ITEM 0EEC $item_silver_coin Copper Pile
+	//Jewelry
+	ITEM 108B $item_beads Beads
+	ITEM 1086 $item_bracelet Bracelet
+	ITEM 1087 $item_earrings Earrings
+	ITEM 1085 $item_necklace1 Necklace
+	ITEM 1088 $item_necklace2 Necklace
+	ITEM 1089 $item_necklace3 Necklace
+	ITEM 108A $item_ring Ring
+	//Cut Gems
+	ITEM 0F25 $item_pieces_of_amber Amber
+	ITEM 0F16 $item_amethysts1 Amethyst
+	ITEM 0F17 $item_amethysts2 Amethyst
+	ITEM 0F22 $item_amethysts3 Amethyst
+	ITEM 0F2E $item_amethysts4 Amethyst
+	ITEM 0F15 $item_citrines1 Citrine
+	ITEM 0F23 $item_citrines2 Citrine
+	ITEM 0F24 $item_citrines3 Citrine
+	ITEM 0F2C $item_citrines4 Citrine
+	ITEM 0F27 $item_diamonds1 Diamond
+	ITEM 0F28 $item_diamonds2 Diamond
+	ITEM 0F29 $item_diamonds3 Diamond
+	ITEM 0F30 $item_diamonds4 Diamond
+	ITEM 0F26 $item_diamonds5 Diamond
+	ITEM 0F10 $item_emeralds1 Emerald
+	ITEM 0F2F $item_emeralds2 Emerald
+	ITEM 0F13 $item_rubies1 Ruby
+	ITEM 0F14 $item_rubies2 Ruby
+	ITEM 0F1A $item_rubies3 Ruby
+	ITEM 0F1C $item_rubies4 Ruby
+	ITEM 0F1D $item_rubies5 Ruby
+	ITEM 0F2A $item_rubies6 Ruby
+	ITEM 0F2B $item_rubies7 Ruby
+	ITEM 0F11 $item_sapphires1 Sapphire
+	ITEM 0F12 $item_sapphires2 Sapphire
+	ITEM 0F19 $item_sapphires3 Sapphire
+	ITEM 0F1F $item_sapphires4 Sapphire
+	ITEM 0F0F $item_star_sapphires1 Sapphire Star
+	ITEM 0F1B $item_star_sapphires2 Sapphire Star
+	ITEM 0F21 $item_star_sapphires3 Sapphire Star
+	ITEM 0F18 $item_tourmalines1 Tourmaline
+	ITEM 0F1E $item_tourmalines2 Tourmaline
+	ITEM 0F20 $item_tourmalines3 Tourmaline
+	ITEM 0F2D $item_tourmalines4 Tourmaline
+	
+	//quest stones/gems
+ 	ITEM 1870 $item_stone_of_compassion Compassion
+	ITEM 1C12 $item_bell_of_courage Courage
+	ITEM 186A $item_stone_of_honesty Honesty
+	ITEM 186D $item_stone_of_honor Honor
+	ITEM 1869 $item_stone_of_humility Humility
+	ITEM 186B $item_stone_of_justice Justice
+	ITEM 1C14 $item_candle_of_love Love
+	ITEM 186C $item_stone_of_sacrifice Sacrifice
+	ITEM 186F $item_stone_of_spirituality Spirituality
+	ITEM 186E $item_stone_of_valor Valor
+	ITEM 1C13 $item_book_of_truth Truth
+	ITEM 1870 $item_gem_of_immortality Gem of Immortality
+}
+
+//
+//SIGNS MENU
+//
+SECTION PAGE
+{
+	SUBMENU 6
+	TITLE Workers
+	INTERLINE 13
+	TAB 25
+	PIC
+	LABEL
+	ITEM 1297 $item_road_sign1_1 Roadsign
+	ITEM 1299 $item_road_sign2_1 Roadsign
+	ITEM 129B $item_road_sign3_1 Roadsign
+	ITEM 129D $item_road_sign4_1 Roadsign
+	ITEM 1296 $item_signpost Signpost
+	//Shop Signs 1
+	ITEM 0B95 $item_library_sign_1 Library
+	ITEM 0BA3 $item_bakery_sign_1 Bakery
+	ITEM 0BA5 $item_tailor_sign_1 Tailor
+	ITEM 0BA7 $item_tinker_sign_1 Tinker
+	ITEM 0BA9 $item_butcher_sign_1 Butcher
+	ITEM 0BAB $item_healer_sign_1 Healer
+	//Shop sign_1s 2
+	ITEM 0BAD $item_magic_shop_sign_1 Magic
+	ITEM 0BAF $item_carpenter_sign_1 Carpenter
+	ITEM 0BB1 $item_shipwright_sign_1 Shipwright
+	ITEM 0BB3 $item_inn_sign_1 Inn
+	ITEM 0BB5 $item_harbor_master_sign_1 Harbor Master
+	ITEM 0BB7 $item_stables_sign_1 Stables
+	ITEM 0BB9 $item_barber_sign_1 Barber
+	//Shop sign_1s 3
+	ITEM 0BBB $item_musician_sign_1 Mucician
+	ITEM 0BBD $item_archer_sign_1 Archery
+	ITEM 0BBF $item_blacksmith_sign_1 Blacksmith
+	ITEM 0BC1 $item_jewler_sign_1 Jewler
+	ITEM 0BC3 $item_tavern_sign_1 Tavern
+	ITEM 0BC5 $item_alchemist_sign_1 Alchemist
+	ITEM 0BC7 $item_armorer_sign_1 Armorer
+	//Shop sign_1s 4
+	ITEM 0BC9 $item_artist_sign_1 Artist
+	ITEM 0BCB $item_provisioner_sign_1 Provisioner
+	ITEM 0BCD $item_bowyer_sign_1 Bowyer
+	ITEM 0C0B $item_bank_sign_1 Bank
+	ITEM 0C0D $item_theater_sign_1 Theater
+	ITEM 0C43 $item_beekeeper_sign_1 Beekeeper
+	//Misc sign_1s
+	ITEM 0BCF $item_wooden_sign_1 Wooden sign
+	ITEM 0BD1 $item_brass_sign_1 Brass sign
+	ITEM 0BD1 $item_brass_sign_1 Plain
+	ITEM 0BD2 $item_brass_sign_1 Plain
+	ITEM 1F29 $item_sign_1 sign
+}
+SECTION PAGE
+{
+	SUBMENU 6
+	TITLE Guilds
+	INTERLINE 13
+	TAB 25
+	PIC
+	LABEL
+	ITEM 0BD3 $item_armaments_guild_sign_1 Armaments 
+	ITEM 0BD5 $item_armorers_guild_sign_1 Armorers 
+	ITEM 0BD7 $item_blacksmiths_guild_sign_1 Blacksmiths 
+	ITEM 0BD9 $item_weapons_guild_sign_1 Weapons 
+	ITEM 0BDB $item_bardic_guild_sign_1 Bardic 
+	ITEM 0BDD $item_barders_guild_sign_1 Barders 
+	ITEM 0BDF $item_provisioners_guild_sign_1 Provisioners 
+	// sign_1s 2
+	ITEM 0BE1 $item_traders_guild_sign_1 Traders 
+	ITEM 0BE3 $item_cooks_guild_sign_1 Cooks 
+	ITEM 0BE5 $item_healers_guild_sign_1 Healers 
+	ITEM 0BE7 $item_mages_guild_sign_1 Mages 
+	ITEM 0BE9 $item_sorcerers_guild_sign_1 Sorcerers 
+	ITEM 0BEB $item_illusionists_guild_sign_1 Illusionists 
+	ITEM 0BED $item_miners_guild_sign_1 Miners 
+	// sign_1s 3
+	ITEM 0BEF $item_archers_guild_sign_1 Archers 
+	ITEM 0BF1 $item_seamans_guild_sign_1 Seamans 
+	ITEM 0BF3 $item_fishermans_guild_sign_1 Fishermans 
+	ITEM 0BF5 $item_sailors_guild_sign_1 Sailors 
+	ITEM 0BF7 $item_shipwrights_guild_sign_1 Shipwrights 
+	ITEM 0BF9 $item_tailors_guild_sign_1 Tailors 
+	ITEM 0BFB $item_thieves_guild_sign_1 Thieves 
+	// sign_1s 4
+	ITEM 0BFD $item_rouges_guild_sign_1 Rouges 
+	ITEM 0BFF $item_assassins_guild_sign_1 Assassins 
+	ITEM 0C01 $item_tinkers_guild_sign_1 Tinkers 
+	ITEM 0C03 $item_warriors_guild_sign_1 Warriors 
+	ITEM 0C05 $item_cavalry_guild_sign_1 Cavalry 
+	ITEM 0C07 $item_fighters_guild_sign_1 Fighters 
+	ITEM 0C09 $item_merchants_guild_sign_1 Merchants 
+}
+//
+//TOOLS MENU
+//
+
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Carpenter 1
+	INTERLINE 15
+	TAB 20
+	PIC
+	LABEL
+	ITEM 1BD7 $item_boards board
+	ITEM 1BE0 $item_logs log
+	ITEM 0F43 $item_hatchet hatchet 
+	ITEM 0F44 $item_hatchet2 hatchet
+	ITEM 1026 $item_chisel chisel
+	ITEM 1027 $item_chisel2 chisel
+	ITEM 1028 $item_dovetail_saw dovetail saw
+	ITEM 1029 $item_dovetail_saw2 dovetail saw
+	ITEM 102A $item_hammer hammer
+	ITEM 102B $item_hammer2 hammer
+	ITEM 102C $item_moulding_planes mould. planes
+	ITEM 102d $item_moulding_planes2 mould. planes
+	ITEM 102E $item_nails nails
+	ITEM 102f $item_nails2 nails
+	ITEM 1030 $item_jointing_plane joint. plane
+	ITEM 1031 $item_jointing_plane2 joint. plane
+	ITEM 1032 $item_smoothing_plane smooth. plane
+	ITEM 1033 $item_smoothing_plane2 smooth. plane
+	ITEM 1034 $item_saw saw
+	ITEM 1035 $item_saw2 saw
+	ITEM 10E4 $item_draw_knife knife
+	ITEM 10E5 $item_froe froe
+	ITEM 10E6 $item_inshave inshave
+	ITEM 10E7 $item_scorp scorp
+	ITEM 19f1 $item_woodworkers_bench1_1 woodworkers bench
+	ITEM 19f2 $item_woodworkers_bench1_2 woodworkers bench
+	ITEM 19f3 $item_woodworkers_bench1_3 woodworkers bench
+	ITEM 19f8 $item_vise1 vise
+	ITEM 19f7 $item_woodworkers_bench2_1 woodworkers bench
+	ITEM 19f6 $item_woodworkers_bench2_2 woodworkers bench
+	ITEM 19f5 $item_woodworkers_bench2_3 woodworkers bench
+	ITEM 19f4 $item_vise2 vise
+	ITEM 19f9 $item_coopers_bench1_1 coopers bench
+	ITEM 19fa $item_coopers_bench1_2 coopers bench
+	ITEM 19fb $item_coopers_bench2_1 coopers bench
+	ITEM 19fc $item_coopers_bench2_2 coopers bench
+	
+}
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Carpenter 2
+	INTERLINE 15
+	TAB 15
+	PIC
+	ITEM 0A9F $item_display_case_border_1 display case_border
+	ITEM 0AA0 $item_display_case_border_2 display case_border
+	ITEM 0AA1 $item_display_case_border_3 display case_border
+	ITEM 0AA2 $item_display_case_border_4 display case_border
+	ITEM 0AA3 $item_display_case_border_5 display case_border
+	ITEM 0AA4 $item_display_case_border_6 display case_border
+	ITEM 0AA5 $item_display_case_border_7 display case_border
+	ITEM 0b18 $item_display_case_border_8 display case_border
+	ITEM 0Afd $item_display_case_border_9 display case_border
+	ITEM 0Afe $item_display_case_border_10 display case_border
+	ITEM 0Aff $item_display_case_border_11 display case_border
+	ITEM 0b03 $item_display_case_border_12 display case_border
+	ITEM 0b04 $item_display_case_border_13 display case_border
+	ITEM 0b05 $item_display_case_border_14 display case_border
+	ITEM 0b0b $item_display_case_border_15 display case_border
+	ITEM 0b0c $item_display_case_border_16 display case_border
+	ITEM 0B00 $item_display_case_1 display case
+	ITEM 0B01 $item_display_case_2 display case
+	ITEM 0B02 $item_display_case_3 display case
+	ITEM 0B06 $item_display_case_4 display case
+	ITEM 0B07 $item_display_case_5 display case
+	ITEM 0B08 $item_display_case_6 display case
+	ITEM 0B09 $item_display_case_7 display case
+	ITEM 0B0a $item_display_case_8 display case
+	ITEM 0B0d $item_display_case_9 display case
+	ITEM 0B0e $item_display_case_10 display case
+	ITEM 0B0f $item_display_case_11 display case
+	ITEM 0B10 $item_display_case_12 display case
+	ITEM 0B11 $item_display_case_13 display case
+	ITEM 0B12 $item_display_case_14 display case
+	ITEM 0B13 $item_display_case_15 display case
+	ITEM 0B14 $item_display_case_16 display case
+	ITEM 0B15 $item_display_case_17 display case
+	ITEM 0B16 $item_display_case_18 display case
+	ITEM 0B17 $item_display_case_19 display case
+	ITEM 0E3E $item_medium_wooden_crate1 medium wooden crate
+	ITEM 0e3f $item_medium_wooden_crate2 medium wooden crate
+	ITEM 0E42 $item_wooden_chest1 wooden chest
+	ITEM 0E43 $item_wooden_chest2 wooden chest
+	ITEM 0E83 $item_tub tub
+	ITEM 0E77 $item_barrel_without_lid open barrel
+	ITEM 0fae $item_barrel_with_lid closed barrel
+	ITEM 1db8 $item_barrel_lid a barrel lid
+	ITEM 1eb2 $item_barrel_staves barrel staves
+	ITEM 1db7 $item_barrel_hoops barrel hoops
+	ITEM 10e1 $item_barrel_hoops2 barrel hoops
+	ITEM 10e2 $item_barrel_hoops3 barrel hoops
+	ITEM 0E7F $item_open_wooden_keg wooden keg
+	ITEM 1940 $item_wooden_keg1_1 wooden keg 
+	ITEM 1ad6 $item_wooden_keg1_2 wooden keg
+	ITEM 1ad7 $item_wooden_keg2_1 wooden keg
+	ITEM 14e0 $item_bucket bucket
+}
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Tailor
+	INTERLINE 20
+	TAB 30
+	PIC
+	LABEL
+	ITEM 0FA9 $item_dyes dyes
+	ITEM 0FAB $item_dying_tub a dying tub
+	ITEM 0F9D $item_sewing_kit sewing kit
+	ITEM 1766 $item_cut_cloth cut cloth
+	ITEM 0F9E $item_scissors scissors
+	ITEM 101d $item_spinning_wheel1 spinning wheel
+	ITEM 10A4 $item_spinning_wheel2 spinning wheel
+	ITEM 10A5 $item_spinning_wheel3 spinning wheel
+	ITEM 0DF8 $item_piles_of_wool_1 piles of wool
+	ITEM 0E1D $item_balls_of_yarn1 balls of yarn
+	ITEM 0E1E $item_balls_of_yarn2 balls of yarn
+	ITEM 0E1F $item_balls_of_yarn3 balls of yarn
+	ITEM 0DF9 $item_bales_of_cotton bales of cotton
+	ITEM 0FA0 $item_spools_of_thread_1 spools of thread
+	ITEM 0EC6 $item_dress_form dress form
+}
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Blacksmith
+	INTERLINE 30
+	TAB 20
+	PIC
+	ITEM 0FAF $item_anvil_1 
+	ITEM 0FB0 $item_anvil_2 
+	ITEM 197A $item_bellows 
+	ITEM 0FB1 $item_forge1 
+	ITEM 197A $item_forge2_1_1 
+	ITEM 197E $item_forge2_1_2 
+	ITEM 19A6 $item_forge2_1_3 
+	ITEM 19A2 $item_forge2_1_4 
+	ITEM 1982 $item_forge2_1_5 
+	ITEM 1986 $item_forge2_2_1 
+	ITEM 198A $item_forge2_2_2 
+	ITEM 199A $item_forge2_2_3 
+	ITEM 1996 $item_forge2_2_4 
+	ITEM 198E $item_forge2_2_5 
+	ITEM 1986 $item_bellows_2 
+	ITEM 0F39 $item_shovel 
+	ITEM 0F39 $item_tongs 
+	ITEM 1BF2 $item_iron_ingots 
+}
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Musician
+	INTERLINE 25
+	TAB 15
+	PIC
+	LABEL
+	ITEM 0E9C $item_drum drum
+	ITEM 0E9D $item_tambourine1 tambourine
+	ITEM 0E9E $item_tambourine2 tambourine
+	ITEM 0EB1 $item_standing_harp stand. harp
+	ITEM 0EB2 $item_lap_harp lap harp
+	ITEM 0EB3 $item_lute_1 lute
+	ITEM 0EB4 $item_lute_2 lute
+}
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Thief
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 14FB $item_lockpicks lockpicks
+}
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Fisher
+	INTERLINE 10
+	TAB 15
+	PIC
+	LABEL
+	ITEM 0DBF $item_fishing_pole Fishing Pole
+}
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Tinker
+	INTERLINE 15
+	TAB 15
+	PIC
+	LABEL
+	ITEM 104F $item_clock_parts clock parts
+	ITEM 1051 $item_axles_with_gears axles/gears
+	ITEM 1053 $item_gears gears
+	ITEM 1055 $item_hinges hinges
+	ITEM 1059 $item_sextant_parts sextant parts
+	ITEM 105B $item_axles axles
+	ITEM 105D $item_springs springs
+	ITEM 1EBC $item_tinkers_tools tools
+	ITEM 104F $item_clock clock
+	ITEM 104D $item_clock_frames clock frame
+}
+SECTION PAGE
+{
+	SUBMENU 7
+	TITLE Bowyer
+	INTERLINE 30
+	TAB 20
+	PIC
+	LABEL
+	ITEM 100A $item_archery_butte_1 butte
+	ITEM 100B $item_archery_butte_2 butte
+	ITEM 1020 $item_feathers_1 feathers
+	ITEM 1021 $item_feathers_2 feathers
+	ITEM 1022 $item_arrow_fletching_1 fletching
+	ITEM 1023 $item_arrow_fletching_2 fletching
+	ITEM 1024 $item_arrow_shafts_1 shafts
+	ITEM 1025 $item_arrow_shafts_2 shafts
+	ITEM 0F3F $item_arrow arrow
+	ITEM 1BFB $item_crossbow_bolt bolt
+}
+
+//
+//FURNITURE MENU
+//
+SECTION PAGE
+{
+	SUBMENU 9
+	TITLE Misc
+	INTERLINE 30
+	TAB 20
+	PIC
+	LABEL
+	ITEM 0B3F counter1_1 counter
+	ITEM 0B3D counter1_2 counter
+	ITEM 0B40 counter2_1 counter
+	ITEM 0B3e counter2_2 counter
+	ITEM 0A2C chest_of_drawers1_1 chest of drawers
+	ITEM 0A34 chest_of_drawers1_2 chest of drawers
+	ITEM 0A30 chest_of_drawers2_2 fancy chest of drawers
+	ITEM 0A38 chest_of_drawers2_1 fancy chest of drawers
+	ITEM 0A97 bookcase1_1 bookcase
+	ITEM 0A98 bookcase1_2 bookcase
+	ITEM 0A9B bookcase1_3 bookcase
+	ITEM 0A99 bookcase2_1 bookcase
+	ITEM 0A9A bookcase2_2 bookcase
+	ITEM 0A9C bookcase2_3 bookcase
+	ITEM 0A9D wooden_shelf1 bookcase
+	ITEM 0A9E wooden_shelf2 bookcase
+	ITEM 0a3c dresser1_2 dresser
+	ITEM 0a3d dresser1_1 dresser
+	ITEM 0a44 dresser2_1 dresser
+	ITEM 0a45 dresser2_2 dresser
+	ITEM 0A4D armoire1_1 fancy armorie
+	ITEM 0A51 armoire1_2 fancy armoire
+	ITEM 0A4F armoire2_1 armoire
+	ITEM 0A53 armoire2_2 armoire
+}
+SECTION PAGE
+{
+	SUBMENU 9
+	TITLE Tables
+	INTERLINE 15
+	TAB 23
+	PIC
+	LABEL
+	ITEM 0B4a writing_desk_1 writing desk
+	ITEM 0B4b writing_desk_2 writing desk
+	ITEM 0B4c writing_desk_3 writing desk
+	ITEM 0B49 writing_desk_4 writing desk
+	ITEM 0B6E table_A1_1 table
+	ITEM 0B6F table_A1_2 table
+	ITEM 0B82 table_A2_1 table
+	ITEM 0B81 table_A2_2 table
+	ITEM 0B70 table_B1_1 table
+	ITEM 0B71 table_B1_2 table
+	ITEM 0B72 table_B1_3 table
+	ITEM 0B73 table_B1_4 table
+	ITEM 0B74 table_B1_5 table
+	ITEM 0B83 table_B2_1 table
+	ITEM 0B84 table_B2_2 table
+	ITEM 0B85 table_B2_3 table
+	ITEM 0B86 table_B2_4 table
+	ITEM 0B87 table_B2_5 table
+	ITEM 0B75 table_C1_1 table
+	ITEM 0B76 table_C1_2 table
+	ITEM 0B89 table_C2_1 table
+	ITEM 0B88 table_C2_2 table
+	ITEM 0B77 table_D1_1 table
+	ITEM 0B78 table_D1_2 table
+	ITEM 0B79 table_D1_3 table
+	ITEM 0B7A table_D1_4 table
+	ITEM 0B7B table_D1_5 table
+	ITEM 0B8A table_D2_1 table
+	ITEM 0B8B table_D2_2 table
+	ITEM 0B8C table_D2_3 table
+	ITEM 0B8D table_D2_4 table
+	ITEM 0B8E table_D2_5 table
+	ITEM 0B7C table_E1 Table
+	ITEM 0B8F table_E2 table
+	ITEM 0b7d table_F1 table
+	ITEM 0B90 table_F2 table
+	ITEM 0B34 table_G1_1 table
+	ITEM 0B37 table_G1_2 table
+	ITEM 0B35 table_G2_1 table
+	ITEM 0B38 table_G2_2 table
+	ITEM 0B6B table_H1_1 table
+	ITEM 0B6D table_H1_2 table
+	ITEM 0B6C table_H1_3 table
+	ITEM 0B7F table_H2_1 table
+	ITEM 0B80 table_H2_2 table
+	ITEM 0B7E table_H2_3 table
+	ITEM 118b table_I table
+	ITEM 118c table_J table
+	ITEM 118d table_K table
+	ITEM 118e table_L table
+	ITEM 118f table_M1_1 table
+	ITEM 1190 table_M1_2 table
+	ITEM 1191 table_M2_1 table
+	ITEM 1192 table_M2_2 table
+}
+SECTION PAGE
+{
+	SUBMENU 9
+	TITLE Chairs
+	INTERLINE 20
+	TAB 20
+	PIC
+	LABEL
+	ITEM 0B32 throne1 throne
+	ITEM 0B33 throne2 throne
+	ITEM 0B2E wooden_chair1_1 wooden chair
+	ITEM 0B2F wooden_chair1_2 wooden chair
+	ITEM 0B30 wooden_chair1_3 wooden chair
+	ITEM 0B31 wooden_chair1_4 wooden chair
+	ITEM 0B56 wooden_chair2_1 wooden chair
+	ITEM 0B57 wooden_chair2_2 wooden chair
+	ITEM 0B58 wooden_chair2_3 wooden chair
+	ITEM 0B59 wooden_chair2_4 wooden chair
+	ITEM 0B4E fancy_chair1_1 fancy chair
+	ITEM 0B4F fancy_chair1_2 fancy chair
+	ITEM 0B50 fancy_chair1_3 fancy chair
+	ITEM 0B51 fancy_chair1_4 fancy chair
+	ITEM 0B52 fancy_chair2_1 fancy chair
+	ITEM 0B53 fancy_chair2_2 fancy chair
+	ITEM 0B54 fancy_chair2_3 fancy chair
+	ITEM 0B55 fancy_chair2_4 fancy chair
+	ITEM 0B5A straw_chair1_1 straw chair
+	ITEM 0B5B straw_chair1_2 straw chair
+	ITEM 0B5C straw_chair1_3 straw chair
+	ITEM 0B5D straw_chair1_4 straw chair
+	ITEM 0A2A stool1 stool
+	ITEM 0A2B stool2 stool
+	ITEM 0B5F bench_A1_1 bench
+	ITEM 0B61 bench_A1_2 bench
+	ITEM 0B60 bench_A1_3 bench
+	ITEM 0B66 bench_A2_2 bench
+	ITEM 0B67 bench_A2_3 bench
+	ITEM 0B65 bench_A2_1 bench
+	ITEM 0B62 bench_B1_1 bench
+	ITEM 0B64 bench_B1_2 bench
+	ITEM 0B63 bench_B1_3 bench
+	ITEM 0B69 bench_B2_1 bench
+	ITEM 0B6A bench_B2_2 bench
+	ITEM 0B68 bench_B2_3 bench
+	ITEM 0B92 bench_C1_1 bench
+	ITEM 0B91 bench_C1_2 bench
+	ITEM 0B93 bench_C2_1 bench
+	ITEM 0B94 bench_C2_2 bench
+	ITEM 0B2C wooden_bench_D1 wooden bench
+	ITEM 0B2D wooden_bench_D2 wooden bench
+}
+SECTION PAGE
+{
+	SUBMENU 9
+	TITLE Beds
+	INTERLINE 30
+	TAB 20
+	PIC
+	ITEM 0a5d bed_headboard_A1_1 bed
+	ITEM 0a69 bed_headboard_A1_2 bed
+	ITEM 0a6a bed_headboard_A1_3 bed
+	ITEM 0a60 bed_headboard_A1_4 bed
+	ITEM 0a62 bed_feet_A1_1 bed
+	ITEM 0a6b bed_feet_A1_2 bed
+	ITEM 0a61 bed_feet_A1_3 bed
+	ITEM 0a63 bed_headboard_A2_1 bed
+	ITEM 0a66 bed_headboard_A2_2 bed
+	ITEM 0a67 bed_headboard_A2_3 bed
+	ITEM 0a5e bed_headboard_A2_4 bed
+	ITEM 0a5c bed_feet_A2_1 bed
+	ITEM 0a68 bed_feet_A2_2 bed
+	ITEM 0a5f bed_feet_A2_3 bed
+}
+SECTION PAGE
+{
+	SUBMENU 9
+	TITLE Bigbeds
+	INTERLINE 35
+	TAB 13
+	PIC
+	ITEM 0a70 bigbed_headleft_A1_1 bed
+	ITEM 0a84 bigbed_headleft_A1_2 bed
+	ITEM 0a7a bigbed_headleft_A1_3 bed
+	ITEM 0a7c bigbed_headleft_A1_4 bed
+	ITEM 0a90 bigbed_headleft_A1_5 bed
+	ITEM 0a8e bigbed_headleft_A1_6 bed
+	ITEM 0a71 bigbed_feetleft_A1_1 bed
+	ITEM 0a86 bigbed_feetleft_A1_2 bed
+	ITEM 0a78 bigbed_feetleft_A1_3 bed
+	ITEM 0a8c bigbed_feetleft_A1_4 bed
+	ITEM 0a72 bigbed_feetright_A1_1 bed
+	ITEM 0a87 bigbed_feetright_A1_2 bed
+	ITEM 0a79 bigbed_feetright_A1_3 bed
+	ITEM 0a8d bigbed_feetright_A1_4 bed
+	ITEM 0a73 bigbed_headright_A1_1 bed
+	ITEM 0a85 bigbed_headright_A1_2 bed
+	ITEM 0a7b bigbed_headright_A1_3 bed
+	ITEM 0a7d bigbed_headright_A1_4 bed
+	ITEM 0a91 bigbed_headright_A1_5 bed
+	ITEM 0a8f bigbed_headright_A1_6 bed
+	ITEM 0a77 bigbed_headleft_A2_1 bed
+	ITEM 0a89 bigbed_headleft_A2_2 bed
+	ITEM 0a80 bigbed_headleft_A2_3 bed
+	ITEM 0a83 bigbed_headleft_A2_4 bed
+	ITEM 0db3 bigbed_headleft_A2_5 bed
+	ITEM 0db5 bigbed_headleft_A2_6 bed
+	ITEM 0a76 bigbed_feetleft_A2_1 bed
+	ITEM 0a8b bigbed_feetleft_A2_2 bed
+	ITEM 0a7f bigbed_feetleft_A2_3 bed
+	ITEM 0db1 bigbed_feetleft_A2_4 bed
+	ITEM 0a71 bigbed_feetright_A2_1 bed
+	ITEM 0a8a bigbed_feetright_A2_2 bed
+	ITEM 0a7e bigbed_feetright_A2_3 bed
+	ITEM 0db0 bigbed_feetright_A2_4 bed
+	ITEM 0a74 bigbed_headright_A2_1 bed
+	ITEM 0a88 bigbed_headright_A2_2 bed
+	ITEM 0a81 bigbed_headright_A2_3 bed
+	ITEM 0a82 bigbed_headright_A2_4 bed
+	ITEM 0db2 bigbed_headright_A2_5 bed
+	ITEM 0db4 bigbed_headright_A2_6 bed
+}
+
+SECTION PAGE
+{
+	SUBMENU 10
+	TITLE page 1
+	INTERLINE 10
+	TAB 30
+	LABEL
+	//PIC
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+}
+
+
+SECTION PAGE
+{
+	SUBMENU 10
+	TITLE page 2
+	INTERLINE 10
+	TAB 30
+	LABEL
+	//PIC
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+	ITEM 0000 $item_hardcoded your custom items here
+}
+
+//EOF: leave this line at the end of the file

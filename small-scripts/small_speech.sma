@@ -6,6 +6,8 @@
 // || This file should include every ingame speech/message as array line! ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+#define DEFAULT_LANGUAGE 0 //0:english - 1:german - 2:italian - 3:french
+
 /*customizable ingame messages*/
 const NUM_nxwlibSENT = 8;
 public msg_nxwlibDef[NUM_nxwlibSENT][]={

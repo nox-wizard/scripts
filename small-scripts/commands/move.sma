@@ -10,7 +10,7 @@
 \fn cmd_move(const chr)
 \brief moves objects
 
-<B>syntax:<B> 'move x y ["abs"/"rel"] or 'move me or 'move here or 'move loc or 'move here [name]
+<B>syntax:<B> 'move "a"/"r" x y [z] or 'move me or 'move here or 'move loc
 
 <B>command params:</B>
 <UL>
@@ -19,12 +19,12 @@ When using this option no other parameters are needed.<br>
 <LI> here: if command is called as 'move here, the targetted character is teleported to the command user<br>
 <LI> x: x movement
 <LI> y : y movement
+<LI> z : z movement
 <LI> 
 	<UL>
-	<LI> "abs": x and y are intended as absolute (non-negative) coordinates, new position is x,y
-	<LI> "rel": x and y are intended as relative movement, new position is oldx + x, oldy + y (default)
+	<LI> "abs": x,y and z are intended as absolute (non-negative) coordinates, new position is x,y
+	<LI> "rel": x,y and z are intended as relative movement, new position is oldx + x, oldy + y (default)
 	</UL> 
-<LI> "target": pass this parameter if you want to bypass the command area
 </UL>
 
 this command supports command areas only in "rel" mode, in that case all items in the area are
@@ -88,30 +88,29 @@ public cmd_move(const chr)
 
 	//READ PARAMETERS
 
+	
+	//---------------  mode  ------------------
+	new mode = 1; //0:abs 1:rel
+
+	if(__cmdParams[0][0] == 'a')
+			mode = 0;
+		else 	if (__cmdParams[0][0]=='r')
+				mode = 1;
+
 	//-------------------  x y ------------------
-	new x,y;
-	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]))
+	new x,y,z = -1000;
+	if(!isStrInt(__cmdParams[1]) || !isStrInt(__cmdParams[2]))
 	{
 		chr_message(chr,_,"x and y must be numbers");
 		return;
 	}
 
-	x = str2Int(__cmdParams[0]);
-	y = str2Int(__cmdParams[1]);
-
-	//---------------  mode  ------------------
-	new mode = 1; //0:abs 1:rel
-
-	if(strlen(__cmdParams[2]))
-	{
-		if(!strcmp(__cmdParams[2],"abs"))
-			mode = 0;
-		else 	if (!strcmp(__cmdParams[2],"rel"))
-				mode = 1;
-
+	x = str2Int(__cmdParams[1]);
+	y = str2Int(__cmdParams[2]);
 	
-	}
-
+	if(isStrInt(__cmdParams[3]))
+		z = str2Int(__cmdParams[3]);
+	
 	//check sign of x and y only in abs mode
 	if((y < 0 || x < 0) && !mode)
 	{
@@ -123,7 +122,7 @@ public cmd_move(const chr)
 	//command areas only in "rel" mode without "target"
 	if(area_isValid(area)  && mode)
 	{
-		new oldx,oldy,oldz,newx,newy,i;
+		new oldx,oldy,oldz,newx,newy,newz,i;
 
 		if(area_itemsIncluded(area))
 			for(set_rewind(area_items(area)); !set_end(area_items(area));i++)
@@ -132,8 +131,9 @@ public cmd_move(const chr)
 				itm_getPosition(itm,oldx,oldy,oldz);
 				newx = oldx + x;
 				newy += oldy + y;
+				newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
 		
-				itm_moveTo(itm,newx,newy,map_getZ(newx,newy));
+				itm_moveTo(itm,newx,newy,newz);
 		
 				#if _CMD_DEBUG_
 					printf("^tMoving item %d to %d %d %d^n",itm,newx,newy,map_getZ(newx,newy));
@@ -148,8 +148,11 @@ public cmd_move(const chr)
 				chr_getPosition(chr2,oldx,oldy,oldz);
 				newx = oldx + x;
 				newy = oldy + y;
+				newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
 		
-				chr_moveTo(chr2,newx,newy,map_getZ(newx,newy));
+				chr_moveTo(chr2,newx,newy,newz);
+				
+				chr_moveTo(chr2,newx,newy,newz);
 		
 				#if _CMD_DEBUG_
 					printf("^tMoving character %d to %d %d %d^n",chr2,newx,newy,map_getZ(newx,newy));
@@ -161,7 +164,11 @@ public cmd_move(const chr)
 		area_useCommand(area);
 		return;
 	}
-
+	
+	//store z if needed
+	if(z != -1000)
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,z);
+		
 	//move by target
 	if(mode)
 		target_create(chr,(x << 16) + y,_,_,"cmd_move_targ_rel");
@@ -283,11 +290,23 @@ public cmd_move_targ_rel(target, chr, object, x, y, z, unused2, param)
 {
 	new deltax = param  >> 16;
 	new deltay = param & 0xFFFF;
-
+	new deltaz = -1000;
+	new newx,newy,newz;
+	
+	if(chr_isaLocalVar(chr,CLV_CMDTEMP))
+	{
+		deltaz = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+	}
+	
 	if(isChar(object))
 	{
 		chr_getPosition(object,x,y,z);
-		chr_moveTo(object,x + deltax,y + deltay,map_getZ(x + deltax, y + deltay));
+		newx = x + deltax;
+		newy = y + deltay;
+		newz = deltaz == -1000 ? newz = map_getZ(newx,newy) : newz = z + deltaz;
+		
+		chr_moveTo(object,newx,newy,newz);
 		area_refresh(chr_getCmdArea(chr));
 		return;
 	}
@@ -295,7 +314,11 @@ public cmd_move_targ_rel(target, chr, object, x, y, z, unused2, param)
 	if(isItem(object))
 	{
 		itm_getPosition(object,x,y,z);
-		itm_moveTo(object,x + deltax,y + deltay,map_getZ(x + deltax, y + deltay));
+		newx = x + deltax;
+		newy = y + deltay;
+		newz = deltaz == -1000 ? newz = map_getZ(newx,newy) : newz = z + deltaz;
+		
+		itm_moveTo(object,newx,newy,newz);
 		area_refresh(chr_getCmdArea(chr));
 		return;
 	}
@@ -313,16 +336,25 @@ public cmd_move_targ_abs(target, chr, object, x, y, z, unused2, param)
 {
 	new newx = param  >> 16;
 	new newy = param & 0xFFFF;
+	new newz;
+	
+	if(chr_isaLocalVar(chr,CLV_CMDTEMP))
+	{
+		newz = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+	}
+	else newz = map_getZ(newx,newy);
+	
 	if(isChar(object))
 	{
-		chr_moveTo(object,newx,newy,map_getZ(newx,newy));
+		chr_moveTo(object,newx,newy,newz);
 		area_refresh(chr_getCmdArea(chr));
 		return;
 	}
 
 	if(isItem(object))
 	{
-		itm_moveTo(object,newx,newy,map_getZ(newx,newy));
+		itm_moveTo(object,newx,newy,newz);
 		area_refresh(chr_getCmdArea(chr));
 		return;
 	}

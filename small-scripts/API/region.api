@@ -131,7 +131,7 @@ native rgn_respawn(const region, const spawnWhat, const amount = 0);
 
 /*!
 \author Wintermute
-\fn rgn_respawn(const region, const spawnWhat, const amount = 0)
+\fn rgn_clearSpawn(const region, const spawntype);
 \param 1 the region
 \param 2 enum value SPAWN_ALL, SPAWN_DYNAMIC, SPAWN_STATIC
 \brief clears the given spawn type in a region
@@ -140,7 +140,7 @@ native rgn_clearSpawn(const region, const spawntype);
 
 /*!
 \author Wintermute
-\fn rgn_respawn(const region, const amount = 0)
+\fn rgn_respawnRegion ( const region, const amount)
 \param 1 the region
 \param 2 the amount how often region spawning should be triggered
 \brief respawns dynamic and static spawns in a given region with the given amount (may vary a bit depending on spawn settings of region)
@@ -152,7 +152,7 @@ stock rgn_respawnRegion ( const region, const amount)
 
 /*!
 \author Wintermute
-\fn rgn_respawn(const region, const amount = 0)
+\fn rgn_respawnRegionRandom ( const region)
 \param 1 the region
 \brief respawns dynamic and static spawns in a given region with a random amount of spawn trigger calls
 */
@@ -164,7 +164,7 @@ stock rgn_respawnRegionRandom ( const region)
 
 /*!
 \author Wintermute
-\fn rgn_respawn(const region, const amount = 0)
+\fn rgn_respawnRegionMax ( const region)
 \param 1 the region
 \brief respawns dynamic and static spawns in a given region until they are spawned to the max
 */
@@ -176,7 +176,7 @@ stock rgn_respawnRegionMax ( const region)
 
 /*!
 \author Wintermute
-\fn rgn_respawn()
+\fn rgn_respawnAll ( )
 \brief respawns all dynamic and static spawns in every region 
 */
 

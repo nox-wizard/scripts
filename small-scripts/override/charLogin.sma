@@ -31,8 +31,7 @@ public __charLogin(const chr)
 	hungerandthirst(chr);
 	
 	//put here any function you want to be executed at character login
-	
-	
+		
 	log_message(" ============ END OF LOGIN SCRIPTS ============");
 }
 

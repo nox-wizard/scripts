@@ -66,6 +66,7 @@ possess,100,cmd_possess
 racelang,0,cmd_racelang
 regioncp,150,cmd_regioncp
 resend,50,cmd_resend
+respawn,150,cmd_respawn
 resurrect,100,cmd_resurrect
 save,200,cmd_save
 setmorexyz,150,cmd_setmorexyz
@@ -78,6 +79,7 @@ settype,150,cmd_settype
 showbank,200,cmd_showbank
 skills,0,cmd_skills
 solvepage,100,cmd_solvepage
+spawnkill,150,cmd_spawnkill
 stamina,200,cmd_stamina
 stats,0,cmd_stats
 summon,100,cmd_summon

@@ -12,8 +12,6 @@ NOX wizard allows users to use ingame commands
 to interact with the emulator.
 An ingame command is an ' followed by the command name
 (i.e.: 'add 'wipe 'skills).
-If you give wrong parameters to a command usually 
-it will tell you what parameters it needs.
 To have hints on commands use the command 
 as help topic (i.e.: help 'add).
 For detailed description about commands parameters 
@@ -32,6 +30,22 @@ TOPIC 'action
 TEXT
 Makes a character perform an action
 sysntax: 'action actionnumber
+ 
+actionnumber can be:
+0: walk unarmed 1:walk armed
+2: run unarmed 3:run armed
+4: stand 5:look around 6:lookdown
+7: stand 1h attack 8:stand 2h attack
+9:attack 1h 10:jab 11:fist
+12:attack 2h down 13:attack 2h wide
+14:2h jab 15:walk war mode
+16:cast direct 17:cast area 18:attack bow
+19:attack crossbow 20:take hit
+21:die back 22:die fwd 23:walk mounted
+24:ride 25:attack horse 26:attack bow horse
+27:attack crossbow horse 28:slap 29:turn
+30:atack unarmed and walk 31:bow
+32:salute 33:drink
 
 TOPIC 'add
 TEXT
@@ -39,8 +53,14 @@ Adds items characters to the world
 syntax: 'add [ID/scriptID][amount]
 If no params are specified the add menu is opened.
 If you give a generic word as parameter ('add forge)
-you will be prompted to choosefrom a list of
-possible items
+you will be prompted to choose from a list of
+possible items.
+The add menu contains subsections to add specific items.
+The "current adding mode" button switches between
+"continuous adding mode" and "single adding mode".
+In continuous mode you can add items wothout having
+to select them from the menu each time. 
+Useful to add many identilcal items at different locations.
 
 TOPIC 'align
 TEXT
@@ -53,6 +73,9 @@ TOPIC 'area
 TEXT
 sets a command area for a character
 syntax: 'area [R] ["itm"/"chr"/"all"] [duration]
+R: the area radius
+itm/chr/all: what to include in area
+duration: number of commands affected
 Command areas are used to perform many commands on 
 all  objects in an area without having to select 
 the area each time.
@@ -62,8 +85,10 @@ deletes a previously defined one.
 TOPIC 'cset
 TEXT
 Sets a character's property
-syntax: 'cset property value
+syntax: 'cset property [value]
  
+If value is not specified you will be told
+the current property value.
 property can be:
 "ai": npcai
 "dir": direction - (n/ne/e/se/s/sw/w/nw)
@@ -105,6 +130,7 @@ TOPIC 'dye
 TEXT
 Dyes an item
 syntax: 'dye color 
+color is the hue code
 
 TOPIC 'dupe
 TEXT
@@ -181,6 +207,8 @@ TEXT
 Sets an item's property
 syntax: 'iset property value
  
+If value is not given you will be told the
+current property value.
 propery can be:
 "amount": amount
 "dir": direction (n/ne/e/se/s/sw/w/nw)
@@ -214,7 +242,9 @@ syntax: 'killhair
 
 TOPIC 'lightlevel
 TEXT
+Sets the world light level
 syntax: 'lightlevel
+0 is the brightest light level, 20 the darkest
 
 TOPIC 'make
 TEXT
@@ -229,7 +259,9 @@ syntax: 'mana
 TOPIC 'move
 TEXT
 Moves an object
-syntax: 'move "me"/"here"/"loc"/ x y ["abs"/"rel"]
+syntax: 'move "a"/"r" x y [z]
+'move a x y z: moves to x y z
+'move r dx dy dz: moves to x + dx, y + dy, z+ dz (relative mode)
 'move me: moves the calling chatacer
 'move here: moves object to charatcer's feet
 'move loc: moves object to a location
@@ -281,6 +313,15 @@ TEXT
 Updates the character
 syntax: 'resend
 May be useful to solve some bugs
+
+TOPIC 'respawn
+TEXT
+Respawns regions
+syntax: 'respawn region amount
+region: the region number or "this" or "all"
+amount: the amount to be spawned or "max" or "rand"
+ 
+Default is: 'respawn = 'respawn all rand
 
 TOPIC 'resurrect
 TEXT
@@ -334,6 +375,15 @@ TEXT
 Solves a character's page
 syntax: 'solvepage [pagenumber]
 
+TOPIC 'spawnkill
+TEXT
+Clears spwns in region(s)
+syntax: 'spawnkill region type
+region: teh region number or "this" or "all"
+type: "stat" "dyn" "all"
+ 
+Default is: 'spawnkill = 'spawnkill all all
+
 TOPIC 'stamina
 TEXT
 Refreshes a character
@@ -360,6 +410,8 @@ TOPIC 'tile
 TEXT
 Tiles an item along x y z axis
 syntax: 'tile [nX nY] [nZ zScale]
+nX,nY,nZ: number of copies
+zScal: Z spacing
 
 TOPIC 'tweak
 TEXT

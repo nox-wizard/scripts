@@ -252,6 +252,7 @@ new currentXssSectionType[FILE_SCAN_BUFFER_SIZE];
 new currentXssSection;
 new currentXssCommand[FILE_SCAN_BUFFER_SIZE];
 new currentXssValue[FILE_SCAN_BUFFER_SIZE];
+new skipXssSection;
 
 /*!
 \author Fax
@@ -291,6 +292,14 @@ public xss_scanFile(filename[],callback[])
 		
 		//seek "SECTION"
 		str2Token(__fileScanBuffer,token,0,__fileScanBuffer,0)
+		
+		//#include
+		if(!strcmp(token,"#include"))
+		{
+			str2Token(__fileScanBuffer,token,0,__fileScanBuffer,0)
+			xss_scanFile(token,callback);
+		}
+		
 		if(strcmp(token,"SECTION")) continue;
 		
 		//store the section type
@@ -324,7 +333,8 @@ public xss_scanFile(filename[],callback[])
 		}
 		
 		//read XSS commands
-		for(file_read(file,__fileScanBuffer); !file_eof(file); file_read(file,__fileScanBuffer))
+		skipXssSection = false;
+		for(file_read(file,__fileScanBuffer); !file_eof(file) && !skipXssSection; file_read(file,__fileScanBuffer))
 		{
 			line++;
 			trim(__fileScanBuffer);
@@ -348,9 +358,16 @@ public xss_scanFile(filename[],callback[])
 		section++;	
 	}
 	
+	file_close(file);
 	return section;
 }
 
+stock str2ScriptID(string[])
+{
+	if(isStrInt(string))
+		return str2Int(string);
+	return getIntFromDefine(string,true);
+}
 //=========================================================================================//
 //                              CHARACTER HELP FUNCTIONS                                   //
 //=========================================================================================//

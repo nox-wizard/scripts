@@ -324,10 +324,8 @@ const PRIV2_NONEEDREAGS = 0x80;	//!<
 
 //these vars are deleted at character's login (globaltags(c) function in charLogin.sma)
 #define CLV_CMDTEMP 9996		//!< commands temp variable - created on the fly,delete after use
-#define CLV_CMDTEMPVEC 9995		//!< commands temp variable for vectors - created on the fly,delete after use
-#define CLV_CMDTEMPSTR 9994		//!< commands temp variable for strings - created on the fly,delete after use
-#define CLV_CMDTEMPSTR1 9993		//!< commands temp variable for strings - created on the fly,delete after use
-#define CLV_CMDADDTEMP 9992		//!< 'add command temp variable - created on the fly, delete after use.
+#define CLV_CMDTEMPVEC 9995
+#define CLV_CONTINUOUS_ADDING_MODE 9994	//!< toggles continuous adding mode
 #define CLV_TEMP1 9991			//!< generic temp var 1 - now used for getRectangle() - created on the fly, delete after use.
 
 /** @} */

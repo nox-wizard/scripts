@@ -440,7 +440,6 @@
 #define $item_bar_door 618
 #define $item_bar_door_1 619
 
-#define $item_trashcan_deed 620
 #define $item_trashcan 621
 #define $item_headwear_list 622
 #define $item_weapons_list 623
@@ -1181,6 +1180,7 @@
 
 /////////////////////////////////////////////////
 
+#define $item_trashcan_deed 620
 #define $item_small_stone_plaster_house_deed 6000
 #define $item_small_stone_house_deed 6001
 #define $item_small_brick_house_deed 6002

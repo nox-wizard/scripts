@@ -23,7 +23,7 @@ to say that a popup has been submitted
 */
 public cmd_popup(const chr)
 {
-	new name[50],message[200];
+	new message[200];
 
 	chr_getSpeech(chr,message);
 	

@@ -353,24 +353,24 @@ new __addMenuList[NUM_ADD_ITEMS][additemEntry] =
 
 	//scrolls
 	//1st circle
-	{0x1F35,"$item_reactive_armor_scroll            ","Agility Scroll"},
-	{0x1F36,"$item_clumsy_scroll                    ","Cunning Scroll"},
-	{0x1F37,"$item_create_food_scroll               ","Cure Scroll"},
-	{0x1F38,"$item_feeblemind_scroll                ","Harm Scroll"},
-	{0x1F39,"$item_heal_scroll                      ","Magic TraP_Scroll"},
-	{0x1F3A,"$item_magic_arrow_scroll               ","Magic UntraP_Scroll"},
-	{0x1F3B,"$item_night_sight_scroll               ","Protection Scroll"},
-	{0x1F3C,"$item_weaken_scroll                    ","Strength Scroll"},
+	{0x1F35,"$item_reactive_armor_scroll            ","reactive armor Scroll"},
+	{0x1F36,"$item_clumsy_scroll                    ","clumsy Scroll"},
+	{0x1F37,"$item_create_food_scroll               ","create food Scroll"},
+	{0x1F38,"$item_feeblemind_scroll                ","feeblemind Scroll"},
+	{0x1F39,"$item_heal_scroll                      ","heal TraP_Scroll"},
+	{0x1F3A,"$item_magic_arrow_scroll               ","Magic arrow Scroll"},
+	{0x1F3B,"$item_night_sight_scroll               ","night sight Scroll"},
+	{0x1F3C,"$item_weaken_scroll                    ","weaken Scroll"},
 
 	//2nd circle
-	{0x1F2D,"$item_agility_scroll                   ","Reactive Armor Scroll"},
-	{0x1F2E,"$item_cunning_scroll                   ","Clumsy Scroll"},
-	{0x1F2F,"$item_cure_scroll                      ","Create Food Scroll"},
-	{0x1F30,"$item_harm_scroll                      ","Feeblemind Scroll"},
-	{0x1F31,"$item_magic_trap_scroll                ","Heal Scroll"},
-	{0x1F32,"$item_magic_untrap_scroll              ","Magic Arrow Scroll"},
-	{0x1F33,"$item_protection_scroll                ","Night Sight Scroll"},
-	{0x1F34,"$item_strength_scroll                  ","Weaken Scroll"},
+	{0x1F2D,"$item_agility_scroll                   ","Agility Scroll"},     
+	{0x1F2E,"$item_cunning_scroll                   ","Cunning Scroll"},     
+	{0x1F2F,"$item_cure_scroll                      ","Cure Scroll"},        
+	{0x1F30,"$item_harm_scroll                      ","Harm Scroll"},        
+	{0x1F31,"$item_magic_trap_scroll                ","Magic Trap Scroll"},  
+	{0x1F32,"$item_magic_untrap_scroll              ","Magic Untrap Scroll"},
+	{0x1F33,"$item_protection_scroll                ","Protection Scroll"},  
+	{0x1F34,"$item_strength_scroll                  ","Strength Scroll"},    
 
 	//3rd circle
 	{0x1F3D,"$item_bless_scroll                     ","Bless Scroll"},
@@ -1745,76 +1745,63 @@ new __deeds[NUM_DEEDS][additemEntry]
 new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 {
 	//platemail
-	{0x1412,"                                       ","helm"},
-	{0x1413,"                                       ","gorget"},
-	{0x1416,"                                       ","chest"},
-	{0x1410,"                                       ","sleeves"},
-	{0x1414,"                                       ","gloves"},
-	{0x141A,"                                       ","legs"},
-	{0x1C04,"                                       ","female"},
+	ITEM 1412 helm
+	ITEM 1413 gorget
+	ITEM 1416 chest
+	ITEM 1410 sleeves
+	ITEM 1414 gloves
+	ITEM 141A legs
+	ITEM 1C04 female
 
 	//chainmail
-	{0x13BB, "                                       ","coif"},
-	{INVALID,"                                       ","gorget"},
-	{0x13C4, "                                       ","tunic"},
-	{INVALID,"                                       ","sleeves"},
-	{INVALID,"                                       ","gloves"},
-	{0x13C3, "                                       ","legs"},
-	{INVALID,"                                       ","female"},
-
+	ITEM 13BB coif
+	ITEM 13C4 tunic
+	ITEM 13C3 legs
+	
 	//ringmail
-	{INVALID,"                                       ","coif"},
-	{INVALID,"                                       ","gorget"},
-	{0x13ED, "                                       ","tunic"},
-	{0x13EF, "                                       ","sleeves"},
-	{0x13F2, "                                       ","gloves"},
-	{0x13F1, "                                       ","legs"},
-	{INVALID,"                                       ","female"},
+	{INVALID coif
+	{INVALID gorget
+	ITEM 13ED tunic
+	ITEM 13EF sleeves
+	ITEM 13F2 gloves
+	ITEM 13F1 legs
+	{INVALID female
 
 	//studded
-	{INVALID,"                                       ","cap"},
-	{0x13D6, "                                       ","gorget"},
-	{0x13E2, "                                       ","tunic"},
-	{0x13D4, "                                       ","sleeves"},
-	{0x13DD, "                                       ","gloves"},
-	{0x13E1, "                                       ","legs"},
-	{0x1C02, "                                       ","female"},
+	{INVALID cap
+	ITEM 13D6 gorget
+	ITEM 13E2 tunic
+	ITEM 13D4 sleeves
+	ITEM 13DD gloves
+	ITEM 13E1 legs
+	ITEM 1C02 female
 
 	//leather
-	{0x1DBA, "                                       ","cap"},
-	{INVALID,"                                       ","gorget"},
-	{0x13D3, "                                       ","tunic"},
-	{0x13CD, "                                       ","sleeves"},
-	{0x13CE, "                                       ","gloves"},
-	{0x13D2, "                                       ","legs"},
-	{0x1C06, "                                       ","female"},
+	ITEM 1DBA cap
+	ITEM 13D3 tunic
+	ITEM 13CD sleeves
+	ITEM 13CE gloves
+	ITEM 13D2 legs
+	ITEM 1C06 female
 
 	//bone
-	{0x1451, "                                       ","helm"},
-	{INVALID,"                                       ","gorget"},
-	{0x144F, "                                       ","chest"},
-	{0x144E, "                                       ","sleeves"},
-	{0x1450, "                                       ","gloves"},
-	{0x1452, "                                       ","legs"},
-	{INVALID,"                                       ","female"},
-
+	ITEM 1451 helm
+	ITEM 144F chest
+	ITEM 144E sleeves
+	ITEM 1450 gloves
+	ITEM 1452 legs
+	
 	//helms
-	{0x1412, "                                       ","plate_helm"},
-	{0x140C, "                                       ","bascinet"},
-	{0x1408, "                                       ","close_helm"},
-	{0x140A, "                                       ","helmet"},
-	{0x140E, "                                       ","nose_helm"},
-	{INVALID,"                                       ","legs"},
-	{INVALID,"                                       ","female"},
+	ITEM 1412 plate_helm
+	ITEM 140C bascinet
+	ITEM 1408 close_helm
+	ITEM 140A helmet
+	ITEM 140E nose_helm
+	{INVALID legs
+	{INVALID female
 
 	//Shields
-	{0x1B73, "                                       ","buckler"},
-	{0x1B7B, "                                       ","metal_shield"},
-	{0x1B72, "                                       ","bronze_shield"},
-	{0x1B78, "                                       ","wooden_kite_shield"},
-	{0x1B74, "                                       ","metal_kite_shield"},
-	{0x1B76, "                                       ","heater"},
-	{INVALID,"                                       ","female"}
+	{INVALID female"}
 }
 
 #define NUM_WEAPONS 4
@@ -1822,44 +1809,44 @@ new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
 new __weapons[NUM_WEAPONS*WEAPONS_PER_GROUP][additemEntry] =
 {
 	//Axes
-	{0x0F4B, "                                       ","double_axe"},
-	{0x0F47, "                                       ","battle_axe"},
-	{0x13FB, "                                       ","large_battle_axe"},
-	{0x0F49, "                                       ","axe"},
-	{0x1442, "                                       ","two-handed_axe"},
-	{0x0F45, "                                       ","executioners_axe"},
-	{0x13B0, "                                       ","war-axe"},
-	{INVALID,"                                       ",""},
+	ITEM 0F4B double_axe
+	ITEM 0F47 battle_axe
+	ITEM 13FB large_battle_axe
+	ITEM 0F49 axe
+	ITEM 1442 two-handed_axe
+	ITEM 0F45 executioners_axe
+	ITEM 13B0 war-axe
+	{INVALID 
 
 	//swords/blades
-	{0x0F51,"                                       ","dagger"},
-	{0x1440,"                                       ","cutlass"},
-	{0x1400,"                                       ","kryss"},
-	{0x13FF,"                                       ","katana"},
-	{0x13B6,"                                       ","scimitar"},
-	{0x0F5E,"                                       ","broadsword"},
-	{0x13B8,"                                       ","long_sword"},
-	{0x13BA,"                                       ","viking_sword"},
+	ITEM 0F51 dagger
+	ITEM 1440 cutlass
+	ITEM 1400 kryss
+	ITEM 13FF katana
+	ITEM 13B6 scimitar
+	ITEM 0F5E broadsword
+	ITEM 13B8 long_sword
+	ITEM 13BA viking_sword
 
 	//maces
-	{0x0F5C,"                                       ","mace"},
-	{0x143A,"                                       ","maul"},
-	{0x1406,"                                       ","war_mace"},
-	{0x1438,"                                       ","war_hammer"},
-	{0x143C,"                                       ","hammer_pick"},
-	{INVALID,"                                       ","legs"},
-	{INVALID,"                                       ","legs"},
-	{INVALID,"                                       ","legs"},
+	ITEM 0F5C mace
+	ITEM 143A maul
+	ITEM 1406 war_mace
+	ITEM 1438 war_hammer
+	ITEM 143C hammer_pick
+	{INVALID legs
+	{INVALID legs
+	{INVALID legs
 
 	//spears/forks/pole arms/bows
-	{0x0F62,"                                       ","short_spear"},
-	{0x1405,"                                       ","war_fork"},
-	{0x0F62,"                                       ","spear"},
-	{0x0F42,"                                       ","bardiche"},
-	{0x143E,"                                       ","halberd"},
-	{0x13B2,"                                       ","bow"},
-	{0x0F50,"                                       ","crossbow"},
-	{0x13FD,"                                       ","heavy_crossbow"}
+	ITEM 0F62 short_spear
+	ITEM 1405 war_fork
+	ITEM 0F62 spear
+	ITEM 0F42 bardiche
+	ITEM 143E halberd
+	ITEM 13B2 bow
+	ITEM 0F50 crossbow
+	ITEM 13FD heavy_crossbow"}
 }
 
 /*! }@ */

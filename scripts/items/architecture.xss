@@ -827,147 +827,147 @@ SECTION ITEM $item_log_wall1_22
     ID 00A5
 }
 
-SECTION ITEM $item_wooden_wall1_1
+SECTION ITEM $item_wooden_wall2_1
 {
     ID 00A6
 }
  
-SECTION ITEM $item_wooden_wall1_2
+SECTION ITEM $item_wooden_wall2_2
 {
     ID 00A7
 }
  
-SECTION ITEM $item_wooden_wall1_3
+SECTION ITEM $item_wooden_wall2_3
 {
     ID 00A8
 }
  
-SECTION ITEM $item_wooden_wall1_4
+SECTION ITEM $item_wooden_wall2_4
 {
     ID 00A9
 }
  
-SECTION ITEM $item_wooden_wall1_5
+SECTION ITEM $item_wooden_wall2_5
 {
     ID 00AA
 }
  
-SECTION ITEM $item_wooden_wall1_6
+SECTION ITEM $item_wooden_wall2_6
 {
     ID 00AB
 }
  
-SECTION ITEM $item_wooden_wall1_7
+SECTION ITEM $item_wooden_wall2_7
 {
     ID 00AC
 }
  
-SECTION ITEM $item_wooden_wall1_8
+SECTION ITEM $item_wooden_wall2_8
 {
     ID 00AD
 }
  
-SECTION ITEM $item_wooden_wall1_9
+SECTION ITEM $item_wooden_wall2_9
 {
     ID 00AE
 }
  
-SECTION ITEM $item_wooden_wall1_10
+SECTION ITEM $item_wooden_wall2_10
 {
     ID 00AF
 }
 
-SECTION ITEM $item_wooden_wall1_11
+SECTION ITEM $item_wooden_wall2_11
 {
     ID 00B0
 }
 
-SECTION ITEM $item_wooden_wall1_12
+SECTION ITEM $item_wooden_wall2_12
 {
     ID 00B1
 }
 
-SECTION ITEM $item_wooden_wall1_13
+SECTION ITEM $item_wooden_wall2_13
 {
     ID 00B2
 }
 
-SECTION ITEM $item_wooden_wall1_14
+SECTION ITEM $item_wooden_wall2_14
 {
     ID 00B3
 }
 
-SECTION ITEM $item_wooden_wall1_15
+SECTION ITEM $item_wooden_wall2_15
 {
     ID 00B4
 }
 
-SECTION ITEM $item_wooden_wall1_16
+SECTION ITEM $item_wooden_wall2_16
 {
     ID 00B5
 }
 
-SECTION ITEM $item_wooden_wall1_17
+SECTION ITEM $item_wooden_wall2_17
 {
     ID 00B6
 }
 
-SECTION ITEM $item_wooden_wall1_18
+SECTION ITEM $item_wooden_wall2_18
 {
     ID 00B7
 }
 
-SECTION ITEM $item_wooden_wall1_19
+SECTION ITEM $item_wooden_wall2_19
 {
     ID 00B8
 }
 
-SECTION ITEM $item_wooden_wall1_20
+SECTION ITEM $item_wooden_wall2_20
 {
     ID 00B9
 }
 
-SECTION ITEM $item_wooden_wall1_21
+SECTION ITEM $item_wooden_wall2_21
 {
     ID 00BA
 }
 
-SECTION ITEM $item_wooden_wall1_22
+SECTION ITEM $item_wooden_wall2_22
 {
     ID 00BB
 }
 
-SECTION ITEM $item_wooden_wall1_23
+SECTION ITEM $item_wooden_wall2_23
 {
     ID 00BC
 }
 
-SECTION ITEM $item_wooden_wall1_24
+SECTION ITEM $item_wooden_wall2_24
 {
     ID 00BD
 }
 
-SECTION ITEM $item_wooden_wall1_25
+SECTION ITEM $item_wooden_wall2_25
 {
     ID 00BE
 }
 
-SECTION ITEM $item_wooden_wall1_26
+SECTION ITEM $item_wooden_wall2_26
 {
     ID 00BF
 }
 
-SECTION ITEM $item_wooden_wall1_27
+SECTION ITEM $item_wooden_wall2_27
 {
     ID 00C0
 }
 
-SECTION ITEM $item_wooden_wall1_28
+SECTION ITEM $item_wooden_wall2_28
 {
     ID 00C1
 }
 
-SECTION ITEM $item_wooden_wall1_29
+SECTION ITEM $item_wooden_wall2_29
 {
     ID 00C2
 }
@@ -3475,172 +3475,172 @@ SECTION ITEM $item_tent_wall3_15
     ID 02EC
 }
 
-SECTION ITEM $item_plaster_wall2_1
+SECTION ITEM $item_plaster_wall3_1
 {
     ID 037F
 }
  
-SECTION ITEM $item_plaster_wall2_2
+SECTION ITEM $item_plaster_wall3_2
 {
     ID 0380
 }
  
-SECTION ITEM $item_plaster_wall2_3
+SECTION ITEM $item_plaster_wall3_3
 {
     ID 0381
 }
  
-SECTION ITEM $item_plaster_wall2_4
+SECTION ITEM $item_plaster_wall3_4
 {
     ID 0382
 }
  
-SECTION ITEM $item_plaster_wall2_5
+SECTION ITEM $item_plaster_wall3_5
 {
     ID 0383
 }
  
-SECTION ITEM $item_plaster_wall2_6
+SECTION ITEM $item_plaster_wall3_6
 {
     ID 0384
 }
  
-SECTION ITEM $item_plaster_wall2_7
+SECTION ITEM $item_plaster_wall3_7
 {
     ID 0385
 }
  
-SECTION ITEM $item_plaster_wall2_8
+SECTION ITEM $item_plaster_wall3_8
 {
     ID 0386
 }
  
-SECTION ITEM $item_plaster_wall2_9
+SECTION ITEM $item_plaster_wall3_9
 {
     ID 0387
 }
  
-SECTION ITEM $item_plaster_wall2_10
+SECTION ITEM $item_plaster_wall3_10
 {
     ID 0388
 }
 
-SECTION ITEM $item_plaster_wall2_11
+SECTION ITEM $item_plaster_wall3_11
 {
     ID 0389
 }
 
-SECTION ITEM $item_plaster_wall2_12
+SECTION ITEM $item_plaster_wall3_12
 {
     ID 038A
 }
 
-SECTION ITEM $item_plaster_wall2_13
+SECTION ITEM $item_plaster_wall3_13
 {
     ID 038B
 }
 
-SECTION ITEM $item_plaster_wall2_14
+SECTION ITEM $item_plaster_wall3_14
 {
     ID 038C
 }
 
-SECTION ITEM $item_plaster_wall2_15
+SECTION ITEM $item_plaster_wall3_15
 {
     ID 038D
 }
 
-SECTION ITEM $item_plaster_wall2_16
+SECTION ITEM $item_plaster_wall3_16
 {
     ID 038E
 }
 
-SECTION ITEM $item_plaster_wall2_17
+SECTION ITEM $item_plaster_wall3_17
 {
     ID 038F
 }
 
-SECTION ITEM $item_plaster_wall2_18
+SECTION ITEM $item_plaster_wall3_18
 {
     ID 0390
 }
 
-SECTION ITEM $item_plaster_wall2_19
+SECTION ITEM $item_plaster_wall3_19
 {
     ID 0391
 }
 
-SECTION ITEM $item_plaster_wall2_20
+SECTION ITEM $item_plaster_wall3_20
 {
     ID 0392
 }
 
-SECTION ITEM $item_plaster_wall2_21
+SECTION ITEM $item_plaster_wall3_21
 {
     ID 0393
 }
 
-SECTION ITEM $item_plaster_wall2_22
+SECTION ITEM $item_plaster_wall3_22
 {
     ID 0394
 }
 
-SECTION ITEM $item_plaster_wall2_23
+SECTION ITEM $item_plaster_wall3_23
 {
     ID 0395
 }
 
-SECTION ITEM $item_plaster_wall2_24
+SECTION ITEM $item_plaster_wall3_24
 {
     ID 0396
 }
 
-SECTION ITEM $item_plaster_wall2_25
+SECTION ITEM $item_plaster_wall3_25
 {
     ID 0397
 }
 
-SECTION ITEM $item_plaster_wall2_26
+SECTION ITEM $item_plaster_wall3_26
 {
     ID 0398
 }
 
-SECTION ITEM $item_plaster_wall2_27
+SECTION ITEM $item_plaster_wall3_27
 {
     ID 0399
 }
 
-SECTION ITEM $item_plaster_wall2_28
+SECTION ITEM $item_plaster_wall3_28
 {
     ID 039A
 }
 
-SECTION ITEM $item_plaster_wall2_29
+SECTION ITEM $item_plaster_wall3_29
 {
     ID 039B
 }
 
-SECTION ITEM $item_plaster_wall2_30
+SECTION ITEM $item_plaster_wall3_30
 {
     ID 039C
 }
 
-SECTION ITEM $item_plaster_wall2_31
+SECTION ITEM $item_plaster_wall3_31
 {
     ID 039D
 }
 
-SECTION ITEM $item_plaster_wall2_32
+SECTION ITEM $item_plaster_wall3_32
 {
     ID 039E
 }
 
-SECTION ITEM $item_plaster_wall2_33
+SECTION ITEM $item_plaster_wall3_33
 {
     ID 039F
 }
 
-SECTION ITEM $item_plaster_wall2_34
+SECTION ITEM $item_plaster_wall3_34
 {
     ID 03A0
 }

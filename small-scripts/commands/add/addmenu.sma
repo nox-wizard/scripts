@@ -1,15 +1,3 @@
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (menus.xss)                                      ||
-// || Maintained by Xanathar and Kendra                                   ||
-// || Last Update 27-nov-2001                                             ||
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.70s or later                      ||
-// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-#include "small-scripts/commands/add/constants.sma"
-#include "small-scripts/API/gui/defines.sma"
-#include "small-scripts/commands/add/lists.sma"
-
 /*!
 \defgroup script_commands_add_menu menu
 \ingroup script_commands_add
@@ -17,16 +5,98 @@
 @{
 */
 
+//======================== EDITABLE SECTION ====================================//
+#define DEFAULT_LANGUAGE 0 //0:english - 1:german - 2:italian - 3:french
+static standardFunction[] = "addgui_standard";	//!< standard function to call to draw menus
+#define MAX_ADD_SUBMENUS 16	//!< maximum number of submenus
+#define MAX_PAGES_PER_SUBMENU 16	//!< maximum number of pages per each submenu
+#define MAX_TITLE_LENGTH 16	//!< maximum title lenght, both submenu and page titles
+#define MAX_ADDMENU_ITEMS 1500	//!< maximum overall number of loadable items
+#define ITEMS_PER_ROW 4	//!< items (submenus - pages) in a header row. This changes the submenus width
 
-#define PICW 30
-//do not touch
-#define INPUT_AMOUNT 0
-#define INPUT_MATERIAL 1
-#define INPUT_MAGIC_SUFFIX 100
+//==============================================================================//
+//strings are set to "ERROR: add menu string not loaded" because with that we can see if a
+//string is not loaded from addmenu.xss 
+new msg_add_addingModeCont[100] = "ERROR: add menu string not loaded";
+new msg_add_addingModeSingle[100] = "ERROR: add menu string not loaded";
+new msg_add_reload[100] = "ERROR: add menu string not loaded";
+new msg_add_createItemsInBackpack[100] = "ERROR: add menu string not loaded";
+new msg_add_itemCreated[100] = "ERROR: add menu string not loaded";
+new msg_add_click2PositionTheItem[100] = "ERROR: add menu string not loaded";
+new msg_add_click2PositionTheChar[100] = "ERROR: add menu string not loaded";
+new msg_add_WARNING[100] = "ERROR: add menu string not loaded";
+new msg_add_itemsNotLoaded[100] = "ERROR: add menu string not loaded";
+new msg_add_itemType[100] = "ERROR: add menu string not loaded";
+new msg_add_material[100] = "ERROR: add menu string not loaded";
+new msg_add_subtype[100] = "ERROR: add menu string not loaded";
+new msg_add_openmenu[100] = "ERROR: add menu string not loaded";
+new msg_add_architecture1[100] = "ERROR: add menu string not loaded";
+new msg_add_architecture2[100] = "ERROR: add menu string not loaded";
+new msg_add_architecture3[100] = "ERROR: add menu string not loaded";
+new msg_add_architecture4[100] = "ERROR: add menu string not loaded";
+new msg_add_architecture5[100] = "ERROR: add menu string not loaded";
+new msg_add_notDefined[100] = "ERROR: add menu string not loaded";
+new msg_add_loadingAddMenu[100] = "Loading 'add menu"; //this string is used before XSS loading
+new msg_add_unable2OpenFile[100] = "ERROR: add menu string not loaded";
+new msg_add_itemsLoaded[100] = "ERROR: add menu string not loaded";
+new msg_add_mustBeInteger[100] = "ERROR: add menu string not loaded";
+new msg_add_mustBeHex[100] = "ERROR: add menu string not loaded";
+new msg_add_tooManyItems[100] = "ERROR: add menu string not loaded";
 
-#define CHK_ITEMSINBACKPACK 0;
+//======================== GLOBAL VARIABLES AND ARRAYS =========================//
+//DO NOT edit this section unless you know what you are doing!
+static addmenu_xss_path[] = "small-scripts/commands/add/"; //!< XSS file path
+static addmenu_xss[100]; //!< XSS file to load
+new currentAddmenuLanguage = DEFAULT_LANGUAGE;
+static pageDataIdx; //!< moving index in pageData[][]
+static listIdx;	//!< moving index in addMenuList[][]
+static submenuCount; //!< number of loaded submenus
+static error; //!< true if an error occurred during the script
 
-static error;
+enum submenuStruct
+{
+	__pageDataIdx,		//!< index in pageData[][] at wich start submenu data
+	__numPages,		//!< number of pages in the submenu
+	__height,		//!< number of linesin the menu body
+	__submenuTitle: MAX_TITLE_LENGTH,	//!< submenu title
+	__submenuFunction: AMX_FUNCTION_LENGTH	//!< submenu function
+}//!< submenuData[][] structure
+public submenuData[MAX_ADD_SUBMENUS][submenuStruct]; //!< submenu data
+
+enum pageStruct
+{
+	__submenu,	//!< the submenu the page belongs to
+	__listIdx,	//!< index in addMenuList[][] at wich items data strat
+	__numItems,	//!< number of listed items
+	__addGui_tab,	//!< columns spacing
+	__addGui_interline,	//!< rows spacing
+	__showPic,	//!< true if the pic is to be shown
+	__showLabel,	//!< true if the label has to be shown
+	__pageFunction: AMX_FUNCTION_LENGTH,	//!< page function for custom pages
+	__pageTitle: MAX_TITLE_LENGTH	//!< page title
+}//!< pageData[][] structure
+public pageData[MAX_ADD_SUBMENUS*MAX_PAGES_PER_SUBMENU][pageStruct];
+
+
+enum addMenuListStruct
+{
+	__addGui_type,		//!< type ofobject NPC or ITEM
+	__addGui_ID,		//!< ID from gumpart.mul
+	__addGui_def: 50,	//!< XSS define
+	__addGui_name: 50	//!< name
+}//!< addMenuList[][] structure
+public addMenuList[MAX_ADDMENU_ITEMS][addMenuListStruct]; //!< main data structure,contains all items data
+//===================================================================================//
+
+//=========================== USEFUL DEFINES ========================================//
+#define PICW 30	//!< pic width, needed to correctly space text after pics
+#define INPUT_AMOUNT 0	//!< amount inputfiled ID
+#define INPUT_MATERIAL 1	//!< material inputfield ID
+#define INPUT_MAGIC_SUFFIX 100	//!< magic suffix inputfield ID
+
+#define CHK_ITEMSINBACKPACK 0	//!< items in backpack checkbox ID
+//===================================================================================//
+
 //==================================================================================//
 //                            ADD MENU MAIN PAGE                                    //
 //==================================================================================//
@@ -41,159 +111,399 @@ This function shows the main add menu page, you can configure the page's content
 functions the functions that draw other pages by editing the contents of __addMenuItems[][] array
 \return the menu serial
 */
-
 public addMenu(const chr)
 {	                  
-	new i_row = ADD_MENU_ENTRIES/ADD_MENU_ROWS;
-	new tab = (ADD_MENU_ENTRIES_L + 4);
-	new COLS = 2 + i_row*tab;
-
+	//calculate menu dimensions
+	new ROWS = submenuCount/ITEMS_PER_ROW + (submenuCount%ITEMS_PER_ROW > 0 ? 1 : 0)
+	new COLS = ITEMS_PER_ROW*MAX_TITLE_LENGTH;
+	new tab = (COLS - 2)/ITEMS_PER_ROW;
+	cursor_setProperty(CRP_TAB,tab);
+	
 	#if _CMD_DEBUG_
 	log_message("^t->drawing add menu");
 	#endif
 	
-	new menu = createFramedMenu(0,550,ADD_MENU_ROWS,0,COLS,"addgui_cback");
+	//create a framed menu with a 1-row body
+	new menu = createFramedMenu(0,245,ROWS,1,COLS,"addgui_cback");
 	cursor_setProperty(CRP_TAB,tab);
-	for(new i = 1; i <= ADD_MENU_ENTRIES; i++)
+	
+	//draw buttons for submenus
+	for(new i = 1; i <= submenuCount; i++)
 	{
-		menu_addLabeledButton(i,addMenuItems[i - 1][__addGuiText]);
+		menu_addLabeledButton(i,submenuData[i - 1][__submenuTitle]);
 		cursor_tab();
 		
-		if(i%i_row == 0 && i != 0) cursor_newline();
+		if(i%ITEMS_PER_ROW == 0 && i != 0) cursor_newline();
 	}
-
+	
+	//move down in the body
+	cursor_back();
+	cursor_down(3);
+	
+	//draw "adding mode" button
+	if(chr_isaLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE))
+		menu_addLabeledButton(1000,msg_add_addingModeCont);
+	else 
+		menu_addLabeledButton(2000,msg_add_addingModeSingle);
+	
+	cursor_tab(3);
+	menu_addLabeledButton(3000,msg_add_reload);
+	
+	//show menu
 	menu_show(chr);
 	return menu;
 }
 
 /*!
 \author Fax
-\fn addgui_cback(menu,chr,weapon)
+\fn addgui_cback(menu,chr,btn)
 \param all: standard menu callback params
 \since 0.82
 \brief callback for weapon menu
 
-Calls functions specified in addMenuItems[][] to craete gumps for the other sections
+Handles main add menu buttons, toggles adding mode and calls functions to draw menus
 \return nothing
 */
-public addgui_cback(menu,chr,idx)
+public addgui_cback(menu,chr,btn)
 {
-	if(!idx) return;
+	//if menu was closed
+	if(!btn) 
+	{	
+		//closing add menu deletetes localvars
+		chr_delLocalVar(chr,CLV_CMDTEMP); 
+		chr_delLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE);
+		return;
+	}
 	
-	new amount[10];
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_AMOUNT,amount);
+	//continuous adding mode on/off
+	switch(btn)
+	{
+		case 1000: chr_delLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE);
+		case 2000: chr_addLocalIntVar(chr,CLV_CONTINUOUS_ADDING_MODE);	
+		case 3000: loadAddMenu(chr);
+	}
+	
+	//show main menu again
 	addMenu(chr);
-
+	
+	//this means we didn't press a submenu button
+	if(btn >= 1000) return;
+	
+	btn--;
 #if _CMD_DEBUG_
-	log_message("^t->calling function: %s",addMenuItems[idx - 1][__addGuiFunc]);
+	log_message("^t->calling function: %s",submenuData[btn][__submenuFunction]);
 #endif
-	callFunction3P(funcidx(addMenuItems[idx - 1][__addGuiFunc]),chr,false,1);
+	//call appropriate function
+	callFunction2P(funcidx(submenuData[btn][__submenuFunction]),chr,btn);
 }
 
 //==================================================================================//
-//                              MAGIC ITEMS MENU                                    //
+//                              STANDARD MENU                                       //
 //==================================================================================//
 /*!
 \author Fax
-\fn addgui_magic(chr,itemsInBackpack,amount)
+\fn addgui_standard(chr,submenu,...)
 \param chr: the character
-\param itemsInBackpack: true if items are to be created in backpack
-\amount:how many items we need
+\param submenu: the submenu to draw
+\param 3: true if items are to be created in backpack
+\param 4: how many items we need
 \since 0.82
-\brief magic items page
+\brief standard menu function
+
+Draws a standard add menu, with a list of pages in the header and a list of items
+for each page.<br> 
+The ... in the params is needed because this function is called at first
+time by addgui_cback with only 2 params and then called by itself with 4 params.<br>
+Custompages are supported, the page function will be called for each page, and will
+be passed the submenu and the current submenu page (index in pageData[][]), so prototype must be:
+\code
+	public callback(submenu,page)
+\endcode
 
 \return nothing
 */
-public addgui_magic(chr,itemsInBackpack,amount)
+public addgui_standard(chr,submenu,...)
 {
 	if(!isChar(chr)) return;
 
 #if _CMD_DEBUG_
-	log_message("^t->drawing magic menu");
+	log_message("^t->drawing submenu %d",submenu);
 #endif
 	
-	new i_row = 4;
-	new ROWS = 2 + MAGIC_MENU_ENTRIES/i_row + (MAGIC_MENU_ENTRIES%i_row > 0 ? 1 : 0)
-	new COLS = i_row*(MAGIC_MENU_ENTRIES_L + 3);
-	
-	new tab = (COLS - 2)/i_row;
-	cursor_setProperty(CRP_TAB,tab);
-		
-	createFramedMenu(0,0,ROWS,15,COLS,"addgui_magic_cback");
-	for(new p = 1; p <= MAGIC_MENU_ENTRIES; p++)
+	//read additional params, amount is 1 by default
+	new startx,starty,itemsInBackpack,amount = 1;
+	if(numargs() > 2)
 	{
-		menu_addLabeledPageButton(p,magicMenuTxt[p - 1]);
-		cursor_tab();
-		
-		if(p%i_row == 0 && p != 0) cursor_newline();
+		itemsInBackpack = getarg(2);
+		if(numargs() > 3)
+		{
+			amount = getarg(3);
+			if(numargs() > 4)
+			{
+				startx = getarg(3);
+				if(numargs() > 4)
+					starty = getarg(4);
+			}
+		}
 	}
 	
-	cursor_newline();	
-	addStdCheckBoxAndInputField(itemsInBackpack,amount);
+	//calculate header size
+	new ROWS = 2 + submenuData[submenu][__numPages]/ITEMS_PER_ROW + (submenuData[submenu][__numPages]%ITEMS_PER_ROW > 0 ? 1 : 0)
+	new COLS = ITEMS_PER_ROW*MAX_TITLE_LENGTH;
+	new tab = (COLS - 2)/ITEMS_PER_ROW;
+	cursor_setProperty(CRP_TAB,tab);
 	
-	cursor_setProperty(CRP_TAB,2*tab);
+	//create a framed menu
+	createFramedMenu(0,0,ROWS,submenuData[submenu][__height],COLS,"addgui_standard_cback");
 	
-	new idx = MAGIC_MENU_IDX,numentries;
-	new starty = cursor_y()
-	for(new p = 1; p <= MAGIC_MENU_ENTRIES; p++)
+	//offset is the index at wich submenu data strats in submenuData[][]
+	new offset = submenuData[submenu][__pageDataIdx];
+	
+	for(new p; p < submenuData[submenu][__numPages]; p++)
+	{
+		if(p%ITEMS_PER_ROW == 0 && p != 0) cursor_newline();
+		
+		menu_addLabeledPageButton(p + 1,pageData[offset + p][__pageTitle]);
+		cursor_tab();		
+	}
+	
+	cursor_newline();
+	
+	//add "create items in backpack" checkbox
+	menu_addLabeledCheckbox(itemsInBackpack,CHK_ITEMSINBACKPACK,msg_add_createItemsInBackpack);
+	cursor_newline();
+	
+	//add amount input field
+	new amountstr[5];
+	sprintf(amountstr,"%d",amount);
+	menu_addLabeledInputField(INPUT_AMOUNT,amountstr,5,"Amount: ");
+	
+	//go down in the body
+	cursor_newline(3);
+
+	new idx;	//current index in submenuData[][]
+	new startIdx;	//start index in addMenuList[][]
+	new stopIdx;	//stop index in addMenuList[][]
+	starty = cursor_y(); //store start row
+	
+	//draw pages
+	for(new p = 1; p <= submenuData[submenu][__numPages]; p++)
 	{
 		menu_addPage(p);
+		idx = offset + p - 1;
 		cursor_newline();
 		cursor_goto(cursor_x(),starty);
-		numentries = __listAllocationMap[P_MAGICALITEMS + p - 1];
-		if(addItemList(numentries,11,idx,true,true)) error = 1;
-		idx += numentries;
+		
+		//draw a custom page if a function is declared
+		if(strlen(pageData[idx][__pageFunction]))
+		{
+			callFunction2P(funcidx(pageData[idx][__pageFunction]),submenu,idx);
+			continue;
+		}
+		
+		//otherwise draw a standard page
+		//collect data to draw the page
+		startIdx = pageData[idx][__listIdx];
+		stopIdx = startIdx + pageData[idx][__numItems];
+		cursor_setProperty(CRP_TAB,pageData[idx][__addGui_tab]);
+		cursor_setProperty(CRP_INTERLINE,pageData[idx][__addGui_interline]);
+		
+		//draw the itemslist
+		addItemList(startIdx,stopIdx,pageData[idx][__showPic],pageData[idx][__showLabel]);
+		//printf("Page:%s - listIdx:%d - numItems:%d^n",pageData[idx][__pageTitle],pageData[idx][__listIdx],pageData[idx][__numItems]);
 	}
-
+	
+	//store submenu because the callback will need it
+	menu_storeValue(0,submenu);
+	
+	//show menu
 	menu_show(chr);
+	
+	//send error popup
 	handleError(chr);
 }
 
 /*!
 \author Fax
-\fn addgui_magic_cback(menu,chr,weapon)
+\fn addgui_standard_cback(menu,chr,btncode)
 \param all: standard menu callback params
 \since 0.82
-\brief callback for magic menu
+\brief callback for standard menu
 
 Creates the items selected in the gump
 \return nothing
 */
-public addgui_magic_cback(menu,chr,btncode)
+public addgui_standard_cback(menu,chr,btncode)
 {
 	if(!btncode)	return;
 
+	//read amount and checkbox
 	new n,itemsInBackpack;
 	getAmountAndChk(menu,n,itemsInBackpack);
-
-	if(itemsInBackpack)
+	//btncode > 0 ==> item
+	//btncode < 0 ==> NPC
+	
+	//if the items is to be created in backpack
+	if(btncode > 0 && itemsInBackpack)
 	{
 		new item; 
+		
+		//create an item
 		item = itm_createInBp(btncode,chr);
-				
+		
+		//pileable items only have amount set to the correct value
 		if(itm_getProperty(item,IP_PILEABLE))
 		{
 			itm_createInBp(btncode,chr,n - 1);
-			chr_message(chr,_,"Item %d created",item);
+			chr_message(chr,_,msg_add_itemCreated,item);
 		}
-		else
-			for(new i = 0; i < n -1; i++)
+		else	//for non-pileable items we have to create n - 1 items more
+			for(new i = 0; i < n - 1; i++)
 			{
 				item = itm_createInBp(btncode,chr);
-				chr_message(chr,_,"Item %d created",item);
+				chr_message(chr,_,msg_add_itemCreated,item);
 			}
+		
+		//rebuild and show the menu
+		addgui_standard(chr,menu_readValue(menu,0),itemsInBackpack,n);
 	}
 
 	else
-	{
+	{	//store amount for cmd_add_* functions
 		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
-		chr_message(chr,_,"click to position the item");
-		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
+		
+		//distinguish between items and NPC
+		if(btncode > 0)
+		{
+			chr_message(chr,_,msg_add_click2PositionTheItem);
+			target_create(chr,btncode,_,_,"cmd_add_itm_targ");
+		}
+		else
+		{
+			chr_message(chr,_,msg_add_click2PositionTheChar);
+			target_create(chr,-1*btncode,_,_,"cmd_add_npc_targ");
+		}
 	}
-
-	addgui_magic(chr,itemsInBackpack,n);
 }
 
+/*!
+\author Fax
+\fn handleError(chr)
+\param chr: the character
+\since 0.82
+\brief handles error messages in add menu
+
+Shows a popup sayng that an error occurred
+\return nothing
+*/
+static handleError(chr)
+{
+	if(error) 
+		popupMenu(chr,msg_add_WARNING,msg_add_itemsNotLoaded);
+		
+	error = 0;
+}
+
+/*!
+\author Fax
+\fn addItemList(startIdx,stopIdx,pic,label)
+\param startIdx: first item index in addMenuList[][]
+\param stopIdx: last item index in addMenuList[][]
+\param pic: true if the pic has to be shown
+\param label: true if the label (item name) has to be shown
+\since 0.82
+\brief draws the item list in standard pages
+
+The list will automatically fit the menu body height but it may go out of the menu width.
+\return nothing
+*/
+static addItemList(startIdx,stopIdx,pic,label)
+{
+	new scriptID;
+	new starty = cursor_y(); //store starting position so we can return back to it
+	
+	//cycle through all items
+	for(new idx = startIdx; idx < stopIdx; idx++)
+	{
+		//read and validate scriptID, invalid scriptIDs have an 'x' instead of the button
+		scriptID = getIntFromDefine(addMenuList[idx][__addGui_def]);
+		if(scriptID > 0)
+		{
+			menu_addButton(scriptID);
+		}
+		else 
+		{
+			menu_addText("x");
+			error = 1;
+		}
+		
+		//move aside position the cursor after the button
+		cursor_move(menu_getProperty(MP_BUTTON_WIDTH),0);
+		
+		//handle pic and label drawing
+		if(pic)
+			if(label)
+				menu_addLabeledTilePic(addMenuList[idx][__addGui_ID],PICW,addMenuList[idx][__addGui_name]);
+			else
+				menu_addTilePic(addMenuList[idx][__addGui_ID]);
+		else
+			menu_addText(addMenuList[idx][__addGui_name]);
+		
+		//restore cursor position
+		cursor_move(-1*menu_getProperty(MP_BUTTON_WIDTH),0);	
+	
+		//move to next line, and to next column if the we are at the bottom
+		if(cursor_down()) 
+		{ 
+			cursor_tab(); 
+			cursor_goto(cursor_x(),starty); 
+		}
+	}
+	
+	//restore cursor position
+	cursor_reset();
+}
+
+/*!
+\author Fax
+\fn getAmountAndChk(menu,&n,&chk)
+\param menu: the menu
+\param &n: amount
+\param &chk: checkbox value
+\since 0.82
+\brief reads amount input field and "items in backpack" checkbox
+\return nothing
+*/
+static getAmountAndChk(menu,&n,&chk)
+{
+	new amount[10];
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_AMOUNT,amount);
+
+	if(!isStrInt(amount))
+		n = 1
+	else n = str2Int(amount);
+	chk = gui_getProperty(menu,MP_CHECK,CHK_ITEMSINBACKPACK);
+}
+
+//===========================================================================//
+//				 NON STANDARD MENUS                          //
+//===========================================================================//
+
+enum
+{
+	P_PLATEMAIL = 0,
+	P_CHAINMAIL,
+	P_RINGMAIL,
+	P_STUDDED,
+	P_LEATHER,
+	P_BONE,
+	P_HELMS,
+	P_SHIELDS,
+	P_AXES,
+	P_SWORDS,
+	P_BLADES,
+	P_OTHER
+};
 //==================================================================================//
 //                            COMBAT ITEMS MENU                                    //
 //==================================================================================//
@@ -209,104 +519,38 @@ public addgui_magic_cback(menu,chr,btncode)
 \return nothing
 \todo Activate amount input box in combat menu
 */
-
-public addgui_combat(chr,itemsInBackpack,amount)
+public addgui_combat(submenu,page)
 {
-	if(!isChar(chr)) return;
-
-	#if _CMD_DEBUG_
-	log_message("^t->drawing combat menu");
-	#endif
-
-	new i_row = 4;
-	new ROWS = 2 + COMBAT_MENU_ENTRIES/i_row + (COMBAT_MENU_ENTRIES%i_row > 0 ? 1 : 0)
-	new COLS = i_row*(COMBAT_MENU_ENTRIES_L + 3);
-
-	new tab = (COLS - 2)/i_row;
-	cursor_setProperty(CRP_TAB,tab);
-		
-	createFramedMenu(0,0,ROWS,15,COLS,"addgui_armor_cback");
-
-	for(new p = 1; p <= COMBAT_MENU_ENTRIES; p++)
-	{
-		menu_addLabeledPageButton(p,combatMenuTxt[p - 1]);
-		cursor_tab();
-		
-		if(p%i_row == 0 && p != 0) cursor_newline();
-	}
-	
-	addStdCheckBoxAndInputField(itemsInBackpack,amount);
-	cursor_setProperty(CRP_TAB,2*tab);
 	
 	new starty = cursor_y();
-	for(new p = 1; p <= COMBAT_MENU_ENTRIES; p++)
-	{
-		menu_addPage(p);
-		cursor_newline();
-		cursor_goto(cursor_x(),starty);
-		switch(p)
-		{
-			case P_PLATEMAIL..P_SHIELDS:
-			{	
-				new artype = p - P_PLATEMAIL;
-				for(new i = 0; i < ARMOR_PARTS; i++)
-				{
-					if(__armor[artype*ARMOR_PARTS + i][__ID] == INVALID) continue;
-			
-					menu_addCheckBox(false,p*10 + i);
-					menu_addLabeledTilePic(__armor[artype*ARMOR_PARTS + i][__ID],PICW,__armor[artype*ARMOR_PARTS + i][__name]);
-					
-					cursor_newline(); cursor_newline();
-				}
-				
-				cursor_goto(cursor_x(),starty);
-				cursor_tab();
-				
-				new material[5] = "";
-				if(p != P_LEATHER && p!= P_STUDDED && p != P_BONE) sprintf(material,"iron");
-				menu_addLabeledInputField(INPUT_MATERIAL + 10*p,material,15,"Material:");
-				cursor_down();
-				
-				menu_addLabeledInputField(INPUT_MAGIC_SUFFIX + 10*p,"",15,"Magic suffix:");
-				cursor_down(4);
-				
-				menu_addLabeledButtonFn(p,"addgui_armor_cback","create in backpack");
-				cursor_down();
-				
-				menu_addLabeledButtonFn(p + 1000,"addgui_armor_cback","Equip");
-				cursor_down();
-				
-				menu_addLabeledButtonFn(p + 10000,"addgui_armor_cback","Equip to character");
-			}
 	
-			case P_AXES..P_OTHER:
-			{
-				cursor_setProperty(CRP_INTERLINE,15);
-				new wpntype = p - P_AXES;
-				for(new i = 0; i < WEAPONS_PER_GROUP; i++)
-				{
-					if(__weapons[wpntype*WEAPONS_PER_GROUP + i][__ID] == INVALID) continue;
-					
-					menu_addButtonFn(wpntype*WEAPONS_PER_GROUP + i,"addgui_weapon_cback");
-					menu_addLabeledTilePic(__weapons[wpntype*WEAPONS_PER_GROUP + i][__ID],PICW,__weapons[wpntype*WEAPONS_PER_GROUP + i][__name]);
-					
-					cursor_newline();
-				}
-				
-				cursor_setProperty(CRP_INTERLINE,10);
-				
-				cursor_goto(cursor_x(),starty);
-				cursor_tab();
-								
-				menu_addLabeledInputField(INPUT_MATERIAL + 10*p,"iron",15,"Material:");
-				cursor_down();
-				
-				menu_addLabeledInputField(INPUT_MAGIC_SUFFIX + 10*p,"",15,"Magic suffix:");
-			}
-		}
+	//relative offset with respect to the starting page of the submenu
+	new armor = page - submenuData[submenu][__pageDataIdx];
+	
+	new material[5] = "iron";
+	if(armor == P_LEATHER || armor == P_STUDDED || armor == P_BONE)
+		sprintf(material,"");
+	
+	//draw checkboxes
+	new startIdx = pageData[page][__listIdx];
+	new stopIdx = startIdx + pageData[page][__numItems];
+	for(new i = startIdx; i < stopIdx; i++)
+	{
+		menu_addCheckBox(false,i); cursor_right();
+		menu_addLabeledTilePic(addMenuList[i][__addGui_ID],PICW,addMenuList[i][__addGui_name]);
+		
+		cursor_newline(2);
 	}
-
-	menu_show(chr);
+	
+	cursor_goto(cursor_x(),starty);
+	cursor_tab(2);
+	
+	menu_addLabeledInputField(INPUT_MATERIAL + 10*page,material,15,"Material:"); cursor_down();
+	menu_addLabeledInputField(INPUT_MAGIC_SUFFIX + 10*page,"",15,"Magic suffix:"); cursor_down(4);
+	
+	menu_addLabeledButtonFn((submenu << 18) + (page << 2) + 2,"addgui_combat_cback","create in backpack"); cursor_down();
+	menu_addLabeledButtonFn((submenu << 18) + (page << 2) + 1,"addgui_combat_cback","Equip"); cursor_down();
+	menu_addLabeledButtonFn((submenu << 18) + (page << 2) + 0,"addgui_combat_cback","Equip to character");
 }
 
 /*!
@@ -319,127 +563,66 @@ public addgui_combat(chr,itemsInBackpack,amount)
 Looks at the values given in the armor menu and creates the XSS def of the items to create and creates them
 \return nothing
 */
-public addgui_armor_cback(menu,chr,armor)
+public addgui_combat_cback(menu,chr,submenuPageAction)
 {
-	if(!armor)	return;
-
-	new action;
-	if(armor >= 10000) 
-	{
-		action = 0;
-		armor -= 10000;
-	}
-	else 	if(armor >= 1000)
-		{
-			action = 1;
-			armor -= 1000;
-		}
-		else action = 2;
-
+	if(!submenuPageAction)	return;
+	
+	new submenu = submenuPageAction >> 18;
+	new page = (submenuPageAction >> 2) & 0xFFFF;
+	new action = submenuPageAction & 0x3;
+	
 	new material[20],suffix[30];
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL + 10*armor,material);
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL + 10*page,material);
 	if(strlen(material)) sprintf(material,"_%s",material);
 
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MAGIC_SUFFIX + 10*armor,suffix);
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MAGIC_SUFFIX + 10*page,suffix);
 	if(strlen(suffix)) sprintf(suffix,"_of_%s",suffix);
 
-	new artype[20] = "";
-	switch(armor)
-	{
-		case P_PLATEMAIL: sprintf(artype,"_plate");
-		case P_CHAINMAIL: sprintf(artype,"_chain");
-		case P_RINGMAIL:  sprintf(artype,"_ringmail");
-		case P_STUDDED:   sprintf(artype,"_studded_leather");
-		case P_LEATHER:	  sprintf(artype,"_leather");
-		case P_BONE:	  sprintf(artype,"_bone");
-	}
-
-	new arpart[20] = "", gender[10] = "",r,buffer[ARMOR_PARTS];
-	for(new i = 0; i < ARMOR_PARTS; i++)
-	{
-		r = gui_getProperty(menu,MP_CHECK,armor*10 + i); 
-		if(r)
-		{
-			if(armor != P_HELMS && armor != P_SHIELDS)
-			switch(i)
-		 	{
-		 		case AR_HELM:
-		 		switch(armor)
-		 		{
-		 			case P_CHAINMAIL: sprintf(arpart,"_coif");
-		 			case P_LEATHER: sprintf(arpart,"_cap");
-		 			default: sprintf(arpart,"_helm");
-		 		}
-		 
-		 		case AR_GORGET: sprintf(arpart,"_gorget");
-		 
-		 		case AR_CHEST: 
-		 		switch(armor)
-		 		{
-		 			case P_PLATEMAIL: sprintf(arpart,"mail");
-		 			case P_BONE: sprintf(arpart,"_chest");
-		 			default: sprintf(arpart,"_tunic");
-		 		}
-		 
-		 		case AR_FEMALE:
-		 		{
-		 			if(armor == P_LEATHER) sprintf(arpart,"_armor");
-		 			sprintf(gender,"_female");
-		 		}
-		 
-		 		case AR_ARMS: 
-		 		switch(armor)
-		 		{
-		 			case P_BONE: sprintf(arpart,"_arms");
-		 			default: sprintf(arpart,"_sleeves");
-		 		}
-		 
-		 		case AR_GLOVES: sprintf(arpart,"_gloves");
-		 
-		 		case AR_LEGS: 
-		 		switch(armor)
-		 		{
-		 			case P_BONE: sprintf(arpart,"_legs");
-		 			default: sprintf(arpart,"_leggings");
-		 		}
-			}
-			else sprintf(arpart,"_%s",__armor[(armor - P_PLATEMAIL)*ARMOR_PARTS + i][__name]);
-
-		new def[100],itm;
-		sprintf(def,"$item%s%s%s%s%s",material,gender,artype,arpart,suffix);
-
-		switch(action)
-		{
-			case 0:
-			{
-				itm = itm_createByDef(def);
-				buffer[i] = itm;
-			}
+	new itm;
+	new startIdx = pageData[page][__listIdx];
+	new stopIdx = startIdx + pageData[page][__numItems];
+	new def[100],token[20],temp[100];
 	
-			case 1:
+	if(action == 0)
+		chr_addLocalIntVec(chr,CLV_CMDTEMP,stopIdx - startIdx,INVALID);
+	
+	for(new i = startIdx; i < stopIdx; i++)
+		if(gui_getProperty(menu,MP_CHECK,i)) 
+		{
+			//replace * with material name and add suffix
+			strcpy(temp,addMenuList[i][__addGui_def]);
+			replaceStr(temp,"*"," ");
+			str2Token(temp,token,0,def,0);
+			ltrim(def);
+			sprintf(def,"%s%s%s%s",token,material,def,suffix);
+			if(getIntFromDefine(def) <= 0 ) continue;
+			
+			switch(action)
 			{
-				itm = itm_createByDef(def);
-				chr_equip(chr,itm);
+				case 0:
+				{
+					itm = itm_createByDef(def);
+					chr_setLocalIntVec(chr,CLV_CMDTEMP,i - startIdx,itm);
+				}
+		
+				case 1:
+				{
+					itm = itm_createByDef(def);
+					chr_equip(chr,itm);
+				}
+				case 2: itm_createInBpDef(def,chr);
 			}
-			case 2: itm_createInBpDef(def,chr);
-		}
 
 		}
-
-	}
 
 	if(action == 0)
 	{
-		chr_delLocalVar(chr,CLV_CMDTEMP);
-		chr_addLocalIntVec(chr,CLV_CMDTEMP,6,INVALID);
-		for(new i = 0; i < 6; i++)
-			chr_setLocalIntVec(chr,CLV_CMDTEMP,i,buffer[i]);
 		target_create(chr,menu,_,_,"equip2char_targ");
+		return;
 	}
-
 	new n,itemsInBackpack;
 	getAmountAndChk(menu,n,itemsInBackpack);
-	addgui_combat(chr,itemsInBackpack,n);
+	addgui_standard(chr,submenu,itemsInBackpack,n);
 }
 
 /*!
@@ -458,354 +641,17 @@ public equip2char_targ(t,chr,obj,x,y,z,unused,menu)
 		return;
 	}
 
-	for(new i = 0; i < 6; i++)
-		chr_equip(obj,chr_getLocalIntVec(chr,CLV_CMDTEMP,i));
+	new l = chr_sizeofLocalVar(chr,CLV_CMDTEMP);
+	for(new i = 0; i < l; i++)
+		if(isItem(chr_getLocalIntVec(chr,CLV_CMDTEMP,i)))
+			chr_equip(obj,chr_getLocalIntVec(chr,CLV_CMDTEMP,i));
 
 	chr_delLocalVar(chr,CLV_CMDTEMP);
-	chr_addLocalIntVar(chr,CLV_CMDTEMP,0);
 }
 
-/*!
-\author Fax
-\fn addgui_weapon_cback(menu,chr,weapon)
-\param all: standard menu callback params
-\since 0.82
-\brief callback for weapon menu
-
-looks the values given in the armor menu and creates the XSS def of the items to create and creates them
-\return nothing
-*/
-public addgui_weapon_cback(menu,chr,weapon)
-{
-	new n,itemsInBackpack;
-	getAmountAndChk(menu,n,itemsInBackpack);
-
-	new weapongrp = weapon/WEAPONS_PER_GROUP;
-
-	new material[20],suffix[30];
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL + 10*(weapongrp + P_AXES),material);
-	if(strlen(material)) sprintf(material,"_%s",material);
-
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MAGIC_SUFFIX + 10*(weapongrp + P_AXES),suffix);
-	if(strlen(suffix)) sprintf(suffix,"_of_%s",suffix);
-
-	new def[100];
-	sprintf(def,"$item%s_%s%s",material,__weapons[weapon][__name],suffix);
-
-	new item,scriptID = getIntFromDefine(def,false); 
-			
-	if(itemsInBackpack)
-	{ 
-		item = itm_createInBp(scriptID,chr);
-				
-		if(itm_getProperty(item,IP_PILEABLE))
-		{
-			itm_createInBp(scriptID,chr,n - 1);
-			chr_message(chr,_,"Item %d created",item);
-		}
-		else
-			for(new i = 0; i < n -1; i++)
-			{
-				item = itm_createInBp(scriptID,chr);
-				chr_message(chr,_,"Item %d created",item);
-			}
-		
-		addgui_combat(chr,itemsInBackpack,n);
-	}
-
-	else
-	{
-		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
-		chr_message(chr,_,"click to position the item");
-		target_create(chr,scriptID,_,_,"cmd_add_itm_targ");
-	}
-}
-
-//==================================================================================//
-//                                 NPC MENU                                         //
-//==================================================================================//
-/*!
-\author Fax
-\fn addgui_NPCs(chr,itemsInBackpack,amount)
-\param chr: the character
-\param itemsInBackpack: true if items are to be created in backpack
-\amount:how many items we need
-\since 0.82
-\brief npc items page
-
-\return nothing
-\todo Activate amount input box in npc menu
-*/
-public addgui_NPCs(chr,itemsInBackpack,amount)
-{
-	if(!isChar(chr)) return;
-
-	#if _CMD_DEBUG_
-	log_message("^t->drawing npc menu");
-	#endif
-	
-	new i_row = 4;
-	new ROWS = 2 + NPC_MENU_ENTRIES/i_row + (NPC_MENU_ENTRIES%i_row > 0 ? 1 : 0)
-	new COLS = i_row*(NPC_MENU_ENTRIES_L + 3);
-	new tab = (COLS - 2)/i_row;
-	cursor_setProperty(CRP_TAB,tab);
-	
-	createFramedMenu(0,0,ROWS,17,COLS,"addgui_npc_cback");
-
-	for(new p = 1; p <= NPC_MENU_ENTRIES; p++)
-	{
-		menu_addLabeledPageButton(p,npcMenuTxt[p - 1]);
-		cursor_tab();
-		
-		if(p%i_row == 0 && p != 0) cursor_newline();
-	}
-	
-	cursor_newline()
-	
-	new amountstr[5];
-	sprintf(amountstr,"%d",amount);
-	menu_addLabeledInputField(INPUT_AMOUNT,amountstr,4,"Amount: ");
-	
-	cursor_down(4);
-	
-	cursor_setProperty(CRP_TAB,(15*tab)/10);
-
-	new idx = NPC_MENU_IDX,numentries;
-	new starty = cursor_y()
-	for(new p = 1; p <= NPC_MENU_ENTRIES; p++)
-	{
-		menu_addPage(p);
-		cursor_newline();
-		cursor_goto(cursor_x(),starty);
-		numentries = __listAllocationMap[P_ANIMALS + p - 1];
-		if(addItemList(numentries,15,idx,false,true)) error = 1;
-		idx += numentries;
-	}
-	
-	menu_show(chr);
-	handleError(chr);
-}
-
-/*!
-\author Fax
-\fn addgui_npc_cback(menu,chr,weapon)
-\param all: standard menu callback params
-\since 0.82
-\brief callback for weapon menu
-
-reads the npc's scriptID and then gets a target to position the npc
-\return nothing
-*/
-public addgui_npc_cback(menu,chr,scriptID)
-{
-	if(!scriptID) return;
-	
-	new amount[10],n;
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_AMOUNT,amount);
-	if(!isStrInt(amount))
-		n = 1;
-	else n = str2Int(amount);
-
-	chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
-	chr_message(chr,_,"click to position the NPC");
-	target_create(chr,scriptID,_,_,"cmd_add_npc_targ");
-}
-
-//==================================================================================//
-//                            SUPPLY ITEMS MENU                                    //
-//==================================================================================//
-/*!
-\author Fax
-\fn addgui_supply(chr,itemsInBackpack,amount)
-\param chr: the character
-\param itemsInBackpack: true if items are to be created in backpack
-\amount:how many items we need
-\since 0.82
-\brief supply items page
-
-\return nothing
-*/
-
-public addgui_supply(chr,itemsInBackpack,amount)
-{
-	if(!isChar(chr)) return;
-
-	#if _CMD_DEBUG_
-	log_message("^t->drawing supply menu");
-	#endif
-	
-	new i_row = 3;
-	new ROWS = 2 + SUPPLY_MENU_ENTRIES/i_row + (SUPPLY_MENU_ENTRIES%i_row > 0 ? 1 : 0)
-	new COLS = i_row*(SUPPLY_MENU_ENTRIES_L + 3);
-	new tab = (COLS - 2)/i_row;
-	cursor_setProperty(CRP_TAB,tab);
-	
-	createFramedMenu(0,0,ROWS,25,COLS,"addgui_supply_cback");
-
-	for(new p = 1; p <= SUPPLY_MENU_ENTRIES; p++)
-	{
-		menu_addLabeledPageButton(p,supplyMenuTxt[p - 1]);
-		cursor_tab();
-		
-		if(p%i_row == 0 && p != 0) cursor_newline();
-	}
-	
-	cursor_newline()
-	
-	addStdCheckBoxAndInputField(itemsInBackpack,amount);
-	
-	new idx = SUPPLY_MENU_IDX,numentries;
-	new starty = cursor_y();
-	
-	for(new p = 1; p <= SUPPLY_MENU_ENTRIES; p++)
-	{
-		new i_col = 23,pic = 1,label = 1,interline = 10;
-		tab = 29;
-		
-		//here you can set the appearance of every menu subsection
-		switch(p + P_BEVERAGES - 1)
-		{
-			case P_BOWLSMEATFRUIT: {i_col = 15; interline = 15;}
-			case P_PLANTS:{	i_col = 10; interline = 20;}
-			case P_LIGHTS:{	i_col = 9; interline = 25;}
-			case P_CONTAINERS:{ i_col = 10; interline = 23;}
-			case P_STATUES_TROPHIES:{i_col = 6;tab = 12; label = 0; interline = 35;}
-			case P_HAIR_BEARD: pic = 0;
-			case P_RUGS:{tab = 10; label = 0; interline = 15; i_col = 15;}
-			case P_CLOTHING:{i_col = 21; tab = 24; interline = 12;}
-			case P_JEWELS: {tab = 23; interline = 12; i_col = 20;}
-		}
-		
-		menu_addPage(p);
-		cursor_goto(cursor_x(),starty);
-		numentries = __listAllocationMap[P_BEVERAGES + p - 1];
-		cursor_setProperty(CRP_TAB,tab);
-		cursor_setProperty(CRP_INTERLINE,interline);
-		if(addItemList(numentries,i_col,idx,pic,label)) error = 1;
-		idx += numentries;
-	}
-	
-	menu_show(chr);
-	handleError(chr)
-}
-
-/*!
-\author Fax
-\fn addgui_supply_cback(menu,chr,weapon)
-\param all: standard menu callback params
-\since 0.82
-\brief callback for supply menu
-
-Creates the item selected in the gump
-\return nothing
-*/
-public addgui_supply_cback(menu,chr,btncode)
-{
-	if(!btncode)	return;
-
-	new n,itemsInBackpack;
-	getAmountAndChk(menu,n,itemsInBackpack);
-
-	if(itemsInBackpack)
-	{
-		new item; 
-		item = itm_createInBp(btncode,chr);
-				
-		if(itm_getProperty(item,IP_PILEABLE))
-		{
-			itm_createInBp(btncode,chr,n - 1);
-			chr_message(chr,_,"Item %d created",item);
-		}
-		else
-			for(new i = 0; i < n -1; i++)
-			{
-				item = itm_createInBp(btncode,chr);
-				chr_message(chr,_,"Item %d created",item);
-			}
-
-		addgui_supply(chr,true,n);
-	}
-
-	else
-	{
-		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
-		chr_message(chr,_,"click to position the item");
-		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
-	}
-}
-
-//==================================================================================//
-//                                  SIGNS MENU                                      //
-//==================================================================================//
-/*!
-\author Fax
-\fn addgui_signs(chr,unused,unused2)
-\param chr: the character
-\param itemsInBackpack: true if items are to be created in backpack
-\amount:how many items we need
-\since 0.82
-\brief signs page
-
-\return nothing
-*/
-public addgui_signs(chr,unused,unused2)
-{
-	if(!isChar(chr)) return;
-
-	#if _CMD_DEBUG_
-	log_message("^t->drawing SIGNS menu");
-	#endif
-	
-	new i_row = 4;
-	new ROWS = SIGNS_MENU_ENTRIES/i_row + (SIGNS_MENU_ENTRIES%i_row > 0 ? 1 : 0)
-	new COLS = i_row*(SIGNS_MENU_ENTRIES_L + 3);
-	new tab = (COLS - 2)/i_row;
-	cursor_setProperty(CRP_TAB,tab);
-	
-	createFramedMenu(0,0,ROWS,27,COLS,"addgui_signs_cback");
-
-	for(new p = 1; p <= SIGNS_MENU_ENTRIES; p++)
-	{
-		menu_addLabeledPageButton(p,signsMenuTxt[p - 1]);
-		cursor_tab();
-		
-		if(p%i_row == 0 && p != 0) cursor_newline();
-	}
-	
-	cursor_newline(3);
-	
-	new idx = SIGNS_MENU_IDX,numentries;
-	new starty = cursor_y();
-	new i_col = 14;
-	
-	cursor_setProperty(CRP_TAB,(15*tab)/10);
-	cursor_setProperty(CRP_INTERLINE,INTERLINE_DOUBLE);
-	for(new p = 1; p <= SIGNS_MENU_ENTRIES; p++)
-	{
-		menu_addPage(p);
-		cursor_goto(cursor_x(),starty);
-		numentries = __listAllocationMap[P_WORKER + p - 1];
-		if(addItemList(numentries,i_col,idx,1,1)) error = 1;
-		idx += numentries;
-	}
-	
-	menu_show(chr);
-	handleError(chr);
-}
-
-public addgui_signs_cback(menu,chr,btncode)
-{
-	if(!btncode)	return;
-
-	chr_message(chr,_,"click to position the item");
-	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
-	addgui_signs(chr,INVALID,INVALID)
-
-}
-
-//==================================================================================//
-//                                  ARCHITECTURE MENU                               //
-//==================================================================================//
+//===========================================================================//
+//                               ARCHITECTURE MENU                           //
+//===========================================================================//
 /*!
 \author Fax
 \fn addgui_architecture(chr,itemsInBackpack,amount)
@@ -828,25 +674,25 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 
 	createFramedMenu(0,0,4,20,70,"addgui_arch_cback");
 
-	menu_addLabeledInputField(0,"wall",10,"Item type: ");
+	menu_addLabeledInputField(0,"wall",10,msg_add_itemType);
 	cursor_newline();
 	
-	menu_addLabeledInputField(1,"stone",10,"Material: ");
+	menu_addLabeledInputField(1,"stone",10,msg_add_material);
 	cursor_newline();
 	
-	menu_addLabeledInputField(2,"1",10,"Subtype: ");
+	menu_addLabeledInputField(2,"1",10,msg_add_subtype);
 	cursor_newline();
 	
-	menu_addLabeledButton(1,"Open menu");
+	menu_addLabeledButton(1,msg_add_openmenu);
 
 	cursor_down(3);
 	
-	menu_addText("This menu will generate a list of items^n");
-	menu_addText("basing on the informations provided above.^n^n");
+	menu_addText(msg_add_architecture1);
+	menu_addText(msg_add_architecture2);
 	
-	menu_addText("'Item type' can be: wall, stairs, floor, roof, door, gate^n^n");	
+	menu_addText(msg_add_architecture3);	
 	
-	menu_addText("'Material' depends on the itemtype:^n");				
+	menu_addText(msg_add_architecture4);				
 	menu_addText("wall: stone, brick, log, marble, rattan, hide, tent, ruined^n");	
 	menu_addText("      sandstone, wooden, bamboo, plaster, cave, dungeon^n");	
 	menu_addText("stairs: marble, stone, sandstone, wooden, carpeted, cave^n");	
@@ -856,7 +702,7 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 	menu_addText("door: metal, wooden, rattan^n");					
 	menu_addText("gate: iron, wooden^n^n");						
 	
-	menu_addText("'subtype': a number 2,3,4 ...");
+	menu_addText(msg_add_architecture5);
 
 	menu_show(chr);
 }
@@ -879,38 +725,33 @@ public addgui_arch_cback(menu,chr,btncode)
 	
 		sprintf(basedef,"$item%s%s%s",material,type,subtype);
 
-		chr_addLocalStrVar(chr,CLV_CMDADDTEMP,basedef);
+		chr_delLocalVar(chr,CLV_TEMP1);
+		chr_addLocalStrVar(chr,CLV_TEMP1,basedef);
 	}
-	else chr_getLocalStrVar(chr,CLV_CMDADDTEMP,basedef);
-
+	else 
+		chr_getLocalStrVar(chr,CLV_TEMP1,basedef);
+		
 	sprintf(def,"%s_1",basedef);
 	
 	if(getIntFromDefine(def,false) <= 0)
 	{
-		chr_message(chr,_,"%s is not defined",def);
+		chr_message(chr,_,msg_add_notDefined,def);
 		return;
 	}
 
-	new tabx = 10;
-	new taby = 7;
+	new tabx = 8;
 
 	if(isStrContainedInStr("floor",def) || isStrContainedInStr("roof",def))
-	{
 		tabx = 7;
-		taby = 3;
-	}
-
+	
 	cursor_setProperty(CRP_TAB,tabx);
 	
 	new scriptID = 0,itm,ID,i=1,p=1;
-	new cols = 39;
-	new rows = 19;
-	createFramedMenu(0,0,2,rows,cols,"addgui_arch_cback2");
-	cursor_right(cols/2 - strlen(title)/2);
-	menu_addTitle(title);
-	cursor_newline();
+	new cols = 7;
+	new rows = 30;
+	createFramedMenu(325,0,2,rows,cols,"addgui_arch_cback2");
 	cursor_setProperty(CRP_START_Y,cursor_y());
-	cursor_newline(3);
+	cursor_newline(4);
 	
 	menu_addPage(p);
 	
@@ -925,29 +766,22 @@ public addgui_arch_cback(menu,chr,btncode)
 		menu_addButton(scriptID);
 
 		sprintf(def,"%s_%d",basedef,++i);
-		cursor_down(taby);
 		
-		if(cursor_down())
-		{
-			cursor_top();
+		if(cursor_down(5))
+		{	
+			cursor_reset();
+			++p;
+			menu_addLabeledPageButton(p,"next");
 			
-			if(cursor_tab())
-			{	
-				cursor_back();
-				cursor_right(cols/2 + 2);
-				++p;
-				menu_addLabeledPageButton(p,"next");
-				
-				cursor_left(10);
-				menu_addPage(p);
-				menu_addLabeledPageButton(p - 1,"prev");
-				
-				cursor_back();
-			}
+			cursor_down();
+			menu_addPage(p);
+			menu_addLabeledPageButton(p - 1,"prev");
+			
 			cursor_down(3);
 		}
+		
 	}
-
+	
 	menu_show(chr);
 	cursor_setProperty(CRP_TAB,10);
 	cursor_setProperty(CRP_GRID_Y,18);
@@ -958,289 +792,19 @@ public addgui_arch_cback2(menu,chr,btncode)
 {
 	if(!btncode)
 	{
-		chr_delLocalVar(chr,CLV_CMDADDTEMP);
+		chr_delLocalVar(chr,CLV_TEMP1);
 		return;
 	}
 
-	chr_message(chr,_,"click to position the item");
+	chr_message(chr,_,msg_add_click2PositionTheItem);
 	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 	addgui_arch_cback(INVALID,chr,1)
 
 }
 
-//==================================================================================//
-//                                FURNITURE MENU                                    //
-//==================================================================================//
-/*!
-\author Fax
-\fn addgui_furniture(chr,itemsInBackpack,amount)
-\param chr: the character
-\param itemsInBackpack: true if items are to be created in backpack
-\amount:how many items we need
-\since 0.82
-\brief furniture page
-
-\return nothing
-*/
-
-public addgui_furniture(chr,itemsInBackpack,amount)
-{
-	if(!isChar(chr)) return;
-
-	#if _CMD_DEBUG_
-	log_message("^t->drawing FURNITURE menu");
-	#endif
-	
-	new i_row = 5;
-	new ROWS = 1 + FURNITURE_MENU_ENTRIES/i_row + (FURNITURE_MENU_ENTRIES%i_row > 0 ? 1 : 0)
-	new COLS = i_row*(FURNITURE_MENU_ENTRIES_L + 1);
-	new tab = (COLS - 2)/i_row;
-	cursor_setProperty(CRP_TAB,tab);
-	
-	createFramedMenu(0,0,ROWS,25,COLS,"addgui_furniture_cback");
-
-	for(new p = 1; p <= FURNITURE_MENU_ENTRIES; p++)
-	{
-		menu_addLabeledPageButton(p,furnitureMenuTxt[p - 1]);
-		cursor_tab();
-		
-		if(p%i_row == 0 && p != 0) cursor_newline();
-	}
-
-	menu_addLabeledInputField(INPUT_MATERIAL,"pine",10,"Material: ");
-	cursor_down(3);
-	
-	new idx = FURNITURE_MENU_IDX,numentries;
-	new starty = cursor_y();
-	
-	
-	tab = 12;
-	cursor_setProperty(CRP_TAB,tab);
-	
-	for(new p = 1; p <= FURNITURE_MENU_ENTRIES; p++)
-	{
-		new i_col = 12,interline = 10;
-		switch(p + P_FURNITURE - 1)
-		{
-			case P_FURNITURE: {i_col = 7; interline = 30;}
-			case P_TABLES:{	i_col = 11; interline = 24;}
-			case P_CHAIRS:{	i_col = 9; interline = 25;}
-			case P_BEDS:{ i_col = 7; interline = 35;}
-			case P_BIGBEDS:{ i_col = 8; interline = 30;}
-		}
-		cursor_setProperty(CRP_INTERLINE,interline);
-		menu_addPage(p);
-		cursor_goto(cursor_x(),starty);
-		cursor_back();
-		numentries = __listAllocationMap[P_FURNITURE + p - 1];
-		new startRow = cursor_y();
-		for(new i = 0; i < numentries; i++, cursor_down())
-		{
-			if(i%i_col == 0 && i != 0) 
-			{ 
-				cursor_tab(); 
-				cursor_goto(cursor_x(),startRow); 
-			}
-			
-			menu_addButton(idx + i + 1);
-			
-			cursor_move(menu_getProperty(MP_BUTTON_WIDTH),0);
-			menu_addTilePic(__addMenuList[idx + i][__ID]);
-			cursor_move(-1*menu_getProperty(MP_BUTTON_WIDTH),0);	
-		}
-	
-		idx += numentries;
-	}
-	
-	menu_show(chr);
-}
-
-/*!
-\author Fax
-\fn addgui_furniture_cback(menu,chr,armor)
-\param menu,chr,armor: standard menu callback params
-\since 0.82
-\brief callback for furniture menu
-
-Looks at the values given in the furniture menu and creates the XSS def of the items to create and creates them
-\return nothing
-*/
-public addgui_furniture_cback(menu,chr,idx)
-{
-	if(!idx)	return;
-	idx--;
-
-	new material[20];
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL,material);
-	if(strlen(material)) sprintf(material,"%s",material);
-
-	new def[100];
-	sprintf(def,"$item_%s_%s",material,__addMenuList[idx][__def]);
-	target_create(chr,getIntFromDefine(def,false),_,_,"cmd_add_itm_targ");
-	addgui_furniture(chr,false,1);
-
-}
 
 //==================================================================================//
-//                            TOOLS ITEMS MENU                                    //
-//==================================================================================//
-/*!
-\author Fax
-\fn addgui_tools(chr,itemsInBackpack,amount)
-\param chr: the character
-\param itemsInBackpack: true if items are to be created in backpack
-\amount:how many items we need
-\since 0.82
-\brief tools items page
-
-\return nothing
-*/
-
-public addgui_tools(chr,itemsInBackpack,amount)
-{
-	if(!isChar(chr)) return;
-
-	#if _CMD_DEBUG_
-	log_message("^t->drawing tools menu");
-	#endif
-	
-	new i_row = 4;
-	new ROWS = 2 + TOOLS_MENU_ENTRIES/i_row + (TOOLS_MENU_ENTRIES%i_row > 0 ? 1 : 0)
-	new COLS = i_row*(TOOLS_MENU_ENTRIES_L + 3);
-	new tab = (COLS - 2)/i_row;
-	cursor_setProperty(CRP_TAB,tab);
-	
-	createFramedMenu(0,0,ROWS,25,COLS,"addgui_tools_cback");
-
-	for(new p = 1; p <= TOOLS_MENU_ENTRIES; p++)
-	{
-		menu_addLabeledPageButton(p,toolsMenuTxt[p - 1]);
-		cursor_tab();
-		
-		if(p%i_row == 0 && p != 0) cursor_newline();
-	}
-	
-	cursor_newline()
-	
-	addStdCheckBoxAndInputField(itemsInBackpack,amount);
-	
-	new idx = TOOLS_MENU_IDX,numentries;
-	new starty = cursor_y();
-	
-	for(new p = 1; p <= TOOLS_MENU_ENTRIES; p++)
-	{
-		new i_col = 23,pic = 1,label = 1,interline = 10;
-		tab = 29;
-		
-		//here you can set the appearance of every menu subsection
-		switch(p + P_CARPENTER1 - 1)
-		{
-			case P_CARPENTER1: {i_col = 13; interline = 20; tab = 25;}
-			case P_CARPENTER2:{i_col = 12; interline = 20; tab = 10; label = 0;}
-			case P_TAILOR:{	i_col = 9; interline = 25;}
-			case P_BLACKSMITH:{ i_col = 7; interline = 33; tab = 25;}
-			case P_MUSICIAN:{i_col = 6; interline = 35;}
-			case P_TINKER: {interline = 20;}
-			case P_BOWYER:{i_col = 5; interline = 35;}
-		}
-		
-		menu_addPage(p);
-		cursor_goto(cursor_x(),starty);
-		numentries = __listAllocationMap[P_CARPENTER1 + p - 1];
-		cursor_setProperty(CRP_TAB,tab);
-		cursor_setProperty(CRP_INTERLINE,interline);
-		if(addItemList(numentries,i_col,idx,pic,label)) error = 1;
-		idx += numentries;
-	}
-	
-	menu_show(chr);
-	handleError(chr)
-}
-
-/*!
-\author Fax
-\fn addgui_tools_cback(menu,chr,weapon)
-\param all: standard menu callback params
-\since 0.82
-\brief callback for tools menu
-
-Creates the item selected in the gump
-\return nothing
-*/
-public addgui_tools_cback(menu,chr,btncode)
-{
-	if(!btncode)	return;
-
-	new n,itemsInBackpack;
-	getAmountAndChk(menu,n,itemsInBackpack);
-
-	if(itemsInBackpack)
-	{
-		new item; 
-		item = itm_createInBp(btncode,chr);
-				
-		if(itm_getProperty(item,IP_PILEABLE))
-		{
-			itm_createInBp(btncode,chr,n - 1);
-			chr_message(chr,_,"Item %d created",item);
-		}
-		else
-			for(new i = 0; i < n -1; i++)
-			{
-				item = itm_createInBp(btncode,chr);
-				chr_message(chr,_,"Item %d created",item);
-			}
-
-		addgui_tools(chr,true,n);
-	}
-
-	else
-	{
-		chr_addLocalIntVar(chr,CLV_CMDTEMP,n);
-		chr_message(chr,_,"click to position the item");
-		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
-	}
-}
-
-//==================================================================================//
-//                                  SPAWNERS MENU                                      //
-//==================================================================================//
-/*!
-\author Fax
-\fn addgui_spawners(chr,unused,unused2)
-\param chr: the character
-\param itemsInBackpack: true if items are to be created in backpack
-\amount:how many items we need
-\since 0.82
-\brief SPAWNERS page
-
-\return nothing
-*/
-public addgui_spawner(chr,unused,unused2)
-{
-	cursor_setProperty(CRP_TAB,55);
-	createListMenu(0,0,30,40,NUM_SPAWNERS,"Spawners","drawSpawnersLine","addgui_spawners_cback");
-	menu_show(chr);
-}
-
-public drawSpawnersLine(page,line,col,i)
-{
-	i += IDX_SPAWNERS;
-	menu_addLabeledButton(getIntFromDefine(__addMenuList[i][__def],false),__addMenuList[i][__name]);
-}
-public addgui_spawners_cback(menu,chr,btncode)
-{
-	if(!btncode)	return;
-
-	chr_addLocalIntVar(chr,CLV_CMDTEMP,1);
-	chr_message(chr,_,"click to position the item");
-	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
-	addgui_spawner(chr,INVALID,INVALID)
-
-}
-
-//==================================================================================//
-//                                  DEEDS MENU                                      //
+//                                  TODO MENUS                                      //
 //==================================================================================//
 /*!
 \author Fax
@@ -1253,19 +817,6 @@ public addgui_spawners_cback(menu,chr,btncode)
 
 \return nothing
 */
-public addgui_deeds(chr,unused,unused2)
-{
-	popupMenu(chr,"Work in progress","Deeds menu is not yet available");
-}
-
-public addgui_deeds_cback(menu,chr,btncode)
-{
-	if(!btncode)	return;
-
-	itm_createInBp(btncode,chr);
-	addgui_spawner(chr,INVALID,INVALID)
-
-}
 
 public addgui_special(chr,unused,unused2)
 {
@@ -1282,74 +833,378 @@ public addgui_treasure(chr,unused,unused2)
 	popupMenu(chr,"Work in progress","Treasure items menu is not yet^navailable");
 }
 
-static getAmountAndChk(menu,&n,&chk)
-{
-	new amount[10];
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_AMOUNT,amount);
+//===========================================================================//
+//			DATA LOADING FUNCTIONS                               //
+//===========================================================================//
+//These functions are used to load addmenu.xss
 
-	if(!isStrInt(amount))
-		n = 1
-	else n = str2Int(amount);
-	chk = gui_getProperty(menu,MP_CHECK,CHK_ITEMSINBACKPACK);
-}
+/*!
+\author Fax
+\fn loadAddMenu(...)
+\param 0: the character
+\since 0.82
+\brief loads add menu
 
-static addItemList(n,i_col,offset,pic,label)
+if a parameter is passed this will be read as the calling character adn a message will be
+sent to it sayng that the menu has been loaded.
+\return nothing
+*/
+public loadAddMenu(...)
 {
-	new startRow = cursor_y(),scriptID,error;
-	for(new i = 0; i < n; i++, cursor_down())
+	//read additional params
+	if(numargs() > 0)
+		chr_message(getarg(0),_,msg_add_loadingAddMenu);
+		
+	log_message(msg_add_loadingAddMenu);
+	
+	//reset arrays and global variables, or new menu will be messed up
+	reset();
+	
+	//create filename basing on choosen language
+	switch(currentAddmenuLanguage)
 	{
-		if(i%i_col == 0 && i != 0) 
-		{ 
-			cursor_tab(); 
-			cursor_goto(cursor_x(),startRow); 
-		}
-		
-		scriptID = getIntFromDefine(__addMenuList[offset + i][__def],false);
-		if(scriptID > 0) 
-			menu_addButton(scriptID);
-		else 
+		case 0: sprintf(addmenu_xss,"%saddmenu_en.xss",addmenu_xss_path);
+		case 1: sprintf(addmenu_xss,"%saddmenu_de.xss",addmenu_xss_path);
+		case 2: sprintf(addmenu_xss,"%saddmenu_it.xss",addmenu_xss_path);
+		case 3: sprintf(addmenu_xss,"%saddmenu_fr.xss",addmenu_xss_path);
+	}
+	
+	//start XSS parsing routine
+	if(xss_scanFile(addmenu_xss,"addgui_scan") == INVALID)
+	{
+		log_error(msg_add_unable2OpenFile,addmenu_xss);
+		return;
+	}
+	
+	//send info about th emenu loading
+	log_message(msg_add_itemsLoaded,listIdx + 1,pageDataIdx + 1);
+	
+	if(numargs() > 0)
+		chr_message(getarg(0),_,msg_add_itemsLoaded,listIdx + 1,pageDataIdx + 1);
+}
+
+/*!
+\author Fax
+\fn reset()
+\since 0.82
+\brief resets add menu script variables
+
+Resets values in arrays and global vars as if the script was calledfor the first time
+\return nothing
+*/
+static reset()
+{
+	submenuCount = 0;
+	pageDataIdx = -1;
+	listIdx = -1;
+	
+	for(new i = 0; i < MAX_ADD_SUBMENUS; i++)
+	{
+		submenuData[i][__pageDataIdx] = -1;
+		submenuData[i][__numPages] = 0;
+		submenuData[i][__height] = 0;
+	}
+	
+	for(new i = 0; i < MAX_ADD_SUBMENUS*MAX_PAGES_PER_SUBMENU; i++)
+	{
+		pageData[i][__listIdx] = -1;
+		pageData[i][__numItems] = 0;
+		pageData[i][__submenu] = -1;
+		pageData[i][__showPic] = 0;
+		pageData[i][__showLabel] = 0;
+	}	
+}
+
+/*!
+\author Fax
+\fn addgui_scan(file,line)
+\since 0.82
+\brief callback for XSS parsing function
+\return nothing
+*/
+public addgui_scan(file,line)
+{
+	//parse SECTION MESSAGES
+	if(!strcmp(currentXssSectionType,"MESSAGES"))
+	{
+		loadMessages(line);
+		return;
+	}
+	
+	//parse SECTION SUBMENU
+	if(!strcmp(currentXssSectionType,"SUBMENU"))
+	{
+		loadSubmenu(line);
+		return;
+	}
+	
+	//parse SECTION PAGE
+	if(!strcmp(currentXssSectionType,"PAGE"))
+	{
+		loadPage(line);
+		return;
+	}
+}
+
+/*!
+\author Fax
+\fn loadMessages(file,line)
+\since 0.82
+\brief loads add menu messages
+\return nothing
+*/
+static loadMessages(line)
+{
+	
+	new token[5];
+	str2Token(currentXssValue,token,0,currentXssValue,0);
+	ltrim(currentXssValue);
+	
+	//replace "^n" with '^n'
+	new string[100];
+	new j,l = strlen(currentXssValue);
+	for(new i; i < l; i++,j++)
+		if(currentXssValue[i] == '^^' && currentXssValue[i+1] == 'n')
 		{
-			menu_addText("x");
-			error = 1;
+			string[j] = '^n';
+			i++;
 		}
-
-		cursor_move(menu_getProperty(MP_BUTTON_WIDTH),0);
-		if(pic)
-			if(label)
-				menu_addLabeledTilePic(__addMenuList[offset + i][__ID],PICW,__addMenuList[offset + i][__name]);
-			else
-				menu_addTilePic(__addMenuList[offset + i][__ID]);
-		else
-			menu_addText(__addMenuList[offset + i][__name]);
-		cursor_move(-1*menu_getProperty(MP_BUTTON_WIDTH),0);	
-	}
-	
-	cursor_newline();
-	cursor_goto(cursor_x(),startRow);
-	return error;
-}
-
-static addStdCheckBoxAndInputField(itemsInBackpack,amount)
-{
-	menu_addLabeledCheckbox(itemsInBackpack,CHK_ITEMSINBACKPACK,"create items in backpack");
-	cursor_newline();
+		else string[j] = currentXssValue[i];
 		
-	new amountstr[5];
-	sprintf(amountstr,"%d",amount);
-	menu_addLabeledInputField(INPUT_AMOUNT,amountstr,5,"Amount: ");
 	
-	cursor_newline();
-	cursor_newline();
-	cursor_newline();
+	if(!isStrInt(token))
+	{
+		log_error("%s(%d) - %s is not an integer value",addmenu_xss,line,token);
+		return;	
+	}	
+	
+	switch(str2Int(token))
+	{
+		case 0 : strcpy(msg_add_addingModeCont,string);
+		case 1 : strcpy(msg_add_addingModeSingle,string);
+		case 2 : strcpy(msg_add_reload,string);
+		case 3 : strcpy(msg_add_createItemsInBackpack,string);
+		case 4 : strcpy(msg_add_itemCreated,string);
+		case 5 : strcpy(msg_add_click2PositionTheItem,string);
+		case 6 : strcpy(msg_add_click2PositionTheChar,string);
+		case 7 : strcpy(msg_add_WARNING,string);
+		case 8 : strcpy(msg_add_itemsNotLoaded,string);
+		case 9 : strcpy(msg_add_itemType,string);
+		case 10: strcpy(msg_add_material,string);
+		case 11: strcpy(msg_add_subtype,string);
+		case 12: strcpy(msg_add_openmenu,string);
+		case 13: strcpy(msg_add_architecture1,string);
+		case 14: strcpy(msg_add_architecture2,string);
+		case 15: strcpy(msg_add_architecture3,string);
+		case 16: strcpy(msg_add_architecture4,string);
+		case 17: strcpy(msg_add_architecture5,string);
+		case 18: strcpy(msg_add_notDefined,string);
+		case 19: strcpy(msg_add_loadingAddMenu,string);
+		case 20: strcpy(msg_add_unable2OpenFile,string);
+		case 21: strcpy(msg_add_itemsLoaded,string);
+		case 22: strcpy(msg_add_mustBeInteger,string);
+		case 23: strcpy(msg_add_mustBeHex,string);
+		case 24: strcpy(msg_add_tooManyItems,string);
+	}
+}
+/*!
+\author Fax
+\fn loadSubmenu(file,line)
+\since 0.82
+\brief loads a submenu declared in SECTION SUBMENU
+
+Reads XSS commands and loads data into submenuData[][]
+\return nothing
+*/
+static loadSubmenu(line)
+{
+	//store title and set the function the the standard one
+	if(!strcmp(currentXssCommand,"TITLE"))
+	{
+		strcpy(submenuData[currentXssSection][__submenuTitle],currentXssValue);
+		strcpy(submenuData[currentXssSection][__submenuFunction],standardFunction);
+		submenuCount++;
+		return;
+	}
+	
+	//change the function to a custom one
+	if(!strcmp(currentXssCommand,"FUNCTION"))
+	{
+		strcpy(submenuData[currentXssSection][__submenuFunction],currentXssValue);
+		return;
+	}
+	
+	//set menu body height
+	if(!strcmp(currentXssCommand,"HEIGHT"))
+	{
+		if(!isStrInt(currentXssValue))
+		{
+			log_error(msg_add_mustBeInteger,addmenu_xss,line);
+			return;
+		}
+		
+		submenuData[currentXssSection][__height] = str2Int(currentXssValue);
+		return;
+	}
 }
 
-static handleError(chr)
+/*!
+\author Fax
+\fn loadPage(file,line)
+\since 0.82
+\brief loads a page declared in SECTION PAGE
+
+Reads XSS commands and loads data into pageData[][] and addMenuList[][]
+\return nothing
+*/
+static loadPage(line)
 {
-	if(error) 
-	{	
-		popupMenu(chr,"WARNING","Some items couldn't be loaded^ncheck items definitions");
-		log_error("addemenu.sma - Some items couldn't be loaded check items definitions");
+	//store the submenu the page belongs to
+	if(!strcmp(currentXssCommand,"SUBMENU"))
+	{
+		if(!isStrInt(currentXssValue))
+		{
+			log_error(msg_add_mustBeInteger,addmenu_xss,line);
+			skipXssSection = true;
+			return;
+		}		
+		new submenu = str2Int(currentXssValue);
+		
+		
+		//move pageData[][] index forward
+		pageDataIdx++;
+		
+		//each time we find a SUBMENU command we must check if this is the first page
+		//in the submenu
+		if(submenuData[submenu][__pageDataIdx] == -1)
+			submenuData[submenu][__pageDataIdx] = pageDataIdx;
+		
+		//increase number of pagesin the submenu
+		submenuData[submenu][__numPages]++;
+		
+		strcpy(pageData[pageDataIdx][__pageFunction],"");
+		return;
 	}
-	error = 0;
+	
+	//store title
+	if(!strcmp(currentXssCommand,"TITLE"))
+	{
+		strcpy(pageData[pageDataIdx][__pageTitle],currentXssValue);
+		return;
+	}
+	
+	//store title
+	if(!strcmp(currentXssCommand,"FUNCTION"))
+	{
+		strcpy(pageData[pageDataIdx][__pageFunction],currentXssValue);
+		return;
+	}
+
+	//store interline
+	if(!strcmp(currentXssCommand,"INTERLINE"))
+	{
+		if(!isStrInt(currentXssValue))
+		{
+			log_error(msg_add_mustBeInteger,addmenu_xss,line);
+			skipXssSection = true;
+			return;
+		}
+		
+		pageData[pageDataIdx][__addGui_interline] = str2Int(currentXssValue);
+		return;
+	}
+	
+	//store tab
+	if(!strcmp(currentXssCommand,"TAB"))
+	{
+		if(!isStrInt(currentXssValue))
+		{
+			log_error(msg_add_mustBeInteger,addmenu_xss,line);
+			skipXssSection = true;
+			return;
+		}
+		
+		pageData[pageDataIdx][__addGui_tab] = str2Int(currentXssValue);
+		return;
+	}	
+	
+	//store pic
+	if(!strcmp(currentXssCommand,"PIC"))
+	{
+		pageData[pageDataIdx][__showPic] = 1;
+		return;
+	}
+	
+	//store label
+	if(!strcmp(currentXssCommand,"LABEL"))
+	{
+		pageData[pageDataIdx][__showLabel] = 1;
+		return;
+	}	
+	
+	//load items
+	if(!strcmp(currentXssCommand,"ITEM"))
+	{
+		loadObject(line,1);
+		return;
+	}
+	
+	//load NPCs
+	if(!strcmp(currentXssCommand,"NPC"))
+	{
+		loadObject(line,-1);
+		return;
+	}
+	
+}
+
+/*!
+\author Fax
+\fn loadObject(line,type)
+\since 0.82
+\brief loads objects in addMenuList[][]
+\return nothing
+*/
+static loadObject(line,type)
+{
+	new token[200];
+
+	//read ID and check if it's a valid Hex number, set to 0 the invalid IDs
+	str2Token(currentXssValue,token,0,currentXssValue,0);
+	sprintf(token,"0x%s",token);	
+	if(!isStrHex(token))
+	{
+		log_error(msg_add_mustBeHex,addmenu_xss,line);
+		sprintf(token,"0x0");
+	}
+	
+	//increase index in addMenuList[][]
+	listIdx++;
+	
+	//check boudaries of addMenuItems[][]
+	if(listIdx >= MAX_ADDMENU_ITEMS)
+	{
+		log_warning(msg_add_tooManyItems);
+		return;
+	}
+	
+	//checkif this is the first page item
+	if(pageData[pageDataIdx][__listIdx] == -1)
+		pageData[pageDataIdx][__listIdx] = listIdx;
+	
+	//increase page items count
+	pageData[pageDataIdx][__numItems]++;
+	
+	//load data into addMenuList[][]
+	addMenuList[listIdx][__addGui_type] = type;
+	addMenuList[listIdx][__addGui_ID] = str2Hex(token);
+	str2Token(currentXssValue,addMenuList[listIdx][__addGui_def],0,addMenuList[listIdx][__addGui_name],0);
+	return;
+}
+
+public test(chr,x,y)
+{
+	createFramedMenu(x,y,2,5,30,"addgui_arch_cback2");
+	menu_show(chr);
 }
 /*! }@ */

@@ -43,9 +43,11 @@
 #include "small-scripts/commands/polymorph.sma"
 #include "small-scripts/commands/popup.sma"
 #include "small-scripts/commands/possess.sma"
+#include "small-scripts/commands/posttype.sma"
 #include "small-scripts/commands/racelang.sma"
 #include "small-scripts/commands/regioncp.sma"
 #include "small-scripts/commands/resend.sma"
+#include "small-scripts/commands/respawn.sma"
 #include "small-scripts/commands/resurrect.sma"
 #include "small-scripts/commands/save.sma"
 //#include "small-scripts/commands/setdir.sma" removed
@@ -57,6 +59,7 @@
 #include "small-scripts/commands/showbank.sma"
 #include "small-scripts/commands/skills/skills.sma"
 #include "small-scripts/commands/skills/setskills.sma"
+#include "small-scripts/commands/spawnkill.sma"
 #include "small-scripts/commands/stamina.sma"
 #include "small-scripts/commands/stats/stats.sma"
 #include "small-scripts/commands/stats/setstats.sma"
@@ -131,6 +134,9 @@ public initCommandSystem()
 
 	//setup 'help command
 	loadHelpTopics();
+	
+	//setup 'add command
+	loadAddMenu();
 
 	log_message("Command system startup completed^n");
 }

@@ -10,19 +10,19 @@
 \fn cmd_wipe
 \brief wipes items or characters or both
 
-<B>syntax:<B> 'wipe ["rect"/"target"]
+<B>syntax:<B> 'wipe [r]
 
 If area effect is active, all objects included in area will be removed.
-If no area effect is active, or if you pass "target", a target will appear and only the targetted
+If no area effect is active a target will appear and only the targetted
 object will be removed
-If you pass "rect" as parameter, then you will be asked to target 2 map locations wich will be
+If you pass "r" as parameter, then you will be asked to target 2 map locations wich will be
 the corners of a rectangular area that will be wiped.
 */
 public cmd_wipe(const chr)
 {
 	readCommandParams(chr);
 
-	if(!strcmp(__cmdParams[0],"rect"))
+	if(__cmdParams[0][0]== 'r')
 	{
 		getRectangle(chr,"cmd_wipe_rect");
 		return;
