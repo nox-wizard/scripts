@@ -15,6 +15,7 @@
 #define _nxwlib_included
 
 #include "../kernel/core.api"
+#include "../string/string.api"
 
 /*************************************************************************
  PRECOMPILATION PROPERTIES
@@ -32,7 +33,6 @@ enum eBoolean
 };
 
 const INVALID = -1;
-const VISRANGE = 18;
 
 /*************************************************************************
  STRING FUNCTIONS
