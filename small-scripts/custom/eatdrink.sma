@@ -179,7 +179,7 @@ const Delay_HungerThirst = 180;
 
 public hungerandthirst(const c)
 {
-	if(chr_getProperty(c,CP_PRIVLEVEL) >= PRIV_CNS)
+	if(chr_getProperty(c,CP_PRIVLEVEL) < PRIV_CNS)
 		tempfx_activate(_, c, c, 0, Delay_HungerThirst,funcidx("hungertimer"));
 }
 
