@@ -41,6 +41,7 @@ gmopen,200,cmd_gmopen
 go,100,cmd_go
 gy,100,cmd_gy
 hiding,100,cmd_hiding
+hunger,0,cmd_hunger
 heal,200,cmd_heal
 help,100,cmd_help
 invul,100,cmd_invul
@@ -62,6 +63,7 @@ playerlist,50,cmd_playerlist
 polymorph,100,cmd_polymorph
 popup,100,cmd_popup
 possess,100,cmd_possess
+racelang,0,cmd_racelang
 regioncp,150,cmd_regioncp
 resend,50,cmd_resend
 resurrect,100,cmd_resurrect
