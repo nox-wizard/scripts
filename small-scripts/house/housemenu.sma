@@ -54,17 +54,13 @@ static ystart = 114;
 public housestart(const itm, const chr)
 {
 	bypass();
-        new more1 = itm_getProperty(itm, IP_MORE, 1);
-        more1 = (more1&0xff)<<24;
-	new more2 = itm_getProperty(itm, IP_MORE, 2);
-	more2 = (more2&0xff)<<16;
-	new more3 = itm_getProperty(itm, IP_MORE, 3);
-	more3 = (more3&0xff)<<8;
-	new more4 = itm_getProperty(itm, IP_MORE, 4);
-	more4 = (more4&0xff)<<0;
+        new more1 = (itm_getProperty(itm, IP_MORE, 1)&0xff)<<24;
+	new more2 = (itm_getProperty(itm, IP_MORE, 2)&0xff)<<16;
+	new more3 = (itm_getProperty(itm, IP_MORE, 3)&0xff)<<8;
+	new more4 = (itm_getProperty(itm, IP_MORE, 4)&0xff)<<0;
 	new house=more4+more3+more2+more1;
 	//printf("start house gump, house ser is %d, item ser is: %d^n", house, itm);
-	if(chr == house_getProperty(house, HP_OWNER))
+	if( (chr == house_getProperty(house, HP_OWNER)) || (chr_getProperty(chr, CP_PRIVLEVEL) >= 150) ) //seer, gm and admin can use house menu too
 		menu_house(chr, house, 1, itm);
 	else chr_message(chr, _, "Only house owner are allowed to use the house menu");
 }
@@ -72,10 +68,7 @@ public housestart(const itm, const chr)
 public menu_house(const chrsource, const house, const pagenumber, sign)
 {
 	new tempStr[100];
-	new checklev = 0;
 	new houseMenu = gui_create( 10,10,1,1,1,"house_cllbck" );
-	new x;
-	new y;
 
 	gui_setProperty( houseMenu,MP_BUFFER,1,house );
 	gui_setProperty( houseMenu,MP_BUFFER,3,BUTTON_HOUSEAPPLY );
@@ -97,6 +90,9 @@ public menu_house(const chrsource, const house, const pagenumber, sign)
 	gui_addButton(houseMenu,279,42,houseButton[arrayline][newhous2],houseButton[arrayline][oldhouse2],2);
 	gui_addText(houseMenu,366,40,33,"Options");
 	gui_addButton(houseMenu,423,42,houseButton[arrayline][newhous3],houseButton[arrayline][oldhouse3],3);
+	
+	gui_addButton(houseMenu,116,230+23*5,housepic1,housepic2,18);
+	gui_addText(houseMenu,146,227+23*5,1310,"Bounce someone out of the house");
 
 //Info
 if( pagenumber ==1)
@@ -240,8 +236,6 @@ else if(pagenumber ==2)
 	}
 	set_delete(banlist);
 	
-	gui_addButton(houseMenu,116,230+23*5,housepic1,housepic2,18);
-	gui_addText(houseMenu,146,227+23*5,1310,"Bounce someone out of the house");
 }
 //options
 else if(pagenumber ==3)
