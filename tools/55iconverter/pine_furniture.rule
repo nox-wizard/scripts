@@ -1,0 +1,717 @@
+[0B6D]
+MAPPING $item_pine_table_H1_2
+
+[I_TABLE_WOOD_SMOOTH_NARROW_EXT]
+MAPPING $item_pine_table_H1_2
+
+[0B6E]
+MAPPING $item_pine_table_A1_1
+
+[I_TABLE_WOOD_SOLID_END]
+MAPPING $item_pine_table_A1_1
+
+[0B6F]
+MAPPING $item_pine_table_A1_2
+
+[0B6A]
+MAPPING $item_pine_bench_B2_2
+
+[0B6B]
+MAPPING $item_pine_table_H1_1
+
+[I_TABLE_WOOD_SMOOTH_NARROW_END]
+MAPPING $item_pine_table_H1_1
+
+[0B6C]
+MAPPING $item_pine_table_H1_3
+
+[0DB0]
+MAPPING $item_pine_bigbed_feetright_A2_4
+
+[I_BED_31]
+MAPPING $item_pine_bigbed_feetright_A2_4
+
+[0B91]
+MAPPING $item_pine_bench_C1_2
+
+[I_BENCH_WOOD_HIGHBACK]
+MAPPING $item_pine_bench_C1_2
+
+[0B90]
+MAPPING $item_pine_table_F2
+
+[0B93]
+MAPPING $item_pine_bench_C2_1
+
+[0B92]
+MAPPING $item_pine_bench_C1_1
+
+[0B94]
+MAPPING $item_pine_bench_C2_2
+
+[0A8E]
+MAPPING $item_pine_bigbed_headleft_A1_6
+
+[0A78]
+MAPPING $item_pine_bigbed_feetleft_A1_3
+
+[I_BED_20]
+MAPPING $item_pine_bigbed_feetleft_A1_3
+
+[0A98]
+MAPPING $item_pine_bookcase2_1
+
+[0A99]
+MAPPING $item_pine_bookcase1_2
+
+[0A8A]
+MAPPING $item_pine_bigbed_feetright_A2_2
+
+[0A8C]
+MAPPING $item_pine_bigbed_feetleft_A1_4
+
+[0A79]
+MAPPING $item_pine_bigbed_feetright_A1_3
+
+[I_BED_21]
+MAPPING $item_pine_bigbed_feetright_A1_3
+
+[0A90]
+MAPPING $item_pine_bigbed_headleft_A1_5
+
+[0A91]
+MAPPING $item_pine_bigbed_headright_A1_5
+
+[0A97]
+MAPPING $item_pine_bookcase1_1
+
+[I_BOOKCASE_FULL]
+MAPPING $item_pine_bookcase1_1
+
+[0DB5]
+MAPPING $item_pine_bigbed_headleft_A2_6
+
+[0DB2]
+MAPPING $item_pine_bigbed_headright_A2_5
+
+[0DB3]
+MAPPING $item_pine_bigbed_headleft_A2_5
+
+[0A85]
+MAPPING $item_pine_bigbed_headright_A1_2
+
+[0A84]
+MAPPING $item_pine_bigbed_headleft_A1_2
+
+[0A87]
+MAPPING $item_pine_bigbed_feetright_A1_2
+
+[0A86]
+MAPPING $item_pine_bigbed_feetleft_A1_2
+
+[0A81]
+MAPPING $item_pine_bigbed_headright_A2_3
+
+[I_BED_29]
+MAPPING $item_pine_bigbed_headright_A2_3
+
+[0A80]
+MAPPING $item_pine_bigbed_headleft_A2_3
+
+[I_BED_28]
+MAPPING $item_pine_bigbed_headleft_A2_3
+
+[0A83]
+MAPPING $item_pine_bigbed_headleft_A2_4
+
+[0A82]
+MAPPING $item_pine_bigbed_headright_A2_4
+
+[I_BED_30]
+MAPPING $item_pine_bigbed_headright_A2_4
+
+[0A9B]
+MAPPING $item_pine_bookcase3_1
+
+[0A9C]
+MAPPING $item_pine_bookcase3_2
+
+[0A9A]
+MAPPING $item_pine_bookcase2_2
+
+[0A89]
+MAPPING $item_pine_bigbed_headleft_A2_2
+
+[0A88]
+MAPPING $item_pine_bigbed_headright_A2_2
+
+[0A9D]
+MAPPING $item_pine_wooden_shelf_1
+
+[I_BOOKCASE]
+MAPPING $item_pine_wooden_shelf_1
+
+[0A9E]
+MAPPING $item_pine_wooden_shelf_2
+
+[0A38]
+MAPPING $item_pine_chest_of_drawers2_1
+
+[0B64]
+MAPPING $item_pine_bench_B1_2
+
+[I_BENCH_WOOD_SMOOTH_EXT]
+MAPPING $item_pine_bench_B1_2
+
+[0B65]
+MAPPING $item_pine_bench_A2_1
+
+[0B66]
+MAPPING $item_pine_bench_A2_2
+
+[0B67]
+MAPPING $item_pine_bench_A2_3
+
+[0B60]
+MAPPING $item_pine_bench_A1_3
+
+[0B61]
+MAPPING $item_pine_bench_A1_2
+
+[0B62]
+MAPPING $item_pine_bench_B1_1
+
+[I_BENCH_WOOD_SMOOTH_END]
+MAPPING $item_pine_bench_B1_1
+
+[0B63]
+MAPPING $item_pine_bench_B1_3
+
+[0A77]
+MAPPING $item_pine_bigbed_headleft_A2_1
+
+[I_BED_19]
+MAPPING $item_pine_bigbed_headleft_A2_1
+
+[0B68]
+MAPPING $item_pine_bench_B2_3
+
+[0B69]
+MAPPING $item_pine_bench_B2_1
+
+[0B4B]
+MAPPING $item_pine_writing_desk_2
+
+[0B4C]
+MAPPING $item_pine_writing_desk_3
+
+[0B4A]
+MAPPING $item_pine_writing_desk_1
+
+[0B4F]
+MAPPING $item_pine_fancy_chair1_2
+
+[0B4E]
+MAPPING $item_pine_fancy_chair1_1
+
+[I_CHAIR_WOOD_FANCY_CUSHION]
+MAPPING $item_pine_fancy_chair1_1
+
+[0A6B]
+MAPPING $item_pine_bed_feet_A1_2
+
+[I_BED_11]
+MAPPING $item_pine_bed_feet_A1_2
+
+[0A6A]
+MAPPING $item_pine_bed_headboard_A1_3
+
+[I_BED_10]
+MAPPING $item_pine_bed_headboard_A1_3
+
+[0B77]
+MAPPING $item_pine_table_D1_1
+
+[I_TABLE_BOARD_ROUGH_CORNER]
+MAPPING $item_pine_table_D1_1
+
+[0B76]
+MAPPING $item_pine_table_C1_2
+
+[0B75]
+MAPPING $item_pine_table_C1_1
+
+[I_TABLE_BOARD_ROUGH_END]
+MAPPING $item_pine_table_C1_1
+
+[0B74]
+MAPPING $item_pine_table_B1_5
+
+[I_TABLE_WOOD_SOLID_CUSTOM_EXT]
+MAPPING $item_pine_table_B1_5
+
+[0B73]
+MAPPING $item_pine_table_B1_4
+
+[0B72]
+MAPPING $item_pine_table_B1_3
+
+[0B71]
+MAPPING $item_pine_table_B1_2
+
+[0B70]
+MAPPING $item_pine_table_B1_1
+
+[I_TABLE_WOOD_SOLID_CUSTOM_CORNER_NS]
+MAPPING $item_pine_table_B1_1
+
+[0A70]
+MAPPING $item_pine_bigbed_headleft_A1_1
+
+[I_BED_12]
+MAPPING $item_pine_bigbed_headleft_A1_1
+
+[0A71]
+MAPPING $item_pine_bigbed_feetleft_A1_1
+
+[I_BED_13]
+MAPPING $item_pine_bigbed_feetleft_A1_1
+
+[0A72]
+MAPPING $item_pine_bigbed_feetright_A1_1
+
+[I_BED_14]
+MAPPING $item_pine_bigbed_feetright_A1_1
+
+[0A73]
+MAPPING $item_pine_bigbed_headright_A1_1
+
+[I_BED_15]
+MAPPING $item_pine_bigbed_headright_A1_1
+
+[0A74]
+MAPPING $item_pine_bigbed_headright_A2_1
+
+[I_BED_16]
+MAPPING $item_pine_bigbed_headright_A2_1
+
+[0B79]
+MAPPING $item_pine_table_D1_3
+
+[0B78]
+MAPPING $item_pine_table_D1_2
+
+[0B7F]
+MAPPING $item_pine_table_H2_1
+
+[0B7E]
+MAPPING $item_pine_table_H2_3
+
+[0B7D]
+MAPPING $item_pine_table_F1
+
+[I_TABLE_WOOD_ROUGH_BOARD]
+MAPPING $item_pine_table_F1
+
+[0B7C]
+MAPPING $item_pine_table_E1
+
+[I_TABLE_WOOD_ROUGH_SMALL]
+MAPPING $item_pine_table_E1
+
+[0B7B]
+MAPPING $item_pine_table_D1_5
+
+[0B7A]
+MAPPING $item_pine_table_D1_4
+
+[0A8D]
+MAPPING $item_pine_bigbed_feetright_A1_4
+
+[0A7A]
+MAPPING $item_pine_bigbed_headleft_A1_3
+
+[I_BED_22]
+MAPPING $item_pine_bigbed_headleft_A1_3
+
+[0A7B]
+MAPPING $item_pine_bigbed_headright_A1_3
+
+[I_BED_23]
+MAPPING $item_pine_bigbed_headright_A1_3
+
+[0A7C]
+MAPPING $item_pine_bigbed_headleft_A1_4
+
+[I_BED_24]
+MAPPING $item_pine_bigbed_headleft_A1_4
+
+[0A7D]
+MAPPING $item_pine_bigbed_headright_A1_4
+
+[I_BED_25]
+MAPPING $item_pine_bigbed_headright_A1_4
+
+[0A7E]
+MAPPING $item_pine_bigbed_feetright_A2_3
+
+[I_BED_26]
+MAPPING $item_pine_bigbed_feetright_A2_3
+
+[0A7F]
+MAPPING $item_pine_bigbed_feetleft_A2_3
+
+[I_BED_27]
+MAPPING $item_pine_bigbed_feetleft_A2_3
+
+[0A8F]
+MAPPING $item_pine_bigbed_headright_A1_6
+
+[0A8B]
+MAPPING $item_pine_bigbed_feetleft_A2_2
+
+[0B40]
+MAPPING $item_pine_counter2_1
+
+[0A68]
+MAPPING $item_pine_bed_feet_A2_2
+
+[I_BED_8]
+MAPPING $item_pine_bed_feet_A2_2
+
+[0A63]
+MAPPING $item_pine_bed_headboard_A2_1
+
+[0A62]
+MAPPING $item_pine_bed_feet_A1_1
+
+[I_BED_5]
+MAPPING $item_pine_bed_feet_A1_1
+
+[0A61]
+MAPPING $item_pine_bed_feet_A1_3
+
+[0B49]
+MAPPING $item_pine_writing_desk_4
+
+[I_TABLE_WRITING]
+MAPPING $item_pine_writing_desk_4
+
+[0A67]
+MAPPING $item_pine_bed_headboard_A2_3
+
+[0A66]
+MAPPING $item_pine_bed_headboard_A2_2
+
+[I_BED_7]
+MAPPING $item_pine_bed_headboard_A2_2
+
+[0A76]
+MAPPING $item_pine_bigbed_feetleft_A2_1
+
+[I_BED_18]
+MAPPING $item_pine_bigbed_feetleft_A2_1
+
+[0DB4]
+MAPPING $item_pine_bigbed_headright_A2_6
+
+[0B2C]
+MAPPING $item_pine_wooden_bench_D1
+
+[I_BENCH_WOOD_DARK]
+MAPPING $item_pine_wooden_bench_D1
+
+[0B2D]
+MAPPING $item_pine_wooden_bench_D2
+
+[0B2E]
+MAPPING $item_pine_wooden_chair1_1
+
+[I_CHAIR_WOOD_ROUGH_DARK]
+MAPPING $item_pine_wooden_chair1_1
+
+[0B2F]
+MAPPING $item_pine_wooden_chair1_2
+
+[0DB1]
+MAPPING $item_pine_bigbed_feetleft_A2_4
+
+[0A4D]
+MAPPING $item_pine_armoire1_1
+
+[0A4F]
+MAPPING $item_pine_armoire2_1
+
+[0A53]
+MAPPING $item_pine_armoire2_2
+
+[0A51]
+MAPPING $item_pine_armoire1_2
+
+[0A69]
+MAPPING $item_pine_bed_headboard_A1_2
+
+[I_BED_9]
+MAPPING $item_pine_bed_headboard_A1_2
+
+[0B59]
+MAPPING $item_pine_wooden_chair2_4
+
+[0B58]
+MAPPING $item_pine_wooden_chair2_3
+
+[0B55]
+MAPPING $item_pine_fancy_chair2_4
+
+[0B54]
+MAPPING $item_pine_fancy_chair2_3
+
+[0B57]
+MAPPING $item_pine_wooden_chair2_2
+
+[0B56]
+MAPPING $item_pine_wooden_chair2_1
+
+[I_CHAIR_WOOD]
+MAPPING $item_pine_wooden_chair2_1
+
+[0B51]
+MAPPING $item_pine_fancy_chair1_4
+
+[0B50]
+MAPPING $item_pine_fancy_chair1_3
+
+[0B53]
+MAPPING $item_pine_fancy_chair2_2
+
+[0B52]
+MAPPING $item_pine_fancy_chair2_1
+
+[I_CHAIR_WOOD_CUSHION]
+MAPPING $item_pine_fancy_chair2_1
+
+[0B5D]
+MAPPING $item_pine_straw_chair1_4
+
+[0B5F]
+MAPPING $item_pine_bench_A1_1
+
+[I_BENCH_BOARD_ROUGH_END]
+MAPPING $item_pine_bench_A1_1
+
+[0B5A]
+MAPPING $item_pine_straw_chair1_1
+
+[I_CHAIR_WOOD_BAMBOO]
+MAPPING $item_pine_straw_chair1_1
+
+[0B5C]
+MAPPING $item_pine_straw_chair1_3
+
+[0B5B]
+MAPPING $item_pine_straw_chair1_2
+
+[0A5F]
+MAPPING $item_pine_bed_feet_A2_3
+
+[0A5D]
+MAPPING $item_pine_bed_headboard_A1_1
+
+[0A5E]
+MAPPING $item_pine_bed_headboard_A2_4
+
+[I_BED_3]
+MAPPING $item_pine_bed_headboard_A2_4
+
+[0A5C]
+MAPPING $item_pine_bed_feet_A2_1
+
+[I_BED_2]
+MAPPING $item_pine_bed_feet_A2_1
+
+[01190]
+MAPPING $item_pine_table_M1_2
+
+[I_TABLE_RUNNER_PLAID_BLUE_EXT]
+MAPPING $item_pine_table_M1_2
+
+[01191]
+MAPPING $item_pine_table_M2_1
+
+[01192]
+MAPPING $item_pine_table_M2_2
+
+[0A45]
+MAPPING $item_pine_dresser2_2
+
+[0A44]
+MAPPING $item_pine_dresser2_1
+
+[0118F]
+MAPPING $item_pine_table_M1_1
+
+[I_TABLE_RUNNER_PLAID_BLUE]
+MAPPING $item_pine_table_M1_1
+
+[0118E]
+MAPPING $item_pine_table_L
+
+[I_TABLE_RUNNER_SNOWFLAKE]
+MAPPING $item_pine_table_L
+
+[0118D]
+MAPPING $item_pine_table_K
+
+[I_TABLE_RUNNER_RED]
+MAPPING $item_pine_table_K
+
+[0118C]
+MAPPING $item_pine_table_J
+
+[0118B]
+MAPPING $item_pine_table_I
+
+[I_TABLE_RUNNER_PURPLE]
+MAPPING $item_pine_table_I
+
+[0A2C]
+MAPPING $item_pine_chest_of_drawers1_1
+
+[I_BUREAU]
+MAPPING $item_pine_chest_of_drawers1_1
+
+[0A2B]
+MAPPING $item_pine_stool2
+
+[I_CHAIR_STOOL]
+MAPPING $item_pine_stool2
+
+[0A2A]
+MAPPING $item_pine_stool1
+
+[I_CHAIR_STOOL_BAR]
+MAPPING $item_pine_stool1
+
+[0B8F]
+MAPPING $item_pine_table_E2
+
+[0B8D]
+MAPPING $item_pine_table_D2_4
+
+[0B8E]
+MAPPING $item_pine_table_D2_5
+
+[I_TABLE_BOARD_ROUGH_EXT]
+MAPPING $item_pine_table_D2_5
+
+[0B8B]
+MAPPING $item_pine_table_D2_2
+
+[0B8C]
+MAPPING $item_pine_table_D2_3
+
+[0B8A]
+MAPPING $item_pine_table_D2_1
+
+[I_TABLE_BOARD_ROUGH_CUSTOM_CORNER_EW]
+MAPPING $item_pine_table_D2_1
+
+[0A34]
+MAPPING $item_pine_chest_of_drawers1_2
+
+[0B38]
+MAPPING $item_pine_table_G2_2
+
+[0A30]
+MAPPING $item_pine_chest_of_drawers2_2
+
+[I_BUREAU_2]
+MAPPING $item_pine_chest_of_drawers2_2
+
+[0B33]
+MAPPING $item_pine_throne_2
+
+[0B32]
+MAPPING $item_pine_throne_1
+
+[I_CHAIR_THRONE]
+MAPPING $item_pine_throne_1
+
+[0B31]
+MAPPING $item_pine_wooden_chair1_4
+
+[0B30]
+MAPPING $item_pine_wooden_chair1_3
+
+[0B37]
+MAPPING $item_pine_table_G1_2
+
+[I_TABLE_NIGHTSTAND_EXT]
+MAPPING $item_pine_table_G1_2
+
+[0B35]
+MAPPING $item_pine_table_G2_1
+
+[0B34]
+MAPPING $item_pine_table_G1_1
+
+[I_TABLE_NIGHTSTAND]
+MAPPING $item_pine_table_G1_1
+
+[0A3D]
+MAPPING $item_pine_dresser1_1
+
+[0A3C]
+MAPPING $item_pine_dresser1_2
+
+[I_DRESSER]
+MAPPING $item_pine_dresser1_2
+
+[0B3F]
+MAPPING $item_pine_counter1_1
+
+[0B3E]
+MAPPING $item_pine_counter2_2
+
+[0B3D]
+MAPPING $item_pine_counter1_2
+
+[0B88]
+MAPPING $item_pine_table_C2_2
+
+[0B89]
+MAPPING $item_pine_table_C2_1
+
+[0B86]
+MAPPING $item_pine_table_B2_4
+
+[0B87]
+MAPPING $item_pine_table_B2_5
+
+[0B84]
+MAPPING $item_pine_table_B2_2
+
+[0B85]
+MAPPING $item_pine_table_B2_3
+
+[0B82]
+MAPPING $item_pine_table_A2_1
+
+[0B83]
+MAPPING $item_pine_table_B2_1
+
+[I_TABLE_WOOD_SOLID_CUSTOM_CORNER_EW]
+MAPPING $item_pine_table_B2_1
+
+[0B80]
+MAPPING $item_pine_table_H2_2
+
+[0B81]
+MAPPING $item_pine_table_A2_2
+
+[0A60]
+MAPPING $item_pine_bed_headboard_A1_4
+
+[I_BED_4]
+MAPPING $item_pine_bed_headboard_A1_4
+

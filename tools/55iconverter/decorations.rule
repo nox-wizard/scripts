@@ -1260,11 +1260,12 @@ MAPPING $item_wooden_bench
 [0b2d]
 MAPPING $item_wooden_bench_1
 
-[i_table_nightstand]
-MAPPING $item_table
-
-[0b35]
-MAPPING $item_table_4
-
 [i_table_nightstand_ext]
 MAPPING $item_table_3
+
+[0b7c]
+MAPPING $item_pine_table_E2
+
+[i_table_wood_rough_small]
+MAPPING $item_pine_table_E2
+

@@ -728,6 +728,12 @@ MAPPING $item_map
 
 [I_MAP]
 MAPPING $item_map
+T;MOREX;MOREX;0
+T;MOREY;MOREY;0
+T;MOREZ;MOREZ;0
+
+[I_MAP_BLANK]
+MAPPING $item_map
 
 [02120]
 MAPPING $item_pet_horse
@@ -1414,12 +1420,6 @@ MAPPING $item_e
 [0E41]
 MAPPING $item_metal_chest2
 
-[i_map_blank]
-MAPPING $item_a_map
-
-[i_water]
-MAPPING $item_ground_water
-
 [i_cloth]
 MAPPING $item_cut_cloth
 
@@ -1452,5 +1452,485 @@ MAPPING $item_water_trough_3
 
 [i_hammer_smith]
 MAPPING $item_smithy_hammer
+
+[i_ttm_l1_0]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_1]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_2]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_3]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_4]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_5]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_6]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_7]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_8]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_9]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_10]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_11]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_12]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_13]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_14]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_15]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_16]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_17]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_18]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_19]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_20]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_21]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_22]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_23]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_24]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_25]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_26]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_27]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_28]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_29]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_30]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l1_31]
+MAPPING $item_treasure_map_lv1_
+
+[i_ttm_l2_0]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_1]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_2]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_3]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_4]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_5]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_6]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_7]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_8]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_9]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_10]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_11]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_12]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_13]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_14]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_15]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_16]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_17]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_18]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_19]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_20]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_21]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_22]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_23]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_24]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_25]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_26]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_27]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_28]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_29]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_30]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l2_31]
+MAPPING $item_treasure_map_lv2_
+
+[i_ttm_l3_0]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_1]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_2]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_3]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_4]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_5]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_6]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_7]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_8]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_9]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_10]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_11]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_12]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_13]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_14]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_15]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_16]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_17]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_18]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_19]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_20]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_21]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_22]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_23]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_24]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_25]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_26]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_27]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_28]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_29]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_30]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l3_31]
+MAPPING $item_treasure_map_lv3_
+
+[i_ttm_l4_0]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_1]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_2]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_3]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_4]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_5]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_6]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_7]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_8]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_9]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_10]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_11]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_12]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_13]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_14]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_15]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_16]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_17]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_18]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_19]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_20]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_21]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_22]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_23]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_24]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_25]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_26]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_27]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_28]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_29]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_30]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l4_31]
+MAPPING $item_treasure_map_lv4_
+
+[i_ttm_l5_0]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_1]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_2]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_3]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_4]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_5]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_6]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_7]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_8]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_9]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_10]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_11]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_12]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_13]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_14]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_15]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_16]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_17]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_18]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_19]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_20]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_21]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_22]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_23]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_24]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_25]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_26]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_27]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_28]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_29]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_30]
+MAPPING $item_treasure_map_lv5_
+
+[i_ttm_l5_31]
+MAPPING $item_treasure_map_lv5_
 
 

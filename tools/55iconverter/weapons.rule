@@ -49,19 +49,19 @@ MAPPING $item_iron_viking_sword_of_power
 MAPPING $item_iron_viking_sword_of_vanquishing
 
 [i_axe_exec_RUIN]
-MAPPING $item_iron_executionners_axe_of_ruin
+MAPPING $item_iron_executioners_axe_of_ruin
 
 [i_axe_exec_MIGHT]
-MAPPING $item_iron_executionners_axe_of_might
+MAPPING $item_iron_executioners_axe_of_might
 
 [i_axe_exec_FORCE]
-MAPPING $item_iron_executionners_axe_of_force
+MAPPING $item_iron_executioners_axe_of_force
 
 [i_axe_exec_POWER]
-MAPPING $item_iron_executionners_axe_of_power
+MAPPING $item_iron_executioners_axe_of_power
 
 [i_axe_exec_vanq]
-MAPPING $item_iron_executionners_axe_of_vanquishing
+MAPPING $item_iron_executioners_axe_of_vanquishing
 
 [0DF0]
 MAPPING $item_black_staff
@@ -456,3 +456,47 @@ MAPPING $item_iron_war_fork_of_vanquishing
 [I_HAMMER_SLEDGE]
 MAPPING $item_sledge_hammer_1
 
+[i_axe_two_hand_RUIN]
+MAPPING $item_iron_two-handed_axe_of_ruin
+
+[i_axe_two_hand_MIGHT]
+MAPPING $item_iron_two-handed_axe_of_might
+
+[i_axe_two_hand_FORCE]
+MAPPING $item_iron_two-handed_axe_of_force
+
+[i_axe_two_hand_POWER]
+MAPPING $item_iron_two-handed_axe_of_power
+
+[i_axe_two_hand_VANQ]
+MAPPING $item_iron_two-handed_axe_of_vanquishing
+
+[i_SPEAR_SHORT_RUIN]
+MAPPING $item_iron_short_spear_of_ruin
+
+[i_SPEAR_SHORT_MIGHT]
+MAPPING $item_iron_short_spear_of_might
+
+[i_SPEAR_SHORT_FORCE]
+MAPPING $item_iron_short_spear_of_force
+
+[i_SPEAR_SHORT_POWER]
+MAPPING $item_iron_short_spear_of_power
+
+[i_SPEAR_SHORT_VANQ]
+MAPPING $item_iron_short_spear_of_vanquishing
+
+[i_MACE_RUIN]
+MAPPING $item_iron_mace_of_ruin
+
+[i_MACE_MIGHT]
+MAPPING $item_iron_mace_of_might
+
+[i_MACE_FORCE]
+MAPPING $item_iron_mace_of_force
+
+[i_MACE_POWER]
+MAPPING $item_iron_mace_of_power
+
+[i_MACE_VANQ]
+MAPPING $item_iron_mace_of_vanquishing

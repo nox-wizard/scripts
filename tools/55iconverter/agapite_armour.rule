@@ -1,63 +1,63 @@
-[i_AAGAPITE_PLATEMAIL]
-MAPPING $item_gapite_platemail
+[i_AGAPITE_PLATEMAIL]
+MAPPING $item_agapite_platemail
 
 [i_AGAPITE_FEMALE_PLATEMAIL]
-MAPPING $item_gapite_female_plate
+MAPPING $item_agapite_female_plate
 
 [i_AGAPITE_PLATEMAIL_leggings]
-MAPPING $item_gapite_plate_leggings
+MAPPING $item_agapite_plate_leggings
 
 [i_AGAPITE_PLATEMAIL_ARMS]
-MAPPING $item_gapite_plate_sleeves
+MAPPING $item_agapite_plate_sleeves
 
 [i_AGAPITE_PLATEMAIL_GORGET]
-MAPPING $item_gapite_plate_gorget
+MAPPING $item_agapite_plate_gorget
 
 [i_AGAPITE_PLATE_HELM]
-MAPPING $item_gapite_plate_helm
+MAPPING $item_agapite_plate_helm
 
 [i_AGAPITE_PLATEMAIL_GAUNTLETS]
-MAPPING $item_gapite_plate_gloves
+MAPPING $item_agapite_plate_gloves
 
 [i_AGAPITE_CHAINMAIL_COIF]
-MAPPING $item_gapite_chain_coif
+MAPPING $item_agapite_chain_coif
 
 [i_AGAPITE_CHAINMAIL_LEGGINGS]
-MAPPING $item_gapite_chain_leggings
+MAPPING $item_agapite_chain_leggings
 
 [i_AGAPITE_CHAINMAIL_TUNIC]
-MAPPING $item_gapite_chain_leggings
+MAPPING $item_agapite_chain_leggings
 
 [i_AGAPITE_METAL_SHIELD]
-MAPPING $item_gapite_metal_shield
+MAPPING $item_agapite_metal_shield
 
 [i_AGAPITE_BUCKLER_SHIELD]
-MAPPING $item_gapite_buckler
+MAPPING $item_agapite_buckler
 
 [i_AGAPITE_HEATER_SHIELD]
-MAPPING $item_gapite_heater
+MAPPING $item_agapite_heater
 
 [i_AGAPITE_RINGMAIL_GLOVES]
-MAPPING $item_gapite_ringmail_gloves
+MAPPING $item_agapite_ringmail_gloves
 
 [i_AGAPITE_RINGMAIL_LEGGINGS]
-MAPPING $item_gapite_ringmail_leggings
+MAPPING $item_agapite_ringmail_leggings
 
 [i_AGAPITE_RINGMAIL_SLEEVES]
-MAPPING $item_gapite_ringmail_sleeves
+MAPPING $item_agapite_ringmail_sleeves
 
 [i_AGAPITE_RINGMAIL_TUNIC]
-MAPPING $item_gapite_ringmail_tunic
+MAPPING $item_agapite_ringmail_tunic
 
 [i_AGAPITE_CLOSED_HELM]
-MAPPING $item_gapite_close_helm
+MAPPING $item_agapite_close_helm
 
 [i_AGAPITE_BASCINET]
-MAPPING $item_gapite_bascinet
+MAPPING $item_agapite_bascinet
 
 [i_AGAPITE_HELMET]
-MAPPING $item_gapite_helmet
+MAPPING $item_agapite_helmet
 
 [i_AGAPITE_NOSE_HELM]
-MAPPING $item_gapite_nose_helm
+MAPPING $item_agapite_nose_helm
 

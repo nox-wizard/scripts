@@ -128,6 +128,9 @@ def parseSphereScript(linebuffer):
 					itemname=id
 				if ( id == None and itemname.startswith("0")):
 					id=itemname
+				if ( id == None ):
+					lineindex +=1
+					continue
 				if ( not id.startswith ("0")):
 					# the id is the same as another object
 					if ( glob.allSphereIds.has_key(id) ):
