@@ -145,19 +145,17 @@ native set_getItem( const set );
 native set_addOwnedNpcs( const set, const owner, const includeStabled=false, const onlyFollowing=true );
 
 /*!
-\brief Add to given set the character near location
+\brief Add to given set the npcs near location
 \author Endymion
 \since 0.82
 \param 1 the set
 \param 2 the x location
 \param 3 the y location
 \param 4 distance
-\param 5 exclude offline
-\param 6 only player
 \return 0
-\fn set_addCharsNearXY( const set, const x, const y, const distance, const excludeOffline, const onlyPlayer ) 
+\fn set_addNpcsNearXY( const set, const x, const y, const distance ) 
 */
-native set_addCharsNearXY( const set, const x, const y, const distance=VISRANGE, const excludeOffline=true, const onlyPlayer=false );
+native set_addNpcsNearXY( const set, const x, const y, const distance=VISRANGE );
 
 /*!
 \brief Add to given set the party friend of given character
