@@ -450,25 +450,3 @@ stock itm_setAmxFlags(const itm, const idx, const value)
 	itm_setProperty(itm, IP_AMXFLAGS, idx, value);
 }
 
-/*!
-\author Rage
-\fn itm_setMultiByteProperty(const itm, const property, const value)
-\brief
-*/
-stock itm_setMultiByteProperty(const itm, const property, const value)
-{
-	itm_setProperty(itm, property, 1, value>>24);
-	itm_setProperty(itm, property, 2, (value>>16)&0xFF);
-	itm_setProperty(itm, property, 3, (value>>8)&0xFF);
-	itm_setProperty(itm, property, 4, value&0xFF);
-}
-
-/*!
-\author Rage
-\fn itm_getMultiByteProperty(const itm, const property)
-\brief
-*/
-stock itm_getMultiByteProperty(const itm, const property)
-{
-	return (itm_getProperty(itm, property, 1) << 24) + (itm_getProperty(itm, property, 2) << 16) + (itm_getProperty(itm, property, 3) << 8) + (itm_getProperty(itm, property, 4));
-}

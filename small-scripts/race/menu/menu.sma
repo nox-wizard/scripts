@@ -311,7 +311,7 @@ public race_make( const socket, const menu, const race, const chr )
 	
 	chr_unmorph( chr );
 	
-	chr_setProperty( chr, PC_RACE, _, race );
+	chr_setProperty( chr, CP_RACE, _, race );
 
 	//
 	// Alter appearance if necessary

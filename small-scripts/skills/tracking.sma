@@ -182,7 +182,10 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 
 				new whereIdx = chr_getDirForSee( chr, chr_getProperty( c, CP_POSITION, CP2_X ), chr_getProperty( c, CP_POSITION, CP2_Y ) );
 				
-				icon = getTrackIconById( id );
+				icon = chr_getProperty( c, CP_ICON );
+				if( icon==INVALID ) //icon not exist
+					icon=0x20D1;			
+				
 				if( seeName ) {
 					new name[100];
 					chr_getProperty( c, CP_STR_NAME, _, name );

@@ -130,6 +130,24 @@ native chr_disturbMed(const chr);
 */
 native chr_getBankBox(const chr, const bankboxtype);
 
+/*
+\brief given character equip specific item
+\author Endymion
+\param 1 character
+\param 2 item
+\return equip or INVALID if not valid character or item
+*/
+native chr_equip( const chr, const item );
+
+/*
+\brief get the backpack of given character
+\author Endymion
+\param 1 the character
+\param 2 if true backpack is created if not exist
+\return backpack item or INVALID if not valid char or haven't backpack
+*/
+native chr_getBackpack( const chr, const createIfNotExist = false );
+
 /*!
 \author Xanathar
 \fn chr_getItemOnLayer(const chr, const layer)
@@ -1227,6 +1245,5 @@ public chr_getDirForSee( const chr, const x, const y )
 	}
 	return SOUTH;
 }
-
 
 

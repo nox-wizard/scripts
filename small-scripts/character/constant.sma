@@ -50,6 +50,13 @@ const CP2_REGEN_HP = 0;
 const CP2_REGEN_MANA = 1;
 const CP2_REGEN_STAMINA = 2;
 
+const CP2_STARTATTACK = 0;
+const CP2_IDLE = 1;
+const CP2_ATTACK = 2;
+const CP2_DEFEND = 3;
+const CP2_DIE = 4;
+
+
 
 //property list
 const CP_CANTRAIN = 0;
@@ -220,6 +227,10 @@ const CP_ID = 403;
 const CP_SKIN = 404;
 const CP_XID = 405;
 const CP_XSKIN = 406;
+const CP_ICON = 407;
+const CP_SOUND = 408;
+const CP_RACE = 409;
+
 
 const CP_STR_DISABLEDMSG = 450;
 const CP_STR_GUILDTITLE = 451;
