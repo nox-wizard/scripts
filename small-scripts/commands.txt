@@ -19,6 +19,7 @@
 area,0,cmd_area
 add,0,cmd_add
 dupe,0,cmd_dupe
+damage,0,cmd_damage
 freeze,0,cmd_freeze
 func,0,cmd_func
 hiding,0,cmd_hiding
@@ -28,6 +29,8 @@ make,0,cmd_make
 move,0,cmd_move
 options,0,cmd_options
 playerlist,0,cmd_playerlist
+regioncp,0,cmd_regioncp
+resurrect,0,cmd_resurrect
 skills,0,cmd_skills
 stats,0,cmd_stats
 tweak,0,cmd_tweak
