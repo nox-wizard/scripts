@@ -1,0 +1,205 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (furniture.xss)                                  ||
+// || Maintained by Akron                                                 ||
+// || Last Update 09-aug-2003                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_marble_bench
+{
+    NAME marble bench
+    ID 0459
+    
+    VALUE 20000
+    WEIGHT 10000
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_marble_bench_1
+{
+    NAME marble bench
+    ID 045A
+    VALUE 20000
+    WEIGHT 10000
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_stone_bench
+{
+    NAME marble bench
+    ID 045B
+    VALUE 20000
+    WEIGHT 10000
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_marble_bench_2
+{
+    NAME marble bench
+    ID 045C
+    VALUE 20000
+    WEIGHT 10000
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_marble_bench_3
+{
+    ID 1DCD
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_marble_bench_4
+{
+    ID 1DCF
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_marble_bench_5
+{
+    ID 1DCE
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_sandstone_bench
+{
+    ID 1DC7
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_sandstone_bench_1
+{
+    ID 1DC9
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Sandstone Bench
+}
+
+SECTION ITEM $item_sandstone_bench_2
+{
+    ID 1DC8
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Sandstone Bench
+}
+
+SECTION ITEM $item_stone_chair
+{
+    ID 1218
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Stone Chair
+}
+
+SECTION ITEM $item_stone_chair_1
+{
+    ID 1219
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Stone Chair
+}
+
+SECTION ITEM $item_stone_chair_2
+{
+    ID 121A
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Stone Chair
+}
+
+SECTION ITEM $item_stone_chair_3
+{
+    ID 121B
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Stone Chair
+}
+
+SECTION ITEM $item_stone_table
+{
+    NAME stone table
+    ID 1201
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_1
+{
+    NAME stone table
+    ID 1202
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_2
+{
+    NAME stone table
+    ID 1203
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_3
+{
+    NAME stone table
+    ID 1204
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_4
+{
+    NAME stone table
+    ID 1205
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_5
+{
+    NAME stone table
+    ID 1206
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+

@@ -1,0 +1,172 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (advance.xss)                                    ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || Supports standard advancement commands, as well as @on... events    ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// Master Smith
+SECTION ADVANCEMENT $advance_smith
+{
+	STR 95
+	DEX 80
+	INT 60
+	BLACKSMITHING 940
+	MINING 940
+	TINKERING 940
+	ITEM $item_iron_smiths_hammer_of_ruin
+	ITEM $item_tongs
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_pickaxe
+	ITEM $item_tinkers_tools
+}
+
+// Master Swordsman
+SECTION ADVANCEMENT $advance_swordsman
+{
+	STR 95
+	DEX 80
+	INT 60
+	SWORDSMANSHIP 940
+	TACTICS 940
+	PARRYING 940
+	ITEM $item_iron_heater
+	ITEM $item_iron_viking_sword_of_ruin
+}
+
+// Master Armsman
+SECTION ADVANCEMENT $advance_armsman
+{
+	STR 95
+	DEX 70
+	INT 70
+	MACEFIGHTING 940
+	TACTICS 940
+	PARRYING 940
+	ITEM $item_iron_heater
+	ITEM $item_iron_war_mace_of_ruin
+}
+
+// Master Fencer
+SECTION ADVANCEMENT $advance_fencer
+{
+	STR 90
+	DEX 85
+	INT 60
+	FENCING 940
+	TACTICS 940
+	PARRYING 940
+	ITEM $item_iron_kryss_of_ruin
+	ITEM $item_iron_heater
+}
+
+// Master Archer
+SECTION ADVANCEMENT $advance_archer
+{
+	STR 85
+	DEX 85
+	INT 65
+	ARCHERY 940
+	TACTICS 940
+	ITEM $item_iron_bow_of_ruin
+	ITEM $item_arrow 100
+}
+
+// Master Mage
+SECTION ADVANCEMENT $advance_mage
+{
+	STR 65
+	DEX 65
+	INT 95
+	MAGERY 940
+	ALCHEMY 940
+	MAGICRESISTANCE 800
+	ITEM $item_a_wizards_hat
+	ITEM $item_a_spellbook
+	ITEM $item_all-spell_scroll
+	ITEM $item_black_pearl 50
+	ITEM $item_bloodmoss 50
+	ITEM $item_garlic 50
+	ITEM $item_ginseng 50
+	ITEM $item_mandrake_root 50 50
+	ITEM $item_nightshade 50
+	ITEM $item_sulfurous_ash 50
+	ITEM $item_spiders_silk 50
+}
+
+// Thief
+SECTION ADVANCEMENT $advance_thief
+{
+	STR 60
+	DEX 95
+	INT 80
+	STEALING 940
+	SNOOPING 940
+	LOCKPICKING 800
+	ITEM $item_lockpicks
+	ITEM $item_lockpicks
+	ITEM $item_lockpicks
+	ITEM $item_lockpicks
+	ITEM $item_cloak
+}
+
+// Bard
+SECTION ADVANCEMENT $advance_bard
+{
+	STR 60
+	DEX 80
+	INT 95
+	MUSICIANSHIP 940
+	PROVOCATION 940
+	ENTICEMENT 800
+	PEACEMAKING 800
+	ITEM $item_lap_harp
+}
+
+// Ranger
+SECTION ADVANCEMENT $advance_ranger
+{
+	STR 65
+	DEX 80
+	INT 80
+	ANIMAL TAMING 940
+	TRACKING 940
+	HERDING 800
+	ITEM $item_sheperds_crook
+	ITEM $item_kindling
+	ITEM $item_kindling
+	ITEM $item_kindling
+	ITEM $item_bedroll
+}
+
+// Assassin
+SECTION ADVANCEMENT $advance_assassin
+{
+	STR 80
+	DEX 65
+	INT 80
+	POISONING 940
+	TASTE IDENTIFICATION 940
+	ITEM $item_iron_dagger
+	ITEM $item_poison_potion
+	ITEM $item_poison_potion
+	ITEM $item_poison_potion
+	ITEM $item_poison_potion
+	ITEM $item_poison_potion
+}
+
+
+
+

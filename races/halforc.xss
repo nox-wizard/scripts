@@ -1,0 +1,110 @@
+//
+// --------------------------------------------------------------------
+// RACE:	HALFORC
+// --------------------------------------------------------------------
+//
+
+SECTION RACE $race_halforc
+{
+	MODE ON
+	NAME Half Orc
+	PLURALNAME Half Orcs
+	DESCRIPTION $race_halforc
+	POISONRESISTANCE $race_orc
+	SKINCOLOR $race_halforc
+	STARTITEM $race_halforc
+//
+//	Skills
+//
+	ALCHEMY $skill_alchemy
+	ANATOMY $skill_anatomy
+	ANIMALLORE $skill_animal_lore
+	ARMSLORE $skill_arms_lore
+	ARCHERY $skill_archery
+	BEGGING $skill_begging
+	BLACKSMITHING $skill_blacksmithing
+	BOWCRAFTING $skill_bowcrafting
+	CAMPING $skill_camping
+	CARPENTRY $skill_carpentry
+	CARTOGRAPHY $skill_cartography
+	COOKING $skill_cooking
+	DETECTHIDDEN $skill_detect_hidden
+	ENTICEMENT $skill_enticement
+	EVALUATEINTELLECT $skill_evaluate_intellect
+	FENCING $skill_fencing
+	FISHING $skill_fishing
+	FORENSICS $skill_forensic_evaluation
+	HEALING $skill_healing
+	HERDING $skill_herding
+	HIDING $skill_hiding
+	INSCRIPTION $skill_inscription
+	ITEMID $skill_itemid
+	LOCKPICKING $skill_lockpicking
+	LUMBERJACKING $skill_lumberjacking
+	MACEFIGHTING $skill_macefighting
+	MAGERY $skill_magery
+	MAGICRESISTANCE $skill_magic_resistance
+	MEDITATION $skill_meditation
+	MINING $skill_mining
+	MUSICIANSHIP $skill_musicianship
+	PEACEMAKING $skill_peacemaking
+	POISONING $skill_poisoning
+	PROVOCATION $skill_provocation
+	REMOVETRAP $skill_remove_traps
+	SNOOPING $skill_snooping
+	SPIRITSPEAK $skill_spirit_speaking
+	STEALING $skill_stealing
+	STEALTH $skill_stealth
+	SWORDMANSHIP $skill_swordsmanship
+	TAILORING $skill_tailoring
+	TAMING $skill_animal_taming
+	TASTEID $skill_taste_identification
+	TACTICS $skill_tactics
+	TINKERING $skill_tinkering
+	TRACKING $skill_tracking
+	VETERINARY $skill_veterinary
+	WRESTLING $skill_wrestling
+}
+
+SECTION SKINCOLOR $race_halforc
+{
+059B
+}
+
+SECTION STARTITEM $race_halforc
+{
+$item_race_colored_female_leather_tunic
+$item_race_colored_male_leather_tunic
+$item_club
+$item_a_orc_helm
+}
+
+SECTION DESCRIPTION $race_halforc
+{
+Intro
+^p
+Personality
+^p
+Appearance
+Half-Orcs are mix between humans and orcs. The result is a more graceful and less
+stocky appearance than orcs. They still have a green skin and are completely
+hairless. Brown and yellow eyes are more common than blue ones. The ears resemble
+their human ancestry.
+^p
+Lifespan
+^p
+Relations
+^p
+Alignment
+^p
+Religion
+^p
+Language
+^p
+Weapons
+^p
+Armour
+Half-Orcs can, because they resemble humans much more the orcs, wear any kind of
+head protection. .... must get them bonus for having sturdier body structure than
+humans ....
+}

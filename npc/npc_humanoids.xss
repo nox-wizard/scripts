@@ -1,0 +1,987 @@
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_humanoids.xss)                              ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 12-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//a savage
+
+SECTION NPC $npc_a_savage
+{
+    NAME a savage
+    ID 0190
+    SKIN 021e
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 60 100
+    DEX 25 100
+    INT 30 40
+    KARMA -1000
+    FAME 1000
+    SPEECH $speech_none
+    MAGICRESISTANCE 108 550
+    TACTICS 350 800
+    WRESTLING 900 1000
+    FENCING 450 900
+    DAMAGE 4 20
+    DEF 15
+    NPCWANDER 4
+    FLEEAT 30
+    REATTACKAT 40
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM plate_iron_spear
+    ITEM $item_a_bear_mask
+    ITEM $item_a_kilt
+    COLORLIST 11
+    ITEM $item_a_body_sash
+    COLORLIST 11
+    GOLD 15 50
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Savages
+    ///DESCRIPTION Savage [M]
+}
+
+//a savage
+
+SECTION NPC $npc_a_savage_1
+{
+    NAME a savage
+    ID 0191
+    SKIN 021e
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 60 100
+    DEX 25 100
+    INT 30 40
+    KARMA -1000
+    FAME 1000
+    SPEECH $speech_none
+    MAGICRESISTANCE 108 550
+    TACTICS 350 800
+    WRESTLING 900 1000
+    FENCING 450 900
+    DAMAGE 4 20
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM plate_iron_spear
+    ITEM $item_a_bear_mask
+    ITEM $item_a_kilt
+    COLORLIST 11
+    ITEM $item_a_body_sash
+    COLORLIST 11
+    GOLD 15 50
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Savages
+    ///DESCRIPTION Savage [F]
+}
+
+// a savage shaman
+
+SECTION NPC $npc_a_savage_shaman
+{
+    NAME a savage shaman
+    ID 0190
+    SKIN 021e
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 100 130
+    DEX 25 100
+    INT 130 140
+    KARMA -1000
+    FAME 1000
+    SPEECH $speech_none
+    MAGICRESISTANCE 508 950
+    MAGERY 900 1000
+    TACTICS 900 1000
+    FENCING 900 1000
+    MACEFIGHTING 900 1000
+    DAMAGE 3 15
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM $item_gnarled_staff
+    ITEM $item_a_tribal_mask_1
+    ITEM $item_a_kilt
+    COLORLIST 11
+    ITEM $item_a_body_sash
+    COLORLIST 11
+    GOLD 25 50
+    SPATTACK 7552
+    SPADELAY 6
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Savages
+    ///DESCRIPTION Savage Shaman
+}
+
+//a savage chief
+
+SECTION NPC $npc_a_savage_chief
+{
+    NAME a savage chief
+    ID 0190
+    SKIN 021e
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 90 130
+    DEX 65 150
+    INT 30 40
+    KARMA -1000
+    FAME 1000
+    SPEECH $speech_none
+    MAGICRESISTANCE 708 950
+    TACTICS 750 999
+    WRESTLING 900 1000
+    FENCING 950 1000
+    DAMAGE 8 20
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM plate_iron_spear
+    ITEM $item_a_tribal_mask
+    ITEM $item_a_kilt
+    COLORLIST 11
+    ITEM $item_a_body_sash
+    COLORLIST 11
+    GOLD 15 50
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Savages
+    ///DESCRIPTION Savage Chief
+}
+
+//*************************************************************************
+//*****************************  Cottonmouth's ****************************
+//*****************************                  **************************
+//*************************************************************************
+
+SECTION NPC $npc_a_cottonmouth_dread
+{
+    NAME a cottonmouth dread
+    ID 0056
+    SKIN 084e
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 40 50
+    DEX 15 20
+    INT 30 40
+    KARMA -1000
+    FAME 1000
+    SPEECH $speech_none
+    MAGICRESISTANCE 468 600
+    TACTICS 300 400
+    WRESTLING 300 400
+    DAMAGE 5 12
+    DEF 25
+    NPCWANDER 4
+    FLEEAT 10
+    REATTACKAT 20
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    GOLD 100 150
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Dread
+}
+
+SECTION NPC $npc_a_cottonmouth_piercer
+{
+    NAME a cottonmouth piercer
+    ID 0056
+    SKIN 0247
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 50 60
+    DEX 15 20
+    INT 30 40
+    KARMA -1500
+    FAME 1500
+    SPEECH $speech_none
+    MAGICRESISTANCE 778 800
+    TACTICS 600 700
+    WRESTLING 500 600
+    DAMAGE 5 12
+    DEF 25
+    NPCWANDER 4
+    FLEEAT 20
+    REATTACKAT 40
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    GOLD 150 250
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Piercer
+}
+
+SECTION NPC $npc_a_cottonmouth_fanger
+{
+    NAME a cottonmouth fanger
+    ID 0056
+    SKIN 046e
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 60 70
+    DEX 15 20
+    INT 50 60
+    KARMA -1500
+    FAME 1500
+    SPEECH $speech_none
+    MAGICRESISTANCE 600 700
+    TACTICS 500 600
+    WRESTLING 700 800
+    DAMAGE 6 12
+    DEF 30
+    NPCWANDER 4
+    FLEEAT 20
+    REATTACKAT 40
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    MAGERY 300 400
+    SPATTACK 7328
+    SPADELAY 10
+    TOTAME 1100
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    GOLD 200 300
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Fanger
+}
+
+SECTION NPC $npc_a_cottonmouth_newt
+{
+    NAME a cottonmouth newt
+    ID 0055
+    SKIN 8422
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 60 70
+    DEX 15 20
+    INT 60 70
+    KARMA -1000
+    FAME 1000
+    SPEECH $speech_none
+    MAGICRESISTANCE 400 500
+    TACTICS 300 400
+    WRESTLING 300 400
+    DAMAGE 6 10
+    DEF 25
+    NPCWANDER 4
+    FLEEAT 20
+    REATTACKAT 40
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    MAGERY 100 300
+    SPATTACK 418
+    SPADELAY 10
+    TOTAME 700
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    GOLD 100 150
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Newt
+}
+
+SECTION NPC $npc_a_cottonmouth_nagi
+{
+    NAME a cottonmouth nagi
+    ID 0055
+    SKIN 0000
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 70 80
+    DEX 15 20
+    INT 80 90
+    KARMA -2000
+    FAME 2000
+    SPEECH $speech_none
+    MAGICRESISTANCE 600 700
+    TACTICS 500 600
+    WRESTLING 500 600
+    DAMAGE 10 20
+    DEF 25
+    NPCWANDER 4
+    FLEEAT 20
+    REATTACKAT 40
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    MAGERY 600 700
+    SPATTACK 1408
+    SPADELAY 10
+    TOTAME 1100
+    BACKPACK
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    GOLD 200 250
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Nagi
+}
+
+SECTION NPC $npc_a_cottonmouth_layer
+{
+    NAME a cottonmouth layer
+    ID 0057
+    SKIN 0000
+    DIRECTION E
+    SAYCOLOR 0026
+    EMOTECOLOR 0026
+    STR 150 200
+    DEX 15 20
+    INT 200 300
+    KARMA -5000
+    FAME 5000
+    SPEECH $speech_none
+    MAGICRESISTANCE 700 750
+    TACTICS 600 700
+    WRESTLING 600 800
+    DAMAGE 10 25
+    DEF 25
+    NPCWANDER 4
+    FLEEAT 20
+    REATTACKAT 40
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    MAGERY 650 750
+    SPATTACK 5376
+    SPADELAY 10
+    TOTAME 1100
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    GOLD 200 300
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Cottonmouths
+    ///DESCRIPTION Cottonmouth Layer
+}
+
+// mounted npc's
+SECTION NPC $npc_knight
+{
+    NAMELIST $names_males
+    //$$ knight
+    TITLE the Knight
+    ID 0190
+    DIRECTION S
+    STR 100 150
+    INT 30 40
+    DEX 50 60
+    KARMA 1000
+    FAME 1000
+    PARRYING 400 500
+    TACTICS 600 700
+    WRESTLING 600 700
+    SWORDSMANSHIP 800 900
+    MAGICRESISTANCE 400 600
+    DEF 4
+    DAMAGE 5 40
+    BACKPACK
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_long_sword
+    ITEM $item_iron_wooden_kite_shield
+    ITEM $item_a_body_sash
+    COLORLIST 11
+    ITEM $item_a_tan_horse
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 1100
+    NPCAI $npc_ai_healer
+    ONHORSE
+    RUNS
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Knight
+}
+
+SECTION NPC $npc_knight_1
+{
+    NAMELIST $names_males
+    //$$ knight
+    TITLE the Knight
+    ID 0190
+    DIRECTION S
+    STR 100 150
+    INT 50 60
+    DEX 30 40
+    KARMA 1000
+    FAME 1000
+    PARRYING 400 500
+    TACTICS 600 700
+    WRESTLING 600 700
+    SWORDSMANSHIP 800 900
+    MAGICRESISTANCE 400 600
+    DEF 4
+    DAMAGE 5 40
+    BACKPACK
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_long_sword
+    ITEM $item_iron_wooden_kite_shield
+    ITEM $item_a_body_sash
+    COLORLIST 11
+    ITEM $item_a_dark_brown_horse
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 1100
+    NPCAI $npc_ai_healer
+    ONHORSE
+    RUNS
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Knight
+}
+
+SECTION NPC $npc_the_black_knight
+{
+    NAME the Black Knight
+    ID 0190
+    DIRECTION S
+    STR 200 250
+    INT 25 75
+    DEX 40 50
+    KARMA -10000
+    FAME -10000
+    SWORDSMANSHIP 900 1000
+    PARRYING 600 800
+    TACTICS 800 900
+    WRESTLING 700 800
+    MAGICRESISTANCE 500 600
+    DEF 4
+    DAMAGE 5 30
+    ITEM $item_npc_equiplist_longswords
+    // random equipped magic sword
+    BACKPACK
+    ITEM $item_merkite_platemail
+    ITEM $item_merkite_plate_gorget
+    ITEM $item_merkite_plate_gloves
+    ITEM $item_merkite_plate_helm
+    ITEM $item_merkite_plate_leggings
+    ITEM plate_sleeves
+    ITEM $item_cloak
+    COLOR 0455
+    ITEM $item_a_nightmare
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 1100
+    NPCAI $npc_ai_evil
+    ONHORSE
+    RUNS
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Black Knight
+}
+
+SECTION NPC $npc_cultist
+{
+    NAMELIST $names_males
+    //$$ cultist
+    SPEECH $speech_cultist
+    SKINLIST 5
+    TITLE The Cultist
+    ID 0190
+    ITEM $item_long_beard
+    HAIRCOLOR 0
+    ITEM $item_a_robe
+    COLOR 220
+    ITEM $item_sandles
+    COLOR 0001
+    ITEM
+    NPCWANDER 4
+    STR 50
+    DEX 15 20
+    INT 100
+    DAMAGE 10 20
+    DEF 5
+    FAME 20000
+    KARMA -5000
+    BEGGING 9999
+    BACKPACK
+    GOLD 1000
+    MAGICRESISTANCE 400 500
+    WRESTLING 600 700
+    TACTICS 700 800
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Cultist
+}
+
+SECTION NPC $npc_priest_of_mondain
+{
+    NAMELIST $names_males
+    //$$ priest of mondain
+    TITLE the Priest of Mondain
+    ID 0190
+    SKINLIST 16
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    NPCAI $npc_ai_evilhealer
+    SPEECH $speech_mondain
+    BACKPACK
+    ITEM $item_gnarled_staff
+    ITEM $item_male_plain_hats_list
+    COLORLIST 5
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 5
+    ITEM $item_male_plain_pants_list
+    COLORLIST 5
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 5
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 20 50
+    KARMA 500
+    FAME 500
+    HEALING 400 600
+    SPIRITSPEAK 400 600
+    ANATOMY 400 600
+    FORENSICS 400 600
+    TACTICS 400 600
+    PARRYING 400 600
+    WRESTLING 400 600
+    MACEFIGHTING 400 600
+    MAGICRESISTANCE 400 600
+    DAMAGE 5 25
+    DEF 5
+    DIRECTION W
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 40
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Priest of Mondain [M]
+}
+
+SECTION NPC $npc_priestess_of_mondain
+{
+    NAMELIST $names_females
+    //$$ priestess of mondain
+    TITLE the Priestess of Mondain
+    ID 0191
+    SKINLIST 16
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    NPCAI $npc_ai_evilhealer
+    SPEECH $speech_mondain
+    BACKPACK
+    ITEM $item_gnarled_staff
+    ITEM $item_male_plain_hats_list
+    COLORLIST 5
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 5
+    ITEM $item_male_plain_pants_list
+    COLORLIST 5
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 5
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 20 50
+    KARMA 500
+    FAME 500
+    HEALING 400 600
+    SPIRITSPEAK 400 600
+    ANATOMY 400 600
+    FORENSICS 400 600
+    TACTICS 400 600
+    PARRYING 400 600
+    WRESTLING 400 600
+    MACEFIGHTING 400 600
+    MAGICRESISTANCE 400 600
+    DAMAGE 5 25
+    DEF 5
+    DIRECTION W
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 40
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Priest of Mondain [F]
+}
+
+//a fire knight
+
+SECTION NPC $npc_a_fire_knight
+{
+    NAME a Fire Knight
+    ID 0190
+    SKINLIST 16
+    DIRECTION S
+    TOTAME 1100
+    STR 200 225
+    DEX 75 125
+    INT 100 150
+    KARMA 0
+    FAME 0
+    PARRYING 790 890
+    MAGICRESISTANCE 890 990
+    TACTICS 690 890
+    WRESTLING 690 790
+    DAMAGE 20 40
+    DEF 14
+    BACKPACK
+    ITEM $item_iron_katana
+    ITEM $item_iron_plate_gorget
+    COLOR 04b9
+    ITEM $item_iron_platemail
+    COLOR 04b9
+    ITEM $item_iron_plate_gloves
+    COLOR 04b9
+    ITEM $item_iron_plate_helm
+    COLOR 04b9
+    ITEM $item_iron_plate_leggings
+    COLOR 04b9
+    ITEM $item_iron_plate_sleeves
+    COLOR 04b9
+    ITEM $item_iron_halberd
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_strong_magical_armor
+    LOOT $loot_strong_magical_weapons
+    GOLD 200 500
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    NPCAI $npc_ai_evil
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Fire Knight
+}
+
+//an ice knight
+
+SECTION NPC $npc_an_ice_knight
+{
+    NAME an Ice Knight
+    ID 0190
+    SKINLIST 16
+    DIRECTION S
+    TOTAME 1100
+    STR 200 225
+    DEX 75 125
+    INT 100 150
+    KARMA 0
+    FAME 0
+    PARRYING 790 890
+    MAGICRESISTANCE 890 990
+    TACTICS 690 890
+    WRESTLING 690 790
+    DAMAGE 20 40
+    DEF 8
+    BACKPACK
+    ITEM $item_iron_katana
+    ITEM $item_iron_plate_gorget
+    COLOR 0481
+    ITEM $item_iron_platemail
+    COLOR 0481
+    ITEM $item_iron_plate_gloves
+    COLOR 0481
+    ITEM $item_iron_plate_helm
+    COLOR 0481
+    ITEM $item_iron_plate_leggings
+    COLOR 0481
+    ITEM $item_iron_plate_sleeves
+    COLOR 0481
+    ITEM $item_iron_halberd
+    LOOT $loot_strong_magical_armor
+    LOOT $loot_strong_magical_weapons
+    GOLD 200 500
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    NPCAI $npc_ai_evil
+    WATERWALK
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Ice Knight
+}
+
+//a converted quest knight
+
+SECTION NPC $npc_converted_quest_knight
+{
+    NAMELIST $names_males
+    //$$ converted quest knight
+    TITLE a converted quest knight
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    SPEECH $speech_none
+    TOTAME 1100
+    BACKPACK
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_viking_sword
+    STR 50 66
+    DEX 15 20
+    INT 50 64
+    KARMA -1450
+    FAME 1450
+    PARRYING 500 600
+    MAGICRESISTANCE 100 220
+    TACTICS 475 625
+    WRESTLING 475 575
+    DAMAGE 6 12
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Converted Quest Knight
+}
+
+//a barbarian
+
+SECTION NPC $npc_barbarian
+{
+    NAMELIST $names_males
+    //$$ barbarian
+    TITLE a barbarian
+    ID 0190
+    SKINLIST 16
+    DIRECTION S
+    STR 225 275
+    INT 125 175
+    DEX 155 185
+    KARMA 0
+    FAME 0
+    PARRYING 600 700
+    TACTICS 600 700
+    WRESTLING 600 700
+    SWORDSMANSHIP 600 700
+    MAGICRESISTANCE 800 900
+    DEF 5
+    DAMAGE 5 40
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    LOOT $loot_food_wine_bread_cheese_meat
+    GOLD 20 100
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_cloak
+    ITEM $item_a_robe
+    ITEM $item_boots
+    ITEM $item_bone_chest
+    ITEM $item_leather_leggings
+    ITEM $item_leather_gloves
+    ITEM $item_a_leather_gorget
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Barbarian
+}
+
+//the executioner
+
+SECTION NPC $npc_executioner
+{
+    NAMELIST $names_males
+    //$$ executioner
+    TITLE the executioner
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION W
+    BACKPACK
+    GOLD 150 200
+    ITEM $item_iron_executioners_axe
+    ITEM $item_male_plain_pants_list
+    COLORLIST 21
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_tunic_list
+    COLORLIST 21
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    SPEECH $speech_brigand
+    TOTAME 1100
+    STR 300 415
+    DEX 70 85
+    INT 60 85
+    KARMA -5000
+    FAME 5000
+    PARRYING 600 800
+    MAGICRESISTANCE 1000
+    TACTICS 800 900
+    FENCING 800 950
+    WRESTLING 600 800
+    DAMAGE 40 60
+    DEF 15
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Executioner
+}
+

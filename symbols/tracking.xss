@@ -1,0 +1,5 @@
+//tracking stuff
+#define $tracking_mainmenu 4096
+#define $tracking_animals 4097
+#define $tracking_creatures 4098
+#define $tracking_players 4099

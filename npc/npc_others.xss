@@ -1,0 +1,1820 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_others.xss)                                 ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//a gargoyle
+SECTION NPC $npc_a_gargoyle
+{
+    NAME a gargoyle
+    ID 0004
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_arrow 10
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_omnivores_food
+    LOOT $loot_potions
+    GOLD 50 140
+    STR 145 175
+    DEX 15 20
+    INT 81 105
+    KARMA -5000
+    FAME 4500
+    PARRYING 350 450
+    MAGICRESISTANCE 700 850
+    TACTICS 500 850
+    WRESTLING 400 800
+    DAMAGE 3 18
+    MAGERY 700 850
+    MAGICLEVEL 5
+    SPATTACK 7552
+    MAGICSPHERE $sphere_gargoyle
+    SPADELAY 7
+    DEF 16
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_gargoyle
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Daemons & Gargoyles
+    ///DESCRIPTION Gargoyle
+}
+
+//a stone gargoyle
+
+SECTION NPC $npc_a_stone_gargoyle
+{
+    NAME a stone gargoyle
+    ID 0004
+    SKINLIST 7
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_arrow 10
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_iron_ore
+    LOOT $loot_jewelry
+    LOOT $loot_potions
+    GOLD 200 300
+    STR 245 275
+    DEX 15 20
+    INT 81 105
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCWANDER 4
+    KARMA -5500
+    FAME 5000
+    PARRYING 350 450
+    MAGICRESISTANCE 850 1000
+    TACTICS 800 1000
+    WRESTLING 600 1000
+    DAMAGE 4 24
+    DEF 25
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_gargoyle
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Daemons & Gargoyles
+    ///DESCRIPTION Gargoyle (stone)
+}
+
+// Fire Gargoyle
+
+SECTION NPC $npc_gargoyle
+{
+    NAMELIST $names_gargoyles
+    //$$ gargoyle
+    ID 0004
+    SKINLIST 1
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    // add lvl one treasure map when you have placed them
+    GOLD 200 300
+    STR 245 325
+    DEX 100 125
+    INT 150 200
+    KARMA -9000
+    FAME 9000
+    PARRYING 650 850
+    MAGICRESISTANCE 800 950
+    TACTICS 600 850
+    WRESTLING 700 800
+    MAGERY 700 850
+    SPATTACK 8192
+    MAGICLEVEL 6
+    MAGICSPHERE $sphere_fire
+    SPADELAY 10
+    DAMAGE 5 25
+    DEF 25
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_gargoyle
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Daemons & Gargoyles
+    ///DESCRIPTION Gargoyle (fire)
+}
+
+//a frankenstein
+
+SECTION NPC $npc_a_frankenstein
+{
+    NAME a frankenstein
+    ID 0190
+    NPCAI $npc_ai_evil
+    SKIN 0599
+    DIRECTION W
+    BACKPACK
+    GOLD 50 125
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    ITEM $item_random_male_hair_list
+    COLOR 0001
+    ITEM $item_male_plain_pants_list
+    COLOR 0544
+    ITEM $item_shirt
+    COLOR 052F
+    SPEECH $speech_cultist
+    STR 50 75
+    DEX 40 70
+    INT 50 75
+    KARMA -1000
+    FAME 1000
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 10 20
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    TOTAME 1100
+    RACE $race_construct
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Frankenstein
+}
+
+//a reaper
+
+SECTION NPC $npc_a_reaper
+{
+    NAME a reaper
+    ID 002f
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_bloodmoss
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_dead_wood
+    GOLD 100 150
+    STR 66 215
+    DEX 15 20
+    INT 86 235
+    KARMA -3500
+    FAME 4000
+    PARRYING 550 650
+    MAGERY 400 500
+    MAGICRESISTANCE 350 500
+    TACTICS 450 600
+    WRESTLING 500 600
+    SPATTACK 7552
+    MAGICLEVEL 3
+    MAGICSPHERE $sphere_reaper
+    SPADELAY 10
+    DAMAGE 5 15
+    DEF 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    NPCWANDER 0
+    PRIV2 2
+    RACE $race_vegetable
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Reaper
+}
+
+//a swamp tentacle
+
+SECTION NPC $npc_a_swamp_tentacle
+{
+    NAME a swamp tentacle
+    ID 0008
+    SKIN 059C
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_garlic 250
+    PACKITEM $item_garlic 250
+    PACKITEM $item_garlic 250
+    GOLD 50 150
+    STR 96 120
+    DEX 15 20
+    INT 66 80
+    KARMA -2000
+    FAME 1500
+    PARRYING 150 250
+    MAGICRESISTANCE 150 200
+    TACTICS 650 800
+    WRESTLING 650 800
+    DAMAGE 3 15
+    DEF 15
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    RACE $race_vegetable
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Swamp Tentacle
+}
+
+//a corpser
+
+SECTION NPC $npc_a_corpser
+{
+    NAME a corpser
+    ID 0008
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    PACKITEM $item_logs
+    GOLD 25 50
+    STR 155 180
+    DEX 15 20
+    INT 26 40
+    KARMA -1000
+    FAME 1500
+    PARRYING 150 250
+    MAGICRESISTANCE 150 200
+    TACTICS 450 600
+    WRESTLING 450 600
+    DAMAGE 3 30
+    DEF 9
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_vegetable
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Corpser
+}
+
+// a giant rat
+
+SECTION NPC $npc_a_giant_rat
+{
+    NAME a giant rat
+    ID 00d7
+    DIRECTION N
+    BACKPACK
+    GOLD 15 25
+    STR 32 74
+    DEX 15 20
+    INT 16 30
+    KARMA -500
+    FAME 500
+    PARRYING 450 550
+    MAGICRESISTANCE 250 300
+    TACTICS 290 440
+    WRESTLING 290 440
+    DAMAGE 3 9
+    DEF 9
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    LOOT $loot_jewelry
+    TOTAME 450
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Giant Rat
+}
+
+//a gazer
+
+SECTION NPC $npc_a_gazer
+{
+    NAME a gazer
+    ID 0016
+    DIRECTION N
+    BACKPACK
+    PACKITEM $item_arrow 10
+    PACKITEM $item_nightshade
+    PACKITEM $item_nightshade
+    PACKITEM $item_nightshade
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_potions
+    LOOT $loot_potions
+    GOLD 50 150
+    STR 96 125
+    DEX 15 20
+    INT 140 165
+    KARMA -4000
+    FAME 4000
+    PARRYING 550 650
+    MAGICRESISTANCE 500 650
+    TACTICS 500 700
+    WRESTLING 500 700
+    DAMAGE 3 12
+    DEF 18
+    SPATTACK 4095
+    MAGICLEVEL 5
+    MAGICSPHERE $sphere_mental
+    SPADELAY 10
+    MAGERY 500 650
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gazer
+}
+
+//an elder gazer
+
+SECTION NPC $npc_an_elder_gazer
+{
+    NAME an elder gazer
+    ID 0016
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_magic_swords
+    GOLD 1000
+    STR 295 325
+    DEX 15 20
+    INT 290 385
+    KARMA -7000
+    FAME 7000
+    PARRYING 550 650
+    MAGICRESISTANCE 850 1000
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 3 24
+    DEF 25
+    SPATTACK 7552
+    SPADELAY 6
+    MAGERY 900 1000
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gazer Elder
+}
+
+SECTION NPC $npc_xanathar
+{
+    NAME Xanathar
+    ID 0016
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_magic_swords
+    GOLD 40000
+    STR 2950 3250
+    DEX 1500 2000
+    INT 2900 3850
+    KARMA -17000
+    FAME 17000
+    PARRYING 999 1000
+    MAGICRESISTANCE 999 1000
+    TACTICS 999 1000
+    WRESTLING 999 1000
+    DAMAGE 53 104
+    DEF 35
+    SPATTACK 7552
+    MAGICSPHERE $sphere_xanathar
+    MAGICLEVEL 23
+    SPADELAY 1
+    MAGERY 999 1000
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Xanathar
+}
+
+// a giant serpent
+
+SECTION NPC $npc_a_giant_serpent
+{
+    NAME a giant serpent
+    ID 0015
+    SKINLIST 10
+    DIRECTION N
+    BACKPACK
+    STR 185 215
+    DEX 15 20
+    INT 56 85
+    KARMA -2500
+    FAME 3000
+    PARRYING 450 600
+    MAGICRESISTANCE 250 400
+    TACTICS 650 700
+    FENCING 400
+    WRESTLING 400 600
+    DAMAGE 5 19
+    DEF 16
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    POISON 2
+    TOTAME 1200
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Giant Serpent
+}
+
+//a giant ice serpent
+
+SECTION NPC $npc_a_giant_ice_serpent
+{
+    NAME a giant ice serpent
+    ID 0015
+    SKIN 0480
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_glacial_staff
+    LOOT $loot_body_parts
+    LOOT $loot_body_parts
+    LOOT $loot_jewelry
+    LOOT $loot_jewelry
+    LOOT $loot_platemail
+    STR 215 245
+    DEX 15 20
+    INT 66 85
+    KARMA -4000
+    FAME 4500
+    PARRYING 450 600
+    MAGICRESISTANCE 250 400
+    TACTICS 750 800
+    FENCING 600 700
+    WRESTLING 600 800
+    DAMAGE 5 19
+    DEF 16
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    WATERWALK
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Giant Serpent (ice)
+}
+
+//a lava serpent
+
+SECTION NPC $npc_a_giant_lava_serpent
+{
+    NAME a giant lava serpent
+    ID 0015
+    SKINLIST 1
+    DIRECTION N
+    STR 150 200
+    DEX 15 20
+    INT 66 85
+    KARMA -6500
+    FAME 6000
+    PARRYING 450 600
+    MAGICRESISTANCE 250 400
+    TACTICS 650 700
+    FENCING 600 700
+    WRESTLING 600 800
+    DAMAGE 7 25
+    DEF 16
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    SPATTACK 8192
+    SPADELAY 10
+    WATERWALK
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Giant Serpent (lava)
+}
+
+
+SECTION NPC $npc_a_hellcat
+{
+    NAME a hellcat
+    ID 00C9
+    SKINLIST 1
+    DIRECTION E
+    BACKPACK
+    STR 15 55
+    DEX 15 20
+    INT 70 150
+    KARMA -1000
+    FAME 1000
+    PARRYING 230 450
+    MAGICRESISTANCE 150 300
+    TACTICS 90 180
+    WRESTLING 90 180
+    DAMAGE 3 15
+    SPATTACK 8192
+    SPADELAY 10
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 760
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Hellcat
+}
+
+SECTION NPC $npc_a_hellcat_predator
+{
+    NAME a hellcat predator
+    ID 00D6
+    SKINLIST 1
+    DIRECTION E
+    BACKPACK
+    STR 160 185
+    DEX 15 20
+    INT 76 100
+    KARMA -2200
+    FAME 2000
+    PARRYING 550 650
+    MAGICRESISTANCE 150 300
+    TACTICS 500 650
+    WRESTLING 500 650
+    DAMAGE 2 20
+    SPATTACK 8192
+    SPADELAY 10
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 930
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Hellcat Predator
+}
+//a frenzied ostard
+
+SECTION NPC $npc_a_frenzied_ostard
+{
+    NAME a frenzied ostard
+    ID 00DA
+    SKINLIST 21
+    DIRECTION E
+    STR 160 260
+    DEX 95 125
+    INT 6 10
+    KARMA -2000
+    FAME 2000
+    PARRYING 750 850
+    MAGICRESISTANCE 300 400
+    TACTICS 750 940
+    WRESTLING 790 940
+    SWORDSMANSHIP 750
+    DAMAGE 15 30
+    DEF 15
+    NPCAI $npc_ai_evil
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 771
+    RACE $race_animal
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Mounts
+    ///DESCRIPTION Ostard (frenzied)
+}
+
+SECTION NPC $npc_a_hell_hound
+{
+    NAME a hell hound
+    ID 00e1
+    SKINLIST 1
+    DIRECTION E
+    BACKPACK
+    STR 96 120
+    DEX 15 20
+    INT 36 60
+    KARMA -3750
+    FAME 3550
+    PARRYING 630 750
+    MAGICRESISTANCE 580 750
+    TACTICS 500 700
+    FENCING 600
+    WRESTLING 600 800
+    DAMAGE 6 22
+    DEF 11
+    MAGERY 500 600
+    SPATTACK 8192
+    SPADELAY 10
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 855
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Hell hound
+}
+
+// Mongbats
+
+SECTION NPC $npc_a_mongbat
+{
+    NAME a mongbat
+    ID 0027
+    DIRECTION N
+    BACKPACK
+    STR 6 10
+    DEX 15 20
+    INT 6 14
+    KARMA -500
+    FAME 500
+    PARRYING 250 380
+    MAGICRESISTANCE 50 140
+    TACTICS 50 100
+    WRESTLING 50 100
+    DAMAGE 1 2
+    DEF 5
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 50
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Mongbat
+}
+
+//a giant toad
+
+SECTION NPC $npc_a_giant_toad
+{
+    NAME a giant toad
+    ID 0050
+    SKIN 0000
+    DIRECTION E
+    STR 76 100
+    DEX 15 20
+    INT 11 20
+    KARMA -2500
+    FAME 2000
+    MAGICRESISTANCE 250 400
+    TACTICS 400 600
+    WRESTLING 400 600
+    PARRYING 380 720
+    DAMAGE 2 20
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    BACKPACK
+    TOTAME 771
+    RACE $race_animal_aberration
+    DOORUSE 0
+}
+
+//a harpy
+
+SECTION NPC $npc_a_harpy
+{
+    NAME a harpy
+    ID 001e
+    SKIN 0000
+    DIRECTION N
+    BACKPACK
+    GOLD 50 150
+    STR 96 120
+    DEX 15 20
+    INT 51 75
+    KARMA -1500
+    FAME 1000
+    MAGICRESISTANCE 500 650
+    TACTICS 700 1000
+    SWORDSMANSHIP 600 900
+    WRESTLING 600 900
+    DAMAGE 3 9
+    DEF 14
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_humanoid_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Harpy
+}
+
+//a harpy hen
+
+SECTION NPC $npc_a_harpy_hen
+{
+    NAME a harpy hen
+    ID 001e
+    SKINLIST 5
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_food_wine_bread_cheese_meat
+    GOLD 100 200
+    STR 150
+    DEX 15 20
+    INT 25
+    KARMA -4000
+    FAME 4000
+    MAGICRESISTANCE 250
+    TACTICS 625
+    SWORDSMANSHIP 625
+    DAMAGE 4 20
+    DEF 20
+    NPCWANDER 4
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_humanoid_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Harpy (hen)
+}
+
+//a stome harpy
+
+SECTION NPC $npc_a_stone_harpy
+{
+    NAME a stone harpy
+    ID 001E
+    SKINLIST 7
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_uncut_gems
+    GOLD 200 300
+    STR 295 320
+    DEX 15 20
+    INT 51 75
+    KARMA -6000
+    FAME 5000
+    PARRYING 750 900
+    MAGICRESISTANCE 500 650
+    TACTICS 700 1000
+    SWORDSMANSHIP 600 900
+    WRESTLING 600 900
+    DAMAGE 3 21
+    DEF 25
+    NPCWANDER 4
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_humanoid_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Harpy (Stone)
+}
+
+//a frost ooze
+
+SECTION NPC $npc_a_frost_ooze
+{
+    NAME a frost ooze
+    ID 0033
+    SKIN 0480
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    GOLD 0 22
+    STR 22 34
+    DEX 15 20
+    INT 16 20
+    KARMA -1000
+    FAME 1000
+    PARRYING 150
+    MAGICRESISTANCE 150 200
+    TACTICS 190 340
+    WRESTLING 190 340
+    DAMAGE 2 10
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1200
+    RACE $race_slime
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Frost Ooze
+}
+
+//a slime
+
+SECTION NPC $npc_a_slime
+{
+    NAME a slime
+    ID 0033
+    SKINLIST 12
+    DIRECTION N
+    STR 22 34
+    DEX 15 20
+    INT 16 20
+    KARMA -500
+    FAME 500
+    PARRYING 150 210
+    MAGICRESISTANCE 150 200
+    TACTICS 190 340
+    WRESTLING 190 340
+    SPLIT 1
+    SPLITCHANCE 30
+    DAMAGE 1 5
+    DEF 4
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 400
+    POISON 1
+    RACE $race_slime
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Slime
+}
+
+//a kraken
+
+SECTION NPC $npc_a_kraken
+{
+    NAME a kraken
+    ID 005f
+    SKIN 0000
+    SPEECH $speech_none
+    DIRECTION E
+    BACKPACK
+    //add treasure maps and MIB's when available
+    LOOT $loot_uncut_gems
+    GOLD 200 400
+    STR 755 780
+    DEX 15 20
+    INT 26 40
+    KARMA -1500
+    FAME 1500
+    MAGICRESISTANCE 150 200
+    TACTICS 450 600
+    WRESTLING 450 600
+    DAMAGE 4 48
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    WATERWALK
+    RACE $race_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Kraken
+}
+
+//an alligator
+
+SECTION NPC $npc_an_alligator
+{
+    NAME an alligator
+    ID 00ca
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    STR 76 100
+    DEX 15 20
+    INT 11 20
+    FAME 1520
+    KARMA -1520
+    PARRYING 380 730
+    MAGICRESISTANCE 250 400
+    TACTICS 400 600
+    FENCING 400 600
+    WRESTLING 400 600
+    DAMAGE 2 18
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 600
+    NPCAI $npc_ai_good
+    RACE $race_animal
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Alligator
+}
+
+SECTION NPC $npc_a_lava_lizard
+{
+    NAME a lava lizard
+    ID 00CE
+    SKINLIST 1
+    DIRECTION N
+    BACKPACK
+    GOLD 100 200
+    STR 125 150
+    DEX 15 20
+    INT 11 20
+    KARMA -3000
+    FAME 3000
+    PARRYING 480 820
+    MAGICRESISTANCE 550 700
+    TACTICS 600 800
+    WRESTLING 600 800
+    DAMAGE 2 28
+    DEF 20
+    NPCAI $npc_ai_evil
+    SPATTACK 8192
+    SPADELAY 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 900
+    WATERWALK
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Lava Lizard
+}
+
+// a silver serpent
+
+SECTION NPC $npc_a_silver_serpent
+{
+    NAME a silver serpent
+    ID 0034
+    SKIN 0961
+    DIRECTION N
+    BACKPACK
+    STR 22
+    DEX 15 20
+    INT 6
+    KARMA -500
+    FAME 500
+    PARRYING 150
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    DAMAGE 1 4
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    POISON 1
+    TOTAME 700
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Serpent (silver)
+}
+
+//a giant silver serpent
+
+SECTION NPC $npc_a_giant_silver_serpent
+{
+    NAME a giant silver serpent
+    ID 0015
+    SKIN 0961
+    DIRECTION N
+    BACKPACK
+    STR 22
+    DEX 15 20
+    INT 6
+    KARMA -5500
+    FAME 5500
+    PARRYING 450 600
+    MAGICRESISTANCE 600 800
+    TACTICS 750 800
+    WRESTLING 600 800
+    PIOSON 4
+    DAMAGE 5 19
+    DEF 16
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Reptiles & Insects
+    ///DESCRIPTION Giant Serpent (silver)
+}
+
+//a dark wolf
+
+SECTION NPC $npc_a_dark_wolf
+{
+    NAME a dark wolf
+    ID 00e1
+    SKIN 0902
+    DIRECTION E
+    BACKPACK
+    STR 100 150
+    DEX 75 100
+    INT 50 75
+    KARMA -500
+    FAME 500
+    PARRYING 450 550
+    MAGICRESISTANCE 450 550
+    TACTICS 500 600
+    FENCING 750 800
+    // Damage per bite
+    DAMAGE 4 20
+    DEF 15
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 750
+    RACE $race_animal
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Wolf (dark)
+}
+
+//a sea serpent
+
+SECTION NPC $npc_a_sea_serpent
+{
+    NAME a sea serpent
+    ID 0096
+    SKINLIST 10
+    DIRECTION E
+    BACKPACK
+    LOOT $loot_fishing_net
+    STR 175 225
+    DEX 45 60
+    INT 30 50
+    KARMA -10
+    FAME 3000
+    RESIST 250 400
+    TACTICS 750 800
+    WRESTLING 700 800
+    DAMAGE 22 28
+    DEF 35
+    NPCWANDER 2
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    HEALING 50 100
+    WATERWALK
+    TOTAME 1000
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Sea
+    ///DESCRIPTION Sea Serpent
+}
+
+//a plague rat
+
+SECTION NPC $npc_a_plague_rat
+{
+    NAME a plague rat
+    ID 00ee
+    SKIN 051D
+    DIRECTION N
+    BACKPACK
+    STR 45 55
+    DEX 35 45
+    INT 15 25
+    LOOT $loot_pagan_reagents
+    LOOT $loot_uncut_gems
+    GOLD 50 75
+    KARMA -700
+    FAME 700
+    PARRYING 300 450
+    MAGICRESISTANCE 150 200
+    TACTICS 250 325
+    WRESTLING 200 300
+    POISON 1
+    DAMAGE 4 16
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_animal
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Plague Rat
+}
+
+//a giant plague rat
+
+SECTION NPC $npc_a_giant_plague_rat
+{
+    NAME a giant plague rat
+    ID 00d7
+    SKIN 051D
+    DIRECTION N
+    BACKPACK
+    STR 90 110
+    DEX 70 90
+    INT 30 50
+    LOOT $loot_pagan_reagents
+    LOOT $loot_pagan_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    GOLD 75 125
+    KARMA -900
+    FAME 900
+    PARRYING 400 550
+    MAGICRESISTANCE 250 300
+    TACTICS 350 425
+    WRESTLING 400 500
+    POISON 2
+    DAMAGE 5 20
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    LOOT $loot_jewelry
+    TOTAME 1100
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Plague Rat (giant)
+}
+
+//a cranium rat
+
+SECTION NPC $npc_a_cranium_rat
+{
+    NAME a cranium rat
+    ID 00ee
+    SKIN 044E
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_reagents
+    LOOT $loot_pagan_reagents
+    LOOT $loot_uncut_gems
+    STR 20 30
+    DEX 40 50
+    INT 200 250
+    KARMA -900
+    FAME 900
+    PARRYING 300 450
+    MAGICRESISTANCE 800 900
+    TACTICS 250 325
+    WRESTLING 200 300
+    MAGERY 500 700
+    SPATTACK 1308
+    SPDELAY 8
+    DAMAGE 4 16
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Cranium Rat
+}
+
+//a giant cranium rat
+
+SECTION NPC $npc_a_giant_cranium_rat
+{
+    NAME a giant cranium rat
+    ID 00d7
+    SKIN 044E
+    DIRECTION N
+    BACKPACK
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_pagan_reagents
+    LOOT $loot_pagan_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    STR 40 60
+    DEX 80 100
+    INT 300 350
+    KARMA -1200
+    FAME 1200
+    PARRYING 400 550
+    MAGICRESISTANCE 950 1000
+    TACTICS 350 425
+    WRESTLING 400 500
+    MAGERY 800 950
+    SPATTACK 1308
+    SPDELAY 8
+    DAMAGE 5 20
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    LOOT $loot_jewelry
+    TOTAME 1100
+    RACE $race_animal_aberration
+    DOORUSE 0
+
+    ///CATEGORY Animals
+    ///SUBSECTION Wild
+    ///DESCRIPTION Cranium Rat (giant)
+}
+
+//a gelatinous ooze
+
+SECTION NPC $npc_a_gelatinous_ooze
+{
+    NAME a gelatinous ooze
+    ID 0033
+    SKIN 6677
+    DIRECTION N
+    STR 220 320
+    DEX 160 200
+    INT 50 75
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_small_blades
+    LOOT $loot_swords
+    LOOT $loot_staves
+    LOOT $loot_minor_chest_armor
+    LOOT $loot_major_hand
+    GOLD 50 500
+    KARMA -500
+    FAME 5000
+    PARRYING 350 450
+    MAGICRESISTANCE 150
+    TACTICS 390 490
+    WRESTLING 390 490
+    MAGERY 700 900
+    SPATTACK 256
+    SPADELAY 8
+    DAMAGE 5 20
+    DEF 10
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_slime
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gelatinous Ooze
+}
+
+//a slithering tracker
+
+SECTION NPC $npc_a_slithering_tracker
+{
+    NAME a slithering tracker
+    ID 0033
+    SKIN 6677
+    DIRECTION N
+    STR 100 150
+    DEX 150 175
+    INT 40 60
+    BACKPACK
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    GOLD 100 200
+    KARMA -500
+    FAME 750
+    PARRYING 150 350
+    MAGICRESISTANCE 150 175
+    TACTICS 290 390
+    WRESTLING 250 350
+    MAGERY 400 600
+    SPATTACK 256
+    SPADELAY 10
+    DAMAGE 5 15
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_slime
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Slithering tracker
+}
+
+//a floating book
+
+SECTION NPC $npc_a_floating_book
+{
+    NAME a floating book
+    ID 03d9
+    SKINLIST 21
+    DIRECTION E
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_circle_6-8_spells
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_pagan_reagents
+    STR 90 120
+    DEX 30 50
+    INT 100 120
+    KARMA -3000
+    FAME 2000
+    MAGICRESISTANCE 550 650
+    TACTICS 500 600
+    FENCING 500 600
+    // Damage per Weapon
+    DAMAGE 5 20
+    DEF 20
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_aberration
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Floating Book
+}
+
+//a yellow mold
+
+SECTION NPC $npc_a_yellow_mold
+{
+    NAME a yellow mold
+    PRIV2 2
+    ID 0033
+    SKINLIST 3
+    DIRECTION N
+    STR 22
+    DEX 16
+    INT 16
+    BACKPACK
+    GOLD 5 15
+    KARMA -500
+    FAME 500
+    PARRYING 150
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    POISON 1
+    DAMAGE 1 5
+    DEF 4
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 110
+    RACE $race_slime
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Yellow mold
+}
+
+//a olive slime
+
+SECTION NPC $npc_an_olive_slime
+{
+    NAME an olive slime
+    ID 0033
+    SKINLIST 4
+    DIRECTION N
+    STR 20
+    DEX 15
+    INT 5
+    KARMA -500
+    FAME 500
+    PARRYING 150
+    MAGICRESISTANCE 150
+    TACTICS 190
+    WRESTLING 190
+    SPLIT 5
+    SPLITCHANCE 100
+    DAMAGE 1 5
+    DEF 5
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 400
+    RACE $race_slime
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Olive Slime
+}
+
+//a giant slime
+
+SECTION NPC $npc_a_giant_slime
+{
+    NAME a giant slime
+    ID 005f
+    SKIN 0487
+    SPEECH $speech_none
+    DIRECTION E
+    STR 200 250
+    DEX 15 20
+    INT 10 20
+    KARMA -1500
+    FAME 1500
+    MAGICRESISTANCE 350 500
+    TACTICS 600 700
+    WRESTLING 700 800
+    DAMAGE 10 15
+    DEF 40
+    NPCWANDER 4
+    FLEEAT 20
+    REATTACKAT 40
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    BACKPACK
+    LOOT $loot_circle_1-5_spells
+    GOLD 150 170
+    RACE $race_slime
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Giant Slime
+}
+
+//an efreeti
+
+SECTION NPC $npc_efreeti
+{
+    NAME efreeti
+    ID 000D
+    SKIN 052f
+    DIRECTION N
+    BACKPACK
+    MAGERY 600 750
+    SPATTACK 4095
+    SPADELAY 10
+    STR 325 355
+    DEX 265 285
+    INT 170 195
+    KARMA 0
+    FAME 0
+    TACTICS 600 800
+    WRESTLING 600 800
+    DAMAGE 8 16
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_healer
+    TOTAME 110
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Efreeti
+}
+
+//a phoenix
+
+SECTION NPC $npc_a_phoenix
+{
+    NAME a phoenix
+    ID 0005
+    SKIN 04B9
+    DIRECTION E
+    BACKPACK
+    STR 500 600
+    DEX 15 20
+    INT 50 65
+    KARMA -1000
+    FAME 10000
+    MAGERY 900 100
+    PARRYING 600
+    MAGICRESISTANCE 850 1000
+    TACTICS 800 900
+    WRESTLING 900 1000
+    SPATTACK 8192
+    SPADELAY 10
+    DAMAGE 7 25
+    DEF 25
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Phoenix
+}
+
+//a nightmare
+
+SECTION NPC $npc_a_nightmare
+{
+    NAME a nightmare
+    ID 00C8
+    SKIN 0455
+    DIRECTION E
+    BACKPACK
+    GOLD 1200 2400
+    STR 995 1020
+    DEX 15 20
+    INT 385 420
+    KARMA -10000
+    FAME 10000
+    PARRYING 550 950
+    MAGERY 600 800
+    MAGICRESISTANCE 990 1000
+    TACTICS 980 1000
+    WRESTLING 900 930
+    DAMAGE 9 29
+    SPATTACK 7679
+    SPADELAY 6
+    DEF 30
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 954
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Nightmare
+}
+
+//a sliver steed
+
+SECTION NPC $npc_a_silver_steed
+{
+    NAME a silver steed
+    ID 00c8
+    SKIN 02b3
+    DIRECTION E
+    BACKPACK
+    STR 995 1020
+    DEX 86 105
+    INT 385 420
+    KARMA 10000
+    FAME 10000
+    PARRYING 550 950
+    MAGICRESISTANCE 990 1000
+    TACTICS 980 1000
+    WRESTLING 900 930
+    MAGERY 900 1000
+    DAMAGE 9 29
+    SPATTACK 7679
+    SPADELAY 10
+    DEF 30
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    GOLD 1200 2400
+    TOTAME 954
+    DOORUSE 0
+
+    ///CATEGORY Evil
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Silver Steed
+}
+
+

@@ -1,0 +1,108 @@
+//
+// --------------------------------------------------------------------
+// RACE:	HUMAN
+// --------------------------------------------------------------------
+//
+
+SECTION RACE $race_human
+{
+	BEARD OPTIONAL
+	DESCRIPTION $race_human
+	DEXCAP 100
+  #copy GENDER DEFAULT
+	HAIR OPTIONAL
+ 	INTCAP 100
+	MODE ON
+	NAME Human
+	PLURALNAME Humans
+	RACETYPE PC NPC
+	STARTITEM $race_human
+	STRCAP 100
+	WEBLINK human.html
+//
+//	Skills
+//
+	ALCHEMY $skill_alchemy
+	ANATOMY $skill_anatomy
+	ANIMALLORE $skill_animal_lore
+	ARMSLORE $skill_arms_lore
+	ARCHERY $skill_archery
+	BEGGING $skill_begging
+	BLACKSMITHING $skill_blacksmithing
+	BOWCRAFTING $skill_bowcrafting
+	CAMPING $skill_camping
+	CARPENTRY $skill_carpentry
+	CARTOGRAPHY $skill_cartography
+	COOKING $skill_cooking
+	DETECTHIDDEN $skill_detect_hidden
+	ENTICEMENT $skill_enticement
+	EVALUATEINTELLECT $skill_evaluate_intellect
+	FENCING $skill_fencing
+	FISHING $skill_fishing
+	FORENSICS $skill_forensic_evaluation
+	HEALING $skill_healing
+	HERDING $skill_herding
+	HIDING $skill_hiding
+	INSCRIPTION $skill_inscription
+	ITEMID $skill_itemid
+	LOCKPICKING $skill_lockpicking
+	LUMBERJACKING $skill_lumberjacking
+	MACEFIGHTING $skill_macefighting
+	MAGERY $skill_magery
+	MAGICRESISTANCE $skill_magic_resistance
+	MEDITATION $skill_meditation
+	MINING $skill_mining
+	MUSICIANSHIP $skill_musicianship
+	PEACEMAKING $skill_peacemaking
+	POISONING $skill_poisoning
+	PROVOCATION $skill_provocation
+	REMOVETRAP $skill_remove_traps
+	SNOOPING $skill_snooping
+	SPIRITSPEAK $skill_spirit_speaking
+	STEALING $skill_stealing
+	STEALTH $skill_stealth
+	SWORDMANSHIP $skill_swordsmanship
+	TAILORING $skill_tailoring
+	TAMING $skill_animal_taming
+	TASTEID $skill_taste_identification
+	TACTICS $skill_tactics
+	TINKERING $skill_tinkering
+	TRACKING $skill_tracking
+	VETERINARY $skill_veterinary
+	WRESTLING $skill_wrestling
+}
+
+SECTION DESCRIPTION $race_human
+{
+Intro
+The Human belong to the most common of races. They live an outward existence
+and are frequently seen by outsiders.
+^p
+Personality
+Humans are a very extensialist people. They meddle in the affairs of the world,
+especially when such concerns impact upon their own lives. They can be very ruthless
+when necessity or opportunity dictates. They're appreciative of beauty, creativity, and the
+natural world as long as it suits their needs. Humans are the among the most proliferous
+of all intelligent races. Their plight, is to live as full a life as possible in the relatively
+short time allocated for them in this world.
+^p
+Appearance
+^p
+Lifespan
+Humans have a short lifespans when compared races like elves or dwarfs, reaching majority
+at 20, and seldom living beyond the age of 90.
+^p
+Relations
+^p
+Alignment
+^p
+Religion
+^p
+Language
+}
+
+SECTION STARTITEM $race_human
+{
+$item_race_colored_female_leather_tunic
+$item_race_colored_male_leather_tunic
+}

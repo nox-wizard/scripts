@@ -1,0 +1,490 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (wtrigrs.scp)                                    ||
+// || Maintained by Xanathar and DoctorX                                  ||
+// || Last Update - 21/12/01 -                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+UNIQUE SECTION ENVOKE
+{
+    x1ea3 fishing net
+    xf9e scissors
+    x9a6 knife
+    x9a5 knife
+    x13f7 butcher knife
+    xec4 skinning knife
+    x9de dirty frypan
+    x13cex13c6x13d5x13ddx13f2x13eb use gloves
+    x1a9cx1a9d flax bundle
+    x101cx101d spinning wheel
+    x136cx136d stones
+    xff6xff7 empty glass pitcher
+    xff8xff9 full water pitcher
+    x1422 Beeswax
+    x142a Pot of wax
+    x14f5 cannon tool
+    xdf6 silk fluxing tool
+    x1e24x1e25 books
+    x102bx102a hammers
+    x1e70x1e79 drawers
+    x9ec honey
+    xd1a grapes
+    x1c18 oil flask
+    x1e7a chest of drawer
+    xe3b book of the dead
+    x45dx45fx461x46fx8cfx8d4x92bx930xde3xe31xfacxfb1197e198a19bb Stoves
+}
+
+
+//World TRIGGERs
+
+SECTION IDLIST WTRIGR x1015x101cx1019x10a4
+{ Use ball of cotton or an unspoon wool on spinning wheel
+    REQ xdf9xdf8
+    RANGE 3
+    NEED xdf9xdf8
+    USEUP 1
+    SND 00 4f
+    ACT 13
+    FMSG You fail to make a ball of yarn and lose the cotton! You're not skilled enough !
+    IFSKL 34 150
+    IADD $item_balls_of_yarn 1
+    IFREQ xdf8 512
+    MSG You make a ball of yarn!
+    STAM -2
+}
+
+SECTION IDLIST WTRIGR x105fx1060x1061x1062x1063x1064x1065x1066
+{ Yarn or Spool to Ball of Cloth
+    REQ xe1dxfa0
+    NEED xe1dxfa0
+    STAM -2
+    ACT 13
+    IFREQ xfa0 513
+    MAKE 142 34 0e 1d
+}
+
+
+SECTION IDLIST WTRIGR x12b8x12b9x12bax12bbxcd0xccd
+{ Chop at a Yew tree, yields more wood
+    REQ x13b0xf43xf47xf49xf4bxf51x13fbx1442
+    STAM -3
+    SND 01 3e
+    ACT d
+    CSKL 44
+    SKL 44 1
+    IADD $item_logs $trg_onGround 5
+    MSG You chop for a while and get some wood
+}
+
+SECTION IDLIST WTRIGR x9ccx9cdx9cex9cf
+{ make fish steaks
+    REQ xf51x9a6x9a5xec4x13f7
+    MSG You cut the fish into steaks!
+    SND 00 50
+    REMOVE
+    IADD $item_fish_steaks $trg_intoBackpack 5
+}
+
+// BAKING TRIGGERS BY RETALIN
+
+SECTION IDLIST WTRIGR xa1e
+{ Mix water with flour to produce dough.
+    FMSG You cant use that on this flour.
+    REQ xff8
+    SND 02 40
+    FMSG You fail to make a good batch of dough.
+    REMOVE
+    SETEVID 0f f7
+    CSKL 13
+    MSG You mix the water into the flour and make some dough.
+    SKL 13 1
+    IDADD 10 3d 1
+}
+
+SECTION IDLIST WTRIGR x103d
+{ Use the Stove on the dough.
+    FMSG You cannot use that on the dough.
+    REQ x937x93dx945x94bx461x462x466x46ax46bx46fx475x47bx482x489x92bx92cx930x931x953x959x967x961
+    NEED x103d
+    SND 00 54
+    MAKE 100 13 10 3d
+    SKL 13 1
+}
+
+SECTION IDLIST WTRIGR x1009xe78
+{ fill the empty wash basin with water using a pitcher of water
+    RANGE 1
+    FMSG A pitcher would surely be helpful...
+    REQ xff8
+    MSG You fill the basin with water.
+    SND 02 3e
+    SETID 10 08
+    SETEVID 0f f7
+}
+
+SECTION IDLIST WTRIGR x0d8x0e7
+{ fill pitcher with milk using a cow
+    REQ xff7
+    MSG You try to milk the cow...
+    SND 00 26
+    FMSG ...but you get no milk!
+    CSKL 35
+    MSG ...and put the milk into the pitcher!
+    SETEVID 9 ad
+    NEWTYPE $itype_drink
+    DISABLEMSG You must wait until the cow respawns its milk!
+    DISABLE 400
+    NEWTRIG 0
+}
+
+SECTION IDLIST WTRIGR x9b5
+{ // Cooking eggs in a frypan
+    MSG You try to make fried eggs in a frypan.
+    MSG You need to crack open the eggs.
+    RANGE 1
+    REQ x45dx45fx461x46fx8cfx8d4x92bx930xde3xe31xfacxfb1197e198a19bb
+    REMOVE
+    IDADD 09 b5 1
+    NEWTRIG 159
+}
+
+SECTION IDLIST WTRIGR x0d1
+{ // Cutting the goat
+    REQ xf9e // scissors
+    EVDUR -1 15
+    SND 02 48
+    ACT 20
+    IADD $item_piles_of_wool_1 $trg_intoBackpack 1
+    MSG You take some unspoon wool.
+    DISABLEMSG You must wait until the goat respawns its wool!
+    DISABLE 600
+}
+
+SECTION IDLIST WTRIGR x0cf
+{ // Cutting the sheep
+    REQ xf9exf9d // scissors
+    EVDUR -1 15
+    SND 02 48
+    ACT 20
+    IADD $item_piles_of_wool_1 $trg_intoBackpack 2
+    IADD $item_piles_of_wool_1 $trg_intoBackpack 1
+    MSG You take some unspoon wool.
+    DISABLEMSG You must wait until the sheep respawns its wool!
+    DISABLE 600
+}
+
+SECTION IDLIST WTRIGR x10d9 //silk scraps
+{ spin silk
+    REQ xdf6
+    NEED x10d9
+    SND 00 4f
+    USEUP 1
+    FMSG You fail to spin some silk!
+    CSKL 34
+    MSG You spin some silk!
+    IDADD 0f 8d 10
+}
+
+SECTION IDLIST WTRIGR x10da //cocoon
+{ spin silk
+    REQ xdf6
+    NEED x10da
+    SND 00 4f
+    USEUP 1
+    FMSG You fail to spin some silk!
+    CSKL 34
+    MSG You spin a lot of silk!
+    IDADD 0f 8d 100
+}
+
+##############
+### ADDONS ###
+##############
+
+// DESTROYER
+///////////////////////////////////////
+SECTION IDLIST WTRIGR x1e24x1e25
+{ Damage Books
+    REQ xf43xf47xf49xf4bxf51
+    STAM -2
+    SND 01 3e
+    ACT d
+    SETID 0c 16
+}
+
+
+SECTION IDLIST WTRIGR xb52xb53xb54xb55xb56xb57xb58xb59xb5axb5bxb5cxb5d
+{ Destroy chair
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 1a
+}
+
+SECTION IDLIST WTRIGR xb4f
+{ Destroy chair
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 1b
+}
+
+SECTION IDLIST WTRIGR xb50
+{ Destroy chair
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 1e
+}
+
+SECTION IDLIST WTRIGR xb4e
+{ Destroy chair
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 1c
+}
+
+SECTION IDLIST WTRIGR xb51
+{ Destroy chair
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 1d
+}
+
+SECTION IDLIST WTRIGR xa4exa4fxa52xa53
+{ Destroy armoire
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 13
+}
+
+SECTION IDLIST WTRIGR xa97xa98xa9b
+{ Destroy bookcase
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 14
+}
+
+SECTION IDLIST WTRIGR xa99xa9axa9c
+{ Destroy bookcase 2
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 15
+}
+
+SECTION IDLIST WTRIGR x104bx104c
+{ Destroy clock
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 1f
+}
+
+SECTION IDLIST WTRIGR xa2c
+{ Destroy chest of drawers
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 24
+}
+
+SECTION IDLIST WTRIGR xa34
+{ Destroy chest of drawers
+    REQ xf43xf47xf49xf4bxf51
+    RANGE 1
+    STAM -2
+    SND 01 42
+    ACT d
+    SETID 0c 25
+}
+
+SECTION IDLIST WTRIGR xc1axc13xc1bxc1cxc1dxc1exc14xb15xc1fxc24xc25xc15
+{ Destroy broken furniture
+    REQ xf43xf47xf49xf4bxf51
+    STAM -2
+    SND 01 3e
+    ACT d
+    SETID 0c 2e
+}
+
+SECTION IDLIST WTRIGR xc2e
+{ Make logs from debris
+    REQ xf43xf47xf49xf4bxf51
+    STAM -2
+    SND 01 3e
+    ACT d
+    REMOVE
+    IDADD 1b e0 4
+}
+
+SECTION IDLIST WTRIGR xe34xef3
+{ Book of the Dead
+    REQ xe3b
+    NEED xe34xef3
+    MAKE 1100 19 0e 34
+    STAM -2
+}
+
+SECTION IDLIST WTRIGR xc6f
+{
+    REQ xe87xe88
+    RANGE 2
+    STAM -5
+    SND 02 34
+    ACT 9
+    IADD $item_onions 2
+    DISABLE 30
+    MSG You harvest some onions
+}
+
+SECTION IDLIST WTRIGR xc76
+{
+    REQ xe87xe88
+    RANGE 2
+    STAM -5
+    SND 02 34
+    ACT 9
+    IADD $item_carrots 2
+    DISABLE 30
+    MSG You harvest some carrots
+}
+
+SECTION IDLIST WTRIGR xc7d
+{
+    REQ xe87xe88
+    RANGE 2
+    STAM -5
+    SND 02 34
+    ACT 9
+    IADD $item_ears_of_corn1_2 2
+    DISABLE 30
+    MSG You harvest some corn
+}
+
+SECTION IDLIST WTRIGR xd9axd96
+{ Pick apples
+    REQ xf51x9a6x9a5xec4x13f7
+    MSG You start to search for some fruit...
+    SND 00 4f
+    ACT 13
+    FMSG ...but don't find anything!
+    RAND 100 50
+    CSKL 10
+    MSG ...and pick some apples!
+    IDADD 9 d0 1
+    NEWTYPE $itype_food
+}
+
+SECTION IDLIST WTRIGR xd9exda2
+{ Pick peaches
+    REQ xf51x9a6x9a5xec4x13f7
+    MSG You start to search for some fruit...
+    SND 00 4f
+    ACT 13
+    FMSG ...but don't find anything!
+    RAND 100 50
+    CSKL 10
+    MSG ...and pick some peaches!
+    IDADD 9 d2 1
+    NEWTYPE $itype_food
+}
+
+SECTION IDLIST WTRIGR xdaaxda6
+{ Pick pears
+    REQ xf51x9a6x9a5xec4x13f7
+    MSG You start to search for some fruit...
+    SND 00 4f
+    ACT 13
+    FMSG ...but don't find anything!
+    RAND 100 50
+    CSKL 10
+    MSG ...and pick some pears!
+    IDADD 9 94 1
+    NEWTYPE $itype_food
+}
+
+SECTION IDLIST WTRIGR xca8xcaaxcab
+{ Pick bananas
+    REQ xf51x9a6x9a5xec4x13f7
+    MSG You start to search for some fruit...
+    SND 00 4f
+    ACT 13
+    FMSG ...but don't find anything!
+    RAND 100 50
+    CSKL 10
+    MSG ...and pick some bananas!
+    IDADD 17 1f 1
+    NEWTYPE $itype_food
+}
+
+SECTION IDLIST WTRIGR xc95
+{ Pick coconuts
+    REQ xf51x9a6x9a5xec4x13f7
+    MSG You start to search for some fruit...
+    SND 00 4f
+    ACT 13
+    FMSG ...but don't find anything!
+    RAND 100 50
+    CSKL 10
+    MSG ...and pick some coconuts!
+    IDADD 17 26 1
+    NEWTYPE $itype_food
+}
+
+SECTION IDLIST WTRIGR xc96
+{ Pick dates
+    REQ xf51x9a6x9a5xec4x13f7
+    MSG You start to search for some fruit...
+    SND 00 4f
+    ACT 13
+    FMSG ...but don't find anything!
+    RAND 100 50
+    CSKL 10
+    MSG ...and pick some dates!
+    IDADD 17 27 1
+    NEWTYPE $itype_food
+}
+
+SECTION IDLIST WTRIGR xd1bxd1cxd1dxd1exd1fxd20xd21xd22xd23xd24
+{ Pick grapes
+    REQ xf51x9a6x9a5xec4x13f7
+    MSG You start to search for some mature grapes...
+    SND 00 4f
+    ACT 13
+    FMSG ...but don't find anything!
+    RAND 100 50
+    CSKL 10
+    MSG ...and pick some!
+    IDADD d 1a 1
+    NEWTYPE $itype_food
+}
+
+
+

@@ -1,0 +1,2716 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (armour.xss)                                     ||
+// || Maintained by Sparhawk		                                  ||
+// || Last Update 04-aug-2002                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//Wooden Shield
+SECTION ITEM $item_wooden_shield
+{
+    NAME wooden shield
+    ID 1B7A
+    DEF 2
+    HP 20
+    STR 5
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 39
+    WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
+}
+
+// bone chest
+SECTION ITEM $item_bone_chest
+{
+    NAME bone chest
+    ID 144F
+    LAYER $layer_inner_torso
+    DEF 9
+    HP 28
+    STR 40
+    DEXADD -6
+    DECAY
+    VALUE 15
+    WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
+}
+
+// bone arms
+SECTION ITEM $item_bone_arms
+{
+    NAME bone arms
+    ID 144E
+    LAYER $layer_arms
+    DEF 5
+    HP 25
+    STR 40
+    DEXADD -2
+    DECAY
+    VALUE 10
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
+}
+
+// bone gloves
+SECTION ITEM $item_bone_gloves
+{
+    NAME bone gloves
+    ID 1450
+    LAYER $layer_gloves
+    DEF 2
+    HP 20
+    STR 40
+    DECAY
+    VALUE 10
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
+}
+
+// bone helm
+SECTION ITEM $item_bone_helm
+{
+    NAME bone helm
+    ID 1451
+    LAYER $layer_helm
+    DEF 4
+    HP 20
+    STR 40
+    DECAY
+    VALUE 12
+    WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
+}
+
+
+// bone legs
+SECTION ITEM $item_bone_legs
+{
+    NAME bone legs
+    ID 1452
+    LAYER $layer_pants
+    DEF 6
+    HP 30
+    STR 40
+    DEXADD -4
+    DECAY
+    VALUE 100
+    WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
+}
+
+// stud gorget
+SECTION ITEM $item_studded_leather_gorget
+{
+    NAME studded leather gorget
+    ID 13D6
+    LAYER $layer_neck
+    DEF 2
+    HP 20
+    STR 25
+    DECAY
+    VALUE 60
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
+}
+
+// stud gloves
+SECTION ITEM $item_studded_leather_gloves
+{
+    NAME studded leather gloves
+    ID 13DD
+    LAYER $layer_gloves
+    DEF 2
+    HP 20
+    STR 25
+    DECAY
+    VALUE 60
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
+}
+
+// stud sleeves
+SECTION ITEM $item_studded_leather_sleeves
+{
+    NAME studded leather sleeves
+    ID 13D4
+    LAYER $layer_arms
+    DEF 3
+    HP 20
+    STR 25
+    DECAY
+    VALUE 65
+    WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
+}
+
+// stud leggings
+SECTION ITEM $item_studded_leather_leggings
+{
+    NAME studded leather leggings
+    ID 13E1
+    LAYER $layer_pants
+    DEF 4
+    HP 25
+    STR 25
+    DECAY
+    VALUE 70
+    WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
+}
+
+// stud tunic
+SECTION ITEM $item_studded_leather_tunic
+{
+    NAME studded leather tunic
+    ID 13E2
+    LAYER $layer_inner_torso
+    DEF 6
+    HP 25
+    STR 25
+    DECAY
+    VALUE 90
+    WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
+}
+
+// leather sleeves
+SECTION ITEM $item_leather_sleeves
+{
+    NAME leather sleeves
+    ID 13CD
+    LAYER $layer_arms
+    DEF 2
+    HP 15
+    STR 10
+    DECAY
+    VALUE 50
+    WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+// leather leggings
+SECTION ITEM $item_leather_leggings
+{
+    NAME leather leggings
+    ID 13D2
+    LAYER $layer_pants
+    DEF 3
+    HP 20
+    STR 10
+    DECAY
+    VALUE 70
+    WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+// leather tunic
+SECTION ITEM $item_leather_tunic
+{
+    NAME leather tunic
+    ID 13D3
+    LAYER $layer_inner_torso
+    DEF 5
+    HP 23
+    STR 10
+    DECAY
+    VALUE 80
+    WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+// orc mask
+SECTION ITEM $item_orc_mask
+{
+    NAME orc mask
+    ID 141C
+    LAYER $layer_helm
+    DEF 2
+    HP 20
+    STR 10
+    DECAY
+    VALUE 35
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
+}
+
+// leather shorts
+SECTION ITEM $item_leather_shorts
+{
+    NAME leather shorts
+    ID 1C00
+    LAYER $layer_innerlegs
+    DECAY
+    DEF 3
+    HP 20
+    STR 10
+    ATT 1
+    VALUE 50
+    WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+// stud armor (female)
+SECTION ITEM $item_female_studded_leather
+{
+    NAME female studded leather
+    ID 1C02
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 6
+    HP 75
+    STR 25
+    VALUE 100
+    WEIGHT 800
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
+}
+
+// female leather armor
+SECTION ITEM $item_female_leather_armor
+{
+    NAME female leather armor
+    ID 1C06
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 5
+    HP 20
+    STR 15
+    VALUE 120
+    WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+// a leather skirt
+SECTION ITEM $item_leather_skirt
+{
+    NAME leather skirt
+    ID 1C08
+    LAYER $layer_outerlegs
+    DECAY
+    DEF 3
+    HP 15
+    STR 10
+    VALUE 80
+    WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+
+// leather bustier
+SECTION ITEM $item_leather_bustier
+{
+    NAME leather bustier
+    ID 1C0A
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 4
+    HP 25
+    STR 10
+    VALUE 85
+    WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+// a stud bustier
+SECTION ITEM $item_studded_leather_bustier
+{
+    NAME studded leather bustier
+    ID 1C0C
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 6
+    HP 70
+    STR 25
+    VALUE 85
+    WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
+}
+
+SECTION ITEM $item_leather_cap
+{
+    NAME leather cap
+    ID 1DBA
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 20
+    DECAY
+    VALUE 60
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+SECTION ITEM $item_boots
+{
+    NAME boots
+    ID 170B
+    LAYER $layer_shoes
+    DEF 1
+    HP 10
+    STR 10
+    DYE 1
+    DECAY
+    VALUE 30
+    WEIGHT 100
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// sandles
+SECTION ITEM $item_sandles
+{
+    NAME sandles
+    ID 170D
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// shoes
+SECTION ITEM $item_shoes
+{
+    NAME shoes
+    ID 170F
+    LAYER $layer_shoes
+    DECAY
+    DYE 1
+    VALUE 15
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// thigh boots
+SECTION ITEM $item_thigh_boots
+{
+    NAME thigh boots
+    ID 1711
+    LAYER $layer_shoes
+    DEF 2
+    HP 20
+    STR 20
+    DYE 1
+    DECAY
+    VALUE 55
+    WEIGHT 100
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// a skullcap
+SECTION ITEM $item_a_skullcap
+{
+    NAME a skullcap
+    ID 1544
+    COLOR 283
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 10
+    DYE 1
+    DECAY
+    VALUE 30
+    WEIGHT 200
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// a deer mask
+SECTION ITEM $item_a_deer_mask
+{
+    NAME a deer mask
+    ID 1547
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 10
+    DECAY
+    VALUE 40
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
+}
+
+// a bear mask
+SECTION ITEM $item_a_bear_mask
+{
+    NAME a bear mask
+    ID 1545
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 10
+    DECAY
+    VALUE 40
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
+}
+
+// a orc helm
+SECTION ITEM $item_a_orc_helm
+{
+    NAME a orc helm
+    ID 1F0B
+    LAYER $layer_helm
+    DEF 2
+    HP 20
+    STR 20
+    DECAY
+    VALUE 25
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
+}
+
+// a orc mask
+SECTION ITEM $item_a_orc_mask
+{
+    NAME a orc mask
+    ID 141C
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 10
+    DECAY
+    VALUE 40
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
+}
+
+// a tribal mask
+SECTION ITEM $item_a_tribal_mask
+{
+    NAME a tribal mask
+    ID 1549
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 10
+    DECAY
+    VALUE 40
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
+}
+
+// a tribal mask
+SECTION ITEM $item_a_tribal_mask_1
+{
+    NAME a tribal mask
+    ID 154B
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 10
+    DECAY
+    VALUE 40
+    WEIGHT 200
+}
+
+// a tribal mask
+SECTION ITEM $item_a_tribal_mask_1
+{
+    NAME a tribal mask
+    ID 154B
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 10
+    DECAY
+    VALUE 40
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
+}
+
+SECTION ITEM $item_phoenix_tunic
+{
+    NAME phoenix tunic
+    ID 13E2
+    COLOR 0027
+    LAYER $layer_inner_torso
+    DEF 7
+    HP 40
+    STR 25
+    DECAY
+    VALUE 90
+    WEIGHT 600
+    GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
+}
+
+
+SECTION ITEM $item_phoenix_gorget
+{
+    NAME phoenix gorget
+    ID 13D6
+    COLOR 0027
+    LAYER $layer_neck
+    DEF 2
+    HP 40
+    STR 25
+    DECAY
+    VALUE 60
+    WEIGHT 200
+    GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
+}
+
+SECTION ITEM $item_phoenix_gloves
+{
+    NAME phoenix gloves
+    ID 13DD
+    COLOR 0027
+    LAYER $layer_gloves
+    DEF 2
+    HP 40
+    STR 25
+    DECAY
+    VALUE 60
+    WEIGHT 200
+    GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
+}
+
+SECTION ITEM $item_phoenix_sleeves
+{
+    NAME phoenix sleeves
+    ID 13D4
+    COLOR 0027
+    LAYER $layer_arms
+    DEF 2
+    HP 40
+    STR 25
+    DECAY
+    VALUE 65
+    WEIGHT 400
+    GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
+}
+
+SECTION ITEM $item_phoenix_leggings
+{
+    NAME phoenix leggings
+    ID 13E1
+    COLOR 0027
+    LAYER $layer_pants
+    DEF 2
+    HP 40
+    STR 25
+    DECAY
+    VALUE 70
+    WEIGHT 500
+    GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
+}
+
+SECTION ITEM $item_phoenix_helm
+{
+    NAME phoenix helm
+    ID 140F
+    COLOR 0027
+    DEXADD -1
+    LAYER $layer_helm
+    DEF 4
+    HP 50
+    STR 40
+    DECAY
+    VALUE 275
+    WEIGHT 500
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
+}
+
+SECTION ITEM $item_leather_gloves
+{
+    NAME Leather Gloves
+    ID 13CE
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 20
+    DECAY
+    VALUE 40
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+SECTION ITEM $item_a_leather_gorget
+{
+    NAME A leather Gorget
+    ID 13C7
+    LAYER $layer_helm
+    DEF 1
+    HP 10
+    STR 20
+    DECAY
+    VALUE 40
+    WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
+}
+
+SECTION ITEM $item_iron_platemail_of_defence
+{
+    NAME magic platemail
+    NAME2 platemail of defence
+    ID 1416
+    LAYER $layer_inner_torso
+    DEF 15
+    HP 70
+    STR 60
+    DECAY
+    VALUE 315
+    WEIGHT 1000
+    COLOR 0961
+    
+    ///CATEGORY Armours - Magic
+    ///SUBSECTION Armours of Defence
+}
+
+SECTION ITEM $item_iron_plate_gorget_of_defence
+{
+    NAME magic plate gorget
+    NAME2 plate gorget of defence
+    ID 1413
+    LAYER $layer_neck
+    DEF 4
+    HP 40
+    STR 40
+    DECAY
+    VALUE 205
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gloves_of_defence
+{
+    NAME magic plate gloves
+    NAME2 plate gloves of defence
+    ID 1414
+    LAYER $layer_gloves
+    DEF 6
+    HP 60
+    STR 40
+    DECAY
+    VALUE 215
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_helm_of_defence
+{
+    NAME magic plate helm
+    NAME2 plate helm of defence
+    ID 1412
+    LAYER $layer_helm
+    DEF 6
+    HP 60
+    STR 40
+    DECAY
+    VALUE 265
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_leggings_of_defence
+{
+    NAME magic plate legs
+    NAME2 plate legs of defence
+    ID 141A
+    LAYER $layer_innerlegs
+    DEF 8
+    HP 80
+    STR 60
+    DECAY
+    VALUE 315
+    WEIGHT 700
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_sleeves_of_defence
+{
+    NAME magic plate arms
+    NAME2 plate arms of defence
+    ID 1410
+    LAYER $layer_arms
+    DEF 7
+    HP 70
+    STR 40
+    DECAY
+    VALUE 275
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_platemail_of_guarding
+{
+    NAME magic platemail
+    NAME2 platemail of guarding
+    ID 1416
+    LAYER $layer_inner_torso
+    DEF 16
+    HP 90
+    STR 60
+    DECAY
+    VALUE 415
+    WEIGHT 1000
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gorget_of_guarding
+{
+    NAME magic plate gorget
+    NAME2 plate gorget of guarding
+    ID 1413
+    LAYER $layer_neck
+    DEF 5
+    HP 50
+    STR 40
+    DECAY
+    VALUE 315
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gloves_of_guarding
+{
+    NAME magic plate gloves
+    NAME2 plate gloves of guarding
+    ID 1414
+    LAYER $layer_gloves
+    DEF 7
+    HP 70
+    STR 40
+    DECAY
+    VALUE 325
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_helm_of_guarding
+{
+    NAME magic plate helm
+    NAME2 plate helm of guarding
+    ID 1412
+    LAYER $layer_helm
+    DEF 7
+    HP 70
+    STR 40
+    DECAY
+    VALUE 375
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_leggings_of_guarding
+{
+    NAME magic plate legs
+    NAME2 plate legs of guarding
+    ID 141A
+    LAYER $layer_innerlegs
+    DEF 9
+    HP 90
+    STR 60
+    DECAY
+    VALUE 405
+    WEIGHT 700
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_sleeves_of_guarding
+{
+    NAME magic plate arms
+    NAME2 plate arms of guarding
+    ID 1410
+    LAYER $layer_arms
+    DEF 8
+    HP 80
+    STR 40
+    DECAY
+    VALUE 355
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_of_hardening
+{
+    NAME magic plate
+    NAME2 plate of hardening
+    ID 1416
+    LAYER $layer_inner_torso
+    DEF 17
+    HP 100
+    STR 60
+    DECAY
+    VALUE 545
+    WEIGHT 1000
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gorget_of_hardening
+{
+    NAME magic plate gorget
+    NAME2 plate gorget of hardening
+    ID 1413
+    LAYER $layer_neck
+    DEF 6
+    HP 60
+    STR 40
+    DECAY
+    VALUE 415
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gloves_of_hardening
+{
+    NAME magic plate gloves
+    NAME2 plate gloves of hardening
+    ID 1414
+    LAYER $layer_gloves
+    DEF 8
+    HP 80
+    STR 40
+    DECAY
+    VALUE 430
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_helm_of_hardening
+{
+    NAME magic plate helm
+    NAME2 plate helm of hardening
+    ID 1412
+    LAYER $layer_helm
+    DEF 8
+    HP 80
+    STR 40
+    DECAY
+    VALUE 460
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_leggings_of_hardening
+{
+    NAME magic plate legs
+    NAME2 plate legs of hardening
+    ID 141A
+    LAYER $layer_innerlegs
+    DEF 10
+    HP 100
+    STR 60
+    DECAY
+    VALUE 510
+    WEIGHT 700
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_sleeves_of_hardening
+{
+    NAME magic plate arms
+    NAME2 plate arms of hardening
+    ID 1410
+    LAYER $layer_arms
+    DEF 9
+    HP 90
+    STR 40
+    DECAY
+    VALUE 470
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_platemail_of_fortification
+{
+    NAME magic platemail
+    NAME2 platemail of fortification
+    ID 1416
+    LAYER $layer_inner_torso
+    DEF 16
+    HP 110
+    STR 60
+    DECAY
+    VALUE 750
+    WEIGHT 1000
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gorget_of_fortification
+{
+    NAME magic plate gorget
+    NAME2 plate gorget of fortification
+    ID 1413
+    LAYER $layer_neck
+    DEF 7
+    HP 70
+    STR 40
+    DECAY
+    VALUE 600
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gloves_of_fortification
+{
+    NAME magic plate gloves
+    NAME2 plate gloves of fortification
+    ID 1414
+    LAYER $layer_gloves
+    DEF 9
+    HP 90
+    STR 40
+    DECAY
+    VALUE 630
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_helm_of_fortification
+{
+    NAME magic plate helm
+    NAME2 plate helm of fortification
+    ID 1412
+    LAYER $layer_helm
+    DEF 9
+    HP 90
+    STR 40
+    DECAY
+    VALUE 660
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_leggings_of_fortification
+{
+    NAME magic plate legs
+    NAME2 plate legs of fortification
+    ID 141A
+    LAYER $layer_innerlegs
+    DEF 11
+    HP 110
+    STR 60
+    DECAY
+    VALUE 730
+    WEIGHT 700
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_sleeves_of_fortification
+{
+    NAME magic plate arms
+    NAME2 plate arms of fortification
+    ID 1410
+    LAYER $layer_arms
+    DEF 10
+    HP 100
+    STR 40
+    DECAY
+    VALUE 660
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_platemail_of_invulnerability
+{
+    NAME magic plate armor
+    NAME2 magic platemail of invulnerability
+    ID 1416
+    LAYER $layer_inner_torso
+    DEF 18
+    HP 120
+    STR 60
+    DECAY
+    VALUE 1000
+    WEIGHT 1000
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gorget_of_invulnerability
+{
+    NAME magic plate armor
+    NAME2 magic plate gorget of invulnerability
+    ID 1413
+    LAYER $layer_neck
+    DEF 8
+    HP 80
+    STR 40
+    DECAY
+    VALUE 900
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_gloves_of_invulnerability
+{
+    NAME magic plate armor
+    NAME2 magic plate gloves of invulnerability
+    ID 1414
+    LAYER $layer_gloves
+    DEF 10
+    HP 100
+    STR 40
+    DECAY
+    VALUE 930
+    WEIGHT 200
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_helm_of_invulnerability
+{
+    NAME magic plate armor
+    NAME2 magic plate helm of invulnerability
+    ID 1412
+    LAYER $layer_helm
+    DEF 10
+    HP 100
+    STR 40
+    DECAY
+    VALUE 950
+    WEIGHT 500
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_leggings_of_invulnerability
+{
+    NAME magic plate armor
+    NAME2 magic plate legs of invulnerability
+    ID 141A
+    LAYER $layer_innerlegs
+    DEF 12
+    HP 120
+    STR 60
+    DECAY
+    VALUE 997
+    WEIGHT 700
+    COLOR 0961
+}
+
+SECTION ITEM $item_iron_plate_sleeves_of_invulnerability
+{
+    NAME magic plate armor
+    NAME2 magic plate arms of invulnerability
+    ID 1410
+    LAYER $layer_arms
+    DEF 11
+    HP 110
+    STR 40
+    DECAY
+    VALUE 985
+    WEIGHT 500
+    COLOR 0961
+}
+
+// Magic Shields (4300->..)
+
+SECTION ITEM $item_iron_bronze_shield_of_defence
+{
+    NAME a magic bronze shield
+    NAME2 a bronze shield of defence
+    ID 1B72
+    DEF 6
+    HP 600
+    STR 30
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 188
+    WEIGHT 600
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_bronze_shield_of_guarding
+{
+    NAME a magic bronze shield
+    NAME2 a bronze shield of guarding
+    ID 1B72
+    DEF 7
+    HP 1200
+    STR 30
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 376
+    WEIGHT 600
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_bronze_shield_of_hardening
+{
+    NAME a magic bronze shield
+    NAME2 a bronze shield of Hardening
+    ID 1B72
+    DEF 8
+    HP 1800
+    STR 30
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 752
+    WEIGHT 600
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_bronze_shield_of_fortification
+{
+    NAME a bronze shield
+    NAME2 a bronze shield of fortification
+    ID 1B72
+    DEF 9
+    HP 2400
+    STR 30
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 1504
+    WEIGHT 600
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_bronze_shield_of_invulnerablity
+{
+    NAME a magic bronze shield
+    NAME2 a bronze shield of invulnerablity
+    ID 1B72
+    DEF 10
+    HP 3000
+    STR 30
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 3008
+    WEIGHT 600
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_buckler_of_defence
+{
+    NAME2 a magic buckler
+    NAME2 a buckler of defence
+    ID 1B73
+    DEF 4
+    HP 1020
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 166
+    WEIGHT 500
+    STR 15
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_buckler_of_guarding
+{
+    NAME a magic buckler
+    NAME2 a buckler of guarding
+    ID 1B73
+    DEF 5
+    HP 2040
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 332
+    WEIGHT 500
+    STR 15
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_buckler_of_hardening
+{
+    NAME a magic buckler
+    NAME2 a buckler of Hardening
+    ID 1B73
+    DEF 6
+    HP 3060
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 664
+    WEIGHT 500
+    STR 15
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_buckler_of_fortification
+{
+    NAME a magic buckler
+    NAME2 a buckler of fortification
+    ID 1B73
+    DEF 7
+    HP 4080
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 1328
+    WEIGHT 500
+    STR 15
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_buckler_of_invulnerablity
+{
+    NAME a magic buckler
+    NAME2 a buckler of invulnerablity
+    ID 1B73
+    DEF 8
+    HP 5100
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 2656
+    WEIGHT 500
+    STR 15
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_kite_shield_of_defence
+{
+    NAME a magic kite shield
+    NAME2 a kite shield of defence
+    ID 1B74
+    DEF 9
+    HP 2300
+    STR 55
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 238
+    DYE 1
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_kite_shield_of_guarding
+{
+    NAME a magic kite shield
+    NAME2 a kite shield of guarding
+    ID 1B74
+    DEF 10
+    HP 4600
+    STR 55
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 476
+    DYE 1
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_kite_shield_of_hardening
+{
+    NAME a magic kite shield
+    NAME2 a kite shield of Hardening
+    ID 1B74
+    DEF 11
+    HP 6900
+    STR 55
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 952
+    DYE 1
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_kite_shield_of_fortification
+{
+    NAME a magic kite shield
+    NAME2 a kite shield of fortification
+    ID 1B74
+    DEF 12
+    HP 9200
+    STR 55
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 1904
+    DYE 1
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_kite_shield_of_invulnerablity
+{
+    NAME a magic kite shield
+    NAME2 a kite shield of invulnerablity
+    ID 1B74
+    DEF 13
+    HP 11500
+    STR 55
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 3808
+    DYE 1
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_metal_shield_of_defence
+{
+    NAME a magic metal shield
+    NAME2 a metal shield of defence
+    ID 1B7B
+    DEF 6
+    HP 880
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 148
+    WEIGHT 600
+    STR 30
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_metal_shield_of_guarding
+{
+    NAME a magic metal shield
+    NAME2 a metal shield of guarding
+    ID 1B7B
+    DEF 7
+    HP 1760
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 296
+    WEIGHT 600
+    STR 30
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_metal_shield_of_hardening
+{
+    NAME a magic metal shield
+    NAME2 a metal shield of Hardening
+    ID 1B7B
+    DEF 8
+    HP 2640
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 592
+    WEIGHT 600
+    STR 30
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_metal_shield_of_fortification
+{
+    NAME a magic metal shield
+    NAME2 a metal shield of fortification
+    ID 1B7B
+    DEF 9
+    HP 3520
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 1184
+    WEIGHT 600
+    STR 30
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_metal_shield_of_invulnerablity
+{
+    NAME a magic metal shield
+    NAME2 a metal shield of invulnerablity
+    ID 1B7B
+    DEF 10
+    HP 4400
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 2368
+    WEIGHT 600
+    STR 30
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_kite_shield_of_defence
+{
+    NAME a magic wooden kite shield
+    NAME2 a wooden kite shield of defence
+    ID 1B78
+    DEF 7
+    HP 1160
+    STR 40
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 220
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_kite_shield_of_guarding
+{
+    NAME a magic wooden kite shield
+    NAME2 a wooden kite shield of guarding
+    ID 1B78
+    DEF 8
+    HP 2320
+    STR 40
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 440
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_kite_shield_of_hardening
+{
+    NAME a magic wooden kite shield
+    NAME2 a wooden kite shield of Hardening
+    ID 1B78
+    DEF 9
+    HP 3480
+    STR 40
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 880
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_kite_shield_of_fortification
+{
+    NAME2 a magic wooden kite shield
+    NAME2 a wooden kite shield of fortification
+    ID 1B78
+    DEF 10
+    HP 4640
+    STR 40
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 1760
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_kite_shield_of_invulnerablity
+{
+    NAME a magic wooden kite shield
+    NAME2 a wooden kite shield of invulnerablity
+    ID 1B78
+    DEF 11
+    HP 5800
+    STR 40
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 3520
+    WEIGHT 700
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_shield_of_defence
+{
+    NAME2 a magic wooden shield
+    NAME2 a wooden shield of defence
+    ID 1B7A
+    DEF 5
+    HP 46
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 78
+    WEIGHT 500
+    STR 10
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_shield_of_guarding
+{
+    NAME a magic wooden shield
+    NAME2 a wooden shield of guarding
+    ID 1B7A
+    DEF 6
+    HP 92
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 156
+    WEIGHT 500
+    STR 10
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_shield_of_hardening
+{
+    NAME a magic wooden shield
+    NAME2 a wooden shield of Hardening
+    ID 1B7A
+    DEF 7
+    HP 138
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 312
+    WEIGHT 500
+    STR 10
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_shield_of_fortification
+{
+    NAME a magic wooden shield
+    NAME2 a wooden shield of fortification
+    ID 1B7A
+    DEF 8
+    HP 184
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 624
+    WEIGHT 500
+    STR 10
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_wooden_shield_of_invulnerablity
+{
+    NAME a magic wooden shield
+    NAME2 a wooden shield of invulnerablity
+    ID 1B7A
+    DEF 9
+    HP 230
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 1248
+    WEIGHT 500
+    STR 10
+    GOOD 11
+}
+
+//Magic Heater Shield
+
+SECTION ITEM $item_iron_heater_sheild_of_defence
+{
+    NAME a magic heater shield
+    NAME2 a heater shield of defence
+    ID 1B76
+    DEF 12
+    HP 740
+    STR 70
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 308
+    WEIGHT 900
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_heater_sheild_of_guarding
+{
+    NAME a magic heater sheild
+    NAME2 a heater sheild of guarding
+    ID 1B76
+    DEF 13
+    HP 1480
+    STR 70
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 616
+    WEIGHT 900
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_heater_sheild_of_hardening
+{
+    NAME a magic heater sheild
+    NAME2 a heater sheild of hardening
+    ID 1B76
+    DEF 14
+    HP 2220
+    STR 70
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 1232
+    WEIGHT 900
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_heater_sheild_of_fortification
+{
+    NAME a magic heater sheild
+    NAME2 a heater sheild of fortification
+    ID 1B76
+    DEF 15
+    HP 2960
+    STR 70
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 2464
+    WEIGHT 900
+    GOOD 11
+}
+
+SECTION ITEM $item_iron_heater_sheild_of_invulnerablity
+{
+    NAME a magic heater sheild
+    NAME2 a heater sheild of Invulnerablity
+    ID 1B76
+    DEF 16
+    HP 3700
+    STR 70
+    LAYER $layer_2hand_weapon
+    ITEMHAND 3
+    DECAY
+    VALUE 4928
+    WEIGHT 900
+    GOOD 11
+}
+
+//Tunic of Durability
+SECTION ITEM $item_iron_platemail_of_durability
+{
+    NAME a magic platemail
+    NAME2 a platemail of durability
+    ID 1416
+    LAYER $layer_inner_torso
+    DEXADD -5
+    DEF 14
+    HP 90
+    STR 60
+    DECAY
+    VALUE 265
+    COLOR 0961
+    WEIGHT 1000
+}
+
+//Gorget of Durability
+SECTION ITEM $item_iron_plate_gorget_of_duribility
+{
+    NAME a magic plate gorget
+    NAME2 a plate gorget of duribility
+    ID 1413
+    LAYER $layer_neck
+    DEXADD -1
+    DEF 3
+    HP 50
+    STR 40
+    DECAY
+    VALUE 115
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Plate Gloves of Durability
+SECTION ITEM $item_iron_plate_gloves_of_duribility
+{
+    NAME magic plate gloves
+    NAME2 plate gloves of duribility
+    ID 1414
+    LAYER $layer_gloves
+    DEXADD -3
+    DEF 5
+    HP 70
+    STR 40
+    DECAY
+    VALUE 135
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Plate Helmet of Durability
+SECTION ITEM $item_iron_plate_helm_of_duribility
+{
+    NAME a magic plate helm
+    NAME2 a plate helm of duribility
+    ID 1412
+    LAYER $layer_helm
+    DEXADD -1
+    DEF 5
+    HP 70
+    STR 40
+    DECAY
+    VALUE 175
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Plate Legs of Durability
+SECTION ITEM $item_iron_plate_leggings_of_duribility
+{
+    NAME magic plate legs
+    NAME2 plate legs of duribility
+    ID 141A
+    LAYER $layer_innerlegs
+    DEXADD -5
+    DEF 7
+    HP 90
+    STR 60
+    DECAY
+    VALUE 231
+    COLOR 0961
+    WEIGHT 700
+}
+
+//Plate Sleeves of Durability
+SECTION ITEM $item_iron_plate_sleeves_of_duribility
+{
+    NAME magic plate arms
+    NAME2 plate arms of duribility
+    ID 1410
+    LAYER $layer_arms
+    DEXADD -2
+    DEF 6
+    HP 80
+    STR 40
+    DECAY
+    VALUE 193
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Substantial Plate Mail Tunic
+SECTION ITEM $item_iron_substantial_platemail
+{
+    NAME a magic platemail
+    NAME2 a substantial platemail
+    ID 1416
+    LAYER $layer_inner_torso
+    DEXADD -5
+    DEF 15
+    HP 110
+    STR 60
+    DECAY
+    VALUE 265
+    COLOR 0961
+    WEIGHT 1000
+}
+
+//Substantial Plate Gorget
+SECTION ITEM $item_iron_substantial_plate_gorget
+{
+    NAME a magic plate gorget
+    NAME2 a substantial plate gorget
+    ID 1413
+    LAYER $layer_neck
+    DEXADD -1
+    DEF 3
+    HP 70
+    STR 40
+    DECAY
+    VALUE 115
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Substantial Plate Gloves
+SECTION ITEM $item_iron_substantial_plate_gloves
+{
+    NAME magic plate gloves
+    NAME2 substantial plate gloves
+    ID 1414
+    LAYER $layer_gloves
+    DEXADD -3
+    DEF 5
+    HP 90
+    STR 40
+    DECAY
+    VALUE 135
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Substantial Plate Helmet
+SECTION ITEM $item_iron_substantial_plate_helm
+{
+    NAME a magic plate helm
+    NAME2 a substantial plate helm
+    ID 1412
+    LAYER $layer_helm
+    DEXADD -1
+    DEF 5
+    HP 90
+    STR 40
+    DECAY
+    VALUE 175
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Substantial Plate Legs
+SECTION ITEM $item_iron_substantial_plate_leggings
+{
+    NAME magic plate legs
+    NAME2 substantial plate legs
+    ID 141A
+    LAYER $layer_innerlegs
+    DEXADD -5
+    DEF 7
+    HP 110
+    STR 60
+    DECAY
+    VALUE 231
+    COLOR 0961
+    WEIGHT 700
+}
+
+//Substantial Plate Sleeves
+SECTION ITEM $item_iron_substantial_plate_sleeves
+{
+    NAME magic plate arms
+    NAME2 substantial plate arms
+    ID 1410
+    LAYER $layer_arms
+    DEXADD -2
+    DEF 6
+    HP 100
+    STR 40
+    DECAY
+    VALUE 193
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Massive PlateMail Tunic
+SECTION ITEM $item_iron_massive_platemail
+{
+    NAME a magic platemail
+    NAME2 a massive platemail
+    ID 1416
+    LAYER $layer_inner_torso
+    DEXADD -5
+    DEF 15
+    HP 130
+    STR 60
+    DECAY
+    VALUE 265
+    COLOR 0961
+    WEIGHT 1000
+}
+
+//Massive Plate Gorget
+SECTION ITEM $item_iron_massive_plate_gorget
+{
+    NAME a magic plate gorget
+    NAME2 a massive plate gorget
+    ID 1413
+    LAYER $layer_neck
+    DEXADD -1
+    DEF 3
+    HP 90
+    STR 40
+    DECAY
+    VALUE 115
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Massive Plate Gloves
+SECTION ITEM $item_iron_massive_plate_gloves
+{
+    NAME magic plate gloves
+    NAME2 massive plate gloves
+    ID 1414
+    LAYER $layer_gloves
+    DEXADD -3
+    DEF 5
+    HP 110
+    STR 40
+    DECAY
+    VALUE 135
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Massive Plate Helmet
+SECTION ITEM $item_iron_massive_plate_helm
+{
+    NAME a magic plate helm
+    NAME2 a massive plate helm
+    ID 1412
+    LAYER $layer_helm
+    DEXADD -1
+    DEF 5
+    HP 110
+    STR 40
+    DECAY
+    VALUE 175
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Massive Plate Legs
+SECTION ITEM $item_iron_massive_plate_leggings
+{
+    NAME magic plate legs
+    NAME2 massive plate legs
+    ID 141A
+    LAYER $layer_innerlegs
+    DEXADD -5
+    DEF 7
+    HP 130
+    STR 60
+    DECAY
+    VALUE 231
+    COLOR 0961
+    WEIGHT 700
+}
+
+//Massive Plate Sleeves
+SECTION ITEM $item_iron_massive_plate_sleeves
+{
+    NAME magic plate arms
+    NAME2 massive plate arms
+    ID 1410
+    LAYER $layer_arms
+    DEXADD -2
+    DEF 6
+    HP 120
+    STR 40
+    DECAY
+    VALUE 193
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Fortified Plate Mail Tunic
+SECTION ITEM $item_iron_fortified_platemail
+{
+    NAME a magic platemail
+    NAME2 a fortified platemail
+    ID 1416
+    LAYER $layer_inner_torso
+    DEXADD -5
+    DEF 16
+    HP 150
+    STR 60
+    DECAY
+    VALUE 265
+    COLOR 0961
+    WEIGHT 1000
+}
+
+//Fortified Plate Gorget
+SECTION ITEM $item_iron_fortified_plate_gorget
+{
+    NAME a magic plate gorget
+    NAME2 a fortified plate gorget
+    ID 1413
+    LAYER $layer_neck
+    DEXADD -1
+    DEF 3
+    HP 110
+    STR 40
+    DECAY
+    VALUE 115
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Fortified Plate Gloves
+SECTION ITEM $item_iron_fortified_plate_gloves
+{
+    NAME magic plate gloves
+    NAME2 fortified plate gloves
+    ID 1414
+    LAYER $layer_gloves
+    DEXADD -3
+    DEF 5
+    HP 130
+    STR 40
+    DECAY
+    VALUE 135
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Fortified Plate Helmet
+SECTION ITEM $item_iron_fortified_plate_helm
+{
+    NAME a magic plate helm
+    NAME2 a fortified plate helm
+    ID 1412
+    LAYER $layer_helm
+    DEXADD -1
+    DEF 5
+    HP 130
+    STR 40
+    DECAY
+    VALUE 175
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Fortified Plate Legs
+SECTION ITEM $item_iron_fortified_plate_leggings
+{
+    NAME magic plate legs
+    NAME2 fortified plate legs
+    ID 141A
+    LAYER $layer_innerlegs
+    DEXADD -5
+    DEF 7
+    HP 150
+    STR 60
+    DECAY
+    VALUE 231
+    COLOR 0961
+    WEIGHT 700
+}
+
+//Fortified Plate Sleeves
+SECTION ITEM $item_iron_fortified_plate_sleeves
+{
+    NAME magic plate arms
+    NAME2 fortified plate arms
+    ID 1410
+    LAYER $layer_arms
+    DEXADD -2
+    DEF 6
+    HP 140
+    STR 40
+    DECAY
+    VALUE 193
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Indestructible Plate Mail Tunic
+SECTION ITEM $item_iron_indestructible_platemail
+{
+    NAME a magic platemail
+    NAME2 a indestructible platemail
+    ID 1416
+    LAYER $layer_inner_torso
+    DEXADD -5
+    DEF 16
+    HP 170
+    STR 60
+    DECAY
+    VALUE 265
+    COLOR 0961
+    WEIGHT 1000
+}
+
+//Indestructible Plate Gorget
+SECTION ITEM $item_iron_indestructible_plate_gorget
+{
+    NAME a magic plate gorget
+    NAME2 a indestructible plate gorget
+    ID 1413
+    LAYER $layer_neck
+    DEXADD -1
+    DEF 3
+    HP 130
+    STR 40
+    DECAY
+    VALUE 115
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Indestructible Plate Gloves
+SECTION ITEM $item_iron_indestructible_plate_gloves
+{
+    NAME magic plate gloves
+    NAME2 indestructible plate gloves
+    ID 1414
+    LAYER $layer_gloves
+    DEXADD -3
+    DEF 5
+    HP 150
+    STR 40
+    DECAY
+    VALUE 135
+    COLOR 0961
+    WEIGHT 200
+}
+
+//Indestructible Plate Helmet
+SECTION ITEM $item_iron_indestructible_plate_helm
+{
+    NAME a magic plate helm
+    NAME2 a indestructible plate helm
+    ID 1412
+    LAYER $layer_helm
+    DEXADD -1
+    DEF 5
+    HP 150
+    STR 40
+    DECAY
+    VALUE 175
+    COLOR 0961
+    WEIGHT 500
+}
+
+//Indestructible Plate Legs
+SECTION ITEM $item_iron_indestructible_plate_leggings
+{
+    NAME magic plate legs
+    NAME2 indestructible plate legs
+    ID 141A
+    LAYER $layer_innerlegs
+    DEXADD -5
+    DEF 7
+    HP 170
+    STR 60
+    DECAY
+    VALUE 231
+    COLOR 0961
+    WEIGHT 700
+}
+
+//Indestructible Plate Sleeves
+SECTION ITEM $item_iron_indestructible_plate_sleeves
+{
+    NAME a magic plate arms
+    NAME2 a indestructible plate arms
+    ID 1410
+    LAYER $layer_arms
+    DEXADD -2
+    DEF 6
+    HP 160
+    STR 40
+    DECAY
+    VALUE 193
+    COLOR 0961
+    WEIGHT 500
+}
+
+SECTION ITEM $item_iron_chainmail_of_defence
+{
+    NAME magic chainmail
+    NAME2 chainmail of defence
+    ID 13C4
+    LAYER $layer_inner_torso
+    DEF 6
+    HP 60
+    STR 35
+    DECAY
+    VALUE 200
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_legs_of_defence
+{
+    NAME magic chain legs
+    NAME2 chain legs of defence
+    ID 13C3
+    LAYER $layer_pants
+    DEF 6
+    HP 60
+    STR 35
+    DECAY
+    VALUE 170
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_coif_of_defence
+{
+    NAME magic chain coif
+    NAME2 chain coif of defence
+    ID 13BB
+    LAYER $layer_helm
+    DEF 4
+    HP 40
+    STR 35
+    DECAY
+    VALUE 150
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chainmail_of_guarding
+{
+    NAME magic chainmail
+    NAME2 chainmail of guarding
+    ID 13C4
+    LAYER $layer_inner_torso
+    DEF 7
+    HP 70
+    STR 35
+    DECAY
+    VALUE 230
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_legs_of_guarding
+{
+    NAME magic chain legs
+    NAME2 chain legs of guarding
+    ID 13C3
+    LAYER $layer_pants
+    DEF 7
+    HP 70
+    STR 35
+    DECAY
+    VALUE 220
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_coif_of_guarding
+{
+    NAME magic chain coif
+    NAME2 chain coif of guarding
+    ID 13BB
+    LAYER $layer_helm
+    DEF 5
+    HP 30
+    STR 35
+    DECAY
+    VALUE 190
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chainmail_of_hardening
+{
+    NAME magic chainmail
+    NAME2 chainmail of hardening
+    ID 13C4
+    LAYER $layer_inner_torso
+    DEF 8
+    HP 80
+    STR 35
+    DECAY
+    VALUE 300
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_legs_of_hardening
+{
+    NAME magic chain legs
+    NAME2 chain legs of hardening
+    ID 13C3
+    LAYER $layer_pants
+    DEF 8
+    HP 80
+    STR 35
+    DECAY
+    VALUE 290
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_coif_of_hardening
+{
+    NAME magic chain coif
+    NAME2 chain coif of hardening
+    ID 13BB
+    LAYER $layer_helm
+    DEF 6
+    HP 60
+    STR 35
+    DECAY
+    VALUE 250
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chainmail_of_fortification
+{
+    NAME magic chainmail
+    NAME2 chainmail of fortification
+    ID 13C4
+    LAYER $layer_inner_torso
+    DEF 9
+    HP 90
+    STR 35
+    DECAY
+    VALUE 400
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_legs_of_fortification
+{
+    NAME magic chain legs
+    NAME2 chain legs of fortification
+    ID 13C3
+    LAYER $layer_pants
+    DEF 9
+    HP 90
+    STR 35
+    DECAY
+    VALUE 375
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_coif_of_fortification
+{
+    NAME magic chain coif
+    NAME2 chain coif of fortification
+    ID 13BB
+    LAYER $layer_helm
+    DEF 7
+    HP 70
+    STR 35
+    DECAY
+    VALUE 360
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chainmail_of_invulnerability
+{
+    NAME magic chainmail
+    NAME2 chainmail of invulnerability
+    ID 13C4
+    LAYER $layer_inner_torso
+    DEF 10
+    HP 100
+    STR 35
+    DECAY
+    VALUE 600
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_legs_of_invulnerability
+{
+    NAME magic chain legs
+    NAME2 chain legs of invulnerability
+    ID 13C3
+    LAYER $layer_pants
+    DEF 10
+    HP 100
+    STR 35
+    DECAY
+    VALUE 500
+    WEIGHT 700
+}
+
+SECTION ITEM $item_iron_chain_coif_of_invulnerability
+{
+    NAME magic chain coif
+    NAME2 chain coif of invulnerability
+    ID 13BB
+    LAYER $layer_helm
+    DEF 8
+    HP 80
+    STR 35
+    DECAY
+    VALUE 490
+    WEIGHT 700
+}
+
+// female plate of defense
+SECTION ITEM $item_iron_plate_of_defense
+{
+    NAME magic female plate
+    NAME2 magic plate of defense
+    ID 1C04
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 6
+    HP 20
+    STR 20
+    VALUE 100
+    WEIGHT 500
+}
+
+// female plate of guarding
+SECTION ITEM $item_iron_plate_of_guarding
+{
+    NAME magic female plate
+    NAME2 magic plate of guarding
+    ID 1C04
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 8
+    HP 20
+    STR 20
+    VALUE 100
+    WEIGHT 500
+}
+
+// female plate of hardening
+SECTION ITEM $item_iron_plate_of_hardening
+{
+    NAME magic female plate
+    NAME2 magic plate of hardening
+    ID 1C04
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 11
+    HP 20
+    STR 20
+    VALUE 100
+    WEIGHT 500
+}
+
+// female plate of fortification
+SECTION ITEM $item_iron_plate_of_fortification
+{
+    NAME magic female plate
+    NAME2 magic plate of fortification
+    ID 1C04
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 13
+    HP 20
+    STR 20
+    VALUE 100
+    WEIGHT 500
+}
+
+// female plate of invulnerability
+SECTION ITEM $item_iron_plate_of_invulnerability
+{
+    NAME magic female plate
+    NAME2 magic plate of invulnerability
+    ID 1C04
+    LAYER $layer_inner_torso
+    DECAY
+    DEF 15
+    HP 20
+    STR 20
+    VALUE 100
+    WEIGHT 500
+}
+
+// daemon bone chest
+SECTION ITEM $item_daemon_bone_chest
+{
+    NAME daemon bone chest
+    ID 144F
+    COLOR 04b9
+    LAYER $layer_inner_torso
+    DEF 16
+    HP 50
+    STR 40
+    DECAY
+    VALUE 130
+    WEIGHT 540
+}
+
+// daemon bone arms
+SECTION ITEM $item_daemon_bone_arms
+{
+    NAME daemon bone arms
+    ID 144E
+    COLOR 04b9
+    LAYER $layer_arms
+    DEF 10
+    HP 45
+    STR 40
+    DECAY
+    VALUE 90
+    WEIGHT 180
+}
+
+// daemon bone gloves
+SECTION ITEM $item_daemon_bone_gloves
+{
+    NAME daemon bone gloves
+    ID 1450
+    COLOR 04b9
+    LAYER $layer_gloves
+    DEF 10
+    HP 40
+    STR 40
+    DECAY
+    VALUE 80
+    WEIGHT 180
+}
+
+// daemon bone helm
+SECTION ITEM $item_daemon_bone_helm
+{
+    NAME daemon bone helm
+    ID 1451
+    COLOR 04b9
+    LAYER $layer_helm
+    DEF 9
+    HP 40
+    STR 40
+    DECAY
+    WEIGHT 270
+}
+
+// daemon bone legs
+SECTION ITEM $item_daemon_bone_legs
+{
+    NAME daemon bone legs
+    ID 1452
+    COLOR 04b9
+    LAYER $layer_pants
+    DEF 12
+    HP 50
+    STR 40
+    DECAY
+    WEIGHT 270
+}
+
+SECTION ITEM $item_dragonskin_legs
+{
+    NAME dragonskin legs
+    ID 13D2
+    LAYER $layer_innerlegs
+    DEF 10
+    HP 50
+    STR 20
+    DECAY
+    VALUE 700
+    WEIGHT 500
+}
+SECTION ITEM $item_dragonskin_tunic
+{
+    NAME dragonskin tunic
+    ID 13D3
+    LAYER $layer_inner_torso
+    DEF 10
+    HP 50
+    STR 20
+    DECAY
+    VALUE 800
+    WEIGHT 700
+}
+
+
+SECTION ITEM $item_ranger_tunic
+{
+    NAME ranger tunic
+    ID 13E2
+    COLOR 0309
+    LAYER $layer_inner_torso
+    DEF 7
+    HP 40
+    STR 25
+    DECAY
+    VALUE 90
+    WEIGHT 600
+    GOOD 10
+}
+
+
+SECTION ITEM $item_ranger_gorget
+{
+    NAME ranger gorget
+    ID 13D6
+    COLOR 0309
+    LAYER $layer_neck
+    DEF 2
+    HP 40
+    STR 25
+    DECAY
+    VALUE 60
+    WEIGHT 200
+    GOOD 10
+}
+
+SECTION ITEM $item_ranger_gloves
+{
+    NAME ranger gloves
+    ID 13DD
+    COLOR 0309
+    LAYER $layer_gloves
+    DEF 2
+    HP 40
+    STR 25
+    DECAY
+    VALUE 60
+    WEIGHT 200
+    GOOD 10
+}
+
+SECTION ITEM $item_ranger_sleeves
+{
+    NAME ranger sleeves
+    ID 13D4
+    COLOR 0309
+    LAYER $layer_arms
+    DEF 2
+    HP 40
+    STR 25
+    DECAY
+    VALUE 65
+    WEIGHT 400
+    GOOD 10
+}
+
+SECTION ITEM $item_ranger_leggings
+{
+    NAME ranger leggings
+    ID 13E1
+    COLOR 0309
+    LAYER $layer_pants
+    DEF 2
+    HP 40
+    STR 25
+    DECAY
+    VALUE 70
+    WEIGHT 500
+    GOOD 10
+}

@@ -1,0 +1,69 @@
+SECTION NPC $npc_fertile_horse
+{
+    NAME male horse
+    ID 00C8
+    SKIN 0050
+    DIRECTION E
+    STR 125
+    DEX 15 20
+    INT 6
+    KARMA 100
+    FAME 100
+    PARRYING 325
+    MAGICRESISTANCE 250
+    TACTICS 325
+    WRESTLING 325
+    DAMAGE 3 15
+    DEF 10
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+    AMXINT 1011 0
+    AMXINT 1012 0
+    AMXINT 1013 1
+    AMXINT 1014 0
+    AMXINT 1015 0
+    AMXINT 1016 0
+    @ONCREATION _fertile
+}
+
+SECTION NPC $npc_fertile_horse2
+{
+    NAME female horse
+    ID 00C8
+    SKIN 0000
+    DIRECTION E
+    STR 125
+    DEX 15 20
+    INT 6
+    KARMA 100
+    FAME 100
+    PARRYING 325
+    MAGICRESISTANCE 250
+    TACTICS 325
+    WRESTLING 325
+    DAMAGE 3 15
+    DEF 10
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 291
+    RACE $race_animal
+    DOORUSE 0
+    AMXINT 1011 1
+    AMXINT 1012 0
+    AMXINT 1013 1
+    AMXINT 1014 0
+    AMXINT 1015 0
+    AMXINT 1016 0
+    @ONCREATION _fertile
+}

@@ -1,0 +1,2921 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (decorations.xss)                                ||
+// || Maintained by Akron                                                 ||
+// || Last Update 09-aug-2003                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_ankh
+{
+    NAME ankh
+    ID 0002
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Left Ankh
+}
+
+SECTION ITEM $item_ankh_1
+{
+    NAME ankh
+    ID 0003
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Right Ankh
+}
+
+SECTION ITEM $item_statue
+{
+    ID 12A1
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_1
+{
+    ID 129F
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_2
+{
+    ID 12A0
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_3
+{
+    ID 12A4
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_4
+{
+    ID 12A2
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_5
+{
+    ID 12A3
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_6
+{
+    ID 12AE
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_7
+{
+    ID 12D7
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_8
+{
+    ID 12D5
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_9
+{
+    ID 12D6
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_A
+{
+    ID 1224
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_B
+{
+    ID 1225
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_C
+{
+    ID 1226
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_D
+{
+    ID 1227
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_statue_E
+{
+    ID 1228
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Statue
+}
+
+SECTION ITEM $item_ankh_of_sacrifice
+{
+    ID 1D97
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Ankh of Sacrifice
+}
+
+SECTION ITEM $item_ankh_of_sacrifice_1
+{
+    ID 1D98
+    
+    ///CATEGORY Decorations
+    ///SUBSECTION Statues
+    ///DESCRIPTION Ankh of Sacrifice
+}
+
+SECTION ITEM $item_trophy
+{
+    ID 1E60
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_1
+{
+    ID 1E61
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_2
+{
+    ID 1E62
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_3
+{
+    ID 1E63
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_4
+{
+    ID 1E64
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_5
+{
+    ID 1E65
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_6
+{
+    ID 1E66
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_7
+{
+    ID 1E67
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_8
+{
+    ID 1E68
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_9
+{
+    ID 1E69
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_A
+{
+    ID 1E6A
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_B
+{
+    ID 1E6B
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_C
+{
+    ID 1E6C
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_trophy_D
+{
+    ID 1E6D
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Trophies
+    ///DESCRIPTION Trophy
+}
+
+SECTION ITEM $item_candle
+{
+    ID 0B1A
+    DIR 2
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Candles & Candelabras
+    ///DESCRIPTION Candle
+}
+
+SECTION ITEM $item_candelabra
+{
+	NAME A candelabra
+	ID 0A27
+	DIR 2
+	TRIGGER $itrg_light_table_candelabra
+	VALUE 40
+	WEIGHT 200
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_a_candelabra
+{
+	NAME A candelabra
+	ID 0A29
+	DIR 1
+	TRIGGER $itrg_light_floor_candelabra
+	VALUE 40
+	WEIGHT 200
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_a_brazier
+{
+    NAME A brazier
+    ID 0E31
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Candles & Candelabras
+    ///DESCRIPTION Brazier
+}
+
+SECTION ITEM $item_tall_candle
+{
+    NAME tall candle
+    ID 0a26
+    DIR 1
+    TRIGGER $itrg_light_table_candle
+    WEIGHT 100
+    DECAY
+    VALUE 10
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_candle_1
+{ candle
+    ID 1433
+    DECAY
+    VALUE 35
+    TRIGGER $itrg_new_candle
+}
+
+SECTION ITEM $item_candle_2
+{
+    ID 0a26
+}
+
+SECTION ITEM $item_candlabra
+{
+    ID 0a27
+}
+
+//a tall candalabra
+SECTION ITEM $item_candalabra
+{
+    NAME candalabra
+    ID 0a29
+    VALUE 40
+    DECAY
+    TRIGGER $itrg_unlight_floor_candelabra
+    WEIGHT 200
+}
+
+SECTION ITEM $item_skull_candle
+{
+    NAME skull candle
+    ID 1854
+    DIR 2
+    VALUE 50
+    ITEMHAND 3
+}
+
+SECTION ITEM $item_wall_sconce_1
+{
+    ID 09FF
+    TRIGGER $itrg_light_n-s_candle
+}
+
+SECTION ITEM $item_wall_sconce_2
+{
+    ID 0A00
+    TRIGGER $itrg_light_e-w_candle
+}
+
+SECTION ITEM $item_bell_of_courage
+{
+    NAME bell of courage
+    ID 1C12
+}
+
+SECTION ITEM $item_book_of_truth
+{
+    NAME book of truth
+    ID 1C13
+}
+
+SECTION ITEM $item_candle_of_love
+{
+    NAME candle of love
+    ID 1C14
+    VALUE 50
+    DECAY
+}
+
+SECTION ITEM $item_dartboard
+{
+    NAME dartboard
+    ID 1e2f
+    TYPE $itype_trash
+    VALUE 50
+    WEIGHT 200
+}
+
+SECTION ITEM $item_dartboard_1
+{
+    NAME dartboard
+    ID 1e2e
+    TYPE $itype_trash
+    VALUE 50
+    WEIGHT 200
+}
+
+SECTION ITEM $item_roadsign
+{
+    NAME roadsign
+    ID 1297
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_roadsign_1
+{
+    NAME roadsign
+    ID 1298
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_roadsign_2
+{
+    NAME roadsign
+    ID 1299
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_roadsign_3
+{
+    NAME roadsign
+    ID 129A
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_roadsign_4
+{
+    NAME roadsign
+    ID 129B
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_roadsign_5
+{
+    NAME roadsign
+    ID 129C
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_roadsign_6
+{
+    NAME roadsign
+    ID 129D
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_roadsign_7
+{
+    NAME roadsign
+    ID 129E
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_signpost
+{
+    NAME signpost
+    ID 1296
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_library
+{
+    NAME library
+    ID 0B95
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_library_1
+{
+    NAME library
+    ID 0B96
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_bakery
+{
+    NAME bakery
+    ID 0BA3
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_bakery_1
+{
+    NAME bakery
+    ID 0BA4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tailor
+{
+    NAME tailor
+    ID 0BA5
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tailor_1
+{
+    NAME tailor
+    ID 0BA6
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tinker
+{
+    NAME tinker
+    ID 0BA7
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tinker_1
+{
+    NAME tinker
+    ID 0BA8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_butcher
+{
+    NAME butcher
+    ID 0BA9
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_butcher_1
+{
+    NAME butcher
+    ID 0BAA
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_healer
+{
+    NAME healer
+    ID 0BAB
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_healer_1
+{
+    NAME healer
+    ID 0BAC
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_magic_shop
+{
+    NAME magic shop
+    ID 0BAD
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_magic_shop_1
+{
+    NAME magic shop
+    ID 0BAE
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_carpenter
+{
+    NAME carpenter
+    ID 0BAF
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_carpenter_1
+{
+    NAME carpenter
+    ID 0BB0
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_shipwright
+{
+    NAME shipwright
+    ID 0BB1
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_shipwright_1
+{
+    NAME shipwright
+    ID 0BB2
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_inn
+{
+    NAME inn
+    ID 0BB3
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_inn_1
+{
+    NAME inn
+    ID 0BB4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_harbor_master
+{
+    NAME harbor master
+    ID 0BB5
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_harbor_master_1
+{
+    NAME harbor master
+    ID 0BB6
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_stables
+{
+    NAME stables
+    ID 0BB7
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_stables_1
+{
+    NAME stables
+    ID 0BB8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_barber
+{
+    NAME barber
+    ID 0BB9
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_barber_1
+{
+    NAME barber
+    ID 0BBA
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_musician
+{
+    NAME musician
+    ID 0BBB
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_musician_1
+{
+    NAME musician
+    ID 0BBC
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_archer_1
+{
+    NAME archer
+    ID 0BBD
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_archer_2
+{
+    NAME archer
+    ID 0BBE
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_blacksmith
+{
+    NAME blacksmith
+    ID 0BBF
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_blacksmith_1
+{
+    NAME blacksmith
+    ID 0BC0
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_jewler
+{
+    NAME jewler
+    ID 0BC1
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_jewler_1
+{
+    NAME jewler
+    ID 0BC2
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tavern
+{
+    NAME tavern
+    ID 0BC3
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tavern_1
+{
+    NAME tavern
+    ID 0BC4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_alchemist
+{
+    NAME alchemist
+    ID 0BC5
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_alchemist_1
+{
+    NAME alchemist
+    ID 0BC6
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_armorer
+{
+    NAME armorer
+    ID 0BC7
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_armorer_1
+{
+    NAME armorer
+    ID 0BC8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_artist
+{
+    NAME artist
+    ID 0BC9
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_artist_1
+{
+    NAME artist
+    ID 0BCA
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_provisioner
+{
+    NAME provisioner
+    ID 0BCB
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_provisioner_1
+{
+    NAME provisioner
+    ID 0BCC
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_bowyer
+{
+    NAME bowyer
+    ID 0BCD
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_bowyer_1
+{
+    NAME bowyer
+    ID 0BCE
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_bank
+{
+    NAME bank
+    ID 0C0B
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_bank_1
+{
+    NAME bank
+    ID 0C0C
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_theater
+{
+    NAME theater
+    ID 0C0D
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_theater_1
+{
+    NAME theater
+    ID 0C0E
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_armaments_guild
+{
+    NAME Armaments Guild
+    ID 0BD3
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_armaments_guild_1
+{
+    NAME Armaments Guild
+    ID 0BD4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_armorers_guild
+{
+    NAME Armorers Guild
+    ID 0BD5
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_armorers_guild_1
+{
+    NAME Armorers Guild
+    ID 0BD6
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_blacksmiths_guild
+{
+    NAME Blacksmiths Guild
+    ID 0BD7
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_blacksmiths_guild_1
+{
+    NAME Blacksmiths Guild
+    ID 0BD8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_weapons_guild
+{
+    NAME Weapons Guild
+    ID 0BD9
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_weapons_guild_1
+{
+    NAME Weapons Guild
+    ID 0BDA
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_bardic_guild
+{
+    NAME Bardic Guild
+    ID 0BDB
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_bardic_guild_1
+{
+    NAME Bardic Guild
+    ID 0BDC
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_barders_guild
+{
+    NAME Barders Guild
+    ID 0BDD
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_barders_guild_1
+{
+    NAME Barders Guild
+    ID 0BDE
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_provisioners_guild
+{
+    NAME Provisioners Guild
+    ID 0BDF
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_provisioners_guild_1
+{
+    NAME Provisioners Guild
+    ID 0BE0
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_traders_guild
+{
+    NAME Traders Guild
+    ID 0BE1
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_traders_guild_1
+{
+    NAME Traders Guild
+    ID 0BE2
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_cooks_guild
+{
+    NAME Cooks Guild
+    ID 0BE3
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_cooks_guild_1
+{
+    NAME Cooks Guild
+    ID 0BE4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_healers_guild
+{
+    NAME Healers Guild
+    ID 0BE5
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_healers_guild_1
+{
+    NAME Healers Guild
+    ID 0BE6
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_mages_guild
+{
+    NAME Mages Guild
+    ID 0BE7
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_mages_guild_1
+{
+    NAME Mages Guild
+    ID 0BE8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_sorcerers_guild
+{
+    NAME Sorcerers Guild
+    ID 0BE9
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_sorcerers_guild_1
+{
+    NAME Sorcerers Guild
+    ID 0BEA
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_illusionists_guild
+{
+    NAME Illusionists Guild
+    ID 0BEB
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_illusionists_guild_1
+{
+    NAME Illusionists Guild
+    ID 0BEC
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_miners_guild
+{
+    NAME Miners Guild
+    ID 0BED
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_miners_guild_1
+{
+    NAME Miners Guild
+    ID 0BEE
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_archers_guild
+{
+    NAME Archers Guild
+    ID 0BEF
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_archers_guild_1
+{
+    NAME Archers Guild
+    ID 0BF0
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_seamans_guild
+{
+    NAME Seamans Guild
+    ID 0BF1
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_seamans_guild_1
+{
+    NAME Seamans Guild
+    ID 0BF2
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_fishermans_guild
+{
+    NAME Fishermans Guild
+    ID 0BF3
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_fishermans_guild_1
+{
+    NAME Fishermans Guild
+    ID 0BF4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_sailors_guild
+{
+    NAME Sailors Guild
+    ID 0BF5
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_sailors_guild_1
+{
+    NAME Sailors Guild
+    ID 0BF6
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_shipwrights_guild
+{
+    NAME Shipwrights Guild
+    ID 0BF7
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_shipwrights_guild_1
+{
+    NAME Shipwrights Guild
+    ID 0BF8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tailors_guild
+{
+    NAME Tailors Guild
+    ID 0BF9
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tailors_guild_1
+{
+    NAME Tailors Guild
+    ID 0BFA
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_thieves_guild
+{
+    NAME Thieves Guild
+    ID 0BFB
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_thieves_guild_1
+{
+    NAME Thieves Guild
+    ID 0BFC
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_rouges_guild
+{
+    NAME Rogues Guild
+    ID 0BFD
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_rouges_guild_1
+{
+    NAME Rogues Guild
+    ID 0BFE
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_assassins_guild
+{
+    NAME Assassins Guild
+    ID 0BFF
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_assassins_guild_1
+{
+    NAME Assassins Guild
+    ID 0C00
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tinkers_guild
+{
+    NAME Tinkers Guild
+    ID 0C01
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_tinkers_guild_1
+{
+    NAME Tinkers Guild
+    ID 0C02
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_warriors_guild
+{
+    NAME Warriors Guild
+    ID 0C03
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_warriors_guild_1
+{
+    NAME Warriors Guild
+    ID 0C04
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_cavalry_guild
+{
+    NAME Cavalry Guild
+    ID 0C05
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_cavalry_guild_1
+{
+    NAME Cavalry Guild
+    ID 0C06
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_fighters_guild
+{
+    NAME Fighters Guild
+    ID 0C07
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_fighters_guild_1
+{
+    NAME Fighters Guild
+    ID 0C08
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_merchants_guild
+{
+    NAME Merchants Guild
+    ID 0C09
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_merchants_guild_1
+{
+    NAME Merchants Guild
+    ID 0C0A
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_wooden_sign
+{
+    NAME wooden sign
+    ID 0BCF
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_wooden_sign_1
+{
+    NAME wooden sign
+    ID 0BD0
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_brass_sign
+{
+    NAME brass sign
+    ID 0BD1
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_brass_sign_1
+{
+    NAME brass sign
+    ID 0BD2
+    TYPE $itype_gumpmenu
+    MOREX 4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_sign
+{
+    NAME sign
+    ID 1F29
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_sign_1
+{
+    NAME sign
+    ID 1F28
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_beekeeper
+{
+    NAME beekeeper
+    ID 0C43
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_beekeeper_1
+{
+    NAME beekeeper
+    ID 0C44
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_brass_sign_2
+{
+    NAME brass sign
+    ID 0BD1
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_brass_sign_3
+{
+    NAME brass sign
+    ID 0BD2
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Signs
+}
+
+SECTION ITEM $item_lamp_post
+{
+    ID 0B20
+    DIR 1
+    NAME A lit lamppost
+}
+
+SECTION ITEM $item_an_unlit_lamppost
+{
+    NAME An unlit lamppost
+    ID 0B21
+}
+
+SECTION ITEM $item_lamp_post_1
+{
+    ID 0B22
+    DIR 1
+    NAME A lit lamp post
+    TRIGGER $itrg_light_lamp_post_2
+}
+
+SECTION ITEM $item_lamp_post_2
+{
+    ID 0B23
+}
+
+SECTION ITEM $item_lamp_post_3
+{
+    ID 0B24
+    
+    TRIGGER $itrg_light_lamp_post_1
+}
+
+SECTION ITEM $item_lamp_post_4
+{
+    ID 0B25
+}
+
+SECTION ITEM $item_wall_torch
+{
+    ID 0A08
+    TRIGGER $itrg_light_n-s_torch
+}
+
+SECTION ITEM $item_wall_torch_1
+{
+    ID 0A0E
+    TRIGGER $itrg_light_e-w_torch
+}
+
+//////// lighthouse pieces ////////////
+
+SECTION ITEM $item_lighthouse
+{ lighthouse 1
+    ID 1AA4
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_1
+{ lighthouse 2
+    ID 1AA5
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_2
+{ lighthouse 3
+    ID 1AA6
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_3
+{ lighthouse 4
+    ID 1AA7
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_4
+{ lighthouse 5
+    ID 1AA8
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_5
+{ lighthouse 6
+    ID 1AA9
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_6
+{ lighthouse 7
+    ID 1AAA
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_7
+{ lighthouse 8
+    ID 1AAB
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_8
+{ lighthouse 9
+    ID 1AAC
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_9
+{ lighthouse 10
+    ID 1AAD
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_A
+{ lighthouse 11
+    ID 1AAE
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_B
+{ lighthouse 12
+    ID 1AAF
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_C
+{ lighthouse 13
+    ID 1AB0
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_D
+{ lighthouse 14
+    ID 1AB1
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_E
+{ lighthouse 15
+    ID 1AB2
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_F
+{ lighthouse 16
+    ID 1AB3
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_G
+{ lighthouse 17
+    ID 1AB4
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_H
+{ lighthouse 18
+    ID 1AB5
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_I
+{ lighthouse 19
+    ID 1AB6
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_J
+{ lighthouse 20
+    ID 1AB7
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_K
+{ lighthouse 21
+    ID 1AB8
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_L
+{ lighthouse 22
+    ID 1AB9
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_M
+{ lighthouse 23
+    ID 1ABA
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_N
+{ lighthouse 24
+    ID 1ABC
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_O
+{ lighthouse 25
+    ID 1ABD
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_P
+{ lighthouse 26
+    ID 1ABC
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Q
+{ lighthouse 27
+    ID 1ABD
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_R
+{ lighthouse 28
+    ID 1ABE
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_S
+{ lighthouse 29
+    ID 1ABF
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_T
+{ lighthouse 30
+    ID 1AC0
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_U
+{ lighthouse 31
+    ID 1AC1
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_V
+{ lighthouse 32
+    ID 1AC2
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_W
+{ lighthouse 33
+    ID 1AC3
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_X
+{ lighthouse 34
+    ID 1AC4
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Y
+{ lighthouse 35
+    ID 1AC5
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z
+{ lighthouse 36
+    ID 1AC6
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z1
+{ lighthouse 37
+    ID 1AC7
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z2
+{ lighthouse 38
+    ID 1AC8
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z3
+{ lighthouse 39
+    ID 1AC9
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z4
+{ lighthouse 40
+    ID 1ACA
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z5
+{ lighthouse 41
+    ID 1ACB
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z6
+{ lighthouse 42
+    ID 1ACC
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z7
+{ lighthouse 43
+    ID 1ACD
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z8
+{ lighthouse 44
+    ID 1ACE
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_Z9
+{ lighthouse 45
+    ID 1ACF
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_ZA
+{ lighthouse 46
+    ID 1AD1
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_ZB
+{ lighthouse 47
+    ID 1AD2
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_ZC
+{ lighthouse 48
+    ID 1AD0
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+SECTION ITEM $item_lighthouse_ZD
+{ lighthouse 49
+    ID 1ABB
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Lighthouse
+}
+
+
+///////  telescope pieces ///////////
+
+
+SECTION ITEM $item_telescope
+{ telescope 1
+    ID 1459
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_1
+{ telescope 2
+    ID 145A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_2
+{ telescope 3
+    ID 145B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_3
+{ telescope 4
+    ID 145C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_4
+{ telescope 5
+    ID 145D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_5
+{ telescope 6
+    ID 145E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_6
+{ telescope 7
+    ID 145F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_7
+{ telescope 8
+    ID 1460
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_8
+{ telescope 9
+    ID 1461
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_9
+{ telescope 10
+    ID 1462
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_A
+{ telescope 11
+    ID 1463
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_B
+{ telescope 12
+    ID 1464
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_C
+{ telescope 13
+    ID 1465
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_D
+{ telescope 14
+    ID 1466
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_E
+{ telescope 15
+    ID 1467
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_F
+{ telescope 16
+    ID 1468
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_G
+{ telescope 17
+    ID 1469
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_H
+{ telescope 18
+    ID 146A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_I
+{ telescope 19
+    ID 146B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_J
+{ telescope 20
+    ID 146C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_K
+{ telescope 21
+    ID 146D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_L
+{ telescope 22
+    ID 146E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_M
+{ telescope 23
+    ID 146F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_N
+{ telescope 24
+    ID 1470
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_O
+{ telescope 25
+    ID 1471
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_P
+{ telescope 26
+    ID 1472
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Q
+{ telescope 27
+    ID 1473
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_R
+{ telescope 28
+    ID 1474
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_S
+{ telescope 29
+    ID 1475
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_T
+{ telescope 30
+    ID 1476
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_U
+{ telescope 31
+    ID 1477
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_V
+{ telescope 32
+    ID 1478
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_W
+{ telescope 33
+    ID 1479
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_X
+{ telescope 34
+    ID 147A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Y
+{ telescope 35
+    ID 147B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z
+{ telescope 36
+    ID 147C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z1
+{ telescope 37
+    ID 147D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z2
+{ telescope 38
+    ID 147E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z3
+{ telescope 39
+    ID 147F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z4
+{ telescope 40
+    ID 1480
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z5
+{ telescope 41
+    ID 1481
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z6
+{ telescope 42
+    ID 1482
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z7
+{ telescope 43
+    ID 1483
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z8
+{ telescope 44
+    ID 1484
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_Z9
+{ telescope 45
+    ID 1485
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZA
+{ telescope 46
+    ID 1486
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZB
+{ telescope 47
+    ID 1487
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZC
+{ telescope 48
+    ID 1488
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZD
+{ telescope 49
+    ID 1489
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZE
+{ telescope 50
+    ID 1490
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZF
+{ telescope 51
+    ID 1491
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZG
+{ telescope 52
+    ID 1492
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZH
+{ telescope 53
+    ID 1493
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZI
+{ telescope 54
+    ID 1494
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZJ
+{ telescope 55
+    ID 1495
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZK
+{ telescope 56
+    ID 1496
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZL
+{ telescope 57
+    ID 1497
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZM
+{ telescope 58
+    ID 1498
+    NODECAY
+}
+
+SECTION ITEM $item_telescope_ZN
+{ telescope 59
+    ID 1499
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZO
+{ telescope 60
+    ID 149A
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZP
+{ telescope 61
+    ID 148A
+    NODECAY
+}
+
+SECTION ITEM $item_telescope_ZQ
+{ telescope 62
+    ID 148B
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZR
+{ telescope 63
+    ID 148C
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZS
+{ telescope 64
+    ID 148D
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZT
+{ telescope 65
+    ID 148E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+SECTION ITEM $item_telescope_ZU
+{ telescope 66
+    ID 148F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Telescope
+}
+
+/////// Arbitoir pieces /////////////
+
+SECTION ITEM $item_altar
+{ Arbitoir 1
+    ID 1213
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_1
+{ Arbitoir 2
+    ID 1214
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_2
+{ Arbitoir 3
+    ID 1215
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_3
+{ Arbitoir 4
+    ID 120E
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_4
+{ Arbitoir 5
+    ID 120F
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_5
+{ Arbitoir 6
+    ID 1210
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_6
+{ Arbitoir 7
+    ID 1211
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_altar_7
+{ Arbitoir 8
+    ID 1212
+    NODECAY
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Albitoir
+}
+
+SECTION ITEM $item_pentagram
+{ PENTAGRAM1
+    ID 0fe6
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_1
+{ PENTAGRAM2
+    ID 0fe7
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_2
+{PENTAGRAM3
+    ID 0fe8
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_3
+{ PENTAGRAM4
+    ID 0fe9
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_4
+{
+    ID 0fea
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_5
+{
+    ID 0feb
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_6
+{
+    ID 0fec
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_7
+{
+    ID 0fed
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+SECTION ITEM $item_pentagram_8
+{
+    ID 0fee
+
+    ///CATEGORY Puzzle Pieces
+    ///SUBSECTION Pentagram
+}
+
+///////////////////////////
+// All Paintings Section///
+///////////////////////////
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EC8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_1
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EC9
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_2
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA8
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_3
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA0
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_4
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA1
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_5
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA2
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_6
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA3
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_7
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA4
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_8
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA5
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_9
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA6
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+SECTION ITEM $item_painting_recoverd_from_a_shipwreck_A
+{
+    NAME painting recoverd from a shipwreck
+    ID 0EA7
+
+    ///CATEGORY Decorations
+    ///SUBSECTION Painting
+}
+
+/////////////////////
+// End Of Paintings//
+////////////////////
+

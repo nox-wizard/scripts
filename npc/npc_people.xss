@@ -1,0 +1,2562 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_people.xss)                                 ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// ##########################################
+// #    Start Of The People Section         #
+// ##########################################
+
+SECTION NPC $npc_chaos_guard_f
+{
+    NAMELIST $names_females
+    //$$ chaos guard f
+    TITLE a chaos guard
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    TOTAME  1100
+    STR 1000 1500
+    DEX 1000 1000
+    INT 450 500
+    KARMA 10000
+    FAME 10000
+    PARRYING 990 1000
+    MAGICRESISTANCE 990 1000
+    TACTICS 990 1000
+    WRESTLING 990 1000
+    DAMAGE 1000 1000
+    DEF 100
+    BACKPACK
+    NPCWANDER 4
+    ITEM $item_iron_chaos_shield
+    ITEM plate_iron_female_plate
+    ITEM $item_leather_skirt
+    ITEM $item_iron_halberd
+    ITEM $item_iron_viking_sword
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    NPCAI $npc_ai_chaosguard
+    NOTRAIN
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Chaos Guard [F]
+}
+
+SECTION NPC $npc_chaos_guard_m
+{
+    NAMELIST $names_males
+    //$$ chaos guard m
+    TITLE a chaos guard
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION S
+    TOTAME  1100
+    STR 1000 1500
+    DEX 1000 1000
+    INT 450 500
+    KARMA 10000
+    FAME 10000
+    PARRYING 990 1000
+    MAGICRESISTANCE 990 1000
+    TACTICS 990 1000
+    WRESTLING 990 1000
+    DAMAGE 1000 1000
+    DEF 100
+    BACKPACK
+    NPCWANDER 4
+    ITEM $item_iron_chaos_shield
+    ITEM $item_iron_platemail
+    ITEM $item_a_doublet
+    COLORLIST 2
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
+    ITEM $item_iron_viking_sword
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    NPCAI $npc_ai_chaosguard
+    NOTRAIN
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Chaos Guard [M]
+}
+
+SECTION NPC $npc_order_guard_f
+{
+    NAMELIST $names_females
+    //$$ order guard f
+    TITLE a order guard
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    TOTAME  1100
+    STR 1000 1500
+    DEX 1000 1000
+    INT 450 500
+    KARMA 10000
+    FAME 10000
+    PARRYING 990 1000
+    MAGICRESISTANCE 990 1000
+    TACTICS 990 1000
+    WRESTLING 990 1000
+    DAMAGE 1000 1000
+    DEF 100
+    BACKPACK
+    NPCWANDER 4
+    ITEM $item_iron_order_shield
+    ITEM plate_iron_female_plate
+    ITEM $item_leather_skirt
+    ITEM $item_iron_halberd
+    ITEM $item_iron_viking_sword
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    NPCAI $npc_ai_orderguard
+    NOTRAIN
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Order Guard [F]
+}
+
+SECTION NPC $npc_order_guard_m
+{
+    NAMELIST $names_males
+    //$$ order guard m
+    TITLE a order guard
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION S
+    TOTAME  1100
+    STR 1000 1500
+    DEX 1000 1000
+    INT 450 500
+    KARMA 10000
+    FAME 10000
+    PARRYING 990 1000
+    MAGICRESISTANCE 990 1000
+    TACTICS 990 1000
+    WRESTLING 990 1000
+    DAMAGE 1000 1000
+    DEF 100
+    BACKPACK
+    NPCWANDER 4
+    ITEM $item_iron_order_shield
+    ITEM $item_iron_platemail
+    ITEM $item_a_doublet
+    COLORLIST 2
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
+    ITEM $item_iron_viking_sword
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    NPCAI $npc_ai_orderguard
+    NOTRAIN
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Order Guard [M]
+}
+
+SECTION NPC $npc_dark_knight
+{
+    NAME Dark Knight
+    TITLE the personal guard
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION S
+    SPEECH $speech_guard
+    BACKPACK
+    ITEM $item_iron_platemail
+    COLOR 096c
+    ITEM $item_iron_plate_gorget
+    COLOR 096c
+    ITEM $item_iron_plate_gloves
+    COLOR 096c
+    ITEM $item_iron_plate_helm
+    COLOR 096c
+    ITEM $item_iron_plate_leggings
+    COLOR 096c
+    ITEM $item_cloak
+    COLOR 096c
+    ITEM $item_iron_plate_sleeves
+    COLOR 096c
+    ITEM $item_iron_halberd
+    TOTAME 1100
+    STR 1000 1500
+    DEX 1000 1000
+    INT 1000 1000
+    KARMA 500
+    FAME 500
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 100 100
+    DEF 18
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Dark Knight
+}
+
+SECTION NPC $npc_pirate_m
+{
+    NAMELIST $names_males
+    //$$ pirate m
+    TITLE the pirate
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    SKINLIST 16
+    DIRECTION E
+    SPEECH $speech_pirate
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM $item_iron_scimitar
+    ITEM $item_male_plain_hats_list
+    COLORLIST 11
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_male_fancy_footwear_list
+    COLORLIST 11
+    ITEM $item_male_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Pirate [M]
+}
+
+SECTION NPC $npc_pirate_f
+{
+    NAMELIST $names_females
+    //$$ pirate f
+    TITLE the pirate
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    SPEECH $speech_pirate
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM $item_iron_scimitar
+    ITEM $item_female_fancy_hats_list
+    COLORLIST 11
+    ITEM $item_female_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_female_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_female_fancy_footwear_list
+    ITEM $item_female_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_female_fancy_cape_list
+    COLORLIST 11
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    SWORDSMANSHIP 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Pirate [F]
+}
+
+SECTION NPC $npc_fighter_m
+{
+    NAMELIST $names_males
+    //$$ fighter m
+    TITLE the fighter
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_good
+    SPEECH $speech_fighter
+    SKINLIST 16
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM $item_iron_chain_coif
+    ITEM $item_iron_ringmail_tunic
+    ITEM $item_iron_ringmail_sleeves
+    ITEM $item_studded_leather_leggings
+    ITEM $item_wooden_shield
+    ITEM $item_iron_long_sword
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA 0
+    FAME 0
+    SWORDSMANSHIP 600 800
+    MACEFIGHTING 500 700
+    PARRYING 500 700
+    MAGICRESISTANCE 200 400
+    TACTICS 800 900
+    WRESTLING 700 800
+    DAMAGE 10 17
+    DEF 18
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Fighter [M]
+}
+
+SECTION NPC $npc_fighter_f
+{
+    NAMELIST $names_females
+    //$$ fighter f
+    TITLE the fighter
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_good
+    SPEECH $speech_fighter
+    SKINLIST 16
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM $item_iron_chain_coif
+    ITEM $item_iron_ringmail_tunic
+    ITEM $item_iron_ringmail_sleeves
+    ITEM $item_studded_leather_leggings
+    ITEM $item_wooden_shield
+    ITEM $item_iron_long_sword
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA 0
+    FAME 0
+    SWORDSMANSHIP 600 800
+    MACEFIGHTING 500 700
+    PARRYING 400 600
+    MAGICRESISTANCE 200 400
+    TACTICS 700 800
+    WRESTLING 500 800
+    DAMAGE 10 17
+    DEF 18
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Fighter [F]
+}
+
+SECTION NPC $npc_cultist_m
+{
+    NAMELIST $names_males
+    //$$ cultist m
+    TITLE the cultist
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION W
+    BACKPACK
+    ITEM $item_black_staff
+    ITEM $item_male_plain_hats_list
+    COLORLIST 1
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 1
+    ITEM $item_male_plain_pants_list
+    COLORLIST 1
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 1
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    GOLD 100 150
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_cultist
+    TOTAME 1100
+    STR 85 95
+    DEX 15 20
+    INT 50 75
+    KARMA -500
+    FAME 500
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    MACEFIGHTING 500 800
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    MAGERY 500 700
+    SPATTACK 7552
+    SPADELAY 10
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Cultist [M]
+}
+
+SECTION NPC $npc_cultist_f
+{
+    NAMELIST $names_females
+    //$$ cultist f
+    TITLE the cultist
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    NPCAI $npc_ai_evil
+    DIRECTION W
+    SPEECH $speech_cultist
+    BACKPACK
+    ITEM $item_female_plain_hats_list
+    COLORLIST 1
+    ITEM $item_female_plain_shirts_list
+    COLORLIST 1
+    ITEM $item_female_plain_pants_list
+    COLORLIST 1
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_robe_list
+    COLORLIST 1
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    GOLD 100 150
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    TOTAME 1100
+    STR 85 95
+    DEX 15 20
+    INT 50 75
+    KARMA -500
+    FAME 500
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    MACEFIGHTING 500 800
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    MAGERY 500 700
+    SPATTACK 7552
+    SPADELAY 10
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Cultist [M]
+}
+
+SECTION NPC $npc_sailor_m
+{
+    NAMELIST $names_males
+    //$$ sailor m
+    TITLE the sailor
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    BACKPACK
+    SKINLIST 16
+    SPEECH $speech_sailor
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM plate_iron_kryss
+    ITEM $item_male_plain_hats_list
+    COLORLIST 11
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_male_plain_pants_list
+    COLORLIST 11
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 11
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Sailor [M]
+}
+
+SECTION NPC $npc_sailor_f
+{
+    NAMELIST $names_females
+    //$$ sailor f
+    TITLE the sailor
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    BACKPACK
+    SPEECH $speech_sailor
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM plate_iron_kryss
+    ITEM $item_female_plain_hats_list
+    COLORLIST 11
+    ITEM $item_female_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_female_plain_pants_list
+    COLORLIST 11
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_robe_list
+    COLORLIST 11
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Sailor [F]
+}
+
+SECTION NPC $npc_brigand_m
+{
+    NAMELIST $names_males
+    //$$ brigand m
+    TITLE the brigand
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION W
+    BACKPACK
+    GOLD 150 200
+    ITEM $item_studded_leather_gloves
+    ITEM $item_leather_sleeves
+    ITEM $item_leather_leggings
+    ITEM $item_leather_tunic
+    ITEM plate_iron_spear
+    ITEM $item_a_leather_gorget
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 11
+    ITEM $item_male_plain_cape_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    SPEECH $speech_brigand
+    TOTAME 1100
+    STR 100 115
+    DEX 15 20
+    INT 50 75
+    KARMA -1000
+    FAME 1000
+    PARRYING 400 600
+    MAGICRESISTANCE 500 700
+    TACTICS 700 900
+    FENCING 700 850
+    WRESTLING 400 600
+    DAMAGE 4 15
+    DEF 15
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Brigand [M]
+}
+
+SECTION NPC $npc_brigand_f
+{
+    NAMELIST $names_females
+    //$$ brigand f
+    TITLE the brigand
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION W
+    BACKPACK
+    GOLD 150 200
+    ITEM $item_studded_leather_gloves
+    ITEM $item_leather_sleeves
+    ITEM $item_leather_leggings
+    ITEM $item_leather_tunic
+    ITEM plate_iron_spear
+    ITEM $item_a_leather_gorget
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_robe_list
+    COLORLIST 11
+    ITEM $item_female_plain_cape_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    SPEECH $speech_brigand
+    TOTAME 1100
+    STR 100 115
+    DEX 15 20
+    INT 50 75
+    KARMA -1000
+    FAME 1000
+    PARRYING 400 600
+    MAGICRESISTANCE 500 700
+    TACTICS 700 900
+    FENCING 700 850
+    WRESTLING 400 600
+    DAMAGE 4 15
+    DEF 15
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Brigand [F]
+}
+
+SECTION NPC $npc_beggar_m
+{
+    NAMELIST $names_males
+    //$$ beggar m
+    TITLE the beggar
+    NPCAI $npc_ai_beggar
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    BACKPACK
+    SKINLIST 16
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_male_plain_pants_list
+    COLORLIST 11
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_beggar
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    BEGGING 800 1000
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Beggar [M]
+}
+
+SECTION NPC $npc_beggar_f
+{
+    NAMELIST $names_females
+    //$$ beggar f
+    TITLE the beggar
+    NPCAI $npc_ai_beggar
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    BACKPACK
+    ITEM $item_female_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_female_plain_pants_list
+    COLORLIST 11
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_robe_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_beggar
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    BEGGING 800 1000
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Beggar [F]
+}
+
+SECTION NPC $npc_noble_m
+{
+    NAMELIST $names_males
+    //$$ noble m
+    TITLE the noble
+    SPEECH $speech_noble
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    BACKPACK
+    SKINLIST 16
+    DIRECTION N
+    GOLD 75
+    ITEM $item_iron_broadsword
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Noble [M]
+}
+
+SECTION NPC $npc_noble_f
+{
+    NAMELIST $names_females
+    //$$ noble f
+    TITLE the noble
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    BACKPACK
+    DIRECTION N
+    GOLD 75
+    ITEM $item_iron_broadsword
+    ITEM $item_female_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_female_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_female_fancy_footwear_list
+    ITEM $item_female_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_female_fancy_cape_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    SPEECH $speech_noble
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Noble [F]
+}
+
+SECTION NPC $npc_thief_m
+{
+    NAMELIST $names_males
+    //$$ thief m
+    TITLE the thief
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    SKINLIST 16
+    BACKPACK
+    ITEM plate_iron_kryss
+    ITEM $item_male_plain_hats_list
+    COLORLIST 11
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_male_plain_pants_list
+    COLORLIST 11
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 11
+    ITEM $item_male_plain_cape_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_thief
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    LOCKPICKING 500 700
+    STEALING 900 1000
+    SNOOPING 800 1000
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    NPCAI $npc_ai_good
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Thief [M]
+}
+
+SECTION NPC $npc_register_of_names
+{ Invul Spawner
+    NAMELIST $names_males
+    //$$ register of names
+    TITLE the Register of names
+    ID 0190
+    PRIV1 4
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    SPEECH $speech_register_of_names
+    SKINLIST 16
+    BACKPACK
+    NPCWANDER 0
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    NPCAI $npc_ai_good
+    TOTAME 1100
+    SHOPKEEPER
+    RSHOPITEM $item_deed
+    SELLITEM $item_deed
+    DOORUSE 1
+}
+
+SECTION NPC $npc_thief_f
+{
+    NAMELIST $names_females
+    //$$ thief f
+    TITLE the thief
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    BACKPACK
+    DIRECTION N
+    ITEM plate_iron_kryss
+    ITEM $item_female_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_female_plain_pants_list
+    COLORLIST 11
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_robe_list
+    COLORLIST 11
+    ITEM $item_female_plain_cape_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_thief
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    LOCKPICKING 500 700
+    STEALING 900 1000
+    SNOOPING 800 1000
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    NPCAI $npc_ai_good
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Thief [F]
+}
+
+SECTION NPC $npc_peasant_m
+{
+    NAMELIST $names_males
+    //$$ peasant m
+    TITLE the peasant
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    BACKPACK
+    DIRECTION N
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_male_plain_pants_list
+    COLORLIST 11
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_peasant
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Peasant [M]
+}
+
+SECTION NPC $npc_peasant_f
+{
+    NAMELIST $names_females
+    //$$ peasant f
+    TITLE the peasant
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    BACKPACK
+    ITEM $item_female_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_female_plain_pants_list
+    COLORLIST 11
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_robe_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_peasant
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Peasant [F]
+}
+
+SECTION NPC $npc_gypsy_m
+{
+    NAMELIST $names_males
+    //$$ gypsy m
+    TITLE the gypsy
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    ITEM plate_iron_kryss
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_male_plain_pants_list
+    COLORLIST 11
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_gypsy
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gypsy [M]
+}
+
+SECTION NPC $npc_gypsy_f
+{
+    NAMELIST $names_females
+    //$$ gypsy f
+    TITLE the gypsy
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    BACKPACK
+    ITEM plate_iron_kryss
+    ITEM $item_female_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_female_plain_pants_list
+    COLORLIST 11
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_robe_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_gypsy
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Gypsy [F]
+}
+
+SECTION NPC $npc_adventurer_m
+{
+    NAMELIST $names_males
+    //$$ adventurer m
+    TITLE the seeker of adventure
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    COLOR 0455
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_coif
+    ITEM $item_studded_leather_gloves
+    ITEM $item_iron_long_sword
+    ITEM $item_iron_bronze_shield
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_cape_list
+    COLORLIST 11
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    NPCWANDER 4
+    SPEECH $speech_seeker_of_adventure
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    SWORDSMANSHIP 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Adventurer [M]
+}
+
+SECTION NPC $npc_adventurer_f
+{
+    NAMELIST $names_females
+    //$$ adventurer f
+    TITLE the seeker of adventure
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_coif
+    ITEM $item_studded_leather_gloves
+    ITEM $item_iron_viking_sword
+    ITEM $item_iron_buckler
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_cape_list
+    COLORLIST 11
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    SPEECH $speech_seeker_of_adventure
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    SWORDSMANSHIP 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Adventurer [F]
+}
+
+SECTION NPC $npc_murderer
+{
+    NAMELIST $names_murderers
+    //$$ murderer
+    TITLE the murderer
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    GOLD 500 600
+    SPEECH $speech_strange_speech
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -5000
+    FAME 5000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 800
+    TACTICS 800 1000
+    SWORDSMANSHIP 800 900
+    WRESTLING 800 1000
+    DAMAGE 10 25
+    DEF 18
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Murderer[M]
+}
+
+SECTION NPC $npc_len_ikbaan
+{
+    NAME Len Ik'Baan
+    TITLE the Murderer
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    BACKPACK
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
+    ITEM $item_female_fancy_cape_list
+    COLORLIST 11
+    GOLD 500 600
+    SPEECH $speech_strange_speech
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -5000
+    FAME 5000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 800
+    TACTICS 800 1000
+    SWORDSMANSHIP 800 900
+    WRESTLING 800 1000
+    DAMAGE 10 25
+    DEF 18
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Murderer[F]
+}
+
+SECTION NPC $npc_sammy
+{
+    NAME Sammy
+    TITLE the little jerk
+    ID 01A4
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -1000
+    FAME 1000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 10 17
+    DEF 18
+    SPATTACK 4095
+    SPADELAY 10
+    MAGERY 500 700
+    SPEECH $speech_jeweler
+    NPCAI $npc_ai_evil
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_isabel
+{
+    NAME Isabel
+    TITLE the little brat
+    ID 01A7
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -1000
+    FAME 1000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 10 17
+    DEF 18
+    SPATTACK 4095
+    SPADELAY 10
+    MAGERY 500 700
+    SPEECH $speech_leatherworker
+    NPCAI $npc_ai_evil
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_mondain
+{
+    NAME Mondain
+    TITLE the Wizard
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    ITEM $item_black_staff
+    ITEM $item_a_wizards_hat
+    COLORLIST 11
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    TOTAME 1100
+    STR 500 800
+    DEX 15 20
+    INT 500 1000
+    KARMA -10000
+    FAME 10000
+    PARRYING 900 1000
+    MAGICRESISTANCE 900 1000
+    TACTICS 900 1000
+    WRESTLING 900 1000
+    DAMAGE 15 25
+    DEF 25
+    SPATTACK 7552
+    SPADELAY 10
+    MAGERY 1000
+    SPEECH $speech_mondain
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_jailor_m
+{
+    NAMELIST $names_males
+    //$$ jailor m
+    TITLE the jailor
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_coif
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_broadsword
+    ITEM $item_iron_bronze_shield
+    ITEM $item_male_fancy_footwear_list
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    SPEECH $speech_guard
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Jailor [M]
+}
+
+SECTION NPC $npc_jailor_f
+{
+    NAMELIST $names_females
+    //$$ jailor f
+    TITLE the jailor
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_coif
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_bronze_shield
+    ITEM $item_female_fancy_footwear_list
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    TOTAME 1100
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    SPEECH $speech_guard
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Jailor [F]
+}
+
+SECTION NPC $npc_billy
+{
+    NAME Billy
+    TITLE the little jerk
+    ID 01A5
+    SKINLIST 16
+    DIRECTION N
+    SPEECH $speech_jeweler
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -1000
+    FAME 1000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 10 17
+    DEF 18
+    SPATTACK 4095
+    SPADELAY 10
+    MAGERY 500 700
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Characters
+}
+
+SECTION NPC $npc_cassandra
+{
+    NAME Cassandra
+    TITLE the little brat
+    ID 01A6
+    SKINLIST 16
+    DIRECTION N
+    SPEECH $speech_leatherworker
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -1000
+    FAME 1000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 10 17
+    DEF 18
+    SPATTACK 4095
+    SPADELAY 10
+    MAGERY 500 700
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Characters
+}
+
+SECTION NPC $npc_towncrier_m
+{
+    NAMELIST $names_males
+    //$$ towncrier m
+    TITLE the Town Crier
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION E
+    STR 40 50
+    DEX 15 20
+    INT 40 50
+    KARMA 0
+    FAME 0
+    SPEECH $speech_town_crier
+    DAMAGE 8 16
+    DEF 8
+    NPCWANDER 0
+    TOTAME 1100
+    HEALING 50 100
+    BACKPACK
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    PRIV1 4
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Towncrier [M]
+}
+
+SECTION NPC $npc_towncrier_f
+{
+    NAMELIST $names_females
+    //$$ towncrier f
+    TITLE the town crier
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    STR 40 50
+    DEX 15 20
+    INT 40 50
+    KARMA 0
+    FAME 0
+    SPEECH $speech_town_crier
+    MAGICRESISTANCE 200 300
+    ARCHERY 200 500
+    TACTICS 200 500
+    SWORDSMANSHIP 200 500
+    MACEFIGHTING 200 500
+    FENCING 200 500
+    WRESTLING 200 500
+    DAMAGE 3 15
+    DEF 8
+    NPCWANDER 0
+    TOTAME 1100
+    HEALING 50 100
+    BACKPACK
+    ITEM $item_female_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_female_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_female_fancy_footwear_list
+    ITEM $item_female_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_female_fancy_cape_list
+    COLORLIST 11
+    PRIV1 4
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Towncrier [F]
+}
+
+SECTION NPC $npc_veterinarian_m
+{
+    NAMELIST $names_males
+    //$$ veterinarian m
+    TITLE the veterinarian
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION E
+    STR 40 50
+    DEX 15 20
+    INT 60 70
+    KARMA 0
+    FAME 0
+    SPEECH $speech_animal_trainer
+    ANIMALLORE 400 600
+    VETERINARY 550 780
+    DAMAGE 3 15
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 1100
+    HEALING 50 100
+    BACKPACK
+    ITEM $item_male_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_male_plain_pants_list
+    COLORLIST 11
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_male_plain_robe_list
+    COLORLIST 11
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Veterinarian [M]
+}
+
+SECTION NPC $npc_veterinarian_f
+{
+    NAMELIST $names_females
+    //$$ veterinarian f
+    TITLE the veterinarian
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION E
+    STR 40 50
+    DEX 15 20
+    INT 60 70
+    KARMA 0
+    FAME 0
+    SPEECH $speech_animal_trainer
+    ANIMALLORE 550 780
+    MAGICRESISTANCE 200 300
+    ARCHERY 200 500
+    TACTICS 200 500
+    VETERINARY 550 780
+    SWORDSMANSHIP 200 500
+    MACEFIGHTING 200 500
+    FENCING 200 500
+    WRESTLING 200 500
+    DAMAGE 8 16
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    HEALING 50 100
+    BACKPACK
+    ITEM $item_female_plain_shirts_list
+    COLORLIST 11
+    ITEM $item_female_plain_pants_list
+    COLORLIST 11
+    ITEM $item_female_plain_footwear_list
+    ITEM $item_female_plain_robe_list
+    COLORLIST 11
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Veterinarian [f]
+}
+
+SECTION NPC $npc_artist_m
+{
+    NAMELIST $names_males
+    //$$ artist m
+    TITLE the artist
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION E
+    STR 15 30
+    DEX 15 20
+    INT 15 30
+    KARMA 0
+    FAME 0
+    SPEECH $speech_artist
+    DAMAGE 8 16
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    HEALING 50 100
+    BACKPACK
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Artist [M]
+}
+
+SECTION NPC $npc_artist_f
+{
+    NAMELIST $names_females
+    //$$ artist f
+    TITLE the artist
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION E
+    STR 15 30
+    DEX 15 20
+    INT 15 30
+    KARMA 0
+    FAME 0
+    SPEECH $speech_artist
+    DEF 8
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    HEALING 50 100
+    BACKPACK
+    GOLD 0 50
+    ITEM $item_female_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_female_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_female_fancy_footwear_list
+    ITEM $item_female_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_female_fancy_cape_list
+    COLORLIST 11
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Artist [F]
+}
+
+SECTION NPC $npc_archmage
+{
+    NAMELIST $names_necromancers
+    //$$ archmage
+    TITLE the arch-mage
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    GOLD 350 500
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_a_wizards_hat
+    COLORLIST 1
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 1
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 1
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_robe_list
+    COLORLIST 1
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 1
+    SPEECH $speech_mage
+    TOTAME 1100
+    STR 150 175
+    DEX 15 20
+    INT 500 750
+    KARMA -3000
+    FAME 3000
+    PARRYING 400 600
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    TACTICS 600 800
+    WRESTLING 700 900
+    DAMAGE 3 10
+    DEF 10
+    SPATTACK 7552
+    SPADELAY 10
+    MAGERY 900 990
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Archmage
+}
+
+SECTION NPC $npc_akbaar
+{
+    NAME Akbaar
+    TITLE the murderous arch-mage
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_male_fancy_robe_list
+    COLORLIST 1
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 1
+    GOLD 500 600
+    SPEECH $speech_brigand
+    TOTAME 1100
+    STR 150 175
+    DEX 15 20
+    INT 250 500
+    KARMA -5000
+    FAME 5000
+    PARRYING 800 1000
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 5 15
+    DEF 18
+    SPATTACK 7552
+    SPADELAY 10
+    MAGERY 900 990
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_kindor_aedrat
+{
+    NAME Kindor Aedrat
+    TITLE the murderous archer
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_bow
+    PACKITEM $item_arrow 100
+    ITEM $item_male_plain_robe_list
+    COLORLIST 1
+    ITEM $item_male_plain_cape_list
+    COLORLIST 1
+    GOLD 500 600
+    SPEECH $speech_strange_speech
+    TOTAME 1100
+    STR 150 175
+    DEX 15 45
+    INT 75 100
+    KARMA -5000
+    FAME 5000
+    PARRYING 800 1000
+    MAGICRESISTANCE 600 800
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    ARCHERY 800 1000
+    DAMAGE 5 15
+    DEF 18
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_quest_knight_m
+{
+    NAMELIST $names_males
+    //$$ quest knight m
+    TITLE a Quest Knight
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    SPEECH $speech_none
+    BACKPACK
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_viking_sword
+    STR 50 66
+    DEX 15 20
+    INT 50 64
+    KARMA 2000
+    FAME 2000
+    PARRYING 500 600
+    MAGICRESISTANCE 100 220
+    TACTICS 475 625
+    WRESTLING 475 575
+    DAMAGE 6 12
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_good
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Quest Knight [M]
+}
+
+// Henchman Master
+SECTION NPC $npc_henchman_master
+{
+    NAMELIST $names_males
+    //$$ henchman master
+    TITLE the Henchman Master
+    ID 0190
+    PRIV1 4
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    ITEM $item_boots
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_ringmail_gloves
+    ITEM $item_iron_ringmail_sleeves
+    ITEM $item_iron_chain_leggings
+    DIRECTION E
+    STR 60 70
+    DEX 0 0
+    INT 40 50
+    KARMA 0
+    FAME 0
+    SPEECH $speech_animal_trainer
+    DAMAGE 3 15
+    DEF 5
+    NPCWANDER 3
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 30
+    TOTAME 1100
+    BACKPACK
+    GOLD 0 50
+    SHOPKEEPER
+    RSHOPITEM $item_weak_henchman
+    RSHOPITEM $item_medium_henchman
+    RSHOPITEM $item_strong_henchman
+    SELLITEM $item_weak_henchman
+    SELLITEM $item_medium_henchman
+    SELLITEM $item_strong_henchman
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Henchman Master
+}
+
+// weak henchman
+SECTION NPC $npc_henchman_weak
+{
+    NAMELIST $names_males
+    //$$ henchman weak
+    TITLE the henchman
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    NPCAI $npc_ai_healer
+    SPEECH $speech_fighter
+    SKINLIST 16
+    BACKPACK
+    NPCWANDER 3
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM $item_leather_cap
+    ITEM $item_leather_gloves
+    ITEM $item_a_leather_gorget
+    ITEM $item_leather_leggings
+    ITEM $item_leather_sleeves
+    ITEM $item_leather_tunic
+    ITEM
+    ITEM
+    ITEM $item_male_plain_footwear_list
+    TOTAME 110
+    STR 50 75
+    DEX 50 75
+    INT 50 75
+    KARMA 0
+    FAME 0
+    SWORDSMANSHIP 300 500
+    MACEFIGHTING 300 500
+    PARRYING 300 500
+    MAGICRESISTANCE 300 500
+    TACTICS 300 500
+    WRESTLING 300 500
+    DAMAGE 3 15
+    DEF 0
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Henchman Weak
+}
+
+// strong henchman
+SECTION NPC $npc_henchman_strong
+{
+    NAMELIST $names_males
+    //$$ henchman strong
+    TITLE the henchman
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    NPCAI $npc_ai_healer
+    SPEECH $speech_fighter
+    SKINLIST 16
+    BACKPACK
+    NPCWANDER 3
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM $item_iron_nose_helm
+    ITEM $item_iron_chain_leggings
+    ITEM $item_iron_chain_tunic
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_plate_gorget
+    ITEM
+    ITEM
+    ITEM $item_male_plain_footwear_list
+    TOTAME 110
+    STR 100 125
+    DEX 100 125
+    INT 100 125
+    KARMA 0
+    FAME 0
+    SWORDSMANSHIP 700 900
+    MACEFIGHTING 700 900
+    PARRYING 700 900
+    MAGICRESISTANCE 700 900
+    TACTICS 700 900
+    WRESTLING 700 900
+    DAMAGE 8 40
+    DEF 0
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Henchman Strong
+}
+
+// medium henchman
+SECTION NPC $npc_henchman_mid
+{
+    NAMELIST $names_males
+    //$$ henchman mid
+    TITLE the henchman
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    NPCAI $npc_ai_healer
+    SPEECH $speech_fighter
+    SKINLIST 16
+    BACKPACK
+    NPCWANDER 3
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    ITEM $item_male_plain_footwear_list
+    ITEM $item_a_orc_helm
+    ITEM $item_studded_leather_gloves
+    ITEM $item_studded_leather_gorget
+    ITEM $item_studded_leather_leggings
+    ITEM $item_studded_leather_sleeves
+    ITEM $item_studded_leather_tunic
+    ITEM
+    ITEM
+    TOTAME 110
+    STR 75 100
+    DEX 75 100
+    INT 75 100
+    KARMA 0
+    FAME 0
+    SWORDSMANSHIP 500 700
+    MACEFIGHTING 500 700
+    PARRYING 500 700
+    MAGICRESISTANCE 500 700
+    TACTICS 500 700
+    WRESTLING 500 700
+    DAMAGE 5 25
+    DEF 0
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Henchman Medium
+}
+
+SECTION NPC $npc_slut
+{
+    NAMELIST $names_females
+    //$$ slut
+    TITLE the slut
+    ID 0191
+    SKIN 83ea
+    BACKPACK
+    ITEM $item_random_female_hair_list
+    COLOR 00ee
+    COLORMATCHHAIR
+    DIRECTION W
+    TOTAME 1100
+    STR 76 95
+    DEX 15 20
+    INT 26 40
+    STEALING 900
+    KARMA -5000
+    FAME 0
+    NPCWANDER 2
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Slut
+}
+
+SECTION NPC $npc_mage_f_1
+{
+    NAMELIST $names_males
+    TITLE the mage
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_a_wizards_hat
+    COLORLIST 2
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 2
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 2
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_robe_list
+    COLORLIST 2
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 2
+    SPEECH $speech_mage
+    STR 130 160
+    DEX 40 80
+    INT 75 140
+    KARMA -5000
+    FAME 3500
+    TOTAME 1100
+    MAGERY 800 1000
+    TACTICS 700 800
+    PARRYING 600 800
+    WRESTLING 700 800
+    MACEFIGHTING 600 700
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    DAMAGE 3 15
+    DEF 5
+    SPATTACK 7552
+    SPADELAY 10
+    GOLD 80 150
+    NPCAI $npc_ai_evil
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Mage
+}
+
+SECTION NPC $npc_mage_m_2
+{
+    NAMELIST $names_males
+    TITLE the mage
+    ID 0191
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    SPEECH $speech_mage
+    STR 130 160
+    DEX 40 80
+    INT 75 140
+    KARMA -2000
+    FAME 2500
+    TOTAME 1100
+    MAGERY 800 1000
+    TACTICS 700 800
+    PARRYING 600 800
+    WRESTLING 700 800
+    MACEFIGHTING 600 700
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    DAMAGE 3 15
+    DEF 5
+    SPATTACK 7552
+    SPADELAY 10
+    GOLD 10 50
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Mage
+}
+
+SECTION NPC $npc_mage_m_3
+{
+    NAMELIST $names_males
+    TITLE the mage
+    ID 0191
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    COLORMATCHHAIR
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_a_robe
+    COLORLIST 2
+    SPEECH $speech_mage
+    STR 130 160
+    DEX 40 80
+    INT 75 140
+    KARMA -5000
+    FAME 3500
+    TOTAME 1100
+    MAGERY 800 1000
+    TACTICS 700 800
+    PARRYING 600 800
+    WRESTLING 700 800
+    MACEFIGHTING 600 700
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    DAMAGE 3 15
+    DEF 5
+    SPATTACK 7552
+    SPADELAY 10
+    GOLD 10 50
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Mage
+}
+
+SECTION NPC $npc_guildmaster_mage_m
+{
+    NAMELIST $names_males
+    TITLE the guildmaster mage
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_a_robe
+    COLORLIST 2
+    SPEECH $speech_mage
+    STR 130 160
+    DEX 40 80
+    INT 75 140
+    KARMA -2000
+    FAME 2500
+    TOTAME 1100
+    MAGERY 800 1000
+    TACTICS 700 800
+    PARRYING 600 800
+    WRESTLING 700 800
+    MACEFIGHTING 600 700
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    DAMAGE 3 15
+    DEF 5
+    SPATTACK 7552
+    SPADELAY 10
+    GOLD 10 50
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Guildmaster Mage
+}
+
+
+

@@ -1,0 +1,545 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_orcs.xss)                                   ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update 28-nov-2001                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//*************************************************
+//*************************************************
+//******************** Orcs ***********************
+//*************************************************
+//*************************************************
+
+// Orc with punching
+
+SECTION NPC $npc_orc
+{
+    //$$ orc
+    NAMELIST $names_orcs
+    ID 0011
+    SKIN 0000
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    PACKITEM $item_butcher_knife
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    GOLD 0 50
+    STR 96 120
+    DEX 15 20
+    INT 36 60
+    KARMA -1000
+    FAME 1000
+    ORCTALKS 1
+    MAGICRESISTANCE 500 750
+    TACTICS 200 300
+    WRESTLING 200 300
+    PARRYING 500 750
+    DAMAGE 3 9
+    DEF 14
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_orc
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc (with punching)
+}
+
+// Orc with macefighting weapon
+
+SECTION NPC $npc_orc_mace
+{
+    NAMELIST $names_orcs
+    //$$ orc mace
+    ID 0029
+    SKIN 0000
+    DIRECTION E
+    BACKPACK
+    ITEM $item_iron_mace
+    GOLD 0 50
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    LOOT $loot_medium_maces
+    SPEECH $speech_orcish
+    STR 96 120
+    DEX 15 20
+    INT 36 60
+    KARMA -1000
+    FAME 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 750 800
+    MACEFIGHTING 800
+    WRESTLING 500 700
+    PARRYING 500 700
+    DAMAGE 8 32
+    DEF 14
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_orc
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc Macefighter
+}
+
+// Orc mage
+
+SECTION NPC $npc_an_orcish_mage
+{
+    NAME an orcish mage
+    ID 0011
+    SKIN 03EA
+    DIRECTION E
+    SPEECH $speech_orcish
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    BACKPACK
+    PACKITEM $item_arrow 10
+    MAGICLEVEL 5
+    SPATTACK 7552
+    MAGICSPHERE $sphere_earthpeople
+    SPADELAY 7
+    MAGERY 500 750
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    GOLD 50 150
+    STR 96 120
+    DEX 15 20
+    INT 80 150
+    KARMA -4000
+    FAME 3500
+    MAGICRESISTANCE 500 750
+    TACTICS 550 800
+    WRESTLING 500 700
+    PARRYING 500 750
+    DAMAGE 3 9
+    SPEECH $speech_orcish
+    DEF 14
+    TOTAME 1100
+    RACE $race_orc
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc Mage
+}
+
+// Orc with two handed axes
+
+SECTION NPC $npc_orc_2_hand_axe
+{
+    //$$ orc 2 hand axe
+    NAMELIST $names_orcs
+    ID 0007
+    SKIN 0000
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    ITEM $item_iron_ringmail_tunic
+    PACKITEM $item_iron_ringmail_tunic
+    PACKITEM $item_boots
+    PACKITEM $item_a_orc_helm
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    LOOT $loot_large_axes
+    GOLD 50 100
+    STR 110 145
+    DEX 15 20
+    INT 36 60
+    KARMA -2500
+    FAME 2000
+    MAGICRESISTANCE 700 850
+    TACTICS 850 1000
+    WRESTLING 700 900
+    SWORDSMANSHIP 700 850
+    DAMAGE 6 36
+    DEF 17
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_orc
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc (with axe)
+}
+
+//Orcish Captain
+
+SECTION NPC $npc_orc_captain
+{
+    NAMELIST $names_orcs
+    //$$ orc captain
+    ID 0007
+    SKIN 0000
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    ITEM $item_iron_ringmail_tunic
+    PACKITEM $item_iron_ringmail_tunic
+    PACKITEM $item_thigh_boots
+    PACKITEM $item_a_orc_mask
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    LOOT $loot_large_axes
+    GOLD 50 150
+    STR 100 150
+    DEX 15 20
+    INT 50 110
+    KARMA -2000
+    FAME 2000
+    PARRYING 700 950
+    MAGICRESISTANCE 700 850
+    TACTICS 850 1000
+    SWORDSMANSHIP 700 850
+    DAMAGE 6 36
+    DEF 17
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_orc
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc Captain
+}
+
+// Orc Lord with two handed axes
+
+SECTION NPC $npc_an_orcish_lord
+{
+    NAME An Orcish Lord
+    ID 0007
+    SKIN 0000
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    ITEM $item_iron_ringmail_tunic
+    PACKITEM $item_iron_ringmail_tunic
+    PACKITEM $item_boots
+    PACKITEM $item_a_orc_mask
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    LOOT $loot_large_axes
+    GOLD 150 300
+    STR 150 320
+    DEX 15 20
+    INT 95 190
+    KARMA -4500
+    FAME 5500
+    MAGICRESISTANCE 700 850
+    TACTICS 750 900
+    WRESTLING 600 900
+    SWORDSMANSHIP 600 850
+    DAMAGE 6 36
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    RACE $race_orc
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Orcs
+    ///DESCRIPTION Orc Lord (with axe)
+}
+
+
+//************************************************************************
+//*************************  Goblins *************************************
+//*************************          *************************************
+//************************************************************************
+
+SECTION NPC $npc_goblin
+{
+    NAMELIST $names_orcs
+    //$$ goblin
+    ID 0011
+    SKIN 08a4
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    LOOT $loot_misc_stuff
+    GOLD 0 15
+    STR 50 65
+    DEX 40 50
+    INT 20 30
+    KARMA -100
+    FAME 0
+    TACTICS 350 450
+    WRESTLING 250 450
+    // Damage per Weapon
+    DAMAGE 3 15
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin
+}
+
+//a goblin with club
+SECTION NPC $npc_goblin_club
+{
+    NAMELIST $names_orcs
+    //$$ goblin club
+    ID 0029
+    SKIN 08a4
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    ITEM $item_club
+    LOOT $loot_misc_stuff
+    GOLD 0 15
+    STR 50 65
+    DEX 40 50
+    INT 20 30
+    KARMA -100
+    FAME 0
+    TACTICS 350 450
+    WRESTLING 250 450
+    // Damage per Weapon
+    DAMAGE 3 15
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin (with club)
+}
+
+// a goblin mage
+SECTION NPC $npc_a_goblin_mage
+{
+    NAME a goblin mage
+    ID 0011
+    SKIN 08a2
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    LOOT $loot_misc_stuff
+    LOOT $loot_uncut_gems
+    GOLD 10 35
+    STR 60 85
+    DEX 50 75
+    INT 40 60
+    KARMA -200
+    FAME 0
+    TACTICS 450 650
+    WRESTLING 450 550
+    MAGERY 400 600
+    SPATTACK 63
+    SPADELAY 10
+    // Damage per Weapon
+    DAMAGE 5 25
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin Mage
+}
+
+// Goblin with two handed axes
+SECTION NPC $npc_ratman_mage
+{
+    NAMELIST $names_orcs
+    //$$ goblin 2 hand axe
+    ID 0007
+    SKIN 08a4
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    ITEM $item_iron_two-handed_axe
+    PACKITEM $item_iron_ringmail_tunic
+    PACKITEM $item_boots
+    PACKITEM $item_a_orc_helm
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    LOOT $loot_large_axes
+    GOLD 50 100
+    STR 110 145
+    DEX 15 20
+    INT 36 60
+    KARMA -2500
+    FAME 2000
+    MAGICRESISTANCE 700 850
+    TACTICS 850 1000
+    WRESTLING 700 900
+    SWORDSMANSHIP 700 850
+    DAMAGE 2 18
+    DEF 17
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin (with axe)
+}
+
+//Goblin Captain
+SECTION NPC $npc_goblin_captain
+{
+    NAMELIST $names_orcs
+    //$$ goblin captain
+    ID 0007
+    SKIN 08a4
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    ITEM $item_iron_two-handed_axe
+    PACKITEM $item_iron_ringmail_tunic
+    PACKITEM $item_thigh_boots
+    PACKITEM $item_a_orc_mask
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    LOOT $loot_large_axes
+    GOLD 50 150
+    STR 100 150
+    DEX 15 20
+    INT 50 110
+    KARMA -2000
+    FAME 2000
+    PARRYING 700 950
+    MAGICRESISTANCE 700 850
+    TACTICS 850 1000
+    SWORDSMANSHIP 700 850
+    DAMAGE 2 17
+    DEF 17
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin Captain
+}
+
+// Goblin Lord with two handed axes
+SECTION NPC $npc_a_goblin_lord
+{
+    NAME A Goblin Lord
+    ID 0007
+    SKIN 08a4
+    DIRECTION E
+    SPEECH $speech_orcish
+    BACKPACK
+    ITEM $item_iron_two-handed_axe
+    PACKITEM $item_iron_ringmail_tunic
+    PACKITEM $item_boots
+    PACKITEM $item_a_orc_mask
+    LOOT $loot_uncut_gems
+    LOOT $loot_uncut_gems
+    LOOT $loot_jewelry
+    LOOT $loot_omnivores_food
+    LOOT $loot_large_axes
+    GOLD 150 300
+    STR 150 320
+    DEX 15 20
+    INT 95 190
+    KARMA -4500
+    FAME 5500
+    MAGICRESISTANCE 700 850
+    TACTICS 750 900
+    WRESTLING 600 900
+    SWORDSMANSHIP 600 850
+    DAMAGE 2 16
+    DEF 15
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_evil
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Evil
+    ///SUBSECTION Goblins
+    ///DESCRIPTION Goblin Lord
+}
+
+

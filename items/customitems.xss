@@ -1,0 +1,97 @@
+SECTION ITEM $item_smithy_hammer
+{
+    NAME smithy's hammer
+    ID 13E4
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 6
+    HIDAMAGE 18
+    HP 42
+    VALUE 25
+    //RESTOCK 10
+    STR 25
+    SPD 28
+    WEIGHT 500
+    DAMAGETYPE $damage_bludgeon
+}
+
+
+SECTION ITEM $item_forge
+{ 
+    NAME forge
+    ID 0FAF
+    @ONDBLCLICK blacksmith
+}
+
+SECTION ITEM $item_forge_2
+{ 
+    NAME forge
+    ID 0FB0
+    @ONDBLCLICK blacksmith
+}
+
+// PickAxe
+SECTION ITEM $item_pickaxe
+{
+    NAME pickaxe
+    ID 0E85
+    LAYER $layer_1hand_weapon
+    ITEMHAND 1
+    LODAMAGE 1
+    HIDAMAGE 15
+    HP 50
+    VALUE 25
+    //RESTOCK 10
+    STR 40
+    SPD 33
+    WEIGHT 800
+}
+
+SECTION ITEM $item_shovel
+{
+    NAME shovel
+    ID 0F39
+    HP 30
+    VALUE 15
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_tongs
+{
+    NAME tongs
+    ID 0FBC
+    HP 60
+    VALUE 15
+    //RESTOCK 10
+}
+
+SECTION ITEM $item_hitching_post
+{
+    NAME Anbindepfosten
+    ID 14e7
+    @ONDBLCLICK _freezing
+    AMXINT 1009 0
+}
+
+SECTION ITEM $item_hitching_post2
+{
+    NAME Anbindepfosten
+    ID 14e8
+    @ONDBLCLICK _freezing
+    AMXINT 1009 0
+}
+
+SECTION ITEM $item_carpenter
+{
+    NAME Testschreiner
+    ID 14e7
+    @ONDBLCLICK _carpenter
+}
+
+SECTION ITEM $item_tweaktest
+{
+    NAME Test Tweak
+    ID 14e7
+    @ONDBLCLICK command_tweak
+}
+

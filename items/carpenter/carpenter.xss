@@ -1,0 +1,704 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (carpenter.xss)                                  ||
+// || Maintained by Horian		                                  ||
+// || Last Update 3-apr-2003                                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82 or later                       ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_boards
+{
+    NAME board
+    ID 1BD7
+    AMOUNT 10
+    VALUE 5
+    WEIGHT 3
+    DECAY
+}
+
+SECTION ITEM $item_logs
+{
+    NAME log
+    ID 1BE0
+    AMOUNT 5
+    VALUE 5
+    WEIGHT 4
+    DECAY
+    @ONDBLCLICK _cutlog
+}
+
+// carpentry tool
+SECTION ITEM $item_carpentry_tools_list
+{
+    NAME carpentry tools list
+    ITEMLIST $itemlist_carpentry_tools
+}
+
+SECTION ITEM $item_hatchet
+{
+    NAME hatchet
+    ID 0F43
+    ITEMHAND 1
+    LAYER $layer_1hand_weapon
+    LODAMAGE 3
+    HIDAMAGE 15
+    HP 50
+    DECAY
+    VALUE 35
+    STR 15
+    SPD 38
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+SECTION ITEM $item_hatchet2
+{
+    NAME hatchet
+    ID 0F44
+    ITEMHAND 1
+    LAYER $layer_1hand_weapon
+    LODAMAGE 3
+    HIDAMAGE 15
+    HP 50
+    DECAY
+    VALUE 35
+    STR 15
+    SPD 38
+    WEIGHT 400
+    DAMAGETYPE $damage_slash
+}
+
+SECTION ITEM $item_chisel
+{
+    NAME chisel
+    ID 1026
+    DECAY
+    VALUE 35
+    WEIGHT 400
+}
+
+SECTION ITEM $item_chisel2
+{
+    NAME chisel
+    ID 1027
+    DECAY
+    VALUE 35
+    WEIGHT 400
+}
+
+SECTION ITEM $item_dovetail_saw
+{
+    NAME dovetail saw
+    ID 1028
+    DECAY
+    VALUE 35
+    WEIGHT 400
+    @ONDBLCLICK _carpenter
+}
+
+SECTION ITEM $item_dovetail_saw2
+{
+    NAME dovetail saw
+    ID 1029
+    DECAY
+    VALUE 35
+    WEIGHT 400
+    @ONDBLCLICK _carpenter
+}
+
+SECTION ITEM $item_hammer
+{
+    ID 102A
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_hammer2
+{
+    ID 102B
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_moulding_planes
+{
+    ID 102C
+    DECAY
+    VALUE 15
+    @ONDBLCLICK carpenter
+}
+
+SECTION ITEM $item_moulding_planes2
+{
+    ID 102d
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_nails
+{
+    ID 102E
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_nails2
+{
+    ID 102f
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_jointing_plane
+{
+    ID 1030
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_jointing_plane2
+{
+    ID 1031
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_smoothing_plane
+{
+    ID 1032
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_smoothing_plane2
+{
+    ID 1033
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_saw
+{
+    ID 1034
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_saw2
+{
+    ID 1035
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_draw_knife
+{
+    ID 10E4
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_froe
+{
+    ID 10E5
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_inshave
+{
+    ID 10E6
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_scorp
+{
+    ID 10E7
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_woodworkers_bench1_1
+{
+    NAME woodworkers bench
+    ID 19f1
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_woodworkers_bench1_2
+{
+    NAME woodworkers bench
+    ID 19f2
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_woodworkers_bench1_3
+{
+    NAME woodworkers bench
+    ID 19f3
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_vise1
+{
+    NAME vise
+    ID 19f8
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_woodworkers_bench2_1
+{
+    NAME woodworkers bench
+    ID 19f7
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_woodworkers_bench2_2
+{
+    NAME woodworkers bench
+    ID 19f6
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_woodworkers_bench2_3
+{
+    NAME woodworkers bench
+    ID 19f5
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_vise2
+{
+    NAME vise
+    ID 19f4
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_coopers_bench1_1
+{
+    NAME coopers bench
+    ID 19f9
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_coopers_bench1_2
+{
+    NAME coopers bench
+    ID 19fa
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_coopers_bench2_1
+{
+    NAME coopers bench
+    ID 19fb
+    VALUE 20
+    MOVABLE 1
+}
+
+SECTION ITEM $item_coopers_bench2_2
+{
+    NAME coopers bench
+    ID 19fc
+    VALUE 20
+    MOVABLE 1
+}
+
+//Misc
+
+SECTION ITEM $item_display_case_border_1
+{
+    NAME display case_border
+    ID 0A9F
+}
+
+SECTION ITEM $item_display_case_border_2
+{
+    NAME display case_border
+    ID 0AA0
+}
+
+SECTION ITEM $item_display_case_border_3
+{
+    NAME display case_border
+    ID 0AA1
+}
+
+SECTION ITEM $item_display_case_border_4
+{
+    NAME display case_border
+    ID 0AA2
+}
+
+SECTION ITEM $item_display_case_border_5
+{
+    NAME display case_border
+    ID 0AA3
+}
+
+SECTION ITEM $item_display_case_border_6
+{
+    NAME display case_border
+    ID 0AA4
+}
+
+SECTION ITEM $item_display_case_border_7
+{
+    NAME display case_border
+    ID 0AA5
+}
+
+SECTION ITEM $item_display_case_border_8
+{
+    NAME display case_border
+    ID 0b18
+}
+
+SECTION ITEM $item_display_case_border_9
+{
+    NAME display case_border
+    ID 0Afd
+}
+
+SECTION ITEM $item_display_case_border_10
+{
+    NAME display case_border
+    ID 0Afe
+}
+
+SECTION ITEM $item_display_case_border_11
+{
+    NAME display case_border
+    ID 0Aff
+}
+
+SECTION ITEM $item_display_case_border_12
+{
+    NAME display case_border
+    ID 0b03
+}
+
+SECTION ITEM $item_display_case_border_13
+{
+    NAME display case_border
+    ID 0b04
+}
+
+SECTION ITEM $item_display_case_border_14
+{
+    NAME display case_border
+    ID 0b05
+}
+
+SECTION ITEM $item_display_case_border_15
+{
+    NAME display case_border
+    ID 0b0b
+}
+
+SECTION ITEM $item_display_case_border_16
+{
+    NAME display case_border
+    ID 0b0c
+}
+
+SECTION ITEM $item_display_case_1
+{
+    NAME display case
+    ID 0B00
+}
+
+SECTION ITEM $item_display_case_2
+{
+    NAME display case
+    ID 0B01
+}
+
+SECTION ITEM $item_display_case_3
+{
+    NAME display case
+    ID 0B02
+}
+
+SECTION ITEM $item_display_case_4
+{
+    NAME display case
+    ID 0B06
+}
+
+SECTION ITEM $item_display_case_5
+{
+    NAME display case
+    ID 0B07
+}
+
+SECTION ITEM $item_display_case_6
+{
+    NAME display case
+    ID 0B08
+}
+
+SECTION ITEM $item_display_case_7
+{
+    NAME display case
+    ID 0B09
+}
+
+SECTION ITEM $item_display_case_8
+{
+    NAME display case
+    ID 0B0a
+}
+
+SECTION ITEM $item_display_case_9
+{
+    NAME display case
+    ID 0B0d
+}
+
+SECTION ITEM $item_display_case_10
+{
+    NAME display case
+    ID 0B0e
+}
+
+SECTION ITEM $item_display_case_11
+{
+    NAME display case
+    ID 0B0f
+}
+
+SECTION ITEM $item_display_case_12
+{
+    NAME display case
+    ID 0B10
+}
+
+SECTION ITEM $item_display_case_13
+{
+    NAME display case
+    ID 0B11
+}
+
+SECTION ITEM $item_display_case_14
+{
+    NAME display case
+    ID 0B12
+}
+
+SECTION ITEM $item_display_case_15
+{
+    NAME display case
+    ID 0B13
+}
+
+SECTION ITEM $item_display_case_16
+{
+    NAME display case
+    ID 0B14
+}
+
+SECTION ITEM $item_display_case_17
+{
+    NAME display case
+    ID 0B15
+}
+
+SECTION ITEM $item_display_case_18
+{
+    NAME display case
+    ID 0B16
+}
+
+SECTION ITEM $item_display_case_19
+{
+    NAME display case
+    ID 0B17
+}
+
+SECTION ITEM $item_large_wooden_crate
+{
+    NAME large wooden crate
+    ID 0E3C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 300
+    MOVABLE 1
+}
+
+SECTION ITEM $item_medium_wooden_crate1
+{
+    NAME medium wooden crate
+    ID 0E3E
+    TYPE $itype_container
+    VALUE 55
+    WEIGHT 200
+    MOVABLE 1
+}
+
+
+SECTION ITEM $item_medium_wooden_crate2
+{
+    NAME medium wooden crate
+    ID 0e3f
+    TYPE $itype_container
+    VALUE 55
+    WEIGHT 200
+    MOVABLE 1
+}
+
+SECTION ITEM $item_wooden_chest1
+{
+    NAME wooden chest
+    ID 0E42
+    TYPE $itype_container
+    VALUE 55
+    WEIGHT 300
+    MOVABLE 1
+}
+
+SECTION ITEM $item_wooden_chest2
+{
+    NAME wooden chest
+    ID 0E43
+    TYPE $itype_container
+    VALUE 55
+    WEIGHT 300
+    MOVABLE 1
+}
+
+SECTION ITEM $item_tub
+{
+    NAME tub
+    ID 0E83
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 200
+    MOVABLE 1
+}
+
+SECTION ITEM $item_barrel_without_lid
+{
+    NAME open barrel
+    ID 0E77
+    TYPE $itype_container
+    VALUE 35
+    WEIGHT 200
+    @ONDBLCLICK _cooking
+}
+
+SECTION ITEM $item_barrel_with_lid
+{
+    NAME closed barrel
+    ID 0fae
+    TYPE $itype_container
+    VALUE 35
+    WEIGHT 200
+    @ONDBLCLICK _cooking
+}
+
+SECTION ITEM $item_barrel_lid
+{
+    NAME a barrel lid
+    ID 1db8
+    VALUE 10
+    WEIGHT 100
+}
+
+SECTION ITEM $item_barrel_staves
+{
+    NAME barrel staves
+    ID 1eb2
+    VALUE 10
+    WEIGHT 100
+}
+
+SECTION ITEM $item_barrel_hoops
+{
+    NAME barrel hoops
+    ID 1db7
+    VALUE 10
+    WEIGHT 100
+}
+
+SECTION ITEM $item_barrel_hoops2
+{
+    NAME barrel hoops
+    ID 10e1
+    VALUE 10
+    WEIGHT 100
+}
+
+SECTION ITEM $item_barrel_hoops3
+{
+    NAME barrel hoops
+    ID 10e2
+    VALUE 10
+    WEIGHT 100
+}
+
+SECTION ITEM $item_open_wooden_keg
+{
+    NAME wooden keg
+    ID 0E7F
+    TYPE $itype_container
+    VALUE 40
+    WEIGHT 200
+    MOVABLE 1
+    @ONDBLCLICK _cooking
+}
+
+SECTION ITEM $item_wooden_keg1_1
+{
+    NAME wooden keg
+    ID 1940
+    TYPE $itype_container
+    VALUE 40
+    WEIGHT 200
+    MOVABLE 1
+    @ONDBLCLICK _cooking
+}
+         
+SECTION ITEM $item_wooden_keg1_2
+{
+    NAME wooden keg
+    ID 1ad6
+    TYPE $itype_container
+    VALUE 40
+    WEIGHT 200
+    MOVABLE 1
+    @ONDBLCLICK _cooking
+}
+
+SECTION ITEM $item_wooden_keg2_1
+{
+    NAME wooden keg
+    ID 1ad7
+    TYPE $itype_container
+    VALUE 40
+    WEIGHT 200
+    MOVABLE 1
+    @ONDBLCLICK _cooking
+}
+
+SECTION ITEM $item_bucket
+{
+    NAME bucket
+    ID 14e0
+    TYPE $itype_container
+    VALUE 40
+    WEIGHT 200
+    MOVABLE 1
+    @ONDBLCLICK _cooking
+}

@@ -1,0 +1,24 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (areas.xss)                                      ||
+// || Maintained by Endymion		                                  ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//
+// X1, Y1 -> upper left corner of spawning rectangle
+// X2, Y2 -> bottom right corner of spawning rectange
+
+
+SECTION AREA $area_0
+{
+	X1 545
+	Y1 2113
+	X2 557
+	Y2 2125
+}
+
+EOF
+
+
+

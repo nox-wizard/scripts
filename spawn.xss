@@ -1,0 +1,62 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (spawn.scp)                                      ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.10 or later                       ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script is NOT yet compatible with 0.70 script format           ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//
+// test-spawn that has all valid tokens inside
+//
+// remark: in the current implementation the spawn number after "SECTION REGIONSPAWN"
+// is ignored, instead of it an internal counter is used starting with 0
+// if you replace the regionspawn 0 with regionspawn 9,
+// you still have to access it via 0, because it's the first in this example.
+// the seconds entry is accessed via 1 etc
+// -> an enumeration starting with 0, ascending is highly recommanded.
+// this way the internal counter fits to the ignored number.
+
+// NPC -> NPC number from NPC.scp
+// NLIST -> NPCLIST number from npc.scp  (*)
+// ILIST -> itemlist number from items.scp  (*)
+// MAX   -> maximum number of NPCS+items that can be spawned in that spawn region
+// X1, Y1 -> upper left corner of spawning rectangle
+// X2, Y2 -> bottom right corner of spawning rectange
+// Mintime -> minimal time between respawns
+// Maxtime -> maximal time between respawns.
+
+// (*) : if you can, define a NPC (or item) containing an NPCLIST (or ITEMLIST)
+//       instead of using lists directly.. usually it works far much better
+
+// spawn-commands:
+// regspawnall                   // spawns all regions to MAX
+// regspawnmax region_number     // spawns the region region_number to MAX
+// regspawnnum region_nmmber num // spawns num chars/items in spawnregion region_number
+// spawnkill   region_number     // kills all spawns in region region_number
+
+// REGIONSPAWN # should start with 1 and not 0. This is 0 now so it wont spawn till you change it.
+
+// All npcs spawned through a region spawner have their wander mode set to 3 (box)
+// the box is defined by the bounding coordinates of the spawner.
+
+SECTION REGIONSPAWN 1
+{
+NAME Test Sheep Spawn
+NPC 51
+//NLIST 505
+//ILIST 1
+MAX 1
+X1 545
+Y1 2113
+X2 557
+Y2 2125
+MINTIME 1
+MAXTIME 2
+}
+
+EOF
+
+
+

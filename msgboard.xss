@@ -1,0 +1,159 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (msgboard.xss)                                   ||
+// || Maintained by Xanathar and Kendra                                   ||
+// || Last Update - N/A -                                                 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+//
+// #######################################################################
+//   Purpose:
+//      To be used as a template for certain default quest
+//      messages like escort or item quests.
+//
+//   Features:
+//      The ability to use replaceable parameters such as:
+//              %n = NPC name
+//              %r = Destination Region Name
+//              %R = Current Region Name
+//              %l = Location of NPC in relation to board (ie "X, Y")
+//              %t = NPC title
+//              %g = Gold (used for Bounty quests)
+//
+//      More to be added as needed
+//
+//   Note:
+//      A typical line displayed in the post window consists of 20
+//      characters.  Some characters are larger and will therefore 
+//      make the total number of characters visible on a single line
+//      smaller.  A ruler has been provided to use in the creation of
+//      message templates.  I recommend not going beyond 20-25 chars
+//      per line and the replaceable parameters should typically be
+//      placed on a line by themselves unless you can guarantee that
+//      the replaced text will be less than 20 characters.  Also, if you
+//      want a blank line you must have at least a single space on that
+//      line or else the parser will skip it and squish the two paragraphs
+//      together.  See the examples below:
+// #######################################################################
+
+// RULER
+//       1         2         3
+//3456789012345678901234567890
+
+UNIQUE SECTION ESCORTS
+{
+ESCORT 1
+ESCORT 2
+ESCORT 3
+ESCORT 4
+}
+
+UNIQUE SECTION BOUNTYS
+{
+BOUNTY 1
+BOUNTY 2
+}
+
+SECTION ESCORT 1
+{
+If you are good of heart
+and desire some honest
+work, then maybe you can
+escort me to
+%r.
+
+Currently I am in
+%R
+near this location:
+%l.
+
+Thank you,
+%n %t
+}
+
+SECTION ESCORT 2
+{
+Urgent, I require a
+companion to travel
+with me to
+%r.
+
+If you can help, I
+can be found in
+%R
+at this location:
+%l.
+ 
+Please hurry,
+%n %t
+}
+
+SECTION ESCORT 3
+{
+Travelling companion needed
+near %R
+ 
+Please contact
+%n %t
+for further details.
+ 
+I can be found near
+the following location:
+%l.
+ 
+Thank you.
+}
+
+SECTION ESCORT 4
+{
+Tis a grim day indeed. My
+closest friend hath just
+been killed. I need to 
+find out information about
+his death near 
+%r
+ 
+Please contact %n
+of %R
+as quickly as possible, as
+I have very little time to
+waste.
+ 
+I can be found near 
+%l.
+ 
+Thank thee.
+}
+
+SECTION BOUNTY 1
+{
+Help our Lord serve swift
+justice towards the evil
+%n %t
+ 
+A reward of %ggp
+will be offered
+for the head of this
+villan.
+
+This person has performed
+many atrocities against
+our people and must be
+stopped!
+}
+
+SECTION BOUNTY 2
+{
+A murderer may be in your
+midsts.  They go by the name
+%n %t.
+ 
+Bring back the head of this
+person and a reward of
+%ggp
+will be given for your
+services.
+}
+
+
+
