@@ -26,15 +26,11 @@
 /*!
 \brief a guild deed double-click
 \author Endymion
-\fn guild_dclickDeed( const deed, const socket )
+\fn guild_dclickDeed( const deed, const master )
 \param deed the guildstone deed
-\param socket who click
+\param master who click
 */
-public guild_dclickDeed( const deed, const socket ) {
-
-	if( socket<=INVALID ) return;
-    new master = getCharFromSocket(socket);
-    if( master<=INVALID ) return;
+public guild_dclickDeed( const deed, const master ) {
 
 	bypass();
 
@@ -44,7 +40,7 @@ public guild_dclickDeed( const deed, const socket ) {
 	}
 	
 	chr_message( master, _, "Where you want place guildstone?" );
-	target_create( master, deed, _, true, "guildPlace" );
+	target_create( master, deed, _, _, "guildPlace" );
 
 }
 	
@@ -90,13 +86,10 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 	
 }
 
-public guildgui_callback( const socket, const gui, const button )
+public guildgui_callback( const gui, const master, const button )
 {
 	if( button<=MENU_CLOSED )
 		return;
-
-    new master = getCharFromSocket(socket);
-    if( master<=INVALID ) return;
 
 	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
 		chr_message( master, _, "Resign from your guild before creating a new guild" );
@@ -132,7 +125,7 @@ public guildgui_callback( const socket, const gui, const button )
 \fn guild_dclickStone( const guild, const socket )
 \brief a guild stone double-click
 */
-public guild_dclickStone( const guild, const socket ){
+public guild_dclickStone( const guild, const curr ){
 	
 	bypass();
 	
@@ -168,11 +161,12 @@ public guild_dclickStone( const guild, const socket ){
 	gui_addText( gui, 45, 239, _, "Read the guilds that you have declared war" );
 	gui_addButton( gui, 25, 239, 0x4B9, 0x4BA, 8 );
 	
-	gui_show( gui, getCharFromSocket(socket) );
+	gui_show( gui, curr );
 	
 }
 
-public guildDclick_callback( const socket, const gui, const button ){
+public guildDclick_callback( const gui, const curr, const button )
+{
 
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	
@@ -196,7 +190,7 @@ public guildDclick_callback( const socket, const gui, const button ){
 		case 8: return;
 		
 		default:{
-			chr_message(socket, _, "Something gone wrong!");
+			chr_message( curr, _, "Something gone wrong!");
 			return;
 		}
 	}
@@ -204,15 +198,15 @@ public guildDclick_callback( const socket, const gui, const button ){
 
 /*!
 \author Endymion
-\fn guild_sclickStone( const guild, const socket )
+\fn guild_sclickStone( const guild, const curr )
 \brief a guild stone single-click
 */
-public guild_sclickStone( const guild, const socket )
+public guild_sclickStone( const guild, const curr )
 {
 	new guildName[64];
 	guild_getProperty( guild, GP_STR_NAME, _, guildName );
 	sprintf( guildName, "Guildstone for %s", guildName );
-	itm_speech( socket, guild, guildName );
+	itm_speech( curr, guild, guildName );
 	bypass();
 }
 

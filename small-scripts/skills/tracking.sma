@@ -141,7 +141,7 @@ public removeTracking(const chr, const dummy1, const data, const mode )
 	if (mode!=TFXM_END) 
 		return;
 		
-	send_questArrow( getCharFromSocket(chr), false, data>>16, data&0xFFFF );
+	send_questArrow( chr, false, data>>16, data&0xFFFF );
 	
 }
 

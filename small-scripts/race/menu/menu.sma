@@ -1,12 +1,7 @@
 
-public race_enlistDialog1( const socket, const race )
+public race_enlistDialog1( const chr, const race )
 {
 
-	if( socket<0 ) 
-		return;
-		
-	new chr = getCharFromSocket( socket );
-	
 	new menu = gui_create( 30, 30, true, false, false, "handle_race_enlist1" );
 
 	gui_addBackground( menu, 5120, 320,  340 );
@@ -56,14 +51,9 @@ public race_enlistDialog1( const socket, const race )
 }
 
 
-public race_dialogRaceInfo( const socket, const race )
+public race_dialogRaceInfo( const chr, const race )
 {
 
-	if( socket<0 ) 
-		return;
-		
-	new chr = getCharFromSocket( socket );
-	
 	new menu = gui_create( 30, 30, true, false, false, "handle_race_raceInfo" );
 
 	gui_addBackground( menu, 5120, 320,  340 );
@@ -109,14 +99,9 @@ public race_dialogRaceInfo( const socket, const race )
 
 
 
-public race_nameList( const socket, const raceType, const canClose, const canMove, const withOk )
+public race_nameList( const chr, const raceType, const canClose, const canMove, const withOk )
 {
 																																															// Must add static reference map < racename, &Race*> to class
-	if( socket<0 ) 
-		return;
-		
-	new chr = getCharFromSocket( socket );
-	
 	new menu = gui_create( 30, 30, canMove, canClose, false, "handle_race_nameList" );
 
 	gui_addBackground( menu, 5120, 320,  340 );
@@ -193,14 +178,9 @@ public race_nameList( const socket, const raceType, const canClose, const canMov
 
 }
 
-public race_description( const socket, const race, const canClose, const canMove, const withOk )
+public race_description( const chr, const race, const canClose, const canMove, const withOk )
 {
 
-	if( socket<0 ) 
-		return;
-		
-	new chr = getCharFromSocket( socket );
-	
 	new menu = gui_create( 30, 30, canMove, canClose, false, "handle_race_description" );
 
 	gui_addBackground( menu, 5120, 640,  340 );
@@ -278,36 +258,28 @@ const descForPage = 11;
 }
 
 
-public race_webInterface( const socket, const menu, const race )
+public race_webInterface( const menu, const chr, const race )
 {
-	if( socket<0 )
-		return;
-		
 	new root[200];
 	race_getGlobalProp( RP_STR_WEBROOT, _, root );
 	
 	if( race!=INVALID ) {
 		new link[100];
 		race_getProperty( race, RP_STR_WEBLINK, _, link );
-		weblaunch( socket, "%s%s", root, link );
+		weblaunch( chr, "%s%s", root, link );
 	}
 	else
-		weblaunch( socket, root );
+		weblaunch( chr, root );
 	
 	
 }
 
 
-public race_make( const socket, const menu, const race, const chr )
+public race_make( const menu, const curr, const race, const chr )
 {
 
-	if( socket<0 )
-		return;
-		
 	if( race==INVALID )
 		return;	
-	
-	new curr = getCharFromSocket( socket );
 	
 	chr_unmorph( chr );
 	

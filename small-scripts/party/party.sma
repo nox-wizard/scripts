@@ -91,7 +91,7 @@ public party_onDelMember( const chr, const kicked )
 {
 	if( kicked==INVALID ) {
 		target_create( chr, _, _, _, "handle_party_onDelM" );
-		sysmessage( chr, _, "Select the one to remove to the party.." );
+		chr_message( chr, _, "Select the one to remove to the party.." );
 	}
 	else 
 		handle_party_onDelM( INVALID, chr, kicked );
