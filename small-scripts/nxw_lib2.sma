@@ -1673,5 +1673,5 @@ stock DVit_Reduce(const itm, const AmxID)
 		itm_setLocalIntVec(itm, AmxID, counter, TmpArray[counter]);
 	return 1;
 }
-*/
+
 /** @} */
