@@ -1940,7 +1940,7 @@ stock chr_getStamina(const chr)
 */
 stock chr_getStr(const chr)
 {
-	return chr_getProperty(chr, CP_STRENGHT, CP2_EFF);
+	return chr_getProperty(chr, CP_STRENGTH, CP2_EFF);
 }
 
 /*!
@@ -1952,7 +1952,7 @@ stock chr_getStr(const chr)
 */
 stock chr_getRealStr(const chr)
 {
-	return chr_getProperty(chr, CP_STRENGHT, CP2_REAL);
+	return chr_getProperty(chr, CP_STRENGTH, CP2_REAL);
 }
 
 /*!
@@ -1964,7 +1964,7 @@ stock chr_getRealStr(const chr)
 */
 stock chr_getHitPoints(const chr)
 {
-	return chr_getProperty(chr, CP_STRENGHT, CP2_ACT);
+	return chr_getProperty(chr, CP_STRENGTH, CP2_ACT);
 }
 
 /*!
@@ -1976,7 +1976,7 @@ stock chr_getHitPoints(const chr)
 */
 stock chr_setHitPoints(const chr, const value)
 {
-	chr_setProperty(chr, CP_STRENGHT, CP2_ACT, value);
+	chr_setProperty(chr, CP_STRENGTH, CP2_ACT, value);
 }
 
 /*!
