@@ -464,32 +464,34 @@ public guildRecruitNew(const chr, const guild)
 		chr_message(chr, _, "You cannot recruit people for other guilds ! ");
 		return;
 	}
-	target_create(chr,0,0,true,"addRecruit", "Who do you want to recruit into the guild ?");
+	chr_message(chr, _, "Who do you want to recruit into the guild ?");
+	target_create(chr,0,0,true,"addRecruit");
 }
 
-public addRecruit(const chr, const charTarget, const itmTarget)
+public addRecruit(const targetNum, const chr, const target, const x, const y, const z, const model, const param1 )
 {
-	if ( itmTarget > 0 )
+	if ( isItem(target) > 0 )
 	{
 		chr_message(chr, _, "You cannot recruit items ! ");
 		return;
 	}
-	if ( charTarget > 0 )
+	if ( isChar(target) > 0 )
 	{
-		if ( chr_getProperty(charTarget, CP_NPC) > 0 )
+		if ( chr_getProperty(target, CP_NPC) > 0 )
 		{
 			chr_message(chr, _, "You cannot recruit npcs ! ");
+			return;
 		}
-		if ( chr_getProperty(charTarget, CP_GUILD) > 0 )
+		if ( chr_getProperty(target, CP_GUILD) > 0 )
 		{
-			if ( chr_getProperty(charTarget, CP_ID) == BODY_FEMALE || chr_getProperty(charTarget, CP_ID) == BODY_DEADFEMALE )
+			if ( chr_getProperty(target, CP_ID) == BODY_FEMALE || chr_getProperty(target, CP_ID) == BODY_DEADFEMALE )
 				chr_message(chr, _, "She has to resign from her old guild first ! ");
 			else
 				chr_message(chr, _, "He has to resign from his old guild first ! ");
 			return;
 		}
-		guild_addRecruit( chr_getProperty(chr, CP_GUILD), charTarget );
-		if ( chr_getProperty(charTarget, CP_ID) == BODY_FEMALE || chr_getProperty(charTarget, CP_ID) == BODY_DEADFEMALE )
+		guild_addRecruit( chr_getProperty(chr, CP_GUILD), target );
+		if ( chr_getProperty(target, CP_ID) == BODY_FEMALE || chr_getProperty(target, CP_ID) == BODY_DEADFEMALE )
 			chr_message(chr, _, "She has been added into your guild ! ");
 		else
 			chr_message(chr, _, "He has been added into your guild ! ");
@@ -516,8 +518,10 @@ public declareFealty(const chr, const guild)
 		{
 			member=set_get(guildMemberSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
-			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getMemberIdx(guild, member) ); // Use internal numbering
-			gui_addText( gui, 25, 55+i*30, _, membername);
+			gui_addButton( gui, 25, 25+i*30, 0x4B9, 0x4BA, guild_getMemberIdx(guild, member) ); // Use internal numbering
+			gui_addText( gui, 55, 20+i*30, _, membername);
+			if ( set_end(guildMemberSet) )
+				break;
 		}
 		if ( page < set_size(guildMemberSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
@@ -583,6 +587,8 @@ public viewCandidatesList(const chr, const guild)
 			member=set_get(guildMemberSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 25, 55+i*30, _, membername);
+			if ( set_end(guildMemberSet))
+				break;
 		}
 		if ( page < set_size(guildMemberSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
@@ -614,6 +620,8 @@ public viewGuildAtWar(const chr, const guild)
 			member=set_get(guildMemberSet);
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 25, 55+i*30, _, membername);
+			if ( set_end(guildMemberSet))
+				break;
 		}
 		if ( page < set_size(guildMemberSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
@@ -889,6 +897,8 @@ public dismissMember(const chr, const guild)
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 65, 55+i*30, _, membername);
 			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getMemberIdx (guild,  member) );
+			if ( set_end(guildMemberSet))
+				break;
 		}
 		if ( page < set_size(guildMemberSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
@@ -981,6 +991,8 @@ public declarePeace(const chr, const guild)
 			chr_getProperty(member, GP_STR_NAME, _, membername);
 			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, page*10+i ); // Buttons start at 10
 			gui_addText( gui, 25, 55+i*30, _, membername);
+			if ( set_end(guildSet))
+				break;
 		}
 		if ( page < set_size(guildSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
@@ -1035,7 +1047,8 @@ public acceptMember(const chr, const guild)
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 25, 55+i*30, _, membername);
 			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getMemberIdx (guild,  member) );
-
+			if ( set_end(guildRecruitSet))
+				break;
 		}
 		if ( page < set_size(guildRecruitSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
@@ -1075,6 +1088,8 @@ public refuseCandidate(const chr, const guild)
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 25, 55+i*30, _, membername);
 			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getRecruitIdx (guild,  member) );
+			if ( set_end(guildRecruitSet))
+				break;
 		}
 		if ( page < set_size(guildRecruitSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1)
