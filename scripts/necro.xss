@@ -64,25 +64,25 @@ SECTION ITEM $necroitem_gravedigging_weapons
 // The listed items are in the Items.scp
 SECTION ITEMLIST $necroitem_gravedigging_weapons
 {
-    $item_scimitar
-    $item_long_sword
-    $item_viking_sword
-    $item_broadsword
-    $item_cutlass
-    $item_katana
-    $item_executioners_axe
-    $item_axe
-    $item_large_battle_axe
-    $item_battle_axe
-    $item_war_axe
-    $item_a_two-handed_axe
-    $item_dagger
-    $item_kryss
-    $item_hammer_pick
-    $item_mace
-    $item_maul
-    $item_war_hammer
-    $item_war_mace
+    $item_iron_scimitar
+    $item_iron_long_sword
+    $item_iron_viking_sword
+    $item_iron_broadsword
+    $item_iron_cutlass
+    $item_iron_katana
+    $item_iron_executioners_axe
+    $item_iron_axe
+    $item_iron_large_battle_axe
+    $item_iron_battle_axe
+    $item_iron_war_axe
+    $item_iron_two-handed_axe
+    $item_iron_dagger
+    $item_iron_kryss
+    $item_iron_hammer_pick
+    $item_iron_mace
+    $item_iron_maul
+    $item_iron_war_hammer
+    $item_iron_war_mace
 }
 
 SECTION ITEM $necroitem_gravedigging_armors
@@ -93,33 +93,33 @@ SECTION ITEM $necroitem_gravedigging_armors
 
 SECTION ITEMLIST $necroitem_gravedigging_armors
 {
-    $item_bronze_shield
-    $item_buckler
-    $item_heater
-    $item_metal_kite_shield
-    $item_metal_shield
-    $item_platemail
-    $item_plate_gorget
-    $item_plate_gloves
-    $item_plate_helm
-    $item_plate_leggings
-    $item_plate_sleeves
+    $item_iron_bronze_shield
+    $item_iron_buckler
+    $item_iron_heater
+    $item_iron_metal_kite_shield
+    $item_iron_metal_shield
+    $item_iron_platemail
+    $item_iron_plate_gorget
+    $item_iron_plate_gloves
+    $item_iron_plate_helm
+    $item_iron_plate_leggings
+    $item_iron_plate_sleeves
     $item_bone_chest
     $item_bone_arms
     $item_bone_gloves
     $item_bone_helm
     $item_bone_legs
-    $item_chain_tunic
-    $item_chain_leggings
-    $item_chain_coif
-    $item_ringmail_tunic
-    $item_ringmail_sleeves
-    $item_ringmail_leggings
-    $item_ringmail_gloves
-    $item_close_helm
-    $item_a_helmet
-    $item_bascinet
-    $item_nose_helm
+    $item_iron_chain_tunic
+    $item_iron_chain_leggings
+    $item_iron_chain_coif
+    $item_iron_ringmail_tunic
+    $item_iron_ringmail_sleeves
+    $item_iron_ringmail_leggings
+    $item_iron_ringmail_gloves
+    $item_iron_close_helm
+    $item_iron_helmet
+    $item_iron_bascinet
+    $item_iron_nose_helm
     $item_female_studded_leather
 }
 

@@ -14,11 +14,7 @@
 SECTION BESTSKILL $skill_alchemy
 { // ALCHEMY
     PACKITEM $item_mortar_and_pestal
-    PACKITEM $item_bottle_A
-    PACKITEM $item_bottle_A
-    PACKITEM $item_bottle_A
-    PACKITEM $item_bottle_A
-    PACKITEM $item_bottle_A
+    PACKITEM $item_bottle_A 4
     PACKITEM $item_black_pearl 3
     PACKITEM $item_bloodmoss 3
     PACKITEM $item_garlic 3
@@ -33,7 +29,7 @@ SECTION BESTSKILL $skill_alchemy
 SECTION BESTSKILL $skill_anatomy
 { // ANATOMY
     PACKITEM $item_robe_1
-    PACKITEM $item_clean_bandages_1
+    PACKITEM $item_clean_bandages 3
 }
 
 SECTION BESTSKILL $skill_animal_lore
@@ -74,7 +70,7 @@ SECTION BESTSKILL $skill_blacksmithing
 
 SECTION BESTSKILL $skill_bowcrafting
 { // BOWCRAFT
-    PACKITEM $item_shafts_4
+    PACKITEM $item_shafts 5
     PACKITEM $item_feathers
     PACKITEM $item_boards
 }
@@ -87,11 +83,7 @@ SECTION BESTSKILL $skill_peacemaking
 SECTION BESTSKILL $skill_camping
 { // CAMPING
     PACKITEM $item_bedroll
-    PACKITEM $item_kindling
-    PACKITEM $item_kindling
-    PACKITEM $item_kindling
-    PACKITEM $item_kindling
-    PACKITEM $item_kindling
+    PACKITEM $item_kindling 5
 }
 
 SECTION BESTSKILL $skill_carpentry
@@ -103,20 +95,16 @@ SECTION BESTSKILL $skill_carpentry
 
 SECTION BESTSKILL $skill_cartography
 { // CARTOGRAPHY
-    PACKITEM $item_a_map
-    PACKITEM $item_a_map
+    PACKITEM $item_a_map 2
     PACKITEM $item_sextant
 }
 
 SECTION BESTSKILL $skill_cooking
 { // COOKING
     PACKITEM $item_pitcher_of_water
-    PACKITEM $item_cooked_birds
-    PACKITEM $item_cooked_birds
-    PACKITEM $item_cooked_birds
+    PACKITEM $item_cooked_birds 3
     PACKITEM $item_sack_of_flour
-    PACKITEM $item_kindling
-    PACKITEM $item_kindling
+    PACKITEM $item_kindling 2
 }
 
 SECTION BESTSKILL $skill_detect_hidden
@@ -135,9 +123,7 @@ SECTION BESTSKILL $skill_evaluate_intellect
 
 SECTION BESTSKILL $skill_healing
 { // HEALING
-    PACKITEM $item_clean_bandages_1
-    PACKITEM $item_clean_bandages
-    PACKITEM $item_clean_bandages
+    PACKITEM $item_clean_bandages 5
     PACKITEM $item_scissors
 }
 
@@ -168,27 +154,22 @@ SECTION BESTSKILL $skill_provocation
 
 SECTION BESTSKILL $skill_inscription
 { // INSCRIPTION
-    PACKITEM $item_blank_scrolls
-    PACKITEM $item_blank_scrolls
+    PACKITEM $item_blank_scrolls 2
 }
 
 SECTION BESTSKILL $skill_lockpicking
 { // LOCKPICKING
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
+    PACKITEM $item_lockpicks 5
 }
 
 SECTION BESTSKILL $skill_magery
 { // MAGERY
     PACKITEM $item_a_spellbook
-    PACKITEM $item_black_pearl 3
-    PACKITEM $item_bloodmoss 3
+    PACKITEM $item_black_pearl 250
+    PACKITEM $item_bloodmoss 50
     PACKITEM $item_garlic 3
     PACKITEM $item_ginseng 3
-    PACKITEM $item_mandrake_root 3
+    PACKITEM $item_mandrake_root 50
     PACKITEM $item_nightshade 3
     PACKITEM $item_sulfurous_ash 3
     PACKITEM $item_spiders_silk 3
@@ -207,10 +188,7 @@ SECTION BESTSKILL $skill_tactics
 
 SECTION BESTSKILL $skill_snooping
 { // SNOOPING
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
+    PACKITEM $item_lockpicks 4
 }
 
 SECTION BESTSKILL $skill_musicianship
@@ -220,8 +198,7 @@ SECTION BESTSKILL $skill_musicianship
 
 SECTION BESTSKILL $skill_poisoning
 { // POISONING
-    PACKITEM $item_poison_potion
-    PACKITEM $item_poison_potion
+    PACKITEM $item_poison_potion 2
 }
 
 SECTION BESTSKILL $skill_archery
@@ -237,19 +214,13 @@ SECTION BESTSKILL $skill_spirit_speaking
 
 SECTION BESTSKILL $skill_stealing
 { // STEALING
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
-    PACKITEM $item_lockpicks
+    PACKITEM $item_lockpicks 4
 }
 
 SECTION BESTSKILL $skill_tailoring
 { // TAILORING
     PACKITEM $item_sewing_kit
-    PACKITEM $item_cut_cloth
-    PACKITEM $item_cut_cloth
-    PACKITEM $item_cut_cloth
-    PACKITEM $item_cut_cloth
+    PACKITEM $item_cut_cloth 4
 }
 
 SECTION BESTSKILL $skill_animal_taming
@@ -278,9 +249,7 @@ SECTION BESTSKILL $skill_tracking
 
 SECTION BESTSKILL $skill_veterinary
 { // VETERINARY
-    PACKITEM $item_clean_bandages
-    PACKITEM $item_clean_bandages
-    PACKITEM $item_clean_bandages_1
+    PACKITEM $item_clean_bandages 5
     PACKITEM $item_scissors
 }
 
@@ -291,12 +260,12 @@ SECTION BESTSKILL $skill_swordsmanship
 
 SECTION BESTSKILL $skill_macefighting
 { // MACEFIGHTING
-    PACKITEM $item_mace_practice_weapon_
+    PACKITEM $item_iron_mace_practice_weapon_
 }
 
 SECTION BESTSKILL $skill_fencing
 { // FENCING
-    PACKITEM $item_spear_practice_weapon_
+    PACKITEM $item_iron_spear_practice_weapon_
 }
 
 SECTION BESTSKILL $skill_wrestling
@@ -329,9 +298,8 @@ SECTION BESTSKILL $skill_remove_traps
 UNIQUE SECTION ALLNEWBIES
 { // THIS GOES TO ALL NEWBIES DESPITE SKILL
     EQUIPITEM $item_shoes
-    EQUIPITEM $item_dagger
-    PACKITEM $item_bread_loaves
-    PACKITEM $item_bread_loaves
+    EQUIPITEM $item_iron_dagger
+    PACKITEM $item_bread_loaves 2
     PACKITEM $item_book
     PACKITEM $item_candle_3
 }

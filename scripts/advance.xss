@@ -17,9 +17,18 @@ SECTION ADVANCEMENT $advance_smith
 	BLACKSMITHING 940
 	MINING 940
 	TINKERING 940
-	ITEM $item_a_magic_smiths_hammer_of_ruin
+	ITEM $item_iron_smiths_hammer_of_ruin
 	ITEM $item_tongs
-	ITEM $item_iron_ingots_1
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
+	ITEM $item_iron_ingots
 	ITEM $item_pickaxe
 	ITEM $item_tinkers_tools
 }
@@ -33,8 +42,8 @@ SECTION ADVANCEMENT $advance_swordsman
 	SWORDSMANSHIP 940
 	TACTICS 940
 	PARRYING 940
-	ITEM $item_heater
-	ITEM $item_a_viking_sword_of_ruin
+	ITEM $item_iron_heater
+	ITEM $item_iron_viking_sword_of_ruin
 }
 
 // Master Armsman
@@ -46,8 +55,8 @@ SECTION ADVANCEMENT $advance_armsman
 	MACEFIGHTING 940
 	TACTICS 940
 	PARRYING 940
-	ITEM $item_heater
-	ITEM $item_a_magic_war_mace_of_ruin
+	ITEM $item_iron_heater
+	ITEM $item_iron_war_mace_of_ruin
 }
 
 // Master Fencer
@@ -59,8 +68,8 @@ SECTION ADVANCEMENT $advance_fencer
 	FENCING 940
 	TACTICS 940
 	PARRYING 940
-	ITEM $item_a_kryss_of_ruin
-	ITEM $item_heater
+	ITEM $item_iron_kryss_of_ruin
+	ITEM $item_iron_heater
 }
 
 // Master Archer
@@ -71,7 +80,7 @@ SECTION ADVANCEMENT $advance_archer
 	INT 65
 	ARCHERY 940
 	TACTICS 940
-	ITEM $item_a_magic_bow_of_ruin
+	ITEM $item_iron_bow_of_ruin
 	ITEM $item_arrow 100
 }
 
@@ -91,7 +100,7 @@ SECTION ADVANCEMENT $advance_mage
 	ITEM $item_bloodmoss 50
 	ITEM $item_garlic 50
 	ITEM $item_ginseng 50
-	ITEM $item_mandrake_root 50
+	ITEM $item_mandrake_root 50 50
 	ITEM $item_nightshade 50
 	ITEM $item_sulfurous_ash 50
 	ITEM $item_spiders_silk 50
@@ -150,7 +159,7 @@ SECTION ADVANCEMENT $advance_assassin
 	INT 80
 	POISONING 940
 	TASTE IDENTIFICATION 940
-	ITEM $item_dagger
+	ITEM $item_iron_dagger
 	ITEM $item_poison_potion
 	ITEM $item_poison_potion
 	ITEM $item_poison_potion

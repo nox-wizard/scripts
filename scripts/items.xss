@@ -8,27 +8,22 @@
 
 #include scripts/items/armour.xss
 #include scripts/items/beard.xss
-#include scripts/items/guild.xss
 #include scripts/items/hair.xss
-#include scripts/items/floortiles.xss
-#include scripts/items/containers.xss
-#include scripts/items/furniture.xss
-#include scripts/items/decorations.xss
-#include scripts/items/magic.xss
-#include scripts/items/clothes.xss
-#include scripts/items/buildings.xss
-#include scripts/items/fooddrinks.xss
-#include scripts/items/professions.xss
-#include scripts/items/boats.xss
-#include scripts/items/custom.xss
-#include scripts/items/treasures.xss
-#include scripts/items/deeds.xss
 #include scripts/items/items.xss
 #include scripts/items/potions.xss
 #include scripts/items/weapons.xss
 #include scripts/items/itemlists.xss
 #include scripts/items/race_items.xss
 #include scripts/items/spawners.xss
+#include scripts/items/guild.xss
+#include scripts/items/floortiles.xss
+#include scripts/items/clothes.xss
+#include scripts/items/buildings.xss
+#include scripts/items/magic.xss
+#include scripts/items/professions.xss
+#include scripts/items/boats.xss
+#include scripts/items/treasures.xss
+#include scripts/items/deeds.xss
 
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || Include your scripts after these lines.                             ||
@@ -38,3 +33,41 @@
 // || upgrades.                                                           ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+#include scripts/items/customitems.xss
+
+#include scripts/items/color armour/agapite_armour.xss
+#include scripts/items/color armour/bronze_armour.xss
+#include scripts/items/color armour/copper_armour.xss
+#include scripts/items/color armour/golden_armour.xss
+#include scripts/items/color armour/iron_armour.xss
+#include scripts/items/color armour/merkite_armour.xss
+#include scripts/items/color armour/shadow_armour.xss
+#include scripts/items/color armour/silver_armour.xss
+#include scripts/items/color armour/valorite_armour.xss
+#include scripts/items/color armour/verite_armour.xss
+
+#include scripts/items/color weapons/agapite_weapons.xss
+#include scripts/items/color weapons/bronze_weapons.xss
+#include scripts/items/color weapons/copper_weapons.xss
+#include scripts/items/color weapons/golden_weapons.xss
+#include scripts/items/color weapons/iron_weapons.xss
+#include scripts/items/color weapons/merkite_weapons.xss
+#include scripts/items/color weapons/shadow_weapons.xss
+#include scripts/items/color weapons/silver_weapons.xss
+#include scripts/items/color weapons/valorite_weapons.xss
+#include scripts/items/color weapons/verite_weapons.xss
+
+#include scripts/items/cooking/cookitems.xss
+#include scripts/items/cooking/farmitems.xss
+#include scripts/items/carpenter/carpenter.xss
+
+#include scripts/items/carpenter/yew_furniture.xss
+#include scripts/items/carpenter/pine_furniture.xss
+#include scripts/items/carpenter/mahogany_furniture.xss
+#include scripts/items/carpenter/oak_furniture.xss
+#include scripts/items/carpenter/walnut_furniture.xss
+#include scripts/items/carpenter/ebony_furniture.xss
+#include scripts/items/carpenter/beech_furniture.xss
+#include scripts/items/carpenter/cedar_furniture.xss
+#include scripts/items/carpenter/alder_furniture.xss
+#include scripts/items/carpenter/maple_furniture.xss

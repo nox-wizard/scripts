@@ -931,7 +931,7 @@ Z 5
 
 SECTION HOUSE ITEM 3
 { Chest (tent)
-ITEM $item_wooden_chest
+ITEM $item_wooden_chest1
 LOCK
 NODECAY
 X 0
@@ -1246,7 +1246,7 @@ Z 8
 
 SECTION HOUSE ITEM 39
 { Shop forge part 2
-ITEM $item_forge_1
+ITEM $item_forge
 X 4
 Y 2
 Z 8
@@ -1392,7 +1392,7 @@ Z 0
 
 SECTION HOUSE ITEM 58
 { Bed-PT2-east
-ITEM $item_bed_8
+ITEM $item_pine_bed_feet_A1_1
 X 1
 Y 0
 Z 0
@@ -1400,7 +1400,7 @@ Z 0
 
 SECTION HOUSE ITEM 59
 { Bed-PT2-south
-ITEM $item_bed_9
+ITEM $item_pine_bed_feet_A2_1
 X 0
 Y 1
 Z 0
@@ -1424,7 +1424,7 @@ Z 0
 
 SECTION HOUSE ITEM 63
 { bed large facing south part 1
-ITEM $item_bed_1
+ITEM $item_pine_bigbed_headleft_A2_4
 LOCK
 X 0
 Y 0
@@ -1432,7 +1432,7 @@ Z 8
 }
 SECTION HOUSE ITEM 64
 { bed large facing south part 2
-ITEM $item_bed
+ITEM $item_pine_bigbed_feetleft_A2_3
 LOCK
 X 0
 Y 1
@@ -1440,7 +1440,7 @@ Z 8
 }
 SECTION HOUSE ITEM 65
 { bed large facing south part 3
-ITEM $item_bed_3
+ITEM $item_pine_bigbed_headright_A2_4
 LOCK
 X 1
 Y 0
@@ -1448,7 +1448,7 @@ Z 8
 }
 SECTION HOUSE ITEM 66
 { bed large facing south part 4
-ITEM $item_bed_2
+ITEM $item_pine_bigbed_feetright_A2_3
 LOCK
 X 1
 Y 1
@@ -1456,7 +1456,7 @@ Z 8
 }
 SECTION HOUSE ITEM 67
 { bed large facing east part 1
-ITEM $item_bed_5
+ITEM $item_pine_bigbed_headright_A1_4
 LOCK
 X 0
 Y 0
@@ -1464,7 +1464,7 @@ Z 8
 }
 SECTION HOUSE ITEM 68
 { bed large facing south part 2
-ITEM $item_bed_4
+ITEM $item_pine_bigbed_headleft_A1_4
 LOCK
 X 0
 Y 1
@@ -1472,7 +1472,7 @@ Z 8
 }
 SECTION HOUSE ITEM 69
 { bed large facing south part 3
-ITEM $item_bed_6
+ITEM $item_pine_bigbed_feetleft_A1_3
 LOCK
 X 1
 Y 1
@@ -1480,7 +1480,7 @@ Z 8
 }
 SECTION HOUSE ITEM 70
 { bed large facing south part 4
-ITEM $item_bed_7
+ITEM $item_pine_bigbed_feetright_A1_3
 LOCK
 X 1
 Y 0

@@ -107,6 +107,7 @@ Four
 Five
 Six
 }
+
 SECTION GUMPMENU 4
 {
 type 5
@@ -152,9 +153,7 @@ button 18 369 2223 2223 0 1 0
 text 38 365 800 17
 button 18 240 1209 1209 1 0 10006
 text 38 235 800 20
-
 }
-
 
 SECTION GUMPTEXT 4
 {

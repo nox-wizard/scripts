@@ -5,7 +5,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || This script requires NoX-Wizard 0.70s or later                      ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
 // Uses items in items.scp
 
 // Be aware that all commands are case-sensitive!
@@ -39,27 +38,27 @@ SECTION MAKEMENU 2
     1B73 Buckler
     RESOURCE 10
     SKILL 32
-    ADDITEM $item_buckler
+    ADDITEM $item_iron_buckler
     1B7B Metal Shield
     RESOURCE 14
     SKILL 173
-    ADDITEM $item_metal_shield
+    ADDITEM $item_iron_metal_shield
     1B72 Bronze Shield
     RESOURCE 12
     SKILL 126
-    ADDITEM $item_bronze_shield
+    ADDITEM $item_iron_bronze_shield
     1B78 Kite Shield (wooden)
     RESOURCE 8
     SKILL 126
-    ADDITEM $item_wooden_kite_shield
+    ADDITEM $item_iron_wooden_kite_shield
     1B74 Kite Shield (Metal)
     RESOURCE 16
     SKILL 314
-    ADDITEM $item_metal_kite_shield
+    ADDITEM $item_iron_metal_kite_shield
     1B76 Heater
     RESOURCE 18
     SKILL 502
-    ADDITEM $item_heater
+    ADDITEM $item_iron_heater
 }
 
 SECTION MAKEMENU 3
@@ -118,31 +117,31 @@ SECTION MAKEMENU 5
     1413 Gorget
     RESOURCE 10
     SKILL 573
-    ADDITEM $item_plate_gorget
+    ADDITEM $item_iron_plate_gorget
     1414 Gloves
     RESOURCE 12
     SKILL 597
-    ADDITEM $item_plate_gloves
+    ADDITEM $item_iron_plate_gloves
     1412 Plate Helm
     RESOURCE 15
     SKILL 650
-    ADDITEM $item_plate_helm
+    ADDITEM $item_iron_plate_helm
     1410 Sleeves
     RESOURCE 18
     SKILL 667
-    ADDITEM $item_plate_sleeves
+    ADDITEM $item_iron_plate_sleeves
     141A Leggings
     RESOURCE 20
     SKILL 691
-    ADDITEM $item_plate_leggings
+    ADDITEM $item_iron_plate_leggings
     1C04 Female Plate
     RESOURCE 20
     SKILL 526
-    ADDITEM $item_female_plate
+    ADDITEM $item_iron_female_plate
     1416 Breastplate
     RESOURCE 25
     SKILL 750
-    ADDITEM $item_platemail
+    ADDITEM $item_iron_platemail
 }
 
 SECTION MAKEMENU 6
@@ -151,15 +150,15 @@ SECTION MAKEMENU 6
     13BB Coif
     RESOURCE 10
     SKILL 408
-    ADDITEM $item_chain_coif
+    ADDITEM $item_iron_chain_coif
     13C3 Leggings
     RESOURCE 18
     SKILL 502
-    ADDITEM $item_chain_leggings
+    ADDITEM $item_iron_chain_leggings
     13C4 Tunic
     RESOURCE 20
     SKILL 526
-    ADDITEM $item_chain_tunic
+    ADDITEM $item_iron_chain_tunic
 }
 
 SECTION MAKEMENU 7
@@ -168,19 +167,19 @@ SECTION MAKEMENU 7
     13F2 Gloves
     RESOURCE 10
     SKILL 338
-    ADDITEM $item_ringmail_gloves
+    ADDITEM $item_iron_ringmail_gloves
     13EF Sleeves
     RESOURCE 14
     SKILL 385
-    ADDITEM $item_ringmail_sleeves
+    ADDITEM $item_iron_ringmail_sleeves
     13F1 Leggings
     RESOURCE 16
     SKILL 408
-    ADDITEM $item_ringmail_leggings
+    ADDITEM $item_iron_ringmail_leggings
     13ED Tunic
     RESOURCE 18
     SKILL 432
-    ADDITEM $item_ringmail_tunic
+    ADDITEM $item_iron_ringmail_tunic
 }
 
 SECTION MAKEMENU 8
@@ -189,19 +188,19 @@ SECTION MAKEMENU 8
     140C Bascinet
     RESOURCE 15
     SKILL 350
-    ADDITEM $item_bascinet
+    ADDITEM $item_iron_bascinet
     1408 Close Helmet
     RESOURCE 15
     SKILL 632
-    ADDITEM $item_close_helm
+    ADDITEM $item_iron_close_helm
     140A Helmet
     RESOURCE 15
     SKILL 632
-    ADDITEM $item_a_helmet
+    ADDITEM $item_iron_helmet
     140E Nose Helm
     RESOURCE 15
     SKILL 632
-    ADDITEM $item_nose_helm
+    ADDITEM $item_iron_nose_helm
 }
 
 SECTION MAKEMENU 9
@@ -210,7 +209,7 @@ SECTION MAKEMENU 9
     0F51 Dagger
     RESOURCE 3
     SKILL 267
-    ADDITEM $item_dagger
+    ADDITEM $item_iron_dagger
     0EC4 Skinning Knife
     RESOURCE 3
     SKILL 267
@@ -218,31 +217,31 @@ SECTION MAKEMENU 9
     1440 Cutlass
     RESOURCE 8
     SKILL 502
-    ADDITEM $item_cutlass
+    ADDITEM $item_iron_cutlass
     1400 Kryss
     RESOURCE 8
     SKILL 620
-    ADDITEM $item_kryss
+    ADDITEM $item_iron_kryss
     13FF Katana
     RESOURCE 8
     SKILL 691
-    ADDITEM $item_katana
+    ADDITEM $item_iron_katana
     13B6 Scimitar
     RESOURCE 10
     SKILL 573
-    ADDITEM $item_scimitar
+    ADDITEM $item_iron_scimitar
     0F5E Broad Sword
     RESOURCE 10
     SKILL 608
-    ADDITEM $item_broadsword
+    ADDITEM $item_iron_broadsword
     13B8 Long Sword
     RESOURCE 12
     SKILL 538
-    ADDITEM $item_long_sword
+    ADDITEM $item_iron_long_sword
     13BA Viking Sword
     RESOURCE 14
     SKILL 502
-    ADDITEM $item_viking_sword
+    ADDITEM $item_iron_viking_sword
 }
 
 SECTION MAKEMENU 10
@@ -251,31 +250,31 @@ SECTION MAKEMENU 10
     0F4B Double Axe
     RESOURCE 12
     SKILL 550
-    ADDITEM $item_double_axe
+    ADDITEM $item_iron_double_axe
     0F47 Battle Axe
     RESOURCE 14
     SKILL 561
-    ADDITEM $item_battle_axe
+    ADDITEM $item_iron_battle_axe
     13FB Large Battle Axe
     RESOURCE 14
     SKILL 538
-    ADDITEM $item_large_battle_axe
+    ADDITEM $item_iron_large_battle_axe
     0F49 Axe
     RESOURCE 14
     SKILL 597
-    ADDITEM $item_axe
+    ADDITEM $item_iron_axe
     1442 Two-handed Axe
     RESOURCE 16
     SKILL 585
-    ADDITEM $item_a_two-handed_axe
+    ADDITEM $item_iron_two-handed_axe
     0F45 Executioner's Axe
     RESOURCE 16
     SKILL 597
-    ADDITEM $item_executioners_axe
+    ADDITEM $item_iron_executioners_axe
     13B0 War Axe
     RESOURCE 16
     SKILL 644
-    ADDITEM $item_war_axe
+    ADDITEM $item_iron_war_axe
 }
 
 SECTION MAKEMENU 11
@@ -284,23 +283,23 @@ SECTION MAKEMENU 11
     0F5C Mace
     RESOURCE 6
     SKILL 408
-    ADDITEM $item_mace
+    ADDITEM $item_iron_mace
     143A Maul
     RESOURCE 10
     SKILL 455
-    ADDITEM $item_maul
+    ADDITEM $item_iron_maul
     1406 War Mace
     RESOURCE 14
     SKILL 538
-    ADDITEM $item_war_mace
+    ADDITEM $item_iron_war_mace
     1438 War Hammer
     RESOURCE 16
     SKILL 597
-    ADDITEM $item_war_hammer
+    ADDITEM $item_iron_war_hammer
     143C Hammer Pick
     RESOURCE 18
     SKILL 514
-    ADDITEM $item_hammer_pick
+    ADDITEM $item_iron_hammer_pick
 }
 
 SECTION MAKEMENU 12
@@ -309,15 +308,15 @@ SECTION MAKEMENU 12
     1403 Short Spear
     RESOURCE 6
     SKILL 702
-    ADDITEM $item_short_spear
+    ADDITEM $item_iron_short_spear
     1405 War Fork
     RESOURCE 12
     SKILL 632
-    ADDITEM $item_war_fork
+    ADDITEM $item_iron_war_fork
     0F62 Spear
     RESOURCE 12
     SKILL 738
-    ADDITEM $item_spear
+    ADDITEM $item_iron_spear
 }
 
 SECTION MAKEMENU 13
@@ -326,11 +325,11 @@ SECTION MAKEMENU 13
     0F4D Bardiche
     RESOURCE 18
     SKILL 573
-    ADDITEM $item_bardiche
+    ADDITEM $item_iron_bardiche
     143E Halberd
     RESOURCE 20
     SKILL 644
-    ADDITEM $item_halberd
+    ADDITEM $item_iron_halberd
 }
 
 SECTION MAKEMENU 14
@@ -356,11 +355,11 @@ SECTION MAKEMENU 19
     1BD7 1 Board
     RESOURCE 2
     SKILL 10
-    ADDITEM $item_boards_1
+    ADDITEM $item_boards
     1BD7 5 Boards
     RESOURCE 7
     SKILL 50
-    ADDITEM $item_boards_2
+    ADDITEM $item_boards 5
     1BD7 10 Boards
     RESOURCE 10
     SKILL 100
@@ -368,7 +367,7 @@ SECTION MAKEMENU 19
     1BD7 20 Boards
     RESOURCE 20
     SKILL 300
-    ADDITEM $item_boards_3
+    ADDITEM $item_boards 20
 }
 
 SECTION MAKEMENU 20
@@ -402,11 +401,11 @@ SECTION MAKEMENU 21
     0A2B Stool (Barstool)
     RESOURCE 9
     SKILL 110
-    ADDITEM $item_stool_1
+    ADDITEM $item_pine_stool1
     0A2A Stool, with Supports
     RESOURCE 9
     SKILL 110
-    ADDITEM $item_stool
+    ADDITEM $item_pine_stool2
     0B5A Chair
     RESOURCE 13
     SKILL 210
@@ -419,14 +418,14 @@ SECTION MAKEMENU 21
     RESOURCE 17
     SKILL 526
     MAKEMENU 25
-    0B2C Wooden Bench facing South
+    0B2C Wooden bench_A facing South
     RESOURCE 17
     SKILL 526
-    ADDITEM $item_wooden_bench
-    0B2D Wooden Bench facing East
+    ADDITEM $item_pine_wooden_bench_D1
+    0B2D Wooden bench_A facing East
     RESOURCE 17
     SKILL 526
-    ADDITEM $item_wooden_bench_1
+    ADDITEM $item_pine_wooden_bench_D2
     0B32 Throne
     RESOURCE 19
     SKILL 736
@@ -455,11 +454,11 @@ SECTION MAKEMENU 22
     0E3E Medium Wooden Crate - East
     RESOURCE 15
     SKILL 315
-    ADDITEM $item_medium_wooden_crate
+    ADDITEM $item_medium_wooden_crate1
     0E3f Medium Wooden Crate - South
     RESOURCE 15
     SKILL 315
-    ADDITEM $item_medium_wooden_crate_1
+    ADDITEM $item_medium_wooden_crate2
     0E3C Large Wooden Crate - East
     RESOURCE 18
     SKILL 473
@@ -467,88 +466,88 @@ SECTION MAKEMENU 22
     0E3d Large Wooden Crate - South
     RESOURCE 18
     SKILL 473
-    ADDITEM $item_large_wooden_crate_1
+    ADDITEM $item_large_wooden_crate
     0E42 Wooden Chest - East
     RESOURCE 15
     SKILL 736
-    ADDITEM $item_wooden_chest
+    ADDITEM $item_wooden_chest1
     0E43 Wooden Chest - South
     RESOURCE 15
     SKILL 736
-    ADDITEM $item_wooden_chest_1
+    ADDITEM $item_wooden_chest2
     0A51 Armorie, Cherry - East
     RESOURCE 35
     SKILL 842
-    ADDITEM $item_armorie
+    ADDITEM $item_pine_armoire1_1
     0A4D Armorie, Cherry - South
     RESOURCE 35
     SKILL 842
-    ADDITEM $item_armoire
+    ADDITEM $item_pine_armoire1_2
     0A53 Armorie, Brown - East
     RESOURCE 35
     SKILL 842
-    ADDITEM $item_armoire_2
+    ADDITEM $item_pine_armoire2_1
     0A4F Armorie, Brown - South
     RESOURCE 35
     SKILL 842
-    ADDITEM $item_armoire_1
+    ADDITEM $item_pine_armoire2_2
     0a34 Chest of Drawers - East
     RESOURCE 40
     SKILL 945
-    ADDITEM $item_chest_of_drawers_1
+    ADDITEM $item_pine_dresser1_2
     0a2c Chest of Drawers - South
     RESOURCE 40
     SKILL 945
-    ADDITEM $item_chest_of_drawers
+    ADDITEM $item_pine_dresser1_1
     0a38 Chest of Drawers Cherry - East
     RESOURCE 40
     SKILL 945
-    ADDITEM $item_chest_of_drawers_3
+    ADDITEM $item_pine_dresser2_1
     0a30 Chest of Drawers Cherry - South
     RESOURCE 40
     SKILL 945
-    ADDITEM $item_chest_of_drawers_2
+    ADDITEM $item_pine_dresser2_2
 }
 
 SECTION MAKEMENU 23
 {
     Tables
-    0B34 Table (Small)
+    0B34 table_A (Small)
     RESOURCE 17
     SKILL 421
-    ADDITEM $item_table
+    ADDITEM $item_pine_table_G1_1
     0B4a Writing Desk - North
     RESOURCE 17
     SKILL 631
-    ADDITEM $item_writing_desk_1
+    ADDITEM $item_pine_writing_desk_1
     0B4b Writing Desk - South
     RESOURCE 17
     SKILL 631
-    ADDITEM $item_writing_desk_2
+    ADDITEM $item_pine_writing_desk_2
     0B4c Writing Desk - East
     RESOURCE 17
     SKILL 631
-    ADDITEM $item_writing_desk_3
+    ADDITEM $item_pine_writing_desk_3
     0B49 Writing Desk - West
     RESOURCE 17
     SKILL 631
-    ADDITEM $item_writing_desk
-    0B8F Table facing east
+    ADDITEM $item_pine_writing_desk_4
+    0B8F table_A facing east
     RESOURCE 23
     SKILL 631
-    ADDITEM $item_table_1
-    0B7c Table facing south
+    ADDITEM $item_pine_table_E2
+    0B7c table_A facing south
     RESOURCE 23
     SKILL 631
-    ADDITEM $item_table_Z5
-    0B7d Large Table (Yew Style)- east
+    ADDITEM $item_pine_table_E1
+    0B7d Large table_A (Yew Style)- east
     RESOURCE 27
     SKILL 842
-    ADDITEM $item_table_Z6
-    0B90 Large Table (Yew Style)- south
+    ADDITEM $item_pine_table_F1
+    0B90 Large table_A (Yew Style)- south
     RESOURCE 27
     SKILL 842
-    ADDITEM $item_table_2
+    ADDITEM $item_pine_table_F2
 }
 SECTION MAKEMENU 24
 {
@@ -556,11 +555,11 @@ SECTION MAKEMENU 24
     0B32 Throne
     RESOURCE 19
     SKILL 736
-    ADDITEM $item_a_throne
+    ADDITEM $item_pine_throne1
     0B33 Throne
     RESOURCE 19
     SKILL 736
-    ADDITEM $item_a_throne_1
+    ADDITEM $item_pine_throne2
 }
 
 SECTION MAKEMENU 25
@@ -569,19 +568,19 @@ SECTION MAKEMENU 25
     0B2E Wooden Chair
     RESOURCE 17
     SKILL 250
-    ADDITEM $item_a_wooden_chair
+    ADDITEM $item_pine_wooden_chair1_1
     0B2F Wooden Chair
     RESOURCE 17
     SKILL 250
-    ADDITEM $item_a_wooden_chair_1
+    ADDITEM $item_pine_wooden_chair1_2
     0B30 Wooden Chair
     RESOURCE 17
     SKILL 250
-    ADDITEM $item_a_wooden_chair_2
+    ADDITEM $item_pine_wooden_chair1_3
     0B31 Wooden Chair
     RESOURCE 17
     SKILL 250
-    ADDITEM $item_a_wooden_chair_3
+    ADDITEM $item_pine_wooden_chair1_4
 }
 
 SECTION MAKEMENU 26
@@ -590,7 +589,7 @@ SECTION MAKEMENU 26
     1db8 Barrel Lid
     RESOURCE 4
     SKILL 110
-    ADDITEM $item_a_barrel_lid
+    ADDITEM $item_barrel_lid
     1eb2 Barrel Staves
     RESOURCE 5
     SKILL 1
@@ -610,7 +609,7 @@ SECTION MAKEMENU 26
     1b78 Wooden Kite Shield
     RESOURCE 15
     SKILL 626
-    ADDITEM $item_wooden_kite_shield
+    ADDITEM $item_iron_wooden_kite_shield
     xeb8 Music Stand
     RESOURCE 15
     SKILL 789
@@ -643,35 +642,35 @@ SECTION MAKEMENU 27
     0B52 Cushioned Chair
     RESOURCE 15
     SKILL 421
-    ADDITEM $item_a_fancy_chair_4
+    ADDITEM $item_pine_fancy_chair2_1
     0B53 Cushioned Chair
     RESOURCE 15
     SKILL 421
-    ADDITEM $item_a_fancy_chair_5
+    ADDITEM $item_pine_fancy_chair2_2
     0B54 Cushioned Chair
     RESOURCE 15
     SKILL 421
-    ADDITEM $item_a_fancy_chair_6
+    ADDITEM $item_pine_fancy_chair2_3
     0B55 Cushioned Chair
     RESOURCE 15
     SKILL 421
-    ADDITEM $item_a_fancy_chair_7
+    ADDITEM $item_pine_fancy_chair2_4
     0B4E Cushioned Chair
     RESOURCE 15
     SKILL 421
-    ADDITEM $item_a_fancy_chair
+    ADDITEM $item_pine_fancy_chair1_4
     0B4F Cushioned Chair
     RESOURCE 15
     SKILL 421
-    ADDITEM $item_a_fancy_chair_1
+    ADDITEM $item_pine_fancy_chair1_1
     0B50 Cushioned Chair
     RESOURCE 15
     SKILL 421
-    ADDITEM $item_a_fancy_chair_2
+    ADDITEM $item_pine_fancy_chair1_2
     0B51 Cushioned Chair
     RESOURCE 15
     SKILL 421
-    ADDITEM $item_a_fancy_chair_3
+    ADDITEM $item_pine_fancy_chair1_3
 }
 
 SECTION MAKEMENU 28
@@ -701,35 +700,35 @@ SECTION MAKEMENU 29
     0B5A Chair
     RESOURCE 13
     SKILL 210
-    ADDITEM $item_a_straw_chair
+    ADDITEM $item_pine_straw_chair1_1
     0B5B Chair
     RESOURCE 13
     SKILL 210
-    ADDITEM $item_a_straw_chair_1
+    ADDITEM $item_pine_straw_chair1_2
     0B5C Chair
     RESOURCE 13
     SKILL 210
-    ADDITEM $item_a_straw_chair_2
+    ADDITEM $item_pine_straw_chair1_3
     0B5D Chair
     RESOURCE 13
     SKILL 210
-    ADDITEM $item_a_straw_chair_3
+    ADDITEM $item_pine_straw_chair1_4
     0B56 Chair
     RESOURCE 13
     SKILL 210
-    ADDITEM $item_a_wooden_chair_4
+    ADDITEM $item_pine_wooden_chair2_1
     0B57 Chair
     RESOURCE 13
     SKILL 210
-    ADDITEM $item_a_wooden_chair_5
+    ADDITEM $item_pine_wooden_chair2_2
     0B58 Chair
     RESOURCE 13
     SKILL 210
-    ADDITEM $item_a_wooden_chair_6
+    ADDITEM $item_pine_wooden_chair2_3
     0B59 Chair
     RESOURCE 13
     SKILL 210
-    ADDITEM $item_a_wooden_chair_7
+    ADDITEM $item_pine_wooden_chair2_4
 }
 
 // End of Carpentry section
@@ -1227,7 +1226,7 @@ SECTION MAKEMENU 50
     1B76 Heater Shield (18)
     RESOURCE 18
     SKILL 506
-    ADDITEM $item_a_golden_heater_shield
+    ADDITEM $item_golden_heater
     13BA Weapons
     RESOURCE 8
     SKILL 411
@@ -1294,7 +1293,7 @@ SECTION MAKEMENU 52
     140f Golden Nose Helm
     RESOURCE 15
     SKILL 700
-    ADDITEM $item_nose_helm_1
+    ADDITEM $item_iron_nose_helm_1
     1409 Golden Close Helm
     RESOURCE 15
     SKILL 700
@@ -1306,15 +1305,15 @@ SECTION MAKEMENU 52
     1410 Golden Sleeves
     RESOURCE 18
     SKILL 800
-    ADDITEM $item_golden_plate_arms
+    ADDITEM $item_golden_plate_sleeves
     141A Golden Leggings
     RESOURCE 20
     SKILL 800
-    ADDITEM $item_golden_plate_legs
+    ADDITEM $item_golden_plate_leggings
     1c04 Golden Female Plate
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_plate_armor
+    ADDITEM $item_iron_platemail
     1416 Golden Platemail
     RESOURCE 25
     SKILL 800
@@ -1327,23 +1326,23 @@ SECTION MAKEMENU 53
     1400 Kryss (8)
     RESOURCE 8
     SKILL 411
-    ADDITEM $item_a_golden_kryss
+    ADDITEM $item_golden_kryss
     13BA Viking Sword (14)
     RESOURCE 14
     SKILL 538
-    ADDITEM $item_a_golden_viking_sword
+    ADDITEM $item_golden_viking_sword
     1406 War Mace (14)
     RESOURCE 14
     SKILL 506
-    ADDITEM $item_a_golden_war_mace
+    ADDITEM $item_golden_war_mace
     0F4B Double Axe (12)
     RESOURCE 12
     SKILL 198
-    ADDITEM $item_a_golden_double_axe
+    ADDITEM $item_golden_double_axe
     13B2 Bow (9)
     RESOURCE 9
     SKILL 461
-    ADDITEM $item_a_golden_bow
+    ADDITEM $item_golden_bow
     1405 War Fork (12)
     RESOURCE 12
     SKILL 411
@@ -1451,15 +1450,15 @@ SECTION MAKEMENU 66
     1BD6 Ten Shafts
     RESOURCE 4
     SKILL 100
-    ADDITEM $item_shafts_1
+    ADDITEM $item_shafts 10
     1BD6 Twenty Shafts
     RESOURCE 8
     SKILL 100
-    ADDITEM $item_shafts_2
+    ADDITEM $item_shafts 20
     1BD6 Fifty Shafts
     RESOURCE 18
     SKILL 100
-    ADDITEM $item_shafts_3
+    ADDITEM $item_shafts 50
 }
 // end bowcraft section
 // end bowcraft/fletching sections
@@ -1766,7 +1765,7 @@ SECTION MAKEMENU 105
     09d5 Silverware
     RESOURCE 2
     SKILL 117
-    ADDITEM $item_silverware_1
+    ADDITEM $item_silverware
     09a6 Knife
     RESOURCE 3
     SKILL 117
@@ -1782,7 +1781,7 @@ SECTION MAKEMENU 105
     09e3 Pot
     RESOURCE 6
     SKILL 300
-    ADDITEM $item_pot_1
+    ADDITEM $item_big_flower_pot
     09f3 pan
     RESOURCE 8
     SKILL 360
@@ -2132,11 +2131,11 @@ SECTION MAKEMENU 2029
     1410 Silver Sleeves
     RESOURCE 18
     SKILL 700
-    ADDITEM $item_silver_plate_arms
+    ADDITEM $item_silver_plate_sleeves
     141A Silver Legs
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_silver_plate_legs
+    ADDITEM $item_silver_plate_leggings
     1c04 Silver Female Plate
     RESOURCE 20
     SKILL 700
@@ -2242,19 +2241,19 @@ SECTION MAKEMENU 816
     14f0 Bed Deed (Facing East)
     RESOURCE 175
     SKILL 650
-    ADDITEM $item_bed-east_deed
+    ADDITEM $item_pine_bed-east_deed
     14f0 Bed Deed (Facing south)
     RESOURCE 175
     SKILL 650
-    ADDITEM $item_bed-south_deed
+    ADDITEM $item_pine_bed-south_deed
     14f0 Large Bed Deed (facing East)
     RESOURCE 200
     SKILL 990
-    ADDITEM $item_a_bed_facing_east_deed
+    ADDITEM $item_pine_bed_facing_east_deed
     14f0 Large Bed Deed (facing South)
     RESOURCE 200
     SKILL 990
-    ADDITEM $item_a_bed_facing_south_deed
+    ADDITEM $item_pine_bed_facing_south_deed
 }
 
 SECTION MAKEMENU 1100
@@ -2308,7 +2307,7 @@ SECTION MAKEMENU 2000
     13F1 Leggings
     RESOURCE 16
     SKILL 408
-    ADDITEM $item_ringmail_leggings_1
+    ADDITEM $item_shadow_ringmail_leggings
     13ED Tunic
     RESOURCE 18
     SKILL 432
@@ -2329,7 +2328,7 @@ SECTION MAKEMENU 2001
     13F1 Leggings
     RESOURCE 16
     SKILL 408
-    ADDITEM $item_ringmail_leggings_2
+    ADDITEM $item_merkite_ringmail_leggings
     13ED Tunic
     RESOURCE 18
     SKILL 432
@@ -2413,7 +2412,7 @@ SECTION MAKEMENU 2005
     13F1 Leggings
     RESOURCE 16
     SKILL 408
-    ADDITEM $item_ringmail_leggings_3
+    ADDITEM $item_bronze_ringmail_leggings
     13ED Tunic
     RESOURCE 18
     SKILL 432
@@ -2541,11 +2540,11 @@ SECTION MAKEMENU 2021
     1410 Bronze Plate Sleeves
     RESOURCE 18
     SKILL 700
-    ADDITEM $item_bronze_plate_arms
+    ADDITEM $item_bronze_plate_sleeves
     141A Bronze Plate Leggings
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_bronze_plate_legs
+    ADDITEM $item_bronze_plate_leggings
     1c04 Bronze Female Plate
     RESOURCE 20
     SKILL 700
@@ -2590,11 +2589,11 @@ SECTION MAKEMENU 2022
     1410 Verite Plate Sleeves
     RESOURCE 18
     SKILL 700
-    ADDITEM $item_verite_plate_arms
+    ADDITEM $item_verite_plate_sleeves
     141A Verite Plate Leggings
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_verite_plate_legs
+    ADDITEM $item_verite_plate_leggings
     1c04 Verite Female Plate
     RESOURCE 20
     SKILL 700
@@ -2627,11 +2626,11 @@ SECTION MAKEMENU 2023
     1410 Mythril Plate Sleeves
     RESOURCE 18
     SKILL 700
-    ADDITEM $item_valorite_plate_arms
+    ADDITEM $item_valorite_plate_sleeves
     141A Mythril Plate Leggings
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_valorite_plate_legs
+    ADDITEM $item_valorite_plate_leggings
     1c04 Mythril Female Plate
     RESOURCE 20
     SKILL 700
@@ -2672,11 +2671,11 @@ SECTION MAKEMENU 2024
     1410 Merkite Plate Sleeves
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_merkite_plate_arms
+    ADDITEM $item_merkite_plate_sleeves
     141A Merkite Plate Leggings
     RESOURCE 22
     SKILL 700
-    ADDITEM $item_merkite_plate_legs
+    ADDITEM $item_merkite_plate_leggings
     1c04 Merkite Female Plate
     RESOURCE 20
     SKILL 700
@@ -2717,11 +2716,11 @@ SECTION MAKEMENU 2025
     1410 Agapite Plate Sleeves
     RESOURCE 18
     SKILL 700
-    ADDITEM $item_agapite_plate_arms
+    ADDITEM $item_agapite_plate_sleeves
     141A Agapite Plate Leggings
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_agapite_plate_legs
+    ADDITEM $item_agapite_plate_leggings
     1c04 Agapite Female Plate
     RESOURCE 20
     SKILL 700
@@ -2758,11 +2757,11 @@ SECTION MAKEMENU 2026
     1410 Copper Arms
     RESOURCE 18
     SKILL 700
-    ADDITEM $item_copper_plate_arms
+    ADDITEM $item_copper_plate_sleeves
     141A Copper Legs
     RESOURCE 20
     SKILL 700
-    ADDITEM $item_copper_plate_legs
+    ADDITEM $item_copper_plate_leggings
     1c04 Copper Female Plate
     RESOURCE 20
     SKILL 700

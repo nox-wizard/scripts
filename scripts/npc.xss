@@ -11,7 +11,7 @@
 #include scripts/npc/npc_npclists.xss
 
 #include scripts/npc/npc_animals.xss
-#include scripts/npc/npc_deamons.xss
+#include scripts/npc/npc_daemons.xss
 #include scripts/npc/npc_dragons.xss
 #include scripts/npc/npc_elementals.xss
 #include scripts/npc/npc_elves.xss
@@ -36,5 +36,4 @@
 // || directory (like the custom directory) to ease future NoX-Wizard     ||
 // || upgrades.                                                           ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-
-
+#include scripts/npc/customnpc.xss

@@ -41,20 +41,20 @@ SECTION FISHLIST 1
 // weapons for fishing...(skill>95)
 SECTION FISHLIST 2
 {
-	$item_a_axe_of_vanquishing
-	$item_viking_sword_of_flamestrike
-	$item_a_magic_spear_of_vanquishing
-	$item_a_katana_of_power
-	$item_a_axe_of_force
-	$item_katana
-	$item_a_pick_axe_of_ruin
+	$item_iron_axe_of_vanquishing
+	$item_iron_viking_sword_of_flamestrike
+	$item_iron_spear_of_vanquishing
+	$item_iron_katana_of_power
+	$item_iron_axe_of_force
+	$item_iron_katana
+	$item_iron_pick_axe_of_ruin
 }
 
 // armor for fishing...(skill>95)
 SECTION FISHLIST 3
 {
 	$item_shadow_chain_tunic
-	$item_magic_plate_of_hardening
+	$item_iron_plate_of_hardening
 	$item_valorite_platemail
 	$item_silver_close_helm
 	$item_verite_plate_gorget
@@ -66,7 +66,7 @@ SECTION FISHLIST 3
 // treasure for fishing...(skill>70)
 SECTION FISHLIST 4
 {
-	$item_a_bronze_shield_of_hardening
+	$item_iron_bronze_shield_of_hardening
 }
 
 // boots for fishing...(skill>20)
