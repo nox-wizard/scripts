@@ -29,6 +29,7 @@
 #include scripts/symbols/speech.xss
 
 #include scripts/symbols/menus.xss
+#include scripts/symbols/triggers.xss
 #include scripts/symbols/itrigrs.xss
 #include scripts/symbols/ntrigrs.xss
 

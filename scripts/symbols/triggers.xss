@@ -1,0 +1,3 @@
+
+#define $trg_onGround 0
+#define $trg_intoBackpack 1
