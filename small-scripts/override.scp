@@ -10,21 +10,21 @@
 1=__anatomy_target,AFTER
 
 //Put here overrides that will be called when player presses the blue skill button.
-//To override other skills you need to put appropriate event handlers on skill 
+//To override other skills you need to put appropriate event handlers on skill
 //triggering items.
 [skills]
-46=__meditation,BYPASS
-38=__nxw_sk_tracking,BYPASS
-49=__nxw_sk_lumber,BYPASS
 2=__nxw_sk_anatomy,BYPASS
 17=__nxw_sk_evint,BYPASS
-24=__nxw_sk_inscript,BYPASS
-50=__nxw_sk_mining,BYPASS
-37=__nxw_sk_tasteid,BYPASS
-34=__nxw_sk_tailoring,BYPASS
-35=__nxw_sk_taming,BYPASS
 18=__nxw_sk_fishing,BYPASS
 21=__nxw_sk_hiding,BYPASS
+24=__nxw_sk_inscript,BYPASS
+34=__nxw_sk_tailoring,BYPASS
+35=__nxw_sk_taming,BYPASS
+37=__nxw_sk_tasteid,BYPASS
+38=__nxw_sk_tracking,BYPASS
+44=__nxw_sk_lumber,BYPASS
+45=__nxw_sk_mining,BYPASS
+46=__meditation,BYPASS
 0=__nxw_sk_alchemy,BYPASS
 
 [triggers]
@@ -34,7 +34,7 @@
 [magiccast]
 
 //We recommend you to use the provided override callbacks instead of declaring new ones
-//in this section because many important scripts are run with these overrides and not 
+//in this section because many important scripts are run with these overrides and not
 //executing them will cause errors in the standard scripts.
 [special]
 OnStart=__startServer,AFTER
