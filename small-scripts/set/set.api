@@ -158,6 +158,20 @@ native set_addOwnedNpcs( const set, const owner, const includeStabled=false, con
 native set_addNpcsNearXY( const set, const x, const y, const distance=VISRANGE );
 
 /*!
+\brief Add to given set the npcs near object
+\author Endymion
+\since 0.82
+\param set the set
+\param obj the object
+\param distance the distance
+\return 0
+\note object can be an item or a char
+\note if object is an item, the location is out most container location
+\fn set_addNpcsNearObj( const set, const obj, const distance )
+*/
+native set_addNpcsNearObj( const set, const obj, const distance=VISRANGE );
+
+/*!
 \brief Add to given set the party friend of given character
 \author Endymion
 \since 0.82
