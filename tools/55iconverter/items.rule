@@ -1,0 +1,1639 @@
+[0F0E]
+MAPPING $item_bottle11
+
+[I_BOTTLE_EMPTY]
+MAPPING $item_bottle11
+
+[0AEF]
+MAPPING $item_carpet6_4
+
+[0142A]
+MAPPING $item_pots_of_wax
+
+[I_POT_OF_WAX]
+MAPPING $item_pots_of_wax
+
+[0AED]
+MAPPING $item_carpet6_2
+
+[0AEE]
+MAPPING $item_carpet6_3
+
+[0AEB]
+MAPPING $item_carpet5_9
+
+[0AEC]
+MAPPING $item_carpet6_1
+
+[0428]
+MAPPING $item_gruesome2_2
+
+[0429]
+MAPPING $item_gruesome1_2
+
+[0426]
+MAPPING $item_banner2_1_1
+
+[I_BANNER_TATTERED]
+MAPPING $item_banner2_1_1
+
+[0427]
+MAPPING $item_banner2_1_2
+
+[0936]
+MAPPING $item_fireplace
+
+[0185B]
+MAPPING $item_set_of_vials
+
+[I_TESTTUBE_RACK]
+MAPPING $item_set_of_vials
+
+MULTIPLE
+[02106]
+MAPPING $item_weak_henchman
+
+[I_PET_MAN]
+MAPPING $item_weak_henchman
+
+[0931]
+MAPPING $item_oven_1
+
+[0420]
+MAPPING $item_gruesome1_1
+
+[I_GRUESOMESTANDARD_2]
+MAPPING $item_gruesome1_1
+
+[0158D]
+MAPPING $item_e_8
+
+[I_BANNER_3_PART_2]
+MAPPING $item_e_8
+
+[01420]
+MAPPING $item_rolls_of_string
+
+[I_STRING]
+MAPPING $item_rolls_of_string
+
+[0AE7]
+MAPPING $item_carpet5_5
+
+[0AE4]
+MAPPING $item_carpet5_2
+
+[01588]
+MAPPING $item_e_6
+
+[I_BANNER_1_PART_3]
+MAPPING $item_e_6
+
+[0AE2]
+MAPPING $item_carpet4_9
+
+[0AE3]
+MAPPING $item_carpet5_1
+
+[0AE0]
+MAPPING $item_carpet4_7
+
+[0AE1]
+MAPPING $item_carpet4_8
+
+[01428]
+MAPPING $item_dipping_stick
+
+[I_DIPPING_STICK]
+MAPPING $item_dipping_stick
+
+[042D]
+MAPPING $item_banner2_2_2
+
+[042E]
+MAPPING $item_banner1_2_1
+
+[042B]
+MAPPING $item_banner1_1_2
+
+[01AE1]
+MAPPING $item_skull_recoverd_from_a_shipwreck_3
+
+[0AE8]
+MAPPING $item_carpet5_6
+
+MULTIPLE
+[01AE3]
+MAPPING $item_skull_recoverd_from_a_shipwreck_1
+
+[01AE3]
+MAPPING $item_skull_1
+
+[0E80]
+MAPPING $item_brass_box
+
+[0E85]
+MAPPING $item_pickaxe
+
+[I_PICKAXE]
+MAPPING $item_pickaxe
+
+[01397]
+MAPPING $item_small_pillow
+
+[I_PILLOW]
+MAPPING $item_small_pillow
+
+[0FBC]
+MAPPING $item_tongs
+
+[0A6C]
+MAPPING $item_folded_blanket_poo
+
+[I_BLANKET]
+MAPPING $item_folded_blanket_poo
+
+[0163A]
+MAPPING $item_large_leather_pillow
+
+[I_PILLOW_LARGE]
+MAPPING $item_large_leather_pillow
+
+[0163C]
+MAPPING $item_small_leather_pillow
+
+[I_PILLOW_10]
+MAPPING $item_small_leather_pillow
+
+[0163B]
+MAPPING $item_medium_leather_pillow
+
+[I_PILLOW_9]
+MAPPING $item_medium_leather_pillow
+
+[01515]
+MAPPING $item_piwafwi
+
+[I_CAPE]
+MAPPING $item_piwafwi
+
+[01F14]
+MAPPING $item_teleport_rune
+
+[I_RUNE_MARKER]
+MAPPING $item_teleport_rune
+
+[0ECA]
+MAPPING $item_pile_of_bones_recoverd_from_a_shipwreck_8
+
+[I_BONES]
+MAPPING $item_pile_of_bones_recoverd_from_a_shipwreck_8
+
+[0ECB]
+MAPPING $item_pile_of_bones_recoverd_from_a_shipwreck_7
+
+[0ECC]
+MAPPING $item_pile_of_bones_recoverd_from_a_shipwreck_6
+
+[0ECD]
+MAPPING $item_pile_of_bones_recoverd_from_a_shipwreck_5
+
+[0ECE]
+MAPPING $item_pile_of_bones_recoverd_from_a_shipwreck_4
+
+[0ECF]
+MAPPING $item_pile_of_bones_recoverd_from_a_shipwreck_3
+
+[0AEA]
+MAPPING $item_carpet5_8
+
+[09FC]
+MAPPING $item_wall_sconce
+
+[0158C]
+MAPPING $item_e_7
+
+[I_BANNER_3_PART_1]
+MAPPING $item_e_7
+
+[0B46]
+MAPPING $item_small_vase1
+
+[0B47]
+MAPPING $item_large_vase
+
+[0B45]
+MAPPING $item_vase
+
+[0B48]
+MAPPING $item_small_vase2
+
+[01BD1]
+MAPPING $item_feathers
+
+[I_FEATHER]
+MAPPING $item_feathers
+
+[01BD4]
+MAPPING $item_shafts
+
+[I_ARROW_SHAFT]
+MAPPING $item_shafts
+
+[0158E]
+MAPPING $item_e_9
+
+[I_BANNER_3_PART_3]
+MAPPING $item_e_9
+
+[0979]
+MAPPING $item_cigar
+
+[0E4B]
+MAPPING $item_jars
+
+[010DA]
+MAPPING $item_strange_cocoon_1
+
+[0ADA]
+MAPPING $item_carpet4_1
+
+[010D9]
+MAPPING $item_silk_scraps_might_be_useful_
+
+[0ADC]
+MAPPING $item_carpet4_3
+
+[0ADB]
+MAPPING $item_carpet4_2
+
+[0F0F]
+MAPPING $item_star_sapphires1
+
+[I_GEM_STAR_SAPPHIRE]
+MAPPING $item_star_sapphires1
+
+[0E40]
+MAPPING $item_metal_chest1
+
+[I_CHEST_METAL_BRASS]
+MAPPING $item_metal_chest1
+
+[0E43]
+MAPPING $item_wooden_chest
+
+[0E42]
+MAPPING $item_wooden_chest_1
+
+[I_CHEST_WOODEN_BRASS]
+MAPPING $item_wooden_chest_1
+
+[0ADE]
+MAPPING $item_carpet4_5
+
+[0ADD]
+MAPPING $item_carpet4_4
+
+[0ADF]
+MAPPING $item_carpet4_6
+
+[01CF0]
+MAPPING $item_brain
+
+[I_FLESH_BRAIN]
+MAPPING $item_brain
+
+[02125]
+MAPPING $item_pet_rabbit
+
+[I_PET_RABBIT]
+MAPPING $item_pet_rabbit
+
+[09AA]
+MAPPING $item_wooden_box_2
+
+[I_BOX_WOOD]
+MAPPING $item_wooden_box_2
+
+[09A8]
+MAPPING $item_metal_box
+
+[I_BOX_BRASS]
+MAPPING $item_metal_box
+
+[09A6]
+MAPPING $item_knife
+
+[0DE1]
+MAPPING $item_kindling
+
+[I_KINDLING]
+MAPPING $item_kindling
+
+[0AE6]
+MAPPING $item_carpet5_4
+
+[0AE5]
+MAPPING $item_carpet5_3
+
+[0FF1]
+MAPPING $item_book
+
+[I_BOOK_SM]
+MAPPING $item_book
+
+[042F]
+MAPPING $item_banner1_2_2
+
+[092C]
+MAPPING $item_oven
+
+[015D1]
+MAPPING $item_small_e
+
+[I_BANNER_POST_18_NW]
+MAPPING $item_small_e
+
+[015D0]
+MAPPING $item_small_n
+
+[I_BANNER_POST_18_NE]
+MAPPING $item_small_n
+
+[01AE0]
+MAPPING $item_skull
+
+[I_BONE_SKULL]
+MAPPING $item_skull
+
+[042C]
+MAPPING $item_banner2_2_1
+
+[0A12]
+MAPPING $item_torch
+
+[I_TORCH_LIT]
+MAPPING $item_torch
+
+[01B1B]
+MAPPING $item_spine
+
+[I_BONE_SPINE]
+MAPPING $item_spine
+
+[01AE2]
+MAPPING $item_skull_2
+
+[0A15]
+MAPPING $item_lantern
+
+[I_LANTERN_LIT]
+MAPPING $item_lantern
+
+[042A]
+MAPPING $item_banner1_1_1
+
+[01B17]
+MAPPING $item_ribcage
+
+[I_BONE_RIBCAGE]
+MAPPING $item_ribcage
+
+[02135]
+MAPPING $item_pet_ostard
+
+[I_PET_OSTARD_DESERT]
+MAPPING $item_pet_ostard
+
+[0433]
+MAPPING $item_curtain_rod_2
+
+[I_CURTAINROD]
+MAPPING $item_curtain_rod_2
+
+[0432]
+MAPPING $item_curtain_2
+
+[I_CURTAIN]
+MAPPING $item_curtain_2
+
+[0435]
+MAPPING $item_curtain_1
+
+[0434]
+MAPPING $item_curtain_rod_1
+
+[01013]
+MAPPING $item_bronze_key
+
+[I_KEY_RUSTY]
+MAPPING $item_bronze_key
+
+[01012]
+MAPPING $item_magic_key
+
+[I_KEY_MAGIC]
+MAPPING $item_magic_key
+
+[0ACD]
+MAPPING $item_carpet2_8
+
+[0ACE]
+MAPPING $item_carpet2_9
+
+[0ACF]
+MAPPING $item_carpet2_10
+
+[0AD2]
+MAPPING $item_carpet3_2
+
+[0AD5]
+MAPPING $item_carpet3_5
+
+[0AD4]
+MAPPING $item_carpet3_4
+
+[0AD7]
+MAPPING $item_carpet3_7
+
+[0AD6]
+MAPPING $item_carpet3_6
+
+[0AD9]
+MAPPING $item_carpet3_9
+
+[0AD8]
+MAPPING $item_carpet3_8
+
+[01010]
+MAPPING $item_iron_key
+
+[I_KEY_IRON]
+MAPPING $item_iron_key
+
+[0E79]
+MAPPING $item_pouch
+
+[0E75]
+MAPPING $item_backpack
+
+[I_BACKPACK]
+MAPPING $item_backpack
+
+[0E76]
+MAPPING $item_leather_bag
+
+[I_BAG]
+MAPPING $item_leather_bag
+
+[0E77]
+MAPPING $item_trashcan
+
+[I_BARREL_OPEN]
+MAPPING $item_trashcan
+
+[0E73]
+MAPPING $item_cannon_ball
+
+[I_CANNON_BALL]
+MAPPING $item_cannon_ball
+
+[01086]
+MAPPING $item_bracelet
+
+[I_BRACELET_GOLD]
+MAPPING $item_bracelet
+
+[01087]
+MAPPING $item_earrings
+
+[I_EARRINGS_GOLD]
+MAPPING $item_earrings
+
+[01085]
+MAPPING $item_necklace1
+
+[I_NECKLACE_METAL_BEADS]
+MAPPING $item_necklace1
+
+[0F1C]
+MAPPING $item_rubies4
+
+[I_GEM_RUBY_4]
+MAPPING $item_rubies4
+
+[01081]
+MAPPING $item_leather
+
+[I_HIDES_CUT_2]
+MAPPING $item_leather
+
+[0F1B]
+MAPPING $item_star_sapphires2
+
+[I_GEM_STAR_SAPPHIRE_2]
+MAPPING $item_star_sapphires2
+
+[01088]
+MAPPING $item_necklace2
+
+[I_NECKLACE_GOLD]
+MAPPING $item_necklace2
+
+[01089]
+MAPPING $item_necklace3
+
+[I_NECKLACE_GOLD_BEADS]
+MAPPING $item_necklace3
+
+[0108B]
+MAPPING $item_beads
+
+[I_BEADS]
+MAPPING $item_beads
+
+[0108A]
+MAPPING $item_ring
+
+[I_RING_GOLD]
+MAPPING $item_ring
+
+[0E7D]
+MAPPING $item_wooden_box_1
+
+[0E7C]
+MAPPING $item_silver_chest
+
+[0AC4]
+MAPPING $item_carpet1_8
+
+[0AC5]
+MAPPING $item_carpet1_9
+
+[0AC6]
+MAPPING $item_carpet2_1
+
+[0AC7]
+MAPPING $item_carpet2_2
+
+[0AC0]
+MAPPING $item_carpet1_4
+
+[0AC1]
+MAPPING $item_carpet1_5
+
+[0AC2]
+MAPPING $item_carpet1_6
+
+[0AC3]
+MAPPING $item_carpet1_7
+
+[0AC8]
+MAPPING $item_carpet2_3
+
+[0AC9]
+MAPPING $item_carpet2_4
+
+[0F88]
+MAPPING $item_nightshade_spawner
+
+[I_REAG_NIGHTSHADE]
+MAPPING $item_nightshade_spawner
+
+[01E5E]
+MAPPING $item_bulletin_board
+
+[I_BULLETIN_BOARD]
+MAPPING $item_bulletin_board
+
+[0F1E]
+MAPPING $item_tourmalines2
+
+[I_GEM_TOURMALINE_2]
+MAPPING $item_tourmalines2
+
+[0F1D]
+MAPPING $item_rubies5
+
+[I_GEM_RUBY_5]
+MAPPING $item_rubies5
+
+[0F1F]
+MAPPING $item_sapphires4
+
+[I_GEM_SAPPHIRE_4]
+MAPPING $item_sapphires4
+
+[0F86]
+MAPPING $item_mandrake_root_spawner
+
+[I_REAG_MANDRAKE_ROOT]
+MAPPING $item_mandrake_root_spawner
+
+[0F84]
+MAPPING $item_garlic_spawner
+
+[I_REAG_GARLIC]
+MAPPING $item_garlic_spawner
+
+[0F85]
+MAPPING $item_gensing_spawner
+
+[I_REAG_GINSENG]
+MAPPING $item_gensing_spawner
+
+[0F6C]
+MAPPING $item_blue_moongate
+
+[I_MOONGATE_BLUE]
+MAPPING $item_blue_moongate
+
+[0DE3]
+MAPPING $item_campfire
+
+[I_CAMPFIRE]
+MAPPING $item_campfire
+
+[0A58]
+MAPPING $item_bedroll
+
+[0FC7]
+MAPPING $item_shell_recoverd_from_a_shipwreck_3
+
+[0FC6]
+MAPPING $item_shell_recoverd_from_a_shipwreck_2
+
+[0FC5]
+MAPPING $item_shell_recoverd_from_a_shipwreck_1
+
+[0FC4]
+MAPPING $item_shell_recoverd_from_a_shipwreck
+
+[I_SHELL]
+MAPPING $item_shell_recoverd_from_a_shipwreck
+
+[0FC9]
+MAPPING $item_shell_recoverd_from_a_shipwreck_5
+
+[0FC8]
+MAPPING $item_shell_recoverd_from_a_shipwreck_4
+
+[0FCC]
+MAPPING $item_shell_recoverd_from_a_shipwreck_8
+
+[0FCB]
+MAPPING $item_shell_recoverd_from_a_shipwreck_7
+
+[0FCA]
+MAPPING $item_shell_recoverd_from_a_shipwreck_6
+
+[01F7F]
+MAPPING $item_bugmans_brew
+
+[01057]
+MAPPING $item_sextant
+
+[I_SEXTANT]
+MAPPING $item_sextant
+
+[0F19]
+MAPPING $item_sapphires3
+
+[I_GEM_SAPPHIRE_3]
+MAPPING $item_sapphires3
+
+[0F18]
+MAPPING $item_tourmalines1
+
+[I_GEM_TOURMALINE]
+MAPPING $item_tourmalines1
+
+[0F1A]
+MAPPING $item_rubies3
+
+[I_GEM_RUBY_3]
+MAPPING $item_rubies3
+
+[0F15]
+MAPPING $item_citrines1
+
+[I_GEM_CITRINE]
+MAPPING $item_citrines1
+
+[0F8C]
+MAPPING $item_sulfuric_ash_spawner
+
+[I_REAG_SULFUR_ASH]
+MAPPING $item_sulfuric_ash_spawner
+
+[0F17]
+MAPPING $item_amethysts2
+
+[I_GEM_AMETHYST_2]
+MAPPING $item_amethysts2
+
+[0F16]
+MAPPING $item_amethysts1
+
+[I_GEM_AMETHYST]
+MAPPING $item_amethysts1
+
+[0F11]
+MAPPING $item_sapphires1
+
+[I_GEM_SAPPHIRE]
+MAPPING $item_sapphires1
+
+[0F10]
+MAPPING $item_emeralds1
+
+[I_GEM_EMERALD]
+MAPPING $item_emeralds1
+
+[0F8D]
+MAPPING $item_spidersilk_spawner
+
+[I_REAG_SPIDER_SILK]
+MAPPING $item_spidersilk_spawner
+
+[0F12]
+MAPPING $item_sapphires2
+
+[I_GEM_SAPPHIRE_2]
+MAPPING $item_sapphires2
+
+[015A8]
+MAPPING $item_e_C
+
+[I_BANNER_13_PART_1]
+MAPPING $item_e_C
+
+[015A9]
+MAPPING $item_e_D
+
+[I_BANNER_13_PART_2]
+MAPPING $item_e_D
+
+[015A0]
+MAPPING $item_e_A
+
+[I_BANNER_9_PART_1]
+MAPPING $item_e_A
+
+[015A1]
+MAPPING $item_e_B
+
+[I_BANNER_9_PART_2]
+MAPPING $item_e_B
+
+[020F6]
+MAPPING $item_pet_llama
+
+[I_PET_LLAMA]
+MAPPING $item_pet_llama
+
+[01E25]
+MAPPING $item_books2
+
+[I_BOOK_OPEN_TWO_GREEN]
+MAPPING $item_books2
+
+[01E24]
+MAPPING $item_books1
+
+[I_BOOK_OPEN_3_RED]
+MAPPING $item_books1
+
+[014F4]
+MAPPING $item_boat_model
+
+[022C]
+MAPPING $item_door_2
+
+[I_DOOR_TENT]
+MAPPING $item_door_2
+
+[022D]
+MAPPING $item_door_3
+
+[I_DOOR_TENT_O]
+MAPPING $item_door_3
+
+[022E]
+MAPPING $item_door
+
+[022F]
+MAPPING $item_door_1
+
+[01E2D]
+MAPPING $item_pickpocket_dip_1
+
+[01E2C]
+MAPPING $item_pickpocket_dip
+
+[I_PICKPOCKET_DIP]
+MAPPING $item_pickpocket_dip
+
+[01008]
+MAPPING $item_wash_basin
+
+[I_WASH_BASIN]
+MAPPING $item_wash_basin
+
+[01005]
+MAPPING $item_jar_for_milk
+
+[I_JAR_EMPTY]
+MAPPING $item_jar_for_milk
+
+[0A0F]
+MAPPING $item_candle_3
+
+[I_CANDLE_LIT]
+MAPPING $item_candle_3
+
+[0F29]
+MAPPING $item_diamonds3
+
+[I_GEM_DIAMOND_4]
+MAPPING $item_diamonds3
+
+[0DF6]
+MAPPING $item_silk_fluxing_tool
+
+[I_KNITTING_ITEM]
+MAPPING $item_silk_fluxing_tool
+
+[0A92]
+MAPPING $item_folded_sheet
+
+[0EED]
+MAPPING $item_gold_coin
+
+[I_GOLD]
+MAPPING $item_gold_coin
+
+[0190F]
+MAPPING $item_bar_door_1
+
+[I_BAR_DOOR_NW]
+MAPPING $item_bar_door_1
+
+[0190E]
+MAPPING $item_bar_door
+
+[I_BAR_DOOR_NE]
+MAPPING $item_bar_door
+
+[01718]
+MAPPING $item_magical_wizards_hat
+
+[I_HAT_WIZARDS]
+MAPPING $item_magical_wizards_hat
+
+[0F14]
+MAPPING $item_rubies2
+
+[I_GEM_RUBY_2]
+MAPPING $item_rubies2
+
+[014EB]
+MAPPING $item_map
+
+[I_MAP]
+MAPPING $item_map
+
+[02120]
+MAPPING $item_pet_horse
+
+[I_PET_HORSE_BROWN_LT]
+MAPPING $item_pet_horse
+
+[0F13]
+MAPPING $item_rubies1
+
+[I_GEM_RUBY]
+MAPPING $item_rubies1
+
+[02126]
+MAPPING $item_pet_pack_horse
+
+[I_PET_HORSE_PACK]
+MAPPING $item_pet_pack_horse
+
+[02127]
+MAPPING $item_pet_pack_llama
+
+[I_PET_LLAMA_PACK]
+MAPPING $item_pet_pack_llama
+
+[0F24]
+MAPPING $item_citrines3
+
+[I_GEM_CITRINE_3]
+MAPPING $item_citrines3
+
+[0F25]
+MAPPING $item_pieces_of_amber
+
+[I_GEM_AMBER]
+MAPPING $item_pieces_of_amber
+
+[0F26]
+MAPPING $item_diamonds5
+
+[I_GEM_DIAMOND]
+MAPPING $item_diamonds5
+
+[0F27]
+MAPPING $item_diamonds1
+
+[I_GEM_DIAMOND_2]
+MAPPING $item_diamonds1
+
+[0F20]
+MAPPING $item_tourmalines3
+
+[I_GEM_TOURMALINE_3]
+MAPPING $item_tourmalines3
+
+[0F21]
+MAPPING $item_star_sapphires3
+
+[I_GEM_STAR_SAPPHIRE_3]
+MAPPING $item_star_sapphires3
+
+[0F22]
+MAPPING $item_amethysts3
+
+[I_GEM_AMETHYST_3]
+MAPPING $item_amethysts3
+
+[0F23]
+MAPPING $item_citrines2
+
+[I_GEM_CITRINE_2]
+MAPPING $item_citrines2
+
+[01006]
+MAPPING $item_jar_full_of_milk
+
+[I_JAR_FULL]
+MAPPING $item_jar_full_of_milk
+
+[0F28]
+MAPPING $item_diamonds2
+
+[I_GEM_DIAMOND_3]
+MAPPING $item_diamonds2
+
+[01003]
+MAPPING $item_spittoon
+
+[I_SPITTOON]
+MAPPING $item_spittoon
+
+[013E4]
+MAPPING $item_smithy_hammer
+
+[015BC]
+MAPPING $item_1
+
+[I_BANNER_POST_8_NE]
+MAPPING $item_1
+
+[015BB]
+MAPPING $item_e_1
+
+[I_BANNER_POST_7_NW]
+MAPPING $item_e_1
+
+[0F2D]
+MAPPING $item_tourmalines4
+
+[I_GEM_TOURMALINE_4]
+MAPPING $item_tourmalines4
+
+[0F2E]
+MAPPING $item_amethysts4
+
+[I_GEM_AMETHYST_4]
+MAPPING $item_amethysts4
+
+[0F2F]
+MAPPING $item_emeralds2
+
+[I_GEM_EMERALD_2]
+MAPPING $item_emeralds2
+
+[0F2A]
+MAPPING $item_rubies6
+
+[I_GEM_RUBY_6]
+MAPPING $item_rubies6
+
+[0F2B]
+MAPPING $item_rubies7
+
+[I_GEM_RUBY_7]
+MAPPING $item_rubies7
+
+[0F2C]
+MAPPING $item_citrines4
+
+[I_GEM_CITRINE_4]
+MAPPING $item_citrines4
+
+[0100F]
+MAPPING $item_gold_key
+
+[I_KEY_GOLD]
+MAPPING $item_gold_key
+
+[01586]
+MAPPING $item_e_4
+
+[I_BANNER_1_PART_1]
+MAPPING $item_e_4
+
+[014E7]
+MAPPING $item_hitching_post
+
+[I_POST_HITCHING]
+MAPPING $item_hitching_post
+
+[014E8]
+MAPPING $item_hitching_post2
+
+[0AB7]
+MAPPING $item_rug2_5
+
+[0AB6]
+MAPPING $item_rug2_4
+
+[0AB5]
+MAPPING $item_rug2_3
+
+[0AB4]
+MAPPING $item_rug2_2
+
+[0AB3]
+MAPPING $item_rug2_1
+
+[0AB2]
+MAPPING $item_rug1_10
+
+[0AB1]
+MAPPING $item_rug1_9
+
+[0AB0]
+MAPPING $item_rug1_8
+
+[0C16]
+MAPPING $item_damaged_books
+
+[I_BOOK_DAMAGED]
+MAPPING $item_damaged_books
+
+[0FB4]
+MAPPING $item_sledge_hammer
+
+[I_HAMMER_SLEDGE]
+MAPPING $item_sledge_hammer
+
+[0AB9]
+MAPPING $item_rug2_7
+
+[0AB8]
+MAPPING $item_rug2_6
+
+[0F9A]
+MAPPING $item_bolts_of_cloth6
+
+[0F9C]
+MAPPING $item_bolts_of_cloth8
+
+[0F9B]
+MAPPING $item_bolts_of_cloth7
+
+[0F95]
+MAPPING $item_bolts_of_cloth1
+
+[I_CLOTH_BOLT]
+MAPPING $item_bolts_of_cloth1
+
+[0F97]
+MAPPING $item_bolts_of_cloth3
+
+[0F96]
+MAPPING $item_bolts_of_cloth2
+
+[0F99]
+MAPPING $item_bolts_of_cloth5
+
+[01AE4]
+MAPPING $item_skull_recoverd_from_a_shipwreck
+
+[0ABF]
+MAPPING $item_carpet1_3
+
+[0ABE]
+MAPPING $item_carpet1_2
+
+[0ABD]
+MAPPING $item_carpet1_1
+
+[0ABC]
+MAPPING $item_rug2_10
+
+[0ABB]
+MAPPING $item_rug2_9
+
+[0ABA]
+MAPPING $item_rug2_8
+
+[01CDD]
+MAPPING $item_arm_1
+
+[I_FLESH_ARM_RIGHT]
+MAPPING $item_arm_1
+
+[01FD4]
+MAPPING $item_black_moongate
+
+[I_MOONGATE_BLACK]
+MAPPING $item_black_moongate
+
+[0DBF]
+MAPPING $item_fishing_pole
+
+[I_FISHING_POLE]
+MAPPING $item_fishing_pole
+
+[0CD7]
+MAPPING $item_christmas_tree
+
+[I_FOLIAGE_CEDAR]
+MAPPING $item_christmas_tree
+
+[041F]
+MAPPING $item_gruesome2_1
+
+[I_GRUESOMESTANDARD]
+MAPPING $item_gruesome2_1
+
+[0211C]
+MAPPING $item_pet_dog
+
+[I_PET_DOG]
+MAPPING $item_pet_dog
+
+[0211B]
+MAPPING $item_pet_cat
+
+[I_PET_CAT]
+MAPPING $item_pet_cat
+
+[0211D]
+MAPPING $item_pet_eagle
+
+[I_PET_EAGLE]
+MAPPING $item_pet_eagle
+
+[0E2C]
+MAPPING $item_bottle8
+
+[I_BOTTLE_7]
+MAPPING $item_bottle8
+
+[0E2B]
+MAPPING $item_bottle7
+
+[I_BOTTLE_6]
+MAPPING $item_bottle7
+
+[0E2A]
+MAPPING $item_bottle6
+
+[I_BOTTLE_5]
+MAPPING $item_bottle6
+
+[0E2D]
+MAPPING $item_cristall_ball_of_reputation
+
+[I_CRYSTAL_BALL]
+MAPPING $item_cristall_ball_of_reputation
+
+[0E21]
+MAPPING $item_clean_bandages
+
+[I_BANDAGE]
+MAPPING $item_clean_bandages
+
+[0E26]
+MAPPING $item_bottle2
+
+[I_BOTTLE_2]
+MAPPING $item_bottle2
+
+[0E25]
+MAPPING $item_bottle1
+
+[I_BOTTLE]
+MAPPING $item_bottle1
+
+[0E24]
+MAPPING $item_empty_vials
+
+[I_VIAL_EMPTY]
+MAPPING $item_empty_vials
+
+[0E29]
+MAPPING $item_bottle5
+
+[I_BOTTLE_4]
+MAPPING $item_bottle5
+
+[0E28]
+MAPPING $item_bottle4
+
+[I_BOTTLE_3]
+MAPPING $item_bottle4
+
+[0104D]
+MAPPING $item_clock_frames
+
+[I_CLOCK_FRAME]
+MAPPING $item_clock_frames
+
+[0AE9]
+MAPPING $item_carpet5_7
+
+[01AD8]
+MAPPING $item_pile_of_skulls_recoverd_from_a_shipwreck
+
+[I_SKULL_PILE]
+MAPPING $item_pile_of_skulls_recoverd_from_a_shipwreck
+
+[01820]
+MAPPING $item_dispel-wall-spawner
+
+[I_RUNE_ALCHEM_4]
+MAPPING $item_dispel-wall-spawner
+
+[0AF9]
+MAPPING $item_carpet1_13
+
+[0AF8]
+MAPPING $item_carpet1_12
+
+[0AF3]
+MAPPING $item_carpet6_8
+
+[0AF2]
+MAPPING $item_carpet6_7
+
+[0AF1]
+MAPPING $item_carpet6_6
+
+[0AF0]
+MAPPING $item_carpet6_5
+
+[0AF7]
+MAPPING $item_carpet1_11
+
+[0AF6]
+MAPPING $item_carpet1_10
+
+[0AF5]
+MAPPING $item_carpet6_10
+
+[0AF4]
+MAPPING $item_carpet6_9
+
+[0AFA]
+MAPPING $item_carpet6_11
+
+[01587]
+MAPPING $item_e_5
+
+[I_BANNER_1_PART_2]
+MAPPING $item_e_5
+
+[0EFC]
+MAPPING $item_efreeti_bottle
+
+[I_BOTTLE_9]
+MAPPING $item_efreeti_bottle
+
+[0EFC]
+MAPPING $item_bottle10
+
+[I_BOTTLE_9]
+MAPPING $item_bottle10
+
+[0EFB]
+MAPPING $item_bottle9
+
+[I_BOTTLE_8]
+MAPPING $item_bottle9
+
+[011FA]
+MAPPING $item_orchish_skin
+
+[0F30]
+MAPPING $item_diamonds4
+
+[I_GEM_DIAMOND_5]
+MAPPING $item_diamonds4
+
+[015C7]
+MAPPING $item_e_3
+
+[I_BANNER_POST_13_NW]
+MAPPING $item_e_3
+
+[015C8]
+MAPPING $item_3
+
+[I_BANNER_POST_14_NE]
+MAPPING $item_3
+
+[0AAB]
+MAPPING $item_rug1_3
+
+[0AAC]
+MAPPING $item_rug1_4
+
+[0AAA]
+MAPPING $item_rug1_2
+
+[0AAF]
+MAPPING $item_rug1_7
+
+[0AAD]
+MAPPING $item_rug1_5
+
+[0AAE]
+MAPPING $item_rug1_6
+
+[015CB]
+MAPPING $item_e_2
+
+[I_BANNER_POST_15_NW]
+MAPPING $item_e_2
+
+[015CC]
+MAPPING $item_2
+
+[I_BANNER_POST_16_NE]
+MAPPING $item_2
+
+[01CEA]
+MAPPING $item_body_part
+
+[I_FLESH_2]
+MAPPING $item_body_part
+
+[01CEF]
+MAPPING $item_entrails
+
+[I_FLESH_ENTRAILS]
+MAPPING $item_entrails
+
+[01CED]
+MAPPING $item_heart
+
+[I_FLESH_HEART]
+MAPPING $item_heart
+
+[0DCA]
+MAPPING $item_fishing_net_recovered_from_a_shipwreck_2
+
+[I_FISHING_NET_3]
+MAPPING $item_fishing_net_recovered_from_a_shipwreck_2
+
+[01CE8]
+MAPPING $item_torso
+
+[I_FLESH_TORSO_3]
+MAPPING $item_torso
+
+[01CE9]
+MAPPING $item_head_2
+
+[01CE1]
+MAPPING $item_head_1
+
+[I_FLESH_HEAD]
+MAPPING $item_head_1
+
+[01CE6]
+MAPPING $item_body
+
+[I_FLESH_UPPER_BODY_2]
+MAPPING $item_body
+
+[01CE7]
+MAPPING $item_legs
+
+[I_FLESH_LEGS_4]
+MAPPING $item_legs
+
+[01CE5]
+MAPPING $item_arm_2
+
+[I_FLESH_ARM_LEFT]
+MAPPING $item_arm_2
+
+[0AD1]
+MAPPING $item_carpet3_1
+
+[0AD0]
+MAPPING $item_carpet2_11
+
+[0AA9]
+MAPPING $item_rug1_1
+
+[0AD3]
+MAPPING $item_carpet3_3
+
+[03E9F]
+MAPPING $item_tan_horse
+
+[I_MT_HORSE_TAN]
+MAPPING $item_tan_horse
+
+[0ACA]
+MAPPING $item_carpet2_5
+
+[0122F]
+MAPPING $item_blood_puddle
+
+[I_BLOOD_SMEAR]
+MAPPING $item_blood_puddle
+
+[0ACB]
+MAPPING $item_carpet2_6
+
+[0ACC]
+MAPPING $item_carpet2_7
+
+[i_moongate_red]
+T;NAME;NAME;red moongate
+I;;ID;3546
+I;;SCRIPTID;2135
+I;;NAME2;#
+C;MOREX;MOREX;=value
+C;MOREY;MOREY;=value
+C;MOREZ;MOREZ;=value
+I;;TYPE;60
+
+[0ddb]
+T;NAME;NAME;red moongate
+I;;ID;3546
+I;;SCRIPTID;2135
+I;;NAME2;#
+C;MOREX;MOREX;=value
+C;MOREY;MOREY;=value
+C;MOREZ;MOREZ;=value
+I;;TYPE;60
+
+
+[i_moongate_blue]
+I;;ID;3948
+T;NAME;NAME;blue moongate
+I;;SCRIPTID;2135
+I;;NAME2;#
+C;MOREX;MOREX;=value
+C;MOREY;MOREY;=value
+C;MOREZ;MOREZ;=value
+I;;TYPE;60
+
+[i_moongate_red_fx]
+I;;ID;3546
+T;NAME;NAME;red moongate
+I;;SCRIPTID;2135
+I;;NAME2;#
+C;MOREX;MOREX;=value
+C;MOREY;MOREY;=value
+C;MOREZ;MOREZ;=value
+I;;TYPE;60
+
+[i_moongate_blue_fx]
+I;;ID;3948
+T;NAME;NAME;blue moongate
+I;;SCRIPTID;2135
+I;;NAME2;#
+C;MOREX;MOREX;=value
+C;MOREY;MOREY;=value
+C;MOREZ;MOREZ;=value
+I;;TYPE;60
+
+[i_moongate_black]
+I;;ID;8148
+T;NAME;NAME;black moongate
+I;;SCRIPTID;2135
+I;;NAME2;#
+C;MOREX;MOREX;=value
+C;MOREY;MOREY;=value
+C;MOREZ;MOREZ;=value
+I;;TYPE;60
+
+[i_moongate_black_fx]
+I;;ID;8148
+T;NAME;NAME;blue moongate
+I;;SCRIPTID;2135
+I;;NAME2;#
+C;MOREX;MOREX;=value
+C;MOREY;MOREY;=value
+C;MOREZ;MOREZ;=value
+I;;TYPE;60
+
+[i_moongate_gray_fx]
+I;;ID;8148
+T;NAME;NAME;gray moongate
+I;;SCRIPTID;2135
+I;;NAME2;#
+C;MOREX;MOREX;=value
+C;MOREY;MOREY;=value
+C;MOREZ;MOREZ;=value
+I;;TYPE;60
+
+
+[019B9]
+MAPPING $item_iron_ore
+
+[0F7B]
+MAPPING $item_bloodmoss_spawner
+
+[I_REAG_BLOOD_MOSS]
+MAPPING $item_bloodmoss_spawner
+
+[0F7A]
+MAPPING $item_black_pearl_spawner
+
+[I_REAG_BLACK_PEARL]
+MAPPING $item_black_pearl_spawner
+
+[0F7D]
+MAPPING $item_vials_of_blood
+
+[I_REAG_BLOOD_VIAL]
+MAPPING $item_vials_of_blood
+
+[01EA8]
+MAPPING $item_slotmachine_5gp_
+
+[I_WINCH]
+MAPPING $item_slotmachine_5gp_
+
+[01EA5]
+MAPPING $item_fishing_net
+
+[0FAC]
+MAPPING $item_fire_pit
+
+[I_FIRE_PIT]
+MAPPING $item_fire_pit
+
+[0F98]
+MAPPING $item_bolts_of_cloth4
+
+[01079]
+MAPPING $item_dragon_scale
+
+[01078]
+MAPPING $item_hide
+
+[I_HIDE]
+MAPPING $item_hide
+
+[01074]
+MAPPING $item_training_dummy_1
+
+[I_TRAINING_DUMMY_N]
+MAPPING $item_training_dummy_1
+
+[0944]
+MAPPING $item_fireplace_1
+
+[01070]
+MAPPING $item_training_dummy_2
+
+[I_TRAINING_DUMMY]
+MAPPING $item_training_dummy_2
+
+[0160D]
+MAPPING $item_n
+
+[I_SINGLE_RED_CURTAIN]
+MAPPING $item_n
+
+[0160E]
+MAPPING $item_e
+
+[0E41]
+MAPPING $item_metal_chest2
+
+

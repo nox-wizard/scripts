@@ -40,9 +40,6 @@ MAPPING $item_trashcan_deed
 [i_deed_townstone]
 MAPPING $item_townstone_deed
 
-[i_deed_guildstone]
-MAPPING $item_guildstone_deed
-
 [i_deed_house_stone_plaster_small]
 MAPPING $item_small_stone_plaster_house_deed
 

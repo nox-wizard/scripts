@@ -1,0 +1,24 @@
+[0ED5]
+MAPPING $item_guildstone
+
+[i_guildstone]
+MAPPING $item_guildstone
+
+[i_guild_stone]
+MAPPING $item_guildstone
+
+[01BC4]
+MAPPING $item_order_shield
+
+[I_SHIELD_ORDER]
+MAPPING $item_order_shield
+
+[i_deed_guildstone]
+MAPPING $item_guildstone_deed
+
+[01BC3]
+MAPPING $item_chaos_shield
+
+[I_SHIELD_CHAOS]
+MAPPING $item_chaos_shield
+
