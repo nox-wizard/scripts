@@ -301,7 +301,7 @@ UNIQUE SECTION ALLNEWBIES
     EQUIPITEM $item_iron_dagger
     PACKITEM $item_bread_loaves_1 2
     PACKITEM $item_book
-    PACKITEM $item_candle_3
+    PACKITEM $item_little_candle_lit
 }
 
 UNIQUE SECTION MALENEWBIES

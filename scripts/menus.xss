@@ -2033,7 +2033,7 @@ SECTION BATCH $batch_polymorph_cns
 //    0B1A Candle
 //    ADDITEM $item_candle
 //    0B1D Candelabra
-//    ADDITEM $item_candelabra
+//    ADDITEM $item_tall_candelabra_unlit
 //    0B25 Dark Lamp post
 //    ADDITEM $item_lamp_post_4
 //    0B23 Fancy Dim Post
@@ -2047,7 +2047,7 @@ SECTION BATCH $batch_polymorph_cns
 //    0B21 Standard Off Post
 //    ADDITEM $item_unlit_lamppost
 //    0B26 Tall Candelabra
-//    ADDITEM $item_candelabra
+//    ADDITEM $item_tall_candelabra_unlit
 //    < Previous Menu
 //    OPENMENU $menu_decoration
 //}
@@ -4639,13 +4639,13 @@ SECTION BATCH $batch_polymorph_cns
 //{
 //    Hand Lights Sources
 //    0A15 Lantern
-//    ADDITEM $item_lantern
+//    ADDITEM $item_hand_lantern_lit
 //    0A12 Torch
-//    ADDITEM $item_torch
+//    ADDITEM $item_hand_torch_lit
 //    0A0F Candle
-//    ADDITEM $item_candle_3
+//    ADDITEM $item_little_candle_lit
 //    1854 Skull candle
-//    ADDITEM $item_skull_candle
+//    ADDITEM $item_skull_candle_lit_1
 //    09FF Wall Candle
 //    ADDITEM $item_wall_sconce_1
 //    0A00 Wall Candle
@@ -5720,7 +5720,7 @@ SECTION BATCH $batch_polymorph_cns
 //    0BD1 Brass Sign
 //    ADDITEM $item_brass_sign
 //    0BD2 Brass Sign
-//    ADDITEM $item_brass_sign_1
+//    ADDITEM $item_brass_sign1_2
 //    1F29 Sign
 //    ADDITEM $item_sign
 //    1F28 Sign
@@ -8187,7 +8187,7 @@ SECTION BATCH $batch_polymorph_cns
 //    1428 Dipping Stick
 //    ADDITEM $item_dipping_stick
 //    1433 One Candle
-//    ADDITEM $item_candle_1
+//    ADDITEM $item_big_simple_candle_unlit
 //}
 //SECTION MENU $menu_candles
 //{
@@ -8195,7 +8195,7 @@ SECTION BATCH $batch_polymorph_cns
 //    0a26 small Candelabra
 //    ADDITEM $item_candle_2
 //    0a27 Candelabra
-//    ADDITEM $item_candlabra
+//    ADDITEM $item_small_candelabra_unlit
 //    0a29 large Candelabra
 //    ADDITEM $item_candalabra
 //    0a28 Candles

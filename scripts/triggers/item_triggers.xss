@@ -722,7 +722,7 @@ SECTION ITEMTRG $itrg_skull_candle_deed
     MSG You place the candle on the ground
     NEED x1ae0
     USEUP x1ae0
-    IADD $item_skull_candle
+    IADD $item_skull_candle_lit_1
     REMOVE
 }
 

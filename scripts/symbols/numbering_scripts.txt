@@ -3,6 +3,7 @@ Numbering-Overview for Nox
 ITEMS
 carpet+rug 248-500
 signs+banner 1890-2500
+light sources 2501-2700
 nox internal local vars 9000-9500
 fireplaces + ovens 20100-20250
 ruined rug + mats 50600-50800

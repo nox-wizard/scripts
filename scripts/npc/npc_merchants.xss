@@ -1112,10 +1112,10 @@ SECTION NPC $npc_provisioner_m
 	RSHOPITEM $item_cut_cloth
 	RSHOPITEM $item_iron_ingots
 	RSHOPITEM $item_tinkers_tools
-	RSHOPITEM $item_candle_3
+	RSHOPITEM $item_little_candle_lit
 	RSHOPITEM $item_scissors
-	RSHOPITEM $item_torch
-	RSHOPITEM $item_lantern
+	RSHOPITEM $item_hand_torch_lit
+	RSHOPITEM $item_hand_lantern_lit
 	SELLITEM $item_wooden_shield
 	SELLITEM $item_leather_sleeves
 	SELLITEM $item_leather_leggings
@@ -1239,10 +1239,10 @@ SECTION NPC $npc_provisioner_m
 	SELLITEM $item_cut_cloth
 	SELLITEM $item_iron_ingots
 	SELLITEM $item_tinkers_tools
-	SELLITEM $item_candle_3
+	SELLITEM $item_little_candle_lit
 	SELLITEM $item_scissors
-	SELLITEM $item_torch
-	SELLITEM $item_lantern
+	SELLITEM $item_hand_torch_lit
+	SELLITEM $item_hand_lantern_lit
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -1375,10 +1375,10 @@ SECTION NPC $npc_provisioner_f
 	RSHOPITEM $item_cut_cloth
 	RSHOPITEM $item_iron_ingots
 	RSHOPITEM $item_tinkers_tools
-	RSHOPITEM $item_candle_3
+	RSHOPITEM $item_little_candle_lit
 	RSHOPITEM $item_scissors
-	RSHOPITEM $item_torch
-	RSHOPITEM $item_lantern
+	RSHOPITEM $item_hand_torch_lit
+	RSHOPITEM $item_hand_lantern_lit
 	SELLITEM $item_wooden_shield
 	SELLITEM $item_leather_sleeves
 	SELLITEM $item_leather_leggings
@@ -1502,10 +1502,10 @@ SECTION NPC $npc_provisioner_f
 	SELLITEM $item_cut_cloth
 	SELLITEM $item_iron_ingots
 	SELLITEM $item_tinkers_tools
-	SELLITEM $item_candle_3
+	SELLITEM $item_little_candle_lit
 	SELLITEM $item_scissors
-	SELLITEM $item_torch
-	SELLITEM $item_lantern
+	SELLITEM $item_hand_torch_lit
+	SELLITEM $item_hand_lantern_lit
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -5855,17 +5855,17 @@ SECTION NPC $npc_beekeeper_m
 	RSHOPITEM $item_pots_of_wax
 	RSHOPITEM $item_dipping_stick
 	RSHOPITEM $item_jars_of_honey
-	RSHOPITEM $item_candle_1
+	RSHOPITEM $item_big_simple_candle_unlit
 	RSHOPITEM $item_candle_of_love
-	RSHOPITEM $item_candle_3
-	RSHOPITEM $item_skull_candle
+	RSHOPITEM $item_little_candle_lit
+	RSHOPITEM $item_skull_candle_lit_1
 	SELLITEM $item_pots_of_wax
 	SELLITEM $item_dipping_stick
 	SELLITEM $item_jars_of_honey
-	SELLITEM $item_candle_1
+	SELLITEM $item_big_simple_candle_unlit
 	SELLITEM $item_candle_of_love
-	SELLITEM $item_candle_3
-	SELLITEM $item_skull_candle
+	SELLITEM $item_little_candle_lit
+	SELLITEM $item_skull_candle_lit_1
 	DOORUSE 1
 	
 	//CATEGORY Humans
@@ -5909,17 +5909,17 @@ SECTION NPC $npc_beekeeper_f
 	RSHOPITEM $item_pots_of_wax
 	RSHOPITEM $item_dipping_stick
 	RSHOPITEM $item_jars_of_honey
-	RSHOPITEM $item_candle_1
+	RSHOPITEM $item_big_simple_candle_unlit
 	RSHOPITEM $item_candle_of_love
-	RSHOPITEM $item_candle_3
-	RSHOPITEM $item_skull_candle
+	RSHOPITEM $item_little_candle_lit
+	RSHOPITEM $item_skull_candle_lit_1
 	SELLITEM $item_pots_of_wax
 	SELLITEM $item_dipping_stick
 	SELLITEM $item_jars_of_honey
-	SELLITEM $item_candle_1
+	SELLITEM $item_big_simple_candle_unlit
 	SELLITEM $item_candle_of_love
-	SELLITEM $item_candle_3
-	SELLITEM $item_skull_candle
+	SELLITEM $item_little_candle_lit
+	SELLITEM $item_skull_candle_lit_1
 	DOORUSE 1
 	
 	//CATEGORY Humans

@@ -81,8 +81,8 @@
 #define $item_large_wooden_crate2 140402
 #define $item_medium_wooden_crate1 140403
 #define $item_medium_wooden_crate2 140404
-#define $item_small_wooden_crate1 140405
-#define $item_small_wooden_crate2 140406
+#define $item_small_wooden_crate1_1 140405
+#define $item_small_wooden_crate1_2 140406
 #define $item_wooden_chest1 140407
 #define $item_wooden_chest2 140408
 #define $item_tub 140409

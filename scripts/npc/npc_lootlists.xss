@@ -1023,8 +1023,8 @@ SECTION LOOTLIST $loot_misc_stuff
 	$item_lute_1
 	$item_arrow 25
 	$item_scissors
-	$item_torch
-	$item_lantern
+	$item_hand_torch_lit
+	$item_hand_lantern_lit
 	$item_wash_basin
 }
 

@@ -1003,11 +1003,6 @@ SECTION ITEM $item_metal_box
     WEIGHT 100
 }
 
-SECTION ITEM $item_wall_sconce
-{
-    ID 09fc
-}
-
 SECTION ITEM $item_knife
 {
     NAME knife
@@ -1391,7 +1386,7 @@ SECTION ITEM $item_book
     MOREY 100
 }
 
-SECTION ITEM $item_candle_3
+SECTION ITEM $item_little_candle_lit
 {// candle
     ID 0A0F
     DIR 2
@@ -1400,7 +1395,7 @@ SECTION ITEM $item_candle_3
     TRIGGER $itrg_light_handheld_candle
 }
 
-SECTION ITEM $item_torch
+SECTION ITEM $item_hand_torch_lit
 {// torch
     ID 0A12
     DIR 1
@@ -1411,7 +1406,7 @@ SECTION ITEM $item_torch
     WEIGHT 100
 }
 
-SECTION ITEM $item_lantern
+SECTION ITEM $item_hand_lantern_lit
 {// lantern
     ID 0A15
     DIR 2

@@ -4,7 +4,7 @@
 #define $lclvar_plantcross_status 9001
 #define $lclvar_plantcross_water 9002
 #define $lclvar_plantcross_fungus 9003
-#define $lclvar_plantcross_invest 9004
+#define $lclvar_plantcross_infest 9004
 #define $lclvar_plantcross_poison 9005
 #define $lclvar_plantcross_bonus_str 9006
 #define $lclvar_plantcross_bonus_hea 9007
@@ -268,25 +268,6 @@
 #define $item_trophy14 1537
 
 
-//
-//LIGHTS
-//
-#define $item_candle 1538
-#define $item_candelabra 1539
-#define $item_candelabra 1540
-#define $item_brazier 1541
-#define $item_lamp_post1_1 12610
-#define $item_lamp_post1_2 12611
-#define $item_lamp_post2_1 12612
-#define $item_lamp_post2_2 12613
-#define $item_lamp_post3_1 12614
-#define $item_lamp_post3_2 12615
-#define $item_wall_torch1_1 12616
-#define $item_torch_holder_1 15113
-#define $item_wall_torch2_1 12618
-#define $item_wall_torch1_2 12617
-#define $item_torch_holder_2 15125
-#define $item_wall_torch2_2 12619
 ///////////////////////////////////////////////////
 
 #define $item_christmas_tree 1597
@@ -352,7 +333,6 @@
 
 ///////////////////////////////////////////////////
 #define $item_fire_mace 1705
-#define $item_tall_candle 1706
 #define $item_recall_rune 1777
 #define $item_spellbook 1783
 #define $item_fishing_pole 1784
@@ -789,13 +769,8 @@
 
 #define $item_pots_of_wax 15101
 #define $item_dipping_stick 15102
-#define $item_candle_1 15103
-#define $item_candle_2 15104
-#define $item_candlabra 15105
-#define $item_candalabra 15106
 
 #define $item_metal_box 15111
-#define $item_wall_sconce 15112
 #define $item_knife 15114
 #define $item_fire_pit 15115
 #define $item_spools_of_thread 15116
@@ -977,10 +952,7 @@
 #define $item_tinkers_tools 17038
 #define $item_tinker_parts_list 17039
 #define $item_book 17040
-#define $item_candle_3 17041
 #define $item_scissors 17042
-#define $item_torch 17043
-#define $item_lantern 17044
 
 #define $item_the_first_uox_book 17115
 #define $item_grammer_of_orchish 17116
@@ -1090,7 +1062,6 @@
 #define $item_bolts_of_cloth8 110040
 
 #define $item_polar_bear_mask 110042
-#define $item_skull_candle 110043
 
 #define $item_fencer 110057
 #define $item_black_smith_1 110058
@@ -1177,7 +1148,6 @@
 #define $item_boat_model 110191
 #define $item_set_of_vials 110192
 #define $item_skull 110193
-#define $item_skull_candle_deed 110194
 #define $item_small_vase1 110195
 #define $item_small_vase2 110196
 #define $item_large_vase 110197
@@ -1209,8 +1179,6 @@
 #define $item_silk_scraps_might_be_useful_ 113015
 #define $item_silk_fluxing_tool 113016
 #define $item_hide 113018
-#define $item_wall_sconce_1 113019
-#define $item_wall_sconce_2 113020
 #define $item_leather 113021
 
 //////////////////////////////////////////

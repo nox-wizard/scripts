@@ -654,7 +654,7 @@ SECTION ITEM $item_medium_wooden_crate2
     AMXINT $localvar_flipitem $item_medium_wooden_crate1
 }
 
-SECTION ITEM $item_small_wooden_crate1
+SECTION ITEM $item_small_wooden_crate1_1
 {
     NAME small wooden crate
     ID 0E7E
@@ -665,10 +665,10 @@ SECTION ITEM $item_small_wooden_crate1
 
     ///CATEGORY Miscellaneous
     ///SUBSECTION Containers
-    AMXINT $localvar_flipitem $item_small_wooden_crate2
+    AMXINT $localvar_flipitem $item_small_wooden_crate1_2
 }
 
-SECTION ITEM $item_small_wooden_crate2
+SECTION ITEM $item_small_wooden_crate1_2
 {
     NAME small wooden crate
     ID 09a9
@@ -679,7 +679,7 @@ SECTION ITEM $item_small_wooden_crate2
 
     ///CATEGORY Miscellaneous
     ///SUBSECTION Containers
-    AMXINT $localvar_flipitem $item_small_wooden_crate1
+    AMXINT $localvar_flipitem $item_small_wooden_crate1_1
 }
 
 SECTION ITEM $item_wooden_chest1

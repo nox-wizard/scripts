@@ -1,0 +1,392 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (lightsources.xss)				 ||
+// || Maintained by Horian						 ||
+// || Last Update 25-feb-2005						 ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later			  ||
+// || Compatible with Unicorn Categorization				  ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+//hanging lights
+SECTION ITEM $item_wall_sconce_unlit_1
+{
+	ID 09Fb
+	TRIGGER $itrg_light_n-s_candle
+	AMXINT $localvar_flipitem $item_wall_sconce_unlit_2
+}
+
+SECTION ITEM $item_wall_sconce_unlit_2
+{
+	ID 0A00
+	TRIGGER $itrg_light_e-w_candle
+	AMXINT $localvar_flipitem $item_wall_sconce_unlit_1
+}
+
+SECTION ITEM $item_wall_sconce_empty_1
+{
+	ID 09Fc
+	AMXINT $localvar_flipitem $item_wall_sconce_empty_2
+}
+
+SECTION ITEM $item_wall_sconce_empty_2
+{
+	ID 0a01
+	AMXINT $localvar_flipitem $item_wall_sconce_empty_1
+}
+
+SECTION ITEM $item_wall_sconce_lit_1
+{
+	ID 09Fd
+	AMXINT $localvar_flipitem $item_wall_sconce_lit_2
+}
+
+SECTION ITEM $item_wall_sconce_lit_2
+{
+	ID 0a03
+	AMXINT $localvar_flipitem $item_wall_sconce_lit_1
+}
+
+SECTION ITEM $item_wall_torch_unlit_1
+{
+	ID 0A05
+	AMXINT $localvar_flipitem $item_wall_torch_unlit_2
+}
+
+SECTION ITEM $item_wall_torch_unlit_2
+{
+	ID 0A0A
+	AMXINT $localvar_flipitem $item_wall_torch_unlit_1
+}
+
+SECTION ITEM $item_wall_torch_empty_1
+{
+	ID 0A06
+	AMXINT $localvar_flipitem $item_wall_torch_empty_2
+}
+
+SECTION ITEM $item_wall_torch_empty_2
+{
+	ID 0A0B
+	AMXINT $localvar_flipitem $item_wall_torch_empty_1
+}
+
+SECTION ITEM $item_wall_torch_lit_1
+{
+	ID 0A07
+	AMXINT $localvar_flipitem $item_wall_torch_lit_2
+}
+
+SECTION ITEM $item_wall_torch_lit_2
+{
+	ID 0A0C
+	AMXINT $localvar_flipitem $item_wall_torch_lit_1
+}
+
+SECTION ITEM $item_hanging_lantern_lit_1
+{
+	ID 0A1A
+	AMXINT $localvar_flipitem $item_hanging_lantern_lit_2
+}
+
+SECTION ITEM $item_hanging_lantern_lit_2
+{
+	ID 0A22
+	AMXINT $localvar_flipitem $item_hanging_lantern_lit_1
+}
+
+SECTION ITEM $item_hanging_lantern_unlit_1
+{
+	ID 0A1D
+	AMXINT $localvar_flipitem $item_hanging_lantern_unlit_2
+}
+
+SECTION ITEM $item_hanging_lantern_unlit_2
+{
+	ID 0A25
+	AMXINT $localvar_flipitem $item_hanging_lantern_unlit_1
+}
+SECTION ITEM $item_lantern_post_1
+{
+	ID 0A1f
+	AMXINT $localvar_flipitem $item_hanging_lantern_unlit_2
+}
+
+SECTION ITEM $item_lantern_post_2
+{
+	ID 0A20
+	AMXINT $localvar_flipitem $item_hanging_lantern_unlit_1
+}
+
+//table/floor lights
+SECTION ITEM $item_tall_candelabra_lit
+{
+	NAME A candelabra
+	ID 0B26
+	TRIGGER $itrg_unlight_floor_candelabra
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_tall_candelabra_unlit
+{
+	NAME A candelabra
+	TRIGGER $itrg_light_floor_candelabra
+	ID 0A29
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_small_candelabra_unlit
+{
+	NAME A candelabra
+	ID 0A27
+	TRIGGER $itrg_light_table_candelabra
+	VALUE 40
+	WEIGHT 200
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_small_candelabra_lit
+{
+	NAME A candelabra
+	ID 0B1D
+	TRIGGER $itrg_light_table_candelabra
+	VALUE 40
+	WEIGHT 200
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_tall_candle_unlit
+{
+	NAME tall candle
+	ID 0a26
+	TRIGGER $itrg_light_table_candle
+	WEIGHT 100
+	VALUE 10
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_tall_candle_lit
+{
+	ID 0B1A
+	WEIGHT 100
+	VALUE 10
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+	///DESCRIPTION Candle
+}
+
+SECTION ITEM $item_little_candle_unlit
+{
+	NAME tall candle
+	ID 0a28
+	TRIGGER $itrg_light_table_candle
+	WEIGHT 100
+	VALUE 10
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+}
+
+SECTION ITEM $item_little_candle_lit
+{
+	ID 0a0f
+	WEIGHT 100
+	VALUE 10
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+	///DESCRIPTION Candle
+}
+
+SECTION ITEM $item_big_simple_candle_unlit
+{
+	NAME candle
+	ID 1433
+	DECAY
+	VALUE 35
+	TRIGGER $itrg_new_candle
+}
+
+SECTION ITEM $item_big_simple_candle_lit
+{
+	NAME candle
+	ID 1430
+	DECAY
+	VALUE 35
+	TRIGGER $itrg_new_candle
+}
+
+SECTION ITEM $item_small_simple_candle_unlit
+{
+	NAME candle
+	ID 142F
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_small_simple_candle_lit
+{
+	NAME candle
+	ID 142c
+	DECAY
+	VALUE 35
+}
+
+
+SECTION ITEM $item_thin_simple_candle_unlit
+{
+	NAME candle
+	ID 1437
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_thin_simple_candle_lit
+{
+	NAME candle
+	ID 1434
+	DECAY
+	VALUE 35
+}
+
+SECTION ITEM $item_medium_brazier_lit
+{
+	NAME a brazier
+	ID 0E31
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+	///DESCRIPTION Brazier
+}
+
+SECTION ITEM $item_tall_brazier_unlit
+{
+	NAME a brazier
+	ID 19aa
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+	///DESCRIPTION Brazier
+}
+
+SECTION ITEM $item_small_brazier_unlit
+{
+	NAME a brazier
+	ID 19bb
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+	///DESCRIPTION Brazier
+}
+
+SECTION ITEM $item_tiny_brazier_unlit
+{
+	NAME a brazier
+	ID 1f2b
+
+	///CATEGORY Decorations
+	///SUBSECTION Candles & Candelabras
+	///DESCRIPTION Brazier
+}
+
+SECTION ITEM $item_skull_candle_lit_1
+{
+	NAME skull candle
+	ID 1854
+	DIR 2
+	VALUE 50
+	ITEMHAND 3
+	AMXINT $localvar_flipitem $item_skull_candle_lit_2
+}
+
+SECTION ITEM $item_skull_candle_lit_2
+{
+	NAME skull candle
+	ID 1858
+	DIR 2
+	VALUE 50
+	ITEMHAND 3
+	AMXINT $localvar_flipitem $item_skull_candle_lit_1
+}
+
+SECTION ITEM $item_skull_candle_unlit_1
+{
+	NAME skull candle
+	ID 1853
+	DIR 2
+	VALUE 50
+	ITEMHAND 3
+	AMXINT $localvar_flipitem $item_skull_candle_unlit_2
+}
+
+SECTION ITEM $item_skull_candle_unlit_2
+{
+	NAME skull candle
+	ID 1857
+	DIR 2
+	VALUE 50
+	ITEMHAND 3
+	AMXINT $localvar_flipitem $item_skull_candle_unlit_1
+}
+
+SECTION ITEM $item_lamp_post_lit_1
+{
+	ID 0B20
+	DIR 1
+	NAME A lit lamppost
+}
+
+SECTION ITEM $item_lamp_post_unlit_1
+{
+	NAME An unlit lamppost
+	ID 0B21
+}
+
+SECTION ITEM $item_lamp_post_lit_2
+{
+	ID 0B22
+	DIR 1
+	NAME A lit lamp post
+	TRIGGER $itrg_light_lamp_post_2
+}
+
+SECTION ITEM $item_lamp_post_unlit_2
+{
+	ID 0B23
+}
+
+SECTION ITEM $item_lamp_post_lit_3
+{
+	ID 0B24
+	TRIGGER $itrg_light_lamp_post_1
+}
+
+SECTION ITEM $item_lamp_post_unlit_3
+{
+	ID 0B25
+}
+
+//Hand lights
+
+SECTION ITEM $item_hand_candle_lit
+{
+	ID 0a0f
+}
+
+SECTION ITEM $item_hand_torch_lit
+{
+	ID 0a12
+}
+
+SECTION ITEM $item_hand_lantern_lit
+{
+	ID 0a15
+}

@@ -1143,6 +1143,9 @@
 #define $item_cave_floor_19 56146
 #define $item_cave_floor_20 56147
 #define $item_cave_floor_21 56148
+#define $item_cave_floor_22 56149
+#define $item_cave_floor_23 56150
+#define $item_cave_floor_24 56151
 #define $item_alchemical_floor_1 414
 #define $item_alchemical_floor_2 415
 #define $item_alchemical_floor_3 416

@@ -1698,7 +1698,7 @@ SECTION MAKEMENU 122
     1433 small Candle
     RESOURCE 2
     SKILL 100
-    ADDITEM $item_candle_1
+    ADDITEM $item_big_simple_candle_unlit
     0a28 Cut Dipping Stick into 3 Candles
     RESOURCE 2
     SKILL 100
@@ -1706,7 +1706,7 @@ SECTION MAKEMENU 122
     0a15 Lantern
     RESOURCE 2
     SKILL 100
-    ADDITEM $item_lantern
+    ADDITEM $item_hand_lantern_lit
     1428 Make Dipping Stick
     RESOURCE 5
     SKILL 150
@@ -1718,23 +1718,23 @@ SECTION MAKEMENU 122
     0a26 a tall candle
     RESOURCE 5
     SKILL 250
-    ADDITEM $item_tall_candle
+    ADDITEM $item_tall_candle_unlit
     0a27 Candelabra
     RESOURCE 5
     SKILL 250
-    ADDITEM $item_candlabra
+    ADDITEM $item_small_candelabra_unlit
     09fc wall scone
     RESOURCE 6
     SKILL 250
-    ADDITEM $item_wall_sconce
+    ADDITEM $item_wall_sconce_empty_1
     0a06 torch holder
     RESOURCE 6
     SKILL 250
-    ADDITEM $item_torch_holder_1
+    ADDITEM $item_wall_torch_empty_1
     0a29 Tall Candelabra
     RESOURCE 9
     SKILL 400
-    ADDITEM $item_candelabra
+    ADDITEM $item_tall_candelabra_unlit
     142a Pot of wax 10 Beewax
     RESOURCE 10
     SKILL 100

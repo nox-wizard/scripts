@@ -1150,7 +1150,7 @@ SECTION HOUSE ITEM 1
 SECTION HOUSE ITEM 2
 {
 	//NAME Sign
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 2
 	Y 4
@@ -1215,7 +1215,7 @@ SECTION HOUSE ITEM 7
 SECTION HOUSE ITEM 8
 {
 	//NAME GHall Sign
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 3
 	Y 7
@@ -1266,7 +1266,7 @@ SECTION HOUSE ITEM 12
 SECTION HOUSE ITEM 13
 {
 	//NAME 2 Story Sign
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 1
 	Y 7
@@ -1317,7 +1317,7 @@ SECTION HOUSE ITEM 17
 SECTION HOUSE ITEM 18
 {
 	//NAME Tower Sign
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 4
 	Y 7
@@ -1368,7 +1368,7 @@ SECTION HOUSE ITEM 22
 SECTION HOUSE ITEM 23
 {
 	//NAME keep sign
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 4
 	Y 11
@@ -1439,7 +1439,7 @@ SECTION HOUSE ITEM 29
 SECTION HOUSE ITEM 30
 {
 	//NAME castle sign
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 4
 	Y 16
@@ -1490,7 +1490,7 @@ SECTION HOUSE ITEM 35
 SECTION HOUSE ITEM 36
 {
 	//NAME Shop sign
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 0
 	Y 7
@@ -1864,7 +1864,7 @@ SECTION HOUSE ITEM 100
 SECTION HOUSE ITEM 101
 {
 	//NAME Sign (Small tower)
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 1
 	Y 4
@@ -1885,7 +1885,7 @@ SECTION HOUSE ITEM 102
 SECTION HOUSE ITEM 103
 {
 	//NAME Sign (marble 2-story)
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 3
 	Y 4
@@ -1906,7 +1906,7 @@ SECTION HOUSE ITEM 104
 SECTION HOUSE ITEM 105
 {
 	//NAME Sign (marble 2-story)
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 3
 	Y 4
@@ -1917,7 +1917,7 @@ SECTION HOUSE ITEM 105
 SECTION HOUSE ITEM 106
 {
 	//NAME Sign (2-story tavern)
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 1
 	Y 6
@@ -1968,7 +1968,7 @@ SECTION HOUSE ITEM 110
 SECTION HOUSE ITEM 111
 {
 	//NAME Sign (adobe)
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 3
 	Y 5
@@ -1989,7 +1989,7 @@ SECTION HOUSE ITEM 112
 SECTION HOUSE ITEM 113
 {
 	//NAME Sign (2-story log)
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 4
 	Y 5
@@ -2020,7 +2020,7 @@ SECTION HOUSE ITEM 115
 SECTION HOUSE ITEM 116
 {
 	//NAME Sign (3-story marble)
-	ITEM $item_brass_sign_1
+	ITEM $item_brass_sign1_2
 	LOCK
 	X 0
 	Y 7

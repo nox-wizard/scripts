@@ -345,126 +345,6 @@ SECTION ITEM $item_trophy14
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_candle
-{
-	ID 0B1A
-	DIR 2
-
-	///CATEGORY Decorations
-	///SUBSECTION Candles & Candelabras
-	///DESCRIPTION Candle
-}
-
-SECTION ITEM $item_candelabra
-{
-	NAME A candelabra
-	ID 0A27
-	DIR 2
-	TRIGGER $itrg_light_table_candelabra
-	VALUE 40
-	WEIGHT 200
-
-	///CATEGORY Decorations
-	///SUBSECTION Candles & Candelabras
-}
-
-SECTION ITEM $item_candelabra
-{
-	NAME A candelabra
-	ID 0A29
-	DIR 1
-	TRIGGER $itrg_light_floor_candelabra
-	VALUE 40
-	WEIGHT 200
-
-	///CATEGORY Decorations
-	///SUBSECTION Candles & Candelabras
-}
-
-SECTION ITEM $item_brazier
-{
-	NAME A brazier
-	ID 0E31
-
-	///CATEGORY Decorations
-	///SUBSECTION Candles & Candelabras
-	///DESCRIPTION Brazier
-}
-
-SECTION ITEM $item_tall_candle
-{
-	NAME tall candle
-	ID 0a26
-	DIR 1
-	TRIGGER $itrg_light_table_candle
-	WEIGHT 100
-	DECAY
-	VALUE 10
-
-	///CATEGORY Decorations
-	///SUBSECTION Candles & Candelabras
-}
-
-SECTION ITEM $item_candle_1
-{ candle
-	ID 1433
-	DECAY
-	VALUE 35
-	AMXINT $localvar_flipitem $item_candle_2
-	TRIGGER $itrg_new_candle
-}
-
-SECTION ITEM $item_candle_2
-{
-	ID 0a26
-	AMXINT $localvar_flipitem $item_candle_1
-}
-
-SECTION ITEM $item_candlabra
-{
-	ID 0a27
-}
-
-//a tall candalabra
-SECTION ITEM $item_candalabra
-{
-	NAME candalabra
-	ID 0a29
-	VALUE 40
-	DECAY
-	TRIGGER $itrg_unlight_floor_candelabra
-	WEIGHT 200
-}
-
-SECTION ITEM $item_skull_candle
-{
-	NAME skull candle
-	ID 1854
-	DIR 2
-	VALUE 50
-	ITEMHAND 3
-}
-
-SECTION ITEM $item_wall_sconce_1
-{
-	ID 09FF
-	TRIGGER $itrg_light_n-s_candle
-	AMXINT $localvar_flipitem $item_wall_sconce_2
-}
-
-SECTION ITEM $item_wall_sconce_2
-{
-	ID 0A00
-	TRIGGER $itrg_light_e-w_candle
-	AMXINT $localvar_flipitem $item_wall_sconce_1
-}
-
-SECTION ITEM $item_bell_of_courage
-{
-	NAME bell of courage
-	ID 1C12
-}
-
 SECTION ITEM $item_book_of_truth
 {
 	NAME book of truth
@@ -477,6 +357,12 @@ SECTION ITEM $item_candle_of_love
 	ID 1C14
 	VALUE 50
 	DECAY
+}
+
+SECTION ITEM $item_bell_of_courage
+{
+	NAME bell of courage
+	ID 1C12
 }
 
 SECTION ITEM $item_dartboard_2
@@ -499,79 +385,6 @@ SECTION ITEM $item_dartboard_1
 	AMXINT $localvar_flipitem $item_dartboard_2
 }
 
-SECTION ITEM $item_lamp_post1_1
-{
-	ID 0B20
-	DIR 1
-	NAME A lit lamppost
-}
-
-SECTION ITEM $item_lamp_post1_2
-{
-	NAME An unlit lamppost
-	ID 0B21
-}
-
-SECTION ITEM $item_lamp_post2_1
-{
-	ID 0B22
-	DIR 1
-	NAME A lit lamp post
-	TRIGGER $itrg_light_lamp_post_2
-}
-
-SECTION ITEM $item_lamp_post2_2
-{
-	ID 0B23
-}
-
-SECTION ITEM $item_lamp_post3_1
-{
-	ID 0B24
-	
-	TRIGGER $itrg_light_lamp_post_1
-}
-
-SECTION ITEM $item_lamp_post3_2
-{
-	ID 0B25
-}
-
-SECTION ITEM $item_wall_torch1_1
-{
-	ID 0A05
-	AMXINT $localvar_flipitem $item_wall_torch1_2
-}
-
-SECTION ITEM $item_torch_holder_1
-{
-	ID 0A06
-	AMXINT $localvar_flipitem $item_torch_holder_2
-}
-
-SECTION ITEM $item_wall_torch2_1
-{
-	ID 0A07
-	AMXINT $localvar_flipitem $item_wall_torch2_2
-}
-
-SECTION ITEM $item_wall_torch1_2
-{
-	ID 0A0A
-	AMXINT $localvar_flipitem $item_wall_torch1_1
-}
-
-SECTION ITEM $item_torch_holder_2
-{
-	ID 0A0B
-	AMXINT $localvar_flipitem $item_torch_holder_1
-}
-
-SECTION ITEM $item_wall_torch2_2
-{
-	ID 0A0C
-	AMXINT $localvar_flipitem $item_wall_torch2_1
-}
 
 //////// lighthouse pieces ////////////
 

@@ -1183,7 +1183,7 @@ SECTION ITEM $item_bread_loaves_2
 	@ONDBLCLICK _onEatandDrink
 	AMXINT 1003 2
 	@ONDROPINLAND _SplitAndFlip
-	AMXINT $localvar_flipitem $item_bread_loaves_3
+	AMXINT $localvar_flipitem $item_bread_loaves_1
 }
 
 SECTION ITEM $item_uncooked_pizza
