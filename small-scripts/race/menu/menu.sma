@@ -1,6 +1,3 @@
-#define RP_WITH_WEB_INTERFACE 0 //show web interface?, 1 means yes
-#define RP_TELEPORT_ON_ENLIST 1 //teleport Char without race to special location
-
 public race_menu( const chr, const race )
 {
 	printf("enter race menu");
@@ -13,10 +10,12 @@ public race_menu( const chr, const race )
 	gui_addBackground( racemenu, 5120, 320,  340 );
 	gui_addGump( racemenu, 20, 80, 1418 );
 	
-	if( RP_WITH_WEB_INTERFACE == 1)
+	new webcheck = race_getGlobalProp( RP_WITH_WEB_INTERFACE );
+	printf("webcheck: %d^n");
+	
+	if( webcheck == 1)
 	{
 		gui_addTilePic( racemenu, 286, 8, 3811 );
-		gui_addHtmlGump( racemenu, 294, 30, 1209, 1210, "http://www.korondar.de/themes/AT-0ri0n/images/logo.jpg", 1, 1 );
 		//gui_addButtonFn( racemenu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
 	}
 
@@ -36,12 +35,13 @@ public race_menu( const chr, const race )
 	gui_addText( racemenu, 13, 106,   95, "you must choose one now!" );
 
 	new offset = 0;
-	if( RP_TELEPORT_ON_ENLIST == 1)
+	if( race_getGlobalProp( RP_TELEPORT_ON_ENLIST ) == 1)
 	{
 		gui_addText( racemenu, 13, 136, 1153, "Y" );
 		gui_addText( racemenu, 25, 136,   95, "ou have been transported to a safe location" );
 		gui_addText( racemenu, 13, 154,   95, "and will be returned after you've made your" );
 		gui_addText( racemenu, 13, 172,   95, "choice." );
+		printf("teleport on race menu is now done!");
 
 		offset=60;
 	}

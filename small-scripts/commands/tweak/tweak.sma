@@ -13,7 +13,6 @@
 
 <B>syntax:</B> 'tweak
 Shows an ingame menu that allows all kinds of modifications to chars and items<BR>
-\todo rename this function when commands are done in sources to cmd_tweak
 <br>
 */
 
@@ -893,10 +892,10 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 		else if(pagenumber == 9) //events
 		{
 			new callname[15];
-		        new oldevent[15];
-		        checked = gui_getProperty(twkItmMenu,MP_CHECK,i+1);
+		        new oldevent[50];
 		        for(i=0;i<NUM_itmevent;i++)
 		        {
+		        	checked = gui_getProperty(twkItmMenu,MP_CHECK,i+1);
 		        	if ( checked != 1) // no more checked and event had existed
 		        	{
 		        		//printf("del event");
@@ -1402,7 +1401,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 			gui_addText(twkChrMenu,66,170+(i*20),1310,eventChr_array[i][eventname]);
 			chr_getEventHandler(target,eventChr_array[i][eventnum],tempChrStr);
 			gui_addInputField( twkChrMenu,220,170+(i*20),200,20,i+1,0,tempChrStr);
-			gui_addCheckbox( twkChrMenu, 200, 173+(i*20), oldpic, newpic, 1, i+1 );
+			gui_addCheckbox( twkChrMenu, 200, 173+(i*20), oldpic, newpic, 1, i );
 		}
 		
 		gui_addPage(twkChrMenu,2);
@@ -2121,14 +2120,16 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        else if(pagenumber == 10) //events
 		        {
 		        	new callname[15];
-		        	new oldevent[15];
-		        	checked = gui_getProperty(twkChrMenu,MP_CHECK,i+1);
+		        	new oldevent[50];
 		        	for(i=0;i<NUM_chrevent;i++)
 		        	{
+		        		checked = gui_getProperty(twkChrMenu,MP_CHECK,i+1);
 		        		if ( checked != 1) // no more checked and event had existed
 		        		{
 		        			//printf("del event");
 		        			chr_delEventHandler(target, eventChr_array[i][eventnum]);
+		        			//chr_getEventHandler(target,eventChr_array[i][eventnum],oldevent);
+		        			//printf("deleted event %d, new eventfunktion: %s^n", eventnum, oldevent);
 		        		}
 		        		else
 		        		{
