@@ -39,11 +39,6 @@ public cmd_random(const chr)
 	new function[AMX_FUNCTION_LENGTH];
 	sprintf(function,"cmd_%s_targ",__cmdParams[1]);
 	
-	
-	new param = INVALID;
-	if(strlen(__cmdParams[2]))
-		param = str2Int(__cmdParams[2]);
-	
 	new s = set_create();
 	set_addAllOnlinePl(s);
 	

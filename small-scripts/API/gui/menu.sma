@@ -39,7 +39,12 @@ enum
 }
 
 
-static mp[MP_COUNT] =
+static mp[MP_COUNT]; //!< menu properties array
+
+/*!
+standard properties values, each menu gets this set of properties when created
+*/
+static mp_0[MP_COUNT] =
 {
 	0x4B9, //0x29F4,  	
 	0x4BA, //0x29F6,		
@@ -67,7 +72,8 @@ static mp[MP_COUNT] =
 	
 	33,
 	1310
-}; //!< menu properties array
+}; 
+
 
 static currentMenu; //!< current menu serial
 
@@ -86,6 +92,11 @@ use this function if you want to create a fully customized menu
 stock createMenu(startx,starty,callback[])
 {
 	currentMenu = gui_create(startx,starty,true,true,true,callback);
+	
+	//reset properties
+	for(new p = 0; p < MP_COUNT; p++)
+		mp[p] = mp_0[p];
+		
 	return currentMenu;
 }
 
@@ -373,6 +384,143 @@ stock createListMenu(startx,starty,rows,cols,nitems,title[],callback[],menuCallb
 	return currentMenu;
 }
 
+/*!
+\author Fax
+\fn createListMenu1(startx,starty,rows,cols,nitems,title[],callback[],menuCallback[])
+\param startx,starty: top left corner coords
+\param rows: menu body height in rows
+\param cols: menu width in columns
+\param nitems: total number of lines
+\param title[]: menu title
+\param callback[]: line callback
+\param menuCallback[]:general menu callback
+\since 0.82
+\brief creates a menu with a simple list
+
+This function creates a list in "client safe" mode (without crashing it)<br>
+The usage is similar to createListMenu() except that:
+- each item should occupy a single row
+- the callback prototype is:<br>
+\code
+	public callback(idx);
+	//idx: the current item index
+\endcode
+
+This function is less powerful than createListMenu() because you can only draw items that fit 
+a single row (or they will go out of the menu boudaries) and each page contains a single column of items.<br> 
+You can obtain the same result using createListMenu() and drawing single line items (eg: labeled buttons).<br>
+The advantage of using this function is that each page is a separated menu and only that menu is sent to the client,
+so ou can build huge lists without crashing the client (as would happen with createListMenu()).<br>
+For lists with less of about 200 gump items (text, buttons, pics) you can use createListMenu(), for bigger
+menus use createSimpleListMenu().
+
+\return the menu serial
+*/
+stock createListMenu1(startx,starty,rows,cols,nitems,title[],callback[],menuCallback[])
+{
+	//create a temporary menu, just to call drawSimpleListMenu() as if it was called by
+	//one of the "prev" "next" buttons
+	new m = createFramedMenu(startx,starty,2,rows,cols,menuCallback);
+	menu_addTitle(title);
+	
+	//store parameters so the function can draw the menu
+	menu_storeValue(0,startx);
+	menu_storeValue(1,starty);
+	menu_storeValue(2,rows);
+	menu_storeValue(3,cols);
+	menu_storeValue(4,nitems);
+	menu_storeString(0,title);
+	menu_storeString(1,callback);
+	menu_storeString(2,menuCallback);
+	
+	//draw the first page
+	return drawSimpleListMenuPage(m,INVALID,(rows > nitems ? nitems : rows) - 1);	
+}
+
+public drawSimpleListMenuPage(menu,chr,btncode)
+{
+	if(!btncode) return INVALID;
+	
+	printf("ciao^n");
+	//read data to draw the menu
+	new startx = menu_readValue(menu,0);
+	new starty = menu_readValue(menu,1);
+	new rows = menu_readValue(menu,2);
+	new cols = menu_readValue(menu,3);
+	new nitems = menu_readValue(menu,4);
+	new title[100];
+	
+	printf("bu^n");
+	menu_readString(menu,0,title);
+	new callback[AMX_FUNCTION_LENGTH];
+	menu_readString(menu,1,callback);
+	new menuCallback[AMX_FUNCTION_LENGTH]
+	menu_readString(menu,2,menuCallback);
+	
+	printf("%s %s %s^n",title,callback,menuCallback);
+	
+	//delete old menu (only needed to get rid of the first temp menu)
+	menu_delete();
+	
+	//create new menu (that will be actually shown)
+	new m = createFramedMenu(startx,starty,2,rows,cols,menuCallback);
+	menu_addTitle(title);
+	
+	//store parameters so we can redraw the menu in the next calls to this function
+	menu_storeValue(0,startx);
+	menu_storeValue(1,starty);
+	menu_storeValue(2,rows);
+	menu_storeValue(3,cols);
+	menu_storeValue(4,nitems);
+	menu_storeString(0,title);
+	menu_storeString(1,callback);
+	menu_storeString(2,menuCallback);
+	
+	printf("riciao^n");
+	
+	//the "prev" "next" buttons return code (btncode) contains information about
+	//the starting and ending items to be drawn
+	new startIdx = btncode >> 16;
+	new stopIdx = btncode & 0xFFFF;
+	
+	printf("startIdx:%d - stopIdx:%d^n",startIdx,stopIdx);
+	
+	cursor_newline();
+	
+	//if this is not the first page add the "prev" button
+	if(startIdx > rows) 
+	{
+		new idx1 = startIdx - rows;
+		new idx2 = startIdx - 1;
+		menu_addLabeledButtonFn((idx1 << 16) + idx2,"drawSimpleListMenuPage","Prev");
+	}
+	
+	//if this is not the last page add the "next" button
+	if(stopIdx < nitems - 1)
+	{
+		new idx1 = stopIdx;
+		new idx2 = stopIdx + rows;
+		if(idx2 >= nitems) idx2 = nitems - 1;
+		menu_addLabeledButtonFn((idx1 << 16) + idx2,"drawSimpleListMenuPage","Next");
+	}
+	
+	//go down to the menu body
+	cursor_newline(3);
+	
+	//draw items by calling the callback
+	for(new idx = startIdx; idx < stopIdx; idx++)
+	{
+		callFunction1P(funcidx(callback),idx); //the callback will only add text on the right of the button
+		cursor_newline();
+	}
+	
+	//chr == INVALID on the first call, because it's called from createSimpleListMenu()
+	if(isChar(chr))
+		menu_show(chr);
+	
+	return m;	
+}
+
 static setListCallback[AMX_FUNCTION_LENGTH],setListSet;
 
 /*!
@@ -463,6 +611,24 @@ stock menu_storeValue(idx,value)
 	gui_setProperty(currentMenu,MP_BUFFER,idx,value);
 }
 
+
+/*!
+\author Fax
+\fn menu_storeValue(idx,string)
+\param idx: index
+\param string: string to be stored
+\since 0.82
+\brief stores a string in an array
+
+Used to pass parameters to the callback, store strings into the menu and then read them in the
+callback with menu_readString()
+\return nothing
+*/
+stock menu_storeString(idx,string[])
+{
+	gui_setProperty(currentMenu,MP_STR_BUFFER,idx,string);
+}
+
 /*!
 \author Fax
 \fn menu_readValue(menu,idx)
@@ -482,13 +648,31 @@ stock menu_readValue(menu,idx)
 
 /*!
 \author Fax
+\fn menu_readString(menu,idx,string[])
+\param menu: the menu
+\param idx: index
+\param string[]: a preallocated string that will be filled
+\since 0.82
+\brief reads a string from an array
+
+Used to pass parameters to the callback, store strings with menu_storeString()
+\return nothing
+*/
+
+stock menu_readString(menu,idx,string[])
+{
+	return gui_getProperty(menu,MP_STR_BUFFER,idx,string);
+}
+
+/*!
+\author Fax
 \fn menu_setCurrent(menu)
 \param menu:the newmenu serial
 \since 0.82
 \brief changes the current menu
 
-With this function you can change the menu you are working on, not that all menu properties will be 
-transferred to the new menu.<BR>
+With this function you can change the menu you are working on.<br>
+All menu properties will be transferred to the new menu.<BR>
 Make sure you have a backup of the old menu serial or you won't be able to retrieve it again.
 \return nothing
 */
@@ -502,36 +686,48 @@ stock menu_setCurrent(menu)
 
 /*!
 \author Fax
-\fn menu_addColorText(text[],color)
+\fn menu_addText(text[],...)
 \param text[]: the text to be added
-\param color: the color
+\param 1: the color
 \since 0.82
 \brief adds color text to the menu
 
-The text starts at cursor position<BR>
-If the last n characters are newlines ('^n') n cursor_newline() are called
+The text starts at cursor's position<BR>
+You can specify the text color as additional parameter.<br>
+If the last n characters are newlines ('^n') n cursor_newline() are called<br>
+Note that only '^n' CHARACTERS as valid as newlines, not "^n" strings, so
+
+\code
+	menu_addText("hello^n") 
+\endcode
+
+will be printed as: <br>
+hello^n<br><br>
+
+while
+
+\code
+	new string[20];
+	sprintf(string,"hello^n");
+	menu_addText(string);	
+\endcode
+
+will be printed as:<br>
+hello<br><br>
+
+with a final cursor_newline() call
+
 \return nothing
 */
-stock menu_addColorText(text[],color)
+stock menu_addText(text[],...)
 {
+	new color = mp[MP_TEXT_COLOR];
+	if(numargs() > 1)
+		color = getarg(1);
+		
 	gui_addText(currentMenu,cursor_x(),cursor_y(),color,text);
-	for(new i = strlen(text); text[i - 1] == '^n'; i--) cursor_newline();
-}
-
-/*!
-\author Fax
-\fn menu_addText(text[])
-\param text[]: the text to be added
-\since 0.82
-\brief adds text to the menu
-
-The text starts at cursor position<BR>
-If the last n characters are newlines ('^n') n cursor_newline() are called
-\return nothing
-*/
-stock menu_addText(text[])
-{
-	menu_addColorText(text,mp[MP_TEXT_COLOR]);
+	for(new i = strlen(text); text[i - 1] == '^n'; i--) 
+		cursor_newline();
 }
 
 /*!
@@ -539,7 +735,7 @@ stock menu_addText(text[])
 \fn menu_addTitle(text[])
 \param text[]: the text to be added
 \since 0.82
-\brief adds title colored text to the menu
+\brief adds title text to the menu
 
 The text starts at cursor position<BR>
 The text will be colored with MP_TITLE_COLOR
@@ -547,7 +743,7 @@ The text will be colored with MP_TITLE_COLOR
 */
 stock menu_addTitle(text[])
 {
-	menu_addColorText(text,mp[MP_TITLE_COLOR]);
+	menu_addText(text,mp[MP_TITLE_COLOR]);
 }
 
 /*!
@@ -596,12 +792,17 @@ The checkbox is positioned at the cursor's position, the label starts just after
 stock menu_addLabeledCheckbox(checked,id,label[],...)
 {
 	//handle custom gumps
+	new gumpOn = mp[MP_CHECKBOX_ON];
+	new gumpOff = mp[MP_CHECKBOX_OFF];
 	if(numargs() > 3)
+	{
+		gumpOn = getarg(3);
 		if(numargs() > 4)
-			menu_addCheckBox(checked,id,getarg(3),getarg(4));
-		else menu_addCheckBox(checked,id,getarg(3));		
-	else menu_addCheckBox(checked,id);
+			gumpOff = getarg(4);
+	}
 	
+	gui_addCheckbox(currentMenu,cursor_x(),cursor_y(),gumpOn,gumpOff,checked,id);
+
 	cursor_move(mp[MP_CHECKBOX_WIDTH],0);
 	menu_addText(label);
 	cursor_move(-1*mp[MP_CHECKBOX_WIDTH],0);
@@ -665,17 +866,30 @@ stock menu_addPage(page)
 
 /*!
 \author Fax
-\fn menu_addPageButton(page)
+\fn menu_addPageButton(page,...)
 \param page: the page the button points to
+\param 1: up gump
+\param 2: down gump
 \since 0.82
 \brief adds a page button
 
-The page button is put at cursor's position
+The page button is put at cursor's position<br>
+If you specify the up and down gumps they will override the MP_PAGEBUTTON_* properties.
 \return nothing
 */
-stock menu_addPageButton(page)
+stock menu_addPageButton(page,...)
 {
-	gui_addPageButton(currentMenu,cursor_x(),cursor_y(),mp[MP_PAGEBUTTON_UP],mp[MP_PAGEBUTTON_DOWN],page);
+	//handle custom gumps
+	new gumpUp = mp[MP_PAGEBUTTON_UP];
+	new gumpDown = mp[MP_PAGEBUTTON_DOWN];
+	if(numargs() > 1)
+	{
+		gumpUp = getarg(1);
+		if(numargs() > 2)
+			gumpDown = getarg(2);
+	}
+	
+	gui_addPageButton(currentMenu,cursor_x(),cursor_y(),gumpUp,gumpDown,page);
 }
 
 /*!
@@ -683,16 +897,29 @@ stock menu_addPageButton(page)
 \fn menu_addLabeledPageButton(page,label[])
 \param page: the page the button points to
 \param label[]: the label
+\param 2: up gump
+\param 3: down gump
 \since 0.82
 \brief adds a labeled page button
 
 The label starts at cursor position,the page button is put just after the label
+If you specify the up and down gumps they will override the MP_PAGEBUTTON_* properties.
 \return nothing
 */
 
-stock menu_addLabeledPageButton(page,label[])
+stock menu_addLabeledPageButton(page,label[],...)
 {
-	menu_addPageButton(page);
+	//handle custom gumps
+	new gumpUp = mp[MP_PAGEBUTTON_UP];
+	new gumpDown = mp[MP_PAGEBUTTON_DOWN];
+	if(numargs() > 2)
+	{
+		gumpUp = getarg(2);
+		if(numargs() > 3)
+			gumpDown = getarg(3);
+	}
+	
+	gui_addPageButton(currentMenu,cursor_x(),cursor_y(),gumpUp,gumpDown,page);
 	cursor_move(mp[MP_PAGEBUTTON_WIDTH],0);
 	menu_addText(label);
 	cursor_move(-1*mp[MP_PAGEBUTTON_WIDTH],0);
@@ -728,15 +955,27 @@ stock menu_addButton(btncode,...)
 \fn menu_addLabeledButton(btncode,label[])
 \param btncode: the button return code
 \param label[]: the label
+\param 2: up gump
+\param 3: down gump
 \since 0.82
 \brief adds a labeled button to the menu
 
 The label starts at cursor position,the button is put just after the label
 \return nothing
 */
-stock menu_addLabeledButton(btncode,label[])
+stock menu_addLabeledButton(btncode,label[],...)
 {
-	gui_addButton(currentMenu,cursor_x(),cursor_y(),mp[MP_BUTTON_UP],mp[MP_BUTTON_DOWN],btncode);
+	//handle custom gumps
+	new gumpUp = mp[MP_BUTTON_UP];
+	new gumpDown = mp[MP_BUTTON_DOWN];
+	if(numargs() > 2)
+	{
+		gumpUp = getarg(2);
+		if(numargs() > 3)
+			gumpDown = getarg(3);
+	}
+	
+	gui_addButton(currentMenu,cursor_x(),cursor_y(),gumpUp,gumpDown,btncode);
 	cursor_move(mp[MP_BUTTON_WIDTH],0);
 	menu_addText(label);
 	cursor_move(-1*mp[MP_BUTTON_WIDTH],0);
@@ -764,7 +1003,7 @@ stock menu_addApplyButton(btncode)
 \since 0.82
 \brief adds a CANCEL button to the menu
 
-This is like any other button, but it uses the MP_CANCEL_* gump
+This is like any other button, but it uses the MP_CANCEL_* gumps
 \return nothing
 */
 stock menu_addCancelButton(btncode)
@@ -806,7 +1045,7 @@ stock menu_addTilePic(gump)
 /*!
 \author Fax
 \fn menu_addLabeledTilePic(gump,width,label[])
-\param gump:gump index in art.mul
+\param gump: gump index in art.mul
 \param width: pic width in pixels
 \param label[]: the label
 \since 0.82
@@ -827,12 +1066,13 @@ stock menu_addLabeledTilePic(gump,width,label[])
 
 /*!
 \author Fax
-\fn menu_addGump(gump)
+\fn menu_addGump(gump,...)
 \param gump: gump index in gumpart.mul
+\param 1: color
 \since 0.82
 \brief adds a gump to the menu
 
-The gump is put at cursor position
+The gump is put at cursor position, you can specify the color as additional parameter
 \return nothing
 */
 stock menu_addGump(gump,...)
@@ -849,15 +1089,27 @@ stock menu_addGump(gump,...)
 \fn menu_addButtonFn(btncode,callback[])
 \param btncode: the button return code
 \param callback[]: the callback
+\param 2: up gump
+\param 3: down gump
 \since 0.82
 \brief adds a function button to the gump
 
 The button is added at cursor's position
 \return nothing
 */
-stock menu_addButtonFn(btncode,callback[])
+stock menu_addButtonFn(btncode,callback[],...)
 {
-	gui_addButtonFn(currentMenu,cursor_x(),cursor_y(),mp[MP_BUTTON_UP],mp[MP_BUTTON_DOWN],btncode,true,callback);
+	//handle custom gumps
+	new gumpUp = mp[MP_BUTTON_UP];
+	new gumpDown = mp[MP_BUTTON_DOWN];
+	if(numargs() > 2)
+	{
+		gumpUp = getarg(2);
+		if(numargs() > 3)
+			gumpDown = getarg(3);
+	}
+	
+	gui_addButtonFn(currentMenu,cursor_x(),cursor_y(),gumpUp,gumpDown,btncode,true,callback);
 }
 
 /*!
@@ -866,31 +1118,72 @@ stock menu_addButtonFn(btncode,callback[])
 \param btncode: the button return code
 \param callback[]: the callback
 \param label[]: the label
+\param 3: up gump
+\param 4: down gump
 \since 0.82
 \brief adds a labeled function button to the gump
 
 The label starts at cursor position,the button is put just after the label
 \return nothing
 */
-stock menu_addLabeledButtonFn(btncode,callback[],label[])
+stock menu_addLabeledButtonFn(btncode,callback[],label[],...)
 {
-	gui_addButtonFn(currentMenu,cursor_x(),cursor_y(),mp[MP_BUTTON_UP],mp[MP_BUTTON_DOWN],btncode,true,callback);
+	//handle custom gumps
+	new gumpUp = mp[MP_BUTTON_UP];
+	new gumpDown = mp[MP_BUTTON_DOWN];
+	if(numargs() > 3)
+	{
+		gumpUp = getarg(3);
+		if(numargs() > 4)
+			gumpDown = getarg(4);
+	}
+	
+	gui_addButtonFn(currentMenu,cursor_x(),cursor_y(),gumpUp,gumpDown,btncode,true,callback);
 	cursor_move(mp[MP_BUTTON_WIDTH],0);
 	menu_addText(label);
 	cursor_move(-1*mp[MP_BUTTON_WIDTH],0);
 }
-			
+
+//=========================== MENU SHOWING =============================================//			
+
 /*!
 \author Fax
-\fn menu_show(chr)
-\param chr: the character
+\fn menu_show(...)
+\param ...: the characters
 \since 0.82
-\brief shows a menu to a character
+\brief shows a menu to given characters
+
+You can specify a variable number of characters that will be shown the menu.<br>
 \return nothing
 */	
-stock menu_show(chr)
+stock menu_show(...)
 {
-	gui_show(currentMenu,chr);	
+	new n = numargs();
+	for(new a = 0; a < n; a++)
+	{
+		if(isChar(getarg(a)))	
+			gui_show(currentMenu,getarg(a));	
+	}
+	
+	currentMenu = INVALID;
+	cursor_restoreDefaults();
+}
+
+/*!
+\author Fax
+\fn menu_show(s)
+\param s: the set
+\since 0.82
+\brief shows a menu to characters in a set
+
+You must take care of creating and deleting the set, see menu_broadcast() for an example.
+\return nothing
+*/	
+stock menu_showSet(s)
+{
+	for(set_rewind(s); !set_end(s);)
+		gui_show(currentMenu,set_getChar(s));
+	
 	currentMenu = INVALID;
 	cursor_restoreDefaults();
 }
@@ -906,8 +1199,7 @@ stock menu_broadcast()
 {
 	new s = set_create();
 	set_fillAllOnlinePl(s);	
-	for(set_rewind(s); !set_end(s);)
-		menu_show(set_getChar(s));
+	menu_showSet(s);
 	set_delete(s);
 }
 
@@ -961,6 +1253,51 @@ stock broadcastPopup(title[],message[])
 	for(set_rewind(s);!set_end(s);)
 		menu_show(set_getChar(s));
 	set_delete(s);
+}
+
+//================================ MENU DATA READING ===========================================//
+
+/*!
+\author Fax
+\fn menu_getInputField(menu,index,string[])
+\param menu: the menu
+\param index: the input field index
+\param string: string that will be filled with the result
+\since 0.82
+\brief reads an input filed from given menu
+\return nothing
+*/
+stock menu_getInputField(menu,index,string[])
+{
+	return gui_getProperty(menu,MP_UNI_TEXT,index,string);
+}
+
+/*!
+\author Fax
+\fn menu_getCheckbox(menu,index)
+\param menu: the menu
+\param index: the checkbox index
+\since 0.82
+\brief reads a checkbox value
+\return the checkbox value
+*/
+stock menu_getCheckbox(menu,index)
+{
+	return gui_getProperty(menu,MP_CHECK,index);
+}
+
+/*!
+\author Fax
+\fn menu_getRadio(menu,index)
+\param menu: the menu
+\param index: the radio button index
+\since 0.82
+\brief reads a radio button value
+\return the radio button value
+*/
+stock menu_getRadio(menu,index)
+{
+	return gui_getProperty(menu,MP_RADIO,index);
 }
 
 /*! @}*/ 

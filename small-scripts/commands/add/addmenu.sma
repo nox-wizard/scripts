@@ -197,7 +197,14 @@ public addgui_cback(menu,chr,btn)
 	//call appropriate function, addgui_standard must be called with diferent parameters
 	if(strcmp(submenuData[btn][__submenuFunction],"addgui_standard"))
 		callFunction2P(funcidx(submenuData[btn][__submenuFunction]),chr,btn);
-	else callFunction3P(funcidx(submenuData[btn][__submenuFunction]),INVALID,chr,(btn << 16));
+	else 
+	{
+		chr_addLocalIntVec(chr,CLV_CMDTEMP,2);
+		chr_setLocalIntVec(chr,CLV_CMDTEMP,0,false);
+		chr_setLocalIntVec(chr,CLV_CMDTEMP,1,1);
+		callFunction3P(funcidx(submenuData[btn][__submenuFunction]),INVALID,chr,btn << 16);
+		//addgui_standard(INVALID,chr,btn << 16);	
+	}
 }
 
 //==================================================================================//
@@ -227,7 +234,11 @@ be passed the submenu and the current submenu page (index in pageData[][]), so p
 */
 public addgui_standard(menu,chr,submenuPage)
 {
-	if(!isChar(chr)) return;
+	if(!isChar(chr)) 
+	{
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+		return;
+	}
 	
 	new submenu = submenuPage >> 16;
 	new page = submenuPage & 0xFFFF;
@@ -238,7 +249,8 @@ public addgui_standard(menu,chr,submenuPage)
 	
 	//read additional params, amount is 1 by default
 	new startx,starty;
-	new itemsInBackpack,amount = 1;
+	new itemsInBackpack = chr_getLocalIntVec(chr,CLV_CMDTEMP,0);
+	new amount = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
 	
 	//calculate header size
 	new ROWS = 2 + submenuData[submenu][__numPages]/ITEMS_PER_ROW + (submenuData[submenu][__numPages]%ITEMS_PER_ROW > 0 ? 1 : 0)
@@ -263,17 +275,19 @@ public addgui_standard(menu,chr,submenuPage)
 	
 	//add "create items in backpack" checkbox
 	menu_addLabeledCheckbox(itemsInBackpack,CHK_ITEMSINBACKPACK,msg_add_createItemsInBackpack);
+	
 	cursor_newline();
 	
 	//add amount input field
-	new amountstr[5];
+	new amountstr[20];
 	sprintf(amountstr,"%d",amount);
+	
 	menu_addLabeledInputField(INPUT_AMOUNT,amountstr,5,"Amount: ");
 	
 	//go down in the body
 	cursor_newline(3);
 
-	new idx;	//current index in submenuData[][]
+	new idx;	//current index in pageData[][]
 	new startIdx;	//start index in addMenuList[][]
 	new stopIdx;	//stop index in addMenuList[][]
 	starty = cursor_y(); //store start row
@@ -298,11 +312,11 @@ public addgui_standard(menu,chr,submenuPage)
 		
 		//draw the itemslist
 		addItemList(startIdx,stopIdx,pageData[idx][__showPic],pageData[idx][__showLabel]);
-		//printf("Page:%s - listIdx:%d - numItems:%d^n",pageData[idx][__pageTitle],pageData[idx][__listIdx],pageData[idx][__numItems]);
 	}
 	
-	//store submenu because the callback will need it
+	//store submenu and page because the callback will need it
 	menu_storeValue(0,submenu);
+	menu_storeValue(1,page);
 	
 	//show menu
 	menu_show(chr);
@@ -325,7 +339,6 @@ public addgui_standard_cback(menu,chr,btncode)
 {
 	if(!btncode)	return;
 	
-	printf("btncode: %d^n",btncode);
 	//read amount and checkbox
 	new n,itemsInBackpack;
 	getAmountAndChk(menu,n,itemsInBackpack);
@@ -354,7 +367,13 @@ public addgui_standard_cback(menu,chr,btncode)
 			}
 		
 		//rebuild and show the menu
-		addgui_standard(chr,menu_readValue(menu,0),itemsInBackpack,n);
+		chr_delLocalVar(chr,CLV_CMDTEMP); //just for safety, not really needed
+		chr_addLocalIntVec(chr,CLV_CMDTEMP,2);
+		chr_setLocalIntVec(chr,CLV_CMDTEMP,0,itemsInBackpack);
+		chr_setLocalIntVec(chr,CLV_CMDTEMP,1,n);
+		new submenu = menu_readValue(menu,0);
+		new page = menu_readValue(menu,1);
+		addgui_standard(INVALID,chr,(submenu << 16) + page);
 	}
 
 	else
@@ -611,7 +630,11 @@ public addgui_combat_cback(menu,chr,submenuPageAction)
 	}
 	new n,itemsInBackpack;
 	getAmountAndChk(menu,n,itemsInBackpack);
-	addgui_standard(chr,submenu,itemsInBackpack,n);
+	
+	chr_addLocalIntVec(chr,CLV_CMDTEMP);
+	chr_setLocalIntVec(chr,CLV_CMDTEMP,0,itemsInBackpack);
+	chr_setLocalIntVec(chr,CLV_CMDTEMP,1,n);
+	addgui_standard(INVALID,chr,(submenu << 16) + page);
 }
 
 /*!
