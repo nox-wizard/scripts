@@ -1232,6 +1232,7 @@ public addgui_spawners_cback(menu,chr,btncode)
 {
 	if(!btncode)	return;
 
+	chr_addLocalIntVar(chr,CLV_CMDTEMP,1);
 	chr_message(chr,_,"click to position the item");
 	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 	addgui_spawner(chr,INVALID,INVALID)
