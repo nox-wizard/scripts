@@ -1,0 +1,679 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (npc_specialpeople.xss)                          ||
+// || Maintained by Xanathar and Kendra, Horian                           ||
+// || Last Update 12-jul-2004                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION NPC $npc_person_basic
+{
+	ID 0190
+	NAMELIST 120
+	SKIN 83FF
+	DIRECTION N
+	SPEECH $speech_healer
+	GOLD 76 95
+	LOOT $loot_circle_6-8_spells
+	LOOT $loot_reagents
+	STR 80
+	DEX 50
+	INT 50
+	KARMA 0
+	FAME 0
+	TAMING 1100
+	PARRYING 400
+	RESISTS 400
+	TACTICS 500
+	WRESTLING 200
+	ATT 13 15
+	DEF 10
+	NPCWANDER 2
+	DOORUSE 1
+}
+
+SECTION NPC $npc_official
+{
+	#copy $npc_person_basic
+	TITLE the official
+	BACKPACK
+	ITEM $item_short_hair
+	ITEM $item_goatee
+	ITEM $item_sandles
+	ITEM $item_a_skullcap
+	COLOR 25
+	ITEM $item_cloak
+	COLOR 17
+	ITEM $item_shirt
+	COLOR 18
+	ITEM $item_a_robe
+	COLOR 39
+	ITEM $item_long_pants
+	COLOR 14
+	ITEM $item_a_body_sash
+	COLOR 20
+}
+
+SECTION NPC $npc_foreman
+{
+	#copy $npc_person_basic
+	TITLE the foreman
+	BACKPACK
+	ITEM $item_thigh_boots
+	COLOR 17
+	COLOR 12
+	ITEM $item_shirt
+	COLOR 39
+	ITEM $item_a_robe
+	COLOR 12
+	ITEM $item_a_skirt
+	COLOR 5
+	ITEM $item_a_body_sash
+	COLOR 0
+}
+
+SECTION NPC $npc_mercenary
+{
+	#copy $npc_person_basic
+	TITLE the mercenary
+	//$$ mercenary
+	BACKPACK
+	ITEM $item_long_beard
+	ITEM $item_sandles
+	ITEM $item_a_wizards_hat
+	COLOR 1
+	ITEM $item_cloak
+	COLOR 10
+	ITEM $item_fancy_shirt
+	COLOR 18
+	COLOR 21
+	ITEM $item_a_kilt
+	COLOR 11
+	ITEM $item_a_half_apron
+	COLOR 30
+}
+
+SECTION NPC $npc_guardsman
+{
+	#copy $npc_person_basic
+	TITLE the guardsman
+	//$$ guardsman
+	BACKPACK
+	ITEM $item_shoes
+	COLOR 18
+	COLOR 13
+	ITEM $item_shirt
+	COLOR 17
+	COLOR 3
+	ITEM $item_long_pants
+	COLOR 20
+	ITEM $item_a_body_sash
+	COLOR 36
+	ITEM $item_quarter_staff
+}
+
+SECTION NPC $npc_watchman
+{
+	#copy $npc_person_basic
+	TITLE the watchman
+	//$$ watchman
+	BACKPACK
+	ITEM $item_sandles
+	COLOR 26
+	ITEM $item_cloak
+	COLOR 8
+	ITEM $item_shirt
+	COLOR 21
+	ITEM $item_a_plain_dress
+	COLOR 34
+	ITEM $item_long_pants
+	COLOR 14
+	ITEM $item_a_full_apron
+	COLOR 18
+}
+
+SECTION NPC $npc_cleric
+{
+	#copy $npc_person_basic
+	TITLE the cleric
+	//$$ cleric
+	BACKPACK
+	ITEM $item_thigh_boots
+	COLOR 0
+	ITEM $item_cloak
+	COLOR 18
+	ITEM $item_shirt
+	COLOR 9
+	COLOR 38
+	ITEM $item_short_pants
+	COLOR 39
+	ITEM $item_a_half_apron
+	COLOR 2 9
+}
+
+SECTION NPC $npc_solem_priest
+{
+	#copy $npc_person_basic
+	TITLE the solem priest
+	//$$ solem priest
+	BACKPACK
+	ITEM $item_boots
+	COLOR 1
+	ITEM $item_cloak
+	COLOR 19
+	ITEM $item_shirt
+	COLOR 17
+	COLOR 8
+	ITEM $item_a_skirt
+	COLOR 1
+	ITEM $item_a_full_apron
+	COLOR 19
+	ITEM $item_quarter_staff
+}
+
+SECTION NPC $npc_magician
+{
+	#copy $npc_person_basic
+	TITLE the magician
+	//$$ magician
+	BACKPACK
+	ITEM $item_long_hair
+	ITEM $item_mustache
+	ITEM $item_boots
+	COLOR 19
+	ITEM $item_cloak
+	COLOR 10
+	ITEM $item_shirt
+	COLOR 19
+	COLOR 7
+	ITEM $item_short_pants
+	COLOR 6
+	ITEM $item_a_half_apron
+	COLOR 0
+}
+
+SECTION NPC $npc_outlander
+{
+	#copy $npc_person_basic
+	TITLE the outlander
+	//$$ outlander
+	BACKPACK
+	ITEM $item_vandyke
+	ITEM $item_boots
+	ITEM $item_a_bear_mask
+	COLOR 9
+	ITEM $item_cloak
+	COLOR 17
+	ITEM $item_fancy_shirt
+	COLOR 32
+	COLOR 5
+	ITEM $item_a_kilt
+	COLOR 25
+	ITEM $item_a_half_apron
+	COLOR 29
+}
+
+SECTION NPC $npc_mountain_man
+{
+	#copy $npc_person_basic
+	TITLE the mountain man
+	//$$ mountain man
+	BACKPACK
+	ITEM $item_thigh_boots
+	ITEM $item_wide_brim_hat
+	COLOR 6
+	ITEM $item_cloak
+	COLOR 14
+	ITEM $item_fancy_shirt
+	COLOR 7
+	COLOR 4
+	ITEM $item_a_kilt
+	COLOR 14
+	ITEM $item_a_half_apron
+	COLOR 4
+}
+
+SECTION NPC $npc_buccaneer
+{
+	#copy $npc_person_basic
+	TITLE the buccaneer
+	//$$ buccaneer
+	BACKPACK
+	ITEM $item_buns_hair
+	ITEM $item_shoes
+	COLOR 21
+	COLOR 25
+	ITEM $item_fancy_shirt
+	COLOR 6
+	COLOR 38
+	ITEM $item_a_skirt
+	COLOR 37
+	ITEM $item_a_body_sash
+	COLOR 14
+	ITEM $item_quarter_staff
+}
+
+SECTION NPC $npc_cavalier
+{
+	#copy $npc_person_basic
+	TITLE the cavalier
+	//$$ cavalier
+	BACKPACK
+	ITEM $item_med_short_beard
+	ITEM $item_thigh_boots
+	COLOR 21
+	ITEM $item_cloak
+	COLOR 27
+	ITEM $item_fancy_shirt
+	COLOR 14
+	COLOR 36
+	ITEM $item_a_kilt
+	COLOR 32
+	ITEM $item_a_body_sash
+	COLOR 21
+	ITEM $item_gnarled_staff
+}
+
+SECTION NPC $npc_priest
+{
+	#copy $npc_person_basic
+	TITLE the priest
+	//$$ priest
+	BACKPACK
+	ITEM $item_med_short_beard_1
+	ITEM $item_thigh_boots
+	ITEM $item_a_tribal_mask_1
+	COLOR 0
+	ITEM $item_cloak
+	COLOR 13
+	ITEM $item_fancy_shirt
+	COLOR 20
+	ITEM $item_a_jesters_suit
+	COLOR 10
+	ITEM $item_a_kilt
+	COLOR 6
+	ITEM $item_a_full_apron
+	COLOR 35
+}
+
+SECTION NPC $npc_magician_1
+{
+	#copy $npc_person_basic
+	TITLE the magician
+	//$$ magician
+	BACKPACK
+	ITEM $item_mustache
+	ITEM $item_thigh_boots
+	ITEM $item_a_orc_helm
+	COLOR 2
+	ITEM $item_cloak
+	COLOR 6
+	ITEM $item_shirt
+	COLOR 22
+	COLOR 6
+	ITEM $item_short_pants
+	COLOR 28
+	ITEM $item_a_body_sash
+	COLOR 5
+}
+
+SECTION NPC $npc_apprentice
+{
+	#copy $npc_person_basic
+	TITLE the apprentice
+	//$$ apprentice
+	BACKPACK
+	ITEM $item_sandles
+	ITEM $item_floopy_hat
+	COLOR 7
+	COLOR 22
+	ITEM $item_shirt
+	COLOR 30
+	COLOR 6
+	ITEM $item_long_pants
+	COLOR 31
+	ITEM $item_a_full_apron
+	COLOR 20
+}
+
+SECTION NPC $npc_wizard
+{
+	#copy $npc_person_basic
+	TITLE the wizard
+	//$$ wizard
+	BACKPACK
+	ITEM $item_krisna_hair
+	ITEM $item_shoes
+	ITEM $item_feathered_hat
+	COLOR 27
+	COLOR 10
+	ITEM $item_fancy_shirt
+	COLOR 6
+	COLOR 31
+	ITEM $item_long_pants
+	COLOR 14
+	ITEM $item_a_full_apron
+	COLOR 26
+}
+
+SECTION NPC $npc_mage
+{
+	#copy $npc_person_basic
+	TITLE the mage
+	//$$ mage
+	BACKPACK
+	ITEM $item_sandles
+	ITEM $item_straw_hat
+	COLOR 32
+	COLOR 7
+	ITEM $item_fancy_shirt
+	COLOR 23
+	COLOR 6
+	ITEM $item_a_skirt
+	COLOR 1
+	ITEM $item_a_half_apron
+	COLOR 26
+}
+
+SECTION NPC $npc_laborer
+{
+	#copy $npc_person_basic
+	TITLE the laborer
+	//$$ laborer
+	BACKPACK
+	ITEM $item_mohawk
+	ITEM $item_short_beard
+	ITEM $item_shoes
+	COLOR 5
+	ITEM $item_cloak
+	COLOR 35
+	ITEM $item_shirt
+	COLOR 31
+	COLOR 17
+	ITEM $item_short_pants
+	COLOR 0
+	ITEM $item_a_full_apron
+	COLOR 17
+}
+
+SECTION NPC $npc_barbarian_1
+{
+	#copy $npc_person_basic
+	TITLE the barbarian
+	//$$ barbarian
+	BACKPACK
+	ITEM $item_krisna_hair
+	ITEM $item_long_beard
+	ITEM $item_sandles
+	COLOR 32
+	COLOR 31
+	ITEM $item_shirt
+	COLOR 3
+	ITEM $item_a_tunic
+	COLOR 37
+	ITEM $item_long_pants
+	COLOR 23
+	ITEM $item_a_half_apron
+	COLOR 10
+}
+
+SECTION NPC $npc_wizard_1
+{
+	#copy $npc_person_basic
+	TITLE the wizard
+	//$$ wizard
+	BACKPACK
+	ITEM $item_thigh_boots
+	COLOR 8
+	ITEM $item_cloak
+	COLOR 14
+	ITEM $item_fancy_shirt
+	COLOR 17
+	COLOR 13
+	ITEM $item_short_pants
+	COLOR 18
+	ITEM $item_a_full_apron
+	COLOR 2
+	ITEM $item_quarter_staff
+}
+
+SECTION NPC $npc_paladin
+{
+	#copy $npc_person_basic
+	TITLE the paladin
+	//$$ paladin
+	BACKPACK
+	ITEM $item_boots
+	COLOR 10
+	ITEM $item_cloak
+	COLOR 31
+	ITEM $item_fancy_shirt
+	COLOR 3
+	COLOR 11
+	ITEM $item_long_pants
+	COLOR 17
+	ITEM $item_a_body_sash
+	COLOR 27
+}
+
+SECTION NPC $npc_fancy_nobleman
+{
+	#copy $npc_person_basic
+	TITLE the fancy nobleman
+	//$$ fancy nobleman
+	BACKPACK
+	ITEM $item_sandles
+	ITEM $item_jester_hat
+	COLOR 9
+	COLOR 33
+	ITEM $item_fancy_shirt
+	COLOR 10
+	COLOR 11
+	ITEM $item_a_kilt
+	COLOR 2
+	ITEM $item_a_full_apron
+	COLOR 39
+}
+
+SECTION NPC $npc_redlady
+{
+	#copy $npc_person_basic
+	TITLE the red lady
+	//$$ redlady
+	BACKPACK
+	ITEM $item_mohawk
+	ITEM $item_boots
+	COLOR 4
+	ITEM $item_cloak
+	COLOR 11
+	ITEM $item_fancy_shirt
+	COLOR 34
+	ITEM $item_a_robe
+	COLOR 21
+	ITEM $item_long_pants
+	COLOR 20
+	ITEM $item_a_full_apron
+	COLOR 5
+	ITEM $item_black_staff
+}
+
+SECTION NPC $npc_magician_2
+{
+	#copy $npc_person_basic
+	TITLE the magician
+	//$$ magician
+	BACKPACK
+	ITEM $item_shoes
+	ITEM $item_bonnet
+	COLOR 27
+	COLOR 38
+	ITEM $item_fancy_shirt
+	COLOR 10
+	COLOR 18
+	ITEM $item_long_pants
+	COLOR 8
+	ITEM $item_a_body_sash
+	COLOR 3
+}
+
+SECTION NPC $npc_thief
+{
+	#copy $npc_person_basic
+	TITLE the thief
+	//$$ thief
+	BACKPACK
+	ITEM $item_boots
+	COLOR 22
+	COLOR 26
+	ITEM $item_shirt
+	COLOR 29
+	COLOR 35
+	ITEM $item_a_kilt
+	COLOR 35
+	ITEM $item_a_full_apron
+	COLOR 37
+}
+
+SECTION NPC $npc_vandal
+{
+	#copy $npc_person_basic
+	TITLE the vandal
+	//$$ vandal
+	BACKPACK
+	ITEM $item_krisna_hair
+	ITEM $item_short_beard
+	ITEM $item_shoes
+	ITEM $item_straw_hat
+	COLOR 37
+	COLOR 31
+	ITEM $item_shirt
+	COLOR 8
+	ITEM $item_a_plain_dress
+	COLOR 36
+	ITEM $item_a_skirt
+	COLOR 20
+	ITEM $item_a_body_sash
+	COLOR 25
+}
+
+SECTION NPC $npc_cutpurse
+{
+	#copy $npc_person_basic
+	TITLE the cutpurse
+	//$$ cutpurse
+	BACKPACK
+	ITEM $item_receding_hair
+	ITEM $item_mustache
+	ITEM $item_sandles
+	COLOR 17
+	ITEM $item_cloak
+	COLOR 24
+	ITEM $item_shirt
+	COLOR 6
+	COLOR 14
+	ITEM $item_short_pants
+	COLOR 24
+	ITEM $item_a_full_apron
+	COLOR 14
+}
+
+SECTION NPC $npc_bandit
+{
+	#copy $npc_person_basic
+	TITLE the bandit
+	//$$ bandit
+	BACKPACK
+	ITEM $item_mohawk
+	ITEM $item_sandles
+	COLOR 20
+	COLOR 18
+	ITEM $item_fancy_shirt
+	COLOR 18
+	COLOR 12
+	ITEM $item_long_pants
+	COLOR 18
+	ITEM $item_a_full_apron
+	COLOR 30
+}
+
+SECTION NPC $npc_night_prowler
+{
+	#copy $npc_person_basic
+	TITLE the night prowler
+	//$$ night prowler
+	BACKPACK
+	ITEM $item_krisna_hair
+	ITEM $item_thigh_boots
+	ITEM $item_floopy_hat
+	COLOR 32
+	COLOR 20
+	ITEM $item_fancy_shirt
+	COLOR 7
+	COLOR 18
+	ITEM $item_a_skirt
+	COLOR 34
+	ITEM $item_a_body_sash
+	COLOR 30
+}
+
+SECTION NPC $npc_ruffian
+{
+	#copy $npc_person_basic
+	TITLE the ruffian
+	//$$ ruffian
+	BACKPACK
+	ITEM $item_pony_tail
+	ITEM $item_med_short_beard
+	ITEM $item_thigh_boots
+	COLOR 29
+	ITEM $item_cloak
+	COLOR 28
+	ITEM $item_shirt
+	COLOR 2
+	COLOR 30
+	ITEM $item_a_skirt
+	COLOR 15
+	ITEM $item_a_full_apron
+	COLOR 31
+}
+
+SECTION NPC $npc_stinky_pimp
+{
+	#copy $npc_person_basic
+	TITLE the stinky pimp
+	//$$ stinky pimp
+	BACKPACK
+	ITEM $item_vandyke
+	ITEM $item_thigh_boots
+	COLOR 25
+	COLOR 5
+	ITEM $item_fancy_shirt
+	COLOR 35
+	ITEM $item_a_jesters_suit
+	COLOR 20
+	ITEM $item_a_skirt
+	COLOR 23
+	ITEM $item_a_body_sash
+	COLOR 37
+}
+
+SECTION NPC $npc_thug
+{
+	#copy $npc_person_basic
+	TITLE the thug
+	//$$ thug
+	BACKPACK
+	ITEM $item_buns_hair
+	ITEM $item_vandyke
+	ITEM $item_boots
+	ITEM $item_jester_hat
+	COLOR 9
+	COLOR 11
+	ITEM $item_shirt
+	COLOR 10
+	ITEM $item_a_plain_dress
+	COLOR 38
+	ITEM $item_short_pants
+	COLOR 30
+	ITEM $item_a_body_sash
+	COLOR 12
+	ITEM $item_quarter_staff
+}
