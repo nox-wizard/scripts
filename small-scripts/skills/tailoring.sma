@@ -8,7 +8,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
 
 /*************************************************************************************
- AUTHOR:	Luxor
+ AUTHOR:	Endymion
  DESCRIPTION:	In this file you can change the tailoring system.
  ************************************************************************************/
 
@@ -20,30 +20,30 @@ Begin Customizable Hides
 \*----------------------------------------------------------------------------------------*/
 
 enum {
-	NORMAL_CLOTH = 0
+	NORMAL_BOLT_CLOTH = 0, ALL_BOLTS_CLOTH
 };
 
-//How many cloths have we got?
-const NUM_CLOTHS = 1;
+//Bolts of Cloth define
+static boltscloth[ALL_BOLTS_CLOTH][] = {
+"$item_bolts_of_cloth"
+};
 
-//Skill value required to work an hide
+enum {
+	NORMAL_CLOTH = 0, ALL_CLOTHS
+};
+
+//Skill value required to work an cloth
 static clothSkill[] = {
-0   //Normal Cloth
+0   //NORMAL_CLOTH
 };
 
-//Colors of cloths
-//Remember that you can't have two cloths with the same color
-static clothColor[] = {
-0x0000 //Normal cloth
-};
-
-//Make menu for that hide
+//Make menu for that cloth
 static clothMakeMenu[] = {
-40   //Normal cloth
+40   //NORMAL_CLOTH
 };
 
-//Cloths names
-static clothDefine[NUM_CLOTHS][] = {
+//Cloths define
+static cloths[ALL_CLOTHS][] = {
 "$item_cut_cloth"
 };
 
@@ -51,15 +51,40 @@ static clothDefine[NUM_CLOTHS][] = {
 End Customizable Cloths
 \*----------------------------------------------------------------------------------------*/
 
+static boltsclothDef[ALL_BOLTS_CLOTH];
+static clothsDef[ALL_CLOTHS];
+
+public checkInitTailoring() {
+
+	static init=false;
+	if( !init ) {
+		for( new b=0; b<ALL_BOLTS_CLOTH; ++b ) {
+			boltsclothDef[b]=getIntFromDefine( boltscloth[b] );
+		}
+		for( new c=0; c<ALL_CLOTHS; ++c ) {
+			clothsDef[c]=getIntFromDefine( cloths[c] );
+		}
+		init=true;		
+	}
+	
+}
 
 public _doCloth( const s, const cloth ) {
 
+	checkInitTailoring();
+	
+	new scriptid = itm_getProperty( cloth, IP_SCRIPTID );
 	new color = itm_getProperty( cloth, IP_COLOR );
 	
-	new type=NORMAL_CLOTH;
-	for( new i=0; i<NUM_CLOTHS; ++i ) {
-		if(	color==clothColor[i] )
+	new type=INVALID;
+	for( new i=0; i<ALL_BOLTS_CLOTH; ++i ) {
+		if(	scriptid==boltsclothDef[i] )
 			type=i;
+	}
+	
+	if(type == INVALID) {
+		printf ("WARNING: _doCloth received an unknown bolt of cloth");
+		return;
 	}
 	
 	new amt = itm_getProperty( cloth, IP_AMOUNT );
@@ -70,7 +95,7 @@ public _doCloth( const s, const cloth ) {
 	
 	amt=amt*40;
 	
-	new cutcloth = itm_createByDef( clothDefine[type] );
+	new cutcloth = itm_createByDef( cloths[type] );
 
 	new chr = getCharFromSocket(s);
 	chr_sound( chr, 0x0248 );
@@ -87,10 +112,12 @@ public _doCloth( const s, const cloth ) {
                                                                                             
 /*****************************************************************************************
  FUNCTION :	__nxw_sk_tailoring
- AUTHOR   :	Luxor
+ AUTHOR   :	Endymion
  ****************************************************************************************/
 public __nxw_sk_tailoring(const s, const itm)
 {
+	checkInitTailoring();
+	
 	if (s < 0) {
 		printf ("WARNING: SOCKET PASSED TO __nxw_sk_tailoring IS INVALID");
 		return;
@@ -103,22 +130,23 @@ public __nxw_sk_tailoring(const s, const itm)
 	
 	//At this point, we're already sure that we're analyzing an cloth, because the engine did the check for us.
 	new cc = getCharFromSocket(s);
-	new clothNum = INVALID;
+	new type = INVALID;
 	new skill = chr_getSkill(cc, SK_TAILORING);
 	new color = itm_getDualByteProperty(itm, IP_COLOR);
-	new index;
-	for (index = 0; index < NUM_CLOTHS; index++) {
-		if (clothColor[index] == color) {
-			clothNum = index;
+	new scriptid = itm_getProperty( itm, IP_SCRIPTID );
+
+	for( new index = 0; index < ALL_CLOTHS; index++) {
+		if( clothsDef[index] == scriptid ) {
+			type = index;
 		}
 	}
-	if (clothNum == INVALID) {
+	if (type == INVALID) {
 		printf ("WARNING: __nxw_sk_tailoring received an unknown cloth");
 		return;
 	}
-	if (skill < clothSkill[clothNum]) {
+	if (skill < clothSkill[type]) {
 		ntprintf(s, "You are not skilled enough for this kind of material.");
 		return;
 	}
-	chr_skillMakeMenu(cc, clothMakeMenu[clothNum], SK_TAILORING);
+	chr_skillMakeMenu(cc, clothMakeMenu[type], SK_TAILORING);
 }

@@ -8,7 +8,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
 
 /*************************************************************************************
- AUTHOR:	Luxor
+ AUTHOR:	Endymion
  DESCRIPTION:	In this file you can change the tannering system.
  ************************************************************************************/
 
@@ -20,30 +20,30 @@ Begin Customizable Hides
 \*----------------------------------------------------------------------------------------*/
 
 enum {
-	NORMAL_HIDE = 0
+	NORMAL_HIDE = 0, ALL_HIDES
 };
 
-//How many hides have we got?
-const NUM_HIDES = 1;
-
-//Skill value required to work an hide
-static hideSkill[] = {
-0   //Normal Hide
+//Hides define
+static hides[ALL_HIDES][] = {
+"$item_hide"
 };
 
-//Colors of hides
-//Remember that you can't have two hides with the same color
-static hideColor[] = {
-0x0000 //Normal Hide
+enum {
+	NORMAL_LEATHER = 0, ALL_LEATHERS
 };
 
-//Make menu for that hide
-static hideMakeMenu[] = {
-40   //Normal Hide
+//Skill value required to work a leather
+static leatherSkill[] = {
+0   // NORMAL_LEATHER
 };
 
-//Hides names
-static hideDefine[NUM_HIDES][] = {
+//Make menu for that leather
+static leatherMakeMenu[] = {
+40   // NORMAL_LEATHER
+};
+
+//Leathers define
+static leathers[ALL_LEATHERS][] = {
 "$item_leather_piece"
 };
 
@@ -52,15 +52,42 @@ End Customizable Hides
 \*----------------------------------------------------------------------------------------*/
                                                                                             
 
+static hidesDef[ALL_HIDES];
+static leathersDef[ALL_LEATHERS];
+
+
+public checkInitTannering() {
+
+	static init=false;
+	if( !init ) {
+		for( new h=0; h<ALL_HIDES; ++h ) {
+			hidesDef[h]=getIntFromDefine( hides[h] );
+		}
+		for( new l=0; l<ALL_LEATHERS; ++l ) {
+			leathersDef[l]=getIntFromDefine( leathers[l] );
+		}
+		init=true;		
+	}
+	
+}
+
 
 public _doLeatherPiece( const s, const hide ) {
 
-	new color = itm_getProperty( hide, IP_COLOR );
-	new type=NORMAL_HIDE;
-	for( new i=0; i<NUM_HIDES; ++i ) {
-		if( color==hideColor[i] )
+	checkInitTannering();
+
+	new scriptid = itm_getProperty( hide, IP_SCRIPTID );
+	new type=INVALID;
+	for( new i=0; i<ALL_HIDES; ++i ) {
+		if( scriptid==hidesDef[i] )
 			type=i;
 	}
+	
+	if(type == INVALID) {
+		printf ("WARNING: _doLeatherPiece received an unknown hide");
+		return;
+	}
+	
 
 	new amt=itm_getProperty( hide, IP_AMOUNT );
 	if( amt<0 ) {
@@ -72,7 +99,7 @@ public _doLeatherPiece( const s, const hide ) {
 	chr_sound( chr, 0x0248 );
 
 	new bp = itm_getCharBackPack( chr );
-	new leather = itm_createByDef( hideDefine[type] );
+	new leather = itm_createByDef( leathers[type] );
 	itm_setProperty( leather, IP_AMOUNT, _, amt );
 	itm_contPileItem( bp, leather );
 	itm_remove( hide );
@@ -85,10 +112,13 @@ public _doLeatherPiece( const s, const hide ) {
 
 /*****************************************************************************************
  FUNCTION :	__nxw_sk_tannering
- AUTHOR   :	Luxor
+ AUTHOR   :	Endymion
  ****************************************************************************************/
 public __nxw_sk_tannering(const s, const itm)
 {
+
+	checkInitTannering();
+
 	if (s < 0) {
 		printf ("WARNING: SOCKET PASSED TO __nxw_sk_tannering IS INVALID");
 		return;
@@ -99,24 +129,24 @@ public __nxw_sk_tannering(const s, const itm)
 		return;
 	}
 	
-	//At this point, we're already sure that we're analyzing an hide, because the engine did the check for us.
+	//At this point, we're already sure that we're analyzing an leather, because the engine did the check for us.
 	new cc = getCharFromSocket(s);
-	new hideNum = INVALID;
+	new type = INVALID;
 	new skill = chr_getSkill(cc, SK_TAILORING);
-	new color = itm_getDualByteProperty(itm, IP_COLOR);
-	new index;
-	for (index = 0; index < NUM_HIDES; index++) {
-		if (hideColor[index] == color) {
-			hideNum = index;
+	new scriptid = itm_getProperty( itm, IP_SCRIPTID );
+
+	for( new index = 0; index < ALL_LEATHERS; index++) {
+		if (leathersDef[index] == scriptid) {
+			type = index;
 		}
 	}
-	if (hideNum == INVALID) {
-		printf ("WARNING: __nxw_sk_tailoring received an unknown hide");
+	if (type == INVALID) {
+		printf ("WARNING: __nxw_sk_tannering received an unknown leather");
 		return;
 	}
-	if (skill < hideSkill[hideNum]) {
+	if (skill < leatherSkill[type]) {
 		ntprintf(s, "You are not skilled enough for this kind of material.");
 		return;
 	}
-	chr_skillMakeMenu(cc, hideMakeMenu[hideNum], SK_TAILORING);
+	chr_skillMakeMenu(cc, leatherMakeMenu[type], SK_TAILORING);
 }
