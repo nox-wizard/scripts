@@ -245,7 +245,7 @@ public __nxw_sk_lumber(const cc, const x, const y, const mapid)
         	logAmount = 0;
         if ( logAmount == 0 )
         {
-		chr_message( cc, _, msg_sk_lumbDef[18]);
+		chr_message( cc, _, msg_sk_lumbDef[17]);
         	return;
         }
         logMaxAmount -=logAmount;

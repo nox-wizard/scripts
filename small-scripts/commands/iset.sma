@@ -143,7 +143,7 @@ static readPropAndVal(chr,&prop,&val)
 	}
 
 	if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
-<		return INVALID;
+		return INVALID;
 	
 	val = str2Int(__cmdParams[1]);
 	return OK;

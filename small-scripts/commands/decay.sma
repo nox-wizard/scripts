@@ -67,7 +67,7 @@ public cmd_decay_targ(target, chr, object, x, y, z, unused, decay)
 	if(isItem(object))
 	{
 		itm_setDecay(object,decay);
-		chr_message(chr,_,,itm_getProperty(object,IP_DECAYTIME));
+		chr_message(chr,_,msg_commandsDef[119],itm_getProperty(object,IP_DECAYTIME));
 	}
 	else chr_message(chr,_,msg_commandsDef[103]);
 }

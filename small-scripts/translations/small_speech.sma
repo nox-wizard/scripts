@@ -318,7 +318,7 @@ public msg_carpenterDef[NUM_carpSENTENCE][]={
 "wood of unknown color %d!"
 };
 
-const NUM_sk_lumbSENT = 19;
+const NUM_sk_lumbSENT = 18;
 public msg_sk_lumbDef[NUM_sk_lumbSENT][]={
 "pine    ",
 "yew     ",
@@ -337,8 +337,7 @@ public msg_sk_lumbDef[NUM_sk_lumbSENT][]={
 "Your hand slips and a part of your wood is destroied.",
 "%s board",
 "You create boards out of the wood.^nCarefully you put the %s in your pack.",
-"pine    ",
-"There is no more wood left to chop.",
+"There is no more wood left to chop."
 };
 
 const NUM_sk_meditSENT = 8;
@@ -447,7 +446,7 @@ public msg_blacksmithDef[NUM_smithSENTENCE][]={
 "You repair the item."
 };
 
-const NUM_sk_miningSENT = 18;
+const NUM_sk_miningSENT = 19;
 public msg_sk_miningDef[NUM_sk_miningSENT][]={
 "iron    ",
 "shadow  ",
@@ -466,7 +465,8 @@ public msg_sk_miningDef[NUM_sk_miningSENT][]={
 "Your hand slips and you pour some of your ore into the blaze.",
 "%s ingots",
 "You smelt the ore.",
-"Carefully you place the %s in your backpack."
+"Carefully you place the %s in your backpack.",
+"There is no more ore here."
 };
 
 const NUM_sk_tailorSENT = 1;
@@ -571,7 +571,7 @@ public msg_api_partyDef[NUM_api_partySENT][]={
 "You notify them that you do not wish to join the party."
 };
 
-const NUM_commandsSENT = 261;
+const NUM_commandsSENT = 262;
 public msg_commandsDef[NUM_commandsSENT][]={
 "No other players connected",
 "Users Online : ",
