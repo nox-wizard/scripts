@@ -65,7 +65,7 @@ public detectCommand(const chr)
 #if _CMD_DEBUG_
 	new name[50];
 	chr_getProperty(chr,CP_STR_NAME,0,name);
-	printf("^nDEBUG: %s using command: %s^n",name,command);
+	log_message("^nDEBUG: %s is using command: %s^n",name,command);
 #endif
 
 //Small command system is bypassed if source command system is selected
@@ -112,7 +112,7 @@ public detectCommand(const chr)
 		
 		
 		#if _CMD_DEBUG_
-			printf("^t->param %d: %s^n",param,__cmdParams[param]);
+			log_message("^t->param %d: %s^n",param,__cmdParams[param]);
 		#endif
 		
 		param++;
@@ -128,7 +128,7 @@ public detectCommand(const chr)
 	else sprintf(function,"cmd_%s",command);
 	
 	#if _CMD_DEBUG_
-		printf("^t->calling function: %s^n",function);
+		log_message("^t->calling function: %s^n",function);
 	#endif
 
 

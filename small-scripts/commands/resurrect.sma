@@ -42,7 +42,7 @@ public cmd_resurrect(const chr)
 				if(chr2 != chr) chr_resurrect(chr2);
 		}
 		
-		chr_message(chr,_,"%d characters unfrozen",i);
+		chr_message(chr,_,"%d characters resurrected",i);
 		return;
 	}
 
