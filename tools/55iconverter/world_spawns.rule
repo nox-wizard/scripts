@@ -1,3 +1,21 @@
+# Rules are defined in the first column
+# I for INSERT, insert the definition into the nox character
+# Insert rules are defined by
+# I;; Nox Attribute Name; Value
+# Change Rules are defined by
+# C;Sphere attribute name; Nox attribute name; value (constant or as a python expression returning a string)
+# D for Delete rules, Remove an obsolete definition, you may use a * as a wildcard at the end of the string,
+# denouncing that the attribute should start with the given value
+# D; Sphere attribute name [*]
+# T for Take rules, take the original value of sphere and assign it to the given Nox attribute
+# T;Sphere attribute;Nox Attribute
+# Reserved words: = to start a python expression
+# glob.accNameTable[<index>] for the nox account number of the account with name <index>
+# glob.serials for a counter variable increased after every worldchar
+# value for the string in the sphere charfile for the current attribute (which is the one defined in column 2)
+# decimal(value) for the decimal representation of a hex value (no tests made, if it is really a hex value)
+
+
 [i_worldgem_bit]
 I;;ID;7955
 I;;NAME2;#

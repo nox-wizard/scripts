@@ -1,0 +1,1410 @@
+[01005]
+MAPPING $item_jar_for_milk
+
+[I_JAR_EMPTY]
+MAPPING $item_jar_for_milk
+
+[01725]
+MAPPING $item_coconuts2
+
+[I_COCONUT_HALVED]
+MAPPING $item_coconuts2
+
+[01E1D]
+MAPPING $item_cooked_fish_headless_2
+
+[01E1E]
+MAPPING $item_cooked_small_fish
+
+[I_FISH_COOKED_SMALL]
+MAPPING $item_cooked_small_fish
+
+[01E1F]
+MAPPING $item_sliced_ham
+
+[I_HAM_SLICES]
+MAPPING $item_sliced_ham
+
+[09BE]
+MAPPING $item_silverware_3
+
+[01E1A]
+MAPPING $item_fish_head1_2
+
+[01E1B]
+MAPPING $item_fish_head2
+
+[I_FISH_RAW_HEAD_PILE]
+MAPPING $item_fish_head2
+
+[01E1C]
+MAPPING $item_cooked_fish_headless_1
+
+[I_FISH_COOKED]
+MAPPING $item_cooked_fish_headless_1
+
+[01AD3]
+MAPPING $item_donuts
+
+[I_DONUTS]
+MAPPING $item_donuts
+
+[0D15]
+MAPPING $item_mushrooms_10
+
+[09AE]
+MAPPING $item_dirty_plate3
+
+[I_PLATE_DIRTY]
+MAPPING $item_dirty_plate3
+
+[015F9]
+MAPPING $item_bowl_of_carrots2
+
+[I_BOWL_WOOD_CARROTS]
+MAPPING $item_bowl_of_carrots2
+
+[01E89]
+MAPPING $item_skinned_goat_2
+
+[I_GOAT_SKINNED_2]
+MAPPING $item_skinned_goat_2
+
+[01E88]
+MAPPING $item_skinned_goat_1
+
+[I_GOAT_SKINNED]
+MAPPING $item_skinned_goat_1
+
+[0171F]
+MAPPING $item_banana_1
+
+[I_FRUIT_BANANA]
+MAPPING $item_banana_1
+
+[0171D]
+MAPPING $item_skinned_banana_1
+
+[I_BANANA_UNPEELED]
+MAPPING $item_skinned_banana_1
+
+[0171E]
+MAPPING $item_skinned_banana_2
+
+[01E83]
+MAPPING $item_bird1_1
+
+[I_BIRD_DEAD]
+MAPPING $item_bird1_1
+
+[01E87]
+MAPPING $item_unplucked_chicken
+
+[I_CHICKEN_DEAD]
+MAPPING $item_unplucked_chicken
+
+[01E86]
+MAPPING $item_bird1_2
+
+[I_BIRD_DEAD_4]
+MAPPING $item_bird1_2
+
+[01E85]
+MAPPING $item_bird1_1
+
+[I_BIRD_DEAD_3]
+MAPPING $item_bird1_1
+
+[01E8F]
+MAPPING $item_pigs_head_2
+
+[I_PIGS_HEAD_2]
+MAPPING $item_pigs_head_2
+
+[09AC]
+MAPPING $item_bushel
+
+[I_BASKET_BUSHEL]
+MAPPING $item_bushel
+
+[0991]
+MAPPING $item_tray_2
+
+[I_TRAY]
+MAPPING $item_tray_2
+
+[01605]
+MAPPING $item_large_wooden_bowl
+
+[I_BOWL_WOOD_LG]
+MAPPING $item_large_wooden_bowl
+
+[0996]
+MAPPING $item_ceramic_mug_3
+
+[0974]
+MAPPING $item_cauldron_1
+
+[I_CAULDRON]
+MAPPING $item_cauldron_1
+
+[0A19]
+MAPPING $item_dirty_plate2
+
+[I_PLATE_DIRTY_3]
+MAPPING $item_dirty_plate2
+
+[01603]
+MAPPING $item_large_pewter_bowl
+
+[I_BOWL_PEWTER_LG]
+MAPPING $item_large_pewter_bowl
+
+[01083]
+MAPPING $item_uncooked_pizza
+
+[I_PIZZA_UNCOOKED]
+MAPPING $item_uncooked_pizza
+
+[0994]
+MAPPING $item_pears_1
+
+[I_FRUIT_PEAR]
+MAPPING $item_pears_1
+
+[0A1E]
+MAPPING $item_bowl_of_flour
+
+[I_FLOUR_BOWL]
+MAPPING $item_bowl_of_flour
+
+[0995]
+MAPPING $item_ceramic_mug_2
+
+[I_MUG_CERAMIC]
+MAPPING $item_ceramic_mug_2
+
+[0D1A]
+MAPPING $item_grape_bunches_2
+
+[09D4]
+MAPPING $item_silverware_1
+
+[I_SILVERWARE_2]
+MAPPING $item_silverware_1
+
+[01E94]
+MAPPING $item_chicken_on_spit_2
+
+[I_CHICKEN_SPITTED]
+MAPPING $item_chicken_on_spit_2
+
+[01E95]
+MAPPING $item_rabbit_on_spit_2
+
+[I_RABBIT_SPITTED]
+MAPPING $item_rabbit_on_spit_2
+
+[01E96]
+MAPPING $item_spit_2
+
+[I_SPIT]
+MAPPING $item_spit_2
+
+[01E97]
+MAPPING $item_chicken_on_spit_1
+
+[I_CHICKEN_SPITTED_2]
+MAPPING $item_chicken_on_spit_1
+
+[01E90]
+MAPPING $item_skinned_deer_1
+
+[I_DEER_SKINNED]
+MAPPING $item_skinned_deer_1
+
+[01E91]
+MAPPING $item_skinned_deer_2
+
+[I_DEER_SKINNED_2]
+MAPPING $item_skinned_deer_2
+
+[01E92]
+MAPPING $item_skinned_rabbit_1
+
+[I_RABBIT_SKINNED]
+MAPPING $item_skinned_rabbit_1
+
+[01E93]
+MAPPING $item_skinned_rabbit_2
+
+[I_RABBIT_SKINNED_2]
+MAPPING $item_skinned_rabbit_2
+
+[01E8C]
+MAPPING $item_pigs_feet_1
+
+[I_PIGS_FEET]
+MAPPING $item_pigs_feet_1
+
+[01E8B]
+MAPPING $item_plucked_chicken
+
+[I_CHICKEN_PLUCKED]
+MAPPING $item_plucked_chicken
+
+[01E8A]
+MAPPING $item_lard
+
+[I_LARD]
+MAPPING $item_lard
+
+[01E98]
+MAPPING $item_rabbit_on_spit_1
+
+[I_RABBIT_SPITTED_2]
+MAPPING $item_rabbit_on_spit_1
+
+[01E99]
+MAPPING $item_spit_1
+
+[I_SPIT_2]
+MAPPING $item_spit_1
+
+[01E8E]
+MAPPING $item_pigs_head_1
+
+[I_PIGS_HEAD]
+MAPPING $item_pigs_head_1
+
+[01E8D]
+MAPPING $item_pigs_feet_2
+
+[I_PIGS_FEET_2]
+MAPPING $item_pigs_feet_2
+
+[0D13]
+MAPPING $item_mushrooms_8
+
+[0C41]
+MAPPING $item_dried_herbs_1
+
+[I_DRIED_HERBS]
+MAPPING $item_dried_herbs_1
+
+[018E3]
+MAPPING $item_garlic_bulb_1
+
+[I_FRUIT_GARLIC]
+MAPPING $item_garlic_bulb_1
+
+[01882]
+MAPPING $item_winnowing_basket
+
+[I_BASKET_WINNOWING]
+MAPPING $item_winnowing_basket
+
+[0D10]
+MAPPING $item_mushrooms_5
+
+[01E18]
+MAPPING $item_raw_fish_headless_2
+
+[01E19]
+MAPPING $item_fish_head1_1
+
+[I_FISH_RAW_HEAD]
+MAPPING $item_fish_head1_1
+
+[01E15]
+MAPPING $item_raw_fish_1
+
+[I_FISH_RAW_WHOLE]
+MAPPING $item_raw_fish_1
+
+[01E16]
+MAPPING $item_raw_fish_2
+
+[09EA]
+MAPPING $item_muffins1
+
+[I_MUFFIN]
+MAPPING $item_muffins1
+
+[0997]
+MAPPING $item_ceramic_mug_4
+
+[0975]
+MAPPING $item_cauldron_2
+
+[09F3]
+MAPPING $item_pan
+
+[I_PAN]
+MAPPING $item_pan
+
+[01F8A]
+MAPPING $item_glass_of_milk_2
+
+[01F8B]
+MAPPING $item_glass_of_milk_3
+
+[09F0]
+MAPPING $item_pitcher_of_milk_2
+
+[01F8D]
+MAPPING $item_glass_of_wine_1
+
+[I_GLASS_OF_WINE]
+MAPPING $item_glass_of_wine_1
+
+[01F8E]
+MAPPING $item_glass_of_wine_2
+
+[01F8F]
+MAPPING $item_glass_of_wine_3
+
+[098E]
+MAPPING $item_jugs_of_cider2
+
+[098D]
+MAPPING $item_jugs_of_cider3
+
+[0D14]
+MAPPING $item_mushrooms_9
+
+[098C]
+MAPPING $item_french_bread
+
+[I_BREAD_FRENCH]
+MAPPING $item_french_bread
+
+[01EBD]
+MAPPING $item_sheave_of_wheat
+
+[I_WHEAT_SHEAF]
+MAPPING $item_sheave_of_wheat
+
+[099A]
+MAPPING $item_goblet_1
+
+[I_GOBLET]
+MAPPING $item_goblet_1
+
+[01729]
+MAPPING $item_lemons2
+
+[I_LEMON_HALVED]
+MAPPING $item_lemons2
+
+[0103C]
+MAPPING $item_bread_loaves_1
+
+[I_BREAD_WONDER]
+MAPPING $item_bread_loaves_1
+
+[099F]
+MAPPING $item_bottles_of_ale1
+
+[I_BOTTLE_ALE]
+MAPPING $item_bottles_of_ale1
+
+[0103A]
+MAPPING $item_open_sack_of_flour_1
+
+[I_FLOUR_SACK_OPEN]
+MAPPING $item_open_sack_of_flour_1
+
+[01724]
+MAPPING $item_coconuts3_1
+
+[01723]
+MAPPING $item_coconuts3_2
+
+[I_COCONUT_UNPEELED]
+MAPPING $item_coconuts3_2
+
+[0103F]
+MAPPING $item_cookie_mix
+
+[I_COOKIE_MIX]
+MAPPING $item_cookie_mix
+
+[01721]
+MAPPING $item_bunch_of_bananas_1
+
+[I_BANANA_BUNCH]
+MAPPING $item_bunch_of_bananas_1
+
+[0103D]
+MAPPING $item_dough
+
+[I_DOUGH]
+MAPPING $item_dough
+
+[0D0C]
+MAPPING $item_mushrooms_1
+
+[I_CROP_MUSHROOM]
+MAPPING $item_mushrooms_1
+
+[0D0D]
+MAPPING $item_mushrooms_2
+
+[099D]
+MAPPING $item_bottles_of_liquor3
+
+[0D0F]
+MAPPING $item_mushrooms_4
+
+[0D18]
+MAPPING $item_mushroom_3
+
+[099E]
+MAPPING $item_bottles_of_liquor4
+
+[01002]
+MAPPING $item_pewter_mug_4
+
+[01000]
+MAPPING $item_pewter_mug_1
+
+[I_MUG_PEWTER]
+MAPPING $item_pewter_mug_1
+
+[01001]
+MAPPING $item_pewter_mug_3
+
+[01F97]
+MAPPING $item_pitcher_of_cider_1
+
+[I_PITCHER_CIDER]
+MAPPING $item_pitcher_of_cider_1
+
+[01F96]
+MAPPING $item_pitcher_of_ale_2
+
+[01F95]
+MAPPING $item_pitcher_of_ale_1
+
+[I_PITCHER_ALE]
+MAPPING $item_pitcher_of_ale_1
+
+[01F94]
+MAPPING $item_glass_of_water_4
+
+[01F93]
+MAPPING $item_glass_of_water_3
+
+[01F92]
+MAPPING $item_glass_of_water_2
+
+[01F91]
+MAPPING $item_glass_of_water_1
+
+[I_GLASS_OF_WATER]
+MAPPING $item_glass_of_water_1
+
+[01F90]
+MAPPING $item_glass_of_wine_4
+
+[09EF]
+MAPPING $item_mug_of_ale_2
+
+[09ED]
+MAPPING $item_kettle
+
+[I_KETTLE]
+MAPPING $item_kettle
+
+[09EE]
+MAPPING $item_mug_of_ale_1
+
+[I_MUG_ALE]
+MAPPING $item_mug_of_ale_1
+
+[09EB]
+MAPPING $item_muffins3
+
+[I_MUFFINS]
+MAPPING $item_muffins3
+
+[09EC]
+MAPPING $item_jars_of_honey
+
+[I_JAR_HONEY]
+MAPPING $item_jars_of_honey
+
+[01F99]
+MAPPING $item_pitcher_of_liquor_1
+
+[I_PITCHER_LIQUOR]
+MAPPING $item_pitcher_of_liquor_1
+
+[01F98]
+MAPPING $item_pitcher_of_cider_2
+
+[099B]
+MAPPING $item_bottles_of_liquor1
+
+[I_BOTTLE_LIQUOR]
+MAPPING $item_bottles_of_liquor1
+
+[099C]
+MAPPING $item_bottles_of_liquor2
+
+[01F9E]
+MAPPING $item_pitcher_of_water_4
+
+[01F9D]
+MAPPING $item_pitcher_of_water_3
+
+[01F9C]
+MAPPING $item_pitcher_of_wine_2
+
+[01F9B]
+MAPPING $item_pitcher_of_wine_1
+
+[I_PITCHER_WINE]
+MAPPING $item_pitcher_of_wine_1
+
+[01F9A]
+MAPPING $item_pitcher_of_liquor_2
+
+[09E9]
+MAPPING $item_cake
+
+[I_CAKE]
+MAPPING $item_cake
+
+[09E6]
+MAPPING $item_dirty_pot2
+
+[I_POT_DIRTY_4]
+MAPPING $item_dirty_pot2
+
+[09E7]
+MAPPING $item_dirty_pot1
+
+[I_POT_DIRTY_5]
+MAPPING $item_dirty_pot1
+
+[01727]
+MAPPING $item_bunches_of_dates
+
+[I_FRUIT_DATES]
+MAPPING $item_bunches_of_dates
+
+[09E5]
+MAPPING $item_pot1
+
+[I_POT_5]
+MAPPING $item_pot1
+
+[09E2]
+MAPPING $item_frying_pan1
+
+[I_FRYPAN]
+MAPPING $item_frying_pan1
+
+[018E4]
+MAPPING $item_garlic_bulb_2
+
+[09E0]
+MAPPING $item_pot5
+
+[I_POT]
+MAPPING $item_pot5
+
+[09E3]
+MAPPING $item_pot3
+
+[I_POT_3]
+MAPPING $item_pot3
+
+[09E1]
+MAPPING $item_pot4
+
+[I_POT_2]
+MAPPING $item_pot4
+
+[0E7A]
+MAPPING $item_square_basket
+
+[I_BASKET_SQUARE]
+MAPPING $item_square_basket
+
+[0E7B]
+MAPPING $item_tub_of_water
+
+[I_TUB_WATER]
+MAPPING $item_tub_of_water
+
+[01039]
+MAPPING $item_sack_of_flour_1
+
+[I_FLOUR_SACK]
+MAPPING $item_sack_of_flour_1
+
+[01E17]
+MAPPING $item_raw_fish_headless_1
+
+[I_FISH_RAW]
+MAPPING $item_raw_fish_headless_1
+
+[01726]
+MAPPING $item_coconuts1
+
+[I_FRUIT_COCONUT]
+MAPPING $item_coconuts1
+
+[0172D]
+MAPPING $item_pears_2
+
+[0172C]
+MAPPING $item_peaches_2
+
+[0172B]
+MAPPING $item_limes2
+
+[I_LIME_HALVED]
+MAPPING $item_limes2
+
+[0172A]
+MAPPING $item_limes1
+
+[I_FRUIT_LIME]
+MAPPING $item_limes1
+
+[01F80]
+MAPPING $item_glass_of_cider_4
+
+[09CC]
+MAPPING $item_fish1
+
+[I_FISH_BIG_1]
+MAPPING $item_fish1
+
+[09FA]
+MAPPING $item_muffins2
+
+[I_MUFFINS_2]
+MAPPING $item_muffins2
+
+[01F83]
+MAPPING $item_glass_3
+
+[01F84]
+MAPPING $item_glass_4
+
+[01F85]
+MAPPING $item_glass_of_liquor_1
+
+[I_GLASS_OF_LIQUOR]
+MAPPING $item_glass_of_liquor_1
+
+[01F86]
+MAPPING $item_glass_of_liquor_2
+
+[01F87]
+MAPPING $item_glass_of_liquor_3
+
+[01F88]
+MAPPING $item_glass_of_liquor_4
+
+[01F89]
+MAPPING $item_glass_of_milk_1
+
+[I_GLASS_OF_MILK]
+MAPPING $item_glass_of_milk_1
+
+[09B1]
+MAPPING $item_basket2
+
+[I_BASKET_2]
+MAPPING $item_basket2
+
+[09D9]
+MAPPING $item_plate_of_food2
+
+[09D8]
+MAPPING $item_plate_of_food1
+
+[010E3]
+MAPPING $item_dough_bowl
+
+[I_BOWL_DOUGH]
+MAPPING $item_dough_bowl
+
+[01874]
+MAPPING $item_sheep_carcass_2
+
+[09F2]
+MAPPING $item_cuts_of_ribs
+
+[I_RIBS_COOKED]
+MAPPING $item_cuts_of_ribs
+
+[09D1]
+MAPPING $item_grape_bunches_1
+
+[I_FRUIT_GRAPES]
+MAPPING $item_grape_bunches_1
+
+[09D0]
+MAPPING $item_apples
+
+[I_FRUIT_APPLE]
+MAPPING $item_apples
+
+[09D3]
+MAPPING $item_hams_2
+
+[09D2]
+MAPPING $item_peaches_1
+
+[I_FRUIT_PEACH]
+MAPPING $item_peaches_1
+
+[09D5]
+MAPPING $item_silverware_2
+
+[09F1]
+MAPPING $item_cuts_of_raw_ribs
+
+[I_RIBS_RAW]
+MAPPING $item_cuts_of_raw_ribs
+
+[09D7]
+MAPPING $item_plate1
+
+[I_PLATE]
+MAPPING $item_plate1
+
+[09D6]
+MAPPING $item_ceramic_pitcher
+
+[I_PITCHER]
+MAPPING $item_ceramic_pitcher
+
+[0970]
+MAPPING $item_stew
+
+[I_BOWL_STEW]
+MAPPING $item_stew
+
+[0D12]
+MAPPING $item_mushrooms_7
+
+[0D11]
+MAPPING $item_mushrooms_6
+
+[01F8C]
+MAPPING $item_glass_of_milk_4
+
+[0D17]
+MAPPING $item_mushroom_2
+
+[0D16]
+MAPPING $item_mushroom_1
+
+[0976]
+MAPPING $item_slabs_of_bacon_1
+
+[I_BACON_SLAB]
+MAPPING $item_slabs_of_bacon_1
+
+[0977]
+MAPPING $item_slabs_of_bacon_2
+
+[0978]
+MAPPING $item_slices_of_bacon_1
+
+[I_BACON_SLICE]
+MAPPING $item_slices_of_bacon_1
+
+[0979]
+MAPPING $item_slices_of_bacon_2
+
+[0D19]
+MAPPING $item_mushroom_4
+
+[01E84]
+MAPPING $item_bird1_2
+
+[I_BIRD_DEAD_2]
+MAPPING $item_bird1_2
+
+[09CD]
+MAPPING $item_fish2
+
+[I_FISH_BIG_2]
+MAPPING $item_fish2
+
+[09CE]
+MAPPING $item_fish3
+
+[I_FISH_BIG_3]
+MAPPING $item_fish3
+
+[09CF]
+MAPPING $item_fish4
+
+[I_FISH_BIG_4]
+MAPPING $item_fish4
+
+[09CA]
+MAPPING $item_ceramic_mug_1
+
+[09CB]
+MAPPING $item_goblet_2
+
+[097A]
+MAPPING $item_raw_fish_steaks
+
+[I_FISH_CUT_RAW]
+MAPPING $item_raw_fish_steaks
+
+[0FC7]
+MAPPING $item_nautilus
+
+[0FC6]
+MAPPING $item_shells_2
+
+[0FC5]
+MAPPING $item_shells_1
+
+[0FC4]
+MAPPING $item_conch_shell
+
+[I_SHELL]
+MAPPING $item_conch_shell
+
+[09A5]
+MAPPING $item_knife_2
+
+[I_KNIFE]
+MAPPING $item_knife_2
+
+[0FC9]
+MAPPING $item_shells_3
+
+[09E8]
+MAPPING $item_dirty_pan
+
+[I_POT_DIRTY_6]
+MAPPING $item_dirty_pan
+
+[01872]
+MAPPING $item_beef_carcass_2
+
+[0FFC]
+MAPPING $item_skull_mug_2
+
+[0FCC]
+MAPPING $item_shell_3
+
+[0FCB]
+MAPPING $item_shell_2
+
+[0FCA]
+MAPPING $item_shell_1
+
+[01F7E]
+MAPPING $item_glass_of_cider_2
+
+[01F7D]
+MAPPING $item_glass_of_cider_1
+
+[I_GLASS_OF_CIDER]
+MAPPING $item_glass_of_cider_1
+
+[01F7F]
+MAPPING $item_glass_of_cider_3
+
+[09C8]
+MAPPING $item_jugs_of_cider1
+
+[I_JUG_CIDER]
+MAPPING $item_jugs_of_cider1
+
+[09C9]
+MAPPING $item_hams_1
+
+[I_HAM]
+MAPPING $item_hams_1
+
+[09C4]
+MAPPING $item_bottles_of_wine4
+
+[I_BOTTLES_WINE]
+MAPPING $item_bottles_of_wine4
+
+[09C5]
+MAPPING $item_bottles_of_wine3
+
+[09C6]
+MAPPING $item_bottles_of_wine2
+
+[09C7]
+MAPPING $item_bottles_of_wine1
+
+[I_BOTTLE_WINE]
+MAPPING $item_bottles_of_wine1
+
+[09C0]
+MAPPING $item_sausages_1
+
+[I_SAUSAGES]
+MAPPING $item_sausages_1
+
+[09C1]
+MAPPING $item_sausages_2
+
+[09C2]
+MAPPING $item_spoon_2
+
+[I_SPOON]
+MAPPING $item_spoon_2
+
+[09C3]
+MAPPING $item_spoon_1
+
+[01871]
+MAPPING $item_beef_carcass_1
+
+[I_CARCASS_BEEF]
+MAPPING $item_beef_carcass_1
+
+[01608]
+MAPPING $item_cooked_chicken_leg
+
+[I_CHICKEN_LEG]
+MAPPING $item_cooked_chicken_leg
+
+[097B]
+MAPPING $item_fish_steaks
+
+[I_FISH_CUT_COOKED]
+MAPPING $item_fish_steaks
+
+[097C]
+MAPPING $item_wedges_of_cheese_1
+
+[I_CHEESE_WEDGE]
+MAPPING $item_wedges_of_cheese_1
+
+[097D]
+MAPPING $item_wedges_of_cheese_2
+
+[I_CHEESE_CUT]
+MAPPING $item_wedges_of_cheese_2
+
+[097E]
+MAPPING $item_wheels_of_cheese
+
+[I_CHEESE_WHEEL]
+MAPPING $item_wheels_of_cheese
+
+[097F]
+MAPPING $item_frying_pan2
+
+[I_FRY_PAN]
+MAPPING $item_frying_pan2
+
+[01043]
+MAPPING $item_rolling_pin
+
+[I_ROLLING_PIN]
+MAPPING $item_rolling_pin
+
+[01600]
+MAPPING $item_bowl_of_lettuce1
+
+[I_BOWL_PEWTER_LETTUCE]
+MAPPING $item_bowl_of_lettuce1
+
+[09BF]
+MAPPING $item_golden_goblet_1
+
+[I_GOBLET_3]
+MAPPING $item_golden_goblet_1
+
+[09DA]
+MAPPING $item_dirty_plate1
+
+[I_PLATE_DIRTY_2]
+MAPPING $item_dirty_plate1
+
+[0DD8]
+MAPPING $item_small_fish_3
+
+[09DC]
+MAPPING $item_dirty_pot5
+
+[I_POT_DIRTY]
+MAPPING $item_dirty_pot5
+
+[09DB]
+MAPPING $item_plate_of_food3
+
+[09DE]
+MAPPING $item_dirty_frypan
+
+[I_FRYPAN_DIRTY]
+MAPPING $item_dirty_frypan
+
+[09DD]
+MAPPING $item_dirty_pot4
+
+[I_POT_DIRTY_2]
+MAPPING $item_dirty_pot4
+
+[09DF]
+MAPPING $item_dirty_pot3
+
+[I_POT_DIRTY_3]
+MAPPING $item_dirty_pot3
+
+[09BD]
+MAPPING $item_silverware_4
+
+[I_SILVERWARE]
+MAPPING $item_silverware_4
+
+[01044]
+MAPPING $item_spam
+
+[I_SPAM]
+MAPPING $item_spam
+
+[09E4]
+MAPPING $item_pot2
+
+[I_POT_4]
+MAPPING $item_pot2
+
+[0FFA]
+MAPPING $item_bucket_of_water
+
+[I_BUCKET_OF_WATER]
+MAPPING $item_bucket_of_water
+
+[0FFB]
+MAPPING $item_skull_mug_1
+
+[I_SKULL_MUG]
+MAPPING $item_skull_mug_1
+
+[09B8]
+MAPPING $item_cooked_birds_2
+
+[0FFD]
+MAPPING $item_skull_mug_3
+
+[0FFE]
+MAPPING $item_skull_mug_4
+
+[0FFF]
+MAPPING $item_pewter_mug_2
+
+[01042]
+MAPPING $item_unbaked_pie
+
+[I_PIE_UNBAKED]
+MAPPING $item_unbaked_pie
+
+[01609]
+MAPPING $item_raw_lamb_leg
+
+[I_LAMB_LEG_RAW]
+MAPPING $item_raw_lamb_leg
+
+[01040]
+MAPPING $item_pizzas
+
+[I_PIZZA]
+MAPPING $item_pizzas
+
+[01041]
+MAPPING $item_baked_pie
+
+[I_PIE_BAKED]
+MAPPING $item_baked_pie
+
+[01046]
+MAPPING $item_open_sack_of_flour_2
+
+[0DD9]
+MAPPING $item_small_fish_4
+
+[09B9]
+MAPPING $item_raw_birds_1
+
+[I_BIRD_RAW]
+MAPPING $item_raw_birds_1
+
+[01045]
+MAPPING $item_sack_of_flour_2
+
+[09B7]
+MAPPING $item_cooked_birds_1
+
+[I_BIRD_COOKED]
+MAPPING $item_cooked_birds_1
+
+[09B6]
+MAPPING $item_fried_eggs
+
+[I_EGGS_FRIED]
+MAPPING $item_fried_eggs
+
+[09B5]
+MAPPING $item_eggs
+
+[I_EGGS_FRESH]
+MAPPING $item_eggs
+
+[09B4]
+MAPPING $item_eggshells
+
+[I_EGGSHELLS]
+MAPPING $item_eggshells
+
+[01604]
+MAPPING $item_bowl_of_stew
+
+[I_BOWL_STEW_LG]
+MAPPING $item_bowl_of_stew
+
+[0DD6]
+MAPPING $item_small_fish_1
+
+[I_FISH_SMALL]
+MAPPING $item_small_fish_1
+
+[01606]
+MAPPING $item_tomato_soup
+
+[I_BOWL_TOMATO_SOUP]
+MAPPING $item_tomato_soup
+
+[01607]
+MAPPING $item_raw_chicken_leg
+
+[I_CHICKEN_LEG_RAW]
+MAPPING $item_raw_chicken_leg
+
+[0DD7]
+MAPPING $item_small_fish_2
+
+[01F81]
+MAPPING $item_glass_1
+
+[I_GLASS]
+MAPPING $item_glass_1
+
+[09B3]
+MAPPING $item_golden_goblet_2
+
+[I_GOBLET_2]
+MAPPING $item_golden_goblet_2
+
+[09AF]
+MAPPING $item_plate_of_food4
+
+[I_PLATE_FOOD]
+MAPPING $item_plate_of_food4
+
+[01F82]
+MAPPING $item_glass_2
+
+[09AD]
+MAPPING $item_pitcher_of_milk_1
+
+[I_PITCHER_MILK]
+MAPPING $item_pitcher_of_milk_1
+
+[01722]
+MAPPING $item_bunch_of_bananas_2
+
+[01601]
+MAPPING $item_bowl_of_peas1
+
+[I_BOWL_PEWTER_PEAS]
+MAPPING $item_bowl_of_peas1
+
+[015F8]
+MAPPING $item_wooden_bowl
+
+[I_BOWL_WOOD]
+MAPPING $item_wooden_bowl
+
+[09A6]
+MAPPING $item_knife_1
+
+[0103E]
+MAPPING $item_flour_sifter
+
+[I_FLOUR_SIFTER]
+MAPPING $item_flour_sifter
+
+[09A3]
+MAPPING $item_fork_2
+
+[I_FORK]
+MAPPING $item_fork_2
+
+[01720]
+MAPPING $item_banana_2
+
+[015FA]
+MAPPING $item_bowl_of_corn2
+
+[I_BOWL_WOOD_CORN]
+MAPPING $item_bowl_of_corn2
+
+[015FC]
+MAPPING $item_bowl_of_peas2
+
+[I_BOWL_WOOD_PEAS]
+MAPPING $item_bowl_of_peas2
+
+[015FB]
+MAPPING $item_bowl_of_lettuce2
+
+[I_BOWL_WOOD_LETTUCE]
+MAPPING $item_bowl_of_lettuce2
+
+[015FE]
+MAPPING $item_bowl_of_carrots1
+
+[I_BOWL_PEWTER_CARROTS]
+MAPPING $item_bowl_of_carrots1
+
+[015FD]
+MAPPING $item_pewter_bowl
+
+[I_BOWL_PEWTER]
+MAPPING $item_pewter_bowl
+
+[01602]
+MAPPING $item_bowl_of_potatoes
+
+[I_BOWL_PEWTER_POTATOES]
+MAPPING $item_bowl_of_potatoes
+
+[015FF]
+MAPPING $item_bowl_of_corn1
+
+[I_BOWL_PEWTER_CORN]
+MAPPING $item_bowl_of_corn1
+
+[09A2]
+MAPPING $item_bottles_of_ale4
+
+[0993]
+MAPPING $item_fruit_basket
+
+[I_BASKET_FRUIT]
+MAPPING $item_fruit_basket
+
+[09A0]
+MAPPING $item_bottles_of_ale2
+
+[09A1]
+MAPPING $item_bottles_of_ale3
+
+[0C3F]
+MAPPING $item_dried_onions_1
+
+[I_DRIED_ONIONS]
+MAPPING $item_dried_onions_1
+
+[09A7]
+MAPPING $item_glass_pitcher_3
+
+[I_PITCHER_GLASS]
+MAPPING $item_glass_pitcher_3
+
+[09A4]
+MAPPING $item_fork_1
+
+[0D0E]
+MAPPING $item_mushrooms_3
+
+[0E78]
+MAPPING $item_round_basket
+
+[I_BASKET_ROUND]
+MAPPING $item_round_basket
+
+[0C42]
+MAPPING $item_dried_herbs_2
+
+[0103B]
+MAPPING $item_bread_loaves_2
+
+[I_BREAD_LOAF]
+MAPPING $item_bread_loaves_2
+
+[0160A]
+MAPPING $item_cooked_lamb_leg
+
+[I_LAMB_LEG]
+MAPPING $item_cooked_lamb_leg
+
+[0160B]
+MAPPING $item_pan_of_cookies
+
+[I_PAN_COOKIES]
+MAPPING $item_pan_of_cookies
+
+[0160C]
+MAPPING $item_plate_of_cookies
+
+[I_PLATE_COOKIES]
+MAPPING $item_plate_of_cookies
+
+[09BC]
+MAPPING $item_roast_pigs_2
+
+[09BB]
+MAPPING $item_roast_pigs_1
+
+[I_PIG_ROAST]
+MAPPING $item_roast_pigs_1
+
+[09BA]
+MAPPING $item_raw_birds_2
+
+[0FF8]
+MAPPING $item_pitcher_of_water_2
+
+[I_PITCHER_WATER]
+MAPPING $item_pitcher_of_water_2
+
+[0FF9]
+MAPPING $item_pitcher_of_water_1
+
+[0992]
+MAPPING $item_tray_1
+
+[I_TRAY_2]
+MAPPING $item_tray_1
+
+[0C40]
+MAPPING $item_dried_onions_2
+
+[0990]
+MAPPING $item_basket1
+
+[I_BASKET]
+MAPPING $item_basket1
+
+[0FF6]
+MAPPING $item_glass_pitcher_1
+
+[0FF7]
+MAPPING $item_glass_pitcher_2
+

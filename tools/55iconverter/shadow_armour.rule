@@ -1,0 +1,66 @@
+[i_SHADOW_PLATEMAIL]
+MAPPING $item_shadow_platemail
+
+[i_SHADOW_FEMALE_PLATEMAIL]
+MAPPING $item_shadow_female_plate
+
+[i_SHADOW_PLATEMAIL_leggings]
+MAPPING $item_shadow_plate_leggings
+
+[i_SHADOW_PLATEMAIL_ARMS]
+MAPPING $item_shadow_plate_sleeves
+
+[i_SHADOW_PLATEMAIL_GORGET]
+MAPPING $item_shadow_plate_gorget
+
+[i_SHADOW_PLATE_HELM]
+MAPPING $item_shadow_plate_helm
+
+[i_SHADOW_PLATEMAIL_GAUNTLETS]
+MAPPING $item_shadow_plate_gloves
+
+[i_SHADOW_CHAINMAIL_COIF]
+MAPPING $item_shadow_chain_coif
+
+[i_SHADOW_CHAINMAIL_LEGGINGS]
+MAPPING $item_shadow_chain_leggings
+
+[i_SHADOW_CHAINMAIL_TUNIC]
+MAPPING $item_shadow_chain_leggings
+
+[i_SHADOW_METAL_SHIELD]
+MAPPING $item_shadow_metal_shield
+
+[i_SHADOW_BUCKLER_SHIELD]
+MAPPING $item_shadow_buckler
+
+[I_SHIELD_KITE_METAL]
+MAPPING $item_shadow_metal_kite_shield
+
+[i_SHADOW_HEATER_SHIELD]
+MAPPING $item_shadow_heater
+
+[i_SHADOW_RINGMAIL_GLOVES]
+MAPPING $item_shadow_ringmail_gloves
+
+[i_SHADOW_RINGMAIL_LEGGINGS]
+MAPPING $item_shadow_ringmail_leggings
+
+[i_SHADOW_RINGMAIL_SLEEVES]
+MAPPING $item_shadow_ringmail_sleeves
+
+[i_SHADOW_RINGMAIL_TUNIC]
+MAPPING $item_shadow_ringmail_tunic
+
+[i_SHADOW_CLOSED_HELM]
+MAPPING $item_shadow_close_helm
+
+[i_SHADOW_BASCINET]
+MAPPING $item_shadow_bascinet
+
+[i_SHADOW_HELMET]
+MAPPING $item_shadow_helmet
+
+[i_SHADOW_NOSE_HELM]
+MAPPING $item_shadow_nose_helm
+

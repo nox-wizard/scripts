@@ -1,0 +1,66 @@
+[i_SILVER_PLATEMAIL]
+MAPPING $item_silver_platemail
+
+[i_SILVER_FEMALE_PLATEMAIL]
+MAPPING $item_silver_female_plate
+
+[i_SILVER_PLATEMAIL_leggings]
+MAPPING $item_silver_plate_leggings
+
+[i_SILVER_PLATEMAIL_ARMS]
+MAPPING $item_silver_plate_sleeves
+
+[i_SILVER_PLATEMAIL_GORGET]
+MAPPING $item_silver_plate_gorget
+
+[i_SILVER_PLATE_HELM]
+MAPPING $item_silver_plate_helm
+
+[i_SILVER_PLATEMAIL_GAUNTLETS]
+MAPPING $item_silver_plate_gloves
+
+[i_SILVER_CHAINMAIL_COIF]
+MAPPING $item_silver_chain_coif
+
+[i_SILVER_CHAINMAIL_LEGGINGS]
+MAPPING $item_silver_chain_leggings
+
+[i_SILVER_CHAINMAIL_TUNIC]
+MAPPING $item_silver_chain_leggings
+
+[i_SILVER_METAL_SHIELD]
+MAPPING $item_silver_metal_shield
+
+[i_SILVER_BUCKLER_SHIELD]
+MAPPING $item_silver_buckler
+
+[I_SHIELD_KITE_METAL]
+MAPPING $item_silver_metal_kite_shield
+
+[i_SILVER_HEATER_SHIELD]
+MAPPING $item_silver_heater
+
+[i_SILVER_RINGMAIL_GLOVES]
+MAPPING $item_silver_ringmail_gloves
+
+[i_SILVER_RINGMAIL_LEGGINGS]
+MAPPING $item_silver_ringmail_leggings
+
+[i_SILVER_RINGMAIL_SLEEVES]
+MAPPING $item_silver_ringmail_sleeves
+
+[i_SILVER_RINGMAIL_TUNIC]
+MAPPING $item_silver_ringmail_tunic
+
+[i_SILVER_CLOSED_HELM]
+MAPPING $item_silver_close_helm
+
+[i_SILVER_BASCINET]
+MAPPING $item_silver_bascinet
+
+[i_SILVER_HELMET]
+MAPPING $item_silver_helmet
+
+[i_SILVER_NOSE_HELM]
+MAPPING $item_silver_nose_helm
+

@@ -1,0 +1,66 @@
+[i_COPPER_PLATEMAIL]
+MAPPING $item_copper_platemail
+
+[i_COPPER_FEMALE_PLATEMAIL]
+MAPPING $item_copper_female_plate
+
+[i_COPPER_PLATEMAIL_leggings]
+MAPPING $item_copper_plate_leggings
+
+[i_COPPER_PLATEMAIL_ARMS]
+MAPPING $item_copper_plate_sleeves
+
+[i_COPPER_PLATEMAIL_GORGET]
+MAPPING $item_copper_plate_gorget
+
+[i_COPPER_PLATE_HELM]
+MAPPING $item_copper_plate_helm
+
+[i_COPPER_PLATEMAIL_GAUNTLETS]
+MAPPING $item_copper_plate_gloves
+
+[i_COPPER_CHAINMAIL_COIF]
+MAPPING $item_copper_chain_coif
+
+[i_COPPER_CHAINMAIL_LEGGINGS]
+MAPPING $item_copper_chain_leggings
+
+[i_COPPER_CHAINMAIL_TUNIC]
+MAPPING $item_copper_chain_leggings
+
+[i_COPPER_METAL_SHIELD]
+MAPPING $item_copper_metal_shield
+
+[i_COPPER_BUCKLER_SHIELD]
+MAPPING $item_copper_buckler
+
+[I_SHIELD_KITE_METAL]
+MAPPING $item_copper_metal_kite_shield
+
+[i_COPPER_HEATER_SHIELD]
+MAPPING $item_copper_heater
+
+[i_COPPER_RINGMAIL_GLOVES]
+MAPPING $item_copper_ringmail_gloves
+
+[i_COPPER_RINGMAIL_LEGGINGS]
+MAPPING $item_copper_ringmail_leggings
+
+[i_COPPER_RINGMAIL_SLEEVES]
+MAPPING $item_copper_ringmail_sleeves
+
+[i_COPPER_RINGMAIL_TUNIC]
+MAPPING $item_copper_ringmail_tunic
+
+[i_COPPER_CLOSED_HELM]
+MAPPING $item_copper_close_helm
+
+[i_COPPER_BASCINET]
+MAPPING $item_copper_bascinet
+
+[i_COPPER_HELMET]
+MAPPING $item_copper_helmet
+
+[i_COPPER_NOSE_HELM]
+MAPPING $item_copper_nose_helm
+

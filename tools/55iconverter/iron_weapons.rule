@@ -1,0 +1,120 @@
+[0F47]
+MAPPING $item_iron_battle_axe
+
+[I_AXE_BATTLE]
+MAPPING $item_iron_battle_axe
+
+[013BA]
+MAPPING $item_iron_viking_sword
+
+[0F45]
+MAPPING $item_iron_executioners_axe
+
+[I_AXE_EXEC]
+MAPPING $item_iron_executioners_axe
+
+[01438]
+MAPPING $item_iron_war_hammer
+
+[I_HAMMER_WAR]
+MAPPING $item_iron_war_hammer
+
+[013FF]
+MAPPING $item_iron_katana
+
+[0F5E]
+MAPPING $item_iron_broadsword
+
+[I_SWORD_BROAD]
+MAPPING $item_iron_broadsword
+
+[013FB]
+MAPPING $item_iron_large_battle_axe
+
+[0F62]
+MAPPING $item_iron_spear
+
+[I_SPEAR]
+MAPPING $item_iron_spear
+
+[0143C]
+MAPPING $item_iron_hammer_pick
+
+[I_HAMMER_PICK]
+MAPPING $item_iron_hammer_pick
+
+[0F49]
+MAPPING $item_iron_axe
+
+[I_AXE]
+MAPPING $item_iron_axe
+
+[0143E]
+MAPPING $item_iron_halberd
+
+[I_HALBERD]
+MAPPING $item_iron_halberd
+
+[0F51]
+MAPPING $item_iron_dagger
+
+[I_DAGGER]
+MAPPING $item_iron_dagger
+
+[0F4B]
+MAPPING $item_iron_double_axe
+
+[I_AXE_DOUBLE]
+MAPPING $item_iron_double_axe
+
+[0F4D]
+MAPPING $item_iron_bardiche
+
+[I_BARDICHE]
+MAPPING $item_iron_bardiche
+
+[013B0]
+MAPPING $item_iron_war_axe
+
+[01442]
+MAPPING $item_iron_two-handed_axe
+
+[I_AXE_TWO_HAND]
+MAPPING $item_iron_two-handed_axe
+
+[013B6]
+MAPPING $item_iron_scimitar
+
+[01440]
+MAPPING $item_iron_cutlass
+
+[I_CUTLASS]
+MAPPING $item_iron_cutlass
+
+[01403]
+MAPPING $item_iron_short_spear
+
+[01400]
+MAPPING $item_iron_kryss
+
+[I_KRYSS]
+MAPPING $item_iron_kryss
+
+[013B8]
+MAPPING $item_iron_long_sword
+
+[01406]
+MAPPING $item_iron_war_mace
+
+[I_MACE_WAR]
+MAPPING $item_iron_war_mace
+
+[0143A]
+MAPPING $item_iron_maul
+
+[I_MAUL]
+MAPPING $item_iron_maul
+
+[01405]
+MAPPING $item_iron_war_fork
+

@@ -15,69 +15,15 @@
 # value for the string in the sphere charfile for the current attribute (which is the one defined in column 2)
 # decimal(value) for the decimal representation of a hex value (no tests made, if it is really a hex value)
 
-[0F06]
-MAPPING $lesser_nightsight_potion
-
-[I_BOTTLE_BLACK]
-MAPPING $lesser_nightsight_potion
-
-[0F07]
-MAPPING $lesser_cure_potion
-
-[I_BOTTLE_ORANGE]
-MAPPING $lesser_cure_potion
-
-[0F08]
-MAPPING $lesser_agility_potion
-
-[I_BOTTLE_BLUE]
-MAPPING $lesser_agility_potion
-
-[0F08]
-MAPPING $item_blessed_water
-
-[I_BOTTLE_BLUE]
-MAPPING $item_blessed_water
-
-[0F09]
-MAPPING $lesser_strength_potion
-
-[I_BOTTLE_WHITE]
-MAPPING $lesser_strength_potion
-
-[0F0B]
-MAPPING $lesser_energy_potion
-
-[I_BOTTLE_RED]
-MAPPING $lesser_energy_potion
-
-[0F0C]
-MAPPING $lesser_healing_potion
-
-[I_BOTTLE_YELLOW]
-MAPPING $lesser_healing_potion
-
-[0F0A]
-MAPPING $lesser_poison_potion
-
-[I_BOTTLE_GREEN]
-MAPPING $lesser_poison_potion
-
-[0F0D]
-MAPPING $lesser_explosion_potion
-
-[I_BOTTLE_PURPLE]
-MAPPING $lesser_explosion_potion
-
-[0F0E]
-MAPPING $lesser_mana_potion
-
-[I_BOTTLE_EMPTY]
-MAPPING $lesser_mana_potion
-
-[01841]
-MAPPING $item_lsd_potion
-
-[I_FLASK_LONG_PURPLE_ANIM]
-MAPPING $item_lsd_potion
-
+[DEFAULT]
+C;SERIAL;SERIAL;=self.serial
+C;COLOR;COLOR;=decimal(value)
+C;CONT;CONT;=getContainer(value)
+C;ATTR;PRIV;=calculatePriv(value)
+C;AMOUNT;AMOUNT;=decimal(value)
+T;X;X;0
+T;Y;Y;0
+T;Z;Z;0
+C;ATTR;VISIBLE;=getVisibility(value)
+C;ATTR;MOVABLE;=getMovability(value)
+C;PRICE;VALUE;=value

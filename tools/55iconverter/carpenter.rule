@@ -1,0 +1,408 @@
+[0F44]
+MAPPING $item_hatchet2
+
+[01AD7]
+MAPPING $item_wooden_keg2_1
+
+[I_KEG_WOOD_2]
+MAPPING $item_wooden_keg2_1
+
+[0F43]
+MAPPING $item_hatchet
+
+[I_HATCHET]
+MAPPING $item_hatchet
+
+[0B11]
+MAPPING $item_display_case_13
+
+[0B10]
+MAPPING $item_display_case_12
+
+[I_DISPLAYCASE_BASE_CUSTOM_CORNER]
+MAPPING $item_display_case_12
+
+[0B13]
+MAPPING $item_display_case_15
+
+[0B12]
+MAPPING $item_display_case_14
+
+[0B15]
+MAPPING $item_display_case_17
+
+[0B14]
+MAPPING $item_display_case_16
+
+[I_DISPLAYCASE_BASE_CUSTOM_EDGE]
+MAPPING $item_display_case_16
+
+[0B17]
+MAPPING $item_display_case_19
+
+[0B16]
+MAPPING $item_display_case_18
+
+[0B18]
+MAPPING $item_display_case_border_8
+
+[010E6]
+MAPPING $item_inshave
+
+[I_INSHAVE]
+MAPPING $item_inshave
+
+[0102D]
+MAPPING $item_moulding_planes2
+
+[0102A]
+MAPPING $item_hammer
+
+[I_HAMMER]
+MAPPING $item_hammer
+
+[0AA3]
+MAPPING $item_display_case_border_5
+
+[I_DISPLAYCASE_RAIL_CUSTOM_CORNER]
+MAPPING $item_display_case_border_5
+
+[0102F]
+MAPPING $item_nails2
+
+[0A9F]
+MAPPING $item_display_case_border_1
+
+[I_DISPLAYCASE_RAIL_CUSTOM_EDGE]
+MAPPING $item_display_case_border_1
+
+[0AFF]
+MAPPING $item_display_case_border_11
+
+[0AFE]
+MAPPING $item_display_case_border_10
+
+[I_DISPLAYCASE_RAIL_LONG_CENTER]
+MAPPING $item_display_case_border_10
+
+[0AFD]
+MAPPING $item_display_case_border_9
+
+[I_DISPLAYCASE_RAIL_LONG_END]
+MAPPING $item_display_case_border_9
+
+[0E83]
+MAPPING $item_tub
+
+[I_TUB_EMPTY]
+MAPPING $item_tub
+
+[0AA4]
+MAPPING $item_display_case_border_6
+
+[0102C]
+MAPPING $item_moulding_planes
+
+[I_PLANE_MOULDING]
+MAPPING $item_moulding_planes
+
+[01AD6]
+MAPPING $item_wooden_keg1_2
+
+[0E77]
+MAPPING $item_barrel_without_lid
+
+[I_BARREL_OPEN]
+MAPPING $item_barrel_without_lid
+
+[01BE0]
+MAPPING $item_logs
+
+[0E7E]
+MAPPING $item_small_wooden_crate1
+
+[0E7F]
+MAPPING $item_open_wooden_keg
+
+[I_KEG_SMALL]
+MAPPING $item_open_wooden_keg
+
+[01EB2]
+MAPPING $item_barrel_staves
+
+[01033]
+MAPPING $item_smoothing_plane2
+
+[01032]
+MAPPING $item_smoothing_plane
+
+[I_PLANE_SMOOTHING]
+MAPPING $item_smoothing_plane
+
+[01031]
+MAPPING $item_jointing_plane2
+
+[01030]
+MAPPING $item_jointing_plane
+
+[I_PLANE_JOINTING]
+MAPPING $item_jointing_plane
+
+[01035]
+MAPPING $item_saw2
+
+[01034]
+MAPPING $item_saw
+
+[I_SAW]
+MAPPING $item_saw
+
+[014E0]
+MAPPING $item_bucket
+
+[I_BUCKET]
+MAPPING $item_bucket
+
+[010E1]
+MAPPING $item_barrel_hoops2
+
+[I_BARREL_HOOPS]
+MAPPING $item_barrel_hoops2
+
+[010E2]
+MAPPING $item_barrel_hoops3
+
+[010E5]
+MAPPING $item_froe
+
+[I_FROE]
+MAPPING $item_froe
+
+[010E4]
+MAPPING $item_draw_knife
+
+[I_KNIFE_DRAW]
+MAPPING $item_draw_knife
+
+[010E7]
+MAPPING $item_scorp
+
+[I_SCORP]
+MAPPING $item_scorp
+
+[01BD7]
+MAPPING $item_boards
+
+[I_BOARD]
+MAPPING $item_boards
+
+[01026]
+MAPPING $item_chisel
+
+[I_CHISELS]
+MAPPING $item_chisel
+
+[01027]
+MAPPING $item_chisel2
+
+[01028]
+MAPPING $item_dovetail_saw
+
+[I_SAW_DOVETAIL]
+MAPPING $item_dovetail_saw
+
+[01029]
+MAPPING $item_dovetail_saw2
+
+[0B05]
+MAPPING $item_display_case_border_14
+
+[0E43]
+MAPPING $item_wooden_chest2
+
+[0E42]
+MAPPING $item_wooden_chest1
+
+[I_CHEST_WOODEN_BRASS]
+MAPPING $item_wooden_chest1
+
+[0E3D]
+MAPPING $item_large_wooden_crate1
+
+[01940]
+MAPPING $item_wooden_keg1_1
+
+[I_KEG_WOOD]
+MAPPING $item_wooden_keg1_1
+
+[0E3E]
+MAPPING $item_medium_wooden_crate1
+
+[I_CRATE_MD]
+MAPPING $item_medium_wooden_crate1
+
+[0AA2]
+MAPPING $item_display_case_border_4
+
+[0102E]
+MAPPING $item_nails
+
+[I_NAILS]
+MAPPING $item_nails
+
+[0AA0]
+MAPPING $item_display_case_border_2
+
+[0AA1]
+MAPPING $item_display_case_border_3
+
+[0E3F]
+MAPPING $item_medium_wooden_crate2
+
+[0102B]
+MAPPING $item_hammer2
+
+[0AA5]
+MAPPING $item_display_case_border_7
+
+[0B0F]
+MAPPING $item_display_case_11
+
+[I_DISPLAYCASE_BASE_CUSTOM_BLOCK]
+MAPPING $item_display_case_11
+
+[0B0D]
+MAPPING $item_display_case_9
+
+[I_DISPLAYCASE_2_BASE]
+MAPPING $item_display_case_9
+
+[0B0E]
+MAPPING $item_display_case_10
+
+[0B0B]
+MAPPING $item_display_case_border_15
+
+[I_DISPLAYCASE_1_RAIL]
+MAPPING $item_display_case_border_15
+
+[0B0C]
+MAPPING $item_display_case_border_16
+
+[0B0A]
+MAPPING $item_display_case_8
+
+[019F9]
+MAPPING $item_coopers_bench1_1
+
+[I_BENCH_COOPER]
+MAPPING $item_coopers_bench1_1
+
+[019F8]
+MAPPING $item_vise1
+
+[019F5]
+MAPPING $item_woodworkers_bench2_3
+
+[019F4]
+MAPPING $item_vise2
+
+[I_VISE]
+MAPPING $item_vise2
+
+[019F7]
+MAPPING $item_woodworkers_bench2_1
+
+[019F6]
+MAPPING $item_woodworkers_bench2_2
+
+[019F1]
+MAPPING $item_woodworkers_bench1_1
+
+[I_BENCH_WOODWORKER_END]
+MAPPING $item_woodworkers_bench1_1
+
+[019F3]
+MAPPING $item_woodworkers_bench1_3
+
+[019F2]
+MAPPING $item_woodworkers_bench1_2
+
+[I_BENCH_WOODWORKER_EXT]
+MAPPING $item_woodworkers_bench1_2
+
+[0FAE]
+MAPPING $item_barrel_with_lid
+
+[I_BARREL]
+MAPPING $item_barrel_with_lid
+
+[09A9]
+MAPPING $item_small_wooden_crate2
+
+[I_CRATE_SMALL]
+MAPPING $item_small_wooden_crate2
+
+[01DB7]
+MAPPING $item_barrel_hoops
+
+[I_BARREL_HOOP]
+MAPPING $item_barrel_hoops
+
+[01DB8]
+MAPPING $item_barrel_lid
+
+[I_BARREL_LID]
+MAPPING $item_barrel_lid
+
+[019FA]
+MAPPING $item_coopers_bench1_2
+
+[019FC]
+MAPPING $item_coopers_bench2_2
+
+[019FB]
+MAPPING $item_coopers_bench2_1
+
+[0B06]
+MAPPING $item_display_case_4
+
+[0B07]
+MAPPING $item_display_case_5
+
+[0B04]
+MAPPING $item_display_case_border_13
+
+[0E3C]
+MAPPING $item_large_wooden_crate2
+
+[I_CRATE_LG]
+MAPPING $item_large_wooden_crate2
+
+[0B02]
+MAPPING $item_display_case_3
+
+[0B03]
+MAPPING $item_display_case_border_12
+
+[0B00]
+MAPPING $item_display_case_1
+
+[I_DISPLAYCASE_BASE_LONG_END]
+MAPPING $item_display_case_1
+
+[0B01]
+MAPPING $item_display_case_2
+
+[I_DISPLAYCASE_BASE_LONG_CENTER]
+MAPPING $item_display_case_2
+
+[0B08]
+MAPPING $item_display_case_6
+
+[0B09]
+MAPPING $item_display_case_7
+
+[I_DISPLAYCASE_1_BASE]
+MAPPING $item_display_case_7
+

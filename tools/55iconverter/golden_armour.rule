@@ -1,0 +1,66 @@
+[i_GOLDEN_PLATEMAIL]
+MAPPING $item_golden_platemail
+
+[i_GOLDEN_FEMALE_PLATEMAIL]
+MAPPING $item_golden_female_plate
+
+[i_GOLDEN_PLATEMAIL_leggings]
+MAPPING $item_golden_plate_leggings
+
+[i_GOLDEN_PLATEMAIL_ARMS]
+MAPPING $item_golden_plate_sleeves
+
+[i_GOLDEN_PLATEMAIL_GORGET]
+MAPPING $item_golden_plate_gorget
+
+[i_GOLDEN_PLATE_HELM]
+MAPPING $item_golden_plate_helm
+
+[i_GOLDEN_PLATEMAIL_GAUNTLETS]
+MAPPING $item_golden_plate_gloves
+
+[i_GOLDEN_CHAINMAIL_COIF]
+MAPPING $item_golden_chain_coif
+
+[i_GOLDEN_CHAINMAIL_LEGGINGS]
+MAPPING $item_golden_chain_leggings
+
+[i_GOLDEN_CHAINMAIL_TUNIC]
+MAPPING $item_golden_chain_leggings
+
+[i_GOLDEN_METAL_SHIELD]
+MAPPING $item_golden_metal_shield
+
+[i_GOLDEN_BUCKLER_SHIELD]
+MAPPING $item_golden_buckler
+
+[I_SHIELD_KITE_METAL]
+MAPPING $item_golden_metal_kite_shield
+
+[i_GOLDEN_HEATER_SHIELD]
+MAPPING $item_golden_heater
+
+[i_GOLDEN_RINGMAIL_GLOVES]
+MAPPING $item_golden_ringmail_gloves
+
+[i_GOLDEN_RINGMAIL_LEGGINGS]
+MAPPING $item_golden_ringmail_leggings
+
+[i_GOLDEN_RINGMAIL_SLEEVES]
+MAPPING $item_golden_ringmail_sleeves
+
+[i_GOLDEN_RINGMAIL_TUNIC]
+MAPPING $item_golden_ringmail_tunic
+
+[i_GOLDEN_CLOSED_HELM]
+MAPPING $item_golden_close_helm
+
+[i_GOLDEN_BASCINET]
+MAPPING $item_golden_bascinet
+
+[i_GOLDEN_HELMET]
+MAPPING $item_golden_helmet
+
+[i_GOLDEN_NOSE_HELM]
+MAPPING $item_golden_nose_helm
+

@@ -166,6 +166,10 @@ def parseSphereScript(linebuffer):
 			id=line[line.upper().index("ID")+len("ID "):].upper()
 			lineindex +=1
 			continue
+		if ( line.upper().startswith("DISPID") and itemname != None):
+			id=line[line.upper().index("DISPID")+len("DISPID "):].upper()
+			lineindex +=1
+			continue
 		lineindex +=1
 	if ( id == None and itemname == None ):
 		return

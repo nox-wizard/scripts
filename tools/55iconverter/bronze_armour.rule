@@ -1,0 +1,66 @@
+[i_BRONZE_PLATEMAIL]
+MAPPING $item_bronze_platemail
+
+[i_BRONZE_FEMALE_PLATEMAIL]
+MAPPING $item_bronze_female_plate
+
+[i_BRONZE_PLATEMAIL_leggings]
+MAPPING $item_bronze_plate_leggings
+
+[i_BRONZE_PLATEMAIL_ARMS]
+MAPPING $item_bronze_plate_sleeves
+
+[i_BRONZE_PLATEMAIL_GORGET]
+MAPPING $item_bronze_plate_gorget
+
+[i_BRONZE_PLATE_HELM]
+MAPPING $item_bronze_plate_helm
+
+[i_BRONZE_PLATEMAIL_GAUNTLETS]
+MAPPING $item_bronze_plate_gloves
+
+[i_BRONZE_CHAINMAIL_COIF]
+MAPPING $item_bronze_chain_coif
+
+[i_BRONZE_CHAINMAIL_LEGGINGS]
+MAPPING $item_bronze_chain_leggings
+
+[i_BRONZE_CHAINMAIL_TUNIC]
+MAPPING $item_bronze_chain_leggings
+
+[i_BRONZE_METAL_SHIELD]
+MAPPING $item_bronze_metal_shield
+
+[i_BRONZE_BUCKLER_SHIELD]
+MAPPING $item_bronze_buckler
+
+[I_SHIELD_KITE_METAL]
+MAPPING $item_bronze_metal_kite_shield
+
+[i_BRONZE_HEATER_SHIELD]
+MAPPING $item_bronze_heater
+
+[i_BRONZE_RINGMAIL_GLOVES]
+MAPPING $item_bronze_ringmail_gloves
+
+[i_BRONZE_RINGMAIL_LEGGINGS]
+MAPPING $item_bronze_ringmail_leggings
+
+[i_BRONZE_RINGMAIL_SLEEVES]
+MAPPING $item_bronze_ringmail_sleeves
+
+[i_BRONZE_RINGMAIL_TUNIC]
+MAPPING $item_bronze_ringmail_tunic
+
+[i_BRONZE_CLOSED_HELM]
+MAPPING $item_bronze_close_helm
+
+[i_BRONZE_BASCINET]
+MAPPING $item_bronze_bascinet
+
+[i_BRONZE_HELMET]
+MAPPING $item_bronze_helmet
+
+[i_BRONZE_NOSE_HELM]
+MAPPING $item_bronze_nose_helm
+

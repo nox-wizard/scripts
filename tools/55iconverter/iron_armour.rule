@@ -1,0 +1,132 @@
+[01C04]
+MAPPING $item_iron_female_plate
+
+[I_ARMOR_FEMALE_PLATE]
+MAPPING $item_iron_female_plate
+
+[01BC3]
+MAPPING $item_iron_chaos_shield
+
+[I_SHIELD_CHAOS]
+MAPPING $item_iron_chaos_shield
+
+[013BB]
+MAPPING $item_iron_chain_coif
+
+[I_CHAINMAIL_COIF]
+MAPPING $item_iron_chain_coif
+
+[0140C]
+MAPPING $item_iron_bascinet
+
+[I_BASCINET]
+MAPPING $item_iron_bascinet
+
+[0140A]
+MAPPING $item_iron_helmet
+
+[I_HELM_OPEN]
+MAPPING $item_iron_helmet
+
+[0140E]
+MAPPING $item_iron_nose_helm
+
+[I_HELM_NOSE]
+MAPPING $item_iron_nose_helm
+
+[013C4]
+MAPPING $item_iron_chain_tunic
+
+[01410]
+MAPPING $item_iron_plate_sleeves
+
+[I_PLATEMAIL_ARMS]
+MAPPING $item_iron_plate_sleeves
+
+[01413]
+MAPPING $item_iron_plate_gorget
+
+[I_PLATEMAIL_GORGET]
+MAPPING $item_iron_plate_gorget
+
+[01412]
+MAPPING $item_iron_plate_helm
+
+[I_PLATEMAIL_HELM]
+MAPPING $item_iron_plate_helm
+
+[01414]
+MAPPING $item_iron_plate_gloves
+
+[I_PLATEMAIL_GLOVES]
+MAPPING $item_iron_plate_gloves
+
+[013C3]
+MAPPING $item_iron_chain_leggings
+
+[01B7B]
+MAPPING $item_iron_metal_shield
+
+[I_SHIELD_ROUND_METAL]
+MAPPING $item_iron_metal_shield
+
+[01B78]
+MAPPING $item_iron_wooden_kite_shield
+
+[I_SHIELD_KITE_WOOD]
+MAPPING $item_iron_wooden_kite_shield
+
+[01B73]
+MAPPING $item_iron_buckler
+
+[I_SHIELD_BUCKLER]
+MAPPING $item_iron_buckler
+
+[01B72]
+MAPPING $item_iron_bronze_shield
+
+[I_SHIELD_ROUND_BRONZE]
+MAPPING $item_iron_bronze_shield
+
+[01416]
+MAPPING $item_iron_platemail
+
+[01B74]
+MAPPING $item_iron_metal_kite_shield
+
+[I_SHIELD_KITE_METAL]
+MAPPING $item_iron_metal_kite_shield
+
+[01B76]
+MAPPING $item_iron_heater
+
+[I_SHIELD_HEATER]
+MAPPING $item_iron_heater
+
+[01BC4]
+MAPPING $item_iron_order_shield
+
+[I_SHIELD_ORDER]
+MAPPING $item_iron_order_shield
+
+[013F2]
+MAPPING $item_iron_ringmail_gloves
+
+[013F1]
+MAPPING $item_iron_ringmail_leggings
+
+[0141A]
+MAPPING $item_iron_plate_leggings
+
+[013EF]
+MAPPING $item_iron_ringmail_sleeves
+
+[013ED]
+MAPPING $item_iron_ringmail_tunic
+
+[01408]
+MAPPING $item_iron_close_helm
+
+[I_HELM_CLOSED]
+MAPPING $item_iron_close_helm
+

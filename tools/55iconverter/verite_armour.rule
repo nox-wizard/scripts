@@ -1,0 +1,66 @@
+[i_VERITE_PLATEMAIL]
+MAPPING $item_verite_platemail
+
+[i_VERITE_FEMALE_PLATEMAIL]
+MAPPING $item_verite_female_plate
+
+[i_VERITE_PLATEMAIL_leggings]
+MAPPING $item_verite_plate_leggings
+
+[i_VERITE_PLATEMAIL_ARMS]
+MAPPING $item_verite_plate_sleeves
+
+[i_VERITE_PLATEMAIL_GORGET]
+MAPPING $item_verite_plate_gorget
+
+[i_VERITE_PLATE_HELM]
+MAPPING $item_verite_plate_helm
+
+[i_VERITE_PLATEMAIL_GAUNTLETS]
+MAPPING $item_verite_plate_gloves
+
+[i_VERITE_CHAINMAIL_COIF]
+MAPPING $item_verite_chain_coif
+
+[i_VERITE_CHAINMAIL_LEGGINGS]
+MAPPING $item_verite_chain_leggings
+
+[i_VERITE_CHAINMAIL_TUNIC]
+MAPPING $item_verite_chain_leggings
+
+[i_VERITE_METAL_SHIELD]
+MAPPING $item_verite_metal_shield
+
+[i_VERITE_BUCKLER_SHIELD]
+MAPPING $item_verite_buckler
+
+[I_SHIELD_KITE_METAL]
+MAPPING $item_verite_metal_kite_shield
+
+[i_VERITE_HEATER_SHIELD]
+MAPPING $item_verite_heater
+
+[i_VERITE_RINGMAIL_GLOVES]
+MAPPING $item_verite_ringmail_gloves
+
+[i_VERITE_RINGMAIL_LEGGINGS]
+MAPPING $item_verite_ringmail_leggings
+
+[i_VERITE_RINGMAIL_SLEEVES]
+MAPPING $item_verite_ringmail_sleeves
+
+[i_VERITE_RINGMAIL_TUNIC]
+MAPPING $item_verite_ringmail_tunic
+
+[i_VERITE_CLOSED_HELM]
+MAPPING $item_verite_close_helm
+
+[i_VERITE_BASCINET]
+MAPPING $item_verite_bascinet
+
+[i_VERITE_HELMET]
+MAPPING $item_verite_helmet
+
+[i_VERITE_NOSE_HELM]
+MAPPING $item_verite_nose_helm
+

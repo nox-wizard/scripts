@@ -1,0 +1,66 @@
+[i_VALORITE_PLATEMAIL]
+MAPPING $item_valorite_platemail
+
+[i_VALORITE_FEMALE_PLATEMAIL]
+MAPPING $item_valorite_female_plate
+
+[i_VALORITE_PLATEMAIL_leggings]
+MAPPING $item_valorite_plate_leggings
+
+[i_VALORITE_PLATEMAIL_ARMS]
+MAPPING $item_valorite_plate_sleeves
+
+[i_VALORITE_PLATEMAIL_GORGET]
+MAPPING $item_valorite_plate_gorget
+
+[i_VALORITE_PLATE_HELM]
+MAPPING $item_valorite_plate_helm
+
+[i_VALORITE_PLATEMAIL_GAUNTLETS]
+MAPPING $item_valorite_plate_gloves
+
+[i_VALORITE_CHAINMAIL_COIF]
+MAPPING $item_valorite_chain_coif
+
+[i_VALORITE_CHAINMAIL_LEGGINGS]
+MAPPING $item_valorite_chain_leggings
+
+[i_VALORITE_CHAINMAIL_TUNIC]
+MAPPING $item_valorite_chain_leggings
+
+[i_VALORITE_METAL_SHIELD]
+MAPPING $item_valorite_metal_shield
+
+[i_VALORITE_BUCKLER_SHIELD]
+MAPPING $item_valorite_buckler
+
+[I_SHIELD_KITE_METAL]
+MAPPING $item_valorite_metal_kite_shield
+
+[i_VALORITE_HEATER_SHIELD]
+MAPPING $item_valorite_heater
+
+[i_VALORITE_RINGMAIL_GLOVES]
+MAPPING $item_valorite_ringmail_gloves
+
+[i_VALORITE_RINGMAIL_LEGGINGS]
+MAPPING $item_valorite_ringmail_leggings
+
+[i_VALORITE_RINGMAIL_SLEEVES]
+MAPPING $item_valorite_ringmail_sleeves
+
+[i_VALORITE_RINGMAIL_TUNIC]
+MAPPING $item_valorite_ringmail_tunic
+
+[i_VALORITE_CLOSED_HELM]
+MAPPING $item_valorite_close_helm
+
+[i_VALORITE_BASCINET]
+MAPPING $item_valorite_bascinet
+
+[i_VALORITE_HELMET]
+MAPPING $item_valorite_helmet
+
+[i_VALORITE_NOSE_HELM]
+MAPPING $item_valorite_nose_helm
+
