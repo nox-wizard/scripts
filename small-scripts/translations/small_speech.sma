@@ -90,28 +90,48 @@ public msg_sk_mainDef[NUM_sk_mainSENT][]={
 "This skill is not yet implemented, use the standard skills menu"
 };
 
-const NUM_sk_alchSENT = 20;
+const NUM_sk_alchSENT = 40;
 public msg_sk_alchDef[NUM_sk_alchSENT][]={
-"bloodmoss    ",
-"garlic       ",
-"sulfurous_ash",
-"ginseng      ",
-"spiders_silk ",
-"nightshade   ",
-"black_pearl  ",
-"mandrake_root",
+"bloodmoss",
+"garlic",
+"sulfurous ash",
+"ginseng",
+"spiders silk",
+"nightshade",
+"black pearl",
+"mandrake root",
 "It must be inside your backpack",
 "Unknown Potion Category, please report this!",
-"These potions need %s as reagent.",
+"These potions needs %s as reagent.",
 "Notices: ",
 "Amount:",
 "unknown button %d in alchemy gump, please tell a gm",
 "You have too few empty bottles!",
 "Your alchemic experiment fails and you destroy some reagents and bottles.",
-"*%s starts grinding some %s in the mortar.*",
-"Your skill is not high enough",
+"*starts grinding some %s in the mortar.*",
 "You have not enough reagents",
-"Your skill is too low and you have not enough reagents"
+"Your skill is not high enough",
+"Your skill is too low and you have not enough reagents",
+"Normal Agility Potion",
+"Greater Agility Potion",
+"Lesser Cure Potion",
+"Normal Cure Potion",
+"Greater Cure Potion",
+"Lesser Explosion Potion",
+"Normal Explosion Potion",
+"Greater Explosion Potion",
+"Lesser Healing Potion",
+"Normal Healing Potion",
+"Greater Healing Potion",
+"Normal Nightsight Potion",
+"Lesser Poison Potion",
+"Normal Poison Potion",
+"Greater Poison Potion",
+"Deadly Poison Potion",
+"Normal Energy Potion",
+"Greater Energy Potion",
+"Lesser Strength Potion",
+"Normal Strength Potion"
 };
 
 const NUM_sk_miscSENT = 4;

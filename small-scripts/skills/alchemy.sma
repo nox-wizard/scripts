@@ -13,29 +13,30 @@ potionchance,
 reagentuse: 14,
 reagentneed,
 potionscript: 18,
-reagentname
+reagentname,
+potionname
 }
 static potionProperty[NUM_POTION][potionprop] = {
-{0x0F7B, 0x0F08, 151, 651,100,"bloodmoss    ",1, "normal_agility   ",0},
-{0x0F7B, 0x0F08, 351, 851,100,"bloodmoss    ",3, "greater_agility  ",0},
-{0x0F84, 0x0F07,   0, 500,100,"garlic       ",1, "lesser_cure      ",1},
-{0x0F84, 0x0F07, 251, 751,100,"garlic       ",3, "normal_cure      ",1},
-{0x0F84, 0x0F07, 651,1151, 70,"garlic       ",6, "greater_cure     ",1},
-{0x0F8C, 0x0F0D,  51, 551,100,"sulfurous_ash",3, "lesser_explosion ",2},
-{0x0F8C, 0x0F0D, 351, 851,100,"sulfurous_ash",5, "normal_explosion ",2},
-{0x0F8C, 0x0F0D, 651,1151, 70,"sulfurous_ash",10, "greater_explosion",2},
-{0x0F85, 0x0F0C,   0, 500,100,"ginseng      ",1, "lesser_healing   ",3},
-{0x0F85, 0x0F0C, 151, 651,100,"ginseng      ",3, "normal_healing   ",3},
-{0x0F85, 0x0F0C, 551,1051, 90,"ginseng      ",7, "greater_healing  ",3},
-{0x0F8D, 0x0F06,   0, 500,100,"spiders_silk ",1, "normal_nightsight",4},
-{0x0F88, 0x0F0A,   0, 500,100,"nightshade   ",1, "lesser_poison    ",5},
-{0x0F88, 0x0F0A, 151, 651,100,"nightshade   ",2, "normal_poison    ",5},
-{0x0F88, 0x0F0A, 551,1051, 90,"nightshade   ",4, "greater_poison   ",5},
-{0x0F88, 0x0F0A, 901,1401, 20,"nightshade   ",8, "deadly_poison    ",5},
-{0x0F7A, 0x0F0B,   0, 500,100,"black_pearl  ",1, "normal_energy    ",6},
-{0x0F7A, 0x0F0B, 251, 751,100,"black_pearl  ",5, "greater_energy   ",6},
-{0x0F86, 0x0F09, 251, 751,100,"mandrake_root",2, "lesser_strength  ",7},
-{0x0F86, 0x0F09, 451, 951,100,"mandrake_root",5, "normal_strength  ",7}
+{0x0F7B, 0x0F08, 151, 651,100,"bloodmoss    ",1, "normal_agility   ",0,20},
+{0x0F7B, 0x0F08, 351, 851,100,"bloodmoss    ",3, "greater_agility  ",0,21},
+{0x0F84, 0x0F07,   0, 500,100,"garlic       ",1, "lesser_cure      ",1,22},
+{0x0F84, 0x0F07, 251, 751,100,"garlic       ",3, "normal_cure      ",1,23},
+{0x0F84, 0x0F07, 651,1151, 70,"garlic       ",6, "greater_cure     ",1,24},
+{0x0F8C, 0x0F0D,  51, 551,100,"sulfurous_ash",3, "lesser_explosion ",2,25},
+{0x0F8C, 0x0F0D, 351, 851,100,"sulfurous_ash",5, "normal_explosion ",2,26},
+{0x0F8C, 0x0F0D, 651,1151, 70,"sulfurous_ash",10, "greater_explosion",2,27},
+{0x0F85, 0x0F0C,   0, 500,100,"ginseng      ",1, "lesser_healing   ",3,28},
+{0x0F85, 0x0F0C, 151, 651,100,"ginseng      ",3, "normal_healing   ",3,29},
+{0x0F85, 0x0F0C, 551,1051, 90,"ginseng      ",7, "greater_healing  ",3,30},
+{0x0F8D, 0x0F06,   0, 500,100,"spiders_silk ",1, "normal_nightsight",4,31},
+{0x0F88, 0x0F0A,   0, 500,100,"nightshade   ",1, "lesser_poison    ",5,32},
+{0x0F88, 0x0F0A, 151, 651,100,"nightshade   ",2, "normal_poison    ",5,33},
+{0x0F88, 0x0F0A, 551,1051, 90,"nightshade   ",4, "greater_poison   ",5,34},
+{0x0F88, 0x0F0A, 901,1401, 20,"nightshade   ",8, "deadly_poison    ",5,35},
+{0x0F7A, 0x0F0B,   0, 500,100,"black_pearl  ",1, "normal_energy    ",6,36},
+{0x0F7A, 0x0F0B, 251, 751,100,"black_pearl  ",5, "greater_energy   ",6,37},
+{0x0F86, 0x0F09, 251, 751,100,"mandrake_root",2, "lesser_strength  ",7,38},
+{0x0F86, 0x0F09, 451, 951,100,"mandrake_root",5, "normal_strength  ",7,39}
 };
 
 const alchpages=8; //one line for one page, two rows for one page
@@ -95,6 +96,8 @@ public alch_show(const chr, const pagenumber)
 	gui_addResizeGump(alch_menu,0,0,2600,513,392);
 	gui_addText(alch_menu,191,35, 33,"Alchemy Menu");
 	new arrayline = pagenumber-1;
+	
+	new tempStr[75];
 	
 	gui_addText(alch_menu,81,62, 33,"Categories");
 	gui_addText(alch_menu,86,103, 33,"Last Potiontype");
@@ -174,14 +177,9 @@ public alch_show(const chr, const pagenumber)
 		
 	}
 	
-	new oldletter[2];
-	sprintf(oldletter, "_");
-	new newletter[2];
-	sprintf(newletter, " ");
-	new potionreg[50];
-	sprintf(potionreg, "These potions need %s as reagent", msg_sk_alchDef[k]);
+	sprintf(tempStr, "These potions needs %s as reagent", msg_sk_alchDef[(potionProperty[k][reagentname])]);
 	gui_addTilePic(alch_menu,200,350, potionProperty[k][hexreag]);
-	gui_addText(alch_menu,155,324, 33,potionreg);
+	gui_addText(alch_menu,155,324, 33,tempStr);
 	gui_addText(alch_menu,86,324, 33,msg_sk_alchDef[11]);
 	
 	new m =0;
@@ -190,15 +188,11 @@ public alch_show(const chr, const pagenumber)
 	{
 		gui_addText(alch_menu,309,76,33,msg_sk_alchDef[12]);
 		gui_addInputField( alch_menu,350,76,50,20,9,1110,"1");
-		new potionname[50];
-		sprintf(potionname, potionProperty[i][potionscript]);
-		replaceStr (potionname, oldletter, newletter)
-		trim(potionname)
-		sprintf(potionname, "%s (%d)", potionname, potionProperty[i][reagentneed]);
-		//printf("potionname: %s^n", potionname);
-		if(chr_getProperty(chr,CP_SKILL,0) >= potionProperty[arrayline][alchemmin])
+		sprintf(tempStr, "%s (%d)", msg_sk_alchDef[(potionProperty[i][potionname])], potionProperty[i][reagentneed]);
+		//printf("potionname: %s^n", tempStr);
+		if(chr_getProperty(chr,CP_SKILL,0) >= potionProperty[i][alchemmin])
 		{
-			gui_addText(alch_menu,309,103+(27*m), 33,potionname);
+			gui_addText(alch_menu,309,103+(27*m), 33,tempStr);
 			gui_addButton(alch_menu,285,110+(27*m),alchpic1, alchpic2, i+10);
 			gui_addTilePic(alch_menu,250,110+(27*m), potionProperty[i][hexpotion]);
 			m=++m;
@@ -234,26 +228,18 @@ public alch_bck(const alch_menu, const chrsource, const buttonCode)
 		}
 		createPotion( chrsource, buttonCode-10, value);
 	}
-	else chr_message(chrsource, _, "unknown button, please tell a gm");
+	else chr_message(chrsource, _, "unknown button %d, please tell a gm", buttonCode);
 }
 
 public createPotion(const chr, const arrayline, const amount)
 {
 	new backpack = chr_getBackpack( chr, true );
+	new tempStr[75];
 	
-	//now a dirty workaround to get the shards script-ID from the scriptname (scriptname should always be the same), feature request for this as new function is a good idea
-	new scriptname[50];
-	sprintf(scriptname, "$item_%s", potionProperty[arrayline][reagentuse]);
-	trim(scriptname);
-	new dummyitm = itm_createByDef(scriptname); //we create a dummy item with the script name
-	new reagscript = itm_getProperty(dummyitm, IP_SCRIPTID); //we get the scriptis of this dummyitem
-	itm_remove(dummyitm); //delete the dummyitem
-	new reagnumber;
-	
-	dummyitm = itm_createByDef("$item_bottle_A");
-	new bottlescript = itm_getProperty(dummyitm, IP_SCRIPTID);
-	printf("bottlescript: %d^n", bottlescript);
-	itm_remove(dummyitm); //delete the dummyitem
+	sprintf(tempStr, "$item_%s", potionProperty[arrayline][reagentuse]);
+	new reagscript = getIntFromDefine(tempStr); 
+	new bottlescript = getIntFromDefine("$item_bottle_A");
+	//printf("bottlescript: %d^n", bottlescript);
 	
 	if(itm_countItemsByID(backpack, bottlescript) < amount)
 	{
@@ -278,7 +264,7 @@ public createPotion(const chr, const arrayline, const amount)
 	}
 	set_delete(itemSet);
 	
-	reagnumber = itm_countItemsByID(backpack, reagscript); //now we count how many items with the needed scriptid we have
+	new reagnumber = itm_countItemsByID(backpack, reagscript); //now we count how many items with the needed scriptid we have
 	new alchskill = chr_getProperty(chr,CP_SKILL,0);
 	reagnumber = reagnumber * amount;
 	if((reagnumber >= potionProperty[arrayline][reagentneed]) && (alchskill >= potionProperty[arrayline][alchemmin]))
@@ -293,32 +279,26 @@ public createPotion(const chr, const arrayline, const amount)
 		itm_delAmountByID(backpack, amount, bottlescript);
 		chr_sound(chr, 0x242); //do sound
 		
-		//extract the item name from the array
-		new potionreg[50];
-		sprintf(potionreg, potionProperty[arrayline][reagentuse]);
-		replaceStr (potionreg, "_", " ");
-		trim( potionreg);
-		
 		//call char name
 		new chrname[30]; //new empty string for creator name
 		chr_getProperty(chr, CP_STR_NAME, 0, chrname); //call char name
 		
 		new emotetext[50];
-		sprintf(emotetext, msg_sk_alchDef[16], chrname, potionreg); //combine the names
+		sprintf(emotetext, msg_sk_alchDef[16], msg_sk_alchDef[(potionProperty[arrayline][reagentname])]); //combine the names
 		chr_emoteAll( chr, emotetext);
 		
 		//combine the potion scriptname out of array and $item_
-		sprintf(scriptname, potionProperty[arrayline][potionscript]);
-		trim(scriptname);
-		sprintf(scriptname, "$%s_potion", scriptname);
-		itm_createByDef(scriptname, backpack, 1*amount);
+		sprintf(tempStr, potionProperty[arrayline][potionscript]);
+		trim(tempStr);
+		sprintf(tempStr, "$%s_potion", tempStr);
+		itm_createByDef(tempStr, backpack, 1*amount);
 	}
-	else if(reagnumber >= potionProperty[arrayline][reagentneed])
+	else if(reagnumber < potionProperty[arrayline][reagentneed])
 	{
 		chr_message(chr, _, msg_sk_alchDef[17]);
 		return
 	}
-	else if(alchskill >= potionProperty[arrayline][alchemmin])
+	else if(alchskill < potionProperty[arrayline][alchemmin])
 	{
 		chr_message(chr, _, msg_sk_alchDef[18]);
 		return		
