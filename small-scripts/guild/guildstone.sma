@@ -20,12 +20,12 @@
 */
 public guild_dclickDeed( const deed, const socket ) {
 
-	if( s<=INVALID ) return;
-    new master = getCharFromSocket(s);
+	if( socket<=INVALID ) return;
+    new master = getCharFromSocket(socket);
     if( master<=INVALID ) return;
 
 	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
-		sysmsg( "Resign from your guild before creating a new guild" );
+		nprintf( socket, "Resign from your guild before creating a new guild" );
 		return;
 	}
 	
@@ -44,7 +44,7 @@ public guildPlace( const s, const target, const item, const x, const y, const z 
 	if( master<=INVALID ) return;
 	
 	if( chr_getProperty( master, CP_GUILD )!=INVALID ) {
-		sysmsg( "Resign from your guild before creating a new guild" );
+		nprintf( s, "Resign from your guild before creating a new guild" );
 		return;
 	}
 	
