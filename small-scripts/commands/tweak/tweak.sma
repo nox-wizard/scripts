@@ -1483,7 +1483,6 @@ public tweak_char(const chrsource, const target, pagenumber)
 	else if(pagenumber == 8)
 	{
 		gui_addText(twkChrMenu,50,150,1110,"Layer");
-		printf("enter layer gump page");
 				
 		new layer;
 		new r=20;
@@ -1541,7 +1540,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 				sprintf(tempChrStr, "Nothing");
 				gui_addText(twkChrMenu,330-t,250+(layer-s)*r,0,ct_layerprop[layer-1][lt_name]);
 				gui_addText(twkChrMenu,410-t,250+(layer-s)*r,1310,tempChrStr);
-				printf(tempChrStr, " ");
+				sprintf(tempChrStr, " ");
 			}
 		}
 	}//pagenumber
