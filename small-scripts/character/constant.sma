@@ -64,6 +64,7 @@ const CP_ATTACKFIRST = 12;
 const CP_ISBEINGTRAINING = 13;
 const CP_GUILDTOGGLE = 14;
 const CP_OVERWEIGHTED = 15;
+const CP_MOUNTED = 16;
 
 const CP_BLOCKED = 101;
 const CP_CELL = 102;
