@@ -371,7 +371,7 @@ SECTION ITEM $item_wyrms_heart
     ///SUBSECTION Reagents
 }
 
-SECTION ITEM $item_a_wand_of_greater_healing
+SECTION ITEM $item_wand_of_greater_healing
 {
     NAME a magic wand
     NAME2 a wand of greater healing
@@ -389,7 +389,7 @@ SECTION ITEM $item_a_wand_of_greater_healing
     ///SUBSECTION Wands
 }
 
-SECTION ITEM $item_a_wand_of_energy_vortex
+SECTION ITEM $item_wand_of_energy_vortex
 {
     NAME a magic wand
     NAME2 a wand of energy vortex
@@ -407,7 +407,7 @@ SECTION ITEM $item_a_wand_of_energy_vortex
     ///SUBSECTION Wands
 }
 
-SECTION ITEM $item_a_wand_of_magic_arrow
+SECTION ITEM $item_wand_of_magic_arrow
 {
     NAME a magic wand
     NAME2 a wand of magic arrow
@@ -425,7 +425,7 @@ SECTION ITEM $item_a_wand_of_magic_arrow
     ///SUBSECTION Wands
 }
 
-SECTION ITEM $item_a_wand_of_ressurection
+SECTION ITEM $item_wand_of_ressurection
 {
     NAME a magic wand
     NAME2 a wand of ressurection
@@ -443,7 +443,7 @@ SECTION ITEM $item_a_wand_of_ressurection
     ///SUBSECTION Wands
 }
 
-SECTION ITEM $item_a_wand_of_greater_heal
+SECTION ITEM $item_wand_of_greater_heal
 {
     NAME a magic wand
     NAME2 a wand of greater heal
@@ -459,7 +459,7 @@ SECTION ITEM $item_a_wand_of_greater_heal
     ///SUBSECTION Wands
 }
 
-SECTION ITEM $item_a_wand_of_summon_daemon
+SECTION ITEM $item_wand_of_summon_daemon
 {
     NAME a magic wand
     NAME2 a wand of summon daemon
@@ -475,7 +475,7 @@ SECTION ITEM $item_a_wand_of_summon_daemon
     ///SUBSECTION Wands
 }
 
-SECTION ITEM $item_a_wand_of_healing
+SECTION ITEM $item_wand_of_healing
 {
     NAME a magic wand
     NAME2 a wand of healing
@@ -492,7 +492,7 @@ SECTION ITEM $item_a_wand_of_healing
     ///SUBSECTION Wands
 }
 
-SECTION ITEM $item_a_wand_of_resurrection
+SECTION ITEM $item_wand_of_resurrection
 {
     NAME a magic wand
     NAME2 a wand of resurrection
@@ -508,7 +508,7 @@ SECTION ITEM $item_a_wand_of_resurrection
     ///SUBSECTION Wands
 }
 
-SECTION ITEM $item_a_recall_rune
+SECTION ITEM $item_recall_rune
 {
     NAME a recall rune
     ID 1F14
@@ -522,7 +522,7 @@ SECTION ITEM $item_a_recall_rune
     ///SUBSECTION Misc
 }
 
-SECTION ITEM $item_a_spellbook
+SECTION ITEM $item_spellbook
 {
     NAME a spellbook
     TYPE $itype_spellbook
@@ -547,7 +547,7 @@ SECTION ITEM $item_all-spell_scroll
     ///SUBSECTION Misc
 }
 
-SECTION ITEM $item_a_clumsy_scroll
+SECTION ITEM $item_clumsy_scroll
 {
     NAME a clumsy scroll
     ID 1F2E
@@ -558,7 +558,7 @@ SECTION ITEM $item_a_clumsy_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_create_food_scroll
+SECTION ITEM $item_create_food_scroll
 {
     NAME a create food scroll
     ID 1F2F
@@ -569,7 +569,7 @@ SECTION ITEM $item_a_create_food_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_feeblemind_scroll
+SECTION ITEM $item_feeblemind_scroll
 {
     NAME a feeblemind scroll
     ID 1F30
@@ -580,7 +580,7 @@ SECTION ITEM $item_a_feeblemind_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_heal_scroll
+SECTION ITEM $item_heal_scroll
 {
     NAME a heal scroll
     ID 1F31
@@ -602,7 +602,7 @@ SECTION ITEM $item_magic_arrow_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_night_sight_scroll
+SECTION ITEM $item_night_sight_scroll
 {
     NAME a night sight scroll
     ID 1F33
@@ -613,7 +613,7 @@ SECTION ITEM $item_a_night_sight_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_reactive_armor_scroll
+SECTION ITEM $item_reactive_armor_scroll
 {
     NAME a reactive armor scroll
     ID 1F2D
@@ -624,7 +624,7 @@ SECTION ITEM $item_a_reactive_armor_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_weaken_scroll
+SECTION ITEM $item_weaken_scroll
 {
     NAME a weaken scroll
     ID 1F34
@@ -635,7 +635,7 @@ SECTION ITEM $item_a_weaken_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_agility_scroll
+SECTION ITEM $item_agility_scroll
 {
     NAME a agility scroll
     ID 1F35
@@ -646,7 +646,7 @@ SECTION ITEM $item_a_agility_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_cunning_scroll
+SECTION ITEM $item_cunning_scroll
 {
     NAME a cunning scroll
     ID 1F36
@@ -657,7 +657,7 @@ SECTION ITEM $item_a_cunning_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_cure_scroll
+SECTION ITEM $item_cure_scroll
 {
     NAME a cure scroll
     ID 1F37
@@ -668,7 +668,7 @@ SECTION ITEM $item_a_cure_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_harm_scroll
+SECTION ITEM $item_harm_scroll
 {
     NAME a harm scroll
     ID 1F38
@@ -701,7 +701,7 @@ SECTION ITEM $item_magic_untrap_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_protection_scroll
+SECTION ITEM $item_protection_scroll
 {
     NAME a protection scroll
     ID 1F3B
@@ -712,7 +712,7 @@ SECTION ITEM $item_a_protection_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_strength_scroll
+SECTION ITEM $item_strength_scroll
 {
     NAME a strength scroll
     ID 1F3C
@@ -723,7 +723,7 @@ SECTION ITEM $item_a_strength_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_bless_scroll
+SECTION ITEM $item_bless_scroll
 {
     NAME a bless scroll
     ID 1F3D
@@ -734,7 +734,7 @@ SECTION ITEM $item_a_bless_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_fireball_scroll
+SECTION ITEM $item_fireball_scroll
 {
     NAME a fireball scroll
     ID 1F3E
@@ -756,7 +756,7 @@ SECTION ITEM $item_magic_lock_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_poison_scroll
+SECTION ITEM $item_poison_scroll
 {
     NAME a poison scroll
     ID 1F40
@@ -767,7 +767,7 @@ SECTION ITEM $item_a_poison_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_telekinesis_scroll
+SECTION ITEM $item_telekinesis_scroll
 {
     NAME a telekinesis scroll
     ID 1F41
@@ -778,7 +778,7 @@ SECTION ITEM $item_a_telekinesis_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_teleport_scroll
+SECTION ITEM $item_teleport_scroll
 {
     NAME a teleport scroll
     ID 1F42
@@ -789,7 +789,7 @@ SECTION ITEM $item_a_teleport_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_an_unlock_scroll
+SECTION ITEM $item_unlock_scroll
 {
     NAME an unlock scroll
     ID 1F43
@@ -800,7 +800,7 @@ SECTION ITEM $item_an_unlock_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_wall_of_stone_scroll
+SECTION ITEM $item_wall_of_stone_scroll
 {
     NAME a wall of stone scroll
     ID 1F44
@@ -811,7 +811,7 @@ SECTION ITEM $item_a_wall_of_stone_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_an_archcure_scroll
+SECTION ITEM $item_archcure_scroll
 {
     NAME an archcure scroll
     ID 1F45
@@ -822,7 +822,7 @@ SECTION ITEM $item_an_archcure_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_an_arch_protection_scroll
+SECTION ITEM $item_arch_protection_scroll
 {
     NAME an arch protection scroll
     ID 1F46
@@ -833,7 +833,7 @@ SECTION ITEM $item_an_arch_protection_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_curse_scroll
+SECTION ITEM $item_curse_scroll
 {
     NAME a curse scroll
     ID 1F47
@@ -844,7 +844,7 @@ SECTION ITEM $item_a_curse_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_fire_field_scroll
+SECTION ITEM $item_fire_field_scroll
 {
     NAME a fire field scroll
     ID 1F48
@@ -855,7 +855,7 @@ SECTION ITEM $item_a_fire_field_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_greater_heal_scroll
+SECTION ITEM $item_greater_heal_scroll
 {
     NAME a greater heal scroll
     ID 1F49
@@ -866,7 +866,7 @@ SECTION ITEM $item_a_greater_heal_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_lightning_scroll
+SECTION ITEM $item_lightning_scroll
 {
     NAME a lightning scroll
     ID 1F4A
@@ -877,7 +877,7 @@ SECTION ITEM $item_a_lightning_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_mana_drain_scroll
+SECTION ITEM $item_mana_drain_scroll
 {
     NAME a mana drain scroll
     ID 1F4B
@@ -888,7 +888,7 @@ SECTION ITEM $item_a_mana_drain_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_recall_scroll
+SECTION ITEM $item_recall_scroll
 {
     NAME a recall scroll
     ID 1F4C
@@ -899,7 +899,7 @@ SECTION ITEM $item_a_recall_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_blade_spirits_scroll
+SECTION ITEM $item_blade_spirits_scroll
 {
     NAME a blade spirits scroll
     ID 1F4D
@@ -910,7 +910,7 @@ SECTION ITEM $item_a_blade_spirits_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_dispel_field_scroll
+SECTION ITEM $item_dispel_field_scroll
 {
     NAME a dispel field scroll
     ID 1F4E
@@ -921,7 +921,7 @@ SECTION ITEM $item_a_dispel_field_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_an_incognito_scroll
+SECTION ITEM $item_incognito_scroll
 {
     NAME an incognito scroll
     ID 1F4F
@@ -943,7 +943,7 @@ SECTION ITEM $item_magic_reflection_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_mind_blast_scroll
+SECTION ITEM $item_mind_blast_scroll
 {
     NAME a mind blast scroll
     ID 1F51
@@ -954,7 +954,7 @@ SECTION ITEM $item_a_mind_blast_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_paralyze_scroll
+SECTION ITEM $item_paralyze_scroll
 {
     NAME a paralyze scroll
     ID 1F52
@@ -965,7 +965,7 @@ SECTION ITEM $item_a_paralyze_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_poison_field_scroll
+SECTION ITEM $item_poison_field_scroll
 {
     NAME a poison field scroll
     ID 1F53
@@ -976,7 +976,7 @@ SECTION ITEM $item_a_poison_field_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_summon_creature_scroll
+SECTION ITEM $item_summon_creature_scroll
 {
     NAME a summon creature scroll
     ID 1F54
@@ -987,7 +987,7 @@ SECTION ITEM $item_a_summon_creature_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_dispel_scroll
+SECTION ITEM $item_dispel_scroll
 {
     NAME a dispel scroll
     ID 1F55
@@ -998,7 +998,7 @@ SECTION ITEM $item_a_dispel_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_an_energy_bolt_scroll
+SECTION ITEM $item_energy_bolt_scroll
 {
     NAME an energy bolt scroll
     ID 1F56
@@ -1009,7 +1009,7 @@ SECTION ITEM $item_an_energy_bolt_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_an_explosion_scroll
+SECTION ITEM $item_explosion_scroll
 {
     NAME an explosion scroll
     ID 1F57
@@ -1020,7 +1020,7 @@ SECTION ITEM $item_an_explosion_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_an_invisibility_scroll
+SECTION ITEM $item_invisibility_scroll
 {
     NAME an invisibility scroll
     ID 1F58
@@ -1031,7 +1031,7 @@ SECTION ITEM $item_an_invisibility_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_mark_scroll
+SECTION ITEM $item_mark_scroll
 {
     NAME a mark scroll
     ID 1F59
@@ -1042,7 +1042,7 @@ SECTION ITEM $item_a_mark_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_mass_curse_scroll
+SECTION ITEM $item_mass_curse_scroll
 {
     NAME a mass curse scroll
     ID 1F5A
@@ -1053,7 +1053,7 @@ SECTION ITEM $item_a_mass_curse_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_paralyze_field_scroll
+SECTION ITEM $item_paralyze_field_scroll
 {
     NAME a paralyze field scroll
     ID 1F5B
@@ -1064,7 +1064,7 @@ SECTION ITEM $item_a_paralyze_field_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_reveal_scroll
+SECTION ITEM $item_reveal_scroll
 {
     NAME a reveal scroll
     ID 1F5C
@@ -1075,7 +1075,7 @@ SECTION ITEM $item_a_reveal_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_chain_lightning_scroll
+SECTION ITEM $item_chain_lightning_scroll
 {
     NAME a chain lightning scroll
     ID 1F5D
@@ -1086,7 +1086,7 @@ SECTION ITEM $item_a_chain_lightning_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_an_energy_field_scroll
+SECTION ITEM $item_energy_field_scroll
 {
     NAME an energy field scroll
     ID 1F5E
@@ -1097,7 +1097,7 @@ SECTION ITEM $item_an_energy_field_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_flamestrike_scroll
+SECTION ITEM $item_flamestrike_scroll
 {
     NAME a flamestrike scroll
     ID 1F5F
@@ -1108,7 +1108,7 @@ SECTION ITEM $item_a_flamestrike_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_gate_travel_scroll
+SECTION ITEM $item_gate_travel_scroll
 {
     NAME a gate travel scroll
     ID 1F60
@@ -1119,7 +1119,7 @@ SECTION ITEM $item_a_gate_travel_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_mana_vampire_scroll
+SECTION ITEM $item_mana_vampire_scroll
 {
     NAME a mana vampire scroll
     ID 1F61
@@ -1130,7 +1130,7 @@ SECTION ITEM $item_a_mana_vampire_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_mass_dispel_scroll
+SECTION ITEM $item_mass_dispel_scroll
 {
     NAME a mass dispel scroll
     ID 1F62
@@ -1141,7 +1141,7 @@ SECTION ITEM $item_a_mass_dispel_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_meteor_swarm_scroll
+SECTION ITEM $item_meteor_swarm_scroll
 {
     NAME a meteor swarm scroll
     ID 1F63
@@ -1152,7 +1152,7 @@ SECTION ITEM $item_a_meteor_swarm_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_polymorph_scroll
+SECTION ITEM $item_polymorph_scroll
 {
     NAME a polymorph scroll
     ID 1F64
@@ -1163,7 +1163,7 @@ SECTION ITEM $item_a_polymorph_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_earthquake_scroll
+SECTION ITEM $item_earthquake_scroll
 {
     NAME a earthquake scroll
     ID 1F65
@@ -1174,7 +1174,7 @@ SECTION ITEM $item_a_earthquake_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_energy_vortex_scroll
+SECTION ITEM $item_energy_vortex_scroll
 {
     NAME a energy vortex scroll
     ID 1F66
@@ -1185,7 +1185,7 @@ SECTION ITEM $item_a_energy_vortex_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_resurrection_scroll
+SECTION ITEM $item_resurrection_scroll
 {
     NAME a resurrection scroll
     ID 1F67
@@ -1196,7 +1196,7 @@ SECTION ITEM $item_a_resurrection_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_summon_air_elemental_scroll
+SECTION ITEM $item_summon_air_elemental_scroll
 {
     NAME a summon air elemental scroll
     ID 1F68
@@ -1207,7 +1207,7 @@ SECTION ITEM $item_a_summon_air_elemental_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_summon_daemon_scroll
+SECTION ITEM $item_summon_daemon_scroll
 {
     NAME a summon daemon scroll
     ID 1F69
@@ -1218,7 +1218,7 @@ SECTION ITEM $item_a_summon_daemon_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_summon_earth_elemental_scroll
+SECTION ITEM $item_summon_earth_elemental_scroll
 {
     NAME a summon earth elemental scroll
     ID 1F6A
@@ -1229,7 +1229,7 @@ SECTION ITEM $item_a_summon_earth_elemental_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_summon_fire_elemental_scroll
+SECTION ITEM $item_summon_fire_elemental_scroll
 {
     NAME a summon fire elemental scroll
     ID 1F6B
@@ -1240,7 +1240,7 @@ SECTION ITEM $item_a_summon_fire_elemental_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_summon_water_elemental_scroll
+SECTION ITEM $item_summon_water_elemental_scroll
 {
     NAME a summon water elemental scroll
     ID 1F6C
@@ -1257,7 +1257,7 @@ SECTION ITEM $item_mortar_and_pestal
     ID 0E9B
     VALUE 6
     DECAY
-    @ONDBLCLICK __nxw_sk_alchemy
+    @ONDBLCLICK _nxw_sk_alchemy
 
     ///CATEGORY Alchemy & Magic
     ///SUBSECTION Misc
@@ -1273,7 +1273,7 @@ SECTION ITEM $item_the_book_of_the_dead
     ///SUBSECTION Necromancy
 }
 
-SECTION ITEM $item_a_summon_zombie_scroll
+SECTION ITEM $item_summon_zombie_scroll
 {
     NAME a summon zombie scroll
     ID xe36
@@ -1286,7 +1286,7 @@ SECTION ITEM $item_a_summon_zombie_scroll
     ///SUBSECTION Necromancy
 }
 
-SECTION ITEM $item_a_summon_skeleton_scroll
+SECTION ITEM $item_summon_skeleton_scroll
 {
     NAME a summon skeleton scroll
     ID xe35
@@ -1299,7 +1299,7 @@ SECTION ITEM $item_a_summon_skeleton_scroll
     ///SUBSECTION Necromancy
 }
 
-SECTION ITEM $item_a_summon_spectre_scroll
+SECTION ITEM $item_summon_spectre_scroll
 {
     NAME a summon spectre scroll
     ID xe37
@@ -1312,7 +1312,7 @@ SECTION ITEM $item_a_summon_spectre_scroll
     ///SUBSECTION Necromancy
 }
 
-SECTION ITEM $item_a_summon_wraith_scroll
+SECTION ITEM $item_summon_wraith_scroll
 {
     NAME a summon wraith scroll
     ID xe38
@@ -1325,7 +1325,7 @@ SECTION ITEM $item_a_summon_wraith_scroll
     ///SUBSECTION Necromancy
 }
 
-SECTION ITEM $item_a_summon_bone_knight_scroll
+SECTION ITEM $item_summon_bone_knight_scroll
 {
     NAME a summon bone knight scroll
     ID xe39
@@ -1338,7 +1338,7 @@ SECTION ITEM $item_a_summon_bone_knight_scroll
     ///SUBSECTION Necromancy
 }
 
-SECTION ITEM $item_a_summon_lich_scroll
+SECTION ITEM $item_summon_lich_scroll
 {
     NAME a summon lich scroll
     ID xe3a
@@ -1351,7 +1351,7 @@ SECTION ITEM $item_a_summon_lich_scroll
     ///SUBSECTION Necromancy
 }
 
-SECTION ITEM $item_a_summon_bone_mage_scroll
+SECTION ITEM $item_summon_bone_mage_scroll
 {
     NAME a summon bone mage scroll
     ID xe35
@@ -1364,7 +1364,7 @@ SECTION ITEM $item_a_summon_bone_mage_scroll
     ///SUBSECTION Necromancy
 }
 
-SECTION ITEM $item_a_summon_lich_lord_scroll
+SECTION ITEM $item_summon_lich_lord_scroll
 {
     NAME a summon lich lord scroll
     ID xe36
@@ -1389,7 +1389,7 @@ SECTION ITEM $item_blank_scrolls
     ///DESCRIPTION Blank Scroll
 }
 
-SECTION ITEM $item_a_recall_rune_1
+SECTION ITEM $item_recall_rune_1
 {
     NAME a recall rune
     ID 1F14

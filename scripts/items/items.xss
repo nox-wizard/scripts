@@ -7,7 +7,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 // teleport rune
-SECTION ITEM $item_a_teleport_rune
+SECTION ITEM $item_teleport_rune
 {
     NAME a teleport rune
     ID 1F14
@@ -104,7 +104,7 @@ SECTION ITEM $item_silver_chest
     MOVABLE 1
 }
 
-SECTION ITEM $item_wooden_box
+SECTION ITEM $item_wooden_box_1
 {
     NAME wooden box
     ID 0E7D
@@ -112,9 +112,10 @@ SECTION ITEM $item_wooden_box
     VALUE 55
     WEIGHT 100
     MOVABLE 1
+    AMXINT $localvar_flipitem $item_wooden_box_2
 }
 
-SECTION ITEM $item_wooden_box_1
+SECTION ITEM $item_wooden_box_2
 {
     NAME wooden box
     ID 09aa
@@ -122,6 +123,7 @@ SECTION ITEM $item_wooden_box_1
     VALUE 55
     WEIGHT 100
     MOVABLE 1
+    AMXINT $localvar_flipitem $item_wooden_box_1
 }
 
 SECTION ITEM $item_brass_box
@@ -174,7 +176,7 @@ SECTION ITEM $item_bronze_key
 }
 
 // a map
-SECTION ITEM $item_a_map
+SECTION ITEM $item_map
 {
     NAME a map
     ID 14EB
@@ -183,7 +185,7 @@ SECTION ITEM $item_a_map
 }
 
 // a book
-SECTION ITEM $item_a_book
+SECTION ITEM $item_book
 {
     NAME a book
     ID 0FF1
@@ -288,7 +290,7 @@ SECTION ITEM $item_bugmans_brew
     GOOD 3
 }
 
-SECTION ITEM $item_an_efreeti_bottle
+SECTION ITEM $item_efreeti_bottle
 {
     NAME a strange looking bottle
     NAME2 an efreeti bottle
@@ -307,14 +309,14 @@ SECTION ITEM $item_seasons_greetings
     DECAY
 }
 
-SECTION ITEM $item_a_fishing_pole
+SECTION ITEM $item_fishing_pole
 {
     NAME a fishing pole
     ITEMHAND 2
     ID 0DBF
     DECAY
     VALUE 14
-    @ONDBLCLICK __nxw_sk_fishing
+    @ONDBLCLICK _nxw_sk_fishing
 }
 
 SECTION ITEM $item_black_smith
@@ -394,14 +396,14 @@ SECTION ITEM $item_dispel-wall-spawner
     VISIBLE 3
 }
 
-SECTION ITEM $item_a_stone_wall
+SECTION ITEM $item_stone_wall
 {
     NAME a stone wall
     ID 0080
     DISPELLABLE 1
 }
 
-SECTION ITEM $item_metal_chest
+SECTION ITEM $item_metal_chest1
 {
     NAME metal chest
     ID 0E40
@@ -419,77 +421,77 @@ SECTION ITEM $item_empty_vials
     VALUE 5
 }
 
-SECTION ITEM $item_bottle
+SECTION ITEM $item_bottle1
 {
     NAME bottle
     ID 0E25
     DECAY
 }
 
-SECTION ITEM $item_bottle_1
+SECTION ITEM $item_bottle2
 {
     NAME bottle
     ID 0E26
     DECAY
 }
 
-SECTION ITEM $item_bottle_2
+SECTION ITEM $item_bottle3
 {
     NAME bottle
     ID 0E27
     DECAY
 }
 
-SECTION ITEM $item_bottle_3
+SECTION ITEM $item_bottle4
 {
     NAME bottle
     ID 0E28
     DECAY
 }
 
-SECTION ITEM $item_bottle_4
+SECTION ITEM $item_bottle5
 {
     NAME bottle
     ID 0E29
     DECAY
 }
 
-SECTION ITEM $item_bottle_5
+SECTION ITEM $item_bottle6
 {
     NAME bottle
     ID 0E2A
     DECAY
 }
 
-SECTION ITEM $item_bottle_6
+SECTION ITEM $item_bottle7
 {
     NAME bottle
     ID 0E2B
     DECAY
 }
 
-SECTION ITEM $item_bottle_7
+SECTION ITEM $item_bottle8
 {
     NAME bottle
     ID 0E2C
     DECAY
 }
 
-SECTION ITEM $item_bottle_8
+SECTION ITEM $item_bottle9
 {
     NAME bottle
     ID 0EFB
     DECAY
 }
 
-SECTION ITEM $item_bottle_9
+SECTION ITEM $item_bottle10
 {
     NAME bottle
     ID 0EFC
     DECAY
 }
 
-SECTION ITEM $item_bottle_A
+SECTION ITEM $item_bottle11
 {
     NAME bottle
     ID 0F0E
@@ -497,25 +499,25 @@ SECTION ITEM $item_bottle_A
     VALUE 5
 }
 
-SECTION ITEM $item_a_blue_moongate
+SECTION ITEM $item_blue_moongate
 {
     NAME a blue moongate
     ID 0F6C
 }
 
-SECTION ITEM $item_a_red_moongate
+SECTION ITEM $item_red_moongate
 {
     NAME a red moongate
     ID 0DDA
 }
 
-SECTION ITEM $item_a_black_moongate
+SECTION ITEM $item_black_moongate
 {
     NAME a black moongate
     ID 1FD4
 }
 
-SECTION ITEM $item_a_master_shard_key
+SECTION ITEM $item_master_shard_key
 {
     NAME a master shard key
     ID 1012
@@ -524,84 +526,100 @@ SECTION ITEM $item_a_master_shard_key
     MORE -1
 }
 
-SECTION ITEM $item_tattered_banner
+SECTION ITEM $item_banner1_1_1
 {
     ID 042A
+    AMXINT $localvar_flipitem $item_banner1_2_1
 }
 
-SECTION ITEM $item_tattered_banner_1
+SECTION ITEM $item_banner1_1_2
 {
     ID 042B
+    AMXINT $localvar_flipitem $item_banner1_2_2
 }
 
-SECTION ITEM $item_tattered_banner_2
+SECTION ITEM $item_banner1_2_1
 {
     ID 042E
+    AMXINT $localvar_flipitem $item_banner1_1_1
 }
 
-SECTION ITEM $item_tattered_banner_3
+SECTION ITEM $item_banner1_2_2
 {
     ID 042F
+    AMXINT $localvar_flipitem $item_banner1_1_2
 }
 
-SECTION ITEM $item_tattered_banner_4
+SECTION ITEM $item_banner2_1_1
 {
     ID 0426
+    AMXINT $localvar_flipitem $item_banner2_2_1
 }
 
-SECTION ITEM $item_tattered_banner_5
+SECTION ITEM $item_banner2_1_2
 {
     ID 0427
+    AMXINT $localvar_flipitem $item_banner2_2_2
 }
 
-SECTION ITEM $item_tattered_banner_6
+SECTION ITEM $item_banner2_2_1
 {
     ID 042C
+    AMXINT $localvar_flipitem $item_banner2_1_1
 }
 
-SECTION ITEM $item_tattered_banner_7
+SECTION ITEM $item_banner2_2_2
 {
     ID 042D
+    AMXINT $localvar_flipitem $item_banner2_1_2
 }
 
-SECTION ITEM $item_curtain
+SECTION ITEM $item_curtain_2
 {
     ID 0432
+    AMXINT $localvar_flipitem $item_curtain_1
 }
 
-SECTION ITEM $item_curtain_rod
+SECTION ITEM $item_curtain_rod_2
 {
     ID 0433
+    AMXINT $localvar_flipitem $item_curtain_rod_1
 }
 
 SECTION ITEM $item_curtain_1
 {
     ID 0435
+    AMXINT $localvar_flipitem $item_curtain_2
 }
 
 SECTION ITEM $item_curtain_rod_1
 {
     ID 0434
+    AMXINT $localvar_flipitem $item_curtain_rod_2
 }
 
-SECTION ITEM $item_gruesome_standard
+SECTION ITEM $item_gruesome1_1
 {
     ID 0420
+    AMXINT $localvar_flipitem $item_gruesome1_2
 }
 
-SECTION ITEM $item_gruesome_standard_1
+SECTION ITEM $item_gruesome1_2
 {
     ID 0429
+    AMXINT $localvar_flipitem $item_gruesome1_1
 }
 
-SECTION ITEM $item_gruesome_standard_2
+SECTION ITEM $item_gruesome2_1
 {
     ID 041F
+    AMXINT $localvar_flipitem $item_gruesome2_2
 }
 
-SECTION ITEM $item_gruesome_standard_3
+SECTION ITEM $item_gruesome2_2
 {
     ID 0428
+    AMXINT $localvar_flipitem $item_gruesome2_1
 }
 
 SECTION ITEM $item_door
@@ -644,126 +662,126 @@ SECTION ITEM $item_copper_coin
     DECAY
 }
 
-SECTION ITEM $item_amethysts
+SECTION ITEM $item_amethysts1
 {
     ID 0F16
     DECAY
     VALUE 105
 }
 
-SECTION ITEM $item_amethysts_1
+SECTION ITEM $item_amethysts2
 {
     ID 0F17
     DECAY
     VALUE 105
 }
 
-SECTION ITEM $item_citrines
+SECTION ITEM $item_citrines1
 {
     ID 0F15
     DECAY
     VALUE 95
 }
 
-SECTION ITEM $item_emeralds
+SECTION ITEM $item_emeralds1
 {
     ID 0F10
     DECAY
     VALUE 115
 }
 
-SECTION ITEM $item_rubies
+SECTION ITEM $item_rubies1
 {
     ID 0F13
     DECAY
     VALUE 100
 }
 
-SECTION ITEM $item_rubies_1
+SECTION ITEM $item_rubies2
 {
     ID 0F14
     DECAY
     VALUE 100
 }
 
-SECTION ITEM $item_rubies_2
+SECTION ITEM $item_rubies3
 {
     ID 0F1A
     DECAY
     VALUE 100
 }
 
-SECTION ITEM $item_rubies_3
+SECTION ITEM $item_rubies4
 {
     ID 0F1C
     DECAY
     VALUE 100
 }
 
-SECTION ITEM $item_rubies_4
+SECTION ITEM $item_rubies5
 {
     ID 0F1D
     DECAY
     VALUE 100
 }
 
-SECTION ITEM $item_sapphires
+SECTION ITEM $item_sapphires1
 {
     ID 0F11
     DECAY
     VALUE 110
 }
 
-SECTION ITEM $item_sapphires_1
+SECTION ITEM $item_sapphires2
 {
     ID 0F12
     DECAY
     VALUE 110
 }
 
-SECTION ITEM $item_sapphires_2
+SECTION ITEM $item_sapphires3
 {
     ID 0F19
     DECAY
     VALUE 110
 }
 
-SECTION ITEM $item_sapphires_3
+SECTION ITEM $item_sapphires4
 {
     ID 0F1F
     DECAY
     VALUE 110
 }
 
-SECTION ITEM $item_star_sapphires
+SECTION ITEM $item_star_sapphires1
 {
     ID 0F0F
     DECAY
     VALUE 130
 }
 
-SECTION ITEM $item_star_sapphires_1
+SECTION ITEM $item_star_sapphires2
 {
     ID 0F1B
     DECAY
     VALUE 130
 }
 
-SECTION ITEM $item_tourmalines
+SECTION ITEM $item_tourmalines1
 {
     ID 0F18
     DECAY
     VALUE 90
 }
 
-SECTION ITEM $item_tourmalines_1
+SECTION ITEM $item_tourmalines2
 {
     ID 0F1E
     DECAY
     VALUE 90
 }
 
-SECTION ITEM $item_tourmalines_2
+SECTION ITEM $item_tourmalines3
 {
     ID 0F20
     DECAY
@@ -777,98 +795,98 @@ SECTION ITEM $item_pieces_of_amber
     VALUE 65
 }
 
-SECTION ITEM $item_amethysts_2
+SECTION ITEM $item_amethysts3
 {
     ID 0F22
     DECAY
     VALUE 75
 }
 
-SECTION ITEM $item_amethysts_3
+SECTION ITEM $item_amethysts4
 {
     ID 0F2E
     DECAY
     VALUE 75
 }
 
-SECTION ITEM $item_citrines_1
+SECTION ITEM $item_citrines2
 {
     ID 0F23
     DECAY
     VALUE 55
 }
 
-SECTION ITEM $item_citrines_2
+SECTION ITEM $item_citrines3
 {
     ID 0F24
     DECAY
     VALUE 55
 }
 
-SECTION ITEM $item_citrines_3
+SECTION ITEM $item_citrines4
 {
     ID 0F2C
     DECAY
     VALUE 55
 }
 
-SECTION ITEM $item_diamonds
+SECTION ITEM $item_diamonds1
 {
     ID 0F27
     DECAY
     VALUE 90
 }
 
-SECTION ITEM $item_diamonds_1
+SECTION ITEM $item_diamonds2
 {
     ID 0F28
     DECAY
     VALUE 90
 }
 
-SECTION ITEM $item_diamonds_2
+SECTION ITEM $item_diamonds3
 {
     ID 0F29
     DECAY
     VALUE 90
 }
 
-SECTION ITEM $item_diamonds_3
+SECTION ITEM $item_diamonds4
 {
     ID 0F30
     DECAY
     VALUE 90
 }
 
-SECTION ITEM $item_emeralds_1
+SECTION ITEM $item_emeralds2
 {
     ID 0F2F
     DECAY
     VALUE 80
 }
 
-SECTION ITEM $item_rubies_5
+SECTION ITEM $item_rubies6
 {
     ID 0F2A
     DECAY
     VALUE 65
 }
 
-SECTION ITEM $item_rubies_6
+SECTION ITEM $item_rubies7
 {
     ID 0F2B
     DECAY
     VALUE 65
 }
 
-SECTION ITEM $item_star_sapphires_2
+SECTION ITEM $item_star_sapphires3
 {
     ID 0F21
     DECAY
     VALUE 75
 }
 
-SECTION ITEM $item_tourmalines_3
+SECTION ITEM $item_tourmalines4
 {
     ID 0F2D
     DECAY
@@ -896,21 +914,21 @@ SECTION ITEM $item_earrings
     VALUE 40
 }
 
-SECTION ITEM $item_necklace
+SECTION ITEM $item_necklace1
 {
     ID 1085
     DECAY
     VALUE 45
 }
 
-SECTION ITEM $item_necklace_1
+SECTION ITEM $item_necklace2
 {
     ID 1088
     DECAY
     VALUE 45
 }
 
-SECTION ITEM $item_necklace_2
+SECTION ITEM $item_necklace3
 {
     ID 1089
     DECAY
@@ -924,7 +942,7 @@ SECTION ITEM $item_ring
     VALUE 35
 }
 
-SECTION ITEM $item_diamonds_4
+SECTION ITEM $item_diamonds5
 {
     ID 0F26
     DECAY
@@ -994,11 +1012,6 @@ SECTION ITEM $item_wall_sconce
     ID 09fc
 }
 
-SECTION ITEM $item_torch_holder
-{
-    ID 0a06
-}
-
 SECTION ITEM $item_knife
 {
     NAME knife
@@ -1018,12 +1031,12 @@ SECTION ITEM $item_rolls_of_string
     ID 1420
 }
 
-SECTION ITEM $item_books
+SECTION ITEM $item_books1
 {
     ID 1e24
 }
 
-SECTION ITEM $item_books_1
+SECTION ITEM $item_books2
 {
     ID 1e25
 }
@@ -1043,7 +1056,7 @@ SECTION ITEM $item_clock_frames
     DECAY
 }
 
-SECTION ITEM $item_a_fishing_net
+SECTION ITEM $item_fishing_net
 {
     NAME a fishing net
     ID 1ea5
@@ -1051,7 +1064,7 @@ SECTION ITEM $item_a_fishing_net
     DECAY
 }
 
-SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck
+SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck
 {
     NAME a fishing net recovered from a shipwreck
     ID 1ea5
@@ -1059,7 +1072,7 @@ SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck
     DECAY
 }
 
-SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck_1
+SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck_1
 {
     NAME a fishing net recovered from a shipwreck
     ID 1ea3
@@ -1067,7 +1080,7 @@ SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck_1
     DECAY
 }
 
-SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck_2
+SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck_2
 {
     NAME a fishing net recovered from a shipwreck
     ID 0dca
@@ -1075,105 +1088,105 @@ SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck_2
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ed2
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_1
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_1
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ed1
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_2
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_2
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ed0
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_3
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_3
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ecf
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_4
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_4
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ece
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_5
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_5
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ecd
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_6
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_6
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ecc
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_7
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_7
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ecb
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_8
+SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_8
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0eca
     DECAY
 }
 
-SECTION ITEM $item_a_pile_of_skulls_recoverd_from_a_shipwreck
+SECTION ITEM $item_pile_of_skulls_recoverd_from_a_shipwreck
 {
     NAME a pile of skulls recoverd from a shipwreck
     ID 1ad8
     DECAY
 }
 
-SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck
+SECTION ITEM $item_skull_recoverd_from_a_shipwreck
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE4
     DECAY
 }
 
-SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck_1
+SECTION ITEM $item_skull_recoverd_from_a_shipwreck_1
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE3
     DECAY
 }
 
-SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck_2
+SECTION ITEM $item_skull_recoverd_from_a_shipwreck_2
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE2
     DECAY
 }
 
-SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck_3
+SECTION ITEM $item_skull_recoverd_from_a_shipwreck_3
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE1
     DECAY
 }
 
-SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck_4
+SECTION ITEM $item_skull_recoverd_from_a_shipwreck_4
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE0
@@ -1274,7 +1287,7 @@ SECTION ITEM $item_wooden_chest_recoverd_from_a_shipwreck-faceing_east
     MOVABLE 1
 }
 
-SECTION ITEM $item_a_cannon_ball
+SECTION ITEM $item_cannon_ball
 {
     NAME a cannon ball
     ID 0E73
@@ -1612,10 +1625,11 @@ SECTION ITEM $item_spittoon
 }
 
 //training dummy (facing south)
-SECTION ITEM $item_training_dummy
+SECTION ITEM $item_training_dummy_2
 {
     NAME training dummy (facing south)
     ID 1070
+    AMXINT $localvar_flipitem $item_training_dummy_1
 }
 
 // training dummy (facing east)
@@ -1623,6 +1637,7 @@ SECTION ITEM $item_training_dummy_1
 {
     NAME training dummy
     ID 1074
+    AMXINT $localvar_flipitem $item_training_dummy_2
 }
 
 //pickpocket dip (facing south)
@@ -1650,7 +1665,7 @@ SECTION ITEM $item_slotmachine_5gp_
 
 
 
-SECTION ITEM $item_bolts_of_cloth
+SECTION ITEM $item_bolts_of_cloth1
 {
     ID 0F95
     NAME bolt of cloth
@@ -1658,7 +1673,7 @@ SECTION ITEM $item_bolts_of_cloth
     VALUE 75
 }
 
-SECTION ITEM $item_bolts_of_cloth_1
+SECTION ITEM $item_bolts_of_cloth2
 {
     ID 0F96
     NAME bolt of cloth
@@ -1666,7 +1681,7 @@ SECTION ITEM $item_bolts_of_cloth_1
     VALUE 75
 }
 
-SECTION ITEM $item_bolts_of_cloth_2
+SECTION ITEM $item_bolts_of_cloth3
 {
     ID 0F97
     NAME bolt of cloth
@@ -1674,7 +1689,7 @@ SECTION ITEM $item_bolts_of_cloth_2
     VALUE 75
 }
 
-SECTION ITEM $item_bolts_of_cloth_3
+SECTION ITEM $item_bolts_of_cloth4
 {
     ID 0F98
     NAME bolt of cloth
@@ -1682,7 +1697,7 @@ SECTION ITEM $item_bolts_of_cloth_3
     VALUE 75
 }
 
-SECTION ITEM $item_bolts_of_cloth_4
+SECTION ITEM $item_bolts_of_cloth5
 {
     ID 0F99
     NAME bolt of cloth
@@ -1690,7 +1705,7 @@ SECTION ITEM $item_bolts_of_cloth_4
     VALUE 75
 }
 
-SECTION ITEM $item_bolts_of_cloth_5
+SECTION ITEM $item_bolts_of_cloth6
 {
     ID 0F9A
     NAME bolt of cloth
@@ -1698,7 +1713,7 @@ SECTION ITEM $item_bolts_of_cloth_5
     VALUE 75
 }
 
-SECTION ITEM $item_bolts_of_cloth_6
+SECTION ITEM $item_bolts_of_cloth7
 {
     ID 0F9B
     NAME bolt of cloth
@@ -1706,7 +1721,7 @@ SECTION ITEM $item_bolts_of_cloth_6
     VALUE 75
 }
 
-SECTION ITEM $item_bolts_of_cloth_7
+SECTION ITEM $item_bolts_of_cloth8
 {
     ID 0F9C
     NAME bolt of cloth
@@ -1856,7 +1871,7 @@ SECTION ITEM $item_drake
     MOREX 78
 }
 
-SECTION ITEM $item_a_bulletin_board
+SECTION ITEM $item_bulletin_board
 {
     NAME a bulletin board
     ID 1E5E
@@ -1960,7 +1975,7 @@ SECTION ITEM $item_assassin_1
     MOREX 10
 }
 
-SECTION ITEM $item_a_vase
+SECTION ITEM $item_vase
 {
     NAME a vase
     ID 0B45
@@ -1978,7 +1993,7 @@ SECTION ITEM $item_jars
     WEIGHT 100
 }
 
-SECTION ITEM $item_a_boat_model
+SECTION ITEM $item_boat_model
 {
     NAME a boat model
     ID 14f4
@@ -1987,7 +2002,7 @@ SECTION ITEM $item_a_boat_model
     WEIGHT 100
 }
 
-SECTION ITEM $item_a_set_of_vials
+SECTION ITEM $item_set_of_vials
 {
     NAME a set of vials
     ID 185B
@@ -1996,7 +2011,7 @@ SECTION ITEM $item_a_set_of_vials
     WEIGHT 100
 }
 
-SECTION ITEM $item_a_skull
+SECTION ITEM $item_skull
 {
     NAME a skull
     ID 1AE0
@@ -2005,7 +2020,7 @@ SECTION ITEM $item_a_skull
     WEIGHT 100
 }
 
-SECTION ITEM $item_a_small_vase
+SECTION ITEM $item_small_vase1
 {
     NAME a small vase
     ID 0B46
@@ -2014,7 +2029,7 @@ SECTION ITEM $item_a_small_vase
     WEIGHT 100
 }
 
-SECTION ITEM $item_a_small_vase_1
+SECTION ITEM $item_small_vase2
 {
     NAME a small vase
     ID 0b48
@@ -2023,7 +2038,7 @@ SECTION ITEM $item_a_small_vase_1
     WEIGHT 100
 }
 
-SECTION ITEM $item_a_large_vase
+SECTION ITEM $item_large_vase
 {
     NAME a large vase
     ID 0b47
@@ -2041,7 +2056,7 @@ SECTION ITEM $item_damaged_books
     WEIGHT 100
 }
 
-SECTION ITEM $item_a_piwafwi
+SECTION ITEM $item_piwafwi
 {
     NAME a piwafwi
     ID 1515
@@ -2058,7 +2073,7 @@ SECTION ITEM $item_a_piwafwi
 //**************************************************
 //********************* Body Parts *****************
 //**************************************************
-SECTION ITEM $item_an_arm
+SECTION ITEM $item_arm_2
 {
     NAME an arm
     ID 1CE5
@@ -2066,7 +2081,7 @@ SECTION ITEM $item_an_arm
     DECAY
 }
 
-SECTION ITEM $item_an_arm_1
+SECTION ITEM $item_arm_1
 {
     NAME an arm
     ID 1CDD
@@ -2074,7 +2089,7 @@ SECTION ITEM $item_an_arm_1
     DECAY
 }
 
-SECTION ITEM $item_a_body
+SECTION ITEM $item_body
 {
     NAME a body
     ID 1ce6
@@ -2088,36 +2103,38 @@ SECTION ITEM $item_legs
     DECAY
 }
 
-SECTION ITEM $item_a_torso
+SECTION ITEM $item_torso
 {
     NAME a torso
     ID 1ce8
     DECAY
 }
 
-SECTION ITEM $item_a_head
+SECTION ITEM $item_head_2
 {
     NAME a head
     ID 1ce9
     DECAY
+    AMXINT $localvar_flipitem $item_head_1
 }
 
-SECTION ITEM $item_a_head_1
+SECTION ITEM $item_head_1
 {
     NAME a head
     ID 1CE1
     WEIGHT 200
     DECAY
+    AMXINT $localvar_flipitem $item_head_2
 }
 
-SECTION ITEM $item_a_body_part
+SECTION ITEM $item_body_part
 {
     NAME a body part
     ID 1cea
     DECAY
 }
 
-SECTION ITEM $item_a_brain
+SECTION ITEM $item_brain
 {
     NAME a brain
     ID 1CF0
@@ -2133,7 +2150,7 @@ SECTION ITEM $item_entrails
     DECAY
 }
 
-SECTION ITEM $item_a_heart
+SECTION ITEM $item_heart
 {
     NAME a heart
     ID 1CED
@@ -2141,23 +2158,25 @@ SECTION ITEM $item_a_heart
     DECAY
 }
 
-SECTION ITEM $item_a_skull_1
+SECTION ITEM $item_skull_1
 { // -s-
     NAME a skull
     ID 1ae3
     WEIGHT 100
     DECAY
+    AMXINT $localvar_flipitem $item_skull_2
 }
 
-SECTION ITEM $item_a_skull_2
+SECTION ITEM $item_skull_2
 { // -e-
     NAME a skull
     ID 1AE2
     WEIGHT 100
     DECAY
+    AMXINT $localvar_flipitem $item_skull_1
 }
 
-SECTION ITEM $item_a_ribcage
+SECTION ITEM $item_ribcage
 {
     NAME a ribcage
     ID 1B17
@@ -2165,7 +2184,7 @@ SECTION ITEM $item_a_ribcage
     DECAY
 }
 
-SECTION ITEM $item_a_spine
+SECTION ITEM $item_spine
 {
     NAME a spine
     ID 1B1B
@@ -2208,7 +2227,7 @@ SECTION ITEM $item_silk_fluxing_tool
 }
 
 // spawn chest
-SECTION ITEM $item_metal_chest_1
+SECTION ITEM $item_metal_chest2
 {
     NAME metal chest
     ID 0E40
@@ -2404,7 +2423,7 @@ SECTION ITEM $item_female_plain_cape_list
     ITEMLIST $itemlist_female_plain_cape
 }
 
-SECTION ITEM $item_loom-south_deed
+SECTION ITEM $item_loom_deed_2
 {
     NAME loom-south deed
     ID 14F0
@@ -2413,7 +2432,7 @@ SECTION ITEM $item_loom-south_deed
     MOREX 19
 }
 
-SECTION ITEM $item_loom-east_deed
+SECTION ITEM $item_loom_deed_1
 {
     NAME loom-east deed
     ID 14F0
@@ -2471,7 +2490,7 @@ SECTION ITEM $item_female_fancy_cape_list
     ITEMLIST $itemlist_female_fancy_cape
 }
 
-SECTION ITEM $item_a_magical_stone
+SECTION ITEM $item_magical_stone
 {
     NAME a magical stone
     ID 186E
@@ -2539,7 +2558,7 @@ SECTION ITEM $item_treasure_chest_lv5_
     MOVABLE 1
 }
 
-SECTION ITEM $item_a_wooden_chest
+SECTION ITEM $item_wooden_chest
 { // standard wooden chest spawn container
     NAME a wooden chest
     ID 0E43
@@ -2555,7 +2574,7 @@ SECTION ITEM $item_christmas_tree
     ID 0CD7
 }
 
-SECTION ITEM $item_a_christmas_gift_chest
+SECTION ITEM $item_christmas_gift_chest
 { //  wooden chest
     NAME a Christmas gift chest
     ID 0E43
@@ -2567,7 +2586,7 @@ SECTION ITEM $item_a_christmas_gift_chest
     AMOUNT 1
 }
 
-SECTION ITEM $item_a_wooden_chest_1
+SECTION ITEM $item_wooden_chest_1
 { // wood chest spawner -east- (low-level)
     NAME a wooden chest
     ID 0E42
@@ -2577,9 +2596,10 @@ SECTION ITEM $item_a_wooden_chest_1
     MOREZ 2
     AMOUNT 3
     DECAY
+    AMXINT $localvar_flipitem $item_wooden_chest_2
 }
 
-SECTION ITEM $item_a_wooden_chest_2
+SECTION ITEM $item_wooden_chest_2
 { // wood chest spawner -south- (low-level)
     NAME a wooden chest
     ID 0E43
@@ -2589,9 +2609,10 @@ SECTION ITEM $item_a_wooden_chest_2
     MOREZ 2
     AMOUNT 3
     DECAY
+    AMXINT $localvar_flipitem $item_wooden_chest_1
 }
 
-SECTION ITEM $item_a_metal_chest
+SECTION ITEM $item_metal_chest1
 { // metal chest spawner -east- (mid-level)
     NAME a metal chest
     ID 0E40
@@ -2601,9 +2622,10 @@ SECTION ITEM $item_a_metal_chest
     MOREZ 2
     AMOUNT 3
     DECAY
+    AMXINT $localvar_flipitem $item_metal_chest2
 }
 
-SECTION ITEM $item_a_metal_chest_1
+SECTION ITEM $item_metal_chest2
 { // metal chest spawner -south- (mid-level)
     NAME a metal chest
     ID 0E41
@@ -2613,9 +2635,10 @@ SECTION ITEM $item_a_metal_chest_1
     MOREZ 2
     AMOUNT 3
     DECAY
+    AMXINT $localvar_flipitem $item_metal_chest1
 }
 
-SECTION ITEM $item_a_metal_chest_2
+SECTION ITEM $item_metal_chest3
 { // metal chest spawner -east- (high-level)
     NAME a metal chest
     ID 0E40
@@ -2625,9 +2648,10 @@ SECTION ITEM $item_a_metal_chest_2
     MOREZ 2
     AMOUNT 2
     DECAY
+    AMXINT $localvar_flipitem $item_metal_chest4
 }
 
-SECTION ITEM $item_a_metal_chest_3
+SECTION ITEM $item_metal_chest4
 { // metal chest spawner -south- (high-level)
     NAME a metal chest
     ID 0E41
@@ -2637,10 +2661,11 @@ SECTION ITEM $item_a_metal_chest_3
     MOREZ 2
     AMOUNT 2
     DECAY
+    AMXINT $localvar_flipitem $item_metal_chest3
 }
 // list continues
 
-SECTION ITEM $item_a_chest_item_spawner_spawner_-low-
+SECTION ITEM $item_chest_item_spawner_spawner_-low-
 {
     NAME a chest item spawner (spawner) -low-
     ID 1F14
@@ -2652,7 +2677,7 @@ SECTION ITEM $item_a_chest_item_spawner_spawner_-low-
     VISIBLE 1
 }
 
-SECTION ITEM $item_a_chest_item_spawner_spawner_-mid-
+SECTION ITEM $item_chest_item_spawner_spawner_-mid-
 {
     NAME a chest item spawner (spawner) -mid-
     ID 1F14
@@ -2664,7 +2689,7 @@ SECTION ITEM $item_a_chest_item_spawner_spawner_-mid-
     VISIBLE 1
 }
 
-SECTION ITEM $item_a_chest_item_spawner_spawner_-high-
+SECTION ITEM $item_chest_item_spawner_spawner_-high-
 {
     NAME a chest item spawner (spawner) -high-
     ID 1F14
@@ -2709,42 +2734,42 @@ SECTION ITEM $item_treasure_hunt_lootlist
     ITEMLIST $itemlist_treasure_hunt
 }
 
-SECTION ITEM $item_a_treasure_map_lv_4_
+SECTION ITEM $item_treasure_map_lv_4_
 { Treasure map
     NAME a treasure map [lv 4]
     ID 14ec
     TRIGGER $itrg_treasure_map_lvl4
 }
 
-SECTION ITEM $item_a_treasure_map_lv1_
+SECTION ITEM $item_treasure_map_lv1_
 { Treasure map
     NAME a treasure map [lv1]
     ID 14ec
     TRIGGER $itrg_treasure_map_lvl1
 }
 
-SECTION ITEM $item_a_treasure_map_lv2_
+SECTION ITEM $item_treasure_map_lv2_
 { Treasure map
     NAME a treasure map [lv2]
     ID 14ec
     TRIGGER $itrg_treasure_map_lvl2
 }
 
-SECTION ITEM $item_a_treasure_map_lv3_
+SECTION ITEM $item_treasure_map_lv3_
 { Treasure map
     NAME a treasure map [lv3]
     ID 14ec
     TRIGGER $itrg_treasure_map_lvl3
 }
 
-SECTION ITEM $item_a_treasure_map_lv5_
+SECTION ITEM $item_treasure_map_lv5_
 { Treasure map
     NAME a treasure map [lv5]
     ID 14ec
     TRIGGER $itrg_treasure_map_lvl5
 }
 
-SECTION ITEM $item_a_magical_wizard`s_hat
+SECTION ITEM $item_wizards_hat
 {
     NAME a magical wizard`s hat
     ID 1718
@@ -2757,7 +2782,7 @@ SECTION ITEM $item_a_magical_wizard`s_hat
     VALUE 75
 }
 
-SECTION ITEM $item_a_large_leather_pillow
+SECTION ITEM $item_large_leather_pillow
 {
     NAME a large leather pillow
     ID 163A
@@ -2769,7 +2794,7 @@ SECTION ITEM $item_a_large_leather_pillow
     COLOR 0709
 }
 
-SECTION ITEM $item_a_medium_leather_pillow
+SECTION ITEM $item_medium_leather_pillow
 {
     NAME a medium leather pillow
     ID 163B
@@ -2781,7 +2806,7 @@ SECTION ITEM $item_a_medium_leather_pillow
     COLOR 0709
 }
 
-SECTION ITEM $item_a_small_leather_pillow
+SECTION ITEM $item_small_leather_pillow
 {
     NAME a small leather pillow
     ID 163C
@@ -2885,7 +2910,7 @@ SECTION ITEM $item_small_e
     WEIGHT 300
 }
 
-SECTION ITEM $item_n_1
+SECTION ITEM $item_1
 {
     NAME N/S banner
     ID 15bc
@@ -2918,7 +2943,7 @@ SECTION ITEM $item_e_2
     WEIGHT 400
 }
 
-SECTION ITEM $item_n_2
+SECTION ITEM $item_2
 {
     NAME N/S banner
     ID 15cc
@@ -2940,7 +2965,7 @@ SECTION ITEM $item_e_3
     WEIGHT 400
 }
 
-SECTION ITEM $item_n_3
+SECTION ITEM $item_3
 {
     NAME N/S banner
     ID 15c8
@@ -3120,7 +3145,7 @@ SECTION ITEM $item_fireplace_1
 
 
 //********************mounts for npcs**********************
-SECTION ITEM $item_a_tan_horse
+SECTION ITEM $item_tan_horse
 {
     NAME a tan horse
     ID 3e9f
@@ -3128,7 +3153,7 @@ SECTION ITEM $item_a_tan_horse
     NEWBIE
 }
 
-SECTION ITEM $item_a_grey_horse
+SECTION ITEM $item_grey_horse
 {
     NAME a grey horse
     ID 3ea0
@@ -3136,7 +3161,7 @@ SECTION ITEM $item_a_grey_horse
     NEWBIE
 }
 
-SECTION ITEM $item_a_light_brown_horse
+SECTION ITEM $item_light_brown_horse
 {
     NAME a light brown horse
     ID 3ea1
@@ -3144,7 +3169,7 @@ SECTION ITEM $item_a_light_brown_horse
     NEWBIE
 }
 
-SECTION ITEM $item_a_dark_brown_horse
+SECTION ITEM $item_dark_brown_horse
 {
     NAME a dark brown horse
     ID 3ea2
@@ -3152,7 +3177,7 @@ SECTION ITEM $item_a_dark_brown_horse
     NEWBIE
 }
 
-SECTION ITEM $item_a_nightmare
+SECTION ITEM $item_nightmare
 {
     NAME a nightmare
     ID 3ea2
@@ -3204,7 +3229,7 @@ SECTION ITEM $item_npc_equiplist_longswords
     ITEMLIST $itemlist_npc_equiplist_longswords
 }
 
-SECTION ITEM $item_treasure_chest_lv1__1
+SECTION ITEM $item_treasure_chest_lv1_1
 {
     NAME treasure chest [lv1]
     ID 0E7C
@@ -3216,7 +3241,7 @@ SECTION ITEM $item_treasure_chest_lv1__1
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv1__2
+SECTION ITEM $item_treasure_chest_lv1_2
 {
     NAME treasure chest [lv1]
     ID 0E7C
@@ -3228,7 +3253,7 @@ SECTION ITEM $item_treasure_chest_lv1__2
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv1__3
+SECTION ITEM $item_treasure_chest_lv1_3
 {
     NAME treasure chest [lv1]
     ID 0E7C
@@ -3240,7 +3265,7 @@ SECTION ITEM $item_treasure_chest_lv1__3
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv4__1
+SECTION ITEM $item_treasure_chest_lv4_1
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -3252,7 +3277,7 @@ SECTION ITEM $item_treasure_chest_lv4__1
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv4__2
+SECTION ITEM $item_treasure_chest_lv4_2
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -3264,7 +3289,7 @@ SECTION ITEM $item_treasure_chest_lv4__2
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv4__3
+SECTION ITEM $item_treasure_chest_lv4_3
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -3276,7 +3301,7 @@ SECTION ITEM $item_treasure_chest_lv4__3
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv4__4
+SECTION ITEM $item_treasure_chest_lv4_4
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -3288,7 +3313,7 @@ SECTION ITEM $item_treasure_chest_lv4__4
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv4__5
+SECTION ITEM $item_treasure_chest_lv4_5
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -3300,7 +3325,7 @@ SECTION ITEM $item_treasure_chest_lv4__5
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv2__1
+SECTION ITEM $item_treasure_chest_lv2_1
 {
     NAME treasure chest [lv2]
     ID 0E7C
@@ -3312,7 +3337,7 @@ SECTION ITEM $item_treasure_chest_lv2__1
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv2__2
+SECTION ITEM $item_treasure_chest_lv2_2
 {
     NAME treasure chest [lv2]
     ID 0E7C
@@ -3324,7 +3349,7 @@ SECTION ITEM $item_treasure_chest_lv2__2
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv2__3
+SECTION ITEM $item_treasure_chest_lv2_3
 {
     NAME treasure chest [lv2]
     ID 0E7C
@@ -3336,7 +3361,7 @@ SECTION ITEM $item_treasure_chest_lv2__3
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv3__1
+SECTION ITEM $item_treasure_chest_lv3_1
 {
     NAME treasure chest [lv3]
     ID 0E7C
@@ -3348,7 +3373,7 @@ SECTION ITEM $item_treasure_chest_lv3__1
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv3__2
+SECTION ITEM $item_treasure_chest_lv3_2
 {
     NAME treasure chest [lv3]
     ID 0E7C
@@ -3360,7 +3385,7 @@ SECTION ITEM $item_treasure_chest_lv3__2
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv3__3
+SECTION ITEM $item_treasure_chest_lv3_3
 {
     NAME treasure chest [lv3]
     ID 0E7C
@@ -3372,7 +3397,7 @@ SECTION ITEM $item_treasure_chest_lv3__3
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv5__1
+SECTION ITEM $item_treasure_chest_lv5_1
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -3384,7 +3409,7 @@ SECTION ITEM $item_treasure_chest_lv5__1
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv5__2
+SECTION ITEM $item_treasure_chest_lv5_2
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -3396,7 +3421,7 @@ SECTION ITEM $item_treasure_chest_lv5__2
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv5__3
+SECTION ITEM $item_treasure_chest_lv5_3
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -3408,7 +3433,7 @@ SECTION ITEM $item_treasure_chest_lv5__3
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv5__4
+SECTION ITEM $item_treasure_chest_lv5_4
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -3420,7 +3445,7 @@ SECTION ITEM $item_treasure_chest_lv5__4
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv5__5
+SECTION ITEM $item_treasure_chest_lv5_5
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -3432,7 +3457,7 @@ SECTION ITEM $item_treasure_chest_lv5__5
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv5__6
+SECTION ITEM $item_treasure_chest_lv5_6
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -3444,7 +3469,7 @@ SECTION ITEM $item_treasure_chest_lv5__6
     MOVABLE 1
 }
 
-SECTION ITEM $item_treasure_chest_lv5__7
+SECTION ITEM $item_treasure_chest_lv5_7
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -3568,22 +3593,1009 @@ SECTION ITEM $item_christmas_list
     ITEMLIST $itemlist_christmas
 }
 
+
+//
+//RUGS AND CARPETS
+//
+
+SECTION ITEM $item_rug1_1
+{
+    NAME rug
+    ID 0AA9
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_2
+{
+    NAME rug
+    ID 0AAA
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_3
+{
+    NAME rug
+    ID 0AAB
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_4
+{
+    NAME rug
+    ID 0AAC
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_5
+{
+    NAME rug
+    ID 0AAD
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_6
+{
+    NAME rug
+    ID 0AAE
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_7
+{
+    NAME rug
+    ID 0AAF
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_8
+{
+    NAME rug
+    ID 0AB0
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_9
+{
+    NAME rug
+    ID 0AB1
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug1_10
+{
+    NAME rug
+    ID 0AB2
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_1
+{
+    NAME rug
+    ID 0AB3
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_2
+{
+    NAME rug
+    ID 0AB4
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_3
+{
+    NAME rug
+    ID 0AB5
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_4
+{
+    NAME rug
+    ID 0AB6
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_5
+{
+    NAME rug
+    ID 0AB7
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_6
+{
+    NAME rug
+    ID 0AB8
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_7
+{
+    NAME rug
+    ID 0AB9
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_8
+{
+    NAME rug
+    ID 0ABA
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_9
+{
+    NAME rug
+    ID 0ABB
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_rug2_10
+{
+    NAME rug
+    ID 0ABC
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Rug
+}
+
+SECTION ITEM $item_carpet1_1
+{
+    NAME carpet
+    ID 0ABD
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_2
+{
+    NAME carpet
+    ID 0ABE
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_3
+{
+    NAME carpet
+    ID 0ABF
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_4
+{
+    NAME carpet
+    ID 0AC0
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_5
+{
+    NAME carpet
+    ID 0AC1
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_6
+{
+    NAME carpet
+    ID 0AC2
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_7
+{
+    NAME carpet
+    ID 0AC3
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_8
+{
+    NAME carpet
+    ID 0AC4
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_9
+{
+    NAME carpet
+    ID 0AC5
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_10
+{
+    NAME carpet
+    ID 0AF6
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_11
+{
+    NAME carpet
+    ID 0AF7
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_12
+{
+    NAME carpet
+    ID 0AF8
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet1_13
+{
+    NAME carpet
+    ID 0AF9
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_1
+{
+    NAME carpet
+    ID 0AC6
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_2
+{
+    NAME carpet
+    ID 0AC7
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_3
+{
+    NAME carpet
+    ID 0AC8
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_4
+{
+    NAME carpet
+    ID 0AC9
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_5
+{
+    NAME carpet
+    ID 0ACA
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_6
+{
+    NAME carpet
+    ID 0ACB
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_7
+{
+    NAME carpet
+    ID 0ACC
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_8
+{
+    NAME carpet
+    ID 0ACD
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_9
+{
+    NAME carpet
+    ID 0ACE
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_10
+{
+    NAME carpet
+    ID 0ACF
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet2_11
+{
+    NAME carpet
+    ID 0AD0
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_1
+{
+    NAME carpet
+    ID 0AD1
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_2
+{
+    NAME carpet
+    ID 0AD2
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_3
+{
+    NAME carpet
+    ID 0AD3
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_4
+{
+    NAME carpet
+    ID 0AD4
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_5
+{
+    NAME carpet
+    ID 0AD5
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_6
+{
+    NAME carpet
+    ID 0AD6
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_7
+{
+    NAME carpet
+    ID 0AD7
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_8
+{
+    NAME carpet
+    ID 0AD8
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet3_9
+{
+    NAME carpet
+    ID 0AD9
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_1
+{
+    NAME carpet
+    ID 0ADA
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_2
+{
+    NAME carpet
+    ID 0ADB
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_3
+{
+    NAME carpet
+    ID 0ADC
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_4
+{
+    NAME carpet
+    ID 0ADD
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_5
+{
+    NAME carpet
+    ID 0ADE
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_6
+{
+    NAME carpet
+    ID 0ADF
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_7
+{
+    NAME carpet
+    ID 0AE0
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_8
+{
+    NAME carpet
+    ID 0AE1
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet4_9
+{
+    NAME carpet
+    ID 0AE2
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_1
+{
+    NAME carpet
+    ID 0AE3
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_2
+{
+    NAME carpet
+    ID 0AE4
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_3
+{
+    NAME carpet
+    ID 0AE5
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_4
+{
+    NAME carpet
+    ID 0AE6
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_5
+{
+    NAME carpet
+    ID 0AE7
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_6
+{
+    NAME carpet
+    ID 0AE8
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_7
+{
+    NAME carpet
+    ID 0AE9
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_8
+{
+    NAME carpet
+    ID 0AEA
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet5_9
+{
+    NAME carpet
+    ID 0AEB
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_1
+{
+    NAME carpet
+    ID 0AEC
+    
+    VALUE 35000
+    WEIGHT 20000
+}
+
+SECTION ITEM $item_carpet6_2
+{
+    NAME carpet
+    ID 0AED
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_3
+{
+    NAME carpet
+    ID 0AEE
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_4
+{
+    NAME carpet
+    ID 0AEF
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_5
+{
+    NAME carpet
+    ID 0AF0
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_6
+{
+    NAME carpet
+    ID 0AF1
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+
+SECTION ITEM $item_carpet6_7
+{
+    NAME carpet
+    ID 0AF2
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_8
+{
+    NAME carpet
+    ID 0AF3
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_9
+{
+    NAME carpet
+    ID 0AF4
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_10
+{
+    NAME carpet
+    ID 0AF5
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
+SECTION ITEM $item_carpet6_11
+{
+    NAME carpet
+    ID 0AFA
+    
+    VALUE 35000
+    WEIGHT 20000
+
+    ///CATEGORY Carpets & Rugs
+    ///SUBSECTION Carpet
+}
+
 //*************************** NOX-WIZARD CUSTOM ITEMS *****************************/
 
-SECTION ITEM $item_a_cristall_ball_of_reputation
+SECTION ITEM $item_cristall_ball_of_reputation
 {
     NAME a Cristall Ball of Reputation
     ID 0E2D
     VALUE 1500
-    @ONDBLCLICK __crystBall
+    @ONDBLCLICK _crystBall
 }
 
-SECTION ITEM $item_a_cigar
+SECTION ITEM $item_cigar
 {
     NAME a cigar
     ID 979
     VALUE 10
-    @ONDBLCLICK __smoke
+    @ONDBLCLICK _smoke
 }
 
 
@@ -3596,7 +4608,7 @@ SECTION ITEM $item_sledge_hammer
 }
 
 // campfire
-SECTION ITEM $item_a_campfire
+SECTION ITEM $item_campfire
 {
     NAME a campfire
     ID 0DE3

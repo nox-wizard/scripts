@@ -50,7 +50,7 @@ SECTION ITEM $item_high_level_dungeon_chest_list
     ///NOTLIST
 }
 
-SECTION ITEM $item_treasure_chest_lv1__1
+SECTION ITEM $item_treasure_chest_lv1_1
 {
     NAME treasure chest [lv1]
     ID 0E7C
@@ -65,7 +65,7 @@ SECTION ITEM $item_treasure_chest_lv1__1
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv1__2
+SECTION ITEM $item_treasure_chest_lv1_2
 {
     NAME treasure chest [lv1]
     ID 0E7C
@@ -80,7 +80,7 @@ SECTION ITEM $item_treasure_chest_lv1__2
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv1__3
+SECTION ITEM $item_treasure_chest_lv1_3
 {
     NAME treasure chest [lv1]
     ID 0E7C
@@ -95,7 +95,7 @@ SECTION ITEM $item_treasure_chest_lv1__3
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv4__1
+SECTION ITEM $item_treasure_chest_lv4_1
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -110,7 +110,7 @@ SECTION ITEM $item_treasure_chest_lv4__1
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv4__2
+SECTION ITEM $item_treasure_chest_lv4_2
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -125,7 +125,7 @@ SECTION ITEM $item_treasure_chest_lv4__2
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv4__3
+SECTION ITEM $item_treasure_chest_lv4_3
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -140,7 +140,7 @@ SECTION ITEM $item_treasure_chest_lv4__3
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv4__4
+SECTION ITEM $item_treasure_chest_lv4_4
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -155,7 +155,7 @@ SECTION ITEM $item_treasure_chest_lv4__4
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv4__5
+SECTION ITEM $item_treasure_chest_lv4_5
 {
     NAME treasure chest [lv4]
     ID 0E7C
@@ -170,7 +170,7 @@ SECTION ITEM $item_treasure_chest_lv4__5
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv2__1
+SECTION ITEM $item_treasure_chest_lv2_1
 {
     NAME treasure chest [lv2]
     ID 0E7C
@@ -185,7 +185,7 @@ SECTION ITEM $item_treasure_chest_lv2__1
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv2__2
+SECTION ITEM $item_treasure_chest_lv2_2
 {
     NAME treasure chest [lv2]
     ID 0E7C
@@ -200,7 +200,7 @@ SECTION ITEM $item_treasure_chest_lv2__2
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv2__3
+SECTION ITEM $item_treasure_chest_lv2_3
 {
     NAME treasure chest [lv2]
     ID 0E7C
@@ -215,7 +215,7 @@ SECTION ITEM $item_treasure_chest_lv2__3
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv3__1
+SECTION ITEM $item_treasure_chest_lv3_1
 {
     NAME treasure chest [lv3]
     ID 0E7C
@@ -230,7 +230,7 @@ SECTION ITEM $item_treasure_chest_lv3__1
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv3__2
+SECTION ITEM $item_treasure_chest_lv3_2
 {
     NAME treasure chest [lv3]
     ID 0E7C
@@ -245,7 +245,7 @@ SECTION ITEM $item_treasure_chest_lv3__2
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv3__3
+SECTION ITEM $item_treasure_chest_lv3_3
 {
     NAME treasure chest [lv3]
     ID 0E7C
@@ -260,7 +260,7 @@ SECTION ITEM $item_treasure_chest_lv3__3
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv5__1
+SECTION ITEM $item_treasure_chest_lv5_1
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -275,7 +275,7 @@ SECTION ITEM $item_treasure_chest_lv5__1
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv5__2
+SECTION ITEM $item_treasure_chest_lv5_2
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -290,7 +290,7 @@ SECTION ITEM $item_treasure_chest_lv5__2
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv5__3
+SECTION ITEM $item_treasure_chest_lv5_3
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -305,7 +305,7 @@ SECTION ITEM $item_treasure_chest_lv5__3
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv5__4
+SECTION ITEM $item_treasure_chest_lv5_4
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -320,7 +320,7 @@ SECTION ITEM $item_treasure_chest_lv5__4
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv5__5
+SECTION ITEM $item_treasure_chest_lv5_5
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -335,7 +335,7 @@ SECTION ITEM $item_treasure_chest_lv5__5
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv5__6
+SECTION ITEM $item_treasure_chest_lv5_6
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -350,7 +350,7 @@ SECTION ITEM $item_treasure_chest_lv5__6
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_lv5__7
+SECTION ITEM $item_treasure_chest_lv5_7
 {
     NAME treasure chest [lv5]
     ID 0E7C
@@ -365,7 +365,7 @@ SECTION ITEM $item_treasure_chest_lv5__7
     ///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_a_treasure_map_lv_4_
+SECTION ITEM $item_treasure_map_lv_4_
 {
     NAME a treasure map [lv 4]
     ID 14ec
@@ -375,7 +375,7 @@ SECTION ITEM $item_a_treasure_map_lv_4_
     ///SUBSECTION Treasure Maps
 }
 
-SECTION ITEM $item_a_treasure_map_lv1_
+SECTION ITEM $item_treasure_map_lv1_
 {
     NAME a treasure map [lv1]
     ID 14ec
@@ -385,7 +385,7 @@ SECTION ITEM $item_a_treasure_map_lv1_
     ///SUBSECTION Treasure Maps
 }
 
-SECTION ITEM $item_a_treasure_map_lv2_
+SECTION ITEM $item_treasure_map_lv2_
 {
     NAME a treasure map [lv2]
     ID 14ec
@@ -395,7 +395,7 @@ SECTION ITEM $item_a_treasure_map_lv2_
     ///SUBSECTION Treasure Maps
 }
 
-SECTION ITEM $item_a_treasure_map_lv3_
+SECTION ITEM $item_treasure_map_lv3_
 {
     NAME a treasure map [lv3]
     ID 14ec
@@ -405,7 +405,7 @@ SECTION ITEM $item_a_treasure_map_lv3_
     ///SUBSECTION Treasure Maps
 }
 
-SECTION ITEM $item_a_treasure_map_lv5_
+SECTION ITEM $item_treasure_map_lv5_
 {
     NAME a treasure map [lv5]
     ID 14ec

@@ -40,7 +40,7 @@ SECTION ITEM $item_bottle_of_pink_champaine
 	@ONDBLCLICK _ondrinkBottle
 }
 
-SECTION ITEM $item_a_pink_champaine_flute
+SECTION ITEM $item_pink_champaine_flute
 {
 	NAME a pink champaine flute
 	ID 099a
@@ -112,6 +112,7 @@ SECTION ITEM $item_bottles_of_ale4
 
 SECTION ITEM $item_mug_of_ale_1
 {
+	AMXINT $localvar_flipitem $item_mug_of_ale_2
 	NAME mug_of_ale
 	ID 09EE
 	DECAY
@@ -129,6 +130,7 @@ SECTION ITEM $item_mug_of_ale_1
 
 SECTION ITEM $item_mug_of_ale_2
 {
+	AMXINT $localvar_flipitem $item_mug_of_ale_1
 	NAME Mug of Ale
 	ID 09Ef
 	DECAY
@@ -141,6 +143,7 @@ SECTION ITEM $item_mug_of_ale_2
 
 SECTION ITEM $item_pitcher_of_ale_1
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_ale_2
 	NAME Pitcher of Ale
 	ID 1F95
 	TYPE $itype_drink
@@ -158,6 +161,7 @@ SECTION ITEM $item_pitcher_of_ale_1
 
 SECTION ITEM $item_pitcher_of_ale_2
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_ale_1
 	NAME Pitcher of Ale
 	ID 1F96
 	TYPE $itype_drink
@@ -229,6 +233,7 @@ SECTION ITEM $item_bottles_of_liquor4
 
 SECTION ITEM $item_glass_of_liquor_1
 {
+	AMXINT $localvar_flipitem $item_glass_of_liquor_3
 	NAME glass_of_liquor
 	ID 1F85
 	TYPE $itype_drink
@@ -246,6 +251,7 @@ SECTION ITEM $item_glass_of_liquor_1
 
 SECTION ITEM $item_glass_of_liquor_2
 {
+	AMXINT $localvar_flipitem $item_glass_of_liquor_4
 	NAME Glass of Liquor
 	ID 1F86
 	TYPE $itype_drink
@@ -259,6 +265,7 @@ SECTION ITEM $item_glass_of_liquor_2
 
 SECTION ITEM $item_glass_of_liquor_3
 {
+	AMXINT $localvar_flipitem $item_glass_of_liquor_1
 	NAME Glass of Liquor
 	ID 1F87
 	TYPE $itype_drink
@@ -272,6 +279,7 @@ SECTION ITEM $item_glass_of_liquor_3
 
 SECTION ITEM $item_glass_of_liquor_4
 {
+	AMXINT $localvar_flipitem $item_glass_of_liquor_2
 	NAME Glass of Liquor
 	ID 1F88
 	TYPE $itype_drink
@@ -285,6 +293,7 @@ SECTION ITEM $item_glass_of_liquor_4
 
 SECTION ITEM $item_pitcher_of_liquor_1
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_liquor_2
 	NAME Pitcher of Liquor
 	ID 1F99
 	TYPE $itype_drink
@@ -302,6 +311,7 @@ SECTION ITEM $item_pitcher_of_liquor_1
 
 SECTION ITEM $item_pitcher_of_liquor_2
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_liquor_1
 	NAME Pitcher of Liquor
 	ID 1F9a
 	TYPE $itype_drink
@@ -373,6 +383,7 @@ SECTION ITEM $item_bottles_of_wine4
 
 SECTION ITEM $item_glass_of_wine_1
 {
+	AMXINT $localvar_flipitem $item_glass_of_wine_3
 	NAME Glass of Wine
 	ID 1F8D
 	TYPE $itype_drink
@@ -390,6 +401,7 @@ SECTION ITEM $item_glass_of_wine_1
 
 SECTION ITEM $item_glass_of_wine_2
 {
+	AMXINT $localvar_flipitem $item_glass_of_wine_4
 	NAME Glass of Wine
 	ID 1F8e
 	TYPE $itype_drink
@@ -403,6 +415,7 @@ SECTION ITEM $item_glass_of_wine_2
 
 SECTION ITEM $item_glass_of_wine_3
 {
+	AMXINT $localvar_flipitem $item_glass_of_wine_1
 	NAME Glass of Wine
 	ID 1F8f
 	TYPE $itype_drink
@@ -416,6 +429,7 @@ SECTION ITEM $item_glass_of_wine_3
 
 SECTION ITEM $item_glass_of_wine_4
 {
+	AMXINT $localvar_flipitem $item_glass_of_wine_2
 	NAME Glass of Wine
 	ID 1F90
 	TYPE $itype_drink
@@ -429,6 +443,7 @@ SECTION ITEM $item_glass_of_wine_4
 
 SECTION ITEM $item_pitcher_of_wine_1
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_wine_2
 	NAME Pitcher of Wine
 	ID 1F9B
 	TYPE $itype_drink
@@ -446,6 +461,7 @@ SECTION ITEM $item_pitcher_of_wine_1
 
 SECTION ITEM $item_pitcher_of_wine_2
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_wine_1
 	NAME Pitcher of Wine
 	ID 1F9c
 	TYPE $itype_drink
@@ -481,6 +497,7 @@ SECTION ITEM $item_tub_of_water
 
 SECTION ITEM $item_glass_of_water_1
 {
+	AMXINT $localvar_flipitem $item_glass_of_water_3
 	NAME glass of water
 	ID 1F91
 	TYPE $itype_drink
@@ -498,6 +515,7 @@ SECTION ITEM $item_glass_of_water_1
 
 SECTION ITEM $item_glass_of_water_2
 {
+	AMXINT $localvar_flipitem $item_glass_of_water_4
 	NAME glass of water
 	ID 1F92
 	TYPE $itype_drink
@@ -511,6 +529,7 @@ SECTION ITEM $item_glass_of_water_2
 
 SECTION ITEM $item_glass_of_water_3
 {
+	AMXINT $localvar_flipitem $item_glass_of_water_1
 	NAME glass of water
 	ID 1F93
 	TYPE $itype_drink
@@ -524,6 +543,7 @@ SECTION ITEM $item_glass_of_water_3
 
 SECTION ITEM $item_glass_of_water_4
 {
+	AMXINT $localvar_flipitem $item_glass_of_water_2
 	NAME glass of water
 	ID 1F94
 	TYPE $itype_drink
@@ -537,6 +557,7 @@ SECTION ITEM $item_glass_of_water_4
 
 SECTION ITEM $item_pitcher_of_water_1
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_water_3
 	NAME pitcher of water
 	ID 0FF9
 	DECAY
@@ -552,6 +573,7 @@ SECTION ITEM $item_pitcher_of_water_1
 
 SECTION ITEM $item_pitcher_of_water_2
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_water_4
 	NAME pitcher of water
 	ID 0FF8
 	DECAY
@@ -563,6 +585,7 @@ SECTION ITEM $item_pitcher_of_water_2
 
 SECTION ITEM $item_pitcher_of_water_3
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_water_1
 	NAME pitcher of water
 	ID 1f9d
 	DECAY
@@ -574,6 +597,7 @@ SECTION ITEM $item_pitcher_of_water_3
 
 SECTION ITEM $item_pitcher_of_water_4
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_water_2
 	NAME pitcher of water
 	ID 1f9e
 	DECAY
@@ -585,6 +609,7 @@ SECTION ITEM $item_pitcher_of_water_4
 
 SECTION ITEM $item_glass_of_cider_1
 {
+	AMXINT $localvar_flipitem $item_glass_of_cider_3
 	NAME glass of cider
 	ID 1F7D
 	TYPE $itype_drink
@@ -602,6 +627,7 @@ SECTION ITEM $item_glass_of_cider_1
 
 SECTION ITEM $item_glass_of_cider_2
 {
+	AMXINT $localvar_flipitem $item_glass_of_cider_4
 	NAME glass of cider
 	ID 1F7e
 	TYPE $itype_drink
@@ -615,6 +641,7 @@ SECTION ITEM $item_glass_of_cider_2
 
 SECTION ITEM $item_glass_of_cider_3
 {
+	AMXINT $localvar_flipitem $item_glass_of_cider_1
 	NAME glass of cider
 	ID 1F7f
 	TYPE $itype_drink
@@ -628,6 +655,7 @@ SECTION ITEM $item_glass_of_cider_3
 
 SECTION ITEM $item_glass_of_cider_4
 {
+	AMXINT $localvar_flipitem $item_glass_of_cider_2
 	NAME glass of cider
 	ID 1F80
 	TYPE $itype_drink
@@ -681,6 +709,7 @@ SECTION ITEM $item_jugs_of_cider1
 
 SECTION ITEM $item_pitcher_of_cider_1
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_cider_2
 	NAME pitcher of cider
 	ID 1F97
 	TYPE $itype_drink
@@ -698,6 +727,7 @@ SECTION ITEM $item_pitcher_of_cider_1
 
 SECTION ITEM $item_pitcher_of_cider_2
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_cider_1
 	NAME pitcher of cider
 	ID 1F98
 	TYPE $itype_drink
@@ -787,6 +817,7 @@ SECTION ITEM $item_bowl_of_flour
 
 SECTION ITEM $item_sack_of_flour_1
 {
+	AMXINT $localvar_flipitem $item_sack_of_flour_2
 	NAME sack of flour
 	ID 1039
 	VALUE 20
@@ -797,6 +828,7 @@ SECTION ITEM $item_sack_of_flour_1
 
 SECTION ITEM $item_sack_of_flour_2
 {
+	AMXINT $localvar_flipitem $item_sack_of_flour_1
 	NAME sack of flour
 	ID 1045
 	VALUE 20
@@ -1253,6 +1285,7 @@ SECTION ITEM $item_plate_of_cookies
 //FOOD Milk//
 SECTION ITEM $item_pitcher_of_milk_1
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_milk_2
 	NAME Pitcher of Milk
 	ID 09AD
 	TYPE $itype_drink
@@ -1270,6 +1303,7 @@ SECTION ITEM $item_pitcher_of_milk_1
 
 SECTION ITEM $item_pitcher_of_milk_2
 {
+	AMXINT $localvar_flipitem $item_pitcher_of_milk_1
 	NAME Pitcher of Milk
 	ID 09f0
 	TYPE $itype_drink
@@ -1285,10 +1319,10 @@ SECTION ITEM $item_jar_for_milk
 {
 	NAME jar for milk
 	ID 1005
-	@ONDBLCLICK __get_milk_target
+	@ONDBLCLICK _get_milk_target
 }
 
-SECTION ITEM $item_a_jar_full_of_milk
+SECTION ITEM $item_jar_full_of_milk
 {
 	NAME a jar full of milk
 	ID 1003 2
@@ -1299,6 +1333,7 @@ SECTION ITEM $item_a_jar_full_of_milk
 
 SECTION ITEM $item_glass_of_milk_1
 {
+	AMXINT $localvar_flipitem $item_glass_of_milk_3
 	NAME Glass of Milk
 	ID 1F89
 	TYPE $itype_drink
@@ -1316,6 +1351,7 @@ SECTION ITEM $item_glass_of_milk_1
 
 SECTION ITEM $item_glass_of_milk_2
 {
+	AMXINT $localvar_flipitem $item_glass_of_milk_4
 	NAME Glass of Milk
 	ID 1F8a
 	TYPE $itype_drink
@@ -1329,6 +1365,7 @@ SECTION ITEM $item_glass_of_milk_2
 
 SECTION ITEM $item_glass_of_milk_3
 {
+	AMXINT $localvar_flipitem $item_glass_of_milk_1
 	NAME Glass of Milk
 	ID 1F8b
 	TYPE $itype_drink
@@ -1342,6 +1379,7 @@ SECTION ITEM $item_glass_of_milk_3
 
 SECTION ITEM $item_glass_of_milk_4
 {
+	AMXINT $localvar_flipitem $item_glass_of_milk_2
 	NAME Glass of Milk
 	ID 1F8c
 	TYPE $itype_drink
@@ -1635,6 +1673,7 @@ SECTION ITEM $item_pigs_feet_2
 
 SECTION ITEM $item_roast_pigs_1
 {
+	AMXINT $localvar_flipitem $item_roast_pigs_2
 	NAME roast pig
 	ID 09BB
 	TYPE $itype_food
@@ -1652,6 +1691,7 @@ SECTION ITEM $item_roast_pigs_1
 
 SECTION ITEM $item_roast_pigs_2
 {
+	AMXINT $localvar_flipitem $item_roast_pigs_1
 	NAME roast pig
 	ID 09BC
 	TYPE $itype_food
@@ -1687,6 +1727,7 @@ SECTION ITEM $item_cooked_lamb_leg
 
 SECTION ITEM $item_raw_birds_1
 {
+	AMXINT $localvar_flipitem $item_raw_birds_2
 	NAME raw bird
 	ID 09B9
 	TYPE $itype_food
@@ -1703,6 +1744,7 @@ SECTION ITEM $item_raw_birds_1
 
 SECTION ITEM $item_raw_birds_2
 {
+	AMXINT $localvar_flipitem $item_raw_birds_1
 	NAME raw bird
 	ID 09Ba
 	TYPE $itype_food
@@ -1715,6 +1757,7 @@ SECTION ITEM $item_raw_birds_2
 
 SECTION ITEM $item_cooked_birds_1
 {
+	AMXINT $localvar_flipitem $item_cooked_birds_2
 	NAME cooked bird
 	ID 09B7
 	TYPE $itype_food
@@ -1732,6 +1775,7 @@ SECTION ITEM $item_cooked_birds_1
 
 SECTION ITEM $item_cooked_birds_2
 {
+	AMXINT $localvar_flipitem $item_cooked_birds_1
 	NAME cooked bird
 	ID 09B8
 	TYPE $itype_food
@@ -1745,6 +1789,7 @@ SECTION ITEM $item_cooked_birds_2
 
 SECTION ITEM $item_bird1_1
 {
+	AMXINT $localvar_flipitem $item_bird1_2
 	NAME bird
 	ID 1e83
 	DECAY
@@ -1756,6 +1801,7 @@ SECTION ITEM $item_bird1_1
 
 SECTION ITEM $item_bird1_2
 {
+	AMXINT $localvar_flipitem $item_bird1_1
 	NAME bird
 	ID 1e84
 	DECAY
@@ -1767,6 +1813,7 @@ SECTION ITEM $item_bird1_2
 
 SECTION ITEM $item_bird1_1
 {
+	AMXINT $localvar_flipitem $item_bird1_2
 	NAME bird
 	ID 1e85
 	DECAY
@@ -1778,6 +1825,7 @@ SECTION ITEM $item_bird1_1
 
 SECTION ITEM $item_bird1_2
 {
+	AMXINT $localvar_flipitem $item_bird1_1
 	NAME bird
 	ID 1e86
 	DECAY
@@ -1928,6 +1976,7 @@ SECTION ITEM $item_fried_eggs
 
 SECTION ITEM $item_sausages_1
 {
+	AMXINT $localvar_flipitem $item_sausages_2
 	NAME sausage
 	ID 09C0
 	TYPE $itype_food
@@ -1945,6 +1994,7 @@ SECTION ITEM $item_sausages_1
 
 SECTION ITEM $item_sausages_2
 {
+	AMXINT $localvar_flipitem $item_sausages_1
 	NAME sausage
 	ID 09C1
 	TYPE $itype_food
@@ -1958,6 +2008,7 @@ SECTION ITEM $item_sausages_2
 
 SECTION ITEM $item_hams_1
 {
+	AMXINT $localvar_flipitem $item_hams_2
 	NAME ham
 	ID 09C9
 	TYPE $itype_food
@@ -1975,6 +2026,7 @@ SECTION ITEM $item_hams_1
 
 SECTION ITEM $item_hams_2
 {
+	AMXINT $localvar_flipitem $item_hams_1
 	NAME ham
 	ID 09d3
 	TYPE $itype_food
@@ -2026,6 +2078,7 @@ SECTION ITEM $item_cuts_of_ribs
 
 SECTION ITEM $item_slabs_of_bacon_1
 {
+	AMXINT $localvar_flipitem $item_slabs_of_bacon_2
 	NAME slabs of bacon
 	ID 0976
 	TYPE $itype_food
@@ -2043,6 +2096,7 @@ SECTION ITEM $item_slabs_of_bacon_1
 
 SECTION ITEM $item_slabs_of_bacon_2
 {
+	AMXINT $localvar_flipitem $item_slabs_of_bacon_1
 	NAME slabs of bacon
 	ID 0977
 	TYPE $itype_food
@@ -2056,6 +2110,7 @@ SECTION ITEM $item_slabs_of_bacon_2
 
 SECTION ITEM $item_slices_of_bacon_1
 {
+	AMXINT $localvar_flipitem $item_slices_of_bacon_2
 	NAME slice of bacon
 	ID 0978
 	TYPE $itype_food
@@ -2073,6 +2128,7 @@ SECTION ITEM $item_slices_of_bacon_1
 
 SECTION ITEM $item_slices_of_bacon_2
 {
+	AMXINT $localvar_flipitem $item_slices_of_bacon_1
 	NAME slice of bacon
 	ID 0979
 	TYPE $itype_food
@@ -2112,6 +2168,7 @@ SECTION ITEM $item_fish_steaks
 
 SECTION ITEM $item_raw_fish_1
 {
+	AMXINT $localvar_flipitem $item_raw_fish_2
 	NAME raw fish
 	ID 1E15
 	VALUE 2
@@ -2122,6 +2179,7 @@ SECTION ITEM $item_raw_fish_1
 
 SECTION ITEM $item_raw_fish_2
 {
+	AMXINT $localvar_flipitem $item_raw_fish_1
 	NAME raw fish
 	ID 1E16
 	VALUE 2
@@ -2132,6 +2190,7 @@ SECTION ITEM $item_raw_fish_2
 
 SECTION ITEM $item_raw_fish_headless_1
 {
+	AMXINT $localvar_flipitem $item_raw_fish_headless_2
 	NAME raw fish without head
 	ID 1E17
 	VALUE 2
@@ -2142,6 +2201,7 @@ SECTION ITEM $item_raw_fish_headless_1
 
 SECTION ITEM $item_cooked_fish_headless_1
 {
+	AMXINT $localvar_flipitem $item_cooked_fish_headless_2
 	NAME cooked fish without head
 	ID 1E1c
 	VALUE 2
@@ -2153,6 +2213,7 @@ SECTION ITEM $item_cooked_fish_headless_1
 
 SECTION ITEM $item_raw_fish_headless_2
 {
+	AMXINT $localvar_flipitem $item_raw_fish_headless_1
 	NAME raw fish without head
 	ID 1E18
 	VALUE 2
@@ -2163,6 +2224,7 @@ SECTION ITEM $item_raw_fish_headless_2
 
 SECTION ITEM $item_cooked_fish_headless_2
 {
+	AMXINT $localvar_flipitem $item_cooked_fish_headless_1
 	NAME cooked fish without head
 	ID 1E1d
 	VALUE 2
@@ -2174,6 +2236,7 @@ SECTION ITEM $item_cooked_fish_headless_2
 
 SECTION ITEM $item_fish_head1_1
 {
+	AMXINT $localvar_flipitem $item_fish_head1_2
 	NAME fish head
 	ID 1E19
 	VALUE 2
@@ -2183,6 +2246,7 @@ SECTION ITEM $item_fish_head1_1
 
 SECTION ITEM $item_fish_head1_2
 {
+	AMXINT $localvar_flipitem $item_fish_head1_1
 	NAME fish head
 	ID 1E1a
 	VALUE 2
@@ -2576,6 +2640,7 @@ SECTION ITEM $item_coconuts2
 
 SECTION ITEM $item_coconuts3_1
 {
+	AMXINT $localvar_flipitem $item_coconuts3_2
 	NAME open coconut
 	ID 1724
 	TYPE $itype_food
@@ -2589,6 +2654,7 @@ SECTION ITEM $item_coconuts3_1
 
 SECTION ITEM $item_coconuts3_2
 {
+	AMXINT $localvar_flipitem $item_coconuts3_1
 	NAME open coconut
 	ID 1723
 	TYPE $itype_food
@@ -2602,6 +2668,7 @@ SECTION ITEM $item_coconuts3_2
 
 SECTION ITEM $item_banana_1
 {
+	AMXINT $localvar_flipitem $item_banana_2
 	NAME banana
 	ID 171f
 	TYPE $itype_food
@@ -2615,6 +2682,7 @@ SECTION ITEM $item_banana_1
 
 SECTION ITEM $item_skinned_banana_1
 {
+	AMXINT $localvar_flipitem $item_skinned_banana_2
 	NAME skinned banana
 	ID 171d
 	TYPE $itype_food
@@ -2628,6 +2696,7 @@ SECTION ITEM $item_skinned_banana_1
 
 SECTION ITEM $item_banana_2
 {
+	AMXINT $localvar_flipitem $item_banana_1
 	NAME banana
 	ID 1720
 	TYPE $itype_food
@@ -2643,8 +2712,9 @@ SECTION ITEM $item_banana_2
 	///DESCRIPTION Banana
 }
 
-SECTION ITEM $item_skinnded_banana_2
+SECTION ITEM $item_skinned_banana_2
 {
+	AMXINT $localvar_flipitem $item_skinned_banana_1
 	NAME skinned banana
 	ID 171e
 	TYPE $itype_food
@@ -2658,6 +2728,7 @@ SECTION ITEM $item_skinnded_banana_2
 
 SECTION ITEM $item_bunch_of_bananas_1
 {
+	AMXINT $localvar_flipitem $item_bunch_of_bananas_2
 	NAME bunch of bananas
 	ID 1721
 	DECAY
@@ -2672,6 +2743,7 @@ SECTION ITEM $item_bunch_of_bananas_1
 
 SECTION ITEM $item_bunch_of_bananas_2
 {
+	AMXINT $localvar_flipitem $item_bunch_of_bananas_1
 	NAME bunch of bananas
 	ID 1722
 	DECAY
@@ -2758,6 +2830,7 @@ SECTION ITEM $item_limes2
 
 SECTION ITEM $item_garlic_bulb_1
 {
+	AMXINT $localvar_flipitem $item_garlic_bulb_2
 	NAME garlic bulb
 	ID 18e3
 	PILE 1
@@ -2772,6 +2845,7 @@ SECTION ITEM $item_garlic_bulb_1
 
 SECTION ITEM $item_garlic_bulb_2
 {
+	AMXINT $localvar_flipitem $item_garlic_bulb_1
 	NAME garlic bulb
 	ID 18e4
 	PILE 1
@@ -2786,6 +2860,7 @@ SECTION ITEM $item_garlic_bulb_2
 
 SECTION ITEM $item_dried_onions_1
 {
+	AMXINT $localvar_flipitem $item_dried_onions_2
 	NAME dried onions
 	ID 0C3f
 	TYPE $itype_food
@@ -2799,6 +2874,7 @@ SECTION ITEM $item_dried_onions_1
 
 SECTION ITEM $item_dried_onions_2
 {
+	AMXINT $localvar_flipitem $item_dried_onions_1
 	NAME dried herbs
 	ID 0C40
 	TYPE $itype_food
@@ -2813,6 +2889,7 @@ SECTION ITEM $item_dried_onions_2
 
 SECTION ITEM $item_dried_herbs_1
 {
+	AMXINT $localvar_flipitem $item_dried_herbs_2
 	NAME dried herbs
 	ID 0C41
 	TYPE $itype_food
@@ -2825,6 +2902,7 @@ SECTION ITEM $item_dried_herbs_1
 
 SECTION ITEM $item_dried_herbs_2
 {
+	AMXINT $localvar_flipitem $item_dried_herbs_1
 	NAME dried herbs
 	ID 0C42
 	TYPE $itype_food
@@ -2977,6 +3055,7 @@ SECTION ITEM $item_bowl_of_peas2
 
 SECTION ITEM $item_pears_1
 {
+	AMXINT $localvar_flipitem $item_pears_2
 	NAME pear
 	ID 0994
 	TYPE $itype_food
@@ -2994,6 +3073,7 @@ SECTION ITEM $item_pears_1
 
 SECTION ITEM $item_pears_2
 {
+	AMXINT $localvar_flipitem $item_pears_1
 	NAME pear
 	ID 172d
 	TYPE $itype_food
@@ -3023,6 +3103,7 @@ SECTION ITEM $item_apples
 
 SECTION ITEM $item_grape_bunches_1
 {
+	AMXINT $localvar_flipitem $item_grape_bunches_2
 	NAME grape bunch
 	ID 09D1
 	TYPE $itype_food
@@ -3040,6 +3121,7 @@ SECTION ITEM $item_grape_bunches_1
 
 SECTION ITEM $item_grape_bunches_2
 {
+	AMXINT $localvar_flipitem $item_grape_bunches_1
 	NAME grape bunch
 	ID 0d1a
 	TYPE $itype_food
@@ -3053,6 +3135,7 @@ SECTION ITEM $item_grape_bunches_2
 
 SECTION ITEM $item_peaches_1
 {
+	AMXINT $localvar_flipitem $item_peaches_2
 	NAME peach
 	ID 09D2
 	TYPE $itype_food
@@ -3070,6 +3153,7 @@ SECTION ITEM $item_peaches_1
 
 SECTION ITEM $item_peaches_2
 {
+	AMXINT $localvar_flipitem $item_peaches_1
 	NAME peach
 	ID 172c
 	TYPE $itype_food
@@ -3186,6 +3270,7 @@ SECTION ITEM $item_goblet_1
 
 SECTION ITEM $item_goblet_2
 {
+	AMXINT $localvar_flipitem $item_goblet_1
 	NAME a goblet
 	ID 09cb
 	@ONDBLCLICK _cooking
@@ -3194,6 +3279,7 @@ SECTION ITEM $item_goblet_2
 
 SECTION ITEM $item_golden_goblet_1
 {
+	AMXINT $localvar_flipitem $item_golden_goblet_2
 	NAME a golden goblet
 	ID 09bf
 	@ONDBLCLICK _cooking
@@ -3202,6 +3288,7 @@ SECTION ITEM $item_golden_goblet_1
 
 SECTION ITEM $item_golden_goblet_2
 {
+	AMXINT $localvar_flipitem $item_golden_goblet_1
 	NAME a golden goblet
 	ID 09B3
 	@ONDBLCLICK _cooking
@@ -3210,6 +3297,7 @@ SECTION ITEM $item_golden_goblet_2
 
 SECTION ITEM $item_glass_1
 {
+	AMXINT $localvar_flipitem $item_glass_3
 	NAME glass
 	ID 1f81
 	@ONDBLCLICK _cooking
@@ -3218,6 +3306,7 @@ SECTION ITEM $item_glass_1
 
 SECTION ITEM $item_glass_2
 {
+	AMXINT $localvar_flipitem $item_glass_4
 	NAME glass
 	ID 1f82
 	@ONDBLCLICK _cooking
@@ -3226,6 +3315,7 @@ SECTION ITEM $item_glass_2
 
 SECTION ITEM $item_glass_3
 {
+	AMXINT $localvar_flipitem $item_glass_1
 	NAME glass
 	ID 1f83
 	@ONDBLCLICK _cooking
@@ -3234,102 +3324,115 @@ SECTION ITEM $item_glass_3
 
 SECTION ITEM $item_glass_4
 {
+	AMXINT $localvar_flipitem $item_glass_2
 	NAME glass
 	ID 1f84
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_a_pewter_mug_1
+SECTION ITEM $item_pewter_mug_1
 {
+	AMXINT $localvar_flipitem $item_pewter_mug_4
 	NAME a pewter mug
 	ID 1000
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_pewter_mug_2
+SECTION ITEM $item_pewter_mug_2
 {
+	AMXINT $localvar_flipitem $item_pewter_mug_3
 	NAME a pewter mug
 	ID 0fff
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_pewter_mug_3
+SECTION ITEM $item_pewter_mug_3
 {
+	AMXINT $localvar_flipitem $item_pewter_mug_2
 	NAME a pewter mug
 	ID 1001
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_pewter_mug_4
+SECTION ITEM $item_pewter_mug_4
 {
+	AMXINT $localvar_flipitem $item_pewter_mug_1
 	NAME a pewter mug
 	ID 1002
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_a_skull_mug_1
+SECTION ITEM $item_skull_mug_1
 {
+	AMXINT $localvar_flipitem $item_skull_mug_3
 	NAME a skull mug
 	ID 0ffb
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_skull_mug_2
+SECTION ITEM $item_skull_mug_2
 {
+	AMXINT $localvar_flipitem $item_skull_mug_4
 	NAME a skull mug
 	ID 0ffc
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_skull_mug_3
+SECTION ITEM $item_skull_mug_3
 {
+	AMXINT $localvar_flipitem $item_skull_mug_1
 	NAME a skull mug
 	ID 0ffd
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_skull_mug_4
+SECTION ITEM $item_skull_mug_4
 {
+	AMXINT $localvar_flipitem $item_skull_mug_2
 	NAME a skull mug
 	ID 0ffe
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_a_ceramic_mug_1
+SECTION ITEM $item_ceramic_mug_1
 {
+	AMXINT $localvar_flipitem $item_ceramic_mug_1
 	NAME a ceramic mug
 	ID 09ca
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_ceramic_mug_2
+SECTION ITEM $item_ceramic_mug_2
 {
+	AMXINT $localvar_flipitem $item_ceramic_mug_2
 	NAME a ceramic mug
 	ID 0995
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_ceramic_mug_3
+SECTION ITEM $item_ceramic_mug_3
 {
+	AMXINT $localvar_flipitem $item_ceramic_mug_3
 	NAME a ceramic mug
 	ID 0996
 	@ONDBLCLICK _cooking
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_ceramic_mug_4
+SECTION ITEM $item_ceramic_mug_4
 {
+	AMXINT $localvar_flipitem $item_ceramic_mug_4
 	NAME a ceramic mug
 	ID 0997
 	@ONDBLCLICK _cooking
@@ -3338,6 +3441,7 @@ SECTION ITEM $item_a_ceramic_mug_4
 
 SECTION ITEM $item_glass_pitcher_1
 {
+	AMXINT $localvar_flipitem $item_glass_pitcher_2
 	NAME glass pitcher
 	ID 0ff6
 	@ONDBLCLICK _cooking
@@ -3346,6 +3450,7 @@ SECTION ITEM $item_glass_pitcher_1
 
 SECTION ITEM $item_glass_pitcher_2
 {
+	AMXINT $localvar_flipitem $item_glass_pitcher_1
 	NAME glass pitcher
 	ID 0ff7
 	@ONDBLCLICK _cooking
@@ -3354,6 +3459,7 @@ SECTION ITEM $item_glass_pitcher_2
 
 SECTION ITEM $item_glass_pitcher_3
 {
+	AMXINT $localvar_flipitem $item_glass_pitcher_3
 	NAME glass pitcher
 	ID 09a7
 	@ONDBLCLICK _cooking
@@ -3693,6 +3799,7 @@ SECTION ITEM $item_tray_2
 
 SECTION ITEM $item_silverware_1
 {
+	AMXINT $localvar_flipitem $item_silverware_2
 	NAME silverware
 	ID 09d4
 	TYPE $itype_container
@@ -3705,6 +3812,7 @@ SECTION ITEM $item_silverware_1
 		 
 SECTION ITEM $item_silverware_2
 {
+	AMXINT $localvar_flipitem $item_silverware_1
 	NAME silverware
 	ID 09d5
 	TYPE $itype_container
@@ -3717,6 +3825,7 @@ SECTION ITEM $item_silverware_2
 
 SECTION ITEM $item_silverware_3
 {
+	AMXINT $localvar_flipitem $item_silverware_4
 	NAME silverware
 	ID 09be
 	TYPE $itype_container
@@ -3729,6 +3838,7 @@ SECTION ITEM $item_silverware_3
 		 
 SECTION ITEM $item_silverware_4
 {
+	AMXINT $localvar_flipitem $item_silverware_3
 	NAME silverware
 	ID 09bd
 	TYPE $itype_container
@@ -3741,6 +3851,7 @@ SECTION ITEM $item_silverware_4
 
 SECTION ITEM $item_spoon_1
 {
+	AMXINT $localvar_flipitem $item_spoon_2
 	NAME spoon
 	ID 09c3
 	TYPE $itype_container
@@ -3753,6 +3864,7 @@ SECTION ITEM $item_spoon_1
 		 
 SECTION ITEM $item_spoon_2
 {
+	AMXINT $localvar_flipitem $item_spoon_1
 	NAME spoon
 	ID 09c2
 	TYPE $itype_container
@@ -3765,6 +3877,7 @@ SECTION ITEM $item_spoon_2
 
 SECTION ITEM $item_knife_1
 {
+	AMXINT $localvar_flipitem $item_knife_2
 	NAME knife
 	ID 09a6
 	TYPE $itype_container
@@ -3777,6 +3890,7 @@ SECTION ITEM $item_knife_1
 		 
 SECTION ITEM $item_knife_2
 {
+	AMXINT $localvar_flipitem $item_knife_1
 	NAME knife
 	ID 09a5
 	TYPE $itype_container
@@ -3789,6 +3903,7 @@ SECTION ITEM $item_knife_2
 
 SECTION ITEM $item_fork_1
 {
+	AMXINT $localvar_flipitem $item_fork_2
 	NAME fork
 	ID 09a4
 	TYPE $itype_container
@@ -3801,6 +3916,7 @@ SECTION ITEM $item_fork_1
 		 
 SECTION ITEM $item_fork_2
 {
+	AMXINT $localvar_flipitem $item_fork_1
 	NAME fork
 	ID 09a3
 	TYPE $itype_container

@@ -111,20 +111,20 @@ SECTION FISHLIST 8
 // skulls for fishing...(skill>70)
 SECTION FISHLIST 9
 {
-	$item_a_skull_recoverd_from_a_shipwreck
-	$item_a_skull_recoverd_from_a_shipwreck_1
-	$item_a_skull_recoverd_from_a_shipwreck_2
-	$item_a_skull_recoverd_from_a_shipwreck_3
-	$item_a_skull_recoverd_from_a_shipwreck_4
-	$item_a_pile_of_skulls_recoverd_from_a_shipwreck
+	$item_skull_recoverd_from_a_shipwreck
+	$item_skull_recoverd_from_a_shipwreck_1
+	$item_skull_recoverd_from_a_shipwreck_2
+	$item_skull_recoverd_from_a_shipwreck_3
+	$item_skull_recoverd_from_a_shipwreck_4
+	$item_pile_of_skulls_recoverd_from_a_shipwreck
 }
 
 // nets for fishing...(skill>90)
 SECTION FISHLIST 10
 {
-	$item_a_fishing_net_recovered_from_a_shipwreck
-	$item_a_fishing_net_recovered_from_a_shipwreck_1
-	$item_a_fishing_net_recovered_from_a_shipwreck_2
+	$item_fishing_net_recovered_from_a_shipwreck
+	$item_fishing_net_recovered_from_a_shipwreck_1
+	$item_fishing_net_recovered_from_a_shipwreck_2
 }
 
 // gold for fishing...(skill>90)
@@ -140,15 +140,15 @@ SECTION FISHLIST 11
 // bones for fishing...(skill>40)
 SECTION FISHLIST 12
 {
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck_1
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck_2
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck_3
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck_4
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck_5
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck_6
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck_7
-	$item_a_pile_of_bones_recoverd_from_a_shipwreck_8
+	$item_pile_of_bones_recoverd_from_a_shipwreck
+	$item_pile_of_bones_recoverd_from_a_shipwreck_1
+	$item_pile_of_bones_recoverd_from_a_shipwreck_2
+	$item_pile_of_bones_recoverd_from_a_shipwreck_3
+	$item_pile_of_bones_recoverd_from_a_shipwreck_4
+	$item_pile_of_bones_recoverd_from_a_shipwreck_5
+	$item_pile_of_bones_recoverd_from_a_shipwreck_6
+	$item_pile_of_bones_recoverd_from_a_shipwreck_7
+	$item_pile_of_bones_recoverd_from_a_shipwreck_8
 }
 
 

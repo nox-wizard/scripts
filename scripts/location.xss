@@ -401,7 +401,7 @@ Z 5
 }
 
 SECTION LOCATION 81
-(
+{
 // Docks
 X 4406
 Y 1045
@@ -1168,25 +1168,29 @@ Z 0
 // Lost Lands
 // **********
 SECTION LOCATION 303
-{ Britain Sewers
+{ 
+// Britain Sewers
 X 6032
 Y 1499
 Z 27
 }
 SECTION LOCATION 304
-{ Papua - mage shop
+{ 
+// Papua - mage shop
 X 5736
 Y 3196
 Z 11
 }
 SECTION LOCATION 305
-{ Delucia center
+{ 
+// Delucia center
 X 5219
 Y 4028
 Z 37
 }
 SECTION LOCATION 306
-{ Ice Dungeon
+{ 
+// Ice Dungeon
 X 1998
 Y 81
 Z 5

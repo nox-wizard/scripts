@@ -1,33 +1,90 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (decorations.xss)								||
-// || Maintained by Akron												 ||
-// || Last Update 09-aug-2003											 ||
+// || NoX-Wizard Scripts (decorations.xss)				 ||
+// || Maintained by Akron						 ||
+// || Last Update 09-aug-2003						 ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.70s or later					  ||
-// || Compatible with Unicorn Categorization							  ||
+// || This script requires NoX-Wizard 0.70s or later			  ||
+// || Compatible with Unicorn Categorization				  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-SECTION ITEM $item_ankh
+SECTION ITEM $item_ankh1_1_1
 {
 	NAME ankh
 	ID 0002
-
+	AMXINT $localvar_flipitem $item_ankh1_2_1
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Left Ankh
 }
 
-SECTION ITEM $item_ankh_1
+SECTION ITEM $item_ankh1_1_2
 {
 	NAME ankh
 	ID 0003
-
+	AMXINT $localvar_flipitem $item_ankh1_2_2
 	///CATEGORY Decorations
 	///SUBSECTION Statues
 	///DESCRIPTION Right Ankh
 }
 
-SECTION ITEM $item_statue
+
+SECTION ITEM $item_ankh1_2_1
+{
+	NAME ankh
+	ID 0004
+	AMXINT $localvar_flipitem $item_ankh1_1_1
+	///CATEGORY Decorations
+	///SUBSECTION Statues
+	///DESCRIPTION Left Ankh
+}
+
+SECTION ITEM $item_ankh1_2_2
+{
+	NAME ankh
+	ID 0005
+	AMXINT $localvar_flipitem $item_ankh1_1_2
+	///CATEGORY Decorations
+	///SUBSECTION Statues
+	///DESCRIPTION Right Ankh
+}
+
+SECTION ITEM $item_ankh2_1_1
+{
+	ID 1D97
+	AMXINT $localvar_flipitem $item_ankh2_2_1
+	///CATEGORY Decorations
+	///SUBSECTION Statues
+	///DESCRIPTION Ankh of Sacrifice
+}
+
+SECTION ITEM $item_ankh2_1_2
+{
+	ID 1D98
+	AMXINT $localvar_flipitem $item_ankh2_2_2
+	///CATEGORY Decorations
+	///SUBSECTION Statues
+	///DESCRIPTION Ankh of Sacrifice
+}
+
+SECTION ITEM $item_ankh2_2_1
+{
+	ID 1E5C
+	AMXINT $localvar_flipitem $item_ankh2_1_1
+	///CATEGORY Decorations
+	///SUBSECTION Statues
+	///DESCRIPTION Ankh of Sacrifice
+}
+
+SECTION ITEM $item_ankh2_2_2
+{
+	ID 1E5D
+	AMXINT $localvar_flipitem $item_ankh2_1_2
+	///CATEGORY Decorations
+	///SUBSECTION Statues
+	///DESCRIPTION Ankh of Sacrifice
+}
+
+SECTION ITEM $item_statue1
 {
 	ID 12A1
 	
@@ -36,7 +93,7 @@ SECTION ITEM $item_statue
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_1
+SECTION ITEM $item_statue2
 {
 	ID 129F
 	
@@ -45,7 +102,7 @@ SECTION ITEM $item_statue_1
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_2
+SECTION ITEM $item_statue2
 {
 	ID 12A0
 	
@@ -54,7 +111,7 @@ SECTION ITEM $item_statue_2
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_3
+SECTION ITEM $item_statue4
 {
 	ID 12A4
 	
@@ -63,7 +120,7 @@ SECTION ITEM $item_statue_3
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_4
+SECTION ITEM $item_statue5
 {
 	ID 12A2
 	
@@ -72,7 +129,7 @@ SECTION ITEM $item_statue_4
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_5
+SECTION ITEM $item_statue6
 {
 	ID 12A3
 	
@@ -81,7 +138,7 @@ SECTION ITEM $item_statue_5
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_6
+SECTION ITEM $item_statue7
 {
 	ID 12AE
 	
@@ -90,7 +147,7 @@ SECTION ITEM $item_statue_6
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_7
+SECTION ITEM $item_statue8
 {
 	ID 12D7
 	
@@ -99,7 +156,7 @@ SECTION ITEM $item_statue_7
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_8
+SECTION ITEM $item_statue9
 {
 	ID 12D5
 	
@@ -108,7 +165,7 @@ SECTION ITEM $item_statue_8
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_9
+SECTION ITEM $item_statue10
 {
 	ID 12D6
 	
@@ -117,7 +174,7 @@ SECTION ITEM $item_statue_9
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_A
+SECTION ITEM $item_statue11
 {
 	ID 1224
 	
@@ -126,7 +183,7 @@ SECTION ITEM $item_statue_A
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_B
+SECTION ITEM $item_statue12
 {
 	ID 1225
 	
@@ -135,7 +192,7 @@ SECTION ITEM $item_statue_B
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_C
+SECTION ITEM $item_statue13
 {
 	ID 1226
 	
@@ -144,7 +201,7 @@ SECTION ITEM $item_statue_C
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_D
+SECTION ITEM $item_statue14
 {
 	ID 1227
 	
@@ -153,7 +210,7 @@ SECTION ITEM $item_statue_D
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_statue_E
+SECTION ITEM $item_statue15
 {
 	ID 1228
 	
@@ -162,25 +219,7 @@ SECTION ITEM $item_statue_E
 	///DESCRIPTION Statue
 }
 
-SECTION ITEM $item_ankh_of_sacrifice
-{
-	ID 1D97
-	
-	///CATEGORY Decorations
-	///SUBSECTION Statues
-	///DESCRIPTION Ankh of Sacrifice
-}
-
-SECTION ITEM $item_ankh_of_sacrifice_1
-{
-	ID 1D98
-	
-	///CATEGORY Decorations
-	///SUBSECTION Statues
-	///DESCRIPTION Ankh of Sacrifice
-}
-
-SECTION ITEM $item_trophy
+SECTION ITEM $item_trophy1
 {
 	ID 1E60
 
@@ -189,7 +228,7 @@ SECTION ITEM $item_trophy
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_1
+SECTION ITEM $item_trophy2
 {
 	ID 1E61
 
@@ -198,7 +237,7 @@ SECTION ITEM $item_trophy_1
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_2
+SECTION ITEM $item_trophy3
 {
 	ID 1E62
 
@@ -207,7 +246,7 @@ SECTION ITEM $item_trophy_2
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_3
+SECTION ITEM $item_trophy4
 {
 	ID 1E63
 
@@ -216,7 +255,7 @@ SECTION ITEM $item_trophy_3
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_4
+SECTION ITEM $item_trophy5
 {
 	ID 1E64
 
@@ -225,7 +264,7 @@ SECTION ITEM $item_trophy_4
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_5
+SECTION ITEM $item_trophy6
 {
 	ID 1E65
 
@@ -234,7 +273,7 @@ SECTION ITEM $item_trophy_5
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_6
+SECTION ITEM $item_trophy7
 {
 	ID 1E66
 
@@ -243,7 +282,7 @@ SECTION ITEM $item_trophy_6
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_7
+SECTION ITEM $item_trophy8
 {
 	ID 1E67
 
@@ -252,7 +291,7 @@ SECTION ITEM $item_trophy_7
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_8
+SECTION ITEM $item_trophy9
 {
 	ID 1E68
 
@@ -261,7 +300,7 @@ SECTION ITEM $item_trophy_8
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_9
+SECTION ITEM $item_trophy10
 {
 	ID 1E69
 
@@ -270,7 +309,7 @@ SECTION ITEM $item_trophy_9
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_A
+SECTION ITEM $item_trophy11
 {
 	ID 1E6A
 
@@ -279,7 +318,7 @@ SECTION ITEM $item_trophy_A
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_B
+SECTION ITEM $item_trophy12
 {
 	ID 1E6B
 
@@ -288,7 +327,7 @@ SECTION ITEM $item_trophy_B
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_C
+SECTION ITEM $item_trophy13
 {
 	ID 1E6C
 
@@ -297,7 +336,7 @@ SECTION ITEM $item_trophy_C
 	///DESCRIPTION Trophy
 }
 
-SECTION ITEM $item_trophy_D
+SECTION ITEM $item_trophy14
 {
 	ID 1E6D
 
@@ -329,7 +368,7 @@ SECTION ITEM $item_candelabra
 	///SUBSECTION Candles & Candelabras
 }
 
-SECTION ITEM $item_a_candelabra
+SECTION ITEM $item_candelabra
 {
 	NAME A candelabra
 	ID 0A29
@@ -342,7 +381,7 @@ SECTION ITEM $item_a_candelabra
 	///SUBSECTION Candles & Candelabras
 }
 
-SECTION ITEM $item_a_brazier
+SECTION ITEM $item_brazier
 {
 	NAME A brazier
 	ID 0E31
@@ -371,12 +410,14 @@ SECTION ITEM $item_candle_1
 	ID 1433
 	DECAY
 	VALUE 35
+	AMXINT $localvar_flipitem $item_candle_2
 	TRIGGER $itrg_new_candle
 }
 
 SECTION ITEM $item_candle_2
 {
 	ID 0a26
+	AMXINT $localvar_flipitem $item_candle_1
 }
 
 SECTION ITEM $item_candlabra
@@ -408,12 +449,14 @@ SECTION ITEM $item_wall_sconce_1
 {
 	ID 09FF
 	TRIGGER $itrg_light_n-s_candle
+	AMXINT $localvar_flipitem $item_wall_sconce_2
 }
 
 SECTION ITEM $item_wall_sconce_2
 {
 	ID 0A00
 	TRIGGER $itrg_light_e-w_candle
+	AMXINT $localvar_flipitem $item_wall_sconce_1
 }
 
 SECTION ITEM $item_bell_of_courage
@@ -436,13 +479,14 @@ SECTION ITEM $item_candle_of_love
 	DECAY
 }
 
-SECTION ITEM $item_dartboard
+SECTION ITEM $item_dartboard_2
 {
 	NAME dartboard
 	ID 1e2f
 	TYPE $itype_trash
 	VALUE 50
 	WEIGHT 200
+	AMXINT $localvar_flipitem $item_dartboard_1
 }
 
 SECTION ITEM $item_dartboard_1
@@ -452,76 +496,77 @@ SECTION ITEM $item_dartboard_1
 	TYPE $itype_trash
 	VALUE 50
 	WEIGHT 200
+	AMXINT $localvar_flipitem $item_dartboard_2
 }
 
-SECTION ITEM $item_roadsign
+SECTION ITEM $item_road_sign1_1
 {
 	NAME roadsign
 	ID 1297
-
+	AMXINT $localvar_flipitem $item_road_sign1_2
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_roadsign_1
+SECTION ITEM $item_road_sign1_2
 {
 	NAME roadsign
 	ID 1298
-
+	AMXINT $localvar_flipitem $item_road_sign1_1
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_roadsign_2
+SECTION ITEM $item_road_sign2_1
 {
 	NAME roadsign
 	ID 1299
-
+	AMXINT $localvar_flipitem $item_road_sign2_2
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_roadsign_3
+SECTION ITEM $item_road_sign2_2
 {
 	NAME roadsign
 	ID 129A
-
+	AMXINT $localvar_flipitem $item_road_sign2_1
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_roadsign_4
+SECTION ITEM $item_road_sign3_1
 {
 	NAME roadsign
 	ID 129B
-
+	AMXINT $localvar_flipitem $item_road_sign3_2
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_roadsign_5
+SECTION ITEM $item_road_sign3_2
 {
 	NAME roadsign
 	ID 129C
-
+	AMXINT $localvar_flipitem road_sign3_1
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_roadsign_6
+SECTION ITEM $item_road_sign4_1
 {
 	NAME roadsign
 	ID 129D
-
+	AMXINT $localvar_flipitem $item_road_sign4_2
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_roadsign_7
+SECTION ITEM $item_road_sign4_2
 {
 	NAME roadsign
 	ID 129E
-
+	AMXINT $localvar_flipitem $item_road_sign4_1
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
@@ -535,17 +580,19 @@ SECTION ITEM $item_signpost
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_library
+SECTION ITEM $item_library_sign_1
 {
+	AMXINT $localvar_flipitem $item_library_sign_2
 	NAME library
 	ID 0B95
-
+	
 	///CATEGORY Decorations
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_library_1
+SECTION ITEM $item_library_sign_2
 {
+	AMXINT $localvar_flipitem $item_library_sign_1
 	NAME library
 	ID 0B96
 
@@ -553,8 +600,9 @@ SECTION ITEM $item_library_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_bakery
+SECTION ITEM $item_bakery_sign_1
 {
+	AMXINT $localvar_flipitem $item_bakery_sign_2
 	NAME bakery
 	ID 0BA3
 
@@ -562,8 +610,9 @@ SECTION ITEM $item_bakery
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_bakery_1
+SECTION ITEM $item_bakery_sign_2
 {
+	AMXINT $localvar_flipitem $item_bakery_sign_1
 	NAME bakery
 	ID 0BA4
 
@@ -571,8 +620,9 @@ SECTION ITEM $item_bakery_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tailor
+SECTION ITEM $item_tailor_sign_1
 {
+	AMXINT $localvar_flipitem $item_tailor_sign_2
 	NAME tailor
 	ID 0BA5
 
@@ -580,8 +630,9 @@ SECTION ITEM $item_tailor
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tailor_1
+SECTION ITEM $item_tailor_sign_2
 {
+	AMXINT $localvar_flipitem $item_tailor_sign_1
 	NAME tailor
 	ID 0BA6
 
@@ -589,8 +640,9 @@ SECTION ITEM $item_tailor_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tinker
+SECTION ITEM $item_tinker_sign_1
 {
+	AMXINT $localvar_flipitem $item_tinker_sign_2
 	NAME tinker
 	ID 0BA7
 
@@ -598,8 +650,9 @@ SECTION ITEM $item_tinker
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tinker_1
+SECTION ITEM $item_tinker_sign_2
 {
+	AMXINT $localvar_flipitem $item_tinker_sign_1
 	NAME tinker
 	ID 0BA8
 
@@ -607,8 +660,9 @@ SECTION ITEM $item_tinker_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_butcher
+SECTION ITEM $item_butcher_sign_1
 {
+	AMXINT $localvar_flipitem $item_butcher_sign_2
 	NAME butcher
 	ID 0BA9
 
@@ -616,8 +670,9 @@ SECTION ITEM $item_butcher
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_butcher_1
+SECTION ITEM $item_butcher_sign_2
 {
+	AMXINT $localvar_flipitem $item_butcher_sign_1
 	NAME butcher
 	ID 0BAA
 
@@ -625,8 +680,9 @@ SECTION ITEM $item_butcher_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_healer
+SECTION ITEM $item_healer_sign_1
 {
+	AMXINT $localvar_flipitem $item_healer_sign_2
 	NAME healer
 	ID 0BAB
 
@@ -634,8 +690,9 @@ SECTION ITEM $item_healer
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_healer_1
+SECTION ITEM $item_healer_sign_2
 {
+	AMXINT $localvar_flipitem $item_healer_sign_1
 	NAME healer
 	ID 0BAC
 
@@ -643,8 +700,9 @@ SECTION ITEM $item_healer_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_magic_shop
+SECTION ITEM $item_magic_shop_sign_1
 {
+	AMXINT $localvar_flipitem $item_magic_shop_sign_2
 	NAME magic shop
 	ID 0BAD
 
@@ -652,8 +710,9 @@ SECTION ITEM $item_magic_shop
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_magic_shop_1
+SECTION ITEM $item_magic_shop_sign_2
 {
+	AMXINT $localvar_flipitem $item_magic_shop_sign_1
 	NAME magic shop
 	ID 0BAE
 
@@ -661,8 +720,9 @@ SECTION ITEM $item_magic_shop_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_carpenter
+SECTION ITEM $item_carpenter_sign_1
 {
+	AMXINT $localvar_flipitem $item_carpenter_sign_2
 	NAME carpenter
 	ID 0BAF
 
@@ -670,8 +730,9 @@ SECTION ITEM $item_carpenter
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_carpenter_1
+SECTION ITEM $item_carpenter_sign_2
 {
+	AMXINT $localvar_flipitem $item_carpenter_sign_1
 	NAME carpenter
 	ID 0BB0
 
@@ -679,8 +740,9 @@ SECTION ITEM $item_carpenter_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_shipwright
+SECTION ITEM $item_shipwright_sign_1
 {
+	AMXINT $localvar_flipitem $item_shipwright_sign_2
 	NAME shipwright
 	ID 0BB1
 
@@ -688,8 +750,9 @@ SECTION ITEM $item_shipwright
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_shipwright_1
+SECTION ITEM $item_shipwright_sign_2
 {
+	AMXINT $localvar_flipitem $item_shipwright_sign_1
 	NAME shipwright
 	ID 0BB2
 
@@ -697,8 +760,9 @@ SECTION ITEM $item_shipwright_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_inn
+SECTION ITEM $item_inn_sign_1
 {
+	AMXINT $localvar_flipitem $item_inn_sign_2
 	NAME inn
 	ID 0BB3
 
@@ -706,8 +770,9 @@ SECTION ITEM $item_inn
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_inn_1
+SECTION ITEM $item_inn_sign_2
 {
+	AMXINT $localvar_flipitem $item_inn_sign_1
 	NAME inn
 	ID 0BB4
 
@@ -715,8 +780,9 @@ SECTION ITEM $item_inn_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_harbor_master
+SECTION ITEM $item_harbor_master_sign_1
 {
+	AMXINT $localvar_flipitem $item_harbor_master_sign_2
 	NAME harbor master
 	ID 0BB5
 
@@ -724,8 +790,9 @@ SECTION ITEM $item_harbor_master
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_harbor_master_1
+SECTION ITEM $item_harbor_master_sign_2
 {
+	AMXINT $localvar_flipitem $item_harbor_master_sign_1
 	NAME harbor master
 	ID 0BB6
 
@@ -733,8 +800,9 @@ SECTION ITEM $item_harbor_master_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_stables
+SECTION ITEM $item_stables_sign_1
 {
+	AMXINT $localvar_flipitem $item_stables_sign_2
 	NAME stables
 	ID 0BB7
 
@@ -742,8 +810,9 @@ SECTION ITEM $item_stables
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_stables_1
+SECTION ITEM $item_stables_sign_2
 {
+	AMXINT $localvar_flipitem $item_stables_sign_1
 	NAME stables
 	ID 0BB8
 
@@ -751,8 +820,9 @@ SECTION ITEM $item_stables_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_barber
+SECTION ITEM $item_barber_sign_1
 {
+	AMXINT $localvar_flipitem $item_barber_sign_2
 	NAME barber
 	ID 0BB9
 
@@ -760,8 +830,9 @@ SECTION ITEM $item_barber
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_barber_1
+SECTION ITEM $item_barber_sign_2
 {
+	AMXINT $localvar_flipitem $item_barber_sign_1
 	NAME barber
 	ID 0BBA
 
@@ -769,8 +840,9 @@ SECTION ITEM $item_barber_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_musician
+SECTION ITEM $item_musician_sign_1
 {
+	AMXINT $localvar_flipitem $item_musician_sign_2
 	NAME musician
 	ID 0BBB
 
@@ -778,8 +850,9 @@ SECTION ITEM $item_musician
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_musician_1
+SECTION ITEM $item_musician_sign_2
 {
+	AMXINT $localvar_flipitem $item_musician_sign_1
 	NAME musician
 	ID 0BBC
 
@@ -787,8 +860,9 @@ SECTION ITEM $item_musician_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_archer_1
+SECTION ITEM $item_archer_sign_1
 {
+	AMXINT $localvar_flipitem $item_archer_sign_2
 	NAME archer
 	ID 0BBD
 
@@ -796,8 +870,9 @@ SECTION ITEM $item_archer_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_archer_2
+SECTION ITEM $item_archer_sign_2
 {
+	AMXINT $localvar_flipitem $item_archer_sign_1
 	NAME archer
 	ID 0BBE
 
@@ -805,8 +880,9 @@ SECTION ITEM $item_archer_2
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_blacksmith
+SECTION ITEM $item_blacksmith_sign_1
 {
+	AMXINT $localvar_flipitem $item_blacksmith_sign_2
 	NAME blacksmith
 	ID 0BBF
 
@@ -814,8 +890,9 @@ SECTION ITEM $item_blacksmith
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_blacksmith_1
+SECTION ITEM $item_blacksmith_sign_2
 {
+	AMXINT $localvar_flipitem $item_blacksmith_sign_1
 	NAME blacksmith
 	ID 0BC0
 
@@ -823,8 +900,9 @@ SECTION ITEM $item_blacksmith_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_jewler
+SECTION ITEM $item_jewler_sign_1
 {
+	AMXINT $localvar_flipitem $item_jewler_sign_2
 	NAME jewler
 	ID 0BC1
 
@@ -832,8 +910,9 @@ SECTION ITEM $item_jewler
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_jewler_1
+SECTION ITEM $item_jewler_sign_2
 {
+	AMXINT $localvar_flipitem $item_jewler_sign_1
 	NAME jewler
 	ID 0BC2
 
@@ -841,8 +920,9 @@ SECTION ITEM $item_jewler_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tavern
+SECTION ITEM $item_tavern_sign_1
 {
+	AMXINT $localvar_flipitem $item_tavern_sign_2
 	NAME tavern
 	ID 0BC3
 
@@ -850,8 +930,9 @@ SECTION ITEM $item_tavern
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tavern_1
+SECTION ITEM $item_tavern_sign_2
 {
+	AMXINT $localvar_flipitem $item_tavern_sign_1
 	NAME tavern
 	ID 0BC4
 
@@ -859,8 +940,9 @@ SECTION ITEM $item_tavern_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_alchemist
+SECTION ITEM $item_alchemist_sign_1
 {
+	AMXINT $localvar_flipitem $item_alchemist_sign_2
 	NAME alchemist
 	ID 0BC5
 
@@ -868,8 +950,9 @@ SECTION ITEM $item_alchemist
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_alchemist_1
+SECTION ITEM $item_alchemist_sign_2
 {
+	AMXINT $localvar_flipitem $item_alchemist_sign_1
 	NAME alchemist
 	ID 0BC6
 
@@ -877,8 +960,9 @@ SECTION ITEM $item_alchemist_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_armorer
+SECTION ITEM $item_armorer_sign_1
 {
+	AMXINT $localvar_flipitem $item_armorer_sign_2
 	NAME armorer
 	ID 0BC7
 
@@ -886,8 +970,9 @@ SECTION ITEM $item_armorer
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_armorer_1
+SECTION ITEM $item_armorer_sign_2
 {
+	AMXINT $localvar_flipitem $item_armorer_sign_1
 	NAME armorer
 	ID 0BC8
 
@@ -895,8 +980,9 @@ SECTION ITEM $item_armorer_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_artist
+SECTION ITEM $item_artist_sign_1
 {
+	AMXINT $localvar_flipitem $item_artist_sign_2
 	NAME artist
 	ID 0BC9
 
@@ -904,8 +990,9 @@ SECTION ITEM $item_artist
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_artist_1
+SECTION ITEM $item_artist_sign_2
 {
+	AMXINT $localvar_flipitem $item_artist_sign_1
 	NAME artist
 	ID 0BCA
 
@@ -913,8 +1000,9 @@ SECTION ITEM $item_artist_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_provisioner
+SECTION ITEM $item_provisioner_sign_1
 {
+	AMXINT $localvar_flipitem $item_provisioner_sign_2
 	NAME provisioner
 	ID 0BCB
 
@@ -922,8 +1010,9 @@ SECTION ITEM $item_provisioner
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_provisioner_1
+SECTION ITEM $item_provisioner_sign_2
 {
+	AMXINT $localvar_flipitem $item_provisioner_sign_1
 	NAME provisioner
 	ID 0BCC
 
@@ -931,8 +1020,9 @@ SECTION ITEM $item_provisioner_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_bowyer
+SECTION ITEM $item_bowyer_sign_1
 {
+	AMXINT $localvar_flipitem $item_bowyer_sign_2
 	NAME bowyer
 	ID 0BCD
 
@@ -940,8 +1030,9 @@ SECTION ITEM $item_bowyer
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_bowyer_1
+SECTION ITEM $item_bowyer_sign_2
 {
+	AMXINT $localvar_flipitem $item_bowyer_sign_1
 	NAME bowyer
 	ID 0BCE
 
@@ -949,8 +1040,9 @@ SECTION ITEM $item_bowyer_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_bank
+SECTION ITEM $item_bank_sign_1
 {
+	AMXINT $localvar_flipitem $item_bank_sign_2
 	NAME bank
 	ID 0C0B
 
@@ -958,8 +1050,9 @@ SECTION ITEM $item_bank
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_bank_1
+SECTION ITEM $item_bank_sign_2
 {
+	AMXINT $localvar_flipitem $item_bank_sign_1
 	NAME bank
 	ID 0C0C
 
@@ -967,8 +1060,9 @@ SECTION ITEM $item_bank_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_theater
+SECTION ITEM $item_theater_sign_1
 {
+	AMXINT $localvar_flipitem $item_theater_sign_2
 	NAME theater
 	ID 0C0D
 
@@ -976,8 +1070,9 @@ SECTION ITEM $item_theater
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_theater_1
+SECTION ITEM $item_theater_sign_2
 {
+	AMXINT $localvar_flipitem $item_theater_sign_1
 	NAME theater
 	ID 0C0E
 
@@ -985,8 +1080,9 @@ SECTION ITEM $item_theater_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_armaments_guild
+SECTION ITEM $item_armaments_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_armaments_guild_sign_2
 	NAME Armaments Guild
 	ID 0BD3
 
@@ -994,8 +1090,9 @@ SECTION ITEM $item_armaments_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_armaments_guild_1
+SECTION ITEM $item_armaments_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_armaments_guild_sign_1
 	NAME Armaments Guild
 	ID 0BD4
 
@@ -1003,8 +1100,9 @@ SECTION ITEM $item_armaments_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_armorers_guild
+SECTION ITEM $item_armorers_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_armorers_guild_sign_2
 	NAME Armorers Guild
 	ID 0BD5
 
@@ -1012,8 +1110,9 @@ SECTION ITEM $item_armorers_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_armorers_guild_1
+SECTION ITEM $item_armorers_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_armorers_guild_sign_1
 	NAME Armorers Guild
 	ID 0BD6
 
@@ -1021,8 +1120,9 @@ SECTION ITEM $item_armorers_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_blacksmiths_guild
+SECTION ITEM $item_blacksmiths_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_blacksmiths_guild_sign_2
 	NAME Blacksmiths Guild
 	ID 0BD7
 
@@ -1030,8 +1130,9 @@ SECTION ITEM $item_blacksmiths_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_blacksmiths_guild_1
+SECTION ITEM $item_blacksmiths_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_blacksmiths_guild_sign_1
 	NAME Blacksmiths Guild
 	ID 0BD8
 
@@ -1039,8 +1140,9 @@ SECTION ITEM $item_blacksmiths_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_weapons_guild
+SECTION ITEM $item_weapons_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_weapons_guild_sign_2
 	NAME Weapons Guild
 	ID 0BD9
 
@@ -1048,8 +1150,9 @@ SECTION ITEM $item_weapons_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_weapons_guild_1
+SECTION ITEM $item_weapons_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_weapons_guild_sign_1
 	NAME Weapons Guild
 	ID 0BDA
 
@@ -1057,8 +1160,9 @@ SECTION ITEM $item_weapons_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_bardic_guild
+SECTION ITEM $item_bardic_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_bardic_guild_sign_2
 	NAME Bardic Guild
 	ID 0BDB
 
@@ -1066,8 +1170,9 @@ SECTION ITEM $item_bardic_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_bardic_guild_1
+SECTION ITEM $item_bardic_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_bardic_guild_sign_1
 	NAME Bardic Guild
 	ID 0BDC
 
@@ -1075,8 +1180,9 @@ SECTION ITEM $item_bardic_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_barders_guild
+SECTION ITEM $item_barders_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_barders_guild_sign_2
 	NAME Barders Guild
 	ID 0BDD
 
@@ -1084,8 +1190,9 @@ SECTION ITEM $item_barders_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_barders_guild_1
+SECTION ITEM $item_barders_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_barders_guild_sign_1
 	NAME Barders Guild
 	ID 0BDE
 
@@ -1093,8 +1200,9 @@ SECTION ITEM $item_barders_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_provisioners_guild
+SECTION ITEM $item_provisioners_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_provisioners_guild_sign_2
 	NAME Provisioners Guild
 	ID 0BDF
 
@@ -1102,8 +1210,9 @@ SECTION ITEM $item_provisioners_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_provisioners_guild_1
+SECTION ITEM $item_provisioners_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_provisioners_guild_sign_1
 	NAME Provisioners Guild
 	ID 0BE0
 
@@ -1111,8 +1220,9 @@ SECTION ITEM $item_provisioners_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_traders_guild
+SECTION ITEM $item_traders_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_traders_guild_sign_2
 	NAME Traders Guild
 	ID 0BE1
 
@@ -1120,8 +1230,9 @@ SECTION ITEM $item_traders_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_traders_guild_1
+SECTION ITEM $item_traders_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_traders_guild_sign_1
 	NAME Traders Guild
 	ID 0BE2
 
@@ -1129,8 +1240,9 @@ SECTION ITEM $item_traders_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_cooks_guild
+SECTION ITEM $item_cooks_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_cooks_guild_sign_2
 	NAME Cooks Guild
 	ID 0BE3
 
@@ -1138,8 +1250,9 @@ SECTION ITEM $item_cooks_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_cooks_guild_1
+SECTION ITEM $item_cooks_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_cooks_guild_sign_1
 	NAME Cooks Guild
 	ID 0BE4
 
@@ -1147,8 +1260,9 @@ SECTION ITEM $item_cooks_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_healers_guild
+SECTION ITEM $item_healers_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_healers_guild_sign_2
 	NAME Healers Guild
 	ID 0BE5
 
@@ -1156,8 +1270,9 @@ SECTION ITEM $item_healers_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_healers_guild_1
+SECTION ITEM $item_healers_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_healers_guild_sign_1
 	NAME Healers Guild
 	ID 0BE6
 
@@ -1165,8 +1280,9 @@ SECTION ITEM $item_healers_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_mages_guild
+SECTION ITEM $item_mages_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_mages_guild_sign_2
 	NAME Mages Guild
 	ID 0BE7
 
@@ -1174,8 +1290,9 @@ SECTION ITEM $item_mages_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_mages_guild_1
+SECTION ITEM $item_mages_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_mages_guild_sign_1
 	NAME Mages Guild
 	ID 0BE8
 
@@ -1183,8 +1300,9 @@ SECTION ITEM $item_mages_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_sorcerers_guild
+SECTION ITEM $item_sorcerers_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_sorcerers_guild_sign_2
 	NAME Sorcerers Guild
 	ID 0BE9
 
@@ -1192,8 +1310,9 @@ SECTION ITEM $item_sorcerers_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_sorcerers_guild_1
+SECTION ITEM $item_sorcerers_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_sorcerers_guild_sign_1
 	NAME Sorcerers Guild
 	ID 0BEA
 
@@ -1201,8 +1320,9 @@ SECTION ITEM $item_sorcerers_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_illusionists_guild
+SECTION ITEM $item_illusionists_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_illusionists_guild_sign_2
 	NAME Illusionists Guild
 	ID 0BEB
 
@@ -1210,8 +1330,9 @@ SECTION ITEM $item_illusionists_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_illusionists_guild_1
+SECTION ITEM $item_illusionists_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_illusionists_guild_sign_1
 	NAME Illusionists Guild
 	ID 0BEC
 
@@ -1219,8 +1340,9 @@ SECTION ITEM $item_illusionists_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_miners_guild
+SECTION ITEM $item_miners_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_miners_guild_sign_2
 	NAME Miners Guild
 	ID 0BED
 
@@ -1228,8 +1350,9 @@ SECTION ITEM $item_miners_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_miners_guild_1
+SECTION ITEM $item_miners_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_miners_guild_sign_1
 	NAME Miners Guild
 	ID 0BEE
 
@@ -1237,8 +1360,9 @@ SECTION ITEM $item_miners_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_archers_guild
+SECTION ITEM $item_archers_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_archers_guild_sign_2
 	NAME Archers Guild
 	ID 0BEF
 
@@ -1246,8 +1370,9 @@ SECTION ITEM $item_archers_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_archers_guild_1
+SECTION ITEM $item_archers_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_archers_guild_sign_1
 	NAME Archers Guild
 	ID 0BF0
 
@@ -1255,8 +1380,9 @@ SECTION ITEM $item_archers_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_seamans_guild
+SECTION ITEM $item_seamans_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_seamans_guild_sign_2
 	NAME Seamans Guild
 	ID 0BF1
 
@@ -1264,8 +1390,9 @@ SECTION ITEM $item_seamans_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_seamans_guild_1
+SECTION ITEM $item_seamans_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_seamans_guild_sign_1
 	NAME Seamans Guild
 	ID 0BF2
 
@@ -1273,8 +1400,9 @@ SECTION ITEM $item_seamans_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_fishermans_guild
+SECTION ITEM $item_fishermans_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_fishermans_guild_sign_2
 	NAME Fishermans Guild
 	ID 0BF3
 
@@ -1282,8 +1410,9 @@ SECTION ITEM $item_fishermans_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_fishermans_guild_1
+SECTION ITEM $item_fishermans_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_fishermans_guild_sign_1
 	NAME Fishermans Guild
 	ID 0BF4
 
@@ -1291,8 +1420,9 @@ SECTION ITEM $item_fishermans_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_sailors_guild
+SECTION ITEM $item_sailors_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_sailors_guild_sign_2
 	NAME Sailors Guild
 	ID 0BF5
 
@@ -1300,8 +1430,9 @@ SECTION ITEM $item_sailors_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_sailors_guild_1
+SECTION ITEM $item_sailors_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_sailors_guild_sign_1
 	NAME Sailors Guild
 	ID 0BF6
 
@@ -1309,8 +1440,9 @@ SECTION ITEM $item_sailors_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_shipwrights_guild
+SECTION ITEM $item_shipwrights_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_shipwrights_guild_sign_2
 	NAME Shipwrights Guild
 	ID 0BF7
 
@@ -1318,8 +1450,9 @@ SECTION ITEM $item_shipwrights_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_shipwrights_guild_1
+SECTION ITEM $item_shipwrights_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_shipwrights_guild_sign_1
 	NAME Shipwrights Guild
 	ID 0BF8
 
@@ -1327,8 +1460,9 @@ SECTION ITEM $item_shipwrights_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tailors_guild
+SECTION ITEM $item_tailors_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_tailors_guild_sign_2
 	NAME Tailors Guild
 	ID 0BF9
 
@@ -1336,8 +1470,9 @@ SECTION ITEM $item_tailors_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tailors_guild_1
+SECTION ITEM $item_tailors_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_tailors_guild_sign_1
 	NAME Tailors Guild
 	ID 0BFA
 
@@ -1345,8 +1480,9 @@ SECTION ITEM $item_tailors_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_thieves_guild
+SECTION ITEM $item_thieves_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_thieves_guild_sign_2
 	NAME Thieves Guild
 	ID 0BFB
 
@@ -1354,8 +1490,9 @@ SECTION ITEM $item_thieves_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_thieves_guild_1
+SECTION ITEM $item_thieves_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_thieves_guild_sign_1
 	NAME Thieves Guild
 	ID 0BFC
 
@@ -1363,8 +1500,9 @@ SECTION ITEM $item_thieves_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_rouges_guild
+SECTION ITEM $item_rouges_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_rouges_guild_sign_2
 	NAME Rogues Guild
 	ID 0BFD
 
@@ -1372,8 +1510,9 @@ SECTION ITEM $item_rouges_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_rouges_guild_1
+SECTION ITEM $item_rouges_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_rouges_guild_sign_1
 	NAME Rogues Guild
 	ID 0BFE
 
@@ -1381,8 +1520,9 @@ SECTION ITEM $item_rouges_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_assassins_guild
+SECTION ITEM $item_assassins_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_assassins_guild_sign_2
 	NAME Assassins Guild
 	ID 0BFF
 
@@ -1390,8 +1530,9 @@ SECTION ITEM $item_assassins_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_assassins_guild_1
+SECTION ITEM $item_assassins_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_assassins_guild_sign_1
 	NAME Assassins Guild
 	ID 0C00
 
@@ -1399,8 +1540,9 @@ SECTION ITEM $item_assassins_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tinkers_guild
+SECTION ITEM $item_tinkers_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_tinkers_guild_sign_2
 	NAME Tinkers Guild
 	ID 0C01
 
@@ -1408,8 +1550,9 @@ SECTION ITEM $item_tinkers_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_tinkers_guild_1
+SECTION ITEM $item_tinkers_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_tinkers_guild_sign_1
 	NAME Tinkers Guild
 	ID 0C02
 
@@ -1417,8 +1560,9 @@ SECTION ITEM $item_tinkers_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_warriors_guild
+SECTION ITEM $item_warriors_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_warriors_guild_sign_2
 	NAME Warriors Guild
 	ID 0C03
 
@@ -1426,8 +1570,9 @@ SECTION ITEM $item_warriors_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_warriors_guild_1
+SECTION ITEM $item_warriors_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_warriors_guild_sign_1
 	NAME Warriors Guild
 	ID 0C04
 
@@ -1435,8 +1580,9 @@ SECTION ITEM $item_warriors_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_cavalry_guild
+SECTION ITEM $item_cavalry_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_cavalry_guild_sign_2
 	NAME Cavalry Guild
 	ID 0C05
 
@@ -1444,8 +1590,9 @@ SECTION ITEM $item_cavalry_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_cavalry_guild_1
+SECTION ITEM $item_cavalry_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_cavalry_guild_sign_1
 	NAME Cavalry Guild
 	ID 0C06
 
@@ -1453,8 +1600,9 @@ SECTION ITEM $item_cavalry_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_fighters_guild
+SECTION ITEM $item_fighters_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_fighters_guild_sign_2
 	NAME Fighters Guild
 	ID 0C07
 
@@ -1462,8 +1610,9 @@ SECTION ITEM $item_fighters_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_fighters_guild_1
+SECTION ITEM $item_fighters_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_fighters_guild_sign_1
 	NAME Fighters Guild
 	ID 0C08
 
@@ -1471,8 +1620,9 @@ SECTION ITEM $item_fighters_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_merchants_guild
+SECTION ITEM $item_merchants_guild_sign_1
 {
+	AMXINT $localvar_flipitem $item_merchants_guild_sign_2
 	NAME Merchants Guild
 	ID 0C09
 
@@ -1480,8 +1630,9 @@ SECTION ITEM $item_merchants_guild
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_merchants_guild_1
+SECTION ITEM $item_merchants_guild_sign_2
 {
+	AMXINT $localvar_flipitem $item_merchants_guild_sign_1
 	NAME Merchants Guild
 	ID 0C0A
 
@@ -1489,8 +1640,9 @@ SECTION ITEM $item_merchants_guild_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_wooden_sign
+SECTION ITEM $item_wooden_sign_1
 {
+	AMXINT $localvar_flipitem $item_wooden_sign_2
 	NAME wooden sign
 	ID 0BCF
 
@@ -1498,8 +1650,9 @@ SECTION ITEM $item_wooden_sign
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_wooden_sign_1
+SECTION ITEM $item_wooden_sign_2
 {
+	AMXINT $localvar_flipitem $item_wooden_sign_1
 	NAME wooden sign
 	ID 0BD0
 
@@ -1507,8 +1660,9 @@ SECTION ITEM $item_wooden_sign_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_brass_sign
+SECTION ITEM $item_brass_sign_1
 {
+	AMXINT $localvar_flipitem $item_brass_sign_2
 	NAME brass sign
 	ID 0BD1
 
@@ -1516,8 +1670,9 @@ SECTION ITEM $item_brass_sign
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_brass_sign_1
+SECTION ITEM $item_brass_sign_2
 {
+	AMXINT $localvar_flipitem $item_brass_sign_1
 	NAME brass sign
 	ID 0BD2
 	TYPE $itype_gumpmenu
@@ -1527,8 +1682,9 @@ SECTION ITEM $item_brass_sign_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_sign
+SECTION ITEM $item_sign_1
 {
+	AMXINT $localvar_flipitem $item_sign_2
 	NAME sign
 	ID 1F29
 
@@ -1536,8 +1692,9 @@ SECTION ITEM $item_sign
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_sign_1
+SECTION ITEM $item_sign_2
 {
+	AMXINT $localvar_flipitem $item_sign_1
 	NAME sign
 	ID 1F28
 
@@ -1545,8 +1702,9 @@ SECTION ITEM $item_sign_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_beekeeper
+SECTION ITEM $item_beekeeper_sign_1
 {
+	AMXINT $localvar_flipitem $item_beekeeper_sign_2
 	NAME beekeeper
 	ID 0C43
 
@@ -1554,8 +1712,9 @@ SECTION ITEM $item_beekeeper
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_beekeeper_1
+SECTION ITEM $item_beekeeper_sign_2
 {
+	AMXINT $localvar_flipitem $item_beekeeper_sign_1
 	NAME beekeeper
 	ID 0C44
 
@@ -1563,8 +1722,9 @@ SECTION ITEM $item_beekeeper_1
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_brass_sign_2
+SECTION ITEM $item_brass_sign2_1
 {
+	AMXINT $localvar_flipitem $item_brass_sign2_2
 	NAME brass sign
 	ID 0BD1
 
@@ -1572,8 +1732,9 @@ SECTION ITEM $item_brass_sign_2
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_brass_sign_3
+SECTION ITEM $item_brass_sign2_2
 {
+	AMXINT $localvar_flipitem $item_brass_sign2_1
 	NAME brass sign
 	ID 0BD2
 
@@ -1581,20 +1742,20 @@ SECTION ITEM $item_brass_sign_3
 	///SUBSECTION Signs
 }
 
-SECTION ITEM $item_lamp_post
+SECTION ITEM $item_lamp_post1_1
 {
 	ID 0B20
 	DIR 1
 	NAME A lit lamppost
 }
 
-SECTION ITEM $item_an_unlit_lamppost
+SECTION ITEM $item_lamp_post1_2
 {
 	NAME An unlit lamppost
 	ID 0B21
 }
 
-SECTION ITEM $item_lamp_post_1
+SECTION ITEM $item_lamp_post2_1
 {
 	ID 0B22
 	DIR 1
@@ -1602,34 +1763,57 @@ SECTION ITEM $item_lamp_post_1
 	TRIGGER $itrg_light_lamp_post_2
 }
 
-SECTION ITEM $item_lamp_post_2
+SECTION ITEM $item_lamp_post2_2
 {
 	ID 0B23
 }
 
-SECTION ITEM $item_lamp_post_3
+SECTION ITEM $item_lamp_post3_1
 {
 	ID 0B24
 	
 	TRIGGER $itrg_light_lamp_post_1
 }
 
-SECTION ITEM $item_lamp_post_4
+SECTION ITEM $item_lamp_post3_2
 {
 	ID 0B25
 }
 
-SECTION ITEM $item_wall_torch
+SECTION ITEM $item_wall_torch1_1
 {
-	ID 0A08
-	TRIGGER $itrg_light_n-s_torch
+	ID 0A05
+	AMXINT $localvar_flipitem $item_wall_torch1_2
 }
 
-SECTION ITEM $item_wall_torch_1
+SECTION ITEM $item_torch_holder_1
 {
-	NAME wall torch
-	ID 0A0E
-	TRIGGER $itrg_light_e-w_torch
+	ID 0A06
+	AMXINT $localvar_flipitem $item_torch_holder_2
+}
+
+SECTION ITEM $item_wall_torch2_1
+{
+	ID 0A07
+	AMXINT $localvar_flipitem $item_wall_torch2_2
+}
+
+SECTION ITEM $item_wall_torch1_2
+{
+	ID 0A0A
+	AMXINT $localvar_flipitem $item_wall_torch1_1
+}
+
+SECTION ITEM $item_torch_holder_2
+{
+	ID 0A0B
+	AMXINT $localvar_flipitem $item_torch_holder_1
+}
+
+SECTION ITEM $item_wall_torch2_2
+{
+	ID 0A0C
+	AMXINT $localvar_flipitem $item_wall_torch2_1
 }
 
 //////// lighthouse pieces ////////////
@@ -2741,7 +2925,7 @@ SECTION ITEM $item_altar_7
 	///SUBSECTION Albitoir
 }
 
-SECTION ITEM $item_pentagram
+SECTION ITEM $item_pentagram_1
 {
 	NAME Pentagram
 	ID 0fe6
@@ -2750,7 +2934,7 @@ SECTION ITEM $item_pentagram
 	///SUBSECTION Pentagram
 }
 
-SECTION ITEM $item_pentagram_1
+SECTION ITEM $item_pentagram_2
 {
 	NAME Pentagram
 	ID 0fe7
@@ -2759,7 +2943,7 @@ SECTION ITEM $item_pentagram_1
 	///SUBSECTION Pentagram
 }
 
-SECTION ITEM $item_pentagram_2
+SECTION ITEM $item_pentagram_3
 {
 	NAME Pentagram
 	ID 0fe8
@@ -2768,7 +2952,7 @@ SECTION ITEM $item_pentagram_2
 	///SUBSECTION Pentagram
 }
 
-SECTION ITEM $item_pentagram_3
+SECTION ITEM $item_pentagram_4
 {
 	NAME Pentagram
 	ID 0fe9
@@ -2777,7 +2961,7 @@ SECTION ITEM $item_pentagram_3
 	///SUBSECTION Pentagram
 }
 
-SECTION ITEM $item_pentagram_4
+SECTION ITEM $item_pentagram_5
 {
 	NAME Pentagram
 	ID 0fea
@@ -2786,7 +2970,7 @@ SECTION ITEM $item_pentagram_4
 	///SUBSECTION Pentagram
 }
 
-SECTION ITEM $item_pentagram_5
+SECTION ITEM $item_pentagram_6
 {
 	NAME Pentagram
 	ID 0feb
@@ -2795,7 +2979,7 @@ SECTION ITEM $item_pentagram_5
 	///SUBSECTION Pentagram
 }
 
-SECTION ITEM $item_pentagram_6
+SECTION ITEM $item_pentagram_7
 {
 	NAME Pentagram
 	ID 0fec
@@ -2804,7 +2988,7 @@ SECTION ITEM $item_pentagram_6
 	///SUBSECTION Pentagram
 }
 
-SECTION ITEM $item_pentagram_7
+SECTION ITEM $item_pentagram_8
 {
 	NAME Pentagram
 	ID 0fed
@@ -2813,7 +2997,7 @@ SECTION ITEM $item_pentagram_7
 	///SUBSECTION Pentagram
 }
 
-SECTION ITEM $item_pentagram_8
+SECTION ITEM $item_pentagram_9
 {
 	NAME Pentagram
 	ID 0fee

@@ -13,70 +13,70 @@
 SECTION ITEMLIST $itemlist_all_scrolls
 {
     //$$ all scrolls
-    $item_a_clumsy_scroll
-    $item_a_create_food_scroll
-    $item_a_feeblemind_scroll
-    $item_a_heal_scroll
+    $item_clumsy_scroll
+    $item_create_food_scroll
+    $item_feeblemind_scroll
+    $item_heal_scroll
     $item_magic_arrow_scroll
-    $item_a_night_sight_scroll
-    $item_a_reactive_armor_scroll
-    $item_a_weaken_scroll
-    $item_a_agility_scroll
-    $item_a_cunning_scroll
-    $item_a_cure_scroll
-    $item_a_harm_scroll
+    $item_night_sight_scroll
+    $item_reactive_armor_scroll
+    $item_weaken_scroll
+    $item_agility_scroll
+    $item_cunning_scroll
+    $item_cure_scroll
+    $item_harm_scroll
     $item_magic_trap_scroll
     $item_magic_untrap_scroll
-    $item_a_protection_scroll
-    $item_a_strength_scroll
-    $item_a_bless_scroll
-    $item_a_fireball_scroll
+    $item_protection_scroll
+    $item_strength_scroll
+    $item_bless_scroll
+    $item_fireball_scroll
     $item_magic_lock_scroll
-    $item_a_poison_scroll
-    $item_a_telekinesis_scroll
-    $item_a_teleport_scroll
-    $item_an_unlock_scroll
-    $item_a_wall_of_stone_scroll
-    $item_an_archcure_scroll
-    $item_an_arch_protection_scroll
-    $item_a_curse_scroll
-    $item_a_fire_field_scroll
-    $item_a_greater_heal_scroll
-    $item_a_lightning_scroll
-    $item_a_mana_drain_scroll
-    $item_a_recall_scroll
-    $item_a_blade_spirits_scroll
-    $item_a_dispel_field_scroll
-    $item_an_incognito_scroll
+    $item_poison_scroll
+    $item_telekinesis_scroll
+    $item_teleport_scroll
+    $item_unlock_scroll
+    $item_wall_of_stone_scroll
+    $item_archcure_scroll
+    $item_arch_protection_scroll
+    $item_curse_scroll
+    $item_fire_field_scroll
+    $item_greater_heal_scroll
+    $item_lightning_scroll
+    $item_mana_drain_scroll
+    $item_recall_scroll
+    $item_blade_spirits_scroll
+    $item_dispel_field_scroll
+    $item_incognito_scroll
     $item_magic_reflection_scroll
-    $item_a_mind_blast_scroll
-    $item_a_paralyze_scroll
-    $item_a_poison_field_scroll
-    $item_a_summon_creature_scroll
-    $item_a_dispel_scroll
-    $item_an_energy_bolt_scroll
-    $item_an_explosion_scroll
-    $item_an_invisibility_scroll
-    $item_a_mark_scroll
-    $item_a_mass_curse_scroll
-    $item_a_paralyze_field_scroll
-    $item_a_reveal_scroll
-    $item_a_chain_lightning_scroll
-    $item_an_energy_field_scroll
-    $item_a_flamestrike_scroll
-    $item_a_gate_travel_scroll
-    $item_a_mana_vampire_scroll
-    $item_a_mass_dispel_scroll
-    $item_a_meteor_swarm_scroll
-    $item_a_polymorph_scroll
-    $item_a_earthquake_scroll
-    $item_a_energy_vortex_scroll
-    $item_a_resurrection_scroll
-    $item_a_summon_air_elemental_scroll
-    $item_a_summon_daemon_scroll
-    $item_a_summon_earth_elemental_scroll
-    $item_a_summon_fire_elemental_scroll
-    $item_a_summon_water_elemental_scroll
+    $item_mind_blast_scroll
+    $item_paralyze_scroll
+    $item_poison_field_scroll
+    $item_summon_creature_scroll
+    $item_dispel_scroll
+    $item_energy_bolt_scroll
+    $item_explosion_scroll
+    $item_invisibility_scroll
+    $item_mark_scroll
+    $item_mass_curse_scroll
+    $item_paralyze_field_scroll
+    $item_reveal_scroll
+    $item_chain_lightning_scroll
+    $item_energy_field_scroll
+    $item_flamestrike_scroll
+    $item_gate_travel_scroll
+    $item_mana_vampire_scroll
+    $item_mass_dispel_scroll
+    $item_meteor_swarm_scroll
+    $item_polymorph_scroll
+    $item_earthquake_scroll
+    $item_energy_vortex_scroll
+    $item_resurrection_scroll
+    $item_summon_air_elemental_scroll
+    $item_summon_daemon_scroll
+    $item_summon_earth_elemental_scroll
+    $item_summon_fire_elemental_scroll
+    $item_summon_water_elemental_scroll
 }
 
 //Varios Weapons and Armor
@@ -132,11 +132,11 @@ SECTION ITEMLIST $itemlist_instruments
 {
     //$$ instruments
     $item_drum
-    $item_tambourine
-    $item_tambourine_1
+    $item_tambourine1
+    $item_tambourine2
     $item_standing_harp
     $item_lap_harp
-    $item_lute
+    $item_lute_2
     $item_lute_1
 }
 
@@ -183,14 +183,14 @@ SECTION ITEMLIST $itemlist_weapons
 SECTION ITEMLIST $itemlist_first_circle_scrolls
 {
     //$$ first circle scrolls
-    $item_a_clumsy_scroll
-    $item_a_create_food_scroll
-    $item_a_feeblemind_scroll
-    $item_a_heal_scroll
+    $item_clumsy_scroll
+    $item_create_food_scroll
+    $item_feeblemind_scroll
+    $item_heal_scroll
     $item_magic_arrow_scroll
-    $item_a_night_sight_scroll
-    $item_a_reactive_armor_scroll
-    $item_a_weaken_scroll
+    $item_night_sight_scroll
+    $item_reactive_armor_scroll
+    $item_weaken_scroll
 }
 
 // Carpentry Tool
@@ -281,10 +281,10 @@ SECTION ITEMLIST $itemlist_male_plain_hats
 {
     //$$ male plain hats
     $item_floopy_hat
-    $item_a_tall_straw_hat
+    $item_tall_straw_hat
     $item_straw_hat
-    $item_a_bandana
-    $item_a_skullcap
+    $item_bandana
+    $item_skullcap
 }
 
 // Male Plain Shirts
@@ -316,17 +316,17 @@ SECTION ITEMLIST $itemlist_male_plain_footwear
 SECTION ITEMLIST $itemlist_male_plain_tunic_and_aprons
 {
     //$$ male plain tunic and aprons
-    $item_a_tunic
-    $item_a_half_apron
-    $item_a_full_apron
+    $item_tunic
+    $item_half_apron
+    $item_full_apron
 }
 
 // Male Plain Tunic & Robe
 SECTION ITEMLIST $itemlist_male_plain_tunic_and_robe
 {
     //$$ male plain tunic and robe
-    $item_a_tunic
-    $item_a_robe
+    $item_tunic
+    $item_robe1
 }
 
 // Male Plain Cape
@@ -374,17 +374,17 @@ SECTION ITEMLIST $itemlist_male_fancy_footwear
 SECTION ITEMLIST $itemlist_male_fancy_surcoat
 {
     //$$ male fancy surcoat
-    $item_a_surcoat
-    $item_a_jesters_suit
-    $item_a_doublet
-    $item_a_body_sash
+    $item_surcoat
+    $item_jesters_suit
+    $item_doublet
+    $item_body_sash
 }
 
 // Male Fancy Robe
 SECTION ITEMLIST $itemlist_male_fancy_robe
 {
     //$$ male fancy robe
-    $item_a_robe
+    $item_robe1
 }
 
 // Male Fancy Cape
@@ -399,10 +399,10 @@ SECTION ITEMLIST $itemlist_female_plain_hats
 {
     //$$ female plain hats
     $item_floopy_hat
-    $item_a_tall_straw_hat
+    $item_tall_straw_hat
     $item_straw_hat
-    $item_a_bandana
-    $item_a_skullcap
+    $item_bandana
+    $item_skullcap
 }
 
 // Female Plain Shirts
@@ -416,9 +416,9 @@ SECTION ITEMLIST $itemlist_female_plain_shirts
 SECTION ITEMLIST $itemlist_female_plain_skirts
 {
     //$$ female plain skirts
-    $item_a_skirt
+    $item_skirt
     $item_short_pants
-    $item_a_kilt
+    $item_kilt
     $item_long_pants
 }
 
@@ -436,19 +436,19 @@ SECTION ITEMLIST $itemlist_female_plain_footwear
 SECTION ITEMLIST $itemlist_female_plain_tunic_and_apron
 {
     //$$ female plain tunic and apron
-    $item_a_tunic
-    $item_a_plain_dress
-    $item_a_half_apron
-    $item_a_full_apron
+    $item_tunic
+    $item_plain_dress
+    $item_half_apron
+    $item_full_apron
 }
 
 // Female Plain Tunic, Robe & Dress
 SECTION ITEMLIST $itemlist_female_plain_tunic
 {
     //$$ female plain tunic
-    $item_a_tunic
-    $item_a_robe
-    $item_a_plain_dress
+    $item_tunic
+    $item_robe1
+    $item_plain_dress
 }
 
 // Female Plain Cape
@@ -463,8 +463,8 @@ SECTION ITEMLIST $itemlist_headwears
 {
     //$$ headwears
     $item_polar_bear_mask
-    $item_a_deer_mask
-    $item_a_bear_mask
+    $item_deer_mask
+    $item_bear_mask
 }
 
 // weapon
@@ -501,9 +501,9 @@ SECTION ITEMLIST $itemlist_female_fancy_shirts
 SECTION ITEMLIST $itemlist_female_fancy_skirt
 {
     //$$ female fancy skirt
-    $item_a_skirt
+    $item_skirt
     $item_short_pants
-    $item_a_kilt
+    $item_kilt
     $item_long_pants
 }
 
@@ -520,19 +520,19 @@ SECTION ITEMLIST $itemlist_female_fancy_shoes
 SECTION ITEMLIST $itemlist_female_fancy_tunic
 {
     //$$ female fancy tunic
-    $item_a_surcoat
-    $item_a_jesters_suit
-    $item_a_doublet
-    $item_a_fancy_dress
-    $item_a_body_sash
+    $item_surcoat
+    $item_jesters_suit
+    $item_doublet
+    $item_fancy_dress
+    $item_body_sash
 }
 
 // Female Fancy Robe & Dress
 SECTION ITEMLIST $itemlist_female_fancy_robe
 {
     //$$ female fancy robe
-    $item_a_robe
-    $item_a_fancy_dress
+    $item_robe1
+    $item_fancy_dress
 }
 
 // Female Fancy Cape
@@ -810,16 +810,16 @@ SECTION ITEMLIST $itemlist_christmas
     $item_hams_1
     $item_plate_of_cookies
     $item_bottles_of_wine1
-    $item_robe_2
+    $item_robe3
     $item_green_sandals
-    $item_robe
+    $item_robe1
     $item_red_sandals
-    $item_a_magical_wizard`s_hat
+    $item_wizards_hat
     $item_beads
     $item_bracelet
     $item_earrings
-    $item_necklace_1
-    $item_necklace_2
+    $item_necklace2
+    $item_necklace3
     $item_ring
 }
 
@@ -902,16 +902,16 @@ SECTION ITEMLIST $itemlist_low_level_dungeon_chest_items
     $item_iron_helmet
     $item_leather_cap
     $item_leather_tunic
-    $item_a_orc_helm
+    $item_orc_helm
     $item_bone_helm
     $item_bone_chest
     $item_iron_plate_gloves
-    $item_a_bless_scroll
-    $item_a_clumsy_scroll
-    $item_a_create_food_scroll
-    $item_a_cure_scroll
-    $item_a_curse_scroll
-    $item_a_cunning_scroll
+    $item_bless_scroll
+    $item_clumsy_scroll
+    $item_create_food_scroll
+    $item_cure_scroll
+    $item_curse_scroll
+    $item_cunning_scroll
     $item_potions_list
 }
 
@@ -1102,22 +1102,22 @@ SECTION ITEMLIST $itemlist_high_level_dungeon_chest_items
 SECTION ITEMLIST $itemlist_low_chest_spawner
 {
     //$$ low chest spawner
-    $item_a_wooden_chest_1
-    $item_a_wooden_chest_2
+    $item_wooden_chest_1
+    $item_wooden_chest_2
 }
 
 SECTION ITEMLIST $itemlist_mid_chest_spawner
 {
     //$$ mid chest spawner
-    $item_a_metal_chest
-    $item_a_metal_chest_1
+    $item_metal_chest1
+    $item_metal_chest2
 }
 
 SECTION ITEMLIST $itemlist_high_chest_spawner
 {
     //$$ high chest spawner
-    $item_a_metal_chest_2
-    $item_a_metal_chest_3
+    $item_metal_chest3
+    $item_metal_chest4
 }
 
 // start of Fraz's npc monsters random equipped weapon list

@@ -10,21 +10,21 @@
 SECTION CARVE 1
 {
     ADDITEM $item_orchish_skin 3
-    ADDITEM $item_a_orc_mask
+    ADDITEM $item_orc_mask
 }
 
 // Medium Orc
 SECTION CARVE 2
 {
     ADDITEM $item_orchish_skin 4
-    ADDITEM $item_a_orc_mask
+    ADDITEM $item_orc_mask
 }
 
 // Large Orc
 SECTION CARVE 3
 {
     ADDITEM $item_orchish_skin
-    ADDITEM $item_a_orc_mask
+    ADDITEM $item_orc_mask
 }
 
 // Drake

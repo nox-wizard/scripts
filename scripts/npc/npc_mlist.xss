@@ -19,17 +19,17 @@ SECTION NPC $npc_official
     ITEM $item_short_hair
     ITEM $item_goatee
     ITEM $item_sandles
-    ITEM $item_a_skullcap
+    ITEM $item_skullcap
     COLOR 2 5
     ITEM $item_cloak
     COLOR 1 7
     ITEM $item_shirt
     COLOR 1 8
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 3 9
     ITEM $item_long_pants
     COLOR 1 4
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 2 0
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -66,11 +66,11 @@ SECTION NPC $npc_foreman
     COLOR 1 2
     ITEM $item_shirt
     COLOR 3 9
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 1 2
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 0 5
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 0 0
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -104,16 +104,16 @@ SECTION NPC $npc_mercenary
     BACKPACK
     ITEM $item_long_beard
     ITEM $item_sandles
-    ITEM $item_a_wizards_hat
+    ITEM $item_wizards_hat
     COLOR 0 1
     ITEM $item_cloak
     COLOR 1 0
     ITEM $item_fancy_shirt
     COLOR 1 8
     COLOR 2 1
-    ITEM $item_a_kilt
+    ITEM $item_kilt
     COLOR 1 1
-    ITEM $item_a_half_apron
+    ITEM $item_half_apron
     COLOR 3 0
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -153,7 +153,7 @@ SECTION NPC $npc_guardsman
     COLOR 0 3
     ITEM $item_long_pants
     COLOR 2 0
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 3 6
     ITEM $item_quarter_staff
     GOLD 76 95
@@ -192,11 +192,11 @@ SECTION NPC $npc_watchman
     COLOR 0 8
     ITEM $item_shirt
     COLOR 2 1
-    ITEM $item_a_plain_dress
+    ITEM $item_plain_dress
     COLOR 3 4
     ITEM $item_long_pants
     COLOR 1 4
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 1 8
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -238,7 +238,7 @@ SECTION NPC $npc_cleric
     COLOR 3 8
     ITEM $item_short_pants
     COLOR 3 9
-    ITEM $item_a_half_apron
+    ITEM $item_half_apron
     COLOR 2 9
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -277,9 +277,9 @@ SECTION NPC $npc_solem_priest
     ITEM $item_shirt
     COLOR 1 7
     COLOR 0 8
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 0 1
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 1 9
     ITEM $item_quarter_staff
     GOLD 76 95
@@ -323,7 +323,7 @@ SECTION NPC $npc_magician
     COLOR 0 7
     ITEM $item_short_pants
     COLOR 1 6
-    ITEM $item_a_half_apron
+    ITEM $item_half_apron
     COLOR 0 0
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -357,16 +357,16 @@ SECTION NPC $npc_outlander
     BACKPACK
     ITEM $item_vandyke
     ITEM $item_boots
-    ITEM $item_a_bear_mask
+    ITEM $item_bear_mask
     COLOR 0 9
     ITEM $item_cloak
     COLOR 1 7
     ITEM $item_fancy_shirt
     COLOR 3 2
     COLOR 0 5
-    ITEM $item_a_kilt
+    ITEM $item_kilt
     COLOR 2 5
-    ITEM $item_a_half_apron
+    ITEM $item_half_apron
     COLOR 2 9
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -406,9 +406,9 @@ SECTION NPC $npc_mountain_man
     ITEM $item_fancy_shirt
     COLOR 0 7
     COLOR 0 4
-    ITEM $item_a_kilt
+    ITEM $item_kilt
     COLOR 1 4
-    ITEM $item_a_half_apron
+    ITEM $item_half_apron
     COLOR 0 4
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -447,9 +447,9 @@ SECTION NPC $npc_buccaneer
     ITEM $item_fancy_shirt
     COLOR 0 6
     COLOR 3 8
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 3 7
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 1 4
     ITEM $item_quarter_staff
     GOLD 76 95
@@ -490,9 +490,9 @@ SECTION NPC $npc_cavalier
     ITEM $item_fancy_shirt
     COLOR 1 4
     COLOR 3 6
-    ITEM $item_a_kilt
+    ITEM $item_kilt
     COLOR 3 2
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 2 1
     ITEM $item_gnarled_staff
     GOLD 76 95
@@ -527,17 +527,17 @@ SECTION NPC $npc_priest
     BACKPACK
     ITEM $item_med_short_beard_1
     ITEM $item_thigh_boots
-    ITEM $item_a_tribal_mask_1
+    ITEM $item_tribal_mask_1
     COLOR 0 0
     ITEM $item_cloak
     COLOR 1 3
     ITEM $item_fancy_shirt
     COLOR 2 0
-    ITEM $item_a_jesters_suit
+    ITEM $item_jesters_suit
     COLOR 1 0
-    ITEM $item_a_kilt
+    ITEM $item_kilt
     COLOR 0 6
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 3 5
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -571,7 +571,7 @@ SECTION NPC $npc_magician_1
     BACKPACK
     ITEM $item_mustache
     ITEM $item_thigh_boots
-    ITEM $item_a_orc_helm
+    ITEM $item_orc_helm
     COLOR 0 2
     ITEM $item_cloak
     COLOR 0 6
@@ -580,7 +580,7 @@ SECTION NPC $npc_magician_1
     COLOR 1 6
     ITEM $item_short_pants
     COLOR 2 8
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 0 5
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -621,7 +621,7 @@ SECTION NPC $npc_apprentice
     COLOR 0 6
     ITEM $item_long_pants
     COLOR 3 1
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 2 0
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -663,7 +663,7 @@ SECTION NPC $npc_wizard
     COLOR 3 1
     ITEM $item_long_pants
     COLOR 1 4
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 2 6
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -696,15 +696,15 @@ SECTION NPC $npc_piss_ant
     SPEECH $speech_healer
     BACKPACK
     ITEM $item_thigh_boots
-    ITEM $item_a_bandana
+    ITEM $item_bandana
     COLOR 0 8
     COLOR 1 0
     ITEM $item_shirt
     COLOR 3 0
     COLOR 3 5
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 0 3
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 1 9
     ITEM $item_gnarled_staff
     GOLD 76 95
@@ -744,9 +744,9 @@ SECTION NPC $npc_mage
     ITEM $item_fancy_shirt
     COLOR 2 3
     COLOR 1 6
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 0 1
-    ITEM $item_a_half_apron
+    ITEM $item_half_apron
     COLOR 2 6
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -789,7 +789,7 @@ SECTION NPC $npc_laborer
     COLOR 1 7
     ITEM $item_short_pants
     COLOR 0 0
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 1 7
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -828,11 +828,11 @@ SECTION NPC $npc_barbarian_1
     COLOR 3 1
     ITEM $item_shirt
     COLOR 0 3
-    ITEM $item_a_tunic
+    ITEM $item_tunic
     COLOR 3 7
     ITEM $item_long_pants
     COLOR 2 3
-    ITEM $item_a_half_apron
+    ITEM $item_half_apron
     COLOR 1 0
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -872,9 +872,9 @@ SECTION NPC $npc_newbie_spammer
     ITEM $item_shirt
     COLOR 2 2
     COLOR 1 1
-    ITEM $item_a_kilt
+    ITEM $item_kilt
     COLOR 2 2
-    ITEM $item_a_half_apron
+    ITEM $item_half_apron
     COLOR 2 4
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -915,7 +915,7 @@ SECTION NPC $npc_wizard_1
     COLOR 1 3
     ITEM $item_short_pants
     COLOR 1 8
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 0 2
     ITEM $item_quarter_staff
     GOLD 76 95
@@ -957,7 +957,7 @@ SECTION NPC $npc_paladin
     COLOR 1 1
     ITEM $item_long_pants
     COLOR 1 7
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 2 7
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -996,9 +996,9 @@ SECTION NPC $npc_fancy_nobleman
     ITEM $item_fancy_shirt
     COLOR 1 0
     COLOR 1 1
-    ITEM $item_a_kilt
+    ITEM $item_kilt
     COLOR 0 2
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 3 9
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1037,11 +1037,11 @@ SECTION NPC $npc_redlady
     COLOR 1 1
     ITEM $item_fancy_shirt
     COLOR 3 4
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 2 1
     ITEM $item_long_pants
     COLOR 2 0
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 0 5
     ITEM $item_black_staff
     GOLD 76 95
@@ -1083,7 +1083,7 @@ SECTION NPC $npc_magician_2
     COLOR 1 8
     ITEM $item_long_pants
     COLOR 0 8
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 0 3
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1121,9 +1121,9 @@ SECTION NPC $npc_thief
     ITEM $item_shirt
     COLOR 2 9
     COLOR 3 5
-    ITEM $item_a_kilt
+    ITEM $item_kilt
     COLOR 3 5
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 3 7
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1163,11 +1163,11 @@ SECTION NPC $npc_vandal
     COLOR 3 1
     ITEM $item_shirt
     COLOR 0 8
-    ITEM $item_a_plain_dress
+    ITEM $item_plain_dress
     COLOR 3 6
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 2 0
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 2 5
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1210,7 +1210,7 @@ SECTION NPC $npc_cutpurse
     COLOR 1 4
     ITEM $item_short_pants
     COLOR 2 4
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 1 4
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1251,7 +1251,7 @@ SECTION NPC $npc_bandit
     COLOR 1 2
     ITEM $item_long_pants
     COLOR 1 8
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 3 0
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1291,9 +1291,9 @@ SECTION NPC $npc_night_prowler
     ITEM $item_fancy_shirt
     COLOR 0 7
     COLOR 1 8
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 3 4
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 3 0
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1334,9 +1334,9 @@ SECTION NPC $npc_ruffian
     ITEM $item_shirt
     COLOR 0 2
     COLOR 3 0
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 1 5
-    ITEM $item_a_full_apron
+    ITEM $item_full_apron
     COLOR 3 1
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1374,11 +1374,11 @@ SECTION NPC $npc_stinky_pimp
     COLOR 0 5
     ITEM $item_fancy_shirt
     COLOR 3 5
-    ITEM $item_a_jesters_suit
+    ITEM $item_jesters_suit
     COLOR 2 0
-    ITEM $item_a_skirt
+    ITEM $item_skirt
     COLOR 2 3
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 3 7
     GOLD 76 95
     LOOT $loot_circle_6-8_spells
@@ -1418,11 +1418,11 @@ SECTION NPC $npc_thug
     COLOR 1 1
     ITEM $item_shirt
     COLOR 1 0
-    ITEM $item_a_plain_dress
+    ITEM $item_plain_dress
     COLOR 3 8
     ITEM $item_short_pants
     COLOR 3 0
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 1 2
     ITEM $item_quarter_staff
     GOLD 76 95

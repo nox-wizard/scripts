@@ -27,407 +27,407 @@
 //                                 WALLS                                   //
 //=========================================================================//
 
-SECTION ITEM $item_wooden_wall_1
+SECTION ITEM $item_wooden_wall1_1
 {
     ID 0006
 }
 
-SECTION ITEM $item_wooden_wall_2
+SECTION ITEM $item_wooden_wall1_2
 {
     ID 0007
 }
 
-SECTION ITEM $item_wooden_wall_3
+SECTION ITEM $item_wooden_wall1_3
 {
     ID 0008
 }
 
-SECTION ITEM $item_wooden_wall_4
+SECTION ITEM $item_wooden_wall1_4
 {
     ID 0009
 }
 
-SECTION ITEM $item_wooden_wall_5
+SECTION ITEM $item_wooden_wall1_5
 {
     ID 000A
 }
 
-SECTION ITEM $item_wooden_wall_6
+SECTION ITEM $item_wooden_wall1_6
 {
     ID 000B
 }
 
-SECTION ITEM $item_wooden_wall_7
+SECTION ITEM $item_wooden_wall1_7
 {
     ID 000C
 }
 
-SECTION ITEM $item_wooden_wall_8
+SECTION ITEM $item_wooden_wall1_8
 {
     ID 000D
 }
 
-SECTION ITEM $item_wooden_wall_9
+SECTION ITEM $item_wooden_wall1_9
 {
     ID 000E
 }
 
-SECTION ITEM $item_wooden_wall_10
+SECTION ITEM $item_wooden_wall1_10
 {
     ID 000F
 }
 
-SECTION ITEM $item_wooden_wall_11
+SECTION ITEM $item_wooden_wall1_11
 {
     ID 0010
 }
 
-SECTION ITEM $item_wooden_wall_12
+SECTION ITEM $item_wooden_wall1_12
 {
     ID 0011
 }
 
-SECTION ITEM $item_wooden_wall_13
+SECTION ITEM $item_wooden_wall1_13
 {
     ID 0012
 }
 
-SECTION ITEM $item_wooden_wall_14
+SECTION ITEM $item_wooden_wall1_14
 {
     ID 0013
 }
 
-SECTION ITEM $item_wooden_wall_15
+SECTION ITEM $item_wooden_wall1_15
 {
     ID 0014
 }
 
-SECTION ITEM $item_wooden_wall_16
+SECTION ITEM $item_wooden_wall1_16
 {
     ID 0015
 }
 
-SECTION ITEM $item_wooden_wall_17
+SECTION ITEM $item_wooden_wall1_17
 {
     ID 0016
 }
 
-SECTION ITEM $item_wooden_wall_18
+SECTION ITEM $item_wooden_wall1_18
 {
     ID 0017
 }
 
-SECTION ITEM $item_wooden_wall_19
+SECTION ITEM $item_wooden_wall1_19
 {
     ID 0018
 }
 
-SECTION ITEM $item_wooden_wall_20
+SECTION ITEM $item_wooden_wall1_20
 {
     ID 0019
 }
 
-SECTION ITEM $item_stone_wall_1
+SECTION ITEM $item_stone_wall1_1
 {
     ID 001A
 }
  
-SECTION ITEM $item_stone_wall_2
+SECTION ITEM $item_stone_wall1_2
 {
     ID 001B
 }
  
-SECTION ITEM $item_stone_wall_3
+SECTION ITEM $item_stone_wall1_3
 {
     ID 001C
 }
  
-SECTION ITEM $item_stone_wall_4
+SECTION ITEM $item_stone_wall1_4
 {
     ID 001D
 }
  
-SECTION ITEM $item_stone_wall_5
+SECTION ITEM $item_stone_wall1_5
 {
     ID 001E
 }
  
-SECTION ITEM $item_stone_wall_6
+SECTION ITEM $item_stone_wall1_6
 {
     ID 001F
 }
  
-SECTION ITEM $item_stone_wall_7
+SECTION ITEM $item_stone_wall1_7
 {
     ID 0020
 }
  
-SECTION ITEM $item_stone_wall_8
+SECTION ITEM $item_stone_wall1_8
 {
     ID 0021
 }
  
-SECTION ITEM $item_stone_wall_9
+SECTION ITEM $item_stone_wall1_9
 {
     ID 0022
 }
  
-SECTION ITEM $item_stone_wall_10
+SECTION ITEM $item_stone_wall1_10
 {
     ID 0023
 }
 
-SECTION ITEM $item_stone_wall_11
+SECTION ITEM $item_stone_wall1_11
 {
     ID 0024
 }
 
-SECTION ITEM $item_stone_wall_12
+SECTION ITEM $item_stone_wall1_12
 {
     ID 0025
 }
 
-SECTION ITEM $item_stone_wall_13
+SECTION ITEM $item_stone_wall1_13
 {
     ID 0026
 }
 
-SECTION ITEM $item_stone_wall_14
+SECTION ITEM $item_stone_wall1_14
 {
     ID 0027
 }
 
-SECTION ITEM $item_stone_wall_15
+SECTION ITEM $item_stone_wall1_15
 {
     ID 0028
 }
 
-SECTION ITEM $item_stone_wall_16
+SECTION ITEM $item_stone_wall1_16
 {
     ID 0029
 }
 
-SECTION ITEM $item_stone_wall_17
+SECTION ITEM $item_stone_wall1_17
 {
     ID 002A
 }
 
-SECTION ITEM $item_stone_wall_18
+SECTION ITEM $item_stone_wall1_18
 {
     ID 002B
 }
 
-SECTION ITEM $item_stone_wall_19
+SECTION ITEM $item_stone_wall1_19
 {
     ID 002C
 }
 
-SECTION ITEM $item_stone_wall_20
+SECTION ITEM $item_stone_wall1_20
 {
     ID 002D
 }
 
-SECTION ITEM $item_stone_wall_21
+SECTION ITEM $item_stone_wall1_21
 {
     ID 002E
 }
 
-SECTION ITEM $item_stone_wall_22
+SECTION ITEM $item_stone_wall1_22
 {
     ID 002F
 }
 
-SECTION ITEM $item_stone_wall_23
+SECTION ITEM $item_stone_wall1_23
 {
     ID 0030
 }
 
-SECTION ITEM $item_stone_wall_24
+SECTION ITEM $item_stone_wall1_24
 {
     ID 0031
 }
 
-SECTION ITEM $item_stone_wall_25
+SECTION ITEM $item_stone_wall1_25
 {
     ID 0032
 }
 
-SECTION ITEM $item_brick_wall_1
+SECTION ITEM $item_brick_wall1_1
 {
     ID 0033
 }
  
-SECTION ITEM $item_brick_wall_2
+SECTION ITEM $item_brick_wall1_2
 {
     ID 0034
 }
  
-SECTION ITEM $item_brick_wall_3
+SECTION ITEM $item_brick_wall1_3
 {
     ID 0035
 }
  
-SECTION ITEM $item_brick_wall_4
+SECTION ITEM $item_brick_wall1_4
 {
     ID 0036
 }
  
-SECTION ITEM $item_brick_wall_5
+SECTION ITEM $item_brick_wall1_5
 {
     ID 0037
 }
  
-SECTION ITEM $item_brick_wall_6
+SECTION ITEM $item_brick_wall1_6
 {
     ID 0038
 }
  
-SECTION ITEM $item_brick_wall_7
+SECTION ITEM $item_brick_wall1_7
 {
     ID 0039
 }
  
-SECTION ITEM $item_brick_wall_8
+SECTION ITEM $item_brick_wall1_8
 {
     ID 003A
 }
  
-SECTION ITEM $item_brick_wall_9
+SECTION ITEM $item_brick_wall1_9
 {
     ID 003B
 }
  
-SECTION ITEM $item_brick_wall_10
+SECTION ITEM $item_brick_wall1_10
 {
     ID 003C
 }
 
-SECTION ITEM $item_brick_wall_11
+SECTION ITEM $item_brick_wall1_11
 {
     ID 003D
 }
 
-SECTION ITEM $item_brick_wall_12
+SECTION ITEM $item_brick_wall1_12
 {
     ID 003E
 }
 
-SECTION ITEM $item_brick_wall_13
+SECTION ITEM $item_brick_wall1_13
 {
     ID 003F
 }
 
-SECTION ITEM $item_brick_wall_14
+SECTION ITEM $item_brick_wall1_14
 {
     ID 0040
 }
 
-SECTION ITEM $item_brick_wall_15
+SECTION ITEM $item_brick_wall1_15
 {
     ID 0041
 }
 
-SECTION ITEM $item_brick_wall_16
+SECTION ITEM $item_brick_wall1_16
 {
     ID 0042
 }
 
-SECTION ITEM $item_brick_wall_17
+SECTION ITEM $item_brick_wall1_17
 {
     ID 0043
 }
 
-SECTION ITEM $item_brick_wall_18
+SECTION ITEM $item_brick_wall1_18
 {
     ID 0044
 }
 
-SECTION ITEM $item_brick_wall_19
+SECTION ITEM $item_brick_wall1_19
 {
     ID 0045
 }
 
-SECTION ITEM $item_brick_wall_20
+SECTION ITEM $item_brick_wall1_20
 {
     ID 0046
 }
 
-SECTION ITEM $item_brick_wall_21
+SECTION ITEM $item_brick_wall1_21
 {
     ID 0047
 }
 
-SECTION ITEM $item_brick_wall_22
+SECTION ITEM $item_brick_wall1_22
 {
     ID 0048
 }
 
-SECTION ITEM $item_brick_wall_23
+SECTION ITEM $item_brick_wall1_23
 {
     ID 0049
 }
 
-SECTION ITEM $item_brick_wall_24
+SECTION ITEM $item_brick_wall1_24
 {
     ID 004A
 }
 
-SECTION ITEM $item_brick_wall_25
+SECTION ITEM $item_brick_wall1_25
 {
     ID 004B
 }
 
-SECTION ITEM $item_brick_wall_26
+SECTION ITEM $item_brick_wall1_26
 {
     ID 004C
 }
 
-SECTION ITEM $item_brick_wall_27
+SECTION ITEM $item_brick_wall1_27
 {
     ID 004D
 }
 
-SECTION ITEM $item_brick_wall_28
+SECTION ITEM $item_brick_wall1_28
 {
     ID 004E
 }
 
-SECTION ITEM $item_brick_wall_29
+SECTION ITEM $item_brick_wall1_29
 {
     ID 004F
 }
 
-SECTION ITEM $item_brick_wall_30
+SECTION ITEM $item_brick_wall1_30
 {
     ID 0050
 }
 
-SECTION ITEM $item_brick_wall_31
+SECTION ITEM $item_brick_wall1_31
 {
     ID 0051
 }
 
-SECTION ITEM $item_brick_wall_32
+SECTION ITEM $item_brick_wall1_32
 {
     ID 0052
 }
 
-SECTION ITEM $item_brick_wall_33
+SECTION ITEM $item_brick_wall1_33
 {
     ID 0053
 }
 
-SECTION ITEM $item_brick_wall_34
+SECTION ITEM $item_brick_wall1_34
 {
     ID 0054
 }
 
-SECTION ITEM $item_brick_wall_35
+SECTION ITEM $item_brick_wall1_35
 {
     ID 0055
 }
 
-SECTION ITEM $item_brick_wall_36
+SECTION ITEM $item_brick_wall1_36
 {
     ID 0056
 }
@@ -717,257 +717,257 @@ SECTION ITEM $item_stone_wall3_22
     ID 008F
 }
 
-SECTION ITEM $item_log_wall_1
+SECTION ITEM $item_log_wall1_1
 {
     ID 0090
 }
  
-SECTION ITEM $item_log_wall_2
+SECTION ITEM $item_log_wall1_2
 {
     ID 0091
 }
  
-SECTION ITEM $item_log_wall_3
+SECTION ITEM $item_log_wall1_3
 {
     ID 0092
 }
  
-SECTION ITEM $item_log_wall_4
+SECTION ITEM $item_log_wall1_4
 {
     ID 0093
 }
  
-SECTION ITEM $item_log_wall_5
+SECTION ITEM $item_log_wall1_5
 {
     ID 0094
 }
  
-SECTION ITEM $item_log_wall_6
+SECTION ITEM $item_log_wall1_6
 {
     ID 0095
 }
  
-SECTION ITEM $item_log_wall_7
+SECTION ITEM $item_log_wall1_7
 {
     ID 0096
 }
  
-SECTION ITEM $item_log_wall_8
+SECTION ITEM $item_log_wall1_8
 {
     ID 0097
 }
  
-SECTION ITEM $item_log_wall_9
+SECTION ITEM $item_log_wall1_9
 {
     ID 0098
 }
  
-SECTION ITEM $item_log_wall_10
+SECTION ITEM $item_log_wall1_10
 {
     ID 0099
 }
 
-SECTION ITEM $item_log_wall_11
+SECTION ITEM $item_log_wall1_11
 {
     ID 009A
 }
 
-SECTION ITEM $item_log_wall_12
+SECTION ITEM $item_log_wall1_12
 {
     ID 009B
 }
 
-SECTION ITEM $item_log_wall_13
+SECTION ITEM $item_log_wall1_13
 {
     ID 009C
 }
 
-SECTION ITEM $item_log_wall_14
+SECTION ITEM $item_log_wall1_14
 {
     ID 009D
 }
 
-SECTION ITEM $item_log_wall_15
+SECTION ITEM $item_log_wall1_15
 {
     ID 009E
 }
 
-SECTION ITEM $item_log_wall_16
+SECTION ITEM $item_log_wall1_16
 {
     ID 009F
 }
 
-SECTION ITEM $item_log_wall_17
+SECTION ITEM $item_log_wall1_17
 {
     ID 00A0
 }
 
-SECTION ITEM $item_log_wall_18
+SECTION ITEM $item_log_wall1_18
 {
     ID 00A1
 }
 
-SECTION ITEM $item_log_wall_19
+SECTION ITEM $item_log_wall1_19
 {
     ID 00A2
 }
 
-SECTION ITEM $item_log_wall_20
+SECTION ITEM $item_log_wall1_20
 {
     ID 00A3
 }
 
-SECTION ITEM $item_log_wall_21
+SECTION ITEM $item_log_wall1_21
 {
     ID 00A4
 }
 
-SECTION ITEM $item_log_wall_22
+SECTION ITEM $item_log_wall1_22
 {
     ID 00A5
 }
 
-SECTION ITEM $item_wooden_wall_1
+SECTION ITEM $item_wooden_wall1_1
 {
     ID 00A6
 }
  
-SECTION ITEM $item_wooden_wall_2
+SECTION ITEM $item_wooden_wall1_2
 {
     ID 00A7
 }
  
-SECTION ITEM $item_wooden_wall_3
+SECTION ITEM $item_wooden_wall1_3
 {
     ID 00A8
 }
  
-SECTION ITEM $item_wooden_wall_4
+SECTION ITEM $item_wooden_wall1_4
 {
     ID 00A9
 }
  
-SECTION ITEM $item_wooden_wall_5
+SECTION ITEM $item_wooden_wall1_5
 {
     ID 00AA
 }
  
-SECTION ITEM $item_wooden_wall_6
+SECTION ITEM $item_wooden_wall1_6
 {
     ID 00AB
 }
  
-SECTION ITEM $item_wooden_wall_7
+SECTION ITEM $item_wooden_wall1_7
 {
     ID 00AC
 }
  
-SECTION ITEM $item_wooden_wall_8
+SECTION ITEM $item_wooden_wall1_8
 {
     ID 00AD
 }
  
-SECTION ITEM $item_wooden_wall_9
+SECTION ITEM $item_wooden_wall1_9
 {
     ID 00AE
 }
  
-SECTION ITEM $item_wooden_wall_10
+SECTION ITEM $item_wooden_wall1_10
 {
     ID 00AF
 }
 
-SECTION ITEM $item_wooden_wall_11
+SECTION ITEM $item_wooden_wall1_11
 {
     ID 00B0
 }
 
-SECTION ITEM $item_wooden_wall_12
+SECTION ITEM $item_wooden_wall1_12
 {
     ID 00B1
 }
 
-SECTION ITEM $item_wooden_wall_13
+SECTION ITEM $item_wooden_wall1_13
 {
     ID 00B2
 }
 
-SECTION ITEM $item_wooden_wall_14
+SECTION ITEM $item_wooden_wall1_14
 {
     ID 00B3
 }
 
-SECTION ITEM $item_wooden_wall_15
+SECTION ITEM $item_wooden_wall1_15
 {
     ID 00B4
 }
 
-SECTION ITEM $item_wooden_wall_16
+SECTION ITEM $item_wooden_wall1_16
 {
     ID 00B5
 }
 
-SECTION ITEM $item_wooden_wall_17
+SECTION ITEM $item_wooden_wall1_17
 {
     ID 00B6
 }
 
-SECTION ITEM $item_wooden_wall_18
+SECTION ITEM $item_wooden_wall1_18
 {
     ID 00B7
 }
 
-SECTION ITEM $item_wooden_wall_19
+SECTION ITEM $item_wooden_wall1_19
 {
     ID 00B8
 }
 
-SECTION ITEM $item_wooden_wall_20
+SECTION ITEM $item_wooden_wall1_20
 {
     ID 00B9
 }
 
-SECTION ITEM $item_wooden_wall_21
+SECTION ITEM $item_wooden_wall1_21
 {
     ID 00BA
 }
 
-SECTION ITEM $item_wooden_wall_22
+SECTION ITEM $item_wooden_wall1_22
 {
     ID 00BB
 }
 
-SECTION ITEM $item_wooden_wall_23
+SECTION ITEM $item_wooden_wall1_23
 {
     ID 00BC
 }
 
-SECTION ITEM $item_wooden_wall_24
+SECTION ITEM $item_wooden_wall1_24
 {
     ID 00BD
 }
 
-SECTION ITEM $item_wooden_wall_25
+SECTION ITEM $item_wooden_wall1_25
 {
     ID 00BE
 }
 
-SECTION ITEM $item_wooden_wall_26
+SECTION ITEM $item_wooden_wall1_26
 {
     ID 00BF
 }
 
-SECTION ITEM $item_wooden_wall_27
+SECTION ITEM $item_wooden_wall1_27
 {
     ID 00C0
 }
 
-SECTION ITEM $item_wooden_wall_28
+SECTION ITEM $item_wooden_wall1_28
 {
     ID 00C1
 }
 
-SECTION ITEM $item_wooden_wall_29
+SECTION ITEM $item_wooden_wall1_29
 {
     ID 00C2
 }
@@ -1230,777 +1230,777 @@ SECTION ITEM $item_stone_wall4_51
     ID 00F7
 }
 
-SECTION ITEM $item_marble_wall_1
+SECTION ITEM $item_marble_wall1_1
 {
     ID 00F8
 }
  
-SECTION ITEM $item_marble_wall_2
+SECTION ITEM $item_marble_wall1_2
 {
     ID 00F9
 }
  
-SECTION ITEM $item_marble_wall_3
+SECTION ITEM $item_marble_wall1_3
 {
     ID 00FA
 }
  
-SECTION ITEM $item_marble_wall_4
+SECTION ITEM $item_marble_wall1_4
 {
     ID 00FB
 }
  
-SECTION ITEM $item_marble_wall_5
+SECTION ITEM $item_marble_wall1_5
 {
     ID 00FC
 }
  
-SECTION ITEM $item_marble_wall_6
+SECTION ITEM $item_marble_wall1_6
 {
     ID 00FD
 }
  
-SECTION ITEM $item_marble_wall_7
+SECTION ITEM $item_marble_wall1_7
 {
     ID 00FE
 }
  
-SECTION ITEM $item_marble_wall_8
+SECTION ITEM $item_marble_wall1_8
 {
     ID 00FF
 }
  
-SECTION ITEM $item_marble_wall_9
+SECTION ITEM $item_marble_wall1_9
 {
     ID 0100
 }
  
-SECTION ITEM $item_marble_wall_10
+SECTION ITEM $item_marble_wall1_10
 {
     ID 0101
 }
 
-SECTION ITEM $item_marble_wall_11
+SECTION ITEM $item_marble_wall1_11
 {
     ID 0102
 }
 
-SECTION ITEM $item_marble_wall_12
+SECTION ITEM $item_marble_wall1_12
 {
     ID 0103
 }
 
-SECTION ITEM $item_marble_wall_13
+SECTION ITEM $item_marble_wall1_13
 {
     ID 0104
 }
 
-SECTION ITEM $item_marble_wall_14
+SECTION ITEM $item_marble_wall1_14
 {
     ID 0105
 }
 
-SECTION ITEM $item_marble_wall_15
+SECTION ITEM $item_marble_wall1_15
 {
     ID 0106
 }
 
-SECTION ITEM $item_marble_wall_16
+SECTION ITEM $item_marble_wall1_16
 {
     ID 0107
 }
 
-SECTION ITEM $item_marble_wall_17
+SECTION ITEM $item_marble_wall1_17
 {
     ID 0108
 }
 
-SECTION ITEM $item_marble_wall_18
+SECTION ITEM $item_marble_wall1_18
 {
     ID 0109
 }
 
-SECTION ITEM $item_marble_wall_19
+SECTION ITEM $item_marble_wall1_19
 {
     ID 010A
 }
 
-SECTION ITEM $item_marble_wall_20
+SECTION ITEM $item_marble_wall1_20
 {
     ID 010B
 }
 
-SECTION ITEM $item_marble_wall_21
+SECTION ITEM $item_marble_wall1_21
 {
     ID 010C
 }
 
-SECTION ITEM $item_marble_wall_22
+SECTION ITEM $item_marble_wall1_22
 {
     ID 010D
 }
 
-SECTION ITEM $item_marble_wall_23
+SECTION ITEM $item_marble_wall1_23
 {
     ID 010E
 }
 
-SECTION ITEM $item_marble_wall_24
+SECTION ITEM $item_marble_wall1_24
 {
     ID 010F
 }
 
-SECTION ITEM $item_marble_wall_25
+SECTION ITEM $item_marble_wall1_25
 {
     ID 0110
 }
 
-SECTION ITEM $item_marble_wall_26
+SECTION ITEM $item_marble_wall1_26
 {
     ID 0111
 }
 
-SECTION ITEM $item_marble_wall_27
+SECTION ITEM $item_marble_wall1_27
 {
     ID 0112
 }
 
-SECTION ITEM $item_marble_wall_28
+SECTION ITEM $item_marble_wall1_28
 {
     ID 0113
 }
 
-SECTION ITEM $item_marble_wall_29
+SECTION ITEM $item_marble_wall1_29
 {
     ID 0114
 }
 
-SECTION ITEM $item_marble_wall_30
+SECTION ITEM $item_marble_wall1_30
 {
     ID 0115
 }
 
-SECTION ITEM $item_marble_wall_31
+SECTION ITEM $item_marble_wall1_31
 {
     ID 0116
 }
 
-SECTION ITEM $item_marble_wall_32
+SECTION ITEM $item_marble_wall1_32
 {
     ID 0117
 }
 
-SECTION ITEM $item_marble_wall_33
+SECTION ITEM $item_marble_wall1_33
 {
     ID 0118
 }
 
-SECTION ITEM $item_marble_wall_34
+SECTION ITEM $item_marble_wall1_34
 {
     ID 0119
 }
 
-SECTION ITEM $item_marble_wall_35
+SECTION ITEM $item_marble_wall1_35
 {
     ID 011A
 }
 
-SECTION ITEM $item_marble_wall_36
+SECTION ITEM $item_marble_wall1_36
 {
     ID 011B
 }
 
-SECTION ITEM $item_marble_wall_37
+SECTION ITEM $item_marble_wall1_37
 {
     ID 011C
 }
 
-SECTION ITEM $item_marble_wall_38
+SECTION ITEM $item_marble_wall1_38
 {
     ID 011D
 }
 
-SECTION ITEM $item_marble_wall_39
+SECTION ITEM $item_marble_wall1_39
 {
     ID 011E
 }
 
-SECTION ITEM $item_marble_wall_40
+SECTION ITEM $item_marble_wall1_40
 {
     ID 011F
 }
 
-SECTION ITEM $item_marble_wall_41
+SECTION ITEM $item_marble_wall1_41
 {
     ID 0120
 }
 
-SECTION ITEM $item_marble_wall_42
+SECTION ITEM $item_marble_wall1_42
 {
     ID 0121
 }
 
-SECTION ITEM $item_marble_wall_43
+SECTION ITEM $item_marble_wall1_43
 {
     ID 0122
 }
 
-SECTION ITEM $item_marble_wall_44
+SECTION ITEM $item_marble_wall1_44
 {
     ID 0123
 }
 
-SECTION ITEM $item_marble_wall_45
+SECTION ITEM $item_marble_wall1_45
 {
     ID 0124
 }
 
-SECTION ITEM $item_marble_wall_46
+SECTION ITEM $item_marble_wall1_46
 {
     ID 0125
 }
 
-SECTION ITEM $item_marble_wall_47
+SECTION ITEM $item_marble_wall1_47
 {
     ID 0126
 }
 
-SECTION ITEM $item_plaster_wall_1
+SECTION ITEM $item_plaster_wall1_1
 {
     ID 0127
 }
  
-SECTION ITEM $item_plaster_wall_2
+SECTION ITEM $item_plaster_wall1_2
 {
     ID 0128
 }
  
-SECTION ITEM $item_plaster_wall_3
+SECTION ITEM $item_plaster_wall1_3
 {
     ID 0129
 }
  
-SECTION ITEM $item_plaster_wall_4
+SECTION ITEM $item_plaster_wall1_4
 {
     ID 012A
 }
  
-SECTION ITEM $item_plaster_wall_5
+SECTION ITEM $item_plaster_wall1_5
 {
     ID 012B
 }
  
-SECTION ITEM $item_plaster_wall_6
+SECTION ITEM $item_plaster_wall1_6
 {
     ID 012C
 }
  
-SECTION ITEM $item_plaster_wall_7
+SECTION ITEM $item_plaster_wall1_7
 {
     ID 012D
 }
  
-SECTION ITEM $item_plaster_wall_8
+SECTION ITEM $item_plaster_wall1_8
 {
     ID 012E
 }
  
-SECTION ITEM $item_plaster_wall_9
+SECTION ITEM $item_plaster_wall1_9
 {
     ID 012F
 }
  
-SECTION ITEM $item_plaster_wall_10
+SECTION ITEM $item_plaster_wall1_10
 {
     ID 0130
 }
 
-SECTION ITEM $item_plaster_wall_11
+SECTION ITEM $item_plaster_wall1_11
 {
     ID 0131
 }
 
-SECTION ITEM $item_plaster_wall_12
+SECTION ITEM $item_plaster_wall1_12
 {
     ID 0132
 }
 
-SECTION ITEM $item_plaster_wall_13
+SECTION ITEM $item_plaster_wall1_13
 {
     ID 0133
 }
 
-SECTION ITEM $item_plaster_wall_14
+SECTION ITEM $item_plaster_wall1_14
 {
     ID 0134
 }
 
-SECTION ITEM $item_plaster_wall_15
+SECTION ITEM $item_plaster_wall1_15
 {
     ID 0135
 }
 
-SECTION ITEM $item_plaster_wall_16
+SECTION ITEM $item_plaster_wall1_16
 {
     ID 0136
 }
 
-SECTION ITEM $item_plaster_wall_17
+SECTION ITEM $item_plaster_wall1_17
 {
     ID 0137
 }
 
-SECTION ITEM $item_plaster_wall_18
+SECTION ITEM $item_plaster_wall1_18
 {
     ID 0138
 }
 
-SECTION ITEM $item_plaster_wall_19
+SECTION ITEM $item_plaster_wall1_19
 {
     ID 0139
 }
 
-SECTION ITEM $item_plaster_wall_20
+SECTION ITEM $item_plaster_wall1_20
 {
     ID 013A
 }
 
-SECTION ITEM $item_plaster_wall_21
+SECTION ITEM $item_plaster_wall1_21
 {
     ID 013B
 }
 
-SECTION ITEM $item_plaster_wall_22
+SECTION ITEM $item_plaster_wall1_22
 {
     ID 013C
 }
 
-SECTION ITEM $item_plaster_wall_23
+SECTION ITEM $item_plaster_wall1_23
 {
     ID 013D
 }
 
-SECTION ITEM $item_plaster_wall_24
+SECTION ITEM $item_plaster_wall1_24
 {
     ID 013E
 }
 
-SECTION ITEM $item_plaster_wall_25
+SECTION ITEM $item_plaster_wall1_25
 {
     ID 013F
 }
 
-SECTION ITEM $item_plaster_wall_26
+SECTION ITEM $item_plaster_wall1_26
 {
     ID 0140
 }
 
-SECTION ITEM $item_plaster_wall_27
+SECTION ITEM $item_plaster_wall1_27
 {
     ID 0149
 }
 
-SECTION ITEM $item_plaster_wall_28
+SECTION ITEM $item_plaster_wall1_28
 {
     ID 014A
 }
 
-SECTION ITEM $item_plaster_wall_29
+SECTION ITEM $item_plaster_wall1_29
 {
     ID 014B
 }
 
-SECTION ITEM $item_plaster_wall_30
+SECTION ITEM $item_plaster_wall1_30
 {
     ID 014C
 }
 
-SECTION ITEM $item_plaster_wall_31
+SECTION ITEM $item_plaster_wall1_31
 {
     ID 014D
 }
 
-SECTION ITEM $item_plaster_wall_32
+SECTION ITEM $item_plaster_wall1_32
 {
     ID 014E
 }
 
-SECTION ITEM $item_plaster_wall_33
+SECTION ITEM $item_plaster_wall1_33
 {
     ID 014F
 }
 
-SECTION ITEM $item_plaster_wall_34
+SECTION ITEM $item_plaster_wall1_34
 {
     ID 0150
 }
 
-SECTION ITEM $item_plaster_wall_35
+SECTION ITEM $item_plaster_wall1_35
 {
     ID 0151
 }
 
-SECTION ITEM $item_plaster_wall_36
+SECTION ITEM $item_plaster_wall1_36
 {
     ID 0152
 }
 
-SECTION ITEM $item_plaster_wall_37
+SECTION ITEM $item_plaster_wall1_37
 {
     ID 0153
 }
 
-SECTION ITEM $item_plaster_wall_38
+SECTION ITEM $item_plaster_wall1_38
 {
     ID 0154
 }
 
-SECTION ITEM $item_plaster_wall_39
+SECTION ITEM $item_plaster_wall1_39
 {
     ID 0155
 }
 
-SECTION ITEM $item_plaster_wall_40
+SECTION ITEM $item_plaster_wall1_40
 {
     ID 0156
 }
 
-SECTION ITEM $item_plaster_wall_41
+SECTION ITEM $item_plaster_wall1_41
 {
     ID 0157
 }
 
-SECTION ITEM $item_sandstone_wall_1
+SECTION ITEM $item_sandstone_wall1_1
 {
     ID 0158
 }
  
-SECTION ITEM $item_sandstone_wall_2
+SECTION ITEM $item_sandstone_wall1_2
 {
     ID 0159
 }
  
-SECTION ITEM $item_sandstone_wall_3
+SECTION ITEM $item_sandstone_wall1_3
 {
     ID 015A
 }
  
-SECTION ITEM $item_sandstone_wall_4
+SECTION ITEM $item_sandstone_wall1_4
 {
     ID 015B
 }
  
-SECTION ITEM $item_sandstone_wall_5
+SECTION ITEM $item_sandstone_wall1_5
 {
     ID 015C
 }
  
-SECTION ITEM $item_sandstone_wall_6
+SECTION ITEM $item_sandstone_wall1_6
 {
     ID 015D
 }
  
-SECTION ITEM $item_sandstone_wall_7
+SECTION ITEM $item_sandstone_wall1_7
 {
     ID 015E
 }
  
-SECTION ITEM $item_sandstone_wall_8
+SECTION ITEM $item_sandstone_wall1_8
 {
     ID 015F
 }
  
-SECTION ITEM $item_sandstone_wall_9
+SECTION ITEM $item_sandstone_wall1_9
 {
     ID 0160
 }
  
-SECTION ITEM $item_sandstone_wall_10
+SECTION ITEM $item_sandstone_wall1_10
 {
     ID 0161
 }
 
-SECTION ITEM $item_sandstone_wall_11
+SECTION ITEM $item_sandstone_wall1_11
 {
     ID 0162
 }
 
-SECTION ITEM $item_sandstone_wall_12
+SECTION ITEM $item_sandstone_wall1_12
 {
     ID 0163
 }
 
-SECTION ITEM $item_sandstone_wall_13
+SECTION ITEM $item_sandstone_wall1_13
 {
     ID 0164
 }
 
-SECTION ITEM $item_sandstone_wall_14
+SECTION ITEM $item_sandstone_wall1_14
 {
     ID 0165
 }
 
-SECTION ITEM $item_sandstone_wall_15
+SECTION ITEM $item_sandstone_wall1_15
 {
     ID 0166
 }
 
-SECTION ITEM $item_sandstone_wall_16
+SECTION ITEM $item_sandstone_wall1_16
 {
     ID 0167
 }
 
-SECTION ITEM $item_sandstone_wall_17
+SECTION ITEM $item_sandstone_wall1_17
 {
     ID 0168
 }
 
-SECTION ITEM $item_sandstone_wall_18
+SECTION ITEM $item_sandstone_wall1_18
 {
     ID 0169
 }
 
-SECTION ITEM $item_sandstone_wall_19
+SECTION ITEM $item_sandstone_wall1_19
 {
     ID 016A
 }
 
-SECTION ITEM $item_sandstone_wall_20
+SECTION ITEM $item_sandstone_wall1_20
 {
     ID 016B
 }
 
-SECTION ITEM $item_sandstone_wall_21
+SECTION ITEM $item_sandstone_wall1_21
 {
     ID 016C
 }
 
-SECTION ITEM $item_sandstone_wall_22
+SECTION ITEM $item_sandstone_wall1_22
 {
     ID 016D
 }
 
-SECTION ITEM $item_sandstone_wall_23
+SECTION ITEM $item_sandstone_wall1_23
 {
     ID 016E
 }
 
-SECTION ITEM $item_sandstone_wall_24
+SECTION ITEM $item_sandstone_wall1_24
 {
     ID 016F
 }
 
-SECTION ITEM $item_sandstone_wall_25
+SECTION ITEM $item_sandstone_wall1_25
 {
     ID 0170
 }
 
-SECTION ITEM $item_sandstone_wall_26
+SECTION ITEM $item_sandstone_wall1_26
 {
     ID 0171
 }
 
-SECTION ITEM $item_sandstone_wall_27
+SECTION ITEM $item_sandstone_wall1_27
 {
     ID 0172
 }
 
-SECTION ITEM $item_sandstone_wall_28
+SECTION ITEM $item_sandstone_wall1_28
 {
     ID 0173
 }
 
-SECTION ITEM $item_sandstone_wall_29
+SECTION ITEM $item_sandstone_wall1_29
 {
     ID 0174
 }
 
-SECTION ITEM $item_sandstone_wall_30
+SECTION ITEM $item_sandstone_wall1_30
 {
     ID 0175
 }
 
-SECTION ITEM $item_sandstone_wall_31
+SECTION ITEM $item_sandstone_wall1_31
 {
     ID 0176
 }
 
-SECTION ITEM $item_sandstone_wall_32
+SECTION ITEM $item_sandstone_wall1_32
 {
     ID 0177
 }
 
-SECTION ITEM $item_sandstone_wall_33
+SECTION ITEM $item_sandstone_wall1_33
 {
     ID 0178
 }
 
-SECTION ITEM $item_sandstone_wall_34
+SECTION ITEM $item_sandstone_wall1_34
 {
     ID 0179
 }
 
-SECTION ITEM $item_sandstone_wall_35
+SECTION ITEM $item_sandstone_wall1_35
 {
     ID 017A
 }
 
-SECTION ITEM $item_sandstone_wall_36
+SECTION ITEM $item_sandstone_wall1_36
 {
     ID 017B
 }
 
-SECTION ITEM $item_sandstone_wall_37
+SECTION ITEM $item_sandstone_wall1_37
 {
     ID 017C
 }
 
-SECTION ITEM $item_sandstone_wall_38
+SECTION ITEM $item_sandstone_wall1_38
 {
     ID 017D
 }
 
-SECTION ITEM $item_sandstone_wall_39
+SECTION ITEM $item_sandstone_wall1_39
 {
     ID 017E
 }
 
-SECTION ITEM $item_sandstone_wall_40
+SECTION ITEM $item_sandstone_wall1_40
 {
     ID 017F
 }
 
-SECTION ITEM $item_sandstone_wall_41
+SECTION ITEM $item_sandstone_wall1_41
 {
     ID 0180
 }
 
-SECTION ITEM $item_sandstone_wall_42
+SECTION ITEM $item_sandstone_wall1_42
 {
     ID 0181
 }
 
-SECTION ITEM $item_sandstone_wall_43
+SECTION ITEM $item_sandstone_wall1_43
 {
     ID 0182
 }
 
-SECTION ITEM $item_sandstone_wall_44
+SECTION ITEM $item_sandstone_wall1_44
 {
     ID 0183
 }
 
-SECTION ITEM $item_sandstone_wall_45
+SECTION ITEM $item_sandstone_wall1_45
 {
     ID 0184
 }
 
-SECTION ITEM $item_sandstone_wall_46
+SECTION ITEM $item_sandstone_wall1_46
 {
     ID 0185
 }
 
-SECTION ITEM $item_sandstone_wall_47
+SECTION ITEM $item_sandstone_wall1_47
 {
     ID 0186
 }
 
-SECTION ITEM $item_sandstone_wall_48
+SECTION ITEM $item_sandstone_wall1_48
 {
     ID 0187
 }
 
-SECTION ITEM $item_sandstone_wall_49
+SECTION ITEM $item_sandstone_wall1_49
 {
     ID 0188
 }
 
-SECTION ITEM $item_sandstone_wall_50
+SECTION ITEM $item_sandstone_wall1_50
 {
     ID 0189
 }
 
-SECTION ITEM $item_sandstone_wall_51
+SECTION ITEM $item_sandstone_wall1_51
 {
     ID 018A
 }
 
-SECTION ITEM $item_sandstone_wall_52
+SECTION ITEM $item_sandstone_wall1_52
 {
     ID 018B
 }
 
-SECTION ITEM $item_sandstone_wall_53
+SECTION ITEM $item_sandstone_wall1_53
 {
     ID 018C
 }
 
-SECTION ITEM $item_sandstone_wall_54
+SECTION ITEM $item_sandstone_wall1_54
 {
     ID 018D
 }
 
-SECTION ITEM $item_sandstone_wall_55
+SECTION ITEM $item_sandstone_wall1_55
 {
     ID 018E
 }
 
-SECTION ITEM $item_sandstone_wall_56
+SECTION ITEM $item_sandstone_wall1_56
 {
     ID 018F
 }
 
-SECTION ITEM $item_sandstone_wall_57
+SECTION ITEM $item_sandstone_wall1_57
 {
     ID 0190
 }
 
-SECTION ITEM $item_sandstone_wall_58
+SECTION ITEM $item_sandstone_wall1_58
 {
     ID 0191
 }
 
-SECTION ITEM $item_sandstone_wall_59
+SECTION ITEM $item_sandstone_wall1_59
 {
     ID 0192
 }
 
-SECTION ITEM $item_sandstone_wall_60
+SECTION ITEM $item_sandstone_wall1_60
 {
     ID 0193
 }
 
-SECTION ITEM $item_sandstone_wall_61
+SECTION ITEM $item_sandstone_wall1_61
 {
     ID 0194
 }
 
-SECTION ITEM $item_sandstone_wall_62
+SECTION ITEM $item_sandstone_wall1_62
 {
     ID 0195
 }
 
-SECTION ITEM $item_sandstone_wall_63
+SECTION ITEM $item_sandstone_wall1_63
 {
     ID 0196
 }
 
-SECTION ITEM $item_sandstone_wall_64
+SECTION ITEM $item_sandstone_wall1_64
 {
     ID 0197
 }
 
-SECTION ITEM $item_sandstone_wall_65
+SECTION ITEM $item_sandstone_wall1_65
 {
     ID 0198
 }
 
-SECTION ITEM $item_sandstone_wall_66
+SECTION ITEM $item_sandstone_wall1_66
 {
     ID 0199
 }
 
-SECTION ITEM $item_sandstone_wall_67
+SECTION ITEM $item_sandstone_wall1_67
 {
     ID 019A
 }
@@ -2050,197 +2050,197 @@ SECTION ITEM $item_wooden_support_9
     ID 01A3
 }
 
-SECTION ITEM $item_sandstone_wall_68
+SECTION ITEM $item_sandstone_wall1_68
 {
     ID 01A4
 }
 
-SECTION ITEM $item_rattan_wall_1
+SECTION ITEM $item_rattan_wall1_1
 {
     ID 01A5
 }
  
-SECTION ITEM $item_rattan_wall_2
+SECTION ITEM $item_rattan_wall1_2
 {
     ID 01A6
 }
  
-SECTION ITEM $item_rattan_wall_3
+SECTION ITEM $item_rattan_wall1_3
 {
     ID 01A7
 }
  
-SECTION ITEM $item_rattan_wall_4
+SECTION ITEM $item_rattan_wall1_4
 {
     ID 01A8
 }
  
-SECTION ITEM $item_rattan_wall_5
+SECTION ITEM $item_rattan_wall1_5
 {
     ID 01A9
 }
  
-SECTION ITEM $item_rattan_wall_6
+SECTION ITEM $item_rattan_wall1_6
 {
     ID 01AA
 }
  
-SECTION ITEM $item_rattan_wall_7
+SECTION ITEM $item_rattan_wall1_7
 {
     ID 01AB
 }
  
-SECTION ITEM $item_rattan_wall_8
+SECTION ITEM $item_rattan_wall1_8
 {
     ID 01AC
 }
  
-SECTION ITEM $item_rattan_wall_9
+SECTION ITEM $item_rattan_wall1_9
 {
     ID 01AD
 }
  
-SECTION ITEM $item_rattan_wall_10
+SECTION ITEM $item_rattan_wall1_10
 {
     ID 01AE
 }
 
-SECTION ITEM $item_rattan_wall_11
+SECTION ITEM $item_rattan_wall1_11
 {
     ID 01AF
 }
 
-SECTION ITEM $item_rattan_wall_12
+SECTION ITEM $item_rattan_wall1_12
 {
     ID 01B0
 }
 
-SECTION ITEM $item_sandstone_wall_69
+SECTION ITEM $item_sandstone_wall1_69
 {
     ID 01B1
 }
 
-SECTION ITEM $item_sandstone_wall_70
+SECTION ITEM $item_sandstone_wall1_70
 {
     ID 01B2
 }
 
-SECTION ITEM $item_sandstone_wall_71
+SECTION ITEM $item_sandstone_wall1_71
 {
     ID 01B3
 }
 
-SECTION ITEM $item_sandstone_wall_72
+SECTION ITEM $item_sandstone_wall1_72
 {
     ID 01B4
 }
 
-SECTION ITEM $item_hide_wall_1
+SECTION ITEM $item_hide_wall1_1
 {
     ID 01B5
 }
  
-SECTION ITEM $item_hide_wall_2
+SECTION ITEM $item_hide_wall1_2
 {
     ID 01B6
 }
  
-SECTION ITEM $item_hide_wall_3
+SECTION ITEM $item_hide_wall1_3
 {
     ID 01B7
 }
  
-SECTION ITEM $item_hide_wall_4
+SECTION ITEM $item_hide_wall1_4
 {
     ID 01B8
 }
  
-SECTION ITEM $item_hide_wall_5
+SECTION ITEM $item_hide_wall1_5
 {
     ID 01B9
 }
  
-SECTION ITEM $item_hide_wall_6
+SECTION ITEM $item_hide_wall1_6
 {
     ID 01BA
 }
  
-SECTION ITEM $item_hide_wall_7
+SECTION ITEM $item_hide_wall1_7
 {
     ID 01BB
 }
  
-SECTION ITEM $item_hide_wall_8
+SECTION ITEM $item_hide_wall1_8
 {
     ID 01BC
 }
  
-SECTION ITEM $item_hide_wall_9
+SECTION ITEM $item_hide_wall1_9
 {
     ID 01BD
 }
  
-SECTION ITEM $item_hide_wall_10
+SECTION ITEM $item_hide_wall1_10
 {
     ID 01BE
 }
 
-SECTION ITEM $item_hide_wall_11
+SECTION ITEM $item_hide_wall1_11
 {
     ID 01BF
 }
 
-SECTION ITEM $item_hide_wall_12
+SECTION ITEM $item_hide_wall1_12
 {
     ID 01C0
 }
 
-SECTION ITEM $item_hide_wall_13
+SECTION ITEM $item_hide_wall1_13
 {
     ID 01C1
 }
 
-SECTION ITEM $item_hide_wall_14
+SECTION ITEM $item_hide_wall1_14
 {
     ID 01C2
 }
 
-SECTION ITEM $item_hide_wall_15
+SECTION ITEM $item_hide_wall1_15
 {
     ID 01C3
 }
 
-SECTION ITEM $item_hide_wall_16
+SECTION ITEM $item_hide_wall1_16
 {
     ID 01C4
 }
 
-SECTION ITEM $item_hide_wall_17
+SECTION ITEM $item_hide_wall1_17
 {
     ID 01C5
 }
 
-SECTION ITEM $item_hide_wall_18
+SECTION ITEM $item_hide_wall1_18
 {
     ID 01C6
 }
 
-SECTION ITEM $item_hide_wall_19
+SECTION ITEM $item_hide_wall1_19
 {
     ID 01C7
 }
 
-SECTION ITEM $item_hide_wall_20
+SECTION ITEM $item_hide_wall1_20
 {
     ID 01C8
 }
 
-SECTION ITEM $item_hide_wall_21
+SECTION ITEM $item_hide_wall1_21
 {
     ID 01C9
 }
 
-SECTION ITEM $item_sandstone_wall_73
+SECTION ITEM $item_sandstone_wall1_73
 {
     ID 01CA
 }
@@ -2410,72 +2410,72 @@ SECTION ITEM $item_stone_wall5_29
     ID 01EB
 }
 
-SECTION ITEM $item_sandstone_wall_74
+SECTION ITEM $item_sandstone_wall1_74
 {
     ID 01EC
 }
 
-SECTION ITEM $item_sandstone_wall_75
+SECTION ITEM $item_sandstone_wall1_75
 {
     ID 01ED
 }
 
-SECTION ITEM $item_sandstone_wall_76
+SECTION ITEM $item_sandstone_wall1_76
 {
     ID 01EE
 }
 
-SECTION ITEM $item_sandstone_wall_77
+SECTION ITEM $item_sandstone_wall1_77
 {
     ID 01EF
 }
 
-SECTION ITEM $item_tent_wall_1
+SECTION ITEM $item_tent_wall1_1
 {
     ID 01F0
 }
  
-SECTION ITEM $item_tent_wall_2
+SECTION ITEM $item_tent_wall1_2
 {
     ID 01F1
 }
  
-SECTION ITEM $item_tent_wall_3
+SECTION ITEM $item_tent_wall1_3
 {
     ID 01F2
 }
  
-SECTION ITEM $item_tent_wall_4
+SECTION ITEM $item_tent_wall1_4
 {
     ID 01F3
 }
  
-SECTION ITEM $item_tent_wall_5
+SECTION ITEM $item_tent_wall1_5
 {
     ID 01F4
 }
  
-SECTION ITEM $item_tent_wall_6
+SECTION ITEM $item_tent_wall1_6
 {
     ID 01F5
 }
  
-SECTION ITEM $item_tent_wall_7
+SECTION ITEM $item_tent_wall1_7
 {
     ID 01F6
 }
  
-SECTION ITEM $item_tent_wall_8
+SECTION ITEM $item_tent_wall1_8
 {
     ID 01F7
 }
  
-SECTION ITEM $item_tent_wall_9
+SECTION ITEM $item_tent_wall1_9
 {
     ID 01F8
 }
  
-SECTION ITEM $item_tent_wall_10
+SECTION ITEM $item_tent_wall1_10
 {
     ID 01F9
 }
@@ -2550,147 +2550,147 @@ SECTION ITEM $item_plaster_wall2_14
     ID 020C
 }
 
-SECTION ITEM $item_bamboo_wall_1
+SECTION ITEM $item_bamboo_wall1_1
 {
     ID 020F
 }
  
-SECTION ITEM $item_bamboo_wall_2
+SECTION ITEM $item_bamboo_wall1_2
 {
     ID 0210
 }
  
-SECTION ITEM $item_bamboo_wall_3
+SECTION ITEM $item_bamboo_wall1_3
 {
     ID 0211
 }
  
-SECTION ITEM $item_bamboo_wall_4
+SECTION ITEM $item_bamboo_wall1_4
 {
     ID 0212
 }
  
-SECTION ITEM $item_bamboo_wall_5
+SECTION ITEM $item_bamboo_wall1_5
 {
     ID 0213
 }
  
-SECTION ITEM $item_bamboo_wall_6
+SECTION ITEM $item_bamboo_wall1_6
 {
     ID 0214
 }
  
-SECTION ITEM $item_bamboo_wall_7
+SECTION ITEM $item_bamboo_wall1_7
 {
     ID 0215
 }
  
-SECTION ITEM $item_bamboo_wall_8
+SECTION ITEM $item_bamboo_wall1_8
 {
     ID 0216
 }
  
-SECTION ITEM $item_bamboo_wall_9
+SECTION ITEM $item_bamboo_wall1_9
 {
     ID 0217
 }
  
-SECTION ITEM $item_bamboo_wall_10
+SECTION ITEM $item_bamboo_wall1_10
 {
     ID 0218
 }
 
-SECTION ITEM $item_bamboo_wall_11
+SECTION ITEM $item_bamboo_wall1_11
 {
     ID 0219
 }
 
-SECTION ITEM $item_bamboo_wall_12
+SECTION ITEM $item_bamboo_wall1_12
 {
     ID 021A
 }
 
-SECTION ITEM $item_palisade_1
+SECTION ITEM $item_palisade_wall_1
 {
     ID 021D
 }
  
-SECTION ITEM $item_palisade_2
+SECTION ITEM $item_palisade_wall_2
 {
     ID 021E
 }
  
-SECTION ITEM $item_palisade_3
+SECTION ITEM $item_palisade_wall_3
 {
     ID 021F
 }
  
-SECTION ITEM $item_palisade_4
+SECTION ITEM $item_palisade_wall_4
 {
     ID 0220
 }
  
-SECTION ITEM $item_palisade_5
+SECTION ITEM $item_palisade_wall_5
 {
     ID 0221
 }
  
-SECTION ITEM $item_palisade_6
+SECTION ITEM $item_palisade_wall_6
 {
     ID 0222
 }
  
-SECTION ITEM $item_palisade_7
+SECTION ITEM $item_palisade_wall_7
 {
     ID 0223
 }
  
-SECTION ITEM $item_palisade_8
+SECTION ITEM $item_palisade_wall_8
 {
     ID 0226
 }
  
-SECTION ITEM $item_palisade_9
+SECTION ITEM $item_palisade_wall_9
 {
     ID 0227
 }
  
-SECTION ITEM $item_palisade_10
+SECTION ITEM $item_palisade_wall_10
 {
     ID 0228
 }
 
-SECTION ITEM $item_palisade_11
+SECTION ITEM $item_palisade_wall_11
 {
     ID 0229
 }
 
-SECTION ITEM $item_palisade_12
+SECTION ITEM $item_palisade_wall_12
 {
     ID 022A
 }
 
-SECTION ITEM $item_palisade_13
+SECTION ITEM $item_palisade_wall_13
 {
     ID 022B
 }
 
-SECTION ITEM $item_palisade_14
+SECTION ITEM $item_palisade_wall_14
 {
     ID 022C
 }
 
-SECTION ITEM $item_palisade_15
+SECTION ITEM $item_palisade_wall_15
 {
     ID 022D
 }
 
-SECTION ITEM $item_palisade_16
+SECTION ITEM $item_palisade_wall_16
 {
     ID 022E
 }
 
-SECTION ITEM $item_palisade_17
+SECTION ITEM $item_palisade_wall_17
 {
     ID 022F
 }
@@ -2745,52 +2745,52 @@ SECTION ITEM $item_tent_wall2_10
     ID 0239
 }
 
-SECTION ITEM $item_dungeon_wall_1
+SECTION ITEM $item_dungeon_wall1_1
 {
     ID 0241
 }
  
-SECTION ITEM $item_dungeon_wall_2
+SECTION ITEM $item_dungeon_wall1_2
 {
     ID 0242
 }
  
-SECTION ITEM $item_dungeon_wall_3
+SECTION ITEM $item_dungeon_wall1_3
 {
     ID 0243
 }
  
-SECTION ITEM $item_dungeon_wall_4
+SECTION ITEM $item_dungeon_wall1_4
 {
     ID 0244
 }
  
-SECTION ITEM $item_dungeon_wall_5
+SECTION ITEM $item_dungeon_wall1_5
 {
     ID 0245
 }
  
-SECTION ITEM $item_dungeon_wall_6
+SECTION ITEM $item_dungeon_wall1_6
 {
     ID 0246
 }
  
-SECTION ITEM $item_dungeon_wall_7
+SECTION ITEM $item_dungeon_wall1_7
 {
     ID 0247
 }
  
-SECTION ITEM $item_dungeon_wall_8
+SECTION ITEM $item_dungeon_wall1_8
 {
     ID 0248
 }
  
-SECTION ITEM $item_dungeon_wall_9
+SECTION ITEM $item_dungeon_wall1_9
 {
     ID 0249
 }
  
-SECTION ITEM $item_dungeon_wall_10
+SECTION ITEM $item_dungeon_wall1_10
 {
     ID 024A
 }
@@ -2875,197 +2875,197 @@ SECTION ITEM $item_sandstone_wall2_16
     ID 025B
 }
 
-SECTION ITEM $item_cave_wall_1
+SECTION ITEM $item_cave_wall1_1
 {
     ID 025C
 }
  
-SECTION ITEM $item_cave_wall_2
+SECTION ITEM $item_cave_wall1_2
 {
     ID 025D
 }
  
-SECTION ITEM $item_cave_wall_3
+SECTION ITEM $item_cave_wall1_3
 {
     ID 025E
 }
  
-SECTION ITEM $item_cave_wall_4
+SECTION ITEM $item_cave_wall1_4
 {
     ID 025F
 }
  
-SECTION ITEM $item_cave_wall_5
+SECTION ITEM $item_cave_wall1_5
 {
     ID 0260
 }
  
-SECTION ITEM $item_cave_wall_6
+SECTION ITEM $item_cave_wall1_6
 {
     ID 0261
 }
  
-SECTION ITEM $item_cave_wall_7
+SECTION ITEM $item_cave_wall1_7
 {
     ID 0262
 }
  
-SECTION ITEM $item_cave_wall_8
+SECTION ITEM $item_cave_wall1_8
 {
     ID 0263
 }
  
-SECTION ITEM $item_cave_wall_9
+SECTION ITEM $item_cave_wall1_9
 {
     ID 0264
 }
  
-SECTION ITEM $item_cave_wall_10
+SECTION ITEM $item_cave_wall1_10
 {
     ID 0265
 }
 
-SECTION ITEM $item_cave_wall_11
+SECTION ITEM $item_cave_wall1_11
 {
     ID 0266
 }
 
-SECTION ITEM $item_cave_wall_12
+SECTION ITEM $item_cave_wall1_12
 {
     ID 0267
 }
 
-SECTION ITEM $item_cave_wall_13
+SECTION ITEM $item_cave_wall1_13
 {
     ID 0268
 }
 
-SECTION ITEM $item_cave_wall_14
+SECTION ITEM $item_cave_wall1_14
 {
     ID 0269
 }
 
-SECTION ITEM $item_cave_wall_15
+SECTION ITEM $item_cave_wall1_15
 {
     ID 026A
 }
 
-SECTION ITEM $item_cave_wall_16
+SECTION ITEM $item_cave_wall1_16
 {
     ID 026B
 }
 
-SECTION ITEM $item_cave_wall_17
+SECTION ITEM $item_cave_wall1_17
 {
     ID 026C
 }
 
-SECTION ITEM $item_cave_wall_18
+SECTION ITEM $item_cave_wall1_18
 {
     ID 026D
 }
 
-SECTION ITEM $item_cave_wall_19
+SECTION ITEM $item_cave_wall1_19
 {
     ID 026E
 }
 
-SECTION ITEM $item_cave_wall_20
+SECTION ITEM $item_cave_wall1_20
 {
     ID 026F
 }
 
-SECTION ITEM $item_cave_wall_21
+SECTION ITEM $item_cave_wall1_21
 {
     ID 0270
 }
 
-SECTION ITEM $item_cave_wall_22
+SECTION ITEM $item_cave_wall1_22
 {
     ID 0271
 }
 
-SECTION ITEM $item_cave_wall_23
+SECTION ITEM $item_cave_wall1_23
 {
     ID 0272
 }
 
-SECTION ITEM $item_cave_wall_24
+SECTION ITEM $item_cave_wall1_24
 {
     ID 0273
 }
 
-SECTION ITEM $item_cave_wall_25
+SECTION ITEM $item_cave_wall1_25
 {
     ID 0274
 }
 
-SECTION ITEM $item_cave_wall_26
+SECTION ITEM $item_cave_wall1_26
 {
     ID 0275
 }
 
-SECTION ITEM $item_cave_wall_27
+SECTION ITEM $item_cave_wall1_27
 {
     ID 0276
 }
 
-SECTION ITEM $item_ruined_wall_1
+SECTION ITEM $item_ruined_wall1_1
 {
     ID 0277
 }
 
-SECTION ITEM $item_ruined_wall_2
+SECTION ITEM $item_ruined_wall1_2
 {
     ID 0278
 }
 
-SECTION ITEM $item_ruined_wall_3
+SECTION ITEM $item_ruined_wall1_3
 {
     ID 0279
 }
 
-SECTION ITEM $item_ruined_wall_4
+SECTION ITEM $item_ruined_wall1_4
 {
     ID 027A
 }
 
-SECTION ITEM $item_ruined_wall_5
+SECTION ITEM $item_ruined_wall1_5
 {
     ID 027B
 }
 
-SECTION ITEM $item_ruined_wall_6
+SECTION ITEM $item_ruined_wall1_6
 {
     ID 027C
 }
 
-SECTION ITEM $item_cave_wall_28
+SECTION ITEM $item_cave_wall1_28
 {
     ID 027D
 }
 
-SECTION ITEM $item_cave_wall_29
+SECTION ITEM $item_cave_wall1_29
 {
     ID 027E
 }
 
-SECTION ITEM $item_cave_wall_30
+SECTION ITEM $item_cave_wall1_30
 {
     ID 027F
 }
 
-SECTION ITEM $item_cave_wall_31
+SECTION ITEM $item_cave_wall1_31
 {
     ID 0280
 }
 
-SECTION ITEM $item_ruined_wall_7
+SECTION ITEM $item_ruined_wall1_7
 {
     ID 0281
 }
 
-SECTION ITEM $item_ruined_wall_8
+SECTION ITEM $item_ruined_wall1_8
 {
     ID 0282
 }
@@ -3769,137 +3769,137 @@ SECTION ITEM $item_stone_wall6_24
 //=========================================================================//
 //                                 STAIRS                                  //
 //=========================================================================//
-SECTION ITEM $item_sandostone_stairs_1
+SECTION ITEM $item_sandostone_stairs1_1
 {
     ID 03EF
 }
  
-SECTION ITEM $item_sandostone_stairs_2
+SECTION ITEM $item_sandostone_stairs1_2
 {
     ID 03F0
 }
  
-SECTION ITEM $item_sandostone_stairs_3
+SECTION ITEM $item_sandostone_stairs1_3
 {
     ID 03F1
 }
  
-SECTION ITEM $item_sandostone_stairs_4
+SECTION ITEM $item_sandostone_stairs1_4
 {
     ID 03F2
 }
  
-SECTION ITEM $item_sandostone_stairs_5
+SECTION ITEM $item_sandostone_stairs1_5
 {
     ID 03F3
 }
  
-SECTION ITEM $item_sandostone_stairs_6
+SECTION ITEM $item_sandostone_stairs1_6
 {
     ID 03F4
 }
  
-SECTION ITEM $item_sandostone_stairs_7
+SECTION ITEM $item_sandostone_stairs1_7
 {
     ID 03F5
 }
  
-SECTION ITEM $item_sandostone_stairs_8
+SECTION ITEM $item_sandostone_stairs1_8
 {
     ID 03F6
 }
  
-SECTION ITEM $item_sandostone_stairs_9
+SECTION ITEM $item_sandostone_stairs1_9
 {
     ID 03F7
 }
  
-SECTION ITEM $item_sandostone_stairs_10
+SECTION ITEM $item_sandostone_stairs1_10
 {
     ID 03F8
 }
 
-SECTION ITEM $item_sandostone_stairs_11
+SECTION ITEM $item_sandostone_stairs1_11
 {
     ID 03F9
 }
 
-SECTION ITEM $item_sandostone_stairs_12
+SECTION ITEM $item_sandostone_stairs1_12
 {
     ID 03FA
 }
 
-SECTION ITEM $item_sandostone_stairs_13
+SECTION ITEM $item_sandostone_stairs1_13
 {
     ID 03FB
 }
 
-SECTION ITEM $item_sandostone_stairs_14
+SECTION ITEM $item_sandostone_stairs1_14
 {
     ID 03FC
 }
 
-SECTION ITEM $item_sandostone_stairs_15
+SECTION ITEM $item_sandostone_stairs1_15
 {
     ID 03FD
 }
 
-SECTION ITEM $item_sandostone_stairs_16
+SECTION ITEM $item_sandostone_stairs1_16
 {
     ID 03FE
 }
 
-SECTION ITEM $item_sandostone_stairs_17
+SECTION ITEM $item_sandostone_stairs1_17
 {
     ID 03FF
 }
 
-SECTION ITEM $item_sandostone_stairs_18
+SECTION ITEM $item_sandostone_stairs1_18
 {
     ID 0400
 }
 
-SECTION ITEM $item_sandostone_stairs_19
+SECTION ITEM $item_sandostone_stairs1_19
 {
     ID 0401
 }
 
-SECTION ITEM $item_sandostone_stairs_20
+SECTION ITEM $item_sandostone_stairs1_20
 {
     ID 0402
 }
 
-SECTION ITEM $item_palisade_20
+SECTION ITEM $item_palisade_wall_20
 {
     ID 0421
 }
 
-SECTION ITEM $item_palisade_21
+SECTION ITEM $item_palisade_wall_21
 {
     ID 0422
 }
 
-SECTION ITEM $item_palisade_22
+SECTION ITEM $item_palisade_wall_22
 {
     ID 0423
 }
 
-SECTION ITEM $item_palisade_23
+SECTION ITEM $item_palisade_wall_23
 {
     ID 0424
 }
 
-SECTION ITEM $item_palisade_24
+SECTION ITEM $item_palisade_wall_24
 {
     ID 0425
 }
 
-SECTION ITEM $item_palisade_25
+SECTION ITEM $item_palisade_wall_25
 {
     ID 0430
 }
 
-SECTION ITEM $item_palisade_26
+SECTION ITEM $item_palisade_wall_26
 {
     ID 0431
 }
@@ -4009,12 +4009,12 @@ SECTION ITEM $item_marble_stairs_21
     ID 071D
 }
 
-SECTION ITEM $item_stone_stairs_1
+SECTION ITEM $item_stone_stairs1_1
 {
     ID 071E
 }
 
-SECTION ITEM $item_stone_stairs_2
+SECTION ITEM $item_stone_stairs1_2
 {
     ID 071F
 }
@@ -4129,12 +4129,12 @@ SECTION ITEM $item_wooden_stairs_22
     ID 0735
 }
 
-SECTION ITEM $item_stone_stairs_3
+SECTION ITEM $item_stone_stairs1_3
 {
     ID 0736
 }
 
-SECTION ITEM $item_stone_stairs_4
+SECTION ITEM $item_stone_stairs1_4
 {
     ID 0737
 }
@@ -4224,297 +4224,297 @@ SECTION ITEM $item_wooden_stairs2_17
     ID 0748
 }
 
-SECTION ITEM $item_stone_stairs_5
+SECTION ITEM $item_stone_stairs1_5
 {
     ID 0749
 }
  
-SECTION ITEM $item_stone_stairs_6
+SECTION ITEM $item_stone_stairs1_6
 {
     ID 074A
 }
  
-SECTION ITEM $item_stone_stairs_7
+SECTION ITEM $item_stone_stairs1_7
 {
     ID 074B
 }
  
-SECTION ITEM $item_stone_stairs_8
+SECTION ITEM $item_stone_stairs1_8
 {
     ID 074C
 }
  
-SECTION ITEM $item_stone_stairs_9
+SECTION ITEM $item_stone_stairs1_9
 {
     ID 074D
 }
  
-SECTION ITEM $item_stone_stairs_10
+SECTION ITEM $item_stone_stairs1_10
 {
     ID 074E
 }
 
-SECTION ITEM $item_stone_stairs_11
+SECTION ITEM $item_stone_stairs1_11
 {
     ID 074F
 }
 
-SECTION ITEM $item_stone_stairs_1
+SECTION ITEM $item_stone_stairs1_1
 {
     ID 0750
 }
  
-SECTION ITEM $item_stone_stairs_2
+SECTION ITEM $item_stone_stairs1_2
 {
     ID 0751
 }
  
-SECTION ITEM $item_stone_stairs_3
+SECTION ITEM $item_stone_stairs1_3
 {
     ID 0752
 }
  
-SECTION ITEM $item_stone_stairs_4
+SECTION ITEM $item_stone_stairs1_4
 {
     ID 0753
 }
  
-SECTION ITEM $item_stone_stairs_5
+SECTION ITEM $item_stone_stairs1_5
 {
     ID 0754
 }
  
-SECTION ITEM $item_stone_stairs_6
+SECTION ITEM $item_stone_stairs1_6
 {
     ID 0755
 }
  
-SECTION ITEM $item_stone_stairs_7
+SECTION ITEM $item_stone_stairs1_7
 {
     ID 0756
 }
  
-SECTION ITEM $item_stone_stairs_8
+SECTION ITEM $item_stone_stairs1_8
 {
     ID 0757
 }
  
-SECTION ITEM $item_stone_stairs_9
+SECTION ITEM $item_stone_stairs1_9
 {
     ID 0758
 }
  
-SECTION ITEM $item_stone_stairs_10
+SECTION ITEM $item_stone_stairs1_10
 {
     ID 0759
 }
 
-SECTION ITEM $item_stone_stairs_11
+SECTION ITEM $item_stone_stairs1_11
 {
     ID 075A
 }
 
-SECTION ITEM $item_stone_stairs_12
+SECTION ITEM $item_stone_stairs1_12
 {
     ID 075B
 }
 
-SECTION ITEM $item_stone_stairs_13
+SECTION ITEM $item_stone_stairs1_13
 {
     ID 075C
 }
 
-SECTION ITEM $item_stone_stairs_14
+SECTION ITEM $item_stone_stairs1_14
 {
     ID 075D
 }
 
-SECTION ITEM $item_stone_stairs_15
+SECTION ITEM $item_stone_stairs1_15
 {
     ID 075E
 }
 
-SECTION ITEM $item_stone_stairs_16
+SECTION ITEM $item_stone_stairs1_16
 {
     ID 075F
 }
 
-SECTION ITEM $item_stone_stairs_17
+SECTION ITEM $item_stone_stairs1_17
 {
     ID 0760
 }
 
-SECTION ITEM $item_stone_stairs_18
+SECTION ITEM $item_stone_stairs1_18
 {
     ID 0761
 }
 
-SECTION ITEM $item_stone_stairs_19
+SECTION ITEM $item_stone_stairs1_19
 {
     ID 0762
 }
 
-SECTION ITEM $item_stone_stairs_20
+SECTION ITEM $item_stone_stairs1_20
 {
     ID 0763
 }
 
-SECTION ITEM $item_stone_stairs_21
+SECTION ITEM $item_stone_stairs1_21
 {
     ID 0764
 }
 
-SECTION ITEM $item_stone_stairs_22
+SECTION ITEM $item_stone_stairs1_22
 {
     ID 0765
 }
 
-SECTION ITEM $item_stone_stairs_23
+SECTION ITEM $item_stone_stairs1_23
 {
     ID 0766
 }
 
-SECTION ITEM $item_stone_stairs_24
+SECTION ITEM $item_stone_stairs1_24
 {
     ID 0767
 }
 
-SECTION ITEM $item_stone_stairs_25
+SECTION ITEM $item_stone_stairs1_25
 {
     ID 0768
 }
 
-SECTION ITEM $item_sandstone_stairs_1
+SECTION ITEM $item_sandstone_stairs1_1
 {
     ID 0769
 }
  
-SECTION ITEM $item_sandstone_stairs_2
+SECTION ITEM $item_sandstone_stairs1_2
 {
     ID 076A
 }
  
-SECTION ITEM $item_sandstone_stairs_3
+SECTION ITEM $item_sandstone_stairs1_3
 {
     ID 076B
 }
  
-SECTION ITEM $item_sandstone_stairs_4
+SECTION ITEM $item_sandstone_stairs1_4
 {
     ID 076C
 }
  
-SECTION ITEM $item_sandstone_stairs_5
+SECTION ITEM $item_sandstone_stairs1_5
 {
     ID 076D
 }
  
-SECTION ITEM $item_sandstone_stairs_6
+SECTION ITEM $item_sandstone_stairs1_6
 {
     ID 076E
 }
  
-SECTION ITEM $item_sandstone_stairs_7
+SECTION ITEM $item_sandstone_stairs1_7
 {
     ID 076F
 }
  
-SECTION ITEM $item_sandstone_stairs_8
+SECTION ITEM $item_sandstone_stairs1_8
 {
     ID 0770
 }
  
-SECTION ITEM $item_sandstone_stairs_9
+SECTION ITEM $item_sandstone_stairs1_9
 {
     ID 0771
 }
  
-SECTION ITEM $item_sandstone_stairs_10
+SECTION ITEM $item_sandstone_stairs1_10
 {
     ID 0772
 }
 
-SECTION ITEM $item_sandstone_stairs_11
+SECTION ITEM $item_sandstone_stairs1_11
 {
     ID 0773
 }
 
-SECTION ITEM $item_sandstone_stairs_12
+SECTION ITEM $item_sandstone_stairs1_12
 {
     ID 0774
 }
 
-SECTION ITEM $item_sandstone_stairs_13
+SECTION ITEM $item_sandstone_stairs1_13
 {
     ID 0775
 }
 
-SECTION ITEM $item_sandstone_stairs_14
+SECTION ITEM $item_sandstone_stairs1_14
 {
     ID 0776
 }
 
-SECTION ITEM $item_sandstone_stairs_15
+SECTION ITEM $item_sandstone_stairs1_15
 {
     ID 0777
 }
 
-SECTION ITEM $item_sandstone_stairs_16
+SECTION ITEM $item_sandstone_stairs1_16
 {
     ID 0778
 }
 
-SECTION ITEM $item_sandstone_stairs_17
+SECTION ITEM $item_sandstone_stairs1_17
 {
     ID 0779
 }
 
-SECTION ITEM $item_sandstone_stairs_18
+SECTION ITEM $item_sandstone_stairs1_18
 {
     ID 077A
 }
 
-SECTION ITEM $item_sandstone_stairs_19
+SECTION ITEM $item_sandstone_stairs1_19
 {
     ID 077B
 }
 
-SECTION ITEM $item_sandstone_stairs_20
+SECTION ITEM $item_sandstone_stairs1_20
 {
     ID 077C
 }
 
-SECTION ITEM $item_sandstone_stairs_21
+SECTION ITEM $item_sandstone_stairs1_21
 {
     ID 077D
 }
 
-SECTION ITEM $item_sandstone_stairs_22
+SECTION ITEM $item_sandstone_stairs1_22
 {
     ID 077E
 }
 
-SECTION ITEM $item_sandstone_stairs_23
+SECTION ITEM $item_sandstone_stairs1_23
 {
     ID 077F
 }
 
-SECTION ITEM $item_sandstone_stairs_24
+SECTION ITEM $item_sandstone_stairs1_24
 {
     ID 0780
 }
 
-SECTION ITEM $item_sandstone_stairs_25
+SECTION ITEM $item_sandstone_stairs1_25
 {
     ID 0781
 }
 
-SECTION ITEM $item_stone_stairs_26
+SECTION ITEM $item_stone_stairs1_26
 {
     ID 0782
 }
 
-SECTION ITEM $item_stone_stairs_27
+SECTION ITEM $item_stone_stairs1_27
 {
     ID 0783
 }
@@ -4659,17 +4659,17 @@ SECTION ITEM $item_cave_stairs_3
     ID 079F
 }
 
-SECTION ITEM $item_stone_stairs_28
+SECTION ITEM $item_stone_stairs1_28
 {
     ID 07A0
 }
 
-SECTION ITEM $item_stone_stairs_29
+SECTION ITEM $item_stone_stairs1_29
 {
     ID 07A1
 }
 
-SECTION ITEM $item_stone_stairs_30
+SECTION ITEM $item_stone_stairs1_30
 {
     ID 07A2
 }
@@ -4779,17 +4779,17 @@ SECTION ITEM $item_carpeted_stairs_5
     ID 07C8
 }
 
-SECTION ITEM $item_stone_stairs_31
+SECTION ITEM $item_stone_stairs1_31
 {
     ID 07DA
 }
 
-SECTION ITEM $item_stone_stairs_32
+SECTION ITEM $item_stone_stairs1_32
 {
     ID 07DF
 }
 
-SECTION ITEM $item_stone_stairs_33
+SECTION ITEM $item_stone_stairs1_33
 {
     ID 07E0
 }
@@ -5731,6 +5731,114 @@ SECTION ITEM $item_cave_floor_20
 SECTION ITEM $item_cave_floor_21
 {
     ID 054F
+}
+
+SECTION ITEM $item_alchemical_floor_1
+{
+    ID 181D
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_2
+{
+    ID 181E
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_3
+{
+    ID 181F
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_4
+{
+    ID 1820
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_5
+{
+    ID 1821
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_6
+{
+    ID 1822
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_7
+{
+    ID 1823
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_8
+{
+    ID 1824
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_9
+{
+    ID 1825
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_10
+{
+    ID 1826
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_11
+{
+    ID 1827
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
+}
+
+SECTION ITEM $item_alchemical_floor_12
+{
+    ID 1828
+    
+    ///CATEGORY Floors
+    ///SUBSECTION Alchemical Symbols
+    ///DESCRIPTION Alchemical Symbol
 }
 
 //=========================================================================//

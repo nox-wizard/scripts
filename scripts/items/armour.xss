@@ -449,7 +449,7 @@ SECTION ITEM $item_thigh_boots
 }
 
 // a skullcap
-SECTION ITEM $item_a_skullcap
+SECTION ITEM $item_skullcap
 {
     NAME a skullcap
     ID 1544
@@ -468,7 +468,7 @@ SECTION ITEM $item_a_skullcap
 }
 
 // a deer mask
-SECTION ITEM $item_a_deer_mask
+SECTION ITEM $item_deer_mask
 {
     NAME a deer mask
     ID 1547
@@ -485,7 +485,7 @@ SECTION ITEM $item_a_deer_mask
 }
 
 // a bear mask
-SECTION ITEM $item_a_bear_mask
+SECTION ITEM $item_bear_mask
 {
     NAME a bear mask
     ID 1545
@@ -502,7 +502,7 @@ SECTION ITEM $item_a_bear_mask
 }
 
 // a orc helm
-SECTION ITEM $item_a_orc_helm
+SECTION ITEM $item_orc_helm
 {
     NAME a orc helm
     ID 1F0B
@@ -519,7 +519,7 @@ SECTION ITEM $item_a_orc_helm
 }
 
 // a orc mask
-SECTION ITEM $item_a_orc_mask
+SECTION ITEM $item_orc_mask
 {
     NAME a orc mask
     ID 141C
@@ -536,7 +536,7 @@ SECTION ITEM $item_a_orc_mask
 }
 
 // a tribal mask
-SECTION ITEM $item_a_tribal_mask
+SECTION ITEM $item_tribal_mask
 {
     NAME a tribal mask
     ID 1549
@@ -553,7 +553,7 @@ SECTION ITEM $item_a_tribal_mask
 }
 
 // a tribal mask
-SECTION ITEM $item_a_tribal_mask_1
+SECTION ITEM $item_tribal_mask_1
 {
     NAME a tribal mask
     ID 154B
@@ -567,7 +567,7 @@ SECTION ITEM $item_a_tribal_mask_1
 }
 
 // a tribal mask
-SECTION ITEM $item_a_tribal_mask_1
+SECTION ITEM $item_tribal_mask_1
 {
     NAME a tribal mask
     ID 154B

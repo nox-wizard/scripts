@@ -35,5 +35,5 @@
 #define $greater_explosion_potion $item_greater_explosion_potion
 
 #define $lesser_mana_potion 665
-#define $normal_mana_potion $item_a_mana_potion
+#define $normal_mana_potion $item_mana_potion
 #define $greater_mana_potion 666

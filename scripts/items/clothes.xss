@@ -70,7 +70,7 @@ SECTION ITEM $item_death_shroud
     ///SUBSECTION Special Clothes
 }
 
-SECTION ITEM $item_gm_robe_red_
+SECTION ITEM $item_gm_robe_red
 {
     NAME GM Robe (red)
     ID 204F
@@ -85,7 +85,7 @@ SECTION ITEM $item_gm_robe_red_
 }
 
 // GM Robe (Blue)
-SECTION ITEM $item_gm_robe_blue_
+SECTION ITEM $item_gm_robe_blue
 {
     NAME GM Robe (Blue)
     ID 204F
@@ -100,7 +100,7 @@ SECTION ITEM $item_gm_robe_blue_
 }
 
 // GM Robe (green)
-SECTION ITEM $item_gm_robe_green_
+SECTION ITEM $item_gm_robe_green
 {
     NAME GM Robe (green)
     ID 204F
@@ -157,7 +157,7 @@ SECTION ITEM $item_cap
 }
 
 // a tall straw hat
-SECTION ITEM $item_a_tall_straw_hat
+SECTION ITEM $item_tall_straw_hat
 {
     NAME a tall straw hat
     ID 1716
@@ -185,7 +185,7 @@ SECTION ITEM $item_straw_hat
 }
 
 // wizard hat
-SECTION ITEM $item_a_wizards_hat
+SECTION ITEM $item_wizards_hat
 {
     NAME a wizard's hat
     ID 1718
@@ -297,7 +297,7 @@ SECTION ITEM $item_shirt
 }
 
 // a surcoat
-SECTION ITEM $item_a_surcoat
+SECTION ITEM $item_surcoat
 {
     NAME a surcoat
     ID 1FFD
@@ -311,7 +311,7 @@ SECTION ITEM $item_a_surcoat
 }
 
 // a tunic
-SECTION ITEM $item_a_tunic
+SECTION ITEM $item_tunic
 {
     NAME a tunic
     ID 1FA1
@@ -325,7 +325,7 @@ SECTION ITEM $item_a_tunic
 }
 
 // a robe
-SECTION ITEM $item_a_robe
+SECTION ITEM $item_robe1
 {
     NAME a robe
     ID 1F03
@@ -339,7 +339,7 @@ SECTION ITEM $item_a_robe
 }
 
 // a jester's suit
-SECTION ITEM $item_a_jesters_suit
+SECTION ITEM $item_jesters_suit
 {
     NAME a jester's suit
     ID 1F9F
@@ -353,7 +353,7 @@ SECTION ITEM $item_a_jesters_suit
 }
 
 // a doublet
-SECTION ITEM $item_a_doublet
+SECTION ITEM $item_doublet
 {
     NAME a doublet
     ID 1F7B
@@ -367,7 +367,7 @@ SECTION ITEM $item_a_doublet
 }
 
 // a fancy dress
-SECTION ITEM $item_a_fancy_dress
+SECTION ITEM $item_fancy_dress
 {
     NAME a fancy dress
     ID 1EFF
@@ -381,7 +381,7 @@ SECTION ITEM $item_a_fancy_dress
 }
 
 // a plain dress
-SECTION ITEM $item_a_plain_dress
+SECTION ITEM $item_plain_dress
 {
     NAME a plain dress
     ID 1F01
@@ -395,7 +395,7 @@ SECTION ITEM $item_a_plain_dress
 }
 
 // a skirt
-SECTION ITEM $item_a_skirt
+SECTION ITEM $item_skirt
 {
     NAME a skirt
     ID 1516
@@ -423,7 +423,7 @@ SECTION ITEM $item_short_pants
 }
 
 // a kilt
-SECTION ITEM $item_a_kilt
+SECTION ITEM $item_kilt
 {
     NAME a kilt
     ID 1537
@@ -451,7 +451,7 @@ SECTION ITEM $item_long_pants
 }
 
 // a half apron
-SECTION ITEM $item_a_half_apron
+SECTION ITEM $item_half_apron
 {
     NAME a half apron
     ID 153B
@@ -465,7 +465,7 @@ SECTION ITEM $item_a_half_apron
 }
 
 // a full apron
-SECTION ITEM $item_a_full_apron
+SECTION ITEM $item_full_apron
 {
     NAME a full apron
     ID 153D
@@ -479,7 +479,7 @@ SECTION ITEM $item_a_full_apron
 }
 
 // a bandana
-SECTION ITEM $item_a_bandana
+SECTION ITEM $item_bandana
 {
     NAME a bandana
     ID 1540
@@ -493,7 +493,7 @@ SECTION ITEM $item_a_bandana
 }
 
 // a body sash
-SECTION ITEM $item_a_body_sash
+SECTION ITEM $item_body_sash
 {
     NAME a body sash
     ID 1541
@@ -506,7 +506,7 @@ SECTION ITEM $item_a_body_sash
     ///SUBSECTION Accessories
 }
 
-SECTION ITEM $item_robe
+SECTION ITEM $item_robe1
 {
     ID 1F03
     LAYER $layer_outer_torso
@@ -520,7 +520,7 @@ SECTION ITEM $item_robe
     ///DESCRIPTION Red Robe
 }
 
-SECTION ITEM $item_robe_1
+SECTION ITEM $item_robe2
 {
     ID 1F03
     LAYER $layer_outer_torso
@@ -533,7 +533,7 @@ SECTION ITEM $item_robe_1
     ///DESCRIPTION Grey Robe
 }
 
-SECTION ITEM $item_robe_2
+SECTION ITEM $item_robe3
 {
     ID 1F03
     LAYER $layer_outer_torso

@@ -7,7 +7,7 @@ SECTION ITEM $item_the_first_uox_book
     VALUE 20
 }
 
-SECTION ITEM $item_a_grammer_of_orchish
+SECTION ITEM $item_grammer_of_orchish
 {
     NAME A Grammer of Orchish
     ID 0FF1
@@ -61,7 +61,7 @@ SECTION ITEM $item_taming_dragons
     VALUE 32
 }
 
-SECTION ITEM $item_a_politic_call_to_anarchy
+SECTION ITEM $item_politic_call_to_anarchy
 {
     NAME A politic call to anarchy
     ID 0FF1
@@ -124,7 +124,7 @@ SECTION ITEM $item_the_fight
     VALUE 27
 }
 
-SECTION ITEM $item_a_song_of_samlethe
+SECTION ITEM $item_song_of_samlethe
 {
     NAME A song of Samlethe
     ID 0FF1
@@ -151,7 +151,7 @@ SECTION ITEM $item_classic_tales_of_vesper_vol1
     VALUE 18
 }
 
-SECTION ITEM $item_a_tale_of_three_tribes
+SECTION ITEM $item_tale_of_three_tribes
 {
     NAME A tale of three tribes
     ID 0FF1
@@ -187,7 +187,7 @@ SECTION ITEM $item_the_wild_girl_in_the_forest
     VALUE 23
 }
 
-SECTION ITEM $item_a_primer_on_arms_and_weopons
+SECTION ITEM $item_primer_on_arms_and_weopons
 {
     NAME A primer on arms and weopons
     ID 0FF1

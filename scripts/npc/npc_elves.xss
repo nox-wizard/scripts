@@ -155,7 +155,7 @@ SECTION NPC $npc_wood_elf_queen
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 015f
     STR 45
     DEX 15 20
@@ -297,7 +297,7 @@ SECTION NPC $npc_wood_elf_wizard
     COLOR 0287
     ITEM $item_fancy_shirt
     COLOR 0599
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -342,7 +342,7 @@ SECTION NPC $npc_wood_elf_enchantress
     COLOR 0287
     ITEM $item_fancy_shirt
     COLOR 0599
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -388,7 +388,7 @@ SECTION NPC $npc_wood_elf_priest
     COLOR 0287
     ITEM $item_fancy_shirt
     COLOR 0599
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -434,7 +434,7 @@ SECTION NPC $npc_wood_elf_priestess
     COLOR 0287
     ITEM $item_fancy_shirt
     COLOR 0599
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 0599
     STR 30
     DEX 15 20
@@ -480,7 +480,7 @@ SECTION NPC $npc_frost_elf_m
     COLOR 0481
     ITEM $item_fancy_shirt
     COLOR 0481
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 0481
     ITEM $item_long_pants
     COLOR 0481
@@ -531,7 +531,7 @@ SECTION NPC $npc_frost_elf_f
     COLOR 0481
     ITEM $item_fancy_shirt
     COLOR 0481
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 0481
     ITEM $item_long_pants
     COLOR 0481
@@ -690,7 +690,7 @@ SECTION NPC $npc_frost_elf_wizard
     COLOR 0481
     ITEM $item_fancy_shirt
     COLOR 0481
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 0481
     ITEM $item_long_pants
     COLOR 0481
@@ -702,7 +702,7 @@ SECTION NPC $npc_frost_elf_wizard
     COLOR 0481
     ITEM $item_leather_gorget
     COLOR 0481
-    PACKITEM $item_a_spellbook
+    PACKITEM $item_spellbook
     LOOT $loot_circle_1-5_spells
     LOOT $loot_reagents
     LOOT $loot_reagents
@@ -855,9 +855,9 @@ SECTION NPC $npc_drow_weapon_lord
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 0142
-    ITEM $item_a_piwafwi
+    ITEM $item_piwafwi
     TOTAME 1100
     STR 100 200
     DEX 15 20
@@ -905,9 +905,9 @@ SECTION NPC $npc_drow_assassin
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 0142
-    ITEM $item_a_piwafwi
+    ITEM $item_piwafwi
     ITEM $item_iron_kryss_of_vanquishing
     TOTAME 1100
     STR 100 100
@@ -953,8 +953,8 @@ SECTION NPC $npc_drow_mistress
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_piwafwi
-    ITEM $item_a_robe
+    ITEM $item_piwafwi
+    ITEM $item_robe1
     COLOR 0086
     ITEM $item_agapite_chain_tunic
     TOTAME 1100
@@ -1005,9 +1005,9 @@ SECTION NPC $npc_drow_warrior
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 0142
-    ITEM $item_a_piwafwi
+    ITEM $item_piwafwi
     ITEM $item_iron_scimitar_of_force
     TOTAME 1100
     STR 100 150
@@ -1053,8 +1053,8 @@ SECTION NPC $npc_drow_drow_priestess
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_piwafwi
-    ITEM $item_a_robe
+    ITEM $item_piwafwi
+    ITEM $item_robe1
     COLOR 0369
     ITEM $item_iron_war_fork_of_power
     TOTAME 1100
@@ -1104,8 +1104,8 @@ SECTION NPC $npc_drow_high_priestess
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_piwafwi
-    ITEM $item_a_robe
+    ITEM $item_piwafwi
+    ITEM $item_robe1
     COLOR 01b6
     ITEM $item_iron_mace_of_force
     TOTAME 1100
@@ -1156,9 +1156,9 @@ SECTION NPC $npc_drow_archer
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 0142
-    ITEM $item_a_piwafwi
+    ITEM $item_piwafwi
     ITEM $item_iron_crossbow_of_force
     PACKITEM $item_crossbow_bolt
     AMOUNT 150
@@ -1207,9 +1207,9 @@ SECTION NPC $npc_drow_wizard
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 0142
-    ITEM $item_a_piwafwi
+    ITEM $item_piwafwi
     TOTAME 1100
     STR 40 65
     DEX 15 20
@@ -1256,8 +1256,8 @@ SECTION NPC $npc_gromph
     COLOR 096c
     ITEM $item_iron_ringmail_gloves
     COLOR 096c
-    ITEM $item_a_body_sash
-    ITEM $item_a_robe
+    ITEM $item_body_sash
+    ITEM $item_robe1
     COLOR 0386
     ITEM $item_fire_mace
     TOTAME 1100
@@ -1317,7 +1317,7 @@ SECTION NPC $npc_high_elf_king
     COLOR 096d
     ITEM $item_cloak
     COLOR 01b6
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 01b6
     TOTAME 1100
     STR 95 100
@@ -1369,7 +1369,7 @@ SECTION NPC $npc_high_elf_prince
     COLOR 096d
     ITEM $item_cloak
     COLOR 01b6
-    ITEM $item_a_body_sash
+    ITEM $item_body_sash
     COLOR 01b6
     TOTAME 1100
     STR 95 100
@@ -1409,11 +1409,11 @@ SECTION NPC $npc_high_elf_mage
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 02a8
     ITEM $item_iron_ringmail_gloves
     ITEM $item_sandles
-    ITEM $item_a_wizards_hat
+    ITEM $item_wizards_hat
     COLOR 02a8
     ITEM $item_gnarled_staff
     TOTAME 1100
@@ -1452,11 +1452,11 @@ SECTION NPC $npc_high_elf_enchantress
     FY1 -1
     FZ1 -1
     FX2 10
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 02a8
     ITEM $item_iron_ringmail_gloves
     ITEM $item_sandles
-    ITEM $item_a_wizards_hat
+    ITEM $item_wizards_hat
     COLOR 02a8
     ITEM $item_gnarled_staff
     STR 55 59
@@ -1491,19 +1491,19 @@ SECTION NPC $npc_high_elf_m
     GOLD 76 95
     ITEM $item_sandles
     COLOR 0238
-    ITEM $item_a_wizards_hat
+    ITEM $item_wizards_hat
     COLOR 0170
     ITEM $item_cloak
     COLOR 0238
     ITEM $item_fancy_shirt
     COLOR 0238
-    ITEM $item_a_tunic
+    ITEM $item_tunic
     COLOR 0238
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 0238
     ITEM $item_long_pants
     COLOR 0238
-    PACKITEM $item_a_spellbook
+    PACKITEM $item_spellbook
     TOTAME 1100
     STR 76 95
     DEX 15 20

@@ -93,8 +93,8 @@ SECTION ADVANCEMENT $advance_mage
 	MAGERY 940
 	ALCHEMY 940
 	MAGICRESISTANCE 800
-	ITEM $item_a_wizards_hat
-	ITEM $item_a_spellbook
+	ITEM $item_wizards_hat
+	ITEM $item_spellbook
 	ITEM $item_all-spell_scroll
 	ITEM $item_black_pearl 50
 	ITEM $item_bloodmoss 50

@@ -164,7 +164,7 @@ SECTION NPC $npc_orc_2_hand_axe
     ITEM $item_iron_ringmail_tunic
     PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_boots
-    PACKITEM $item_a_orc_helm
+    PACKITEM $item_orc_helm
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
@@ -211,7 +211,7 @@ SECTION NPC $npc_orc_captain
     ITEM $item_iron_ringmail_tunic
     PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_thigh_boots
-    PACKITEM $item_a_orc_mask
+    PACKITEM $item_orc_mask
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
@@ -257,7 +257,7 @@ SECTION NPC $npc_an_orcish_lord
     ITEM $item_iron_ringmail_tunic
     PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_boots
-    PACKITEM $item_a_orc_mask
+    PACKITEM $item_orc_mask
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
@@ -420,7 +420,7 @@ SECTION NPC $npc_ratman_mage
     ITEM $item_iron_two-handed_axe
     PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_boots
-    PACKITEM $item_a_orc_helm
+    PACKITEM $item_orc_helm
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
@@ -465,7 +465,7 @@ SECTION NPC $npc_goblin_captain
     ITEM $item_iron_two-handed_axe
     PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_thigh_boots
-    PACKITEM $item_a_orc_mask
+    PACKITEM $item_orc_mask
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
@@ -509,7 +509,7 @@ SECTION NPC $npc_a_goblin_lord
     ITEM $item_iron_two-handed_axe
     PACKITEM $item_iron_ringmail_tunic
     PACKITEM $item_boots
-    PACKITEM $item_a_orc_mask
+    PACKITEM $item_orc_mask
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry

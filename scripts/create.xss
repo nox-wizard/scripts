@@ -338,11 +338,11 @@ SECTION MAKEMENU 14
     0E73 Cannon Ball
     RESOURCE 10
     SKILL 400
-    ADDITEM $item_a_cannon_ball
+    ADDITEM $item_cannon_ball
     14ED Cannon Deed
     RESOURCE 1000
     SKILL 801
-    ADDITEM $item_a_cannon_deed
+    ADDITEM $item_cannon_deed
 }
 
 // End of Blacksmithing section
@@ -421,11 +421,11 @@ SECTION MAKEMENU 21
     0B2C Wooden bench_A facing South
     RESOURCE 17
     SKILL 526
-    ADDITEM $item_pine_wooden_bench_D1
+    ADDITEM $item_pine_wooden_bench4_1
     0B2D Wooden bench_A facing East
     RESOURCE 17
     SKILL 526
-    ADDITEM $item_pine_wooden_bench_D2
+    ADDITEM $item_pine_wooden_bench4_2
     0B32 Throne
     RESOURCE 19
     SKILL 736
@@ -438,19 +438,19 @@ SECTION MAKEMENU 22
     0E7D Wooden Box - East
     RESOURCE 8
     SKILL 100
-    ADDITEM $item_wooden_box
+    ADDITEM $item_wooden_box_1
     09aa Wooden Box - South
     RESOURCE 8
     SKILL 100
-    ADDITEM $item_wooden_box_1
+    ADDITEM $item_wooden_box_2
     0E7E Small Wooden Crate - East
     RESOURCE 9
     SKILL 100
-    ADDITEM $item_small_wooden_crate
+    ADDITEM $item_small_wooden_crate1_1
     09a9 Small Wooden Crate - South
     RESOURCE 9
     SKILL 100
-    ADDITEM $item_small_wooden_crate_1
+    ADDITEM $item_small_wooden_crate1_2
     0E3E Medium Wooden Crate - East
     RESOURCE 15
     SKILL 315
@@ -515,7 +515,7 @@ SECTION MAKEMENU 23
     0B34 table_A (Small)
     RESOURCE 17
     SKILL 421
-    ADDITEM $item_pine_table_G1_1
+    ADDITEM $item_pine_table7_1_1
     0B4a Writing Desk - North
     RESOURCE 17
     SKILL 631
@@ -535,19 +535,19 @@ SECTION MAKEMENU 23
     0B8F table_A facing east
     RESOURCE 23
     SKILL 631
-    ADDITEM $item_pine_table_E2
+    ADDITEM $item_pine_table5_2
     0B7c table_A facing south
     RESOURCE 23
     SKILL 631
-    ADDITEM $item_pine_table_E1
+    ADDITEM $item_pine_table5_1
     0B7d Large table_A (Yew Style)- east
     RESOURCE 27
     SKILL 842
-    ADDITEM $item_pine_table_F1
+    ADDITEM $item_pine_table6_1
     0B90 Large table_A (Yew Style)- south
     RESOURCE 27
     SKILL 842
-    ADDITEM $item_pine_table_F2
+    ADDITEM $item_pine_table6_2
 }
 SECTION MAKEMENU 24
 {
@@ -555,11 +555,11 @@ SECTION MAKEMENU 24
     0B32 Throne
     RESOURCE 19
     SKILL 736
-    ADDITEM $item_pine_throne1
+    ADDITEM $item_pine_throne_1
     0B33 Throne
     RESOURCE 19
     SKILL 736
-    ADDITEM $item_pine_throne2
+    ADDITEM $item_pine_throne_2
 }
 
 SECTION MAKEMENU 25
@@ -679,7 +679,7 @@ SECTION MAKEMENU 28
     0dbf Fishing Pole
     RESOURCE 5
     SKILL 684
-    ADDITEM $item_a_fishing_pole
+    ADDITEM $item_fishing_pole
     0e8a Quarter Staff
     RESOURCE 6
     SKILL 736
@@ -775,11 +775,11 @@ SECTION MAKEMENU 31
     1540 Bandana
     RESOURCE 2
     SKILL 10
-    ADDITEM $item_a_bandana
+    ADDITEM $item_bandana
     1544 Skullcap
     RESOURCE 2
     SKILL 10
-    ADDITEM $item_a_skullcap
+    ADDITEM $item_skullcap
     1717 Straw hat
     RESOURCE 10
     SKILL 68
@@ -811,7 +811,7 @@ SECTION MAKEMENU 31
     1716 Tall hat
     RESOURCE 12
     SKILL 73
-    ADDITEM $item_a_tall_straw_hat
+    ADDITEM $item_tall_straw_hat
     171C Jester hat
     RESOURCE 15
     SKILL 79
@@ -819,7 +819,7 @@ SECTION MAKEMENU 31
     1718 Wizard's hat
     RESOURCE 15
     SKILL 79
-    ADDITEM $item_a_wizards_hat
+    ADDITEM $item_wizards_hat
 }
 
 SECTION MAKEMENU 32
@@ -828,7 +828,7 @@ SECTION MAKEMENU 32
     1F7B Doublet
     RESOURCE 8
     SKILL 10
-    ADDITEM $item_a_doublet
+    ADDITEM $item_doublet
     1517 Plain shirt
     RESOURCE 8
     SKILL 227
@@ -840,19 +840,19 @@ SECTION MAKEMENU 32
     1F01 Plain Dress
     RESOURCE 10
     SKILL 363
-    ADDITEM $item_a_plain_dress
+    ADDITEM $item_plain_dress
     1FA1 Tunic
     RESOURCE 12
     SKILL 10
-    ADDITEM $item_a_tunic
+    ADDITEM $item_tunic
     1EFF Fancy Dress
     RESOURCE 12
     SKILL 136
-    ADDITEM $item_a_fancy_dress
+    ADDITEM $item_fancy_dress
     1FFD Surcoat
     RESOURCE 14
     SKILL 90
-    ADDITEM $item_a_surcoat
+    ADDITEM $item_surcoat
     1515 Cape
     RESOURCE 14
     SKILL 454
@@ -860,11 +860,11 @@ SECTION MAKEMENU 32
     1F03 Robe
     RESOURCE 16
     SKILL 590
-    ADDITEM $item_a_robe
+    ADDITEM $item_robe1
     1F9F Jester's suit
     RESOURCE 24
     SKILL 90
-    ADDITEM $item_a_jesters_suit
+    ADDITEM $item_jesters_suit
 }
 
 SECTION MAKEMENU 33
@@ -877,7 +877,7 @@ SECTION MAKEMENU 33
     1537 Kilt
     RESOURCE 8
     SKILL 227
-    ADDITEM $item_a_kilt
+    ADDITEM $item_kilt
     1539 Long pants
     RESOURCE 8
     SKILL 272
@@ -885,7 +885,7 @@ SECTION MAKEMENU 33
     1516 Skirt
     RESOURCE 10
     SKILL 318
-    ADDITEM $item_a_skirt
+    ADDITEM $item_skirt
 }
 
 SECTION MAKEMENU 34
@@ -894,15 +894,15 @@ SECTION MAKEMENU 34
     1541 Body sash
     RESOURCE 4
     SKILL 45
-    ADDITEM $item_a_body_sash
+    ADDITEM $item_body_sash
     153B Half apron
     RESOURCE 6
     SKILL 227
-    ADDITEM $item_a_half_apron
+    ADDITEM $item_half_apron
     153D Full apron
     RESOURCE 10
     SKILL 318
-    ADDITEM $item_a_full_apron
+    ADDITEM $item_full_apron
 }
 
 SECTION MAKEMENU 35
@@ -1180,15 +1180,15 @@ SECTION MAKEMENU 46
     163C A Small Leather Pillow
     RESOURCE 6
     SKILL 350
-    ADDITEM $item_a_small_leather_pillow
+    ADDITEM $item_small_leather_pillow
     163B A Medium Leather Pillow
     RESOURCE 8
     SKILL 450
-    ADDITEM $item_a_medium_leather_pillow
+    ADDITEM $item_medium_leather_pillow
     163A A Large Leather Pillow
     RESOURCE 12
     SKILL 550
-    ADDITEM $item_a_large_leather_pillow
+    ADDITEM $item_large_leather_pillow
 }
 
 
@@ -1202,7 +1202,7 @@ SECTION MAKEMENU 50
     09B3 A Golden Goblet
     RESOURCE 3
     SKILL 500
-    ADDITEM $item_a_golden_goblet
+    ADDITEM $item_golden_goblet
     13ed Golden Ringmail
     RESOURCE 10
     SKILL 338
@@ -1346,7 +1346,7 @@ SECTION MAKEMENU 53
     1405 War Fork (12)
     RESOURCE 12
     SKILL 411
-    ADDITEM $item_bottle_9
+    ADDITEM $item_bottle10
 }
 
 //End of GoldSmithing
@@ -1490,7 +1490,7 @@ SECTION MAKEMENU 70
     14f4 A Boat Model
     RESOURCE 5
     SKILL 100
-    ADDITEM $item_a_boat_model
+    ADDITEM $item_boat_model
     104D clock frame
     RESOURCE 6
     SKILL 250
@@ -1625,23 +1625,23 @@ SECTION MAKEMENU 84
     1000 A Pewter Mug
     RESOURCE 3
     SKILL 100
-    ADDITEM $item_a_pewter_mug_1
+    ADDITEM $item_pewter_mug_1
     0b46 a small vase
     RESOURCE 5
     SKILL 150
-    ADDITEM $item_a_small_vase
+    ADDITEM $item_small_vase1
     0b48 a small vase
     RESOURCE 5
     SKILL 150
-    ADDITEM $item_a_small_vase
+    ADDITEM $item_small_vase1
     0B45 A Vase
     RESOURCE 5
     SKILL 150
-    ADDITEM $item_a_vase
+    ADDITEM $item_vase
     0B47 A Vase
     RESOURCE 5
     SKILL 150
-    ADDITEM $item_a_vase
+    ADDITEM $item_vase
     0e4B Jars
     RESOURCE 5
     SKILL 150
@@ -1649,7 +1649,7 @@ SECTION MAKEMENU 84
     185B Vials
     RESOURCE 5
     SKILL 150
-    ADDITEM $item_a_set_of_vials
+    ADDITEM $item_set_of_vials
 }
 //end section Tinkering with Ingots
 
@@ -1714,7 +1714,7 @@ SECTION MAKEMENU 122
     1854 A Skull Candle
     RESOURCE 5
     SKILL 250
-    ADDITEM $item_a_skull_candle_deed
+    ADDITEM $item_skull_candle_deed
     0a26 a tall candle
     RESOURCE 5
     SKILL 250
@@ -1730,11 +1730,11 @@ SECTION MAKEMENU 122
     0a06 torch holder
     RESOURCE 6
     SKILL 250
-    ADDITEM $item_torch_holder
+    ADDITEM $item_torch_holder_1
     0a29 Tall Candelabra
     RESOURCE 9
     SKILL 400
-    ADDITEM $item_a_candelabra
+    ADDITEM $item_candelabra
     142a Pot of wax 10 Beewax
     RESOURCE 10
     SKILL 100
@@ -2152,15 +2152,15 @@ SECTION MAKEMENU 815
     0faf Anvil Deed (Facing South)
     RESOURCE 150
     SKILL 600
-    ADDITEM $item_an_anvil_deed_facing_south_
+    ADDITEM $item_anvil_deed_2
     0fb0 Anvil Deed (Facing East)
     RESOURCE 150
     SKILL 600
-    ADDITEM $item_an_anvil_deed_facing_east_
+    ADDITEM $item_anvil_deed_1
     0fb1 Small Forge Deed
     RESOURCE 200
     SKILL 700
-    ADDITEM $item_a_forge_deed
+    ADDITEM $item_forge_deed
     14f0 Fireplace Deed (facing East)
     RESOURCE 200
     SKILL 700
@@ -2180,11 +2180,11 @@ SECTION MAKEMENU 815
     14f0 Large Forge Deed (facing East)
     RESOURCE 250
     SKILL 950
-    ADDITEM $item_a_large_forge_facing_east_deed
+    ADDITEM $item_large_forge_deed_1
     14f0 large Forge Deed (facing South)
     RESOURCE 250
     SKILL 950
-    ADDITEM $item_a_large_forge_facing_south_deed
+    ADDITEM $item_large_forge_deed_2
 }
 
 SECTION MAKEMENU 816
@@ -2201,43 +2201,43 @@ SECTION MAKEMENU 816
     10A5 Spinning Wheel Deed (Facing South)
     RESOURCE 100
     SKILL 500
-    ADDITEM $item_a_spinning_wheel_deed_facing_south_
+    ADDITEM $item_spinning_wheel_deed_2
     10A5 Spinning Wheel Deed (Facing East)
     RESOURCE 100
     SKILL 500
-    ADDITEM $item_a_spinning_wheel_deed_facing_east_
+    ADDITEM $item_spinning_wheel_deed_1
     100a Archery Butte Deed (Facing East)
     RESOURCE 150
     SKILL 600
-    ADDITEM $item_an_archery_butte_deed_facing_east_
+    ADDITEM $item_archery_butte_deed_1
     100b Archery Butte Deed (Facing South)
     RESOURCE 150
     SKILL 600
-    ADDITEM $item_an_archery_butte_deed_facing_south_
+    ADDITEM $item_archery_butte_deed_2
     1070 Training Dummy Deed (Facing South)
     RESOURCE 175
     SKILL 650
-    ADDITEM $item_a_training_dummy_deed_facing_south_
+    ADDITEM $item_training_dummy_deed_2
     1074 Training Dummy Deed (Facing East)
     RESOURCE 175
     SKILL 650
-    ADDITEM $item_a_training_dummy_deed_facing_east_
+    ADDITEM $item_training_dummy_deed_1
     1e2c Pick Pocket Dip Deed (Facing South)
     RESOURCE 175
     SKILL 650
-    ADDITEM $item_a_pickpocket_dip_deed_facing_south_
+    ADDITEM $item_pickpocket_dip_deed_2
     1e2d Pick Pocket Dip Deed (Facing East)
     RESOURCE 175
     SKILL 650
-    ADDITEM $item_a_pickpocket_dip_deed_facing_east_
+    ADDITEM $item_pickpocket_dip_deed_1
     14f0 Loom Deed (Facing East)
     RESOURCE 175
     SKILL 650
-    ADDITEM $item_loom-east_deed
+    ADDITEM $item_loom_deed_1
     14f0 Loom Deed (Facing South)
     RESOURCE 175
     SKILL 650
-    ADDITEM $item_loom-south_deed
+    ADDITEM $item_loom_deed_2
     14f0 Bed Deed (Facing East)
     RESOURCE 175
     SKILL 650
@@ -2249,11 +2249,11 @@ SECTION MAKEMENU 816
     14f0 Large Bed Deed (facing East)
     RESOURCE 200
     SKILL 990
-    ADDITEM $item_pine_bed_facing_east_deed
+    ADDITEM $item_pine_bed_1deed
     14f0 Large Bed Deed (facing South)
     RESOURCE 200
     SKILL 990
-    ADDITEM $item_pine_bed_facing_south_deed
+    ADDITEM $item_pine_bed_2deed
 }
 
 SECTION MAKEMENU 1100
@@ -2262,35 +2262,35 @@ SECTION MAKEMENU 1100
     20ec Zombie Scroll
     RESOURCE 1
     SKILL 100
-    ADDITEM $item_a_summon_zombie_scroll
+    ADDITEM $item_summon_zombie_scroll
     20e7 Skeleton Scroll
     RESOURCE 1
     SKILL 250
-    ADDITEM $item_a_summon_skeleton_scroll
+    ADDITEM $item_summon_skeleton_scroll
     2109 Spectre Scroll
     RESOURCE 1
     SKILL 250
-    ADDITEM $item_a_summon_spectre_scroll
+    ADDITEM $item_summon_spectre_scroll
     2109 Wraith Scroll
     RESOURCE 1
     SKILL 450
-    ADDITEM $item_a_summon_wraith_scroll
+    ADDITEM $item_summon_wraith_scroll
     20e7 Bone Knight Scroll
     RESOURCE 1
     SKILL 550
-    ADDITEM $item_a_summon_bone_knight_scroll
+    ADDITEM $item_summon_bone_knight_scroll
     20f8 Lich Scroll
     RESOURCE 1
     SKILL 650
-    ADDITEM $item_a_summon_lich_scroll
+    ADDITEM $item_summon_lich_scroll
     20e7 Bone Mage Scroll
     RESOURCE 1
     SKILL 750
-    ADDITEM $item_a_summon_bone_mage_scroll
+    ADDITEM $item_summon_bone_mage_scroll
     20f8 Lich Lord
     RESOURCE 1
     SKILL 850
-    ADDITEM $item_a_summon_lich_lord_scroll
+    ADDITEM $item_summon_lich_lord_scroll
 }
 
 SECTION MAKEMENU 2000

@@ -18,7 +18,7 @@ SECTION ITEM $item_dyes
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_a_dying_tub
+SECTION ITEM $item_dying_tub
 {
     NAME a dying tub
     ID 0FAB
@@ -30,27 +30,20 @@ SECTION ITEM $item_a_dying_tub
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_forge
-{
-    ID 0FB1
-    
-    ///CATEGORY Professions
-    ///SUBSECTION Miner & Blacksmith
-    ///DESCRIPTION Forge
-}
-
-SECTION ITEM $item_anvil
+SECTION ITEM $item_anvil_1
 {
     ID 0FAF
+    AMXINT $localvar_flipitem $item_anvil_2
     
     ///CATEGORY Professions
     ///SUBSECTION Miner & Blacksmith
     ///DESCRIPTION Anvil
 }
 
-SECTION ITEM $item_anvil_1
+SECTION ITEM $item_anvil_2
 {
     ID 0FB0
+    AMXINT $localvar_flipitem $item_anvil_1
     
     ///CATEGORY Professions
     ///SUBSECTION Miner & Blacksmith
@@ -66,41 +59,112 @@ SECTION ITEM $item_bellows
     ///DESCRIPTION Bellows 
 }
 
-SECTION ITEM $item_forge_1
-{
-    ID 197E
-    
-    ///CATEGORY Professions
-    ///SUBSECTION Miner & Blacksmith
-    ///DESCRIPTION Forge 2
-}
-
-SECTION ITEM $item_forge_2
-{
-    ID 1982
-    
-    ///CATEGORY Professions
-    ///SUBSECTION Miner & Blacksmith
-    ///DESCRIPTION Forge 2
-}
-
-//sections 8074-8076 large forge facing east
-SECTION ITEM $item_bellows_2
+SECTION ITEM $item_bellows_1
 {
     ID 1986
 }
 
-SECTION ITEM $item_forge_5
+SECTION ITEM $item_forge1
+{
+    ID 0FB1
+    
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge
+}
+
+SECTION ITEM $item_forge2_1_1
+{
+    ID 197A
+    AMXINT $localvar_flipitem $item_forge2_2_1
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
+}
+
+SECTION ITEM $item_forge2_1_2
+{
+    ID 197E
+    AMXINT $localvar_flipitem $item_forge2_2_2
+    
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
+}
+
+SECTION ITEM $item_forge2_1_3
+{
+    ID 19A6
+    AMXINT $localvar_flipitem $item_forge2_2_3
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
+}
+
+SECTION ITEM $item_forge2_1_4
+{
+    ID 19A2
+    AMXINT $localvar_flipitem $item_forge2_2_4
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
+}
+
+SECTION ITEM $item_forge2_1_5
+{
+    ID 1982
+    AMXINT $localvar_flipitem $item_forge2_2_5
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
+}
+
+SECTION ITEM $item_forge2_2_1
+{
+    ID 1986
+    AMXINT $localvar_flipitem $item_forge2_1_1
+    
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
+}
+
+SECTION ITEM $item_forge2_2_2
 {
     ID 198a
+    AMXINT $localvar_flipitem $item_forge2_1_2
 }
 
-SECTION ITEM $item_forge_6
+SECTION ITEM $item_forge2_2_3
+{
+    ID 199A
+    AMXINT $localvar_flipitem $item_forge2_1_3
+    
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
+}
+
+SECTION ITEM $item_forge2_2_4
+{
+    ID 1996
+    AMXINT $localvar_flipitem $item_forge2_1_4
+    
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
+}
+
+SECTION ITEM $item_forge2_2_5
 {
     ID 198e
+    AMXINT $localvar_flipitem $item_forge2_1_5
+    ///CATEGORY Professions
+    ///SUBSECTION Miner & Blacksmith
+    ///DESCRIPTION Forge 2
 }
 
-SECTION ITEM $item_a_large_forge_facing_south_deed
+SECTION ITEM $item_large_forge_deed_2
 {
     NAME a large forge facing south deed
     ID 14F0
@@ -108,7 +172,7 @@ SECTION ITEM $item_a_large_forge_facing_south_deed
     MOREX 36
 }
 
-SECTION ITEM $item_a_large_forge_facing_east_deed
+SECTION ITEM $item_large_forge_deed_1
 {
     NAME a large forge facing east deed
     ID 14F0
@@ -139,7 +203,7 @@ SECTION ITEM $item_drum
     ///DESCRIPTION Drum
 }
 
-SECTION ITEM $item_tambourine
+SECTION ITEM $item_tambourine1
 {
     ID 0E9D
     DECAY
@@ -150,7 +214,7 @@ SECTION ITEM $item_tambourine
     ///DESCRIPTION Tambourine
 }
 
-SECTION ITEM $item_tambourine_1
+SECTION ITEM $item_tambourine2
 {
     ID 0E9E
     DECAY
@@ -183,12 +247,12 @@ SECTION ITEM $item_lap_harp
     ///DESCRIPTION Harp
 }
 
-SECTION ITEM $item_lute
+SECTION ITEM $item_lute_2
 {
     ID 0EB3
     DECAY
     VALUE 25
-
+    AMXINT $localvar_flipitem $item_lute_1
     ///CATEGORY Professions
     ///SUBSECTION Bard
     ///DESCRIPTION Lute
@@ -199,7 +263,7 @@ SECTION ITEM $item_lute_1
     ID 0EB4
     DECAY
     VALUE 25
-
+    AMXINT $localvar_flipitem $item_lute_2
     ///CATEGORY Professions
     ///SUBSECTION Bard
     ///DESCRIPTION Lute
@@ -364,7 +428,7 @@ SECTION ITEM $item_scissors
     ///DESCRIPTION Scissors
 }
 
-SECTION ITEM $item_spinning_wheel
+SECTION ITEM $item_spinning_wheel1
 {
     ID 101d
     NAME spinning wheel
@@ -373,7 +437,7 @@ SECTION ITEM $item_spinning_wheel
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_a_spinning_wheel_deed_facing_east_
+SECTION ITEM $item_spinning_wheel_deed_1
 {
     NAME a spinning wheel deed (facing east)
     ID 14F0
@@ -385,7 +449,7 @@ SECTION ITEM $item_a_spinning_wheel_deed_facing_east_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_spinning_wheel_1
+SECTION ITEM $item_spinning_wheel2
 {
     ID 10A4
     NAME spinning wheel - not animated
@@ -394,7 +458,7 @@ SECTION ITEM $item_spinning_wheel_1
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_spinning_wheel_2
+SECTION ITEM $item_spinning_wheel3
 {
     ID 10A5
     NAME spinning wheel - animated
@@ -412,26 +476,48 @@ SECTION ITEM $item_piles_of_wool_1
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_upright_loom
+SECTION ITEM $item_upright_loom_1_1
 { // pt1- south
     ID 1061
     NAME upright loom
+    AMXINT $localvar_flipitem $item_upright_loom_2_1
 
     ///CATEGORY Professions
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_upright_loom_1
+SECTION ITEM $item_upright_loom_1_2
 { // pt2- south
     ID 1062
     NAME upright loom
+    AMXINT $localvar_flipitem $item_upright_loom_2_2
+
+    ///CATEGORY Professions
+    ///SUBSECTION Tailor
+}
+
+SECTION ITEM $item_upright_loom_2_1
+{ // pt1- east
+    ID 105F
+    NAME upright loom
+    AMXINT $localvar_flipitem $item_upright_loom_1_1
+
+    ///CATEGORY Professions
+    ///SUBSECTION Tailor
+}
+
+SECTION ITEM $item_upright_loom_2_2
+{ // pt2- east
+    ID 1060
+    NAME upright loom
+    AMXINT $localvar_flipitem $item_upright_loom_1_2
 
     ///CATEGORY Professions
     ///SUBSECTION Tailor
 }
 
 // ball of yarn
-SECTION ITEM $item_balls_of_yarn
+SECTION ITEM $item_balls_of_yarn1
 {
     ID 0E1D
     DYE 1
@@ -445,7 +531,7 @@ SECTION ITEM $item_balls_of_yarn
 }
 
 // ball of yarn
-SECTION ITEM $item_balls_of_yarn_1
+SECTION ITEM $item_balls_of_yarn2
 {
     ID 0E1E
     DYE 1
@@ -459,7 +545,7 @@ SECTION ITEM $item_balls_of_yarn_1
 }
 
 // ball of yarn
-SECTION ITEM $item_balls_of_yarn_2
+SECTION ITEM $item_balls_of_yarn3
 {
     ID 0E1F
     DYE 1
@@ -479,24 +565,6 @@ SECTION ITEM $item_bales_of_cotton
     AMOUNT 5
     DECAY
     VALUE 10
-
-    ///CATEGORY Professions
-    ///SUBSECTION Tailor
-}
-
-SECTION ITEM $item_upright_loom_2
-{ // pt1- east
-    ID 105F
-    NAME upright loom
-
-    ///CATEGORY Professions
-    ///SUBSECTION Tailor
-}
-
-SECTION ITEM $item_upright_loom_3
-{ // pt2- east
-    ID 1060
-    NAME upright loom
 
     ///CATEGORY Professions
     ///SUBSECTION Tailor
@@ -523,10 +591,11 @@ SECTION ITEM $item_dress_form
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_archery_butte
+SECTION ITEM $item_archery_butte_2
 {
     ID 100A
-    NAME archery butte - east
+    NAME archery butte
+    AMXINT $localvar_flipitem $item_archery_butte_1
 
     ///CATEGORY Professions
     ///SUBSECTION Bowyer / Fletcher
@@ -535,7 +604,8 @@ SECTION ITEM $item_archery_butte
 SECTION ITEM $item_archery_butte_1
 {
     ID 100B
-    NAME archery butte - south
+    NAME archery butte
+    AMXINT $localvar_flipitem $item_archery_butte_2
 
     ///CATEGORY Professions
     ///SUBSECTION Bowyer / Fletcher
@@ -545,7 +615,7 @@ SECTION ITEM $item_feathers_1
 {
     ID 1020
     NAME decorative feathers
-
+    AMXINT $localvar_flipitem $item_feathers_2
     ///CATEGORY Professions
     ///SUBSECTION Bowyer / Fletcher
 }
@@ -554,16 +624,17 @@ SECTION ITEM $item_feathers_2
 {
     ID 1021
     NAME decorative feathers
-
+    AMXINT $localvar_flipitem $item_feathers_1
     ///CATEGORY Professions
     ///SUBSECTION Bowyer / Fletcher
 }
 
-SECTION ITEM $item_arrow_fletching
+SECTION ITEM $item_arrow_fletching_2
 {
     ID 1022
     NAME decorative arrow fletching
-
+    AMXINT $localvar_flipitem $item_arrow_fletching_1
+    
     ///CATEGORY Professions
     ///SUBSECTION Bowyer / Fletcher
 }
@@ -572,16 +643,18 @@ SECTION ITEM $item_arrow_fletching_1
 {
     ID 1023
     NAME decorative arrow fletching
-
+    AMXINT $localvar_flipitem $item_arrow_fletching_2
+    
     ///CATEGORY Professions
     ///SUBSECTION Bowyer / Fletcher
 }
 
-SECTION ITEM $item_arrow_shafts
+SECTION ITEM $item_arrow_shafts_2
 {
     ID 1024
     NAME decorative arrow shafts
-
+    AMXINT $localvar_flipitem $item_arrow_shafts_1
+    
     ///CATEGORY Professions
     ///SUBSECTION Bowyer / Fletcher
 }
@@ -590,7 +663,8 @@ SECTION ITEM $item_arrow_shafts_1
 {
     ID 1025
     NAME decorative arrow shafts
-
+    AMXINT $localvar_flipitem $item_arrow_shafts_2
+    
     ///CATEGORY Professions
     ///SUBSECTION Bowyer / Fletcher
 }

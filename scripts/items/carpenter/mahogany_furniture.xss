@@ -1,6 +1,6 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (mahogany_furniture.xss)                            ||
-// || Maintained by Horian		                                  ||
+// || Maintained by Horian and Fax		                                  ||
 // || Last Update 3-apr-2003                                              ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || This script requires NoX-Wizard 0.82 or later                       ||
@@ -9,454 +9,506 @@
 // producable Items
 SECTION ITEM $item_mahogany_counter1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_counter2_2
     NAME mahogany counter
     ID 0B3F
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_counter1_2
 {
     NAME mahogany counter
     ID 0B3D
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_counter2_1
 {
     NAME mahogany counter
     ID 0B40
-    COLOR 01ba 
+    COLOR 01BA 
 }
     
 SECTION ITEM $item_mahogany_counter2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_counter1_1
     NAME mahogany counter
     ID 0B3e
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //writing desk facing north
 SECTION ITEM $item_mahogany_writing_desk_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_writing_desk_2
     NAME mahogany writing desk
     ID 0B4a
     VALUE 60
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //writing desk facing south
 SECTION ITEM $item_mahogany_writing_desk_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_writing_desk_3
     NAME mahogany writing desk
     ID 0B4b
     VALUE 60
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //writing desk facing - east
 SECTION ITEM $item_mahogany_writing_desk_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_writing_desk_4
     NAME mahogany writing desk
     ID 0B4c
     VALUE 60
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_writing_desk_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_writing_desk_1
     NAME mahogany writing desk
     ID 0B49
     VALUE 60
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //Table A
-SECTION ITEM $item_mahogany_table_A1_1
+SECTION ITEM $item_mahogany_table1_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table1_2_1
     NAME mahogany table
     ID 0B6E
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_A1_2
+SECTION ITEM $item_mahogany_table1_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table1_2_2
     NAME mahogany table
     ID 0B6F
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_A2_1
+SECTION ITEM $item_mahogany_table1_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table1_1_1
     NAME mahogany table
     ID 0B82
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_A2_2
+SECTION ITEM $item_mahogany_table1_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table1_1_2
     NAME mahogany table
     ID 0B81
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //Table G
-SECTION ITEM $item_mahogany_table_B1_1
+SECTION ITEM $item_mahogany_table2_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_2_1
     NAME mahogany table
     ID 0B70
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B1_2
+SECTION ITEM $item_mahogany_table2_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_2_2
     NAME mahogany table
     ID 0B71
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B1_3
+SECTION ITEM $item_mahogany_table2_1_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_2_3
     NAME mahogany table
     ID 0B72
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B1_4
+SECTION ITEM $item_mahogany_table2_1_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_2_4
     NAME mahogany table
     ID 0B73
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B1_5
+SECTION ITEM $item_mahogany_table2_1_5
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_2_5
     NAME mahogany table
     ID 0B74
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B2_1
+SECTION ITEM $item_mahogany_table2_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_1_1
     NAME mahogany table
     ID 0B83
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B2_2
+SECTION ITEM $item_mahogany_table2_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_1_2
     NAME mahogany table
     ID 0B84
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B2_3
+SECTION ITEM $item_mahogany_table2_2_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_1_3
     NAME mahogany table
     ID 0B85
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B2_4
+SECTION ITEM $item_mahogany_table2_2_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_1_4
     NAME mahogany table
     ID 0B86
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_B2_5
+SECTION ITEM $item_mahogany_table2_2_5
 {
+    AMXINT $localvar_flipitem $item_mahogany_table2_1_5
     NAME mahogany table
     ID 0B87
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //Table H
-SECTION ITEM $item_mahogany_table_C1_1
+SECTION ITEM $item_mahogany_table3_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table3_2_1
     NAME mahogany table
     ID 0B75
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_C1_2
+SECTION ITEM $item_mahogany_table3_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table3_2_2
     NAME mahogany table
     ID 0B76
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_C2_1
+SECTION ITEM $item_mahogany_table3_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table3_1_1
     NAME mahogany table
     ID 0B89
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_C2_2
+SECTION ITEM $item_mahogany_table3_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table3_1_2
     NAME mahogany table
     ID 0B88
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //Table D
-SECTION ITEM $item_mahogany_table_D1_1
+SECTION ITEM $item_mahogany_table4_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_2_1
     NAME mahogany table
     ID 0B77
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D1_2
+SECTION ITEM $item_mahogany_table4_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_2_2
     NAME mahogany table
     ID 0B78
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D1_3
+SECTION ITEM $item_mahogany_table4_1_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_2_3
     NAME mahogany table
     ID 0B79
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D1_4
+SECTION ITEM $item_mahogany_table4_1_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_2_4
     NAME mahogany table
     ID 0B7A
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D1_5
+SECTION ITEM $item_mahogany_table4_1_5
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_2_5
     NAME mahogany table
     ID 0B7B
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D2_1
+SECTION ITEM $item_mahogany_table4_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_1_1
     NAME mahogany table
     ID 0B8A
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D2_2
+SECTION ITEM $item_mahogany_table4_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_1_2
     NAME mahogany table
     ID 0B8B
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D2_3
+SECTION ITEM $item_mahogany_table4_2_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_1_3
     NAME mahogany table
     ID 0B8C
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D2_4
+SECTION ITEM $item_mahogany_table4_2_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_1_4
     NAME mahogany table
     ID 0B8D
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_D2_5
+SECTION ITEM $item_mahogany_table4_2_5
 {
+    AMXINT $localvar_flipitem $item_mahogany_table4_1_5
     NAME mahogany table
     ID 0B8E
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // Table E (smooth)
-SECTION ITEM $item_mahogany_table_E1
+SECTION ITEM $item_mahogany_table5_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table5_2
     NAME mahogany Table
     ID 0B7C
     VALUE 80
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 400
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_E2
+SECTION ITEM $item_mahogany_table5_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table5_1
     NAME mahogany table
     ID 0B8F
     VALUE 80
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 400
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //table F (boards)
-SECTION ITEM $item_mahogany_table_F1
+SECTION ITEM $item_mahogany_table6_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table6_2
     NAME mahogany table
     ID 0b7d
     VALUE 120
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 500
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_F2
+SECTION ITEM $item_mahogany_table6_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table6_1
     NAME mahogany table
     ID 0B90
     VALUE 120
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 500
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_G1_1
+SECTION ITEM $item_mahogany_table7_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table7_2_1
     NAME mahogany table
     ID 0B34
     VALUE 50
     //RESTOCK 10
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_G1_2
+SECTION ITEM $item_mahogany_table7_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table7_2_2
     NAME mahogany table
     ID 0B37
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_G2_1
+SECTION ITEM $item_mahogany_table7_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table7_1_1
     NAME mahogany table
     ID 0B35
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_G2_2
+SECTION ITEM $item_mahogany_table7_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table7_1_2
     NAME mahogany table
     ID 0B38
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //Table1
-SECTION ITEM $item_mahogany_table_H1_1
+SECTION ITEM $item_mahogany_table8_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table8_2_1
     NAME mahogany table
     ID 0B6B
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_H1_2
+SECTION ITEM $item_mahogany_table8_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table8_2_2
     NAME mahogany table
     ID 0B6D
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_H1_3
+SECTION ITEM $item_mahogany_table8_1_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_table8_2_3
     NAME mahogany table
     ID 0B6C
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_H2_1
+SECTION ITEM $item_mahogany_table8_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table8_1_1
     NAME mahogany table
     ID 0B7F
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_H2_2
+SECTION ITEM $item_mahogany_table8_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table8_1_2
     NAME mahogany table
     ID 0B80
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_H2_3
+SECTION ITEM $item_mahogany_table8_2_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_table8_1_3
     NAME mahogany table
     ID 0B7E
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_I
+SECTION ITEM $item_mahogany_table9
 {
     NAME mahogany table
     ID 118b
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_J
+SECTION ITEM $item_mahogany_table10
 {
     NAME mahogany table
     ID 118c
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_K
+SECTION ITEM $item_mahogany_table11
 {
     NAME mahogany table
     ID 118d
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_L
+SECTION ITEM $item_mahogany_table12
 {
     NAME mahogany table
     ID 118e
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_M1_1
+SECTION ITEM $item_mahogany_table13_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table13_2_1
     NAME mahogany table
     ID 118f
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_M1_2
+SECTION ITEM $item_mahogany_table13_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table13_2_2
     NAME mahogany table
     ID 1190
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_M2_1
+SECTION ITEM $item_mahogany_table13_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_table13_1_1
     NAME mahogany table
     ID 1191
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_table_M2_2
+SECTION ITEM $item_mahogany_table13_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_table13_1_2
     NAME mahogany table
     ID 1192
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_stool1
@@ -465,7 +517,7 @@ SECTION ITEM $item_mahogany_stool1
     ID 0A2A
     VALUE 20
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_stool2
@@ -474,540 +526,597 @@ SECTION ITEM $item_mahogany_stool2
     ID 0A2B
     VALUE 20
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_A1_1
+SECTION ITEM $item_mahogany_bench1_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench1_2_1
     NAME bench
     ID 0B5F
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_A1_2
+SECTION ITEM $item_mahogany_bench1_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench1_2_2
     NAME bench
     ID 0B61
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_A1_3
+SECTION ITEM $item_mahogany_bench1_1_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench1_2_3
     NAME bench
     ID 0B60
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_A2_2
+SECTION ITEM $item_mahogany_bench1_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench1_1_2
     NAME bench
     ID 0B66
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_A2_3
+SECTION ITEM $item_mahogany_bench1_2_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench1_1_3
     NAME bench
     ID 0B67
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_A2_1
+SECTION ITEM $item_mahogany_bench1_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench1_1_1
     NAME bench
     ID 0B65
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_B1_1
+SECTION ITEM $item_mahogany_bench2_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench2_2_1
     NAME bench
     ID 0B62
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_B1_2
+SECTION ITEM $item_mahogany_bench2_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench2_2_2
     NAME bench
     ID 0B64
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_B1_3
+SECTION ITEM $item_mahogany_bench2_1_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench2_2_3
     NAME bench
     ID 0B63
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_B2_1
+SECTION ITEM $item_mahogany_bench2_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench2_1_1
     NAME bench
     ID 0B69
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_B2_2
+SECTION ITEM $item_mahogany_bench2_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench2_1_2
     NAME bench
     ID 0B6A
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_B2_3
+SECTION ITEM $item_mahogany_bench2_2_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench2_1_3
     NAME bench
     ID 0B68
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_C1_1
+SECTION ITEM $item_mahogany_bench3_1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench3_2_1
     NAME bench
     ID 0B92
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 
-SECTION ITEM $item_mahogany_bench_C1_2
+SECTION ITEM $item_mahogany_bench3_1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench3_2_2
     NAME bench
     ID 0B91
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_C2_1
+SECTION ITEM $item_mahogany_bench3_2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench3_1_1
     NAME bench
     ID 0B93
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bench_C2_2
+SECTION ITEM $item_mahogany_bench3_2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_bench3_1_2
     NAME bench
     ID 0B94
-    COLOR 01ba 
+    COLOR 01BA 
 }
     
-// a wooden bench_A facing south
-SECTION ITEM $item_mahogany_wooden_bench_D1
+// a wooden bench1_ facing south
+SECTION ITEM $item_mahogany_wooden_bench4_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_bench4_2
     NAME wooden bench
     ID 0B2C
     VALUE 20
     MOVABLE 0
     //RESTOCK 10
     WEIGHT 100
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-//wooden bench_A facing east
-SECTION ITEM $item_mahogany_wooden_bench_D2
+//wooden bench1_ facing east
+SECTION ITEM $item_mahogany_wooden_bench4_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_bench4_1
     NAME wooden bench
     ID 0B2D
     VALUE 20
     MOVABLE 0
     //RESTOCK 10
     WEIGHT 100
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a throne facing south
-SECTION ITEM $item_mahogany_throne1
+SECTION ITEM $item_mahogany_throne_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_throne_2
     NAME a throne
     ID 0B32
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a throne facing east
-SECTION ITEM $item_mahogany_throne2
+SECTION ITEM $item_mahogany_throne_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_throne_1
     NAME a throne
     ID 0B33
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // wooden chair
 SECTION ITEM $item_mahogany_wooden_chair1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_chair1_2
     NAME a wooden chair
     ID 0B2E
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // wooden chair
 SECTION ITEM $item_mahogany_wooden_chair1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_chair1_3
     NAME a wooden chair
     ID 0B2F
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // wooden chair
 SECTION ITEM $item_mahogany_wooden_chair1_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_chair1_4
     NAME a wooden chair
     ID 0B30
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // wooden chair
 SECTION ITEM $item_mahogany_wooden_chair1_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_chair1_1
     NAME a wooden chair
     ID 0B31
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a wooden chair
 SECTION ITEM $item_mahogany_wooden_chair2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_chair2_2
     NAME a wooden chair
     ID 0B56
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a wooden chair
 SECTION ITEM $item_mahogany_wooden_chair2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_chair2_3
     NAME a wooden chair
     ID 0B57
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a wooden chair
 SECTION ITEM $item_mahogany_wooden_chair2_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_chair2_4
     NAME a wooden chair
     ID 0B58
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a wooden chair
 SECTION ITEM $item_mahogany_wooden_chair2_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_chair2_1
     NAME a wooden chair
     ID 0B59
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a fancy chair
 SECTION ITEM $item_mahogany_fancy_chair1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_fancy_chair1_2
     NAME a fancy chair
     ID 0B4E
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a fancy chair
 SECTION ITEM $item_mahogany_fancy_chair1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_fancy_chair1_3
     NAME a fancy chair
     ID 0B4F
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a fancy chair
 SECTION ITEM $item_mahogany_fancy_chair1_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_fancy_chair1_4
     NAME a fancy chair
     ID 0B50
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a fancy chair
 SECTION ITEM $item_mahogany_fancy_chair1_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_fancy_chair1_1
     NAME a fancy chair
     ID 0B51
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a fancy chair
 SECTION ITEM $item_mahogany_fancy_chair2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_fancy_chair2_2
     NAME a fancy chair
     ID 0B52
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a fancy chair
 SECTION ITEM $item_mahogany_fancy_chair2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_fancy_chair2_3
     NAME a fancy chair
     ID 0B53
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a fancy chair
 SECTION ITEM $item_mahogany_fancy_chair2_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_fancy_chair2_4
     NAME a fancy chair
     ID 0B54
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a fancy chair
 SECTION ITEM $item_mahogany_fancy_chair2_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_fancy_chair2_1
     NAME a fancy chair
     ID 0B55
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a straw chair
 SECTION ITEM $item_mahogany_straw_chair1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_straw_chair1_2
     NAME a straw chair
     ID 0B5A
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a straw chair
 SECTION ITEM $item_mahogany_straw_chair1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_straw_chair1_3
     NAME a straw chair
     ID 0B5B
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a straw chair
 SECTION ITEM $item_mahogany_straw_chair1_3
 {
+    AMXINT $localvar_flipitem $item_mahogany_straw_chair1_4
     NAME a straw chair
     ID 0B5C
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 // a straw chair
 SECTION ITEM $item_mahogany_straw_chair1_4
 {
+    AMXINT $localvar_flipitem $item_mahogany_straw_chair1_1
     NAME a straw chair
     ID 0B5D
     VALUE 20
     WEIGHT 100
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //chest of drawers facing south
 SECTION ITEM $item_mahogany_chest_of_drawers1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_chest_of_drawers1_2
     NAME mahogany chest of drawers
     ID 0A2C
     TYPE $itype_container
     MOVABLE 0
     WEIGHT 300
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_chest_of_drawers1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_chest_of_drawers1_1
     NAME mahogany chest of drawers
     ID 0A34
     TYPE $itype_container
     MOVABLE 0
     WEIGHT 300
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_chest_of_drawers2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_chest_of_drawers2_1
     NAME mahogany fancy chest of drawers
     ID 0A30
     TYPE $itype_container
     MOVABLE 0
     WEIGHT 300
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //chest of drawers - cherry facing east
 SECTION ITEM $item_mahogany_chest_of_drawers2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_chest_of_drawers2_2
     NAME mahogany fancy chest of drawers
     ID 0A38
     TYPE $itype_container
     MOVABLE 0
     WEIGHT 300
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_bookcase1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_bookcase1_2
     NAME mahogany bookcase
     ID 0A97
     TYPE $itype_container
-    COLOR 01ba 
-}
-
-SECTION ITEM $item_mahogany_bookcase1_2
-{
-    NAME mahogany bookcase
-    ID 0A98
-    TYPE $itype_container
-    COLOR 01ba 
-}
-
-SECTION ITEM $item_mahogany_bookcase1_3
-{
-    NAME mahogany bookcase
-    ID 0A9B
-    TYPE $itype_container
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_bookcase2_1
 {
+AMXINT $localvar_flipitem $item_mahogany_bookcase2_2
+    NAME mahogany bookcase
+    ID 0A98
+    TYPE $itype_container
+    COLOR 01BA 
+}
+
+SECTION ITEM $item_mahogany_bookcase3_1
+{
+AMXINT $localvar_flipitem $item_mahogany_bookcase3_2
+    NAME mahogany bookcase
+    ID 0A9B
+    TYPE $itype_container
+    COLOR 01BA 
+}
+
+SECTION ITEM $item_mahogany_bookcase1_2
+{
+AMXINT $localvar_flipitem $item_mahogany_bookcase1_1
     NAME mahogany bookcase
     ID 0A99
     TYPE $itype_container
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_bookcase2_2
 {
+AMXINT $localvar_flipitem $item_mahogany_bookcase2_1
     NAME mahogany bookcase
     ID 0A9A
     TYPE $itype_container
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bookcase2_3
+SECTION ITEM $item_mahogany_bookcase3_2
 {
+AMXINT $localvar_flipitem $item_mahogany_bookcase3_1
     NAME mahogany bookcase
     ID 0A9C
     TYPE $itype_container
-    COLOR 01ba
+    COLOR 01BA
 }
 
-SECTION ITEM $item_mahogany_wooden_shelf1
+SECTION ITEM $item_mahogany_wooden_shelf_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_shelf_2
     NAME mahogany bookcase
     ID 0A9D
     TYPE $itype_container
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_wooden_shelf2
+SECTION ITEM $item_mahogany_wooden_shelf_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_wooden_shelf_1
     NAME mahogany bookcase
     ID 0A9E
     TYPE $itype_container
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_dresser1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_dresser1_1
     NAME mahogany dresser
     ID 0a3c
     VALUE 60
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_dresser1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_dresser1_2
     NAME mahogany dresser
     ID 0a3d
     VALUE 60
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_dresser2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_dresser2_2
     NAME mahogany dresser
     ID 0a44
     VALUE 60
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_dresser2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_dresser2_1
     NAME mahogany dresser
     ID 0a45
     VALUE 60
     //RESTOCK 10
     MOVABLE 0
     WEIGHT 200
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_armoire1_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_armoire1_2
     NAME mahogany fancy armorie
     ID 0A4D
     TYPE $itype_container
@@ -1015,12 +1124,13 @@ SECTION ITEM $item_mahogany_armoire1_1
     //RESTOCK 10
     WEIGHT 600
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //armorie,cherry facing south
 SECTION ITEM $item_mahogany_armoire1_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_armoire1_1
     NAME mahogany fancy armoire
     ID 0A51
     TYPE $itype_container
@@ -1029,11 +1139,12 @@ SECTION ITEM $item_mahogany_armoire1_2
     //RESTOCK 10
     WEIGHT 600
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_armoire2_1
 {
+    AMXINT $localvar_flipitem $item_mahogany_armoire2_2
     NAME mahogany armoire
     ID 0A4F
     TYPE $itype_container
@@ -1041,11 +1152,12 @@ SECTION ITEM $item_mahogany_armoire2_1
     //RESTOCK 10
     WEIGHT 600
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_armoire2_2
 {
+    AMXINT $localvar_flipitem $item_mahogany_armoire2_1
     NAME mahogany armoire
     ID 0A53
     TYPE $itype_container
@@ -1053,404 +1165,404 @@ SECTION ITEM $item_mahogany_armoire2_2
     //RESTOCK 10
     WEIGHT 600
     MOVABLE 0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 //section 8061-8064 Bed facing south
-SECTION ITEM $item_mahogany_bed_headboard_A1_1
+SECTION ITEM $item_mahogany_bed_headboard1_1_1
 {
     NAME mahogany bed
     ID 0a5d
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_headboard_A1_2
+SECTION ITEM $item_mahogany_bed_headboard1_1_2
 {
     NAME mahogany bed
     ID 0a69
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_headboard_A1_3
+SECTION ITEM $item_mahogany_bed_headboard1_1_3
 {
     NAME mahogany bed
     ID 0a6a
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_headboard_A1_4
+SECTION ITEM $item_mahogany_bed_headboard1_1_4
 {
     NAME mahogany bed
     ID 0a60
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_feet_A1_1
+SECTION ITEM $item_mahogany_bed_feet1_1_1
 {
     NAME mahogany bed
     ID 0a62
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_feet_A1_2
+SECTION ITEM $item_mahogany_bed_feet1_1_2
 {
     NAME mahogany bed
     ID 0a6b
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_feet_A1_3
+SECTION ITEM $item_mahogany_bed_feet1_1_3
 {
     NAME mahogany bed
     ID 0a61
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_headboard_A2_1
+SECTION ITEM $item_mahogany_bed_headboard1_2_1
 {
     NAME mahogany bed
     ID 0a63
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_headboard_A2_2
+SECTION ITEM $item_mahogany_bed_headboard1_2_2
 {
     NAME mahogany bed
     ID 0a66
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_headboard_A2_3
+SECTION ITEM $item_mahogany_bed_headboard1_2_3
 {
     NAME mahogany bed
     ID 0a67
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_headboard_A2_4
+SECTION ITEM $item_mahogany_bed_headboard1_2_4
 {
     NAME mahogany bed
     ID 0a5e
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_feet_A2_1
+SECTION ITEM $item_mahogany_bed_feet1_2_1
 {
     NAME mahogany bed
     ID 0a5c
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_feet_A2_2
+SECTION ITEM $item_mahogany_bed_feet1_2_2
 {
     NAME mahogany bed
     ID 0a68
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_feet_A2_3
+SECTION ITEM $item_mahogany_bed_feet1_2_3
 {
     NAME mahogany bed
     ID 0a5f
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A1_1
+SECTION ITEM $item_mahogany_bigbed_headleft1_1_1
 {
     NAME mahogany bed
     ID 0a70
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A1_2
+SECTION ITEM $item_mahogany_bigbed_headleft1_1_2
 {
     NAME mahogany bed
     ID 0a84
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A1_3
+SECTION ITEM $item_mahogany_bigbed_headleft1_1_3
 {
     NAME mahogany bed
     ID 0a7a
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A1_4
+SECTION ITEM $item_mahogany_bigbed_headleft1_1_4
 {
     NAME mahogany bed
     ID 0a7c
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A1_5
+SECTION ITEM $item_mahogany_bigbed_headleft1_1_5
 {
     NAME mahogany bed
     ID 0a90
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A1_6
+SECTION ITEM $item_mahogany_bigbed_headleft1_1_6
 {
     NAME mahogany bed
     ID 0a8e
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetleft_A1_1
+SECTION ITEM $item_mahogany_bigbed_feetleft1_1_1
 {
     NAME mahogany bed
     ID 0a71
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetleft_A1_2
+SECTION ITEM $item_mahogany_bigbed_feetleft1_1_2
 {
     NAME mahogany bed
     ID 0a86
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetleft_A1_3
+SECTION ITEM $item_mahogany_bigbed_feetleft1_1_3
 {
     NAME mahogany bed
     ID 0a78
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetleft_A1_4
+SECTION ITEM $item_mahogany_bigbed_feetleft1_1_4
 {
     NAME mahogany bed
     ID 0a8c
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetright_A1_1
+SECTION ITEM $item_mahogany_bigbed_feetright1_1_1
 {
     NAME mahogany bed
     ID 0a72
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetright_A1_2
+SECTION ITEM $item_mahogany_bigbed_feetright1_1_2
 {
     NAME mahogany bed
     ID 0a87
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetright_A1_3
+SECTION ITEM $item_mahogany_bigbed_feetright1_1_3
 {
     NAME mahogany bed
     ID 0a79
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetright_A1_4
+SECTION ITEM $item_mahogany_bigbed_feetright1_1_4
 {
     NAME mahogany bed
     ID 0a8d
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A1_1
+SECTION ITEM $item_mahogany_bigbed_headright1_1_1
 {
     NAME mahogany bed
     ID 0a73
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A1_2
+SECTION ITEM $item_mahogany_bigbed_headright1_1_2
 {
     NAME mahogany bed
     ID 0a85
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A1_3
+SECTION ITEM $item_mahogany_bigbed_headright1_1_3
 {
     NAME mahogany bed
     ID 0a7b
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A1_4
+SECTION ITEM $item_mahogany_bigbed_headright1_1_4
 {
     NAME mahogany bed
     ID 0a7d
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A1_5
+SECTION ITEM $item_mahogany_bigbed_headright1_1_5
 {
     NAME mahogany bed
     ID 0a91
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A1_6
+SECTION ITEM $item_mahogany_bigbed_headright1_1_6
 {
     NAME mahogany bed
     ID 0a8f
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A2_1
+SECTION ITEM $item_mahogany_bigbed_headleft1_2_1
 {
     NAME mahogany bed
     ID 0a77
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A2_2
+SECTION ITEM $item_mahogany_bigbed_headleft1_2_2
 {
     NAME mahogany bed
     ID 0a89
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A2_3
+SECTION ITEM $item_mahogany_bigbed_headleft1_2_3
 {
     NAME mahogany bed
     ID 0a80
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A2_4
+SECTION ITEM $item_mahogany_bigbed_headleft1_2_4
 {
     NAME mahogany bed
     ID 0a83
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A2_5
+SECTION ITEM $item_mahogany_bigbed_headleft1_2_5
 {
     NAME mahogany bed
     ID 0db3
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headleft_A2_6
+SECTION ITEM $item_mahogany_bigbed_headleft1_2_6
 {
     NAME mahogany bed
     ID 0db5
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetleft_A2_1
+SECTION ITEM $item_mahogany_bigbed_feetleft1_2_1
 {
     NAME mahogany bed
     ID 0a76
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetleft_A2_2
+SECTION ITEM $item_mahogany_bigbed_feetleft1_2_2
 {
     NAME mahogany bed
     ID 0a8b
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetleft_A2_3
+SECTION ITEM $item_mahogany_bigbed_feetleft1_2_3
 {
     NAME mahogany bed
     ID 0a7f
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetleft_A2_4
+SECTION ITEM $item_mahogany_bigbed_feetleft1_2_4
 {
     NAME mahogany bed
     ID 0db1
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetright_A2_1
+SECTION ITEM $item_mahogany_bigbed_feetright1_2_1
 {
     NAME mahogany bed
     ID 0a71
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetright_A2_2
+SECTION ITEM $item_mahogany_bigbed_feetright1_2_2
 {
     NAME mahogany bed
     ID 0a8a
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetright_A2_3
+SECTION ITEM $item_mahogany_bigbed_feetright1_2_3
 {
     NAME mahogany bed
     ID 0a7e
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_feetright_A2_4
+SECTION ITEM $item_mahogany_bigbed_feetright1_2_4
 {
     NAME mahogany bed
     ID 0db0
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A2_1
+SECTION ITEM $item_mahogany_bigbed_headright1_2_1
 {
     NAME mahogany bed
     ID 0a74
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A2_2
+SECTION ITEM $item_mahogany_bigbed_headright1_2_2
 {
     NAME mahogany bed
     ID 0a88
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A2_3
+SECTION ITEM $item_mahogany_bigbed_headright1_2_3
 {
     NAME mahogany bed
     ID 0a81
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A2_4
+SECTION ITEM $item_mahogany_bigbed_headright1_2_4
 {
     NAME mahogany bed
     ID 0a82
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A2_5
+SECTION ITEM $item_mahogany_bigbed_headright1_2_5
 {
     NAME mahogany bed
     ID 0db2
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bigbed_headright_A2_6
+SECTION ITEM $item_mahogany_bigbed_headright1_2_6
 {
     NAME mahogany bed
     ID 0db4
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_facing_south_deed
+SECTION ITEM $item_mahogany_bed_2deed
 {
     NAME mahogany a bed facing south deed
     ID 14F0
     NEWBIE
     MOREX 33
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
-SECTION ITEM $item_mahogany_bed_facing_east_deed
+SECTION ITEM $item_mahogany_bed_1deed
 {
     NAME mahogany a bed facing east deed
     ID 14F0
     NEWBIE
     MOREX 34
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_bed-east_deed
@@ -1459,7 +1571,7 @@ SECTION ITEM $item_mahogany_bed-east_deed
     ID 14F0
     DECAY
     MOREX 210
-    COLOR 01ba 
+    COLOR 01BA 
 }
 
 SECTION ITEM $item_mahogany_bed-south_deed
@@ -1468,5 +1580,5 @@ SECTION ITEM $item_mahogany_bed-south_deed
     ID 14F0
     DECAY
     MOREX 211
-    COLOR 01ba 
+    COLOR 01BA 
 }

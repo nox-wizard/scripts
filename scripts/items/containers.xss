@@ -87,7 +87,7 @@ SECTION ITEM $item_silver_chest
     ///SUBSECTION Containers
 }
 
-SECTION ITEM $item_wooden_box
+SECTION ITEM $item_wooden_box1_1
 {
     NAME wooden box
     ID 0E7D
@@ -100,7 +100,7 @@ SECTION ITEM $item_wooden_box
     ///SUBSECTION Containers
 }
 
-SECTION ITEM $item_wooden_box_1
+SECTION ITEM $item_wooden_box1_2
 {
     NAME wooden box
     ID 09aa
@@ -128,7 +128,7 @@ SECTION ITEM $item_brass_box
 
 
 
-SECTION ITEM $item_metal_chest
+SECTION ITEM $item_metal_chest1
 {
     NAME metal chest
     ID 0E40

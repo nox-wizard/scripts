@@ -1518,30 +1518,27 @@ SECTION HOUSE ITEM 38
 }
 	
 SECTION HOUSE ITEM 39
-{
-	//NAME Shop forge part 2
-	ITEM $item_forge
-	X 4
-	Y 2
-	Z 8
+{ Shop forge part 2
+ITEM $item_forge1
+X 4
+Y 2
+Z 8
 }
 	
 SECTION HOUSE ITEM 40
-{
-	//NAME Shop forge part 3
-	ITEM $item_forge_2
-	X 5
-	Y 2
-	Z 8
+{ Shop forge part 3
+ITEM $item_forge2_1_5
+X 5
+Y 2
+Z 8
 }
 	
 SECTION HOUSE ITEM 41
-{
-	//NAME Shop anvil
-	ITEM $item_anvil
-	X 5
-	Y 4
-	Z 8
+{ Shop anvil
+ITEM $item_anvil_1
+X 5
+Y 4
+Z 8
 }
 	
 SECTION HOUSE ITEM 42
@@ -1635,39 +1632,35 @@ SECTION HOUSE ITEM 51
 }
 	
 SECTION HOUSE ITEM 52
-{
-	//NAME LOOM-PT1-south
-	ITEM $item_upright_loom
-	X 0
-	Y 0
-	Z 8
+{ LOOM-PT1-south
+ITEM $item_upright_loom_1_1
+X 0
+Y 0
+Z 8
 }
 	
 SECTION HOUSE ITEM 53
-{
-	//NAME LOOM-PT2-south
-	ITEM $item_upright_loom_1
-	X 1
-	Y 0
-	Z 8
+{ LOOM-PT2-south
+ITEM $item_upright_loom_1_2
+X 1
+Y 0
+Z 8
 }
 	
 SECTION HOUSE ITEM 54
-{
-	//NAME LOOM-PT1-east
-	ITEM $item_upright_loom_2
-	X 0
-	Y 0
-	Z 8
+{ LOOM-PT1-east
+ITEM $item_upright_loom_2_1
+X 0
+Y 0
+Z 8
 }
 	
 SECTION HOUSE ITEM 55
-{
-	//NAME LOOM-PT2-east
-	ITEM $item_upright_loom_3
-	X 0
-	Y -1
-	Z 8
+{ LOOM-PT2-east
+ITEM $item_upright_loom_2_2
+X 0
+Y -1
+Z 8
 }
 	
 SECTION HOUSE ITEM 56
@@ -1691,7 +1684,7 @@ SECTION HOUSE ITEM 57
 SECTION HOUSE ITEM 58
 {
 	//NAME Bed-PT2-east
-	ITEM $item_pine_bed_feet_A1_1
+	ITEM $item_pine_bed_feet1_1_1
 	X 1
 	Y 0
 	Z 0
@@ -1700,7 +1693,7 @@ SECTION HOUSE ITEM 58
 SECTION HOUSE ITEM 59
 {
 	//NAME Bed-PT2-south
-	ITEM $item_pine_bed_feet_A2_1
+	ITEM $item_pine_bed_feet1_2_1
 	X 0
 	Y 1
 	Z 0
@@ -1727,7 +1720,7 @@ SECTION HOUSE ITEM 61
 SECTION HOUSE ITEM 63
 {
 	//NAME bed large facing south part 1
-	ITEM $item_pine_bigbed_headleft_A2_4
+	ITEM $item_pine_bigbed_headleft1_2_4
 	LOCK
 	X 0
 	Y 0
@@ -1737,7 +1730,7 @@ SECTION HOUSE ITEM 63
 SECTION HOUSE ITEM 64
 {
 	//NAME bed large facing south part 2
-	ITEM $item_pine_bigbed_feetleft_A2_3
+	ITEM $item_pine_bigbed_feetleft1_2_3
 	LOCK
 	X 0
 	Y 1
@@ -1747,7 +1740,7 @@ SECTION HOUSE ITEM 64
 SECTION HOUSE ITEM 65
 {
 	//NAME bed large facing south part 3
-	ITEM $item_pine_bigbed_headright_A2_4
+	ITEM $item_pine_bigbed_headright1_2_4
 	LOCK
 	X 1
 	Y 0
@@ -1757,7 +1750,7 @@ SECTION HOUSE ITEM 65
 SECTION HOUSE ITEM 66
 {
 	//NAME bed large facing south part 4
-	ITEM $item_pine_bigbed_feetright_A2_3
+	ITEM $item_pine_bigbed_feetright1_2_3
 	LOCK
 	X 1
 	Y 1
@@ -1767,7 +1760,7 @@ SECTION HOUSE ITEM 66
 SECTION HOUSE ITEM 67
 {
 	//NAME bed large facing east part 1
-	ITEM $item_pine_bigbed_headright_A1_4
+	ITEM $item_pine_bigbed_headright1_1_4
 	LOCK
 	X 0
 	Y 0
@@ -1777,7 +1770,7 @@ SECTION HOUSE ITEM 67
 SECTION HOUSE ITEM 68
 {
 	//NAME bed large facing south part 2
-	ITEM $item_pine_bigbed_headleft_A1_4
+	ITEM $item_pine_bigbed_headleft1_1_4
 	LOCK
 	X 0
 	Y 1
@@ -1787,7 +1780,7 @@ SECTION HOUSE ITEM 68
 SECTION HOUSE ITEM 69
 {
 	//NAME bed large facing south part 3
-	ITEM $item_pine_bigbed_feetleft_A1_3
+	ITEM $item_pine_bigbed_feetleft1_1_3
 	LOCK
 	X 1
 	Y 1
@@ -1797,7 +1790,7 @@ SECTION HOUSE ITEM 69
 SECTION HOUSE ITEM 70
 {
 	//NAME bed large facing south part 4
-	ITEM $item_pine_bigbed_feetright_A1_3
+	ITEM $item_pine_bigbed_feetright1_1_3
 	LOCK
 	X 1
 	Y 0
@@ -1805,63 +1798,57 @@ SECTION HOUSE ITEM 70
 }
 	
 SECTION HOUSE ITEM 71
-{
-	//NAME large forge facing east part 1
-	ITEM $item_bellows_2
-	LOCK
-	X 0
-	Y 0
-	Z 8
+{ large forge facing east part 1
+ITEM $item_forge2_2_1
+LOCK
+X 0
+Y 0
+Z 8
 }
 	
 SECTION HOUSE ITEM 72
-{
-	//NAME large forge facing east part 2
-	ITEM $item_forge_5
-	LOCK
-	X 0
-	Y 1
-	Z 8
+{ large forge facing east part 2
+ITEM $item_forge2_2_4
+LOCK
+X 0
+Y 1
+Z 8
 }
 	
 SECTION HOUSE ITEM 73
-{
-	//NAME large forge facing east part 3
-	ITEM $item_forge_6
-	LOCK
-	X 0
-	Y 2
-	Z 8
+{ large forge facing east part 3
+ITEM $item_forge2_2_5
+LOCK
+X 0
+Y 2
+Z 8
 }
 	
 SECTION HOUSE ITEM 74
-{
-	//NAME large forge facing south part 1
-	ITEM $item_bellows_1
-	LOCK
-	X 0
-	Y 0
-	Z 8
+{ large forge facing south part 1
+ITEM $item_forge2_1_1
+LOCK
+X 0
+Y 0
+Z 8
 }
 	
 SECTION HOUSE ITEM 75
-{
-	//NAME large forge facing south part 2
-	ITEM $item_forge_3
-	LOCK
-	X 1
-	Y
-	Z 8
+{ large forge facing south part 2
+ITEM $item_forge2_2_1
+LOCK
+X 1
+Y
+Z 8
 }
 	
 SECTION HOUSE ITEM 76
-{
-	//NAME large forge facing south part 3
-	ITEM $item_forge_4
-	LOCK
-	X 2
-	Y 0
-	Z 8
+{ large forge facing south part 3
+ITEM $item_forge2_2_2
+LOCK
+X 2
+Y 0
+Z 8
 }
 	
 SECTION HOUSE ITEM 100
@@ -3740,66 +3727,59 @@ SECTION HOUSE ITEM 344
 }
 	
 SECTION HOUSE ITEM 345
-{
-	//NAME // christmas tree ordament
-	ITEM $item_amethysts_2
-	X 1
-	Y 0
-	Z 13
+{ // christmas tree ordament
+ITEM $item_amethysts3
+X 1
+Y 0
+Z 13
 }
 	
 SECTION HOUSE ITEM 346
-{
-	//NAME // christmas tree ordament
-	ITEM $item_citrines_1
-	X 0
-	Y 2
-	Z 13
+{ // christmas tree ordament
+ITEM $item_citrines2
+X 0
+Y 2
+Z 13
 }
 	
 SECTION HOUSE ITEM 347
-{
-	//NAME // christmas tree ordament
-	ITEM $item_diamonds
-	X -1
-	Y 0
-	Z 16
+{ // christmas tree ordament
+ITEM $item_diamonds1
+X -1
+Y 0
+Z 16
 }
 	
 SECTION HOUSE ITEM 348
-{
-	//NAME // christmas tree ordament
-	ITEM $item_emeralds_1
-	X 0
-	Y 0
-	Z 29
+{ // christmas tree ordament
+ITEM $item_emeralds2
+X 0
+Y 0
+Z 29
 }
 	
 SECTION HOUSE ITEM 349
-{
-	//NAME // christmas tree ordament
-	ITEM $item_rubies_5
-	X 0
-	Y 1
-	Z 15
+{ // christmas tree ordament
+ITEM $item_rubies6
+X 0
+Y 1
+Z 15
 }
 	
 SECTION HOUSE ITEM 350
-{
-	//NAME // christmas tree ordament
-	ITEM $item_star_sapphires_2
-	X 1
-	Y 0
-	Z 18
+{ // christmas tree ordament
+ITEM $item_star_sapphires3
+X 1
+Y 0
+Z 18
 }
 	
 SECTION HOUSE ITEM 351
-{
-	//NAME // christmas tree ordament
-	ITEM $item_tourmalines_3
-	X 2
-	Y 0
-	Z 15
+{ // christmas tree ordament
+ITEM $item_tourmalines4
+X 2
+Y 0
+Z 15
 }
 	
 SECTION HOUSE ITEM 352
@@ -3812,33 +3792,27 @@ SECTION HOUSE ITEM 352
 }
 	
 SECTION HOUSE ITEM 353
-{
-	//NAME // christmas tree ordament
-	ITEM $item_necklace
-	X 0
-	Y 0
-	Z 13
+{ // christmas tree ordament
+ITEM $item_necklace1
+X 0
+Y 0
+Z 13
 }
 	
 SECTION HOUSE ITEM 354
-{
-	//NAME // christmas tree ordament
-	ITEM $item_necklace_1
-	X 0
-	Y 0
-	Z 8
+{ // christmas tree ordament
+ITEM $item_necklace2
+X 0
+Y 0
+Z 8
 }
 	
 SECTION HOUSE ITEM 355
-{
-	//NAME // christmas tree ordament
-	ITEM $item_necklace_2
-	X 0
-	Y 0
-	Z 25
+{ // christmas tree ordament
+ITEM $item_necklace3
+X 0
+Y 0
+Z 25
 }
-	
-	EOF
-	
-	
-	
+
+EOF

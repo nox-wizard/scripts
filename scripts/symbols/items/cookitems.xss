@@ -2,7 +2,7 @@
 
 //Drinking 100.000-100.500//
 #define $item_bottle_of_pink_champaine 100005
-#define $item_a_pink_champaine_flute 100006
+#define $item_pink_champaine_flute 100006
 
 #define $item_bottles_of_ale1 100011
 #define $item_bottles_of_ale2 100012
@@ -209,7 +209,7 @@
 #define $item_pitcher_of_milk_1 103751
 #define $item_pitcher_of_milk_2 103752
 #define $item_jar_for_milk 103753
-#define $item_a_jar_full_of_milk 103754
+#define $item_jar_full_of_milk 103754
 #define $item_glass_of_milk_1 103756
 #define $item_glass_of_milk_2 103757
 #define $item_glass_of_milk_3 103758
@@ -226,7 +226,7 @@
 #define $item_banana_1 104026
 #define $item_skinned_banana_1 104027
 #define $item_banana_2 104028
-#define $item_skinnded_banana_2 104029
+#define $item_skinned_banana_2 104029
 #define $item_bunch_of_bananas_1 104030
 #define $item_bunch_of_bananas_2 104031
 #define $item_bunches_of_dates 104032
@@ -329,18 +329,18 @@
 #define $item_glass_2 105306
 #define $item_glass_3 105307
 #define $item_glass_4 105308
-#define $item_a_pewter_mug_1 105310
-#define $item_a_pewter_mug_2 105311
-#define $item_a_pewter_mug_3 105312
-#define $item_a_pewter_mug_4 105313
-#define $item_a_skull_mug_1 105314
-#define $item_a_skull_mug_2 105315
-#define $item_a_skull_mug_3 105316
-#define $item_a_skull_mug_4 105317
-#define $item_a_ceramic_mug_1 105318
-#define $item_a_ceramic_mug_2 105319
-#define $item_a_ceramic_mug_3 105320
-#define $item_a_ceramic_mug_4 105321
+#define $item_pewter_mug_1 105310
+#define $item_pewter_mug_2 105311
+#define $item_pewter_mug_3 105312
+#define $item_pewter_mug_4 105313
+#define $item_skull_mug_1 105314
+#define $item_skull_mug_2 105315
+#define $item_skull_mug_3 105316
+#define $item_skull_mug_4 105317
+#define $item_ceramic_mug_1 105318
+#define $item_ceramic_mug_2 105319
+#define $item_ceramic_mug_3 105320
+#define $item_ceramic_mug_4 105321
 #define $item_glass_pitcher_1 105324
 #define $item_glass_pitcher_2 105325
 #define $item_glass_pitcher_3 105326

@@ -75,7 +75,7 @@ SECTION NPC $npc_chaos_guard_m
     NPCWANDER 4
     ITEM $item_iron_chaos_shield
     ITEM $item_iron_platemail
-    ITEM $item_a_doublet
+    ITEM $item_doublet
     COLORLIST 2
     ITEM $item_iron_plate_gorget
     ITEM $item_iron_plate_gloves
@@ -163,7 +163,7 @@ SECTION NPC $npc_order_guard_m
     NPCWANDER 4
     ITEM $item_iron_order_shield
     ITEM $item_iron_platemail
-    ITEM $item_a_doublet
+    ITEM $item_doublet
     COLORLIST 2
     ITEM $item_iron_plate_gorget
     ITEM $item_iron_plate_gloves
@@ -1497,7 +1497,7 @@ SECTION NPC $npc_mondain
     NPCWANDER 4
     BACKPACK
     ITEM $item_black_staff
-    ITEM $item_a_wizards_hat
+    ITEM $item_wizards_hat
     COLORLIST 11
     ITEM $item_male_fancy_shirts_list
     COLORLIST 11
@@ -1969,7 +1969,7 @@ SECTION NPC $npc_archmage
     FY1 -1
     FZ1 -1
     FX2 5
-    ITEM $item_a_wizards_hat
+    ITEM $item_wizards_hat
     COLORLIST 1
     ITEM $item_male_fancy_shirts_list
     COLORLIST 1
@@ -2317,7 +2317,7 @@ SECTION NPC $npc_henchman_mid
     FZ1 -1
     FX2 10
     ITEM $item_male_plain_footwear_list
-    ITEM $item_a_orc_helm
+    ITEM $item_orc_helm
     ITEM $item_studded_leather_gloves
     ITEM $item_studded_leather_gorget
     ITEM $item_studded_leather_leggings
@@ -2392,7 +2392,7 @@ SECTION NPC $npc_mage_f_1
     FY1 -1
     FZ1 -1
     FX2 5
-    ITEM $item_a_wizards_hat
+    ITEM $item_wizards_hat
     COLORLIST 2
     ITEM $item_male_fancy_shirts_list
     COLORLIST 2
@@ -2487,7 +2487,7 @@ SECTION NPC $npc_mage_m_3
     FY1 -1
     FZ1 -1
     FX2 5
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLORLIST 2
     SPEECH $speech_mage
     STR 130 160
@@ -2530,7 +2530,7 @@ SECTION NPC $npc_guildmaster_mage_m
     FY1 -1
     FZ1 -1
     FX2 5
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLORLIST 2
     SPEECH $speech_mage
     STR 130 160

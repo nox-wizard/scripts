@@ -174,7 +174,7 @@ SECTION NPC $npc_a_bone_magi
     SKIN 07de
     DIRECTION N
     BACKPACK
-    PACKITEM $item_a_skull
+    PACKITEM $item_skull
     PACKITEM $item_bone
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells
@@ -321,7 +321,7 @@ SECTION NPC $npc_a_skeletal_magi
     SKIN 0000
     DIRECTION N
     BACKPACK
-    PACKITEM $item_a_skull
+    PACKITEM $item_skull
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells
@@ -765,7 +765,7 @@ SECTION NPC $npc_a_lich_elder
     DIRECTION N
     BACKPACK
     PACKITEM $item_iron_katana_of_vanquishing
-    PACKITEM $item_a_wand_of_greater_heal
+    PACKITEM $item_wand_of_greater_heal
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_6-8_spells
     LOOT $loot_circle_6-8_spells
@@ -895,7 +895,7 @@ SECTION NPC $npc_vampiress
     ITEM $item_cloak
     COLOR 066d
     ITEM $item_shirt
-    ITEM $item_a_robe
+    ITEM $item_robe1
     COLOR 066d
     STR 100 180
     DEX 80 110

@@ -41,10 +41,10 @@ SECTION NPC $npc_a_savage
 	FZ1 -1
 	FX2 10
 	ITEM plate_iron_spear
-	ITEM $item_a_bear_mask
-	ITEM $item_a_kilt
+	ITEM $item_bear_mask
+	ITEM $item_kilt
 	COLORLIST 11
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLORLIST 11
 	GOLD 15 50
 	TOTAME 1100
@@ -90,10 +90,10 @@ SECTION NPC $npc_a_savage_1
 	FZ1 -1
 	FX2 10
 	ITEM plate_iron_spear
-	ITEM $item_a_bear_mask
-	ITEM $item_a_kilt
+	ITEM $item_bear_mask
+	ITEM $item_kilt
 	COLORLIST 11
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLORLIST 11
 	GOLD 15 50
 	DOORUSE 1
@@ -139,10 +139,10 @@ SECTION NPC $npc_a_savage_shaman
 	FZ1 -1
 	FX2 10
 	ITEM $item_gnarled_staff
-	ITEM $item_a_tribal_mask_1
-	ITEM $item_a_kilt
+	ITEM $item_tribal_mask_1
+	ITEM $item_kilt
 	COLORLIST 11
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLORLIST 11
 	GOLD 25 50
 	SPATTACK 7552
@@ -189,10 +189,10 @@ SECTION NPC $npc_a_savage_chief
 	FZ1 -1
 	FX2 10
 	ITEM plate_iron_spear
-	ITEM $item_a_tribal_mask
-	ITEM $item_a_kilt
+	ITEM $item_tribal_mask
+	ITEM $item_kilt
 	COLORLIST 11
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLORLIST 11
 	GOLD 15 50
 	DOORUSE 1
@@ -482,9 +482,9 @@ SECTION NPC $npc_knight
 	ITEM $item_iron_plate_leggings
 	ITEM $item_iron_long_sword
 	ITEM $item_iron_wooden_kite_shield
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLORLIST 11
-	ITEM $item_a_tan_horse
+	ITEM $item_tan_horse
 	NPCWANDER 4
 	FX1 -1
 	FY1 -1
@@ -528,9 +528,9 @@ SECTION NPC $npc_knight_1
 	ITEM $item_iron_plate_sleeves
 	ITEM $item_iron_long_sword
 	ITEM $item_iron_wooden_kite_shield
-	ITEM $item_a_body_sash
+	ITEM $item_body_sash
 	COLORLIST 11
-	ITEM $item_a_dark_brown_horse
+	ITEM $item_dark_brown_horse
 	NPCWANDER 4
 	FX1 -1
 	FY1 -1
@@ -574,7 +574,7 @@ SECTION NPC $npc_the_black_knight
 	ITEM plate_sleeves
 	ITEM $item_cloak
 	COLOR 0455
-	ITEM $item_a_nightmare
+	ITEM $item_nightmare
 	NPCWANDER 4
 	FX1 -1
 	FY1 -1
@@ -600,7 +600,7 @@ SECTION NPC $npc_cultist
 	ID 0190
 	ITEM $item_long_beard
 	HAIRCOLOR 0
-	ITEM $item_a_robe
+	ITEM $item_robe1
 	COLOR 220
 	ITEM $item_sandles
 	COLOR 0001
@@ -916,7 +916,7 @@ SECTION NPC $npc_barbarian
 	ITEM $item_iron_plate_helm
 	ITEM $item_iron_plate_leggings
 	ITEM $item_cloak
-	ITEM $item_a_robe
+	ITEM $item_robe1
 	ITEM $item_boots
 	ITEM $item_bone_chest
 	ITEM $item_leather_leggings

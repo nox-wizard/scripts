@@ -19,40 +19,40 @@ SECTION ITEM $necroitem_gravedigging_gems
 
 SECTION ITEMLIST $necroitem_gravedigging_gems
 {
-    $item_amethysts
-    $item_amethysts_1
-    $item_citrines
-    $item_diamonds_4
-    $item_emeralds
-    $item_rubies
-    $item_rubies_1
-    $item_rubies_2
-    $item_rubies_3
-    $item_rubies_4
-    $item_sapphires
-    $item_sapphires_1
-    $item_sapphires_2
-    $item_sapphires_3
-    $item_star_sapphires
-    $item_star_sapphires_1
-    $item_tourmalines
-    $item_tourmalines_1
-    $item_tourmalines_2
+    $item_amethysts1
+    $item_amethysts2
+    $item_citrines1
+    $item_diamonds5
+    $item_emeralds1
+    $item_rubies1
+    $item_rubies2
+    $item_rubies3
+    $item_rubies4
+    $item_rubies5
+    $item_sapphires1
+    $item_sapphires2
+    $item_sapphires3
+    $item_sapphires4
+    $item_star_sapphires1
+    $item_star_sapphires2
+    $item_tourmalines1
+    $item_tourmalines2
+    $item_tourmalines3
     $item_pieces_of_amber
-    $item_amethysts_2
-    $item_amethysts_3
-    $item_citrines_1
-    $item_citrines_2
-    $item_citrines_3
-    $item_diamonds
-    $item_diamonds_1
-    $item_diamonds_2
-    $item_diamonds_3
-    $item_emeralds_1
-    $item_rubies_5
-    $item_rubies_6
-    $item_star_sapphires_2
-    $item_tourmalines_3
+    $item_amethysts3
+    $item_amethysts4
+    $item_citrines2
+    $item_citrines3
+    $item_citrines4
+    $item_diamonds1
+    $item_diamonds2
+    $item_diamonds3
+    $item_diamonds4
+    $item_emeralds2
+    $item_rubies6
+    $item_rubies7
+    $item_star_sapphires3
+    $item_tourmalines4
 }
 
 SECTION ITEM $necroitem_gravedigging_weapons

@@ -230,7 +230,7 @@ SECTION ITEM $item_townstone_deed
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_small_stone__plaster_house_deed
+SECTION ITEM $item_small_stone_plaster_house_deed
 {
     NAME small stone & plaster house deed
     ID 14F0
@@ -282,7 +282,7 @@ SECTION ITEM $item_small_wood_house_deed
     ///SUBSECTION House Deeds
 }
 
-SECTION ITEM $item_small_wood__plaster_house_deed
+SECTION ITEM $item_small_wood_plaster_house_deed
 {
     NAME small wood & plaster house deed
     ID 14F0
@@ -344,7 +344,7 @@ SECTION ITEM $item_3_room_brick_house_deed
     TYPE $itype_housedeed
 }
 
-SECTION ITEM $item_2_story_wood__plaster_house_deed
+SECTION ITEM $item_2_story_wood_plaster_house_deed
 {
     NAME 2 story wood & plaster house deed
     ID 14F0
@@ -357,7 +357,7 @@ SECTION ITEM $item_2_story_wood__plaster_house_deed
     ///SUBSECTION House Deeds
 }
 
-SECTION ITEM $item_2_story_stone__plaster_house_deed
+SECTION ITEM $item_2_story_stone_plaster_house_deed
 {
     NAME 2 story stone & plaster house deed
     ID 14F0
@@ -435,7 +435,7 @@ SECTION ITEM $item_large_smithy_deed
     ///SUBSECTION House Deeds
 }
 
-SECTION ITEM $item_a_forge_deed
+SECTION ITEM $item_forge_deed
 {
     NAME a forge deed
     ID 14F0
@@ -447,7 +447,7 @@ SECTION ITEM $item_a_forge_deed
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_an_anvil_deed_facing_south_
+SECTION ITEM $item_anvil_deed_2
 {
     NAME an anvil deed (facing south)
     ID 14F0
@@ -460,7 +460,7 @@ SECTION ITEM $item_an_anvil_deed_facing_south_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_an_anvil_deed_facing_east_
+SECTION ITEM $item_anvil_deed_1
 {
     NAME an anvil deed (facing east)
     ID 14F0
@@ -473,7 +473,7 @@ SECTION ITEM $item_an_anvil_deed_facing_east_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_a_spinning_wheel_deed_facing_south_
+SECTION ITEM $item_spinning_wheel_deed_2
 {
     NAME a spinning wheel deed (facing south)
     ID 14F0
@@ -486,7 +486,7 @@ SECTION ITEM $item_a_spinning_wheel_deed_facing_south_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_an_archery_butte_deed_facing_east_
+SECTION ITEM $item_archery_butte_deed_1
 {
     NAME an archery butte deed (facing east)
     ID 14F0
@@ -499,7 +499,7 @@ SECTION ITEM $item_an_archery_butte_deed_facing_east_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_an_archery_butte_deed_facing_south_
+SECTION ITEM $item_archery_butte_deed_2
 {
     NAME an archery butte deed (facing south)
     ID 14F0
@@ -512,7 +512,7 @@ SECTION ITEM $item_an_archery_butte_deed_facing_south_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_a_training_dummy_deed_facing_south_
+SECTION ITEM $item_training_dummy_deed_2
 {
     NAME a training dummy deed (facing south)
     ID 14F0
@@ -524,7 +524,7 @@ SECTION ITEM $item_a_training_dummy_deed_facing_south_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_a_training_dummy_deed_facing_east_
+SECTION ITEM $item_training_dummy_deed_1
 {
     NAME a training dummy deed (facing east)
     ID 14F0
@@ -537,7 +537,7 @@ SECTION ITEM $item_a_training_dummy_deed_facing_east_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_a_pickpocket_dip_deed_facing_south_
+SECTION ITEM $item_pickpocket_dip_deed_2
 {
     NAME a pickpocket dip deed (facing south)
     ID 14F0
@@ -550,7 +550,7 @@ SECTION ITEM $item_a_pickpocket_dip_deed_facing_south_
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_a_pickpocket_dip_deed_facing_east_
+SECTION ITEM $item_pickpocket_dip_deed_1
 {
     NAME a pickpocket dip deed (facing east)
     ID 14F0
@@ -576,7 +576,7 @@ SECTION ITEM $item_pentagram_deed
     ///SUBSECTION Multis Deeds
 }
 
-SECTION ITEM $item_a_cannon_deed
+SECTION ITEM $item_cannon_deed
 {
     NAME a cannon deed
     ID 14ED
@@ -587,7 +587,7 @@ SECTION ITEM $item_a_cannon_deed
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_a_large_forge_facing_south_deed
+SECTION ITEM $item_large_forge_deed_2
 {
     NAME a large forge facing south deed
     ID 14F0
@@ -599,7 +599,7 @@ SECTION ITEM $item_a_large_forge_facing_south_deed
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_a_large_forge_facing_east_deed
+SECTION ITEM $item_large_forge_deed_1
 {
     NAME a large forge facing east deed
     ID 14F0
@@ -611,7 +611,7 @@ SECTION ITEM $item_a_large_forge_facing_east_deed
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_a_skull_candle_deed
+SECTION ITEM $item_skull_candle_deed
 {
     NAME a skull candle deed
     ID 14f0

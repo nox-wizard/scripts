@@ -742,7 +742,7 @@ SECTION ITEM $item_heavy_crossbow
     DAMAGETYPE $damage_pierce
 }
 
-SECTION ITEM $item_a_golden_bow
+SECTION ITEM $item_golden_bow
 {
     NAME a Bronze bow
     ID 13B2
@@ -2761,7 +2761,7 @@ SECTION ITEM $item_iron_bardiche_of_vanquishing
 }
 
 // Black Staff
-SECTION ITEM $item_a_staff_of_lich_summoning
+SECTION ITEM $item_staff_of_lich_summoning
 {
     NAME a staff of lich summoning
     ID 0DF0

@@ -76,7 +76,7 @@ SECTION STARTITEM $race_halforc
 $item_race_colored_female_leather_tunic
 $item_race_colored_male_leather_tunic
 $item_club
-$item_a_orc_helm
+$item_orc_helm
 }
 
 SECTION DESCRIPTION $race_halforc

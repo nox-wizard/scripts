@@ -11,46 +11,46 @@
 SECTION LOOTLIST $loot_circle_1-5_spells
 {
 	//$$ circle 1-5 spells
-	$item_a_clumsy_scroll
-	$item_a_create_food_scroll
-	$item_a_feeblemind_scroll
-	$item_a_heal_scroll
+	$item_clumsy_scroll
+	$item_create_food_scroll
+	$item_feeblemind_scroll
+	$item_heal_scroll
 	$item_magic_arrow_scroll
-	$item_a_night_sight_scroll
-	$item_a_reactive_armor_scroll
-	$item_a_weaken_scroll
-	$item_a_agility_scroll
-	$item_a_cunning_scroll
-	$item_a_cure_scroll
-	$item_a_harm_scroll
+	$item_night_sight_scroll
+	$item_reactive_armor_scroll
+	$item_weaken_scroll
+	$item_agility_scroll
+	$item_cunning_scroll
+	$item_cure_scroll
+	$item_harm_scroll
 	$item_magic_trap_scroll
 	$item_magic_untrap_scroll
-	$item_a_protection_scroll
-	$item_a_strength_scroll
-	$item_a_bless_scroll
-	$item_a_fireball_scroll
+	$item_protection_scroll
+	$item_strength_scroll
+	$item_bless_scroll
+	$item_fireball_scroll
 	$item_magic_lock_scroll
-	$item_a_poison_scroll
-	$item_a_telekinesis_scroll
-	$item_a_teleport_scroll
-	$item_an_unlock_scroll
-	$item_a_wall_of_stone_scroll
-	$item_an_archcure_scroll
-	$item_an_arch_protection_scroll
-	$item_a_curse_scroll
-	$item_a_fire_field_scroll
-	$item_a_greater_heal_scroll
-	$item_a_lightning_scroll
-	$item_a_mana_drain_scroll
-	$item_a_recall_scroll
-	$item_a_blade_spirits_scroll
-	$item_a_dispel_field_scroll
-	$item_an_incognito_scroll
+	$item_poison_scroll
+	$item_telekinesis_scroll
+	$item_teleport_scroll
+	$item_unlock_scroll
+	$item_wall_of_stone_scroll
+	$item_archcure_scroll
+	$item_arch_protection_scroll
+	$item_curse_scroll
+	$item_fire_field_scroll
+	$item_greater_heal_scroll
+	$item_lightning_scroll
+	$item_mana_drain_scroll
+	$item_recall_scroll
+	$item_blade_spirits_scroll
+	$item_dispel_field_scroll
+	$item_incognito_scroll
 	$item_magic_reflection_scroll
-	$item_a_mind_blast_scroll
-	$item_a_paralyze_scroll
-	$item_a_poison_field_scroll
-	$item_a_summon_creature_scroll
+	$item_mind_blast_scroll
+	$item_paralyze_scroll
+	$item_poison_field_scroll
+	$item_summon_creature_scroll
 }
 
 // ******************
@@ -60,30 +60,30 @@ SECTION LOOTLIST $loot_circle_1-5_spells
 SECTION LOOTLIST $loot_circle_6-8_spells
 {
 	//$$ circle 6-8 spells
-	$item_a_dispel_scroll
-	$item_an_energy_bolt_scroll
-	$item_an_explosion_scroll
-	$item_an_invisibility_scroll
-	$item_a_mark_scroll
-	$item_a_mass_curse_scroll
-	$item_a_paralyze_field_scroll
-	$item_a_reveal_scroll
-	$item_a_chain_lightning_scroll
-	$item_an_energy_field_scroll
-	$item_a_flamestrike_scroll
-	$item_a_gate_travel_scroll
-	$item_a_mana_vampire_scroll
-	$item_a_mass_dispel_scroll
-	$item_a_meteor_swarm_scroll
-	$item_a_polymorph_scroll
-	$item_a_earthquake_scroll
-	$item_a_energy_vortex_scroll
-	$item_a_resurrection_scroll
-	$item_a_summon_air_elemental_scroll
-	$item_a_summon_daemon_scroll
-	$item_a_summon_earth_elemental_scroll
-	$item_a_summon_fire_elemental_scroll
-	$item_a_summon_water_elemental_scroll
+	$item_dispel_scroll
+	$item_energy_bolt_scroll
+	$item_explosion_scroll
+	$item_invisibility_scroll
+	$item_mark_scroll
+	$item_mass_curse_scroll
+	$item_paralyze_field_scroll
+	$item_reveal_scroll
+	$item_chain_lightning_scroll
+	$item_energy_field_scroll
+	$item_flamestrike_scroll
+	$item_gate_travel_scroll
+	$item_mana_vampire_scroll
+	$item_mass_dispel_scroll
+	$item_meteor_swarm_scroll
+	$item_polymorph_scroll
+	$item_earthquake_scroll
+	$item_energy_vortex_scroll
+	$item_resurrection_scroll
+	$item_summon_air_elemental_scroll
+	$item_summon_daemon_scroll
+	$item_summon_earth_elemental_scroll
+	$item_summon_fire_elemental_scroll
+	$item_summon_water_elemental_scroll
 }
 
 //**********
@@ -121,20 +121,20 @@ SECTION LOOTLIST $loot_uncut_gems
 {
 	//$$ uncut gems
 	$item_pieces_of_amber
-	$item_amethysts_2
-	$item_amethysts_3
-	$item_citrines_1
-	$item_citrines_2
-	$item_citrines_3
-	$item_diamonds
-	$item_diamonds_1
-	$item_diamonds_2
-	$item_diamonds_3
-	$item_emeralds_1
-	$item_rubies_5
-	$item_rubies_6
-	$item_star_sapphires_2
-	$item_tourmalines_3
+	$item_amethysts3
+	$item_amethysts4
+	$item_citrines2
+	$item_citrines3
+	$item_citrines4
+	$item_diamonds1
+	$item_diamonds2
+	$item_diamonds3
+	$item_diamonds4
+	$item_emeralds2
+	$item_rubies6
+	$item_rubies7
+	$item_star_sapphires3
+	$item_tourmalines4
 }
 
 //*************
@@ -143,31 +143,31 @@ SECTION LOOTLIST $loot_uncut_gems
 SECTION LOOTLIST $loot_jewelry
 {
 	//$$ jewelry
-	$item_amethysts
-	$item_amethysts_1
-	$item_citrines
-	$item_diamonds_4
-	$item_emeralds
-	$item_rubies
-	$item_rubies_1
-	$item_rubies_2
-	$item_rubies_3
-	$item_rubies_4
-	$item_sapphires
-	$item_sapphires_1
-	$item_sapphires_2
-	$item_sapphires_3
-	$item_star_sapphires
-	$item_star_sapphires_1
-	$item_tourmalines
-	$item_tourmalines_1
-	$item_tourmalines_2
+	$item_amethysts1
+	$item_amethysts2
+	$item_citrines1
+	$item_diamonds5
+	$item_emeralds1
+	$item_rubies1
+	$item_rubies2
+	$item_rubies3
+	$item_rubies4
+	$item_rubies5
+	$item_sapphires1
+	$item_sapphires2
+	$item_sapphires3
+	$item_sapphires4
+	$item_star_sapphires1
+	$item_star_sapphires2
+	$item_tourmalines1
+	$item_tourmalines2
+	$item_tourmalines3
 	$item_beads
 	$item_bracelet
 	$item_earrings
-	$item_necklace
-	$item_necklace_1
-	$item_necklace_2
+	$item_necklace1
+	$item_necklace2
+	$item_necklace3
 	$item_ring
 }
 
@@ -197,7 +197,7 @@ SECTION LOOTLIST $loot_glacial_staff
 SECTION LOOTLIST $loot_fishing_net
 {
 	//$$ fishing net
-	$item_a_fishing_net
+	$item_fishing_net
 }
 //************************
 // Random Food - Omnivores
@@ -268,11 +268,11 @@ SECTION LOOTLIST $loot_food_wine_bread_cheese_meat
 SECTION LOOTLIST $loot_body_parts
 {
 	//$$ body parts
-	$item_a_heart
-	$item_a_skull_1
-	$item_a_skull_2
-	$item_a_ribcage
-	$item_a_spine
+	$item_heart
+	$item_skull_1
+	$item_skull_2
+	$item_ribcage
+	$item_spine
 }
 //***********************************************
 //***************** Random Potions **************
@@ -296,14 +296,14 @@ SECTION LOOTLIST $loot_potions
 SECTION LOOTLIST $loot_wands
 {
 	//$$ wands
-	$item_a_wand_of_greater_healing
-	$item_a_wand_of_energy_vortex
-	$item_a_wand_of_magic_arrow
-	$item_a_wand_of_ressurection
-	$item_a_wand_of_greater_heal
-	$item_a_wand_of_summon_daemon
-	$item_a_wand_of_summon_daemon
-	$item_a_wand_of_resurrection
+	$item_wand_of_greater_healing
+	$item_wand_of_energy_vortex
+	$item_wand_of_magic_arrow
+	$item_wand_of_ressurection
+	$item_wand_of_greater_heal
+	$item_wand_of_summon_daemon
+	$item_wand_of_summon_daemon
+	$item_wand_of_resurrection
 }
 //***********************************************
 // Random Small Blades
@@ -535,11 +535,11 @@ SECTION LOOTLIST $loot_minor_helms
 {
 	//$$ minor helms
 	$item_leather_cap
-	$item_a_skullcap
-	$item_a_orc_helm
-	$item_a_orc_mask
-	$item_a_tribal_mask
-	$item_a_tribal_mask_1
+	$item_skullcap
+	$item_orc_helm
+	$item_orc_mask
+	$item_tribal_mask
+	$item_tribal_mask_1
 	$item_iron_chain_coif
 	$item_bone_helm
 }
@@ -1008,18 +1008,18 @@ SECTION LOOTLIST $loot_misc_stuff
 	$item_iron_key
 	$item_magic_key
 	$item_bronze_key
-	$item_a_recall_rune
+	$item_recall_rune
 	$item_empty_vials
-	$item_bottle_5
+	$item_bottle6
 	$item_silver_coin 6
 	$item_copper_coin
-	$item_balls_of_yarn
+	$item_balls_of_yarn1
 	$item_drum
-	$item_tambourine
-	$item_tambourine_1
+	$item_tambourine1
+	$item_tambourine2
 	$item_standing_harp
 	$item_lap_harp
-	$item_lute
+	$item_lute_2
 	$item_lute_1
 	$item_arrow 25
 	$item_scissors

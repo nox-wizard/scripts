@@ -300,7 +300,7 @@ SECTION ITEMTRG $itrg_forge_deed
 { forge deed
     //$$ forge deed
     MSG You place the forge on the ground!
-    IADD $item_forge
+    IADD $item_forge1
     REMOVE
 }
 
@@ -308,7 +308,7 @@ SECTION ITEMTRG $itrg_anvil_deed_s
 { anvil deed (facing south)
     //$$ anvil deed s
     MSG You place the anvil on the ground!
-    IADD $item_anvil
+    IADD $item_anvil_2
     REMOVE
 }
 
@@ -324,7 +324,7 @@ SECTION ITEMTRG $itrg_wheel_deed
 { wheel deed
     //$$ wheel deed
     MSG You place the wheel on the ground!
-    IADD $item_spinning_wheel_2
+    IADD $item_spinning_wheel3
     NEWNAME a spinning wheel
     REMOVE
 }
@@ -333,7 +333,7 @@ SECTION ITEMTRG $itrg_archery_butte_deed_e
 { archery butte deed (facing east)
     //$$ archery butte deed e
     MSG You place the archery butte on the ground!
-    IADD $item_archery_butte
+    IADD $item_archery_butte_2
     NEWNAME an archery butte
     REMOVE
 }
@@ -351,7 +351,7 @@ SECTION ITEMTRG $itrg_train_dummy_s
 { training dummy (facing south)
     //$$ train dummy s
     MSG You place the training dummy on the ground!
-    IADD $item_training_dummy
+    IADD $item_training_dummy_2
     REMOVE
 }
 
@@ -393,7 +393,7 @@ SECTION ITEMTRG $itrg_wheel_deed_1
 { wheel deed
     //$$ wheel deed
     MSG You place the wheel on the ground!
-    IADD $item_spinning_wheel
+    IADD $item_spinning_wheel1
     NEWNAME a spinning wheel
     REMOVE
 }
@@ -421,7 +421,7 @@ SECTION ITEMTRG $itrg_cocoon_to_treasure
     EMT somethings in there!
     RAND 100 33
     EMT the cocoon bursts open!!
-    IADD $item_rubies_2
+    IADD $item_rubies3
     IADD $item_bone_gloves
     IADD $item_bone_helm
     IADD $item_silk_scraps_might_be_useful_
@@ -686,7 +686,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl1
     NADD $npc_orc_mace
     NADD $npc_orc_mace
     REMOVE
-    IADD $item_treasure_chest_lv1__1
+    IADD $item_treasure_chest_lv1_1
 }
 
 SECTION ITEMTRG $itrg_treasure_map_lvl4
@@ -708,7 +708,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl4
     NADD $npc_an_ogre_lord
     NADD $npc_an_ogre_lord
     REMOVE
-    IADD $item_treasure_chest_lv4__1
+    IADD $item_treasure_chest_lv4_1
 }
 
 SECTION ITEMTRG $itrg_treasure_map_lvl2
@@ -729,7 +729,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl2
     NADD $npc_an_orcish_lord
     NADD $npc_an_orcish_lord
     REMOVE
-    IADD $item_treasure_chest_lv2__1
+    IADD $item_treasure_chest_lv2_1
 }
 
 SECTION ITEMTRG $itrg_treasure_map_lvl3
@@ -750,7 +750,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3
     NADD $npc_an_orcish_lord
     NADD $npc_an_orcish_lord
     REMOVE
-    IADD $item_treasure_chest_lv3__1
+    IADD $item_treasure_chest_lv3_1
 }
 
 SECTION ITEMTRG $itrg_treasure_map_lvl5
@@ -769,7 +769,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5
     NADD $npc_the_collector_of_souls
     NADD $npc_the_collector_of_souls
     REMOVE
-    IADD $item_treasure_chest_lv5__1
+    IADD $item_treasure_chest_lv5_1
 }
 
 SECTION ITEMTRG $itrg_spawn_reagents
@@ -800,7 +800,7 @@ SECTION ITEMTRG $itrg_treasure_spawn_lvl2
     NADD $npc_a_headless
     NADD $npc_a_headless
     REMOVE
-    IADD $item_treasure_chest_lv1__2
+    IADD $item_treasure_chest_lv1_2
 }
 
 SECTION ITEMTRG $itrg_treasure_spawn_lvl3
@@ -814,7 +814,7 @@ SECTION ITEMTRG $itrg_treasure_spawn_lvl3
     NADD $npc_a_zombie
     NADD $npc_a_zombie
     REMOVE
-    IADD $item_treasure_chest_lv1__3
+    IADD $item_treasure_chest_lv1_3
 }
 
 SECTION ITEMTRG $itrg_treasure
@@ -828,23 +828,23 @@ SECTION ITEMTRG $itrg_treasure
     IADD $item_iron_chainmail_of_defence
     IADD $item_iron_hatchet_of_ruin
     IADD $item_pieces_of_amber
-    IADD $item_amethysts_2
-    IADD $item_amethysts_3
-    IADD $item_citrines_1
-    IADD $item_citrines_2
-    IADD $item_citrines_3
-    IADD $item_diamonds
-    IADD $item_diamonds_1
-    IADD $item_diamonds_2
-    IADD $item_diamonds_3
+    IADD $item_amethysts3
+    IADD $item_amethysts4
+    IADD $item_citrines2
+    IADD $item_citrines3
+    IADD $item_citrines4
+    IADD $item_diamonds1
+    IADD $item_diamonds2
+    IADD $item_diamonds3
+    IADD $item_diamonds4
     IADD $item_black_pearl
     IADD $item_bloodmoss
     IADD $item_garlic
     IADD $item_spiders_silk
-    IADD $item_a_clumsy_scroll
-    IADD $item_a_agility_scroll
-    IADD $item_a_bless_scroll
-    IADD $item_an_archcure_scroll
+    IADD $item_clumsy_scroll
+    IADD $item_agility_scroll
+    IADD $item_bless_scroll
+    IADD $item_archcure_scroll
     REMOVE
     SND 01 1E
     HEA -10
@@ -859,7 +859,7 @@ SECTION ITEMTRG $itrg_treasure_spawn_lvl4
     NADD $npc_a_dark_spider
     NADD $npc_a_dark_spider
     REMOVE
-    IADD $item_treasure_chest_lv4__2
+    IADD $item_treasure_chest_lv4_2
 }
 
 SECTION ITEMTRG $itrg_treasure_spawn_lvl4_1
@@ -873,7 +873,7 @@ SECTION ITEMTRG $itrg_treasure_spawn_lvl4_1
     NADD $npc_a_lich
     NADD $npc_a_lich
     REMOVE
-    IADD $item_treasure_chest_lv4__3
+    IADD $item_treasure_chest_lv4_3
 }
 
 SECTION ITEMTRG $itrg_treasure_spawn_lvl4_2
@@ -888,7 +888,7 @@ SECTION ITEMTRG $itrg_treasure_spawn_lvl4_2
     NADD $npc_a_lich_lord
     NADD $npc_a_lich_lord
     REMOVE
-    IADD $item_treasure_chest_lv4__4
+    IADD $item_treasure_chest_lv4_4
 }
 
 SECTION ITEMTRG $itrg_treasure_spawn_lvl4_3
@@ -903,7 +903,7 @@ SECTION ITEMTRG $itrg_treasure_spawn_lvl4_3
     NADD $npc_an_orcish_mage
     NADD $npc_an_orcish_mage
     REMOVE
-    IADD $item_treasure_chest_lv4__5
+    IADD $item_treasure_chest_lv4_5
 }
 
 SECTION ITEMTRG $itrg_big_treasure
@@ -915,40 +915,40 @@ SECTION ITEMTRG $itrg_big_treasure
     IADD $item_gold_coin 4000
     IADD $item_iron_chainmail_of_guarding
     IADD $item_iron_chain_legs_of_guarding
-    IADD $item_a_wand_of_greater_heal
+    IADD $item_wand_of_greater_heal
     IADD $item_iron_viking_sword_of_ruin
     IADD $item_iron_scimitar_of_ruin
     IADD $item_iron_executionners_axe_of_ruin
     IADD $item_iron_skinning_knife_of_ruin
     IADD $item_iron_platemail_of_defence
     IADD $item_iron_cutlass_of_ruin
-    IADD $item_a_wand_of_summon_daemon
+    IADD $item_wand_of_summon_daemon
     IADD $item_iron_axe_of_ruin
     IADD $item_iron_pick_axe_of_ruin
     IADD $item_iron_broad_sword_of_ruin
-    IADD $item_a_create_food_scroll
-    IADD $item_a_feeblemind_scroll
-    IADD $item_a_weaken_scroll
-    IADD $item_a_cunning_scroll
-    IADD $item_a_cure_scroll
-    IADD $item_a_wall_of_stone_scroll
-    IADD $item_a_curse_scroll
-    IADD $item_a_fire_field_scroll
+    IADD $item_create_food_scroll
+    IADD $item_feeblemind_scroll
+    IADD $item_weaken_scroll
+    IADD $item_cunning_scroll
+    IADD $item_cure_scroll
+    IADD $item_wall_of_stone_scroll
+    IADD $item_curse_scroll
+    IADD $item_fire_field_scroll
     IADD $item_magic_reflection_scroll
-    IADD $item_a_paralyze_scroll
-    IADD $item_a_dispel_scroll
-    IADD $item_an_explosion_scroll
-    IADD $item_a_reveal_scroll
+    IADD $item_paralyze_scroll
+    IADD $item_dispel_scroll
+    IADD $item_explosion_scroll
+    IADD $item_reveal_scroll
     IADD $item_pieces_of_amber
-    IADD $item_amethysts_2
-    IADD $item_amethysts_3
-    IADD $item_citrines_1
-    IADD $item_citrines_2
-    IADD $item_citrines_3
-    IADD $item_diamonds
-    IADD $item_diamonds_1
-    IADD $item_diamonds_2
-    IADD $item_diamonds_3
+    IADD $item_amethysts3
+    IADD $item_amethysts4
+    IADD $item_citrines2
+    IADD $item_citrines3
+    IADD $item_citrines4
+    IADD $item_diamonds1
+    IADD $item_diamonds2
+    IADD $item_diamonds3
+    IADD $item_diamonds4
     IADD $item_black_pearl
     IADD $item_bloodmoss
     IADD $item_garlic
@@ -973,7 +973,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl2_1
     NADD $npc_a_gazer
     NADD $npc_a_gazer
     REMOVE
-    IADD $item_treasure_chest_lv2__2
+    IADD $item_treasure_chest_lv2_2
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl2_2
@@ -987,7 +987,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl2_2
     NADD $npc_an_earth_elemental
     NADD $npc_an_earth_elemental
     REMOVE
-    IADD $item_treasure_chest_lv2__3
+    IADD $item_treasure_chest_lv2_3
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl2_3
@@ -1018,15 +1018,15 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl2_3
     IADD $item_all_circle_scrolls_list
     IADD $item_all_circle_scrolls_list
     IADD $item_pieces_of_amber
-    IADD $item_amethysts_2
-    IADD $item_amethysts_3
-    IADD $item_citrines_1
-    IADD $item_citrines_2
-    IADD $item_citrines_3
-    IADD $item_diamonds
-    IADD $item_diamonds_1
-    IADD $item_diamonds_2
-    IADD $item_diamonds_3
+    IADD $item_amethysts3
+    IADD $item_amethysts4
+    IADD $item_citrines2
+    IADD $item_citrines3
+    IADD $item_citrines4
+    IADD $item_diamonds1
+    IADD $item_diamonds2
+    IADD $item_diamonds3
+    IADD $item_diamonds4
     IADD $item_reagents_list
     IADD $item_reagents_list
     IADD $item_reagents_list
@@ -1063,7 +1063,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_1
     NADD $npc_a_dark_spider
     NADD $npc_a_dark_spider
     REMOVE
-    IADD $item_treasure_chest_lv3__2
+    IADD $item_treasure_chest_lv3_2
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl3_2
@@ -1078,7 +1078,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_2
     NADD $npc_a_water_elemental
     NADD $npc_a_shadow_wyrm
     REMOVE
-    IADD $item_treasure_chest_lv3__3
+    IADD $item_treasure_chest_lv3_3
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl3_3
@@ -1129,15 +1129,15 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_3
     IADD $item_all_circle_scrolls_list
     IADD $item_all_circle_scrolls_list
     IADD $item_pieces_of_amber
-    IADD $item_amethysts_2
-    IADD $item_amethysts_3
-    IADD $item_citrines_1
-    IADD $item_citrines_2
-    IADD $item_citrines_3
-    IADD $item_diamonds
-    IADD $item_diamonds_1
-    IADD $item_diamonds_2
-    IADD $item_diamonds_3
+    IADD $item_amethysts3
+    IADD $item_amethysts4
+    IADD $item_citrines2
+    IADD $item_citrines3
+    IADD $item_citrines4
+    IADD $item_diamonds1
+    IADD $item_diamonds2
+    IADD $item_diamonds3
+    IADD $item_diamonds4
     IADD $item_reagents_list
     IADD $item_reagents_list
     IADD $item_reagents_list
@@ -1182,7 +1182,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_1
     NADD $npc_a_lich_lord
     NADD $npc_a_lich_lord
     REMOVE
-    IADD $item_treasure_chest_lv5__2
+    IADD $item_treasure_chest_lv5_2
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_2
@@ -1194,7 +1194,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_2
     NADD $npc_a_lich_lord
     NADD $npc_a_lich_lord
     REMOVE
-    IADD $item_treasure_chest_lv5__3
+    IADD $item_treasure_chest_lv5_3
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_3
@@ -1206,7 +1206,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_3
     NADD $npc_deamon_unarmed
     NADD $npc_deamon_unarmed
     REMOVE
-    IADD $item_treasure_chest_lv5__4
+    IADD $item_treasure_chest_lv5_4
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_4
@@ -1220,7 +1220,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_4
     NADD $npc_an_elder_gazer
     NADD $npc_an_elder_gazer
     REMOVE
-    IADD $item_treasure_chest_lv5__5
+    IADD $item_treasure_chest_lv5_5
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_5
@@ -1233,7 +1233,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_5
     NADD $npc_a_poison_elemental
     NADD $npc_a_poison_elemental
     REMOVE
-    IADD $item_treasure_chest_lv5__6
+    IADD $item_treasure_chest_lv5_6
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_6
@@ -1247,7 +1247,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_6
     NADD $npc_a_blood_elemental
     NADD $npc_a_blood_elemental
     REMOVE
-    IADD $item_treasure_chest_lv5__7
+    IADD $item_treasure_chest_lv5_7
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_7
@@ -1321,15 +1321,15 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_7
     IADD $item_all_circle_scrolls_list
     IADD $item_all_circle_scrolls_list
     IADD $item_pieces_of_amber
-    IADD $item_amethysts_2
-    IADD $item_amethysts_3
-    IADD $item_citrines_1
-    IADD $item_citrines_2
-    IADD $item_citrines_3
-    IADD $item_diamonds
-    IADD $item_diamonds_1
-    IADD $item_diamonds_2
-    IADD $item_diamonds_3
+    IADD $item_amethysts3
+    IADD $item_amethysts4
+    IADD $item_citrines2
+    IADD $item_citrines3
+    IADD $item_citrines4
+    IADD $item_diamonds1
+    IADD $item_diamonds2
+    IADD $item_diamonds3
+    IADD $item_diamonds4
     IADD $item_reagents_list
     IADD $item_reagents_list
     IADD $item_reagents_list
@@ -1550,7 +1550,7 @@ SECTION ITEMTRG $itrg_dartboard_deed
 SECTION ITEMTRG $itrg_dartboard_deed_1
 { // Dartboard
     //$$ dartboard deed
-    IADD $item_dartboard
+    IADD $item_dartboard_2
     REMOVE
 }
 
