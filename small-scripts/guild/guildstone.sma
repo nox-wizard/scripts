@@ -59,33 +59,38 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 	}
 	
 #if defined( GUILD_POSITION_WITH_TARGET )
-	if( x==INVALID || y==INVALID || z==INVALID ) {
+	if( x==INVALID || y==INVALID ) {
 		sysmessage( master, _, "This is not a valid place" );
 		return;
 	}
 #endif
-		
+	
 #if defined( GUILD_POSITION_WHERE_PLAYER )
 	x = chr_getProperty( master, CP_POSITION, CP2_X );
 	y = chr_getProperty( master, CP_POSITION, CP2_Y );
 	z = chr_getProperty( master, CP_POSITION, CP2_Z );
 #endif
-
-	new gui = gui_create( 40, 40, true, true, true, "guildgui_new" );
+	const colorEdit = 32;
+	new gui = gui_create( 40, 40, true, true, true, "guildgui_callback" );
+	// gui_addBackground( gui, 0x0A2C, 300, 100 );
 	gui_addGump( gui, 0, 0, 0x04CC, 0 );
 	gui_setProperty( gui, MP_BUFFER, 0, deed );
 	gui_setProperty( gui, MP_BUFFER, 1, x );
 	gui_setProperty( gui, MP_BUFFER, 2, y );
 	gui_setProperty( gui, MP_BUFFER, 3, z );
-	gui_addButton( gui, 100, 100, 0x084A, 0x084B, 1 );
-	gui_addText( gui, 20, 20, _, "Enter Guild Name " );
-	gui_addInputField( gui, 20, 50, 250, 50, 55, _, "" );
+	gui_addButton( gui, 243, 265, 0x084A, 0x084B, 1 );
+	gui_addText( gui, 20, 30, _, "Enter Guild Name " );
+	gui_addInputField( gui, 170, 30, 125, 30, 55, colorEdit, "Guild");
+	gui_addText( gui, 20, 30, _, "Enter Guild Abbreviation " );
+	gui_addInputField( gui, 170, 30, 125, 30, 56, colorEdit, "Guild Short Name");
+
+	
 	gui_show( gui, master );
 
 	
 }
 
-public guildgui_new( const socket, const gui, const button )
+public guildgui_callback( const socket, const gui, const button )
 {
 	if( button<=MENU_CLOSED )
 		return;
@@ -101,9 +106,13 @@ public guildgui_new( const socket, const gui, const button )
 	new name[150];
 	gui_getProperty( gui, MP_UNI_TEXT, 55, name );
 	
+	new shortname[150];
+	gui_getProperty( gui, MP_UNI_TEXT, 56, name );
+	
 	new stone = itm_createByDef( "$item_guildstone" );
 	new guild = _guild_createStandardGuild( stone, master ); // create a standard guild.. see guild.sma
 	guild_setProperty( guild, GP_STR_NAME, _, name ); 
+	guild_setProperty( guild, GP_STR_ABBREVIATION, _, shortname ); 
 	
 	itm_setProperty( stone, IP_POSITION, IP2_X, gui_getProperty( gui, MP_BUFFER, 1 ) );
 	itm_setProperty( stone, IP_POSITION, IP2_Y, gui_getProperty( gui, MP_BUFFER, 2 ) );
@@ -119,13 +128,12 @@ public guildgui_new( const socket, const gui, const button )
 
 
 /*!
-\author Endymion
+\author Doctor X
 \fn guild_dclickStone( const guild, const socket )
 \brief a guild stone double-click
 */
 public guild_dclickStone( const guild, const socket )
 {
-	guildgui_show( guild, getCharFromSocket( socket ) );
 	bypass();
 }
 
@@ -138,7 +146,7 @@ public guild_sclickStone( const guild, const socket )
 {
 	new guildName[64];
 	guild_getProperty( guild, GP_STR_NAME, _, guildName );
-	sprintf( guildName, "Guildstone of %s", guildName );
+	sprintf( guildName, "Guildstone for %s", guildName );
 	itm_speech( socket, guild, guildName );
 	bypass();
 }
