@@ -204,6 +204,7 @@ const CP_STR_SPEECHWORD = 457;	//!< word/phrase in speech that triggered speech 
 const CP_STR_SPEECH = 458; 	//!< entire speech that contains word/phrase that triggered speech override
 const CP_STR_ACCOUNT = 459; // Account name of current player
 const CP_STR_PASSWORD = 460; // Account name of current player
+const CP_STR_PARAM = 461; // Params given by the character with the last command called
 
 const CP_UNI_SPEECH_CURRENT = 500;//!<
 const CP_UNI_PROFILE = 501;	//!<
