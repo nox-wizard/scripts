@@ -278,7 +278,7 @@ public createPotion(const chr, const arrayline, const amount)
 		}
 		else if(chr_getProperty(chr,CP_SKILL,0) == 1000) //we have an GM, still there is a success chance for some things
 		{
-			new checkchance = random[100];
+			new checkchance = random(100);
 			if( checkchance < potionProperty[arrayline][potionchance] ) //hehe, even GM fail sometimes
 			{
 				itm_delAmountByID(backpack, ((potionProperty[arrayline][reagentneed])*amount)/2, reagscript); //we delete the half amount of needed reagents
