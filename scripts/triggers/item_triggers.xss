@@ -779,10 +779,10 @@ SECTION ITEMTRG $itrg_spawn_reagents
     EMT *feels magical powers*
     IADD $item_black_pearl
     IADD $item_bloodmoss
-    IADD $item_garlic
+    IADD $item_garlic 50
     IADD $item_ginseng
     IADD $item_mandrake_root
-    IADD $item_nightshade
+    IADD $item_nightshade 50
     IADD $item_sulfurous_ash
     IADD $item_spiders_silk
     REMOVE
@@ -822,10 +822,10 @@ SECTION ITEMTRG $itrg_treasure
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin
-    IADD $item_a_broad_sword_of_ruin
-    IADD $item_chainmail_of_defence
-    IADD $item_a_hatchet_of_ruin
+    IADD $item_gold_coin 1000
+    IADD $item_iron_broad_sword_of_ruin
+    IADD $item_iron_chainmail_of_defence
+    IADD $item_iron_hatchet_of_ruin
     IADD $item_pieces_of_amber
     IADD $item_amethysts_2
     IADD $item_amethysts_3
@@ -911,20 +911,20 @@ SECTION ITEMTRG $itrg_big_treasure
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin
-    IADD $item_chainmail_of_guarding
-    IADD $item_chain_legs_of_guarding
+    IADD $item_gold_coin 4000
+    IADD $item_iron_chainmail_of_guarding
+    IADD $item_iron_chain_legs_of_guarding
     IADD $item_a_wand_of_greater_heal
-    IADD $item_a_viking_sword_of_ruin
-    IADD $item_a_scimitar_of_ruin
-    IADD $item_a_executionners_axe_of_ruin
-    IADD $item_a_skinning_knife_of_ruin
-    IADD $item_platemail_of_defence
-    IADD $item_a_cutlass_of_ruin
+    IADD $item_iron_viking_sword_of_ruin
+    IADD $item_iron_scimitar_of_ruin
+    IADD $item_iron_executionners_axe_of_ruin
+    IADD $item_iron_skinning_knife_of_ruin
+    IADD $item_iron_platemail_of_defence
+    IADD $item_iron_cutlass_of_ruin
     IADD $item_a_wand_of_summon_daemon
-    IADD $item_a_axe_of_ruin
-    IADD $item_a_pick_axe_of_ruin
-    IADD $item_a_broad_sword_of_ruin
+    IADD $item_iron_axe_of_ruin
+    IADD $item_iron_pick_axe_of_ruin
+    IADD $item_iron_broad_sword_of_ruin
     IADD $item_a_create_food_scroll
     IADD $item_a_feeblemind_scroll
     IADD $item_a_weaken_scroll
@@ -933,7 +933,7 @@ SECTION ITEMTRG $itrg_big_treasure
     IADD $item_a_wall_of_stone_scroll
     IADD $item_a_curse_scroll
     IADD $item_a_fire_field_scroll
-    IADD $item_a_magic_reflection_scroll
+    IADD $item_magic_reflection_scroll
     IADD $item_a_paralyze_scroll
     IADD $item_a_dispel_scroll
     IADD $item_an_explosion_scroll
@@ -995,7 +995,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl2_3
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin
+    IADD $item_gold_coin 2000
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
@@ -1086,7 +1086,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_3
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin
+    IADD $item_gold_coin 3000
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
@@ -1255,7 +1255,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_7
     SETUSES 1
     RANGE 2
     SND 00 37
-    IADD $item_gold_coin
+    IADD $item_gold_coin 5000
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
     IADD $item_various_weapons_and_armors_list
@@ -1727,14 +1727,22 @@ SECTION ITEMTRG $itrg_drink_ale
 SECTION ITEMTRG $itrg_potted_tree
 { // potted tree
     //$$ potted tree
-    IADD $item_potted_tree_1
+    IADD $item_potted_tree
     REMOVE
 }
 
 SECTION ITEMTRG $itrg_potted_tree_1
 { // potted tree
     //$$ potted tree
-    IADD $item_potted_tree_3
+    IADD $item_potted_plant
+    REMOVE
+}
+
+SECTION ITEMTRG $itrg_happy_holidays
+{
+    //$$ happy holidays
+    MSG Happy Holidays from the NoX-Wizard Dev team!!!
+    IADD $item_fireworks_wand
     REMOVE
 }
 
