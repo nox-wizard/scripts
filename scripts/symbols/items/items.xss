@@ -1323,11 +1323,11 @@
 #define $item_cut_cloth 7029
 #define $item_iron_ingots 7030
 #define $item_clock_parts 7031
-#define $item_xles_with_gears 7032
+#define $item_axles_with_gears 7032
 #define $item_gears 7033
 #define $item_hinges 7034
 #define $item_sextant_parts 7035
-#define $item_xles 7036
+#define $item_axles 7036
 #define $item_springs 7037
 #define $item_tinkers_tools 7038
 #define $item_tinker_parts_list 7039

@@ -1470,7 +1470,7 @@ SECTION MAKEMENU 70
     105B axle
     RESOURCE 2
     SKILL 10
-    ADDITEM $item_xles
+    ADDITEM $item_axles
     0E34 blank scroll
     RESOURCE 2
     SKILL 10

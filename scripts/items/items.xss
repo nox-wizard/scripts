@@ -4741,15 +4741,6 @@ SECTION ITEM $item_iron_ore
     WEIGHT 800
 }
 
-SECTION ITEM $item_shovel
-{
-    NAME shovel
-    ID 0F39
-    HP 30
-    VALUE 15
-    //RESTOCK 10
-}
-
 SECTION ITEM $item_tongs
 {
     NAME tongs
@@ -4757,6 +4748,7 @@ SECTION ITEM $item_tongs
     HP 60
     VALUE 15
     //RESTOCK 10
+    @ONDBLCLICK blacksmith
 }
 
 SECTION ITEM $item_hitching_post

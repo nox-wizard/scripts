@@ -5481,22 +5481,22 @@ SECTION NPC $npc_tinker_m
 	SHOPKEEPER
 	RSHOPITEM $item_sextant
 	RSHOPITEM $item_clock_parts
-	RSHOPITEM $item_xles_with_gears
+	RSHOPITEM $item_axles_with_gears
 	RSHOPITEM $item_gears
 	RSHOPITEM $item_hinges
 	RSHOPITEM $item_sextant_parts
-	RSHOPITEM $item_xles
+	RSHOPITEM $item_axles
 	RSHOPITEM $item_springs
 	RSHOPITEM $item_tinkers_tools
 	RSHOPITEM $item_clock_frames
 	SELLITEM $item_clock_frames
 	SELLITEM $item_sextant
 	SELLITEM $item_clock_parts
-	SELLITEM $item_xles_with_gears
+	SELLITEM $item_axles_with_gears
 	SELLITEM $item_gears
 	SELLITEM $item_hinges
 	SELLITEM $item_sextant_parts
-	SELLITEM $item_xles
+	SELLITEM $item_axles
 	SELLITEM $item_springs
 	SELLITEM $item_tinkers_tools
 	DOORUSE 1
@@ -5546,22 +5546,22 @@ SECTION NPC $npc_tinker_f
 	SHOPKEEPER
 	RSHOPITEM $item_sextant
 	RSHOPITEM $item_clock_parts
-	RSHOPITEM $item_xles_with_gears
+	RSHOPITEM $item_axles_with_gears
 	RSHOPITEM $item_gears
 	RSHOPITEM $item_hinges
 	RSHOPITEM $item_sextant_parts
-	RSHOPITEM $item_xles
+	RSHOPITEM $item_axles
 	RSHOPITEM $item_springs
 	RSHOPITEM $item_tinkers_tools
 	RSHOPITEM $item_clock_frames
 	SELLITEM $item_clock_frames
 	SELLITEM $item_sextant
 	SELLITEM $item_clock_parts
-	SELLITEM $item_xles_with_gears
+	SELLITEM $item_axles_with_gears
 	SELLITEM $item_gears
 	SELLITEM $item_hinges
 	SELLITEM $item_sextant_parts
-	SELLITEM $item_xles
+	SELLITEM $item_axles
 	SELLITEM $item_springs
 	SELLITEM $item_tinkers_tools
 	DOORUSE 1

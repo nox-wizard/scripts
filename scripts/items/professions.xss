@@ -32,6 +32,7 @@ SECTION ITEM $item_dying_tub
 
 SECTION ITEM $item_anvil_1
 {
+    NAME anvil
     ID 0FAF
     AMXINT $localvar_flipitem $item_anvil_2
     @ONDBLCLICK blacksmith
@@ -43,6 +44,7 @@ SECTION ITEM $item_anvil_1
 
 SECTION ITEM $item_anvil_2
 {
+    NAME anvil
     ID 0FB0
     AMXINT $localvar_flipitem $item_anvil_1
     @ONDBLCLICK blacksmith
@@ -54,6 +56,7 @@ SECTION ITEM $item_anvil_2
 
 SECTION ITEM $item_bellows
 {
+    NAME bellows
     ID 197A
     
     ///CATEGORY Professions
@@ -63,11 +66,13 @@ SECTION ITEM $item_bellows
 
 SECTION ITEM $item_bellows_1
 {
+    NAME bellows
     ID 1986
 }
 
 SECTION ITEM $item_forge1
 {
+    NAME forge
     ID 0FB1
     
     ///CATEGORY Professions
@@ -77,6 +82,7 @@ SECTION ITEM $item_forge1
 
 SECTION ITEM $item_forge2_1_1
 {
+    NAME forge
     ID 197A
     AMXINT $localvar_flipitem $item_forge2_2_1
     ///CATEGORY Professions
@@ -86,6 +92,7 @@ SECTION ITEM $item_forge2_1_1
 
 SECTION ITEM $item_forge2_1_2
 {
+    NAME forge
     ID 197E
     AMXINT $localvar_flipitem $item_forge2_2_2
     
@@ -96,6 +103,7 @@ SECTION ITEM $item_forge2_1_2
 
 SECTION ITEM $item_forge2_1_3
 {
+    NAME forge
     ID 19A6
     AMXINT $localvar_flipitem $item_forge2_2_3
     ///CATEGORY Professions
@@ -105,6 +113,7 @@ SECTION ITEM $item_forge2_1_3
 
 SECTION ITEM $item_forge2_1_4
 {
+    NAME forge
     ID 19A2
     AMXINT $localvar_flipitem $item_forge2_2_4
     ///CATEGORY Professions
@@ -114,6 +123,7 @@ SECTION ITEM $item_forge2_1_4
 
 SECTION ITEM $item_forge2_1_5
 {
+    NAME forge
     ID 1982
     AMXINT $localvar_flipitem $item_forge2_2_5
     ///CATEGORY Professions
@@ -123,6 +133,7 @@ SECTION ITEM $item_forge2_1_5
 
 SECTION ITEM $item_forge2_2_1
 {
+    NAME forge
     ID 1986
     AMXINT $localvar_flipitem $item_forge2_1_1
     
@@ -133,12 +144,14 @@ SECTION ITEM $item_forge2_2_1
 
 SECTION ITEM $item_forge2_2_2
 {
+    NAME forge
     ID 198a
     AMXINT $localvar_flipitem $item_forge2_1_2
 }
 
 SECTION ITEM $item_forge2_2_3
 {
+    NAME forge
     ID 199A
     AMXINT $localvar_flipitem $item_forge2_1_3
     
@@ -149,6 +162,7 @@ SECTION ITEM $item_forge2_2_3
 
 SECTION ITEM $item_forge2_2_4
 {
+    NAME forge
     ID 1996
     AMXINT $localvar_flipitem $item_forge2_1_4
     
@@ -159,6 +173,7 @@ SECTION ITEM $item_forge2_2_4
 
 SECTION ITEM $item_forge2_2_5
 {
+    NAME forge
     ID 198e
     AMXINT $localvar_flipitem $item_forge2_1_5
     ///CATEGORY Professions
@@ -184,10 +199,11 @@ SECTION ITEM $item_large_forge_deed_1
 
 SECTION ITEM $item_shovel
 {
+    NAME shovel
     ID 0F39
-    DECAY
     HP 30
     VALUE 15
+    //RESTOCK 10
     
     ///CATEGORY Professions
     ///SUBSECTION Miner & Blacksmith
@@ -196,6 +212,7 @@ SECTION ITEM $item_shovel
 
 SECTION ITEM $item_drum
 {
+    NAME drum
     ID 0E9C
     DECAY
     VALUE 25
@@ -207,6 +224,7 @@ SECTION ITEM $item_drum
 
 SECTION ITEM $item_tambourine1
 {
+    NAME tambourine
     ID 0E9D
     DECAY
     VALUE 25
@@ -218,6 +236,7 @@ SECTION ITEM $item_tambourine1
 
 SECTION ITEM $item_tambourine2
 {
+    NAME tambourine
     ID 0E9E
     DECAY
     VALUE 25
@@ -229,6 +248,7 @@ SECTION ITEM $item_tambourine2
 
 SECTION ITEM $item_standing_harp
 {
+    NAME standing harp
     ID 0EB1
     DECAY
     VALUE 25
@@ -240,6 +260,7 @@ SECTION ITEM $item_standing_harp
 
 SECTION ITEM $item_lap_harp
 {
+    NAME lap harp
     ID 0EB2
     DECAY
     VALUE 25
@@ -251,6 +272,7 @@ SECTION ITEM $item_lap_harp
 
 SECTION ITEM $item_lute_2
 {
+    NAME lute
     ID 0EB3
     DECAY
     VALUE 25
@@ -262,6 +284,7 @@ SECTION ITEM $item_lute_2
 
 SECTION ITEM $item_lute_1
 {
+    NAME lute
     ID 0EB4
     DECAY
     VALUE 25
@@ -273,6 +296,7 @@ SECTION ITEM $item_lute_1
 
 SECTION ITEM $item_lockpicks
 {
+    NAME lockpicks
     ID 14FB
     VALUE 2
     WEIGHT 1
@@ -285,6 +309,7 @@ SECTION ITEM $item_lockpicks
 
 SECTION ITEM $item_sewing_kit
 {
+    NAME sewing kit
     ID 0F9D
     VALUE 30
     WEIGHT 3
@@ -296,6 +321,7 @@ SECTION ITEM $item_sewing_kit
 
 SECTION ITEM $item_cut_cloth
 {
+    NAME cut cloth
     ID 1766
     DECAY
     VALUE 2
@@ -309,6 +335,7 @@ SECTION ITEM $item_cut_cloth
 
 SECTION ITEM $item_iron_ingots
 {
+    NAME ingots
     ID 1BF2
     COLOR 0961
     AMOUNT 5
@@ -323,6 +350,7 @@ SECTION ITEM $item_iron_ingots
 
 SECTION ITEM $item_clock_parts
 {
+    NAME clock parts
     ID 104F
     VALUE 20
     WEIGHT 100
@@ -333,8 +361,9 @@ SECTION ITEM $item_clock_parts
     ///DESCRIPTION Clock Parts
 }
 
-SECTION ITEM $item_xles_with_gears
+SECTION ITEM $item_axles_with_gears
 {
+    NAME axles with gears
     ID 1051
     VALUE 25
     WEIGHT 100
@@ -347,6 +376,7 @@ SECTION ITEM $item_xles_with_gears
 
 SECTION ITEM $item_gears
 {
+    NAME gears
     ID 1053
     VALUE 15
     WEIGHT 100
@@ -381,7 +411,7 @@ SECTION ITEM $item_sextant_parts
     ///DESCRIPTION Sextant Parts
 }
 
-SECTION ITEM $item_xles
+SECTION ITEM $item_axles
 {
     ID 105B
     VALUE 15

@@ -216,11 +216,11 @@ SECTION ITEMLIST $itemlist_tinker_parts
     //$$ tinker parts
     $item_iron_ingots
     $item_clock_parts
-    $item_xles_with_gears
+    $item_axles_with_gears
     $item_gears
     $item_hinges
     $item_sextant_parts
-    $item_xles
+    $item_axles
     $item_springs
     $item_tinkers_tools
 }
