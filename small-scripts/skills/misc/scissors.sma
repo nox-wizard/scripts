@@ -22,7 +22,7 @@ public _scissorsTarget( const s, const target, const itm )
     if( itm_getProperty( itm, IP_MAGIC )==4 )
     	return;
     	
-	new id = itm_getDualByteProperty( itm, IP_ID );
+	new id = itm_getProperty( itm, IP_ID );
 
 	
 	if( isCloth( id ) || isCutCloth( id ) ) {

@@ -184,7 +184,7 @@ public __nxw_sk_mining(const s)
 	new ore = itm_createByDef( "$item_iron_ore" );
 	itm_setProperty( ore, IP_AMOUNT, _, oreAmount );
 	itm_setProperty( ore, IP_STR_NAME, 0, str );
-	itm_setDualByteProperty( ore, IP_COLOR, oreColor[oreFound] );
+	itm_setProperty( ore, IP_COLOR, _, oreColor[oreFound] );
 	itm_setContSerial( ore, bp );
 	itm_setProperty( ore, IP_WEIGHT, _, 100 );
 	
@@ -224,7 +224,7 @@ public __nxw_smeltOre2(const s, const ore, const minskill, const id1, const id2,
 	itm_setProperty( ingot, IP_AMOUNT, _, numingots );
 	itm_setProperty( ingot, IP_STR_NAME, 0, orename );
 	new color = (col1<<8) + col2;
-	itm_setDualByteProperty( ingot, IP_COLOR, color );
+	itm_setProperty( ingot, IP_COLOR, _, color );
 	itm_setContSerial( ingot, bp );
 	itm_setProperty( ingot, IP_WEIGHT, _, 100 );
 

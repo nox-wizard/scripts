@@ -20,8 +20,6 @@ const IP2_DZ = 3;
 const IP2_DISPZ = 3;
 
 const IP_INCOGNITO = 0;
-const IP_COLOR = 100;
-const IP_CONTAINERSERIAL2 = 101;
 const IP_CORPSE = 102;
 const IP_DOORDIR = 103;
 const IP_DOOROPEN = 104;
@@ -29,17 +27,14 @@ const IP_DYE = 105;
 const IP_FREE = 106;
 const IP_GLOWFX = 107;
 const IP_GLOWOLDCOLOR = 108;
-const IP_ID = 109;
 const IP_LAYER = 110;
 const IP_MAGIC = 111;
 const IP_MORE = 112;
 const IP_MOREB = 113;
 const IP_OFFSPELL = 114;
 const IP_OLDLAYER = 115;
-const IP_OWNERSERIAL2 = 116;
 const IP_PILEABLE = 117;
 const IP_PRIV = 118;
-const IP_SERIAL2 = 119;
 const IP_VISIBLE = 120;
 const IP_DAMAGETYPE = 121;
 const IP_AUXDAMAGETYPE = 122;
@@ -100,9 +95,14 @@ const IP_RESISTS = 253;
 const IP_AUXDAMAGE = 254;
 const IP_AMMO = 255;
 const IP_AMMOFX = 256;
+
 const IP_AMOUNT = 400;
 const IP_AMOUNT2 = 401;
 const IP_DIR = 402;
+const IP_COLOR = 403;
+const IP_ID = 404;
+
+
 const IP_STR_CREATOR = 450;
 const IP_STR_DESCRIPTION = 451;
 const IP_STR_DISABLEDMSG = 452;

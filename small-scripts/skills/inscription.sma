@@ -12,7 +12,7 @@ public __inscription_copy(const socket, const target, const item)
 	if ( socket < 0 || item < 0 )
 	    exit;
 
-	new id = itm_getDualByteProperty(item,IP_ID);
+	new id = itm_getProperty(item,IP_ID);
 
 	if ( id == 3643 || id == 3834 )
 	{
@@ -144,7 +144,7 @@ static __inscription_book(const socket, const book)
 		new item = set_getItem( book_set );
 		//    printf("Item %d ^n",item);
 		if( item!=INVALID ) {
-			new id = itm_getDualByteProperty(item,IP_ID);
+			new id = itm_getProperty(item,IP_ID);
 			book_array[id-7981]=item;
 		}
 	}

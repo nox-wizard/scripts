@@ -165,7 +165,7 @@ public __smoke(const itm, const s)
     new c = getCharFromSocket(s);
     new container = itm_getMultiByteProperty(itm, IP_CONTAINERSERIAL);
 	if (!container) itm_remove(itm);
-	if (container) itm_contDelAmount(container, 1, itm_getDualByteProperty(itm, IP_ID), itm_getDualByteProperty(itm, IP_COLOR));
+	if (container) itm_contDelAmount(container, 1, itm_getProperty(itm, IP_ID), itm_getProperty(itm, IP_COLOR));
     nprintf(s, "You start smoking");
     timer_add(c, 5, 0, funcidx("__smoke_cback"), 0, 5, 0 );
 }

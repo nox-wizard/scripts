@@ -842,11 +842,13 @@ native chr_isOnline(const chr);
 
 
 /*!
-\author Luxor
+\brief Check if character is frozen
+\author Endymion
 \fn chr_isFrozen(const chr)
-\brief
 */
-native chr_isFrozen(const chr);
+public chr_isFrozen(const chr) {
+	return chr_getProperty( chr, CP_FROZEN );
+}
 
 
 /*!
@@ -873,26 +875,6 @@ native chr_stable(const chr, const stablemaster);
 */
 native chr_unStable(const chr);
 
-/*!
-\author ???
-\fn chr_getDualByteProperty(const chr, const property)
-\brief
-*/
-stock chr_getDualByteProperty(const chr, const property)
-{
-	return (chr_getProperty(chr, property, 2) << 8) + chr_getProperty(chr, property, 1);
-}
-
-/*!
-\author ???
-\fn chr_setDualByteProperty(const chr, const property, const value)
-\brief
-*/
-stock chr_setDualByteProperty(const chr, const property, const value)
-{
-	chr_setProperty(chr, property, 2, value>>8);
-	chr_setProperty(chr, property, 1, value&0xFF);
-}
 
 /*!
 \author ???

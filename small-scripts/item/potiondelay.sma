@@ -247,7 +247,7 @@ public itm_potionUse(const item, const socket)
 #endif
 	new thispotion = -1;
 
-	switch(itm_getDualByteProperty(item, IP_ID))
+	switch(itm_getProperty(item, IP_ID))
 	{
 		case 0x0F06	: 	thispotion = 1;
 		case 0x0F07	: 	thispotion = 2;

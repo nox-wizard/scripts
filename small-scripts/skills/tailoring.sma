@@ -128,7 +128,7 @@ public __nxw_sk_tailoring(const s, const itm)
 	new cc = getCharFromSocket(s);
 	new type = INVALID;
 	new skill = chr_getSkill(cc, SK_TAILORING);
-	new color = itm_getDualByteProperty(itm, IP_COLOR);
+	new color = itm_getProperty(itm, IP_COLOR);
 	new scriptid = itm_getProperty( itm, IP_SCRIPTID );
 
 	for( new index = 0; index < ALL_CLOTHS; index++) {

@@ -439,26 +439,6 @@ native itm_nextLocalVar( const item, const previous );
 */
 native itm_getCombatSkill(const itm);
 
-/*!
-\author ???
-\fn itm_getDualByteProperty(const itm, const property)
-\brief
-*/
-stock itm_getDualByteProperty(const itm, const property)
-{
-	return (itm_getProperty(itm, property, 2) << 8) + itm_getProperty(itm, property, 1);
-}
-
-/*!
-\author ???
-\fn itm_setDualByteProperty(const itm, const property, const value)
-\brief
-*/
-stock itm_setDualByteProperty(const itm, const property, const value)
-{
-	itm_setProperty(itm, property, 2, value>>8);
-	itm_setProperty(itm, property, 1, value&0xFF);
-}
 
 /*!
 \author ???
