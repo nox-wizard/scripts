@@ -37,6 +37,7 @@
 #include scripts/symbols/npc/customnpc.xss
 #include scripts/symbols/npc/ntrigrs.xss
 #include scripts/symbols/npc/customnpc.xss
+#include scripts/symbols/npc/customspeech.xss
 
 #include scripts/symbols/menus.xss
 #include scripts/symbols/triggers.xss
