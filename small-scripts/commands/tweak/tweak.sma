@@ -1171,7 +1171,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 					gui_addGump(twkChrMenu,ct_gu+k, 181+(n*20), 0x827);
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
 					gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
-					gui_addCheckbox( twkChrMenu,ct_check+k,180+(n*20),oldpic,newpic,checklev,i);
+					gui_addCheckbox( twkChrMenu,ct_check+k-10,180+(n*20),oldpic,newpic,checklev,i);
 					checklev=0;
 				}
 				case 4: //checkbox
@@ -1486,15 +1486,14 @@ public tweak_char(const chrsource, const target, pagenumber)
 		printf("enter layer gump page");
 				
 		new layer;
-		new r;
+		new r=20;
 		new s;
 		new t;
-		printf("layerpage preset");
+		new u;
 		new itemSet=set_create();
-		printf("layerpage postset");
 		set_addItemWeared(itemSet,target,false,true,true);
+		sprintf(tempChrStr, "");
 		
-		printf("layerpage1");
 		for (set_rewind(itemSet);!set_end(itemSet);)
 		{
 			new item = set_get(itemSet);
@@ -1504,38 +1503,47 @@ public tweak_char(const chrsource, const target, pagenumber)
 			ct_layerprop[layer-1][lt_used] = 1; //this layer is used
 			if ( layer <= 24) //number of layer should only show equipplayer, not bankbox or others
 			{
-				r = 20;
 				if ( layer <= 12 )
 				{
-					s=1;
+					s=0;
 					t=274;
+					u=10;
 				}
 				else
 				{
-					s=11;
+					s=12;
 					t=0;
+					u=50;
 				}
-				gui_addTilePic(twkChrMenu,(layer-s)*r*2,190-t,chr_getProperty(item,IP_ID));
-				sprintf(tempChrStr, "%s", itemName);
 			}
+			gui_addTilePic(twkChrMenu,(layer-s)*(r+2)*2, 170+u,itm_getProperty(item,IP_ID));
+			sprintf(tempChrStr, "%s", itemName);
+			gui_addCheckbox(twkChrMenu,307-t,253+(layer-s)*r, oldpic, newpic, 1, layer);
+			gui_addText(twkChrMenu,330-t,250+(layer-s)*r,0,ct_layerprop[layer-1][lt_name]);
+			gui_addText(twkChrMenu,410-t,250+(layer-s)*r,1310,tempChrStr);
+			sprintf(tempChrStr, "");
 		}
 		set_delete(itemSet);
-		printf("layerpage2");
-		for ( layer=1;layer <= 24;++layer) //now draw lines for unused layer
+		for ( layer=1;layer <= 24;layer++) //now draw lines for unused layer
 		{
 			if ( ct_layerprop[layer-1][lt_used] == 0 )
 			{
 				if ( layer <= 12 )
-					s=1;
+				{
+					s=0;
+					t=274;
+				}
 				else
-					s=11
+				{
+					s=12;
+					t=0;
+				}
 				sprintf(tempChrStr, "Nothing");
+				gui_addText(twkChrMenu,330-t,250+(layer-s)*r,0,ct_layerprop[layer-1][lt_name]);
+				gui_addText(twkChrMenu,410-t,250+(layer-s)*r,1310,tempChrStr);
+				printf(tempChrStr, " ");
 			}
 		}
-		gui_addCheckbox(twkChrMenu,317-t,203+(layer-s)*r, oldpic, newpic, 1, 6+(layer-1));
-		gui_addText(twkChrMenu,340-t,200+(layer-s)*r,0,ct_layerprop[layer-1][lt_name]);
-		gui_addText(twkChrMenu,420-t,200+(layer-s)*r,1310,tempChrStr);
-		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
 	}//pagenumber
 	else if(pagenumber == 6)
 	{
@@ -2039,20 +2047,16 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        	for (set_rewind(itemSet);!set_end(itemSet);)
 		        	{
 		        		new item = set_get(itemSet);
-		        		new itemName[30];
-		        		chr_getProperty(item,IP_STR_NAME,_,itemName);
-		        		new layer= chr_getProperty(item,IP_LAYER);
-		        		if ( layer <= 24)
+		        		new layer= itm_getProperty(item,IP_LAYER);
+		        		if(!gui_getProperty(twkChrMenu,MP_CHECK,layer))
 		        		{
-		        			if(!gui_getProperty(twkChrMenu,MP_CHECK,6+(layer-1)))
-		        			{
-		        				new bp = chr_getBackpack(target, true);
-		        				itm_setContSerial(item, bp);
-		        				itm_refresh(item);
-		        			}
+		        			new bp = chr_getBackpack(target, true);
+		        			itm_setContSerial(item, bp);
+		        			itm_refresh(item);
 		        		}
+		        		
 		        	}
-		        	set_delete( itemSet );
+		        	set_delete(itemSet);
 		        }//pagenumber
 		        chr_update(target);
 		//gui_delete( twkChrMenu );
