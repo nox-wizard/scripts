@@ -1,0 +1,207 @@
+[01541]
+MAPPING $item_body_sash
+
+[I_SASH]
+MAPPING $item_body_sash
+
+[01540]
+MAPPING $item_bandana
+
+[0152E]
+MAPPING $item_short_pants
+
+[I_PANTS_SHORT]
+MAPPING $item_short_pants
+
+[02043]
+MAPPING $item_blackthorne_robe
+
+[I_PERSON_BLACK_THORNE]
+MAPPING $item_blackthorne_robe
+
+[02042]
+MAPPING $item_lord_british_armor
+
+[I_PERSON_LORD_BRITISH]
+MAPPING $item_lord_british_armor
+
+[01EFD]
+MAPPING $item_fancy_shirt
+
+[I_SHIRT_FANCY]
+MAPPING $item_fancy_shirt
+
+[01EFF]
+MAPPING $item_fancy_dress
+
+[I_DRESS_FULL]
+MAPPING $item_fancy_dress
+
+[0171B]
+MAPPING $item_tricorne_hat
+
+[I_HAT_TRICORNE]
+MAPPING $item_tricorne_hat
+
+[0171C]
+MAPPING $item_jester_hat
+
+[I_HAT_JESTER]
+MAPPING $item_jester_hat
+
+[0171A]
+MAPPING $item_feathered_hat
+
+[I_HAT_FEATHER]
+MAPPING $item_feathered_hat
+
+[01515]
+MAPPING $item_cloak
+
+[I_CAPE]
+MAPPING $item_cloak
+
+[01516]
+MAPPING $item_skirt
+
+[I_SKIRT_LONG]
+MAPPING $item_skirt
+
+[01517]
+MAPPING $item_shirt
+
+[I_SHIRT_PLAIN]
+MAPPING $item_shirt
+
+[01539]
+MAPPING $item_long_pants
+
+[I_PANTS_LONG]
+MAPPING $item_long_pants
+
+[01FA1]
+MAPPING $item_tunic
+
+[I_TUNIC]
+MAPPING $item_tunic
+
+[01F9F]
+MAPPING $item_jesters_suit
+
+[I_JESTER_SUIT]
+MAPPING $item_jesters_suit
+
+[01537]
+MAPPING $item_kilt
+
+[I_KILT]
+MAPPING $item_kilt
+
+[01F7B]
+MAPPING $item_doublet
+
+[I_DOUBLET]
+MAPPING $item_doublet
+
+[02050]
+MAPPING $item_dupre
+
+[I_DUPRE]
+MAPPING $item_dupre
+
+[01713]
+MAPPING $item_floopy_hat
+
+[I_HAT_FLOPPY]
+MAPPING $item_floopy_hat
+
+[0153D]
+MAPPING $item_full_apron
+
+[I_APRON_FULL]
+MAPPING $item_full_apron
+
+[01711]
+MAPPING $item_thigh_boots_1
+
+[I_BOOTS_THIGH]
+MAPPING $item_thigh_boots_1
+
+[01716]
+MAPPING $item_tall_straw_hat
+
+[I_HAT_STRAW_TALL]
+MAPPING $item_tall_straw_hat
+
+[01717]
+MAPPING $item_straw_hat
+
+[I_HAT_STRAW]
+MAPPING $item_straw_hat
+
+[01714]
+MAPPING $item_wide_brim_hat
+
+[I_HAT_WIDE_BRIM]
+MAPPING $item_wide_brim_hat
+
+[01715]
+MAPPING $item_cap
+
+[I_CAP]
+MAPPING $item_cap
+
+[01718]
+MAPPING $item_wizards_hat
+
+[I_HAT_WIZARDS]
+MAPPING $item_wizards_hat
+
+[01719]
+MAPPING $item_bonnet
+
+[I_BONNET]
+MAPPING $item_bonnet
+
+[0204F]
+MAPPING $item_gm_robe_undyed
+
+[I_ROBE_GM]
+MAPPING $item_gm_robe_undyed
+
+[0204E]
+MAPPING $item_death_shroud
+
+[I_DEATHSHROUD]
+MAPPING $item_death_shroud
+
+[0170D]
+MAPPING $item_red_sandals
+
+[I_SANDALS]
+MAPPING $item_red_sandals
+
+[01F01]
+MAPPING $item_plain_dress
+
+[I_DRESS_PLAIN]
+MAPPING $item_plain_dress
+
+[01F03]
+MAPPING $item_robe1
+
+[I_ROBE]
+MAPPING $item_robe1
+
+[0153B]
+MAPPING $item_half_apron
+
+[I_APRON_HALF]
+MAPPING $item_half_apron
+
+[01FFD]
+MAPPING $item_surcoat
+
+[I_SURCOAT]
+MAPPING $item_surcoat
+

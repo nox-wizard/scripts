@@ -1,0 +1,649 @@
+[03E4E]
+MAPPING $item_tillerman
+
+[i_deed_ship]
+MAPPING $item_deed_small_ship
+
+[i_deed_ship_small_N]
+MAPPING $item_deed_small_ship
+
+[i_deed_ship_small_E]
+MAPPING $item_deed_small_ship
+
+[i_deed_ship_medium_N]
+MAPPING $item_deed_medium_ship
+
+[i_deed_ship_medium_E]
+MAPPING $item_deed_medium_ship
+
+[i_deed_ship_long_N]
+MAPPING $item_deed_large_ship
+
+[i_deed_ship_long_E]
+MAPPING $item_deed_large_ship
+
+[i_deed_ship_dragon_small_N]
+MAPPING $item_deed_small_dragon_ship
+
+[i_deed_ship_dragon_small_E]
+MAPPING $item_deed_small_dragon_ship
+
+[i_deed_ship_dragon_medium_N]
+MAPPING $item_deed_medium_dragon_ship
+
+[i_deed_ship_dragon_medium_E]
+MAPPING $item_deed_medium_dragon_ship
+
+[i_deed_ship_dragon_long_N]
+MAPPING $item_deed_large_dragon_ship
+
+[i_deed_ship_dragon_long_E]
+MAPPING $item_deed_large_dragon_ship
+
+[03e4a]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+
+[03e4b]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+
+[03e4c]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+
+[03e4d]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+
+[03e4e]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+
+[03e4f]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+
+[03e50]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+
+[03e51]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+
+[03e52]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+
+[03e53]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+
+[03e54]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+
+[03e55]
+I;;NAME;a tiller man
+I;;ID;15950
+I;;NAME2;#
+I;;ATT;5
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+
+[i_ship_hatch_e]
+I;;ID;16046
+I;;NAME2;#
+I;;TYPE;1
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 1, self.getAttr("X"), self.getAttr("Y"), 1)]
+I;;ATT;5
+
+[03eb1]
+I;;NAME;#
+I;;ID;16049
+I;;NAME2;#
+I;;TYPE;117
+I;;TYPE2;3
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 1, self.getAttr("X"), self.getAttr("Y"), 1)]
+I;;ATT;5
+
+# ship side horizontal south side
+[03eb2]
+I;;NAME;#
+I;;ID;16051
+I;;NAME2;#
+I;;TYPE;117
+I;;TYPE2;3
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 3, self.getAttr("X"), self.getAttr("Y"), 1)]
+I;;ATT;5
+
+[03ed4]
+I;;NAME;#
+I;;ID;16050
+I;;NAME2;#
+I;;TYPE;117
+I;;TYPE2;3
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 3, self.getAttr("X"), self.getAttr("Y"), 1)]
+I;;ATT;5
+
+# ship side horizontal north side
+[03ed5]
+I;;NAME;#
+I;;ID;16052
+I;;NAME2;#
+I;;TYPE;117
+I;;TYPE2;3
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 2, self.getAttr("X"), self.getAttr("Y"), 1)]
+I;;ATT;5
+
+[i_ship_plank_n_c]
+I;;ID;16050
+I;;NAME2;#
+I;;TYPE;117
+I;;TYPE2;3
+C;LINK;MORE;=glob.serialIndex[ setShipPart(value, self.getAttr("SERIAL"), 2, self.getAttr("X"), self.getAttr("Y"), 1)]
+I;;ATT;5
+
+[i_multi_ship_dragon_long_n]
+I;;NAME;a mast
+I;;ID;16404
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;337051648
+#MORE2 1074040122
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 1)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 1)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+
+[i_multi_ship_dragon_long_e]
+I;;NAME;a mast
+I;;ID;16405
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;337051648
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 2)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 2)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;2
+
+[i_multi_ship_dragon_long_s]
+I;;NAME;a mast
+I;;ID;16406
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;337051648
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 3)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 3)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;4
+
+[i_multi_ship_dragon_long_w]
+I;;NAME;a mast
+I;;ID;16407
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;337051648
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 4)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 4)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;6
+
+
+[i_multi_ship_dragon_medium_n]
+I;;NAME;a mast
+I;;ID;16396
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;202309632
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 1)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 1)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+
+[i_multi_ship_dragon_medium_e]
+I;;NAME;a mast
+I;;ID;16397
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;202309632
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 2)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 2)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;2
+
+[i_multi_ship_dragon_medium_s]
+I;;NAME;a mast
+I;;ID;16398
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;202309632
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 3)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 3)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;4
+
+[i_multi_ship_dragon_medium_w]
+I;;NAME;a mast
+I;;ID;16399
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;202309632
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 4)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 4)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;6
+
+[i_multi_ship_dragon_small_n]
+I;;NAME;a mast
+I;;ID;16388
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;67567616
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 1)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 1)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+
+[i_multi_ship_dragon_small_e]
+I;;NAME;a mast
+I;;ID;16389
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;67567616
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 2)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 2)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;2
+
+[i_multi_ship_dragon_small_s]
+I;;NAME;a mast
+I;;ID;16390
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;67567616
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 3)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 3)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;4
+
+[i_multi_ship_dragon_small_w]
+I;;NAME;a mast
+I;;ID;16391
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;67567616
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 4)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 4)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;6
+
+[i_multi_ship_long_n]
+I;;NAME;a mast
+I;;ID;16400
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;269680640
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 1)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 1)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+
+[i_multi_ship_long_e]
+I;;NAME;a mast
+I;;ID;16401
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;269680640
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 2)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 2)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;2
+
+[i_multi_ship_long_s]
+I;;NAME;a mast
+I;;ID;16402
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;269680640
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 3)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 3)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;4
+
+[i_multi_ship_long_w]
+I;;NAME;a mast
+I;;ID;16403
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;269680640
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 4)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 4)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;6
+
+[i_multi_ship_medium_n]
+I;;NAME;a mast
+I;;ID;16392
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;134938624
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 1)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 1)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+
+[i_multi_ship_medium_e]
+I;;NAME;a mast
+I;;ID;16393
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;134938624
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 2)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 2)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;2
+
+[i_multi_ship_medium_s]
+I;;NAME;a mast
+I;;ID;16394
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;134938624
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 3)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 3)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;4
+
+[i_multi_ship_medium_w]
+I;;NAME;a mast
+I;;ID;16395
+I;;NAME2;#
+I;;TYPE;117
+I;;MORE;134938624
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 4)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 4)]
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;DIR;6
+
+[i_multi_ship_small_n]
+I;;NAME;a mast
+I;;ID;16384
+I;;TYPE;117
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;MORE;196608
+I;;MOREX;
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 1)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 1)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 1)]
+
+[i_multi_ship_small_e]
+I;;NAME;a mast
+I;;ID;16385
+I;;TYPE;117
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;MORE;196608
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 2)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 2)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 2)]
+I;;DIR;2
+
+[i_multi_ship_small_s]
+I;;NAME;a mast
+I;;ID;16386
+I;;TYPE;117
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;MORE;196608
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 3)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 3)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 3)]
+I;;DIR;4
+
+[i_multi_ship_small_w]
+I;;NAME;a mast
+I;;ID;16387
+I;;TYPE;117
+C;MORE1;OWNER;=glob.serialIndex[value]
+C;MORE1;ST;=generateHouseKey(value, self.serial)
+C;MORE1;ST2;=generateHouseKey(value, self.serial)
+I;;ATT;5
+I;;MORE;196608
+# Tiller man
+I;;MORE2;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 0, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Left plank
+I;;MOREX;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 2, self.getAttr("X"), self.getAttr("Y"), 4)]
+# Right plank
+I;;MOREY;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 3, self.getAttr("X"), self.getAttr("Y"), 4)]
+#Hatch
+I;;MOREZ;=glob.serialIndex[ setShipPart( self.getAttr("SERIAL"), None, 1, self.getAttr("X"), self.getAttr("Y"), 4)]
+I;;DIR;6
