@@ -7,73 +7,6 @@
 // || Compatible with Unicorn Categorization                              ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-SECTION ITEM $item_guildstone
-{
-    NAME a guildstone
-    ID 0ED5
-    VALUE 500000
-    MOVEABLE 0
-    @ONCLICK guild_sclickStone
-    @ONDBLCLICK guild_dclickStone
-
-    ///CATEGORY Deeds
-    ///SUBSECTION Miscellaneous
-}
-
-SECTION ITEM $item_guildstone_deed
-{
-    NAME a guildstone deed
-    ID 14F0
-    VALUE 35000
-    @ONDBLCLICK guild_dclickDeed
-
-    ///CATEGORY Deeds
-    ///SUBSECTION Miscellaneous
-}
-
-SECTION ITEM $item_treasure_deed
-{
-    NAME treasure deed
-    ID 14F0
-    DECAY
-    MOREX 200
-    
-    ///CATEGORY Deeds
-    ///SUBSECTION Multis Deeds
-}
-
-SECTION ITEM $item_treasure_deed_1
-{
-    NAME treasure deed
-    ID 14F0
-    DECAY
-    MOREX 201
-    
-    ///CATEGORY Deeds
-    ///SUBSECTION Multis Deeds
-}
-
-SECTION ITEM $item_treasure_deed_2
-{
-    NAME treasure deed
-    ID 14F0
-    DECAY
-    MOREX 202
-    
-    ///CATEGORY Deeds
-    ///SUBSECTION Multis Deeds
-}
-
-SECTION ITEM $item_treasure_deed_3
-{
-    NAME treasure deed
-    ID 14F0
-    DECAY
-    MOREX 203
-    
-    ///CATEGORY Deeds
-    ///SUBSECTION Multis Deeds
-}
 
 SECTION ITEM $item_lighthouse_deed
 {
@@ -227,15 +160,6 @@ SECTION ITEM $item_employment_deed
     ///SUBSECTION Miscellaneous
 }
 
-SECTION ITEM $item_christmas_tree
-{
-    NAME christmas tree
-    ID 0CD7
-
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
-}
-
 SECTION ITEM $item_christmas_tree_deed
 {
     NAME christmas tree deed
@@ -260,18 +184,6 @@ SECTION ITEM $item_dartboard_deed
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_dartboard
-{
-    NAME dartboard
-    ID 1e2f
-    TYPE $itype_trash
-    VALUE 50
-    WEIGHT 200
-
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
-}
-
 SECTION ITEM $item_dartboard_deed_1
 {
     NAME Dartboard Deed
@@ -283,49 +195,12 @@ SECTION ITEM $item_dartboard_deed_1
     ///SUBSECTION Objects Deeds
 }
 
-SECTION ITEM $item_dartboard_1
-{
-    NAME dartboard
-    ID 1e2e
-    TYPE $itype_trash
-    VALUE 50
-    WEIGHT 200
-
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
-}
-
 SECTION ITEM $item_trashcan_deed
 {
     NAME Trashcan Deed
     ID 14f0
     TRIGGER $itrg_trashcan_deed
     TRIGTYPE 0
-
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
-}
-
-SECTION ITEM $item_trashcan
-{
-    NAME trashcan
-    ID 0e77
-    COLOR 0515
-    TYPE $itype_trash
-    VALUE 50
-    WEIGHT 200
-
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
-}
-
-SECTION ITEM $item_townstone
-{
-    NAME Townstone
-    ID 0edt
-    TYPE 35
-    MOREY 0
-    MOREZ 5
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -667,28 +542,6 @@ SECTION ITEM $item_a_cannon_deed
     NAME a cannon deed
     ID 14ED
     VALUE 3000
-    
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
-}
-
-SECTION ITEM $item_a_bed_facing_south_deed
-{
-    NAME a bed facing south deed
-    ID 14F0
-    NEWBIE
-    MOREX 33
-    
-    ///CATEGORY Deeds
-    ///SUBSECTION Objects Deeds
-}
-
-SECTION ITEM $item_a_bed_facing_east_deed
-{
-    NAME a bed facing east deed
-    ID 14F0
-    NEWBIE
-    MOREX 34
     
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds

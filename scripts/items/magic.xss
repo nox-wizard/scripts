@@ -591,7 +591,7 @@ SECTION ITEM $item_a_heal_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_magic_arrow_scroll
+SECTION ITEM $item_magic_arrow_scroll
 {
     NAME a magic arrow scroll
     ID 1F32
@@ -679,7 +679,7 @@ SECTION ITEM $item_a_harm_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_magic_trap_scroll
+SECTION ITEM $item_magic_trap_scroll
 {
     NAME a magic trap scroll
     ID 1F39
@@ -690,7 +690,7 @@ SECTION ITEM $item_a_magic_trap_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_magic_untrap_scroll
+SECTION ITEM $item_magic_untrap_scroll
 {
     NAME a magic untrap scroll
     ID 1F3A
@@ -745,7 +745,7 @@ SECTION ITEM $item_a_fireball_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_magic_lock_scroll
+SECTION ITEM $item_magic_lock_scroll
 {
     NAME a magic lock scroll
     ID 1F3F
@@ -932,7 +932,7 @@ SECTION ITEM $item_an_incognito_scroll
     ///SUBSECTION Scrolls
 }
 
-SECTION ITEM $item_a_magic_reflection_scroll
+SECTION ITEM $item_magic_reflection_scroll
 {
     NAME a magic reflection scroll
     ID 1F50

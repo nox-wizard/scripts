@@ -14,120 +14,144 @@ SECTION ITEM $item_a_teleport_rune
     TYPE $itype_teleportrune
 }
 
-//Heater
-SECTION ITEM $item_heater
-{
-    NAME heater
-    ID 1B76
-    DEF 7
-    HP 30
-    STR 30
-    LAYER $layer_2hand_weapon
-    ITEMHAND 3
-    DECAY
-    VALUE 154
-    WEIGHT 900
-}
-
 SECTION ITEM $item_stone_of_humility
 {
     NAME stone of humility
     ID 1869
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
 }
 
 SECTION ITEM $item_stone_of_honesty
 {
     NAME stone of honesty
     ID 186A
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
 }
 
 SECTION ITEM $item_stone_of_justice
 {
     NAME stone of justice
     ID 186B
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
 }
 
 SECTION ITEM $item_stone_of_sacrifice
 {
     NAME stone of sacrifice
     ID 186C
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
 }
 
 SECTION ITEM $item_stone_of_honor
 {
     NAME stone of honor
     ID 186D
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
 }
 
 SECTION ITEM $item_stone_of_valor
 {
     NAME stone of valor
     ID 186E
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
 }
 
 SECTION ITEM $item_stone_of_spirituality
 {
     NAME stone of spirituality
     ID 186F
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
 }
 
 SECTION ITEM $item_stone_of_compassion
 {
     NAME stone of compassion
     ID 1870
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
 }
 
-SECTION ITEM $item_bell_of_courage
+SECTION ITEM $item_backpack
 {
-    NAME bell of courage
-    ID 1C12
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
+    NAME backpack
+    ID 0E75
+    TYPE $itype_container
+    LAYER $layer_backpack
+    DYE 1
+    VALUE 30
+    WEIGHT 100
 }
 
-SECTION ITEM $item_book_of_truth
+SECTION ITEM $item_leather_bag
 {
-    NAME book of truth
-    ID 1C13
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
+    NAME leather bag
+    ID 0E76
+    TYPE $itype_container
+    DYE 1
+    VALUE 25
+    WEIGHT 100
 }
 
-SECTION ITEM $item_candle_of_love
+SECTION ITEM $item_pouch
 {
-    NAME candle of love
-    ID 1C14
+    NAME pouch
+    ID 0E79
+    TYPE $itype_container
+    DYE 1
+    VALUE 30
+    WEIGHT 100
+}
+
+SECTION ITEM $item_silver_chest
+{
+    NAME silver chest
+    SMELT 2
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 300
+    MOVABLE 1
+}
+
+SECTION ITEM $item_wooden_box
+{
+    NAME wooden box
+    ID 0E7D
+    TYPE $itype_container
+    VALUE 55
+    WEIGHT 100
+    MOVABLE 1
+}
+
+SECTION ITEM $item_wooden_box_1
+{
+    NAME wooden box
+    ID 09aa
+    TYPE $itype_container
+    VALUE 55
+    WEIGHT 100
+    MOVABLE 1
+}
+
+SECTION ITEM $item_small_wooden_crate
+{
+    NAME small wooden crate
+    ID 0E7E
+    TYPE $itype_container
+    VALUE 45
+    WEIGHT 100
+    MOVABLE 1
+}
+
+SECTION ITEM $item_small_wooden_crate_1
+{
+    NAME small wooden crate
+    ID 09a9
+    TYPE $itype_container
+    VALUE 45
+    WEIGHT 100
+    MOVABLE 1
+}
+
+SECTION ITEM $item_brass_box
+{
+    NAME brass box
+    ID 0E80
+    TYPE $itype_container
     VALUE 50
-    DECAY
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Quest Items
+    WEIGHT 100
+    MOVABLE 1
 }
 
 SECTION ITEM $item_gold_key
@@ -138,9 +162,6 @@ SECTION ITEM $item_gold_key
     DECAY
     VALUE 15
     WEIGHT 2
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Keys
 }
 
 SECTION ITEM $item_iron_key
@@ -151,9 +172,6 @@ SECTION ITEM $item_iron_key
     DECAY
     VALUE 10
     WEIGHT 2
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Keys
 }
 
 SECTION ITEM $item_magic_key
@@ -163,9 +181,6 @@ SECTION ITEM $item_magic_key
     TYPE $itype_key
     VALUE 35
     WEIGHT 2
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Keys
 }
 
 SECTION ITEM $item_bronze_key
@@ -176,9 +191,6 @@ SECTION ITEM $item_bronze_key
     DECAY
     VALUE 10
     WEIGHT 2
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION Keys
 }
 
 // a map
@@ -204,7 +216,6 @@ SECTION ITEM $item_all_circle_scrolls_list
 {
     //$$ all circle scrolls list
     ITEMLIST $itemlist_all_scrolls
-    ///NOTLIST
 }
 
 //Varios Weapons and Armor
@@ -212,7 +223,6 @@ SECTION ITEM $item_various_weapons_and_armors_list
 {
     //$$ various weapons and armors list
     ITEMLIST $itemlist_various_weapons_and_armor
-    ///NOTLIST
 }
 
 //More Weapons and Armor
@@ -220,7 +230,6 @@ SECTION ITEM $item_more_weapons_and_armors_list
 {
     //$$ more weapons and armors list
     ITEMLIST $itemlist_more_weapons_and_armor
-    ///NOTLIST
 }
 
 SECTION ITEM $item_bar_door
@@ -241,12 +250,21 @@ SECTION ITEM $item_bar_door_1
     TYPE $itype_door
 }
 
+SECTION ITEM $item_trashcan
+{
+    NAME trashcan
+    ID 0e77
+    COLOR 0515
+    TYPE $itype_trash
+    VALUE 50
+    WEIGHT 200
+}
+
 // headwear
 SECTION ITEM $item_headwear_list
 {
     //$$ headwear list
     ITEMLIST $itemlist_headwears
-    ///NOTLIST
 }
 
 // weapon
@@ -254,8 +272,8 @@ SECTION ITEM $item_weapons_list
 {
     //$$ weapons list
     ITEMLIST $itemlist_weapons_1
-    ///NOTLIST
 }
+
 
 // Weak Henchman
 SECTION ITEM $item_weak_henchman
@@ -303,15 +321,15 @@ SECTION ITEM $item_an_efreeti_bottle
     TRIGGER $itrg_efreeti
 }
 
-SECTION ITEM $item_bottle_of_pink_champaine
+SECTION ITEM $item_seasons_greetings
 {
-    NAME bottle of pink champaine
-    ID 09C7
-    COLOR 04B1
-    TYPE $itype_drink
+    NAME Seasons Greetings
+    ID 14F0
+    TRIGTYPE 0
+    TRIGGER $itrg_happy_holidays
+    NEWBIE
+    COLOR 0027
     DECAY
-    VALUE 0
-    GOOD 3
 }
 
 SECTION ITEM $item_a_fishing_pole
@@ -321,6 +339,7 @@ SECTION ITEM $item_a_fishing_pole
     ID 0DBF
     DECAY
     VALUE 14
+    @ONDBLCLICK __nxw_sk_fishing
 }
 
 SECTION ITEM $item_black_smith
@@ -380,26 +399,24 @@ SECTION ITEM $item_gem_of_immortality
     COLOR 03B7
 }
 
-SECTION ITEM $item_stool
-{
-    ID 0A2A
-    VALUE 20
-    MOVABLE 1
-}
-
-SECTION ITEM $item_stool_1
-{
-    ID 0A2B
-    VALUE 20
-    MOVABLE 1
-}
-
 SECTION ITEM $item_gold_coin
 {
     ID 0EED
     PILE 1
     AMOUNT 1
     DECAY
+}
+
+SECTION ITEM $item_dispel-wall-spawner
+{
+    NAME dispel-wall-spawner
+    ID 1820
+    COLOR 008A
+    TYPE $itype_item_spawner
+    MOREX 2002
+    MOREY 2
+    MOREZ 2
+    VISIBLE 3
 }
 
 SECTION ITEM $item_a_stone_wall
@@ -409,6 +426,16 @@ SECTION ITEM $item_a_stone_wall
     DISPELLABLE 1
 }
 
+SECTION ITEM $item_metal_chest
+{
+    NAME metal chest
+    ID 0E40
+    TYPE $itype_container
+    VALUE 45
+    WEIGHT 300
+    MOVABLE 1
+}
+
 SECTION ITEM $item_empty_vials
 { a empty vial
     ID 0E24
@@ -416,30 +443,35 @@ SECTION ITEM $item_empty_vials
     DECAY
     VALUE 5
 }
+
 SECTION ITEM $item_bottle
 {
     NAME bottle
     ID 0E25
     DECAY
 }
+
 SECTION ITEM $item_bottle_1
 {
     NAME bottle
     ID 0E26
     DECAY
 }
+
 SECTION ITEM $item_bottle_2
 {
     NAME bottle
     ID 0E27
     DECAY
 }
+
 SECTION ITEM $item_bottle_3
 {
     NAME bottle
     ID 0E28
     DECAY
 }
+
 SECTION ITEM $item_bottle_4
 {
     NAME bottle
@@ -513,142 +545,8 @@ SECTION ITEM $item_a_master_shard_key
     NAME a master shard key
     ID 1012
     TYPE $itype_key
-//MORE FF FF FF FF
+#MORE FF FF FF FF
     MORE -1
-}
-
-SECTION ITEM $item_armoire
-{armorie,cherry
-    ID 0A4D
-    TYPE $itype_container
-    
-    VALUE 140
-    WEIGHT 600
-    MOVABLE 1
-}
-
-//armorie,cherry facing south
-SECTION ITEM $item_armorie
-{
-    NAME armorie
-    ID 0A51
-    TYPE $itype_container
-    DECAY
-    VALUE 140
-    WEIGHT 600
-    MOVABLE 1
-}
-
-SECTION ITEM $item_armoire_1
-{Armorie,Brown
-    ID 0A4F
-    TYPE $itype_container
-    
-    VALUE 140
-    WEIGHT 600
-    MOVABLE 1
-}
-
-
-SECTION ITEM $item_armoire_2
-{Armorie,Brown
-    ID 0A53
-    TYPE $itype_container
-    
-    VALUE 140
-    WEIGHT 600
-    MOVABLE 1
-}
-
-//writing desk facing west
-SECTION ITEM $item_writing_desk
-{
-    NAME writing desk
-    ID 0B49
-    VALUE 60
-    
-    MOVABLE 1
-    WEIGHT 200
-}
-
-SECTION ITEM $item_table
-{
-    NAME table
-    ID 0B34
-    VALUE 50
-    
-    MOVABLE 1
-}
-
-SECTION ITEM $item_table_1
-{
-    NAME table
-    ID 0B8F
-    VALUE 80
-    
-    MOVABLE 1
-    WEIGHT 400
-}
-
-//large table facing south (yew)
-SECTION ITEM $item_table_2
-{
-    NAME table
-    ID 0B90
-    VALUE 120
-    
-    MOVABLE 1
-    WEIGHT 500
-}
-
-SECTION ITEM $item_lamp_post
-{
-    ID 0B20
-    DIR 1
-    NAME A lit lamppost
-}
-
-SECTION ITEM $item_an_unlit_lamppost
-{
-    NAME An unlit lamppost
-    ID 0B21
-}
-
-SECTION ITEM $item_lamp_post_1
-{
-    ID 0B22
-    DIR 1
-    NAME A lit lamp post
-    TRIGGER $itrg_light_lamp_post_2
-}
-
-SECTION ITEM $item_lamp_post_2
-{
-    ID 0B23
-}
-
-SECTION ITEM $item_lamp_post_3
-{
-    ID 0B24
-    
-    TRIGGER $itrg_light_lamp_post_1
-}
-
-SECTION ITEM $item_lamp_post_4
-{
-    ID 0B25
-}
-
-SECTION ITEM $item_wall_torch
-{
-    ID 0A08
-    TRIGGER $itrg_light_n-s_torch
-}
-
-SECTION ITEM $item_wall_torch_1
-{
-    ID 0A0E
-    TRIGGER $itrg_light_e-w_torch
 }
 
 SECTION ITEM $item_wooden_wall
@@ -1262,26 +1160,6 @@ SECTION ITEM $item_silver_coin
     DECAY
 }
 
-SECTION ITEM $item_silver_coin_1
-{
-    NAME silver coin
-    ID 0EED
-    COLOR 02B8
-    PILE 1
-    AMOUNT 3
-    DECAY
-}
-
-SECTION ITEM $item_silver_coin_2
-{
-    NAME silver coin
-    ID 0EED
-    COLOR 02B8
-    PILE 1
-    AMOUNT 6
-    DECAY
-}
-
 SECTION ITEM $item_copper_coin
 {
     NAME copper coin
@@ -1289,26 +1167,6 @@ SECTION ITEM $item_copper_coin
     COLOR 002F
     PILE 1
     AMOUNT 1
-    DECAY
-}
-
-SECTION ITEM $item_copper_coin_1
-{
-    NAME copper coin
-    ID 0EED
-    COLOR 002F
-    PILE 1
-    AMOUNT 3
-    DECAY
-}
-
-SECTION ITEM $item_copper_coin_2
-{
-    NAME copper coin
-    ID 0EED
-    COLOR 002F
-    PILE 1
-    AMOUNT 6
     DECAY
 }
 
@@ -1599,6 +1457,16 @@ SECTION ITEM $item_diamonds_4
     VALUE 145
 }
 
+
+SECTION ITEM $item_townstone
+{ Townstone
+    NAME Townstone
+    ID 0edt
+    TYPE 35
+    MOREY 0
+    MOREZ 5
+}
+
 SECTION ITEM $item_brick_arch_5
 {
     ID 0045
@@ -1612,30 +1480,6 @@ SECTION ITEM $item_orchish_skin
     COLOR 021a
     VALUE 18
     AMOUNT 5
-    WEIGHT 250
-    GOOD 33
-}
-
-SECTION ITEM $item_orchish_skin_1
-{
-    NAME orchish skin
-    ID 11FA
-    DECAY
-    COLOR 021a
-    VALUE 18
-    AMOUNT 3
-    WEIGHT 250
-    GOOD 33
-}
-
-SECTION ITEM $item_orchish_skin_2
-{
-    NAME orchish skin
-    ID 11FA
-    DECAY
-    COLOR 021a
-    VALUE 18
-    AMOUNT 4
     WEIGHT 250
     GOOD 33
 }
@@ -1654,78 +1498,24 @@ SECTION ITEM $item_dragon_scale
     GOOD 33
 }
 
-SECTION ITEM $item_dragon_scale_1
-{
-    NAME dragon scale
-    ID 1079
-    COLOR 02FC
-    DECAY
-    PILE 1
-    VALUE 2000
-    AMOUNT 80
-    WEIGHT 1000
-    GOOD 33
-}
-
 SECTION ITEM $item_pots_of_wax
 { pot of wax
     ID 142a
     VALUE 30
 }
+
 SECTION ITEM $item_dipping_stick
 { dipping stick
     ID 1428
     VALUE 20
 }
 
-SECTION ITEM $item_candle_1
-{ candle
-    ID 1433
-    DECAY
-    VALUE 35
-    TRIGGER $itrg_new_candle
-}
-
-SECTION ITEM $item_candle_2
+SECTION ITEM $item_metal_box
 {
-    ID 0a26
-}
-SECTION ITEM $item_candlabra
-{
-    ID 0a27
-}
-
-//a tall candalabra
-SECTION ITEM $item_candalabra
-{
-    NAME candalabra
-    ID 0a29
-    VALUE 40
-    DECAY
-    TRIGGER $itrg_unlight_floor_candelabra
-    WEIGHT 200
-}
-SECTION ITEM $item_kettle
-{
-    NAME kettle
-    ID 09ed
-    DECAY
-    VALUE 10
-    WEIGHT 200
-}
-SECTION ITEM $item_frying_pan
-{
-    NAME frying pan
-    ID 09e2
-    DECAY
-    VALUE 10
-    WEIGHT 100
-}
-SECTION ITEM $item_pan
-{
-    NAME pan
-    ID 09f3
-    DECAY
+    NAME metal box
+    ID 09a8
+    TYPE $itype_container
+    
     VALUE 10
     WEIGHT 100
 }
@@ -1734,10 +1524,12 @@ SECTION ITEM $item_wall_sconce
 {
     ID 09fc
 }
+
 SECTION ITEM $item_torch_holder
 {
     ID 0a06
 }
+
 SECTION ITEM $item_knife
 {
     NAME knife
@@ -1746,100 +1538,26 @@ SECTION ITEM $item_knife
     VALUE 10
     WEIGHT 100
 }
+
 SECTION ITEM $item_fire_pit
 { Fire Pit
     ID 0fac
 }
-SECTION ITEM $item_spools_of_thread
-{
-    ID 0fa0
-}
+
 SECTION ITEM $item_rolls_of_string
 {
     ID 1420
 }
-SECTION ITEM $item_fish_head
-{
-    ID 1e1a
-    TRIGGER $itrg_remove_fish_head
-}
 
-SECTION ITEM $item_flax
-{
-    ID 1a99
-    TRIGGER $itrg_collect_flax
-}
-SECTION ITEM $item_flax_1
-{
-    ID 1a9a
-    TRIGGER $itrg_collect_flax
-}
-SECTION ITEM $item_flax_2
-{
-    ID 1a9b
-    TRIGGER $itrg_collect_flax
-}
 SECTION ITEM $item_books
 {
     ID 1e24
 }
+
 SECTION ITEM $item_books_1
 {
     ID 1e25
 }
-
-
-// ball of yarn
-SECTION ITEM $item_balls_of_yarn
-{
-    ID 0E1D
-    DYE 1
-    PILE 1
-    DECAY
-    VALUE 15
-    WEIGHT 100
-}
-
-// ball of yarn
-SECTION ITEM $item_balls_of_yarn_1
-{
-    ID 0E1E
-    DYE 1
-    PILE 1
-    DECAY
-    VALUE 15
-    WEIGHT 100
-}
-
-// ball of yarn
-SECTION ITEM $item_balls_of_yarn_2
-{
-    ID 0E1F
-    DYE 1
-    PILE 1
-    DECAY
-    VALUE 15
-    WEIGHT 100
-}
-
-// cotton
-SECTION ITEM $item_bales_of_cotton
-{
-    ID 0DF9
-    DECAY
-    VALUE 91
-    WEIGHT 100
-}
-
-// unspun wool
-SECTION ITEM $item_piles_of_wool
-{
-    ID 0DF8
-    DECAY
-    VALUE 45
-    WEIGHT 100
-}
-
 
 SECTION ITEM $item_shafts
 {
@@ -1848,39 +1566,8 @@ SECTION ITEM $item_shafts
     AMOUNT 5
     DECAY
 }
-
-SECTION ITEM $item_shafts_1
-{
-    ID 1BD4
-    VALUE 4
-    AMOUNT 10
-    DECAY
-}
-
-SECTION ITEM $item_shafts_2
-{
-    ID 1BD4
-    VALUE 4
-    AMOUNT 20
-    DECAY
-}
-
-SECTION ITEM $item_shafts_3
-{
-    ID 1BD4
-    VALUE 4
-    AMOUNT 50
-    DECAY
-}
 // end vagrant
 
-//spacedog - tinkering
-SECTION ITEM $item_sledge_hammer
-{
-    ID 0FB4
-    VALUE 32
-    DECAY
-}
 SECTION ITEM $item_clock_frames
 {
     ID 104D
@@ -1894,6 +1581,7 @@ SECTION ITEM $item_a_fishing_net
     COLOR 07d3
     DECAY
 }
+
 SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck
 {
     NAME a fishing net recovered from a shipwreck
@@ -1901,6 +1589,7 @@ SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck
     COLOR 0579
     DECAY
 }
+
 SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck_1
 {
     NAME a fishing net recovered from a shipwreck
@@ -1908,6 +1597,7 @@ SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck_1
     COLOR 0579
     DECAY
 }
+
 SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck_2
 {
     NAME a fishing net recovered from a shipwreck
@@ -1915,96 +1605,112 @@ SECTION ITEM $item_a_fishing_net_recovered_from_a_shipwreck_2
     COLOR 07d3
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ed2
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_1
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ed1
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_2
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ed0
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_3
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ecf
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_4
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ece
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_5
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ecd
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_6
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ecc
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_7
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0ecb
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_bones_recoverd_from_a_shipwreck_8
 {
     NAME a pile of bones recoverd from a shipwreck
     ID 0eca
     DECAY
 }
+
 SECTION ITEM $item_a_pile_of_skulls_recoverd_from_a_shipwreck
 {
     NAME a pile of skulls recoverd from a shipwreck
     ID 1ad8
     DECAY
 }
+
 SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE4
     DECAY
 }
+
 SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck_1
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE3
     DECAY
 }
+
 SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck_2
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE2
     DECAY
 }
+
 SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck_3
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE1
     DECAY
 }
+
 SECTION ITEM $item_a_skull_recoverd_from_a_shipwreck_4
 {
     NAME a skull recoverd from a shipwreck
     ID 1AE0
     DECAY
 }
+
 SECTION ITEM $item_shell_recoverd_from_a_shipwreck
 {
     NAME shell recoverd from a shipwreck
@@ -2058,6 +1764,7 @@ SECTION ITEM $item_shell_recoverd_from_a_shipwreck_8
     NAME shell recoverd from a shipwreck
     ID 0fcc
 }
+
 SECTION ITEM $item_metal_chest_recoverd_from_a_shipwreck
 {
     NAME metal chest recoverd from a shipwreck
@@ -2110,7 +1817,6 @@ SECTION ITEM $item_potions_list
 {
     //$$ potions list
     ITEMLIST $itemlist_potions
-    //NOTLIST
 }
 
 //regs
@@ -2118,7 +1824,6 @@ SECTION ITEM $item_reagents_list
 {
     //$$ reagents list
     ITEMLIST $itemlist_reagents
-    //NOTLIST
 }
 
 //instruments
@@ -2126,7 +1831,6 @@ SECTION ITEM $item_instruments_list
 {
     //$$ instruments list
     ITEMLIST $itemlist_instruments
-    //NOTLIST
 }
 
 // blacksmith tools
@@ -2134,7 +1838,6 @@ SECTION ITEM $item_blacksmith_tools_list
 {
     //$$ blacksmith tools list
     ITEMLIST $itemlist_blacksmith_tools
-    //NOTLIST
 }
 
 SECTION ITEM $item_clean_bandages
@@ -2152,16 +1855,6 @@ SECTION ITEM $item_weapons_list_1
 {
     //$$ weapons list
     ITEMLIST $itemlist_weapons
-    //NOTLIST
-}
-
-SECTION ITEM $item_shafts_4
-{// arrow shaft
-    ID 1BD4
-    AMOUNT 5
-    VALUE 2
-    WEIGHT 2
-    DECAY
 }
 
 SECTION ITEM $item_feathers
@@ -2187,15 +1880,6 @@ SECTION ITEM $item_first_circle_scrolls_list
 {
     //$$ first circle scrolls list
     ITEMLIST $itemlist_first_circle_scrolls
-    //NOTLIST
-}
-
-// carpentry tool
-SECTION ITEM $item_carpentry_tools_list
-{
-    //$$ carpentry tools list
-    ITEMLIST $itemlist_carpentry_tools
-    //NOTLIST
 }
 
 SECTION ITEM $item_kindling
@@ -2205,24 +1889,6 @@ SECTION ITEM $item_kindling
     WEIGHT 2
 }
 
-SECTION ITEM $item_boards
-{// board
-    ID 1BD7
-    AMOUNT 10
-    VALUE 5
-    WEIGHT 3
-    DECAY
-}
-
-SECTION ITEM $item_logs
-{// log
-    ID 1BE0
-    AMOUNT 5
-    VALUE 5
-    WEIGHT 4
-    DECAY
-}
-
 SECTION ITEM $item_sextant
 {// sextant
     ID 1057
@@ -2230,27 +1896,11 @@ SECTION ITEM $item_sextant
     WEIGHT 2
 }
 
-SECTION ITEM $item_sack_of_flour
-{// sack of flour
-    ID 1039
-    VALUE 20
-    WEIGHT 3
-}
-
-SECTION ITEM $item_cuts_of_raw_ribs
-{// raw ribs
-    ID 09F1
-    VALUE 15
-    WEIGHT 3
-    DECAY
-}
-
 // TINKERPARTS
 SECTION ITEM $item_tinker_parts_list
 {
     //$$ tinker parts list
     ITEMLIST $itemlist_tinker_parts
-    ///NOTLIST
 }
 
 SECTION ITEM $item_book
@@ -2293,394 +1943,117 @@ SECTION ITEM $item_lantern
     WEIGHT 100
 }
 
-//writing desk facing north
-SECTION ITEM $item_writing_desk_1
+SECTION ITEM $item_virtue
 {
-    NAME writing desk
-    ID 0B4a
-    VALUE 60
-    MOVABLE 1
-    WEIGHT 200
+    NAME Virtue
+    ID 0FF1
+    TYPE $itype_book
+    MORE 11
+    VALUE 23
 }
 
-//writing desk facing south
-SECTION ITEM $item_writing_desk_2
+// Regent Spawners
+SECTION ITEM $item_black_pearl_spawner
 {
-    NAME writing desk
-    ID 0B4b
-    VALUE 60
-    MOVABLE 1
-    WEIGHT 200
-}
-
-//writing desk facing - east
-SECTION ITEM $item_writing_desk_3
-{
-    NAME writing desk
-    ID 0B4c
-    VALUE 60
-    MOVABLE 1
-    WEIGHT 200
-}
-
-//chest of drawers facing south
-SECTION ITEM $item_chest_of_drawers
-{
-    NAME chest of drawers
-    ID 0A2C
-    TYPE $itype_container
-    MOVABLE 1
-    
-    WEIGHT 300
-}
-
-//chest of drawers facing east
-SECTION ITEM $item_chest_of_drawers_1
-{
-    NAME chest of drawers
-    ID 0A34
-    TYPE $itype_container
-    MOVABLE 1
-    
-    WEIGHT 300
-}
-
-//chest of drawers - cherry facing south
-SECTION ITEM $item_chest_of_drawers_2
-{
-    NAME chest of drawers
-    ID 0A30
-    TYPE $itype_container
-    MOVABLE 1
-    
-    WEIGHT 300
-}
-
-//chest of drawers - cherry facing east
-SECTION ITEM $item_chest_of_drawers_3
-{
-    NAME chest of drawers
-    ID 0A38
-    TYPE $itype_container
-    MOVABLE 1
-    WEIGHT 300
-}
-
-SECTION ITEM $item_a_barrel_lid
-{
-    NAME a barrel lid
-    ID 1db8
-    VALUE 10
-    WEIGHT 100
-}
-
-SECTION ITEM $item_barrel_staves
-{
-    NAME barrel staves
-    ID 1eb2
-    VALUE 10
-    WEIGHT 100
-}
-
-SECTION ITEM $item_bookcase
-{
-    ID 0A97
-    TYPE $itype_container
-}
-
-SECTION ITEM $item_bookcase_1
-{
-    ID 0A98
-    TYPE $itype_container
-}
-
-SECTION ITEM $item_bookcase_2
-{
-    ID 0A99
-    TYPE $itype_container
-}
-
-SECTION ITEM $item_bookcase_3
-{
-    ID 0A9A
-    TYPE $itype_container
-}
-
-SECTION ITEM $item_bookcase_4
-{
-    ID 0A9B
-    TYPE $itype_container
-}
-
-SECTION ITEM $item_bookcase_5
-{
-    ID 0A9C
-    TYPE $itype_container
-}
-
-SECTION ITEM $item_wooden_shelf
-{
-    ID 0A9D
-    TYPE $itype_container
-}
-
-SECTION ITEM $item_wooden_shelf_1
-{
-    ID 0A9E
-    TYPE $itype_container
-}
-
-SECTION ITEM $item_table_3
-{
-    ID 0B37
-}
-
-SECTION ITEM $item_table_4
-{
-    ID 0B35
-}
-
-SECTION ITEM $item_table_5
-{
-    ID 0B38
-}
-
-SECTION ITEM $item_counter
-{
-    ID 0B3F
-}
-
-SECTION ITEM $item_counter_1
-{
-    ID 0B3D
-}
-
-SECTION ITEM $item_writing_table
-{
-    ID 0B4C
-}
-
-SECTION ITEM $item_counter_2
-{
-    ID 0B3E
-}
-
-SECTION ITEM $item_table_6
-{
-    ID 0B6B
-}
-
-SECTION ITEM $item_table_7
-{
-    ID 0B6D
-}
-
-SECTION ITEM $item_table_8
-{
-    ID 0B6C
-}
-
-SECTION ITEM $item_table_9
-{
-    ID 0B7F
-}
-
-SECTION ITEM $item_table_A
-{
-    ID 0B80
-}
-
-SECTION ITEM $item_table_B
-{
-    ID 0B7E
-}
-
-SECTION ITEM $item_table_C
-{
-    ID 0B6E
-}
-
-SECTION ITEM $item_table_D
-{
-    ID 0B6F
-}
-
-SECTION ITEM $item_table_E
-{
-    ID 0B82
-}
-
-SECTION ITEM $item_table_F
-{
-    ID 0B81
-}
-
-SECTION ITEM $item_table_G
-{
-    ID 0B70
-}
-
-SECTION ITEM $item_table_H
-{
-    ID 0B71
-}
-
-SECTION ITEM $item_table_I
-{
-    ID 0B72
-}
-
-SECTION ITEM $item_table_J
-{
-    ID 0B73
-}
-
-SECTION ITEM $item_table_K
-{
-    ID 0B74
-}
-
-SECTION ITEM $item_table_L
-{
-    ID 0B75
-}
-
-SECTION ITEM $item_table_M
-{
-    ID 0B76
-}
-
-SECTION ITEM $item_table_N
-{
-    ID 0B89
-}
-
-SECTION ITEM $item_table_O
-{
-    ID 0B88
-}
-
-SECTION ITEM $item_table_P
-{
-    ID 0B77
-}
-
-SECTION ITEM $item_table_Q
-{
-    ID 0B78
-}
-
-SECTION ITEM $item_table_R
-{
-    ID 0B79
-}
-
-SECTION ITEM $item_table_S
-{
-    ID 0B7A
-}
-
-SECTION ITEM $item_table_T
-{
-    ID 0B7B
-}
-
-SECTION ITEM $item_table_U
-{
-    ID 0B83
-}
-
-SECTION ITEM $item_table_V
-{
-    ID 0B84
-}
-
-SECTION ITEM $item_table_W
-{
-    ID 0B85
-}
-
-SECTION ITEM $item_table_X
-{
-    ID 0B86
-}
-
-SECTION ITEM $item_table_Y
-{
-    ID 0B87
-}
-
-SECTION ITEM $item_table_Z
-{
-    ID 0B8A
-}
-
-SECTION ITEM $item_table_Z1
-{
-    ID 0B8B
-}
-
-SECTION ITEM $item_table_Z2
-{
-    ID 0B8C
-}
-
-SECTION ITEM $item_table_Z3
-{
-    ID 0B8D
-}
-
-SECTION ITEM $item_table_Z4
-{
-    ID 0B8E
-}
-
-// table facing south
-SECTION ITEM $item_table_Z5
-{
-    NAME Table
-    ID 0B7C
-    VALUE 80
-    MOVABLE 1
-    WEIGHT 400
-}
-
-//table large facing east (yew)
-SECTION ITEM $item_table_Z6
-{
-    NAME table
-    ID 0b7d
-    VALUE 120
-    MOVABLE 1
-    WEIGHT 500
-    
-}
-
-SECTION ITEM $item_boards_1
-{// 1 Board
-    ID 1BD7
+    NAME black pearl spawner
+    ID 0f7a
+    TYPE $itype_item_spawner
+    MOREX 428
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
     AMOUNT 1
-    VALUE 5
-    WEIGHT 3
     DECAY
 }
 
-SECTION ITEM $item_boards_2
-{// 5 Boards
-    ID 1BD7
-    AMOUNT 5
-    VALUE 5
-    WEIGHT 3
+SECTION ITEM $item_mandrake_root_spawner
+{
+    NAME mandrake root spawner
+    ID 0F86
+    TYPE $itype_item_spawner
+    MOREX 440
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 1
     DECAY
 }
 
-SECTION ITEM $item_boards_3
-{// 20 Boards
-    ID 1BD7
-    AMOUNT 20
-    VALUE 5
-    WEIGHT 3
+SECTION ITEM $item_bloodmoss_spawner
+{
+    NAME bloodmoss spawner
+    ID 0F7B
+    TYPE $itype_item_spawner
+    MOREX 429
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 1
     DECAY
+}
+
+SECTION ITEM $item_garlic_spawner
+{
+    NAME garlic spawner
+    ID 0F84
+    TYPE $itype_item_spawner
+    MOREX 438
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 1
+    DECAY
+}
+
+SECTION ITEM $item_gensing_spawner
+{
+    NAME gensing spawner
+    ID 0F85
+    TYPE $itype_item_spawner
+    MOREX 439
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 1
+    DECAY
+}
+
+SECTION ITEM $item_nightshade_spawner
+{
+    NAME nightshade spawner
+    ID 0F88
+    TYPE $itype_item_spawner
+    MOREX 442
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 1
+    DECAY
+}
+
+SECTION ITEM $item_spidersilk_spawner
+{
+    NAME spidersilk spawner
+    ID 0F8D
+    TYPE $itype_item_spawner
+    MOREX 447
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 1
+    DECAY
+}
+
+SECTION ITEM $item_sulfuric_ash_spawner
+{
+    NAME sulfuric ash spawner
+    ID 0F8C
+    TYPE $itype_item_spawner
+    MOREX 446
+    MOREY 1
+    MOREZ 5
+    VISIBLE 1
+    AMOUNT 1
 }
 
 SECTION ITEM $item_pet_horse
@@ -2755,107 +2128,6 @@ SECTION ITEM $item_pet_pack_llama
     VALUE 650
 }
 
-// Potted Cactus
-SECTION ITEM $item_potted_cactus
-{
-    NAME potted cactus
-    ID 1E10
-}
-
-// Potted Cactus w/bush
-SECTION ITEM $item_potted_cactus_1
-{
-    NAME potted cactus
-    ID 1E11
-}
-
-// Potted Branched Cactus
-SECTION ITEM $item_potted_cactus_2
-{
-    NAME potted cactus
-    ID 1E12
-}
-
-// Potted Catus w/flowers
-SECTION ITEM $item_potted_cactus_3
-{
-    NAME potted cactus
-    ID 1E0F
-}
-
-//section 8061-8064 Bed facing south
-
-SECTION ITEM $item_bed
-{
-    ID 0a7f
-}
-SECTION ITEM $item_bed_1
-{
-    ID 0a83
-}
-SECTION ITEM $item_bed_2
-{
-    ID 0a7E
-}
-SECTION ITEM $item_bed_3
-{
-    ID 0a82
-}
-
-//section 8065-8068 Bed facing east
-SECTION ITEM $item_bed_4
-{
-    ID 0a7c
-}
-SECTION ITEM $item_bed_5
-{
-    ID 0a7d
-}
-SECTION ITEM $item_bed_6
-{
-    ID 0a78
-}
-SECTION ITEM $item_bed_7
-{
-    ID 0a79
-}
-
-//sections 8071-8073 large forge facing south
-SECTION ITEM $item_bellows_1
-{
-    ID 197a
-}
-SECTION ITEM $item_forge_3
-{
-    ID 197e
-}
-SECTION ITEM $item_forge_4
-{
-    ID 1982
-}
-
-//sections 8074-8076 large forge facing east
-SECTION ITEM $item_bellows_2
-{
-    ID 1986
-}
-SECTION ITEM $item_forge_5
-{
-    ID 198a
-}
-SECTION ITEM $item_forge_6
-{
-    ID 198e
-}
-
-SECTION ITEM $item_pitcher_of_milk_1
-{ pitcher of milk
-    ID 09AD
-    DECAY
-    TRIGTYPE 0
-    TRIGGER
-}
-
 SECTION ITEM $item_wash_basin
 { wash basin with water
     ID 1008
@@ -2900,6 +2172,8 @@ SECTION ITEM $item_slotmachine_5gp_
     WEIGHT 12
     COLOR 386
 }
+
+
 
 SECTION ITEM $item_bolts_of_cloth
 {
@@ -2963,100 +2237,6 @@ SECTION ITEM $item_bolts_of_cloth_7
     NAME bolt of cloth
     DECAY
     VALUE 75
-}
-
-SECTION ITEM $item_sheaf_of_hay
-{sheaf of hay
-    ID 0F36
-    DECAY
-    VALUE 5
-}
-
-SECTION ITEM $item_skull_candle
-{
-    NAME skull candle
-    ID 1854
-    DIR 2
-    VALUE 50
-    ITEMHAND 3
-}
-
-SECTION ITEM $item_campion_flowers
-{
-    NAME campion flowers
-    ID 0C83
-}
-
-SECTION ITEM $item_foxglove_flowers
-{
-    NAME foxglove flowers
-    ID 0C84
-}
-
-SECTION ITEM $item_orfluer_flowers
-{
-    NAME orfluer flowers
-    ID 0C85
-}
-
-SECTION ITEM $item_red_poppies
-{
-    NAME red poppies
-    ID 0C86
-}
-
-SECTION ITEM $item_snow_drops
-{
-    NAME snow drops
-    ID 0C88
-}
-
-SECTION ITEM $item_hedge
-{
-    NAME hedge
-    ID 0C8F
-}
-
-SECTION ITEM $item_blade_plant
-{
-    NAME blade plant
-    ID 0C93
-}
-
-SECTION ITEM $item_large_fern
-{
-    NAME large fern
-    ID 0CA1
-}
-
-SECTION ITEM $item_pampas_grass
-{
-    NAME pampas grass
-    ID 0CA5
-}
-
-SECTION ITEM $item_spider_tree
-{
-    NAME spider tree
-    ID 0CC9
-}
-
-SECTION ITEM $item_juniper_bush
-{
-    NAME juniper bush
-    ID 0CC8
-}
-
-SECTION ITEM $item_weed
-{
-    NAME weed
-    ID 0CC7
-}
-
-SECTION ITEM $item_yucca
-{
-    NAME yucca
-    ID 0D38
 }
 
 SECTION ITEM $item_fencer
@@ -3201,15 +2381,6 @@ SECTION ITEM $item_drake
     MOREX 78
 }
 
-SECTION ITEM $item_iron_ingots_1
-{// 50 INGOTS
-    ID 1BF2
-    COLOR 0961
-    AMOUNT 50
-    VALUE 10
-    WEIGHT 20
-}
-
 SECTION ITEM $item_a_bulletin_board
 {
     NAME a bulletin board
@@ -3314,24 +2485,6 @@ SECTION ITEM $item_assassin_1
     MOREX 10
 }
 
-SECTION ITEM $item_a_goblet
-{
-    NAME a goblet
-    ID 099a
-}
-
-SECTION ITEM $item_a_golden_goblet
-{
-    NAME a golden goblet
-    ID 09B3
-}
-
-SECTION ITEM $item_a_pewter_mug
-{
-    NAME a pewter mug
-    ID 1000
-}
-
 SECTION ITEM $item_a_vase
 {
     NAME a vase
@@ -3385,6 +2538,7 @@ SECTION ITEM $item_a_small_vase
     DECAY
     WEIGHT 100
 }
+
 SECTION ITEM $item_a_small_vase_1
 {
     NAME a small vase
@@ -3393,6 +2547,7 @@ SECTION ITEM $item_a_small_vase_1
     DECAY
     WEIGHT 100
 }
+
 SECTION ITEM $item_a_large_vase
 {
     NAME a large vase
@@ -3401,6 +2556,7 @@ SECTION ITEM $item_a_large_vase
     DECAY
     WEIGHT 200
 }
+
 SECTION ITEM $item_damaged_books
 {
     NAME damaged books
@@ -3424,71 +2580,6 @@ SECTION ITEM $item_a_piwafwi
     SPD 20
 }
 
-SECTION ITEM $item_a_whispering_rose
-{
-    NAME a whispering rose
-    ID 18E9
-    VALUE 25
-    DECAY
-    WEIGHT 100
-}
-SECTION ITEM $item_a_bucket
-{
-    NAME a bucket
-    ID 14e0
-    TYPE $itype_container
-    
-    VALUE 25
-    WEIGHT 100
-}
-SECTION ITEM $item_a_flower_pot
-{
-    NAME a flower pot
-    ID 11c6
-    TYPE $itype_container
-    VALUE 25
-    WEIGHT 100
-}
-SECTION ITEM $item_silverware
-{
-    NAME silverware
-    ID 09d4
-    TYPE $itype_container
-    VALUE 25
-    WEIGHT 100
-}
-SECTION ITEM $item_silverware_1
-{
-    NAME silverware
-    ID 09d5
-    TYPE $itype_container
-    VALUE 25
-    WEIGHT 100
-}
-SECTION ITEM $item_pot
-{
-    NAME pot
-    ID 09e1
-    TYPE $itype_container
-    VALUE 25
-    WEIGHT 100
-}
-SECTION ITEM $item_pot_1
-{
-    NAME pot
-    ID 09e3
-    TYPE $itype_container
-    VALUE 25
-    WEIGHT 100
-}
-SECTION ITEM $item_plate
-{
-    NAME plate
-    ID 09d7
-    TYPE $itype_container
-    VALUE 25
-    WEIGHT 100
-}
 //**************************************************
 //********************* Body Parts *****************
 //**************************************************
@@ -3661,18 +2752,6 @@ SECTION ITEM $item_hide
     PILE 1
 }
 
-SECTION ITEM $item_wall_sconce_1
-{
-    ID 09FF
-    TRIGGER $itrg_light_n-s_candle
-}
-
-SECTION ITEM $item_wall_sconce_2
-{
-    ID 0A00
-    TRIGGER $itrg_light_e-w_candle
-}
-
 SECTION ITEM $item_leather
 {
     NAME leather
@@ -3681,7 +2760,6 @@ SECTION ITEM $item_leather
     VALUE 3
     PILE 1
 }
-
 
 // Random Male Hair
 SECTION ITEM $item_random_male_hair_list
@@ -3926,6 +3004,66 @@ SECTION ITEM $item_a_magical_stone
     TRIGGER $itrg_spawn_reagents
 }
 
+SECTION ITEM $item_treasure_chest_lv1_
+{
+    NAME treasure chest [lv1]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl1
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv4_
+{
+    NAME treasure chest [lv4]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl4
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv2_
+{
+    NAME treasure chest [lv2]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl2
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv3_
+{
+    NAME treasure chest [lv3]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl3
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv5_
+{
+    NAME treasure chest [lv5]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl5
+    MOVABLE 1
+}
+
 SECTION ITEM $item_a_wooden_chest
 { // standard wooden chest spawn container
     NAME a wooden chest
@@ -3935,6 +3073,155 @@ SECTION ITEM $item_a_wooden_chest
     MOREZ 2
     AMOUNT 1
     NODECAY
+}
+
+SECTION ITEM $item_christmas_tree
+{
+    NAME christmas tree
+    ID 0CD7
+}
+
+SECTION ITEM $item_a_christmas_gift_chest
+{ //  wooden chest
+    NAME a Christmas gift chest
+    ID 0E43
+    COLOR 0107
+    TYPE $itype_decaying_item_spawner
+    MOREX 98000
+    MOREY 1
+    MOREZ 2
+    AMOUNT 1
+    NODECAY
+}
+
+SECTION ITEM $item_a_wooden_chest_1
+{ // wood chest spawner -east- (low-level)
+    NAME a wooden chest
+    ID 0E42
+    TYPE $itype_locked_item_spawner
+    MOREX 98001
+    MOREY 1
+    MOREZ 2
+    AMOUNT 3
+    DECAY
+}
+
+SECTION ITEM $item_a_wooden_chest_2
+{ // wood chest spawner -south- (low-level)
+    NAME a wooden chest
+    ID 0E43
+    TYPE $itype_locked_item_spawner
+    MOREX 98001
+    MOREY 1
+    MOREZ 2
+    AMOUNT 3
+    DECAY
+}
+
+SECTION ITEM $item_a_metal_chest
+{ // metal chest spawner -east- (mid-level)
+    NAME a metal chest
+    ID 0E40
+    TYPE $itype_locked_item_spawner
+    MOREX 98002
+    MOREY 1
+    MOREZ 2
+    AMOUNT 3
+    DECAY
+}
+
+SECTION ITEM $item_a_metal_chest_1
+{ // metal chest spawner -south- (mid-level)
+    NAME a metal chest
+    ID 0E41
+    TYPE $itype_locked_item_spawner
+    MOREX 98002
+    MOREY 1
+    MOREZ 2
+    AMOUNT 3
+    DECAY
+}
+
+SECTION ITEM $item_a_metal_chest_2
+{ // metal chest spawner -east- (high-level)
+    NAME a metal chest
+    ID 0E40
+    TYPE $itype_locked_item_spawner
+    MOREX 98003
+    MOREY 1
+    MOREZ 2
+    AMOUNT 2
+    DECAY
+}
+
+SECTION ITEM $item_a_metal_chest_3
+{ // metal chest spawner -south- (high-level)
+    NAME a metal chest
+    ID 0E41
+    TYPE $itype_locked_item_spawner
+    MOREX 98003
+    MOREY 1
+    MOREZ 2
+    AMOUNT 2
+    DECAY
+}
+// list continues
+
+SECTION ITEM $item_a_chest_item_spawner_spawner_-low-
+{
+    NAME a chest item spawner (spawner) -low-
+    ID 1F14
+    TYPE $itype_item_spawner
+    MOREX 15225
+    MOREY 2
+    MOREZ 3
+    AMOUNT 1
+    NODECAY
+    VISIBLE 1
+}
+
+SECTION ITEM $item_a_chest_item_spawner_spawner_-mid-
+{
+    NAME a chest item spawner (spawner) -mid-
+    ID 1F14
+    TYPE $itype_item_spawner
+    MOREX 15226
+    MOREY 2
+    MOREZ 3
+    AMOUNT 1
+    NODECAY
+    VISIBLE 1
+}
+
+SECTION ITEM $item_a_chest_item_spawner_spawner_-high-
+{
+    NAME a chest item spawner (spawner) -high-
+    ID 1F14
+    TYPE $itype_item_spawner
+    MOREX 15227
+    MOREY 2
+    MOREZ 3
+    AMOUNT 1
+    NODECAY
+    VISIBLE 1
+}
+
+SECTION ITEM $item_low_chest_spawner_list
+{
+    //$$ low chest spawner list
+    ITEMLIST $itemlist_low_chest_spawner
+}
+
+SECTION ITEM $item_mid_chest_spawner_list
+{
+    //$$ mid chest spawner list
+    ITEMLIST $itemlist_mid_chest_spawner
+}
+
+SECTION ITEM $item_high_chest_spawner_list
+{
+    //$$ high chest spawner list
+    ITEMLIST $itemlist_high_chest_spawner
 }
 
 SECTION ITEM $item_vials_of_blood
@@ -3950,7 +3237,54 @@ SECTION ITEM $item_treasure_hunt_lootlist
 { Treasure Hunt LOOTLIST
     //$$ treasure hunt lootlist
     ITEMLIST $itemlist_treasure_hunt
-    ///NOTLIST
+}
+
+SECTION ITEM $item_a_treasure_map_lv_4_
+{ Treasure map
+    NAME a treasure map [lv 4]
+    ID 14ec
+    TRIGGER $itrg_treasure_map_lvl4
+}
+
+SECTION ITEM $item_a_treasure_map_lv1_
+{ Treasure map
+    NAME a treasure map [lv1]
+    ID 14ec
+    TRIGGER $itrg_treasure_map_lvl1
+}
+
+SECTION ITEM $item_a_treasure_map_lv2_
+{ Treasure map
+    NAME a treasure map [lv2]
+    ID 14ec
+    TRIGGER $itrg_treasure_map_lvl2
+}
+
+SECTION ITEM $item_a_treasure_map_lv3_
+{ Treasure map
+    NAME a treasure map [lv3]
+    ID 14ec
+    TRIGGER $itrg_treasure_map_lvl3
+}
+
+SECTION ITEM $item_a_treasure_map_lv5_
+{ Treasure map
+    NAME a treasure map [lv5]
+    ID 14ec
+    TRIGGER $itrg_treasure_map_lvl5
+}
+
+SECTION ITEM $item_a_magical_wizard`s_hat
+{
+    NAME a magical wizard`s hat
+    ID 1718
+    LAYER $layer_helm
+    STRADD -5
+    DEXADD -5
+    INTADD 10
+    DYE 1
+    DECAY
+    VALUE 75
 }
 
 SECTION ITEM $item_a_large_leather_pillow
@@ -4284,6 +3618,7 @@ SECTION ITEM $item_oven_1
     ID 0931
     NAME Oven
 }
+
 SECTION ITEM $item_fireplace-east_deed
 { // Brick-east
     NAME fireplace-east deed
@@ -4312,33 +3647,7 @@ SECTION ITEM $item_fireplace_1
     NAME Fireplace
 }
 
-SECTION ITEM $item_bed-east_deed
-{ // Bed-east
-    NAME bed-east deed
-    ID 14F0
-    DECAY
-    MOREX 210
-}
 
-SECTION ITEM $item_bed_8
-{ // bed-east pt2
-    ID 0A62
-    NAME Bed
-}
-
-SECTION ITEM $item_bed-south_deed
-{ // Bed-south
-    NAME Bed-south Deed
-    ID 14F0
-    DECAY
-    MOREX 211
-}
-
-SECTION ITEM $item_bed_9
-{ // bed-south pt2
-    ID 0A5C
-    NAME Bed
-}
 
 //********************mounts for npcs**********************
 SECTION ITEM $item_a_tan_horse
@@ -4347,7 +3656,6 @@ SECTION ITEM $item_a_tan_horse
     ID 3e9f
     LAYER $layer_mount
     NEWBIE
-    ///NOTLIST
 }
 
 SECTION ITEM $item_a_grey_horse
@@ -4356,7 +3664,6 @@ SECTION ITEM $item_a_grey_horse
     ID 3ea0
     LAYER $layer_mount
     NEWBIE
-    ///NOTLIST
 }
 
 SECTION ITEM $item_a_light_brown_horse
@@ -4365,7 +3672,6 @@ SECTION ITEM $item_a_light_brown_horse
     ID 3ea1
     LAYER $layer_mount
     NEWBIE
-    ///NOTLIST
 }
 
 SECTION ITEM $item_a_dark_brown_horse
@@ -4374,7 +3680,6 @@ SECTION ITEM $item_a_dark_brown_horse
     ID 3ea2
     LAYER $layer_mount
     NEWBIE
-    ///NOTLIST
 }
 
 SECTION ITEM $item_a_nightmare
@@ -4384,7 +3689,6 @@ SECTION ITEM $item_a_nightmare
     COLOR 0455
     LAYER $layer_mount
     NEWBIE
-    ///NOTLIST
 }
 
 //********************Lists for monster weapons**********************
@@ -4392,88 +3696,433 @@ SECTION ITEM $item_npc_equiplist_balron_weapon
 {
     //$$ npc equiplist balron weapon
     ITEMLIST $itemlist_npc_equiplist_balron_weapon
-    ///NOTLIST
 }
 
 SECTION ITEM $item_npc_equiplist_deamon_sword
 {
     //$$ npc equiplist deamon sword
     ITEMLIST $itemlist_npc_equiplist_deamon_sword
-    ///NOTLIST
 }
 
 SECTION ITEM $item_npc_equiplist_double_axe
 {
     //$$ npc equiplist double axe
     ITEMLIST $itemlist_npc_equiplist_double_axe
-    ///NOTLIST
 }
 
 SECTION ITEM $item_npc_equiplist_scimitar
 {
     //$$ npc equiplist scimitar
     ITEMLIST $itemlist_npc_equiplist_scimitar
-    ///NOTLIST
 }
 
 SECTION ITEM $item_npc_equiplist_war_hammer
 {
     //$$ npc equiplist war hammer
     ITEMLIST $itemlist_npc_equiplist_war_hammer
-    ///NOTLIST
 }
 
 SECTION ITEM $item_npc_equiplist_bardiches
 {
     //$$ npc equiplist bardiches
     ITEMLIST $itemlist_npc_equiplist_bardiches
-    ///NOTLIST
 }
 
 SECTION ITEM $item_npc_equiplist_longswords
 {
     //$$ npc equiplist longswords
     ITEMLIST $itemlist_npc_equiplist_longswords
-    ///NOTLIST
 }
 
-SECTION ITEM $item_clean_bandages_1
-{ Bandages
-    ID 0E21
-    PILE 1
-    DECAY
-    DYE 1
-    VALUE 6
-    AMOUNT 3
-}
-
-SECTION ITEM $item_gm_ticket
+SECTION ITEM $item_treasure_chest_lv1__1
 {
-    NAME A GM visited you while you were away. Plz Page again.
-    //$$ gm ticket
-    ID 14F0
-    NEWBIE
+    NAME treasure chest [lv1]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
     TRIGTYPE 0
-    TRIGGER $itrg_blesser
-
-    ///CATEGORY Miscellaneous
-    ///SUBSECTION GM Items
-    ///DESCRIPTION GM Ticket
+    TRIGGER $itrg_treasure_spawn_lvl2
+    MOVABLE 1
 }
 
-SECTION ITEM $item_iron_ore
+SECTION ITEM $item_treasure_chest_lv1__2
 {
-    NAME iron ore
-    ID 19b9
-    AMOUNT 5
-    WEIGHT 700
+    NAME treasure chest [lv1]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_spawn_lvl3
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv1__3
+{
+    NAME treasure chest [lv1]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv4__1
+{
+    NAME treasure chest [lv4]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_spawn_lvl4
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv4__2
+{
+    NAME treasure chest [lv4]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_spawn_lvl4_1
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv4__3
+{
+    NAME treasure chest [lv4]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_spawn_lvl4_2
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv4__4
+{
+    NAME treasure chest [lv4]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_spawn_lvl4_3
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv4__5
+{
+    NAME treasure chest [lv4]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_big_treasure
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv2__1
+{
+    NAME treasure chest [lv2]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl2_1
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv2__2
+{
+    NAME treasure chest [lv2]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl2_2
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv2__3
+{
+    NAME treasure chest [lv2]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl2_3
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv3__1
+{
+    NAME treasure chest [lv3]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl3_1
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv3__2
+{
+    NAME treasure chest [lv3]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl3_2
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv3__3
+{
+    NAME treasure chest [lv3]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl3_3
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv5__1
+{
+    NAME treasure chest [lv5]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl5_1
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv5__2
+{
+    NAME treasure chest [lv5]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl5_2
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv5__3
+{
+    NAME treasure chest [lv5]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl5_3
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv5__4
+{
+    NAME treasure chest [lv5]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl5_4
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv5__5
+{
+    NAME treasure chest [lv5]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl5_5
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv5__6
+{
+    NAME treasure chest [lv5]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl5_6
+    MOVABLE 1
+}
+
+SECTION ITEM $item_treasure_chest_lv5__7
+{
+    NAME treasure chest [lv5]
+    ID 0E7C
+    TYPE $itype_container
+    VALUE 60
+    WEIGHT 600
+    TRIGTYPE 0
+    TRIGGER $itrg_treasure_chest_lvl5_7
+    MOVABLE 1
+}
+
+SECTION ITEM $item_noble_escort-m
+{
+    NAME Noble escort-m
+    ID 1397
+    TYPE $itype_escortspawn
+    MORE 514
+    MOREX 219
+    MOREY 5
+    MOREZ 10
+    VISIBLE 1
+}
+
+SECTION ITEM $item_noble_escort-f
+{
+    NAME Noble escort-f
+    ID 1397
+    TYPE $itype_escortspawn
+    MORE 514
+    MOREX 220
+    MOREY 5
+    MOREZ 10
+    VISIBLE 1
+}
+// Practice Weapons for Newbie.scp..Ripper
+// Regs For Newbie.scp
+
+SECTION ITEM $item_pure_red_hairdye
+{
+    NAME pure red hairdye
+    ID 0E27
+    COLOR 0026
+    VALUE 20000
+}
+
+SECTION ITEM $item_pure_black_hairdye
+{
+    NAME pure black hairdye
+    ID 0E27
+    COLOR 0001
+    VALUE 50000
+}
+
+SECTION ITEM $item_bronze_hairdye
+{
+    NAME bronze hairdye
+    ID 0E27
+    COLOR 045D
+    VALUE 2000
+}
+
+SECTION ITEM $item_gold_hairdye
+{
+    NAME gold hairdye
+    ID 0E27
+    COLOR 0465
+    VALUE 20000
+}
+
+SECTION ITEM $item_dark_gold_hairdye
+{
+    NAME dark gold hairdye
+    ID 0E27
+    COLOR 046D
+    VALUE 2000
+}
+
+SECTION ITEM $item_copper_hairdye
+{
+    NAME copper hairdye
+    ID 0E27
+    COLOR 0475
+    VALUE 2000
+}
+
+SECTION ITEM $item_dark_copper_hairdye
+{
+    NAME dark copper hairdye
+    ID 0E27
+    COLOR 047D
+    VALUE 2000
+}
+
+SECTION ITEM $item_dark_blue_hairdye
+{
+    NAME dark blue hairdye
+    ID 0E27
+    COLOR 051D
+    VALUE 2000
+}
+
+SECTION ITEM $item_pure_white_hairdye
+{
+    NAME pure white hairdye
+    ID 0E27
+    COLOR 0481
+    VALUE 50000
+}
+
+SECTION ITEM $item_red_hairdye
+{
+    NAME red hairdye
+    ID 0E27
+    COLOR 0664
+    VALUE 20000
 }
 
 SECTION ITEM $item_christmas_list
 {
     //$$ christmas list
     ITEMLIST $itemlist_christmas
-    ///NOTLIST
+}
+
+//*************************** NOX-WIZARD CUSTOM ITEMS *****************************/
+
+SECTION ITEM $item_a_cristall_ball_of_reputation
+{
+    NAME a Cristall Ball of Reputation
+    ID 0E2D
+    VALUE 1500
+    @ONDBLCLICK __crystBall
+}
+
+SECTION ITEM $item_a_cigar
+{
+    NAME a cigar
+    ID 979
+    VALUE 10
+    @ONDBLCLICK __smoke
+}
+
+
+SECTION ITEM $item_sledge_hammer
+{
+    ID 0FB4
+    VALUE 32
+    DECAY
+    @ONDBLCLICK schmieden
 }
 
 // campfire
@@ -4489,24 +4138,20 @@ SECTION ITEM $item_a_campfire
 SECTION ITEM $item_mount
 {
 	NAME mount
-	///NOTLIST
 }
 
 SECTION ITEM $item_restock
 {
 	ID 2AF8
-	///NOTLIST
 }
 
 SECTION ITEM $item_hardcoded
 {
-	///NOTLIST
 }
 
 SECTION ITEM $item_blood_puddle
 {
     ID 122F
     DECAY
-	///NOTLIST
 }
 

@@ -9,6 +9,7 @@
 
 SECTION ITEM $item_ankh
 {
+    NAME ankh
     ID 0002
 
     ///CATEGORY Decorations
@@ -18,6 +19,7 @@ SECTION ITEM $item_ankh
 
 SECTION ITEM $item_ankh_1
 {
+    NAME ankh
     ID 0003
 
     ///CATEGORY Decorations
@@ -364,48 +366,92 @@ SECTION ITEM $item_tall_candle
     ///SUBSECTION Candles & Candelabras
 }
 
-SECTION ITEM $item_potted_tree
-{
-    NAME potted tree
-    ID 14f0
-    TRIGGER $itrg_potted_tree
-    TRIGTYPE 0
-
-    ///CATEGORY Decorations
-    ///SUBSECTION Plants
+SECTION ITEM $item_candle_1
+{ candle
+    ID 1433
+    DECAY
+    VALUE 35
+    TRIGGER $itrg_new_candle
 }
 
-SECTION ITEM $item_potted_tree_1
+SECTION ITEM $item_candle_2
 {
-    NAME potted tree
-    ID 11c8
+    ID 0a26
+}
+
+SECTION ITEM $item_candlabra
+{
+    ID 0a27
+}
+
+//a tall candalabra
+SECTION ITEM $item_candalabra
+{
+    NAME candalabra
+    ID 0a29
+    VALUE 40
+    DECAY
+    TRIGGER $itrg_unlight_floor_candelabra
+    WEIGHT 200
+}
+
+SECTION ITEM $item_skull_candle
+{
+    NAME skull candle
+    ID 1854
+    DIR 2
+    VALUE 50
+    ITEMHAND 3
+}
+
+SECTION ITEM $item_wall_sconce_1
+{
+    ID 09FF
+    TRIGGER $itrg_light_n-s_candle
+}
+
+SECTION ITEM $item_wall_sconce_2
+{
+    ID 0A00
+    TRIGGER $itrg_light_e-w_candle
+}
+
+SECTION ITEM $item_bell_of_courage
+{
+    NAME bell of courage
+    ID 1C12
+}
+
+SECTION ITEM $item_book_of_truth
+{
+    NAME book of truth
+    ID 1C13
+}
+
+SECTION ITEM $item_candle_of_love
+{
+    NAME candle of love
+    ID 1C14
+    VALUE 50
+    DECAY
+}
+
+SECTION ITEM $item_dartboard
+{
+    NAME dartboard
+    ID 1e2f
+    TYPE $itype_trash
     VALUE 50
     WEIGHT 200
-
-    ///CATEGORY Decorations
-    ///SUBSECTION Plants
 }
 
-SECTION ITEM $item_potted_tree_2
+SECTION ITEM $item_dartboard_1
 {
-    NAME potted tree
-    ID 14f0
-    TRIGGER $itrg_potted_tree_1
-    TRIGTYPE 0
-
-    ///CATEGORY Decorations
-    ///SUBSECTION Plants
-}
-
-SECTION ITEM $item_potted_tree_3
-{
-    NAME potted tree
-    ID 11c9
+    NAME dartboard
+    ID 1e2e
+    TYPE $itype_trash
     VALUE 50
     WEIGHT 200
-
-    ///CATEGORY Decorations
-    ///SUBSECTION Plants
 }
 
 SECTION ITEM $item_roadsign
@@ -1535,410 +1581,54 @@ SECTION ITEM $item_brass_sign_3
     ///SUBSECTION Signs
 }
 
-/////// treasure pieces ///////////////
-
-SECTION ITEM $item_treasure
-{ treasure 1
-    ID 1B3F
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
+SECTION ITEM $item_lamp_post
+{
+    ID 0B20
+    DIR 1
+    NAME A lit lamppost
 }
 
-SECTION ITEM $item_treasure_1
-{ treasure 2
-    ID 1B40
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
+SECTION ITEM $item_an_unlit_lamppost
+{
+    NAME An unlit lamppost
+    ID 0B21
 }
 
-SECTION ITEM $item_treasure_2
-{ treasure 3
-    ID 1B41
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
+SECTION ITEM $item_lamp_post_1
+{
+    ID 0B22
+    DIR 1
+    NAME A lit lamp post
+    TRIGGER $itrg_light_lamp_post_2
 }
 
-SECTION ITEM $item_treasure_3
-{ treasure 4
-    ID 1B42
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
+SECTION ITEM $item_lamp_post_2
+{
+    ID 0B23
 }
 
-SECTION ITEM $item_treasure_4
-{ treasure 6
-    ID 1B43
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
+SECTION ITEM $item_lamp_post_3
+{
+    ID 0B24
+    
+    TRIGGER $itrg_light_lamp_post_1
 }
 
-SECTION ITEM $item_treasure_5
-{ treasure 7
-    ID 1B44
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
+SECTION ITEM $item_lamp_post_4
+{
+    ID 0B25
 }
 
-SECTION ITEM $item_treasure_6
-{ treasure 8
-    ID 1B45
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
+SECTION ITEM $item_wall_torch
+{
+    ID 0A08
+    TRIGGER $itrg_light_n-s_torch
 }
 
-SECTION ITEM $item_treasure_7
-{ treasure 9
-    ID 1B46
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_8
-{ treasure 10
-    ID 1B47
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_9
-{ treasure 11
-    ID 1B48
-    NODECAY
-}
-
-// Not used ... delete later
-SECTION ITEM $item__1
-{ treasure 12
-    ID 1B49
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_A
-{ treasure 13
-    ID 1B4A
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_B
-{ treasure 14
-    ID 1B4B
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_C
-{ treasure 15
-    ID 1B4C
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_D
-{ treasure 16
-    ID 1B4D
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_E
-{ treasure 17
-    ID 1B4E
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_F
-{ treasure 18
-    ID 1B4F
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_G
-{ treasure 19
-    ID 1B50
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_H
-{ treasure 20
-    ID 1B51
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item__2
-{ treasure 21
-    ID 1B52
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_I
-{ treasure 22
-    ID 1B53
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_J
-{ treasure 23
-    ID 1B54
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_K
-{ treasure 24
-    ID 1B55
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_L
-{ treasure 25
-    ID 1B56
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_M
-{ treasure 26
-    ID 1B57
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_N
-{ treasure 27
-    ID 1B58
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_O
-{ treasure 28
-    ID 1B59
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_P
-{ treasure 29
-    ID 1B5A
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_Q
-{ treasure 30
-    ID 1B5B
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_R
-{ treasure 31
-    ID 1B5C
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_S
-{ treasure 32
-    ID 1B5D
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-// not used, delete later
-SECTION ITEM $item__3
-{ treasure 33
-    ID 1B5E
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_T
-{ treasure 34
-    ID 1B5F
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_U
-{ treasure 35
-    ID 1B60
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_V
-{ treasure 36
-    ID 1B61
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_W
-{ treasure 37
-    ID 1B62
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_X
-{ treasure 38
-    ID 1B63
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_Y
-{ treasure 39
-    ID 1B64
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_Z
-{ treasure 40
-    ID 1B65
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_Z1
-{ treasure 41
-    ID 1B66
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_Z2
-{ treasure 42
-    ID 1B67
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_Z3
-{ treasure 43
-    ID 1B68
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_Z4
-{ treasure 44
-    ID 1B69
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_treasure_Z5
-{ treasure 45
-    ID 1B6A
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
-}
-
-SECTION ITEM $item_wall_cracks
-{ treasure 46
-    ID 1B6B
-    NODECAY
-
-    ///CATEGORY Puzzle Pieces
-    ///SUBSECTION Treasure
+SECTION ITEM $item_wall_torch_1
+{
+    ID 0A0E
+    TRIGGER $itrg_light_e-w_torch
 }
 
 //////// lighthouse pieces ////////////

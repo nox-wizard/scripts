@@ -84,6 +84,38 @@ SECTION ITEM $item_forge_2
     ///DESCRIPTION Forge 2
 }
 
+//sections 8074-8076 large forge facing east
+SECTION ITEM $item_bellows_2
+{
+    ID 1986
+}
+
+SECTION ITEM $item_forge_5
+{
+    ID 198a
+}
+
+SECTION ITEM $item_forge_6
+{
+    ID 198e
+}
+
+SECTION ITEM $item_a_large_forge_facing_south_deed
+{
+    NAME a large forge facing south deed
+    ID 14F0
+    NEWBIE
+    MOREX 36
+}
+
+SECTION ITEM $item_a_large_forge_facing_east_deed
+{
+    NAME a large forge facing east deed
+    ID 14F0
+    NEWBIE
+    MOREX 35
+}
+
 SECTION ITEM $item_shovel
 {
     ID 0F39
@@ -94,128 +126,6 @@ SECTION ITEM $item_shovel
     ///CATEGORY Professions
     ///SUBSECTION Miner & Blacksmith
     ///DESCRIPTION Shovel
-}
-
-SECTION ITEM $item_tongs
-{
-    ID 0FBC
-    DECAY
-    HP 60
-    VALUE 15
-    
-    ///CATEGORY Professions
-    ///SUBSECTION Miner & Blacksmith
-    ///DESCRIPTION Tongs
-}
-
-SECTION ITEM $item_draw_knife
-{
-    ID 10E4
-    DECAY
-    VALUE 5
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_dovetail_saw
-{
-    ID 1028
-    DECAY
-    VALUE 15
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_saw
-{
-    ID 1035
-    DECAY
-    VALUE 20
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_hammer
-{
-    ID 102A
-    DECAY
-    VALUE 15
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_jointing_plane
-{
-    ID 1030
-    DECAY
-    VALUE 15
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_smoothing_plane
-{
-    ID 1032
-    DECAY
-    VALUE 15
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_scorp
-{
-    ID 10E7
-    DECAY
-    VALUE 10
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_inshave
-{
-    ID 10E6
-    DECAY
-    VALUE 10
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_moulding_planes
-{
-    ID 102C
-    DECAY
-    VALUE 15
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_nails
-{
-    ID 102E
-    DECAY
-    VALUE 5
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
-}
-
-SECTION ITEM $item_froe
-{
-    ID 10E5
-    DECAY
-    VALUE 15
-
-    ///CATEGORY Professions
-    ///SUBSECTION Carpenter
 }
 
 SECTION ITEM $item_drum
@@ -520,16 +430,49 @@ SECTION ITEM $item_upright_loom_1
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_balls_of_yarn_3
+// ball of yarn
+SECTION ITEM $item_balls_of_yarn
 {
     ID 0E1D
-    NAME ball of yarn
+    DYE 1
+    PILE 1
+    DECAY
+    VALUE 15
+    WEIGHT 100
 
     ///CATEGORY Professions
     ///SUBSECTION Tailor
 }
 
-SECTION ITEM $item_bales_of_cotton_1
+// ball of yarn
+SECTION ITEM $item_balls_of_yarn_1
+{
+    ID 0E1E
+    DYE 1
+    PILE 1
+    DECAY
+    VALUE 15
+    WEIGHT 100
+
+    ///CATEGORY Professions
+    ///SUBSECTION Tailor
+}
+
+// ball of yarn
+SECTION ITEM $item_balls_of_yarn_2
+{
+    ID 0E1F
+    DYE 1
+    PILE 1
+    DECAY
+    VALUE 15
+    WEIGHT 100
+
+    ///CATEGORY Professions
+    ///SUBSECTION Tailor
+}
+
+SECTION ITEM $item_bales_of_cotton
 {
     ID 0DF9
     NAME bales of cotton
@@ -652,60 +595,6 @@ SECTION ITEM $item_arrow_shafts_1
     ///SUBSECTION Bowyer / Fletcher
 }
 
-SECTION ITEM $item_fish
-{
-    NAME fish
-    ID 09CC
-    DECAY
-    VALUE 2
-
-    ///CATEGORY Professions
-    ///SUBSECTION Fisher
-}
-
-SECTION ITEM $item_raw_fish
-{
-    NAME raw fish
-    ID 1E17
-    VALUE 2
-
-    ///CATEGORY Professions
-    ///SUBSECTION Fisher
-}
-
-SECTION ITEM $item_fish_1
-{
-    NAME fish
-    ID 09CD
-    DECAY
-    VALUE 2
-
-    ///CATEGORY Professions
-    ///SUBSECTION Fisher
-}
-
-SECTION ITEM $item_fish_2
-{
-    NAME fish
-    ID 09CE
-    DECAY
-    VALUE 2
-
-    ///CATEGORY Professions
-    ///SUBSECTION Fisher
-}
-
-SECTION ITEM $item_fish_3
-{
-    NAME fish
-    ID 09CF
-    DECAY
-    VALUE 2
-
-    ///CATEGORY Professions
-    ///SUBSECTION Fisher
-}
-
 SECTION ITEM $item_arrow
 {
     ID 0F3F
@@ -740,6 +629,13 @@ SECTION ITEM $item_clock
 	
 	///CATEGORY Professions
 	///SUBSECTION Tinker
+}
+
+SECTION ITEM $item_clock_frames
+{
+    NAME clock frame
+    ID 104D
+    DECAY
 }
 
 SECTION ITEM $item_leather_piece

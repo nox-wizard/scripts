@@ -74,132 +74,6 @@ SECTION BONUS OF VORPAL
 // || Basic weapons                                                       ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-// Hatchet
-SECTION ITEM $item_hatchet
-{
-    NAME hatchet
-    ID 0F43
-    ITEMHAND 1
-    LAYER $layer_1hand_weapon
-    LODAMAGE 3
-    HIDAMAGE 15
-    HP 50
-    DECAY
-    VALUE 35
-    STR 15
-    SPD 38
-    WEIGHT 400
-    DAMAGETYPE $damage_slash
-}
-
-// Execut. Axe
-SECTION ITEM $item_executioners_axe
-{
-    NAME executioner's axe
-    ID 0F45
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 6
-    HIDAMAGE 30
-    HP 60
-    DECAY
-    VALUE 85
-    STR 40
-    SPD 28
-    WEIGHT 800
-    DAMAGETYPE $damage_slash
-}
-
-// Axe
-SECTION ITEM $item_axe
-{
-    NAME axe
-    ID 0F49
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 4
-    HIDAMAGE 28
-    HP 65
-    DECAY
-    VALUE 55
-    STR 35
-    SPD 35
-    WEIGHT 400
-    DAMAGETYPE $damage_slash
-}
-
-// Double Axe
-SECTION ITEM $item_double_axe
-{
-    NAME double axe
-    ID 0F4B
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 6
-    HIDAMAGE 30
-    HP 70
-    DECAY
-    VALUE 70
-    STR 45
-    SPD 35
-    WEIGHT 800
-    DAMAGETYPE $damage_slash
-}
-
-// Lg. Battle Axe
-SECTION ITEM $item_large_battle_axe
-{
-    NAME large battle axe
-    ID 13FB
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 5
-    HIDAMAGE 37
-    HP 75
-    DECAY
-    VALUE 65
-    STR 44
-    SPD 29
-    WEIGHT 600
-    DAMAGETYPE $damage_slash
-}
-
-// PickAxe
-SECTION ITEM $item_pickaxe
-{
-    NAME pickaxe
-    ID 0E85
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 1
-    HIDAMAGE 15
-    HP 50
-    DECAY
-    VALUE 25
-    STR 40
-    SPD 33
-    WEIGHT 800
-    DAMAGETYPE $damage_slash
-}
-
-// War Axe
-SECTION ITEM $item_war_axe
-{
-    NAME war axe
-    ID 13B0
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 9
-    HIDAMAGE 27
-    HP 75
-    DECAY
-    VALUE 65
-    STR 35
-    SPD 38
-    WEIGHT 500
-    DAMAGETYPE $damage_slash
-}
-
 // Butcher Knife
 SECTION ITEM $item_butcher_knife
 {
@@ -254,42 +128,6 @@ SECTION ITEM $item_meat_cleaver
     DAMAGETYPE $damage_slash
 }
 
-// Dagger
-SECTION ITEM $item_dagger
-{
-    NAME dagger
-    ID 0F51
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 3
-    HIDAMAGE 15
-    HP 35
-    DECAY
-    VALUE 15
-    STR 1
-    SPD 40
-    WEIGHT 100
-    DAMAGETYPE $damage_pierce
-}
-
-// Kryss
-SECTION ITEM $item_kryss
-{
-    NAME kryss
-    ID 1400
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 5
-    HIDAMAGE 26
-    HP 70
-    DECAY
-    VALUE 40
-    STR 22
-    SPD 45
-    WEIGHT 100
-    DAMAGETYPE $damage_pierce
-}
-
 // Club
 SECTION ITEM $item_club
 {
@@ -306,153 +144,29 @@ SECTION ITEM $item_club
     SPD 38
     WEIGHT 600
     DAMAGETYPE $damage_bludgeon
+    @ONDBLCLICK schmieden
 }
 
-// Hammer Pick
-SECTION ITEM $item_hammer_pick
-{
-    NAME hammer pick
-    ID 143C
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 8
-    HIDAMAGE 24
-    HP 32
-    DECAY
-    VALUE 40
-    STR 45
-    SPD 30
-    WEIGHT 600
-    DAMAGETYPE $damage_bludgeon
-}
 
-// Mace
-SECTION ITEM $item_mace
-{
-	NAME mace
-	ID 0F5C
-	LAYER $layer_1hand_weapon
-	ITEMHAND 1
-	LODAMAGE 8
-	HIDAMAGE 32
-	HP 40
-	SKILL 41
-	DECAY
-	VALUE 30
-	STR 45
-	SPD 28
-	WEIGHT 1100
-	DAMAGETYPE $damage_bludgeon
-}
-
-// Maul
-SECTION ITEM $item_maul
-{
-    NAME maul
-    ID 143A
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 7
-    HIDAMAGE 32
-    HP 50
-    DECAY
-    VALUE 35
-    STR 20
-    SPD 28
-    WEIGHT 1100
-    DAMAGETYPE $damage_bludgeon
-}
-
-// Smithy Hammer
+//Smithy Hammer
 SECTION ITEM $item_smithy_hammer
 {
-    NAME smithy hammer
-    ID 13E4
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 6
-    HIDAMAGE 18
-    HP 42
-    DECAY
-    VALUE 25
-    STR 25
-    SPD 28
-    WEIGHT 500
-    DAMAGETYPE $damage_bludgeon
+NAME smithy hammer
+ID 13E4
+LAYER $layer_1hand_weapon
+ITEMHAND 1
+LODAMAGE 6
+HIDAMAGE 18
+HP 42
+DECAY
+VALUE 25
+STR 25
+SPD 28
+WEIGHT 500
+DAMAGETYPE $damage_bludgeon
+@ONDBLCLICK schmieden
 }
 
-// War Hammer
-SECTION ITEM $item_war_hammer
-{
-    NAME war hammer
-    ID 1438
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 8
-    HIDAMAGE 38
-    HP 70
-    DECAY
-    VALUE 55
-    STR 40
-    SPD 29
-    WEIGHT 700
-    DAMAGETYPE $damage_bludgeon
-}
-
-// War Mace
-SECTION ITEM $item_war_mace
-{
-    NAME war mace
-    ID 1406
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 10
-    HIDAMAGE 30
-    HP 70
-    DECAY
-    VALUE 60
-    STR 30
-    SPD 30
-    WEIGHT 1400
-    DAMAGETYPE $damage_bludgeon
-}
-
-// Bardiche
-SECTION ITEM $item_bardiche
-{
-    NAME bardiche
-    ID 0F4D
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 5
-    HIDAMAGE 43
-    HP 62
-    DECAY
-    VALUE 70
-    STR 50
-    SPD 24
-    WEIGHT 400
-    DAMAGETYPE $damage_slash
-}
-
-// Halberd
-SECTION ITEM $item_halberd
-{
-    NAME halberd
-    ID 143E
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 5
-    HIDAMAGE 49
-    HP 62
-    DEF 5
-    DECAY
-    VALUE 85
-    STR 55
-    SPD 22
-    WEIGHT 1300
-    DAMAGETYPE $damage_slash
-}
 
 // Black Staff
 SECTION ITEM $item_black_staff
@@ -512,7 +226,7 @@ SECTION ITEM $item_quarter_staff
 }
 
 //Long Sword of Invisibility
-SECTION ITEM $item_long_sword_of_invisibility
+SECTION ITEM $item_iron_long_sword_of_invisibility
 {
     NAME a magic longsword
     NAME2 long sword of invisibility
@@ -536,7 +250,7 @@ SECTION ITEM $item_long_sword_of_invisibility
     DAMAGETYPE $damage_slash
 }
 
-SECTION ITEM $item_long_sword_of_invisibility
+SECTION ITEM $item_iron_long_sword_of_invisibility
 {
     NAME a magic longsword
     NAME2 long sword of invisibility
@@ -561,7 +275,7 @@ SECTION ITEM $item_long_sword_of_invisibility
 }
 
 //Long Sword of Resurrection
-SECTION ITEM $item_long_sword_of_resurrection
+SECTION ITEM $item_iron_long_sword_of_resurrection
 {
     NAME a magic longsword
     NAME2 long sword of resurrection
@@ -586,7 +300,7 @@ SECTION ITEM $item_long_sword_of_resurrection
 }
 
 //Scimitar of Flamestrike
-SECTION ITEM $item_scimitar_of_flamestrike
+SECTION ITEM $item_iron_scimitar_of_flamestrike
 {
     NAME a magic scimitar
     NAME2 scimitar of flamestrike
@@ -610,7 +324,7 @@ SECTION ITEM $item_scimitar_of_flamestrike
 }
 
 //Scimitar of Feeblemind
-SECTION ITEM $item_scimitar_of_feeblemind
+SECTION ITEM $item_iron_scimitar_of_feeblemind
 {
     NAME a magic scimitar
     NAME2 scimitar of feeblemind
@@ -634,7 +348,7 @@ SECTION ITEM $item_scimitar_of_feeblemind
 }
 
 //Scimitar of Mana Drain
-SECTION ITEM $item_scimitar_of_mana_drain
+SECTION ITEM $item_iron_scimitar_of_mana_drain
 {
     NAME a magic scimiter
     NAME2 scimitar of mana drain
@@ -658,7 +372,7 @@ SECTION ITEM $item_scimitar_of_mana_drain
 }
 
 //Scimitar of Lightning
-SECTION ITEM $item_scimitar_of_lightning
+SECTION ITEM $item_iron_scimitar_of_lightning
 {
     NAME a magic scimitar
     NAME2 scimitar of lightning
@@ -682,7 +396,7 @@ SECTION ITEM $item_scimitar_of_lightning
 }
 
 //Scimitar of Energy Bolt
-SECTION ITEM $item_scimitar_of_energy_bolt
+SECTION ITEM $item_iron_scimitar_of_energy_bolt
 {
     NAME a magic scimitar
     NAME2 scimitar of energy bolt
@@ -705,7 +419,7 @@ SECTION ITEM $item_scimitar_of_energy_bolt
 }
 
 //Scimitar of Invisibility
-SECTION ITEM $item_scimitar_of_invisibility
+SECTION ITEM $item_iron_scimitar_of_invisibility
 {
     NAME a magic scimitar
     NAME2 scimitar of invisibility
@@ -729,7 +443,7 @@ SECTION ITEM $item_scimitar_of_invisibility
 }
 
 //Scimitar of Resurrection
-SECTION ITEM $item_scimitar_of_resurrection
+SECTION ITEM $item_iron_scimitar_of_resurrection
 {
     NAME a magic scimitar
     NAME2 scimitar of resurrection
@@ -752,7 +466,7 @@ SECTION ITEM $item_scimitar_of_resurrection
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Flamestrike
-SECTION ITEM $item_broad_sword_of_flamestrike
+SECTION ITEM $item_iron_broad_sword_of_flamestrike
 {
     NAME a magic broadsword
     NAME2 broad sword of flamestrike
@@ -775,7 +489,7 @@ SECTION ITEM $item_broad_sword_of_flamestrike
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Feeblemind
-SECTION ITEM $item_broad_sword_of_feeblemind
+SECTION ITEM $item_iron_broad_sword_of_feeblemind
 {
     NAME a magic broadsword
     NAME2 broad sword of feeblemind
@@ -798,7 +512,7 @@ SECTION ITEM $item_broad_sword_of_feeblemind
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Mana Drain
-SECTION ITEM $item_broad_sword_of_mana_drain
+SECTION ITEM $item_iron_broad_sword_of_mana_drain
 {
     NAME a magic boradsword
     NAME2 broad sword of mana drain
@@ -821,7 +535,7 @@ SECTION ITEM $item_broad_sword_of_mana_drain
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Lightning
-SECTION ITEM $item_broad_sword_of_lightning
+SECTION ITEM $item_iron_broad_sword_of_lightning
 {
     NAME a magic broadsword
     NAME2 broad sword of lightning
@@ -844,7 +558,7 @@ SECTION ITEM $item_broad_sword_of_lightning
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Energy Bolt
-SECTION ITEM $item_broad_sword_of_energy_bolt
+SECTION ITEM $item_iron_broad_sword_of_energy_bolt
 {
     NAME a magic broadsword
     NAME2 broad sword of energy bolt
@@ -867,7 +581,7 @@ SECTION ITEM $item_broad_sword_of_energy_bolt
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Invisibility
-SECTION ITEM $item_broad_sword_of_invisibility
+SECTION ITEM $item_iron_broad_sword_of_invisibility
 {
     NAME a magic broadsword
     NAME2 broad sword of invisibility
@@ -890,7 +604,7 @@ SECTION ITEM $item_broad_sword_of_invisibility
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Resurrection
-SECTION ITEM $item_broad_sword_of_resurrection
+SECTION ITEM $item_iron_broad_sword_of_resurrection
 {
     NAME a magic broadsword
     NAME2 broad sword of resurrection
@@ -1047,7 +761,7 @@ SECTION ITEM $item_a_golden_bow
     GOOD 12
     DAMAGETYPE $damage_pierce
 }
-SECTION ITEM $item_a_magic_bow_of_ruin
+SECTION ITEM $item_iron_bow_of_ruin
 {
     NAME a magic bow
     NAME2 a magic bow of ruin
@@ -1068,7 +782,7 @@ SECTION ITEM $item_a_magic_bow_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_bow_of_might
+SECTION ITEM $item_iron_bow_of_might
 {
     NAME a magic bow
     NAME2 a magic bow of might
@@ -1089,7 +803,7 @@ SECTION ITEM $item_a_magic_bow_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_bow_of_force
+SECTION ITEM $item_iron_bow_of_force
 {
     NAME a magic bow
     NAME2 a magic bow of force
@@ -1110,7 +824,7 @@ SECTION ITEM $item_a_magic_bow_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_bow_of_power
+SECTION ITEM $item_iron_bow_of_power
 {
     NAME a magic bow
     NAME2 a magic bow of power
@@ -1131,7 +845,7 @@ SECTION ITEM $item_a_magic_bow_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_bow_of_vanquishing
+SECTION ITEM $item_iron_bow_of_vanquishing
 {
     NAME a magic bow
     NAME2 a magic bow of vanquishing
@@ -1152,7 +866,7 @@ SECTION ITEM $item_a_magic_bow_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_magic_crossbow_of_ruin
+SECTION ITEM $item_iron_crossbow_of_ruin
 {
     NAME a magic crossbow
     NAME2 a magic crossbow of ruin
@@ -1171,7 +885,7 @@ SECTION ITEM $item_a_magic_crossbow_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_crossbow_of_might
+SECTION ITEM $item_iron_crossbow_of_might
 {
     NAME a magic crossbow
     NAME2 a magic crossbow of might
@@ -1190,7 +904,7 @@ SECTION ITEM $item_a_magic_crossbow_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_crossbow_of_force
+SECTION ITEM $item_iron_crossbow_of_force
 {
     NAME a magic crossbow
     NAME2 a magic crossbow of force
@@ -1209,7 +923,7 @@ SECTION ITEM $item_a_magic_crossbow_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_crossbow_of_power
+SECTION ITEM $item_iron_crossbow_of_power
 {
     NAME a magic crossbow
     NAME2 a magic crossbow of power
@@ -1228,7 +942,7 @@ SECTION ITEM $item_a_magic_crossbow_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_crossbow_of_vanquishing
+SECTION ITEM $item_iron_crossbow_of_vanquishing
 {
     NAME a magic crossbow
     NAME2 a magic crossbow of vanquishing
@@ -1247,7 +961,7 @@ SECTION ITEM $item_a_magic_crossbow_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_magic_heavy_crossbow_of_ruin
+SECTION ITEM $item_iron_heavy_crossbow_of_ruin
 {
     NAME a magic heavy crossbow
     NAME2 a magic heavy crossbow of ruin
@@ -1266,7 +980,7 @@ SECTION ITEM $item_a_magic_heavy_crossbow_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_heavy_crossbow_of_might
+SECTION ITEM $item_iron_heavy_crossbow_of_might
 {
     NAME a magic heavy crossbow
     NAME2 a magic heavy crossbow of might
@@ -1285,7 +999,7 @@ SECTION ITEM $item_a_magic_heavy_crossbow_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_heavy_crossbow_of_force
+SECTION ITEM $item_iron_heavy_crossbow_of_force
 {
     NAME a magic heavy crossbow
     NAME2 a magic heavy crossbow of force
@@ -1304,7 +1018,7 @@ SECTION ITEM $item_a_magic_heavy_crossbow_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_heavy_crossbow_of_power
+SECTION ITEM $item_iron_heavy_crossbow_of_power
 {
     NAME a magic heavy crossbow
     NAME2 a magic heavy crossbow of power
@@ -1323,7 +1037,7 @@ SECTION ITEM $item_a_magic_heavy_crossbow_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_heavy_crossbow_of_vanquishing
+SECTION ITEM $item_iron_heavy_crossbow_of_vanquishing
 {
     NAME a magic heavy crossbow
     NAME2 a magic heavy crossbow of vanquishing
@@ -1359,7 +1073,7 @@ SECTION ITEM $item_gnarled_staff_practice_weapon_
 }
 
 //Spear
-SECTION ITEM $item_spear_practice_weapon_
+SECTION ITEM $item_iron_spear_practice_weapon_
 {
     NAME spear [practice weapon]
     ID 0F62
@@ -1390,25 +1104,6 @@ SECTION ITEM $item_pitchfork
     STR 10
     SPD 40
     WEIGHT 700
-    DAMAGETYPE $damage_pierce
-}
-
-//Spear
-SECTION ITEM $item_spear
-{
-    NAME spear
-    ID 0F62
-    LAYER $layer_1hand_weapon
-    ITEMHAND 2
-    LODAMAGE 2
-    HIDAMAGE 36
-    HP 40
-    SKILL 42
-    DECAY
-    VALUE 55
-    STR 30
-    SPD 27
-    WEIGHT 300
     DAMAGETYPE $damage_pierce
 }
 
@@ -1483,7 +1178,6 @@ SECTION ITEM $item_skinning_knife_practice_weapon_
 
 SECTION ITEM $item_fire_mace
 {
-    #copy ITEM $item_mace
     NAME fire mace
     TYPE $itype_wand
     MOREX 3
@@ -1515,122 +1209,7 @@ SECTION ITEM $item_scepter
     DAMAGETYPE $damage_slash
 }
 
-//Scimitar
-SECTION ITEM $item_scimitar
-{
-    NAME scimitar
-    ID 13B6
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 4
-    HIDAMAGE 30
-    HP 45
-    DEF 4
-    DECAY
-    VALUE 65
-    STR 32
-    SPD 41
-    WEIGHT 200
-    DAMAGETYPE $damage_slash
-}
-
-//Long Sword
-SECTION ITEM $item_long_sword
-{
-    NAME long sword
-    ID 13B8
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    DEF 5
-    LODAMAGE 6
-    HIDAMAGE 27
-    HP 45
-    SKILL 40
-    DECAY
-    VALUE 70
-    STR 25
-    SPD 33
-    WEIGHT 400
-    DAMAGETYPE $damage_slash
-}
-
-//Viking Sword
-SECTION ITEM $item_viking_sword
-{
-    NAME viking sword
-    ID 13BA
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    HP 50
-    LODAMAGE 6
-    HIDAMAGE 34
-    HP 100
-    DECAY
-    VALUE 85
-    STR 38
-    SPD 30
-    WEIGHT 300
-    DAMAGETYPE $damage_slash
-}
-
-//Broad Sword
-SECTION ITEM $item_broadsword
-{
-    NAME broadsword
-    ID 0F5E
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 5
-    HIDAMAGE 29
-    HP 65
-    DEF 5
-    DECAY
-    VALUE 80
-    STR 25
-    SPD 39
-    WEIGHT 300
-    DAMAGETYPE $damage_slash
-}
-
-//Cutlass
-SECTION ITEM $item_cutlass
-{
-    NAME cutlass
-    ID 1440
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 6
-    HIDAMAGE 28
-    HP 50
-    DEF 4
-    DECAY
-    VALUE 65
-    STR 35
-    SPD 40
-    WEIGHT 500
-    DAMAGETYPE $damage_slash
-}
-
-//Katana
-SECTION ITEM $item_katana
-{
-    NAME katana
-    ID 13FF
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 5
-    HIDAMAGE 26
-    HP 45
-    DEF 8
-    DECAY
-    VALUE 75
-    STR 10
-    SPD 40
-    WEIGHT 300
-    DAMAGETYPE $damage_slash
-}
-
-SECTION ITEM $item_a_long_sword_of_ruin
+SECTION ITEM $item_iron_long_sword_of_ruin
 {
     NAME a magic long sword
     NAME2 a long sword of ruin
@@ -1651,7 +1230,7 @@ SECTION ITEM $item_a_long_sword_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_long_sword_of_might
+SECTION ITEM $item_iron_long_sword_of_might
 {
     NAME a magic long sword
     NAME2 a long sword of might
@@ -1672,7 +1251,7 @@ SECTION ITEM $item_a_long_sword_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_long_sword_of_force
+SECTION ITEM $item_iron_long_sword_of_force
 {
     NAME a magic long sword
     NAME2 a long sword of force
@@ -1693,7 +1272,7 @@ SECTION ITEM $item_a_long_sword_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_long_sword_of_power
+SECTION ITEM $item_iron_long_sword_of_power
 {
     NAME a magic long sword
     NAME2 a long sword of power
@@ -1714,7 +1293,7 @@ SECTION ITEM $item_a_long_sword_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_long_sword_of_vanquishing
+SECTION ITEM $item_iron_long_sword_of_vanquishing
 {
     NAME a magic long sword
     NAME2 a long sword of vanquishing
@@ -1735,7 +1314,7 @@ SECTION ITEM $item_a_long_sword_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_viking_sword_of_ruin
+SECTION ITEM $item_iron_viking_sword_of_ruin
 {
     NAME a magic viking sword
     NAME2 a viking sword of ruin
@@ -1756,7 +1335,7 @@ SECTION ITEM $item_a_viking_sword_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_viking_sword_of_might
+SECTION ITEM $item_iron_viking_sword_of_might
 {
     NAME a magic viking sword
     NAME2 a viking sword of might
@@ -1777,7 +1356,7 @@ SECTION ITEM $item_a_viking_sword_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_viking_sword_of_force
+SECTION ITEM $item_iron_viking_sword_of_force
 {
     NAME a magic viking sword
     NAME2 a viking sword of force
@@ -1798,7 +1377,7 @@ SECTION ITEM $item_a_viking_sword_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_viking_sword_of_power
+SECTION ITEM $item_iron_viking_sword_of_power
 {
     NAME a magic viking sword
     NAME2 a viking sword of power
@@ -1819,7 +1398,7 @@ SECTION ITEM $item_a_viking_sword_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_viking_sword_of_vanquishing
+SECTION ITEM $item_iron_viking_sword_of_vanquishing
 {
     NAME a magic viking sword
     NAME2 a viking sword of vanquishing
@@ -1840,7 +1419,7 @@ SECTION ITEM $item_a_viking_sword_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_broad_sword_of_ruin
+SECTION ITEM $item_iron_broad_sword_of_ruin
 {
     NAME a magic broad sword
     NAME2 a broad sword of ruin
@@ -1861,7 +1440,7 @@ SECTION ITEM $item_a_broad_sword_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_broad_sword_of_might
+SECTION ITEM $item_iron_broad_sword_of_might
 {
     NAME a magic broad sword
     NAME2 a broad sword of might
@@ -1882,7 +1461,7 @@ SECTION ITEM $item_a_broad_sword_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_broad_sword_of_force
+SECTION ITEM $item_iron_broad_sword_of_force
 {
     NAME a magic broad sword
     NAME2 a broad sword of force
@@ -1903,7 +1482,7 @@ SECTION ITEM $item_a_broad_sword_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_broad_sword_of_power
+SECTION ITEM $item_iron_broad_sword_of_power
 {
     NAME a magic broad sword
     NAME2 a broad sword of power
@@ -1924,7 +1503,7 @@ SECTION ITEM $item_a_broad_sword_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_broad_sword_of_vanquishing
+SECTION ITEM $item_iron_broad_sword_of_vanquishing
 {
     NAME a magic broad sword
     NAME2 a broad sword of vanquishing
@@ -1945,7 +1524,7 @@ SECTION ITEM $item_a_broad_sword_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_scimitar_of_ruin
+SECTION ITEM $item_iron_scimitar_of_ruin
 {
     NAME a magic scimitar
     NAME2 a scimitar of ruin
@@ -1966,7 +1545,7 @@ SECTION ITEM $item_a_scimitar_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_scimitar_of_might
+SECTION ITEM $item_iron_scimitar_of_might
 {
     NAME a magic scimitar
     NAME2 a scimitar of might
@@ -1987,7 +1566,7 @@ SECTION ITEM $item_a_scimitar_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_scimitar_of_force
+SECTION ITEM $item_iron_scimitar_of_force
 {
     NAME a magic scimitar
     NAME2 a scimitar of force
@@ -2008,7 +1587,7 @@ SECTION ITEM $item_a_scimitar_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_scimitar_of_power
+SECTION ITEM $item_iron_scimitar_of_power
 {
     NAME a magic scimitar
     NAME2 a scimitar of power
@@ -2029,7 +1608,7 @@ SECTION ITEM $item_a_scimitar_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_scimitar_of_vanquishing
+SECTION ITEM $item_iron_scimitar_of_vanquishing
 {
     NAME a magic scimitar
     NAME2 a scimitar of vanquishing
@@ -2050,7 +1629,7 @@ SECTION ITEM $item_a_scimitar_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_cutlass_of_ruin
+SECTION ITEM $item_iron_cutlass_of_ruin
 {
     NAME a magic cutlass
     NAME2 a cutlass of ruin
@@ -2071,7 +1650,7 @@ SECTION ITEM $item_a_cutlass_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_cutlass_of_might
+SECTION ITEM $item_iron_cutlass_of_might
 {
     NAME a magic cutlass
     NAME2 a cutlass of might
@@ -2092,7 +1671,7 @@ SECTION ITEM $item_a_cutlass_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_cutlass_of_force
+SECTION ITEM $item_iron_cutlass_of_force
 {
     NAME a magic cutlass
     NAME2 a cutlass of force
@@ -2113,7 +1692,7 @@ SECTION ITEM $item_a_cutlass_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_cutlass_of_power
+SECTION ITEM $item_iron_cutlass_of_power
 {
     NAME a magic cutlass
     NAME2 a cutlass of power
@@ -2135,7 +1714,7 @@ SECTION ITEM $item_a_cutlass_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_cutlass_of_vanquishing
+SECTION ITEM $item_iron_cutlass_of_vanquishing
 {
     NAME a magic cutlass
     NAME2 a cutlass of vanquishing
@@ -2156,7 +1735,7 @@ SECTION ITEM $item_a_cutlass_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_katana_of_ruin
+SECTION ITEM $item_iron_katana_of_ruin
 {
     NAME a magic katana
     NAME2 a katana of ruin
@@ -2177,7 +1756,7 @@ SECTION ITEM $item_a_katana_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_katana_of_might
+SECTION ITEM $item_iron_katana_of_might
 {
     NAME a magic katana
     NAME2 a katana of might
@@ -2198,7 +1777,7 @@ SECTION ITEM $item_a_katana_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_katana_of_force
+SECTION ITEM $item_iron_katana_of_force
 {
     NAME a magic katana
     NAME2 a katana of force
@@ -2219,7 +1798,7 @@ SECTION ITEM $item_a_katana_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_katana_of_power
+SECTION ITEM $item_iron_katana_of_power
 {
     NAME a magic katana
     NAME2 a katana of power
@@ -2240,7 +1819,7 @@ SECTION ITEM $item_a_katana_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_katana_of_vanquishing
+SECTION ITEM $item_iron_katana_of_vanquishing
 {
     NAME a magic katana
     NAME2 a katana of vanquishing
@@ -2261,28 +1840,8 @@ SECTION ITEM $item_a_katana_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_golden_viking_sword
-{
-    NAME a Golden viking sword
-    ID 13BA
-    COLOR 096D
-    LAYER $layer_1hand_weapon
-    ITEMHAND 1
-    LODAMAGE 2
-    HIDAMAGE 29
-    HP 200
-    STR 65
-    VALUE 255
-    DECAY
-    SPD 30
-    WEIGHT 1200
-    ATT 23
-    GOOD 27
-    DAMAGETYPE $damage_slash
-}
-
 //Viking of Flamestrike
-SECTION ITEM $item_viking_sword_of_flamestrike
+SECTION ITEM $item_iron_viking_sword_of_flamestrike
 {
     NAME a magic viking sword
     NAME2 viking sword of flamestrike
@@ -2306,7 +1865,7 @@ SECTION ITEM $item_viking_sword_of_flamestrike
 }
 
 //Viking of Feeblemind
-SECTION ITEM $item_viking_sword_of_feeblemind
+SECTION ITEM $item_iron_viking_sword_of_feeblemind
 {
     NAME a magic viking sword
     NAME2 viking sword of feeblemind
@@ -2330,7 +1889,7 @@ SECTION ITEM $item_viking_sword_of_feeblemind
 }
 
 //Viking of Mana Drain
-SECTION ITEM $item_viking_sword_of_mana_drain
+SECTION ITEM $item_iron_viking_sword_of_mana_drain
 {
     NAME a magic viking sword
     NAME2 viking sword of mana drain
@@ -2354,7 +1913,7 @@ SECTION ITEM $item_viking_sword_of_mana_drain
 }
 
 //Viking of Lightning
-SECTION ITEM $item_viking_sword_of_lightning
+SECTION ITEM $item_iron_viking_sword_of_lightning
 {
     NAME a magic viking sword
     NAME2 viking sword of lightning
@@ -2378,7 +1937,7 @@ SECTION ITEM $item_viking_sword_of_lightning
 }
 
 //Viking of Energy Bolt
-SECTION ITEM $item_viking_sword_of_energy_bolt
+SECTION ITEM $item_iron_viking_sword_of_energy_bolt
 {
     NAME a magic viking sword
     NAME2 viking sword of energy bolt
@@ -2402,7 +1961,7 @@ SECTION ITEM $item_viking_sword_of_energy_bolt
 }
 
 //Viking of Invisibility
-SECTION ITEM $item_viking_sword_of_invisibility
+SECTION ITEM $item_iron_viking_sword_of_invisibility
 {
     NAME a magic viking sword
     NAME2 viking sword of invisibility
@@ -2426,7 +1985,7 @@ SECTION ITEM $item_viking_sword_of_invisibility
 }
 
 //Viking of Resurrection
-SECTION ITEM $item_viking_sword_of_resurrection
+SECTION ITEM $item_iron_viking_sword_of_resurrection
 {
     NAME a magic viking sword
     NAME2 viking sword of resurrection
@@ -2450,7 +2009,7 @@ SECTION ITEM $item_viking_sword_of_resurrection
 }
 
 //Long Sword of Flamestrike
-SECTION ITEM $item_long_sword_of_flamestrike
+SECTION ITEM $item_iron_long_sword_of_flamestrike
 {
     NAME a magic longsword
     NAME2 long sword of flamestrike
@@ -2475,7 +2034,7 @@ SECTION ITEM $item_long_sword_of_flamestrike
 }
 
 //Long Sword of Feeblemind
-SECTION ITEM $item_long_sword_of_feeblemind
+SECTION ITEM $item_iron_long_sword_of_feeblemind
 {
     NAME a magic longsword
     NAME2 long sword of feeblemind
@@ -2500,7 +2059,7 @@ SECTION ITEM $item_long_sword_of_feeblemind
 }
 
 //Long Sword of Mana Drain
-SECTION ITEM $item_long_sword_of_mana_drain
+SECTION ITEM $item_iron_long_sword_of_mana_drain
 {
     NAME a magic longsword
     NAME2 long sword of mana drain
@@ -2525,7 +2084,7 @@ SECTION ITEM $item_long_sword_of_mana_drain
 }
 
 //Long Sword of Lightning
-SECTION ITEM $item_long_sword_of_lightning
+SECTION ITEM $item_iron_long_sword_of_lightning
 {
     NAME a magic longsword
     NAME2 long sword of lightning
@@ -2550,7 +2109,7 @@ SECTION ITEM $item_long_sword_of_lightning
 }
 
 //Long Sword of Energy Bolt
-SECTION ITEM $item_long_sword_of_energy_bolt
+SECTION ITEM $item_iron_long_sword_of_energy_bolt
 {
     NAME a magic longsword
     NAME2 long sword of energy bolt
@@ -2575,7 +2134,7 @@ SECTION ITEM $item_long_sword_of_energy_bolt
 }
 
 //Long Sword of Invisibility
-SECTION ITEM $item_long_sword_of_invisibility
+SECTION ITEM $item_iron_long_sword_of_invisibility
 {
     NAME a magic longsword
     NAME2 long sword of invisibility
@@ -2600,7 +2159,7 @@ SECTION ITEM $item_long_sword_of_invisibility
 }
 
 //Long Sword of Resurrection
-SECTION ITEM $item_long_sword_of_resurrection
+SECTION ITEM $item_iron_long_sword_of_resurrection
 {
     NAME a magic longsword
     NAME2 long sword of resurrection
@@ -2625,7 +2184,7 @@ SECTION ITEM $item_long_sword_of_resurrection
 }
 
 //Scimitar of Flamestrike
-SECTION ITEM $item_scimitar_of_flamestrike
+SECTION ITEM $item_iron_scimitar_of_flamestrike
 {
     NAME a magic scimitar
     NAME2 scimitar of flamestrike
@@ -2649,7 +2208,7 @@ SECTION ITEM $item_scimitar_of_flamestrike
 }
 
 //Scimitar of Feeblemind
-SECTION ITEM $item_scimitar_of_feeblemind
+SECTION ITEM $item_iron_scimitar_of_feeblemind
 {
     NAME a magic scimitar
     NAME2 scimitar of feeblemind
@@ -2673,7 +2232,7 @@ SECTION ITEM $item_scimitar_of_feeblemind
 }
 
 //Scimitar of Mana Drain
-SECTION ITEM $item_scimitar_of_mana_drain
+SECTION ITEM $item_iron_scimitar_of_mana_drain
 {
     NAME a magic scimiter
     NAME2 scimitar of mana drain
@@ -2697,7 +2256,7 @@ SECTION ITEM $item_scimitar_of_mana_drain
 }
 
 //Scimitar of Lightning
-SECTION ITEM $item_scimitar_of_lightning
+SECTION ITEM $item_iron_scimitar_of_lightning
 {
     NAME a magic scimitar
     NAME2 scimitar of lightning
@@ -2721,7 +2280,7 @@ SECTION ITEM $item_scimitar_of_lightning
 }
 
 //Scimitar of Energy Bolt
-SECTION ITEM $item_scimitar_of_energy_bolt
+SECTION ITEM $item_iron_scimitar_of_energy_bolt
 {
     NAME a magic scimitar
     NAME2 scimitar of energy bolt
@@ -2744,7 +2303,7 @@ SECTION ITEM $item_scimitar_of_energy_bolt
 }
 
 //Scimitar of Invisibility
-SECTION ITEM $item_scimitar_of_invisibility
+SECTION ITEM $item_iron_scimitar_of_invisibility
 {
     NAME a magic scimitar
     NAME2 scimitar of invisibility
@@ -2768,7 +2327,7 @@ SECTION ITEM $item_scimitar_of_invisibility
 }
 
 //Scimitar of Resurrection
-SECTION ITEM $item_scimitar_of_resurrection
+SECTION ITEM $item_iron_scimitar_of_resurrection
 {
     NAME a magic scimitar
     NAME2 scimitar of resurrection
@@ -2791,7 +2350,7 @@ SECTION ITEM $item_scimitar_of_resurrection
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Flamestrike
-SECTION ITEM $item_broad_sword_of_flamestrike
+SECTION ITEM $item_iron_broad_sword_of_flamestrike
 {
     NAME a magic broadsword
     NAME2 broad sword of flamestrike
@@ -2814,7 +2373,7 @@ SECTION ITEM $item_broad_sword_of_flamestrike
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Feeblemind
-SECTION ITEM $item_broad_sword_of_feeblemind
+SECTION ITEM $item_iron_broad_sword_of_feeblemind
 {
     NAME a magic broadsword
     NAME2 broad sword of feeblemind
@@ -2837,7 +2396,7 @@ SECTION ITEM $item_broad_sword_of_feeblemind
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Mana Drain
-SECTION ITEM $item_broad_sword_of_mana_drain
+SECTION ITEM $item_iron_broad_sword_of_mana_drain
 {
     NAME a magic boradsword
     NAME2 broad sword of mana drain
@@ -2860,7 +2419,7 @@ SECTION ITEM $item_broad_sword_of_mana_drain
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Lightning
-SECTION ITEM $item_broad_sword_of_lightning
+SECTION ITEM $item_iron_broad_sword_of_lightning
 {
     NAME a magic broadsword
     NAME2 broad sword of lightning
@@ -2883,7 +2442,7 @@ SECTION ITEM $item_broad_sword_of_lightning
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Energy Bolt
-SECTION ITEM $item_broad_sword_of_energy_bolt
+SECTION ITEM $item_iron_broad_sword_of_energy_bolt
 {
     NAME a magic broadsword
     NAME2 broad sword of energy bolt
@@ -2906,7 +2465,7 @@ SECTION ITEM $item_broad_sword_of_energy_bolt
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Invisibility
-SECTION ITEM $item_broad_sword_of_invisibility
+SECTION ITEM $item_iron_broad_sword_of_invisibility
 {
     NAME a magic broadsword
     NAME2 broad sword of invisibility
@@ -2929,7 +2488,7 @@ SECTION ITEM $item_broad_sword_of_invisibility
     DAMAGETYPE $damage_slash
 }
 //Broad Sword of Resurrection
-SECTION ITEM $item_broad_sword_of_resurrection
+SECTION ITEM $item_iron_broad_sword_of_resurrection
 {
     NAME a magic broadsword
     NAME2 broad sword of resurrection
@@ -2952,79 +2511,7 @@ SECTION ITEM $item_broad_sword_of_resurrection
     DAMAGETYPE $damage_slash
 }
 
-
-// Two-Handed Axe
-SECTION ITEM $item_a_two-handed_axe
-{
-    NAME a two-handed axe
-    ID 1442
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 7
-    HIDAMAGE 35
-    HP 70
-    DECAY
-    VALUE 65
-    STR 60
-    SPD 35
-    WEIGHT 500
-    DAMAGETYPE $damage_slash
-}
-
-//Short Spear
-SECTION ITEM $item_short_spear
-{
-    NAME short spear
-    ID 1403
-    LAYER $layer_1hand_weapon
-    ITEMHAND 2
-    LODAMAGE 7
-    HIDAMAGE 35
-    HP 70
-    DECAY
-    VALUE 45
-    STR 15
-    SPD 35
-    WEIGHT 200
-    DAMAGETYPE $damage_pierce
-}
-
-// Battle Axe
-SECTION ITEM $item_battle_axe
-{
-    NAME battle axe
-    ID 0F47
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 4
-    HIDAMAGE 20
-    HP 110
-    DECAY
-    VALUE 35
-    STR 30
-    SPD 45
-    WEIGHT 200
-    DAMAGETYPE $damage_slash
-}
-
-//War Fork
-SECTION ITEM $item_war_fork
-{
-    ID 1405
-    LAYER $layer_2hand_weapon
-    ITEMHAND 2
-    LODAMAGE 6
-    HIDAMAGE 30
-    HP 65
-    DECAY
-    VALUE 90
-    STR 35
-    SPD 35
-    WEIGHT 600
-    DAMAGETYPE $damage_pierce
-}
-
-SECTION ITEM $item_a_cleaver_of_ruin
+SECTION ITEM $item_iron_cleaver_of_ruin
 {
     NAME a magic cleaver
     NAME2 a cleaver of ruin
@@ -3043,7 +2530,7 @@ SECTION ITEM $item_a_cleaver_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_cleaver_of_might
+SECTION ITEM $item_iron_cleaver_of_might
 {
     NAME a magic cleaver
     NAME2 a cleaver of might
@@ -3062,7 +2549,7 @@ SECTION ITEM $item_a_cleaver_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_butcher_knife_of_vanquishing
+SECTION ITEM $item_iron_butcher_knife_of_vanquishing
 {
     NAME a magic butcher knife
     NAME2 a butcher knife of vanquishing
@@ -3081,7 +2568,7 @@ SECTION ITEM $item_a_butcher_knife_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_axe_of_force
+SECTION ITEM $item_iron_axe_of_force
 {
     NAME a magic axe
     NAME2 a axe of force
@@ -3100,7 +2587,7 @@ SECTION ITEM $item_a_axe_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_axe_of_might
+SECTION ITEM $item_iron_axe_of_might
 {
     NAME a magic axe
     NAME2 a axe of might
@@ -3119,7 +2606,7 @@ SECTION ITEM $item_a_axe_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_axe_of_power
+SECTION ITEM $item_iron_axe_of_power
 {
     NAME a magic axe
     NAME2 a axe of power
@@ -3138,7 +2625,7 @@ SECTION ITEM $item_a_axe_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_axe_of_ruin
+SECTION ITEM $item_iron_axe_of_ruin
 {
     NAME a magic axe
     NAME2 a axe of ruin
@@ -3158,7 +2645,7 @@ SECTION ITEM $item_a_axe_of_ruin
 }
 
 
-SECTION ITEM $item_a_axe_of_vanquishing
+SECTION ITEM $item_iron_axe_of_vanquishing
 {
     NAME a magic axe
     NAME2 a axe of vanquishing
@@ -3177,7 +2664,7 @@ SECTION ITEM $item_a_axe_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_magic_bardiche_of_ruin
+SECTION ITEM $item_iron_bardiche_of_ruin
 {
     NAME a magic bardiche
     NAME2 a magic bardiche of ruin
@@ -3196,7 +2683,7 @@ SECTION ITEM $item_a_magic_bardiche_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_bardiche_of_might
+SECTION ITEM $item_iron_bardiche_of_might
 {
     NAME a magic bardiche
     NAME2 a magic bardiche of might
@@ -3215,7 +2702,7 @@ SECTION ITEM $item_a_magic_bardiche_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_bardiche_of_force
+SECTION ITEM $item_iron_bardiche_of_force
 {
     NAME a magic bardiche
     NAME2 a magic bardiche of force
@@ -3234,7 +2721,7 @@ SECTION ITEM $item_a_magic_bardiche_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_bardiche_of_power
+SECTION ITEM $item_iron_bardiche_of_power
 {
     NAME a magic bardiche
     NAME2 a magic bardiche of power
@@ -3253,7 +2740,7 @@ SECTION ITEM $item_a_magic_bardiche_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_bardiche_of_vanquishing
+SECTION ITEM $item_iron_bardiche_of_vanquishing
 {
     NAME a magic bardiche
     NAME2 a magic bardiche of vanquishing
@@ -3293,7 +2780,7 @@ SECTION ITEM $item_a_staff_of_lich_summoning
     DAMAGETYPE $damage_bludgeon
 }
 
-SECTION ITEM $item_a_butcher_knife_of_ruin
+SECTION ITEM $item_iron_butcher_knife_of_ruin
 {
     NAME a magic butcher knife
     NAME2 a butcher knife of ruin
@@ -3312,7 +2799,7 @@ SECTION ITEM $item_a_butcher_knife_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_butcher_knife_of_might
+SECTION ITEM $item_iron_butcher_knife_of_might
 {
     NAME a magic butcher knife
     NAME2 a butcher knife of might
@@ -3331,7 +2818,7 @@ SECTION ITEM $item_a_butcher_knife_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_butcher_knife_of_force
+SECTION ITEM $item_iron_butcher_knife_of_force
 {
     NAME a magic butcher knife
     NAME2 a butcher knife of force
@@ -3350,7 +2837,7 @@ SECTION ITEM $item_a_butcher_knife_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_butcher_knife_of_power
+SECTION ITEM $item_iron_butcher_knife_of_power
 {
     NAME a magic butcher knife
     NAME2 a butcher knife of power
@@ -3388,7 +2875,7 @@ SECTION ITEM $item_sheperds_crook
     DAMAGETYPE $damage_bludgeon
 }
 
-SECTION ITEM $item_a_cleaver_of_force
+SECTION ITEM $item_iron_cleaver_of_force
 {
     NAME a magic cleaver
     NAME2 a cleaver of force
@@ -3407,7 +2894,7 @@ SECTION ITEM $item_a_cleaver_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_cleaver_of_power
+SECTION ITEM $item_iron_cleaver_of_power
 {
     NAME a magic cleaver
     NAME2 a cleaver of power
@@ -3426,7 +2913,7 @@ SECTION ITEM $item_a_cleaver_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_cleaver_of_vanquishing
+SECTION ITEM $item_iron_cleaver_of_vanquishing
 {
     NAME a magic cleaver
     NAME2 a cleaver of vanquishing
@@ -3445,7 +2932,7 @@ SECTION ITEM $item_a_cleaver_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_club_of_ruin
+SECTION ITEM $item_iron_club_of_ruin
 {
     NAME a magic club
     NAME2 a club of ruin
@@ -3464,7 +2951,7 @@ SECTION ITEM $item_a_club_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_club_of_might
+SECTION ITEM $item_iron_club_of_might
 {
     NAME a magic club
     NAME2 a club of might
@@ -3483,7 +2970,7 @@ SECTION ITEM $item_a_club_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_club_of_force
+SECTION ITEM $item_iron_club_of_force
 {
     NAME a magic club
     NAME2 a club of force
@@ -3502,7 +2989,7 @@ SECTION ITEM $item_a_club_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_club_of_power
+SECTION ITEM $item_iron_club_of_power
 {
     NAME a magic club
     NAME2 a club of power
@@ -3521,7 +3008,7 @@ SECTION ITEM $item_a_club_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_club_of_vanquishing
+SECTION ITEM $item_iron_club_of_vanquishing
 {
     NAME a magic club
     NAME2 a club of vanquishing
@@ -3540,7 +3027,7 @@ SECTION ITEM $item_a_club_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_dagger_of_ruin
+SECTION ITEM $item_iron_dagger_of_ruin
 {
     NAME a magic dagger
     NAME2 a dagger of ruin
@@ -3559,7 +3046,7 @@ SECTION ITEM $item_a_dagger_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_dagger_of_might
+SECTION ITEM $item_iron_dagger_of_might
 {
     NAME a magic dagger
     NAME2 a dagger of might
@@ -3578,7 +3065,7 @@ SECTION ITEM $item_a_dagger_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_dagger_of_force
+SECTION ITEM $item_iron_dagger_of_force
 {
     NAME a magic dagger
     NAME2 a dagger of force
@@ -3597,7 +3084,7 @@ SECTION ITEM $item_a_dagger_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_dagger_of_power
+SECTION ITEM $item_iron_dagger_of_power
 {
     NAME a magic dagger
     NAME2 a dagger of power
@@ -3616,7 +3103,7 @@ SECTION ITEM $item_a_dagger_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_dagger_of_vanquishing
+SECTION ITEM $item_iron_dagger_of_vanquishing
 {
     NAME a magic dagger
     NAME2 a dagger of vanquishing
@@ -3635,7 +3122,7 @@ SECTION ITEM $item_a_dagger_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_double_axe_of_ruin
+SECTION ITEM $item_iron_double_axe_of_ruin
 {
     NAME a magic double axe
     NAME2 a double axe of ruin
@@ -3654,7 +3141,7 @@ SECTION ITEM $item_a_double_axe_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_double_axe_of_might
+SECTION ITEM $item_iron_double_axe_of_might
 {
     NAME a magic double axe
     NAME2 a double axe of might
@@ -3673,7 +3160,7 @@ SECTION ITEM $item_a_double_axe_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_double_axe_of_force
+SECTION ITEM $item_iron_double_axe_of_force
 {
     NAME a magic double axe
     NAME2 a double axe of force
@@ -3692,7 +3179,7 @@ SECTION ITEM $item_a_double_axe_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_double_axe_of_power
+SECTION ITEM $item_iron_double_axe_of_power
 {
     NAME a magic double axe
     NAME2 a double axe of power
@@ -3711,7 +3198,7 @@ SECTION ITEM $item_a_double_axe_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_double_axe_of_vanquishing
+SECTION ITEM $item_iron_double_axe_of_vanquishing
 {
     NAME a magic double axe
     NAME2 a double axe of vanquishing
@@ -3730,7 +3217,7 @@ SECTION ITEM $item_a_double_axe_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_executionners_axe_of_might
+SECTION ITEM $item_iron_executionners_axe_of_might
 {
     NAME a magic executionner's axe
     NAME2 a executionner's axe of might
@@ -3750,7 +3237,7 @@ SECTION ITEM $item_a_executionners_axe_of_might
 }
 
 
-SECTION ITEM $item_a_executionners_axe_of_force
+SECTION ITEM $item_iron_executionners_axe_of_force
 {
     NAME a magic executionner's axe
     NAME2 a executionner's axe of force
@@ -3769,7 +3256,7 @@ SECTION ITEM $item_a_executionners_axe_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_executionners_axe_of_power
+SECTION ITEM $item_iron_executionners_axe_of_power
 {
     NAME a magic executionner's axe
     NAME2 a executionner's axe of power
@@ -3788,7 +3275,7 @@ SECTION ITEM $item_a_executionners_axe_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_executionners_axe_of_vanquishing
+SECTION ITEM $item_iron_executionners_axe_of_vanquishing
 {
     NAME a magic executionner's axe
     NAME2 a executionner's axe of vanquishing
@@ -3807,7 +3294,7 @@ SECTION ITEM $item_a_executionners_axe_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_magic_halberd_of_ruin
+SECTION ITEM $item_iron_halberd_of_ruin
 {
     NAME a magic halberd
     NAME2 a magic halberd of ruin
@@ -3826,7 +3313,7 @@ SECTION ITEM $item_a_magic_halberd_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_halberd_of_might
+SECTION ITEM $item_iron_halberd_of_might
 {
     NAME a magic halberd
     NAME2 a magic halberd of might
@@ -3845,7 +3332,7 @@ SECTION ITEM $item_a_magic_halberd_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_halberd_of_force
+SECTION ITEM $item_iron_halberd_of_force
 {
     NAME a magic halberd
     NAME2 a magic halberd of force
@@ -3864,7 +3351,7 @@ SECTION ITEM $item_a_magic_halberd_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_halberd_of_power
+SECTION ITEM $item_iron_halberd_of_power
 {
     NAME a magic halberd
     NAME2 a magic halberd of power
@@ -3883,7 +3370,7 @@ SECTION ITEM $item_a_magic_halberd_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_halberd_of_vanquishing
+SECTION ITEM $item_iron_halberd_of_vanquishing
 {
     NAME a magic halberd
     NAME2 a magic halberd of vanquishing
@@ -3902,7 +3389,7 @@ SECTION ITEM $item_a_magic_halberd_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_hatchet_of_ruin
+SECTION ITEM $item_iron_hatchet_of_ruin
 {
     NAME a magic hatchet
     NAME2 a hatchet of ruin
@@ -3924,7 +3411,7 @@ SECTION ITEM $item_a_hatchet_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_hatchet_of_might
+SECTION ITEM $item_iron_hatchet_of_might
 {
     NAME a magic hatchet
     NAME2 a hatchet of might
@@ -3945,7 +3432,7 @@ SECTION ITEM $item_a_hatchet_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_hatchet_of_force
+SECTION ITEM $item_iron_hatchet_of_force
 {
     NAME a magic hatchet
     NAME2 a hatchet of force
@@ -3966,7 +3453,7 @@ SECTION ITEM $item_a_hatchet_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_hatchet_of_power
+SECTION ITEM $item_iron_hatchet_of_power
 {
     NAME a magic hatchet
     NAME2 a hatchet of power
@@ -3987,7 +3474,7 @@ SECTION ITEM $item_a_hatchet_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_hatchet_of_vanquishing
+SECTION ITEM $item_iron_hatchet_of_vanquishing
 {
     NAME a magic hatchet
     NAME2 a hatchet of vanquishing
@@ -4009,7 +3496,7 @@ SECTION ITEM $item_a_hatchet_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_magic_war_mace_of_ruin
+SECTION ITEM $item_iron_war_mace_of_ruin
 {
     NAME a magic war mace
     NAME2 a magic war mace of ruin
@@ -4028,7 +3515,7 @@ SECTION ITEM $item_a_magic_war_mace_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_war_mace_of_might
+SECTION ITEM $item_iron_war_mace_of_might
 {
     NAME a magic war mace
     NAME2 a magic war mace of might
@@ -4047,7 +3534,7 @@ SECTION ITEM $item_a_magic_war_mace_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_war_mace_of_force
+SECTION ITEM $item_iron_war_mace_of_force
 {
     NAME a magic war mace
     NAME2 a magic war mace of force
@@ -4066,7 +3553,7 @@ SECTION ITEM $item_a_magic_war_mace_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_war_mace_of_power
+SECTION ITEM $item_iron_war_mace_of_power
 {
     NAME a magic war mace
     NAME2 a magic war mace of power
@@ -4085,7 +3572,7 @@ SECTION ITEM $item_a_magic_war_mace_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_war_mace_of_vanquishing
+SECTION ITEM $item_iron_war_mace_of_vanquishing
 {
     NAME a magic war mace
     NAME2 a magic war mace of vanquishing
@@ -4105,7 +3592,7 @@ SECTION ITEM $item_a_magic_war_mace_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_magic_war_hammer_of_ruin
+SECTION ITEM $item_iron_war_hammer_of_ruin
 {
     NAME a magic war hammer
     NAME2 a magic war hammer of ruin
@@ -4124,7 +3611,7 @@ SECTION ITEM $item_a_magic_war_hammer_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_war_hammer_of_might
+SECTION ITEM $item_iron_war_hammer_of_might
 {
     NAME a magic war hammer
     NAME2 a magic war hammer of might
@@ -4143,7 +3630,7 @@ SECTION ITEM $item_a_magic_war_hammer_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_war_hammer_of_force
+SECTION ITEM $item_iron_war_hammer_of_force
 {
     NAME a magic war hammer
     NAME2 a magic war hammer of force
@@ -4162,7 +3649,7 @@ SECTION ITEM $item_a_magic_war_hammer_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_war_hammer_of_power
+SECTION ITEM $item_iron_war_hammer_of_power
 {
     NAME a magic war hammer
     NAME2 a magic war hammer of power
@@ -4181,7 +3668,7 @@ SECTION ITEM $item_a_magic_war_hammer_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_war_hammer_of_vanquishing
+SECTION ITEM $item_iron_war_hammer_of_vanquishing
 {
     NAME a magic war hammer
     NAME2 a magic war hammer of vanquishing
@@ -4201,7 +3688,7 @@ SECTION ITEM $item_a_magic_war_hammer_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_magic_war_fork_of_ruin
+SECTION ITEM $item_iron_war_fork_of_ruin
 {
     NAME a magic war fork
     NAME2 a magic war fork of ruin
@@ -4220,7 +3707,7 @@ SECTION ITEM $item_a_magic_war_fork_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_war_fork_of_might
+SECTION ITEM $item_iron_war_fork_of_might
 {
     NAME a magic war fork
     NAME2 a magic war fork of might
@@ -4239,7 +3726,7 @@ SECTION ITEM $item_a_magic_war_fork_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_war_fork_of_force
+SECTION ITEM $item_iron_war_fork_of_force
 {
     NAME a magic war fork
     NAME2 a magic war fork of force
@@ -4258,7 +3745,7 @@ SECTION ITEM $item_a_magic_war_fork_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_war_fork_of_power
+SECTION ITEM $item_iron_war_fork_of_power
 {
     NAME a magic war fork
     NAME2 a magic war fork of power
@@ -4277,7 +3764,7 @@ SECTION ITEM $item_a_magic_war_fork_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_war_fork_of_vanquishing
+SECTION ITEM $item_iron_war_fork_of_vanquishing
 {
     NAME a magic war fork
     NAME2 a magic war fork of vanquishing
@@ -4297,7 +3784,7 @@ SECTION ITEM $item_a_magic_war_fork_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_war_axe_of_ruin
+SECTION ITEM $item_iron_war_axe_of_ruin
 {
     NAME a magic war axe
     NAME2 a war axe of ruin
@@ -4316,7 +3803,7 @@ SECTION ITEM $item_a_war_axe_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_war_axe_of_might
+SECTION ITEM $item_iron_war_axe_of_might
 {
     NAME a magic war axe
     NAME2 a war axe of might
@@ -4335,7 +3822,7 @@ SECTION ITEM $item_a_war_axe_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_war_axe_of_force
+SECTION ITEM $item_iron_war_axe_of_force
 {
     NAME a magic war axe
     NAME2 a war axe of force
@@ -4354,7 +3841,7 @@ SECTION ITEM $item_a_war_axe_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_war_axe_of_power
+SECTION ITEM $item_iron_war_axe_of_power
 {
     NAME a magic war axe
     NAME2 a war axe of power
@@ -4373,7 +3860,7 @@ SECTION ITEM $item_a_war_axe_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_war_axe_of_vanquishing
+SECTION ITEM $item_iron_war_axe_of_vanquishing
 {
     NAME a magic war axe
     NAME2 a war axe of vanquishing
@@ -4393,7 +3880,7 @@ SECTION ITEM $item_a_war_axe_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_magic_spear_of_ruin
+SECTION ITEM $item_iron_spear_of_ruin
 {
     NAME a magic spear
     NAME2 a magic spear of ruin
@@ -4413,7 +3900,7 @@ SECTION ITEM $item_a_magic_spear_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_spear_of_might
+SECTION ITEM $item_iron_spear_of_might
 {
     NAME a magic spear
     NAME2 a magic spear of might
@@ -4433,7 +3920,7 @@ SECTION ITEM $item_a_magic_spear_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_spear_of_force
+SECTION ITEM $item_iron_spear_of_force
 {
     NAME a magic spear
     NAME2 a magic spear of force
@@ -4453,7 +3940,7 @@ SECTION ITEM $item_a_magic_spear_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_spear_of_power
+SECTION ITEM $item_iron_spear_of_power
 {
     NAME a magic spear
     NAME2 a magic spear of power
@@ -4473,7 +3960,7 @@ SECTION ITEM $item_a_magic_spear_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_spear_of_vanquishing
+SECTION ITEM $item_iron_spear_of_vanquishing
 {
     NAME a magic spear
     NAME2 a magic spear of vanquishing
@@ -4493,7 +3980,7 @@ SECTION ITEM $item_a_magic_spear_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_hammer_pick_of_ruin
+SECTION ITEM $item_iron_hammer_pick_of_ruin
 {
     NAME a magic hammer pick
     NAME2 a hammer pick of ruin
@@ -4512,7 +3999,7 @@ SECTION ITEM $item_a_hammer_pick_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_hammer_pick_of_might
+SECTION ITEM $item_iron_hammer_pick_of_might
 {
     NAME a magic hammer pick
     NAME2 a hammer pick of might
@@ -4531,7 +4018,7 @@ SECTION ITEM $item_a_hammer_pick_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_hammer_pick_of_force
+SECTION ITEM $item_iron_hammer_pick_of_force
 {
     NAME a magic hammer pick
     NAME2 a hammer pick of force
@@ -4550,7 +4037,7 @@ SECTION ITEM $item_a_hammer_pick_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_hammer_pick_of_power
+SECTION ITEM $item_iron_hammer_pick_of_power
 {
     NAME a magic hammer pick
     NAME2 a hammer pick of power
@@ -4569,7 +4056,7 @@ SECTION ITEM $item_a_hammer_pick_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_hammer_pick_of_vanquishing
+SECTION ITEM $item_iron_hammer_pick_of_vanquishing
 {
     NAME a magic hammer pick
     NAME2 a hammer pick of vanquishing
@@ -4588,7 +4075,7 @@ SECTION ITEM $item_a_hammer_pick_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_kryss_of_ruin
+SECTION ITEM $item_iron_kryss_of_ruin
 {
     NAME a magic kryss
     NAME2 a kryss of ruin
@@ -4607,7 +4094,7 @@ SECTION ITEM $item_a_kryss_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_kryss_of_might
+SECTION ITEM $item_iron_kryss_of_might
 {
     NAME a magic kryss
     NAME2 a kryss of might
@@ -4626,7 +4113,7 @@ SECTION ITEM $item_a_kryss_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_kryss_of_force
+SECTION ITEM $item_iron_kryss_of_force
 {
     NAME a magic kryss
     NAME2 a kryss of force
@@ -4645,7 +4132,7 @@ SECTION ITEM $item_a_kryss_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_kryss_of_power
+SECTION ITEM $item_iron_kryss_of_power
 {
     NAME a magic kryss
     NAME2 a kryss of power
@@ -4664,7 +4151,7 @@ SECTION ITEM $item_a_kryss_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_kryss_of_vanquishing
+SECTION ITEM $item_iron_kryss_of_vanquishing
 {
     NAME a magic kryss
     NAME2 a kryss of vanquishing
@@ -4683,7 +4170,7 @@ SECTION ITEM $item_a_kryss_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_large_battle_axe_of_ruin
+SECTION ITEM $item_iron_large_battle_axe_of_ruin
 {
     NAME a magic large battle axe
     NAME2 a large battle axe of ruin
@@ -4702,7 +4189,7 @@ SECTION ITEM $item_a_large_battle_axe_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_large_battle_axe_of_might
+SECTION ITEM $item_iron_large_battle_axe_of_might
 {
     NAME a magic large battle axe
     NAME2 a large battle axe of might
@@ -4721,7 +4208,7 @@ SECTION ITEM $item_a_large_battle_axe_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_large_battle_axe_of_force
+SECTION ITEM $item_iron_large_battle_axe_of_force
 {
     NAME a magic large battle axe
     NAME2 a large battle axe of force
@@ -4740,7 +4227,7 @@ SECTION ITEM $item_a_large_battle_axe_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_large_battle_axe_of_power
+SECTION ITEM $item_iron_large_battle_axe_of_power
 {
     NAME a magic large battle axe
     NAME2 a large battle axe of power
@@ -4759,7 +4246,7 @@ SECTION ITEM $item_a_large_battle_axe_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_large_battle_axe_of_vanquishing
+SECTION ITEM $item_iron_large_battle_axe_of_vanquishing
 {
     NAME a magic large battle axe
     NAME2 a large battle axe of vanquishing
@@ -4778,11 +4265,11 @@ SECTION ITEM $item_a_large_battle_axe_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_magic_mace_of_ruin
+SECTION ITEM $item_iron_mace_of_ruin
 {
     NAME a magic mace
     NAME2 a magic mace of ruin
-    ID 0F5C
+    ID 0x0f 0x5c
     LAYER $layer_1hand_weapon
     ITEMHAND 1
     LODAMAGE 7
@@ -4797,11 +4284,11 @@ SECTION ITEM $item_a_magic_mace_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_mace_of_might
+SECTION ITEM $item_iron_mace_of_might
 {
     NAME a magic mace
     NAME2 a magic mace of might
-    ID 0F5C
+    ID 0x0f 0x5c
     LAYER $layer_1hand_weapon
     ITEMHAND 1
     LODAMAGE 8
@@ -4816,11 +4303,11 @@ SECTION ITEM $item_a_magic_mace_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_mace_of_force
+SECTION ITEM $item_iron_mace_of_force
 {
     NAME a magic mace
     NAME2 a magic mace of force
-    ID 0F5C
+    ID 0x0f 0x5c
     LAYER $layer_1hand_weapon
     ITEMHAND 1
     LODAMAGE 9
@@ -4835,11 +4322,11 @@ SECTION ITEM $item_a_magic_mace_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_mace_of_power
+SECTION ITEM $item_iron_mace_of_power
 {
     NAME a magic mace
     NAME2 a magic mace of power
-    ID 0F5C
+    ID 0x0f 0x5c
     LAYER $layer_1hand_weapon
     ITEMHAND 1
     LODAMAGE 10
@@ -4854,11 +4341,11 @@ SECTION ITEM $item_a_magic_mace_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_mace_of_vanquishing
+SECTION ITEM $item_iron_mace_of_vanquishing
 {
     NAME a magic mace
     NAME2 a magic mace of vanquishing
-    ID 0F5C
+    ID 0x0f 0x5c
     LAYER $layer_1hand_weapon
     ITEMHAND 1
     LODAMAGE 11
@@ -4873,7 +4360,7 @@ SECTION ITEM $item_a_magic_mace_of_vanquishing
     #copy BONUS OF VANQUISHING
 }
 
-SECTION ITEM $item_a_magic_maul_of_ruin
+SECTION ITEM $item_iron_maul_of_ruin
 {
     NAME a magic maul
     NAME2 a magic maul of ruin
@@ -4892,7 +4379,7 @@ SECTION ITEM $item_a_magic_maul_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_maul_of_might
+SECTION ITEM $item_iron_maul_of_might
 {
     NAME a magic maul
     NAME2 a magic maul of might
@@ -4911,7 +4398,7 @@ SECTION ITEM $item_a_magic_maul_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_maul_of_force
+SECTION ITEM $item_iron_maul_of_force
 {
     NAME a magic maul
     NAME2 a magic maul of force
@@ -4930,7 +4417,7 @@ SECTION ITEM $item_a_magic_maul_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_maul_of_power
+SECTION ITEM $item_iron_maul_of_power
 {
     NAME a magic maul
     NAME2 a magic maul of power
@@ -4949,7 +4436,7 @@ SECTION ITEM $item_a_magic_maul_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_maul_of_vanquishing
+SECTION ITEM $item_iron_maul_of_vanquishing
 {
     NAME a magic maul
     NAME2 a magic maul of vanquishing
@@ -4969,7 +4456,7 @@ SECTION ITEM $item_a_magic_maul_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_pick_axe_of_ruin
+SECTION ITEM $item_iron_pick_axe_of_ruin
 {
     NAME a magic pick axe
     NAME2 a pick axe of ruin
@@ -4988,7 +4475,7 @@ SECTION ITEM $item_a_pick_axe_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_pick_axe_of_might
+SECTION ITEM $item_iron_pick_axe_of_might
 {
     NAME a magic pick axe
     NAME2 a pick axe of might
@@ -5007,7 +4494,7 @@ SECTION ITEM $item_a_pick_axe_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_pick_axe_of_force
+SECTION ITEM $item_iron_pick_axe_of_force
 {
     NAME a magic pick axe
     NAME2 a pick axe of force
@@ -5026,7 +4513,7 @@ SECTION ITEM $item_a_pick_axe_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_pick_axe_of_power
+SECTION ITEM $item_iron_pick_axe_of_power
 {
     NAME a magic pick axe
     NAME2 a pick axe of power
@@ -5045,7 +4532,7 @@ SECTION ITEM $item_a_pick_axe_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_pick_axe_of_vanquishing
+SECTION ITEM $item_iron_pick_axe_of_vanquishing
 {
     NAME a magic pick axe
     NAME2 a pick axe of vanquishing
@@ -5065,7 +4552,7 @@ SECTION ITEM $item_a_pick_axe_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_magic_pitch_fork_of_ruin
+SECTION ITEM $item_iron_pitch_fork_of_ruin
 {
     NAME a magic pitch fork
     NAME2 a magic pitch fork of ruin
@@ -5084,7 +4571,7 @@ SECTION ITEM $item_a_magic_pitch_fork_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_pitch_fork_of_might
+SECTION ITEM $item_iron_pitch_fork_of_might
 {
     NAME a magic pitch fork
     NAME2 a magic pitch fork of might
@@ -5103,7 +4590,7 @@ SECTION ITEM $item_a_magic_pitch_fork_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_pitch_fork_of_force
+SECTION ITEM $item_iron_pitch_fork_of_force
 {
     NAME a magic pitch fork
     NAME2 a magic pitch fork of force
@@ -5122,7 +4609,7 @@ SECTION ITEM $item_a_magic_pitch_fork_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_pitch_fork_of_power
+SECTION ITEM $item_iron_pitch_fork_of_power
 {
     NAME a magic pitch fork
     NAME2 a magic pitch fork of power
@@ -5141,7 +4628,7 @@ SECTION ITEM $item_a_magic_pitch_fork_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_pitch_fork_of_vanquishing
+SECTION ITEM $item_iron_pitch_fork_of_vanquishing
 {
     NAME a magic pitch fork
     NAME2 a magic pitch fork of vanquishing
@@ -5161,7 +4648,7 @@ SECTION ITEM $item_a_magic_pitch_fork_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_skinning_knife_of_ruin
+SECTION ITEM $item_iron_skinning_knife_of_ruin
 {
     NAME a magic skinning knife
     NAME2 a skinning knife of ruin
@@ -5180,7 +4667,7 @@ SECTION ITEM $item_a_skinning_knife_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_skinning_knife_of_might
+SECTION ITEM $item_iron_skinning_knife_of_might
 {
     NAME a magic skinning knife
     NAME2 a skinning knife of might
@@ -5199,7 +4686,7 @@ SECTION ITEM $item_a_skinning_knife_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_skinning_knife_of_force
+SECTION ITEM $item_iron_skinning_knife_of_force
 {
     NAME a magic skinning knife
     NAME2 a skinning knife of force
@@ -5218,7 +4705,7 @@ SECTION ITEM $item_a_skinning_knife_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_skinning_knife_of_power
+SECTION ITEM $item_iron_skinning_knife_of_power
 {
     NAME a magic skinning knife
     NAME2 a skinning knife of power
@@ -5237,7 +4724,7 @@ SECTION ITEM $item_a_skinning_knife_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_skinning_knife_of_vanquishing
+SECTION ITEM $item_iron_skinning_knife_of_vanquishing
 {
     NAME a magic skinning knife
     NAME2 a skinning knife of vanquishing
@@ -5257,7 +4744,7 @@ SECTION ITEM $item_a_skinning_knife_of_vanquishing
 }
 
 
-SECTION ITEM $item_a_magic_smiths_hammer_of_ruin
+SECTION ITEM $item_iron_smiths_hammer_of_ruin
 {
     NAME a magic smith's hammer
     NAME2 a magic smith's hammer of ruin
@@ -5276,7 +4763,7 @@ SECTION ITEM $item_a_magic_smiths_hammer_of_ruin
     #copy BONUS OF RUIN
 }
 
-SECTION ITEM $item_a_magic_smiths_hammer_of_might
+SECTION ITEM $item_iron_smiths_hammer_of_might
 {
     NAME a magic smith's hammer
     NAME2 a magic smith's hammer of might
@@ -5295,7 +4782,7 @@ SECTION ITEM $item_a_magic_smiths_hammer_of_might
     #copy BONUS OF MIGHT
 }
 
-SECTION ITEM $item_a_magic_smiths_hammer_of_force
+SECTION ITEM $item_iron_smiths_hammer_of_force
 {
     NAME a magic smith's hammer
     NAME2 a magic smith's hammer of force
@@ -5314,7 +4801,7 @@ SECTION ITEM $item_a_magic_smiths_hammer_of_force
     #copy BONUS OF FORCE
 }
 
-SECTION ITEM $item_a_magic_smiths_hammer_of_power
+SECTION ITEM $item_iron_smiths_hammer_of_power
 {
     NAME a magic smith's hammer
     NAME2 a magic smith's hammer of power
@@ -5333,7 +4820,7 @@ SECTION ITEM $item_a_magic_smiths_hammer_of_power
     #copy BONUS OF POWER
 }
 
-SECTION ITEM $item_a_magic_smiths_hammer_of_vanquishing
+SECTION ITEM $item_iron_smiths_hammer_of_vanquishing
 {
     NAME a magic smith's hammer
     NAME2 a magic smith's hammer of vanquishing

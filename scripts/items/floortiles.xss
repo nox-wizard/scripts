@@ -1074,7 +1074,7 @@ SECTION ITEM $item_blue_tiles_3
     ///SUBSECTION Blue Tiles
 }
 
-SECTION ITEM $item_blue_tiles_3
+SECTION ITEM $item_blue_tiles_4
 {
     NAME blue tiles
     ID 04ED
@@ -1086,7 +1086,7 @@ SECTION ITEM $item_blue_tiles_3
     ///SUBSECTION Blue Tiles
 }
 
-SECTION ITEM $item_blue_tiles_4
+SECTION ITEM $item_blue_tiles_5
 {
     NAME blue tiles
     ID 04EE
@@ -1098,7 +1098,7 @@ SECTION ITEM $item_blue_tiles_4
     ///SUBSECTION Blue Tiles
 }
 
-SECTION ITEM $item_blue_tiles_5
+SECTION ITEM $item_blue_tiles_6
 {
     NAME blue tiles
     ID 04EF
@@ -1110,7 +1110,7 @@ SECTION ITEM $item_blue_tiles_5
     ///SUBSECTION Blue Tiles
 }
 
-SECTION ITEM $item_blue_tiles_6
+SECTION ITEM $item_blue_tiles_7
 {
     NAME blue tiles
     ID 04F0
@@ -1122,7 +1122,7 @@ SECTION ITEM $item_blue_tiles_6
     ///SUBSECTION Blue Tiles
 }
 
-SECTION ITEM $item_blue_tiles_7
+SECTION ITEM $item_blue_tiles_8
 {
     NAME blue tiles
     ID 04F1
@@ -1134,7 +1134,7 @@ SECTION ITEM $item_blue_tiles_7
     ///SUBSECTION Blue Tiles
 }
 
-SECTION ITEM $item_blue_tiles_8
+SECTION ITEM $item_blue_tiles_9
 {
     NAME blue tiles
     ID 04F2

@@ -1,5 +1,5 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (floortiles.xss)                                 ||
+// || NoX-Wizard Scripts (clothes.xss)                                 ||
 // || Maintained by Akron                                                 ||
 // || Last Update 09-aug-2003                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -44,7 +44,7 @@ SECTION ITEM $item_blackthorne_robe
     ///SUBSECTION Special Clothes
 }
 
-SECTION ITEM $item_
+SECTION ITEM $item_dupre
 {
     ID 2050
     HP 500
