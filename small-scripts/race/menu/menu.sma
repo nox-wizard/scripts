@@ -50,6 +50,7 @@ public race_menu( const chr, const race )
 		gui_addText( racemenu, 13, 172,   95, "choice." );
 		
 		new racex = race_getGlobalProp( RP_STARTLOCATION,RP2_X );
+		printf("racex: %d", racex);
 		new racey = race_getGlobalProp( RP_STARTLOCATION,RP2_Y);
 		new racez = race_getGlobalProp( RP_STARTLOCATION,RP2_Z );
 		printf("blub^n");
@@ -61,6 +62,7 @@ public race_menu( const chr, const race )
 		chr_LocalVarMaker(chr, 0, RACE_STARTX, chrx, _);
 		chr_LocalVarMaker(chr, 0, RACE_STARTY, chry, _);
 		chr_LocalVarMaker(chr, 0, RACE_STARTZ, chrz, _);
+		chr_moveTo(chr, racex, racey, racez);
 
 		offset=60;
 	}
