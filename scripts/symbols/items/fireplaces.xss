@@ -1,0 +1,66 @@
+#define $item_oven-east_deed 20100
+#define $item_oven-south_deed 20101
+#define $item_fireplace-east_deed 20110
+#define $item_fireplace-south_deed 20111
+
+#define $item_oven_sandstone1_1 20151
+#define $item_oven_sandstone2_1 20152
+#define $item_oven_sandstone2_2 20153
+#define $item_oven_sandstone1_2 20154
+
+#define $item_oven_stone1_1 20155
+#define $item_oven_stone2_1 20156
+#define $item_oven_stone3_1 20157
+#define $item_oven_stone1_2 20158
+#define $item_oven_stone2_2 20159
+#define $item_oven_stone3_2 20160
+
+#define $item_fireplace_sandstone1_1 20161
+#define $item_fireplace_sandstone2_1 20162
+#define $item_fireplace_sandstone1_2 20163
+#define $item_fireplace_sandstone2_2 20164
+#define $item_fireplace_sandstone3_1 20165
+#define $item_fireplace_sandstone3_2 20166
+#define $item_fireplace_sandstone4_1 20167
+#define $item_fireplace_sandstone4_2 20168
+#define $item_fireplace_stone1_1 20169
+#define $item_fireplace_stone2_1 20170
+#define $item_fireplace_stone2_2 20171
+#define $item_fireplace_stone1_2 20172
+#define $item_fireplace_stone3_1 20173
+#define $item_fireplace_stone4_1 20174
+#define $item_fireplace_stone3_2 20175
+#define $item_fireplace_stone4_2 20176
+#define $item_fireplace_stone5_1 20177
+#define $item_fireplace_stone6_1 20178
+#define $item_fireplace_stone7_1 20179
+#define $item_fireplace_stone8_1 20180
+#define $item_fireplace_stone5_2 20181
+#define $item_fireplace_stone6_2 20182
+#define $item_fireplace_stone7_2 20183
+#define $item_fireplace_stone8_2 20184
+#define $item_fireplace_stone9_1 20185
+#define $item_fireplace_stone10_1 20186
+#define $item_fireplace_stone11_1 20187
+#define $item_fireplace_stone12_1 20188
+#define $item_fireplace_stone9_2 20189
+#define $item_fireplace_stone10_2 20190
+#define $item_fireplace_stone11_2 20191
+#define $item_fireplace_stone12_2 20192
+#define $item_fireplace_stone13_1 20193
+#define $item_fireplace_stone14_1 20194
+#define $item_fireplace_stone14_2 20195
+#define $item_fireplace_stone13_2 20196
+
+#define $item_chimney1_1 20197
+#define $item_chimney2_1 20198
+#define $item_chimney2_2 20199
+#define $item_chimney1_2 20200
+#define $item_chimney2_1 20201
+#define $item_chimney2_2 20202
+#define $item_chimney3_2 20203
+#define $item_chimney3 20204
+#define $item_chimney3_1 20205
+
+#define $item_firepit 20206
+#define $item_campfire 20207

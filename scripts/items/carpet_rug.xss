@@ -1259,3 +1259,303 @@ SECTION ITEM $item_carpet_grey_12
 {
 ID 10a3
 }
+
+SECTION ITEM $item_rug_brown_bear1_1
+{
+	ID 1e36
+}
+
+SECTION ITEM $item_rug_brown_bear2_1
+{
+	ID 1e37
+}
+
+SECTION ITEM $item_rug_brown_bear3_1
+{
+	ID 1e38
+}
+
+SECTION ITEM $item_rug_brown_bear4_1
+{
+	ID 1e39
+}
+
+SECTION ITEM $item_rug_brown_bear5_1
+{
+	ID 1e3a
+}
+
+SECTION ITEM $item_rug_brown_bear6_1
+{
+	ID 1e3b
+}
+
+SECTION ITEM $item_rug_brown_bear7_1
+{
+	ID 1e3c
+}
+
+SECTION ITEM $item_rug_brown_bear8_1
+{
+	ID 1e3d
+}
+
+SECTION ITEM $item_rug_brown_bear9_1
+{
+	ID 1e3e
+}
+
+SECTION ITEM $item_rug_brown_bear1_2
+{
+	ID 1e40
+}
+
+SECTION ITEM $item_rug_brown_bear2_2
+{
+	ID 1e41
+}
+
+SECTION ITEM $item_rug_brown_bear3_2
+{
+	ID 1e42
+}
+
+SECTION ITEM $item_rug_brown_bear4_2
+{
+	ID 1e43
+}
+
+SECTION ITEM $item_rug_brown_bear5_2
+{
+	ID 1e44
+}
+
+SECTION ITEM $item_rug_brown_bear6_2
+{
+	ID 1e45
+}
+
+SECTION ITEM $item_rug_brown_bear7_2
+{
+	ID 1e46
+}
+
+SECTION ITEM $item_rug_brown_bear8_2
+{
+	ID 1e47
+}
+
+SECTION ITEM $item_rug_brown_bear9_2
+{
+	ID 1e48
+}
+
+SECTION ITEM $item_rug_polar_bear1_1
+{
+	ID 1e49
+}
+
+SECTION ITEM $item_rug_polar_bear2_1
+{
+	ID 1e4a
+}
+
+SECTION ITEM $item_rug_polar_bear3_1
+{
+	ID 1e4b
+}
+
+SECTION ITEM $item_rug_polar_bear4_1
+{
+	ID 1e4c
+}
+
+SECTION ITEM $item_rug_polar_bear5_1
+{
+	ID 1e4d
+}
+
+SECTION ITEM $item_rug_polar_bear6_1
+{
+	ID 1e4e
+}
+
+SECTION ITEM $item_rug_polar_bear7_1
+{
+	ID 1e4f
+}
+
+SECTION ITEM $item_rug_polar_bear8_1
+{
+	ID 1e50
+}
+
+SECTION ITEM $item_rug_polar_bear9_1
+{
+	ID 1e51
+}
+
+SECTION ITEM $item_rug_polar_bear1_2
+{
+	ID 1e53
+}
+
+SECTION ITEM $item_rug_polar_bear2_2
+{
+	ID 1e54
+}
+
+SECTION ITEM $item_rug_polar_bear3_2
+{
+	ID 1e55
+}
+
+SECTION ITEM $item_rug_polar_bear4_2
+{
+	ID 1e56
+}
+
+SECTION ITEM $item_rug_polar_bear5_2
+{
+	ID 1e57
+}
+
+SECTION ITEM $item_rug_polar_bear6_2
+{
+	ID 1e58
+}
+
+SECTION ITEM $item_rug_polar_bear7_2
+{
+	ID 1e59
+}
+
+SECTION ITEM $item_rug_polar_bear8_2
+{
+	ID 1e5a
+}
+
+SECTION ITEM $item_rug_polar_bear9_2
+{
+	ID 1e5b
+}
+
+SECTION ITEM $item_grass_mat1_1
+{
+ID 11e2
+}
+
+SECTION ITEM $item_grass_mat2_1
+{
+ID 11e3
+}
+
+SECTION ITEM $item_grass_mat1_2
+{
+ID 11e4
+}
+
+SECTION ITEM $item_grass_mat2_2
+{
+ID 11e5
+}
+
+SECTION ITEM $item_woven_mat1_1
+{
+ID 11e6
+}
+
+SECTION ITEM $item_woven_mat2_1
+{
+ID 11e7
+}
+
+SECTION ITEM $item_woven_mat1_2
+{
+ID 11e8
+}
+
+SECTION ITEM $item_woven_mat2_2
+{
+ID 11e9
+}
+
+SECTION ITEM $item_fur_mat1_1
+{
+ID 11f4
+}
+
+SECTION ITEM $item_fur_mat2_1
+{
+ID 11f5
+}
+
+SECTION ITEM $item_fur_mat3_1
+{
+ID 11f6
+}
+
+SECTION ITEM $item_fur_mat4_1
+{
+ID 11f7
+}
+
+SECTION ITEM $item_fur_mat1_2
+{
+ID 11f8
+}
+
+SECTION ITEM $item_fur_mat2_2
+{
+ID 11f9
+}
+
+SECTION ITEM $item_fur_mat3_2
+{
+ID 11fa
+}
+
+SECTION ITEM $item_fur_mat4_2
+{
+ID 11fb
+}
+
+SECTION ITEM $item_fur_mat5_1
+{
+ID 1f73
+}
+
+SECTION ITEM $item_fur_mat6_1
+{
+ID 1f74
+}
+
+SECTION ITEM $item_fur_mat5_2
+{
+ID 1f75
+}
+
+SECTION ITEM $item_fur_mat6_2
+{
+ID 1f76
+}
+
+SECTION ITEM $item_fur_mat7_1
+{
+ID 1f77
+}
+
+SECTION ITEM $item_fur_mat8_1
+{
+ID 1f78
+}
+
+SECTION ITEM $item_fur_mat7_2
+{
+ID 1f79
+}
+
+SECTION ITEM $item_fur_mat8_2
+{
+ID 1f7a
+}

@@ -2848,64 +2848,6 @@ SECTION ITEM $item_e_D
     WEIGHT 250
 }
 
-SECTION ITEM $item_oven-east_deed
-{ // oven-east
-    NAME Oven-east deed
-    ID 14F0
-    DECAY
-    MOREX 213
-}
-
-SECTION ITEM $item_oven
-{ // oven east- pt2
-    ID 092c
-    NAME Oven
-}
-
-SECTION ITEM $item_oven-south_deed
-{ //oven-south
-    NAME oven-south deed
-    ID 14F0
-    DECAY
-    MOREX 214
-}
-
-SECTION ITEM $item_oven_1
-{ // oven south- pt2
-    ID 0931
-    NAME Oven
-}
-
-SECTION ITEM $item_fireplace-east_deed
-{ // Brick-east
-    NAME fireplace-east deed
-    ID 14F0
-    DECAY
-    MOREX 208
-}
-
-SECTION ITEM $item_fireplace
-{ // brick east- pt2
-    ID 0936
-    NAME fireplace
-}
-
-SECTION ITEM $item_fireplace-south_deed
-{ // Brick-south
-    NAME fireplace-south deed
-    ID 14F0
-    DECAY
-    MOREX 209
-}
-
-SECTION ITEM $item_fireplace_1
-{ // brick south- pt2
-    ID 0944
-    NAME Fireplace
-}
-
-
-
 //********************mounts for npcs**********************
 SECTION ITEM $item_tan_horse
 {

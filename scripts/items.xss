@@ -11,6 +11,7 @@
 #include scripts/items/beard.xss
 #include scripts/items/carpet_rug.xss
 #include scripts/items/decorations.xss
+#include scripts/items/fireplaces.xss
 #include scripts/items/hair.xss
 #include scripts/items/items.xss
 #include scripts/items/potions.xss

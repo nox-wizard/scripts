@@ -121,7 +121,7 @@
 #define $item_bow 116
 #define $item_crossbow 117
 #define $item_heavy_crossbow 118
-
+#define $item_sledge_hammer_1 20151
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 ///////////////////////////////////////////////////
@@ -1654,6 +1654,8 @@
 #define $item_folded_blanket_poo 20106
 #define $item_folded_sheet 20107
 #define $item_small_pillow 20108
+
+//banner
 #define $item_e 20109
 #define $item_n 20110
 #define $item_small_n 20111
@@ -1674,16 +1676,8 @@
 #define $item_e_B 20126
 #define $item_e_C 20127
 #define $item_e_D 20128
-#define $item_oven-east_deed 20129
-#define $item_oven 20130
-#define $item_oven-south_deed 20131
-#define $item_oven_1 20132
-#define $item_sledge_hammer_1 20151
-#define $item_fireplace-east_deed 20153
-#define $item_fireplace 20154
-#define $item_fireplace-south_deed 20155
-#define $item_fireplace_1 20156
 
+//npc mount
 #define $item_tan_horse 25000
 #define $item_grey_horse 25001
 #define $item_light_brown_horse 25002
