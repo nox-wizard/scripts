@@ -1,118 +1,17 @@
-public _splititem1less(const itm, const chr)
-{
-	/*
-	new scriptid = chr_getProperty(itm, IP_SCRIPTID);
-	new itemdel[50]:
-	sprintf(itemdel, "%s", getDefinefromInt(scriptid));
-	new lenght = strlen(itmdel);
-	itemdel[lenght] = ' ';
-	trim(itemdel);
-	lenght = lenght - 1;
-	sprintf(itemdel, "%s%d", itemdel, lenght);
-	new additem = getIntfromDefine(itemdel); //one left pile
-	itm_reduceAmount(itm, 1);
-	itm_createInBp(additem, chr);
-	*/
-}
+//use _SplitAndFlip to flip (turn) an item or to split it (changing a picture pile of bottles into another for example)
 
-public _splititem2less(const itm, const chr)
+public _SplitAndFlip(const itm, const chr)
 {
-	/*
-	new scriptid = chr_getProperty(itm, IP_SCRIPTID);
-	new itemdel[50]:
-	sprintf(itemdel, "%s", getDefinefromInt(scriptid));
-	new lenght = strlen(itmdel);
-	itemdel[lenght] = ' ';
-	trim(itemdel);
-	lenght = lenght - 1;
-	sprintf(itemdel, "%s%d", itemdel, lenght);
-	new additem = getIntfromDefine(itemdel); //one left pile
-	itm_reduceAmount(itm, 1);
-	itm_createInBp(additem, chr);
-	*/
-}
-
-public _splititem3less(const itm, const chr)
-{
-	/*
-	new scriptid = chr_getProperty(itm, IP_SCRIPTID);
-	new itemdel[50]:
-	sprintf(itemdel, "%s", getDefinefromInt(scriptid));
-	new lenght = strlen(itmdel);
-	itemdel[lenght] = ' ';
-	trim(itemdel);
-	lenght = lenght - 1;
-	sprintf(itemdel, "%s%d", itemdel, lenght);
-	new additem = getIntfromDefine(itemdel); //one left pile
-	itm_reduceAmount(itm, 1);
-	itm_createInBp(additem, chr);
-	*/
-}
-
-public flipitemnext(const itm, const chr)
-{
-	/*
-	new scriptid = chr_getProperty(itm, IP_SCRIPTID);
-	new itemdel[50]:
-	sprintf(itemdel, "%s", getDefinefromInt(scriptid));
-	new lenght = strlen(itmdel);
-	itemdel[lenght] = ' ';
-	trim(itemdel);
-	lenght = lenght + 1;
-	sprintf(itemdel, "%s%d", itemdel, lenght);
-	new additem = getIntfromDefine(itemdel); //next item
-	itm_reduceAmount(itm, 1);
-	itm_createInBp(additem, chr);
-	*/
-}
-
-public flipitem1less(const itm, const chr)
-{
-	/*
-	new scriptid = chr_getProperty(itm, IP_SCRIPTID);
-	new itemdel[50]:
-	sprintf(itemdel, "%s", getDefinefromInt(scriptid));
-	new lenght = strlen(itmdel);
-	itemdel[lenght] = ' ';
-	trim(itemdel);
-	lenght = lenght - 1;
-	sprintf(itemdel, "%s%d", itemdel, lenght);
-	new additem = getIntfromDefine(itemdel); //one left pile
-	itm_reduceAmount(itm, 1);
-	itm_createInBp(additem, chr);
-	*/
-}
-
-public flipitem2less(const itm, const chr)
-{
-	/*
-	new scriptid = chr_getProperty(itm, IP_SCRIPTID);
-	new itemdel[50]:
-	sprintf(itemdel, "%s", getDefinefromInt(scriptid));
-	new lenght = strlen(itmdel);
-	itemdel[lenght] = ' ';
-	trim(itemdel);
-	lenght = lenght - 2;
-	sprintf(itemdel, "%s%d", itemdel, lenght);
-	new additem = getIntfromDefine(itemdel); //one left pile
-	itm_reduceAmount(itm, 1);
-	itm_createInBp(additem, chr);
-	*/
-}
-
-public flipitem3less(const itm, const chr)
-{
-	/*
-	new scriptid = chr_getProperty(itm, IP_SCRIPTID);
-	new itemdel[50]:
-	sprintf(itemdel, "%s", getDefinefromInt(scriptid));
-	new lenght = strlen(itmdel);
-	itemdel[lenght] = ' ';
-	trim(itemdel);
-	lenght = lenght - 3;
-	sprintf(itemdel, "%s%d", itemdel, lenght);
-	new additem = getIntfromDefine(itemdel); //one left pile
-	itm_reduceAmount(itm, 1);
-	itm_createInBp(additem, chr);
-	*/
+	new itmx = itm_getProperty(itm, IP_POSITION, IP2_X); // Ausgabe der
+	new itmy = itm_getProperty(itm, IP_POSITION, IP2_Y); // Char und der Item Position
+	new itmz = itm_getProperty(itm, IP_POSITION, IP2_Z);
+	
+	printf("item is %d and at: %d, %d^n", itm,itmx,itmy);
+	//check if character can move the item
+	//ratio = -1: item too far
+	//ratio = 0: item too heavy
+	//ratio > 10: item can be moved
+	new ratio = chr_canMoveItem(chr,itm,true);
+	if(ratio >= 10)
+		itm_flip(itm);
 }

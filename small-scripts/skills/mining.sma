@@ -320,10 +320,11 @@ public __nxw_smeltOre(const cc, const color, ore)
 public blacksmith(const itm, const chr)
 {
 bypass();
-printf("enter smith");
+//printf("enter smith");
 new itmx = itm_getProperty(itm, IP_POSITION, IP2_X); // Ausgabe der
 new itmy = itm_getProperty(itm, IP_POSITION, IP2_Y); // Char und der Item Position
 new itmz = itm_getProperty(itm, IP_POSITION, IP2_Z);
+//printf("itmx: %d, itmy: %d^n", itmx, itmy);
 new chrz = chr_getProperty(chr, CP_POSITION, CP2_Z);
 new chrx = chr_getProperty(chr, CP_POSITION, CP2_X); // um den Abstand bestimmen 
 new chry = chr_getProperty(chr, CP_POSITION, CP2_Y); // zu koennen

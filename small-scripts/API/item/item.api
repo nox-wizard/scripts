@@ -155,16 +155,19 @@ stock itm_moveToVec(const item, pos[3])
 
 /*!
 \author Fax
-\fn itm_getPosition(const item, &x, &y, &z)
+\fn itm_getPosition(const item, &itmx, &itmy, &itmz)
 \param item the item
 \param x,y,z: variables to be filled with coordinates
 \brief gets the position of an item
 */
 stock itm_getPosition(const item, &x, &y, &z)
 {
-	x = itm_getProperty(item,IP_POSITION,CP2_X);
-	y = itm_getProperty(item,IP_POSITION,CP2_Y);
-	z = itm_getProperty(item,IP_POSITION,CP2_Z);
+	if(!isItem(item)) return INVALID
+	x = itm_getProperty(item, IP_POSITION, IP2_X);
+	y = itm_getProperty(item,227,1);
+	z = itm_getProperty(item,227,2);
+	printf("item: %d at %d", item, x);
+	return OK;
 }
 
 

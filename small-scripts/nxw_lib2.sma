@@ -585,10 +585,11 @@ The character can reach the item if this is within 1 tile from the character
 */
 stock chr_canReachItem(const chr, const itm)
 {
-	new x,y,z,x1,y1,z1;
+	new x,y,z,itmx,itmy,itmz;
+	itm_getPosition(itm,itmx,itmy,itmz);
 	chr_getPosition(chr,x,y,z);
-	itm_getPosition(itm,x1,y1,z1);
-	if(-1 <= x - x1 <= 1 && -1 <= y - y1 <= 1)
+	printf("char is %d and at: %d, %d, item is %d and at: %d, %d^n", chr,x,y,itm,itmx,itmy);
+	if(-1 <= x - itmx <= 1 && -1 <= y - itmy <= 1)
 		return true;
 	return false;
 }
