@@ -39,10 +39,11 @@ static houseButton[housepages][house_buttons] = {
 
 public housestart(const itm, const chr)
 {
+	house_getProperty(itm, HP_SERIAL);
 	menu_house(chr, 1);
 }
 
-public menu_house(const chr, const pagenumber)
+public menu_house(const chr, const house, const pagenumber)
 {
 	new tempStr[100];
 	new house_cllbck[50];
