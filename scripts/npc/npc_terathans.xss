@@ -57,7 +57,7 @@ SECTION NPC $npc_a_terathan_warrior
     DIRECTION E
     BACKPACK
     ITEM $item_halberd
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_potions
     LOOT $loot_potions
     LOOT $loot_uncut_gems

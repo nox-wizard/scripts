@@ -227,7 +227,7 @@ SECTION BESTSKILL $skill_poisoning
 SECTION BESTSKILL $skill_archery
 { // ARCHERY
     PACKITEM $item_bow_practice_weapon_
-    PACKITEM $item_arrow_6
+    PACKITEM $item_arrow 25
 }
 
 SECTION BESTSKILL $skill_spirit_speaking

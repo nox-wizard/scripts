@@ -1379,19 +1379,19 @@ SECTION MAKEMENU 61
     0F40 Five Arrows
     RESOURCE 5
     SKILL 150
-    ADDITEM $item_arrow_2
+    ADDITEM $item_arrow 5
     0F41 Ten Arrows
     RESOURCE 10
     SKILL 150
-    ADDITEM $item_arrow_3
+    ADDITEM $item_arrow 10
     0F41 Twenty Arrows
     RESOURCE 20
     SKILL 150
-    ADDITEM $item_arrow_4
+    ADDITEM $item_arrow 20
     0F41 Fifty Arrows
     RESOURCE 50
     SKILL 150
-    ADDITEM $item_arrow_5
+    ADDITEM $item_arrow 50
 }
 
 SECTION MAKEMENU 62

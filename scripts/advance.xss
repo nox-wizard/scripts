@@ -72,7 +72,7 @@ SECTION ADVANCEMENT $advance_archer
 	ARCHERY 940
 	TACTICS 940
 	ITEM $item_a_magic_bow_of_ruin
-	ITEM $item_arrow_1
+	ITEM $item_arrow 100
 }
 
 // Master Mage

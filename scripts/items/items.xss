@@ -7609,14 +7609,6 @@ SECTION ITEM $item_fruit_basket
     VALUE 15
 }
 
-SECTION ITEM $item_arrow_1
-{ // stack of 100 arrows, used on Lizard Archer
-    ID 0F3F
-    VALUE 4
-    AMOUNT 100
-    DECAY
-}
-
 SECTION ITEM $item_pots_of_wax
 { pot of wax
     ID 142a
@@ -7807,27 +7799,11 @@ SECTION ITEM $item_piles_of_wool
 }
 
 
-SECTION ITEM $item_arrow_2
-{
-    ID 0F3F
-    VALUE 4
-    AMOUNT 5
-    DECAY
-}
-
 SECTION ITEM $item_crossbow_bolt_1
 {
     ID 1BFB
     VALUE 4
     AMOUNT 5
-    DECAY
-}
-
-SECTION ITEM $item_arrow_3
-{
-    ID 0F3F
-    VALUE 4
-    AMOUNT 10
     DECAY
 }
 
@@ -7839,27 +7815,11 @@ SECTION ITEM $item_crossbow_bolt_2
     DECAY
 }
 
-SECTION ITEM $item_arrow_4
-{
-    ID 0F3F
-    VALUE 4
-    AMOUNT 20
-    DECAY
-}
-
 SECTION ITEM $item_crossbow_bolt_3
 {
     ID 1BFB
     VALUE 4
     AMOUNT 10
-    DECAY
-}
-
-SECTION ITEM $item_arrow_5
-{
-    ID 0F3F
-    VALUE 4
-    AMOUNT 50
     DECAY
 }
 
@@ -7870,7 +7830,6 @@ SECTION ITEM $item_crossbow_bolt_4
     AMOUNT 50
     DECAY
 }
-
 
 SECTION ITEM $item_shafts
 {
@@ -9578,15 +9537,6 @@ SECTION ITEM $item_sulfuric_ash_spawner
     VISIBLE 1
     AMOUNT 1
 }
-
-SECTION ITEM $item_arrow_7
-{ // stack of 10 arrows
-    ID 0F3F
-    VALUE 4
-    AMOUNT 10
-    DECAY
-}
-
 
 SECTION ITEM $item_pet_horse
 {
@@ -11584,15 +11534,6 @@ SECTION ITEM $item_a_magical_wizard`s_hat
     DYE 1
     DECAY
     VALUE 75
-}
-
-SECTION ITEM $item_arrow_8
-{
-    ID 0F3F
-    VALUE 4
-    AMOUNT 400
-    DECAY
-    WEIGHT 2
 }
 
 SECTION ITEM $item_crossbow_bolt_5

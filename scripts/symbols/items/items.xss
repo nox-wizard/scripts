@@ -1387,7 +1387,6 @@
 #define $item_grape_bunches 5055
 #define $item_peaches 5056
 #define $item_fruit_basket 5057
-#define $item_arrow_1 5058
 #define $item_a_platemail_of_durability 5059
 #define $item_a_plate_gorget_of_duribility 5060
 #define $item_plate_gloves_of_duribility 5061
@@ -1463,13 +1462,9 @@
 #define $item_piles_of_wool 5144
 #define $item_goat_spawner 5145
 #define $item_glacial_staff 5146
-#define $item_arrow_2 5500
 #define $item_crossbow_bolt_1 5501
-#define $item_arrow_3 5502
 #define $item_crossbow_bolt_2 5503
-#define $item_arrow_4 5504
 #define $item_crossbow_bolt_3 5505
-#define $item_arrow_5 5506
 #define $item_crossbow_bolt_4 5507
 #define $item_shafts 5508
 #define $item_shafts_1 5509
@@ -1559,7 +1554,6 @@
 #define $item_instruments_list 7009
 #define $item_blacksmith_tools_list 7010
 #define $item_clean_bandages 7011
-#define $item_arrow_6 7012
 #define $item_weapons_list_1 7013
 #define $item_shafts_4 7014
 #define $item_feathers 7015
@@ -1748,7 +1742,6 @@
 #define $item_daemon_bone_gloves 7392
 #define $item_daemon_bone_helm 7393
 #define $item_daemon_bone_legs 7394
-#define $item_arrow_7 7395
 #define $item_pet_horse 7500
 #define $item_pet_ostard 7501
 #define $item_pet_llama 7502
@@ -2254,7 +2247,6 @@
 #define $item_a_treasure_map_lv3_ 20024
 #define $item_a_treasure_map_lv5_ 20025
 #define $item_a_magical_wizard`s_hat 20026
-#define $item_arrow_8 20067
 #define $item_crossbow_bolt_5 20068
 #define $item_a_large_leather_pillow 20101
 #define $item_a_medium_leather_pillow 20102

@@ -1614,7 +1614,7 @@ SECTION NPC $npc_a_dread_spider
     COLOR 0453
     DIRECTION N
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     PACKITEM $item_spiders_silk
     PACKITEM $item_spiders_silk
     PACKITEM $item_spiders_silk
@@ -1661,7 +1661,7 @@ SECTION NPC $npc_a_giant_spider
     ID 001c
     DIRECTION N
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     PACKITEM $item_spiders_silk
     PACKITEM $item_spiders_silk
     PACKITEM $item_spiders_silk

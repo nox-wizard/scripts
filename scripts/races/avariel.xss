@@ -103,7 +103,7 @@ $item_race_avariel_female_leather_tunic
 $item_race_avariel_male_leather_tunic
 //$item_race_avariel_wings
 $item_bow
-$item_arrow_3
+$item_arrow 10
 }
 
 SECTION DESCRIPTION $race_avariel

@@ -254,7 +254,7 @@ SECTION NPC $npc_a_skeletal_knight
     ITEM $item_scimitar
     PACKITEM $item_scimitar
     PACKITEM $item_wooden_shield
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_jewelry
     LOOT $loot_jewelry
     LOOT $loot_jewelry

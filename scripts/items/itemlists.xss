@@ -865,8 +865,8 @@ SECTION ITEMLIST $itemlist_high_level_dungeon_chest_spawner
 SECTION ITEMLIST $itemlist_low_level_dungeon_chest_items
 { low level dungeon chest items (72,99002)
     //$$ low level dungeon chest items
-    $item_arrow_2
-    $item_arrow_3
+    $item_arrow 5
+    $item_arrow 10
     $item_axe
     $item_bardiche
     $item_battle_axe

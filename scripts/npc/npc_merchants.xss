@@ -2878,14 +2878,14 @@ SECTION NPC $npc_bowyer_m
     RSHOPITEM $item_bow
     RSHOPITEM $item_crossbow
     RSHOPITEM $item_heavy_crossbow
-    RSHOPITEM $item_arrow_8
+    RSHOPITEM $item_arrow 400
     RSHOPITEM $item_crossbow_bolt_5
     RSHOPITEM $item_shafts_4
     RSHOPITEM $item_feathers
     SELLITEM $item_bow
     SELLITEM $item_crossbow
     SELLITEM $item_heavy_crossbow
-    SELLITEM $item_arrow_8
+    SELLITEM $item_arrow
     SELLITEM $item_crossbow_bolt_5
     SELLITEM $item_shafts_4
     SELLITEM $item_feathers
@@ -2949,14 +2949,14 @@ SECTION NPC $npc_bowyer_f
     RSHOPITEM $item_bow
     RSHOPITEM $item_crossbow
     RSHOPITEM $item_heavy_crossbow
-    RSHOPITEM $item_arrow_8
+    RSHOPITEM $item_arrow 400
     RSHOPITEM $item_crossbow_bolt_5
     RSHOPITEM $item_shafts_4
     RSHOPITEM $item_feathers
     SELLITEM $item_bow
     SELLITEM $item_crossbow
     SELLITEM $item_heavy_crossbow
-    SELLITEM $item_arrow_8
+    SELLITEM $item_arrow
     SELLITEM $item_crossbow_bolt_5
     SELLITEM $item_shafts_4
     SELLITEM $item_feathers
@@ -8348,14 +8348,14 @@ SECTION NPC $npc_bowyer_m_1
     RSHOPITEM $item_bow
     RSHOPITEM $item_crossbow
     RSHOPITEM $item_heavy_crossbow
-    RSHOPITEM $item_arrow_8
+    RSHOPITEM $item_arrow 400
     RSHOPITEM $item_crossbow_bolt_5
     RSHOPITEM $item_shafts_4
     RSHOPITEM $item_feathers
     SELLITEM $item_bow
     SELLITEM $item_crossbow
     SELLITEM $item_heavy_crossbow
-    SELLITEM $item_arrow_8
+    SELLITEM $item_arrow
     SELLITEM $item_crossbow_bolt_5
     SELLITEM $item_shafts_4
     SELLITEM $item_feathers
@@ -8403,14 +8403,14 @@ SECTION NPC $npc_bowyer_f_1
     RSHOPITEM $item_bow
     RSHOPITEM $item_crossbow
     RSHOPITEM $item_heavy_crossbow
-    RSHOPITEM $item_arrow_8
+    RSHOPITEM $item_arrow 400
     RSHOPITEM $item_crossbow_bolt_5
     RSHOPITEM $item_shafts_4
     RSHOPITEM $item_feathers
     SELLITEM $item_bow
     SELLITEM $item_crossbow
     SELLITEM $item_heavy_crossbow
-    SELLITEM $item_arrow_8
+    SELLITEM $item_arrow
     SELLITEM $item_crossbow_bolt_5
     SELLITEM $item_shafts_4
     SELLITEM $item_feathers

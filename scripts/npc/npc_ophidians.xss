@@ -19,7 +19,7 @@ SECTION NPC $npc_an_ophidian_warrior
     DIRECTION E
     BACKPACK
     ITEM $item_halberd
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_uncut_gems
     LOOT $loot_potions
     LOOT $loot_potions
@@ -61,7 +61,7 @@ SECTION NPC $npc_an_ophidian_enforcer
     DIRECTION E
     BACKPACK
     ITEM $item_halberd
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_potions
     LOOT $loot_potions
     LOOT $loot_uncut_gems
@@ -145,7 +145,7 @@ SECTION NPC $npc_an_ophidian_avenger
     DIRECTION E
     BACKPACK
     ITEM $item_npc_equiplist_bardiches
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_circle_1-5_spells
     LOOT $loot_reagents
     LOOT $loot_reagents
@@ -202,7 +202,7 @@ SECTION NPC $npc_an_ophidian_apprentice_mage
     DIRECTION E
     BACKPACK
     ITEM $item_quarter_staff
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells
     LOOT $loot_reagents
@@ -263,7 +263,7 @@ SECTION NPC $npc_an_ophidian_shaman
     SKIN 0000
     DIRECTION E
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_6-8_spells

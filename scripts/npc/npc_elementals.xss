@@ -354,7 +354,7 @@ SECTION NPC $npc_an_ice_elemental
     SKIN 0480
     DIRECTION N
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     GOLD 100 200

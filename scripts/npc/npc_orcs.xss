@@ -105,7 +105,7 @@ SECTION NPC $npc_an_orcish_mage
     FX2 20
     NPCAI $npc_ai_evil
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     MAGICLEVEL 5
     SPATTACK 7552
     MAGICSPHERE $sphere_earthpeople

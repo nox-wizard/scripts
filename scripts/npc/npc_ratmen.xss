@@ -90,7 +90,7 @@ SECTION NPC $npc_ratman_archer
     DIRECTION N
     BACKPACK
     ITEM $item_bow
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     GOLD 200 250
     STR 96 120
     DEX 90 110

@@ -133,7 +133,7 @@ SECTION NPC $npc_lizardman_archer
     DIRECTION N
     BACKPACK
     ITEM $item_bow
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     SPEECH $speech_lizardman
     LOOT $loot_jewelry
     LOOT $loot_jewelry

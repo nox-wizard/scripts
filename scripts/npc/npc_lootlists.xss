@@ -1022,7 +1022,7 @@ SECTION LOOTLIST $loot_misc_stuff
     $item_lap_harp
     $item_lute
     $item_lute_1
-    $item_arrow_6
+    $item_arrow 25
     $item_scissors
     $item_torch
     $item_lantern

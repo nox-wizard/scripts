@@ -1993,7 +1993,7 @@ SECTION NPC $npc_kindor_aedrat
     ITEM $item_plate_leggings
     ITEM $item_plate_sleeves
     ITEM $item_bow
-    PACKITEM $item_arrow_1
+    PACKITEM $item_arrow 100
     ITEM $item_male_plain_robe_list
     COLORLIST 1
     ITEM $item_male_plain_cape_list

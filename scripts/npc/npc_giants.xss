@@ -19,7 +19,7 @@ SECTION NPC $npc_an_ogre
     DIRECTION N
     BACKPACK
     ITEM $item_club
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     PACKITEM $item_club
     NPCWANDER 4
     FX1 -1
@@ -59,7 +59,7 @@ SECTION NPC $npc_an_ettin
     SKIN 0000
     DIRECTION N
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     LOOT $loot_jewelry
@@ -365,7 +365,7 @@ SECTION NPC $npc_a_cyclopedian_warrior
     DIRECTION E
     BACKPACK
     GOLD 200 300
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     ITEM $item_npc_equiplist_war_hammer
     LOOT $loot_potions
     LOOT $loot_potions

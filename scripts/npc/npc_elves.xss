@@ -590,7 +590,7 @@ SECTION NPC $npc_frost_elf_archer
     COLOR 0481
     ITEM $item_a_leather_gorget
     COLOR 0481
-    PACKITEM $item_arrow_1
+    PACKITEM $item_arrow 100
     LOOT $loot_uncut_gems
     LOOT $loot_omnivores_food
     LOOT $loot_misc_stuff

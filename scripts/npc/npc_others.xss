@@ -12,7 +12,7 @@ SECTION NPC $npc_a_gargoyle
     SKIN 0000
     DIRECTION N
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_circle_1-5_spells
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
@@ -55,7 +55,7 @@ SECTION NPC $npc_a_stone_gargoyle
     SKINLIST 7
     DIRECTION N
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     LOOT $loot_circle_1-5_spells
     LOOT $loot_iron_ore
     LOOT $loot_jewelry
@@ -317,7 +317,7 @@ SECTION NPC $npc_a_gazer
     ID 0016
     DIRECTION N
     BACKPACK
-    PACKITEM $item_arrow_7
+    PACKITEM $item_arrow 10
     PACKITEM $item_nightshade
     PACKITEM $item_nightshade
     PACKITEM $item_nightshade
