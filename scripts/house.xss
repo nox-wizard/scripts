@@ -1810,7 +1810,7 @@ SECTION HOUSE 253
 	HOUSE_ITEM 473
 	HOUSE_ITEM 474
 }
-	
+
 SECTION HOUSE 254
 {
 	NAME small Bed east
@@ -1827,6 +1827,35 @@ SECTION HOUSE 254
 	HOUSE_ITEM 476
 }
 
+SECTION HOUSE 255
+{
+	NAME stone fountain
+	NOKEY
+	NOREALMULTI
+	SPACEX1 2
+	SPACEX2 2
+	SPACEY1 2
+	SPACEY2 2
+	CHARX -4
+	CHARY -4
+	CHARZ 8
+	HOUSE_ITEM 479
+	HOUSE_ITEM 480
+	HOUSE_ITEM 481
+	HOUSE_ITEM 482
+	HOUSE_ITEM 483
+	HOUSE_ITEM 484
+	HOUSE_ITEM 485
+	HOUSE_ITEM 486
+	HOUSE_ITEM 487
+	HOUSE_ITEM 488
+	HOUSE_ITEM 489
+	HOUSE_ITEM 490
+	HOUSE_ITEM 491
+	HOUSE_ITEM 492
+	HOUSE_ITEM 493
+	HOUSE_ITEM 494
+}
 
 //////////////////House Item//////////////////////
 SECTION HOUSE ITEM 1
@@ -5696,6 +5725,151 @@ SECTION HOUSE ITEM 478
 {
 	//NAME Bed-PT2-south
 	ITEM $item_basfur_bed_headboard_A2_1
+	X 0
+	Y 3
+	Z 0
+}	
+
+//white stone fountain
+SECTION HOUSE ITEM 479
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain1
+	X 0
+	Y 3
+	Z 0
+}	
+
+SECTION HOUSE ITEM 480
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain2
+	X 1
+	Y 3
+	Z 0
+}	
+
+SECTION HOUSE ITEM 481
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain3
+	X 2
+	Y 3
+	Z 0
+}	
+
+SECTION HOUSE ITEM 482
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain4
+	X 3
+	Y 3
+	Z 0
+}	
+
+SECTION HOUSE ITEM 483
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain5
+	X 3
+	Y 2
+	Z 0
+}	
+
+SECTION HOUSE ITEM 484
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain6
+	X 3
+	Y 1
+	Z 0
+}	
+
+SECTION HOUSE ITEM 485
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain7
+	X 3
+	Y 0
+	Z 0
+}	
+
+SECTION HOUSE ITEM 486
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain8
+	X 2
+	Y 0
+	Z 0
+}	
+
+SECTION HOUSE ITEM 487
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain9
+	X 2
+	Y 1
+	Z 0
+}	
+
+SECTION HOUSE ITEM 488
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain10
+	X 2
+	Y 2
+	Z 0
+}	
+
+SECTION HOUSE ITEM 489
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain11
+	X 1
+	Y 2
+	Z 0
+}	
+
+SECTION HOUSE ITEM 490
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain12
+	X 0
+	Y 2
+	Z 0
+}	
+
+SECTION HOUSE ITEM 491
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain13
+	X 0
+	Y 1
+	Z 0
+}	
+
+SECTION HOUSE ITEM 492
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain14
+	X 1
+	Y 1
+	Z 0
+}	
+
+SECTION HOUSE ITEM 493
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain15
+	X 1
+	Y 0
+	Z 0
+}	
+
+SECTION HOUSE ITEM 494
+{
+	//NAME white fountain
+	ITEM $item_stone_fountain16
 	X 0
 	Y 0
 	Z 0

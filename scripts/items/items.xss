@@ -1,9 +1,9 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (items.xss)									  ||
-// || Maintained by Sparhawk										  ||
-// || Last Update 04-aug-2002											 ||
+// || NoX-Wizard Scripts (items.xss)					  ||
+// || Maintained by Sparhawk						  ||
+// || Last Update 04-aug-2002						  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.70s or later					  ||
+// || This script requires NoX-Wizard 0.70s or later			  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 SECTION ITEM $item_nodraw

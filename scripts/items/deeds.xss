@@ -43,6 +43,31 @@ SECTION ITEM $item_arbitoir_deed
 	///SUBSECTION Multis Deeds
 }
 
+SECTION ITEM $item_white_fountain_deed
+{
+	NAME white fountain deed
+	ID 14F0
+	DECAY
+	MOREX 255
+	TYPE $itype_multideed
+
+	///CATEGORY Deeds
+	///DESCRIPTION White Fountain Deed
+}
+
+SECTION ITEM $item_brown_fountain_deed
+{
+	ID 14F0
+	MOREX 256
+	TYPE $itype_multideed
+	DECAY
+	VALUE 50000
+
+	///CATEGORY Deeds
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Brown Fountain Deed
+}
+
 SECTION ITEM $item_deed
 {
 	ID 14F0

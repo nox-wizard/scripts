@@ -588,186 +588,212 @@ SECTION ITEM $item_stalagmite7_2
 //////////////////////////////////////
 SECTION ITEM $item_fountain
 {
+	WEIGHT 250
 	ID 090d
 }
 	
 SECTION ITEM $item_stone_fountain1
 {
+	WEIGHT 250
 	ID 1731
 }
 	
 SECTION ITEM $item_stone_fountain2
 {
+	WEIGHT 250
 	ID 1732
 }
 	
 SECTION ITEM $item_stone_fountain3
 {
+	WEIGHT 250
 	ID 1733
 }
 	
 SECTION ITEM $item_stone_fountain4
 {
+	WEIGHT 250
 	ID 1734
 }
 	
 SECTION ITEM $item_stone_fountain5
 {
+	WEIGHT 250
 	ID 1735
 }
 	
 SECTION ITEM $item_stone_fountain6
 {
+	WEIGHT 250
 	ID 1736
 }
 	
 SECTION ITEM $item_stone_fountain7
 {
+	WEIGHT 250
 	ID 1737
 }
 	
 SECTION ITEM $item_stone_fountain8
 {
+	WEIGHT 250
 	ID 1738
 }
 	
 SECTION ITEM $item_stone_fountain9
 {
+	WEIGHT 250
 	ID 1739
 }
 	
 SECTION ITEM $item_stone_fountain10
 {
+	WEIGHT 250
 	ID 173a
 }
 	
 SECTION ITEM $item_stone_fountain11
 {
+	WEIGHT 250
 	ID 173b
 }
 	
 SECTION ITEM $item_stone_fountain12
 {
+	WEIGHT 250
 	ID 173c
 }
 	
 SECTION ITEM $item_stone_fountain13
 {
+	WEIGHT 250
 	ID 173d
 }
 	
 SECTION ITEM $item_stone_fountain14
 {
+	WEIGHT 250
 	ID 173e
 }
 	
 SECTION ITEM $item_stone_fountain15
 {
+	WEIGHT 250
 	ID 173f
 }
 	
 SECTION ITEM $item_stone_fountain16
 {
+	WEIGHT 250
 	ID 1740
 }
-	
-SECTION ITEM $item_stone_fountain17
-{
-	ID 1753
-}
-	
-SECTION ITEM $item_stone_fountain18
-{
-	ID 1757
-}
-	
+
 SECTION ITEM $item_sandstone_fountain1
 {
+	WEIGHT 250
+		WEIGHT 250
 	ID 19c3
 }
 	
 SECTION ITEM $item_sandstone_fountain2
 {
+	WEIGHT 250
 	ID 19c4
 }
 	
 SECTION ITEM $item_sandstone_fountain3
 {
+	WEIGHT 250
 	ID 19c5
 }
 	
 SECTION ITEM $item_sandstone_fountain4
 {
+	WEIGHT 250
 	ID 19c6
 }
 	
 SECTION ITEM $item_sandstone_fountain5
 {
+	WEIGHT 250
 	ID 19c7
 }
 	
 SECTION ITEM $item_sandstone_fountain6
 {
+	WEIGHT 250
 	ID 19c8
 }
 	
 SECTION ITEM $item_sandstone_fountain7
 {
+	WEIGHT 250
 	ID 19c9
 }
 	
 SECTION ITEM $item_sandstone_fountain8
 {
+	WEIGHT 250
 	ID 19ca
 }
 	
 SECTION ITEM $item_sandstone_fountain9
 {
+	WEIGHT 250
 	ID 19cb
 }
 	
 SECTION ITEM $item_sandstone_fountain10
 {
+	WEIGHT 250
 	ID 19cc
 }
 	
 SECTION ITEM $item_sandstone_fountain11
 {
+	WEIGHT 250
 	ID 19cd
 }
 	
 SECTION ITEM $item_sandstone_fountain12
 {
+	WEIGHT 250
 	ID 19ce
 }
 	
 SECTION ITEM $item_sandstone_fountain13
 {
+	WEIGHT 250
 	ID 19cf
 }
 	
 SECTION ITEM $item_sandstone_fountain14
 {
+	WEIGHT 250
 	ID 19d0
 }
 	
 SECTION ITEM $item_sandstone_fountain15
 {
+	WEIGHT 250
 	ID 19d1
 }
 	
 SECTION ITEM $item_sandstone_fountain16
 {
+	WEIGHT 250
 	ID 19d2
 }
 	
 SECTION ITEM $item_sandstone_fountain17
 {
+	WEIGHT 250
 	ID 19e5
 }
 	
 SECTION ITEM $item_sandstone_fountain18
 {
+	WEIGHT 250
 	ID 19e9
 }
 

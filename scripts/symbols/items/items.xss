@@ -33,8 +33,6 @@
 #define $item_stone_fountain14 2715
 #define $item_stone_fountain15 2716
 #define $item_stone_fountain16 2717
-#define $item_stone_fountain17 2718
-#define $item_stone_fountain18 2719
 #define $item_sandstone_fountain1 2720
 #define $item_sandstone_fountain2 2721
 #define $item_sandstone_fountain3 2722
@@ -909,6 +907,8 @@
 #define $item_dartboard_deed 1599
 #define $item_dartboard_deed_1 1610
 #define $item_townstone_deed 13299
+#define $item_white_fountain_deed 13300
+#define $item_brown_fountain_deed 13301
 
 /////////////////////////////////////////////////
 #define $item_forge_deed 16015
