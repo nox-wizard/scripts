@@ -2391,6 +2391,20 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_WRESTLING ) );
 			addProperty( "Wrestling", str, 0, 0, ( edit ? propSkillWRESTLING : 0 ) );
+			//
+			addProperty( "", "" );
+			//
+			addProperty( "", "" );
+			//
+			addProperty( "", "" );
+			//
+			addProperty( "", "" );
+			//
+			addProperty( "", "" );
+			//
+			addProperty( "", "" );
+			//
+			addProperty( "", "" );
 		}
 		if( page > 16 )
 		{
