@@ -20,12 +20,7 @@
 #define $item_vandyke 20
 #define $item_gm_robe_blue_ 22
 #define $item_a_teleport_rune 23
-#define $item_heater 24
-#define $item_wooden_kite_shield 25
-#define $item_wooden_shield 26
-#define $item_metal_shield 27
-#define $item_chaos_shield 28
-#define $item_order_shield 29
+
 #define $item_stone_of_humility 30
 #define $item_stone_of_honesty 31
 #define $item_stone_of_justice 32
@@ -40,24 +35,14 @@
 #define $item_ankh 41
 #define $item_ankh_1 42
 #define $item_krisna_hair 43
-#define $item_platemail 44
-#define $item_plate_gorget 45
-#define $item_plate_gloves 46
-#define $item_plate_helm 47
-#define $item_plate_leggings 48
-#define $item_plate_sleeves 49
+
+//armor
 #define $item_bone_chest 50
 #define $item_bone_arms 51
 #define $item_bone_gloves 52
 #define $item_bone_helm 53
 #define $item_bone_legs 54
-#define $item_chain_tunic 55
-#define $item_chain_leggings 56
-#define $item_chain_coif 57
-#define $item_ringmail_tunic 58
-#define $item_ringmail_sleeves 59
-#define $item_ringmail_leggings 60
-#define $item_ringmail_gloves 61
+
 #define $item_studded_leather_gorget 62
 #define $item_studded_leather_gloves 63
 #define $item_studded_leather_sleeves 64
@@ -66,55 +51,39 @@
 #define $item_leather_sleeves 67
 #define $item_leather_leggings 68
 #define $item_leather_tunic 69
-#define $item_close_helm 70
-#define $item_a_helmet 71
-#define $item_bascinet 72
-#define $item_nose_helm 73
+
 #define $item_orc_mask 74
 #define $item_leather_shorts 75
 #define $item_female_studded_leather 76
-#define $item_female_plate 77
+#define $item_iron_female_plate 77
 #define $item_female_leather_armor 78
 #define $item_leather_skirt 79
 #define $item_leather_bustier 80
 #define $item_studded_leather_bustier 81
-#define $item_hatchet 82
-#define $item_executioners_axe 83
-#define $item_axe 84
-#define $item_double_axe 85
-#define $item_large_battle_axe 86
+
+//tools
 #define $item_pickaxe 87
-#define $item_war_axe 88
 #define $item_butcher_knife 89
 #define $item_skinning_knife 90
 #define $item_meat_cleaver 91
-#define $item_dagger 92
-#define $item_kryss 93
-#define $item_club 94
-#define $item_hammer_pick 95
-#define $item_mace 96
-#define $item_maul 97
 #define $item_smithy_hammer 98
-#define $item_war_hammer 99
-#define $item_war_mace 100
-#define $item_bardiche 101
-#define $item_halberd 102
+
+//weapon
 #define $item_black_staff 103
 #define $item_gnarled_staff 104
 #define $item_quarter_staff 105
 #define $item_sheperds_crook 106
 #define $item_scepter 107
-#define $item_scimitar 108
-#define $item_long_sword 109
-#define $item_viking_sword 110
-#define $item_broadsword 111
-#define $item_cutlass 112
-#define $item_katana 113
-#define $item_pitchfork 114
-#define $item_spear 115
+
 #define $item_bow 116
 #define $item_crossbow 117
 #define $item_heavy_crossbow 118
+
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+///////////////////////////////////////////////////
+
 #define $item_floor_tile 119
 #define $item_floor_tile_1 120
 #define $item_floor_tile_2 121
@@ -185,9 +154,7 @@
 #define $item_cobblestones_1 188
 #define $item_cobblestones_2 189
 #define $item_cobblestones_3 190
-#define $item_bronze_shield 191
-#define $item_buckler 192
-#define $item_metal_kite_shield 193
+
 #define $item_wooden_logs 194
 #define $item_wooden_logs_1 195
 #define $item_wooden_logs_2 196
@@ -202,6 +169,7 @@
 #define $item_wooden_logs_B 205
 #define $item_wooden_logs_C 206
 #define $item_wooden_logs_D 207
+
 #define $item_stone_floor 208
 #define $item_stone_floor_1 209
 #define $item_stone_floor_2 210
@@ -210,6 +178,7 @@
 #define $item_stone_floor_5 213
 #define $item_stone_floor_6 214
 #define $item_stone_floor_7 215
+
 #define $item_blue_tiles 216
 #define $item_blue_tiles_1 217
 #define $item_blue_tiles_2 218
@@ -219,6 +188,8 @@
 #define $item_blue_tiles_6 221
 #define $item_blue_tiles_7 222
 #define $item_blue_tiles_8 223
+#define $item_blue_tiles_9 193
+
 #define $item_red_tiles 224
 #define $item_red_tiles_1 225
 #define $item_red_tiles_2 226
@@ -228,6 +199,7 @@
 #define $item_red_tiles_6 230
 #define $item_red_tiles_7 231
 #define $item_red_tiles_8 232
+
 #define $item_flagstone 233
 #define $item_sandstone_floor_4 235
 #define $item_sandstone_floor_5 236
@@ -320,68 +292,33 @@
 #define $item_carpet_ZK 323
 #define $item_carpet_ZL 324
 #define $item_carpet_ZM 325
+
+///////////////////////////////////////////////////
+
 #define $item_leather_cap 326
 #define $item_backpack 327
 #define $item_leather_bag 328
-#define $item_barrel 329
-#define $item_round_basket 330
+
 #define $item_pouch 331
-#define $item_square_basket 332
+
 #define $item_silver_chest 333
 #define $item_wooden_box 334
 #define $item_wooden_box_1 720
 #define $item_small_wooden_crate 335
 #define $item_small_wooden_crate_1 721
-#define $item_wooden_keg 336
+
 #define $item_brass_box 337
 #define $item_gold_key 338
 #define $item_iron_key 339
 #define $item_magic_key 340
 #define $item_bronze_key 341
+
+///////////////////////////////////////////////////
+
 #define $item_marble_bench 342
 #define $item_marble_bench_1 343
 #define $item_stone_bench 344
 #define $item_marble_bench_2 345
-#define $item_wooden_bench 346
-#define $item_wooden_bench_1 347
-#define $item_bench 348
-#define $item_bench_1 349
-#define $item_bench_2 350
-#define $item_bench_3 351
-#define $item_bench_4 352
-#define $item_bench_5 353
-#define $item_bench_6 354
-#define $item_bench_7 355
-#define $item_bench_8 356
-#define $item_bench_9 357
-#define $item_bench_A 358
-#define $item_bench_B 359
-#define $item_bench_C 360
-#define $item_bench_D 361
-#define $item_bench_E 362
-#define $item_bench_F 363
-#define $item_a_throne 364
-#define $item_a_throne_1 365
-#define $item_a_wooden_chair 366
-#define $item_a_wooden_chair_1 367
-#define $item_a_wooden_chair_2 368
-#define $item_a_wooden_chair_3 369
-#define $item_a_fancy_chair 370
-#define $item_a_fancy_chair_1 371
-#define $item_a_fancy_chair_2 372
-#define $item_a_fancy_chair_3 373
-#define $item_a_fancy_chair_4 374
-#define $item_a_fancy_chair_5 375
-#define $item_a_fancy_chair_6 376
-#define $item_a_fancy_chair_7 377
-#define $item_a_wooden_chair_4 378
-#define $item_a_wooden_chair_5 379
-#define $item_a_wooden_chair_6 380
-#define $item_a_wooden_chair_7 381
-#define $item_a_straw_chair 382
-#define $item_a_straw_chair_1 383
-#define $item_a_straw_chair_2 384
-#define $item_a_straw_chair_3 385
 #define $item_marble_bench_3 386
 #define $item_marble_bench_4 387
 #define $item_marble_bench_5 388
@@ -392,6 +329,9 @@
 #define $item_stone_chair_1 393
 #define $item_stone_chair_2 394
 #define $item_stone_chair_3 395
+
+///////////////////////////////////////////////////
+
 #define $item_statue 396
 #define $item_statue_1 397
 #define $item_statue_2 398
@@ -407,8 +347,12 @@
 #define $item_statue_C 409
 #define $item_statue_D 410
 #define $item_statue_E 411
+
 #define $item_ankh_of_sacrifice 412
 #define $item_ankh_of_sacrifice_1 413
+
+///////////////////////////////////////////////////
+
 #define $item_alchemical_symbol 414
 #define $item_alchemical_symbol_1 415
 #define $item_alchemical_symbol_2 416
@@ -421,6 +365,9 @@
 #define $item_alchemical_symbol_9 423
 #define $item_alchemical_symbol_A 424
 #define $item_alchemical_symbol_B 425
+
+///////////////////////////////////////////////////
+
 #define $item_batwing 426
 #define $item_blackmoor 427
 #define $item_black_pearl 428
@@ -447,9 +394,15 @@
 #define $item_volcanic_ash 449
 #define $item_dead_wood 450
 #define $item_wyrms_heart 451
+
+///////////////////////////////////////////////////
+
 #define $item_a_map 452
 #define $item_a_book 453
 #define $item_gm_robe_green_ 454
+
+///////////////////////////////////////////////////
+
 #define $item_boots 455
 #define $item_sandles 456
 #define $item_shoes 457
@@ -464,6 +417,7 @@
 #define $item_feathered_hat 466
 #define $item_tricorne_hat 467
 #define $item_jester_hat 468
+
 #define $item_cloak 469
 #define $item_fancy_shirt 470
 #define $item_shirt 471
@@ -474,12 +428,14 @@
 #define $item_a_doublet 476
 #define $item_a_fancy_dress 477
 #define $item_a_plain_dress 478
+
 #define $item_a_skirt 479
 #define $item_short_pants 480
 #define $item_a_kilt 481
 #define $item_long_pants 482
 #define $item_a_half_apron 483
 #define $item_a_full_apron 484
+
 #define $item_a_bandana 485
 #define $item_a_body_sash 486
 #define $item_a_skullcap 487
@@ -489,31 +445,18 @@
 #define $item_a_orc_mask 491
 #define $item_a_tribal_mask 492
 #define $item_a_tribal_mask_1 493
-#define $item_a_two-handed_axe 494
-#define $item_short_spear 495
-#define $item_battle_axe 496
+
+///////////////////////////////////////////////////
+
 #define $item_all_circle_scrolls_list 500
 #define $item_various_weapons_and_armors_list 501
 #define $item_more_weapons_and_armors_list 502
 #define $item_dyes 505
 #define $item_a_dying_tub 506
-#define $item_display_case 507
-#define $item_display_case_1 508
-#define $item_display_case_2 509
-#define $item_display_case_3 510
-#define $item_display_case_4 511
-#define $item_display_case_5 512
-#define $item_display_case_6 513
-#define $item_display_case_7 514
-#define $item_display_case_8 515
-#define $item_display_case_9 516
-#define $item_display_case_A 517
-#define $item_display_case_B 518
-#define $item_display_case_C 519
-#define $item_display_case_D 520
-#define $item_display_case_E 521
-#define $item_display_case_F 522
-#define $item_display_case_G 523
+
+
+///////////////////////////////////////////////////
+
 #define $item_trophy 524
 #define $item_trophy_1 525
 #define $item_trophy_2 526
@@ -528,10 +471,16 @@
 #define $item_trophy_B 535
 #define $item_trophy_C 536
 #define $item_trophy_D 537
+
+///////////////////////////////////////////////////
+
 #define $item_candle 538
 #define $item_candelabra 539
 #define $item_a_candelabra 540
 #define $item_a_brazier 541
+
+///////////////////////////////////////////////////
+
 #define $item_a_metal_door 542
 #define $item_a_metal_door_1 543
 #define $item_a_metal_door_2 544
@@ -576,29 +525,35 @@
 #define $item_wooden_gate_5 583
 #define $item_wooden_gate_6 584
 #define $item_wooden_gate_7 585
+
+///////////////////////////////////////////////////
+
 #define $item_christmas_tree 597
 #define $item_christmas_tree_deed 598
 #define $item_dartboard_deed 599
 #define $item_dartboard 600
-#define $item_forge 601
 #define $item_anvil 602
 #define $item_anvil_1 603
 #define $item_bellows 604
-#define $item_forge_1 605
+#define $item_forge 605
 #define $item_forge_2 606
-#define $item_shovel 607
-#define $item_ 608
+#define $item_forge_1 607
+#define $item_shovel 608
 #define $item_tongs 609
 #define $item_dartboard_deed_1 610
 #define $item_dartboard_1 611
+
 #define $item_stone_table 612
 #define $item_stone_table_1 613
 #define $item_stone_table_2 614
 #define $item_stone_table_3 615
 #define $item_stone_table_4 616
 #define $item_stone_table_5 617
+
 #define $item_bar_door 618
 #define $item_bar_door_1 619
+
+
 #define $item_trashcan_deed 620
 #define $item_trashcan 621
 #define $item_headwear_list 622
@@ -609,17 +564,20 @@
 #define $item_blessed_water 627
 #define $item_bugmans_brew 628
 #define $item_an_efreeti_bottle 629
+#define $item_seasons_greetings 635
+#define $item_fireworks_wand 638
+
+///////////////////////////////////////////////////
+
 #define $item_phoenix_tunic 642
 #define $item_phoenix_gorget 643
 #define $item_phoenix_gloves 644
 #define $item_phoenix_sleeves 645
 #define $item_phoenix_leggings 646
 #define $item_phoenix_helm 647
-#define $item_potted_tree 648
-#define $item_potted_tree_1 649
-#define $item_potted_tree_2 650
-#define $item_potted_tree_3 651
-#define $item_bottle_of_pink_champaine 666
+
+///////////////////////////////////////////////////
+
 #define $item_a_wand_of_greater_healing 680
 #define $item_a_wand_of_energy_vortex 681
 #define $item_a_wand_of_magic_arrow 682
@@ -628,7 +586,11 @@
 #define $item_a_wand_of_summon_daemon 702
 #define $item_a_wand_of_healing 703
 #define $item_a_wand_of_resurrection 704
+
+///////////////////////////////////////////////////
+
 #define $item_fire_mace 705
+
 #define $item_tall_candle 706
 #define $item_a_recall_rune 777
 #define $item_a_spellbook 783
@@ -639,11 +601,14 @@
 #define $item_archer 803
 #define $item_mage 804
 #define $item_armsman 805
+
+///////////////////////////////////////////////////
+
 #define $item_a_clumsy_scroll 810
 #define $item_a_create_food_scroll 811
 #define $item_a_feeblemind_scroll 812
 #define $item_a_heal_scroll 813
-#define $item_a_magic_arrow_scroll 814
+#define $item_magic_arrow_scroll 814
 #define $item_a_night_sight_scroll 815
 #define $item_a_reactive_armor_scroll 816
 #define $item_a_weaken_scroll 817
@@ -651,13 +616,13 @@
 #define $item_a_cunning_scroll 821
 #define $item_a_cure_scroll 822
 #define $item_a_harm_scroll 823
-#define $item_a_magic_trap_scroll 824
-#define $item_a_magic_untrap_scroll 825
+#define $item_magic_trap_scroll 824
+#define $item_magic_untrap_scroll 825
 #define $item_a_protection_scroll 826
 #define $item_a_strength_scroll 827
 #define $item_a_bless_scroll 830
 #define $item_a_fireball_scroll 831
-#define $item_a_magic_lock_scroll 832
+#define $item_magic_lock_scroll 832
 #define $item_a_poison_scroll 833
 #define $item_a_telekinesis_scroll 834
 #define $item_a_teleport_scroll 835
@@ -674,7 +639,7 @@
 #define $item_a_blade_spirits_scroll 850
 #define $item_a_dispel_field_scroll 851
 #define $item_an_incognito_scroll 852
-#define $item_a_magic_reflection_scroll 853
+#define $item_magic_reflection_scroll 853
 #define $item_a_mind_blast_scroll 854
 #define $item_a_paralyze_scroll 855
 #define $item_a_poison_field_scroll 856
@@ -703,6 +668,9 @@
 #define $item_a_summon_earth_elemental_scroll 885
 #define $item_a_summon_fire_elemental_scroll 886
 #define $item_a_summon_water_elemental_scroll 887
+
+///////////////////////////////////////////////////
+
 #define $item_roadsign 895
 #define $item_roadsign_1 896
 #define $item_roadsign_2 897
@@ -826,21 +794,19 @@
 #define $item_sign_1 1015
 #define $item_beekeeper 1016
 #define $item_beekeeper_1 1017
+
+///////////////////////////////////////////////////
+
 #define $item_gem_of_immortality 1018
-#define $item_stool 1020
-#define $item_stool_1 1021
+
 #define $item_gold_coin 2000
 #define $item_dispel-wall-spawner 2001
 #define $item_a_stone_wall 2002
-#define $item_large_wooden_crate 2500
-#define $item_medium_wooden_crate 2501
-#define $item_medium_wooden_crate_1 722
-#define $item_large_wooden_crate_1 723
+
 #define $item_metal_chest 2502
-#define $item_wooden_chest 2503
-#define $item_wooden_chest_1 726
-#define $item_tub 2504
+
 #define $item_empty_vials 2505
+
 #define $item_bottle 2506
 #define $item_bottle_1 2507
 #define $item_bottle_2 2508
@@ -852,6 +818,7 @@
 #define $item_bottle_8 2514
 #define $item_bottle_9 2515
 #define $item_bottle_A 2516
+
 #define $item_night_sight_potion 2517
 #define $item_cure_potion 2518
 #define $item_agility_potion 2519
@@ -860,24 +827,22 @@
 #define $item_energy_potion 2522
 #define $item_lesser_heal_potion 2523
 #define $item_lesser_explosion_potion 2524
+
 #define $item_a_blue_moongate 2525
 #define $item_a_red_moongate 2526
 #define $item_a_black_moongate 2527
+
 #define $item_greater_heal_potion 2528
+
 #define $item_a_master_shard_key 2529
+
 #define $item_brass_sign_2 2530
 #define $item_brass_sign_3 2531
+
 #define $item_leather_gloves 2532
 #define $item_a_leather_gorget 2533
-#define $item_war_fork 2534
-#define $item_armoire 2535
-#define $item_armorie 724
-#define $item_armoire_1 2536
-#define $item_armoire_2 725
-#define $item_writing_desk 2537
-#define $item_table 2538
-#define $item_table_1 2539
-#define $item_table_2 2540
+	
+
 #define $item_mortar_and_pestal 2600
 #define $item_lamp_post 2610
 #define $item_an_unlit_lamppost 2611
@@ -954,8 +919,12 @@
 #define $item_palisade_B 3064
 #define $item_palisade_C 3065
 #define $item_palisade_D 3066
+
 #define $item_arrow 3070
 #define $item_crossbow_bolt 3071
+
+/////////////////////////////////////////////////
+
 #define $item_stone_wall 3100
 #define $item_stone_wall_1 3101
 #define $item_stone_wall_2 3102
@@ -1016,12 +985,13 @@
 #define $item_brick_wall_P 3182
 #define $item_brick_wall_Q 3183
 #define $item_brick_wall_R 3184
+
+/////////////////////////////////////////////////
+
 #define $item_silver_coin 3188
-#define $item_silver_coin_1 3189
-#define $item_silver_coin_2 3190
+
 #define $item_copper_coin 3191
-#define $item_copper_coin_1 3192
-#define $item_copper_coin_2 3193
+
 #define $item_amethysts 3194
 #define $item_amethysts_1 3195
 #define $item_citrines 3196
@@ -1055,6 +1025,7 @@
 #define $item_rubies_6 3224
 #define $item_star_sapphires_2 3225
 #define $item_tourmalines_3 3226
+
 #define $item_beads 3227
 #define $item_bracelet 3228
 #define $item_earrings 3229
@@ -1062,7 +1033,11 @@
 #define $item_necklace_1 3231
 #define $item_necklace_2 3232
 #define $item_ring 3233
+
 #define $item_diamonds_4 3234
+
+/////////////////////////////////////////////////
+
 #define $item_banker_spawner-f 3235
 #define $item_bard_spawner-f 3236
 #define $item_bard_spawner-m 3237
@@ -1119,168 +1094,128 @@
 #define $item_engineer_spawner-m 3288
 #define $item_engineer_spawner-f 3289
 #define $item_banker_spawner-m 3290
+
+/////////////////////////////////////////////////
+
 #define $item_townstone 3298
 #define $item_townstone_deed 3299
-#define $item_a_long_sword_of_ruin 3300
-#define $item_a_long_sword_of_might 3301
-#define $item_a_long_sword_of_force 3302
-#define $item_a_long_sword_of_power 3303
-#define $item_a_long_sword_of_vanquishing 3304
-#define $item_a_viking_sword_of_ruin 3305
-#define $item_a_viking_sword_of_might 3306
-#define $item_a_viking_sword_of_force 3307
-#define $item_a_viking_sword_of_power 3308
-#define $item_a_viking_sword_of_vanquishing 3309
-#define $item_a_broad_sword_of_ruin 3310
-#define $item_a_broad_sword_of_might 3311
-#define $item_a_broad_sword_of_force 3312
-#define $item_a_broad_sword_of_power 3313
-#define $item_a_broad_sword_of_vanquishing 3314
-#define $item_a_scimitar_of_ruin 3315
-#define $item_a_scimitar_of_might 3316
-#define $item_a_scimitar_of_force 3317
-#define $item_a_scimitar_of_power 3318
-#define $item_a_scimitar_of_vanquishing 3319
-#define $item_a_cutlass_of_ruin 3320
-#define $item_a_cutlass_of_might 3321
-#define $item_a_cutlass_of_force 3322
-#define $item_a_cutlass_of_power 3323
-#define $item_a_cutlass_of_vanquishing 3324
-#define $item_a_katana_of_ruin 3325
-#define $item_a_katana_of_might 3326
-#define $item_a_katana_of_force 3327
-#define $item_a_katana_of_power 3328
-#define $item_a_katana_of_vanquishing 3329
-#define $item_a_hatchet_of_ruin 3330
-#define $item_a_hatchet_of_might 3331
-#define $item_a_hatchet_of_force 3332
-#define $item_a_hatchet_of_power 3333
-#define $item_a_hatchet_of_vanquishing 3334
-#define $item_a_executionners_axe_of_ruin 3335
-#define $item_a_executionners_axe_of_might 3336
-#define $item_a_executionners_axe_of_force 3337
-#define $item_a_executionners_axe_of_power 3338
-#define $item_a_executionners_axe_of_vanquishing 3339
-#define $item_a_axe_of_ruin 3340
-#define $item_a_axe_of_might 3341
-#define $item_a_axe_of_force 3342
-#define $item_a_axe_of_power 3343
-#define $item_a_axe_of_vanquishing 3344
-#define $item_a_double_axe_of_ruin 3345
-#define $item_a_double_axe_of_might 3346
-#define $item_a_double_axe_of_force 3347
-#define $item_a_double_axe_of_power 3348
-#define $item_a_double_axe_of_vanquishing 3349
-#define $item_a_large_battle_axe_of_ruin 3350
-#define $item_a_large_battle_axe_of_might 3351
-#define $item_a_large_battle_axe_of_force 3352
-#define $item_a_large_battle_axe_of_power 3353
-#define $item_a_large_battle_axe_of_vanquishing 3354
-#define $item_a_pick_axe_of_ruin 3355
-#define $item_a_pick_axe_of_might 3356
-#define $item_a_pick_axe_of_force 3357
-#define $item_a_pick_axe_of_power 3358
-#define $item_a_pick_axe_of_vanquishing 3359
-#define $item_a_war_axe_of_ruin 3360
-#define $item_a_war_axe_of_might 3361
-#define $item_a_war_axe_of_force 3362
-#define $item_a_war_axe_of_power 3363
-#define $item_a_war_axe_of_vanquishing 3364
-#define $item_a_butcher_knife_of_ruin 3365
-#define $item_a_butcher_knife_of_might 3366
-#define $item_a_butcher_knife_of_force 3367
-#define $item_a_butcher_knife_of_power 3368
-#define $item_a_butcher_knife_of_vanquishing 3369
-#define $item_a_skinning_knife_of_ruin 3370
-#define $item_a_skinning_knife_of_might 3371
-#define $item_a_skinning_knife_of_force 3372
-#define $item_a_skinning_knife_of_power 3373
-#define $item_a_skinning_knife_of_vanquishing 3374
-#define $item_a_cleaver_of_ruin 3375
-#define $item_a_cleaver_of_might 3376
-#define $item_a_cleaver_of_force 3377
-#define $item_a_cleaver_of_power 3378
-#define $item_a_cleaver_of_vanquishing 3379
-#define $item_a_dagger_of_ruin 3380
-#define $item_a_dagger_of_might 3381
-#define $item_a_dagger_of_force 3382
-#define $item_a_dagger_of_power 3383
-#define $item_a_dagger_of_vanquishing 3384
-#define $item_a_kryss_of_ruin 3385
-#define $item_a_kryss_of_might 3386
-#define $item_a_kryss_of_force 3387
-#define $item_a_kryss_of_power 3388
-#define $item_a_kryss_of_vanquishing 3389
-#define $item_a_club_of_ruin 3390
-#define $item_a_club_of_might 3391
-#define $item_a_club_of_force 3392
-#define $item_a_club_of_power 3393
-#define $item_a_club_of_vanquishing 3394
-#define $item_a_hammer_pick_of_ruin 3395
-#define $item_a_hammer_pick_of_might 3396
-#define $item_a_hammer_pick_of_force 3397
-#define $item_a_hammer_pick_of_power 3398
-#define $item_a_hammer_pick_of_vanquishing 3399
-#define $item_draw_knife 3400
-#define $item_dovetail_saw 3401
-#define $item_saw 3402
-#define $item_hammer 3403
-#define $item_jointing_plane 3404
-#define $item_smoothing_plane 3405
-#define $item_scorp 3406
-#define $item_inshave 3407
-#define $item_moulding_planes 3408
-#define $item_nails 3409
-#define $item_froe 3410
-#define $item_platemail_of_defence 3500
-#define $item_plate_gorget_of_defence 3501
-#define $item_plate_gloves_of_defence 3502
-#define $item_plate_helm_of_defence 3503
-#define $item_plate_legs_of_defence 3504
-#define $item_plate_arms_of_defence 3505
-#define $item_platemail_of_guarding 3510
-#define $item_plate_gorget_of_guarding 3511
-#define $item_plate_gloves_of_guarding 3512
-#define $item_plate_helm_of_guarding 3513
-#define $item_plate_legs_of_guarding 3514
-#define $item_plate_arms_of_guarding 3515
-#define $item_plate_of_hardening 3516
-#define $item_plate_gorget_of_hardening 3517
-#define $item_plate_gloves_of_hardening 3518
-#define $item_plate_helm_of_hardening 3519
-#define $item_plate_legs_of_hardening 3520
-#define $item_plate_arms_of_hardening 3521
-#define $item_platemail_of_fortification 3522
-#define $item_plate_gorget_of_fortification 3523
-#define $item_plate_gloves_of_fortification 3524
-#define $item_plate_helm_of_fortification 3525
-#define $item_plate_legs_of_fortification 3526
-#define $item_plate_arms_of_fortification 3527
-#define $item_magic_platemail_of_invulnerability 3528
-#define $item_magic_plate_gorget_of_invulnerability 3529
-#define $item_magic_plate_gloves_of_invulnerability 3530
-#define $item_magic_plate_helm_of_invulnerability 3531
-#define $item_magic_plate_legs_of_invulnerability 3532
-#define $item_magic_plate_arms_of_invulnerability 3533
+
+/////////////////////////////////////////////////
+
+#define $item_iron_long_sword_of_ruin 3300
+#define $item_iron_long_sword_of_might 3301
+#define $item_iron_long_sword_of_force 3302
+#define $item_iron_long_sword_of_power 3303
+#define $item_iron_long_sword_of_vanquishing 3304
+#define $item_iron_viking_sword_of_ruin 3305
+#define $item_iron_viking_sword_of_might 3306
+#define $item_iron_viking_sword_of_force 3307
+#define $item_iron_viking_sword_of_power 3308
+#define $item_iron_viking_sword_of_vanquishing 3309
+#define $item_iron_broad_sword_of_ruin 3310
+#define $item_iron_broad_sword_of_might 3311
+#define $item_iron_broad_sword_of_force 3312
+#define $item_iron_broad_sword_of_power 3313
+#define $item_iron_broad_sword_of_vanquishing 3314
+#define $item_iron_scimitar_of_ruin 3315
+#define $item_iron_scimitar_of_might 3316
+#define $item_iron_scimitar_of_force 3317
+#define $item_iron_scimitar_of_power 3318
+#define $item_iron_scimitar_of_vanquishing 3319
+#define $item_iron_cutlass_of_ruin 3320
+#define $item_iron_cutlass_of_might 3321
+#define $item_iron_cutlass_of_force 3322
+#define $item_iron_cutlass_of_power 3323
+#define $item_iron_cutlass_of_vanquishing 3324
+#define $item_iron_katana_of_ruin 3325
+#define $item_iron_katana_of_might 3326
+#define $item_iron_katana_of_force 3327
+#define $item_iron_katana_of_power 3328
+#define $item_iron_katana_of_vanquishing 3329
+#define $item_iron_hatchet_of_ruin 3330
+#define $item_iron_hatchet_of_might 3331
+#define $item_iron_hatchet_of_force 3332
+#define $item_iron_hatchet_of_power 3333
+#define $item_iron_hatchet_of_vanquishing 3334
+#define $item_iron_executionners_axe_of_ruin 3335
+#define $item_iron_executionners_axe_of_might 3336
+#define $item_iron_executionners_axe_of_force 3337
+#define $item_iron_executionners_axe_of_power 3338
+#define $item_iron_executionners_axe_of_vanquishing 3339
+#define $item_iron_axe_of_ruin 3340
+#define $item_iron_axe_of_might 3341
+#define $item_iron_axe_of_force 3342
+#define $item_iron_axe_of_power 3343
+#define $item_iron_axe_of_vanquishing 3344
+#define $item_iron_double_axe_of_ruin 3345
+#define $item_iron_double_axe_of_might 3346
+#define $item_iron_double_axe_of_force 3347
+#define $item_iron_double_axe_of_power 3348
+#define $item_iron_double_axe_of_vanquishing 3349
+#define $item_iron_large_battle_axe_of_ruin 3350
+#define $item_iron_large_battle_axe_of_might 3351
+#define $item_iron_large_battle_axe_of_force 3352
+#define $item_iron_large_battle_axe_of_power 3353
+#define $item_iron_large_battle_axe_of_vanquishing 3354
+#define $item_iron_pick_axe_of_ruin 3355
+#define $item_iron_pick_axe_of_might 3356
+#define $item_iron_pick_axe_of_force 3357
+#define $item_iron_pick_axe_of_power 3358
+#define $item_iron_pick_axe_of_vanquishing 3359
+#define $item_iron_war_axe_of_ruin 3360
+#define $item_iron_war_axe_of_might 3361
+#define $item_iron_war_axe_of_force 3362
+#define $item_iron_war_axe_of_power 3363
+#define $item_iron_war_axe_of_vanquishing 3364
+#define $item_iron_butcher_knife_of_ruin 3365
+#define $item_iron_butcher_knife_of_might 3366
+#define $item_iron_butcher_knife_of_force 3367
+#define $item_iron_butcher_knife_of_power 3368
+#define $item_iron_butcher_knife_of_vanquishing 3369
+#define $item_iron_skinning_knife_of_ruin 3370
+#define $item_iron_skinning_knife_of_might 3371
+#define $item_iron_skinning_knife_of_force 3372
+#define $item_iron_skinning_knife_of_power 3373
+#define $item_iron_skinning_knife_of_vanquishing 3374
+#define $item_iron_cleaver_of_ruin 3375
+#define $item_iron_cleaver_of_might 3376
+#define $item_iron_cleaver_of_force 3377
+#define $item_iron_cleaver_of_power 3378
+#define $item_iron_cleaver_of_vanquishing 3379
+#define $item_iron_dagger_of_ruin 3380
+#define $item_iron_dagger_of_might 3381
+#define $item_iron_dagger_of_force 3382
+#define $item_iron_dagger_of_power 3383
+#define $item_iron_dagger_of_vanquishing 3384
+#define $item_iron_kryss_of_ruin 3385
+#define $item_iron_kryss_of_might 3386
+#define $item_iron_kryss_of_force 3387
+#define $item_iron_kryss_of_power 3388
+#define $item_iron_kryss_of_vanquishing 3389
+#define $item_iron_club_of_ruin 3390
+#define $item_iron_club_of_might 3391
+#define $item_iron_club_of_force 3392
+#define $item_iron_club_of_power 3393
+#define $item_iron_club_of_vanquishing 3394
+#define $item_iron_hammer_pick_of_ruin 3395
+#define $item_iron_hammer_pick_of_might 3396
+#define $item_iron_hammer_pick_of_force 3397
+#define $item_iron_hammer_pick_of_power 3398
+#define $item_iron_hammer_pick_of_vanquishing 3399
+
+/////////////////////////////////////////////////
+
 #define $item_brick_arch_5 3534
-#define $item_golden_platemail 4009
-#define $item_golden_plate_gorget 4010
-#define $item_golden_plate_gloves 4011
-#define $item_golden_plate_helm 4012
-#define $item_golden_plate_legs 4013
-#define $item_golden_plate_arms 4014
-#define $item_a_golden_heater_shield 4016
-#define $item_a_golden_viking_sword 4017
-#define $item_a_golden_war_mace 4018
-#define $item_a_golden_double_axe 4019
-#define $item_a_golden_kryss 4020
-#define $item_a_golden_bow 4021
-#define $item_a_golden_war_fork 4022
+
+#define $item_golden_bow 4021
+
 #define $item_random_orc_spawn 4100
 #define $item_random_lizard_spawn 4101
 #define $item_random_ratmen_rpawn 4102
 #define $item_random_dragon_and_drake 4103
 #define $item_random_cows_horses_etc 4104
+
+
 #define $item_orchish_skin 4190
 #define $item_red_sandals 4232
 #define $item_blue_sandals 4233
@@ -1289,142 +1224,136 @@
 #define $item_gold_sandals 4236
 #define $item_black_sandals 4237
 #define $item_pink_sandals 4238
-#define $item_a_bronze_shield_of_defence 4300
-#define $item_a_bronze_shield_of_guarding 4301
-#define $item_a_bronze_shield_of_hardening 4302
-#define $item_a_bronze_shield_of_fortification 4303
-#define $item_a_bronze_shield_of_invulnerablity 4304
-#define $item_a_magic_buckler 4305
-#define $item_a_buckler_of_guarding 4306
-#define $item_a_buckler_of_hardening 4307
-#define $item_a_buckler_of_fortification 4308
-#define $item_a_buckler_of_invulnerablity 4309
-#define $item_a_kite_shield_of_defence 4310
-#define $item_a_kite_shield_of_guarding 4311
-#define $item_a_kite_shield_of_hardening 4312
-#define $item_a_kite_shield_of_fortification 4313
-#define $item_a_kite_shield_of_invulnerablity 4314
-#define $item_a_metal_shield_of_defence 4315
-#define $item_a_metal_shield_of_guarding 4316
-#define $item_a_metal_shield_of_hardening 4317
-#define $item_a_metal_shield_of_fortification 4318
-#define $item_a_metal_shield_of_invulnerablity 4319
-#define $item_a_wooden_kite_shield_of_defence 4320
-#define $item_a_wooden_kite_shield_of_guarding 4321
-#define $item_a_wooden_kite_shield_of_hardening 4322
-#define $item_a_magic_wooden_kite_shield 4323
-#define $item_a_wooden_kite_shield_of_invulnerablity 4324
-#define $item_a_magic_wooden_shield 4325
-#define $item_a_wooden_shield_of_guarding 4326
-#define $item_a_wooden_shield_of_hardening 4327
-#define $item_a_wooden_shield_of_fortification 4328
-#define $item_a_wooden_shield_of_invulnerablity 4329
-#define $item_a_heater_sheild_of_defence 4330
-#define $item_a_heater_sheild_of_guarding 4331
-#define $item_a_heater_sheild_of_hardening 4332
-#define $item_a_heater_sheild_of_fortification 4333
-#define $item_a_heater_sheild_of_invulnerablity 4334
-#define $item_orchish_skin_1 4610
-#define $item_orchish_skin_2 4611
+
+/////////////////////////////////////////////////
+
 #define $item_dragon_scale 4613
-#define $item_dragon_scale_1 4614
-#define $item_bottle_of_ale 5000
-#define $item_bottles_of_ale 5001
-#define $item_bottles_of_ale_1 5002
-#define $item_bottles_of_ale_2 5003
-#define $item_bottle_of_liquor 5004
-#define $item_bottles_of_liquor 5005
-#define $item_bottles_of_liquor_1 5006
-#define $item_bottles_of_liquor_2 5007
-#define $item_bottle_of_wine 5008
-#define $item_bottles_of_wine 5009
-#define $item_bottles_of_wine_1 5010
-#define $item_bottles_of_wine_2 5011
-#define $item_bucket_of_water 5012
-#define $item_mug_of_ale 5013
-#define $item_glass_of_cider 5014
-#define $item_glass_of_liquor 5015
-#define $item_glass_of_milk 5016
-#define $item_glass_of_water 5017
-#define $item_glass_of_wine 5018
-#define $item_jugs_of_cider 5019
-#define $item_jugs_of_cider_1 5020
-#define $item_pitcher_of_ale 5021
-#define $item_pitcher_of_cider 5022
-#define $item_pitcher_of_liquor 5023
-#define $item_pitcher_of_milk 5024
-#define $item_pitcher_of_water 5025
-#define $item_pitcher_of_wine 5026
-#define $item_baked_pie 5027
-#define $item_unbaked_pie 5028
-#define $item_cake 5029
-#define $item_wedges_of_cheese 5030
-#define $item_wedges_of_cheese_1 5031
-#define $item_wheels_of_cheese 5032
-#define $item_french_bread 5033
-#define $item_muffins 5034
-#define $item_muffins_1 5035
-#define $item_muffins_2 5036
-#define $item_bread_loaves 5037
-#define $item_pizzas 5038
-#define $item_uncooked_pizzas 5039
-#define $item_pan_of_cookies 5040
-#define $item_plate_of_cookies 5041
-#define $item_eggshells 5042
-#define $item_eggs 5043
-#define $item_fried_eggs 5044
-#define $item_cooked_birds 5045
-#define $item_roast_pigs 5046
-#define $item_sausages 5047
-#define $item_hams 5048
-#define $item_cuts_of_ribs 5049
-#define $item_fish_steaks 5050
-#define $item_slabs_of_bacon 5051
-#define $item_slices_of_bacon 5052
-#define $item_pears 5053
-#define $item_apples 5054
-#define $item_grape_bunches 5055
-#define $item_peaches 5056
-#define $item_fruit_basket 5057
-#define $item_a_platemail_of_durability 5059
-#define $item_a_plate_gorget_of_duribility 5060
-#define $item_plate_gloves_of_duribility 5061
-#define $item_a_plate_helm_of_duribility 5062
-#define $item_plate_legs_of_duribility 5063
-#define $item_plate_arms_of_duribility 5064
-#define $item_a_substantial_platemail 5065
-#define $item_a_substantial_plate_gorget 5066
-#define $item_substantial_plate_gloves 5067
-#define $item_a_substantial_plate_helm 5068
-#define $item_substantial_plate_legs 5069
-#define $item_substantial_plate_arms 5070
-#define $item_a_massive_platemail 5071
-#define $item_a_massive_plate_gorget 5072
-#define $item_massive_plate_gloves 5073
-#define $item_a_massive_plate_helm 5074
-#define $item_massive_plate_legs 5075
-#define $item_massive_plate_arms 5076
-#define $item_a_fortified_platemail 5077
-#define $item_a_fortified_plate_gorget 5078
-#define $item_fortified_plate_gloves 5079
-#define $item_a_fortified_plate_helm 5080
-#define $item_fortified_plate_legs 5081
-#define $item_fortified_plate_arms 5082
-#define $item_a_indestructible_platemail 5083
-#define $item_a_indestructible_plate_gorget 5084
-#define $item_indestructible_plate_gloves 5085
-#define $item_a_indestructible_plate_helm 5086
-#define $item_indestructible_plate_legs 5087
-#define $item_a_indestructible_plate_arms 5088
+
+
+#define $item_iron_platemail_of_durability 5059
+#define $item_iron_plate_gorget_of_duribility 5060
+#define $item_iron_plate_gloves_of_duribility 5061
+#define $item_iron_plate_helm_of_duribility 5062
+#define $item_iron_plate_leggings_of_duribility 5063
+#define $item_iron_plate_sleeves_of_duribility 5064
+#define $item_iron_substantial_platemail 5065
+#define $item_iron_substantial_plate_gorget 5066
+#define $item_iron_substantial_plate_gloves 5067
+#define $item_iron_substantial_plate_helm 5068
+#define $item_iron_substantial_plate_leggings 5069
+#define $item_iron_substantial_plate_sleeves 5070
+#define $item_iron_massive_platemail 5071
+#define $item_iron_massive_plate_gorget 5072
+#define $item_iron_massive_plate_gloves 5073
+#define $item_iron_massive_plate_helm 5074
+#define $item_iron_massive_plate_leggings 5075
+#define $item_iron_massive_plate_sleeves 5076
+#define $item_iron_fortified_platemail 5077
+#define $item_iron_fortified_plate_gorget 5078
+#define $item_iron_fortified_plate_gloves 5079
+#define $item_iron_fortified_plate_helm 5080
+#define $item_iron_fortified_plate_leggings 5081
+#define $item_iron_fortified_plate_sleeves 5082
+#define $item_iron_indestructible_platemail 5083
+#define $item_iron_indestructible_plate_gorget 5084
+#define $item_iron_indestructible_plate_gloves 5085
+#define $item_iron_indestructible_plate_helm 5086
+#define $item_iron_indestructible_plate_leggings 5087
+#define $item_iron_indestructible_plate_sleeves 5088
+#define $item_iron_platemail_of_defence 3500
+#define $item_iron_plate_gorget_of_defence 3501
+#define $item_iron_plate_gloves_of_defence 3502
+#define $item_iron_plate_helm_of_defence 3503
+#define $item_iron_plate_leggings_of_defence 3504
+#define $item_iron_plate_sleeves_of_defence 3505
+#define $item_iron_platemail_of_guarding 3510
+#define $item_iron_plate_gorget_of_guarding 3511
+#define $item_iron_plate_gloves_of_guarding 3512
+#define $item_iron_plate_helm_of_guarding 3513
+#define $item_iron_plate_leggings_of_guarding 3514
+#define $item_iron_plate_sleeves_of_guarding 3515
+#define $item_iron_plate_of_hardening 3516
+#define $item_iron_plate_gorget_of_hardening 3517
+#define $item_iron_plate_gloves_of_hardening 3518
+#define $item_iron_plate_helm_of_hardening 3519
+#define $item_iron_plate_leggings_of_hardening 3520
+#define $item_iron_plate_sleeves_of_hardening 3521
+#define $item_iron_platemail_of_fortification 3522
+#define $item_iron_plate_gorget_of_fortification 3523
+#define $item_iron_plate_gloves_of_fortification 3524
+#define $item_iron_plate_helm_of_fortification 3525
+#define $item_iron_plate_leggings_of_fortification 3526
+#define $item_iron_plate_sleeves_of_fortification 3527
+#define $item_iron_platemail_of_invulnerability 3528
+#define $item_iron_plate_gorget_of_invulnerability 3529
+#define $item_iron_plate_gloves_of_invulnerability 3530
+#define $item_iron_plate_helm_of_invulnerability 3531
+#define $item_iron_plate_leggings_of_invulnerability 3532
+#define $item_iron_plate_sleeves_of_invulnerability 3533
+
+#define $item_iron_chainmail_of_defence 5125
+#define $item_iron_chain_legs_of_defence 5126
+#define $item_iron_chain_coif_of_defence 5127
+#define $item_iron_chainmail_of_guarding 5128
+#define $item_iron_chain_legs_of_guarding 5129
+#define $item_iron_chain_coif_of_guarding 5130
+#define $item_iron_chainmail_of_hardening 5131
+#define $item_iron_chain_legs_of_hardening 5132
+#define $item_iron_chain_coif_of_hardening 5133
+#define $item_iron_chainmail_of_fortification 5134
+#define $item_iron_chain_legs_of_fortification 5135
+#define $item_iron_chain_coif_of_fortification 5136
+#define $item_iron_chainmail_of_invulnerability 5137
+#define $item_iron_chain_legs_of_invulnerability 5138
+#define $item_iron_chain_coif_of_invulnerability 5139
+
+#define $item_iron_bronze_shield_of_defence 4300
+#define $item_iron_bronze_shield_of_guarding 4301
+#define $item_iron_bronze_shield_of_hardening 4302
+#define $item_iron_bronze_shield_of_fortification 4303
+#define $item_iron_bronze_shield_of_invulnerablity 4304
+#define $item_iron_buckler_of_defence 4305
+#define $item_iron_buckler_of_guarding 4306
+#define $item_iron_buckler_of_hardening 4307
+#define $item_iron_buckler_of_fortification 4308
+#define $item_iron_buckler_of_invulnerablity 4309
+#define $item_iron_kite_shield_of_defence 4310
+#define $item_iron_kite_shield_of_guarding 4311
+#define $item_iron_kite_shield_of_hardening 4312
+#define $item_iron_kite_shield_of_fortification 4313
+#define $item_iron_kite_shield_of_invulnerablity 4314
+#define $item_iron_metal_shield_of_defence 4315
+#define $item_iron_metal_shield_of_guarding 4316
+#define $item_iron_metal_shield_of_hardening 4317
+#define $item_iron_metal_shield_of_fortification 4318
+#define $item_iron_metal_shield_of_invulnerablity 4319
+#define $item_iron_wooden_kite_shield_of_defence 4320
+#define $item_iron_wooden_kite_shield_of_guarding 4321
+#define $item_iron_wooden_kite_shield_of_hardening 4322
+#define $item_iron_wooden_kite_shield_of_fortification 4323
+#define $item_iron_wooden_kite_shield_of_invulnerablity 4324
+#define $item_iron_wooden_shield_of_defence 4325
+#define $item_iron_wooden_shield_of_guarding 4326
+#define $item_iron_wooden_shield_of_hardening 4327
+#define $item_iron_wooden_shield_of_fortification 4328
+#define $item_iron_wooden_shield_of_invulnerablity 4329
+#define $item_iron_heater_sheild_of_defence 4330
+#define $item_iron_heater_sheild_of_guarding 4331
+#define $item_iron_heater_sheild_of_hardening 4332
+#define $item_iron_heater_sheild_of_fortification 4333
+#define $item_iron_heater_sheild_of_invulnerablity 4334
+
+#define $item_wooden_shield 4335
+
+/////////////////////////////////////////////////
+
 #define $item_pots_of_wax 5101
 #define $item_dipping_stick 5102
 #define $item_candle_1 5103
 #define $item_candle_2 5104
 #define $item_candlabra 5105
 #define $item_candalabra 5106
-#define $item_kettle 5108
-#define $item_frying_pan 5109
-#define $item_pan 5110
+
 #define $item_metal_box 5111
 #define $item_wall_sconce 5112
 #define $item_torch_holder 5113
@@ -1432,41 +1361,30 @@
 #define $item_fire_pit 5115
 #define $item_spools_of_thread 5116
 #define $item_rolls_of_string 5117
-#define $item_fish_head 5118
+
 #define $item_thigh_boots_1 5119
-#define $item_flax 5120
-#define $item_flax_1 5121
-#define $item_flax_2 5122
+
 #define $item_books 5123
 #define $item_books_1 5124
-#define $item_chainmail_of_defence 5125
-#define $item_chain_legs_of_defence 5126
-#define $item_chain_coif_of_defence 5127
-#define $item_chainmail_of_guarding 5128
-#define $item_chain_legs_of_guarding 5129
-#define $item_chain_coif_of_guarding 5130
-#define $item_chainmail_of_hardening 5131
-#define $item_chain_legs_of_hardening 5132
-#define $item_chain_coif_of_hardening 5133
-#define $item_chainmail_of_fortification 5134
-#define $item_chain_legs_of_fortification 5135
-#define $item_chain_coif_of_fortification 5136
-#define $item_chainmail_of_invulnerability 5137
-#define $item_chain_legs_of_invulnerability 5138
-#define $item_chain_coif_of_invulnerability 5139
+
+/////////////////////////////////////////////////
+
 #define $item_balls_of_yarn 5140
 #define $item_balls_of_yarn_1 5141
 #define $item_balls_of_yarn_2 5142
 #define $item_bales_of_cotton 5143
 #define $item_piles_of_wool 5144
+
 #define $item_goat_spawner 5145
 #define $item_glacial_staff 5146
+
 #define $item_shafts 5508
-#define $item_shafts_1 5509
-#define $item_shafts_2 5510
-#define $item_shafts_3 5511
+
 #define $item_sledge_hammer 5512
 #define $item_clock_frames 5513
+
+/////////////////////////////////////////////////
+
 #define $item_small_stone__plaster_house_deed 6000
 #define $item_small_stone_house_deed 6001
 #define $item_small_brick_house_deed 6002
@@ -1482,6 +1400,9 @@
 #define $item_keep_deed 6012
 #define $item_castle_deed 6013
 #define $item_large_smithy_deed 6014
+
+/////////////////////////////////////////////////
+
 #define $item_a_forge_deed 6015
 #define $item_an_anvil_deed_facing_south_ 6016
 #define $item_an_anvil_deed_facing_east_ 6017
@@ -1492,7 +1413,10 @@
 #define $item_a_training_dummy_deed_facing_east_ 6022
 #define $item_a_pickpocket_dip_deed_facing_south_ 6023
 #define $item_a_pickpocket_dip_deed_facing_east_ 6024
+
+
 #define $item_pentagram_deed 6025
+
 #define $item_pentagram 6026
 #define $item_pentagram_1 6027
 #define $item_pentagram_2 6028
@@ -1502,8 +1426,13 @@
 #define $item_pentagram_6 6032
 #define $item_pentagram_7 6033
 #define $item_pentagram_8 6034
+
 #define $item_4_room_house_deed 6035
+
 #define $item_a_fishing_net 6442
+
+/////////////////////////////////////////////////
+
 #define $item_a_fishing_net_recovered_from_a_shipwreck 6443
 #define $item_a_fishing_net_recovered_from_a_shipwreck_1 6444
 #define $item_a_fishing_net_recovered_from_a_shipwreck_2 6445
@@ -1535,8 +1464,12 @@
 #define $item_wooden_chest_recoverd_from_a_shipwreck 6471
 #define $item_metal_chest_recoverd_from_a_shipwreck-faceing_west 6472
 #define $item_wooden_chest_recoverd_from_a_shipwreck-faceing_east 6473
+
+/////////////////////////////////////////////////
+
 #define $item_a_cannon_deed 6500
 #define $item_a_cannon_ball 6501
+
 #define $item_drum 7000
 #define $item_tambourine 7001
 #define $item_tambourine_1 7002
@@ -1544,23 +1477,22 @@
 #define $item_lap_harp 7004
 #define $item_lute 7005
 #define $item_lute_1 7006
+
 #define $item_potions_list 7007
 #define $item_reagents_list 7008
 #define $item_instruments_list 7009
 #define $item_blacksmith_tools_list 7010
+
 #define $item_clean_bandages 7011
+
 #define $item_weapons_list_1 7013
-#define $item_shafts_4 7014
+
 #define $item_feathers 7015
 #define $item_bedroll 7016
 #define $item_first_circle_scrolls_list 7017
-#define $item_carpentry_tools_list 7018
 #define $item_kindling 7019
-#define $item_boards 7020
-#define $item_logs 7021
 #define $item_sextant 7022
-#define $item_sack_of_flour 7023
-#define $item_cuts_of_raw_ribs 7024
+
 #define $item_blank_scrolls 7026
 #define $item_lockpicks 7027
 #define $item_sewing_kit 7028
@@ -1580,66 +1512,7 @@
 #define $item_scissors 7042
 #define $item_torch 7043
 #define $item_lantern 7044
-#define $item_writing_desk_1 7045
-#define $item_writing_desk_2 7046
-#define $item_writing_desk_3 7047
-#define $item_chest_of_drawers 7056
-#define $item_chest_of_drawers_1 7057
-#define $item_chest_of_drawers_2 7060
-#define $item_chest_of_drawers_3 7061
-#define $item_a_barrel_lid 7062
-#define $item_barrel_staves 7063
-#define $item_bookcase 7064
-#define $item_bookcase_1 7065
-#define $item_bookcase_2 7066
-#define $item_bookcase_3 7067
-#define $item_bookcase_4 7068
-#define $item_bookcase_5 7069
-#define $item_wooden_shelf 7070
-#define $item_wooden_shelf_1 7071
-#define $item_table_3 7072
-#define $item_table_4 7073
-#define $item_table_5 7074
-#define $item_counter 7075
-#define $item_counter_1 7076
-#define $item_writing_table 7077
-#define $item_counter_2 7078
-#define $item_table_6 7079
-#define $item_table_7 7080
-#define $item_table_8 7081
-#define $item_table_9 7082
-#define $item_table_A 7083
-#define $item_table_B 7084
-#define $item_table_C 7085
-#define $item_table_D 7086
-#define $item_table_E 7087
-#define $item_table_F 7088
-#define $item_table_G 7089
-#define $item_table_H 7090
-#define $item_table_I 7091
-#define $item_table_J 7092
-#define $item_table_K 7093
-#define $item_table_L 7094
-#define $item_table_M 7095
-#define $item_table_N 7096
-#define $item_table_O 7097
-#define $item_table_P 7098
-#define $item_table_Q 7099
-#define $item_table_R 7100
-#define $item_table_S 7101
-#define $item_table_T 7102
-#define $item_table_U 7103
-#define $item_table_V 7104
-#define $item_table_W 7105
-#define $item_table_X 7106
-#define $item_table_Y 7107
-#define $item_table_Z 7108
-#define $item_table_Z1 7109
-#define $item_table_Z2 7110
-#define $item_table_Z3 7111
-#define $item_table_Z4 7112
-#define $item_table_Z5 7113
-#define $item_table_Z6 7114
+
 #define $item_the_first_uox_book 7115
 #define $item_a_grammer_of_orchish 7116
 #define $item_the_bold_stranger 7117
@@ -1672,9 +1545,7 @@
 #define $item_uox3_story_chapter_2_-_end_of_the_world 7144
 #define $item_uox3_story_chapter_3-_the_lost_splinter 7145
 #define $item_my_personal_book 7146
-#define $item_boards_1 7200
-#define $item_boards_2 7201
-#define $item_boards_3 7203
+
 #define $item_black_pearl_spawner 7301
 #define $item_mandrake_root_spawner 7302
 #define $item_bloodmoss_spawner 7303
@@ -1683,60 +1554,19 @@
 #define $item_nightshade_spawner 7306
 #define $item_spidersilk_spawner 7307
 #define $item_sulfuric_ash_spawner 7308
-#define $item_magic_plate_of_defense 7320
-#define $item_magic_plate_of_guarding 7321
-#define $item_magic_plate_of_hardening 7322
-#define $item_magic_plate_of_fortification 7323
-#define $item_magic_plate_of_invulnerability 7324
-#define $item_shadow_female_plate 7340
-#define $item_merkite_female_plate 7341
-#define $item_plate_armor 7342
-#define $item_verite_female_plate 7343
-#define $item_agapite_female_plate 7344
-#define $item_bronze_female_plate 7345
-#define $item_copper_female_plate 7346
-#define $item_valorite_female_plate 7347
-#define $item_silver_female_plate 7348
-#define $item_shadow_ringmail_tunic 7350
-#define $item_shadow_ringmail_sleeves 7351
-#define $item_ringmail_leggings_1 7352
-#define $item_shadow_ringmail_gloves 7353
-#define $item_merkite_ringmail_tunic 7354
-#define $item_merkite_ringmail_sleeves 7355
-#define $item_ringmail_leggings_2 7356
-#define $item_merkite_ringmail_gloves 7357
-#define $item_golden_ringmail_tunic 7358
-#define $item_golden_ringmail_sleeves 7359
-#define $item_golden_ringmail_leggings 7360
-#define $item_golden_ringmail_gloves 7361
-#define $item_verite_ringmail_tunic 7362
-#define $item_verite_ringmail_sleeves 7363
-#define $item_verite_ringmail_leggings 7364
-#define $item_verite_ringmail_gloves 7365
-#define $item_agapite_ringmail_tunic 7366
-#define $item_agapite_ringmail_sleeves 7367
-#define $item_agapite_ringmail_leggings 7368
-#define $item_agapite_ringmail_gloves 7369
-#define $item_bronze_ringmail_tunic 7370
-#define $item_bronze_ringmail_sleeves 7371
-#define $item_ringmail_leggings_3 7372
-#define $item_bronze_ringmail_gloves 7373
-#define $item_copper_ringmail_tunic 7374
-#define $item_copper_ringmail_sleeves 7375
-#define $item_copper_ringmail_leggings 7376
-#define $item_copper_ringmail_gloves 7377
-#define $item_valorite_ringmail_tunic 7378
-#define $item_valorite_ringmail_sleeves 7379
-#define $item_valorite_ringmail_leggings 7380
-#define $item_valorite_ringmail_gloves 7381
-#define $item_copper_chain_tunic 7382
-#define $item_copper_chain_leggings 7383
-#define $item_copper_chain_coif 7384
+
+#define $item_iron_plate_of_defense 7320
+#define $item_iron_plate_of_guarding 7321
+#define $item_iron_plate_of_hardening 7322
+#define $item_iron_plate_of_fortification 7323
+#define $item_iron_plate_of_invulnerability 7324
+
 #define $item_daemon_bone_chest 7390
 #define $item_daemon_bone_arms 7391
 #define $item_daemon_bone_gloves 7392
 #define $item_daemon_bone_helm 7393
 #define $item_daemon_bone_legs 7394
+
 #define $item_pet_horse 7500
 #define $item_pet_ostard 7501
 #define $item_pet_llama 7502
@@ -1746,10 +1576,7 @@
 #define $item_pet_eagle 7506
 #define $item_pet_pack_horse 7507
 #define $item_pet_pack_llama 7508
-#define $item_potted_cactus 8001
-#define $item_potted_cactus_1 8002
-#define $item_potted_cactus_2 8003
-#define $item_potted_cactus_3 8004
+
 #define $item_spinning_wheel 8048
 #define $item_a_spinning_wheel_deed_facing_east_ 8049
 #define $item_spinning_wheel_1 8050
@@ -1757,22 +1584,11 @@
 #define $item_piles_of_wool_1 8052
 #define $item_upright_loom 8053
 #define $item_upright_loom_1 8054
-#define $item_balls_of_yarn_3 8055
-#define $item_bales_of_cotton_1 8056
 #define $item_upright_loom_2 8057
 #define $item_upright_loom_3 8058
 #define $item_spools_of_thread_1 8059
 #define $item_dress_form 8060
-#define $item_bed 8061
-#define $item_bed_1 8062
-#define $item_bed_2 8063
-#define $item_bed_3 8064
-#define $item_bed_4 8065
-#define $item_bed_5 8066
-#define $item_bed_6 8067
-#define $item_bed_7 8068
-#define $item_a_bed_facing_south_deed 8069
-#define $item_a_bed_facing_east_deed 8070
+
 #define $item_bellows_1 8071
 #define $item_forge_3 8072
 #define $item_forge_4 8073
@@ -1789,122 +1605,16 @@
 #define $item_arrow_fletching_1 8087
 #define $item_arrow_shafts 8088
 #define $item_arrow_shafts_1 8089
-#define $item_nose_helm_1 8107
-#define $item_fish 8108
-#define $item_raw_fish 8109
-#define $item_fish_1 8110
-#define $item_fish_2 8111
-#define $item_fish_3 8112
-#define $item_merkite_platemail 8200
-#define $item_merkite_plate_gorget 8201
-#define $item_merkite_plate_gloves 8202
-#define $item_merkite_plate_helm 8203
-#define $item_merkite_plate_legs 8204
-#define $item_merkite_plate_arms 8205
-#define $item_merkite_nose_helm 8206
-#define $item_merkite_close_helm 8207
-#define $item_merkite_bascinet 8209
-#define $item_shadow_platemail 8220
-#define $item_shadow_plate_gorget 8221
-#define $item_shadow_plate_gloves 8222
-#define $item_shadow_plate_helm 8223
-#define $item_shadow_plate_legs 8224
-#define $item_shadow_plate_arms 8225
-#define $item_shadow_nose_helm 8226
-#define $item_shadow_close_helm 8227
-#define $item_shadow_bascinet 8228
-#define $item_copper_nose_helm 8230
-#define $item_copper_close_helm 8231
-#define $item_copper_bascinet 8232
-#define $item_silver_chain_tunic 8240
-#define $item_silver_chain_leggings 8241
-#define $item_silver_chain_coif 8242
-#define $item_golden_close_helm 8250
-#define $item_golden_bascinet 8251
-#define $item_valorite_platemail 8300
-#define $item_valorite_plate_gorget 8301
-#define $item_valorite_plate_gloves 8302
-#define $item_valorite_plate_helm 8303
-#define $item_valorite_plate_legs 8304
-#define $item_valorite_plate_arms 8305
-#define $item_valorite_nose_helm 8306
-#define $item_valorite_close_helm 8307
-#define $item_valorite_helmet 8308
-#define $item_valorite_bascinet 8309
-#define $item_silver_nose_helm 8310
-#define $item_silver_close_helm 8311
-#define $item_silver_bascinet 8312
-#define $item_verite_platemail 8400
-#define $item_verite_plate_gorget 8401
-#define $item_verite_plate_gloves 8402
-#define $item_verite_plate_helm 8403
-#define $item_verite_plate_legs 8404
-#define $item_verite_plate_arms 8405
-#define $item_verite_nose_helm 8406
-#define $item_verite_close_helm 8407
-#define $item_verite_helmet 8408
-#define $item_verite_bascinet 8409
-#define $item_bronze_platemail 8500
-#define $item_bronze_plate_gorget 8501
-#define $item_bronze_plate_gloves 8502
-#define $item_bronze_plate_helm 8503
-#define $item_bronze_plate_legs 8504
-#define $item_bronze_plate_arms 8505
-#define $item_bronze_nose_helm 8506
-#define $item_bronze_close_helm 8507
-#define $item_bronze_helmet 8508
-#define $item_bronze_bascinet 8509
-#define $item_agapite_platemail 8600
-#define $item_agapite_plate_gorget 8601
-#define $item_agapite_plate_gloves 8602
-#define $item_agapite_plate_helm 8603
-#define $item_agapite_plate_legs 8604
-#define $item_agapite_plate_arms 8605
-#define $item_agapite_nose_helm 8606
-#define $item_agapite_close_helm 8607
-#define $item_agapite_helmet 8608
-#define $item_agapite_bascinet 8609
-#define $item_pitcher_of_milk_1 9002
+#define $item_iron_nose_helm_1 8107
+
 #define $item_wash_basin 9003
 #define $item_spittoon 9004
 #define $item_training_dummy 9006
 #define $item_training_dummy_1 9007
 #define $item_pickpocket_dip 9008
 #define $item_pickpocket_dip_1 9009
-#define $item_raw_bird 9919
 #define $item_slotmachine_5gp_ 9999
-#define $item_heads_of_lettuce 10001
-#define $item_squash 10002
-#define $item_carrots 10003
-#define $item_heads_of_cabbage 10004
-#define $item_ears_of_corn 10005
-#define $item_donuts 10006
-#define $item_jars_of_honey 10007
-#define $item_turnip 10008
-#define $item_sprouts 10009
-#define $item_pumpkins 10010
-#define $item_onions 10011
-#define $item_coconuts 10012
-#define $item_bananas 10013
-#define $item_bananas_1 10014
-#define $item_bunches_of_dates 10015
-#define $item_lemons 10016
-#define $item_lemons_1 10017
-#define $item_limes 10018
-#define $item_limes_1 10019
-#define $item_honeydew_melons 10020
-#define $item_canteloupes 10021
-#define $item_watermelons 10022
-#define $item_cookie_mix 10023
-#define $item_dough_bowl 10024
-#define $item_bowl_of_carrots 10025
-#define $item_bowl_of_corn 10026
-#define $item_bowl_of_lettuce 10027
-#define $item_bowl_of_peas 10028
-#define $item_bowl_of_potatoes 10029
-#define $item_bowl_of_stew 10030
-#define $item_tomato_soup 10031
-#define $item_pewter_bowl 10032
+
 #define $item_bolts_of_cloth 10033
 #define $item_bolts_of_cloth_1 10034
 #define $item_bolts_of_cloth_2 10035
@@ -1913,22 +1623,10 @@
 #define $item_bolts_of_cloth_5 10038
 #define $item_bolts_of_cloth_6 10039
 #define $item_bolts_of_cloth_7 10040
-#define $item_sheaf_of_hay 10041
+
 #define $item_polar_bear_mask 10042
 #define $item_skull_candle 10043
-#define $item_campion_flowers 10044
-#define $item_foxglove_flowers 10045
-#define $item_orfluer_flowers 10046
-#define $item_red_poppies 10047
-#define $item_snow_drops 10048
-#define $item_hedge 10049
-#define $item_blade_plant 10050
-#define $item_large_fern 10051
-#define $item_pampas_grass 10052
-#define $item_spider_tree 10053
-#define $item_juniper_bush 10054
-#define $item_weed 10055
-#define $item_yucca 10056
+
 #define $item_fencer 10057
 #define $item_black_smith_1 10058
 #define $item_swordsman_1 10059
@@ -1944,8 +1642,9 @@
 #define $item_daemon 10069
 #define $item_dragon 10070
 #define $item_drake 10071
-#define $item_iron_ingots_1 10080
+
 #define $item_a_bulletin_board 10081
+
 #define $item_random_cowshorsesect 10082
 #define $item_random_dragon_and_drake_1 10083
 #define $item_random_ratmen 10084
@@ -1967,8 +1666,10 @@
 #define $item_random_med_orcs 10100
 #define $item_random_weaker_orcs 10101
 #define $item_random_crc-kin 10102
+
 #define $item_explosion_potion 10103
 #define $item_greater_explosion_potion 10104
+
 #define $item_male_human 10105
 #define $item_female_human 10106
 #define $item_thief 10107
@@ -1979,32 +1680,14 @@
 #define $item_bard_1 10112
 #define $item_ranger_1 10113
 #define $item_assassin_1 10114
+
 #define $item_town_area_spawner 10115
 #define $item_swamp_area_spawner 10116
 #define $item_jungle_area_spawner 10117
-#define $item_shadow_chain_tunic 10118
-#define $item_shadow_chain_leggings 10119
-#define $item_shadow_chain_coif 10120
-#define $item_golden_chain_tunic 10121
-#define $item_golden_chain_leggings 10122
-#define $item_golden_chain_coif 10123
-#define $item_merkite_chain_tunic 10124
-#define $item_merkite_chain_leggings 10125
-#define $item_merkite_chain_coif 10126
-#define $item_verite_chain_tunic 10127
-#define $item_verite_chain_leggings 10128
-#define $item_verite_chain_coif 10129
-#define $item_valorite_chain_tunic 10130
-#define $item_valorite_chain_leggings 10131
-#define $item_valorite_chain_coif 10132
-#define $item_bronze_chain_tunic 10133
-#define $item_bronze_chain_leggings 10134
-#define $item_bronze_chain_coif 10135
-#define $item_agapite_chain_tunic 10136
-#define $item_agapite_chain_leggings 10137
-#define $item_agapite_chain_coif 10138
+
 #define $item_staff_of_summoning_demon 10139
 #define $item_staff_of_summoning_hero 10140
+
 #define $item_random_arctic_spawner 10141
 #define $item_random_cave_spawner 10142
 #define $item_random_desert_spawner 10143
@@ -2022,37 +1705,39 @@
 #define $item_random_diablo_spawner 10155
 #define $item_random_wood_elves_spawner 10156
 #define $item_random_high_elves_spawner 10157
-#define $item_viking_sword_of_flamestrike 10158
-#define $item_viking_sword_of_feeblemind 10159
-#define $item_viking_sword_of_mana_drain 10160
-#define $item_viking_sword_of_lightning 10161
-#define $item_viking_sword_of_energy_bolt 10162
-#define $item_viking_sword_of_invisibility 10163
-#define $item_viking_sword_of_resurrection 10164
-#define $item_long_sword_of_flamestrike 10165
-#define $item_long_sword_of_feeblemind 10166
-#define $item_long_sword_of_mana_drain 10167
-#define $item_long_sword_of_lightning 10168
-#define $item_long_sword_of_energy_bolt 10169
-#define $item_long_sword_of_invisibility 10170
-#define $item_long_sword_of_resurrection 10171
-#define $item_scimitar_of_flamestrike 10172
-#define $item_scimitar_of_feeblemind 10173
-#define $item_scimitar_of_mana_drain 10174
-#define $item_scimitar_of_lightning 10175
-#define $item_scimitar_of_energy_bolt 10176
-#define $item_scimitar_of_invisibility 10177
-#define $item_scimitar_of_resurrection 10178
-#define $item_broad_sword_of_flamestrike 10179
-#define $item_broad_sword_of_feeblemind 10180
-#define $item_broad_sword_of_mana_drain 10181
-#define $item_broad_sword_of_lightning 10182
-#define $item_broad_sword_of_energy_bolt 10183
-#define $item_broad_sword_of_invisibility 10184
-#define $item_broad_sword_of_resurrection 10185
-#define $item_a_goblet 10186
-#define $item_a_golden_goblet 10187
-#define $item_a_pewter_mug 10188
+
+#define $item_iron_viking_sword_of_flamestrike 10158
+#define $item_iron_viking_sword_of_feeblemind 10159
+#define $item_iron_viking_sword_of_mana_drain 10160
+#define $item_iron_viking_sword_of_lightning 10161
+#define $item_iron_viking_sword_of_energy_bolt 10162
+#define $item_iron_viking_sword_of_invisibility 10163
+#define $item_iron_viking_sword_of_resurrection 10164
+
+#define $item_iron_long_sword_of_flamestrike 10165
+#define $item_iron_long_sword_of_feeblemind 10166
+#define $item_iron_long_sword_of_mana_drain 10167
+#define $item_iron_long_sword_of_lightning 10168
+#define $item_iron_long_sword_of_energy_bolt 10169
+#define $item_iron_long_sword_of_invisibility 10170
+#define $item_iron_long_sword_of_resurrection 10171
+
+#define $item_iron_scimitar_of_flamestrike 10172
+#define $item_iron_scimitar_of_feeblemind 10173
+#define $item_iron_scimitar_of_mana_drain 10174
+#define $item_iron_scimitar_of_lightning 10175
+#define $item_iron_scimitar_of_energy_bolt 10176
+#define $item_iron_scimitar_of_invisibility 10177
+#define $item_iron_scimitar_of_resurrection 10178
+
+#define $item_iron_broad_sword_of_flamestrike 10179
+#define $item_iron_broad_sword_of_feeblemind 10180
+#define $item_iron_broad_sword_of_mana_drain 10181
+#define $item_iron_broad_sword_of_lightning 10182
+#define $item_iron_broad_sword_of_energy_bolt 10183
+#define $item_iron_broad_sword_of_invisibility 10184
+#define $item_iron_broad_sword_of_resurrection 10185
+
 #define $item_a_vase 10189
 #define $item_jars 10190
 #define $item_a_boat_model 10191
@@ -2067,14 +1752,7 @@
 #define $item_a_piwafwi 10200
 #define $item_dragonskin_legs 10201
 #define $item_dragonskin_tunic 10202
-#define $item_a_whispering_rose 10203
-#define $item_a_bucket 10204
-#define $item_a_flower_pot 10205
-#define $item_silverware 10206
-#define $item_silverware_1 10207
-#define $item_pot 10208
-#define $item_pot_1 10209
-#define $item_plate 10210
+
 #define $item_an_arm 10280
 #define $item_an_arm_1 10281
 #define $item_a_body 10282
@@ -2090,18 +1768,7 @@
 #define $item_a_skull_2 10292
 #define $item_a_ribcage 10293
 #define $item_a_spine 10294
-#define $item_silver_platemail 13000
-#define $item_silver_plate_gorget 13001
-#define $item_silver_plate_gloves 13002
-#define $item_silver_plate_helm 13003
-#define $item_silver_plate_legs 13004
-#define $item_silver_plate_arms 13005
-#define $item_copper_platemail 13006
-#define $item_copper_plate_gorget 13007
-#define $item_copper_plate_gloves 13008
-#define $item_copper_plate_helm 13009
-#define $item_copper_plate_legs 13010
-#define $item_copper_plate_arms 13011
+
 #define $item_strange_cocoon 13012
 #define $item_strange_cocoon_1 13013
 #define $item_cocoon_spawner 13014
@@ -2112,71 +1779,85 @@
 #define $item_wall_sconce_1 13019
 #define $item_wall_sconce_2 13020
 #define $item_leather 13021
-#define $item_a_magic_mace_of_ruin 15000
-#define $item_a_magic_mace_of_might 15001
-#define $item_a_magic_mace_of_force 15002
-#define $item_a_magic_mace_of_power 15003
-#define $item_a_magic_mace_of_vanquishing 15004
-#define $item_a_magic_maul_of_ruin 15005
-#define $item_a_magic_maul_of_might 15006
-#define $item_a_magic_maul_of_force 15007
-#define $item_a_magic_maul_of_power 15008
-#define $item_a_magic_maul_of_vanquishing 15009
-#define $item_a_magic_smiths_hammer_of_ruin 15010
-#define $item_a_magic_smiths_hammer_of_might 15011
-#define $item_a_magic_smiths_hammer_of_force 15012
-#define $item_a_magic_smiths_hammer_of_power 15013
-#define $item_a_magic_smiths_hammer_of_vanquishing 15014
-#define $item_a_magic_war_hammer_of_ruin 15015
-#define $item_a_magic_war_hammer_of_might 15016
-#define $item_a_magic_war_hammer_of_force 15017
-#define $item_a_magic_war_hammer_of_power 15018
-#define $item_a_magic_war_hammer_of_vanquishing 15019
-#define $item_a_magic_war_mace_of_ruin 15020
-#define $item_a_magic_war_mace_of_might 15021
-#define $item_a_magic_war_mace_of_force 15022
-#define $item_a_magic_war_mace_of_power 15023
-#define $item_a_magic_war_mace_of_vanquishing 15024
-#define $item_a_magic_pitch_fork_of_ruin 15025
-#define $item_a_magic_pitch_fork_of_might 15026
-#define $item_a_magic_pitch_fork_of_force 15027
-#define $item_a_magic_pitch_fork_of_power 15028
-#define $item_a_magic_pitch_fork_of_vanquishing 15029
-#define $item_a_magic_spear_of_ruin 15030
-#define $item_a_magic_spear_of_might 15031
-#define $item_a_magic_spear_of_force 15032
-#define $item_a_magic_spear_of_power 15033
-#define $item_a_magic_spear_of_vanquishing 15034
-#define $item_a_magic_war_fork_of_ruin 15035
-#define $item_a_magic_war_fork_of_might 15036
-#define $item_a_magic_war_fork_of_force 15037
-#define $item_a_magic_war_fork_of_power 15038
-#define $item_a_magic_war_fork_of_vanquishing 15039
-#define $item_a_magic_bardiche_of_ruin 15040
-#define $item_a_magic_bardiche_of_might 15041
-#define $item_a_magic_bardiche_of_force 15042
-#define $item_a_magic_bardiche_of_power 15043
-#define $item_a_magic_bardiche_of_vanquishing 15044
-#define $item_a_magic_halberd_of_ruin 15045
-#define $item_a_magic_halberd_of_might 15046
-#define $item_a_magic_halberd_of_force 15047
-#define $item_a_magic_halberd_of_power 15048
-#define $item_a_magic_halberd_of_vanquishing 15049
-#define $item_a_magic_bow_of_ruin 15050
-#define $item_a_magic_bow_of_might 15051
-#define $item_a_magic_bow_of_force 15052
-#define $item_a_magic_bow_of_power 15053
-#define $item_a_magic_bow_of_vanquishing 15054
-#define $item_a_magic_crossbow_of_ruin 15055
-#define $item_a_magic_crossbow_of_might 15056
-#define $item_a_magic_crossbow_of_force 15057
-#define $item_a_magic_crossbow_of_power 15058
-#define $item_a_magic_crossbow_of_vanquishing 15059
-#define $item_a_magic_heavy_crossbow_of_ruin 15060
-#define $item_a_magic_heavy_crossbow_of_might 15061
-#define $item_a_magic_heavy_crossbow_of_force 15062
-#define $item_a_magic_heavy_crossbow_of_power 15063
-#define $item_a_magic_heavy_crossbow_of_vanquishing 15064
+
+#define $item_iron_mace_of_ruin 15000
+#define $item_iron_mace_of_might 15001
+#define $item_iron_mace_of_force 15002
+#define $item_iron_mace_of_power 15003
+#define $item_iron_mace_of_vanquishing 15004
+
+#define $item_iron_maul_of_ruin 15005
+#define $item_iron_maul_of_might 15006
+#define $item_iron_maul_of_force 15007
+#define $item_iron_maul_of_power 15008
+#define $item_iron_maul_of_vanquishing 15009
+
+#define $item_iron_smiths_hammer_of_ruin 15010
+#define $item_iron_smiths_hammer_of_might 15011
+#define $item_iron_smiths_hammer_of_force 15012
+#define $item_iron_smiths_hammer_of_power 15013
+#define $item_iron_smiths_hammer_of_vanquishing 15014
+
+#define $item_iron_war_hammer_of_ruin 15015
+#define $item_iron_war_hammer_of_might 15016
+#define $item_iron_war_hammer_of_force 15017
+#define $item_iron_war_hammer_of_power 15018
+#define $item_iron_war_hammer_of_vanquishing 15019
+
+#define $item_iron_war_mace_of_ruin 15020
+#define $item_iron_war_mace_of_might 15021
+#define $item_iron_war_mace_of_force 15022
+#define $item_iron_war_mace_of_power 15023
+#define $item_iron_war_mace_of_vanquishing 15024
+
+#define $item_iron_pitch_fork_of_ruin 15025
+#define $item_iron_pitch_fork_of_might 15026
+#define $item_iron_pitch_fork_of_force 15027
+#define $item_iron_pitch_fork_of_power 15028
+#define $item_iron_pitch_fork_of_vanquishing 15029
+
+#define $item_iron_spear_of_ruin 15030
+#define $item_iron_spear_of_might 15031
+#define $item_iron_spear_of_force 15032
+#define $item_iron_spear_of_power 15033
+#define $item_iron_spear_of_vanquishing 15034
+
+#define $item_iron_war_fork_of_ruin 15035
+#define $item_iron_war_fork_of_might 15036
+#define $item_iron_war_fork_of_force 15037
+#define $item_iron_war_fork_of_power 15038
+#define $item_iron_war_fork_of_vanquishing 15039
+
+#define $item_iron_bardiche_of_ruin 15040
+#define $item_iron_bardiche_of_might 15041
+#define $item_iron_bardiche_of_force 15042
+#define $item_iron_bardiche_of_power 15043
+#define $item_iron_bardiche_of_vanquishing 15044
+
+#define $item_iron_halberd_of_ruin 15045
+#define $item_iron_halberd_of_might 15046
+#define $item_iron_halberd_of_force 15047
+#define $item_iron_halberd_of_power 15048
+#define $item_iron_halberd_of_vanquishing 15049
+
+#define $item_iron_bow_of_ruin 15050
+#define $item_iron_bow_of_might 15051
+#define $item_iron_bow_of_force 15052
+#define $item_iron_bow_of_power 15053
+#define $item_iron_bow_of_vanquishing 15054
+
+#define $item_iron_crossbow_of_ruin 15055
+#define $item_iron_crossbow_of_might 15056
+#define $item_iron_crossbow_of_force 15057
+#define $item_iron_crossbow_of_power 15058
+#define $item_iron_crossbow_of_vanquishing 15059
+
+#define $item_iron_heavy_crossbow_of_ruin 15060
+#define $item_iron_heavy_crossbow_of_might 15061
+#define $item_iron_heavy_crossbow_of_force 15062
+#define $item_iron_heavy_crossbow_of_power 15063
+#define $item_iron_heavy_crossbow_of_vanquishing 15064
+
 #define $item_random_male_hair_list 15065
 #define $item_random_beard_list 15066
 #define $item_random_female_hair_list 15067
@@ -2201,8 +1882,10 @@
 #define $item_female_plain_tunic_list 15094
 #define $item_female_plain_robe_list 15095
 #define $item_female_plain_cape_list 15096
+
 #define $item_loom-south_deed 15097
 #define $item_loom-east_deed 15098
+
 #define $item_female_fancy_hats_list 15100
 #define $item_female_fancy_shirts_list 15101
 #define $item_female_fancy_pants_list 15102
@@ -2210,13 +1893,15 @@
 #define $item_female_fancy_tunic_list 15104
 #define $item_female_fancy_robe_list 15105
 #define $item_female_fancy_cape_list 15106
+
 #define $item_a_magical_stone 15107
-#define $item_a_guildstone_deed 15108
+
 #define $item_treasure_chest_lv1_ 15109
 #define $item_treasure_chest_lv4_ 15110
 #define $item_treasure_chest_lv2_ 15111
 #define $item_treasure_chest_lv3_ 15112
 #define $item_treasure_chest_lv5_ 15113
+
 #define $item_town_crier_spawner-m 15114
 #define $item_town_crier_spawner-f 15115
 #define $item_a_staff_of_lich_summoning 15116
@@ -2238,11 +1923,14 @@
 #define $item_vials_of_blood 20000
 #define $item_treasure_hunt_lootlist 20001
 #define $item_a_treasure_map_lv_4_ 20003
+
 #define $item_a_treasure_map_lv1_ 20022
 #define $item_a_treasure_map_lv2_ 20023
 #define $item_a_treasure_map_lv3_ 20024
 #define $item_a_treasure_map_lv5_ 20025
+
 #define $item_a_magical_wizard`s_hat 20026
+
 #define $item_a_large_leather_pillow 20101
 #define $item_a_medium_leather_pillow 20102
 #define $item_a_small_leather_pillow 20103
@@ -2280,10 +1968,7 @@
 #define $item_fireplace 20154
 #define $item_fireplace-south_deed 20155
 #define $item_fireplace_1 20156
-#define $item_bed-east_deed 20157
-#define $item_bed_8 20158
-#define $item_bed-south_deed 20159
-#define $item_bed_9 20160
+
 #define $item_a_tan_horse 25000
 #define $item_a_grey_horse 25001
 #define $item_a_light_brown_horse 25002
@@ -2296,6 +1981,7 @@
 #define $item_npc_equiplist_war_hammer 25504
 #define $item_npc_equiplist_bardiches 25505
 #define $item_npc_equiplist_longswords 25506
+
 #define $item_treasure_chest_lv1__1 30000
 #define $item_treasure_chest_lv1__2 30001
 #define $item_treasure_chest_lv1__3 30002
@@ -2317,22 +2003,27 @@
 #define $item_treasure_chest_lv5__5 30018
 #define $item_treasure_chest_lv5__6 30019
 #define $item_treasure_chest_lv5__7 30020
+
 #define $item_noble_escort-m 40000
 #define $item_noble_escort-f 40001
 #define $item_register_of_names 40002
+
+#define $item_iron_spear_practice_weapon_ 49999
 #define $item_crook_practice_weapon_ 50000
 #define $item_bow_practice_weapon_ 50001
 #define $item_gnarled_staff_practice_weapon_ 50002
-#define $item_spear_practice_weapon_ 50003
+#define $item_iron_spear_practice_weapon_ 50003
 #define $item_hatchet_practice_weapon_ 50004
-#define $item_mace_practice_weapon_ 50005
+#define $item_iron_mace_practice_weapon_ 50005
 #define $item_longsword_practice_weapon_ 50006
 #define $item_skinning_knife_practice_weapon_ 50007
+#define $item_mace_practice_weapon_ 50008
+
 #define $item_robe 50016
 #define $item_robe_1 50017
-#define $item_clean_bandages_1 50018
 #define $item_robe_2 50019
 #define $item_a_recall_rune_1 50020
+
 #define $item_pure_red_hairdye 50021
 #define $item_pure_black_hairdye 50022
 #define $item_bronze_hairdye 50023
@@ -2343,6 +2034,7 @@
 #define $item_dark_blue_hairdye 50028
 #define $item_pure_white_hairdye 50029
 #define $item_red_hairdye 50030
+
 #define $item_deed 50031
 #define $item_small_tower_deed 50032
 #define $item_small_marble_shop_deed 50033
@@ -2352,6 +2044,7 @@
 #define $item_sandstone_patio_house_deed 50037
 #define $item_2-story_log_cabin_deed 50038
 #define $item_large_marble_patio_house_deed 50039
+
 #define $item_treasure 60001
 #define $item_treasure_1 60002
 #define $item_treasure_2 60003
@@ -2396,7 +2089,9 @@
 #define $item_treasure_Z3 60042
 #define $item_treasure_Z4 60043
 #define $item_treasure_Z5 60044
+
 #define $item_wall_cracks 60045
+
 #define $item_lighthouse 60046
 #define $item_lighthouse_1 60047
 #define $item_lighthouse_2 60048
@@ -2446,6 +2141,7 @@
 #define $item_lighthouse_ZB 60092
 #define $item_lighthouse_ZC 60093
 #define $item_lighthouse_ZD 60094
+
 #define $item_telescope 60095
 #define $item_telescope_1 60096
 #define $item_telescope_2 60097
@@ -2512,6 +2208,7 @@
 #define $item_telescope_ZS 60158
 #define $item_telescope_ZT 60159
 #define $item_telescope_ZU 60160
+
 #define $item_altar 60161
 #define $item_altar_1 60162
 #define $item_altar_2 60163
@@ -2520,15 +2217,18 @@
 #define $item_altar_5 60166
 #define $item_altar_6 60167
 #define $item_altar_7 60168
+
 #define $item_treasure_deed 60290
 #define $item_treasure_deed_1 60291
 #define $item_treasure_deed_2 60292
 #define $item_treasure_deed_3 60293
+
 #define $item_lighthouse_deed 60294
 #define $item_telescope_deed 60295
 #define $item_arbitoir_deed 60296
 #define $item_lsd_potion 60297
 #define $item_the_book_of_the_dead 85000
+
 #define $item_a_summon_zombie_scroll 85001
 #define $item_a_summon_skeleton_scroll 85002
 #define $item_a_summon_spectre_scroll 85003
@@ -2537,11 +2237,13 @@
 #define $item_a_summon_lich_scroll 85006
 #define $item_a_summon_bone_mage_scroll 85007
 #define $item_a_summon_lich_lord_scroll 85008
+
 #define $item_ranger_tunic 95500
 #define $item_ranger_gorget 95501
 #define $item_ranger_gloves 95502
 #define $item_ranger_sleeves 95503
 #define $item_ranger_leggings 95504
+
 #define $item_painting_recoverd_from_a_shipwreck 95505
 #define $item_painting_recoverd_from_a_shipwreck_1 95506
 #define $item_painting_recoverd_from_a_shipwreck_2 95507
@@ -2553,18 +2255,20 @@
 #define $item_painting_recoverd_from_a_shipwreck_8 95513
 #define $item_painting_recoverd_from_a_shipwreck_9 95514
 #define $item_painting_recoverd_from_a_shipwreck_A 95515
+
 #define $item_gm_ticket 95517
 #define $item_iron_ore 95518
 #define $item_christmas_list 98000
+
 #define $item_low_level_dungeon_chest_spawner_list 98001
 #define $item_mid_level_dungeon_chest_spawner_list 98002
 #define $item_high_level_dungeon_chest_spawner_list 98003
 #define $item_low_level_dungeon_chest_list 99030
 #define $item_mid_level_dungeon_chest_list 99031
 #define $item_high_level_dungeon_chest_list 99032
-#define $item_jar_for_milk 199000
-#define $item_a_jar_full_of_milk 199001
+
 #define $item_a_cristall_ball_of_reputation 199002
+
 #define $item_deed_small_ship 2117
 #define $item_deed_small_dragon_ship 2118
 #define $item_deed_medium_ship 2119
@@ -2573,7 +2277,14 @@
 #define $item_deed_large_dragon_ship 2122
 #define $item_guildstone 2123
 #define $item_guildstone_deed 2124
-#define $item_a_cigar 2125
+// several stuff //
+#define $item_dupre 400002
+#define $item_a_golden_goblet 400003
+#define $item_a_cigar 400004
+#define $item_club 400005
+#define $item_a_golden_bow 400006
+#define $item_pitchfork 400007
+#define $item_iron_mace_practice_weapon_ 400010
 #define $item_a_campfire 2126
 #define $item_tillerman 2127
 #define $item_plank1 2128
@@ -2586,17 +2297,3 @@
 #define $item_hardcoded 2135
 #define $item_blood_puddle 2136
 #define $item_restock 2137
-
-
-
-
-
-
-
-
-
-
-
-
-
-
