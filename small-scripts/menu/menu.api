@@ -92,10 +92,11 @@ native menu_addBackground( const menu, const gump, const width, const height );
 \param 4 button up gump
 \param 5 button down gump
 \param 6 return code
+\param 7 pressable, if true can be pressed
 \return false if error, true else
-\fn menu_addButton( const menu, const x, const y, const up, const down, const result=INVALID )
+\fn menu_addButton( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true )
 */
-native menu_addButton( const menu, const x, const y, const up, const down, const result=INVALID );
+native menu_addButton( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true );
 
 /*!
 \brief Add a new button at given menu
@@ -105,11 +106,12 @@ native menu_addButton( const menu, const x, const y, const up, const down, const
 \param 3 y
 \param 4 button up gump
 \param 5 button down gump
-\param 6 function callback
+\param 6 pressable, if true can be pressed
+\param 7 function callback
 \return false if error, true else
-\fn menu_addButtonFn( const menu, const x, const y, const up, const down, const callback[] )
+\fn menu_addButtonFn( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true, const callback[], ... )
 */
-native menu_addButtonFn( const menu, const x, const y, const up, const down, const callback[] );
+native menu_addButtonFn( const menu, const x, const y, const up, const down, const result=INVALID, const pressable=true, const callback[], ... );
 
 /*!
 \brief Add a new checkbox at given menu
