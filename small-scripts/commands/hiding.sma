@@ -23,25 +23,60 @@ If area effect is active, all characters in area will be hidden.
 If no area effect is active, or if you pass "target", a target will appear and only 
 the targetted char will be hidden.
 Passing no paramteres will toggle the charcater's hiding staus between permahidden/unhidden
-\todo make this function work when commands are done in sources
+\todo make a chr_isHidden function
 */
-public cmd_hide(const chr)
+public cmd_hiding(const chr)
 {
-	new target = true;
+	new target = false;
 	new mode = 2; //0:skill 1:spell 2:perma
-	new action = -1; //1:on 0:off -1:toggle
+	new action = -1; //0:on 1:off 2:toggle
 	
-	//TODO:set parameters properly
+	if(!strlen(__cmdParams[0]))
+	{
+		chr_message(chr,_,"You must specify at least the first parameter (on,off,toggle), other params are optional");	
+		return;
+	}
+	
+	if(!strcmp(__cmdParams[0],"on"))
+		action = 0;
+	else 	if (!strcmp(__cmdParams[0],"off"))
+			action = 1;	
+		else 	if (!strcmp(__cmdParams[0],"toggle"))
+				action = 2;
+			else
+			{
+				chr_message(chr,_,"You must specify 'on','off' or 'toggle' as first parameter");	
+				return;
+			}	
+	
+	if(strlen(__cmdParams[1]))
+	{
+		if(!strcmp(__cmdParams[1],"skill"))
+			action = 0;
+		else 	if (!strcmp(__cmdParams[1],"spell"))
+				action = 1;	
+			else 	if (!strcmp(__cmdParams[1],"perma"))
+					action = 2;
+				else
+				{
+					chr_message(chr,_,"You must specify 'skill', 'spell' or 'perma' as first parameter");	
+					return;
+				}
+	}
+	
+	if(!strcmp(__cmdParams[2],"target"))
+		target = true;
+		
 	new area = chr_getCmdArea(chr);
-	
+	new i=0, chr2;
 	//apply command to all characters in area
 	if(area_isValid(area) && !target)
 	{	//swich on action: toggle, unhide, hide
 		switch(action)
 		{
-			case -1: //toggle, TODO: have a chr_isHidden(chr) function
+			case 2: //toggle, TODO: have a chr_isHidden(chr) function
 			{
-				break;
+				
 				/*for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 				{
 					chr2 = set_getChar(area_chars(area));
@@ -52,7 +87,8 @@ public cmd_hide(const chr)
 				}*/	
 			}
 		
-			case 0: //unhide
+		
+			case 1: //unhide
 			{
 				for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 				{
@@ -61,7 +97,7 @@ public cmd_hide(const chr)
 				}	
 			}
 			
-			case 1: //hide
+			case 0: //hide
 			{
 				for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 				{
@@ -84,12 +120,12 @@ public cmd_hide(const chr)
 
 	switch(action)
 	{
-		case -1: chr_message(chr,_,"Select a character to toggle hiding action ");
-		case 0: chr_message(chr,_,"Select a character to unhide");
-		case 1: chr_message(chr,_,"Select a character to hide");
+		case 0: chr_message(chr,_,"Select a character to toggle hiding action ");
+		case 1: chr_message(chr,_,"Select a character to unhide");
+		case 2: chr_message(chr,_,"Select a character to hide");
 	}
 	
-	target_create(chr,action,mode,_,"cmd_kill_targ");
+	target_create(chr,10*action + mode,_,_,"cmd_kill_targ");
 }
 
 /*!
@@ -98,14 +134,17 @@ public cmd_hide(const chr)
 \params all standard target callback params
 \brief handles single character targetting and hiding
 */
-public cmd_hide_targ(target, chr, object, x, y, z, unused, action)
+public cmd_hide_targ(target, chr, object, x, y, z, unused, param)
 {
+	new action = param/10;
+	new mode = param%10;
+	
 	if(isChar(object))
 	{
 		switch(action)
 		{
 			case -1: //toggle, TODO: have a chr_isHidden(chr) function
-				break;
+				{ }
 		
 			case 0: //unhide
 				chr_unhide(object);
@@ -122,5 +161,6 @@ public cmd_hide_targ(target, chr, object, x, y, z, unused, action)
 					}		
 		}		
 	}
+	
 	else chr_message(chr,_,"You must target a character");
 }

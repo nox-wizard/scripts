@@ -32,12 +32,13 @@
 [magiccast]
 
 [special]
-StartChar=_charlogin,AFTER
+OnStart=__startServer,AFTER
+StartChar=__charLogin,AFTER
 
 [networkrcv]
 
 [speech]
-+=bla_char,BEFORE
+'=detectCommand,BEFORE
 
 
 

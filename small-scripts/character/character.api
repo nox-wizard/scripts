@@ -148,7 +148,7 @@ This function sets the PRIV_GMCLEARANCE flag, to set GM restriction use CP_GMRES
 stock chr_makeGM(const chr)
 {
 	if(!isChar(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_ISGM);
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_ISGM);
 	return OK;
 }
 
@@ -170,7 +170,7 @@ native chr_canBroadcast(const chr);
 stock chr_setBroadcast(const chr)
 {
 	if(!isChar(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_CANBROADCAST);
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_CANBROADCAST);
 	return OK;
 }
 
@@ -184,7 +184,7 @@ stock chr_setBroadcast(const chr)
 stock chr_resetBroadcast(const chr)
 {
 	if(!isChar(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_CANBROADCAST);
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~PRIV_CANBROADCAST);
 	return OK;
 }
 
@@ -353,7 +353,7 @@ native chr_isCounselor(const chr);
 stock chr_makeCounselor(const chr)
 {
 	if(!isChar(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_ISCOUNSELOR);
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | PRIV_ISCOUNSELOR);
 	return OK;
 }
 
@@ -376,7 +376,7 @@ native chr_isGMorCns(const chr);
 stock chr_makePlayer(const chr)
 { 
 	if(!isChar(chr)) return INVALID;
-	(chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~(PRIV_ISGM + PRIV_ISCOUNSELOR));
+	chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~(PRIV_ISGM + PRIV_ISCOUNSELOR));
 	return OK;
 }
 
@@ -1297,9 +1297,9 @@ native chr_teleport(const chr);
 stock chr_getPosition(const chr, &x, &y, &z)
 {
 	if(!isChar(chr)) return INVALID
-	x = chr_getPrperty(chr,CP_POSITION,CP2_X);
-	y = chr_getPrperty(chr,CP_POSITION,CP2_Y);
-	z = chr_getPrperty(chr,CP_POSITION,CP2_Z);
+	x = chr_getProperty(chr,CP_POSITION,CP2_X);
+	y = chr_getProperty(chr,CP_POSITION,CP2_Y);
+	z = chr_getProperty(chr,CP_POSITION,CP2_Z);
 	return OK;
 }
 
@@ -1314,9 +1314,9 @@ stock chr_getPosition(const chr, &x, &y, &z)
 stock chr_getPositionVec(const chr, pos[3])
 {
 	if(!isChar(chr)) return INVALID
-	pos[0] = chr_getPrperty(chr,CP_POSITION,CP2_X);
-	pos[1] = chr_getPrperty(chr,CP_POSITION,CP2_Y);
-	pos[2] = chr_getPrperty(chr,CP_POSITION,CP2_Z);
+	pos[0] = chr_getProperty(chr,CP_POSITION,CP2_X);
+	pos[1] = chr_getProperty(chr,CP_POSITION,CP2_Y);
+	pos[2] = chr_getProperty(chr,CP_POSITION,CP2_Z);
 	return OK;
 }
 

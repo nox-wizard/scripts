@@ -23,64 +23,119 @@ this command supports command areas only in "rel" mode, in that case all items i
 moved to new positions.
 If you don't pass any parameter, you will be prompted to target both the object to move
 and the destination
-\todo make this function work when commands are done in sources
 */
 public cmd_move(const chr)
-{
-	new x,y,me;
-	//if no params are passed, target both object and destination
-	//TODO: better check when params will be available
-	if(me)
+{	
+	//called 'move me
+	if(!strcmp(__cmdParams[0],"me"))
 	{
 		chr_message(chr,_,"Select a location where to go");
 		target_create(chr,chr,_,_,"cmd_move_targ_dst");
 		return;
 	}
 	
-	if(x == INVALID && y == INVALID)
+	//called with no params
+	if(!strlen(__cmdParams[0]))
 	{
 		chr_message(chr,_,"Select an item to move");
 		target_create(chr,_,_,_,"cmd_move_targ");
 		return;
 	}
-		
-	new mode = 1; //0:abs 1:rel
-	//TODO:set parameters properly
 
-	new target = true;
+	//READ PARAMETERS	
+	
+	//-------------------  x y ------------------
+	new x,y;
+	if(!isStrInt(__cmdParams[0]))
+	{
+		chr_message(chr,_,"x and y must be numbers");
+		return;
+	}
+	
+	x = str2Int(__cmdParams[0]);
+	if(!isStrInt(__cmdParams[1]))
+	{
+		chr_message(chr,_,"x and y must be numbers");
+		return;
+	}
+	
+	y = str2Int(__cmdParams[1]);
+		
+	//---------------  mode  ------------------
+	new mode = 1; //0:abs 1:rel
+	new target = false;
+	
+	if(strlen(__cmdParams[2]))
+	{
+		if(!strcmp(__cmdParams[2],"abs"))
+			mode = 0;
+		else 	if (strcmp(__cmdParams[2],"rel"))
+			{
+				chr_message(chr,_,"mode must be 'abs' or 'rel'");
+				return;
+			}
+		
+		if(!strcmp(__cmdParams[3],"target"))
+			target = true;
+	}
+	
+	//check sign of x and y only in abs mode
+	if((y < 0 || x < 0) && !mode)
+	{
+		chr_message(chr,_,"x and y must be positive numbers in abs mode");
+		return;
+	}
 	new area = chr_getCmdArea(chr);
 	
 	//command areas only in "rel" mode without "target"
 	if(area_isValid(area) && !target && mode)
 	{
-		new oldx,oldy,oldz,i;
-		for(set_rewind(area_items(area)); !set_end(area_items(area));i++)
+		new oldx,oldy,oldz,newx,newy,i;
+		
+		if(area_itemsIncluded(area))
+			for(set_rewind(area_items(area)); !set_end(area_items(area));i++)
 			{
 				new itm = set_getItem(area_items(area));
 				itm_getPosition(itm,oldx,oldy,oldz);
-				x += oldx;
-				y += oldy;
-				itm_moveTo(itm,x,y,map_getZ(x,y));	
+				newx = oldx + x;
+				newy += oldy + y;
+				
+				itm_moveTo(itm,newx,newy,map_getZ(newx,newy));
+				
+				#if _CMD_DEBUG_
+					printf("^tMoving item %d to %d %d %d^n",itm,newx,newy,map_getZ(newx,newy));
+				#endif	
 			}
-		chr_message(chr,_,"%d items moved",i);
+			
+		
+		if(area_charsIncluded(area))
+			for(set_rewind(area_chars(area)); !set_end(area_chars(area));i++)
+			{
+				new chr2 = set_getChar(area_chars(area));
+				chr_getPosition(chr2,oldx,oldy,oldz);
+				newx = oldx + x;
+				newy = oldy + y;
+				
+				chr_moveTo(chr2,newx,newy,map_getZ(newx,newy));
+				
+				#if _CMD_DEBUG_
+					printf("^tMoving character %d to %d %d %d^n",chr2,newx,newy,map_getZ(newx,newy));
+				#endif	
+			}
+			
+		chr_message(chr,_,"%d objects moved",i);
 		area_refresh(area);
 		area_useCommand(area);
 		return;
 	}
 
-
-
-
-if(mode)
-	target_create(chr,x,y,_,"cmd_move_targ_rel");	
-else 
+	//move by target
+	if(mode)
+		target_create(chr,(x << 16) + y,_,_,"cmd_move_targ_rel");	
+	else 
 	{
-		if(x < 0 || y < 0)
-		{
-			chr_message(chr,_,"in abs mode x and y must be non-negative",i);	
-			return;		
-		}	
-		target_create(chr,x,y,_,"cmd_move_targ_abs");
+		chr_message(chr,_,"Select an object to move");	
+		target_create(chr,(x << 16) + y,_,_,"cmd_move_targ_abs");
 	}
 }
 
@@ -110,7 +165,7 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 */
 public cmd_move_targ_dst(target, chr, unused, x, y, z, unused2, param)
 {
-	if(x != INVALID && y != INVALID && z != INVALID && param != INVALID)
+	if(x != INVALID && y != INVALID && param != INVALID)
 	{
 		if(isChar(param))
 			chr_moveTo(param,x,y,z);
@@ -128,13 +183,15 @@ public cmd_move_targ_dst(target, chr, unused, x, y, z, unused2, param)
 \params all standard target callback params
 \brief handles the destination targetting in 'move when called with "rel" param
 */
-public cmd_move_targ_rel(target, chr, object, x, y, z, unused2, deltax)
+public cmd_move_targ_rel(target, chr, object, x, y, z, unused2, param)
 {
-	new deltay = target_getProperty(target,TP_BUFFER,1);
+	new deltax = param  >> 16;
+	new deltay = param & 0xFFFF;
+	
 	if(isChar(object))
 	{
 		chr_getPosition(object,x,y,z);
-		chr_moveTo(object,x + deltax,y + delaty,map_getZ(x + delatx, y + deltay));
+		chr_moveTo(object,x + deltax,y + deltay,map_getZ(x + deltax, y + deltay));
 		area_refresh(chr_getCmdArea(chr));
 		return;	
 	}
@@ -142,7 +199,7 @@ public cmd_move_targ_rel(target, chr, object, x, y, z, unused2, deltax)
 	if(isItem(object))
 	{
 		itm_getPosition(object,x,y,z);
-		itm_moveTo(object,x + deltax,y + delaty,map_getZ(x + delatx, y + deltay));
+		itm_moveTo(object,x + deltax,y + deltay,map_getZ(x + deltax, y + deltay));
 		area_refresh(chr_getCmdArea(chr));
 		return;	
 	}
@@ -156,19 +213,20 @@ public cmd_move_targ_rel(target, chr, object, x, y, z, unused2, deltax)
 \params all standard target callback params
 \brief handles the destination targetting in 'move when called with "abs" param
 */
-public cmd_move_targ_abs(target, chr, object, x, y, z, unused2, newx)
+public cmd_move_targ_abs(target, chr, object, x, y, z, unused2, param)
 {
-	new newy = target_getProperty(target,TP_BUFFER,1);
+	new newx = param  >> 16;
+	new newy = param & 0xFFFF;
 	if(isChar(object))
 	{
-		chr_moveTo(object,mewx,newy,map_getZ(newx,newy));
+		chr_moveTo(object,newx,newy,map_getZ(newx,newy));
 		area_refresh(chr_getCmdArea(chr));
 		return;	
 	}
 	
 	if(isItem(object))
 	{
-		itm_moveTo(object,mewx,newy,map_getZ(newx,newy));
+		itm_moveTo(object,newx,newy,map_getZ(newx,newy));
 		area_refresh(chr_getCmdArea(chr));
 		return;	
 	}

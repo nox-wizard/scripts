@@ -12,33 +12,33 @@
 If area effect is active, all characters in area will die.
 If no area effect is active, or if you pass "target", a target will appear and only 
 the targetted char will be killed
-\todo make this function work when commands are done in sources
 */
 public cmd_kill(const chr)
 {
-	new target = true;
+	new target = false;
 	
-	//TODO:set target by reading parameters
+	if(!strcmp(__cmdParams[0],"target"))
+		target = true;
+	
 	new area = chr_getCmdArea(chr);
-	
+	new i = 0, chr2;
 	//apply command to all characters in area
 	if(area_isValid(area) && !target)
 	{
 		area_useCommand(area);
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
-			{
+		{
 				chr2 = set_getChar(area_chars(area));
 				if(chr2 != chr) chr_setHitPoints(chr2,0);
-			}
-			chr_message(chr,_,"%d characters killed",i);
-		}	
+		}
 		
+		chr_message(chr,_,"%d characters killed",i);	
 		area_refresh(area);			
 		return;
 	}
 
-chr_message(chr,_,"Select a character to kill");
-target_create(chr,area,_,_,"cmd_kill_targ");
+	chr_message(chr,_,"Select a character to kill");
+	target_create(chr,area,_,_,"cmd_kill_targ");
 }
 
 /*!

@@ -1,3 +1,61 @@
+
+/*
+\fn __charLogin(const chr)
+\param chr: the character who is logging in
+\brief handles login stuff
+
+Use this function to call a script at character login, do not put code in the function but call
+an extern function
+*/
+
+public __charLogin(const chr)
+{
+	if( chr_isNpc (chr)) return;
+	
+	createPrivlevelVar(chr); //creates the privlevel variable
+		
+	//globaltags(chr);
+	
+	//itm_potionStart(chr);//every function you want to start with char login put in here
+	
+	//hungerandthirst(chr);
+}
+
+public createPrivlevelVar(const chr)
+{
+	printf("creating local var %d",CLV_PRIVLEEVEL);
+	
+	if(!chr_isaLocalVar(chr,CLV_PRIVLEVEL))
+	{
+		//enter as a player
+		chr_addLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_PLAYER);
+		
+		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
+		{
+			log_error("Unable to create VAR_PRIVLEVEL");
+			return;
+		}
+		
+		//set PRIV_ADMIN to the admins		
+		if(chr_getProperty(chr, CP_ACCOUNT)== 0)
+		{
+			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_ADMIN);
+			
+			if(chr_getLocalVarErr() != VAR_ERROR_NONE)
+			{
+				log_error("Unable set admin privlevel");
+				return;
+			}
+			
+			chr_message(chr,_,"You have been set admin");
+			new name[20];
+			chr_getProperty(chr,CP_STR_NAME,0,name);
+			log_warning("%s is new admin",name);
+		}
+	}
+}
+
+
 const Delay_Maptile = 300;
 const Delay_HungerThirst = 180;
 const NumGlobalVars = 10; //1002 hunger, 1003 thirst, 1004 + 1005 skills, 1006 Race, 1007 diverses useable, 1009 taming repeats, 1010 taming target
@@ -5,14 +63,6 @@ const NumGlobalVars = 10; //1002 hunger, 1003 thirst, 1004 + 1005 skills, 1006 R
 public npccreate(const c)
 {
 printf("creation start");
-}
-
-public _charlogin(const c)
-{
-if( chr_isNpc (c)) return;
-globaltags(c);
-itm_potionStart(c);//every function you want to start with char login put in here
-hungerandthirst(c);
 }
 
 public globaltags(const c)

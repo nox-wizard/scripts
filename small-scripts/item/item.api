@@ -146,6 +146,20 @@ stock itm_moveToVec(const item, pos[3])
 	itm_moveTo(item,pos[0],pos[1],pos[2]);
 }
 
+/*!
+\author Fax
+\fn itm_getPosition(const item, &x, &y, &z)
+\param item the item
+\param x,y,z: variables to be filled with coordinates
+\brief gets the position of an item
+*/
+stock itm_getPosition(const item, &x, &y, &z)
+{
+	x = itm_getProperty(item,IP_POSITION,CP2_X);
+	y = itm_getProperty(item,IP_POSITION,CP2_Y);
+	z = itm_getProperty(item,IP_POSITION,CP2_Z);
+}
+
 
 /*!
 \author Xanathar

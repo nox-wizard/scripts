@@ -129,7 +129,7 @@ static animProperty[NUM_anims][animprop] = {
 {0225, 0x00e1, 0x2122, "wolf"}
 };
 
-public command_polymorph(const itm, const chrsource)
+public cmd_polymorph(const chrsource)
 {
 	if( (chr_isGM(chrsource)!=0) || (chr_getProperty(chrsource, CP_ACCOUNT)!= 0)) //no admin or gm -> abort
 		return;

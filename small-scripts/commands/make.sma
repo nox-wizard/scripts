@@ -15,13 +15,23 @@
 </UL>
 
 Doesn't support command areas
-\todo make this function work when commands are done in sources
 */
 public cmd_make(const chr)
 {
 	new makewhat = 1;
-	//TODO:set makewhat parameters
-
+	
+	if(!strcmp(__cmdParams[0],"GM"))
+		makewhat = 0;
+	else 	if(!strcmp(__cmdParams[0],"cns"))
+			makewhat = 0;
+		else 	if(!strcmp(__cmdParams[0],"player"))
+				makewhat = 0;
+			else
+			{
+				chr_message(chr,_,"You must specify 'GM', 'cns' or 'player'");
+				return;
+			}
+		
 	switch(makewhat)
 	{	
 		case 0: chr_message(chr,_,"Choose a player to make GM");
@@ -38,7 +48,7 @@ target_create(chr,makewhat,_,_,"cmd_make_targ");
 \params all standard target callback params
 \brief handles targetting and sets the status
 */
-public cmd_make_targ(target, chr, object, x, y, z, unused, makeinvul)
+public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 {
 	if(!isChar(object))
 	{
@@ -48,8 +58,20 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makeinvul)
 	
 	switch(makewhat)
 	{	
-		case 0: chr_makeGM(object);
-		case 1: chr_makeCounselor(object);
-		case 2: chr_makePlayer(object);
+		case 0: 
+		{
+			chr_makeGM(object);
+			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_GM);
+		}
+		case 1:
+		{ 
+			chr_makeCounselor(object);
+			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_CNS);
+		}
+		case 2: 
+		{
+			chr_makePlayer(object);
+			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_PLAYER);
+		}
 	}
 }

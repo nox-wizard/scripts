@@ -1,5 +1,5 @@
 const chrForPage = 14;
-public command_playerlist( const caller )
+public cmd_playerlist( const caller )
 {
 	new set=set_create();
 	

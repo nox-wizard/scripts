@@ -6,30 +6,42 @@
 <B>syntax:</B> 'add [scriptID][amount]
 <B>command params:</B>
 <UL>
-<LI> scriptID: scriptID ($item_/$npc_/number) of the object 
+<LI> scriptID: scriptID ($item_.../$npc_...) of the object 
 <LI> amount: how much objects you want (default = XSS value for items, 1 for npcs)
 </UL>
 
 If no params are specified the add menu is opened.<BR>
-\todo make this function work when commands are done in sources
 <br>
 */
 public cmd_add(const chr)
 {
-	new def[50], type[6];
-	new amount = INVALID;
+	new type[6];
+	new amount = 1;
 	
-	if()
+	//if no parameters are given, show add menu
+	if(!strlen(__cmdParams[0]))
 	{
-		gumps_addMenu(chr);
+		chr_message(chr,_,"Sorry, the add gump has not yet been implemented");
+		//gumps_addMenu(chr);
 		return;		
 	}
 	
-	substring(def,0,4,type,false);
+	if(isStrInt(__cmdParams[1]))
+		amount = str2Int(__cmdParams[1]);
+	
+	if(amount < 0)
+	{
+		chr_message(chr,_,"Amount must be a positive number");
+		return;
+	}
+	
+	substring(__cmdParams[0],0,4,type,false);
 	if(!strcmp(type,"$item")) //add an item
 	{
-		new item = itm_createInBpDef(def,chr,amount);
-		chr_message(chr,_,"Item %d created",item);
+		new item = itm_createInBpDef(__cmdParams[0],chr,amount);
+		if(isItem(item))
+			chr_message(chr,_,"Item %d created in your backpack",item);
+		else chr_message(chr,_,"An error occurred while creating the item");
 		return;
 	}
 	
@@ -37,11 +49,11 @@ public cmd_add(const chr)
 	if(!strcmp(type,"$npc_"))  //add an NPC
 	{
 		chr_message(chr,_,"click to position the NPC");
-		target_create(chr,getIntFromDefine(def),amount,_,"cmd_add_targ");
+		target_create(chr,getIntFromDefine(__cmdParams[0]),amount,_,"cmd_add_targ");
 		return;
 	}
 	
-	chr_message(chr,_,"You must pass as parameter scriptID ($item_ $npc_)");
+	chr_message(chr,_,"%s is not a valid scriptID",__cmdParams[0]);
 }
 
 /*!
@@ -49,17 +61,24 @@ public cmd_add(const chr)
 \fn cmd_add_targ(target, chr, object, x, y, z, unused1, scriptID)
 \brief handles the area targetting
 */
-public cmd_area_targ(target, chr, object, x, y, z, unused1, scriptID)
+public cmd_add_targ(target, chr, object, x, y, z, unused1, scriptID)
 {
-	if(x != INVALID && y != INVALID && z != INVALID)
+	#if _CMD_DEBUG_
+		printf("^tadding npc at: %d %d %d ^n",x,y,z);
+	#endif
+	
+	if(x != INVALID && y != INVALID)
 	{
-		new amount = target_getProperty(target,TP_BUFFER,1);
+		new amount = 1;//target_getProperty(target,TP_BUFFER,1);
 		for(new i = 0; i < amount; i++)
 		{
 			new npc = chr_addNPC(scriptID,x,y,z);
 			chr_message(chr,_,"Character %d created",npc);
+			#if _CMD_DEBUG_
+				printf("Character %d created",npc);
+			#endif
 		}
 		return;
 	}
-	chr_message(chr,_,"You must target a map location");
+	chr_message(chr,_,"Invalid map location");
 }

@@ -62,6 +62,9 @@
 #include "small-scripts/variable/constant.sma"
 #include "small-scripts/race/constant.sma"
 #include "small-scripts/party/constant.sma"
+#include "small-scripts/magic/constant.sma"
+#include "small-scripts/commands/constant.sma"
+
 //
 // Include the NoX-Wizard small api
 //
@@ -95,6 +98,8 @@
 //
 // Include the NoX-Wizard small scripts
 //
+#include "small-scripts/override/startServer.sma"
+#include "small-scripts/override/charLogin.sma"
 #include "small-scripts/include/nxw_lib"
 #include "small-scripts/calendar/calendar.sma"
 #include "small-scripts/skills/skills.sma"

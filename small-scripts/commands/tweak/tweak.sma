@@ -91,7 +91,7 @@ static event_array[NUM_chrevent][event_prop] = {
 {"on click:             ", 28}
 };
 
-public command_tweak(const itm, const chrsource)
+public cmd_tweak(const chrsource)
 {
 	if( (chr_isGM(chrsource)!=0) || (chr_getProperty(chrsource, CP_ACCOUNT)!= 0)) //no admin or gm -> abort
 		return;

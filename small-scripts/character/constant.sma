@@ -88,8 +88,8 @@ const CP_DISABLED = 217;	//!< true if the char is disabled
 const CP_FAME = 218;		//!< fame
 const CP_FLEEAT = 219;		//!< HP at wich the char starts fleeing
 const CP_FOODPOSITION = 220;	//!< 
-const CP_FPOS1_NPCWANDER = 221;	//!<
-const CP_FPOS2_NPCWANDER = 222;	//!<
+const CP_FPOS1_NPCWANDER = 221;	//!< first box corner when wnader mode is WANDER_FREELY_BOX, use CP2_X, CP2_Y, CP2_Z as subproperties
+const CP_FPOS2_NPCWANDER = 222;	//!< second box corner when wnader mode is WANDER_FREELY_BOX, use CP2_X, CP2_Y, CP2_Z as subproperties
 const CP_FTARG = 223;		//!< npc follow target
 const CP_GMMOVEEFF = 224;	//!< move effect fot GMs
 const CP_GUILDFEALTY = 225;	//!< serial of the loyalty declaration in the guildstone
@@ -278,9 +278,9 @@ const NXWF0_GREY = 1;		//!<
 const NXWF0_PERMAGREY = 2;	//!<
 		
 const WANDER_NOMOVE = 0;	//!<
-const WANDER_FOLLOW = 1;	//!<
+const WANDER_FOLLOW = 1;	//!< npc will follow the character specified in CP_FTARG
 const WANDER_FREELY_CIRCLE = 2;	//!<
-const WANDER_FREELY_BOX = 3;	//!<
+const WANDER_FREELY_BOX = 3;	//!< npc will wander in box with corners in CP_FPOS1_NPCWANDER, CP_FPOS2_NPCWANDER 
 const WANDER_FREELY = 4;	//!<
 const WANDER_FLEE = 5;		//!<
 const WANDER_AMX = 6;		//!<
@@ -311,7 +311,9 @@ const PRIV2_DISPELLABLE = 0x20;	//!<
 const PRIV2_PERMAMAGICREFLECT = 0x40;//!<
 const PRIV2_NONEEDREAGS = 0x80;	//!<
 
-
+//local vars used by standard scripts
+//(Character Local Vars)
+const CLV_PRIVLEVEL = 9999	//!< character privlevel
 
 
 /** @} */
