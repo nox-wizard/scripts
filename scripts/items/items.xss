@@ -7799,38 +7799,6 @@ SECTION ITEM $item_piles_of_wool
 }
 
 
-SECTION ITEM $item_crossbow_bolt_1
-{
-    ID 1BFB
-    VALUE 4
-    AMOUNT 5
-    DECAY
-}
-
-SECTION ITEM $item_crossbow_bolt_2
-{
-    ID 1BFB
-    VALUE 4
-    AMOUNT 10
-    DECAY
-}
-
-SECTION ITEM $item_crossbow_bolt_3
-{
-    ID 1BFB
-    VALUE 4
-    AMOUNT 10
-    DECAY
-}
-
-SECTION ITEM $item_crossbow_bolt_4
-{
-    ID 1BFB
-    VALUE 4
-    AMOUNT 50
-    DECAY
-}
-
 SECTION ITEM $item_shafts
 {
     ID 1BD4
@@ -11534,15 +11502,6 @@ SECTION ITEM $item_a_magical_wizard`s_hat
     DYE 1
     DECAY
     VALUE 75
-}
-
-SECTION ITEM $item_crossbow_bolt_5
-{
-    ID 1BFB
-    VALUE 4
-    AMOUNT 400
-    DECAY
-    WEIGHT 2
 }
 
 SECTION ITEM $item_a_large_leather_pillow
