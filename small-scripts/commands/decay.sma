@@ -31,14 +31,14 @@ public cmd_decay(const chr)
 		return;
 	}
 	
-	new areacheck = 0;
+	new decay = INVALID;
+	if(isStrInt(__cmdParams[1]))	
+		decay = getTimerValue(str2Int(__cmdParams[1]));
+		
+		new areacheck = 0;
 	
 	if(__cmdParams[0][0] == 'a')
 		areacheck=1;
-
-	new decay = INVALID;
-	if(isStrInt(__cmdParams[1]))	
-		decay = getTimerValue(str2Int(__cmdParams[0]));
 		
 	if(areacheck==1)
 	{
