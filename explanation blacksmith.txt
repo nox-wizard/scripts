@@ -1,0 +1,35 @@
+If you find bugs or have suggestions concerning this system,
+please contact Horian at official Nox boards.
+The file contains a selfextracting exe which needs as 
+path the nox main folder. It will overwrite many (!) files - 
+all with weapons or armor like race definition or lootlists 
+for example. So if you already modified these, please 
+copy the content by hand into them. 
+There is an update included for the Nox-GMTool 
+(version of Accomplice I made) for the sections SCP 
+Items Shields, Weapon, Armor . You need to install 
+Accomplice from  
+http://nobbz.ssh3.de/wbboard/thread.php?...7&styleid=1 
+to use this update.
+
+It contains that all items produceable by blacksmith had 
+to be re-sorted and get new item ID's in xss-files. 
+We have shields, weapons and armor a blacksmith can 
+do in 10 colors (copper, bronze, silver, gold, iron, 
+merkite, valorite, verite, agaptite and shadow) with a 
+SMALL system for blacksmithing with skill dependent 
+changed high damage of weapon and armor value of 
+armor. Name of the item is changed depending on its 
+quality. 
+Nox allows only 30 letters for name and no item title so 
+the name of the item after production is still buggy when
+ longer than this. 
+Rank system so far has no impact on arms lore and so is
+ not integrated. 
+Skill check is integrated, ingot check is integrated for 
+number and color. Distance check to forge is integrated.
+
+Forge is the trigger item for our system. You need to
+put "@ONDBLCLICK _schmieden" into its xss-definition. 
+Player needs to have a blacksmithing tool like tong 
+oder hammer in his backpack, too.

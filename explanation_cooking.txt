@@ -1,0 +1,29 @@
+This package can ONLY be used as "ADDON" to the blacksmithing
+system from gerNox since its modification are basing on these!
+If you find bugs or have suggestions concerning this system,
+please contact Horian at official Nox boards.
+The file contains a selfextracting exe which needs as 
+path the nox main folder. It will overwrite (!) some files - 
+all with foods, drinks or dishes like menus or item 
+definitions for example. So if you already modified these, 
+please copy the content by hand into them. 
+
+There is an update included for the Nox-GMTool 
+(version of Accomplice I made) for the sections SCP 
+Plants, Food and Drinks . You need to install 
+Accomplice from  http://nobbz.ssh3.de/wbboard/thread.php?...7&styleid=1 
+to use this update.
+
+It contains that all items which are cook-, drink or 
+eatable had to be re-sorted and get new item ID's in 
+xss-files. 
+All kinds of items for eating, drinking or dishes from inside
+UO and all kinds of plants are inluded in nox with this 
+cooking system.
+It has links for osi-farming and planting in it too, but at the
+moment this system is not possible to do with nox so 
+these links are disabled.
+The recepies for cooking you can find at
+http://uo.stratics.com/content/guides/cookessay.shtml
+Items which are a pile (eg two bottles or three) are not drink- or
+eatable, a "split in seperate bottles" is on its way.

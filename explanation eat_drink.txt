@@ -1,0 +1,15 @@
+This eat/drink system bases on the hunger/thirst local vars
+introduced when char logs on (see charlogin.sma). It lowers 
+hunger and thirst every three minutes for 3 points, range is
+0-100 (zero means death but untill now no death is integrated).
+The speech command +hunger ingame shows the char how much hunger
+and thirst he has.
+Every eat- or drinkable food Item in cookitems.xss has a value
+how much it increases (or decreases) hunger or thirst (right now 
+all items increase depending if food or drink the value by 2) 
+100 is the highest possible value.
+If an Item calls eatanddrink.sma without a definition if food or drink,
+an error is logged in error.log containing the item and person using
+it.
+This script is not osi-style so need not be installed but since
+several people asked me for this, I did it. ;)
