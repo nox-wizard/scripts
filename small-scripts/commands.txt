@@ -1,1 +1,22 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (commnads.txt)                                   ||
+// || By Frodo & Stonedz                                                  ||
+// || Last Update 02 Feb 2004                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82 or later                       ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+//	PRIVLEVEL_ADMIN = 255
+//	PRIVLEVEL_GM	= 200
+//	PRIVLEVEL_SEER	= 150
+//	PRIVLEVEL_CNS	= 100
+//	PRIVLEVEL_PLAYER = 50
+//	PRIVLEVEL_GUEST = 0
+
+//      name_of_the_command,priv_level,callback
+
+
+freeze,0,cmd_freeze
+
 kill,0,cmd_kill
