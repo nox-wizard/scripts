@@ -40,42 +40,41 @@
 
 
 
-/**********************************************************************************************
- FUNCTION : __nxw_sk_main
- AUTHOR   : Luxor
- *********************************************************************************************/
-public __nxw_sk_main(const cc, const skill_num)
+/*!
+\author: Luxor, modified by someone else
+\fn __nxw_sk_main(const chr, const skill_num)
+\param chr: the character who is using the skill
+\param skill_num: the skill used, one of the SK_* constants
+\brief Handles skill usage
+
+This function is called by the engine every time a skill is used by clicking
+the blue button on the skills gump.<br>
+This means that only those skills can be managed 
+\todo test when the source has been fixed
+*/
+public __nxw_sk_main(const chr, const skill_num)
 {
+	#if _SKILLS_DEBUG_
+		printf("DEBUG: Skill use detected - character %d - skill %d^n",chr,skill_num);
+	#endif
+	
 	if ( skill_num < 0 ) return;
 	
-	if ( !chr_isGM( cc ) && chr_getProperty(cc, CP_SKILLDELAY) > getCurrentTime() ) {
-		chr_message( cc, _, "You must wait a few moments before using another skill.");
-		return;
-	}
-	if (chr_getProperty(cc, CP_DEAD) == 1) {
-		chr_message( cc, _, "You cannot do that as a ghost.");
-		return;
-	}
-
-	switch (skill_num)
+	if ( !chr_isGM( chr ) && chr_getProperty(chr, CP_SKILLDELAY) > getCurrentTime() ) 
 	{
-		case SK_ANATOMY:
-			__nxw_sk_anatomy(cc);
-		case SK_EVALUATINGINTEL:
-			__nxw_sk_evint(cc);
-		case SK_INSCRIPTION:
-			__nxw_sk_inscript(cc);
-		case SK_TASTEID:
-			__nxw_sk_tasteid(cc);
-		case SK_TRACKING:
-			__nxw_sk_tracking(cc);
-		case SK_TAMING:
-		        __nxw_sk_taming(cc);
-		case SK_HIDING:
-			__nxw_sk_hiding(cc);
-		case SK_DETECTINGHIDDEN:
-		        __nxw_sk_dtchidden(cc);
-		default:
-			return;
+		chr_message( chr, _, "You must wait a few moments before using another skill.");
+		return;
 	}
+	
+	if (chr_getProperty(chr, CP_DEAD) == 1) 
+	{
+		chr_message( chr, _, "You cannot do that as a ghost.");
+		return;
+	}
+	
+	#if _SKILLS_DEBUG_
+		printf("^tCalling function %s^n",__skillFunctions[skill_num]);
+	#endif
+	
+	callFunction1P(funcidx(__skillFunctions[skill_num]),chr);
 }

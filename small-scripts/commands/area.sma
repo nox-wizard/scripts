@@ -1,5 +1,5 @@
 /*!
-\defgroup script_command_area area command
+\defgroup script_command_area 'area
 \ingroup script_commands
 
 @{

@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_add 'add
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_add(const chr)
 \brief adds objects to the world
@@ -82,3 +89,5 @@ public cmd_add_targ(target, chr, object, x, y, z, unused1, scriptID)
 	}
 	chr_message(chr,_,"Invalid map location");
 }
+
+/*! }@ */

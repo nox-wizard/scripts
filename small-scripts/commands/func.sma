@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_func 'func
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_func(const chr)
 \brief executes a Small function
@@ -53,3 +60,4 @@ public cmd_func(const chr)
 	}
 }
 
+/*! }@ */

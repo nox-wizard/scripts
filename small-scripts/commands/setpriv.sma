@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_setpriv 'setpriv
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_setpriv(const chr)
 \brief sets the privlevel of a character
@@ -74,3 +81,5 @@ public cmd_freeze_targ(target, chr, object, x, y, z, unused, priv)
 		chr_setLocalIntVar(object,CLV_PRIVLEVEL,priv);
 	else chr_message(chr,_,"You must target a character");
 }
+
+/*! }@ */

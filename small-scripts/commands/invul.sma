@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_invul 'invul
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_invul
 \brief makes a character vulnerable or invulnerable
@@ -87,3 +94,5 @@ public cmd_invul_targ(target, chr, object, x, y, z, unused, makeinvul)
 		else chr_makeVulnerable(object);
 	else chr_message(chr,_,"You must target a character");		
 }
+
+/*! }@ */

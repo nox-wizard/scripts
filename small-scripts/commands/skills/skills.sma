@@ -1,4 +1,11 @@
-public command_skills( const caller )
+/*!
+\defgroup script_command_skills 'skills
+\ingroup script_commands
+
+@{
+*/
+
+public cmd_skills( const caller )
 {
 	chr_message(caller, _, "Select character.. "); 
 	target_create( caller, _, _, _, "target_skills");
@@ -71,4 +78,4 @@ public handle_skills_char( const caller, const menu, const button )
 		
 }
 
-
+/*! }@ */

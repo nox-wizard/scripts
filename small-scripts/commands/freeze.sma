@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_freeze 'freeze
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_freeze(const chr)
 \brief freezes a character
@@ -99,3 +106,5 @@ public cmd_freeze_targ(target, chr, object, x, y, z, unused, freeze)
 		}
 	else chr_message(chr,_,"You must target a character");
 }
+
+/*! }@ */

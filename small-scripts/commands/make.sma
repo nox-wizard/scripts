@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_make 'make
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_make(const chr)
 \brief makes a character GM, counselor or player
@@ -75,3 +82,5 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 		}
 	}
 }
+
+/*! }@ */

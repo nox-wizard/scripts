@@ -1,15 +1,21 @@
 /*!
+\defgroup script_command_stats 'stats
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Sparhawk?
 \fn cmd_stats(const chr)
 \brief small ingame char/item editing
 
-<B>syntax:</B> 'small
+<B>syntax:</B> 'stats
 Shows a small ingame menu that allows all kinds of modifications to chars and items<BR>
-\todo rename this function when commands are done in sources to cmd_stats
 <br>
 */
 
-public command_stats( const caller )
+public cmd_stats( const caller )
 {
 	if(chr_getProperty(caller, CP_SERIAL) != caller) //as long sockets are still given instead serial
 		return;
@@ -408,3 +414,4 @@ public stats_item( const caller, const item, const page )
 	gui_show( menu, caller );
 }
 
+/*! }@ */

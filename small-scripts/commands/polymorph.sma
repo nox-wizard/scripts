@@ -1,12 +1,8 @@
 /*!
-\author Horian
-\fn cmd_polymorph(const chr)
-\brief polymorphing of chars/npc
+\defgroup script_command_polymorph 'polymorph
+\ingroup script_commands
 
-<B>syntax:</B> 'tweak
-Shows an ingame menu that allows to choose from all available bodys to polymorph the char<BR>
-\todo make this function work when commands are done in sources
-<br>
+@{
 */
 
 /*
@@ -129,6 +125,15 @@ static animProperty[NUM_anims][animprop] = {
 {0225, 0x00e1, 0x2122, "wolf"}
 };
 
+/*!
+\author Horian
+\fn cmd_polymorph(const chr)
+\brief polymorphing of chars/npc
+
+<B>syntax:</B> 'polymorph
+Shows an ingame menu that allows to choose from all available bodys to polymorph the char<BR>
+<br>
+*/
 public cmd_polymorph(const chrsource)
 {
 	if( (chr_isGM(chrsource)!=0) || (chr_getProperty(chrsource, CP_ACCOUNT)!= 0)) //no admin or gm -> abort
@@ -271,3 +276,5 @@ public infoPolyCallback(const polymMenu, const chrsource, const buttonCode)
 		chr_update(target);
 	}
 }
+
+/*! }@ */

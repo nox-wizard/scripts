@@ -1,5 +1,5 @@
 /*!
-\defgroup script_commands_constants
+\defgroup script_commands_constants constants
 \ingroup script_commands
 
 To add new commands simply adda a name in the __commands[][] array and put somewhere a
@@ -53,7 +53,7 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"wipe"},
 	{PRIV_CNS,	"polimorph"},
 	{PRIV_ADMIN,	"setpriv"},
-	{0,""},
+	{PRIV_GM,	"dupe"},
 	{0,""},
 	
 	{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},{0,""},

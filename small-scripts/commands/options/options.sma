@@ -1,4 +1,11 @@
-public command_options( const caller )
+/*!
+\defgroup script_command_options 'options
+\ingroup script_commands
+
+@{
+*/
+
+public cmd_options( const caller )
 {
 	chr_message(caller, _, "Select object.. ");
 	target_create( caller, _, _, _, "target_options");
@@ -98,3 +105,4 @@ public options_item( const caller, const item )
 	chr_message(caller,_ , "Options on item" );
 }
 
+/*! }@ */

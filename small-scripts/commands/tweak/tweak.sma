@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_tweak 'tweak
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Straylight of the freeshard Anacron, www.anacron.net, rewrite, extended and modified by Horian,gernox.de
 \fn cmd_tweak(const chr)
 \brief ingame char/item editing
@@ -1625,3 +1632,5 @@ public callItemMenu(const chrsource,const target, const pagenumber)
 		gui_addText(menuitemprop1,400,230,0,tempStr,0);
 		gui_show(menuitemprop1,chrsource);
 }
+
+/*! }@ */

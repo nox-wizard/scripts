@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_kill 'kill
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax(const chr)
 \fn cmd_kill
 \brief kills a character
@@ -56,3 +63,5 @@ public cmd_kill_targ(target, chr, object, x, y, z, unused, area)
 	}
 	else chr_message(chr,_,"You must target a character");
 }
+
+/*! }@ */

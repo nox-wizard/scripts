@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_move 'move
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_move(const chr)
 \brief moves objects
@@ -233,3 +240,5 @@ public cmd_move_targ_abs(target, chr, object, x, y, z, unused2, param)
 	
 	chr_message(chr,_,"You must select an object!");	
 }
+
+/*! }@ */

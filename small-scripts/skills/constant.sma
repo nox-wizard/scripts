@@ -15,6 +15,8 @@
 @{
 */
 
+#define _SKILLS_DEBUG_ 1 //<! set to 1 if you want debug messages to be printed
+
 /*!
 \brief skill constants used to identify a skill with a number always use this constants to refer to a skill
 */
@@ -187,7 +189,7 @@ This array contains the names of the functions called to execute
 a skill.
 Changing values in the array will cause a different function to be called to execute a skill
 */
-public skillFunctions[SK_COUNT][] = {
+public __skillFunctions[SK_COUNT][] = {
 	"__nxw_sk_alchemy",
 	"__nxw_sk_anatomy",
 	"__nxw_sk_animalLore",
@@ -202,7 +204,7 @@ public skillFunctions[SK_COUNT][] = {
 	"__nxw_sk_carpentery",
 	"__nxw_sk_cartography",
 	"__nxw_sk_cooking",
-	"__nxw_sk_detectHid",
+	"__nxw_sk_dtchidden",
 	"__nxw_sk_enticement",
 	"__nxw_sk_evint",
 	"__nxw_sk_healing",
@@ -224,7 +226,7 @@ public skillFunctions[SK_COUNT][] = {
 	"__nxw_sk_stealing",
 	"__nxw_sk_tailoring",
 	"__nxw_sk_taming",
-	"__nxw_sk_tasteId",
+	"__nxw_sk_tasteid",
 	"__nxw_sk_tinkering",
 	"__nxw_sk_tracking",
 	"__nxw_sk_veterinary",

@@ -1,3 +1,10 @@
+/*!
+\defgroup script_command_playerlist 'playerlist
+\ingroup script_commands
+
+@{
+*/
+
 const chrForPage = 14;
 public cmd_playerlist( const caller )
 {
@@ -59,3 +66,5 @@ public handle_playerlist( const caller, const menu, const button )
 	if( button == MENU_CLOSED )	return;
 	options_char( caller, button );
 }
+
+/*! }@ */

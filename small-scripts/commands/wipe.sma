@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_wipe 'wipe
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_wipe
 \brief wipes items or characters or both
@@ -83,3 +90,5 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 	
 	area_refresh(area);
 }
+
+/*! }@ */

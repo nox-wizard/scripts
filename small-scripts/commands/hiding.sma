@@ -1,4 +1,11 @@
 /*!
+\defgroup script_command_hiding 'hiding
+\ingroup script_commands
+
+@{
+*/
+
+/*!
 \author Fax
 \fn cmd_hide(const chr)
 \brief hides a character
@@ -164,3 +171,5 @@ public cmd_hide_targ(target, chr, object, x, y, z, unused, param)
 	
 	else chr_message(chr,_,"You must target a character");
 }
+
+/*! }@ */
