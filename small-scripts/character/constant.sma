@@ -45,10 +45,15 @@ const CP2_INTDEC  = 1;
 const CP2_INTREAL = 2;
 const CP2_MANA  = 3;
 
-//second cp for regenerate
+//property for regenerate
 const CP2_REGEN_HP = 0;
 const CP2_REGEN_MANA = 1;
 const CP2_REGEN_STAMINA = 2;
+
+//property for applyDamage
+const CP2_DAMAGE_HP = 0;
+const CP2_DAMAGE_MANA = 1;
+const CP2_DAMAGE_STAMINA = 2;
 
 const CP2_STARTATTACK = 0;
 const CP2_IDLE = 1;
