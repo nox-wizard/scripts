@@ -13,6 +13,7 @@
 #include "small-scripts/commands/tweak/tweak.sma"
 //#include "small-scripts/commands/where.sma"
 //#include "small-scripts/commands/wipe.sma"
+#include "small-scripts/commands/polymorph.sma"
 
 /*!
 \defgroup script_commands commands
