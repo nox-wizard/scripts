@@ -87,14 +87,14 @@ SECTION ADVANCEMENT $advance_mage
 	ITEM $item_a_wizards_hat
 	ITEM $item_a_spellbook
 	ITEM $item_all-spell_scroll
-	ITEM $item_black_pearls
-	ITEM $item_blood_moss
-	ITEM $item_garlic_1
-	ITEM $item_ginseng_1
-	ITEM $item_mandrake_roots
-	ITEM $item_nightshade_1
-	ITEM $item_sulfurous_ash_1
-	ITEM $item_spiders_silk_1
+	ITEM $item_black_pearl 50
+	ITEM $item_bloodmoss 50
+	ITEM $item_garlic 50
+	ITEM $item_ginseng 50
+	ITEM $item_mandrake_root 50
+	ITEM $item_nightshade 50
+	ITEM $item_sulfurous_ash 50
+	ITEM $item_spiders_silk 50
 }
 
 // Thief

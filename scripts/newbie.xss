@@ -19,14 +19,14 @@ SECTION BESTSKILL $skill_alchemy
     PACKITEM $item_bottle_A
     PACKITEM $item_bottle_A
     PACKITEM $item_bottle_A
-    PACKITEM $item_black_pearls_2
-    PACKITEM $item_blood_moss_2
-    PACKITEM $item_garlic_3
-    PACKITEM $item_ginseng_3
-    PACKITEM $item_mandrake_roots_2
-    PACKITEM $item_nightshade_3
-    PACKITEM $item_sulfurous_ash_3
-    PACKITEM $item_spiders_silk_3
+    PACKITEM $item_black_pearl 3
+    PACKITEM $item_bloodmoss 3
+    PACKITEM $item_garlic 3
+    PACKITEM $item_ginseng 3
+    PACKITEM $item_mandrake_root 3
+    PACKITEM $item_nightshade 3
+    PACKITEM $item_sulfurous_ash 3
+    PACKITEM $item_spiders_silk 3
     PACKITEM $item_robe
 }
 
@@ -184,14 +184,14 @@ SECTION BESTSKILL $skill_lockpicking
 SECTION BESTSKILL $skill_magery
 { // MAGERY
     PACKITEM $item_a_spellbook
-    PACKITEM $item_black_pearls_2
-    PACKITEM $item_blood_moss_2
-    PACKITEM $item_garlic_3
-    PACKITEM $item_ginseng_3
-    PACKITEM $item_mandrake_roots_2
-    PACKITEM $item_nightshade_3
-    PACKITEM $item_sulfurous_ash_3
-    PACKITEM $item_spiders_silk_3
+    PACKITEM $item_black_pearl 3
+    PACKITEM $item_bloodmoss 3
+    PACKITEM $item_garlic 3
+    PACKITEM $item_ginseng 3
+    PACKITEM $item_mandrake_root 3
+    PACKITEM $item_nightshade 3
+    PACKITEM $item_sulfurous_ash 3
+    PACKITEM $item_spiders_silk 3
     PACKITEM $item_first_circle_scrolls_list
     PACKITEM $item_first_circle_scrolls_list
     PACKITEM $item_first_circle_scrolls_list

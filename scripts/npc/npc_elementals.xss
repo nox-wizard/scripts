@@ -101,8 +101,8 @@ SECTION NPC $npc_a_fire_elemental
     SKIN 0000
     DIRECTION N
     BACKPACK
-    PACKITEM $item_sulfurous_ash_2
-    PACKITEM $item_sulfurous_ash_2
+    PACKITEM $item_sulfurous_ash 250
+    PACKITEM $item_sulfurous_ash 250
     LOOT $loot_uncut_gems
     LOOT $loot_uncut_gems
     GOLD 120 250
@@ -142,11 +142,11 @@ SECTION NPC $npc_a_fire_lord
     SKIN 0000
     DIRECTION N
     BACKPACK
-    PACKITEM $item_sulfurous_ash_2
-    PACKITEM $item_sulfurous_ash_2
-    PACKITEM $item_sulfurous_ash_2
-    PACKITEM $item_sulfurous_ash_2
-    PACKITEM $item_sulfurous_ash_2
+    PACKITEM $item_sulfurous_ash 250
+    PACKITEM $item_sulfurous_ash 250
+    PACKITEM $item_sulfurous_ash 250
+    PACKITEM $item_sulfurous_ash 250
+    PACKITEM $item_sulfurous_ash 250
     LOOT $loot_circle_1-5_spells
     LOOT $loot_circle_1-5_spells
     GOLD 300 500

@@ -221,9 +221,9 @@ SECTION NPC $npc_a_swamp_tentacle
     SKIN 059C
     DIRECTION N
     BACKPACK
-    PACKITEM $item_garlic_2
-    PACKITEM $item_garlic_2
-    PACKITEM $item_garlic_2
+    PACKITEM $item_garlic 250
+    PACKITEM $item_garlic 250
+    PACKITEM $item_garlic 250
     GOLD 50 150
     STR 96 120
     DEX 15 20

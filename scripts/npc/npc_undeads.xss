@@ -522,7 +522,7 @@ SECTION NPC $npc_a_mummy
     SKIN 044e
     DIRECTION N
     BACKPACK
-    PACKITEM $item_garlic_2
+    PACKITEM $item_garlic 250
     PACKITEM $item_clean_bandages_1
     LOOT $loot_circle_1-5_spells
     LOOT $loot_potions

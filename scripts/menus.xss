@@ -2324,35 +2324,35 @@ SECTION MENU $menu_common_reagents
     0F7A Black Pearl
     ADDITEM $item_black_pearl
     0F7A 50 Black Pearls
-    ADDITEM $item_black_pearls
+    ADDITEM $item_black_pearl 50
     0F7B Blood Moss
     ADDITEM $item_bloodmoss
     0F7B 50 Blood Moss
-    ADDITEM $item_blood_moss
+    ADDITEM $item_bloodmoss 50
     0F84 Garlic
     ADDITEM $item_garlic
     0F84 50 Garlic
-    ADDITEM $item_garlic_1
+    ADDITEM $item_garlic 50
     0F85 Ginseng
     ADDITEM $item_ginseng
     0F85 50 Ginseng
-    ADDITEM $item_ginseng_1
+    ADDITEM $item_ginseng 50
     0F86 Mandrake Root
     ADDITEM $item_mandrake_root
     0F86 50 Mandrake Root
-    ADDITEM $item_mandrake_roots
+    ADDITEM $item_mandrake_root 50
     0F88 Nightshade
     ADDITEM $item_nightshade
     0F88 50 Nightshade
-    ADDITEM $item_nightshade_1
+    ADDITEM $item_nightshade 50
     0F8C Sulfurous Ash
     ADDITEM $item_sulfurous_ash
     0F8C 50 Sulfurous Ash
-    ADDITEM $item_sulfurous_ash_1
+    ADDITEM $item_sulfurous_ash 50
     0F8D Spiders Silk
     ADDITEM $item_spiders_silk
     0F8D 50 Spiders Silk
-    ADDITEM $item_spiders_silk_1
+    ADDITEM $item_spiders_silk 50
     < Previous Menu
     OPENMENU $menu_reagents
 }

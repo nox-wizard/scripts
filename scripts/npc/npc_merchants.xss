@@ -2084,14 +2084,14 @@ SECTION NPC $npc_mage_m
     RSHOPITEM $item_a_wizards_hat
     RSHOPITEM $item_a_recall_rune_1
     RSHOPITEM $item_a_spellbook
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_a_clumsy_scroll
     RSHOPITEM $item_a_create_food_scroll
     RSHOPITEM $item_a_feeblemind_scroll
@@ -2146,14 +2146,14 @@ SECTION NPC $npc_mage_m
     SELLITEM $item_a_wizards_hat
     SELLITEM $item_a_recall_rune_1
     SELLITEM $item_a_spellbook
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_a_clumsy_scroll
     SELLITEM $item_a_create_food_scroll
     SELLITEM $item_a_feeblemind_scroll
@@ -2260,14 +2260,14 @@ SECTION NPC $npc_mage_f
     RSHOPITEM $item_black_staff
     RSHOPITEM $item_a_recall_rune_1
     RSHOPITEM $item_a_spellbook
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_a_clumsy_scroll
     RSHOPITEM $item_a_create_food_scroll
     RSHOPITEM $item_a_feeblemind_scroll
@@ -2321,14 +2321,14 @@ SECTION NPC $npc_mage_f
     SELLITEM $item_black_staff
     SELLITEM $item_a_recall_rune_1
     SELLITEM $item_a_spellbook
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_a_clumsy_scroll
     SELLITEM $item_a_create_food_scroll
     SELLITEM $item_a_feeblemind_scroll
@@ -2416,23 +2416,23 @@ SECTION NPC $npc_herbalist_m
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_mortar_and_pestal
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     DOORUSE 1
 }
@@ -2471,23 +2471,23 @@ SECTION NPC $npc_herbalist_f
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_mortar_and_pestal
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     DOORUSE 1
 }
@@ -5462,14 +5462,14 @@ SECTION NPC $npc_alchemist_m
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_mortar_and_pestal
     RSHOPITEM $item_empty_vials
     RSHOPITEM $item_bottle_A
@@ -5502,14 +5502,14 @@ SECTION NPC $npc_alchemist_m
     SELLITEM $item_dark_blue_hairdye
     SELLITEM $item_pure_white_hairdye
     SELLITEM $item_red_hairdye
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     SELLITEM $item_empty_vials
     SELLITEM $item_bottle_A
@@ -5560,14 +5560,14 @@ SECTION NPC $npc_alchemist_f
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_mortar_and_pestal
     RSHOPITEM $item_empty_vials
     RSHOPITEM $item_bottle_A
@@ -5598,14 +5598,14 @@ SECTION NPC $npc_alchemist_f
     SELLITEM $item_dark_blue_hairdye
     SELLITEM $item_pure_white_hairdye
     SELLITEM $item_red_hairdye
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     SELLITEM $item_empty_vials
     SELLITEM $item_bottle_A
@@ -7394,14 +7394,14 @@ SECTION NPC $npc_mage_m_1
     RSHOPITEM $item_a_wizards_hat
     RSHOPITEM $item_a_recall_rune_1
     RSHOPITEM $item_a_spellbook
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_a_clumsy_scroll
     RSHOPITEM $item_a_create_food_scroll
     RSHOPITEM $item_a_feeblemind_scroll
@@ -7456,14 +7456,14 @@ SECTION NPC $npc_mage_m_1
     SELLITEM $item_a_wizards_hat
     SELLITEM $item_a_recall_rune_1
     SELLITEM $item_a_spellbook
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_a_clumsy_scroll
     SELLITEM $item_a_create_food_scroll
     SELLITEM $item_a_feeblemind_scroll
@@ -7737,14 +7737,14 @@ SECTION NPC $npc_mage_f_2
     RSHOPITEM $item_black_staff
     RSHOPITEM $item_a_recall_rune_1
     RSHOPITEM $item_a_spellbook
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_a_clumsy_scroll
     RSHOPITEM $item_a_create_food_scroll
     RSHOPITEM $item_a_feeblemind_scroll
@@ -7798,14 +7798,14 @@ SECTION NPC $npc_mage_f_2
     SELLITEM $item_black_staff
     SELLITEM $item_a_recall_rune_1
     SELLITEM $item_a_spellbook
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_a_clumsy_scroll
     SELLITEM $item_a_create_food_scroll
     SELLITEM $item_a_feeblemind_scroll
@@ -7892,23 +7892,23 @@ SECTION NPC $npc_herbalist_m_1
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_mortar_and_pestal
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     DOORUSE 1
 }
@@ -7946,23 +7946,23 @@ SECTION NPC $npc_herbalist_f_1
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_mortar_and_pestal
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     DOORUSE 1
 }
@@ -11147,14 +11147,14 @@ SECTION NPC $npc_alchemist_m_1
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_mortar_and_pestal
     RSHOPITEM $item_empty_vials
     RSHOPITEM $item_bottle_A
@@ -11185,14 +11185,14 @@ SECTION NPC $npc_alchemist_m_1
     SELLITEM $item_dark_blue_hairdye
     SELLITEM $item_pure_white_hairdye
     SELLITEM $item_red_hairdye
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     SELLITEM $item_empty_vials
     SELLITEM $item_bottle_A
@@ -11242,14 +11242,14 @@ SECTION NPC $npc_alchemist_f_1
     DAMAGE 3 15
     DEF 5
     SHOPKEEPER
-    RSHOPITEM $item_black_pearls_1
-    RSHOPITEM $item_blood_moss_1
-    RSHOPITEM $item_garlic_2
-    RSHOPITEM $item_ginseng_2
-    RSHOPITEM $item_mandrake_roots_1
-    RSHOPITEM $item_nightshade_2
-    RSHOPITEM $item_sulfurous_ash_2
-    RSHOPITEM $item_spiders_silk_2
+    RSHOPITEM $item_black_pearl 250
+    RSHOPITEM $item_bloodmoss 250
+    RSHOPITEM $item_garlic 250
+    RSHOPITEM $item_ginseng 250
+    RSHOPITEM $item_mandrake_root 250
+    RSHOPITEM $item_nightshade 250
+    RSHOPITEM $item_sulfurous_ash 250
+    RSHOPITEM $item_spiders_silk 250
     RSHOPITEM $item_mortar_and_pestal
     RSHOPITEM $item_empty_vials
     RSHOPITEM $item_bottle_A
@@ -11280,14 +11280,14 @@ SECTION NPC $npc_alchemist_f_1
     SELLITEM $item_dark_blue_hairdye
     SELLITEM $item_pure_white_hairdye
     SELLITEM $item_red_hairdye
-    SELLITEM $item_black_pearls_1
-    SELLITEM $item_blood_moss_1
-    SELLITEM $item_garlic_2
-    SELLITEM $item_ginseng_2
-    SELLITEM $item_mandrake_roots_1
-    SELLITEM $item_nightshade_2
-    SELLITEM $item_sulfurous_ash_2
-    SELLITEM $item_spiders_silk_2
+    SELLITEM $item_black_pearl
+    SELLITEM $item_bloodmoss
+    SELLITEM $item_garlic
+    SELLITEM $item_ginseng
+    SELLITEM $item_mandrake_root
+    SELLITEM $item_nightshade
+    SELLITEM $item_sulfurous_ash
+    SELLITEM $item_spiders_silk
     SELLITEM $item_mortar_and_pestal
     SELLITEM $item_empty_vials
     SELLITEM $item_bottle_A

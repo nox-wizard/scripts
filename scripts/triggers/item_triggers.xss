@@ -777,14 +777,14 @@ SECTION ITEMTRG $itrg_spawn_reagents
     SND 02 11
     ACT 11
     EMT *feels magical powers*
-    IADD $item_black_pearls
-    IADD $item_blood_moss
-    IADD $item_garlic_1
-    IADD $item_ginseng_1
-    IADD $item_mandrake_roots
-    IADD $item_nightshade_1
-    IADD $item_sulfurous_ash_1
-    IADD $item_spiders_silk_1
+    IADD $item_black_pearl
+    IADD $item_bloodmoss
+    IADD $item_garlic
+    IADD $item_ginseng
+    IADD $item_mandrake_root
+    IADD $item_nightshade
+    IADD $item_sulfurous_ash
+    IADD $item_spiders_silk
     REMOVE
 }
 
