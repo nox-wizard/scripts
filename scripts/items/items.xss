@@ -7503,6 +7503,12 @@ SECTION ITEM $item_cooked_birds
     VALUE 10
 }
 
+SECTION ITEM $item_raw_bird 
+{ 
+    ID 09B9 
+    DECAY 
+}
+
 SECTION ITEM $item_roast_pigs
 {
     ID 09BB

@@ -1871,6 +1871,7 @@
 #define $item_training_dummy_1 9007
 #define $item_pickpocket_dip 9008
 #define $item_pickpocket_dip_1 9009
+#define $item_raw_bird 9919
 #define $item_slotmachine_5gp_ 9999
 #define $item_heads_of_lettuce 10001
 #define $item_squash 10002
