@@ -33,26 +33,20 @@ const IP2_DISPZ = 3;
 const IP_INCOGNITO = 0;                //!< for items under incognito effect
 const IP_CORPSE = 102;                 //!< true if the item is a corpse
 const IP_DOORDIR = 103;                //!< door direction
-const IP_DOOROPEN = 104;               //!< true if the door is open
+const IP_DOOROPEN = 104;               //!< true if the dorr is open
 const IP_DYE = 105;                    //!< true if can be dyed with dye kit
 const IP_FREE = 106;                   //!< true if item is removed
-
-
-
 const IP_LAYER = 110;                  //!< the layer the item is on (see \ref LAYER_ constants)
 const IP_MAGIC = 111;                  //!< 0: default as stored in client 1:always movable 2:never movable 3:owner movable
 const IP_MORE = 112;                   //!< more
 const IP_MOREB = 113;                  //!< moreb
 const IP_OFFSPELL = 114;               //!< 
 const IP_OLDLAYER = 115;               //!<
-
 const IP_PILEABLE = 117;               //!< true if the item can be piled
 const IP_PRIV = 118;                   //!< bit 0: decay off/on bit 1:newbie off/on bit 2:dispellable
-
 const IP_VISIBLE = 120;                //!< 0:normally visible 1:owner & GM visible 2:GM visible
 const IP_DAMAGETYPE = 121;             //!< the damage type (see \ref DAMAGE_ constants)
 const IP_AUXDAMAGETYPE = 122;          //!< the additional damagetype for magic weapons (see \ref DAMAGE_ constants)
-
 const IP_ATT = 200;                    //!< attack power of the item
 const IP_CARVE = 201;                  //!< internal for carving system
 const IP_CONTAINERSERIAL = 202;        //!< the serial of the container the item is in
@@ -63,7 +57,6 @@ const IP_DEXREQUIRED = 206;            //!< dexterity required to use the item
 const IP_DISABLED = 207;               //!< true if disabled
 const IP_GATENUMBER = 208;             //!< 
 const IP_GATETIME = 209;               //!<
-
 const IP_GOOD = 211;                   //!<
 const IP_HIDAMAGE = 212;               //!< maximum damage done by the item
 const IP_HP = 213;                     //!< item hit points
@@ -82,10 +75,10 @@ const IP_OWNERSERIAL = 225;            //!< the serial of the owner
 const IP_POISONED = 226;               //!< poison type
 const IP_POSITION = 227;               //!< position, use CP2_X CP2_Y CP2_Z as subproperties
 const IP_RANK = 228;                   //!< rank
-const IP_REQSKILL = 229;               //!< 
+const IP_REQSKILL = 229;               //!< bugged, its the SMALL-synonym of REQSKILL in XSS, REQSKILL is only loaded from worldsave and is a number pair: skillnumber skillvalue, REQSKILL is never saved to worldsave except for itemcreation once, SMALL IP_REQSKILL does only change skillvalue but its not stored in worldsave too - so bugged twice
 const IP_RESTOCK = 230;                //!<
 const IP_RNDVALUERATE = 231;           //!<
-const IP_SECUREIT = 232;               //!<
+const IP_SECUREIT = 232;               //!< 1 or 0, secured container inside houses, if 1 only house owner can move and open the chest/container, for other people its closed as if locked by a key
 const IP_SERIAL = 233;                 //!< useless, the item serial
 const IP_SMELT = 234;                  //!< 
 const IP_SPAWNREGION = 235;            //!< the region from wich the item spawned
