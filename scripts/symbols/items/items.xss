@@ -232,40 +232,6 @@
 #define $item_bronze_key 341
 
 //
-// STONE FURNITURE
-//
-
-#define $item_marble_bench_A1 342
-#define $item_marble_bench_A2 343
-#define $item_marble_bench_B1_1 386
-#define $item_marble_bench_B1_2 387
-#define $item_marble_bench_B1_3 388
-#define $item_marble_bench_B2_1 346
-#define $item_marble_bench_B2_2 347
-#define $item_marble_bench_B2_3 248
-
-#define $item_sandstone_bench_A1 344
-#define $item_sandstone_bench_A2 345
-#define $item_sandstone_bench_B1_1 389
-#define $item_sandstone_bench_B1_2 390
-#define $item_sandstone_bench_B1_3 391
-#define $item_sandstone_bench_B2_1 349
-#define $item_sandstone_bench_B2_2 350
-#define $item_sandstone_bench_B2_3 351
-
-#define $item_stone_chair_1 392
-#define $item_stone_chair_2 393
-#define $item_stone_chair_3 394
-#define $item_stone_chair_4 395
-
-#define $item_stone_table_1_1 612
-#define $item_stone_table_1_2 613
-#define $item_stone_table_1_3 614
-#define $item_stone_table_2_1 615
-#define $item_stone_table_2_2 616
-#define $item_stone_table_2_3 617
-
-//
 // STATUES
 //
 #define $item_statue1 396
