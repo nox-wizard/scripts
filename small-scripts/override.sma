@@ -13,6 +13,7 @@
 
 #include "small-scripts/nxw_lib"
 #include "small-scripts/API/API.sma"
+#include "small-scripts/commands/commands.sma"
 
 #include "small-scripts/override/startServer.sma"
 #include "small-scripts/override/charLogin.sma"
@@ -23,7 +24,7 @@
 #include "small-scripts/guild/guildstone.sma"
 #include "small-scripts/race/menu/menu.sma"
 #include "small-scripts/party/party.sma"
-#include "small-scripts/commands/commands.sma"
+
 
 #include "small-scripts/custom/default.sma"
 

@@ -1,6 +1,15 @@
 public __startServer()
 {
 	printf("^n################  Small scripts started  ###################^n^n");
+	
+	//Command system type message
+	#if _CMD_DEBUG_
+		#if _USE_SOURCE_CMDSYS_
+			printf("^nSOURCE command system selected^n^n");
+		#else
+			printf("^nSMALL command system selected^n^n");
+		#endif
+	#endif
 		
 	//command system test
 	#if _CMD_DEBUG_

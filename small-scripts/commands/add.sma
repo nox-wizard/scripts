@@ -82,7 +82,7 @@ public cmd_add_targ(target, chr, object, x, y, z, unused1, scriptID)
 			new npc = chr_addNPC(scriptID,x,y,z);
 			chr_message(chr,_,"Character %d created",npc);
 			#if _CMD_DEBUG_
-				printf("Character %d created",npc);
+				printf("^tCharacter %d created",npc);
 			#endif
 		}
 		return;

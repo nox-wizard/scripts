@@ -2,12 +2,10 @@
 \defgroup script_commands_constants constants
 \ingroup script_commands
 
-To add new commands simply adda a name in the __commands[][] array and put somewhere a
-public function named cmd_nameofyournewcommand(chr).<br>
-If you want to call another function instead of the cmd_commandname function, put it in __commands[][__cmdFunc]
 @{
 */
 
+#define _USE_SOURCE_CMDSYS_ 1	//!< set to 1 if you want to use the source code command system, 0 if you want the Small scripted one.
 #define _CMD_DEBUG_  1		//!< command system debug switch set to 1 to have debug messages shown, 0 else.
 #define _CMD_SHOWLIST_ 1	//!< set to 1 if you want to see a list of available commands at startup
 #define _CMD_SHOW_MSG 1		//!< set to 1 if you want users to be warned when they try to use commands they are not authorized to use or that not exist

@@ -37,8 +37,11 @@ You don't need to modify this functions as all settings can be done in small-scr
 
 public detectCommand(const chr)
 {
+	
+//bypass only if Small command system is active
+#if !_USE_SOURCE_CMDSYS_
 	bypass();
-	if (!isChar(chr)) return; 
+#endif
 
 	new speech[150];	 
 	new command[30]; 
@@ -47,19 +50,23 @@ public detectCommand(const chr)
 			 	
 	speech[0]=' ';	//delete ' 							
 	ltrim(speech); 							
-
+	
 	//read command
 	str2Token(speech, command, 0,speech,0);
-	trim(command);
 	trim(speech);
-	str2lower(command); 
-	
-	#if _CMD_DEBUG_
-		new name[50];
-		chr_getProperty(chr,CP_STR_NAME,0,name);
-		printf("^nDEBUG: %s using command: %s^n",name,command);
-	#endif
-	
+	 
+	trim(command);
+	str2lower(command);
+
+#if _CMD_DEBUG_
+	new name[50];
+	chr_getProperty(chr,CP_STR_NAME,0,name);
+	printf("^nDEBUG: %s using command: %s^n",name,command);
+#endif
+
+//Small command system is bypassed if source command system is selected
+#if !_USE_SOURCE_CMDSYS_
+
 	//search command in __commands[][]
 	new cmd = 0;	
 	for(;strcmp(command,__commands[cmd][__cmdName]) && cmd < __CMD_COUNT; cmd++)
@@ -85,7 +92,8 @@ public detectCommand(const chr)
 		
 		return;
 	}	 
-	
+#endif
+
 	//read parameters and store them in __params[][]
 	new param = 0;
 	for(new i = 0; i < __MAX_PARAMS; i++)
@@ -106,6 +114,9 @@ public detectCommand(const chr)
 		param++;
 	}
 	
+//Small command system is bypassed if source command system is selected
+#if !_USE_SOURCE_CMDSYS_
+
 	//build command function name as: cmd_commandname or read the function to call if it has been specified
 	new function[20];
 	if(strlen(__commands[cmd][__cmdFunc]))
@@ -115,10 +126,13 @@ public detectCommand(const chr)
 	#if _CMD_DEBUG_
 		printf("^t->calling function: %s^n",function);
 	#endif
-	
+
+
 	//call command function
 	callFunction1P(funcidx(function),chr);
+#endif
 }
+
 
 /*!
 \author Fax
@@ -135,7 +149,12 @@ Usually you can  use this function like this:
 addCommand("mycommand",mypriv,"");
 \endcode
 and cmd_mycommand will be called on command use.
+
+\note: this function is a native function if the source coded command system is selected, else this is a normal public function
 */
+/*#if _USE_SOURCE_CMDSYS_
+	native addCommand(name[],priv,func[]);
+#else*/
 public addCommand(name[],priv, func[])
 {
 	if(!strlen(name))
@@ -165,6 +184,7 @@ public addCommand(name[],priv, func[])
 	printf("Command '%s (priv:%d func:%s) succesfully added^n",__commands[i][__cmdName],__commands[i][__cmdPriv],__commands[i][__cmdFunc]);
 	return CMD_OK;
 }
+//#endif
 
 /*!
 \author Fax
@@ -174,7 +194,11 @@ public addCommand(name[],priv, func[])
 \brief Deletes a command
 
 This is an helper function that can be called by scripts to delete commands at runtime. 
+\note: this function is a native function if the source coded command system is selected, else this is a normal public function
 */
+/*#if _USE_SOURCE_CMDSYS_
+	native deleteCommand(name[]);
+#else*/
 public deleteCommand(name[])
 {
 	//seek command
@@ -195,5 +219,7 @@ public deleteCommand(name[])
 	printf("Command '%s succesfully deleted^n",name);
 	return CMD_OK
 }
+//#endif
+
 
 /*! @} */ //end of scripts_commands_system

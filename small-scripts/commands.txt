@@ -16,7 +16,21 @@
 
 //      name_of_the_command,priv_level,callback
 
-
+area,0,cmd_area
+add,0,cmd_add
+dupe,0,cmd_dupe
 freeze,0,cmd_freeze
-
+func,0,cmd_func
+hiding,0,cmd_hiding
+invul,0,cmd_invul
 kill,0,cmd_kill
+make,0,cmd_make
+move,0,cmd_move
+options,0,cmd_options
+playerlist,0,cmd_playerlist
+skills,0,cmd_skills
+stats,0,cmd_stats
+tweak,0,cmd_tweak
+where,0,cmd_where
+wipe,0,cmd_wipe
+polymorph,0,cmd_polymorph
