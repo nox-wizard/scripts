@@ -21,5 +21,11 @@ public __startServer()
 	//defined in "small-scripts/skills/extendedSkillsystem.sma"
 	initExtendedSkillsystem();
 	
+	//defined in "small-scripts/custom/worldstone.sma"
+	initWorldstone();
+	
+	//defined in "small-scripts/custom/treasurehunt/treasurehunt.sma"
+	initTreasure();
+	
 	printf("^n================  END OF STARTUP SCRIPTS ===================^n^n");
 }

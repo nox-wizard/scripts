@@ -11,11 +11,11 @@ SECTION ITEMTRG $itrg_treasure_map_lvl1
 	RANGE 2
 	CSKL $skill_cartography
 	IFSKL $skill_cartography 40
-	IADD $item_treasure_chest_lv1_
+	IADD $item_treasure_chest_lvl1
 	REMOVE
 }
 
-SECTION ITEMTRG $itrg_treasure_chest_lvl1_
+SECTION ITEMTRG $itrg_treasure_chest_lvl1
 {
 	RANGE 2
 	SND 02 50
@@ -56,7 +56,7 @@ SECTION ITEMTRG $itrg_treasure
 	RANGE 2
 	SND 00 37
 	MSG Final chest appears
-	IADD $item_treasure_chest_final_lv1_
+	IADD $item_treasure_chest_final_lvl1
 	SND 01 1E
 	HEA -10
 	REMOVE
@@ -68,7 +68,7 @@ SECTION ITEMTRG $itrg_treasure
 
 SECTION ITEMTRG $itrg_treasure_map_lvl2
 {
-	IADD $item_treasure_chest_lv2_
+	IADD $item_treasure_chest_lvl2
 	REMOVE
 }
 
@@ -102,14 +102,14 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl2_2
 	NADD $npc_a_hell_hound
 	NADD $npc_an_earth_elemental
 	NADD $npc_an_earth_elemental
-	SETTRG $itrg_treasure_chest_lv2_3
+	SETTRG $itrg_treasure_chest_lvl2_3
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl2_3
 {
 	RANGE 2
 	SND 00 37
-	IADD $item_treasure_chest_final_lv2_
+	IADD $item_treasure_chest_final_lvl2
 	REMOVE
 	SND 01 1E
 	HEA -20
@@ -121,7 +121,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl2_3
 
 SECTION ITEMTRG $itrg_treasure_map_lvl3
 {
-	IADD $item_treasure_chest_lv3_
+	IADD $item_treasure_chest_lvl3
 	REMOVE
 }
 
@@ -133,7 +133,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3
 	NADD $npc_a_lich
 	NADD $npc_an_orcish_lord
 	NADD $npc_an_orcish_lord
-	SETTRG $itrg_treasure_chest_lv3_1
+	SETTRG $itrg_treasure_chest_lvl3_1
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl3_1
@@ -144,7 +144,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_1
 	NADD $npc_an_ogre_lord
 	NADD $npc_a_dark_spider
 	NADD $npc_a_dark_spider
-	SETTRG $itrg_treasure_chest_lv3_2
+	SETTRG $itrg_treasure_chest_lvl3_2
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl3_2
@@ -156,14 +156,14 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_2
 	NADD $npc_summoned_water_elemental
 	NADD $npc_summoned_water_elemental
 	NADD $npc_a_shadow_wyrm
-	SETTRG $itrg_treasure_chest_lv3_3
+	SETTRG $itrg_treasure_chest_lvl3_3
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl3_3
 {
 	RANGE 2
 	SND 00 37
-	IADD $item_treasure_chest_final_lv3_
+	IADD $item_treasure_chest_final_lvl3
 	REMOVE
 	SND 01 1E
 	HEA -30
@@ -173,34 +173,34 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_3
 //treasure level 4
 ///////////////////
 
-SECTION ITEMTRG $itrg_treasure_map_lv4_
+SECTION ITEMTRG $itrg_treasure_map_lvl4
 {
 	RANGE 2
 	CSKL $skill_cartography
 	IFSKL $skill_cartography 90
-	IADD $item_treasure_chest_lv4_
+	IADD $item_treasure_chest_lvl4
 	REMOVE
 }
 
-SECTION ITEMTRG $itrg_treasure_chest_lv4_
+SECTION ITEMTRG $itrg_treasure_chest_lvl4
 {
 	RANGE 2
 	SND 02 50
 	NADD $npc_an_ogre_lord
 	NADD $npc_an_ogre_lord
-	SETTRG $itrg_treasure_chest_lv4_1
+	SETTRG $itrg_treasure_chest_lvl4_1
 }
 
-SECTION ITEMTRG $itrg_treasure_spawn_lv4_1
+SECTION ITEMTRG $itrg_treasure_chest_lvl4_1
 {
 	RANGE 2
 	SND 02 50
 	NADD $npc_a_dark_spider
 	NADD $npc_a_dark_spider
-	SETTRG $itrg_treasure_chest_lv4_2
+	SETTRG $itrg_treasure_chest_lvl4_2
 }
 
-SECTION ITEMTRG $itrg_treasure_spawn_lv4_2
+SECTION ITEMTRG $itrg_treasure_chest_lvl4_2
 {
 	RANGE 2
 	SND 02 50
@@ -208,10 +208,10 @@ SECTION ITEMTRG $itrg_treasure_spawn_lv4_2
 	NADD $npc_a_lich
 	NADD $npc_a_lich
 	NADD $npc_a_lich
-	SETTRG $itrg_treasure_chest_lv4_3
+	SETTRG $itrg_treasure_chest_lvl4_3
 }
 
-SECTION ITEMTRG $itrg_treasure_spawn_lv4_3
+SECTION ITEMTRG $itrg_treasure_chest_lvl4_3
 {
 	RANGE 2
 	SND 02 50
@@ -220,10 +220,10 @@ SECTION ITEMTRG $itrg_treasure_spawn_lv4_3
 	NADD $npc_a_headless
 	NADD $npc_a_lich_lord
 	NADD $npc_a_lich_lord
-	SETTRG $itrg_treasure_chest_lv4_4
+	SETTRG $itrg_treasure_chest_lvl4_4
 }
 
-SECTION ITEMTRG $itrg_treasure_spawn_lv4_4
+SECTION ITEMTRG $itrg_treasure_chest_lvl4_4
 {
 	RANGE 2
 	SND 02 50
@@ -241,7 +241,7 @@ SECTION ITEMTRG $itrg_big_treasure
 	SETUSES 1
 	RANGE 2
 	SND 00 37
-	IADD $item_treasure_chest_final_lv4_
+	IADD $item_treasure_chest_final_lvl4
 	REMOVE
 	SND 01 1E
 	HEA -40
@@ -253,7 +253,7 @@ SECTION ITEMTRG $itrg_big_treasure
 
 SECTION ITEMTRG $itrg_treasure_map_lvl5
 {
-	IADD $item_treasure_chest_lv5_
+	IADD $item_treasure_chest_lvl5
 	REMOVE
 }
 
@@ -263,7 +263,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5
 	SND 02 50
 	NADD $npc_the_collector_of_souls
 	NADD $npc_the_collector_of_souls
-	SETTRG $itrg_treasure_chest_lv5_1
+	SETTRG $itrg_treasure_chest_lvl5_1
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_1
@@ -272,7 +272,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_1
 	SND 02 50
 	NADD $npc_a_lich_lord
 	NADD $npc_a_lich_lord
-	SETTRG $itrg_treasure_chest_lv5_2
+	SETTRG $itrg_treasure_chest_lvl5_2
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_2
@@ -281,7 +281,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_2
 	SND 02 50
 	NADD $npc_a_lich_lord
 	NADD $npc_a_lich_lord
-	SETTRG $itrg_treasure_chest_lv5_3
+	SETTRG $itrg_treasure_chest_lvl5_3
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_3
@@ -290,7 +290,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_3
 	SND 02 50
 	NADD $npc_deamon_unarmed
 	NADD $npc_deamon_unarmed
-	SETTRG $itrg_treasure_chest_lv5_4
+	SETTRG $itrg_treasure_chest_lvl5_4
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_4
@@ -301,7 +301,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_4
 	NADD $npc_an_elder_gazer
 	NADD $npc_an_elder_gazer
 	NADD $npc_an_elder_gazer
-	SETTRG $itrg_treasure_chest_lv5_5
+	SETTRG $itrg_treasure_chest_lvl5_5
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_5
@@ -311,7 +311,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_5
 	NADD $npc_a_poison_elemental
 	NADD $npc_a_poison_elemental
 	NADD $npc_a_poison_elemental
-	SETTRG $itrg_treasure_chest_lv5_6
+	SETTRG $itrg_treasure_chest_lvl5_6
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_6
@@ -322,7 +322,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_6
 	NADD $npc_a_blood_elemental
 	NADD $npc_a_blood_elemental
 	NADD $npc_a_blood_elemental
-	SETTRG $itrg_treasure_chest_lv5_7
+	SETTRG $itrg_treasure_chest_lvl5_7
 }
 
 SECTION ITEMTRG $itrg_treasure_chest_lvl5_7
@@ -331,7 +331,7 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl5_7
 	SETUSES 1
 	RANGE 2
 	SND 00 37
-	IADD $item_treasure_chest_final_lv5_
+	IADD $item_treasure_chest_final_lvl5
 	REMOVE
 	SND 01 1E
 	HEA -50

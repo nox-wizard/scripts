@@ -26,6 +26,7 @@
 45=__nxw_sk_mining,BYPASS
 46=__meditation,BYPASS
 0=__nxw_sk_alchemy,BYPASS
+14=__nxw_sk_dtchidden,BYPASS
 
 [triggers]
 

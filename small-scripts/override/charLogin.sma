@@ -35,7 +35,7 @@ public __charLogin(const chr)
 	{
 		new race = chr_getProperty(chr, CP_NPCRACE);
 		printf("race is: %d^n ", race);
-		if( race < 0)
+		if( race == 0)
 			race_menu(chr, race);
 	}
 	

@@ -1,21 +1,21 @@
-#define $item_treasure_map_lv1_ 20022
-#define $item_treasure_chest_lv1_ 15109
-#define $item_treasure_chest_final_lv1_ 30000
+#define $item_treasure_map_lvl1 20022
+#define $item_treasure_chest_lvl1 15109
+#define $item_treasure_chest_final_lvl1 30000
 
-#define $item_treasure_map_lv2_ 20023
-#define $item_treasure_chest_lv2_ 15111
-#define $item_treasure_chest_final_lv2_ 30008
+#define $item_treasure_map_lvl2 20023
+#define $item_treasure_chest_lvl2 15111
+#define $item_treasure_chest_final_lvl2 30008
 
-#define $item_treasure_map_lv3_ 20024
-#define $item_treasure_chest_lv3_ 15112
-#define $item_treasure_chest_final_lv3_ 30011
+#define $item_treasure_map_lvl3 20024
+#define $item_treasure_chest_lvl3 15112
+#define $item_treasure_chest_final_lvl3 30011
 
-#define $item_treasure_map_lv4_ 20003
-#define $item_treasure_chest_lv4_ 15110
-#define $item_treasure_chest_final_lv4_ 30003
+#define $item_treasure_map_lvl4 20003
+#define $item_treasure_chest_lvl4 15110
+#define $item_treasure_chest_final_lvl4 30003
 
-#define $item_treasure_map_lv5_ 20025
-#define $item_treasure_chest_lv5_ 15113
-#define $item_treasure_chest_final_lv5_ 30014
+#define $item_treasure_map_lvl5 20025
+#define $item_treasure_chest_lvl5 15113
+#define $item_treasure_chest_final_lvl5 30014
 
 #define $item_treasure_hunt_lootlist 20001

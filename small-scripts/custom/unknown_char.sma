@@ -183,7 +183,7 @@ public unknown_hearPl(const listener, const speaker)
 
 	chr_getProperty(speaker, CP_UNI_SPEECH_CURRENT,_,tempStr3); 
  
-	chr_getProperty(listener, CP_STR_ACCOUNT, _,tempStr); 
+	chr_getProperty(listener, CP_STR_NAME, _,tempStr); 
 	new charmap = chr_getLocalIntVar( listener, UNKNOWN_CHAR_VAR); 
 	new polycheck = chr_getProperty(listener, CP_POLYMORPH); 
 	   //emergency: what happens if we don't have the originals char name for checking because the char was polymorphed at login? Well, only chance is we try to get every single/double-click its real name again ... 
@@ -229,7 +229,7 @@ public unknown_sglclick(const clicked, const viewer)
 {
 	log_message("enter sglclick pre bypass");
 	bypass(); 
-	chr_getProperty(viewer, CP_STR_ACCOUNT, _,tempStr); 
+	chr_getProperty(viewer, CP_STR_NAME, _,tempStr); 
 	new charmap = chr_getLocalIntVar( viewer, UNKNOWN_CHAR_VAR); 
 	new polycheck = chr_getProperty(viewer, CP_POLYMORPH); 
 	 
@@ -272,7 +272,7 @@ public unknown_sglclick(const clicked, const viewer)
 public unknown_dblclick(const clicked, const viewer) 
 { 
 	bypass();  
-	chr_getProperty(viewer, CP_STR_ACCOUNT, _,tempStr); 
+	chr_getProperty(viewer, CP_STR_NAME, _,tempStr); 
 	new charmap = chr_getLocalIntVar( viewer, UNKNOWN_CHAR_VAR); 
 	new polycheck = chr_getProperty(viewer, CP_POLYMORPH); 
 	 

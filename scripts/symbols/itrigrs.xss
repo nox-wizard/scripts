@@ -79,7 +79,7 @@
 
 //treasure hunt
 #define $itrg_treasure_map_lvl1 123
-#define $itrg_treasure_chest_lvl1_ 124
+#define $itrg_treasure_chest_lvl1 124
 #define $itrg_treasure_spawn_lvl1_2 135
 #define $itrg_treasure_spawn_lvl1_3 136
 #define $itrg_treasure 137
@@ -98,15 +98,14 @@
 
 #define $itrg_treasure_map_lvl4 125
 #define $itrg_treasure_chest_lvl4 126
-#define $itrg_treasure_spawn_lvl4 138
-#define $itrg_treasure_spawn_lvl4_1 139
-#define $itrg_treasure_spawn_lvl4_2 140
-#define $itrg_treasure_spawn_lvl4_3 141
+#define $itrg_treasure_chest_lvl4_1 138
+#define $itrg_treasure_chest_lvl4_2 139
+#define $itrg_treasure_chest_lvl4_3 140
+#define $itrg_treasure_chest_lvl4_4 141
 #define $itrg_big_treasure 142
 
 #define $itrg_treasure_map_lvl5 131
 #define $itrg_treasure_chest_lvl5 132
-
 #define $itrg_treasure_chest_lvl5_1 149
 #define $itrg_treasure_chest_lvl5_2 150
 #define $itrg_treasure_chest_lvl5_3 151

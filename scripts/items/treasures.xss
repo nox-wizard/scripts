@@ -8,7 +8,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 //treasure maps
-SECTION ITEM $item_treasure_map_lv1_
+SECTION ITEM $item_treasure_map_lvl1
 {	
 	NAME a treasure map
 	ID 14ec
@@ -19,7 +19,7 @@ SECTION ITEM $item_treasure_map_lv1_
 }
 
 //treasure chest to spawn
-SECTION ITEM $item_treasure_chest_lv1_
+SECTION ITEM $item_treasure_chest_lvl1
 {
 	NAME treasure chest
 	ID 0E7C
@@ -34,7 +34,7 @@ SECTION ITEM $item_treasure_chest_lv1_
 }
 
 //treasure chest to spawn
-SECTION ITEM $item_treasure_chest_final_lv1_
+SECTION ITEM $item_treasure_chest_final_lvl1
 {
 	NAME treasure chest
 	ID 0E7C
@@ -71,7 +71,7 @@ SECTION ITEM $item_treasure_chest_final_lv1_
 //////////////////////////////////////
 //////////////////////////////////////
 
-SECTION ITEM $item_treasure_map_lv2_
+SECTION ITEM $item_treasure_map_lvl2
 {
 	NAME a treasure map
 	ID 14ec
@@ -81,7 +81,7 @@ SECTION ITEM $item_treasure_map_lv2_
 	///SUBSECTION Treasure Maps
 }
 
-SECTION ITEM $item_treasure_chest_lv2_
+SECTION ITEM $item_treasure_chest_lvl2
 {
 	NAME treasure chest
 	ID 0E7C
@@ -96,7 +96,7 @@ SECTION ITEM $item_treasure_chest_lv2_
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_final_lv2_
+SECTION ITEM $item_treasure_chest_final_lvl2
 {
 	NAME treasure chest
 	ID 0E7C
@@ -135,7 +135,7 @@ SECTION ITEM $item_treasure_chest_final_lv2_
 
 ///////////////////////////////////////
 
-SECTION ITEM $item_treasure_map_lv3_
+SECTION ITEM $item_treasure_map_lvl3
 {
 	NAME a treasure map
 	ID 14ec
@@ -145,7 +145,7 @@ SECTION ITEM $item_treasure_map_lv3_
 	///SUBSECTION Treasure Maps
 }
 
-SECTION ITEM $item_treasure_chest_lv3_
+SECTION ITEM $item_treasure_chest_lvl3
 {
 	NAME treasure chest
 	ID 0E7C
@@ -160,7 +160,7 @@ SECTION ITEM $item_treasure_chest_lv3_
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_final_lv3_
+SECTION ITEM $item_treasure_chest_final_lvl3
 {
 	NAME treasure chest
 	ID 0E7C
@@ -200,17 +200,17 @@ SECTION ITEM $item_treasure_chest_final_lv3_
 ///////////////////////////////////////
 ///////////////////////////////////////
 
-SECTION ITEM $item_treasure_map_lv4_
+SECTION ITEM $item_treasure_map_lvl4
 {
 	NAME a treasure map
 	ID 14ec
-	TRIGGER $itrg_treasure_map_lv4_
+	TRIGGER $itrg_treasure_map_lvl4
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Maps
 }
 
-SECTION ITEM $item_treasure_chest_lv4_
+SECTION ITEM $item_treasure_chest_lvl4
 {
 	NAME treasure chest
 	ID 0E7C
@@ -218,14 +218,14 @@ SECTION ITEM $item_treasure_chest_lv4_
 	VALUE 60
 	WEIGHT 600
 	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lv4_
+	TRIGGER $itrg_treasure_chest_lvl4
 	MOVABLE 1
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_final_lv4_
+SECTION ITEM $item_treasure_chest_final_lvl4
 {
 	NAME treasure chest
 	ID 0E7C
@@ -271,7 +271,7 @@ SECTION ITEM $item_treasure_chest_final_lv4_
 //////////////////////////////////////
 //////////////////////////////////////
 
-SECTION ITEM $item_treasure_map_lv5_
+SECTION ITEM $item_treasure_map_lvl5
 {
 	NAME a treasure map
 	ID 14ec
@@ -281,7 +281,7 @@ SECTION ITEM $item_treasure_map_lv5_
 	///SUBSECTION Treasure Maps
 }
 
-SECTION ITEM $item_treasure_chest_lv5_
+SECTION ITEM $item_treasure_chest_lvl5
 {
 	NAME treasure chest
 	ID 0E7C
@@ -296,7 +296,7 @@ SECTION ITEM $item_treasure_chest_lv5_
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEM $item_treasure_chest_final_lv5_
+SECTION ITEM $item_treasure_chest_final_lvl5
 {
 	NAME treasure chest
 	ID 0E7C
