@@ -352,7 +352,7 @@ native  set_getCoOwners ( const set, const house);
 \param 2 the house
 \return 0
 */
-native  set_getFriends ( const set, const house);
+native  set_addFriends ( const set, const house);
 
 /*
 \brief Add to given set all house banned (serials)
@@ -362,7 +362,7 @@ native  set_getFriends ( const set, const house);
 \param 2 the house
 \return 0
 */
-native  set_getBanned ( const set, const house);
+native  set_addBanned ( const set, const house);
 
 /*
 \brief Add to given set all owned house (serials)
@@ -372,6 +372,6 @@ native  set_getBanned ( const set, const house);
 \param 2 the house
 \return 0
 */
-native  set_getOwnedHouses ( const set, const house);
+native  set_addOwnedHouses ( const set, const house);
 
 /*! }@ */
