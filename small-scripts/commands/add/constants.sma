@@ -33,7 +33,7 @@ enum
 	P_AXES,
 	P_SWORDS,
 	P_BLADES,
-	P_FORKS,
+	P_OTHER,
 		
 	P_ANIMALS = 1,
 	P_T2A_MONSTERS,
@@ -54,13 +54,26 @@ enum
 	P_BAKED,
 	P_BOWLSMEATFRUIT,
 	P_PLANTS,
-	P_DOORS,
 	P_LIGHTS,
-	P_SIGNS
+	P_CONTAINERS,
+	P_STATUES_TROPHIES,
+	P_HAIR_BEARD,
+	P_RUGS,
+	P_CLOTHING,
+	P_JEWELS,
+	
+	P_CARPENTER = 1,
+	P_BLACKSMITH,
+	P_MUSICIAN,
+	P_TAILOR,
+	P_THIEF,
+	P_BOWYER,
+	P_TINKER,
+	P_FISHER
 };
 
-#define ADD_MENU_ENTRIES 12	//! number of items in the ad menu
-#define ADD_MENU_ENTRIES_L 10	//! string length of add menu items
+#define ADD_MENU_ENTRIES 13	//! number of items in the ad menu
+#define ADD_MENU_ENTRIES_L 13	//! string length of add menu items
 #define ADD_MENU_ROWS 3		//! number of rows the items will be displayed in
 enum __addMenuStruct
 {
@@ -69,18 +82,19 @@ enum __addMenuStruct
 }
 new addMenuItems[ADD_MENU_ENTRIES][__addMenuStruct] =
 {
-	{"Magic    ","addgui_magic"},
-	{"Combat   ","addgui_combat"},
-	{"Deeds    ","addgui_deeds"},
-	{"NPCs     ","addgui_NPCs"},
-	{"Spawner  ","addgui_spawner"},
-	{"Supply   ","addgui_supply"},
-	{"Skills   ","addgui_skills"},
-	{"Build    ","addgui_architecture"},
-	{"Floors   ","addgui_floors"},
-	{"Special  ","addgui_special"},
-	{"Shard    ","addgui_shard"},
-	{"Treasure ","addgui_treasure"}
+	{"Magic       ","addgui_magic"},
+	{"Combat      ","addgui_combat"},
+	{"Deeds       ","addgui_deeds"},
+	{"NPCs        ","addgui_NPCs"},
+	{"Spawner     ","addgui_spawner"},
+	{"Supply      ","addgui_supply"},
+	{"Signs       ","addgui_signs"},
+	{"Tools       ","addgui_tools"},
+	{"Architecture","addgui_architecture"},
+	{"Furniture   ","addgui_furniture"},
+	{"Special     ","addgui_special"},
+	{"Shard       ","addgui_shard"},
+	{"Treasure    ","addgui_treasure"}
 }
 
 #define MAGIC_MENU_ITEM_ENTRIES 6
@@ -126,7 +140,7 @@ new combatMenuTxt[COMBAT_MENU_ENTRIES][COMBAT_MENU_ENTRIES_L] =
 	"Axes",
 	"Blades",
 	"Maces",
-	"Forks"	
+	"Other"	
 }
 
 #define NPC_MENU_MONSTERS_ENTRIES 10
@@ -154,9 +168,9 @@ new npcMenuTxt[NPC_MENU_ENTRIES][NPC_MENU_ENTRIES_L] =
 }
 
 #define SUPPLY_MENU_FOOD_ENTRIES 3
-#define SUPPLY_MENU_ENTRIES SUPPLY_MENU_FOOD_ENTRIES + 4
-#define SUPPLY_MENU_ENTRIES_L 15
-#define SUPPLY_MENU_ROWS 2
+#define SUPPLY_MENU_ENTRIES SUPPLY_MENU_FOOD_ENTRIES + 9
+#define SUPPLY_MENU_ENTRIES_L 17
+#define SUPPLY_MENU_ROWS 3
 new supplyMenuTxt[SUPPLY_MENU_ENTRIES][SUPPLY_MENU_ENTRIES_L] =
 {
 	"Beverages",
@@ -165,7 +179,27 @@ new supplyMenuTxt[SUPPLY_MENU_ENTRIES][SUPPLY_MENU_ENTRIES_L] =
 	"Plants",
 	"Doors",
 	"Lights",
-	"Signs"
+	"Containers",
+	"Statues/Trophies",
+	"Hair/beard",
+	"Rugs",
+	"Clothing",
+	"Jewels"
+}
+
+#define TOOLS_MENU_ENTRIES 8
+#define TOOLS_MENU_ENTRIES_L 11
+#define TOOLS_MENU_ROWS 2
+new toolsMenuTxt[TOOLS_MENU_ENTRIES][TOOLS_MENU_ENTRIES_L] =
+{
+	"Carpenter",
+	"Blacksmith",
+	"Musician",
+	"Tailor",
+	"Thief",
+	"Bowyer",
+	"Tinker",
+	"Fisher"
 }
 
 enum {AR_HELM,AR_GORGET,AR_CHEST,AR_ARMS,AR_GLOVES,AR_LEGS,AR_FEMALE}

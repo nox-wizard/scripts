@@ -31,6 +31,27 @@ stock isChar( const serial ) {
 	return ( ( serial>=FIRST_CHAR_SERIAL ) && ( serial<FIRST_ITEM_SERIAL ) ); 
 }
 
+//=================  HIDING  ======================
+/*!
+\author Luxor
+\fn chr_hide(const chr, const mode)
+\params chr the character to be hidden
+\params mode what to do: 0 - unhide, 1 - hide, 2 - hidebyspell
+\brief hides a character
+
+\todo remove unhide mode? there is chr_unhide already
+\return 0 or INVALID if chr is not a valid character serial
+*/
+native chr_hide(const chr, const mode);
+
+/*!
+\author Xanathar
+\fn chr_unhide(const chr)
+\param chr the character
+\brief unhides a character
+\note character is unhidden only if it was hidden by skill and it wasn't permanently hidden
+*/
+native chr_unhide(const chr);
 
 //====================== PROPERTIES INTERFACE  ============================
 /*!
@@ -1321,27 +1342,7 @@ stock chr_getPositionVec(const chr, pos[3])
 }
 
 /** @} */
-//=================  HIDING  ======================
-/*!
-\author Luxor
-\fn chr_hide(const chr, const mode)
-\params chr the character to be hidden
-\params mode what to do: 0 - unhide, 1 - hide, 2 - hidebyspell
-\brief hides a character
 
-TODO: remove unhide mode? ther is chr_unhide already
-\return 0 or INVALID if chr is not a valid character serial
-*/
-native chr_hide(const chr, const mode);
-
-/*!
-\author Xanathar
-\fn chr_unhide(const chr)
-\param chr the character
-\brief unhides a character
-\note character is unhidden only if it was hidden by skill and it wasn't permanently hidden
-*/
-native chr_unhide(const chr);
 
 
 //===================  TAMING  ========================

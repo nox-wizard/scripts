@@ -25,14 +25,14 @@ Doesn't support command areas
 */
 public cmd_make(const chr)
 {
-	new makewhat = 1;
+	new makewhat = 2;
 	
 	if(!strcmp(__cmdParams[0],"gm"))
 		makewhat = 0;
 	else 	if(!strcmp(__cmdParams[0],"cns"))
-			makewhat = 0;
+			makewhat = 1;
 		else 	if(!strcmp(__cmdParams[0],"player"))
-				makewhat = 0;
+				makewhat = 2;
 			else
 			{
 				chr_message(chr,_,"You must specify 'gm', 'cns' or 'player'");
@@ -69,16 +69,19 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 		{
 			chr_makeGM(object);
 			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_GM);
+			chr_message(chr,_,"You are a GM now!");
 		}
 		case 1:
 		{ 
 			chr_makeCounselor(object);
 			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_CNS);
+			chr_message(chr,_,"You are a counselor now!");
 		}
 		case 2: 
 		{
 			chr_makePlayer(object);
 			chr_setLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_PLAYER);
+			chr_message(chr,_,"You are a player now!");
 		}
 	}
 }

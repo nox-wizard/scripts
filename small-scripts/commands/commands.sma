@@ -1,11 +1,10 @@
 #include "small-scripts/commands/area.sma"
-
 #include "small-scripts/commands/add/add.sma"
 #include "small-scripts/commands/dupe.sma"
 #include "small-scripts/commands/damage.sma"
 #include "small-scripts/commands/freeze.sma"
 #include "small-scripts/commands/func.sma"
-#include "small-scripts/commands/go.sma"
+#include "small-scripts/commands/go/go.sma"
 #include "small-scripts/commands/hiding.sma"
 #include "small-scripts/commands/invul.sma"
 #include "small-scripts/commands/kill.sma"
@@ -66,7 +65,7 @@ public detectCommand(const chr)
 #if _CMD_DEBUG_
 	new name[50];
 	chr_getProperty(chr,CP_STR_NAME,0,name);
-	log_message("DEBUG: %s is using command: %s^n",name,command);
+	log_message("DEBUG: %s is using command: %s",name,command);
 #endif
 
 //Small command system is bypassed if source command system is selected

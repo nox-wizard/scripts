@@ -481,53 +481,6 @@
 
 ///////////////////////////////////////////////////
 
-#define $item_a_metal_door 542
-#define $item_a_metal_door_1 543
-#define $item_a_metal_door_2 544
-#define $item_a_metal_door_3 545
-#define $item_a_barred_metal_door 546
-#define $item_barred_metal_door 547
-#define $item_barred_metal_door_1 548
-#define $item_barred_metal_door_2 549
-#define $item_rattan_door 550
-#define $item_rattan_door_1 551
-#define $item_rattan_door_2 552
-#define $item_rattan_door_3 553
-#define $item_wooden_door 554
-#define $item_wooden_door_1 555
-#define $item_wooden_door_2 556
-#define $item_wooden_door_3 557
-#define $item_wooden_door_4 558
-#define $item_wooden_door_5 559
-#define $item_wooden_door_6 560
-#define $item_wooden_door_7 561
-#define $item_metal_door 562
-#define $item_metal_door_1 563
-#define $item_metal_door_2 564
-#define $item_metal_door_3 565
-#define $item_wooden_door_8 566
-#define $item_wooden_door_9 567
-#define $item_wooden_door_A 568
-#define $item_wooden_door_B 569
-#define $item_wooden_door_C 570
-#define $item_wooden_door_D 571
-#define $item_wooden_door_E 572
-#define $item_wooden_door_F 573
-#define $item_wooden_gate 574
-#define $item_wooden_gate_1 575
-#define $item_wooden_gate_2 576
-#define $item_wooden_gate_3 577
-#define $item_iron_gate 578
-#define $item_iron_gate_1 579
-#define $item_iron_gate_2 580
-#define $item_iron_gate_3 581
-#define $item_wooden_gate_4 582
-#define $item_wooden_gate_5 583
-#define $item_wooden_gate_6 584
-#define $item_wooden_gate_7 585
-
-///////////////////////////////////////////////////
-
 #define $item_christmas_tree 597
 #define $item_christmas_tree_deed 598
 #define $item_dartboard_deed 599

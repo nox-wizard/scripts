@@ -59,23 +59,18 @@ public cmd_hiding(const chr)
 	if(strlen(__cmdParams[1]))
 	{
 		if(!strcmp(__cmdParams[1],"skill"))
-			action = 0;
+			mode = 0;
 		else 	if (!strcmp(__cmdParams[1],"spell"))
-				action = 1;	
+				mode = 1;	
 			else 	if (!strcmp(__cmdParams[1],"perma"))
-					action = 2;
-				else
-				{
-					chr_message(chr,_,"You must specify 'skill', 'spell' or 'perma' as first parameter");	
-					return;
-				}
+					mode = 2;
 	}
 	
 	if(!strcmp(__cmdParams[2],"target"))
 		target = true;
 		
 	new area = chr_getCmdArea(chr);
-	new i=0, chr2;
+	new i=0, chr2,txt[15];
 	//apply command to all characters in area
 	if(area_isValid(area) && !target)
 	{	//swich on action: toggle, unhide, hide
@@ -97,42 +92,59 @@ public cmd_hiding(const chr)
 		
 			case 1: //unhide
 			{
-				for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
+				for(set_rewind(area_chars(area)); !set_end(area_chars(area)); )
 				{
 					chr2 = set_getChar(area_chars(area));
-					if(chr2 != chr) chr_unhide(chr);
-				}	
+					if(chr2 != chr) 
+					{
+						i++
+						if(chr_isPermahidden(chr2))
+							chr_unpermahide(chr2);
+						
+						chr_setProperty(chr,CP_HIDDEN,_,0);
+						chr_update(chr2);
+					}					
+				}
+				sprintf(txt,"unhidden");	
 			}
 			
 			case 0: //hide
 			{
-				for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
+				for(set_rewind(area_chars(area)); !set_end(area_chars(area));)
 				{
 					chr2 = set_getChar(area_chars(area));
-					switch(mode)
+					if(chr2 != chr)
 					{
-						case 0: //hide by skill
-							if(chr2 != chr) chr_hide(chr,1);
-						case 1: //hide by spell
-							if(chr2 != chr) chr_hide(chr,2);
-						case 2: //permanently hidden
-							if(chr2 != chr) chr_permahide(chr);
+						i++
+						switch(mode)
+						{
+							case 0: //hide by skill
+								chr_hide(chr2,1);
+							case 1: //hide by spell
+								chr_hide(chr2,2);
+							case 2: //permanently hidden
+								chr_permahide(chr2);
+						}
+					chr_update(chr2);
 					}		
-				}	
+				}
+				sprintf(txt,"hidden");	
 			}
 		}	
+		
+		chr_message(chr,_,"%d characters %s",i,txt);
 		area_useCommand(area);			
 		return;
 	}
 
 	switch(action)
 	{
-		case 0: chr_message(chr,_,"Select a character to toggle hiding action ");
+		case 2: chr_message(chr,_,"Select a character to toggle hiding satus");
 		case 1: chr_message(chr,_,"Select a character to unhide");
-		case 2: chr_message(chr,_,"Select a character to hide");
+		case 0: chr_message(chr,_,"Select a character to hide");
 	}
 	
-	target_create(chr,10*action + mode,_,_,"cmd_kill_targ");
+	target_create(chr,10*action + mode,_,_,"cmd_hide_targ");
 }
 
 /*!
@@ -150,13 +162,20 @@ public cmd_hide_targ(target, chr, object, x, y, z, unused, param)
 	{
 		switch(action)
 		{
-			case -1: //toggle, TODO: have a chr_isHidden(chr) function
+			case 2: //toggle, TODO: have a chr_isHidden(chr) function
 				{ }
 		
-			case 0: //unhide
-				chr_unhide(object);
+			case 1: //unhide
+				{
+					if(chr_isPermahidden(object))
+						chr_unpermahide(object);
+					
+					chr_setProperty(chr,CP_HIDDEN,_,0);
+					chr_message(chr,_,"Character unhidden");
+				}
 			
-			case 1: //hide
+			case 0: //hide
+				{
 				switch(mode)
 					{
 						case 0: //hide by skill
@@ -165,8 +184,12 @@ public cmd_hide_targ(target, chr, object, x, y, z, unused, param)
 							chr_hide(object,2);
 						case 2: //permanently hidden
 							chr_permahide(object);
-					}		
-		}		
+					}
+				chr_message(chr,_,"Character hidden");
+				}		
+		}
+		
+	chr_update(object);		
 	}
 	
 	else chr_message(chr,_,"You must target a character");

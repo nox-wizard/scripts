@@ -32,6 +32,7 @@ static L_MARG;			//!< left margin, in columns
 //do not touch
 #define INPUT_AMOUNT 0
 #define INPUT_MATERIAL 1
+#define INPUT_MAGIC_SUFFIX 100
 
 #define CHK_ITEMSINBACKPACK 0;
 
@@ -436,6 +437,11 @@ public addgui_combat(chr,itemsInBackpack,amount)
 				new material[5] = "";
 				if(p != P_LEATHER && p!= P_STUDDED && p != P_BONE) sprintf(material,"iron");
 				gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*p,TXT_COLOR,"%s",material);
+				y += ROW;
+				
+				gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Magic suffix:");
+				gui_addInputField(menu,x + (tab + 15)*COL,y,15*COL,ROW,INPUT_MAGIC_SUFFIX + 10*p,TXT_COLOR,"");
+				y += ROW;
 				
 				gui_addButtonFn(menu,x + tab*COL,y  + 2*ROW,BTN_UP,BTN_DOWN,p,true,"addgui_armor_cback");
 				gui_addText(menu,x + BTNW + tab*COL,y + 2*ROW,TXT_COLOR,"create in backpack");
@@ -445,7 +451,9 @@ public addgui_combat(chr,itemsInBackpack,amount)
 		
 				gui_addButtonFn(menu,x + tab*COL,y + 4*ROW,BTN_UP,BTN_DOWN,p + 10000,true,"addgui_armor_cback");
 				gui_addText(menu,x + BTNW + tab*COL,y + 4*ROW,TXT_COLOR,"Equip to character");
-							
+				
+				y -= 2*ROW;
+					
 				new artype = p - P_PLATEMAIL;
 				for(new i = 0; i < ARMOR_PARTS; i++)
 				{
@@ -458,12 +466,15 @@ public addgui_combat(chr,itemsInBackpack,amount)
 				}		
 			}
 			
-			case P_AXES..P_FORKS:
+			case P_AXES..P_OTHER:
 			{
 				
 				gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
 				gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*p,TXT_COLOR,"iron");
-							
+				
+				gui_addText(menu,x + tab*COL,y + ROW,TXT_COLOR,"Magic suffix:");
+				gui_addInputField(menu,x + (tab + 15)*COL,y + ROW,15*COL,ROW,INPUT_MAGIC_SUFFIX + 10*p,TXT_COLOR,"");
+						
 				new wpntype = p - P_AXES;
 				for(new i = 0; i < WEAPONS_PER_GROUP; i++)
 				{
@@ -508,10 +519,12 @@ public addgui_armor_cback(menu,chr,armor)
 		}
 		else action = 2;
 	
-	new material[20];
+	new material[20],suffix[30];
 	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL + 10*armor,material);
 	if(strlen(material)) sprintf(material,"_%s",material);
 	
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MAGIC_SUFFIX + 10*armor,suffix);
+	if(strlen(suffix)) sprintf(suffix,"_of_%s",suffix);
 	
 	new artype[20] = "";	
 	switch(armor)
@@ -576,7 +589,7 @@ public addgui_armor_cback(menu,chr,armor)
 			else sprintf(arpart,"_%s",__armor[(armor - P_PLATEMAIL)*ARMOR_PARTS + i][__name]);
 		
 		new def[100],itm;
-		sprintf(def,"$item%s%s%s%s",material,gender,artype,arpart);
+		sprintf(def,"$item%s%s%s%s%s",material,gender,artype,arpart,suffix);
 		
 		switch(action)
 		{
@@ -652,11 +665,15 @@ public addgui_weapon_cback(menu,chr,weapon)
 	
 	new weapongrp = weapon/WEAPONS_PER_GROUP;
 	
-	new material[20];
+	new material[20],suffix[30];
 	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL + 10*(weapongrp + P_AXES),material);
-		
+	if(strlen(material)) sprintf(material,"_%s",material);
+	
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MAGIC_SUFFIX + 10*(weapongrp + P_AXES),suffix);
+	if(strlen(suffix)) sprintf(suffix,"_of_%s",suffix);
+	
 	new def[100];
-	sprintf(def,"$item_%s_%s",material,__weapons[weapon][__name]);
+	sprintf(def,"$item%s_%s%s",material,__weapons[weapon][__name],suffix);
 		
 	new item,scriptID = getIntFromDefine(def); 
 	item = itm_createInBp(scriptID,chr);
@@ -1105,20 +1122,6 @@ public addgui_supply(chr,itemsInBackpack,amount)
 				}
 			}
 			
-			case P_DOORS:
-			{	
-				i_row = 6;
-				tab = 7;
-				for(new i = 0; i < NUM_DOORS; i++, y+= (25*ROW)/10)
-				{
-					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-					
-					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__doors[i][__def]));
-					gui_addTilePic(menu,x + BTNW,y - BTNW,__doors[i][__ID]);
-					//gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__doors[i][__name]);
-				}
-			}
-			
 			case P_LIGHTS:
 			{	
 				i_row = 10;
@@ -1133,17 +1136,88 @@ public addgui_supply(chr,itemsInBackpack,amount)
 				}
 			}
 			
-			case P_SIGNS:
+			case P_CONTAINERS:
 			{	
-				i_row = 15;
-				tab = 10;
-				for(new i = 0; i < NUM_SIGNS; i++, y+= ROW)
+				i_row = 10;
+				tab = 27;
+				for(new i = 0; i < NUM_CONTAINERS; i++, y+= (15*ROW)/10)
 				{
 					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
 					
-					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__signs[i][__def]));
-					gui_addTilePic(menu,x + BTNW,y - BTNW,__signs[i][__ID]);
-					//gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__signs[i][__name]);
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__containers[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y - BTNW,__containers[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__containers[i][__name]);
+				}
+			}
+			
+			case P_STATUES_TROPHIES:
+			{	
+				i_row = 6;
+				tab = 10;
+				for(new i = 0; i < NUM_STATUES_TROPHIES; i++, y+= (25*ROW)/10)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__statuesTrophies[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y - BTNW,__statuesTrophies[i][__ID]);
+					//gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__statuesTrophies[i][__name]);
+				}
+			}
+			
+			case P_HAIR_BEARD:
+			{
+				i_row = 7;
+				tab = 27;
+				
+				for(new i = 0; i < NUM_HAIR_BEARD; i++, y+= (20*ROW)/10)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__hairBeard[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__hairBeard[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__hairBeard[i][__name]);
+				}
+			}
+			
+			case P_RUGS:
+			{	
+				i_row = 15;
+				tab = 10;
+				for(new i = 0; i < NUM_RUGS; i++, y+= ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__rugs[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y - BTNW,__rugs[i][__ID]);
+					//gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__rugs[i][__name]);
+				}
+			}
+			
+			case P_CLOTHING:
+			{	
+				i_row = 20;
+				tab = 24;
+				for(new i = 0; i < NUM_CLOTHING; i++, y += ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x += tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__clothing[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__clothing[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__clothing[i][__name]);
+				}
+			}
+			
+			case P_JEWELS:
+			{	
+				i_row = 15;
+				tab = 24;
+				for(new i = 0; i < NUM_JEWELS; i++, y += ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x += tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__jewels[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__jewels[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__jewels[i][__name]);
 				}
 			}
 		}
@@ -1197,6 +1271,85 @@ public addgui_supply_cback(menu,chr,btncode)
 	}
 }
 
+//==================================================================================//
+//                                  SIGNS MENU                                      //
+//==================================================================================//
+/*!
+\author Fax
+\fn addgui_signs(chr,unused,unused2)
+\param chr: the character
+\param itemsInBackpack: true if items are to be created in backpack
+\amount:how many items we need
+\since 0.82
+\brief signs page
+
+\return nothing
+*/
+public addgui_signs(chr,unused,unused2)
+{
+	new  START_X = 0;
+	new  START_Y = 0;
+	
+	new COLS = 39;
+	new ROWS = 19;
+	
+	new  WIDTH =  COLS*COL;
+	new  HEIGHT = (ROWS + 2)*ROW;
+	
+	new tabx = 5;	
+	new taby = 2;
+	
+	new x,y;
+	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_signs_cback");
+	
+	//draw menu frame
+	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT + ROW );
+	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT);
+		
+	x = START_X + L_MARG;
+	y = START_Y + ROW/2 + ROW;
+	
+	new p=1;
+	
+	gui_addPage(menu,p);
+	
+	for(new i; i < NUM_SIGNS; i++)
+	{
+		if(y >= START_Y + HEIGHT)
+		{
+			y = START_Y + ROW/2 + ROW;
+			++p;
+			gui_addText(menu,(START_X + WIDTH)/2 + 2*BTNW,START_Y + HEIGHT,TXT_COLOR,"next");
+			gui_addPageButton(menu,(START_X + WIDTH)/2 + BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p);
+			gui_addPage(menu,p);
+			gui_addText(menu,(START_X + WIDTH)/2 - 6*COL,START_Y + HEIGHT,TXT_COLOR,"prev");
+			gui_addPageButton(menu,(START_X + WIDTH)/2 - BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p - 1);
+		}
+		
+		gui_addTilePic(menu,x,y,__signs[i][__ID]);
+		gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__signs[i][__def]));
+		
+		
+		x += tabx*COL;
+		if(x >= START_X + WIDTH) 
+		{ 
+			x = START_X + L_MARG; 
+			y += taby*ROW;
+		}	
+	}
+	
+	gui_show(menu,chr);
+}
+
+public addgui_signs_cback(menu,chr,btncode)
+{
+	if(!btncode)	return;
+	
+	chr_message(chr,_,"click to position the item");
+	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
+	addgui_signs(chr,INVALID,INVALID)
+	
+}
 
 //==================================================================================//
 //                                  ARCHITECTURE MENU                                      //
@@ -1261,7 +1414,7 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 	gui_addText(menu,x,y,TXT_COLOR,"This menu will generate a list of items"); 			y += ROW;
 	gui_addText(menu,x,y,TXT_COLOR,"basing on the informations provided above.");			y += 2*ROW;
 	
-	gui_addText(menu,x,y,TXT_COLOR,"'Item type' can be: wall, stairs, floor, roof");		y += 2*ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"'Item type' can be: wall, stairs, floor, roof, door, gate");	y += 2*ROW;
 	
 	gui_addText(menu,x,y,TXT_COLOR,"'Material' depends on the itemtype:");				y += ROW;
 	gui_addText(menu,x,y,TXT_COLOR,"wall: stone, brick, log, marble, rattan, hide, tent, ruined");	y += ROW;
@@ -1269,7 +1422,9 @@ public addgui_architecture(chr,itemsInBackpack,amount)
 	gui_addText(menu,x,y,TXT_COLOR,"stairs: marble, stone, sandstone, wooden, carpeted, cave");	y += ROW;
 	gui_addText(menu,x,y,TXT_COLOR,"floor: marble, sandstone, planks, boards, logs, bricks, tiles");y += ROW;
 	gui_addText(menu,x,y,TXT_COLOR,"       flagstones, cobblestones, cave");			y += ROW;
-	gui_addText(menu,x,y,TXT_COLOR,"roof: stone, slate, tiles, palm, logs, tent, thatch");		y += 2*ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"roof: stone, slate, tiles, palm, logs, tent, thatch");		y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"door: metal, wooden, rattan");					y += ROW;
+	gui_addText(menu,x,y,TXT_COLOR,"gate: iron, wooden");						y += 2*ROW;
 	
 	gui_addText(menu,x,y,TXT_COLOR,"'subtype': a number 2,3,4 ...");
 	
@@ -1388,42 +1543,160 @@ public addgui_arch_cback2(menu,chr,btncode)
 }
 
 //==================================================================================//
-//                                  FLOORS MENU                                      //
+//                                FURNITURE MENU                                    //
 //==================================================================================//
 /*!
 \author Fax
-\fn addgui_floors(chr,itemsInBackpack,amount)
+\fn addgui_furniture(chr,itemsInBackpack,amount)
 \param chr: the character
 \param itemsInBackpack: true if items are to be created in backpack
 \amount:how many items we need
 \since 0.82
-\brief supply items page
+\brief furniture page
 
 \return nothing
 */
 
-public addgui_floors(chr,itemsInBackpack,amount)
+public addgui_furniture(chr,itemsInBackpack,amount)
 {
 	if(!isChar(chr)) return;
 	
 	#if _CMD_DEBUG_
-	log_message("^t->drawing floors menu");
+	log_message("^t->drawing furniture menu");
+	#endif
+	new START_X,START_Y;
+	
+	new COLS = 39;
+	new ROWS = 19;
+	
+	new  WIDTH =  COLS*COL;
+	new  HEIGHT = (ROWS + 2)*ROW;
+	
+	new tab = 15;
+	new tabx = 7;	
+	new taby = 3;
+		
+	new x,y;
+	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_furniture_cback");
+	
+	//draw menu frame
+	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT + ROW );
+	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT);
+	
+	
+	x = START_X + L_MARG;
+	y = START_Y + ROW/2 + ROW;
+	
+	gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
+	gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL,TXT_COLOR,"pine");
+		
+	x = START_X + L_MARG;
+	y += 2*ROW;
+	
+	//new amountstr[5];
+	//sprintf(amountstr,"%d",amount);
+	//gui_addText(menu,x,y,TXT_COLOR,"amount: ")
+	//gui_addInputField(menu,x + 10*COL,y,5*COL,ROW,INPUT_AMOUNT,TXT_COLOR,amountstr);
+	
+				
+	
+	
+	tab *= 2;
+	new p = 1;
+	gui_addPage(menu,1);
+	
+	for(new i; i < NUM_FURNITURE; i++)
+	{
+		if(y >= START_Y + HEIGHT || p == 0)
+		{
+			y = START_Y + ROW/2 + 3*ROW;
+			++p;
+			gui_addText(menu,(START_X + WIDTH)/2 + 2*BTNW,START_Y + HEIGHT,TXT_COLOR,"next");
+			gui_addPageButton(menu,(START_X + WIDTH)/2 + BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p);
+			gui_addPage(menu,p);
+			gui_addText(menu,(START_X + WIDTH)/2 - 6*COL,START_Y + HEIGHT,TXT_COLOR,"prev");
+			gui_addText(menu,START_X,START_Y,TXT_COLOR,"pag: %d",p);
+			gui_addPageButton(menu,(START_X + WIDTH)/2 - BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p - 1);
+		}
+		
+		gui_addTilePic(menu,x,y,__furniture[i][__ID]);
+		gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,i + 1);
+		
+		
+		x += tabx*COL;
+		if(x >= START_X + WIDTH) 
+		{ 
+			x = START_X + L_MARG; 
+			y += taby*ROW;
+		}	
+	}
+
+	gui_show(menu,chr);
+}
+
+/*!
+\author Fax
+\fn addgui_furniture_cback(menu,chr,armor)
+\param menu,chr,armor: standard menu callback params
+\since 0.82
+\brief callback for furniture menu
+
+Looks at the values given in the furniture menu and creates the XSS def of the items to create and creates them
+\return nothing
+*/
+public addgui_furniture_cback(menu,chr,idx)
+{
+	if(!idx)	return;
+	idx--;
+	
+	new material[20];
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL,material);
+	if(strlen(material)) sprintf(material,"_%s",material);
+	
+	new def[100];
+	sprintf(def,"$item_%s_%s",material,__furniture[idx][__def]);
+	target_create(chr,getIntFromDefine(def),_,_,"cmd_add_itm_targ");
+	addgui_furniture(chr,false,1);
+	
+}
+
+//==================================================================================//
+//                            TOOLS ITEMS MENU                                    //
+//==================================================================================//
+/*!
+\author Fax
+\fn addgui_tools(chr,itemsInBackpack,amount)
+\param chr: the character
+\param itemsInBackpack: true if items are to be created in backpack
+\amount:how many items we need
+\since 0.82
+\brief tools items page
+
+\return nothing
+*/
+
+public addgui_tools(chr,itemsInBackpack,amount)
+{
+	if(!isChar(chr)) return;
+	
+	#if _CMD_DEBUG_
+	log_message("^t->drawing tools menu");
 	#endif
 	
 	new  START_X = 0;
 	new  START_Y = 0;
 	
-	new h = 3,w = 8;
-	new i_row = 6;
-	new i_col = 7;
-	new COLS = i_row*w;
+	new i_row = TOOLS_MENU_ENTRIES/TOOLS_MENU_ROWS;
+	new COLS = 3 + i_row*(TOOLS_MENU_ENTRIES_L + 1 + PBTNW/COL);
 	
 	new  WIDTH =  COLS*COL;
-	new  HEIGHT1 = 4*ROW;
-	new HEIGHT2 = i_col*h*ROW;
+	new  HEIGHT1 = (TOOLS_MENU_ROWS + 5)*ROW;
+	new HEIGHT2 = 17*ROW;
 	
+	new tab = (COLS - 2)/i_row;	
+		
 	new x,y;
-	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_floors_cback");
+	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_tools_cback");
 	
 	//draw menu frame
 	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT1 + HEIGHT2 + ROW );
@@ -1431,48 +1704,207 @@ public addgui_floors(chr,itemsInBackpack,amount)
 	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2 + HEIGHT1,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT2);
 	
 	
-	x = (START_X + WIDTH)/2;
-	y = START_Y + HEIGHT1 + HEIGHT2 - 2*ROW;
+	x = START_X+ L_MARG;
+	y = START_Y + ROW/2 + ROW;
 	
-	new idx,npag = 1 + NUM_FLOORS/(i_row*i_col);
-	
-	for(new p = 1; p <= npag && idx < NUM_FLOORS; p++)
+	for(new p = 1; p <= TOOLS_MENU_ENTRIES; p++)
 	{
-		gui_addPage(menu,p);
-		//next button
-		if(p < npag) gui_addPageButton(menu,x + COL,y,PBTN_UP,PBTN_DOWN,p + 1);
-		if(p > 1) gui_addPageButton(menu,x - COL,y,PBTN_UP,PBTN_DOWN,p - 1);	
-		
-		for(new i = 0; i< i_row && idx < NUM_FLOORS; i++)
-			for(new j = 0; j < i_col && idx < NUM_FLOORS; j++)
-			{
-				gui_addTilePic(menu,START_X + L_MARG + i*w*COL,START_Y + HEIGHT1 + j*h*ROW,__floors[idx][__ID]);
-				gui_addButton(menu,START_X + L_MARG + i*w*COL,START_Y + HEIGHT1 + j*h*ROW,BTN_UP,BTN_DOWN,getIntFromDefine(__floors[idx++][__def]));
-			}
+		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,p);
+		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,toolsMenuTxt[p - 1]);	
+	
+		x += tab*COL;
+		if(p%i_row == 0 && p != 0) {x = START_X + L_MARG; y += ROW;}
 	}
 	
+	x = START_X + L_MARG;
+	y += ROW;
+	gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,itemsInBackpack,CHK_ITEMSINBACKPACK);
+	gui_addText(menu,x + BTNW,y,TXT_COLOR,"create items in backpack")
+	
+	y += ROW;
+	new amountstr[5];
+	sprintf(amountstr,"%d",amount);
+	gui_addText(menu,x,y,TXT_COLOR,"amount: ")
+	gui_addInputField(menu,x + 10*COL,y,5*COL,ROW,INPUT_AMOUNT,TXT_COLOR,amountstr);
+	
+	
+	tab *= 2;
+	i_row = 11;
+
+	for(new p = 1; p <= TOOLS_MENU_ENTRIES; p++)
+	{
+		gui_addPage(menu,p);
+		
+		x = L_MARG;
+		y = HEIGHT1 + 2*ROW;
+		new startRow = y;
+		
+		switch(p)
+		{
+			case P_CARPENTER:
+			{
+				i_row = 20;
+				tab = 10;
+				for(new i = 0; i < NUM_CARPENTER; i++, y+= ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__carpenter[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__carpenter[i][__ID]);
+					//gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__carpenter[i][__name]);
+				}
+			}
+			
+			case P_BLACKSMITH:
+			{
+				i_row = 7;
+				tab = 27;
+				
+				for(new i = 0; i < NUM_BLACKSMITH; i++, y+= 2*ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__blacksmith[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__blacksmith[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__blacksmith[i][__name]);
+				}
+			}
+			
+			case P_TAILOR:
+			{	
+				i_row = 7;
+				tab = 27;
+				for(new i = 0; i < NUM_TAILOR; i++, y+= 2*ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__tailor[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__tailor[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__tailor[i][__name]);
+				}
+			}
+			
+			case P_MUSICIAN:
+			{	
+				i_row = 7;
+				tab = 27;
+				for(new i = 0; i < NUM_MUSICIAN; i++, y+= 2*ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__musician[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__musician[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__musician[i][__name]);
+				}
+			}
+			
+			case P_THIEF:
+			{	
+				i_row = 7;
+				tab = 27;
+				for(new i = 0; i < NUM_THIEF; i++, y+= 2*ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__thief[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__thief[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__thief[i][__name]);
+				}
+			}
+			
+			case P_BOWYER:
+			{	
+				i_row = 7;
+				tab = 27;
+				for(new i = 0; i < NUM_BOWYER; i++, y+= 3*ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__bowyer[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__bowyer[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__bowyer[i][__name]);
+				}
+			}
+			
+			case P_TINKER:
+			{	
+				i_row = 7;
+				tab = 27;
+				for(new i = 0; i < NUM_TINKER; i++, y+= 2*ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__tinker[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__tinker[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__tinker[i][__name]);
+				}
+			}
+			
+			case P_FISHER:
+			{	
+				i_row = 7;
+				tab = 27;
+				for(new i = 0; i < NUM_FISHER; i++, y+= 2*ROW)
+				{
+					if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+					
+					gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__fisher[i][__def]));
+					gui_addTilePic(menu,x + BTNW,y,__fisher[i][__ID]);
+					gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__fisher[i][__name]);
+				}
+			}	
+		}
+	}
+
 	gui_show(menu,chr);
 }
 
 /*!
 \author Fax
-\fn addgui_floors_cback(menu,chr,btncode)
+\fn addgui_tools_cback(menu,chr,weapon)
 \param all: standard menu callback params
 \since 0.82
-\brief callback for floors menu
+\brief callback for tools menu
 
 Creates the item selected in the gump
 \return nothing
 */
-public addgui_floors_cback(menu,chr,btncode)
+public addgui_tools_cback(menu,chr,btncode)
 {
 	if(!btncode)	return;
 	
-	chr_message(chr,_,"click to position the item");
-	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
+	new n,itemsInBackpack;
+	getAmountAndChk(menu,n,itemsInBackpack);
+	
+	if(itemsInBackpack)
+	{
+		new item; 
+		item = itm_createInBp(btncode,chr);
+						
+		if(itm_getProperty(item,IP_PILEABLE))
+		{	
+			itm_createInBp(btncode,chr,n - 1);
+			chr_message(chr,_,"Item %d created",item);
+		}
+		else
+			for(new i = 0; i < n -1; i++)
+			{
+				item = itm_createInBp(btncode,chr);
+				chr_message(chr,_,"Item %d created",item);		
+			}
+		
+		addgui_tools(chr,true,n);
+	}
+	
+	else
+	{
+		chr_setLocalIntVar(chr,CLV_CMDTEMP,n);
+		chr_message(chr,_,"click to position the item");
+		target_create(chr,btncode,_,_,"cmd_add_itm_targ");
+	}
 }
 
-
+			
 
 static getAmountAndChk(menu,&n,&chk)
 {

@@ -7113,3 +7113,408 @@ SECTION ITEM $item_tent_roof_79
 {
     ID 0674
 }
+
+//=========================================================================//
+//                                 DOORS                                   //
+//=========================================================================//
+SECTION ITEM $item_metal_door_1
+{
+    NAME A metal door
+    ID 0675
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Metal Door
+}
+
+SECTION ITEM $item_metal_door_2
+{
+    NAME A metal door
+    ID 0677
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Metal Door
+}
+
+SECTION ITEM $item_metal_door_3
+{
+    NAME A metal door
+    ID 067D
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Metal Door
+}
+
+SECTION ITEM $item_metal_door_4
+{
+    NAME A metal door
+    ID 067F
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Metal Door
+}
+
+SECTION ITEM $item_metal_door_5
+{
+    NAME A barred metal door
+    ID 0685
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Barred Metal Door
+}
+
+SECTION ITEM $item_metal_door_6
+{
+    ID 0687
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Barred Metal Door
+}
+
+SECTION ITEM $item_metal_door_7
+{
+    ID 068D
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Barred Metal Door
+}
+
+SECTION ITEM $item_metal_door_8
+{
+    ID 068F
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Barred Metal Door
+}
+
+SECTION ITEM $item_rattan_door_1
+{
+    ID 0695
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Rattan Door
+}
+
+SECTION ITEM $item_rattan_door_2
+{
+    ID 0697
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Rattan Door
+}
+
+SECTION ITEM $item_rattan_door_3
+{
+    ID 069D
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Rattan Door
+}
+
+SECTION ITEM $item_rattan_door_4
+{
+    ID 069F
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Rattan Door
+}
+
+SECTION ITEM $item_wooden_door_1
+{
+    ID 06A5
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door
+}
+
+SECTION ITEM $item_wooden_door_2
+{
+    ID 06A7
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door
+}
+
+SECTION ITEM $item_wooden_door_3
+{
+    ID 06AD
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door
+}
+
+SECTION ITEM $item_wooden_door_4
+{
+    ID 06AF
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door
+}
+
+SECTION ITEM $item_wooden_door_5
+{
+    ID 06B5
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door
+}
+
+SECTION ITEM $item_wooden_door_6
+{
+    ID 06B7
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door
+}
+
+SECTION ITEM $item_wooden_door_7
+{
+    ID 06BD
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door
+}
+
+SECTION ITEM $item_wooden_door_8
+{
+    ID 06BF
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door
+}
+
+SECTION ITEM $item_metal_door_9
+{
+    ID 06C5
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Metal Door 2
+}
+
+SECTION ITEM $item_metal_door_10
+{
+    ID 06C7
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Metal Door 2
+}
+
+SECTION ITEM $item_metal_door_11
+{
+    ID 06CD
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Metal Door 2
+}
+
+SECTION ITEM $item_metal_door_12
+{
+    ID 06CF
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Metal Door 2
+}
+
+SECTION ITEM $item_wooden_door_9
+{
+    ID 06D5
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door 2
+}
+
+SECTION ITEM $item_wooden_door_10
+{
+    ID 06D7
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door 2
+}
+
+SECTION ITEM $item_wooden_door_11
+{
+    ID 06DD
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door 2
+}
+
+SECTION ITEM $item_wooden_door_12
+{
+    ID 06DF
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door 2
+}
+
+SECTION ITEM $item_wooden_door_13
+{
+    ID 06E5
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door 2
+}
+
+SECTION ITEM $item_wooden_door_14
+{
+    ID 06E7
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door 2
+}
+
+SECTION ITEM $item_wooden_door_15
+{
+    ID 06ED
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door 2
+}
+
+SECTION ITEM $item_wooden_door_16
+{
+    ID 06EF
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Door 2
+}
+
+SECTION ITEM $item_wooden_gate_1
+{
+    ID 0839
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Gate
+}
+
+SECTION ITEM $item_wooden_gate_2
+{
+    ID 083B
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Gate
+}
+
+SECTION ITEM $item_wooden_gate_3
+{
+    ID 0841
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Gate
+}
+
+SECTION ITEM $item_wooden_gate_4
+{
+    ID 0843
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Gate
+}
+
+SECTION ITEM $item_iron_gate_1
+{
+    ID 084C
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Iron Gate
+}
+
+SECTION ITEM $item_iron_gate_2
+{
+    ID 084E
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Iron Gate
+}
+
+SECTION ITEM $item_iron_gate_3
+{
+    ID 0854
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Iron Gate
+}
+
+SECTION ITEM $item_iron_gate_4
+{
+    ID 0856
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Iron Gate
+}
+
+SECTION ITEM $item_wooden_gate_5
+{
+    ID 0866
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Gate 2
+}
+
+SECTION ITEM $item_wooden_gate_6
+{
+    ID 0868
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Gate 2
+}
+
+SECTION ITEM $item_wooden_gate_7
+{
+    ID 086E
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Gate 2
+}
+
+SECTION ITEM $item_wooden_gate_8
+{
+    ID 0870
+    TYPE $itype_door
+
+    ///CATEGORY Buildings - Doors
+    ///SUBSECTION Wooden Gate 2
+}
+
