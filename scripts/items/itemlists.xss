@@ -672,7 +672,7 @@ SECTION ITEMLIST $itemlist_male_plain_hats
     $item_floopy_hat
     $item_tall_straw_hat
     $item_straw_hat
-    $item_bandana
+    $item_bandana1_1
     $item_skullcap
 }
 
@@ -680,49 +680,49 @@ SECTION ITEMLIST $itemlist_male_plain_hats
 SECTION ITEMLIST $itemlist_male_plain_shirts
 {
     //$$ male plain shirts
-    $item_shirt
+    $item_shirt1_1
 }
 
 // Male Plain Pants
 SECTION ITEMLIST $itemlist_male_plain_pants
 {
     //$$ male plain pants
-    $item_short_pants
-    $item_long_pants
+    $item_short_pants1_1
+    $item_long_pants1_1
 }
 
 // Male Plain Sandal, Shoe & Boots
 SECTION ITEMLIST $itemlist_male_plain_footwear
 {
     //$$ male plain footwear
-    $item_boots
-    $item_sandles
-    $item_shoes
-    $item_thigh_boots
+    $item_boots1_1
+    $item_sandles1_1
+    $item_shoes1_1
+    $item_thigh_boots1_1
 }
 
 // Male Plain Tunic & Aprons
 SECTION ITEMLIST $itemlist_male_plain_tunic_and_aprons
 {
     //$$ male plain tunic and aprons
-    $item_tunic
-    $item_half_apron
-    $item_full_apron
+    $item_tunic1_1
+    $item_half_apron1_1
+    $item_full_apron1_1
 }
 
 // Male Plain Tunic & Robe
 SECTION ITEMLIST $itemlist_male_plain_tunic_and_robe
 {
     //$$ male plain tunic and robe
-    $item_tunic
-    $item_robe1
+    $item_tunic1_1
+    $item_robe1_1
 }
 
 // Male Plain Cape
 SECTION ITEMLIST $itemlist_male_plain_cape
 {
     //$$ male plain cape
-    $item_cloak
+    $item_cloak1_1
 }
 
 // Male Fancy Hats
@@ -739,48 +739,48 @@ SECTION ITEMLIST $itemlist_male_fancy_hats
 SECTION ITEMLIST $itemlist_male_fancy_shirts
 {
     //$$ male fancy shirts
-    $item_fancy_shirt
+    $item_fancy_shirt1_1
 }
 
 // Male Fancy Pants
 SECTION ITEMLIST $itemlist_male_fancy_pants
 {
     //$$ male fancy pants
-    $item_short_pants
-    $item_long_pants
+    $item_short_pants1_1
+    $item_long_pants1_1
 }
 
 // Male Fancy Shoes & Boots
 SECTION ITEMLIST $itemlist_male_fancy_footwear
 {
     //$$ male fancy footwear
-    $item_boots
-    $item_shoes
-    $item_thigh_boots
+    $item_boots1_1
+    $item_shoes1_1
+    $item_thigh_boots1_1
 }
 
 // Male Fancy Surcoat, Tunic, Doublet & Sash
 SECTION ITEMLIST $itemlist_male_fancy_surcoat
 {
     //$$ male fancy surcoat
-    $item_surcoat
-    $item_jesters_suit
-    $item_doublet
-    $item_body_sash
+    $item_surcoat1_1
+    $item_jesters_suit1_1
+    $item_doublet1_1
+    $item_body_sash1_1
 }
 
 // Male Fancy Robe
 SECTION ITEMLIST $itemlist_male_fancy_robe
 {
     //$$ male fancy robe
-    $item_robe1
+    $item_robe1_1
 }
 
 // Male Fancy Cape
 SECTION ITEMLIST $itemlist_male_fancy_cape
 {
     //$$ male fancy cape
-    $item_cloak
+    $item_cloak1_1
 }
 
 // Female Plain Hats
@@ -790,7 +790,7 @@ SECTION ITEMLIST $itemlist_female_plain_hats
     $item_floopy_hat
     $item_tall_straw_hat
     $item_straw_hat
-    $item_bandana
+    $item_bandana1_1
     $item_skullcap
 }
 
@@ -798,53 +798,53 @@ SECTION ITEMLIST $itemlist_female_plain_hats
 SECTION ITEMLIST $itemlist_female_plain_shirts
 {
     //$$ female plain shirts
-    $item_shirt
+    $item_shirt1_1
 }
 
 // Female Plain Skirt, Pants & Kilt
 SECTION ITEMLIST $itemlist_female_plain_skirts
 {
     //$$ female plain skirts
-    $item_skirt
-    $item_short_pants
-    $item_kilt
-    $item_long_pants
+    $item_skirt1_1
+    $item_short_pants1_1
+    $item_kilt1_1
+    $item_long_pants1_1
 }
 
 // Female Plain Sandal, Shoe & Boots
 SECTION ITEMLIST $itemlist_female_plain_footwear
 {
     //$$ female plain footwear
-    $item_boots
-    $item_sandles
-    $item_shoes
-    $item_thigh_boots
+    $item_boots1_1
+    $item_sandles1_1
+    $item_shoes1_1
+    $item_thigh_boots1_1
 }
 
 // Female Plain Tunic, Dress & Aprons
 SECTION ITEMLIST $itemlist_female_plain_tunic_and_apron
 {
     //$$ female plain tunic and apron
-    $item_tunic
-    $item_plain_dress
-    $item_half_apron
-    $item_full_apron
+    $item_tunic1_1
+    $item_plain_dress1_1
+    $item_half_apron1_1
+    $item_full_apron1_1
 }
 
 // Female Plain Tunic, Robe & Dress
 SECTION ITEMLIST $itemlist_female_plain_tunic
 {
     //$$ female plain tunic
-    $item_tunic
-    $item_robe1
-    $item_plain_dress
+    $item_tunic1_1
+    $item_robe1_1
+    $item_plain_dress1_1
 }
 
 // Female Plain Cape
 SECTION ITEMLIST $itemlist_female_plain_cape
 {
     //$$ female plain cape
-    $item_cloak
+    $item_cloak1_1
 }
 
 // headwear
@@ -883,52 +883,52 @@ SECTION ITEMLIST $itemlist_female_fancy_hats
 SECTION ITEMLIST $itemlist_female_fancy_shirts
 {
     //$$ female fancy shirts
-    $item_fancy_shirt
+    $item_fancy_shirt1_1
 }
 
 // Female Fancy Skirt, Pants & Kilt
 SECTION ITEMLIST $itemlist_female_fancy_skirt
 {
     //$$ female fancy skirt
-    $item_skirt
-    $item_short_pants
-    $item_kilt
-    $item_long_pants
+    $item_skirt1_1
+    $item_short_pants1_1
+    $item_kilt1_1
+    $item_long_pants1_1
 }
 
 // Female Fancy Shoes & Boots
 SECTION ITEMLIST $itemlist_female_fancy_shoes
 {
     //$$ female fancy shoes
-    $item_boots
-    $item_shoes
-    $item_thigh_boots
+    $item_boots1_1
+    $item_shoes1_1
+    $item_thigh_boots1_1
 }
 
 // Female Fancy Surcoat, Tunic, Doublet, Dress & Sash
 SECTION ITEMLIST $itemlist_female_fancy_tunic
 {
     //$$ female fancy tunic
-    $item_surcoat
-    $item_jesters_suit
-    $item_doublet
-    $item_fancy_dress
-    $item_body_sash
+    $item_surcoat1_1
+    $item_jesters_suit1_1
+    $item_doublet1_1
+    $item_fancy_dress1_1
+    $item_body_sash1_1
 }
 
 // Female Fancy Robe & Dress
 SECTION ITEMLIST $itemlist_female_fancy_robe
 {
     //$$ female fancy robe
-    $item_robe1
-    $item_fancy_dress
+    $item_robe1_1
+    $item_fancy_dress1_1
 }
 
 // Female Fancy Cape
 SECTION ITEMLIST $itemlist_female_fancy_cape
 {
     //$$ female fancy cape
-    $item_cloak
+    $item_cloak1_1
 }
 
 // Reagent list
@@ -958,7 +958,7 @@ SECTION ITEMLIST $itemlist_christmas
     $item_bottles_of_wine1
     $item_robe3
     $item_green_sandals
-    $item_robe1
+    $item_robe1_1
     $item_red_sandals
     $item_wizards_hat
     $item_beads

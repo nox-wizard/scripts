@@ -1,0 +1,1096 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (plants.xss)                                      ||
+// || Maintained by Horian		                                   ||
+// || Last Update 14.03.2005 00:49                                         ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.82 or later                        ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// plants that are not farmed
+//dried
+SECTION ITEM $item_dried flowers1_1
+{
+	ID  0c3b
+}
+
+SECTION ITEM $item_dried_flowers1_2
+{
+	ID  0c3c
+}
+
+SECTION ITEM $item_dried_flowers2_1
+{
+	ID  0c3d
+}
+
+SECTION ITEM $item_dried_flowers2_2
+{
+	ID  0c3e
+}
+
+SECTION ITEM $item_dried_herbs1_1
+{
+	ID  0c41
+}
+
+SECTION ITEM $item_dried_herbs1_2
+{
+	ID  0c42
+}
+
+SECTION ITEM $item_wheat_sheaves
+{
+	ID  1ebd
+}
+
+SECTION ITEM $item_dried_onions1_1
+{
+	ID  0c3f
+}
+
+SECTION ITEM $item_dried_onions1_2
+{
+	ID  0c40
+}
+
+///////////fruit trees///////////
+//
+//apple
+//
+SECTION ITEM $item_apple_trunk1
+{
+	ID  0d94
+}
+
+SECTION ITEM $item_apple_leaves1_1
+{
+	ID  0d95
+}
+
+SECTION ITEM $item_apple_leaves1_2
+{
+	ID  0d96
+}
+
+SECTION ITEM $item_apple_leaves1_3
+{
+	ID  0d97
+}
+
+SECTION ITEM $item_apple_trunk2
+{
+	ID  0d98
+}
+
+SECTION ITEM $item_apple_leaves2_1
+{
+	ID  0d99
+}
+
+SECTION ITEM $item_apple_leaves2_2
+{
+	ID  0d9a
+}
+
+SECTION ITEM $item_apple_leaves2_3
+{
+	ID  0d9b
+}
+
+//peach
+SECTION ITEM $item_peach_trunk1
+{
+	ID  0d9c
+}
+
+SECTION ITEM $item_peach_leaves1_1
+{
+	ID  0d9d
+}
+
+SECTION ITEM $item_peach_leaves1_2
+{
+	ID  0d9e
+}
+
+SECTION ITEM $item_peach_leaves1_3
+{
+	ID  0d9f
+}
+
+SECTION ITEM $item_peach_trunk2
+{
+	ID  0da0
+}
+
+SECTION ITEM $item_peach_leaves2_1
+{
+	ID  0da1
+}
+
+SECTION ITEM $item_peach_leaves2_2
+{
+	ID  0da2
+}
+
+SECTION ITEM $item_peach_leaves2_3
+{
+	ID  0da3
+}
+
+//pear
+SECTION ITEM $item_pear_trunk1
+{
+	ID  0da4
+}
+
+SECTION ITEM $item_pear_leaves1_1
+{
+	ID  0da5
+}
+
+SECTION ITEM $item_pear_leaves1_2
+{
+	ID  0da6
+}
+
+SECTION ITEM $item_pear_leaves1_3
+{
+	ID  0da7
+}
+
+SECTION ITEM $item_pear_trunk2
+{
+	ID  0da8
+}
+
+SECTION ITEM $item_pear_leaves2_1
+{
+	ID  0da9
+}
+
+SECTION ITEM $item_pear_leaves2_2
+{
+	ID  0daa
+}
+
+SECTION ITEM $item_pear_leaves2_3
+{
+	ID  0dab
+}
+
+///////////wood trees///////////
+//
+//cypress
+//
+
+SECTION ITEM $item_cypress_trunk1
+{
+	ID  0cf8
+}
+
+SECTION ITEM $item_cypress_leaves1_1
+{
+	ID  0cf9
+}
+
+SECTION ITEM $item_cypress_leaves1_2
+{
+	ID  0cfa
+}
+
+SECTION ITEM $item_cypress_trunk2
+{
+	ID  0cfb
+}
+
+SECTION ITEM $item_cypress_leaves2_1
+{
+	ID  0cfc
+}
+
+SECTION ITEM $item_cypress_leaves2_2
+{
+	ID  0cfd
+}
+
+SECTION ITEM $item_cypress_trunk3
+{
+	ID  0cfe
+}
+
+SECTION ITEM $item_cypress_leaves3_1
+{
+	ID  0cff
+}
+
+SECTION ITEM $item_cypress_leaves3_2
+{
+	ID  0d00
+}
+
+SECTION ITEM $item_cypress_trunk4
+{
+	ID  0d01
+}
+
+SECTION ITEM $item_cypress_leaves4_1
+{
+	ID  0d02
+}
+
+SECTION ITEM $item_cypress_leaves4_2
+{
+	ID  0d03
+}
+
+//
+// unnamed trees
+//
+SECTION ITEM $item_trunk1
+{
+	ID  0cca
+}
+
+SECTION ITEM $item_trunk2
+{
+	ID  0ccb
+}
+
+SECTION ITEM $item_trunk3
+{
+	ID  0ccc
+}
+
+SECTION ITEM $item_trunk4
+{
+	ID  0ccd
+}
+
+SECTION ITEM $item_leaves4_1
+{
+	ID  0cce
+}
+
+SECTION ITEM $item_leaves4_2
+{
+	ID  0ccf
+}
+
+SECTION ITEM $item_trunk5
+{
+	ID  0cd0
+}
+
+SECTION ITEM $item_leaves5_1
+{
+	ID  0cd1
+}
+
+SECTION ITEM $item_leaves5_2
+{
+	ID  0cd2
+}
+
+SECTION ITEM $item_trunk6
+{
+	ID  0cd3
+}
+
+SECTION ITEM $item_leaves6_1
+{
+	ID  0cd4
+}
+
+SECTION ITEM $item_leaves6_2
+{
+	ID  0cd5
+}
+
+//
+// named other
+//
+SECTION ITEM $item_cedar_trunk1
+{
+	ID  0cd6
+}
+
+SECTION ITEM $item_cedar_needles1
+{
+	ID  0cd7
+}
+
+SECTION ITEM $item_cedar_trunk2
+{
+	ID  0cd8
+}
+
+SECTION ITEM $item_cedar_needles2
+{
+	ID  0cd9
+}
+
+SECTION ITEM $item_oak_trunk1
+{
+	ID  0cda
+}
+
+SECTION ITEM $item_oak_leaves1_1
+{
+	ID  0cdb
+}
+
+SECTION ITEM $item_oak_leaves1_2
+{
+	ID  0cdc
+}
+
+SECTION ITEM $item_oak_trunk2
+{
+	ID  0cdd
+}
+
+SECTION ITEM $item_oak_leaves2_1
+{
+	ID  0cde
+}
+
+SECTION ITEM $item_oak_leaves2_2
+{
+	ID  0cdf
+}
+
+SECTION ITEM $item_walnut_trunk1
+{
+	ID  0ce0
+}
+
+SECTION ITEM $item_walnut_leaves1_1
+{
+	ID  0ce1
+}
+
+SECTION ITEM $item_walnut_leaves1_2
+{
+	ID  0ce2
+}
+
+SECTION ITEM $item_walnut_trunk2
+{
+	ID  0ce3
+}
+
+SECTION ITEM $item_walnut_leaves2_1
+{
+	ID  0ce4
+}
+
+SECTION ITEM $item_walnut_leaves2_1
+{
+	ID  0ce5
+}
+
+SECTION ITEM $item_willow_trunk1
+{
+	ID  0ce6
+}
+
+SECTION ITEM $item_willow_leaves1_1
+{
+	ID  0ce7
+}
+
+SECTION ITEM $item_willow_leaves1_2
+{
+	ID  0ce8
+}
+
+SECTION ITEM $item_sapling1_1
+{
+	ID  0ce9
+}
+
+SECTION ITEM $item_sapling1_2
+{
+	ID  0cea
+}
+
+SECTION ITEM $item_Yew_trunk1
+{
+	ID  12b5
+}
+
+SECTION ITEM $item_Yew_trunk2
+{
+	ID  12b6
+}
+
+SECTION ITEM $item_Yew_trunk3
+{
+	ID  12b7
+}
+
+SECTION ITEM $item_Yew_trunk4
+{
+	ID  12b8
+}
+
+SECTION ITEM $item_Yew_trunk5
+{
+	ID  12b9
+}
+
+SECTION ITEM $item_Yew_trunk6
+{
+	ID  12ba
+}
+
+SECTION ITEM $item_Yew_trunk7
+{
+	ID  12bb
+}
+
+SECTION ITEM $item_Yew_trunk8
+{
+	ID  12bc
+}
+
+SECTION ITEM $item_Yew_trunk9
+{
+	ID  12bd
+}
+
+SECTION ITEM $item_Yew_leaves1
+{
+	ID  12be
+}
+
+SECTION ITEM $item_Yew_leaves2
+{
+	ID  12bf
+}
+
+SECTION ITEM $item_Yew_leaves3
+{
+	ID  12c0
+}
+
+SECTION ITEM $item_Yew_leaves4
+{
+	ID  12c1
+}
+
+SECTION ITEM $item_Yew_leaves5
+{
+	ID  12c2
+}
+
+SECTION ITEM $item_Yew_leaves6
+{
+	ID  12c3
+}
+
+SECTION ITEM $item_Yew_leaves7
+{
+	ID  12c4
+}
+
+SECTION ITEM $item_Yew_leaves8
+{
+	ID  12c5
+}
+
+SECTION ITEM $item_Yew_leaves9
+{
+	ID  12c6
+}
+
+SECTION ITEM $item_Yew_leaves10
+{
+	ID  12c7
+}
+
+SECTION ITEM $item_jungle_trunk1A
+{
+	ID  0d41
+}
+
+SECTION ITEM $item_jungle_trunk1B
+{
+	ID  0d42
+}
+
+SECTION ITEM $item_jungle_trunk1C
+{
+	ID  0d43
+}
+
+SECTION ITEM $item_jungle_trunk1D
+{
+	ID  0d44
+}
+
+SECTION ITEM $item_jungle_leaves1A
+{
+	ID  0d45
+}
+
+SECTION ITEM $item_jungle_leaves1B
+{
+	ID  0d46
+}
+
+SECTION ITEM $item_jungle_leaves1C
+{
+	ID  0d47
+}
+
+SECTION ITEM $item_jungle_leaves1D
+{
+	ID  0d48
+}
+
+SECTION ITEM $item_jungle_leaves1E
+{
+	ID  0d49
+}
+
+SECTION ITEM $item_jungle_leaves1F
+{
+	ID  0d4a
+}
+
+SECTION ITEM $item_jungle_leaves1G
+{
+	ID  0d4b
+}
+
+SECTION ITEM $item_jungle_leaves1H
+{
+	ID  0d4c
+}
+
+SECTION ITEM $item_jungle_leaves2A
+{
+	ID  0d4d
+}
+
+SECTION ITEM $item_jungle_leaves2B
+{
+	ID  0d4e
+}
+
+SECTION ITEM $item_jungle_leaves2C
+{
+	ID  0d4f
+}
+
+SECTION ITEM $item_jungle_leaves2D
+{
+	ID  0d50
+}
+
+SECTION ITEM $item_jungle_leaves2E
+{
+	ID  0d51
+}
+
+SECTION ITEM $item_jungle_leaves2F
+{
+	ID  0d52
+}
+
+SECTION ITEM $item_jungle_leaves2G
+{
+	ID  0d53
+}
+
+SECTION ITEM $item_jungle_trunk3A
+{
+	ID  0d57
+}
+
+SECTION ITEM $item_jungle_trunk3B
+{
+	ID  0d58
+}
+
+SECTION ITEM $item_jungle_trunk3C
+{
+	ID  0d59
+}
+
+SECTION ITEM $item_jungle_trunk3D
+{
+	ID  0d5a
+}
+
+SECTION ITEM $item_jungle_trunk3E
+{
+	ID  0d5b
+}
+
+SECTION ITEM $item_jungle_leaves3A
+{
+	ID  0d5c
+}
+
+SECTION ITEM $item_jungle_leaves3B
+{
+	ID  0d5d
+}
+
+SECTION ITEM $item_jungle_leaves3C
+{
+	ID  0d5e
+}
+
+SECTION ITEM $item_jungle_leaves3D
+{
+	ID  0d5f
+}
+
+SECTION ITEM $item_jungle_leaves3E
+{
+	ID  0d60
+}
+
+SECTION ITEM $item_jungle_leaves3F
+{
+	ID  0d61
+}
+
+SECTION ITEM $item_jungle_leaves3G
+{
+	ID  0d62
+}
+
+SECTION ITEM $item_jungle_leaves4A
+{
+	ID  0d63
+}
+
+SECTION ITEM $item_jungle_leaves4B
+{
+	ID  0d64
+}
+
+SECTION ITEM $item_jungle_leaves4C
+{
+	ID  0d65
+}
+
+SECTION ITEM $item_jungle_leaves4D
+{
+	ID  0d66
+}
+
+SECTION ITEM $item_jungle_leaves4E
+{
+	ID  0d67
+}
+
+SECTION ITEM $item_jungle_leaves4F
+{
+	ID  0d68
+}
+
+SECTION ITEM $item_jungle_leaves4G
+{
+	ID  0d69
+}
+
+SECTION ITEM $item_jungle_trunk5A
+{
+	ID  0d6e
+}
+
+SECTION ITEM $item_jungle_trunk5B
+{
+	ID  0d6f
+}
+
+SECTION ITEM $item_jungle_trunk5C
+{
+	ID  0d70
+}
+
+SECTION ITEM $item_jungle_trunk5D
+{
+	ID  0d71
+}
+
+SECTION ITEM $item_jungle_trunk5E
+{
+	ID  0d72
+}
+
+SECTION ITEM $item_jungle_leaves5A
+{
+	ID  0d73
+}
+
+SECTION ITEM $item_jungle_leaves5B
+{
+	ID  0d74
+}
+
+SECTION ITEM $item_jungle_leaves5C
+{
+	ID  0d75
+}
+
+SECTION ITEM $item_jungle_leaves5D
+{
+	ID  0d76
+}
+
+SECTION ITEM $item_jungle_leaves5E
+{
+	ID  0d77
+}
+
+SECTION ITEM $item_jungle_leaves5F
+{
+	ID  0d78
+}
+
+SECTION ITEM $item_jungle_leaves5G
+{
+	ID  0d79
+}
+
+SECTION ITEM $item_jungle_leaves6A
+{
+	ID  0d7a
+}
+
+SECTION ITEM $item_jungle_leaves6B
+{
+	ID  0d7b
+}
+
+SECTION ITEM $item_jungle_leaves6C
+{
+	ID  0d7c
+}
+
+SECTION ITEM $item_jungle_leaves6D
+{
+	ID  0d7d
+}
+
+SECTION ITEM $item_jungle_leaves6E
+{
+	ID  0d7e
+}
+
+SECTION ITEM $item_jungle_leaves6F
+{
+	ID  0d7f
+}
+
+SECTION ITEM $item_jungle_trunk7A
+{
+	ID  0d84
+}
+
+SECTION ITEM $item_jungle_trunk7B
+{
+	ID  0d85
+}
+
+SECTION ITEM $item_jungle_trunk7C
+{
+	ID  0d86
+}
+
+SECTION ITEM $item_jungle_leaves7A
+{
+	ID  0d87
+}
+
+SECTION ITEM $item_jungle_leaves7B
+{
+	ID  0d88
+}
+
+SECTION ITEM $item_jungle_leaves7C
+{
+	ID  0d89
+}
+
+SECTION ITEM $item_jungle_leaves7D
+{
+	ID  0d8a
+}
+
+SECTION ITEM $item_jungle_leaves7E
+{
+	ID  0d8b
+}
+
+SECTION ITEM $item_jungle_leaves8A
+{
+	ID  0d8c
+}
+
+SECTION ITEM $item_jungle_leaves8B
+{
+	ID  0d8d
+}
+
+SECTION ITEM $item_jungle_leaves8C
+{
+	ID  0d8e
+}
+
+SECTION ITEM $item_jungle_leaves8D
+{
+	ID  0d8f
+}
+
+SECTION ITEM $item_jungle_leaves8E
+{
+	ID  0d90
+}
+
+SECTION ITEM $item_mushroom5
+{
+	ID  1125
+}
+
+SECTION ITEM $item_fallen_log1A
+{
+	ID  0cf3
+}
+
+SECTION ITEM $item_fallen_log1B
+{
+	ID  0cf4
+}
+
+SECTION ITEM $item_fallen_log2A
+{
+	ID  0cf5
+}
+
+SECTION ITEM $item_fallen_log2B
+{
+	ID  0cf6
+}
+
+SECTION ITEM $item_fallen_log2C
+{
+	ID  0cf7
+}
+
+SECTION ITEM $item_stump1_1
+{
+	ID  0e56
+}
+
+SECTION ITEM $item_stump1_2
+{
+	ID  0e58
+}
+
+SECTION ITEM $item_stump2_1
+{
+	ID  0e57
+}
+
+SECTION ITEM $item_stump2_2
+{
+	ID  0e59
+}
+
+SECTION ITEM $item_kindling1
+{
+	ID  0de1
+}
+
+SECTION ITEM $item_kindling2
+{
+	ID  0de2
+}
+
+SECTION ITEM $item_twig1_1
+{
+	ID  0f31
+}
+
+SECTION ITEM $item_twig1_2
+{
+	ID  0f32
+}
+
+SECTION ITEM $item_twigs1
+{
+	ID  1b81
+}
+
+SECTION ITEM $item_twigs2
+{
+	ID  1b9b
+}
+
+SECTION ITEM $item_twigs3
+{
+	ID  1b9c
+}
+
+SECTION ITEM $item_twigs4
+{
+	ID  1b9d
+}
+
+SECTION ITEM $item_twigs5
+{
+	ID  1b9e
+}
+
+SECTION ITEM $item_wood1
+{
+	ID  1b82
+}
+
+SECTION ITEM $item_wood2
+{
+	ID  1b83
+}
+
+SECTION ITEM $item_wood3
+{
+	ID  1b84
+}
+
+SECTION ITEM $item_wood4
+{
+	ID  1b85
+}
+
+SECTION ITEM $item_wood5
+{
+	ID  1b86
+}
+
+SECTION ITEM $item_wood6
+{
+	ID  1b87
+}
+
+SECTION ITEM $item_wood7
+{
+	ID  1b88
+}
+
+SECTION ITEM $item_wood8
+{
+	ID  1b89
+}
+
+SECTION ITEM $item_wood9
+{
+	ID  1b8a
+}
+
+SECTION ITEM $item_wood10
+{
+	ID  1b8b
+}
+
+SECTION ITEM $item_wood11
+{
+	ID  1b8c
+}
+
+SECTION ITEM $item_wood12
+{
+	ID  1b8d
+}
+
+SECTION ITEM $item_wood13
+{
+	ID  1b8e
+}
+
+SECTION ITEM $item_wood14
+{
+	ID  1b8f
+}
+
+SECTION ITEM $item_wood15
+{
+	ID  1b90
+}
+
+SECTION ITEM $item_wood16
+{
+	ID  1b91
+}
+
+SECTION ITEM $item_wood17
+{
+	ID  1b92
+}
+
+SECTION ITEM $item_wood18
+{
+	ID  1b93
+}
+
+SECTION ITEM $item_wood19
+{
+	ID  1b97
+}
+
+SECTION ITEM $item_wood20
+{
+	ID  1b98
+}
+
+SECTION ITEM $item_wood21
+{
+	ID  1b99
+}
+
+SECTION ITEM $item_wood22
+{
+	ID  1b9a
+}
+
+SECTION ITEM $item_fallen_branch1
+{
+	ID  0d3b
+}
+
+SECTION ITEM $item_fallen_branch2
+{
+	ID  0d3c
+}
+
+SECTION ITEM $item_fallen_branch3
+{
+	ID  0d3d
+}
+
+SECTION ITEM $item_brambles1_1
+{
+	ID  0d3f
+}
+
+SECTION ITEM $item_brambles1_2
+{
+	ID  0d40
+}
+
+SECTION ITEM $item_palm_stump1_1
+{
+	ID  0dac
+}
+
+SECTION ITEM $item_palm_stump1_2
+{
+	ID  0dad
+}

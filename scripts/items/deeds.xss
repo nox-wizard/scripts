@@ -131,7 +131,7 @@ SECTION ITEM $item_small_stone_shop_deed
 	///SUBSECTION House Deeds
 }
 
-SECTION ITEM $item_2-story_villa_deed
+SECTION ITEM $item_banner31_1-story_villa_deed
 {
 	NAME 2-story villa deed
 	ID 14f0
@@ -157,7 +157,7 @@ SECTION ITEM $item_sandstone_patio_house_deed
 	///SUBSECTION House Deeds
 }
 
-SECTION ITEM $item_2-story_log_cabin_deed
+SECTION ITEM $item_banner31_1-story_log_cabin_deed
 {
 	NAME 2-story log cabin deed
 	ID 14F0

@@ -8,6 +8,8 @@ fountain 2701-2800
 garbage 2801-3000
 spider webs 3001-3050
 gamestuff 3051-3500
+non-harvest plants 3501-3800
+professions items 3801-5000
 nox internal local vars 9000-9500
 fireplaces + ovens 20100-20250
 ruined rug + mats 50600-50800
@@ -20,14 +22,9 @@ fish and shells 103.001-103.500
 mushrooms and milk 103.501 - 104.000
 fruits and vegetable 104.001 - 105.000
 container, dishes, tools 105.001 - 105.500
-deco flower/plant 120.000-120.299
-farming plants 120300-120640
-outside plants 120641-120790
-vines 120791-120830
-water plant + desert 120831-120930
-resource plants 120931-121000
-deco plant/agriculture 121001-121070
-plantcrossing sys 121071-121150
+curtain, towel, pillow 120.000-120100
+deco flower/plant 120.100-121.000
+npc mounts 125.000-?
 Carpenter Tools 140.000-140.200
 display case 140201-140400
 container 140401-140600

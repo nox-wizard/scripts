@@ -254,8 +254,22 @@ SECTION ITEM $item_jester_hat
     ///SUBSECTION Hats
 }
 
+// jester hat
+SECTION ITEM $item_jester_cap
+{
+    NAME jester's cap
+    ID 172E
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
 // cloak
-SECTION ITEM $item_cloak
+SECTION ITEM $item_cloak1_1
 {
     NAME cloak
     ID 1515
@@ -268,8 +282,22 @@ SECTION ITEM $item_cloak
     ///SUBSECTION Accessories
 }
 
+// cloak
+SECTION ITEM $item_cloak1_2
+{
+    NAME cloak
+    ID 1530
+    LAYER $layer_cloak
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
 // fancy shirt
-SECTION ITEM $item_fancy_shirt
+SECTION ITEM $item_fancy_shirt1_1
 {
     NAME fancy shirt
     ID 1EFD
@@ -282,8 +310,22 @@ SECTION ITEM $item_fancy_shirt
     ///SUBSECTION Shirts
 }
 
+// fancy shirt
+SECTION ITEM $item_fancy_shirt1_2
+{
+    NAME fancy shirt
+    ID 1EFE
+    LAYER $layer_shirt
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // shirt
-SECTION ITEM $item_shirt
+SECTION ITEM $item_shirt1_1
 {
     NAME shirt
     ID 1517
@@ -296,8 +338,22 @@ SECTION ITEM $item_shirt
     ///SUBSECTION Shirts
 }
 
+// shirt
+SECTION ITEM $item_shirt1_2
+{
+    NAME shirt
+    ID 1518
+    LAYER $layer_shirt
+    DYE 1
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // a surcoat
-SECTION ITEM $item_surcoat
+SECTION ITEM $item_surcoat1_1
 {
     NAME a surcoat
     ID 1FFD
@@ -310,8 +366,22 @@ SECTION ITEM $item_surcoat
     ///SUBSECTION Shirts
 }
 
+// a surcoat
+SECTION ITEM $item_surcoat1_2
+{
+    NAME a surcoat
+    ID 1FFE
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // a tunic
-SECTION ITEM $item_tunic
+SECTION ITEM $item_tunic1_1
 {
     NAME a tunic
     ID 1FA1
@@ -324,8 +394,22 @@ SECTION ITEM $item_tunic
     ///SUBSECTION Shirts
 }
 
+// a tunic
+SECTION ITEM $item_tunic1_2
+{
+    NAME a tunic
+    ID 1FA2
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // a robe
-SECTION ITEM $item_robe1
+SECTION ITEM $item_robe1_1
 {
     NAME a robe
     ID 1F03
@@ -338,8 +422,22 @@ SECTION ITEM $item_robe1
     ///SUBSECTION Shirts
 }
 
+// a robe
+SECTION ITEM $item_robe1_2
+{
+    NAME a robe
+    ID 1F04
+    LAYER $layer_outer_torso
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // a jester's suit
-SECTION ITEM $item_jesters_suit
+SECTION ITEM $item_jesters_suit1_1
 {
     NAME a jester's suit
     ID 1F9F
@@ -352,8 +450,22 @@ SECTION ITEM $item_jesters_suit
     ///SUBSECTION Shirts
 }
 
+// a jester's suit
+SECTION ITEM $item_jesters_suit1_2
+{
+    NAME a jester's suit
+    ID 1FA0
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 50
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // a doublet
-SECTION ITEM $item_doublet
+SECTION ITEM $item_doublet1_1
 {
     NAME a doublet
     ID 1F7B
@@ -366,8 +478,22 @@ SECTION ITEM $item_doublet
     ///SUBSECTION Shirts
 }
 
+// a doublet
+SECTION ITEM $item_doublet1_2
+{
+    NAME a doublet
+    ID 1F7C
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // a fancy dress
-SECTION ITEM $item_fancy_dress
+SECTION ITEM $item_fancy_dress1_1
 {
     NAME a fancy dress
     ID 1EFF
@@ -380,8 +506,22 @@ SECTION ITEM $item_fancy_dress
     ///SUBSECTION Shirts
 }
 
+// a fancy dress
+SECTION ITEM $item_fancy_dress1_2
+{
+    NAME a fancy dress
+    ID 1F00
+    LAYER $layer_outer_torso
+    DECAY
+    DYE 1
+    VALUE 70
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // a plain dress
-SECTION ITEM $item_plain_dress
+SECTION ITEM $item_plain_dress1_1
 {
     NAME a plain dress
     ID 1F01
@@ -394,8 +534,22 @@ SECTION ITEM $item_plain_dress
     ///SUBSECTION Shirts
 }
 
+// a plain dress
+SECTION ITEM $item_plain_dress1_2
+{
+    NAME a plain dress
+    ID 1F02
+    LAYER $layer_outer_torso
+    DYE 1
+    DECAY
+    VALUE 55
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
 // a skirt
-SECTION ITEM $item_skirt
+SECTION ITEM $item_skirt1_1
 {
     NAME a skirt
     ID 1516
@@ -408,8 +562,22 @@ SECTION ITEM $item_skirt
     ///SUBSECTION Pants & Skirts
 }
 
+// a skirt
+SECTION ITEM $item_skirt1_2
+{
+    NAME a skirt
+    ID 1531
+    LAYER $layer_outerlegs
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Pants & Skirts
+}
+
 // short pants
-SECTION ITEM $item_short_pants
+SECTION ITEM $item_short_pants1_1
 {
     NAME short pants
     ID 152E
@@ -422,8 +590,22 @@ SECTION ITEM $item_short_pants
     ///SUBSECTION Pants & Skirts
 }
 
+// short pants
+SECTION ITEM $item_short_pants1_2
+{
+    NAME short pants
+    ID 152F
+    LAYER $layer_pants
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Pants & Skirts
+}
+
 // a kilt
-SECTION ITEM $item_kilt
+SECTION ITEM $item_kilt1_1
 {
     NAME a kilt
     ID 1537
@@ -436,8 +618,22 @@ SECTION ITEM $item_kilt
     ///SUBSECTION Pants & Skirts
 }
 
+// a kilt
+SECTION ITEM $item_kilt1_2
+{
+    NAME a kilt
+    ID 1538
+    LAYER $layer_outerlegs
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Pants & Skirts
+}
+
 // long pants
-SECTION ITEM $item_long_pants
+SECTION ITEM $item_long_pants1_1
 {
     NAME long pants
     ID 1539
@@ -450,8 +646,22 @@ SECTION ITEM $item_long_pants
     ///SUBSECTION Pants & Skirts
 }
 
+// long pants
+SECTION ITEM $item_long_pants1_2
+{
+    NAME long pants
+    ID 153a
+    LAYER $layer_pants
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Pants & Skirts
+}
+
 // a half apron
-SECTION ITEM $item_half_apron
+SECTION ITEM $item_half_apron1_1
 {
     NAME a half apron
     ID 153B
@@ -464,8 +674,22 @@ SECTION ITEM $item_half_apron
     ///SUBSECTION Accessories
 }
 
+// a half apron
+SECTION ITEM $item_half_apron1_2
+{
+    NAME a half apron
+    ID 153C
+    LAYER $layer_waist
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
 // a full apron
-SECTION ITEM $item_full_apron
+SECTION ITEM $item_full_apron1_1
 {
     NAME a full apron
     ID 153D
@@ -478,8 +702,36 @@ SECTION ITEM $item_full_apron
     ///SUBSECTION Accessories
 }
 
+// a full apron
+SECTION ITEM $item_full_apron1_2
+{
+    NAME a full apron
+    ID 153E
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
 // a bandana
-SECTION ITEM $item_bandana
+SECTION ITEM $item_bandana1_1
+{
+    NAME a bandana
+    ID 153f
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
+// a bandana
+SECTION ITEM $item_bandana1_2
 {
     NAME a bandana
     ID 1540
@@ -493,10 +745,24 @@ SECTION ITEM $item_bandana
 }
 
 // a body sash
-SECTION ITEM $item_body_sash
+SECTION ITEM $item_body_sash1_1
 {
     NAME a body sash
     ID 1541
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
+// a body sash
+SECTION ITEM $item_body_sash1_2
+{
+    NAME a body sash
+    ID 1542
     LAYER $layer_mid_torso
     DYE 1
     DECAY
@@ -652,16 +918,141 @@ SECTION ITEM $item_pink_sandals
     ///SUBSECTION Footwears
 }
 
-SECTION ITEM $item_thigh_boots_1
+SECTION ITEM $item_boots1_1
 {
-    ID 1711
-    NAME old boots
+    NAME boots
+    ID 170B
     LAYER $layer_shoes
+    DEF 1
+    HP 10
+    STR 10
+    DYE 1
     DECAY
-    VALUE 25
-    COLOR 2f0
+    VALUE 30
+    WEIGHT 100
 
     ///CATEGORY Clothes
     ///SUBSECTION Footwears
+}
+
+SECTION ITEM $item_boots1_2
+{
+    NAME boots
+    ID 170C
+    LAYER $layer_shoes
+    DEF 1
+    HP 10
+    STR 10
+    DYE 1
+    DECAY
+    VALUE 30
+    WEIGHT 100
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// sandles
+SECTION ITEM $item_sandles1_1
+{
+    NAME sandles
+    ID 170D
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// sandles
+SECTION ITEM $item_sandles1_2
+{
+    NAME sandles
+    ID 170E
+    LAYER $layer_shoes
+    DYE 0
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// shoes
+SECTION ITEM $item_shoes1_1
+{
+    NAME shoes
+    ID 170F
+    LAYER $layer_shoes
+    DECAY
+    DYE 1
+    VALUE 15
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// shoes
+SECTION ITEM $item_shoes1_2
+{
+    NAME shoes
+    ID 1710
+    LAYER $layer_shoes
+    DECAY
+    DYE 1
+    VALUE 15
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+// thigh boots
+SECTION ITEM $item_thigh_boots1_1
+{
+    NAME thigh boots
+    ID 1711
+    LAYER $layer_shoes
+    DEF 2
+    HP 20
+    STR 20
+    DYE 1
+    DECAY
+    VALUE 55
+    WEIGHT 100
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+SECTION ITEM $item_thigh_boots1_2
+{
+    NAME thigh boots
+    ID 1712
+    LAYER $layer_shoes
+    DEF 2
+    HP 20
+    STR 20
+    DYE 1
+    DECAY
+    VALUE 55
+    WEIGHT 100
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
+}
+
+SECTION ITEM $item_magical_wizards_hat
+{
+	NAME a magical wizard`s hat
+	ID 1718
+	LAYER $layer_helm
+	STRADD -5
+	DEXADD -5
+	INTADD 10
+	DYE 1
+	DECAY
+	VALUE 75
 }
 

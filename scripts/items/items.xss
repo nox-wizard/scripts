@@ -1,7 +1,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (items.xss)					  ||
-// || Maintained by Sparhawk						  ||
-// || Last Update 04-aug-2002						  ||
+// || Maintained by Horian						  ||
+// || Last Update 15.03.2005 01:48						  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || This script requires NoX-Wizard 0.82 or later			  ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -34,14 +34,14 @@ SECTION ITEM $item_target
 
 SECTION ITEM $item_worldgem_bit
 {
-	NAME a Worldgem bit
+	NAME Worldgem bit
 	ID 1ea7
 }
 
 // teleport rune
 SECTION ITEM $item_teleport_rune
 {
-	NAME a teleport rune
+	NAME teleport rune
 	ID 1F14
 	TYPE $itype_teleportrune
 }
@@ -260,7 +260,7 @@ SECTION ITEM $item_key_ring4
 // a map
 SECTION ITEM $item_map
 {
-	NAME a map
+	NAME map
 	ID 14EB
 	TYPE $itype_map
 	VALUE 40
@@ -269,7 +269,7 @@ SECTION ITEM $item_map
 // a book
 SECTION ITEM $item_book
 {
-	NAME a book
+	NAME book
 	ID 0FF1
 	TYPE $itype_book
 	VALUE 20
@@ -360,7 +360,7 @@ SECTION ITEM $item_bugmans_brew
 
 SECTION ITEM $item_efreeti_bottle
 {
-	NAME a strange looking bottle
+	NAME strange looking bottle
 	NAME2 an efreeti bottle
 	ID 0EFC
 	TRIGGER $itrg_efreeti
@@ -379,7 +379,7 @@ SECTION ITEM $item_seasons_greetings
 
 SECTION ITEM $item_fishing_pole
 {
-	NAME a fishing pole
+	NAME fishing pole
 	ITEMHAND 2
 	ID 0DBF
 	DECAY
@@ -458,7 +458,7 @@ SECTION ITEM $item_dispel-wall-spawner
 
 SECTION ITEM $item_stone_wall
 {
-	NAME a stone wall
+	NAME stone wall
 	ID 0080
 	DISPELLABLE 1
 }
@@ -561,7 +561,7 @@ SECTION ITEM $item_bottle11
 
 SECTION ITEM $item_blue_moongate
 {
-	NAME a blue moongate
+	NAME blue moongate
 	ID 0F6C
 	TYPE $itype_moongate
 
@@ -569,21 +569,21 @@ SECTION ITEM $item_blue_moongate
 
 SECTION ITEM $item_red_moongate
 {
-	NAME a red moongate
+	NAME red moongate
 	ID 0DDA
 	TYPE $itype_moongate
 }
 
 SECTION ITEM $item_black_moongate
 {
-	NAME a black moongate
+	NAME black moongate
 	ID 1FD4
 	TYPE $itype_moongate
 }
 
 SECTION ITEM $item_master_shard_key
 {
-	NAME a master shard key
+	NAME master shard key
 	ID 1012
 	TYPE $itype_key
 	//MORE FF FF FF FF
@@ -777,11 +777,6 @@ SECTION ITEM $item_fire_pit
 	ID 0fac
 }
 
-SECTION ITEM $item_rolls_of_string
-{
-	ID 1420
-}
-
 SECTION ITEM $item_books1
 {
 	ID 1e24
@@ -809,7 +804,7 @@ SECTION ITEM $item_clock_frames
 
 SECTION ITEM $item_fishing_net
 {
-	NAME a fishing net
+	NAME fishing net
 	ID 1ea5
 	COLOR 07d3
 	DECAY
@@ -817,7 +812,7 @@ SECTION ITEM $item_fishing_net
 
 SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck
 {
-	NAME a fishing net recovered from a shipwreck
+	NAME fishing net recovered from a shipwreck
 	ID 1ea5
 	COLOR 0579
 	DECAY
@@ -825,7 +820,7 @@ SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck
 
 SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck_1
 {
-	NAME a fishing net recovered from a shipwreck
+	NAME fishing net recovered from a shipwreck
 	ID 1ea3
 	COLOR 0579
 	DECAY
@@ -833,7 +828,7 @@ SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck_1
 
 SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck_2
 {
-	NAME a fishing net recovered from a shipwreck
+	NAME fishing net recovered from a shipwreck
 	ID 0dca
 	COLOR 07d3
 	DECAY
@@ -841,105 +836,105 @@ SECTION ITEM $item_fishing_net_recovered_from_a_shipwreck_2
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0ed2
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_1
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0ed1
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_2
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0ed0
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_3
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0ecf
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_4
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0ece
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_5
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0ecd
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_6
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0ecc
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_7
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0ecb
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_bones_recoverd_from_a_shipwreck_8
 {
-	NAME a pile of bones recoverd from a shipwreck
+	NAME pile of bones recoverd from a shipwreck
 	ID 0eca
 	DECAY
 }
 
 SECTION ITEM $item_pile_of_skulls_recoverd_from_a_shipwreck
 {
-	NAME a pile of skulls recoverd from a shipwreck
+	NAME pile of skulls recoverd from a shipwreck
 	ID 1ad8
 	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck
 {
-	NAME a skull recoverd from a shipwreck
+	NAME skull recoverd from a shipwreck
 	ID 1AE4
 	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck_1
 {
-	NAME a skull recoverd from a shipwreck
+	NAME skull recoverd from a shipwreck
 	ID 1AE3
 	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck_2
 {
-	NAME a skull recoverd from a shipwreck
+	NAME skull recoverd from a shipwreck
 	ID 1AE2
 	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck_3
 {
-	NAME a skull recoverd from a shipwreck
+	NAME skull recoverd from a shipwreck
 	ID 1AE1
 	DECAY
 }
 
 SECTION ITEM $item_skull_recoverd_from_a_shipwreck_4
 {
-	NAME a skull recoverd from a shipwreck
+	NAME skull recoverd from a shipwreck
 	ID 1AE0
 	DECAY
 }
@@ -1040,7 +1035,7 @@ SECTION ITEM $item_wooden_chest_recoverd_from_a_shipwreck-faceing_east
 
 SECTION ITEM $item_cannon_ball
 {
-	NAME a cannon ball
+	NAME cannon ball
 	ID 0E73
 	VALUE 10
 }
@@ -1097,15 +1092,6 @@ SECTION ITEM $item_feathers
 	VALUE 2
 	WEIGHT 2
 	DECAY
-}
-
-SECTION ITEM $item_bedroll
-{// bedroll
-	ID 0A58
-	VALUE 20
-	WEIGHT 3
-	TRIGTYPE 0
-	TRIGGER $itrg_unroll_bedroll
 }
 
 // 1st circle scrolls
@@ -1414,72 +1400,6 @@ SECTION ITEM $item_slotmachine_5gp_
 	COLOR 386
 }
 
-
-
-SECTION ITEM $item_bolts_of_cloth1
-{
-	ID 0F95
-	NAME bolt of cloth
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_bolts_of_cloth2
-{
-	ID 0F96
-	NAME bolt of cloth
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_bolts_of_cloth3
-{
-	ID 0F97
-	NAME bolt of cloth
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_bolts_of_cloth4
-{
-	ID 0F98
-	NAME bolt of cloth
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_bolts_of_cloth5
-{
-	ID 0F99
-	NAME bolt of cloth
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_bolts_of_cloth6
-{
-	ID 0F9A
-	NAME bolt of cloth
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_bolts_of_cloth7
-{
-	ID 0F9B
-	NAME bolt of cloth
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_bolts_of_cloth8
-{
-	ID 0F9C
-	NAME bolt of cloth
-	DECAY
-	VALUE 75
-}
-
 SECTION ITEM $item_fencer
 {
 	NAME fencer
@@ -1624,7 +1544,7 @@ SECTION ITEM $item_drake
 
 SECTION ITEM $item_bulletin_board
 {
-	NAME a bulletin board
+	NAME bulletin board
 	ID 1E5E
 }
 
@@ -1728,7 +1648,7 @@ SECTION ITEM $item_ssassin_1
 
 SECTION ITEM $item_vase
 {
-	NAME a vase
+	NAME vase
 	ID 0B45
 	VALUE 20
 	DECAY
@@ -1746,7 +1666,7 @@ SECTION ITEM $item_jars
 
 SECTION ITEM $item_boat_model
 {
-	NAME a boat model
+	NAME boat model
 	ID 14f4
 	VALUE 20
 	DECAY
@@ -1755,7 +1675,7 @@ SECTION ITEM $item_boat_model
 
 SECTION ITEM $item_set_of_vials
 {
-	NAME a set of vials
+	NAME set of vials
 	ID 185B
 	VALUE 20
 	DECAY
@@ -1764,7 +1684,7 @@ SECTION ITEM $item_set_of_vials
 
 SECTION ITEM $item_skull
 {
-	NAME a skull
+	NAME skull
 	ID 1AE0
 	VALUE 20
 	DECAY
@@ -1773,7 +1693,7 @@ SECTION ITEM $item_skull
 
 SECTION ITEM $item_small_vase1
 {
-	NAME a small vase
+	NAME small vase
 	ID 0B46
 	VALUE 20
 	DECAY
@@ -1782,7 +1702,7 @@ SECTION ITEM $item_small_vase1
 
 SECTION ITEM $item_small_vase2
 {
-	NAME a small vase
+	NAME small vase
 	ID 0b48
 	VALUE 20
 	DECAY
@@ -1791,7 +1711,7 @@ SECTION ITEM $item_small_vase2
 
 SECTION ITEM $item_large_vase
 {
-	NAME a large vase
+	NAME large vase
 	ID 0b47
 	VALUE 20
 	DECAY
@@ -1809,7 +1729,7 @@ SECTION ITEM $item_damaged_books
 
 SECTION ITEM $item_piwafwi
 {
-	NAME a piwafwi
+	NAME piwafwi
 	ID 1515
 	LAYER $layer_bracelet
 	COLOR 0142
@@ -1842,7 +1762,7 @@ SECTION ITEM $item_arm_1
 
 SECTION ITEM $item_body
 {
-	NAME a body
+	NAME body
 	ID 1ce6
 	DECAY
 }
@@ -1856,14 +1776,14 @@ SECTION ITEM $item_legs
 
 SECTION ITEM $item_torso
 {
-	NAME a torso
+	NAME torso
 	ID 1ce8
 	DECAY
 }
 
 SECTION ITEM $item_head_2
 {
-	NAME a head
+	NAME head
 	ID 1ce9
 	DECAY
 	AMXINT $localvar_flipitem $item_head_1
@@ -1871,7 +1791,7 @@ SECTION ITEM $item_head_2
 
 SECTION ITEM $item_head_1
 {
-	NAME a head
+	NAME head
 	ID 1CE1
 	WEIGHT 200
 	DECAY
@@ -1880,14 +1800,14 @@ SECTION ITEM $item_head_1
 
 SECTION ITEM $item_body_part
 {
-	NAME a body part
+	NAME body part
 	ID 1cea
 	DECAY
 }
 
 SECTION ITEM $item_brain
 {
-	NAME a brain
+	NAME brain
 	ID 1CF0
 	WEIGHT 100
 	DECAY
@@ -1903,7 +1823,7 @@ SECTION ITEM $item_entrails
 
 SECTION ITEM $item_heart
 {
-	NAME a heart
+	NAME heart
 	ID 1CED
 	WEIGHT 100
 	DECAY
@@ -1911,7 +1831,7 @@ SECTION ITEM $item_heart
 
 SECTION ITEM $item_skull_1
 { // -s-
-	NAME a skull
+	NAME skull
 	ID 1ae3
 	WEIGHT 100
 	DECAY
@@ -1920,7 +1840,7 @@ SECTION ITEM $item_skull_1
 
 SECTION ITEM $item_skull_2
 { // -e-
-	NAME a skull
+	NAME skull
 	ID 1AE2
 	WEIGHT 100
 	DECAY
@@ -1929,7 +1849,7 @@ SECTION ITEM $item_skull_2
 
 SECTION ITEM $item_ribcage
 {
-	NAME a ribcage
+	NAME ribcage
 	ID 1B17
 	WEIGHT 100
 	DECAY
@@ -1937,7 +1857,7 @@ SECTION ITEM $item_ribcage
 
 SECTION ITEM $item_spine
 {
-	NAME a spine
+	NAME spine
 	ID 1B1B
 	WEIGHT 100
 	DECAY
@@ -1969,14 +1889,6 @@ SECTION ITEM $item_silk_scraps_might_be_useful_
 	MOVABLE 1
 }
 
-SECTION ITEM $item_silk_fluxing_tool
-{makes silk from scraps
-	NAME silk fluxing tool
-	ID 0df6
-	DECAY
-	VALUE 20
-}
-
 // spawn chest
 SECTION ITEM $item_metal_chest2
 {
@@ -1986,24 +1898,6 @@ SECTION ITEM $item_metal_chest2
 	MOREX 70
 	MOREY 1
 	MOREZ 2
-}
-
-SECTION ITEM $item_hide
-{
-	NAME hide
-	ID 1078
-	DECAY
-	VALUE 3
-	PILE 1
-}
-
-SECTION ITEM $item_leather
-{
-	NAME leather
-	ID 1081
-	DECAY
-	VALUE 3
-	PILE 1
 }
 
 // Random Male Hair
@@ -2245,7 +2139,7 @@ SECTION ITEM $item_female_fancy_cape_list
 
 SECTION ITEM $item_magical_stone
 {
-	NAME a magical stone
+	NAME magical stone
 	ID 186E
 	TRIGTYPE 0
 	TRIGGER $itrg_spawn_reagents
@@ -2253,7 +2147,7 @@ SECTION ITEM $item_magical_stone
 
 SECTION ITEM $item_wooden_chest
 { // standard wooden chest spawn container
-	NAME a wooden chest
+	NAME wooden chest
 	ID 0E43
 	TYPE $itype_locked_container
 	MOREY 1
@@ -2263,7 +2157,7 @@ SECTION ITEM $item_wooden_chest
 
 SECTION ITEM $item_christmas_gift_chest
 { //  wooden chest
-	NAME a Christmas gift chest
+	NAME Christmas gift chest
 	ID 0E43
 	COLOR 0107
 	TYPE $itype_decaying_item_spawner
@@ -2274,7 +2168,8 @@ SECTION ITEM $item_christmas_gift_chest
 }
 
 SECTION ITEM $item_vials_of_blood
-{ vial of blood
+{
+	NAME vial of blood
 	ID 0F7D
 	PILE 3
 	DECAY
@@ -2282,327 +2177,10 @@ SECTION ITEM $item_vials_of_blood
 	WEIGHT 6
 }
 
-SECTION ITEM $item_magical_wizards_hat
-{
-	NAME a magical wizard`s hat
-	ID 1718
-	LAYER $layer_helm
-	STRADD -5
-	DEXADD -5
-	INTADD 10
-	DYE 1
-	DECAY
-	VALUE 75
-}
-
-SECTION ITEM $item_large_leather_pillow
-{
-	NAME a large leather pillow
-	ID 163A
-	TYPE 0
-	LAYER 0
-	DYE 0
-	VALUE 10
-	WEIGHT 100
-	COLOR 0709
-}
-
-SECTION ITEM $item_medium_leather_pillow
-{
-	NAME a medium leather pillow
-	ID 163B
-	TYPE 0
-	LAYER 0
-	DYE 0
-	VALUE 15
-	WEIGHT 80
-	COLOR 0709
-}
-
-SECTION ITEM $item_small_leather_pillow
-{
-	NAME a small leather pillow
-	ID 163C
-	TYPE 0
-	LAYER 0
-	DYE 0
-	VALUE 20
-	WEIGHT 70
-	COLOR 0709
-}
-
-SECTION ITEM $item_bedroll_1
-{
-	NAME bedroll
-	ID 0a59
-	TYPE 0
-	LAYER 0
-	DYE 0
-	VALUE 20
-	WEIGHT 300
-	COLOR 0709
-}
-
-SECTION ITEM $item_folded_blanket_poo
-{
-	NAME folded blanket poo
-	ID 0a6c
-	TYPE 0
-	LAYER 0
-	DYE 0
-	VALUE 15
-	WEIGHT 200
-	COLOR 0709
-}
-
-SECTION ITEM $item_folded_sheet
-{
-	NAME folded sheet
-	ID 0a92
-	TYPE 0
-	LAYER 0
-	DYE 0
-	VALUE 10
-	WEIGHT 125
-	COLOR 0709
-}
-
-SECTION ITEM $item_small_pillow
-{
-	NAME small pillow
-	ID 1397
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 10
-	WEIGHT 60
-	COLOR 0709
-}
-
-SECTION ITEM $item_e
-{
-	NAME E/W curtain
-	ID 160e
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 300
-	WEIGHT 500
-}
-
-SECTION ITEM $item_n
-{
-	NAME N/S curtain
-	ID 160d
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 300
-	WEIGHT 500
-}
-
-SECTION ITEM $item_small_n
-{
-	NAME small N/S banner
-	ID 15d0
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 75
-	WEIGHT 300
-}
-
-SECTION ITEM $item_small_e
-{
-	NAME small E/W banner
-	ID 15d1
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 75
-	WEIGHT 300
-}
-
-SECTION ITEM $item_1
-{
-	NAME N/S banner
-	ID 15bc
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 150
-	WEIGHT 400
-}
-
-SECTION ITEM $item_e_1
-{
-	NAME E/W banner
-	ID 15bb
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 150
-	WEIGHT 400
-}
-
-SECTION ITEM $item_e_2
-{
-	NAME E/W banner
-	ID 15cb
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 175
-	WEIGHT 400
-}
-
-SECTION ITEM $item_2
-{
-	NAME N/S banner
-	ID 15cc
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 175
-	WEIGHT 400
-}
-
-SECTION ITEM $item_e_3
-{
-	NAME E/W banner
-	ID 15c7
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 200
-	WEIGHT 400
-}
-
-SECTION ITEM $item_3
-{
-	NAME N/S banner
-	ID 15c8
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 200
-	WEIGHT 400
-}
-
-SECTION ITEM $item_e_4
-{
-	NAME E/W banner pt 1
-	ID 1586
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 100
-	WEIGHT 200
-}
-
-SECTION ITEM $item_e_5
-{
-	NAME E/W banner pt 2
-	ID 1587
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 200
-	WEIGHT 300
-}
-
-SECTION ITEM $item_e_6
-{
-	NAME E/W banner pt 3
-	ID 1588
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 100
-	WEIGHT 200
-}
-
-SECTION ITEM $item_e_7
-{
-	NAME E/W banner pt 1
-	ID 158c
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 125
-	WEIGHT 200
-}
-
-SECTION ITEM $item_e_8
-{
-	NAME E/W banner pt 2
-	ID 158d
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 250
-	WEIGHT 300
-}
-
-SECTION ITEM $item_e_9
-{
-	NAME E/W banner pt 3
-	ID 158e
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 125
-	WEIGHT 200
-}
-
-SECTION ITEM $item_e_A
-{
-	NAME E/W banner pt 3
-	ID 15a0
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 200
-	WEIGHT 250
-}
-
-SECTION ITEM $item_e_B
-{
-	NAME E/W banner pt 3
-	ID 15a1
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 200
-	WEIGHT 250
-}
-
-SECTION ITEM $item_e_C
-{
-	NAME E/W banner pt 3
-	ID 15a8
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 250
-	WEIGHT 250
-}
-
-SECTION ITEM $item_e_D
-{
-	NAME E/W banner pt 3
-	ID 15a9
-	TYPE 0
-	LAYER 0
-	DYE 1
-	VALUE 250
-	WEIGHT 250
-}
-
 //********************mounts for npcs**********************
 SECTION ITEM $item_tan_horse
 {
-	NAME a tan horse
+	NAME tan horse
 	ID 3e9f
 	LAYER $layer_mount
 	NEWBIE
@@ -2610,7 +2188,7 @@ SECTION ITEM $item_tan_horse
 
 SECTION ITEM $item_grey_horse
 {
-	NAME a grey horse
+	NAME grey horse
 	ID 3ea0
 	LAYER $layer_mount
 	NEWBIE
@@ -2618,7 +2196,7 @@ SECTION ITEM $item_grey_horse
 
 SECTION ITEM $item_light_brown_horse
 {
-	NAME a light brown horse
+	NAME light brown horse
 	ID 3ea1
 	LAYER $layer_mount
 	NEWBIE
@@ -2626,7 +2204,7 @@ SECTION ITEM $item_light_brown_horse
 
 SECTION ITEM $item_dark_brown_horse
 {
-	NAME a dark brown horse
+	NAME dark brown horse
 	ID 3ea2
 	LAYER $layer_mount
 	NEWBIE
@@ -2634,7 +2212,7 @@ SECTION ITEM $item_dark_brown_horse
 
 SECTION ITEM $item_nightmare
 {
-	NAME a nightmare
+	NAME nightmare
 	ID 3ea2
 	COLOR 0455
 	LAYER $layer_mount
@@ -2801,7 +2379,7 @@ SECTION ITEM $item_christmas_list
 
 SECTION ITEM $item_cristall_ball_of_reputation
 {
-	NAME a Cristall Ball of Reputation
+	NAME Cristall Ball of Reputation
 	ID 0E2D
 	VALUE 1500
 	@ONDBLCLICK _crystBall
@@ -2809,7 +2387,7 @@ SECTION ITEM $item_cristall_ball_of_reputation
 
 SECTION ITEM $item_cigar
 {
-	NAME a cigar
+	NAME cigar
 	ID 979
 	VALUE 10
 	@ONDBLCLICK _smoke
@@ -2827,7 +2405,7 @@ SECTION ITEM $item_sledge_hammer
 // campfire
 SECTION ITEM $item_campfire
 {
-	NAME a campfire
+	NAME campfire
 	ID 0DE3
 	DECAY
 	VALUE 0
@@ -2866,7 +2444,7 @@ SECTION ITEM $item_jar_for_milk
 
 SECTION ITEM $item_jar_full_of_milk
 {
-	NAME a jar full of milk
+	NAME jar full of milk
 	ID 1006
 	TYPE $itype_food
 
@@ -2876,7 +2454,7 @@ SECTION ITEM $item_jar_full_of_milk
 
 SECTION ITEM $item_cristall_ball_of_reputation
 {
-	NAME a Cristall Ball of Reputation
+	NAME Cristall Ball of Reputation
 	ID 0E2D
 	VALUE 1500
 	@ONDBLCLICK __crystBall
@@ -2887,26 +2465,10 @@ SECTION ITEM $item_cristall_ball_of_reputation
 
 SECTION ITEM $item_cigar
 {
-	NAME a cigar
+	NAME cigar
 	ID 979
 	VALUE 10
 	@ONDBLCLICK __smoke
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION NoX-Wizard Custom Items
-}
-
-SECTION ITEM $item_magical_wizards_hat
-{
-	NAME a magical wizard`s hat
-	ID 1718
-	LAYER $layer_helm
-	STRADD -5
-	DEXADD -5
-	INTADD 10
-	DYE 1
-	DECAY
-	VALUE 75
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION NoX-Wizard Custom Items
@@ -2971,6 +2533,7 @@ SECTION ITEM $item_hitching_post
 	ID 14e7
 	@ONDBLCLICK _freezing
 	AMXINT 1009 0
+	AMXINT $localvar_flipitem $item_hitching_post2
 }
 
 SECTION ITEM $item_hitching_post2
@@ -2979,4 +2542,619 @@ SECTION ITEM $item_hitching_post2
 	ID 14e8
 	@ONDBLCLICK _freezing
 	AMXINT 1009 0
+	AMXINT $localvar_flipitem $item_hitching_post
+}
+
+SECTION ITEM $item_closed_bedroll1_1
+{
+	NAME bedroll
+	ID 0a59
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 30
+	TRIGGER $itrg_unroll_bedroll
+	AMXINT $localvar_flipitem $item_closed_bedroll1_2
+}
+
+SECTION ITEM $item_closed_bedroll1_2
+{
+	NAME bedroll
+	ID 0a58
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 30
+	TRIGGER $itrg_unroll_bedroll
+	AMXINT $localvar_flipitem $item_closed_bedroll1_3
+}
+
+SECTION ITEM $item_closed_bedroll1_3
+{
+	NAME bedroll
+	ID 0a57
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 30
+	TRIGGER $itrg_unroll_bedroll
+	AMXINT $localvar_flipitem $item_closed_bedroll1_1
+}
+
+SECTION ITEM $item_unrolled_bedroll1_1
+{
+	NAME bedroll
+	ID 0a55
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 30
+	AMXINT $localvar_flipitem $item_unrolled_bedroll1_2
+}
+
+SECTION ITEM $item_unrolled_bedroll1_2
+{
+	NAME bedroll
+	ID 0a56
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 30
+	AMXINT $localvar_flipitem $item_unrolled_bedroll1_1
+}
+
+SECTION ITEM $item_folded_blanket1_1
+{
+	NAME folded blanket
+	ID 0a6c
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 200
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_folded_blanket1_2
+}
+
+SECTION ITEM $item_folded_blanket1_2
+{
+	NAME folded blanket
+	ID 0a6d
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 200
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_folded_blanket1_3
+}
+
+SECTION ITEM $item_folded_blanket1_3
+{
+	NAME folded blanket
+	ID 0a6e
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 200
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_folded_blanket1_4
+}
+
+SECTION ITEM $item_folded_blanket1_4
+{
+	NAME folded blanket
+	ID 0a6f
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 200
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_folded_blanket1_1
+}
+
+SECTION ITEM $item_folded_sheet1_1
+{
+	NAME folded sheet
+	ID 0a92
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 125
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_folded_sheet1_2
+}
+
+SECTION ITEM $item_folded_sheet1_2
+{
+	NAME folded sheet
+	ID 0a93
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 125
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_folded_sheet1_3
+}
+
+SECTION ITEM $item_folded_sheet1_3
+{
+	NAME folded sheet
+	ID 0a94
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 125
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_folded_sheet1_4
+}
+
+SECTION ITEM $item_folded_sheet1_4
+{
+	NAME folded sheet
+	ID 0a95
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 125
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_folded_sheet1_1
+}
+
+SECTION ITEM $item_large_leather_pillow
+{
+	NAME large leather pillow
+	ID 163A
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 100
+	COLOR 0709
+}
+
+SECTION ITEM $item_medium_leather_pillow
+{
+	NAME medium leather pillow
+	ID 163B
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 80
+	COLOR 0709
+}
+
+SECTION ITEM $item_small_leather_pillow
+{
+	NAME small leather pillow
+	ID 163C
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 70
+	COLOR 0709
+}
+
+SECTION ITEM $item_large_pillow1
+{
+	NAME large pillow
+	ID 163A
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 100
+}
+
+SECTION ITEM $item_large_pillow2_1
+{
+	NAME large pillow
+	ID 13A9
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 100
+	AMXINT $localvar_flipitem $item_large_pillow2_2
+}
+
+SECTION ITEM $item_large_pillow2_2
+{
+	NAME large pillow
+	ID 13AB
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 100
+	AMXINT $localvar_flipitem $item_large_pillow2_3
+}
+
+SECTION ITEM $item_large_pillow2_3
+{
+	NAME large pillow
+	ID 13AD
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 100
+	AMXINT $localvar_flipitem $item_large_pillow2_4
+}
+
+SECTION ITEM $item_large_pillow2_4
+{
+	NAME large pillow
+	ID 13AE
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 10
+	WEIGHT 100
+	AMXINT $localvar_flipitem $item_large_pillow2_1
+}
+
+SECTION ITEM $item_medium_pillow1
+{
+	NAME medium pillow
+	ID 163B
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 80
+}
+
+SECTION ITEM $item_medium_pillow2_1
+{
+	NAME medium pillow
+	ID 13A4
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 80
+	AMXINT $localvar_flipitem $item_medium_pillow2_2
+}
+
+SECTION ITEM $item_medium_pillow2_2
+{
+	NAME medium pillow
+	ID 13A5
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 15
+	WEIGHT 80
+	AMXINT $localvar_flipitem $item_medium_pillow2_1
+}
+
+SECTION ITEM $item_small_pillow1
+{
+	NAME small pillow
+	ID 163C
+	TYPE 0
+	LAYER 0
+	DYE 0
+	VALUE 20
+	WEIGHT 70
+}
+
+SECTION ITEM $item_small_pillow2_1
+{
+	NAME small pillow
+	ID 13AB
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 10
+	WEIGHT 60
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_small_pillow2_2
+}
+
+SECTION ITEM $item_small_pillow2_2
+{
+	NAME small pillow
+	ID 13AC
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 10
+	WEIGHT 60
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_small_pillow2_1
+}
+
+SECTION ITEM $item_small_pillow3_1
+{
+	NAME small pillow
+	ID 13A7
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 10
+	WEIGHT 60
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_small_pillow3_2
+}
+
+SECTION ITEM $item_small_pillow3_2
+{
+	NAME small pillow
+	ID 13A8
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 10
+	WEIGHT 60
+	COLOR 0709
+	AMXINT $localvar_flipitem $item_small_pillow3_1
+}
+
+SECTION ITEM $item_small_pillow4
+{
+	NAME pillow
+	ID 1915
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_towel
+{
+	NAME towel
+	ID 1914
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain2_1
+{
+	NAME curtain
+	ID 160e
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 300
+	WEIGHT 500
+	AMXINT $localvar_flipitem $item_curtain2_2
+}
+
+SECTION ITEM $item_curtain2_2
+{
+	NAME curtain
+	ID 160d
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 300
+	WEIGHT 500
+	AMXINT $localvar_flipitem $item_curtain2_1
+}
+
+SECTION ITEM $item_curtain1_1
+{
+	NAME curtain
+	ID 1638
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain1_1
+}
+
+SECTION ITEM $item_curtain1_2
+{
+	NAME curtain
+	ID 1639
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain1_2
+}
+
+SECTION ITEM $item_curtain3_1
+{
+	NAME curtain
+	ID 15f6
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain3_2
+}
+
+SECTION ITEM $item_curtain3_2
+{
+	NAME curtain
+	ID 15f7
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain3_1
+}
+
+SECTION ITEM $item_curtain4_1
+{
+	NAME curtain
+	ID 159e
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain4_2
+}
+
+SECTION ITEM $item_curtain4_2
+{
+	NAME curtain
+	ID 159f
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain4_1
+}
+
+SECTION ITEM $item_curtain5A
+{
+	NAME curtain
+	ID 12da
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain5B
+{
+	NAME curtain
+	ID 12db
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain6A
+{
+	NAME curtain
+	ID 12de
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain6B
+{
+	NAME curtain
+	ID 12df
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain7A
+{
+	NAME curtain
+	ID 12e5
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain7B
+{
+	NAME curtain
+	ID 12e6
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain8A
+{
+	NAME curtain
+	ID 12e9
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain8B
+{
+	NAME curtain
+	ID 12ea
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+}
+
+SECTION ITEM $item_curtain9_1
+{
+	NAME curtain
+	ID 12e3
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain9_2
+}
+
+SECTION ITEM $item_curtain9_2
+{
+	NAME curtain
+	ID 12e4
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain9_1
+}
+
+SECTION ITEM $item_curtain10_1
+{
+	NAME curtain
+	ID 12e2
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain10_2
+}
+
+SECTION ITEM $item_curtain10_2
+{
+	NAME curtain
+	ID 12ed
+	TYPE 0
+	LAYER 0
+	DYE 1
+	VALUE 15
+	WEIGHT 5
+	AMXINT $localvar_flipitem $item_curtain10_1
 }
