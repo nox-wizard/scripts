@@ -23,6 +23,7 @@
 //Here is the command's declaration syntax:
 //name_of_the_command,priv_level,callback
 
+action,100,cmd_action
 add,150,cmd_add
 align,100,cmd_align
 area,100,cmd_area
@@ -45,10 +46,13 @@ invul,100,cmd_invul
 iset,200,cmd_iset
 jail,100,cmd_jail
 kill,100,cmd_kill
+killhair,150,cmd_killhair
+killbeard,150,cmd_killbeard
 lightlevel,100,cmd_lightlevel
 make,255,cmd_make
 mana,200,cmd_mana
 move,100,cmd_move
+npcwander,150,cmd_npcwander
 onlinegm,0,cmd_onlinegm
 options,100,cmd_options
 page,0,cmd_page
@@ -56,6 +60,7 @@ pages,100,cmd_pages
 pagelist,100,cmd_pagelist
 playerlist,50,cmd_playerlist
 polymorph,100,cmd_polymorph
+possess,100,cmd_possess
 regioncp,150,cmd_regioncp
 resend,50,cmd_resend
 resurrect,100,cmd_resurrect
@@ -63,6 +68,7 @@ setdir,150,cmd_setdir
 setmorexyz,150,cmd_setmorexyz
 setpriv,255,cmd_setpriv
 setskills,200,cmd_setskills
+setstats,200,cmd_setstats
 settype,150,cmd_settype
 showbank,200,cmd_showbank
 skills,0,cmd_skills

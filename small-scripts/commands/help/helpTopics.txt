@@ -24,6 +24,11 @@ Your privlevel defines whether you can access a command or not, more powerful co
 Your privlevel can be set by the shard admins, by default you are a 'player'.
 
 ====== HERE START THE COMMANDS HELP TOPICS =======
+TOPIC action
+TEXT
+Makes a character perform an action
+sysntax: 'action actionnumber
+
 TOPIC add
 TEXT
 Adds items characters to the world
@@ -46,7 +51,7 @@ Command area are used to perform many commands on all objects in an area without
 TOPIC cset
 TEXT
 Sets a character's property
-syntax: 'cset property value ["target"]
+syntax: 'cset property value 
 
 TOPIC csetxyz
 TEXT
@@ -56,24 +61,24 @@ syntax: 'csetxyz property x y z
 TOPIC damage
 TEXT
 Damages a character
-syntax: 'damage [amount]["hp"/"stam"/"mana"]["target"]
+syntax: 'damage [amount]["hp"/"stam"/"mana"]
 You can specify wich stat you want to damage
 
 TOPIC decay
 TEXT
 Sets item's decay time
-syntax: 'decay decayTime/"off" ["target"]
+syntax: 'decay decayTime/"off" 
 'decay off makes the item not decay
 
 TOPIC dye
 TEXT
 Dyes an item
-syntax: 'dye color ["target"]
+syntax: 'dye color 
 
 TOPIC dupe
 TEXT
 Duplicates an item
-syntax: 'dupe ["target"]
+syntax: 'dupe 
 
 TOPIC freeze
 TEXT
@@ -113,7 +118,7 @@ syntax: 'gy message
 TOPIC hiding
 TEXT
 Hides a character
-syntax: 'hiding ["on"/"off"]["skill"/"spell"/"perma"]["target"]
+syntax: 'hiding ["on"/"off"]["skill"/"spell"/"perma"]
 
 TOPIC heal
 TEXT
@@ -128,7 +133,7 @@ syntax: 'help
 TOPIC invul
 TEXT
 Switches invulnerability of a character
-syntax: 'invul ["on"/"off"] ["target"]
+syntax: 'invul ["on"/"off"] 
 
 TOPIC iset
 TEXT
@@ -144,7 +149,19 @@ If not jailing time is specified, tha character will be jailed forever (until so
 TOPIC kill
 TEXT
 Kills a character
-syntax: 'kill ["target"]
+syntax: 'kill 
+
+TOPIC killbeard
+TEXT
+Kills a character's beard
+syntax: 'killhair
+
+
+TOPIC killhair
+TEXT
+Kills a character's hair
+syntax: 'killhair
+
 
 TOPIC lightlevel
 TEXT
@@ -153,17 +170,17 @@ syntax: 'lightlevel
 TOPIC make
 TEXT
 Makes a character player, GM or counselor
-syntax: 'make "player"/"gm"/"cns" ["target"]
+syntax: 'make "player"/"gm"/"cns" 
 
 TOPIC mana
 TEXT
 Refreshes character's mana
-syntax: 'mana ["target"]
+syntax: 'mana 
 
 TOPIC move
 TEXT
 Moves an object
-syntax: 'move "me"/"here"/"loc"/ x y ["abs"/"rel"]["target"]
+syntax: 'move "me"/"here"/"loc"/ x y ["abs"/"rel"]
 'move me: moves the calling chatacer
 'move here: moves object to charatcer's feet
 'move loc: moves object to a location
@@ -201,6 +218,12 @@ TOPIC polymorph
 TEXT
 syntax: 'polymorph
 
+TOPIC possess
+TEXT
+Possesses an npc
+sysntax: 'possess
+to switch back possession use 'possess again and target yourself
+
 TOPIC regioncp
 TEXT
 Opens the region control panel
@@ -216,7 +239,7 @@ May be useful to solve some bugs
 TOPIC resurrect
 TEXT
 Resurrects a ghost
-syntax: 'resurrect ["target"]
+syntax: 'resurrect 
 
 TOPIC setmorexyz
 TEXT
@@ -247,7 +270,7 @@ syntax: 'solvepage [pagenumber]
 TOPIC stamina
 TEXT
 Refreshes a character
-syntax: 'stamina ["target"]
+syntax: 'stamina 
 
 TOPIC stats
 TEXT

@@ -20,7 +20,9 @@ public cmd_gy(const chr)
 
 	chr_getProperty(chr,CP_STR_SPEECH,0,speech);
 	str2Token(speech,temp,0,message,0);
-
+	chr_getProperty(chr,CP_STR_NAME,0,temp);
+	
+	sprintf(message,"%s: %s",temp,message);
 	new chr2 = INVALID;
 	for(set_rewind(__onlineStaff);!set_end(__onlineStaff);)
 	{

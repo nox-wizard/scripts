@@ -105,5 +105,9 @@ public loadHelpTopics()
 	}
 
 	log_message("%d help topics loaded",i);
+	if(!file_eof(file))
+		log_warning("helpTopics[][] is undersized, increas it's size in small-scripts/commands/help/constant.sma",i);
+	
+	file_close(file);
 	printf("^n");
 }

@@ -38,7 +38,7 @@ public cmd_stamina(const chr)
 		{
 				chr2 = set_getChar(area_chars(area));
 				if(chr2 != chr)
-					chr_setProperty(chr,CP_DEXTERITY,CP2_EFF,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
+					chr_setProperty(chr,CP_DEXTERITY,CP2_STAMINA,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
 		}
 
 		chr_message(chr,_,"%d characters set to full stats",i);
@@ -60,7 +60,7 @@ public cmd_stamina_targ(target, chr, object, x, y, z, unused, unused2)
 {
 	if(isChar(object))
 	{
-		chr_setProperty(chr,CP_DEXTERITY,CP2_EFF,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
+		chr_setProperty(chr,CP_DEXTERITY,CP2_STAMINA,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
 		chr_message(chr,_,"stats raised");
 	}
 	else chr_message(chr,_,"You must target a character");

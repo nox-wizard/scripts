@@ -99,7 +99,6 @@ enum
 	}	//<! skill data type, you can modify this to your needs, but remember to update __skillinfo[][] too
 	
 	new SK_ADDITIONAL_COUNT = 0;	//!< skills loaded from skills2.sma - DO NOT TOUCH!
-	new SK_COUNT = SK_STD_COUNT;	//!< total number of skills - DO NOT TOUCH!
 	
 	/*!
 	\brief mixed array with additional skills characteristics
@@ -108,71 +107,8 @@ enum
 	new __skillinfo[SK_ADDITIONAL_MAX][__skillStruct];
 #endif
 
-#define CLASSES_COUNT 1	//!< maximum number of classes
-new __classSkillCapModifier[SK_STD_COUNT + SK_ADDITIONAL_MAX][CLASSES_COUNT];//!< skillcap modifiers derived from classes
-
-#define RACES_COUNT 1	//!< maximum number of races
-new __raceSkillCapModifier[SK_STD_COUNT + SK_ADDITIONAL_MAX][RACES_COUNT];//!< skillcap modifiers derived from races
-
-#if !ACTIVATE_EXTENDED_SKILLSYSTEM
-
 new SK_COUNT = SK_STD_COUNT;	//!< total number of skills - DO NOT TOUCH!
 
-public skillName[SK_STD_COUNT][] = 
-{
-	"Alchemy",
-	"Anatomy",
-	"Animal Lore",
-	"Item Id",
-	"Arms Lore",
-	"Parrying",
-	"Begging",
-	"Blacksmithing",
-	"Bowcraft",
-	"Peacemaking",
-	"Camping",
-	"Carpentery",
-	"Cartography",
-	"Cooking",
-	"Detecting hidden",
-	"Enticement",
-	"Evaluating intelligence",
-	"Healing",
-	"Fishing",
-	"Forensic",
-	"Herding",
-	"Hiding",
-	"Provocation",
-	"Inscription",
-	"Lockpicking",
-	"Magery",
-	"Magic resistance",
-	"Tactics",
-	"Snooping",
-	"Musicianship",
-	"Poisoning",
-	"Archery",
-	"Spirit Speak",
-	"Stealing",
-	"Tailoring",
-	"Taming",
-	"Taste Id",
-	"Tinkering",
-	"Tracking",
-	"Veterinary",
-	"Swordsmanship",
-	"Macefighting",
-	"Fencing",
-	"Wrestling",
-	"Lumberjacking",
-	"Mining",
-	"Meditation",
-	"Stealth",
-	"Remove Traps"
-};
-#endif
-
-#if ACTIVATE_EXTENDED_SKILLSYSTEM
 public skillName[SK_STD_COUNT + SK_ADDITIONAL_MAX][] = 
 {
 	"Alchemy",
@@ -235,11 +171,11 @@ public skillName[SK_STD_COUNT + SK_ADDITIONAL_MAX][] =
 	"additional skill 9             ",
 	"additional skill 10            "
 };
-#endif
+
 //!< skill names array, to be indexed with SK_ constants
 
 
-
+//this works only for standard skills
 public skillByName[SK_STD_COUNT] = {
 SK_ALCHEMY,
 SK_ANATOMY,

@@ -3,6 +3,7 @@
 
 //here are all command scripts
 #include "small-scripts/commands/area.sma"
+#include "small-scripts/commands/action.sma"
 #include "small-scripts/commands/add/add.sma"
 #include "small-scripts/commands/align.sma"
 #include "small-scripts/commands/cset.sma"
@@ -24,9 +25,12 @@
 #include "small-scripts/commands/iset.sma"
 #include "small-scripts/commands/jail.sma"
 #include "small-scripts/commands/kill.sma"
+#include "small-scripts/commands/killbeard.sma"
+#include "small-scripts/commands/killhair.sma"
 #include "small-scripts/commands/mana.sma"
 #include "small-scripts/commands/make.sma"
 #include "small-scripts/commands/move.sma"
+#include "small-scripts/commands/npcwander.sma"
 #include "small-scripts/commands/lightlevel.sma"
 #include "small-scripts/commands/page/onlinegm.sma"
 #include "small-scripts/commands/options/options.sma"
@@ -35,6 +39,7 @@
 #include "small-scripts/commands/page/pages.sma"
 #include "small-scripts/commands/playerlist.sma"
 #include "small-scripts/commands/polymorph.sma"
+#include "small-scripts/commands/possess.sma"
 #include "small-scripts/commands/regioncp.sma"
 #include "small-scripts/commands/resend.sma"
 #include "small-scripts/commands/resurrect.sma"
@@ -44,8 +49,10 @@
 #include "small-scripts/commands/settype.sma"
 #include "small-scripts/commands/showbank.sma"
 #include "small-scripts/commands/skills/skills.sma"
+#include "small-scripts/commands/skills/setskills.sma"
 #include "small-scripts/commands/stamina.sma"
 #include "small-scripts/commands/stats/stats.sma"
+#include "small-scripts/commands/stats/setstats.sma"
 #include "small-scripts/commands/sysm.sma"
 #include "small-scripts/commands/tile.sma"
 #include "small-scripts/commands/tweak/tweak.sma"
@@ -185,6 +192,8 @@ public readCommandParams(const chr)
 	}
 	
 }
+
+#if !_USE_SOURCE_CMDSYS_
 /*!
 \author Fax
 \since 0.82
@@ -270,7 +279,7 @@ public deleteCommand(name[])
 	log_message("Command '%s succesfully deleted",name);
 	return CMD_OK
 }
-//#endif
+#endif
 
 /*!
 \author Fax
@@ -294,15 +303,16 @@ public initCommandSystem()
 			log_message("^nSMALL command system selected^n^n");
 		#endif
 	#endif
-
+	
+	//load commands
+	log_message("Loading commands");
+	if(file_scan("small-scripts/commands.txt","loadCommand","//") == INVALID)
+		log_critical("COMMAND SYSTEM WON'T WORK CORRECTLY!");
+	printf("^n");
+		
 	//command system test
-	#if _CMD_DEBUG_
+	#if !_USE_SOURCE_CMDSYS_ & _CMD_DEBUG_
 		commandSystemTest();
-	#endif
-
-	//Commands list, you can switch this off setting _CMD_SHOWLIST_ to 0
-	#if _CMD_SHOWLIST_
-		showCommandsList();
 	#endif
 
 	//setup 'area command
@@ -330,6 +340,7 @@ Usually this function will be completely executed only at the first character lo
 */
 public startCommandSystem(const chr)
 {
+#if !_USE_SOURCE_CMDSYS_
 	printf("^n");
 	if(!chr_isaLocalVar(chr,CLV_PRIVLEVEL))
 	{
@@ -379,8 +390,12 @@ public startCommandSystem(const chr)
 
 	log_message("Scripted command system check succesful");
 	printf("^n");
+#else 
+	return;
+#endif
 }
 
+#if !_USE_SOURCE_CMDSYS_
 /*!
 \author Fax
 \fn commandSystemTest()
@@ -418,29 +433,13 @@ public commandSystemTest()
 	log_message("^tEnd of command system test");
 	printf("^n");
 }
+#endif
 
-/*!
-\author Fax
-\fn showCommandsList()
-\param chr: the character
-\since 0.82
-\brief shows a list of available commands
-
-Scans commands.txt and prints commands information
-\return nothing
-*/
-public showCommandsList()
-{
-	printf("^n");
-	log_message("Available commands (command - privlevel):")
-	if(file_scan("small-scripts/commands.txt","printCommandInfo","//") == INVALID)
-		log_error("Unable to open commands.txt");
-	printf("^n");
-}
-
-public printCommandInfo(file,linenum)
+public loadCommand(file,linenum)
 {
 	if(linenum == INVALID) return;
+	
+	static c;
 	
 	//read scanned line
 	new line[FILE_SCAN_BUFFER_SIZE];
@@ -450,13 +449,22 @@ public printCommandInfo(file,linenum)
 	replaceStr(line,","," ");
 	
 	//read command
-	new cmd[100];
-	str2Token(line,cmd,0,line,0);
+	new name[30]
+	str2Token(line,name,0,line,0);
 	
 	//read priv
-	new priv[50];
+	new priv[10];
 	str2Token(line,priv,0,line,0);
-	
+
+#if !_USE_SOURCE_CMDSYS_
+	strcpy(__commands[c][__cmdName],name)
+	__commands[c][__cmdPriv] = str2Int(priv);
+		
+	//read function
+	str2Token(line,__commands[c][__cmdFunc],0,line,0);
+#endif
+
+#if _CMD_SHOWLIST_
 	//give privs a name if they are standard privs
 	switch(str2Int(priv))
 	{
@@ -469,6 +477,8 @@ public printCommandInfo(file,linenum)
 	}
 	
 	//print command info
-	log_message("'%s - %s",cmd,priv);
+	log_message("%d - '%s - %s",c,name,priv);
+#endif
+	c++;
 }
 /*! @} */ //end of scripts_commands_system

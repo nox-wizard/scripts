@@ -77,7 +77,8 @@ public cmd_setpriv(const chr)
 public cmd_setpriv_targ(target, chr, object, x, y, z, unused, priv)
 {
 	if(isChar(object))
-	{
+	{	
+		chr_setProperty(object,CP_PRIVLEVEL,_,priv);
 		chr_setLocalIntVar(object,CLV_PRIVLEVEL,priv);
 		chr_message(chr,_,"Privlevel set to %d",chr_getLocalIntVar(object,CLV_PRIVLEVEL));
 		chr_message(object,_,"Your privlevel has been modified,now it's %d",chr_getLocalIntVar(object,CLV_PRIVLEVEL));

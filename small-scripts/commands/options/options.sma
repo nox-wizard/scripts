@@ -79,7 +79,7 @@ public handle_options_char( const caller, const menu, const button )
 
 	switch( button ) {
 		case 1:
-			stats_char( caller, chr, 1 );
+			menu_stats_char( caller, chr, 1 );
 		case 2:
 			tweak_char( caller, chr, 1 );
 		case 3: {

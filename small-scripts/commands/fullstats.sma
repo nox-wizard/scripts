@@ -8,7 +8,7 @@
 /*!
 \author Fax
 \fn cmd_fullstats(const chr)
-\brief raises all stats (hp,mana,stamina) tomaximum
+\brief raises all stats (hp,mana,stamina) to maximum
 
 <B>syntax:<B> 'fullstats 
 <B>command params:</B>
@@ -39,9 +39,9 @@ public cmd_fullstats(const chr)
 				chr2 = set_getChar(area_chars(area));
 				if(chr2 != chr)
 				{
-					chr_setProperty(chr,CP_STRENGTH,CP2_EFF,chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
-					chr_setProperty(chr,CP_DEXTERITY,CP2_EFF,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
-					chr_setProperty(chr,CP_INTELLIGENCE,CP2_EFF,chr_getProperty(chr,CP_INTELLIGENCE,CP2_REAL));
+					chr_setProperty(chr,CP_STRENGTH,CP2_HP,chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
+					chr_setProperty(chr,CP_DEXTERITY,CP2_STAMINA,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
+					chr_setProperty(chr,CP_INTELLIGENCE,CP2_MANA,chr_getProperty(chr,CP_INTELLIGENCE,CP2_REAL));
 				}
 		}
 
@@ -64,9 +64,9 @@ public cmd_fullstats_targ(target, chr, object, x, y, z, unused, unused2)
 {
 	if(isChar(object))
 	{
-		chr_setProperty(chr,CP_STRENGTH,CP2_EFF,chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
-		chr_setProperty(chr,CP_DEXTERITY,CP2_EFF,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
-		chr_setProperty(chr,CP_INTELLIGENCE,CP2_EFF,chr_getProperty(chr,CP_INTELLIGENCE,CP2_REAL));
+		chr_setProperty(chr,CP_STRENGTH,CP2_HP,chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
+		chr_setProperty(chr,CP_DEXTERITY,CP2_STAMINA,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
+		chr_setProperty(chr,CP_INTELLIGENCE,CP2_MANA,chr_getProperty(chr,CP_INTELLIGENCE,CP2_REAL));
 		chr_message(chr,_,"stats raised");
 	}
 	else chr_message(chr,_,"You must target a character");

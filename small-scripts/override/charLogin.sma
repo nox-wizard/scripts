@@ -12,12 +12,10 @@ public __charLogin(const chr)
 {
 	if( chr_isNpc (chr)) return;
 	
-	//start scripted command system if needed
-	#if !_USE_SOURCE_CMDSYS_
-		startCommandSystem(chr); 
-	#endif
-	
-	//start extended skillsystem if required
+	//defined in small-scripts/comands.sma
+	startCommandSystem(chr); 
+		
+	//defined in "small-scripts/skills/extendedSkillsystem.sma"
 	startExtSkillsystem(chr);
 			
 	globaltags(chr);
@@ -26,7 +24,7 @@ public __charLogin(const chr)
 	
 	hungerandthirst(chr);
 	
-	//add the character to the pageable staff list if needed
+	//defined in "small-scripts/comands/page/pagesystem.sma"
 	addOnlineStaff(chr);
 }
 

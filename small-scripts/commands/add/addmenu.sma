@@ -388,7 +388,7 @@ public addgui_combat(chr,itemsInBackpack,amount)
 	new tab = (COLS - 2)/i_row;
 
 	new x,y;
-	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_combat_cback");
+	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_armor_cback");
 
 	//draw menu frame
 	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT1 + HEIGHT2 + ROW );
@@ -1956,6 +1956,94 @@ public addgui_spawners_cback(menu,chr,btncode)
 	target_create(chr,btncode,_,_,"cmd_add_itm_targ");
 	addgui_spawner(chr,INVALID,INVALID)
 
+}
+
+//==================================================================================//
+//                                  DEEDS MENU                                      //
+//==================================================================================//
+/*!
+\author Fax
+\fn addgui_deeds(chr,unused,unused2)
+\param chr: the character
+\param itemsInBackpack: true if items are to be created in backpack
+\amount:how many items we need
+\since 0.82
+\brief SPAWNERS page
+
+\return nothing
+*/
+public addgui_deeds(chr,unused,unused2)
+{
+	new  START_X = 0;
+	new  START_Y = 0;
+
+	new COLS = 39;
+	new ROWS = 19;
+
+	new  WIDTH =  COLS*COL;
+	new  HEIGHT = (ROWS + 2)*ROW;
+
+	new x,y;
+	new menu = gui_create(START_X,START_Y,true,true,true,"addgui_deeds_cback");
+
+	//draw menu frame
+	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT + ROW );
+	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT);
+
+	x = START_X + L_MARG;
+	y = START_Y + ROW/2 + ROW;
+	
+	gui_addText(menu,x + BTNW,y,TXT_COLOR,"deeds page is currently unavailble");
+	
+	/*
+	new p=1;
+	
+	gui_addPage(menu,p);
+
+	for(new i; i < NUM_DEEDS; i++)
+	{
+		if(y >= START_Y + HEIGHT)
+		{
+			y = START_Y + ROW/2 + ROW;
+			++p;
+			gui_addText(menu,(START_X + WIDTH)/2 + 2*BTNW,START_Y + HEIGHT,TXT_COLOR,"next");
+			gui_addPageButton(menu,(START_X + WIDTH)/2 + BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p);
+			gui_addPage(menu,p);
+			gui_addText(menu,(START_X + WIDTH)/2 - 6*COL,START_Y + HEIGHT,TXT_COLOR,"prev");
+			gui_addPageButton(menu,(START_X + WIDTH)/2 - BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p - 1);
+		}
+
+		gui_addText(menu,x + BTNW,y,TXT_COLOR,__spawners[i][__name]);
+		gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__deeds[i][__def],false));
+
+		y += ROW;
+	}
+	*/
+	gui_show(menu,chr);
+}
+
+public addgui_deeds_cback(menu,chr,btncode)
+{
+	if(!btncode)	return;
+
+	itm_createInBp(btncode,chr);
+	addgui_spawner(chr,INVALID,INVALID)
+
+}
+
+public addgui_special(chr,unused,unused2)
+{
+	chr_message(chr,_,"This section is currently empty");
+}
+
+public addgui_shard(chr,unused,unused2)
+{
+	chr_message(chr,_,"This section is for your shard's items, you have to build it by yourself");
+}
+
+public addgui_treasure(chr,unused,unused2)
+{
+	chr_message(chr,_,"This section will be filled as soon as treasure definitions are rearranged");
 }
 
 static getAmountAndChk(menu,&n,&chk)

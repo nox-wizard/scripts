@@ -1,6 +1,7 @@
 /*!
 \defgroup script_extended_skills extended skillsystem
 \ingroup script_skills
+
 @{
 */
 
@@ -95,7 +96,7 @@ public chr_getBaseSkill(const chr,const skill)
 \brief returns the sum of all skills
 \return nothing
 */
-public chr_getSkillcap(const chr)
+public chr_getSkillSum(const chr)
 {
 	if(!isChar(chr)) return -1;
 	
@@ -108,8 +109,11 @@ public chr_getSkillcap(const chr)
 	return skillcap; 
 }
 
-//stop reading file if extended skillsystem is not activated and change setup functions
+//stop reading file if extended skillsystem is not activated.
 #if !ACTIVATE_EXTENDED_SKILLSYSTEM
+	
+	//this function is define further in this file, but if the system
+	//is not active this is the function implementation that will run
 	public startExtSkillsystem(chr)
 	{
 		//delete local vars if character previously logged with extended skillsystem activated
@@ -126,6 +130,8 @@ public chr_getSkillcap(const chr)
 		}
 	}
 	
+	//this function is define further in this file, but if the system
+	//is not active this is the function implementation that will run
 	public initExtendedSkillsystem()
 	{
 		log_message("Extended skillsystem in not active");
@@ -151,7 +157,6 @@ the skill is raised.
 \note: this function is the same as chr_checkSkill but can be used with additional skills
 \return  -1000 - 0: fail, 1 - 1000: success (1 - 1000 only for additional skills, the grater the value the better the try has succeded)
 */
-
 public chr_trySkill(const chr, sk, low, high, const raise)
 {	
 	//if it is a standard skill, call the native funciton
@@ -295,7 +300,8 @@ public updateSkillLevel(chr, sk)
 \param chr: the character
 \brief handles extended skillsystemstartup for logging characters
 
-If extended skillsystem is active, this function creates 2local vars to store skill values.<br>
+This function is called in __charLogin(chr) function and that's the only location where it must be used.<br>
+If extended skillsystem is active, this function creates 2 local vars to store skill values.<br>
 If extended skillsystem is not active this function deletes the local vars.
 \note: this function doesn't exist if extended skillsystem is not activated
 */
@@ -339,6 +345,7 @@ public startExtSkillsystem(const chr)
 \since 0.82
 \brief initializes the extended skillsystem
 
+This function is called in __StartServer() function and that's the only location where it must be used.<br>
 Loads skills2.xss, uses loadAdditionalSkills() to actually load skills
 \return nothing
 */

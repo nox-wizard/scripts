@@ -1770,4 +1770,58 @@ new __spawners[NUM_SPAWNERS][additemEntry] =
 	{INVALID,"$item_jungle_area_spawner              ","jungle area spawner"},
 	{INVALID,"$item_cocoon_spawner                   ","cocoon spawner"}
 }
+
+#define NUM_DEEDS 48
+new __deeds[NUM_DEEDS][additemEntry]
+/*=
+{
+	{INVALID,"$item_lighthouse_deed                  ","lighthouse deed" },
+	{INVALID,"$item_telescope_deed                   ","telescope deed" },
+	{INVALID,"$item_arbitoir_deed                    ","arbitoir deed" },
+	{INVALID,"$item_deed                             ","deed" },
+	{INVALID,"$item_small_tower_deed                 ","small tower deed" },
+	{INVALID,"$item_small_marble_shop_deed           ","small marble shop deed" },
+	{INVALID,"$item_farm_house_deed                  ","farm house deed" },
+	{INVALID,"$item_small_stone_shop_deed            ","small stone shop deed" },
+	{INVALID,"$item_2-story_villa_deed               ","2-story villa deed" },
+	{INVALID,"$item_sandstone_patio_house_deed       ","sandstone patio house deed" },
+	{INVALID,"$item_large_marble_patio_house_deed    ","large marble patio house deed" },
+	{INVALID,"$item_employment_deed                  ","employment deed" },
+	{INVALID,"$item_christmas_tree_deed              ","christmas tree deed" },
+	{INVALID,"$item_dartboard_deed                   ","Dartboard Deed" },
+	{INVALID,"$item_dartboard_deed_1                 ","Dartboard Deed" },
+	{INVALID,"$item_trashcan_deed                    ","Trashcan Deed" },
+	{INVALID,"$item_townstone_deed                   ","townstone deed" },
+	{INVALID,"$item_small_stone_plaster_house_deed   ","small stone & plaster house deed" },
+	{INVALID,"$item_small_stone_house_deed           ","small stone house deed" },
+	{INVALID,"$item_small_brick_house_deed           ","small brick house deed" },
+	{INVALID,"$item_small_wood_house_deed            ","small wood house deed" },
+	{INVALID,"$item_small_wood_plaster_house_deed    ","small wood & plaster house deed" },
+	{INVALID,"$item_small_wood_house_straw_roof_deed ","small wood house with straw roof deed" },
+	{INVALID,"$item_blue_tent_deed                   ","blue tent deed" },
+	{INVALID,"$item_green_tent_deed                  ","green tent deed" },
+	{INVALID,"$item_3_room_brick_house_deed          ","3 room brick house deed" },
+	{INVALID,"$item_2_story_wood_plaster_house_deed  ","2 story wood & plaster house deed" },
+	{INVALID,"$item_2_story_stone_plaster_house_deed ","2 story stone & plaster house deed" },
+	{INVALID,"$item_tower_deed                       ","tower deed" },
+	{INVALID,"$item_keep_deed                        ","keep deed" },
+	{INVALID,"$item_4_room_house_deed                ","4 room house deed" },
+	{INVALID,"$item_castle_deed                      ","castle deed" },
+	{INVALID,"$item_large_smithy_deed                ","large smithy deed" },
+	{INVALID,"$item_a_forge_deed                     ","a forge deed" },
+	{INVALID,"$item_anvil_1_deed                     ","an anvil deed (facing south)" },
+	{INVALID,"$item_anvil_2_deed          _          ","an anvil deed (facing east)" },
+	{INVALID,"$item_a_spinning_wheel_deed_facing_south_","a spinning wheel deed (facing south)" },
+	{INVALID,"$item_archery_butte_deed_facing_east_  ","an archery butte deed (facing east)" },
+	{INVALID,"$item_archery_butte_deed_facing_south_ ","an archery butte deed (facing south)" },
+	{INVALID,"$item_a_training_dummy_deed_facing_south_","a training dummy deed (facing south)" },
+	{INVALID,"$item_a_training_dummy_deed_facing_east_ ","a training dummy deed (facing east)" },
+	{INVALID,"$item_a_pickpocket_dip_deed_facing_south_","a pickpocket dip deed (facing south)" },
+	{INVALID,"$item_a_pickpocket_dip_deed_facing_east_ ","a pickpocket dip deed (facing east)" },
+	{INVALID,"$item_pentagram_deed                     ","pentagram deed" },
+	{INVALID,"$item_a_cannon_deed                      ","a cannon deed" },
+	{INVALID,"$item_a_large_forge_facing_south_deed    ","a large forge facing south deed" },
+	{INVALID,"$item_a_large_forge_facing_east_deed     ","a large forge facing east deed" },
+	{INVALID,"$item_a_skull_candle_deed                ","a skull candle deed" }
+}*/
 /*! }@ */

@@ -17,19 +17,14 @@
 	<UL>
 	<LI> "ai": npcai
 	<LI> "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
-	<LI> "dex": dexterity
 	<LI> "gmfx": gm moving effect
-	<LI> "int": intelligence
-	<LI> "npcwander": npc wander mode
 	<LI> "owner": owner serial
 	<LI> "shop": is character is a shopkeeper (0 no - 1 yes)
-	<LI> "str": strength
 	<LI> "spattack": type of spell attack
 	<LI> "spadelay": delay between 2 spell attacks
 	<LI> "speech": speech block
 	<LI> "split": split
 	<LI> "splitchance": splitchance
-	<LI> "target": npc follow target
 	<LI> "train": if npc can train (0 no - 1 yes)
 	<LI> "trigger": npc trigger
 	</UL>
@@ -93,7 +88,7 @@ public cmd_cset_targ(target, chr, object, x, y, z, unused, val)
 	{
 		chr_setProperty(object,prop,_,val);
 		chr_update(object);
-		chr_message(chr,_,"property set");
+		chr_message(chr,_,"property set to %d",val);
 	}
 
 	else chr_message(chr,_,"You must target an item");
@@ -107,38 +102,31 @@ static readPropAndVal(chr,&prop,&val)
 	{
 		case 'a': prop = CP_NPCAI;
 		case 'd':
-			switch(__cmdParams[0][1])
 			{
-				case 'e': prop = CP_DEXTERITY;
-				case 'i': //direction
+				if(!strlen(__cmdParams[0]))
 				{
-					if(!strlen(__cmdParams[0]))
-					{
-						chr_message(chr,_,"You must specify the direction: n ne e se s sw w nw");
-						return INVALID;
-					}
-			
-					prop = CP_DIR;
-					val = str2Dir(__cmdParams[1]);
-			
-					if(val == INVALID)
-					{
-						chr_message(chr,_,"invalid direction, choose between: n ne e se s sw w nw");
-						return INVALID;
-					}
-			
-					return OK;
+					chr_message(chr,_,"You must specify the direction: n ne e se s sw w nw");
+					return INVALID;
 				}
+		
+				prop = CP_DIR;
+				val = str2Dir(__cmdParams[1]);
+		
+				if(val == INVALID)
+				{
+					chr_message(chr,_,"invalid direction, choose between: n ne e se s sw w nw");
+					return INVALID;
+				}
+		
+				return OK;
 			}
+
 		case 'g': prop = CP_GMMOVEEFF;
-		case 'i': prop = CP_INTELLIGENCE;
-		case 'n': prop = CP_NPCWANDER
 		case 'o': prop = CP_OWNSERIAL;
 		case 's':
 			switch(__cmdParams[0][1])
 			{ 
 				case 's': prop = CP_SHOPKEEPER;
-				case 't': prop = CP_STRENGTH;
 				case 'p': 
 					switch(__cmdParams[0][1])
 					{ 
@@ -160,7 +148,7 @@ static readPropAndVal(chr,&prop,&val)
 		
 				default:
 				{
-					chr_message(chr,_,"Maybe you wanted to type 'strength','speech','split' or 'splitchance'?");
+					chr_message(chr,_,"Maybe you wanted to type'speech','split' or 'splitchance'?");
 					return INVALID;
 				}
 			}
@@ -168,23 +156,22 @@ static readPropAndVal(chr,&prop,&val)
 		case 't': 
 			switch(__cmdParams[0][1])
 			{ 
-				case 'a': prop = CP_FTARG;
 				case 'r': 
-					switch(__cmdParams[0][1])
+					switch(__cmdParams[0][2])
 					{ 
 						case 'i': prop = CP_TRIGGER;
 						case 'a': prop = CP_CANTRAIN;
 					}
 				default:
 				{
-					chr_message(chr,_,"Maybe you wanted to type 'target','trigger' or 'trainer'?");
+					chr_message(chr,_,"Maybe you wanted to type 'trigger' or 'trainer'?");
 					return INVALID;
 				}
 			}
 		
 		default:
 		{
-			chr_message(chr,_,"Invalid property, allowed properties are: ai dex dir int npcwander owner strength spattack spadelay speech target trigger");
+			chr_message(chr,_,"Invalid property, allowed properties are: ai dir owner spattack spadelay speech train trigger");
 			return INVALID;
 		}
 	}
