@@ -7,15 +7,15 @@ public example1(const s)
 
     new c = getCharFromSocket(s);
 
-    new set = set_open(); // creating a new set
+    new set = set_create(); // creating a new set
     
     nprintf(s, "Player near you");
 
-    // fill the set with all chars in range
-	set_addCharsNearXY( set, chr_getProperty(c, CP2_X), chr_getProperty(c, CP2_Y), _, true, false );
+    // fill the set with all player in range
+	set_addOnPlNearObj( set, c );
 
-    //set_rewind reinitialize internal set index, so now point to first element
-    //!set_isEmpty check if is not at end of set
+    // set_rewind reinitialize internal set index, so now point to first element
+    // !set_end check if is not at end of set
     
     for( set_rewind(set); !set_end(set);  ) 
     {
@@ -24,6 +24,6 @@ public example1(const s)
 			nprintf(s, chr_getProperty(cc, CP_NAME));
     }
 
-    set_close(set); // close the set ( very important )
+    set_delete(set); // delete the set ( very important )
 }
 
