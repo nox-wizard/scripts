@@ -331,12 +331,12 @@ static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {1, "Char title:       ", 455, 0, 0, "         "},
 {1, "Karma:            ", 237, 0, 0, "         "},
 {1, "Fame:             ", 218, 0, 0, "         "},
-{6, "Strength:         ", 295, 0, 0, "         "},
-{6, "Hits:             ", 295, 3, 0, "         "},
-{6, "Dexterity:        ", 216, 0, 0, "         "},
-{6, "Stamina:          ", 216, 3, 0, "         "},
-{6, "Intelligence:     ", 236, 0, 0, "         "},
-{6, "Mana:             ", 236, 3, 0, "         "},
+{6, "Strength:         ", 295, 2, 0, "         "},
+{6, "Hits:             ", 295, 2, 0, "         "},
+{6, "Dexterity:        ", 216, 2, 0, "         "},
+{6, "Stamina:          ", 216, 2, 0, "         "},
+{6, "Intelligence:     ", 236, 2, 0, "         "},
+{6, "Mana:             ", 236, 2, 0, "         "},
 {1, "Kills:            ", 239, 0, 0, "         "},
 {1, "Foodposition:     ", 220, 0, 0, "         "},
 {2, "Weight:           ", 312, 0, 0, "         "},
@@ -1031,25 +1031,18 @@ public tweak_char(const chrsource, const target, pagenumber)
 
 	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
 	gui_addText(twkChrMenu,60,49,33,"Main infos");
-	
 	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
 	gui_addText(twkChrMenu,195,49,33,"Flags1");
-	
 	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
 	gui_addText(twkChrMenu,285,49,33,"Flags2");
-	
 	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
 	gui_addText(twkChrMenu,380,49,33,"Flags3");
-	
 	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 	gui_addText(twkChrMenu,470,49,33,"Events");
-	
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 	gui_addText(twkChrMenu,60,79,33,"LocalVars");
-	
 	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkChrMenu,195,79,33,"Skills");
-	
 	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 	gui_addText(twkChrMenu,285,79,33,"Layer");
 	
@@ -1231,7 +1224,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 				{
 					gui_addGump(twkChrMenu,ct_gu+k,181+(n*20), 0x827);
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
-					gui_addPropField( twkChrMenu, (ct_prop+k), (180+(n*20)),150,30, (chr_twkarray[i][ct_propnumber]), (chr_twkarray[i][ct_infotype]));
+					gui_addPropField( twkChrMenu, ct_prop+k, 180+(n*20),150,30, chr_twkarray[i][ct_propnumber], chr_twkarray[i][ct_infotype]);
 				}
 				case 7: //stock function call
 				{
@@ -1306,17 +1299,19 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
 		gui_addText(twkChrMenu,60,49,33,"Main infos");
 		gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-		gui_addText(twkChrMenu,195,49,33,"Skills");
+		gui_addText(twkChrMenu,195,49,33,"Flags1");
 		gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-		gui_addText(twkChrMenu,285,49,33,"Flags");
+		gui_addText(twkChrMenu,285,49,33,"Flags2");
 		gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-		gui_addText(twkChrMenu,380,49,33,"Layer");
+		gui_addText(twkChrMenu,380,49,33,"Flags3");
 		gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 		gui_addText(twkChrMenu,470,49,33,"Events");
 		gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 		gui_addText(twkChrMenu,60,79,33,"LocalVars");
 		gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-		gui_addText(twkChrMenu,195,79,33,"Flags 2");
+		gui_addText(twkChrMenu,195,79,33,"Skills");
+		gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+		gui_addText(twkChrMenu,285,79,33,"Layer");
 		
 		gui_addText(twkChrMenu,66,120,33,"Account number :");
 		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
@@ -1350,17 +1345,19 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
 		gui_addText(twkChrMenu,60,49,33,"Main infos");
 		gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-		gui_addText(twkChrMenu,195,49,33,"Skills");
+		gui_addText(twkChrMenu,195,49,33,"Flags1");
 		gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-		gui_addText(twkChrMenu,285,49,33,"Flags");
+		gui_addText(twkChrMenu,285,49,33,"Flags2");
 		gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-		gui_addText(twkChrMenu,380,49,33,"Layer");
+		gui_addText(twkChrMenu,380,49,33,"Flags3");
 		gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 		gui_addText(twkChrMenu,470,49,33,"Events");
 		gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 		gui_addText(twkChrMenu,60,79,33,"LocalVars");
 		gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-		gui_addText(twkChrMenu,195,79,33,"Flags 2");
+		gui_addText(twkChrMenu,195,79,33,"Skills");
+		gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+		gui_addText(twkChrMenu,285,79,33,"Layer");
 		
 		gui_addText(twkChrMenu,66,120,33,"Account number :");
 		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
@@ -1386,6 +1383,152 @@ public tweak_char(const chrsource, const target, pagenumber)
 		}
 		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
 	}
+	
+	else if(pagenumber ==7)
+	{
+		gui_addText(twkChrMenu,100,150,33,"Miscellaneous");
+		new miscSkills[21]={ SK_ALCHEMY,SK_BLACKSMITHING,SK_BOWCRAFT,SK_CARPENTRY,SK_COOKING,SK_FISHING,SK_HEALING,SK_HERDING,SK_LOCKPICKING,SK_LUMBERJACKING,SK_MAGERY,SK_MEDITATION,SK_MINING,SK_MUSICIANSHIP,SK_REMOVETRAPS,	SK_MAGICRESISTANCE,SK_SNOOPING,SK_STEALING,SK_TAILORING,SK_TINKERING,SK_VETERINARY};
+		for ( new i=0;i<13;++i)
+		{
+			gui_addGump(twkChrMenu,50,171+20*i, 0x827);
+			gui_addText( twkChrMenu,66,170+20*i,1310,"%s : ",skillName[ miscSkills[i] ] );
+			gui_addPropField( twkChrMenu,190,170+20*i,50,30,CP_BASESKILL,miscSkills[i],0 );
+		}
+		for ( new i=13;i<21;++i)
+		{
+
+			gui_addGump(twkChrMenu,321,171+20*(i-13), 0x827);
+			gui_addText( twkChrMenu,335,170+20*(i-13),1310,"%s : ",skillName[ miscSkills[i] ] );
+			gui_addPropField( twkChrMenu,470,170+20*(i-13),50,30,CP_BASESKILL,miscSkills[i],0 );
+		}
+		
+		gui_addText(twkChrMenu,130,490,1310,"Skill Page 2 (Combat Ratings,Actions,Lore Knowledge)");
+		gui_addPageButton(twkChrMenu,100,493,2224,2117,2);
+		
+		gui_addPage(twkChrMenu,2);
+		gui_addPageButton(twkChrMenu,100,493,2224,2117,1);
+		gui_addText(twkChrMenu,130,490,1310,"Skill Page 1 (Miscellaneous)");
+		
+		gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
+		gui_addText(twkChrMenu,60,49,33,"Main infos");
+		gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
+		gui_addText(twkChrMenu,195,49,33,"Flags1");
+		gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
+		gui_addText(twkChrMenu,285,49,33,"Flags2");
+		gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
+		gui_addText(twkChrMenu,380,49,33,"Flags3");
+		gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
+		gui_addText(twkChrMenu,470,49,33,"Events");
+		gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
+		gui_addText(twkChrMenu,60,79,33,"LocalVars");
+		gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
+		gui_addText(twkChrMenu,195,79,33,"Skills");
+	
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+	gui_addText(twkChrMenu,285,79,33,"Layer");
+		
+		gui_addText(twkChrMenu,66,120,33,"Account number :");
+		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
+		gui_addText( twkChrMenu, 185, 120,0,tempChrStr);
+		
+		gui_addText(twkChrMenu,280,120,33,"Serial :");
+		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_SERIAL));
+		gui_addText( twkChrMenu, 336, 120,0,tempChrStr);
+		
+		gui_addGump(twkChrMenu,430,121, 0x827);
+		gui_addText(twkChrMenu,451,120,33,"NPC-AI:");
+		gui_addPropField( twkChrMenu,515,120,50,30,CP_NPCAI);
+		
+		gui_addText(twkChrMenu,100,150,33,"Combat Ratings");
+
+		new combatSkills[8]={ SK_ARCHERY,SK_FENCING,SK_MACEFIGHTING,SK_PARRYING,SK_SWORDSMANSHIP,SK_TACTICS,SK_WRESTLING};
+		for ( new i=0;i<8;++i)
+		{
+			gui_addGump(twkChrMenu,50,171+20*i, 0x827);
+			gui_addText( twkChrMenu,66,170+20*i,1310,"%s : ",skillName[ combatSkills[i] ] );
+			gui_addPropField( twkChrMenu,190,170+20*i,50,30,CP_BASESKILL,combatSkills[i],0 );
+		}
+		gui_addText(twkChrMenu,100,335,33,"Actions");
+		new actionSkills[13]={ SK_TAMING,SK_BEGGING,SK_CAMPING,SK_CARTOGRAPHY,SK_DETECTINGHIDDEN,SK_ENTICEMENT,	SK_HIDING,SK_INSCRIPTION,SK_PEACEMAKING,SK_POISONING,SK_PROVOCATION,SK_SPIRITSPEAK,SK_TRACKING};
+		for ( new i=0;i<7;++i)
+		{
+			gui_addGump(twkChrMenu,50,351+20*i, 0x827);
+			gui_addText( twkChrMenu,66,350+20*i,1310,"%s : ",skillName[ actionSkills[i] ] );
+			gui_addPropField( twkChrMenu,190,350+20*i,50,30,CP_BASESKILL,actionSkills[i],0 );
+		}
+		for ( new i=7;i<13;++i)
+		{
+			gui_addGump(twkChrMenu,321,171+20*(i-7), 0x827);
+			gui_addText( twkChrMenu,335,170+20*(i-7),1310,"%s : ",skillName[ actionSkills[i] ] );
+			gui_addPropField( twkChrMenu,470,170+20*(i-7),50,30,CP_BASESKILL,actionSkills[i],0 );
+		}
+		gui_addText(twkChrMenu,361,300,33,"Lore & Knowledge");
+		new loreSkills[7]={ SK_ANATOMY,SK_ANIMALLORE,SK_ARMSLORE,SK_EVALUATINGINTEL,SK_FORENSICS,SK_ITEMID,SK_TASTEID};
+		for ( new i=0;i<7;++i)
+		{
+			gui_addGump(twkChrMenu,321,321+20*i, 0x827);
+			gui_addText( twkChrMenu,335,320+20*i,1310,"%s : ",skillName[ loreSkills[i] ] );
+			gui_addPropField( twkChrMenu,470,320+20*i,50,30,CP_BASESKILL,loreSkills[i],0 );
+		}
+		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
+	}
+	else if(pagenumber == 8)
+	{
+		gui_addText(twkChrMenu,50,150,1110,"Layer");
+		printf("enter layer gump page");
+				
+		new layer;
+		new r;
+		new s;
+		new t;
+		printf("layerpage preset");
+		new itemSet=set_create();
+		printf("layerpage postset");
+		set_addItemWeared(itemSet,target,false,true,true);
+		
+		printf("layerpage1");
+		for (set_rewind(itemSet);!set_end(itemSet);)
+		{
+			new item = set_get(itemSet);
+			new itemName[30];
+			chr_getProperty(item,IP_STR_NAME,_,itemName);
+			layer= chr_getProperty(item,IP_LAYER);
+			ct_layerprop[layer-1][lt_used] = 1; //this layer is used
+			if ( layer <= 24) //number of layer should only show equipplayer, not bankbox or others
+			{
+				r = 20;
+				if ( layer <= 12 )
+				{
+					s=1;
+					t=274;
+				}
+				else
+				{
+					s=11;
+					t=0;
+				}
+				gui_addTilePic(twkChrMenu,(layer-s)*r*2,190-t,chr_getProperty(item,IP_ID));
+				sprintf(tempChrStr, "%s", itemName);
+			}
+		}
+		set_delete(itemSet);
+		printf("layerpage2");
+		for ( layer=1;layer <= 24;++layer) //now draw lines for unused layer
+		{
+			if ( ct_layerprop[layer-1][lt_used] == 0 )
+			{
+				if ( layer <= 12 )
+					s=1;
+				else
+					s=11
+				sprintf(tempChrStr, "Nothing");
+			}
+		}
+		gui_addCheckbox(twkChrMenu,317-t,203+(layer-s)*r, oldpic, newpic, 1, 6+(layer-1));
+		gui_addText(twkChrMenu,340-t,200+(layer-s)*r,0,ct_layerprop[layer-1][lt_name]);
+		gui_addText(twkChrMenu,420-t,200+(layer-s)*r,1310,tempChrStr);
+		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
+	}//pagenumber
 	else if(pagenumber == 6)
 	{
 		gui_addText(twkChrMenu,230,150,33,"LocalVars 1");
@@ -1444,18 +1587,20 @@ public tweak_char(const chrsource, const target, pagenumber)
 						gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
 						gui_addText(twkChrMenu,60,49,33,"Main infos");
 						gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-						gui_addText(twkChrMenu,195,49,33,"Skills");
+						gui_addText(twkChrMenu,195,49,33,"Flags1");
 						gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-						gui_addText(twkChrMenu,285,49,33,"Flags");
+						gui_addText(twkChrMenu,285,49,33,"Flags2");
 						gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-						gui_addText(twkChrMenu,380,49,33,"Layer");
+						gui_addText(twkChrMenu,380,49,33,"Flags3");
 						gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
 						gui_addText(twkChrMenu,470,49,33,"Events");
-						gui_addGump(twkChrMenu,35,81,twkButton[arrayline][new6]);
+						gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
 						gui_addText(twkChrMenu,60,79,33,"LocalVars");
 						gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-						gui_addText(twkChrMenu,195,79,33,"Flags 2");
-						
+						gui_addText(twkChrMenu,195,79,33,"Skills");
+						gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
+						gui_addText(twkChrMenu,285,79,33,"Layer");
+				
 						gui_addText(twkChrMenu,66,120,33,"Account number :");
 						sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
 						gui_addText( twkChrMenu, 185, 120,0,tempChrStr);
@@ -1571,148 +1716,6 @@ public tweak_char(const chrsource, const target, pagenumber)
 		}//for
 		//printf("dividerrest: %d, count: %d", dividerrest, count);
 	}
-	else if(pagenumber ==7)
-	{
-		gui_addText(twkChrMenu,100,150,33,"Miscellaneous");
-		new miscSkills[21]={ SK_ALCHEMY,SK_BLACKSMITHING,SK_BOWCRAFT,SK_CARPENTRY,SK_COOKING,SK_FISHING,SK_HEALING,SK_HERDING,SK_LOCKPICKING,SK_LUMBERJACKING,SK_MAGERY,SK_MEDITATION,SK_MINING,SK_MUSICIANSHIP,SK_REMOVETRAPS,	SK_MAGICRESISTANCE,SK_SNOOPING,SK_STEALING,SK_TAILORING,SK_TINKERING,SK_VETERINARY};
-		for ( new i=0;i<13;++i)
-		{
-			gui_addGump(twkChrMenu,50,171+20*i, 0x827);
-			gui_addText( twkChrMenu,66,170+20*i,1310,"%s : ",skillName[ miscSkills[i] ] );
-			gui_addPropField( twkChrMenu,190,170+20*i,50,30,CP_BASESKILL,miscSkills[i],0 );
-		}
-		for ( new i=13;i<21;++i)
-		{
-
-			gui_addGump(twkChrMenu,321,171+20*(i-13), 0x827);
-			gui_addText( twkChrMenu,335,170+20*(i-13),1310,"%s : ",skillName[ miscSkills[i] ] );
-			gui_addPropField( twkChrMenu,470,170+20*(i-13),50,30,CP_BASESKILL,miscSkills[i],0 );
-		}
-		
-		gui_addText(twkChrMenu,130,490,1310,"Skill Page 2 (Combat Ratings,Actions,Lore Knowledge)");
-		gui_addPageButton(twkChrMenu,100,493,2224,2117,2);
-		
-		gui_addPage(twkChrMenu,2);
-		gui_addPageButton(twkChrMenu,100,493,2224,2117,1);
-		gui_addText(twkChrMenu,130,490,1310,"Skill Page 1 (Miscellaneous)");
-		
-		gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-		gui_addText(twkChrMenu,60,49,33,"Main infos");
-		gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-		gui_addText(twkChrMenu,195,49,33,"Skills");
-		gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-		gui_addText(twkChrMenu,285,49,33,"Flags");
-		gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-		gui_addText(twkChrMenu,380,49,33,"Layer");
-		gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-		gui_addText(twkChrMenu,470,49,33,"Events");
-		gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-		gui_addText(twkChrMenu,60,79,33,"LocalVars");
-		gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-		gui_addText(twkChrMenu,195,79,33,"Flags 2");
-		
-		gui_addText(twkChrMenu,66,120,33,"Account number :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
-		gui_addText( twkChrMenu, 185, 120,0,tempChrStr);
-		
-		gui_addText(twkChrMenu,280,120,33,"Serial :");
-		sprintf( tempChrStr,"%d",chr_getProperty(target,CP_SERIAL));
-		gui_addText( twkChrMenu, 336, 120,0,tempChrStr);
-		
-		gui_addGump(twkChrMenu,430,121, 0x827);
-		gui_addText(twkChrMenu,451,120,33,"NPC-AI:");
-		gui_addPropField( twkChrMenu,515,120,50,30,CP_NPCAI);
-		
-		gui_addText(twkChrMenu,100,150,33,"Combat Ratings");
-
-		new combatSkills[8]={ SK_ARCHERY,SK_FENCING,SK_MACEFIGHTING,SK_PARRYING,SK_SWORDSMANSHIP,SK_TACTICS,SK_WRESTLING};
-		for ( new i=0;i<8;++i)
-		{
-			gui_addGump(twkChrMenu,50,171+20*i, 0x827);
-			gui_addText( twkChrMenu,66,170+20*i,1310,"%s : ",skillName[ combatSkills[i] ] );
-			gui_addPropField( twkChrMenu,190,170+20*i,50,30,CP_BASESKILL,combatSkills[i],0 );
-		}
-		gui_addText(twkChrMenu,100,335,33,"Actions");
-		new actionSkills[13]={ SK_TAMING,SK_BEGGING,SK_CAMPING,SK_CARTOGRAPHY,SK_DETECTINGHIDDEN,SK_ENTICEMENT,	SK_HIDING,SK_INSCRIPTION,SK_PEACEMAKING,SK_POISONING,SK_PROVOCATION,SK_SPIRITSPEAK,SK_TRACKING};
-		for ( new i=0;i<7;++i)
-		{
-			gui_addGump(twkChrMenu,50,351+20*i, 0x827);
-			gui_addText( twkChrMenu,66,350+20*i,1310,"%s : ",skillName[ actionSkills[i] ] );
-			gui_addPropField( twkChrMenu,190,350+20*i,50,30,CP_BASESKILL,actionSkills[i],0 );
-		}
-		for ( new i=7;i<13;++i)
-		{
-			gui_addGump(twkChrMenu,321,171+20*(i-7), 0x827);
-			gui_addText( twkChrMenu,335,170+20*(i-7),1310,"%s : ",skillName[ actionSkills[i] ] );
-			gui_addPropField( twkChrMenu,470,170+20*(i-7),50,30,CP_BASESKILL,actionSkills[i],0 );
-		}
-		gui_addText(twkChrMenu,361,300,33,"Lore & Knowledge");
-		new loreSkills[7]={ SK_ANATOMY,SK_ANIMALLORE,SK_ARMSLORE,SK_EVALUATINGINTEL,SK_FORENSICS,SK_ITEMID,SK_TASTEID};
-		for ( new i=0;i<7;++i)
-		{
-			gui_addGump(twkChrMenu,321,321+20*i, 0x827);
-			gui_addText( twkChrMenu,335,320+20*i,1310,"%s : ",skillName[ loreSkills[i] ] );
-			gui_addPropField( twkChrMenu,470,320+20*i,50,30,CP_BASESKILL,loreSkills[i],0 );
-		}
-		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
-	}
-	else if(pagenumber == 8)
-	{
-		gui_addText(twkChrMenu,50,150,1110,"Layer");
-		printf("enter layer gump page");
-				
-		new layer;
-		new r;
-		new s;
-		new t;
-		printf("layerpage preset");
-		new itemSet=set_create();
-		printf("layerpage postset");
-		set_addItemWeared(itemSet,target,false,true,true);
-		
-		printf("layerpage1");
-		for (set_rewind(itemSet);!set_end(itemSet);)
-		{
-			new item = set_get(itemSet);
-			new itemName[30];
-			chr_getProperty(item,IP_STR_NAME,_,itemName);
-			layer= chr_getProperty(item,IP_LAYER);
-			ct_layerprop[layer-1][lt_used] = 1; //this layer is used
-			if ( layer <= 24) //number of layer should only show equipplayer, not bankbox or others
-			{
-				r = 20;
-				if ( layer <= 12 )
-				{
-					s=1;
-					t=274;
-				}
-				else
-				{
-					s=11;
-					t=0;
-				}
-				gui_addTilePic(twkChrMenu,(layer-s)*r*2,190-t,chr_getProperty(item,IP_ID));
-				sprintf(tempChrStr, "%s", itemName);
-			}
-		}
-		set_delete(itemSet);
-		printf("layerpage2");
-		for ( layer=1;layer <= 24;++layer) //now draw lines for unused layer
-		{
-			if ( ct_layerprop[layer-1][lt_used] == 0 )
-			{
-				if ( layer <= 12 )
-					s=1;
-				else
-					s=11
-				sprintf(tempChrStr, "Nothing");
-			}
-		}
-		gui_addCheckbox(twkChrMenu,317-t,203+(layer-s)*r, oldpic, newpic, 1, 6+(layer-1));
-		gui_addText(twkChrMenu,340-t,200+(layer-s)*r,0,ct_layerprop[layer-1][lt_name]);
-		gui_addText(twkChrMenu,420-t,200+(layer-s)*r,1310,tempChrStr);
-		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
-	}//pagenumber
 	gui_show(twkChrMenu,chrsource); 
 }
 
