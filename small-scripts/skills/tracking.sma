@@ -17,6 +17,11 @@ static where[8][] = {
 
 public __nxw_sk_tracking( const socket )
 {
+	if ( !chr_checkSkill(cc, SK_TRAKING, 0, 1000, 1) ) {
+		ntprintf( s, "You cannot see any sign" ); 
+		return;
+	}
+
 	new menu = gui_createIconList( "handle_tracking", "What do you wish to track?"  );
 
 	gui_addIcon( menu, 0x20D4, _, _, "Animals" );
