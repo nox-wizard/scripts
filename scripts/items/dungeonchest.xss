@@ -13,7 +13,7 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 ///////////////////////////////////////////////////////////
 
-//1. spawn the treasure chest (low level)
+//1. add the spawner of the chest (low level)
 SECTION ITEM $item_chest_item_spawner_spawner_-low-
 {
     NAME a chest item spawner (spawner) -low-
@@ -26,7 +26,7 @@ SECTION ITEM $item_chest_item_spawner_spawner_-low-
     VISIBLE 1
 }
 
-//15225
+//15225 - spawn one of the chests at the list
 SECTION ITEM $item_low_chest_spawner_list
 {
     //$$ low chest spawner list

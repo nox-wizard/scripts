@@ -63,3 +63,8 @@
 #define $itemlist_npc_equiplist_bardiches 505
 #define $itemlist_npc_equiplist_longswords 506
 
+#define $itemlist_lv1_treasure_items 508
+#define $itemlist_lv2_treasure_items 509
+#define $itemlist_lv3_treasure_items 510
+#define $itemlist_lv4_treasure_items 511
+#define $itemlist_lv5_treasure_items 512

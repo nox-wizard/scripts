@@ -18,17 +18,7 @@ SECTION ITEM $item_treasure_map_lv1_
 	///SUBSECTION Treasure Maps
 }
 
-//old XSS system: deciphering the map deletes the map and created the chest right at the feet of the decipherer ...
-SECTION ITEMTRG $itrg_treasure_map_lvl1
-{// Level 1 treasure map
-	RANGE 2
-	CSKL $skill_cartography
-	IFSKL $skill_cartography 40
-	IADD $item_treasure_chest_lv1_
-	REMOVE
-}
-
-//treasure chests
+//treasure chest to spawn
 SECTION ITEM $item_treasure_chest_lv1_
 {
 	NAME treasure chest
@@ -37,129 +27,45 @@ SECTION ITEM $item_treasure_chest_lv1_
 	WEIGHT 600
 	TRIGTYPE 0
 	TRIGGER $itrg_treasure_chest_lvl1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl1
-{
-	//$$ treasure chest lvl1
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_mongbat
-	NADD $npc_a_mongbat
-	NADD $npc_orc_mace
-	NADD $npc_orc_mace
-	REMOVE
-	IADD $item_treasure_chest_lv1_1
-}
-
-SECTION ITEM $item_treasure_chest_lv1_1
-{
-	NAME treasure chest [lv1]
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_spawn_lvl2
 	MOVABLE 1
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEMTRG $itrg_treasure_spawn_lvl2
-{
-	//$$ treasure spawn lvl2
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_ratman
-	NADD $npc_ratman
-	NADD $npc_a_headless
-	NADD $npc_a_headless
-	REMOVE
-	IADD $item_treasure_chest_lv1_2
-}
-
-SECTION ITEM $item_treasure_chest_lv1_2
+//treasure chest to spawn
+SECTION ITEM $item_treasure_chest_final_lv1_
 {
 	NAME treasure chest
 	ID 0E7C
-	TYPE $itype_container
 	VALUE 60
 	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_spawn_lvl3
+	TYPE $itype_container
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 100
+	CONTAINLIST 508 AMOUNT 1 CHANCE 50
+	CONTAINLIST 508 AMOUNT 1 CHANCE 30
+	CONTAINLIST 508 AMOUNT 1 CHANCE 70
+	CONTAINLIST 508 AMOUNT 1 CHANCE 50
+	CONTAINLIST 508 AMOUNT 1 CHANCE 30
+	CONTAINLIST 508 AMOUNT 1 CHANCE 70
 	MOVABLE 1
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_spawn_lvl3
-{
-	//$$ treasure spawn lvl3
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_skeleton
-	NADD $npc_a_skeleton
-	NADD $npc_a_zombie
-	NADD $npc_a_zombie
-	REMOVE
-	IADD $item_treasure_chest_lv1_3
-}
-
-SECTION ITEM $item_treasure_chest_lv1_3
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure
-{
-	//$$ treasure
-	SETUSES 1
-	RANGE 2
-	SND 00 37
-	IADD $item_gold_coin 1000
-	IADD $item_iron_broad_sword_of_ruin
-	IADD $item_iron_chainmail_of_defence
-	IADD $item_iron_hatchet_of_ruin
-	IADD $item_pieces_of_amber
-	IADD $item_amethysts3
-	IADD $item_amethysts4
-	IADD $item_citrines2
-	IADD $item_citrines3
-	IADD $item_citrines4
-	IADD $item_diamonds1
-	IADD $item_diamonds2
-	IADD $item_diamonds3
-	IADD $item_diamonds4
-	IADD $item_black_pearl
-	IADD $item_bloodmoss
-	IADD $item_garlic
-	IADD $item_spiders_silk
-	IADD $item_clumsy_scroll
-	IADD $item_agility_scroll
-	IADD $item_bless_scroll
-	IADD $item_archcure_scroll
-	REMOVE
-	SND 01 1E
-	HEA -10
 }
 
 //////////////////////////////////////
@@ -173,13 +79,6 @@ SECTION ITEM $item_treasure_map_lv2_
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Maps
-}
-
-SECTION ITEMTRG $itrg_treasure_map_lvl2
-{ Level 2 treasure map
-	//$$ treasure map lvl2
-	IADD $item_treasure_chest_lv2_
-	REMOVE
 }
 
 SECTION ITEM $item_treasure_chest_lv2_
@@ -197,153 +96,41 @@ SECTION ITEM $item_treasure_chest_lv2_
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEMTRG $itrg_treasure_chest_lvl2
-{ Level 2 treasure chest
-	//$$ treasure chest lvl2
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_an_orcish_mage
-	NADD $npc_an_orcish_mage
-	NADD $npc_an_orcish_lord
-	NADD $npc_an_orcish_lord
-	REMOVE
-	IADD $item_treasure_chest_lv2_1
-}
-
-SECTION ITEM $item_treasure_chest_lv2_1
+SECTION ITEM $item_treasure_chest_final_lv2_
 {
 	NAME treasure chest
 	ID 0E7C
 	TYPE $itype_container
 	VALUE 60
 	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl2_1
 	MOVABLE 1
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 100
+	CONTAINLIST 509 AMOUNT 1 CHANCE 50
+	CONTAINLIST 509 AMOUNT 1 CHANCE 30
+	CONTAINLIST 509 AMOUNT 1 CHANCE 70
+	CONTAINLIST 509 AMOUNT 1 CHANCE 50
+	CONTAINLIST 509 AMOUNT 1 CHANCE 30
+	CONTAINLIST 509 AMOUNT 1 CHANCE 70
+	CONTAINLIST 509 AMOUNT 1 CHANCE 50
+	CONTAINLIST 509 AMOUNT 1 CHANCE 30
+	CONTAINLIST 509 AMOUNT 1 CHANCE 70
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl2_1
-{ Level 2 treasure chest
-	//$$ treasure chest lvl2
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_gargoyle
-	NADD $npc_a_gargoyle
-	NADD $npc_a_gazer
-	NADD $npc_a_gazer
-	REMOVE
-	IADD $item_treasure_chest_lv2_2
-}
-
-SECTION ITEM $item_treasure_chest_lv2_2
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl2_2
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl2_2
-{
-	//$$ treasure chest lvl2
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_hell_hound
-	NADD $npc_a_hell_hound
-	NADD $npc_an_earth_elemental
-	NADD $npc_an_earth_elemental
-	REMOVE
-	IADD $item_treasure_chest_lv2_3
-}
-
-SECTION ITEM $item_treasure_chest_lv2_3
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl2_3
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl2_3
-{
-	//$$ treasure chest lvl2
-	SETUSES 1
-	RANGE 2
-	SND 00 37
-	IADD $item_gold_coin 2000
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_pieces_of_amber
-	IADD $item_amethysts3
-	IADD $item_amethysts4
-	IADD $item_citrines2
-	IADD $item_citrines3
-	IADD $item_citrines4
-	IADD $item_diamonds1
-	IADD $item_diamonds2
-	IADD $item_diamonds3
-	IADD $item_diamonds4
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	REMOVE
-	SND 01 1E
-	HEA -20
 }
 
 ///////////////////////////////////////
@@ -356,13 +143,6 @@ SECTION ITEM $item_treasure_map_lv3_
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Maps
-}
-
-SECTION ITEMTRG $itrg_treasure_map_lvl3
-{
-	//$$ treasure map lvl3
-	IADD $item_treasure_chest_lv3_
-	REMOVE
 }
 
 SECTION ITEM $item_treasure_chest_lv3_
@@ -380,184 +160,41 @@ SECTION ITEM $item_treasure_chest_lv3_
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEMTRG $itrg_treasure_chest_lvl3
-{
-	//$$ treasure chest lvl3
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_lich
-	NADD $npc_a_lich
-	NADD $npc_an_orcish_lord
-	NADD $npc_an_orcish_lord
-	REMOVE
-	IADD $item_treasure_chest_lv3_1
-}
-
-SECTION ITEM $item_treasure_chest_lv3_1
+SECTION ITEM $item_treasure_chest_final_lv3_
 {
 	NAME treasure chest
 	ID 0E7C
 	TYPE $itype_container
 	VALUE 60
 	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl3_1
 	MOVABLE 1
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 50
+	CONTAINLIST 511 AMOUNT 1 CHANCE 30
+	CONTAINLIST 511 AMOUNT 1 CHANCE 70
+	CONTAINLIST 511 AMOUNT 1 CHANCE 50
+	CONTAINLIST 511 AMOUNT 1 CHANCE 30
+	CONTAINLIST 511 AMOUNT 1 CHANCE 70
+	CONTAINLIST 511 AMOUNT 1 CHANCE 50
+	CONTAINLIST 511 AMOUNT 1 CHANCE 30
+	CONTAINLIST 511 AMOUNT 1 CHANCE 70
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl3_1
-{ Level 3 treasure chest
-	//$$ treasure chest lvl3
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_an_ogre_lord
-	NADD $npc_an_ogre_lord
-	NADD $npc_a_dark_spider
-	NADD $npc_a_dark_spider
-	REMOVE
-	IADD $item_treasure_chest_lv3_2
-}
-
-SECTION ITEM $item_treasure_chest_lv3_2
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl3_2
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl3_2
-{ Level 3 treasure chest
-	//$$ treasure chest lvl3
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_an_air_elemental
-	NADD $npc_an_air_elemental
-	NADD $npc_summoned_water_elemental
-	NADD $npc_summoned_water_elemental
-	NADD $npc_a_shadow_wyrm
-	REMOVE
-	IADD $item_treasure_chest_lv3_3
-}
-
-SECTION ITEM $item_treasure_chest_lv3_3
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl3_3
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl3_3
-{ Level 3 treasure chest
-	//$$ treasure chest lvl3
-	SETUSES 1
-	RANGE 2
-	SND 00 37
-	IADD $item_gold_coin 3000
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_pieces_of_amber
-	IADD $item_amethysts3
-	IADD $item_amethysts4
-	IADD $item_citrines2
-	IADD $item_citrines3
-	IADD $item_citrines4
-	IADD $item_diamonds1
-	IADD $item_diamonds2
-	IADD $item_diamonds3
-	IADD $item_diamonds4
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	REMOVE
-	SND 01 1E
-	HEA -30
 }
 
 ///////////////////////////////////////
@@ -567,20 +204,10 @@ SECTION ITEM $item_treasure_map_lv4_
 {
 	NAME a treasure map
 	ID 14ec
-	TRIGGER $itrg_treasure_map_lvl4
+	TRIGGER $itrg_treasure_map_lv4_
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Maps
-}
-
-SECTION ITEMTRG $itrg_treasure_map_lvl4
-{ level 4 treasure map
-	//$$ treasure map lvl4
-	RANGE 2
-	CSKL $skill_cartography
-	IFSKL $skill_cartography 90
-	IADD $item_treasure_chest_lv4_
-	REMOVE
 }
 
 SECTION ITEM $item_treasure_chest_lv4_
@@ -591,210 +218,54 @@ SECTION ITEM $item_treasure_chest_lv4_
 	VALUE 60
 	WEIGHT 600
 	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl4
+	TRIGGER $itrg_treasure_chest_lv4_
 	MOVABLE 1
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEMTRG $itrg_treasure_chest_lvl4
-{ Level 4 treasure chest
-	//$$ treasure chest lvl4
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_an_ogre_lord
-	NADD $npc_an_ogre_lord
-	REMOVE
-	IADD $item_treasure_chest_lv4_1
-}
-
-SECTION ITEM $item_treasure_chest_lv4_1
+SECTION ITEM $item_treasure_chest_final_lv4_
 {
 	NAME treasure chest
 	ID 0E7C
 	TYPE $itype_container
 	VALUE 60
 	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_spawn_lvl4
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 100
+	CONTAINLIST 511 AMOUNT 1 CHANCE 50
+	CONTAINLIST 511 AMOUNT 1 CHANCE 30
+	CONTAINLIST 511 AMOUNT 1 CHANCE 70
+	CONTAINLIST 511 AMOUNT 1 CHANCE 50
+	CONTAINLIST 511 AMOUNT 1 CHANCE 30
+	CONTAINLIST 511 AMOUNT 1 CHANCE 70
+	CONTAINLIST 511 AMOUNT 1 CHANCE 50
+	CONTAINLIST 511 AMOUNT 1 CHANCE 30
+	CONTAINLIST 511 AMOUNT 1 CHANCE 70
+	CONTAINLIST 511 AMOUNT 1 CHANCE 50
+	CONTAINLIST 511 AMOUNT 1 CHANCE 30
+	CONTAINLIST 511 AMOUNT 1 CHANCE 70
 	MOVABLE 1
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_spawn_lvl4
-{
-	//$$ treasure spawn lvl4
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_dark_spider
-	NADD $npc_a_dark_spider
-	REMOVE
-	IADD $item_treasure_chest_lv4_2
-}
-
-SECTION ITEM $item_treasure_chest_lv4_2
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_spawn_lvl4_1
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_spawn_lvl4_1
-{
-	//$$ treasure spawn lvl4
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_lich
-	NADD $npc_a_lich
-	NADD $npc_a_lich
-	NADD $npc_a_lich
-	REMOVE
-	IADD $item_treasure_chest_lv4_3
-}
-
-SECTION ITEM $item_treasure_chest_lv4_3
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_spawn_lvl4_2
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_spawn_lvl4_2
-{
-	//$$ treasure spawn lvl4
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_headless
-	NADD $npc_a_headless
-	NADD $npc_a_headless
-	NADD $npc_a_lich_lord
-	NADD $npc_a_lich_lord
-	REMOVE
-	IADD $item_treasure_chest_lv4_4
-}
-
-SECTION ITEM $item_treasure_chest_lv4_4
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_spawn_lvl4_3
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_spawn_lvl4_3
-{
-	//$$ treasure spawn lvl4
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_deamon_unarmed
-	NADD $npc_an_elder_gazer
-	NADD $npc_an_elder_gazer
-	NADD $npc_an_orcish_mage
-	NADD $npc_an_orcish_mage
-	REMOVE
-	IADD $item_treasure_chest_lv4_5
-}
-
-SECTION ITEM $item_treasure_chest_lv4_5
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_big_treasure
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_big_treasure
-{
-	//$$ big treasure
-	SETUSES 1
-	RANGE 2
-	SND 00 37
-	IADD $item_gold_coin 4000
-	IADD $item_iron_chainmail_of_guarding
-	IADD $item_iron_chain_legs_of_guarding
-	IADD $item_wand_of_greater_heal
-	IADD $item_iron_viking_sword_of_ruin
-	IADD $item_iron_scimitar_of_ruin
-	IADD $item_iron_executioners_axe_of_ruin
-	IADD $item_iron_skinning_knife_of_ruin
-	IADD $item_iron_platemail_of_defence
-	IADD $item_iron_cutlass_of_ruin
-	IADD $item_wand_of_summon_daemon
-	IADD $item_iron_axe_of_ruin
-	IADD $item_iron_pick_axe_of_ruin
-	IADD $item_iron_broad_sword_of_ruin
-	IADD $item_create_food_scroll
-	IADD $item_feeblemind_scroll
-	IADD $item_weaken_scroll
-	IADD $item_cunning_scroll
-	IADD $item_cure_scroll
-	IADD $item_wall_of_stone_scroll
-	IADD $item_curse_scroll
-	IADD $item_fire_field_scroll
-	IADD $item_magic_reflection_scroll
-	IADD $item_paralyze_scroll
-	IADD $item_dispel_scroll
-	IADD $item_explosion_scroll
-	IADD $item_reveal_scroll
-	IADD $item_pieces_of_amber
-	IADD $item_amethysts3
-	IADD $item_amethysts4
-	IADD $item_citrines2
-	IADD $item_citrines3
-	IADD $item_citrines4
-	IADD $item_diamonds1
-	IADD $item_diamonds2
-	IADD $item_diamonds3
-	IADD $item_diamonds4
-	IADD $item_black_pearl
-	IADD $item_bloodmoss
-	IADD $item_garlic
-	IADD $item_ginseng
-	IADD $item_mandrake_root
-	IADD $item_nightshade
-	IADD $item_sulfurous_ash
-	IADD $item_spiders_silk
-	REMOVE
-	SND 01 1E
-	HEA -40
 }
 
 //////////////////////////////////////
@@ -808,13 +279,6 @@ SECTION ITEM $item_treasure_map_lv5_
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Maps
-}
-
-SECTION ITEMTRG $itrg_treasure_map_lvl5
-{ Level 5 treasure map
-	//$$ treasure map lvl5
-	IADD $item_treasure_chest_lv5_
-	REMOVE
 }
 
 SECTION ITEM $item_treasure_chest_lv5_
@@ -832,358 +296,56 @@ SECTION ITEM $item_treasure_chest_lv5_
 	///SUBSECTION Treasure Chests
 }
 
-SECTION ITEMTRG $itrg_treasure_chest_lvl5
-{ Level 5 treasure chest
-	//$$ treasure chest lvl5
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_the_collector_of_souls
-	NADD $npc_the_collector_of_souls
-	REMOVE
-	IADD $item_treasure_chest_lv5_1
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl5_1
-{ Level 5 treasure chest
-	//$$ treasure chest lvl5
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_lich_lord
-	NADD $npc_a_lich_lord
-	REMOVE
-	IADD $item_treasure_chest_lv5_2
-}
-
-SECTION ITEM $item_treasure_chest_lv5_2
+SECTION ITEM $item_treasure_chest_final_lv5_
 {
 	NAME treasure chest
 	ID 0E7C
 	TYPE $itype_container
 	VALUE 60
 	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl5_2
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 100
+	CONTAINLIST 512 AMOUNT 1 CHANCE 50
+	CONTAINLIST 512 AMOUNT 1 CHANCE 30
+	CONTAINLIST 512 AMOUNT 1 CHANCE 70
+	CONTAINLIST 512 AMOUNT 1 CHANCE 50
+	CONTAINLIST 512 AMOUNT 1 CHANCE 30
+	CONTAINLIST 512 AMOUNT 1 CHANCE 70
+	CONTAINLIST 512 AMOUNT 1 CHANCE 50
+	CONTAINLIST 512 AMOUNT 1 CHANCE 30
+	CONTAINLIST 512 AMOUNT 1 CHANCE 70
+	CONTAINLIST 512 AMOUNT 1 CHANCE 50
+	CONTAINLIST 512 AMOUNT 1 CHANCE 30
+	CONTAINLIST 512 AMOUNT 1 CHANCE 70
+	CONTAINLIST 512 AMOUNT 1 CHANCE 50
+	CONTAINLIST 512 AMOUNT 1 CHANCE 30
+	CONTAINLIST 512 AMOUNT 1 CHANCE 70
+	CONTAINLIST 512 AMOUNT 1 CHANCE 50
+	CONTAINLIST 512 AMOUNT 1 CHANCE 30
+	CONTAINLIST 512 AMOUNT 1 CHANCE 70
 	MOVABLE 1
 
 	///CATEGORY Miscellaneous
 	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl5_2
-{ Level 5 treasure chest
-	//$$ treasure chest lvl5
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_lich_lord
-	NADD $npc_a_lich_lord
-	REMOVE
-	IADD $item_treasure_chest_lv5_3
-}
-
-SECTION ITEM $item_treasure_chest_lv5_3
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl5_3
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl5_3
-{ Level 5 treasure chest
-	//$$ treasure chest lvl5
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_deamon_unarmed
-	NADD $npc_deamon_unarmed
-	REMOVE
-	IADD $item_treasure_chest_lv5_4
-}
-
-SECTION ITEM $item_treasure_chest_lv5_4
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl5_4
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl5_4
-{ Level 5 treasure chest
-	//$$ treasure chest lvl5
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_an_elder_gazer
-	NADD $npc_an_elder_gazer
-	NADD $npc_an_elder_gazer
-	NADD $npc_an_elder_gazer
-	REMOVE
-	IADD $item_treasure_chest_lv5_5
-}
-
-SECTION ITEM $item_treasure_chest_lv5_5
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl5_5
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl5_5
-{ Level 5 treasure chest
-	//$$ treasure chest lvl5
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_poison_elemental
-	NADD $npc_a_poison_elemental
-	NADD $npc_a_poison_elemental
-	REMOVE
-	IADD $item_treasure_chest_lv5_6
-}
-
-SECTION ITEM $item_treasure_chest_lv5_6
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl5_6
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl5_6
-{ Level 5 treasure chest
-	//$$ treasure chest lvl5
-	SETUSES 1
-	RANGE 2
-	SND 02 50
-	NADD $npc_a_blood_elemental
-	NADD $npc_a_blood_elemental
-	NADD $npc_a_blood_elemental
-	NADD $npc_a_blood_elemental
-	REMOVE
-	IADD $item_treasure_chest_lv5_7
-}
-
-SECTION ITEM $item_treasure_chest_lv5_7
-{
-	NAME treasure chest
-	ID 0E7C
-	TYPE $itype_container
-	VALUE 60
-	WEIGHT 600
-	TRIGTYPE 0
-	TRIGGER $itrg_treasure_chest_lvl5_7
-	MOVABLE 1
-
-	///CATEGORY Miscellaneous
-	///SUBSECTION Treasure Chests
-}
-
-SECTION ITEMTRG $itrg_treasure_chest_lvl5_7
-{ Level 5 treasure chest
-	//$$ treasure chest lvl5
-	SETUSES 1
-	RANGE 2
-	SND 00 37
-	IADD $item_gold_coin 5000
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_various_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_more_weapons_and_armors_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_all_circle_scrolls_list
-	IADD $item_pieces_of_amber
-	IADD $item_amethysts3
-	IADD $item_amethysts4
-	IADD $item_citrines2
-	IADD $item_citrines3
-	IADD $item_citrines4
-	IADD $item_diamonds1
-	IADD $item_diamonds2
-	IADD $item_diamonds3
-	IADD $item_diamonds4
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	IADD $item_reagents_list
-	REMOVE
-	SND 01 1E
-	HEA -50
 }
 
 /////////////////////////////////////////////
