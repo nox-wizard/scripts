@@ -869,8 +869,8 @@
 #define $item_shipwright_spawner-f 3265
 #define $item_spinner_spawner-m 3266
 #define $item_spinner_spawner-f 3267
-#define $item_rmorer_spawner-m 3268
-#define $item_rmorer_spawner-f 3269
+#define $item_armorer_spawner-m 3268
+#define $item_armorer_spawner-f 3269
 #define $item_blacksmith_spawner-m 3270
 #define $item_blacksmith_spawner-f 3271
 #define $item_architect_spawner-m 3272
@@ -881,12 +881,12 @@
 #define $item_farmer_spawner-f 3277
 #define $item_cook_spawner-m 3278
 #define $item_cook_spawner-f 3279
-#define $item_nimal_trainer_spawner-m 3280
-#define $item_nimal_trainer_spawner-f 3281
+#define $item_animal_trainer_spawner-m 3280
+#define $item_animal_trainer_spawner-f 3281
 #define $item_fisherman_spawner 3282
 #define $item_fisherlady_spawner 3283
-#define $item_lchemist_spawner-m 3284
-#define $item_lchemist_spawner-f 3285
+#define $item_alchemist_spawner-m 3284
+#define $item_alchemist_spawner-f 3285
 #define $item_tinker_spawner-m 3286
 #define $item_tinker_spawner-f 3287
 #define $item_engineer_spawner-m 3288
