@@ -61,7 +61,7 @@ public __get_milk_from_cow(const s, const c, const this_is_useless)
  AUTHOR   : Xanathar
  PURPOSE  : shows target stamina to GM anatomists
  ****************************************************************************/
-public __anatomy_target(const s)
+public __anatomy_target(const s, const target, const obj)
 {
     new cc = getCharFromSocket(s);
 
@@ -69,8 +69,8 @@ public __anatomy_target(const s)
 
     //we are here so anatomy >= 95%, let's get target stamina and show it!
 
-    new stm = chr_getProperty(getCharTarget(), CP_DEXTERITY, CP2_STAMINA);
-    new dex = chr_getProperty(getCharTarget(), CP_DEXTERITY, CP2_DEX);
+    new stm = chr_getProperty( obj, CP_DEXTERITY, CP2_STAMINA);
+    new dex = chr_getProperty( obj, CP_DEXTERITY, CP2_DEX);
 
     new prc = stm*100/dex;
 

@@ -25,14 +25,6 @@ public isItem( const serial ) {
 }
 
 /*!
-\author Xanathar
-\fn getItemTarget()
-\brief Gets the targetted item
-*/
-native getItemTarget();
-
-
-/*!
 \author Luxor
 \fn getItemFromSerial(const serial)
 \param serial: the serial
