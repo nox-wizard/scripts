@@ -98,12 +98,12 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 {
 
 	if( master<=INVALID ) return;
-	if( chr_getProperty( master, CP_GUILD ) > 0 && ! chr_isGMorCns(master))
+	if( (chr_getProperty( master, CP_GUILD ) > 0) && (! chr_isGMorCns(master)))
 	{
 		chr_message( master, _, "Resign from your guild before creating a new guild" );
 		return;
 	}
-
+	printf("T: %d, M: %d, O: %d, x: %d, y: %d, z: %d, model: %d, deed: %d\n", target, master, obj, x, y, z, model, deed);
 #if defined( GUILD_POSITION_WITH_TARGET )
 	if( x==INVALID || y==INVALID ) {
 		chr_message( master, _, "This is not a valid place" );
@@ -135,14 +135,14 @@ public guildPlace( const target, const master, const obj, const x, const y, cons
 
 /*!
 \author Endymion, modified by Wintermute
-\fn guildgui_callback( const chr, const gui, const button )
+\fn guildgui_callback( const gui, const chr, const button )
 \param chr: Character serial who places the stone
 \param gui: serial of the menu
 \param button: button id that was pressed
 \brief callback method for placing a guildstone, checks for current membership of placing char in antoher guild and opens the naming gump
 */
 
-public guildgui_callback( const chr, const gui, const button )
+public guildgui_callback( const gui, const chr, const button )
 {
 	if( button<=MENU_CLOSED )
 		return;
@@ -297,14 +297,14 @@ public guild_dclickStone( const guild, const chr )
 
 /*!
 \author Wintermute
-\fn guildDclick_cback( const chr, const gui, const button )
+\fn guildDclick_cback( const gui, const chr, const button )
 \param chr: Character serial who places the stone
 \param gui: serial of the menu
 \param button: button id that was pressed
 \brief callback method for the guild menu, calling the approbriate sub methods
 */
 
-public guildDclick_cback( const chr, const gui, const button )
+public guildDclick_cback( const gui, const chr, const button )
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 
@@ -364,14 +364,14 @@ public guildDclick_cback( const chr, const gui, const button )
 
 /*!
 \author Wintermute
-\fn viewCB( const chr, const gui, const button )
+\fn viewCB( const gui, const chr, const button )
 \param chr: Character serial who places the stone
 \param gui: serial of the menu
 \param button: button id that was pressed
 \brief common callback method for the guild menu, called for all view xxx dialogs
 */
 
-public viewCB( const chr, const gui, const button )
+public viewCB( const gui, const chr, const button )
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 
@@ -385,7 +385,7 @@ public viewCB( const chr, const gui, const button )
 
 /*!
 \author Wintermute
-\fn viewCB( const chr, const gui, const button )
+\fn viewCB( const gui, const chr, const button )
 \param chr: Character serial who places the stone
 \param gui: serial of the menu
 \param button: button id that was pressed
@@ -532,7 +532,7 @@ public declareFealty(const chr, const guild)
 	gui_show( gui, chr );
 }
 
-public fealtyCB( const chr, const gui, const button )
+public fealtyCB( const gui, const chr, const button )
 {
 	switch(button)
 	{
@@ -714,7 +714,7 @@ public guildmasterMenu(const chr, const guild)
 	gui_show( gui, chr );
 }
 
-public guildMasterMenuCB( const chr, const gui, const buttonCode )
+public guildMasterMenuCB( const gui, const chr, const buttonCode )
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 
@@ -764,7 +764,7 @@ public renameGuild(const chr, const guild)
 
 }
 
-public renameGuildCB(const chr, const gui, const buttonCode)
+public renameGuildCB(const gui, const chr, const buttonCode)
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	if ( buttonCode == 1 )
@@ -810,7 +810,7 @@ public changeAbbreviation(const chr, const guild)
 	gui_show( gui, chr );
 }
 
-public changeAbbrevCB(const chr, const gui, const buttonCode)
+public changeAbbrevCB(const gui, const chr, const buttonCode)
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	if ( buttonCode == 1 )
@@ -841,7 +841,7 @@ public changeAbbrevCB(const chr, const gui, const buttonCode)
 public changeAlignment(const chr, const guild)
 {
 	new gui = gui_create( 40, 40, true, true, true, "changeAlignCB" );
-	gui_addResizeGump( gui, 0, 0,  0x0A28, 500, 200 );
+	gui_addResizeGump( gui, 0, 0,  0x0A28, 450, 200 );
 
 	new guildName[60];
 	guild_getProperty(guild, GP_STR_NAME, _, guildName );
@@ -854,12 +854,12 @@ public changeAlignment(const chr, const guild)
 	gui_addText( gui, 85, 135, _, "Chaos" );
 	gui_addButton( gui, 45, 135, 0x4B9, 0x4BA, 3 );
 	// Cancel Button plazieren
-	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
+	gui_addButton( gui, 400, 160, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 
 }
 
-public changeAlignCB(const chr, const gui, const buttonCode)
+public changeAlignCB(const gui, const chr, const buttonCode)
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	if ( buttonCode == 1 )
@@ -910,23 +910,26 @@ public dismissMember(const chr, const guild)
 		for ( new i=1;i < 10;++i)
 		{
 			member=set_get(guildMemberSet);
+			if ( set_end(guildMemberSet))
+				break;
+			if ( member == chr )
+				continue;
 			chr_getProperty(member, CP_STR_NAME, _, membername);
 			gui_addText( gui, 65, 55+i*30, _, membername);
 			gui_addButton( gui, 25, 55+i*30, 0x4B9, 0x4BA, guild_getMemberIdx (guild,  member) );
-			if ( set_end(guildMemberSet))
-				break;
 		}
 		if ( page < set_size(guildMemberSet)/10+1)
 			gui_addPageButton(gui, 330, 365, 0x1458, 0x1458, page + 1);
 		if ( page > 1 )
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
+	set_delete(guildMemberSet);
 	// Cancel Button plazieren
 	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 }
 
-public dismissMemberCB(const chr, const gui, const buttonCode)
+public dismissMemberCB(const gui, const chr, const buttonCode)
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	if ( buttonCode > 0 )
@@ -962,11 +965,11 @@ public declareWar(const chr, const guild)
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
 	// Cancel Button plazieren
-	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
+	gui_addButton( gui, 300, 180, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 }
 
-public declareWarCB(const chr, const gui, const buttonCode)
+public declareWarCB(const gui, const chr, const buttonCode)
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	if ( buttonCode >= 10 )
@@ -1020,13 +1023,11 @@ public declarePeace(const chr, const guild)
 			gui_addPageButton(gui, 310, 365, 0x1458, 0x1458, page + 1);
 	}
 	// Cancel Button plazieren
-	gui_addButton( gui, 300, 120, 0xf3, 0xf1, 0, 1);
-	// OK Button
-	gui_addButton( gui, 350, 120, 0xf9, 0xf7, 1, 1);
+	gui_addButton( gui, 300, 180, 0xf3, 0xf1, 0, 1);
 	gui_show( gui, chr );
 }
 
-public declarePeaceCB(const chr, const gui, const buttonCode)
+public declarePeaceCB(const gui, const chr, const buttonCode)
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 
@@ -1085,7 +1086,7 @@ public acceptMember(const chr, const guild)
 	gui_show( gui, chr );
 }
 
-public acceptMemberCB(const chr, const gui, const buttonCode)
+public acceptMemberCB(const gui, const chr, const buttonCode)
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	if ( buttonCode > 0 )
@@ -1128,7 +1129,7 @@ public refuseCandidate(const chr, const guild)
 
 }
 
-public refuseMemberCB(const chr, const gui, const buttonCode)
+public refuseMemberCB(const gui, const chr, const buttonCode)
 {
 	new guild = gui_getProperty( gui, MP_BUFFER, 0 );
 	if ( buttonCode > 0 )
