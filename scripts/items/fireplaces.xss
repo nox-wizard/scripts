@@ -1,327 +1,332 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard Scripts (fireplaces.xss)                                 ||
-// || Maintained by Horian		                                  ||
-// || Last Update 12-dec-2004                                             ||
+// || NoX-Wizard Scripts (fireplaces.xss)								 ||
+// || Maintained by Horian										  ||
+// || Last Update 12-dec-2004											 ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || This script requires NoX-Wizard 0.82 or later                       ||
+// || This script requires NoX-Wizard 0.82 or later					   ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
 SECTION ITEM $item_oven-east_deed
 { // oven-east
-    NAME Oven-east deed
-    ID 14F0
-    DECAY
-    MOREX 213
+	NAME Oven-east deed
+	TYPE $itype_multideed
+	ID 14F0
+	DECAY
+	MOREX 213
 }
 
 SECTION ITEM $item_oven-south_deed
 { //oven-south
-    NAME oven-south deed
-    ID 14F0
-    DECAY
-    MOREX 214
+	NAME oven-south deed
+	TYPE $itype_multideed
+	ID 14F0
+	DECAY
+	MOREX 214
 }
 
 SECTION ITEM $item_oven_sandstone1_1
 {
-ID 0461
+	ID 0461
 }
 
 SECTION ITEM $item_oven_sandstone2_1
 {
-ID 0462
+	ID 0462
 }
 
 SECTION ITEM $item_oven_sandstone2_2
 {
-ID 046a
+	ID 046a
 }
 
 SECTION ITEM $item_oven_sandstone1_2
 {
-ID 046f
+	ID 046f
 }
 
 SECTION ITEM $item_oven_stone1_1
 {
-ID 092b
+	ID 092b
 }
 
 SECTION ITEM $item_oven_stone2_1
 {
-ID 092c
+	ID 092c
 }
 
 SECTION ITEM $item_oven_stone3_1
 {
-ID 092f
+	ID 092f
 }
 
 SECTION ITEM $item_oven_stone1_2
 {
-ID 0930
+	ID 0930
 }
 
 SECTION ITEM $item_oven_stone2_2
 {
-ID 0931
+	ID 0931
 }
 
 SECTION ITEM $item_oven_stone3_2
 {
-ID 0934
+	ID 0934
 }
-
+	
 SECTION ITEM $item_fireplace-east_deed
 { // Brick-east
-    NAME fireplace-east deed
-    ID 14F0
-    DECAY
-    MOREX 208
+	NAME fireplace-east deed
+	TYPE $itype_multideed
+	ID 14F0
+	DECAY
+	MOREX 208
 }
-
+	
 SECTION ITEM $item_fireplace-south_deed
 { // Brick-south
-    NAME fireplace-south deed
-    ID 14F0
-    DECAY
-    MOREX 209
+	NAME fireplace-south deed
+	TYPE $itype_multideed
+	ID 14F0
+	DECAY
+	MOREX 209
 }
-
+	
 SECTION ITEM $item_fireplace_sandstone1_1
 {
-ID 045d
+	ID 045d
 }
-
+	
 SECTION ITEM $item_fireplace_sandstone2_1
 {
-ID 045e
+	ID 045e
 }
-
+	
 SECTION ITEM $item_fireplace_sandstone1_2
 {
-ID 045f
+	ID 045f
 }
-
+	
 SECTION ITEM $item_fireplace_sandstone2_2
 {
-ID 0460
+	ID 0460
 }
-
+	
 SECTION ITEM $item_fireplace_sandstone3_1
 {
-ID 0475
+	ID 0475
 }
-
+	
 SECTION ITEM $item_fireplace_sandstone3_2
 {
-ID 047b
+	ID 047b
 }
-
+	
 SECTION ITEM $item_fireplace_sandstone4_1
 {
-ID 0482
+	ID 0482
 }
-
+	
 SECTION ITEM $item_fireplace_sandstone4_2
 {
-ID 0489
+	ID 0489
 }
-
+	
 SECTION ITEM $item_fireplace_stone1_1
 {
-ID 08cf
+	ID 08cf
 }
-
+	
 SECTION ITEM $item_fireplace_stone2_1
 {
-ID 08d0
+	ID 08d0
 }
-
+	
 SECTION ITEM $item_fireplace_stone2_2
 {
-ID 08d3
+	ID 08d3
 }
-
+	
 SECTION ITEM $item_fireplace_stone1_2
 {
-ID 08d4
+	ID 08d4
 }
-
+	
 SECTION ITEM $item_fireplace_stone3_1
 {
-ID 08da
+	ID 08da
 }
-
+	
 SECTION ITEM $item_fireplace_stone4_1
 {
-ID 08db
+	ID 08db
 }
-
+	
 SECTION ITEM $item_fireplace_stone3_2
 {
-ID 08de
+	ID 08de
 }
-
+	
 SECTION ITEM $item_fireplace_stone4_2
 {
-ID 08df
+	ID 08df
 }
-
+	
 SECTION ITEM $item_fireplace_stone5_1
 {
-ID 0935
+	ID 0935
 }
-
+	
 SECTION ITEM $item_fireplace_stone6_1
 {
-ID 0936
+	ID 0936
 }
-
+	
 SECTION ITEM $item_fireplace_stone7_1
 {
-ID 0937
+	ID 0937
 }
-
+	
 SECTION ITEM $item_fireplace_stone8_1
 {
-ID 093d
+	ID 093d
 }
-
+	
 SECTION ITEM $item_fireplace_stone5_2
 {
-ID 0943
+	ID 0943
 }
-
+	
 SECTION ITEM $item_fireplace_stone6_2
 {
-ID 0944
+	ID 0944
 }
-
+	
 SECTION ITEM $item_fireplace_stone7_2
 {
-ID 0945
+	ID 0945
 }
-
+	
 SECTION ITEM $item_fireplace_stone8_2
 {
-ID 094b
+	ID 094b
 }
-
+	
 SECTION ITEM $item_fireplace_stone9_1
 {
-ID 0951
+	ID 0951
 }
-
+	
 SECTION ITEM $item_fireplace_stone10_1
 {
-ID 0952
+	ID 0952
 }
-
+	
 SECTION ITEM $item_fireplace_stone11_1
 {
-ID 0953
+	ID 0953
 }
-
+	
 SECTION ITEM $item_fireplace_stone12_1
 {
-ID 0959
+	ID 0959
 }
-
+	
 SECTION ITEM $item_fireplace_stone9_2
 {
-ID 095f
+	ID 095f
 }
-
+	
 SECTION ITEM $item_fireplace_stone10_2
 {
-ID 0960
+	ID 0960
 }
-
+	
 SECTION ITEM $item_fireplace_stone11_2
 {
-ID 0961
+	ID 0961
 }
-
+	
 SECTION ITEM $item_fireplace_stone12_2
 {
-ID 0967
+	ID 0967
 }
-
+	
 SECTION ITEM $item_fireplace_stone13_1
 {
-ID 11ec
+	ID 11ec
 }
-
+	
 SECTION ITEM $item_fireplace_stone14_1
 {
-ID 11ed
+	ID 11ed
 }
-
+	
 SECTION ITEM $item_fireplace_stone14_2
 {
-ID 11ee
+	ID 11ee
 }
-
+	
 SECTION ITEM $item_fireplace_stone13_2
 {
-ID 11ef
+	ID 11ef
 }
-
-//chimney
+	
+	//chimney
 SECTION ITEM $item_chimney1_1
 {
-ID 08d1
+	ID 08d1
 }
-
+	
 SECTION ITEM $item_chimney2_1
 {
-ID 08d2
+	ID 08d2
 }
-
+	
 SECTION ITEM $item_chimney2_2
 {
-ID 08d5
+	ID 08d5
 }
-
+	
 SECTION ITEM $item_chimney1_2
 {
-ID 08d6
+	ID 08d6
 }
-
+	
 SECTION ITEM $item_chimney2_1
 {
-ID 08d7
+	ID 08d7
 }
-
+	
 SECTION ITEM $item_chimney2_2
 {
-ID 08d8
+	ID 08d8
 }
-
+	
 SECTION ITEM $item_chimney3_2
 {
-ID 08d9
+	ID 08d9
 }
-
+	
 SECTION ITEM $item_chimney3
 {
-ID 08dc
+	ID 08dc
 }
-
+	
 SECTION ITEM $item_chimney3_1
 {
-ID 08dd
+	ID 08dd
 }
-
-//outdoor
+	
+	//outdoor
 SECTION ITEM $item_firepit
 {
-ID 0fac
+	ID 0fac
 }
-
+	
 SECTION ITEM $item_campfire
 {
-ID 0de3
+	ID 0de3
 }
+	
