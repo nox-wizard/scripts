@@ -34,7 +34,6 @@
 #include "small-scripts/custom/flipitem.sma"
 #include "small-scripts/custom/potiondelay.sma"
 #include "small-scripts/custom/unknown_char.sma"
-#include "small-scripts/custom/test_showpaperdoll.sma"
 
 //treasurehunt
 #include "small-scripts/custom/treasurehunt/treasurehunt.sma"
