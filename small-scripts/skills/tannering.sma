@@ -79,8 +79,10 @@ public _doLeatherPiece( const s, const hide ) {
 	new scriptid = itm_getProperty( hide, IP_SCRIPTID );
 	new type=INVALID;
 	for( new i=0; i<ALL_HIDES; ++i ) {
-		if( scriptid==hidesDef[i] )
+		if( scriptid==hidesDef[i] ) {
 			type=i;
+			break;
+		}
 	}
 	
 	if(type == INVALID) {

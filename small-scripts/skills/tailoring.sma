@@ -78,8 +78,10 @@ public _doCloth( const s, const cloth ) {
 	
 	new type=INVALID;
 	for( new i=0; i<ALL_BOLTS_CLOTH; ++i ) {
-		if(	scriptid==boltsclothDef[i] )
+		if(	scriptid==boltsclothDef[i] ) {
 			type=i;
+			break;
+		}
 	}
 	
 	if(type == INVALID) {
