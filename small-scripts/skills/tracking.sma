@@ -17,7 +17,8 @@ static where[8][] = {
 
 public __nxw_sk_tracking( const socket )
 {
-
+	new chr=getCharFromSocket( socket );
+	
 	new menu = gui_createIconList( "handle_tracking", "What do you wish to track?"  );
 
 	gui_addIcon( menu, 0x20D4, _, _, "Animals" );
