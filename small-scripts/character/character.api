@@ -1194,33 +1194,38 @@ public chr_getDirForSee( const chr, const x, const y )
 	if ((chr_x == x) && (chr_y == y))
 		return chr_getProperty( chr, CP_DIR );
 
-	if (chr_x == x)
+	if (chr_x == x) {
 		if (chr_y > y)
-			dir = NORTH; // north
+			return NORTH; // north
 		else
-			dir = SOUTH; // south
+			return SOUTH; // south
+	}
 	else
 	{
-		float coef =(y - chr_y) / (x - chr_x);
+		/*new coef;
+		float(coef)
+		coef =(y - chr_y) / (x - chr_x);
 		if (chr_x < x) // facing east
 			if (coef > 2)
-				dir = SOUTH;
+				return SOUTH;
 			else if (coef > 0.5)
-				dir = SOUTHEAST;
+				return SOUTHEAST;
 			else if (coef > -0.5)
-				dir = EAST;
+				return EAST;
 			else if (coef > -2)
-				dir = NORTHEAST;
-			else dir = NORTH;
+				return NORTHEAST;
+			else return NORTH;
 		else // facing west
 			if (coef > 2)
-				dir = NORTH;
+				return NORTH;
 			else if (coef > 0.5)
-				dir = NORTHWEST; // south-west
+				return NORTHWEST; // south-west
 			else if (coef > -0.5)
-				dir = WEST; // west
+				return WEST; // west
 			else if (coef > -2)
-				dir = SOUTHWEST; // north-west
-			else dir = SOUTH;
+				return SOUTHWEST; // north-west
+			else return SOUTH;
+		*/
 	}
+	return SOUTH;
 }

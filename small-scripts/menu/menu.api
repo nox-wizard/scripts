@@ -346,11 +346,12 @@ native menu_createIconList( const callback[], const question[], ... );
 \param 1 the menu serial
 \param 2 model
 \param 3 color
-\param 4 response
+\param 4 data
+\param 5 response
 \return false if error, true else
 \fn menu_addIcon( const menu, const model, const color, const response[], ... )
 */
-native menu_addIcon( const menu, const model, const color=0, const response[], ... );
+native menu_addIcon( const menu, const model, const color=0, const data=INVALID, const response[], ... );
 
 
 /** @} */ // end of script_API_menu

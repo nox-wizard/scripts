@@ -23,6 +23,8 @@
 #include "small-scripts/skills/tannering.sma"
 //Taste Identification
 #include "small-scripts/skills/tasteid.sma"
+//Tracking
+#include "small-scripts/skills/tracking.sma"
 
 
 
@@ -55,6 +57,8 @@ public __nxw_sk_main(const s, const skill_num)
 			__nxw_sk_inscript(s);
 		case SK_TASTEID:
 			__nxw_sk_tasteid(s);
+		case SK_TRACKING:
+			__nxw_sk_tracking(s);
 		default:
 			return;
 	}
