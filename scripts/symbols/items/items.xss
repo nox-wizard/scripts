@@ -2149,3 +2149,5 @@
 #define $item_hardcoded 2135
 #define $item_blood_puddle 2136
 #define $item_restock 2137
+#define $item_hitching_post 500500
+#define $item_hitching_post2 500501

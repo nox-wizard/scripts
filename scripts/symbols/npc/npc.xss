@@ -500,3 +500,6 @@
 #define $npc_a_lich_lord_1 10807
 #define $npc_a_wisp 33
 #define $npc_xanathar 1912
+
+#define $npc_fertile_horse 500500
+#define $npc_fertile_horse2 500501
