@@ -57,6 +57,7 @@ const CP_DEAD = 1;
 const CP_FREE = 2;
 const CP_GUARDED = 3;
 const CP_GUILDTRAITOR = 4;
+const CP_JAILED = 5;
 const CP_INCOGNITO = 6;
 const CP_ONHORSE = 7;
 const CP_POLYMORPH = 8;
@@ -68,6 +69,7 @@ const CP_ISBEINGTRAINING = 13;
 const CP_GUILDTOGGLE = 14;
 const CP_OVERWEIGHTED = 15;
 const CP_MOUNTED = 16;
+const CP_FROZEN = 17;
 
 const CP_BLOCKED = 101;
 const CP_CELL = 102;

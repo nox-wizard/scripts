@@ -75,6 +75,27 @@ native chr_canSeeSerials(const chr);
 native chr_canSnoop(const chr);
 
 /*!
+\brief Jail the given player
+\author Endymion
+\param jailer the jailer
+\param player the player to jail
+\param seconds the jail time
+\note if seconds is 0 and player is jailed, player is released
+*/
+native chr_jail( const jailer, const player, const seconds );
+
+/*!
+\brief Release the given player from jail
+\author Endymion
+\param releaser the releaser
+\param player the player to release
+*/
+public chr_unjail( const releaser, const player ) {
+	chr_jail( releaser, player, 0 );
+}
+
+
+/*!
 \author Xanathar
 \fn chr_countBankGold(const chr)
 \brief

@@ -32,17 +32,24 @@
 native tempfx_activate( const type = TFX_AMXCUSTOM, const chrsrc, const chrdest, const more, const dur = -1, const callback = -1);
 
 /*!
+\brief Delete a tempfx
 \author Endymion
-\fn tempfx_delete( const type = TFX_AMXCUSTOM, const doExpire = true, const callback = -1)
-\brief
+\param chr the character
+\param type the tempfx type
+\param doExpire if true call the expire function
+\param callback is the second param if type = TFX_AMXCUSTOM, is INVALID if not used
+\fn tempfx_delete( const chr, const type = TFX_AMXCUSTOM, const doExpire = true, const callback = INVALID)
 */
-native tempfx_delete( const type = TFX_AMXCUSTOM, const doExpire = true, const callback = -1);
+native tempfx_delete( const chr, const type = TFX_AMXCUSTOM, const doExpire = true, const callback = INVALID);
 
 /*!
-\brief
+\brief Check if a tempfx is active
 \author Endymion
-\fn tempfx_isActive( const type = TFX_AMXCUSTOM, const callback = -1)
+\param chr the character
+\param type the tempfx type
+\param callback is the second param if type = TFX_AMXCUSTOM, is INVALID if not used
+\fn tempfx_isActive( const chr, const type = TFX_AMXCUSTOM, const callback = INVALID)
 */
-native tempfx_isActive( const type = TFX_AMXCUSTOM, const callback = -1)
+native tempfx_isActive( const chr, const type = TFX_AMXCUSTOM, const callback = INVALID)
 
 /** @} */ // end of script_API_tempfx

@@ -180,9 +180,9 @@ native menu_addHtmlGump( const menu, const x, const y, const width, const height
 \param 7 color
 \param 8 initial value
 \return false if error, true else
-\fn menu_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[]  )
+\fn menu_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[], ...  )
 */
-native menu_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[]  );
+native menu_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[], ...  );
 
 /*!
 \brief Add a new property field at given menu
@@ -238,9 +238,24 @@ native menu_addResizeGump( const menu, const x, const y, const gump, const width
 \param 4 color
 \param 5 text
 \return false if error, true else
-\fn menu_addText( const menu, const x, const y, const color=0, const text[] )
+\fn menu_addText( const menu, const x, const y, const color=0, const text[], ... )
 */
-native menu_addText( const menu, const x, const y, const color=0, const text[]  );
+native menu_addText( const menu, const x, const y, const color=0, const text[], ...  );
+
+/*!
+\brief Add a new Cropped text at given menu
+\author Endymion
+\param 1 the menu serial
+\param 2 x
+\param 3 y
+\param 4 width
+\param 5 height
+\param 6 hue
+\param 7 text
+\return false if error, true else
+\fn menu_addCroppedtext( const menu, const x, const y, const width, const height, const hue=0, const text[], ... )
+*/
+native menu_addCroppedtext( const menu, const x, const y, const width, const height, const hue=0, const text[], ... );
 
 /*!
 \brief Add a new tile picture at given menu
