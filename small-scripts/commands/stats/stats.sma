@@ -346,6 +346,9 @@ public stats_item( const socket, const item, const page )
 			gui_addText( menu, 58, 20+(20*i), _, "IP Amount : " );
 			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, IP_AMOUNT, _, colorEdit );
 			
+			gui_addText( menu, 58, 20+(20*i), _, "Layer : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, IP_LAYER, _, colorEdit );
+			
 		}
 	
 	}
