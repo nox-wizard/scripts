@@ -1,9 +1,41 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard	: Embedded Small Scripts			||
+// || Maintained by	: Horiab         				||
+// || Last Update	: 10-aug-2004					||
+// || Designed for NXW 	: 0.82						||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+#if defined _nxw_race_api_
+  #endinput
+#endif
+#define _nxw_race_api_
+
+/*! \defgroup script_API_race Race handling
+\ingroup script_API
+@{
+*/
+
+/*!
+\author Endymion?
+\since 0.82
+\fn race_getProperty( const race, const property, const subProp=0, ... );
+\param	race	- race number
+\param property - the property we want to read
+\param subprop  - the subproperty we want to read
+\param ... optional parameter, needed for some kind of properties
+\brief gets a race's property
+*/
 native race_getProperty( const race, const property, const subProp=0, ... );
 
+/*!
+\author Endymion?
+\since 0.82
+\fn race_getGlobalProp( const property, const subProp=0, ... );
+\param property - the property we want to read
+\param subprop  - the subproperty we want to read
+\param ... optional parameter, needed for some kind of properties
+\brief gets informations set in global.xss inside scripts/races folder
+*/
 native race_getGlobalProp( const property, const subProp=0, ... );
 
-public __race_enlist( const chr )
-{
-	chr_message( chr, _, "Race system work in progress" );
-}
+/*! }@*/

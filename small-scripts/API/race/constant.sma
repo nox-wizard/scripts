@@ -1,9 +1,18 @@
-
-const RP2_DESCRIPTION_COUNT = 1;
-
+//global props
 const RP_TELEPORT_ON_ENLIST = 0;
 const RP_WITH_WEB_INTERFACE = 1;
+const RP_MODE = 3;
+const RP_STARTLOCATION = 200;
+const RP_STR_WEBLINK = 452;
+const RP_STR_WEBROOT = 453;
 
+//global subprops
+const RP2_X = 201;
+const RP2_Y = 202;
+const RP2_Z = 203;
+
+//unsorted/untested
+const RP2_DESCRIPTION_COUNT = 1;
 const RP_TYPE = 100;
 const RP_LAYER_PERMITTED = 101;
 
@@ -11,8 +20,7 @@ const RP_SKIN = 400;
 
 const RP_STR_NAME = 450;
 const RP_STR_DESCRIPTION = 451;
-const RP_STR_WEBLINK = 452;
-const RP_STR_WEBROOT = 453;
+
 
 
 const RT_OPTIONAL = 0;
