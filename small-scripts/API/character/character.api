@@ -10,7 +10,7 @@
 #endif
 #define _nxw_character_api_
 #define OK 0 //to be moved in nxw_lib
-#include "small-scripts/include/nxw_lib"
+#include "small-scripts/nxw_lib"
 
 /** \defgroup script_API_character Character
  *  \ingroup script_API

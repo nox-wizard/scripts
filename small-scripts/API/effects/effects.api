@@ -10,7 +10,7 @@
 #endif
 #define _nxw_effects_api_
 
-#include "small-scripts/effects/constant.sma"
+#include "small-scripts/API/effects/constant.sma"
 
 /** \defgroup script_API_tempfx Tempfx
  *  \ingroup script_API

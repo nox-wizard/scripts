@@ -10,23 +10,6 @@
 #endif
 #define _nxw_set_api_
 
-/*! \page p_set Set
-* \section set Set, Contenitori di oggetti
-* <br>
-* <br>
-* Un set é un vettore che può contenere un qualsiasi oggetto, quindi sia item che char. <br>
-* Può essere riempito attraverso le funzioni predefinite oppure "manualmente" dallo scripter <br><br>
-* Alcuni esempi:
-* <UL>
-* <LI>un semplice esempio di come mandare a un player la lista degli altri giocatori in zona ( \ref esempio1.sma )
-* </UL>
-*/
-
-/** \example esempio1.sma
- * Primo esempio sui set
- */
-
-#include "small-scripts/include/nxw_lib"
 /*!
 \defgroup script_API_set Set
 \ingroup script_API

@@ -88,6 +88,23 @@ enum {
 	DAMAGE_FORCE, DAMAGE_HOLY, DAMAGE_MAGIC, MAX_RESISTANCE_INDEX
 };
 /* @} */
+
+/*************************************************************************
+ LOCAL VARS CONSTANTS
+ *************************************************************************/
+
+const VAR_TYPE_ANY	= 0;
+const VAR_TYPE_INTEGER	= 1;
+const VAR_TYPE_STRING	= 3;
+
+enum
+{
+	VAR_ERROR_NONE = 0,
+	VAR_ERROR_UNKNOWN_VAR = 1,
+	VAR_ERROR_DUPLICATE_VAR = 2,
+	VAR_ERROR_WRONG_TYPE = 3,
+	VAR_ERROR_ACCESS_DENIED = 4
+};
 /*************************************************************************
  LAYER TYPES CONSTANTS
  *************************************************************************/
