@@ -63,12 +63,12 @@ native cfgServerOption(const format[], ...);
 
 /*!
 \author Luxor
-\fn weblaunch(const socket,const format[], ...)
-\param socket: the socket
+\fn weblaunch(const chr,const format[], ...)
+\param socket: the character
 \param format[]: the URL to be opened by the web client
-\brief Sends a request to the given socket to launch its web client
+\brief Sends a request to socket of the given character to launch its web client
 */
-native weblaunch(const socket,const format[], ...);
+native weblaunch(const chr,const format[], ...);
 
 /*!
 \author Luxor
