@@ -350,9 +350,9 @@ public race_make( const socket, const menu, const race, const chr )
 	//
 	
 	new item_set = set_create();
-	set_getRaceStuff( item_set, race, RP_BACKPACK_ITEM, chr  );
+	set_getRaceStuff( item_set, race, RS_BACKPACK_ITEM, chr  );
 	new amount_set = set_create();
-	set_getRaceStuff( amount_set, race, RP_BACKPACK_ITEM, chr  );
+	set_getRaceStuff( amount_set, race, RS_BACKPACK_ITEM, chr  );
 	
 	for( set_rewind( item_set ); !set_end( item_set ); ) {
 		new def = set_get( item_set );
@@ -364,9 +364,9 @@ public race_make( const socket, const menu, const race, const chr )
 	
 
 	set_clear( item_set );
-	set_getRaceStuff( item_set, race, RP_BANK_ITEM, chr  );
+	set_getRaceStuff( item_set, race, RS_BANK_ITEM, chr  );
 	set_clear( amount_set );
-	set_getRaceStuff( amount_set, race, RP_BANK_ITEM, chr  );
+	set_getRaceStuff( amount_set, race, RS_BANK_ITEM, chr  );
 	
 	for( set_rewind( item_set ); !set_end( item_set ); ) {
 		new def = set_get( item_set );
@@ -377,9 +377,9 @@ public race_make( const socket, const menu, const race, const chr )
 	}
 	
 	set_clear( item_set );
-	set_getRaceStuff( item_set, race, RP_EQUIP_ITEM, chr  );
+	set_getRaceStuff( item_set, race, RS_EQUIP_ITEM, chr  );
 	set_clear( amount_set );
-	set_getRaceStuff( amount_set, race, RP_EQUIP_ITEM, chr  );
+	set_getRaceStuff( amount_set, race, RS_EQUIP_ITEM, chr  );
 	
 	for( set_rewind( item_set ); !set_end( item_set ); ) {
 		new def = set_get( item_set );
@@ -402,7 +402,7 @@ public race_make( const socket, const menu, const race, const chr )
 	chr_teleport(chr);
 	
 	new race_name[100];
-	race_getProperty( race, CP_STR_NAME, _, race_name );
+	race_getProperty( race, RP_STR_NAME, _, race_name );
 	sysmessage( socket, _, "You have become a %s", race_name );
 	
 	if( curr!=chr ) {

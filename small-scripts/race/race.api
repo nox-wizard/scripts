@@ -3,3 +3,10 @@ native race_getProperty( const race, const property, const subProp=0, ... );
 
 native race_getGlobalProp( const property, const subProp=0, ... );
 
+public __race_enlist( const socket )
+{
+	if( socket<0 )
+		return;
+		
+	sysmessage( socket, _, "Race system work in progress" );
+}
