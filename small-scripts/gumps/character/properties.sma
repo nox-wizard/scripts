@@ -10,7 +10,7 @@ static col2X			= 0;
 static col1XTxt			= 0;
 static col2XTxt			= 0;
 static const colBackGump	= 0x52;
-static lastPage			= 16;
+static lastPage			= 17;
 static const rowsPerPage	= 12;
 static currentPageRow		= 0;
 static stringMode		= 0;
@@ -43,7 +43,7 @@ static const propGMClearance		= 23;
 static const propGMPageable		= 24;
 static const propShowSerials		= 25;
 static const propInvulnerable		= 26;
-//static const propSkillTitle		= 27;
+static const propOnKill			= 27;
 static const propSnoopAbility		= 28;
 static const propMagicReflect		= 29;
 static const propShowSkill		= 30;
@@ -159,7 +159,7 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 		new edit;
 		new updateChar = 0;
 		charPropsRespInit( button, edit, page );
-		printf( !"page %d button %d^n", page, button );
+		//printf( !"page %d button %d^n", page, button );
 		if( page != button )
 		{
 			charPropsRespExit( updateChar, serial, pc, page, edit )
@@ -933,6 +933,19 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 				chr_setEventHandler( serial, EVENT_CHR_ONDISMOUNT, EVENTTYPE_STATIC, newString );
 			}
 			//
+			// process changes to: Event On Kill
+			// ---------------------------------
+			//
+			gui_getInputField( propOnKill, newString );
+			trim( newString );
+			chr_getEventHandler( serial, EVENT_CHR_ONKILL, oldString );
+			if( strcmp( newString, oldString ) )
+			{
+				if( strlen( oldString ) )
+					chr_delEventHandler( serial, EVENT_CHR_ONKILL );
+				chr_setEventHandler( serial, EVENT_CHR_ONKILL, EVENTTYPE_STATIC, newString );
+			}
+			//
 			// process changes to: Fame
 			// ------------------------
 			//
@@ -1062,6 +1075,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 				updateChar = 1;
 			}
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if( page == 9 )
+		{
+			//
 			// process changes to: Hiding skill
 			// --------------------------------
 			//
@@ -1070,14 +1091,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_HIDING, newNumeric );
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if( page == 9 )
-		{
 			//
 			// process changes to: Houses shown as icons
 			// -----------------------------------------
@@ -1183,15 +1196,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			//	}
 			//}
 			//
-			// process changes to: Karma
-			// -------------------------
-			//
-			gui_getInputField( propKarma, newString );
-			oldNumeric = chr_getProperty( serial, CP_KARMA, _ );
-			newNumeric = prop2Signed( newString, oldNumeric );
-			if( newNumeric != oldNumeric )
-				chr_setProperty( serial, CP_KARMA, _, newNumeric )
-			//
 			// Finish
 			//
 			charPropsRespExit( updateChar, serial, pc, page, edit )
@@ -1199,6 +1203,15 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 		}
 		if ( page == 10 )
 		{
+			//
+			// process changes to: Karma
+			// -------------------------
+			//
+			gui_getInputField( propKarma, newString );
+			oldNumeric = chr_getProperty( serial, CP_KARMA, _ );
+			newNumeric = prop2Signed( newString, oldNumeric );
+			if( newNumeric != oldNumeric )
+				chr_setProperty( serial, CP_KARMA, _, newNumeric );
 			//
 			// process changes to: Location
 			// ----------------------------
@@ -1295,6 +1308,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_MAGICRESISTANCE, newNumeric );
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if ( page == 11 )
+		{
+			//
 			// process changes to: Mana not needed
 			// -----------------------------------
 			//
@@ -1308,14 +1329,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 				else
 					chr_setProperty( serial, CP_PRIV2, _,  chr_getProperty( serial, CP_PRIV2, _) & ~0x10 );
 			}
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if ( page == 11 )
-		{
 			//
 			// process changes to: Meditation skill
 			// ------------------------------------
@@ -1424,6 +1437,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 					chr_setProperty( serial, CP_PRIV2, _,  chr_getProperty( serial, CP_PRIV2, _) & ~0x80 );
 			}
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if ( page == 13 )
+		{
+			//
 			// process changes to: Remove traps skill
 			// --------------------------------------
 			//
@@ -1432,14 +1453,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_REMOVETRAPS, newNumeric );
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if ( page == 13 )
-		{
 			//
 			// process changes to: Serials displayed on single click
 			// -----------------------------------------------------
@@ -1621,6 +1634,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_TASTEID, newNumeric );
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if ( page == 15 )
+		{
+			//
 			// process changes to: Tinkering skill
 			// -----------------------------------
 			//
@@ -1629,14 +1650,6 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			newNumeric = prop2Unsigned( newString, oldNumeric );
 			if( newNumeric != oldNumeric )
 				chr_setProperty( serial, CP_SKILL, SK_TINKERING, newNumeric );
-			//
-			// Finish
-			//
-			charPropsRespExit( updateChar, serial, pc, page, edit )
-			return;
-		}
-		if ( page == 15 )
-		{
 			//
 			// process changes to: Title
 			// -------------------------
@@ -1693,6 +1706,14 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 				chr_setProperty( serial, CP_NPCWANDER, _, newNumeric )
 			}
 			//
+			// Finish
+			//
+			charPropsRespExit( updateChar, serial, pc, page, edit )
+			return;
+		}
+		if( page == 16 )
+		{
+			//
 			// process changes to: Wrestling skill
 			// -----------------------------------
 			//
@@ -1707,12 +1728,12 @@ public gui_charPropsResp( const gump, const serial, const button, const pc )
 			charPropsRespExit( updateChar, serial, pc, page, edit )
 			return;
 		}
-		if( page > 15 )
+		if( page > 16 )
 		{
 			//
 			// Process user defined variables
 			//
-			new lastVar	= (page - 15) * 10;
+			new lastVar	= (page - 16) * 10;
 			new firstVar	= lastVar - 9;
 			new userVar = chr_firstLocalVar( serial );
 			for( new varIndex = 1; varIndex < firstVar; ++varIndex )
@@ -1823,7 +1844,7 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 		//
 		//	Calculate maximum number of pages
 		//
-		lastPage	= 15 + ( chr_countLocalVar( clickedChar ) / 10 ) + ( chr_countLocalVar( clickedChar ) % 10  > 0 ? 1 : 0);
+		lastPage	= 16 + ( chr_countLocalVar( clickedChar ) / 10 ) + ( chr_countLocalVar( clickedChar ) % 10  > 0 ? 1 : 0);
 		currentPageRow	= 1;
 		//
 		//	Background
@@ -2064,6 +2085,9 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			chr_getEventHandler( clickedChar, EVENT_CHR_ONDISMOUNT, str );
 			addProperty( "Event dismount", str, 0, 0, ( edit ? propOnDismount : 0 ));
 			//
+			chr_getEventHandler( clickedChar, EVENT_CHR_ONKILL, str );
+			addProperty( "Event kill", str, 0, 0, ( edit ? propOnKill : 0 ));
+			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_FAME, _ ));
 			addProperty( "Fame", str, 0, 0, ( edit ? propFame : 0 ) );
 			//
@@ -2084,11 +2108,11 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			//
 			addProperty( "Game master is pageable", ( chr_getProperty( clickedChar, CP_PRIV, _)&0x20 ? "True" : "False" ), 0, 0, ( edit ? propGMPageable : 0 ));
 			//
-			addProperty( "Guarded", (chr_getProperty( clickedChar, CP_GUARDED, _ ) ? "True" : "False" ) );
-			//
 		}
 		if ( page == 8 )
 		{
+			addProperty( "Guarded", (chr_getProperty( clickedChar, CP_GUARDED, _ ) ? "True" : "False" ) );
+			//
 			sprintf( str, "%d", chr_getGuildNumber( clickedChar ) );
 			addProperty( "Guild", str );
 			//
@@ -2130,12 +2154,12 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			//
 			addProperty( "Hidden permanently", ((chr_getProperty( clickedChar, CP_PRIV2, _)&0x8) ? "True" : "False" ), 0, 0, ( edit ? propAlwaysHidden : 0 ) );
 			//
-			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_HIDING ) );
-			addProperty( "Hiding", str, 0, 0, ( edit ? propSkillHIDING : 0 ) );
-			//
 		}
 		if ( page == 9 )
 		{
+			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_HIDING ) );
+			addProperty( "Hiding", str, 0, 0, ( edit ? propSkillHIDING : 0 ) );
+			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_STRENGHT, CP2_ACT ) );
 			addProperty( "Hitpoints", str );
 			//
@@ -2159,12 +2183,12 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_ITEMID ) );
 			addProperty( "Item identification", str, 0, 0, ( edit ? propSkillITEMID : 0 ) );
 			//
-			sprintf( str, "%d", chr_getProperty( clickedChar, CP_KARMA, _ ));
-			addProperty( "Karma", str, 0, 0, ( edit ? propKarma : 0 ) );
-			//
 		}
 		if ( page == 10 )
 		{
+			sprintf( str, "%d", chr_getProperty( clickedChar, CP_KARMA, _ ));
+			addProperty( "Karma", str, 0, 0, ( edit ? propKarma : 0 ) );
+			//
 			sprintf( str, "%d %d %d",	chr_getProperty( clickedChar, CP_POSITION, CP2_X ),
 							chr_getProperty( clickedChar, CP_POSITION, CP2_Y ),
 							chr_getProperty( clickedChar, CP_POSITION, CP2_Z ));
@@ -2195,11 +2219,11 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_INTELLIGENCE, CP2_ACT ));
 			addProperty( "Mana", str );
 			//
-			addProperty( "Mana not needed", ((chr_getProperty( clickedChar, CP_PRIV2, _)&0x10) ? "True" : "False" ), 0, 0, ( edit ? propManaUnneeded : 0 ) );
-			//
 		}
 		if ( page == 11)
 		{
+			addProperty( "Mana not needed", ((chr_getProperty( clickedChar, CP_PRIV2, _)&0x10) ? "True" : "False" ), 0, 0, ( edit ? propManaUnneeded : 0 ) );
+			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_MEDITATION ) );
 			addProperty( "Meditation", str, 0, 0, ( edit ? propSkillMEDITATION : 0 ) );
 			//
@@ -2224,15 +2248,15 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			chr_getProperty( clickedChar, CP_STR_ORGNAME, _, str );
 			addProperty( "Name (real)", str, 0, 1 );
 			//
+		}
+		if ( page == 12 )
+		{
 			int = chr_getProperty( clickedChar, CP_WEIGHT, _ ) - chr_getProperty( clickedChar, CP_STRENGHT, CP2_REAL )*4 + 30;
 			if( int < 0 )
 				int = 0;
 			sprintf( str, "%d", int );
 			addProperty( "Overweight", str );
 			//
-		}
-		if ( page == 12 )
-		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_OWNSERIAL2, _ ));
 			addProperty( "Owner", str );
 			//
@@ -2265,12 +2289,12 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_REMOVETRAPS ) );
 			addProperty( "Remove traps", str, 0, 0, ( edit ? propSkillREMOVETRAPS : 0 ) );
 			//
-			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SERIAL, _ ) );
-			addProperty( "Serial", str );
-			//
 		}
 		if ( page == 13 )
 		{
+			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SERIAL, _ ) );
+			addProperty( "Serial", str );
+			//
 			addProperty( "Serial display", (chr_getProperty( clickedChar, CP_PRIV,_ )&0x08 ? "True" : "False"), 0, 0, ( edit ? propShowSerials : 0 ));
 			//
 			addProperty( "Script", "n/a" );
@@ -2293,12 +2317,12 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_SPIRITSPEAK ) );
 			addProperty( "Spiritspeak", str, 0, 0, ( edit ? propSkillSPIRITSPEAK : 0 ) );
 			//
-			sprintf( str, "%d", chr_getProperty( clickedChar, CP_DEXTERITY, CP2_ACT ));
-			addProperty( "Stamina", str );
-			//
 		}
 		if ( page == 14 )
 		{
+			sprintf( str, "%d", chr_getProperty( clickedChar, CP_DEXTERITY, CP2_ACT ));
+			addProperty( "Stamina", str );
+			//
 			addProperty( "Stat gain today", "n/a (yet)" );
 			//
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_STEALING ) );
@@ -2325,12 +2349,12 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_TASTEID ) );
 			addProperty( "Taste identification", str, 0, 0, ( edit ? propSkillTASTEID : 0 ) );
 			//
-			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_TINKERING ) );
-			addProperty( "Tinkering", str, 0, 0, ( edit ? propSkillTINKERING : 0 ) );
-			//
 		}
 		if ( page == 15 )
 		{
+			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_TINKERING ) );
+			addProperty( "Tinkering", str, 0, 0, ( edit ? propSkillTINKERING : 0 ) );
+			//
 			chr_getProperty( clickedChar, CP_STR_TITLE, _, str );
 			addProperty( "Title", str, 0, 0, ( edit ? propTitle : 0 ) );
 			//
@@ -2355,12 +2379,15 @@ static charPropsPage( const clickedChar, const showToWhom, const edit, const pag
 			sprintf( str, "%d/%d", chr_getProperty(clickedChar, CP_WEIGHT, _), chr_getProperty(clickedChar, CP_STRENGHT, CP2_REAL )*4+30 );
 			addProperty( "Weight", str );
 			//
+		}
+		if ( page == 16 )
+		{
 			sprintf( str, "%d", chr_getProperty( clickedChar, CP_SKILL, SK_WRESTLING ) );
 			addProperty( "Wrestling", str, 0, 0, ( edit ? propSkillWRESTLING : 0 ) );
 		}
-		if( page > 15 )
+		if( page > 16 )
 		{
-			new lastVar	= (page - 15) * 10;
+			new lastVar	= (page - 16) * 10;
 			new firstVar	= lastVar - 9;
 			new userVar = chr_firstLocalVar( clickedChar );
 			for( new varIndex = 1; varIndex < firstVar; ++varIndex )
