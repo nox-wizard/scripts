@@ -50,7 +50,7 @@
 // Include the NoX-Wizard small scripts
 //
 #include "small-scripts/calendar/calendar.sma"
-#include <nxw_lib>
+#include "small-scripts/include/nxw_lib"
 #include "small-scripts/skills/skills.sma"
 #include "small-scripts/misc/default.sma"
 #include "small-scripts/item/potiondelay.sma"
