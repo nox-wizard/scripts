@@ -189,16 +189,37 @@ public handle_stats_item( const socket, const menu, const button )
 	if( button==MENU_CLOSED )
 		return;
 		
-	new chr = gui_getProperty( menu, MP_BUFFER, 1 );
-		
-	if( button>10 ) { //page button
-		stats_item( socket, chr, button-10 );
-	}
-	else { //apply button, so resend current page
-		chr_teleport( chr );
-		stats_item( socket, chr, gui_getProperty( menu, MP_BUFFER, 3 ) );
+	new item = gui_getProperty( menu, MP_BUFFER, 1 );
+	new page = gui_getProperty( menu, MP_BUFFER, 3 )
+	
+	if( button == 1 ) { //apply button
+		chr_teleport( item );
+		stats_item( socket, item, page );
 	}
 	
+	if (button == 2) { // more button
+		nprintf( socket,"Click on a Key" );
+		target_create( getCharFromSocket(socket), item, _, true, "MakeMorePD" );
+	}
+		
+	if( button>10 ) { //page button
+		stats_item( socket, item, button-10 );
+	}
+
+	
+}
+
+public MakeMorePD( const target, const chr, const key, const x, const y, const z, const unused, const itemTweaked ){
+	new socket = getSocketFromChar(chr);
+	// nprintf(socket, "target %d, key %d,unused %d, ItemT %d", target, key, unused, itemTweaked);
+	
+	new MoreA = key>>16 ; 
+	// nprintf(socket, "MoreA %d", MoreA);
+	new MoreB = key&0xFFFF; 
+	// nprintf(socket, "MoreB %d", MoreB);
+	itm_setProperty(itemTweaked,IP_MORE,_,MoreA);
+	itm_setProperty(itemTweaked,IP_MOREB,_,MoreB);
+	stats_item( socket, itemTweaked, 4 );
 }
 
 public stats_item( const socket, const item, const page )
@@ -332,6 +353,7 @@ public stats_item( const socket, const item, const page )
 			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, IP_STR_DESCRIPTION, _, colorEdit );
 			
 			gui_addText( menu, 58, 20+(20*i), _, "IP More : " );
+			gui_addButton( menu, 258, 20+(20*i), 0x4B9, 0x4BA, 2 );
 			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, IP_MORE, _, colorEdit );
 			
 			gui_addText( menu, 58, 20+(20*i), _, "IP More B : " );
@@ -348,6 +370,9 @@ public stats_item( const socket, const item, const page )
 			
 			gui_addText( menu, 58, 20+(20*i), _, "Layer : " );
 			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, IP_LAYER, _, colorEdit );
+			
+			gui_addText( menu, 58, 20+(20*i), _, "Serial : " );
+			gui_addPropField( menu, 228, 20+(20*i++), 125, 30, IP_SERIAL, _, colorEdit );
 			
 		}
 	
