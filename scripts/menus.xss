@@ -2934,31 +2934,31 @@ SECTION MENU $menu_fruit
 {
     Fruit
     0994 Pear
-    ADDITEM $item_pears
+    ADDITEM $item_pears_1
     09D0 Apple
     ADDITEM $item_apples
     09D1 Grape Bunch
-    ADDITEM $item_grape_bunches
+    ADDITEM $item_grape_bunches_1
     09D2 Peach
-    ADDITEM $item_peaches
+    ADDITEM $item_peaches_1
     0993 Fruit Basket
     ADDITEM $item_fruit_basket
     1726 Coconut
-    ADDITEM $item_coconuts
+    ADDITEM $item_coconuts1
     1720 Banana
-    ADDITEM $item_banana
+    ADDITEM $item_banana_1
     1721 Bananas
-    ADDITEM $item_banana
+    ADDITEM $item_banana_1
     1727 Dates
     ADDITEM $item_bunches_of_dates
     1728 Lemon
-    ADDITEM $item_lemons
+    ADDITEM $item_lemons1
     1729 Lemons
-    ADDITEM $item_lemons_1
+    ADDITEM $item_lemons1
     172A Lime
-    ADDITEM $item_limes
+    ADDITEM $item_limes1
     172B Limes
-    ADDITEM $item_limes_1
+    ADDITEM $item_limes1
     0C74 Honeydew Melon
     ADDITEM $item_honeydew_melons1
     0C79 Canteloupe
@@ -5901,29 +5901,29 @@ SECTION MENU $menu_bottled_beverages
 {
     Bottled Beverages
     099F Bottle of Ale
-    ADDITEM $item_bottle_of_ale
+    ADDITEM $item_bottles_of_ale1
     09A0 Bottles of Ale
-    ADDITEM $item_bottles_of_ale
+    ADDITEM $item_bottles_of_ale2
     09A1 Bottles of Ale
-    ADDITEM $item_bottles_of_ale_1
+    ADDITEM $item_bottles_of_ale3
     09A2 Bottles of Ale
-    ADDITEM $item_bottles_of_ale_2
+    ADDITEM $item_bottles_of_ale4
     099B Bottle of Liquor
-    ADDITEM $item_bottle_of_liquor
+    ADDITEM $item_bottles_of_liquor1
     099C Bottles of Liquor
-    ADDITEM $item_bottles_of_liquor
+    ADDITEM $item_bottles_of_liquor2
     099D Bottles of Liquor
-    ADDITEM $item_bottles_of_liquor_1
+    ADDITEM $item_bottles_of_liquor3
     099E Bottles of Liquor
-    ADDITEM $item_bottles_of_liquor_2
+    ADDITEM $item_bottles_of_liquor4
     09C7 Bottle of Wine
-    ADDITEM $item_bottle_of_wine
+    ADDITEM $item_bottles_of_wine1
     09C6 Bottles of Wine
-    ADDITEM $item_bottles_of_wine
+    ADDITEM $item_bottles_of_wine1
     09C5 Bottles of Wine
-    ADDITEM $item_bottles_of_wine
+    ADDITEM $item_bottles_of_wine1
     09C4 Bottles of Wine
-    ADDITEM $item_bottles_of_wine_2
+    ADDITEM $item_bottles_of_wine2
     < Previous Menu
     OPENMENU $menu_food_items
 }
@@ -5938,7 +5938,7 @@ SECTION MENU $menu_baked_and_veggys
     09E9 Cake
     ADDITEM $item_cake
     097C Wedge of Cheese
-    ADDITEM $item_wedges_of_cheese
+    ADDITEM $item_wedges_of_cheese_1
     097D Cut Cheese
     ADDITEM $item_wedges_of_cheese_1
     097E Wheel of Cheese
@@ -5946,13 +5946,13 @@ SECTION MENU $menu_baked_and_veggys
     098C French Bread
     ADDITEM $item_french_bread
     09EA Muffin
-    ADDITEM $item_muffins
+    ADDITEM $item_muffins1
     09FA Muffins
-    ADDITEM $item_muffins_1
+    ADDITEM $item_muffins2
     09EB Muffins
-    ADDITEM $item_muffins_2
+    ADDITEM $item_muffins2
     103C Loaf of Bread
-    ADDITEM $item_bread_loaves
+    ADDITEM $item_bread_loaves_1
     1040 Pizza
     ADDITEM $item_pizzas
     1083 Unbaked Pizza
@@ -6176,21 +6176,21 @@ SECTION MENU $menu_meat
 {
     Meat
     09B7 Cooked Bird
-    ADDITEM $item_cooked_birds
+    ADDITEM $item_cooked_birds_1
     09BB Roast Pig
-    ADDITEM $item_roast_pigs
+    ADDITEM $item_roast_pigs_1
     09C0 Sausages
-    ADDITEM $item_sausages
+    ADDITEM $item_sausages_1
     09C9 Ham
-    ADDITEM $item_hams
+    ADDITEM $item_hams_1
     09F2 Ribs
     ADDITEM $item_cuts_of_ribs
     097B Fish Steak
     ADDITEM $item_fish_steaks
     0976 Slabs of Bacon
-    ADDITEM $item_slabs_of_bacon
+    ADDITEM $item_slabs_of_bacon_1
     0978 Slice of Bacon
-    ADDITEM $item_slices_of_bacon
+    ADDITEM $item_slabs_of_bacon_1
     < Previous Menu
     OPENMENU $menu_food_items
 }
@@ -6225,33 +6225,33 @@ SECTION MENU $menu_non-bottled_beverages
     0FFA Bucket of Water
     ADDITEM $item_bucket_of_water
     09EE Glass of Ale
-    ADDITEM $item_mug_of_ale
+    ADDITEM $item_mug_of_ale_1
     1F7D Glass of Cider
-    ADDITEM $item_glass_of_cider
+    ADDITEM $item_glass_of_cider_1
     1F85 Glass of Liquor
-    ADDITEM $item_glass_of_liquor
+    ADDITEM $item_glass_of_liquor_1
     1F89 Glass of Milk
-    ADDITEM $item_glass_of_milk
+    ADDITEM $item_glass_of_milk_1
     1F91 Glass of Water
-    ADDITEM $item_glass_of_water
+    ADDITEM $item_glass_of_water_1
     1F8D Glass of Wine
-    ADDITEM $item_glass_of_wine
+    ADDITEM $item_glass_of_wine_1
     098E Jugs of Cider
-    ADDITEM $item_jugs_of_cider
+    ADDITEM $item_jugs_of_cider1
     098D Jugs of Cider
-    ADDITEM $item_jugs_of_cider_1
+    ADDITEM $item_jugs_of_cider2
     1F95 Pitcher of Ale
-    ADDITEM $item_pitcher_of_ale
+    ADDITEM $item_pitcher_of_ale_1
     1F97 Pitcher of Cider
-    ADDITEM $item_pitcher_of_cider
+    ADDITEM $item_pitcher_of_cider_1
     1F99 Pitcher of Liquor
-    ADDITEM $item_pitcher_of_liquor
+    ADDITEM $item_pitcher_of_liquor_1
     09AD Pitcher of Milk
-    ADDITEM $item_pitcher_of_milk
+    ADDITEM $item_pitcher_of_milk_1
     0FF9 Pitcher of Water
-    ADDITEM $item_pitcher_of_water
+    ADDITEM $item_pitcher_of_water_1
     1F9B Pitcher of Wine
-    ADDITEM $item_pitcher_of_wine
+    ADDITEM $item_pitcher_of_wine_1
     < Previous Menu
     OPENMENU $menu_food_items
 }
@@ -6741,13 +6741,13 @@ SECTION MENU $menu_bowls
     10E3 Dough
     ADDITEM $item_dough_bowl
     15FE Carrots
-    ADDITEM $item_bowl_of_carrots
+    ADDITEM $item_bowl_of_carrots1
     15FF Corn
-    ADDITEM $item_bowl_of_corn
+    ADDITEM $item_bowl_of_corn1
     1600 Lettuce
-    ADDITEM $item_bowl_of_lettuce
+    ADDITEM $item_bowl_of_lettuce1
     1601 Peas
-    ADDITEM $item_bowl_of_peas
+    ADDITEM $item_bowl_of_peas1
     1602 Potatoes
     ADDITEM $item_bowl_of_potatoes
     1604 Stew
@@ -7077,11 +7077,11 @@ SECTION MENU $menu_fishing_items
     097B Fish Steak
     ADDITEM $item_fish_steaks
     1E1A Fish Head
-    ADDITEM $item_fish_head
+    ADDITEM $item_fish_head1_1
     09CC A fish
-    ADDITEM $item_fish
+    ADDITEM $item_fish1
     1E17 Raw Fish
-    ADDITEM $item_raw_fish
+    ADDITEM $item_raw_fish_1
     < Previous Menu
     OPENMENU $menu_skills_related_menu
 }
@@ -7946,11 +7946,11 @@ SECTION MENU $menu_misc_items
     < Previous Menu
     OPENMENU $menu_equipment
     < A Goblet
-    ADDITEM $item_a_goblet
+    ADDITEM $item_goblet_1
     < A Golden Goblet
     ADDITEM $item_a_golden_goblet
     < A Pewter Mug
-    ADDITEM $item_a_pewter_mug
+    ADDITEM $item_a_pewter_mug_1
     < A Vase
     ADDITEM $item_a_vase
     < Jars

@@ -101,9 +101,9 @@ SECTION BESTSKILL $skill_cartography
 
 SECTION BESTSKILL $skill_cooking
 { // COOKING
-    PACKITEM $item_pitcher_of_water
-    PACKITEM $item_cooked_birds 3
-    PACKITEM $item_sack_of_flour
+    PACKITEM $item_pitcher_of_water_1
+    PACKITEM $item_cooked_birds_1 3
+    PACKITEM $item_sack_of_flour_1
     PACKITEM $item_kindling 2
 }
 
@@ -299,7 +299,7 @@ UNIQUE SECTION ALLNEWBIES
 { // THIS GOES TO ALL NEWBIES DESPITE SKILL
     EQUIPITEM $item_shoes
     EQUIPITEM $item_iron_dagger
-    PACKITEM $item_bread_loaves 2
+    PACKITEM $item_bread_loaves_1 2
     PACKITEM $item_book
     PACKITEM $item_candle_3
     
