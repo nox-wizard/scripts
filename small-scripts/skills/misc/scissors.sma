@@ -34,21 +34,19 @@ public _scissorsTarget( const s, const target, const itm )
 		}
 
 		amt=amt*3;
-	
+		
 		chr_sound( chr, 0x0248 );
-		nprintf(s,"You cut some cloth into bandages, and put it in your backpack");
-		new bp = itm_getCharBackPack( target );
+		ntprintf(s,"You cut some cloth into bandages, and put it in your backpack");
+		new bp = itm_getCharBackPack( chr );
 		new benda = itm_createByDef( "$item_clean_bandages" );
 		itm_setProperty( benda, IP_AMOUNT, _, amt );
 		itm_contPileItem( bp, benda );
-		itm_reduceAmount( itm, 1 );
 		itm_remove(itm);
 		
 	}
 
 	else if( isBoltOfCloth( id ) ) {
 		_doCloth( s, itm );
-	   	nprintf( s, "is bolt" );
 		
 	}
 	
