@@ -53,7 +53,7 @@ SECTION ITEM $item_a_pink_champaine_flute
 	@ONDBLCLICK _ondrinkGoblet
 }
 
-SECTION ITEM $item_bottle_of_ale
+SECTION ITEM $item_bottles_of_ale1
 {
 	NAME bottle of ale
 	ID 099F
@@ -68,7 +68,7 @@ SECTION ITEM $item_bottle_of_ale
 	///DESCRIPTION Bottle of Ale
 }
 
-SECTION ITEM $item_bottles_of_ale
+SECTION ITEM $item_bottles_of_ale2
 {
 	NAME Bottles of Ale
 	ID 09A0
@@ -82,7 +82,7 @@ SECTION ITEM $item_bottles_of_ale
 	///DESCRIPTION Bottles of Ale
 }
 
-SECTION ITEM $item_bottles_of_ale_1
+SECTION ITEM $item_bottles_of_ale3
 {
 	NAME bottles of ale
 	ID 09A1
@@ -96,7 +96,7 @@ SECTION ITEM $item_bottles_of_ale_1
 	///DESCRIPTION Bottles of Ale
 }
 
-SECTION ITEM $item_bottles_of_ale_2
+SECTION ITEM $item_bottles_of_ale4
 {
 	NAME bottles_of_ale
 	ID 09A2
@@ -110,7 +110,7 @@ SECTION ITEM $item_bottles_of_ale_2
 	///DESCRIPTION Bottles of Ale
 }
 
-SECTION ITEM $item_mug_of_ale
+SECTION ITEM $item_mug_of_ale_1
 {
 	NAME mug_of_ale
 	ID 09EE
@@ -139,7 +139,7 @@ SECTION ITEM $item_mug_of_ale_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_pitcher_of_ale
+SECTION ITEM $item_pitcher_of_ale_1
 {
 	NAME Pitcher of Ale
 	ID 1F95
@@ -169,7 +169,7 @@ SECTION ITEM $item_pitcher_of_ale_2
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_bottle_of_liquor
+SECTION ITEM $item_bottles_of_liquor1
 {
 	NAME bottle of liquor
 	ID 099B
@@ -185,7 +185,7 @@ SECTION ITEM $item_bottle_of_liquor
 	///DESCRIPTION Bottle of Liquor
 }
 
-SECTION ITEM $item_bottles_of_liquor
+SECTION ITEM $item_bottles_of_liquor2
 {
 	NAME bottles_of_liquor
 	ID 099C
@@ -199,7 +199,7 @@ SECTION ITEM $item_bottles_of_liquor
 	///DESCRIPTION Bottles of Liquor
 }
 
-SECTION ITEM $item_bottles_of_liquor_1
+SECTION ITEM $item_bottles_of_liquor3
 {
 	NAME bottles_of_liquor
 	ID 099D
@@ -213,7 +213,7 @@ SECTION ITEM $item_bottles_of_liquor_1
 	///DESCRIPTION Bottles of Liquor
 }
 
-SECTION ITEM $item_bottles_of_liquor_2
+SECTION ITEM $item_bottles_of_liquor4
 {
 	NAME bottles_of_liquor
 	ID 099E
@@ -227,7 +227,7 @@ SECTION ITEM $item_bottles_of_liquor_2
 	///DESCRIPTION Bottles of Liquor
 }
 
-SECTION ITEM $item_glass_of_liquor
+SECTION ITEM $item_glass_of_liquor_1
 {
 	NAME glass_of_liquor
 	ID 1F85
@@ -283,7 +283,7 @@ SECTION ITEM $item_glass_of_liquor_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_pitcher_of_liquor
+SECTION ITEM $item_pitcher_of_liquor_1
 {
 	NAME Pitcher of Liquor
 	ID 1F99
@@ -313,7 +313,7 @@ SECTION ITEM $item_pitcher_of_liquor_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_bottle_of_wine
+SECTION ITEM $item_bottles_of_wine1
 {
 	NAME bottle_of_wine
 	ID 09C7
@@ -329,7 +329,7 @@ SECTION ITEM $item_bottle_of_wine
 	///DESCRIPTION Bottle of Wine
 }
 
-SECTION ITEM $item_bottles_of_wine
+SECTION ITEM $item_bottles_of_wine2
 {
 	NAME bottles_of wine
 	ID 09C6
@@ -343,7 +343,7 @@ SECTION ITEM $item_bottles_of_wine
 	///DESCRIPTION Bottles of Wine
 }
 
-SECTION ITEM $item_bottles_of_wine_2
+SECTION ITEM $item_bottles_of_wine3
 {
 	NAME bottles_of_wine
 	ID 09C5
@@ -357,7 +357,7 @@ SECTION ITEM $item_bottles_of_wine_2
 	///DESCRIPTION Bottles of Wine
 }
 
-SECTION ITEM $item_bottles_of_wine_3
+SECTION ITEM $item_bottles_of_wine4
 {
 	NAME bottles of wine
 	ID 09C4
@@ -371,7 +371,7 @@ SECTION ITEM $item_bottles_of_wine_3
 	///DESCRIPTION Bottles of Wine
 }
 
-SECTION ITEM $item_glass_of_wine
+SECTION ITEM $item_glass_of_wine_1
 {
 	NAME Glass of Wine
 	ID 1F8D
@@ -427,7 +427,7 @@ SECTION ITEM $item_glass_of_wine_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_pitcher_of_wine
+SECTION ITEM $item_pitcher_of_wine_1
 {
 	NAME Pitcher of Wine
 	ID 1F9B
@@ -479,7 +479,7 @@ SECTION ITEM $item_tub_of_water
 	//RESTOCK 10
 }
 
-SECTION ITEM $item_glass_of_water
+SECTION ITEM $item_glass_of_water_1
 {
 	NAME glass of water
 	ID 1F91
@@ -535,7 +535,7 @@ SECTION ITEM $item_glass_of_water_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_pitcher_of_water
+SECTION ITEM $item_pitcher_of_water_1
 {
 	NAME pitcher of water
 	ID 0FF9
@@ -583,7 +583,7 @@ SECTION ITEM $item_pitcher_of_water_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_glass_of_cider
+SECTION ITEM $item_glass_of_cider_1
 {
 	NAME glass of cider
 	ID 1F7D
@@ -639,7 +639,7 @@ SECTION ITEM $item_glass_of_cider_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_jugs_of_cider_2
+SECTION ITEM $item_jugs_of_cider3
 {
 	NAME Jugs of Cider
 	ID 098D
@@ -653,7 +653,7 @@ SECTION ITEM $item_jugs_of_cider_2
 	///DESCRIPTION Jugs of Cider
 }
 
-SECTION ITEM $item_jugs_of_cider_1
+SECTION ITEM $item_jugs_of_cider2
 {
 	NAME Jugs of Cider
 	ID 098E
@@ -667,7 +667,7 @@ SECTION ITEM $item_jugs_of_cider_1
 	///DESCRIPTION Jugs of Cider
 }
 
-SECTION ITEM $item_jugs_of_cider
+SECTION ITEM $item_jugs_of_cider1
 {
 	NAME jug of cider
 	ID 09c8
@@ -679,7 +679,7 @@ SECTION ITEM $item_jugs_of_cider
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_pitcher_of_cider
+SECTION ITEM $item_pitcher_of_cider_1
 {
 	NAME pitcher of cider
 	ID 1F97
@@ -785,7 +785,7 @@ SECTION ITEM $item_bowl_of_flour
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_sack_of_flour
+SECTION ITEM $item_sack_of_flour_1
 {
 	NAME sack of flour
 	ID 1039
@@ -805,7 +805,7 @@ SECTION ITEM $item_sack_of_flour_2
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_open_sack_of_flour
+SECTION ITEM $item_open_sack_of_flour_1
 {
 	NAME sack of flour
 	ID 103a
@@ -1061,7 +1061,7 @@ SECTION ITEM $item_french_bread
 	///DESCRIPTION French Bread
 }
 
-SECTION ITEM $item_muffins
+SECTION ITEM $item_muffins1
 {
 	NAME Muffins
 	ID 09EA
@@ -1078,7 +1078,7 @@ SECTION ITEM $item_muffins
 	///DESCRIPTION Muffins
 }
 
-SECTION ITEM $item_muffins_1
+SECTION ITEM $item_muffins2
 {
 	NAME Muffins
 	ID 09FA
@@ -1092,7 +1092,7 @@ SECTION ITEM $item_muffins_1
 	///DESCRIPTION Muffins
 }
 
-SECTION ITEM $item_muffins_2
+SECTION ITEM $item_muffins3
 {
 	NAME Muffins
 	ID 09EB
@@ -1106,7 +1106,7 @@ SECTION ITEM $item_muffins_2
 	///DESCRIPTION Muffins
 }
 
-SECTION ITEM $item_bread_loaves
+SECTION ITEM $item_bread_loaves_1
 {
 	NAME Bread Loaves
 	ID 103C
@@ -1251,7 +1251,7 @@ SECTION ITEM $item_plate_of_cookies
 }
 
 //FOOD Milk//
-SECTION ITEM $item_pitcher_of_milk
+SECTION ITEM $item_pitcher_of_milk_1
 {
 	NAME Pitcher of Milk
 	ID 09AD
@@ -1297,7 +1297,7 @@ SECTION ITEM $item_a_jar_full_of_milk
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_glass_of_milk
+SECTION ITEM $item_glass_of_milk_1
 {
 	NAME Glass of Milk
 	ID 1F89
@@ -1353,7 +1353,7 @@ SECTION ITEM $item_glass_of_milk_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_wedges_of_cheese
+SECTION ITEM $item_wedges_of_cheese_1
 {
 	NAME wedge of cheese
 	ID 097C
@@ -1370,7 +1370,7 @@ SECTION ITEM $item_wedges_of_cheese
 	///DESCRIPTION Cheese
 }
 
-SECTION ITEM $item_wedges_of_cheese_1
+SECTION ITEM $item_wedges_of_cheese_2
 {
 	NAME wedge of cheese
 	ID 097D
@@ -1405,7 +1405,7 @@ SECTION ITEM $item_wheels_of_cheese
 }
 
 //FOOD MEAT EGGS AND FISH//
-SECTION ITEM $item_spit
+SECTION ITEM $item_spit_1
 {
 	NAME spit
 	ID 1e99
@@ -1427,7 +1427,7 @@ SECTION ITEM $item_spit_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_chicken_on_spit
+SECTION ITEM $item_chicken_on_spit_1
 {
 	NAME chicken on a spit
 	ID 1e97
@@ -1437,6 +1437,7 @@ SECTION ITEM $item_chicken_on_spit
 	//RESTOCK 10
 	@ONDBLCLICK _oneatleft
 	AMXINT 1003 2
+	@ONDROPINLAND flipitemnext
 }
 
 SECTION ITEM $item_chicken_on_spit_2
@@ -1449,9 +1450,10 @@ SECTION ITEM $item_chicken_on_spit_2
 	//RESTOCK 10
 	@ONDBLCLICK _oneatleft
 	AMXINT 1003 2
+	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_rabbit_on_spit
+SECTION ITEM $item_rabbit_on_spit_1
 {
 	NAME rabbit on a spit
 	ID 1e98
@@ -1461,6 +1463,7 @@ SECTION ITEM $item_rabbit_on_spit
 	//RESTOCK 10
 	@ONDBLCLICK _oneatleft
 	AMXINT 1003 2
+	@ONDROPINLAND flipitemnext
 }
 
 SECTION ITEM $item_rabbit_on_spit_2
@@ -1473,9 +1476,10 @@ SECTION ITEM $item_rabbit_on_spit_2
 	//RESTOCK 10
 	@ONDBLCLICK _oneatleft
 	AMXINT 1003 2
+	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_skinned_rabbit
+SECTION ITEM $item_skinned_rabbit_1
 {
 	NAME skinned rabbit
 	ID 1e92
@@ -1497,7 +1501,7 @@ SECTION ITEM $item_skinned_rabbit_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_skinned_goat
+SECTION ITEM $item_skinned_goat_1
 {
 	NAME skinned goat
 	ID 1e88
@@ -1519,7 +1523,7 @@ SECTION ITEM $item_skinned_goat_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_sheep_carcass
+SECTION ITEM $item_sheep_carcass_1
 {
 	NAME sheep carcass
 	ID 1873
@@ -1541,7 +1545,7 @@ SECTION ITEM $item_sheep_carcass_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_beef_carcass
+SECTION ITEM $item_beef_carcass_1
 {
 	NAME beef carcass
 	ID 1871
@@ -1563,7 +1567,7 @@ SECTION ITEM $item_beef_carcass_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_skinned_deer
+SECTION ITEM $item_skinned_deer_1
 {
 	NAME skinned deer
 	ID 1e90
@@ -1585,7 +1589,7 @@ SECTION ITEM $item_skinned_deer_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_pigs_head
+SECTION ITEM $item_pigs_head_1
 {
 	NAME pigs head
 	ID 1e8e
@@ -1607,7 +1611,7 @@ SECTION ITEM $item_pigs_head_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_pigs_feet
+SECTION ITEM $item_pigs_feet_1
 {
 	NAME pigs feet
 	ID 1e8c
@@ -1629,7 +1633,7 @@ SECTION ITEM $item_pigs_feet_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_roast_pigs
+SECTION ITEM $item_roast_pigs_1
 {
 	NAME roast pig
 	ID 09BB
@@ -1681,7 +1685,7 @@ SECTION ITEM $item_cooked_lamb_leg
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_raw_birds
+SECTION ITEM $item_raw_birds_1
 {
 	NAME raw bird
 	ID 09B9
@@ -1709,7 +1713,7 @@ SECTION ITEM $item_raw_birds_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_cooked_birds
+SECTION ITEM $item_cooked_birds_1
 {
 	NAME cooked bird
 	ID 09B7
@@ -1739,7 +1743,7 @@ SECTION ITEM $item_cooked_birds_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_bird
+SECTION ITEM $item_bird1_1
 {
 	NAME bird
 	ID 1e83
@@ -1750,7 +1754,7 @@ SECTION ITEM $item_bird
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_bird_2
+SECTION ITEM $item_bird1_2
 {
 	NAME bird
 	ID 1e84
@@ -1761,7 +1765,7 @@ SECTION ITEM $item_bird_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_bird_3
+SECTION ITEM $item_bird1_1
 {
 	NAME bird
 	ID 1e85
@@ -1772,7 +1776,7 @@ SECTION ITEM $item_bird_3
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_bird_4
+SECTION ITEM $item_bird1_2
 {
 	NAME bird
 	ID 1e86
@@ -1922,7 +1926,7 @@ SECTION ITEM $item_fried_eggs
 	///DESCRIPTION Eggs
 }
 
-SECTION ITEM $item_sausages
+SECTION ITEM $item_sausages_1
 {
 	NAME sausage
 	ID 09C0
@@ -1952,7 +1956,7 @@ SECTION ITEM $item_sausages_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_hams
+SECTION ITEM $item_hams_1
 {
 	NAME ham
 	ID 09C9
@@ -2020,7 +2024,7 @@ SECTION ITEM $item_cuts_of_ribs
 	///DESCRIPTION Cuts of Ribs
 }
 
-SECTION ITEM $item_slabs_of_bacon
+SECTION ITEM $item_slabs_of_bacon_1
 {
 	NAME slabs of bacon
 	ID 0976
@@ -2050,7 +2054,7 @@ SECTION ITEM $item_slabs_of_bacon_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_slices_of_bacon
+SECTION ITEM $item_slices_of_bacon_1
 {
 	NAME slice of bacon
 	ID 0978
@@ -2106,7 +2110,7 @@ SECTION ITEM $item_fish_steaks
 	///DESCRIPTION Fish Steaks
 }
 
-SECTION ITEM $item_raw_fish
+SECTION ITEM $item_raw_fish_1
 {
 	NAME raw fish
 	ID 1E15
@@ -2126,7 +2130,7 @@ SECTION ITEM $item_raw_fish_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_raw_fish_headless
+SECTION ITEM $item_raw_fish_headless_1
 {
 	NAME raw fish without head
 	ID 1E17
@@ -2136,7 +2140,7 @@ SECTION ITEM $item_raw_fish_headless
 	@ONDROPINLAND flipitemscnd
 }
 
-SECTION ITEM $item_cooked_fish_headless
+SECTION ITEM $item_cooked_fish_headless_1
 {
 	NAME cooked fish without head
 	ID 1E1c
@@ -2168,7 +2172,7 @@ SECTION ITEM $item_cooked_fish_headless_2
 	@ONDROPINLAND flipitem2less
 }
 
-SECTION ITEM $item_fish_head
+SECTION ITEM $item_fish_head1_1
 {
 	NAME fish head
 	ID 1E19
@@ -2177,7 +2181,7 @@ SECTION ITEM $item_fish_head
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_fish_head_2
+SECTION ITEM $item_fish_head1_2
 {
 	NAME fish head
 	ID 1E1a
@@ -2186,7 +2190,7 @@ SECTION ITEM $item_fish_head_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_fish_head_3
+SECTION ITEM $item_fish_head2
 {
 	NAME fish heads
 	ID 1E1b
@@ -2194,7 +2198,7 @@ SECTION ITEM $item_fish_head_3
 	//RESTOCK 15
 }
 
-SECTION ITEM $item_fish
+SECTION ITEM $item_fish1
 {
 	NAME fish
 	ID 09CC
@@ -2204,7 +2208,7 @@ SECTION ITEM $item_fish
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_fish_2
+SECTION ITEM $item_fish2
 {
 	NAME fish
 	ID 09CD
@@ -2214,7 +2218,7 @@ SECTION ITEM $item_fish_2
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_fish_3
+SECTION ITEM $item_fish3
 { 
 	NAME fish
 	ID 09CE
@@ -2224,7 +2228,7 @@ SECTION ITEM $item_fish_3
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_fish_4
+SECTION ITEM $item_fish4
 { 
 	NAME fish
 	ID 09CF
@@ -2234,7 +2238,7 @@ SECTION ITEM $item_fish_4
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_small_fish
+SECTION ITEM $item_small_fish_1
 {
 	NAME  small fish
 	ID 0dd6
@@ -2371,7 +2375,7 @@ SECTION ITEM $item_shells_4
 }
 
 //Mushroom//
-SECTION ITEM $item_mushrooms
+SECTION ITEM $item_mushrooms_1
 {
 	NAME mushrooms
 	ID 0d0c
@@ -2491,7 +2495,7 @@ SECTION ITEM $item_mushrooms_10
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_mushroom
+SECTION ITEM $item_mushroom_1
 {
 	NAME mushroom
 	ID 0d16
@@ -2540,7 +2544,7 @@ SECTION ITEM $item_mushroom_4
 }
 
 //FOOD VEGGIE AND FRUITS//
-SECTION ITEM $item_coconuts
+SECTION ITEM $item_coconuts1
 {
 	NAME coconut
 	ID 1726
@@ -2557,7 +2561,7 @@ SECTION ITEM $item_coconuts
 	///DESCRIPTION Coconut
 }
 
-SECTION ITEM $item_coconuts_2
+SECTION ITEM $item_coconuts2
 {
 	NAME open coconut
 	ID 1725
@@ -2570,7 +2574,7 @@ SECTION ITEM $item_coconuts_2
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_coconuts_3
+SECTION ITEM $item_coconuts3_1
 {
 	NAME open coconut
 	ID 1724
@@ -2583,7 +2587,7 @@ SECTION ITEM $item_coconuts_3
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_coconuts_4
+SECTION ITEM $item_coconuts3_2
 {
 	NAME open coconut
 	ID 1723
@@ -2596,7 +2600,7 @@ SECTION ITEM $item_coconuts_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_banana
+SECTION ITEM $item_banana_1
 {
 	NAME banana
 	ID 171f
@@ -2609,7 +2613,7 @@ SECTION ITEM $item_banana
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_skinned_banana
+SECTION ITEM $item_skinned_banana_1
 {
 	NAME skinned banana
 	ID 171d
@@ -2652,7 +2656,7 @@ SECTION ITEM $item_skinnded_banana_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_bunch_of_bananas
+SECTION ITEM $item_bunch_of_bananas_1
 {
 	NAME bunch of bananas
 	ID 1721
@@ -2692,7 +2696,7 @@ SECTION ITEM $item_bunches_of_dates
 	///DESCRIPTION Bunches of Dates
 }
 
-SECTION ITEM $item_lemons
+SECTION ITEM $item_lemons1
 {
 	NAME lemon
 	ID 1728
@@ -2708,7 +2712,7 @@ SECTION ITEM $item_lemons
 	///DESCRIPTION Lemons
 }
 
-SECTION ITEM $item_lemons_1
+SECTION ITEM $item_lemons2
 {
 	NAME lemons
 	ID 1729
@@ -2720,7 +2724,7 @@ SECTION ITEM $item_lemons_1
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_limes
+SECTION ITEM $item_limes1
 {
 	NAME lime
 	ID 172A
@@ -2736,7 +2740,7 @@ SECTION ITEM $item_limes
 	///DESCRIPTION Lime
 }
 
-SECTION ITEM $item_limes_1
+SECTION ITEM $item_limes2
 {
 	NAME limes
 	ID 172B
@@ -2752,7 +2756,7 @@ SECTION ITEM $item_limes_1
 	///DESCRIPTION Limes
 }
 
-SECTION ITEM $item_garlic_bulb
+SECTION ITEM $item_garlic_bulb_1
 {
 	NAME garlic bulb
 	ID 18e3
@@ -2780,7 +2784,7 @@ SECTION ITEM $item_garlic_bulb_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_dried_onions
+SECTION ITEM $item_dried_onions_1
 {
 	NAME dried onions
 	ID 0C3f
@@ -2807,7 +2811,7 @@ SECTION ITEM $item_dried_onions_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_dried_herbs
+SECTION ITEM $item_dried_herbs_1
 {
 	NAME dried herbs
 	ID 0C41
@@ -2831,7 +2835,7 @@ SECTION ITEM $item_dried_herbs_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_bowl_of_carrots
+SECTION ITEM $item_bowl_of_carrots1
 {
 	NAME bowl of carrots
 	ID 15FE
@@ -2847,7 +2851,7 @@ SECTION ITEM $item_bowl_of_carrots
 	///DESCRIPTION Bowl of Carrots
 }
 
-SECTION ITEM $item_bowl_of_corn
+SECTION ITEM $item_bowl_of_corn1
 {
 	NAME bowl of corn
 	ID 15FF
@@ -2863,7 +2867,7 @@ SECTION ITEM $item_bowl_of_corn
 	///DESCRIPTION Bowl of Corn
 }
 
-SECTION ITEM $item_bowl_of_lettuce
+SECTION ITEM $item_bowl_of_lettuce1
 {
 	NAME bowl of lettuce
 	ID 1600
@@ -2879,7 +2883,7 @@ SECTION ITEM $item_bowl_of_lettuce
 	///DESCRIPTION Bowl of lettuce
 }
 
-SECTION ITEM $item_bowl_of_peas
+SECTION ITEM $item_bowl_of_peas1
 {
 	NAME bowl of peas
 	ID 1601
@@ -2971,7 +2975,7 @@ SECTION ITEM $item_bowl_of_peas2
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_pears
+SECTION ITEM $item_pears_1
 {
 	NAME pear
 	ID 0994
@@ -3017,7 +3021,7 @@ SECTION ITEM $item_apples
 	///DESCRIPTION Apples
 }
 
-SECTION ITEM $item_grape_bunches
+SECTION ITEM $item_grape_bunches_1
 {
 	NAME grape bunch
 	ID 09D1
@@ -3047,7 +3051,7 @@ SECTION ITEM $item_grape_bunches_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_peaches
+SECTION ITEM $item_peaches_1
 {
 	NAME peach
 	ID 09D2
@@ -3172,7 +3176,7 @@ SECTION ITEM $item_rolling_pin
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_a_goblet
+SECTION ITEM $item_goblet_1
 {
 	NAME a goblet
 	ID 099a
@@ -3180,7 +3184,7 @@ SECTION ITEM $item_a_goblet
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_goblet_2
+SECTION ITEM $item_goblet_2
 {
 	NAME a goblet
 	ID 09cb
@@ -3188,7 +3192,7 @@ SECTION ITEM $item_a_goblet_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_a_golden_goblet
+SECTION ITEM $item_golden_goblet_1
 {
 	NAME a golden goblet
 	ID 09bf
@@ -3196,7 +3200,7 @@ SECTION ITEM $item_a_golden_goblet
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_a_golden_goblet_2
+SECTION ITEM $item_golden_goblet_2
 {
 	NAME a golden goblet
 	ID 09B3
@@ -3204,7 +3208,7 @@ SECTION ITEM $item_a_golden_goblet_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_glass
+SECTION ITEM $item_glass_1
 {
 	NAME glass
 	ID 1f81
@@ -3236,7 +3240,7 @@ SECTION ITEM $item_glass_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_a_pewter_mug
+SECTION ITEM $item_a_pewter_mug_1
 {
 	NAME a pewter mug
 	ID 1000
@@ -3268,7 +3272,7 @@ SECTION ITEM $item_a_pewter_mug_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_a_skull_mug
+SECTION ITEM $item_a_skull_mug_1
 {
 	NAME a skull mug
 	ID 0ffb
@@ -3300,7 +3304,7 @@ SECTION ITEM $item_a_skull_mug_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_a_ceramic_mug
+SECTION ITEM $item_a_ceramic_mug_1
 {
 	NAME a ceramic mug
 	ID 09ca
@@ -3332,7 +3336,7 @@ SECTION ITEM $item_a_ceramic_mug_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_glass_pitcher
+SECTION ITEM $item_glass_pitcher_1
 {
 	NAME glass pitcher
 	ID 0ff6
@@ -3374,7 +3378,7 @@ SECTION ITEM $item_kettle
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_frying_pan
+SECTION ITEM $item_frying_pan1
 {
 	NAME frying pan
 	ID 09e2
@@ -3386,7 +3390,7 @@ SECTION ITEM $item_frying_pan
 	@ONDROPINLAND flipitemnext
 }
 
-SECTION ITEM $item_frying_pan_2
+SECTION ITEM $item_frying_pan2
 {
 	NAME frying pan
 	ID 097f
@@ -3432,7 +3436,7 @@ SECTION ITEM $item_dirty_pan
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_pot
+SECTION ITEM $item_pot1
 {
 	NAME pot
 	ID 09e5
@@ -3443,7 +3447,7 @@ SECTION ITEM $item_pot
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_dirty_pot
+SECTION ITEM $item_dirty_pot1
 {
 	NAME dirty pot
 	ID 09e7
@@ -3454,7 +3458,7 @@ SECTION ITEM $item_dirty_pot
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_pot_2
+SECTION ITEM $item_pot2
 {
 	NAME pot
 	ID 09e4
@@ -3465,7 +3469,7 @@ SECTION ITEM $item_pot_2
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_dirty_pot_2
+SECTION ITEM $item_dirty_pot2
 {
 	NAME dirty pot
 	ID 09e6
@@ -3476,7 +3480,7 @@ SECTION ITEM $item_dirty_pot_2
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_pot_3
+SECTION ITEM $item_pot3
 {
 	NAME pot
 	ID 09e3
@@ -3487,7 +3491,7 @@ SECTION ITEM $item_pot_3
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_dirty_pot_3
+SECTION ITEM $item_dirty_pot3
 {
 	NAME dirty pot
 	ID 09df
@@ -3498,7 +3502,7 @@ SECTION ITEM $item_dirty_pot_3
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_pot_4
+SECTION ITEM $item_pot4
 {
 	NAME pot
 	ID 09e1
@@ -3509,7 +3513,7 @@ SECTION ITEM $item_pot_4
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_dirty_pot_4
+SECTION ITEM $item_dirty_pot4
 {
 	NAME dirty pot
 	ID 09dd
@@ -3520,7 +3524,7 @@ SECTION ITEM $item_dirty_pot_4
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_pot_5
+SECTION ITEM $item_pot5
 {
 	NAME dirty pot
 	ID 09e0
@@ -3531,7 +3535,7 @@ SECTION ITEM $item_pot_5
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_dirty_pot_5
+SECTION ITEM $item_dirty_pot5
 {
 	NAME dirty pot
 	ID 09dc
@@ -3542,7 +3546,7 @@ SECTION ITEM $item_dirty_pot_5
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_cauldron
+SECTION ITEM $item_cauldron_1
 {
 	NAME cauldron
 	ID 0974
@@ -3566,7 +3570,7 @@ SECTION ITEM $item_cauldron_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_plate
+SECTION ITEM $item_plate1
 {
 	NAME plate
 	ID 09d7
@@ -3578,7 +3582,7 @@ SECTION ITEM $item_plate
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_dirty_plate
+SECTION ITEM $item_dirty_plate1
 {
 	NAME dirty plate
 	ID 09da
@@ -3589,7 +3593,7 @@ SECTION ITEM $item_dirty_plate
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_dirty_plate_2
+SECTION ITEM $item_dirty_plate2
 {
 	NAME dirty plate 2
 	ID 0a19
@@ -3600,7 +3604,7 @@ SECTION ITEM $item_dirty_plate_2
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_dirty_plate_3
+SECTION ITEM $item_dirty_plate3
 {
 	NAME dirty plate 2
 	ID 09ae
@@ -3611,7 +3615,7 @@ SECTION ITEM $item_dirty_plate_3
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_plate_of_food
+SECTION ITEM $item_plate_of_food1
 {
 	NAME plate of food
 	ID 09d8
@@ -3624,7 +3628,7 @@ SECTION ITEM $item_plate_of_food
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_plate_of_food_2
+SECTION ITEM $item_plate_of_food2
 {
 	NAME plate of food
 	ID 09d9
@@ -3637,7 +3641,7 @@ SECTION ITEM $item_plate_of_food_2
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_plate_of_food_3
+SECTION ITEM $item_plate_of_food3
 {
 	NAME plate of food
 	ID 09db
@@ -3650,7 +3654,7 @@ SECTION ITEM $item_plate_of_food_3
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_plate_of_food_4
+SECTION ITEM $item_plate_of_food4
 {
 	NAME plate of food
 	ID 09af
@@ -3663,7 +3667,7 @@ SECTION ITEM $item_plate_of_food_4
 	AMXINT 1003 2
 }
 
-SECTION ITEM $item_tray
+SECTION ITEM $item_tray_1
 {
 	NAME tray
 	ID 0992
@@ -3687,7 +3691,7 @@ SECTION ITEM $item_tray_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_silverware
+SECTION ITEM $item_silverware_1
 {
 	NAME silverware
 	ID 09d4
@@ -3735,7 +3739,7 @@ SECTION ITEM $item_silverware_4
 	@ONDROPINLAND flipitem3less
 }
 
-SECTION ITEM $item_spoon
+SECTION ITEM $item_spoon_1
 {
 	NAME spoon
 	ID 09c3
@@ -3759,7 +3763,7 @@ SECTION ITEM $item_spoon_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_knife
+SECTION ITEM $item_knife_1
 {
 	NAME knife
 	ID 09a6
@@ -3783,7 +3787,7 @@ SECTION ITEM $item_knife_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_fork
+SECTION ITEM $item_fork_1
 {
 	NAME fork
 	ID 09a4
@@ -3819,7 +3823,7 @@ SECTION ITEM $item_round_basket
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_basket
+SECTION ITEM $item_basket1
 {
 	NAME basket
 	ID 0990
@@ -3830,7 +3834,7 @@ SECTION ITEM $item_basket
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_basket_2
+SECTION ITEM $item_basket2
 {
 	NAME basket
 	ID 09b1

@@ -777,7 +777,7 @@ SECTION ITEMLIST $itemlist_spawn_chest_loot
 {
     //$$ spawn chest loot
     $item_gold_coin 96
-    $item_bread_loaves
+    $item_bread_loaves_1
     $item_lesser_heal_potion
     $item_iron_scimitar
     $item_iron_long_sword
@@ -807,9 +807,9 @@ SECTION ITEMLIST $itemlist_christmas
     $item_baked_pie
     $item_bunches_of_dates
     $item_fruit_basket
-    $item_hams
+    $item_hams_1
     $item_plate_of_cookies
-    $item_bottle_of_wine
+    $item_bottles_of_wine1
     $item_robe_2
     $item_green_sandals
     $item_robe

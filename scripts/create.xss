@@ -1621,11 +1621,11 @@ SECTION MAKEMENU 84
     099a A golblet
     RESOURCE 3
     SKILL 100
-    ADDITEM $item_a_goblet
+    ADDITEM $item_goblet_1
     1000 A Pewter Mug
     RESOURCE 3
     SKILL 100
-    ADDITEM $item_a_pewter_mug
+    ADDITEM $item_a_pewter_mug_1
     0b46 a small vase
     RESOURCE 5
     SKILL 150
@@ -1661,7 +1661,7 @@ SECTION MAKEMENU 100
     103C Loaf of Bread
     RESOURCE 1
     SKILL 100
-    ADDITEM $item_bread_loaves
+    ADDITEM $item_bread_loaves_1
     098C French Bread
     RESOURCE 1
     SKILL 100
@@ -1669,7 +1669,7 @@ SECTION MAKEMENU 100
     09EB Muffins
     RESOURCE 1
     SKILL 100
-    ADDITEM $item_muffins_2
+    ADDITEM $item_muffins2
     160B Pan of Cookies
     RESOURCE 1
     SKILL 100
@@ -1761,11 +1761,11 @@ SECTION MAKEMENU 105
     09d4 Silverware
     RESOURCE 2
     SKILL 117
-    ADDITEM $item_silverware
+    ADDITEM $item_silverware_1
     09d5 Silverware
     RESOURCE 2
     SKILL 117
-    ADDITEM $item_silverware
+    ADDITEM $item_silverware_1
     09a6 Knife
     RESOURCE 3
     SKILL 117
@@ -1773,11 +1773,11 @@ SECTION MAKEMENU 105
     09d7 Plate
     RESOURCE 3
     SKILL 117
-    ADDITEM $item_plate
+    ADDITEM $item_plate1
     09e1 Pot
     RESOURCE 5
     SKILL 300
-    ADDITEM $item_pot
+    ADDITEM $item_pot1
     09e3 Pot
     RESOURCE 6
     SKILL 300
@@ -1789,7 +1789,7 @@ SECTION MAKEMENU 105
     09e2 frypan
     RESOURCE 9
     SKILL 380
-    ADDITEM $item_frying_pan
+    ADDITEM $item_frying_pan1
     09ed kettle
     RESOURCE 16
     SKILL 550
