@@ -44,9 +44,10 @@ public chr_setSkill(const chr,const skill, const value)
 		chr_setProperty(chr, CP_BASESKILL, skill, value);
 		return OK;
 	}
-	
+	#if ACTIVATE_EXTENDED_SKILLSYSTEM
 	chr_setLocalIntVec(chr,CLV_ADDITIONALSKILLSBASE,skill - SK_STD_COUNT, value*100);
 	updateSkillLevel(chr,skill);
+	#endif
 	return OK;
 }
 

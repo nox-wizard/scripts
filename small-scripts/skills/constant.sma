@@ -16,10 +16,11 @@
 */
 
 #define _SKILLS_DEBUG_ 1 //<! set to 1 if you want debug messages to be printed
-#define ACTIVATE_EXTENDED_SKILLSYSTEM 1	//!< set to 1 to activate the extended skillsystem
+#define ACTIVATE_EXTENDED_SKILLSYSTEM 0	//!< set to 1 to activate the extended skillsystem
 #define MAX_SKILL_SUM 7000	//!< maximum value the skillsumcan reach
 #define MAX_SKILL_VALUE 1000 	//!< maximum value a skill can reach, not considering modifiers
 #define SK_ADDITIONAL_MAX 10	//!< max number of additional skills in skills2.xss, change it if you need more skills
+
 
 //==================   DO NOT MODIFY ANYTHING BELOW THIS LINE  ======================== 
 
@@ -81,7 +82,7 @@ enum
 };
 
 #if ACTIVATE_EXTENDED_SKILLSYSTEM 
-//if extended skillsystem is not active compiler won't generate code for this
+//if extended skillsystem is NOT active compiler will not generate code for this
 
 
 //skill properties structure
@@ -97,12 +98,14 @@ enum __skillStruct
 }	//<! skill data type, you can modify this to your needs, but remember to update __skillinfo[][] too
 
 new SK_ADDITIONAL_COUNT = 0;	//!< skills loaded from skills2.sma - DO NOT TOUCH!
-new SK_COUNT = SK_STD_COUNT;	//!< total number of skills - DO NOT TOUCH!
+new SK_COUNT = SK_STD_COUNT+SK_ADDITIONAL_COUNT;	//!< total number of skills - DO NOT TOUCH!
+
 /*!
 \brief mixed array with additional skills characteristics
 
 add a row for each new skill
 */
+
 new __skillinfo[SK_ADDITIONAL_MAX][__skillStruct];
 #endif
 
@@ -112,7 +115,11 @@ new __classSkillCapModifier[SK_STD_COUNT + SK_ADDITIONAL_MAX][CLASSES_COUNT];//!
 #define RACES_COUNT 1	//!< maximum number of races
 new __raceSkillCapModifier[SK_STD_COUNT + SK_ADDITIONAL_MAX][RACES_COUNT];//!< skillcap modifiers derived from races
 
-public skillName[SK_STD_COUNT + SK_ADDITIONAL_MAX][] = 
+#if !ACTIVATE_EXTENDED_SKILLSYSTEM
+new SK_ADDITIONAL_COUNT = 0;	//!< skills loaded from skills2.sma - DO NOT TOUCH!
+new SK_COUNT = SK_STD_COUNT;	//!< total number of skills - DO NOT TOUCH!
+
+public skillName[SK_STD_COUNT][] = 
 {
 	"Alchemy",
 	"Anatomy",
@@ -163,9 +170,61 @@ public skillName[SK_STD_COUNT + SK_ADDITIONAL_MAX][] =
 	"Meditation",
 	"Stealth",
 	"Remove Traps"
-	
-#if ACTIVATE_EXTENDED_SKILLSYSTEM //do not put anything here
-	,//blanks are needed to avoid memory allocation problems when loading skills with long names 
+};
+#endif
+
+#if ACTIVATE_EXTENDED_SKILLSYSTEM
+public skillName[SK_STD_COUNT + SK_ADDITIONAL_MAX][] = 
+{
+	"Alchemy",
+	"Anatomy",
+	"Animal Lore",
+	"Item Id",
+	"Arms Lore",
+	"Parrying",
+	"Begging",
+	"Blacksmithing",
+	"Bowcraft",
+	"Peacemaking",
+	"Camping",
+	"Carpentery",
+	"Cartography",
+	"Cooking",
+	"Detecting hidden",
+	"Enticement",
+	"Evaluating intelligence",
+	"Healing",
+	"Fishing",
+	"Forensic",
+	"Herding",
+	"Hiding",
+	"Provocation",
+	"Inscription",
+	"Lockpicking",
+	"Magery",
+	"Magic resistance",
+	"Tactics",
+	"Snooping",
+	"Musicianship",
+	"Poisoning",
+	"Archery",
+	"Spirit Speak",
+	"Stealing",
+	"Tailoring",
+	"Taming",
+	"Taste Id",
+	"Tinkering",
+	"Tracking",
+	"Veterinary",
+	"Swordsmanship",
+	"Macefighting",
+	"Fencing",
+	"Wrestling",
+	"Lumberjacking",
+	"Mining",
+	"Meditation",
+	"Stealth",
+	"Remove Traps", 
 	"additional skill 1             ",
 	"additional skill 2             ",
 	"additional skill 3             ",
@@ -176,8 +235,9 @@ public skillName[SK_STD_COUNT + SK_ADDITIONAL_MAX][] =
 	"additional skill 8             ",
 	"additional skill 9             ",
 	"additional skill 10            "
+};
 #endif
-}; //!< skill names array, to be indexed with SK_ constants
+//!< skill names array, to be indexed with SK_ constants
 
 
 
