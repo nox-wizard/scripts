@@ -29,15 +29,14 @@ public __charLogin(const chr)
 	
 	hungerandthirst(chr);
 	
-	/*
-	new race = chr_getProperty(chr, CP_NPCRACE);
-	printf("race is: %d", race);
-	if( race < 0)
+	new racemode = race_getGlobalProp( RP_MODE );
+	if(racemode == 1)
 	{
-		printf("call racemenu now");
-		race_menu(chr, race);
+		new race = chr_getProperty(chr, CP_NPCRACE);
+		printf("race is: %d ", race);
+		if( race < 0)
+			race_menu(chr, race);
 	}
-	*/
 	
 	#if ACTIVATE_UKNOWN_CHARSYS
 		start_unknown_char(chr);

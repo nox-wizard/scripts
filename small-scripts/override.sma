@@ -22,7 +22,7 @@
 #include "small-scripts/skills/misc/scissors.sma"
 #include "small-scripts/guild/guild.sma"
 #include "small-scripts/guild/guildstone.sma"
-//#include "small-scripts/race/menu/menu.sma" //commented out as long as it is not working
+#include "small-scripts/race/menu/menu.sma" //commented out as long as it is not working
 #include "small-scripts/party/party.sma"
 #include "small-scripts/house/housemenu.sma"
 

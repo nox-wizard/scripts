@@ -6,7 +6,17 @@ Flag is an 8bit number containing information about reputation status, bitfields
     - 0x8: green
     - 0x10: Orange
     
-
+new flag = chr_getRelation(listener, speaker);
+	switch(flag)
+	{
+		case 1: flag = 1205;
+		case 2: flag = 2305;
+		case 4: flag = 2124;
+		case 8: flag = 1354;
+		case 10: flag = 2084;
+		default: log_error("unknown char relation between Char1 %d and Char2 %d^n", listener, speaker);
+	}
+	
 \brief Add to given set all chars of an account
 \author Wintermute
 \since 0.82
@@ -33,7 +43,7 @@ both combined should be unique even when the char is deleted later*/
 	if(chr_isaLocalVar( viewerchr, UNKNOWN_CHAR_VAR, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
         {
         	chr_addLocalIntVar( viewerchr, UNKNOWN_CHAR_VAR, char_unknown_map );
-        	//printf("char %d got 'unknown char system' var %d^n", viewerchr, UNKNOWN_CHAR_VAR);
+        	printf("char %d got 'unknown char system' var %d^n", viewerchr, UNKNOWN_CHAR_VAR);
         }
         if((chr_isaLocalVar( viewerchr, UNKNOWN_CHAR_VAR, VAR_TYPE_STRING ) == 1)) //there already is a string variable (shouldn't happen)
         {
@@ -58,30 +68,58 @@ both combined should be unique even when the char is deleted later*/
         //add onsingleclick event to the char
         chr_getEventHandler(viewerchr, 28, tempStr);
         trim(tempStr);
-        if( strcmp(tempStr, "unknown_sglclick") && (strlen(tempStr) != 0)) //different event, that is bad, so make a log entry but change the event
+        if( strcmp(tempStr, "unknown_sglclick") ) //different event, that is bad, so make a log entry but change the event
         {
+        	if(strlen(tempStr) != 0)
+        	{
+        		log_error("ERROR! Char %d already had a different single click event when single click for UNKNOWN CHAR SYSTEM was added!^n", viewerchr);
+        		log_error("This previous event function was %s^n", tempStr);
+        	}
         	chr_setEventHandler(viewerchr, 28, EVENTTYPE_STATIC, "unknown_sglclick");
-        	log_error("ERROR! Char %d already had a different single click event when single click for UNKNOWN CHAR SYSTEM was added!^n", viewerchr);
-        	log_error("This previous event function was %s^n", tempStr);
+        	printf("added singleclick event^n");
         }
         //add ondoubleclick event to the char
         chr_getEventHandler(viewerchr, 41, tempStr);
         trim(tempStr);
-        if( (strcmp(tempStr, "unknown_dblclick")) && (strlen(tempStr) != 0)) //different event, that is bad, so make a log entry but change the event
+        if( strcmp(tempStr, "unknown_sglclick")) //different event, that is bad, so make a log entry but change the event
         {
-        	chr_setEventHandler(viewerchr, 41, EVENTTYPE_STATIC, "unknown_dblclick");
-       		log_error("ERROR! Char %d already had a different double click event when double click for UNKNOWN CHAR SYSTEM was added!^n", viewerchr);
-        	log_error("This previous event function was %s^n", tempStr);
+        	if(strlen(tempStr) != 0)
+        	{
+        		log_error("ERROR! Char %d already had a different double click event when double click for UNKNOWN CHAR SYSTEM was added!^n", viewerchr);
+        		log_error("This previous event function was %s^n", tempStr);
+        	}
+        	chr_setEventHandler(viewerchr, 41, EVENTTYPE_STATIC, "unknown_sglclick");
+        	printf("added doubleclick event^n");
         }
                 
         //add onhearplayer event to the char
         chr_getEventHandler(viewerchr, 32, tempStr);
         trim(tempStr);
-        if( strcmp(tempStr, "unknown_hearPl") && (strlen(tempStr) != 0)) //different event, that is bad, so make a log entry but change the event
+        if( strcmp(tempStr, "unknown_hearPl") ) //different event, that is bad, so make a log entry but change the event
         {
+        	if(strlen(tempStr) != 0)
+        	{
+        		log_error("ERROR! Char %d already had a different ONHEARPLAYER event when hear-player for UNKNOWN CHAR SYSTEM was added!^n", viewerchr);
+        		log_error("This previous event function was %s^n", tempStr);
+        	}
         	chr_setEventHandler(viewerchr, 32, EVENTTYPE_STATIC, "unknown_hearPl");
-       		log_error("ERROR! Char %d already had a different ONHEARPLAYER event when hear-player for UNKNOWN CHAR SYSTEM was added!^n", viewerchr);
-        	log_error("This previous event function was %s^n", tempStr);
+        	printf("added hearplayer event^n");
+
+        }
+        
+        //add onhearplayer event to the char
+        chr_getEventHandler(viewerchr, 35, tempStr);
+        trim(tempStr);
+        if( strcmp(tempStr, "unknown_speech") ) //different event, that is bad, so make a log entry but change the event
+        {
+        	if(strlen(tempStr) != 0)
+        	{
+        		log_error("ERROR! Char %d already had a different ONSPEECH event when speech for UNKNOWN CHAR SYSTEM was added!^n", viewerchr);
+        		log_error("This previous event function was %s^n", tempStr);
+        	}
+        	chr_setEventHandler(viewerchr, 35, EVENTTYPE_STATIC, "unknown_speech");
+        	printf("added speech event^n");
+
         }
 }
 
@@ -111,6 +149,13 @@ public stop_unknown_char(const viewerchr)
         	chr_delEventHandler(viewerchr, 32);
 	}
 	
+		chr_getEventHandler(viewerchr, 35, tempStr);
+        trim(tempStr);
+        if( !strcmp(tempStr, "unknown_speech")) //we have an event here that is SAME to char unknown system function so DON'T KEEP this and delete it for further use because "unknown char" is now shut off ! Otherwise we need to keep this!
+        {
+        	chr_delEventHandler(viewerchr, 35);
+	}
+	
 	//delete the localVars to save space
 	if(chr_isaLocalVar( viewerchr, UNKNOWN_CHAR_VAR, VAR_TYPE_INTEGER ) == 1 ) //1 means there is a var at globalVar
 	{
@@ -122,13 +167,24 @@ public stop_unknown_char(const viewerchr)
 	}
 }
 
+public unknown_speech(const speaker)
+{
+	printf("enter unknown-speech^n");
+	new tempStr[100];
+	if(chr_isaLocalVar( speaker, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 1 ) //1 means there is a var at globalVar
+	{
+		chr_getLocalStrVar( speaker, UNKNOWN_CHAR_NAME, tempStr); //now replace recent char name in tempStr with real name speaker char, if we have this one
+	}
+	chr_setProperty(speaker,CP_STR_NAME,0,tempStr);
+}
+
 public unknown_hearPl(const listener, const speaker)
 {
 	new tempStr[100];
 	chr_getProperty(listener, CP_STR_ACCOUNT, _,tempStr);
 	new charmap = chr_getLocalIntVar( listener, UNKNOWN_CHAR_VAR);
 	new polycheck = chr_getProperty(listener, CP_POLYMORPH);
-	
+	printf("enter unknown-hear^n");
         //emergency: what happens if we don't have the originals char name for checking because the char was polymorphed at login? Well, only chance is we try to get every single/double-click its real name again ...
         if( (polycheck != 1) && (chr_isaLocalVar( listener, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 0) && (strcmp(tempStr, msg_chrUnknownDef[0])) ) //char is not polymorph, chars name is not "unknown" and string var does not exist -> create it
         {
@@ -136,7 +192,7 @@ public unknown_hearPl(const listener, const speaker)
         	chr_addLocalStrVar( listener, UNKNOWN_CHAR_NAME, tempStr );
         }
 	
-	/* npc-starter-function for testing system offline
+	/*npc-starter-function for testing system offline
 	if(chr_isNpc(speaker))
 	{
 		//char name - we have a problem here, what about polymorphed chars and the changed name?
@@ -151,26 +207,19 @@ public unknown_hearPl(const listener, const speaker)
 			chr_delLocalVar( speaker, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER);
 			chr_addLocalStrVar( speaker, UNKNOWN_CHAR_NAME, tempStr );
 		}
-	}*/
+	}
+	*/
 	if(chr_isaLocalVar( speaker, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 1 ) //1 means there is a var at globalVar
 	{
 		chr_getLocalStrVar( speaker, UNKNOWN_CHAR_NAME, tempStr); //now replace recent char name in tempStr with real name speaker char, if we have this one
 	}
 		
 	new status = getResourceStringValue(charmap, tempStr);
-	new flag = chr_getRelation(listener, speaker);
-	switch(flag)
-	{
-		case 1: flag = 1205;
-		case 2: flag = 2305;
-		case 4: flag = 2124;
-		case 8: flag = 1354;
-		case 10: flag = 2084;
-		default: log_error("unknown char relation between Char1 %d and Char2 %d^n", listener, speaker);
-	}
-	if ((chr_isNpc(speaker)) || (listener == speaker) || (chr_isGMorCns(listener)) || (chr_isGMorCns(speaker)))
-	//if ((listener == speaker) || (chr_isGMorCns(speaker)))
+
+	//if ((chr_isNpc(speaker)) || (listener == speaker) || (chr_isGMorCns(listener)) || (chr_isGMorCns(speaker)))
+	if (listener == speaker)
 		status=1;
+	printf("listener is: %d, speaker is: %d, status: %d^n^n", listener, speaker, status);	
 	//printf("char listener is: %d and status towards %s is: %d^n", listener, tempStr, status);
 			
 	if( status == -1)
@@ -215,78 +264,11 @@ public unknown_sglclick(const clicked, const viewer)
 	}
 		
 	new status = getResourceStringValue(charmap, tempStr);
-	new flag = chr_getRelation(viewer, clicked);
-	switch(flag)
-	{
-		case 1: flag = 1205;
-		case 2: flag = 2305;
-		case 4: flag = 2124;
-		case 8: flag = 1354;
-		case 10: flag = 2084;
-		default: log_error("unknown char relation between Char1 %d and Char2 %d^n", viewer, clicked);
-	}
-	if ((chr_isNpc(clicked)) || (viewer == clicked) || (chr_isGMorCns(viewer)) || (chr_isGMorCns(clicked)))
-	//if ((viewer == clicked) || (chr_isGMorCns(clicked)))
-		status=1;
-	//printf("char viewer is: %d and status towards %s is: %d^n", viewer, tempStr, status);
-			
-	if( status == -1)
-		chr_setProperty(clicked,CP_STR_NAME,0,msg_chrUnknownDef[0]);
-	else
-		chr_setProperty(clicked,CP_STR_NAME,0,tempStr);
-}
 
-public unknown_dblclick(const clicked, const viewer)
-{
-
-	new tempStr[100];
-	chr_getProperty(viewer, CP_STR_ACCOUNT, _,tempStr);
-	new charmap = chr_getLocalIntVar( viewer, UNKNOWN_CHAR_VAR);
-	new polycheck = chr_getProperty(viewer, CP_POLYMORPH);
-	
-        //emergency: what happens if we don't have the originals char name for checking because the char was polymorphed at login? Well, only chance is we try to get every single/double-click its real name again ...
-        if( (polycheck != 1) && (chr_isaLocalVar( viewer, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 0) && (strcmp(tempStr, msg_chrUnknownDef[0])) ) //char is not polymorph, chars name is not "unknown" and string var does not exist -> create it
-        {
-        	//printf("now set char original name to: %s^n", tempStr);
-        	chr_addLocalStrVar( viewer, UNKNOWN_CHAR_NAME, tempStr );
-        }
-	
-	/* npc-starter-function for testing system offline
-	if(chr_isNpc(clicked))
-	{
-		//char name - we have a problem here, what about polymorphed chars and the changed name?
-		chr_getProperty(clicked, CP_STR_NAME, _,tempStr);
-		if(chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_ANY ) == 0 ) //0 means no var at globalVar
-		{
-			chr_addLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr );
-			printf("char %d got 'unknown char system' var %d^n", clicked, UNKNOWN_CHAR_NAME);
-		}
-		if((chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER ) == 1)) //there already is a integer variable (shouldn't happen)
-		{
-			chr_delLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_INTEGER);
-			chr_addLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr );
-		}
-	}*/
-	if(chr_isaLocalVar( clicked, UNKNOWN_CHAR_NAME, VAR_TYPE_STRING ) == 1 ) //1 means there is a var at globalVar
-	{
-		chr_getLocalStrVar( clicked, UNKNOWN_CHAR_NAME, tempStr); //now replace recent char name in tempStr with real name clicked char, if we have this one
-	}
-		
-	new status = getResourceStringValue(charmap, tempStr);
-	new flag = chr_getRelation(viewer, clicked);
-	switch(flag)
-	{
-		case 1: flag = 1205;
-		case 2: flag = 2305;
-		case 4: flag = 2124;
-		case 8: flag = 1354;
-		case 10: flag = 2084;
-		default: log_error("unknown char relation between Char1 %d and Char2 %d^n", viewer, clicked);
-	}
-	if ((chr_isNpc(clicked)) || (viewer == clicked) || (chr_isGMorCns(viewer)) || (chr_isGMorCns(clicked)))
-	//if ((viewer == clicked) || (chr_isGMorCns(clicked)))
+	//if ((chr_isNpc(clicked)) || (viewer == clicked) || (chr_isGMorCns(viewer)) || (chr_isGMorCns(clicked)))
+	if (viewer == clicked)
 		status=1;
-	//printf("char viewer is: %d and status towards %s is: %d^n", viewer, tempStr, status);
+		printf("Enter single/double click, viewer is: %d, clicked is: %d, status: %d^n^n", viewer, clicked, status);
 			
 	if( status == -1)
 		chr_setProperty(clicked,CP_STR_NAME,0,msg_chrUnknownDef[0]);

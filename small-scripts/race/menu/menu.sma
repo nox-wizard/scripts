@@ -1,6 +1,7 @@
 public race_menu( const chr, const race )
 {
 	printf("enter race menu");
+	new tempStr[50];
 	new racemenu = gui_create( 10,10,1,0,0,"race_menu_Bck" );
 	
 	gui_setProperty( racemenu,MP_BUFFER,0,PROP_CHARACTER );
@@ -11,13 +12,20 @@ public race_menu( const chr, const race )
 	gui_addGump( racemenu, 20, 80, 1418 );
 	
 	new webcheck = race_getGlobalProp( RP_WITH_WEB_INTERFACE );
-	printf("webcheck: %d^n");
+	printf("webcheck: %d^n", webcheck);
+	race_getGlobalProp( RP_STR_WEBLINK,_, tempStr );
+	printf("weblink: %s, ", tempStr);
+	race_getGlobalProp( RP_STR_WEBROOT, _, tempStr );
+	printf("webroot: %s^n", tempStr);
 	
+	printf("Startlocation is: %d %d %d^n Mode is: %d", race_getGlobalProp( RP_STARTLOCATION,RP2_X ), race_getGlobalProp( RP_STARTLOCATION,RP2_Y), race_getGlobalProp( RP_STARTLOCATION,RP2_Z ), race_getGlobalProp( RP_MODE ));
 	if( webcheck == 1)
 	{
 		gui_addTilePic( racemenu, 286, 8, 3811 );
 		//gui_addButtonFn( racemenu, 294, 30, 1209, 1210, race, _, "race_webInterface" )
 	}
+	
+	printf("bla");
 
 	gui_addText( racemenu, 73,   8,  152,  "N" );
 	gui_addText( racemenu, 85,   8,   95,  "oxwizard" );
@@ -33,9 +41,13 @@ public race_menu( const chr, const race )
 	gui_addText( racemenu, 13,  88, 1153, "A" );
 	gui_addText( racemenu, 25,  88,   95, "s you do not belong to a race yet....." );
 	gui_addText( racemenu, 13, 106,   95, "you must choose one now!" );
+	
+	printf("bla2");
 
 	new offset = 0;
-	if( race_getGlobalProp( RP_TELEPORT_ON_ENLIST ) == 1)
+	new telecheck = race_getGlobalProp( RP_TELEPORT_ON_ENLIST );
+	printf("teleport check: %d", telecheck);
+	if( telecheck == 1)
 	{
 		gui_addText( racemenu, 13, 136, 1153, "Y" );
 		gui_addText( racemenu, 25, 136,   95, "ou have been transported to a safe location" );
