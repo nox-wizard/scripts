@@ -126,7 +126,6 @@ both combined should be unique even when the char is deleted later*/
 public stop_unknown_char(const viewerchr)
 {
 	new tempStr[100];
-	printf("stopping char unknown");
 	//delete the onsingleclick event handler so the function is not fired
 	chr_getEventHandler(viewerchr, 28, tempStr);
         trim(tempStr);
