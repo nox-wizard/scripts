@@ -105,7 +105,6 @@ if( pagenumber ==1)
 	new ownerser = house_getProperty(house, HP_OWNER, _);
 	chr_getProperty(ownerser, CP_STR_NAME, _, tempStr);
 	gui_addText(houseMenu,xstart+40+110,ystart,_,tempStr);
-	printf("ownerser: %d^n", ownerser);
 	
 	gui_addText(houseMenu,xstart+40,ystart+20,1310,"Account:");
 	sprintf( tempStr,"%d",chr_getProperty(ownerser,CP_ACCOUNT));
@@ -279,7 +278,7 @@ public house_cllbck(const houseMenu, const chrsource, const buttonCode)
 	new chr;
 	switch(buttonCode)
 	{
-		case 1..3: menu_house(chrsource, house, buttonCode);
+		case 1..3: menu_house(chrsource, house, buttonCode, sign);
 		case 11:
 		{
 			new setlist = set_create();
@@ -494,6 +493,7 @@ public Bounceout(const t, const chrsource, const target, const x, const y, const
 {
 	new hx1 = house_getProperty(house, HP_DIMENSION, 0);
 	new hy1 = house_getProperty(house, HP_DIMENSION, 2);
+	printf("hx: %d, hy: %d", hx1, hy1);
 	chr_moveTo(target, hx1-1, hy1-1, chr_getProperty(target, CP_POSITION, CP2_X));
 	chr_message(target, _, "You have been bounced out of the house.");
 	chr_update(target);
@@ -504,4 +504,9 @@ public TransferHouse(const t, const chrsource, const target, const x, const y, c
 	house_setProperty(house, HP_OWNER, _, target);
 	chr_message(chrsource, _, "You are no longer Owner of this house.");
 	chr_message(target, _, "You own now this house");
+}
+
+public multienter(const multi, const chr)
+{
+	printf("enter multi, multi is %d, char is %d", multi, chr);
 }
