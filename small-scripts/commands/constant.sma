@@ -15,10 +15,11 @@
 
 enum
 {
-	PRIV_PLAYER = 0,
-	PRIV_CNS = 64,
-	PRIV_GM = 128,
-	PRIV_SCRIPTER = 192,
+	PRIV_GUEST = 0,
+	PRIV_PLAYER = 50,
+	PRIV_CNS = 100,
+	PRIV_SEER = 150,
+	PRIV_GM = 200,
 	PRIV_ADMIN = 255
 };//!< predefined privlevels, insert you own privs between existing ones
 
@@ -34,10 +35,10 @@ enum __cmdEntry
 //insert your custom commands here.
 new __commands[__CMD_COUNT][__cmdEntry] =
 {
-	{PRIV_GM,	"add",		""},
+	{PRIV_SEER,	"add",		""},
 	{PRIV_CNS,	"area",		""},
 	{PRIV_CNS,	"freeze",	""},
-	{PRIV_SCRIPTER,	"func",		""},
+	{PRIV_GM,	"func",		""},
 	{PRIV_CNS,	"hiding",	""},
 	{PRIV_CNS,	"invul",	""},
 	{PRIV_CNS,	"kill",		""},
@@ -46,17 +47,17 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"options",	""},
 
 	{PRIV_PLAYER,	"playerlist",	""},
-	{PRIV_PLAYER,	"skills",	""},
-	{PRIV_PLAYER,	"stats",	""},
+	{PRIV_GUEST,	"skills",	""},
+	{PRIV_GUEST,	"stats",	""},
 	{PRIV_CNS,	"tweak",	""},
 	{PRIV_CNS,	"where",	""},
 	{PRIV_CNS,	"wipe",		""},
 	{PRIV_CNS,	"polimorph",	""},
 	{PRIV_ADMIN,	"setpriv",	""},
-	{PRIV_GM,	"dupe",		""},
-	{PRIV_CNS,	"damage",	""},
+	{PRIV_SEER,	"dupe",		""},
+	{PRIV_SEER,	"damage",	""},
 	
-	{PRIV_GM,	"regioncp",	""},
+	{PRIV_SEER,	"regioncp",	""},
 	{PRIV_CNS,	"resurrect",	""},
 	{0,"",""},{0,"",""},{0,"",""},
 	{0,"",""},{0,"",""},{0,"",""},{0,"",""},{0,"",""}

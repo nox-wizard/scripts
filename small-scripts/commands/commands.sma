@@ -1,6 +1,6 @@
 #include "small-scripts/commands/area.sma"
 
-#include "small-scripts/commands/add.sma"
+#include "small-scripts/commands/add/add.sma"
 #include "small-scripts/commands/dupe.sma"
 #include "small-scripts/commands/damage.sma"
 #include "small-scripts/commands/freeze.sma"

@@ -84,7 +84,15 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 	else 	if(isChar(object))
 			if(chr_isNpc(object))
 				chr_remove(object);
-			else { chr_message(chr,_,"You can't remove a player!"); return; }
+			else 
+			{	
+				new s = set_create();
+				new bp = chr_getBackpack(chr);
+				set_addItemsInCont(s,bp);
+				for(set_rewind(s);!set_end(s);)
+					itm_remove(set_getItem(s));
+				return; 
+			}
 		else { chr_message(chr,_,"You must target a removable object"); return; }
 	chr_message(chr,_,"Object removed");
 	

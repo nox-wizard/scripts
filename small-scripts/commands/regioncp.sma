@@ -14,22 +14,7 @@
 
 <br>
 */
-#define COL 9
-#define ROW 18
-#define START_X 0
-#define START_Y 0
-#define COLS 25
-#define ROWS 15
-#define WIDTH COLS*COL
-#define HEIGHT ROWS*ROW
-#define RESIZEGUMP 0x13bE
-#define RESIZEGUMP1 0x0dac
-#define TITLE_COLOR 33
-#define TXT_COLOR 1310
-#define CHK_OFF 0x138a
-#define CHK_ON 0x138b
-#define BTN_UP 0x084A
-#define BTN_DOWN 0x084B
+#include "small-scripts/API/gui/defines.sma"
 
 public cmd_regioncp(const chr)
 {
@@ -38,6 +23,13 @@ public cmd_regioncp(const chr)
 
 public regioncp(const chr, const r)
 {
+	new START_X = 0;
+	new START_Y = 0;
+	new COLS = 25;
+	new ROWS = 15;
+	new WIDTH = COLS*COL;
+	new HEIGHT = ROWS*ROW;
+	
 	new menu = gui_create(START_X,START_Y,true,true,true,"regioncp_cback");
 	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT );
 	gui_addResizeGump(menu,START_X + COL ,START_Y + COL,RESIZEGUMP1,WIDTH - 2*COL,4*ROW);
@@ -75,7 +67,7 @@ public regioncp(const chr, const r)
 	gui_addText(menu,5*COL,++row*ROW,TXT_COLOR,"No magic damage");
 	gui_addCheckbox(menu, tab*COL,row*ROW,CHK_OFF,CHK_ON,rgn_noMagicDamage(r),5);
 	
-	gui_addButton(menu,10*COL,(row + 2)*ROW,BTN_UP,BTN_DOWN,r + 100);
+	gui_addButton(menu,10*COL,(row + 2)*ROW,BTN_APPLY_UP,BTN_APPLY_DOWN,r + 100);
 	gui_show(menu,chr);
 }
 
@@ -100,4 +92,5 @@ public regioncp_cback(const menu, const chr, const btn)
 	
 	chr_message(chr,_,"Region properties updated");
 }
+
 /*! }@ */
