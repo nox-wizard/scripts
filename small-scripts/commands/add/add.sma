@@ -118,11 +118,16 @@ public cmd_add(const chr)
 		return;
 	}
 	
+	new tempStr[100];
+	chr_getSpeech(chr, tempStr);
+	trim(tempStr);
 	substring(__cmdParams[0],0,4,type,false);
+
+	//__cmdParams[0] does not work as only small letters are reported back by readCommandParams!
 	if(!strcmp(type,"$item")) //add an item
 	{
 		chr_message(chr,_,"click to position the item");
-		target_create(chr,getIntFromDefine(__cmdParams[0]),amount,_,"cmd_add_itm_targ");
+		target_create(chr,getIntFromDefine(tempStr),amount,_,"cmd_add_itm_targ");
 		return;
 	}
 
@@ -130,7 +135,7 @@ public cmd_add(const chr)
 	if(!strcmp(type,"$npc_"))  //add an NPC
 	{
 		chr_message(chr,_,"click to position the NPC");
-		target_create(chr,getIntFromDefine(__cmdParams[0]),amount,_,"cmd_add_npc_targ");
+		target_create(chr,getIntFromDefine(tempStr),amount,_,"cmd_add_npc_targ");
 		return;
 	}
 
