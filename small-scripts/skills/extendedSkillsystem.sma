@@ -148,7 +148,7 @@ public skill_isDirectlyUsable(skill)
 	//is not active this is the function implementation that will run
 	public initExtendedSkillsystem()
 	{
-		log_message("Extended skillsystem in not active");
+		log_message("Extended skillsystem is not active");
 		printf("^n");
 	}
 	#endinput
