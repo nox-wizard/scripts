@@ -14,7 +14,7 @@ SECTION ITEM $item_lighthouse_deed
     ID 14F0
     DECAY
     MOREX 204
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Multis Deeds
 }
@@ -25,7 +25,7 @@ SECTION ITEM $item_telescope_deed
     ID 14F0
     DECAY
     MOREX 205
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Multis Deeds
 }
@@ -36,7 +36,7 @@ SECTION ITEM $item_arbitoir_deed
     ID 14F0
     DECAY
     MOREX 206
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Multis Deeds
 }
@@ -47,7 +47,7 @@ SECTION ITEM $item_deed
     TYPE $itype_rename_deed
     DECAY
     VALUE 50000
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Miscellaneous
     ///DESCRIPTION Rename Deed
@@ -60,7 +60,7 @@ SECTION ITEM $item_small_tower_deed
     NEWBIE
     MOREX 26
     VALUE 100000
-    
+    TYPE $itype_housedeed
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -72,7 +72,8 @@ SECTION ITEM $item_small_marble_shop_deed
     NEWBIE
     MOREX 27
     VALUE 145000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -84,7 +85,8 @@ SECTION ITEM $item_farm_house_deed
     NEWBIE
     MOREX 17
     VALUE 67500
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -96,7 +98,8 @@ SECTION ITEM $item_small_stone_shop_deed
     NEWBIE
     MOREX 28
     VALUE 135000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -108,7 +111,8 @@ SECTION ITEM $item_2-story_villa_deed
     NEWBIE
     MOREX 29
     VALUE 195000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -120,7 +124,8 @@ SECTION ITEM $item_sandstone_patio_house_deed
     NEWBIE
     MOREX 30
     VALUE 80000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -132,7 +137,8 @@ SECTION ITEM $item_2-story_log_cabin_deed
     NEWBIE
     MOREX 31
     VALUE 125000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -144,7 +150,8 @@ SECTION ITEM $item_large_marble_patio_house_deed
     NEWBIE
     MOREX 32
     VALUE 225000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -224,7 +231,8 @@ SECTION ITEM $item_small_stone__plaster_house_deed
     NEWBIE
     MOREX 2
     VALUE 55000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -236,7 +244,8 @@ SECTION ITEM $item_small_stone_house_deed
     NEWBIE
     MOREX 3
     VALUE 55000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -248,7 +257,8 @@ SECTION ITEM $item_small_brick_house_deed
     NEWBIE
     MOREX 1
     VALUE 57000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -260,7 +270,8 @@ SECTION ITEM $item_small_wood_house_deed
     NEWBIE
     MOREX 4
     VALUE 55000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -272,7 +283,8 @@ SECTION ITEM $item_small_wood__plaster_house_deed
     NEWBIE
     MOREX 5
     VALUE 55000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -284,7 +296,8 @@ SECTION ITEM $item_small_wood_house_with_straw_roof_deed
     NEWBIE
     MOREX 6
     VALUE 55000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -296,7 +309,8 @@ SECTION ITEM $item_blue_tent_deed
     NEWBIE
     MOREX 7
     VALUE 12500
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -308,7 +322,8 @@ SECTION ITEM $item_green_tent_deed
     NEWBIE
     MOREX 8
     VALUE 12500
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -320,6 +335,7 @@ SECTION ITEM $item_3_room_brick_house_deed
     NEWBIE
     MOREX 9
     VALUE 150000
+    TYPE $itype_housedeed
 }
 
 SECTION ITEM $item_2_story_wood__plaster_house_deed
@@ -329,7 +345,8 @@ SECTION ITEM $item_2_story_wood__plaster_house_deed
     NEWBIE
     MOREX 10
     VALUE 210000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -341,7 +358,8 @@ SECTION ITEM $item_2_story_stone__plaster_house_deed
     NEWBIE
     MOREX 11
     VALUE 210000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -353,7 +371,8 @@ SECTION ITEM $item_tower_deed
     NEWBIE
     MOREX 12
     VALUE 350000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -365,7 +384,8 @@ SECTION ITEM $item_keep_deed
     NEWBIE
     MOREX 13
     VALUE 1000000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -377,7 +397,8 @@ SECTION ITEM $item_4_room_house_deed
     NEWBIE
     MOREX 66
     VALUE 265000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -389,7 +410,8 @@ SECTION ITEM $item_castle_deed
     NEWBIE
     MOREX 14
     VALUE 2000000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -401,7 +423,8 @@ SECTION ITEM $item_large_smithy_deed
     NEWBIE
     MOREX 16
     VALUE 200000
-    
+    TYPE $itype_housedeed
+
     ///CATEGORY Deeds
     ///SUBSECTION House Deeds
 }
@@ -413,7 +436,7 @@ SECTION ITEM $item_a_forge_deed
     NEWBIE
     VALUE 1200
     TRIGGER $itrg_forge_deed
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -425,7 +448,7 @@ SECTION ITEM $item_an_anvil_deed_facing_south_
     NEWBIE
     VALUE 1200
     TRIGGER $itrg_anvil_deed_s
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -437,7 +460,7 @@ SECTION ITEM $item_an_anvil_deed_facing_east_
     NEWBIE
     VALUE 1200
     TRIGGER $itrg_anvil_deed_e
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -449,7 +472,7 @@ SECTION ITEM $item_a_spinning_wheel_deed_facing_south_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_wheel_deed
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -461,7 +484,7 @@ SECTION ITEM $item_an_archery_butte_deed_facing_east_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_archery_butte_deed_e
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -473,7 +496,7 @@ SECTION ITEM $item_an_archery_butte_deed_facing_south_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_archery_butte_deed_s
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -484,7 +507,7 @@ SECTION ITEM $item_a_training_dummy_deed_facing_south_
     ID 14F0
     VALUE 1000
     TRIGGER $itrg_train_dummy_s
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -496,7 +519,7 @@ SECTION ITEM $item_a_training_dummy_deed_facing_east_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_train_dummy_e
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -508,7 +531,7 @@ SECTION ITEM $item_a_pickpocket_dip_deed_facing_south_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_pickpocket_dip_s
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -520,7 +543,7 @@ SECTION ITEM $item_a_pickpocket_dip_deed_facing_east_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_pickpocket_dip_e
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -532,7 +555,7 @@ SECTION ITEM $item_pentagram_deed
     NEWBIE
     DECAY
     MOREX 18
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Multis Deeds
 }
@@ -542,7 +565,7 @@ SECTION ITEM $item_a_cannon_deed
     NAME a cannon deed
     ID 14ED
     VALUE 3000
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -553,7 +576,7 @@ SECTION ITEM $item_a_large_forge_facing_south_deed
     ID 14F0
     NEWBIE
     MOREX 36
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -564,7 +587,7 @@ SECTION ITEM $item_a_large_forge_facing_east_deed
     ID 14F0
     NEWBIE
     MOREX 35
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
@@ -575,7 +598,7 @@ SECTION ITEM $item_a_skull_candle_deed
     ID 14f0
     VALUE 5000
     TRIGGER $itrg_skull_candle_deed
-    
+
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
 }
