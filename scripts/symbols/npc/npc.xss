@@ -380,6 +380,13 @@
 #define $npc_a_savage_1 1205
 #define $npc_a_savage_shaman 1206
 #define $npc_a_savage_chief 1207
+#define $npc_mage_m_1 4200
+#define $npc_mage_m_2 4201
+#define $npc_mage_m_3 4202
+#define $npc_mage 918
+#define $npc_magician 908
+#define $npc_magician_1 914
+#define $npc_magician_2 926
 #define $npc_knight 3000
 #define $npc_knight_1 3001
 #define $npc_the_black_knight 3002
@@ -391,6 +398,7 @@
 #define $npc_converted_quest_knight 601
 #define $npc_barbarian 604
 #define $npc_executioner 623
+#define $npc_necromancer 527
 
 //humans merchants and other professions
 #define $npc_adventurer_m 227
@@ -459,22 +467,14 @@
 #define $npc_jailor_f 257
 #define $npc_jeweler_m 1078
 #define $npc_jeweler_f 1079
-#define $npc_knight_2 685
-#define $npc_knight_3 686
+#define $npc_knight_m 685
+#define $npc_knight_f 686
 #define $npc_leather_worker_m 1080
 #define $npc_leather_worker_f 1081
-#define $npc_mage_f_1 4200
-#define $npc_mage_m_2 4201
-#define $npc_mage_m_3 4202
 #define $npc_mage_m 1068
 #define $npc_mage_f 1069
-#define $npc_mage 918
-#define $npc_magician 908
-#define $npc_magician_1 914
-#define $npc_magician_2 926
 #define $npc_miner_m 1056
 #define $npc_miner_f 1057
-#define $npc_necromancer 527
 #define $npc_noble_m 219
 #define $npc_noble_f 220
 #define $npc_peasant_m 223

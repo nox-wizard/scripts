@@ -7626,7 +7626,7 @@ SECTION BATCH $batch_polymorph_cns
 //    < JeremyThe Knight
 //    NPC $npc_knight_2
 //    < JasonThe Knight
-//    NPC $npc_knight_3
+//    NPC $npc_knight_f
 //    < Quest Knight
 //    NPC $npc_quest_knight_m
 //    < a Converted Quest Knight

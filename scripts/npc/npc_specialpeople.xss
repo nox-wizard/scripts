@@ -30,6 +30,1440 @@ SECTION NPC $npc_person_basic
 	DOORUSE 1
 }
 
+SECTION NPC $npc_knight_f
+{
+	NAMELIST $names_males
+	//$$ knight
+	TITLE the Knight
+	ID 0190
+	ITEM $item_random_male_hair_list
+	HAIRCOLOR 15
+	SKINLIST 16
+	DIRECTION N
+	SPEECH $speech_none
+	BACKPACK
+	GOLD 300 400
+	ITEM $item_body_sash
+	COLORLIST 11
+	ITEM $item_iron_long_sword
+	ITEM $item_iron_metal_kite_shield
+	ITEM $item_iron_platemail
+	ITEM $item_iron_plate_gorget
+	ITEM $item_iron_plate_gloves
+	ITEM $item_iron_plate_helm
+	ITEM $item_iron_plate_leggings
+	ITEM $item_iron_plate_sleeves
+	TOTAME 1100
+	STR 300 400
+	DEX 15 20
+	INT 200 300
+	KARMA 2000
+	FAME 1000
+	PARRYING 200 300
+	MAGICRESISTANCE 300 400
+	TACTICS 250 350
+	WRESTLING 300 400
+	DAMAGE 10 20
+	DEF 20
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 20
+	DOORUSE 1
+	
+	//CATEGORY Humans
+	//SUBSECTION Miscellaneous
+	//DESCRIPTION Knight
+}
+	
+SECTION NPC $npc_land_lord
+{
+	NAMELIST $names_males
+	//$$ land lord
+	TITLE the Lord of the Land
+	ID 0190
+	ITEM $item_random_male_hair_list
+	HAIRCOLOR 15
+	ITEM $item_random_beard_list
+	COLORMATCHHAIR
+	SKINLIST 16
+	DIRECTION N
+	SPEECH $speech_none
+	BACKPACK
+	GOLD 79 98
+	TOTAME 1100
+	ITEM $item_body_sash
+	ITEM $item_iron_long_sword
+	ITEM $item_iron_metal_kite_shield
+	ITEM $item_iron_platemail
+	ITEM $item_iron_plate_gorget
+	ITEM $item_iron_plate_gloves
+	ITEM $item_iron_plate_helm
+	ITEM $item_iron_plate_leggings
+	ITEM $item_iron_plate_sleeves
+	LOOT $loot_jewelry
+	STR 79 98
+	DEX 15 20
+	INT 28 45
+	INT 45
+	KARMA -5000
+	FAME 5000
+	PARRYING 300 450
+	MAGICRESISTANCE 300 450
+	TACTICS 450 600
+	WRESTLING 400 600
+	DAMAGE 10 20
+	DEF 30
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 20
+	NPCAI $npc_ai_evil
+	DOORUSE 1
+	
+	//CATEGORY Humans
+	//SUBSECTION Evils
+	//DESCRIPTION Land Lord
+}
+
+SECTION NPC $npc_que
+{ Invul Spawner
+	NAME Que
+	TITLE the engineer
+	ID 0190
+	PRIV1 4
+	ITEM $item_random_male_hair_list
+	HAIRCOLOR 15
+	SKINLIST 16
+	DIRECTION E
+	SPEECH $speech_engineer
+	BACKPACK
+	ITEM $item_male_plain_shirts_list
+	COLORLIST 11
+	ITEM $item_male_plain_pants_list
+	COLORLIST 11
+	ITEM $item_male_plain_footwear_list
+	ITEM $item_male_plain_tunic_list
+	COLORLIST 11
+	NPCWANDER 3
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 5
+	TOTAME 1100
+	STR 50 75
+	DEX 15 20
+	INT 50 75
+	KARMA 0
+	FAME 0
+	TINKERING 400 600
+	LOCKPICKING 400 600
+	DAMAGE 3 15
+	DEF 5
+	SHOPKEEPER
+	RSHOPITEM $item_cannon_ball
+	RSHOPITEM $item_iron_ingots
+	SELLITEM $item_cannon_ball
+	SELLITEM $item_iron_ingots
+	DOORUSE 1
+	
+	//CATEGORY Humans
+	//SUBSECTION Merchants
+	//DESCRIPTION Engineer [M]
+}
+
+SECTION NPC $npc_necromancer
+{
+	NAMELIST $names_necromancers
+	//$$ necromancer
+	TITLE the necromancer
+	ID 0190
+	ITEM $item_random_male_hair_list
+	HAIRCOLOR 15
+	SKINLIST 16
+	DIRECTION W
+	BACKPACK
+	ITEM $item_gm_robe_red
+	ITEM $item_black_staff
+	NPCWANDER 3
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 5
+	SPEECH $speech_necromancer
+	TOTAME 1100
+	STR 50 75
+	DEX 80 95
+	INT 75 100
+	KARMA -500
+	FAME 500
+	SPATTACK 7552
+	SPADELAY 10
+	MAGERY 600 800
+	ITEMID 400 600
+	INSCRIPTION 400 600
+	TACTICS 400 600
+	PARRYING 400 600
+	WRESTLING 400 600
+	MACEFIGHTING 400 600
+	MAGICRESISTANCE 400 600
+	DAMAGE 3 15
+	DEF 5
+	SHOPKEEPER
+	RSHOPITEM $item_black_staff
+	RSHOPITEM $item_batwing
+	RSHOPITEM $item_blackmoor
+	RSHOPITEM $item_bloodspawn
+	RSHOPITEM $item_vial_of_blood
+	RSHOPITEM $item_bone
+	RSHOPITEM $item_brimstone
+	RSHOPITEM $item_daemon_bone
+	RSHOPITEM $item_fertile_dirt
+	RSHOPITEM $item_dragon_blood
+	RSHOPITEM $item_executioners_cap
+	RSHOPITEM $item_eye_of_newt
+	RSHOPITEM $item_obsidian
+	RSHOPITEM $item_pig_iron
+	RSHOPITEM $item_pumice
+	RSHOPITEM $item_serpents_scale
+	RSHOPITEM $item_volcanic_ash
+	RSHOPITEM $item_dead_wood
+	RSHOPITEM $item_wyrms_heart
+	RSHOPITEM $item_empty_vials
+	RSHOPITEM $item_the_book_of_the_dead
+	RSHOPITEM $item_summon_bone_knight_scroll
+	RSHOPITEM $item_summon_bone_mage_scroll
+	RSHOPITEM $item_summon_lich_lord_scroll
+	RSHOPITEM $item_summon_lich_scroll
+	RSHOPITEM $item_summon_skeleton_scroll
+	RSHOPITEM $item_summon_spectre_scroll
+	RSHOPITEM $item_summon_wraith_scroll
+	RSHOPITEM $item_summon_zombie_scroll
+	SELLITEM $item_black_staff
+	SELLITEM $item_batwing
+	SELLITEM $item_blackmoor
+	SELLITEM $item_black_pearl
+	SELLITEM $item_bloodmoss
+	SELLITEM $item_bloodspawn
+	SELLITEM $item_vial_of_blood
+	SELLITEM $item_bone
+	SELLITEM $item_brimstone
+	SELLITEM $item_daemon_bone
+	SELLITEM $item_fertile_dirt
+	SELLITEM $item_dragon_blood
+	SELLITEM $item_executioners_cap
+	SELLITEM $item_garlic
+	SELLITEM $item_ginseng
+	SELLITEM $item_mandrake_root
+	SELLITEM $item_eye_of_newt
+	SELLITEM $item_nightshade
+	SELLITEM $item_obsidian
+	SELLITEM $item_pig_iron
+	SELLITEM $item_pumice
+	SELLITEM $item_sulfurous_ash
+	SELLITEM $item_spiders_silk
+	SELLITEM $item_serpents_scale
+	SELLITEM $item_volcanic_ash
+	SELLITEM $item_empty_vials
+	SELLITEM $item_the_book_of_the_dead
+	SELLITEM $item_summon_bone_knight_scroll
+	SELLITEM $item_summon_bone_mage_scroll
+	SELLITEM $item_summon_lich_lord_scroll
+	SELLITEM $item_summon_lich_scroll
+	SELLITEM $item_summon_skeleton_scroll
+	SELLITEM $item_summon_spectre_scroll
+	SELLITEM $item_summon_wraith_scroll
+	SELLITEM $item_summon_zombie_scroll
+	DOORUSE 1
+	
+	//CATEGORY Humans
+	//SUBSECTION Merchants
+	//DESCRIPTION Necromancer [M]
+}
+
+SECTION NPC $npc_dark_knight
+{
+    NAME Dark Knight
+    TITLE the personal guard
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION S
+    SPEECH $speech_guard
+    BACKPACK
+    ITEM $item_iron_platemail
+    COLOR 096c
+    ITEM $item_iron_plate_gorget
+    COLOR 096c
+    ITEM $item_iron_plate_gloves
+    COLOR 096c
+    ITEM $item_iron_plate_helm
+    COLOR 096c
+    ITEM $item_iron_plate_leggings
+    COLOR 096c
+    ITEM $item_cloak
+    COLOR 096c
+    ITEM $item_iron_plate_sleeves
+    COLOR 096c
+    ITEM $item_iron_halberd
+    TOTAME 1100
+    STR 1000 1500
+    DEX 1000 1000
+    INT 1000 1000
+    KARMA 500
+    FAME 500
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 100 100
+    DEF 18
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 10
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Guards
+    ///DESCRIPTION Dark Knight
+}
+
+SECTION NPC $npc_register_of_names
+{ Invul Spawner
+    NAMELIST $names_males
+    //$$ register of names
+    TITLE the Register of names
+    ID 0190
+    PRIV1 4
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    SPEECH $speech_register_of_names
+    SKINLIST 16
+    BACKPACK
+    NPCWANDER 0
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    STR 50 75
+    DEX 15 20
+    INT 50 75
+    KARMA 0
+    FAME 0
+    PARRYING 400 600
+    MAGICRESISTANCE 400 600
+    TACTICS 400 600
+    WRESTLING 400 600
+    DAMAGE 3 10
+    DEF 5
+    NPCAI $npc_ai_good
+    TOTAME 1100
+    SHOPKEEPER
+    RSHOPITEM $item_deed
+    SELLITEM $item_deed
+    DOORUSE 1
+}
+
+SECTION NPC $npc_murderer
+{
+    NAMELIST $names_murderers
+    //$$ murderer
+    TITLE the murderer
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    GOLD 500 600
+    SPEECH $speech_strange_speech
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -5000
+    FAME 5000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 800
+    TACTICS 800 1000
+    SWORDSMANSHIP 800 900
+    WRESTLING 800 1000
+    DAMAGE 10 25
+    DEF 18
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Murderer[M]
+}
+
+SECTION NPC $npc_len_ikbaan
+{
+    NAME Len Ik'Baan
+    TITLE the Murderer
+    ID 0191
+    ITEM $item_random_female_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    NPCAI $npc_ai_evil
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    BACKPACK
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_halberd
+    ITEM $item_female_fancy_cape_list
+    COLORLIST 11
+    GOLD 500 600
+    SPEECH $speech_strange_speech
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -5000
+    FAME 5000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 800
+    TACTICS 800 1000
+    SWORDSMANSHIP 800 900
+    WRESTLING 800 1000
+    DAMAGE 10 25
+    DEF 18
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Murderer[F]
+}
+
+SECTION NPC $npc_sammy
+{
+    NAME Sammy
+    TITLE the little jerk
+    ID 01A4
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -1000
+    FAME 1000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 10 17
+    DEF 18
+    SPATTACK 4095
+    SPADELAY 10
+    MAGERY 500 700
+    SPEECH $speech_jeweler
+    NPCAI $npc_ai_evil
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_isabel
+{
+    NAME Isabel
+    TITLE the little brat
+    ID 01A7
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -1000
+    FAME 1000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 10 17
+    DEF 18
+    SPATTACK 4095
+    SPADELAY 10
+    MAGERY 500 700
+    SPEECH $speech_leatherworker
+    NPCAI $npc_ai_evil
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_mondain
+{
+    NAME Mondain
+    TITLE the Wizard
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    ITEM $item_black_staff
+    ITEM $item_wizards_hat
+    COLORLIST 11
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 11
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 11
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_tunic_list
+    COLORLIST 11
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 11
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    LOOT $loot_circle_1-5_spells
+    LOOT $loot_reagents
+    LOOT $loot_uncut_gems
+    TOTAME 1100
+    STR 500 800
+    DEX 15 20
+    INT 500 1000
+    KARMA -10000
+    FAME 10000
+    PARRYING 900 1000
+    MAGICRESISTANCE 900 1000
+    TACTICS 900 1000
+    WRESTLING 900 1000
+    DAMAGE 15 25
+    DEF 25
+    SPATTACK 7552
+    SPADELAY 10
+    MAGERY 1000
+    SPEECH $speech_mondain
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_billy
+{
+    NAME Billy
+    TITLE the little jerk
+    ID 01A5
+    SKINLIST 16
+    DIRECTION N
+    SPEECH $speech_jeweler
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -1000
+    FAME 1000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 10 17
+    DEF 18
+    SPATTACK 4095
+    SPADELAY 10
+    MAGERY 500 700
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Characters
+}
+
+SECTION NPC $npc_cassandra
+{
+    NAME Cassandra
+    TITLE the little brat
+    ID 01A6
+    SKINLIST 16
+    DIRECTION N
+    SPEECH $speech_leatherworker
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    TOTAME 1100
+    STR 100 150
+    DEX 15 20
+    INT 50 70
+    KARMA -1000
+    FAME 1000
+    PARRYING 800 1000
+    MAGICRESISTANCE 500 700
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 10 17
+    DEF 18
+    SPATTACK 4095
+    SPADELAY 10
+    MAGERY 500 700
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Characters
+}
+
+SECTION NPC $npc_archmage
+{
+    NAMELIST $names_necromancers
+    //$$ archmage
+    TITLE the arch-mage
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION N
+    BACKPACK
+    GOLD 350 500
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 5
+    ITEM $item_wizards_hat
+    COLORLIST 1
+    ITEM $item_male_fancy_shirts_list
+    COLORLIST 1
+    ITEM $item_male_fancy_pants_list
+    COLORLIST 1
+    ITEM $item_male_fancy_footwear_list
+    ITEM $item_male_fancy_robe_list
+    COLORLIST 1
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 1
+    SPEECH $speech_mage
+    TOTAME 1100
+    STR 150 175
+    DEX 15 20
+    INT 500 750
+    KARMA -3000
+    FAME 3000
+    PARRYING 400 600
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    TACTICS 600 800
+    WRESTLING 700 900
+    DAMAGE 3 10
+    DEF 10
+    SPATTACK 7552
+    SPADELAY 10
+    MAGERY 900 990
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+    ///DESCRIPTION Archmage
+}
+
+SECTION NPC $npc_akbaar
+{
+    NAME Akbaar
+    TITLE the murderous arch-mage
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_male_fancy_robe_list
+    COLORLIST 1
+    ITEM $item_male_fancy_cape_list
+    COLORLIST 1
+    GOLD 500 600
+    SPEECH $speech_brigand
+    TOTAME 1100
+    STR 150 175
+    DEX 15 20
+    INT 250 500
+    KARMA -5000
+    FAME 5000
+    PARRYING 800 1000
+    MAGICRESISTANCE 600 800
+    MEDITATION 400 600
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    DAMAGE 5 15
+    DEF 18
+    SPATTACK 7552
+    SPADELAY 10
+    MAGERY 900 990
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_kindor_aedrat
+{
+    NAME Kindor Aedrat
+    TITLE the murderous archer
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    ITEM $item_random_beard_list
+    COLORMATCHHAIR
+    NPCAI $npc_ai_evil
+    SKINLIST 16
+    DIRECTION N
+    NPCWANDER 4
+    BACKPACK
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 15
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_bow
+    PACKITEM $item_arrow 100
+    ITEM $item_male_plain_robe_list
+    COLORLIST 1
+    ITEM $item_male_plain_cape_list
+    COLORLIST 1
+    GOLD 500 600
+    SPEECH $speech_strange_speech
+    TOTAME 1100
+    STR 150 175
+    DEX 15 45
+    INT 75 100
+    KARMA -5000
+    FAME 5000
+    PARRYING 800 1000
+    MAGICRESISTANCE 600 800
+    TACTICS 800 1000
+    WRESTLING 800 1000
+    ARCHERY 800 1000
+    DAMAGE 5 15
+    DEF 18
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Evils
+}
+
+SECTION NPC $npc_quest_knight_m
+{
+    NAMELIST $names_males
+    //$$ quest knight m
+    TITLE a Quest Knight
+    ID 0190
+    ITEM $item_random_male_hair_list
+    HAIRCOLOR 15
+    SKINLIST 16
+    DIRECTION N
+    SPEECH $speech_none
+    BACKPACK
+    ITEM $item_iron_platemail
+    ITEM $item_iron_plate_gorget
+    ITEM $item_iron_plate_gloves
+    ITEM $item_iron_plate_helm
+    ITEM $item_iron_plate_leggings
+    ITEM $item_iron_plate_sleeves
+    ITEM $item_iron_viking_sword
+    STR 50 66
+    DEX 15 20
+    INT 50 64
+    KARMA 2000
+    FAME 2000
+    PARRYING 500 600
+    MAGICRESISTANCE 100 220
+    TACTICS 475 625
+    WRESTLING 475 575
+    DAMAGE 6 12
+    DEF 12
+    NPCWANDER 4
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    NPCAI $npc_ai_good
+    TOTAME 1100
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Quest Knight [M]
+}
+
+// mounted npc's
+SECTION NPC $npc_knight
+{
+	NAMELIST $names_males
+	//$$ knight
+	TITLE the Knight
+	ID 0190
+	DIRECTION S
+	STR 100 150
+	INT 30 40
+	DEX 50 60
+	KARMA 1000
+	FAME 1000
+	PARRYING 400 500
+	TACTICS 600 700
+	WRESTLING 600 700
+	SWORDSMANSHIP 800 900
+	MAGICRESISTANCE 400 600
+	DEF 4
+	DAMAGE 5 40
+	BACKPACK
+	ITEM $item_iron_plate_helm
+	ITEM $item_iron_platemail
+	ITEM $item_iron_plate_sleeves
+	ITEM $item_iron_plate_gloves
+	ITEM $item_iron_plate_leggings
+	ITEM $item_iron_long_sword
+	ITEM $item_iron_wooden_kite_shield
+	ITEM $item_body_sash
+	COLORLIST 11
+	ITEM $item_tan_horse
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 30
+	TOTAME 1100
+	NPCAI $npc_ai_healer
+	ONHORSE
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Knight
+}
+
+SECTION NPC $npc_knight_1
+{
+	NAMELIST $names_males
+	//$$ knight
+	TITLE the Knight
+	ID 0190
+	DIRECTION S
+	STR 100 150
+	INT 50 60
+	DEX 30 40
+	KARMA 1000
+	FAME 1000
+	PARRYING 400 500
+	TACTICS 600 700
+	WRESTLING 600 700
+	SWORDSMANSHIP 800 900
+	MAGICRESISTANCE 400 600
+	DEF 4
+	DAMAGE 5 40
+	BACKPACK
+	ITEM $item_iron_platemail
+	ITEM $item_iron_plate_gorget
+	ITEM $item_iron_plate_gloves
+	ITEM $item_iron_plate_helm
+	ITEM $item_iron_plate_leggings
+	ITEM $item_iron_plate_sleeves
+	ITEM $item_iron_long_sword
+	ITEM $item_iron_wooden_kite_shield
+	ITEM $item_body_sash
+	COLORLIST 11
+	ITEM $item_dark_brown_horse
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 30
+	TOTAME 1100
+	NPCAI $npc_ai_healer
+	ONHORSE
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Knight
+}
+
+SECTION NPC $npc_the_black_knight
+{
+	NAME the Black Knight
+	ID 0190
+	DIRECTION S
+	STR 200 250
+	INT 25 75
+	DEX 40 50
+	KARMA -10000
+	FAME -10000
+	SWORDSMANSHIP 900 1000
+	PARRYING 600 800
+	TACTICS 800 900
+	WRESTLING 700 800
+	MAGICRESISTANCE 500 600
+	DEF 4
+	DAMAGE 5 30
+	ITEM $item_npc_equiplist_longswords
+	// random equipped magic sword
+	BACKPACK
+	ITEM $item_merkite_platemail
+	ITEM $item_merkite_plate_gorget
+	ITEM $item_merkite_plate_gloves
+	ITEM $item_merkite_plate_helm
+	ITEM $item_merkite_plate_leggings
+	ITEM plate_sleeves
+	ITEM $item_cloak
+	COLOR 0455
+	ITEM $item_nightmare
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 30
+	TOTAME 1100
+	NPCAI $npc_ai_evil
+	ONHORSE
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Black Knight
+}
+
+SECTION NPC $npc_cultist
+{
+	NAMELIST $names_males
+	//$$ cultist
+	SPEECH $speech_cultist
+	SKINLIST 5
+	TITLE The Cultist
+	ID 0190
+	ITEM $item_long_beard
+	HAIRCOLOR 0
+	ITEM $item_robe1
+	COLOR 220
+	ITEM $item_sandles
+	COLOR 0001
+	ITEM
+	NPCWANDER 4
+	STR 50
+	DEX 15 20
+	INT 100
+	DAMAGE 10 20
+	DEF 5
+	FAME 20000
+	KARMA -5000
+	BEGGING 9999
+	BACKPACK
+	GOLD 1000
+	MAGICRESISTANCE 400 500
+	WRESTLING 600 700
+	TACTICS 700 800
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Cultist
+}
+
+SECTION NPC $npc_priest_of_mondain
+{
+	NAMELIST $names_males
+	//$$ priest of mondain
+	TITLE the Priest of Mondain
+	ID 0190
+	SKINLIST 16
+	ITEM $item_random_male_hair_list
+	HAIRCOLOR 15
+	ITEM $item_random_beard_list
+	COLORMATCHHAIR
+	NPCAI $npc_ai_evilhealer
+	SPEECH $speech_mondain
+	BACKPACK
+	ITEM $item_gnarled_staff
+	ITEM $item_male_plain_hats_list
+	COLORLIST 5
+	ITEM $item_male_plain_shirts_list
+	COLORLIST 5
+	ITEM $item_male_plain_pants_list
+	COLORLIST 5
+	ITEM $item_male_plain_footwear_list
+	ITEM $item_male_plain_robe_list
+	COLORLIST 5
+	TOTAME 1100
+	STR 50 75
+	DEX 15 20
+	INT 20 50
+	KARMA 500
+	FAME 500
+	HEALING 400 600
+	SPIRITSPEAK 400 600
+	ANATOMY 400 600
+	FORENSICS 400 600
+	TACTICS 400 600
+	PARRYING 400 600
+	WRESTLING 400 600
+	MACEFIGHTING 400 600
+	MAGICRESISTANCE 400 600
+	DAMAGE 5 25
+	DEF 5
+	DIRECTION W
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 40
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Priest of Mondain [M]
+}
+
+SECTION NPC $npc_priestess_of_mondain
+{
+	NAMELIST $names_females
+	//$$ priestess of mondain
+	TITLE the Priestess of Mondain
+	ID 0191
+	SKINLIST 16
+	ITEM $item_random_male_hair_list
+	HAIRCOLOR 15
+	ITEM $item_random_beard_list
+	COLORMATCHHAIR
+	NPCAI $npc_ai_evilhealer
+	SPEECH $speech_mondain
+	BACKPACK
+	ITEM $item_gnarled_staff
+	ITEM $item_male_plain_hats_list
+	COLORLIST 5
+	ITEM $item_male_plain_shirts_list
+	COLORLIST 5
+	ITEM $item_male_plain_pants_list
+	COLORLIST 5
+	ITEM $item_male_plain_footwear_list
+	ITEM $item_male_plain_robe_list
+	COLORLIST 5
+	TOTAME 1100
+	STR 50 75
+	DEX 15 20
+	INT 20 50
+	KARMA 500
+	FAME 500
+	HEALING 400 600
+	SPIRITSPEAK 400 600
+	ANATOMY 400 600
+	FORENSICS 400 600
+	TACTICS 400 600
+	PARRYING 400 600
+	WRESTLING 400 600
+	MACEFIGHTING 400 600
+	MAGICRESISTANCE 400 600
+	DAMAGE 5 25
+	DEF 5
+	DIRECTION W
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 40
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Priest of Mondain [F]
+}
+
+//a fire knight
+
+SECTION NPC $npc_a_fire_knight
+{
+	NAME a Fire Knight
+	ID 0190
+	SKINLIST 16
+	DIRECTION S
+	TOTAME 1100
+	STR 200 225
+	DEX 75 125
+	INT 100 150
+	KARMA 0
+	FAME 0
+	PARRYING 790 890
+	MAGICRESISTANCE 890 990
+	TACTICS 690 890
+	WRESTLING 690 790
+	DAMAGE 20 40
+	DEF 14
+	BACKPACK
+	ITEM $item_iron_katana
+	ITEM $item_iron_plate_gorget
+	COLOR 04b9
+	ITEM $item_iron_platemail
+	COLOR 04b9
+	ITEM $item_iron_plate_gloves
+	COLOR 04b9
+	ITEM $item_iron_plate_helm
+	COLOR 04b9
+	ITEM $item_iron_plate_leggings
+	COLOR 04b9
+	ITEM $item_iron_plate_sleeves
+	COLOR 04b9
+	ITEM $item_iron_halberd
+	LOOT $loot_jewelry
+	LOOT $loot_jewelry
+	LOOT $loot_strong_magical_armor
+	LOOT $loot_strong_magical_weapons
+	GOLD 200 500
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 15
+	NPCAI $npc_ai_evil
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Fire Knight
+}
+
+//an ice knight
+
+SECTION NPC $npc_an_ice_knight
+{
+	NAME an Ice Knight
+	ID 0190
+	SKINLIST 16
+	DIRECTION S
+	TOTAME 1100
+	STR 200 225
+	DEX 75 125
+	INT 100 150
+	KARMA 0
+	FAME 0
+	PARRYING 790 890
+	MAGICRESISTANCE 890 990
+	TACTICS 690 890
+	WRESTLING 690 790
+	DAMAGE 20 40
+	DEF 8
+	BACKPACK
+	ITEM $item_iron_katana
+	ITEM $item_iron_plate_gorget
+	COLOR 0481
+	ITEM $item_iron_platemail
+	COLOR 0481
+	ITEM $item_iron_plate_gloves
+	COLOR 0481
+	ITEM $item_iron_plate_helm
+	COLOR 0481
+	ITEM $item_iron_plate_leggings
+	COLOR 0481
+	ITEM $item_iron_plate_sleeves
+	COLOR 0481
+	ITEM $item_iron_halberd
+	LOOT $loot_strong_magical_armor
+	LOOT $loot_strong_magical_weapons
+	GOLD 200 500
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 15
+	NPCAI $npc_ai_evil
+	WATERWALK
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Ice Knight
+}
+
+//a converted quest knight
+
+SECTION NPC $npc_converted_quest_knight
+{
+	NAMELIST $names_males
+	//$$ converted quest knight
+	TITLE a converted quest knight
+	ID 0190
+	ITEM $item_random_male_hair_list
+	HAIRCOLOR 15
+	SKINLIST 16
+	DIRECTION N
+	SPEECH $speech_none
+	TOTAME 1100
+	BACKPACK
+	ITEM $item_iron_platemail
+	ITEM $item_iron_plate_gorget
+	ITEM $item_iron_plate_gloves
+	ITEM $item_iron_plate_helm
+	ITEM $item_iron_plate_leggings
+	ITEM $item_iron_plate_sleeves
+	ITEM $item_iron_viking_sword
+	STR 50 66
+	DEX 15 20
+	INT 50 64
+	KARMA -1450
+	FAME 1450
+	PARRYING 500 600
+	MAGICRESISTANCE 100 220
+	TACTICS 475 625
+	WRESTLING 475 575
+	DAMAGE 6 12
+	DEF 12
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 20
+	NPCAI $npc_ai_evil
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Converted Quest Knight
+}
+
+//a barbarian
+
+SECTION NPC $npc_barbarian
+{
+	NAMELIST $names_males
+	//$$ barbarian
+	TITLE a barbarian
+	ID 0190
+	SKINLIST 16
+	DIRECTION S
+	STR 225 275
+	INT 125 175
+	DEX 155 185
+	KARMA 0
+	FAME 0
+	PARRYING 600 700
+	TACTICS 600 700
+	WRESTLING 600 700
+	SWORDSMANSHIP 600 700
+	MAGICRESISTANCE 800 900
+	DEF 5
+	DAMAGE 5 40
+	BACKPACK
+	LOOT $loot_uncut_gems
+	LOOT $loot_jewelry
+	LOOT $loot_omnivores_food
+	LOOT $loot_food_wine_bread_cheese_meat
+	GOLD 20 100
+	ITEM $item_iron_plate_helm
+	ITEM $item_iron_plate_leggings
+	ITEM $item_cloak
+	ITEM $item_robe1
+	ITEM $item_boots
+	ITEM $item_bone_chest
+	ITEM $item_leather_leggings
+	ITEM $item_leather_gloves
+	ITEM $item_leather_gorget
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 30
+	TOTAME 1100
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Barbarian
+}
+
+//the executioner
+
+SECTION NPC $npc_executioner
+{
+	NAMELIST $names_males
+	//$$ executioner
+	TITLE the executioner
+	ID 0190
+	ITEM $item_random_male_hair_list
+	HAIRCOLOR 15
+	NPCAI $npc_ai_evil
+	SKINLIST 16
+	DIRECTION W
+	BACKPACK
+	GOLD 150 200
+	ITEM $item_iron_executioners_axe
+	ITEM $item_male_plain_pants_list
+	COLORLIST 21
+	ITEM $item_male_plain_footwear_list
+	ITEM $item_male_plain_tunic_list
+	COLORLIST 21
+	NPCWANDER 4
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 20
+	SPEECH $speech_brigand
+	TOTAME 1100
+	STR 300 415
+	DEX 70 85
+	INT 60 85
+	KARMA -5000
+	FAME 5000
+	PARRYING 600 800
+	MAGICRESISTANCE 1000
+	TACTICS 800 900
+	FENCING 800 950
+	WRESTLING 600 800
+	DAMAGE 40 60
+	DEF 15
+	DOORUSE 1
+
+	///CATEGORY Humans
+	///SUBSECTION Miscellaneous
+	///DESCRIPTION Executioner
+}
+
+SECTION NPC $npc_slut
+{
+    NAMELIST $names_females
+    //$$ slut
+    TITLE the slut
+    ID 0191
+    SKIN 83ea
+    BACKPACK
+    ITEM $item_random_female_hair_list
+    COLOR 00ee
+    COLORMATCHHAIR
+    DIRECTION W
+    TOTAME 1100
+    STR 76 95
+    DEX 15 20
+    INT 26 40
+    STEALING 900
+    KARMA -5000
+    FAME 0
+    NPCWANDER 2
+    FX1 -1
+    FY1 -1
+    FZ1 -1
+    FX2 20
+    DOORUSE 1
+
+    ///CATEGORY Humans
+    ///SUBSECTION Miscellaneous
+    ///DESCRIPTION Slut
+}
+	
+SECTION NPC $npc_jessie
+{ Invul Spawner
+	NAME Jessie
+	TITLE the engineer
+	ID 0191
+	PRIV1 4
+	ITEM $item_random_female_hair_list
+	HAIRCOLOR 15
+	SKINLIST 16
+	SPEECH $speech_engineer
+	BACKPACK
+	ITEM $item_female_plain_shirts_list
+	COLORLIST 11
+	ITEM $item_female_plain_pants_list
+	COLORLIST 11
+	ITEM $item_female_plain_footwear_list
+	ITEM $item_female_plain_tunic_list
+	COLORLIST 11
+	NPCWANDER 3
+	FX1 -1
+	FY1 -1
+	FZ1 -1
+	FX2 5
+	TOTAME 1100
+	STR 50 75
+	DEX 15 20
+	INT 50 75
+	KARMA 0
+	FAME 0
+	TINKERING 400 600
+	LOCKPICKING 400 600
+	DAMAGE 3 15
+	DOORUSE 1
+	
+	//CATEGORY Humans
+	//SUBSECTION Merchants
+	//DESCRIPTION Engineer [F]
+}
+
 SECTION NPC $npc_official
 {
 	#copy NPC $npc_person_basic
