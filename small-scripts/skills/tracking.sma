@@ -17,11 +17,6 @@ static where[8][] = {
 
 public __nxw_sk_tracking( const socket )
 {
-	new chr = getCharFromSocket( socket );
-	if ( !chr_checkSkill(chr, SK_TRACKING, 0, 1000, 1) ) {
-		ntprintf( socket, "You cannot see any sign" ); 
-		return;
-	}
 
 	new menu = gui_createIconList( "handle_tracking", "What do you wish to track?"  );
 
@@ -42,6 +37,12 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 		return;
 		
 	new chr=getCharFromSocket( socket );
+	
+	if ( !chr_checkSkill(chr, SK_TRACKING, 0, 1000, 1) ) {
+		ntprintf( socket, "You cannot see any sign" ); 
+		return;
+	}
+	
 	new range = VISRANGE * 2;
 	new set = set_create();
 		
