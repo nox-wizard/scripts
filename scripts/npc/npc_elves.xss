@@ -956,7 +956,7 @@ SECTION NPC $npc_drow_mistress
     ITEM $item_piwafwi
     ITEM $item_robe1
     COLOR 0086
-    ITEM $item_agapite_chain_tunic
+    ITEM $item_gapite_chain_tunic
     TOTAME 1100
     STR 350 350
     DEX 15 20
