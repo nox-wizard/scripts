@@ -24,10 +24,10 @@
 #include "small-scripts/guild/guildstone.sma"
 #include "small-scripts/race/menu/menu.sma"
 #include "small-scripts/party/party.sma"
-
+#include "small-scripts/house/housemenu.sma"
 
 #include "small-scripts/custom/default.sma"
-
+#include "small-scripts/custom/speech.sma"
 
 //
 // Include the Shard's script
