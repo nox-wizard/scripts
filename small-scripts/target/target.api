@@ -44,8 +44,8 @@ native target_do( const target, const chr );
 /*}@ */
 /*!
 \brief Example of target callback
-\example public callback( const targettype, const chrsource, const target, const x, const y, const z, const model, const param1 )
-\param targettype - the kind of the target (1: playerchar, 2: item, 3: npc, 4: ground) the target serial
+\example public callback( const unknown, const chrsource, const target, const x, const y, const z, const model, const param1 )
+\param unknown - seems to be counted up starting from one, unknown intention
 \param chrsource - the character that started the target-function
 \param target - the serial of the item/npc targetted, -1 if ground
 \param x, y, z - the location or INVALID if not a location targetted

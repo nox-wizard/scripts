@@ -111,9 +111,9 @@ public TweakStart( const t, const chrsource, const target, const x, const y, con
 		chr_message( chrsource, _,"Select a char or item,please");
 		return;
 	}
-	if ( (t == 1) || (t==3)) //is npc/char
+	if ( isChar(target)) //is npc/char
 	        tweak_char(chrsource,target, 1);
-	else if ( t==2)
+	else if ( isItem(target))
 		callItemMenu(chrsource,target, 1);
 }
 
