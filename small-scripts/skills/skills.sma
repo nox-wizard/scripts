@@ -19,6 +19,8 @@
 #include "small-scripts/skills/mining.sma"
 //Tailoring
 #include "small-scripts/skills/tailoring.sma"
+//Tannering
+#include "small-scripts/skills/tannering.sma"
 //Taste Identification
 #include "small-scripts/skills/tasteid.sma"
 
