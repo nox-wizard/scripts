@@ -1016,7 +1016,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_setProperty( twkChrMenu,MP_BUFFER,0,PROP_CHARACTER );
 	gui_setProperty( twkChrMenu,MP_BUFFER,1,target );
 	gui_setProperty( twkChrMenu,MP_BUFFER,3,BUTTON_APPLY );
-	gui_setProperty( twkChrMenu,MP_BUFFER,5,pagenumber );
+	gui_setProperty( twkChrMenu,MP_BUFFER,2,pagenumber );
 
 	gui_addPage(twkChrMenu,0);
 	gui_addResizeGump(twkChrMenu,10,35,5054,550,530 );
@@ -1729,7 +1729,8 @@ public tweak_char(const chrsource, const target, pagenumber)
 public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 {
 	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 );
-	new pagenumber = gui_getProperty( twkChrMenu,MP_BUFFER,5 );
+	new pagenumber = gui_getProperty( twkChrMenu,MP_BUFFER,2 );
+	printf("page: %d", pagenumber);
 	new startline;
 	new leftrow;
 	new rightrow;
@@ -1772,25 +1773,28 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 	{
 		case 1..8: 	
 		{	
-			printf("call viewchrMenu^n");	
+			//printf("call viewchrMenu^n");	
 			viewchrMenu(chrsource, target, buttonCode);
 				//gui_delete( twkChrMenu );
 		}
 		case 10:
 		{
-		        if(1 <= pagenumber <= 4)
+		        if(0 < pagenumber < 5)
 		        {
 		        	for(i=startline; i<=endline; ++i)
 		        	{
 		        		new linetype = chr_twkarray[i][ct_linetype];
+		        		new propnumber = chr_twkarray[i][ct_propnumber];
+		        		new type=chr_twkarray[i][ct_propnumber];
+		        		new checked=0;
+		        		new checkbox = gui_getProperty(twkChrMenu,MP_CHECK,i);
+		        		printf("linetype: %d", linetype);
 		        		checklev = 0;
 		        		if(linetype == 3)
 		        		{
 		        			new textbuf_input[15];
 		        			new textbuf_origin[15];
 		        			new value=0;
-		        			new type=chr_twkarray[i][ct_propnumber];
-		        			new checked=0;
 		        			if( type== 1) //TFX function
 		        			{
 		        				sprintf(textbuf_origin, "%s", chr_twkarray[i][ct_inputname]);
@@ -1838,26 +1842,32 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 			        	}//linetype
 			        	else if(linetype == 4) //checkbox
 		        		{
-		        			if((chr_twkarray[i][ct_propnumber] == 134) || (chr_twkarray[i][ct_propnumber] == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
+		        			printf("enter checkbox line, propnumber: %d^n", propnumber);
+		        			if((propnumber == 134) || (propnumber == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
 						{
 							new privvalue = chr_twkarray[i][ct_infotype]
 							if(privvalue >= 10)
 							privvalue = (privvalue/10)*16;
-							if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] == privvalue) //property status we have
+							if(chr_getProperty( target,propnumber)&chr_twkarray[i][ct_infotype] == privvalue) //property status we have
 								checklev = 1;
 							if( checklev < gui_getProperty(twkChrMenu,MP_CHECK,i)) //its checked now and status changed to ON
-								chr_setProperty( target,chr_twkarray[i][ct_propnumber],_, chr_getProperty( target,chr_twkarray[i][ct_propnumber],_)|chr_twkarray[i][ct_infotype] );
+								chr_setProperty( target,propnumber,_, chr_getProperty( target,propnumber,_)|chr_twkarray[i][ct_infotype] );
 							else if(checklev > gui_getProperty(twkChrMenu,MP_CHECK,i)) //its checked now and status changed to OFF
-								chr_setProperty( target,chr_twkarray[i][ct_propnumber],_, chr_getProperty( target,chr_twkarray[i][ct_propnumber],_)&~chr_twkarray[i][ct_infotype] );
+								chr_setProperty( target,propnumber,_, chr_getProperty( target,propnumber,_)&~chr_twkarray[i][ct_infotype] );
 						}
-						else if(chr_twkarray[i][ct_propnumber] == 0) //customized button function, for example open bank box
+						else if(propnumber == 0) //customized button function, for example open bank box
 						{
 							new infotype = chr_twkarray[i][ct_infotype];
-							if( (infotype == 1) && gui_getProperty(twkChrMenu,MP_CHECK,i)) //bank box opening
-								chr_getBankBox(target, BANKBOX_NORMAL);
-							else if((infotype == 2) && gui_getProperty(twkChrMenu,MP_CHECK,i)) //gold bank opening
-								chr_getBankBox(target, BANKBOX_GOLDONLY);
-							else if( (infotype == 3) && gui_getProperty(twkChrMenu,MP_CHECK,i)) //go to guild stone
+							new bank;
+							printf("line name: %s, infotype: %d, checkbox: %d", chr_twkarray[i][ct_linename], infotype, checkbox);
+							if( (infotype == 1) && (checkbox == 1)) //bank box opening
+							{
+								bank = chr_getBankBox(target, BANKBOX_NORMAL);
+								itm_showContainer(bank,chrsource);
+							}
+							else if((infotype == 2) && (checkbox == 1)) //gold bank opening
+								itm_showContainer( chr_getBankBox(target, BANKBOX_GOLDONLY),chrsource);
+							else if( (infotype == 3) && (checkbox == 1)) //go to guild stone
 							{
 								new x = itm_getProperty(chr_getGuild(target), IP_POSITION, IP2_X);
 								new y = itm_getProperty(chr_getGuild(target), IP_POSITION, IP2_Y);
@@ -1865,42 +1875,42 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 								chr_moveTo( chrsource, x, y, z);
 							}
 							else if( infotype == 4) //polymorp/unmorph
-								if (!(gui_getProperty(twkChrMenu,MP_CHECK,i))&& (chr_getProperty( target,CP_ID)) != (chr_getProperty(target,CP_XID))) //not checked and is morphed, if(chr_getProperty( target,CP_POLYMORPH) == 1) //polymorphed
+								if (!((checkbox == 1))&& (chr_getProperty( target,CP_ID)) != (chr_getProperty(target,CP_XID))) //not checked and is morphed, if(chr_getProperty( target,CP_POLYMORPH) == 1) //polymorphed
 		        						chr_unmorph(target);
-		        					else if((gui_getProperty(twkChrMenu,MP_CHECK,i))&& (chr_getProperty( target,CP_ID)) == (chr_getProperty(target,CP_XID))) //is checked and not morphed
+		        					else if(((checkbox == 1))&& (chr_getProperty( target,CP_ID)) == (chr_getProperty(target,CP_XID))) //is checked and not morphed
 		        						callPolyMenu(chrsource, target,1); //polymorph
 						}
 						else //on/off check only
 						{
-							checklev = chr_getProperty(target,chr_twkarray[i][ct_propnumber]); //status of property
-							if((checklev == 0) && ( gui_getProperty(twkChrMenu,MP_CHECK,i))) //is checked and was zero
-								chr_setProperty( target, (chr_twkarray[i][ct_propnumber]),_, 1);
-							else if((checklev != 0) && (!gui_getProperty(twkChrMenu,MP_CHECK,i))) //is not checked and was not zero
-								chr_setProperty( target,(chr_twkarray[i][ct_propnumber]) ,_, 1);
+							checklev = chr_getProperty(target,propnumber); //status of property
+							if((checklev == 0) && ( (checkbox == 1))) //is checked and was zero
+								chr_setProperty( target, (propnumber),_, 1);
+							else if((checklev != 0) && (!(checkbox == 1))) //is not checked and was not zero
+								chr_setProperty( target,(propnumber) ,_, 1);
 						}
 		        		}
 		        		else if(linetype == 5) //radiobutton
 		        		{
-		        			if((chr_twkarray[i][ct_propnumber] == 110) || (chr_twkarray[i][ct_propnumber] == 121)) //bitfields (for example visibility)
+		        			if((propnumber == 110) || (propnumber == 121)) //bitfields (for example visibility)
 						{
-							if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] == chr_twkarray[i][ct_infotype]) //which status does the property has so far?
+							if(chr_getProperty( target,propnumber)&chr_twkarray[i][ct_infotype] == chr_twkarray[i][ct_infotype]) //which status does the property has so far?
 								checklev = 1; //yes
-							if( gui_getProperty(twkChrMenu,MP_CHECK,i) > checklev ) //changed status and checked now
-								chr_setProperty( target,chr_twkarray[i][ct_propnumber],_, chr_getProperty( target,chr_twkarray[i][ct_propnumber],_)|chr_twkarray[i][ct_infotype] );
+							if( (checkbox == 1) > checklev ) //changed status and checked now
+								chr_setProperty( target,propnumber,_, chr_getProperty( target,propnumber,_)|chr_twkarray[i][ct_infotype] );
 							else
-								chr_setProperty( target,chr_twkarray[i][ct_propnumber],_, chr_getProperty( target,chr_twkarray[i][ct_propnumber],_)&~chr_twkarray[i][ct_infotype] );
+								chr_setProperty( target,propnumber,_, chr_getProperty( target,propnumber,_)&~chr_twkarray[i][ct_infotype] );
 						}
-		        			else if(chr_twkarray[i][ct_propnumber] == 111) //splitted normal properties, for example moveable (CP_MAGIC)
+		        			else if(propnumber == 111) //splitted normal properties, for example moveable (CP_MAGIC)
 						{
-							if(chr_twkarray[i][ct_propval] == chr_getProperty( target,chr_twkarray[i][ct_propnumber])) //which status does the property has so far?
+							if(chr_twkarray[i][ct_propval] == chr_getProperty( target,propnumber)) //which status does the property has so far?
 								checklev = 1;
-							if( gui_getProperty(twkChrMenu,MP_CHECK,i) > checklev) //changed status and checked now
-								chr_setProperty( target,chr_twkarray[i][ct_propnumber], chr_twkarray[i][ct_propval]);
+							if( (checkbox == 1) > checklev) //changed status and checked now
+								chr_setProperty( target,propnumber, chr_twkarray[i][ct_propval]);
 						}
 					}//linetype
 					else if(linetype == 7) //stock function call
 					{
-						//new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
+						//new q = (propnumber); //type of stock function
 						//new output;
 						printf("needed callback: %d", i);
 					}
@@ -1912,7 +1922,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        	new oldevent[15];
 		        	for(i=0;i<NUM_chrevent;i++)
 		        	{
-		        		if ( !gui_getProperty(twkChrMenu,MP_CHECK,i+1)) //checkbox no more checked and event had existed
+		        		if ( !gui_getProperty(twkChrMenu,MP_CHECK,i+1)) //(checkbox == 1) no more checked and event had existed
 		        		{
 		        			//printf("del event");
 		        			chr_delEventHandler(target, eventChr_array[i][eventnum]);
@@ -1934,7 +1944,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        	{
 		        		if (chr_isaLocalVar(target, i, VAR_TYPE_ANY))
 		        		{
-		        			if(!(gui_getProperty(twkChrMenu,MP_CHECK,i)))
+		        			if(gui_getProperty(twkChrMenu,MP_CHECK,i)!= 1)
 		        			{
 		        				chr_delLocalVar(target, i)
 		        			}
