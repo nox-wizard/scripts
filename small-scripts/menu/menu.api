@@ -175,29 +175,12 @@ native menu_addHtmlGump( const menu, const x, const y, const width, const height
 \param 4 width
 \param 5 height
 \param 6 text id
-\param 7 initial value
-\param 8 color
-\return false if error, true else
-\fn menu_addInputField( const menu, const x, const y, const width, const height, const textId, const text, const color=0 )
-*/
-native menu_addInputField( const menu, const x, const y, const width, const height, const textId, const text, const color=0 );
-
-/*!
-\brief Add a new property field at given menu
-\author Endymion
-\param 1 the menu serial
-\param 2 x
-\param 3 y
-\param 4 width
-\param 5 height
-\param 6 property
-\param 7 sub property
+\param 7 color
 \param 8 initial value
-\param 9 color
 \return false if error, true else
-\fn menu_addPropertyField( const menu, const x, const y, const width, const height, const property, const subPro, const text, const color = 0 )
+\fn menu_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[]  )
 */
-native menu_addPropertyField( const menu, const x, const y, const width, const height, const property, const subPro, const text, const color = 0 );
+native menu_addInputField( const menu, const x, const y, const width, const height, const textId, const color=0, const text[]  );
 
 /*!
 \brief Add a new property field at given menu
@@ -250,12 +233,12 @@ native menu_addResizeGump( const menu, const x, const y, const gump, const width
 \param 1 the menu serial
 \param 2 x
 \param 3 y
-\param 4 text
-\param 5 color
+\param 4 color
+\param 5 text
 \return false if error, true else
-\fn menu_addText( const menu, const x, const y, const text[], const color=0 )
+\fn menu_addText( const menu, const x, const y, const color=0, const text[] )
 */
-native menu_addText( const menu, const x, const y, const text[], const color=0 );
+native menu_addText( const menu, const x, const y, const color=0, const text[]  );
 
 /*!
 \brief Add a new tile picture at given menu
