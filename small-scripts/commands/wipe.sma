@@ -146,8 +146,14 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 	area_refresh(area);
 }
 
-public cmd_wipe_rect(chr,x0,y0,x1,y1)
+public cmd_wipe_rect(chr,xy0,xy1,z0,z1)
 {
+	new x0 = xy0 >> 16;
+	new y0 = xy0 & 0xFFFF;
+	
+	new x1 = xy1 >> 16;
+	new y1 = xy1 & 0xFFFF;
+	
 	#if _CMD_DEBUG_
 		log_message("^t->deleting items in rectangle %d %d %d %d",x0,y0,x1,y1);
 	#endif
@@ -162,7 +168,9 @@ public cmd_wipe_rect(chr,x0,y0,x1,y1)
 	for(set_rewind(s);!set_end(s);)
 	{
 		itm = set_getItem(s);
-		itm_remove(itm);
+		new itmz = itm_getProperty(itm, IP_POSITION, IP2_Z);
+		if(z0<=itmz<=z1)
+			itm_remove(itm);
 
 		#if _CMD_DEBUG_
 			log_message("^t->item %d removed",itm);

@@ -80,16 +80,24 @@ public getRectangle(const chr, callback[])
 You shouldn't need to look edit this function
 \return nothing
 */
-public rectangle_cback_1(target, chr, object, x, y, z, unused, unused1)
+new rect_z;
+new rect_object;
+public rectangle_cback_1(target, chr, object, x, y, z, staticid, unused1)
 {
+	//get xyz no matter if item, char or object was targeted
 	if(getMapLocation(object,x,y,z) == INVALID)
 	{
 		chr_message(chr,_,msg_nxwlibDef[1]);
 		return;
 	}
 	
-	chr_message(chr,_,msg_nxwlibDef[2]);
+	rect_z = z;
+	rect_object = object;
+	//we have 32bit for storing x1,y1 and z1, we use 16 for x, 16 for y
+	//and basic z we store in ...?
 	new xy = (x << 16) + y;
+	chr_message(chr,_,msg_nxwlibDef[2]);
+	
 	target_create(chr,xy,_,_,"rectangle_cback_2");
 
 }
@@ -105,7 +113,134 @@ public rectangle_cback_1(target, chr, object, x, y, z, unused, unused1)
 You shouldn't need to look edit this function
 \return nothing
 */
-public rectangle_cback_2(target, chr, object, x, y, z, unused, xy)
+public rectangle_cback_2(target, chr, object1, x, y, z, unused, xy)
+{
+	if(getMapLocation(object1,x,y,z) == INVALID)
+	{
+		chr_message(chr,_,msg_nxwlibDef[1]);
+		return;
+	}
+	
+	new x1,x0 = xy >> 16;
+	new y1,y0 = xy & 0xFFFF;
+	
+	if(x0 > x)
+	{
+		x1 = x0;
+		x0 = x;
+	}
+	else x1 = x;
+	
+	if(y0 > y)
+	{
+		y1 = y0;
+		y0 = y;
+	}
+	else y1 = y;
+	
+	new xy0=(x0 << 16) + y0;
+	new xy1=(x1 << 16) + y1;
+	new z0=rect_z;
+	new z1=z;
+	
+	new callback[AMX_FUNCTION_LENGTH + 1];
+	chr_getLocalStrVar(chr,CLV_TEMP1,callback);
+	chr_delLocalVar(chr,CLV_TEMP1);
+	
+	callFunction6P(funcidx(callback),chr,xy0,xy1,z0,z1,rect_object);
+}
+
+/*!
+\author Fax
+\fn getRectangle(const chr, callback[])
+\param chr: the character
+\param callback[]: the function that will be called at the end of rectangle aquisition
+\since 0.82
+\brief ask the player to select a rectangle on the map by clicking two map locations that will be the corners of the rectangle.
+
+This function is used to ask a player for a map rectangle, player hasto target 2 map locations 
+(he can target items or characters, in that cas the object's position will be taken) and then the callback
+will be called and it will be passed the rectangle.<br>
+Callback proptotype must be:<br>
+\code
+public callback(chr,x0,y0,x1,y1)
+\endcode
+x0,y0 are the top left corner coords<br>
+x1,y1 are the bottom right corner coords<br>
+It's always x0 <= x1 && y0 <= y1.
+\return nothing
+*/
+public getRectangleTop(const chr, callback[])
+{
+	printf("enter rect^n");
+	chr_delLocalVar(chr,CLV_TEMP1);
+	chr_addLocalStrVar(chr,CLV_TEMP1,callback);
+	
+	chr_message(chr,_,msg_nxwlibDef[0]);
+	target_create(chr,_,_,_,"rectangleTop_cback_1");
+}
+
+/*!
+\author Fax
+\fn rectangleTop_cback_1(target, chr, object, x, y, z, unused, unused1)
+\param all: standard target callback params
+\since 0.82
+\brief first callback to get the rectangle
+Gives the top of the target for adding stuff on top of other items
+You shouldn't need to look edit this function
+\return nothing
+*/
+public rectangleTop_cback_1(target, chr, object, x, y, z, itemid, unused1)
+{
+	//get xyz no matter if item, char or object was targeted
+	if(getMapLocation(object,x,y,z) == INVALID)
+	{
+		chr_message(chr,_,msg_nxwlibDef[1]);
+		return;
+	}
+	
+	//printf("staticid is %d^n", itemid);
+	
+	new height;
+	new worldstone_loc = createResourceMap( RESOURCEMAP_LOCATION, 1, "worldstone_loc");
+	
+	if(itemid != -1)
+	{
+		if(0x0<=itemid<=0x1770)
+			height = getResourceLocationValue(worldstone_loc, 1, itemid, 1 ); //region exists (value of y=id is height)
+		else if(0x1771<=itemid<=0x2EE0)
+			height = getResourceLocationValue(worldstone_loc, 2, itemid, 1 ); //region exists (value of y=id is height)
+		else if(0x2EE1<=itemid<=0x4650)
+			height = getResourceLocationValue(worldstone_loc, 3, itemid, 1 ); //region exists (value of y=id is height)
+		//always put it for errors in rendering 1 higher on floor tiles
+		if( height == 0) height = 1;
+	}
+	else height = 0;
+	
+	//printf("height is %d, z0 in rectangle is: %d^n", height, z);
+	rect_z = z+height;	
+	//we have 32bit for storing x1,y1 and z1, we use 16 for x, 16 for y
+	//and basic z we store in ...?
+	//printf("z0 in rectangle after height check is: %d^n", rect_z);
+	new xy = (x << 16) + y;
+	chr_message(chr,_,msg_nxwlibDef[2]);
+	
+	target_create(chr,xy,_,_,"rectangleTop_cback_2");
+
+}
+
+
+/*!
+\author Fax, Horian
+\fn rectangleTop_cback_2(target, chr, object, x, y, z, unused, unused1)
+\param all: standard target callback params
+\since 0.82
+\brief second callback to get the rectangle
+Gives the top of the target for adding stuff on top of other items
+You shouldn't need to look edit this function
+\return nothing
+*/
+public rectangleTop_cback_2(target, chr, object, x, y, z, itemid, xy)
 {
 	if(getMapLocation(object,x,y,z) == INVALID)
 	{
@@ -130,11 +265,33 @@ public rectangle_cback_2(target, chr, object, x, y, z, unused, xy)
 	}
 	else y1 = y;
 	
+	new xy0=(x0 << 16) + y0;
+	new xy1=(x1 << 16) + y1;
+	new z0=rect_z;
+	
+	new height;
+	new worldstone_loc = createResourceMap( RESOURCEMAP_LOCATION, 1, "worldstone_loc");
+	
+	if(itemid != -1)
+	{
+		if(0x0<=itemid<=0x1770)
+			height = getResourceLocationValue(worldstone_loc, 1, itemid, 1 ); //region exists (value of y=id is height)
+		else if(0x1771<=itemid<=0x2EE0)
+			height = getResourceLocationValue(worldstone_loc, 2, itemid, 1 ); //region exists (value of y=id is height)
+		else if(0x2EE1<=itemid<=0x4650)
+			height = getResourceLocationValue(worldstone_loc, 3, itemid, 1 ); //region exists (value of y=id is height)
+		//always put it for errors in rendering 1 higher on floor tiles
+		if( height == 0) height = 1;
+	}
+	else height = 0;
+	
+	new z1=z+height;
+	
 	new callback[AMX_FUNCTION_LENGTH + 1];
 	chr_getLocalStrVar(chr,CLV_TEMP1,callback);
 	chr_delLocalVar(chr,CLV_TEMP1);
 	
-	callFunction5P(funcidx(callback),chr,x0,y0,x1,y1);
+	callFunction5P(funcidx(callback),chr,xy0,xy1,z0,z1);
 }
 
 

@@ -37,14 +37,14 @@ public cmd_tile(const chr)
 	}
 	else
 	{
-		getRectangle(chr,"cmd_tile_rect");
+		getRectangleTop(chr,"cmd_tile_rect");
 		return;
 	}
 	
 	//call with no further params -> ask for rectangle
 	if(!strlen(__cmdParams[1]))
 	{
-		getRectangle(chr,"cmd_tile_rect");
+		getRectangleTop(chr,"cmd_tile_rect");
 		return;
 	}
 
@@ -76,7 +76,7 @@ public cmd_tile(const chr)
 \params all standard target callback params
 \brief handles parametrized tiling
 */
-public cmd_tile_targ(target, chr, object, x, y, z, unused, nXnYnZzScale)
+public cmd_tile_targ(target, chr, object, x, y, z, staticid, nXnYnZzScale)
 {
 	if(!isItem(object))
 	{
@@ -90,31 +90,49 @@ public cmd_tile_targ(target, chr, object, x, y, z, unused, nXnYnZzScale)
 	 new nZ = (nXnYnZzScale >> 8)& 0xFF;
 	 new zScale = nXnYnZzScale & 0xFF;
 	 
-	 cmd_tile_copyItem(object,x,y,z,nX,nY,nZ,zScale);
+	new itemid;
+	new height;
+	new worldstone_loc = createResourceMap( RESOURCEMAP_LOCATION, 1, "worldstone_loc");
+	if(isItem(object))
+		itemid = itm_getProperty(object, IP_ID);
+	else if( (staticid != INVALID) && (object == INVALID))
+		itemid = staticid;
+	if(0x0<=itemid<=0x1770)
+		height = getResourceLocationValue(worldstone_loc, 1, itemid, 1 ); //region exists (value of y=id is height)
+	else if(0x1771<=itemid<=0x2EE0)
+		height = getResourceLocationValue(worldstone_loc, 2, itemid, 1 ); //region exists (value of y=id is height)
+	else if(0x2EE1<=itemid<=0x4650)
+		height = getResourceLocationValue(worldstone_loc, 3, itemid, 1 ); //region exists (value of y=id is height)
+	if( height == 0) height = 1;
+	 
+	 cmd_tile_copyItem(object,x,y,(z+height),nX,nY,nZ,zScale);
 }
 
-public cmd_tile_rect(chr,x0,y0,x1,y1)
+public cmd_tile_rect(chr,xy0,xy1,z0,z1)
 {
+	new x0 = xy0 >> 16;
+	new y0 = xy0 & 0xFFFF;
+	
+	new x1 = xy1 >> 16;
+	new y1 = xy1 & 0xFFFF;
+	
 	new nX = x1 - x0 + 1;
 	new nY = y1 - y0 + 1;
 	new nXnY = (nX << 16) + nY;
-
-	new xy = (x0 << 16) + y0;
-	chr_addLocalIntVar(chr,CLV_CMDTEMP,xy);
+	
+	//printf("z for tile is %d^n",z0);
 
 	//which item?
 	if(!strlen(itemStr))
 	{
 		chr_message(chr,_,msg_commandsDef[253]);
-		target_create(chr,nXnY,_,_,"cmd_tile_targ1");
+		target_create(chr,nXnY,_,_,"cmd_tile_targ1"); //no item defined, so which item to place?
 		return;
 	}
 	else
-		new x = xy >> 16;
-		new y = xy & 0xFFFF;
-		new z = map_getZ(x,y);
 		new object = itm_createByDef(itemStr);
-		cmd_tile_copyItem(object,x,y,z,nX,nY,1,1);
+		
+		cmd_tile_copyItem(object,x0,y0,z0,nX,nY,1,1);
 		itm_remove(object);
 }
 

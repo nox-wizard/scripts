@@ -70,8 +70,13 @@ public cmd_npcwander_targ(target, chr, object, x, y, z, unused, wander)
 	}
 }
 
-public cmd_npcwander_rect(chr,x0,y0,x1,y1)
+public cmd_npcwander_rect(chr,xy0,xy1,z0,z1)
 {
+	new x0 = xy0 >> 16;
+	new y0 = xy0 & 0xFFFF;
+	
+	new x1 = xy1 >> 16;
+	new y1 = xy1 & 0xFFFF;
 	new npc = chr_getLocalIntVar(chr,CLV_CMDTEMP);
 	chr_delLocalVar(chr,CLV_CMDTEMP);
 	

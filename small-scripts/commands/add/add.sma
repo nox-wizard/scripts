@@ -173,7 +173,7 @@ public cmd_add_npc_targ(target, chr, object, x, y, z, unused1, scriptID)
 \fn cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 \brief handles targetting
 */
-public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
+public cmd_add_itm_targ(target, chr, object, x, y, z, staticid, scriptID)
 {
 	new amount = chr_getTempIntVar(chr,CLV_CMDTEMP);
 	
@@ -200,6 +200,7 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 
 	else 	if(isItem(object))
 			itm_getPosition(object,x,y,z);
+			
 		else 	if(x == INVALID || y == INVALID)
 			{
 				chr_message(chr,_,"Invalid map location %d %d",x,y);
@@ -208,7 +209,23 @@ public cmd_add_itm_targ(target, chr, object, x, y, z, unused1, scriptID)
 			}
 
 	new itm = itm_create(scriptID);
-	itm_moveTo(itm,x,y,z);
+	
+	new itemid;
+	new height;
+	new worldstone_loc = createResourceMap( RESOURCEMAP_LOCATION, 1, "worldstone_loc");
+	if(isItem(object))
+		itemid = itm_getProperty(object, IP_ID);
+	else if( (staticid != INVALID) && (object == INVALID))
+		itemid = staticid;
+	if(0x0<=itemid<=0x1770)
+		height = getResourceLocationValue(worldstone_loc, 1, itemid, 1 ); //region exists (value of y=id is height)
+	else if(0x1771<=itemid<=0x2EE0)
+		height = getResourceLocationValue(worldstone_loc, 2, itemid, 1 ); //region exists (value of y=id is height)
+	else if(0x2EE1<=itemid<=0x4650)
+		height = getResourceLocationValue(worldstone_loc, 3, itemid, 1 ); //region exists (value of y=id is height)
+	if( height == 0) height = 1;
+	
+	itm_moveTo(itm,x,y,z+height);
 	itm_refresh(itm);
 	chr_message(chr,_,"Item %d created",itm);
 	

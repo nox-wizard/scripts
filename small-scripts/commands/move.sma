@@ -24,8 +24,11 @@
 </UL>
 
 You can perform relative movement by specifing at least 1 sign ('move 0 0 +4  'move +1 -2 0) 
-this command supports command areas only in "rel" mode, in that case all items in the area are
+This command supports command areas only in "rel" mode, in that case all items in the area are
 moved to new positions.
+When you pass params and no area is defined, you will asked for a rect target and if your first
+target was an item, all items in this x/y rectangle will be moved absolute or relative (allows fast
+house/roof building).
 If you don't pass any parameter, you will be prompted to target both the object to move
 and the destination
 */
@@ -96,22 +99,26 @@ public cmd_move(const chr)
 
 	//READ PARAMETERS
 	
-	//these flags are true if we want to keep the old value
-	new keep_movex = __cmdParams[0][0] == '_' || __cmdParams[0][0] == 0;
-	new keep_movey = __cmdParams[1][0] == '_' || __cmdParams[1][0] == 0;
-	new keep_movez = __cmdParams[2][0] == '_' || __cmdParams[2][0] == 0;
+	//these flags are true if we want to keep the old value, keep_ is 1 if old values are to be kept
+	new keep_movex = __cmdParams[1][0] == '_' || __cmdParams[1][0] == 0;
+	new keep_movey = __cmdParams[2][0] == '_' || __cmdParams[2][0] == 0;
+	new keep_movez = __cmdParams[3][0] == '_' || __cmdParams[3][0] == 0;
+	
+	printf("1_0 is %s^n", __cmdParams[1][0]);
+	printf("change x: %d, y: %d, z: %d^n", keep_movex, keep_movey, keep_movez);
 	
 	new x,y,z;	
 
-	if(isStrInt(__cmdParams[0]))
-		x = str2Int(__cmdParams[0]);
 	if(isStrInt(__cmdParams[1]))
-		y = str2Int(__cmdParams[1]);	
+		x = str2Int(__cmdParams[1]);
 	if(isStrInt(__cmdParams[2]))
-		z = str2Int(__cmdParams[2]);
+		y = str2Int(__cmdParams[2]);	
+	if(isStrInt(__cmdParams[3]))
+		z = str2Int(__cmdParams[3]);
 		
 	//if one of the parameters has a sign character (+/-) the mode is "rel"
-	new mode = __cmdParams[0][0] == '+' || __cmdParams[0][0] == '-' || __cmdParams[1][0] == '+' || __cmdParams[1][0] == '-';
+	new mode = __cmdParams[1][0] == '+' || __cmdParams[1][0] == '-' || __cmdParams[2][0] == '+' || __cmdParams[2][0] == '-';
+	if(__cmdParams[0][0] == 'r') mode = 1;
 	
 	//check sign of x and y only in abs mode
 	if((y < 0 || x < 0) && !mode)
@@ -134,7 +141,7 @@ public cmd_move(const chr)
 				newy = keep_movey ? y : oldy+y;
 				newz = keep_movez ? z : oldz+z;
 				//newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
-				printf("moving %d to %d %d %d^n",itm,newx,newy,newz);
+				//printf("moving %d to %d %d %d^n",itm,newx,newy,newz);
 				itm_moveTo(itm,newx,newy,newz);
 			}
 	
@@ -157,10 +164,13 @@ public cmd_move(const chr)
 		area_useCommand(area);
 		return;
 	}
-		
-	x = keep_movex ? -1 : x;
-	y = keep_movey ? -1 : y;
-	z = keep_movez ? -1 : z;
+	
+	//if it is to keep (keep_ is 1) than make it x=0
+	x = keep_movex ? 0 : x;
+	y = keep_movey ? 0 : y;
+	z = keep_movez ? 0 : z;
+	
+	printf("decision for move: x %d, y %d, z %d, mode %d^n", x,y,z,mode);
 	
 	//store mode and values
 	chr_addLocalIntVec(chr,CLV_CMDTEMP,4);
@@ -170,17 +180,27 @@ public cmd_move(const chr)
 	chr_setLocalIntVec(chr,CLV_CMDTEMP,3,z);
 	
 	chr_message(chr,_,msg_commandsDef[183]);
-	target_create(chr,_,_,_,"cmd_move_targ");
+	getRectangle(chr, "cmd_move_targ")
+	//target_create(chr,_,_,_,"cmd_move_targ");
 }
 
 /*!
-\author Fax
+\author Fax, Horian
 \fn cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 \params all standard target callback params
 \brief handles first targetting in 'move command with no params
 */
-public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
+
+public cmd_move_targ(chr,xy0,xy1,z0,z1,object)
 {
+	new x0 = xy0 >> 16;
+	new y0 = xy0 & 0xFFFF;
+	
+	new x1 = xy1 >> 16;
+	new y1 = xy1 & 0xFFFF;
+	
+	//printf("rectangle for move: x0 %d, y0 %d, x1 %d, y1 %d, z0 %d^n", x0,y0,x1,y1,z0);
+	
 	if(!isChar(object) && !isItem(object))
 	{
 		chr_message(chr,_,msg_commandsDef[184]);
@@ -198,30 +218,31 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 	
 	new mode = chr_getLocalIntVec(chr,CLV_CMDTEMP,0);
 	new oldx,oldy,oldz,newx,newy,newz;
+	
 	if(isChar(object))
 	{
 		chr_getPosition(object,oldx,oldy,oldz);
 		
-		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,1) != -1) //don't keep that one
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,1) != 0) //don't keep that one
 		{
 			if(mode)//rel
-			newx += chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+			newx = oldx + chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
 			else
 			newx = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
 		}
 		else newx = oldx;
-		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,2) != -1)//don't keep that one
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,2) != 0)//don't keep that one
 		{
 			if(mode)
-			newy += chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+			newy = oldy + chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
 			else
 			newy = chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
 		}
 		else newy = oldy;
-		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1)//don't keep that one
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != 0)//don't keep that one
 		{
 			if(mode)
-			newz += chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+			newz = oldz + chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
 			else
 			newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
 		}
@@ -234,39 +255,58 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 
 	if(isItem(object))
 	{
-		itm_getPosition(object,oldx,oldy,oldz);
-		
-		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,1) != -1)
+		//printf("start object is %d^n", object);
+		new s = set_create();
+		new x,y;
+		for(x = x0; x <= x1; x++)
+			for(y = y0; y <= y1; y++)
+				set_addItemsNearXY(s,x,y,0);
+				
+		for(set_rewind(s);!set_end(s);)
 		{
-			if(mode)
-			newx += chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
-			else
-			newx = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+			object = set_getItem(s);
+			//printf("object found, object is %d^n", object);
+			itm_getPosition(object,oldx,oldy,oldz);
+			//printf("object position is %d %d %d^n", oldx,oldy,oldz);
+			if(z0<=oldz<=z1)
+			{
+				//printf("set object found %d^n", object);
+				if(chr_getLocalIntVec(chr,CLV_CMDTEMP,1) != 0)
+				{
+					if(mode)
+						newx = oldx + chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+					else
+						newx = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+				}
+				else newx = oldx;
+				
+				if(chr_getLocalIntVec(chr,CLV_CMDTEMP,2) != 0)
+				{
+					if(mode)
+						newy = oldy + chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+					else
+						newy = chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+				}
+				else newy = oldy;
+				
+				if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != 0)
+				{
+					if(mode)
+						newz = oldz + chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+					else
+						newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+				}
+				else newz = oldz;
+								
+				//printf("move old x: %d, y: %d, z: %d of object %d^n", oldx,oldy,oldz);
+				//printf("move x: %d, y: %d, z: %d of object %d^n", newx,newy,newz,object);
+				
+				itm_moveTo(object,newx,newy,newz);
+				area_refresh(chr_getCmdArea(chr));
+			}	
 		}
-		else newx = oldx;
-
-		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,2) != -1)
-		{
-			if(mode)
-			newy += chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
-			else
-			newy = chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
-		}
-		else newy = oldy;
-		
-		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1)
-		{
-			if(mode)
-			newz += chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
-			else
-			newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
-		}
-		else newz = oldz;
+		set_delete(s);
 		chr_delLocalVar(chr,CLV_CMDTEMP);
-		
-		itm_moveTo(object,newx,newy,newz);
-		area_refresh(chr_getCmdArea(chr));
-		return;
 	}
 }
 

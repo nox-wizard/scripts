@@ -59,4 +59,11 @@ native callFunction4P( const functionIndex, const param1, const param2, const pa
 */
 native callFunction5P( const functionIndex, const param1, const param2, const param3, const param4, const param5 );
 
+/*!
+\brief calls a function with 6 parameters
+\author Luxor
+\fn callFunction6P( const functionIndex, const param1, const param2, const param3, const param4, const param5, const param6 )
+*/
+native callFunction6P( const functionIndex, const param1, const param2, const param3, const param4, const param5, const param6 );
+
 /** @} */ // end of script_API_direct

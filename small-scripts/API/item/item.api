@@ -166,7 +166,7 @@ stock itm_getPosition(const item, &x, &y, &z)
 	x = itm_getProperty(item, IP_POSITION, IP2_X);
 	y = itm_getProperty(item,227,1);
 	z = itm_getProperty(item,227,2);
-	printf("item: %d at %d", item, x);
+	//printf("item: %d at %d", item, x);
 	return OK;
 }
 
