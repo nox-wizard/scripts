@@ -18,6 +18,7 @@
 If area effect is active, all objects in area will be removed.
 If no area effect is active, or if you pass "target", a target will appear and only the targetted
 object will be removed
+\todo make this function work when commands are done in sources
 */
 public cmd_wipe(const chr)
 {	

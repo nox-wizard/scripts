@@ -15,6 +15,7 @@
 </UL>
 
 Doesn't support command areas
+\todo make this function work when commands are done in sources
 */
 public cmd_make(const chr)
 {

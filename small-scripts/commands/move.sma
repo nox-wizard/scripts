@@ -23,6 +23,7 @@ this command supports command areas only in "rel" mode, in that case all items i
 moved to new positions.
 If you don't pass any parameter, you will be prompted to target both the object to move
 and the destination
+\todo make this function work when commands are done in sources
 */
 public cmd_move(const chr)
 {

@@ -57,6 +57,7 @@ static areas[MAX_AREAS][areaParams];
 Performs a sequential search in the area[][] array to see if it finds a match
 between the given character and the areas users
 \return the command area or AREA_INVALID
+
 */
 public chr_getCmdArea(const chr)
 {
@@ -189,6 +190,7 @@ public area_chars(const area)
 If no params are specified and a command area is already active for the player, 
 the area effect is stopped.<BR>
 If no area effect is active, passing no params is like calling:<br>
+\todo make this function work when commands are done in sources
 */
 public cmd_area(const chr)
 {

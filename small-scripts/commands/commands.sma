@@ -16,7 +16,6 @@
 
 /*!
 \defgroup script_commands commands
-
 This group of scripts contains all the ingame commands scripts.<br>
 The commandlevel management is done internally, in the sources, but you can 
 define, modify all the commands you want by editing the existing scripts.<br>
@@ -58,5 +57,4 @@ You can define all commands you want, modify the privlevels, modify/erase existi
 you can do everything you want with commands!<br>
 To edit an existing command simply open the corresponding script (has the same name as the command, in the small-scripts\commands folder)
 and modify it, the commands' behaviour is completely written in small, so you full control over it.<br>
-
 */

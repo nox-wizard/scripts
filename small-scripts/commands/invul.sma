@@ -17,6 +17,7 @@
 If area effect is active, all characters in area will be affec.
 If no area effect is active, or if you pass "target", a target will appear and only 
 the targetted char will be affected.
+\todo make this function work when commands are done in sources
 */
 public cmd_invul(const chr)
 {

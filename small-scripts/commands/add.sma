@@ -11,6 +11,7 @@
 </UL>
 
 If no params are specified the add menu is opened.<BR>
+\todo make this function work when commands are done in sources
 <br>
 */
 public cmd_add(const chr)
@@ -18,7 +19,6 @@ public cmd_add(const chr)
 	new def[50], type[6];
 	new amount = INVALID;
 	
-	//TODO: check to call the add menu, set params properly
 	if()
 	{
 		gumps_addMenu(chr);

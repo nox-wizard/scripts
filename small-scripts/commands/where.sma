@@ -5,6 +5,7 @@
 
 <B>syntax:</B> 'where
 Prints a message with character's location and region<BR>
+\todo make this function work when commands are done in sources
 <br>
 */
 public cmd_where(const chr)

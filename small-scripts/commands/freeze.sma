@@ -16,6 +16,7 @@
 If area effect is active, all characters in area will be frozen.
 If no area effect is active, or if you pass "target", a target will appear and only 
 the targetted char will be frozen
+\todo make this function work when commands are done in sources
 */
 public cmd_freeze(const chr)
 {
