@@ -93,9 +93,7 @@ static event_array[NUM_chrevent][event_prop] = {
 
 public command_tweak(const itm, const chrsource)
 {
-	if(chr_getProperty(chrsource, CP_SERIAL) != chrsource) //as long sockets are still given instead serial
-		return;
-	else if (! chr_isGM(chrsource))
+	if( (chr_isGM(chrsource)!=0) || (chr_getProperty(chrsource, CP_ACCOUNT)!= 0)) //no admin or gm -> abort
 		return;
 	chr_message( chrsource, _, "About whom/what do you want info ?");
 	target_create( chrsource, _, _, _, "TweakStart" );
@@ -153,9 +151,9 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addButton(twkMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkMenu,195,79,33,"Flags 2");
 	
-	gui_addText(twkMenu,66,120,33,"Accountname :");
+	gui_addText(twkMenu,66,120,33,"Account number :");
 	sprintf( tempStr,"%d",chr_getProperty(target,CP_ACCOUNT));
-	gui_addText( twkMenu, 170, 120,0,tempStr);
+	gui_addText( twkMenu, 185, 120,0,tempStr);
 	
 	gui_addText(twkMenu,280,120,33,"Serial :");
 	sprintf( tempStr,"%d",chr_getProperty(target,CP_SERIAL));
@@ -344,9 +342,9 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addButton(twkMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 		gui_addText(twkMenu,195,79,33,"Flags 2");
 		
-		gui_addText(twkMenu,66,120,33,"Accountname :");
+		gui_addText(twkMenu,66,120,33,"Account number :");
 		sprintf( tempStr,"%d",chr_getProperty(target,CP_ACCOUNT));
-		gui_addText( twkMenu, 170, 120,0,tempStr);
+		gui_addText( twkMenu, 185, 120,0,tempStr);
 		
 		gui_addText(twkMenu,280,120,33,"Serial :");
 		sprintf( tempStr,"%d",chr_getProperty(target,CP_SERIAL));
@@ -686,9 +684,9 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addButton(twkMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 		gui_addText(twkMenu,195,79,33,"Flags 2");
 		
-		gui_addText(twkMenu,66,120,33,"Accountname :");
+		gui_addText(twkMenu,66,120,33,"Account number :");
 		sprintf( tempStr,"%d",chr_getProperty(target,CP_ACCOUNT));
-		gui_addText( twkMenu, 170, 120,0,tempStr);
+		gui_addText( twkMenu, 185, 120,0,tempStr);
 		
 		gui_addText(twkMenu,280,120,33,"Serial :");
 		sprintf( tempStr,"%d",chr_getProperty(target,CP_SERIAL));
@@ -729,9 +727,9 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addButton(twkMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 		gui_addText(twkMenu,195,79,33,"Flags 2");
 		
-		gui_addText(twkMenu,66,120,33,"Accountname :");
+		gui_addText(twkMenu,66,120,33,"Account number :");
 		sprintf( tempStr,"%d",chr_getProperty(target,CP_ACCOUNT));
-		gui_addText( twkMenu, 170, 120,0,tempStr);
+		gui_addText( twkMenu, 185, 120,0,tempStr);
 		
 		gui_addText(twkMenu,280,120,33,"Serial :");
 		sprintf( tempStr,"%d",chr_getProperty(target,CP_SERIAL));
@@ -821,9 +819,9 @@ public tweak_char(const chrsource, const target, pagenumber)
 						gui_addButton(twkMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 						gui_addText(twkMenu,195,79,33,"Flags 2");
 						
-						gui_addText(twkMenu,66,120,33,"Accountname :");
+						gui_addText(twkMenu,66,120,33,"Account number :");
 						sprintf( tempStr,"%d",chr_getProperty(target,CP_ACCOUNT));
-						gui_addText( twkMenu, 170, 120,0,tempStr);
+						gui_addText( twkMenu, 185, 120,0,tempStr);
 						
 						gui_addText(twkMenu,280,120,33,"Serial :");
 						sprintf( tempStr,"%d",chr_getProperty(target,CP_SERIAL));
