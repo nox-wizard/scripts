@@ -1,9 +1,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (beard.xss)                                      ||
 // || Maintained by Sparhawk		                                  ||
-// || Last Update 04-aug-2002                                             ||
+// || Last Update 09-aug-2003                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 
@@ -19,6 +20,9 @@ SECTION ITEM $item_long_beard
 	NAME long beard
 	ID 203E
 	#copy DEFAULT BEARD
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Hair & Beard
 }
 
 SECTION ITEM $item_short_beard
@@ -26,6 +30,9 @@ SECTION ITEM $item_short_beard
 	NAME short beard
 	ID 203F
 	#copy DEFAULT BEARD
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Hair & Beard
 }
 
 SECTION ITEM $item_goatee
@@ -33,6 +40,9 @@ SECTION ITEM $item_goatee
 	NAME goatee
 	ID 2040
 	#copy DEFAULT BEARD
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Hair & Beard
 }
 
 SECTION ITEM $item_mustache
@@ -40,6 +50,9 @@ SECTION ITEM $item_mustache
 	NAME mustache
 	ID 2041
 	#copy DEFAULT BEARD
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Hair & Beard
 }
 
 SECTION ITEM $item_med_short_beard
@@ -47,6 +60,9 @@ SECTION ITEM $item_med_short_beard
 	NAME medium short beard
 	ID 204B
 	#copy DEFAULT BEARD
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Hair & Beard
 }
 
 SECTION ITEM $item_med_short_beard_1
@@ -54,6 +70,9 @@ SECTION ITEM $item_med_short_beard_1
 	NAME medium short beard
 	ID 204C
 	#copy DEFAULT BEARD
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Hair & Beard
 }
 
 SECTION ITEM $item_vandyke
@@ -61,4 +80,7 @@ SECTION ITEM $item_vandyke
 	NAME vandyke
 	ID 204D
 	#copy DEFAULT BEARD
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Hair & Beard
 }

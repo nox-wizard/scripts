@@ -1,3 +1,11 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (race_items.xss)                                 ||
+// || Last Update 09-aug-2003                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 //
 // Hmmmm...looks like there's a problem with #copy when used multiple times
 //
@@ -15,6 +23,9 @@ SECTION ITEM $item_race_male_leather_tunic
 	VALUE 80
 	WEIGHT 500
 	GENDER MALE
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Race Items
 }
 
 SECTION ITEM $item_race_female_leather_tunic
@@ -29,6 +40,9 @@ SECTION ITEM $item_race_female_leather_tunic
 	VALUE 80
 	WEIGHT 500
 	GENDER FEMALE
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Race Items
 }
 
 SECTION ITEM $item_race_colored_male_leather_tunic
@@ -45,6 +59,10 @@ SECTION ITEM $item_race_colored_male_leather_tunic
 	WEIGHT 500
 	GENDER MALE
 	COLORLIST 11
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Race Items
+	///DESCRIPTION Leather Tunic (colored)
 }
 
 SECTION ITEM $item_race_colored_female_leather_tunic
@@ -61,6 +79,10 @@ SECTION ITEM $item_race_colored_female_leather_tunic
 	WEIGHT 500
 	GENDER FEMALE
 	COLORLIST 11
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Race Items
+	///DESCRIPTION Leather Tunic (colored)
 }
 
 //
@@ -77,6 +99,9 @@ SECTION ITEM $item_race_orc_face
     	MOVABLE 2
 	WEIGHT 1
 	SKINCOLOR
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Race Items
 }
 
 //
@@ -109,6 +134,10 @@ SECTION ITEM $item_race_avariel_male_leather_tunic
 	WEIGHT 500
 	GENDER MALE
 	COLOR 084e
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Race Items
+	///DESCRIPTION Leather Tunic (Avariel)
 }
 
 SECTION ITEM $item_race_avariel_female_leather_tunic
@@ -125,5 +154,9 @@ SECTION ITEM $item_race_avariel_female_leather_tunic
 	WEIGHT 500
 	GENDER FEMALE
 	COLOR 084e
+
+	///CATEGORY Miscellaneous
+	///SUBSECTION Race Items
+	///DESCRIPTION Leather Tunic (Avariel)
 }
 

@@ -19,6 +19,9 @@ SECTION ITEM $item_wooden_kite_shield
     DECAY
     VALUE 110
     WEIGHT 700
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
 }
 
 //Wooden Shield
@@ -34,6 +37,9 @@ SECTION ITEM $item_wooden_shield
     DECAY
     VALUE 39
     WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
 }
 
 //Metal Shield
@@ -49,6 +55,9 @@ SECTION ITEM $item_metal_shield
     DECAY
     VALUE 74
     WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
 }
 
 //Chaos Shield
@@ -64,6 +73,9 @@ SECTION ITEM $item_chaos_shield
     DECAY
     VALUE 250
     WEIGHT 800
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
 }
 
 //Order Shield
@@ -79,6 +91,9 @@ SECTION ITEM $item_order_shield
     DECAY
     VALUE 250
     WEIGHT 800
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
 }
 
 //Plate Mail
@@ -95,6 +110,9 @@ SECTION ITEM $item_platemail
     VALUE 265
     WEIGHT 1000
     COLOR 0961
+
+    ///CATEGORY Armours
+    ///SUBSECTION Platemail
 }
 
 //Plate Gorget
@@ -111,6 +129,9 @@ SECTION ITEM $item_plate_gorget
     VALUE 115
     WEIGHT 200
     COLOR 0961
+
+    ///CATEGORY Armours
+    ///SUBSECTION Platemail
 }
 
 //Plate Gloves
@@ -127,6 +148,9 @@ SECTION ITEM $item_plate_gloves
     VALUE 135
     WEIGHT 200
     COLOR 0961
+
+    ///CATEGORY Armours
+    ///SUBSECTION Platemail
 }
 
 //Plate Helmet
@@ -143,6 +167,9 @@ SECTION ITEM $item_plate_helm
     VALUE 175
     WEIGHT 500
     COLOR 0961
+
+    ///CATEGORY Armours
+    ///SUBSECTION Platemail
 }
 
 //Plate Legs
@@ -159,6 +186,9 @@ SECTION ITEM $item_plate_leggings
     VALUE 231
     WEIGHT 700
     COLOR 0961
+
+    ///CATEGORY Armours
+    ///SUBSECTION Platemail
 }
 
 //Plate Sleeves
@@ -175,6 +205,9 @@ SECTION ITEM $item_plate_sleeves
     VALUE 193
     WEIGHT 500
     COLOR 0961
+
+    ///CATEGORY Armours
+    ///SUBSECTION Platemail
 }
 
 // bone chest
@@ -190,6 +223,9 @@ SECTION ITEM $item_bone_chest
     DECAY
     VALUE 15
     WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
 }
 
 // bone arms
@@ -205,6 +241,9 @@ SECTION ITEM $item_bone_arms
     DECAY
     VALUE 10
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
 }
 
 // bone gloves
@@ -219,6 +258,9 @@ SECTION ITEM $item_bone_gloves
     DECAY
     VALUE 10
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
 }
 
 // bone helm
@@ -233,6 +275,9 @@ SECTION ITEM $item_bone_helm
     DECAY
     VALUE 12
     WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
 }
 
 
@@ -249,6 +294,9 @@ SECTION ITEM $item_bone_legs
     DECAY
     VALUE 100
     WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Bone
 }
 
 // Chain Tunic
@@ -265,6 +313,9 @@ SECTION ITEM $item_chain_tunic
     DECAY
     VALUE 150
     WEIGHT 700
+
+    ///CATEGORY Armours
+    ///SUBSECTION Chainmail
 }
 
 // Chain Legs
@@ -281,6 +332,9 @@ SECTION ITEM $item_chain_leggings
     DECAY
     VALUE 120
     WEIGHT 700
+
+    ///CATEGORY Armours
+    ///SUBSECTION Chainmail
 }
 
 // Chain Coif
@@ -296,6 +350,9 @@ SECTION ITEM $item_chain_coif
     DECAY
     VALUE 100
     WEIGHT 700
+
+    ///CATEGORY Armours
+    ///SUBSECTION Chainmail
 }
 
 // Ringmail
@@ -311,6 +368,9 @@ SECTION ITEM $item_ringmail_tunic
     DECAY
     VALUE 100
     WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Ringmail
 }
 
 // ring sleeves
@@ -326,6 +386,9 @@ SECTION ITEM $item_ringmail_sleeves
     DECAY
     VALUE 80
     WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Ringmail
 }
 
 // ring leggings
@@ -341,6 +404,9 @@ SECTION ITEM $item_ringmail_leggings
     DECAY
     VALUE 85
     WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Ringmail
 }
 
 // ring gloves
@@ -356,6 +422,9 @@ SECTION ITEM $item_ringmail_gloves
     DECAY
     VALUE 75
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Ringmail
 }
 
 // stud gorget
@@ -370,6 +439,9 @@ SECTION ITEM $item_studded_leather_gorget
     DECAY
     VALUE 60
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
 }
 
 // stud gloves
@@ -384,6 +456,9 @@ SECTION ITEM $item_studded_leather_gloves
     DECAY
     VALUE 60
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
 }
 
 // stud sleeves
@@ -398,6 +473,9 @@ SECTION ITEM $item_studded_leather_sleeves
     DECAY
     VALUE 65
     WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
 }
 
 // stud leggings
@@ -412,6 +490,9 @@ SECTION ITEM $item_studded_leather_leggings
     DECAY
     VALUE 70
     WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
 }
 
 // stud tunic
@@ -426,6 +507,9 @@ SECTION ITEM $item_studded_leather_tunic
     DECAY
     VALUE 90
     WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
 }
 
 // leather sleeves
@@ -440,6 +524,9 @@ SECTION ITEM $item_leather_sleeves
     DECAY
     VALUE 50
     WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 // leather leggings
@@ -454,6 +541,9 @@ SECTION ITEM $item_leather_leggings
     DECAY
     VALUE 70
     WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 // leather tunic
@@ -468,6 +558,9 @@ SECTION ITEM $item_leather_tunic
     DECAY
     VALUE 80
     WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 // close helm
@@ -483,6 +576,9 @@ SECTION ITEM $item_close_helm
     DECAY
     VALUE 160
     WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // a helmet
@@ -497,6 +593,9 @@ SECTION ITEM $item_a_helmet
     DECAY
     VALUE 150
     WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // a bascinet
@@ -511,6 +610,9 @@ SECTION ITEM $item_bascinet
     DECAY
     VALUE 155
     WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // a nose helm
@@ -525,6 +627,9 @@ SECTION ITEM $item_nose_helm
     DECAY
     VALUE 160
     WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // orc mask
@@ -539,6 +644,9 @@ SECTION ITEM $item_orc_mask
     DECAY
     VALUE 35
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // leather shorts
@@ -554,6 +662,9 @@ SECTION ITEM $item_leather_shorts
     ATT 1
     VALUE 50
     WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 // stud armor (female)
@@ -568,6 +679,9 @@ SECTION ITEM $item_female_studded_leather
     STR 25
     VALUE 100
     WEIGHT 800
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
 }
 
 // female plate
@@ -584,6 +698,9 @@ SECTION ITEM $item_female_plate
     DEXADD -5
     VALUE 100
     WEIGHT 500
+
+    ///CATEGORY Armours
+    ///SUBSECTION Platemail
 }
 
 // female leather armor
@@ -598,6 +715,9 @@ SECTION ITEM $item_female_leather_armor
     STR 15
     VALUE 120
     WEIGHT 600
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 // a leather skirt
@@ -612,6 +732,9 @@ SECTION ITEM $item_leather_skirt
     STR 10
     VALUE 80
     WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 // leather bustier
@@ -626,6 +749,9 @@ SECTION ITEM $item_leather_bustier
     STR 10
     VALUE 85
     WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 // a stud bustier
@@ -640,6 +766,9 @@ SECTION ITEM $item_studded_leather_bustier
     STR 25
     VALUE 85
     WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Studded
 }
 
 //Bronze Shield
@@ -655,6 +784,9 @@ SECTION ITEM $item_bronze_shield
     DECAY
     VALUE 94
     WEIGHT 300
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
 }
 
 //Buckler
@@ -670,6 +802,9 @@ SECTION ITEM $item_buckler
     DECAY
     VALUE 83
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
 }
 
 //Kite Shield (Metal)
@@ -686,6 +821,9 @@ SECTION ITEM $item_metal_kite_shield
     DECAY
     VALUE 119
     WEIGHT 400
+
+    ///CATEGORY Armours
+    ///SUBSECTION Shields
 }
 
 SECTION ITEM $item_leather_cap
@@ -699,6 +837,9 @@ SECTION ITEM $item_leather_cap
     DECAY
     VALUE 60
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 // boots
@@ -714,6 +855,9 @@ SECTION ITEM $item_boots
     DECAY
     VALUE 30
     WEIGHT 100
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
 }
 
 // sandles
@@ -725,6 +869,9 @@ SECTION ITEM $item_sandles
     DYE 0
     DECAY
     VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
 }
 
 // shoes
@@ -736,6 +883,9 @@ SECTION ITEM $item_shoes
     DECAY
     DYE 1
     VALUE 15
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
 }
 
 // thigh boots
@@ -751,6 +901,9 @@ SECTION ITEM $item_thigh_boots
     DECAY
     VALUE 55
     WEIGHT 100
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Footwears
 }
 
 // a skullcap
@@ -767,6 +920,9 @@ SECTION ITEM $item_a_skullcap
     DECAY
     VALUE 30
     WEIGHT 200
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
 }
 
 // a deer mask
@@ -781,6 +937,9 @@ SECTION ITEM $item_a_deer_mask
     DECAY
     VALUE 40
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // a bear mask
@@ -795,6 +954,9 @@ SECTION ITEM $item_a_bear_mask
     DECAY
     VALUE 40
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // a orc helm
@@ -809,6 +971,9 @@ SECTION ITEM $item_a_orc_helm
     DECAY
     VALUE 25
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // a orc mask
@@ -823,6 +988,9 @@ SECTION ITEM $item_a_orc_mask
     DECAY
     VALUE 40
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // a tribal mask
@@ -837,6 +1005,9 @@ SECTION ITEM $item_a_tribal_mask
     DECAY
     VALUE 40
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 // a tribal mask
@@ -851,6 +1022,9 @@ SECTION ITEM $item_a_tribal_mask_1
     DECAY
     VALUE 40
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Helmets & Masks
 }
 
 SECTION ITEM $item_phoenix_tunic
@@ -866,6 +1040,9 @@ SECTION ITEM $item_phoenix_tunic
     VALUE 90
     WEIGHT 600
     GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
 }
 
 
@@ -882,6 +1059,9 @@ SECTION ITEM $item_phoenix_gorget
     VALUE 60
     WEIGHT 200
     GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
 }
 
 SECTION ITEM $item_phoenix_gloves
@@ -897,6 +1077,9 @@ SECTION ITEM $item_phoenix_gloves
     VALUE 60
     WEIGHT 200
     GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
 }
 
 SECTION ITEM $item_phoenix_sleeves
@@ -912,6 +1095,9 @@ SECTION ITEM $item_phoenix_sleeves
     VALUE 65
     WEIGHT 400
     GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
 }
 
 SECTION ITEM $item_phoenix_leggings
@@ -927,6 +1113,9 @@ SECTION ITEM $item_phoenix_leggings
     VALUE 70
     WEIGHT 500
     GOOD 10
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
 }
 
 SECTION ITEM $item_phoenix_helm
@@ -942,6 +1131,9 @@ SECTION ITEM $item_phoenix_helm
     DECAY
     VALUE 275
     WEIGHT 500
+
+    ///CATEGORY Armours - Colored
+    ///SUBSECTION Phoenix Armour
 }
 
 SECTION ITEM $item_leather_gloves
@@ -955,6 +1147,9 @@ SECTION ITEM $item_leather_gloves
     DECAY
     VALUE 40
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 SECTION ITEM $item_a_leather_gorget
@@ -968,6 +1163,9 @@ SECTION ITEM $item_a_leather_gorget
     DECAY
     VALUE 40
     WEIGHT 200
+
+    ///CATEGORY Armours
+    ///SUBSECTION Leather
 }
 
 SECTION ITEM $item_platemail_of_defence
@@ -983,6 +1181,9 @@ SECTION ITEM $item_platemail_of_defence
     VALUE 315
     WEIGHT 1000
     COLOR 0961
+
+    ///CATEGORY Armours - Magic
+    ///SUBSECTION Armours of Defence
 }
 
 SECTION ITEM $item_plate_gorget_of_defence

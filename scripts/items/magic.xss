@@ -1,0 +1,1390 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (magic.xss)                                      ||
+// || Maintained by Akron                                                 ||
+// || Last Update 09-aug-2003                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+// batwing
+SECTION ITEM $item_batwing
+{
+    NAME batwing
+    ID 0F78
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// blackmoor
+SECTION ITEM $item_blackmoor
+{
+    NAME blackmoor
+    ID 0F79
+    PILE 1
+    DECAY
+    VALUE 19
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// black pearl
+SECTION ITEM $item_black_pearl
+{
+    NAME black pearl
+    ID 0F7A
+    PILE 1
+    DECAY
+    VALUE 12
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// bloodmoss
+SECTION ITEM $item_bloodmoss
+{
+    NAME bloodmoss
+    ID 0F7B
+    PILE 1
+    DECAY
+    VALUE 6
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// bloodspawn
+SECTION ITEM $item_bloodspawn
+{
+    NAME bloodspawn
+    ID 0F7C
+    PILE 1
+    DECAY
+    VALUE 15
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// vial of blood
+SECTION ITEM $item_vial_of_blood
+{
+    NAME vial of blood
+    ID 0F7D
+    PILE 1
+    DECAY
+    VALUE 15
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// bone
+SECTION ITEM $item_bone
+{
+    NAME bone
+    ID 0F7E
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// brimstone
+SECTION ITEM $item_brimstone
+{
+    NAME brimstone
+    ID 0F7F
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// Daemon Bone
+SECTION ITEM $item_daemon_bone
+{
+    NAME Daemon Bone
+    ID 0F80
+    PILE 1
+    DECAY
+    VALUE 30
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// fertile dirt
+SECTION ITEM $item_fertile_dirt
+{
+    NAME fertile dirt
+    ID 0F81
+    PILE 1
+    DECAY
+    VALUE 7
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// dragon blood
+SECTION ITEM $item_dragon_blood
+{
+    NAME dragon blood
+    ID 0F82
+    PILE 1
+    DECAY
+    VALUE 25
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// executioner's cap
+SECTION ITEM $item_executioners_cap
+{
+    NAME executioner's cap
+    ID 0F83
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 100
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// garlic
+SECTION ITEM $item_garlic
+{
+    NAME garlic
+    ID 0F84
+    PILE 1
+    DECAY
+    VALUE 3
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// ginseng
+SECTION ITEM $item_ginseng
+{
+    NAME ginseng
+    ID 0F85
+    PILE 1
+    DECAY
+    VALUE 3
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// mandrake root
+SECTION ITEM $item_mandrake_root
+{
+    NAME mandrake root
+    ID 0F86
+    PILE 1
+    DECAY
+    VALUE 3
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// eye of newt
+SECTION ITEM $item_eye_of_newt
+{
+    NAME eye of newt
+    ID 0F87
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// nightshade
+SECTION ITEM $item_nightshade
+{
+    NAME nightshade
+    ID 0F88
+    PILE 1
+    DECAY
+    VALUE 3
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// obsidian
+SECTION ITEM $item_obsidian
+{
+    NAME obsidian
+    ID 0F89
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// pig iron
+SECTION ITEM $item_pig_iron
+{
+    NAME pig iron
+    ID 0F8A
+    PILE 1
+    DECAY
+    VALUE 15
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// pumice
+SECTION ITEM $item_pumice
+{
+    NAME pumice
+    ID 0F8B
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// sulfurous ash
+SECTION ITEM $item_sulfurous_ash
+{
+    NAME sulfurous ash
+    ID 0F8C
+    PILE 1
+    DECAY
+    VALUE 4
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// spider's silk
+SECTION ITEM $item_spiders_silk
+{
+    NAME spider's silk
+    ID 0F8D
+    PILE 1
+    DECAY
+    VALUE 3
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// serpent's scale
+SECTION ITEM $item_serpents_scale
+{
+    NAME serpent's scale
+    ID 0F8E
+    PILE 1
+    DECAY
+    VALUE 15
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// volcanic ash
+SECTION ITEM $item_volcanic_ash
+{
+    NAME volcanic ash
+    ID 0F8F
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// dead wood
+SECTION ITEM $item_dead_wood
+{
+    NAME dead wood
+    ID 0F90
+    PILE 1
+    DECAY
+    VALUE 10
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+// wyrm's heart
+SECTION ITEM $item_wyrms_heart
+{
+    NAME wyrm's heart
+    ID 0F91
+    PILE 1
+    DECAY
+    VALUE 45
+    WEIGHT 2
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Reagents
+}
+
+SECTION ITEM $item_a_wand_of_greater_healing
+{
+    NAME a magic wand
+    NAME2 a wand of greater healing
+    LAYER $layer_1hand_weapon
+    ID 0DF2
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 5
+    MOREZ 20
+    DECAY
+    VALUE 100
+    GOOD 32
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Wands
+}
+
+SECTION ITEM $item_a_wand_of_energy_vortex
+{
+    NAME a magic wand
+    NAME2 a wand of energy vortex
+    LAYER $layer_1hand_weapon
+    ID 0DF3
+    TYPE $itype_wand
+    MOREX 8
+    MOREY 5
+    MOREZ 5
+    DECAY
+    VALUE 150
+    GOOD 32
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Wands
+}
+
+SECTION ITEM $item_a_wand_of_magic_arrow
+{
+    NAME a magic wand
+    NAME2 a wand of magic arrow
+    LAYER $layer_1hand_weapon
+    ID 0DF4
+    TYPE $itype_wand
+    MOREX 1
+    MOREY 5
+    MOREZ 100
+    DECAY
+    VALUE 100
+    GOOD 32
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Wands
+}
+
+SECTION ITEM $item_a_wand_of_ressurection
+{
+    NAME a magic wand
+    NAME2 a wand of ressurection
+    LAYER $layer_1hand_weapon
+    ID 0DF5
+    TYPE $itype_wand
+    MOREX 8
+    MOREY 3
+    MOREZ 1
+    DECAY
+    VALUE 90
+    GOOD 32
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Wands
+}
+
+SECTION ITEM $item_a_wand_of_greater_heal
+{
+    NAME a magic wand
+    NAME2 a wand of greater heal
+    ID 0DF2
+    TYPE $itype_wand
+    MOREX 4
+    MOREY 5
+    MOREZ 20
+    DECAY
+    VALUE 100
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Wands
+}
+
+SECTION ITEM $item_a_wand_of_summon_daemon
+{
+    NAME a magic wand
+    NAME2 a wand of summon daemon
+    ID 0DF3
+    TYPE $itype_wand
+    MOREX 8
+    MOREY 5
+    DECAY
+    MOREZ 5
+    VALUE 150
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Wands
+}
+
+SECTION ITEM $item_a_wand_of_healing
+{
+    NAME a magic wand
+    NAME2 a wand of healing
+    ID 0DF4
+    TYPE $itype_wand
+    MOREX 1
+    MOREY 5
+    MOREZ 100
+    DECAY
+    
+    VALUE 100
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Wands
+}
+
+SECTION ITEM $item_a_wand_of_resurrection
+{
+    NAME a magic wand
+    NAME2 a wand of resurrection
+    ID 0DF5
+    TYPE $itype_wand
+    MOREX 8
+    MOREY 3
+    MOREZ 1
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Wands
+}
+
+SECTION ITEM $item_a_recall_rune
+{
+    NAME a recall rune
+    ID 1F14
+    TYPE $itype_rune
+    MOREX 0
+    MOREY 0
+    MOREZ 0
+    VALUE 14
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Misc
+}
+
+SECTION ITEM $item_a_spellbook
+{
+    NAME a spellbook
+    TYPE $itype_spellbook
+    ID 0EFA
+    NEWBIE
+    DECAY
+    ITEMHAND 1
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Misc
+}
+
+SECTION ITEM $item_all-spell_scroll
+{
+    NAME all-spell scroll
+    ID 1F6D
+    DECAY
+    VALUE 2000
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Misc
+}
+
+SECTION ITEM $item_a_clumsy_scroll
+{
+    NAME a clumsy scroll
+    ID 1F2E
+    DECAY
+    VALUE 15
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_create_food_scroll
+{
+    NAME a create food scroll
+    ID 1F2F
+    DECAY
+    VALUE 15
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_feeblemind_scroll
+{
+    NAME a feeblemind scroll
+    ID 1F30
+    DECAY
+    VALUE 15
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_heal_scroll
+{
+    NAME a heal scroll
+    ID 1F31
+    DECAY
+    VALUE 15
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_magic_arrow_scroll
+{
+    NAME a magic arrow scroll
+    ID 1F32
+    DECAY
+    VALUE 15
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_night_sight_scroll
+{
+    NAME a night sight scroll
+    ID 1F33
+    DECAY
+    VALUE 15
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_reactive_armor_scroll
+{
+    NAME a reactive armor scroll
+    ID 1F2D
+    DECAY
+    VALUE 15
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_weaken_scroll
+{
+    NAME a weaken scroll
+    ID 1F34
+    DECAY
+    VALUE 15
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_agility_scroll
+{
+    NAME a agility scroll
+    ID 1F35
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_cunning_scroll
+{
+    NAME a cunning scroll
+    ID 1F36
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_cure_scroll
+{
+    NAME a cure scroll
+    ID 1F37
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_harm_scroll
+{
+    NAME a harm scroll
+    ID 1F38
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_magic_trap_scroll
+{
+    NAME a magic trap scroll
+    ID 1F39
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_magic_untrap_scroll
+{
+    NAME a magic untrap scroll
+    ID 1F3A
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_protection_scroll
+{
+    NAME a protection scroll
+    ID 1F3B
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_strength_scroll
+{
+    NAME a strength scroll
+    ID 1F3C
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_bless_scroll
+{
+    NAME a bless scroll
+    ID 1F3D
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_fireball_scroll
+{
+    NAME a fireball scroll
+    ID 1F3E
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_magic_lock_scroll
+{
+    NAME a magic lock scroll
+    ID 1F3F
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_poison_scroll
+{
+    NAME a poison scroll
+    ID 1F40
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_telekinesis_scroll
+{
+    NAME a telekinesis scroll
+    ID 1F41
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_teleport_scroll
+{
+    NAME a teleport scroll
+    ID 1F42
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_an_unlock_scroll
+{
+    NAME an unlock scroll
+    ID 1F43
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_wall_of_stone_scroll
+{
+    NAME a wall of stone scroll
+    ID 1F44
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_an_archcure_scroll
+{
+    NAME an archcure scroll
+    ID 1F45
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_an_arch_protection_scroll
+{
+    NAME an arch protection scroll
+    ID 1F46
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_curse_scroll
+{
+    NAME a curse scroll
+    ID 1F47
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_fire_field_scroll
+{
+    NAME a fire field scroll
+    ID 1F48
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_greater_heal_scroll
+{
+    NAME a greater heal scroll
+    ID 1F49
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_lightning_scroll
+{
+    NAME a lightning scroll
+    ID 1F4A
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_mana_drain_scroll
+{
+    NAME a mana drain scroll
+    ID 1F4B
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_recall_scroll
+{
+    NAME a recall scroll
+    ID 1F4C
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_blade_spirits_scroll
+{
+    NAME a blade spirits scroll
+    ID 1F4D
+    DECAY
+    VALUE 75
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_dispel_field_scroll
+{
+    NAME a dispel field scroll
+    ID 1F4E
+    DECAY
+    VALUE 75
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_an_incognito_scroll
+{
+    NAME an incognito scroll
+    ID 1F4F
+    DECAY
+    VALUE 75
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_magic_reflection_scroll
+{
+    NAME a magic reflection scroll
+    ID 1F50
+    DECAY
+    VALUE 75
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_mind_blast_scroll
+{
+    NAME a mind blast scroll
+    ID 1F51
+    DECAY
+    VALUE 75
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_paralyze_scroll
+{
+    NAME a paralyze scroll
+    ID 1F52
+    DECAY
+    VALUE 75
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_poison_field_scroll
+{
+    NAME a poison field scroll
+    ID 1F53
+    DECAY
+    VALUE 75
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_summon_creature_scroll
+{
+    NAME a summon creature scroll
+    ID 1F54
+    DECAY
+    VALUE 75
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_dispel_scroll
+{
+    NAME a dispel scroll
+    ID 1F55
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_an_energy_bolt_scroll
+{
+    NAME an energy bolt scroll
+    ID 1F56
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_an_explosion_scroll
+{
+    NAME an explosion scroll
+    ID 1F57
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_an_invisibility_scroll
+{
+    NAME an invisibility scroll
+    ID 1F58
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_mark_scroll
+{
+    NAME a mark scroll
+    ID 1F59
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_mass_curse_scroll
+{
+    NAME a mass curse scroll
+    ID 1F5A
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_paralyze_field_scroll
+{
+    NAME a paralyze field scroll
+    ID 1F5B
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_reveal_scroll
+{
+    NAME a reveal scroll
+    ID 1F5C
+    DECAY
+    VALUE 90
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_chain_lightning_scroll
+{
+    NAME a chain lightning scroll
+    ID 1F5D
+    DECAY
+    VALUE 105
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_an_energy_field_scroll
+{
+    NAME an energy field scroll
+    ID 1F5E
+    DECAY
+    VALUE 105
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_flamestrike_scroll
+{
+    NAME a flamestrike scroll
+    ID 1F5F
+    DECAY
+    VALUE 105
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_gate_travel_scroll
+{
+    NAME a gate travel scroll
+    ID 1F60
+    DECAY
+    VALUE 105
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_mana_vampire_scroll
+{
+    NAME a mana vampire scroll
+    ID 1F61
+    DECAY
+    VALUE 105
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_mass_dispel_scroll
+{
+    NAME a mass dispel scroll
+    ID 1F62
+    DECAY
+    VALUE 105
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_meteor_swarm_scroll
+{
+    NAME a meteor swarm scroll
+    ID 1F63
+    DECAY
+    VALUE 105
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_polymorph_scroll
+{
+    NAME a polymorph scroll
+    ID 1F64
+    DECAY
+    VALUE 105
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_earthquake_scroll
+{
+    NAME a earthquake scroll
+    ID 1F65
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_energy_vortex_scroll
+{
+    NAME a energy vortex scroll
+    ID 1F66
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_resurrection_scroll
+{
+    NAME a resurrection scroll
+    ID 1F67
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_summon_air_elemental_scroll
+{
+    NAME a summon air elemental scroll
+    ID 1F68
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_summon_daemon_scroll
+{
+    NAME a summon daemon scroll
+    ID 1F69
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_summon_earth_elemental_scroll
+{
+    NAME a summon earth elemental scroll
+    ID 1F6A
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_summon_fire_elemental_scroll
+{
+    NAME a summon fire elemental scroll
+    ID 1F6B
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_a_summon_water_elemental_scroll
+{
+    NAME a summon water elemental scroll
+    ID 1F6C
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Scrolls
+}
+
+SECTION ITEM $item_mortar_and_pestal
+{
+    NAME mortar and pestal
+    ID 0E9B
+    VALUE 6
+    DECAY
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Misc
+}
+
+SECTION ITEM $item_the_book_of_the_dead
+{
+    NAME The Book of the Dead
+    ID xe3b
+    COLOR 0901
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_a_summon_zombie_scroll
+{
+    NAME a summon zombie scroll
+    ID xe36
+    COLOR 066d
+    TRIGGER $itrg_necro_summon_zombie
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_a_summon_skeleton_scroll
+{
+    NAME a summon skeleton scroll
+    ID xe35
+    COLOR 066d
+    TRIGGER $itrg_necro_summon_skeleton
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_a_summon_spectre_scroll
+{
+    NAME a summon spectre scroll
+    ID xe37
+    COLOR 066d
+    TRIGGER $itrg_necro_summon_spectre
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_a_summon_wraith_scroll
+{
+    NAME a summon wraith scroll
+    ID xe38
+    COLOR 066d
+    TRIGGER $itrg_necro_summon_wraith
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_a_summon_bone_knight_scroll
+{
+    NAME a summon bone knight scroll
+    ID xe39
+    COLOR 066d
+    TRIGGER $itrg_necro_summon_bone_knight
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_a_summon_lich_scroll
+{
+    NAME a summon lich scroll
+    ID xe3a
+    COLOR 066d
+    TRIGGER $itrg_necro_summon_lich
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_a_summon_bone_mage_scroll
+{
+    NAME a summon bone mage scroll
+    ID xe35
+    COLOR 066d
+    TRIGGER $itrg_necro_summon_bone_mage
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_a_summon_lich_lord_scroll
+{
+    NAME a summon lich lord scroll
+    ID xe36
+    COLOR 066d
+    TRIGGER $itrg_necro_summon_lich_lord
+    DECAY
+    VALUE 120
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+}
+
+SECTION ITEM $item_blank_scrolls
+{
+    ID 0E34
+    VALUE 5
+    WEIGHT 2
+    DECAY
+
+    ///CATEGORY Alchemy & Magic
+    ///SUBSECTION Necromancy
+    ///DESCRIPTION Blank Scroll
+}
+

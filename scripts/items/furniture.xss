@@ -1,0 +1,838 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (furniture.xss)                                  ||
+// || Maintained by Akron                                                 ||
+// || Last Update 09-aug-2003                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_marble_bench
+{
+    NAME marble bench
+    ID 0459
+    
+    VALUE 20000
+    WEIGHT 10000
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_marble_bench_1
+{
+    NAME marble bench
+    ID 045A
+    VALUE 20000
+    WEIGHT 10000
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_stone_bench
+{
+    NAME marble bench
+    ID 045B
+    VALUE 20000
+    WEIGHT 10000
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_marble_bench_2
+{
+    NAME marble bench
+    ID 045C
+    VALUE 20000
+    WEIGHT 10000
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a wooden bench facing south
+SECTION ITEM $item_wooden_bench
+{
+    NAME wooden bench
+    ID 0B2C
+    VALUE 20
+    MOVABLE 1
+    WEIGHT 100
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+//wooden bench facing east
+SECTION ITEM $item_wooden_bench_1
+{
+    NAME wooden bench
+    ID 0B2D
+    VALUE 20
+    MOVABLE 1
+    WEIGHT 100
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_bench
+{
+    ID 0B66
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_1
+{
+    ID 0B68
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_2
+{
+    ID 0B69
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_3
+{
+    ID 0B5F
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_4
+{
+    ID 0B61
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_5
+{
+    ID 0B60
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_6
+{
+    ID 0B62
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_7
+{
+    ID 0B64
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_8
+{
+    ID 0B63
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_9
+{
+    ID 0B69
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_A
+{
+    ID 0B6A
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_B
+{
+    ID 0B68
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_C
+{
+    ID 0B92
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+
+SECTION ITEM $item_bench_D
+{
+    ID 0B91
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_E
+{
+    ID 0B93
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+SECTION ITEM $item_bench_F
+{
+    ID 0B94
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Bench
+}
+
+// a throne facing south
+SECTION ITEM $item_a_throne
+{
+    NAME a throne
+    ID 0B32
+    VALUE 20
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Throne (South)
+}
+
+// a throne facing east
+SECTION ITEM $item_a_throne_1
+{
+    NAME a throne
+    ID 0B33
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Throne (East)
+}
+
+// wooden chair
+SECTION ITEM $item_a_wooden_chair
+{
+    NAME a wooden chair
+    ID 0B2E
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// wooden chair
+SECTION ITEM $item_a_wooden_chair_1
+{
+    NAME a wooden chair
+    ID 0B2F
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// wooden chair
+SECTION ITEM $item_a_wooden_chair_2
+{
+    NAME a wooden chair
+    ID 0B30
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// wooden chair
+SECTION ITEM $item_a_wooden_chair_3
+{
+    NAME a wooden chair
+    ID 0B31
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a fancy chair
+SECTION ITEM $item_a_fancy_chair
+{
+    NAME a fancy chair
+    ID 0B4E
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a fancy chair
+SECTION ITEM $item_a_fancy_chair_1
+{
+    NAME a fancy chair
+    ID 0B4F
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a fancy chair
+SECTION ITEM $item_a_fancy_chair_2
+{
+    NAME a fancy chair
+    ID 0B50
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a fancy chair
+SECTION ITEM $item_a_fancy_chair_3
+{
+    NAME a fancy chair
+    ID 0B51
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a fancy chair
+SECTION ITEM $item_a_fancy_chair_4
+{
+    NAME a fancy chair
+    ID 0B52
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a fancy chair
+SECTION ITEM $item_a_fancy_chair_5
+{
+    NAME a fancy chair
+    ID 0B53
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a fancy chair
+SECTION ITEM $item_a_fancy_chair_6
+{
+    NAME a fancy chair
+    ID 0B54
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a fancy chair
+SECTION ITEM $item_a_fancy_chair_7
+{
+    NAME a fancy chair
+    ID 0B55
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a wooden chair
+SECTION ITEM $item_a_wooden_chair_4
+{
+    NAME a wooden chair
+    ID 0B56
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a wooden chair
+SECTION ITEM $item_a_wooden_chair_5
+{
+    NAME a wooden chair
+    ID 0B57
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a wooden chair
+SECTION ITEM $item_a_wooden_chair_6
+{
+    NAME a wooden chair
+    ID 0B58
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a wooden chair
+SECTION ITEM $item_a_wooden_chair_7
+{
+    NAME a wooden chair
+    ID 0B59
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a straw chair
+SECTION ITEM $item_a_straw_chair
+{
+    NAME a straw chair
+    ID 0B5A
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a straw chair
+SECTION ITEM $item_a_straw_chair_1
+{
+    NAME a straw chair
+    ID 0B5B
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a straw chair
+SECTION ITEM $item_a_straw_chair_2
+{
+    NAME a straw chair
+    ID 0B5C
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+// a straw chair
+SECTION ITEM $item_a_straw_chair_3
+{
+    NAME a straw chair
+    ID 0B5D
+    VALUE 20
+    
+    WEIGHT 100
+    MOVABLE 1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+}
+
+SECTION ITEM $item_marble_bench_3
+{
+    ID 1DCD
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_marble_bench_4
+{
+    ID 1DCF
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_marble_bench_5
+{
+    ID 1DCE
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_sandstone_bench
+{
+    ID 1DC7
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Marble Bench
+}
+
+SECTION ITEM $item_sandstone_bench_1
+{
+    ID 1DC9
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Sandstone Bench
+}
+
+SECTION ITEM $item_sandstone_bench_2
+{
+    ID 1DC8
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Sandstone Bench
+}
+
+SECTION ITEM $item_stone_chair
+{
+    ID 1218
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Stone Chair
+}
+
+SECTION ITEM $item_stone_chair_1
+{
+    ID 1219
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Stone Chair
+}
+
+SECTION ITEM $item_stone_chair_2
+{
+    ID 121A
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Stone Chair
+}
+
+SECTION ITEM $item_stone_chair_3
+{
+    ID 121B
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Chairs & Benches
+    ///DESCRIPTION Stone Chair
+}
+
+SECTION ITEM $item_display_case
+{
+    ID 0B0F
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_1
+{
+    ID 0B17
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_2
+{
+    ID 0B13
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_3
+{
+    ID 0B14
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_4
+{
+    ID 0B11
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_5
+{
+    ID 0B15
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_6
+{
+    ID 0B12
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_7
+{
+    ID 0B16
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_8
+{
+    ID 0B10
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_9
+{
+    ID 0AA2
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_A
+{
+    ID 0AA4
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_B
+{
+    ID 0A9F
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_C
+{
+    ID 0B18
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_D
+{
+    ID 0AA0
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_E
+{
+    ID 0AA5
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_F
+{
+    ID 0AA1
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_display_case_G
+{
+    ID 0AA3
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Display Case
+}
+
+SECTION ITEM $item_stone_table
+{
+    NAME stone table
+    ID 1201
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_1
+{
+    NAME stone table
+    ID 1202
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_2
+{
+    NAME stone table
+    ID 1203
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_3
+{
+    NAME stone table
+    ID 1204
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_4
+{
+    NAME stone table
+    ID 1205
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+SECTION ITEM $item_stone_table_5
+{
+    NAME stone table
+    ID 1206
+
+    ///CATEGORY Furniture
+    ///SUBSECTION Tables
+    ///DESCRIPTION Stone Table
+}
+
+

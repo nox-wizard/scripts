@@ -1,0 +1,508 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (floortiles.xss)                                 ||
+// || Maintained by Akron                                                 ||
+// || Last Update 09-aug-2003                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_gm_robe_undyed
+{
+    NAME GM Robe undyed
+    ID 204F
+    HP 50
+    ATT 50
+    DEF 500
+    LAYER $layer_outer_torso
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Special Clothes
+}
+
+SECTION ITEM $item_lord_british_armor
+{
+    NAME Lord British Armor
+    ID 2042
+    HP 500
+    DEF 500
+    LAYER $layer_outer_torso
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Special Clothes
+}
+
+SECTION ITEM $item_blackthorne_robe
+{
+    NAME Blackthorne Robe
+    ID 2043
+    HP 500
+    DEF 500
+    LAYER $layer_outer_torso
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Special Clothes
+}
+
+SECTION ITEM $item_
+{
+    ID 2050
+    HP 500
+    DEF 500
+    LAYER $layer_outer_torso
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Special Clothes
+    ///DESCRIPTION Dupre the Fighter
+}
+
+SECTION ITEM $item_death_shroud
+{
+    NAME death shroud
+    ID 204E
+    HP 10
+    DEF 10
+    LAYER $layer_outer_torso
+    WEIGHT 100000
+    DECAY
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Special Clothes
+}
+
+SECTION ITEM $item_gm_robe_red_
+{
+    NAME GM Robe (red)
+    ID 204F
+    COLOR 0021
+    HP 50
+    ATT 50
+    DEF 500
+    LAYER $layer_outer_torso
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Special Clothes
+}
+
+// GM Robe (Blue)
+SECTION ITEM $item_gm_robe_blue_
+{
+    NAME GM Robe (Blue)
+    ID 204F
+    COLOR 0003
+    HP 50
+    ATT 50
+    DEF 500
+    LAYER $layer_outer_torso
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Special Clothes
+}
+
+// GM Robe (green)
+SECTION ITEM $item_gm_robe_green_
+{
+    NAME GM Robe (green)
+    ID 204F
+    COLOR 01D3
+    HP 50
+    ATT 50
+    DEF 500
+    LAYER $layer_outer_torso
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Special Clothes
+}
+
+// floopy hat
+SECTION ITEM $item_floopy_hat
+{
+    NAME floopy hat
+    ID 1713
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// wide brim hat
+SECTION ITEM $item_wide_brim_hat
+{
+    NAME wide brim hat
+    ID 1714
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// cap
+SECTION ITEM $item_cap
+{
+    NAME cap
+    ID 1715
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// a tall straw hat
+SECTION ITEM $item_a_tall_straw_hat
+{
+    NAME a tall straw hat
+    ID 1716
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// straw hat
+SECTION ITEM $item_straw_hat
+{
+    NAME straw hat
+    ID 1717
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// wizard hat
+SECTION ITEM $item_a_wizards_hat
+{
+    NAME a wizard's hat
+    ID 1718
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// bonnet
+SECTION ITEM $item_bonnet
+{
+    NAME bonnet
+    ID 1719
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// feathered hat
+SECTION ITEM $item_feathered_hat
+{
+    NAME feathered hat
+    ID 171A
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// tricorne hat
+SECTION ITEM $item_tricorne_hat
+{
+    NAME tricorne hat
+    ID 171B
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// jester hat
+SECTION ITEM $item_jester_hat
+{
+    NAME jester hat
+    ID 171C
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Hats
+}
+
+// cloak
+SECTION ITEM $item_cloak
+{
+    NAME cloak
+    ID 1515
+    LAYER $layer_cloak
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
+// fancy shirt
+SECTION ITEM $item_fancy_shirt
+{
+    NAME fancy shirt
+    ID 1EFD
+    LAYER $layer_shirt
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// shirt
+SECTION ITEM $item_shirt
+{
+    NAME shirt
+    ID 1517
+    LAYER $layer_shirt
+    DYE 1
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// a surcoat
+SECTION ITEM $item_a_surcoat
+{
+    NAME a surcoat
+    ID 1FFD
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// a tunic
+SECTION ITEM $item_a_tunic
+{
+    NAME a tunic
+    ID 1FA1
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 45
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// a robe
+SECTION ITEM $item_a_robe
+{
+    NAME a robe
+    ID 1F03
+    LAYER $layer_outer_torso
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// a jester's suit
+SECTION ITEM $item_a_jesters_suit
+{
+    NAME a jester's suit
+    ID 1F9F
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 50
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// a doublet
+SECTION ITEM $item_a_doublet
+{
+    NAME a doublet
+    ID 1F7B
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// a fancy dress
+SECTION ITEM $item_a_fancy_dress
+{
+    NAME a fancy dress
+    ID 1EFF
+    LAYER $layer_outer_torso
+    DECAY
+    DYE 1
+    VALUE 70
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// a plain dress
+SECTION ITEM $item_a_plain_dress
+{
+    NAME a plain dress
+    ID 1F01
+    LAYER $layer_outer_torso
+    DYE 1
+    DECAY
+    VALUE 55
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Shirts
+}
+
+// a skirt
+SECTION ITEM $item_a_skirt
+{
+    NAME a skirt
+    ID 1516
+    LAYER $layer_outerlegs
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Pants & Skirts
+}
+
+// short pants
+SECTION ITEM $item_short_pants
+{
+    NAME short pants
+    ID 152E
+    LAYER $layer_pants
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Pants & Skirts
+}
+
+// a kilt
+SECTION ITEM $item_a_kilt
+{
+    NAME a kilt
+    ID 1537
+    LAYER $layer_outerlegs
+    DYE 1
+    DECAY
+    VALUE 35
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Pants & Skirts
+}
+
+// long pants
+SECTION ITEM $item_long_pants
+{
+    NAME long pants
+    ID 1539
+    LAYER $layer_pants
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Pants & Skirts
+}
+
+// a half apron
+SECTION ITEM $item_a_half_apron
+{
+    NAME a half apron
+    ID 153B
+    LAYER $layer_waist
+    DYE 1
+    DECAY
+    VALUE 40
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
+// a full apron
+SECTION ITEM $item_a_full_apron
+{
+    NAME a full apron
+    ID 153D
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 60
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
+// a bandana
+SECTION ITEM $item_a_bandana
+{
+    NAME a bandana
+    ID 1540
+    LAYER $layer_helm
+    DYE 1
+    DECAY
+    VALUE 20
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+
+// a body sash
+SECTION ITEM $item_a_body_sash
+{
+    NAME a body sash
+    ID 1541
+    LAYER $layer_mid_torso
+    DYE 1
+    DECAY
+    VALUE 30
+
+    ///CATEGORY Clothes
+    ///SUBSECTION Accessories
+}
+

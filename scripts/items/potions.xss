@@ -1,9 +1,10 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || NoX-Wizard Scripts (items.xss)                                      ||
 // || Maintained by Sparhawk and Juliunus                                 ||
-// || Last Update 28-05-2002                                              ||
+// || Last Update 09-aug-2003                                             ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 // || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 //
@@ -67,6 +68,10 @@ SECTION ITEM $lesser_nightsight_potion
 	NAME2 a weak nightsight potion
 	MOREZ $lesser_potion_strength
 	VALUE $lesser_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Nightsight (Lesser)
 }
 
 SECTION ITEM $normal_nightsight_potion
@@ -75,6 +80,10 @@ SECTION ITEM $normal_nightsight_potion
 	NAME2 a nightsight potion
 	MOREZ $normal_potion_strength
 	VALUE $normal_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Nightsight (Normal)
 }
 
 SECTION ITEM $greater_nightsight_potion
@@ -83,6 +92,10 @@ SECTION ITEM $greater_nightsight_potion
 	NAME2 a nightsight potion
 	MOREZ $greater_potion_strength
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Nightsight (Greater)
 }
 
 //
@@ -95,6 +108,7 @@ SECTION DEFAULT CURE_POTION
 	MOREY $cure_potion
 	NAME an orange potion
 	@ONDBLCLICK itm_potionUse
+	///NOTLIST
 }
 
 SECTION ITEM $lesser_cure_potion
@@ -103,6 +117,10 @@ SECTION ITEM $lesser_cure_potion
 	NAME2 a weak cure potion
 	MOREZ $lesser_potion_strength
 	VALUE $lesser_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Cure (Lesser)
 }
 
 SECTION ITEM $normal_cure_potion
@@ -111,6 +129,10 @@ SECTION ITEM $normal_cure_potion
 	NAME2 a cure potion
 	MOREZ $normal_potion_strength
 	VALUE $normal_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Cure (Normal)
 }
 
 SECTION ITEM $greater_cure_potion
@@ -119,6 +141,10 @@ SECTION ITEM $greater_cure_potion
 	NAME2 a strong cure potion
 	MOREZ $greater_potion_strength
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Cure (Greater)
 }
 
 //
@@ -139,6 +165,10 @@ SECTION ITEM $lesser_agility_potion
 	NAME2 a weak agility potion
 	MOREZ $lesser_potion_strength
 	VALUE $lesser_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Agility (Lesser)
 }
 
 SECTION ITEM $normal_agility_potion
@@ -147,6 +177,10 @@ SECTION ITEM $normal_agility_potion
 	NAME2 an agility potion
 	MOREZ $normal_potion_strength
 	VALUE $normal_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Agility (Normal)
 }
 
 SECTION ITEM $greater_agility_potion
@@ -155,6 +189,10 @@ SECTION ITEM $greater_agility_potion
 	NAME2 a strong agility potion
 	MOREZ $greater_potion_strength
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Agility (Greater)
 }
 
 //
@@ -175,6 +213,10 @@ SECTION ITEM $lesser_strength_potion
 	NAME2 a strength potion
 	MOREZ $lesser_potion_strength
 	VALUE $lesser_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Strength (Lesser)
 }
 
 SECTION ITEM $normal_strength_potion
@@ -183,6 +225,10 @@ SECTION ITEM $normal_strength_potion
 	NAME2 a strength potion
 	MOREZ $normal_potion_strength
 	VALUE $normal_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Strength (Normal)
 }
 
 SECTION ITEM $greater_strength_potion
@@ -191,6 +237,10 @@ SECTION ITEM $greater_strength_potion
 	NAME2 a strong strength potion
 	MOREZ $greater_potion_strength
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Strength (Greater)
 }
 
 //
@@ -210,6 +260,10 @@ SECTION ITEM $lesser_poison_potion
 	NAME2 a weak poison potion
 	MOREZ $lesser_potion_strength
 	VALUE $lesser_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Poison (Lesser)
 }
 
 SECTION ITEM $normal_poison_potion
@@ -218,6 +272,10 @@ SECTION ITEM $normal_poison_potion
 	NAME2 a poison potion
 	MOREZ $normal_potion_strength
 	VALUE $normal_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Poison (Normal)
 }
 
 SECTION ITEM $greater_poison_potion
@@ -226,6 +284,10 @@ SECTION ITEM $greater_poison_potion
 	NAME2 a strong poison potion
 	MOREZ $greater_potion_strength
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Poison (Greater)
 }
 
 SECTION ITEM $deadly_poison_potion
@@ -234,6 +296,10 @@ SECTION ITEM $deadly_poison_potion
 	NAME2 a deadly poison potion
 	MOREZ 4
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Poison (Deadly)
 }
 
 //
@@ -254,6 +320,10 @@ SECTION ITEM $lesser_energy_potion
     	NAME2 a weak energy potion
 	MOREZ $lesser_potion_strength
 	VALUE $lesser_energy_potion
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Energy (Lesser)
 }
 
 SECTION ITEM $normal_energy_potion
@@ -262,6 +332,10 @@ SECTION ITEM $normal_energy_potion
     	NAME2 an energy potion
 	MOREZ $normal_potion_strength
 	VALUE $normal_energy_potion
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Energy (Normal)
 }
 
 SECTION ITEM $greater_energy_potion
@@ -270,6 +344,10 @@ SECTION ITEM $greater_energy_potion
     	NAME2 a strong energy potion
 	MOREZ $greater_potion_strength
 	VALUE $greater_energy_potion
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Energy (Greater)
 }
 
 //
@@ -291,6 +369,10 @@ SECTION ITEM $lesser_healing_potion
 	NAME2 a weak healing potion
 	MOREZ $lesser_potion_strength
 	VALUE $lesser_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Healing (Lesser)
 }
 
 SECTION ITEM $normal_healing_potion
@@ -299,6 +381,10 @@ SECTION ITEM $normal_healing_potion
 	NAME2 a healing potion
 	MOREZ $normal_potion_strength
 	VALUE $normal_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Healing (Normal)
 }
 
 SECTION ITEM $greater_healing_potion
@@ -307,6 +393,10 @@ SECTION ITEM $greater_healing_potion
 	NAME2 a strong healing potion
 	MOREZ $greater_potion_strength
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Healing (Greater)
 }
 
 //
@@ -328,6 +418,10 @@ SECTION ITEM $lesser_explosion_potion
 	MOREX 300
 	MOREZ $lesser_potion_strength
 	VALUE $lesser_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Explosion (Lesser)
 }
 
 SECTION ITEM $normal_explosion_potion
@@ -337,6 +431,10 @@ SECTION ITEM $normal_explosion_potion
 	MOREX 600
 	MOREZ $normal_potion_strength
 	VALUE $normal_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Explosion (Normal)
 }
 
 SECTION ITEM $greater_explosion_potion
@@ -346,6 +444,10 @@ SECTION ITEM $greater_explosion_potion
 	MOREX 900
 	MOREZ $greater_potion_strength
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Explosion (Greater)
 }
 
 //
@@ -369,6 +471,10 @@ SECTION ITEM $lesser_mana_potion
 	MOREZ $lesser_potion_strength
 	MOREX 100
 	VALUE $lesser_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Mana (Lesser)
 }
 
 SECTION ITEM $normal_mana_potion
@@ -377,6 +483,10 @@ SECTION ITEM $normal_mana_potion
 	NAME2 a mana potion
 	MOREZ $normal_potion_strength
 	VALUE $normal_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Mana (Normal)
 }
 
 SECTION ITEM $greater_mana_potion
@@ -385,6 +495,10 @@ SECTION ITEM $greater_mana_potion
 	NAME2 a strong mana potion
 	MOREZ $greater_potion_strength
 	VALUE $greater_potion_value
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Mana (Greater)
 }
 
 //
@@ -399,6 +513,10 @@ SECTION ITEM $item_lsd_potion
 	MOREY $lsd_potion
 	MOREZ $normal_potion_strength
 	DECAY
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION LSD
 }
 
 //
@@ -416,4 +534,9 @@ SECTION ITEM $item_blessed_water
 	NODECAY
 	VALUE 50
 	GOOD 30
+
+	///CATEGORY Alchemy & Magic
+	///SUBSECTION Potions
+	///DESCRIPTION Blessed Water
 }
+

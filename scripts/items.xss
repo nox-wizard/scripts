@@ -10,6 +10,15 @@
 #include scripts/items/beard.xss
 #include scripts/items/guild.xss
 #include scripts/items/hair.xss
+#include scripts/items/floortiles.xss
+#include scripts/items/containers.xss
+#include scripts/items/furniture.xss
+#include scripts/items/decorations.xss
+#include scripts/items/magic.xss
+#include scripts/items/clothes.xss
+#include scripts/items/buildings.xss
+#include scripts/items/fooddrinks.xss
+#include scripts/items/professions.xss
 #include scripts/items/items.xss
 #include scripts/items/potions.xss
 #include scripts/items/weapons.xss

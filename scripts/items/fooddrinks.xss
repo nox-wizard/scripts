@@ -1,0 +1,739 @@
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || NoX-Wizard Scripts (fooddrinks.xss)                                 ||
+// || Maintained by Akron                                                 ||
+// || Last Update 09-aug-2003                                             ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+// || This script requires NoX-Wizard 0.70s or later                      ||
+// || Compatible with Unicorn Categorization                              ||
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+SECTION ITEM $item_bottle_of_ale
+{
+    ID 099F
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottles_of_ale
+{
+    ID 09A0
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottles_of_ale_1
+{
+    ID 09A1
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottles_of_ale_2
+{
+    ID 09A2
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottle_of_liquor
+{
+    ID 099B
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottles_of_liquor
+{
+    ID 099C
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+SECTION ITEM $item_bottles_of_liquor_1
+{
+    ID 099D
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+SECTION ITEM $item_bottles_of_liquor_2
+{
+    ID 099E
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottle_of_wine
+{
+    ID 09C7
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottles_of_wine
+{
+    ID 09C6
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottles_of_wine_1
+{
+    ID 09C5
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bottles_of_wine_2
+{
+    ID 09C4
+    TYPE $itype_drink
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_bucket_of_water
+{
+    ID 0FFA
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_mug_of_ale
+{
+    ID 09EE
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_glass_of_cider
+{
+    ID 1F7D
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_glass_of_liquor
+{
+    ID 1F85
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_glass_of_milk
+{
+    ID 1F89
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_glass_of_water
+{
+    ID 1F91
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_glass_of_wine
+{
+    ID 1F8D
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_jugs_of_cider
+{
+    ID 098E
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_jugs_of_cider_1
+{
+    ID 098D
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_pitcher_of_ale
+{
+    ID 1F95
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_pitcher_of_cider
+{
+    ID 1F97
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_pitcher_of_liquor
+{
+    ID 1F99
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_pitcher_of_milk
+{
+    ID 09AD
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_pitcher_of_water
+{
+    ID 0FF9
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_pitcher_of_wine
+{
+    ID 1F9B
+    TYPE $itype_drink
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_baked_pie
+{
+    ID 1041
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_unbaked_pie
+{
+    ID 1042
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_cake
+{
+    ID 09E9
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_wedges_of_cheese
+{
+    ID 097C
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_wedges_of_cheese_1
+{
+    ID 097D
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_wheels_of_cheese
+{
+    ID 097E
+    TYPE $itype_food
+    TRIGGER $itrg_cut_cheese
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_french_bread
+{
+    ID 098C
+    TYPE $itype_food
+    DECAY
+    PILE 1
+    VALUE 15
+}
+
+SECTION ITEM $item_muffins
+{
+    ID 09EA
+    TYPE $itype_food
+    DECAY
+    PILE 1
+    VALUE 15
+}
+
+SECTION ITEM $item_muffins_1
+{
+    ID 09FA
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_muffins_2
+{
+    ID 09EB
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_bread_loaves
+{
+    ID 103C
+    TYPE $itype_food
+    DECAY
+    PILE 1
+    VALUE 15
+}
+
+SECTION ITEM $item_pizzas
+{
+    ID 1040
+    TYPE $itype_food
+    DECAY
+    PILE 1
+    VALUE 15
+}
+
+SECTION ITEM $item_uncooked_pizzas
+{
+    ID 1083
+    TYPE $itype_food
+    DECAY
+    PILE 1
+    VALUE 15
+}
+
+SECTION ITEM $item_pan_of_cookies
+{
+    ID 160B
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_plate_of_cookies
+{
+    ID 160C
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_eggshells
+{
+    ID 09B4
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_eggs
+{
+    ID 09B5
+    TYPE $itype_food
+    TRIGGER $itrg_fry_eggs
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_fried_eggs
+{
+    ID 09B6
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_cooked_birds
+{
+    ID 09B7
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_raw_bird 
+{ 
+    ID 09B9 
+    DECAY 
+}
+
+SECTION ITEM $item_roast_pigs
+{
+    ID 09BB
+    TYPE $itype_food
+    DECAY
+    VALUE 50
+}
+
+SECTION ITEM $item_sausages
+{
+    ID 09C0
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_hams
+{
+    ID 09C9
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_cuts_of_ribs
+{
+    ID 09F2
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_fish_steaks
+{
+    ID 097B
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_slabs_of_bacon
+{
+    ID 0976
+    TYPE $itype_food
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_slices_of_bacon
+{
+    ID 0978
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_pears
+{
+    ID 0994
+    TYPE $itype_food
+    DECAY
+    VALUE 3
+}
+
+SECTION ITEM $item_apples
+{
+    ID 09D0
+    TYPE $itype_food
+    DECAY
+    VALUE 3
+}
+
+SECTION ITEM $item_grape_bunches
+{
+    ID 09D1
+    TYPE $itype_food
+    DECAY
+    VALUE 3
+}
+
+SECTION ITEM $item_peaches
+{
+    ID 09D2
+    TYPE $itype_food
+    DECAY
+    VALUE 3
+}
+
+SECTION ITEM $item_fruit_basket
+{
+    ID 0993
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_heads_of_lettuce
+{lettuce
+    ID 0C70
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_squash
+{squash
+    ID 0C72
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_carrots
+{carrots
+    ID 0C76
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_heads_of_cabbage
+{cabbage
+    ID 0C7B
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_ears_of_corn
+{ear of corn
+    ID 0C7F
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_donuts
+{donuts
+    ID 1AD3
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_jars_of_honey
+{jar of honey
+    ID 09EC
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_turnip
+{turnip
+    ID 0C61
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_sprouts
+{sprouts
+    ID 0C68
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_pumpkins
+{pumpkin
+    ID 0C6A
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_onions
+{onion
+    ID 0C6D
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_coconuts
+{coconut
+    ID 1726
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_bananas
+{banana
+    ID 1720
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_bananas_1
+{bananas
+    ID 1721
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_bunches_of_dates
+{dates
+    ID 1727
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_lemons
+{lemon
+    ID 1728
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_lemons_1
+{lemons
+    ID 1729
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_limes
+{lime
+    ID 172A
+    TYPE $itype_food
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_limes_1
+{limes
+    ID 172B
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_honeydew_melons
+{honeydew melon
+    ID 0C74
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_canteloupes
+{canteloupe
+    ID 0C79
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_watermelons
+{water melon
+    ID 0C5D
+    TYPE $itype_food
+    DECAY
+    VALUE 15
+}
+
+SECTION ITEM $item_cookie_mix
+{cookie mix
+    ID 103F
+    TYPE $itype_food
+    DECAY
+    VALUE 20
+}
+
+SECTION ITEM $item_dough_bowl
+{dough
+    ID 10E3
+    DECAY
+    VALUE 5
+}
+
+SECTION ITEM $item_bowl_of_carrots
+{carrots
+    ID 15FE
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_bowl_of_corn
+{corn
+    ID 15FF
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_bowl_of_lettuce
+{lettuce
+    ID 1600
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_bowl_of_peas
+{peas
+    ID 1601
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_bowl_of_potatoes
+{potatoes
+    ID 1602
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_bowl_of_stew
+{stew
+    ID 1604
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_tomato_soup
+{tomato soup
+    ID 1606
+    TYPE $itype_food
+    DECAY
+    VALUE 10
+}
+
+SECTION ITEM $item_pewter_bowl
+{pewter
+    ID 15FD
+    DECAY
+    VALUE 5
+}
+
+
