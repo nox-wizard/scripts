@@ -239,7 +239,7 @@ SECTION NPCLIST $npclist_elementals_and_deamons
     $npc_a_daemon
     $npc_an_earth_elemental
     $npc_a_fire_elemental
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
     $npc_a_blood_elemental
     $npc_the_collector_of_souls
     $npc_lord_of_the_abyss
@@ -262,7 +262,7 @@ SECTION NPCLIST $npclist_elementals
     $npc_an_air_elemental
     $npc_an_earth_elemental
     $npc_a_fire_elemental
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
     $npc_a_blood_elemental
     $npc_a_poison_elemental
 }
@@ -1119,7 +1119,7 @@ SECTION NPCLIST $npclist_ocean_spawns
     //$$ ocean spawns
     $npc_a_dolphin
     $npc_a_walrus
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
 }
 
 SECTION NPC $npc_swamp_spawn
@@ -1279,7 +1279,7 @@ SECTION NPCLIST $npclist_dungeon_spawn
     $npc_ratman
     $npc_ratman_axe
     $npc_a_reaper
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
 }
 
 SECTION NPCLIST $npclist_dungeon_spawn_1
@@ -1404,7 +1404,7 @@ SECTION NPCLIST $npclist_dungeon_spawn_3
     $npc_ratman
     $npc_ratman_axe
     $npc_a_reaper
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
     $npc_a_troll
     $npc_a_troll_1
     $npc_a_troll_2
@@ -1447,7 +1447,7 @@ SECTION NPCLIST $npclist_dungeon_spawn_5
     $npc_ratman
     $npc_ratman_axe
     $npc_a_reaper
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
     $npc_a_troll
     $npc_a_troll_1
     $npc_a_troll_2
@@ -1746,7 +1746,7 @@ SECTION NPCLIST $npclist_dungeon_spawn_H
     $npc_a_gazer
     $npc_an_ogre
     $npc_a_troll
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
 }
 
 SECTION NPCLIST $npclist_dungeon_spawn_I
@@ -1807,7 +1807,7 @@ SECTION NPCLIST $npclist_dungeon_spawn_L
     $npc_a_troll
     $npc_a_troll_1
     $npc_a_troll_2
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
 }
 
 SECTION NPCLIST $npclist_dungeon_spawn_M
@@ -1881,7 +1881,7 @@ SECTION NPCLIST $npclist_dungeon_spawn_Q
     $npc_an_ogre_lord
     $npc_a_troll
     $npc_a_troll_1
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
     $npc_a_wisp
 }
 
@@ -1906,7 +1906,7 @@ SECTION NPCLIST $npclist_dungeon_spawn_S
 {
     //$$ dungeon spawn
     $npc_an_air_elemental
-    $npc_a_water_elemental
+    $npc_summoned_water_elemental
     $npc_an_ettin
     $npc_an_ettin_1
     $npc_lizardman_fencer

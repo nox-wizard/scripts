@@ -1074,8 +1074,8 @@ SECTION ITEMTRG $itrg_treasure_chest_lvl3_2
     SND 02 50
     NADD $npc_an_air_elemental
     NADD $npc_an_air_elemental
-    NADD $npc_a_water_elemental
-    NADD $npc_a_water_elemental
+    NADD $npc_summoned_water_elemental
+    NADD $npc_summoned_water_elemental
     NADD $npc_a_shadow_wyrm
     REMOVE
     IADD $item_treasure_chest_lv3_3

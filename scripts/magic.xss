@@ -35,7 +35,7 @@ SECTION POLYMORPHMENU
 	20E7 SKILL 450 $npc_a_skeleton Skeleton
 	2100 SKILL 850 $npc_a_wisp Wisp
 	211F SKILL 150 $npc_a_horse Horse
-	210B SKILL 750 $npc_a_water_elemental Water Elemental
+	210B SKILL 750 $npc_summoned_water_elemental Water Elemental
 }
 
 SECTION CREATEFOODMENU

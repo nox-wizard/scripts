@@ -6169,7 +6169,7 @@ SECTION BATCH $batch_polymorph_cns
 //    20D9 a gargoyle
 //    NPC $npc_a_gargoyle
 //    210B a water elemental
-//    NPC $npc_a_water_elemental
+//    NPC $npc_summoned_water_elemental
 //}
 //
 //SECTION MENU $menu_meat

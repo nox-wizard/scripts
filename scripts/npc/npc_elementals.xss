@@ -195,7 +195,7 @@ SECTION NPC $npc_a_fire_lord
 
 //a water elemental
 
-SECTION NPC $npc_a_water_elemental
+SECTION NPC $npc_summoned_water_elemental
 {
     NAME a water elemental
     ID 0010

@@ -89,7 +89,7 @@ SECTION FISHLIST 6
 // random water monsters...(skill>40)
 SECTION MONSTERLIST 7
 {
-	$npc_a_water_elemental
+	$npc_summoned_water_elemental
 	$npc_a_mongbat
 	$npc_a_sea_serpent
 }
