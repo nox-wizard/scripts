@@ -12,7 +12,9 @@
 	-# "gmfx": gm moving effect
 	-# "int": intelligence
 	-# "light": character fixed light level
+	-# "murder": set number of murder char has commited
 	-# "owner": owner serial
+	-# "poison": poisoned, 0:unpoisoned, 1:lesser poison, 2:poisoned, 3:greater poison, 4:deadly poison
 	-# "privon/privoff": special privs (1: can broadcast, 2: see serial numbers by single click, 3: no skill titles,4: Can snoop other,5: Allmove,6: View houses as icons,7: need no mana, 8: permanent magic reflect, 9:needs no reagents, 10: dispelable
 	-# "shop": character is a shopkeeper (0 no - 1 yes)
 	-# "spattack": type of spell attack
@@ -72,12 +74,8 @@ public cmd_cset(const chr)
 		return;
 	}
 
-	new prop,val = -1000;
-	readPropAndVal(chr,prop,val);
 
-
-
-	new area = chr_getCmdArea(chr);
+	/*new area = chr_getCmdArea(chr);
 	new i = 0, item,chr2;
 	//apply command to all items in area
 	if(area_isValid(area) && __cmdParams[2][0] != 't')
@@ -92,13 +90,10 @@ public cmd_cset(const chr)
 
 		chr_message(chr,_,msg_commandsDef[100],__cmdParams[0],i);		
 		return;
-	}
-
-	//store parameters to be read by the callback
-	chr_addLocalIntVar(chr,CLV_CMDTEMP,prop);
+	}*/
 
 	chr_message(chr,_,msg_commandsDef[101],__cmdParams[0]);
-	target_create(chr,val,_,_,"cmd_cset_targ");
+	target_create(chr,_,_,_,"cmd_cset_targ");
 }
 
 /*!
@@ -107,23 +102,27 @@ public cmd_cset(const chr)
 \params all standard target callback params
 \brief handles single character targetting and setdiring
 */
-public cmd_cset_targ(target, chr, object, x, y, z, unused, val)
+public cmd_cset_targ(target, chr, object, x, y, z, unused, unused2)
 {
-	new prop = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-	chr_delLocalVar(chr,CLV_CMDTEMP);
-
+	new prop,val = -1000;
 	if(isChar(object))
 	{
-		if(val != -1000)
-		{
-			chr_setProperty(object,prop,cset_subprop,val);
-			chr_update(object);
-			chr_message(chr,_,msg_commandsDef[102],val);
-		}
-		else
-			chr_message(chr,_,msg_commandsDef[261],chr_getProperty(object,prop));
+		readPropAndVal(object,prop,val);
 	}
 	else chr_message(chr,_,msg_commandsDef[103]);
+	
+	prop = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	chr_delLocalVar(chr,CLV_CMDTEMP);
+	
+	if(val != -1000)
+	{
+		chr_setProperty(object,prop,cset_subprop,val);
+		chr_update(object);
+		chr_message(chr,_,msg_commandsDef[102],val);
+	}
+	else
+		chr_message(chr,_,msg_commandsDef[261],chr_getProperty(object,prop));
+	
 }
 
 static readPropAndVal(chr,&prop,&val)
@@ -175,23 +174,28 @@ static readPropAndVal(chr,&prop,&val)
 			cset_subprop = CP2_INTREAL;
 		}
 		case 'l':prop = CP_FIXEDLIGHT;
+		case 'm':prop = CP_KILLS;
 		case 'o': prop = CP_OWNSERIAL;
 		case 'p':
 		{
 			if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
 			return INVALID;
 			
-			val = str2Int(__cmdParams[2]);
+			val = str2Int(__cmdParams[1]);
 			
 			switch(val)
 			{
 				case 1..4:
 				{
-					if (__cmdParams[0][6]== 'f') //off
+					if (__cmdParams[0][1]== 'o') //poison
+					{
+						prop = CP_POISONED;
+					}
+					else if (__cmdParams[0][6]== 'f') //priv off
 					{
 						chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) & ~priv_array[val-1]);
 					}
-					else chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | priv_array[val-1]);
+					else chr_setProperty( chr, CP_PRIV, _, chr_getProperty(chr,CP_PRIV) | priv_array[val-1]); //priv on
 				}
 				case 5..10:
 				{
@@ -212,7 +216,55 @@ static readPropAndVal(chr,&prop,&val)
 		case 's':
 			switch(__cmdParams[0][1])
 			{ 
-				case 'h': prop = CP_SHOPKEEPER;
+				case 'h':
+				{
+					prop = CP_SHOPKEEPER;
+					
+					if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
+					return INVALID;
+					
+					val = str2Int(__cmdParams[1]);
+					printf("val: %d^n", val);
+					
+					if(val == 1)
+					{
+						new pack = itm_createByDef("$item_restock");
+						itm_setProperty(pack, IP_LAYER, _, 26);
+						itm_setProperty(pack, IP_CONTAINERSERIAL, _, chr);
+						itm_setProperty(pack, IP_TYPE, _, 1);
+						itm_setProperty(pack, IP_PRIV, _, itm_getProperty(pack,IP_PRIV) | 2);
+						chr_equip(chr, pack);
+						
+						pack = itm_createByDef("$item_buy_pack");
+						itm_setProperty(pack, IP_CONTAINERSERIAL, _, chr);
+						itm_setProperty(pack, IP_PRIV, _, itm_getProperty(pack,IP_PRIV) | 2);
+						chr_equip(chr, pack);
+						printf("added buy pack for %d", chr);
+						
+						pack = itm_createByDef("$item_bought_pack");
+						itm_setProperty(pack, IP_CONTAINERSERIAL, _, chr);
+						itm_setProperty(pack, IP_PRIV, _, itm_getProperty(pack,IP_PRIV) | 2);
+						chr_equip(chr, pack);
+						chr_update(chr);
+					}
+					else
+					{
+						new itm;
+						new layer;
+						new itemSet=set_create();
+						set_addItemWeared(itemSet,chr,false,false,false);
+						
+						for (set_rewind(itemSet);!set_end(itemSet);)
+						{
+							itm = set_get(itemSet);
+							printf("found item at layer %d^n", layer);
+							layer= itm_getProperty(itm,IP_LAYER);
+							if(26<=layer<=28)
+								itm_remove(itm);
+						}
+						set_delete(itemSet);
+					}
+				}
 				case 'p': 
 					switch(__cmdParams[0][1])
 					{ 

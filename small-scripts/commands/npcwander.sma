@@ -11,6 +11,14 @@
 \brief defines character's wander mode
 
 <B>syntax:<B> 'npcwander
+
+amx: AMX defined wandering (?)
+rectangle: wander inside rectangle
+circle: wander inside circle
+nomove: stay still - NOT the same like frozen!
+follow: follow target
+flee: run away from target
+free: walk around freely
 */
 public cmd_npcwander(const chr)
 {

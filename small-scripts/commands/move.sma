@@ -10,16 +10,17 @@
 \fn cmd_move(const chr)
 \brief moves objects
 
-<B>syntax:<B> 'move x y [z] or 'move me or 'move here or 'move loc
+<B>syntax:<B> 'move a/r x y [z] or 'move [param]
 
 <B>command params:</B>
 <UL>
-<LI> me: if command is called as 'move me, the character is teleported in a targetted location
-When using this option no other parameters are needed.<br>
-<LI> here: if command is called as 'move here, the targetted character is teleported to the command user<br>
-<LI> x: x movement
-<LI> y : y movement
-<LI> z : z movement 
+<LI> 'move a x y z: moves to x y z<br>
+<LI> 'move r dx dy dz: moves to x + dx, y + dy, z+ dz (relative mode)<br>
+<LI> 'move me: moves the calling chatacer<br>
+<LI> 'move here: moves object to charatcer's feet<br>
+<LI> 'move loc: moves object to a location<br>
+<LI> 'move bag: moves object to chars backpack<br>
+
 </UL>
 
 You can perform relative movement by specifing at least 1 sign ('move 0 0 +4  'move +1 -2 0) 
@@ -31,7 +32,7 @@ and the destination
 public cmd_move(const chr)
 {
 	readCommandParams(chr);
-
+	
 	//called 'move me
 	if(!strcmp(__cmdParams[0],"me"))
 	{
@@ -73,6 +74,14 @@ public cmd_move(const chr)
 		target_create(chr,chr,_,_,"cmd_move_targ_loc");
 		return;
 	}
+	
+	//called 'move bag
+	if(!strcmp(__cmdParams[0],"bag"))
+	{
+		chr_message(chr,_,msg_commandsDef[178]);
+		target_create(chr,chr,_,_,"cmd_move_targ_bag");
+		return;
+	}
 
 	//called with no params
 	if(!strlen(__cmdParams[0]))
@@ -83,22 +92,21 @@ public cmd_move(const chr)
 	}
 
 	//READ PARAMETERS
+	
+	//these flags are true if we want to keep the old value
+	new keep_movex = __cmdParams[0][0] == '_' || __cmdParams[0][0] == 0;
+	new keep_movey = __cmdParams[1][0] == '_' || __cmdParams[1][0] == 0;
+	new keep_movez = __cmdParams[2][0] == '_' || __cmdParams[2][0] == 0;
+	
+	new x,y,z;	
 
-	
-	//-------------------  x y ------------------
-	new x,y,z = -1000;
-	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]))
-	{
-		chr_message(chr,_,msg_commandsDef[180]);
-		return;
-	}
-	
-	x = str2Int(__cmdParams[0]);
-	y = str2Int(__cmdParams[1]);
-	
+	if(isStrInt(__cmdParams[0]))
+		x = str2Int(__cmdParams[0]);
+	if(isStrInt(__cmdParams[1]))
+		y = str2Int(__cmdParams[1]);	
 	if(isStrInt(__cmdParams[2]))
 		z = str2Int(__cmdParams[2]);
-	
+		
 	//if one of the parameters has a sign character (+/-) the mode is "rel"
 	new mode = __cmdParams[0][0] == '+' || __cmdParams[0][0] == '-' || __cmdParams[1][0] == '+' || __cmdParams[1][0] == '-';
 	
@@ -109,20 +117,20 @@ public cmd_move(const chr)
 		return;
 	}
 	new area = chr_getCmdArea(chr);
-
+	new oldx,oldy,oldz,newx,newy,newz,i;
+	
 	//command areas only in "rel" mode without "target"
 	if(area_isValid(area)  && mode)
 	{
-		new oldx,oldy,oldz,newx,newy,newz,i;
-
 		if(area_itemsIncluded(area))
 			for(set_rewind(area_items(area)); !set_end(area_items(area));i++)
 			{
 				new itm = set_getItem(area_items(area));
 				itm_getPosition(itm,oldx,oldy,oldz);
-				newx = oldx + x;
-				newy = oldy + y;
-				newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
+				newx = keep_movex ? x : oldx+x;
+				newy = keep_movey ? y : oldy+y;
+				newz = keep_movez ? z : oldz+z;
+				//newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
 				printf("moving %d to %d %d %d^n",itm,newx,newy,newz);
 				itm_moveTo(itm,newx,newy,newz);
 			}
@@ -133,13 +141,12 @@ public cmd_move(const chr)
 			{
 				new chr2 = set_getChar(area_chars(area));
 				chr_getPosition(chr2,oldx,oldy,oldz);
-				newx = oldx + x;
-				newy = oldy + y;
-				newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
+				newx = keep_movex ? x : oldx+x;
+				newy = keep_movey ? y : oldy+y;
+				newz = keep_movez ? z : oldz+z;
+				//newz = z == -1000 ? map_getZ(newx,newy) : oldz + z;
 		
 				chr_moveTo(chr2,newx,newy,newz);
-				
-				chr_moveTo(chr2,newx,newy,newz);	
 			}
 	
 		chr_message(chr,_,msg_commandsDef[182],i);
@@ -147,6 +154,10 @@ public cmd_move(const chr)
 		area_useCommand(area);
 		return;
 	}
+		
+	x = keep_movex ? -1 : x;
+	y = keep_movey ? -1 : y;
+	z = keep_movez ? -1 : z;
 	
 	//store mode and values
 	chr_addLocalIntVec(chr,CLV_CMDTEMP,4);
@@ -183,16 +194,35 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 	
 	
 	new mode = chr_getLocalIntVec(chr,CLV_CMDTEMP,0);
-	
+	new oldx,oldy,oldz,newx,newy,newz;
 	if(isChar(object))
-	{	
-		new newx,newy,newz;
-		if(mode) //rel
-			chr_getPosition(object,newx,newy,newz);
+	{
+		chr_getPosition(object,oldx,oldy,oldz);
 		
-		newx += chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
-		newy += chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
-		newz += chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,1) != -1) //don't keep that one
+		{
+			if(mode)//rel
+			newx += chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+			else
+			newx = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+		}
+		else newx = oldx;
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,2) != -1)//don't keep that one
+		{
+			if(mode)
+			newy += chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+			else
+			newy = chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+		}
+		else newy = oldy;
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1)//don't keep that one
+		{
+			if(mode)
+			newz += chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+			else
+			newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+		}
+		else newz = oldz;
 		chr_delLocalVar(chr,CLV_CMDTEMP);
 		chr_moveTo(object,newx,newy,newz);
 		area_refresh(chr_getCmdArea(chr));
@@ -201,17 +231,34 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 
 	if(isItem(object))
 	{
-		new newx,newy,newz;
-		if(mode) //rel
-			itm_getPosition(object,newx,newy,newz);
+		itm_getPosition(object,oldx,oldy,oldz);
 		
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,1) != -1)
+		{
+			if(mode)
+			newx += chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+			else
+			newx = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
+		}
+		else newx = oldx;
+
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,2) != -1)
+		{
+			if(mode)
+			newy += chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+			else
+			newy = chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
+		}
+		else newy = oldy;
 		
-		newx += chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
-		
-		newy += chr_getLocalIntVec(chr,CLV_CMDTEMP,2);
-		
-		newz += chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
-		
+		if(chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1)
+		{
+			if(mode)
+			newz += chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+			else
+			newz = chr_getLocalIntVec(chr,CLV_CMDTEMP,3) != -1000 ? chr_getLocalIntVec(chr,CLV_CMDTEMP,3) : map_getZ(newx,newy);
+		}
+		else newz = oldz;
 		chr_delLocalVar(chr,CLV_CMDTEMP);
 		
 		itm_moveTo(object,newx,newy,newz);
@@ -258,6 +305,29 @@ public cmd_move_targ_loc(target, chr, object, x, y, z, unused, unused2)
 		chr_message(chr,_,msg_commandsDef[184]);
 		return;
 	}
+}
+
+/*!
+\author Fax
+\fn cmd_move_targ_bag(target, chr, object, x, y, z, unused, unused2)
+\params all standard target callback params
+\brief handles 'move here commmand
+*/
+public cmd_move_targ_bag(target, chr, object, x, y, z, unused, unused2)
+{
+	//new pack = chr_getBackpack(chr, true);
+
+	if(isChar(object))
+		return;
+	else
+	{
+		if(isItem(object))
+		{
+			itm_BounceToPack(chr, object);
+			itm_refresh(object);
+		}
+	}
+	
 }
 
 /*!

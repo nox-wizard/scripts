@@ -785,7 +785,7 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Select the destination",
 "That character does not have a valid backpack",
 "You must target a location or an object!",
-"Select an npc",
+"Select a npc",
 "You must target a removable object",
 "Wander limits set to: %d %d %d %d", //190
 "Whom do you want to polymorph/unmorph?",

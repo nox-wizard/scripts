@@ -1,6 +1,3 @@
-#include "small-scripts/nxw_lib2.sma"
-#include "small-scripts/commands/constant.sma"
-
 //here are all command scripts
 #include "small-scripts/commands/area.sma"
 #include "small-scripts/commands/action.sma"
@@ -33,6 +30,7 @@
 #include "small-scripts/commands/kick.sma"
 #include "small-scripts/commands/killbeard.sma"
 #include "small-scripts/commands/killhair.sma"
+#include "small-scripts/commands/killpack.sma"
 #include "small-scripts/commands/loaddefaults.sma"
 #include "small-scripts/commands/lightlevel.sma"
 #include "small-scripts/commands/mana.sma"
@@ -256,9 +254,8 @@ The commands docmentations follow a simple syntax:\n
 - parameters: the parameters list, [param] means optional parameter, "text" means you have to type the specified text.
 
 
-
- *  @{
- */
+@{
+*/
 
 /*!
 \author Fax
@@ -416,4 +413,4 @@ public printCommand(file,linenum)
 
 	c++;
 }
-/*! @} */ //end of scripts_commands_system
+/*! }@ */ //end of scripts_commands_system

@@ -10,11 +10,12 @@
 \fn cmd_wipe
 \brief wipes items or characters or both
 
-<B>syntax:<B> 'wipe ["r"/"t"]
+<B>syntax:<B> 'wipe ["r"/"rx"/"t"/tx"/"x"]
 
 If area effect is active, all objects included in area will be removed.
 If no area effect is active or if you pass "t" a target will appear and only the targetted
 object will be removed
+If you use rx or tx or x, only items that don't have wipe set to 1 are wiped
 If you pass "r" as parameter, then you will be asked to target 2 map locations wich will be
 the corners of a rectangular area that will be wiped.
 */
@@ -36,14 +37,33 @@ public cmd_wipe(const chr)
 	{
 		//wipe items if required
 		new i = 0;
+		new itm;
 		if(area_itemsIncluded(area))
-			for(set_rewind(area_items(area)); !set_end(area_items(area));i++)
+		{
+			if(__cmdParams[0][0] == 'x') //wipe only wipeable items
 			{
-				new itm = set_getItem(area_items(area));
-				itm_remove(itm);
-				#if _CMD_DEBUG_
-					printf("^titem %d removed^n",itm);
-				#endif
+				for(set_rewind(area_items(area)); !set_end(area_items(area));i++)
+				{
+					itm = set_getItem(area_items(area));
+					if(itm_getProperty(itm, IP_WIPE) == 0)
+					{
+						itm_remove(itm);
+						#if _CMD_DEBUG_
+							printf("^titem %d removed^n",itm);
+						#endif
+					}
+				}
+			}
+			else
+			{
+				for(set_rewind(area_items(area)); !set_end(area_items(area));i++)
+				{
+					itm = set_getItem(area_items(area));
+					itm_remove(itm);
+					#if _CMD_DEBUG_
+						printf("^titem %d removed^n",itm);
+					#endif
+				}
 			}
 	
 		//wipe chars if required
@@ -61,6 +81,7 @@ public cmd_wipe(const chr)
 		area_refresh(area);
 		area_useCommand(area);
 		return;
+		}
 	}
 
 //do a single object wipe
@@ -88,12 +109,31 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 			new s = set_create();
 			new bp = chr_getBackpack(chr);
 			set_addItemsInCont(s,bp);
-			for(set_rewind(s);!set_end(s);)
+			if((__cmdParams[0][1] == 'x') || (__cmdParams[0][0] == 'x')) //remove only wipeable items
 			{
-				itm_remove(set_getItem(s));
+				new itm;
+				new wipe;
+				for(set_rewind(s);!set_end(s);)
+				{
+					itm = set_getItem(s);
+					wipe = itm_getProperty(itm, IP_WIPE);
+					if(wipe == 0)
+					{
+						itm_remove(itm);
+					}
+				}
+				set_delete(s);
+				return; 
 			}
-			set_delete(s);
-			return; 
+			else
+			{
+				for(set_rewind(s);!set_end(s);)
+				{
+					itm_remove(set_getItem(s));
+				}
+				set_delete(s);
+				return; 
+			}
 		}
 	}
 	else

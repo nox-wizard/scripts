@@ -18,10 +18,14 @@
 		<UL>
 		<LI> "amount": amount
 		<LI> "dir": direction - values: "n" "ne" "e" "se" "s" "sw" "w" "nw")
+		<LI> "move": moveable
+		<LI> "privon/privoff": special privs (1:newbie 2:dispellable)
+		<LI> "restock": restock amount
+		<LI> "sfx": proximity sound effect
 		<LI> "type": item type
 		<LI> "value": item price
-		<LI> "restock": restock rate
-		<LI> "sfx": proximity sound effect
+		<LI> "vis": item visibility, 0:normally 1:owner & GM visible 2:GM visible
+		<LI> "wipe": wipe restriction, set to 1 if not deleted by 'wipe x
 		</UL>
 	</UL>
 <LI> "t": bypass command area and get a target
@@ -31,8 +35,12 @@ Properties are recognized also if you type only a few initial letters. Unless th
 between properties names you can type only the first letter, if you get an ambiguity message type some
 more letters.
 */
+
+new areatype;
+
 public cmd_iset(const chr)
 {
+	areatype = 0;
 	readCommandParams(chr);
 
 	if(!strlen(__cmdParams[0]))
@@ -42,7 +50,7 @@ public cmd_iset(const chr)
 	}
 
 	new prop,val = -1000;
-	readPropAndVal(chr,prop,val)
+	readPropAndVal(chr,prop,val,0);
 
 
 	new area = chr_getCmdArea(chr);
@@ -50,6 +58,7 @@ public cmd_iset(const chr)
 	//apply command to all items in area
 	if(area_isValid(area) && __cmdParams[2][0] != 't')
 	{
+		areatype = 1;
 		area_useCommand(area);
 		for(set_rewind(area_items(area)); !set_end(area_items(area)); i++)
 		{
@@ -62,10 +71,10 @@ public cmd_iset(const chr)
 	}
 
 	//store parameters to be read by the callback
-	chr_addLocalIntVar(chr,CLV_CMDTEMP,prop);
+	//chr_addLocalIntVar(chr,CLV_CMDTEMP,prop);
 
 	chr_message(chr,_,msg_commandsDef[161],__cmdParams[0]);
-	target_create(chr,val,_,_,"cmd_iset_targ");
+	target_create(chr,_,_,_,"cmd_iset_targ");
 }
 
 /*!
@@ -74,13 +83,15 @@ public cmd_iset(const chr)
 \params all standard target callback params
 \brief handles single character targetting and setdiring
 */
-public cmd_iset_targ(target, chr, object, x, y, z, unused, val)
+public cmd_iset_targ(target, chr, object, x, y, z, unused, unused2)
 {
-	new prop = chr_getLocalIntVar(chr,CLV_CMDTEMP);
-	chr_delLocalVar(chr,CLV_CMDTEMP);
+	new prop,val = -1000;
+	//new prop = chr_getLocalIntVar(chr,CLV_CMDTEMP);
+	//chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isItem(object))
 	{
+		readPropAndVal(chr,prop,val,object);
 		if(val != -1000)
 		{
 		itm_setProperty(object,prop,_,val);
@@ -93,7 +104,7 @@ public cmd_iset_targ(target, chr, object, x, y, z, unused, val)
 	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
-static readPropAndVal(chr,&prop,&val)
+static readPropAndVal(chr,&prop,&val, itm)
 {
 	//switch on first property letter, if there is ambiguity add 
 	//another switch on the second letter __cmdParams[0][1]
@@ -120,7 +131,22 @@ static readPropAndVal(chr,&prop,&val)
 			return OK;
 		}
 
-		//case 'm': prop = IP_MOVEABLE;
+		case 'm': prop = IP_MAGIC;
+		case 'p':
+		{
+			if(areatype == 1)
+				return OK;
+			else if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
+				return INVALID;
+			
+			val = str2Int(__cmdParams[1]);
+			
+			if (__cmdParams[0][6]== 'f') //priv off
+			{
+				itm_setProperty( itm, IP_PRIV, _, itm_getProperty(itm,IP_PRIV) & ~val);
+			}
+			else itm_setProperty( itm, IP_PRIV, _, itm_getProperty(itm,IP_PRIV) | val); //priv on
+		}
 		case 't': prop = IP_TYPE;
 		case 'v': 
 			switch(__cmdParams[0][1])

@@ -138,6 +138,7 @@ dir: direction - values: n ne e se s sw w nw)
 gmfx: gm moving effect
 int: intelligence
 light: character fixed light level
+murder: murder count
 owner: owner serial
 privon/privoff: special privs (1: can broadcast, 2: see serial numbers
 by single click, 3: no skill titles,4: Can snoop other,5: Allmove,
@@ -146,7 +147,7 @@ by single click, 3: no skill titles,4: Can snoop other,5: Allmove,
 shop: character is a shopkeeper (0 no - 1 yes)
 spattack: type of spell attack
 spadelay: delay between 2 spell attacks
-speech: speech block
+speech: npc number of speech block used
 split: split
 splitchance: splitchance
 squelch: 1 squelched - 0 not squelched
@@ -213,7 +214,7 @@ TEXT
 Calls a Small public function
 syntax: 'func function [param0][param1][param2][param3][param4]
 Parameters can only be integers
-syntax: 'gmopen
+syntax: 'func
 
 TOPIC 'gcollect
 TEXT
@@ -292,10 +293,14 @@ current property value.
 propery can be:
 amount: amount
 dir: direction (n/ne/e/se/s/sw/w/nw)
+move: moveable, 0: client 1:always 2:never 3:owner
+privon/privoff: special privs (1:newbie 2:dispellable)
+restock: restock amount
+sfx: proximity sound effect
 type: item type
 value: item price
-restock: restock rate
-sfx: proximity sound effect
+vis: item visibility, 0:normally 1:owner & GM visible 2:GM visible
+wipe: wipe restriction, set to 1 if not deleted by 'wipe x
 
 TOPIC 'jail
 TEXT
@@ -324,6 +329,11 @@ TEXT
 Kills a character's hair
 syntax: 'killhair
 
+TOPIC 'killpack
+TEXT
+Kills a character's backpack
+syntax: 'killpack
+
 TOPIC 'loaddefaults
 TEXT
 Loads server defaults.
@@ -348,12 +358,13 @@ syntax: 'mana
 TOPIC 'move
 TEXT
 Moves an object
-syntax: 'move x y [z]
+syntax: 'move a/r x y [z] or 'move [param]
 'move a x y z: moves to x y z
 'move r dx dy dz: moves to x + dx, y + dy, z+ dz (relative mode)
 'move me: moves the calling chatacer
 'move here: moves object to charatcer's feet
 'move loc: moves object to a location
+'move bag: moves object to chars backpack
 If you specify the sign (+/-) in x or y 
 params will be read as relative movement 
 if no signs are specified the params will be interpreted 
@@ -630,6 +641,13 @@ syntax: 'where
 TOPIC 'wipe
 TEXT
 Removes objects
-syntax: 'wipe [rect]
+syntax: 'wipe [r/rx/t/tx/x]
+ 
+If area effect is active, all objects included in area will be removed.
+If no area effect is active or if you pass "t" a target will appear and only the targetted
+object will be removed
+If you use rx or tx or x, only items that don't have wipe set to 1 are wiped
+If you pass "r" as parameter, then you will be asked to target 2 map locations wich will be
+the corners of a rectangular area that will be wiped.
 
 ====== END OF COMMAND HELP TOPICS ================

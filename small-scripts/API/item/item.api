@@ -308,7 +308,7 @@ native itm_checkDecay(const itm);
 \author Fax
 \fn itm_setDecay(const itm, const decayTime)
 \param itm: the item
-\param decayTime: time the itemwill decay, INVALID means decay off
+\param decayTime: time the item will decay, INVALID means decay off
 \since 0.82
 \brief sets the item's decay time
 \return nothing
@@ -391,12 +391,12 @@ native itm_speech(const s, const itm, const text[]);
 
 /*!
 \author Anthalir
-\fn itm_bounceToPack(const s, const item)
+\fn itm_bounceToPack(const chr, const item)
 \param s the socket
 \param item the item
 \brief puts the item in the backpack of the character with soicket s
 */
-native itm_BounceToPack(const s, const item);
+native itm_BounceToPack(const chr, const item);
 
 /*!
 \author Sparhawk

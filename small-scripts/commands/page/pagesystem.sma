@@ -1,4 +1,4 @@
-#include "small-scripts/commands/page/constants.sma"
+
 #define MAX_GM_PAGES 100
 #define MAX_GM_PAGE_LENGTH 128
 static GMpages[MAX_GM_PAGES][MAX_GM_PAGE_LENGTH];

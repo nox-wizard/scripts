@@ -1,5 +1,6 @@
 public race_menu( const chr, const race )
 {
+	new BUTTON_APPLY =11;
 	new tempStr[50];
 	if( race_getGlobalProp( RP_WITH_WEB_INTERFACE ) == 1)
 		sprintf(tempStr,"race_webInterface");

@@ -66,7 +66,6 @@ public scan_regions(file,line)
 	if(!strcmp(currentXssCommand,"NAME"))
 	{
 		sprintf(regionname, currentXssValue);
-		NUM_LOCATIONS++;
 		return;
 	}
 	
