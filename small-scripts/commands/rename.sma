@@ -51,13 +51,9 @@ public cmd_rename_targ(const target, const chr, const object, const x, const y, 
 	chr_getLocalStrVar(chr,CLV_CMDTEMP, tempStr);
 	chr_delLocalVar(chr,CLV_CMDTEMP);
 	
-	//remove the "what" keyword/command word in front of the term
-	new i=0;
-	while( tempStr[i] != ' ')
-	{
-		i++;
-	}
-	substring(tempStr, i+1, strlen(tempStr), tempStr, 0);
+	//remove the "what" keyword/command word in front of the title/name/...
+	new Token[1];
+	str2Token(tempStr, Token, 0, tempStr,0);
 	trim(tempStr);
 	//printf("tempStr: %s^n", tempStr);
 	
