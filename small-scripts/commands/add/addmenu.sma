@@ -57,7 +57,7 @@ enum submenuStruct
 {
 	__pageDataIdx,		//!< index in pageData[][] at wich start submenu data
 	__numPages,		//!< number of pages in the submenu
-	__height,		//!< number of linesin the menu body
+	__height,		//!< number of lines in the menu body
 	__submenuTitle: MAX_TITLE_LENGTH,	//!< submenu title
 	__submenuFunction: AMX_FUNCTION_LENGTH	//!< submenu function
 }//!< submenuData[][] structure
@@ -66,7 +66,7 @@ public submenuData[MAX_ADD_SUBMENUS][submenuStruct]; //!< submenu data
 enum pageStruct
 {
 	__submenu,	//!< the submenu the page belongs to
-	__listIdx,	//!< index in addMenuList[][] at wich items data strat
+	__listIdx,	//!< index in addMenuList[][] at wich items data start
 	__numItems,	//!< number of listed items
 	__addGui_tab,	//!< columns spacing
 	__addGui_interline,	//!< rows spacing
@@ -194,8 +194,10 @@ public addgui_cback(menu,chr,btn)
 #if _CMD_DEBUG_
 	log_message("^t->calling function: %s",submenuData[btn][__submenuFunction]);
 #endif
-	//call appropriate function
-	callFunction2P(funcidx(submenuData[btn][__submenuFunction]),chr,btn);
+	//call appropriate function, addgui_standard must be called with diferent parameters
+	if(strcmp(submenuData[btn][__submenuFunction],"addgui_standard"))
+		callFunction2P(funcidx(submenuData[btn][__submenuFunction]),chr,btn);
+	else callFunction3P(funcidx(submenuData[btn][__submenuFunction]),INVALID,chr,(btn << 16));
 }
 
 //==================================================================================//
@@ -223,30 +225,20 @@ be passed the submenu and the current submenu page (index in pageData[][]), so p
 
 \return nothing
 */
-public addgui_standard(chr,submenu,...)
+public addgui_standard(menu,chr,submenuPage)
 {
 	if(!isChar(chr)) return;
-
+	
+	new submenu = submenuPage >> 16;
+	new page = submenuPage & 0xFFFF;
+	
 #if _CMD_DEBUG_
-	log_message("^t->drawing submenu %d",submenu);
+	log_message("^t->drawing submenu %d - page %d",submenu,page);
 #endif
 	
 	//read additional params, amount is 1 by default
-	new startx,starty,itemsInBackpack,amount = 1;
-	if(numargs() > 2)
-	{
-		itemsInBackpack = getarg(2);
-		if(numargs() > 3)
-		{
-			amount = getarg(3);
-			if(numargs() > 4)
-			{
-				startx = getarg(3);
-				if(numargs() > 4)
-					starty = getarg(4);
-			}
-		}
-	}
+	new startx,starty;
+	new itemsInBackpack,amount = 1;
 	
 	//calculate header size
 	new ROWS = 2 + submenuData[submenu][__numPages]/ITEMS_PER_ROW + (submenuData[submenu][__numPages]%ITEMS_PER_ROW > 0 ? 1 : 0)
@@ -255,8 +247,7 @@ public addgui_standard(chr,submenu,...)
 	cursor_setProperty(CRP_TAB,tab);
 	
 	//create a framed menu
-	createFramedMenu(0,0,ROWS,submenuData[submenu][__height],COLS,"addgui_standard_cback");
-	
+	createFramedMenu(startx,starty,ROWS,submenuData[submenu][__height],COLS,"addgui_standard_cback");
 	//offset is the index at wich submenu data strats in submenuData[][]
 	new offset = submenuData[submenu][__pageDataIdx];
 	
@@ -264,10 +255,10 @@ public addgui_standard(chr,submenu,...)
 	{
 		if(p%ITEMS_PER_ROW == 0 && p != 0) cursor_newline();
 		
-		menu_addLabeledPageButton(p + 1,pageData[offset + p][__pageTitle]);
+		//call addgui_standard to draw the other pages when needed
+		menu_addLabeledButtonFn((submenu << 16) + p,"addgui_standard",pageData[offset + p][__pageTitle]);
 		cursor_tab();		
 	}
-	
 	cursor_newline();
 	
 	//add "create items in backpack" checkbox
@@ -287,21 +278,17 @@ public addgui_standard(chr,submenu,...)
 	new stopIdx;	//stop index in addMenuList[][]
 	starty = cursor_y(); //store start row
 	
-	//draw pages
-	for(new p = 1; p <= submenuData[submenu][__numPages]; p++)
+	//draw page
+	idx = offset + page;
+	cursor_newline();
+	cursor_goto(cursor_x(),starty);
+	
+	//draw a custom page if a function is declared
+	if(strlen(pageData[idx][__pageFunction]))
+		callFunction2P(funcidx(pageData[idx][__pageFunction]),submenu,idx);
+	else
 	{
-		menu_addPage(p);
-		idx = offset + p - 1;
-		cursor_newline();
-		cursor_goto(cursor_x(),starty);
-		
-		//draw a custom page if a function is declared
-		if(strlen(pageData[idx][__pageFunction]))
-		{
-			callFunction2P(funcidx(pageData[idx][__pageFunction]),submenu,idx);
-			continue;
-		}
-		
+	
 		//otherwise draw a standard page
 		//collect data to draw the page
 		startIdx = pageData[idx][__listIdx];
@@ -428,7 +415,7 @@ static addItemList(startIdx,stopIdx,pic,label)
 	for(new idx = startIdx; idx < stopIdx; idx++)
 	{
 		//read and validate scriptID, invalid scriptIDs have an 'x' instead of the button
-		scriptID = getIntFromDefine(addMenuList[idx][__addGui_def]);
+		scriptID = getIntFromDefine(addMenuList[idx][__addGui_def],false);
 		if(scriptID > 0)
 		{
 			menu_addButton(addMenuList[idx][__addGui_type]*scriptID);

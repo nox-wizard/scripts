@@ -290,7 +290,7 @@ static searchMatch()
 	}
 		
 	new scriptID;
-	scriptID = getIntFromDefine(def,false);
+	scriptID = getIntFromDefine(def);
 	if(scriptID > 0)
 	{
 		//increase last index
