@@ -179,6 +179,13 @@ const Delay_HungerThirst = 180;
 
 public hungerandthirst(const c)
 {
+	if( (tempfx_isActive( c, _, funcidx("hungertimer")) == 1) && (chr_getProperty(c,CP_PRIVLEVEL) < PRIV_CNS) )
+		return;
+	else if ( (tempfx_isActive( c, _, funcidx("hungertimer")) == 1) && (chr_getProperty(c,CP_PRIVLEVEL) >= PRIV_CNS) )
+	{
+		tempf_delete( c, _, false, funcidx("hungertimer");
+		return;
+	}
 	if(chr_getProperty(c,CP_PRIVLEVEL) < PRIV_CNS)
 		tempfx_activate(_, c, c, 500, Delay_HungerThirst,funcidx("hungertimer"));
 }
@@ -186,7 +193,7 @@ public hungerandthirst(const c)
 public hungertimer(const source, const dest, const power, const mode)
 {
 	if(mode != TFXM_END) return;
-	printf("power: %d",power);
+	//printf("power: %d",power);
 	new c = source;
 
     	new hunger = chr_getLocalIntVar(c, 1002);//Hunger
