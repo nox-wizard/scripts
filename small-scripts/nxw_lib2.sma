@@ -959,5 +959,4 @@ stock chr_getTempIntVec(chr,var,vec[])
 		vec[i] = chr_getLocalIntVec(chr,var,i);
 }
 
-
 /** @} */

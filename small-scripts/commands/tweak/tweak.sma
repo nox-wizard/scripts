@@ -19,8 +19,14 @@ Shows an ingame menu that allows all kinds of modifications to chars and items<B
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 //                                        general tweak stuff                                             //
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
-const BUTTON_APPLY=11
-const twkpages=10; //one line for one page, two rows for one page
+const BUTTON_APPLY=16;
+const BUTTON_FLAGMIN_CHR=1;
+const BUTTON_FLAGMAX_CHR=10;
+const BUTTON_EVENTS_CHR = 14;
+const BUTTON_LAYER_CHR = 13;
+const BUTTON_SKILL_CHR = 12;
+const BUTTON_LV_CHR = 11;
+const twkpages=15; //one line for one page, two rows for one page
 
 const oldpic = 5002;
 const newpic = 5003;
@@ -46,20 +52,35 @@ old8,
 new9,
 old9,
 new10,
-old10
+old10,
+new11,
+old11,
+new12,
+old12,
+new13,
+old13,
+new14,
+old14,
+new15,
+old15
 };
 
 static twkButton[twkpages][twk_buttons] = {
-{5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003},
-{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209}
+{5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209, 5209, 5003},
+{5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5209, 5003, 5003, 5209}
 };
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
@@ -100,6 +121,14 @@ static ct_pg5_l =0;
 static ct_pg5_r =0;
 static ct_pg6_l =0;
 static ct_pg6_r =0;
+static ct_pg7_l =0;
+static ct_pg7_r =0;
+static ct_pg8_l =0;
+static ct_pg8_r =0;
+static ct_pg9_l =0;
+static ct_pg9_r =0;
+static ct_pg10_l =0;
+static ct_pg10_r =0;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//
 //                                         functions start                     //
@@ -140,12 +169,14 @@ public init_tweak_itm()
 				j = i + itm_twkarray[i][it_propval]; //how many lines we need for the radiobuttonbox-thing?
 			else if(itm_twkarray[i][it_linetype] == 6) //subprop-grouping
 				j = i + itm_twkarray[i][it_propval];
+			else if(chr_twkarray[i][ct_linetype] == 0) //title/heading
+				j = i + itm_twkarray[i][it_propval];
 			else j=i;
 			//printf("j: %d^n", j);
 			if(i<=13) //left row page1, we can only check first 14 array lines
 			{
 				if(j>=14)  //to add radio button would extend over max line number
-					it_pg1_l = i-1; //then fewer lines then max to keep it together
+					it_pg1_l = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 				else if(j==13) //14 lines = maximum fits
 					it_pg1_l = i; //maximum 14 lines that fit at row
 			}
@@ -153,7 +184,7 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg1_l+14)) // to add radio button would extend over max line number
 				{
-					it_pg1_r = i-1; //then fewer lines then max to keep it together
+					it_pg1_r = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg1_l+14;
 				}
 				else if(j==(it_pg1_l+14))
@@ -163,7 +194,7 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg1_r+14)) // to add radio button would extend over max line number
 				{
-					it_pg2_l = i-1; //then fewer lines then max to keep it together
+					it_pg2_l = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg1_r+14;
 				}
 				else if(j==(it_pg1_r+14))
@@ -173,7 +204,7 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg2_l+14)) // to add radio button would extend over max line number
 				{
-					it_pg2_r = i-1; //then fewer lines then max to keep it together
+					it_pg2_r = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg2_l+14;
 				}
 				else if(j==(it_pg2_l+14))
@@ -183,7 +214,7 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg2_r+14)) // to add radio button would extend over max line number
 				{
-					it_pg3_l = i-1; //then fewer lines then max to keep it together
+					it_pg3_l = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg2_r+14;
 				}
 				else if((j==(it_pg2_r+14)) || i==(NUM_itmtweak-1))
@@ -193,7 +224,7 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg3_l+14)) // to add radio button would extend over max line number
 				{
-					it_pg3_r = i-1; //then fewer lines then max to keep it together
+					it_pg3_r = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg3_l+14;
 				}
 				else if((j==(it_pg3_l+14)) || i==(NUM_itmtweak-1))
@@ -203,7 +234,7 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg3_r+14)) // to add radio button would extend over max line number
 				{
-					it_pg4_l = i-1; //then fewer lines then max to keep it together
+					it_pg4_l = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg3_r+14;
 				}
 				else if((j==(it_pg3_r+14)) || i==(NUM_itmtweak-1))
@@ -213,7 +244,7 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg4_l+14)) // to add radio button would extend over max line number
 				{
-					it_pg4_r = i-1; //then fewer lines then max to keep it together
+					it_pg4_r = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg4_l+14;
 				}
 				else if((j==(it_pg4_l+14)) || i==(NUM_itmtweak-1))
@@ -223,7 +254,7 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg4_r+14)) // to add radio button would extend over max line number
 				{
-					it_pg5_l = i-1; //then fewer lines then max to keep it together
+					it_pg5_l = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg4_r+14;
 				}
 				else if((j==(it_pg4_r+14)) || i==(NUM_itmtweak-1))
@@ -233,25 +264,22 @@ public init_tweak_itm()
 			{
 				if(j>(it_pg5_l+14)) // to add radio button would extend over max line number
 				{
-					it_pg5_r = i-1; //then fewer lines then max to keep it together
+					it_pg5_r = i-itm_twkarray[i][it_propval]; //then fewer lines then max to keep it together
 					i=it_pg5_l+14;
 				}
 				else if((j==(it_pg5_l+14)) || i==(NUM_itmtweak-1))
 					it_pg5_r = i; //maximum 14 lines that fit at row
 			}
 		}//for
+		new tempStr[50];
 		for(new i=0; i<NUM_chrtweak; ++i)
 		{
 			new j;
-			if(chr_twkarray[i][ct_linetype] == 5) //radiobutton-grouping
-				j = i + chr_twkarray[i][ct_propval]; //how many lines we need for the radiobuttonbox-thing?
-			else if(chr_twkarray[i][ct_linetype] == 6) //subprop-grouping
-				j = i + chr_twkarray[i][ct_propval];
-			else j=i;
+			j = i + chr_twkarray[i][ct_propval]; //how many lines we need for the radiobuttonbox-thing?
 			if(i<14) //left row page1, we can only check first 14 array lines
 			{
 				if(j>=14)  //to add radio button would extend over max line number
-					ct_pg1_l = i-1; //then fewer lines then max to keep it together
+					ct_pg1_l = i- 1; //then fewer lines then max to keep it together
 				else if(j==13) //14 lines = maximum fits
 					ct_pg1_l = i; //maximum 14 lines that fit at row
 			}
@@ -259,7 +287,7 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg1_l+14)) // to add radio button would extend over max line number
 				{
-					ct_pg1_r = i-1; //then fewer lines then max to keep it together
+					ct_pg1_r = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg1_l+14;
 					//printf("i: %d, j: %d^n", i, j);
 				}
@@ -273,7 +301,7 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg1_r+14)) // to add radio button would extend over max line number
 				{
-					ct_pg2_l = i-1; //then fewer lines then max to keep it together
+					ct_pg2_l = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg1_r+14;
 				}
 				else if(j==(ct_pg1_r+14))
@@ -283,7 +311,7 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg2_l+14)) // to add radio button would extend over max line number
 				{
-					ct_pg2_r = i-1; //then fewer lines then max to keep it together
+					ct_pg2_r = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg2_l+14;
 				}
 				else if(j==(ct_pg2_l+14))
@@ -293,7 +321,7 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg2_r+14)) // to add radio button would extend over max line number
 				{
-					ct_pg3_l = i-1; //then fewer lines then max to keep it together
+					ct_pg3_l = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg2_r+14;
 				}
 				else if((j==(ct_pg2_r+14)) || i==(NUM_chrtweak-1))
@@ -303,7 +331,7 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg3_l+14)) // to add radio button would extend over max line number
 				{
-					ct_pg3_r = i-1; //then fewer lines then max to keep it together
+					ct_pg3_r = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg3_l+14;
 				}
 				else if((j==(ct_pg3_l+14)) || i==(NUM_chrtweak-1))
@@ -313,7 +341,7 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg3_r+14)) // to add radio button would extend over max line number
 				{
-					ct_pg4_l = i-1; //then fewer lines then max to keep it together
+					ct_pg4_l = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg3_r+14;
 				}
 				else if((j==(ct_pg3_r+14)) || i==(NUM_chrtweak-1))
@@ -323,7 +351,7 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg4_l+14)) // to add radio button would extend over max line number
 				{
-					ct_pg4_r = i-1; //then fewer lines then max to keep it together
+					ct_pg4_r = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg4_l+14;
 				}
 				else if((j==(ct_pg4_l+14)) || i==(NUM_chrtweak-1))
@@ -333,7 +361,7 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg4_r+14)) // to add radio button would extend over max line number
 				{
-					ct_pg5_l = i-1; //then fewer lines then max to keep it together
+					ct_pg5_l = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg4_r+14;
 				}
 				else if((j==(ct_pg4_r+14)) || i==(NUM_chrtweak-1))
@@ -343,17 +371,17 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg5_l+14)) // to add radio button would extend over max line number
 				{
-					ct_pg5_r = i-1; //then fewer lines then max to keep it together
+					ct_pg5_r = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg5_l+14;
 				}
 				else if((j==(ct_pg5_l+14)) || i==(NUM_chrtweak-1))
 					ct_pg5_r = i; //maximum 14 lines that fit at row
 			}//else if
-			else if(ct_pg5_r < i <= (ct_pg5_r+14))//left row 5. page
+			else if(ct_pg5_r < i <= (ct_pg5_r+14))//left row 6. page
 			{
 				if(j>(ct_pg5_r+14)) // to add radio button would extend over max line number
 				{
-					ct_pg6_l = i-1; //then fewer lines then max to keep it together
+					ct_pg6_l = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg5_r+14;
 				}
 				else if((j==(ct_pg5_r+14)) || i==(NUM_chrtweak-1))
@@ -363,11 +391,91 @@ public init_tweak_itm()
 			{
 				if(j>(ct_pg6_l+14)) // to add radio button would extend over max line number
 				{
-					ct_pg6_r = i-1; //then fewer lines then max to keep it together
+					ct_pg6_r = i- 1; //then fewer lines then max to keep it together
 					i=ct_pg6_l+14;
 				}
 				else if((j==(ct_pg6_l+14)) || i==(NUM_chrtweak-1))
 					ct_pg6_r = i; //maximum 14 lines that fit at row
+			}//else if
+			else if(ct_pg6_r < i <= (ct_pg6_r+14))//left row 7. page
+			{
+				if(j>(ct_pg6_r+14)) // to add radio button would extend over max line number
+				{
+					ct_pg7_l = i- 1; //then fewer lines then max to keep it together
+					i=ct_pg6_r+14;
+				}
+				else if((j==(ct_pg6_r+14)) || i==(NUM_chrtweak-1))
+					ct_pg7_l = i; //maximum 14 lines that fit at row
+			}
+			else if(ct_pg7_l < i <= (ct_pg7_l+14))//right row 7. page
+			{
+				if(j>(ct_pg7_l+14)) // to add radio button would extend over max line number
+				{
+					ct_pg7_r = i- 1; //then fewer lines then max to keep it together
+					i=ct_pg7_l+14;
+				}
+				else if((j==(ct_pg7_l+14)) || i==(NUM_chrtweak-1))
+					ct_pg7_r = i; //maximum 14 lines that fit at row
+			}//else if
+			else if(ct_pg7_r < i <= (ct_pg7_r+14))//left row 8. page
+			{
+				if(j>(ct_pg7_r+14)) // to add radio button would extend over max line number
+				{
+					ct_pg8_l = i- 1; //then fewer lines then max to keep it together
+					i=ct_pg7_r+14;
+				}
+				else if((j==(ct_pg7_r+14)) || i==(NUM_chrtweak-1))
+					ct_pg8_l = i; //maximum 14 lines that fit at row
+			}
+			else if(ct_pg8_l < i <= (ct_pg8_l+14))//right row 8. page
+			{
+				if(j>(ct_pg8_l+14)) // to add radio button would extend over max line number
+				{
+					ct_pg8_r = i- 1; //then fewer lines then max to keep it together
+					i=ct_pg8_l+14;
+				}
+				else if((j==(ct_pg8_l+14)) || i==(NUM_chrtweak-1))
+					ct_pg8_r = i; //maximum 14 lines that fit at row
+			}//else if
+			else if(ct_pg8_r < i <= (ct_pg8_r+14))//left row 9. page
+			{
+				if(j>(ct_pg8_r+14)) // to add radio button would extend over max line number
+				{
+					ct_pg9_l = i- 1; //then fewer lines then max to keep it together
+					i=ct_pg8_r+14;
+				}
+				else if((j==(ct_pg8_r+14)) || i==(NUM_chrtweak-1))
+					ct_pg9_l = i; //maximum 14 lines that fit at row
+			}
+			else if(ct_pg9_l < i <= (ct_pg9_l+14))//right row 9. page
+			{
+				if(j>(ct_pg9_l+14)) // to add radio button would extend over max line number
+				{
+					ct_pg9_r = i- 1; //then fewer lines then max to keep it together
+					i=ct_pg9_l+14;
+				}
+				else if((j==(ct_pg9_l+14)) || i==(NUM_chrtweak-1))
+					ct_pg9_r = i; //maximum 14 lines that fit at row
+			}//else if
+			else if(ct_pg9_r < i <= (ct_pg9_r+14))//left row 10. page
+			{
+				if(j>(ct_pg9_r+14)) // to add radio button would extend over max line number
+				{
+					ct_pg10_l = i- 1; //then fewer lines then max to keep it together
+					i=ct_pg9_r+14;
+				}
+				else if((j==(ct_pg9_r+14)) || i==(NUM_chrtweak-1))
+					ct_pg10_l = i; //maximum 14 lines that fit at row
+			}
+			else if(ct_pg10_l < i <= (ct_pg10_l+14))//right row 10. page
+			{
+				if(j>(ct_pg10_l+14)) // to add radio button would extend over max line number
+				{
+					ct_pg10_r = i- 1; //then fewer lines then max to keep it together
+					i=ct_pg10_l+14;
+				}
+				else if((j==(ct_pg10_l+14)) || i==(NUM_chrtweak-1))
+					ct_pg10_r = i; //maximum 14 lines that fit at row
 			}//else if
 		}//for
 	tweakinit = true;
@@ -448,6 +556,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 		startline = it_pg2_r+1;
 		leftrow = it_pg3_l;
 		rightrow = it_pg3_r;
+		printf("tweak item page 3: left %d line, right %d^n", it_pg3_l, it_pg3_r);
 	}
 	else if( pagenumber == 4)
 	{
@@ -455,6 +564,7 @@ public tweak_itm(const chrsource, const target, pagenumber)
 		startline = it_pg3_r+1;
 		leftrow = it_pg4_l;
 		rightrow = it_pg4_r;
+		printf("tweak item page 4: left %d line, right %d^n", it_pg4_l, it_pg4_r);
 	}
 	else if( pagenumber == 5) //events
 	{
@@ -760,10 +870,11 @@ public tweak_itm(const chrsource, const target, pagenumber)
 					case 7:
 					{
 						new stocktype = itm_twkarray[i][it_propnumber];
-						if( (stocktype == 0) || (stocktype == 1)) //MoreB1+2
+						new propertynum = itm_twkarray[i][it_infotype];
+						if( (stocktype == 0) || (stocktype == 1)) //MoreB1+2 u. MoreB3+4
 						{
-							new moreb1 = itm_getProperty(target, IP_MOREB, 1+2*stocktype);
-							new moreb2 = itm_getProperty(target, IP_MOREB, 2+2*stocktype);
+							new moreb1 = itm_getProperty(target, propertynum, 1+2*stocktype);
+							new moreb2 = itm_getProperty(target, propertynum, 2+2*stocktype);
 							moreb1 = (moreb1&0xff);
 							moreb2 = (moreb2&0xff)<<8;
 							sprintf(tempItmStr, "%d", moreb1+moreb2);
@@ -834,16 +945,18 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 	{
 		tweak_itm(chrsource, target, buttonCode);
 	}
-	else if( buttonCode == 11) //apply
+	else if( buttonCode == 16) //apply
 	{
 		if( 1<= pagenumber <= 5)
 		{
+			new type;
 			for(i=0; i <= NUM_itmtweak; ++i)
 			{
+				type = itm_twkarray[i][it_propnumber];
 				new linetype = itm_twkarray[i][it_linetype];
 				if(linetype == 4) //checkbox
 				{
-					if(itm_twkarray[i][it_propnumber] == 118) //Priv
+					if( type == 118) //Priv
 					{
 						if( (itm_getProperty( target,IP_PRIV)&itm_twkarray[i][it_infotype] == itm_twkarray[i][it_infotype]) && (!gui_getProperty(twkItmMenu,MP_RADIO,i)) ) //is at TRUE and not checked
 							itm_setProperty( target,IP_PRIV, _, itm_setProperty( target,IP_PRIV) &~ itm_twkarray[i][it_infotype] );
@@ -851,6 +964,20 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 							itm_setProperty( target,IP_PRIV, _, itm_setProperty( target,IP_PRIV) | itm_twkarray[i][it_infotype] );
 					}
 				}
+				else if(linetype == 5) //radiobutton
+		        	{
+		        		printf("enter radiobutton in 5, prop is %d", type);
+		        		checked = gui_getProperty(twkItmMenu,MP_RADIO,i);
+		        		new privvalue = itm_twkarray[i][it_infotype];
+		        		if(type == 120)//visibility
+					{
+						new originalvalue = itm_getProperty( target,type);
+						if( (checked == 1) && (originalvalue != privvalue)) //is false and checked now
+						{
+							itm_setProperty( target,type, _, privvalue);
+						}
+					}
+		        	}//linetype
 				else if(linetype == 5) //radiobutton
 				{
 					new limit;
@@ -861,14 +988,15 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 					for( new m = 0; m <= limit; ++m)
 					{
 						if(gui_getProperty(twkItmMenu,MP_RADIO,i))
-							itm_setProperty( target, itm_twkarray[i][it_propnumber], _, itm_twkarray[i][it_infotype]);
+							itm_setProperty( target, type, _, itm_twkarray[i][it_infotype]);
 						++i;
 					}
 					limit = 0;
 				}
 				else if(linetype == 7) //stock function
 				{
-					new stocktype = itm_twkarray[i][it_propnumber];
+					new stocktype = type;
+					new propertynum = itm_twkarray[i][it_infotype];
 					if( (stocktype == 0) || (stocktype == 1)) //MoreB1+2
 					{
 						new textbuf_input[15];
@@ -880,8 +1008,8 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 							value = str2UnsignedInt(textbuf_input);
 							new moreb1 = value%256;
 							new moreb2 = value/256;
-							itm_setProperty(target, IP_MOREB, 1+2*stocktype, moreb1);
-							itm_setProperty(target, IP_MOREB, 2+2*stocktype, moreb2);
+							itm_setProperty(target, propertynum, 1+2*stocktype, moreb1);
+							itm_setProperty(target, propertynum, 2+2*stocktype, moreb2);
 							//printf("moreb1-subprop: %d, moreb2-subprop: %d^n", 1+2*stocktype*(9/10), 2+2*stocktype*(9/10));
 						}
 						else chr_message( chrsource, _,msg_commandsDef[76]);
@@ -1022,37 +1150,47 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_setProperty( twkChrMenu,MP_BUFFER,4,pagenumber );
 
 	gui_addPage(twkChrMenu,0);
-	gui_addResizeGump(twkChrMenu,10,35,5054,550,530 );
-	gui_addResizeGump(twkChrMenu,20,105,3500,530,455);
-	gui_addResizeGump(twkChrMenu,25,49,5100,525,51);
+	gui_addResizeGump(twkChrMenu,10,0,5054,550,530 );
+	gui_addResizeGump(twkChrMenu,20,105,3500,530,425);
+	gui_addResizeGump(twkChrMenu,25,19,5100,525,81);
 	
-	gui_addText(twkChrMenu,250,32,1210,msg_commandsDef[40]);
-	gui_addButton( twkChrMenu,460,525, 0x084A, 0x084B,BUTTON_APPLY );
+	gui_addText(twkChrMenu,250,2,1210,msg_commandsDef[40]);
+	gui_addButton( twkChrMenu,460,495, 0x084A, 0x084B,BUTTON_APPLY );
 	gui_addPage(twkChrMenu,1);
 
 	new arrayline = pagenumber-1;
 
-	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[41]);
-	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[42]);//flag1
-	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[43]);//flag2
-	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
-	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+	gui_addButton(twkChrMenu,35,21,twkButton[arrayline][new1],twkButton[arrayline][old1],BUTTON_FLAGMIN_CHR);
+	gui_addText(twkChrMenu,60,19,33,msg_commandsDef[41]);
+	gui_addButton(twkChrMenu,170,21,twkButton[arrayline][new2],twkButton[arrayline][old2],BUTTON_FLAGMIN_CHR+1);
+	gui_addText(twkChrMenu,195,19,33,msg_commandsDef[42]);//flag1
+	gui_addButton(twkChrMenu,260,21,twkButton[arrayline][new3],twkButton[arrayline][old3],BUTTON_FLAGMIN_CHR+2);
+	gui_addText(twkChrMenu,285,19,33,msg_commandsDef[43]);//flag2
+	gui_addButton(twkChrMenu,355,21,twkButton[arrayline][new4],twkButton[arrayline][old4],BUTTON_FLAGMIN_CHR+3);
+	gui_addText(twkChrMenu,380,19,33,msg_commandsDef[44]);//flag3
+	gui_addButton(twkChrMenu,445,21,twkButton[arrayline][new5],twkButton[arrayline][old5],BUTTON_FLAGMIN_CHR+4);
+	gui_addText(twkChrMenu,470,19,33,msg_commandsDef[47]);//flag4
 	
-	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[272]); //flag5
-	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
-	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
-	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-	gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
-	gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
+	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new6],twkButton[arrayline][old6],BUTTON_FLAGMIN_CHR+5);
+	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[272]); //flag5
+	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new7],twkButton[arrayline][old7],BUTTON_FLAGMIN_CHR+6);
+	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[280]); //flag6
+	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new8],twkButton[arrayline][old8],BUTTON_FLAGMIN_CHR+7);
+	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[281]);//flag7
+	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new9],twkButton[arrayline][old9],BUTTON_FLAGMIN_CHR+8);
+	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[282]);//flag8
+	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new10],twkButton[arrayline][old10],BUTTON_FLAGMIN_CHR+9);
+	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[283]);//flag9
+	
+	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new11],twkButton[arrayline][old11],BUTTON_LV_CHR);
+	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[45]); //localVars
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new12],twkButton[arrayline][old12],BUTTON_SKILL_CHR);
+	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[48]);//skill
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new13],twkButton[arrayline][old13],BUTTON_LAYER_CHR);
+	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[49]);//layer
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new14],twkButton[arrayline][old14],BUTTON_EVENTS_CHR);
+	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[46]);//event
+	
 	
 	//printf("target: %d", target);
 	gui_addText(twkChrMenu,66,120,33,msg_commandsDef[66]);
@@ -1108,32 +1246,62 @@ public tweak_char(const chrsource, const target, pagenumber)
 	}
 	else if( pagenumber == 5)
 	{
-		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[45]);
+		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[47]);
 		startline = ct_pg4_r+1;
 		leftrow = ct_pg5_l;
 		rightrow = ct_pg5_r;
 	}
 	else if( pagenumber == 6)
 	{
-		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[270]);
+		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[272]);
 		startline = ct_pg5_r+1;
 		leftrow = ct_pg6_l;
 		rightrow = ct_pg6_r;
 	}
+	else if( pagenumber == 7)
+	{
+		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[280]);
+		startline = ct_pg6_r+1;
+		leftrow = ct_pg7_l;
+		rightrow = ct_pg7_r;
+	}
+	else if( pagenumber == 8)
+	{
+		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[281]);
+		startline = ct_pg7_r+1;
+		leftrow = ct_pg8_l;
+		rightrow = ct_pg8_r;
+	}
+	else if( pagenumber == 9)
+	{
+		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[282]);
+		startline = ct_pg8_r+1;
+		leftrow = ct_pg9_l;
+		rightrow = ct_pg9_r;
+	}
+	else if( pagenumber == 10)
+	{
+		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[283]);
+		startline = ct_pg9_r+1;
+		leftrow = ct_pg10_l;
+		rightrow = ct_pg10_r;
+	}
 	//printf("rightrow: %d, leftrow: %d", rightrow, leftrow);
-	if( 1<= pagenumber <= 6)
+	if( BUTTON_FLAGMIN_CHR<= pagenumber <= BUTTON_FLAGMAX_CHR)
 	{
 		new linetype; //type of the line (propertyfield, inputfield, radiobutton ...)
 		new p; //creates several property fields if splitted (more is splitted into 4 more values and so p for more is 4)
 		new k=0; //multiplier how many pixel right row is pushed to the right compared to the left row
 		new n=0; //counts the line numbers per row, max is 14 lines
 		new endline;
+		new propnumber;
 		if((rightrow == 0) && (leftrow != 0))
 			endline = leftrow;
 		else if((rightrow != 0) && (leftrow != 0))
 			endline = rightrow;
 		for(new i=startline; i<=endline; ++i)
 		{
+			propnumber = chr_twkarray[i][ct_propnumber];
 			if(i==(leftrow+1))//other row
 			{
 				k=254;
@@ -1155,15 +1323,15 @@ public tweak_char(const chrsource, const target, pagenumber)
 					{
 						for(p = 1; p<= chr_twkarray[i][ct_infotype]; p++)
 						{
-							gui_addPropField( twkChrMenu, ct_prop+k-30+p*30, (180+(n*20)),150,30, chr_twkarray[i][ct_propnumber]);
+							gui_addPropField( twkChrMenu, ct_prop+k-30+p*30, (180+(n*20)),150,30, propnumber);
 						}
 					}
-					else gui_addPropField( twkChrMenu, ct_prop+k, (180+(n*20)),150,30, chr_twkarray[i][ct_propnumber]);
+					else gui_addPropField( twkChrMenu, ct_prop+k, (180+(n*20)),150,30, propnumber);
 				}
 				case 2: //infofield, eg weight
 				{
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
-					if(chr_twkarray[i][ct_propnumber]==0) //custom info function
+					if(propnumber==0) //custom info function
 					{
 						if(chr_twkarray[i][ct_infotype]==1)
 							sprintf( tempChrStr,"%d",tempfx_isActive( target,TFX_SPELL_REACTARMOR));
@@ -1174,29 +1342,29 @@ public tweak_char(const chrsource, const target, pagenumber)
 					}
 					else if(chr_twkarray[i][ct_propval]==0) //is an integer information
 					{
-						sprintf( tempChrStr,"%d",chr_getProperty(target,chr_twkarray[i][ct_propnumber]));
+						sprintf( tempChrStr,"%d",chr_getProperty(target,propnumber));
 					}
 					else if(chr_twkarray[i][ct_propval]==1) //is an string information
 					{
-						chr_getProperty(target,chr_twkarray[i][ct_propnumber],_,tempChrStr);
+						chr_getProperty(target,propnumber,_,tempChrStr);
 					}
 					gui_addText( twkChrMenu, ct_desc+k, 180+(n*20),0,tempChrStr);
 					sprintf( tempChrStr,"");
 				}
 				case 3: //inputfield, eg Nightsight
 				{
-					if( chr_twkarray[i][ct_propnumber] == 1) //TFX function
+					if( propnumber == 1) //TFX function
 					{
 						if(tempfx_isActive( target,chr_twkarray[i][ct_infotype]) == 1)
 							checklev = 1;
 							sprintf(tempChrStr, "%s", chr_twkarray[i][ct_inputname]);
 					}
-					else if( chr_twkarray[i][ct_propnumber] == 2) //AMX LocalVars Int
+					else if( propnumber == 2) //AMX LocalVars Int
 					{
 						new output = chr_getLocalIntVar(target, chr_twkarray[i][ct_infotype]);
 						sprintf(tempChrStr, "%d",output);
 					}
-					else if( chr_twkarray[i][ct_propnumber] == 3) //AMX LocalVars Str
+					else if( propnumber == 3) //AMX LocalVars Str
 						chr_getLocalStrVar(target, chr_twkarray[i][ct_infotype], tempChrStr);
 					gui_addGump(twkChrMenu,ct_gu+k, 181+(n*20), 0x827);
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
@@ -1206,16 +1374,16 @@ public tweak_char(const chrsource, const target, pagenumber)
 				}
 				case 4: //checkbox
 				{
-					if((chr_twkarray[i][ct_propnumber] == 134) || (chr_twkarray[i][ct_propnumber] == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
+					if((propnumber == 134) || (propnumber == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
 					{
 						new privvalue = chr_twkarray[i][ct_infotype];
 						if(privvalue >= 10)
 							privvalue = (privvalue/10)*16;
-						new originalval = chr_getProperty( target,chr_twkarray[i][ct_propnumber])&privvalue;
+						new originalval = chr_getProperty( target,propnumber)&privvalue;
 						if(originalval == privvalue) //for example is frozen
 							checklev = 1;
 					}
-					else if(chr_twkarray[i][ct_propnumber] < 0) //customized button function, for example open bank box
+					else if(propnumber < 0) //customized button function, for example open bank box
 					{
 						if( chr_twkarray[i][ct_infotype] == 4)
 						{
@@ -1223,9 +1391,9 @@ public tweak_char(const chrsource, const target, pagenumber)
 						              checklev = 1;
 						}
 					}
-					else //on/off check only
+					else if((propnumber != (-1)) || (propnumber != 134) || (propnumber != 121))//on/off check only
 					{
-						if(chr_getProperty(target,chr_twkarray[i][ct_propnumber]) == 1)
+						if(chr_getProperty(target,propnumber) == 1)
 							checklev = 1;
 					}
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
@@ -1240,18 +1408,18 @@ public tweak_char(const chrsource, const target, pagenumber)
 						u=chr_twkarray[i][ct_propval]+1;
 						gui_addGroup( twkChrMenu, u );
 					}
-					if(chr_twkarray[i][ct_propnumber] == 121) //bitfields (for example visibility)
+					if(propnumber == 121) //bitfields (for example visibility)
 					{
 						new privvalue = chr_twkarray[i][ct_infotype];
 						if(privvalue >= 10)
 							privvalue = (privvalue/10)*16;
-						new originalval = chr_getProperty( target,chr_twkarray[i][ct_propnumber])&privvalue;
+						new originalval = chr_getProperty( target,propnumber)&privvalue;
 						if(originalval == privvalue) //can decay
 							checklev = 1;
 					}
-					else if (chr_twkarray[i][ct_propnumber] == 110)
+					else if (propnumber == 110)
 					{
-						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber]) == chr_twkarray[i][ct_infotype])
+						if(chr_getProperty( target,propnumber) == chr_twkarray[i][ct_infotype])
 							checklev = 1;
 					}
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
@@ -1262,31 +1430,41 @@ public tweak_char(const chrsource, const target, pagenumber)
 				{
 					gui_addGump(twkChrMenu,ct_gu+k,181+(n*20), 0x827);
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310, chr_twkarray[i][ct_linename]);
-					gui_addPropField( twkChrMenu, ct_prop+k, 180+(n*20),150,30, chr_twkarray[i][ct_propnumber], chr_twkarray[i][ct_infotype]);
+					gui_addPropField( twkChrMenu, ct_prop+k, 180+(n*20),150,30, propnumber, chr_twkarray[i][ct_infotype]);
 				}
 				case 7: //stock function call
 				{
 					new q = (chr_twkarray[i][ct_infotype]); //type of stock function
 					new output;
 					new infotext=1;
+					new isint = 0;
 					if(q==0)
+					{
 						output = chr_getSkillSum(target);
+						isint = 1;
+					}
 					else if(q==1)
+					{
 						output = chr_countBankGold(target);
+						isint = 1;
+					}
 					else if(q==2)
 					{
+						isint = 0;
 						if ( chr_getGuild(target) >= 0 )
 							guild_getProperty( chr_getGuild(target),GP_STR_NAME,_,0,tempChrStr );
 						else	tempChrStr="None";
 					}
 					else if(q==3)
 					{
+						isint = 0;
 						if ( chr_getGuild(target) >= 0 )
 							chr_getProperty(getGuildMaster(chr_getGuild(target)), CP_STR_NAME, _, tempChrStr);
 						else	tempChrStr="None";
 					}
 					else if(q==4)//creation day
 					{
+						isint = 0;
 						new age=chr_getProperty(target,CP_CREATIONDAY);
 						if ( age > 0 )
 						{
@@ -1300,18 +1478,18 @@ public tweak_char(const chrsource, const target, pagenumber)
 					}
 					else if(q==5) //kill/dead
 					{
-						new status = chr_getProperty(target,chr_twkarray[i][ct_propval]);
+						new status = chr_getProperty(target,propnumber);
 						if(status == 1)
 							checklev = 1;
 						gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]);
-						gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,checklev,i);
+						gui_addCheckbox( twkChrMenu,ct_prop+k+70,181+(n*20),oldpic,newpic,checklev,i);
 						checklev = 0;
 						infotext=0;
 						printf("status: %d", status);
 					}
 					else if(q==6) //Beard Color
 					{
-						new beard = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+						new beard = chr_getProperty(target, propnumber);
 						if(beard>=0)
 						{
 							output = itm_getProperty(beard, IP_COLOR);
@@ -1321,13 +1499,13 @@ public tweak_char(const chrsource, const target, pagenumber)
 						else
 							sprintf(tempChrStr, "None");
 						gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
-						gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,checklev,i);
+						gui_addCheckbox( twkChrMenu,ct_prop+k+70,181+(n*20),oldpic,newpic,checklev,i);
 						checklev = 0;
 						infotext = 0; //no infoline
 					}
 					else if(q==7) //Beard Style
 					{
-						new beard = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+						new beard = chr_getProperty(target, propnumber);
 						if(beard>=0)
 						{
 							output = itm_getProperty(beard, IP_ID);
@@ -1337,13 +1515,13 @@ public tweak_char(const chrsource, const target, pagenumber)
 						else
 							sprintf(tempChrStr, "None");
 						gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
-						gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,checklev,i);
+						gui_addCheckbox( twkChrMenu,ct_prop+k+70,181+(n*20),oldpic,newpic,checklev,i);
 						checklev = 0;
 						infotext = 0; //no infoline
 					}
 					else if(q==8) //Hair color
 					{
-						new hair = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+						new hair = chr_getProperty(target, propnumber);
 						if(hair>=0)
 						{
 							output = itm_getProperty(hair, IP_COLOR);
@@ -1353,13 +1531,13 @@ public tweak_char(const chrsource, const target, pagenumber)
 						else
 							sprintf(tempChrStr, msg_commandsDef[75]);
 						gui_addInputField( twkChrMenu,ct_prop+k,180+(n*20),50,20,i,1110,tempChrStr);
-						gui_addCheckbox( twkChrMenu,ct_prop+k,181+(n*20),oldpic,newpic,checklev,i);
+						gui_addCheckbox( twkChrMenu,ct_prop+k+70,181+(n*20),oldpic,newpic,checklev,i);
 						checklev = 0;
 						infotext = 0; //no infoline
 					}
 					else if(q==9) //Hair style
 					{
-						new hair = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+						new hair = chr_getProperty(target, propnumber);
 						if(hair>=0)
 						{
 							output = itm_getProperty(hair, IP_ID);
@@ -1373,7 +1551,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 					gui_addText(twkChrMenu,ct_tex+k,180+(n*20),1310,chr_twkarray[i][ct_linename]); //line name
 					if(infotext == 1) //we have an infoline here, so what is the info?
 					{
-						if(chr_twkarray[i][ct_propval] == 0) //integer value to display
+						if(isint == 1) //integer value to display
 							sprintf(tempChrStr, "%d", output);
 						gui_addText( twkChrMenu, ct_desc+k, 180+(n*20),0,tempChrStr);
 					}
@@ -1385,7 +1563,8 @@ public tweak_char(const chrsource, const target, pagenumber)
 		}//for
 	}//if pagenumber
 
-	else if(pagenumber == 10)
+//events
+	else if(pagenumber == BUTTON_EVENTS_CHR)
 	{
 		gui_addPageButton(twkChrMenu,210,493,2224,2117,2);
 		gui_addText(twkChrMenu,240,490,1310,msg_commandsDef[68]);
@@ -1410,27 +1589,36 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addPageButton(twkChrMenu,320,493,2224,2117,3);
 		gui_addText(twkChrMenu,350,490,1310,msg_commandsDef[69]);
 		
-	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[41]);
-	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[42]);//flag1
-	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[43]);//flag2
-	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
-	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+	gui_addButton(twkChrMenu,35,21,twkButton[arrayline][new1],twkButton[arrayline][old1],BUTTON_FLAGMIN_CHR);
+	gui_addText(twkChrMenu,60,19,33,msg_commandsDef[41]);
+	gui_addButton(twkChrMenu,170,21,twkButton[arrayline][new2],twkButton[arrayline][old2],BUTTON_FLAGMIN_CHR+1);
+	gui_addText(twkChrMenu,195,19,33,msg_commandsDef[42]);//flag1
+	gui_addButton(twkChrMenu,260,21,twkButton[arrayline][new3],twkButton[arrayline][old3],BUTTON_FLAGMIN_CHR+2);
+	gui_addText(twkChrMenu,285,19,33,msg_commandsDef[43]);//flag2
+	gui_addButton(twkChrMenu,355,21,twkButton[arrayline][new4],twkButton[arrayline][old4],BUTTON_FLAGMIN_CHR+3);
+	gui_addText(twkChrMenu,380,19,33,msg_commandsDef[44]);//flag3
+	gui_addButton(twkChrMenu,445,21,twkButton[arrayline][new5],twkButton[arrayline][old5],BUTTON_FLAGMIN_CHR+4);
+	gui_addText(twkChrMenu,470,19,33,msg_commandsDef[47]);//flag4
 	
-	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
-	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
-	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-	gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
-	gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
+	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new6],twkButton[arrayline][old6],BUTTON_FLAGMIN_CHR+5);
+	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[272]); //flag5
+	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new7],twkButton[arrayline][old7],BUTTON_FLAGMIN_CHR+6);
+	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[280]); //flag6
+	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new8],twkButton[arrayline][old8],BUTTON_FLAGMIN_CHR+7);
+	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[281]);//flag7
+	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new9],twkButton[arrayline][old9],BUTTON_FLAGMIN_CHR+8);
+	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[282]);//flag8
+	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new10],twkButton[arrayline][old10],BUTTON_FLAGMIN_CHR+9);
+	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[283]);//flag9
+	
+	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new11],twkButton[arrayline][old11],BUTTON_LV_CHR);
+	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[45]); //localVars
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new12],twkButton[arrayline][old12],BUTTON_SKILL_CHR);
+	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[48]);//skill
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new13],twkButton[arrayline][old13],BUTTON_LAYER_CHR);
+	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[49]);//layer
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new14],twkButton[arrayline][old14],BUTTON_EVENTS_CHR);
+	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[46]);//event
 	
 	//printf("target: %d", target);
 	gui_addText(twkChrMenu,66,120,33,msg_commandsDef[66]);
@@ -1462,27 +1650,36 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addPageButton(twkChrMenu,210,493,2224,2117,2);
 		gui_addText(twkChrMenu,240,490,1310,msg_commandsDef[68]);
 		
-	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[41]);
-	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[42]);//flag1
-	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[43]);//flag2
-	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
-	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+	gui_addButton(twkChrMenu,35,21,twkButton[arrayline][new1],twkButton[arrayline][old1],BUTTON_FLAGMIN_CHR);
+	gui_addText(twkChrMenu,60,19,33,msg_commandsDef[41]);
+	gui_addButton(twkChrMenu,170,21,twkButton[arrayline][new2],twkButton[arrayline][old2],BUTTON_FLAGMIN_CHR+1);
+	gui_addText(twkChrMenu,195,19,33,msg_commandsDef[42]);//flag1
+	gui_addButton(twkChrMenu,260,21,twkButton[arrayline][new3],twkButton[arrayline][old3],BUTTON_FLAGMIN_CHR+2);
+	gui_addText(twkChrMenu,285,19,33,msg_commandsDef[43]);//flag2
+	gui_addButton(twkChrMenu,355,21,twkButton[arrayline][new4],twkButton[arrayline][old4],BUTTON_FLAGMIN_CHR+3);
+	gui_addText(twkChrMenu,380,19,33,msg_commandsDef[44]);//flag3
+	gui_addButton(twkChrMenu,445,21,twkButton[arrayline][new5],twkButton[arrayline][old5],BUTTON_FLAGMIN_CHR+4);
+	gui_addText(twkChrMenu,470,19,33,msg_commandsDef[47]);//flag4
 	
-	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
-	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
-	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-	gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
-	gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
+	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new6],twkButton[arrayline][old6],BUTTON_FLAGMIN_CHR+5);
+	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[272]); //flag5
+	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new7],twkButton[arrayline][old7],BUTTON_FLAGMIN_CHR+6);
+	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[280]); //flag6
+	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new8],twkButton[arrayline][old8],BUTTON_FLAGMIN_CHR+7);
+	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[281]);//flag7
+	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new9],twkButton[arrayline][old9],BUTTON_FLAGMIN_CHR+8);
+	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[282]);//flag8
+	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new10],twkButton[arrayline][old10],BUTTON_FLAGMIN_CHR+9);
+	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[283]);//flag9
+	
+	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new11],twkButton[arrayline][old11],BUTTON_LV_CHR);
+	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[45]); //localVars
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new12],twkButton[arrayline][old12],BUTTON_SKILL_CHR);
+	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[48]);//skill
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new13],twkButton[arrayline][old13],BUTTON_LAYER_CHR);
+	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[49]);//layer
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new14],twkButton[arrayline][old14],BUTTON_EVENTS_CHR);
+	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[46]);//event
 	
 	//printf("target: %d", target);
 	gui_addText(twkChrMenu,66,120,33,msg_commandsDef[66]);
@@ -1510,7 +1707,8 @@ public tweak_char(const chrsource, const target, pagenumber)
 		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
 	}
 	
-	else if(pagenumber ==8)
+	//skills
+	else if(pagenumber ==BUTTON_SKILL_CHR)
 	{
 		gui_addText(twkChrMenu,100,150,33,msg_commandsDef[71]);
 		new miscSkills[21]={ SK_ALCHEMY,SK_BLACKSMITHING,SK_BOWCRAFT,SK_CARPENTRY,SK_COOKING,SK_FISHING,SK_HEALING,SK_HERDING,SK_LOCKPICKING,SK_LUMBERJACKING,SK_MAGERY,SK_MEDITATION,SK_MINING,SK_MUSICIANSHIP,SK_REMOVETRAPS,	SK_MAGICRESISTANCE,SK_SNOOPING,SK_STEALING,SK_TAILORING,SK_TINKERING,SK_VETERINARY};
@@ -1535,27 +1733,36 @@ public tweak_char(const chrsource, const target, pagenumber)
 		gui_addPageButton(twkChrMenu,100,493,2224,2117,1);
 		gui_addText(twkChrMenu,130,490,1310,msg_commandsDef[71]);
 		
-	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[41]);
-	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[42]);//flag1
-	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[43]);//flag2
-	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
-	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
+	gui_addButton(twkChrMenu,35,21,twkButton[arrayline][new1],twkButton[arrayline][old1],BUTTON_FLAGMIN_CHR);
+	gui_addText(twkChrMenu,60,19,33,msg_commandsDef[41]);
+	gui_addButton(twkChrMenu,170,21,twkButton[arrayline][new2],twkButton[arrayline][old2],BUTTON_FLAGMIN_CHR+1);
+	gui_addText(twkChrMenu,195,19,33,msg_commandsDef[42]);//flag1
+	gui_addButton(twkChrMenu,260,21,twkButton[arrayline][new3],twkButton[arrayline][old3],BUTTON_FLAGMIN_CHR+2);
+	gui_addText(twkChrMenu,285,19,33,msg_commandsDef[43]);//flag2
+	gui_addButton(twkChrMenu,355,21,twkButton[arrayline][new4],twkButton[arrayline][old4],BUTTON_FLAGMIN_CHR+3);
+	gui_addText(twkChrMenu,380,19,33,msg_commandsDef[44]);//flag3
+	gui_addButton(twkChrMenu,445,21,twkButton[arrayline][new5],twkButton[arrayline][old5],BUTTON_FLAGMIN_CHR+4);
+	gui_addText(twkChrMenu,470,19,33,msg_commandsDef[47]);//flag4
 	
-	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
-	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
-	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-	gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
-	gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
+	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new6],twkButton[arrayline][old6],BUTTON_FLAGMIN_CHR+5);
+	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[272]); //flag5
+	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new7],twkButton[arrayline][old7],BUTTON_FLAGMIN_CHR+6);
+	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[280]); //flag6
+	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new8],twkButton[arrayline][old8],BUTTON_FLAGMIN_CHR+7);
+	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[281]);//flag7
+	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new9],twkButton[arrayline][old9],BUTTON_FLAGMIN_CHR+8);
+	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[282]);//flag8
+	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new10],twkButton[arrayline][old10],BUTTON_FLAGMIN_CHR+9);
+	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[283]);//flag9
+	
+	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new11],twkButton[arrayline][old11],BUTTON_LV_CHR);
+	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[45]); //localVars
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new12],twkButton[arrayline][old12],BUTTON_SKILL_CHR);
+	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[48]);//skill
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new13],twkButton[arrayline][old13],BUTTON_LAYER_CHR);
+	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[49]);//layer
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new14],twkButton[arrayline][old14],BUTTON_EVENTS_CHR);
+	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[46]);//event
 	
 	//printf("target: %d", target);
 	gui_addText(twkChrMenu,66,120,33,msg_commandsDef[66]);
@@ -1603,7 +1810,9 @@ public tweak_char(const chrsource, const target, pagenumber)
 		}
 		//printf("test gui, twkChrMenu: %d^n", twkChrMenu);
 	}
-	else if(pagenumber == 9)
+	
+	// Layer
+	else if(pagenumber == BUTTON_LAYER_CHR)
 	{
 		gui_addText(twkChrMenu,50,150,1110,msg_commandsDef[49]);
 				
@@ -1667,7 +1876,9 @@ public tweak_char(const chrsource, const target, pagenumber)
 			}
 		}
 	}//pagenumber
-	else if(pagenumber == 7)
+	
+	//local Var
+	else if(pagenumber == BUTTON_LV_CHR)
 	{
 		gui_addText(twkChrMenu,230,150,33,msg_commandsDef[53]);
 		
@@ -1723,27 +1934,36 @@ public tweak_char(const chrsource, const target, pagenumber)
 							gui_addText(twkChrMenu,190,520,1310,tempChrStr);
 						}
 												
-						gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new1],twkButton[arrayline][old1],1);
-						gui_addText(twkChrMenu,60,49,33,msg_commandsDef[41]);
-						gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new2],twkButton[arrayline][old2],2);
-						gui_addText(twkChrMenu,195,49,33,msg_commandsDef[42]);//flag1
-						gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new3],twkButton[arrayline][old3],3);
-						gui_addText(twkChrMenu,285,49,33,msg_commandsDef[43]);//flag2
-						gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new4],twkButton[arrayline][old4],4);
-						gui_addText(twkChrMenu,380,49,33,msg_commandsDef[44]);//flag3
-						gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new5],twkButton[arrayline][old5],5);
-						gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
-						
-						gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-						gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
-						gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
-						gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
-						gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
-						gui_addText(twkChrMenu,285,79,33,msg_commandsDef[48]);//skill
-						gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new9],twkButton[arrayline][old9],9);
-						gui_addText(twkChrMenu,380,79,33,msg_commandsDef[49]);//layer
-						gui_addButton(twkChrMenu,445,81,twkButton[arrayline][new10],twkButton[arrayline][old10],10);
-						gui_addText(twkChrMenu,470,79,33,msg_commandsDef[46]);//event
+	gui_addButton(twkChrMenu,35,21,twkButton[arrayline][new1],twkButton[arrayline][old1],BUTTON_FLAGMIN_CHR);
+	gui_addText(twkChrMenu,60,19,33,msg_commandsDef[41]);
+	gui_addButton(twkChrMenu,170,21,twkButton[arrayline][new2],twkButton[arrayline][old2],BUTTON_FLAGMIN_CHR+1);
+	gui_addText(twkChrMenu,195,19,33,msg_commandsDef[42]);//flag1
+	gui_addButton(twkChrMenu,260,21,twkButton[arrayline][new3],twkButton[arrayline][old3],BUTTON_FLAGMIN_CHR+2);
+	gui_addText(twkChrMenu,285,19,33,msg_commandsDef[43]);//flag2
+	gui_addButton(twkChrMenu,355,21,twkButton[arrayline][new4],twkButton[arrayline][old4],BUTTON_FLAGMIN_CHR+3);
+	gui_addText(twkChrMenu,380,19,33,msg_commandsDef[44]);//flag3
+	gui_addButton(twkChrMenu,445,21,twkButton[arrayline][new5],twkButton[arrayline][old5],BUTTON_FLAGMIN_CHR+4);
+	gui_addText(twkChrMenu,470,19,33,msg_commandsDef[47]);//flag4
+	
+	gui_addButton(twkChrMenu,35,51,twkButton[arrayline][new6],twkButton[arrayline][old6],BUTTON_FLAGMIN_CHR+5);
+	gui_addText(twkChrMenu,60,49,33,msg_commandsDef[272]); //flag5
+	gui_addButton(twkChrMenu,170,51,twkButton[arrayline][new7],twkButton[arrayline][old7],BUTTON_FLAGMIN_CHR+6);
+	gui_addText(twkChrMenu,195,49,33,msg_commandsDef[280]); //flag6
+	gui_addButton(twkChrMenu,260,51,twkButton[arrayline][new8],twkButton[arrayline][old8],BUTTON_FLAGMIN_CHR+7);
+	gui_addText(twkChrMenu,285,49,33,msg_commandsDef[281]);//flag7
+	gui_addButton(twkChrMenu,355,51,twkButton[arrayline][new9],twkButton[arrayline][old9],BUTTON_FLAGMIN_CHR+8);
+	gui_addText(twkChrMenu,380,49,33,msg_commandsDef[282]);//flag8
+	gui_addButton(twkChrMenu,445,51,twkButton[arrayline][new10],twkButton[arrayline][old10],BUTTON_FLAGMIN_CHR+9);
+	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[283]);//flag9
+	
+	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new11],twkButton[arrayline][old11],BUTTON_LV_CHR);
+	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[45]); //localVars
+	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new12],twkButton[arrayline][old12],BUTTON_SKILL_CHR);
+	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[48]);//skill
+	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new13],twkButton[arrayline][old13],BUTTON_LAYER_CHR);
+	gui_addText(twkChrMenu,285,79,33,msg_commandsDef[49]);//layer
+	gui_addButton(twkChrMenu,355,81,twkButton[arrayline][new14],twkButton[arrayline][old14],BUTTON_EVENTS_CHR);
+	gui_addText(twkChrMenu,380,79,33,msg_commandsDef[46]);//event
 						
 							gui_addText(twkChrMenu,66,120,33,msg_commandsDef[50]);
 							sprintf( tempChrStr,"%d",chr_getProperty(target, IP_OWNERSERIAL));
@@ -1872,6 +2092,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 	new leftrow;
 	new rightrow;
 	new tempChrStr[50];
+	//printf("enter tweak char back, button %d", buttonCode);
 	
 	if( pagenumber == 1)
 	{
@@ -1909,6 +2130,30 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		leftrow = ct_pg6_l;
 		rightrow = ct_pg6_r;
 	}
+	else if( pagenumber == 7)
+	{
+		startline = ct_pg6_r+1;
+		leftrow = ct_pg7_l;
+		rightrow = ct_pg7_r;
+	}
+	else if( pagenumber == 8)
+	{
+		startline = ct_pg7_r+1;
+		leftrow = ct_pg8_l;
+		rightrow = ct_pg8_r;
+	}
+	else if( pagenumber == 9)
+	{
+		startline = ct_pg8_r+1;
+		leftrow = ct_pg9_l;
+		rightrow = ct_pg9_r;
+	}
+	else if( pagenumber == 10)
+	{
+		startline = ct_pg9_r+1;
+		leftrow = ct_pg10_l;
+		rightrow = ct_pg10_r;
+	}
 	new endline;
 	new i=0;
 	//performance saver, only go through the array lines shown at the page with apply button
@@ -1918,17 +2163,18 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		endline = rightrow;
 	new checklev;
 	new checked;
+	//printf("pagenumber: %d^n", pagenumber);
 	
 	switch(buttonCode)
 	{
-		case 1..10: 	
+		case 1..15: 	
 		{	
 			tweak_char(chrsource, target, buttonCode);
 			//gui_delete( twkChrMenu );
 		}
-		case 11:
+		case BUTTON_APPLY:
 		{
-			if(0 < pagenumber <= 6)
+			if((BUTTON_FLAGMIN_CHR-1) < pagenumber <= BUTTON_FLAGMAX_CHR)
 		        {
 		        	for(i=startline; i<=endline; ++i)
 		        	{
@@ -2065,7 +2311,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        		}//linetype
 					else if(linetype == 7) //stock function call
 					{
-						new q = (chr_twkarray[i][ct_propnumber]); //type of stock function
+						new q = chr_twkarray[i][ct_infotype]; //type of stock function
 						checked = gui_getProperty(twkChrMenu,MP_CHECK,i); //is it checked?
 						if( q == 5) //char kill/revive
 						{
@@ -2082,7 +2328,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 							new textbuf_input[15];
 							new value=0;
 							new output;
-							new item = chr_getProperty(target, chr_twkarray[i][ct_propnumber]);
+							new item = chr_getProperty(target, type);
 							gui_getProperty(twkChrMenu,MP_UNI_TEXT,i,textbuf_input);
 							trim(textbuf_input);
 							if(isStrUnsignedInt(textbuf_input)) //should be an integer, is it?
@@ -2117,7 +2363,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 					}
 		        	}//for
 		        }
-		        else if(pagenumber == 10) //events
+		        else if(pagenumber == BUTTON_EVENTS_CHR) //events
 		        {
 		        	new callname[15];
 		        	new oldevent[50];
@@ -2142,7 +2388,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        		sprintf(callname, "");
 		        	}//for
 		        }
-		        else if(pagenumber == 7) //localVars
+		        else if(pagenumber == BUTTON_LV_CHR) //localVars
 		        {
 		        	for(i=1000;i<5000;i++)
 		        	{
@@ -2231,7 +2477,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        			chr_message(target, _, msg_commandsDef[77]);
 		        	}
 		        }
-		        else if(pagenumber == 9) //layer
+		        else if(pagenumber == BUTTON_LAYER_CHR ) //layer
 		        {
 		        	new itemSet=set_create();
 		        	set_addItemWeared(itemSet,target,false,true,true);

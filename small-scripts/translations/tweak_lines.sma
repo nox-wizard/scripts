@@ -23,7 +23,7 @@ public eventItm_array[NUM_itmevent][eventItm_prop] = {
 {"on chr walks over it:  ", 16}
 };
 
-const NUM_itmtweak = 89;
+const NUM_itmtweak = 96;
 enum Itm_tweaklines
 {
 it_linetype,
@@ -112,18 +112,25 @@ public itm_twkarray[NUM_itmtweak][Itm_tweaklines] = {
 {1,"smelt:        ?  ", 234, 0, 0, "         "},
 {6,"Item type2:    ? ", 246, 0, 0, "         "},
 {2,"Animation ID:    ", 252, 0, 0, "         "},
-{0,"Spawner Stuff    ",   0, 0, 0, "         "},
+{0,"Spawner Stuff    ",   0, 0,11, "         "},
 {1,"Max at Spawner:  ", 400, 0, 0, "         "},
 {1,"Now at Spawner:  ", 401, 0, 0, "         "},
 {6,"Script to Spawn: ", 220, 0, 2, "         "},
 {6,"Minimal time(min)", 220, 1, 0, "         "},
 {6,"Maximum time(min)", 220, 2, 0, "         "},
 {1,"Item=61 or NPC=62", 245, 0, 0, "         "},
-{7,"Min. to Spawn:   ",   0, 0, 0, "         "},
-{7,"Max. to Spawn:   ",   1, 0, 0, "         "},
+{7,"Min. to Spawn:   ", 0, 113, 0, "         "},
+{7,"Max. to Spawn:   ", 1, 113, 0, "         "},
 {1,"Spawn Region:    ", 235, 0, 0, "         "},
 {1,"Spawner serial:  ", 236, 0, 0, "         "},
 {1,"Restockrate:  ?  ", 230, 0, 0, "         "},
+{0,"Treasure Map:    ",   0, 0, 6, "         "},
+{7,"Map X1:          ", 0, 112, 0, "         "},
+{7,"Map Y1:          ", 1, 112, 0, "         "},
+{7,"Map X2:          ", 0, 113, 0, "         "},
+{7,"Map Y2:          ", 1, 113, 0, "         "},
+{6,"Treasure X:      ", 220, 0, 1, "         "},
+{6,"Treasure Y:      ", 220, 1, 0, "         "},
 {1,"Direction:       ", 402, 0, 0, "         "},
 {1,"Hex ID:          ", 404, 0, 0, "         "},
 {6,"Description:     ", 451, 0, 0, "         "},
@@ -217,7 +224,7 @@ public eventChr_array[NUM_chrevent][eventChr_prop] = {
 {"on open skills:       ", 40}
 };
 
-const NUM_chrtweak = 214;
+const NUM_chrtweak = 208;
 enum Chr_tweaklines
 {
 ct_linetype,
@@ -237,7 +244,6 @@ ct_inputname: 10
 //7: stock function call: ct_propnumber is number of stock function, ct_infotype: string:1 and integer: 0
 public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {1, "Char name:        ", 453, 0, 0, "         "},
-{2, "Char orig. name:  ", 454, 0, 1, "         "},
 {1, "Char title:       ", 455, 0, 0, "         "},
 {1, "Karma:            ", 237, 0, 0, "         "},
 {1, "Fame:             ", 218, 0, 0, "         "},
@@ -253,7 +259,7 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {2, "Weight:           ", 312, 0, 0, "         "},
 {2, "Is overweighted:  ",  15, 0, 0, "         "},
 {7, "Skill sum:        ",   0, 0, 0, "         "},
-{7, "Bank gold:        ",   1, 0, 0, "         "},
+{7, "Bank gold:        ",   0, 1, 0, "         "},
 {4, "Open Bank box:    ",   0, 1, 0, "         "},
 {4, "Open Gold bank:   ",   0, 2, 0, "         "},
 {0, "Optical stuff     ",   0, 0, 0, "         "},
@@ -287,7 +293,6 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {2, "Mute ends in:     ", 248, 0, 0, "         "},
 {4, "Invulnerable:     ", 134, 4, 0, "         "},
 {4, "Freeze priv:      ", 121, 2, 0, "         "},
-{1, "freeze prop:      ",  17, 0, 0, "         "},
 {5, "Invis by skill:   ", 110, 1, 3, "         "},
 {5, "Invis by spell:   ", 110, 2, 0, "         "},
 {5, "permanent Invis:  ", 121, 8, 0, "         "},
@@ -297,7 +302,7 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {3, "Nightsight:       ",   1, 2, 0, "millisec "},
 {4, "Polymorph:        ",  -1, 4, 0, "         "},
 {2, "Incognito tfx:    ",   0, 2, 0, "         "},
-{1, "Incognito prop:   ",   6, 0, 0, "         "},
+{4, "Incognito prop:   ",   6, 0, 0, "         "},
 {4, "See House as Icon:", 121, 4, 0, "         "},
 {2, "Owns house no.:   ", 245, 0, 0, "         "},
 {1, "Steps to fly:     ", 108, 0, 0, "         "},
@@ -307,7 +312,6 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {4, "Can Broadcast:    ", 134, 2, 0, "         "},
 {4, "Can dispel:       ", 121,20, 0, "         "},
 {2, "Is jailed:        ",   5, 0, 0, "         "},
-{2, "Is in jail cell:  ", 102, 0, 0, "         "},
 {4, "Needs no mana:    ", 121,10, 0, "         "},
 {4, "Needs no reagents:", 121,80, 0, "         "},
 {4, "Can see serials:  ", 134, 8, 0, "         "},
@@ -319,11 +323,11 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {1, "Smokes after:     ", 279, 0, 0, "         "},
 {1, "Smoking time:     ", 280, 0, 0, "         "},
 {1, "Msgboard posttype:", 263, 0, 0, "         "},
-{0, "Guild Stuff       ",   0, 0, 0, "         "},
+{0, "Guild Stuff       ",   0, 0, 8, "         "},
 {2, "Guild serial:     ", 273, 0, 0, "         "},
 {2, "Guild number:     ", 226, 0, 0, "         "},
-{7, "Guild name:       ",   2, 1, 0, "         "},
-{7, "Guild leader:     ",   3, 1, 0, "         "},
+{7, "Guild name:       ",   1, 2, 0, "         "},
+{7, "Guild leader:     ",   1, 3, 0, "         "},
 {4, "Go to Guild:      ",   0, 3, 0, "         "},
 {2, "Is Guild traitor: ",   4, 0, 0, "         "},
 {4, "Show Guildname:   ",  14, 0, 0, "         "},
@@ -340,7 +344,7 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {2, "Hit message:      ", 210, 1, 0, "         "},
 {2, "Swing will hit:   ", 297, 0, 0, "         "},
 {2, "Aims at:          ", 300, 0, 0, "         "},
-{7, "Kill/Dead:        ",   5, 0, 1, "         "},
+{7, "Kill/Dead:        ",   1, 5, 0, "         "},
 {2, "Murderer was:     ", 246, 0, 0, "         "},
 {2, "Death number:     ", 214, 0, 0, "         "},
 {1, "Kills number:     ", 239, 0, 0, "         "},
@@ -403,7 +407,7 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {2, "Stablemaster is:  ", 293, 0, 0, "         "},
 {2, "Is on horse:      ",   7, 0, 0, "         "},
 {2, "Is ridden:        ",  16, 0, 0, "         "},
-{1, "Is Vendor:        ",  11, 0, 0, "         "},
+{4, "Is Vendor:        ",  11, 0, 0, "         "},
 {4, "Can train:        ",   0, 0, 0, "         "},
 {1, "trains in:        ", 133, 0, 0, "         "},
 {1, "NPC Poison attack:", 257, 0, 0, "         "},
@@ -434,10 +438,8 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {2, "Fixed light:      ", 106, 0, 0, "         "},
 {2, "reputation:       ", 107, 0, 0, "         "},
 {2, "gm restriction:   ", 109, 0, 0, "         "},
-{2, "original skin:    ", 118, 0, 0, "         "},
 {2, "nxw flags:        ", 131, 0, 0, "         "},
 {2, "advancement gate: ", 201, 0, 0, "         "},
-{2, "gm call number:   ", 207, 0, 0, "         "},
 {2, "Is casting:       ", 209, 0, 0, "         "},
 {2, "Skill used now:   ", 242, 0, 0, "         "},
 {2, "Is meditating:    ", 243, 0, 0, "         "},
@@ -448,6 +450,5 @@ public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {2, "Bounty reward:    ", 267, 0, 0, "         "},
 {2, "Bounty target rgn:", 268, 0, 0, "         "},
 {2, "Bounty source rgn:", 269, 0, 0, "         "},
-{2, "Tail item:        ", 298, 0, 0, "         "},
 {2, "carve (internal): ", 208, 0, 0, "         "}
 };

@@ -595,7 +595,7 @@ public msg_api_partyDef[NUM_api_partySENT][]={
 "You notify them that you do not wish to join the party."
 };
 
-const NUM_commandsSENT = 280;
+const NUM_commandsSENT = 284;
 public msg_commandsDef[NUM_commandsSENT][]={
 "No other players connected",
 "Users Online : ",
@@ -876,7 +876,11 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Command applied to %d characters",
 "You can't change the hair/beard color, if the person has no hair/beard!",
 "You have to specify 1 value to set this more property",
-"More values were changed accordingly"
+"More values were changed accordingly",
+"Flags6", //280
+"Flags7",
+"Flags8",
+"Flags9"
 };
 
 const NUM_EatDrinkSENT = 26;
