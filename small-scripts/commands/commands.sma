@@ -2,6 +2,7 @@
 
 #include "small-scripts/commands/add.sma"
 #include "small-scripts/commands/dupe.sma"
+#include "small-scripts/commands/damage.sma"
 #include "small-scripts/commands/freeze.sma"
 #include "small-scripts/commands/func.sma"
 #include "small-scripts/commands/hiding.sma"
@@ -11,6 +12,8 @@
 #include "small-scripts/commands/move.sma"
 #include "small-scripts/commands/options/options.sma"
 #include "small-scripts/commands/playerlist.sma"
+#include "small-scripts/commands/regioncp.sma"
+#include "small-scripts/commands/resurrect.sma"
 #include "small-scripts/commands/skills/skills.sma"
 #include "small-scripts/commands/stats/stats.sma"
 #include "small-scripts/commands/tweak/tweak.sma"
@@ -223,9 +226,11 @@ public deleteCommand(name[])
 
 public startCommandSystem(const chr)
 {
-	printf("creating privlevel for character %d ... ",chr);
+	
 	if(!chr_isaLocalVar(chr,CLV_PRIVLEVEL))
 	{
+		printf("creating privlevel for character %d ... ",chr);
+		
 		//enter as a player
 		chr_addLocalIntVar(chr,CLV_PRIVLEVEL,PRIV_PLAYER);
 		
@@ -253,6 +258,19 @@ public startCommandSystem(const chr)
 		}
 		
 		printf("[DONE]^n");
+	}
+	
+	if(!chr_isaLocalVar(chr,CLV_CMDTEMP))
+	{
+		printf("creating command temp var for character %d ... ",chr);
+		
+		chr_addLocalIntVar(chr,CLV_CMDTEMP,0);
+		
+		if(chr_getLocalVarErr() != VAR_ERROR_NONE)
+		{
+			log_error("Unable to create CLV_CMDTEMP");
+			return;
+		}
 	}
 }
 /*! @} */ //end of scripts_commands_system

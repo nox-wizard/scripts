@@ -244,6 +244,12 @@ const CP2_INTDEC  = 1;		//!< intelligence decimal value
 const CP2_INTREAL = 2;		//!< intelligence real value
 const CP2_MANA  = 3;		//!< intelligence actual value (mana)
 
+//constants to be used with chr_applyDamage as stat parameter
+const STAT_HP = 0;
+const STAT_MANA = 1;
+const STAT_STAMINA = 2;
+
+
 //property for regenerate
 const CP2_REGEN_HP = 0;		//!< HP regen rate
 const CP2_REGEN_MANA = 1;	//!< MANA regen rate
@@ -311,9 +317,10 @@ const PRIV2_DISPELLABLE = 0x20;	//!<
 const PRIV2_PERMAMAGICREFLECT = 0x40;//!<
 const PRIV2_NONEEDREAGS = 0x80;	//!<
 
-//local vars used by standard scripts
-//(Character Local Vars)
-const CLV_PRIVLEVEL = 9999	//!< character privlevel
+#define CLV_PRIVLEVEL 9999	//!< character privlevel
+#define CLV_CMDTEMP 9996	//!< commands temp variable
+#define CLV_ADDITIONALSKILLS 9998	//<! local variable to store additional skill values
+#define CLV_ADDITIONALSKILLSBASE 9997	//<! local variable to store addition base skill values
 
 
 /** @} */

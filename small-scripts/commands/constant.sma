@@ -54,9 +54,11 @@ new __commands[__CMD_COUNT][__cmdEntry] =
 	{PRIV_CNS,	"polimorph",	""},
 	{PRIV_ADMIN,	"setpriv",	""},
 	{PRIV_GM,	"dupe",		""},
-	{0,"",""},
+	{PRIV_CNS,	"damage",	""},
 	
-	{0,"",""},{0,"",""},{0,"",""},{0,"",""},{0,"",""},
+	{PRIV_GM,	"regioncp",	""},
+	{PRIV_CNS,	"resurrect",	""},
+	{0,"",""},{0,"",""},{0,"",""},
 	{0,"",""},{0,"",""},{0,"",""},{0,"",""},{0,"",""}
 }; //!< names of commands, are used to create function names. Due to the 19 characters function name limit, command names are limited to 15 characters in length.
 

@@ -10,12 +10,12 @@
 \fn cmd_make(const chr)
 \brief makes a character GM, counselor or player
 
-<B>syntax:<B> 'make ["GM"/"cns"/"player"]
+<B>syntax:<B> 'make ["gm"/"cns"/"player"]
 <B>command params:</B>
 <UL>
 <LI> 
 	<UL>
-	<LI> "GM": make the charcater a GM
+	<LI> "gm": make the charcater a GM
 	<LI> "cns": make tha charcater a counselor (default)
 	<LI> "player": make the character a player
 	</UL> 
@@ -27,7 +27,7 @@ public cmd_make(const chr)
 {
 	new makewhat = 1;
 	
-	if(!strcmp(__cmdParams[0],"GM"))
+	if(!strcmp(__cmdParams[0],"gm"))
 		makewhat = 0;
 	else 	if(!strcmp(__cmdParams[0],"cns"))
 			makewhat = 0;
@@ -35,7 +35,7 @@ public cmd_make(const chr)
 				makewhat = 0;
 			else
 			{
-				chr_message(chr,_,"You must specify 'GM', 'cns' or 'player'");
+				chr_message(chr,_,"You must specify 'gm', 'cns' or 'player'");
 				return;
 			}
 		
