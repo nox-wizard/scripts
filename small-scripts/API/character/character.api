@@ -2062,16 +2062,17 @@ TODO: is really needed? why don't use chr_speech?
 */
 native chr_showMessage(const chrWhoSeesMsg, const chrWhoHasMsg, const msg[], const color = 0x0481)
 
-/*!
-\author Sparhawk modified by Frodo
-\fn chr_speech(const speaker, const listener, const mode, const color, const antispam = 1, const speech[])
-\param 1 speaker
-\param 2 listener
-\param 3 version ( RUNIC or EMOTE or TALK for plain text )
-\param 4 color
-\param 5 antispam flag (activates the antispam timer)
-\param 6 text
-\brief makes a character speak
+/* 
+\brief generic npctalk/npcemote handler 
+\author Sparhawk modified by Frodo 
+\since 0.60 
+\param 1 speaker 
+\param 2 listener 
+\param 3 version ( RUNIC or EMOTE or _ for plain text ) 
+\param 4 color 
+\param 5 antispam flag 
+\param 6 text 
+\return 0 or INVALID if not valid characters 
 */
 native chr_speech(const speaker, const listener, const mode, const color, const antispam = 1, const speech[]);
 
