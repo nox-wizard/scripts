@@ -332,11 +332,11 @@ static chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {1, "Karma:            ", 237, 0, 0, "         "},
 {1, "Fame:             ", 218, 0, 0, "         "},
 {6, "Strength:         ", 295, 2, 0, "         "},
-{6, "Hits:             ", 295, 2, 0, "         "},
+{6, "Hits(from Str):   ", 295, 3, 0, "         "},
 {6, "Dexterity:        ", 216, 2, 0, "         "},
-{6, "Stamina:          ", 216, 2, 0, "         "},
+{6, "Stamina(from Dex):", 216, 3, 0, "         "},
 {6, "Intelligence:     ", 236, 2, 0, "         "},
-{6, "Mana:             ", 236, 2, 0, "         "},
+{6, "Mana (from Int):  ", 236, 3, 0, "         "},
 {1, "Kills:            ", 239, 0, 0, "         "},
 {1, "Foodposition:     ", 220, 0, 0, "         "},
 {2, "Weight:           ", 312, 0, 0, "         "},
@@ -1780,7 +1780,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 	{
 		case 1..8: 	
 		{	
-			viewchrMenu(chrsource, target, buttonCode);
+			tweak_char(chrsource, target, buttonCode);
 			//gui_delete( twkChrMenu );
 		}
 		case 10:
@@ -2061,22 +2061,6 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		//gui_delete( twkChrMenu );
 		}//case
 	}//switch
-}
-
-public viewchrMenu(const chrsource, const target, const buttonCode)
-{
-	printf("enter viewchrMenu, page: %d", buttonCode);
-	switch(buttonCode)
-	{
-		case 1: tweak_char(chrsource, target, 1);
-		case 2: tweak_char(chrsource, target, 2);
-		case 3: tweak_char(chrsource, target, 3);
-		case 4: tweak_char(chrsource, target, 4);
-		case 5: tweak_char(chrsource, target, 5);
-		case 6: tweak_char(chrsource, target, 6);
-		case 7: tweak_char(chrsource, target, 7);
-		case 8: tweak_char(chrsource, target, 8);
-	}
 }
 
 /*! }@ */
