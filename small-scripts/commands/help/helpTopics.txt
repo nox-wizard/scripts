@@ -55,12 +55,19 @@ If no params are specified the add menu is opened.
 If you give a generic word as parameter ('add forge)
 you will be prompted to choose from a list of
 possible items.
+'add reload reloads teh items from addmenu.xss.
+'add lang changes the addmenu language
+'add menu x y shows the menu at x y
+ 
 The add menu contains subsections to add specific items.
 The "current adding mode" button switches between
 "continuous adding mode" and "single adding mode".
 In continuous mode you can add items wothout having
 to select them from the menu each time. 
-Useful to add many identilcal items at different locations.
+Useful to add many identical items at different locations.
+You can edit the add menu by editing addmenu_*.xss,
+each addmenu_*.xss file contains data in a specific
+language (addmenu_en.xss = english). 
 
 TOPIC 'align
 TEXT
@@ -125,6 +132,8 @@ TEXT
 Sets item's decay time
 syntax: 'decay decayTime/"off" 
 'decay off makes the item not decay
+The decay is expressed in seconds
+'decay 20 means "decay in 20 seconds"
 
 TOPIC 'dye
 TEXT
@@ -259,12 +268,16 @@ syntax: 'mana
 TOPIC 'move
 TEXT
 Moves an object
-syntax: 'move "a"/"r" x y [z]
+syntax: 'move x y [z]
 'move a x y z: moves to x y z
 'move r dx dy dz: moves to x + dx, y + dy, z+ dz (relative mode)
 'move me: moves the calling chatacer
 'move here: moves object to charatcer's feet
 'move loc: moves object to a location
+If you specify the sign (+/-) in x or y 
+params will be read as relative movement 
+if no signs are specified the params will be interpreted 
+as absolute position
 
 TOPIC 'onlinegm
 TEXT
@@ -331,7 +344,10 @@ syntax: 'resurrect
 TOPIC 'save
 TEXT
 Saves the world
-synatx: 'save
+synatx: 'save [timeout]
+timeout is the time it will take to save the world,
+at the end of the save you will be sent a message
+saying how long the save took to be performed.
 
 TOPIC 'setmorexyz
 TEXT
