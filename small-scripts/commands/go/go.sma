@@ -1,5 +1,5 @@
 
-static filename[] = "small-scripts/commands/go/locations.xss";
+static filename[] = "scripts/locations.xss";
 enum locationStruct
 {
 	__locX,
@@ -305,7 +305,8 @@ static cmd_go_writeFile()
 		file_write(f,"}^n^n");
 	}
 	
-	file_write(f,"//EOF: leave this line at the end of the file");
+	file_write(f,"//EOF: leave this line at the end of the file^nEOF");
 	file_close(f);
+	reload_scripts();
 }
 /*! }@ */
