@@ -30,6 +30,7 @@
 #define $itype_trash 87
 #define $itype_housedeed 90
 #define $itype_boatdeed 91
+#define $itype_multideed 92
 #define $itype_boats 117
 #define $itype_fireworks_wand 181
 #define $itype_smoke 185

@@ -14,7 +14,7 @@ SECTION ITEM $item_lighthouse_deed
     ID 14F0
     DECAY
     MOREX 204
-
+	TYPE $itype_multideed
     ///CATEGORY Deeds
     ///SUBSECTION Multis Deeds
 }
@@ -25,6 +25,7 @@ SECTION ITEM $item_telescope_deed
     ID 14F0
     DECAY
     MOREX 205
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Multis Deeds
@@ -36,6 +37,7 @@ SECTION ITEM $item_arbitoir_deed
     ID 14F0
     DECAY
     MOREX 206
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Multis Deeds
@@ -174,6 +176,7 @@ SECTION ITEM $item_christmas_tree_deed
     NEWBIE
     DECAY
     MOREX 212
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -186,6 +189,7 @@ SECTION ITEM $item_dartboard_deed
     ID 14f0
     TRIGGER $itrg_dartboard_deed_1
     TRIGTYPE 0
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -197,6 +201,7 @@ SECTION ITEM $item_dartboard_deed_1
     ID 14f0
     TRIGGER $itrg_dartboard_deed
     TRIGTYPE 0
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -208,6 +213,7 @@ SECTION ITEM $item_trashcan_deed
     ID 14f0
     TRIGGER $itrg_trashcan_deed
     TRIGTYPE 0
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -448,6 +454,7 @@ SECTION ITEM $item_an_anvil_deed_facing_south_
     NEWBIE
     VALUE 1200
     TRIGGER $itrg_anvil_deed_s
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -460,6 +467,7 @@ SECTION ITEM $item_an_anvil_deed_facing_east_
     NEWBIE
     VALUE 1200
     TRIGGER $itrg_anvil_deed_e
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -472,6 +480,7 @@ SECTION ITEM $item_a_spinning_wheel_deed_facing_south_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_wheel_deed
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -484,6 +493,7 @@ SECTION ITEM $item_an_archery_butte_deed_facing_east_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_archery_butte_deed_e
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -496,6 +506,7 @@ SECTION ITEM $item_an_archery_butte_deed_facing_south_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_archery_butte_deed_s
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -507,6 +518,7 @@ SECTION ITEM $item_a_training_dummy_deed_facing_south_
     ID 14F0
     VALUE 1000
     TRIGGER $itrg_train_dummy_s
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -519,6 +531,7 @@ SECTION ITEM $item_a_training_dummy_deed_facing_east_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_train_dummy_e
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -531,6 +544,7 @@ SECTION ITEM $item_a_pickpocket_dip_deed_facing_south_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_pickpocket_dip_s
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -543,6 +557,7 @@ SECTION ITEM $item_a_pickpocket_dip_deed_facing_east_
     NEWBIE
     VALUE 1000
     TRIGGER $itrg_pickpocket_dip_e
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -555,6 +570,7 @@ SECTION ITEM $item_pentagram_deed
     NEWBIE
     DECAY
     MOREX 18
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Multis Deeds
@@ -565,6 +581,7 @@ SECTION ITEM $item_a_cannon_deed
     NAME a cannon deed
     ID 14ED
     VALUE 3000
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -576,6 +593,7 @@ SECTION ITEM $item_a_large_forge_facing_south_deed
     ID 14F0
     NEWBIE
     MOREX 36
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -587,6 +605,7 @@ SECTION ITEM $item_a_large_forge_facing_east_deed
     ID 14F0
     NEWBIE
     MOREX 35
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
@@ -598,6 +617,7 @@ SECTION ITEM $item_a_skull_candle_deed
     ID 14f0
     VALUE 5000
     TRIGGER $itrg_skull_candle_deed
+	TYPE $itype_multideed
 
     ///CATEGORY Deeds
     ///SUBSECTION Objects Deeds
