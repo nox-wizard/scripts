@@ -57,7 +57,7 @@ public cmd_go(const chr)
 		
 			if(set_end(s) && c < n)
 			{
-				chr_message(chr,_,"There are less than %d players online",n);
+				chr_message(chr,_,msg_commandsDef[143],n);
 				return;
 			}	
 		
@@ -67,7 +67,7 @@ public cmd_go(const chr)
 		{//'go s serial
 			if(!isStrInt(__cmdParams[1]))
 			{
-				chr_message(chr,_,"you must specify a character serial");
+				chr_message(chr,_,msg_commandsDef[144]);
 				return;
 			}
 	
@@ -75,7 +75,7 @@ public cmd_go(const chr)
 	
 			if(!isChar(chr2))
 			{
-				chr_message(chr,_,"you must specify a valid character serial");
+				chr_message(chr,_,msg_commandsDef[145]);
 				return;
 			}
 	
@@ -101,7 +101,7 @@ public cmd_go(const chr)
 	
 			if(set_end(s) && strcmp(__cmdParams[0],name))
 			{
-				chr_message(chr,_,"%s is not online",__cmdParams[0]);
+				chr_message(chr,_,msg_commandsDef[146],__cmdParams[0]);
 				return;
 			}
 	
@@ -111,7 +111,7 @@ public cmd_go(const chr)
 		//move char to the target
 		if(x < 0 || y < 0)
 		{
-			chr_message(chr,_,"Invalid map location");
+			chr_message(chr,_,msg_commandsDef[6]);
 			return;
 		}
 

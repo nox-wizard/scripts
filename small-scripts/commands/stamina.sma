@@ -41,12 +41,12 @@ public cmd_stamina(const chr)
 					chr_setProperty(chr,CP_DEXTERITY,CP2_STAMINA,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
 		}
 
-		chr_message(chr,_,"%d characters set to full stats",i);
+		chr_message(chr,_,msg_commandsDef[248],i);
 		return;
 	}
 
 	//if we are here it means we need a target
-	chr_message(chr,_,"Select a character to raise stats");
+	chr_message(chr,_,msg_commandsDef[249]);
 	target_create(chr,_,_,_,"cmd_stamina_targ");
 }
 
@@ -61,9 +61,9 @@ public cmd_stamina_targ(target, chr, object, x, y, z, unused, unused2)
 	if(isChar(object))
 	{
 		chr_setProperty(chr,CP_DEXTERITY,CP2_STAMINA,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
-		chr_message(chr,_,"stats raised");
+		chr_message(chr,_,msg_commandsDef[250]);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

@@ -34,7 +34,7 @@ public cmd_freeze(const chr)
 	//read them
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify on or off");
+		chr_message(chr,_,msg_commandsDef[131]);
 		return;
 	}
 
@@ -42,7 +42,7 @@ public cmd_freeze(const chr)
 		freeze = true;
 	else if(strcmp(__cmdParams[0],"off"))
 		{
-			chr_message(chr,_,"You must specify 'on' 'off' or 'target' as first parameter");
+			chr_message(chr,_,msg_commandsDef[132]);
 			return;
 		}
 
@@ -61,7 +61,7 @@ public cmd_freeze(const chr)
 					if(chr2 != chr) chr_freeze(chr2);
 			}
 
-			chr_message(chr,_,"%d characters frozen",i);
+			chr_message(chr,_,msg_commandsDef[133],i);
 		}
 
 		else
@@ -71,14 +71,14 @@ public cmd_freeze(const chr)
 					chr2 = set_getChar(area_chars(area));
 					if(chr2 != chr) chr_unfreeze(chr2);
 			}
-			chr_message(chr,_,"%d characters unfrozen",i);
+			chr_message(chr,_,msg_commandsDef[134],i);
 		}	
 
 		return;
 	}
 
 	//if we are here it means we need a target
-	chr_message(chr,_,"Select a character to freeze");
+	chr_message(chr,_,msg_commandsDef[135]);
 	target_create(chr,freeze,_,_,"cmd_freeze_targ");
 }
 
@@ -94,15 +94,15 @@ public cmd_freeze_targ(target, chr, object, x, y, z, unused, freeze)
 		if(freeze)
 		{
 			chr_freeze(object);
-			chr_message(chr,_,"character frozen");
+			chr_message(chr,_,msg_commandsDef[136]);
 		}
 
 		else 
 		{
 			chr_unfreeze(object);
-			chr_message(chr,_,"charcater unfrozen");
+			chr_message(chr,_,msg_commandsDef[137]);
 		}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

@@ -18,7 +18,7 @@ SEERs and higher staff can flip everything without stamina loss.
 */
 public cmd_flip(const chr)
 {
-	chr_message(chr,_,"Select an item to flip");
+	chr_message(chr,_,msg_commandsDef[130]);
 	target_create(chr,_,_,_,"cmd_flip_targ");
 }
 
@@ -60,7 +60,7 @@ public cmd_flip_targ(target, chr, object, x, y, z, unused, color)
 		chr_setStamina(chr,chr_getStamina(chr) - 50/ratio)
 		itm_flip(object);
 	}
-	else chr_message(chr,_,"You must target an item");
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 /*! }@ */

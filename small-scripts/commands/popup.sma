@@ -48,7 +48,7 @@ public cmd_popup(const chr)
 	
 	new title[25];
 	chr_getProperty(chr,CP_STR_NAME,0,title);
-	sprintf(title,"Message from %s",title);	
+	sprintf(title,msg_commandsDef[199],title);	
 	broadcastPopup(title,message);	
 }
 /*! @}*/

@@ -28,7 +28,7 @@ public cmd_dye(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"Sorry, the dye menu hasn't been done yet");
+		chr_message(chr,_,msg_commandsDef[125]);
 		return;
 	}
 
@@ -36,7 +36,7 @@ public cmd_dye(const chr)
 	if(!isStrHex(__cmdParams[0]))
 		if(!isStrInt(__cmdParams[0]))
 		{
-			chr_message(chr,_,"Color code must be an hexadecimal (preceded by 0x) or integer number");
+			chr_message(chr,_,msg_commandsDef[126]);
 			return;
 		}
 		else color = str2Int(__cmdParams[0]);
@@ -57,11 +57,11 @@ public cmd_dye(const chr)
 				itm_refresh(item);
 		}
 
-		chr_message(chr,_,"%d items dyed",i);		
+		chr_message(chr,_,msg_commandsDef[127],i);		
 		return;
 	}
 
-	chr_message(chr,_,"Select an item to dye");
+	chr_message(chr,_,msg_commandsDef[128]);
 	target_create(chr,color,_,_,"cmd_dye_targ");
 }
 
@@ -77,9 +77,9 @@ public cmd_dye_targ(target, chr, object, x, y, z, unused, color)
 	{
 		itm_setProperty(object,IP_COLOR,_,color);
 		itm_refresh(object);
-		chr_message(chr,_,"Item dyed");
+		chr_message(chr,_,msg_commandsDef[129]);
 	}
-	else chr_message(chr,_,"You must target an item");
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 /*! }@ */

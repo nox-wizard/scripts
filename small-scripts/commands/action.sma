@@ -18,12 +18,12 @@ public cmd_action(const chr)
 	
 	if(!isStrInt(__cmdParams[0]))
 	{
-		chr_message(chr,_,"Action must be an integer");
+		chr_message(chr,_,msg_commandsDef[79]);
 		return;
 	}
 	
 	new act = str2Int(__cmdParams[0]);
-	chr_message(chr,_,"Select a character that will perform the action");
+	chr_message(chr,_,msg_commandsDef[80]);
 	target_create(chr,act,_,_,"cmd_action_targ");
 }
 
@@ -37,7 +37,7 @@ public cmd_action_targ(target, chr, object, x, y, z, unused, action)
 {
 	if(isChar(object))
 		chr_action(object,action)
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

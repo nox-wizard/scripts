@@ -35,11 +35,11 @@ public cmd_resend(const chr)
 		for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 			chr_update(set_getChar(area_chars(area)));
 			
-		chr_message(chr,_,"%d characters resended",i);		
+		chr_message(chr,_,msg_commandsDef[215],i);		
 		return;
 	}
 
-	chr_message(chr,_,"Select a character to resend");
+	chr_message(chr,_,msg_commandsDef[216]);
 	target_create(chr,area,_,_,"cmd_resend_targ");
 }
 
@@ -53,7 +53,7 @@ public cmd_resend_targ(target, chr, object, x, y, z, unused, area)
 {
 	if(isChar(object))
 		chr_update(object);
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

@@ -35,7 +35,7 @@ public cmd_move(const chr)
 	//called 'move me
 	if(!strcmp(__cmdParams[0],"me"))
 	{
-		chr_message(chr,_,"Select a location where to go");
+		chr_message(chr,_,msg_commandsDef[176]);
 		target_create(chr,chr,_,_,"cmd_move_targ_dst");
 		return;
 	}
@@ -52,7 +52,7 @@ public cmd_move(const chr)
 			new chr2 = getOnlineCharFromName(__cmdParams[1]);
 			if(!isChar(chr2))
 			{
-				chr_message(chr,_,"%s is not online",__cmdParams[1]);
+				chr_message(chr,_,msg_commandsDef[5],__cmdParams[1]);
 				return;
 			}
 			
@@ -61,7 +61,7 @@ public cmd_move(const chr)
 		}
 		else
 		{
-			chr_message(chr,_,"Select an object to move to you");
+			chr_message(chr,_,msg_commandsDef[177]);
 			target_create(chr,chr,_,_,"cmd_move_targ_here");
 			return;
 		}
@@ -69,7 +69,7 @@ public cmd_move(const chr)
 	//called 'move loc
 	if(!strcmp(__cmdParams[0],"loc"))
 	{
-		chr_message(chr,_,"Select an object to move to a location");
+		chr_message(chr,_,msg_commandsDef[178]);
 		target_create(chr,chr,_,_,"cmd_move_targ_loc");
 		return;
 	}
@@ -77,7 +77,7 @@ public cmd_move(const chr)
 	//called with no params
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"Select an item to move");
+		chr_message(chr,_,msg_commandsDef[179]);
 		target_create(chr,_,_,_,"cmd_move_targ");
 		return;
 	}
@@ -89,7 +89,7 @@ public cmd_move(const chr)
 	new x,y,z = -1000;
 	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]))
 	{
-		chr_message(chr,_,"x and y must be numbers");
+		chr_message(chr,_,msg_commandsDef[180]);
 		return;
 	}
 	
@@ -105,7 +105,7 @@ public cmd_move(const chr)
 	//check sign of x and y only in abs mode
 	if((y < 0 || x < 0) && !mode)
 	{
-		chr_message(chr,_,"x and y must be positive numbers in abs mode");
+		chr_message(chr,_,msg_commandsDef[181]);
 		return;
 	}
 	new area = chr_getCmdArea(chr);
@@ -142,7 +142,7 @@ public cmd_move(const chr)
 				chr_moveTo(chr2,newx,newy,newz);	
 			}
 	
-		chr_message(chr,_,"%d objects moved",i);
+		chr_message(chr,_,msg_commandsDef[182],i);
 		area_refresh(area);
 		area_useCommand(area);
 		return;
@@ -155,7 +155,7 @@ public cmd_move(const chr)
 	chr_setLocalIntVec(chr,CLV_CMDTEMP,2,y);
 	chr_setLocalIntVec(chr,CLV_CMDTEMP,3,z);
 	
-	chr_message(chr,_,"Select an object to move");
+	chr_message(chr,_,msg_commandsDef[183]);
 	target_create(chr,_,_,_,"cmd_move_targ");
 }
 
@@ -169,7 +169,7 @@ public cmd_move_targ(target, chr, object, x, y, z, unused, unused2)
 {
 	if(!isChar(object) && !isItem(object))
 	{
-		chr_message(chr,_,"You must select an object");
+		chr_message(chr,_,msg_commandsDef[184]);
 		return;
 	}
 	
@@ -236,7 +236,7 @@ public cmd_move_targ_here(target, chr, object, x, y, z, unused, unused2)
 			itm_moveTo(object,x,y,z)
 		else
 		{
-			chr_message(chr,_,"You must select an object");
+			chr_message(chr,_,msg_commandsDef[184]);
 			return;
 		}
 }
@@ -255,7 +255,7 @@ public cmd_move_targ_loc(target, chr, object, x, y, z, unused, unused2)
 		locationsMenu(chr,object)
 	else
 	{
-		chr_message(chr,_,"You must select an object");
+		chr_message(chr,_,msg_commandsDef[184]);
 		return;
 	}
 }
@@ -283,7 +283,7 @@ public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 					itm_refresh(param);
 					itm_refresh(bp);
 				}
-				else chr_message(chr,_,"That character does not have a valid backpack");
+				else chr_message(chr,_,msg_commandsDef[186]);
 			}
 
 		if(isChar(param))
@@ -300,8 +300,7 @@ public cmd_move_targ_dst(target, chr, object, x, y, z, unused2, param)
 		area_refresh(chr_getCmdArea(chr));
 		return;
 	}
-	chr_message(chr,_,"You must target a location or an object!");
+	chr_message(chr,_,msg_commandsDef[187]);
 }
-
 
 /*! }@ */

@@ -41,12 +41,12 @@ public cmd_heal(const chr)
 					chr_setProperty(chr,CP_STRENGTH,CP2_HP,chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
 		}
 
-		chr_message(chr,_,"%d characters set to full stats",i);
+		chr_message(chr,_,msg_commandsDef[147],i);
 		return;
 	}
 
 	//if we are here it means we need a target
-	chr_message(chr,_,"Select a character to raise stats");
+	chr_message(chr,_,msg_commandsDef[148]);
 	target_create(chr,_,_,_,"cmd_heal_targ");
 }
 
@@ -61,9 +61,9 @@ public cmd_heal_targ(target, chr, object, x, y, z, unused, unused2)
 	if(isChar(object))
 	{
 		chr_setProperty(chr,CP_STRENGTH,CP2_HP,chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
-		chr_message(chr,_,"stats raised");
+		chr_message(chr,_,msg_commandsDef[149]);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

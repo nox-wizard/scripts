@@ -16,7 +16,7 @@ the targetted character will be unjailed
 */
 public cmd_unjail(const chr)
 {
-	chr_message(chr,_,"Select a character to unjail");
+	chr_message(chr,_,msg_commandsDef[254]);
 	target_create(chr,_,_,_,"cmd_unjail_targ");
 }
 
@@ -30,7 +30,7 @@ public cmd_unjail_targ(target, chr, object, x, y, z, unused, unused1)
 {
 	if(isChar(object))
 		chr_unjail(chr,object);
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

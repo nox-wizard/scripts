@@ -22,13 +22,13 @@ public cmd_setmoreb34(const chr)
 
 	if(!strlen(__cmdParams[0]) )
 	{
-		chr_message(chr,_,"You have to specify 1 value for moreb34!");
+		chr_message(chr,_,msg_commandsDef[227]);
 		return;
 	}
 
 	if(!isStrInt(__cmdParams[0]))
 	{
-		chr_message(chr,_,"value must be an integer number");
+		chr_message(chr,_,msg_commandsDef[109]);
 		return;
 	}
 
@@ -49,11 +49,11 @@ public cmd_setmoreb34(const chr)
 				itm_setProperty(item, IP_MOREB, 4, moreb34/256);
 		}
 
-		chr_message(chr,_,"%d items had moreb34 set",i);		
+		chr_message(chr,_,msg_commandsDef[228],i);		
 		return;
 	}
 
-	chr_message(chr,_,"Select an item to set moreb34");
+	chr_message(chr,_,msg_commandsDef[229]);
 	target_create(chr,moreb34,_,_,"cmd_setmoreb34_targ");
 }
 
@@ -68,9 +68,9 @@ public cmd_setmoreb34_targ(target, chr, object, x, y, z, unused, moreb34)
 	{
 		itm_setProperty(target, IP_MOREB, 3, moreb34%256);
 		itm_setProperty(target, IP_MOREB, 4, moreb34/256);
-		chr_message(chr,_,"New moreb34:%d",(itm_getProperty(object,IP_MOREB,3)&0xff) + ((itm_getProperty(object,IP_MOREB,4)&0xff)<<8) );
+		chr_message(chr,_,msg_commandsDef[230],(itm_getProperty(object,IP_MOREB,3)&0xff) + ((itm_getProperty(object,IP_MOREB,4)&0xff)<<8) );
 	}
-	else chr_message(chr,_,"You must target an item");
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 /*! }@ */

@@ -16,7 +16,7 @@ the targetted character's backpack will be opened
 */
 public cmd_gmopen(const chr)
 {
-	chr_message(chr,_,"Select a character to open his backpack");
+	chr_message(chr,_,msg_commandsDef[141]);
 	target_create(chr,_,_,_,"cmd_gmopen_targ");
 }
 
@@ -33,13 +33,13 @@ public cmd_gmopen_targ(target, chr, object, x, y, z, unused, unused1)
 		new bp = chr_getBackpack(object);
 		if(!isItem(bp))
 		{
-			chr_message(chr,_,"That character does not have a backpack");
+			chr_message(chr,_,msg_commandsDef[142]);
 			return;
 		}
 
 		itm_showContainer(bp,chr);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

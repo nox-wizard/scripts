@@ -33,7 +33,7 @@ public cmd_invul(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify on or off");
+		chr_message(chr,_,msg_commandsDef[131]);
 		return;
 	}
 
@@ -41,7 +41,7 @@ public cmd_invul(const chr)
 		makeinvul = true;
 	else if(strcmp(__cmdParams[0],"off"))
 		{
-			chr_message(chr,_,"You must specify 'on' 'off' or 'target' as first parameter");
+			chr_message(chr,_,msg_commandsDef[132]);
 			return;
 		}
 
@@ -58,7 +58,7 @@ public cmd_invul(const chr)
 					chr2 = set_getChar(area_chars(area));
 					if(chr2 != chr) chr_makeInvul(chr2);
 			}
-			chr_message(chr,_,"%d characters invulnerabilized",i);
+			chr_message(chr,_,msg_commandsDef[158],i);
 		}
 		else 
 		{
@@ -67,14 +67,14 @@ public cmd_invul(const chr)
 					chr2 = set_getChar(area_chars(area));
 					if(chr2 != chr) chr_makeVulnerable(chr2);
 			}
-			chr_message(chr,_,"%d characters vulnerabilized",i);
+			chr_message(chr,_,msg_commandsDef[159],i);
 		}
 
 		area_useCommand(area);		
 		return;
 	}
 
-	chr_message(chr,_,"Choose a character");
+	chr_message(chr,_,msg_commandsDef[31]);
 	target_create(chr,makeinvul,_,_,"cmd_invul_targ");
 }
 
@@ -90,7 +90,7 @@ public cmd_invul_targ(target, chr, object, x, y, z, unused, makeinvul)
 		if(makeinvul)
 			chr_makeInvul(object);
 		else chr_makeVulnerable(object);
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

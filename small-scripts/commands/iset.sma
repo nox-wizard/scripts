@@ -34,7 +34,7 @@ public cmd_iset(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify the property to set");
+		chr_message(chr,_,msg_commandsDef[99]);
 		return;
 	}
 
@@ -56,14 +56,14 @@ public cmd_iset(const chr)
 				itm_refresh(item);
 		}
 
-		chr_message(chr,_,"%s set to %d items",__cmdParams[0],i);		
+		chr_message(chr,_,msg_commandsDef[160],__cmdParams[0],i);		
 		return;
 	}
 
 	//store parameters to be read by the callback
 	chr_addLocalIntVar(chr,CLV_CMDTEMP,prop);
 
-	chr_message(chr,_,"Select an item to set the %s",__cmdParams[0]);
+	chr_message(chr,_,msg_commandsDef[161],__cmdParams[0]);
 	target_create(chr,val,_,_,"cmd_iset_targ");
 }
 
@@ -79,16 +79,17 @@ public cmd_iset_targ(target, chr, object, x, y, z, unused, val)
 	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isItem(object))
+	{
 		if(val != -1000)
 		{
-			itm_setProperty(object,prop,_,val);
-			itm_refresh(object);
-			chr_message(chr,_,"property set");
+		itm_setProperty(object,prop,_,val);
+		itm_refresh(object);
+		chr_message(chr,_,msg_commandsDef[102], val);
 		}
 		else
-			chr_message(chr,_,"Property value is currently %d",itm_getProperty(object,prop));
-
-	else chr_message(chr,_,"You must target an item");
+			chr_message(chr,_,msg_commandsDef[261],itm_getProperty(object,prop));
+	}
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 static readPropAndVal(chr,&prop,&val)
@@ -102,7 +103,7 @@ static readPropAndVal(chr,&prop,&val)
 		{
 			if(!strlen(__cmdParams[0]))
 			{
-				chr_message(chr,_,"You must specify the direction: n ne e se s sw w nw");
+				chr_message(chr,_,msg_commandsDef[104]);
 				return INVALID;
 			}
 	
@@ -111,7 +112,7 @@ static readPropAndVal(chr,&prop,&val)
 	
 			if(val == INVALID)
 			{
-				chr_message(chr,_,"invalid direction, choose between: n ne e se s sw w nw");
+				chr_message(chr,_,msg_commandsDef[105]);
 				return INVALID;
 			}
 	
@@ -127,7 +128,7 @@ static readPropAndVal(chr,&prop,&val)
 				case 'i': prop = IP_VISIBLE;
 				default:
 				{
-					chr_message(chr,_,"maybe you want totype 'value'or 'visible'");
+					chr_message(chr,_,msg_commandsDef[162]);
 					return INVALID;
 				}
 			}
@@ -136,13 +137,13 @@ static readPropAndVal(chr,&prop,&val)
 
 		default:
 		{
-			chr_message(chr,_,"Invalid property, allowed properties are: amount dir movable type value visible wipe");
+			chr_message(chr,_,msg_commandsDef[163]);
 			return INVALID;
 		}
 	}
 
 	if(!strlen(__cmdParams[1]) || !isStrInt(__cmdParams[1]))
-		return INVALID;
+<		return INVALID;
 	
 	val = str2Int(__cmdParams[1]);
 	return OK;

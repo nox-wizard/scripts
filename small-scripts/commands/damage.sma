@@ -38,7 +38,7 @@ public cmd_damage(const chr)
 
 	if(!isStrInt(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify the amount of damage to do");
+		chr_message(chr,_,msg_commandsDef[112]);
 		return;
 	}
 
@@ -49,7 +49,7 @@ public cmd_damage(const chr)
 			stat = STAT_MANA;
 		else if(strcmp(__cmdParams[1],"hp"))
 		{
-			chr_message(chr,_,"You must specify the stat to be damaged: hp stam or mana");
+			chr_message(chr,_,msg_commandsDef[113]);
 			return;
 		}
 
@@ -67,14 +67,14 @@ public cmd_damage(const chr)
 					chr_applyDamage(chr2,amount,DAMAGE_PURE,stat);
 		}
 
-		chr_message(chr,_,"%d characters damaged",i);
+		chr_message(chr,_,msg_commandsDef[114],i);
 
 		return;
 	}
 
 	//if we are here it means we need a target
 	chr_addLocalIntVar(chr,CLV_CMDTEMP,stat);
-	chr_message(chr,_,"Select a character to damage");
+	chr_message(chr,_,msg_commandsDef[115]);
 	target_create(chr,amount,_,_,"cmd_damage_targ");
 }
 
@@ -91,7 +91,7 @@ public cmd_damage_targ(target, chr, object, x, y, z, unused, damage)
 		chr_applyDamage(object,damage,DAMAGE_PURE,chr_getLocalIntVar(chr,CLV_CMDTEMP));
 		chr_delLocalVar(chr,CLV_CMDTEMP);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[31]);
 }
 
 /*! }@ */

@@ -39,7 +39,7 @@ public cmd_jail(const chr)
 	}
 	else secs = 1000000000; //let's jail him forever ...
 
-	chr_message(chr,_,"Select a character to jail");
+	chr_message(chr,_,msg_commandsDef[164]);
 	target_create(chr,secs,_,_,"cmd_jail_targ");
 }
 
@@ -53,7 +53,7 @@ public cmd_jail_targ(target, chr, object, x, y, z, unused, secs)
 {
 	if(isChar(object))
 		chr_jail(chr,object,secs);
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

@@ -40,16 +40,16 @@ public cmd_make(const chr)
 					makewhat = 3;
 				else
 				{
-					chr_message(chr,_,"You must specify 'gm','gmpageable', 'cns' or 'player'");
+					chr_message(chr,_,msg_commandsDef[170]);
 					return;
 				}
 
 	switch(makewhat)
 	{
-		case 0: chr_message(chr,_,"Choose a player to make GM");
-		case 1: chr_message(chr,_,"Choose a player to make counselor");
-		case 2: chr_message(chr,_,"Choose a GM or couselor to make player");
-		case 3: chr_message(chr,_,"Choose a player to make pageable GM");
+		case 0: chr_message(chr,_,msg_commandsDef[171]);
+		case 1: chr_message(chr,_,msg_commandsDef[172]);
+		case 2: chr_message(chr,_,msg_commandsDef[173]);
+		case 3: chr_message(chr,_,msg_commandsDef[174]);
 	}
 
 target_create(chr,makewhat,_,_,"cmd_make_targ");
@@ -65,7 +65,7 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 {
 	if(!isChar(object))
 	{
-		chr_message(chr,_,"You must target a character");
+		chr_message(chr,_,msg_commandsDef[32]);
 		return;
 	}
 
@@ -94,7 +94,7 @@ public cmd_make_targ(target, chr, object, x, y, z, unused, makewhat)
 		}
 	}
 
-	chr_message(chr,_,"Privlevel of character set to %d",chr_getProperty(object,CP_PRIVLEVEL));
+	chr_message(chr,_,msg_commandsDef[175],chr_getProperty(object,CP_PRIVLEVEL));
 }
 
 /*! }@ */

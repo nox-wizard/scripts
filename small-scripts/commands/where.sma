@@ -21,7 +21,7 @@ public cmd_where(const chr)
 	region = chr_getProperty(chr,CP_REGION);
 	new regionname[50];
 	rgn_getName(region,regionname);
-	chr_message(chr,_,"You are in %s region, at %d %d %d",regionname,x,y,z);
+	chr_message(chr,_,msg_commandsDef[255],regionname,x,y,z);
 }
 
 /*! }@ */

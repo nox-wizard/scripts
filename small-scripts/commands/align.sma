@@ -26,7 +26,7 @@ public cmd_align(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify the alignment direction: x y z");
+		chr_message(chr,_,msg_commandsDef[81]);
 		return;
 	}
 
@@ -38,12 +38,12 @@ public cmd_align(const chr)
 		case 'z': d = CP2_Z;
 		default:
 		{
-			chr_message(chr,_,"Alignment direction MUST be x y or z");
+			chr_message(chr,_,msg_commandsDef[82]);
 			return;
 		}
 	}
 
-	chr_message(chr,_,"Select reference item or character");
+	chr_message(chr,_,msg_commandsDef[83]);
 	target_create(chr,d,_,_,"cmd_align_targ_ref");
 }
 
@@ -70,12 +70,12 @@ public cmd_align_targ_ref(target, chr, object, x, y, z, unused, dir)
 			default:
 			{
 				log_error("Invalid value for variable dir in align.sma - dir = %d",dir);
-				chr_message(chr,_,"An error occurred!");
+				chr_message(chr,_,msg_commandsDef[84]);
 				return;
 			}
 		}
 
-	chr_message(chr,_,"Select the object to be moved");
+	chr_message(chr,_,msg_commandsDef[85]);
 	target_create(chr,dir*100000 + pos,_,_,"cmd_align_targ");
 }
 
@@ -117,11 +117,11 @@ public cmd_align_targ(target, chr, object, x, y, z, unused, posAndDir)
 		}
 		else
 		{
-			chr_message(chr,_,"You must select an item or a character");
+			chr_message(chr,_,msg_commandsDef[86]);
 			return;
 		}
 
-	chr_message(chr,_,"Object moved to %d %d %d",newx,newy,newz);
+	chr_message(chr,_,msg_commandsDef[87],newx,newy,newz);
 }
 
 /*! }@ */

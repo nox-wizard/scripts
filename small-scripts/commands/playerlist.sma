@@ -14,7 +14,7 @@ public cmd_playerlist( const caller )
 
 	new count=set_size(set);
 	if( count==1 ) {
-		chr_message(caller,_ , "No other players connected" );
+		chr_message(caller,_ , msg_commandsDef[0] );
 		set_delete(set);
 		return;
 	}
@@ -25,7 +25,7 @@ public cmd_playerlist( const caller )
 	gui_addGump( menu, 0, 0, 0x0027, 0 );
 
 	//Users online: ##
-	gui_addText( menu, 20, 4, _, "Users Online : " );
+	gui_addText( menu, 20, 4, _, msg_commandsDef[1] );
 	gui_addText( menu, 150, 4, _, "%d", count );
 
 	//create player list

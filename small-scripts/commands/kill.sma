@@ -36,12 +36,12 @@ public cmd_kill(const chr)
 				if(chr2 != chr) chr_kill(chr2);
 		}
 
-		chr_message(chr,_,"%d characters killed",i);
+		chr_message(chr,_,msg_commandsDef[165],i);
 		area_refresh(area);	
 		return;
 	}
 
-	chr_message(chr,_,"Select a character to kill");
+	chr_message(chr,_,msg_commandsDef[166]);
 	target_create(chr,area,_,_,"cmd_kill_targ");
 }
 
@@ -58,7 +58,7 @@ public cmd_kill_targ(target, chr, object, x, y, z, unused, area)
 		chr_kill(object);
 		area_refresh(area);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

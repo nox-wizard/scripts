@@ -14,7 +14,7 @@
 */
 public cmd_killhair(const chr)
 {
-	chr_message(chr,_,"Select a character to kill his hair");
+	chr_message(chr,_,msg_commandsDef[168]);
 	target_create(chr,_,_,_,"cmd_killhair_targ");
 }
 
@@ -32,7 +32,7 @@ public cmd_killhair_targ(target, chr, object, x, y, z, unused, unused1)
 		if(isItem(hair))
 			itm_remove(hair);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

@@ -42,7 +42,7 @@ public cmd_cset(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify the property to set");
+		chr_message(chr,_,msg_commandsDef[99]);
 		return;
 	}
 
@@ -64,14 +64,14 @@ public cmd_cset(const chr)
 				chr_update(item);
 		}
 
-		chr_message(chr,_,"%s set to %d characters",__cmdParams[0],i);		
+		chr_message(chr,_,msg_commandsDef[100],__cmdParams[0],i);		
 		return;
 	}
 
 	//store parameters to be read by the callback
 	chr_addLocalIntVar(chr,CLV_CMDTEMP,prop);
 
-	chr_message(chr,_,"Select a character to set the %s",__cmdParams[0]);
+	chr_message(chr,_,msg_commandsDef[101],__cmdParams[0]);
 	target_create(chr,val,_,_,"cmd_cset_targ");
 }
 
@@ -87,16 +87,17 @@ public cmd_cset_targ(target, chr, object, x, y, z, unused, val)
 	chr_delLocalVar(chr,CLV_CMDTEMP);
 
 	if(isChar(object))
+	{
 		if(val != -1000)
 		{
 			chr_setProperty(object,prop,_,val);
 			chr_update(object);
-			chr_message(chr,_,"property set to %d",val);
+			chr_message(chr,_,msg_commandsDef[102],val);
 		}
 		else
-			chr_message(chr,_,"Property value is currently %d",chr_getProperty(object,prop));
-
-	else chr_message(chr,_,"You must target an item");
+			chr_message(chr,_,msg_commandsDef[261],chr_getProperty(object,prop));
+	}
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 static readPropAndVal(chr,&prop,&val)
@@ -110,7 +111,7 @@ static readPropAndVal(chr,&prop,&val)
 			{
 				if(!strlen(__cmdParams[0]))
 				{
-					chr_message(chr,_,"You must specify the direction: n ne e se s sw w nw");
+					chr_message(chr,_,msg_commandsDef[104]);
 					return INVALID;
 				}
 		
@@ -119,7 +120,7 @@ static readPropAndVal(chr,&prop,&val)
 		
 				if(val == INVALID)
 				{
-					chr_message(chr,_,"invalid direction, choose between: n ne e se s sw w nw");
+					chr_message(chr,_,msg_commandsDef[105]);
 					return INVALID;
 				}
 		
@@ -154,7 +155,7 @@ static readPropAndVal(chr,&prop,&val)
 		
 				default:
 				{
-					chr_message(chr,_,"Maybe you wanted to type'speech','split' or 'splitchance'?");
+					chr_message(chr,_,msg_commandsDef[106]);
 					return INVALID;
 				}
 			}
@@ -170,14 +171,14 @@ static readPropAndVal(chr,&prop,&val)
 					}
 				default:
 				{
-					chr_message(chr,_,"Maybe you wanted to type 'trigger' or 'trainer'?");
+					chr_message(chr,_,msg_commandsDef[107]);
 					return INVALID;
 				}
 			}
 		
 		default:
 		{
-			chr_message(chr,_,"Invalid property, allowed properties are: ai dir owner spattack spadelay speech train trigger");
+			chr_message(chr,_,msg_commandsDef[108]);
 			return INVALID;
 		}
 	}

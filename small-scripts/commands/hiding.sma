@@ -41,7 +41,7 @@ public cmd_hiding(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify at least the first parameter (on,off,toggle), other params are optional");
+		chr_message(chr,_,msg_commandsDef[150]);
 		return;
 	}
 
@@ -53,7 +53,7 @@ public cmd_hiding(const chr)
 				action = 2;
 			else
 			{
-				chr_message(chr,_,"You must specify 'on','off' or 'toggle' as first parameter");
+				chr_message(chr,_,msg_commandsDef[151]);
 				return;
 			}
 
@@ -75,16 +75,16 @@ public cmd_hiding(const chr)
 	{	//swich on action: toggle, unhide, hide
 		switch(action)
 		{
-			case 2: //toggle, TODO: have a chr_isHidden(chr) function
+			case 2: //toggle TODO: have a chr_isHidden(chr) function
 			{
 		
 				/*for(set_rewind(area_chars(area)); !set_end(area_chars(area)); i++)
 				{
 					chr2 = set_getChar(area_chars(area));
 					if(chr2 != chr) 
-						if(chr_isHidden(chr))
-							chr_permahide(chr);
-						else chr_unhide(chr);
+						if(chr_isHidden(chr2))
+							chr_permahide(chr2);
+						else chr_unhide(chr2);
 				}*/
 			}
 
@@ -99,11 +99,11 @@ public cmd_hiding(const chr)
 						if(chr_isPermahidden(chr2))
 							chr_unpermahide(chr2);
 				
-						chr_setProperty(chr,CP_HIDDEN,_,0);
+						chr_setProperty(chr2,CP_HIDDEN,_,0);
 						chr_update(chr2);
 					}			
 				}
-				sprintf(txt,"unhidden");
+				sprintf(txt,msg_commandsDef[152]);
 			}
 	
 			case 0: //hide
@@ -126,20 +126,20 @@ public cmd_hiding(const chr)
 					chr_update(chr2);
 					}
 				}
-				sprintf(txt,"hidden");
+				sprintf(txt,msg_commandsDef[153]);
 			}
 		}
 
-		chr_message(chr,_,"%d characters %s",i,txt);
+		chr_message(chr,_,msg_commandsDef[154],i,txt);
 		area_useCommand(area);	
 		return;
 	}
 
 	switch(action)
 	{
-		case 2: chr_message(chr,_,"Select a character to toggle hiding satus");
-		case 1: chr_message(chr,_,"Select a character to unhide");
-		case 0: chr_message(chr,_,"Select a character to hide");
+		case 2: chr_message(chr,_,msg_commandsDef[155]);
+		case 1: chr_message(chr,_,msg_commandsDef[156]);
+		case 0: chr_message(chr,_,msg_commandsDef[157]);
 	}
 
 	target_create(chr,10*action + mode,_,_,"cmd_hide_targ");
@@ -169,7 +169,7 @@ public cmd_hide_targ(target, chr, object, x, y, z, unused, param)
 						chr_unpermahide(object);
 			
 					chr_setProperty(chr,CP_HIDDEN,_,0);
-					chr_message(chr,_,"Character unhidden");
+					chr_message(chr,_,msg_commandsDef[152]);
 				}
 	
 			case 0: //hide
@@ -183,14 +183,14 @@ public cmd_hide_targ(target, chr, object, x, y, z, unused, param)
 						case 2: //permanently hidden
 							chr_permahide(object);
 					}
-				chr_message(chr,_,"Character hidden");
+				chr_message(chr,_,msg_commandsDef[153]);
 				}
 		}
 
 	chr_update(object);
 	}
 
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

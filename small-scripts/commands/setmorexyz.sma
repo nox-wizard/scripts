@@ -22,13 +22,13 @@ public cmd_setmorexyz(const chr)
 
 	if(!strlen(__cmdParams[0]) || !strlen(__cmdParams[1]) || !strlen(__cmdParams[2]))
 	{
-		chr_message(chr,_,"You have to specify 3 values for morex morey morez");
+		chr_message(chr,_,msg_commandsDef[231]);
 		return;
 	}
 
 	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]) || !isStrInt(__cmdParams[2]))
 	{
-		chr_message(chr,_,"morex morey morez must be integer numbers");
+		chr_message(chr,_,msg_commandsDef[232]);
 		return;
 	}
 
@@ -52,11 +52,11 @@ public cmd_setmorexyz(const chr)
 				itm_setProperty(item,IP_MORE,IP2_Z,morez);
 		}
 
-		chr_message(chr,_,"%d items had morex morey morez set",i);		
+		chr_message(chr,_,msg_commandsDef[233],i);		
 		return;
 	}
 
-	chr_message(chr,_,"Select an item to set morex morey morez");
+	chr_message(chr,_,msg_commandsDef[234]);
 	target_create(chr,(morex << 16) + (morey << 8) + morez,_,_,"cmd_setmorexyz_targ");
 }
 
@@ -72,9 +72,9 @@ public cmd_setmorexyz_targ(target, chr, object, x, y, z, unused, morexyz)
 		itm_setProperty(object,IP_MORE,IP2_X, morexyz >> 16);
 		itm_setProperty(object,IP_MORE,IP2_Y,(morexyz >> 8) & 0xFF);
 		itm_setProperty(object,IP_MORE,IP2_Z, morexyz & 0xFF);
-		chr_message(chr,_,"New morex: %d morey:%d morez:%d",itm_getProperty(object,IP_MORE,IP2_X),itm_getProperty(object,IP_MORE,IP2_Y),itm_getProperty(object,IP_MORE,IP2_Z));
+		chr_message(chr,_,msg_commandsDef[235],itm_getProperty(object,IP_MORE,IP2_X),itm_getProperty(object,IP_MORE,IP2_Y),itm_getProperty(object,IP_MORE,IP2_Z));
 	}
-	else chr_message(chr,_,"You must target an item");
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 /*! }@ */

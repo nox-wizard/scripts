@@ -35,13 +35,13 @@ public cmd_tile(const chr)
 
 	if(!strlen(__cmdParams[1]))
 	{
-		chr_message(chr,_,"If you want to pass parameters you must pass at least nX and nY");
+		chr_message(chr,_,msg_commandsDef[251]);
 		return;
 	}
 
 	if(!isStrInt(__cmdParams[0]) || !isStrInt(__cmdParams[1]) || (strlen(__cmdParams[2]) && !isStrInt(__cmdParams[2])) || (strlen(__cmdParams[3]) && !isStrInt(__cmdParams[3])))
 	{
-		chr_message(chr,_,"x y z and z-scale must be integer numbers");
+		chr_message(chr,_,msg_commandsDef[252]);
 		return;
 	}
 
@@ -51,7 +51,7 @@ public cmd_tile(const chr)
 	new zScale = isStrInt(__cmdParams[3]) ? str2Int(__cmdParams[3]) : 1;
 	new nXnYnZzScale = (nX << 24) + (nY << 16) + (nZ << 8) + zScale;  
 	 
-	chr_message(chr,_,"Select an item to tile");
+	chr_message(chr,_,msg_commandsDef[253]);
 	target_create(chr,nXnYnZzScale,_,_,"cmd_tile_targ");
 }
 
@@ -65,7 +65,7 @@ public cmd_tile_targ(target, chr, object, x, y, z, unused, nXnYnZzScale)
 {
 	if(!isItem(object))
 	{
-		chr_message(chr,_,"You must target an item");
+		chr_message(chr,_,msg_commandsDef[103]);
 		return;
 	}
 	itm_getPosition(object,x,y,z);
@@ -87,7 +87,7 @@ public cmd_tile_rect(chr,x0,y0,x1,y1)
 	new xy = (x0 << 16) + y0;
 	chr_addLocalIntVar(chr,CLV_CMDTEMP,xy);
 
-	chr_message(chr,_,"Select an item to tile");
+	chr_message(chr,_,msg_commandsDef[253]);
 	target_create(chr,nXnY,_,_,"cmd_tile_targ1");
 }
 
@@ -95,7 +95,7 @@ public cmd_tile_targ1(target, chr, object, x, y, z, unused, nXnY)
 {
 	if(!isItem(object))
 	{
-		chr_message(chr,_,"You must target an item");
+		chr_message(chr,_,msg_commandsDef[103]);
 		return;
 	}
 	 	 

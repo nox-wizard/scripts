@@ -33,13 +33,13 @@ public cmd_setpriv(const chr)
 	//read them
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must enter the privlevel to set");
+		chr_message(chr,_,msg_commandsDef[236]);
 		return;
 	}
 
 	if(!isStrInt(__cmdParams[0]))
 	{
-		chr_message(chr,_,"privlevel must be number");
+		chr_message(chr,_,msg_commandsDef[237]);
 		return;
 	}
 
@@ -59,12 +59,12 @@ public cmd_setpriv(const chr)
 				if(chr2 != chr) chr_setProperty(chr2,CP_PRIVLEVEL,_,priv);
 		}
 
-		chr_message(chr,_,"Privlevel set to %d characters ",i);
+		chr_message(chr,_,msg_commandsDef[238],i);
 		return;
 	}
 
 	//if we are here it means we need a target
-	chr_message(chr,_,"Select a character");
+	chr_message(chr,_,msg_commandsDef[239]);
 	target_create(chr,priv,_,_,"cmd_setpriv_targ");
 }
 
@@ -79,10 +79,10 @@ public cmd_setpriv_targ(target, chr, object, x, y, z, unused, priv)
 	if(isChar(object))
 	{	
 		chr_setProperty(object,CP_PRIVLEVEL,_,priv);
-		chr_message(chr,_,"Privlevel set to %d",chr_getProperty(object,CP_PRIVLEVEL));
-		chr_message(object,_,"Your privlevel has been modified,now it's %d",chr_getProperty(object,CP_PRIVLEVEL));
+		chr_message(chr,_,msg_commandsDef[240],chr_getProperty(object,CP_PRIVLEVEL));
+		chr_message(object,_,msg_commandsDef[241],chr_getProperty(object,CP_PRIVLEVEL));
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

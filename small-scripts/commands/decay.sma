@@ -27,7 +27,7 @@ public cmd_decay(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You have to specify the decay time, or 'off'");
+		chr_message(chr,_,msg_commandsDef[116]);
 		return;
 	}
 
@@ -49,11 +49,11 @@ public cmd_decay(const chr)
 				itm_setDecay(item,decay);
 		}
 
-		chr_message(chr,_,"%d items had decay set",i);		
+		chr_message(chr,_,msg_commandsDef[117],i);		
 		return;
 	}
 
-	chr_message(chr,_,"Select an item to set decay");
+	chr_message(chr,_,msg_commandsDef[118]);
 	target_create(chr,decay,_,_,"cmd_decay_targ");
 }
 
@@ -67,9 +67,9 @@ public cmd_decay_targ(target, chr, object, x, y, z, unused, decay)
 	if(isItem(object))
 	{
 		itm_setDecay(object,decay);
-		chr_message(chr,_,"Item will decay at %dms",itm_getProperty(object,IP_DECAYTIME));
+		chr_message(chr,_,,itm_getProperty(object,IP_DECAYTIME));
 	}
-	else chr_message(chr,_,"You must target an item");
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 /*! }@ */

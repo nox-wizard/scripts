@@ -40,12 +40,12 @@ public cmd_resurrect(const chr)
 				if(chr2 != chr) chr_resurrect(chr2);
 		}
 
-		chr_message(chr,_,"%d characters resurrected",i);
+		chr_message(chr,_,msg_commandsDef[217],i);
 		return;
 	}
 
 	//if we are here it means we need a target
-	chr_message(chr,_,"Select a character to resurrect");
+	chr_message(chr,_,msg_commandsDef[218]);
 	target_create(chr,_,_,_,"cmd_resurrect_targ");
 }
 
@@ -60,9 +60,9 @@ public cmd_resurrect_targ(target, chr, object, x, y, z, unused, unused2)
 	if(isChar(object))
 	{
 		chr_resurrect(object);
-		chr_message(chr,_,"charcater resurrectd");
+		chr_message(chr,_,msg_commandsDef[219]);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

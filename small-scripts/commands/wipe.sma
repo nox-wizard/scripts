@@ -57,14 +57,14 @@ public cmd_wipe(const chr)
 				#endif
 			}
 
-		chr_message(chr,_,"%d objects removed",i);
+		chr_message(chr,_,msg_commandsDef[260],i);
 		area_refresh(area);
 		area_useCommand(area);
 		return;
 	}
 
 //do a single object wipe
-chr_message(chr,_,"Select an object to wipe");
+chr_message(chr,_,msg_commandsDef[256]);
 target_create(chr,area,_,_,"cmd_wipe_targ");
 }
 
@@ -91,8 +91,8 @@ public cmd_wipe_targ(target, chr, object, x, y, z, unused, area)
 					itm_remove(set_getItem(s));
 				return; 
 			}
-		else { chr_message(chr,_,"You must target a removable object"); return; }
-	chr_message(chr,_,"Object removed");
+		else { chr_message(chr,_,msg_commandsDef[257]); return; }
+	chr_message(chr,_,msg_commandsDef[258]);
 
 	area_refresh(area);
 }
@@ -120,6 +120,6 @@ public cmd_wipe_rect(chr,x0,y0,x1,y1)
 		#endif
 
 	}
-	chr_message(chr,_,"Items removed");
+	chr_message(chr,_,msg_commandsDef[259]);
 }
 /*! }@ */

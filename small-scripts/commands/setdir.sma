@@ -24,7 +24,7 @@ public cmd_setdir(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify the direction: n ne e se s sw w nw");
+		chr_message(chr,_,msg_commandsDef[104]);
 		return;
 	}
 
@@ -49,7 +49,7 @@ public cmd_setdir(const chr)
 		case 'w': dir = DIR_WEST;
 		default:
 			{
-				chr_message(chr,_,"Invalid direction");
+				chr_message(chr,_,msg_commandsDef[105]);
 				return;
 			}
 	}
@@ -75,11 +75,11 @@ public cmd_setdir(const chr)
 				chr_setProperty(chr2,CP_DIR,_,dir);
 				chr_update(chr2);
 		}
-		chr_message(chr,_,"%d objects directed",i);		
+		chr_message(chr,_,msg_commandsDef[220],i);		
 		return;
 	}
 
-	chr_message(chr,_,"Select an item to set the direction");
+	chr_message(chr,_,msg_commandsDef[221]);
 	target_create(chr,dir,_,_,"cmd_setdir_targ");
 }
 
@@ -103,7 +103,7 @@ public cmd_setdir_targ(target, chr, object, x, y, z, unused, dir)
 			chr_update(object);
 			chr_message(chr,_,"Direction set");
 		}
-	else chr_message(chr,_,"You must target an item or character");
+	else chr_message(chr,_,msg_commandsDef[222]);
 }
 
 /*! }@ */

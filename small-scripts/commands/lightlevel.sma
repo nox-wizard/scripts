@@ -26,7 +26,7 @@ public cmd_lightlevel(const chr)
 
 	if(!isStrInt(__cmdParams[0]))
 	{
-		chr_message(chr,_,"you must specify 0-15 or -1");
+		chr_message(chr,_,msg_commandsDef[169]);
 		return;
 	}
 	

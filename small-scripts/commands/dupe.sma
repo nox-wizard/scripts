@@ -55,13 +55,13 @@ public cmd_dupe(const chr)
 			}
 		}
 
-		chr_message(chr,_,"%d items copied",i);
+		chr_message(chr,_,msg_commandsDef[120],i);
 		
 		return;
 	}
 
 	//if we are here it means we need a target
-	chr_message(chr,_,"Select an item to duplicate");
+	chr_message(chr,_,msg_commandsDef[121]);
 	target_create(chr,n,_,_,"cmd_dupe_targ");
 }
 
@@ -75,13 +75,13 @@ public cmd_dupe_targ(target, chr, object, x, y, z, unused, n)
 {
 	if(!isItem(object))
 	{
-		chr_message(chr,_,"It must be an item");
+		chr_message(chr,_,msg_commandsDef[122]);
 		return;
 	}
 
 	if(itm_getProperty(object,IP_CONTAINERSERIAL) != INVALID)
 	{
-		chr_message(chr,_,"Item must not be in a container");
+		chr_message(chr,_,msg_commandsDef[123]);
 		return;
 	}
 
@@ -95,7 +95,7 @@ public cmd_dupe_targ(target, chr, object, x, y, z, unused, n)
 	
 		if(!isItem(copy))
 		{
-			chr_message(chr,_,"That item can't be duplicated");
+			chr_message(chr,_,msg_commandsDef[124]);
 			return;
 		}
 			

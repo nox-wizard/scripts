@@ -247,7 +247,7 @@ public cmd_area(const chr)
 	if(!strlen(__cmdParams[0]) && area != AREA_INVALID)
 	{
 		areas[area][area_user] = INVALID;
-		chr_message(chr,_,"Command area cleared");
+		chr_message(chr,_,msg_commandsDef[88]);
 		return;
 	}
 
@@ -258,7 +258,7 @@ public cmd_area(const chr)
 		area = cmds_getNewArea();
 		if(area == AREA_INVALID)
 		{
-			chr_message(chr,_,"No more command areas available");
+			chr_message(chr,_,msg_commandsDef[89]);
 			return;
 		}
 	}
@@ -277,7 +277,7 @@ public cmd_area(const chr)
 		areas[area][area_incl] = DEFAULT_INCLUDE;
 		areas[area][area_cmdsLeft] = DEFAULT_CMDS;
 		area_refresh(area);
-		chr_message(chr,_,"Standard area set");
+		chr_message(chr,_,msg_commandsDef[90]);
 
 		#if _CMD_DEBUG_
 			printf("^tNew standard command area set for character %d^n",areas[area][area_user]);
@@ -294,14 +294,14 @@ public cmd_area(const chr)
 	//---------------  radius  ----------------------
 	if(!isStrInt(__cmdParams[0]))
 	{
-		chr_message(chr,_,"First parameter must be the area radius");
+		chr_message(chr,_,msg_commandsDef[91]);
 		return;
 	}
 
 	new R = str2Int(__cmdParams[0]);
 	if(R < 0)
 	{
-		chr_message(chr,_,"Radius must be a positive number");
+		chr_message(chr,_,msg_commandsDef[92]);
 		return;
 	}
 
@@ -311,7 +311,7 @@ public cmd_area(const chr)
 	//---------------  include mode  ----------------------
 	if(!strlen(__cmdParams[1]))
 	{
-		chr_message(chr,_,"You must specify all parameters");
+		chr_message(chr,_,msg_commandsDef[93]);
 		return;
 	}
 
@@ -326,14 +326,14 @@ public cmd_area(const chr)
 
 			else
 			{
-				chr_message(chr,_,"The include mode can only be: itm chr all");
+				chr_message(chr,_,msg_commandsDef[94]);
 				return;
 			}
 
 	//---------------  number of commands  -----------------
 	if(!strlen(__cmdParams[2]))
 	{
-		chr_message(chr,_,"You must specify all parameters");
+		chr_message(chr,_,msg_commandsDef[95]);
 		return;
 	}
 
@@ -341,7 +341,7 @@ public cmd_area(const chr)
 		areas[area][area_cmdsLeft] = 0xFFFFFFFF;
 	else 	if(!isStrInt(__cmdParams[2]))
 		{
-			chr_message(chr,_,"Number of commands must be a number or 'unlimited'");
+			chr_message(chr,_,msg_commandsDef[96]);
 			return;
 		}
 
@@ -355,7 +355,7 @@ public cmd_area(const chr)
 	areas[area][area_chrs] = set_create();
 
 	//ask for target
-	chr_message(chr,_,"Target the area center");
+	chr_message(chr,_,msg_commandsDef[97]);
 	target_create(chr,area,_,_,"cmd_area_targ");
 }
 
@@ -372,7 +372,7 @@ public cmd_area_targ(target, chr, object, x, y, z, unused1, area)
 
 	if(x < 0 || y < 0)
 	{
-		chr_message(chr,_,"Invalid map location");
+		chr_message(chr,_,msg_commandsDef[6]);
 		return;
 	}
 
@@ -393,7 +393,7 @@ public cmd_area_targ(target, chr, object, x, y, z, unused1, area)
 	//finally we can assign area to character
 	areas[area][area_user] = chr;
 
-	chr_message(chr,_,"area set");
+	chr_message(chr,_,msg_commandsDef[98]);
 	#if _CMD_DEBUG_
 		printf("^tNew command area set for character %d^n",areas[area][area_user]);
 		printf("^tR:%d^n",areas[area][area_R]);

@@ -23,7 +23,7 @@ public cmd_showbank(const chr)
 	if(!strcmp(__cmdParams[0],"gold"))
 		type = BANKBOX_GOLDONLY;
 
-	chr_message(chr,_,"Select a character to open his bankbox");
+	chr_message(chr,_,msg_commandsDef[246]);
 	target_create(chr,type,_,_,"cmd_showbank_targ");
 }
 
@@ -40,12 +40,12 @@ public cmd_showbank_targ(target, chr, object, x, y, z, unused, type)
 		new bank = chr_getBankBox(object,type);
 		if(!isItem(bank))
 		{
-			chr_message(chr,_,"Invalid bankbox item, may be an error");
+			chr_message(chr,_,msg_commandsDef[247]);
 			return;
 		}
 		itm_showContainer(bank,chr);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

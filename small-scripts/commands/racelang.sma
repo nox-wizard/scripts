@@ -38,12 +38,12 @@ public cmd_racelang(const c)
 			if ((chr_getProperty(c, CP_NPCRACE ) == race) || ( random(80) < chr_getInt(near_cc)))  
 			{  
 			//str[5] cuts ".lang" from the begining
-				chr_message( c, _,"You understand how %s says: %s",name,str[5]);  
+				chr_message( c, _,msg_commandsDef[202],name,str[5]);  
 			}
 			else 
 			{
 				chr_talkAllRunic(c,"bla");
-				chr_message( c, _," %s says something in an unknown language.",name);
+				chr_message( c, _,msg_commandsDef[202],name);
 			}
 		}
 	}

@@ -47,7 +47,7 @@ public cmd_summon(const chr)
 		
 		if(!isChar(chr2))
 		{
-			chr_message(chr,_,"%s is not online",__cmdParams[0]);
+			chr_message(chr,_,msg_commandsDef[5],__cmdParams[0]);
 			return;
 		}
 		

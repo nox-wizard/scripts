@@ -31,7 +31,7 @@ public cmd_npcwander(const chr)
 			}
 	}
 	
-	chr_message(chr,_,"Select an npc");
+	chr_message(chr,_,msg_commandsDef[188]);
 	target_create(chr,wander,_,_,"cmd_npcwander_targ");
 	
 }
@@ -57,7 +57,7 @@ public cmd_npcwander_targ(target, chr, object, x, y, z, unused, wander)
 	}
 	else 
 	{ 
-		chr_message(chr,_,"You must target a removable object"); 
+		chr_message(chr,_,msg_commandsDef[189]); 
 		return; 
 	}
 }
@@ -73,7 +73,7 @@ public cmd_npcwander_rect(chr,x0,y0,x1,y1)
 	chr_setProperty(npc,CP_FPOS2_NPCWANDER,CP2_X,x1);
 	chr_setProperty(npc,CP_FPOS2_NPCWANDER,CP2_Y,x1);
 	
-	chr_message(chr,_,"Wander limits set to: %d %d %d %d",x0,y0,x1,y1)
+	chr_message(chr,_,msg_commandsDef[190],x0,y0,x1,y1)
 }
 
 public cmd_npcwander_follow(target,chr,object,x,y,z,unused,npc)
@@ -82,7 +82,7 @@ public cmd_npcwander_follow(target,chr,object,x,y,z,unused,npc)
 		chr_setProperty(npc,CP_FTARG,_,object);
 	else 
 	{ 
-		chr_message(chr,_,"You must target a character"); 
+		chr_message(chr,_,msg_commandsDef[32]); 
 		return; 
 	}
 }

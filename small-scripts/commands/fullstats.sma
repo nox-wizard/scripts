@@ -45,12 +45,12 @@ public cmd_fullstats(const chr)
 				}
 		}
 
-		chr_message(chr,_,"%d characters set to full stats",i);
+		chr_message(chr,_,msg_commandsDef[138],i);
 		return;
 	}
 
 	//if we are here it means we need a target
-	chr_message(chr,_,"Select a character to raise stats");
+	chr_message(chr,_,msg_commandsDef[139]);
 	target_create(chr,_,_,_,"cmd_fullstats_targ");
 }
 
@@ -67,9 +67,9 @@ public cmd_fullstats_targ(target, chr, object, x, y, z, unused, unused2)
 		chr_setProperty(chr,CP_STRENGTH,CP2_HP,chr_getProperty(chr,CP_STRENGTH,CP2_REAL));
 		chr_setProperty(chr,CP_DEXTERITY,CP2_STAMINA,chr_getProperty(chr,CP_DEXTERITY,CP2_REAL));
 		chr_setProperty(chr,CP_INTELLIGENCE,CP2_MANA,chr_getProperty(chr,CP_INTELLIGENCE,CP2_REAL));
-		chr_message(chr,_,"stats raised");
+		chr_message(chr,_,msg_commandsDef[140]);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

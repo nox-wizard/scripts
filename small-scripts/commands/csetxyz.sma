@@ -32,7 +32,7 @@ public cmd_csetxyz(const chr)
 
 	if(!strlen(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You must specify the property to set");
+		chr_message(chr,_,msg_commandsDef[99]);
 		return;
 	}
 
@@ -59,7 +59,7 @@ public cmd_csetxyz(const chr)
 				}
 		}
 
-		chr_message(chr,_,"%s set to %d characters",__cmdParams[0],i);		
+		chr_message(chr,_,msg_commandsDef[100],__cmdParams[0],i);		
 		return;
 	}
 
@@ -68,7 +68,7 @@ public cmd_csetxyz(const chr)
 	chr_setLocalIntVec(chr,CLV_CMDTEMPVEC,1,val[1]);
 	chr_setLocalIntVec(chr,CLV_CMDTEMPVEC,2,val[2]);
 
-	chr_message(chr,_,"Select a character to set the %s",__cmdParams[0]);
+	chr_message(chr,_,msg_commandsDef[101],__cmdParams[0]);
 	target_create(chr,prop,_,_,"cmd_csetxyz_targ");
 }
 
@@ -94,10 +94,10 @@ public cmd_csetxyz_targ(target, chr, object, x, y, z, unused, prop)
 		chr_setProperty(object,prop,CP2_Z,val[2]);
 
 		chr_update(object);
-		chr_message(chr,_,"property set");
+		chr_message(chr,_,msg_commandsDef[110]);
 	}
 
-	else chr_message(chr,_,"You must target an item");
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 static readPropAndxyz(chr,&prop,val[])
@@ -112,14 +112,14 @@ static readPropAndxyz(chr,&prop,val[])
 
 		default:
 		{
-			chr_message(chr,_,"Invalid property, allowed properties are: food home work");
+			chr_message(chr,_,msg_commandsDef[111]);
 			return INVALID;
 		}
 	}
 
 	if(!isStrInt(__cmdParams[1]) || !isStrInt(__cmdParams[2]) || !isStrInt(__cmdParams[3]))
 	{
-		chr_message(chr,_,"Integer value required");
+		chr_message(chr,_,msg_commandsDef[109]);
 		return INVALID;
 	}
 

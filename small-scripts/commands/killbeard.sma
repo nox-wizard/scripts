@@ -14,7 +14,7 @@
 */
 public cmd_killbeard(const chr)
 {
-	chr_message(chr,_,"Select a character to kill his beard");
+	chr_message(chr,_,msg_commandsDef[167]);
 	target_create(chr,_,_,_,"cmd_killbeard_targ");
 }
 
@@ -32,7 +32,7 @@ public cmd_killbeard_targ(target, chr, object, x, y, z, unused, unused1)
 		if(isItem(beard))
 			itm_remove(beard);
 	}
-	else chr_message(chr,_,"You must target a character");
+	else chr_message(chr,_,msg_commandsDef[32]);
 }
 
 /*! }@ */

@@ -22,7 +22,7 @@ public cmd_settype(const chr)
 
 	if(!strlen(__cmdParams[0]) || !isStrInt(__cmdParams[0]))
 	{
-		chr_message(chr,_,"You have to specify the type as an integer number");
+		chr_message(chr,_,msg_commandsDef[242]);
 		return;
 	}
 
@@ -42,11 +42,11 @@ public cmd_settype(const chr)
 				itm_setProperty(item,IP_TYPE,_,type);
 		}
 
-		chr_message(chr,_,"%d items had type set",i);		
+		chr_message(chr,_,msg_commandsDef[243],i);		
 		return;
 	}
 
-	chr_message(chr,_,"Select an item to set type");
+	chr_message(chr,_,msg_commandsDef[244]);
 	target_create(chr,type,_,_,"cmd_settype_targ");
 }
 
@@ -60,9 +60,9 @@ public cmd_settype_targ(target, chr, object, x, y, z, unused, type)
 	if(isItem(object))
 	{
 		itm_setProperty(object,IP_TYPE,_,type);
-		chr_message(chr,_,"type set");
+		chr_message(chr,_,msg_commandsDef[245]);
 	}
-	else chr_message(chr,_,"You must target an item");
+	else chr_message(chr,_,msg_commandsDef[103]);
 }
 
 /*! }@ */
