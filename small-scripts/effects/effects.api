@@ -10,16 +10,39 @@
 #endif
 #define _nxw_effects_api_
 
+#include "small-scripts/effects/constant.sma"
+
 /** \defgroup script_API_effects Effects
  *  \ingroup script_API
  *  @{
  */
+ 
 
 /*!
+\brief Add a new temp effect
 \author Xanathar
-\fn tempfx_activate(const type = 121, const chrsrc, const chrdest, const more, const dur = -1, const callback = -3)
+\param type the type ( see constants )
+\param chrsrc the source character
+\param chrdest the destination character
+\param more
+\param dur the duration
+\param callback the function callack to call ( only if is a TFX_AMXCUSTOM )
+\fn tempfx_activate( const type = TFX_AMXCUSTOM, const chrsrc, const chrdest, const more, const dur = -1, const callback = -1)
+*/
+native tempfx_activate( const type = TFX_AMXCUSTOM, const chrsrc, const chrdest, const more, const dur = -1, const callback = -1);
+
+/*!
+\author Endymion
+\fn tempfx_delete( const type = TFX_AMXCUSTOM, const doExpire = true, const callback = -1)
 \brief
 */
-native tempfx_activate(const type = 121, const chrsrc, const chrdest, const more, const dur = -1, const callback = -3);
+native tempfx_delete( const type = TFX_AMXCUSTOM, const doExpire = true, const callback = -1);
+
+/*!
+\brief
+\author Endymion
+\fn tempfx_isActive( const type = TFX_AMXCUSTOM, const callback = -1)
+*/
+native tempfx_isActive( const type = TFX_AMXCUSTOM, const callback = -1)
 
 /** @} */ // end of script_API_tempfx
