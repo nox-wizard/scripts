@@ -2334,8 +2334,6 @@ stock chr_setAmxFlags(const chr, const idx, const value)
  *  @{
  */
 /*!
-
-/*!
 \author Wintermute
 \fn chr_showMessage(const chr, const target)
 \param chr the character who should get the paperdoll
