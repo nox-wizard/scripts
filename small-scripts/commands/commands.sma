@@ -10,6 +10,7 @@
 #include "small-scripts/commands/kill.sma"
 #include "small-scripts/commands/make.sma"
 #include "small-scripts/commands/move.sma"
+#include "small-scripts/commands/lightlevel.sma"
 #include "small-scripts/commands/options/options.sma"
 #include "small-scripts/commands/playerlist.sma"
 #include "small-scripts/commands/regioncp.sma"

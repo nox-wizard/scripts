@@ -45,7 +45,19 @@ enum
 	P_FORKS,
 	
 	P_BUILDING_MENU,
+	
 	P_NPC_MENU,
+	P_ANIMALS,
+	P_T2A_MONSTERS,
+	P_DEAMONS,
+	P_ELEMENTALS,
+	P_ORCS,
+	P_MONSTERS,
+	P_UNDEADS,
+	P_UNIQUE,
+	P_FROST_STONE,
+	P_DRAGONS,
+	
 	P_SPAWNER_MENU,
 	P_GATE_MENU,
 	P_SUPPLY_MENU,
@@ -84,6 +96,21 @@ static combatMenuTxt[COMBAT_MENU_ENTRIES][20] =
 	"Blades",
 	"Maces",
 	"Forks"	
+}
+
+#define NPC_MENU_ENTRIES 10
+static npcMenuTxt[NPC_MENU_ENTRIES][20] =
+{
+	"Animals",
+	"T2A monsters",
+	"Deamons",
+	"Elementals",
+	"Orcs",
+	"Monsters",
+	"Undeads",
+	"Unique",
+	"Frost-stone",
+	"Dragons"	
 }
 
 enum {AR_HELM,AR_GORGET,AR_CHEST,AR_ARMS,AR_GLOVES,AR_LEGS,AR_FEMALE}
@@ -340,8 +367,30 @@ case P_COMBAT_MENU:
 		gui_addPage(menu,i);
 		drawSubPage(menu,i);
 	}
+}
 	
-   
+case P_NPC_MENU:
+{
+	pag = P_ANIMALS;
+	x = L_MARG + (t++*tab)*COL;
+	y = 7*ROW;
+	//gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Armor:");
+	y += ROW;
+	
+	for(t = 0; t < NPC_MENU_ENTRIES; t++)
+	{
+		x = L_MARG + (t%4*tab)*COL;
+		if(t%4 == 0 && t != 0) y += ROW;
+		
+		gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,pag++);
+		gui_addText(menu,PBTNW + x,y,TXT_COLOR ,npcMenuTxt[t]);	
+	}
+	
+	for(new i = P_ANIMALS; i <= P_ANIMALS + NPC_MENU_ENTRIES; i++)
+	{
+		gui_addPage(menu,i);
+		drawSubPage(menu,i);
+	}
 }
 	 
 } //end of switch(page)
@@ -486,6 +535,136 @@ switch(page)
 			gui_addTilePic(menu,x + BTNW,y,__weapons[wpntype*WEAPONS_PER_GROUP + i][__ID]);
 			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__weapons[wpntype*WEAPONS_PER_GROUP + i][__name]);
 			y += 2*ROW;
+		}		
+	}
+	
+	case P_ANIMALS:
+	{
+		new picw = 50;
+		for(new i = 0; i < NUM_ANIMALS; i++, y+= (15*ROW)/10)
+		{
+			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__animals[i][__def]),true,"addmenu_npc");
+			gui_addTilePic(menu,x + BTNW,y,__animals[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__animals[i][__name]);
+		}		
+	}
+	
+	case P_T2A_MONSTERS:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_T2A_MONSTERS; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__T2Amonsters[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__T2Amonsters[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__T2Amonsters[i][__name]);
+		}		
+	}
+	
+	case P_DEAMONS:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_DEAMONS; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__deamons[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__deamons[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__deamons[i][__name]);
+		}		
+	}
+	
+	case P_ELEMENTALS:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_ELEMENTALS; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__elementals[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__elementals[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__elementals[i][__name]);
+		}		
+	}
+	
+	case P_ORCS:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_ORCS; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__orcs[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__orcs[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__orcs[i][__name]);
+		}		
+	}
+	
+	case P_MONSTERS:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_MONSTERS; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__monsters[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__monsters[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__monsters[i][__name]);
+		}		
+	}
+	
+	case P_UNDEADS:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_UNDEADS; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__undeads[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__undeads[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__undeads[i][__name]);
+		}		
+	}
+	
+	case P_UNIQUE:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_UNIQUE; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__uniqueMonsters[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__uniqueMonsters[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__uniqueMonsters[i][__name]);
+		}		
+	}
+	
+	case P_FROST_STONE:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_FROST_STONE; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__frost_stone_monsters[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__frost_stone_monsters[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__frost_stone_monsters[i][__name]);
+		}		
+	}
+	
+	case P_DRAGONS:
+	{
+		new picw = 0;
+		for(new i = 0; i < NUM_DRAGONS; i++, y+= ROW)
+		{
+			if(i%15 == 0 && i != 0) { x+= tab*COL; y = startRow; }
+			
+			gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__dragons[i][__def]),true,"addmenu_npc");
+			//gui_addTilePic(menu,x + BTNW,y,__dragons[i][__ID]);
+			gui_addText(menu,x + BTNW + picw,y,TXT_COLOR,__dragons[i][__name]);
 		}		
 	}		
 }//end of switch(page)
@@ -669,4 +848,16 @@ public addmenu_weapons(menu,chr,weapon)
 	sprintf(def,"$item_%s_%s",material,__weapons[weapon][__name]);
 		
 	addmenu_cback(menu,chr,getIntFromDefine(def));
+}
+
+public addmenu_npc(menu,chr,scriptID)
+{
+	new amount[10],n;
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_AMOUNT,amount);
+	if(!isStrInt(amount))
+		n = 1;
+	else n = str2Int(amount);
+	
+	chr_message(chr,_,"click to position the NPC");
+	target_create(chr,scriptID,n,_,"cmd_add_targ");
 }

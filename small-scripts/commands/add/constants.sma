@@ -6,9 +6,6 @@ enum additemEntry
 	
 };
 
-
-
-
 #define NUM_MAGICAL_ITEMS 4
 new magicalItems[NUM_MAGICAL_ITEMS][additemEntry] =
 {
@@ -324,9 +321,218 @@ new __weapons[NUM_WEAPONS*WEAPONS_PER_GROUP][additemEntry] =
 	{0x0F62,"                                       ","spear"},
 	{0x0F42,"                                       ","bardiche"},
 	{0x143E,"                                       ","halberd"},
-	{INVALID,"                                       ","legs"},
-	{INVALID,"                                       ","legs"},
-	{INVALID,"                                       ","legs"}
+	{INVALID,"                                       ",""},
+	{INVALID,"                                       ",""},
+	{INVALID,"                                       ",""}
 }
 
-	
+//^([0-9,A-F][0-9,A-F][0-9,A-F][0-9,A-F]^) ^([a-z,A-Z, ,0-9,(,)]+^)^p^tNPC ^(^$[a-z,A-Z,0-9,_,]+^)
+//{0x^1,"^3","^2"},
+
+#define NUM_ANIMALS 26
+new __animals[NUM_ANIMALS][additemEntry] =
+{
+	{0x2120,"$npc_a_horse                           ","Horse 1"},
+	{0x211F,"$npc_a_horse_1                         ","Horse 2"},
+	{0x2124,"$npc_a_horse_2                         ","Horse 3"},
+	{0x2121,"$npc_a_horse_3                         ","Horse 4"},
+	{0x20DB,"$npc_a_grizzly_bear                    ","a grizzly bear"},
+	{0x20F5,"$npc_a_gorilla                         ","a gorilla"},
+	{0x20CF,"$npc_a_black_bear                      ","a brown bear"},
+	{0x20D1,"$npc_a_chicken                         ","a chicken"},
+	{0x20D4,"$npc_a_great_hart                      ","a deer"},
+	{0x20D5,"$npc_a_dog                             ","a dog"},
+	{0x20DA,"$npc_an_alligator                      ","an alligator"},
+	{0x20E1,"$npc_a_polar_bear                      ","a polar bear"},
+	{0x20E1,"$npc_a_vera_bear                       ","a vera bear"},
+	{0x20E1,"$npc_a_cave_bear                       ","a cave bear"},
+	                                                
+	{0x20E2,"$npc_a_rabbit                          ","a rabbit"},
+	{0x20EB,"$npc_a_sheep                           ","a sheep"},
+	{0x20EE,"$npc_forest_bird                       ","a bird"},
+	{0x211D,"$npc_an_eagle                          ","an eagle"},
+	{0x20F6,"$npc_a_rideable_llama                  ","a llama"},
+	{0x2101,"$npc_a_pig                             ","a pig"},
+	{0x2102,"$npc_a_panther                         ","a panther"},
+	{0x2103,"$npc_a_cow                             ","a cow"},
+	{0x2108,"$npc_a_goat                            ","a goat"},
+	{0x211B,"$npc_a_cat                             ","a cat"},
+	{0x2126,"$npc_a_pack_horse                      ","a pack horse"},
+	{0x2127,"$npc_a_pack_llama                      ","a pack llama"}
+}                                                       
+	                                                
+#define NUM_T2A_MONSTERS 41	                        
+new __T2Amonsters[NUM_T2A_MONSTERS][additemEntry] =	 
+{	                                                
+	{0x005F,"$npc_a_kraken                          ","Kraken"},
+	{0x004B,"$npc_a_titan                           ","Titan"},
+	{0x0050,"$npc_a_giant_toad                      ","Giant Toad"},
+	{0x0051,"$npc_a_bullfrog                        ","Bullfrog"},
+	{0x004C,"$npc_a_cyclopedian_warrior             ","Cyclopedian Warrior"},
+	{0x0003,"$npc_a_mummy                           ","Mummy"},
+	{0x000D,"$npc_a_snow_elemental                  ","Snow Elemental"},
+	{0x0034,"$npc_an_ice_serpent                    ","Ice Snake"},
+	{0x0035,"$npc_a_frost_troll                     ","Frost Troll"},
+	{0x0008,"$npc_a_swamp_tentacle                  ","Swamp Tentacle"},
+	{0x0047,"$npc_a_terathan_drone                  ","Terathen Drone"},
+	{0x0048,"$npc_a_terathan_warrior                ","Terathen Warrior"},
+	{0x0048,"$npc_a_terathan_avenger                ","Terathen Avenger"},
+	{0x0046,"$npc_a_terathan_matriarch              ","Terathen Matriarche"},
+	{0x0047,"$npc_banker_f                          ","Terathen Newt"},
+	{0x001E,"$npc_a_stone_harpy                     ","Stone Harpy"},
+	{0x0004,"$npc_a_stone_gargoyle                  ","Stone Gargoyle"},    
+	{0x0027,"$npc_an_imp                            ","Imp"},
+	{0x0009,"$npc_an_ice_fiend                      ","Ice Fiend"}, 
+	{0x0056,"$npc_an_ophidian_warrior               ","Ophidian Warrior"},
+	{0x0056,"$npc_an_ophidian_enforcer              ","Ophidian Enforcer"},
+	{0x0056,"$npc_an_ophidian_avenger               ","Ophidian Avenger"},
+	{0x0055,"$npc_an_ophidian_apprentice_mage       ","Ophidian Apprentice"},
+	{0x0055,"$npc_an_ophidian_shaman                ","Ophidian Shaman"},
+	{0x0057,"$npc_an_ophidian_matriarch             ","Ophidian Matriarche"},
+	{0x00CE,"$npc_a_lava_lizard                     ","Lava Lizard"},
+	{0x00CC,"$npc_a_nightmare                       ","A Nightmare"},
+	{0x00DA,"$npc_a_frenzied_ostard                 ","Frenzied Ostard"},
+	{0x00DB,"$npc_a_forest_ostard                   ","Forest Ostard"},
+	{0x00D2,"$npc_a_desert_ostard                   ","Desert Ostard"},
+	{0x000D,"$npc_an_efreet                         ","Efreet"},
+	{0x0033,"$npc_a_frost_ooze                      ","Frost Ooze"},
+	{0x0016,"$npc_an_elder_gazer                    ","Gazer Chief"},
+	{0x00C9,"$npc_a_hellcat                         ","Hellcat"},
+	{0x00D6,"$npc_a_hellcat_predator                ","Hellcat Predator"},
+	{0x000E,"$npc_an_ice_elemental                  ","Ice Elemental"},
+	{0x0056,"$npc_an_ophidian_knight                ","Ophidian Knight"},
+	{0x0005,"$npc_a_phoenix                         ","Phoenix"},
+	{0x0015,"$npc_a_giant_ice_serpent               ","Ice Serpent"},
+	{0x0015,"$npc_a_giant_lava_serpent              ","Lava Serpent"},
+	{0x001C,"$npc_a_frost_spider                    ","Frost Spider"}
+}       
+
+#define NUM_DEAMONS 5
+new __deamons[NUM_DEAMONS][additemEntry] =
+{
+	//daemons
+	{0x20D3,"$npc_deamon_unarmed                    ","a daemon"},
+	{0x20D3,"$npc_a_daemon                          ","a daemon w/sword"},
+	{0x0000,"$npc_an_ice_fiend                      ","ice fiend"},
+	{0x20D9,"$npc_a_gargoyle                        ","a gargoyle"},
+	{0x0000,"$npc_a_stone_gargoyle                  ","stone gargoyle"}
+}                                                       
+                                                        
+#define NUM_ELEMENTALS 8                                
+new __elementals[NUM_ELEMENTALS][additemEntry] =        
+{                                                       
+	//elementals                                    
+	{0x20ED,"$npc_an_air_elemental                  ","an air elemental"},
+	{0x20D7,"$npc_an_earth_elemental                ","an earth elemental"},
+	{0x20F3,"$npc_a_fire_elemental                  ","a fire elemental"},
+	{0x210B,"$npc_a_water_elemental                 ","a water elemental"},  
+	{0x210B,"$npc_a_blood_elemental                 ","a blood elemental"},
+	{0x20ED,"$npc_a_poison_elemental                ","a poison elemental"},
+	{0x0000,"$npc_an_ice_elemental                  ","ice elemental"},
+	{0x0000,"$npc_a_stone_elemental                 ","stone elemental"}
+}	                                                  
+                                                          
+#define NUM_ORCS 12                                       
+new __orcs[NUM_ORCS][additemEntry] =                      
+{                                                         
+	//orc kin                                         
+	{0x20D8,"$npc_an_ettin                          ","an ettin"},
+	{0x20D8,"$npc_an_ettin_1                        ","an ettin with axe"},
+	{0x20E0,"$npc_orc                               ","an orc"},
+	{0x20E0,"$npc_orc_mace                          ","an orc with club"},
+	{0x20E0,"$npc_an_orcish_mage                    ","an orcish mage"},
+	{0x20E0,"$npc_orc_2_hand_axe                    ","an orcish captian"},
+	{0x20E0,"$npc_an_orcish_lord                    ","an orcish lord"},
+	{0x20DF,"$npc_an_ogre                           ","an ogre"},
+	{0x20DF,"$npc_an_ogre_lord                      ","an ogre lord"},
+	{0x20E9,"$npc_a_troll                           ","a troll"},
+	{0x20E9,"$npc_a_troll_1                         ","a troll 2"},
+	{0x20E9,"$npc_a_troll_2                         ","a troll 3"}
+}                                                       
+                                                        
+#define NUM_MONSTERS 17                                 
+new __monsters[NUM_MONSTERS][additemEntry] =            
+{	                                                
+	//other monsters                                
+	{0x20D2,"$npc_a_corpser                         ","a corpser"},
+	{0x20d0,"$npc_a_giant_rat                       ","a giant rat"},
+	{0x20E4,"$npc_a_giant_scorpion                  ","a giant scorpion"},
+	{0x20FE,"$npc_a_giant_serpent                   ","a giant serpent"},
+	{0x0096,"$npc_a_sea_serpent                     ","a giant sea serpent"},
+	{0x20FD,"$npc_a_giant_spider                    ","a giant spider"},
+	{0x20FD,"$npc_a_dark_spider                     ","a dark spider"},
+	{0x20DE,"$npc_lizardman_short_sword             ","a lizardman"},
+	{0x20DE,"$npc_lizardman_fencer                  ","a lizardman with spear"},
+	{0x20DE,"$npc_lizardman_macefighter             ","a lizardman with hammer"},
+	{0x20F9,"$npc_a_mongbat                         ","a mongbat"},
+	{0x20E3,"$npc_ratman_axe                        ","a ratman with club"},
+	{0x20E3,"$npc_ratman                            ","a ratman with sword"},
+	{0x20FA,"$npc_a_reaper                          ","a reaper"},
+	{0x2123,"$npc_a_sewer_rat                       ","a sewer rat"},
+	{0x20E8,"$npc_a_slime                           ","a slime"},
+	{0x20FC,"$npc_a_snake                           ","a snake"}
+}                                                         
+                                                          
+#define NUM_UNDEADS 15                                    
+new __undeads[NUM_UNDEADS][additemEntry] =                
+{                                                         
+	//undead/mithycal                                 
+	{0x20F4,"$npc_a_gazer                           ","a gazer"},
+	{0x210A,"$npc_a_headless                        ","a headless"},
+	{0x20F8,"$npc_a_lich                            ","a lich"},
+	{0x0000,"$npc_a_lich_elder                      ","a liche elder"},
+    	{0x20F8,"$npc_a_lich_lord                       ","a lich lord"},
+	{0x20DC,"$npc_a_harpy                           ","a harpy"},
+	{0x20E7,"$npc_a_bone_knight                     ","a skeletal knight"},
+	{0x20E7,"$npc_a_bone_magi                       ","a skeletal mage"},
+	{0x20E7,"$npc_a_skeleton                        ","a skeleton"},
+	{0x20E7,"$npc_a_skeleton_1                      ","a skeleton with axe"},
+	{0x2109,"$npc_a_spectre                         ","a spectre"},
+	{0x2100,"$npc_a_wisp                            ","a wisp"},
+	{0x20EC,"$npc_a_zombie                          ","a zombie"},
+	{0x0000,"$npc_a_zombie_elder                    ","a zombie elder"},
+	{0x0000,"$npc_a_wraith                          ","a wraith"}
+}                                                         
+	                                                  
+#define NUM_UNIQUE 5                                      
+new __uniqueMonsters[NUM_UNIQUE][additemEntry] =         
+{                                                         
+	//unique                                          
+	{0x20D3,"$npc_the_collector_of_souls            ","the Collector of Souls"},
+	{0x20DC,"$npc_a_harpy_hen                       ","a harpy hen"},
+	{0x20D3,"$npc_lord_of_the_abyss                 ","the Lord of the Abyss"},
+	{0x20D3,"$npc_slayer                            ","the Slayer"},
+	{0x20F4,"$npc_xanathar                          ","Xanathar"}
+}	
+
+#define NUM_FROST_STONE 7
+new __frost_stone_monsters[NUM_FROST_STONE][additemEntry] =
+{
+	//ice frost and stone
+	{0x0000,"$npc_an_ice_serpent                    ","ice snake"},
+	{0x0000,"$npc_a_giant_ice_serpent               ","ice serpent"},
+	{0x0000,"$npc_an_ice_giant                      ","ice giant"},
+	{0x0000,"$npc_a_frost_troll                     ","frost troll"},
+	{0x0000,"$npc_a_frost_ooze                      ","frost Ooze"},
+	{0x0000,"$npc_a_frost_spider                    ","frost spider"},
+	{0x0000,"$npc_a_stone_harpy                     ","stone harpy"}
+}	
+
+#define NUM_DRAGONS 13
+new __dragons[NUM_DRAGONS][additemEntry] =
+{
+	//dragon kin
+	{0x0000,"$npc_a_wyvern                          ","a Wyvern (brown)"},
+	{0x0000,"$npc_a_drake                           ","a Drake (red)"},
+	{0x0000,"$npc_a_drake_1                         ","a Drake (brown)"},
+	{0x0000,"$npc_a_dragon                          ","a Dragon (brown)"},
+	{0x0000,"$npc_a_dragon_2                        ","a Dragon (red)"},
+	{0x0000,"$npc_an_ancient_wyrm                   ","an ancient Wyrm (brown)"},
+	{0x0000,"$npc_an_ancient_wyrm_2                 ","an ancient Wyrm (brown)"},
+	{0x0000,"$npc_an_ancient_wyrm_1                 ","an ancient Wyrm (red)"},
+	{0x0000,"$npc_a_white_wyrm_1                    ","a white wyrm"},
+	{0x0000,"$npc_a_white_wyrm                      ","a pure white wyrm"},
+	{0x0000,"$npc_a_dragon_1                        ","a Dragon (brown)"},
+	{0x0000,"$npc_a_drake_2                         ","a Drake (brown)"},
+	{0x0000,"$npc_a_fire_wyrm                       ","a fire wyrm"}
+}	
