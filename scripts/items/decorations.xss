@@ -1070,6 +1070,192 @@ SECTION ITEM $item_bell_of_courage
 	ID 1C12
 }
 
+//////////////////////////////////////
+/////////////Games Stuff//////////////
+//////////////////////////////////////
+SECTION ITEM $item_backgammon_1
+{
+	ID 0x0fad
+	AMXINT $localvar_flipitem $item_backgammon_2
+}
+
+SECTION ITEM $item_backgammon_2
+{
+	ID 0x0e1c
+	AMXINT $localvar_flipitem $item_backgammon_1
+}
+
+SECTION ITEM $item_black_chessmen1_1
+{
+	ID 0x0e12
+	AMXINT $localvar_flipitem $item_black_chessmen1_2
+}
+
+SECTION ITEM $item_black_chessmen1_2
+{
+	ID 0x0e13
+	AMXINT $localvar_flipitem $item_black_chessmen1_1
+}
+
+SECTION ITEM $item_white_chessmen2_1
+{
+	ID 0x0e14
+	AMXINT $localvar_flipitem $item_white_chessmen2_2
+}
+
+SECTION ITEM $item_white_chessmen2_2
+{
+	ID 0x0fa8
+	AMXINT $localvar_flipitem $item_white_chessmen2_1
+}
+
+SECTION ITEM $item_cards1_1
+{
+	ID 0x0e15
+	AMXINT $localvar_flipitem $item_cards1_2
+}
+
+SECTION ITEM $item_cards1_2
+{
+	ID 0x0e16
+	AMXINT $localvar_flipitem $item_cards1_3
+}
+
+SECTION ITEM $item_cards1_3
+{
+	ID 0x0e18
+	AMXINT $localvar_flipitem $item_cards1_4
+}
+
+SECTION ITEM $item_cards1_4
+{
+	ID 0x0e19
+	AMXINT $localvar_flipitem $item_cards1_1
+}
+
+SECTION ITEM $item_cards2_1
+{
+	ID 0x0fa2
+	AMXINT $localvar_flipitem $item_cards2_2
+}
+
+SECTION ITEM $item_cards2_2
+{
+	ID 0x0fa3
+	AMXINT $localvar_flipitem $item_cards2_1
+}
+
+SECTION ITEM $item_deck_of_cards
+{
+	ID 0x0e17
+}
+
+SECTION ITEM $item_red_checkers_1
+{
+	ID 0x0e1a
+	AMXINT $localvar_flipitem $item_red_checkers_2
+}
+
+SECTION ITEM $item_red_checkers_2
+{
+	ID 0x0fa4
+	AMXINT $localvar_flipitem $item_red_checkers_1
+}
+
+SECTION ITEM $item_white_checkers_1
+{
+	ID 0x0e1b
+	AMXINT $localvar_flipitem $item_white_checkers_2
+}
+
+SECTION ITEM $item_white_checkers_2
+{
+	ID 0x0fa5
+	AMXINT $localvar_flipitem $item_white_checkers_1
+}
+
+SECTION ITEM $item_checker_board
+{
+	ID 0x0fa6
+}
+
+SECTION ITEM $item_dice_and_cup
+{
+	ID 0x0fa7
+}
+
+SECTION ITEM $item_tarot1_1
+{
+	ID 0x12a5
+	AMXINT $localvar_flipitem $item_tarot1_2
+}
+
+SECTION ITEM $item_tarot1_2
+{
+	ID 0x12a6
+	AMXINT $localvar_flipitem $item_tarot1_1
+}
+
+SECTION ITEM $item_tarot2_1
+{
+	ID 0x12a7
+	AMXINT $localvar_flipitem $item_tarot2_2
+}
+
+SECTION ITEM $item_tarot2_2
+{
+	ID 0x12a8
+	AMXINT $localvar_flipitem $item_tarot2_1
+}
+
+SECTION ITEM $item_tarot3_1
+{
+	ID 0x12a9
+	AMXINT $localvar_flipitem $item_tarot3_2
+}
+
+SECTION ITEM $item_tarot3_2
+{
+	ID 0x12aa
+	AMXINT $localvar_flipitem $item_tarot3_1
+}
+
+SECTION ITEM $item_decks_of_tarot_1
+{
+	ID 0x12ab
+	AMXINT $localvar_flipitem $item_decks_of_tarot_2
+}
+
+SECTION ITEM $item_decks_of_tarot_2
+{
+	ID 0x12ac
+	AMXINT $localvar_flipitem $item_decks_of_tarot_1
+}
+
+SECTION ITEM $item_dartboard_axe_1
+{
+	ID 0x1e30
+	AMXINT $localvar_flipitem $item_dartboard_axe_2
+}
+
+SECTION ITEM $item_dartboard_axe_2
+{
+	ID 0x1e31
+	AMXINT $localvar_flipitem $item_dartboard_axe_1
+}
+
+SECTION ITEM $item_dartboard_knives_1
+{
+	ID 0x1e32
+	AMXINT $localvar_flipitem $item_dartboard_knives_2
+}
+
+SECTION ITEM $item_dartboard_knives_2
+{
+	ID 0x1e33
+	AMXINT $localvar_flipitem $item_dartboard_knives_1
+}
+
 SECTION ITEM $item_dartboard_2
 {
 	NAME dartboard

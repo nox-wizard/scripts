@@ -1,5 +1,5 @@
 //nox internal local vars 9000-9500
-//localvar used to store flipped item scriptID
+//localvar used to store flipped $item scriptID
 #define $localvar_flipitem 9000
 //nox internal plant crossing
 #define $lclvar_plantcross_status 9001
@@ -99,6 +99,42 @@
 #define $item_cocoon_open 3042
 
 //
+// Game stuff
+//
+#define $item_backgammon_1 3070
+#define $item_backgammon_2 3052
+#define $item_black_chessmen1_1 3053
+#define $item_black_chessmen1_2 3054
+#define $item_white_chessmen2_1 3055
+#define $item_white_chessmen2_2 3056
+#define $item_cards1_1 3057
+#define $item_cards1_2 3058
+#define $item_cards1_3 3059
+#define $item_cards1_4 3070
+#define $item_cards2_1 3061
+#define $item_cards2_2 3062
+#define $item_deck_of_cards 3063
+#define $item_red_checkers_1 3064
+#define $item_red_checkers_2 3065
+#define $item_white_checkers_1 3066
+#define $item_white_checkers_2 3067
+#define $item_checker_board 3068
+#define $item_dice_and_cup 3069
+#define $item_tarot1_1 3070
+#define $item_tarot1_2 3071
+#define $item_tarot2_1 3072
+#define $item_tarot2_2 3073
+#define $item_tarot3_1 3074
+#define $item_tarot3_2 3075
+#define $item_decks_of_tarot_1 3076
+#define $item_decks_of_tarot_2 3077
+#define $item_dartboard_axe_1 3078
+#define $item_dartboard_axe_2 3079
+#define $item_dartboard_knives_1 3080
+#define $item_dartboard_knives_2 3081
+
+
+//
 // GM ROBES
 //
 
@@ -134,7 +170,7 @@
 #define $item_worldgem_bit 66
 
 //
-// QUEST / SPECIAL ITEMS
+// QUEST / SPECIAL $itemS
 //
 
 #define $item_stone_of_humility 80
