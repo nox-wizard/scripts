@@ -6,6 +6,46 @@
 // || This file should contain only includes to your own scripts :)       ||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+/*! \mainpage Nox Wizard Documentation
+ *
+ * \section intro Introduction
+ * \include docs/license.sma
+ * \include docs/installation.sma
+ * \include docs/code/reference.sma
+ *
+ * Nox Wizard is an Ultima Online Emulator ect ect
+ *
+ * <br>
+ * <br>
+ *
+ * This manual is divided into three parts, each of which is divided into several sections.
+ *
+ * The first part forms a user manual:
+ *
+ * \section user User
+ * <UL>
+ * 	<LI> \ref p_installation
+ * 	<LI> \ref p_license
+ * </UL>
+ * <br>
+ * The second part forms a reference manual for scripter:
+ *
+ * \section script Script
+ * <UL>
+ *  <LI> \ref p_script_dummies
+ * 	<LI> \ref p_small
+ * 	<LI> \ref XSS
+ * </UL>
+ *
+ * The third part provides information for developers:
+ *
+ * \section p_source Source
+ * <UL>
+ * 	<LI> \ref p_reference
+ * </UL>
+ * <BR><BR>
+ */
+
 //
 // Include NoX-Wizard small constants
 //
