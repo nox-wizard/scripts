@@ -313,14 +313,4 @@ const PRIV2_DISPELLABLE = 0x20;	//!<
 const PRIV2_PERMAMAGICREFLECT = 0x40;//!<
 const PRIV2_NONEEDREAGS = 0x80;	//!<
 
-//these local vars are reserved
-#define CLV_ADDITIONALSKILLS 9998	//<! local variable to store additional skill values
-#define CLV_ADDITIONALSKILLSBASE 9997	//<! local variable to store addition base skill values
-
-//these vars are deleted at character's login (globaltags(c) function in charLogin.sma)
-#define CLV_CMDTEMP 9996		//!< commands temp variable - created on the fly,delete after use
-#define CLV_CMDTEMPVEC 9995
-#define CLV_CONTINUOUS_ADDING_MODE 9994	//!< toggles continuous adding mode
-#define CLV_TEMP1 9991			//!< generic temp var 1 - now used for getRectangle() - created on the fly, delete after use.
-
 /** @} */

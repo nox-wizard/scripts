@@ -750,7 +750,7 @@ Flag is an 8bit number containing information about reputation status, bitfields
 */
 stock chr_getFlag(const chr)
 {
-	return chr_setProperty( chr, CP_FLAG);
+	return chr_getProperty( chr, CP_FLAG);
 }
 
 /*!

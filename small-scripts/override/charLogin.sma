@@ -39,6 +39,13 @@ public __charLogin(const chr)
 	}
 	*/
 	
+	#if ACTIVATE_UKNOWN_CHARSYS
+		start_unknown_char(chr);
+	#endif
+	#if !ACTIVATE_UKNOWN_CHARSYS
+		stop_unknown_char(chr);
+	#endif
+	
 	//put here any function you want to be executed at character login
 		
 	log_message(" ============ END OF LOGIN SCRIPTS ============");

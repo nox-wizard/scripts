@@ -46,6 +46,7 @@ hiding,100,cmd_hiding
 hunger,0,cmd_hunger
 heal,200,cmd_heal
 help,100,cmd_help
+introduce,0,chr_introduce_name
 invul,100,cmd_invul
 iset,200,cmd_iset
 jail,100,cmd_jail

@@ -166,7 +166,7 @@ public ct_layerprop[NUM_lay][ct_layerlines] = {
 {0,"inner legs"}
 };
 
-const NUM_chrevent = 38;
+const NUM_chrevent = 42;
 enum eventChr_prop
 {
 eventname: 23,
@@ -210,10 +210,14 @@ public eventChr_array[NUM_chrevent][eventChr_prop] = {
 {"on multi leave:       ", 16},
 {"on start:             ", 25},
 {"on heart beat:        ", 26},
-{"on click:             ", 28}
+{"on click:             ", 28},
+{"on dblclick:          ", 41},
+{"on open chat:         ", 38},
+{"on open status:       ", 39},
+{"on open skills:       ", 40}
 };
 
-const NUM_chrtweak = 213;
+const NUM_chrtweak = 214;
 enum Chr_tweaklines
 {
 ct_linetype,
@@ -233,6 +237,7 @@ ct_inputname: 10
 //7: stock function call: ct_propnumber is number of stock function, ct_infotype: string:1 and integer: 0
 public chr_twkarray[NUM_chrtweak][Chr_tweaklines] = {
 {1, "Char name:        ", 453, 0, 0, "         "},
+{2, "Char orig. name:  ", 454, 0, 1, "         "},
 {1, "Char title:       ", 455, 0, 0, "         "},
 {1, "Karma:            ", 237, 0, 0, "         "},
 {1, "Fame:             ", 218, 0, 0, "         "},

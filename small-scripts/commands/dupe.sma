@@ -67,7 +67,7 @@ public cmd_dupe(const chr)
 
 /*!
 \author Fax
-\fn cmd_freeze_targ(target, chr, object, x, y, z, unused, freeze)
+\fn cmd_dupe_targ(target, chr, object, x, y, z, unused, freeze)
 \params all standard target callback params
 \brief handles single character targetting and freezing
 */

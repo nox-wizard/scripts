@@ -841,37 +841,42 @@ const EVENT_CHR_ONAFTERDEATH	= 37;
 <B>notes:</B>
 */
 const EVENT_CHR_ONOPENCHAT		= 38;
+
+
 /*!
 <B>callback prototype:</B> public mycallback(status_requester, chr_status_requested)<br>
 <UL>
 <LI> status_requester: the char who requests the stat window
 <LI> chr_status_requested: the char whose the stat window was requested
 </UL>
-<B>called when:</B> player presses chat button<br>
+<B>called when:</B> player presses status button<br>
 <B>bypass:</B> NO<br>
 <B>return:</B> nothing<br>
 <B>notes:</B>
 */
 const EVENT_CHR_ONOPENSTATUS		= 39;
+
+
 /*!
 <B>callback prototype:</B> public mycallback(skill_requester)<br>
 <UL>
 <LI> skill_requester: the chat opener
 </UL>
-<B>called when:</B> player presses chat button<br>
+<B>called when:</B> player presses skill button<br>
 <B>bypass:</B> NO<br>
 <B>return:</B> nothing<br>
 <B>notes:</B>
 */
-
 const EVENT_CHR_ONOPENSKILLS		= 40;
+
+
 /*!
 <B>callback prototype:</B> public mycallback(clicked, clicker)<br>
 <UL>
 <LI> clicked: the character who has been clicked over
 <LI> clicker: the character who clicked
 </UL>
-<B>called when:</B> a charcater is clicked over<br>
+<B>called when:</B> a character is clicked over<br>
 <B>bypass:</B><br>
 <B>return:</B> nothing<br>
 <B>notes:</B>

@@ -882,3 +882,12 @@ public msg_EatDrinkDef[NUM_EatDrinkSENT][]={
 "You are not able to drink one more drop.",
 "You are not able to eat one more piece."
 };
+
+/* char unknown system*/
+const NUM_chrUnknownSENT = 4;
+public msg_chrUnknownDef[NUM_chrUnknownSENT][]={
+"Unknown",
+"To whom do you want to introduce your name?",
+"My name is %s.",
+"%s already knows your name."
+};

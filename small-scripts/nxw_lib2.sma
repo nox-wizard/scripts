@@ -710,6 +710,36 @@ public chr_getMove(const chr)
        		return MOVE_WALKING + (chr_getProperty(chr, CP_ONHORSE, 0)*2) + min(chr_getProperty(chr, CP_RUNNING, 0),1); 
    	return MOVE_STANDING; 
 }
+
+/*!
+\author Horian
+\fn chr_getRelation(const chr1, const chr2)
+\param chr1 the character looking at someone
+\param chr2 the character chr1 looks at
+\brief gets the characters relation depending on murderer, criminal, guild alliance, karma etc.
+\return the value that defines what relation chr2 towards chr1 has
+*/
+stock chr_getRelation(const chr1, const chr2)
+{
+	new guild1 = chr_getProperty(chr1, CP_GUILDNUMBER);
+	new guild2 = chr_getProperty(chr2, CP_GUILDNUMBER);
+	new flag=0;
+	
+	if( chr_isMurderer(chr2))
+		flag = 1; //red
+	else if( chr_isCriminal(chr2))
+		flag = 2; //grey
+	else if( (guild1>0) && (guild2 > 0)) //both are guild member
+	{
+		if( ((guild1 != guild2) && (guild_hasAllianceWith( guild1, guild2 ))) || (guild1 == guild2) ) //we are in alliance or same guild -> green
+			flag = 8; //green
+		else if( (guild1 != guild2) && (guild_hasWarWith( guild1, guild2 )) ) //we are in war -> orange
+			flag = 10; //orange
+	}
+	else flag = chr_getProperty( chr2, CP_FLAG);
+	return flag;
+}
+
 //===============================================================================//
 //                             ITEM HELP FUNCTIONS                               //
 //===============================================================================//

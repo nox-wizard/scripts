@@ -1157,6 +1157,10 @@ public tweak_char(const chrsource, const target, pagenumber)
 					{
 						sprintf( tempChrStr,"%d",chr_getProperty(target,chr_twkarray[i][ct_propnumber]));
 					}
+					else if(chr_twkarray[i][ct_propval]==1) //is an string information
+					{
+						chr_getProperty(target,chr_twkarray[i][ct_propnumber],_,tempChrStr);
+					}
 					gui_addText( twkChrMenu, ct_desc+k, 180+(n*20),0,tempChrStr);
 					sprintf( tempChrStr,"");
 				}

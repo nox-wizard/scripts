@@ -8,6 +8,7 @@
 Called by OnStart override, use this function to perform code at server startup
 \return nothing
 */
+
 public __startServer()
 {
 	printf("^n================  SMALL SCRIPTS STARTED  ===================^n^n");
