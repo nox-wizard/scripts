@@ -20,7 +20,7 @@
 #include scripts/npc/npc_lizardmen.xss
 #include scripts/npc/npc_magery_summons.xss
 #include scripts/npc/npc_merchants.xss
-#include scripts/npc/npc_mlist.xss
+#include scripts/npc/npc_specialpeople.xss
 #include scripts/npc/npc_ophidians.xss
 #include scripts/npc/npc_orcs.xss
 #include scripts/npc/npc_others.xss
