@@ -10,7 +10,7 @@
 
 UNIQUE SECTION ONLINE
 {
-C:\WEBSHARE\WWWROOT\index.html
+status.html
 LINE <html>
 LINE <head>
 LINE    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
@@ -109,6 +109,33 @@ LINE                <td width="50%" bgcolor="#000000"><font color="#C0C0C0">
 CNSNUM
 LINE </font></td>
 LINE              </tr>
+LINE              <tr>
+LINE                <td bgcolor="#001B35">
+LINE                  <p align="right"><font color="#C0C0C0">Who is online:&nbsp;
+LINE </font></td>
+LINE              </tr>
+LINE <table> <tr>
+LINE                <td bgcolor="#001B35">
+LINE                  <p align="right"><font color="#C0C0C0">Charnumber&nbsp;
+LINE </font></td>
+LINE                <td bgcolor="#001B35">
+LINE                  <p align="right"><font color="#C0C0C0">Charname&nbsp;
+LINE </font></td>
+LINE                <td bgcolor="#001B35">
+LINE                  <p align="right"><font color="#C0C0C0">Position&nbsp;
+LINE </font></td>
+LINE                <td bgcolor="#001B35">
+LINE                  <p align="right"><font color="#C0C0C0">Region&nbsp;
+LINE </font></td>
+LINE                <td bgcolor="#001B35">
+LINE                  <p align="right"><font color="#C0C0C0">Accountnumber&nbsp;
+LINE </font></td>
+LINE                <td bgcolor="#001B35">
+LINE                  <p align="right"><font color="#C0C0C0">Privlevel&nbsp;
+LINE </font></td>
+LINE              </tr>
+WHOLIST P REGION ACCOUNT PRIVLEVEL
+LINE </table>
 LINE              <tr>
 LINE                <td width="50%" bgcolor="#001B35">
 LINE                  <p align="right"><font color="#C0C0C0">Simulation Cycles Per Second:&nbsp;
