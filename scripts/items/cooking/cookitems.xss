@@ -916,7 +916,7 @@ SECTION ITEM $item_unbaked_apple_pie
 	@ONDBLCLICK _cooking
 }
 
-SECTION ITEM $item_pple_pie
+SECTION ITEM $item_apple_pie
 {
 	NAME apple pie
 	ID 1041
@@ -3085,7 +3085,7 @@ SECTION ITEM $item_pears_2
 	@ONDROPINLAND flipitem1less
 }
 
-SECTION ITEM $item_pples
+SECTION ITEM $item_apples
 {
 	NAME apple
 	ID 09D0
