@@ -171,6 +171,7 @@ public addgui_cback(menu,chr,btn)
 	if(!btn) 
 	{	
 		//closing add menu deletetes localvars
+		chr_delLocalVar(chr,CLV_CMDTEMP);
 		chr_delLocalVar(chr,CLV_CONTINUOUS_ADDING_MODE);
 		return;
 	}
@@ -246,8 +247,7 @@ public addgui_standard(menu,chr,submenuPage)
 	new startx,starty;
 	new itemsInBackpack = chr_getLocalIntVec(chr,CLV_CMDTEMP,0);
 	new amount = chr_getLocalIntVec(chr,CLV_CMDTEMP,1);
-	chr_delLocalVar(chr,CLV_CMDTEMP);
-	
+		
 	//calculate header size
 	new ROWS = 2 + submenuData[submenu][__numPages]/ITEMS_PER_ROW + (submenuData[submenu][__numPages]%ITEMS_PER_ROW > 0 ? 1 : 0)
 	new COLS = ITEMS_PER_ROW*MAX_TITLE_LENGTH;
@@ -259,14 +259,16 @@ public addgui_standard(menu,chr,submenuPage)
 	//offset is the index at wich submenu data strats in submenuData[][]
 	new offset = submenuData[submenu][__pageDataIdx];
 	
+	//draw page buttons
 	for(new p; p < submenuData[submenu][__numPages]; p++)
 	{
 		if(p%ITEMS_PER_ROW == 0 && p != 0) cursor_newline();
 		
 		//call addgui_standard to draw the other pages when needed
-		menu_addLabeledButtonFn((submenu << 16) + p,"addgui_standard",pageData[offset + p][__pageTitle]);
+		menu_addLabeledButtonFn((submenu << 16) + p + 1,"addgui_standard",pageData[offset + p][__pageTitle]);
 		cursor_tab();		
 	}
+		
 	cursor_newline();
 	
 	//add "create items in backpack" checkbox
@@ -277,8 +279,7 @@ public addgui_standard(menu,chr,submenuPage)
 	//add amount input field
 	new amountstr[20];
 	sprintf(amountstr,"%d",amount);
-	
-	menu_addLabeledInputField(INPUT_AMOUNT,amountstr,5,"Amount: ");
+	menu_addLabeledInputField(INPUT_AMOUNT,amountstr,10,"Amount: ");
 	
 	//go down in the body
 	cursor_newline(3);
@@ -313,7 +314,7 @@ public addgui_standard(menu,chr,submenuPage)
 	//store submenu and page because the callback will need it
 	menu_storeValue(0,submenu);
 	menu_storeValue(1,page);
-	
+		
 	//show menu
 	menu_show(chr);
 	
@@ -333,7 +334,11 @@ Creates the items selected in the gump
 */
 public addgui_standard_cback(menu,chr,btncode)
 {
-	if(!btncode)	return;
+	if(!btncode)	
+	{
+		chr_delLocalVar(chr,CLV_CMDTEMP);
+		return;
+	}
 	
 	//read amount and checkbox
 	new n,itemsInBackpack;
@@ -341,7 +346,7 @@ public addgui_standard_cback(menu,chr,btncode)
 	//btncode > 0 ==> item
 	//btncode < 0 ==> NPC
 	
-	//if the items is to be created in backpack
+	//if the item is to be created in backpack
 	if(btncode > 0 && itemsInBackpack)
 	{
 		new item; 
@@ -364,9 +369,10 @@ public addgui_standard_cback(menu,chr,btncode)
 		
 		//rebuild and show the menu
 		chr_setTempIntVec(chr,CLV_CMDTEMP,itemsInBackpack,n);
+		
 		new submenu = menu_readValue(menu,0);
 		new page = menu_readValue(menu,1);
-		addgui_standard(INVALID,chr,(submenu << 16) + page);
+		addgui_standard(INVALID,chr,(submenu << 16) + page + 1);
 	}
 
 	else
