@@ -1,7 +1,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
-// || NoX-Wizard	: Embedded Small Scripts			||
-// || Maintained by	: Luxor, Sparhawk				||
-// || Last Update	: 06-apr-2003					||
+// || NoX-Wizard	: Embedded Small Scripts		||
+// || Maintained by	: Luxor, Sparhawk, Endymion		||
+// || Last Update	: 19-may-2003					||
 // || Designed for NXW 	: 0.82						||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
@@ -81,7 +81,7 @@ native set_end( const set );
 \brief Get number of element contained in a set
 \author Endymion
 \since 0.82
-\param 1: the set
+\param 1 the set
 \return element count
 \fn set_size( const set )
 */
@@ -91,12 +91,34 @@ native set_size( const set );
 \brief Get current object of given set
 \author Endymion
 \since 0.82
-\param 1: the set
+\param 1 the set
 \return the object
 \note move index to next item
 \fn set_get( const set )
 */
 native set_get( const set );
+
+/*!
+\brief Get current character of given set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return the character
+\note move index to next
+\fn set_getChar( const set )
+*/
+native set_getChar( const set );
+
+/*!
+\brief Get current item of given set
+\author Endymion
+\since 0.82
+\param 1 the set
+\return the item
+\note move index to next
+\fn set_getItem( const set )
+*/
+native set_getItem( const set );
 
 /*!
 \brief Add object to given set

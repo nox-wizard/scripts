@@ -19,7 +19,7 @@ public example1(const s)
     
     for( set_rewind(set); !set_end(set);  ) 
     {
-		new cc=set_get(set); //set_get get the current set element na dmove internal index to next
+		new cc=set_getChar(set); // get the current set character and move internal index to next
 		if(cc!=INVALID) // if is valid char
 			nprintf(s, chr_getProperty(cc, CP_NAME));
     }
