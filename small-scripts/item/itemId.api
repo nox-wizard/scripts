@@ -7,7 +7,6 @@
 
 enum eWeapontype
 {
-	WEAPON_INVALID=INVALID,
 	SWORD1H=0,
 	SWORD2H,
 	AXE1H,
@@ -23,13 +22,17 @@ enum eWeapontype
 	HEAVYCROSSBOW
 };
 
-public isWeaponLike3( const id, type1, type2, type3 ) 
-{
-	return false;
-}
-
-stock isWeaponLike( const id, type1, type2 = WEAPON_INVALID, type3 = WEAPON_INVALID ) isWeaponLike3( id, type1, type2, type3 );
-
+/*
+\brief Check if given id is a weapon
+\author Endymion
+\since 0.82
+\param 1 the id
+\param 2 weapon type
+\param 3 weapon type 2 ( or INVALID if not used )
+\param 4 weapon type 3 ( or INVALID if not used )
+\return true or false
+*/
+native isWeaponLike( const id, type1, type2 = INVALID, type3 = INVALID );
 
 /*!
 \author Endymion
