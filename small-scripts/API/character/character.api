@@ -1490,12 +1490,21 @@ native chr_calcAtt (const chr);
 \author Xanathar
 \fn chr_calcDef(const chr)
 \param chr the character
+\param bodyPart: the body part of wich you want to calculate the def value, 0 means the whole armor, 1-6 are the different body parts 
 \brief calculates a character's defense power
-TODO: defense power description
-TODO: check for another paramater (body location), used in sources
-\return 0 or INVALID if chr is not a valid character serial
+
+These are the body parts codes:
+- 0: whole body
+- 1: torso 	(item on layer: outer torso)
+- 2: arms 	(item on layer: arms)
+- 3: helm 	(item on layer: helm)
+- 4: legs	(item on layer: inner legs)
+- 5: gorget	(item on layer: neck)
+- 6: gloves	(item on layer: gloves)
+
+\return the def value or INVALID if chr is not a valid character serial
 */
-native chr_calcDef (const chr);
+native chr_calcDef (const chr, const bodyPart = 0);
 
 /*!
 \author Xanathar
