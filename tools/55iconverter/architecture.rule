@@ -1,0 +1,3972 @@
+[06E7]
+MAPPING $item_wooden_door_14
+
+[072A]
+MAPPING $item_wooden_stairs_11
+
+[072C]
+MAPPING $item_wooden_stairs_13
+
+[072B]
+MAPPING $item_wooden_stairs_12
+
+[072E]
+MAPPING $item_wooden_stairs_15
+
+[072D]
+MAPPING $item_wooden_stairs_14
+
+[072F]
+MAPPING $item_wooden_stairs_16
+
+[0839]
+MAPPING $item_wooden_gate_1
+
+[I_GATE_WOOD]
+MAPPING $item_wooden_gate_1
+
+[0545]
+MAPPING $item_cave_floor_11
+
+[0544]
+MAPPING $item_cave_floor_10
+
+[0547]
+MAPPING $item_cave_floor_13
+
+[0546]
+MAPPING $item_cave_floor_12
+
+[0541]
+MAPPING $item_cave_floor_7
+
+[0540]
+MAPPING $item_cave_floor_6
+
+[0543]
+MAPPING $item_cave_floor_9
+
+[0542]
+MAPPING $item_cave_floor_8
+
+[0549]
+MAPPING $item_cave_floor_15
+
+[0548]
+MAPPING $item_cave_floor_14
+
+[054E]
+MAPPING $item_cave_floor_20
+
+[054D]
+MAPPING $item_cave_floor_19
+
+[054F]
+MAPPING $item_cave_floor_21
+
+[054A]
+MAPPING $item_cave_floor_16
+
+[054C]
+MAPPING $item_cave_floor_18
+
+[054B]
+MAPPING $item_cave_floor_17
+
+[0721]
+MAPPING $item_wooden_stairs_2
+
+[0720]
+MAPPING $item_wooden_stairs_1
+
+[I_STAIRS_WOOD]
+MAPPING $item_wooden_stairs_1
+
+[0723]
+MAPPING $item_wooden_stairs_4
+
+[0722]
+MAPPING $item_wooden_stairs_3
+
+[0725]
+MAPPING $item_wooden_stairs_6
+
+[0724]
+MAPPING $item_wooden_stairs_5
+
+[0727]
+MAPPING $item_wooden_stairs_8
+
+[0726]
+MAPPING $item_wooden_stairs_7
+
+[0729]
+MAPPING $item_wooden_stairs_10
+
+[0728]
+MAPPING $item_wooden_stairs_9
+
+[0619]
+MAPPING $item_tent_roof_27
+
+[0618]
+MAPPING $item_tent_roof_26
+
+[0615]
+MAPPING $item_tent_roof_23
+
+[0614]
+MAPPING $item_tent_roof_22
+
+[0617]
+MAPPING $item_tent_roof_25
+
+[0616]
+MAPPING $item_tent_roof_24
+
+[0611]
+MAPPING $item_tent_roof_19
+
+[0610]
+MAPPING $item_tent_roof_18
+
+[0613]
+MAPPING $item_tent_roof_21
+
+[0612]
+MAPPING $item_tent_roof_20
+
+[061E]
+MAPPING $item_tent_roof_32
+
+[061D]
+MAPPING $item_tent_roof_31
+
+[061F]
+MAPPING $item_tent_roof_33
+
+[061A]
+MAPPING $item_tent_roof_28
+
+[061C]
+MAPPING $item_tent_roof_30
+
+[061B]
+MAPPING $item_tent_roof_29
+
+[04AC]
+MAPPING $item_boards_floor_8
+
+[04AB]
+MAPPING $item_boards_floor_7
+
+[04AA]
+MAPPING $item_boards_floor_6
+
+[04AF]
+MAPPING $item_boards_floor_11
+
+[04AE]
+MAPPING $item_boards_floor_10
+
+[04AD]
+MAPPING $item_boards_floor_9
+
+[01C4]
+MAPPING $item_hide_wall1_16
+
+[I_WALL_HIDE_2]
+MAPPING $item_hide_wall1_16
+
+[01C5]
+MAPPING $item_hide_wall1_17
+
+[01C6]
+MAPPING $item_hide_wall1_18
+
+[I_WALL_HIDE_4]
+MAPPING $item_hide_wall1_18
+
+[01C7]
+MAPPING $item_hide_wall1_19
+
+[01C0]
+MAPPING $item_hide_wall1_12
+
+[01C1]
+MAPPING $item_hide_wall1_13
+
+[01C2]
+MAPPING $item_hide_wall1_14
+
+[01C3]
+MAPPING $item_hide_wall1_15
+
+[01C8]
+MAPPING $item_hide_wall1_20
+
+[01C9]
+MAPPING $item_hide_wall1_21
+
+[01CD]
+MAPPING $item_dock_pole_3
+
+[01CE]
+MAPPING $item_dock_pole_4
+
+[01CF]
+MAPPING $item_stone_wall5_1
+
+[I_WALL_STONE_9]
+MAPPING $item_stone_wall5_1
+
+[01CA]
+MAPPING $item_sandstone_wall1_73
+
+[01CB]
+MAPPING $item_dock_pole_1
+
+[01CC]
+MAPPING $item_dock_pole_2
+
+[04A3]
+MAPPING $item_planks_floor_3
+
+[04A2]
+MAPPING $item_planks_floor_2
+
+[04A1]
+MAPPING $item_planks_floor_1
+
+[I_WOOD_PLANK]
+MAPPING $item_planks_floor_1
+
+[04A0]
+MAPPING $item_sandstone_floor_4
+
+[04A7]
+MAPPING $item_boards_floor_3
+
+[04A6]
+MAPPING $item_boards_floor_2
+
+[04A5]
+MAPPING $item_boards_floor_1
+
+[I_FLOOR_WOOD]
+MAPPING $item_boards_floor_1
+
+[04A4]
+MAPPING $item_planks_floor_4
+
+[04A9]
+MAPPING $item_boards_floor_5
+
+[04A8]
+MAPPING $item_boards_floor_4
+
+[02C9]
+MAPPING $item_stone_wall4_54
+
+[02C8]
+MAPPING $item_stone_wall4_53
+
+[02C0]
+MAPPING $item_marble_wall2_47
+
+[02C7]
+MAPPING $item_stone_wall4_52
+
+[I_WALL_STONE_11]
+MAPPING $item_stone_wall4_52
+
+[062D]
+MAPPING $item_stone_roof_45
+
+[02CC]
+MAPPING $item_stone_wall4_57
+
+[02CB]
+MAPPING $item_stone_wall4_56
+
+[02CA]
+MAPPING $item_stone_wall4_55
+
+[02CF]
+MAPPING $item_stone_wall4_60
+
+[02CE]
+MAPPING $item_stone_wall4_59
+
+[02CD]
+MAPPING $item_stone_wall4_58
+
+[062F]
+MAPPING $item_stone_roof_47
+
+[053A]
+MAPPING $item_bricks_floor_12
+
+[053B]
+MAPPING $item_cave_floor_1
+
+[053C]
+MAPPING $item_cave_floor_2
+
+[053D]
+MAPPING $item_cave_floor_3
+
+[053E]
+MAPPING $item_cave_floor_4
+
+[053F]
+MAPPING $item_cave_floor_5
+
+[084C]
+MAPPING $item_iron_gate_1
+
+[I_GATE_IRON_2]
+MAPPING $item_iron_gate_1
+
+[084E]
+MAPPING $item_iron_gate_2
+
+[0841]
+MAPPING $item_wooden_gate_3
+
+[0843]
+MAPPING $item_wooden_gate_4
+
+[0530]
+MAPPING $item_sandstone_floor_14
+
+[0531]
+MAPPING $item_sandstone_floor_15
+
+[0532]
+MAPPING $item_sandstone_floor_16
+
+[0533]
+MAPPING $item_sandstone_floor_17
+
+[0534]
+MAPPING $item_sandstone_floor_18
+
+[0535]
+MAPPING $item_sandstone_floor_19
+
+[0536]
+MAPPING $item_sandstone_floor_20
+
+[0537]
+MAPPING $item_bricks_floor_9
+
+[0538]
+MAPPING $item_bricks_floor_10
+
+[0539]
+MAPPING $item_bricks_floor_11
+
+[083B]
+MAPPING $item_wooden_gate_2
+
+[019B]
+MAPPING $item_wooden_support_1
+
+[I_WALL_PRIMITIVEWOOD]
+MAPPING $item_wooden_support_1
+
+[019C]
+MAPPING $item_wooden_support_2
+
+[066B]
+MAPPING $item_tent_roof_70
+
+[019A]
+MAPPING $item_sandstone_wall1_67
+
+[019F]
+MAPPING $item_wooden_support_5
+
+[066E]
+MAPPING $item_tent_roof_73
+
+[019D]
+MAPPING $item_wooden_support_3
+
+[019E]
+MAPPING $item_wooden_support_4
+
+[0282]
+MAPPING $item_ruined_wall1_8
+
+[0280]
+MAPPING $item_cave_wall1_31
+
+[0281]
+MAPPING $item_ruined_wall1_7
+
+[026D]
+MAPPING $item_cave_wall1_18
+
+[026E]
+MAPPING $item_cave_wall1_19
+
+[026F]
+MAPPING $item_cave_wall1_20
+
+[026A]
+MAPPING $item_cave_wall1_15
+
+[026B]
+MAPPING $item_cave_wall1_16
+
+[026C]
+MAPPING $item_cave_wall1_17
+
+[0264]
+MAPPING $item_cave_wall1_9
+
+[0265]
+MAPPING $item_cave_wall1_10
+
+[0266]
+MAPPING $item_cave_wall1_11
+
+[0267]
+MAPPING $item_cave_wall1_12
+
+[0260]
+MAPPING $item_cave_wall1_5
+
+[0261]
+MAPPING $item_cave_wall1_6
+
+[0262]
+MAPPING $item_cave_wall1_7
+
+[0263]
+MAPPING $item_cave_wall1_8
+
+[0268]
+MAPPING $item_cave_wall1_13
+
+[0269]
+MAPPING $item_cave_wall1_14
+
+[0668]
+MAPPING $item_tent_roof_67
+
+[0669]
+MAPPING $item_tent_roof_68
+
+[0198]
+MAPPING $item_sandstone_wall1_65
+
+[0199]
+MAPPING $item_sandstone_wall1_66
+
+[0192]
+MAPPING $item_sandstone_wall1_59
+
+[0193]
+MAPPING $item_sandstone_wall1_60
+
+[0190]
+MAPPING $item_sandstone_wall1_57
+
+[0191]
+MAPPING $item_sandstone_wall1_58
+
+[0196]
+MAPPING $item_sandstone_wall1_63
+
+[0197]
+MAPPING $item_sandstone_wall1_64
+
+[0194]
+MAPPING $item_sandstone_wall1_61
+
+[0195]
+MAPPING $item_sandstone_wall1_62
+
+[06D7]
+MAPPING $item_wooden_door_10
+
+[06D5]
+MAPPING $item_wooden_door_9
+
+[I_DOOR_WOOD_2]
+MAPPING $item_wooden_door_9
+
+[01BF]
+MAPPING $item_hide_wall1_11
+
+[01BE]
+MAPPING $item_hide_wall1_10
+
+[01BD]
+MAPPING $item_hide_wall1_9
+
+[01BC]
+MAPPING $item_hide_wall1_8
+
+[01BB]
+MAPPING $item_hide_wall1_7
+
+[01BA]
+MAPPING $item_hide_wall1_6
+
+[03F9]
+MAPPING $item_sandostone_stairs1_11
+
+[03A0]
+MAPPING $item_plaster_wall3_34
+
+[01B7]
+MAPPING $item_hide_wall1_3
+
+[01B6]
+MAPPING $item_hide_wall1_2
+
+[I_WALL_HIDE]
+MAPPING $item_hide_wall1_2
+
+[01B5]
+MAPPING $item_hide_wall1_1
+
+[01B4]
+MAPPING $item_sandstone_wall1_72
+
+[01B3]
+MAPPING $item_sandstone_wall1_71
+
+[01B2]
+MAPPING $item_sandstone_wall1_70
+
+[01B1]
+MAPPING $item_sandstone_wall1_69
+
+[01B0]
+MAPPING $item_rattan_wall1_12
+
+[01B9]
+MAPPING $item_hide_wall1_5
+
+[01B8]
+MAPPING $item_hide_wall1_4
+
+[06DF]
+MAPPING $item_wooden_door_12
+
+[06DD]
+MAPPING $item_wooden_door_11
+
+[0751]
+MAPPING $item_stone_stairs1_2
+
+[04B8]
+MAPPING $item_boards_floor_20
+
+[04B9]
+MAPPING $item_boards_floor_21
+
+[04B6]
+MAPPING $item_boards_floor_18
+
+[04B7]
+MAPPING $item_boards_floor_19
+
+[04B4]
+MAPPING $item_boards_floor_16
+
+[04B5]
+MAPPING $item_boards_floor_17
+
+[04B2]
+MAPPING $item_boards_floor_14
+
+[04B3]
+MAPPING $item_boards_floor_15
+
+[04B0]
+MAPPING $item_boards_floor_12
+
+[04B1]
+MAPPING $item_boards_floor_13
+
+[04BF]
+MAPPING $item_boards_floor_27
+
+[04BD]
+MAPPING $item_boards_floor_25
+
+[04BE]
+MAPPING $item_boards_floor_26
+
+[04BB]
+MAPPING $item_boards_floor_23
+
+[04BC]
+MAPPING $item_boards_floor_24
+
+[04BA]
+MAPPING $item_boards_floor_22
+
+[01DA]
+MAPPING $item_stone_wall5_12
+
+[0755]
+MAPPING $item_stone_stairs1_6
+
+[0756]
+MAPPING $item_stone_stairs1_7
+
+[0757]
+MAPPING $item_stone_stairs1_8
+
+[01DE]
+MAPPING $item_stone_wall5_16
+
+[0203]
+MAPPING $item_plaster_wall2_5
+
+[0752]
+MAPPING $item_stone_stairs1_3
+
+[0201]
+MAPPING $item_plaster_wall2_3
+
+[0758]
+MAPPING $item_stone_stairs1_9
+
+[03F4]
+MAPPING $item_sandostone_stairs1_6
+
+[03F7]
+MAPPING $item_sandostone_stairs1_9
+
+[03F6]
+MAPPING $item_sandostone_stairs1_8
+
+[075D]
+MAPPING $item_stone_stairs1_14
+
+[075E]
+MAPPING $item_stone_stairs1_15
+
+[075F]
+MAPPING $item_stone_stairs1_16
+
+[0856]
+MAPPING $item_iron_gate_4
+
+[0854]
+MAPPING $item_iron_gate_3
+
+[029A]
+MAPPING $item_marble_wall2_10
+
+[020B]
+MAPPING $item_plaster_wall2_13
+
+[029C]
+MAPPING $item_marble_wall2_12
+
+[029B]
+MAPPING $item_marble_wall2_11
+
+[I_WALL_MARBLE_10]
+MAPPING $item_marble_wall2_11
+
+[029E]
+MAPPING $item_marble_wall2_14
+
+[029D]
+MAPPING $item_marble_wall2_13
+
+[075A]
+MAPPING $item_stone_stairs1_11
+
+[0523]
+MAPPING $item_stone_floor_11
+
+[0522]
+MAPPING $item_stone_floor_10
+
+[0521]
+MAPPING $item_stone_floor_9
+
+[0520]
+MAPPING $item_stone_floor_8
+
+[0527]
+MAPPING $item_sandstone_floor_7
+
+[0526]
+MAPPING $item_sandstone_floor_6
+
+[0525]
+MAPPING $item_sandstone_floor_5
+
+[I_FLOOR_SANDSTONE_2]
+MAPPING $item_sandstone_floor_5
+
+[0524]
+MAPPING $item_stone_floor_12
+
+[0529]
+MAPPING $item_sandstone_floor_9
+
+[0528]
+MAPPING $item_sandstone_floor_8
+
+[03FA]
+MAPPING $item_sandostone_stairs1_12
+
+[052C]
+MAPPING $item_sandstone_floor_12
+
+[052B]
+MAPPING $item_sandstone_floor_11
+
+[052A]
+MAPPING $item_sandstone_floor_10
+
+[052F]
+MAPPING $item_sandstone_floor_13
+
+[I_FLOOR_SANDSTONE_3]
+MAPPING $item_sandstone_floor_13
+
+[0299]
+MAPPING $item_marble_wall2_9
+
+[0298]
+MAPPING $item_marble_wall2_8
+
+[0291]
+MAPPING $item_marble_wall2_1
+
+[I_WALL_MARBLE_1]
+MAPPING $item_marble_wall2_1
+
+[0293]
+MAPPING $item_marble_wall2_3
+
+[0292]
+MAPPING $item_marble_wall2_2
+
+[0295]
+MAPPING $item_marble_wall2_5
+
+[I_WALL_MARBLE_8]
+MAPPING $item_marble_wall2_5
+
+[0294]
+MAPPING $item_marble_wall2_4
+
+[0297]
+MAPPING $item_marble_wall2_7
+
+[0296]
+MAPPING $item_marble_wall2_6
+
+[0277]
+MAPPING $item_ruined_wall1_1
+
+[I_WALL_SANDSTONE_7]
+MAPPING $item_ruined_wall1_1
+
+[0276]
+MAPPING $item_cave_wall1_27
+
+[0275]
+MAPPING $item_cave_wall1_26
+
+[0271]
+MAPPING $item_cave_wall1_22
+
+[0279]
+MAPPING $item_ruined_wall1_3
+
+[0278]
+MAPPING $item_ruined_wall1_2
+
+[0185]
+MAPPING $item_sandstone_wall1_46
+
+[0184]
+MAPPING $item_sandstone_wall1_45
+
+[0187]
+MAPPING $item_sandstone_wall1_48
+
+[0186]
+MAPPING $item_sandstone_wall1_47
+
+[0181]
+MAPPING $item_sandstone_wall1_42
+
+[0180]
+MAPPING $item_sandstone_wall1_41
+
+[0183]
+MAPPING $item_sandstone_wall1_44
+
+[0182]
+MAPPING $item_sandstone_wall1_43
+
+[0189]
+MAPPING $item_sandstone_wall1_50
+
+[0188]
+MAPPING $item_sandstone_wall1_49
+
+[05AF]
+MAPPING $item_thatch_roof_12
+
+[0492]
+MAPPING $item_floor_2
+
+[0673]
+MAPPING $item_tent_roof_78
+
+[0672]
+MAPPING $item_tent_roof_77
+
+[0671]
+MAPPING $item_tent_roof_76
+
+[0670]
+MAPPING $item_tent_roof_75
+
+[0677]
+MAPPING $item_metal_door_2
+
+[05AD]
+MAPPING $item_thatch_roof_10
+
+[0675]
+MAPPING $item_metal_door_1
+
+[I_DOOR_METAL]
+MAPPING $item_metal_door_1
+
+[0674]
+MAPPING $item_tent_roof_79
+
+[05AB]
+MAPPING $item_thatch_roof_8
+
+[067F]
+MAPPING $item_metal_door_4
+
+[0496]
+MAPPING $item_marble_floor_2
+
+[018E]
+MAPPING $item_sandstone_wall1_55
+
+[018D]
+MAPPING $item_sandstone_wall1_54
+
+[018F]
+MAPPING $item_sandstone_wall1_56
+
+[018A]
+MAPPING $item_sandstone_wall1_51
+
+[0495]
+MAPPING $item_marble_floor_1
+
+[I_FLOOR_MARBLE]
+MAPPING $item_marble_floor_1
+
+[018C]
+MAPPING $item_sandstone_wall1_53
+
+[018B]
+MAPPING $item_sandstone_wall1_52
+
+[070D]
+MAPPING $item_marble_stairs_5
+
+[027F]
+MAPPING $item_cave_wall1_30
+
+[027E]
+MAPPING $item_cave_wall1_29
+
+[027D]
+MAPPING $item_cave_wall1_28
+
+[027C]
+MAPPING $item_ruined_wall1_6
+
+[027B]
+MAPPING $item_ruined_wall1_5
+
+[027A]
+MAPPING $item_ruined_wall1_4
+
+[03CB]
+MAPPING $item_stone_wall6_1
+
+[I_WALL_STONE_13]
+MAPPING $item_stone_wall6_1
+
+[03CC]
+MAPPING $item_stone_wall6_2
+
+[03CF]
+MAPPING $item_stone_wall6_5
+
+[I_WALL_STONE_14]
+MAPPING $item_stone_wall6_5
+
+[03CD]
+MAPPING $item_stone_wall6_3
+
+[03CE]
+MAPPING $item_stone_wall6_4
+
+[04CA]
+MAPPING $item_planks_floor_9
+
+[04CC]
+MAPPING $item_planks_floor_11
+
+[04CB]
+MAPPING $item_planks_floor_10
+
+[04CE]
+MAPPING $item_planks_floor_13
+
+[04CD]
+MAPPING $item_planks_floor_12
+
+[04CF]
+MAPPING $item_planks_floor_14
+
+[01A2]
+MAPPING $item_wooden_support_8
+
+[01A3]
+MAPPING $item_wooden_support_9
+
+[01A0]
+MAPPING $item_wooden_support_6
+
+[01A1]
+MAPPING $item_wooden_support_7
+
+[01A6]
+MAPPING $item_rattan_wall1_2
+
+[01A7]
+MAPPING $item_rattan_wall1_3
+
+[01A4]
+MAPPING $item_sandstone_wall1_68
+
+[01A5]
+MAPPING $item_rattan_wall1_1
+
+[I_WALL_RATTAN]
+MAPPING $item_rattan_wall1_1
+
+[01A8]
+MAPPING $item_rattan_wall1_4
+
+[01A9]
+MAPPING $item_rattan_wall1_5
+
+[01AB]
+MAPPING $item_rattan_wall1_7
+
+[01AC]
+MAPPING $item_rattan_wall1_8
+
+[01AA]
+MAPPING $item_rattan_wall1_6
+
+[01AF]
+MAPPING $item_rattan_wall1_11
+
+[01AD]
+MAPPING $item_rattan_wall1_9
+
+[01AE]
+MAPPING $item_rattan_wall1_10
+
+[04C9]
+MAPPING $item_planks_floor_8
+
+[04C8]
+MAPPING $item_planks_floor_7
+
+[04C1]
+MAPPING $item_logs_floor_1
+
+[I_FLOOR_WOOD_PRIMITIVE]
+MAPPING $item_logs_floor_1
+
+[04C0]
+MAPPING $item_boards_floor_28
+
+[04C3]
+MAPPING $item_logs_floor_3
+
+[04C2]
+MAPPING $item_logs_floor_2
+
+[04C5]
+MAPPING $item_logs_floor_5
+
+[04C4]
+MAPPING $item_logs_floor_4
+
+[04C7]
+MAPPING $item_planks_floor_6
+
+[04C6]
+MAPPING $item_planks_floor_5
+
+[02A1]
+MAPPING $item_marble_wall2_17
+
+[02A0]
+MAPPING $item_marble_wall2_16
+
+[02A3]
+MAPPING $item_marble_wall2_19
+
+[02A2]
+MAPPING $item_marble_wall2_18
+
+[02A5]
+MAPPING $item_marble_wall2_21
+
+[02A4]
+MAPPING $item_marble_wall2_20
+
+[02A7]
+MAPPING $item_marble_wall2_23
+
+[02A6]
+MAPPING $item_marble_wall2_22
+
+[02A9]
+MAPPING $item_marble_wall2_25
+
+[02A8]
+MAPPING $item_marble_wall2_24
+
+[0660]
+MAPPING $item_tent_roof_59
+
+[0569]
+MAPPING $item_stone_roof_22
+
+[0661]
+MAPPING $item_tent_roof_60
+
+[0564]
+MAPPING $item_stone_roof_17
+
+[0662]
+MAPPING $item_tent_roof_61
+
+[02AA]
+MAPPING $item_marble_wall2_26
+
+[02AC]
+MAPPING $item_marble_wall2_28
+
+[02AB]
+MAPPING $item_marble_wall2_27
+
+[02AE]
+MAPPING $item_marble_wall2_30
+
+[02AD]
+MAPPING $item_marble_wall2_29
+
+[I_WALL_MARBLE_12]
+MAPPING $item_marble_wall2_29
+
+[0560]
+MAPPING $item_stone_roof_13
+
+[051F]
+MAPPING $item_stone_floor_7
+
+[051D]
+MAPPING $item_stone_floor_5
+
+[051E]
+MAPPING $item_stone_floor_6
+
+[051B]
+MAPPING $item_stone_floor_3
+
+[051C]
+MAPPING $item_stone_floor_4
+
+[051A]
+MAPPING $item_stone_floor_2
+
+[086E]
+MAPPING $item_wooden_gate_7
+
+[056D]
+MAPPING $item_stone_roof_26
+
+[0389]
+MAPPING $item_plaster_wall3_11
+
+[0868]
+MAPPING $item_wooden_gate_6
+
+[0866]
+MAPPING $item_wooden_gate_5
+
+[I_GATE_WOOD_3]
+MAPPING $item_wooden_gate_5
+
+[0518]
+MAPPING $item_cobblestones_floor_4
+
+[0519]
+MAPPING $item_stone_floor_1
+
+[I_PAVER_STONE]
+MAPPING $item_stone_floor_1
+
+[0516]
+MAPPING $item_cobblestones_floor_2
+
+[0517]
+MAPPING $item_cobblestones_floor_3
+
+[0514]
+MAPPING $item_marble_floor_12
+
+[0515]
+MAPPING $item_cobblestones_floor_1
+
+[I_FLOOR_COBBLESTONE]
+MAPPING $item_cobblestones_floor_1
+
+[0512]
+MAPPING $item_marble_floor_10
+
+[0513]
+MAPPING $item_marble_floor_11
+
+[I_FLOOR_MARBLE_5]
+MAPPING $item_marble_floor_11
+
+[0510]
+MAPPING $item_marble_floor_8
+
+[0511]
+MAPPING $item_marble_floor_9
+
+[I_FLOOR_MARBLE_4]
+MAPPING $item_marble_floor_9
+
+[064F]
+MAPPING $item_tent_roof_56
+
+[064D]
+MAPPING $item_tent_roof_54
+
+[064E]
+MAPPING $item_tent_roof_55
+
+[064B]
+MAPPING $item_tent_roof_52
+
+[064C]
+MAPPING $item_tent_roof_53
+
+[064A]
+MAPPING $item_tent_roof_51
+
+[024C]
+MAPPING $item_sandstone_wall2_1
+
+[I_WALL_SANDSTONE_1]
+MAPPING $item_sandstone_wall2_1
+
+[024A]
+MAPPING $item_dungeon_wall1_10
+
+[024F]
+MAPPING $item_sandstone_wall2_4
+
+[024D]
+MAPPING $item_sandstone_wall2_2
+
+[024E]
+MAPPING $item_sandstone_wall2_3
+
+[0242]
+MAPPING $item_dungeon_wall1_2
+
+[0243]
+MAPPING $item_dungeon_wall1_3
+
+[0241]
+MAPPING $item_dungeon_wall1_1
+
+[I_WALL_DUNGEON]
+MAPPING $item_dungeon_wall1_1
+
+[0246]
+MAPPING $item_dungeon_wall1_6
+
+[0247]
+MAPPING $item_dungeon_wall1_7
+
+[0244]
+MAPPING $item_dungeon_wall1_4
+
+[0245]
+MAPPING $item_dungeon_wall1_5
+
+[0248]
+MAPPING $item_dungeon_wall1_8
+
+[0249]
+MAPPING $item_dungeon_wall1_9
+
+[0648]
+MAPPING $item_tent_roof_49
+
+[0649]
+MAPPING $item_tent_roof_50
+
+[05A6]
+MAPPING $item_thatch_roof_3
+
+[05A7]
+MAPPING $item_thatch_roof_4
+
+[05A5]
+MAPPING $item_thatch_roof_2
+
+[05A3]
+MAPPING $item_slate_roof_22
+
+[049E]
+MAPPING $item_sandstone_floor_2
+
+[05A1]
+MAPPING $item_slate_roof_20
+
+[063E]
+MAPPING $item_stone_roof_58
+
+[0870]
+MAPPING $item_wooden_gate_8
+
+[0509]
+MAPPING $item_logs_floor_11
+
+[0508]
+MAPPING $item_logs_floor_10
+
+[0636]
+MAPPING $item_tent_roof_48
+
+[0501]
+MAPPING $item_flagstones_floor_6
+
+[0500]
+MAPPING $item_flagstones_floor_5
+
+[I_FLOOR_SANDSTONE]
+MAPPING $item_flagstones_floor_5
+
+[0503]
+MAPPING $item_flagstones_floor_8
+
+[0502]
+MAPPING $item_flagstones_floor_7
+
+[0505]
+MAPPING $item_logs_floor_7
+
+[0504]
+MAPPING $item_logs_floor_6
+
+[0507]
+MAPPING $item_logs_floor_9
+
+[0506]
+MAPPING $item_logs_floor_8
+
+[050A]
+MAPPING $item_logs_floor_12
+
+[050C]
+MAPPING $item_logs_floor_14
+
+[050B]
+MAPPING $item_logs_floor_13
+
+[I_FLOOR_WOOD_LOG]
+MAPPING $item_logs_floor_13
+
+[050E]
+MAPPING $item_marble_floor_6
+
+[050D]
+MAPPING $item_marble_floor_5
+
+[I_FLOOR_MARBLE_2]
+MAPPING $item_marble_floor_5
+
+[050F]
+MAPPING $item_marble_floor_7
+
+[I_FLOOR_MARBLE_3]
+MAPPING $item_marble_floor_7
+
+[0259]
+MAPPING $item_sandstone_wall2_14
+
+[0258]
+MAPPING $item_sandstone_wall2_13
+
+[03EF]
+MAPPING $item_sandostone_stairs1_1
+
+[0255]
+MAPPING $item_sandstone_wall2_10
+
+[0254]
+MAPPING $item_sandstone_wall2_9
+
+[0257]
+MAPPING $item_sandstone_wall2_12
+
+[0256]
+MAPPING $item_sandstone_wall2_11
+
+[0251]
+MAPPING $item_sandstone_wall2_6
+
+[0250]
+MAPPING $item_sandstone_wall2_5
+
+[0253]
+MAPPING $item_sandstone_wall2_8
+
+[0252]
+MAPPING $item_sandstone_wall2_7
+
+[063D]
+MAPPING $item_stone_roof_57
+
+[063C]
+MAPPING $item_stone_roof_56
+
+[063B]
+MAPPING $item_stone_roof_55
+
+[0651]
+MAPPING $item_tent_roof_58
+
+[0650]
+MAPPING $item_tent_roof_57
+
+[0653]
+MAPPING $item_stone_roof_60
+
+[0652]
+MAPPING $item_stone_roof_59
+
+[0655]
+MAPPING $item_stone_roof_62
+
+[0654]
+MAPPING $item_stone_roof_61
+
+[0657]
+MAPPING $item_stone_roof_64
+
+[0656]
+MAPPING $item_stone_roof_63
+
+[0659]
+MAPPING $item_stone_roof_66
+
+[0658]
+MAPPING $item_stone_roof_65
+
+[065A]
+MAPPING $item_stone_roof_67
+
+[065C]
+MAPPING $item_stone_roof_69
+
+[065B]
+MAPPING $item_stone_roof_68
+
+[065E]
+MAPPING $item_tent_roof_57
+
+[065D]
+MAPPING $item_stone_roof_70
+
+[065F]
+MAPPING $item_tent_roof_58
+
+[03E0]
+MAPPING $item_stone_wall6_22
+
+[03E1]
+MAPPING $item_stone_wall6_23
+
+[03E2]
+MAPPING $item_stone_wall6_24
+
+[025B]
+MAPPING $item_sandstone_wall2_16
+
+[06A5]
+MAPPING $item_wooden_door_1
+
+[I_DOOR_WOOD]
+MAPPING $item_wooden_door_1
+
+[05B3]
+MAPPING $item_tile_roof_1
+
+[I_ROOF_TILE]
+MAPPING $item_tile_roof_1
+
+[05B2]
+MAPPING $item_thatch_roof_15
+
+[05B7]
+MAPPING $item_tile_roof_5
+
+[0491]
+MAPPING $item_floor_1
+
+[I_FLOOR_BLUE]
+MAPPING $item_floor_1
+
+[05B4]
+MAPPING $item_tile_roof_2
+
+[0589]
+MAPPING $item_palm_roof_4
+
+[016B]
+MAPPING $item_sandstone_wall1_20
+
+[0169]
+MAPPING $item_sandstone_wall1_18
+
+[0790]
+MAPPING $item_stone_stairs2_13
+
+[0791]
+MAPPING $item_stone_stairs2_14
+
+[0792]
+MAPPING $item_stone_stairs2_15
+
+[0793]
+MAPPING $item_stone_stairs2_16
+
+[0794]
+MAPPING $item_stone_stairs2_17
+
+[0795]
+MAPPING $item_stone_stairs2_18
+
+[0796]
+MAPPING $item_stone_stairs2_19
+
+[0797]
+MAPPING $item_stone_stairs2_20
+
+[0798]
+MAPPING $item_stone_stairs2_21
+
+[0799]
+MAPPING $item_stone_stairs2_22
+
+[0400]
+MAPPING $item_sandostone_stairs1_18
+
+[0401]
+MAPPING $item_sandostone_stairs1_19
+
+[0402]
+MAPPING $item_sandostone_stairs1_20
+
+[022A]
+MAPPING $item_palisade_wall_12
+
+[022B]
+MAPPING $item_palisade_wall_13
+
+[022C]
+MAPPING $item_palisade_wall_14
+
+[I_DOOR_TENT]
+MAPPING $item_palisade_wall_14
+
+[022D]
+MAPPING $item_palisade_wall_15
+
+[I_DOOR_TENT_O]
+MAPPING $item_palisade_wall_15
+
+[022E]
+MAPPING $item_palisade_wall_16
+
+[022F]
+MAPPING $item_palisade_wall_17
+
+[05D4]
+MAPPING $item_palm_roof_19
+
+[0228]
+MAPPING $item_palisade_wall_10
+
+[0229]
+MAPPING $item_palisade_wall_11
+
+[0220]
+MAPPING $item_palisade_wall_4
+
+[0221]
+MAPPING $item_palisade_wall_5
+
+[0222]
+MAPPING $item_palisade_wall_6
+
+[0223]
+MAPPING $item_palisade_wall_7
+
+[0226]
+MAPPING $item_palisade_wall_8
+
+[0227]
+MAPPING $item_palisade_wall_9
+
+[079A]
+MAPPING $item_stone_stairs2_23
+
+[079B]
+MAPPING $item_stone_stairs2_24
+
+[079C]
+MAPPING $item_stone_stairs2_25
+
+[079D]
+MAPPING $item_cave_stairs_1
+
+[I_CAVE_STEP]
+MAPPING $item_cave_stairs_1
+
+[079E]
+MAPPING $item_cave_stairs_2
+
+[079F]
+MAPPING $item_cave_stairs_3
+
+[039D]
+MAPPING $item_plaster_wall3_31
+
+[0134]
+MAPPING $item_plaster_wall1_14
+
+[0135]
+MAPPING $item_plaster_wall1_15
+
+[0136]
+MAPPING $item_plaster_wall1_16
+
+[0137]
+MAPPING $item_plaster_wall1_17
+
+[0130]
+MAPPING $item_plaster_wall1_10
+
+[0131]
+MAPPING $item_plaster_wall1_11
+
+[0132]
+MAPPING $item_plaster_wall1_12
+
+[0133]
+MAPPING $item_plaster_wall1_13
+
+[0138]
+MAPPING $item_plaster_wall1_18
+
+[0139]
+MAPPING $item_plaster_wall1_19
+
+[039E]
+MAPPING $item_plaster_wall3_32
+
+[01FF]
+MAPPING $item_plaster_wall2_1
+
+[I_WALL_PLASTER_9]
+MAPPING $item_plaster_wall2_1
+
+[03D3]
+MAPPING $item_stone_wall6_9
+
+[03D2]
+MAPPING $item_stone_wall6_8
+
+[03D1]
+MAPPING $item_stone_wall6_7
+
+[03D0]
+MAPPING $item_stone_wall6_6
+
+[03D7]
+MAPPING $item_stone_wall6_13
+
+[03D6]
+MAPPING $item_stone_wall6_12
+
+[03D5]
+MAPPING $item_stone_wall6_11
+
+[03D4]
+MAPPING $item_stone_wall6_10
+
+[03D9]
+MAPPING $item_stone_wall6_15
+
+[03D8]
+MAPPING $item_stone_wall6_14
+
+[03DC]
+MAPPING $item_stone_wall6_18
+
+[03DB]
+MAPPING $item_stone_wall6_17
+
+[03DA]
+MAPPING $item_stone_wall6_16
+
+[03DF]
+MAPPING $item_stone_wall6_21
+
+[03DE]
+MAPPING $item_stone_wall6_20
+
+[03DD]
+MAPPING $item_stone_wall6_19
+
+[01F9]
+MAPPING $item_tent_wall1_10
+
+[01F8]
+MAPPING $item_tent_wall1_9
+
+[01F3]
+MAPPING $item_tent_wall1_4
+
+[01F2]
+MAPPING $item_tent_wall1_3
+
+[01F1]
+MAPPING $item_tent_wall1_2
+
+[01F0]
+MAPPING $item_tent_wall1_1
+
+[I_WALL_TENT_10]
+MAPPING $item_tent_wall1_1
+
+[01F7]
+MAPPING $item_tent_wall1_8
+
+[01F6]
+MAPPING $item_tent_wall1_7
+
+[01F5]
+MAPPING $item_tent_wall1_6
+
+[01F4]
+MAPPING $item_tent_wall1_5
+
+[013D]
+MAPPING $item_plaster_wall1_23
+
+[013E]
+MAPPING $item_plaster_wall1_24
+
+[013F]
+MAPPING $item_plaster_wall1_25
+
+[013A]
+MAPPING $item_plaster_wall1_20
+
+[I_WALL_PLASTER_2]
+MAPPING $item_plaster_wall1_20
+
+[013B]
+MAPPING $item_plaster_wall1_21
+
+[013C]
+MAPPING $item_plaster_wall1_22
+
+[039A]
+MAPPING $item_plaster_wall3_28
+
+[039B]
+MAPPING $item_plaster_wall3_29
+
+[0769]
+MAPPING $item_sandstone_stairs1_1
+
+[I_STAIRS_SANDSTONE]
+MAPPING $item_sandstone_stairs1_1
+
+[0768]
+MAPPING $item_stone_stairs1_25
+
+[039C]
+MAPPING $item_plaster_wall3_30
+
+[0765]
+MAPPING $item_stone_stairs1_22
+
+[0764]
+MAPPING $item_stone_stairs1_21
+
+[077A]
+MAPPING $item_sandstone_stairs1_18
+
+[078C]
+MAPPING $item_stone_stairs2_9
+
+[078B]
+MAPPING $item_stone_stairs2_8
+
+[078A]
+MAPPING $item_stone_stairs2_7
+
+[078F]
+MAPPING $item_stone_stairs2_12
+
+[078E]
+MAPPING $item_stone_stairs2_11
+
+[078D]
+MAPPING $item_stone_stairs2_10
+
+[0783]
+MAPPING $item_stone_stairs1_27
+
+[0782]
+MAPPING $item_stone_stairs1_26
+
+[I_STAIRS_STONE_3]
+MAPPING $item_stone_stairs1_26
+
+[0781]
+MAPPING $item_sandstone_stairs1_25
+
+[0780]
+MAPPING $item_sandstone_stairs1_24
+
+[0787]
+MAPPING $item_stone_stairs2_4
+
+[0786]
+MAPPING $item_stone_stairs2_3
+
+[0785]
+MAPPING $item_stone_stairs2_2
+
+[0784]
+MAPPING $item_stone_stairs2_1
+
+[0789]
+MAPPING $item_stone_stairs2_6
+
+[0788]
+MAPPING $item_stone_stairs2_5
+
+[07E0]
+MAPPING $item_stone_stairs1_33
+
+[0745]
+MAPPING $item_wooden_stairs2_14
+
+[0239]
+MAPPING $item_tent_wall2_10
+
+[0238]
+MAPPING $item_tent_wall2_9
+
+[0233]
+MAPPING $item_tent_wall2_4
+
+[0232]
+MAPPING $item_tent_wall2_3
+
+[0231]
+MAPPING $item_tent_wall2_2
+
+[0230]
+MAPPING $item_tent_wall2_1
+
+[I_WALL_TENT]
+MAPPING $item_tent_wall2_1
+
+[0237]
+MAPPING $item_tent_wall2_8
+
+[0236]
+MAPPING $item_tent_wall2_7
+
+[0235]
+MAPPING $item_tent_wall2_6
+
+[0234]
+MAPPING $item_tent_wall2_5
+
+[012F]
+MAPPING $item_plaster_wall1_9
+
+[012E]
+MAPPING $item_plaster_wall1_8
+
+[012D]
+MAPPING $item_plaster_wall1_7
+
+[012C]
+MAPPING $item_plaster_wall1_6
+
+[012B]
+MAPPING $item_plaster_wall1_5
+
+[012A]
+MAPPING $item_plaster_wall1_4
+
+[0127]
+MAPPING $item_plaster_wall1_1
+
+[I_WALL_PLASTER]
+MAPPING $item_plaster_wall1_1
+
+[0126]
+MAPPING $item_marble_wall1_47
+
+[0125]
+MAPPING $item_marble_wall1_46
+
+[0124]
+MAPPING $item_marble_wall1_45
+
+[0123]
+MAPPING $item_marble_wall1_44
+
+[0122]
+MAPPING $item_marble_wall1_43
+
+[0121]
+MAPPING $item_marble_wall1_42
+
+[0120]
+MAPPING $item_marble_wall1_41
+
+[0129]
+MAPPING $item_plaster_wall1_3
+
+[0128]
+MAPPING $item_plaster_wall1_2
+
+[01E6]
+MAPPING $item_stone_wall5_24
+
+[01E7]
+MAPPING $item_stone_wall5_25
+
+[01E4]
+MAPPING $item_stone_wall5_22
+
+[01E5]
+MAPPING $item_stone_wall5_23
+
+[01E2]
+MAPPING $item_stone_wall5_20
+
+[01E3]
+MAPPING $item_stone_wall5_21
+
+[01E0]
+MAPPING $item_stone_wall5_18
+
+[01E1]
+MAPPING $item_stone_wall5_19
+
+[01E8]
+MAPPING $item_stone_wall5_26
+
+[01E9]
+MAPPING $item_stone_wall5_27
+
+[015A]
+MAPPING $item_sandstone_wall1_3
+
+[01EF]
+MAPPING $item_sandstone_wall1_77
+
+[01ED]
+MAPPING $item_sandstone_wall1_75
+
+[01EE]
+MAPPING $item_sandstone_wall1_76
+
+[01EB]
+MAPPING $item_stone_wall5_29
+
+[01EC]
+MAPPING $item_sandstone_wall1_74
+
+[01EA]
+MAPPING $item_stone_wall5_28
+
+[05E8]
+MAPPING $item_palm_roof_38
+
+[05E9]
+MAPPING $item_palm_roof_39
+
+[074C]
+MAPPING $item_stone_stairs1_8
+
+[074B]
+MAPPING $item_stone_stairs1_7
+
+[0626]
+MAPPING $item_tent_roof_40
+
+[066A]
+MAPPING $item_tent_roof_69
+
+[066C]
+MAPPING $item_tent_roof_71
+
+[066D]
+MAPPING $item_tent_roof_72
+
+[0627]
+MAPPING $item_tent_roof_41
+
+[057A]
+MAPPING $item_stone_roof_39
+
+[066F]
+MAPPING $item_tent_roof_74
+
+[0620]
+MAPPING $item_tent_roof_34
+
+[05D7]
+MAPPING $item_palm_roof_21
+
+[05D0]
+MAPPING $item_tile_roof_30
+
+[05D3]
+MAPPING $item_palm_roof_18
+
+[068F]
+MAPPING $item_metal_door_8
+
+[068D]
+MAPPING $item_metal_door_7
+
+[0424]
+MAPPING $item_palisade_wall_23
+
+[0425]
+MAPPING $item_palisade_wall_24
+
+[0422]
+MAPPING $item_palisade_wall_21
+
+[0423]
+MAPPING $item_palisade_wall_22
+
+[0421]
+MAPPING $item_palisade_wall_20
+
+[I_PALISADE]
+MAPPING $item_palisade_wall_20
+
+[05FF]
+MAPPING $item_tent_roof_1
+
+[I_ROOF_TENT]
+MAPPING $item_tent_roof_1
+
+[05FE]
+MAPPING $item_log_roof_15
+
+[05FD]
+MAPPING $item_log_roof_14
+
+[05FC]
+MAPPING $item_log_roof_13
+
+[05FB]
+MAPPING $item_log_roof_12
+
+[05FA]
+MAPPING $item_log_roof_11
+
+[05F9]
+MAPPING $item_log_roof_10
+
+[05F8]
+MAPPING $item_log_roof_9
+
+[05F7]
+MAPPING $item_log_roof_8
+
+[05F6]
+MAPPING $item_log_roof_7
+
+[05F5]
+MAPPING $item_log_roof_6
+
+[05F4]
+MAPPING $item_log_roof_5
+
+[05F3]
+MAPPING $item_log_roof_4
+
+[05F2]
+MAPPING $item_log_roof_3
+
+[05F1]
+MAPPING $item_log_roof_2
+
+[05F0]
+MAPPING $item_log_roof_1
+
+[I_ROOF_LOG]
+MAPPING $item_log_roof_1
+
+[07DF]
+MAPPING $item_stone_stairs1_32
+
+[07DA]
+MAPPING $item_stone_stairs1_31
+
+[0687]
+MAPPING $item_metal_door_6
+
+[0685]
+MAPPING $item_metal_door_5
+
+[I_DOOR_METAL_BAR]
+MAPPING $item_metal_door_5
+
+[0112]
+MAPPING $item_marble_wall1_27
+
+[0113]
+MAPPING $item_marble_wall1_28
+
+[0110]
+MAPPING $item_marble_wall1_25
+
+[0111]
+MAPPING $item_marble_wall1_26
+
+[0116]
+MAPPING $item_marble_wall1_31
+
+[0117]
+MAPPING $item_marble_wall1_32
+
+[0114]
+MAPPING $item_marble_wall1_29
+
+[0115]
+MAPPING $item_marble_wall1_30
+
+[0118]
+MAPPING $item_marble_wall1_33
+
+[0119]
+MAPPING $item_marble_wall1_34
+
+[0168]
+MAPPING $item_sandstone_wall1_17
+
+[0754]
+MAPPING $item_stone_stairs1_5
+
+[0207]
+MAPPING $item_plaster_wall2_9
+
+[I_WALL_PLASTER_10]
+MAPPING $item_plaster_wall2_9
+
+[01DC]
+MAPPING $item_stone_wall5_14
+
+[01DB]
+MAPPING $item_stone_wall5_13
+
+[01DD]
+MAPPING $item_stone_wall5_15
+
+[0200]
+MAPPING $item_plaster_wall2_2
+
+[01DF]
+MAPPING $item_stone_wall5_17
+
+[03F1]
+MAPPING $item_sandostone_stairs1_3
+
+[03F0]
+MAPPING $item_sandostone_stairs1_2
+
+[03F3]
+MAPPING $item_sandostone_stairs1_5
+
+[03F2]
+MAPPING $item_sandostone_stairs1_4
+
+[03F5]
+MAPPING $item_sandostone_stairs1_7
+
+[0759]
+MAPPING $item_stone_stairs1_10
+
+[0208]
+MAPPING $item_plaster_wall2_10
+
+[0209]
+MAPPING $item_plaster_wall2_11
+
+[01D1]
+MAPPING $item_stone_wall5_3
+
+[01D0]
+MAPPING $item_stone_wall5_2
+
+[01D3]
+MAPPING $item_stone_wall5_5
+
+[I_WALL_STONE_WINDOW]
+MAPPING $item_stone_wall5_5
+
+[01D2]
+MAPPING $item_stone_wall5_4
+
+[01D5]
+MAPPING $item_stone_wall5_7
+
+[01D4]
+MAPPING $item_stone_wall5_6
+
+[01D7]
+MAPPING $item_stone_wall5_9
+
+[01D6]
+MAPPING $item_stone_wall5_8
+
+[01D9]
+MAPPING $item_stone_wall5_11
+
+[01D8]
+MAPPING $item_stone_wall5_10
+
+[03FC]
+MAPPING $item_sandostone_stairs1_14
+
+[03FB]
+MAPPING $item_sandostone_stairs1_13
+
+[03FE]
+MAPPING $item_sandostone_stairs1_16
+
+[03FD]
+MAPPING $item_sandostone_stairs1_15
+
+[03FF]
+MAPPING $item_sandostone_stairs1_17
+
+[011B]
+MAPPING $item_marble_wall1_36
+
+[011C]
+MAPPING $item_marble_wall1_37
+
+[011A]
+MAPPING $item_marble_wall1_35
+
+[011F]
+MAPPING $item_marble_wall1_40
+
+[011D]
+MAPPING $item_marble_wall1_38
+
+[011E]
+MAPPING $item_marble_wall1_39
+
+[0753]
+MAPPING $item_stone_stairs1_4
+
+[0211]
+MAPPING $item_bamboo_wall1_3
+
+[0210]
+MAPPING $item_bamboo_wall1_2
+
+[0744]
+MAPPING $item_wooden_stairs2_13
+
+[0215]
+MAPPING $item_bamboo_wall1_7
+
+[0742]
+MAPPING $item_wooden_stairs2_11
+
+[0741]
+MAPPING $item_wooden_stairs2_10
+
+[0216]
+MAPPING $item_bamboo_wall1_8
+
+[05EC]
+MAPPING $item_palm_roof_42
+
+[0663]
+MAPPING $item_tent_roof_62
+
+[0664]
+MAPPING $item_tent_roof_63
+
+[0665]
+MAPPING $item_tent_roof_64
+
+[0666]
+MAPPING $item_tent_roof_65
+
+[0667]
+MAPPING $item_tent_roof_66
+
+[0431]
+MAPPING $item_palisade_wall_26
+
+[0430]
+MAPPING $item_palisade_wall_25
+
+[021A]
+MAPPING $item_bamboo_wall1_12
+
+[074F]
+MAPPING $item_stone_stairs1_11
+
+[074E]
+MAPPING $item_stone_stairs1_10
+
+[074D]
+MAPPING $item_stone_stairs1_9
+
+[021E]
+MAPPING $item_palisade_wall_2
+
+[021D]
+MAPPING $item_palisade_wall_1
+
+[I_WALL_WOOD_7]
+MAPPING $item_palisade_wall_1
+
+[074A]
+MAPPING $item_stone_stairs1_6
+
+[021F]
+MAPPING $item_palisade_wall_3
+
+[05E2]
+MAPPING $item_palm_roof_32
+
+[05E3]
+MAPPING $item_palm_roof_33
+
+[05E0]
+MAPPING $item_palm_roof_30
+
+[05E1]
+MAPPING $item_palm_roof_31
+
+[05E6]
+MAPPING $item_palm_roof_36
+
+[05E7]
+MAPPING $item_palm_roof_37
+
+[05E4]
+MAPPING $item_palm_roof_34
+
+[05E5]
+MAPPING $item_palm_roof_35
+
+[0695]
+MAPPING $item_rattan_door_1
+
+[I_DOOR_RATTAN]
+MAPPING $item_rattan_door_1
+
+[0697]
+MAPPING $item_rattan_door_2
+
+[010E]
+MAPPING $item_marble_wall1_23
+
+[010D]
+MAPPING $item_marble_wall1_22
+
+[010F]
+MAPPING $item_marble_wall1_24
+
+[010A]
+MAPPING $item_marble_wall1_19
+
+[010C]
+MAPPING $item_marble_wall1_21
+
+[010B]
+MAPPING $item_marble_wall1_20
+
+[075B]
+MAPPING $item_stone_stairs1_12
+
+[0109]
+MAPPING $item_marble_wall1_18
+
+[0108]
+MAPPING $item_marble_wall1_17
+
+[I_WALL_MARBLE_6]
+MAPPING $item_marble_wall1_17
+
+[0105]
+MAPPING $item_marble_wall1_14
+
+[0104]
+MAPPING $item_marble_wall1_13
+
+[0107]
+MAPPING $item_marble_wall1_16
+
+[0106]
+MAPPING $item_marble_wall1_15
+
+[0101]
+MAPPING $item_marble_wall1_10
+
+[0100]
+MAPPING $item_marble_wall1_9
+
+[0103]
+MAPPING $item_marble_wall1_12
+
+[0102]
+MAPPING $item_marble_wall1_11
+
+[I_WALL_MARBLE_4]
+MAPPING $item_marble_wall1_11
+
+[075C]
+MAPPING $item_stone_stairs1_13
+
+[069D]
+MAPPING $item_rattan_door_3
+
+[069F]
+MAPPING $item_rattan_door_4
+
+[0747]
+MAPPING $item_wooden_stairs2_16
+
+[0746]
+MAPPING $item_wooden_stairs2_15
+
+[0213]
+MAPPING $item_bamboo_wall1_5
+
+[0212]
+MAPPING $item_bamboo_wall1_4
+
+[0743]
+MAPPING $item_wooden_stairs2_12
+
+[0214]
+MAPPING $item_bamboo_wall1_6
+
+[0217]
+MAPPING $item_bamboo_wall1_9
+
+[0740]
+MAPPING $item_wooden_stairs2_9
+
+[05EB]
+MAPPING $item_palm_roof_41
+
+[0218]
+MAPPING $item_bamboo_wall1_10
+
+[05EA]
+MAPPING $item_palm_roof_40
+
+[0749]
+MAPPING $item_stone_stairs1_5
+
+[0748]
+MAPPING $item_wooden_stairs2_17
+
+[0272]
+MAPPING $item_cave_wall1_23
+
+[060C]
+MAPPING $item_tent_roof_14
+
+[059F]
+MAPPING $item_slate_roof_18
+
+[059D]
+MAPPING $item_slate_roof_16
+
+[059E]
+MAPPING $item_slate_roof_17
+
+[059B]
+MAPPING $item_slate_roof_14
+
+[059C]
+MAPPING $item_slate_roof_15
+
+[059A]
+MAPPING $item_slate_roof_13
+
+[0493]
+MAPPING $item_floor_3
+
+[03F8]
+MAPPING $item_sandostone_stairs1_10
+
+[0596]
+MAPPING $item_slate_roof_9
+
+[0597]
+MAPPING $item_slate_roof_10
+
+[0594]
+MAPPING $item_palm_roof_15
+
+[0595]
+MAPPING $item_slate_roof_8
+
+[I_ROOF_SLATE_2]
+MAPPING $item_slate_roof_8
+
+[0592]
+MAPPING $item_palm_roof_13
+
+[0593]
+MAPPING $item_palm_roof_14
+
+[0590]
+MAPPING $item_palm_roof_11
+
+[0591]
+MAPPING $item_palm_roof_12
+
+[0598]
+MAPPING $item_slate_roof_11
+
+[0599]
+MAPPING $item_slate_roof_12
+
+[0178]
+MAPPING $item_sandstone_wall1_33
+
+[0179]
+MAPPING $item_sandstone_wall1_34
+
+[0170]
+MAPPING $item_sandstone_wall1_25
+
+[0171]
+MAPPING $item_sandstone_wall1_26
+
+[0172]
+MAPPING $item_sandstone_wall1_27
+
+[0173]
+MAPPING $item_sandstone_wall1_28
+
+[0174]
+MAPPING $item_sandstone_wall1_29
+
+[0175]
+MAPPING $item_sandstone_wall1_30
+
+[0176]
+MAPPING $item_sandstone_wall1_31
+
+[0177]
+MAPPING $item_sandstone_wall1_32
+
+[0770]
+MAPPING $item_sandstone_stairs1_8
+
+[0771]
+MAPPING $item_sandstone_stairs1_9
+
+[0776]
+MAPPING $item_sandstone_stairs1_14
+
+[0777]
+MAPPING $item_sandstone_stairs1_15
+
+[05D2]
+MAPPING $item_palm_roof_17
+
+[0778]
+MAPPING $item_sandstone_stairs1_16
+
+[0779]
+MAPPING $item_sandstone_stairs1_17
+
+[05D9]
+MAPPING $item_palm_roof_23
+
+[05D8]
+MAPPING $item_palm_roof_22
+
+[05DE]
+MAPPING $item_palm_roof_28
+
+[05DD]
+MAPPING $item_palm_roof_27
+
+[05DA]
+MAPPING $item_palm_roof_24
+
+[077D]
+MAPPING $item_sandstone_stairs1_21
+
+[077E]
+MAPPING $item_sandstone_stairs1_22
+
+[017A]
+MAPPING $item_sandstone_wall1_35
+
+[017B]
+MAPPING $item_sandstone_wall1_36
+
+[017C]
+MAPPING $item_sandstone_wall1_37
+
+[017D]
+MAPPING $item_sandstone_wall1_38
+
+[017E]
+MAPPING $item_sandstone_wall1_39
+
+[017F]
+MAPPING $item_sandstone_wall1_40
+
+[06B5]
+MAPPING $item_wooden_door_5
+
+[I_DOOR_WOOD_4]
+MAPPING $item_wooden_door_5
+
+[06B7]
+MAPPING $item_wooden_door_6
+
+[0494]
+MAPPING $item_floor_4
+
+[04DD]
+MAPPING $item_planks_floor_28
+
+[04DE]
+MAPPING $item_planks_floor_29
+
+[04DF]
+MAPPING $item_planks_floor_30
+
+[04DA]
+MAPPING $item_planks_floor_25
+
+[04DB]
+MAPPING $item_planks_floor_26
+
+[04DC]
+MAPPING $item_planks_floor_27
+
+[04D8]
+MAPPING $item_planks_floor_23
+
+[04D9]
+MAPPING $item_planks_floor_24
+
+[04D4]
+MAPPING $item_planks_floor_19
+
+[04D5]
+MAPPING $item_planks_floor_20
+
+[04D6]
+MAPPING $item_planks_floor_21
+
+[04D7]
+MAPPING $item_planks_floor_22
+
+[04D0]
+MAPPING $item_planks_floor_15
+
+[04D1]
+MAPPING $item_planks_floor_16
+
+[04D2]
+MAPPING $item_planks_floor_17
+
+[04D3]
+MAPPING $item_planks_floor_18
+
+[06BD]
+MAPPING $item_wooden_door_7
+
+[06BF]
+MAPPING $item_wooden_door_8
+
+[07AA]
+MAPPING $item_stone_stairs3_8
+
+[07AB]
+MAPPING $item_stone_stairs3_9
+
+[07AC]
+MAPPING $item_stone_stairs3_10
+
+[07AD]
+MAPPING $item_stone_stairs3_11
+
+[07AE]
+MAPPING $item_stone_stairs3_12
+
+[07AF]
+MAPPING $item_stone_stairs3_13
+
+[07A8]
+MAPPING $item_stone_stairs3_6
+
+[07A9]
+MAPPING $item_stone_stairs3_7
+
+[07A0]
+MAPPING $item_stone_stairs1_28
+
+[07A1]
+MAPPING $item_stone_stairs1_29
+
+[07A2]
+MAPPING $item_stone_stairs1_30
+
+[07A3]
+MAPPING $item_stone_stairs3_1
+
+[I_STAIRS_STONE_4]
+MAPPING $item_stone_stairs3_1
+
+[07A4]
+MAPPING $item_stone_stairs3_2
+
+[07A5]
+MAPPING $item_stone_stairs3_3
+
+[07A6]
+MAPPING $item_stone_stairs3_4
+
+[07A7]
+MAPPING $item_stone_stairs3_5
+
+[05CA]
+MAPPING $item_tile_roof_24
+
+[05CB]
+MAPPING $item_tile_roof_25
+
+[05CC]
+MAPPING $item_tile_roof_26
+
+[05CD]
+MAPPING $item_tile_roof_27
+
+[05CE]
+MAPPING $item_tile_roof_28
+
+[05CF]
+MAPPING $item_tile_roof_29
+
+[076E]
+MAPPING $item_sandstone_stairs1_6
+
+[076D]
+MAPPING $item_sandstone_stairs1_5
+
+[076F]
+MAPPING $item_sandstone_stairs1_7
+
+[076A]
+MAPPING $item_sandstone_stairs1_2
+
+[076C]
+MAPPING $item_sandstone_stairs1_4
+
+[076B]
+MAPPING $item_sandstone_stairs1_3
+
+[0181E]
+MAPPING $item_alchemical_floor_2
+
+[I_RUNE_ALCHEM_2]
+MAPPING $item_alchemical_floor_2
+
+[0181D]
+MAPPING $item_alchemical_floor_1
+
+[I_RUNE_ALCHEM_1]
+MAPPING $item_alchemical_floor_1
+
+[0181F]
+MAPPING $item_alchemical_floor_3
+
+[I_RUNE_ALCHEM_3]
+MAPPING $item_alchemical_floor_3
+
+[0581]
+MAPPING $item_slate_roof_3
+
+[0580]
+MAPPING $item_slate_roof_2
+
+[0583]
+MAPPING $item_slate_roof_5
+
+[0582]
+MAPPING $item_slate_roof_4
+
+[0585]
+MAPPING $item_slate_roof_7
+
+[0584]
+MAPPING $item_slate_roof_6
+
+[0587]
+MAPPING $item_palm_roof_2
+
+[0586]
+MAPPING $item_palm_roof_1
+
+[I_ROOF_PALMFROND]
+MAPPING $item_palm_roof_1
+
+[016C]
+MAPPING $item_sandstone_wall1_21
+
+[0588]
+MAPPING $item_palm_roof_3
+
+[016A]
+MAPPING $item_sandstone_wall1_19
+
+[016F]
+MAPPING $item_sandstone_wall1_24
+
+[016E]
+MAPPING $item_sandstone_wall1_23
+
+[016D]
+MAPPING $item_sandstone_wall1_22
+
+[058A]
+MAPPING $item_palm_roof_5
+
+[058C]
+MAPPING $item_palm_roof_7
+
+[058B]
+MAPPING $item_palm_roof_6
+
+[058E]
+MAPPING $item_palm_roof_9
+
+[058D]
+MAPPING $item_palm_roof_8
+
+[058F]
+MAPPING $item_palm_roof_10
+
+[0163]
+MAPPING $item_sandstone_wall1_12
+
+[0162]
+MAPPING $item_sandstone_wall1_11
+
+[I_WALL_SANDSTONE_4]
+MAPPING $item_sandstone_wall1_11
+
+[0161]
+MAPPING $item_sandstone_wall1_10
+
+[0160]
+MAPPING $item_sandstone_wall1_9
+
+[0167]
+MAPPING $item_sandstone_wall1_16
+
+[0166]
+MAPPING $item_sandstone_wall1_15
+
+[0165]
+MAPPING $item_sandstone_wall1_14
+
+[0164]
+MAPPING $item_sandstone_wall1_13
+
+[05C0]
+MAPPING $item_tile_roof_14
+
+[05C1]
+MAPPING $item_tile_roof_15
+
+[05C2]
+MAPPING $item_tile_roof_16
+
+[I_SHINGLE_WOODEN]
+MAPPING $item_tile_roof_16
+
+[05C3]
+MAPPING $item_tile_roof_17
+
+[05C4]
+MAPPING $item_tile_roof_18
+
+[05C5]
+MAPPING $item_tile_roof_19
+
+[05C6]
+MAPPING $item_tile_roof_20
+
+[05C7]
+MAPPING $item_tile_roof_21
+
+[05C8]
+MAPPING $item_tile_roof_22
+
+[05C9]
+MAPPING $item_tile_roof_23
+
+[0767]
+MAPPING $item_stone_stairs1_24
+
+[0766]
+MAPPING $item_stone_stairs1_23
+
+[0761]
+MAPPING $item_stone_stairs1_18
+
+[0760]
+MAPPING $item_stone_stairs1_17
+
+[0763]
+MAPPING $item_stone_stairs1_20
+
+[0762]
+MAPPING $item_stone_stairs1_19
+
+[06CF]
+MAPPING $item_metal_door_12
+
+[06CD]
+MAPPING $item_metal_door_11
+
+[06C7]
+MAPPING $item_metal_door_10
+
+[06C5]
+MAPPING $item_metal_door_9
+
+[I_DOOR_METAL_2]
+MAPPING $item_metal_door_9
+
+[04E9]
+MAPPING $item_bricks_floor_8
+
+[04E8]
+MAPPING $item_bricks_floor_7
+
+[04E7]
+MAPPING $item_bricks_floor_6
+
+[04E6]
+MAPPING $item_bricks_floor_5
+
+[04E5]
+MAPPING $item_bricks_floor_4
+
+[04E4]
+MAPPING $item_bricks_floor_3
+
+[04E3]
+MAPPING $item_bricks_floor_2
+
+[04E2]
+MAPPING $item_bricks_floor_1
+
+[I_FLOOR_FLAGSTONE_RED]
+MAPPING $item_bricks_floor_1
+
+[04E1]
+MAPPING $item_planks_floor_32
+
+[04E0]
+MAPPING $item_planks_floor_31
+
+[04EF]
+MAPPING $item_tiles_floor_6
+
+[04EE]
+MAPPING $item_tiles_floor_5
+
+[04ED]
+MAPPING $item_tiles_floor_4
+
+[04EC]
+MAPPING $item_tiles_floor_3
+
+[04EB]
+MAPPING $item_tiles_floor_2
+
+[04EA]
+MAPPING $item_tiles_floor_1
+
+[015F]
+MAPPING $item_sandstone_wall1_8
+
+[062E]
+MAPPING $item_stone_roof_46
+
+[057D]
+MAPPING $item_stone_roof_42
+
+[057E]
+MAPPING $item_stone_roof_43
+
+[057F]
+MAPPING $item_slate_roof_1
+
+[I_ROOF_SLATE]
+MAPPING $item_slate_roof_1
+
+[015D]
+MAPPING $item_sandstone_wall1_6
+
+[057B]
+MAPPING $item_stone_roof_40
+
+[057C]
+MAPPING $item_stone_roof_41
+
+[0397]
+MAPPING $item_plaster_wall3_25
+
+[037F]
+MAPPING $item_plaster_wall3_1
+
+[I_WALL_PLASTER_14]
+MAPPING $item_plaster_wall3_1
+
+[015B]
+MAPPING $item_sandstone_wall1_4
+
+[062A]
+MAPPING $item_tent_roof_44
+
+[062B]
+MAPPING $item_stone_roof_43
+
+[0393]
+MAPPING $item_plaster_wall3_21
+
+[0578]
+MAPPING $item_stone_roof_37
+
+[0579]
+MAPPING $item_stone_roof_38
+
+[I_ROOF_STONE_3]
+MAPPING $item_stone_roof_38
+
+[0574]
+MAPPING $item_stone_roof_33
+
+[0575]
+MAPPING $item_stone_roof_34
+
+[0576]
+MAPPING $item_stone_roof_35
+
+[0577]
+MAPPING $item_stone_roof_36
+
+[0570]
+MAPPING $item_stone_roof_29
+
+[0571]
+MAPPING $item_stone_roof_30
+
+[0572]
+MAPPING $item_stone_roof_31
+
+[0573]
+MAPPING $item_stone_roof_32
+
+[0394]
+MAPPING $item_plaster_wall3_22
+
+[0395]
+MAPPING $item_plaster_wall3_23
+
+[0396]
+MAPPING $item_plaster_wall3_24
+
+[015E]
+MAPPING $item_sandstone_wall1_7
+
+[0390]
+MAPPING $item_plaster_wall3_18
+
+[015C]
+MAPPING $item_sandstone_wall1_5
+
+[I_WALL_SANDSTONE_2]
+MAPPING $item_sandstone_wall1_5
+
+[0392]
+MAPPING $item_plaster_wall3_20
+
+[062C]
+MAPPING $item_stone_roof_44
+
+[0398]
+MAPPING $item_plaster_wall3_26
+
+[0399]
+MAPPING $item_plaster_wall3_27
+
+[05B1]
+MAPPING $item_thatch_roof_14
+
+[05B6]
+MAPPING $item_tile_roof_4
+
+[0710]
+MAPPING $item_marble_stairs_8
+
+[0711]
+MAPPING $item_marble_stairs_9
+
+[0712]
+MAPPING $item_marble_stairs_10
+
+[0713]
+MAPPING $item_marble_stairs_11
+
+[0714]
+MAPPING $item_marble_stairs_12
+
+[0715]
+MAPPING $item_marble_stairs_13
+
+[0716]
+MAPPING $item_marble_stairs_14
+
+[0717]
+MAPPING $item_marble_stairs_15
+
+[071A]
+MAPPING $item_marble_stairs_18
+
+[071C]
+MAPPING $item_marble_stairs_20
+
+[071D]
+MAPPING $item_marble_stairs_21
+
+[071E]
+MAPPING $item_stone_stairs1_1
+
+[I_STAIRS_STONE_2]
+MAPPING $item_stone_stairs1_1
+
+[071F]
+MAPPING $item_stone_stairs1_2
+
+[0624]
+MAPPING $item_tent_roof_38
+
+[0157]
+MAPPING $item_plaster_wall1_41
+
+[0154]
+MAPPING $item_plaster_wall1_38
+
+[I_WALL_PLASTER_5]
+MAPPING $item_plaster_wall1_38
+
+[0155]
+MAPPING $item_plaster_wall1_39
+
+[0152]
+MAPPING $item_plaster_wall1_36
+
+[0621]
+MAPPING $item_tent_roof_35
+
+[0150]
+MAPPING $item_plaster_wall1_34
+
+[0623]
+MAPPING $item_tent_roof_37
+
+[0628]
+MAPPING $item_tent_roof_42
+
+[0629]
+MAPPING $item_tent_roof_43
+
+[0158]
+MAPPING $item_sandstone_wall1_1
+
+[I_WALL_SANDSTONE]
+MAPPING $item_sandstone_wall1_1
+
+[0159]
+MAPPING $item_sandstone_wall1_2
+
+[0718]
+MAPPING $item_marble_stairs_16
+
+[0719]
+MAPPING $item_marble_stairs_17
+
+[05B0]
+MAPPING $item_thatch_roof_13
+
+[04FB]
+MAPPING $item_tiles_floor_18
+
+[04FC]
+MAPPING $item_flagstones_floor_1
+
+[I_FLOOR_FLAGSTONE_GRAY]
+MAPPING $item_flagstones_floor_1
+
+[04FA]
+MAPPING $item_tiles_floor_17
+
+[04FF]
+MAPPING $item_flagstones_floor_4
+
+[04FD]
+MAPPING $item_flagstones_floor_2
+
+[04FE]
+MAPPING $item_flagstones_floor_3
+
+[04F8]
+MAPPING $item_tiles_floor_15
+
+[04F9]
+MAPPING $item_tiles_floor_16
+
+[05B5]
+MAPPING $item_tile_roof_3
+
+[04F2]
+MAPPING $item_tiles_floor_9
+
+[04F3]
+MAPPING $item_tiles_floor_10
+
+[I_FLOOR_STONE_RED]
+MAPPING $item_tiles_floor_10
+
+[04F0]
+MAPPING $item_tiles_floor_7
+
+[04F1]
+MAPPING $item_tiles_floor_8
+
+[04F6]
+MAPPING $item_tiles_floor_13
+
+[04F7]
+MAPPING $item_tiles_floor_14
+
+[04F4]
+MAPPING $item_tiles_floor_11
+
+[04F5]
+MAPPING $item_tiles_floor_12
+
+[05B9]
+MAPPING $item_tile_roof_7
+
+[05B8]
+MAPPING $item_tile_roof_6
+
+[05BC]
+MAPPING $item_tile_roof_10
+
+[05BB]
+MAPPING $item_tile_roof_9
+
+[05BA]
+MAPPING $item_tile_roof_8
+
+[05BF]
+MAPPING $item_tile_roof_13
+
+[02DF]
+MAPPING $item_tent_wall3_2
+
+[05BE]
+MAPPING $item_tile_roof_12
+
+[02DE]
+MAPPING $item_tent_wall3_1
+
+[I_WALL_TENT_2]
+MAPPING $item_tent_wall3_1
+
+[05BD]
+MAPPING $item_tile_roof_11
+
+[0219]
+MAPPING $item_bamboo_wall1_11
+
+[071B]
+MAPPING $item_marble_stairs_19
+
+[02D2]
+MAPPING $item_stone_wall4_63
+
+[02D3]
+MAPPING $item_stone_wall4_64
+
+[02D0]
+MAPPING $item_stone_wall4_61
+
+[02D1]
+MAPPING $item_stone_wall4_62
+
+[02D6]
+MAPPING $item_stone_wall4_67
+
+[02D7]
+MAPPING $item_stone_wall4_68
+
+[02D4]
+MAPPING $item_stone_wall4_65
+
+[02D5]
+MAPPING $item_stone_wall4_66
+
+[02D8]
+MAPPING $item_stone_wall4_69
+
+[02D9]
+MAPPING $item_stone_wall4_70
+
+[02BE]
+MAPPING $item_marble_wall2_45
+
+[07C7]
+MAPPING $item_carpeted_stairs_4
+
+[07C8]
+MAPPING $item_carpeted_stairs_5
+
+[0498]
+MAPPING $item_marble_floor_4
+
+[070C]
+MAPPING $item_marble_stairs_4
+
+[070B]
+MAPPING $item_marble_stairs_3
+
+[070A]
+MAPPING $item_marble_stairs_2
+
+[I_STAIRS_MARBLE_2]
+MAPPING $item_marble_stairs_2
+
+[05AE]
+MAPPING $item_thatch_roof_11
+
+[0497]
+MAPPING $item_marble_floor_3
+
+[070F]
+MAPPING $item_marble_stairs_7
+
+[070E]
+MAPPING $item_marble_stairs_6
+
+[05AA]
+MAPPING $item_thatch_roof_7
+
+[0156]
+MAPPING $item_plaster_wall1_40
+
+[0273]
+MAPPING $item_cave_wall1_24
+
+[0625]
+MAPPING $item_tent_roof_39
+
+[039F]
+MAPPING $item_plaster_wall3_33
+
+[038F]
+MAPPING $item_plaster_wall3_17
+
+[038E]
+MAPPING $item_plaster_wall3_16
+
+[038D]
+MAPPING $item_plaster_wall3_15
+
+[038C]
+MAPPING $item_plaster_wall3_14
+
+[038B]
+MAPPING $item_plaster_wall3_13
+
+[038A]
+MAPPING $item_plaster_wall3_12
+
+[0568]
+MAPPING $item_stone_roof_21
+
+[0567]
+MAPPING $item_stone_roof_20
+
+[0566]
+MAPPING $item_stone_roof_19
+
+[0565]
+MAPPING $item_stone_roof_18
+
+[029F]
+MAPPING $item_marble_wall2_15
+
+[0563]
+MAPPING $item_stone_roof_16
+
+[0562]
+MAPPING $item_stone_roof_15
+
+[0561]
+MAPPING $item_stone_roof_14
+
+[0153]
+MAPPING $item_plaster_wall1_37
+
+[0387]
+MAPPING $item_plaster_wall3_9
+
+[0386]
+MAPPING $item_plaster_wall3_8
+
+[0385]
+MAPPING $item_plaster_wall3_7
+
+[0384]
+MAPPING $item_plaster_wall3_6
+
+[0383]
+MAPPING $item_plaster_wall3_5
+
+[0622]
+MAPPING $item_tent_roof_36
+
+[0381]
+MAPPING $item_plaster_wall3_3
+
+[0380]
+MAPPING $item_plaster_wall3_2
+
+[056F]
+MAPPING $item_stone_roof_28
+
+[056E]
+MAPPING $item_stone_roof_27
+
+[0151]
+MAPPING $item_plaster_wall1_35
+
+[056C]
+MAPPING $item_stone_roof_25
+
+[056B]
+MAPPING $item_stone_roof_24
+
+[056A]
+MAPPING $item_stone_roof_23
+
+[0388]
+MAPPING $item_plaster_wall3_10
+
+[025E]
+MAPPING $item_cave_wall1_3
+
+[025D]
+MAPPING $item_cave_wall1_2
+
+[025F]
+MAPPING $item_cave_wall1_4
+
+[025A]
+MAPPING $item_sandstone_wall2_15
+
+[0709]
+MAPPING $item_marble_stairs_1
+
+[I_STAIRS_MARBLE]
+MAPPING $item_marble_stairs_1
+
+[025C]
+MAPPING $item_cave_wall1_1
+
+[I_WALL_SANDSTONE_6]
+MAPPING $item_cave_wall1_1
+
+[05A8]
+MAPPING $item_thatch_roof_5
+
+[05A9]
+MAPPING $item_thatch_roof_6
+
+[049C]
+MAPPING $item_floor_6
+
+[I_FLOOR_SLATE_GREY]
+MAPPING $item_floor_6
+
+[049B]
+MAPPING $item_floor_5
+
+[05A4]
+MAPPING $item_thatch_roof_1
+
+[I_ROOF_THATCH]
+MAPPING $item_thatch_roof_1
+
+[05A2]
+MAPPING $item_slate_roof_21
+
+[049F]
+MAPPING $item_sandstone_floor_3
+
+[05A0]
+MAPPING $item_slate_roof_19
+
+[049D]
+MAPPING $item_sandstone_floor_1
+
+[I_PAVER_SANDSTONE]
+MAPPING $item_sandstone_floor_1
+
+[06AD]
+MAPPING $item_wooden_door_3
+
+[06AF]
+MAPPING $item_wooden_door_4
+
+[0206]
+MAPPING $item_plaster_wall2_8
+
+[0637]
+MAPPING $item_stone_roof_51
+
+[0140]
+MAPPING $item_plaster_wall1_26
+
+[0635]
+MAPPING $item_tent_roof_47
+
+[0634]
+MAPPING $item_tent_roof_46
+
+[0633]
+MAPPING $item_tent_roof_45
+
+[0632]
+MAPPING $item_stone_roof_50
+
+[0631]
+MAPPING $item_stone_roof_49
+
+[0630]
+MAPPING $item_stone_roof_48
+
+[0149]
+MAPPING $item_plaster_wall1_27
+
+[I_WALL_PLASTER_4]
+MAPPING $item_plaster_wall1_27
+
+[0639]
+MAPPING $item_stone_roof_53
+
+[0638]
+MAPPING $item_stone_roof_52
+
+[014A]
+MAPPING $item_plaster_wall1_28
+
+[014C]
+MAPPING $item_plaster_wall1_30
+
+[014B]
+MAPPING $item_plaster_wall1_29
+
+[014E]
+MAPPING $item_plaster_wall1_32
+
+[014D]
+MAPPING $item_plaster_wall1_31
+
+[063A]
+MAPPING $item_stone_roof_54
+
+[014F]
+MAPPING $item_plaster_wall1_33
+
+[0204]
+MAPPING $item_plaster_wall2_6
+
+[05AC]
+MAPPING $item_thatch_roof_9
+
+[06A7]
+MAPPING $item_wooden_door_2
+
+[0205]
+MAPPING $item_plaster_wall2_7
+
+[0202]
+MAPPING $item_plaster_wall2_4
+
+[0382]
+MAPPING $item_plaster_wall3_4
+
+[02E9]
+MAPPING $item_tent_wall3_12
+
+[02E8]
+MAPPING $item_tent_wall3_11
+
+[I_WALL_TENT_3]
+MAPPING $item_tent_wall3_11
+
+[02E5]
+MAPPING $item_tent_wall3_8
+
+[02E4]
+MAPPING $item_tent_wall3_7
+
+[02E7]
+MAPPING $item_tent_wall3_10
+
+[02E6]
+MAPPING $item_tent_wall3_9
+
+[02E1]
+MAPPING $item_tent_wall3_4
+
+[02E0]
+MAPPING $item_tent_wall3_3
+
+[02E3]
+MAPPING $item_tent_wall3_6
+
+[02E2]
+MAPPING $item_tent_wall3_5
+
+[02EA]
+MAPPING $item_tent_wall3_13
+
+[02EC]
+MAPPING $item_tent_wall3_15
+
+[02EB]
+MAPPING $item_tent_wall3_14
+
+[055B]
+MAPPING $item_stone_roof_8
+
+[055C]
+MAPPING $item_stone_roof_9
+
+[055A]
+MAPPING $item_stone_roof_7
+
+[055F]
+MAPPING $item_stone_roof_12
+
+[055D]
+MAPPING $item_stone_roof_10
+
+[055E]
+MAPPING $item_stone_roof_11
+
+[07B1]
+MAPPING $item_cave_stairs_5
+
+[07B0]
+MAPPING $item_cave_stairs_4
+
+[07B2]
+MAPPING $item_cave_stairs_6
+
+[07BA]
+MAPPING $item_carpeted_stairs_1
+
+[I_CARPET_ROSTRUM]
+MAPPING $item_carpeted_stairs_1
+
+[07BC]
+MAPPING $item_carpeted_stairs_3
+
+[07BB]
+MAPPING $item_carpeted_stairs_2
+
+[0558]
+MAPPING $item_stone_roof_5
+
+[0559]
+MAPPING $item_stone_roof_6
+
+[0556]
+MAPPING $item_stone_roof_3
+
+[0557]
+MAPPING $item_stone_roof_4
+
+[0554]
+MAPPING $item_stone_roof_1
+
+[I_ROOF_STONE_2]
+MAPPING $item_stone_roof_1
+
+[0555]
+MAPPING $item_stone_roof_2
+
+[060B]
+MAPPING $item_tent_roof_13
+
+[060A]
+MAPPING $item_tent_roof_12
+
+[060F]
+MAPPING $item_tent_roof_17
+
+[060D]
+MAPPING $item_tent_roof_15
+
+[060E]
+MAPPING $item_tent_roof_16
+
+[020F]
+MAPPING $item_bamboo_wall1_1
+
+[I_WALL_BAMBOO]
+MAPPING $item_bamboo_wall1_1
+
+[0274]
+MAPPING $item_cave_wall1_25
+
+[01828]
+MAPPING $item_alchemical_floor_12
+
+[I_RUNE_ALCHEM_12]
+MAPPING $item_alchemical_floor_12
+
+[01824]
+MAPPING $item_alchemical_floor_8
+
+[I_RUNE_ALCHEM_8]
+MAPPING $item_alchemical_floor_8
+
+[01825]
+MAPPING $item_alchemical_floor_9
+
+[I_RUNE_ALCHEM_9]
+MAPPING $item_alchemical_floor_9
+
+[01826]
+MAPPING $item_alchemical_floor_10
+
+[I_RUNE_ALCHEM_10]
+MAPPING $item_alchemical_floor_10
+
+[01827]
+MAPPING $item_alchemical_floor_11
+
+[I_RUNE_ALCHEM_11]
+MAPPING $item_alchemical_floor_11
+
+[01820]
+MAPPING $item_alchemical_floor_4
+
+[I_RUNE_ALCHEM_4]
+MAPPING $item_alchemical_floor_4
+
+[01821]
+MAPPING $item_alchemical_floor_5
+
+[I_RUNE_ALCHEM_5]
+MAPPING $item_alchemical_floor_5
+
+[01822]
+MAPPING $item_alchemical_floor_6
+
+[I_RUNE_ALCHEM_6]
+MAPPING $item_alchemical_floor_6
+
+[01823]
+MAPPING $item_alchemical_floor_7
+
+[I_RUNE_ALCHEM_7]
+MAPPING $item_alchemical_floor_7
+
+[0736]
+MAPPING $item_stone_stairs1_3
+
+[0737]
+MAPPING $item_stone_stairs1_4
+
+[0734]
+MAPPING $item_wooden_stairs_21
+
+[0735]
+MAPPING $item_wooden_stairs_22
+
+[0732]
+MAPPING $item_wooden_stairs_19
+
+[0733]
+MAPPING $item_wooden_stairs_20
+
+[0730]
+MAPPING $item_wooden_stairs_17
+
+[0731]
+MAPPING $item_wooden_stairs_18
+
+[0270]
+MAPPING $item_cave_wall1_21
+
+[0738]
+MAPPING $item_wooden_stairs2_1
+
+[I_STAIRS_WOOD_2]
+MAPPING $item_wooden_stairs2_1
+
+[0739]
+MAPPING $item_wooden_stairs2_2
+
+[073F]
+MAPPING $item_wooden_stairs2_8
+
+[073D]
+MAPPING $item_wooden_stairs2_6
+
+[073E]
+MAPPING $item_wooden_stairs2_7
+
+[073B]
+MAPPING $item_wooden_stairs2_4
+
+[073C]
+MAPPING $item_wooden_stairs2_5
+
+[073A]
+MAPPING $item_wooden_stairs2_3
+
+[0602]
+MAPPING $item_tent_roof_4
+
+[0603]
+MAPPING $item_tent_roof_5
+
+[0600]
+MAPPING $item_tent_roof_2
+
+[0601]
+MAPPING $item_tent_roof_3
+
+[0606]
+MAPPING $item_tent_roof_8
+
+[0607]
+MAPPING $item_tent_roof_9
+
+[0604]
+MAPPING $item_tent_roof_6
+
+[0605]
+MAPPING $item_tent_roof_7
+
+[0608]
+MAPPING $item_tent_roof_10
+
+[0609]
+MAPPING $item_tent_roof_11
+
+[020C]
+MAPPING $item_plaster_wall2_14
+
+[020A]
+MAPPING $item_plaster_wall2_12
+
+[06ED]
+MAPPING $item_wooden_door_15
+
+[06EF]
+MAPPING $item_wooden_door_16
+
+[0772]
+MAPPING $item_sandstone_stairs1_10
+
+[0773]
+MAPPING $item_sandstone_stairs1_11
+
+[02BA]
+MAPPING $item_marble_wall2_41
+
+[02BB]
+MAPPING $item_marble_wall2_42
+
+[02BC]
+MAPPING $item_marble_wall2_43
+
+[02BD]
+MAPPING $item_marble_wall2_44
+
+[02BF]
+MAPPING $item_marble_wall2_46
+
+[05D6]
+MAPPING $item_palm_roof_20
+
+[05D1]
+MAPPING $item_palm_roof_16
+
+[0774]
+MAPPING $item_sandstone_stairs1_12
+
+[0775]
+MAPPING $item_sandstone_stairs1_13
+
+[02B8]
+MAPPING $item_marble_wall2_39
+
+[02B9]
+MAPPING $item_marble_wall2_40
+
+[02B0]
+MAPPING $item_marble_wall2_31
+
+[02B1]
+MAPPING $item_marble_wall2_32
+
+[02B2]
+MAPPING $item_marble_wall2_33
+
+[02B3]
+MAPPING $item_marble_wall2_34
+
+[02B4]
+MAPPING $item_marble_wall2_35
+
+[02B5]
+MAPPING $item_marble_wall2_36
+
+[02B6]
+MAPPING $item_marble_wall2_37
+
+[02B7]
+MAPPING $item_marble_wall2_38
+
+[0391]
+MAPPING $item_plaster_wall3_19
+
+[077B]
+MAPPING $item_sandstone_stairs1_19
+
+[077C]
+MAPPING $item_sandstone_stairs1_20
+
+[05DF]
+MAPPING $item_palm_roof_29
+
+[077F]
+MAPPING $item_sandstone_stairs1_23
+
+[05DC]
+MAPPING $item_palm_roof_26
+
+[05DB]
+MAPPING $item_palm_roof_25
+
+[067D]
+MAPPING $item_metal_door_3
+
+[06E5]
+MAPPING $item_wooden_door_13
+
+[I_DOOR_WOOD_3]
+MAPPING $item_wooden_door_13
+

@@ -1,0 +1,433 @@
+MULTIPLE
+[i_PLATEMAIL_DEFENSE_FEMALE]
+MAPPING $item_iron_plate_of_defense
+
+[i_PLATEMAIL_GUARDING_FEMALE]
+MAPPING $item_iron_plate_of_guarding
+
+[i_PLATEMAIL_HARDENING_FEMALE]
+MAPPING $item_iron_plate_of_hardening
+
+[i_PLATEMAIL_FORTIFICATION_FEMALE]
+MAPPING $item_iron_plate_of_fortification
+
+[i_PLATEMAIL_INVULNERABILITY_FEMALE]
+MAPPING $item_iron_plate_of_invulnerability
+
+[01C06]
+MAPPING $item_female_leather_armor
+
+[I_ARMOR_FEMALE_LEATHER]
+MAPPING $item_female_leather_armor
+
+[01C00]
+MAPPING $item_leather_shorts
+
+[I_ARMOR_FEMALE_SHORTS]
+MAPPING $item_leather_shorts
+
+[01C02]
+MAPPING $item_female_studded_leather
+
+[I_ARMOR_FEMALE_STUDDED]
+MAPPING $item_female_studded_leather
+
+[01C08]
+MAPPING $item_leather_skirt
+
+[I_ARMOR_FEMALE_SKIRT]
+MAPPING $item_leather_skirt
+
+[0144F]
+MAPPING $item_bone_chest
+
+[I_BONE_CHEST]
+MAPPING $item_bone_chest
+
+[i_PLATEMAIL_leggings_DEFENSE]
+MAPPING $item_iron_plate_leggings_of_defence
+
+[i_PLATEMAIL_leggings_GUARDING]
+MAPPING $item_iron_plate_leggings_of_guarding
+
+[i_PLATEMAIL_leggings_HARDENING]
+MAPPING $item_iron_plate_leggings_of_hardening
+
+[i_PLATEMAIL_leggings_FORTIFICATION]
+MAPPING $item_iron_plate_leggings_of_fortification
+
+[i_PLATEMAIL_leggings_INVULNERABILITY]
+MAPPING $item_iron_plate_leggings_of_invulnerability
+
+[0144E]
+MAPPING $item_bone_arms
+
+[I_BONE_ARMS]
+MAPPING $item_bone_arms
+
+[01F0B]
+MAPPING $item_orc_helm
+
+[I_HELM_ORC]
+MAPPING $item_orc_helm
+
+[i_CHAINMAIL_LEGGINGS_DEFENSE]
+MAPPING $item_iron_chain_legs_of_defence
+
+[i_CHAINMAIL_LEGGINGS_GUARDING]
+MAPPING $item_iron_chain_legs_of_guarding
+
+[i_CHAINMAIL_LEGGINGS_HARDENING]
+MAPPING $item_iron_chain_legs_of_hardening
+
+[i_CHAINMAIL_LEGGINGS_FORTIFICATION]
+MAPPING $item_iron_chain_legs_of_fortification
+
+[i_CHAINMAIL_LEGGINGS_INVULNERABILITY]
+MAPPING $item_iron_chain_legs_of_invulnerability
+
+[0140F]
+MAPPING $item_phoenix_helm
+
+[013DD]
+MAPPING $item_studded_leather_gloves
+
+[01DBA]
+MAPPING $item_leather_cap
+
+[01451]
+MAPPING $item_bone_helm
+
+[I_BONE_HELMET]
+MAPPING $item_bone_helm
+
+[01450]
+MAPPING $item_bone_gloves
+
+[I_BONE_GLOVES]
+MAPPING $item_bone_gloves
+
+[01452]
+MAPPING $item_bone_legs
+
+[I_BONE_LEGGINGS]
+MAPPING $item_bone_legs
+
+[013E2]
+MAPPING $item_studded_leather_tunic
+
+[i_PLATEMAIL_ARMS_DEFENSE]
+MAPPING $item_iron_plate_sleeves_of_defence
+
+[i_PLATEMAIL_ARMS_GUARDING]
+MAPPING $item_iron_plate_sleeves_of_guarding
+
+[i_PLATEMAIL_ARMS_HARDENING]
+MAPPING $item_iron_plate_sleeves_of_hardening
+
+[i_PLATEMAIL_ARMS_FORTIFICATION]
+MAPPING $item_iron_plate_sleeves_of_fortification
+
+[i_PLATEMAIL_ARMS_INVULNERABILITY]
+MAPPING $item_iron_plate_sleeves_of_invulnerability
+
+[i_PLATEMAIL_GORGET_DEFENSE]
+MAPPING $item_iron_plate_gorget_of_defence
+
+[i_PLATEMAIL_GORGET_GUARDING]
+MAPPING $item_iron_plate_gorget_of_guarding
+
+[i_PLATEMAIL_GORGET_HARDENING]
+MAPPING $item_iron_plate_gorget_of_hardening
+
+[i_PLATEMAIL_GORGET_FORTIFICATION]
+MAPPING $item_iron_plate_gorget_of_fortification
+
+[i_PLATEMAIL_GORGET_INVULNERABILITY]
+MAPPING $item_iron_plate_gorget_of_invulnerability
+
+[013E1]
+MAPPING $item_studded_leather_leggings
+
+[i_PLATEMAIL_GAUNTLETS_DEFENSE]
+MAPPING $item_iron_plate_gloves_of_defence
+
+[i_PLATEMAIL_GAUNTLETS_GUARDING]
+MAPPING $item_iron_plate_gloves_of_guarding
+
+[i_PLATEMAIL_GAUNTLETS_HARDENING]
+MAPPING $item_iron_plate_gloves_of_hardening
+
+[i_PLATEMAIL_GAUNTLETS_FORTIFICATION]
+MAPPING $item_iron_plate_gloves_of_fortification
+
+[i_PLATEMAIL_GAUNTLETS_INVULNERABILITY]
+MAPPING $item_iron_plate_gloves_of_invulnerability
+
+[i_PLATEMAIL_DEFENSE]
+MAPPING $item_iron_platemail_of_defence
+
+[i_PLATEMAIL_GUARDING]
+MAPPING $item_iron_platemail_of_guarding
+
+[i_PLATEMAIL_HARDENING]
+MAPPING $item_iron_plate_of_hardening
+
+[i_PLATEMAIL_FORTIFICATION]
+MAPPING $item_iron_platemail_of_fortification
+
+[i_PLATEMAIL_INVULNERABILITY]
+MAPPING $item_iron_platemail_of_invulnerability
+
+[i_CHAINMAIL_COIF_DEFENSE]
+MAPPING $item_iron_chain_coif_of_defence
+
+[i_CHAINMAIL_COIF_GUARDING]
+MAPPING $item_iron_chain_coif_of_guarding
+
+[i_CHAINMAIL_COIF_HARDENING]
+MAPPING $item_iron_chain_coif_of_hardening
+
+[i_CHAINMAIL_COIF_FORTIFICATION]
+MAPPING $item_iron_chain_coif_of_fortification
+
+[i_CHAINMAIL_COIF_INVULNERABILITY]
+MAPPING $item_iron_chain_coif_of_invulnerability
+
+[01B7A]
+MAPPING $item_wooden_shield
+
+[I_SHIELD_WOOD]
+MAPPING $item_wooden_shield
+
+[i_WOODEN_SHIELD_DEFENSE]
+MAPPING $item_iron_wooden_shield_of_defence
+
+[i_WOODEN_SHIELD_GUARDING]
+MAPPING $item_iron_wooden_shield_of_guarding
+
+[i_WOODEN_SHIELD_HARDENING]
+MAPPING $item_iron_wooden_shield_of_hardening
+
+[i_WOODEN_SHIELD_FORTIFICATION]
+MAPPING $item_iron_wooden_shield_of_fortification
+
+[i_WOODEN_SHIELD_INVULNERABILITY]
+MAPPING $item_iron_wooden_shield_of_invulnerablity
+
+[i_METAL_SHIELD_DEFENSE]
+MAPPING $item_iron_metal_shield_of_defence
+
+[i_METAL_SHIELD_GUARDING]
+MAPPING $item_iron_metal_shield_of_guarding
+
+[i_METAL_SHIELD_HARDENING]
+MAPPING $item_iron_metal_shield_of_hardening
+
+[i_METAL_SHIELD_FORTIFICATION]
+MAPPING $item_iron_metal_shield_of_fortification
+
+[i_METAL_SHIELD_INVULNERABILITY]
+MAPPING $item_iron_metal_shield_of_invulnerablity
+
+[i_WOODEN_KITE_SHIELD_DEFENSE]
+MAPPING $item_iron_wooden_kite_shield_of_defence
+
+[i_WOODEN_KITE_SHIELD_GUARDING]
+MAPPING $item_iron_wooden_kite_shield_of_guarding
+
+[i_WOODEN_KITE_SHIELD_HARDENING]
+MAPPING $item_iron_wooden_kite_shield_of_hardening
+
+[i_WOODEN_KITE_SHIELD_FORTIFICATION]
+MAPPING $item_iron_wooden_kite_shield_of_fortification
+
+[i_WOODEN_KITE_SHIELD_INVULNERABILITY]
+MAPPING $item_iron_wooden_kite_shield_of_invulnerablity
+
+[i_BUCKLER_SHIELD_DEFENSE]
+MAPPING $item_iron_buckler_of_defence
+
+[i_BUCKLER_SHIELD_GUARDING]
+MAPPING $item_iron_buckler_of_guarding
+
+[i_BUCKLER_SHIELD_HARDENING]
+MAPPING $item_iron_buckler_of_hardening
+
+[i_BUCKLER_SHIELD_FORTIFICATION]
+MAPPING $item_iron_buckler_of_fortification
+
+[i_BUCKLER_SHIELD_INVULNERABILITY]
+MAPPING $item_iron_buckler_of_invulnerablity
+
+[i_BRONZE_SHIELD_DEFENSE]
+MAPPING $item_iron_bronze_shield_of_defence
+
+[i_BRONZE_SHIELD_GUARDING]
+MAPPING $item_iron_bronze_shield_of_guarding
+
+[i_BRONZE_SHIELD_HARDENING]
+MAPPING $item_iron_bronze_shield_of_hardening
+
+[i_BRONZE_SHIELD_FORTIFICATION]
+MAPPING $item_iron_bronze_shield_of_fortification
+
+[i_BRONZE_SHIELD_INVULNERABILITY]
+MAPPING $item_iron_bronze_shield_of_invulnerablity
+
+[i_METAL_KITE_SHIELD_DEFENSE]
+MAPPING $item_iron_kite_shield_of_defence
+
+[i_METAL_KITE_SHIELD_GUARDING]
+MAPPING $item_iron_kite_shield_of_guarding
+
+[i_METAL_KITE_SHIELD_HARDENING]
+MAPPING $item_iron_kite_shield_of_hardening
+
+[i_METAL_KITE_SHIELD_FORTIFICATION]
+MAPPING $item_iron_kite_shield_of_fortification
+
+[i_METAL_KITE_SHIELD_INVULNERABILITY]
+MAPPING $item_iron_kite_shield_of_invulnerablity
+
+[i_HEATER_SHIELD_DEFENSE]
+MAPPING $item_iron_heater_sheild_of_defence
+
+[i_HEATER_SHIELD_GUARDING]
+MAPPING $item_iron_heater_sheild_of_guarding
+
+[i_HEATER_SHIELD_HARDENING]
+MAPPING $item_iron_heater_sheild_of_hardening
+
+[i_HEATER_SHIELD_FORTIFICATION]
+MAPPING $item_iron_heater_sheild_of_fortification
+
+[i_HEATER_SHIELD_INVULNERABILITY]
+MAPPING $item_iron_heater_sheild_of_invulnerablity
+
+[01547]
+MAPPING $item_deer_mask
+
+[I_MASK_DEER]
+MAPPING $item_deer_mask
+
+[013C7]
+MAPPING $item_leather_gorget
+
+[I_LEATHER_GORGET]
+MAPPING $item_leather_gorget
+
+[01545]
+MAPPING $item_bear_mask
+
+[I_MASK_BEAR]
+MAPPING $item_bear_mask
+
+[01711]
+MAPPING $item_thigh_boots
+
+[I_BOOTS_THIGH]
+MAPPING $item_thigh_boots
+
+[013CD]
+MAPPING $item_leather_sleeves
+
+[013CE]
+MAPPING $item_leather_gloves
+
+[0141C]
+MAPPING $item_orc_mask
+
+[i_platemail_HELM_DEFENSE]
+MAPPING $item_iron_plate_helm_of_defence
+
+[i_platemail_HELM_GUARDING]
+MAPPING $item_iron_plate_helm_of_guarding
+
+[i_platemail_HELM_HARDENING]
+MAPPING $item_iron_plate_helm_of_hardening
+
+[i_platemail_HELM_FORTIFICATION]
+MAPPING $item_iron_plate_helm_of_fortification
+
+[i_platemail_HELM_INVULNERABILITY]
+MAPPING $item_iron_plate_helm_of_invulnerability
+
+[01549]
+MAPPING $item_tribal_mask
+
+[I_MASK_BLUE]
+MAPPING $item_tribal_mask
+
+[0154B]
+MAPPING $item_tribal_mask_1
+
+[I_MASK_TRIBAL_RED]
+MAPPING $item_tribal_mask_1
+
+[0170B]
+MAPPING $item_boots
+
+[I_BOOTS_CALF]
+MAPPING $item_boots
+
+[0170D]
+MAPPING $item_sandles
+
+[I_SANDALS]
+MAPPING $item_sandles
+
+[0170F]
+MAPPING $item_shoes
+
+[I_SHOES_PLAIN]
+MAPPING $item_shoes
+
+[013D3]
+MAPPING $item_leather_tunic
+
+[013D2]
+MAPPING $item_leather_leggings
+
+[013D4]
+MAPPING $item_studded_leather_sleeves
+
+[I_STUDDED_SLEEVES]
+MAPPING $item_studded_leather_sleeves
+
+[013D6]
+MAPPING $item_studded_leather_gorget
+
+[I_STUDDED_GORGET]
+MAPPING $item_studded_leather_gorget
+
+[i_CHAINMAIL_TUNIC_DEFENSE]
+MAPPING $item_iron_chainmail_of_defence
+
+[i_CHAINMAIL_TUNIC_GUARDING]
+MAPPING $item_iron_chainmail_of_guarding
+
+[i_CHAINMAIL_TUNIC_HARDENING]
+MAPPING $item_iron_chainmail_of_hardening
+
+[i_CHAINMAIL_TUNIC_FORTIFICATION]
+MAPPING $item_iron_chainmail_of_fortification
+
+[i_CHAINMAIL_TUNIC_INVULNERABILITY]
+MAPPING $item_iron_chainmail_of_invulnerability
+
+[01544]
+MAPPING $item_skullcap
+
+[01C0A]
+MAPPING $item_leather_bustier
+
+[I_ARMOR_FEMALE_BUSTIER]
+MAPPING $item_leather_bustier
+
+[01C0C]
+MAPPING $item_studded_leather_bustier
+
+[I_ARMOR_FEMALE_BUSTIER_STUDDED]
+MAPPING $item_studded_leather_bustier
+
