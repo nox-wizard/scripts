@@ -100,9 +100,7 @@ public _doLeatherPiece( const s, const hide ) {
 	chr_sound( chr, 0x0248 );
 
 	new bp = itm_getCharBackPack( chr );
-	new leather = itm_createByDef( leathers[type] );
-	itm_setProperty( leather, IP_AMOUNT, _, 2 );
-	itm_contPileItem( bp, leather );
+	new leather = itm_createByDef( leathers[type], bp, 2 );
 	itm_reduceAmount( hide, 1 );
 	
 }
