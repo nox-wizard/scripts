@@ -65,6 +65,7 @@ popup,100,cmd_popup
 possess,100,cmd_possess
 racelang,0,cmd_racelang
 regioncp,150,cmd_regioncp
+reload,255,cmd_reload
 resend,50,cmd_resend
 respawn,150,cmd_respawn
 resurrect,100,cmd_resurrect
@@ -77,6 +78,7 @@ setskills,200,cmd_setskills
 setstats,200,cmd_setstats
 settype,150,cmd_settype
 showbank,200,cmd_showbank
+shutdown,200,cmd_shutdown
 skills,0,cmd_skills
 solvepage,100,cmd_solvepage
 spawnkill,150,cmd_spawnkill
@@ -85,8 +87,9 @@ stats,0,cmd_stats
 summon,100,cmd_summon
 sysm,100,cmd_sysm
 tile,150,cmd_tile
+timespeed,255,cmd_timespeed
 tweak,100,cmd_tweak
 unjail,200,cmd_unjail
 where,0,cmd_where
 wipe,100,cmd_wipe
-recompile_small,255,cmd_recompile_small
+

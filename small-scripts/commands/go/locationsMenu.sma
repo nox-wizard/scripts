@@ -1,5 +1,4 @@
 #include "small-scripts/API/gui/defines.sma"
-#include "small-scripts/commands/go/locations.sma"
 
 public locationsMenu(const chr, const object)
 {
@@ -8,7 +7,7 @@ public locationsMenu(const chr, const object)
 	#endif
 	
 	cursor_setProperty(CRP_TAB,50);
-	createListMenu(0,0,30,30,NUM_LOCATIONS,"LOCATIONS LIST","drawLocationsMenuLine","locationsMenuCback");	
+	createListMenu(0,0,30,30,NUM_LOCATIONS,"Locations list","drawLocationsMenuLine","locationsMenuCback");	
 	cursor_restoreDefaults();
 	menu_storeValue(0,object);
 	menu_show(chr);
@@ -16,7 +15,12 @@ public locationsMenu(const chr, const object)
 
 public drawLocationsMenuLine(page,line,col,i)
 {
+	new text[10];
+	sprintf(text,"%d ",i);
+	menu_addText(text);
+	cursor_right(strlen(text));
 	menu_addLabeledButton(i + 1,__locations[i][__locName]);
+	cursor_back();
 }
 
 public locationsMenuCback(menu,chr,loc)

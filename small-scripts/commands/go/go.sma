@@ -1,3 +1,17 @@
+
+static filename[] = "small-scripts/commands/go/locations.xss";
+enum locationStruct
+{
+	__locX,
+	__locY,
+	__locZ,
+	__locName: 50
+}      
+
+#define MAX_LOCATIONS 200
+new NUM_LOCATIONS
+new __locations[MAX_LOCATIONS][locationStruct];
+
 /*!
 \defgroup script_commands_go 'go
 \ingroup script_commands
@@ -90,21 +104,67 @@ public cmd_go(const chr)
 	
 			chr_getPosition(chr2,x,y,z);
 		}
-		else
-		{//'go "name"
-	
-			new name[50];
-			chr_getSpeech(chr,name)
-			new chr2 = getOnlineCharFromName(name);
-	
-			if(!isChar(chr2))
-			{
-				chr_message(chr,_,msg_commandsDef[5],name);
+		else if(!strcmp(__cmdParams[0],"d"))
+			{	
+				if(!isStrInt(__cmdParams[1]))
+					return;
+				new l = str2Int(__cmdParams[1]);
+				
+				if(l < 0 || l >= NUM_LOCATIONS)
+					return;
+					
+				__locations[l][__locX] = -1;
+				chr_message(chr,_,msg_commandsDef[269],l);
+				
+				cmd_go_writeFile();
+				NUM_LOCATIONS = 0;
+				xss_scanFile(filename,"cmd_go_scan");
 				return;
+		
 			}
-	
-			chr_getPosition(chr2,x,y,z);
-		}
+			else if(!strcmp(__cmdParams[0],"m"))
+				{
+					if(NUM_LOCATIONS == MAX_LOCATIONS)
+					{
+						chr_message(chr,_,msg_commandsDef[267],MAX_LOCATIONS);
+						return;
+					}
+					
+					new temp[5],speech[100];
+					chr_getSpeech(chr,speech);
+					
+					str2Token(speech,temp,0,speech,0);
+					trim(speech);
+					
+					chr_getPosition(chr,x,y,z);
+					
+					__locations[NUM_LOCATIONS][__locX] = x;
+					__locations[NUM_LOCATIONS][__locY] = y;
+					__locations[NUM_LOCATIONS][__locZ] = y;
+					strcpy(__locations[NUM_LOCATIONS][__locName],speech);
+					
+					chr_message(chr,_,msg_commandsDef[268],NUM_LOCATIONS,x,y,z,speech);
+					
+					NUM_LOCATIONS++;
+					
+					cmd_go_writeFile();
+					return;
+				}
+				else
+				{//'go "name"
+		
+					new name[50];
+					chr_getSpeech(chr,name)
+					new chr2 = getOnlineCharFromName(name);
+			
+					if(!isChar(chr2))
+					{
+						chr_message(chr,_,msg_commandsDef[5],name);
+						return;
+					}
+			
+					chr_getPosition(chr2,x,y,z);
+				}
 
 		//move char to the target
 		if(x < 0 || y < 0)
@@ -126,46 +186,126 @@ public cmd_go(const chr)
 \brief
 \return nothing
 */
-/*
-public loadLocations()
+
+public loadGoLocations()
 {
-	log_message("Loading locations.xss for 'go command ...");
-
-	xss_parseFile(__locationsFile,"LOCATION","loadXssEntry");
-
-	new error,i = 0, section = 0,name[50];
-	while(i < NUM_LOCATIONS)
+	NUM_LOCATIONS = 0;
+	log_message("Loading locations for 'go command ...");
+	if(xss_scanFile(filename,"cmd_go_scan")==INVALID)
 	{
-		section++;
-
-		__locations[i][__locX] = xss_getProperty(__locationsFile,"LOCATION",section,"X");
-		error = xss_getError(); 
-		if(error == XSS_OK)
-		{
-			strcpy(__locations[i][__locName],name);
-			xss_getStrProperty(__locationsFile,"LOCATION",section,"//",__locations[i][__locName]);
-			__locations[i][__locY] = xss_getProperty(__locationsFile,"LOCATION",section,"Y");
-			__locations[i][__locZ] = xss_getProperty(__locationsFile,"LOCATION",section,"Z");
-	
-			i++;
-		}
-		else
-		{ 
-			xss_getErrorMsg();
-			if(error != XSS_SECTION_NOT_FOUND) return;
-		}
+		log_error("Unable toread from %s",filename);
+		return;
 	}
-
-	log_message("%d locations loaded",i);
-	printf("^n");
+	
+	log_message("%d locations loaded^n",NUM_LOCATIONS);
+	
 }
 
-public loadXssEntry(scriptID,value)
+public cmd_go_scan(file,line)
 {
-	static idx,lastScriptID;
-
-	new prop[20];
-	xss_getCurrentProp(prop[]);
+	if(strcmp(currentXssSectionType,"LOCATION"))
+	{
+		skipXssSection = true;
+		return;
+	}
+	
+	if(currentXssSection >= MAX_LOCATIONS)
+	{
+		log_warning("%s(%d): there are only %d available locations",filename,line,MAX_LOCATIONS);
+		skipXssSection = true;
+		return;
+	}
+	
+	new loc = currentXssSection;
+	
+	if(!strcmp(currentXssCommand,"NAME"))
+	{
+		strcpy(__locations[loc][__locName],currentXssValue)
+		NUM_LOCATIONS++;
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"X"))
+	{
+		if(!isStrInt(currentXssValue))
+		{
+			log_error("%s(%d): must be an integer",filename,line);
+			skipXssSection = true;
+			return;
+		}
+		
+		__locations[loc][__locX] = str2Int(currentXssValue);
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"Y"))
+	{
+		if(!isStrInt(currentXssValue))
+		{
+			log_error("%s(%d): must be an integer",filename,line);
+			skipXssSection = true;
+			return;
+		}
+		
+		__locations[loc][__locY] = str2Int(currentXssValue);
+		return;
+	}
+	
+	if(!strcmp(currentXssCommand,"Z"))
+	{
+		if(!isStrInt(currentXssValue))
+		{
+			log_error("%s(%d): must be an integer",filename,line);
+			skipXssSection = true;
+			return;
+		}
+		
+		__locations[loc][__locZ] = str2Int(currentXssValue);
+		return;
+	}
+	
+	log_warning("%s(%d): Unrecognized command '%s'",filename,line,currentXssCommand);
 }
-*/
+
+static cmd_go_writeFile()
+{
+	new f = file_open(filename,"w+");
+	
+	if(f == INVALID)
+	{
+		log_error("Unable to write %s",filename);
+		return;
+	}
+	
+	new buffer[100]
+	new d;
+	for(new l = 0; l < NUM_LOCATIONS; l++)
+	{
+		if(__locations[l][__locX] == -1)
+		{
+			d++;
+			continue;
+		}
+		
+		sprintf(buffer,"SECTION LOCATION %d^n{^n",l - d)
+		file_write(f,buffer);
+		
+		sprintf(buffer,"^tNAME %s^n",__locations[l - d][__locName])
+		file_write(f,buffer);
+		
+		sprintf(buffer,"^tX %d^n",__locations[l - d][__locX])
+		file_write(f,buffer);
+		
+		sprintf(buffer,"^tY %d^n",__locations[l - d][__locY])
+		file_write(f,buffer);
+		
+		sprintf(buffer,"^tZ %d^n",__locations[l - d][__locZ])
+		file_write(f,buffer);
+		
+		file_write(f,"}^n^n");
+	}
+	
+	file_write(f,"//EOF: leave this line at the end of the file");
+	file_close(f);
+}
 /*! }@ */

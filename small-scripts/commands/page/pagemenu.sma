@@ -38,7 +38,7 @@ public drawPageListMenu(const solver, const chr)
 		{
 			log_error("There was an error reading the GM page list");
 			chr_message(solver,_,"There was an error reading the GM page list");
-			return;
+			return 1;
 		}
 
 	if(set_size(s) == 0)

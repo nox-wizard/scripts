@@ -571,7 +571,7 @@ public msg_api_partyDef[NUM_api_partySENT][]={
 "You notify them that you do not wish to join the party."
 };
 
-const NUM_commandsSENT = 267;
+const NUM_commandsSENT = 270;
 public msg_commandsDef[NUM_commandsSENT][]={
 "No other players connected",
 "Users Online : ",
@@ -839,5 +839,8 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "You already have %d unanswered pages",
 "There are no posts in list",
 "Page %d solved",
-"All pages solved"
+"All pages solved",
+"There are only %d available locations",
+"Location %d stored - (%d,%d,%d) %s",
+"Location %d deleted" //270
 };

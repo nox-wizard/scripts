@@ -1,10 +1,23 @@
-#include "small-scripts/commands/help/constants.sma"
 /*!
 \defgroup script_command_tile 'tile
 \ingroup script_commands
 
 @{
 */
+
+
+static helpFile[] = "small-scripts/translations/helpTopics.txt";
+
+new helpResourceMap = INVALID;
+#define NUM_HELP_TOPICS 100
+static NUM_LOADED_TOPICS = 0;
+enum helpTopicStruct
+{
+	__helpTopic: 20,
+	__helpText: 512
+}
+
+static helpTopics[NUM_HELP_TOPICS][helpTopicStruct];
 
 /*!
 \author Fax
@@ -31,21 +44,16 @@ public cmd_help(const chr)
 		return;
 	}
 
-	new speech[200],topic[200],temp[20];
+	new topic[200];
 
-	chr_getProperty(chr,CP_STR_SPEECH,0,speech);
-	str2Token(speech,temp,0,topic,0);
-
+	chr_getSpeech(chr,topic);
 	trim(topic);
-
-	for(new i; i < NUM_LOADED_TOPICS; i++)
-		if(!strcmp(helpTopics[i][__helpTopic],topic))
-		{
-			cmd_help_showTopic(INVALID,chr,i + 1);
-			return;
-		}
-
-	popupMenu(chr,topic,"Help is not available for that topic.^nYou can ask the staff to write it");
+	new topicIdx = getResourceStringValue(helpResourceMap,topic);
+	
+	if(topicIdx >= 0)
+		cmd_help_showTopic(INVALID,chr,topicIdx);
+	else
+		popupMenu(chr,topic,"Help is not available for that topic.^nYou can ask the staff to write it");
 }
 
 public cmd_help_showTopicList(chr)
@@ -69,14 +77,16 @@ public cmd_help_showTopic(menu,chr,topic)
 public loadHelpTopics()
 {
 	new file = file_open(helpFile,"r");
-
+	helpResourceMap = createResourceMap(RESOURCEMAP_STRING);
+	printf("help map: %d^n",helpResourceMap);
+	
 	if(file == INVALID)
 	{
 		log_error("Unable to open %s, help won't work",helpFile);
 		return;
 	}
 
-	log_message("^t->Loading help topics for 'help command...");
+	log_message("Loading topics for 'help command...");
 
 	new buffer[200],cmd[50],i;
 	for(i = 0; i < NUM_HELP_TOPICS; i++)
@@ -92,8 +102,12 @@ public loadHelpTopics()
 
 		trim(buffer);
 		strcpy(helpTopics[i][__helpTopic],buffer);
-
+		
+		setResourceStringValue(helpResourceMap,i,buffer);
+		//printf("%d - %s^n",getResourceStringValue(helpResourceMap,buffer),buffer);
+		
 		//seek TEXT command
+		
 		while(strcmp(cmd,"TEXT"))
 		{
 			file_read(file,buffer);
@@ -111,9 +125,9 @@ public loadHelpTopics()
 	}
 	
 	NUM_LOADED_TOPICS = i;
-	log_message("^t->%d help topics loaded",NUM_LOADED_TOPICS);
+	log_message("%d help topics loaded^n",NUM_LOADED_TOPICS);
 	if(!file_eof(file))
-		log_warning("helpTopics[][] is undersized, increas it's size in small-scripts/commands/help/constant.sma",i);
+		log_warning("helpTopics[][] is undersized, increas it's size in small-scripts/commands/help/constant.sma^n",i);
 	
 	file_close(file);
 }

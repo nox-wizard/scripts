@@ -96,7 +96,7 @@ native world_save();
 
 
 /*!
-\author Fax
+\author Stonedz
 \fn setLightLevel(const level)
 \param level: light level
 \since 0.82
@@ -108,3 +108,78 @@ light level is 0 (brightest) to 15 (darkest), -1 enables day/night cycle
 native setLightLevel(const level);
 
 native recompileSmall();
+
+/*!
+\author Stonedz
+\fn reload_accounts()
+\since 0.82
+\brief reloads accounts
+
+reloads accounts.cfg file and prints an info message in console but none in the client, this should be easily odne in small.
+\return nothing
+*/
+native reload_accounts();
+
+
+/*!
+\author Stonedz
+\fn reload_scripts()
+\since 0.82
+\brief reloads scripts
+
+reloads XSS scripts and prints an info message in console but none in the client, this should be easily odne in small.
+\return nothing
+*/
+native reload_scripts();
+
+
+/*!
+\author Stonedz
+\fn reload_commands()
+\since 0.82
+\brief reloads commands
+reloads command.txt directives into command Map and prints a message 
+into console but none in the client.
+\return nothing
+*/
+native reload_commands();
+
+/*!
+\author Stonedz
+\fn shutdown(seconds, optional_message[]="")
+\param seconds: shutdown delay
+\param message[]: optional message
+\since 0.82
+\brief shuts down the server
+
+shuts down the server in "seconds" seconds and prints a custom message 
+"The server will shutdown in X minutes and Y seconds." in client and console, 
+if seconds==0 any prvious shoutdown procedure will be stopped and a 
+custom message will be print in client and in console. 
+If optional_message is specified after the custom message will be 
+printed in client the replacing the standard one.
+
+\return nothing
+*/
+native shutdown(seconds, optional_message[]="");
+
+/*!
+\author Stonedz
+\fn setSecondsPerUoMinute(seconds)
+\param seconds: number of seconds
+\since 0.82
+\brief sets ingame time speed
+sets the real seconds for UO minutes, 
+this value will be saved on server.cfg at first save.
+\return nothing
+*/ 
+native setSecondsPerUoMinute(seconds);
+
+ /*!
+\author Stonedz
+\fn garbageCollection()
+\since 0.82
+\brief perform garbage collection and prints a message in console.
+\return nothing
+*/
+native garbageCollection();

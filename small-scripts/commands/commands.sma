@@ -46,6 +46,8 @@
 #include "small-scripts/commands/posttype.sma"
 #include "small-scripts/commands/racelang.sma"
 #include "small-scripts/commands/regioncp.sma"
+#include "small-scripts/commands/reload.sma"
+//#include "small-scripts/commands/reloadsmall.sma" removed
 #include "small-scripts/commands/resend.sma"
 #include "small-scripts/commands/respawn.sma"
 #include "small-scripts/commands/resurrect.sma"
@@ -57,6 +59,7 @@
 #include "small-scripts/commands/setpriv.sma"
 #include "small-scripts/commands/settype.sma"
 #include "small-scripts/commands/showbank.sma"
+#include "small-scripts/commands/shutdown.sma"
 #include "small-scripts/commands/skills/skills.sma"
 #include "small-scripts/commands/skills/setskills.sma"
 #include "small-scripts/commands/page/solvepage.sma"
@@ -71,7 +74,6 @@
 #include "small-scripts/commands/unjail.sma"
 #include "small-scripts/commands/where.sma"
 #include "small-scripts/commands/wipe.sma"
-#include "small-scripts/commands/reloadsmall.sma"
 
 /** \defgroup script_commands_system system functions
  *  \ingroup script_commands
@@ -138,6 +140,9 @@ public initCommandSystem()
 	
 	//setup 'add command
 	loadAddMenu();
+	
+	//setup 'go command
+	loadGoLocations();
 
 	log_message("Command system startup completed^n");
 }

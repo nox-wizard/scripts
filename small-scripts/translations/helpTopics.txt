@@ -135,6 +135,11 @@ Calls a Small public function
 syntax: 'func function [param0][param1][param2][param3][param4]
 Parameters can only be integers
 
+TOPIC 'gcollect
+TEXT
+Collects garbage and deletes it
+syntax: 'gcollect
+
 TOPIC 'gmopen
 TEXT
 Opens a character's backpack
@@ -148,6 +153,8 @@ syntax: 'go [x y z / x y / n / name / "s" serial]
 'go n : go to n-th connected player
 'go name : go to named character
 'go "s" serial: go to character with that serial
+'go "m" name: mark location and give it a name
+'go "d" n: delete location n
 
 TOPIC 'gy
 TEXT
@@ -270,6 +277,13 @@ sysntax: 'possess
 to switch back possession use 'possess again 
 and target yourself
 
+
+TOPIC 'reload
+TEXT
+Reloads commands/XSS/scripts/small
+syntax: 'reload "commands"/"XSS"/"scripts"
+
+
 TOPIC 'regioncp
 TEXT
 Opens the region control panel
@@ -324,6 +338,14 @@ Open character's bank box
 syntax: 'showbank ["gold"]
 'showbank gold : opens gold-only bank
 
+TOPIC 'shutdown
+TEXT
+Shuts the server down
+syntax: 'shutdown [seconds]
+seconds: shutdown delay,in seconds
+'shutdown: shutdown in 1 minute
+'shutdown 0: block current shutdown.
+
 TOPIC 'skills
 TEXT
 Shows character's skills
@@ -360,6 +382,12 @@ TOPIC 'tile
 TEXT
 Tiles an item along x y z axis
 syntax: 'tile [nX nY] [nZ zScale]
+
+TOPIC 'timespeed
+TEXT
+Sets howlong is an UO minute, in real seconds
+syntax: 'timespeed seconds
+seconds: the number of real seconds that form an UO minute
 
 TOPIC 'tweak
 TEXT
