@@ -36,6 +36,9 @@ enum
 	P_RINGMAIL,
 	P_STUDDED,
 	P_LEATHER,
+	P_BONE,
+	P_FEMALE,
+	P_HELMS,
 	
 	P_BUILDING_MENU,
 	P_NPC_MENU,
@@ -65,20 +68,21 @@ static L_MARG;
 
 public addMenu(const chr)
 {
+	
 	//BTN_UP = 0x09aa;
 	//BTN_DOWN = 0x09a9;
-	
+	                  
 	//BTN_UP = 0x0845;
 	//BTN_DOWN = 0x0846;
-	
-	BTN_UP = 0x29F4;
+	                  
+	BTN_UP = 0x29F4;  
 	BTN_DOWN = 0x29F6;
 	
 	PBTN_UP = 0x0827;
 	PBTN_DOWN = 0x0827;
 	
 	L_MARG = 4*COL;
-
+        
 	PBTNW = 20;
 	BTNW = 15;
 	PICW = 40;
@@ -201,7 +205,9 @@ public addMenu(const chr)
 	drawPage(menu,P_SHARD_MENU);
 	
 	gui_show(menu,chr);
+
 }
+
 
 public drawPage(const menu, const page)
 {
@@ -260,7 +266,7 @@ case P_MAGIC_MENU:
 	
 	for(new i = 0; i < NUM_MAGICAL_ITEMS; i++)
 	{
-		gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(magicalItemsDefs[i]));
+		gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(magicalItems[i][__def]));
 		gui_addTilePic(menu,x + BTNW,y,magicalItems[i][__ID]);
 		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,magicalItems[i][__name]);
 		
@@ -269,47 +275,12 @@ case P_MAGIC_MENU:
 		
 	}
 	
-	gui_addPage(menu,P_REAGENTS);
-	drawSubPage(menu,P_REAGENTS);
+	for(new i = P_REAGENTS; i <= P_SCROLLS8; i++)
+	{
+		gui_addPage(menu,i);
+		drawSubPage(menu,i);
+	}
 	
-	gui_addPage(menu,P_REAGENTS2);
-	drawSubPage(menu,P_REAGENTS2);
-	
-	gui_addPage(menu,P_BOTTLES);
-	drawSubPage(menu,P_BOTTLES);
-	
-	gui_addPage(menu,P_POTIONS);
-	drawSubPage(menu,P_POTIONS);
-	
-	gui_addPage(menu,P_WANDS);
-	drawSubPage(menu,P_WANDS);
-	
-	gui_addPage(menu,P_GATES);
-	drawSubPage(menu,P_GATES);
-	
-	gui_addPage(menu,P_SCROLLS1);
-	drawSubPage(menu,P_SCROLLS1);
-	
-	gui_addPage(menu,P_SCROLLS2);
-	drawSubPage(menu,P_SCROLLS2);
-	
-	gui_addPage(menu,P_SCROLLS3);
-	drawSubPage(menu,P_SCROLLS3);
-	
-	gui_addPage(menu,P_SCROLLS4);
-	drawSubPage(menu,P_SCROLLS4);
-	
-	gui_addPage(menu,P_SCROLLS5);
-	drawSubPage(menu,P_SCROLLS5);
-	
-	gui_addPage(menu,P_SCROLLS6);
-	drawSubPage(menu,P_SCROLLS6);
-	
-	gui_addPage(menu,P_SCROLLS7);
-	drawSubPage(menu,P_SCROLLS7);
-	
-	gui_addPage(menu,P_SCROLLS8);
-	drawSubPage(menu,P_SCROLLS8);
 }//end of case P_MAGIC
 
 case P_COMBAT_MENU:
@@ -343,26 +314,28 @@ case P_COMBAT_MENU:
 	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_LEATHER);
 	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Leather");
 	
-	gui_addPage(menu,P_PLATEMAIL);
-	drawSubPage(menu,P_PLATEMAIL);
+	x = L_MARG + (t++*tab)*COL;
+	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_BONE);
+	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Bone");
+		
+	t = 0;
+	y += ROW;
 	
-	gui_addPage(menu,P_CHAINMAIL);
-	drawSubPage(menu,P_CHAINMAIL);
+	x = L_MARG + (t++*tab)*COL;
+	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_FEMALE);
+	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Female");
 	
-	gui_addPage(menu,P_RINGMAIL);
-	drawSubPage(menu,P_RINGMAIL);
+	x = L_MARG + (t++*tab)*COL;
+	gui_addPageButton(menu,x,y,PBTN_UP,PBTN_DOWN,P_HELMS);
+	gui_addText(menu,PBTNW + x,y,TXT_COLOR ,"Helms");
 	
-	gui_addPage(menu,P_STUDDED);
-	drawSubPage(menu,P_STUDDED);
+	for(new i = P_PLATEMAIL; i <= P_HELMS; i++)
+	{
+		gui_addPage(menu,i);
+		drawSubPage(menu,i);
+	}
 	
-	gui_addPage(menu,P_LEATHER);
-	drawSubPage(menu,P_LEATHER);
-	
-    /*
-    < Enchanted Weapons
-    OPENMENU $menu_enchanted_weapons
-    < Enchanted Weapons 2
-    OPENMENU $menu_enchanted_weapons_2*/
+   
 }
 	 
 } //end of switch(page)
@@ -385,7 +358,7 @@ switch(page)
 		{
 			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
 			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__reagentsDefs[i]));
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__reagents[i][__def]));
 			gui_addTilePic(menu,x + BTNW,y,__reagents[i][__ID]);
 			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__reagents[i][__name]);
 		}
@@ -397,7 +370,7 @@ switch(page)
 		{
 			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
 			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__reagents2Defs[i]));
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__reagents2[i][__def]));
 			gui_addTilePic(menu,x + BTNW,y,__reagents2[i][__ID]);
 			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__reagents2[i][__name]);
 		}
@@ -409,7 +382,7 @@ switch(page)
 		{
 			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
 			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__bottlesDefs[i]));
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__bottles[i][__def]));
 			gui_addTilePic(menu,x + BTNW,y,__bottles[i][__ID]);
 			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__bottles[i][__name]);
 		}
@@ -421,7 +394,7 @@ switch(page)
 		{
 			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
 			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__potionsDefs[i]));
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__potions[i][__def]));
 			gui_addTilePic(menu,x + BTNW,y,__potions[i][__ID]);
 			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__potions[i][__name]);
 		}
@@ -433,7 +406,7 @@ switch(page)
 		{
 			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
 			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__wandsDefs[i]));
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__wands[i][__def]));
 			gui_addTilePic(menu,x + BTNW,y,__wands[i][__ID]);
 			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__wands[i][__name]);
 		}
@@ -445,105 +418,22 @@ switch(page)
 		{
 			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
 			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__gatesDefs[i]));
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__gates[i][__def]));
 			gui_addTilePic(menu,x + BTNW,y,__gates[i][__ID]);
 			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__gates[i][__name]);
 		}
 	}
 	
-	case P_SCROLLS1:
+	case P_SCROLLS1..P_SCROLLS8:
 	{
-		for(new i = 0; i < NUM_SCROLLS1; i++, y+= ROW)
+		new startscroll = (page - P_SCROLLS1)*SCROLLS_PER_CIRCLE;
+		new endscroll = startscroll + SCROLLS_PER_CIRCLE; 
+		for(new i = startscroll; i < endscroll; i++, y+= ROW)
 		{
-			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls1Defs[i]));
-			gui_addTilePic(menu,x + BTNW,y,__scrolls1[i][__ID]);
-			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls1[i][__name]);
-		}
-	}
-	
-	case P_SCROLLS2:
-	{
-		for(new i = 0; i < NUM_SCROLLS2; i++, y+= ROW)
-		{
-			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls2Defs[i]));
-			gui_addTilePic(menu,x + BTNW,y,__scrolls2[i][__ID]);
-			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls2[i][__name]);
-		}
-	}
-	
-	case P_SCROLLS3:
-	{
-		for(new i = 0; i < NUM_SCROLLS3; i++, y+= ROW)
-		{
-			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls3Defs[i]));
-			gui_addTilePic(menu,x + BTNW,y,__scrolls3[i][__ID]);
-			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls3[i][__name]);
-		}
-	}
-	
-	case P_SCROLLS4:
-	{
-		for(new i = 0; i < NUM_SCROLLS4; i++, y+= ROW)
-		{
-			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls4Defs[i]));
-			gui_addTilePic(menu,x + BTNW,y,__scrolls4[i][__ID]);
-			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls4[i][__name]);
-		}
-	}
-	
-	case P_SCROLLS5:
-	{
-		for(new i = 0; i < NUM_SCROLLS5; i++, y+= ROW)
-		{
-			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls5Defs[i]));
-			gui_addTilePic(menu,x + BTNW,y,__scrolls5[i][__ID]);
-			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls5[i][__name]);
-		}
-	}
-	
-	case P_SCROLLS6:
-	{
-		for(new i = 0; i < NUM_SCROLLS6; i++, y+= ROW)
-		{
-			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls6Defs[i]));
-			gui_addTilePic(menu,x + BTNW,y,__scrolls6[i][__ID]);
-			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls6[i][__name]);
-		}
-	}
-	
-	case P_SCROLLS7:
-	{
-		for(new i = 0; i < NUM_SCROLLS7; i++, y+= ROW)
-		{
-			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls7Defs[i]));
-			gui_addTilePic(menu,x + BTNW,y,__scrolls7[i][__ID]);
-			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls7[i][__name]);
-		}
-	}
-	
-	case P_SCROLLS8:
-	{
-		for(new i = 0; i < NUM_SCROLLS1; i++, y+= ROW)
-		{
-			if(i%i_row == 0 && i != 0) { x+= tab*COL; y = startRow; }
-			
-			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls8Defs[i]));
-			gui_addTilePic(menu,x + BTNW,y,__scrolls8[i][__ID]);
-			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls8[i][__name]);
+			if((i - startscroll)%i_row == 0 && i != startscroll) { x+= tab*COL; y = startRow; }
+			gui_addButton(menu,x,y,BTN_UP,BTN_DOWN,getIntFromDefine(__scrolls[i][__def]));
+			gui_addTilePic(menu,x + BTNW,y,__scrolls[i][__ID]);
+			gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,__scrolls[i][__name]);
 		}
 	}
 	
@@ -554,7 +444,7 @@ switch(page)
 		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Helm");
 		
 		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
-		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL,TXT_COLOR,"iron");
+		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*P_PLATEMAIL,TXT_COLOR,"iron");
 		
 		y += 2*ROW;
 		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_PLATEMAIL*10 + AR_GORGET);
@@ -591,6 +481,193 @@ switch(page)
 		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
 	}
 	
+	case P_CHAINMAIL:
+	{
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_CHAINMAIL*10 + AR_HELM);
+		gui_addTilePic(menu,x + BTNW,y,0x13BB);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Coif");
+		
+		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
+		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL  + 10*P_CHAINMAIL,TXT_COLOR,"iron");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_CHAINMAIL*10 + AR_CHEST);
+		gui_addTilePic(menu,x + BTNW,y,0x13C4);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Tunic");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_CHAINMAIL*10 + AR_LEGS);
+		gui_addTilePic(menu,x + BTNW,y,0x13C3);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_CHAINMAIL,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_CHAINMAIL + 1000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
+
+		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_CHAINMAIL + 10000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
+	}
+	
+	case P_RINGMAIL:
+	{
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_RINGMAIL*10 + AR_CHEST);
+		gui_addTilePic(menu,x + BTNW,y,0x13ED);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Tunic");
+		
+		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
+		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL  + 10*P_RINGMAIL,TXT_COLOR,"iron");
+		
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_RINGMAIL*10 + AR_ARMS);
+		gui_addTilePic(menu,x + BTNW,y,0x13EF);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Sleeves");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_RINGMAIL*10 + AR_GLOVES);
+		gui_addTilePic(menu,x + BTNW,y,0x13F2);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_RINGMAIL*10 + AR_LEGS);
+		gui_addTilePic(menu,x + BTNW,y,0x13F1);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_RINGMAIL,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_RINGMAIL + 1000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
+
+		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_RINGMAIL + 10000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
+	}
+	
+	case P_STUDDED:
+	{
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_GORGET);
+		gui_addTilePic(menu,x + BTNW,y,0x13D6);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gorget");
+		
+		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
+		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*P_STUDDED,TXT_COLOR,"");
+				
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_CHEST);
+		gui_addTilePic(menu,x + BTNW,y,0x13E2);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Tunic");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_ARMS);
+		gui_addTilePic(menu,x + BTNW,y,0x13D4);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Sleeves");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_GLOVES);
+		gui_addTilePic(menu,x + BTNW,y,0x13DD);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_STUDDED*10 + AR_LEGS);
+		gui_addTilePic(menu,x + BTNW,y,0x13E1);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_STUDDED,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_STUDDED + 1000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
+
+		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_STUDDED + 10000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
+	}
+
+	case P_LEATHER:
+	{
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_HELM);
+		gui_addTilePic(menu,x + BTNW,y,0x1DBA);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Cap");
+		
+		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Material:");
+		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*P_LEATHER,TXT_COLOR,"");
+				
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_GORGET);
+		gui_addTilePic(menu,x + BTNW,y,0x13C7);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gorget");
+						
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_CHEST);
+		gui_addTilePic(menu,x + BTNW,y,0x13D3);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Tunic");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_ARMS);
+		gui_addTilePic(menu,x + BTNW,y,0x13CD);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Sleeves");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_GLOVES);
+		gui_addTilePic(menu,x + BTNW,y,0x13CE);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_LEATHER*10 + AR_LEGS);
+		gui_addTilePic(menu,x + BTNW,y,0x13D2);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_LEATHER,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_LEATHER + 1000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
+
+		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_LEATHER + 10000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
+	}		
+	
+	case P_BONE:
+	{
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_HELM);
+		gui_addTilePic(menu,x + BTNW,y,0x1451);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Helm");
+		
+		gui_addText(menu,x + tab*COL,y,TXT_COLOR,"Beast:");
+		gui_addInputField(menu,x + (tab + 10)*COL,y,15*COL,ROW,INPUT_MATERIAL + 10*P_BONE,TXT_COLOR,"");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_CHEST);
+		gui_addTilePic(menu,x + BTNW,y,0x144F);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Chest");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_ARMS);
+		gui_addTilePic(menu,x + BTNW,y,0x144E);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Arms");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_GLOVES);
+		gui_addTilePic(menu,x + BTNW,y,0x1450);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Gloves");
+		
+		y += 2*ROW;
+		gui_addCheckbox(menu,x,y,BTN_UP,BTN_DOWN,0,P_BONE*10 + AR_LEGS);
+		gui_addTilePic(menu,x + BTNW,y,0x1452);
+		gui_addText(menu,x + BTNW + PICW,y,TXT_COLOR,"Legs");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - 2*ROW,BTN_UP,BTN_DOWN,P_BONE,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - 2*ROW,TXT_COLOR,"create in backpack");
+		
+		gui_addButtonFn(menu,x + tab*COL,y - ROW,BTN_UP,BTN_DOWN,P_BONE + 1000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y - ROW,TXT_COLOR,"Equip");
+
+		gui_addButtonFn(menu,x + tab*COL,y,BTN_UP,BTN_DOWN,P_BONE + 10000,true,"addmenu_armor");
+		gui_addText(menu,x + BTNW + tab*COL,y,TXT_COLOR,"Equip to character");		
+	}
+
+			
 }//end of switch(page)
 
 }
@@ -608,9 +685,10 @@ public addmenu_cback(menu,chr,btncode)
 	
 	new item; 
 	item = itm_createInBp(btncode,chr);
+	
 	if(itm_getProperty(item,IP_PILEABLE))
 	{
-		itm_setProperty(item,IP_AMOUNT,n);
+		itm_setProperty(item,IP_AMOUNT,_,n);
 		chr_message(chr,_,"Item %d created",item);
 	}
 	else
@@ -627,9 +705,6 @@ public addmenu_armor(menu,chr,armor)
 {
 	if(!armor)	return;
 	
-	new material[20];
-	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL,material);
-	
 	new action;
 	if(armor >= 10000) 
 	{
@@ -643,6 +718,11 @@ public addmenu_armor(menu,chr,armor)
 		}
 		else action = 2;
 	
+	new material[20];
+	gui_getProperty(menu,MP_UNI_TEXT,INPUT_MATERIAL + 10*armor,material);
+	if(strlen(material)) sprintf(material,"_%s",material);
+	
+	
 	new artype[20];	
 	switch(armor)
 	{
@@ -651,6 +731,7 @@ public addmenu_armor(menu,chr,armor)
 		case P_RINGMAIL: sprintf(artype,"_ringmail");
 		case P_STUDDED: sprintf(artype,"_studded_leather");
 		case P_LEATHER:	sprintf(artype,"_leather");
+		case P_BONE:	sprintf(artype,"_bone");
 	}
 	
 	new arpart[20],r,buffer[6];
@@ -665,7 +746,8 @@ public addmenu_armor(menu,chr,armor)
 		 		switch(armor)
 		 		{
 		 			case P_CHAINMAIL: sprintf(arpart,"_coif");
-		 			case P_PLATEMAIL: sprintf(arpart,"_helm");	
+		 			case P_LEATHER: sprintf(arpart,"_cap");	
+		 			default: sprintf(arpart,"_helm");
 		 		}
 		 		
 		 		case AR_GORGET: sprintf(arpart,"_gorget");
@@ -674,18 +756,29 @@ public addmenu_armor(menu,chr,armor)
 		 		switch(armor)
 		 		{
 		 			case P_PLATEMAIL: sprintf(arpart,"mail");
+		 			case P_BONE: sprintf(arpart,"_chest");
 		 			default: sprintf(arpart,"_tunic");
 		 		}
 		 		
-		 		case AR_ARMS: sprintf(arpart,"_sleeves");
+		 		case AR_ARMS: 
+		 		switch(armor)
+		 		{
+		 			case P_BONE: sprintf(arpart,"_arms");
+		 			default: sprintf(arpart,"_sleeves");
+		 		}
 		 		
 		 		case AR_GLOVES: sprintf(arpart,"_gloves");
 		 		
-		 		case AR_LEGS: sprintf(arpart,"_leggings");
+		 		case AR_LEGS: 
+		 		switch(armor)
+		 		{
+		 			case P_BONE: sprintf(arpart,"_legs");
+		 			default: sprintf(arpart,"_leggings");
+		 		}
 			}
 		
 		new def[100],itm;
-		sprintf(def,"$item_%s%s%s",material,artype,arpart);
+		sprintf(def,"$item%s%s%s",material,artype,arpart);
 		
 		switch(action)
 		{

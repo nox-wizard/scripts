@@ -707,7 +707,7 @@ SECTION ITEM $item_leather_gloves
     ///SUBSECTION Leather
 }
 
-SECTION ITEM $item_a_leather_gorget
+SECTION ITEM $item_leather_gorget
 {
     NAME A leather Gorget
     ID 13C7
