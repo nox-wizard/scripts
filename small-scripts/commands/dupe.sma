@@ -24,7 +24,10 @@ Items in the player's backpack are not copied.
 public cmd_dupe(const chr)
 {
 	readCommandParams(chr);
-
+	
+	new n = 1;
+	if(isStrInt(__cmdParams[0]))
+		n = str2Int(__cmdParams[0]);
 
 
 	new area = chr_getCmdArea(chr);
@@ -59,7 +62,7 @@ public cmd_dupe(const chr)
 
 	//if we are here it means we need a target
 	chr_message(chr,_,"Select an item to duplicate");
-	target_create(chr,0,_,_,"cmd_dupe_targ");
+	target_create(chr,n,_,_,"cmd_dupe_targ");
 }
 
 /*!
@@ -68,7 +71,7 @@ public cmd_dupe(const chr)
 \params all standard target callback params
 \brief handles single character targetting and freezing
 */
-public cmd_dupe_targ(target, chr, object, x, y, z, unused, unused1)
+public cmd_dupe_targ(target, chr, object, x, y, z, unused, n)
 {
 	if(!isItem(object))
 	{
@@ -82,17 +85,22 @@ public cmd_dupe_targ(target, chr, object, x, y, z, unused, unused1)
 		return;
 	}
 
-	new copy = itm_duplicate(object);
 
-	if(!isItem(copy))
-	{
-		chr_message(chr,_,"That item can't be duplicated");
-		return;
-	}
-
+	new copy;
 	itm_getPosition(object,x,y,z);
-	itm_moveTo(copy,x,y,z);
-	chr_message(chr,_,"Item %d created at %d %d %d",copy,x,y,z);
+	
+	for(new i; i < n; i++)
+	{
+		copy = itm_duplicate(object);
+	
+		if(!isItem(copy))
+		{
+			chr_message(chr,_,"That item can't be duplicated");
+			return;
+		}
+			
+		itm_moveTo(copy,x,y,z);
+	}
 }
 
 

@@ -55,7 +55,6 @@ mana,200,cmd_mana
 move,100,cmd_move
 npcwander,150,cmd_npcwander
 onlinegm,0,cmd_onlinegm
-options,100,cmd_options
 page,0,cmd_page
 pages,100,cmd_pages
 pagelist,100,cmd_pagelist

@@ -13,8 +13,6 @@
 <B>syntax:<B> 'setmoreb12 value
 
 If area effect is active, all items in area will have moreb12 set.
-If no area effect is active, or if you pass "target", a target will appear and only 
-the targetted item will be affected
 */
 public cmd_setmoreb12(const chr)
 {

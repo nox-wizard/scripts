@@ -34,7 +34,7 @@
 #include "small-scripts/commands/npcwander.sma"
 #include "small-scripts/commands/lightlevel.sma"
 #include "small-scripts/commands/page/onlinegm.sma"
-#include "small-scripts/commands/options/options.sma"
+//#include "small-scripts/commands/options/options.sma" removed
 #include "small-scripts/commands/page/pagelist.sma"
 #include "small-scripts/commands/page/page.sma"
 #include "small-scripts/commands/page/pages.sma"
@@ -46,7 +46,7 @@
 #include "small-scripts/commands/resend.sma"
 #include "small-scripts/commands/resurrect.sma"
 #include "small-scripts/commands/save.sma"
-//#include "small-scripts/commands/setdir.sma"
+//#include "small-scripts/commands/setdir.sma" removed
 #include "small-scripts/commands/setmoreb12.sma"
 #include "small-scripts/commands/setmoreb34.sma"
 #include "small-scripts/commands/setmorexyz.sma"

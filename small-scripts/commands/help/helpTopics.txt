@@ -109,7 +109,8 @@ syntax: 'dye color
 TOPIC 'dupe
 TEXT
 Duplicates an item
-syntax: 'dupe 
+syntax: 'dupe [n]
+n is the number of copies
 
 TOPIC 'flip
 TEXT
@@ -238,10 +239,6 @@ TEXT
 Shows a list of online GMs and counselors
 syntax: 'onlinegm
 
-TOPIC 'options
-TEXT
-syntax: 'options
-
 TOPIC 'page
 TEXT
 Submits a page
@@ -347,10 +344,17 @@ TEXT
 Shows many object's stats
 syntax: 'stats
 
+TOPIC 'summon
+TEXT
+Takes a character to you
+syntax: 'summon [name]
+name is the character's name
+player must be online
+
 TOPIC 'sysm
 TEXT
 Broadcasts a message
-syntax: 'sysm
+syntax: 'sysm [message]
 
 TOPIC 'tile
 TEXT

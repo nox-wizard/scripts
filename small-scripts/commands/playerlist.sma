@@ -64,7 +64,7 @@ public handle_playerlist( const menu, const caller, const button )
 {
 	//on button press open character's options
 	if( button == MENU_CLOSED )	return;
-	options_char( caller, button );
+		tweak_char(caller,button, 1);
 }
 
 /*! }@ */
