@@ -571,7 +571,9 @@ public msg_api_partyDef[NUM_api_partySENT][]={
 "You notify them that you do not wish to join the party."
 };
 
-const NUM_commandsSENT = 277;
+
+const NUM_commandsSENT = 27;
+
 public msg_commandsDef[NUM_commandsSENT][]={
 "No other players connected",
 "Users Online : ",
@@ -627,10 +629,10 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Serial:",
 "Itemtype:",
 "LocalVars 1",
-"None:",
+"Add LocalVar:",
 "Str:",
 "Int:",
-"Add LocalVar:",
+"None:",
 "(No.)",
 "(Value)",
 "next page (%d)",//60
@@ -845,39 +847,3 @@ public msg_commandsDef[NUM_commandsSENT][]={
 "Location %d deleted", 
 "The item the character has on layer %d is not a container", //270
 "Location %d deleted",
-"Flags5",
-"Select the character on wich you want account info",
-"Select a character to kick",
-"Invalid serial",
-"Command applied to %d characters"
-};
-
-const NUM_EatDrinkSENT = 26;
-public msg_EatDrinkDef[NUM_EatDrinkSENT][]={
-"You must eat something immediatelly or you will die in 1 minute!",
-"You must eat something very very fast or you will die from hunger!",
-"You are extremly hungry!",
-"You are very hungry and start feeling dizzy!",
-"You are really hungry and your stomache growls loudly!",
-"You stomach starts growling by hunger!",
-"You are bit hungry.",
-"You could have something to eat.",
-"You feel satisfied.",
-"You are well fed.",
-"You are absolutly stuffed.",
-"You die from starving too long!",
-"And you must drink something immediatelly or you will die in 1 minute!^n",
-"And you must drink something very very fast or you will die from thirst!^n",
-"And you are extremly thirsty!^n",
-"And you are very thirsty and start feeling dizzy!^n",
-"And you are really thirsty and your tongue sticks in your mouth!^n",
-"And your tongue starts becoming sticky by thirst!^n",
-"And you are bit thirsty.^n",
-"And you could have something to drink.^n",
-"And you don't need to drink anything.^n",
-"And you feel absolutely no thirst.^n",
-"And your belly is filled with liquid.^n",
-"And you die from being thirsty too long!^n",
-"You are not able to drink one more drop.",
-"You are not able to eat one more piece."
-};

@@ -1025,7 +1025,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addText(twkChrMenu,470,49,33,msg_commandsDef[47]);//flag4
 	
 	gui_addButton(twkChrMenu,35,81,twkButton[arrayline][new6],twkButton[arrayline][old6],6);
-	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[270]); //flag5
+	gui_addText(twkChrMenu,60,79,33,msg_commandsDef[272]); //flag5
 	gui_addButton(twkChrMenu,170,81,twkButton[arrayline][new7],twkButton[arrayline][old7],7);
 	gui_addText(twkChrMenu,195,79,33,msg_commandsDef[45]); //localVars
 	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
@@ -2072,7 +2072,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 									if(item>=0) //beard/hair exists already
 										itm_setProperty(item, IP_COLOR, value);
 									else if(item < 0) //can't change the color if the hair/beard does not exist
-										chr_message( target, _, msg_commandsDef[271]);
+										chr_message( target, _, msg_commandsDef[277]);
 									
 								}//new value
 							} //if color
