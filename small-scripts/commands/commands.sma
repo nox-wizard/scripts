@@ -59,6 +59,7 @@
 #include "small-scripts/commands/showbank.sma"
 #include "small-scripts/commands/skills/skills.sma"
 #include "small-scripts/commands/skills/setskills.sma"
+#include "small-scripts/commands/page/solvepage.sma"
 #include "small-scripts/commands/spawnkill.sma"
 #include "small-scripts/commands/stamina.sma"
 #include "small-scripts/commands/stats/stats.sma"

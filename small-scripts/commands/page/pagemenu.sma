@@ -28,96 +28,55 @@ showing all paging character's pages
 */
 public drawPageListMenu(const solver, const chr)
 {
-	new s = set_create();
-	if(isChar(chr))
+	new s;
+	if(isChar(chr)) //we want a specific char's pages
+	{
+		s = set_create();
 		set_add(s,chr);
-	else 	if(!getGmPageList(s))
+	}
+	else 	if(!getGmPageList(s)) //orwe want all pages
 		{
 			log_error("There was an error reading the GM page list");
+			chr_message(solver,_,"There was an error reading the GM page list");
 			return;
 		}
 
+	if(set_size(s) == 0)
+		return 0;
+		
 	//now s contains serials of the characters we want to see the pages
-	
 	new COLS = 40;
 	new ROWS = set_size(s)*4;
 	cursor_setProperty(CRP_TAB,50);
 	createSetListMenu(0,0,ROWS,COLS,s,"Submitted pages","pagemenu_printpage","pagemenu_cback");
-	/*new BTN_UP = 0x29F4;  	//!< buttons up gump
-	new BTN_DOWN = 0x29F6;	//!< buttons down gump
-
-	new  START_X = 0;
-	new  START_Y = 0;
-
-	new L_MARG = 2*COL;
-
-	new BTNW = 15;
-
-	new COLS = 40;
-	new ROWS = set_size(s)*4;
-
-	new  WIDTH =  COLS*COL;
-	new  HEIGHT = (ROWS + 3)*ROW;
-
-	new x,y;
-	new menu = gui_create(START_X,START_Y,true,true,true,"pagemenu_cback");
-
-	//draw menu frame
-	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT + ROW );
-	gui_addResizeGump(menu,START_X + COL ,START_Y + ROW/2,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT);
-
-	x = START_X + L_MARG;
-	y = START_Y + ROW/2 + ROW;
-
-	new p=1;
-	new tab = 5;
-	gui_addPage(menu,p);
-	new name[30], reason[100], time[10],pager,page;
-	for(set_rewind(s);!set_end(s);)
-	{
-		if(y >= START_Y + HEIGHT)
-		{
-			y = START_Y + ROW/2 + ROW;
-			++p;
-			gui_addText(menu,(START_X + WIDTH)/2 + 2*BTNW,START_Y + HEIGHT,TXT_COLOR,"next");
-			gui_addPageButton(menu,(START_X + WIDTH)/2 + BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p);
-			gui_addPage(menu,p);
-			gui_addText(menu,(START_X + WIDTH)/2 - 6*COL,START_Y + HEIGHT,TXT_COLOR,"prev");
-			gui_addPageButton(menu,(START_X + WIDTH)/2 - BTNW,START_Y + HEIGHT,BTN_UP,BTN_DOWN,p - 1);
-		}
-
-		page = 1;pager = set_getChar(s);
-		chr_getProperty(chr,CP_STR_NAME,0,name);
-
-		gui_addButtonFn(menu,x,y,BTN_UP,BTN_DOWN,pager,true,"pagemenu_go2Char_cback");
-		gui_addText(menu,x + BTNW,y,TITLE_COLOR,name);
-		y += ROW;
-
-		while(chr_getGmPage(pager,page++,reason,time))
-		{
-			gui_addButton(menu,x + (tab - 2)*COL,y,BTN_UP,BTN_DOWN,page*100000 + pager + 1);
-			gui_addText(menu,x + tab*COL,y,TXT_COLOR,time);
-			gui_addText(menu,x + tab*COL + 12,y,TXT_COLOR,reason);
-			y += ROW;
-		}
-	}
-	*/
-	menu_show(chr);
+	
+	menu_show(solver);
+	return 1;
 }
 
 public pagemenu_printpage(p,line,col,i,set)
 {
-	new name[30], reason[100], time[10],pager = set_getChar(set),page = 1;
+	//read current pager and print his name
+	new name[30];
+	new pager = set_getChar(set);
 	chr_getProperty(pager,CP_STR_NAME,0,name);
-
+	if(chr_isOnline(pager))
+		sprintf(name,"%s [online]",name);
+	else
+		sprintf(name,"%s [offline]",name);
+		
 	menu_addLabeledButtonFn(pager,"pagemenu_go2Char_cback",name)
+	
 	cursor_newline();
 	
-	new label[100];
-	while(chr_getGmPage(pager,page++,reason,time))
+	//print pages
+	new label[100], reason[100], time[10];
+	for(new page = 1; chr_getGmPage(pager,page,reason,time); page++)
 	{
 		sprintf(label,"%s %s",time,reason);
+		cursor_right(5);
 		menu_addLabeledButton(page*100000 + pager + 1,label);
+		cursor_back();
 		cursor_newline();
 	}
 }
@@ -125,19 +84,22 @@ public pagemenu_printpage(p,line,col,i,set)
 public pagemenu_cback(menu,chr,btncode)
 {
 	if(!btncode) return;
-
+	
+	btncode--;
+	
 	new page = btncode/100000;
-	new pager = btncode%100000 - 1;
+	new pager = btncode%100000;
 
-	chr_solveGmPage(pager,page);
-	sendPageHandlingMessage(chr,pager,page,PAGE_STATUS_SOLVED);
+	if(chr_solveGmPage(pager,page))
+		sendPageHandlingMessage(chr,pager,page,PAGE_STATUS_SOLVED);
 }
 
 public pagemenu_go2Char_cback(menu,solver,pager)
 {
 	new x,y,z;
 	chr_getPosition(pager,x,y,z);
-	chr_moveTo(solver,x,y,z);
+	new x1=x, y1=y, z1=z;
+	chr_moveTo(solver,x1 + 1,y1,z1);
 	sendPageHandlingMessage(solver,pager,INVALID,PAGE_STATUS_SOLVING);
 }
 /*! @}*/

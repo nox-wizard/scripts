@@ -23,17 +23,12 @@ to say that a page has been submitted
 */
 public cmd_page(const chr)
 {
-	new speech[200],temp[20],reason[100];
+	new reason[100];
 
-	chr_getProperty(chr,CP_STR_SPEECH,0,speech);
-	str2Token(speech,temp,0,speech,0);
-
-	strcpy(reason,speech);
-	#if _CMD_DEBUG_
-		#if _PAGESYSTEM_DEBUG_
-			log_message("character %d is submitting page: %s",chr,reason);
-		#endif
-	#endif
-	addGmPage(chr,reason);
+	chr_getSpeech(chr,reason);
+	
+	if(addGmPage(chr,reason))
+		chr_message(chr,_,msg_commandsDef[262]);
+	else chr_message(chr,_,msg_commandsDef[263],MAX_GM_PAGES_PER_CHAR);
 }
 /*! @}*/

@@ -25,7 +25,7 @@ The set will be filled with all paging characters,in order of paging time,charac
 if they paged many times.
 \return true on success,else false
 */
-native getGmPageList(const set) 
+//native getGmPageList(const set) 
 
 /*!
 \author Fax
@@ -38,7 +38,7 @@ native getGmPageList(const set)
 Use this function to add a page to the GMpage list, reason[] must be less than 100 characters long
 \return true on success,else false
 */
-native addGmPage(const chr ,const reason[])
+//native addGmPage(const chr ,const reason[])
 
 /*!
 \author Fax
@@ -53,7 +53,7 @@ native addGmPage(const chr ,const reason[])
 Every character has a maximum of 3 open pages simultaneously, son pge_number is limited to 
 \return true on success,else false
 */
-native chr_getGmPage(const chr,const page_number,reason[],time[])
+//native chr_getGmPage(const chr,const page_number,reason[],time[])
 
 /*!
 \author Fax
@@ -66,6 +66,6 @@ native chr_getGmPage(const chr,const page_number,reason[],time[])
 Deletes a page from the GM page list
 \return true on success,else false
 */
-native chr_solveGmPage (const chr ,const page_number)
+//native chr_solveGmPage (const chr ,const page_number)
 
 /** @} */ // end of script_API_gmpage

@@ -1,4 +1,7 @@
 #include "small-scripts/commands/page/constants.sma"
+#define MAX_GM_PAGES 100
+#define MAX_GM_PAGE_LENGTH 128
+static GMpages[MAX_GM_PAGES][MAX_GM_PAGE_LENGTH];
 
 /*!
 \defgroup script_commands_pagesystem page system functions
@@ -20,17 +23,10 @@ public initPageSystem()
 {
 	log_message("Initializing GM page system^n");
 	__onlineStaff = set_create();
-	
+	pageResourceMap = createResourceMap();
 	//pageSystemTest();
 }
 
-public pageSystemTest()
-{
-	addGmPage(3,msg_commandsDef[24]);
-	new reason[100];
-	chr_getGmPage(3,1,reason);
-	printf(reason);
-}
 /*!
 \author Fax
 \fn addOnlineStaff(const chr)
@@ -132,6 +128,100 @@ public sendPageHandlingMessage(solver,pager,page,status)
 		if(chr_isGMPageable(chr2) || chr_isCounselor(chr2))
 			chr_message(chr2,_,message);
 	}
+}
+
+//TEMPORARY SMALL BASED APIs
+
+public getGmPageList(&set)
+{	
+	set = set_create();
+	new s = set_create();
+	set_addAllOnlinePl(s);
+	
+	//seek paging players in the online players list
+	new chr;
+	for(set_rewind(s); !set_end(s);)
+	{
+		//store characters that have at least one page submitted
+		chr = set_getChar(s);
+		if(getResourceLocationValue(pageResourceMap,chr,0,0) != -1)
+			set_add(set,chr);
+	}
+	
+	return 1;
+}
+
+public addGmPage(chr,reason[])
+{
+	//seek first empty place in the array
+	new p;
+	for(p = 0; p < MAX_GM_PAGES; p++)
+		if(GMpages[p][0] == 0)
+			break;
+	
+	
+	strcpy(GMpages[p],reason);
+	
+	//seek first empty place in the resource map for this player
+	new i;
+	while(getResourceLocationValue(pageResourceMap,chr,i,0) >= 0)
+		i++;
+	
+	if(i == MAX_GM_PAGES_PER_CHAR)
+		return false;
+	
+	
+	//store the page index in the resource map as:
+	//x: player
+	//y: page
+	//z: unused
+	setResourceLocationValue(pageResourceMap,p,chr,i,0);
+		
+	#if _CMD_DEBUG_
+		#if _PAGESYSTEM_DEBUG_
+			log_message("loading page '%s' from character %d at position %d",reason,chr,p);
+		#endif
+	#endif
+	
+	return true;
+}
+
+public chr_getGmPage(const chr, const page,reason[],time[])
+{
+	new pageIdx = getResourceLocationValue(pageResourceMap,chr,page - 1,0);
+	if(pageIdx < 0)
+		return false;
+		
+	strcpy(reason,GMpages[pageIdx]);
+	strcpy(time,"--:--");
+	
+	return true;
+}
+
+public chr_solveGmPage (const chr ,const page)
+{
+	new p = page - 1;
+	new pageIdx = getResourceLocationValue(pageResourceMap,chr,p,0);
+	if(pageIdx < 0)
+		return false;
+	
+	#if _CMD_DEBUG_
+		#if _PAGESYSTEM_DEBUG_
+			log_message("deleting page %d (index %d) from character %d",page,pageIdx,chr);
+		#endif
+	#endif
+	
+	GMpages[pageIdx][0] = 0;
+	setResourceLocationValue(pageResourceMap,-1,chr,p,0);
+	
+	//move next pages back to fill the blank
+	for(p++; pageIdx != -1 ;p++)
+	{
+		pageIdx = getResourceLocationValue(pageResourceMap,chr,p,0);
+		setResourceLocationValue(pageResourceMap,pageIdx,chr,p - 1,0);	
+	}
+	
+	return true;
 }
 
 /*! @}*/

@@ -362,10 +362,11 @@ stock createSetListMenu(startx,starty,rows,cols,set,title[],callback[],menuCback
 {
 	strcpy(setListCallback,callback);
 	setListSet = set;
+	set_rewind(setListSet);
 	return createListMenu(startx,starty,rows,cols,set_size(set),title,"createSetListCback",menuCback)
 }
 
-public setListCback(p,l,c,i)
+public createSetListCback(p,l,c,i)
 {
 	callFunction5P(funcidx(setListCallback),p,l,c,i,setListSet);
 }
@@ -746,6 +747,25 @@ stock menu_addLabeledTilePic(gump,width,label[])
 	cursor_move(width,0);
 	menu_addText(label);
 	cursor_move(-1*width,0);
+}
+
+/*!
+\author Fax
+\fn menu_addGump(gump)
+\param gump: gump index in gumpart.mul
+\since 0.82
+\brief adds a gump to the menu
+
+The gump is put at cursor position
+\return nothing
+*/
+stock menu_addGump(gump,...)
+{
+	new color = 0;
+	if(numargs() > 1)
+		color = getarg(1);
+		
+	gui_addGump(currentMenu,cursor_x(),cursor_y(),gump,color)
 }
 
 /*!

@@ -112,8 +112,9 @@ public cmd_go(const chr)
 			chr_message(chr,_,msg_commandsDef[6]);
 			return;
 		}
-
-		chr_moveTo(chr,x,y,z);
+	
+		new x1 = x, y1 = y, z1 = z; //No,I'm not stupid... this is to prevent a bug in the API
+		chr_moveTo(chr,x1,y1,z1);
 }
 
 //==============  EXPERIMENTAL XSS LOADING FUNCTIONS ==============

@@ -41,8 +41,13 @@ public cmd_solvepage_cback(const t, const chr, const object, x, y, z, unused, pa
 		return;
 	}
 
-	for(new p; p < MAX_GM_PAGES_PER_CHAR; p++)
+	for(new p = 1; p <= MAX_GM_PAGES_PER_CHAR; p++)
 		if(page == INVALID || p == page)
 			chr_solveGmPage(object,p);
+	
+	if(page == INVALID)
+		chr_message(chr,_,msg_commandsDef[266]);
+	else 	if(page <= MAX_GM_PAGES_PER_CHAR) 
+			chr_message(chr,_,msg_commandsDef[265],page);
 }
 /*! @}*/

@@ -13,6 +13,7 @@
 #define MAX_GM_PAGES_PER_CHAR 3 //!< maximum number of pages per character, you can't modify this valueas it is defined in sources too.
 
 new __onlineStaff; //!< set that is filled with all pageable online staff
+new pageResourceMap;
 
 enum
 {

@@ -19,6 +19,7 @@ Use this command tosee the GM page list
 */
 public cmd_pagelist(const chr)
 {
-	drawPageListMenu(chr,INVALID);
+	if(!drawPageListMenu(chr,INVALID))
+		chr_message(chr,_,msg_commandsDef[264]);
 }
 /*! @}*/

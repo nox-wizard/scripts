@@ -61,7 +61,7 @@ native setResourceLocationValue( const map, const value, const x, const y, const
 \param 3 the second position parameter
 \param 4 the third position parameter
 \return the value of the resource map entry
-\fn getResourceStringValue( const set )
+\fn getResourceLocationValue( const set )
 \return 0
 */
 native getResourceLocationValue( const map, const x, const y, const z );
