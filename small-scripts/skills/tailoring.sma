@@ -89,13 +89,10 @@ public _doCloth( const s, const cloth ) {
 		return;
 	}
 	
-	new amt = itm_getProperty( cloth, IP_AMOUNT );
-	if( amt<0 ) {
+	if( itm_getProperty( cloth, IP_AMOUNT )<0 ) {
 		itm_remove(cloth);
 		return;
 	}
-	
-	amt=amt*40;
 	
 	new cutcloth = itm_createByDef( cloths[type] );
 
@@ -103,9 +100,9 @@ public _doCloth( const s, const cloth ) {
 	chr_sound( chr, 0x0248 );
 
 	new bp = itm_getCharBackPack( chr );
-	itm_setProperty( cutcloth, IP_AMOUNT, _, amt );
+	itm_setProperty( cutcloth, IP_AMOUNT, _, 40 );
 	itm_contPileItem( bp, cutcloth );
-	itm_remove(cloth);
+	itm_reduceAmount( cloth, 1 );
 	return;
 
 }

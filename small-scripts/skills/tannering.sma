@@ -91,8 +91,7 @@ public _doLeatherPiece( const s, const hide ) {
 	}
 	
 
-	new amt=itm_getProperty( hide, IP_AMOUNT );
-	if( amt<0 ) {
+	if( itm_getProperty( hide, IP_AMOUNT )<0 ) {
 		itm_remove( hide );
 		return;
 	}
@@ -102,9 +101,9 @@ public _doLeatherPiece( const s, const hide ) {
 
 	new bp = itm_getCharBackPack( chr );
 	new leather = itm_createByDef( leathers[type] );
-	itm_setProperty( leather, IP_AMOUNT, _, amt );
+	itm_setProperty( leather, IP_AMOUNT, _, 2 );
 	itm_contPileItem( bp, leather );
-	itm_remove( hide );
+	itm_reduceAmount( hide, 1 );
 	
 }
 
