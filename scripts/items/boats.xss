@@ -14,7 +14,7 @@ SECTION ITEM $item_deed_small_ship
     NEWBIE
     MOREX 20
     VALUE 12000
-
+	TYPE $itype_boatdeed
     ///CATEGORY Deeds
     ///SUBSECTION Ship Deeds
 }
@@ -26,6 +26,7 @@ SECTION ITEM $item_deed_small_dragon_ship
     NEWBIE
     MOREX 21
     VALUE 15000
+	TYPE $itype_boatdeed
 
     ///CATEGORY Deeds
     ///SUBSECTION Ship Deeds
@@ -38,6 +39,7 @@ SECTION ITEM $item_deed_medium_ship
     NEWBIE
     MOREX 22
     VALUE 17000
+	TYPE $itype_boatdeed
 
     ///CATEGORY Deeds
     ///SUBSECTION Ship Deeds
@@ -50,6 +52,7 @@ SECTION ITEM $item_deed_medium_dragon_ship
     NEWBIE
     MOREX 23
     VALUE 20000
+	TYPE $itype_boatdeed
 
     ///CATEGORY Deeds
     ///SUBSECTION Ship Deeds
@@ -62,6 +65,7 @@ SECTION ITEM $item_deed_large_ship
     NEWBIE
     MOREX 24
     VALUE 25000
+	TYPE $itype_boatdeed
 
     ///CATEGORY Deeds
     ///SUBSECTION Ship Deeds
@@ -74,6 +78,7 @@ SECTION ITEM $item_deed_large_dragon_ship
     NEWBIE
     MOREX 25
     VALUE 30000
+	TYPE $itype_boatdeed
 
     ///CATEGORY Deeds
     ///SUBSECTION Ship Deeds
