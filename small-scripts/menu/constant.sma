@@ -10,8 +10,8 @@
 #endif
 #define _nxw_menu_constant_
 
-/** \defgroup script_const_menu Menu constants
- *  \ingroup script_API_menu
+/** \defgroup script_const_mnu Menu constants
+ *  \ingroup script_API_mnu
  *  @{
  */
 
@@ -21,6 +21,6 @@ const MENUSTYLE_PAPER = 2;
 const MENUSTYLE_BLACKBOARD = 3;
 const MENUSTYLE_TRASPARENCY = 4;
 
-/** @} */ // end of script_const_menu
+/** @} */ // end of script_const_mnu
 
 

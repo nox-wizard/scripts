@@ -37,6 +37,7 @@
 #include "small-scripts/log/log.api"
 #include "small-scripts/magic/magic.api"
 #include "small-scripts/map/map.api"
+#include "small-scripts/menu/mnu.api"
 #include "small-scripts/menu/menu.api"
 #include "small-scripts/misc/misc.api"
 #include "small-scripts/network/network.api"

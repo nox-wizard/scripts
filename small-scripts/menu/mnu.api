@@ -5,12 +5,12 @@
 // || Designed for NXW 	: 0.82						||
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-#if defined _nxw_menu_api_
+#if defined _nxw_mnu_api_
   #endinput
 #endif
-#define _nxw_menu_api_
+#define _nxw_mnu_api_
 
-/** \defgroup script_API_menu Menu
+/** \defgroup script_API_mnu Menu
  *  \ingroup script_API
  *  @{
  */
@@ -65,4 +65,4 @@ native mnu_show(const socket);
 */
 native mnu_setCallback(const socket, const callback);
 
-/** @} */ // end of script_API_menu
+/** @} */ // end of script_API_mnu
