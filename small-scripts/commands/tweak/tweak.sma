@@ -217,9 +217,29 @@ public init_tweak_itm()
 					it_pg4_r = i-1; //then fewer lines then max to keep it together
 					i=it_pg4_l+14;
 				}
-				else if((j==(it_pg3_l+14)) || i==(NUM_itmtweak-1))
+				else if((j==(it_pg4_l+14)) || i==(NUM_itmtweak-1))
 					it_pg4_r = i; //maximum 14 lines that fit at row
 			}//else if
+			else if(it_pg4_r < i <= (it_pg4_r+14))//left row 5. page
+			{
+				if(j>(it_pg4_r+14)) // to add radio button would extend over max line number
+				{
+					it_pg5_l = i-1; //then fewer lines then max to keep it together
+					i=it_pg4_r+14;
+				}
+				else if((j==(it_pg4_r+14)) || i==(NUM_itmtweak-1))
+					it_pg5_l = i; //maximum 14 lines that fit at row
+			}
+			else if(it_pg5_l < i <= (it_pg5_l+14))//right row 5. page
+			{
+				if(j>(it_pg5_l+14)) // to add radio button would extend over max line number
+				{
+					it_pg5_r = i-1; //then fewer lines then max to keep it together
+					i=it_pg5_l+14;
+				}
+				else if((j==(it_pg5_l+14)) || i==(NUM_itmtweak-1))
+					it_pg5_r = i; //maximum 14 lines that fit at row
+			}
 		}//for
 		for(new i=0; i<NUM_chrtweak; ++i)
 		{
@@ -768,10 +788,11 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 {
 	new target = gui_getProperty( twkItmMenu,MP_BUFFER,1 ); //target
 	new pagenumber = gui_getProperty( twkItmMenu,MP_BUFFER,4 );
-	new leftrow;
-	new rightrow;
 	new tempItmStr[50];
-	/*
+	new i=0;
+	/*new leftrow;
+	new rightrow;
+	
 	new startline;
 	if( pagenumber == 1)
 	{
@@ -802,14 +823,13 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 		startline = it_pg4_r+1;
 		leftrow = it_pg5_l;
 		rightrow = it_pg5_r;
-	}*/
+	}
 	new endline;
-	new i=0;
 	//performance saver, only go through the array lines shown at the page with apply button
 	if((rightrow == 0) && (leftrow != 0))
 		endline = leftrow;
 	else if((rightrow != 0) && (leftrow != 0))
-		endline = rightrow;
+		endline = rightrow;*/
 	new checked;
 	if( 1 <= buttonCode <= 9)
 	{
@@ -880,15 +900,15 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 		        	if ( checked != 1) // no more checked and event had existed
 		        	{
 		        		//printf("del event");
-		        		itm_delEventHandler(target, eventItm_array[i][eventnum]);
+		        		itm_delEventHandler(target, eventItm_array[i][eventItmnum]);
 		        	}
 		        	else
 		        	{
 		        		gui_getProperty(twkItmMenu,MP_UNI_TEXT,i+1,callname);
 		        		trim(callname);
-		        		itm_getEventHandler(target,eventItm_array[i][eventnum],oldevent);
+		        		itm_getEventHandler(target,eventItm_array[i][eventItmnum],oldevent);
 		        		if( strcmp( callname, oldevent) ) //different input happened
-		        			itm_setEventHandler(target, eventItm_array[i][eventnum], EVENTTYPE_STATIC, callname);
+		        			itm_setEventHandler(target, eventItm_array[i][eventItmnum], EVENTTYPE_STATIC, callname);
 		        	}
 		        	sprintf(callname, "");
 		        }//for
@@ -2084,7 +2104,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 							{
 								checked = gui_getProperty(twkChrMenu,MP_CHECK,i);
 								output = itm_getProperty(item, IP_ID);
-								if(checked = 1) //keep/have hair/beard
+								if(checked == 1) //keep/have hair/beard
 								{
 									if((output != value) && (item>=0)) //new value and hair/beard exists already
 										itm_setProperty(item, IP_ID, value);

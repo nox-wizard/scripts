@@ -9,7 +9,7 @@
   #endinput
 #endif
 #define _nxw_guild_constant_
-
+// for array with ranks and alignment names, please look into translation folder (small-scripts/translation/small_speech.sma)
 
 const PROP_GUILD = 3;
 

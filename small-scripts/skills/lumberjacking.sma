@@ -297,8 +297,8 @@ public _cutlog(const saw, const chr)
 {
 	bypass();
 	new scriptid = itm_getProperty(saw, IP_SCRIPTID);
-	if((itm_getProperty(saw, IP_SCRIPTID) != getIntFromDefine("$item_saw")) && (itm_getProperty(saw, IP_SCRIPTID) != getIntFromDefine("$item_saw2")) && (itm_getProperty(saw, IP_SCRIPTID) != getIntFromDefine("$item_dovetail_saw")) && (itm_getProperty(saw, IP_SCRIPTID) != getIntFromDefine("$item_dovetail_saw2")))
-		return;
+	if((scriptid != getIntFromDefine("$item_saw")) && (scriptid != getIntFromDefine("$item_saw2")) && (scriptid != getIntFromDefine("$item_dovetail_saw")) && (scriptid != getIntFromDefine("$item_dovetail_saw2")))
+		return; //prevent source left over start this function
 	
 	chr_message( chr, _, "%s", msg_carpenterDef[18]);
 	target_create( chr, _, _, _, "_cutlog_targ" );

@@ -915,3 +915,36 @@ public msg_chrUnknownDef[NUM_chrUnknownSENT][]={
 "My name is %s.",
 "This char already knows you under the name %s."
 };
+
+public ranks[ALL_RANKS-2][] = { //rank name
+	"GuildMaster",
+	"Member"
+};
+
+public rank_male_name[ALL_RANKS][] = {	//rank male name
+	"GuildMaster",
+	"Vicemaster",
+	"Member",
+	"Novice"
+};
+
+public rank_female_name[ALL_RANKS][] = {	//rank female name
+	"GuildMistress",
+	"Vicemistress",
+	"Member",
+	"Novice"
+};
+
+enum GUILD_ALIGN {
+	GUILD_NEUTRAL = 0,
+	GUILD_CHAOS=1,
+	GUILD_ORDER=2,
+	GUILD_TOWN=3
+
+};
+
+public alignments[GUILD_TOWN][] = {
+	"neutral",
+	"chaotic",
+	"lawful"
+	};

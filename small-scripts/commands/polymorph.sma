@@ -107,7 +107,7 @@ public callPolyMenu(const chrsource,const target, const page)
 	}
 
 	new l = i;
-	for ( i;i<j;++i)
+	for ( i=(page-1)*14;i<j;++i)
 	{
 		gui_addTilePic(polymMenu,60,151+50*(i-l), animProperty[i][hextile]);
 		gui_addText( polymMenu,110,150+50*(i-l),1310,"%s : ",animProperty[i][animname] );
@@ -115,7 +115,7 @@ public callPolyMenu(const chrsource,const target, const page)
 	}
 
 	i=j;
-	for ( i;i<k;++i)
+	for ( i=(page-1)*14;i<k;++i)
 	{
 		gui_addTilePic(polymMenu,331,151+50*(i-j), animProperty[i][hextile]);
 		gui_addText( polymMenu,381,150+50*(i-j),1310,"%s : ",animProperty[i][animname] );

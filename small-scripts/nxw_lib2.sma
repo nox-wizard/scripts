@@ -588,7 +588,7 @@ stock chr_canReachItem(const chr, const itm)
 	new x,y,z,itmx,itmy,itmz;
 	itm_getPosition(itm,itmx,itmy,itmz);
 	chr_getPosition(chr,x,y,z);
-	printf("char is %d and at: %d, %d, item is %d and at: %d, %d^n", chr,x,y,itm,itmx,itmy);
+	//printf("char is %d and at: %d, %d, item is %d and at: %d, %d^n", chr,x,y,itm,itmx,itmy);
 	if(-1 <= x - itmx <= 1 && -1 <= y - itmy <= 1)
 		return true;
 	return false;

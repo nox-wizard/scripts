@@ -10,8 +10,6 @@
  *  \attention not used now
  *  @{
  */
-#include "small-scripts/API/guild/constant.sma"
-
 
 #define RENAMEPRICE 40000
 #define ABBREVPRICE 40000
@@ -29,8 +27,6 @@
 	#define GUILD_POSITION_WHERE_PLAYER
 #endif
 
-// Duplicate definition from guild/constants.sma, since small doesn't seem to handle static defs in include right
-
 enum GUILD_RANK {
 		RANK_GUILDMASTER=0,
 		RANK_GUILDVICE,
@@ -39,40 +35,10 @@ enum GUILD_RANK {
 		ALL_RANKS
 		};
 
-static ranks[ALL_RANKS][] = { //rank name
-	"GuildMaster",
-	"GuildVice",
-	"Member",
-	"Recruit"
-};
-
-static rank_male_name[ALL_RANKS][] = {	//rank male name
-	"GuildMaster",
-	"Vice guild master",
-	"Member",
-	"Novice"
-};
-
-static rank_female_name[ALL_RANKS][] = {	//rank female name
-	"Guild Mistress",
-	"Vice guild mistress",
-	"Member",
-	"Novice"
-};
-
-enum GUILD_ALIGN {
-	GUILD_NEUTRAL = 0,
-	GUILD_CHAOS=1,
-	GUILD_ORDER=2,
-	GUILD_TOWN=3
-
-};
-
-static alignments[GUILD_TOWN][] = {
-	"neutral",
-	"chaotic",
-	"lawful"
-	};
+/*public rank_priv[ALL_RANKS] = {	//rank privileges
+	PRIV_ALL,
+	PRIV_NONE
+};*/ //for what is this?
 
 /*!
 \brief a guild deed double-click

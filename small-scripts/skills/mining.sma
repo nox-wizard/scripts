@@ -382,49 +382,49 @@ target_create( chr, _, _, _, "blacksmithtwo" );
 
 public blacksmithtwo( const t, const chr, const target, const x, const y, const z, const model, const param1 )
 {
-new itemscript = itm_getProperty(target, IP_SCRIPTID);
-new itemid=itm_getProperty(target, IP_ID);
-if (300001 <= itemscript <= 390002)//weapon/armor was target
-    {
-    _repair(chr, target)
-    }
-else if (itemid == 0x1bf2) //ingots was target
-   {
-   new backpack = chr_getBackpack( chr, true );
-   if ((itm_getProperty(target, IP_CONTAINERSERIAL)) != (itm_getProperty(backpack,IP_SERIAL))) //ingots in pack?
-       {
-       chr_message( chr, _,"%s", msg_blacksmithDef[3]);
-       return;
-       }
-   else
-       {
-       chr_setLocalIntVar(chr, globalSkillVar1, target); //Serial ingot-target stored at char
-       new color = itm_getProperty(target, IP_COLOR);//color of ingots?
-       new actualskill;
-       //is char good enough to work with this kind of ingots?
-           switch(color) 
-            {
-       case 2104:  actualskill=oreProperty[0][oreuseskill]; //iron
-       case 2412:  actualskill=oreProperty[1][oreuseskill]; //shadow
-       case 0606:  actualskill=oreProperty[2][oreuseskill]; //Merkit
-       case 1134:  actualskill=oreProperty[3][oreuseskill]; //Kupfer
-       case 2101:  actualskill=oreProperty[4][oreuseskill]; //silver
-       case 2107:  actualskill=oreProperty[5][oreuseskill]; //Bronze
-       case 2009:  actualskill=oreProperty[6][oreuseskill]; //Gold
-       case 2205:  actualskill=oreProperty[7][oreuseskill]; //Agapit
-       case 2212:  actualskill=oreProperty[8][oreuseskill]; //Verit
-       case 0401:  actualskill=oreProperty[9][oreuseskill]; //Mythril
-       default: chr_message( chr, _, "Ingots of unknown color!");
-             }
-       if (chr_getSkill(chr, SK_BLACKSMITHING) < actualskill)
-              {
-              chr_message( chr, _, "%s", msg_blacksmithDef[4]);
-              return;
-              }
-       else menu_smith(chr)
-       }
-    }
-else chr_message( chr, _, "%s", msg_blacksmithDef[5]);
+	new itemscript = itm_getProperty(target, IP_SCRIPTID);
+	new itemid=itm_getProperty(target, IP_ID);
+	if (300001 <= itemscript <= 390002)//weapon/armor was target
+	{
+		_repair(chr, target)
+	}
+	else if(itemid == 0x1bf2) //ingots was target
+	{
+		new backpack = chr_getBackpack( chr, true );
+		if ((itm_getProperty(target, IP_CONTAINERSERIAL)) != (itm_getProperty(backpack,IP_SERIAL))) //ingots in pack?
+		{
+			chr_message( chr, _,"%s", msg_blacksmithDef[3]);
+			return;
+		}
+		else
+		{
+			chr_setLocalIntVar(chr, globalSkillVar1, target); //Serial ingot-target stored at char
+			new color = itm_getProperty(target, IP_COLOR);//color of ingots?
+			new actualskill;
+			//is char good enough to work with this kind of ingots?
+			switch(color) 
+			{
+				case 2104:  actualskill=oreProperty[0][oreuseskill]; //iron
+				case 2412:  actualskill=oreProperty[1][oreuseskill]; //shadow
+				case 0606:  actualskill=oreProperty[2][oreuseskill]; //Merkit
+				case 1134:  actualskill=oreProperty[3][oreuseskill]; //Kupfer
+				case 2101:  actualskill=oreProperty[4][oreuseskill]; //silver
+				case 2107:  actualskill=oreProperty[5][oreuseskill]; //Bronze
+				case 2009:  actualskill=oreProperty[6][oreuseskill]; //Gold
+				case 2205:  actualskill=oreProperty[7][oreuseskill]; //Agapit
+				case 2212:  actualskill=oreProperty[8][oreuseskill]; //Verit
+				case 0401:  actualskill=oreProperty[9][oreuseskill]; //Mythril
+				default: chr_message( chr, _, "Ingots of unknown color!");
+			}
+			if (chr_getSkill(chr, SK_BLACKSMITHING) < actualskill)
+			{
+				chr_message( chr, _, "%s", msg_blacksmithDef[4]);
+				return;
+			}
+			else menu_smith(chr);
+		}
+	}
+	else chr_message( chr, _, "%s", msg_blacksmithDef[5]);
 }
 
 
@@ -914,84 +914,84 @@ default: log_message("%s", msg_blacksmithDef[79]);
 }
 
 /****************************************************
-************* Reparieren ****************************
+************* Repair ********************************
 ****************************************************/
 
 public _repair(const target, const chr)
 {
-new smithing = chr_getProperty(chr, CP_SKILL, SK_BLACKSMITHING);
-new hp = itm_getProperty(target, IP_HP);
-new maxhp = itm_getProperty(target, IP_MAXHP);
-//new magic = itm_getProperty(target, IP_MAGIC);
-new color = itm_getProperty(target, IP_COLOR);//color is called
-new itemid=itm_getProperty(target, IP_ID);//ItemID is called
-new barrennum  = chr_countItems(chr, 0x1bf2, color);
-new index = 0;
-for (index = 0; index < NUM_ITEMS; index++)
-   {
-   //if (itemid == itemDef[index][3])//Array-line calculation
-      //{
-      if (smithing < 500)
-         {
-         chr_message( chr, _,"%s", msg_blacksmithDef[80]);
-         return;
-         }
-      //if (magic!= 0) //right now every item has magic 0 so does not work at the moment
-      new backpack = chr_getBackpack( chr, true );
-      if ((itm_getProperty(target, IP_CONTAINERSERIAL)) != (itm_getProperty(backpack,IP_SERIAL)))
-         {
-         chr_message( chr, _,"%s", msg_blacksmithDef[81]);
-         return;
-         }
-      if (!hp)//does the item has an hp-value? if not we can't repair it
-         {
-         chr_message( chr, _,"%s", msg_blacksmithDef[82]);
-         return;
-         }
-      if (hp==maxhp)
-         {
-         chr_message( chr, _, "%s", msg_blacksmithDef[83]);
-         return;
-         }
-      if (barrennum <= itemDef[index][repairingot])
-         {
-         chr_message( chr, _, "%s", msg_blacksmithDef[84]);
-         return;
-         }
-      new dmg = 4;    // repairing creates a damage at max-damage possible
-      if((smithing>=900)) dmg=1;
-      else if ((smithing>=700)) dmg=2;
-      else if ((smithing>=500)) dmg=3;
-      if (chr_checkSkill(chr, SK_BLACKSMITHING, itemDef[index][repairskillsmith], itemDef[index][skillmaxsmith], 0))
-          {
-          new newmaxhp=maxhp-dmg;
-          itm_contDelAmount(backpack , itemDef[index][repairingot],  0x1bf2, color);
-          itm_setProperty(target, IP_HP, _, newmaxhp);
-          itm_setProperty(target, IP_MAXHP, _, newmaxhp);
-          chr_message( chr, _,"%s", msg_blacksmithDef[88]);
-          }
-          //smithing is too low for repair normally but nevertheless there is a random chance for repairing
-     
-    new chance = random(50)
-    switch(chance)
-               {
-               case 0..35:
-                   {
-                   new newhp=hp-2;
-                   itm_contDelAmount(backpack , (itemDef[index][repairingot])/2, 0x1bf2 , color);
-                   itm_setProperty(target, IP_HP, _, newhp);
-                   chr_message( chr, _,"%s", msg_blacksmithDef[85]);
-                   }
-               case 36..50:
-                   {
-                   new newmaxhp=maxhp-1;
-                   itm_contDelAmount(backpack , (itemDef[index][repairingot])/2, 0x1bf2 , color);
-                   itm_setProperty(target, IP_MAXHP, _, newmaxhp);
-                   chr_message( chr, _,"%s", msg_blacksmithDef[86]);
-                   }
-               default: return;
-               }//switch
-     /*}//if itemid
-   else chr_message( chr, _, "%s", msg_blacksmithDef[82]); */
-  }//for
+	new smithing = chr_getProperty(chr, CP_SKILL, SK_BLACKSMITHING);
+	new hp = itm_getProperty(target, IP_HP);
+	new maxhp = itm_getProperty(target, IP_MAXHP);
+	//new magic = itm_getProperty(target, IP_MAGIC);
+	new color = itm_getProperty(target, IP_COLOR);//color is called
+	//new itemid=itm_getProperty(target, IP_ID);//ItemID is called
+	new barrennum  = chr_countItems(chr, 0x1bf2, color);
+	new index = 0;
+	for (index = 0; index < NUM_ITEMS; index++)
+	{
+		//if (itemid == itemDef[index][3])//Array-line calculation
+		//{
+		if (smithing < 500)
+		{
+			chr_message( chr, _,"%s", msg_blacksmithDef[80]);
+			return;
+		}
+		//if (magic!= 0) //right now every item has magic 0 so does not work at the moment
+		new backpack = chr_getBackpack( chr, true );
+		if ((itm_getProperty(target, IP_CONTAINERSERIAL)) != (itm_getProperty(backpack,IP_SERIAL)))
+		{
+			chr_message( chr, _,"%s", msg_blacksmithDef[81]);
+			return;
+		}
+		if (!hp)//does the item has an hp-value? if not we can't repair it
+		{
+			chr_message( chr, _,"%s", msg_blacksmithDef[82]);
+			return;
+		}
+		else if (hp==maxhp)
+		{
+			chr_message( chr, _, "%s", msg_blacksmithDef[83]);
+			return;
+		}
+		if (barrennum <= itemDef[index][repairingot])
+		{
+			chr_message( chr, _, "%s", msg_blacksmithDef[84]);
+			return;
+		}
+		new dmg = 4;    // repairing creates a damage at max-damage possible
+		if((smithing>=900)) dmg=1;
+		else if ((smithing>=700)) dmg=2;
+		else if ((smithing>=500)) dmg=3;
+		if (chr_checkSkill(chr, SK_BLACKSMITHING, itemDef[index][repairskillsmith], itemDef[index][skillmaxsmith], 0))
+		{
+			maxhp=maxhp-dmg;
+			itm_contDelAmount(backpack , itemDef[index][repairingot],  0x1bf2, color);
+			itm_setProperty(target, IP_HP, _, maxhp);
+			itm_setProperty(target, IP_MAXHP, _, maxhp);
+			chr_message( chr, _,"%s", msg_blacksmithDef[88]);
+		}
+		//smithing is too low for repair normally but nevertheless there is a random chance for repairing
+		
+	new chance = random(50)
+	switch(chance)
+	{
+		case 0..35:
+		{
+			hp=hp-2;
+			itm_contDelAmount(backpack , (itemDef[index][repairingot])/2, 0x1bf2 , color);
+			itm_setProperty(target, IP_HP, _, hp);
+			chr_message( chr, _,"%s", msg_blacksmithDef[85]);
+		}
+		case 36..50:
+		{
+			maxhp=maxhp-1;
+			itm_contDelAmount(backpack , (itemDef[index][repairingot])/2, 0x1bf2 , color);
+			itm_setProperty(target, IP_MAXHP, _, maxhp);
+			chr_message( chr, _,"%s", msg_blacksmithDef[86]);
+		}
+		default: return;
+	}//switch
+	/*}//if itemid
+	else chr_message( chr, _, "%s", msg_blacksmithDef[82]); */
+	}//for
 }

@@ -1,28 +1,4 @@
-// Duplicate definition from guild/constants.sma, since small doesn't seem to handle static defs in include right
-
-static ranks[ALL_RANKS][] = { //rank name
-	"GuildMaster",
-	"Member"
-};
-
-static rank_priv[ALL_RANKS] = {	//rank privileges
-	PRIV_ALL,
-	PRIV_NONE
-};
-
-static rank_male_name[ALL_RANKS][] = {	//rank male name
-	"GuildMaster",
-	"Vicemaster",
-	"Member",
-	"Novice"
-};
-
-static rank_female_name[ALL_RANKS][] = {	//rank female name
-	"GuildMistress",
-	"Vicemistress",
-	"Member",
-	"Novice"
-};
+// for array with ranks and alignment names, please look into translation folder (small-scripts/translation/small_speech.sma)
 
 public _createStdGuild( const stone, const master )
 {
