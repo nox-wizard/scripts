@@ -47,20 +47,17 @@ public handle_tracking( const socket, const oldmenu, const button, const model, 
 			set_addNpcsNearObj( set, chr, range );
 			id1=62; // default tracking animals
 			id2=399;
-			icon=8404;
 		}
 		case 2: { //Creatures
 			set_addNpcsNearObj( set, chr, range );
 			id1=1;
 			id2=61;
-			icon=0x20d1;
 		}
 		case 3: { //Players
 			set_addNpcsNearObj( set, chr, range );
 			set_addOnPlNearObj( set, chr, true, range );
 			id1=BODY_MALE;
 			id2=BODY_FEMALE;
-			icon=8454;
 		}
 	}
 	
