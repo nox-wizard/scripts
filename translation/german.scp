@@ -199,7 +199,7 @@ That player is already dead.$Dieser Spieler ist schon tot.
 
 Your weapon has been destroyed$Eure Waffe ist kaputt gegangen.
 You failed to disarm your opponent!$Du schaffst es nicht, deinen Gegner zu entwaffnen.
-You failed to stun your opponent!$Du schaffst es nicht, deinen Gegner zu lähmen.
+You failed to stun your opponent!$Du schaffst es nicht, deinen Gegner zu laehmen.
 Your shield has been destroyed$Euer Schild ist kaputt gegangen.
 You are out of ammunition!$Dir ist die Munition ausgegangen !
 You are too tired to attack.$Ihr seid zu muede um anzugreifen!
@@ -225,8 +225,8 @@ hits you to your Throat!$trifft Euch in den Hals!
 hits you in Left Hand!$trifft Euch in die linke Hand!
 hits you in Right Hand!$trifft Euch in die rechte Hand!
 Your %s has been destroyed$Euer %s ist kaputt!
-You prepare yourself for a disarm move.$Du bereitest dich für einen Entwaffnungsschlag vor.
-You prepare yourself for a stunning punch.$Du bereitest dich für einen Laehmungsschlag vor.
+You prepare yourself for a disarm move.$Du bereitest dich fuer einen Entwaffnungsschlag vor.
+You prepare yourself for a stunning punch.$Du bereitest dich fuer einen Laehmungsschlag vor.
 
 // commands.cpp
 
@@ -576,7 +576,7 @@ Currently posting GLOBAL messages$Nachrichtenart steht auf GLOBALE Nachrichten.
 Post type set to LOCAL$Nachrichtenart auf LOKAL geaendert.
 Post type set to REGIONAL$Nachrichtenart auf REGIONAL geaendert
 Post type set to GLOBAL$Nachrichtenart auf GLOBAL geaendert
-Invalid Post Type$UNgültige Nachrichtenart
+Invalid Post Type$UNgueltige Nachrichtenart
 You can not reply to global or regional posts$Ihr koennt nicht auf globale oder regionale Nachrichten antworten.
 Post failed!$Aushaengen der Nachricht fehlgeschlagen!
 Invalid post type!$Ungueltige Nachrichtenart!
@@ -753,7 +753,7 @@ Stupid Mortal I'll crush you as a fly$Dummer Sterblicher, ich werde Euch wie ein
 
 Thou art dead, but 'tis within my power to resurrect thee.  Live!$Ihr seid tot - aber es steht in meiner Macht, Euch wiederzubeleben. LEBT!
 Perhaps thou shouldst be more careful.  Here, I shall resurrect thee.$Vielleicht solltet ihr vorsichtiger sein. Hier, ich werde euch wiederbeleben.
-Live again, ghost!  Thy time in this world is not yet done.$Kehre ins Leben zurück, Geist ! Deine Zeit in dieser Welt ist noch nicht vorbei.
+Live again, ghost!  Thy time in this world is not yet done.$Kehre ins Leben zurueck, Geist ! Deine Zeit in dieser Welt ist noch nicht vorbei.
 Come nearer, ghost, and i'll give you life!$Komm naeher Geist und ich werde Euch das Leben wiederschenken.
 I will not give life to a scoundrel like thee!$Abschaum wie Euch werde ich niemals Leben spenden!
 Come nearer, evil soul, and i'll give you life!$Kommt naeher, boese Seele, und ich werde Euch das Leben neu schenken.
@@ -1095,7 +1095,7 @@ Rune renamed to: %s$Rune umbenannt zu: %s
 Your new name is: %s$Ab jetzt heisst Ihr %s
 Invalid namedeed$UNgueltiges Namensdeed
 Key renamed to: %s$Schluessel wurde umbenannt zu: %s
-Counselor Page from %s [%08x]: %s$Counselor Page von %s [%08x]
+Counselor Page from %s [%08x]: %s$Counselor Page von %s
 Which pet?$Welches Tier ?
 I have stabled %s$I habe %s in meinem Stall untergebracht.
 I have stabled %d pets$In meinem Stall stehen %d Tiere.
@@ -1188,8 +1188,8 @@ You are too far away to steal that item.$Ihr seid zu weit weg, um diesen Gegenst
 You can't steal from gods.$Ihr koennt nicht von Goettern stehlen.
 bad luck, your victim doesn't have a backpack$Pech gehabt, Euer Opfer traegt keinen Rucksack.
 You reach into %s's pack to steal something ...$Ihr greift in den Rucksack von %s , um etwas zu stehlen
-... and discover your victim doesn't have any posessions$... und stellt fest, daß das Opfer nichts besitzt.
-... and fail because it is of no value to you.$... und stellt fest, daß das Opfer nichts von Wert besitzt.
+... and discover your victim doesn't have any posessions$... und stellt fest, dass das Opfer nichts besitzt.
+... and fail because it is of no value to you.$... und stellt fest, dass das Opfer nichts von Wert besitzt.
 ... and fail because it's a locked container.$... und versagt, weil es sich um einen verschlossenen Behaelter handelt
 ... and fail because it is too heavy.$... und versagt, weil es zu schwer ist.
 ... and you succeed.$... und habt Erfolg !
