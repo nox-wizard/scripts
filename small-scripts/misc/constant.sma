@@ -79,7 +79,7 @@ const LAVA_WATER = 32;
 /*************************************************************************
  DAMAGE TYPES CONSTANTS
  *************************************************************************/
-/*! \defgroup DAMAGE_ damage constants
+/*! \defgroup DAMAGE_ DAMAGE_
 * @{
 */
 enum {
@@ -92,7 +92,7 @@ enum {
  LAYER TYPES CONSTANTS
  *************************************************************************/
 
-/*! \defgroup LAYER_ layers definitions
+/*! \defgroup LAYER_ LAYER_
 * @{
 */
 enum

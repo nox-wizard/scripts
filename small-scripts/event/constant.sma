@@ -16,6 +16,7 @@ const TRIG_CONTINUE = 0;
 const ITEM_DONTUSE = 0;
 const ITEM_CANUSE = 1;
 
+
 enum
 {
 	ITEM_USE_UNKNOWN = 0,
@@ -27,6 +28,9 @@ enum
 const SKILLADV_DONTRAISE = 0;
 const SKILLADV_RAISE = 1;
 
+/*!
+\brief constants for the type parameter in the @ONDISPEL event 
+*/
 enum
 {
 	DISPELTYPE_UNKNOWN = 0,
@@ -76,25 +80,241 @@ const EVENTTYPE_DYNAMIC = 1;
 */
 enum
 {
+	/*!
+	<B>callback prototype:</B> <br>
+	<UL>
+	<LI> 
+	</UL>
+	<B>called when:</B><br>
+	<B>bypass:</B><br>
+	<B>return:</B><br>
+	<B>notes:</B>
+	*/
 	EVENT_ITM_ONSTART = 0,
-        EVENT_ITM_ONDAMAGE,
-        EVENT_ITM_ONEQUIP,
-        EVENT_ITM_ONUNEQUIP,
-        EVENT_ITM_ONCLICK,
-        EVENT_ITM_ONDBLCLICK,
-        EVENT_ITM_ONPUTINBACKPACK,
-        EVENT_ITM_ONDROPINLAND,
-        EVENT_ITM_ONCHECKCANUSE,
-        EVENT_ITM_ONTRANSFER,
-        EVENT_ITM_ONSTOLEN,
-        EVENT_ITM_ONPOISONED,
-        EVENT_ITM_ONDECAY,
-        EVENT_ITM_ONREMOVETRAP,
-        EVENT_ITM_ONLOCKPICK,
-        EVENT_ITM_ONWALKOVER,
-        EVENT_ITM_ONPUTITEM,
-        EVENT_ITM_ONTAKEFROMCONTAINER,
-        ALLITEMEVENTS
+        
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, victim, damage, attacker)<br>
+	<UL>
+	<LI> itm: the item
+	<LI> victim: the victim of the damage
+	<LI> damage: damage amount
+	<LI> attacker: the character who caused the damage
+	</UL>
+	<B>called when:</B> an item is damaging a character<br>
+	<B>bypass:</B> avoids damage<br>
+	<B>return:</B> the damage to be done<br>
+	<B>notes:</B> called after EVENT_CHR_ONWOUNDED, returning 0 is better than bypassing
+	*/
+	EVENT_ITM_ONDAMAGE,
+       
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr)<br>
+	<UL>
+	<LI> itm: the item being equipped
+	<LI> chr: the character equipping the item
+	</UL>
+	<B>called when:</B> an item is equipped<br>
+	<B>bypass:</B> prevents the item from being equipped<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B>
+	*/
+	EVENT_ITM_ONEQUIP,
+        
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr)<br>
+	<UL>
+	<LI> itm: the item being unequipped
+	<LI> chr: the character unequipping the item
+	</UL>
+	<B>called when:</B> an item is unequipped<br>
+	<B>bypass:</B> keeps the item equipped<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONUNEQUIP,
+	
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr)<br>
+	<UL>
+	<LI> itm: the item clicked
+	<LI> chr: the character who clicked
+	</UL>
+	<B>called when:</B> an item is clicked once<br>
+	<B>bypass:</B> avoids the standard code<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONCLICK,
+        
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr)<br>
+	<UL>
+	<LI> itm: the item doubleclicked
+	<LI> chr: the character who double clicked the item
+	</UL>
+	<B>called when:</B> a character doubleclicks an item<br>
+	<B>bypass:</B> avoids standard code<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B>
+	*/
+	EVENT_ITM_ONDBLCLICK,
+	
+        /*!
+	<B>callback prototype:</B><br>
+	<UL>
+	<LI>
+	</UL>
+	<B>called when:</B><br>
+	<B>bypass:</B> <br>
+	<B>return:</B> <br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONPUTINBACKPACK,
+	
+        /*!
+	<B>callback prototype:</B> <br>
+	<UL>
+	<LI> 
+	</UL>
+	<B>called when:</B> <br>
+	<B>bypass:</B> <br>
+	<B>return:</B> <br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONDROPINLAND,
+	
+        /*!
+	<B>callback prototype:</B> <br>
+	<UL>
+	<LI> 
+	</UL>
+	<B>called when:</B> <br>
+	<B>bypass:</B> <br>
+	<B>return:</B> <br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONCHECKCANUSE,
+	
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr1, chr2)<br>
+	<UL>
+	<LI> itm: the item being transferred
+	<LI> chr1: the old owner
+	<LI> chr2: the new owner
+	</UL>
+	<B>called when:</B> an item is traded between two characters<br>
+	<B>bypass:</B> the item is not tranferred<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B> when transfering a container this event is called for each item in the container
+	*/
+	EVENT_ITM_ONTRANSFER,
+        
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr, victim)<br>
+	<UL>
+	<LI> itm: the item being stolen
+	<LI> chr: the thief
+	<LI> victim: the victim
+	</UL>
+	<B>called when:</B> an item is stolen<br>
+	<B>bypass:</B> avoids the stealing<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONSTOLEN,
+	
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr, poison)<br>
+	<UL>
+	<LI> itm: the item being poisoned
+	<LI> chr: the poisoner
+	<LI> poison: the type of poison
+	</UL>
+	<B>called when:</B> someone is applying poison to an item<br>
+	<B>bypass:</B> avoids the standard code<br>
+	<B>return:</B> the type of poison to be applied, one of the POISON_ constants<br>
+	<B>notes:</B> returning POISON_NONE will delete the bottle
+	*/
+	EVENT_ITM_ONPOISONED,
+	
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr, decaytipe)<br>
+	<UL>
+	<LI> itm: the item dacaying
+	<LI> chr: the character who clicked
+	<LI> decaytipe: one of the DECAYTYPE_ constants
+	</UL>
+	<B>called when:</B> an item is decaying<br>
+	<B>bypass:</B> avoids decay, not allowed if decaytype is DECAYTYPE_GMREMOVE<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONDECAY,
+	
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr)<br>
+	<UL>
+	<LI> itm: the item 
+	<LI> chr: the disarmer
+	</UL>
+	<B>called when:</B> someone tries to disarm a trap<br>
+	<B>bypass:</B> NO<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B> used to implement custom traps
+	*/
+	EVENT_ITM_ONREMOVETRAP,
+	
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr)<br>
+	<UL>
+	<LI> itm: the item 
+	<LI> chr: the thief
+	</UL>
+	<B>called when:</B> someone tries to lockpick an item<br>
+	<B>bypass:</B> avoids standard code<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B> called befor checking if the item is lockpickable
+	*/
+	EVENT_ITM_ONLOCKPICK,
+	
+        /*!
+	<B>callback prototype:</B> public mycallback(itm, chr)<br>
+	<UL>
+	<LI> itm: the item
+	<LI> chr: the character who walked on the item
+	</UL>
+	<B>called when:</B> someone is walking over an item<br>
+	<B>bypass:</B> avoids the standard code<br>
+	<B>return:</B> nothing<br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONWALKOVER,
+	
+        /*!
+	<B>callback prototype:</B> <br>
+	<UL>
+	<LI> 
+	</UL>
+	<B>called when:</B> <br>
+	<B>bypass:</B> <br>
+	<B>return:</B> <br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONPUTITEM,
+        
+        /*!
+	<B>callback prototype:</B> <br>
+	<UL>
+	<LI>
+	</UL>
+	<B>called when:</B> <br>
+	<B>bypass:</B> <br>
+	<B>return:</B> <br>
+	<B>notes:</B> 
+	*/
+	EVENT_ITM_ONTAKEFROMCONTAINER,
+        
+	ALLITEMEVENTS
 };
 /* @} */
 
@@ -188,7 +408,7 @@ const EVENT_CHR_ONREPUTATIONCHG	=  5;
 <UL>
 <LI> chr: the character being dispelled
 <LI> dispeller: the charater who's dispelling chr
-<LI> type: one of \ref DISPEL_
+<LI> type: one of \ref DISPELTYPE_
 </UL>
 <B>called when:</B> the char is being dispelled<br>
 <B>bypass:</B> can't bypass if type is DISPEL_GMREMOVE, in other cases you should remove the dispel cause<br>

@@ -1138,6 +1138,16 @@ stock chr_unpossess(chr)
 }
 /** @} */
 //=========================== MISC ============================
+/*
+\brief Send a sysmessage to given character using given color
+\author Endymion
+\param chr the character
+\param color the message color
+\param text[] the message text
+\return 1 or 0 if error
+*/
+native chr_message(const chr, const color, const text[]);
+
 /*!
 \author Luxor
 \fn chr_isOnline(const chr)
