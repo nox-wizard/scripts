@@ -1,0 +1,121 @@
+[014F0]
+MAPPING $item_deed
+
+[i_deed_tower_wizard]
+MAPPING $item_small_tower_deed
+
+[i_deed_shop_marble_small]
+MAPPING $item_small_marble_shop_deed
+
+[i_deed_farm_house]
+MAPPING $item_farm_house_deed
+
+[i_deed_small_stone_shop]
+MAPPING $item_small_stone_shop_deed
+
+[i_deed_villa_2story]
+MAPPING $item_2-story_villa_deed
+
+[i_deed_house_patio_sand]
+MAPPING $item_sandstone_patio_house_deed
+
+[i_deed_cabin_log_2story]
+MAPPING $item_2-story_log_cabin_deed
+
+[i_deed_house_patio_marble]
+MAPPING $item_large_marble_patio_house_deed
+
+[i_deed_employment]
+MAPPING $item_employment_deed
+
+[i_deed_christmas_tree]
+MAPPING $item_christmas_tree_deed
+
+[i_deed_dartboard]
+MAPPING $item_dartboard_deed
+
+[i_deed_trashcan]
+MAPPING $item_trashcan_deed
+
+[i_deed_townstone]
+MAPPING $item_townstone_deed
+
+[i_deed_guildstone]
+MAPPING $item_guildstone_deed
+
+[i_deed_house_stone_plaster_small]
+MAPPING $item_small_stone_plaster_house_deed
+
+[i_deed_house_stone_small]
+MAPPING $item_small_stone_house_deed
+
+[i_deed_House_stone_brick_small]
+MAPPING $item_small_brick_house_deed
+
+[i_deed_House_stone_wood_small]
+MAPPING $item_small_wood_house_deed
+
+[i_deed_house_wood_plaster_small]
+MAPPING $item_small_wood_plaster_house_deed
+
+[i_deed_small_wood_house_with_straw_roof]
+MAPPING $item_small_wood_house_with_straw_roof_deed
+
+[i_deed_tent_blue]
+MAPPING $item_blue_tent_deed
+
+[i_deed_tent_green]
+MAPPING $item_green_tent_deed
+
+[i_deed_house_3room]
+MAPPING $item_3_room_brick_house_deed
+
+[i_deed_house_wood_plaster_2story]
+MAPPING $item_2_story_wood_plaster_house_deed
+
+[i_deed_house_stone_plaster_2story]
+MAPPING $item_2_story_stone_plaster_house_deed
+
+[i_deed_tower]
+MAPPING $item_tower_deed
+
+[i_deed_keep]
+MAPPING $item_keep_deed
+
+[i_deed_4_room_house]
+MAPPING $item_4_room_house_deed
+
+[i_deed_castle]
+MAPPING $item_castle_deed
+
+[i_deed_shop_blacksmithy_large]
+MAPPING $item_large_smithy_deed
+
+[I_DEED_FORGE]
+MAPPING $item_forge_deed
+
+[I_DEED_ANVIL]
+MAPPING $item_anvil_deed_1
+
+[i_deed_spinwheel]
+MAPPING $item_spinning_wheel_deed_2
+
+[I_DEED_ARCHBUTTEW]
+MAPPING $item_archery_butte_deed_2
+
+[I_DEED_ARCHBUTTEN]
+MAPPING $item_archery_butte_deed_1
+
+[I_DEED_DUMMYN]
+MAPPING $item_training_dummy_deed_2
+
+[I_DEED_DUMMYW]
+MAPPING $item_training_dummy_deed_1
+
+[i_deed_pickpockw]
+MAPPING $item_pickpocket_dip_deed_2
+
+[I_DEED_PICKPOCKN]
+MAPPING $item_pickpocket_dip_deed_1
+
+
