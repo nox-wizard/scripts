@@ -165,9 +165,9 @@ native set_addOwnedNpcs( const set, const owner, const includeStabled=false, con
 \param 5 exclude offline
 \param 6 only player
 \return 0
-\fn set_addCharsNearXYZ( const set, const x, const y, const distance, const excludeOffline, const onlyPlayer ) 
+\fn set_addCharsNearXY( const set, const x, const y, const distance, const excludeOffline, const onlyPlayer ) 
 */
-native set_addCharsNearXYZ( const set, const x, const y, const distance=VISRANGE, const excludeOffline=true, const onlyPlayer=false );
+native set_addCharsNearXY( const set, const x, const y, const distance=VISRANGE, const excludeOffline=true, const onlyPlayer=false );
 
 /*!
 \brief Add to given set the party friend of given character
@@ -191,9 +191,9 @@ native set_addPartyFriend( const set, const chr, const distance=VISRANGE, const 
 \param 3 include sub containers
 \param 4 only first subcontainer
 \return 0
-\fn set_addItemsInContainer( const set, const item, const includeSubCont, const onlyFirstSubCont )
+\fn set_addItemsInCont( const set, const item, const includeSubCont, const onlyFirstSubCont )
 */
-native set_addItemsInContainer( const set, const item, const includeSubCont=false, const onlyFirstSubCont=true );
+native set_addItemsInCont( const set, const item, const includeSubCont=false, const onlyFirstSubCont=true );
 
 /*!
 \brief Add to given set the items weared by given character
@@ -232,9 +232,9 @@ native set_addItemsAtXY( const set, const x, const y, const type );
 \param 4 distance
 \param 5 exclude not moveable
 \return 0
-\fn set_addItemsNearXYZ( const set, const x, const y, const distance, const excludeNotMoveable )
+\fn set_addItemsNearXY( const set, const x, const y, const distance, const excludeNotMoveable )
 */
-native set_addItemsNearXYZ( const set, const x, const y, const distance=VISRANGE, const excludeNotMoveable=true );
+native set_addItemsNearXY( const set, const x, const y, const distance=VISRANGE, const excludeNotMoveable=true );
 
 /*!
 \brief Add to given set all online players
@@ -243,9 +243,9 @@ native set_addItemsNearXYZ( const set, const x, const y, const distance=VISRANGE
 \param 1 the set
 \return 0
 \note are added ONLY client chaarcter online
-\fn set_addAllOnlinePlayers( const set )
+\fn set_addAllOnlinePl( const set )
 */
-native set_addAllOnlinePlayers( const set );
+native set_addAllOnlinePl( const set );
 
 /*!
 \brief Add to given set all online players near given character
@@ -257,23 +257,10 @@ native set_addAllOnlinePlayers( const set );
 \param 4 distance
 \return 0
 \note are added ONLY client chaarcter online
-\fn set_addOnlinePlayersNearChar( const set, const chr, const excludeThis, const distance )
+\fn set_addOnlinePlNearChar( const set, const chr, const excludeThis, const distance )
+\note if object is an item and is in a subcontainer, is returned the true location, the ocation of in world container
 */
-native set_addOnlinePlayersNearChar( const set, const chr, const excludeThis=true, const distance=VISRANGE );
-
-/*!
-\brief Add to given set all online players near item
-\author Endymion
-\since 0.82
-\param 1 the set
-\param 2 the item
-\param 3 distance
-\return 0
-\note are added ONLY client chaarcter online
-\note if item is in a subcontainer, is returned the true location, the ocation of in world container
-\fn set_addOnlinePlayersNearItem( const set, const itm, const distance )
-*/
-native set_addOnlinePlayersNearItem( const set, const itm, const distance=VISRANGE );
+native set_addOnlinePlNearObj( const set, const chr, const excludeThis=true, const distance=VISRANGE );
 
 /*!
 \brief Add to given set all online players near location
@@ -285,6 +272,6 @@ native set_addOnlinePlayersNearItem( const set, const itm, const distance=VISRAN
 \param 4 distance
 \return 0
 \note are added ONLY client chaarcter online
-\fn set_addOnlinePlayersNearXY( const set, const x, const y, const distance=VISRANGE )
+\fn set_addOnlinePlNearXY( const set, const x, const y, const distance=VISRANGE )
 */
-native set_addOnlinePlayersNearXY( const set, const x, const y, const distance );
+native set_addOnlinePlNearXY( const set, const x, const y, const distance );
