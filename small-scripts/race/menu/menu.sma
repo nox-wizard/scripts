@@ -40,9 +40,7 @@ public race_menu( const chr, const race )
 	gui_addText( racemenu, 13, 106,   95, "you must choose one now!" );
 	
 	new offset = 0;
-	new telecheck = race_getGlobalProp( RP_TELEPORT_ON_ENLIST );
-	printf("teleport check: %d^n", telecheck);
-	if( telecheck == 1)
+	if( race_getGlobalProp( RP_TELEPORT_ON_ENLIST ) == 1)
 	{
 		gui_addText( racemenu, 13, 136, 1153, "Y" );
 		gui_addText( racemenu, 25, 136,   95, "ou have been transported to a safe location" );
@@ -80,7 +78,7 @@ public race_menu( const chr, const race )
 
 public race_menu_Bck(const racemenu, const chrsource, const buttonCode)
 {
-
+	
 }
 
 public race_dialogRaceInfo( const chr, const race )
