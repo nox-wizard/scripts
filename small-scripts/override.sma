@@ -28,6 +28,7 @@
 
 #include "small-scripts/custom/default.sma"
 #include "small-scripts/custom/speech.sma"
+#include "small-scripts/custom/hitching.sma"
 #include "small-scripts/custom/eatdrink.sma"
 #include "small-scripts/custom/flipitem.sma"
 #include "small-scripts/custom/potiondelay.sma"

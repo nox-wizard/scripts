@@ -5,6 +5,16 @@ Flag is an 8bit number containing information about reputation status, bitfields
     - 0x4: Blue
     - 0x8: green
     - 0x10: Orange
+    
+/*
+\brief Add to given set all chars of an account
+\author Wintermute
+\since 0.82
+\param 1 the set
+\param 2 the account number
+\return 0
+*/
+native set_addAccountChars(const set, const accountnum);
 */
 
 public start_unknown_char(const viewerchr)
