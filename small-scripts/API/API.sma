@@ -23,6 +23,8 @@
 #include "small-scripts/API/gmpage.api"
 #include "small-scripts/API/gui/mnu.api"
 #include "small-scripts/API/gui/gui.api"
+#include "small-scripts/API/gui/cursor.sma"
+#include "small-scripts/API/gui/menu.sma"
 #include "small-scripts/API/guild/guild.api"
 #include "small-scripts/API/house/house.api"
 #include "small-scripts/API/item/item.api"

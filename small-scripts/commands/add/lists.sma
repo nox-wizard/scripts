@@ -13,19 +13,271 @@ enum additemEntry
 
 };
 
+//magic menu #defines
+#define MAGIC_MENU_IDX 0
+
 #define NUM_MAGICALITEMS 4
-new __magicalItems[NUM_MAGICALITEMS][additemEntry] =
+#define MAGICALITEMS_IDX MAGIC_MENU_IDX
+ 
+#define NUM_REAGENTS 8
+#define REAGENTS_IDX NUM_MAGICALITEMS + MAGICALITEMS_IDX
+
+#define NUM_REAGENTS2 18
+#define REAGENTS2_IDX NUM_REAGENTS + REAGENTS_IDX
+
+#define NUM_BOTTLES 12
+#define BOTTLES_IDX NUM_REAGENTS2 + REAGENTS2_IDX
+
+#define NUM_POTIONS 12
+#define POTIONS_IDX NUM_BOTTLES + BOTTLES_IDX
+
+#define NUM_WANDS 9
+#define WANDS_IDX NUM_POTIONS + POTIONS_IDX
+
+#define NUM_GATES 3
+#define GATES_IDX NUM_WANDS + WANDS_IDX
+
+#define NUM_SCROLLS1 8
+#define NUM_SCROLLS2 8
+#define NUM_SCROLLS3 8
+#define NUM_SCROLLS4 8
+#define NUM_SCROLLS5 8
+#define NUM_SCROLLS6 8
+#define NUM_SCROLLS7 8
+#define NUM_SCROLLS8 8
+
+#define NUM_SCROLLS 64
+#define SCROLLS_IDX NUM_GATES + GATES_IDX
+
+//NPC menu #defines
+#define NPC_MENU_IDX SCROLLS_IDX + NUM_SCROLLS
+
+#define NUM_ANIMALS 26
+#define IDX_ANIMALS NPC_MENU_IDX
+
+#define NUM_T2A_MONSTERS 41	                        
+#define IDX_T2A_MONSTERS IDX_ANIMALS + NUM_ANIMALS
+
+#define NUM_DEAMONS 5
+#define IDX_DEAMONS IDX_T2A_MONSTERS + NUM_T2A_MONSTERS
+
+#define NUM_ELEMENTALS 7                                
+#define IDX_ELEMENTALS IDX_DEAMONS + NUM_DEAMONS
+
+#define NUM_ORCS 12
+#define IDX_ORCS IDX_ELEMENTALS + NUM_ELEMENTALS
+
+#define NUM_MONSTERS 17
+#define IDX_MONSTERS IDX_ORCS + NUM_ORCS
+
+#define NUM_UNDEADS 15
+#define IDX_UNDEADS IDX_MONSTERS + NUM_MONSTERS
+
+#define NUM_UNIQUE 5
+#define IDX_UNIQUE IDX_UNDEADS + NUM_UNDEADS
+
+#define NUM_FROST_STONE 7
+#define IDX_FROST_STONE IDX_UNIQUE + NUM_UNIQUE
+
+#define NUM_DRAGONS 13
+#define IDX_DRAGONS IDX_FROST_STONE + NUM_FROST_STONE
+
+#define NUM_PEOPLE_M 29
+#define IDX_PEOPLE_M IDX_DRAGONS + NUM_DRAGONS
+
+#define NUM_PEOPLE_F 22
+#define IDX_PEOPLE_F IDX_PEOPLE_M + NUM_PEOPLE_M
+
+#define NUM_MERCHANTS_M 32
+#define IDX_MERCHANTS_M IDX_PEOPLE_F + NUM_PEOPLE_F
+
+#define NUM_MERCHANTS_F 30
+#define IDX_MERCHANTS_F IDX_MERCHANTS_M + NUM_MERCHANTS_M
+
+//supply menu #defines
+#define SUPPLY_MENU_IDX IDX_MERCHANTS_F + NUM_MERCHANTS_F 
+
+#define NUM_BEVERAGES 27
+#define IDX_BEVERAGES SUPPLY_MENU_IDX
+
+#define NUM_BAKED 39
+#define IDX_BAKED IDX_BEVERAGES + NUM_BEVERAGES
+
+#define NUM_BOWLSMEATFRUIT 28
+#define IDX_BOWLSMEATFRUIT IDX_BAKED + NUM_BAKED
+
+#define NUM_PLANTS 19
+#define IDX_PLANTS IDX_BOWLSMEATFRUIT + NUM_BOWLSMEATFRUIT
+
+#define NUM_LIGHTS 18
+#define IDX_LIGHTS IDX_PLANTS + NUM_PLANTS
+
+#define NUM_CONTAINERS 18
+#define IDX_CONTAINERS IDX_LIGHTS + NUM_LIGHTS
+
+#define NUM_STATUES_TROPHIES 29
+#define IDX_STATUES_TROPHIES IDX_CONTAINERS + NUM_CONTAINERS
+
+#define NUM_HAIR_BEARD 16
+#define IDX_HAIR_BEARD IDX_STATUES_TROPHIES + NUM_STATUES_TROPHIES
+
+#define NUM_CLOTHING 41
+#define IDX_CLOTHING IDX_HAIR_BEARD + NUM_HAIR_BEARD
+
+#define NUM_RUGS 90
+#define IDX_RUGS IDX_CLOTHING + NUM_CLOTHING
+
+#define NUM_JEWELS 60
+#define IDX_JEWELS IDX_RUGS + NUM_RUGS
+
+//Signs menu defines
+#define SIGNS_MENU_IDX IDX_JEWELS + NUM_JEWELS 
+
+#define NUM_WORKER 69
+#define IDX_WORKER SIGNS_MENU_IDX
+
+#define NUM_GUILD 56
+#define IDX_GUILD IDX_WORKER + NUM_WORKER
+
+//furniture menu defines
+#define FURNITURE_MENU_IDX IDX_GUILD + NUM_GUILD
+
+#define NUM_FURNITURE 24
+#define IDX_FURNITURE FURNITURE_MENU_IDX
+
+#define NUM_TABLES 54
+#define IDX_TABLES IDX_FURNITURE + NUM_FURNITURE
+
+#define NUM_CHAIRS 42
+#define IDX_CHAIRS IDX_TABLES + NUM_TABLES
+
+#define NUM_BEDS 14
+#define IDX_BEDS IDX_CHAIRS + NUM_CHAIRS
+
+#define NUM_BIGBEDS 40
+#define IDX_BIGBEDS IDX_BEDS + NUM_BEDS
+
+//Tools menu defines
+
+#define TOOLS_MENU_IDX IDX_BIGBEDS + NUM_BIGBEDS
+
+#define NUM_CARPENTER1 36
+#define IDX_CARPENTER1 TOOLS_MENU_IDX
+
+#define NUM_CARPENTER2 53
+#define IDX_CARPENTER2 IDX_CARPENTER1 + NUM_CARPENTER1
+
+#define NUM_TAILOR 15
+#define IDX_TAILOR IDX_CARPENTER2 + NUM_CARPENTER2
+
+#define NUM_BLACKSMITH 11
+#define IDX_BLACKSMITH IDX_TAILOR + NUM_TAILOR
+
+#define NUM_MUSICIAN 7
+#define IDX_MUSICIAN IDX_BLACKSMITH + NUM_BLACKSMITH
+
+#define NUM_THIEF 1
+#define IDX_THIEF IDX_MUSICIAN + NUM_MUSICIAN
+
+#define NUM_FISHER 1
+#define IDX_FISHER IDX_THIEF + NUM_THIEF
+
+#define NUM_TINKER 10
+#define IDX_TINKER IDX_FISHER + NUM_FISHER
+
+#define NUM_BOWYER 10
+#define IDX_BOWYER IDX_TINKER + NUM_TINKER
+
+//Spawners
+#define NUM_SPAWNERS 114
+#define IDX_SPAWNERS IDX_BOWYER + NUM_BOWYER
+
+//total items = last idx + last number
+#define NUM_ADD_ITEMS IDX_SPAWNERS + NUM_SPAWNERS
+
+new __listAllocationMap[58] =
 {
+	//magic
+	NUM_MAGICALITEMS,
+	NUM_REAGENTS,
+	NUM_REAGENTS2,
+	NUM_BOTTLES,
+	NUM_POTIONS,
+	NUM_WANDS,
+	NUM_GATES,
+	NUM_SCROLLS1,
+	NUM_SCROLLS2,
+	NUM_SCROLLS3,
+	NUM_SCROLLS4,
+	NUM_SCROLLS5,
+	NUM_SCROLLS6,
+	NUM_SCROLLS7,
+	NUM_SCROLLS8,
+	
+	//npc
+	NUM_ANIMALS,
+	NUM_T2A_MONSTERS,	                        
+	NUM_DEAMONS,
+	NUM_ELEMENTALS,                                
+	NUM_ORCS,
+	NUM_MONSTERS,
+	NUM_UNDEADS,
+	NUM_UNIQUE,
+	NUM_FROST_STONE,
+	NUM_DRAGONS,
+	NUM_PEOPLE_M,
+	NUM_PEOPLE_F,
+	NUM_MERCHANTS_M,
+	NUM_MERCHANTS_F,
+
+	//supply
+	NUM_BEVERAGES,
+	NUM_BAKED,
+	NUM_BOWLSMEATFRUIT,
+	NUM_PLANTS,
+	NUM_LIGHTS,
+	NUM_CONTAINERS,
+	NUM_STATUES_TROPHIES,
+	NUM_HAIR_BEARD,
+	NUM_CLOTHING,
+	NUM_RUGS,
+	NUM_JEWELS,
+	
+	//signs
+	NUM_WORKER,
+	NUM_GUILD,
+	
+	//furniture	
+	NUM_FURNITURE,
+	NUM_TABLES,
+	NUM_CHAIRS,
+	NUM_BEDS,
+	NUM_BIGBEDS,
+	
+	//tools
+	NUM_CARPENTER1,
+	NUM_CARPENTER2,
+	NUM_TAILOR,
+	NUM_BLACKSMITH,
+	NUM_MUSICIAN,
+	NUM_THIEF,
+	NUM_FISHER,
+	NUM_TINKER,
+	NUM_BOWYER,
+	
+	//Spawners
+	NUM_SPAWNERS
+};
+
+new __addMenuList[NUM_ADD_ITEMS][additemEntry] =
+{
+	//magical items
 	{0x1F14,"$item_a_recall_rune                    ","Recall rune"}, 
 	{0x0EFA,"$item_a_spellbook                      ","Spellbook"}, 
 	{0x0E34,"$item_blank_scrolls                    ","Blank scrolls"}, 
-	{0x1F6D,"$item_all-spell_scroll                 ","all-spell scroll"} 
-}                                                       
-
-                                                        
-#define NUM_REAGENTS 8                                  
-new __reagents[NUM_REAGENTS][additemEntry] =            
-{                                                       
+	{0x1F6D,"$item_all-spell_scroll                 ","all-spell scroll"},
+	
+	//reagents                                  
 	{0x0F7A,"$item_black_pearl                      ","Black Pearl"},
 	{0x0F7B,"$item_bloodmoss                        ","Blood Moss"},
 	{0x0F84,"$item_garlic                           ","Garlic"},
@@ -33,14 +285,9 @@ new __reagents[NUM_REAGENTS][additemEntry] =
 	{0x0F86,"$item_mandrake_root                    ","Mandrake Root"},
 	{0x0F88,"$item_nightshade                       ","Nightshade"},
 	{0x0F8C,"$item_sulfurous_ash                    ","Sulfurous Ash"},
-	{0x0F8D,"$item_spiders_silk                     ","Spiders Silk"}
-}                                                       
-                                                        
-                                                        
-                                                        
-#define NUM_REAGENTS2 18                                
-new __reagents2[NUM_REAGENTS2][additemEntry] =          
-{                                                       
+	{0x0F8D,"$item_spiders_silk                     ","Spiders Silk"},
+
+	//reagents 2
 	{0x0F78,"$item_batwing                          ","Bat Wing"},
 	{0x0F79,"$item_blackmoor                        ","Blackmoor"},
 	{0x0F7C,"$item_bloodspawn                       ","Bloodspawn"},
@@ -58,32 +305,23 @@ new __reagents2[NUM_REAGENTS2][additemEntry] =
 	{0x0F8E,"$item_serpents_scale                   ","Serpent Scales"},
 	{0x0F8F,"$item_volcanic_ash                     ","Volcanic Ash"},
 	{0x0F90,"$item_dead_wood                        ","Dead Wood"},
-	{0x0F91,"$item_wyrms_heart                      ","Worms Heart"}
-}                                                       
-                                                        
-                                                        
-                                                        
-                                                        
-#define NUM_BOTTLES 12                                  
-new __bottles[NUM_BOTTLES][additemEntry] =              
-{                                                       
-	{0x0F0E,"$item_bottle_A                         ","Bottle"},
+	{0x0F91,"$item_wyrms_heart                      ","Worms Heart"},
+
+	//bottles                                                       
+	{0x0F0E,"$item_bottle10                         ","Bottle"},
 	{0x0E24,"$item_empty_vials                      ","Empty vial"},
-	{0x0E25,"$item_bottle                           ","Bottle"},
-	{0x0E26,"$item_bottle_1                         ","Bottle"},
-	{0x0E27,"$item_bottle_2                         ","Bottle"},
-	{0x0E28,"$item_bottle_3                         ","Bottle"},
-	{0x0E29,"$item_bottle_4                         ","Bottle"},
-	{0x0E2A,"$item_bottle_5                         ","Bottle"},
-	{0x0E2B,"$item_bottle_6                         ","Bottle"},
-	{0x0E2C,"$item_bottle_7                         ","Bottle"},
-	{0x0EFB,"$item_bottle_8                         ","Bottle"},
-	{0x0EFC,"$item_bottle_9                         ","Bottle"}
-}                                                       
-                                                        
-#define NUM_POTIONS 12                                  
-new __potions[NUM_POTIONS][additemEntry] =              
-{                                                       
+	{0x0E25,"$item_bottle11                           ","Bottle"},
+	{0x0E26,"$item_bottle1                         ","Bottle"},
+	{0x0E27,"$item_bottle2                         ","Bottle"},
+	{0x0E28,"$item_bottle3                         ","Bottle"},
+	{0x0E29,"$item_bottle4                         ","Bottle"},
+	{0x0E2A,"$item_bottle5                         ","Bottle"},
+	{0x0E2B,"$item_bottle6                         ","Bottle"},
+	{0x0E2C,"$item_bottle7                         ","Bottle"},
+	{0x0EFB,"$item_bottle8                         ","Bottle"},
+	{0x0EFC,"$item_bottle9                         ","Bottle"},
+
+	//potions                                                
 	{0x0E9B,"$item_mortar_and_pestal                ","Mortar And Pestal"},
 	{0x0F06,"$item_night_sight_potion               ","Night Sight Potion"},
 	{0x0F07,"$item_cure_potion                      ","Cure_Potion"},
@@ -95,35 +333,25 @@ new __potions[NUM_POTIONS][additemEntry] =
 	{0x0F0C,"$item_greater_heal_potion              ","Greater Heal Potion"},
 	{0x0F0D,"$item_lesser_explosion_potion          ","Lesser Explosion Potion"},
 	{0x0F0D,"$item_explosion_potion                 ","Explosion Potion"},
-	{0x0F0D,"$item_greater_explosion_potion         ","Greater Explosion Potion"}
-}
+	{0x0F0D,"$item_greater_explosion_potion         ","Greater Explosion Potion"},
 
-#define NUM_WANDS 9
-new __wands[NUM_WANDS][additemEntry] =
-{
-	{0x0DF2,"$item_a_wand_of_greater_heal           ","Greater Heal Wand"},
-	{0x0DF3,"$item_a_wand_of_summon_daemon          ","Summon Daemon Wand"},
-	{0x0DF4,"$item_a_wand_of_healing                ","Magic Arrow Wand"},
-	{0x0DF5,"$item_a_wand_of_resurrection           ","Resurrect Wand"},
+	//wands
+	{0x0DF2,"$item_wand_of_greater_heal             ","Greater Heal Wand"},
+	{0x0DF3,"$item_wand_of_summon_daemon            ","Summon Daemon Wand"},
+	{0x0DF4,"$item_wand_of_healing                  ","Magic Arrow Wand"},
+	{0x0DF5,"$item_wand_of_resurrection             ","Resurrect Wand"},
 	{0x0F5C,"$item_fire_mace                        ","Fireball Mace"},
-	{0x0F5C,"$item_a_wand_of_greater_healing        ","greater healing wand"},
-	{0x0F5C,"$item_a_wand_of_energy_vortex          ","energy vortex wand"},
-	{0x0F5C,"$item_a_wand_of_magic_arrow            ","magic arrow wand"},
-	{0x0F5C,"$item_a_wand_of_ressurection           ","ressurection wand"}
-}
+	{0x0F5C,"$item_wand_of_greater_healing          ","greater healing wand"},
+	{0x0F5C,"$item_wand_of_energy_vortex            ","energy vortex wand"},
+	{0x0F5C,"$item_wand_of_magic_arrow              ","magic arrow wand"},
+	{0x0F5C,"$item_wand_of_ressurection             ","ressurection wand"},
 
-#define NUM_GATES 3
-new __gates[NUM_GATES][additemEntry] =
-{
+	//gates
 	{0x0F6C,"$item_a_blue_moongate                  ","A Blue Moongate"},
 	{0x0DDA,"$item_a_red_moongate                   ","A Red Moongate"},
-	{0x1FD4,"$item_a_black_moongate                 ","A Black Moongate"}
-}
+	{0x1FD4,"$item_a_black_moongate                 ","A Black Moongate"},
 
-#define MAX_SCROLLS 64
-#define SCROLLS_PER_CIRCLE 8
-new __scrolls[ MAX_SCROLLS][additemEntry] =
-{
+	//scrolls
 	//1st circle
 	{0x1F35,"$item_a_reactive_armor_scroll          ","Agility Scroll"},
 	{0x1F36,"$item_a_clumsy_scroll                  ","Cunning Scroll"},
@@ -202,138 +430,9 @@ new __scrolls[ MAX_SCROLLS][additemEntry] =
 	{0x1F69,"$item_a_summon_daemon_scroll           ","Summon Daemon Scroll"},
 	{0x1F6A,"$item_a_summon_earth_elemental_scroll  ","Summon Earth Elemental Scroll"},
 	{0x1F6B,"$item_a_summon_fire_elemental_scroll   ","Summon Fire Elemental Scroll"},
-	{0x1F6C,"$item_a_summon_water_elemental_scroll  ","Summon Water Elemental Scroll"}
-}
-
-//the XSS def name string is not necessary as it is generated automatically
-#define NUM_ARMORS 8
-#define ARMOR_PARTS 7
-new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
-{
-	//platemail
-	{0x1412,"                                       ","helm"},
-	{0x1413,"                                       ","gorget"},
-	{0x1416,"                                       ","chest"},
-	{0x1410,"                                       ","sleeves"},
-	{0x1414,"                                       ","gloves"},
-	{0x141A,"                                       ","legs"},
-	{0x1C04,"                                       ","female"},
-
-	//chainmail
-	{0x13BB, "                                       ","coif"},
-	{INVALID,"                                       ","gorget"},
-	{0x13C4, "                                       ","tunic"},
-	{INVALID,"                                       ","sleeves"},
-	{INVALID,"                                       ","gloves"},
-	{0x13C3, "                                       ","legs"},
-	{INVALID,"                                       ","female"},
-
-	//ringmail
-	{INVALID,"                                       ","coif"},
-	{INVALID,"                                       ","gorget"},
-	{0x13ED, "                                       ","tunic"},
-	{0x13EF, "                                       ","sleeves"},
-	{0x13F2, "                                       ","gloves"},
-	{0x13F1, "                                       ","legs"},
-	{INVALID,"                                       ","female"},
-
-	//studded
-	{INVALID,"                                       ","cap"},
-	{0x13D6, "                                       ","gorget"},
-	{0x13E2, "                                       ","tunic"},
-	{0x13D4, "                                       ","sleeves"},
-	{0x13DD, "                                       ","gloves"},
-	{0x13E1, "                                       ","legs"},
-	{0x1C02, "                                       ","female"},
-
-	//leather
-	{0x1DBA, "                                       ","cap"},
-	{INVALID,"                                       ","gorget"},
-	{0x13D3, "                                       ","tunic"},
-	{0x13CD, "                                       ","sleeves"},
-	{0x13CE, "                                       ","gloves"},
-	{0x13D2, "                                       ","legs"},
-	{0x1C06, "                                       ","female"},
-
-	//bone
-	{0x1451, "                                       ","helm"},
-	{INVALID,"                                       ","gorget"},
-	{0x144F, "                                       ","chest"},
-	{0x144E, "                                       ","sleeves"},
-	{0x1450, "                                       ","gloves"},
-	{0x1452, "                                       ","legs"},
-	{INVALID,"                                       ","female"},
-
-	//helms
-	{0x1412, "                                       ","plate_helm"},
-	{0x140C, "                                       ","bascinet"},
-	{0x1408, "                                       ","close_helm"},
-	{0x140A, "                                       ","helmet"},
-	{0x140E, "                                       ","nose_helm"},
-	{INVALID,"                                       ","legs"},
-	{INVALID,"                                       ","female"},
-
-	//Shields
-	{0x1B73, "                                       ","buckler"},
-	{0x1B7B, "                                       ","metal_shield"},
-	{0x1B72, "                                       ","bronze_shield"},
-	{0x1B78, "                                       ","wooden_kite_shield"},
-	{0x1B74, "                                       ","metal_kite_shield"},
-	{0x1B76, "                                       ","heater"},
-	{INVALID,"                                       ","female"}
-}
-
-#define NUM_WEAPONS 4
-#define WEAPONS_PER_GROUP 8
-new __weapons[NUM_WEAPONS*WEAPONS_PER_GROUP][additemEntry] =
-{
-	//Axes
-	{0x0F4B, "                                       ","double_axe"},
-	{0x0F47, "                                       ","battle_axe"},
-	{0x13FB, "                                       ","large_battle_axe"},
-	{0x0F49, "                                       ","axe"},
-	{0x1442, "                                       ","two-handed_axe"},
-	{0x0F45, "                                       ","executioners_axe"},
-	{0x13B0, "                                       ","war-axe"},
-	{INVALID,"                                       ",""},
-
-	//swords/blades
-	{0x0F51,"                                       ","dagger"},
-	{0x1440,"                                       ","cutlass"},
-	{0x1400,"                                       ","kryss"},
-	{0x13FF,"                                       ","katana"},
-	{0x13B6,"                                       ","scimitar"},
-	{0x0F5E,"                                       ","broadsword"},
-	{0x13B8,"                                       ","long_sword"},
-	{0x13BA,"                                       ","viking_sword"},
-
-	//maces
-	{0x0F5C,"                                       ","mace"},
-	{0x143A,"                                       ","maul"},
-	{0x1406,"                                       ","war_mace"},
-	{0x1438,"                                       ","war_hammer"},
-	{0x143C,"                                       ","hammer_pick"},
-	{INVALID,"                                       ","legs"},
-	{INVALID,"                                       ","legs"},
-	{INVALID,"                                       ","legs"},
-
-	//spears/forks/pole arms/bows
-	{0x0F62,"                                       ","short_spear"},
-	{0x1405,"                                       ","war_fork"},
-	{0x0F62,"                                       ","spear"},
-	{0x0F42,"                                       ","bardiche"},
-	{0x143E,"                                       ","halberd"},
-	{0x13B2,"                                       ","bow"},
-	{0x0F50,"                                       ","crossbow"},
-	{0x13FD,"                                       ","heavy_crossbow"}
-}
-
-//^([0-9,A-F][0-9,A-F][0-9,A-F][0-9,A-F]^) ^([a-z,A-Z, ,0-9,(,)]+^)^p^tNPC ^(^$[a-z,A-Z,0-9,_,]+^)
-//{0x^1,"^3","^2"},
-
-#define NUM_ANIMALS 26
-new __animals[NUM_ANIMALS][additemEntry] =
-{
+	{0x1F6C,"$item_a_summon_water_elemental_scroll  ","Summon Water Elemental Scroll"},
+	
+	//animals
 	{0x2120,"$npc_a_horse                           ","Horse 1"},
 	{0x211F,"$npc_a_horse_1                         ","Horse 2"},
 	{0x2124,"$npc_a_horse_2                         ","Horse 3"},
@@ -360,12 +459,9 @@ new __animals[NUM_ANIMALS][additemEntry] =
 	{0x2108,"$npc_a_goat                            ","a goat"},
 	{0x211B,"$npc_a_cat                             ","a cat"},
 	{0x2126,"$npc_a_pack_horse                      ","a pack horse"},
-	{0x2127,"$npc_a_pack_llama                      ","a pack llama"}
-}                                                       
-	                                                
-#define NUM_T2A_MONSTERS 41	                        
-new __T2Amonsters[NUM_T2A_MONSTERS][additemEntry] =	 
-{	                                                
+	{0x2127,"$npc_a_pack_llama                      ","a pack llama"},
+	
+	//T2A monsters
 	{0x005F,"$npc_a_kraken                          ","Kraken"},
 	{0x004B,"$npc_a_titan                           ","Titan"},
 	{0x0050,"$npc_a_giant_toad                      ","Giant Toad"},
@@ -406,23 +502,15 @@ new __T2Amonsters[NUM_T2A_MONSTERS][additemEntry] =
 	{0x0005,"$npc_a_phoenix                         ","Phoenix"},
 	{0x0015,"$npc_a_giant_ice_serpent               ","Ice Serpent"},
 	{0x0015,"$npc_a_giant_lava_serpent              ","Lava Serpent"},
-	{0x001C,"$npc_a_frost_spider                    ","Frost Spider"}
-}       
-
-#define NUM_DEAMONS 5
-new __deamons[NUM_DEAMONS][additemEntry] =
-{
+	{0x001C,"$npc_a_frost_spider                    ","Frost Spider"},
+	
 	//daemons
 	{0x20D3,"$npc_deamon_unarmed                    ","a daemon"},
 	{0x20D3,"$npc_a_daemon                          ","a daemon w/sword"},
 	{0x0000,"$npc_an_ice_fiend                      ","ice fiend"},
 	{0x20D9,"$npc_a_gargoyle                        ","a gargoyle"},
-	{0x0000,"$npc_a_stone_gargoyle                  ","stone gargoyle"}
-}                                                       
-                                                        
-#define NUM_ELEMENTALS 7                                
-new __elementals[NUM_ELEMENTALS][additemEntry] =        
-{                                                       
+	{0x0000,"$npc_a_stone_gargoyle                  ","stone gargoyle"},
+	
 	//elementals                                    
 	{0x20ED,"$npc_an_air_elemental                  ","an air elemental"},
 	{0x20D7,"$npc_an_earth_elemental                ","an earth elemental"},
@@ -430,12 +518,8 @@ new __elementals[NUM_ELEMENTALS][additemEntry] =
 	{0x210B,"$npc_a_water_elemental                 ","a water elemental"},  
 	{0x210B,"$npc_a_blood_elemental                 ","a blood elemental"},
 	{0x20ED,"$npc_a_poison_elemental                ","a poison elemental"},
-	{0x0000,"$npc_an_ice_elemental                  ","ice elemental"}
-}	                                                  
-                                                          
-#define NUM_ORCS 12                                       
-new __orcs[NUM_ORCS][additemEntry] =                      
-{                                                         
+	{0x0000,"$npc_an_ice_elemental                  ","ice elemental"},
+	
 	//orc kin                                         
 	{0x20D8,"$npc_an_ettin                          ","an ettin"},
 	{0x20D8,"$npc_an_ettin_1                        ","an ettin with axe"},
@@ -448,12 +532,8 @@ new __orcs[NUM_ORCS][additemEntry] =
 	{0x20DF,"$npc_an_ogre_lord                      ","an ogre lord"},
 	{0x20E9,"$npc_a_troll                           ","a troll"},
 	{0x20E9,"$npc_a_troll_1                         ","a troll 2"},
-	{0x20E9,"$npc_a_troll_2                         ","a troll 3"}
-}                                                       
-                                                        
-#define NUM_MONSTERS 17                                 
-new __monsters[NUM_MONSTERS][additemEntry] =            
-{	                                                
+	{0x20E9,"$npc_a_troll_2                         ","a troll 3"},
+	
 	//other monsters                                
 	{0x20D2,"$npc_a_corpser                         ","a corpser"},
 	{0x20d0,"$npc_a_giant_rat                       ","a giant rat"},
@@ -471,12 +551,8 @@ new __monsters[NUM_MONSTERS][additemEntry] =
 	{0x20FA,"$npc_a_reaper                          ","a reaper"},
 	{0x2123,"$npc_a_sewer_rat                       ","a sewer rat"},
 	{0x20E8,"$npc_a_slime                           ","a slime"},
-	{0x20FC,"$npc_a_snake                           ","a snake"}
-}                                                         
-                                                          
-#define NUM_UNDEADS 15                                    
-new __undeads[NUM_UNDEADS][additemEntry] =                
-{                                                         
+	{0x20FC,"$npc_a_snake                           ","a snake"},
+	
 	//undead/mithycal                                 
 	{0x20F4,"$npc_a_gazer                           ","a gazer"},
 	{0x210A,"$npc_a_headless                        ","a headless"},
@@ -492,36 +568,24 @@ new __undeads[NUM_UNDEADS][additemEntry] =
 	{0x2100,"$npc_a_wisp                            ","a wisp"},
 	{0x20EC,"$npc_a_zombie                          ","a zombie"},
 	{0x0000,"$npc_a_zombie_elder                    ","a zombie elder"},
-	{0x0000,"$npc_a_wraith                          ","a wraith"}
-}                                                         
-	                                                  
-#define NUM_UNIQUE 5                                      
-new __uniqueMonsters[NUM_UNIQUE][additemEntry] =         
-{                                                         
+	{0x0000,"$npc_a_wraith                          ","a wraith"},
+	
 	//unique                                          
 	{0x20D3,"$npc_the_collector_of_souls            ","the Collector of Souls"},
 	{0x20DC,"$npc_a_harpy_hen                       ","a harpy hen"},
 	{0x20D3,"$npc_lord_of_the_abyss                 ","the Lord of the Abyss"},
 	{0x20D3,"$npc_slayer                            ","the Slayer"},
-	{0x20F4,"$npc_xanathar                          ","Xanathar"}
-}
-
-#define NUM_FROST_STONE 7
-new __frost_stone_monsters[NUM_FROST_STONE][additemEntry] =
-{
-	//ice frost and stone
+	{0x20F4,"$npc_xanathar                          ","Xanathar"},
+	
+	//forst/stone
 	{0x0000,"$npc_an_ice_serpent                    ","ice snake"},
 	{0x0000,"$npc_a_giant_ice_serpent               ","ice serpent"},
 	{0x0000,"$npc_an_ice_giant                      ","ice giant"},
 	{0x0000,"$npc_a_frost_troll                     ","frost troll"},
 	{0x0000,"$npc_a_frost_ooze                      ","frost Ooze"},
 	{0x0000,"$npc_a_frost_spider                    ","frost spider"},
-	{0x0000,"$npc_a_stone_harpy                     ","stone harpy"}
-}
-
-#define NUM_DRAGONS 13
-new __dragons[NUM_DRAGONS][additemEntry] =
-{
+	{0x0000,"$npc_a_stone_harpy                     ","stone harpy"},
+	
 	//dragon kin
 	{0x0000,"$npc_a_wyvern                          ","a Wyvern (brown)"},
 	{0x0000,"$npc_a_drake                           ","a Drake (red)"},
@@ -535,12 +599,8 @@ new __dragons[NUM_DRAGONS][additemEntry] =
 	{0x0000,"$npc_a_white_wyrm                      ","a pure white wyrm"},
 	{0x0000,"$npc_a_dragon_1                        ","a Dragon (brown)"},
 	{0x0000,"$npc_a_drake_2                         ","a Drake (brown)"},
-	{0x0000,"$npc_a_fire_wyrm                       ","a fire wyrm"}
-}
-
-#define NUM_PEOPLE_M 29
-new __people_male[NUM_PEOPLE_M][additemEntry] =
-{
+	{0x0000,"$npc_a_fire_wyrm                       ","a fire wyrm"},
+	
 	//people - male
 	{0x0000,"$npc_murderer                          ","Murderer"},
 	{0x2022,"$npc_artist_m                          ","Artist"},
@@ -570,12 +630,8 @@ new __people_male[NUM_PEOPLE_M][additemEntry] =
 	{0x2018,"$npc_shipwright_m                      ","Shipwright"},
 	{0x201C,"$npc_thief_m                           ","Thief"},
 	{0x2026,"$npc_towncrier_m                       ","Town Crier"},
-	{0x2037,"$npc_veterinarian_m                    ","Veterinarian"}
-}
-
-#define NUM_PEOPLE_F 22
-new __people_female[NUM_PEOPLE_F][additemEntry] =
-{
+	{0x2037,"$npc_veterinarian_m                    ","Veterinarian"},
+	
 	//people - female
 	{0x2022,"$npc_artist_f                          ","Artist"},
 	{0x202B,"$npc_beggar_f                          ","Beggar"},
@@ -598,12 +654,8 @@ new __people_female[NUM_PEOPLE_F][additemEntry] =
 	{0x2018,"$npc_shipwright_f                      ","Shipwright"},
 	{0x201C,"$npc_thief_f                           ","Thief"},
 	{0x2027,"$npc_towncrier_f                       ","Town Crier"},
-	{0x2038,"$npc_veterinarian_f                    ","Veterinarian"}
-}
-
-#define NUM_MERCHANTS_M 32
-new __merchants_male[NUM_MERCHANTS_M][additemEntry] =
-{
+	{0x2038,"$npc_veterinarian_f                    ","Veterinarian"},
+	
 	//merchants - male
 	{0x2023,"$npc_alchemist_m                       ","Alchemist"},
 	{0x2035,"$npc_animal_trainer_m                  ","Animal Trainer"},
@@ -636,12 +688,8 @@ new __merchants_male[NUM_MERCHANTS_M][additemEntry] =
 	{0x2019,"$npc_tailor_m                          ","Tailor"},
 	{0x2021,"$npc_tinker_m                          ","Tinker"},
 	{0x0000,"$npc_veterinarian_m                    ","Veterinarian"},
-	{0x201F,"$npc_weaponsmith_m                     ","Weaponsmith"}
-}
-
-#define NUM_MERCHANTS_F 30
-new __merchants_female[NUM_MERCHANTS_F][additemEntry] =
-{
+	{0x201F,"$npc_weaponsmith_m                     ","Weaponsmith"},
+	
 	//merchants - female
 	{0x2023,"$npc_alchemist_f                       ","Alchemist"},
 	{0x2036,"$npc_animal_trainer_f                  ","Animal Trainer"},
@@ -672,18 +720,8 @@ new __merchants_female[NUM_MERCHANTS_F][additemEntry] =
 	{0x201A,"$npc_spinner_f                         ","Spinner"},
 	{0x2019,"$npc_tailor_f                          ","Tailor"},
 	{0x2021,"$npc_tinker_f                          ","Tinker"},
-	{0x201F,"$npc_weaponsmith_f                     ","Weaponsmith"}
-}
-
-//===================================================================================
-//==========================   ITEMS   ==============================================
-
-//^([0-9,A-F][0-9,A-F][0-9,A-F][0-9,A-F]^) ^([a-z,A-Z, ,',0-9,(,),&,/,^-]+^)^p    ADDITEM ^(^$[a-z,A-Z,0-9,_,]+^)
-//{0x^1,"^3","^2"},
-
-#define NUM_BEVERAGES 27
-new __beverages[NUM_BEVERAGES][additemEntry] =
-{
+	{0x201F,"$npc_weaponsmith_f                     ","Weaponsmith"},
+	
 	//Bottled beverages
 	{0x099F,"$item_bottles_of_ale1                  ","Bottle of Ale"},
 	{0x09A0,"$item_bottles_of_ale2                  ","Bottles of Ale"},
@@ -711,12 +749,8 @@ new __beverages[NUM_BEVERAGES][additemEntry] =
 	{0x1F99,"$item_pitcher_of_liquor_1              ","Pitcher of Liquor"},
 	{0x09AD,"$item_pitcher_of_milk_1                ","Pitcher of Milk"},
 	{0x0FF9,"$item_pitcher_of_water_1               ","Pitcher of Water"},
-	{0x1F9B,"$item_pitcher_of_wine_1                ","Pitcher of Wine"}
-}    
-
-#define NUM_BAKED 39
-new __bakedAndVeggys[NUM_BAKED][additemEntry] =
-{    
+	{0x1F9B,"$item_pitcher_of_wine_1                ","Pitcher of Wine"},
+	
 	//Baked and Veggys
 	{0x1041,"$item_baked_pie                        ","Baked Pie"},
 	{0x1042,"$item_unbaked_pie                      ","Unbaked Pie"},
@@ -756,12 +790,8 @@ new __bakedAndVeggys[NUM_BAKED][additemEntry] =
 	{0x09CC,"$item_fish1                            ","A fish"},
 	{0x1E17,"$item_raw_fish_1                       ","Raw Fish"},
 	{0x0976,"$item_slabs_of_bacon_1                 ","Slabs of Bacon"},
-	{0x0978,"$item_slices_of_bacon_1                ","Slice of Bacon"}
-}
-
-#define NUM_BOWLSMEATFRUIT 28
-new __bowlsMeatFruit[NUM_BOWLSMEATFRUIT][additemEntry] =
-{
+	{0x0978,"$item_slices_of_bacon_1                ","Slice of Bacon"},
+	
 	//Bowls, meat, fruit
 	{0x0994,"$item_pears_1                          ","Pear"},
 	{0x09D0,"$item_apples                           ","Apple"},
@@ -790,12 +820,9 @@ new __bowlsMeatFruit[NUM_BOWLSMEATFRUIT][additemEntry] =
 	{0x0C61,"$item_turnip1                          ","Turnip"},
 	{0x0C68,"$item_sprouts                          ","Sprouts"},
 	{0x0C6A,"$item_pumpkin1                         ","Pumpkin"},
-	{0x0C6D,"$item_onions                           ","Onion"}
-}
-
-#define NUM_PLANTS 19
-new __plants[NUM_PLANTS][additemEntry] =
-{
+	{0x0C6D,"$item_onions                           ","Onion"},
+	
+	//plants
 	{0x14f0,"$item_potted_tree                      ","potted tree"},
 	{0x14f0,"$item_potted_plant                     ","potted tree"},
 	{0x1E0F,"$item_potted_cactus3                   ","Potted Cactus w/flowers"},
@@ -814,12 +841,9 @@ new __plants[NUM_PLANTS][additemEntry] =
 	{0x0CC9,"$item_spider_tree                      ","Spider Tree"},
 	{0x0CC8,"$item_juniper_bush                     ","Juniper Bush"},
 	{0x0CC7,"$item_weed                             ","Weed"},
-	{0x0D38,"$item_yucca                            ","Yucca"}
-}
-    
-#define NUM_LIGHTS 18
-new __lights[NUM_LIGHTS][additemEntry] =
-{
+	{0x0D38,"$item_yucca                            ","Yucca"},
+	
+	//lights
 	{0x0A08,"$item_wall_torch                       ","N/S Wall Torch"},
 	{0x0A0E,"$item_wall_torch_1                     ","E/W Wall Torch"},
 	{0x0E31,"$item_a_brazier                        ","Brazier"},
@@ -837,12 +861,294 @@ new __lights[NUM_LIGHTS][additemEntry] =
 	{0x0A0F,"$item_candle_3                         ","Candle"},
 	{0x1854,"$item_skull_candle                     ","Skull candle"},
 	{0x09FF,"$item_wall_sconce_1                    ","Wall Candle"},
-	{0x0A00,"$item_wall_sconce_2                    ","Wall Candle"}
-}
-
-#define NUM_SIGNS 125
-new __signs[NUM_SIGNS][additemEntry] =
-{
+	{0x0A00,"$item_wall_sconce_2                    ","Wall Candle"},
+	
+	//Containers                                                                																																																																
+	{0x0E75,"$item_backpack                         ","Backpack"},          																																																																
+	{0x0E76,"$item_leather_bag                      ","Leather Bag"},       																																																																
+	{0x0E78,"$item_round_basket                     ","Round Basket"},      																																																																
+	{0x0E79,"$item_pouch                            ","Pouch"},             																																																																
+	{0x0E7A,"$item_square_basket                    ","Square Basket"},     																																																																
+	{0x0E42,"$item_wooden_chest1                    ","Wooden Chest"},      																																																																
+	{0x0E7C,"$item_silver_chest                     ","Silver Chest"},      																																																																
+	{0x0E40,"$item_metal_chest                      ","Metal Chest"},       																																																																
+	{0x0E7D,"$item_wooden_box                       ","Wooden Box"},        																																																																
+	{0x0E7E,"$item_small_wooden_crate               ","Small Wooden Crate"},																																																																
+	{0x0E3E,"$item_medium_wooden_crate1             ","Medium Wooden Crate"}																																																																		,
+	{0x0E3C,"$item_large_wooden_crate1              ","Large Wooden Crate"},																																																																		
+	{0x0E7F,"$item_open_wooden_keg                  ","Wooden Keg"},        																																																																		
+	{0x0E83,"$item_tub                              ","Tub"},               																																																																		
+	{0x0E77,"$item_barrel_with_lid                  ","Barrel"},            																																																																		
+	{0x0E80,"$item_brass_box                        ","Brass Box"},         																																																																		
+	{0x0A4D,"$item_pine_armoire1_2                  ","Armorie simple"},    																																																																		
+	{0x0A4F,"$item_pine_armoire2_2                  ","Armorie fancy"},
+	
+	//Statues
+	{0x12A1,"$item_statue                           ","Statue 1 Left"},
+	{0x129F,"$item_statue_1                         ","Statue 1 Center"},
+	{0x12A0,"$item_statue_2                         ","Statue 1 Right"},
+	{0x12A4,"$item_statue_3                         ","Statue 2 Left"},
+	{0x12A2,"$item_statue_4                         ","Statue 2 Center"},
+	{0x12A3,"$item_statue_5                         ","Statue 2 Right"},
+	{0x12D7,"$item_statue_7                         ","Statue 3 Left"},
+	{0x12D5,"$item_statue_8                         ","Statue 3 Center"},
+	{0x12D6,"$item_statue_9                         ","Statue 3 Right"},
+	{0x12A3,"$item_statue_6                         ","Unfinished Statue"},
+	{0x1224,"$item_statue_A                         ","Statue"},
+	{0x1225,"$item_statue_B                         ","Statue"},
+	{0x1226,"$item_statue_C                         ","Statue"},
+	{0x1227,"$item_statue_D                         ","Statue"},
+	{0x1228,"$item_statue_E                         ","Statue"},
+	//Trophies
+	{0x1E60,"$item_trophy                           ","Trophy"},
+	{0x1E61,"$item_trophy_1                         ","Trophy"},
+	{0x1E62,"$item_trophy_2                         ","Trophy"},
+	{0x1E63,"$item_trophy_3                         ","Trophy"},
+	{0x1E64,"$item_trophy_4                         ","Trophy"},
+	{0x1E65,"$item_trophy_5                         ","Trophy"},
+	{0x1E66,"$item_trophy_6                         ","Trophy"},
+	{0x1E67,"$item_trophy_7                         ","Trophy"},
+	{0x1E68,"$item_trophy_8                         ","Trophy"},
+	{0x1E69,"$item_trophy_9                         ","Trophy"},
+	{0x1E6A,"$item_trophy_A                         ","Trophy"},
+	{0x1E6B,"$item_trophy_B                         ","Trophy"},
+	{0x1E6C,"$item_trophy_C                         ","Trophy"},
+	{0x1E6D,"$item_trophy_D                         ","Trophy"},
+	
+	//Hairs
+	{0x2046,"$item_buns_hair                        ","Curly"},
+	{0x203C,"$item_long_hair                        ","Long Hair"},
+	{0x2044,"$item_mohawk                           ","Mohawk"},
+	{0x2045,"$item_pageboy                          ","Pageboy"},
+	{0x203D,"$item_pony_tail                        ","Pony Tail"},
+	{0x2048,"$item_receding_hair                    ","Receding"},
+	{0x203B,"$item_short_hair                       ","Short Hair"},
+	{0x2049,"$item_2_pig_tails                      ","2 Tails"},
+	{0x204A,"$item_krisna_hair                      ","Topknot"},
+	//Beards
+	{0x2040,"$item_goatee                           ","Goatee"},
+	{0x204D,"$item_vandyke                          ","Goatee/Moustache"},
+	{0x2041,"$item_mustache                         ","Moustache"},
+	{0x203E,"$item_long_beard                       ","Long Beard"},
+	{0x204C,"$item_med_short_beard_1                ","Long/Moustache"},
+	{0x203F,"$item_short_beard                      ","Short Beard"},
+	{0x204B,"$item_med_short_beard                  ","Short/Moustache"},
+	
+	
+	//Boots
+	{0x170B,"$item_boots                            ","Boots"},
+	{0x170D,"$item_sandles                          ","Sandals"},
+	{0x170F,"$item_shoes                            ","Shoes"},
+	{0x1711,"$item_thigh_boots                      ","Thigh boots"},
+	//Hats
+	{0x1713,"$item_floopy_hat                       ","Floppy hat"},
+	{0x1714,"$item_wide_brim_hat                    ","Wide-brim hat"},
+	{0x1715,"$item_cap                              ","Cap"},
+	{0x1716,"$item_a_tall_straw_hat                 ","Tall straw hat"},
+	{0x1717,"$item_straw_hat                        ","Straw hat"},
+	{0x1718,"$item_a_wizards_hat                    ","Wizard's hat"},
+	{0x1718,"$item_a_magical_wizard`s_hat           ","Magical hat"},
+	{0x1719,"$item_bonnet                           ","Bonnet"},
+	{0x171A,"$item_feathered_hat                    ","Feathered hat"},
+	{0x171B,"$item_tricorne_hat                     ","Tricorne hat"},
+	{0x171C,"$item_jester_hat                       ","Jester hat"},
+	//Shirts & Robes
+	{0x1515,"$item_cloak                            ","Cape"},
+	{0x1EFD,"$item_fancy_shirt                      ","Fancy shirt"},
+	{0x1517,"$item_shirt                            ","Plain shirt"},
+	{0x1FFD,"$item_a_surcoat                        ","Surcoat"},
+	{0x1FA1,"$item_a_tunic                          ","Tunic"},
+	{0x1F03,"$item_a_robe                           ","Robe"},
+	{0x1F9F,"$item_a_jesters_suit                   ","Fancy suit"},
+	{0x1F7B,"$item_a_doublet                        ","Doublet"},
+	{0x1EFF,"$item_a_fancy_dress                    ","Fancy Dress"},
+	{0x1F01,"$item_a_plain_dress                    ","Plain Dress"},
+	//Pants
+	{0x1516,"$item_a_skirt                          ","Skirt"},
+	{0x152E,"$item_short_pants                      ","Short pants"},
+	{0x1537,"$item_a_kilt                           ","Kilt"},
+	{0x1539,"$item_long_pants                       ","Long pants"},
+	//Misc
+	{0x153B,"$item_a_half_apron                     ","Half apron"},
+	{0x153D,"$item_a_full_apron                     ","Full apron"},
+	{0x1540,"$item_a_bandana                        ","Bandana"},
+	{0x1541,"$item_a_body_sash                      ","Body sash"},
+	{0x1544,"$item_a_skullcap                       ","Skullcap"},
+	//Masks
+	{0x1547,"$item_a_deer_mask                      ","Deer mask"},
+	{0x1545,"$item_a_bear_mask                      ","Bear mask"},
+	{0x1F0B,"$item_a_orc_helm                       ","Orc helm"},
+	{0x141C,"$item_a_orc_mask                       ","Orc mask"},
+	{0x1549,"$item_a_tribal_mask                    ","Tribal mask"},
+	{0x154B,"$item_a_tribal_mask_1                  ","Voodoo mask"},
+	{0x1546,"$item_polar_bear_mask                  ","Polar bear mask"},
+	
+	//Red Rug
+	{0x0AA9,"$item_rug                              ","Red Rug"},
+	{0x0AAA,"$item_rug_1                            ","Red Rug"},
+	{0x0AAB,"$item_rug_2                            ","Red Rug"},
+	{0x0AAC,"$item_rug_3                            ","Red Rug"},
+	{0x0AAD,"$item_rug_4                            ","Red Rug"},
+	{0x0AAE,"$item_rug_5                            ","Red Rug"},
+	{0x0AAF,"$item_rug_6                            ","Red Rug"},
+	{0x0AB0,"$item_rug_7                            ","Red Rug"},
+	{0x0AB1,"$item_rug_8                            ","Red Rug"},
+	{0x0AB2,"$item_rug_9                            ","Red Rug"},
+	//Greenish Rug
+	{0x0AB3,"$item_rug_A                            ","Greenish Rug"},
+	{0x0AB4,"$item_rug_B                            ","Greenish Rug"},
+	{0x0AB5,"$item_rug_C                            ","Greenish Rug"},
+	{0x0AB6,"$item_rug_D                            ","Greenish Rug"},
+	{0x0AB7,"$item_rug_E                            ","Greenish Rug"},
+	{0x0AB8,"$item_rug_F                            ","Greenish Rug"},
+	{0x0AB9,"$item_rug_G                            ","Greenish Rug"},
+	{0x0ABA,"$item_rug_H                            ","Greenish Rug"},
+	{0x0ABB,"$item_rug_I                            ","Greenish Rug"},
+	{0x0ABC,"$item_rug_J                            ","Greenish Rug"},
+	//Fancy Blue Rug
+	{0x0ABD,"$item_carpet                           ","Fancy Blue Rug"},
+	{0x0ABE,"$item_carpet_1                         ","Fancy Blue Rug"},
+	{0x0ABF,"$item_carpet_2                         ","Fancy Blue Rug"},
+	{0x0AC0,"$item_carpet_3                         ","Fancy Blue Rug"},
+	{0x0AC1,"$item_carpet_4                         ","Fancy Blue Rug"},
+	{0x0AC2,"$item_carpet_5                         ","Fancy Blue Rug"},
+	{0x0AC3,"$item_carpet_6                         ","Fancy Blue Rug"},
+	{0x0AC4,"$item_carpet_7                         ","Fancy Blue Rug"},
+	{0x0AC5,"$item_carpet_8                         ","Fancy Blue Rug"},
+	//Fancy Red Rug
+	{0x0AC6,"$item_carpet_9                         ","Fancy Red Rug"},
+	{0x0AC7,"$item_carpet_A                         ","Fancy Red Rug"},
+	{0x0AC8,"$item_carpet_B                         ","Fancy Red Rug"},
+	{0x0AC9,"$item_carpet_C                         ","Fancy Red Rug"},
+	{0x0ACA,"$item_carpet_D                         ","Fancy Red Rug"},
+	{0x0ACB,"$item_carpet_E                         ","Fancy Red Rug"},
+	{0x0ACC,"$item_carpet_F                         ","Fancy Red Rug"},
+	{0x0ACD,"$item_carpet_G                         ","Fancy Red Rug"},
+	{0x0ACE,"$item_carpet_H                         ","Fancy Red Rug"},
+	{0x0ACF,"$item_carpet_I                         ","Fancy Red Rug"},
+	{0x0AD0,"$item_carpet_J                         ","Fancy Red Rug"},
+	//Fancy Blue/Gold Rug
+	{0x0AD1,"$item_carpet_K                         ","Fancy Blue/Gold Rug"},
+	{0x0AD2,"$item_carpet_L                         ","Fancy Blue/Gold Rug"},
+	{0x0AD3,"$item_carpet_M                         ","Fancy Blue/Gold Rug"},
+	{0x0AD4,"$item_carpet_N                         ","Fancy Blue/Gold Rug"},
+	{0x0AD5,"$item_carpet_O                         ","Fancy Blue/Gold Rug"},
+	{0x0AD6,"$item_carpet_P                         ","Fancy Blue/Gold Rug"},
+	{0x0AD7,"$item_carpet_Q                         ","Fancy Blue/Gold Rug"},
+	{0x0AD8,"$item_carpet_R                         ","Fancy Blue/Gold Rug"},
+	{0x0AD9,"$item_carpet_S                         ","Fancy Blue/Gold Rug"},
+	//Fancy Golden Rug
+	{0x0ADA,"$item_carpet_T                         ","Fancy Golden Rug"},
+	{0x0ADB,"$item_carpet_U                         ","Fancy Golden Rug"},
+	{0x0ADC,"$item_carpet_V                         ","Fancy Golden Rug"},
+	{0x0ADD,"$item_carpet_W                         ","Fancy Golden Rug"},
+	{0x0ADE,"$item_carpet_X                         ","Fancy Golden Rug"},
+	{0x0ADF,"$item_carpet_Y                         ","Fancy Golden Rug"},
+	{0x0AE0,"$item_carpet_Z                         ","Fancy Golden Rug"},
+	{0x0AE1,"$item_carpet_Z1                        ","Fancy Golden Rug"},
+	{0x0AE2,"$item_carpet_Z2                        ","Fancy Golden Rug"},
+	//Fancy Pink Rug
+	{0x0AE3,"$item_carpet_Z3                        ","Fancy Pink Rug"},
+	{0x0AE4,"$item_carpet_Z4                        ","Fancy Pink Rug"},
+	{0x0AE5,"$item_carpet_Z5                        ","Fancy Pink Rug"},
+	{0x0AE6,"$item_carpet_Z6                        ","Fancy Pink Rug"},
+	{0x0AE7,"$item_carpet_Z7                        ","Fancy Pink Rug"},
+	{0x0AE8,"$item_carpet_Z8                        ","Fancy Pink Rug"},
+	{0x0AE9,"$item_carpet_Z9                        ","Fancy Pink Rug"},
+	{0x0AEA,"$item_carpet_ZA                        ","Fancy Pink Rug"},
+	{0x0AEB,"$item_carpet_ZB                        ","Fancy Pink Rug"},
+	//Fancy Pink & Blue Rug
+	{0x0AEC,"$item_carpet_ZC                        ","Fancy Pink & Blue Rug"},
+	{0x0AED,"$item_carpet_ZD                        ","Fancy Pink & Blue Rug"},
+	{0x0AEE,"$item_carpet_ZE                        ","Fancy Pink & Blue Rug"},
+	{0x0AEF,"$item_carpet_ZF                        ","Fancy Pink & Blue Rug"},
+	{0x0AF0,"$item_carpet_ZG                        ","Fancy Pink & Blue Rug"},
+	{0x0AF1,"$item_carpet_ZH                        ","Fancy Pink & Blue Rug"},
+	{0x0AF2,"$item_carpet_ZI                        ","Fancy Pink & Blue Rug"},
+	{0x0AF3,"$item_carpet_ZJ                        ","Fancy Pink & Blue Rug"},
+	{0x0AF4,"$item_carpet_ZK                        ","Fancy Pink & Blue Rug"},
+	{0x0AF5,"$item_carpet_ZL                        ","Fancy Pink & Blue Rug"},
+	{0x0AFA,"$item_carpet_ZM                        ","Fancy Pink & Blue Rug"},
+	{0x181D,"$item_alchemical_symbol                ","Alchemical Symbol"},
+	{0x181E,"$item_alchemical_symbol_1              ","Alchemical Symbol"},
+	{0x181F,"$item_alchemical_symbol_2              ","Alchemical Symbol"},
+	{0x1820,"$item_alchemical_symbol_3              ","Alchemical Symbol"},
+	{0x1821,"$item_alchemical_symbol_4              ","Alchemical Symbol"},
+	{0x1822,"$item_alchemical_symbol_5              ","Alchemical Symbol"},
+	{0x1823,"$item_alchemical_symbol_6              ","Alchemical Symbol"},
+	{0x1824,"$item_alchemical_symbol_7              ","Alchemical Symbol"},
+	{0x1825,"$item_alchemical_symbol_8              ","Alchemical Symbol"},
+	{0x1826,"$item_alchemical_symbol_9              ","Alchemical Symbol"},
+	{0x1827,"$item_alchemical_symbol_A              ","Alchemical Symbol"},
+	{0x1828,"$item_alchemical_symbol_B              ","Alchemical Symbol"},
+	
+	//jewels
+	{0x100F,"$item_gold_key                         ","Gold Key"},
+	{0x1010,"$item_iron_key                         ","Iron Key"},
+	{0x1012,"$item_magic_key                        ","Magic Key"},
+	{0x1013,"$item_bronze_key                       ","Bronze Key"},
+	//Coins
+	{0x0EEF,"$item_gold_coin                        ","Gold Pile"},
+	{0x0EF2,"$item_silver_coin                      ","Silver Pile"},
+	{0x0EEC,"$item_silver_coin                      ","Copper Pile"},
+	//Jewelry
+	{0x108B,"$item_beads                            ","Beads"},
+	{0x1086,"$item_bracelet                         ","Bracelet"},
+	{0x1087,"$item_earrings                         ","Earrings"},
+	{0x1085,"$item_necklace                         ","Necklace"},
+	{0x1088,"$item_necklace_1                       ","Necklace"},
+	{0x1089,"$item_necklace_2                       ","Necklace"},
+	{0x108A,"$item_ring                             ","Ring"},
+	//Cut Gems
+	{0x0F16,"$item_amethysts                        ","Amethyst"},
+	{0x0F17,"$item_amethysts_1                      ","Amethyst"},
+	{0x0F15,"$item_citrines                         ","Citrine"},
+	{0x0F26,"$item_diamonds_4                       ","Diamond"},
+	{0x0F10,"$item_emeralds                         ","Emerald"},
+	{0x0F13,"$item_rubies                           ","Ruby"},
+	{0x0F14,"$item_rubies_1                         ","Ruby"},
+	{0x0F1A,"$item_rubies_2                         ","Ruby"},
+	{0x0F1C,"$item_rubies_3                         ","Ruby"},
+	{0x0F1D,"$item_rubies_4                         ","Ruby"},
+	{0x0F11,"$item_sapphires                        ","Sapphire"},
+	{0x0F12,"$item_sapphires_1                      ","Sapphire"},
+	{0x0F19,"$item_sapphires_2                      ","Sapphire"},
+	{0x0F1F,"$item_sapphires_3                      ","Sapphire"},
+	{0x0F0F,"$item_star_sapphires                   ","Sapphire Star"},
+	{0x0F1B,"$item_star_sapphires_1                 ","Sapphire Star"},
+	{0x0F18,"$item_tourmalines                      ","Tourmaline"},
+	{0x0F1E,"$item_tourmalines_1                    ","Tourmaline"},
+	{0x0F20,"$item_tourmalines_2                    ","Tourmaline"},
+	//UnCut Gems
+	{0x0F25,"$item_pieces_of_amber                  ","Amber"},
+	{0x0F22,"$item_amethysts_2                      ","Amethyst"},
+	{0x0F2E,"$item_amethysts_3                      ","Amethyst"},
+	{0x0F23,"$item_citrines_1                       ","Citrine"},
+	{0x0F24,"$item_citrines_2                       ","Citrine"},
+	{0x0F2C,"$item_citrines_3                       ","Citrine"},
+	{0x0F27,"$item_diamonds                         ","Diamond"},
+	{0x0F28,"$item_diamonds_1                       ","Diamond"},
+	{0x0F29,"$item_diamonds_2                       ","Diamond"},
+	{0x0F30,"$item_diamonds_3                       ","Diamond"},
+	{0x0F2F,"$item_emeralds_1                       ","Emerald"},
+	{0x0F2A,"$item_rubies_5                         ","Ruby"},
+	{0x0F2B,"$item_rubies_6                         ","Ruby"},
+	{0x0F21,"$item_star_sapphires_2                 ","Sapphire Star"},
+	{0x0F2D,"$item_tourmalines_3                    ","Tourmaline"},
+	//quest stones/gems
+    	{0x1870,"$item_stone_of_compassion              ","Compassion"},
+	{0x1C12,"$item_bell_of_courage                  ","Courage"},
+	{0x186A,"$item_stone_of_honesty                 ","Honesty"},
+	{0x186D,"$item_stone_of_honor                   ","Honor"},
+	{0x1869,"$item_stone_of_humility                ","Humility"},
+	{0x186B,"$item_stone_of_justice                 ","Justice"},
+	{0x1C14,"$item_candle_of_love                   ","Love"},
+	{0x186C,"$item_stone_of_sacrifice               ","Sacrifice"},
+	{0x186F,"$item_stone_of_spirituality            ","Spirituality"},
+	{0x186E,"$item_stone_of_valor                   ","Valor"},
+	{0x1C13,"$item_book_of_truth                    ","Truth"},
+	{0x1870,"$item_gem_of_immortality               ","Gem of Immortality"},
+	
 	//Roadsigns
 	{0x1297,"$item_roadsign                         ","Roadsign"},
 	{0x1298,"$item_roadsign_1                       ","Roadsign"},
@@ -977,324 +1283,35 @@ new __signs[NUM_SIGNS][additemEntry] =
 	{0x0C07,"$item_fighters_guild                   ","Fighters Guild"},
 	{0x0C08,"$item_fighters_guild_1                 ","Fighters Guild"},
 	{0x0C09,"$item_merchants_guild                  ","Merchants Guild"},
-	{0x0C0A,"$item_merchants_guild_1                ","Merchants Guild"}
-}
-
-#define NUM_CONTAINERS 18
-new __containers[NUM_CONTAINERS][additemEntry] = 
-{
-	//Containers                                                                																																																																
-	{0x0E75,"$item_backpack                         ","Backpack"},          																																																																
-	{0x0E76,"$item_leather_bag                      ","Leather Bag"},       																																																																
-	{0x0E78,"$item_round_basket                     ","Round Basket"},      																																																																
-	{0x0E79,"$item_pouch                            ","Pouch"},             																																																																
-	{0x0E7A,"$item_square_basket                    ","Square Basket"},     																																																																
-	{0x0E42,"$item_wooden_chest1                    ","Wooden Chest"},      																																																																
-	{0x0E7C,"$item_silver_chest                     ","Silver Chest"},      																																																																
-	{0x0E40,"$item_metal_chest                      ","Metal Chest"},       																																																																
-	{0x0E7D,"$item_wooden_box                       ","Wooden Box"},        																																																																
-	{0x0E7E,"$item_small_wooden_crate               ","Small Wooden Crate"},																																																																
-	{0x0E3E,"$item_medium_wooden_crate1             ","Medium Wooden Crate"}																																																																		,
-	{0x0E3C,"$item_large_wooden_crate1              ","Large Wooden Crate"},																																																																		
-	{0x0E7F,"$item_open_wooden_keg                  ","Wooden Keg"},        																																																																		
-	{0x0E83,"$item_tub                              ","Tub"},               																																																																		
-	{0x0E77,"$item_barrel_with_lid                  ","Barrel"},            																																																																		
-	{0x0E80,"$item_brass_box                        ","Brass Box"},         																																																																		
-	{0x0A4D,"$item_pine_armoire1_2                  ","Armorie simple"},    																																																																		
-	{0x0A4F,"$item_pine_armoire2_2                  ","Armorie fancy"}      																																																																		
-}
-
-#define NUM_STATUES_TROPHIES 29
-new __statuesTrophies[NUM_STATUES_TROPHIES][additemEntry] = 
-{
-	//Statues
-	{0x12A1,"$item_statue                           ","Statue 1 Left"},
-	{0x129F,"$item_statue_1                         ","Statue 1 Center"},
-	{0x12A0,"$item_statue_2                         ","Statue 1 Right"},
-	{0x12A4,"$item_statue_3                         ","Statue 2 Left"},
-	{0x12A2,"$item_statue_4                         ","Statue 2 Center"},
-	{0x12A3,"$item_statue_5                         ","Statue 2 Right"},
-	{0x12D7,"$item_statue_7                         ","Statue 3 Left"},
-	{0x12D5,"$item_statue_8                         ","Statue 3 Center"},
-	{0x12D6,"$item_statue_9                         ","Statue 3 Right"},
-	{0x12A3,"$item_statue_6                         ","Unfinished Statue"},
-	{0x1224,"$item_statue_A                         ","Statue"},
-	{0x1225,"$item_statue_B                         ","Statue"},
-	{0x1226,"$item_statue_C                         ","Statue"},
-	{0x1227,"$item_statue_D                         ","Statue"},
-	{0x1228,"$item_statue_E                         ","Statue"},
-	//Trophies
-	{0x1E60,"$item_trophy                           ","Trophy"},
-	{0x1E61,"$item_trophy_1                         ","Trophy"},
-	{0x1E62,"$item_trophy_2                         ","Trophy"},
-	{0x1E63,"$item_trophy_3                         ","Trophy"},
-	{0x1E64,"$item_trophy_4                         ","Trophy"},
-	{0x1E65,"$item_trophy_5                         ","Trophy"},
-	{0x1E66,"$item_trophy_6                         ","Trophy"},
-	{0x1E67,"$item_trophy_7                         ","Trophy"},
-	{0x1E68,"$item_trophy_8                         ","Trophy"},
-	{0x1E69,"$item_trophy_9                         ","Trophy"},
-	{0x1E6A,"$item_trophy_A                         ","Trophy"},
-	{0x1E6B,"$item_trophy_B                         ","Trophy"},
-	{0x1E6C,"$item_trophy_C                         ","Trophy"},
-	{0x1E6D,"$item_trophy_D                         ","Trophy"}
-}
-
-#define NUM_HAIR_BEARD 16
-new __hairBeard[NUM_HAIR_BEARD][additemEntry] = 
-{
-	//Hairs
-	{0x2046,"$item_buns_hair                        ","Curly"},
-	{0x203C,"$item_long_hair                        ","Long Hair"},
-	{0x2044,"$item_mohawk                           ","Mohawk"},
-	{0x2045,"$item_pageboy                          ","Pageboy"},
-	{0x203D,"$item_pony_tail                        ","Pony Tail"},
-	{0x2048,"$item_receding_hair                    ","Receding"},
-	{0x203B,"$item_short_hair                       ","Short Hair"},
-	{0x2049,"$item_2_pig_tails                      ","2 Tails"},
-	{0x204A,"$item_krisna_hair                      ","Topknot"},
-	//Beards
-	{0x2040,"$item_goatee                           ","Goatee"},
-	{0x204D,"$item_vandyke                          ","Goatee/Moustache"},
-	{0x2041,"$item_mustache                         ","Moustache"},
-	{0x203E,"$item_long_beard                       ","Long Beard"},
-	{0x204C,"$item_med_short_beard_1                ","Long/Moustache"},
-	{0x203F,"$item_short_beard                      ","Short Beard"},
-	{0x204B,"$item_med_short_beard                  ","Short/Moustache"}
-}
-
-#define NUM_RUGS 90
-new __rugs[NUM_RUGS][additemEntry] =
-{
-	//Red Rug
-	{0x0AA9,"$item_rug                              ","Red Rug"},
-	{0x0AAA,"$item_rug_1                            ","Red Rug"},
-	{0x0AAB,"$item_rug_2                            ","Red Rug"},
-	{0x0AAC,"$item_rug_3                            ","Red Rug"},
-	{0x0AAD,"$item_rug_4                            ","Red Rug"},
-	{0x0AAE,"$item_rug_5                            ","Red Rug"},
-	{0x0AAF,"$item_rug_6                            ","Red Rug"},
-	{0x0AB0,"$item_rug_7                            ","Red Rug"},
-	{0x0AB1,"$item_rug_8                            ","Red Rug"},
-	{0x0AB2,"$item_rug_9                            ","Red Rug"},
-	//Greenish Rug
-	{0x0AB3,"$item_rug_A                            ","Greenish Rug"},
-	{0x0AB4,"$item_rug_B                            ","Greenish Rug"},
-	{0x0AB5,"$item_rug_C                            ","Greenish Rug"},
-	{0x0AB6,"$item_rug_D                            ","Greenish Rug"},
-	{0x0AB7,"$item_rug_E                            ","Greenish Rug"},
-	{0x0AB8,"$item_rug_F                            ","Greenish Rug"},
-	{0x0AB9,"$item_rug_G                            ","Greenish Rug"},
-	{0x0ABA,"$item_rug_H                            ","Greenish Rug"},
-	{0x0ABB,"$item_rug_I                            ","Greenish Rug"},
-	{0x0ABC,"$item_rug_J                            ","Greenish Rug"},
-	//Fancy Blue Rug
-	{0x0ABD,"$item_carpet                           ","Fancy Blue Rug"},
-	{0x0ABE,"$item_carpet_1                         ","Fancy Blue Rug"},
-	{0x0ABF,"$item_carpet_2                         ","Fancy Blue Rug"},
-	{0x0AC0,"$item_carpet_3                         ","Fancy Blue Rug"},
-	{0x0AC1,"$item_carpet_4                         ","Fancy Blue Rug"},
-	{0x0AC2,"$item_carpet_5                         ","Fancy Blue Rug"},
-	{0x0AC3,"$item_carpet_6                         ","Fancy Blue Rug"},
-	{0x0AC4,"$item_carpet_7                         ","Fancy Blue Rug"},
-	{0x0AC5,"$item_carpet_8                         ","Fancy Blue Rug"},
-	//Fancy Red Rug
-	{0x0AC6,"$item_carpet_9                         ","Fancy Red Rug"},
-	{0x0AC7,"$item_carpet_A                         ","Fancy Red Rug"},
-	{0x0AC8,"$item_carpet_B                         ","Fancy Red Rug"},
-	{0x0AC9,"$item_carpet_C                         ","Fancy Red Rug"},
-	{0x0ACA,"$item_carpet_D                         ","Fancy Red Rug"},
-	{0x0ACB,"$item_carpet_E                         ","Fancy Red Rug"},
-	{0x0ACC,"$item_carpet_F                         ","Fancy Red Rug"},
-	{0x0ACD,"$item_carpet_G                         ","Fancy Red Rug"},
-	{0x0ACE,"$item_carpet_H                         ","Fancy Red Rug"},
-	{0x0ACF,"$item_carpet_I                         ","Fancy Red Rug"},
-	{0x0AD0,"$item_carpet_J                         ","Fancy Red Rug"},
-	//Fancy Blue/Gold Rug
-	{0x0AD1,"$item_carpet_K                         ","Fancy Blue/Gold Rug"},
-	{0x0AD2,"$item_carpet_L                         ","Fancy Blue/Gold Rug"},
-	{0x0AD3,"$item_carpet_M                         ","Fancy Blue/Gold Rug"},
-	{0x0AD4,"$item_carpet_N                         ","Fancy Blue/Gold Rug"},
-	{0x0AD5,"$item_carpet_O                         ","Fancy Blue/Gold Rug"},
-	{0x0AD6,"$item_carpet_P                         ","Fancy Blue/Gold Rug"},
-	{0x0AD7,"$item_carpet_Q                         ","Fancy Blue/Gold Rug"},
-	{0x0AD8,"$item_carpet_R                         ","Fancy Blue/Gold Rug"},
-	{0x0AD9,"$item_carpet_S                         ","Fancy Blue/Gold Rug"},
-	//Fancy Golden Rug
-	{0x0ADA,"$item_carpet_T                         ","Fancy Golden Rug"},
-	{0x0ADB,"$item_carpet_U                         ","Fancy Golden Rug"},
-	{0x0ADC,"$item_carpet_V                         ","Fancy Golden Rug"},
-	{0x0ADD,"$item_carpet_W                         ","Fancy Golden Rug"},
-	{0x0ADE,"$item_carpet_X                         ","Fancy Golden Rug"},
-	{0x0ADF,"$item_carpet_Y                         ","Fancy Golden Rug"},
-	{0x0AE0,"$item_carpet_Z                         ","Fancy Golden Rug"},
-	{0x0AE1,"$item_carpet_Z1                        ","Fancy Golden Rug"},
-	{0x0AE2,"$item_carpet_Z2                        ","Fancy Golden Rug"},
-	//Fancy Pink Rug
-	{0x0AE3,"$item_carpet_Z3                        ","Fancy Pink Rug"},
-	{0x0AE4,"$item_carpet_Z4                        ","Fancy Pink Rug"},
-	{0x0AE5,"$item_carpet_Z5                        ","Fancy Pink Rug"},
-	{0x0AE6,"$item_carpet_Z6                        ","Fancy Pink Rug"},
-	{0x0AE7,"$item_carpet_Z7                        ","Fancy Pink Rug"},
-	{0x0AE8,"$item_carpet_Z8                        ","Fancy Pink Rug"},
-	{0x0AE9,"$item_carpet_Z9                        ","Fancy Pink Rug"},
-	{0x0AEA,"$item_carpet_ZA                        ","Fancy Pink Rug"},
-	{0x0AEB,"$item_carpet_ZB                        ","Fancy Pink Rug"},
-	//Fancy Pink & Blue Rug
-	{0x0AEC,"$item_carpet_ZC                        ","Fancy Pink & Blue Rug"},
-	{0x0AED,"$item_carpet_ZD                        ","Fancy Pink & Blue Rug"},
-	{0x0AEE,"$item_carpet_ZE                        ","Fancy Pink & Blue Rug"},
-	{0x0AEF,"$item_carpet_ZF                        ","Fancy Pink & Blue Rug"},
-	{0x0AF0,"$item_carpet_ZG                        ","Fancy Pink & Blue Rug"},
-	{0x0AF1,"$item_carpet_ZH                        ","Fancy Pink & Blue Rug"},
-	{0x0AF2,"$item_carpet_ZI                        ","Fancy Pink & Blue Rug"},
-	{0x0AF3,"$item_carpet_ZJ                        ","Fancy Pink & Blue Rug"},
-	{0x0AF4,"$item_carpet_ZK                        ","Fancy Pink & Blue Rug"},
-	{0x0AF5,"$item_carpet_ZL                        ","Fancy Pink & Blue Rug"},
-	{0x0AFA,"$item_carpet_ZM                        ","Fancy Pink & Blue Rug"},
-	{0x181D,"$item_alchemical_symbol                ","Alchemical Symbol"},
-	{0x181E,"$item_alchemical_symbol_1              ","Alchemical Symbol"},
-	{0x181F,"$item_alchemical_symbol_2              ","Alchemical Symbol"},
-	{0x1820,"$item_alchemical_symbol_3              ","Alchemical Symbol"},
-	{0x1821,"$item_alchemical_symbol_4              ","Alchemical Symbol"},
-	{0x1822,"$item_alchemical_symbol_5              ","Alchemical Symbol"},
-	{0x1823,"$item_alchemical_symbol_6              ","Alchemical Symbol"},
-	{0x1824,"$item_alchemical_symbol_7              ","Alchemical Symbol"},
-	{0x1825,"$item_alchemical_symbol_8              ","Alchemical Symbol"},
-	{0x1826,"$item_alchemical_symbol_9              ","Alchemical Symbol"},
-	{0x1827,"$item_alchemical_symbol_A              ","Alchemical Symbol"},
-	{0x1828,"$item_alchemical_symbol_B              ","Alchemical Symbol"}
-}
-
-#define NUM_CLOTHING 41
-new __clothing[NUM_CLOTHING][additemEntry] =
-{
-	//Boots
-	{0x170B,"$item_boots                            ","Boots"},
-	{0x170D,"$item_sandles                          ","Sandals"},
-	{0x170F,"$item_shoes                            ","Shoes"},
-	{0x1711,"$item_thigh_boots                      ","Thigh boots"},
-	//Hats
-	{0x1713,"$item_floopy_hat                       ","Floppy hat"},
-	{0x1714,"$item_wide_brim_hat                    ","Wide-brim hat"},
-	{0x1715,"$item_cap                              ","Cap"},
-	{0x1716,"$item_a_tall_straw_hat                 ","Tall straw hat"},
-	{0x1717,"$item_straw_hat                        ","Straw hat"},
-	{0x1718,"$item_a_wizards_hat                    ","Wizard's hat"},
-	{0x1718,"$item_a_magical_wizard`s_hat           ","Magical hat"},
-	{0x1719,"$item_bonnet                           ","Bonnet"},
-	{0x171A,"$item_feathered_hat                    ","Feathered hat"},
-	{0x171B,"$item_tricorne_hat                     ","Tricorne hat"},
-	{0x171C,"$item_jester_hat                       ","Jester hat"},
-	//Shirts & Robes
-	{0x1515,"$item_cloak                            ","Cape"},
-	{0x1EFD,"$item_fancy_shirt                      ","Fancy shirt"},
-	{0x1517,"$item_shirt                            ","Plain shirt"},
-	{0x1FFD,"$item_a_surcoat                        ","Surcoat"},
-	{0x1FA1,"$item_a_tunic                          ","Tunic"},
-	{0x1F03,"$item_a_robe                           ","Robe"},
-	{0x1F9F,"$item_a_jesters_suit                   ","Fancy suit"},
-	{0x1F7B,"$item_a_doublet                        ","Doublet"},
-	{0x1EFF,"$item_a_fancy_dress                    ","Fancy Dress"},
-	{0x1F01,"$item_a_plain_dress                    ","Plain Dress"},
-	//Pants
-	{0x1516,"$item_a_skirt                          ","Skirt"},
-	{0x152E,"$item_short_pants                      ","Short pants"},
-	{0x1537,"$item_a_kilt                           ","Kilt"},
-	{0x1539,"$item_long_pants                       ","Long pants"},
+	{0x0C0A,"$item_merchants_guild_1                ","Merchants Guild"},
+	
 	//Misc
-	{0x153B,"$item_a_half_apron                     ","Half apron"},
-	{0x153D,"$item_a_full_apron                     ","Full apron"},
-	{0x1540,"$item_a_bandana                        ","Bandana"},
-	{0x1541,"$item_a_body_sash                      ","Body sash"},
-	{0x1544,"$item_a_skullcap                       ","Skullcap"},
-	//Masks
-	{0x1547,"$item_a_deer_mask                      ","Deer mask"},
-	{0x1545,"$item_a_bear_mask                      ","Bear mask"},
-	{0x1F0B,"$item_a_orc_helm                       ","Orc helm"},
-	{0x141C,"$item_a_orc_mask                       ","Orc mask"},
-	{0x1549,"$item_a_tribal_mask                    ","Tribal mask"},
-	{0x154B,"$item_a_tribal_mask_1                  ","Voodoo mask"},
-	{0x1546,"$item_polar_bear_mask                  ","Polar bear mask"}
-}
-
-#define NUM_JEWELS 60
-new __jewels[NUM_JEWELS][additemEntry] =
-{
-	{0x100F,"$item_gold_key                         ","Gold Key"},
-	{0x1010,"$item_iron_key                         ","Iron Key"},
-	{0x1012,"$item_magic_key                        ","Magic Key"},
-	{0x1013,"$item_bronze_key                       ","Bronze Key"},
-	//Coins
-	{0x0EEF,"$item_gold_coin                        ","Gold Pile"},
-	{0x0EF2,"$item_silver_coin                      ","Silver Pile"},
-	{0x0EEC,"$item_silver_coin                      ","Copper Pile"},
-	//Jewelry
-	{0x108B,"$item_beads                            ","Beads"},
-	{0x1086,"$item_bracelet                         ","Bracelet"},
-	{0x1087,"$item_earrings                         ","Earrings"},
-	{0x1085,"$item_necklace                         ","Necklace"},
-	{0x1088,"$item_necklace_1                       ","Necklace"},
-	{0x1089,"$item_necklace_2                       ","Necklace"},
-	{0x108A,"$item_ring                             ","Ring"},
-	//Cut Gems
-	{0x0F16,"$item_amethysts                        ","Amethyst"},
-	{0x0F17,"$item_amethysts_1                      ","Amethyst"},
-	{0x0F15,"$item_citrines                         ","Citrine"},
-	{0x0F26,"$item_diamonds_4                       ","Diamond"},
-	{0x0F10,"$item_emeralds                         ","Emerald"},
-	{0x0F13,"$item_rubies                           ","Ruby"},
-	{0x0F14,"$item_rubies_1                         ","Ruby"},
-	{0x0F1A,"$item_rubies_2                         ","Ruby"},
-	{0x0F1C,"$item_rubies_3                         ","Ruby"},
-	{0x0F1D,"$item_rubies_4                         ","Ruby"},
-	{0x0F11,"$item_sapphires                        ","Sapphire"},
-	{0x0F12,"$item_sapphires_1                      ","Sapphire"},
-	{0x0F19,"$item_sapphires_2                      ","Sapphire"},
-	{0x0F1F,"$item_sapphires_3                      ","Sapphire"},
-	{0x0F0F,"$item_star_sapphires                   ","Sapphire Star"},
-	{0x0F1B,"$item_star_sapphires_1                 ","Sapphire Star"},
-	{0x0F18,"$item_tourmalines                      ","Tourmaline"},
-	{0x0F1E,"$item_tourmalines_1                    ","Tourmaline"},
-	{0x0F20,"$item_tourmalines_2                    ","Tourmaline"},
-	//UnCut Gems
-	{0x0F25,"$item_pieces_of_amber                  ","Amber"},
-	{0x0F22,"$item_amethysts_2                      ","Amethyst"},
-	{0x0F2E,"$item_amethysts_3                      ","Amethyst"},
-	{0x0F23,"$item_citrines_1                       ","Citrine"},
-	{0x0F24,"$item_citrines_2                       ","Citrine"},
-	{0x0F2C,"$item_citrines_3                       ","Citrine"},
-	{0x0F27,"$item_diamonds                         ","Diamond"},
-	{0x0F28,"$item_diamonds_1                       ","Diamond"},
-	{0x0F29,"$item_diamonds_2                       ","Diamond"},
-	{0x0F30,"$item_diamonds_3                       ","Diamond"},
-	{0x0F2F,"$item_emeralds_1                       ","Emerald"},
-	{0x0F2A,"$item_rubies_5                         ","Ruby"},
-	{0x0F2B,"$item_rubies_6                         ","Ruby"},
-	{0x0F21,"$item_star_sapphires_2                 ","Sapphire Star"},
-	{0x0F2D,"$item_tourmalines_3                    ","Tourmaline"},
-	//quest stones/gems
-    	{0x1870,"$item_stone_of_compassion              ","Compassion"},
-	{0x1C12,"$item_bell_of_courage                  ","Courage"},
-	{0x186A,"$item_stone_of_honesty                 ","Honesty"},
-	{0x186D,"$item_stone_of_honor                   ","Honor"},
-	{0x1869,"$item_stone_of_humility                ","Humility"},
-	{0x186B,"$item_stone_of_justice                 ","Justice"},
-	{0x1C14,"$item_candle_of_love                   ","Love"},
-	{0x186C,"$item_stone_of_sacrifice               ","Sacrifice"},
-	{0x186F,"$item_stone_of_spirituality            ","Spirituality"},
-	{0x186E,"$item_stone_of_valor                   ","Valor"},
-	{0x1C13,"$item_book_of_truth                    ","Truth"},
-	{0x1870,"$item_gem_of_immortality               ","Gem of Immortality"}
-}
-
-#define NUM_FURNITURE 174
-new __furniture[NUM_FURNITURE][additemEntry] =
-{
 	{0x0B3F,"counter1_1                               ","counter"},
 	{0x0B3D,"counter1_2                               ","counter"},
 	{0x0B40,"counter2_1                               ","counter"},
 	{0x0B3e,"counter2_2                               ","counter"},
+	{0x0A2C,"chest_of_drawers1_1                      ","chest of drawers"},
+	{0x0A34,"chest_of_drawers1_2                      ","chest of drawers"},
+	{0x0A30,"chest_of_drawers2_2                      ","fancy chest of drawers"},
+	{0x0A38,"chest_of_drawers2_1                      ","fancy chest of drawers"},
+	{0x0A97,"bookcase1_1                              ","bookcase"},
+	{0x0A98,"bookcase1_2                              ","bookcase"},
+	{0x0A9B,"bookcase1_3                              ","bookcase"},
+	{0x0A99,"bookcase2_1                              ","bookcase"},
+	{0x0A9A,"bookcase2_2                              ","bookcase"},
+	{0x0A9C,"bookcase2_3                              ","bookcase"},
+	{0x0A9D,"wooden_shelf1                            ","bookcase"},
+	{0x0A9E,"wooden_shelf2                            ","bookcase"},
+	{0x0a3c,"dresser1_2                               ","dresser"},
+	{0x0a3d,"dresser1_1                               ","dresser"},
+	{0x0a44,"dresser2_1                               ","dresser"},
+	{0x0a45,"dresser2_2                               ","dresser"},
+	{0x0A4D,"armoire1_1                               ","fancy armorie"},
+	{0x0A51,"armoire1_2                               ","fancy armoire"},
+	{0x0A4F,"armoire2_1                               ","armoire"},
+	{0x0A53,"armoire2_2                               ","armoire"},
+	
+	//tables
 	{0x0B4a,"writing_desk_1                           ","writing desk"},
 	{0x0B4b,"writing_desk_2                           ","writing desk"},
 	{0x0B4c,"writing_desk_3                           ","writing desk"},
@@ -1349,26 +1366,9 @@ new __furniture[NUM_FURNITURE][additemEntry] =
 	{0x1190,"table_M1_2                               ","table"},
 	{0x1191,"table_M2_1                               ","table"},
 	{0x1192,"table_M2_2                               ","table"},
-	{0x0A2A,"stool1                                   ","stool"},
-	{0x0A2B,"stool2                                   ","stool"},
-	{0x0B5F,"bench_A1_1                               ","bench"},
-	{0x0B61,"bench_A1_2                               ","bench"},
-	{0x0B60,"bench_A1_3                               ","bench"},
-	{0x0B66,"bench_A2_2                               ","bench"},
-	{0x0B67,"bench_A2_3                               ","bench"},
-	{0x0B65,"bench_A2_1                               ","bench"},
-	{0x0B62,"bench_B1_1                               ","bench"},
-	{0x0B64,"bench_B1_2                               ","bench"},
-	{0x0B63,"bench_B1_3                               ","bench"},
-	{0x0B69,"bench_B2_1                               ","bench"},
-	{0x0B6A,"bench_B2_2                               ","bench"},
-	{0x0B68,"bench_B2_3                               ","bench"},
-	{0x0B92,"bench_C1_1                               ","bench"},
-	{0x0B91,"bench_C1_2                               ","bench"},
-	{0x0B93,"bench_C2_1                               ","bench"},
-	{0x0B94,"bench_C2_2                               ","bench"},
-	{0x0B2C,"wooden_bench_D1                          ","wooden bench"},
-	{0x0B2D,"wooden_bench_D2                          ","wooden bench"},
+	
+	
+	//chairs
 	{0x0B32,"throne1                                  ","throne"},
 	{0x0B33,"throne2                                  ","throne"},
 	{0x0B2E,"wooden_chair1_1                          ","wooden chair"},
@@ -1391,26 +1391,28 @@ new __furniture[NUM_FURNITURE][additemEntry] =
 	{0x0B5B,"straw_chair1_2                           ","straw chair"},
 	{0x0B5C,"straw_chair1_3                           ","straw chair"},
 	{0x0B5D,"straw_chair1_4                           ","straw chair"},
-	{0x0A2C,"chest_of_drawers1_1                      ","chest of drawers"},
-	{0x0A34,"chest_of_drawers1_2                      ","chest of drawers"},
-	{0x0A30,"chest_of_drawers2_2                      ","fancy chest of drawers"},
-	{0x0A38,"chest_of_drawers2_1                      ","fancy chest of drawers"},
-	{0x0A97,"bookcase1_1                              ","bookcase"},
-	{0x0A98,"bookcase1_2                              ","bookcase"},
-	{0x0A9B,"bookcase1_3                              ","bookcase"},
-	{0x0A99,"bookcase2_1                              ","bookcase"},
-	{0x0A9A,"bookcase2_2                              ","bookcase"},
-	{0x0A9C,"bookcase2_3                              ","bookcase"},
-	{0x0A9D,"wooden_shelf1                            ","bookcase"},
-	{0x0A9E,"wooden_shelf2                            ","bookcase"},
-	{0x0a3c,"dresser1_2                               ","dresser"},
-	{0x0a3d,"dresser1_1                               ","dresser"},
-	{0x0a44,"dresser2_1                               ","dresser"},
-	{0x0a45,"dresser2_2                               ","dresser"},
-	{0x0A4D,"armoire1_1                               ","fancy armorie"},
-	{0x0A51,"armoire1_2                               ","fancy armoire"},
-	{0x0A4F,"armoire2_1                               ","armoire"},
-	{0x0A53,"armoire2_2                               ","armoire"},
+	{0x0A2A,"stool1                                   ","stool"},
+	{0x0A2B,"stool2                                   ","stool"},
+	{0x0B5F,"bench_A1_1                               ","bench"},
+	{0x0B61,"bench_A1_2                               ","bench"},
+	{0x0B60,"bench_A1_3                               ","bench"},
+	{0x0B66,"bench_A2_2                               ","bench"},
+	{0x0B67,"bench_A2_3                               ","bench"},
+	{0x0B65,"bench_A2_1                               ","bench"},
+	{0x0B62,"bench_B1_1                               ","bench"},
+	{0x0B64,"bench_B1_2                               ","bench"},
+	{0x0B63,"bench_B1_3                               ","bench"},
+	{0x0B69,"bench_B2_1                               ","bench"},
+	{0x0B6A,"bench_B2_2                               ","bench"},
+	{0x0B68,"bench_B2_3                               ","bench"},
+	{0x0B92,"bench_C1_1                               ","bench"},
+	{0x0B91,"bench_C1_2                               ","bench"},
+	{0x0B93,"bench_C2_1                               ","bench"},
+	{0x0B94,"bench_C2_2                               ","bench"},
+	{0x0B2C,"wooden_bench_D1                          ","wooden bench"},
+	{0x0B2D,"wooden_bench_D2                          ","wooden bench"},
+	
+	//beds
 	{0x0a5d,"bed_headboard_A1_1                       ","bed"},
 	{0x0a69,"bed_headboard_A1_2                       ","bed"},
 	{0x0a6a,"bed_headboard_A1_3                       ","bed"},
@@ -1425,6 +1427,8 @@ new __furniture[NUM_FURNITURE][additemEntry] =
 	{0x0a5c,"bed_feet_A2_1                            ","bed"},
 	{0x0a68,"bed_feet_A2_2                            ","bed"},
 	{0x0a5f,"bed_feet_A2_3                            ","bed"},
+	
+	//Big beds
 	{0x0a70,"bigbed_headleft_A1_1                     ","bed"},
 	{0x0a84,"bigbed_headleft_A1_2                     ","bed"},
 	{0x0a7a,"bigbed_headleft_A1_3                     ","bed"},
@@ -1464,12 +1468,9 @@ new __furniture[NUM_FURNITURE][additemEntry] =
 	{0x0a81,"bigbed_headright_A2_3                    ","bed"},
 	{0x0a82,"bigbed_headright_A2_4                    ","bed"},
 	{0x0db2,"bigbed_headright_A2_5                    ","bed"},
-	{0x0db4,"bigbed_headright_A2_6                    ","bed"}
-}
+	{0x0db4,"bigbed_headright_A2_6                    ","bed"},
 
-#define NUM_CARPENTER 89
-new __carpenter[NUM_CARPENTER][additemEntry] = 
-{
+	//carpenter
 	{0x1BD7,"$item_boards                           ","board"},
 	{0x1BE0,"$item_logs                             ","log"},
 	{0x0F43,"$item_hatchet                          ","hatchet"},   
@@ -1559,32 +1560,26 @@ new __carpenter[NUM_CARPENTER][additemEntry] =
 	{0x1940,"$item_wooden_keg1_1                    ","wooden keg"},        
 	{0x1ad6,"$item_wooden_keg1_2                    ","wooden keg"},
 	{0x1ad7,"$item_wooden_keg2_1                    ","wooden keg"},
-	{0x14e0,"$item_bucket                           ","bucket"}
-}
-
-#define NUM_TAILOR 15
-new __tailor[NUM_TAILOR][additemEntry] =
-{
+	{0x14e0,"$item_bucket                           ","bucket"},
+	
+	//Tailor
 	{0x0FA9,"$item_dyes                             ","dyes"},
 	{0x0FAB,"$item_a_dying_tub                      ","a dying tub"},
-	{0x0F9D,"$item_sewing_kit                       ",""},
-	{0x1766,"$item_cut_cloth                        ",""},
-	{0x0F9E,"$item_scissors                         ",""},
-	{0x101d,"$item_spinning_wheel                   ",""},
-	{0x10A4,"$item_spinning_wheel_1                 ",""},
-	{0x10A5,"$item_spinning_wheel_2                 ",""},
-	{0x0DF8,"$item_piles_of_wool_1                  ",""},
-	{0x0E1D,"$item_balls_of_yarn                    ",""},
-	{0x0E1E,"$item_balls_of_yarn_1                  ",""},
-	{0x0E1F,"$item_balls_of_yarn_2                  ",""},
-	{0x0DF9,"$item_bales_of_cotton                  ",""},
-	{0x0FA0,"$item_spools_of_thread_1               ",""},
-	{0x0EC6,"$item_dress_form                       ",""}
-}
-
-#define NUM_BLACKSMITH 11
-new __blacksmith[NUM_BLACKSMITH][additemEntry] =
-{
+	{0x0F9D,"$item_sewing_kit                       ","sewing kit"},
+	{0x1766,"$item_cut_cloth                        ","cut cloth"},
+	{0x0F9E,"$item_scissors                         ","scissors"},
+	{0x101d,"$item_spinning_wheel                   ","spinning wheel"},
+	{0x10A4,"$item_spinning_wheel_1                 ","spinning wheel"},
+	{0x10A5,"$item_spinning_wheel_2                 ","spinning wheel"},
+	{0x0DF8,"$item_piles_of_wool_1                  ","piles of wool"},
+	{0x0E1D,"$item_balls_of_yarn                    ","balls of yarn"},
+	{0x0E1E,"$item_balls_of_yarn_1                  ","balls of yarn"},
+	{0x0E1F,"$item_balls_of_yarn_2                  ","balls of yarn"},
+	{0x0DF9,"$item_bales_of_cotton                  ","bales of cotton"},
+	{0x0FA0,"$item_spools_of_thread_1               ","spools of thread"},
+	{0x0EC6,"$item_dress_form                       ","dress form"},
+	
+	//Blacksmith
 	{0x0FB1,"$item_forge                            ",""},
 	{0x0FAF,"$item_anvil                            ",""},
 	{0x0FB0,"$item_anvil_1                          ",""},
@@ -1595,36 +1590,24 @@ new __blacksmith[NUM_BLACKSMITH][additemEntry] =
 	{0x198a,"$item_forge_5                          ",""},
 	{0x198e,"$item_forge_6                          ",""},
 	{0x0F39,"$item_shovel                           ",""},
-	{0x1BF2,"$item_iron_ingots                      ",""}
-}
-
-#define NUM_MUSICIAN 7
-new __musician[NUM_MUSICIAN][additemEntry] =
-{
+	{0x1BF2,"$item_iron_ingots                      ",""},
+	
+	//Musician
 	{0x0E9C,"$item_drum                             ",""},
 	{0x0E9D,"$item_tambourine                       ",""},
 	{0x0E9E,"$item_tambourine_1                     ",""},
 	{0x0EB1,"$item_standing_harp                    ",""},
 	{0x0EB2,"$item_lap_harp                         ",""},
 	{0x0EB3,"$item_lute                             ",""},
-	{0x0EB4,"$item_lute_1                           ",""}
-}
-
-#define NUM_THIEF 1
-new __thief[NUM_THIEF][additemEntry] =
-{
-	{0x14FB,"$item_lockpicks                        ",""}
-}
-
-#define NUM_FISHER 1
-new __fisher[NUM_FISHER][additemEntry] =
-{
-	{0x0DBF,"$item_a_fishing_pole","Fishing Pole"}
-}
-
-#define NUM_TINKER 10
-new __tinker[NUM_TINKER][additemEntry] =
-{
+	{0x0EB4,"$item_lute_1                           ",""},
+	
+	//Thief
+	{0x14FB,"$item_lockpicks                        ",""},
+	
+	//Fisher
+	{0x0DBF,"$item_a_fishing_pole","Fishing Pole"},
+	
+	//Tinker
 	{0x104F,"$item_clock_parts                      ",""},
 	{0x1051,"$item_axles_with_gears                 ",""},
 	{0x1053,"$item_gears                            ",""},
@@ -1634,12 +1617,9 @@ new __tinker[NUM_TINKER][additemEntry] =
 	{0x105D,"$item_springs                          ",""},
 	{0x1EBC,"$item_tinkers_tools                    ",""},
 	{0x104F,"$item_clock                            ","clock"},
-	{0x104D,"$item_clock_frames                     ","clock frame"}
-}
-
-#define NUM_BOWYER 10
-new __bowyer[NUM_BOWYER][additemEntry] =
-{
+	{0x104D,"$item_clock_frames                     ","clock frame"},
+	
+	//Bowyer
 	{0x100A,"$item_archery_butte                    ",""},
 	{0x100B,"$item_archery_butte_1                  ",""},
 	{0x1020,"$item_feathers_1                       ",""},
@@ -1649,12 +1629,9 @@ new __bowyer[NUM_BOWYER][additemEntry] =
 	{0x1024,"$item_arrow_shafts                     ",""},
 	{0x1025,"$item_arrow_shafts_1                   ",""},
 	{0x0F3F,"$item_arrow                            ",""},
-	{0x1BFB,"$item_crossbow_bolt                    ",""}
-}
+	{0x1BFB,"$item_crossbow_bolt                    ",""},
 
-#define NUM_SPAWNERS 114
-new __spawners[NUM_SPAWNERS][additemEntry] =
-{
+	//Spawners
 	{INVALID,"$item_orc_lord_spawner                 ","orc lord spawner"},
 	{INVALID,"$item_orc_spawner                      ","orc spawner"},
 	{INVALID,"$item_orc_mage_spawner                 ","orc mage spawner"},
@@ -1824,4 +1801,128 @@ new __deeds[NUM_DEEDS][additemEntry]
 	{INVALID,"$item_a_large_forge_facing_east_deed     ","a large forge facing east deed" },
 	{INVALID,"$item_a_skull_candle_deed                ","a skull candle deed" }
 }*/
+
+//the XSS def name string is not necessary as it is generated automatically
+#define NUM_ARMORS 8
+#define ARMOR_PARTS 7
+new __armor[NUM_ARMORS*ARMOR_PARTS][additemEntry] =
+{
+	//platemail
+	{0x1412,"                                       ","helm"},
+	{0x1413,"                                       ","gorget"},
+	{0x1416,"                                       ","chest"},
+	{0x1410,"                                       ","sleeves"},
+	{0x1414,"                                       ","gloves"},
+	{0x141A,"                                       ","legs"},
+	{0x1C04,"                                       ","female"},
+
+	//chainmail
+	{0x13BB, "                                       ","coif"},
+	{INVALID,"                                       ","gorget"},
+	{0x13C4, "                                       ","tunic"},
+	{INVALID,"                                       ","sleeves"},
+	{INVALID,"                                       ","gloves"},
+	{0x13C3, "                                       ","legs"},
+	{INVALID,"                                       ","female"},
+
+	//ringmail
+	{INVALID,"                                       ","coif"},
+	{INVALID,"                                       ","gorget"},
+	{0x13ED, "                                       ","tunic"},
+	{0x13EF, "                                       ","sleeves"},
+	{0x13F2, "                                       ","gloves"},
+	{0x13F1, "                                       ","legs"},
+	{INVALID,"                                       ","female"},
+
+	//studded
+	{INVALID,"                                       ","cap"},
+	{0x13D6, "                                       ","gorget"},
+	{0x13E2, "                                       ","tunic"},
+	{0x13D4, "                                       ","sleeves"},
+	{0x13DD, "                                       ","gloves"},
+	{0x13E1, "                                       ","legs"},
+	{0x1C02, "                                       ","female"},
+
+	//leather
+	{0x1DBA, "                                       ","cap"},
+	{INVALID,"                                       ","gorget"},
+	{0x13D3, "                                       ","tunic"},
+	{0x13CD, "                                       ","sleeves"},
+	{0x13CE, "                                       ","gloves"},
+	{0x13D2, "                                       ","legs"},
+	{0x1C06, "                                       ","female"},
+
+	//bone
+	{0x1451, "                                       ","helm"},
+	{INVALID,"                                       ","gorget"},
+	{0x144F, "                                       ","chest"},
+	{0x144E, "                                       ","sleeves"},
+	{0x1450, "                                       ","gloves"},
+	{0x1452, "                                       ","legs"},
+	{INVALID,"                                       ","female"},
+
+	//helms
+	{0x1412, "                                       ","plate_helm"},
+	{0x140C, "                                       ","bascinet"},
+	{0x1408, "                                       ","close_helm"},
+	{0x140A, "                                       ","helmet"},
+	{0x140E, "                                       ","nose_helm"},
+	{INVALID,"                                       ","legs"},
+	{INVALID,"                                       ","female"},
+
+	//Shields
+	{0x1B73, "                                       ","buckler"},
+	{0x1B7B, "                                       ","metal_shield"},
+	{0x1B72, "                                       ","bronze_shield"},
+	{0x1B78, "                                       ","wooden_kite_shield"},
+	{0x1B74, "                                       ","metal_kite_shield"},
+	{0x1B76, "                                       ","heater"},
+	{INVALID,"                                       ","female"}
+}
+
+#define NUM_WEAPONS 4
+#define WEAPONS_PER_GROUP 8
+new __weapons[NUM_WEAPONS*WEAPONS_PER_GROUP][additemEntry] =
+{
+	//Axes
+	{0x0F4B, "                                       ","double_axe"},
+	{0x0F47, "                                       ","battle_axe"},
+	{0x13FB, "                                       ","large_battle_axe"},
+	{0x0F49, "                                       ","axe"},
+	{0x1442, "                                       ","two-handed_axe"},
+	{0x0F45, "                                       ","executioners_axe"},
+	{0x13B0, "                                       ","war-axe"},
+	{INVALID,"                                       ",""},
+
+	//swords/blades
+	{0x0F51,"                                       ","dagger"},
+	{0x1440,"                                       ","cutlass"},
+	{0x1400,"                                       ","kryss"},
+	{0x13FF,"                                       ","katana"},
+	{0x13B6,"                                       ","scimitar"},
+	{0x0F5E,"                                       ","broadsword"},
+	{0x13B8,"                                       ","long_sword"},
+	{0x13BA,"                                       ","viking_sword"},
+
+	//maces
+	{0x0F5C,"                                       ","mace"},
+	{0x143A,"                                       ","maul"},
+	{0x1406,"                                       ","war_mace"},
+	{0x1438,"                                       ","war_hammer"},
+	{0x143C,"                                       ","hammer_pick"},
+	{INVALID,"                                       ","legs"},
+	{INVALID,"                                       ","legs"},
+	{INVALID,"                                       ","legs"},
+
+	//spears/forks/pole arms/bows
+	{0x0F62,"                                       ","short_spear"},
+	{0x1405,"                                       ","war_fork"},
+	{0x0F62,"                                       ","spear"},
+	{0x0F42,"                                       ","bardiche"},
+	{0x143E,"                                       ","halberd"},
+	{0x13B2,"                                       ","bow"},
+	{0x0F50,"                                       ","crossbow"},
+	{0x13FD,"                                       ","heavy_crossbow"}
+}
+
 /*! }@ */

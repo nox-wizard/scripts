@@ -23,52 +23,37 @@ public cmd_regioncp(const chr)
 
 public regioncp(const chr, const r)
 {
-	new START_X = 0;
-	new START_Y = 0;
-	new COLS = 25;
-	new ROWS = 15;
-	new WIDTH = COLS*COL;
-	new HEIGHT = ROWS*ROW;
-
-	new menu = gui_create(START_X,START_Y,true,true,true,"regioncp_cback");
-	gui_addResizeGump(menu,START_X,START_Y,RESIZEGUMP,WIDTH,HEIGHT );
-	gui_addResizeGump(menu,START_X + COL ,START_Y + COL,RESIZEGUMP1,WIDTH - 2*COL,4*ROW);
-	gui_addResizeGump(menu,START_X + COL ,START_Y + 4*ROW,RESIZEGUMP1,WIDTH - 2*COL,HEIGHT - 4*ROW - COL);
-
 	new name[100];
 	rgn_getName(r,name);
-	gui_addText(menu,5*COL,ROW,TITLE_COLOR,"Region control panel");
-	gui_addText(menu,5*COL,2*ROW,TXT_COLOR,"%s",name);
-
-	new row = 4;
-	new tab = 19;
-
-	gui_addText(menu,5*COL,++row*ROW,TXT_COLOR,"Guarded ");
-	gui_addCheckbox(menu, tab*COL,row*ROW,CHK_OFF,CHK_ON,rgn_isGuarded(r),0);
-
-	gui_addText(menu,5*COL,++row*ROW,TXT_COLOR,"Can recall");
-	gui_addCheckbox(menu, tab*COL,row*ROW,CHK_OFF,CHK_ON,rgn_canRecall(r),1);
-
-	gui_addText(menu,5*COL,++row*ROW,TXT_COLOR,"Can mark");
-	gui_addCheckbox(menu, tab*COL,row*ROW,CHK_OFF,CHK_ON,rgn_canMark(r),2);
-
-	gui_addText(menu,5*COL,++row*ROW,TXT_COLOR,"Weather");
+	
+	createStdMenu(0,0,8,25,name,"regioncp_cback");
+	
+	menu_addLabeledCheckbox(rgn_isGuarded(r),0,"Guarded");
+	cursor_newline();
+	
+	menu_addLabeledCheckbox(rgn_canRecall(r),1,"Can recall");
+	cursor_newline();
+	
+	menu_addLabeledCheckbox(rgn_canMark(r),2,"Can mark");
+	cursor_newline();
+	
 	new weather = rgn_getWeather(r);
 	switch(weather)
 	{
-		case WEATHER_SUN: gui_addInputField(menu,tab*COL,row*ROW,10*COL,ROW,3,TXT_COLOR,"sun");
-		case WEATHER_RAIN:gui_addInputField(menu,tab*COL,row*ROW,10*COL,ROW,3,TXT_COLOR,"rain");
-		case WEATHER_SNOW:gui_addInputField(menu,tab*COL,row*ROW,10*COL,ROW,3,TXT_COLOR,"snow");
+		case WEATHER_SUN: menu_addLabeledInputField(3,"sun",10,"Weather:  ");
+		case WEATHER_RAIN:menu_addLabeledInputField(3,"rain",10,"Weather:  ");
+		case WEATHER_SNOW:menu_addLabeledInputField(3,"snow",10,"Weather:  ");
 	}
+	cursor_newline();
 
-	gui_addText(menu,5*COL,++row*ROW,TXT_COLOR,"Can gate");
-	gui_addCheckbox(menu, tab*COL,row*ROW,CHK_OFF,CHK_ON,rgn_canGate(r),4);
-
-	gui_addText(menu,5*COL,++row*ROW,TXT_COLOR,"No magic damage");
-	gui_addCheckbox(menu, tab*COL,row*ROW,CHK_OFF,CHK_ON,rgn_noMagicDamage(r),5);
-
-	gui_addButton(menu,10*COL,(row + 2)*ROW,BTN_APPLY_UP,BTN_APPLY_DOWN,r + 100);
-	gui_show(menu,chr);
+	menu_addLabeledCheckbox(rgn_canGate(r),4,"Can gate");
+	cursor_newline();
+	
+	menu_addLabeledCheckbox(rgn_noMagicDamage(r),5,"No magic damage");
+	cursor_newline(2);
+	cursor_right(8);
+	menu_addApplyButton(r + 100);
+	menu_show(chr);
 }
 
 public regioncp_cback(const menu, const chr, const btn)

@@ -394,9 +394,9 @@ stock str2Token( const string[], token[], const packedToken, remainder[], const 
 	new remainderIndex = 0;
 	if( stringLength )
 	{
-		while( stringIndex < stringLength && ( (packedString ? string{stringIndex} : string[stringIndex]) == ' ' || (packedString ? string{stringIndex} : string[stringIndex]) == '^t') )
+		while( stringIndex < stringLength && ( (packedString ? string{stringIndex} : string[stringIndex]) == ' ' || (packedString ? string{stringIndex} : string[stringIndex]) == '^t' || (packedString ? string{stringIndex} : string[stringIndex]) == '^n') )
 			++stringIndex;
-		while( stringIndex < stringLength && (packedString ? string{stringIndex} : string[stringIndex]) != ' ' && (packedString ? string{stringIndex} : string[stringIndex]) != '^t')
+		while( stringIndex < stringLength && (packedString ? string{stringIndex} : string[stringIndex]) != ' ' && (packedString ? string{stringIndex} : string[stringIndex]) != '^t' && (packedString ? string{stringIndex} : string[stringIndex]) != '^n')
 			if( packedToken )
 				token{tokenIndex++} = (packedString ? string{stringIndex++} : string[stringIndex++]);
 			else

@@ -38,8 +38,12 @@ public drawPageListMenu(const solver, const chr)
 		}
 
 	//now s contains serials of the characters we want to see the pages
-
-	new BTN_UP = 0x29F4;  	//!< buttons up gump
+	
+	new COLS = 40;
+	new ROWS = set_size(s)*4;
+	cursor_setProperty(CRP_TAB,50);
+	createSetListMenu(0,0,ROWS,COLS,s,"Submitted pages","pagemenu_printpage","pagemenu_cback");
+	/*new BTN_UP = 0x29F4;  	//!< buttons up gump
 	new BTN_DOWN = 0x29F6;	//!< buttons down gump
 
 	new  START_X = 0;
@@ -97,8 +101,25 @@ public drawPageListMenu(const solver, const chr)
 			y += ROW;
 		}
 	}
+	*/
+	menu_show(chr);
+}
 
-	gui_show(menu,chr);
+public pagemenu_printpage(p,line,col,i,set)
+{
+	new name[30], reason[100], time[10],pager = set_getChar(set),page = 1;
+	chr_getProperty(pager,CP_STR_NAME,0,name);
+
+	menu_addLabeledButtonFn(pager,"pagemenu_go2Char_cback",name)
+	cursor_newline();
+	
+	new label[100];
+	while(chr_getGmPage(pager,page++,reason,time))
+	{
+		sprintf(label,"%s %s",time,reason);
+		menu_addLabeledButton(page*100000 + pager + 1,label);
+		cursor_newline();
+	}
 }
 
 public pagemenu_cback(menu,chr,btncode)

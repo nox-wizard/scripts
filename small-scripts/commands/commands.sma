@@ -39,6 +39,7 @@
 #include "small-scripts/commands/page/pages.sma"
 #include "small-scripts/commands/playerlist.sma"
 #include "small-scripts/commands/polymorph.sma"
+#include "small-scripts/commands/popup.sma"
 #include "small-scripts/commands/possess.sma"
 #include "small-scripts/commands/regioncp.sma"
 #include "small-scripts/commands/resend.sma"
@@ -311,7 +312,7 @@ public initCommandSystem()
 	printf("^n");
 		
 	//command system test
-	#if !_USE_SOURCE_CMDSYS_ & _CMD_DEBUG_
+	#if !_USE_SOURCE_CMDSYS_ && _CMD_DEBUG_
 		commandSystemTest();
 	#endif
 
