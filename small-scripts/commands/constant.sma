@@ -9,7 +9,7 @@
 #define _CMD_DEBUG_  1		//!< command system debug switch set to 1 to have debug messages shown, 0 else.
 #define _CMD_SHOWLIST_ 1	//!< set to 1 if you want to see a list of available commands at startup
 #define _CMD_SHOW_MSG 1		//!< set to 1 if you want users to be warned when they try to use commands they are not authorized to use or that not exist
-#define __MAX_PARAMS 8		//!< maximum number of parameters a command can have
+#define __MAX_PARAMS 7		//!< maximum number of parameters a command can have
 #define __MAX_PARAM_LENGTH 20	//!< maximum number of character a parameter can be made of
 #define __CMD_COUNT 60		//!< number of available commands
 
