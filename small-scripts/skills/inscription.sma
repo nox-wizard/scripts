@@ -135,16 +135,18 @@ static __inscription_book(const socket, const book)
 {
 	new book_ser = itm_getProperty(book,IP_SERIAL);
 	new book_set = set_open();
-	set_fillItemsInCont( book_set, book_ser, 0 );
+	set_addItemsInCont( book_set, book_ser, false, _ );
 	new book_size = set_size( book_set );
 	new i,j;
 	//printf("Size %d^n", book_size);
-	for (i = 0; i < book_size; i++)
+	for( set_rewind( book_set); !set_end( book_set ); )
 	{
-		new item = set_pop( book_set );
+		new item = set_getItem( book_set );
 		//    printf("Item %d ^n",item);
-		new id = itm_getDualByteProperty(item,IP_ID);
-		book_array[id-7981]=item;
+		if( item!=INVALID ) {
+			new id = itm_getDualByteProperty(item,IP_ID);
+			book_array[id-7981]=item;
+		}
 	}
 	set_close( book_set );
 
