@@ -7,10 +7,14 @@
 #define ACTIVATE_EXTENDED_SKILLSYSTEM 0	//!< set to 1 to activate the extended skillsystem
 #define SK_ADDITIONAL_COUNT 1		//number of additional skills
 #define CLV_ADDITIONALSKILLS 9998	//<! local variable to store additional skill values
-
 #define CLV_ADDITIONALSKILLSBASE 9997	//<! local variable to store addition base skill values
 
-#define SK_EXT_COUNT SK_COUNT + SK_ADDITIONAL_COUNT  //total number of skills
+//total number of skills
+#if ACTIVATE_EXTENDED_SKILLSYSTEM
+	#define SK_EXT_COUNT SK_COUNT + SK_ADDITIONAL_COUNT  
+#else
+	#define SK_EXT_COUNT SK_COUNT
+#endif
 
 enum __skill
 {
@@ -106,6 +110,16 @@ public chr_getBaseSkill(const chr,const skill)
 #endif
 }
 
+public chr_getSkillcap(const chr)
+{
+	if(!isChar(chr)) return -1;
+	
+	new skillcap = 0;
+	for(new sk = 0; sk < SK_EXT_COUNT; sk++)
+		skillcap += chr_getSkill(chr,sk);
+	return skillcap; 
+}
+
 //stop reading file if extended skillsystem is not activated
 #if !ACTIVATE_EXTENDED_SKILLSYSTEM
 	#endinput
@@ -198,8 +212,7 @@ public advanceSkill(chr, sk, success)
 {
 	if(sk < SK_COUNT) return;
 	
-	//stop gaining skill at 1000
-	if(chr_getSkill(chr,sk) >= 1000) return;
+	if(handleSkillcap(chr,sk,success,SKILLADV_RAISE) == SKILLADV_DONTRAISE) return;
 	
 	sk -= SK_COUNT;
 	
