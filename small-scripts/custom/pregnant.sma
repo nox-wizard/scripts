@@ -77,34 +77,28 @@ set_addNpcsNearXY( set, female_x,female_y,10);
 
 for( set_rewind(set); !set_end(set);)
 {
-
-new cc=set_getChar(set); // get the current set character and move internal index to next
-if(cc!=INVALID && cc!=animal) // if is valid char
-{
-
- new isadult = chr_getLocalIntVar(cc, adultcheck)
- if( ( isadult == 1) && !(chr_isHuman(cc)) && ( race == chr_getLocalIntVar(cc, animalrace)) && (chr_getLocalIntVar(cc, SexVar) == 0)) //adult animale, npc, no human, same race, male
- {
-
-new male_x = chr_getProperty(cc, CP_POSITION, CP2_X);
-new male_y = chr_getProperty(cc, CP_POSITION, CP2_Y);
-new male_z = chr_getProperty(cc, CP_POSITION, CP2_Z);
-new females = animal;
-new mountedmale = chr_getProperty( cc, CP_MOUNTED );
-if( (chr_lineOfSight(females, female_x, female_y, female_z, male_x, male_y, male_z, 63) == 1) && (mountedmale == 0) && (chr_getProperty(cc, CP_PRIV2) != 2) ) //nothing between both and male is not mounted too and male is not frozen
-{
- //allright then, lets get the female pregnant
-chr_setLocalIntVar(animal, pregnancy, 1); //animal is pregnant in first stage
-shadowchild(animal, cc);
-return;
-
-}
- 
+	new cc=set_getChar(set); // get the current set character and move internal index to next
+	if(cc!=INVALID && cc!=animal) // if is valid char
+	{
+		new isadult = chr_getLocalIntVar(cc, adultcheck)
+		if( ( isadult == 1) && !(chr_isHuman(cc)) && ( race == chr_getLocalIntVar(cc, animalrace)) && (chr_getLocalIntVar(cc, SexVar) == 0)) //adult animale, npc, no human, same race, male
+		{
+			new male_x = chr_getProperty(cc, CP_POSITION, CP2_X);
+			new male_y = chr_getProperty(cc, CP_POSITION, CP2_Y);
+			new male_z = chr_getProperty(cc, CP_POSITION, CP2_Z);
+			new females = animal;
+			new mountedmale = chr_getProperty( cc, CP_MOUNTED );
+			if( (chr_lineOfSight(females, female_x, female_y, female_z, male_x, male_y, male_z, 63) == 1) && (mountedmale == 0) && (chr_getProperty(cc, CP_PRIV2) != 2) ) //nothing between both and male is not mounted too and male is not frozen
+			{
+				//allright then, lets get the female pregnant
+				chr_setLocalIntVar(animal, pregnancy, 1); //animal is pregnant in first stage
+				shadowchild(animal, cc);
+				return;
+			}
+		}
+	}
 }
 
-}
-
-}
 countfertile(animal);
 set_delete(set); // close the set ( very important )
 

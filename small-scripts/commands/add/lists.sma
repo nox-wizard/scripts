@@ -1004,13 +1004,13 @@ new __containers[NUM_CONTAINERS][additemEntry] =
 	{0x0E7D,"$item_wooden_box                       ","Wooden Box"},        																																																																		
 	{0x0E7E,"$item_small_wooden_crate               ","Small Wooden Crate"},																																																																		
 	{0x0E3E,"$item_medium_wooden_crate1             ","Medium Wooden Crate"}																																																																		,
-	{0x0E3C,"$item_large_wooden_crate               ","Large Wooden Crate"},																																																																		
+	{0x0E3C,"$item_large_wooden_crate1              ","Large Wooden Crate"},																																																																		
 	{0x0E7F,"$item_open_wooden_keg                  ","Wooden Keg"},        																																																																		
 	{0x0E83,"$item_tub                              ","Tub"},               																																																																		
 	{0x0E77,"$item_barrel_with_lid                  ","Barrel"},            																																																																		
 	{0x0E80,"$item_brass_box                        ","Brass Box"},         																																																																		
-	{0x0A4D,"$item_pine_armoire1_2                  ","Armorie Cherry"},    																																																																		
-	{0x0A4F,"$item_pine_armoire2_2                  ","Armorie Brown"}      																																																																		
+	{0x0A4D,"$item_pine_armoire1_2                  ","Armorie simple"},    																																																																		
+	{0x0A4F,"$item_pine_armoire2_2                  ","Armorie fancy"}      																																																																		
 }
 
 #define NUM_STATUES_TROPHIES 29
