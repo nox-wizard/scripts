@@ -117,7 +117,7 @@ const CP_MURDERRATE = 247;	//!< time to murdercount decay
 const CP_MUTETIME = 248;	//!< time to end of squelch
 const CP_NAMEDEED = 249;	//!< 
 const CP_NEXTACT = 250;		//!< time to next spell action
-const CP_NPCAI = 251;		//!< npc AI time
+const CP_NPCAI = 251;		//!< npc AI type
 const CP_NPCMOVETIME = 252;	//!< 
 const CP_OBJECTDELAY = 253;	//!< time till a new object can be used
 const CP_OLDPOS = 254;		//!< old position, usually used for gates
@@ -263,7 +263,7 @@ const CP2_DIE = 4;		//!< ??
 
 enum {
 	GENDER_MALE,		//!< ??
-	GENDER_FEMAL,		//!< ??
+	GENDER_FEMALE,		//!< ??
 	GENDER_UNDEFINED	//!< ??
 	}
 
@@ -310,5 +310,8 @@ const PRIV2_NONEEDMANA = 0x10;	//!<
 const PRIV2_DISPELLABLE = 0x20;	//!<
 const PRIV2_PERMAMAGICREFLECT = 0x40;//!<
 const PRIV2_NONEEDREAGS = 0x80;	//!<
+
+
+
 
 /** @} */

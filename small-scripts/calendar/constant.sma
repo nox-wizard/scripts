@@ -5,8 +5,8 @@
 
 const PROP_CALENDAR = 2;
 
-/** \defgroup script_const_calendar Calendar
- *  \ingroup script_constants
+/** \defgroup script_API_calendar_constants Constants
+ *  \ingroup script_API_calendar
  *  @{
  */
  

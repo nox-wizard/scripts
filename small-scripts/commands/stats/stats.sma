@@ -1,3 +1,8 @@
+public command_stats( const caller )
+{
+	chr_message(caller, _, "Select object to inspect.. " );
+	target_create( caller, _, _, _, "target_stats");
+}
 
 public target_stats( const chr, const target, const item )
 {

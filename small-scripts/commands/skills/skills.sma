@@ -1,3 +1,9 @@
+public command_skills( const caller )
+{
+	chr_message(caller, _, "Select character.. "); 
+	target_create( caller, _, _, _, "target_skills");
+}
+
 
 public target_skills( const caller, const target, const item )
 {

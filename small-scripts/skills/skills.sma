@@ -7,7 +7,7 @@
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 /*!
-\defgroup script_skills skills
+\defgroup script_skills Skills
 @{
 */
 

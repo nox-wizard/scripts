@@ -1,3 +1,8 @@
+public command_options( const caller )
+{
+	chr_message(caller, _, "Select object.. ");
+	target_create( caller, _, _, _, "target_options");
+}
 
 public target_options( const chr, const target, const item )
 {

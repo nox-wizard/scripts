@@ -1,86 +1,62 @@
-
-#include "small-scripts/commands/tweak/tweak.sma"
-#include "small-scripts/commands/stats/stats.sma"
+//#include "small-scripts/commands/add.sma"
+//#include "small-scripts/commands/area.sma"
+//#include "small-scripts/commands/freeze.sma"
+//#include "small-scripts/commands/hiding.sma"
+//#include "small-scripts/commands/invul.sma"
+//#include "small-scripts/commands/kill.sma"
+//#include "small-scripts/commands/make.sma"
+//#include "small-scripts/commands/move.sma"
 #include "small-scripts/commands/options/options.sma"
+#include "small-scripts/commands/playerlist.sma"
 #include "small-scripts/commands/skills/skills.sma"
+#include "small-scripts/commands/stats/stats.sma"
+#include "small-scripts/commands/tweak/tweak.sma"
+//#include "small-scripts/commands/where.sma"
+//#include "small-scripts/commands/wipe.sma"
 
-public command_tweak( const caller )
-{
-	chr_message(caller, _, "Select Object to tweak.. ");
-	target_create( caller, _, _, _, "target_tweak");
-}
+/*!
+\defgroup script_commands commands
 
-public command_playerlist( const caller )
-{
-	new set=set_create();
-	
-	set_addAllOnlinePl( set );
-	
-	new count=set_size(set);
-	if( count==1 ) {
-		chr_message(caller,_ , "No other player connected" );
-		set_delete(set);
-		return;
-	}
-	
-	new menu = gui_create( 50, 50, true, true, true, "handle_playerlist" );
-	gui_addGump( menu, 0, 0, 0x0027, 0 );
-	gui_addText( menu, 20, 4, _, "User Online : " );
-	gui_addText( menu, 150, 4, _, "%d", count );
-	
-	const chrForPage = 14;
-	new page=1;
-	new i=0;
-	for( set_rewind(set); !set_end(set); ++i ) {
-	
-		new chr=set_getChar(set);
+This group of scripts contains all the ingame commands scripts.<br>
+The commandlevel management is done internally, in the sources, but you can 
+define, modify all the commands you want by editing the existing scripts.<br>
 
-		if( (i%chrForPage)==0 ) {
-			gui_addPage( menu, page );
-			if( page>1 )
-				gui_addPageButton( menu, 205,   6, 0x824, GUMP_INVALID, page-1 );
-			if( page<=(count/chrForPage) )
-				gui_addPageButton( menu, 202, 265, 0x825, GUMP_INVALID, page+1 );
-			++page;
-		}
-	
-		gui_addButton( menu, 32, 39+(i%chrForPage)*15, 0x4B9, 0x4BA, chr );
-		new str[100];
-		chr_getProperty( chr, CP_STR_NAME, 0, str );
-		gui_addText( menu, 52, 35+(i%chrForPage)*15, _, str );
+\section commandsplayerinterface Player interface
+Players can use ingame commands, that is, they can send commands to the server to make various things.
+Not all commands are available to all players, every command needs a certain authorization to be used, this authorization
+is the "command level" or "privlevel".<br>
+The privlevel is a number, this number defines if a command is usable by a player or not.<br>
+To use a command the player has to write:<br>
+'[commandname] <br>
+for example:<br>
+'wipe 'kill 'invul <br>
+are all commands.<br>
+<br>
+Usually a command takes some parameters wich specify how the command should work:<br>
+'invul on<br>
+'kill target<br>
+are examples.
 
-	}
-	
-	set_delete(set);
-	
-	gui_show( menu, caller);
-}
+\section usingcommands Using commands
+Using commands is easy, simpy type the command (with his parameters) and the follow the instructions that
+appear as messages in the bottom left corner of the screen.<br>
+Usually a command requires to target a character or item, in that case the target pointer will appear
+with a prompt saying what you should target.
+When a command requires parameters, there always some default values for the most used values.<br>
+When a parameter has a default value tou can ommit it in the command call, and the default will be assumed.<br>
+If you want to specify a parameter, you have to specify all the preceding parameters, or you will get errors.<br>
+In the commands documentation, it is always written the dafault value for every parameter.
 
-public handle_playerlist( const caller, const menu, const button )
-{
-	if( button==MENU_CLOSED )
-		return;
-		
-	options_char( caller, button );
-}
+\section commandareas Command areas
+A player who can use the 'area command, can set "command area".<br>
+This is needed sometimes when you have to aplly a command to a large number of items/characters
+and it would be boring to write the command many times.<br>
+See the \ref script_command_area for more details.
 
+\section customizability Customizability
+You can define all commands you want, modify the privlevels, modify/erase existing commands, in other words,
+you can do everything you want with commands!<br>
+To edit an existing command simply open the corresponding script (has the same name as the command, in the small-scripts\commands folder)
+and modify it, the commands' behaviour is completely written in small, so you full control over it.<br>
 
-
-
-public command_stats( const caller )
-{
-	chr_message(caller, _, "Select object to inspect.. " );
-	target_create( caller, _, _, _, "target_stats");
-}
-
-public command_options( const caller )
-{
-	chr_message(caller, _, "Select object.. ");
-	target_create( caller, _, _, _, "target_options");
-}
-
-public command_skills( const caller )
-{
-	chr_message(caller, _, "Select character.. "); 
-	target_create( caller, _, _, _, "target_skills");
-}
+*/

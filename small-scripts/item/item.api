@@ -216,7 +216,7 @@ native itm_setSerial(const item, const serial);
 \author Xanathar
 \fn itm_create(const itemtype, const container = -1, const amount = -1)
 \brief Create a new item
-\param itemtype the scriptid
+\param itemtype the scriptID
 \param container the container to put into
 \param amount the amount ( if INVALID use default xss amount )
 */

@@ -12,7 +12,7 @@
 
 #include "small-scripts/effects/constant.sma"
 
-/** \defgroup script_API_effects Effects
+/** \defgroup script_API_tempfx Tempfx
  *  \ingroup script_API
  *  @{
  */

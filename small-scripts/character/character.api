@@ -1135,8 +1135,8 @@ native chr_setRandomName(const chr, const namelist[]);
 
 /*!
 \author Luxor
-\fn chr_lineOfSight(const s, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor)
-\param s socket
+\fn chr_lineOfSight(const chr, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor)
+\param chr the character
 \param x1,y1,z1 character's location
 \param x2,y2,z2 location to check the LOS
 \param checkfor items that can block the LOS
@@ -1144,7 +1144,23 @@ native chr_setRandomName(const chr, const namelist[]);
 TODO: checkfor values
 \return 0 if LOS is not blocked, 1 if it's blocked, INVALIDE for invalid socket
 */
-native chr_lineOfSight(const s, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor);
+native chr_lineOfSight(const chr, const x1, const y1, const z1, const x2, const y2, const z2, const checkfor);
+
+/*!
+\author Fax
+\fn chr_checkLos(const chr1, const chr2)
+\param chr1 first character
+\param chr2 second character
+\brief checks the Line Of Sight between two characters
+\return 0 if LOS is not blocked, 1 if it's blocked, INVALID for invalid characters
+*/
+stock chr_checkLos(const chr1, const chr2)
+{
+	new pos1[3], pos2[3];
+	chr_getPositionVec(chr1,pos1);
+	chr_getPositionVec(chr2,pos2);
+	return chr_lineOfSight(chr1,pos1[0],pos1[1],pos1[2],pos2[0],pos2[1],pos2[2],0);
+}
 
 /*!
 \author Xanathar

@@ -1,3 +1,8 @@
+public command_tweak( const caller )
+{
+	chr_message(caller, _, "Select Object to tweak.. ");
+	target_create( caller, _, _, _, "target_tweak");
+}
 
 public target_tweak( const caller, const target, const item )
 {

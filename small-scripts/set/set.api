@@ -27,6 +27,11 @@
  */
 
 #include "small-scripts/include/nxw_lib"
+/*!
+\defgroup script_API_set Set
+\ingroup script_API
+@{
+*/
 
 /*!
 \brief Open a set
@@ -345,3 +350,5 @@ native set_addAllRaces( const set, const onlyActive=true );
 \fn set_getRaceStuff( const set, const race, const prop, const subProp=0  )
 */
 native set_getRaceStuff( const set, const race, const prop, const subProp=0  );
+
+/*! }@ */
