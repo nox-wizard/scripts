@@ -1007,16 +1007,19 @@ public tweakItmBck(const twkItmMenu, const chrsource, const buttonCode)
 
 public tweak_char(const chrsource, const target, pagenumber)
 {
-	printf("enter char tweak mit nummer %d", pagenumber);
+	printf("enter char tweak seite %d^n", pagenumber);
 	init_tweak_itm();
 	new tempChrStr[100];
 	
 	new twkChrMenu = gui_create( 10,10,1,1,1,"tweakchrBck" );
+	new trgnumber = target;
+	new pgetarget = trgnumber + (pagenumber<<8); //put both, pagenumber and target into one value)
+	//printf("menu page: %d, target: %d, pgetarget: %d^n", pagenumber, target, pgetarget);
 	
 	gui_setProperty( twkChrMenu,MP_BUFFER,0,PROP_CHARACTER );
 	gui_setProperty( twkChrMenu,MP_BUFFER,1,target );
 	gui_setProperty( twkChrMenu,MP_BUFFER,3,BUTTON_APPLY );
-	gui_setProperty( twkChrMenu,MP_BUFFER,2,pagenumber );
+	gui_setProperty( twkChrMenu,MP_BUFFER,4,pagenumber );
 
 	gui_addPage(twkChrMenu,0);
 	gui_addResizeGump(twkChrMenu,10,35,5054,550,530 );
@@ -1046,6 +1049,7 @@ public tweak_char(const chrsource, const target, pagenumber)
 	gui_addButton(twkChrMenu,260,81,twkButton[arrayline][new8],twkButton[arrayline][old8],8);
 	gui_addText(twkChrMenu,285,79,33,"Layer");
 	
+	printf("target: %d", target);
 	gui_addText(twkChrMenu,66,120,33,"Account number :");
 	sprintf( tempChrStr,"%d",chr_getProperty(target,CP_ACCOUNT));
 	gui_addText( twkChrMenu, 185, 120,0,tempChrStr);
@@ -1204,12 +1208,12 @@ public tweak_char(const chrsource, const target, pagenumber)
 				}
 				case 5: //radiobutton
 				{
-					new u; //how many radiobuttons are part of this group?
-					if( chr_twkarray[i][ct_infotype] != 0)
+					/*new u; //how many radiobuttons are part of this group?
+					if( chr_twkarray[i][ct_infotype] != 0) //first line of a radiobuttongroup
 					{
 						u=chr_twkarray[i][ct_infotype]+1;
 						gui_addGroup( twkChrMenu, u );
-					}
+					}*/
 					if((chr_twkarray[i][ct_propnumber] == 110) || (chr_twkarray[i][ct_propnumber] == 121)) //bitfields (for example visibility)
 					{
 						if(chr_getProperty( target,chr_twkarray[i][ct_propnumber])&chr_twkarray[i][ct_infotype] != chr_twkarray[i][ct_infotype]) //can decay
@@ -1729,8 +1733,8 @@ public tweak_char(const chrsource, const target, pagenumber)
 public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 {
 	new target = gui_getProperty( twkChrMenu,MP_BUFFER,1 );
-	new pagenumber = gui_getProperty( twkChrMenu,MP_BUFFER,2 );
-	printf("page: %d", pagenumber);
+	new pagenumber = gui_getProperty( twkChrMenu,MP_BUFFER,4 );
+	printf("enter callback, page: %d, target: %d^n", pagenumber, target);
 	new startline;
 	new leftrow;
 	new rightrow;
@@ -1767,18 +1771,19 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		endline = leftrow;
 	else if((rightrow != 0) && (leftrow != 0))
 		endline = rightrow;
-	
 	new checklev;
 	switch(buttonCode)
 	{
 		case 1..8: 	
 		{	
-			//printf("call viewchrMenu^n");	
 			viewchrMenu(chrsource, target, buttonCode);
 				//gui_delete( twkChrMenu );
 		}
 		case 10:
 		{
+		        
+		        new checked=0;
+		        new checkbox;
 		        if(0 < pagenumber < 5)
 		        {
 		        	for(i=startline; i<=endline; ++i)
@@ -1786,15 +1791,14 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        		new linetype = chr_twkarray[i][ct_linetype];
 		        		new propnumber = chr_twkarray[i][ct_propnumber];
 		        		new type=chr_twkarray[i][ct_propnumber];
-		        		new checked=0;
-		        		new checkbox = gui_getProperty(twkChrMenu,MP_CHECK,i);
-		        		printf("linetype: %d", linetype);
+		        		printf("enter line %s, line number: %d, linetype: %d, checkbox: %d^n", chr_twkarray[i][ct_linename],i, linetype, checkbox);
 		        		checklev = 0;
-		        		if(linetype == 3)
+		        		if(linetype == 3) //input line
 		        		{
 		        			new textbuf_input[15];
 		        			new textbuf_origin[15];
 		        			new value=0;
+		        			checkbox = gui_getProperty(twkChrMenu,MP_CHECK,i);
 		        			if( type== 1) //TFX function
 		        			{
 		        				sprintf(textbuf_origin, "%s", chr_twkarray[i][ct_inputname]);
@@ -1842,7 +1846,8 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 			        	}//linetype
 			        	else if(linetype == 4) //checkbox
 		        		{
-		        			printf("enter checkbox line, propnumber: %d^n", propnumber);
+		        			//printf("enter checkbox line, propnumber: %d^n", propnumber);
+		        			checkbox = gui_getProperty(twkChrMenu,MP_CHECK,i);
 		        			if((propnumber == 134) || (propnumber == 121)) //CP_PRIV or CP_PRIV2 or ... (bitfields)
 						{
 							new privvalue = chr_twkarray[i][ct_infotype]
@@ -1859,7 +1864,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 						{
 							new infotype = chr_twkarray[i][ct_infotype];
 							new bank;
-							printf("line name: %s, infotype: %d, checkbox: %d", chr_twkarray[i][ct_linename], infotype, checkbox);
+							printf("enter checkbox, line number: %d, line name: %s, infotype: %d, checkbox: %d^n", i, chr_twkarray[i][ct_linename], infotype, checkbox);
 							if( (infotype == 1) && (checkbox == 1)) //bank box opening
 							{
 								bank = chr_getBankBox(target, BANKBOX_NORMAL);
@@ -1891,6 +1896,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 		        		}
 		        		else if(linetype == 5) //radiobutton
 		        		{
+		        			checkbox = gui_getProperty(twkChrMenu,MP_RADIO,i);
 		        			if((propnumber == 110) || (propnumber == 121)) //bitfields (for example visibility)
 						{
 							if(chr_getProperty( target,propnumber)&chr_twkarray[i][ct_infotype] == chr_twkarray[i][ct_infotype]) //which status does the property has so far?
@@ -1912,7 +1918,7 @@ public tweakchrBck(const twkChrMenu, const chrsource, const buttonCode)
 					{
 						//new q = (propnumber); //type of stock function
 						//new output;
-						printf("needed callback: %d", i);
+						//printf("needed callback: %d", i);
 					}
 		        	}//for
 		        }
