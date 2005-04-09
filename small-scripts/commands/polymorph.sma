@@ -113,9 +113,10 @@ public callPolyMenu(const chrsource,const target, const page)
 		gui_addText( polymMenu,110,150+50*(i-l),1310,"%s : ",animProperty[i][animname] );
 		gui_addButton( polymMenu,140,170+50*(i-l),oldpic,newpic, i+10);
 	}
-
+	
+	//printf("k: %d, j:%d^n", k, j);
 	i=j;
-	for ( i=(page-1)*14;i<k;++i)
+	for ( i;i<k;++i)
 	{
 		gui_addTilePic(polymMenu,331,151+50*(i-j), animProperty[i][hextile]);
 		gui_addText( polymMenu,381,150+50*(i-j),1310,"%s : ",animProperty[i][animname] );

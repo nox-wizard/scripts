@@ -46,54 +46,6 @@ SECTION ITEM $item_teleport_rune
 	TYPE $itype_teleportrune
 }
 
-SECTION ITEM $item_stone_of_humility
-{
-	NAME stone of humility
-	ID 1869
-}
-
-SECTION ITEM $item_stone_of_honesty
-{
-	NAME stone of honesty
-	ID 186A
-}
-
-SECTION ITEM $item_stone_of_justice
-{
-	NAME stone of justice
-	ID 186B
-}
-
-SECTION ITEM $item_stone_of_sacrifice
-{
-	NAME stone of sacrifice
-	ID 186C
-}
-
-SECTION ITEM $item_stone_of_honor
-{
-	NAME stone of honor
-	ID 186D
-}
-
-SECTION ITEM $item_stone_of_valor
-{
-	NAME stone of valor
-	ID 186E
-}
-
-SECTION ITEM $item_stone_of_spirituality
-{
-	NAME stone of spirituality
-	ID 186F
-}
-
-SECTION ITEM $item_stone_of_compassion
-{
-	NAME stone of compassion
-	ID 1870
-}
-
 SECTION ITEM $item_backpack
 {
 	NAME backpack
@@ -174,7 +126,7 @@ SECTION ITEM $item_brass_box
 
 SECTION ITEM $item_copper_key
 {
-	NAME gold key
+	NAME copper key
 	ID 100F
 	TYPE $itype_key
 	DECAY
@@ -251,6 +203,460 @@ SECTION ITEM $item_key_ring4
 	ID 176b
 	VALUE 10
 	WEIGHT 2
+}
+
+//virtue
+SECTION ITEM $item_Honesty1_1
+{	
+	ID 149f
+	AMXINT $localvar_flipitem $item_Honesty1_2
+}
+
+SECTION ITEM $item_Honesty1_2
+{
+	ID 14a6
+	AMXINT $localvar_flipitem $item_Honesty1_1
+}
+
+SECTION ITEM $item_Honesty2_1
+{
+	ID 14a0
+	AMXINT $localvar_flipitem $item_Honesty2_2
+}
+
+SECTION ITEM $item_Honesty2_2
+{
+	ID 14a6
+	AMXINT $localvar_flipitem $item_Honesty2_1
+}
+
+SECTION ITEM $item_Honesty3_1
+{
+	ID 14a1
+	AMXINT $localvar_flipitem $item_Honesty3_2
+}
+
+SECTION ITEM $item_Honesty3_2
+{
+	ID 14a5
+	AMXINT $localvar_flipitem $item_Honesty3_1
+}
+
+SECTION ITEM $item_Honesty4_1
+{
+	ID 14a2
+	AMXINT $localvar_flipitem $item_Honesty4_2
+}
+
+SECTION ITEM $item_Honesty4_2
+{
+	ID 14a4
+	AMXINT $localvar_flipitem $item_Honesty4_1
+}
+
+SECTION ITEM $item_Compassion1_1
+{
+	ID 14a7
+	AMXINT $localvar_flipitem $item_Compassion1_2
+}
+
+SECTION ITEM $item_Compassion1_2
+{
+	ID 14ab
+	AMXINT $localvar_flipitem $item_Compassion1_1
+}
+
+SECTION ITEM $item_Compassion2_1
+{
+	ID 14a8
+	AMXINT $localvar_flipitem $item_Compassion2_2
+}
+
+SECTION ITEM $item_Compassion2_2
+{
+	ID 14ae
+	AMXINT $localvar_flipitem $item_Compassion2_1
+}
+
+SECTION ITEM $item_Compassion3_1
+{
+	ID 14a9
+	AMXINT $localvar_flipitem $item_Compassion3_2
+}
+
+SECTION ITEM $item_Compassion3_2
+{
+	ID 14ad
+	AMXINT $localvar_flipitem $item_Compassion3_1
+}
+
+SECTION ITEM $item_Compassion4_1
+{
+	ID 14aa
+	AMXINT $localvar_flipitem $item_Compassion4_2
+}
+
+SECTION ITEM $item_Compassion4_2
+{
+	ID 14ac
+	AMXINT $localvar_flipitem $item_Compassion4_1
+}
+
+SECTION ITEM $item_Justice1_1
+{
+	ID 14b0
+	AMXINT $localvar_flipitem $item_Justice1_2
+}
+
+SECTION ITEM $item_Justice1_2
+{
+	ID 14b3
+	AMXINT $localvar_flipitem $item_Justice1_1
+}
+
+SECTION ITEM $item_Justice2_1
+{
+	ID 14b6
+	AMXINT $localvar_flipitem $item_Justice2_2
+}
+
+SECTION ITEM $item_Justice2_2
+{
+	ID 14af
+	AMXINT $localvar_flipitem $item_Justice2_1
+}
+
+SECTION ITEM $item_Justice3_1
+{
+	ID 14b2
+	AMXINT $localvar_flipitem $item_Justice3_2
+}
+
+SECTION ITEM $item_Justice3_2
+{
+	ID 14b5
+	AMXINT $localvar_flipitem $item_Justice3_1
+}
+
+SECTION ITEM $item_Justice4_1
+{
+	ID 14b4
+	AMXINT $localvar_flipitem $item_Justice4_2
+}
+
+SECTION ITEM $item_Justice4_2
+{
+	ID 14b1
+	AMXINT $localvar_flipitem $item_Justice4_1
+}
+
+SECTION ITEM $item_Valor1_1
+{
+	ID 14b7
+	AMXINT $localvar_flipitem $item_Valor1_2
+}
+
+SECTION ITEM $item_Valor1_2
+{
+	ID 14be
+	AMXINT $localvar_flipitem $item_Valor1_1
+}
+
+SECTION ITEM $item_Valor2_1
+{
+	ID 14b8
+	AMXINT $localvar_flipitem $item_Valor2_2
+}
+
+SECTION ITEM $item_Valor2_2
+{
+	ID 14bb
+	AMXINT $localvar_flipitem $item_Valor2_1
+}
+
+SECTION ITEM $item_Valor3_1
+{
+	ID 14b9
+	AMXINT $localvar_flipitem $item_Valor3_2
+}
+
+SECTION ITEM $item_Valor3_2
+{
+	ID 14bc
+	AMXINT $localvar_flipitem $item_Valor3_1
+}
+
+SECTION ITEM $item_Valor4_1
+{
+	ID 14ba
+	AMXINT $localvar_flipitem $item_Valor4_2
+}
+
+SECTION ITEM $item_Valor4_2
+{
+	ID 14bd
+	AMXINT $localvar_flipitem $item_Valor4_1
+}
+
+SECTION ITEM $item_Spirituality1_1
+{
+	ID 14bf
+	AMXINT $localvar_flipitem $item_Spirituality1_2
+}
+
+SECTION ITEM $item_Spirituality1_2
+{
+	ID 14c6
+	AMXINT $localvar_flipitem $item_Spirituality1_1
+}
+
+SECTION ITEM $item_Spirituality2_1
+{
+	ID 14c0
+	AMXINT $localvar_flipitem $item_Spirituality2_2
+}
+
+SECTION ITEM $item_Spirituality2_2
+{
+	ID 14c3
+	AMXINT $localvar_flipitem $item_Spirituality2_1
+}
+
+SECTION ITEM $item_Spirituality3_1
+{
+	ID 14c1
+	AMXINT $localvar_flipitem $item_Spirituality3_2
+}
+
+SECTION ITEM $item_Spirituality3_2
+{
+	ID 14c4
+	AMXINT $localvar_flipitem $item_Spirituality3_1
+}
+
+SECTION ITEM $item_Spirituality4_1
+{
+	ID 14c2
+	AMXINT $localvar_flipitem $item_Spirituality4_2
+}
+
+SECTION ITEM $item_Spirituality4_2
+{
+	ID 14c5
+	AMXINT $localvar_flipitem $item_Spirituality4_1
+}
+
+SECTION ITEM $item_Honor1_1
+{
+	ID 14c7
+	AMXINT $localvar_flipitem $item_Honor1_2
+}
+
+SECTION ITEM $item_Honor1_2
+{
+	ID 14ce
+	AMXINT $localvar_flipitem $item_Honor1_1
+}
+
+SECTION ITEM $item_Honor2_1
+{
+	ID 14c8
+	AMXINT $localvar_flipitem $item_Honor2_2
+}
+
+SECTION ITEM $item_Honor2_2
+{
+	ID 14cb
+	AMXINT $localvar_flipitem $item_Honor2_1
+}
+
+SECTION ITEM $item_Honor3_1
+{
+	ID 14c9
+	AMXINT $localvar_flipitem $item_Honor3_2
+}
+
+SECTION ITEM $item_Honor3_2
+{
+	ID 14cc
+	AMXINT $localvar_flipitem $item_Honor3_1
+}
+
+SECTION ITEM $item_Honor4_1
+{
+	ID 14ca
+	AMXINT $localvar_flipitem $item_Honor4_2
+}
+
+SECTION ITEM $item_Honor4_2
+{
+	ID 14cd
+	AMXINT $localvar_flipitem $item_Honor4_1
+}
+
+SECTION ITEM $item_Humility1_1
+{
+	ID 14cf
+	AMXINT $localvar_flipitem $item_Humility1_2
+}
+
+SECTION ITEM $item_Humility1_2
+{
+	ID 14d6
+	AMXINT $localvar_flipitem $item_Humility1_1
+}
+
+SECTION ITEM $item_Humility2_1
+{
+	ID 14d0
+	AMXINT $localvar_flipitem $item_Humility2_2
+}
+
+SECTION ITEM $item_Humility2_2
+{
+	ID 14d3
+	AMXINT $localvar_flipitem $item_Humility2_1
+}
+
+SECTION ITEM $item_Humility3_1
+{
+	ID 14d1
+	AMXINT $localvar_flipitem $item_Humility3_2
+}
+
+SECTION ITEM $item_Humility3_2
+{
+	ID 14d4
+	AMXINT $localvar_flipitem $item_Humility3_1
+}
+
+SECTION ITEM $item_Humility4_1
+{
+	ID 14d2
+	AMXINT $localvar_flipitem $item_Humility4_2
+}
+
+SECTION ITEM $item_Humility4_2
+{
+	ID 14d5
+	AMXINT $localvar_flipitem $item_Humility4_1
+}
+
+SECTION ITEM $item_Chaos1
+{
+	ID 14e3
+}
+
+SECTION ITEM $item_Chaos2
+{
+	ID 14e4
+}
+
+SECTION ITEM $item_Chaos3
+{
+	ID 14e5
+}
+
+SECTION ITEM $item_Chaos4
+{
+	ID 14e6
+}
+
+SECTION ITEM $item_Sacrifice1_1
+{
+	ID 150a
+	AMXINT $localvar_flipitem $item_Sacrifice1_2
+}
+
+SECTION ITEM $item_Sacrifice1_2
+{
+	ID 1511
+	AMXINT $localvar_flipitem $item_Sacrifice1_1
+}
+
+SECTION ITEM $item_Sacrifice2_1
+{
+	ID 150b
+	AMXINT $localvar_flipitem $item_Sacrifice2_2
+}
+
+SECTION ITEM $item_Sacrifice2_2
+{
+	ID 150e
+	AMXINT $localvar_flipitem $item_Sacrifice2_1
+}
+
+SECTION ITEM $item_Sacrifice3_1
+{
+	ID 150c
+	AMXINT $localvar_flipitem $item_Sacrifice3_2
+}
+
+SECTION ITEM $item_Sacrifice3_2
+{
+	ID 150f
+	AMXINT $localvar_flipitem $item_Sacrifice3_1
+}
+
+SECTION ITEM $item_Sacrifice4_1
+{
+	ID 150d
+	AMXINT $localvar_flipitem $item_Sacrifice4_2
+}
+
+SECTION ITEM $item_Sacrifice4_2
+{
+	ID 1510
+	AMXINT $localvar_flipitem $item_Sacrifice4_1
+}
+
+
+SECTION ITEM $item_stone_of_humility
+{
+	NAME stone of humility
+	ID 1869
+}
+
+SECTION ITEM $item_stone_of_honesty
+{
+	NAME stone of honesty
+	ID 186A
+}
+
+SECTION ITEM $item_stone_of_justice
+{
+	NAME stone of justice
+	ID 186B
+}
+
+SECTION ITEM $item_stone_of_sacrifice
+{
+	NAME stone of sacrifice
+	ID 186C
+}
+
+SECTION ITEM $item_stone_of_honor
+{
+	NAME stone of honor
+	ID 186D
+}
+
+SECTION ITEM $item_stone_of_valor
+{
+	NAME stone of valor
+	ID 186E
+}
+
+SECTION ITEM $item_stone_of_spirituality
+{
+	NAME stone of spirituality
+	ID 186F
+}
+
+SECTION ITEM $item_stone_of_compassion
+{
+	NAME stone of compassion
+	ID 1870
 }
 
 // a map
